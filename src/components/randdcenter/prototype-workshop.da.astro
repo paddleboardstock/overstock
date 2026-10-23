@@ -1,0 +1,196 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'da' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">← Tilbage til R&amp;D Center</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Lab 05</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Prototype værksted</h1>
+      <p class="mt-3 text-lg text-muted">Fra CAD-model til havklar båd - bygget, monteret og gennemprøvet</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-ocean-voyager-1.webp"
+        alt="Aquafarer prototype fabrikation af værkstedsbåd"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Hvor design bliver til virkelighed</h2>
+  <p>
+    En CAD-model, uanset hvor detaljeret den er, kan ikke afsløre, hvordan en båd rent faktisk vil klare sig, før den
+    møder vandet. Derfor er vores prototypeværksted designet til at omsætte tekniske data til et fysisk, søgående fartøj
+    så hurtigt og præcist som muligt. Hver ny {SITE.name} model - og enhver væsentlig specialbygget - passerer gennem dette
+    værksted, før produktionsværktøjet er forpligtet.
+  </p>
+  <p>
+    Værkstedet er fuldt udstyret til samtidig fremstilling af skrog, rør og rigning. Denne parallelle workflow-tilgang
+    reducerer prototypens leveringstid til 8-12 uger fra ingeniørudgivelsen sammenlignet med industrinormen på 16-20
+    uger. Når din ansøgning kræver en specialiseret løsning, kan vi gå fra koncept til validering på vandet på under tre
+    måneder.
+  </p>
+
+  <h2>Værkstedsmuligheder</h2>
+  <table>
+    <thead><tr><th>Arbejdsstation</th><th>Udstyr</th><th>Formål</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Skrogfremstilling</td><td
+          >Rotationsstøbeovn (HDPE), TIG-svejsebås (aluminium), håndoplægningsforme (glasfiber)</td
+        ><td>Fuldskala skrogproduktion i alle tre materialetyper</td></tr
+      >
+      <tr
+        ><td>Rørsamling</td><td>RF svejsepresse, varmluftshæftestation, oppumpningsprøvestik</td><td
+          >Fremstilling af rørsamlinger i fuld størrelse med alle ledeplader, kegler og ventiler</td
+        ></tr
+      >
+      <tr
+        ><td>Rigning &amp; montering</td><td
+          >Motorhejs (500 kg), mock-up-ramme til konsol, hydraulisk slangepresser, elektrisk ledningskort</td
+        ><td>Komplet udstyr: motor, styretøj, kontrol, brændstofsystem, elektronik, sæde</td></tr
+      >
+      <tr
+        ><td>Instrumentation bay</td><td
+          >GPS-hastighedssensor, brændstofflowmåler, accelerometre, termoelementarray, datalogger</td
+        ><td>Installation og kalibrering af instrumentering til søforsøg</td></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>Prototyperejsen - trin for trin</h2>
+  <ol>
+    <li>
+      <strong>Engineering overdragelse</strong> — Designpakken (3D-model, FEA-rapport, stykliste, opstillingsplan) gennemgås
+      formelt af værkstedets leder og projektingeniøren. Eventuelle fremstillingsproblemer er markeret og løst, før skæring
+      begynder.
+    </li>
+    <li>
+      <strong>Skrogproduktion</strong> — Skroget er bygget i henhold til ingeniørspecifikationen. For HDPE: rotationsstøbningsprogrammet
+      indlæses fra Moldex3D-simuleringen. For aluminium: de CNC-skårne plader svejses i TIG-båsen efter det godkendte svejsekort.
+      For glasfiber: Lagbogen følges lag for lag.
+    </li>
+    <li>
+      <strong>Rørfremstilling</strong> — Stof skæres ved hjælp af CNC-mønsterskabeloner og RF-svejses derefter til kamre i
+      fuld størrelse. Hvert kammer pustes op til testtryk og efterlades i 24 timer for indledende stabilisering.
+    </li>
+    <li>
+      <strong>Montering &amp; rigning</strong> — Skrog og rør er parret. Motoren hænger, styring og kontrol er tilsluttet,
+      brændstofsystem er installeret, og alle elektriske kredsløb er tilsluttet og verificeret.
+    </li>
+    <li>
+      <strong>Statiske test</strong> — Inden båden rører vandet, gennemgår den: opdriftskontrol (fuld last + 30 % reserve),
+      tryktest af brændstofsystem, fuldlås cyklustest af styresystem, kontinuitetstest af elektrisk jordforbindelse.
+    </li>
+    <li><strong>Søforsøgsprogram</strong> — 20 timers test i vandet, detaljeret nedenfor.</li>
+    <li>
+      <strong>Prototype gennemgang</strong> — Der afholdes et formelt afmeldingsmøde med ingeniør-, produktions- og kvalitetsteams.
+      Eventuelle nødvendige designændringer dokumenteres og inkorporeres i produktionsudgivelsen.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      20-Timers søforsøgsprogram — Testplan
+    </p>
+    <div class="space-y-2 text-sm">
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">2 h</span><span class="flex-1"
+          >Havnemanøvrering — håndtering ved lav hastighed, bakgear, skærmkontrol</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">4 h</span><span class="flex-1"
+          >Hastighedsforsøg — GPS-verificeret tophastighed, krydshastighed, brændstofforbrug ved 3 RPM-punkter</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Drejetest — taktisk diameter, fremrykning og forflytning ved 20 kn, bagbord og styrbord</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Slammetest — gentagne kørsler gennem 0.5–1.0 m hakke; accelerometer på rorsædets base</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Stabilitetstest — statisk krængningsvinkel med 4 mandskab + gear til styrbord, offset belastning</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Udholdenhedsløb — 3 t kontinuerligt ved krydshastighed; temperaturovervågning (motor, brændstof, elektrisk)</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">2 h</span><span class="flex-1"
+          >Afsluttende inspektion — efterprøve inspektion af alle systemer, stram/kontroller alle
+          fastgørelsesanordninger, dokumenter fund</span
+        >
+      </div>
+    </div>
+  </div>
+
+  <h2>Brugerdefineret prototyping til unikke applikationer</h2>
+  <p>
+    Prototypeværkstedet er hvor vi løser de problemer, som standardproduktionsbåde ikke kan løse. Nylige eksempler
+    omfatter:
+  </p>
+  <ul>
+    <li>
+      En 7.8 m RIB til en eftersøgnings- og redningsorganisation, der kræver en brugerdefineret kabinestruktur med
+      væltebeskyttelse, integrerede båremonteringer og en buemonteret ekkolod - alt sammen prototype, monteret og testet
+      på vores anlæg.
+    </li>
+    <li>
+      En 5.2 m oppustelig til en hydrografisk undersøgelsesentreprenør, med en nedskæret agterspejl, aftagelig
+      instrumentmast og transducerlommer gennem skroget designet til at minimere strømningsforstyrrelser.
+    </li>
+    <li>
+      Et el-drevet 4.5 m bud på en superyacht, hvor prototypen blev brugt til at validere rækkevidde, ladeinfrastruktur
+      og støjniveauer, før kunden forpligtede sig til en flåde på fire.
+    </li>
+  </ul>
+
+  <h2>Vores prototyping team</h2>
+  <p>
+    Værkstedet er bemandet af otte multi-faglærte marineteknikere, der hver er krydsuddannet i mindst to af de tre
+    kernediscipliner (skrog, rør, rigning). Teamlederen er en mesterbådbygger med 16 års erfaring, der spænder over
+    tilpassede engangsbyggerier til produktionsserier. Hver prototype er tildelt en dedikeret projektingeniør, der
+    fungerer som det eneste kontaktpunkt for kunden under hele bygge- og prøveprocessen.
+  </p>
+
+  <h2>Kundeinddragelse</h2>
+  <p>
+    Vi opfordrer aktivt vores kunder til at deltage i vigtige milepæle under prototypebyggeriet - især den indledende
+    indretningsgennemgang og søforsøget. Din operationelle feedback i disse faser er uvurderlig til at finjustere båden,
+    før den går i produktion. Vi bygger ikke i et vakuum; vi bygger i samarbejde med dig.
+  </p>
+  <p>
+    20-timers søprøve er også en mulighed for dit team til at sætte sig ind i bådens håndtering, systemlayout og
+    vedligeholdelseskrav, hvilket sikrer en glidende overgang til service, når produktionsbådene leveres.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Start dit prototypeprojekt</h2>
+    <p class="mt-2 text-sm text-muted">
+      Fortæl os om den båd, du har brug for, og vi vil foreslå en prototypeudviklingsplan.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Kontakt vores prototyping-team</a
+    >
+  </div>
+</section>

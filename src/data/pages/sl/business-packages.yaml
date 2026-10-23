@@ -1,0 +1,82 @@
+hero:
+  tagline: Poslovni paketi
+  title: Posel z vodo, pripravljen za začetek<br />Paketi za vsako fazo
+  subtitle: Prednastavljeni paketi opreme za klube za vodne športe, letovišča in zagonske znamke — z jasno določenimi cenami, hitro dostavo in možnostjo popolne prilagoditve.
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/use-cases/aquafarer-outdoor-adventure.webp
+    alt: Aquafarer paketi poslovne opreme
+direct_answer: Aquafarer ponuja tri vnaprej konfigurirane poslovne pakete, zasnovane za operaterje vodnih športov na vseh stopnjah. Paket Club Starter vključuje 10 SUPs s vesli, črpalkami, popravnimi kompleti in varnostno opremo za nastajajoče klube in šole. Paket Resort Premium zagotavlja 50–100 enot s shranjevalnimi sistemi, blagovno znamko in vodniki za usposabljanje za hotele in gostinske objekte. Paket Brand Launch nudi izbiro izdelkov, oblikovanje prilagojenega logotipa, pakiranje, proizvodnjo in pošiljanje za podjetnike, ki uvajajo svojo lastno blagovno znamko vodnih športov. Vsi paketi vključujejo cene neposredno iz tovarne, CE certifikacijo in globalno logistično podporo.
+packages:
+  - id: club-starter
+    tag: Best Seller
+    name: Začetni paket kluba
+    subtitle: Vse, kar potrebujete za zagon ali nadgradnjo vašega paddle kluba
+    target: SUP klubi, klubi za kajak, šole deskanja, trening centri
+    price_label: Od 4.800 $
+    line_items:
+      - item: 10 SUP deske ali kajaki
+      - item: 10 ujemajočih se loparjev
+      - item: 10 črpalk z visokim izkoristkom
+      - item: 10 kompletov za popravilo
+      - item: 10 rešilnih jopičev z logotipom kluba
+      - item: Blagovna znamka kluba na oglasnih deskah
+      - item: Komplet varnostnih označb
+      - item: PDF vodič za začetniško lekcijo
+    cta_text: Pridobi paket kluba
+    cta_href: /contact
+  - id: resort-premium
+    tag: Premium
+    name: Premium paket letovišča
+    subtitle: Celoten program vodnih aktivnosti za goste v hotelih in resortih
+    target: Obalna letovišča, hoteli ob jezeru, ekološka letovišča, jahtni klubi
+    price_label: Prilagojena ponudba
+    line_items:
+      - item: 50–100 SUPs, kajakov ali mešana flota
+      - item: Polno blagovno znamčenje letovišča na vsem opremi
+      - item: Vesla in rešilni jopiči za najem
+      - item: Komercialni sistem regalov za shranjevanje
+      - item: Inflacijska postaja z industrijskimi črpalkami
+      - item: Varnostni sistem (plavuti, znaki, reševalna deska)
+      - item: Program usposabljanja zaposlenih
+      - item: Priročnik za upravljanje prihodkov
+    cta_text: Pridobi paket Resort
+    cta_href: /contact
+  - id: brand-launch
+    tag: Entrepreneur
+    name: Paket za lansiranje blagovne znamke
+    subtitle: Svojo idejo za blagovno znamko spremenite v izdelek, pripravljen za pošiljanje — običajno v 60–90 dneh
+    target: Prodajalci na Amazonu, vplivneži, regionalni distributerji
+    price_label: Od 6.500 $ naprej
+    line_items:
+      - item: Posvet pri izbiri izdelka
+      - item: Oblikovanje logotipa po meri na deskah
+      - item: Prilagajanje barv po meri
+      - item: Trgovinsko pakiranje z blagovno znamko
+      - item: Oznake in navodila za uporabo
+      - item: Dokumentacija za CE certifikat
+      - item: Vzorec proizvodnje
+      - item: Prevoz iz Qingdao FOB
+    cta_text: Lansiraj mojo blagovno znamko
+    cta_href: /contact
+faq:
+  title: Pogosto zastavljena vprašanja o paketu
+  questions:
+    - q: Kakšno je najmanjše naročilo za pakete?
+      a: Klubski začetni paket ima minimalno 10 enot. Paketi Resort in Brand so prilagojeni vašim potrebam z fleksibilnim MOQs.
+    - q: Koliko časa traja dostava?
+      a: Standardna proizvodnja traja 30–45 dni od potrditve naročila. Pospešena proizvodnja je na voljo za dodatno pristojbino.
+    - q: Ali lahko prilagodim barve opreme in blagovno znamko?
+      a: Da. Vsi paketi vključujejo polno prilagoditev — barve desk, tisk logotipa in oblikovanje pakiranja.
+    - q: Ali nudite podporo po prodaji?
+      a: Da. Vsak paket vključuje dostop do naših spletnih vodnikov za vzdrževanje, video vodičev in sistema za naročanje rezervnih delov.
+cta:
+  title: Niste prepričani, kateri paket je pravi?
+  subtitle: Odgovorite na 3 hitra vprašanja in priporočili vam bomo popoln paket za vaše podjetje.
+  actions:
+    - variant: primary
+      text: Pridobi priporočeni paket
+      href: /contact
+    - text: Ogled rešitev po ciljni skupini
+      href: /solutions
+    - text: Preberi zgodbe o uspehu
+      href: /success-stories

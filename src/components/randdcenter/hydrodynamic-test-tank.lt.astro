@@ -1,0 +1,197 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'lt' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">&larr; Atgal į MTEP centrą</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Laboratorija 04</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Hidrodinaminis bandymų bakas</h1>
+      <p class="mt-3 text-lg text-muted">Našumo tikrinimas prieš pirmąjį pilno masto prototipą</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-design-discussion-original.webp"
+        alt="Aquafarer hidrodinaminių bandymų bako eksploatacinių savybių testavimas"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Kodėl verta testuoti mažą laivą bake?</h2>
+  <p>
+    Dažnai klaidingai manoma, kad hidrodinaminiai bandymai skirti tik jūrinėms laivams. Iš tikrųjų mažo planuojančio
+    korpuso — pavyzdžiui, 4–5 m RIB — našumas priklauso nuo jo po vandeniu esančios formos tiek pat, kiek naftovežio
+    našumas priklauso nuo jo kupolo formos priekio. Pakrypimo kampas, sudrėkinta paviršiaus sritis, purslų susidarymas
+    ir vėdinimas turi didelį poveikį greičiui, kuro sąnaudoms ir plaukimo patogumui.{SITE.name}, mes turime specialią
+    hidrodinaminių bandymų talpą, leidžiančią mums kiekybiškai įvertinti šiuos efektus modelio mastu — prieš skiriant
+    metalą ir audinį pilno dydžio prototipui.
+  </p>
+  <p>
+    Testavimas modelio masteliu (dažniausiai 1:3–1:5) suteikia galimybę greitai ir ekonomiškai iteruoti korpuso formas.
+    Savaitė tanke gali generuoti tuos pačius našumo duomenis, kuriems prireiktų mėnesių pilno masto bandymų ir klaidų –
+    ir už dalį kainos.
+  </p>
+
+  <h2>Įrenginio specifikacijos</h2>
+  <table>
+    <thead><tr><th>Parametras</th><th>Specifikacija</th></tr></thead>
+    <tbody>
+      <tr><td>Tanko matmenys</td><td>35 m (į kairę) × 3,5 m (į ilgį) × 1,8 m (į dešinę)</td></tr>
+      <tr
+        ><td>Vilkimo vagonas</td><td
+          >Elektrinis servo variklis, maksimalus greitis 12 m/s (23 mazgai), greičio tikslumas ± 0,5 %</td
+        ></tr
+      >
+      <tr
+        ><td>Bangų generatorius</td><td
+          >Atvartų tipo, programuojamos reguliarios ir nereguliarios jūros būsenos, Hs iki 0,3 m modelio masteliu</td
+        ></tr
+      >
+      <tr
+        ><td>Instrumentuotė</td><td
+          >6 komponentų dinamometras (varža, šoninė jėga, posūkio momentas), akselerometrai, inklinometrai, bangų zondai</td
+        ></tr
+      >
+      <tr
+        ><td>Duomenų surinkimas</td><td
+          >Mėginių ėmimas 1000 Hz dažniu kiekvienam kanalui, realaus laiko rodymo + postprocesinis rinkinys</td
+        ></tr
+      >
+      <tr><td>Modelių gamyba</td><td>Vidinis CNC frezavimas ir 3D spausdinimas modelių korpusams iki 1,8 m LOA</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Mūsų testavimo programa</h2>
+  <p>Standartinė korpuso kūrimo programa mūsų tanke vyksta pagal šią seką:</p>
+  <ol>
+    <li>
+      <strong>Modelių kūrimas</strong>— 1:3,5 mastelio modelis CNCpagamintas iš didelio tankio putų ir stiklinamas dėl
+      standumo. Svoris ir CG reguliuojami pagal Froude mastelio pilno apkrovimo būklę.
+    </li>
+    <li>
+      <strong>Pasipriešinimo bėgimai</strong>— Modelis tempiamas 8–10 greičių greičiu per visą darbinį diapazoną.
+      Bendras pasipriešinimas matuojamas ir skaidomas į trinties bei likučius komponentus naudojant ITTC-1957 metodą.
+    </li>
+    <li>
+      <strong>Lygiavimo ir grimzdimo matavimas</strong>— Kiekvieno greičio metu fiksuojamas bėgimo balansas ir
+      grimzdimas. Optimalus 4–6° balanso kampas korpusų planavimui yra tikslas.
+    </li>
+    <li>
+      <strong>Wake apklausa</strong>— Skersiniai bangų pjūviai matuojami dviem greičiais, siekiant įvertinti bangų
+      susidarymo pasipriešinimą ir identifikuoti skersines bangų sąveikas, galinčias sukelti užpakalinį interferenciją.
+    </li>
+    <li>
+      <strong>Jūros laikymasis (pasirinktinai)</strong>— Priekinės ir vėlesnės bangos skrydžiai reguliariomis bangomis,
+      siekiant išmatuoti papildomą pasipriešinimą, vertikalų pagreitį ir smūgio tikimybę.
+    </li>
+    <li>
+      <strong>Duomenų analizė ir rekomendacijos</strong>— Pateikiama išsami ataskaita su palyginamaisiais žemėlapiais,
+      greičio/galios kreivėmis ir konkrečiomis pilno masto korpuso projektavimo rekomendacijomis.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Tipiniai tanko bandymų rezultatai — pasipriešinimas prieš greitį (RIB450 korpusas, 1:3,5 mastelis)
+    </p>
+    <div class="space-y-2">
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">5 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:18%"></div>
+        </div><span class="w-16 text-right">42 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">10 mazgų (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:35%"></div>
+        </div><span class="w-16 text-right">81 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">15 mazgų (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:52%"></div>
+        </div><span class="w-16 text-right">121 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">20 mazgų (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:68%"></div>
+        </div><span class="w-16 text-right">158 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">25 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:85%"></div>
+        </div><span class="w-16 text-right">197 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">30 mazgų (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:100%"></div>
+        </div><span class="w-16 text-right">232 N</span>
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      Modelio mastelio varža (N) esant Froude mastelio greičiui. Pilno masto galios prognozė vykdoma pagal ITTC-1978
+      našumo prognozavimo metodą.
+    </p>
+  </div>
+
+  <h2>Ekspertų komanda</h2>
+  <p>
+    Mūsų tanką valdo hidrodinamikas, turintis daktaro laipsnį laivų architektūroje ir 8 metų vilkimo tankų patirtį
+    dideliame Europos jūrų tyrimų institute. Jį palaiko technikas, kuris paruošia visus modelius ir instrumentus.
+    Komanda laikosi ITTC (Tarptautinės vilkimo tankų konferencijos) rekomenduojamų procedūrų, kad kiekvienas bandymas
+    būtų pakartojamas, atsekamas ir tarptautiniu mastu ginamas.
+  </p>
+
+  <h2>Tankų bandymai individualių korpusų kūrimui</h2>
+  <p>
+    Mūsų tankas naudojamas ne tik namuose suprojektuotiems korpusams – mes reguliariai vykdome testavimo programas
+    klientams, norintiems patvirtinti individualią korpuso formą arba ištirti našumo problemą:
+  </p>
+  <ul>
+    <li>
+      <strong>Korpuso formos palyginimas</strong>— Dvi ar daugiau kandidatų korpuso formų, išbandytų identiškomis
+      sąlygomis, suteikiančios objektyvų pasipriešinimo/greičio/stabilumo palyginimą, padedantį pasirinkti dizainą.
+    </li>
+    <li>
+      <strong>Priedų optimizavimas</strong>— Interceptorinės plokštės, purškimo bėgeliai, reguliavimo plokštelės ir
+      strakės gali būti testuojamos įvairiomis konfigūracijomis, siekiant kiekybiškai įvertinti jų individualų indėlį į
+      pasipriešinimo mažinimą.
+    </li>
+    <li>
+      <strong>Variklių suderinimo tyrimas</strong>— Varžos duomenys konvertuojami į galios prognozavimo kreivę,
+      leidžiančią pasirinkti optimalią variklio galią pagal norimą greitį ir naudingąją apkrovą.
+    </li>
+  </ul>
+
+  <h2>Kodėl verta testuoti pas mus?</h2>
+  <p>
+    Mes nepateikiame jums tik žalių skaičių rinkinio. Mūsų ataskaitose bako duomenys paverčiami praktiškomis
+    inžinerinėmis rekomendacijomis: "Pakelkite purškimo bėgelį 8 mm, kad sumažintumėte šlapią paviršių kruizo greičiu",
+    "Padidinkite deadrise ties užpakaliu 3°, kad sumažintumėte staigų pagreitį", arba "Perkelkite išilginį svorio centrą
+    150 mm atgal, kad pagerintumėte planavimo padėtį". Išeinate aiškiai suprasdami, ką ir kodėl reikia keisti.
+  </p>
+  <p>
+    Mūsų bakas taip pat yra prieinamas nepriklausomiems trečiųjų šalių bandymams už paslaugą. Jei kuriate korpusą ir
+    norite nešališko, profesionaliai atliekamo hidrodinaminio vertinimo, laukiame jūsų užklausos.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Užsisakykite tanko testavimo sesiją</h2>
+    <p class="mt-2 text-sm text-muted">
+      Nesvarbu, ar jums reikia pilnos tobulėjimo programos, ar vieno lyginamojo testo, mes galime prisitaikyti prie jūsų
+      tvarkaraščio.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Susisiekite su mūsų hidrodinamikos komanda</a
+    >
+  </div>
+</section>

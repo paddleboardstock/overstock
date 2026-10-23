@@ -1,0 +1,188 @@
+---
+import { SITE } from 'astrowind:config';
+const { lang = 'it' } = Astro.props;
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={`/${lang}/randdcenter`} class="text-sm text-gray-500 hover:underline">&larr; Torna al Centro R&S</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Lab 02</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Studio di ingegneria scafi</h1>
+      <p class="mt-3 text-lg text-muted">
+        Simulazione digitale, intelligenza strutturale, progettazione scafi su misura
+      </p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/design discussaquafarer-inflatable-boat-aquafarer-factory-exterior.webp"
+        alt="Postazione di lavoro CAD per l'ingegneria degli scafi Aquafarer"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Dove la resistenza incontra l'idrodinamica</h2>
+  <p>
+    Lo scafo è la spina dorsale di ogni RIB o gommone. Deve essere abbastanza leggero da planare in modo efficiente,
+    abbastanza resistente da assorbire i carichi d'impatto e dimensionalmente stabile in un'ampia gamma di temperature.
+    In {SITE.name}, il nostro Studio di ingegneria scafi combina modellazione CAD avanzata, analisi agli elementi finiti
+    (FEA) e decenni di esperienza pratica in architettura navale per produrre scafi ottimizzati per la missione prevista
+    — non forme generiche adattate da un catalogo.
+  </p>
+  <p>
+    Lavoriamo con tre materiali principali per gli scafi — HDPE rotostampato, alluminio saldato di qualità marina e
+    vetroresina posata a mano — e abbiamo la capacità ingegneristica di progettare, simulare e validare ciascuno di essi
+    internamente.
+  </p>
+
+  <h2>Strumenti di progettazione e standard</h2>
+  <p>Il nostro ambiente di ingegneria digitale comprende:</p>
+  <table>
+    <thead><tr><th>Capacità</th><th>Software / Strumento</th><th>Applicazione</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Modellazione parametrica 3D</td><td>SolidWorks Professional</td><td
+          >Superficie dello scafo, sistema di longheroni, staffa motore, layout del ponte</td
+        ></tr
+      >
+      <tr
+        ><td>Analisi agli elementi finiti</td><td>ANSYS Mechanical &amp; LS-DYNA</td><td
+          >Mappatura delle sollecitazioni, analisi modale, simulazione di crash/impatto</td
+        ></tr
+      >
+      <tr
+        ><td>Fluidodinamica computazionale</td><td>Ansys Fluent / Star-CCM+</td><td
+          >Previsione della resistenza idrodinamica, ottimizzazione dell'assetto</td
+        ></tr
+      >
+      <tr
+        ><td>Ingegneria dei laminati</td><td>ESAComp / CADEC</td><td
+          >Impilamento degli strati in vetroresina, selezione del nucleo, stima del peso</td
+        ></tr
+      >
+      <tr
+        ><td>Simulazione del flusso nello stampo</td><td>Moldex3D</td><td
+          >Previsione dello spessore di parete per rotostampaggio</td
+        ></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>Il nostro flusso di lavoro ingegneristico</h2>
+  <p>
+    Ogni progettazione di scafo, che si tratti di un modello standard o di un progetto completamente personalizzato,
+    segue un rigoroso processo in cinque fasi:
+  </p>
+  <ol>
+    <li>
+      <strong>Raccolta del concept &amp; dei requisiti</strong> — Ci incontriamo con voi per definire payload, inviluppo di
+      velocità, capacità in condizioni di mare, requisiti di rimorchio e qualsiasi attrezzatura speciale per la missione (boccaporti
+      sul ponte, posizioni della consolle, integrazione del serbatoio carburante).
+    </li>
+    <li>
+      <strong>Modellazione 3D delle superfici &amp; calcolo idrostatico</strong> — La forma dello scafo viene modellata in
+      SolidWorks e verificata per la stabilità idrostatica (GM, braccio raddrizzante) utilizzando gli strumenti di analisi
+      integrati.
+    </li>
+    <li>
+      <strong>FEA strutturale</strong> — Vengono definiti i casi di carico: statico (equipaggio + attrezzatura), dinamico
+      (impatto di planata a 5g) e slamming (caduta dalla cresta di un'onda a 3 m/s). Vengono esaminati i contorni delle sollecitazioni;
+      è obbligatorio un fattore di sicurezza &ge; 2.5.
+    </li>
+    <li>
+      <strong>Ottimizzazione CFD della resistenza</strong> — Lo scafo viene simulato in tre condizioni di carico e a cinque
+      velocità. Superficie bagnata, angolo di assetto e resistenza residua vengono ridotti in modo iterativo.
+    </li>
+    <li>
+      <strong>Revisione del progetto &amp; rilascio</strong> — Il pacchetto ingegneristico completo (modello 3D, rapporto
+      FEA, rapporto CFD, stima del peso, laminato di progetto) viene revisionato dal nostro architetto navale senior prima
+      del rilascio all'officina prototipi.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Distribuzione delle sollecitazioni FEA — Scafo pattugliatore RIB 450 (Alluminio 5083)
+    </p>
+    <div class="grid grid-cols-2 gap-4 text-sm">
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">2.8 : 1</span>
+        <span class="text-gray-500">Fattore di sicurezza a pieno carico</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">15.2 %</span>
+        <span class="text-gray-500">Riduzione della resistenza rispetto alla generazione precedente</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">87 kN/m&sup2;</span>
+        <span class="text-gray-500">Pressione di picco da slamming (limite di progetto)</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">18 000 h</span>
+        <span class="text-gray-500">Tempo di calcolo FEA cumulativo nel 2025</span>
+      </div>
+    </div>
+  </div>
+
+  <h2>Personalizzazione: il vostro scafo, le vostre regole</h2>
+  <p>
+    Nessun operatore ha esigenze identiche a un altro. Un RIB di pattugliamento portuale ha bisogno di uno scafo a V
+    poco profondo per la stabilità a bassa velocità; un'imbarcazione per intervento rapido ha bisogno di una V profonda
+    con listelli di spray; un'imbarcazione di supporto subacqueo ha bisogno di un baglio ampio e di uno specchio di
+    poppa basso. Non costringiamo la vostra applicazione in una forma di scafo preesistente. Progettiamo partendo dalle
+    vostre specifiche.
+  </p>
+  <p>Esempi di recenti progetti di ingegneria scafi personalizzati:</p>
+  <ul>
+    <li>
+      Uno scafo HDPE allungato da 6.8 m per un tour operator dei Caraibi, con prua rinforzata per gli attraversamenti in
+      spiaggia (+15 % di spessore del fondo).
+    </li>
+    <li>
+      Un RIB leggero in alluminio da 7.2 m per una guardia costiera, con deflettori integrati nel serbatoio carburante e
+      irrigidimenti dei vani attrezzatura.
+    </li>
+    <li>
+      Un'imbarcazione da immersione in vetroresina da 5.5 m con specchio di poppa ribassato e doppio vano batterie,
+      progettata per facilitare il reimbarco degli snorkelisti.
+    </li>
+  </ul>
+
+  <h2>I nostri ingegneri</h2>
+  <p>
+    Lo studio è guidato da un architetto navale senior con 14 anni di esperienza nella progettazione di imbarcazioni ad
+    alta velocità, affiancato da due ingegneri meccanici specializzati in FEA e CFD. Tutti e tre possiedono lauree
+    avanzate in ingegneria navale o architettura navale presso università riconosciute a livello internazionale. Il team
+    pubblica regolarmente su riviste di settore e presenta a conferenze come la International Conference on
+    High-Performance Marine Vehicles.
+  </p>
+
+  <h2>Collaborate con noi per il vostro prossimo scafo</h2>
+  <p>
+    Dal primo schizzo concettuale al rapporto finale sulle sollecitazioni, il nostro Studio di ingegneria scafi è il
+    vostro partner nella creazione di un'imbarcazione che non è solo costruita — ma progettata. Investiamo le ore di
+    simulazione in anticipo affinché ogni saldatura, ogni strato di laminato e ogni curva dello scafo ci sia per una
+    ragione.
+  </p>
+  <p>
+    Che abbiate bisogno di una modifica minore a un modello esistente o di un progetto completamente nuovo, siamo pronti
+    a discutere le vostre esigenze.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Avviate la vostra consulenza per la progettazione dello scafo</h2>
+    <p class="mt-2 text-sm text-muted">
+      Parlateci del vostro profilo di missione e proporremo un percorso ingegneristico.
+    </p>
+    <a
+      href={`/${lang}/contact`}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Contattate il nostro team di ingegneria</a
+    >
+  </div>
+</section>

@@ -1,0 +1,91 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+
+const metadata = {
+  title: `Boat Knowledge — Inflatable Boat & RIB Guides — ${SITE.name}`,
+  description:
+    'Technical guides on inflatable boats, RIBs, dinghies, and kayaks — engineering, materials, operation, and maintenance.',
+};
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Learn' }, { name: 'Boat Knowledge' }];
+
+const topics = [
+  {
+    title: 'Inflatable Boat Types',
+    desc: 'Dinghies, RIBs, kayaks, and tenders — learn the differences and choose the right one.',
+    href: '/v2/inflatable-boat-buying-guide',
+  },
+  {
+    title: 'PVC vs Hypalon',
+    desc: 'The definitive comparison of the two dominant inflatable boat materials.',
+    href: '/learn/pvc-vs-hypalon',
+  },
+  {
+    title: 'Drop-Stitch Technology',
+    desc: 'How thousands of internal threads create rigid, high-pressure inflatable structures.',
+    href: '/learn/drop-stitch-core',
+  },
+  {
+    title: 'Materials Reference',
+    desc: 'PVC denier ratings, fabric weights, UV resistance, and what makes marine-grade materials.',
+    href: '/learn/materials',
+  },
+  {
+    title: 'Inflatable Technology',
+    desc: 'Construction methods — RF welding, adhesive bonding, and seam types explained.',
+    href: '/learn/inflatable-technology',
+  },
+  {
+    title: 'RIB vs Dinghy',
+    desc: 'Compare rigid inflatable boats with traditional inflatable dinghies for different use cases.',
+    href: '/compare/rib-vs-dinghy',
+  },
+  {
+    title: 'Boat Maintenance',
+    desc: 'Cleaning, storage, valve care, and winterization for inflatable boats.',
+    href: '/v2/inflatable-sup-maintenance',
+  },
+  {
+    title: 'Boat Safety',
+    desc: 'Essential safety equipment, PFD requirements, and operation guidelines for inflatable boats.',
+    href: '/learn/water-safety',
+  },
+];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <JsonLd
+    type="Article"
+    article={{
+      headline: metadata.title,
+      description: metadata.description,
+      datePublished: '2024-12-01',
+      dateModified: '2025-06-10',
+    }}
+  />
+  <section class="px-6 py-16 max-w-5xl mx-auto text-center">
+    <p class="text-sm font-semibold text-primary uppercase tracking-wider">Boat Knowledge</p>
+    <h1 class="mt-3 text-4xl md:text-5xl font-bold">Inflatable Boat & RIB Guides</h1>
+    <p class="mt-3 text-lg text-muted max-w-2xl mx-auto">
+      Technical guides covering engineering, materials, operation, and maintenance of inflatable watercraft.
+    </p>
+  </section>
+
+  <section class="px-6 pb-20 max-w-6xl mx-auto">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {
+        topics.map((t) => (
+          <a
+            href={t.href}
+            class="group block bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-all hover:-translate-y-0.5"
+          >
+            <h3 class="font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">{t.title}</h3>
+            <p class="mt-2 text-sm text-gray-500 leading-relaxed">{t.desc}</p>
+            <span class="mt-4 inline-flex text-sm font-medium text-sky-600 group-hover:text-sky-700">Read guide →</span>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+</Layout>

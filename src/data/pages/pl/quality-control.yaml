@@ -1,0 +1,137 @@
+hero:
+  tagline: Kontrola jakości
+  title: System Kontroli Jakości<br />dla OEM Produkcji Morskiej
+  subtitle: Wieloetapowy proces kontroli obejmujący materiały przychodzące, produkcję w toku, testy ciśnieniowe, finalny montaż oraz weryfikację przed wysyłką. Każda partia jest możliwa do śledzenia, każdy test jest rejestrowany.
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-pressure-testing.webp
+    alt: Aquafarer proces kontroli jakości i testowania ciśnieniowego
+stats:
+  title: Kontrola jakości w liczbach
+  stats:
+    - title: Jednostki testowane pod kątem ciśnienia
+      amount: 100%
+    - title: Maksymalne spadek ciśnienia
+      amount: <5%
+    - title: Inspektorzy kontroli jakości
+      amount: '12'
+    - title: Zachowane rekordy
+      amount: 10 lat
+content_system:
+  tagline: Przegląd systemu kontroli jakości
+  title: Zintegrowany Ramowy System Kontroli Jakości
+  subtitle: Nasz system kontroli jakości działa niezależnie od produkcji i raportuje bezpośrednio do kierownictwa. Żadna partia nie jest wysyłana bez podpisanego zatwierdzenia jakości z laboratorium kontroli jakości.
+  items:
+    - title: Niezależne Laboratorium Jakości
+      description: Nasze laboratorium jakości działa jako odrębna funkcja w stosunku do produkcji. Kontrolerzy jakości raportują do Kierownika ds. Jakości, a nie do Dyrektora Produkcji. Ta niezależność organizacyjna zapewnia, że decyzje dotyczące jakości są podejmowane obiektywnie — terminy produkcji nigdy nie mają pierwszeństwa przed wymaganiami jakościowymi.
+      features:
+        - Raportuje bezpośrednio do kierownictwa, niezależnie od produkcji
+        - Upoważniony do wstrzymania produkcji z powodu problemów z jakością
+        - 12 dedykowanych inspektorów kontroli jakości na wszystkich etapach
+        - Wszystkie urządzenia testowe kalibrowane corocznie
+    - title: Śledzenie partii
+      description: Każda partia surowca otrzymuje unikalny numer partii w naszym systemie ERP. Od przybycia materiału, przez produkcję, aż po produkt końcowy, każda specyfikacja materiałowa statku wiąże się z oryginalnymi partiami dostawcy. Umożliwia to pełną wsteczną identyfikowalność w przypadku jakichkolwiek zapytań dotyczących jakości lub zgodności.
+      features:
+        - Śledzenie partii oparte na ERP od materiału do wyrobu gotowego
+        - Fizyczne etykiety partii na każdym zleceniu pracy
+        - 100% pokrycie materiałem — PVC, Hypalon, sprzęt, kleje
+        - Dokumenty przechowywane przez 10 lat (CE wymóg 2013/53/UE)
+    - title: Standardy i zgodność
+      description: Nasze procedury kontroli jakości są zgodne z międzynarodowymi standardami. Produkty posiadają certyfikat CE zgodnie z dyrektywą UE dotyczącą jednostek rekreacyjnych 2013/53/UE. Nasz system zarządzania jakością posiada certyfikat ISO 9001. Zgodność społeczna jest utrzymywana poprzez certyfikację BSCI.
+      features:
+        - Certyfikacja CE (UE 2013/53/UE)
+        - ISO 9001:2015 zarządzanie jakością
+        - BSCI certyfikat zgodności społecznej
+        - REACH i zgodność materiałów z RoHS
+        - Certyfikacja UKCA po Brexicie
+content_inspection:
+  tagline: Etapy inspekcji
+  title: Sześciostopniowy proces inspekcji
+  subtitle: Każdy produkt przechodzi przez 6 etapów inspekcji z udokumentowanymi punktami kontrolnymi QC. Wady są wykrywane wcześnie, działania korygujące są natychmiastowe, a każda partia jest w pełni możliwa do śledzenia.
+  stages:
+    - stage: '1'
+      title: Kontrola materiałów przychodzących
+      description: Wszystkie przychodzące materiały są rejestrowane według numeru partii/seryjnego i kwarantannowane do czasu zatwierdzenia przez QC. Rolki tkanin PVC/Hypalon są testowane pod kątem wytrzymałości na rozciąganie (ASTM D751), odporności na rozdarcie (ISO 4674) oraz grubości. Drop-stitch rdzenie, zawory, kleje i elementy metalowe są wizualnie kontrolowane i mierzone pod kątem zgodności ze specyfikacjami.
+      checks: Wytrzymałość na rozciąganie ASTM D751, odporność na rozdarcie ISO 4674, grubość, lepkość kleju, skan wizualny wad
+      threshold: Przetestowano 100% partii. Odrzucić, jeśli rozciąganie < 90% specyfikacji, rozdarcie < minimalna specyfikacja lub jakakolwiek wada wizualna
+    - stage: '2'
+      title: Kontrola jakości w toku — Cięcie i przygotowanie
+      description: Panele przycinane CNC są kontrolowane wymiarowo w porównaniu z plikami źródłowymi CAD co dwudziesty panel. Jakość krawędzi jest sprawdzana pod kątem strzępienia, nierównych cięć lub odchyleń wymiarowych. Liczba paneli jest weryfikowana względem BOM dla każdej partii produkcyjnej przed przeniesieniem materiałów do spawania.
+      checks: Kontrola wymiarowa z plikami CAD DXF, kontrola jakości krawędzi, weryfikacja liczby paneli
+      threshold: Tolerancja ±0,5 mm. Odrzuć partię, jeśli >2% jest poza tolerancją
+    - stage: '3'
+      title: Kontrola jakości w trakcie procesu — spawanie i klejenie
+      description: Podczas produkcji jakość spawu jest ciągle monitorowana. Testy rozdzielcze (ASTM D751) są przeprowadzane na próbkach co 50 jednostek. Szerokość spawu jest mierzona zgodnie ze specyfikacją. Rejestry temperatury gorącego powietrza są przeglądane w celu sprawdzenia spójności. Każdy szew jest wizualnie kontrolowany pod światłem przechodzącym w celu wykrycia kanałów lub pustek.
+      checks: Test odrywania ASTM D751 co 50 jednostek, pomiar szerokości spoiny, przegląd rejestru temperatury gorącego powietrza, kontrola szwów pod światłem wstecznym
+      threshold: Siła odrywania min 8 N/cm. Tolerancja szerokości spoiny ±1mm. Każde widoczne tworzenie kanałów = odrzut
+    - stage: '4'
+      title: Kontrola jakości montażu
+      description: Każda jednostka przechodzi 100-punktową listę kontrolną montażu podpisaną przez lidera zespołu. Funkcjonowanie zaworu jest testowane poprzez 10 cykli otwierania/zamykania. Moment dokręcenia elementów sprzętowych jest weryfikowany. Kontrola wzrokowa obejmuje wykończenie powierzchni, spójność kolorów, umiejscowienie etykiet oraz kompletność akcesoriów.
+      checks: Lista kontrolna 100 punktów na jednostkę, test funkcji zaworu, weryfikacja momentu dokręcania elementów, kontrola wizualna
+      threshold: 'Polityka zerowej defektów w przypadku elementów krytycznych dla bezpieczeństwa (zawory, pierścienie typu D, uchwyty). Drobne zmiany kosmetyczne: AQL 2,5 (ISO 2859)'
+    - stage: '5'
+      title: Próba ciśnieniowa
+      description: Każda komora jest nadmuchiwana do 1,25× nominalnego ciśnienia i utrzymywana przez 24-48 godzin. Czujniki ciśnienia rejestrują dane przez cały czas trwania próby. Odczyty skompensowane pod kątem temperatury zapewniają dokładność. Każda komora, która przekroczy spadek ciśnienia o 5%, jest odrzucana i wysyłana do ponownej kontroli szwów wraz z 100% powtórnym testem całej partii produkcyjnej.
+      checks: 24-48h rejestr utrzymywania ciśnienia, kalibracja czujnika weryfikowana codziennie, odczyt skompensowany temperaturowo, ponowne testowanie szwu po naprawie
+      threshold: Maksymalny spadek ciśnienia 5% w ciągu 24h przy stabilnej temperaturze. Przekroczenie = 100% ponowny test całej partii
+    - stage: '6'
+      title: Ostateczna kontrola i zwolnienie wysyłki
+      description: Ostateczna kontrola wizualna i funkcjonalna przed pakowaniem. Sprawdzane są wady powierzchni, jednolitość koloru, zgodność etykiet/koszy, integralność opakowania oraz kompletność akcesoriów względem zamówienia klienta. Jednostki są pakowane próżniowo, wkładane do pudeł i układane na paletach. Wymagane jest końcowe zatwierdzenie kontroli jakości przed opuszczeniem fabryki przez produkt.
+      checks: Pełna kontrola wzrokowa, lista kontrolna akcesoriów według SKU, test upadku opakowania (próbka losowa 1 m), weryfikacja skanowania etykiety/kodu kreskowego
+      threshold: AQL 2,5 wady poważne, AQL 4,0 wady drobne. Brak tolerancji dla wad bezpieczeństwa. 100% jednostek poddanych kontroli wizualnej
+content_equipment:
+  tagline: Sprzęt testowy
+  title: Sprzęt laboratorium kontroli jakości
+  subtitle: Nasze laboratorium jakościowe jest wyposażone w specjalistyczny sprzęt do weryfikacji materiałów, integralności spoin oraz walidacji wydajności produktu.
+  columns: 3
+  items:
+    - title: Maszyna do badań wytrzymałości na rozciąganie
+      description: Mierzy wytrzymałość na rozciąganie i wydłużenie tkaniny zgodnie z ASTM D751. Stosowane do kontroli jakości przyjmowanych partii wszystkich tkanin PVC, Hypalon i drop-stitch.
+      icon: tabler:scale
+    - title: Komora temperaturowa
+      description: Komora środowiskowa do testów odporności na UV (ASTM G154) i testów elastyczności w niskich temperaturach. Symuluje ekstremalne warunki pracy.
+      icon: tabler:temperature
+    - title: Czujniki ciśnienia i rejestratory
+      description: Cyfrowe czujniki ciśnienia z ciągłym rejestrowaniem danych do 24-48 godzinnych testów szczelności powietrza. Skorygowane temperaturowo dla dokładności.
+      icon: tabler:wind
+    - title: Stanowisko do testu odrywania
+      description: Skalibrowany sprzęt do testowania odrywania w celu weryfikacji wytrzymałości spoiny. Losowe próbki z każdej partii produkcyjnej.
+      icon: tabler:files
+    - title: Zbiornik detekcji wycieków
+      description: Zbiornik wodny do zanurzeniowych testów szczelności nadmuchanych komór. Wizualne wykrywanie pęcherzyków w celu weryfikacji szczelności szwów i zaworów.
+      icon: tabler:ripple
+    - title: Narzędzia inspekcyjne
+      description: Skalibrowane narzędzia pomiarowe — mierniki grubości, klucze dynamometryczne, suwmiarki wymiarowe, testery twardości dla stacji kontroli jakości produkcji.
+      icon: tabler:tools
+content_metrics:
+  tagline: Wydajność kontroli jakości
+  title: Metryki kontroli jakości
+  subtitle: Rzeczywiste dane zdawalności/niezdawalności z naszej linii produkcyjnej. Te wskaźniki są monitorowane codziennie i przeglądane miesięcznie przez kierownictwo.
+  columns: 3
+  items:
+    - title: 100% Jednostek Przetestowanych
+      description: Każda komora każdej łodzi jest testowana pod kątem ciśnienia przed wysyłką. Brak próbkowania — 100% kontroli szczelności ciśnieniowej.
+      icon: tabler:check
+    - title: <Spadek ciśnienia <5%>
+      description: Maksymalna dopuszczalna utrata ciśnienia w ciągu 24-48 godzin przy 1,25× ciśnienia znamionowego. Każda komora przekraczająca ten próg uruchamia powtórne badanie partii.
+      icon: tabler:gauge
+    - title: AQL 2,5
+      description: Dopuszczalny poziom jakości dla głównych wad zgodnie ze standardem próbkowania ISO 2859. Zero tolerancji dla wad krytycznych dla bezpieczeństwa.
+      icon: tabler:clipboard-check
+    - title: Zatrzymanie na 24-48 godzin
+      description: 'Czas utrzymywania ciśnienia różni się w zależności od kategorii produktu. Komory RIB: 48 godzin. SUP i łodzie pneumatyczne: 24-48 godzin.'
+      icon: tabler:clock
+    - title: Ciśnienie próbne 1,25×
+      description: Margines bezpieczeństwa w każdej komorze — testowany przy 25% wyższym ciśnieniu niż nominalne, aby zapewnić zapas ponad maksymalne warunki eksploatacyjne.
+      icon: tabler:arrow-up
+    - title: 0% Wad Bezpieczeństwa
+      description: Polityka zerowej tolerancji wobec defektów krytycznych dla bezpieczeństwa — zawory, pierścienie D, szwy i komory wypornościowe. Każdy defekt = 100% ponowna kontrola.
+      icon: tabler:shield
+cta:
+  title: Zażądaj dokumentacji jakości
+  subtitle: Zapewniamy pełne pakiety dokumentacji jakościowej, w tym raporty z testów, certyfikaty materiałów oraz deklaracje zgodności przy każdej przesyłce. Skontaktuj się z nami w sprawie próbek.
+  actions:
+    - variant: primary
+      text: Poproś o dokumentację kontroli jakości
+      href: /contact
+    - text: Wyświetl protokoły testowania
+      href: /quality

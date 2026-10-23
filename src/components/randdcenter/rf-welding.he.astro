@@ -1,0 +1,171 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'he' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">← חזרה למרכז מו"פ</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">מעבדה 03</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">מרכז ריתוך RF</h1>
+      <p class="mt-3 text-lg text-muted">טכנולוגיית דבקות דיאלקטרית לתפרים שמחזיקים תחת לחץ</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-jungle-mandala-1.webp"
+        alt="Aquafarer תהליך חיבור דיאלקטרי בהלחמת RF"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>המדע שמאחורי התפר</h2>
+  <p>
+    ספינה מתנפחת אמינה רק ככל שהחותמות שלה חזקות. ריתוך חלש אחד יכול לפגוע בכל תא — ובים, כישלון של תא אינו מטרד; זה
+    סיכון בטיחותי. ב{SITE.name}, השקענו במרכז ייעודי לריתוך בתדר רדיו (RF) המשלב לחצני ריתוך דיאלקטריים בדרגת תעשייה עם
+    בקרת תהליך קפדנית ובדיקות לאחר הריתוך. כל תפר שאנו מייצרים מתועד, ניתנת לעקיבה ומוסמך לעמוד או לעלות על דרישות התקן
+    הבינלאומי לכלי שיט מתנפחים.
+  </p>
+  <p>
+    ריתוך בתדר גבוה (RF) משתמש באנרגיה אלקטרומגנטית בתדר גבוה (בדרך כלל 27.12 מגהרץ) כדי לעורר את המולקולות הקוטביות
+    בתוך PVC או Hypalon מצופה בבד, וליצור חום בדיוק במשטח החומר. בשונה מריתוך באוויר חם או במרחב חום קטן, ריתוך RF יוצר
+    קשר מולקולרי אמיתי — שתי שכבות הבד מתמזגות לחומר הומוגני אחד באזור הריתוך, ומייצרות חיבור שהחוזק שלו שווה לחומר
+    המקורי עצמו.
+  </p>
+
+  <h2>ציוד ריתוך ובקרת תהליכים</h2>
+  <p>מרכז הריתוך שלנו מצויד ב:</p>
+  <table>
+    <thead><tr><th>מכונה</th><th>כוח / קיבולת</th><th>יישום</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>מכבש RF דיאלקטרי 1</td><td>15 קילוואט, פלטן 2000 × 600 מ"מ</td><td
+          >תפרים אורך ראשיים, חיבורים מהרוחב לצינור</td
+        ></tr
+      >
+      <tr
+        ><td>מכבש RF דיאלקטרי 2</td><td>10 קילוואט, פלטן 1500 × 500 מ"מ</td><td
+          >תפרי חיבור של מחסומים, צמידי קונוס, תיקוני שסתומים</td
+        ></tr
+      >
+      <tr
+        ><td>מכונת ריתוך RF מבוקרת CNC</td><td>8 קילוואט, שולחן XY 2500 × 1200 מ״מ</td><td
+          >תפרים מעוקלים, דפוס לוגו/פאנל בולט, עבודת פאצ'וורק מדויקת</td
+        ></tr
+      >
+      <tr
+        ><td>ריתוך אוטומטי Hotwedge</td><td>טמפרטורה משתנה, מקסימום 1.2 מ'/דקה</td><td
+          >שיטת גיבוי לחומרים Hypalon/CSM</td
+        ></tr
+      >
+    </tbody>
+  </table>
+  <p>
+    כל מכבש RF מצויד במעקב סגור אחר טמפרטורה ולחץ. פרמטרי הריתוך — כוח, זמן לחיצה, זמן קירור, לחץ האלקטרודה — מתוכנתים
+    לפי סוג החומר ומוקלטים במערכת ניהול הייצור שלנו (MES) למעקב מלא.
+  </p>
+
+  <h2>בדיקות איכות ריתוך — כל תפר, כל סירה</h2>
+  <p>שלמות הריתוך נבדקת באמצעות פרוטוקול חובה של ארבעה מבחנים:</p>
+  <ol>
+    <li>
+      <strong>בדיקה חזותית</strong>— 100% מהתפירות נבדקות ויזואלית לנקבים, חוסר יישור, זיהום או חיבור לא שלם. סף שיעור
+      דחייה: 0.5% מהמטרים הקוויים.
+    </li>
+    <li>
+      <strong>בדיקת קילוף ()</strong>— רצועה ברוחב 25 מ"מ נחתכת מנתיך בדיקה שנריתך עם כל אצווה ייצור. כוח לקילוף
+      מינימלי: 120 ניוטון/25 מ"מ עבור PVC 1100 דטקס.
+    </li>
+    <li>
+      <strong>בדיקת אטימות לאוויר</strong>— כל תא שהושלם מנותח ללחץ של 1.25 × לחץ עבודה ומוחזק במשך 24-48 שעות. ירידת
+      הלחץ לא חייבת לעלות על 2%.
+    </li>
+    <li>
+      <strong>בדיקת מחזורים תרמיים</strong>— דגימות הקופונים מועברות ממינוס 20 מעלות צלזיוס ל+ 60 מעלות צלזיוס במשך 50
+      מחזורים, ולאחר מכן נבדקות שוב בעזרת בדיקת קילוף. אובדן חוזק מקובל: פחות מ-10 %.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      השוואת חוזק קילוף — ריתוך RF מול ריתוך באוויר חם (PVC 1100 דטקס)
+    </p>
+    <div class="space-y-3">
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">ריתוך RF</span><div
+          class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded"
+        >
+          <div class="h-full bg-blue-600 rounded" style="width:92%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">184 N</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">אוויר חם</span><div
+          class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded"
+        >
+          <div class="h-full bg-gray-400 rounded" style="width:65%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">130 N</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">דקה</span><div class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded">
+          <div class="h-full bg-green-500 rounded" style="width:48%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">96 N</span>
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">ריתוך RF משיג באופן עקבי 90-95% מחוזק חומר המקור, הרבה מעל המינימום.</p>
+  </div>
+
+  <h2>מומחיות מקצועית</h2>
+  <p>
+    צוות ההלחמה שלנו מובל על ידי מהנדס תהליכים בכיר עם 11 שנות ניסיון בהלחמת דיאלקטריות של טקסטילים מצופים. כל אופרטור
+    משלם תוכנית הסמכה פנימית של 6 חודשים לפני שמותר לו לעבוד על תפרי ייצור. נדרשת הסמכה מחודשת מדי שנה, כולל מבחן הלחמה
+    מעשי המוערך לפי התקן הפנימי שלנו דרגה A (כוח קילוף &ge; 160 N/25 מ"מ).
+  </p>
+
+  <h2>פתרונות ריתוך מותאמים לדרישות ייחודיות</h2>
+  <p>
+    אנו מבינים שמפרט ריתוך אחד אינו מתאים לכל יישום. מרכז הריתוך RF שלנו מפתח באופן שגרתי תצורות תפר מותאמות אישית
+    ללקוחות עם דרישות מיוחדות:
+  </p>
+  <ul>
+    <li>
+      <strong>בטנות חיזוק מרובדות</strong>— לאזורים בעלי שחיקה גבוהה כגון פסי חיכוך וקונוסים בחזית, אנו מפתחים ריתוכים
+      RF מרובי מעבר שמשלבים שכבת חיצונית עמידה לשחיקה מבלי לפגוע בגמישות.
+    </li>
+    <li>
+      <strong>תפרים מוליכים או אטומי RF</strong>— עבור כלי שיט צבאיים או מעקב שדורשים שימור אלקטרומגנטי, אנחנו מרתכים
+      שכבות רשת מוליכת בתוך הצטברות התפר.
+    </li>
+    <li>
+      <strong>ריתוך לוח שינוי צבע</strong>— לוחות בד בצבעים כפולים (למשל גוף כתום + חלק עליון אפור) מותאמים בריתוך עם
+      חפיפה מוסתרת כדי לשמור על אסתטיקת המותג מבלי קו חיבור גלוי.
+    </li>
+  </ul>
+
+  <h2>המחויבות שלנו אליך</h2>
+  <p>
+    כל סירה שאנו מספקים נושאת את התחייבות האיכות שלנו לריתוך: אם כל תפר נכשל בשירות רגיל במהלך תקופת האחריות, אנו מתקן
+    או מחליפים את התא הנפגע ללא עלות, ונערכת בדיקה לבחינת שורש הבעיה כדי למנוע הישנות. זה לא סתם אחריות — זו התחייבות
+    לשיפור מתמיד המונעת על ידי נתונים תפעוליים מהעולם האמיתי.
+  </p>
+  <p>
+    כאשר אתה בוחר{SITE.name}, אתה בוחר תפרים שמתוכננים, נבדקים ומתועדים — לא רק מרותכים. זה ההבדל בין סירה שצפה וסירה
+    שמבצעת.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">דון בדרישות הריתוך שלך</h2>
+    <p class="mt-2 text-sm text-muted">מפרטי תפר מותאמים אישית, תאימות חומר, או אימות תהליך.</p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >צור קשר עם צוות הריתוך שלנו</a
+    >
+  </div>
+</section>

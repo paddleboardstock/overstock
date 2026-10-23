@@ -1,0 +1,56 @@
+hero:
+  tagline: Makmal Kawalan Kualiti
+  title: Makmal Ujian & Jaminan Kualiti
+  subtitle: Makmal kualiti bebas dengan proses ISO 9001 — setiap unit diuji sebelum penghantaran
+intro: Aquafarer mengendalikan makmal kawalan kualiti khusus yang beroperasi secara bebas daripada pengeluaran. Setiap batch bahan mentah dan setiap bot siap diperiksa mengikut protokol pemeriksaan yang didokumenkan sebelum dikeluarkan. Pasukan QC kami melaporkan terus kepada pihak pengurusan, memastikan keputusan kualiti yang tidak berat sebelah.
+highlights:
+  - value: 100%
+    label: Unit diuji tekanan
+    detail: Setiap ruang, setiap bot
+  - value: 48 h
+    label: Tempoh ujian penahanan udara
+    detail: Pada tekanan 1.25× tahap yang dinilai
+  - value: '&lt;5%'
+    label: Jumlah kejatuhan tekanan maksimum yang dibenarkan
+    detail: Dalam tempoh tahan 24 jam
+  - value: AQL 2.5
+    label: Ambang kecacatan utama
+    detail: Setiap ISO 2859 persampelan
+test_procedures:
+  - title: Pemeriksaan Bahan Mentah
+    description: Setiap batch PVC, kain Hypalon, drop-stitch dan perkakasan yang diterima diuji sebelum diterima. Kekuatan tegangan (ASTM D751), rintangan koyakan (ISO 4674), dan rintangan UV disahkan. Bahan yang tidak mematuhi piawaian dikarantin dan dikembalikan.
+    standards:
+      - ASTM D751 (tegangan)
+      - ISO 4674 (koyakan)
+      - ISO 4892 (UV)
+  - title: Pemeriksaan QC Semasa Proses
+    description: Operator pengeluaran melakukan pemeriksaan sendiri pada setiap peringkat. Juruaudit QC melakukan persampelan rawak sepanjang syif. Ujian pengelupasan kimpalan dilakukan setiap 50 unit. Pemeriksaan dimensi dilakukan setiap panel ke-20.
+    standards:
+      - ASTM D751 (pengelupasan)
+      - Senarai semak 100-mata dalaman
+      - ISO 2859 persampelan
+  - title: Ujian Penahanan Udara 48-Jam
+    description: Setiap ruang tiub ditiup ke 125% tekanan dinilai dan ditahan selama 48 jam. Sensor tekanan mencatat secara berterusan dengan pampasan suhu. Sebarang ruang yang melepasi kejatuhan tekanan 5% akan mencetuskan pemeriksaan semula batch secara automatik.
+    standards:
+      - ISO 6185
+      - CE 2013/53/EU
+  - title: Ujian Beban & Keseimbangan
+    description: Bot yang lengkap diuji pada kapasiti maksimum yang dinilai untuk kestabilan, freeboard, dan pengendalian. Setiap kapal menjalani ujian air sebelum kelulusan pemeriksaan akhir.
+    standards:
+      - ISO 12217
+      - CE 2013/53/EU
+equipment:
+  - name: Mesin Ujian Sejagat (tarik)
+    spec: 5 kN, mematuhi ASTM D751
+  - name: Penguji Kemerosotan Tekanan
+    spec: Pelbagai saluran, 0–50 psi, merekod data
+  - name: UV Bilik Penuaan Cuaca
+    spec: ISO 4892, 1,000 kitaran jam
+  - name: Pengukur Ketebalan (digital)
+    spec: Resolusi 0.01 mm
+  - name: Penguji Kupas (las)
+    spec: Bertenaga motor, kapasiti 50 N
+  - name: Bilik Suhu
+    spec: -40 °C hingga +100 °C
+  - name: Tangki Pengesanan Kebocoran
+    spec: 6 m × 2 m, diterangi

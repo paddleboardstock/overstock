@@ -1,0 +1,202 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'lt' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">&larr; Atgal į MTEP centrą</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Laboratorija 05</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Prototipo dirbtuvės</h1>
+      <p class="mt-3 text-lg text-muted">
+        Nuo CAD modelio iki jūrai paruošto laivo – pastatytas, sumontuotas ir patikrintas
+      </p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-ocean-voyager-1.webp"
+        alt="Aquafarer prototipo dirbtuvė valtims gaminti"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Kur dizainas tampa realybe</h2>
+  <p>
+    CAD modelis, nesvarbu, koks detaliai jis būtų sukurtas, negali parodyti, kaip valtis iš tikrųjų elgsis vandenyje.
+    Todėl mūsų Prototipų dirbtuvė yra sukurta taip, kad inžinerinius duomenis perkeltų į fizinę, jūroje plaukiančią
+    valtį kuo greičiau ir tiksliau. Kiekviena nauja{SITE.name}modelis — ir kiekvienas reikšmingas užsakomasis gaminys —
+    praeina per šią dirbtuvę prieš pradedant gamybos įrankių naudojimą.
+  </p>
+  <p>
+    Dirbtuvės yra pilnai įrengtos vienu metu gaminti korpusą, vamzdžius ir takelažą. Šis lygiagretus darbo procesas
+    sutrumpina prototipo pristatymo laiką iki 8–12 savaičių nuo inžinerinio išleidimo, palyginti su pramonės norma –
+    16–20 savaičių. Kai jūsų programai reikalingas specializuotas sprendimas, galime pereiti nuo koncepcijos prie
+    validacijos vandenyje per mažiau nei tris mėnesius.
+  </p>
+
+  <h2>Dirbtuvių galimybės</h2>
+  <table>
+    <thead><tr><th>Darbo stotis</th><th>Įranga</th><th>Paskirtis</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Korpuso gamyba</td><td
+          >Sukamoji liejimo krosnis (HDPE), TIG suvirinimo skyrius (aliuminis), rankomis uždengiamos formos (stiklo
+          pluoštas)</td
+        ><td>Pilno masto korpuso gamyba visuose trijuose medžiagų tipuose</td></tr
+      >
+      <tr
+        ><td>Vamzdelių surinkimas</td><td
+          >RF suvirinimo presas, karšto oro tvirtinimo stotis, pripūtimo testavimo šablonas</td
+        ><td>Pilno dydžio vamzdžių surinkinių gamyba su visais pertvaromis, kūgiais ir vožtuvais</td></tr
+      >
+      <tr
+        ><td>Rigavimas ir pritaikymas</td><td
+          >Variklio keltuvas (500 kg), konsolės maketas, hidraulinis žarnos spaudimo įtaisas, elektrinė laidų lenta</td
+        ><td>Pilnas įrangos komplektas: variklis, vairas, valdymas, kuro sistema, elektronika, sėdimos vietos</td></tr
+      >
+      <tr
+        ><td>Instrumentų skyrius</td><td
+          >GPS greičio jutiklis, kuro srauto matuoklis, akselerometrai, termoporų masyvas, duomenų registratorius</td
+        ><td>Jūrinių bandymų instrumentų montavimas ir kalibravimas</td></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>Prototipo kelionė – žingsnis po žingsnio</h2>
+  <ol>
+    <li>
+      <strong>Inžinerinis perdavimas</strong>— Projektavimo paketas (3D modelis, FEA ataskaita, medžiagų sąrašas,
+      išdėstymo grafikas) yra oficialiai peržiūrimas dirbtuvių vadovo ir projekto inžinieriaus. Bet kokie gamybos
+      klausimai yra pažymėti ir išsprendžiami prieš pradedant pjovimą.
+    </li>
+    <li>
+      <strong>Korpuso gamyba</strong>— Korpusas statomas pagal inžinerinę specifikaciją. HDPE: rotacinio liejimo
+      programa įkeliama iš Moldex3D simuliacijos. Aliuminui: CNC-pjautos plokštelės suvirinamos TIG skyriuje pagal
+      patvirtintą suvirinimo žemėlapį. Stiklo pluoštui: fanera sekama sluoksnis po sluoksnio.
+    </li>
+    <li>
+      <strong>Vamzdžių gamyba</strong>— Audinys pjaustomas naudojant CNC-modelio šablonus, tada RF suvirinamas į pilno
+      dydžio kameras. Kiekviena kamera pripučiama slėgiui patikrinti ir paliekama 24 valandoms pradiniam stabilizavimui.
+    </li>
+    <li>
+      <strong>Surinkimas ir rigavimas</strong>— Korpusas ir vamzdžiai sujungiami. Variklis pakabintas, vairavimas ir
+      valdymas sujungti, įrengta kuro sistema, o visi elektros grandynai sujungti ir patikrinti.
+    </li>
+    <li>
+      <strong>Statiniai bandymai</strong>— Prieš laivui paliečiant vandenį, jis praeina: plūdrumo patikrą (pilnas
+      krovinys + 30 % atsargų), kuro sistemos slėgio testą, vairo sistemos pilno užrakinimo ciklo testą, elektros žemės
+      jungties tęstinumo testą.
+    </li>
+    <li><strong>Jūrų bandymų programa</strong>— 20 valandų bandymų vandenyje, išsamiai aprašyta žemiau.</li>
+    <li>
+      <strong>Prototipo apžvalga</strong>— Rengiamas oficialus užbaigimo susitikimas su inžinerijos, gamybos ir kokybės
+      komandomis. Visi reikalingi dizaino pakeitimai dokumentuojami ir įtraukiami į gamybos leidimą.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      20 valandų jūrų bandymų programa – bandymų tvarkaraštis
+    </p>
+    <div class="space-y-2 text-sm">
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">2 h</span><span class="flex-1"
+          >Uosto manevravimas — valdymas lėtu greičiu, atbulinė eiga, apsauga</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">4 h</span><span class="flex-1"
+          >Greičio bandymas — GPS patvirtintas maksimalus greitis, kruizo greitis, kuro sąnaudos 3 aps./min. taškais</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Posūkio testas — taktinis skersmuo, judėjimas ir perdavimas 20 mazgų, kairėje ir dešinėje</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Smūgių testas — pakartotiniai važiavimai per 0,5–1,0 m nuolydį; akselerometras ant vairo sėdynės pagrindo</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Stabilumo testas — statinis kulno kampas su 4 + įgulos važiuokle dešinėje pusėje, paskirstyta apkrova</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Ištvermės važiavimas — 3 val. nenutrūkstamai kruizo greičiu; temperatūros stebėjimas (variklis, kuras,
+          elektra)</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">2 h</span><span class="flex-1"
+          >Galutinė apžiūra — visų sistemų po bandomosios apžiūros, visų tvirtinimo elementų priveržimas/patikra,
+          dokumentų išvados</span
+        >
+      </div>
+    </div>
+  </div>
+
+  <h2>Individualus prototipavimas unikalioms programoms</h2>
+  <p>
+    Prototipų dirbtuvėse sprendžiame problemas, kurių standartiniai serijiniai laivai negali išspręsti. Naujausi
+    pavyzdžiai:
+  </p>
+  <ul>
+    <li>
+      7,8 m paieškos RIB ir gelbėjimo organizacijai, reikalaujanti individualios kabinos konstrukcijos su apsauga nuo
+      apvirtimo, integruotų neštuvų laikiklių ir priekyje sumontuoto sonaro modulio – visa tai buvo sukurta prototipų,
+      sumontuotų ir išbandyta mūsų objekte.
+    </li>
+    <li>
+      5,2 m ilgio pripučiamas įrenginys hidrografinio tyrimo rangovui, su sumažintu transomu, nuimamu prietaisų stiebu
+      ir per korpusą esančiomis keitiklio kišenėmis, skirtomis sumažinti srauto trikdžius.
+    </li>
+    <li>
+      4,5 m elektrinio pavaros tenderis superjachtai, kur prototipas buvo naudojamas nuotolio, įkrovimo infrastruktūros
+      ir triukšmo lygio patikrinimui prieš klientui įsipareigojant turėti keturių laivų flotilę.
+    </li>
+  </ul>
+
+  <h2>Mūsų prototipų kūrimo komanda</h2>
+  <p>
+    Dirbtuvėse dirba aštuoni daugiafunkciai jūrų technikai, kiekvienas apmokytas bent dviejose iš trijų pagrindinių
+    disciplinų (korpuso, vamzdžių, takelažo). Komandos vadovas yra meistras laivų statytojas, turintis 16 metų patirtį
+    nuo individualių užsakymų iki serijinių serijų. Kiekvienam prototipui priskiriamas specialus projekto inžinierius,
+    kuris yra vienintelis kontaktinis asmuo klientui viso statybos ir bandymo proceso metu.
+  </p>
+
+  <h2>Klientų įsitraukimas</h2>
+  <p>
+    Aktyviai skatiname klientus dalyvauti svarbiausiuose prototipo kūrimo etapuose – ypač pradiniame įrengimo peržiūros
+    etape ir jūrų bandyme. Jūsų operacinė grįžtamoji informacija šiuose etapuose yra neįkainojama tobulinant laivą prieš
+    pradedant gamybą. Mes nestatome vakuume; mes kuriame bendradarbiaudami su jumis.
+  </p>
+  <p>
+    20 valandų jūrinis bandymas taip pat suteikia jūsų komandai galimybę susipažinti su laivo valdymu, sistemų išdėstymu
+    ir techninės priežiūros reikalavimais, užtikrinant sklandų perėjimą prie tarnybos, kai gamybiniai laivai bus
+    pristatyti.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Pradėkite savo prototipo projektą</h2>
+    <p class="mt-2 text-sm text-muted">
+      Papasakokite apie jums reikalingą laivą, ir mes pasiūlysime prototipo kūrimo planą.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Susisiekite su mūsų prototipavimo komanda</a
+    >
+  </div>
+</section>

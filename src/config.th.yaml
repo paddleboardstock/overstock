@@ -1,0 +1,118 @@
+site:
+  name: Aquafarer
+  site: 'https://aquafarer.com'
+  base: '/'
+  trailingSlash: false
+  googleSiteVerificationId: ''
+metadata:
+  title:
+    default: Aquafarer — เรือเป่าลมสมัยใหม่และโซลูชันผลิตภัณฑ์เทคนิค
+    template: '%s — Aquafarer'
+  description: 'Aquafarer ออกแบบและผลิตเรือเป่าลมคุณภาพสูง RIB และผลิตภัณฑ์เทคนิค สำรวจผลิตภัณฑ์ ข้อมูลจำเพาะ และทรัพยากรของเรา'
+  keywords:
+    - Aquafarer
+    - เรือเป่าลม
+    - RIB
+    - PVC
+    - ทางทะเล
+    - วิศวกรรม
+  author: Aquafarer
+  robots:
+    index: true
+    follow: true
+  openGraph:
+    site_name: Aquafarer
+    images:
+      - url: '~/assets/images/default.webp'
+        width: 1200
+        height: 628
+    type: website
+    locale: th_TH
+  twitter:
+    handle: '@Aquafarer'
+    site: '@Aquafarer'
+    cardType: summary_large_image
+i18n:
+  textDirection: ltr
+apps:
+  blog:
+    isEnabled: true
+    postsPerPage: 6
+    post:
+      isEnabled: true
+      permalink: '/news/%slug%'
+      robots:
+        index: true
+        follow: true
+    list:
+      isEnabled: true
+      pathname: 'news'
+      robots:
+        index: true
+        follow: true
+    category:
+      isEnabled: true
+      pathname: 'category'
+      robots:
+        index: true
+        follow: true
+    tag:
+      isEnabled: true
+      pathname: 'tag'
+      robots:
+        index: false
+        follow: true
+    isRelatedPostsEnabled: true
+    relatedPostsCount: 4
+  products:
+    isEnabled: true
+    productsPerPage: 12
+    product:
+      isEnabled: true
+      permalink: '/products/%slug%'
+      robots:
+        index: true
+        follow: true
+    list:
+      isEnabled: true
+      pathname: 'products'
+      robots:
+        index: true
+        follow: true
+analytics:
+  vendors:
+    googleAnalytics:
+      id: null
+ui:
+  theme: 'system'
+
+siteSettings:
+  siteName: 'Aquafarer'
+  siteTagline: 'Aquafarer — เรือเป่าลมระดับพรีเมียม บอร์ด SUP และอุปกรณ์กีฬาทางน้ำ'
+  siteDescription: 'Aquafarer ออกแบบและผลิตเรือเป่าลมระดับพรีเมียม บอร์ด SUP และอุปกรณ์กีฬาทางน้ำ'
+  organization:
+    name: 'Aquafarer'
+    logo: ''
+    contactEmail: info@aquafarer.com
+    contactPhone: '+86 13305324192'
+    address: 'Economic Development Zone, Laixi, Qingdao, China, 266600'
+
+branding:
+  site_name: 'Aquafarer'
+  logo_image: ''
+  logo_alt: 'โลโก้ Aquafarer'
+  copyright: '© {year} {site_name} · สงวนลิขสิทธิ์'
+  phone: '+86 13305324192'
+  address: 'Economic Development Zone, Laixi, Qingdao, China, 266600'
+  email: info@aquafarer.com
+  whatsapp_number: '+86 13305324192'
+  whatsapp_default_message: 'สวัสดี ฉันต้องการสอบถามเกี่ยวกับสินค้า'
+  contact_email_to: info@aquafarer.com
+  contact_email_provider: resend
+  contact_from_email: info@aquafarer.com
+  contact_from_name: Aquafarer
+  contact_resend_api_key: Aa123456#
+  contact_submissions_pat: ''
+  gmap_api_key: ''
+  map_latitude: '36.8861'
+  map_longitude: '120.5261'

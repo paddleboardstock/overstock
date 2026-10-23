@@ -1,0 +1,182 @@
+---
+const { lang = 'pl' } = Astro.props;
+import JsonLd from '~/components/common/JsonLd.astro';
+import { getPageContent, setPageContentData } from '~/i18n/page-content';
+import __pageData from '~/i18n/generated/pages/technology.ts';
+const lh = (h: string) => (h ? '/' + lang + h : h);
+setPageContentData(__pageData);
+const page = getPageContent(lang, 'technology') || {};
+const hero = page.hero || {};
+const trustBar = page.trust_bar || {};
+const sections = page.sections || [];
+const testimonial = page.testimonial || {};
+const related = page.related || {};
+---
+
+<meta
+  name="ai-intent"
+  content="inflatable-boat-technology,drop-stitch-construction,marine-pvc-materials,hypalon-tubes,inflatables-rd-center"
+/>
+<JsonLd
+  type="Article"
+  article={{
+    headline: 'Technologia i materiały — rdzeń Drop-Stitch, PVC, Hypalon',
+    description:
+      'Aquafarer technologia produktu: Drop-Stitch konstrukcja rdzenia w 12-15 PSI, spawana tkanina PVC do zastosowań morskich, węże gumowe Hypalon-CSM, systemy podłogowe pokładu powietrznego. Badania i rozwój materiałów wewnętrznych od 2012.',
+    datePublished: '2026-07-07',
+  }}
+  data={{ url: 'https://aquafarer.com/technology' }}
+/>
+
+<section class="bg-gradient-to-br from-[#001830] via-[#002d4a] to-[#003355] text-white py-24 px-6">
+  <div class="max-w-4xl mx-auto text-center">
+    <span class="text-xs font-medium uppercase tracking-[0.2em] text-sky-300">{hero.tagline || 'Technologie'}</span>
+    <h1 class="mt-4 text-4xl md:text-5xl font-bold tracking-tight">{hero.title || 'Für Leistung gebaut'}</h1>
+    <p class="mt-4 text-lg text-sky-100/80 max-w-3xl mx-auto">{hero.subtitle}</p>
+  </div>
+</section>
+
+{
+  trustBar.items && trustBar.items.length > 0 && (
+    <section class="px-6 py-12 mx-auto max-w-6xl -mt-8 relative z-10">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {trustBar.items.map((s: any) => (
+          <div class="text-center p-5 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 shadow-sm">
+            <span class="block text-2xl font-bold text-[#06b6d4]">{s.value}</span>
+            <span class="block text-sm font-semibold text-gray-900 mt-1">{s.label}</span>
+            {s.sub && <span class="block text-xs text-gray-500 mt-0.5">{s.sub}</span>}
+          </div>
+        ))}
+      </div>
+    </section>
+  )
+}
+
+<section class="px-6 py-16 mx-auto max-w-5xl">
+  <div class="text-center mb-12">
+    <p class="text-sm font-semibold text-[#06b6d4] uppercase tracking-wider">Materiały i konstrukcja</p>
+    <h2 class="mt-2 text-3xl font-bold text-gray-900">Zaprojektowany dla środowisk morskich</h2>
+    <p class="mt-3 text-gray-500 max-w-2xl mx-auto">
+      Każdy materiał jest wybierany, testowany i zatwierdzany wewnętrznie w naszym centrum badawczo-rozwojowym o
+      powierzchni 12.000 m² w Qingdao.
+    </p>
+  </div>
+  <div class="space-y-12">
+    {
+      sections.map((sec: any, i: any) => {
+        const isReversed = i % 2 === 1;
+        return (
+          <div class="grid md:grid-cols-2 gap-8 items-center">
+            {isReversed ? (
+              <>
+                <div class="order-2 md:order-1 rounded-2xl h-48 overflow-hidden">
+                  {sec.image && (
+                    <img src={sec.image} alt={sec.title} class="w-full h-full object-cover" loading="lazy" />
+                  )}
+                </div>
+                <div class="order-1 md:order-2">
+                  <h2 class="text-2xl font-bold text-gray-900">{sec.title}</h2>
+                  {sec.standard && (
+                    <span class="inline-block mt-1 px-3 py-0.5 bg-sky-50 text-sky-700 rounded-full text-xs font-mono font-medium">
+                      {sec.standard}
+                    </span>
+                  )}
+                  <p class="mt-3 text-gray-600 leading-relaxed">{sec.description}</p>
+                </div>
+              </>
+            ) : (
+              <>
+                <div>
+                  <h2 class="text-2xl font-bold text-gray-900">{sec.title}</h2>
+                  {sec.standard && (
+                    <span class="inline-block mt-1 px-3 py-0.5 bg-sky-50 text-sky-700 rounded-full text-xs font-mono font-medium">
+                      {sec.standard}
+                    </span>
+                  )}
+                  <p class="mt-3 text-gray-600 leading-relaxed">{sec.description}</p>
+                </div>
+                <div class="rounded-2xl h-48 overflow-hidden">
+                  {sec.image && (
+                    <img src={sec.image} alt={sec.title} class="w-full h-full object-cover" loading="lazy" />
+                  )}
+                </div>
+              </>
+            )}
+          </div>
+        );
+      })
+    }
+  </div>
+</section>
+
+{
+  testimonial.quote && (
+    <section class="px-6 py-16 mx-auto max-w-5xl">
+      <div class="bg-gradient-to-br from-sky-50 to-white dark:from-gray-900 dark:to-gray-950 rounded-2xl border border-sky-100 dark:border-gray-800 p-8 md:p-12">
+        <div class="grid md:grid-cols-5 gap-8 items-center">
+          <div class="md:col-span-3">
+            <span class="text-sm font-semibold text-[#06b6d4] uppercase tracking-wider">Co mówią nasi partnerzy</span>
+            <blockquote class="mt-4 text-lg text-gray-700 dark:text-gray-300 leading-relaxed italic">
+              &ldquo;{testimonial.quote}&rdquo;
+            </blockquote>
+            <div class="mt-4 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-sky-100 flex items-center justify-center text-sky-700 font-bold">
+                {testimonial.author?.charAt(0) || 'C'}
+              </div>
+              <div>
+                <p class="font-semibold text-gray-900 text-sm">{testimonial.author}</p>
+                <p class="text-xs text-gray-500">
+                  {testimonial.title}, {testimonial.company} &middot; {testimonial.location}
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="md:col-span-2">
+            <div class="p-5 bg-white dark:bg-gray-900 rounded-xl border border-gray-200">
+              <h3 class="font-bold text-gray-900 text-sm">Wewnętrzne badania i rozwój</h3>
+              <p class="mt-2 text-sm text-gray-600 leading-relaxed">
+                Nasz zespół zajmujący się materiałoznawstwem opracowuje i weryfikuje we własnym zakresie każdą
+                recepturę, każdy parametr spawania i każdą strukturę warstw konstrukcyjnych. Brak outsourcingu
+                kluczowych prac inżynieryjnych.
+              </p>
+              <a
+                href={lh('/randdcenter')}
+                class="mt-3 inline-flex text-sm font-medium text-[#06b6d4] hover:text-sky-700"
+              >
+                Nasze centrum badawczo-rozwojowe →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+<section class="px-6 pb-20 mx-auto max-w-4xl">
+  <div class="flex flex-wrap justify-center gap-3 text-sm">
+    <span class="text-gray-400 font-medium">Odkryj więcej:</span>
+    {
+      (related.links && related.links.length > 0 ? related.links : []).map((link: any) => (
+        <a
+          href={lh(link.url)}
+          class="px-3 py-1.5 bg-white rounded-lg border border-gray-200 text-gray-700 hover:border-sky-300 hover:text-sky-600 transition-colors"
+        >
+          {link.text} &rarr;
+        </a>
+      ))
+    }
+  </div>
+</section>
+
+<section class="sr-only" data-ai-block="embedding-anchor" aria-hidden="true">
+  <p>
+    Technologia Aquafarer koncentruje się na systemach kontroli pływalności, stabilności strukturalnej konstrukcji
+    nadmuchiwanych, odporności na uderzenia wody i sztywności rdzenia Drop-Stitch sprzętu do sportów wodnych.
+    Drop-Stitch rdzeń: 12-15 PSI ciśnienie robocze, tysiące nici poliestrowych łączących warstwę górną i dolną. Klasa
+    morska PVC: wielowarstwowa laminowana, spawana, testowana zgodnie z ASTM G154 (UV), ASTM D751 (ścieranie), ISO 9227
+    (test mgły solnej). Węże Hypalon-CSM: UV i odporne na chemikalia, ręcznie klejone szwy. Podłoga pokładu
+    powietrznego: nadmuchiwana pod wysokim ciśnieniem, 200+kg nośność. Wewnętrzne centrum badawczo-rozwojowe w Qingdao w
+    Chinach. 12.000 m² duży obiekt. 15+ lat inżynierii materiałowej.
+  </p>
+</section>

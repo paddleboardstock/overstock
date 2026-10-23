@@ -1,0 +1,155 @@
+hero:
+  tagline: Mérnöki
+  title: Termékfejlesztés és egyedi<br />Fejlesztés a OEM partnerei számára
+  subtitle: A koncepciótervezéstől a gyártásra kész termékig — a Aquafarer mérnöki csapata teljes körű termékfejlesztést biztosít RIB hajók, felfújható vízi járművek és vízisporteszközök számára.
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-production-department.webp
+    alt: Aquafarer mérnöki és termékfejlesztő csapat
+stats:
+  title: Mérnöki munka számokban
+  stats:
+    - title: Kutatási és fejlesztési mérnökök
+      amount: 25+
+    - title: Összesített tapasztalat
+      amount: 78+ év
+    - title: Termékplatformok
+      amount: 40+
+    - title: OEM Befejezett projektek
+      amount: 1,200+
+content_capability:
+  tagline: Műszaki képesség
+  title: Mi mérnökségünk<br />A csapat szállít
+  subtitle: Aquafarer mérnöki munka lefedi a teljes termék életciklust — a piackutatástól és a koncepciótervezéstől a prototípus-gyártáson, tesztelésen és tömeggyártáson át.
+  items:
+    - title: Ipari tervezés
+      description: Ipari formatervező csapatunk az ügyfél igényeiből, piackutatásból és versenytárs elemzésekből dolgozik ki termékkoncepciókat, amelyek ötvözik az esztétikát, a funkcionalitást és a gyárthatóságot. Készítünk 2D vázlatokat, 3D látványterveket és specifikációs dokumentumokat az ügyfél átvizsgálására, mielőtt hozzálátunk a szerszámkészítéshez.
+      features:
+        - Koncepciófejlesztés és megvalósíthatósági tanulmányok
+        - 2D tervezési rajzok és 3D látványtervek
+        - Anyagválasztás és specifikáció
+        - Gyártásra tervezés (DFM) elemzés
+        - Ergonómiai és biztonsági értékelés
+    - title: Szerkezetmérnöki munka
+      description: Szerkezetmérnökeink az felfújható hajók tervezésére specializálódtak — a hajótest kialakítása, a csőkamrák konfigurációja, drop-stitch magmérnöki tervezés és a terheléselosztás. Minden tervet elemzünk a szerkezeti integritás, a súlyoptimalizáció és a vonatkozó szabványoknak való megfelelés (CE, ISO, AS) szempontjából.
+      features:
+        - Mély-V üvegszálas hajótest kialakítás számított deadrise szögekkel
+        - Többlégterű csőkonfiguráció a biztonság és a felhajtóerő érdekében
+        - Drop-stitch mag specifikáció és sűrűség optimalizálás
+        - Véges elem analízis teherhordó alkatrészekhez
+        - Súlyeloszlás és stabilitási számítások
+    - title: 3D modellezés és CAD
+      description: Minden terméktervet 3D CAD-ben dolgozunk ki, mielőtt megkezdődne a prototípus eszközgyártása. Mérnökeink a SolidWorks és a Rhino 3D programokat használják a termékmodellezéshez, lehetővé téve az ügyfelek számára, hogy minden részletet — a csőprofiloktól a konzol elrendezéséig — átnézzenek, mielőtt a gyártásra köteleznék el magukat.
+      features:
+        - Teljes 3D CAD modellezés SolidWorks és Rhino 3D programokban
+        - Fotórealisztikus megjelenítés ügyfélprezentációkhoz
+        - Műszaki rajzcsomagok a gyártáshoz
+        - Forma- és szerszámtervezés 3D modellekből
+        - CAD-CNC közvetlen adatátvitel a precíziós vágáshoz
+    - title: Prototípus készítés és tesztelés
+      description: A tömeggyártás előtt minden új termék átesik a prototípus szakaszon. Funkcionális prototípusokat készítünk az ügyfél értékelésére, majd alávetjük őket teljes tesztelési protokollunknak — nyomáspróba, stabilitáspróba, terheléspróba és vízi tesztek. A prototípus szakaszban a tervezési iterációk gyorsak és költséghatékonyak.
+      features:
+        - Gyors prototípus-készítő szerszámok (15-20 napos átfutási idő)
+        - Funkcionális prototípus valós világban történő értékeléshez
+        - Teljes tesztelési protokoll a gyártási jóváhagyás előtt
+        - Ismétlődő tervezési finomítás a teszteredmények alapján
+        - Ügyfél jóváhagyási mérföldkő a gyártási szerszámok előtt
+    - title: Egyedi kiegészítő integráció
+      description: Sok OEM projekt megköveteli az ügyfél által szállított vagy harmadik féltől származó kiegészítők — egyedi konzolok, speciális ülések, elektronikai rendszerek, búvárfelszerelés tartók vagy márkajelzési elemek — integrációját. Mérnöki csapatunk kezeli az összes kiegészítő integrációs tervezését, szerkezeti adaptációját és minőség-ellenőrzését.
+      features:
+        - Konzol kialakítás és műszerfal elrendezés
+        - Egyedi ülések és kárpitozás integrációja
+        - Elektronikus rendszer tervezése és kábelezése
+        - Búvár- és mentési felszerelések rögzítőrendszerei
+        - Márka- és grafikai alkalmazási előírások
+content_process:
+  tagline: Fejlesztési folyamat
+  title: Koncepcióból<br />Termeléshez
+  subtitle: Termékfejlesztési folyamatunk egy strukturált, 6 lépésből álló munkafolyamatot követ, amelynek célja a kockázat minimalizálása, az idővonalak tömörítése és a gyártási készség biztosítása az első naptól kezdve.
+  stages:
+    - stage: '01'
+      title: Követelmények és kutatás
+      duration: 1-2 hét
+      description: A klienssel együttműködve meghatározzuk a termék specifikációit, a célpiac követelményeit, a szabályozási megfelelőségi igényeket és a kereskedelmi célokat. Ez a szakasz egy Termékkövetelmény-Dokumentumot (PRD) hoz létre, amely irányítja az összes további munkát.
+      deliverables: PRD, piaci elemzés, versenytárs-átlag, előzetes költségbecslés
+    - stage: '02'
+      title: Koncepcióterv
+      duration: 2-3 hét
+      description: Az ipari tervezési csapat a PRD alapján fejleszti ki termékkoncepciókat. Több tervezési lehetőséget kínálnak, 3D képesítésekkel, anyagajánlásokkal és kezdeti mérnöki értékelésekkel. Az ügyfél választja ki az irányt a részletes fejlesztéshez.
+      deliverables: 3D koncepcióképek, anyagspecifikációk, tervezési indoklás, előzetes BOM
+    - stage: '03'
+      title: Részletes mérnöki munka
+      duration: 2-4 hét
+      description: A kiválasztott koncepció teljesen megtervezett — 3D CAD modellezés, szerkezeti elemzés, csőkonfiguráció, hajótesttervezés, kiegészítők integrációja és gyártási dokumentáció. Minden méret, anyag és folyamat meg van jelölve a szerszámkészítéshez.
+      deliverables: Teljes 3D CAD modell, mérnöki rajzok, végső BOM, szerszámspecifikációk, QC terv
+    - stage: '04'
+      title: Prototípus
+      duration: 2-3 hét
+      description: Prototípus szerszámokat készítenek, és funkcionális mintákat készítenek. Az ügyfél a prototípust PRD specifikációi alapján értékeli. A tesztelést a megállapodás szerint végzik. A tervezési módosításokat visszajelzés alapján végzik a gyártási szerszámok bevezetése előtt.
+      deliverables: Funkcionális prototípus, tesztjelentés, tervezési felülvizsgálati napló, ügyfél aláírási dokumentum
+    - stage: '05'
+      title: Gyártási szerszámok
+      duration: 2-3 hét
+      description: A prototípus jóváhagyása után gyártási szerszámokat rendelnek meg – formák, hegesztő jigek, vágási programok, összeszerelési berendezések. A minőségellenőrzési dokumentáció és ellenőrzési kritériumok véglegesítésre kerülnek. A folyamat ellenőrzése próbafuttatása zajlik.
+      deliverables: Gyártási szerszámok, folyamatdokumentáció, minőségellenőrzési terv, próbajelentés
+    - stage: '06'
+      title: Tömeggyártás és minőségellenőrzés
+      duration: Folyamatban
+      description: A teljes gyártás minden szakaszban folyamatban lévő minőségellenőrzéssel kezdődik. Az első termékeket a tétel kiadása előtt ellenőrizik és jóváhagyják. Folyamatos minőségellenőrzés, hibakövetés és folyamatos fejlesztés a gyártási életciklus során.
+      deliverables: Gyártási menetrend, minőségellenőrzési jelentések, kötetes nyomon követhetőségi nyilvántartások, szállítási dokumentáció
+content_customization:
+  tagline: Testreszabási lehetőségek
+  title: Mi lehet<br />Testreszabott
+  subtitle: Termékeink szinte minden aspektusa testreszabható az ügyféligények megfelelően. Az alábbiakban a leggyakoribb testreszabási kategóriák találhatók.
+  columns: 3
+  items:
+    - title: Hajótest és szerkezet
+      description: Egyedi törzshossz, gerendaszélesség, holtállás szög, csőátmérő, kamra elrendezése és anyagminőség.
+      icon: tabler:sailboat
+    - title: Színek és grafika
+      description: Csőszín (PVC/Hypalon), hajótest gélkabtok színe, konzol színe, fedélzeti grafika, logó elhelyezése és csomagolástervezés.
+      icon: tabler:palette
+    - title: Konzol és irányítás
+      description: Középkonzol, oldalsó konzol vagy kormánykormány. Egyedi műszerfal elrendezés, kapcsoló elhelyezése és kormány pozíciója.
+      icon: tabler:steering-wheel
+    - title: Ülőhelyek és kárpitozás
+      description: Jockey ülések, padok, luxus kárpitozás, színhez illő varrások, összehajtogatható vagy levehető konfigurációk.
+      icon: tabler:armchair
+    - title: Kiegészítők és felszerelések
+      description: Merülőlétrák, tartálytartók, vontató pillérek, T-topok, Bimini tetők, hangrendszerek, navigációs elektronika és biztonsági felszerelések.
+      icon: tabler:backpack
+    - title: Csomagolás és márkaépítés
+      description: Egyedi kiskereskedelmi csomagolás, saját márkás dobozok, márkajelzéssel ellátott szállítódobozok, akasztós címkék és használati útmutatók az ügyfél nyelvén.
+      icon: tabler:box
+content_industries:
+  tagline: Ipari alkalmazások
+  title: Műszaki megoldások<br />ipar szerint
+  subtitle: Mérnöki csapatunk számos tengeri alkalmazásra fejlesztett ki termékeket — mindegyiknek megvannak a sajátos követelményei és teljesítménymutatói.
+  columns: 3
+  items:
+    - title: Búvárműveleti tevékenységek
+      description: Megerősített fedélzetek, búvárlétra integráció, tartálytároló rendszerek és stabil platformok világszerte kereskedelmi búvárközpontok számára.
+      icon: tabler:lifebuoy
+    - title: Mentés és sürgősségi
+      description: Nagy sebességű törzs kialakítások, önürítős fedélzetek, berendezés-telepítő rendszerek és többkamrás biztonsági konfigurációk mentési műveletekhez.
+      icon: tabler:alert-triangle
+    - title: Tengeri turizmus
+      description: Az utaskényelmi elrendezések, napellenző integráció, beszállítási rendszerek és üzemanyag-takarékos konfigurációk szigeti átszállítási műveletekhez.
+      icon: tabler:beach
+    - title: Jacht tender
+      description: Kompakt kialakítások a daru tárolásához, luxus kivitelezési lehetőségek, a főhajó színeivel megegyező árnyalatok, és nagy teljesítményű vontatási jellemzők.
+      icon: tabler:sailboat
+    - title: Halászat és akvakultúra
+      description: Lapos fedélzeti konfigurációk, élőhal-tartó integráció, bot-tartó elrendezések, korrózióálló szerelvények folyamatos sós víznek való kitettséghez.
+      icon: tabler:fish
+    - title: Kikötő és ipari
+      description: Különösen erős hajótest-megerősítés, munkahajó elrendezések, személyszállító konfigurációk és berendezésintegráció tengerentúli műveletekhez.
+      icon: tabler:ship
+cta:
+  title: Indítsa el a termékfejlesztési projektjét
+  subtitle: Ossza meg termékkövetelményeit, célpiacát és ütemtervét — mérnöki csapatunk 48 órán belül válaszol fejlesztési javaslattal és költségbecsléssel.
+  actions:
+    - variant: primary
+      text: Indítsd el a projekted
+      href: /contact
+    - text: Nézd meg a OEM/ODM tervrajzot
+      href: /oem-odm-blueprint

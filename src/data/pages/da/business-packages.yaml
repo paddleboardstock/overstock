@@ -1,0 +1,82 @@
+hero:
+  tagline: Forretningspakker
+  title: Klar til at implementere Water Business<br />pakker til alle stadier
+  subtitle: Forudkonfigurerede udstyrspakker til vandsportsklubber, feriesteder og brandstarter - med gennemsigtige priser, hurtig levering og fulde tilpasningsmuligheder.
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/use-cases/aquafarer-outdoor-adventure.webp
+    alt: Aquafarer business udstyrspakker
+direct_answer: Aquafarer tilbyder tre prækonfigurerede forretningspakker designet til vandsportsoperatører på alle stadier. Klubstartpakken inkluderer 10 SUP'er med padler, pumper, reparationssæt og sikkerhedsudstyr til nye klubber og skoler. Resort Premium-pakken forsyner 50-100 enheder med opbevaringssystemer, branding og træningsvejledninger til hoteller og hotelejendomme. Brand Launch Package giver produktudvalg, tilpasset logodesign, emballering, produktion og forsendelse til iværksættere, der lancerer deres eget vandsportsmærke. Alle pakker inkluderer fabriksdirekte priser, CE-certificering og global logistiksupport.
+packages:
+  - id: club-starter
+    tag: Best Seller
+    name: Klub startpakke
+    subtitle: Alt hvad du behøver for at starte eller opgradere din padleklub
+    target: SUP-klubber, kajakklubber, surfskoler, træningscentre
+    price_label: Fra $4.800
+    line_items:
+      - item: 10 SUP boards eller kajakker
+      - item: 10 matchende pagajer
+      - item: 10 højeffektpumper
+      - item: 10 reparationssæt
+      - item: 10 redningsveste med klublogo
+      - item: Klubbranding på tavler
+      - item: Sikkerhedsskilte sæt
+      - item: Begynder lektionsvejledning pdf
+    cta_text: Get Club Package
+    cta_href: /contact
+  - id: resort-premium
+    tag: Premium
+    name: Resort Premium-pakke
+    subtitle: Komplet gæstevandaktivitetersprogram for hoteller og resorts
+    target: Strandresorts, hoteller ved søen, øko-resorts, yachtklubber
+    price_label: Tilpasset tilbud
+    line_items:
+      - item: 50-100 SUP'er, kajakker eller blandet flåde
+      - item: Fuld resort branding på alt udstyr
+      - item: Pagajer og PFD'er i lejekvalitet
+      - item: Kommercielt opbevaringsreolsystem
+      - item: Inflationsstation med industripumper
+      - item: Sikkerhedssystem (bøjer, skilte, redningstavle)
+      - item: Personalets uddannelsesprogram
+      - item: Indtægtsstyring spillebog
+    cta_text: Get Resort Package
+    cta_href: /contact
+  - id: brand-launch
+    tag: Entrepreneur
+    name: Brand lanceringspakke
+    subtitle: Gør din brandidé til et afsendt produkt — typisk på 60–90 dage
+    target: Amazon-sælgere, influencers, regionale distributører
+    price_label: Fra $6.500
+    line_items:
+      - item: Rådgivning om produktvalg
+      - item: Brugerdefineret logo design på tavler
+      - item: Brugerdefineret farvematch
+      - item: Brandet detailemballage
+      - item: Hæng tags og brugsanvisning
+      - item: CE-certificeringsdokumentation
+      - item: Produktionsprøver
+      - item: FOB Qingdao forsendelse
+    cta_text: Launch My Brand
+    cta_href: /contact
+faq:
+  title: Ofte stillede spørgsmål om pakke
+  questions:
+    - q: Hvad er den mindste ordremængde for pakker?
+      a: Klub startpakke har minimum 10 enheder. Resort- og brandpakker er tilpasset dine behov med fleksible MOQ'er.
+    - q: Hvor lang tid tager leveringen?
+      a: Standardproduktion er 30-45 dage fra ordrebekræftelse. Fremskyndet produktion er tilgængelig mod et ekstra gebyr.
+    - q: Kan jeg tilpasse udstyrsfarver og branding?
+      a: Ja. Alle pakker inkluderer fuld tilpasning - tavlefarver, logotryk og emballagedesign.
+    - q: Yder du eftersalgssupport?
+      a: Ja. Hver pakke inkluderer adgang til vores online vedligeholdelsesvejledninger, videovejledninger og reservedelsbestillingssystem.
+cta:
+  title: Ikke sikker på hvilken pakke der passer?
+  subtitle: Besvar 3 hurtige spørgsmål, og vi vil anbefale den perfekte pakke til din virksomhed.
+  actions:
+    - variant: primary
+      text: Få anbefalet pakke
+      href: /contact
+    - text: Se løsninger efter målgruppe
+      href: /solutions
+    - text: Læs succeshistorier
+      href: /success-stories

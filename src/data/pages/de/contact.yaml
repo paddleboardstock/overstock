@@ -1,0 +1,131 @@
+hero_text:
+  tagline: Kontakt
+  title: NEHMEN SIE KONTAKT AUF
+contact_form:
+  id: form
+  title: Senden Sie uns eine Nachricht
+  subtitle: Für Angebote, technische Fragen oder Partnerschaftsanfragen schreiben Sie uns. Wir antworten innerhalb eines Werktags.
+  email_to: info@aquafarer.com
+  submit_button: Nachricht senden
+  success_message: Vielen Dank! Ihre Nachricht ist in unserem Posteingang gelandet. Wir werden innerhalb eines Werktags antworten.
+  error_message: Beim Senden Ihrer Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt eine E-Mail.
+  default_country_code: '+1'
+  captcha:
+    label: 'Anti-Spam: Bitte lösen Sie die folgende Aufgabe'
+  fields:
+    - name: firstName
+      label: Vorname
+      row: 1
+    - name: lastName
+      label: Nachname
+      row: 1
+    - name: companyName
+      label: Unternehmen
+      row: 2
+    - name: address
+      label: Adresse
+      row: 3
+    - name: zip
+      label: PLZ / Postleitzahl
+      row: 4
+    - name: country
+      label: Land
+      row: 4
+      type: select
+      optionsKey: countries
+    - name: email
+      label: E-Mail
+      row: 5
+      type: email
+    - name: tel
+      label: TEL
+      row: 5
+      type: tel
+      withCountryCode: true
+    - name: orderVolume
+      label: Geschätztes Bestellvolumen
+      row: 6
+      type: select
+      options:
+        - value: ''
+          label: Wählen Sie das geschätzte Volumen...
+        - value: sample
+          label: Nur Muster / Prototypen
+        - value: '5-10'
+          label: 50–100 Einheiten (Standard-Moq)
+        - value: '100-500'
+          label: 100–500 Einheiten
+        - value: '500-plus'
+          label: 500+ Einheiten (Mengenrabatt)
+    - name: customization
+      label: Anpassung erforderlich?
+      row: 7
+      type: select
+      options:
+        - value: ''
+          label: Wählen Sie den Anpassungstyp...
+        - value: none
+          label: Standardprodukt (keine Anpassung)
+        - value: logo
+          label: Nur eigenes Logo / Branding
+        - value: full
+          label: Vollständige OEM (Größe, Farbe, Grafik, Verpackung)
+        - value: consultation
+          label: Nicht sicher — Beratung erforderlich
+    - name: productInterest
+      label: Produktkategorien von Interesse
+      row: 8
+      type: select
+      options:
+        - value: ''
+          label: Wählen Sie eine Produktkategorie...
+        - value: all
+          label: Alle Produkte / Gesamtkatalog
+        - value: sup
+          label: SUP-Boards / Paddleboards
+        - value: kayak
+          label: Schlauchkajaks
+        - value: rib
+          label: RIB-Boote
+        - value: dinghy
+          label: Beiboote / Tender
+        - value: safety
+          label: Sicherheitsausrüstung / Schwimmwesten
+        - value: accessory
+          label: Zubehör (Pumpen, Paddel, Taschen)
+
+    - name: subject
+      label: Betreff
+      row: 9
+    - name: message
+      label: Nachricht
+      row: 10
+      type: textarea
+      rows: 6
+features2_other_ways:
+  title: Weitere Möglichkeiten, uns zu erreichen
+  columns: 3
+  items:
+    - title: Verkaufsanfragen
+      description: Angebote, Konfigurationen, Händlerbewerbungen und Großbestellungen.
+      icon: tabler:shopping-bag
+    - title: Technischer Support
+      description: Garantie, Reparaturen, Ersatzteile und Betriebsfragen.
+      icon: tabler:tool
+    - title: Presse & Partnerschaften
+      description: Medienpakete, Sponsoring und Branchenkooperationen.
+      icon: tabler:news
+    - title: Telefon
+      description: '+1 279 732 3333 (US-Zentrale) · +86 13305324192 (Werk)'
+      icon: tabler:headset
+    - title: E-Mail
+      description: info@aquafarer.com
+      icon: tabler:mail
+    - title: Globalzentrale & Abrechnung
+      description: Aquafarer LLC, New Mexico, USA
+      icon: tabler:map-pin
+map:
+  title: Unser Standort
+  subtitle: Besuchen Sie unser Fertigungszentrum in Qingdao
+  address: Economic Development Zone, Laixi, Qingdao, China, 266600
+  zoom: 15

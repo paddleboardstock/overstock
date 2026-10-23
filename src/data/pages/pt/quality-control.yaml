@@ -1,0 +1,137 @@
+hero:
+  tagline: Controle de Qualidade
+  title: Sistema de Controle de Qualidade<br /> para OEM Fabricação Marítima
+  subtitle: Processo de inspeção em várias etapas, abrangendo materiais recebidos, produção em processo, teste de pressão, montagem final e verificação pré-envio. Cada lote é rastreável, cada teste é registrado.
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-pressure-testing.webp
+    alt: Aquafarer processo de controle de qualidade e teste de pressão
+stats:
+  title: Controle de qualidade em números
+  stats:
+    - title: Unidades Testadas com Pressão
+      amount: 100%
+    - title: Queda Máxima de Pressão
+      amount: <5%
+    - title: Inspetores de CQ
+      amount: '12'
+    - title: Registros Retidos
+      amount: 10 anos
+content_system:
+  tagline: Visão Geral do Sistema de QC
+  title: Estrutura Integrada de Controle de Qualidade
+  subtitle: Nosso sistema de CQ opera de forma independente da produção e reporta-se diretamente à administração. Nenhum lote é enviado sem a liberação de qualidade assinada pelo laboratório de qualidade.
+  items:
+    - title: Laboratório de Qualidade Independente
+      description: Nosso laboratório de qualidade opera como uma função separada da produção. Os inspetores de CQ reportam-se ao Gerente de Qualidade, e não ao Diretor de Produção. Essa independência organizacional garante que as decisões de qualidade sejam tomadas de forma objetiva — os prazos de produção nunca se sobrepõem aos requisitos de qualidade.
+      features:
+        - Reporta-se diretamente à administração, independente da produção
+        - Autorizado a interromper a produção por problemas de qualidade
+        - 12 inspetores de QC dedicados em todas as etapas
+        - Todo equipamento de teste calibrado anualmente
+    - title: Rastreabilidade de Lote
+      description: Cada lote de matéria-prima recebe um número de lote único em nosso sistema ERP. Desde a chegada do material até a produção e o produto acabado, a lista de materiais de cada embarcação está vinculada aos lotes originais do fornecedor. Isso permite rastreabilidade completa a montante para qualquer consulta de qualidade ou conformidade.
+      features:
+        - Rastreamento de lote baseado em ERP desde o material até o produto acabado
+        - Etiquetas de lote físico em cada ordem de serviço
+        - Cobertura de material 100% — PVC, Hypalon, hardware, adesivos
+        - Registros mantidos por 10 anos (requisito CE 2013/53/UE)
+    - title: Normas e Conformidade
+      description: Nossos procedimentos de QC estão alinhados com padrões internacionais. Os produtos são certificados CE sob a Diretiva de Embarcações de Recreio da UE 2013/53/EU. Nosso sistema de gestão da qualidade é certificado ISO 9001. A conformidade social é mantida através da certificação BSCI.
+      features:
+        - certificação CE (UE 2013/53/UE)
+        - ISO gestão da qualidade 9001:2015
+        - Certificação de conformidade social BSCI
+        - REACH e conformidade de materiais RoHS
+        - Certificação UKCA pós-Brexit
+content_inspection:
+  tagline: Estágios de Inspeção
+  title: Processo de Inspeção em Seis Etapas
+  subtitle: Cada produto passa por 6 etapas de inspeção com pontos de verificação de controle de qualidade documentados. Defeitos são identificados cedo, ações corretivas são imediatas e cada lote é totalmente rastreável.
+  stages:
+    - stage: '1'
+      title: Inspeção de Material de Entrada
+      description: Todos os materiais recebidos são registrados pelo número do lote/partida e colocados em quarentena até a aprovação do Controle de Qualidade (CQ). Rolos de tecido PVC/Hypalon são testados quanto à resistência à tração (ASTM D751), resistência ao rasgo (ISO 4674) e espessura. Drop-stitch núcleos, válvulas, adesivos e ferragens são inspecionados visualmente e medidos em relação às especificações.
+      checks: Resistência à tração ASTM D751, resistência ao rasgo ISO 4674, medidor de espessura, viscosidade do adesivo, inspeção visual de defeitos
+      threshold: 100% dos lotes testados. Rejeite se tração < 90% da especificação, rasgo < especificação mínima ou qualquer defeito visual
+    - stage: '2'
+      title: Controle de Qualidade em Processo — Corte e Preparação
+      description: Os painéis cortados CNC são verificados dimensionalmente em relação aos arquivos CAD a cada vigésimo painel. A qualidade das bordas é inspecionada quanto a desfiamento, cortes irregulares ou desvio dimensional. A contagem de painéis é verificada em relação à BOM para cada lote de produção antes que os materiais sejam levados para a soldagem.
+      checks: Verificação dimensional em arquivos CAD DXF, inspeção de qualidade de borda, verificação de contagem de painéis
+      threshold: Tolerância ±0,5 mm. Rejeitar lote se >2% fora da tolerância
+    - stage: '3'
+      title: Controle de Qualidade em Processo — Soldagem e Colagem
+      description: Durante a produção, a qualidade da solda é continuamente monitorada. Testes de arrancamento (ASTM D751) são realizados em amostras a cada 50 unidades. A largura da solda é medida em relação à especificação. Registros de temperatura do ar quente são revisados para consistência. Cada costura é inspecionada visualmente sob luz de fundo para detecção de canais ou vazios.
+      checks: Teste de descascamento ASTM D751 a cada 50 unidades, medição da largura da solda, revisão do registro de temperatura do ar quente, inspeção da costura com luz de fundo
+      threshold: Resistência à descamação mínima 8 N/cm. Tolerância da largura da solda ±1 mm. Qualquer canal visível = rejeitar
+    - stage: '4'
+      title: Controle de Qualidade de Montagem
+      description: Cada unidade segue uma lista de verificação de montagem de 100 pontos assinada pelo líder da equipe. A função da válvula é testada através de 10 ciclos de abertura/fechamento. O torque do hardware é verificado. A inspeção visual cobre acabamento da superfície, consistência de cor, posicionamento de etiquetas e completude dos acessórios.
+      checks: Lista de verificação de 100 pontos por unidade, teste de funcionamento da válvula, verificação de torque do hardware, inspeção visual
+      threshold: 'Política de zero defeito em itens críticos de segurança (válvulas, anéis D, manípulos). Cosmético menor: AQL 2,5 (ISO 2859)'
+    - stage: '5'
+      title: Teste de pressão
+      description: Cada câmara é inflada para 1,25× a pressão nominal e mantida por 24-48 horas. Sensores de pressão registram continuamente durante todo o período de manutenção. Leituras compensadas pela temperatura garantem a precisão. Qualquer câmara que exceda uma queda de pressão de 5% é rejeitada e enviada para reinspeção das costuras, com 100% de reteste de todo o lote de produção.
+      checks: Registro de pressão mantida por 24-48h, calibração do sensor verificada diariamente, leitura compensada por temperatura, reteste da costura após reparo
+      threshold: Queda máxima de pressão de 5% em 24h a temperatura estável. Excedendo = 100% re-teste de todo o lote
+    - stage: '6'
+      title: Inspeção Final e Liberação para Envio
+      description: Inspeção visual e funcional final antes da embalagem. Defeitos na superfície, consistência de cor, verificação de etiquetas/BIN, integridade da embalagem e completude de acessórios são verificados em relação ao pedido do cliente. As unidades são embaladas a vácuo, colocadas em caixas e paletizadas. A assinatura final do Controle de Qualidade é necessária antes que qualquer produto saia da fábrica.
+      checks: Inspeção visual completa, lista de verificação de acessórios por SKU, teste de queda de embalagem (amostra aleatória de 1m), verificação de leitura de etiqueta/código de barras
+      threshold: AQL 2,5 defeitos graves, AQL 4,0 defeitos menores. Tolerância zero para defeitos de segurança. 100% das unidades inspecionadas visualmente
+content_equipment:
+  tagline: Equipamento de Teste
+  title: Equipamento do Laboratório de CQ
+  subtitle: Nosso laboratório de qualidade é equipado com equipamentos de teste especializados para verificação de materiais, integridade de solda e validação do desempenho do produto.
+  columns: 3
+  items:
+    - title: Máquina de Ensaio de Tração
+      description: Mede a resistência à tração e alongamento do tecido conforme ASTM D751. Utilizado para controle de qualidade de entrada de todos os lotes de tecido PVC, Hypalon e drop-stitch.
+      icon: tabler:scale
+    - title: Câmara de Temperatura
+      description: Câmara ambiental para testes de resistência UV (ASTM G154) e testes de flexibilidade em baixa temperatura. Simula condições extremas de operação.
+      icon: tabler:temperature
+    - title: Sensores e Registradores de Pressão
+      description: Sensores de pressão digitais com registro contínuo de dados para testes de retenção de ar de 24-48 horas. Compensados por temperatura para precisão.
+      icon: tabler:wind
+    - title: Bancada de Teste de Descasque
+      description: Equipamento de teste de descascamento calibrado para verificação da resistência da junta de solda. Amostras aleatórias de cada lote de produção.
+      icon: tabler:files
+    - title: Tanque de Detecção de Vazamento
+      description: Tanque de água para teste de vazamento submerso de câmaras infladas. Detecção visual de bolhas para verificação da integridade da costura e da válvula.
+      icon: tabler:ripple
+    - title: Ferramentas de Inspeção
+      description: Ferramentas de medição calibradas — medidores de espessura, chaves de torque, paquímetros dimensionais, testadores de dureza para estações de Controle de Qualidade de produção.
+      icon: tabler:tools
+content_metrics:
+  tagline: Desempenho de QC
+  title: Métricas de Controle de Qualidade
+  subtitle: Dados reais de aprovação/reprovação da nossa linha de produção. Essas métricas são monitoradas diariamente e revisadas mensalmente pela gestão.
+  columns: 3
+  items:
+    - title: 100% das Unidades Testadas
+      description: Cada compartimento de cada barco é testado quanto à pressão antes do envio. Sem amostragem — inspeção de 100% na integridade da pressão.
+      icon: tabler:check
+    - title: <5% Queda de Pressão
+      description: Perda máxima de pressão permitida em 24-48 horas a 1,25× a pressão nominal. Qualquer câmara que exceda esse limite aciona re-teste do lote.
+      icon: tabler:gauge
+    - title: AQL 2,5
+      description: Nível de Qualidade Aceitável para defeitos maiores segundo a norma de amostragem ISO 2859. Tolerância zero para defeitos críticos de segurança.
+      icon: tabler:clipboard-check
+    - title: Retenção de 24-48 horas
+      description: 'A duração da manutenção da pressão varia conforme a categoria do produto. Câmaras RIB: 48 horas. SUP e barcos infláveis: 24-48 horas.'
+      icon: tabler:clock
+    - title: 1,25× Pressão de Teste
+      description: Margem de segurança em cada câmara — testada a 25% acima da pressão nominal para garantir margem acima das condições máximas de operação.
+      icon: tabler:arrow-up
+    - title: 0% Defeitos de Segurança
+      description: Política de tolerância zero para defeitos críticos de segurança — válvulas, anéis em D, costuras e câmaras de flutuação. Qualquer defeito = re-inspeção de 100%.
+      icon: tabler:shield
+cta:
+  title: Solicitar documentação de qualidade
+  subtitle: Fornecemos pacotes completos de documentação de qualidade, incluindo relatórios de teste, certificações de material e declarações de conformidade em cada envio. Entre em contato conosco para amostras.
+  actions:
+    - variant: primary
+      text: Solicitar documentação de QC
+      href: /contact
+    - text: Visualizar protocolos de teste
+      href: /quality

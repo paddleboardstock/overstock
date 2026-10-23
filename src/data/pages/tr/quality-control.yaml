@@ -1,0 +1,137 @@
+hero:
+  tagline: Kalite Kontrol
+  title: Kalite Kontrol Sistemi<br />OEM Denizcilik Üretimi için
+  subtitle: Gelen malzemeler, üretim süreci, basınç testi, nihai montaj ve sevkiyat öncesi doğrulamayı kapsayan çok aşamalı denetim süreci. Her parti izlenebilir, her test kaydedilir.
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-pressure-testing.webp
+    alt: Aquafarer kalite kontrol ve basınç test etme süreci
+stats:
+  title: Sayılarla Kalite Kontrolü
+  stats:
+    - title: Birimler Basınç Testinden Geçti
+      amount: 100%
+    - title: Maksimum Basınç Düşüşü
+      amount: <5%
+    - title: Kalite Kontrol Müfettişleri
+      amount: '12'
+    - title: Kayıtlar Saklandı
+      amount: 10 yıl
+content_system:
+  tagline: Kalite Kontrol Sistemi Genel Bakış
+  title: Entegre Kalite<br />Kontrol Çerçevesi
+  subtitle: Kalite kontrol sistemimiz üretimden bağımsız olarak çalışır ve doğrudan yönetime rapor verir. Kalite laboratuvarından imzalı kalite onayı olmadan hiçbir parti sevk edilmez.
+  items:
+    - title: Bağımsız Kalite Laboratuvarı
+      description: Kalite laboratuvarımız, üretimden bağımsız bir işlev olarak çalışmaktadır. Kalite kontrol denetçileri, Üretim Direktörüne değil, Kalite Müdürüne rapor verir. Bu organizasyonel bağımsızlık, kalite kararlarının objektif bir şekilde alınmasını sağlar — üretim süreleri asla kalite gereksinimlerinin önüne geçmez.
+      features:
+        - Üretimden bağımsız olarak doğrudan yönetime rapor verir
+        - Kalite sorunları nedeniyle üretimi durdurma yetkisine sahip
+        - Tüm aşamalarda 12 adanmış kalite kontrol müfettişi
+        - Tüm test ekipmanları her yıl kalibre edilir
+    - title: Seri İzlenebilirliği
+      description: Her hammadde partisine ERP sistemimizde benzersiz bir lot numarası atanır. Malzeme gelişinden üretime ve bitmiş ürüne kadar, her teknenin malzeme listesi orijinal tedarikçi partilerine geri bağlanır. Bu, herhangi bir kalite veya uyum sorgulaması için tam yukarı yönlü izlenebilirlik sağlar.
+      features:
+        - Malzemeden bitmiş ürüne ERP-tabanlı parti takibi
+        - Her iş emri için fiziksel parti etiketleri
+        - Yüzde 100 malzeme kapsamı — PVC, Hypalon, donanım, yapıştırıcılar
+        - Kayıtlar 10 yıl süreyle saklanır (CE 2013/53/AB gereksinimi)
+    - title: Standartlar ve Uyum
+      description: Kalite kontrol prosedürlerimiz uluslararası standartlarla uyumludur. Ürünler, AB Rekreasyon Teknesi Direktifi 2013/53/EU kapsamında CE sertifikalıdır. Kalite yönetim sistemimiz ISO 9001 sertifikalıdır. Sosyal uyum, BSCI sertifikası ile sağlanmaktadır.
+      features:
+        - CE sertifikası (AB 2013/53/AB)
+        - ISO 9001:2015 kalite yönetimi
+        - BSCI sosyal uyum sertifikası
+        - REACH ve RoHS malzeme uyumluluğu
+        - UKCA Brexit sonrası sertifikalandırma
+content_inspection:
+  tagline: Denetim Aşamaları
+  title: Altı Aşamalı<br />Denetim Süreci
+  subtitle: Her ürün, dokümante edilmiş KK kontrol noktalarına sahip 6 denetim aşamasından geçer. Kusurlar erken tespit edilir, düzeltici işlemler hemen uygulanır ve her parti tamamen izlenebilir durumdadır.
+  stages:
+    - stage: '1'
+      title: Gelen Malzeme Muayenesi
+      description: Tüm gelen malzemeler parti/lot numarası ile kaydedilir ve Kalite Kontrol onayına kadar karantinaya alınır. PVC/Hypalon kumaş ruloları çekme dayanımı (ASTM D751), yırtılma direnci (ISO 4674) ve kalınlık açısından test edilir. Drop-stitch gövdeler, valfler, yapıştırıcılar ve donanımlar görsel olarak incelenir ve spesifikasyonlara göre ölçülür.
+      checks: Çekme dayanımı ASTM D751, yırtılma direnci ISO 4674, kalınlık ölçer, yapışkan viskozitesi, görsel kusur taraması
+      threshold: Test edilen partilerin %100'ü. Çekme dayanımı spesifikasyonun %90'ından az, yırtılma minimum spesifikasyondan az veya herhangi bir görsel kusur varsa reddedin
+    - stage: '2'
+      title: Süreç İçi Kalite Kontrol — Kesim ve Hazırlık
+      description: CNC-kesim paneller, her 20. panelde bir CAD kaynak dosyalarına göre boyutsal olarak kontrol edilir. Kenar kalitesi, tüylenme, düzensiz kesimler veya boyutsal sapma açısından incelenir. Malzemeler kaynak işlemine geçmeden önce her üretim partisi için panel sayısı BOM ile doğrulanır.
+      checks: CAD DXF dosyalarına karşı boyutsal kontrol, kenar kalitesi incelemesi, panel sayısı doğrulaması
+      threshold: Tolerans ±0.5mm. Tolerans dışı %2’den fazlaysa seriyi reddedin
+    - stage: '3'
+      title: İşlem Sırasındaki Kalite Kontrolü — Kaynak ve Yapıştırma
+      description: Üretim sırasında kaynak kalitesi sürekli olarak izlenir. Her 50 birimde bir örnek üzerinde yaprak soyma testleri (ASTM D751) yapılır. Kaynak genişliği spesifikasyona karşı ölçülür. Sıcak hava sıcaklığı kayıtları tutarlılık açısından incelenir. Her dikiş, kanallar veya boşluklar açısından arka ışık altında görsel olarak incelenir.
+      checks: Peel testi ASTM D751 her 50 birimde, kaynak genişliği ölçümü, sıcak hava sıcaklık kaydı incelemesi, arka ışık dikiş muayenesi
+      threshold: Soyma dayanımı min 8 N/cm. Kaynak genişliği toleransı ±1mm. Görünür herhangi bir kanallama = reddet
+    - stage: '4'
+      title: Montaj Kalite Kontrolü
+      description: Her bir birim, ekip lideri tarafından imzalanan 100 puanlık bir montaj kontrol listesine uyar. Valf fonksiyonu, 10 açma/kapatma döngüsü ile test edilir. Donanım torku doğrulanır. Görsel muayene, yüzey kaplaması, renk tutarlılığı, etiket yerleşimi ve aksesuar tamlığını kapsar.
+      checks: Birim başına 100 maddelik kontrol listesi, vana fonksiyon testi, donanım tork doğrulaması, görsel muayene
+      threshold: 'Güvenlik açısından kritik öğelerde (valfler, D-ringler, kollar) sıfır hata politikası. Küçük kozmetik: AQL 2.5 (ISO 2859)'
+    - stage: '5'
+      title: Basınç Testi
+      description: Her bir bölme, nominal basıncın 1,25 katına kadar şişirilir ve 24-48 saat boyunca tutulur. Basınç sensörleri, bekletme süresi boyunca sürekli olarak veri kaydeder. Sıcaklığa göre düzeltilmiş ölçümler doğruluğu sağlar. Basınçta %5'ten fazla düşüş olan herhangi bir bölme reddedilir ve dikiş tekrar kontrolü için gönderilir, tüm üretim partisi ise %100 yeniden test edilir.
+      checks: 24-48 saat basınç tutma kaydı, sensör kalibrasyonu günlük olarak doğrulandı, sıcaklıkla telafi edilmiş okuma, tamir sonrası dikiş yeniden testi
+      threshold: Sabit sıcaklıkta 24 saat boyunca maksimum %5 basınç düşüşü. Aşılması = tüm partinin %100 yeniden testi
+    - stage: '6'
+      title: Final Muayene ve Sevkiyat Serbestisi
+      description: Paketlemeden önce son görsel ve fonksiyonel kontrol. Yüzey kusurları, renk tutarlılığı, etiket/BIN doğrulaması, ambalaj bütünlüğü ve aksesuar tamlığı müşteri siparişine karşı kontrol edilir. Ürünler vakumlanır, kutulanır ve paletlenir. Ürünün fabrikadan çıkmasından önce nihai kalite kontrol onayı gereklidir.
+      checks: Tam görsel inceleme, SKU göre aksesuar kontrol listesi, ambalaj düşme testi (1m rastgele örnek), etiket/barkod tarama doğrulaması
+      threshold: AQL 2.5 majör kusur, AQL 4.0 minör. Güvenlik kusurlarında sıfır tolerans. Ünitelerin %100’ü görsel olarak incelenir
+content_equipment:
+  tagline: Test Ekipmanları
+  title: QC Laboratuvarı<br />Ekipman
+  subtitle: Kalite laboratuvarımız, malzeme doğrulama, kaynak bütünlüğü ve ürün performans doğrulaması için özel test ekipmanlarıyla donatılmıştır.
+  columns: 3
+  items:
+    - title: Çekme Testi Makinesi
+      description: ASTM D751’e göre kumaş çekme dayanıklılığı ve uzamasını ölçer. Tüm PVC, Hypalon ve drop-stitch kumaş partilerinin giriş QC’sinde kullanılır.
+      icon: tabler:scale
+    - title: Sıcaklık Odası
+      description: UV direnci testi (ASTM G154) ve düşük sıcaklık esnekliği testi için çevresel oda. Aşırı çalışma koşullarını simüle eder.
+      icon: tabler:temperature
+    - title: Basınç Sensörleri ve Kaydediciler
+      description: 24-48 saatlik hava sızdırmazlık testleri için sürekli veri kaydı yapan dijital basınç sensörleri. Doğruluk için sıcaklığa göre düzeltme yapılmıştır.
+      icon: tabler:wind
+    - title: Soyma Testi Düzeni
+      description: Kaynak dikiş dayanıklılığını doğrulamak için kalibre edilmiş soyma testi ekipmanı. Her üretim partisinden rastgele örnekler alınır.
+      icon: tabler:files
+    - title: Kaçak Tespit Tankı
+      description: Şişirilmiş odaların su altında kaçak testleri için su tankı. Dikiş ve valf bütünlüğünü doğrulamak için görsel kabarcık tespiti.
+      icon: tabler:ripple
+    - title: İnceleme Araçları
+      description: Kalibre edilmiş ölçüm aletleri — kalınlık ölçer, tork anahtarları, boyutsal kumpaslar, sertlik test cihazları üretim QC istasyonları için.
+      icon: tabler:tools
+content_metrics:
+  tagline: QC Performansı
+  title: Kalite Kontrol<br />Metrikler
+  subtitle: Üretim hattımızdan gerçek geçme/kalma verileri. Bu metrikler günlük olarak izlenir ve yönetim tarafından aylık olarak gözden geçirilir.
+  columns: 3
+  items:
+    - title: '%100 Test Edilen Üniteler'
+      description: Her teknenin her odası sevkiyat öncesi basınç testine tabi tutulur. Örnekleme yok — basınç bütünlüğünde %100 inceleme.
+      icon: tabler:check
+    - title: <%5 Basınç Düşüşü
+      description: 24-48 saat içinde 1.25× nominal basınçta maksimum izin verilen basınç kaybı. Bu eşik değerini aşan herhangi bir oda partinin tekrar test edilmesini tetikler.
+      icon: tabler:gauge
+    - title: AQL 2.5
+      description: ISO 2859 örnekleme standardına göre majör kusurlarda kabul edilebilir kalite seviyesi. Güvenlik kritik kusurlarda sıfır tolerans.
+      icon: tabler:clipboard-check
+    - title: 24-48 Saat Bekletme
+      description: 'Basınç bekletme süresi ürün kategorisine göre değişir. RIB odaları: 48 saat. SUP ve şişme botlar: 24-48 saat.'
+      icon: tabler:clock
+    - title: 1.25× Test Basıncı
+      description: Her odada güvenlik payı — maksimum çalışma koşullarının üzerinde bir pay sağlamak için belirtilen basıncın %25 üzerinde test edilmiştir.
+      icon: tabler:arrow-up
+    - title: '%0 Güvenlik Hatası'
+      description: Güvenlik açısından kritik hatalar konusunda sıfır tolerans politikası — valfler, D-halkalar, dikişler ve yüzdürme odaları. Herhangi bir hata = %100 yeniden inceleme.
+      icon: tabler:shield
+cta:
+  title: Kalite belgelerini talep edin
+  subtitle: Her gönderim ile birlikte test raporları, malzeme sertifikaları ve uygunluk beyanları dahil olmak üzere tam kalite belgelendirme paketleri sağlıyoruz. Numuneler için bizimle iletişime geçin.
+  actions:
+    - variant: primary
+      text: QC belgelerini talep edin
+      href: /contact
+    - text: Test protokollerini görüntüleyin
+      href: /quality

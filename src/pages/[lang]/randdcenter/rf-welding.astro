@@ -1,0 +1,321 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+import { languages, defaultLang } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+import RDe from '~/components/randdcenter/rf-welding.de.astro';
+import REs from '~/components/randdcenter/rf-welding.es.astro';
+import RFr from '~/components/randdcenter/rf-welding.fr.astro';
+import RIt from '~/components/randdcenter/rf-welding.it.astro';
+import REn from '~/components/randdcenter/rf-welding.en.astro';
+import RCs from '~/components/randdcenter/rf-welding.cs.astro';
+import RSv from '~/components/randdcenter/rf-welding.sv.astro';
+import RDa from '~/components/randdcenter/rf-welding.da.astro';
+import REl from '~/components/randdcenter/rf-welding.el.astro';
+import RNo from '~/components/randdcenter/rf-welding.no.astro';
+import RRu from '~/components/randdcenter/rf-welding.ru.astro';
+import RNl from '~/components/randdcenter/rf-welding.nl.astro';
+import RFi from '~/components/randdcenter/rf-welding.fi.astro';
+import RPl from '~/components/randdcenter/rf-welding.pl.astro';
+import RAr from '~/components/randdcenter/rf-welding.ar.astro';
+import RPt from '~/components/randdcenter/rf-welding.pt.astro';
+import RJa from '~/components/randdcenter/rf-welding.ja.astro';
+import RBg from '~/components/randdcenter/rf-welding.bg.astro';
+import REt from '~/components/randdcenter/rf-welding.et.astro';
+import RHe from '~/components/randdcenter/rf-welding.he.astro';
+import RHr from '~/components/randdcenter/rf-welding.hr.astro';
+import RHu from '~/components/randdcenter/rf-welding.hu.astro';
+import RId from '~/components/randdcenter/rf-welding.id.astro';
+import RKo from '~/components/randdcenter/rf-welding.ko.astro';
+import RLt from '~/components/randdcenter/rf-welding.lt.astro';
+import RLv from '~/components/randdcenter/rf-welding.lv.astro';
+import RMs from '~/components/randdcenter/rf-welding.ms.astro';
+import RRo from '~/components/randdcenter/rf-welding.ro.astro';
+import RSk from '~/components/randdcenter/rf-welding.sk.astro';
+import RSl from '~/components/randdcenter/rf-welding.sl.astro';
+import RSr from '~/components/randdcenter/rf-welding.sr.astro';
+import RTh from '~/components/randdcenter/rf-welding.th.astro';
+import RTl from '~/components/randdcenter/rf-welding.tl.astro';
+import RTr from '~/components/randdcenter/rf-welding.tr.astro';
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: any) => getUiForLang(lang || defaultLang)?.[key] || '';
+
+const META: Record<string, { title: string; description: string }> = {
+  en: {
+    title: 'RF Welding Center — Dielectric Bonding for Airtight Seams',
+    description: `Radio-frequency welding technology delivering compliant airtight seams. Peel testing, air-retention validation, and custom seam specifications. Discuss your welding requirements with our team.`,
+  },
+  de: {
+    title: 'HF-Schweißzentrum — dielektrisches Fügen für luftdichte Nähte',
+    description: `Hochfrequenz-Schweißtechnologie für luftdichte, konforme Nähte. Abziehversuche, Validierung der Luftdichtigkeit und individuelle Nahtspezifikationen. Besprechen Sie Ihre Schweißanforderungen mit unserem Team.`,
+  },
+  es: {
+    title: 'Centro de soldadura RF — unión dieléctrica para costuras herméticas',
+    description: `Tecnología de soldadura por radiofrecuencia que ofrece costuras herméticas conformes. Ensayos de pelado, validación de retención de aire y especificaciones de costuras personalizadas. Comente sus requisitos de soldadura con nuestro equipo.`,
+  },
+  fr: {
+    title: "Centre de soudure RF — liaison diélectrique pour soudures étanches à l'air",
+    description: `Technologie de soudure par radiofréquence offrant des soudures hermétiques conformes. Tests de pelage, validation de la rétention d'air et spécifications de soudures sur mesure. Discutez de vos besoins en soudure avec notre équipe.`,
+  },
+  it: {
+    title: "Centro di saldatura RF — giunzione dielettrica per cuciture a tenuta d'aria",
+    description: `Tecnologia di saldatura a radiofrequenza per cuciture a tenuta d'aria conformi. Prove di pelatura, validazione della ritenzione d'aria e specifiche di cucitura personalizzate. Discutete i vostri requisiti di saldatura con il nostro team.`,
+  },
+  cs: {
+    title: 'RF svařovací centrum — Dielektrické lepení pro vzduchotěsné švy',
+    description:
+      'Technologie vysokofrekvenčního svařování zajišťující vyhovující vzduchotěsné švy. Testování odlupování, ověření zadržení vzduchu a vlastní specifikace švů. Prodiskutujte své požadavky na svařování s naším týmem.',
+  },
+  sv: {
+    title: 'RF Welding Center — Dielektrisk bindning för lufttäta sömmar',
+    description:
+      'Radiofrekvenssvetsteknik som ger följsamma lufttäta sömmar. Skalningstestning, validering av luftretention och anpassade sömspecifikationer. Diskutera dina svetskrav med vårt team.',
+  },
+  da: {
+    title: 'RF-svejsecenter — dielektrisk limning til lufttætte sømme',
+    description:
+      'Radiofrekvenssvejseteknologi, der leverer kompatible lufttætte sømme. Afskalningstest, lufttilbageholdelsesvalidering og brugerdefinerede sømspecifikationer. Diskuter dine svejsekrav med vores team.',
+  },
+  el: {
+    title: 'Κέντρο συγκόλλησης RF — Διηλεκτρική συγκόλληση για αεροστεγείς ραφές',
+    description:
+      'Τεχνολογία συγκόλλησης ραδιοσυχνοτήτων που παρέχει συμβατές αεροστεγείς ραφές. Δοκιμή απολέπισης, επικύρωση διατήρησης αέρα και προσαρμοσμένες προδιαγραφές ραφής. Συζητήστε τις απαιτήσεις συγκόλλησης με την ομάδα μας.',
+  },
+  no: {
+    title: 'RF-sveisesenter — dielektrisk liming for lufttette sømmer',
+    description:
+      'Radiofrekvenssveiseteknologi som leverer kompatible lufttette sømmer. Avskallingstesting, luftretensjonsvalidering og tilpassede sømspesifikasjoner. Diskuter dine sveisekrav med teamet vårt.',
+  },
+  ru: {
+    title: 'Центр радиочастотной сварки — диэлектрическая сварка для герметичных швов',
+    description:
+      'Технология радиочастотной сварки, обеспечивающая герметичные швы. Испытание на отслаивание, проверка удержания воздуха и индивидуальные характеристики шва. Обсудите ваши требования к сварке с нашей командой.',
+  },
+  nl: {
+    title: 'RF-lascentrum – Diëlektrische verbinding voor luchtdichte naden',
+    description:
+      'Radiofrequentie-lastechnologie zorgt voor conforme luchtdichte naden. Afpeltesten, validatie van luchtretentie en aangepaste naadspecificaties. Bespreek uw laswensen met ons team.',
+  },
+  fi: {
+    title: 'RF-hitsauskeskus — Dielektrinen liimaus ilmatiiviille saumoille',
+    description:
+      'Radiotaajuushitsaustekniikka, joka tuottaa vaatimustenmukaiset ilmatiiviit saumat. Kuorimistestaus, ilmanpidätysvalmius ja mukautetut sauman tekniset tiedot. Keskustele hitsaustarpeistasi tiimimme kanssa.',
+  },
+  pl: {
+    title: 'Centrum spawalnicze RF — łączenie dielektryczne w celu uzyskania hermetycznych szwów',
+    description:
+      'Technologia zgrzewania częstotliwością radiową zapewniająca szczelne szwy. Testy odrywania, weryfikacja zatrzymywania powietrza i niestandardowe specyfikacje szwów. Omów swoje wymagania spawalnicze z naszym zespołem.',
+  },
+  ar: {
+    title: 'مركز اللحام بالترددات اللاسلكية – الربط العازل للدرزات المحكمة',
+    description:
+      'توفر تقنية اللحام بالترددات الراديوية طبقات محكمة الإغلاق ومتوافقة. اختبار التقشير، والتحقق من احتباس الهواء، ومواصفات التماس المخصصة. ناقش متطلبات اللحام الخاصة بك مع فريقنا.',
+  },
+  pt: {
+    title: 'Centro de soldagem RF – ligação dielétrica para costuras herméticas',
+    description:
+      'Tecnologia de soldagem por radiofrequência que proporciona costuras herméticas compatíveis. Teste de descascamento, validação de retenção de ar e especificações de costura personalizadas. Discuta seus requisitos de soldagem com nossa equipe.',
+  },
+  ja: {
+    title: 'RF 溶接センター — 気密シームのための誘電体接合',
+    description:
+      '高周波溶接技術により、準拠した気密性の高い継ぎ目を実現します。剥離テスト、空気保持性の検証、およびカスタムの縫い目仕様。溶接要件について当社のチームと話し合ってください。',
+  },
+  bg: {
+    title: 'RF Welding Center — Dielectric Bonding for Airtight Seams',
+    description:
+      'Radio-frequency welding technology delivering compliant airtight seams. Peel testing, air-retention validation, and custom seam specifications. Discuss your welding requirements with our team.',
+  },
+  et: {
+    title: 'RF Welding Center — Dielectric Bonding for Airtight Seams',
+    description:
+      'Radio-frequency welding technology delivering compliant airtight seams. Peel testing, air-retention validation, and custom seam specifications. Discuss your welding requirements with our team.',
+  },
+  he: {
+    title: 'RF Welding Center — Dielectric Bonding for Airtight Seams',
+    description:
+      'Radio-frequency welding technology delivering compliant airtight seams. Peel testing, air-retention validation, and custom seam specifications. Discuss your welding requirements with our team.',
+  },
+  hr: {
+    title: 'RF Welding Center — Dielectric Bonding for Airtight Seams',
+    description:
+      'Radio-frequency welding technology delivering compliant airtight seams. Peel testing, air-retention validation, and custom seam specifications. Discuss your welding requirements with our team.',
+  },
+  hu: {
+    title: 'RF Welding Center — Dielectric Bonding for Airtight Seams',
+    description:
+      'Radio-frequency welding technology delivering compliant airtight seams. Peel testing, air-retention validation, and custom seam specifications. Discuss your welding requirements with our team.',
+  },
+  id: {
+    title: 'RF Welding Center — Dielectric Bonding for Airtight Seams',
+    description:
+      'Radio-frequency welding technology delivering compliant airtight seams. Peel testing, air-retention validation, and custom seam specifications. Discuss your welding requirements with our team.',
+  },
+  ko: {
+    title: 'RF Welding Center — Dielectric Bonding for Airtight Seams',
+    description:
+      'Radio-frequency welding technology delivering compliant airtight seams. Peel testing, air-retention validation, and custom seam specifications. Discuss your welding requirements with our team.',
+  },
+  lt: {
+    title: 'RF Welding Center — Dielectric Bonding for Airtight Seams',
+    description:
+      'Radio-frequency welding technology delivering compliant airtight seams. Peel testing, air-retention validation, and custom seam specifications. Discuss your welding requirements with our team.',
+  },
+  lv: {
+    title: 'RF Welding Center — Dielectric Bonding for Airtight Seams',
+    description:
+      'Radio-frequency welding technology delivering compliant airtight seams. Peel testing, air-retention validation, and custom seam specifications. Discuss your welding requirements with our team.',
+  },
+  ms: {
+    title: 'RF Welding Center — Dielectric Bonding for Airtight Seams',
+    description:
+      'Radio-frequency welding technology delivering compliant airtight seams. Peel testing, air-retention validation, and custom seam specifications. Discuss your welding requirements with our team.',
+  },
+  ro: {
+    title: 'RF Welding Center — Dielectric Bonding for Airtight Seams',
+    description:
+      'Radio-frequency welding technology delivering compliant airtight seams. Peel testing, air-retention validation, and custom seam specifications. Discuss your welding requirements with our team.',
+  },
+  sk: {
+    title: 'RF Welding Center — Dielectric Bonding for Airtight Seams',
+    description:
+      'Radio-frequency welding technology delivering compliant airtight seams. Peel testing, air-retention validation, and custom seam specifications. Discuss your welding requirements with our team.',
+  },
+  sl: {
+    title: 'RF Welding Center — Dielectric Bonding for Airtight Seams',
+    description:
+      'Radio-frequency welding technology delivering compliant airtight seams. Peel testing, air-retention validation, and custom seam specifications. Discuss your welding requirements with our team.',
+  },
+  sr: {
+    title: 'RF Welding Center — Dielectric Bonding for Airtight Seams',
+    description:
+      'Radio-frequency welding technology delivering compliant airtight seams. Peel testing, air-retention validation, and custom seam specifications. Discuss your welding requirements with our team.',
+  },
+  th: {
+    title: 'RF Welding Center — Dielectric Bonding for Airtight Seams',
+    description:
+      'Radio-frequency welding technology delivering compliant airtight seams. Peel testing, air-retention validation, and custom seam specifications. Discuss your welding requirements with our team.',
+  },
+  tl: {
+    title: 'RF Welding Center — Dielectric Bonding for Airtight Seams',
+    description:
+      'Radio-frequency welding technology delivering compliant airtight seams. Peel testing, air-retention validation, and custom seam specifications. Discuss your welding requirements with our team.',
+  },
+  tr: {
+    title: 'RF Welding Center — Dielectric Bonding for Airtight Seams',
+    description:
+      'Radio-frequency welding technology delivering compliant airtight seams. Peel testing, air-retention validation, and custom seam specifications. Discuss your welding requirements with our team.',
+  },
+};
+
+const crumbs = [
+  { name: t('nav.home') || 'Home', href: `/${lang}/` },
+  { name: 'R&D Center', href: `/${lang}/randdcenter` },
+  { name: 'RF Welding Center' },
+];
+
+const meta = META[lang] || META.en;
+
+const metadata = {
+  title: `${meta.title} | ${SITE.name}`,
+  description: meta.description,
+};
+
+const RanddBody: any =
+  (
+    {
+      de: RDe,
+      es: REs,
+      fr: RFr,
+      it: RIt,
+      cs: RCs,
+      sv: RSv,
+      da: RDa,
+      el: REl,
+      no: RNo,
+      ru: RRu,
+      nl: RNl,
+      fi: RFi,
+      pl: RPl,
+      ar: RAr,
+      pt: RPt,
+      ja: RJa,
+      bg: RBg,
+      et: REt,
+      he: RHe,
+      hr: RHr,
+      hu: RHu,
+      id: RId,
+      ko: RKo,
+      lt: RLt,
+      lv: RLv,
+      ms: RMs,
+      ro: RRo,
+      sk: RSk,
+      sl: RSl,
+      sr: RSr,
+      th: RTh,
+      tl: RTl,
+      tr: RTr,
+    } as Record<string, any>
+  )[lang] || REn;
+
+const faqSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is RF welding?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Radio Frequency welding uses electromagnetic energy to fuse PVC molecules at the molecular level, creating seams that are often stronger than the base material.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is RF welding better than hand gluing?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'RF welding produces more consistent, stronger seams on PVC materials. Hand gluing is required for Hypalon/CSM which cannot be RF welded.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How are welds tested?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Peel testing (measuring force to separate), backlight seam inspection (detecting voids), and weld width verification per ISO standards.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What materials can be RF welded?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Marine-grade PVC (0.9-1.2mm), Drop-Stitch core fabrics, and EVA deck pad materials. Hypalon/CSM requires hand gluing.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the weld strength compared to base material?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Properly executed RF welds achieve 90-100% of the base material tensile strength, making the seam as strong as the surrounding material.',
+      },
+    },
+  ],
+});
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  {RanddBody && <RanddBody lang={lang} />}
+  <script is:inline type="application/ld+json" set:html={faqSchema} />
+</Layout>

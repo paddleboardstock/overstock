@@ -1,0 +1,175 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'ko' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">&larr; R&D 센터로 돌아가기</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">랩 04</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">수력 시험 수조</h1>
+      <p class="mt-3 text-lg text-muted">첫 번째 실물 프로토타입 전에 성능 검증</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-design-discussion-original.webp"
+        alt="Aquafarer 유체역학 시험 수조 성능 시험"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>왜 작은 보트를 수조에서 테스트할까?</h2>
+  <p>
+    수리동역학 시험이 대형 해양 선박에만 해당된다는 것은 흔한 오해입니다. 실제로, 4~5m 정도의 작은 플래닝 선체의 성능도
+    유조선이 벌브형 선수에 의존하는 것만큼이나 수중 형상에 크게 좌우됩니다. 트림 각도, 젖은 표면적, 스프레이 발생, 환기
+    등은 모두 속도, 연료 소비, 승선 편안함에 큰 영향을 미칩니다.{SITE.name}, 우리는 전체 크기 프로토타입에 금속과 천을
+    투입하기 전에 모델 규모에서 이러한 영향을 정량화할 수 있는 전용 유체역학 시험 수조를 운영합니다.
+  </p>
+  <p>
+    모델 스케일(보통 1:3~1:5)에서의 테스트는 선체 형상을 신속하고 비용 효율적으로 반복할 수 있게 해줍니다. 수조에서의
+    1주일 테스트는 몇 달에 걸친 실물 규모 시행착오와 동일한 성능 데이터를 제공할 수 있으며, 비용은 그 일부만 소요됩니다.
+  </p>
+
+  <h2>시설 사양</h2>
+  <table>
+    <thead><tr><th>매개변수</th><th>사양</th></tr></thead>
+    <tbody>
+      <tr><td>수조 크기</td><td>35 m (L) × 3.5 m (W) × 1.8 m (D)</td></tr>
+      <tr><td>견인 차량</td><td>전기 서보 구동, 최대 속도 12 m/s (23 kn), 속도 정확도 ± 0.5 %</td></tr>
+      <tr
+        ><td>파 생성기</td><td>플랩형, 규칙적 및 불규칙적 해상 상태 프로그래밍 가능, 모델 스케일에서 Hs 최대 0.3 m</td
+        ></tr
+      >
+      <tr><td>계측 장비</td><td>6성분 다이나모미터(저항, 측력, 요우 모멘트), 가속도계, 경사계, 파 탐침</td></tr>
+      <tr><td>데이터 수집</td><td>채널별 1000 Hz 샘플링, 실시간 디스플레이 + 후처리 소프트웨어</td></tr>
+      <tr><td>모델 제작</td><td>사내 CNC 밀링 및 3D 프린팅을 통한 최대 1.8 m LOA 선체 모델 제작</td></tr>
+    </tbody>
+  </table>
+
+  <h2>우리의 테스트 프로그램</h2>
+  <p>우리 수조에서 표준 선체 개발 프로그램은 다음 순서를 따릅니다:</p>
+  <ol>
+    <li>
+      <strong>모델 제작</strong>— 1:3.5 스케일 모델을 고밀도 폼에서 CNC-가공하며 강성을 위해 글래스로 강화합니다. 중량과
+      무게 중심(CG)을 프루드 비율의 만재 조건에 맞게 조정합니다.
+    </li>
+    <li>
+      <strong>저항 테스트</strong>— 모델을 작동 범위에 걸쳐 8-10가지 속도로 견인합니다. 총 저항을 측정하고 ITTC-1957
+      방법을 사용하여 마찰 저항과 잔여 저항으로 분해합니다.
+    </li>
+    <li>
+      <strong>트림 및 침수 측정</strong>— 각 속도에서 달리기 트림과 침수를 기록합니다. 플래닝 선체의 최적 트림 각도는
+      4-6°를 목표로 합니다.
+    </li>
+    <li>
+      <strong>웨이크 측량</strong>— 횡파 절단은 두 가지 속도로 측정되어 파동 생성 저항을 평가하고 후진(stern) 간섭을
+      일으킬 수 있는 횡파 상호작용을 식별합니다.
+    </li>
+    <li>
+      <strong>시키핑(선택 사항)</strong>— 정상파 속에서 상해와 후행 해상 주행을 통해 추가 저항, 수직 가속도, 그리고 충격
+      확률을 측정합니다.
+    </li>
+    <li>
+      <strong>데이터 분석 및 권고사항</strong>— 전체 보고서는 비교 차트, 속도/출력 곡선, 그리고 실물 크기 선체에 대한
+      구체적인 설계 권고안을 포함하여 제공됩니다.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      일반적인 탱크 시험 결과 — 저항 대 속도 (RIB450 차체, 1:3.5 스케일)
+    </p>
+    <div class="space-y-2">
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">5노트 (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:18%"></div>
+        </div><span class="w-16 text-right">42 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">10노트 (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:35%"></div>
+        </div><span class="w-16 text-right">81 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">15노트 (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:52%"></div>
+        </div><span class="w-16 text-right">121 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">20노트 (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:68%"></div>
+        </div><span class="w-16 text-right">158 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">25노트 (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:85%"></div>
+        </div><span class="w-16 text-right">197 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">30노트 (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:100%"></div>
+        </div><span class="w-16 text-right">232 N</span>
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      프라우드 스케일 속도에서의 모델 규모 저항(N). 전체 규모 전력 예측은 ITTC-1978 성능 예측 방법을 따릅니다.
+    </p>
+  </div>
+
+  <h2>전문가 팀</h2>
+  <p>
+    우리 탱크는 해군 건축학 박사 학위와 유럽 주요 해양 연구소에서 8년간 견인 탱크 경험을 가진 유체역학자가 운영합니다.
+    그는 모든 모델과 계측기를 준비하는 기술자의 지원을 받습니다. 팀은 ITTC(국제 견인 탱크 회의) 권장 절차를 준수하여
+    모든 시험이 반복 가능하고 추적 가능하며 국제적으로 방어할 수 있도록 보장합니다.
+  </p>
+
+  <h2>맞춤형 선체 개발을 위한 탱크 시험</h2>
+  <p>
+    저희 탱크는 자체 설계 선체에만 사용되는 것이 아니라, 맞춤형 선체 형태를 검증하거나 성능 문제를 조사하고자 하는
+    고객을 위해 정기적으로 테스트 프로그램을 운영합니다:
+  </p>
+  <ul>
+    <li>
+      <strong>선체 형태 비교</strong>— 동일한 조건에서 두 개 이상의 후보 선체 형상을 시험하여 객관적인 항력/속도/안정성
+      비교를 제공하여 설계 선택에 도움이 됩니다.
+    </li>
+    <li>
+      <strong>부속물 최적화</strong>— 인터셉터 플레이트, 스프레이 레일, 트림 탭, 스트레이크는 각각 저항 감소에 기여하는
+      개별적인 기여도를 정량화하기 위해 다양한 구성으로 시험할 수 있습니다.
+    </li>
+    <li>
+      <strong>엔진 매칭 연구</strong>— 저항 데이터는 출력 예측 곡선으로 변환되어 목표 속도와 탑재량에 맞는 최적의 엔진
+      마력을 선택할 수 있습니다.
+    </li>
+  </ul>
+
+  <h2>왜 우리와 함께 테스트해야 할까요?</h2>
+  <p>
+    우리는 단순히 원시 수치만 제공하지 않습니다. 우리 보고서는 탱크 데이터를 실행 가능한 엔지니어링 권고사항으로
+    전환합니다: "순항 속도에서 습한 표면을 줄이기 위해 스프레이 레일을 8mm 올려라", "트랜섬에서 데드라이즈 3° 증가하여
+    충격 가속도를 줄이기", 또는 "종방향 무게중심을 150mm 뒤로 이동시켜 플래닝 자세를 개선하라". 무엇을 왜 바꿔야 하는지
+    명확히 이해하고 떠나세요.
+  </p>
+  <p>
+    저희 탱크는 서비스 대비 독립 제3자 테스트도 가능합니다. 선체를 개발 중이며 공정하고 전문적으로 수행된 유체역학
+    평가를 원하신다면 문의를 환영합니다.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">탱크 테스트 세션을 예약하세요</h2>
+    <p class="mt-2 text-sm text-muted">전체 개발 프로그램이든 단일 비교 시험이든 일정에 맞춰 조정해 드립니다.</p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >저희 유체역학 팀에 연락하세요</a
+    >
+  </div>
+</section>

@@ -1,0 +1,82 @@
+hero:
+  tagline: Pakiety Biznesowe
+  title: Gotowe do wdrożenia pakiety<br />wodne na każdym etapie
+  subtitle: Wstępnie skonfigurowane pakiety sprzętu dla klubów sportów wodnych, ośrodków wypoczynkowych i start-upów marek — z przejrzystymi cenami, szybką dostawą i pełnymi opcjami dostosowywania.
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/use-cases/aquafarer-outdoor-adventure.webp
+    alt: Pakiety sprzętu biznesowego Aquafarer
+direct_answer: Aquafarer oferuje trzy wstępnie skonfigurowane pakiety biznesowe przeznaczone dla operatorów sportów wodnych na każdym etapie. Pakiet startowy klubu obejmuje 10 desek SUP z wiosłami, pompkami, zestawami naprawczymi i sprzętem ochronnym dla powstających klubów i szkół. Pakiet Resort Premium dostarcza 50–100 jednostek z systemami przechowywania, brandingiem i przewodnikami szkoleniowymi dla hoteli i obiektów hotelarskich. Pakiet Brand Launch Package zapewnia wybór produktów, projekt niestandardowego logo, pakowanie, produkcję i wysyłkę dla przedsiębiorców wprowadzających na rynek własną markę sportów wodnych. Wszystkie pakiety obejmują bezpośrednie ceny fabryczne, certyfikat CE i globalne wsparcie logistyczne.
+packages:
+  - id: club-starter
+    tag: Best Seller
+    name: Klubowy Pakiet Startowy
+    subtitle: Wszystko, czego potrzebujesz, aby uruchomić lub ulepszyć swój klub wiosłowy
+    target: Kluby SUP, kluby kajakowe, szkoły surfingu, ośrodki szkoleniowe
+    price_label: Od 4800 dolarów
+    line_items:
+      - item: 10 desek SUP lub kajaków
+      - item: 10 pasujących wioseł
+      - item: 10 pomp o dużej wydajności
+      - item: 10 zestawów naprawczych
+      - item: 10 kamizelek ratunkowych z logo klubu
+      - item: Branding klubu na tablicach
+      - item: Zestaw znaków bezpieczeństwa
+      - item: Przewodnik po lekcjach dla początkujących w formacie PDF
+    cta_text: Get Club Package
+    cta_href: /contact
+  - id: resort-premium
+    tag: Premium
+    name: Pakiet Resort Premium
+    subtitle: Kompletny program zajęć wodnych dla gości w hotelach i kurortach
+    target: Ośrodki nadmorskie, hotele nad jeziorem, eko resorty, kluby jachtowe
+    price_label: Niestandardowy cytat
+    line_items:
+      - item: 50–100 SUP, kajaków lub flota mieszana
+      - item: Pełne oznakowanie ośrodka na całym sprzęcie
+      - item: Wiosła i PFD klasy do wypożyczenia
+      - item: Komercyjny system regałów magazynowych
+      - item: Stacja inflacji z pompami przemysłowymi
+      - item: System bezpieczeństwa (boje, znaki, tablica ratunkowa)
+      - item: Program szkolenia personelu
+      - item: Poradnik zarządzania przychodami
+    cta_text: Get Resort Package
+    cta_href: /contact
+  - id: brand-launch
+    tag: Entrepreneur
+    name: Pakiet wprowadzenia marki
+    subtitle: Zamień pomysł na markę w gotowy produkt — zazwyczaj w 60–90 dni
+    target: Sprzedawcy Amazon, influencerzy, dystrybutorzy regionalni
+    price_label: Od 6500 dolarów
+    line_items:
+      - item: Konsultacje w zakresie wyboru produktu
+      - item: Niestandardowy projekt logo na tablicach
+      - item: Niestandardowe dopasowanie kolorów
+      - item: Markowe opakowania detaliczne
+      - item: Zawieś metki i instrukcję obsługi
+      - item: Dokumentacja certyfikująca CE
+      - item: Próbki produkcyjne
+      - item: Wysyłka FOB Qingdao
+    cta_text: Launch My Brand
+    cta_href: /contact
+faq:
+  title: Często zadawane pytania dotyczące pakietu
+  questions:
+    - q: Jaka jest minimalna wielkość zamówienia paczek?
+      a: Pakiet Startowy Klubu obejmuje minimum 10 jednostek. Pakiety Resort i Brand są dostosowywane do Twoich potrzeb dzięki elastycznym MOQ.
+    - q: Jak długo trwa dostawa?
+      a: Standardowa produkcja wynosi 30–45 dni od potwierdzenia zamówienia. Przyspieszona produkcja jest dostępna za dodatkową opłatą.
+    - q: Czy mogę dostosować kolory i branding sprzętu?
+      a: Tak. Wszystkie pakiety obejmują pełną personalizację — kolory tektury, nadruki logo i projekty opakowań.
+    - q: Czy zapewniacie wsparcie posprzedażowe?
+      a: Tak. Każdy pakiet obejmuje dostęp do naszych internetowych przewodników konserwacyjnych, samouczków wideo i systemu zamawiania części zamiennych.
+cta:
+  title: Nie wiesz, który pakiet pasuje?
+  subtitle: Odpowiedz na 3 krótkie pytania, a my polecimy idealny pakiet dla Twojej firmy.
+  actions:
+    - variant: primary
+      text: Uzyskaj rekomendowany pakiet
+      href: /contact
+    - text: Wyświetl rozwiązania według odbiorców
+      href: /solutions
+    - text: Przeczytaj historie sukcesu
+      href: /success-stories

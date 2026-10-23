@@ -1,0 +1,275 @@
+---
+import JsonLd from '~/components/common/JsonLd.astro';
+import AiQuickAnswer from '~/components/common/AiQuickAnswer.astro';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
+const { lang = 'hr' } = Astro.props;
+const t = (key: string) => getUiForLang(lang)?.[key] || '';
+---
+
+<JsonLd
+  type="Article"
+  article={{
+    headline: 'Vodič za napuhavajući čamac — Potpuni resurs',
+    description:
+      'Sveobuhvatan vodič za napuhavajuće čamce koji pokriva vrste, metode izgradnje, usporedbu materijala, kriterije odabira, sigurnosne standarde i održavanje.',
+    datePublished: '2026-07-07',
+  }}
+  data={{ url: 'https://aquafarer.com/marine-industry/' }}
+/>
+
+<JsonLd
+  type="BreadcrumbList"
+  breadcrumbs={[
+    { name: t('nav.home') || 'Home', href: `/${lang}/` },
+    { name: 'Pomorska industrija', href: `/${lang}/marine-industry` },
+    { name: 'Vodič za napuhavajući čamac', href: `/${lang}/marine-industry/` },
+  ]}
+/>
+
+<AiQuickAnswer
+  entityType="Vodič"
+  quickAnswer="Napuhavajući čamac je lagano plovilo izrađeno od fleksibilnih tkaninskih cijevi (sponzora) napunjenih komprimiranim zrakom kako bi se osigurala plovnost. Moderna napuhavajuća plovila uključuju čamce, RIBs (kruti napuhavajući čamci), napuhavajuće kajake i daske za veslanje u stojećem položaju. Izrađuju se od PVC ili Hypalon CSM tkanina koristeći RF zavarivanje ili ručno lijepljene šavove, s drop-stitch konstrukcijom koja omogućuje visoko tlakovite krute podove."
+  facts={[
+    { label: 'Globalna veličina tržišta', value: '$2.8B (2026)' },
+    { label: 'Primarni materijali', value: 'PVC / Hypalon CSM' },
+    { label: 'Raspon životnog vijeka', value: '8-20+ godina' },
+    { label: 'CE Certifikacija', value: 'Obavezno (EU)' },
+  ]}
+/>
+
+<section class="max-w-4xl mx-auto py-16 px-6">
+  <h1 class="text-4xl font-semibold text-gray-900">Vodič za napuhavajući čamac</h1>
+  <p class="mt-4 text-lg text-gray-500">
+    Najvažniji izvor o napuhavajućim plovilima — od rekreativnih RIBs čamaca do profesionalnih i specijaliziranih
+    spasilačkih plovila.
+  </p>
+
+  <nav class="mt-8 flex flex-wrap gap-2">
+    {
+      ['Types', 'Construction', 'Materials', 'Selection', 'Safety', 'Maintenance', 'Standards'].map((section) => (
+        <a
+          href={`#${section.toLowerCase()}`}
+          class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition"
+        >
+          {section}
+        </a>
+      ))
+    }
+  </nav>
+
+  <section id="types" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Vrste napuhavajućih čamaca</h2>
+    <div class="mt-8 grid gap-6">
+      {
+        [
+          {
+            title: 'Napuhavajuće gumenjake',
+            desc: 'Mali, prijenosni čamci za prijevoz, ribolov i rekreativnu upotrebu na kratke udaljenosti. Obično 2-4 m, pogonjeni malim izvanbrodskim motorima (2-15 HP) ili veslima. Najpovoljnija ulazna opcija.',
+            icon: '🚤',
+          },
+          {
+            title: 'Čvrsti napuhavajući čamci (RIBs)',
+            desc: 'Visokoučinkoviti čamci s krutom oplatom od stakloplastike, aluminija ili HDPE-a i napuhavajućim sponeovima. Duljine 3-12 m, vanbrodski motori 15-300+ HP. Koriste se za patrolu, spašavanje, ronjenje i offshore krstarenje.',
+            icon: '⚡',
+          },
+          {
+            title: 'Napuhavajući kajaci',
+            desc: 'Prijenosni kajaci izrađeni od PVC ili TPU tkanina. Dostupni u jednokrevetnoj i dvokrevetnoj konfiguraciji za rekreacijsko razgledavanje, vožnju rijekom i ekspedicijska putovanja.',
+            icon: '🛶',
+          },
+          {
+            title: 'Napuhavajuće daske za stajanje i veslanje (SUPs)',
+            desc: 'Drop-stitch konstruirao je paddle boardove koji se napuhuju u krute palube visokog tlaka. Dostupni su modeli za sve, touring, yogu, ribolov i surfanje.',
+            icon: '🏄',
+          },
+          {
+            title: 'Spasilački čamci (SAR)',
+            desc: 'Specijaliziran RIBs za operacije potrage i spašavanja. Ima samopražnjenje na podovima, prednje konzole, vučne kopče i sheme boja visoke vidljivosti. CE-certificiran za upotrebu u spašavanju.',
+            icon: '🆘',
+          },
+          {
+            title: 'Komercijalni radni brodovi',
+            desc: 'Težak RIBs za podršku ronjenju, patrolu, istraživanje i komercijalne pomorske operacije. Hypalon CSM konstrukcija, ojačani trupovi i profesionalna oprema.',
+            icon: '⚙️',
+          },
+        ].map((item) => (
+          <div class="flex gap-4 p-5 bg-gray-50 rounded-xl border border-gray-200">
+            <span class="text-2xl flex-shrink-0">{item.icon}</span>
+            <div>
+              <h3 class="font-semibold text-gray-900">{item.title}</h3>
+              <p class="mt-1 text-sm text-gray-600">{item.desc}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section id="construction" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Metode gradnje</h2>
+    <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">RF zavarivanje (visokofrekventno)</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Koristi elektromagnetsku energiju za spajanje PVC slojeva na molekularnoj razini. Stvara najčvršće hermetičke
+          spojeve. PVC Uobičajeno kod visokokvalitetnih brodova i . SUPsZahtijeva specijalizirane strojeve i vješto
+          rukovanje.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Ručno lijepljenje / kemijsko povezivanje</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Dvodijelno ljepilo povezuje platnene panele. Primarna metoda za Hypalon CSM brodove (ne može se zavarivati
+          RF). Zahtijeva preciznu pripremu površine, kontroliranu vlažnost i pravilno vrijeme stvrdnjavanja za optimalnu
+          čvrstoću šava.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Drop-Stitch Jezgra</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Tisuće poliesterskih niti povezuju gornji i PVC donji sloj, omogućujući napuhavanje pod visokim tlakom
+          (15-25PSI) za performanse krute ploče. Gustoća navoja (15-50 navoja/cm²) određuje krutost i težinu.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Toplinsko zavarivanje</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Zavarivanje vrućim zrakom ili vrućim klinom koje se koristi za spojeve i ojačanja. Uobičajeno u RIB većim
+          konstrukcijama. Manje precizno od RF zavarivanja, ali učinkovito za Hypalon PVC teške tkanine.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="materials" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Usporedba materijala</h2>
+    <div class="mt-6 overflow-x-auto">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="bg-gray-50 border-b-2 border-gray-200">
+            <th class="px-4 py-3 text-left font-semibold text-gray-700">Nekretnine</th>
+            <th class="px-4 py-3 text-center font-semibold text-sky-700">PVC</th>
+            <th class="px-4 py-3 text-center font-semibold text-emerald-700">Hypalon CSM</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            [
+              ['Relative Cost', '$ (budget)', '$$$ (premium)'],
+              ['UV Resistance', 'Good (with coating)', 'Excellent (inherent)'],
+              ['Abrasion Resistance', 'Moderate-Good', 'Excellent'],
+              ['Chemical Resistance', 'Good', 'Excellent'],
+              ['Cold Flexibility', 'Stiffens below 0°C', 'Flexible to -20°C'],
+              ['Lifespan', '8-12 years', '15-20+ years'],
+              ['Seam Method', 'RF welding', 'Hand gluing'],
+              ['Repair', 'PVC glue (easy)', '2-part adhesive (moderate)'],
+            ].map((row, i) => (
+              <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                {row.map((cell, j) => (
+                  <td
+                    class={`px-4 py-3 border-b border-gray-200 ${j === 0 ? 'font-medium text-gray-700' : 'text-center text-gray-600'}`}
+                  >
+                    {cell}
+                  </td>
+                ))}
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-4 text-sm text-gray-500">
+      Moderni vojni PVC (1100-1670 dtex) nudi izvrsnu izdržljivost za većinu rekreativnih korisnika po pola cijene
+      Hypalon. Hypalon je preferiran za komercijalne flote, tropske klimatske uvjete i kritične misije.
+    </p>
+    <a
+      href={`/${lang}/learn/pvc-vs-hypalon`}
+      class="mt-4 inline-block text-sky-600 hover:text-sky-700 text-sm font-medium">Detaljan vodič PVC vs Hypalon →</a
+    >
+  </section>
+
+  <section id="selection" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Kako odabrati napuhavajući čamac</h2>
+    <div class="mt-8 grid md:grid-cols-3 gap-6">
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">1. Definirajte svoju namjenu</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>Rekreativno: čamac ili SUP</li>
+          <li>Performanse: RIB (15-60 HP)</li>
+          <li>Komercijalno: RIB (100+ HP)</li>
+          <li>Fitness: napuhavajući SUP</li>
+          <li>Putovanje: napuhavajući kajak</li>
+        </ul>
+      </div>
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">2. Postavite svoj proračun</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>$200-$800: napuhavajući SUP</li>
+          <li>$500-$2,000: čamac + motor</li>
+          <li>$3,000-$8,000: početni RIB</li>
+          <li>$8,000-$20,000: premium RIB</li>
+          <li>$20,000+: komercijalni RIB</li>
+        </ul>
+      </div>
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">3. Razmotrite materijal</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>PVC: povoljan, lagan</li>
+          <li>Hypalon: premium, dugovječan</li>
+          <li>Drop-Stitch: čvrste performanse</li>
+          <li>Težina tkanine: 1100-1670 dtex</li>
+          <li>Premaz: UV + slojevi otpornosti na probijanje</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="safety" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Sigurnost i standardi</h2>
+    <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">CE Certifikacija</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Svi napuhavajući čamci prodani u EU zahtijevaju oznaku CE prema Direktivama o rekreativnim plovilima (RCD)
+          2013/53/EU. Certifikacija obuhvaća kategoriju dizajna (A-D), plovnost, stabilnost i nosivost. Aquafarer čamci
+          su CE-certificirani za rekreativnu i spasilačku uporabu.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Standard</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Međunarodni standard za napuhavajuće čamce koji specificira zahtjeve za materijale, šavove, ventile i
+          testiranje performansi. Tipovi I-IV pokrivaju sve od malih čamaca do velikih RIBs.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Osnovna sigurnosna oprema</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Prsluci za spašavanje/PFD (CE 12402), bacanje užadi, crpka/vatrogasni aparat, navigacijska svjetla (noću), VHF
+          radio, komplet prve pomoći, sidro i rezervna vesla ili gorivo.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Sigurna vožnja</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          NIKADA ne premašujte maksimalni kapacitet naveden na pločici. Provjerite sigurnost ventila prije porinuća.
+          Ravnomjerno rasporedite težinu. Pratite vremenske uvjete. Podnesite plan kretanja brodom. Pohađajte tečaj
+          sigurnosti na vodi.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="maintenance" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Održavanje i briga</h2>
+    <div class="mt-8 space-y-4 text-sm text-gray-600">
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <>
+          <span class="text-sky-600 font-bold flex-shrink-0">1.</span>
+          <span>Isperite slatkom vodom nakon svake uporabe u slanoj vodi. Potpuno osušite prije pohrane.</span>
+        </>
+      </div>
+    </div>
+  </section>
+</section>

@@ -1,0 +1,174 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'he' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">← חזרה למרכז מו"פ</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">מעבדה 01</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">PVC מעבדת הבדים</h1>
+      <p class="mt-3 text-lg text-muted">בדיקות מדעיות בחומרים — מסיבים לצינור גמור</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/randd/aquafarer-pvc-material-lab.webp"
+        alt="Aquafarer PVC מעבדת בדיקות חומרי בד"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>היסוד של כל סירה מתנפחת</h2>
+  <p>
+    בד הצינור הוא החומר הקריטי ביותר בסירה מתנפחת. הוא חייב לעמוד בפני חשיפה מתמדת ל-UV, מחזורי תפיחה חוזרים, שחיקה מול
+    רציפונים ופסולת, ושינויים קיצוניים בטמפרטורה — הכל תוך שמירה על שלמות המבנה שלו לאורך שנים. ב{SITE.name}, מעבדת הבד
+    שלנו PVC מוקדשת בלעדית לאפיון, לאימות ולשיפור מתמשך של הבדים שבהם אנו משתמשים בכל סירה שאנו בונים.
+  </p>
+  <p>
+    איננו מסתמכים רק על גיליונות נתונים של ספקים. כל אצווה PVC Hypalon וכל בד שנכנס לסדנה שלנו נבדק באופן עצמאי בתוך
+    החברה. זה מבטיח שהמפרט החומרי שנפרסם הוא ביצועי החומר שתקבל — הרבה אחרי החלקה, שנה אחרי שנה.
+  </p>
+
+  <h2>ציוד בדיקה סטנדרטי</h2>
+  <p>מעבדת הבדים שלנו מצוידת במכשירים תעשייתיים התואמים ISOלשיטות בדיקה של , ASTM ו-EN:</p>
+  <table>
+    <thead><tr><th>ציוד</th><th>פרמטרים שנמדדו</th><th>סטנדרט</th></tr></thead>
+    <tbody>
+      <tr><td>בודק מתיחה אוניברסלי (50 kN)</td><td>כוח שבירה, הארכה בשבירה, התפשטות קרע</td><td>/ ASTM D751</td></tr>
+      <tr><td>תא התבלה בקשת קסנון</td><td>UV התנגדות (שינוי צבע, שמירת חוזק לאחר 2000 שעות)</td><td>/ ASTM G155</td></tr
+      >
+      <tr><td>בודק גמישות בטמפרטורות נמוכות</td><td>נקודת סדק בין -30°C ל-50°C</td><td>ISO 4675 / ASTM D2136</td></tr>
+      <tr
+        ><td>בודק שחיקה Taber</td><td>ירידה במשקל לאחר 1000 מחזורים (גלגל CS-10)</td><td>ASTM D3389 / ISO 5470-1</td
+        ></tr
+      >
+      <tr><td>מד עובי (דיגיטלי, רזולוציית 0.001 מ"מ)</td><td>אחידות ברוחב הגליל</td><td>ISO 2286-3</td></tr>
+      <tr><td>בודק ראש הידרוסטטי</td><td>עמידות לחדירת מים</td><td>ISO 811</td></tr>
+    </tbody>
+  </table>
+  <p class="text-sm text-gray-500">* כל הציוד מכויל מדי שנה על ידי מעבדות מוסמכות של צד שלישי.</p>
+
+  <h2>מהנתונים להחלטה: תהליך בדיקה טיפוסי</h2>
+  <p>כאשר מגיע מועמד חדש לבד, הוא עובר תהליך הסמכה סטנדרטי בן שבעה שלבים:</p>
+  <ol>
+    <li>
+      <strong>בדיקת קבלות</strong>— בדיקה ויזואלית לפגמים במשטח, חורים סיניים ועמידה במימדיות.
+    </li>
+    <li>
+      <strong>מיפוי עובי</strong>— מדידה של 20 נקודות על פני הגלגול; נדרש CV &lt; 3% לקבלה.
+    </li>
+    <li>
+      <strong>בדיקות מתיחה</strong>— 5 דגימות בכיווני ארימה ומערב. מינימום 3500 ניוטון/50 מ"מ ל-1100 dtexPVC.
+    </li>
+    <li>
+      <strong>UV התניה</strong>— חשיפה של 1000 שעות בתא קשת קסנון; נדרש שמירת חוזק מינימלית של 80%.
+    </li>
+    <li>
+      <strong>סדק קר</strong>— 4 שעות ב-35- מעלות צלזיוס, ואז כיפוף של 180° מעל מנדרל בקוטר 25 מ"מ. אין סדקים נראים
+      לעין.
+    </li>
+    <li><strong>עמידות לשחיקה</strong>— 1000 מחזורים, ירידה במשקל ≤ 0.05 גרם.</li>
+    <li>
+      <strong>אישור אישור</strong>— רק לאחר שכל שבעת השערים עברו הבד יוצא להפקה.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      טיפוסי PVC 1100 dtex — החזקת מתיחה לאחר UV חשיפה
+    </p>
+    <div class="flex items-end gap-3 h-40">
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-600 rounded-t" style="height:100%"></div><span class="text-xs mt-1"
+          >0 h<br />100%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-500 rounded-t" style="height:95%"></div><span class="text-xs mt-1"
+          >500 h<br />95%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-400 rounded-t" style="height:88%"></div><span class="text-xs mt-1"
+          >1000 h<br />88%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-300 rounded-t" style="height:82%"></div><span class="text-xs mt-1"
+          >2000 h<br />82%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-gray-300 rounded-t" style="height:65%"></div><span class="text-xs mt-1"
+          >מתחרה<br />~65%</span
+        >
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      PVC בד ה-1100 DTEX שלנו שומר על חוזק מתיחה &gt;-80% לאחר חשיפה לקשת קסנון של 2000 שעות, לעומת בד תעשייתי טיפוסי
+      שיורדים מתחת ל-70%.
+    </p>
+  </div>
+
+  <h2>הצוות המקצועי שלנו</h2>
+  <p>
+    המעבדה מאוישת על ידי שני מהנדסי חומרים במשרה מלאה, שכל אחד מהם מחזיק בתואר במדעי הפולימרים או הנדסת טקסטיל עם
+    מינימום של שש שנות ניסיון בתעשייה. הם נתמכים על ידי שלושה טכנאים המבצעים בדיקות יומיומיות ורישומי נתונים. הצוות
+    משתתף באופן קבוע בניסויים בין-מעבדתיים המאורגנים על ידי הארגון הבינלאומי לתקינה ISO() כדי לאמת את דיוק שיטות הבדיקה
+    שלנו.
+  </p>
+
+  <h2>פתרון האתגרים החומריים הקשים ביותר שלך</h2>
+  <p>
+    כל סביבה ימית שונה. סירת סיור הפועלת במפרץ הפרסי מתמודדת UV עם תנאי טמפרטורה שונים מאוד מכלי חילוץ בים הצפוני. מעבדת
+    הבדים שלנו עוזרת לך לבחור — או לפתח — מפרט בד שמותאם לפרופיל התפעול שלך.
+  </p>
+  <p>פתרונות מותאמים אישית עדכניים כוללים:</p>
+  <ul>
+    <li>תערובת עם שחיקה גבוהה PVC עבור לקוח צבאי שסירותיו חוצות בקביעות על שוניות אלמוגים (+40% חיי שחיקה).</li>
+    <li>נוסחה בטמפרטורה נמוכה Hypalon לתחנת מחקר ארקטית, שנבדקה עד -50 מעלות צלזיוס ללא שבירות.</li>
+    <li>בד כתום מייצב בצבע לצי חיפוש והצלה, השומר על ראות לאחר 3 שנים של חשיפה לשמש טרופית.</li>
+  </ul>
+  <p>
+    אנו לא מוכרים בדים "מוכנים מראש" ומקווים שהם יתאימו. אנו בודקים, מאמתים וממליצים — או מייצרים — פתרון מותאם אישית
+    לפרופיל המשימה הספציפי שלכם. זהו ה{SITE.name}הבדל.
+  </p>
+
+  <h2>איך אנחנו משרתים אותך</h2>
+  <p>כאשר אתם מביאים אלינו אתגר חומרי, הנה מה שניתן לצפות לו:</p>
+  <ol>
+    <li><strong>ייעוץ</strong>— אנחנו דנים בסביבת הפעולה שלכם, ביעדי הביצועים ובתקציב.</li>
+    <li><strong>הצעה</strong>— מתוכנן תוכנית בדיקה עם קריטריוני הצלחה/כישלון ברורים ובלוח זמנים.</li>
+    <li>
+      <strong>ביצוע</strong>— המעבדה שלנו מבצעת את הבדיקות ומפיקה דוח מפורט עם נתונים גולמיים וניתוח השוואתי.
+    </li>
+    <li>
+      <strong>המלצה</strong>— אנו מציגים מפרט בד, כולל אפשרויות חלופיות אם מספר חומרים עומדים בדרישות שלכם.
+    </li>
+    <li>
+      <strong>מעקב</strong>— לאחר המסירה, אנו נשארים זמינים לתמיכה בכל שאלה על החומר במהלך השימוש.
+    </li>
+  </ol>
+  <p>
+    המטרה שלנו אינה פשוט למכור לכם סירה. המטרה היא להבטיח שהסירה שתקבלו תפעל באופן אמין בתנאים שבהם אתם פועלים — וזה
+    מתחיל מהבד.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">זקוקים למפרט בד מותאם אישית?</h2>
+    <p class="mt-2 text-sm text-muted">צרו קשר עם צוות ההנדסה החומרית שלנו כדי לדון בדרישות שלכם.</p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >צרו קשר עם צוות המעבדה שלנו</a
+    >
+  </div>
+</section>

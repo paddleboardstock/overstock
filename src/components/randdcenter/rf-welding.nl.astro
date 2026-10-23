@@ -1,0 +1,181 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'nl' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">← Terug naar R&amp;D-centrum</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Laboratorium 03</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">RF-lascentrum</h1>
+      <p class="mt-3 text-lg text-muted">
+        Diëlektrische verbindingstechnologie voor lassen die onder druk blijven bestaan
+      </p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-jungle-mandala-1.webp"
+        alt="Aquafarer RF-lassen diëlektrisch verbindingsproces"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>De wetenschap achter de naad</h2>
+  <p>
+    Een opblaasboot is slechts zo betrouwbaar als zijn naden. Een enkele zwakke las kan een hele kamer in gevaar brengen
+    – en op zee is een defect in de kamer geen ongemak; het is een veiligheidsrisico. Bij {SITE.name}hebben we
+    geïnvesteerd in een speciaal radiofrequentie (RF) lascentrum dat diëlektrische laspersen van industriële kwaliteit
+    combineert met strenge procescontrole en tests na het lassen. Elke naad die we produceren is gedocumenteerd,
+    traceerbaar en gecertificeerd om te voldoen aan de eisen van de internationale norm voor opblaasbare vaartuigen, of
+    deze zelfs te overtreffen.
+  </p>
+  <p>
+    RF-lassen maakt gebruik van hoogfrequente elektromagnetische energie (doorgaans 27.12 MHz) om de polaire moleculen
+    in PVC of Hypalon-gecoate stof te exciteren, waardoor warmte precies op het grensvlak van het materiaal wordt
+    gegenereerd. In tegenstelling tot lassen met hete lucht of hete wig creëert RF-lassen een echte moleculaire binding:
+    de twee lagen stof smelten samen tot één homogeen materiaal in de laszone, waardoor een verbinding ontstaat die net
+    zo sterk is als het moedermateriaal zelf.
+  </p>
+
+  <h2>Lasapparatuur en procescontrole</h2>
+  <p>Ons lascentrum is uitgerust met:</p>
+  <table>
+    <thead><tr><th>Machine</th><th>Vermogen / Capaciteit</th><th>Sollicitatie</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Diëlektrische RF-pers 1</td><td>15 kW, degel 2000 × 600 mm</td><td
+          >Belangrijkste langsnaden, dwars-buisverbindingen</td
+        ></tr
+      >
+      <tr
+        ><td>Diëlektrische RF-pers 2</td><td>10 kW, degel 1500 × 500 mm</td><td
+          >Baffle-lassen, conusbevestigingen, kleppatches</td
+        ></tr
+      >
+      <tr
+        ><td>CNC-gestuurde RF-lasmachine</td><td>8 kW, XYtabel 2500 × 1200 mm</td><td
+          >Gebogen naden, reliëflogo/paneel, nauwkeurig patchwork</td
+        ></tr
+      >
+      <tr
+        ><td>Hotwedge automatisch lasapparaat</td><td>Variabele temperatuur, 1.2 m/min max</td><td
+          >Back-upmethode voor Hypalon/CSM materialen</td
+        ></tr
+      >
+    </tbody>
+  </table>
+  <p>
+    Elke RF-pers is uitgerust met een closed-loop temperatuur- en drukbewaking. Lasparameters – vermogen, perstijd,
+    koeltijd, elektrodedruk – worden per materiaaltype geprogrammeerd en vastgelegd in ons Manufacturing Execution
+    System (MES) voor volledige traceerbaarheid.
+  </p>
+
+  <h2>Laskwaliteitstesten – elke naad, elke boot</h2>
+  <p>De lasintegriteit wordt geverifieerd via een verplicht protocol van vier tests:</p>
+  <ol>
+    <li>
+      <strong>Visuele inspectie</strong> — 100 % van de naden wordt visueel geïnspecteerd op doorbranden, verkeerde uitlijning,
+      vervuiling of onvolledige versmelting. Drempel uitwerppercentage: 0.5 % van strekkende meter.
+    </li>
+    <li>
+      <strong>Schiltest ()</strong> — Uit een testcoupon wordt een 25 mm brede strook gesneden die bij elke productiebatch
+      wordt gelast. Minimale afpelkracht: 120 N/25 mm voor PVC 1100 dtex.
+    </li>
+    <li>
+      <strong>Luchtretentietest</strong> — Elke voltooide kamer wordt op druk gebracht tot 1.25 × werkdruk en gedurende 24-48
+      uur vastgehouden. De drukval mag niet groter zijn dan 2%.
+    </li>
+    <li>
+      <strong>Thermische fietstest</strong> — Monstercoupons worden gedurende 50 cycli van -20 °C tot +60 °C gewisseld en
+      vervolgens opnieuw aan een peel-test onderworpen. Aanvaardbaar krachtverlies: &lt; 10 %.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Vergelijking van de afpelsterkte — RF versus heteluchtlassen (PVC 1100 dtex)
+    </p>
+    <div class="space-y-3">
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">RF-las</span><div
+          class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded"
+        >
+          <div class="h-full bg-blue-600 rounded" style="width:92%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">184 N</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">Hete lucht</span><div
+          class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded"
+        >
+          <div class="h-full bg-gray-400 rounded" style="width:65%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">130 N</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium"> min</span><div class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded">
+          <div class="h-full bg-green-500 rounded" style="width:48%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">96 N</span>
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      Met RF-lassen wordt consequent 90-95% van de sterkte van het moedermateriaal bereikt, ruim boven het minimum.
+    </p>
+  </div>
+
+  <h2>Professionele expertise</h2>
+  <p>
+    Ons lasteam wordt geleid door een senior procesingenieur met 11 jaar ervaring in het diëlektrisch lassen van gecoat
+    textiel. Elke operator voltooit een intern certificeringsprogramma van 6 maanden voordat hij aan productienaden mag
+    werken. Jaarlijks is hercertificering vereist, inclusief een praktische lastest die wordt beoordeeld aan de hand van
+    onze interne klasse A-norm (afpelsterkte ≥ 160 N/25 mm).
+  </p>
+
+  <h2>Aangepaste lasoplossingen voor unieke vereisten</h2>
+  <p>
+    Wij begrijpen dat één lasspecificatie niet voor elke toepassing geschikt is. Ons RF-lascentrum ontwikkelt
+    routinematig aangepaste naadconfiguraties voor klanten met speciale vereisten:
+  </p>
+  <ul>
+    <li>
+      <strong>Meerlaagse verstevigingspatches</strong> — voor gebieden met hoge slijtage, zoals stootranden en boegkegels,
+      ontwikkelen we multi-pass RF-lassen die een slijtvaste buitenlaag integreren zonder de flexibiliteit in gevaar te brengen.
+    </li>
+    <li>
+      <strong>Geleidende of RFopaque naden</strong> — voor militaire of surveillancevaartuigen die elektromagnetische afscherming
+      vereisen, lassen we geleidende gaaslagen in de naadstapeling.
+    </li>
+    <li>
+      <strong>Lassen van kleurwisselpanelen</strong> — tweekleurige stoffen panelen (bijv. oranje romp + grijze bovenzijde)
+      gelast met een verborgen overlap om de merkesthetiek te behouden zonder een zichtbare verbindingslijn.
+    </li>
+  </ul>
+
+  <h2>Onze toewijding aan u</h2>
+  <p>
+    Op elke boot die we leveren valt onze laskwaliteitsgarantie: als een naad bij normaal gebruik binnen de
+    garantieperiode faalt, repareren of vervangen we de betreffende kamer kosteloos, en wordt er een onderzoek naar de
+    oorzaak uitgevoerd om herhaling te voorkomen. Dit is niet alleen maar een garantie; het is een toewijding aan
+    voortdurende verbetering, aangedreven door operationele gegevens uit de praktijk.
+  </p>
+  <p>
+    Wanneer u kiest {SITE.name}Kiest u voor naden die zijn ontworpen, getest en gedocumenteerd – en niet alleen maar
+    zijn gelast. Dat is het verschil tussen een boot die drijft en een boot die presteert.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Bespreek uw laswensen</h2>
+    <p class="mt-2 text-sm text-muted">Aangepaste naadspecificaties, materiaalcompatibiliteit of procesvalidatie.</p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Neem contact op met ons lasteam</a
+    >
+  </div>
+</section>

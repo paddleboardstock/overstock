@@ -1,0 +1,155 @@
+articles:
+  sup:
+    - title: SUP Alused — Algaja juhend
+      desc: Kõik, mida algaja peab teadma — lauade tüübid, reketi suurused, asend ja esimesse päeva nõuanded.
+    - title: SUP Suuruse juhend
+      desc: Leia õige lauapikkus, -laius ja -maht vastavalt oma kehakaalule, oskustele ja sõudmisstiilile.
+    - title: Täispuhutav vs kõva laud
+      desc: Milline sobib teile? Kergekantavus, jõudlus, vastupidavus ja hind võrreldud.
+    - title: Vahepealsed tehnikad
+      desc: Tõsta oma sõudmist kõrgemale tasemele arenenud tõmmete, pööramistehnikate ja karevee käitlemise abil.
+    - title: Kuidas valida täispuhutavat SUP
+      desc: Liigu läbi peamiste tegurite — konstruktsioon, paksus, tiibade seadistus ja kaasatud tarvikud.
+    - title: Veeohutus
+      desc: Oluline ohutusalane teadmine, sealhulgas ilma lugemine, PFD valik, enesepäästmine ja grupis aerutamine.
+  inflatable-boat:
+    - title: Materjalide Viide
+      desc: PVC, Hypalon, drop-stitch, denieri hinnangud — saa aru, millest sinu täispuhutav varustus on tehtud.
+    - title: PVC vs Hypalon
+      desc: Lõplik võrdlus PVC ja Hypalon kangaste vahel täispuhutavate paatide jaoks — vastupidavus, UV vastupidavus ja hind.
+    - title: Drop-Stitch Tuum selgitatud
+      desc: Kuidas tuhanded sisemised niidid loovad 12–15 PSI juures jäiga platvormi kõrgetasemelise õhkutäitmise SUPs jaoks.
+    - title: Täispuhutavate tehnoloogiate ülevaade
+      desc: Kuidas on valmistatud kummipaate ja SUPs — alates materjali kihi paigaldusest kuni ventiilisüsteemide ja õmbluste keevitamiseni.
+    - title: Jäik-põhja-hõljukpaadi (RIB) juhend
+      desc: Kõik, mis puudutab RIB ehitamist, kere tüüpe, torumaterjale ja õige RIB valimist vastavalt teie vajadustele.
+    - title: Painduvpaat vs RIB
+      desc: Peamised erinevused traditsiooniliste õhkpatjadega paatide ja kõvakere õhkpatjadega paatide vahel erinevates kasutusvaldkondades.
+  water-safety:
+    - title: Veeohutuse juhend
+      desc: Oluline ohutusalane teadmine iga aerutaja jaoks — ilm, PFD-d, eneseräävimine ja rühma aerutamise protokollid.
+    - title: Eluvest ja PFD juhend
+      desc: Kuidas valida õige isikliku päästevahendi SUP jaoks, kajakisõiduks, paadisõiduks ja professionaalseks kasutamiseks.
+    - title: SUP Ohutuskontrollnimekiri
+      desc: Eelkäivituse ohutuschecklist, mida iga stand-up lauaga sõitja peaks enne vee peale minekut järgima.
+    - title: Külma vee sõudmise ohutus
+      desc: Olulised ettevaatusabinõud, varustus ja tehnikad külmas vees sõudmiseks.
+    - title: Algaja sõudmisvead
+      desc: Levinumad vead, mida esmakordsed sõudjad teevad, ja kuidas neid vältida ohutuma ja nauditavama kogemuse jaoks.
+    - title: CE Sertifitseerimine selgitatud
+      desc: Mida CE sertifitseerimine tähendab täispuhutavate veesõidukite puhul — standardid, testimine ja miks see ohutuse jaoks oluline on.
+ui:
+  read_guide: Lugege juhendit →
+  card_tech: Mereturbe inseneriteadus ja materjalide testimine
+  card_products: Avastage täielik Aquafarer toodete kataloog
+  card_trust: CE, ISO ja BSCI vastavus
+materials:
+  intro_p1: Täispuhutava veesõiduki jõudlus, vastupidavus ja ohutus sõltuvad peaaegu täielikult selle ehituses kasutatud materjalidest. Alates torud moodustavast kangast kuni õmblusteni, mis annavad SUP lauale jäikuse, mõjutab iga materjalivalik toote käitumist vees ja selle kestvust.
+  intro_p2: 'See juhend käsitleb nelja peamist materjali, mida kasutatakse tänapäeva täispuhutavates veesõidukites: PVC kangas, Hypalon CSM kumm, drop-stitch tuuma konstruktsioon ja EVA vahtkate. Nende materjalide mõistmine aitab teil valida oma vajadustele sobiva toote ja seda maksimaalse eluea tagamiseks hooldada.'
+  labels:
+    advantages: Eelised
+    limitations: Piirangud
+    best_for: 'Parim:'
+  items:
+    - name: PVC (polüvinüülkloriid)
+      summary: Vabaajaks mõeldud täispuhutavate paatide ja SUPs tööstusstandard. Mitmekihiline lamineeritud kangas pakub suurepärast tugevuse ja kaalu suhet taskukohase hinnaga.
+      pros:
+        - Taskukohane — 30–50% odavam kui Hypalon
+        - Kerge ja hõlpsasti käsitsetav
+        - Hea UV vastupanu õige kattega
+        - Lai valik värve ja viimistlusi
+        - Lihtne parandada PVC plaastrite ja lahustipea adhesiiviga
+      cons:
+        - Lühem eluiga kui Hypalon (7-10 aastat)
+        - Vähem paindlik külmades temperatuurides
+        - Madalam keemiline vastupidavus
+        - Aja jooksul võib tekkida plastifikaatori migratsioon
+      best_for: Vaba aja SUPs, eelarvesõbralikud paadid, rendilaagrid, hooajaline kasutus, magevesi ja rannikualad.
+    - name: Hypalon (CSM kumm)
+      summary: Kvaliteetne sünteetiline kummimaterjal, mis on tuntud erakordse vastupidavuse, UV vastupidavuse ja pikaealisuse poolest. Kuldstandard ärilistele ja sõjaväe klassi täispuhutavatele paatidele.
+      pros:
+        - Erakordne UV ja osoonivastupidavus
+        - Eluaeg 15–20 aastat korraliku hoolduse korral
+        - Suurepärane külmakindlus
+        - Ülitugev keemiliste ainete ja õlide suhtes
+        - Värv püsib kauem kui PVC
+      cons:
+        - Tähtsuse poolest oluliselt kallim kui PVC
+        - Raskem kangas
+        - Vähem värvivalikuid
+        - Remont nõuab spetsiaalseid liime
+        - Vähem tootmisettevõtteid maailmas
+      best_for: Kommerts RIBs, otsing ja pääste, sõjaväe rakendused, troopilised kliimad, pikaajaline laevastiku omand
+    - name: Drop-stitch Core
+      summary: Tehnoloogia, mis revolutsiooniliselt muutis täispuhutavaid SUPs. Tuhanded polüesterniidid ühendavad ülemist ja alumist kangakihti, võimaldades kõrgsurvega täispuhumist jäikade, kõvaste kestadega jõudluseks
+      pros:
+        - Äärmiselt jäik 12–20 PSI
+        - Kerge — 18–30 naela täissuuruses lauaga
+        - Kokkupandav lamedaks hoiustamiseks ja reisimiseks
+        - Suurepärane löögikindlus
+        - Ühtlane jõudlus erinevatel temperatuuridel
+      cons:
+        - Nõuab kõrgsurvelist pumpa
+        - Lõikeparandus keerukam kui ühekihilisel
+        - Kõrgem tootmiskulu kui tavapärastel täispuhutavatel
+        - Ajutised rõhulangused nõuavad perioodilist täitmist
+      best_for: Stand-up aerulauad, kajakid, täispuhutavate paatide õhkapadjad, kõik rakendused, mis nõuavad jäika jõudlust koos täispuhutatava kaasaskantavusega
+    - name: EVA Vahtkate
+      summary: Suletud rakuga EVA (etüleen-vinüülatsetaat) vaht, mida kasutatakse haardepadi SUP laudade ja paadikannide jaoks. Tagab padjanduse, haarduvuse ja soojusisolatsiooni
+      pros:
+        - Suurepärane libisemiskindel haarduvus märja või kuiva pinnaga
+        - Padjandus vähendab väsimust pikkadel aerutamistel
+        - Soojusisolatsioon külma tekipinna eest
+        - UV ja soolaveekindel
+        - Saadaval mitmevärvilises plokkide kokkupanekus ja lasergraveeritud kujundustes
+      cons:
+        - Võib kuluda rasket kasutust kuni 2–3 aastaga
+        - Peab olema korralikult liimitud, et vältida delaminatsiooni
+        - Ei ole struktuurne — ei mõjuta jäikust
+        - Lisab veidi kaalu (200-400 g plaadi kohta)
+      best_for: SUP tekikinnitus, paaditekstiili polster, kajaki iste mugavus, kõik pinnad, mis vajavad libisemisvastast haaret.
+  selection:
+    title: Materjali valiku juhend
+    subtitle: 'Vali õige materjal vastavalt peamisele kasutusotstarbele:'
+    headers:
+      - Kasuta ümbrist
+      - Soovitatud materjal
+      - Miks
+    rows:
+      - - Vaba aja SUP aerutamine
+        - Drop-stitch PVC
+        - Kerge, jäik, taskukohane — ideaalne tasakaal lõbusõitudeks
+      - - Pere paat / järvepaat
+        - PVC (1100 denjööri)
+        - Kuluefektiivne, lihtne parandada, piisav vastupidavus vaba aja veetmiseks
+      - - Kaubanduslik RIB / patrullpaat
+        - Hypalon CSM
+        - Maksimaalne UV vastupidavus, 15-20-aastane eluiga, keemiline/õli vastupidavus
+      - - Rendiplaadid SUP
+        - Drop-stitch PVC + EVA tekikate
+        - Vastupidav, parandatav, hea väärtus suure käibe jaoks
+      - - Otsingu- ja päästeoperatsioonid
+        - Hypalon CSM
+        - Usaldusväärsus ekstreemtingimustes, külma painduvus, keemiline vastupidavus
+      - - Tuuri- / ekspeditsioonikajakk
+        - Drop-stitch PVC
+        - Jäik jõudlus, samas kaasaskantav reisimiseks
+  deep_dive:
+    title: Sügavamad juhendid
+    topics:
+      - title: Meretööstuse klassi PVC
+        desc: Mitmekihiline lamineeritud PVC kangas — UV vastupidavus, kulumisetestid ja denier'i hinnangud selgitatud.
+      - title: PVC vs Hypalon
+        desc: Kahe domineeriva täispuhutava paadi materjali määrav võrdlus — hind, eluiga, UV vastupidavus.
+      - title: Drop-stitch Core
+        desc: Kuidas tuhanded siselõngad loovad jäikad, kõrge rõhuga täispuhutavad struktuurid 12-15 PSI.
+      - title: RF keevitustehnoloogia
+        desc: Kõrgsageduskeevitus loob tugevad ja ühtlased õmblused — kuidas see töötab ja miks see on oluline.
+      - title: PSI & jõudlus
+        desc: Miks on õhurõhk tähtis täispuhutavatele SUPs ja paatidele — jäikus, kandevõime ja sõidumugavus.
+      - title: Kvaliteeditestimine
+        desc: Rõhutestid, ujuvuskatsetused, UV vananemine ja hävitustestid — meie kvaliteediprotsess.
+      - title: EVA Vahtkate plaadid
+        desc: Suletudrakulised EVA vahtkate plaadid — haakuvus, mugavus ja vastupidavus SUP ja paadikaante jaoks.
+      - title: Materjali hooldus
+        desc: Puhastamine, UV kaitse, hallituse ennetamine ja hoiustamise parimad tavad täispuhutavate toodete jaoks.

@@ -1,0 +1,167 @@
+hero:
+  tagline: Aquafarer Akadémia
+  title: Vzdelávacie centrum
+  subtitle: Sprievodcovia a návody pre každú úroveň zručnosti — od SUP základov po pokročilé záchranné techniky
+categories:
+  - level: Začiatočník
+    color: from-green-500 to-emerald-600
+    badge: bg-green-100 text-green-700
+    guides:
+      - title: SUP Základy
+        desc: Naučte sa základy paddleboardingu — postoja, technika pádlovania a rovnováha.
+        slug: beginner-sup-guide
+      - title: Techniky pádlovania
+        desc: Predný ťah, zametací ťah, ťah na stranu a nízka opora — ovládnite základné pohyby pádlom.
+        slug: sup-paddle-guide
+      - title: Bezpečnosť na prvom mieste
+        desc: Základné bezpečnostné postupy vrátane kontrol počasia, PFD používania, pravidiel na pásku a sebazáchrany.
+        slug: sup-safety-guide
+  - level: Stredná úroveň
+    color: from-blue-500 to-indigo-600
+    badge: bg-blue-100 text-blue-700
+    guides:
+      - title: Základy turistiky
+        desc: Plánovanie viachodinových výletov — navigácia, hydratácia, tempo a čítanie predpovedí vetra.
+        slug: touring-sup-guide
+      - title: Čítanie počasia
+        desc: Interpretácia námorných predpovedí, rozpoznávanie oblačných vzorcov a pochopenie vplyvu vetra na vodu.
+        slug: weather-planning-water-sports
+      - title: Základy navigácie
+        desc: Čítanie máp, používanie kompasu, GPS body a plánovanie trasy pre pobrežné paddleboardovanie.
+        slug: sup-navigation-guide
+      - title: Povedomie o prílivoch
+        desc: Pochopenie cyklov prílivu, prúdov a ich vplyv na čas spustenia a plánovanie trasy.
+        slug: understanding-tides
+  - level: Pokročilý
+    color: from-purple-500 to-violet-600
+    badge: bg-purple-100 text-purple-700
+    guides:
+      - title: Plánovanie viacdňových výletov
+        desc: Logistika expedície — výber výbavy, plánovanie jedla, bezpečnostné protokoly a núdzové kontakty.
+        slug: sup-travel-guide
+      - title: Záchranné techniky
+        desc: Sebazáchrana, T-záchrana, eskimská záchrana pre kajaky a ťahacie protokoly na otvorenej vode.
+        slug: sup-self-rescue
+      - title: Nočné pádlovanie
+        desc: Navigácia po tme — požiadavky na osvetlenie, pamäť trasy, komunikácia v skupine a bezpečnosť pri nebezpečenstve.
+        slug: sup-navigation-guide
+  - level: Údržba
+    color: from-amber-500 to-orange-600
+    badge: bg-amber-100 text-amber-700
+    guides:
+      - title: Čistenie a starostlivosť
+        desc: Oplachovanie sladkou vodou, UV ochrana, prevencia plesní a správne sušenie po každej jazde.
+        slug: inflatable-sup-maintenance
+      - title: Sprievodca skladovaním
+        desc: Najlepšie postupy pri skladovaní nafukovacích dosiek a lodí — vyfukovanie, skladanie, regulácia teploty a trvanlivosť.
+        slug: inflatable-sup-storage
+      - title: Základy opráv
+        desc: Opravte malé prepichnutia, netesnosti švu a problémy PVC s ventilmi pomocou opravných súprav a technik záplaty.
+        slug: inflatable-sup-repair
+      - title: Údržba ventilov
+        desc: Identifikujte typy ventilov (Halkey-Roberts, Boston, Leafield), odstráňte nečistoty a vymeňte chybné stonky.
+        slug: inflatable-sup-repair
+knowledge_center_tagline: Znalostné centrum
+knowledge_center_title: Príručky námorného vybavenia a priemyslu
+knowledge_center_subtitle: Odborné znalosti a nákupné príručky pre námorných profesionálov, prevádzkovateľov flotíl a nadšencov vodných športov.
+knowledge_sections:
+  - title: RIB Poznanie lodí
+    tagline: Sprievodcovia na pevné nafukovacie člny
+    desc: Všetko o RIB lodiach — dizajn trupu, materiály, výber motorov, údržba a rady pri kúpe pre komerčné a rekreačné použitie.
+    guides:
+      - title: Ako si vybrať RIB správnu loď
+        desc: Kompletný sprievodca výberom RIB — veľkosť, výkon motora, materiál trubiek, typ trupu a zamýšľané použitie.
+        href: /v2/inflatable-boat-buying-guide
+      - title: RIB vs nafukovací čln
+        desc: Pevný nafukovací čln vs tradičný nafukovací čln — porovnanie dizajnu trupu, výkonu, odolnosti a kapacity.
+        href: /compare/rib-vs-dinghy
+      - title: RIB Komerčné vs rekreačné RIB
+        desc: RIB Komerčné vs rekreačné lode — stavebné normy, materiály, životnosť, cena a certifikácie.
+        href: /compare/commercial-vs-recreational-rib
+      - title: Hliníkový vs laminátový trup
+        desc: Porovnajte hliníkové a laminátové trupy RIB lodí podľa hmotnosti, ceny, odolnosti a odolnosti voči korózii.
+        href: /compare/aluminum-vs-fiberglass
+  - title: Sprievodca nafukovacím člnom
+    tagline: Vedomosti o nafukovacích vodných plavidlách
+    desc: Komplexné príručky o nafukovacích člnoch – PVC v porovnaní Hypalons výrobnými metódami, bezpečnostnými normami a najlepšími postupmi údržby.
+    guides:
+      - title: PVC vs Hypalon Materiálový sprievodca
+        desc: Definitívne porovnanie medzi PVC Hypalon CSM a pre konštrukciu nafukovacích člnov.
+        href: /compare/pvc-vs-hypalon
+      - title: Ako sa vyrábajú nafukovacie člny
+        desc: Výrobný proces — rezanie materiálu, zváranie HF, konštrukcia spojov, tlakové testovanie a kontrola kvality.
+        href: /learn/inflatable-technology
+      - title: Príručka bezpečnosti nafukovacích člnov
+        desc: Bezpečnostné normy, nosnosť, správne nafukovanie, kontroly pred odchodom a núdzové postupy.
+        href: /learn/water-safety
+      - title: Údržba nafukovacích člnov
+        desc: Čistenie, skladovanie, UV ochrana, zimná príprava a opravy nafukovacích člnov a RIBs.
+        href: /v2/inflatable-boat-maintenance
+  - title: Poznanie o lodiach
+    tagline: Nafukovacia loď & RIB Hub
+    desc: Technické príručky pokrývajúce typy nafukovacích lodí, materiály, stavebné metódy, údržbu a bezpečnosť — od člnov po RIBs.
+    guides:
+      - title: Typy nafukovacích lodí
+        desc: Člny, RIBs, kajaky a motorové člny — naučte sa rozdiely a vyberte si ten správny.
+        href: /v2/inflatable-boat-buying-guide
+      - title: Technológia Drop-Stitch
+        desc: Ako tisíce vnútorných vlákien vytvárajú pevné, vysokotlakové nafukovacie konštrukcie.
+        href: /learn/drop-stitch-core
+      - title: Referencie materiálov
+        desc: Hodnotenia denieru PVC, hmotnosť látky, odolnosť voči UV a vysvetlenie materiálov vhodných pre námorné použitie.
+        href: /learn/materials
+      - title: RIB vs čln
+        desc: Porovnajte pevné nafukovacie lode s tradičnými nafukovacími člnmi pre rôzne použitia.
+        href: /compare/rib-vs-dinghy
+  - title: Poznanie SUP
+    tagline: Príručky pre stand-up paddleboardy
+    desc: Všetko o SUP doskách — nafukovacie vs pevné, rozmery dosiek, technológia materiálov a odborné rady pre všetky úrovne zručností.
+    guides:
+      - title: Nafukovacie vs pevné SUP
+        desc: Porovnanie iSUP a pevných epoxidových dosiek z hľadiska prenosnosti, odolnosti, výkonu a hodnoty.
+        href: /learn/sup
+      - title: Príručka rozmerov dosiek SUP
+        desc: Ako dĺžka, šírka a hrúbka ovplyvňujú stabilitu, rýchlosť a manévrovateľnosť.
+        href: /learn/sup
+      - title: Údržba a starostlivosť SUP
+        desc: Čistenie, skladovanie, ochrana UV a tipy na opravu nafukovacích SUP dosiek.
+        href: /v2/inflatable-sup-maintenance
+      - title: Výber vašej prvej SUP
+        desc: Príručka pre začiatočníkov pri výbere správneho stand-up paddleboardu podľa hmotnosti, úrovne zručností a plánovaného použitia.
+        href: /learn/sup
+  - title: Príručka potápačského vybavenia
+    tagline: Poznanie komerčných potápačských lodí
+    desc: Špecializované príručky o potápačských lodiach, potápačských RIBs a vybavení pre potápačské centrá, prevádzkovateľov a komerčné potápačské tímy.
+    guides:
+      - title: Najlepšia RIB loď pre potápačské centrá
+        desc: Ako vybrať správnu potápačskú RIB pre vaše potápačské centrum — kapacita, konfigurácia a rozpočet.
+        href: /solutions-diving-center-boats
+      - title: Príručka konfigurácie potápačských RIB
+        desc: Základné funkcie pre potápačské RIBs — stojany na fľaše, systémy rebríkov, potápačská plošina a skladovanie vybavenia.
+        href: /solutions-diving-center-boats
+  - title: Príručka motorového člna pre jachty
+    tagline: Riešenia pre superjachty a vybavenie pre lodné tendry
+    desc: Príručky na výber dokonalého jachtového tendra — nafukovacie tendre, RIB tendre, riešenia skladovania a príslušenstvo pre tendre.
+    guides:
+      - title: Ako vybrať jachtový tender
+        desc: Faktory, ktoré je potrebné zvážiť pri výbere tendra pre vašu jachtu — veľkosť, materiál, motor a skladovanie.
+        href: /solutions-yacht-tender-solutions
+      - title: Nafukovacie vs RIB tendre
+        desc: Porovnajte nafukovacie člny s tuhými nafukovacími člnmi z hľadiska výkonu, trvácnosti a skladovateľnosti.
+        href: /compare/rib-vs-dinghy
+  - title: Príručka záchranného vybavenia
+    tagline: Vedomosti o záchranárskych vodných plavidlách
+    desc: Profesionálne príručky o záchranných člnkoch, vodných plavidlách SAR a vybavení pre pohotovostné zásahy pre pobrežnú stráž, plavčíkov a tímy humanitárnej pomoci.
+    guides:
+      - title: Príručka výberu člnu SAR
+        desc: Ako vybrať správny čln pre vyhľadávanie a záchranu — rýchlosť, kapacita, trvácnosť a požiadavky na špecializované vybavenie.
+        href: /solutions-rescue-watercraft
+      - title: Komerčné RIB pre záchranné operácie
+        desc: Prečo sú komerčné RIBs preferovanou voľbou pre profesionálne tímy vyhľadávania a záchrany po celom svete.
+        href: /use-cases/search-and-rescue
+read_guide: Prečítajte si príručku →
+cta:
+  title: Neviete, kde začať?
+  desc: Urobte náš kvíz hodnotenia zručností, aby ste našli vhodné príručky a vybavenie pre vašu úroveň.
+  label: Kontaktujte nás →
+  link: /contact

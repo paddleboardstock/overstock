@@ -1,0 +1,181 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'lt' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">&larr; Atgal į MTEP centrą</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Laboratorija 02</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Korpuso inžinerijos studija</h1>
+      <p class="mt-3 text-lg text-muted">
+        Skaitmeninė simuliacija, struktūrinis intelektas, individualus korpuso dizainas
+      </p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/design discussaquafarer-inflatable-boat-aquafarer-factory-exterior.webp"
+        alt="Aquafarer korpuso inžinerijos CAD projektavimo darbo vieta"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Ten, kur jėga susitinka su hidrodinamika</h2>
+  <p>
+    Korpusas yra bet kurio RIB ar pripučiamo laivo stuburas. Jis turi būti pakankamai lengvas, kad efektyviai slystų,
+    pakankamai stiprus, kad absorbuotų smūgio apkrovas, ir matmenų stabilus plačiame temperatūrų diapazone.{SITE.name},
+    mūsų Denio Inžinerijos Studija jungia pažangų CAD modeliavimą, baigtinių elementų analizę (FEA) ir keliasdešimt metų
+    praktinės jūrų architektūros patirties, kad sukurtume denius, optimizuotus jų numatytojai misijai — o ne bendrąsias
+    formas, pritaikytas iš katalogo.
+  </p>
+  <p>
+    Mes dirbame su trimis pagrindinėmis korpuso medžiagomis — rotaciniu būdu formuotu HDPE, suvirintu jūrinės klasės
+    aliuminiu ir rankomis klijuotu stiklo audiniu — ir turime inžinerinę galimybę projektuoti, simuliuoti ir patvirtinti
+    kiekvieną iš jų viduje.
+  </p>
+
+  <h2>Dizaino įrankiai ir standartai</h2>
+  <p>Mūsų skaitmeninė inžinerinė aplinka apima:</p>
+  <table>
+    <thead><tr><th>Galimybė</th><th>Programinė įranga / Įrankis</th><th>Taikymas</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>3D parametrinis modeliavimas</td><td>SolidWorks Professional</td><td
+          >Korpuso paviršius, stygų sistema, variklio laikiklis, denio išdėstymas</td
+        ></tr
+      >
+      <tr
+        ><td>Galutinių elementų analizė</td><td>ANSYS Mechanical & LS-DYNA</td><td
+          >Įtempio žemėlapio sudarymas, modalinė analizė, avarijos/smūgio simuliacija</td
+        ></tr
+      >
+      <tr
+        ><td>Skaičiavimo skysčių dinamika</td><td>Ansys Fluent / Star-CCM+</td><td
+          >Hidrodinaminių traukos prognozavimas, denio optimizavimas</td
+        ></tr
+      >
+      <tr
+        ><td>Laminato inžinerija</td><td>ESAComp / CADEC</td><td
+          >Stiklo audinio sluoksnių išdėstymas, branduolio pasirinkimas, svorio vertinimas</td
+        ></tr
+      >
+      <tr><td>Formos srauto simuliacija</td><td>Moldex3D</td><td>Rotomoulding sienelių storio prognozavimas</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Mūsų inžinerinis darbo eiga</h2>
+  <p>
+    Kiekvienas korpuso projektas, nesvarbu ar tai standartinis modelis, ar visiškai individualus projektas, atitinka
+    griežtą penkių etapų procesą:
+  </p>
+  <ol>
+    <li>
+      <strong>Koncepcija ir reikalavimų rinkimas</strong>— Susitinkame su jumis, kad apibrėžtume krovinį, greičio ribas,
+      jūros būsenos galimybes, vilkimo reikalavimus ir bet kokią specialią misijos įrangą (denio liukus, konsolės
+      pozicijas, kuro bako integraciją).
+    </li>
+    <li>
+      <strong>3D dangos ir hidrostatinis skaičiavimas</strong>— Korpuso forma modeliuojama SolidWorks ir tikrinama
+      hidrostatiniu stabilumu (GM, atstatymo ranka) naudojant įmontuotus analizės įrankius.
+    </li>
+    <li>
+      <strong>Struktūrinis FEA</strong>— Apkrovos atvejai apibrėžiami: statinis (įgulos + įranga), dinaminis (planavimo
+      smūgiai esant 5g) ir smūgis (kritimas nuo bangos keteros 3 m/s greičiu). Peržiūrimos įtampos kontūrai; saugos
+      koeficientas ≥ 2,5 yra privalomas.
+    </li>
+    <li>
+      <strong>CFD pasipriešinimo optimizavimas</strong>— Korpusas simuliuojamas trimis apkrovos sąlygomis ir penkiais
+      greičiais. Drėgnas paviršiaus plotas, balansavimo kampas ir likutinis pasipriešinimas yra iteratyviai mažinami.
+    </li>
+    <li>
+      <strong>Dizaino peržiūra ir išleidimas</strong>— Visą inžinerinį paketą (3D modelis, FEA ataskaita, CFD ataskaita,
+      svorio įvertinimas, faneros knyga) peržiūri mūsų vyresnysis laivų architektas prieš išleidžiant į prototipo
+      dirbtuves.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      FEA streso pasiskirstymas — RIB 450 patrulinis korpusas (aliuminis 5083)
+    </p>
+    <div class="grid grid-cols-2 gap-4 text-sm">
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">2.8 : 1</span>
+        <span class="text-gray-500">Saugumo koeficientas esant maksimaliai naudingajai apkrovai</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">15.2 %</span>
+        <span class="text-gray-500">Oro pasipriešinimo sumažinimas lyginant su ankstesne karta</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">87 kN/m²</span>
+        <span class="text-gray-500">Didžiausias smūgių slėgis (projektinė riba)</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">18 000 h</span>
+        <span class="text-gray-500">Bendras FEA vykdymo laikas 2025 metais</span>
+      </div>
+    </div>
+  </div>
+
+  <h2>Individualizavimas: jūsų korpusas, jūsų taisyklės</h2>
+  <p>
+    Nėra dviejų operatorių, turinčių vienodus reikalavimus. Uosto patruliui RIB reikia seklios V formos korpuso
+    stabilumui esant mažam greičiui; greito sulaikymo laivui reikia gilaus V formos su purškimo bėgiais; nardymo
+    palaikymo laivui reikia plataus pločio ir žemo užpakalinio laivagalio. Mes neverčiame jūsų paraiškos naudoti jau
+    egzistuojančioje korpuso formoje. Mes projektuojame pagal jūsų specifikacijas ir toliau.
+  </p>
+  <p>Naujausių individualių korpusų inžinerinių projektų pavyzdžiai:</p>
+  <ul>
+    <li>
+      Ištemptas 6,8 m HDPE korpusas Karibų kelionių operatoriui, su sustiprintu priekiu išsilaipinimams paplūdimyje (+15
+      % dugno storio).
+    </li>
+    <li>
+      Lengvas aliuminio 7,2 m ilgio RIB pakrančių apsaugai, su integruotais kuro bakų pertvaromis ir įrangos spintelių
+      standikliais.
+    </li>
+    <li>
+      Stiklo pluošto 5,5 m nardymo valtis su sumažintu užpakaliniu dangčiu ir dviem baterijų dėžėmis, sukurta lengvam
+      nardymo su vamzdeliu vėl įlipimui.
+    </li>
+  </ul>
+
+  <h2>Mūsų inžinieriai</h2>
+  <p>
+    Studiją vadovauja vyresnysis laivų architektas, turintis 14 metų patirtį greitaeigių laivų projektavime, kurį remia
+    du mechanikos inžinieriai, specializuojantys FEA ir CFD. Visi trys turi pažangius jūrų inžinerijos arba laivų
+    architektūros laipsnius iš tarptautiniu mastu pripažintų universitetų. Komanda reguliariai publikuoja straipsnius
+    pramonės žurnaluose ir skaito pranešimus konferencijose, tokiose kaip Tarptautinė aukštos klasės jūrų transporto
+    priemonių konferencija.
+  </p>
+
+  <h2>Bendradarbiaukite su mumis kitame korpuse</h2>
+  <p>
+    Nuo pirmojo koncepcijos eskizo iki galutinės apkrovos ataskaitos – mūsų korpuso inžinerijos studija yra jūsų
+    partneris kuriant laivą, kuris ne tik pastatytas, bet ir inžinerinis. Simuliacijos valandas skiriame iš anksto, kad
+    kiekvienas suvirinimas, kiekvienas laminato sluoksnis ir kiekviena korpuso kreivė būtų tam tikra priežastis.
+  </p>
+  <p>
+    Nesvarbu, ar jums reikia nedidelio esamo modelio pakeitimo, ar visiškai naujo dizaino, mes pasiruošę aptarti jūsų
+    poreikius.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Pradėkite korpuso projektavimo konsultaciją</h2>
+    <p class="mt-2 text-sm text-muted">Papasakokite apie savo misijos profilį, ir mes pasiūlysime inžinerinį kelią.</p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Susisiekite su mūsų inžinierių komanda</a
+    >
+  </div>
+</section>

@@ -1,0 +1,313 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { languages, defaultLang } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => getUiForLang(lang || defaultLang)?.[key] || '';
+
+const metadata = {
+  title: `${t('compare.aluminumVsFiberglass.title') || 'Aluminum Hull vs Fiberglass Hull for RIB Boats'}`,
+  description:
+    t('compare.aluminumVsFiberglass.desc') ||
+    'Compare aluminum and fiberglass hulls for RIB boats, inflatable boats, and rigid inflatables across weight, cost, durability, corrosion resistance, and more.',
+  ignoreTitleTemplate: true,
+};
+
+const faqSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Which is better for RIB boats: aluminum or fiberglass?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Aluminum hulls offer superior impact resistance and lighter weight. Fiberglass provides smoother finish and lower cost. Aquafarer RIBs feature aluminum hulls for durability.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Are aluminum RIB hulls more expensive?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Aluminum hulls have higher initial cost but lower lifecycle cost due to impact resistance and ease of repair.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What hull material does Aquafarer use for RIBs?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Marine-grade aluminum alloy hulls with PVC or Hypalon/CSM tubes, providing the best combination of durability and performance.',
+      },
+    },
+  ],
+});
+---
+
+<Layout metadata={metadata}>
+  <JsonLd
+    type="Article"
+    article={{
+      headline: t('compare.aluminumVsFiberglass.headline') || 'Aluminum Hull vs Fiberglass Hull for RIB Boats',
+      description:
+        t('compare.aluminumVsFiberglass.desc') ||
+        'Compare aluminum and fiberglass hulls for RIB boats, inflatable boats, and rigid inflatables across weight, cost, durability, corrosion resistance, and more.',
+      datePublished: '2026-07-15',
+    }}
+    data={{ url: `https://aquafarer.com/${lang}/compare/aluminum-vs-fiberglass` }}
+  />
+  <JsonLd
+    type="BreadcrumbList"
+    breadcrumbs={[
+      { name: t('home') || 'Home', href: `/${lang}/` },
+      { name: t('compare.label') || 'Compare', href: `/${lang}/compare` },
+      { name: t('compare.aluminumVsFiberglass.short') || 'Aluminum vs Fiberglass' },
+    ]}
+  />
+  <section class="max-w-4xl mx-auto py-24 px-6">
+    <a href={`/${lang}/products`} class="text-sm text-sky-600 hover:text-sky-700"
+      >&larr; {t('compare.backToProducts') || 'Products'}</a
+    >
+    <h1 class="mt-4 text-4xl font-semibold text-gray-900">
+      {t('compare.aluminumVsFiberglass.heading') || 'Aluminum Hull vs Fiberglass Hull for RIB Boats'}
+    </h1>
+    <p class="mt-4 text-lg text-gray-500">
+      {
+        t('compare.aluminumVsFiberglass.subtitle') ||
+          'A detailed comparison between aluminum and fiberglass hull construction for rigid inflatable boats — covering weight, cost, durability, corrosion resistance, repairability, fuel efficiency, noise, and customization options.'
+      }
+    </p>
+
+    <div class="mt-12 grid md:grid-cols-2 gap-8">
+      <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+        <h2 class="text-xl font-semibold text-gray-900">
+          {t('compare.aluminumVsFiberglass.col1Title') || 'Aluminum Hull'}
+        </h2>
+        <ul class="mt-4 space-y-3 text-sm text-gray-600">
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span
+              ><strong>{t('compare.aluminumVsFiberglass.weight') || 'Weight:'}</strong>
+              {
+                t('compare.aluminumVsFiberglass.weightDesc') ||
+                  'Lighter than fiberglass. Better fuel efficiency and higher payload capacity.'
+              }</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span
+              ><strong>{t('compare.aluminumVsFiberglass.cost') || 'Cost:'}</strong>
+              {
+                t('compare.aluminumVsFiberglass.costDesc') ||
+                  'Higher initial cost than fiberglass. Premium pricing for welded aluminum construction.'
+              }</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span
+              ><strong>{t('compare.aluminumVsFiberglass.durability') || 'Durability:'}</strong>
+              {
+                t('compare.aluminumVsFiberglass.durabilityDesc') ||
+                  'Extremely durable. Resistant to impacts, punctures, and abrasion in harsh conditions.'
+              }</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span
+              ><strong>{t('compare.aluminumVsFiberglass.corrosion') || 'Corrosion Resistance:'}</strong>
+              {
+                t('compare.aluminumVsFiberglass.corrosionDesc') ||
+                  'Excellent in saltwater with proper marine-grade alloy and coatings.'
+              }</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span
+              ><strong>{t('compare.aluminumVsFiberglass.bestFor') || 'Best for:'}</strong>
+              {
+                t('compare.aluminumVsFiberglass.bestForDesc') ||
+                  'Commercial, military, law enforcement, and demanding workboat applications.'
+              }</span
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+        <h2 class="text-xl font-semibold text-gray-900">
+          {t('compare.aluminumVsFiberglass.col2Title') || 'Fiberglass Hull'}
+        </h2>
+        <ul class="mt-4 space-y-3 text-sm text-gray-600">
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span
+              ><strong>{t('compare.aluminumVsFiberglass.weight') || 'Weight:'}</strong>
+              {
+                t('compare.aluminumVsFiberglass.fiberglassWeightDesc') ||
+                  'Heavier than aluminum. Requires more power to achieve same speed.'
+              }</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span
+              ><strong>{t('compare.aluminumVsFiberglass.cost') || 'Cost:'}</strong>
+              {
+                t('compare.aluminumVsFiberglass.fiberglassCostDesc') ||
+                  'Lower initial cost. More affordable for recreational boaters and tourism operators.'
+              }</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span
+              ><strong>{t('compare.aluminumVsFiberglass.durability') || 'Durability:'}</strong>
+              {
+                t('compare.aluminumVsFiberglass.fiberglassDurabilityDesc') ||
+                  'Good durability. Can crack on hard impacts but easier to repair than aluminum.'
+              }</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span
+              ><strong>{t('compare.aluminumVsFiberglass.corrosion') || 'Corrosion Resistance:'}</strong>
+              {
+                t('compare.aluminumVsFiberglass.fiberglassCorrosionDesc') ||
+                  'Requires maintenance in saltwater. Prone to osmotic blistering if gelcoat is damaged.'
+              }</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span
+              ><strong>{t('compare.aluminumVsFiberglass.bestFor') || 'Best for:'}</strong>
+              {
+                t('compare.aluminumVsFiberglass.fiberglassBestDesc') ||
+                  'Recreational boating, leisure, diving, tourism, and family use.'
+              }</span
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="mt-16">
+      <h2 class="text-2xl font-semibold text-gray-900">
+        {t('compare.aluminumVsFiberglass.tableTitle') || 'Side-by-Side Comparison'}
+      </h2>
+      <div class="mt-6 overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="bg-gray-50 border-b-2 border-gray-200">
+              <th class="px-4 py-3 text-left font-semibold text-gray-700">{t('compare.factor') || 'Factor'}</th>
+              <th class="px-4 py-3 text-center font-semibold text-sky-700"
+                >{t('compare.aluminumVsFiberglass.aluminumShort') || 'Aluminum'}</th
+              >
+              <th class="px-4 py-3 text-center font-semibold text-emerald-700"
+                >{t('compare.aluminumVsFiberglass.fiberglassShort') || 'Fiberglass'}</th
+              >
+            </tr>
+          </thead>
+          <tbody>
+            {
+              [
+                [
+                  t('compare.aluminumVsFiberglass.r1') || 'Weight',
+                  t('compare.aluminumVsFiberglass.r1a') || 'Lighter — better fuel efficiency, higher payload',
+                  t('compare.aluminumVsFiberglass.r1b') || 'Heavier — more power needed for same speed',
+                ],
+                [
+                  t('compare.aluminumVsFiberglass.r2') || 'Cost',
+                  t('compare.aluminumVsFiberglass.r2a') || 'Higher initial cost (premium welded construction)',
+                  t('compare.aluminumVsFiberglass.r2b') || 'Lower initial cost (more affordable)',
+                ],
+                [
+                  t('compare.aluminumVsFiberglass.r3') || 'Durability',
+                  t('compare.aluminumVsFiberglass.r3a') || 'Extremely durable — impact and puncture resistant',
+                  t('compare.aluminumVsFiberglass.r3b') || 'Good durability — can crack on hard impact',
+                ],
+                [
+                  t('compare.aluminumVsFiberglass.r4') || 'Corrosion Resistance',
+                  t('compare.aluminumVsFiberglass.r4a') || 'Excellent in saltwater (marine-grade alloy)',
+                  t('compare.aluminumVsFiberglass.r4b') || 'Requires maintenance — risk of osmotic blistering',
+                ],
+                [
+                  t('compare.aluminumVsFiberglass.r5') || 'Repairability',
+                  t('compare.aluminumVsFiberglass.r5a') || 'Difficult — requires professional welding',
+                  t('compare.aluminumVsFiberglass.r5b') || 'Easier — gelcoat and fiberglass repair',
+                ],
+                [
+                  t('compare.aluminumVsFiberglass.r6') || 'Fuel Efficiency',
+                  t('compare.aluminumVsFiberglass.r6a') || 'Better — lighter hull reduces fuel consumption',
+                  t('compare.aluminumVsFiberglass.r6b') || 'Slightly less efficient — heavier hull',
+                ],
+                [
+                  t('compare.aluminumVsFiberglass.r7') || 'Noise / Vibration',
+                  t('compare.aluminumVsFiberglass.r7a') || 'More vibration and noise transmission',
+                  t('compare.aluminumVsFiberglass.r7b') || 'Quieter ride — fiberglass dampens vibration',
+                ],
+                [
+                  t('compare.aluminumVsFiberglass.r8') || 'Customization',
+                  t('compare.aluminumVsFiberglass.r8a') || 'Limited — welded fabrication constraints',
+                  t('compare.aluminumVsFiberglass.r8b') || 'Highly customizable — custom mold shapes possible',
+                ],
+                [
+                  t('compare.aluminumVsFiberglass.r9') || 'Best For',
+                  t('compare.aluminumVsFiberglass.r9a') || 'Commercial, military, law enforcement, workboats',
+                  t('compare.aluminumVsFiberglass.r9b') || 'Recreational, leisure, diving, tourism, family',
+                ],
+              ].map((row, i) => (
+                <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                  {row.map((cell, j) => (
+                    <td
+                      class={`px-4 py-3 border-b border-gray-200 ${j === 0 ? 'font-medium text-gray-700' : 'text-center text-gray-600'}`}
+                    >
+                      {cell}
+                    </td>
+                  ))}
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mt-16 bg-gradient-to-br from-sky-50 to-blue-50 rounded-2xl p-8 border border-sky-200">
+      <h2 class="text-xl font-semibold text-gray-900">
+        {t('compare.aluminumVsFiberglass.recTitle') || 'Which Should You Choose?'}
+      </h2>
+      <p class="mt-4 text-gray-600 text-sm leading-relaxed">
+        {
+          t('compare.aluminumVsFiberglass.recDesc') ||
+            "Choose an aluminum hull if you operate in demanding commercial, military, or law enforcement environments where impact resistance, longevity in saltwater, and fuel efficiency are top priorities. Aluminum's higher upfront cost is offset by exceptional durability and lower lifetime maintenance for heavy-use vessels. Choose a fiberglass hull if you are a recreational boater, dive operator, or tourism business looking for a more affordable option with a quieter ride, easier repairability, and the ability to customize hull shapes. Fiberglass offers excellent value for leisure-focused RIB applications."
+        }
+      </p>
+      <div class="mt-6 flex gap-4 flex-wrap">
+        <a
+          href={`/${lang}/products`}
+          class="px-6 py-3 bg-gray-900 text-white rounded-full text-sm font-medium hover:bg-gray-800 transition"
+          >{t('compare.browseProducts') || 'Browse Products'}</a
+        >
+        <a
+          href={`/${lang}/learn/materials`}
+          class="px-6 py-3 border border-gray-200 text-gray-700 rounded-full text-sm font-medium hover:border-gray-400 transition"
+          >{t('compare.aluminumVsFiberglass.learnMore') || 'In-Depth Guide'}</a
+        >
+      </div>
+    </section>
+  </section>
+
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true">
+    <p>
+      {
+        t('compare.aluminumVsFiberglass.aiBlock') ||
+          'Comprehensive comparison between aluminum hull and fiberglass hull construction for RIB boats and rigid inflatable boats. Covers weight, cost, durability, corrosion resistance, repairability, fuel efficiency, noise/vibration, customization, and best-use applications. Aluminum hulls are lighter, more durable in saltwater, more expensive, difficult to repair, noisier, and better for commercial/military/law enforcement. Fiberglass hulls are heavier, more affordable, easier to repair, quieter, highly customizable, and better for recreational/leisure/diving/tourism. Recommendation: aluminum for commercial/workboat applications requiring maximum durability; fiberglass for recreational/tourism use prioritizing value, comfort, and customization.'
+      }
+    </p>
+  </section>
+  <script is:inline type="application/ld+json" set:html={faqSchema} />
+</Layout>

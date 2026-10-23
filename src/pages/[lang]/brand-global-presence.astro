@@ -1,0 +1,96 @@
+---
+export const prerender = true;
+
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import WorldMap from '~/components/widgets/WorldMap.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+import { getPageContent, setPageContentData } from '~/i18n/page-content';
+import __pageData from '~/i18n/generated/pages/brand-global-presence.ts';
+import { localizePageTitle } from '~/i18n/page-title';
+import { languages } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => getUiForLang(lang)?.[key] || '';
+setPageContentData(__pageData);
+const page = getPageContent(lang, 'brand-global-presence');
+
+const hero = page.hero ?? {};
+const stats = page.stats ?? {};
+const markets = page.features3_markets ?? {};
+const distribution = page.features3_distribution ?? {};
+const logistics = page.steps2_logistics ?? {};
+const cta = page.cta ?? {};
+const lh = (h: string) => (h ? `/${lang}${h}` : h);
+const ctaActions = cta.actions?.map((a: any) => ({ ...a, href: lh(a.href) }));
+
+const metadata = {
+  title: localizePageTitle(page, `Global Presence — ${SITE.name} | Manufacturing & Distribution Worldwide`),
+  description:
+    'Aquafarer serves 50+ countries from our Qingdao facility and US warehouse in Montclair, CA. Find a distributor or become a partner.',
+};
+const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: 'Brand' }, { name: 'Global Presence' }];
+
+const faqSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Where does Aquafarer ship to?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: '50+ countries across Europe, North America, Asia-Pacific, Middle East, and Africa through OEM partnerships and dealership networks.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is there a minimum order for international shipping?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Container-load orders (20ft or 40ft) for best FOB pricing. LCL consolidation available for smaller orders.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What shipping terms are available?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'FOB Qingdao standard. CIF, DDP, and other terms negotiable for qualified partners.',
+      },
+    },
+  ],
+});
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <Hero tagline={hero.tagline} image={hero.image} title={hero.title} subtitle={hero.subtitle} />
+  <Stats title={stats.title} stats={stats.stats} />
+  <WorldMap lang={lang} />
+  <Features3
+    tagline={markets.tagline}
+    title={markets.title}
+    subtitle={markets.subtitle}
+    columns={markets.columns}
+    items={markets.items}
+  />
+  <Features3
+    tagline={distribution.tagline}
+    title={distribution.title}
+    subtitle={distribution.subtitle}
+    columns={distribution.columns}
+    items={distribution.items}
+  />
+  <Steps2 title={logistics.title} subtitle={logistics.subtitle} items={logistics.items} />
+  <CallToAction title={cta.title} subtitle={cta.subtitle} actions={ctaActions} />
+  <script is:inline type="application/ld+json" set:html={faqSchema} />
+</Layout>

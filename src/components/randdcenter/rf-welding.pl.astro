@@ -1,0 +1,182 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'pl' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">← Powrót do Centrum badawczo-rozwojowe</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Laboratorium 03</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Centrum spawalnicze RF</h1>
+      <p class="mt-3 text-lg text-muted">Technologia łączenia dielektrycznego do spoin wytrzymujących ciśnienie</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-jungle-mandala-1.webp"
+        alt="Aquafarer Proces spajania dielektrycznego metodą RF"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Nauka kryjąca się za szwem</h2>
+  <p>
+    Ponton jest tak niezawodny, jak jego szwy. Pojedynczy słaby spaw może zagrozić całej komorze, a na morzu awaria
+    komory nie jest niedogodnością; stanowi to zagrożenie dla bezpieczeństwa. Na {SITE.name}zainwestowaliśmy w
+    dedykowane centrum spawalnicze wykorzystujące częstotliwość radiową (RF), które łączy w sobie przemysłowe prasy do
+    spawania dielektrycznego z rygorystyczną kontrolą procesu i testami po spawaniu. Każdy szew, który produkujemy, jest
+    udokumentowany, identyfikowalny i certyfikowany, aby spełniać lub przekraczać wymagania — międzynarodowego standardu
+    dotyczącego jednostek nadmuchiwanych.
+  </p>
+  <p>
+    Spawanie RF wykorzystuje energię elektromagnetyczną o wysokiej częstotliwości (zwykle 27.12 MHz) do wzbudzania
+    cząsteczek polarnych w tkaninie powlekanej PVC lub Hypalon, wytwarzając ciepło dokładnie na styku materiału. W
+    przeciwieństwie do spawania gorącym powietrzem lub gorącym klinem, spawanie RF tworzy prawdziwe wiązanie molekularne
+    — dwie warstwy tkaniny łączą się w jeden jednorodny materiał w strefie zgrzewania, tworząc połączenie tak mocne jak
+    sam materiał macierzysty.
+  </p>
+
+  <h2>Sprzęt spawalniczy i kontrola procesu</h2>
+  <p>Nasze centrum spawalnicze wyposażone jest w:</p>
+  <table>
+    <thead><tr><th>Maszyna</th><th>Moc / pojemność</th><th>Aplikacja</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Prasa dielektryczna RF 1</td><td>15 kW, płyta 2000 × 600 mm</td><td
+          >Główne szwy wzdłużne, połączenia pawęży z rurami</td
+        ></tr
+      >
+      <tr
+        ><td>Prasa dielektryczna RF 2</td><td>10 kW, płyta 1500 × 500 mm</td><td
+          >Spawy przegród, mocowania stożków, łatki zaworów</td
+        ></tr
+      >
+      <tr
+        ><td>Spawarka RF sterowana CNC</td><td>8 kW, XYtabela 2500 × 1200 mm</td><td
+          >Zakrzywione szwy, wytłoczone logo/panel, precyzyjny patchwork</td
+        ></tr
+      >
+      <tr
+        ><td>Automatyczna spawarka Hotwedge</td><td>Zmienna temperatura, 1.2 m/min max</td><td
+          >Metoda tworzenia kopii zapasowych materiałów Hypalon/CSM</td
+        ></tr
+      >
+    </tbody>
+  </table>
+  <p>
+    Każda prasa RF jest wyposażona w monitorowanie temperatury i ciśnienia w pętli zamkniętej. Parametry spawania — moc,
+    czas prasowania, czas chłodzenia, docisk elektrody — są programowane dla rodzaju materiału i rejestrowane w naszym
+    systemie realizacji produkcji (MES) w celu zapewnienia pełnej identyfikowalności.
+  </p>
+
+  <h2>Testy jakości spoin — każdy szew, każda łódź</h2>
+  <p>Integralność spoiny jest weryfikowana za pomocą obowiązkowego protokołu czterech testów:</p>
+  <ol>
+    <li>
+      <strong>Kontrola wzrokowa</strong> — 100 % szwów sprawdza się wzrokowo pod kątem przepaleń, niewspółosiowości, zanieczyszczeń
+      lub niepełnego stopienia. Próg szybkości odrzutów: 0.5 % metrów bieżących.
+    </li>
+    <li>
+      <strong>Próba odrywania ()</strong> — Z próbki testowej zespawanej z każdą partią produkcyjną wycina się pasek o szerokości
+      25 mm. Minimalna siła odrywania: 120 N/25 mm dla PVC 1100 dtex.
+    </li>
+    <li>
+      <strong>Test zatrzymywania powietrza</strong> — Każda ukończona komora jest poddawana działaniu ciśnienia 1.25 × ciśnienie
+      robocze i utrzymywana przez 24-48 godzin. Spadek ciśnienia nie może przekraczać 2%.
+    </li>
+    <li>
+      <strong>Test cyklu termicznego</strong> — Próbki kuponów poddaje się cyklom od -20 °C do +60 °C przez 50 cykli, a następnie
+      ponownie poddaje się próbie odrywania. Dopuszczalna utrata wytrzymałości: &lt; 10%.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Porównanie wytrzymałości na odrywanie — RF i spawanie gorącym powietrzem (PVC 1100 dtex)
+    </p>
+    <div class="space-y-3">
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">Spawanie RF</span><div
+          class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded"
+        >
+          <div class="h-full bg-blue-600 rounded" style="width:92%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">184 N</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">Gorące powietrze</span><div
+          class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded"
+        >
+          <div class="h-full bg-gray-400 rounded" style="width:65%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">130 N</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium"> min</span><div class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded">
+          <div class="h-full bg-green-500 rounded" style="width:48%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">96 N</span>
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      Spawanie RF konsekwentnie osiąga 90-95% wytrzymałości materiału macierzystego, znacznie powyżej minimum.
+    </p>
+  </div>
+
+  <h2>Profesjonalna wiedza</h2>
+  <p>
+    Naszym zespołem spawaczy kieruje starszy inżynier procesu z 11-letnim doświadczeniem w spawaniu dielektrycznym
+    tekstyliów powlekanych. Każdy operator przechodzi 6-miesięczny wewnętrzny program certyfikacji, zanim zostanie
+    dopuszczony do pracy przy szwach produkcyjnych. Co roku wymagana jest ponowna certyfikacja, obejmująca praktyczny
+    test spawania oceniany zgodnie z naszą wewnętrzną normą Grade-A (wytrzymałość na odrywanie ≥ 160 N/25 mm).
+  </p>
+
+  <h2>Niestandardowe rozwiązania spawalnicze dla unikalnych wymagań</h2>
+  <p>
+    Rozumiemy, że jedna specyfikacja spawania nie pasuje do każdego zastosowania. Nasze centrum spawalnicze RF rutynowo
+    opracowuje niestandardowe konfiguracje szwów dla klientów o specjalnych wymaganiach:
+  </p>
+  <ul>
+    <li>
+      <strong>Wielowarstwowe łaty wzmacniające</strong> — w przypadku obszarów narażonych na duże zużycie, takich jak pasy
+      trące i stożki łukowe, opracowujemy wieloprzejściowe spoiny RF, które integrują odporną na zużycie warstwę zewnętrzną
+      bez uszczerbku dla elastyczności.
+    </li>
+    <li>
+      <strong>Szwy przewodzące lub RFopaque</strong> — w przypadku statków wojskowych lub statków obserwacyjnych wymagających
+      ekranowania elektromagnetycznego, w obrębie szwu spawamy przewodzące warstwy siatki.
+    </li>
+    <li>
+      <strong>Zgrzewanie panelu zmieniające kolor</strong> — dwukolorowe panele z tkaniny (np. pomarańczowy kadłub + szary
+      wierzch) zespawane z ukrytą zakładką, aby zachować estetykę marki bez widocznej linii łączenia.
+    </li>
+  </ul>
+
+  <h2>Nasze zaangażowanie wobec Ciebie</h2>
+  <p>
+    Każda dostarczana przez nas łódź objęta jest naszą gwarancją jakości spoin: jeśli jakikolwiek szew ulegnie
+    uszkodzeniu podczas normalnej pracy w okresie gwarancyjnym, naprawiamy lub wymieniamy uszkodzoną komorę bezpłatnie,
+    a następnie przeprowadzamy badanie pierwotnej przyczyny, aby zapobiec ponownemu wystąpieniu. To nie jest zwykła
+    gwarancja — to zobowiązanie do ciągłego doskonalenia opartego na rzeczywistych danych operacyjnych.
+  </p>
+  <p>
+    Kiedy wybierzesz {SITE.name}, wybierasz szwy, które zostały zaprojektowane, przetestowane i udokumentowane, a nie
+    tylko spawane. Na tym polega różnica między łodzią, która pływa, a łodzią, która działa.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Omów swoje wymagania dotyczące spawania</h2>
+    <p class="mt-2 text-sm text-muted">
+      Niestandardowe specyfikacje szwów, kompatybilność materiałów lub walidacja procesu.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Skontaktuj się z naszym zespołem spawalniczym</a
+    >
+  </div>
+</section>

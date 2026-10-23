@@ -1,0 +1,213 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'ro' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline"
+    >← Înapoi la Centrul de Cercetare și Dezvoltare</a
+  >
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Laborator 05</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Atelier de prototipuri</h1>
+      <p class="mt-3 text-lg text-muted">
+        De la model CAD la barcă pregătită pentru mare — construită, echipată și testată
+      </p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-ocean-voyager-1.webp"
+        alt="Aquafarer atelier de prototip pentru fabricarea bărcii"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Unde designul devine realitate</h2>
+  <p>
+    Un model CAD, indiferent cât de detaliat, nu poate dezvălui cum se va comporta de fapt o barcă până când nu
+    întâlnește apa. De aceea, Atelierul nostru de Prototipuri este conceput pentru a transforma datele inginerești
+    într-o ambarcațiune fizică, capabilă să navigheze pe mare, cât mai rapid și precis posibil. Fiecare nou{
+      SITE.name
+    }modelul — și fiecare construcție personalizată semnificativă — trece prin acest atelier înainte ca sculele de
+    producție să fie angajate.
+  </p>
+  <p>
+    Atelierul este complet echipat pentru fabricația simultană a corpului, tuburilor și echipamentului. Această abordare
+    de flux de lucru paralel reduce timpul de realizare a prototipului la 8-12 săptămâni de la eliberarea ingineriei,
+    comparativ cu norma industriei de 16-20 de săptămâni. Când aplicația dumneavoastră necesită o soluție specializată,
+    putem trece de la concept la validarea pe apă în mai puțin de trei luni.
+  </p>
+
+  <h2>Capabilitățile atelierului</h2>
+  <table>
+    <thead><tr><th>Stație de lucru</th><th>Echipament</th><th>Scop</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Fabricație corp</td><td
+          >Cuptor pentru turnare rotativă (HDPE), banc de sudură TIG (aluminiu), matrițe pentru aplicare manuală (fibra
+          de sticlă)</td
+        ><td>Producția corpului la scară completă în toate cele trei tipuri de materiale</td></tr
+      >
+      <tr
+        ><td>Asamblare tuburi</td><td>Presă de sudură RF, stație de lipire cu aer cald, jig de testare a inflației</td
+        ><td>Fabricarea ansamblurilor de tuburi la scară completă cu toate compartimentele, conurile și supapele</td
+        ></tr
+      >
+      <tr
+        ><td>Echipare și montaj</td><td
+          >Macara pentru motor (500 kg), cadru mock-up pentru consolă, presă hidraulică pentru furtunuri, placă pentru
+          cabluri electrice</td
+        ><td>Echipare completă: motor, direcție, comenzi, sistem de combustibil, electronică, scaune</td></tr
+      >
+      <tr
+        ><td>Secție instrumentație</td><td
+          >Senzor GPS de viteză, contor de flux carburant, accelerometre, matrice de termocuple, înregistrator de date</td
+        ><td>Instalarea și calibrarea instrumentației pentru teste pe mare</td></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>Parcursul prototipului — pas cu pas</h2>
+  <ol>
+    <li>
+      <strong>Predarea ingineriei</strong>— Pachetul de design (model 3D, raport FEA, lista de materiale, programul de
+      layup) este revizuit formal de șeful atelierului și inginerul de proiect. Orice problemă de fabricație este
+      identificată și rezolvată înainte de începerea tăierii.
+    </li>
+    <li>
+      <strong>Producția corpului</strong>— Corpul este construit conform specificațiilor inginerești. Pentru HDPE:
+      programul de turnare rotativă este încărcat din simularea Moldex3D. Pentru aluminiu: plăcile tăiate CNC sunt
+      sudate în bancul TIG conform hărții de sudură aprobate. Pentru fibra de sticlă: cartea cu straturi este urmată
+      strat cu strat.
+    </li>
+    <li>
+      <strong>Fabricația tuburilor</strong>— Țesătura este tăiată folosind șabloane CNC, apoi sudată RF în camere de
+      dimensiuni complete. Fiecare cameră este umflată la presiunea de test și lăsată 24 de ore pentru stabilizarea
+      inițială.
+    </li>
+    <li>
+      <strong>Asamblare și montare</strong>— Carena și tuburile sunt cuplate. Motorul este suspendat, direcția și
+      comenzile sunt conectate, sistemul de alimentare este instalat, iar toate circuitele electrice sunt cablate și
+      verificate.
+    </li>
+    <li>
+      <strong>Teste statice</strong>— Înainte ca barca să atingă apa, trece: verificarea flotabilității (+rezervă
+      completă de 30%), testul presiunii sistemului de combustibil, testul ciclului de blocare completă al sistemului de
+      direcție, testul continuității legăturii electrice la pământ.
+    </li>
+    <li><strong>Programul de probă pe mare</strong>— 20 de ore de testare în apă, detaliate mai jos.</li>
+    <li>
+      <strong>Recenzie prototip</strong>— O întâlnire formală de semnare are loc cu echipele de inginerie, producție și
+      calitate. Orice modificări de design necesare sunt documentate și încorporate în comunicatul de producție.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Programul de probă pe mare de 20 de ore — Program de testare
+    </p>
+    <div class="space-y-2 text-sm">
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">2 h</span><span class="flex-1"
+          >Manevre în port — manevrabilitate la viteze joase, marșarier, verificare a aripii de sprijin</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">4 h</span><span class="flex-1"
+          >Probă de viteză — viteză maximă, viteză de croazieră, consum de combustibil verificați GPS la 3 puncte RPM</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Test de viraj — diametru tactic, avans și transfer la 20 noduri, babord și tribord</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Testul de slăbit — treceri repetate prin tăietură de 0,5–1,0 m; accelerometru pe baza scaunului de la cârmă</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Test de stabilitate — unghi static de înclinare cu 4 + mecanisme de echipaj la tribord, sarcină decalată</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Cursa de anduranță — 3 ore continue la viteză de croazieră; monitorizarea temperaturii (motor, combustibil,
+          electricitate)</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">2 h</span><span class="flex-1"
+          >Inspecția finală — inspecția post-testare a tuturor sistemelor, strângere/verificarea tuturor elementelor de
+          fixare, documentarea constatărilor</span
+        >
+      </div>
+    </div>
+  </div>
+
+  <h2>Prototipare personalizată pentru aplicații unice</h2>
+  <p>
+    Atelierul de Prototipuri este locul unde rezolvăm problemele pe care bărcile de producție standard nu le pot
+    rezolva. Exemple recente includ:
+  </p>
+  <ul>
+    <li>
+      Un 7,8 m RIB pentru o organizație de căutare și salvare, necesitând o structură personalizată de cabină cu
+      protecție împotriva răsturnării, suporturi integrate pentru targă și un pod sonar montat în prova — toate
+      prototipate, montate și testate la facilitățile noastre.
+    </li>
+    <li>
+      Un proiectil gonflabil de 5,2 m pentru un contractor hidrografic, cu un pupa redusă, catarg de instrumente
+      detașabil și buzunare pentru traductoare prin carenă, concepute pentru a minimiza perturbarea debitului.
+    </li>
+    <li>
+      Un tender electric de 4,5 m pentru un superiaht, unde prototipul a fost folosit pentru a valida autonomia,
+      infrastructura de încărcare și nivelurile de zgomot înainte ca clientul să se angajeze la o flotă de patru
+      persoane.
+    </li>
+  </ul>
+
+  <h2>Echipa noastră de prototipare</h2>
+  <p>
+    Atelierul este deservit de opt tehnicieni marini cu multiple abilități, fiecare instruit în cel puțin două dintre
+    cele trei discipline de bază (carenă, tub, montaj). Liderul echipei este un maestru constructor de bărci cu 16 ani
+    de experiență, de la construcții personalizate și serii de producție. Fiecărui prototip i se atribuie un inginer de
+    proiect dedicat, care servește ca punct unic de contact pentru client pe tot parcursul procesului de construcție și
+    testare.
+  </p>
+
+  <h2>Implicarea clienților</h2>
+  <p>
+    Încurajăm activ clienții noștri să participe la etapele cheie din timpul construcției prototipului — în special
+    revizuirea inițială a amenajării și testul pe mare. Feedback-ul operațional din aceste etape este de neprețuit
+    pentru reglarea fină a bărcii înainte de a intra în producție. Nu construim în vid; construim în parteneriat cu
+    dumneavoastră.
+  </p>
+  <p>
+    Testul pe mare de 20 de ore este, de asemenea, o oportunitate pentru echipa dumneavoastră de a se familiariza cu
+    manevrabilitatea, configurația sistemelor și cerințele de întreținere ale bărcii, asigurând o tranziție lină la
+    serviciu la livrarea bărcilor de producție.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Începe proiectul tău prototip</h2>
+    <p class="mt-2 text-sm text-muted">
+      Povestiți-ne despre barca de care aveți nevoie și vom propune un plan de dezvoltare prototip.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Contactați echipa noastră de prototipare</a
+    >
+  </div>
+</section>

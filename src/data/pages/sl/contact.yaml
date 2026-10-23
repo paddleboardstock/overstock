@@ -1,0 +1,130 @@
+hero_text:
+  tagline: Kontakt
+  title: STOPITE V STIK
+contact_form:
+  id: form
+  title: Pošljite nam sporočilo
+  subtitle: Za ponudbe, tehnična vprašanja ali poizvedbe o partnerstvu nam napišite. Odgovorimo v enem delovnem dnevu.
+  email_to: info@aquafarer.com
+  submit_button: Pošlji poizvedbo → Pridobi ponudbo
+  success_message: Hvala! Vaše sporočilo je prispelo v naš poštni predal. Odgovorili bomo v enem delovnem dnevu.
+  error_message: Pri pošiljanju sporočila je prišlo do napake. Poskusite znova ali nam pišite neposredno na e-pošto.
+  default_country_code: '+1'
+  captcha:
+    label: 'Proti neželeni pošti: prosimo, rešite naslednje'
+  fields:
+    - name: firstName
+      label: Ime
+      row: 1
+    - name: lastName
+      label: Priimek
+      row: 1
+    - name: companyName
+      label: Ime podjetja
+      row: 2
+    - name: address
+      label: Naslov
+      row: 3
+    - name: zip
+      label: Poštna številka
+      row: 4
+    - name: country
+      label: Država
+      row: 4
+      type: select
+      optionsKey: countries
+    - name: email
+      label: E-pošta
+      row: 5
+      type: email
+    - name: tel
+      label: TEL
+      row: 5
+      type: tel
+      withCountryCode: true
+    - name: Obseg naročila
+      label: Ocenjeni obseg naročila
+      row: 6
+      type: select
+      options:
+        - value: ''
+          label: Izberite ocenjeni obseg...
+        - value: sample
+          label: Samo vzorci / prototipi
+        - value: 5-10
+          label: 5–10 enot (Standard MOQ)
+        - value: 100-500
+          label: 100–500 enot
+        - value: 500-plus
+          label: 500+ enot (Cenik po količini)
+    - name: customization
+      label: Potrebna prilagoditev?
+      row: 7
+      type: select
+      options:
+        - value: ''
+          label: Izberite vrsto prilagoditve...
+        - value: none
+          label: Standardni izdelek (brez prilagoditve)
+        - value: logo
+          label: Samo po meri logotip / blagovna znamka
+        - value: full
+          label: Polno OEM (velikost, barva, grafika, embalaža)
+        - value: consultation
+          label: Nisem prepričan — potrebujem posvet
+    - name: interes za izdelek
+      label: Kategorije izdelkov, ki jih zanimajo
+      row: 8
+      type: select
+      options:
+        - value: ''
+          label: Izberite kategorijo izdelka...
+        - value: all
+          label: Vsi izdelki / Celoten katalog
+        - value: sup
+          label: SUP Deske / sup deske
+        - value: kayak
+          label: Napihljivi kajaki
+        - value: rib
+          label: RIB Čolni
+        - value: dinghy
+          label: Gumenjaki / Čolni za prevoz
+        - value: safety
+          label: Varnostna oprema / Rešilni jopiči
+        - value: accessory
+          label: Dodatki (črpalke, vesla, torbe)
+    - name: subject
+      label: Predmet
+      row: 9
+    - name: message
+      label: Sporočilo
+      row: 10
+      type: textarea
+      rows: 6
+features2_other_ways:
+  title: Drugi načini, kako nas doseči
+  columns: 3
+  items:
+    - title: Prodajna povpraševanja
+      description: Ponudbe, konfiguracije, prijave trgovcev in množična naročila.
+      icon: tabler:shopping-bag
+    - title: Tehnična podpora
+      description: Garancija, popravila, nadomestni deli in vprašanja glede delovanja.
+      icon: tabler:tool
+    - title: Tisk in partnerstva
+      description: Medijski kompleti, sponzorstva in sodelovanje v industriji.
+      icon: tabler:news
+    - title: Telefon
+      description: +1 279 732 3333 (ZDA HQ) · +86 13305324192 (tovarna)
+      icon: tabler:headset
+    - title: E-pošta
+      description: info@aquafarer.com
+      icon: tabler:mail
+    - title: Svetovna pisarna in obračun
+      description: Aquafarer d.o.o., Novi Mehiko, Združene države
+      icon: tabler:map-pin
+map:
+  title: Naša lokacija
+  subtitle: Obiščite naš proizvodni center v Qingdau
+  address: Cona gospodarskega razvoja, Laixi, Qingdao, Kitajska, 266600
+  zoom: 15

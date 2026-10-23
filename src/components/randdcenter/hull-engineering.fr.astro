@@ -1,0 +1,186 @@
+---
+import { SITE } from 'astrowind:config';
+const { lang = 'fr' } = Astro.props;
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={`/${lang}/randdcenter`} class="text-sm text-gray-500 hover:underline">&larr; Retour au Centre R&amp;D</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Lab 02</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Studio de génie de coques</h1>
+      <p class="mt-3 text-lg text-muted">
+        Simulation numérique, intelligence structurelle, conception de coques sur mesure
+      </p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/design discussaquafarer-inflatable-boat-aquafarer-factory-exterior.webp"
+        alt="Poste de travail CAD de génie de coques Aquafarer"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Là où la résistance rencontre l'hydrodynamique</h2>
+  <p>
+    La coque est la colonne vertébrale de tout RIB ou bateau gonflable. Elle doit être suffisamment légère pour déjauger
+    efficacement, assez résistante pour absorber les charges d'impact et dimensionnellement stable sur une large plage
+    de températures. Chez {SITE.name}, notre Studio de génie de coques combine la modélisation CAD avancée, l'analyse
+    par éléments finis (FEA) et des décennies d'expérience pratique en architecture navale pour livrer des coques
+    optimisées pour leur mission prévue — et non des formes génériques adaptées d'un catalogue.
+  </p>
+  <p>
+    Nous travaillons avec trois matériaux de coque principaux — le HDPE moulé par rotation, l'aluminium de qualité
+    marine soudé et la fibre de verre stratifiée à la main — et nous avons la capacité technique de concevoir, simuler
+    et valider chacun d'eux en interne.
+  </p>
+
+  <h2>Outils de conception et normes</h2>
+  <p>Notre environnement d'ingénierie numérique comprend :</p>
+  <table>
+    <thead><tr><th>Capacité</th><th>Logiciel / Outil</th><th>Application</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Modélisation paramétrique 3D</td><td>SolidWorks Professional</td><td
+          >Surface de coque, système de longerons, support moteur, agencement du pont</td
+        ></tr
+      >
+      <tr
+        ><td>Analyse par éléments finis</td><td>ANSYS Mechanical &amp; LS-DYNA</td><td
+          >Cartographie des contraintes, analyse modale, simulation de choc/d'impact</td
+        ></tr
+      >
+      <tr
+        ><td>Dynamique des fluides numérique</td><td>Ansys Fluent / Star-CCM+</td><td
+          >Prédiction de la traînée hydrodynamique, optimisation du trim</td
+        ></tr
+      >
+      <tr
+        ><td>Ingénierie des stratifiés</td><td>ESAComp / CADEC</td><td
+          >Empilement des couches de fibre de verre, sélection de l'âme, estimation du poids</td
+        ></tr
+      >
+      <tr
+        ><td>Simulation de remplissage de moule</td><td>Moldex3D</td><td
+          >Prédiction de l'épaisseur de paroi en rotomoulage</td
+        ></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>Notre processus d'ingénierie</h2>
+  <p>
+    Chaque conception de coque, qu'il s'agisse d'un modèle standard ou d'un projet entièrement sur mesure, suit un
+    processus rigoureux en cinq étapes :
+  </p>
+  <ol>
+    <li>
+      <strong>Concept &amp; recueil des exigences</strong> — Nous nous réunissons avec vous pour définir la charge utile,
+      l'enveloppe de vitesse, la tenue selon l'état de la mer, les exigences de remorquage et tout équipement de mission spécial
+      (trappes de pont, positions de console, intégration du réservoir de carburant).
+    </li>
+    <li>
+      <strong>Surfaçage 3D &amp; calcul hydrostatique</strong> — La forme de la coque est modélisée dans SolidWorks et vérifiée
+      pour la stabilité hydrostatique (GM, bras de redressement) à l'aide des outils d'analyse intégrés.
+    </li>
+    <li>
+      <strong>FEA structurelle</strong> — Les cas de charge sont définis : statique (équipage + matériel), dynamique (impacts
+      de déjaugeage à 5g) et slamming (chute depuis une crête de vague à 3 m/s). Les contours de contraintes sont examinés
+      ; un facteur de sécurité &ge; 2.5 est obligatoire.
+    </li>
+    <li>
+      <strong>Optimisation de la traînée par CFD</strong> — La coque est simulée à trois conditions de chargement et cinq
+      vitesses. La surface mouillée, l'angle de trim et la résistance résiduelle sont réduits de manière itérative.
+    </li>
+    <li>
+      <strong>Revue de conception &amp; lancement</strong> — Le dossier d'ingénierie complet (modèle 3D, rapport FEA, rapport
+      CFD, estimation du poids, carnet de laminage) est examiné par notre architecte naval senior avant sa transmission à
+      l'atelier de prototypes.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Répartition des contraintes FEA — Coque RIB 450 Patrouille (Aluminium 5083)
+    </p>
+    <div class="grid grid-cols-2 gap-4 text-sm">
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">2.8 : 1</span>
+        <span class="text-gray-500">Facteur de sécurité à charge utile maximale</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">15.2 %</span>
+        <span class="text-gray-500">Réduction de traînée par rapport à la génération précédente</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">87 kN/m&sup2;</span>
+        <span class="text-gray-500">Pression de slamming de pointe (limite de conception)</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">18 000 h</span>
+        <span class="text-gray-500">Temps de calcul FEA cumulé en 2025</span>
+      </div>
+    </div>
+  </div>
+
+  <h2>Personnalisation : votre coque, vos règles</h2>
+  <p>
+    Aucun opérateur n'a des exigences identiques. Un RIB de patrouille portuaire a besoin d'une coque en V peu profond
+    pour la stabilité à basse vitesse ; un engin d'interception rapide a besoin d'un V profond avec des plans de dérive
+    ; un bateau de soutien de plongée a besoin d'une grande largeur et d'un tableau arrière bas. Nous ne contraignons
+    pas votre application dans une forme de coque préexistante. Nous concevons à partir de votre cahier des charges.
+  </p>
+  <p>Exemples de projets récents d'ingénierie de coques sur mesure :</p>
+  <ul>
+    <li>
+      Une coque HDPE allongée de 6.8 m pour un voyagiste des Caraïbes, avec une étrave renforcée pour les échouages sur
+      plage (+15 % d'épaisseur de fond).
+    </li>
+    <li>
+      Un RIB léger en aluminium de 7.2 m pour une garde côtière, avec des cloisons anti-ballotement intégrées dans le
+      réservoir de carburant et des raidisseurs pour les coffres à équipement.
+    </li>
+    <li>
+      Un bateau de plongée en fibre de verre de 5.5 m avec un tableau arrière abaissé et deux caissons à batteries,
+      conçu pour faciliter le rembarquement des nageurs en apnée.
+    </li>
+  </ul>
+
+  <h2>Nos ingénieurs</h2>
+  <p>
+    Le studio est dirigé par un architecte naval senior fort de 14 ans d'expérience dans la conception d'engins rapides,
+    assisté de deux ingénieurs mécaniciens spécialisés en FEA et CFD. Tous trois détiennent des diplômes avancés en
+    ingénierie marine ou en architecture navale d'universités internationalement reconnues. L'équipe publie
+    régulièrement dans des revues industrielles et présente lors de conférences telles que l'International Conference on
+    High-Performance Marine Vehicles.
+  </p>
+
+  <h2>Faites équipe avec nous pour votre prochaine coque</h2>
+  <p>
+    Du premier croquis de concept au rapport de contraintes final, notre Studio de génie de coques est votre partenaire
+    dans la création d'un bateau qui n'est pas seulement construit — mais conçu par ingénierie. Nous investissons les
+    heures de simulation en amont pour que chaque soudure, chaque couche de stratifié et chaque courbe de la coque
+    soient là pour une raison.
+  </p>
+  <p>
+    Que vous ayez besoin d'une modification mineure d'un modèle existant ou d'une conception entièrement nouvelle, nous
+    sommes prêts à discuter de vos exigences.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Commencez votre consultation de conception de coque</h2>
+    <p class="mt-2 text-sm text-muted">
+      Parlez-nous de votre profil de mission et nous vous proposerons une démarche d'ingénierie.
+    </p>
+    <a
+      href={`/${lang}/contact`}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Contactez notre équipe d'ingénierie</a
+    >
+  </div>
+</section>

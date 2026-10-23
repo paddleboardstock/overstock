@@ -1,0 +1,275 @@
+---
+import JsonLd from '~/components/common/JsonLd.astro';
+import AiQuickAnswer from '~/components/common/AiQuickAnswer.astro';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
+const { lang = 'tr' } = Astro.props;
+const t = (key: string) => getUiForLang(lang)?.[key] || '';
+---
+
+<JsonLd
+  type="Article"
+  article={{
+    headline: 'Şişme Bot Rehberi — Tam Kaynak',
+    description:
+      'Şişme botlar hakkında türler, yapı yöntemleri, malzeme karşılaştırması, seçim kriterleri, güvenlik standartları ve bakım konularını kapsayan kapsamlı bir rehber.',
+    datePublished: '2026-07-07',
+  }}
+  data={{ url: 'https://aquafarer.com/marine-industry/' }}
+/>
+
+<JsonLd
+  type="BreadcrumbList"
+  breadcrumbs={[
+    { name: t('nav.home') || 'Home', href: `/${lang}/` },
+    { name: 'Denizcilik Endüstrisi', href: `/${lang}/marine-industry` },
+    { name: 'Şişme Bot Rehberi', href: `/${lang}/marine-industry/` },
+  ]}
+/>
+
+<AiQuickAnswer
+  entityType="Kılavuz"
+  quickAnswer="Şişme bot, kaldırma kuvveti sağlamak için basınçlı hava ile doldurulmuş esnek kumaş tüplerden (sponsonlar) yapılmış hafif bir su aracı türüdür. Modern şişme botlar arasında sandal, RIBs (sert şişme botlar), şişme kanolar ve ayakta kürek tahtaları bulunur. RF kaynak veya el ile yapıştırılmış dikişler kullanılarak PVC veya Hypalon CSM kumaşlardan üretilirler ve drop-stitch yapı, yüksek basınçlı sert tabanların kullanılmasını sağlar."
+  facts={[
+    { label: 'Küresel Pazar Büyüklüğü', value: '$2.8B (2026)' },
+    { label: 'Birincil Malzemeler', value: 'PVC / Hypalon CSM' },
+    { label: 'Yaşam Süresi Aralığı', value: '8-20+ yıl' },
+    { label: 'CE Sertifikası', value: 'Gerekli (AB)' },
+  ]}
+/>
+
+<section class="max-w-4xl mx-auto py-16 px-6">
+  <h1 class="text-4xl font-semibold text-gray-900">Şişme Bot Rehberi</h1>
+  <p class="mt-4 text-lg text-gray-500">
+    Şişme su araçları hakkında kesin kaynak — eğlence amaçlı sandalardan profesyonel RIBs ve özel kurtarma gemilerine
+    kadar.
+  </p>
+
+  <nav class="mt-8 flex flex-wrap gap-2">
+    {
+      ['Types', 'Construction', 'Materials', 'Selection', 'Safety', 'Maintenance', 'Standards'].map((section) => (
+        <a
+          href={`#${section.toLowerCase()}`}
+          class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition"
+        >
+          {section}
+        </a>
+      ))
+    }
+  </nav>
+
+  <section id="types" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Şişme Bot Türleri</h2>
+    <div class="mt-8 grid gap-6">
+      {
+        [
+          {
+            title: 'Şişme Botlar',
+            desc: 'Servis, balıkçılık ve kısa mesafe eğlence amaçlı kullanım için küçük, taşınabilir botlar. Genellikle 2-4 m uzunluğunda, küçük dıştan takma motorlar (2-15 HP) veya küreklerle çalışır. En uygun fiyatlı başlangıç noktası.',
+            icon: '🚤',
+          },
+          {
+            title: 'Sert Şişme Botlar (RIBs)',
+            desc: 'Sabit fiberglas, alüminyum veya HDPE gövdeye ve şişme yan şişme bölgelere sahip yüksek performanslı tekneler. 3-12 m uzunluk, 15-300 + HP dıştan takma motorlar. Devriye, kurtarma, dalış ve açık deniz gezileri için kullanılır.',
+            icon: '⚡',
+          },
+          {
+            title: 'Şişme Kano',
+            desc: 'Taşınabilir kayaklar PVC veya TPU kumaşlardan yapılmıştır. Rekreasyon amaçlı gezi, nehirde kürek çekme ve keşif seyahatleri için tekli ve tandem konfigürasyonlarda mevcuttur.',
+            icon: '🛶',
+          },
+          {
+            title: 'Şişme Ayakta Sörf Panoları (SUPs)',
+            desc: 'Drop-stitch, sert yüksek basınçlı güvertelere şişirilen paddle boardlar inşa etti. Her yönlü, tur, yoga, balık tutma ve sörf modelleri mevcuttur.',
+            icon: '🏄',
+          },
+          {
+            title: 'Kurtarma Botları (SAR)',
+            desc: 'Arama ve kurtarma operasyonları için özel RIBs. Kendiliğinden boşalan zeminler, ön konsollar, çekme aparatı ve yüksek görünürlük renk şemaları özelliklerine sahiptir. Kurtarma kullanımı için CE-sertifikalı.',
+            icon: '🆘',
+          },
+          {
+            title: 'Ticari İş Tekneleri',
+            desc: 'Dalış desteği, devriye, keşif ve ticari deniz operasyonları için ağır hizmet RIBs. Hypalon CSM yapım, güçlendirilmiş gövdeler ve profesyonel sınıf donanım.',
+            icon: '⚙️',
+          },
+        ].map((item) => (
+          <div class="flex gap-4 p-5 bg-gray-50 rounded-xl border border-gray-200">
+            <span class="text-2xl flex-shrink-0">{item.icon}</span>
+            <div>
+              <h3 class="font-semibold text-gray-900">{item.title}</h3>
+              <p class="mt-1 text-sm text-gray-600">{item.desc}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section id="construction" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">İnşaat Yöntemleri</h2>
+    <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">RF Kaynak (Yüksek Frekans)</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Moleküler düzeyde PVC katmanlarını birleştirmek için elektromanyetik enerji kullanır. En güçlü hava geçirmez
+          dikişleri oluşturur. Yüksek kaliteli PVC teknelerde ve SUPs'de yaygındır. Özel makine ve uzman işletim
+          gerektirir.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Elle Yapıştırma / Kimyasal Bağlama</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          İki bileşenli yapıştırıcı kumaş panelleri birleştirir. Hypalon CSM tekneler için birincil yöntemdir (RF ile
+          kaynak yapılamaz). Optimal dikiş dayanımı için hassas yüzey hazırlığı, kontrollü nem ve uygun kürleme süresi
+          gerektirir.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Drop-Stitch Çekirdek</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Binlerce polyester iplik, üst ve alt PVC katmanları birbirine bağlayarak sert tahta performansı için yüksek
+          basınçlı şişirmeyi (15-25 PSI) mümkün kılar. İplik yoğunluğu (15-50 iplik/cm²) sertliği ve ağırlığı belirler.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Isı Kaynağı</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Dikişler ve takviyeler için sıcak hava veya sıcak kama kaynağı kullanılır. Daha büyük RIB yapılarında
+          yaygındır. RF kaynağı kadar hassas olmasa da Hypalon ve ağır hizmet PVC kumaşlar için etkilidir.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="materials" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Malzemelerin Karşılaştırması</h2>
+    <div class="mt-6 overflow-x-auto">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="bg-gray-50 border-b-2 border-gray-200">
+            <th class="px-4 py-3 text-left font-semibold text-gray-700">Mülk</th>
+            <th class="px-4 py-3 text-center font-semibold text-sky-700">PVC</th>
+            <th class="px-4 py-3 text-center font-semibold text-emerald-700">Hypalon CSM</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            [
+              ['Relative Cost', '$ (budget)', '$$$ (premium)'],
+              ['UV Resistance', 'Good (with coating)', 'Excellent (inherent)'],
+              ['Abrasion Resistance', 'Moderate-Good', 'Excellent'],
+              ['Chemical Resistance', 'Good', 'Excellent'],
+              ['Cold Flexibility', 'Stiffens below 0°C', 'Flexible to -20°C'],
+              ['Lifespan', '8-12 years', '15-20+ years'],
+              ['Seam Method', 'RF welding', 'Hand gluing'],
+              ['Repair', 'PVC glue (easy)', '2-part adhesive (moderate)'],
+            ].map((row, i) => (
+              <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                {row.map((cell, j) => (
+                  <td
+                    class={`px-4 py-3 border-b border-gray-200 ${j === 0 ? 'font-medium text-gray-700' : 'text-center text-gray-600'}`}
+                  >
+                    {cell}
+                  </td>
+                ))}
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-4 text-sm text-gray-500">
+      Modern askeri sınıf PVC (1100-1670 dtex) çoğu hobi kullanıcıları için mükemmel dayanıklılık sunar ve Hypalon'nin
+      yarı maliyetindedir. Hypalon ticari filolar, tropik iklimler ve kritik görev uygulamaları için tercih edilir.
+    </p>
+    <a
+      href={`/${lang}/learn/pvc-vs-hypalon`}
+      class="mt-4 inline-block text-sky-600 hover:text-sky-700 text-sm font-medium">Detaylı PVC vs Hypalon Rehberi →</a
+    >
+  </section>
+
+  <section id="selection" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Şişme Bot Nasıl Seçilir</h2>
+    <div class="mt-8 grid md:grid-cols-3 gap-6">
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">1. Kullanım Amacınızı Belirleyin</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>Rekreasyon: Bot ya da SUP</li>
+          <li>Performans: RIB (15-60 HP)</li>
+          <li>Ticari: RIB (100+ HP)</li>
+          <li>Spor: Şişme SUP</li>
+          <li>Seyahat: Şişme kayak</li>
+        </ul>
+      </div>
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">2. Bütçenizi Belirleyin</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>$200-$800: Şişme SUP</li>
+          <li>$500-$2,000: Bot + motor</li>
+          <li>$3,000-$8,000: Giriş RIB</li>
+          <li>$8.000-$20.000: Premium RIB</li>
+          <li>$20,000+: Ticari RIB</li>
+        </ul>
+      </div>
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">3. Malzemeyi Düşünün</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>PVC: Bütçe dostu, hafif</li>
+          <li>Hypalon: Premium, uzun ömürlü</li>
+          <li>Drop-Stitch: Sert performans</li>
+          <li>Kumaş ağırlığı: 1100-1670 dtex</li>
+          <li>Kaplama: UV + delinme katmanları</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="safety" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Güvenlik & Standartlar</h2>
+    <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">CE Sertifikası</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          AB'de satılan tüm şişme botlar, 2013/53/EU sayılı Rekreasyonel Tekne Direktifi (RCD) kapsamında CE
+          işaretlemeye sahiptir. Sertifikasyon tasarım kategorisini (A-D), yüzdürme, kararlılık ve yük kapasitesini
+          kapsar. Aquafarer botlar rekreasyon ve kurtarma kullanımı için CE sertifikalıdır.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Standart</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Şişme botlar için malzemeler, dikişler, valfler ve performans testleri ile ilgili gereklilikleri belirleyen
+          uluslararası standart. Tip I-IV, küçük botlardan büyük RIBs kadar her şeyi kapsar.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Gerekli Güvenlik Ekipmanları</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Can yelekleri/PFD (CE 12402), atma halatları, kepçe/yangın söndürücü, seyir lambaları (gece), VHF radyo, ilk
+          yardım çantası, çapa ve yedek kürek veya yakıt.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Güvenli Kullanım</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Maksimum kapasite plakasını HİÇBİR ZAMAN aşmayın. Suya indirmeden önce valflerin güvenliğini kontrol edin.
+          Ağırlığı eşit olarak dağıtın. Hava koşullarını izleyin. Bir seyir planı dosyalayın. Bir deniz güvenliği
+          kursuna katılın.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="maintenance" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Bakım ve Özen</h2>
+    <div class="mt-8 space-y-4 text-sm text-gray-600">
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <>
+          <span class="text-sky-600 font-bold flex-shrink-0">1.</span>
+          <span>Her tuzlu su kullanımından sonra taze su ile durulayın. Depolamadan önce tamamen kurulayın.</span>
+        </>
+      </div>
+    </div>
+  </section>
+</section>

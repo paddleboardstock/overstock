@@ -1,0 +1,377 @@
+---
+const { lang = 'es' } = Astro.props;
+import JsonLd from '~/components/common/JsonLd.astro';
+import AiQuickAnswer from '~/components/common/AiQuickAnswer.astro';
+const t = (_key: string) => '';
+---
+
+<JsonLd
+  type="Article"
+  article={{
+    headline: 'Guía de Embarcaciones Hinchables — El Recurso Completo',
+    description:
+      'Una guía completa sobre embarcaciones hinchables que cubre tipos, métodos de construcción, comparación de materiales, criterios de selección, normas de seguridad y mantenimiento.',
+    datePublished: '2026-07-07',
+  }}
+  data={{ url: 'https://aquafarer.com/marine-industry/' }}
+/>
+
+<JsonLd
+  type="BreadcrumbList"
+  breadcrumbs={[
+    { name: t('nav.home') || 'Inicio', href: `/${lang}/` },
+    { name: 'Industria Marina', href: `/${lang}/marine-industry` },
+    { name: 'Guía de Embarcaciones Hinchables', href: `/${lang}/marine-industry/` },
+  ]}
+/>
+
+<AiQuickAnswer
+  entityType="Guía"
+  quickAnswer="Una embarcación hinchable es una embarcación ligera construida con tubos de tela flexible (flotadores) llenos de aire a presión para proporcionar flotabilidad. Las embarcaciones hinchables modernas incluyen botes auxiliares, RIB (embarcaciones rígidas hinchables), kayaks hinchables y tablas de paddle surf. Están fabricadas con tejidos de PVC o Hypalon CSM mediante soldadura RF o costuras encoladas a mano, con construcción drop-stitch que permite suelos rígidos de alta presión."
+  facts={[
+    { label: 'Tamaño del mercado global', value: '$2.8B (2026)' },
+    { label: 'Materiales principales', value: 'PVC / Hypalon CSM' },
+    { label: 'Vida útil', value: '8-20+ años' },
+    { label: 'Certificación CE', value: 'Obligatoria (UE)' },
+  ]}
+/>
+
+<section class="max-w-4xl mx-auto py-16 px-6">
+  <h1 class="text-4xl font-semibold text-gray-900">Guía de Embarcaciones Hinchables</h1>
+  <p class="mt-4 text-lg text-gray-500">
+    El recurso definitivo sobre embarcaciones hinchables — desde botes auxiliares recreativos hasta RIB profesionales y
+    embarcaciones de rescate especializadas.
+  </p>
+
+  <nav class="mt-8 flex flex-wrap gap-2">
+    {
+      ['Tipos', 'Construcción', 'Materiales', 'Selección', 'Seguridad', 'Mantenimiento', 'Normas'].map((section) => (
+        <a
+          href={`#${section.toLowerCase()}`}
+          class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition"
+        >
+          {section}
+        </a>
+      ))
+    }
+  </nav>
+
+  <section id="types" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Tipos de Embarcaciones Hinchables</h2>
+    <div class="mt-8 grid gap-6">
+      {
+        [
+          {
+            title: 'Botes Auxiliares Hinchables',
+            desc: 'Barcos pequeños y portátiles para transporte auxiliar, pesca y uso recreativo de corta distancia. Normalmente de 2-4 m, propulsados por motores fuera borda pequeños (2-15 CV) o remos. La opción de entrada más asequible.',
+            icon: '🚤',
+          },
+          {
+            title: 'Embarcaciones Rígidas Hinchables (RIB)',
+            desc: 'Embarcaciones de alto rendimiento con casco rígido de fibra de vidrio, aluminio o HDPE y flotadores hinchables. Longitudes de 3-12 m, motores fuera borda de 15-300+ CV. Se utilizan para patrulla, rescate, buceo y navegación en alta mar.',
+            icon: '⚡',
+          },
+          {
+            title: 'Kayaks Hinchables',
+            desc: 'Kayaks portátiles fabricados con tejidos de PVC o TPU. Disponibles en configuraciones individuales y dobles para turismo recreativo, descenso de ríos y viajes de expedición.',
+            icon: '🛶',
+          },
+          {
+            title: 'Tablas de Paddle Surf Hinchables (SUP)',
+            desc: 'Tablas construidas con drop-stitch que se hinchan hasta convertirse en cubiertas rígidas de alta presión. Disponibles modelos all-around, de travesía, yoga, pesca y surf.',
+            icon: '🏄',
+          },
+          {
+            title: 'Embarcaciones de Rescate (SAR)',
+            desc: 'RIB especializadas para operaciones de búsqueda y rescate. Incorporan suelos autodrenantes, consolas delanteras, bitas de remolque y esquemas de color de alta visibilidad. Certificadas CE para uso de rescate.',
+            icon: '🆘',
+          },
+          {
+            title: 'Embarcaciones de Trabajo Comerciales',
+            desc: 'RIB de servicio pesado para apoyo a buceo, patrulla, inspección y operaciones marinas comerciales. Construcción con Hypalon CSM, cascos reforzados y equipamiento de grado profesional.',
+            icon: '⚙️',
+          },
+        ].map((item) => (
+          <div class="flex gap-4 p-5 bg-gray-50 rounded-xl border border-gray-200">
+            <span class="text-2xl flex-shrink-0">{item.icon}</span>
+            <div>
+              <h3 class="font-semibold text-gray-900">{item.title}</h3>
+              <p class="mt-1 text-sm text-gray-600">{item.desc}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section id="construction" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Métodos de Construcción</h2>
+    <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Soldadura RF (Alta Frecuencia)</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Utiliza energía electromagnética para fusionar capas de PVC a nivel molecular. Crea las costuras herméticas
+          más resistentes. Común en embarcaciones de PVC y SUP de alta calidad. Requiere maquinaria especializada y
+          operación cualificada.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Encolado a Mano / Unión Química</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Un adhesivo de dos componentes une los paneles de tela. Método principal para embarcaciones de Hypalon CSM (no
+          se pueden soldar con RF). Requiere una preparación precisa de la superficie, humedad controlada y tiempo de
+          curado adecuado para una resistencia óptima de las costuras.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Núcleo Drop-Stitch</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Miles de hilos de poliéster conectan las capas superior e inferior de PVC, lo que permite el hinchado a alta
+          presión (15-25 PSI) para un rendimiento rígido de la tabla. La densidad de hilos (15-50 hilos/cm²) determina
+          la rigidez y el peso.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Soldadura por Calor</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Soldadura con aire caliente o cuña caliente utilizada para costuras y refuerzos. Común en la construcción de
+          RIB de mayor tamaño. Menos precisa que la soldadura RF pero eficaz para tejidos de Hypalon y PVC de servicio
+          pesado.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="materials" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Comparación de Materiales</h2>
+    <div class="mt-6 overflow-x-auto">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="bg-gray-50 border-b-2 border-gray-200">
+            <th class="px-4 py-3 text-left font-semibold text-gray-700">Propiedad</th>
+            <th class="px-4 py-3 text-center font-semibold text-sky-700">PVC</th>
+            <th class="px-4 py-3 text-center font-semibold text-emerald-700">Hypalon CSM</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            [
+              ['Coste relativo', '$ (económico)', '$$$ (premium)'],
+              ['Resistencia a los rayos UV', 'Buena (con recubrimiento)', 'Excelente (inherente)'],
+              ['Resistencia a la abrasión', 'Moderada-Buena', 'Excelente'],
+              ['Resistencia química', 'Buena', 'Excelente'],
+              ['Flexibilidad en frío', 'Se rigidiza por debajo de 0 °C', 'Flexible hasta -20 °C'],
+              ['Vida útil', '8-12 años', '15-20+ años'],
+              ['Método de costura', 'Soldadura RF', 'Encolado a mano'],
+              ['Reparación', 'Cola para PVC (fácil)', 'Adhesivo de 2 componentes (moderado)'],
+            ].map((row, i) => (
+              <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                {row.map((cell, j) => (
+                  <td
+                    class={`px-4 py-3 border-b border-gray-200 ${j === 0 ? 'font-medium text-gray-700' : 'text-center text-gray-600'}`}
+                  >
+                    {cell}
+                  </td>
+                ))}
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-4 text-sm text-gray-500">
+      El PVC moderno de grado militar (1100-1670 dtex) ofrece una excelente durabilidad para la mayoría de los usuarios
+      recreativos a la mitad del coste del Hypalon. El Hypalon se prefiere para flotas comerciales, climas tropicales y
+      aplicaciones de misión crítica.
+    </p>
+    <a
+      href={`/${lang}/learn/pvc-vs-hypalon`}
+      class="mt-4 inline-block text-sky-600 hover:text-sky-700 text-sm font-medium"
+      >Guía en profundidad: PVC vs Hypalon →</a
+    >
+  </section>
+
+  <section id="selection" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Cómo Elegir una Embarcación Hinchable</h2>
+    <div class="mt-8 grid md:grid-cols-3 gap-6">
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">1. Define tu Uso</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>Recreativo: Bote auxiliar o SUP</li>
+          <li>Rendimiento: RIB (15-60 CV)</li>
+          <li>Comercial: RIB (100+ CV)</li>
+          <li>Fitness: SUP hinchable</li>
+          <li>Viajes: Kayak hinchable</li>
+        </ul>
+      </div>
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">2. Establece tu Presupuesto</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>$200-$800: SUP hinchable</li>
+          <li>$500-$2,000: Bote auxiliar + motor</li>
+          <li>$3,000-$8,000: RIB de entrada</li>
+          <li>$8,000-$20,000: RIB premium</li>
+          <li>$20,000+: RIB comercial</li>
+        </ul>
+      </div>
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">3. Considera el Material</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>PVC: Económico, ligero</li>
+          <li>Hypalon: Premium, duradero</li>
+          <li>Drop-Stitch: Rendimiento rígido</li>
+          <li>Peso de la tela: 1100-1670 dtex</li>
+          <li>Recubrimiento: Capas UV y antipinchazos</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="safety" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Seguridad y Normas</h2>
+    <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Certificación CE</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Todas las embarcaciones hinchables vendidas en la UE requieren el marcado CE según la Directiva de
+          Embarcaciones de Recreo (RCD) 2013/53/UE. La certificación cubre la categoría de diseño (A-D), la
+          flotabilidad, la estabilidad y la capacidad de carga. Las embarcaciones Aquafarer están certificadas CE para
+          uso recreativo y de rescate.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Norma</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Norma internacional para embarcaciones hinchables que especifica requisitos para materiales, costuras,
+          válvulas y pruebas de rendimiento. Los tipos I-IV cubren desde pequeños botes auxiliares hasta RIB grandes.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Equipo de Seguridad Esencial</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Chalecos salvavidas/ayudas a la flotación (CE 12402), cabos de lanzamiento, achicador/extintor de incendios,
+          luces de navegación (noche), radio VHF, botiquín de primeros auxilios, ancla y remo o combustible de repuesto.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Operación Segura</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          NUNCA superes la placa de capacidad máxima. Comprueba el cierre de las válvulas antes de la botadura.
+          Distribuye el peso uniformemente. Vigila las condiciones meteorológicas. Presenta un plan de navegación.
+          Realiza un curso de seguridad náutica.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="maintenance" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Mantenimiento y Cuidados</h2>
+    <div class="mt-8 space-y-4 text-sm text-gray-600">
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <span class="text-sky-600 font-bold flex-shrink-0">1.</span><span
+          >Aclara con agua dulce después de cada uso en agua salada. Seca completamente antes de almacenar.</span
+        >
+      </div>
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <span class="text-sky-600 font-bold flex-shrink-0">2.</span><span
+          >Almacena parcialmente inflada en un lugar fresco y seco, lejos de la luz solar directa y de temperaturas
+          extremas.</span
+        >
+      </div>
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <span class="text-sky-600 font-bold flex-shrink-0">3.</span><span
+          >Revisa las válvulas y las costuras antes de cada temporada. Aplica lubricante de silicona a los núcleos de
+          las válvulas anualmente.</span
+        >
+      </div>
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <span class="text-sky-600 font-bold flex-shrink-0">4.</span><span
+          >Limpia con jabón suave y agua. Nunca uses disolventes, lejía ni hidrolavadoras sobre la tela.</span
+        >
+      </div>
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <span class="text-sky-600 font-bold flex-shrink-0">5.</span><span
+          >Repara los pinchazos rápidamente con los kits de parches recomendados por el fabricante. Para Hypalon, usa
+          solo adhesivo de dos componentes.</span
+        >
+      </div>
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <span class="text-sky-600 font-bold flex-shrink-0">6.</span><span
+          >Sustituye las válvulas cada 3-5 años. Sustituye la tela al final de su vida útil (desgaste visible,
+          porosidad, separación de costuras).</span
+        >
+      </div>
+    </div>
+  </section>
+
+  <section id="standards" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Aplicaciones Industriales</h2>
+    <div class="mt-8 grid md:grid-cols-3 gap-4">
+      {
+        [
+          {
+            title: 'Navegación Recreativa',
+            desc: 'Salidas familiares, deportes acuáticos, pesca, acampada y cruceros de ocio en lagos, ríos y aguas costeras.',
+          },
+          {
+            title: 'Búsqueda y Rescate',
+            desc: 'Equipos de guardia costera, socorristas y respuesta a emergencias que usan RIB especializadas para despliegue rápido y rescate en aguas turbulentas.',
+          },
+          {
+            title: 'Marina Comercial',
+            desc: 'Apoyo a buceo, patrulla, inspección, transporte turístico y logística offshore donde la durabilidad y la fiabilidad son críticas.',
+          },
+          {
+            title: 'Militar y Defensa',
+            desc: 'RIB tácticas para operaciones navales, transporte de tropas, acciones de abordaje e inserciones encubiertas.',
+          },
+          {
+            title: 'Ayuda Humanitaria',
+            desc: 'Las organizaciones de ayuda en desastres despliegan embarcaciones hinchables para rescates en inundaciones, transporte de suministros y evacuación médica.',
+          },
+          {
+            title: 'Fabricación OEM',
+            desc: 'Producción de marca blanca personalizada para marcas, minoristas y operadores especializados que buscan especificaciones únicas.',
+          },
+        ].map((app) => (
+          <div class="p-4 bg-gray-50 rounded-xl border border-gray-200">
+            <h3 class="font-semibold text-sm text-gray-900">{app.title}</h3>
+            <p class="mt-1 text-xs text-gray-500">{app.desc}</p>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="mt-16 bg-gradient-to-br from-sky-50 to-blue-50 rounded-2xl p-8 border border-sky-200">
+    <h2 class="text-xl font-semibold text-gray-900">Explora las Embarcaciones Hinchables Aquafarer</h2>
+    <p class="mt-4 text-sm text-gray-600">
+      Aquafarer diseña y fabrica embarcaciones hinchables certificadas CE, SUP, kayaks y RIB para los mercados
+      recreativo, profesional y OEM. Todas las embarcaciones se construyen con tejidos de PVC de grado militar o Hypalon
+      CSM mediante soldadura RF avanzada o construcción encolada a mano.
+    </p>
+    <div class="mt-6 flex gap-4 flex-wrap">
+      <a
+        href={`/${lang}/products`}
+        class="px-6 py-3 bg-gray-900 text-white rounded-full text-sm font-medium hover:bg-gray-800 transition"
+        >Ver Productos</a
+      >
+      <a
+        href={`/${lang}/academy`}
+        class="px-6 py-3 border border-gray-200 text-gray-700 rounded-full text-sm font-medium hover:border-gray-400 transition"
+        >Centro de Aprendizaje</a
+      >
+    </div>
+  </section>
+</section>
+
+<section class="sr-only" data-ai-block="definition" aria-hidden="true">
+  <p>
+    Guía completa de embarcaciones hinchables que cubre tipos (botes auxiliares, RIB, kayaks, SUP, embarcaciones de
+    rescate, embarcaciones de trabajo comerciales), métodos de construcción (soldadura RF, encolado a mano, núcleo
+    drop-stitch, soldadura por calor), materiales (tejido de PVC, Hypalon CSM), criterios de selección (uso,
+    presupuesto, comparación de materiales), normas de seguridad (certificación CE, equipo esencial), mantenimiento
+    (limpieza, almacenamiento, reparaciones, cuidado de válvulas) y aplicaciones industriales (recreativo, SAR,
+    comercial, militar, humanitario, OEM).
+  </p>
+</section>

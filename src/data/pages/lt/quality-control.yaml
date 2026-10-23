@@ -1,0 +1,137 @@
+hero:
+  tagline: Kokybės kontrolė
+  title: Kokybės kontrolės sistema<br />skirta OEM Jūrų gamybai
+  subtitle: Daugiapakopis tikrinimo procesas, apimantis įeinančias medžiagas, gamybos metu atliekamą patikrą, slėgio testavimą, galutinę surinkimą ir priešsiuntimo patikrinimą. Kiekviena partija yra sekama, kiekvienas testas registruojamas.
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-pressure-testing.webp
+    alt: Aquafarer kokybės kontrolės ir slėgio testavimo procesas
+stats:
+  title: QC pagal skaičius
+  stats:
+    - title: Vienetai patikrinti spaudimu
+      amount: 100%
+    - title: Maksimalus slėgio kritimas
+      amount: <5%
+    - title: Kokybės kontrolės inspektoriai
+      amount: '12'
+    - title: Įrašai saugomi
+      amount: 10 metų
+content_system:
+  tagline: Kokybės kontrolės sistemos apžvalga
+  title: Integruota kokybė<br />Kontrolės sistema
+  subtitle: Mūsų kokybės kontrolės sistema veikia nepriklausomai nuo gamybos ir tiesiogiai ataskaitas teikia vadovybei. Nei viena partija nėra išsiunčiama be pasirašyto kokybės laboratorijos leidimo.
+  items:
+    - title: Nepriklausoma kokybės laboratorija
+      description: Mūsų kokybės laboratorija veikia kaip atskira funkcija nuo gamybos. Kokybės kontrolės inspektoriai ataskaitas teikia kokybės vadovui, o ne gamybos direktoriui. Ši organizacinė nepriklausomybė užtikrina, kad kokybės sprendimai būtų priimami objektyviai — gamybos terminai niekada nepakeičia kokybės reikalavimų.
+      features:
+        - Praneša tiesiogiai vadovybei, nepriklausomai nuo gamybos
+        - Įgaliotas sustabdyti gamybą dėl kokybės problemų
+        - 12 skirtų kokybės kontrolės inspektorių visuose etapuose
+        - Visa testavimo įranga kalibruojama kasmet
+    - title: Partijos atsekamumas
+      description: Kiekvienam žaliavų partijui mūsų ERP sistemoje priskiriamas unikalus partijos numeris. Nuo medžiagų gavimo per gamybą iki galutinio produkto, kiekvieno laivo medžiagų sąmata susiejama su originaliomis tiekėjo partijomis. Tai leidžia visiškai stebėti tiekimo grandinę bet kokiam kokybės ar atitikties patikrinimui.
+      features:
+        - Partijų sekimas nuo medžiagos iki gatavo produkto, pagrįstas ERP
+        - Fiziniai partijų lipdukai kiekviename darbo užsakyme
+        - 100 % medžiagų aprėptis — PVC, Hypalon, aparatinė įranga, klijai
+        - Įrašai saugomi 10 metų (CE 2013/53/ES reikalavimas)
+    - title: Standartai ir atitikimas
+      description: Mūsų kokybės kontrolės procedūros atitinka tarptautinius standartus. Produktai yra CE sertifikuoti pagal ES laisvalaikio valtims skirtą direktyvą 2013/53/ES. Mūsų kokybės vadybos sistema yra ISO 9001 sertifikuota. Socialinio atitikimo reikalavimai palaikomi per BSCI sertifikavimą.
+      features:
+        - CE sertifikavimas (ES 2013/53/ES)
+        - ISO 9001:2015 Kokybės valdymas
+        - BSCI Socialinės atitikties sertifikavimas
+        - REACH ir RoHS medžiagų atitiktis
+        - UKCA po "Brexit" sertifikavimas
+content_inspection:
+  tagline: Apžiūros etapai
+  title: Šešių etapų<br />Inspekcijos procesas
+  subtitle: Kiekvienas produktas pereina 6 patikrinimo etapus su dokumentuotais kokybės kontrolės punktais. Defektai nustatomi anksti, korekciniai veiksmai atliekami nedelsiant, o kiekviena partija yra visiškai atsekama.
+  stages:
+    - stage: '1'
+      title: Atvykstančių medžiagų inspekcija
+      description: Visos atvykstančios medžiagos fiksuojamos pagal partijos/partijos numerį ir karantinuojamos iki kokybės kontrolės patvirtinimo. PVC/Hypalon audinių ritiniai testuojami dėl tempimo stiprumo (ASTM D751), plyšimų atsparumo (ISO4674) ir storio.Drop-stitch Šerdys, vožtuvai, klijai ir įranga vizualiai tikrinami ir matuojami pagal specifikacijas.
+      checks: Tempiamasis stipris ASTM D751, plyšimo atsparumas ISO 4674, storio matuoklis, klijų klampumas, vizualinių defektų skenavimas
+      threshold: Išbandyta 100 % partijų. Atmesti, jei tempimo stipris < 90 % nuo specifikacijos, plyšimas < minimalios specifikacijos arba bet koks vizualinis defektas
+    - stage: '2'
+      title: Procesų kokybės kontrolė — pjovimas ir paruošimas
+      description: CNC-pjautos plokštės kas 20-ą panelę matmenimis tikrinamos pagal CAD šaltinio failus. Kraštų kokybė tikrinama dėl susidėvėjimo, nelygių pjūvių ar matmenų poslinkio. Panelių skaičius tikrinamas pagal BOM kiekvienai gamybos partijai prieš pereinant prie suvirinimo.
+      checks: Matmenų patikrinimas pagal CAD DXF failus, kraštų kokybės patikrinimas, skydelių skaičiaus patikrinimas
+      threshold: Tolerancija ±0,5 mm. Atmesti partiją, jei >2 % netolerancijos
+    - stage: '3'
+      title: Procesų kokybės kontrolė — suvirinimas ir klijavimas
+      description: Gamybos metu nuolat stebima suvirinimo kokybė. Kas 50 vienetų atliekami lupimo testai (ASTM D751). Suvirinimo plotis matuojamas pagal specifikacijas. Karšto oro temperatūros žurnalai peržiūrimi dėl nuoseklumo. Kiekviena siūlė vizualiai tikrinama po apšvietimu dėl kanalų ar tuštumų.
+      checks: Kas 50 vienetų atlikite ASTM D751 atplėšimo testą, matuokite suvirinimo plotį, peržiūrėkite karšto oro temperatūros žurnalą, apšvietėkite siūlės apžiūrą
+      threshold: Nulupimo stipris minimalus 8 N/cm. Suvirinimo pločio tolerancija ±1 mm. Bet koks matomas kanalizavimas = atmetimas
+    - stage: '4'
+      title: Surinkimo kokybės kontrolė
+      description: Kiekvienas vienetas laikosi 100 punktų surinkimo kontrolinio sąrašo, kurį patvirtina komandos vadovas. Vožtuvo funkcija tikrinama per 10 atidarymo/uždarymo ciklų. Patikrinamas aparatinės įrangos sukimo momentas. Vizualinė apžiūra apima paviršiaus apdailą, spalvų nuoseklumą, etikečių išdėstymą ir priedų pilnumą.
+      checks: 100 punktų kontrolinis sąrašas vienetui, vožtuvų funkcijos testas, techninės įrangos sukimo momento patikra, vizualinė apžiūra
+      threshold: 'Nulinės klaidos politika saugai kritiškiems elementams (vožtuvai, D formos žiedai, rankenos). Nedideli kosmetiniai trūkumai: AQL 2,5 (ISO 2859)'
+    - stage: '5'
+      title: Slėgio Testavimas
+      description: Kiekviena kamera pripučiama iki 1,25× nominalaus slėgio ir palaikoma 24–48 valandas. Slėgio jutikliai nuolat fiksuoja viso laikymo laikotarpį. Temperatūrai kompensuoti rodmenys užtikrina tikslumą. Bet kuri kamera, viršijanti 5% slėgio kritimą, atmetama ir siunčiama siūlės pakartotinei apžiūrai su 100% visos gamybos partijos pakartotiniu testu.
+      checks: 24–48 valandų slėgio laikymo žurnalas, jutiklio kalibravimas kasdien tikrinamas, temperatūros kompensuotas rodmuo, siūlės pakartotinis patikrinimas po remonto
+      threshold: Maksimalus 5 % slėgio kritimas per 24 valandas esant stabiliai temperatūrai. Viršijimas = 100 % visos partijos pakartotinis testas
+    - stage: '6'
+      title: Galutinė apžiūra ir siuntimo išleidimas
+      description: Galutinė vizualinė ir funkcinė apžiūra prieš pakavimą. Paviršiaus defektai, spalvų nuoseklumas, etiketės/BIN patikra, pakuotės vientisumas ir priedų pilnumas tikrinami pagal kliento užsakymą. Vienetai vakuumuojami, supakuoti į dėžes ir paletizuojami. Galutinis kokybės kontrolės patvirtinimas reikalingas prieš išvežant bet kurį produktą iš gamyklos.
+      checks: Pilna vizualinė apžiūra, priedų kontrolinis sąrašas pagal SKU, pakavimo kritimo testas (1 m atsitiktinis mėginys), etiketės / brūkšninio kodo nuskaitymo patikrinimas
+      threshold: AQL 2,5 dideli defektai, AQL 4,0 maži. Nulinė tolerancija saugos defektams. 100 % vienetų vizualiai patikrinta
+content_equipment:
+  tagline: Bandymo įranga
+  title: QC laboratorija<br />Įranga
+  subtitle: Mūsų kokybės laboratorija yra aprūpinta specializuota bandymo įranga medžiagos patikrai, siūlių vientisumui ir produkto savybių patvirtinimui.
+  columns: 3
+  items:
+    - title: Tampumo testavimo mašina
+      description: Matuoja audinio tempimo stiprumą ir išsitempimą pagal ASTM D751. Naudojama visų PVC, Hypalon ir drop-stitch audinių partijų gautiesiems kokybės kontrolei.
+      icon: tabler:scale
+    - title: Temperatūros kamera
+      description: Aplinkos kamera UV atsparumo bandymams (ASTM G154) ir žemos temperatūros lankstumo testams. Imituoja ekstremalias eksploatavimo sąlygas.
+      icon: tabler:temperature
+    - title: Slėgio jutikliai ir registratoriai
+      description: Skaitmeniniai slėgio jutikliai su nuolatiniu duomenų registravimu 24–48 val. oro išlaikymo testams. Temperatūros kompensacija tikslumui.
+      icon: tabler:wind
+    - title: Atplėšimo testavimo įranga
+      description: Kalibruota atplėšimo testavimo įranga siūlių stiprumo tikrinimui. Atsitiktiniai mėginiai iš kiekvienos gamybos partijos.
+      icon: tabler:files
+    - title: Nutekėjimo aptikimo bakas
+      description: Vandens bakas užliejamų kamerų nuotėkiams tikrinti. Vizualus burbuliukų aptikimas siūlių ir vožtuvo vientisumo patikrinimui.
+      icon: tabler:ripple
+    - title: Apžiūros įrankiai
+      description: Kalibruoti matavimo įrankiai – storio matuokliai, sukimo momento raktai, matmenų matuokliai, kietumo testeriai gamybos QC stotims.
+      icon: tabler:tools
+content_metrics:
+  tagline: QC našumas
+  title: Kokybės kontrolė<br />Rodikliai
+  subtitle: Tikri praėjimo / nepraėjimo duomenys iš mūsų gamybos linijos. Šie rodikliai stebimi kasdien ir peržiūrimi kas mėnesį vadovybės.
+  columns: 3
+  items:
+    - title: 100 % vienetų išbandyta
+      description: Kiekviena valties kamera prieš išsiuntimą yra slėgio testuojama. Nėra mėginių – 100 % slėgio vientisumo patikra.
+      icon: tabler:check
+    - title: <5 % slėgio kritimas
+      description: Didžiausia leistina slėgio nuostolių per 24–48 valandas 1,25× nominalaus slėgio. Bet kuri kamera, viršijanti šią ribą, sukelia partijos pakartotinį testavimą.
+      icon: tabler:gauge
+    - title: AQL 2,5
+      description: Priimtinas kokybės lygis dideliems defektams pagal ISO 2859 atrankos standartą. Nulinė tolerancija kritiniams saugos defektams.
+      icon: tabler:clipboard-check
+    - title: 24–48 val. laikymas
+      description: 'Slėgio laikymo trukmė skiriasi priklausomai nuo produktų kategorijos. RIB kameroms: 48 valandos. SUP ir pripučiamos valtis: 24–48 valandos.'
+      icon: tabler:clock
+    - title: 1,25× testavimo slėgis
+      description: Saugos riba kiekviename kamerose — bandoma esant 25 % didesniam nei nurodytas slėgis, kad būtų užtikrinta riba virš maksimalios eksploatacinės apkrovos.
+      icon: tabler:arrow-up
+    - title: 0 % saugos defektų
+      description: Nulinės tolerancijos politika saugą lemiančių defektų atžvilgiu — vožtuvai, D-žiedai, siūlės ir plūduriuojančios kameros. Bet koks defektas = 100 % pakartotinis patikrinimas.
+      icon: tabler:shield
+cta:
+  title: Užsisakyti kokybės dokumentaciją
+  subtitle: Mes teikiame pilnas kokybės dokumentacijos pakuotes, įskaitant bandymų ataskaitas, medžiagų sertifikatus ir atitikties deklaracijas su kiekvienu siuntiniu. Susisiekite su mumis dėl pavyzdžių.
+  actions:
+    - variant: primary
+      text: Užsisakyti kokybės kontrolės dokumentaciją
+      href: /contact
+    - text: Peržiūrėti bandymų protokolus
+      href: /quality

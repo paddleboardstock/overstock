@@ -1,0 +1,82 @@
+hero:
+  tagline: Paquetes Empresariales
+  title: Paquetes de negocios de agua listos para implementar<br />para cada etapa
+  subtitle: Paquetes de equipos preconfigurados para clubes de deportes acuáticos, complejos turísticos y nuevas marcas, con precios transparentes, entrega rápida y opciones de personalización completas.
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/use-cases/aquafarer-outdoor-adventure.webp
+    alt: Paquetes de equipamiento empresarial Aquafarer
+direct_answer: Aquafarer ofrece tres paquetes empresariales preconfigurados diseñados para operadores de deportes acuáticos en cada etapa. El paquete Club Starter incluye 10 SUP con remos, bombas, kits de reparación y equipo de seguridad para clubes y escuelas emergentes. El paquete Resort Premium suministra de 50 a 100 unidades con sistemas de almacenamiento, marca y guías de capacitación para hoteles y propiedades hoteleras. El paquete de lanzamiento de marca ofrece selección de productos, diseño de logotipo personalizado, embalaje, producción y envío para emprendedores que lanzan su propia marca de deportes acuáticos. Todos los paquetes incluyen precios directos de fábrica, certificación CE y soporte logístico global.
+packages:
+  - id: club-starter
+    tag: Best Seller
+    name: Paquete de inicio del club
+    subtitle: Todo lo que necesitas para poner en marcha o mejorar tu club de pádel
+    target: Clubes de SUP, clubes de kayak, escuelas de surf, centros de formación
+    price_label: Desde $4.800
+    line_items:
+      - item: 10 tablas de SUP o kayaks
+      - item: 10 paletas a juego
+      - item: 10 bombas de alto rendimiento
+      - item: 10 kits de reparación
+      - item: 10 chalecos salvavidas con el logo del club
+      - item: Marca del club en los tableros.
+      - item: Conjunto de señalización de seguridad.
+      - item: Guía de lecciones para principiantes PDF
+    cta_text: Get Club Package
+    cta_href: /contact
+  - id: resort-premium
+    tag: Premium
+    name: Paquete Resort Premium
+    subtitle: Programa completo de actividades acuáticas para huéspedes en hoteles y resorts.
+    target: Resorts de playa, hoteles junto al lago, complejos turísticos ecológicos, clubes náuticos
+    price_label: Cotización personalizada
+    line_items:
+      - item: 50-100 SUP, kayaks o flota mixta
+      - item: Marca completa del resort en todos los equipos.
+      - item: Palas y PFD de alquiler
+      - item: Sistema de estanterías de almacenamiento comercial.
+      - item: Estación de inflado con bombas industriales.
+      - item: Sistema de seguridad (boyas, señales, tabla de salvamento)
+      - item: Programa de formación del personal
+      - item: Manual de estrategias de gestión de ingresos
+    cta_text: Get Resort Package
+    cta_href: /contact
+  - id: brand-launch
+    tag: Entrepreneur
+    name: Paquete de lanzamiento de marca
+    subtitle: Convierta la idea de su marca en un producto enviado — normalmente en 60–90 días
+    target: Vendedores de Amazon, personas influyentes, distribuidores regionales
+    price_label: Desde $6.500
+    line_items:
+      - item: Consulta de selección de productos.
+      - item: Diseño de logotipo personalizado en tableros.
+      - item: Combinación de colores personalizada
+      - item: Embalaje minorista de marca
+      - item: Etiquetas colgantes y manual de instrucciones.
+      - item: Documentación de certificación CE
+      - item: Muestras de producción
+      - item: Envío FOB Qingdao
+    cta_text: Launch My Brand
+    cta_href: /contact
+faq:
+  title: Preguntas frecuentes sobre paquetes
+  questions:
+    - q: ¿Cuál es la cantidad mínima de pedido para paquetes?
+      a: El Paquete Club Starter tiene un mínimo de 10 unidades. Los paquetes Resort y Brand se personalizan según sus necesidades con MOQ flexibles.
+    - q: ¿Cuánto tiempo tarda la entrega?
+      a: La producción estándar es de 30 a 45 días desde la confirmación del pedido. La producción acelerada está disponible por una tarifa adicional.
+    - q: ¿Puedo personalizar los colores y la marca del equipo?
+      a: 'Sí. Todos los paquetes incluyen personalización completa: colores del tablero, impresiones de logotipos y diseño de empaque.'
+    - q: ¿Ofrecen soporte postventa?
+      a: Sí. Cada paquete incluye acceso a nuestras guías de mantenimiento en línea, tutoriales en vídeo y sistema de pedido de repuestos.
+cta:
+  title: ¿No estás seguro de qué paquete encaja?
+  subtitle: Responda 3 preguntas rápidas y le recomendaremos el paquete perfecto para su negocio.
+  actions:
+    - variant: primary
+      text: Obtener paquete recomendado
+      href: /contact
+    - text: Ver soluciones por audiencia
+      href: /solutions
+    - text: Leer historias de éxito
+      href: /success-stories

@@ -1,0 +1,163 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'ko' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">&larr; R&D 센터로 돌아가기</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">랩 03</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">RF 용접 센터</h1>
+      <p class="mt-3 text-lg text-muted">압력 하에서도 견디는 용접을 위한 유전체 접합 기술</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-jungle-mandala-1.webp"
+        alt="Aquafarer RF 용접 유전체 접합 공정"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>솔기의 과학</h2>
+  <p>
+    고무 보트의 신뢰성은 그 솔기의 견고함에 달려 있습니다. 하나의 약한 용접만으로도 전체 챔버가 위험해질 수 있으며,
+    바다에서는 챔버의 고장이 단순한 불편이 아니라 안전상의 위험입니다.{SITE.name}, 우리는 산업용 유전체 용접 프레스와
+    엄격한 공정 관리 및 용접 후 테스트를 결합한 전문 라디오 주파수(RF) 용접 센터에 투자했습니다. 우리가 생산하는 모든
+    솔기는 문서화되고 추적 가능하며, 국제 표준 — 풍선식 장비에 대한 요구 사항을 충족하거나 초과하도록 인증됩니다.
+  </p>
+  <p>
+    RF 용접은 고주파 전자기 에너지(일반적으로 27.12 MHz)를 사용하여 PVC 또는 Hypalon 코팅 섬유 내의 극성 분자를
+    자극하고, 소재 접합부에서 정확하게 열을 발생시킵니다. 열풍 용접이나 핫웨지 용접과 달리, RF 용접은 진정한 분자 결합을
+    생성합니다 — 두 섬유층이 용접 구역에서 하나의 균질한 재료로 융합되어 원재료만큼 강한 접합부를 만듭니다.
+  </p>
+
+  <h2>용접 장비 및 공정 관리</h2>
+  <p>저희 용접 센터에는 다음 장비가 구비되어 있습니다:</p>
+  <table>
+    <thead><tr><th>기계</th><th>전력 / 용량</th><th>적용</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>유전체 RF 프레스 1</td><td>15 kW, 플래튼 2000 × 600 mm</td><td>주요 종방향 솔기, 트랜섬-튜브 접합부</td
+        ></tr
+      >
+      <tr><td>유전체 RF 프레스 2</td><td>10 kW, 플래튼 1500 × 500 mm</td><td>격벽 용접, 콘 부착, 밸브 패치</td></tr>
+      <tr
+        ><td>CNC 제어 RF 용접기</td><td>8 kW, XY 테이블 2500 × 1200 mm</td><td
+          >곡선 솔기, 로고/패널 엠보싱, 정밀 패치워크</td
+        ></tr
+      >
+      <tr><td>핫웨지 자동 용접기</td><td>가변 온도, 최대 1.2 m/min</td><td>Hypalon/CSM 소재의 백업 방법</td></tr>
+    </tbody>
+  </table>
+  <p>
+    모든 RF 프레스는 폐회로 온도 및 압력 모니터링 장치가 장착되어 있습니다. 용접 매개변수 — 전력, 프레스 시간, 냉각
+    시간, 전극 압력 — 는 소재 유형별로 프로그래밍되며, 완전한 추적성을 위해 MES(제조 실행 시스템)에 기록됩니다.
+  </p>
+
+  <h2>용접 품질 검사 — 모든 솔기, 모든 보트</h2>
+  <p>용접 무결성은 필수 네 가지 테스트 프로토콜을 통해 검증됩니다:</p>
+  <ol>
+    <li>
+      <strong>시각 검사</strong>— 100% 솔기에 대해 소손, 정렬 불량, 오염 또는 불완전 융합 여부를 시각적으로 검사합니다.
+      불합격률 기준: 선형 미터당 0.5%.
+    </li>
+    <li>
+      <strong>박리 테스트 ()</strong>— 각 생산 배치마다 용접된 테스트 쿠폰에서 폭 25mm 스트립을 절단합니다. 최소 필 힘:
+      PVC 1100 dtex 시 120 N/25 mm.
+    </li>
+    <li>
+      <strong>공기 보유 시험</strong>— 완성된 모든 챔버는 작동 압력 1.25×으로 압력을 받으며 24-48시간 유지됩니다. 압력
+      강하는 2%를 넘지 않아야 합니다.
+    </li>
+    <li>
+      <strong>열 사이클링 테스트</strong>— 샘플 쿠폰은 -20 °C에서 +60 °C까지 50회 사이클링한 후 다시 필 테스트를 합니다.
+      허용 강도 손실: &lt; 10%.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      필 강도 비교 — RF 대 열풍 용접 (PVC1100 dtex)
+    </p>
+    <div class="space-y-3">
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">RF 용접</span><div
+          class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded"
+        >
+          <div class="h-full bg-blue-600 rounded" style="width:92%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">184 N</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">핫에어</span><div
+          class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded"
+        >
+          <div class="h-full bg-gray-400 rounded" style="width:65%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">130 N</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">민</span><div class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded">
+          <div class="h-full bg-green-500 rounded" style="width:48%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">96 N</span>
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      RF 용접은 모재 강도의 90-95%를 꾸준히 달성하며, 이는 최소 강도를 훨씬 상회합니다.
+    </p>
+  </div>
+
+  <h2>전문 지식</h2>
+  <p>
+    저희 용접팀은 코팅된 섬유의 유전 용접 분야에서 11년 경력을 가진 선임 공정 엔지니어가 이끌고 있습니다. 각 작업자는
+    생산 이음새 작업에 참여하기 전에 6개월간의 자체 인증 프로그램을 완료합니다. 매년 재인증이 요구되며, 내부 Grade A
+    표준(필 강도 160 N/25 mm)에 따라 평가된 실용 용접 시험≥ 포함됩니다.
+  </p>
+
+  <h2>독특한 요구에 맞는 맞춤형 용접 솔루션</h2>
+  <p>
+    우리는 한 가지 용접 사양이 모든 용도에 맞지 않는다는 점을 이해하고 있습니다. 저희 RF 용접 센터는 특별한 요구사항이
+    있는 고객을 위해 맞춤형 이음 구성을 정기적으로 개발합니다:
+  </p>
+  <ul>
+    <li>
+      <strong>다층 보강 패치</strong>— 마찰 스트레이크나 선수 콘과 같은 마모가 심한 부위를 위해, 우리는 유연성을 해치지
+      않으면서 마모에 강한 외층을 통합하는 다중 통과 RF 용접을 개발합니다.
+    </li>
+    <li>
+      <strong>전도성 또는 RFopaque 이음</strong>— 군용 또는 감시 선박이 전자기 차폐가 필요한 경우, 이음새 스택 내에
+      전도성 메쉬층을 용접합니다.
+    </li>
+    <li>
+      <strong>색상 변경 패널 용접</strong>— 브랜드 미학을 유지하기 위해 보이는 접합선이 보이지 않는 이중 색상 원단
+      패널(예: 주황색 선체 + 회색 상부)을 은폐된 겹침 부분으로 용접하는 것.
+    </li>
+  </ul>
+
+  <h2>당신에 대한 우리의 약속</h2>
+  <p>
+    저희가 인도하는 모든 보트는 용접 품질 보증을 갖추고 있습니다: 보증 기간 내에 정상 운용 중 이음새가 파손될 경우, 해당
+    챔버를 무료로 수리하거나 교체하며, 재발을 방지하기 위한 근본 원인 조사를 실시합니다. 이는 단순한 보증이 아니라 실제
+    운영 데이터를 바탕으로 지속적인 개선에 대한 약속입니다.
+  </p>
+  <p>
+    선택할 때{SITE.name}, 당신은 단순히 용접된 것이 아니라 설계되고 테스트되며 문서화된 솔기를 선택하고 있습니다. 이것이
+    단순히 뜨는 배와 성능을 발휘하는 배의 차이입니다.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">용접 요구사항에 대해 논의하세요</h2>
+    <p class="mt-2 text-sm text-muted">맞춤형 이음 사양, 재료 호환성 또는 공정 검증.</p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >용접팀에 연락하세요</a
+    >
+  </div>
+</section>

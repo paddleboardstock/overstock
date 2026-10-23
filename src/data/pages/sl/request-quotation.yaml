@@ -1,0 +1,306 @@
+hero_text:
+  tagline: Pridobite ponudbo
+  title: Zahtevajte ponudbo<br />za vaš projekt
+  subtitle: Povejte nam svoje zahteve, naše ekipe pa vam bodo odgovorile z natančno ponudbo v roku 2 delovnih dni.
+steps2_process:
+  title: Kako deluje
+  subtitle: Štiri preprosti koraki od povpraševanja do ponudbe.
+  items:
+    - title: 'Korak 1: Pošljite svoje zahteve'
+      description: Izpolnite spodnji obrazec s tipom izdelka, količino in specifikacijami. Bolj kot so podrobne vaše informacije, natančnejša bo vaša ponudba.
+      icon: tabler:file-text
+    - title: 'Korak 2: Pregledamo in svetujemo'
+      description: Naša inženirska ekipa pregleda vaše zahteve in vas po potrebi kontaktira za pojasnila. Nudimo priporočila glede konfiguracije izdelka in opcij.
+      icon: tabler:users
+    - title: 'Korak 3: Prejmete svojo ponudbo'
+      description: Prejmete natančno ponudbo, ki vključuje ceno na enoto, MOQ, dobavni rok, pogoje plačila in možnosti pošiljanja. Običajno v 48 urah.
+      icon: tabler:currency-dollar
+    - title: 'Korak 4: Vzorec in proizvodnja'
+      description: Po sprejetju ponudbe nadaljujemo s proizvodnjo vzorcev (če je primerno) ali neposredno z množično proizvodnjo. Redne posodobitve skozi celoten proces.
+      icon: tabler:building-factory
+content_form:
+  tagline: Obrazec za ponudbo
+  title: Povejte nam o svojem projektu
+  subtitle: Vsa polja označena z * so obvezna.
+  fields:
+    - name: Kategorija izdelka
+      type: select
+      options:
+        - RIB Čoln
+        - Napihljiv čoln
+        - SUP Deska
+        - Napihljivi kajak
+        - Rešilni jopič
+        - Morski dodatek
+        - Po meri OEM/ODM
+    - name: Uporaba
+      type: select
+      options:
+        - Potrebi za center potapljanja
+        - Ribolov
+        - Morski turizem / Resort
+        - Iskanje in reševanje
+        - Oskrbovalna ladja za jahte
+        - Komercialni delovni čoln
+        - Vlada / Vojska
+        - OEM / Zasebna znamka
+        - Osebno / rekreativno
+        - Drugo
+    - name: Količina
+      type: text
+      placeholder: npr. 50 enot
+    - name: Ciljni trg
+      type: text
+      placeholder: npr. Evropa, Severna Amerika, Bližnji vzhod
+    - name: Država dostave
+      type: text
+      placeholder: npr. Italija, ZAE, ZDA, Avstralija
+    - name: Materialna preferenca
+      type: select
+      options:
+        - Brez preferenc
+        - Pomorski razred PVC (1100 dtex)
+        - Premium Hypalon / CSM
+        - Trup iz steklenih vlaken
+        - Aluminijasti trup
+    - name: Zahteve po motorju
+      type: text
+      placeholder: npr. 60 zunanjih HP motorjev, brez motorja, dvojni 115 HP
+    - name: Potrebna prilagoditev
+      type: text
+      placeholder: npr. prilagojene barve, blagovna znamka/logotip, embalaža, posebna oprema
+    - name: Časovnica
+      type: text
+      placeholder: npr. dostava v 90 dneh
+    - name: Dodatne zahteve
+      type: textarea
+      placeholder: Opišite svojo aplikacijo, tehnične specifikacije ali katere koli posebne zahteve — vključite referenčne risbe, specifikacije ali povezave, če so na voljo
+    - name: Specifikacija nalaganja
+      type: file
+      placeholder: Naložite svoj specifikacijski list, risbo ali referenčni dokument (PDF, DWG, DXF)
+    - name: Naloži logotip / umetniško delo
+      type: file
+      placeholder: Naložite svoj logotip ali umetniško delo za prilagojeno blagovno znamčenje (AI, EPS, PNG)
+content_rfq_types:
+  tagline: 3-nivojski RFQ sistem
+  title: Izberite pravo<br />Raven povpraševanja
+  subtitle: Različni projekti zahtevajo različne ravni podrobnosti. Izberite obrazec, ki ustreza vašemu nakupovalnemu koraku.
+  items:
+    - title: Hitra poizvedba
+      description: 5-6 polj, 30 sekund. Za prvotni stik, splošna vprašanja ali nadaljnje postopke prenosa virov. Odgovorimo v 24 urah z osnovnimi informacijami in naslednjimi koraki.
+      icon: tabler:bolt
+    - title: Standardni RFQ
+      description: 8-10 polj, 2 minuti. Za specifična ponudbena povpraševanja za izdelke z izbiro modela, količine in zahtevami glede dobave. Podrobno ponudbo prejmete v 48 urah.
+      icon: tabler:file-text
+    - title: Projektni RFQ
+      description: 10-14 polj, 5 minut. Za RIB, letoviški vozni park, reševalne ali vladne projekte, ki zahtevajo prilagojeno konfiguracijo, dokumentacijo skladnosti in večletno načrtovanje dobave. Dodeljen je namenski vodja projekta.
+      icon: tabler:clipboard-list
+form_quick:
+  title: Hitra poizvedba
+  subtitle: Hiter stik za splošna vprašanja in začetne informacije.
+  fields:
+    - name: fullName
+      label: Polno ime
+      type: text
+      required: true
+      placeholder: Vaše polno ime
+    - name: businessEmail
+      label: Poslovni e-naslov
+      type: email
+      required: true
+      placeholder: you@company.com
+    - name: companyName
+      label: Naziv podjetja
+      type: text
+      required: true
+      placeholder: Vaše podjetje
+    - name: buyerType
+      label: Jaz sem...
+      type: select
+      required: true
+      options:
+        - Distributer / Uvoznik
+        - Lastnik blagovne znamke / Private Label
+        - Letovišče / Vodni center
+        - Operator najema
+        - Vladna / Reševalna agencija
+        - Potapljaški / Ribiški operater
+        - Morski inženir / Preoblikovalec
+        - Drugo
+    - name: productInterest
+      label: Zanimanje za izdelek
+      type: multiselect
+      required: true
+      options:
+        - RIB čolni
+        - Napihljivi čolni
+        - SUP Deske
+        - Varnostna oprema
+        - Dodatki
+        - OEM/ODM Po meri
+    - name: message
+      label: Kaj potrebujete?
+      type: textarea
+      required: false
+      placeholder: Kratek opis vaših zahtev...
+form_standard:
+  title: Standardni RFQ
+  subtitle: Podrobna prošnja za ponudbo za določene izdelke in količine.
+  fields:
+    - name: fullName
+      label: Polno ime
+      type: text
+      required: true
+    - name: businessEmail
+      label: Poslovni e-naslov
+      type: email
+      required: true
+    - name: companyName
+      label: Naziv podjetja
+      type: text
+      required: true
+    - name: buyerType
+      label: Tip kupca
+      type: select
+      required: true
+    - name: modelIzdelka
+      label: Model / Tip izdelka
+      type: text
+      required: true
+      placeholder: i.e., AF580 RIB, AF380 Napihljivi
+    - name: quantity
+      label: Ocenjena količina
+      type: text
+      required: true
+      placeholder: i.e., 10-20 enot
+    - name: ciljniTrg
+      label: Ciljni trg / regija
+      type: text
+      required: true
+      placeholder: i.e., EU, Severna Amerika, Bližnji vzhod
+    - name: časDobave
+      label: Želena dostava
+      type: select
+      required: true
+      options:
+        - V 30 dneh
+        - 30-60 dni
+        - 60-90 dni
+        - Načrtovanje vnaprej (90+ dni)
+        - Samo raziskujem
+    - name: zahtevanaSkupna skladnost
+      label: Zahteve glede skladnosti
+      type: multiselect
+      required: false
+      options:
+        - CE / RCD 2013/53/EU
+        - UKCA
+        - USCG
+        - ISO 9001
+        - BSCI
+        - REACH
+        - Ni / Nisem prepričan
+    - name: message
+      label: Dodatni podatki
+      type: textarea
+      required: false
+form_project:
+  title: Projektni RFQ
+  subtitle: Celovita poizvedba projekta za floto, po meri ali vladino nabavo.
+  fields:
+    - name: fullName
+      label: Polno ime
+      type: text
+      required: true
+    - name: businessEmail
+      label: Poslovni e-naslov
+      type: email
+      required: true
+    - name: companyName
+      label: Naziv podjetja
+      type: text
+      required: true
+    - name: buyerType
+      label: Tip kupca
+      type: select
+      required: true
+    - name: projectType
+      label: Vrsta projekta
+      type: select
+      required: true
+      options:
+        - Resort / Hotelska flota
+        - Najemna flota
+        - Reševalna / Patruljna flota
+        - Flota potapljaškega centra
+        - Vladina nabava
+        - Lastna znamka / OEM
+        - Naročilo zaloge trgovca
+        - Drugo
+    - name: boatTypes
+      label: Potrebne vrste čolnov
+      type: multiselect
+      required: true
+      options:
+        - RIB čolni
+        - Napihljivi čolni / Čolni
+        - SUP Deske
+        - Kajaki
+        - Varnostna oprema
+    - name: fleetSize
+      label: Velikost flote / Obseg količine
+      type: text
+      required: true
+      placeholder: i n., 20-50 enot v 12 mesecih
+    - name: customRequirements
+      label: Potrebne konfiguracije po meri
+      type: textarea
+      required: false
+      placeholder: Velikost trupa, material tub, postavitev palube, zahteve za blagovno znamko...
+    - name: zahtevanaSkupna skladnost
+      label: Zahteve skladnosti in certifikacije
+      type: multiselect
+      required: true
+      options:
+        - CE / RCD 2013/53/EU
+        - UKCA
+        - USCG Tip III/V
+        - ISO 9001
+        - BSCI
+        - REACH / RoHS
+        - Certifikacija za lokalni trg
+    - name: ciljniTrg
+      label: Ciljni trg
+      type: text
+      required: true
+    - name: razponProračuna
+      label: Razpon proračuna
+      type: select
+      required: false
+      options:
+        - Pod 10.000 $
+        - $10,000 - $50,000
+        - $50,000 - $200,000
+        - $200,000+
+        - Raje ne povem
+    - name: časDobave
+      label: Časovni okvir projekta
+      type: select
+      required: true
+      options:
+        - Hiter (v 30 dneh)
+        - Standarden (30-60 dni)
+        - Načrtovan (60-90 dni)
+        - Za prihodnje načrtovanje (več kot 90 dni)
+    - name: message
+      label: Podrobnosti in zahteve projekta
+      type: textarea
+      required: false
+      placeholder: Opišite svoj projekt, aplikacijo in morebitne posebne zahteve...
+cta:
+  title: Raje razpravljate po e-pošti?
+  subtitle: Pošljite svoje povpraševanje neposredno naši prodajni ekipi in odgovorili vam bomo v 24 urah.
+  actions:
+    - variant: primary
+      text: Pošljite nam e-pošto neposredno
+      href: /contact

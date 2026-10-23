@@ -1,0 +1,207 @@
+---
+import { SITE } from 'astrowind:config';
+const { lang = 'fr' } = Astro.props;
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={`/${lang}/randdcenter`} class="text-sm text-gray-500 hover:underline">&larr; Retour au Centre R&amp;D</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Lab 04</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Bassin d'essais hydrodynamiques</h1>
+      <p class="mt-3 text-lg text-muted">Validation des performances avant le premier prototype pleine échelle</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-design-discussion-original.webp"
+        alt="Tests de performance au bassin d'essais hydrodynamiques Aquafarer"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Pourquoi tester un petit bateau en bassin ?</h2>
+  <p>
+    C'est une idée reçue courante que les essais hydrodynamiques sont réservés aux navires hauturiers. En réalité, les
+    performances d'une petite coque déjaugeante — comme un RIB de 4–5 m — dépendent tout autant de sa forme immergée que
+    celles d'un pétrolier de son bulbe d'étrave. L'angle de trim, la surface mouillée, la génération d'embruns et la
+    ventilation ont tous un effet considérable sur la vitesse, la consommation de carburant et le confort de navigation.
+    Chez {SITE.name}, nous exploitons un bassin d'essais hydrodynamiques dédié qui nous permet de quantifier ces effets
+    à l'échelle du modèle — avant d'engager le métal et le tissu dans un prototype pleine taille.
+  </p>
+  <p>
+    Les essais à l'échelle du modèle (généralement 1:3 à 1:5) nous donnent la capacité d'itérer rapidement et à moindre
+    coût sur les formes de coque. Une semaine en bassin peut produire les mêmes données de performance qui exigeraient
+    des mois d'essais et d'erreurs à pleine échelle — et pour une fraction du coût.
+  </p>
+
+  <h2>Spécifications de l'installation</h2>
+  <table>
+    <thead><tr><th>Paramètre</th><th>Spécification</th></tr></thead>
+    <tbody>
+      <tr><td>Dimensions du bassin</td><td>35 m (L) &times; 3.5 m (l) &times; 1.8 m (P)</td></tr>
+      <tr
+        ><td>Chariot de remorquage</td><td
+          >Entraînement électrique à servomoteur, vitesse max 12 m/s (23 kn), précision de vitesse &plusmn; 0.5 %</td
+        ></tr
+      >
+      <tr
+        ><td>Générateur de vagues</td><td
+          >Type à clapet, états de mer réguliers &amp; irréguliers programmables, Hs jusqu'à 0.3 m à l'échelle du modèle</td
+        ></tr
+      >
+      <tr
+        ><td>Instrumentation</td><td
+          >Dynamomètre 6 composantes (résistance, force latérale, moment d'embardée), accéléromètres, inclinomètres,
+          sondes à vagues</td
+        ></tr
+      >
+      <tr
+        ><td>Acquisition de données</td><td
+          >Échantillonnage à 1000 Hz par canal, affichage en temps réel + suite de post-traitement</td
+        ></tr
+      >
+      <tr
+        ><td>Fabrication des modèles</td><td
+          >Fraisage CNC interne et impression 3D pour les coques modèles jusqu'à 1.8 m de longueur hors tout</td
+        ></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>Notre programme d'essais</h2>
+  <p>Un programme standard de développement de coque dans notre bassin suit cette séquence :</p>
+  <ol>
+    <li>
+      <strong>Construction du modèle</strong> — Un modèle à l'échelle 1:3.5 est usiné par CNC dans de la mousse haute densité
+      et stratifié pour la rigidité. Le poids et le centre de gravité sont ajustés pour correspondre à la condition de pleine
+      charge à l'échelle de Froude.
+    </li>
+    <li>
+      <strong>Essais de résistance</strong> — Le modèle est remorqué à 8-10 vitesses couvrant la plage d'exploitation. La
+      résistance totale est mesurée et décomposée en composantes de frottement et résiduaire selon la méthode ITTC-1957.
+    </li>
+    <li>
+      <strong>Mesure du trim &amp; de l'enfoncement</strong> — Le trim de marche et l'enfoncement sont enregistrés à chaque
+      vitesse. Un angle de trim optimal de 4-6&deg; pour les coques déjaugeantes est l'objectif.
+    </li>
+    <li>
+      <strong>Relevé du sillage</strong> — Les coupes de vagues transversales sont mesurées à deux vitesses pour évaluer la
+      résistance de formation de vagues et identifier les interactions transversales susceptibles de provoquer des interférences
+      à l'arrière.
+    </li>
+    <li>
+      <strong>Tenue à la mer (en option)</strong> — Courses par mer de face et de dos dans des vagues régulières pour mesurer
+      la résistance additionnelle, l'accélération verticale et la probabilité de slamming.
+    </li>
+    <li>
+      <strong>Analyse des données &amp; recommandations</strong> — Un rapport complet est livré avec des graphiques comparatifs,
+      des courbes vitesse/puissance et des recommandations de conception spécifiques pour la coque pleine échelle.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Résultats typiques d'essais en bassin — Résistance vs Vitesse (coque RIB 450, échelle 1:3.5)
+    </p>
+    <div class="space-y-2">
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">5 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:18%"></div>
+        </div><span class="w-16 text-right">42 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">10 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:35%"></div>
+        </div><span class="w-16 text-right">81 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">15 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:52%"></div>
+        </div><span class="w-16 text-right">121 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">20 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:68%"></div>
+        </div><span class="w-16 text-right">158 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">25 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:85%"></div>
+        </div><span class="w-16 text-right">197 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">30 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:100%"></div>
+        </div><span class="w-16 text-right">232 N</span>
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      Résistance du modèle (N) aux vitesses à l'échelle de Froude. La prédiction de puissance pleine échelle suit la
+      méthode de prédiction de performances ITTC-1978.
+    </p>
+  </div>
+
+  <h2>Équipe d'experts</h2>
+  <p>
+    Notre bassin est exploité par un ingénieur hydrodynamique titulaire d'un doctorat en architecture navale et fort de
+    8 ans d'expérience en bassin de remorquage dans un grand institut européen de recherche maritime. Il est assisté
+    d'un technicien qui prépare tous les modèles et l'instrumentation. L'équipe suit les procédures recommandées de
+    l'ITTC (International Towing Tank Conference) pour garantir que chaque essai soit reproductible, traçable et
+    défendable à l'échelle internationale.
+  </p>
+
+  <h2>Essais en bassin pour le développement de coques sur mesure</h2>
+  <p>
+    Notre bassin n'est pas seulement utilisé pour les coques conçues en interne — nous menons régulièrement des
+    programmes d'essais pour des clients qui souhaitent valider une forme de coque sur mesure ou étudier un problème de
+    performance :
+  </p>
+  <ul>
+    <li>
+      <strong>Comparaison de formes de coque</strong> — Deux formes de coque candidates ou plus testées dans des conditions
+      identiques, fournissant une comparaison objective de traînée, de vitesse et de stabilité pour éclairer votre choix de
+      conception.
+    </li>
+    <li>
+      <strong>Optimisation des appendices</strong> — Les plaques interceptrices, les plans de dérive, les volets de trim et
+      les strakes peuvent être testés dans diverses configurations pour quantifier leur contribution individuelle à la réduction
+      de traînée.
+    </li>
+    <li>
+      <strong>Étude d'adaptation moteur</strong> — Les données de résistance sont converties en courbe de prédiction de puissance,
+      vous permettant de sélectionner la puissance moteur optimale pour votre vitesse et votre charge utile cibles.
+    </li>
+  </ul>
+
+  <h2>Pourquoi tester avec nous ?</h2>
+  <p>
+    Nous ne nous contentons pas de vous remettre un ensemble de chiffres bruts. Nos rapports traduisent les données du
+    bassin en recommandations d'ingénierie exploitables : « Surélevez le plan de dérive de 8 mm pour réduire la surface
+    mouillée à la vitesse de croisière », « Augmentez le deadrise au tableau arrière de 3&deg; pour réduire
+    l'accélération de slamming » ou « Déplacez le centre de gravité longitudinal de 150 mm vers l'arrière pour améliorer
+    l'attitude de déjaugeage ». Vous repartez avec une compréhension claire de ce qu'il faut modifier et pourquoi.
+  </p>
+  <p>
+    Notre bassin est également disponible pour des essais indépendants par des tiers sur une base de services à
+    honoraires. Si vous développez une coque et souhaitez une évaluation hydrodynamique impartiale et exécutée de
+    manière professionnelle, nous accueillons volontiers votre demande.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Réservez une session d'essais en bassin</h2>
+    <p class="mt-2 text-sm text-muted">
+      Que vous ayez besoin d'un programme de développement complet ou d'un test comparatif unique, nous nous adapterons
+      à votre planning.
+    </p>
+    <a
+      href={`/${lang}/contact`}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Contactez notre équipe hydrodynamique</a
+    >
+  </div>
+</section>

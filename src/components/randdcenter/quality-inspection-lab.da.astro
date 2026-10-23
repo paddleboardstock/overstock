@@ -1,0 +1,203 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'da' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">← Tilbage til R&amp;D Center</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Lab 06</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Kvalitets- og inspektionslaboratorium</h1>
+      <p class="mt-3 text-lg text-muted">Uafhængig verifikation - hver test bestået før levering</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-uv-resistance-testing.webp"
+        alt="Aquafarer kvalitetsinspektionslaboratorium UV test"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Stol på, men bekræft</h2>
+  <p>
+    Hver båd, der forlader vores værksted, bærer certificeringen af, at den har bestået et defineret sæt
+    kvalitetsinspektioner og materialetests. Vores kvalitets- og inspektionslaboratorium er en uafhængig funktion i
+    organisationen - den rapporterer direkte til den administrerende direktør, ikke til produktionen - og sikrer, at
+    intet kommercielt pres kan kompromittere inspektionslågen. Hvis en materialebatch eller en færdig båd ikke opfylder
+    den offentliggjorte specifikation, har laboratoriet bemyndigelse til at standse forsendelsen, indtil
+    uoverensstemmelsen er løst.
+  </p>
+  <p>
+    Laboratoriet fungerer under et kvalitetsstyringssystem, der er tilpasset principperne, og vores testmetoder er
+    baseret på ISO, ASTM og EN standarder, hvor det er relevant. Vi opretholder detaljerede registreringer af hver test,
+    der udføres, og skaber en komplet sporbarhedskæde fra råmaterialemodtagelse til den endelige bådlevering.
+  </p>
+
+  <h2>Test udstyr og kapaciteter</h2>
+  <table>
+    <thead><tr><th>Udstyr</th><th>Udførte tests</th><th>Standard / Metode</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Universal testmaskine (50 kN)</td><td>Trækstyrke (stof), skrælningsmodstand (sømme), riveudbredelse</td><td
+          >, ISO 4674</td
+        ></tr
+      >
+      <tr
+        ><td>Testrig for lufttilbageholdelse (programmerbar)</td><td
+          >1000-cyklus inflation/deflation udholdenhed, 24-48 t tryk-hold test</td
+        ><td> (indre)</td></tr
+      >
+      <tr
+        ><td>Sømskrællejig (motoriseret 180° peel)</td><td>Svejse- og limsøms skrælningsstyrke ved 100 mm/min</td><td>
+          / ASTM D1876</td
+        ></tr
+      >
+      <tr><td>Hydrostatisk hovedtester</td><td>Vandgennemtrængning af stof (0 — 00 mbar)</td><td>ISO 811</td></tr>
+      <tr
+        ><td>Digital tykkelsesmåler og mikrometer</td><td>Stoftykkelse, rørvægstykkelse, klæbemiddel-filmtykkelse</td
+        ><td>ISO 2286-3</td></tr
+      >
+      <tr
+        ><td>Miljøkammer</td><td>Temperaturkonditionering (-40 °C til +80 °C) til koldrevne- og varmeældningstest</td
+        ><td>ISO 188, ISO 4675</td></tr
+      >
+      <tr
+        ><td>Farvespektrofotometer</td><td>Delta-E farvemåling efter UV eksponering</td><td>ISO 105-A05 / ASTM D2244</td
+        ></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>Inspektionsportene — fra materiale til levering</h2>
+  <p>
+    Hver båd følger en defineret kvalitetsplan med obligatoriske inspektionspunkter. Ingen båd kan springe en låge over;
+    hver gate skal være underskrevet af en kvalitetsinspektør, inden næste produktionstrin begynder.
+  </p>
+
+  <div class="not-prose my-8">
+    <div class="relative">
+      <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-blue-200 dark:bg-blue-800"></div>
+      <div class="space-y-6 relative">
+        {
+          [
+            {
+              gate: 'Gate 1',
+              label: 'Incoming material inspection',
+              desc: 'Fabric batch, adhesive batch, hardware — all checked against incoming specification before release to production.',
+            },
+            {
+              gate: 'Gate 2',
+              label: 'In-process weld inspection',
+              desc: 'First-off weld coupon tested (peel + visual) at start of each production shift.',
+            },
+            {
+              gate: 'Gate 3',
+              label: 'Chamber air test',
+              desc: 'Each chamber pressurised to 1.25 x working pressure, held 24-48 h. Data logged per serial number.',
+            },
+            {
+              gate: 'Gate 4',
+              label: 'Pre-delivery inspection',
+              desc: 'Complete boat inspected: all fasteners torqued, systems functional, no cosmetic defects. 100-point checklist.',
+            },
+            {
+              gate: 'Gate 5',
+              label: 'Final certification',
+              desc: 'Test reports compiled, inspection records reviewed, Certificate of Conformance issued.',
+            },
+          ].map((g) => (
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs font-bold z-10">
+                {g.gate}
+              </div>
+              <div class="flex-1 p-3 rounded-lg bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800">
+                <p class="text-sm font-semibold">{g.label}</p>
+                <p class="text-xs text-gray-500 mt-1">{g.desc}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+
+  <h2>Nøglekvalitetsmetrics (2025 rullende gennemsnit)</h2>
+  <div class="not-prose my-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">99.7 %</span>
+      <span class="text-xs text-gray-500">Førstegangsudbytte (stofbatch)</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">&lt; 0.2 %</span>
+      <span class="text-xs text-gray-500">Svejseafvisningsrate (lineær meter)</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">100 %</span>
+      <span class="text-xs text-gray-500">Kamre lufttestet før samling</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600"></span>
+      <span class="text-xs text-gray-500">Overholdelse af designkategorier</span>
+    </div>
+  </div>
+
+  <h2>Vores kvalitetsteam</h2>
+  <p>
+    Laboratoriet er bemandet af en kvalitetschef (10 år i marine QA, ASQ Certified Quality Engineer), to
+    kvalitetsinspektører (hver med Level 2 NDT-certificering i visuel testning) og en materialetekniker, der er
+    ansvarlig for al fysisk testning. Teamet gennemgår årlige færdighedstest gennem en uafhængig tredjepartsudbyder for
+    at sikre, at vores testresultater forbliver nøjagtige og reproducerbare.
+  </p>
+
+  <h2>Uafhængig test for kunder</h2>
+  <p>
+    Vores kvalitets- og inspektionslaboratorium er tilgængeligt for uafhængige testtjenester. Hvis du har brug for at
+    verificere en stofspecifikation, validere et nyt klæbemiddelsystem eller indhente en tredjeparts testrapport for en
+    indkøbskvalifikation, kan vi udføre testene i henhold til den gældende standard og udstede en certificeret
+    testrapport.
+  </p>
+  <p>Eksempler på nyere tredjepartstestarbejde:</p>
+  <ul>
+    <li>
+      Afrivningsstyrke-sammenligning af fem konkurrerende klæbende filmprodukter til et europæisk militærindkøbsprogram.
+    </li>
+    <li>
+      Accelereret ældningsundersøgelse (UV + termisk cykling) for en ny orange-pigmenteret PVC-formulering med
+      regelmæssige midlertidige målinger med 500 timers intervaller.
+    </li>
+    <li>Lufttilbageholdelsesvalidering af 50 prototype afskærmningsventiler til et nyt højtryksrørdesign.</li>
+  </ul>
+
+  <h2>Vores engagement i dig</h2>
+  <p>
+    Når du modtager en {SITE.name} båd, modtager du også dens kvalitetsdossier — en samlet registrering af de testresultater,
+    der gælder for din specifikke båd. Stofbatchcertifikat, svejseafskalningstest, kammerlufttestlogfiler og tjekliste til
+    inspektion før levering. Hvert nummer er sporbart. Hver inspektør er identificeret. Dette er ikke kun papirarbejde - det
+    er vores løfte om, at det, vi leverede, er det, vi har specificeret.
+  </p>
+  <p>
+    Hvis du nogensinde har problemer med kvaliteten, kan du kontakte laboratoriet direkte - kontaktoplysningerne er
+    trykt på dit overensstemmelsescertifikat. Vi tager enhver forespørgsel seriøst og forpligter os til en formel
+    undersøgelse inden for 48 timer.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Har du brug for uafhængig test eller kvalitetsbekræftelse?</h2>
+    <p class="mt-2 text-sm text-muted">
+      Vores laboratorium accepterer tredjeparts testarbejde - kontakt os med dine krav.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Kontakt kvalitetslaboratoriet</a
+    >
+  </div>
+</section>

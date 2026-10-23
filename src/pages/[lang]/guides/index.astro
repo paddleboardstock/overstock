@@ -1,0 +1,143 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { guides } from '~/data/guides';
+import { GUIDE_L10N, GUIDE_META_L10N } from '~/lib/guides-l10n';
+import { GUIDE_L10N_MT, GUIDE_META_L10N_MT } from '~/lib/guides-l10n-mt';
+import { getPageContent, setPageContentData } from '~/i18n/page-content';
+import __pageData from '~/i18n/generated/pages/guides.ts';
+import { localizePageTitle } from '~/i18n/page-title';
+import { languages } from '~/i18n/config';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+setPageContentData(__pageData);
+const page = getPageContent(lang, 'guides');
+
+const hero = page.hero ?? {};
+const sizeGuide = page.size_guide ?? {};
+
+const metadata = {
+  title: localizePageTitle(page, `Guides — ${SITE.name}`),
+  description:
+    'Beginner guides for SUP and water sports. Learn how to choose your SUP, safety tips, inflatable vs hard board comparisons, paddling techniques, and more.',
+};
+
+const categories = [...new Set(guides.map((g) => g.category))];
+
+const labels = GUIDE_META_L10N[lang] ?? GUIDE_META_L10N_MT[lang];
+const l10nFor = (slug: string) => GUIDE_L10N[lang]?.[slug] ?? GUIDE_L10N_MT[lang]?.[slug];
+
+const catNames: Record<string, string> = {
+  'buying-guide': 'Buying Guides',
+  tutorial: 'Tutorials',
+  safety: 'Safety',
+  maintenance: 'Maintenance',
+  technical: 'Technical',
+  lifestyle: 'Lifestyle & Fitness',
+  planning: 'Trip Planning',
+  ...(labels?.category ?? {}),
+};
+---
+
+<Layout metadata={metadata}>
+  <meta name="ai-intent" content="beginner-water-sports-guides,sup-selection-guide,paddling-safety" />
+  <JsonLd
+    type="WebSite"
+    data={{
+      name: 'Aquafarer Guides',
+      description: 'Water sports guides and tutorials',
+    }}
+  />
+
+  <section class="max-w-4xl mx-auto py-24 px-6" data-ai-block="definition">
+    <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">{hero.tagline || 'Guides'}</span>
+    <h1 class="mt-4 text-4xl font-semibold text-gray-900">{hero.title || 'New to SUP?'}</h1>
+    <p class="mt-4 text-lg text-gray-500">
+      {hero.subtitle || 'Practical guides to help you choose, use, and enjoy inflatable water sports equipment.'}
+    </p>
+    <div class="mt-6 flex flex-wrap gap-2 text-xs">
+      <span class="px-3 py-1.5 bg-gray-100 text-gray-600 rounded-full font-medium">{guides.length} guides</span>
+      <span class="px-3 py-1.5 bg-gray-100 text-gray-600 rounded-full font-medium">{categories.length} categories</span>
+    </div>
+  </section>
+
+  <!-- Size Guide -->
+  <section class="max-w-4xl mx-auto pb-16 px-6">
+    <div class="rounded-2xl border border-sky-200 bg-sky-50 p-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="text-xs font-semibold text-sky-600 uppercase tracking-wider"
+          >{sizeGuide.tagline || 'Size &amp; Specs'}</span
+        >
+      </div>
+      <h2 class="text-2xl font-semibold text-gray-900">{sizeGuide.title || 'Find the Right Size for Your Needs'}</h2>
+      <p class="mt-2 text-gray-500 text-sm max-w-2xl">
+        {sizeGuide.desc || 'Compare product dimensions, weight capacities, and recommended uses.'}
+      </p>
+      <div class="mt-6 grid md:grid-cols-3 gap-6">
+        {
+          (sizeGuide.cards || []).map((card: any) => (
+            <div class="p-4 bg-white rounded-xl border border-sky-100">
+              <h3 class="font-medium text-gray-900">{card.title}</h3>
+              <p class="mt-2 text-sm text-gray-600">{card.desc}</p>
+            </div>
+          ))
+        }
+      </div>
+      <a
+        href={`/${lang}${sizeGuide.link || '/size-guide'}`}
+        class="mt-6 inline-flex items-center gap-1 text-sm font-medium text-sky-600 hover:text-sky-700"
+      >
+        {sizeGuide.link_label || 'Full size guide with product specs →'}
+      </a>
+    </div>
+  </section>
+
+  {
+    categories.map((cat) => (
+      <section class="max-w-4xl mx-auto pb-16 px-6">
+        <h2 class="text-lg font-semibold text-gray-900 mb-6">{catNames[cat] || cat}</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          {guides
+            .filter((g) => g.category === cat)
+            .map((g) => (
+              <div class="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-shadow">
+                <div class="flex items-center gap-2 text-xs mb-3">
+                  <span class="px-2 py-0.5 bg-sky-50 text-sky-700 rounded-full capitalize">
+                    {labels?.difficulty?.[g.difficulty] || g.difficulty}
+                  </span>
+                  {g.waterType.slice(0, 2).map((w) => (
+                    <span class="px-2 py-0.5 bg-gray-100 text-gray-500 rounded-full">
+                      {labels?.waterType?.[w] || w}
+                    </span>
+                  ))}
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900">{l10nFor(g.slug)?.title || g.title}</h3>
+                <p class="mt-2 text-gray-500 text-sm">{l10nFor(g.slug)?.description || g.description}</p>
+                <a
+                  href={`/${lang}/guides/${g.slug}`}
+                  class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-sky-600 hover:text-sky-700"
+                >
+                  Read guide →
+                </a>
+              </div>
+            ))}
+        </div>
+      </section>
+    ))
+  }
+
+  <section class="sr-only" data-ai-block="use-case" aria-hidden="true">
+    <p>
+      Aquafarer guides cover beginner SUP selection, paddling technique, equipment comparison, water safety,
+      maintenance, fishing, yoga, fitness, kayaking, weather reading, repair, family paddling, trip planning, and board
+      specifications for recreational users.
+    </p>
+  </section>
+</Layout>

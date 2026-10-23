@@ -1,0 +1,178 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'ja' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">← 研究開発センターに戻る</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">研究室04</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">流体力学試験タンク</h1>
+      <p class="mt-3 text-lg text-muted">最初の本格的なプロトタイプの前に性能を検証</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-design-discussion-original.webp"
+        alt="Aquafarer 流体力学試験タンクの性能試験"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>なぜ小型ボートのタンクテストを行うのでしょうか?</h2>
+  <p>
+    流体力学試験は外航船専用であるというのはよくある誤解です。実際には、4–5 m RIB
+    などの小型滑走船体の性能は、タンカーが球根状の船首に依存するのと同じように、その水中形状に依存します。トリム角度、濡れた表面積、スプレーの生成、換気はすべて、速度、燃料消費量、乗り心地に劇的な影響を与えます。で
+    {SITE.name}では、金属や布地を実物大のプロトタイプに仕上げる前に、これらの効果をモデル
+    スケールで定量化できる専用の流体力学テスト タンクを運用しています。
+  </p>
+  <p>
+    モデル スケール (通常は 1:3 から 1:5)
+    でのテストにより、船体の形状を迅速かつコスト効率よく反復できるようになります。水槽に 1
+    週間入れておくだけで、数か月にわたる本格的な試行錯誤が必要となるのと同じパフォーマンス データを、数分の 1
+    のコストで生成できます。
+  </p>
+
+  <h2>設備仕様</h2>
+  <table>
+    <thead><tr><th>パラメータ</th><th>仕様</th></tr></thead>
+    <tbody>
+      <tr><td>タンク寸法</td><td>35 メートル (長さ) × 3.5 メートル (幅) × 1.8 メートル (奥行き)</td></tr>
+      <tr><td>牽引台車</td><td>電気サーボ駆動、最大速度 12 m/s (23 kn)、速度精度 ± 0.5 %</td></tr>
+      <tr
+        ><td>ウェーブジェネレーター</td><td
+          >フラップタイプ、プログラム可能な規則的および不規則な海況、モデルスケールで最大 0.3 m までの水深</td
+        ></tr
+      >
+      <tr
+        ><td>計装</td><td
+          >6-コンポーネントダイナモメーター (抵抗、横力、ヨーモーメント)、加速度計、傾斜計、波動プローブ</td
+        ></tr
+      >
+      <tr><td>データ取得</td><td>チャンネルごとに 1000 Hz でサンプリング、リアルタイム表示 + 後処理スイート</td></tr>
+      <tr><td>模型製作</td><td>最大 1.8 m LOA までの船体モデルの社内 CNC フライス加工と 3D プリント</td></tr>
+    </tbody>
+  </table>
+
+  <h2>私たちのテストプログラム</h2>
+  <p>私たちの戦車の標準的な船体開発プログラムは次の順序に従います。</p>
+  <ol>
+    <li>
+      <strong>モデルの構築</strong> — 1:3.5 スケール モデルは、高密度フォームから CNC 加工され、剛性を高めるためにガラス張りになっています。重量と重心は、フルードスケールの全負荷条件に一致するように調整されます。
+    </li>
+    <li>
+      <strong>レジスタンスラン</strong> — モデルは動作範囲内で 8-10 の速度で牽引されます。総抵抗は、ITTC-1957 メソッドを使用して測定され、摩擦成分と残留成分に分解されます。
+    </li>
+    <li>
+      <strong>トリムと沈みの測定</strong> — ランニングトリムとシンケージが各速度で記録されます。船体の滑走に最適なトリム角度
+      4-6° が目標です。
+    </li>
+    <li>
+      <strong>通夜調査</strong> — 横波のカットは 2 つの速度で測定され、造波抵抗を評価し、船尾干渉を引き起こす可能性のある横波の相互作用を特定します。
+    </li>
+    <li>
+      <strong>海上保管（オプション）</strong> — 前海と後海を規則的な波で走行し、追加の抵抗、垂直加速度、および衝突確率を測定します。
+    </li>
+    <li>
+      <strong>データ分析と推奨事項</strong> — 比較チャート、速度/出力曲線、実物大船体の具体的な設計推奨事項を含む完全なレポートが提供されます。
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      典型的なタンクテスト結果 — 抵抗と速度 (RIB 450 船体、1:3.5 スケール)
+    </p>
+    <div class="space-y-2">
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">5 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:18%"></div>
+        </div><span class="w-16 text-right">42 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">10 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:35%"></div>
+        </div><span class="w-16 text-right">81 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">15 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:52%"></div>
+        </div><span class="w-16 text-right">121 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">20 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:68%"></div>
+        </div><span class="w-16 text-right">158 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">25 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:85%"></div>
+        </div><span class="w-16 text-right">197 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">30 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:100%"></div>
+        </div><span class="w-16 text-right">232 N</span>
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      フルードスケールの速度におけるモデルスケールの抵抗 (N)。フルスケールの電力予測は、ITTC-1978
+      パフォーマンス予測方法に従います。
+    </p>
+  </div>
+
+  <h2>専門家チーム</h2>
+  <p>
+    私たちのタンクは、造船の博士号を取得し、ヨーロッパの主要な海事研究機関で 8
+    年間のタンク曳航経験を持つ流体力学者によって運営されています。彼は、すべてのモデルと機器を準備する技術者によってサポートされています。チームは
+    ITTC (国際曳航戦車会議)
+    の推奨手順に従い、すべてのテストが再現可能、追跡可能、国際的に防御可能であることを保証します。
+  </p>
+
+  <h2>カスタム船体の開発のためのタンクテスト</h2>
+  <p>
+    当社のタンクは、自社設計の船体に使用されるだけではありません。カスタムの船体形状を検証したり、パフォーマンスの問題を調査したいお客様のために、定期的にテスト
+    プログラムを実行します。
+  </p>
+  <ul>
+    <li>
+      <strong>船体形状比較</strong> — 2 つ以上の候補の船体形状を同一条件下でテストし、設計の選択に役立つ客観的な抗力/速度/安定性の比較を提供します。
+    </li>
+    <li>
+      <strong>付属器の最適化</strong> — インターセプター プレート、スプレー レール、トリム タブ、およびストレーキをさまざまな構成でテストして、抗力低減に対する個々の貢献を定量化できます。
+    </li>
+    <li>
+      <strong>エンジンマッチング検討</strong> — 抵抗データは出力予測曲線に変換され、目標速度とペイロードに最適なエンジン馬力を選択できます。
+    </li>
+  </ul>
+
+  <h2>なぜ私たちと一緒にテストするのでしょうか?</h2>
+  <p>
+    私たちは単に生の数値を提供するだけではありません。当社のレポートは、タンク
+    データを実用的なエンジニアリング推奨事項に変換します。「巡航速度で濡れた表面を減らすためにスプレー レールを 8 mm
+    上げる」、「スラミング加速を減らすためにトランサムのデッドライズを 3°
+    増やす」、または「滑走姿勢を改善するために縦方向の重心を 150 mm
+    後方に移動する」。何を変更する必要があるのか、なぜ変更するのかを明確に理解して終了します。
+  </p>
+  <p>
+    当社のタンクは、独立したサードパーティによる有料テストにも利用できます。船体を開発中で、専門家による公平な流体力学的評価をご希望の場合は、お問い合わせをお待ちしております。
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">タンクテストセッションを予約する</h2>
+    <p class="mt-2 text-sm text-muted">
+      完全な開発プログラムが必要な場合でも、単一の比較テストが必要な場合でも、当社はお客様のスケジュールに対応できます。
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >当社の流体力学チームにお問い合わせください</a
+    >
+  </div>
+</section>

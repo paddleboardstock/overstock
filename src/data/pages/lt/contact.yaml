@@ -1,0 +1,130 @@
+hero_text:
+  tagline: Kontaktai
+  title: SUSISIEKITE
+contact_form:
+  id: form
+  title: Siųskite mums žinutę
+  subtitle: Dėl kainų, techninių klausimų ar partnerystės užklausų, parašykite mums. Atsakome per vieną darbo dieną.
+  email_to: info@aquafarer.com
+  submit_button: Siųsti užklausą → Gauti pasiūlymą
+  success_message: Ačiū! Jūsų žinutė pasiekė mūsų pašto dėžutę. Atsakysime per vieną darbo dieną.
+  error_message: Įvyko klaida siunčiant jūsų žinutę. Bandykite dar kartą arba rašykite mums tiesiogiai el. paštu.
+  default_country_code: '+1'
+  captcha:
+    label: 'Apsauga nuo šlamšto: prašome išspręsti šį uždavinį'
+  fields:
+    - name: firstName
+      label: Vardas
+      row: 1
+    - name: lastName
+      label: Pavardė
+      row: 1
+    - name: companyName
+      label: Įmonės pavadinimas
+      row: 2
+    - name: address
+      label: Adresas
+      row: 3
+    - name: zip
+      label: Pašto kodas
+      row: 4
+    - name: country
+      label: Šalis
+      row: 4
+      type: select
+      optionsKey: countries
+    - name: email
+      label: El. paštas
+      row: 5
+      type: email
+    - name: tel
+      label: TEL
+      row: 5
+      type: tel
+      withCountryCode: true
+    - name: Užsakymo apimtis
+      label: Numatoma užsakymo apimtis
+      row: 6
+      type: select
+      options:
+        - value: ''
+          label: Pasirinkite numatomą apimtį...
+        - value: sample
+          label: Tik pavyzdžiai / prototipai
+        - value: 5-10
+          label: 5–10 vienetų (Standartas MOQ)
+        - value: 100-500
+          label: 100–500 vienetų
+        - value: 500-plus
+          label: 500+ vienetų (Kiekio kainodara)
+    - name: customization
+      label: Reikia individualizavimo?
+      row: 7
+      type: select
+      options:
+        - value: ''
+          label: Pasirinkite individualizavimo tipą...
+        - value: none
+          label: Standartinis produktas (be individualizavimo)
+        - value: logo
+          label: Tik pagal užsakymą logotipas / brandingas
+        - value: full
+          label: Visas OEM (dydis, spalva, grafika, pakuotė)
+        - value: consultation
+          label: Nežinau — reikia konsultacijos
+    - name: produktųSusidomėjimas
+      label: Produktų kategorijos, kuriose domitės
+      row: 8
+      type: select
+      options:
+        - value: ''
+          label: Pasirinkite produktų kategoriją...
+        - value: all
+          label: Visi produktai / Pilnas katalogas
+        - value: sup
+          label: SUP Lentų / Baidarių lentos
+        - value: kayak
+          label: Pripučiamieji kajakai
+        - value: rib
+          label: RIB Valtys
+        - value: dinghy
+          label: Pripučiamieji valtelės / pagalbinės valtys
+        - value: safety
+          label: Apsaugos įranga / Gelbėjimosi liemenės
+        - value: accessory
+          label: Priedai (siurbliai, irklai, krepšiai)
+    - name: subject
+      label: Tema
+      row: 9
+    - name: message
+      label: Žinutė
+      row: 10
+      type: textarea
+      rows: 6
+features2_other_ways:
+  title: Kiti būdai susisiekti su mumis
+  columns: 3
+  items:
+    - title: Pardavimų užklausos
+      description: Pasiūlymai, konfigūracijos, dilerių paraiškos ir didmeninės užsakymos.
+      icon: tabler:shopping-bag
+    - title: Techninė pagalba
+      description: Garantija, remontas, atsarginės dalys ir eksploatavimo klausimai.
+      icon: tabler:tool
+    - title: Spauda ir partnerystė
+      description: Žiniasklaidos rinkiniai, rėmimas ir pramonės bendradarbiavimas.
+      icon: tabler:news
+    - title: Telefonas
+      description: +1 279 732 3333 (JAV būstinė) · +86 13305324192 (gamykla)
+      icon: tabler:headset
+    - title: El. paštas
+      description: info@aquafarer.com
+      icon: tabler:mail
+    - title: Pasaulinė būstinė ir sąskaitų faktūrų išrašymas
+      description: Aquafarer LLC, Niujampšyras, Jungtinės Amerikos Valstijos
+      icon: tabler:map-pin
+map:
+  title: Mūsų vieta
+  subtitle: Apsilankykite mūsų gamybos centre Čingdao
+  address: Ekonominės plėtros zona, Laixi, Čingdao, Kinija, 266600
+  zoom: 15

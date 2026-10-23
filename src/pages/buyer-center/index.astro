@@ -1,0 +1,251 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { defaultLang } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
+const t = (key: string) => getUiForLang(defaultLang)?.[key] || '';
+
+const metadata = {
+  title: `Buyer Center | ${SITE.name}`,
+  description: t('buyerCenter.subtitle'),
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <JsonLd
+    data={{
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      headline: 'Buyer Center',
+      description: metadata.description,
+      author: { '@type': 'Organization', name: SITE.name },
+    }}
+  />
+
+  <div class="max-w-6xl mx-auto px-4 py-12">
+    <!-- Hero -->
+    <section class="text-center mb-14">
+      <span class="text-sm font-semibold text-sky-600 tracking-wide uppercase"
+        >{getUiForLang(defaultLang)?.['home.resources.buyersCenter'] || 'Buyers Center'}</span
+      >
+      <h1 class="mt-3 text-4xl font-extrabold text-gray-900 dark:text-slate-100">{t('buyerCenter.title')}</h1>
+      <p class="mt-3 text-lg text-gray-500 dark:text-slate-400 max-w-2xl mx-auto">{t('buyerCenter.heroDesc')}</p>
+    </section>
+
+    <!-- Quick Actions -->
+    <section class="mb-14">
+      <h2 class="text-lg font-semibold text-gray-700 dark:text-slate-300 mb-4">{t('buyerCenter.quickActions')}</h2>
+      <div class="grid grid-cols-3 gap-4">
+        <a
+          href="/contact"
+          class="flex items-center justify-center gap-2 py-4 px-6 rounded-xl bg-sky-600 text-white font-semibold hover:bg-sky-700 transition-colors"
+        >
+          <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            ><path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+            ></path></svg
+          >
+          <span>{t('buyerCenter.contactSales')}</span>
+        </a>
+        <a
+          href="/contact"
+          class="flex items-center justify-center gap-2 py-4 px-6 rounded-xl bg-amber-500 text-white font-semibold hover:bg-amber-600 transition-colors"
+        >
+          <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            ><path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg
+          >
+          <span>{t('buyerCenter.requestQuote')}</span>
+        </a>
+        <a
+          href="/contact"
+          class="flex items-center justify-center gap-2 py-4 px-6 rounded-xl bg-gray-700 text-white font-semibold hover:bg-gray-800 transition-colors"
+        >
+          <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            ><path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+            ></path></svg
+          >
+          <span>{t('buyerCenter.downloadCatalog')}</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Buying Guides -->
+    <section class="mb-14">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="text-2xl">&#x1F4D6;</span>
+        <div>
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-slate-100">{t('buyerCenter.buyingGuides')}</h2>
+          <p class="text-sm text-gray-500 dark:text-slate-400">{t('buyerCenter.buyingGuidesDesc')}</p>
+        </div>
+      </div>
+      <div class="grid md:grid-cols-3 gap-5">
+        <a
+          href="/size-guide"
+          class="block p-6 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:shadow-md transition-shadow"
+        >
+          <div class="text-2xl mb-3">&#x1F4CF;</div>
+          <h3 class="font-semibold text-gray-900 dark:text-slate-100">{t('buyerCenter.sizeGuide')}</h3>
+          <p class="mt-1 text-sm text-gray-500 dark:text-slate-400">{t('buyerCenter.sizeGuideDesc')}</p>
+        </a>
+        <a
+          href="/compare"
+          class="block p-6 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:shadow-md transition-shadow"
+        >
+          <div class="text-2xl mb-3">&#x2696;&#xFE0F;</div>
+          <h3 class="font-semibold text-gray-900 dark:text-slate-100">{t('buyerCenter.comparisons')}</h3>
+          <p class="mt-1 text-sm text-gray-500 dark:text-slate-400">{t('buyerCenter.comparisonsDesc')}</p>
+        </a>
+        <a
+          href="/research/oem-buyer-guide"
+          class="block p-6 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:shadow-md transition-shadow"
+        >
+          <div class="text-2xl mb-3">&#x1F4D8;</div>
+          <h3 class="font-semibold text-gray-900 dark:text-slate-100">{t('buyerCenter.oemBuyerGuide')}</h3>
+          <p class="mt-1 text-sm text-gray-500 dark:text-slate-400">{t('buyerCenter.oemBuyerGuideDesc')}</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Product Catalog -->
+    <section class="mb-14">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="text-2xl">&#x1F3F7;&#xFE0F;</span>
+        <div>
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-slate-100">{t('buyerCenter.products')}</h2>
+          <p class="text-sm text-gray-500 dark:text-slate-400">{t('buyerCenter.productsDesc')}</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <a
+          href="/products?category=RIB"
+          class="block p-5 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-center hover:shadow-md transition-shadow"
+        >
+          <div class="text-3xl mb-2">&#x1F6A4;</div>
+          <h3 class="font-semibold text-sm text-gray-900 dark:text-slate-100">{t('buyerCenter.ribs')}</h3>
+        </a>
+        <a
+          href="/products?category=INFLATABLE"
+          class="block p-5 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-center hover:shadow-md transition-shadow"
+        >
+          <div class="text-3xl mb-2">&#x1F6F6;</div>
+          <h3 class="font-semibold text-sm text-gray-900 dark:text-slate-100">{t('buyerCenter.inflatables')}</h3>
+        </a>
+        <a
+          href="/products?category=SUP"
+          class="block p-5 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-center hover:shadow-md transition-shadow"
+        >
+          <div class="text-3xl mb-2">&#x1F3C4;</div>
+          <h3 class="font-semibold text-sm text-gray-900 dark:text-slate-100">{t('buyerCenter.sups')}</h3>
+        </a>
+        <a
+          href="/products?category=ACCESSORY"
+          class="block p-5 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-center hover:shadow-md transition-shadow"
+        >
+          <div class="text-3xl mb-2">&#x1F392;</div>
+          <h3 class="font-semibold text-sm text-gray-900 dark:text-slate-100">{t('buyerCenter.accessories')}</h3>
+        </a>
+      </div>
+      <div class="mt-5 text-center">
+        <a href="/products" class="inline-flex items-center gap-1 text-sky-600 font-medium hover:text-sky-700 text-sm"
+          >{t('buyerCenter.browseProducts')} &rarr;</a
+        >
+      </div>
+    </section>
+
+    <!-- Buyer Support -->
+    <section class="mb-14">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="text-2xl">&#x1F6DF;&#xFE0F;</span>
+        <div>
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-slate-100">{t('buyerCenter.support')}</h2>
+          <p class="text-sm text-gray-500 dark:text-slate-400">{t('buyerCenter.supportDesc')}</p>
+        </div>
+      </div>
+      <div class="grid md:grid-cols-3 gap-5">
+        <a
+          href="/warranty"
+          class="block p-6 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:shadow-md transition-shadow"
+        >
+          <div class="text-2xl mb-3">&#x1F6E1;&#xFE0F;</div>
+          <h3 class="font-semibold text-gray-900 dark:text-slate-100">{t('buyerCenter.warranty')}</h3>
+          <p class="mt-1 text-sm text-gray-500 dark:text-slate-400">{t('buyerCenter.warrantyDesc')}</p>
+        </a>
+        <a
+          href="/faq"
+          class="block p-6 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:shadow-md transition-shadow"
+        >
+          <div class="text-2xl mb-3">&#x2753;</div>
+          <h3 class="font-semibold text-gray-900 dark:text-slate-100">{t('buyerCenter.faq')}</h3>
+          <p class="mt-1 text-sm text-gray-500 dark:text-slate-400">{t('buyerCenter.faqDesc')}</p>
+        </a>
+        <a
+          href="/contact"
+          class="block p-6 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:shadow-md transition-shadow"
+        >
+          <div class="text-2xl mb-3">&#x2709;&#xFE0F;</div>
+          <h3 class="font-semibold text-gray-900 dark:text-slate-100">{t('buyerCenter.contact')}</h3>
+          <p class="mt-1 text-sm text-gray-500 dark:text-slate-400">{t('buyerCenter.contactDesc')}</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- B2B & OEM -->
+    <section>
+      <div class="flex items-center gap-3 mb-6">
+        <span class="text-2xl">&#x1F91D;</span>
+        <div>
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-slate-100">{t('buyerCenter.b2b')}</h2>
+          <p class="text-sm text-gray-500 dark:text-slate-400">{t('buyerCenter.b2bDesc')}</p>
+        </div>
+      </div>
+      <div class="grid md:grid-cols-4 gap-5">
+        <a
+          href="/oem-odm-manufacturer"
+          class="block p-6 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:shadow-md transition-shadow"
+        >
+          <div class="text-2xl mb-3">&#x1F3ED;</div>
+          <h3 class="font-semibold text-sm text-gray-900 dark:text-slate-100">{t('buyerCenter.oemPage')}</h3>
+          <p class="mt-1 text-xs text-gray-500 dark:text-slate-400">{t('buyerCenter.oemPageDesc')}</p>
+        </a>
+        <a
+          href="/oem-process"
+          class="block p-6 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:shadow-md transition-shadow"
+        >
+          <div class="text-2xl mb-3">&#x1F4CB;</div>
+          <h3 class="font-semibold text-sm text-gray-900 dark:text-slate-100">{t('buyerCenter.oemProcess')}</h3>
+          <p class="mt-1 text-xs text-gray-500 dark:text-slate-400">{t('buyerCenter.oemProcessDesc')}</p>
+        </a>
+        <a
+          href="/quality"
+          class="block p-6 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:shadow-md transition-shadow"
+        >
+          <div class="text-2xl mb-3">&#x2705;</div>
+          <h3 class="font-semibold text-sm text-gray-900 dark:text-slate-100">{t('buyerCenter.quality')}</h3>
+          <p class="mt-1 text-xs text-gray-500 dark:text-slate-400">{t('buyerCenter.qualityDesc')}</p>
+        </a>
+        <a
+          href="/"
+          class="block p-6 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:shadow-md transition-shadow"
+        >
+          <div class="text-2xl mb-3">&#x1F4E6;</div>
+          <h3 class="font-semibold text-sm text-gray-900 dark:text-slate-100">{t('buyerCenter.b2bResources')}</h3>
+          <p class="mt-1 text-xs text-gray-500 dark:text-slate-400">{t('buyerCenter.b2bResourcesDesc')}</p>
+        </a>
+      </div>
+    </section>
+  </div>
+</Layout>

@@ -1,0 +1,130 @@
+hero_text:
+  tagline: Kontakti
+  title: SAZINĀTIES
+contact_form:
+  id: form
+  title: Nosūtiet mums ziņu
+  subtitle: Lai saņemtu cenu piedāvājumus, tehniskus jautājumus vai partnerības pieprasījumus, atsūtiet mums ziņu. Mēs atbildēsim vienas darba dienas laikā.
+  email_to: info@aquafarer.com
+  submit_button: Nosūtīt pieprasījumu → Saņemt cenu piedāvājumu
+  success_message: Paldies! Jūsu ziņa ir sasniegusi mūsu iesūtni. Mēs atbildēsim vienas darba dienas laikā.
+  error_message: Radās problēmas, nosūtot jūsu ziņu. Lūdzu, mēģiniet vēlreiz vai rakstiet mums tieši pa e-pastu.
+  default_country_code: '+1'
+  captcha:
+    label: 'Pret surogātpastu: lūdzu, atrisiniet sekojošo'
+  fields:
+    - name: vārds
+      label: Vārds
+      row: 1
+    - name: uzvārds
+      label: Uzvārds
+      row: 1
+    - name: uzņēmu nosaukums
+      label: Uzņēmuma nosaukums
+      row: 2
+    - name: address
+      label: Adrese
+      row: 3
+    - name: zip
+      label: Pasta indekss / Pasta kods
+      row: 4
+    - name: country
+      label: Valsts
+      row: 4
+      type: select
+      optionsKey: countries
+    - name: email
+      label: E-pasts
+      row: 5
+      type: email
+    - name: tel
+      label: TEL
+      row: 5
+      type: tel
+      withCountryCode: true
+    - name: Pasūtījuma apjoms
+      label: Aptuvenais pasūtījuma apjoms
+      row: 6
+      type: select
+      options:
+        - value: ''
+          label: Izvēlieties savu aptuveno apjomu...
+        - value: sample
+          label: Tikai paraugi / prototipi
+        - value: 5-10
+          label: 5–10 vienības (Standarta MOQ)
+        - value: 100-500
+          label: 100–500 vienības
+        - value: 500-plus
+          label: 500+ vienības (Mēroga cenu noteikšana)
+    - name: customization
+      label: Vai nepieciešama pielāgošana?
+      row: 7
+      type: select
+      options:
+        - value: ''
+          label: Izvēlieties pielāgošanas veidu...
+        - value: none
+          label: Standarta produkts (bez pielāgošanas)
+        - value: logo
+          label: Tikai pielāgots logotips / zīmols
+        - value: full
+          label: Pilns OEM (izmērs, krāsa, grafika, iepakojums)
+        - value: consultation
+          label: Nezinu — nepieciešama konsultācija
+    - name: produktaInterese
+      label: Produktos, kas interesē
+      row: 8
+      type: select
+      options:
+        - value: ''
+          label: Izvēlieties produktu kategoriju...
+        - value: all
+          label: Visi produkti / Pilns katalogs
+        - value: sup
+          label: SUP Dēļi / Sērfošanas dēļi
+        - value: kayak
+          label: Piepūšamie kajaki
+        - value: rib
+          label: RIB Laivas
+        - value: dinghy
+          label: Piepūšamie laiviņi / Tenderi
+        - value: safety
+          label: Drošības aprīkojums / Glābšanas vestes
+        - value: accessory
+          label: Piederumi (sūknis, airi, somas)
+    - name: subject
+      label: Temats
+      row: 9
+    - name: message
+      label: Ziņa
+      row: 10
+      type: textarea
+      rows: 6
+features2_other_ways:
+  title: Citi veidi, kā sazināties ar mums
+  columns: 3
+  items:
+    - title: Pārdošanas jautājumi
+      description: Piedāvājumi, konfigurācijas, dīlera pieteikumi un lieli pasūtījumi.
+      icon: tabler:shopping-bag
+    - title: Tehniskais atbalsts
+      description: Garantija, remonts, rezerves daļas un ekspluatācijas jautājumi.
+      icon: tabler:tool
+    - title: Preses un partnerības
+      description: Mediju komplekti, sponsorēšana un nozares sadarbība.
+      icon: tabler:news
+    - title: Tālrunis
+      description: +1 279 732 3333 (ASV galvenā būve) · +86 13305324192 (fabrika)
+      icon: tabler:headset
+    - title: E-pasts
+      description: info@aquafarer.com
+      icon: tabler:mail
+    - title: Globālā mītne & rēķinu izrakstīšana
+      description: Aquafarer LLC, Ņūmeksika, Amerikas Savienotās Valstis
+      icon: tabler:map-pin
+map:
+  title: Mūsu atrašanās vieta
+  subtitle: Apmeklējiet mūsu ražošanas centru Cindao
+  address: Ekonomiskās attīstības zona, Laixi, Cindao, Ķīna, 266600
+  zoom: 15

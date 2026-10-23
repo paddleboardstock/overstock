@@ -1,0 +1,48 @@
+hero:
+  tagline: Processo
+  title: Processo de Fabrico
+  subtitle: Da matéria-prima ao barco pronto para o mar — cada passo sob o nosso controlo
+  back_label: Voltar à Fábrica
+  back_link: /factory
+
+intro: Ao contrário de marcas que subcontratam produção a fábricas terceiras, a Aquafarer possui e opera toda a sua cadeia de fabrico. Esta integração vertical permite-nos manter um rigoroso controlo de qualidade em cada etapa, responder rapidamente a requisitos personalizados e entregar qualidade de produto consistente lote após lote. Eis como um barco é construído na nossa instalação.
+
+steps:
+  - step: '01'
+    title: Receção e Inspeção de Material
+    description: Cada lote recebido de tecido PVC, manta de fibra de vidro, resina e ferragens é inspecionado conforme especificação. Amostras de tecido são testadas quanto à resistência à tração, uniformidade de espessura e resistência UV antes da libertação para produção. Materiais não conformes são colocados em quarentena e devolvidos.
+    duration: 1–2 dias
+  - step: '02'
+    title: Corte Automático de PVC
+    description: Os tecidos aprovados são colocados na máquina de corte automática CNC e cortados com precisão sub-milimétrica. O aninhamento otimizado por computador dispõe os painéis para minimizar o desperdício — tipicamente abaixo de 5%. Os painéis cortados são etiquetados por modelo de barco e câmara, depois agrupados para transferência para a oficina de soldagem.
+    duration: 2–4 horas por kit de barco
+  - step: '03'
+    title: Selagem Térmica e Soldagem de Tubos
+    description: Os painéis são alinhados e unidos usando máquinas de selagem térmica com soldagem de ar quente a temperaturas controladas de 200–600 °C. As costuras principais são reforçadas com soldagem dielétrica RF para juntas estanques de alta resistência. As câmaras concluídas são insufladas a 1,25× a pressão de trabalho para validação de retenção de ar de 30 minutos.
+    duration: 1–2 dias por barco
+  - step: '04'
+    title: Moldagem de Casco RIB em Fibra de Vidro
+    description: Os cascos dos barcos RIB são produzidos usando moldagem manual de fibra de vidro. Camadas de manta de fibra de vidro e tecido são enroladas à mão com resina poliéster ou viniléster em moldes de precisão. Cada camada é ensacada a vácuo para qualidade consistente do laminado. O casco é finalizado com gelcoat para uma superfície marinho de alto brilho e resistente a UV.
+    duration: 2–4 dias por casco
+  - step: '05'
+    title: Impressão SUP e Decoração
+    description: Os gráficos do deck da prancha SUP são aplicados usando impressão digital para designs de qualidade fotográfica a cores, e serigrafia para logótipos duráveis e padrões repetitivos. As impressões são curadas e seladas para resistência a UV e abrasão.
+    duration: 1–2 dias
+  - step: '06'
+    title: Montagem Final e Equipamento
+    description: Os cascos de fibra de vidro e os conjuntos de tubos PVC são unidos na linha de montagem. O motor é montado, a direção e os controlos de aceleração são ligados, o sistema de combustível é instalado e o arnês elétrico completo é cablado. Cada barco segue uma lista de verificação de montagem de 100 pontos com aprovação obrigatória em cada etapa.
+    duration: 2–3 dias
+  - step: '07'
+    title: Testes de Qualidade e Inspeção
+    description: 'Cada barco concluído passa por um controlo de qualidade obrigatório: teste de retenção de ar das câmaras, verificação funcional dos sistemas, verificação de torque dos fixadores e inspeção cosmética. Construções personalizadas e protótipos também recebem provas de mar na água cobrindo velocidade, manuseio, estabilidade e resistência.'
+    duration: 1–2 dias
+  - step: '08'
+    title: Embalagem e Expedição
+    description: Os barcos são desinsuflados, dobrados conforme procedimento, embalados em sacos de tecido resistente ou caixas de contraplacado e carregados para expedição. Cada embalagem é etiquetada com modelo, número de série e destino. Coordenamos com transitários para envios FCL e LCL em todo o mundo.
+    duration: 1 dia
+
+cta:
+  title: Veja o nosso equipamento e maquinaria
+  desc: Explore o equipamento industrial por trás de cada barco Aquafarer.
+  label: Ver equipamento →
+  link: /factory/equipment

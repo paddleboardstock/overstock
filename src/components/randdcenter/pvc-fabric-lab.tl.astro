@@ -1,0 +1,228 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'tl' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">&larr; Bumalik sa R&D Center</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Lab 01</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">PVC Laboratoryo ng Tela</h1>
+      <p class="mt-3 text-lg text-muted">Siyentipikong pagsubok ng materyal — mula hibla hanggang natapos na tubo</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/randd/aquafarer-pvc-material-lab.webp"
+        alt="Aquafarer PVC laboratoryo para sa pagsusuri ng materyal na tela"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Ang pundasyon ng bawat inflatable na bangka</h2>
+  <p>
+    Ang tela ng tubo ay ang isa sa pinaka-kritikal na materyal sa isang inflatable na bangka. Dapat nitong tiisin ang
+    tuloy-tuloy na UV na pagkakalantad, paulit-ulit na mga cycle ng pag-inflate, pagkakagasgas laban sa mga pantalan at
+    basura, at matinding pagbabago ng temperatura — habang pinananatili ang integridad ng istruktura nito sa loob ng
+    maraming taon. Sa{SITE.name}, ang aming PVC Fabric Lab ay nakatuon eksklusibo sa karakterisasyon, pagpapatunay, at
+    patuloy na pagpapabuti ng mga telang ginagamit namin sa bawat bangkang ginagawa namin.
+  </p>
+  <p>
+    Hindi kami umaasa lamang sa datasheet ng supplier. Bawat batch ng PVC at Hypalon tela na pumapasok sa aming workshop
+    ay independiyenteng sinusuri sa loob ng aming laboratoryo. Tinitiyak nito na ang materyal na espesipikasyon na
+    inilalathala namin ay ang performance ng materyal na matatanggap mo — lot pagkatapos ng lot, taon-taon.
+  </p>
+
+  <h2>Pamantayang kagamitan para sa pagsubok</h2>
+  <p>
+    Ang aming laboratoryo ng tela ay may kagamitan sa industriyal na antas na sumusunod sa ISO, ASTM, at EN na mga
+    pamaraan sa pagsubok:
+  </p>
+  <table>
+    <thead><tr><th>Kagamitan</th><th>Mga Parameter na Sinusukat</th><th>Pamantayan</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Universal tensile tester (50 kN)</td><td
+          >Puwersa ng pagkabasag, pag-uunat bago mabasag, propagasyon ng punit</td
+        ><td>/ ASTM D751</td></tr
+      >
+      <tr
+        ><td>Xenon-arc weathering chamber</td><td
+          >UV resistensya (pagbabago ng kulay, pagpapanatili ng lakas pagkatapos ng 2000 h)</td
+        ><td>/ ASTM G155</td></tr
+      >
+      <tr
+        ><td>Low-temperature flex tester</td><td>Crack point sa -30 &deg;C hanggang -50 &deg;C</td><td
+          >ISO 4675 / ASTM D2136</td
+        ></tr
+      >
+      <tr
+        ><td>Taber abrasion tester</td><td>Pagkawala ng timbang pagkatapos ng 1000 cycles (CS-10 wheel)</td><td
+          >ASTM D3389 / ISO 5470-1</td
+        ></tr
+      >
+      <tr
+        ><td>Thickness gauge (digital, 0.001 mm resolution)</td><td>Pagkakapare-pareho sa kabuuan ng lapad ng rolyo</td
+        ><td>ISO 2286-3</td></tr
+      >
+      <tr><td>Hydrostatic head tester</td><td>Pagtutol sa pagtagas ng tubig</td><td>ISO 811</td></tr>
+    </tbody>
+  </table>
+  <p class="text-sm text-gray-500">
+    * Lahat ng kagamitan ay kinakalibrate taun-taon ng mga third-party accredited na laboratoryo.
+  </p>
+
+  <h2>Mula sa datos hanggang desisyon: isang tipikal na daloy ng pagsusuri</h2>
+  <p>
+    Kapag dumating ang bagong kandidato sa tela, ito ay sumusunod sa isang standardisadong pitong-hakbang na proseso ng
+    kwalipikasyon:
+  </p>
+  <ol>
+    <li>
+      <strong>Inspeksyon ng resibo</strong>— biswal na pagsusuri para sa mga depekto sa ibabaw, butas ng karayom, at
+      pagsunod sa sukat.
+    </li>
+    <li>
+      <strong>Pagmamapa ng kapal</strong>— 20-point na pagsukat sa buong roll; Kinakailangan ang CV &lt; 3% para sa
+      pagtanggap.
+    </li>
+    <li>
+      <strong>Pagsusuri ng Tensile</strong>— 5 specimen sa direksyon ng warp at weft. Minimum na 3500 N/50 mm para sa
+      1100 dtexPVC.
+    </li>
+    <li>
+      <strong>UV pag-aayos</strong>— 1000 h exposure sa xenon-arc chamber; minimum na 80% strength retention na
+      kinakailangan.
+    </li>
+    <li>
+      <strong>Malamig na bitak</strong>— 4 na oras sa -35 °C, pagkatapos ay 180° na liko sa ibabaw ng 25 mm na mandrel.
+      Walang nakikitang bitak.
+    </li>
+    <li><strong>Resistensya sa pagkagasgas</strong>— 1000 cycles, pagbaba ng timbang ≤ 0.05 g.</li>
+    <li>
+      <strong>Pagpirma ng pag-apruba</strong>— pagkatapos lamang malampasan ang lahat ng pitong tarangkahan ay
+      inilalabas ang tela para sa produksyon.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Tipikal PVC na 1100 dtex — Tensile Retention Pagkatapos UV ng Exposure
+    </p>
+    <div class="flex items-end gap-3 h-40">
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-600 rounded-t" style="height:100%"></div><span class="text-xs mt-1"
+          >0 h<br />100%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-500 rounded-t" style="height:95%"></div><span class="text-xs mt-1"
+          >500 h<br />95%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-400 rounded-t" style="height:88%"></div><span class="text-xs mt-1"
+          >1000 h<br />88%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-300 rounded-t" style="height:82%"></div><span class="text-xs mt-1"
+          >2000 h<br />82%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-gray-300 rounded-t" style="height:65%"></div><span class="text-xs mt-1"
+          >Kalahok<br />~65%</span
+        >
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      Ang PVC aming 1100 dtex na tela ay nananatili &gt; 80% tensile strength pagkatapos ng 2000 h xenon-arc exposure,
+      kumpara sa karaniwang industry grades na bumababa sa 70%.
+    </p>
+  </div>
+
+  <h2>Ang aming propesyonal na koponan</h2>
+  <p>
+    Ang laboratoryo ay pinamumunuan ng dalawang full-time na material engineer, bawat isa ay may degree sa polymer
+    science o textile engineering na may minimum na anim na taon ng karanasan sa industriya. Sila ay sinusuportahan ng
+    tatlong technician na nagsasagawa ng araw-araw na testing at data logging. Regular na lumalahok ang team sa
+    inter-laboratory round-robin trials na inorganisa ng International Organization for Standardization (ISO) upang
+    patunayan ang katumpakan ng aming mga test methods.
+  </p>
+
+  <h2>Paglutas sa iyong pinakamahirap na hamon sa materyal</h2>
+  <p>
+    Iba-iba ang kapaligiran ng dagat. Ang isang patrol boat na nag-ooperate sa Persian Gulf ay nahaharap sa napakaibang
+    UV kondisyon at temperatura kumpara sa isang rescue craft sa North Sea. Tinutulungan ka ng aming Fabric Lab na
+    pumili — o bumuo — ng fabric specification na na-optimize para sa iyong operating profile.
+  </p>
+  <p>Kabilang sa mga kamakailang custom na solusyon ang:</p>
+  <ul>
+    <li>
+      Isang PVC high-abrasion na timpla para sa isang military client na ang mga bangka ay regular na natatatag sa coral
+      reefs (+40% abrasion life).
+    </li>
+    <li>
+      Isang Hypalon mababang temperatura na pormulasyon para sa isang istasyon ng pananaliksik sa Arctic, sinubukan
+      hanggang -50 °C nang walang pagiging marupok.
+    </li>
+    <li>
+      Isang color-stabilised orange na tela para sa search-and-rescue fleet, na nagpapanatili ng visibility matapos ang
+      3 taon ng tropical na sikat ng araw.
+    </li>
+  </ul>
+  <p>
+    Hindi kami nagbebenta ng "off-the-shelf" na mga tela at umaasa na ito ay gagana. Sinusuri, tinitiyak, at
+    inirerekomenda namin — o lumilikha — ng isang solusyong akma para sa iyong partikular na profile ng misyon. Iyon ay
+    ang{SITE.name}pagkakaiba.
+  </p>
+
+  <h2>Paano namin kayo pinaglilingkuran</h2>
+  <p>Kapag nagdala ka ng isang materyal na hamon sa amin, narito ang maaari mong asahan:</p>
+  <ol>
+    <li>
+      <strong>Konsultasyon</strong>— pinag-uusapan namin ang iyong operating environment, mga target sa pagganap, at
+      badyet.
+    </li>
+    <li>
+      <strong>Panukala</strong>— isang plano sa pagsusuri ang ginagawa na may malinaw na pamantayan sa pagpasa/pagkabigo
+      at isang iskedyul.
+    </li>
+    <li>
+      <strong>Pagpapatupad</strong>— ang aming laboratoryo ang nagsasagawa ng mga pagsusuri at gumagawa ng isang
+      detalyadong ulat na may hilaw na datos at paghahambing na pagsusuri.
+    </li>
+    <li>
+      <strong>Rekomendasyon</strong>— ipinapakita namin ang isang espesipikasyon ng tela, kabilang ang mga alternatibong
+      pagpipilian kung maraming materyales ang nakakatugon sa iyong mga kinakailangan.
+    </li>
+    <li>
+      <strong>Pagpapatuloy</strong>— pagkatapos ng paghahatid, mananatili kaming magagamit upang suportahan ang anumang
+      mga katanungan tungkol sa materyal na ginagamit sa serbisyo.
+    </li>
+  </ol>
+  <p>
+    Ang aming layunin ay hindi lamang basta magbenta sa iyo ng isang bangka. Ito ay upang matiyak na ang bangkang
+    matatanggap mo ay maaasahang gumagana sa mga kundisyon na iyong pinagtatrabahuhan — at nagsisimula ito sa tela.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Kailangan mo ba ng custom na espesipikasyon ng tela?</h2>
+    <p class="mt-2 text-sm text-muted">
+      Makipag-ugnayan sa aming koponan sa inhinyeriyang materyal upang talakayin ang iyong mga kinakailangan.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Makipag-ugnayan sa aming pangkat ng laboratoryo</a
+    >
+  </div>
+</section>

@@ -1,0 +1,200 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'hu' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">&larr; Vissza a K+F Központba</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Labor 05</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Prototípus műhely</h1>
+      <p class="mt-3 text-lg text-muted">CAD modelltől tengerre kész hajóig — megépített, felszerelt és bizonyított</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-ocean-voyager-1.webp"
+        alt="Aquafarer prototípus műhely hajó gyártás"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Ahol a tervezés valósággá válik</h2>
+  <p>
+    Egy CAD-modell, bármennyire is részletes, nem tudja megmutatni, hogyan fog valójában kezelni egy hajót, amíg nem
+    találkozik a vízzel. Ez az oka annak, hogy Prototípus Műhelyünk úgy van kialakítva, hogy a mérnöki adatokat a lehető
+    leggyorsabban és legpontosabban fizikai, tengerre kész járművé alakítsa. Minden új{SITE.name}A modellt — és minden
+    jelentős egyedi építést — átvezetnek ezen a műhelyen, mielőtt a gyártási szerszámokhoz hozzálátnak.
+  </p>
+  <p>
+    A műhely teljesen felszerelt a hajótest, csövek és a kötél egyidejű gyártására. Ez a párhuzamos
+    munkafolyamat-megközelítés a prototípus előkészítési idejét 8-12 hétre csökkenti a mérnöki megjelenéstől kezdve,
+    szemben az iparági normával 16-20 hétig. Ha az alkalmazása speciális megoldást igényel, kevesebb mint három hónap
+    alatt átléphetünk a koncepcióról a vízi validációra.
+  </p>
+
+  <h2>Műhely képességei</h2>
+  <table>
+    <thead><tr><th>Munkaállomás</th><th>Felszerelés</th><th>Cél</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Hajótest gyártása</td><td
+          >Forgó formázási sütő (HDPE), TIG hegesztőrek (alumínium), kézzel lefektethető formák (üvegszál)</td
+        ><td>Teljes méretarányú hajótestgyártás mindhárom anyagtípusban</td></tr
+      >
+      <tr
+        ><td>Cső összeállítás</td><td>RF hegesztőspresz, forrólevegős csapasztóállomás, felfújó tesztjig</td><td
+          >Teljes méretű csőösszeállítások gyártása minden keresztnyílással, kúptal és szeleppel</td
+        ></tr
+      >
+      <tr
+        ><td>Felszerelés és felszerelés</td><td
+          >Motoremelő (500 kg), konzol makett váz, hidraulikus slövő, elektromos kötél panel</td
+        ><td>Teljes felszerelés: motor, kormányzás, vezérlők, üzemanyagrendszer, elektronika, ülések</td></tr
+      >
+      <tr
+        ><td>Hangszerek</td><td
+          >GPS sebességérzékelő, üzemanyag-áramlásmérő, gyorsulásmérő, hőpár rendszer, adatlogger</td
+        ><td>Tengeri próbaműszerek telepítése és kalibrálása</td></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>A prototípus útja — lépésről lépésre</h2>
+  <ol>
+    <li>
+      <strong>Mérnöki átadás</strong>— A tervezési csomagot (3D modell, FEA-jelentés, anyagjegyzék, leépítési menetrend)
+      hivatalosan átnézi a műhelyvezető és a projektmérnök. Minden gyártási aggályt jeleznek és rendeznek a vágás
+      megkezdése előtt.
+    </li>
+    <li>
+      <strong>Hajótestgyártás</strong>— A hajótest a mérnöki előírások szerint épül. HDPE esetén: a forgó formázási
+      program a Moldex3D szimulációból származik. Alumínium esetén: a CNC-vágott lemezeket a TIG rekeszben hegesztik a
+      jóváhagyott hegesztési térkép alapján. Üvegszál esetén: a réteglemez könyvet rétegenként követik.
+    </li>
+    <li>
+      <strong>Csőgyártás</strong>— Az anyagot CNC-mintás sablonokkal vágják, majd RF-hegesztéssel teljes méretű kamrákba
+      hegesztik. Minden kamrát felfújnak a nyomás tesztelésére, és 24 órán át hagyják az első stabilizációhoz.
+    </li>
+    <li>
+      <strong>Szerelés és kötélzés</strong>— A törzs és a csövek össze vannak kötve. A motor fel van függesztve, a
+      kormányzás és a vezérlők össze vannak kötve, az üzemanyag-rendszer beszerelve van, és minden elektromos áramkör be
+      van kötve és ellenőrizve.
+    </li>
+    <li>
+      <strong>Statikus tesztek</strong>— Mielőtt a hajó vízhez ér, a következő felhajtóképesség-ellenőrzésen (teljes
+      terhelés + 30%-os tartalék), üzemanyagrendszer nyomásvizsgálaton, kormányrendszer teljes zárolási ciklusteszten,
+      elektromos földkötés folytonossági teszten.
+    </li>
+    <li><strong>Tengeri próbaprogram</strong>— 20 óra víz alatti tesztelés, részletezve lentebb.</li>
+    <li>
+      <strong>Prototípus áttekintés</strong>— Hivatalos aláírási találkozót tartanak a mérnöki, gyártási és minőségi
+      csapatokkal. Minden szükséges tervezési változtatást dokumentálnak és beépítenek a gyártási nyilatkozatba.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      20 órás tengeri próbaprogram — Tesztmenetrend
+    </p>
+    <div class="space-y-2 text-sm">
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">2 h</span><span class="flex-1"
+          >Kikötői manőverezés — alacsony sebességű kezelhetőség, hátramenet, sárvédő ellenőrzés</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">4 h</span><span class="flex-1"
+          >Sebességpróba — GPS-ellen ellenőrzött végsebesség, utazósebesség, üzemanyag-fogyasztás 3 fordulat/perc ponton</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Kangósítási teszt — taktikai átmérő, előrehaladás és átadás 20 csomónál, bal oldalon és jobb oldalon</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Csapásmérő — ismétlődő futások 0,5–1,0 m vágáson; gyorsulásmérő a kormányülés alapján</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Stabilitási teszt — statikus sarokszög 4 legénységi + felszereléssel jobb oldalra, eloszlatott terheléssel</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Állóképességi futás — 3 óra folyamatos útfutáson; hőmérséklet-ellenőrzés (motor, üzemanyag, elektromos)</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">2 h</span><span class="flex-1"
+          >Végső ellenőrzés — minden rendszer vizsgálata a tárgyalás után, minden rögzítőt meghúzás/ellenőrzés,
+          dokumentumok megállapítása</span
+        >
+      </div>
+    </div>
+  </div>
+
+  <h2>Egyedi prototípus egyedi alkalmazásokhoz</h2>
+  <p>
+    A Prototípus Műhely az, ahol megoldjuk azokat a problémákat, amelyeket a hagyományos gyártású hajók nem tudnak
+    megoldani. A legutóbbi példák:
+  </p>
+  <ul>
+    <li>
+      7,8 méter RIB egy kereső-mentő szervezet számára, amely egyedi kabinszerkezetet igényel borulás elleni védelemmel,
+      integrált hordágytartókkal és orrra szerelt szonár kapszolával — mind prototípusként készült, szerelt és tesztelt
+      a létesítményünkben.
+    </li>
+    <li>
+      Egy 5,2 méteres felfújható egy hidrográfiai felmérési vállalkozó számára, lerövidített keresztfüllel, levehető
+      műszerárbóccal és átmenő hajózsebekkel, amelyek a vízzavarok minimalizálására tervezték.
+    </li>
+    <li>
+      Egy elektromos hajtású 4,5 méteres tender egy szuperjachthoz, ahol a prototípust használták a hatótávolság, a
+      töltési infrastruktúra és a zajszint ellenőrzésére, mielőtt az ügyfél négy fős flottát vállalt.
+    </li>
+  </ul>
+
+  <h2>Prototípus csapatunk</h2>
+  <p>
+    A műhely nyolc, többszakadékos tengerészi technikus dolgozik, akik mindegyike legalább kettőben a három fő
+    szakterületből (hajótest, cső, kötél) átképezett. A csapatvezető egy mesterhajóépítő, aki 16 éves tapasztalattal
+    rendelkezik egyedi egyedi építésektől a gyártási sorozatokig. Minden prototípushoz egy dedikált projektmérnök bízik
+    meg, aki az ügyfél egyetlen kapcsolattartója az építés és a próba folyamat során.
+  </p>
+
+  <h2>Ügyfél részvétele</h2>
+  <p>
+    Aktívan ösztönözzük ügyfeleinket, hogy vegyenek részt a prototípus építése során zajló kulcsfontosságú
+    mérföldköveken – különösen az első felszerelési felülvizsgálaton és a tengeri próbán. Az Ön működési visszajelzése
+    ezekben a szakaszokban felbecsülhetetlen értékű a hajó finomhangolásában, mielőtt a gyártásba lép. Nem üres űrben
+    építünk; Önnel együttműködve építünk.
+  </p>
+  <p>
+    A 20 órás tengeri próba lehetőséget ad csapatod számára, hogy megismerkedjenek a hajó kezelésével,
+    rendszerelrendezésével és karbantartási követelményeivel, így a gyártási hajók szállítása után zökkenőmentes átmenet
+    a szolgálatba.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Kezdd el a prototípus projektedet</h2>
+    <p class="mt-2 text-sm text-muted">
+      Meséljen nekünk a szükséges hajóról, és mi prototípus fejlesztési tervet is felajánlunk.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Lépj kapcsolatba prototípus készítésű csapatunkkal</a
+    >
+  </div>
+</section>

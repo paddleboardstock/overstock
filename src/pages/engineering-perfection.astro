@@ -1,0 +1,185 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+import ExperienceLayer from '~/components/content/ExperienceLayer.astro';
+import RelatedPages from '~/components/content/RelatedPages.astro';
+
+const metadata = {
+  title: `Engineering Perfection — Inflatable Boat Manufacturing Excellence — ${SITE.name}`,
+  description: `${SITE.name}'s engineering philosophy \u2014 precision manufacturing, rigorous quality control, and segment-specific design for whitewater, fishing, dinghies and recreational inflatable boats.`,
+};
+
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Engineering Perfection' }];
+
+const pillars = [
+  {
+    title: 'Superior Material Sourcing',
+    content:
+      'We invest considerable resources in identifying, testing, and procuring the finest fabrics, adhesives, and components available globally. We do not compromise on material specifications for cost savings. Our sourcing protocol includes batch testing for tensile strength, tear resistance, coating adhesion, and UV stability.',
+  },
+  {
+    title: 'Precision Engineering & Design',
+    content:
+      'Our design team comprises experienced naval architects who leverage advanced CAD software and real-world testing to create hulls that are hydrodynamically efficient, exceptionally stable, and robust. Every curve, seam, and attachment point is meticulously planned and analyzed.',
+  },
+  {
+    title: 'Craftsmanship & Manufacturing Excellence',
+    content:
+      'Aquafarer employs highly skilled technicians who are masters of their craft. Our production facility is equipped with state-of-the-art CNC cutting machines and thermo-welding equipment. We foster a culture of meticulousness, where attention to detail is paramount at every stage of assembly.',
+  },
+  {
+    title: 'Rigorous Quality Control & Testing',
+    content:
+      'Quality is built in from the very beginning. We implement a multi-layered QC system with stringent checks at each critical step, culminating in comprehensive final testing including 24-48 hour pressure holding tests, leak detection, dimensional verification, and functional tests.',
+  },
+];
+
+const segments = [
+  {
+    name: 'Whitewater Inflatables',
+    desc: 'High-denier PVC or premium Hypalon with heavy reinforcements, high rocker, self-bailing floors, large tube diameters for maximum buoyancy, and continuous grab lines.',
+  },
+  {
+    name: 'Fishing Inflatables',
+    desc: 'Exceptional stability and shallow draft. Features include rod holders, gear mounts, elevated seating, and quieter muted colors for stealth approach.',
+  },
+  {
+    name: 'Dinghies & Tenders',
+    desc: 'Lightweight and compact for easy storage and lifting. Efficient rowing and motoring performance with reinforced towing points and substantial rub strakes.',
+  },
+  {
+    name: 'General Recreational Craft',
+    desc: 'Versatile design for family boating with high priority on stability, safety, comfort, and ease of inflation, deflation, and transport.',
+  },
+];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <section class="px-6 sm:px-6 py-16 sm:py-20 lg:py-24 mx-auto max-w-5xl text-center">
+    <p class="text-sm font-semibold text-primary uppercase tracking-wider">Manufacturing Philosophy</p>
+    <h1 class="mt-3 text-4xl md:text-5xl font-bold">Engineering Perfection</h1>
+    <p class="mt-3 text-lg text-muted max-w-3xl mx-auto">
+      Aquafarer was founded on a simple yet profound principle: to produce perfect products. This is not a marketing
+      slogan — it is the bedrock of our operational philosophy, driving every material selection, design decision, and
+      quality control protocol.
+    </p>
+  </section>
+
+  <section class="px-6 sm:px-6 py-16 mx-auto max-w-4xl space-y-12">
+    {
+      pillars.map((p, i) => (
+        <div class={`grid md:grid-cols-2 gap-8 items-center ${i % 2 === 1 ? 'md:order-2' : ''}`}>
+          <div class={i % 2 === 1 ? 'md:order-2' : ''}>
+            <h2 class="text-xl font-bold">{p.title}</h2>
+            <p class="mt-3 text-muted leading-relaxed">{p.content}</p>
+          </div>
+          <div class={`rounded-xl overflow-hidden ${i % 2 === 1 ? 'md:order-1' : ''}`}>
+            <img
+              src={
+                [
+                  'https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-pvc-material-testing.webp',
+                  'https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-design-discussion.webp',
+                  'https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-sup-manufacturing.webp',
+                  'https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-pressure-testing.webp',
+                ][i]
+              }
+              alt={p.title}
+              class="w-full h-64 object-cover rounded-xl"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      ))
+    }
+  </section>
+
+  <section class="px-6 sm:px-6 py-16 mx-auto max-w-6xl bg-gray-50 dark:bg-gray-900">
+    <div class="text-center mb-12">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Specialized Segments</p>
+      <h2 class="mt-2 text-3xl font-bold">Tailored for Adventure</h2>
+    </div>
+    <div class="grid md:grid-cols-2 gap-6">
+      {
+        segments.map((s) => (
+          <div class="p-6 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+            <h3 class="text-lg font-bold">{s.name}</h3>
+            <p class="mt-2 text-muted text-sm leading-relaxed">{s.desc}</p>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="px-6 sm:px-6 py-16 mx-auto max-w-4xl">
+    <div class="rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-8">
+      <h2 class="text-2xl font-bold text-center">The Art & Science of Manufacturing</h2>
+      <p class="mt-4 text-muted leading-relaxed text-center max-w-3xl mx-auto">
+        From CNC-precision fabric cutting and advanced thermal welding to controlled-environment adhesive bonding and
+        exhaustive multi-stage testing, every Aquafarer boat represents the pinnacle of inflatable craft manufacturing.
+        Our production process is designed to prevent common defects — seam leaks, delamination, valve failures,
+        dimensional inconsistencies — before they can occur.
+      </p>
+      <div class="text-center mt-8">
+        <a
+          href="/contact"
+          class="inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+        >
+          Discuss your project →
+        </a>
+      </div>
+    </div>
+  </section>
+  <ExperienceLayer
+    title="Engineering Philosophy in Practice"
+    subtitle="Real examples of how our engineering standards translate into field performance."
+    stories={[
+      {
+        quote:
+          "We tested five manufacturers' SUPs for our rental fleet. After 500 rentals, the Aquafarer boards had the lowest failure rate by a wide margin — less than 2% vs 8-15% for competitors.",
+        narrative:
+          'A European resort operator conducted a year-long comparative test of inflatable SUPs from five manufacturers for their 200-board rental fleet. Aquafarer boards were tested alongside products from China, Europe, and US manufacturers. After 500 rental cycles per board (inflation, use, deflation, storage), the Aquafarer boards showed the least valve wear, the fewest seam leaks, and the best pressure retention. The resort standardized on Aquafarer for all future fleet purchases.',
+        context: 'Resort rental fleet comparison, Mediterranean, 2024',
+        source: 'Resort Operations Director',
+      },
+      {
+        quote:
+          'When a customer reported a slow leak on a board after two years, we traced it to a valve core that had been cross-threaded during a field repair. The board itself was still structurally perfect.',
+        narrative:
+          "Aquafarer's quality team investigates every warranty claim thoroughly. In this case, a two-year-old board returned with a slow leak was found to have no manufacturing defects — the drop-stitch core, seams, and fabric were all within specification. The leak was traced to a valve core damaged during customer maintenance. The board was repaired and returned. The incident reinforced Aquafarer's commitment to designing for repairability and providing clear maintenance documentation.",
+        context: 'Warranty analysis, North America, 2024',
+        source: 'Quality Assurance Team',
+      },
+    ]}
+  />
+  <RelatedPages
+    title="Explore More"
+    subtitle="Related engineering and manufacturing resources"
+    links={[
+      {
+        title: 'Quality Control & Testing',
+        description: 'Multi-layered QC system with stringent checks at each critical manufacturing step.',
+        href: '/quality',
+        label: 'Quality',
+      },
+      {
+        title: 'R&D Center',
+        description:
+          'Our research facilities including PVC Fabric Lab, Hydrodynamic Test Tank, and Prototype Workshop.',
+        href: '/randdcenter',
+        label: 'R&D',
+      },
+      {
+        title: 'Factory Overview',
+        description: '12,000 m² facility with RF welding, drop-stitch production, and custom assembly lines.',
+        href: '/factory',
+        label: 'Facility',
+      },
+      {
+        title: 'Design & Innovation',
+        description: 'Full-service design studio for custom ODM projects, from concept to production.',
+        href: '/design-powerhouse',
+        label: 'Design',
+      },
+    ]}
+  />
+</Layout>

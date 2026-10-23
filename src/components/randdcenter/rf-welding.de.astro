@@ -1,0 +1,183 @@
+---
+import { SITE } from 'astrowind:config';
+const { lang = 'de' } = Astro.props;
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={`/${lang}/randdcenter`} class="text-sm text-gray-500 hover:underline">&larr; Zurück zum F&amp;E-Zentrum</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Lab 03</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">HF-Schweißzentrum</h1>
+      <p class="mt-3 text-lg text-muted">Dielektrische Fügetechnologie für Schweißnähte, die dem Druck standhalten</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-jungle-mandala-1.webp"
+        alt="HF-Schweißprozess — dielektrisches Fügen bei Aquafarer"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Die Wissenschaft hinter der Naht</h2>
+  <p>
+    Ein Schlauchboot ist nur so zuverlässig wie seine Nähte. Eine einzige schwache Schweißnaht kann eine ganze Kammer
+    gefährden — und auf See ist ein Kammerausfall keine Unannehmlichkeit, sondern ein Sicherheitsrisiko. Bei
+    {SITE.name} haben wir in ein eigenes Hochfrequenz-Schweißzentrum (HF) investiert, das industrielle dielektrische Schweißpressen
+    mit strenger Prozesskontrolle und Schweißnachprüfungen verbindet. Jede Naht, die wir herstellen, ist dokumentiert, rückverfolgbar
+    und zertifiziert, um die Anforderungen von — der internationalen Norm für aufblasbare Wasserfahrzeuge — zu erfüllen oder
+    zu übertreffen.
+  </p>
+  <p>
+    Beim HF-Schweißen wird hochfrequente elektromagnetische Energie (typischerweise 27.12 MHz) genutzt, um die polaren
+    Moleküle im PVC- oder Hypalon-beschichteten Gewebe anzuregen und so Wärme exakt an der Materialgrenzfläche zu
+    erzeugen. Anders als beim Heißluft- oder Heizkeilschweißen erzeugt das HF-Schweißen eine echte molekulare Verbindung
+    — die beiden Gewebelagen verschmelzen in der Schweißzone zu einem einzigen homogenen Werkstoff, wodurch eine
+    Verbindung entsteht, die so fest ist wie das Ausgangsmaterial selbst.
+  </p>
+
+  <h2>Schweißausrüstung und Prozesskontrolle</h2>
+  <p>Unser Schweißzentrum ist ausgestattet mit:</p>
+  <table>
+    <thead><tr><th>Maschine</th><th>Leistung / Kapazität</th><th>Anwendung</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Dielektrische HF-Presse 1</td><td>15 kW, Tischplatte 2000 &times; 600 mm</td><td
+          >Hauptlängsnähte, Verbindungen Spiegelheck-Schlauch</td
+        ></tr
+      >
+      <tr
+        ><td>Dielektrische HF-Presse 2</td><td>10 kW, Tischplatte 1500 &times; 500 mm</td><td
+          >Schwallnaht-Schweißungen, Konenansätze, Ventilflicken</td
+        ></tr
+      >
+      <tr
+        ><td>CNC-gesteuerte HF-Schweißanlage</td><td>8 kW, XY-Tisch 2500 &times; 1200 mm</td><td
+          >Geschwungene Nähte, Logo-/Panel-Prägung, Präzisionsflicken</td
+        ></tr
+      >
+      <tr
+        ><td>Automatischer Heizkeil-Schweißer</td><td>Variable Temperatur, max. 1.2 m/min</td><td
+          >Ersatzverfahren für Hypalon/CSM-Materialien</td
+        ></tr
+      >
+    </tbody>
+  </table>
+  <p>
+    Jede HF-Presse ist mit einer Regelkreis-Überwachung von Temperatur und Druck ausgestattet. Die Schweißparameter —
+    Leistung, Presszeit, Kühlzeit, Elektrodendruck — werden pro Materialtyp programmiert und für die vollständige
+    Rückverfolgbarkeit in unserem Manufacturing Execution System (MES) aufgezeichnet.
+  </p>
+
+  <h2>Schweißqualitätsprüfungen — jede Naht, jedes Boot</h2>
+  <p>Die Integrität der Schweißnähte wird über ein verbindliches Vier-Prüfungs-Protokoll verifiziert:</p>
+  <ol>
+    <li>
+      <strong>Sichtprüfung</strong> — 100 % der Nähte werden auf Durchbrand, Fehlausrichtung, Verunreinigungen oder unvollständige
+      Verschmelzung geprüft. Fehlerquoten-Schwelle: 0.5 % der laufenden Meter.
+    </li>
+    <li>
+      <strong>Schälversuch ()</strong> — aus einem mit jeder Produktionscharge geschweißten Prüfmuster wird ein 25 mm breiter
+      Streifen geschnitten. Mindest-Schälkraft: 120 N/25 mm für PVC 1100 dtex.
+    </li>
+    <li>
+      <strong>Luftdichtheitsprüfung</strong> — Jede fertige Kammer wird auf den 1.25-fachen Betriebsdruck aufgeblasen und
+      24-48 Stunden gehalten. Der Druckabfall darf 2 % nicht überschreiten.
+    </li>
+    <li>
+      <strong>Thermischer Zyklustest</strong> — Prüfmuster werden 50 Zyklen von -20 &deg;C bis +60 &deg;C geführt und anschließend
+      erneut schälgeprüft. Zulässiger Festigkeitsverlust: &lt; 10 %.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Vergleich der Schälfestigkeit — HF vs. Heißluftschweißen (PVC 1100 dtex)
+    </p>
+    <div class="space-y-3">
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">HF-Schweißung</span><div
+          class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded"
+        >
+          <div class="h-full bg-blue-600 rounded" style="width:92%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">184 N</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">Heißluft</span><div
+          class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded"
+        >
+          <div class="h-full bg-gray-400 rounded" style="width:65%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">130 N</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">Mindestwert</span><div
+          class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded"
+        >
+          <div class="h-full bg-green-500 rounded" style="width:48%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">96 N</span>
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      Das HF-Schweißen erreicht durchgängig 90-95 % der Festigkeit des Ausgangsmaterials — deutlich über der
+      Mindestanforderung.
+    </p>
+  </div>
+
+  <h2>Professionelle Expertise</h2>
+  <p>
+    Unser Schweißteam wird von einem leitenden Prozessingenieur mit 11 Jahren Erfahrung im dielektrischen Schweißen
+    beschichteter Textilien geführt. Jeder Bediener durchläuft ein 6-monatiges internes Zertifizierungsprogramm, bevor
+    er an Produktionsnähten arbeiten darf. Die Rezertifizierung ist jährlich erforderlich und umfasst einen praktischen
+    Schweißtest, der anhand unseres internen Grade-A-Standards bewertet wird (Schälfestigkeit &ge; 160 N/25 mm).
+  </p>
+
+  <h2>Individuelle Schweißlösungen für besondere Anforderungen</h2>
+  <p>
+    Wir verstehen, dass eine Schweißspezifikation nicht für jede Anwendung passt. Unser HF-Schweißzentrum entwickelt
+    regelmäßig individuelle Nahtkonfigurationen für Kunden mit besonderen Anforderungen:
+  </p>
+  <ul>
+    <li>
+      <strong>Mehrschichtige Verstärkungsflicken</strong> — für stark beanspruchte Bereiche wie Scheuerleisten und Bugkonen
+      entwickeln wir mehrlagige HF-Schweißungen, die eine verschleißfeste Außenschicht integrieren, ohne die Flexibilität
+      zu beeinträchtigen.
+    </li>
+    <li>
+      <strong>Leitfähige oder HF-undurchlässige Nähte</strong> — für Militär- oder Überwachungsfahrzeuge, die eine elektromagnetische
+      Abschirmung benötigen, schweißen wir leitfähige Maschenlagen in den Nahtaufbau ein.
+    </li>
+    <li>
+      <strong>Schweißen von Farbwechsel-Panels</strong> — zweifarbige Gewebepanels (z. B. orangefarbener Rumpf + graues Oberdeck)
+      werden mit einer verdeckten Überlappung geschweißt, um die Markenästhetik ohne sichtbare Stoßlinie zu bewahren.
+    </li>
+  </ul>
+
+  <h2>Unser Versprechen an Sie</h2>
+  <p>
+    Jedes Boot, das wir ausliefern, trägt unsere Schweißqualitätsgarantie: Wenn innerhalb der Garantiezeit im normalen
+    Betrieb eine Naht versagt, reparieren oder ersetzen wir die betroffene Kammer kostenlos, und es wird eine
+    Ursachenuntersuchung durchgeführt, um ein erneutes Auftreten zu verhindern. Das ist nicht einfach eine Garantie — es
+    ist ein Bekenntnis zur kontinuierlichen Verbesserung, angetrieben durch reale Betriebsdaten.
+  </p>
+  <p>
+    Wenn Sie sich für {SITE.name} entscheiden, entscheiden Sie sich für Nähte, die entwickelt, geprüft und dokumentiert sind
+    — nicht nur geschweißt. Das ist der Unterschied zwischen einem Boot, das schwimmt, und einem Boot, das funktioniert.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Besprechen Sie Ihre Schweißanforderungen</h2>
+    <p class="mt-2 text-sm text-muted">
+      Individuelle Nahtspezifikationen, Materialverträglichkeit oder Prozessvalidierung.
+    </p>
+    <a
+      href={`/${lang}/contact`}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Kontaktieren Sie unser Schweißteam</a
+    >
+  </div>
+</section>

@@ -1,0 +1,56 @@
+hero:
+  tagline: Kvalitātes kontroles laboratorija
+  title: Testēšanas laboratorija un kvalitātes nodrošināšana
+  subtitle: Neatkarīga kvalitātes laboratorija ar ISO 9001 procesiem — katra vienība tiek pārbaudīta pirms nosūtīšanas
+intro: Aquafarer darbojas kā īpaša kvalitātes kontroles laboratorija, kas darbojas neatkarīgi no ražošanas. Katrs izejmateriālu un gatavo laivu partijas iziet dokumentētus pārbaudes protokolus pirms izdošanas. Mūsu KZ komanda ziņo tieši vadībai, nodrošinot objektīvus kvalitātes lēmumus.
+highlights:
+  - value: 100%
+    label: Vienības pārbaudītas spiedienam
+    detail: Katrs nodalījums, katra laiva
+  - value: 48 h
+    label: Gaisa noturības pārbaudes ilgums
+    detail: Pie 1,25× nominālā spiediena
+  - value: '&lt;5%'
+    label: Maksimāli pieļaujamā spiediena krituma vērtība
+    detail: 24 stundu uzglabāšanas periodā
+  - value: AQL 2,5
+    label: Lielā defekta slieksnis
+    detail: Saskaņā ar ISO 2859 paraugu ņemšanu
+test_procedures:
+  - title: Izejvielu inspekcija
+    description: Katra ienākošā PVC, Hypalon, drop-stitch auduma un aparatūras partija tiek pārbaudīta pirms pieņemšanas. Pārbaudīta ir stiepes izturība (ASTM D751), plēšanas izturība (ISO 4674) un UV izturība. Nesaskaņotie materiāli tiek izolēti un atgriezti.
+    standards:
+      - ASTM D751 (stiepe)
+      - ISO 4674 (plēšana)
+      - ISO 4892 (UV)
+  - title: Procesa KZ kontrolpunkti
+    description: Ražošanas operatori veic pašpārbaudi katrā posmā. KZ auditori veic nejaušu paraugu ņemšanu visu maiņu laikā. Metinājumu lobīšanas testi tiek veikti ik pēc 50 vienībām. Dimensiju pārbaudes tiek veiktas katram 20. panelim.
+    standards:
+      - ASTM D751 (lobīšana)
+      - Iekšējā 100 punktu kontrolsaraksts
+      - ISO 2859 paraugu ņemšana
+  - title: 48 stundu gaisa noturības tests
+    description: Katrs cauruļu nodalījums tiek piepūsts līdz 125% no nominālā spiediena un turēts 48 stundas. Spiediena sensori nepārtraukti reģistrē ar temperatūras kompensāciju. Jebkurš nodalījums, kurš pārsniedz 5% spiediena kritumu, aktivizē automātisku partijas pārbaudi.
+    standards:
+      - ISO 6185
+      - CE 2013/53/ES
+  - title: Slodzes un līdzsvara testēšana
+    description: Pabeigtās laivas tiek pārbaudītas maksimālajā nominālajā kapacitātē stabilitātes, brīvā bortu augstuma un vadāmības pārbaudei. Katrā kuģa vienībā tiek veikta ūdens pārbaude pirms galīgās inspekcijas apstiprināšanas.
+    standards:
+      - ISO 12217
+      - CE 2013/53/ES
+equipment:
+  - name: Universālā testēšanas mašīna (stiepes)
+    spec: 5 kN, saskaņā ar ASTM D751
+  - name: Spiediena starpības testētājs
+    spec: Daudzkanālu, 0–50 psi, datu fiksēšana
+  - name: UV Laika apstākļu kamera
+    spec: ISO 4892, 1 000 stundu cikli
+  - name: Biezuma mērītājs (digitāls)
+    spec: 0,01 mm izšķirtspēja
+  - name: Līšanas testētājs (metinājums)
+    spec: Motorizēts, 50 N kapacitāte
+  - name: Temperatūras kamera
+    spec: -40 °C līdz +100 °C
+  - name: Noplūdes noteikšanas tvertne
+    spec: 6 m × 2 m, apgaismota

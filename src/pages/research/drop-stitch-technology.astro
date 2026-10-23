@@ -1,0 +1,188 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+
+const metadata = {
+  title: `How Drop Stitch Works — The Engineering Behind Inflatable Rigid Cores | ${SITE.name}`,
+  description: `Deep dive into drop stitch technology: how thousands of internal threads turn flexible PVC into a rigid, high-pressure core capable of 15-20 PSI. Construction methods, materials, quality indicators, and applications across SUPs, kayaks, and inflatable boats.`,
+  ignoreTitleTemplate: true,
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'How Drop Stitch Works — The Engineering Behind Inflatable Rigid Cores',
+  description: metadata.description,
+  author: { '@type': 'Organization', name: SITE.name },
+  datePublished: '2024-01-15',
+  dateModified: '2025-06-01',
+};
+---
+
+<Layout metadata={metadata}>
+  <JsonLd data={jsonLd} />
+
+  <article class="max-w-4xl mx-auto px-6 py-16">
+    <nav class="text-sm text-gray-500 mb-8">
+      <a href="/" class="hover:text-sky-600">{SITE.name}</a>
+      <span class="mx-2">/</span>
+      <a href="/research" class="hover:text-sky-600">Research</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-900">Drop Stitch Technology</span>
+    </nav>
+
+    <div class="mb-4">
+      <span
+        class="inline-block text-xs font-semibold uppercase tracking-wider text-sky-600 bg-sky-50 px-3 py-1 rounded-full"
+        >Technology</span
+      >
+      <span class="ml-3 text-sm text-gray-400">8 min read</span>
+    </div>
+
+    <h1 class="text-4xl font-bold text-gray-900 mb-6">How Drop Stitch Works</h1>
+    <p class="text-xl text-gray-500 mb-12 leading-relaxed">
+      Drop stitch is the core technology that made modern inflatable stand-up paddle boards, lightweight kayaks, and
+      high-pressure inflatable boats possible. It bridges the gap between portability and rigidity.
+    </p>
+
+    <div class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600">
+      <h2>What Is Drop Stitch?</h2>
+      <p>
+        Drop stitch (also called "drop-stitch fabric" or "drop-stitch core") is a construction method in which thousands
+        of individual polyester threads connect the top and bottom layers of a fabric shell. When the shell is inflated,
+        these threads act as internal tension members <span class="text-gray-800 font-semibold">—</span> they prevent the
+        top and bottom panels from bulging outward into a round shape, forcing the panel to remain flat and rigid.
+      </p>
+      <p>
+        The result is a lightweight, portable structure that can withstand 15 <span class="text-gray-800 font-semibold"
+          >–</span
+        > 20 PSI of internal pressure <span class="text-gray-800 font-semibold">—</span> comparable to the rigidity of a hard-shell
+        board but fully deflatable for storage and transport.
+      </p>
+
+      <h2>How It Works: The Physics</h2>
+      <p>
+        In a conventional inflatable structure (like a balloon or an air mattress), the internal air pressure pushes
+        equally in all directions. Without internal restraint, the structure becomes cylindrical or spherical. Drop
+        stitch solves this by introducing <strong>tensile reinforcement</strong>:
+      </p>
+      <ul>
+        <li><strong>Thousands of threads</strong> connect the top and bottom fabric layers</li>
+        <li><strong>When inflated</strong>, the air pressure tries to push the top and bottom apart</li>
+        <li>
+          <strong>The threads resist</strong> this separation, transferring the load into tension along the thread axis
+        </li>
+        <li><strong>The result</strong> is a flat, rigid panel that resists bending</li>
+      </ul>
+      <p>
+        The thread density (typically 1 <span class="text-gray-800 font-semibold">–</span> 2 threads per square inch) determines
+        the maximum pressure the panel can withstand. Higher density = higher pressure capacity = greater rigidity.
+      </p>
+
+      <h2>Construction Process</h2>
+      <ol>
+        <li>
+          <strong>Weaving:</strong> Polyester threads are woven simultaneously into two separate layers of base fabric (typically
+          1,100 DTEX or 1,680 DTEX PVC-coated polyester). The threads are loop-woven between the layers at a 90<span
+            class="text-gray-800 font-semibold">°</span
+          > angle.
+        </li>
+        <li>
+          <strong>Coating:</strong> The woven base fabric is coated with PVC (or occasionally TPU) using a knife-coating or
+          calendar-coating process. This seals the threads and creates the air-tight membrane.
+        </li>
+        <li>
+          <strong>Layer bonding:</strong> The drop-stitch core is bonded to outer laminated layers (typically 0.9 mm or 1.2
+          mm PVC) using heat lamination or adhesive.
+        </li>
+        <li>
+          <strong>Welding:</strong> Rail bands are welded along the edges using hot air welding, RF welding, or high-frequency
+          welding to create the side walls of the board.
+        </li>
+        <li>
+          <strong>Valve installation:</strong> Boston valves or Halkey-Roberts valves are installed, typically with a pressure
+          relief mechanism to prevent over-inflation.
+        </li>
+      </ol>
+
+      <h2>Key Quality Indicators</h2>
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="bg-gray-100">
+            <th class="p-3 text-left font-semibold text-gray-900 border">Parameter</th>
+            <th class="p-3 text-left font-semibold text-gray-900 border">Entry Level</th>
+            <th class="p-3 text-left font-semibold text-gray-900 border">Premium</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            ><td class="p-3 border">Thread density</td><td class="p-3 border">1 thread / sq in</td><td
+              class="p-3 border">2 threads / sq in</td
+            ></tr
+          >
+          <tr
+            ><td class="p-3 border">Base fabric</td><td class="p-3 border">1,100 DTEX</td><td class="p-3 border"
+              >1,680 DTEX</td
+            ></tr
+          >
+          <tr
+            ><td class="p-3 border">Max pressure</td><td class="p-3 border"
+              >12 <span class="text-gray-800 font-semibold">–</span> 15 PSI</td
+            ><td class="p-3 border">18 <span class="text-gray-800 font-semibold">–</span> 22 PSI</td></tr
+          >
+          <tr
+            ><td class="p-3 border">PVC thickness</td><td class="p-3 border"
+              >0.6 <span class="text-gray-800 font-semibold">–</span> 0.9 mm</td
+            ><td class="p-3 border">1.0 <span class="text-gray-800 font-semibold">–</span> 1.2 mm</td></tr
+          >
+          <tr
+            ><td class="p-3 border">Rail construction</td><td class="p-3 border">Folded &amp; glued</td><td
+              class="p-3 border">Welded &amp; fusion-bonded</td
+            ></tr
+          >
+        </tbody>
+      </table>
+
+      <h2>Applications</h2>
+      <ul>
+        <li>
+          <strong>SUP Boards:</strong> 4" <span class="text-gray-800 font-semibold">–</span> 6" thickness, 15 <span
+            class="text-gray-800 font-semibold">–</span
+          > 20 PSI, 1 <span class="text-gray-800 font-semibold">–</span> 2 threads/sq in
+        </li>
+        <li>
+          <strong>Kayaks:</strong> Drop-stitch floor + inflatable side chambers, 10 <span
+            class="text-gray-800 font-semibold">–</span
+          > 15 PSI floor
+        </li>
+        <li>
+          <strong>RIB floors:</strong> Drop-stitch floors for lightweight, packable RIB tenders, 12 <span
+            class="text-gray-800 font-semibold">–</span
+          > 18 PSI
+        </li>
+        <li><strong>Boat fenders:</strong> Low-pressure drop stitch for shaped fenders with flat faces</li>
+      </ul>
+
+      <h2>Drop Stitch vs. Air Deck (Fiberglass or Wood Core)</h2>
+      <p>
+        Hard-shell boards use EPS foam cores with fiberglass or wood stringer reinforcement. They are lighter, stiffer,
+        and more responsive <span class="text-gray-800 font-semibold">—</span> but they cannot be deflated. Drop stitch trades
+        some rigidity for full portability. For most recreational users, modern drop-stitch SUPs at 20 PSI are indistinguishable
+        from entry-level hard boards in rigidity.
+      </p>
+
+      <h2>How Aquafarer Uses Drop Stitch</h2>
+      <p>
+        Aquafarer uses a 1,680 DTEX drop-stitch core across its SUP lineup, with 2 threads per square inch and a 1.2 mm
+        PVC outer laminate. Boards are rated to 20 PSI and undergo a 24-48 hour pressure hold test at 1.25x rated
+        pressure before shipment. Rail bands are hot-air welded with triple-layer fusion, and pressure relief valves are
+        standard across all models.
+      </p>
+    </div>
+
+    <div class="mt-16 pt-8 border-t border-gray-200">
+      <a href="/research" class="text-sky-600 hover:text-sky-700 font-medium">&larr; Back to Research</a>
+    </div>
+  </article>
+</Layout>

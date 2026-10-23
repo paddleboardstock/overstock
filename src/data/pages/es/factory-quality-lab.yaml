@@ -1,0 +1,60 @@
+hero:
+  tagline: Laboratorio de control de calidad
+  title: Laboratorio de pruebas y aseguramiento de calidad
+  subtitle: Laboratorio de calidad independiente con procesos ISO 9001 — cada unidad se prueba antes del envío
+
+intro: Aquafarer opera un laboratorio de control de calidad dedicado e independiente de la producción. Cada lote de materia prima y cada embarcación terminada pasa por protocolos de inspección documentados antes de su liberación. Nuestro equipo de control de calidad reporta directamente a la dirección, lo que garantiza decisiones de calidad imparciales.
+
+highlights:
+  - value: 100%
+    label: Unidades probadas a presión
+    detail: Cada cámara, cada embarcación
+  - value: 48 h
+    label: Duración de la prueba de retención de aire
+    detail: Al 1,25× de la presión nominal
+  - value: '&lt;5%'
+    label: Caída de presión máxima permitida
+    detail: Durante un período de mantenimiento de 24 horas
+  - value: AQL 2.5
+    label: Umbral de defectos mayores
+    detail: Según el muestreo ISO 2859
+
+test_procedures:
+  - title: Inspección de materias primas
+    description: Cada lote entrante de PVC, Hypalon, tela drop-stitch y herrajes se prueba antes de su aceptación. Se verifican la resistencia a la tracción (ASTM D751), la resistencia al desgarro (ISO 4674) y la resistencia a los rayos UV. Los materiales no conformes se ponen en cuarentena y se devuelven.
+    standards:
+      - ASTM D751 (tracción)
+      - ISO 4674 (desgarro)
+      - ISO 4892 (UV)
+  - title: Puntos de control de calidad en proceso
+    description: Los operarios de producción realizan la autoinspección en cada etapa. Los auditores de control de calidad llevan a cabo muestreos aleatorios durante todo el turno. Las pruebas de pelado de soldaduras se realizan cada 50 unidades. Las comprobaciones dimensionales se efectúan en cada 20.º panel.
+    standards:
+      - ASTM D751 (pelado)
+      - Lista de verificación interna de 100 puntos
+      - Muestreo ISO 2859
+  - title: Prueba de retención de aire de 48 horas
+    description: Cada cámara del tubo se infla al 125% de la presión nominal y se mantiene durante 48 horas. Los sensores de presión registran continuamente con compensación de temperatura. Cualquier cámara que supere una caída de presión del 5% activa la reinspección automática del lote.
+    standards:
+      - ISO 6185
+      - CE 2013/53/EU
+  - title: Pruebas de carga y equilibrio
+    description: Las embarcaciones terminadas se prueban a su capacidad nominal máxima en estabilidad, francobordo y maniobrabilidad. Cada embarcación se somete a pruebas en el agua antes de la aprobación final de la inspección.
+    standards:
+      - ISO 12217
+      - CE 2013/53/EU
+
+equipment:
+  - name: Máquina universal de ensayo (tracción)
+    spec: 5 kN, conforme a ASTM D751
+  - name: Probador de caída de presión
+    spec: Multicanal, 0–50 psi, registro de datos
+  - name: Cámara de envejecimiento UV
+    spec: ISO 4892, ciclos de 1,000 h
+  - name: Medidor de espesor (digital)
+    spec: Resolución de 0,01 mm
+  - name: Probador de pelado (soldadura)
+    spec: Motorizado, capacidad de 50 N
+  - name: Cámara de temperatura
+    spec: -40 °C a +100 °C
+  - name: Tanque de detección de fugas
+    spec: 6 m × 2 m, iluminado

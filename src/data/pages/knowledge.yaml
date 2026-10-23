@@ -1,0 +1,92 @@
+hero:
+  tagline: 'Knowledge Graph'
+  title: 'Water Exploration Knowledge'
+  subtitle: |
+    A structured knowledge base covering inflatable SUP technology,<br />
+    water safety, boat engineering, and adventure planning.
+  taglineSection: 'Explore. Learn. Go with confidence.'
+
+clusters:
+  tagline: 'Knowledge Clusters'
+  title: 'Explore by topic'
+  subtitle: 'Deep dives into the technology, safety, and skills behind every Aquafarer product.'
+  items:
+    - title: 'SUP Knowledge'
+      description: 'From choosing your first board to advanced touring techniques — everything about stand-up paddle boarding.'
+      icon: 'tabler:lifebuoy'
+      topics:
+        - 'How to choose your first inflatable SUP'
+        - 'Best SUP size for beginners'
+        - 'How difficult is paddle boarding?'
+        - 'Inflatable vs hard board comparison'
+        - 'SUP safety checklist'
+    - title: 'Boat Knowledge'
+      description: 'Technical guides on inflatable boats, RIBs, dinghies, and kayaks — engineering, materials, and operation.'
+      icon: 'tabler:sailboat'
+      topics:
+        - 'Inflatable boat types explained'
+        - 'PVC vs Hypalon comparison'
+        - 'RIB vs Dinghy comparison'
+        - 'Drop-stitch technology deep dive'
+        - 'Marine material science guide'
+    - title: 'Safety Knowledge'
+      description: 'Essential safety knowledge for every paddler — from PFD selection to weather reading to self-rescue techniques.'
+      icon: 'tabler:shield'
+      topics:
+        - 'SUP safety checklist'
+        - 'Do you need a life jacket?'
+        - 'Ocean paddling safety guide'
+        - 'River safety for inflatable kayaks'
+        - 'Weather and water condition awareness'
+    - title: 'Technology'
+      description: 'The engineering behind Aquafarer products — materials, construction methods, and quality testing.'
+      icon: 'tabler:microscope'
+      topics:
+        - 'Marine-grade PVC technology'
+        - 'Drop-stitch core explained'
+        - 'Why PSI matters for inflatable SUPs'
+        - 'RF welding vs adhesive bonding'
+        - 'Quality testing and certification'
+    - title: 'Business Knowledge'
+      description: 'Commercial guides for building and scaling your water sports business — from rental operations to private label branding.'
+      icon: 'tabler:briefcase'
+      topics:
+        - 'How to start a SUP rental business'
+        - 'Building a resort water sports center'
+        - 'Paddle board fleet sizing for clubs'
+        - 'Inflatable vs hard SUP for commercial use'
+        - 'Best kayak material for rental fleets'
+        - 'Starting a private label water brand'
+        - 'Resort water sports revenue strategies'
+        - 'Commercial equipment maintenance guide'
+
+featured_guides:
+  tagline: 'Featured Guides'
+  title: 'Most popular knowledge resources'
+  items:
+    - title: 'SUP Basics'
+      href: '/learn/sup'
+    - title: 'Inflatable vs Hard Board'
+      href: '/compare/inflatable-vs-hardboard'
+    - title: 'Water Safety Guide'
+      href: '/learn/water-safety'
+    - title: 'Materials Reference'
+      href: '/learn/materials'
+    - title: 'SUP Size Guide'
+      href: '/size-guide'
+    - title: 'SUP Rental Cost Guide'
+      href: '/v2/cost-to-start-sup-rental-business'
+    - title: 'Resort Water Sports Center'
+      href: '/v2/building-resort-water-sports-center'
+    - title: 'Start a Water Brand'
+      href: '/v2/start-water-sports-brand-private-label'
+
+cta:
+  title: 'Start exploring'
+  subtitle: 'Dive into our knowledge base and get the information you need for your next water adventure.'
+  actions:
+    - variant: primary
+      text: 'Browse all guides'
+      href: '/academy'
+    - text: 'Explore Knowledge Graph'
+      href: '/knowledge'

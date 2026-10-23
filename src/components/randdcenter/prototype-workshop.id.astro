@@ -1,0 +1,198 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'id' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">&larr; Kembali ke Pusat R&D</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Lab 05</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Bengkel Prototipe</h1>
+      <p class="mt-3 text-lg text-muted">Dari model CAD ke perahu siap laut — dibangun, dipasang, dan terbukti</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-ocean-voyager-1.webp"
+        alt="bengkel prototipe pembuatan kapal"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Di mana desain menjadi kenyataan</h2>
+  <p>
+    Model CAD, tidak peduli seberapa rinci, tidak dapat menunjukkan bagaimana sebuah perahu akan benar-benar
+    dikendalikan sampai bertemu dengan air. Itulah mengapa Bengkel Prototipe kami dirancang untuk menerjemahkan data
+    teknik menjadi kapal nyata yang bisa berlayar di laut secepat dan setepat mungkin. Setiap baru{SITE.name}model — dan
+    setiap pembuatan khusus yang signifikan — melewati bengkel ini sebelum peralatan produksi digunakan.
+  </p>
+  <p>
+    Bengkel ini dilengkapi sepenuhnya untuk pembuatan lambung, tabung, dan rigging secara bersamaan. Pendekatan alur
+    kerja paralel ini mempersingkat waktu pembuatan prototipe menjadi 8-12 minggu dari pelepasan rekayasa, dibandingkan
+    dengan standar industri 16-20 minggu. Ketika aplikasi Anda menuntut solusi khusus, kami dapat bergerak dari konsep
+    hingga validasi di air dalam waktu kurang dari tiga bulan.
+  </p>
+
+  <h2>Kemampuan bengkel</h2>
+  <table>
+    <thead><tr><th>Stasiun Kerja</th><th>Peralatan</th><th>Tujuan</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Pembuatan lambung</td><td
+          >Oven cetakan rotasi (HDPE), tempat pengelasan TIG (aluminium), cetakan hand-lay-up (fiberglass)</td
+        ><td>Produksi lambung skala penuh dalam ketiga jenis material</td></tr
+      >
+      <tr
+        ><td>Perakitan tabung</td><td>Press pengelasan RF, stasiun penyambungan udara panas, jig uji inflasi</td><td
+          >Pembuatan rakitan tabung ukuran penuh dengan semua sekat, kerucut, dan katup</td
+        ></tr
+      >
+      <tr
+        ><td>Rigging & pemasangan</td><td
+          >Pengangkat mesin (500 kg), rangka mock-up konsol, crimper selang hidrolik, papan harness listrik</td
+        ><td>Pemasangan lengkap: mesin, kemudi, kontrol, sistem bahan bakar, elektronik, kursi</td></tr
+      >
+      <tr
+        ><td>Bay instrumentasi</td><td
+          >Sensor kecepatan GPS, meter aliran bahan bakar, akselerometer, array termokopel, pencatat data</td
+        ><td>Pemasangan dan kalibrasi instrumentasi uji laut</td></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>Perjalanan prototipe — langkah demi langkah</h2>
+  <ol>
+    <li>
+      <strong>Serah terima rekayasa</strong>— Paket desain (model 3D, laporan FEA, daftar bahan, jadwal layup) secara
+      resmi ditinjau oleh kepala bengkel dan insinyur proyek. Setiap masalah manufaktur ditandai dan diselesaikan
+      sebelum pemotongan dimulai.
+    </li>
+    <li>
+      <strong>Produksi lambung</strong>— Lambung dibangun sesuai spesifikasi rekayasa. Untuk HDPE: program cetakan
+      rotasi dimuat dari simulasi Moldex3D. Untuk aluminium: pelat CNC dipotong dan dilas di bay TIG mengikuti peta las
+      yang disetujui. Untuk fiberglass: buku lapisan diikuti lapis demi lapis.
+    </li>
+    <li>
+      <strong>Pembuatan tabung</strong>— Kain dipotong menggunakan template pola CNC, lalu dilas RF menjadi ruang ukuran
+      penuh. Setiap ruang diinflasikan hingga tekanan uji dan dibiarkan selama 24 jam untuk stabilisasi awal.
+    </li>
+    <li>
+      <strong>Perakitan & pemasangan</strong>— Lambung dan tabung dipasangkan. Mesin digantung, kemudi dan kontrol
+      terhubung, sistem bahan bakar dipasang, dan semua sirkuit listrik dikabel dan diverifikasi.
+    </li>
+    <li>
+      <strong>Tes statis</strong>— Sebelum perahu menyentuh air, dilakukan: pemeriksaan daya apung (beban penuh + 30%
+      cadangan), uji tekanan sistem bahan bakar, uji siklus kunci penuh sistem kemudi, uji kesinambungan ikatan tanah
+      listrik.
+    </li>
+    <li><strong>Program uji coba laut</strong>— 20 jam pengujian di air, dijelaskan secara rinci di bawah.</li>
+    <li>
+      <strong>Tinjauan prototipe</strong>— Pertemuan tanda tangan formal diadakan dengan tim teknik, produksi, dan
+      kualitas. Setiap perubahan desain yang diperlukan didokumentasikan dan dimasukkan ke dalam rilis produksi.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Program Uji Coba Laut 20 Jam — Jadwal Uji
+    </p>
+    <div class="space-y-2 text-sm">
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">2 h</span><span class="flex-1"
+          >Manuver pelabuhan — penanganan kecepatan rendah, mundur, pemeriksaan pelindung perahu</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">4 h</span><span class="flex-1"
+          >Uji kecepatan — kecepatan maksimum terverifikasi GPS, kecepatan jelajah, konsumsi bahan bakar pada 3 titik
+          RPM</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Uji belok — diameter taktis, advance, dan transfer pada 20 kn, ke kiri dan ke kanan</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Uji benturan ombak — beberapa kali melewati guncangan 0,5–1,0 m; akselerometer pada dasar kursi kemudi</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Uji stabilitas — sudut miring statis dengan 4 kru + perlengkapan ke kanan, beban offset</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Jalani uji ketahanan — 3 jam terus-menerus pada kecepatan jelajah; pemantauan suhu (mesin, bahan bakar,
+          listrik)</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">2 h</span><span class="flex-1"
+          >Inspeksi akhir — inspeksi pasca uji semua sistem, kencangkan/periksa semua pengikat, dokumentasikan temuan</span
+        >
+      </div>
+    </div>
+  </div>
+
+  <h2>Pembuatan prototipe khusus untuk aplikasi unik</h2>
+  <p>
+    Bengkel Prototipe adalah tempat kami menyelesaikan masalah yang tidak dapat diatasi oleh perahu produksi standar.
+    Contoh terbaru termasuk:
+  </p>
+  <ul>
+    <li>
+      Sebuah perahu 7,8 m RIB untuk organisasi pencarian dan penyelamatan, membutuhkan struktur kabin khusus dengan
+      perlindungan anti-terbalik, pemasangan tandu terintegrasi, dan pod sonar dipasang di haluan — semua diprototipe,
+      dipasang, dan diuji di fasilitas kami.
+    </li>
+    <li>
+      Sebuah perahu karet 5,2 m untuk kontraktor survei hidrographi, dengan buritan dipersingkat, tiang instrumen yang
+      dapat dilepas, dan kantong transmisi melalui lambung yang dirancang untuk meminimalkan gangguan aliran.
+    </li>
+    <li>
+      Tender 4,5 m bertenaga listrik untuk superyacht, di mana prototipe digunakan untuk memvalidasi jangkauan,
+      infrastruktur pengisian, dan tingkat kebisingan sebelum klien memutuskan untuk membuat armada berjumlah empat.
+    </li>
+  </ul>
+
+  <h2>Tim prototipe kami</h2>
+  <p>
+    Bengkel ini diisi delapan teknisi kelautan multi-keahlian, masing-masing terlatih dalam minimal dua dari tiga
+    disiplin inti (lambung, tabung, pemasangan). Pemimpin tim adalah seorang pembuat perahu master dengan 16 tahun
+    pengalaman dari pembuatan satu-an kustom hingga produksi massal. Setiap prototipe diberi insinyur proyek khusus yang
+    menjadi satu-satunya titik kontak untuk klien sepanjang proses pembangunan dan pengujian.
+  </p>
+
+  <h2>Keterlibatan klien</h2>
+  <p>
+    Kami secara aktif mendorong klien untuk hadir pada tonggak penting selama pembangunan prototipe — terutama tinjauan
+    pemasangan awal dan uji coba laut. Masukan operasional Anda selama tahap ini sangat berharga dalam menyempurnakan
+    perahu sebelum masuk produksi. Kami tidak membangun secara sendiri; kami membangun bekerja sama dengan Anda.
+  </p>
+  <p>
+    Uji coba laut 20 jam juga menjadi kesempatan bagi tim Anda untuk membiasakan diri dengan penanganan perahu, tata
+    letak sistem, dan persyaratan perawatan, memastikan transisi lancar ke layanan ketika perahu produksi dikirim.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Mulai proyek prototipe Anda</h2>
+    <p class="mt-2 text-sm text-muted">
+      Beri tahu kami tentang perahu yang Anda butuhkan dan kami akan mengusulkan rencana pengembangan prototipe.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Hubungi tim prototipe kami</a
+    >
+  </div>
+</section>

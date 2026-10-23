@@ -1,0 +1,177 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'cs' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">← Zpět na R&amp;D Center</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Laboratoř 02</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Inženýrské studio trupu</h1>
+      <p class="mt-3 text-lg text-muted">Digitální simulace, strukturální inteligence, zakázkový design trupu</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/design discussaquafarer-inflatable-boat-aquafarer-factory-exterior.webp"
+        alt="Aquafarer pracovní stanice CAD pro konstrukci trupu"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Kde se síla snoubí s hydrodynamikou</h2>
+  <p>
+    Trup je páteří každého RIB nebo nafukovacího člunu. Musí být dostatečně lehký, aby bylo možné hoblovat efektivně,
+    dostatečně pevný, aby absorboval nárazové zatížení, a rozměrově stálý v širokém teplotním rozsahu. Na {SITE.name},
+    naše Hull Engineering Studio kombinuje pokročilé CAD modelování, analýzu konečných prvků (FEA) a desetiletí
+    praktických zkušeností s námořní architekturou, aby vytvořilo trupy, které jsou optimalizovány pro jejich zamýšlené
+    poslání – nikoli obecné tvary upravené z katalogu.
+  </p>
+  <p>
+    Pracujeme se třemi základními materiály trupu – rotačně tvarovaným HDPE, svařovaným hliníkem pro námořní účely a
+    ručně kladeným skleněným vláknem – a máme inženýrské schopnosti každý z nich navrhnout, simulovat a ověřit vlastními
+    silami.
+  </p>
+
+  <h2>Návrhové nástroje a normy</h2>
+  <p>Naše digitální inženýrské prostředí zahrnuje:</p>
+  <table>
+    <thead><tr><th>Schopnost</th><th>Software / nástroj</th><th>Aplikace</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>3D parametrické modelování</td><td>SolidWorks Professional</td><td
+          >Povrch trupu, výztuha, držák motoru, uspořádání paluby</td
+        ></tr
+      >
+      <tr
+        ><td>Analýza konečných prvků</td><td>ANSYS Mechanical &amp; LS-DYNA</td><td
+          >Mapování napětí, modální analýza, simulace nárazu a nárazu</td
+        ></tr
+      >
+      <tr
+        ><td>Výpočetní dynamika tekutin</td><td>Ansys Fluent / Star-CCM+</td><td
+          >Predikce hydrodynamického odporu, optimalizace trimu</td
+        ></tr
+      >
+      <tr
+        ><td>Laminátové inženýrství</td><td>ESAComp / CADEC</td><td
+          >Stohování sklolaminátové vrstvy, výběr jádra, odhad hmotnosti</td
+        ></tr
+      >
+      <tr><td>Simulace proudění formy</td><td>Moldex 3D</td><td>Předpověď tloušťky stěny rotačním litím</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Náš inženýrský pracovní postup</h2>
+  <p>
+    Každý návrh trupu, ať už se jedná o standardní model nebo plně zakázkový projekt, se řídí přísným pětistupňovým
+    procesem:
+  </p>
+  <ol>
+    <li>
+      <strong>Shromažďování konceptů a požadavků</strong> — Setkáme se s vámi, abychom definovali užitečné zatížení, rychlostní
+      obálku, schopnost stavu moře, požadavky na tažení a jakékoli speciální vybavení mise (poklopy na palubu, pozice konzol,
+      integrace palivové nádrže).
+    </li>
+    <li>
+      <strong>3D povrchová úprava a hydrostatický výpočet</strong> — Forma trupu je modelována v SolidWorks a kontrolována
+      na hydrostatickou stabilitu (GM, vzpřimovací rameno) pomocí vestavěných analytických nástrojů.
+    </li>
+    <li>
+      <strong>Strukturální FEA</strong> — Zatěžovací stavy jsou definovány: statické (posádka + převodovka), dynamické (nárazy
+      při hoblování při 5 g) a nárazové (spadnutí z hřebene vlny rychlostí 3 m/s). Kontury napětí jsou přezkoumány; bezpečnostní
+      faktor ≥ 2.5 je povinný.
+    </li>
+    <li>
+      <strong>CFD optimalizace brzdění</strong> — Trup je simulován při třech podmínkách zatížení a pěti rychlostech. Smáčená
+      povrchová plocha, úhel sklonu a zbytkový odpor jsou iterativně redukovány.
+    </li>
+    <li>
+      <strong>Recenze a vydání designu</strong> — Kompletní inženýrský balíček (3D model, zpráva FEA, zpráva CFD, odhad hmotnosti,
+      kniha vrstev) před vydáním do prototypové dílny zkontroluje náš hlavní námořní architekt.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      FEA Stress Distribution — RIB 450 Hlídkový trup (hliník 5083)
+    </p>
+    <div class="grid grid-cols-2 gap-4 text-sm">
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">2.8 : 1</span>
+        <span class="text-gray-500">Bezpečnostní faktor při maximálním užitečném zatížení</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">15.2 %</span>
+        <span class="text-gray-500">Redukce odporu oproti předchozí generaci</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">87 kN/m&sup2;</span>
+        <span class="text-gray-500">Špičkový nárazový tlak (konstrukční limit)</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">18 000 h</span>
+        <span class="text-gray-500">Kumulativní běhové prostředí FEA v 2025</span>
+      </div>
+    </div>
+  </div>
+
+  <h2>Přizpůsobení: váš trup, vaše pravidla</h2>
+  <p>
+    Žádní dva operátoři nemají stejné požadavky. Přístavní hlídka RIB potřebuje pro stabilitu při nízké rychlosti trup s
+    mělkým V; rychle zachycující plavidlo potřebuje hluboké V se sprejovými kolejnicemi; člun s podporou ponoru
+    potřebuje široký paprsek a nízkou příčku. Vaši aplikaci nenutíme do již existujícího tvaru trupu. Navrhujeme od vaší
+    specifikace výše.
+  </p>
+  <p>Příklady nedávných zakázkových inženýrských projektů trupu:</p>
+  <ul>
+    <li>
+      Natažený 6.8 m HDPE trup pro karibskou cestovní kancelář se zesílenou přídí pro přistání na pláži (+15 % tloušťky
+      dna).
+    </li>
+    <li>
+      Lehký hliníkový 7.2 m RIB pro pobřežní hlídku s integrovanými přepážkami palivové nádrže a výztuhami skříněk
+      vybavení.
+    </li>
+    <li>
+      Sklolaminátový potápěčský člun 5.5 m se zkrácenou příčkou a dvojitými bateriovými boxy, navržený pro snadné
+      opětovné nalodění na šnorchl.
+    </li>
+  </ul>
+
+  <h2>Naši inženýři</h2>
+  <p>
+    Studio vede starší námořní architekt s 14 lety zkušeností s návrhem vysokorychlostních plavidel, podporovaný dvěma
+    strojními inženýry specializovanými na FEA a CFD. Všichni tři mají pokročilé tituly v námořním inženýrství nebo
+    námořní architektuře z mezinárodně uznávaných univerzit. Tým pravidelně publikuje v odborných časopisech a
+    prezentuje se na konferencích, jako je International Conference on High-Performance Marine Vehicles.
+  </p>
+
+  <h2>Spolupracujte s námi na vašem příštím trupu</h2>
+  <p>
+    Od prvního koncepčního náčrtu až po závěrečnou zprávu o zátěži je naše Hull Engineering Studio vaším partnerem při
+    vytváření lodi, která není jen postavena – ale zkonstruována. Hodiny simulace investujeme předem, takže každý svar,
+    každá vrstva laminátu a každá křivka trupu má svůj důvod.
+  </p>
+  <p>
+    Ať už potřebujete drobnou úpravu stávajícího modelu nebo zcela čistý design, jsme připraveni prodiskutovat vaše
+    požadavky.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Začněte konzultovat návrh trupu</h2>
+    <p class="mt-2 text-sm text-muted">Řekněte nám o svém profilu mise a my vám navrhneme inženýrskou cestu.</p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Kontaktujte náš technický tým</a
+    >
+  </div>
+</section>

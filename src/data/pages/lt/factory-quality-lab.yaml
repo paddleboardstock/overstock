@@ -1,0 +1,56 @@
+hero:
+  tagline: Kokybės kontrolės laboratorija
+  title: Testavimo laboratorija ir kokybės užtikrinimas
+  subtitle: Nepriklausoma kokybės laboratorija su ISO 9001 procesais — kiekvienas vienetas patikrintas prieš išsiuntimą
+intro: Aquafarer Valdo specialią kokybės kontrolės laboratoriją, kuri veikia nepriklausomai nuo gamybos. Kiekviena žaliavos partija ir kiekvienas baigtas laivas prieš išleidimą pereina dokumentuotus patikros protokolus. Mūsų kokybės kontrolės komanda tiesiogiai atsiskaito vadovybei, užtikrindama nešališkus kokybės sprendimus.
+highlights:
+  - value: 100%
+    label: Slėginiai vienetai
+    detail: Kiekviena kamera, kiekviena valtis
+  - value: 48 h
+    label: Oro sulaikymo testo trukmė
+    detail: Ties 1,25× nurodytas slėgis
+  - value: '&lt;5%'
+    label: Maksimalus leistinas slėgio kritimas
+    detail: Per 24 valandų laukimo laikotarpį
+  - value: AQL 2.5
+    label: Didelių defektų slenkstis
+    detail: Pagal ISO 2859 imtį
+test_procedures:
+  - title: Žaliavų inspekcija
+    description: Kiekviena gaunama PVC, Hypalondrop-stitch , audinio ir furnitūros partija yra testuojama prieš priėmimą. Tikrinamas tempiamasis stipris (ASTM D751), atsparumas plyšimamsISO (4674) ir UV atsparumas. Neatitinkančios medžiagos yra karantinuojamos ir grąžinamos.
+    standards:
+      - ASTM D751 (įtempimas)
+      - ISO 4674 (plyšimas)
+      - ISO 4892 (UV)
+  - title: Procesų metu vykdomi kokybės kontrolės kontrolės punktai
+    description: Gamybos operatoriai atlieka savikontrolę kiekviename etape. QC auditoriai atlieka atsitiktinę imtį visos pamainos metu. Suvirinimo nuėmimo testai atliekami kas 50 vienetų. Matmenų patikrinimai atliekami kas 20-ą panelę.
+    standards:
+      - ASTM D751 (pilingas)
+      - Vidinis 100 punktų kontrolinis sąrašas
+      - ISO 2859 mėginių ėmimas
+  - title: 48 valandų oro sulaikymo testas
+    description: Kiekviena vamzdžio kamera pripučiama iki 125 % nominalaus slėgio ir laikoma 48 valandas. Slėgio jutikliai nuolat registruoja temperatūrą, kompensuodami temperatūrą. Bet kuri kamera, viršijanti 5 % slėgio kritimą, sukelia automatinį partijos pakartotinį patikrinimą.
+    standards:
+      - ISO 6185
+      - CE 2013/53/ES
+  - title: Apkrovos ir balanso testavimas
+    description: Baigti laivai testuojami maksimalioje nominalioje stabilumo, laisvo borto ir valdymo talpoje. Kiekvienas laivas yra tikrinamas vandenyje prieš galutinį patikrinimą.
+    standards:
+      - ISO 12217
+      - CE 2013/53/ES
+equipment:
+  - name: Universalus bandymų įrenginys (traukimui)
+    spec: 5 kN, atitinka ASTM D751
+  - name: Slėgio kritimo testeris
+    spec: Daugiakanalis, 0–50 psi, duomenų registracija
+  - name: UV Oro poveikio kamera
+    spec: ISO 4892, 1 000 val. ciklai
+  - name: Storio matuoklis (skaitmeninis)
+    spec: 0,01 mm raiška
+  - name: Lupimo testeris (suvirinimas)
+    spec: Motorinis, 50 N talpa
+  - name: Temperatūros kamera
+    spec: -40 °C iki +100 °C
+  - name: Nutekėjimo aptikimo bakas
+    spec: 6 m × 2 m, apšviestas

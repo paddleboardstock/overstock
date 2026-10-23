@@ -1,0 +1,56 @@
+hero:
+  tagline: Laboratorija za kontrolu kvaliteta
+  title: Laboratorija za testiranje i osiguranje kvaliteta
+  subtitle: Nezavisna laboratorija kvaliteta sa ISO 9001 procedura — svaka jedinica testirana pre isporuke
+intro: Aquafarer upravlja posvećenom laboratorijom za kontrolu kvaliteta koja funkcioniše nezavisno od proizvodnje. Svaka serija sirovina i svaka gotova čamac prolazi kroz dokumentovane protokole inspekcije pre puštanja u promet. Naš QC tim izveštava direktno upravi, osiguravajući nepristrasne odluke o kvalitetu.
+highlights:
+  - value: 100%
+    label: Jedinice testirane pritiskom
+    detail: Svaka komora, svaki čamac
+  - value: 48 h
+    label: Trajanje testa zadržavanja vazduha
+    detail: Na 1,25× nazivnog pritiska
+  - value: '&lt;5%'
+    label: Maksimalni dozvoljeni pad pritiska
+    detail: Tokom 24-časovnog perioda držanja
+  - value: AQL 2,5
+    label: Prag velike nedostatnosti
+    detail: Prema ISO 2859 uzorkovanju
+test_procedures:
+  - title: Sirovina Inspekcija
+    description: Svaka dolazna serija PVC, Hypalon, drop-stitch tkanine i hardvera testira se pre prihvatanja. Proveravaju se čvrstoća istezanja (ASTM D751), otpornost na cepanje (ISO 4674) i otpornost UV. Materijali koji ne ispunjavaju standarde stavljaju se u karantin i vraćaju.
+    standards:
+      - ASTM D751 (istezanje)
+      - ISO 4674 (cepanje)
+      - ISO 4892 (UV)
+  - title: Kontrolne tačke QC u toku procesa
+    description: Proizvodni operateri vrše samoprovjeru u svakoj fazi. QC auditori sprovode nasumično uzorkovanje tokom cele smene. Testovi odvajanja zavara vrše se na svake 50 jedinica. Dimenzionalne provere vrše se na svakom 20. panelu.
+    standards:
+      - ASTM D751 (odvajanje)
+      - Interna lista od 100 stavki
+      - ISO 2859 uzorkovanje
+  - title: 48-časovni test zadržavanja vazduha
+    description: Svaka komora tube se napuše do 125% nazivnog pritiska i zadržava 48 sati. Senzori pritiska beleže kontinuirano uz kompenzaciju temperature. Svaka komora koja premaši pad pritiska od 5% pokreće automatsku ponovnu inspekciju serije.
+    standards:
+      - ISO 6185
+      - CE 2013/53/EU
+  - title: Testiranje opterećenja i ravnoteže
+    description: Gotovi čamci se testiraju na maksimalnom nazivnom kapacitetu za stabilnost, odnos prema vodi i rukovanje. Svako plovilo prolazi testiranje u vodi pre konačne odobrenja inspekcije.
+    standards:
+      - ISO 12217
+      - CE 2013/53/EU
+equipment:
+  - name: Univerzalna mašina za ispitivanje (zatezanje)
+    spec: 5 kN, usklađeno sa ASTM D751
+  - name: Tester opadanja pritiska
+    spec: Višekanalni, 0–50 psi, beleženje podataka
+  - name: UV Komora za izlaganje vremenskim uslovima
+    spec: ISO 4892, 1.000 h ciklusa
+  - name: Merač debljine (digitalni)
+    spec: Rezolucija 0,01 mm
+  - name: Tester ljuštenja (zavarivanje)
+    spec: Motorni, kapacitet 50 N
+  - name: Komora za temperaturu
+    spec: -40 °C do +100 °C
+  - name: Tank za detekciju curenja
+    spec: 6 m × 2 m, osvetljen

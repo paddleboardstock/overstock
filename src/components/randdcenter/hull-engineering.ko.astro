@@ -1,0 +1,154 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'ko' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">&larr; R&D 센터로 돌아가기</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">랩 02</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">선체 엔지니어링 스튜디오</h1>
+      <p class="mt-3 text-lg text-muted">디지털 시뮬레이션, 구조 지능, 맞춤형 선체 설계</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/design discussaquafarer-inflatable-boat-aquafarer-factory-exterior.webp"
+        alt="Aquafarer 선체 엔지니어링 CAD 설계 워크스테이션"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>강도와 유체역학의 만남</h2>
+  <p>
+    선체는 모든 RIB 또는 고무보트의 척추입니다. 선체는 효율적으로 활공할 수 있을 만큼 가벼워야 하고, 충격 하중을 흡수할
+    수 있을 만큼 강해야 하며, 넓은 온도 범위에서 치수 안정성이 있어야 합니다.{SITE.name}, 저희 선체 엔지니어링
+    스튜디오는 첨단 CAD 모델링, 유한 요소 해석(FEA), 수십 년간의 실무 해양 건축 경험을 결합하여, 카탈로그에서 가져온
+    일반적인 형상이 아닌, 의도된 임무에 최적화된 선체를 제공합니다.
+  </p>
+  <p>
+    우리는 회전 성형 HDPE, 용접식 해양 등급 알루미늄, 수작업으로 적층한 유리섬유 등 세 가지 주요 선체 재료를 사용하며,
+    각 재료를 내부에서 설계, 시뮬레이션, 검증할 수 있는 엔지니어링 능력을 갖추고 있습니다.
+  </p>
+
+  <h2>설계 도구 및 표준</h2>
+  <p>우리의 디지털 엔지니어링 환경에는 다음이 포함됩니다:</p>
+  <table>
+    <thead><tr><th>능력</th><th>소프트웨어 / 도구</th><th>적용</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>3D 파라메트릭 모델링</td><td>솔리드웍스 프로페셔널</td><td
+          >선체 표면, 스트링거 시스템, 엔진 브래킷, 갑판 레이아웃</td
+        ></tr
+      >
+      <tr
+        ><td>유한 요소 해석</td><td>ANSYS Mechanical & LS-DYNA</td><td>응력 매핑, 모드 해석, 충돌/임팩트 시뮬레이션</td
+        ></tr
+      >
+      <tr><td>전산 유체 역학</td><td>Ansys Fluent / Star-CCM+</td><td>유체 저항 예측, 트림 최적화</td></tr>
+      <tr><td>라미네이트 엔지니어링</td><td>ESAComp / CADEC</td><td>유리섬유 층 적층, 코어 선택, 중량 추정</td></tr>
+      <tr><td>금형 유동 시뮬레이션</td><td>몰덱스3D</td><td>로토몰딩 벽 두께 예측</td></tr>
+    </tbody>
+  </table>
+
+  <h2>우리의 엔지니어링 워크플로우</h2>
+  <p>표준 모델이든 완전 맞춤 프로젝트이든 모든 선체 설계는 엄격한 5단계 프로세스를 따릅니다:</p>
+  <ol>
+    <li>
+      <strong>컨셉 & 요구 사항 수집</strong>— 우리는 탑재량, 속도 범위, 해상 상태 능력, 견인 요구사항, 그리고 특수 임무
+      장비(갑판 해치, 콘솔 위치, 연료-탱크 통합)를 정의하기 위해 여러분과 만납니다.
+    </li>
+    <li>
+      <strong>3D 표면 및 정수압 계산</strong>— 선체 형태는 SolidWorks에서 모델링되며, 내장 분석 도구를 사용해 정수압
+      안정성(GM, 복원 암)을 확인합니다.
+    </li>
+    <li>
+      <strong>구조적 FEA</strong>— 하중 상황은 정적(승무원 + 장비), 동적 (5g에서의 플래닝 충돌), 그리고 슬램(3 m/s 파도
+      정점에서 낙하)으로 정의됩니다. 응력 등고선이 검토되며; 안전 계수 ≥ 2.5가 필수입니다.
+    </li>
+    <li>
+      <strong>CFD 항력 최적화</strong>— 선체는 세 가지 하중 조건과 다섯 가지 속도로 시뮬레이션됩니다. 습윤 표면적,
+      트림각, 잔류 저항이 반복적으로 감소합니다.
+    </li>
+    <li>
+      <strong>설계 검토 및 공개</strong>— 전체 엔지니어링 패키지(3D 모델, FEA 보고서, CFD 보고서, 중량 추정, 합판 책)는
+      시급 해군 설계사가 검토한 후 시제품 작업장에 배포됩니다.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      FEA 응력 분포 — RIB 450 순찰 선체 (알루미늄 5083)
+    </p>
+    <div class="grid grid-cols-2 gap-4 text-sm">
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">2.8 : 1</span>
+        <span class="text-gray-500">최대 탑재 시 안전 계수</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">15.2 %</span>
+        <span class="text-gray-500">이전 세대와 비교한 항력 감소</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">87 kN/m²</span>
+        <span class="text-gray-500">최대 슬램 압력 (설계 한계)</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">18 000 h</span>
+        <span class="text-gray-500">2025년 누적 FEA 실행 시간</span>
+      </div>
+    </div>
+  </div>
+
+  <h2>커스터마이징: 선체, 규칙</h2>
+  <p>
+    두 운영자는 동일한 요구사항을 갖지 않습니다. 항만 순찰함은 RIB 저속에서 안정성을 위해 얕은 V형 선체가 필요하고, 고속
+    요격함은 스프레이 레일이 있는 딥-V형이 필요하며, 다이브 서포트 보트는 넓은 빔과 낮은 선미가 필요합니다. 기존 선체
+    형태에 적용하지 않습니다. 귀하의 사양부터 설계합니다.
+  </p>
+  <p>최근 맞춤형 선체 엔지니어링 프로젝트 예시:</p>
+  <ul>
+    <li>
+      카리브해 여행사용 6.8m 길이의 HDPE 선체를 늘리고, 해변 상륙을 위해 보강된 선수(+바닥 두께 15%)가 장착되었습니다.
+    </li>
+    <li>해안경비대용 7.2m 경량 알루미늄 기관 RIB 차로, 연료 탱크 배플과 장비 보관함 보강재가 통합되어 있습니다.</li>
+    <li>
+      트랜섬이 잘려 있고 쌍 배터리 박스가 장착된 유리섬유 5.5m 다이브 보트로, 스노클러 재보딩을 용이하게 설계되었습니다.
+    </li>
+  </ul>
+
+  <h2>우리 엔지니어들</h2>
+  <p>
+    이 스튜디오는 고속 선박 설계 분야에서 14년 경력을 가진 선임 해군 건축가가 이끌며, FEA와 CFD를 전문으로 하는 두 명의
+    기계공학자가 지원합니다. 세 명 모두 국제적으로 인정받는 대학에서 해양공학 또는 해군 건축학 고급 학위를 보유하고
+    있습니다. 팀은 업계 저널에 정기적으로 글을 발표하며, 국제 고성능 해양 차량 회의와 같은 학회에서 발표합니다.
+  </p>
+
+  <h2>다음 선체에서 저희와 협력해 주세요</h2>
+  <p>
+    첫 컨셉 스케치부터 최종 응력 보고서까지, 저희 선체 엔지니어링 스튜디오는 단순히 제작된 것이 아니라 설계된 보트를
+    만드는 데 함께하는 파트너입니다. 모든 용접, 모든 라미네이트 층, 선체의 모든 곡선이 이유가 있도록 시뮬레이션 시간을
+    미리 투자합니다.
+  </p>
+  <p>
+    기존 모델에 약간의 수정이 필요하든, 완전히 새로운 디자인을 원하든, 저희는 귀하의 요구사항을 논의할 준비가 되어
+    있습니다.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">선체 설계 상담을 시작하세요</h2>
+    <p class="mt-2 text-sm text-muted">임무 프로필에 대해 말씀해 주시면 엔지니어링 경로를 제안하겠습니다.</p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >엔지니어링 팀에 연락해 주세요</a
+    >
+  </div>
+</section>

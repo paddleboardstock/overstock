@@ -1,0 +1,321 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+import { languages, defaultLang } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+import RDe from '~/components/randdcenter/hull-engineering.de.astro';
+import REs from '~/components/randdcenter/hull-engineering.es.astro';
+import RFr from '~/components/randdcenter/hull-engineering.fr.astro';
+import RIt from '~/components/randdcenter/hull-engineering.it.astro';
+import REn from '~/components/randdcenter/hull-engineering.en.astro';
+import RCs from '~/components/randdcenter/hull-engineering.cs.astro';
+import RSv from '~/components/randdcenter/hull-engineering.sv.astro';
+import RDa from '~/components/randdcenter/hull-engineering.da.astro';
+import REl from '~/components/randdcenter/hull-engineering.el.astro';
+import RNo from '~/components/randdcenter/hull-engineering.no.astro';
+import RRu from '~/components/randdcenter/hull-engineering.ru.astro';
+import RNl from '~/components/randdcenter/hull-engineering.nl.astro';
+import RFi from '~/components/randdcenter/hull-engineering.fi.astro';
+import RPl from '~/components/randdcenter/hull-engineering.pl.astro';
+import RAr from '~/components/randdcenter/hull-engineering.ar.astro';
+import RPt from '~/components/randdcenter/hull-engineering.pt.astro';
+import RJa from '~/components/randdcenter/hull-engineering.ja.astro';
+import RBg from '~/components/randdcenter/hull-engineering.bg.astro';
+import REt from '~/components/randdcenter/hull-engineering.et.astro';
+import RHe from '~/components/randdcenter/hull-engineering.he.astro';
+import RHr from '~/components/randdcenter/hull-engineering.hr.astro';
+import RHu from '~/components/randdcenter/hull-engineering.hu.astro';
+import RId from '~/components/randdcenter/hull-engineering.id.astro';
+import RKo from '~/components/randdcenter/hull-engineering.ko.astro';
+import RLt from '~/components/randdcenter/hull-engineering.lt.astro';
+import RLv from '~/components/randdcenter/hull-engineering.lv.astro';
+import RMs from '~/components/randdcenter/hull-engineering.ms.astro';
+import RRo from '~/components/randdcenter/hull-engineering.ro.astro';
+import RSk from '~/components/randdcenter/hull-engineering.sk.astro';
+import RSl from '~/components/randdcenter/hull-engineering.sl.astro';
+import RSr from '~/components/randdcenter/hull-engineering.sr.astro';
+import RTh from '~/components/randdcenter/hull-engineering.th.astro';
+import RTl from '~/components/randdcenter/hull-engineering.tl.astro';
+import RTr from '~/components/randdcenter/hull-engineering.tr.astro';
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: any) => getUiForLang(lang || defaultLang)?.[key] || '';
+
+const META: Record<string, { title: string; description: string }> = {
+  en: {
+    title: 'Hull Engineering Studio — CAD, FEA & Custom RIB Hull Design',
+    description: `Explore our Hull Engineering Studio for CAD design, finite element analysis (FEA), and custom HDPE/aluminium/fibre glass hull development. Contact our engineering team to start your next RIB project.`,
+  },
+  de: {
+    title: 'Studio für Rumpftechnik — CAD, FEA und individueller RIB-Rumpfentwurf',
+    description: `Entdecken Sie unser Studio für Rumpftechnik: CAD-Design, Finite-Elemente-Analyse (FEA) und individuelle Rumpfentwicklung aus HDPE, Aluminium und Glasfaser. Kontaktieren Sie unser Entwicklungsteam für Ihr nächstes RIB-Projekt.`,
+  },
+  es: {
+    title: 'Studio de ingeniería de cascos — diseño de cascos RIB personalizados con CAD y FEA',
+    description: `Descubra nuestro studio de ingeniería de cascos: diseño CAD, análisis por elementos finitos (FEA) y desarrollo de cascos personalizados en HDPE, aluminio y fibra de vidrio. Contacte con nuestro equipo de ingeniería para iniciar su próximo proyecto RIB.`,
+  },
+  fr: {
+    title: 'Studio de génie de coques — conception de coques RIB sur mesure avec CAD et FEA',
+    description: `Découvrez notre studio de génie de coques : conception CAD, analyse par éléments finis (FEA) et développement de coques personnalisées en HDPE, aluminium et fibre de verre. Contactez notre équipe d'ingénierie pour lancer votre prochain projet RIB.`,
+  },
+  it: {
+    title: 'Studio di ingegneria scafi — progettazione di scafi RIB su misura con CAD e FEA',
+    description: `Scoprite il nostro studio di ingegneria scafi: progettazione CAD, analisi a elementi finiti (FEA) e sviluppo di scafi personalizzati in HDPE, alluminio e vetroresina. Contattate il nostro team di ingegneria per avviare il vostro prossimo progetto RIB.`,
+  },
+  cs: {
+    title: 'Hull Engineering Studio — CAD, FEA & Custom RIB Návrh trupu',
+    description:
+      'Prozkoumejte naše Hull Engineering Studio pro návrh CAD, analýzu konečných prvků (FEA) a vlastní vývoj trupu z HDPE/hliníku/skelných vláken. Kontaktujte náš technický tým a začněte s dalším projektem RIB.',
+  },
+  sv: {
+    title: 'Hull Engineering Studio — CAD, FEA & Custom RIB Skrovdesign',
+    description:
+      'Utforska vår Hull Engineering Studio för CAD-design, finita elementanalys (FEA) och skräddarsydd utveckling av skrov av HDPE/aluminium/fiber. Kontakta vårt ingenjörsteam för att starta ditt nästa RIB-projekt.',
+  },
+  da: {
+    title: 'Hull Engineering Studio — CAD, FEA & Custom RIB Skrogdesign',
+    description:
+      'Udforsk vores Hull Engineering Studio for CAD-design, finite element-analyse (FEA) og skræddersyet HDPE/aluminium/fiberglasskrogudvikling. Kontakt vores ingeniørteam for at starte dit næste RIB projekt.',
+  },
+  el: {
+    title: 'Hull Engineering Studio — CAD, FEA & Custom RIB Σχεδιασμός σκάφους',
+    description:
+      'Εξερευνήστε το Hull Engineering Studio μας για σχεδιασμό CAD, ανάλυση πεπερασμένων στοιχείων (FEA) και προσαρμοσμένη ανάπτυξη γάστρας από HDPE/αλουμίνιο/ίνες γυαλιού. Επικοινωνήστε με την ομάδα μηχανικών μας για να ξεκινήσετε το επόμενο RIB έργο σας.',
+  },
+  no: {
+    title: 'Hull Engineering Studio — CAD, FEA & Custom RIB Skrogdesign',
+    description:
+      'Utforsk vårt Hull Engineering Studio for CAD-design, finite element-analyse (FEA) og skrogutvikling av tilpasset HDPE/aluminium/fiberglass. Kontakt ingeniørteamet vårt for å starte ditt neste RIB-prosjekt.',
+  },
+  ru: {
+    title: 'Студия Hull Engineering — CAD, FEA и заказ RIB Проектирование корпуса',
+    description:
+      'Посетите нашу студию проектирования корпуса для проектирования САПР, анализа методом конечных элементов (FEA) и разработки индивидуальных корпусов из полиэтилена высокой плотности, алюминия и стекловолокна. Свяжитесь с нашей командой инженеров, чтобы начать свой следующий проект RIB.',
+  },
+  nl: {
+    title: 'Romp Engineering Studio - CAD, FEA en aangepast RIB Rompontwerp',
+    description:
+      'Ontdek onze Hull Engineering Studio voor CAD-ontwerp, eindige elementenanalyse (FEA) en op maat gemaakte HDPE/aluminium/glasvezel rompontwikkeling. Neem contact op met ons engineeringteam om uw volgende RIB-project te starten.',
+  },
+  fi: {
+    title: 'Rungon suunnittelustudio — CAD, FEA ja mukautettu RIB runkosuunnittelu',
+    description:
+      'Tutustu Hull Engineering Studioon CAD-suunnitteluun, elementtianalyysiin (FEA) ja mukautettuun HDPE/alumiini/lasikuiturungon kehittämiseen. Ota yhteyttä suunnittelutiimiimme aloittaaksesi seuraavan RIB-projektisi.',
+  },
+  pl: {
+    title: 'Studio inżynieryjne kadłuba — CAD, FEA i niestandardowe RIB Projekt kadłuba',
+    description:
+      'Poznaj nasze studio inżynieryjne kadłuba do projektowania CAD, analizy elementów skończonych (FEA) i opracowywania niestandardowych kadłubów z HDPE/aluminium/włókna szklanego. Skontaktuj się z naszym zespołem inżynierów, aby rozpocząć kolejny projekt RIB.',
+  },
+  ar: {
+    title: 'استوديو هال الهندسي - تصميم CAD وFEA والتصميم المخصص RIB تصميم الهيكل',
+    description:
+      'استكشف استوديو Hull Engineering الخاص بنا لتصميم CAD، وتحليل العناصر المحدودة (FEA)، وتطوير هيكل HDPE/الألومنيوم/الألياف الزجاجية المخصص. اتصل بفريقنا الهندسي لبدء مشروعك التالي RIB.',
+  },
+  pt: {
+    title: 'Estúdio de Engenharia de Casco — CAD, FEA e Projeto de Casco Personalizado RIB',
+    description:
+      'Explore nosso Hull Engineering Studio para projeto CAD, análise de elementos finitos (FEA) e desenvolvimento de casco personalizado em HDPE/alumínio/fibra de vidro. Entre em contato com nossa equipe de engenharia para iniciar seu próximo projeto RIB.',
+  },
+  ja: {
+    title: 'Hull Engineering Studio — CAD、FEA、カスタム RIB 船体設計',
+    description:
+      'CAD 設計、有限要素解析 (FEA)、およびカスタム HDPE/アルミニウム/グラスファイバー船体の開発のための船体エンジニアリング スタジオを探索してください。次の RIB プロジェクトを開始するには、当社のエンジニアリング チームにお問い合わせください。',
+  },
+  bg: {
+    title: 'Hull Engineering Studio — CAD, FEA & Custom RIB Hull Design',
+    description:
+      'Explore our Hull Engineering Studio for CAD design, finite element analysis (FEA), and custom HDPE/aluminium/fibre glass hull development. Contact our engineering team to start your next RIB project.',
+  },
+  et: {
+    title: 'Hull Engineering Studio — CAD, FEA & Custom RIB Hull Design',
+    description:
+      'Explore our Hull Engineering Studio for CAD design, finite element analysis (FEA), and custom HDPE/aluminium/fibre glass hull development. Contact our engineering team to start your next RIB project.',
+  },
+  he: {
+    title: 'Hull Engineering Studio — CAD, FEA & Custom RIB Hull Design',
+    description:
+      'Explore our Hull Engineering Studio for CAD design, finite element analysis (FEA), and custom HDPE/aluminium/fibre glass hull development. Contact our engineering team to start your next RIB project.',
+  },
+  hr: {
+    title: 'Hull Engineering Studio — CAD, FEA & Custom RIB Hull Design',
+    description:
+      'Explore our Hull Engineering Studio for CAD design, finite element analysis (FEA), and custom HDPE/aluminium/fibre glass hull development. Contact our engineering team to start your next RIB project.',
+  },
+  hu: {
+    title: 'Hull Engineering Studio — CAD, FEA & Custom RIB Hull Design',
+    description:
+      'Explore our Hull Engineering Studio for CAD design, finite element analysis (FEA), and custom HDPE/aluminium/fibre glass hull development. Contact our engineering team to start your next RIB project.',
+  },
+  id: {
+    title: 'Hull Engineering Studio — CAD, FEA & Custom RIB Hull Design',
+    description:
+      'Explore our Hull Engineering Studio for CAD design, finite element analysis (FEA), and custom HDPE/aluminium/fibre glass hull development. Contact our engineering team to start your next RIB project.',
+  },
+  ko: {
+    title: 'Hull Engineering Studio — CAD, FEA & Custom RIB Hull Design',
+    description:
+      'Explore our Hull Engineering Studio for CAD design, finite element analysis (FEA), and custom HDPE/aluminium/fibre glass hull development. Contact our engineering team to start your next RIB project.',
+  },
+  lt: {
+    title: 'Hull Engineering Studio — CAD, FEA & Custom RIB Hull Design',
+    description:
+      'Explore our Hull Engineering Studio for CAD design, finite element analysis (FEA), and custom HDPE/aluminium/fibre glass hull development. Contact our engineering team to start your next RIB project.',
+  },
+  lv: {
+    title: 'Hull Engineering Studio — CAD, FEA & Custom RIB Hull Design',
+    description:
+      'Explore our Hull Engineering Studio for CAD design, finite element analysis (FEA), and custom HDPE/aluminium/fibre glass hull development. Contact our engineering team to start your next RIB project.',
+  },
+  ms: {
+    title: 'Hull Engineering Studio — CAD, FEA & Custom RIB Hull Design',
+    description:
+      'Explore our Hull Engineering Studio for CAD design, finite element analysis (FEA), and custom HDPE/aluminium/fibre glass hull development. Contact our engineering team to start your next RIB project.',
+  },
+  ro: {
+    title: 'Hull Engineering Studio — CAD, FEA & Custom RIB Hull Design',
+    description:
+      'Explore our Hull Engineering Studio for CAD design, finite element analysis (FEA), and custom HDPE/aluminium/fibre glass hull development. Contact our engineering team to start your next RIB project.',
+  },
+  sk: {
+    title: 'Hull Engineering Studio — CAD, FEA & Custom RIB Hull Design',
+    description:
+      'Explore our Hull Engineering Studio for CAD design, finite element analysis (FEA), and custom HDPE/aluminium/fibre glass hull development. Contact our engineering team to start your next RIB project.',
+  },
+  sl: {
+    title: 'Hull Engineering Studio — CAD, FEA & Custom RIB Hull Design',
+    description:
+      'Explore our Hull Engineering Studio for CAD design, finite element analysis (FEA), and custom HDPE/aluminium/fibre glass hull development. Contact our engineering team to start your next RIB project.',
+  },
+  sr: {
+    title: 'Hull Engineering Studio — CAD, FEA & Custom RIB Hull Design',
+    description:
+      'Explore our Hull Engineering Studio for CAD design, finite element analysis (FEA), and custom HDPE/aluminium/fibre glass hull development. Contact our engineering team to start your next RIB project.',
+  },
+  th: {
+    title: 'Hull Engineering Studio — CAD, FEA & Custom RIB Hull Design',
+    description:
+      'Explore our Hull Engineering Studio for CAD design, finite element analysis (FEA), and custom HDPE/aluminium/fibre glass hull development. Contact our engineering team to start your next RIB project.',
+  },
+  tl: {
+    title: 'Hull Engineering Studio — CAD, FEA & Custom RIB Hull Design',
+    description:
+      'Explore our Hull Engineering Studio for CAD design, finite element analysis (FEA), and custom HDPE/aluminium/fibre glass hull development. Contact our engineering team to start your next RIB project.',
+  },
+  tr: {
+    title: 'Hull Engineering Studio — CAD, FEA & Custom RIB Hull Design',
+    description:
+      'Explore our Hull Engineering Studio for CAD design, finite element analysis (FEA), and custom HDPE/aluminium/fibre glass hull development. Contact our engineering team to start your next RIB project.',
+  },
+};
+
+const crumbs = [
+  { name: t('nav.home') || 'Home', href: `/${lang}/` },
+  { name: 'R&D Center', href: `/${lang}/randdcenter` },
+  { name: 'Hull Engineering Studio' },
+];
+
+const meta = META[lang] || META.en;
+
+const metadata = {
+  title: `${meta.title} | ${SITE.name}`,
+  description: meta.description,
+};
+
+const RanddBody: any =
+  (
+    {
+      de: RDe,
+      es: REs,
+      fr: RFr,
+      it: RIt,
+      cs: RCs,
+      sv: RSv,
+      da: RDa,
+      el: REl,
+      no: RNo,
+      ru: RRu,
+      nl: RNl,
+      fi: RFi,
+      pl: RPl,
+      ar: RAr,
+      pt: RPt,
+      ja: RJa,
+      bg: RBg,
+      et: REt,
+      he: RHe,
+      hr: RHr,
+      hu: RHu,
+      id: RId,
+      ko: RKo,
+      lt: RLt,
+      lv: RLv,
+      ms: RMs,
+      ro: RRo,
+      sk: RSk,
+      sl: RSl,
+      sr: RSr,
+      th: RTh,
+      tl: RTl,
+      tr: RTr,
+    } as Record<string, any>
+  )[lang] || REn;
+
+const faqSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What hull designs does Aquafarer offer?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Planing hulls for RIB boats, displacement hulls for kayaks, flat/wide platforms for SUP boards, and V-hull configurations for performance RIBs.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I get a custom hull design?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Our engineering team develops custom hull shapes using 3D CAD and produces CNC-machined aluminum molds for precision.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What CAD formats are available?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'PDF GA drawings (free), DXF/DWG (light form), STEP/IGES (project application). See the Technical Drawings page for details.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How are hulls tested?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Hydrostatic pressure testing, stability testing per ISO 12217, and buoyancy verification per ISO 6185 before production approval.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the typical design-to-mold timeline?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: '3-5 days for 3D CAD modeling, 7-14 days for CNC mold machining, 3-5 days for prototype production and testing.',
+      },
+    },
+  ],
+});
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  {RanddBody && <RanddBody lang={lang} />}
+  <script is:inline type="application/ld+json" set:html={faqSchema} />
+</Layout>

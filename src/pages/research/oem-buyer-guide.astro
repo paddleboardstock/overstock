@@ -1,0 +1,282 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+
+const metadata = {
+  title: `OEM Buyer Guide — Sourcing Inflatable Watercraft from Asia | ${SITE.name}`,
+  description: `Comprehensive guide for sourcing inflatable boats, SUPs, kayaks, and RIBs from Asian manufacturers: factory evaluation checklist, QC protocols, compliance verification, MOQ negotiation, shipping terms, and common pitfalls.`,
+  ignoreTitleTemplate: true,
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'OEM Buyer Guide — Sourcing Inflatable Watercraft from Asian Manufacturers',
+  description: metadata.description,
+  author: { '@type': 'Organization', name: SITE.name },
+  datePublished: '2024-05-08',
+  dateModified: '2025-06-10',
+};
+---
+
+<Layout metadata={metadata}>
+  <JsonLd data={jsonLd} />
+
+  <article class="max-w-4xl mx-auto px-6 py-16">
+    <nav class="text-sm text-gray-500 mb-8">
+      <a href="/" class="hover:text-sky-600">{SITE.name}</a>
+      <span class="mx-2">/</span>
+      <a href="/research" class="hover:text-sky-600">Research</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-900">OEM Buyer Guide</span>
+    </nav>
+
+    <div class="mb-4">
+      <span
+        class="inline-block text-xs font-semibold uppercase tracking-wider text-sky-600 bg-sky-50 px-3 py-1 rounded-full"
+        >Sourcing</span
+      >
+      <span class="ml-3 text-sm text-gray-400">12 min read</span>
+    </div>
+
+    <h1 class="text-4xl font-bold text-gray-900 mb-6">OEM Buyer Guide</h1>
+    <p class="text-xl text-gray-500 mb-12 leading-relaxed">
+      A comprehensive guide for sourcing inflatable watercraft from Asian manufacturers. Covers factory evaluation,
+      quality control, compliance verification, MOQ negotiation, and logistics.
+    </p>
+
+    <div class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600">
+      <h2>1. Pre- Qualification: What to Look for in a Factory</h2>
+
+      <p>Before engaging any manufacturer, verify the following credentials:</p>
+
+      <h3>Compliance Certificates</h3>
+      <ul>
+        <li>
+          <strong>ISO 9001:2015</strong>
+          <span class="text-gray-800 font-semibold">–</span> Quality management system. If a factory does not have ISO 9001,
+          they almost certainly lack the process controls needed for consistent quality.
+        </li>
+        <li>
+          <strong>CE certification</strong>
+          <span class="text-gray-800 font-semibold">–</span> For any product destined for the European market. Verify the
+          Notified Body number and scope of certification.
+        </li>
+        <li>
+          <strong>BSCI / SMETA / SEDEX</strong>
+          <span class="text-gray-800 font-semibold">–</span> Social compliance audits. Many EU and US buyers now require these
+          as part of their supply chain due diligence.
+        </li>
+        <li>
+          <strong>REACH / RoHS</strong>
+          <span class="text-gray-800 font-semibold">–</span> Material compliance declarations for chemical substances.
+        </li>
+      </ul>
+
+      <h3>Manufacturing Capabilities</h3>
+      <ul>
+        <li>Drop-stitch core weaving in-house vs. outsourced</li>
+        <li>PVC coating / lamination line (calender or spread coating)</li>
+        <li>RF welding and hot air welding equipment</li>
+        <li>In-house mold making (CNC machining)</li>
+        <li>Testing lab (pressure testing, UV aging, tensile testing)</li>
+      </ul>
+
+      <h3>Experience Verification</h3>
+      <ul>
+        <li>Years in inflatable watercraft manufacturing (5+ years minimum for serious consideration)</li>
+        <li>Number of engineers on staff</li>
+        <li>Existing OEM/ODM clients (request references with permission)</li>
+        <li>
+          Export destinations <span class="text-gray-800 font-semibold">–</span> are they already shipping to your target
+          market?
+        </li>
+      </ul>
+
+      <h2>2. Quality Control Protocols</h2>
+
+      <h3>Material Incoming QC</h3>
+      <ul>
+        <li>Tensile strength testing of incoming PVC fabric (per ASTM D751 or ISO 1421)</li>
+        <li>Tear resistance testing (per ASTM D2261 or ISO 4674)</li>
+        <li>Adhesion strength of laminate layers</li>
+        <li>UV aging spot checks (QUV accelerated weathering tester)</li>
+      </ul>
+
+      <h3>In-Process QC</h3>
+      <ul>
+        <li>
+          Seam strength monitoring during welding <span class="text-gray-800 font-semibold">–</span> peel tests every 50 units
+        </li>
+        <li>Valve installation torque and sealing verification</li>
+        <li>Drop-stitch thread density verification</li>
+        <li>Dimensional checks against CAD drawings</li>
+      </ul>
+
+      <h3>Final Inspection (Before Shipment)</h3>
+      <ul>
+        <li>
+          100% inflation hold test <span class="text-gray-800 font-semibold">–</span> inflate to rated pressure, hold for
+          24 hours, max 5% pressure drop
+        </li>
+        <li>Visual inspection: surface defects, color consistency, weld quality, label placement</li>
+        <li>
+          Valve function test <span class="text-gray-800 font-semibold">–</span> open/close cycle 10 times, check sealing
+        </li>
+        <li>Packaging integrity check</li>
+        <li>Random sample testing (AQL 2.5 or 4.0 per ISO 2859)</li>
+      </ul>
+
+      <h2>3. Compliance Documentation Checklist</h2>
+      <p>For each product, the factory should provide:</p>
+      <ul>
+        <li>Declaration of Conformity (DoC) referencing the correct EU directive</li>
+        <li>CE certificate from the notified body (if applicable)</li>
+        <li>Test report from accredited lab</li>
+        <li>Material safety data sheets (MSDS) for all adhesives and coatings</li>
+        <li>REACH compliance declaration</li>
+        <li>Bill of Materials with supplier traceability</li>
+        <li>Factory inspection report (if third-party audit conducted)</li>
+      </ul>
+
+      <h2>4. MOQ Negotiation</h2>
+      <p>Typical MOQs for inflatable watercraft OEM:</p>
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="bg-gray-100">
+            <th class="p-3 text-left font-semibold text-gray-900 border">Product Type</th>
+            <th class="p-3 text-left font-semibold text-gray-900 border">Standard MOQ</th>
+            <th class="p-3 text-left font-semibold text-gray-900 border">Negotiable Range</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            ><td class="p-3 border">SUP Boards</td><td class="p-3 border"
+              >50 <span class="text-gray-800 font-semibold">–</span> 100 units</td
+            ><td class="p-3 border">5 <span class="text-gray-800 font-semibold">–</span> 10 units (sample / trial)</td
+            ></tr
+          >
+          <tr
+            ><td class="p-3 border">Kayaks</td><td class="p-3 border"
+              >50 <span class="text-gray-800 font-semibold">–</span> 100 units</td
+            ><td class="p-3 border">5 <span class="text-gray-800 font-semibold">–</span> 10 units (sample / trial)</td
+            ></tr
+          >
+          <tr
+            ><td class="p-3 border">Inflatable Boats</td><td class="p-3 border"
+              >50 <span class="text-gray-800 font-semibold">–</span> 100 units</td
+            ><td class="p-3 border">2 <span class="text-gray-800 font-semibold">–</span> 5 units (sample / trial)</td
+            ></tr
+          >
+          <tr
+            ><td class="p-3 border">RIB Boats</td><td class="p-3 border"
+              >20 <span class="text-gray-800 font-semibold">–</span> 50 units</td
+            ><td class="p-3 border">2 <span class="text-gray-800 font-semibold">–</span> 5 units (sample / trial)</td
+            ></tr
+          >
+          <tr
+            ><td class="p-3 border">Safety / Accessories</td><td class="p-3 border"
+              >200 <span class="text-gray-800 font-semibold">–</span> 500 units</td
+            ><td class="p-3 border">50 <span class="text-gray-800 font-semibold">–</span> 100 units (sample / trial)</td
+            ></tr
+          >
+        </tbody>
+      </table>
+
+      <p>Negotiation tips:</p>
+      <ul>
+        <li>Offer to pay a sample/tooling deposit to reduce initial MOQ</li>
+        <li>Accept a slightly higher unit price for lower MOQ on first order</li>
+        <li>Commit to a forecast for subsequent orders to secure MOQ flexibility</li>
+        <li>Combine multiple products or variants into a single production run</li>
+      </ul>
+
+      <h2>5. Logistics and Shipping</h2>
+      <h3>Common Incoterms</h3>
+      <ul>
+        <li>
+          <strong>FOB (Free on Board):</strong> Factory delivers to the departure port. Buyer assumes responsibility once
+          goods are on board. Most common for Asian manufacturing.
+        </li>
+        <li>
+          <strong>EXW (Ex Works):</strong> Buyer arranges all shipping from the factory door. Cheapest factory price but most
+          buyer responsibility.
+        </li>
+        <li>
+          <strong>CIF (Cost, Insurance, Freight):</strong> Factory pays freight and insurance to destination port. Higher
+          price but less risk for buyer.
+        </li>
+      </ul>
+
+      <h3>Shipping Considerations</h3>
+      <ul>
+        <li>
+          Inflatable products are low-weight, high-volume <span class="text-gray-800 font-semibold">–</span> volumetric weight
+          (DIM) often determines shipping cost, not actual weight
+        </li>
+        <li>
+          Request vacuum-packed packaging to reduce volume by 50 <span class="text-gray-800 font-semibold">–</span> 60%
+        </li>
+        <li>
+          Sea freight from China/East Asia to EU: 25 <span class="text-gray-800 font-semibold">–</span> 35 days; to US West
+          Coast: 15 <span class="text-gray-800 font-semibold">–</span> 20 days
+        </li>
+        <li>
+          For urgent orders, air freight is 4 <span class="text-gray-800 font-semibold">–</span> 6x more expensive but takes
+          3 <span class="text-gray-800 font-semibold">–</span> 7 days
+        </li>
+      </ul>
+
+      <h2>6. Common Pitfalls and How to Avoid Them</h2>
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="bg-gray-100">
+            <th class="p-3 text-left font-semibold text-gray-900 border">Pitfall</th>
+            <th class="p-3 text-left font-semibold text-gray-900 border">Consequence</th>
+            <th class="p-3 text-left font-semibold text-gray-900 border">Prevention</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            ><td class="p-3 border">No factory audit</td><td class="p-3 border"
+              >Inconsistent quality, missed delivery dates</td
+            ><td class="p-3 border">Always perform or commission a third-party audit (QIMA, SGS, Bureau Veritas)</td
+            ></tr
+          >
+          <tr
+            ><td class="p-3 border">Verbal specs only</td><td class="p-3 border">Product does not match expectations</td
+            ><td class="p-3 border">Detailed technical specification sheet signed by both parties</td></tr
+          >
+          <tr
+            ><td class="p-3 border">Skipping sample approval</td><td class="p-3 border"
+              >Mass production with design flaws</td
+            ><td class="p-3 border">Written sign-off on samples before bulk production starts</td></tr
+          >
+          <tr
+            ><td class="p-3 border">No QC during production</td><td class="p-3 border"
+              >Defects discovered at destination with no recourse</td
+            ><td class="p-3 border">Third-party inspection during production (DUPRO) and before shipment (PSI)</td></tr
+          >
+          <tr
+            ><td class="p-3 border">Ignoring compliance</td><td class="p-3 border"
+              >Shipment seized at customs, legal liability</td
+            ><td class="p-3 border">Verify CE/UKCA/other certification before production</td></tr
+          >
+        </tbody>
+      </table>
+
+      <h2>7. Why Aquafarer</h2>
+      <p>
+        Aquafarer has been manufacturing OEM/ODM inflatable watercraft since 2012. With a 12,000 m<sup>2</sup> ISO 9001 certified
+        facility, 25+ engineers, and 64 CE-certified models across our product lines, we meet every criterion in this guide.
+        We offer trial MOQs for new partners and full compliance documentation packages. Our factory is open for on-site and
+        virtual audits.
+      </p>
+    </div>
+
+    <div class="mt-16 pt-8 border-t border-gray-200">
+      <a href="/research" class="text-sky-600 hover:text-sky-700 font-medium">&larr; Back to Research</a>
+    </div>
+  </article>
+</Layout>

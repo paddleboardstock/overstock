@@ -1,0 +1,185 @@
+---
+import { SITE } from 'astrowind:config';
+const { lang = 'fr' } = Astro.props;
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={`/${lang}/randdcenter`} class="text-sm text-gray-500 hover:underline">&larr; Retour au Centre R&amp;D</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Lab 03</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Centre de soudure RF</h1>
+      <p class="mt-3 text-lg text-muted">
+        Technologie de liaison diélectrique pour des soudures qui tiennent sous pression
+      </p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-jungle-mandala-1.webp"
+        alt="Procédé de liaison diélectrique par soudure RF Aquafarer"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>La science derrière la soudure</h2>
+  <p>
+    Un bateau gonflable n'est fiable qu'à la hauteur de ses soudures. Une seule soudure faible peut compromettre une
+    chambre entière — et en mer, une défaillance de chambre n'est pas un désagrément ; c'est un danger pour la sécurité.
+    Chez {SITE.name}, nous avons investi dans un Centre de soudure RF dédié qui combine des presses de soudage
+    diélectrique de qualité industrielle avec un contrôle rigoureux des processus et des essais après soudage. Chaque
+    soudure que nous produisons est documentée, traçable et certifiée pour répondre ou dépasser les exigences de — la
+    norme internationale pour les embarcations gonflables.
+  </p>
+  <p>
+    La soudure RF utilise une énergie électromagnétique haute fréquence (typiquement 27.12 MHz) pour exciter les
+    molécules polaires du tissu enduit PVC ou Hypalon, générant de la chaleur précisément à l'interface des matériaux.
+    Contrairement au soudage à air chaud ou à coin chaud, la soudure RF crée une véritable liaison moléculaire — les
+    deux couches de tissu fusionnent en un seul matériau homogène dans la zone de soudure, produisant un joint aussi
+    résistant que le matériau d'origine lui-même.
+  </p>
+
+  <h2>Équipement de soudage et contrôle des processus</h2>
+  <p>Notre centre de soudage est équipé de :</p>
+  <table>
+    <thead><tr><th>Machine</th><th>Puissance / Capacité</th><th>Application</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Presse RF diélectrique 1</td><td>15 kW, plateau 2000 &times; 600 mm</td><td
+          >Soudures longitudinales principales, jonctions tableau-flotteurs</td
+        ></tr
+      >
+      <tr
+        ><td>Presse RF diélectrique 2</td><td>10 kW, plateau 1500 &times; 500 mm</td><td
+          >Soudures de cloisons, fixations des cônes, pièces de valve</td
+        ></tr
+      >
+      <tr
+        ><td>Soudeuse RF à commande CNC</td><td>8 kW, table XY 2500 &times; 1200 mm</td><td
+          >Soudures courbes, gaufrage de logos/panneaux, rapiéçage de précision</td
+        ></tr
+      >
+      <tr
+        ><td>Soudeuse automatique à coin chaud</td><td>Température variable, 1.2 m/min max</td><td
+          >Méthode de secours pour les matériaux Hypalon/CSM</td
+        ></tr
+      >
+    </tbody>
+  </table>
+  <p>
+    Chaque presse RF est équipée d'une surveillance en boucle fermée de la température et de la pression. Les paramètres
+    de soudure — puissance, temps de presse, temps de refroidissement, pression des électrodes — sont programmés par
+    type de matériau et enregistrés dans notre système d'exécution de fabrication (MES) pour une traçabilité complète.
+  </p>
+
+  <h2>Essais de qualité des soudures — chaque soudure, chaque bateau</h2>
+  <p>L'intégrité des soudures est vérifiée par un protocole obligatoire de quatre essais :</p>
+  <ol>
+    <li>
+      <strong>Inspection visuelle</strong> — 100 % des soudures sont inspectées visuellement pour détecter les brûlures, les
+      désalignements, les contaminations ou les fusions incomplètes. Seuil de rejet : 0.5 % des mètres linéaires.
+    </li>
+    <li>
+      <strong>Test de pelage ()</strong> — Une bande de 25 mm de large est découpée dans une éprouvette soudée avec chaque
+      lot de production. Force de pelage minimale : 120 N/25 mm pour PVC 1100 dtex.
+    </li>
+    <li>
+      <strong>Test de rétention d'air</strong> — Chaque chambre terminée est pressurisée à 1.25 &times; la pression de service
+      et maintenue pendant 24-48 heures. La chute de pression ne doit pas dépasser 2 %.
+    </li>
+    <li>
+      <strong>Test de cycles thermiques</strong> — Des éprouvettes sont soumises à des cycles de -20 &deg;C à +60 &deg;C pendant
+      50 cycles, puis testées au pelage à nouveau. Perte de résistance acceptable : &lt; 10 %.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Comparaison de la résistance au pelage — Soudure RF vs air chaud (PVC 1100 dtex)
+    </p>
+    <div class="space-y-3">
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">Soudure RF</span><div
+          class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded"
+        >
+          <div class="h-full bg-blue-600 rounded" style="width:92%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">184 N</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">Air chaud</span><div
+          class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded"
+        >
+          <div class="h-full bg-gray-400 rounded" style="width:65%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">130 N</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">Minimum</span><div
+          class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded"
+        >
+          <div class="h-full bg-green-500 rounded" style="width:48%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">96 N</span>
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      La soudure RF atteint régulièrement 90-95 % de la résistance du matériau d'origine, bien au-dessus du minimum.
+    </p>
+  </div>
+
+  <h2>Expertise professionnelle</h2>
+  <p>
+    Notre équipe de soudage est dirigée par un ingénieur processus senior avec 11 ans d'expérience en soudage
+    diélectrique de textiles enduits. Chaque opérateur suit un programme de certification interne de 6 mois avant d'être
+    autorisé à travailler sur les soudures de production. Une recertification annuelle est requise, comprenant un test
+    pratique de soudure évalué selon notre norme interne Grade A (résistance au pelage &ge; 160 N/25 mm).
+  </p>
+
+  <h2>Solutions de soudage sur mesure pour des exigences uniques</h2>
+  <p>
+    Nous comprenons qu'une seule spécification de soudure ne convient pas à toutes les applications. Notre Centre de
+    soudure RF développe régulièrement des configurations de soudures sur mesure pour des clients ayant des exigences
+    particulières :
+  </p>
+  <ul>
+    <li>
+      <strong>Pièces de renforcement multicouches</strong> — pour les zones à forte usure telles que les lisses de frottement
+      et les cônes de proue, nous développons des soudures RF multipasses intégrant une couche externe résistante à l'usure
+      sans compromettre la flexibilité.
+    </li>
+    <li>
+      <strong>Soudures conductrices ou opaques aux RF</strong> — pour les navires militaires ou de surveillance nécessitant
+      un blindage électromagnétique, nous soudons des couches de treillis conducteur dans l'empilement de la soudure.
+    </li>
+    <li>
+      <strong>Soudure de panneaux bicolores</strong> — panneaux de tissu bicolores (par ex. coque orange + pont gris) soudés
+      avec un recouvrement dissimulé pour préserver l'esthétique de la marque sans ligne de jonction visible.
+    </li>
+  </ul>
+
+  <h2>Notre engagement envers vous</h2>
+  <p>
+    Chaque bateau que nous livrons porte notre garantie de qualité des soudures : si une soudure défaille en service
+    normal pendant la période de garantie, nous réparons ou remplaçons la chambre concernée sans frais, et une
+    investigation des causes profondes est menée pour prévenir toute récurrence. Ce n'est pas simplement une garantie —
+    c'est un engagement envers l'amélioration continue porté par des données opérationnelles réelles.
+  </p>
+  <p>
+    Lorsque vous choisissez {SITE.name}, vous choisissez des soudures qui sont conçues, testées et documentées — pas
+    simplement soudées. C'est la différence entre un bateau qui flotte et un bateau qui performe.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Discutez de vos besoins en soudure</h2>
+    <p class="mt-2 text-sm text-muted">
+      Spécifications de soudures sur mesure, compatibilité des matériaux ou validation des processus.
+    </p>
+    <a
+      href={`/${lang}/contact`}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Contactez notre équipe de soudage</a
+    >
+  </div>
+</section>

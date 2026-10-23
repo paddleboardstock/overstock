@@ -1,0 +1,163 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'ja' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">← 研究開発センターに戻る</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">研究室02</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">ハルエンジニアリングスタジオ</h1>
+      <p class="mt-3 text-lg text-muted">デジタルシミュレーション、構造インテリジェンス、カスタム船体設計</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/design discussaquafarer-inflatable-boat-aquafarer-factory-exterior.webp"
+        alt="Aquafarer 船体エンジニアリング CAD 設計ワークステーション"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>強度と流体力学が出会う場所</h2>
+  <p>
+    船体は、RIB またはインフレータブル
+    ボートのバックボーンです。効率的に平面加工を行うのに十分な軽さ、衝撃荷重を吸収するのに十分な強度、そして広い温度範囲にわたって寸法が安定している必要があります。で
+    {SITE.name}当社の船体エンジニアリング スタジオは、高度な CAD モデリング、有限要素解析
+    (FEA)、数十年にわたる海軍建築の実践経験を組み合わせて、カタログから適合させた一般的な形状ではなく、意図した任務に合わせて最適化された船体を提供します。
+  </p>
+  <p>
+    当社は、回転成形された HDPE、溶接された海洋グレードのアルミニウム、および手作業で敷かれたグラスファイバーという 3
+    つの主要な船体材料を使用しており、それぞれを社内で設計、シミュレーション、検証するエンジニアリング能力を備えています。
+  </p>
+
+  <h2>設計ツールと標準</h2>
+  <p>当社のデジタル エンジニアリング環境には次のものが含まれます。</p>
+  <table>
+    <thead><tr><th>能力</th><th>ソフトウェア/ツール</th><th>応用</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>3Dパラメトリックモデリング</td><td>SolidWorks プロフェッショナル</td><td
+          >船体表面、ストリンガーシステム、エンジンブラケット、デッキレイアウト</td
+        ></tr
+      >
+      <tr
+        ><td>有限要素解析</td><td>ANSYS メカニカル &amp; LS-DYNA</td><td
+          >応力マッピング、モーダル解析、衝突/衝撃シミュレーション</td
+        ></tr
+      >
+      <tr><td>数値流体力学</td><td>Ansys Fluent / Star-CCM+</td><td>流体力学的抵抗予測、トリム最適化</td></tr>
+      <tr
+        ><td>ラミネートエンジニアリング</td><td>ESAComp / CADEC</td><td
+          >グラスファイバー層の積層、コアの選択、重量の推定</td
+        ></tr
+      >
+      <tr><td>モールドフローシミュレーション</td><td>モルデックス3D</td><td>回転成形肉厚予測</td></tr>
+    </tbody>
+  </table>
+
+  <h2>当社のエンジニアリングワークフロー</h2>
+  <p>
+    標準モデルであろうと完全なカスタム プロジェクトであろうと、すべての船体の設計は、厳格な 5 段階のプロセスに従います。
+  </p>
+  <ol>
+    <li>
+      <strong>コンセプトと要件の収集</strong> — ペイロード、速度エンベロープ、海洋状態での能力、曳航要件、および特別なミッション機器
+      (デッキハッチ、コンソールの位置、燃料タンクの統合) を定義するためにお客様と打ち合わせを行います。
+    </li>
+    <li>
+      <strong>3D サーフェスと静水圧計算</strong> — 船体の形状は SolidWorks でモデル化され、内蔵の解析ツールを使用して静水圧安定性
+      (GM、復元アーム) がチェックされます。
+    </li>
+    <li>
+      <strong>構造FEA</strong> — 荷重ケースが定義されています: 静的 (乗組員 + ギア)、動的 (5g でのプレーニング衝撃)、およびスラミング
+      (3 m/s での波頭からの落下)。応力等高線が確認されます。安全係数 ≥ 2.5 は必須です。
+    </li>
+    <li>
+      <strong>CFDドラッグの最適化</strong> — 船体は 3 つの荷重条件と 5 つの速度でシミュレートされます。接液表面積、トリム角度、残留抵抗は繰り返し減少します。
+    </li>
+    <li>
+      <strong>デザインレビューとリリース</strong> — 完全なエンジニアリング パッケージ (3D モデル、FEA レポート、CFD レポート、重量推定、プライブック)
+      は、プロトタイプ ワークショップにリリースされる前に当社の上級造船技師によってレビューされます。
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      FEA 応力分布 — RIB 450 パトロール船体 (アルミニウム 5083)
+    </p>
+    <div class="grid grid-cols-2 gap-4 text-sm">
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">2.8 : 1</span>
+        <span class="text-gray-500">最大積載量における安全率</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">15.2 %</span>
+        <span class="text-gray-500">前世代と比較した場合の抵抗低減</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">87 kN/m&sup2;</span>
+        <span class="text-gray-500">ピークスラミング圧力（設計限界）</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">18 000 h</span>
+        <span class="text-gray-500">2025 の累積 FEA 実行時間</span>
+      </div>
+    </div>
+  </div>
+
+  <h2>カスタマイズ: あなたの船体、あなたのルール</h2>
+  <p>
+    同じ要件を持つ 2 つの演算子は存在しません。港湾パトロールの RIB には、低速での安定性を確保するために浅い V
+    の船体が必要です。高速迎撃クラフトにはスプレー レールを備えたディープ V
+    が必要です。ダイビングサポートボートには広いビームと低いトランサムが必要です。アプリケーションを既存のハル形状に強制することはありません。お客様の仕様に基づいて設計を行います。
+  </p>
+  <p>最近のカスタム船体エンジニアリング プロジェクトの例:</p>
+  <ul>
+    <li>
+      カリブ海のツアー オペレーター向けの伸長 6.8 m HDPE 船体。ビーチ着水用に強化された船首 (+15 % の底厚)
+      を備えています。
+    </li>
+    <li>
+      沿岸警備隊向けの軽量アルミニウム製 7.2 m RIB で、燃料タンク バッフルと機器ロッカーの補強材が一体化されています。
+    </li>
+    <li>
+      カットダウントランサムとツインバッテリーボックスを備えたファイバーグラス製5.5メートルのダイビングボートで、シュノーケラーが簡単に再乗船できるように設計されています。
+    </li>
+  </ul>
+
+  <h2>当社のエンジニア</h2>
+  <p>
+    このスタジオは、高速船設計で 14 年の経験を持つ上級造船技師が主導し、FEA と CFD を専門とする 2
+    人の機械エンジニアがサポートしています。 3
+    人全員が、国際的に認められた大学で海洋工学または造船の高度な学位を取得しています。チームは業界ジャーナルに定期的に出版し、高性能船舶に関する国際会議などの会議で発表しています。
+  </p>
+
+  <h2>次の船体に関して私たちと提携してください</h2>
+  <p>
+    最初のコンセプト スケッチから最終的な応力レポートに至るまで、当社のハル エンジニアリング
+    スタジオは、単に建造するだけでなく設計されたボートを作成するパートナーです。私たちは、船体のすべての溶接、すべてのラミネート層、およびすべての曲線に理由があるように、事前にシミュレーション時間を費やしています。
+  </p>
+  <p>
+    既存のモデルに小さな変更が必要な場合でも、完全に白紙の設計が必要な場合でも、いつでもご要望に応じてご相談させていただきます。
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">船体設計のコンサルティングを開始する</h2>
+    <p class="mt-2 text-sm text-muted">
+      あなたのミッションプロファイルについて教えてください。エンジニアリングパスを提案します。
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >弊社のエンジニアリングチームにお問い合わせください</a
+    >
+  </div>
+</section>

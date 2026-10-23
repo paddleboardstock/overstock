@@ -1,0 +1,119 @@
+hero:
+  tagline: Livre blanc sur l'ingénierie
+  title: Technologie Drop-Stitch et science des matériaux :<br />L'ingénierie derrière les motomarines gonflables modernes
+  subtitle: Une référence technique faisant autorité couvrant la construction du noyau à points de chute, la comparaison des matériaux PVC et Hypalon, les tests de rigidité des récipients à haute pression et les normes de fabrication des embarcations.
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/randd/aquafarer-design-discussion-lab.webp
+    alt: Laboratoire R&D Aquafarer — essais et ingénierie des matériaux
+direct_answer: La technologie Drop-Stitch utilise des milliers de fils internes en polyester reliant les couches de tissu supérieure et inférieure d'un noyau gonflable. Lorsqu'ils sont gonflés à 15-20 PSI, ces fils agissent comme des éléments de tension, empêchant le renflement et créant une structure rigide comparable à une construction à coque dure. Combiné avec des revêtements avancés en tissu PVC ou Hypalon et un soudage RF, cela permet d'obtenir une embarcation gonflable portable et de haute performance adaptée à un usage professionnel, commercial et récréatif.
+section_drop_stitch:
+  title: Ingénierie structurelle à points de chute
+  subtitle: Comment des milliers de fils transforment un tissu flexible en structure rigide
+  content: |-
+    Le drop-stitch (également connu sous le nom de « tissu drop-stitch » ou « noyau drop-stitch ») représente une percée dans l'ingénierie des structures gonflables. Le principe est d'une simplicité trompeuse : des milliers de fils de polyester individuels sont tissés simultanément en deux couches distinctes de tissu de base, reliant les panneaux supérieur et inférieur à un angle de 90 degrés.
+
+    Lorsque la chambre scellée est sous pression, la pression de l’air interne exerce une force égale dans toutes les directions, essayant de séparer les panneaux supérieur et inférieur pour leur donner une forme cylindrique. Les milliers de fils drop-stitch résistent à cette séparation, transférant la charge en tension le long de l'axe du fil. Le résultat est un panneau plat et rigide qui peut résister à une pression interne de 15 à 20 PSI.
+
+    À 20 PSI, un panneau à points de chute de 1 m² subit environ 14 000 kg de force interne totale, mais la matrice de filetage le maintient parfaitement à plat. Cela donne aux structures à points de chute un rapport résistance/poids qui rivalise avec les matériaux rigides traditionnels.
+section_materials:
+  title: PVC vs Hypalon — Comparaison des matériaux techniques
+  subtitle: Données objectives pour une sélection éclairée de matériaux dans la fabrication de motomarines
+  table:
+    columns:
+      - header: Propriété
+      - header: PVC (chlorure de polyvinyle)
+      - header: Hypalon (CSM)
+    rows:
+      - property: Résistance aux UV
+        pvc: Bon (avec stabilisateurs UV)
+        hypalon: Excellent (inhérent)
+      - property: Résistance à l'abrasion
+        pvc: Bien
+        hypalon: Très bien
+      - property: Résistance à la traction
+        pvc: 3 000 à 5 000 N/5 cm
+        hypalon: 2 500 à 4 000 N/5 cm
+      - property: Poids au m²
+        pvc: 850 à 1 200 g
+        hypalon: 1 100 à 1 500 g
+      - property: Flexion à froid
+        pvc: '- 30 °C'
+        hypalon: -20°C
+      - property: Méthode de jointure
+        pvc: Soudage RF / Soudage à air chaud
+        hypalon: Collage à la main (ciment contact)
+      - property: Réparabilité
+        pvc: Facile (thermo-soudage ou adhésif)
+        hypalon: Nécessite un adhésif CSM
+      - property: Coût du matériel
+        pvc: 8 à 15 $/m²
+        hypalon: 20 à 40 $/m²
+      - property: Durée de vie (soleil tropical)
+        pvc: 5 à 8 ans
+        hypalon: 10 à 15 ans
+      - property: Gamme de couleurs
+        pvc: Large (spectre de couleurs complet)
+        hypalon: Limité (couleurs de base)
+      - property: Résistance chimique
+        pvc: Bon (grades résistants au carburant/à l'huile)
+        hypalon: Excellent (large gamme chimique)
+section_testing:
+  title: Protocoles de test et de sécurité
+  subtitle: Le cadre d'assurance qualité d'Aquafarer pour chaque lot de production
+  protocols:
+    - title: Test de maintien de la pression nominale 1,25x
+      description: Chaque navire assemblé est gonflé à 1,25 fois sa pression de fonctionnement nominale et maintenu pendant 24 à 48 heures. Toute chute de pression supérieure à 2 % entraîne un rejet et une reprise.
+      standard: OIN 6185
+    - title: Test de résistance au pelage des coutures
+      description: Des échantillons de soudures et de joints de colle de chaque lot de production sont testés pour déterminer leur résistance au pelage à l'aide d'un équipement de tension calibré. Résistance au pelage minimale de 4 kN/m requise.
+      standard: OIN 2411
+    - title: Test de traction du tissu
+      description: Les rouleaux de tissu entrants sont soumis à des tests de résistance à la traction et d’allongement dans les sens chaîne et trame. Seuil de rejet inférieur à 3 000 N/5 cm pour le PVC.
+      standard: OIN 1421
+    - title: Vieillissement accéléré par les UV
+      description: Les échantillons de matériaux sont soumis à plus de 1 000 heures d’exposition accélérée aux UV dans des chambres d’essai QUV. Perte de résistance à la traction maximale de 15 % autorisée.
+      standard: ASTM G154
+    - title: Intégrité des vannes et des raccords
+      description: Chaque ensemble de vannes est testé pour l'intégrité du joint à une pression nominale de 1,25 fois. Les vannes anti-fuite sont testées pour leurs performances d'étanchéité unidirectionnelle.
+      standard: OIN 12402
+section_manufacturing:
+  title: Normes de fabrication et certifications de qualité
+  subtitle: Conformité aux normes de l’industrie pour un accès au marché mondial
+  standards:
+    - name: ISO 9001:2015
+      body: Certifié SGS
+      scope: Système de gestion de la qualité à travers la conception, la production et la livraison
+    - name: CE 2013/53/UE
+      body: Organisme notifié par l'UE
+      scope: Directive sur les bateaux de plaisance — conception de la coque, stabilité, flottaison, émissions
+    - name: BSCI
+      body: Amfori
+      scope: Conformité sociale – sécurité des travailleurs, travail équitable, gestion environnementale
+    - name: OIN 6185
+      body: Norme internationale
+      scope: Bateaux pneumatiques — construction, stabilité, flottaison, tests de pression
+    - name: ATTEINDRE
+      body: Règlement UE
+      scope: Sécurité chimique — substances restreintes dans les matériaux et les revêtements
+section_faq:
+  title: FAQ technique
+  questions:
+    - q: Comment le dropstitch se compare-t-il à la construction traditionnelle à coque rigide ?
+      a: Les noyaux modernes à points de chute à 20 PSI atteignent 85 à 90 % de la rigidité des coques dures comparables en mousse EPS/fibre de verre, tout en étant entièrement dégonflables pour le transport. Le compromis est un poids légèrement plus élevé et une rigidité ultime inférieure, mais pour la plupart des applications récréatives et commerciales, la différence est négligeable.
+    - q: Quelle densité de fil est considérée comme une qualité supérieure ?
+      a: Les tissus à point de chute haut de gamme utilisent 2 fils par pouce carré (environ 3 100 fils par m²) tissés à partir de fil de polyester 1 680 DTEX. Les tissus d'entrée de gamme utilisent 1 fil par pouce carré avec un fil 1 100 DTEX.
+    - q: L'Hypalon peut-il être soudé comme le PVC ?
+      a: Non. L’Hypalon/CSM ne peut pas être soudé par RF. Il doit être assemblé à l’aide de colle de contact appliquée à la main, ce qui rend la production plus exigeante en main-d’œuvre et les coutures dépendent des compétences de l’opérateur. Le PVC peut être soudé par RF ou par air chaud pour une qualité de couture constante et automatisée.
+    - q: Quelle est la pression maximale de sécurité pour les bateaux pneumatiques ?
+      a: Les tubes de bateau pneumatique standard fonctionnent entre 8 et 12 PSI. Les sols à points de chute fonctionnent entre 12 et 20 PSI. Les noyaux de point de chute (SUP) à haute pression peuvent fonctionner entre 20 et 25 PSI. Chaque produit comprend des soupapes de surpression calibrées pour éviter un gonflage excessif.
+    - q: Combien de temps faut-il pour fabriquer un bateau pneumatique sur mesure ?
+      a: La production OEM standard dure 30 à 45 jours à compter de la confirmation de la commande jusqu'à FOB Qingdao. Le développement de moules personnalisés ajoute 15 à 20 jours pour la production et les tests de prototypes.
+cta:
+  title: Consultation en ingénierie
+  subtitle: Vous avez une question spécifique en matière de matériau ou de conception ? Notre équipe d’ingénieurs est disponible pour des discussions techniques.
+  actions:
+    - variant: primary
+      text: Demandez à notre équipe d'ingénierie
+      href: /contact
+    - text: Explorez notre centre de R&D
+      href: /randdcenter

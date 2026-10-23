@@ -1,0 +1,131 @@
+site:
+  name: Aquafarer
+  site: 'https://aquafarer.com'
+  base: '/'
+  trailingSlash: true
+  googleSiteVerificationId: ''
+
+# Default SEO metadata
+metadata:
+  title:
+    default: Aquafarer — Modernong solusyon para sa inflatable bangka at teknikal na produkto
+    template: '%s — Aquafarer'
+  description: 'Nagdidisenyo at gumagawa ang Aquafarer ng mga inflatable bangka, RIB at mataas na kalidad na teknikal na produkto. Tuklasin ang aming katalogo, teknikal na mga detalye at mga sanggunian.'
+  keywords:
+    - Aquafarer
+    - inflatable bangka
+    - RIB
+    - PVC
+    - marino
+    - inhinyeriya
+  author: Aquafarer
+  robots:
+    index: true
+    follow: true
+  openGraph:
+    site_name: Aquafarer
+    images:
+      - url: '~/assets/images/default.webp'
+        width: 1200
+        height: 628
+    type: website
+    locale: tl_PH
+  twitter:
+    handle: '@Aquafarer'
+    site: '@Aquafarer'
+    cardType: summary_large_image
+
+i18n:
+  textDirection: ltr
+
+apps:
+  blog:
+    isEnabled: true
+    postsPerPage: 6
+
+    post:
+      isEnabled: true
+      permalink: '/news/%slug%' # Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
+      robots:
+        index: true
+        follow: true
+
+    list:
+      isEnabled: true
+      pathname: 'news' # News main path
+      robots:
+        index: true
+        follow: true
+
+    category:
+      isEnabled: true
+      pathname: 'news/category' # /category/<slug>
+      robots:
+        index: true
+        follow: true
+
+    tag:
+      isEnabled: true
+      pathname: 'news/tag' # /tag/<slug>
+      robots:
+        index: false
+        follow: true
+
+    isRelatedPostsEnabled: true
+    relatedPostsCount: 4
+
+  products:
+    isEnabled: true
+    productsPerPage: 12
+    product:
+      isEnabled: true
+      permalink: '/products/%slug%'
+      robots:
+        index: true
+        follow: true
+    list:
+      isEnabled: true
+      pathname: 'products'
+      robots:
+        index: true
+        follow: true
+
+analytics:
+  vendors:
+    googleAnalytics:
+      id: null # or "G-XXXXXXXXXX"
+
+ui:
+  theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
+
+# --- Per-language site settings ---
+siteSettings:
+  siteName: 'Aquafarer'
+  siteTagline: 'Aquafarer — Inflatable bangka, SUP board at premium na kagamitan sa water sports'
+  siteDescription: 'Nagdidisenyo at gumagawa ang Aquafarer ng mga inflatable bangka, SUP board at mataas na kalidad na kagamitan sa water sports.'
+  organization:
+    name: 'Aquafarer'
+    logo: ''
+    contactEmail: info@aquafarer.com
+    contactPhone: '+86 13305324192'
+    address: 'Economic Development Zone, Laixi, Qingdao, China, 266600'
+
+branding:
+  site_name: 'Aquafarer'
+  logo_image: ''
+  logo_alt: 'Aquafarer logo'
+  copyright: '© {year} {site_name} · Nakalaan ang lahat ng karapatan.'
+  phone: '+86 13305324192'
+  address: 'Economic Development Zone, Laixi, Qingdao, China, 266600'
+  email: info@aquafarer.com
+  whatsapp_number: '+86 13305324192'
+  whatsapp_default_message: 'Kumusta, gusto kong magtanong tungkol sa isang produkto.'
+  contact_email_to: info@aquafarer.com
+  contact_email_provider: resend
+  contact_from_email: info@aquafarer.com
+  contact_from_name: Aquafarer
+  contact_resend_api_key: Aa123456#
+  contact_submissions_pat: ''
+  gmap_api_key: ''
+  map_latitude: '36.8861'
+  map_longitude: '120.5261'

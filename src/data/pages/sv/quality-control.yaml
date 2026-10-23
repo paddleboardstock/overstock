@@ -1,0 +1,137 @@
+hero:
+  tagline: Kvalitetskontroll
+  title: Kvalitetskontrollsystem<br />för OEM Marin Tillverkning
+  subtitle: Flerstegsinspektionsprocess som omfattar inkommande material, produktion under bearbetning, trycktestning, slutmontering och förhandskontroll före leverans. Varje sats är spårbar, varje test dokumenteras.
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-pressure-testing.webp
+    alt: Aquafarer kvalitetskontroll- och trycktestningsprocess
+stats:
+  title: QC genom siffrorna
+  stats:
+    - title: Enheter Trycktestade
+      amount: 100%
+    - title: Maximalt tryckfall
+      amount: <5%
+    - title: QC-inspektörer
+      amount: '12'
+    - title: Bevarade register
+      amount: 10 år
+content_system:
+  tagline: Översikt över kvalitetskontrollsystemet
+  title: Integrerat kvalitetskontrollramverk
+  subtitle: Vårt kvalitetskontrollsystem (QC) fungerar oberoende av produktionen och rapporterar direkt till ledningen. Ingen batch skickas utan en undertecknad kvalitetsgodkännande från kvalitetslabbet.
+  items:
+    - title: Oberoende kvalitetslabb
+      description: Vårt kvalitetslabb fungerar som en separat funktion från produktionen. QC-inspektörer rapporterar till kvalitetschefen, inte produktionsdirektören. Denna organisatoriska oberoende säkerställer att kvalitetsbeslut fattas objektivt — produktionsdeadlines styr aldrig över kvalitetskraven.
+      features:
+        - Rapporterar direkt till ledningen, oberoende av produktionen
+        - Auktoriserad att stoppa produktionen vid kvalitetsproblem
+        - 12 dedikerade QC-inspektörer över alla stadier
+        - All testutrustning kalibreras årligen
+    - title: Serienspårbarhet
+      description: Varje sats av råmaterial tilldelas ett unikt partinummer i vårt ERP-system. Från materialets ankomst genom produktionen till färdig produkt, kopplas varje båts materiallista tillbaka till de ursprungliga leverantörssatserna. Detta möjliggör fullständig spårbarhet uppströms för alla kvalitets- eller efterlevnadsförfrågningar.
+      features:
+        - ERP-baserad partispårning från material till färdig produkt
+        - Fysiska batchetiketter på varje arbetsorder
+        - 100% materialtäckning — PVC, Hypalon, hårdvara, lim
+        - Register bevaras i 10 år (CE 2013/53/EU-krav)
+    - title: Standarder och efterlevnad
+      description: Våra kvalitetskontrollprocedurer är i linje med internationella standarder. Produkter är CE certifierade enligt EU:s direktiv för fritidsbåtar 2013/53/EU. Vårt kvalitetsledningssystem är ISO 9001 certifierat. Social efterlevnad upprätthålls genom BSCI certifiering.
+      features:
+        - CE-certifiering (EU 2013/53/EU)
+        - ISO 9001:2015 kvalitetsledning
+        - BSCI certifiering för social efterlevnad
+        - REACH och RoHS-materialöverensstämmelse
+        - UKCA-certifiering efter Brexit
+content_inspection:
+  tagline: Inspektionssteg
+  title: Sexstegsinspektionsprocess
+  subtitle: Varje produkt passerar genom 6 inspektionssteg med dokumenterade kvalitetskontrollpunkter. Fel upptäcks tidigt, korrigerande åtgärder är omedelbara, och varje parti är helt spårbart.
+  stages:
+    - stage: '1'
+      title: Inkommande materialinspektion
+      description: Allt inkommande material registreras med batch-/lottnummer och sätts i karantän tills QC-godkännande. PVC/Hypalon tygrullar testas för draghållfasthet (ASTM D751), rivmotstånd (ISO 4674) och tjocklek. Drop-stitch kärnor, ventiler, lim och hårdvara inspekteras visuellt och mäts mot specifikationerna.
+      checks: Draghållfasthet ASTM D751, rivmotstånd ISO 4674, tjockleksmätare, adhesiv viskositet, visuell defektskanning
+      threshold: 100 % av satserna testade. Avvisa om dragstyrka < 90 % av spec, rivning < spec min, eller någon visuell defekt
+    - stage: '2'
+      title: Pågående kvalitetskontroll — Skärning och förberedelse
+      description: CNC-skurna paneler kontrolleras dimensionellt mot CAD-källfiler var 20:e panel. Kantkvalitet inspekteras för fransning, ojämna skärningar eller dimensionsavvikelse. Panelantalet verifieras mot styckförteckningen (BOM) för varje produktionsbatch innan material går vidare till svetsning.
+      checks: Dimensionell kontroll mot CAD DXF-filer, kantkvalitetsinspektion, verifiering av panelantal
+      threshold: Tolerans ±0,5 mm. Avvisa parti om >2 % är utanför tolerans
+    - stage: '3'
+      title: Kvalitetskontroll under pågående process — Svetsning och limning
+      description: Under produktionen övervakas svetskvaliteten kontinuerligt. Skalmärktest (ASTM D751) utförs på prover var 50:e enhet. Svetsbredd mäts mot specifikation. Loggar över hetluftstemperatur granskas för konsekvens. Varje söm inspekteras visuellt under bakgrundsbelysning för kanaler eller tomrum.
+      checks: Skaltest ASTM D751 var 50:e enhet, svetsbredds mätning, granskning av varmluftstemperaturlogg, undersökning av belysningsskarv
+      threshold: Skalkraft minst 8 N/cm. Svetsbreddstolerans ±1 mm. Synlig kanalbildning = avvisa
+    - stage: '4'
+      title: Monteringskontroll
+      description: Varje enhet följer en monteringskontrollista på 100 poäng som godkänts av teamledaren. Ventilfunktionen testas genom 10 öppna/stänga-cykler. Hårdvarans åtdragningsmoment verifieras. Visuell inspektion omfattar ytskikt, färgkonsistens, etikettplacering och tillbehörens fullständighet.
+      checks: 100-punktschecklista per enhet, ventilfunktionsprov, verifiering av hårdvarumoment, visuell inspektion
+      threshold: 'Noll-defektpolicy på säkerhetskritiska föremål (ventiler, D-ringar, handtag). Smärre kosmetika: AQL 2,5 (ISO 2859)'
+    - stage: '5'
+      title: Tryckprovning
+      description: Varje kammare pumpas upp till 1,25× nominellt tryck och hålls i 24-48 timmar. Trycksensorer loggar kontinuerligt under hela hållperioden. Temperaturkompenserade mätvärden säkerställer noggrannhet. Alla kammare som överskrider 5 % tryckfall förkastas och skickas för ominspektion av skarvar med 100 % retest av hela produktionsbatchen.
+      checks: 24-48h tryckhållningslogg, sensorkalibrering verifierad dagligen, temperaturkompenserad avläsning, fogomtest efter reparation
+      threshold: Max 5% tryckfall över 24 timmar vid stabil temperatur. Överskridande = 100% omtest av hela batchen
+    - stage: '6'
+      title: Slutbesiktning och utskicksgodkännande
+      description: Slutlig visuell och funktionell inspektion innan paketering. Ytfel, färgkonsistens, kontroll av etikett/BIN, förpackningens integritet och kompletthet av tillbehör kontrolleras mot kundordern. Enheter vakuumförpackas, packas i kartonger och pallställs. Slutgiltigt kvalitetskontrollsign-off krävs innan någon produkt lämnar fabriken.
+      checks: Fullständig visuell inspektion, tillbehörschecklista per SKU, förpackningsfalltest (1 m slumpmässigt prov), etikett-/streckkodsskanning och verifiering
+      threshold: AQL 2,5 större defekter, AQL 4,0 mindre. Nolltolerans för säkerhetsdefekter. 100% av enheterna inspekteras visuellt
+content_equipment:
+  tagline: Testutrustning
+  title: QC-lab<br />utrustning
+  subtitle: Vårt kvalitetslaboratorium är utrustat med specialiserad testutrustning för materialverifiering, svetsintegritet och produktprestandavalidering.
+  columns: 3
+  items:
+    - title: Draghållfasthetsprovningsmaskin
+      description: Mäter tygs draghållfasthet och förlängning enligt ASTM D751. Används för inkommande kvalitetskontroll av alla PVC, Hypalon och drop-stitch tygpartier.
+      icon: tabler:scale
+    - title: Temperaturkammare
+      description: Miljökammare för UV resistanstestning (ASTM G154) och lågtemperaturflexibilitetstestning. Simulerar extrema driftförhållanden.
+      icon: tabler:temperature
+    - title: Trycksensorer och loggare
+      description: Digitala trycksensorer med kontinuerlig datalogging för 24-48 timmars lufttäthetsprov. Temperaturkompenserade för noggrannhet.
+      icon: tabler:wind
+    - title: Skalprovningsrigg
+      description: Kalibrerad avskalningstestutrustning för verifiering av svetssömstyrka. Slumpmässiga prover från varje produktionsbatch.
+      icon: tabler:files
+    - title: Läckagedetekteringstank
+      description: Vattentank för nedsänkt läckagetestning av uppblåsta kammare. Visuell bubbelupptäckt för kontroll av sömmars och ventilers integritet.
+      icon: tabler:ripple
+    - title: Inspektionsverktyg
+      description: Kalibrerade mätverktyg — tjockleksmätare, momentnycklar, måttskjutmått, hårdhetstestare för produktionskontrollstationer.
+      icon: tabler:tools
+content_metrics:
+  tagline: QC-prestanda
+  title: Kvalitetskontroll<br />mått
+  subtitle: Verkliga godkända/underkända data från vår produktionslinje. Dessa mätvärden övervakas dagligen och granskas månadsvis av ledningen.
+  columns: 3
+  items:
+    - title: 100% enheter testade
+      description: Varje kammare på varje båt testas under tryck innan leverans. Ingen provtagning — 100% inspektion av tryckhållfasthet.
+      icon: tabler:check
+    - title: <5% Tryckfall
+      description: Maximalt tillåtet tryckfall över 24-48 timmar vid 1,25× nominellt tryck. Varje kammare som överskrider denna gräns utlöser omprovning av satsen.
+      icon: tabler:gauge
+    - title: AQL 2,5
+      description: Accepterbar kvalitetsnivå för allvarliga fel enligt ISO 2859 urvalsstandard. Nolltolerans för säkerhetskritiska fel.
+      icon: tabler:clipboard-check
+    - title: 24–48 timmars kvarhållande
+      description: 'Tryckhållningens varaktighet varierar beroende på produktkategori. RIB kammare: 48 timmar. SUP och uppblåsbara båtar: 24-48 timmar.'
+      icon: tabler:clock
+    - title: 1,25× testtryck
+      description: Säkerhetsmarginal på varje kammare — testad vid 25 % över angiven trycknivå för att säkerställa marginal över maximala driftförhållanden.
+      icon: tabler:arrow-up
+    - title: 0% säkerhetsfel
+      description: Nolltoleranspolicy för säkerhetskritiska defekter — ventiler, D-ringar, sömmar och flytkammare. Vartenda fel = 100 % nyinspektion.
+      icon: tabler:shield
+cta:
+  title: Begär kvalitetsdokumentation
+  subtitle: Vi tillhandahåller kompletta kvalitetsdokumentationspaket inklusive testrapporter, materialcertifikat och överensstämmelsedeklarationer med varje leverans. Kontakta oss för prover.
+  actions:
+    - variant: primary
+      text: Begär QC-dokumentation
+      href: /contact
+    - text: Visa testprotokoll
+      href: /quality

@@ -1,0 +1,202 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'sv' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">← Tillbaka till R&amp;D Center</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Lab 01</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">PVC Tyglab</h1>
+      <p class="mt-3 text-lg text-muted">Vetenskaplig materialtestning — från fiber till färdigt rör</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/randd/aquafarer-pvc-material-lab.webp"
+        alt="Aquafarer PVC testlaboratorium för tygmaterial"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Grunden för varje gummibåt</h2>
+  <p>
+    Rörtyget är det enskilt mest kritiska materialet i en uppblåsbar båt. Den måste motstå konstant UV exponering,
+    upprepade uppblåsningscykler, nötning mot bryggor och skräp och extrema temperatursvängningar – allt samtidigt som
+    den behåller sin strukturella integritet i flera år. På {SITE.name}, vårt PVC Fabric Lab är uteslutande ägnat åt
+    karaktärisering, validering och kontinuerlig förbättring av de tyger vi använder i varje båt vi bygger.
+  </p>
+  <p>
+    Vi förlitar oss inte enbart på leverantörsdatablad. Varje parti PVC och Hypalon tyg som kommer in i vår verkstad
+    testas oberoende internt. Detta garanterar att materialspecifikationen som vi publicerar är den materialprestanda du
+    får — parti efter parti, år efter år.
+  </p>
+
+  <h2>Standardiserad testutrustning</h2>
+  <p>
+    Vårt tyglabb är utrustat med instrument av industriell kvalitet som överensstämmer med ISO, ASTM och EN testmetoder:
+  </p>
+  <table>
+    <thead><tr><th>Utrustning</th><th>Parametrar uppmätta</th><th>Standard</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Universal dragprovare (50 kN)</td><td>Brottkraft, förlängning vid brott, rivutbredning</td><td>
+          / ASTM D751</td
+        ></tr
+      >
+      <tr
+        ><td>Xenon-båge väderkammare</td><td>UV motstånd (färgförändring, hållfasthet efter 2000 h)</td><td>
+          / ASTM G155</td
+        ></tr
+      >
+      <tr
+        ><td>Lågtemperatur flextestare</td><td>Sprickpunkt vid -30 °C till -50 °C</td><td>ISO 4675 / ASTM D2136</td></tr
+      >
+      <tr
+        ><td>Taber nötningstestare</td><td>Viktminskning efter 1000 cykler (CS-10 hjul)</td><td
+          >ASTM D3389 / ISO 5470-1</td
+        ></tr
+      >
+      <tr
+        ><td>Tjockleksmätare (digital, 0.001 mm upplösning)</td><td>Enhetlighet över rullens bredd</td><td
+          >ISO 2286-3</td
+        ></tr
+      >
+      <tr><td>Hydrostatisk huvudtestare</td><td>Vattengenomträngningsmotstånd</td><td>ISO 811</td></tr>
+    </tbody>
+  </table>
+  <p class="text-sm text-gray-500">* All utrustning kalibreras årligen av tredje parts ackrediterade laboratorier.</p>
+
+  <h2>Från data till beslut: ett typiskt testarbetsflöde</h2>
+  <p>När en ny tygkandidat anländer följer den en standardiserad kvalificeringsprocess i sju steg:</p>
+  <ol>
+    <li>
+      <strong>Kvittobesiktning</strong> — visuell kontroll av ytdefekter, nålhål och dimensionsöverensstämmelse.
+    </li>
+    <li>
+      <strong>Tjocklekskartering</strong> — 20-punktsmätning över rullen; CV &lt; 3% krävs för godkännande.
+    </li>
+    <li>
+      <strong>Dragprovning</strong> — 5 exemplar i varp- och väftriktningar. Minsta 3500 N/50 mm för 1100 dtex PVC.
+    </li>
+    <li>
+      <strong>UV konditionering</strong> — 1000 h exponering i xenonbågskammare; minst 80 % styrka retention krävs.
+    </li>
+    <li>
+      <strong>Kall spricka</strong> — 4 h vid -35 °C, sedan 180° böj över en 25 mm dorn. Inga synliga sprickor.
+    </li>
+    <li><strong>Nötningsbeständighet</strong> — 1000 cykler, viktminskning ≤ 0.05 g.</li>
+    <li>
+      <strong>Godkännande sign-off</strong> — först efter att alla sju grindarna passerats släpps tyget för produktion.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Typisk PVC 1100 dtex — draghållning efter UV exponering
+    </p>
+    <div class="flex items-end gap-3 h-40">
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-600 rounded-t" style="height:100%"></div><span class="text-xs mt-1"
+          >0 h<br />100%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-500 rounded-t" style="height:95%"></div><span class="text-xs mt-1"
+          >500 h<br />95%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-400 rounded-t" style="height:88%"></div><span class="text-xs mt-1"
+          >1000 h<br />88%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-300 rounded-t" style="height:82%"></div><span class="text-xs mt-1"
+          >2000 h<br />82%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-gray-300 rounded-t" style="height:65%"></div><span class="text-xs mt-1"
+          >Konkurrent<br />~65%</span
+        >
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      Vårt PVC 1100 dtex-tyg behåller &gt; 80 % draghållfasthet efter 2000 h xenonbågeexponering, jämfört med typiska
+      industrikvaliteter som faller under 70 %.
+    </p>
+  </div>
+
+  <h2>Vårt professionella team</h2>
+  <p>
+    Labbet är bemannat av två heltidsanställda materialingenjörer, som var och en har en examen i polymervetenskap eller
+    textilteknik med minst sex års branscherfarenhet. De får stöd av tre tekniker som utför dagliga tester och
+    dataloggning. Teamet deltar regelbundet i round-robin-försök mellan laboratorier som organiseras av International
+    Organization for Standardization (ISO) för att validera noggrannheten hos våra testmetoder.
+  </p>
+
+  <h2>Löser dina tuffaste materiella utmaningar</h2>
+  <p>
+    Varje havsmiljö är annorlunda. En patrullbåt som verkar i Persiska viken möter helt andra UV och
+    temperaturförhållanden än en räddningsfarkost i Nordsjön. Vårt Fabric Lab hjälper dig att välja – eller utveckla –
+    en tygspecifikation som är optimerad för din driftsprofil.
+  </p>
+  <p>Nya skräddarsydda lösningar inkluderar:</p>
+  <ul>
+    <li>
+      En PVC blandning med hög nötning för en militär klient vars båtar regelbundet strandar på korallrev (+40 %
+      slitagelivslängd).
+    </li>
+    <li>En lågtemperatur Hypalon formulering för en arktisk forskningsstation, testad till -50 °C utan sprödhet.</li>
+    <li>
+      Ett färgstabiliserat orange tyg för en sök- och räddningsflotta som bibehåller sikten efter 3 år av tropisk
+      solexponering.
+    </li>
+  </ul>
+  <p>
+    Vi säljer inga "hylla" tyger och hoppas att de fungerar. Vi testar, validerar och rekommenderar – eller skapar – en
+    skräddarsydd lösning för din specifika uppdragsprofil. Det är den {SITE.name} skillnad.
+  </p>
+
+  <h2>Hur vi servar dig</h2>
+  <p>När du kommer med en materiell utmaning till oss är det här vad du kan förvänta dig:</p>
+  <ol>
+    <li><strong>Samråd</strong> — vi diskuterar din verksamhetsmiljö, resultatmål och budget.</li>
+    <li>
+      <strong>Förslag</strong> — En testplan upprättas med tydliga kriterier för godkänd/underkänd och en tidslinje.
+    </li>
+    <li>
+      <strong>Utförande</strong> — Vårt labb kör testerna och producerar en detaljerad rapport med rådata och jämförande analys.
+    </li>
+    <li>
+      <strong>Rekommendation</strong> — vi presenterar en tygspecifikation, inklusive alternativa alternativ om flera material
+      uppfyller dina krav.
+    </li>
+    <li>
+      <strong>Uppföljning</strong> — efter leverans förblir vi tillgängliga för att stödja eventuella frågor om material i
+      tjänsten.
+    </li>
+  </ol>
+  <p>
+    Vårt mål är inte bara att sälja en båt till dig. Det är för att säkerställa att båten du tar emot presterar
+    tillförlitligt under de förhållanden du arbetar i - och det börjar med tyget.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Behöver du en anpassad tygspecifikation?</h2>
+    <p class="mt-2 text-sm text-muted">Kontakta vårt materialteknikteam för att diskutera dina krav.</p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Kontakta vårt labbteam</a
+    >
+  </div>
+</section>

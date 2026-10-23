@@ -1,0 +1,119 @@
+hero:
+  tagline: Inženirska bela knjiga
+  title: Drop-Stitch Tehnologija in znanost o materialih:<br />Inženirstvo sodobnih napihljivih plovil
+  subtitle: Avtoritativni tehnični referenčni vir, ki pokriva drop-stitch osnovno konstrukcijo, primerjavo PVC s Hypalon materiali, testiranje togosti visokotlačnih posod ter standarde proizvodnje plovil.
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/randd/aquafarer-design-discussion-lab.webp
+    alt: Aquafarer R&R laboratorij — testiranje materialov in inženirstvo
+direct_answer: Drop-stitch tehnologija uporablja tisoče notranjih poliestrskih niti, ki povezujejo zgornje in spodnje plasti tkanine napihljivega jedra. Ko se napihne na 15–20 PSI, te niti delujejo kot natezna členica, preprečujejo napihovanje in ustvarjajo trdno strukturo, primerljivo s konstrukcijo s trdo lupino. V kombinaciji z naprednimi PVC ali Hypalon premazi tkanine in RF varjenjem to omogoča prenosna, visoko zmogljiva napihljiva plovila, primerno za profesionalno, komercialno in rekreativno uporabo.
+section_drop_stitch:
+  title: Drop-Stitch Strukturno inženirstvo
+  subtitle: Kako tisoče niti preoblikuje fleksibilno tkanino v trdno strukturo
+  content: |
+    Drop-stitch (znan tudi kot "drop-stitch tkanina" ali "drop-stitch jedro") predstavlja preboj v inženirstvu napihljivih struktur. Princip je zavajajoče preprost: tisoče posameznih poliestrskih niti se hkrati vtkajo v dve ločeni plasti osnovne tkanine, povezujoč zgornje in spodnje panele pod 90-stopinjskim kotom.
+
+    Ko je zaprta komora pod tlakom, notranji zračni tlak deluje enakomerno v vse smeri — poskuša razmakniti zgornje in spodnje panele v cilindrično obliko. Tisoče drop-stitch niti upirajo temu razmikanju, prenašajo obremenitev v natezno silo po osi niti. Rezultat je raven, trden panel, ki zdrži 15–20 PSI notranjega tlaka.
+
+    Pri 20 PSI panel 1 m² drop-stitch doživi približno 14.000 kg skupne notranje sile — vendar matrična mreža niti ostane popolnoma ravna. To daje drop-stitch strukturam razmerje med močjo in težo, ki se lahko kosa s tradicionalnimi togimi materiali.
+section_materials:
+  title: PVC proti Hypalon — Tehnična primerjava materialov
+  subtitle: Objektivni podatki za informirano izbiro materiala pri izdelavi napihljivih plovil
+  table:
+    columns:
+      - header: Lastnost
+      - header: PVC (polivinilklorid)
+      - header: Hypalon (CSM)
+    rows:
+      - property: UV Odpornost
+        pvc: Dobro (z UV stabilizatorji)
+        hypalon: Odlično (v bistvu)
+      - property: Odpornost proti abraziji
+        pvc: Dobro
+        hypalon: Zelo dobro
+      - property: Natezna trdnost
+        pvc: 3.000–5.000 N/5cm
+        hypalon: 2.500–4.000 N/5cm
+      - property: Teža na m²
+        pvc: 850–1,200 g
+        hypalon: 1,100–1,500 g
+      - property: Hladna fleksibilnost
+        pvc: -30°C
+        hypalon: -20°C
+      - property: Način povezovanja
+        pvc: RF varjenje / vroče zračno varjenje
+        hypalon: Ročno lepljenje (kontaktni cement)
+      - property: Popravljivost
+        pvc: Enostavno (toplotno varjenje ali lepilni spoj)
+        hypalon: Zahteva CSM lepilo
+      - property: Stroški materiala
+        pvc: $8–15 / m²
+        hypalon: $20–40 / m²
+      - property: Življenjska doba (tropsko sonce)
+        pvc: 5–8 let
+        hypalon: 10–15 let
+      - property: Spekter barv
+        pvc: Širok (celotni barvni spekter)
+        hypalon: Omejen (osnovne barve)
+      - property: Kemijska odpornost
+        pvc: Dobra (razredi odporno na gorivo/olje)
+        hypalon: Odlična (širok spekter kemikalij)
+section_testing:
+  title: Preizkusi in varnostni protokoli
+  subtitle: Kakovostni okvir Aquafarer za vsak proizvodni bat
+  protocols:
+    - title: 1,25-kratni preizkus zadrževanja nazivnega tlaka
+      description: Vsaka sestavljena posoda je napihnjena do 1,25-kratnika nazivnega delovnega tlaka in zadržana 24–48 ur. Vsak padec tlaka, ki presega 2 %, sproži zavrnitev in predelavo.
+      standard: ISO 6185
+    - title: Preizkus odpornosti šiva na luščenje
+      description: Vzorce varjenih in lepljenih šivov iz vsake proizvodne serije preizkusimo glede odpornosti na luščenje z uporabo kalibrirane napetostne opreme. Zahtevana minimalna odpornost na luščenje je 4 kN/m.
+      standard: ISO 2411
+    - title: Preizkus natezne trdnosti tkanine
+      description: Vhodne tkanine iz rol podvržemo preizkusu natezne trdnosti in razteznosti tako po vrti kot po vezni smeri. Meja zavrnitve je pod 3.000 N/5cm za PVC.
+      standard: ISO 1421
+    - title: UV Pospešeno vremensko staranje
+      description: Vzorce materiala izpostavimo 1.000 + uram pospešenega UV izpostavljanja v QUV testnih komorah. Dovoljena največja izguba natezne trdnosti je 15%.
+      standard: ASTM G154
+    - title: Integriteta ventilov in priključkov
+      description: Vsaka sestava ventila je preizkušena glede tesnjenja pri 1,25-kratniku nazivnega tlaka. Povratni ventili so preizkušeni glede delovanja tesnila samo v eno smer.
+      standard: ISO 12402
+section_manufacturing:
+  title: Proizvodni standardi in certifikati kakovosti
+  subtitle: Skladnost z industrijskimi standardi za dostop do svetovnega trga
+  standards:
+    - name: ISO 9001:2015
+      body: SGS Certificirano
+      scope: Sistem upravljanja kakovosti pri oblikovanju, proizvodnji in dobavi
+    - name: CE 2013/53/EU
+      body: Obvesteno telo EU
+      scope: Direktiva o plovilih za prosti čas — oblikovanje trupa, stabilnost, plovnost, emisije
+    - name: BSCI
+      body: Amfori
+      scope: Družbena skladnost — varnost delavcev, poštena delovna praksa, varstvo okolja
+    - name: ISO 6185
+      body: Mednarodni standard
+      scope: Napihljivi čolni — konstrukcija, stabilnost, plovnost, preskus tlaka
+    - name: REACH
+      body: Uredba EU
+      scope: Varnost kemikalij — omejene snovi v materialih in premazi
+section_faq:
+  title: Tehnična pogosta vprašanja
+  questions:
+    - q: Kako se drop-stitch primerja s tradicionalno trdo konstrukcijo?
+      a: Sodobni drop-stitch jedri pri 20 PSI dosežejo 85–90 % trdnosti primerljivih trdo-strukturiranih EPS/paljenih steklo vlaken, hkrati pa so popolnoma izpustljiva za transport. Kompromis je nekoliko večja teža in manjša končna togost — vendar je za večino rekreativnih in komercialnih uporab razlika nepomembna.
+    - q: Katera gostota niti se šteje za vrhunsko kakovost?
+      a: Vrhunska drop-stitch tkanina uporablja 2 niti na kvadratni palec (približno 3.100 niti na m²) tkaljene iz 1.680 DTEX poliester niti. Osnovne tkanine uporabljajo 1 nit na kvadratni palec s 1.100 DTEX nitmi.
+    - q: Ali se Hypalon lahko varijo kot PVC?
+      a: Ne. Hypalon/CSM se ne da RF-variti. Sestavljati jih je treba z ročno nanesenim kontaktnim lepilom, kar naredi proizvodnjo bolj delovno intenzivno in šive odvisne od spretnosti izvajalca. PVC se lahko RF-varijo ali vroče zračno varijo za dosledno, avtomatizirano kakovost šiva.
+    - q: Kateri je največji varen tlak za napihljive čolne?
+      a: Standardni napihljivi čolni imajo tlak 8–12 PSI. Drop-stitch dna imajo tlak 12–20 PSI. Visokotlačna drop-stitch jedra (SUPs) lahko delujejo pri 20–25 PSI. Vsak izdelek vključuje ventil za sproščanje tlaka, kalibriran za preprečevanje prekomernega napihovanja.
+    - q: Koliko časa traja izdelava po meri napihljivega čolna?
+      a: Standardna proizvodnja OEM traja 30–45 dni od potrditve naročila do FOB Qingdao. Razvoj kalupa po meri doda 15–20 dni za izdelavo prototipa in testiranje.
+cta:
+  title: Inženirsko svetovanje
+  subtitle: Imate specifično vprašanje o materialu ali oblikovanju? Naša inženirska ekipa je na voljo za tehnične razprave.
+  actions:
+    - variant: primary
+      text: Vprašajte našo inženirsko ekipo
+      href: /contact
+    - text: Raziščite naš center za raziskave in razvoj
+      href: /randdcenter

@@ -1,0 +1,152 @@
+---
+export const prerender = true;
+
+import Hero from '~/components/widgets/Hero.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import Tldr from '~/components/common/Tldr.astro';
+import TrustBadges from '~/components/common/TrustBadges.astro';
+import { SITE } from 'astrowind:config';
+import { getPageContent, setPageContentData } from '~/i18n/page-content';
+import __pageData from '~/i18n/generated/pages/certifications.ts';
+import { localizePageTitle } from '~/i18n/page-title';
+import { languages } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => getUiForLang(lang)?.[key] || '';
+setPageContentData(__pageData);
+const page = getPageContent(lang, 'certifications') || {};
+
+const hero = page.hero ?? {};
+const certifications = page.content_certifications ?? {};
+const factory = page.content_factory ?? {};
+const safety = page.content_safety ?? {};
+const cta = page.cta ?? {};
+
+const lh = (h: string) => (h ? `/${lang}${h}` : h);
+const ctaActions = cta.actions?.map((a: Record<string, string>) => ({ ...a, href: lh(a.href) }));
+
+const metadata = {
+  title: localizePageTitle(page, 'Certifications \u2014 ' + SITE.name + ' | Quality & Compliance Standards'),
+  description:
+    'Aquafarer products are CE certified, ISO 9001:2015, UKCA marked, BSCI compliant, and REACH compliant. Learn about our quality certifications and safety standards.',
+};
+const crumbs = [{ name: t('nav.home') || 'Home', href: '/' + lang + '/' }, { name: 'Certifications' }];
+
+const tldrSummary =
+  'Aquafarer holds 64 CE-certified models across 5 product categories, manufactured under ISO 9001:2015, with UKCA, BSCI, and REACH compliance. All products undergo 1.25x rated pressure testing per AQL 2.5 / ISO 2859.';
+
+const tldrPoints = [
+  '64 CE-certified models across SUP, RIB, Drop-Stitch, OEM, and ODM categories',
+  'ISO 9001:2015 quality management system certified by SGS',
+  'UKCA marking for UK market conformity post-Brexit',
+  'BSCI (amfori) social compliance audit for ethical manufacturing',
+  'REACH compliant: all materials tested per EU chemical safety regulations',
+];
+
+const directAnswerHtml =
+  '<div class="direct-answer border-l-4 border-blue-600 bg-blue-50 dark:bg-slate-800/50 rounded-r-xl px-6 py-5 my-8"><p class="text-sm text-gray-700 dark:text-slate-300 leading-relaxed">' +
+  tldrSummary +
+  '</p></div>';
+
+const faqSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What CE certifications do Aquafarer products hold?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Aquafarer products hold CE certification under the EU Recreational Craft Directive 2013/53/EU (RCD), covering recreational craft up to 24 meters. This ensures compliance with design, construction, and safety requirements for inflatable boats, SUP boards, and RIBs sold in the European Union.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is Aquafarer ISO 9001 certified?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes, Aquafarer is ISO 9001:2015 certified by SGS. This certification covers the quality management system for manufacturing marine inflatable products, ensuring consistent process control, documentation, and continuous improvement across all production lines.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What does UKCA marking mean for Aquafarer products?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'UKCA (UK Conformity Assessed) marking certifies that Aquafarer products meet the regulatory requirements for the UK market following Brexit. It replaces the CE marking for goods placed on the market in Great Britain, demonstrating conformity with UK safety and performance standards.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is BSCI compliance?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'BSCI compliance means Aquafarer has passed the amfori Business Social Compliance Initiative audit, which evaluates ethical manufacturing practices including worker rights, fair wages, workplace safety, and environmental responsibility throughout the supply chain.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Are Aquafarer products REACH compliant?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes, all Aquafarer products are REACH compliant. This means all materials and substances used in manufacturing have been registered, evaluated, and approved under the EU REACH regulation (Registration, Evaluation, Authorisation and Restriction of Chemicals), ensuring no harmful chemicals are present.',
+      },
+    },
+  ],
+});
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <Hero tagline={hero.tagline} image={hero.image} title={hero.title} subtitle={hero.subtitle} />
+  <Tldr summary={tldrSummary} points={tldrPoints} />
+  <div set:html={directAnswerHtml} />
+  <Features3
+    tagline={certifications.tagline}
+    title={certifications.title}
+    subtitle={certifications.subtitle}
+    columns={3}
+    items={certifications.items}
+  />
+  <Content
+    tagline={factory.tagline}
+    title={factory.title}
+    subtitle={factory.subtitle}
+    content={factory.list?.map((i: string) => (i ? '- ' + i : '')).join('\n')}
+  />
+  <Features3
+    tagline={safety.tagline}
+    title={safety.title}
+    subtitle={safety.subtitle}
+    columns={3}
+    items={safety.items}
+  />
+  <TrustBadges layout="grid" />
+  <CallToAction title={cta.title} subtitle={cta.subtitle} actions={ctaActions} />
+  <JsonLd
+    type="Service"
+    service={{
+      name: 'Marine Equipment Certification & Compliance',
+      description: 'CE certified, ISO 9001:2015, UKCA marked, BSCI compliant, REACH compliant marine products.',
+      serviceType: 'Product Certification & Compliance',
+      areaServed: ['EU', 'UK', 'US', 'AU', 'Global'],
+      url: '/' + lang + '/certifications',
+      items: [
+        { name: 'CE Certification', description: 'EU directive compliance for recreational craft' },
+        { name: 'ISO 9001:2015', description: 'Quality management system certified by SGS/BSI' },
+        { name: 'UKCA Marking', description: 'UK market conformity assessment' },
+        { name: 'BSCI Compliance', description: 'amfori social compliance certification' },
+        { name: 'REACH Compliance', description: 'European chemical safety regulation compliance' },
+      ],
+    }}
+  />
+  <script is:inline type="application/ld+json" set:html={faqSchema} />
+</Layout>

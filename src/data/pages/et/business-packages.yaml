@@ -1,0 +1,82 @@
+hero:
+  tagline: Äripaketid
+  title: Väljaandmiseks valmis veefirma<br />Pakendid igaks etapiks
+  subtitle: Veealuste spordiklubide, kuurortide ja brändi idufirmade jaoks eelkonfigureeritud varustuse paketid — läbipaistva hinnastuse, kiire tarne ja täielike kohandamisvõimalustega.
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/use-cases/aquafarer-outdoor-adventure.webp
+    alt: Aquafarer äriseadmete paketid
+direct_answer: Aquafarer pakub kolme eelkonfigureeritud äripaketti, mis on mõeldud veespordioperaatoritele igal arenguetapil. Club Starter Package sisaldab 10 SUPs koos aerude, pumpade, remondikomplektide ja turvavarustusega algavatele klubidele ja koolidele. Resort Premium Package varustab 50–100 ühikut koos hoiustamissüsteemide, brändingu ja koolitusjuhenditega hotellidele ja majutusasutustele. Brand Launch Package pakub toodete valikut, kohandatud logodisaini, pakendamist, tootmist ja saatmist ettevõtjatele, kes alustavad oma veespordibrändi. Kõik paketid sisaldavad tehtasest otse hindamist, CE sertifitseerimist ja ülemaailmset logistilist tuge.
+packages:
+  - id: club-starter
+    tag: Best Seller
+    name: Klubi algpakett
+    subtitle: Kõik, mida vajate oma aeruklubi käivitamiseks või uuendamiseks
+    target: SUP klubid, kajakiklubid, lainelauakoolid, treeningukeskused
+    price_label: Alates 4 800 dollarist
+    line_items:
+      - item: 10 SUP lauda või kajakki
+      - item: 10 sobivat sõudmispulka
+      - item: 10 suure võimsusega pumpa
+      - item: 10 parandamiskomplekti
+      - item: 10 eluvesti klubilogo
+      - item: Klubi bränding laudadel
+      - item: Ohutusmärgistuse komplekt
+      - item: Algaja õppetunni juhendi PDF
+    cta_text: Hangi klubipakett
+    cta_href: /contact
+  - id: resort-premium
+    tag: Premium
+    name: Resorti premium-pakett
+    subtitle: Täielik külaliste veetegevuste programm hotellidele ja kuurortidele
+    target: Rannakuurordid, järveäärsed hotellid, öko-kuurordid, jahtklubid
+    price_label: Kohandatud hinnapakkumine
+    line_items:
+      - item: 50–100 SUPs, kajakke või segalaevastikku
+      - item: Täielik kuurordi bränding kogu varustusel
+      - item: Rentimiseks mõeldud aerud ja päästevestid
+      - item: Kaubanduslik ladustamissüsteem
+      - item: Inflatsioonijaam tööstuslike pumpadega
+      - item: Ohutussüsteem (poid, märgid, päästelaud)
+      - item: Töötajate koolitusprogramm
+      - item: Tulujuhtimise käsiraamat
+    cta_text: Hangi kuurordi pakett
+    cta_href: /contact
+  - id: brand-launch
+    tag: Entrepreneur
+    name: Brändi käivitamise pakett
+    subtitle: Muuda oma brändiidee saadetavaks tooteks — tavaliselt 60–90 päeva jooksul
+    target: Amazon müüjad, mõjutajad, piirkondlikud hulgimüüjad
+    price_label: Alates 6 500 dollarist
+    line_items:
+      - item: Tootevaliku konsultatsioon
+      - item: Kohandatud logo kujundus laudadele
+      - item: Kohandatud värvi sobitamine
+      - item: Bränditud jaemüügipakend
+      - item: Sildid ja kasutusjuhend
+      - item: CE sertifitseerimise dokumentatsioon
+      - item: Tootmisproovid
+      - item: FOB Qingdao saatmine
+    cta_text: Käivita minu bränd
+    cta_href: /contact
+faq:
+  title: Paketi KKK
+  questions:
+    - q: Mis on pakettide minimaalne tellimuse kogus?
+      a: Klubi alustuspaketil on minimaalne kogus 10 ühikut. Resort ja Brändi paketid on kohandatud vastavalt teie vajadustele paindlike MOQs tingimustega.
+    - q: Kui kaua tarne kestab?
+      a: Tavapärane tootmine on 30–45 päeva alates tellimuse kinnitamisest. Kiirtellimus on saadaval lisatasu eest.
+    - q: Kas saan seadmete värve ja brändingut kohandada?
+      a: Jah. Kõik paketid sisaldavad täielikku kohandamist — laua värvid, logo trükised ja pakendi kujundus.
+    - q: Kas te pakute müügijärgset tuge?
+      a: Jah. Iga pakett sisaldab ligipääsu meie veebipõhistele hooldusjuhenditele, videokursustele ja varuosade tellimissüsteemile.
+cta:
+  title: Ei ole kindel, milline pakett sobib?
+  subtitle: Vasta 3 kiirele küsimusele ja me soovitame teie ettevõttele täiusliku paketi.
+  actions:
+    - variant: primary
+      text: Saada soovitatav pakett
+      href: /contact
+    - text: Vaata lahendusi sihtrühmade järgi
+      href: /solutions
+    - text: Lugege edulugusid
+      href: /success-stories

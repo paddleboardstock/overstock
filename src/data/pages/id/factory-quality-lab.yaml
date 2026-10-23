@@ -1,0 +1,56 @@
+hero:
+  tagline: Laboratorium Pengendalian Kualitas
+  title: Laboratorium Pengujian & Penjaminan Kualitas
+  subtitle: Laboratorium kualitas independen dengan proses ISO 9001 — setiap unit diuji sebelum pengiriman
+intro: Aquafarer mengoperasikan laboratorium pengendalian kualitas khusus yang beroperasi secara independen dari produksi. Setiap batch bahan baku dan setiap perahu jadi melewati protokol inspeksi yang terdokumentasi sebelum dilepas. Tim QC kami melapor langsung ke manajemen, memastikan keputusan kualitas yang tidak memihak.
+highlights:
+  - value: 100%
+    label: Unit diuji tekanan
+    detail: Setiap ruang, setiap perahu
+  - value: 48 h
+    label: Durasi uji retensi udara
+    detail: Pada tekanan 1,25× rating
+  - value: <5%
+    label: Penurunan tekanan maksimum yang diizinkan
+    detail: Selama periode tahan 24 jam
+  - value: AQL 2,5
+    label: Ambang cacat utama
+    detail: Per pengambilan ISO 2859
+test_procedures:
+  - title: Inspeksi Bahan Baku
+    description: Setiap batch masuk PVC, Hypalon, drop-stitch kain, dan perangkat keras diuji sebelum diterima. Kekuatan tarik (ASTM D751), ketahanan sobek (ISO 4674), dan ketahanan UV diverifikasi. Material yang tidak sesuai dikarantina dan dikembalikan.
+    standards:
+      - ASTM D751 (tarik)
+      - ISO 4674 (sobek)
+      - ISO 4892 (UV)
+  - title: Titik Pemeriksaan QC Dalam Proses
+    description: Operator produksi melakukan pemeriksaan sendiri pada setiap tahap. Auditor QC melakukan pengambilan sampel acak sepanjang shift. Tes pengelupasan las dilakukan setiap 50 unit. Pemeriksaan dimensi dilakukan setiap panel ke-20.
+    standards:
+      - ASTM D751 (pengelupasan)
+      - Daftar periksa internal 100 poin
+      - ISO 2859 pengambilan sampel
+  - title: Tes Retensi Udara 48 Jam
+    description: Setiap ruang tabung dipompa hingga 125% dari tekanan rating dan ditahan selama 48 jam. Sensor tekanan mencatat terus-menerus dengan kompensasi suhu. Setiap ruang yang melebihi penurunan tekanan 5% memicu pemeriksaan ulang batch otomatis.
+    standards:
+      - ISO 6185
+      - CE 2013/53/EU
+  - title: Tes Beban & Keseimbangan
+    description: Perahu yang sudah selesai diuji pada kapasitas rating maksimum untuk stabilitas, freeboard, dan penanganan. Setiap kapal menjalani uji air sebelum persetujuan inspeksi akhir.
+    standards:
+      - ISO 12217
+      - CE 2013/53/EU
+equipment:
+  - name: Mesin Uji Universal (tarik)
+    spec: 5 kN, sesuai ASTM D751
+  - name: Penguji Penurunan Tekanan
+    spec: Multi-saluran, 0–50 psi, pencatatan data
+  - name: UV Ruang Penuaan (Weathering Chamber)
+    spec: ISO 4892, 1.000 siklus
+  - name: Pengukur Ketebalan (digital)
+    spec: Resolusi 0,01 mm
+  - name: Penguji Perekat (las)
+    spec: Bertenaga motor, kapasitas 50 N
+  - name: Ruang Suhu
+    spec: -40 °C hingga +100 °C
+  - name: Tangki Deteksi Kebocoran
+    spec: 6 m × 2 m, diterangi

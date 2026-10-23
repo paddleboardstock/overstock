@@ -1,0 +1,37 @@
+---
+import merge from 'lodash.merge';
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Faq from '~/components/widgets/FAQs.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import WorldMap from '~/components/widgets/WorldMap.astro';
+import { SITE } from 'astrowind:config';
+
+import trustData from '~/data/pages/trust.yaml';
+
+const page = merge({}, trustData);
+
+const metadata = {
+  title: `Trust — Certifications & Quality Assurance — ${SITE.name}`,
+  description:
+    'CE certified per applicable EU directives, ISO 9001, BSCI, REACH compliant. Every Aquafarer product tested for safety and durability.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero {...page.hero} />
+  <Stats {...page.stats} />
+  <WorldMap />
+  <Features3 {...page.features3_certifications} />
+  <Features3 {...page.features3_lab} />
+  <Testimonials {...page.testimonials} />
+  <Steps2 {...page.steps2_manufacturing} />
+  <Faq {...page.faqs_rib} />
+  <Faq {...page.faqs_inflatable} />
+  <Faq {...page.faqs_sup} />
+  <CallToAction {...page.cta} />
+</Layout>

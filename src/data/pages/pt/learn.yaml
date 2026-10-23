@@ -1,0 +1,73 @@
+hero:
+  tagline: 'Conhecimento em Exploração Aquática'
+  title: 'Aprender'
+  subtitle: |
+    Guias, tutoriais e aprofundamentos — tudo que você precisa para explorar<br />
+    a água com confiança. Desde escolher seu primeiro SUP até dominar técnicas avançadas.
+  taglineSection: 'Conhecimento para cada remador. Do iniciante ao profissional.'
+
+featured:
+  tagline: 'Tópicos em Destaque'
+  title: 'Inicie sua jornada de aprendizado'
+  subtitle: 'Seja você novo nos esportes aquáticos ou procurando evoluir, nossos guias têm o que você precisa.'
+  items:
+    - title: 'Fundamentos de SUP'
+      description: 'Tudo que um iniciante precisa saber — tipos de prancha, dimensionamento de remo, postura e dicas para o primeiro dia.'
+      icon: 'tabler:lifebuoy'
+      href: '/learn/sup'
+    - title: 'Inflável vs Prancha Rígida'
+      description: 'Qual é a ideal para você? Comparamos portabilidade, desempenho, durabilidade e custo lado a lado.'
+      icon: 'tabler:arrows-left-right'
+      href: '/compare/inflatable-vs-hardboard'
+    - title: 'Segurança Aquática'
+      description: 'Conhecimento essencial de segurança que todo remador deve ter — clima, coletes salva-vidas, auto-resgate e muito mais.'
+      icon: 'tabler:shield'
+      href: '/learn/water-safety'
+    - title: 'Guia de Materiais'
+      description: 'PVC vs Hypalon, tecnologia drop-stitch, classificações de denier — entenda do que seu equipamento é feito.'
+      icon: 'tabler:hexagons'
+      href: '/learn/materials'
+    - title: 'Guia de Tamanho SUP'
+      description: 'Encontre o comprimento, largura e volume certos para seu peso, habilidade e estilo de remada.'
+      icon: 'tabler:ruler'
+      href: '/size-guide'
+    - title: 'Técnicas Intermediárias'
+      description: 'Evolua sua remada com braçadas avançadas, técnicas de virada e manuseio em águas agitadas.'
+      icon: 'tabler:ripple'
+      href: '/learn/intermediate-techniques'
+
+categories:
+  tagline: 'Categorias'
+  title: 'Explore por tópico'
+  subtitle: 'Todo o conteúdo de aprendizado organizado por nível de habilidade e interesse.'
+  columns:
+    - title: 'Iniciante'
+      items:
+        - 'Fundamentos de SUP — comece aqui'
+        - 'Inflável vs Prancha Rígida'
+        - 'Fundamentos de Segurança Aquática'
+        - 'Como Escolher Seu SUP'
+        - 'Guia de Bomba e Embalagem'
+    - title: 'Intermediário'
+      items:
+        - 'Técnicas de Remada'
+        - 'Tecnologia de Infláveis'
+        - 'Referência de Materiais'
+        - 'Comparação PVC vs Hypalon'
+        - 'Núcleo Drop-Stitch Explicado'
+    - title: 'Avançado e Profissional'
+      items:
+        - 'Operações de Frota'
+        - 'Equipamentos de Nível Comercial'
+        - 'Protocolos de Segurança e Resgate'
+        - 'Construções Personalizadas e OEM'
+
+cta:
+  title: 'Ainda tem dúvidas?'
+  subtitle: 'Pergunte ao nosso guia de IA para respostas personalizadas sobre equipamentos, segurança e técnicas.'
+  actions:
+    - variant: primary
+      text: 'Pergunte ao Consultor de Água IA'
+      href: '#ai-guide'
+    - text: 'Ver todos os guias'
+      href: '/academy'

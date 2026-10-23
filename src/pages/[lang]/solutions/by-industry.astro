@@ -1,0 +1,336 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+import { languages, defaultLang } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+import ExperienceLayer from '~/components/content/ExperienceLayer.astro';
+import RelatedPages from '~/components/content/RelatedPages.astro';
+
+const { lang } = Astro.params;
+const t = (key: string) => getUiForLang(lang || defaultLang)?.[key] || '';
+
+const metadata = {
+  title: `${t('solutionsByIndustry.title') || 'Solutions by Industry — Inflatable Watercraft for Every Sector'} | ${SITE.name}`,
+  description:
+    t('solutionsByIndustry.desc') ||
+    'Find the right inflatable watercraft solution for your industry. Government, commercial, recreational, industrial — Aquafarer manufactures CE-certified boats for every sector.',
+  ignoreTitleTemplate: true,
+};
+
+const crumbs = [
+  { name: t('nav.home') || 'Home', href: `/${lang}/` },
+  { name: t('solutionsByIndustry.title') || 'Solutions by Industry' },
+];
+
+const industries = [
+  {
+    name: t('solutionsByIndustry.sar.name') || 'Search & Rescue',
+    color: 'from-red-50 to-orange-50',
+    border: 'border-red-200',
+    icon: 'M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z',
+    description:
+      t('solutionsByIndustry.sar.desc') ||
+      'Rapid-deployment inflatable boats for water rescue, flood response, and coastal patrol.',
+    craft: [
+      t('solutionsByIndustry.sar.craft1') || 'RIBs (16-24ft rescue configurations)',
+      t('solutionsByIndustry.sar.craft2') || 'Inflatable rescue boats',
+      t('solutionsByIndustry.sar.craft3') || 'Patrol craft with console',
+    ],
+    certs: [
+      t('solutionsByIndustry.sar.cert1') || 'SOLAS compliant options',
+      t('solutionsByIndustry.sar.cert2') || 'CE rescue craft directive',
+    ],
+    link: `/${lang}/search-rescue-operations`,
+  },
+  {
+    name: t('solutionsByIndustry.disaster.name') || 'Disaster Relief & Humanitarian Aid',
+    color: 'from-amber-50 to-yellow-50',
+    border: 'border-amber-200',
+    icon: 'M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 12.5V17a2 2 0 01-2 2H6a2 2 0 01-2-2V9a2 2 0 012-2h3.5a2 2 0 012 2v.5M15 12.5V17a2 2 0 01-2 2H6',
+    description:
+      t('solutionsByIndustry.disaster.desc') ||
+      'Inflatable craft for emergency response, medical evacuation, supply transport, and temporary bridge ferries in disaster zones.',
+    craft: [
+      t('solutionsByIndustry.disaster.craft1') || 'Heavy-duty inflatable boats',
+      t('solutionsByIndustry.disaster.craft2') || 'Dinghies for supply transport',
+      t('solutionsByIndustry.disaster.craft3') || 'High-capacity tenders',
+    ],
+    certs: [
+      t('solutionsByIndustry.disaster.cert1') || 'CE certified',
+      t('solutionsByIndustry.disaster.cert2') || 'UV/harsh environment tested',
+    ],
+    link: `/${lang}/disaster-relief-humanitarian-aid`,
+  },
+  {
+    name: t('solutionsByIndustry.commercial.name') || 'Commercial Marine Operations',
+    color: 'from-sky-50 to-blue-50',
+    border: 'border-sky-200',
+    icon: 'M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z',
+    description:
+      t('solutionsByIndustry.commercial.desc') ||
+      'Workboats for dive support, passenger transport, fish farming, and marine construction.',
+    craft: [
+      t('solutionsByIndustry.commercial.craft1') || 'Commercial RIB workboats',
+      t('solutionsByIndustry.commercial.craft2') || 'Dive support vessels',
+      t('solutionsByIndustry.commercial.craft3') || 'Passenger tenders',
+      t('solutionsByIndustry.commercial.craft4') || 'Fish farm service boats',
+    ],
+    certs: [t('solutionsByIndustry.commercial.cert1') || 'CE commercial craft'],
+    link: `/${lang}/commercial-workboats`,
+  },
+  {
+    name: t('solutionsByIndustry.defense.name') || 'Defense & Government',
+    color: 'from-gray-50 to-slate-50',
+    border: 'border-gray-200',
+    icon: 'M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4',
+    description:
+      t('solutionsByIndustry.defense.desc') ||
+      'Military-grade inflatable craft for reconnaissance, troop transport, coastal patrol, and special operations.',
+    craft: [
+      t('solutionsByIndustry.defense.craft1') || 'Military-spec RIBs',
+      t('solutionsByIndustry.defense.craft2') || 'Coastal patrol boats',
+      t('solutionsByIndustry.defense.craft3') || 'Special operations craft',
+    ],
+    certs: [
+      t('solutionsByIndustry.defense.cert1') || 'Military-grade Hypalon',
+      t('solutionsByIndustry.defense.cert2') || 'NBC resistant options',
+      t('solutionsByIndustry.defense.cert3') || 'Stealth profile options',
+    ],
+    link: `/${lang}/oem-odm-manufacturer`,
+  },
+  {
+    name: t('solutionsByIndustry.hospitality.name') || 'Hospitality & Tourism',
+    color: 'from-teal-50 to-emerald-50',
+    border: 'border-teal-200',
+    icon: 'M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7',
+    description:
+      t('solutionsByIndustry.hospitality.desc') ||
+      'Resort and rental fleet supply including SUPs, kayaks, and tenders.',
+    craft: [
+      t('solutionsByIndustry.hospitality.craft1') || 'Rental-grade SUPs (reinforced)',
+      t('solutionsByIndustry.hospitality.craft2') || 'Hotel beach tenders',
+      t('solutionsByIndustry.hospitality.craft3') || 'Guided tour kayaks',
+      t('solutionsByIndustry.hospitality.craft4') || 'Kids watercraft',
+    ],
+    certs: [
+      t('solutionsByIndustry.hospitality.cert1') || 'CE recreational craft',
+      t('solutionsByIndustry.hospitality.cert2') || 'Commercial fleet grade',
+    ],
+    link: `/${lang}/products`,
+  },
+  {
+    name: t('solutionsByIndustry.fishing.name') || 'Fishing & Aquaculture',
+    color: 'from-cyan-50 to-blue-50',
+    border: 'border-cyan-200',
+    icon: 'M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197',
+    description:
+      t('solutionsByIndustry.fishing.desc') ||
+      'Fishing-specific SUPs, kayaks, and workboats for recreational anglers and commercial aquaculture.',
+    craft: [
+      t('solutionsByIndustry.fishing.craft1') || 'Fishing SUPs (wide/stable)',
+      t('solutionsByIndustry.fishing.craft2') || 'Fishing kayaks (rod holders)',
+      t('solutionsByIndustry.fishing.craft3') || 'Aquaculture service boats',
+    ],
+    certs: [
+      t('solutionsByIndustry.fishing.cert1') || 'CE recreational',
+      t('solutionsByIndustry.fishing.cert2') || 'Food-safe material options',
+    ],
+    link: `/${lang}/products`,
+  },
+];
+
+const faqSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What industries does Aquafarer serve?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Water sports rental, resorts, clubs, aquaculture, marine research, offshore energy, tourism, search and rescue, and yacht tenders.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How do I find the right product for my industry?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Browse the Solutions section for your industry, or contact us for a personalized recommendation based on your requirements.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Are there industry-specific customizations?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Each industry has specific material, feature, and compliance requirements. We tailor products accordingly.',
+      },
+    },
+  ],
+});
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <section class="max-w-6xl mx-auto py-24 px-6">
+    <h1 class="mt-4 text-4xl font-semibold text-gray-900">
+      {t('solutionsByIndustry.title') || 'Solutions by Industry'}
+    </h1>
+    <p class="mt-4 text-lg text-gray-500">
+      {t('solutionsByIndustry.desc') || 'Find the right inflatable watercraft for your industry.'}
+    </p>
+
+    <div class="mt-16 space-y-8">
+      {
+        industries.map((ind) => (
+          <div
+            class={`bg-gradient-to-br ${ind.color} rounded-2xl border ${ind.border} p-8 hover:shadow-md transition-shadow`}
+          >
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl bg-white/80 flex items-center justify-center flex-shrink-0">
+                <svg
+                  class="w-6 h-6 text-gray-700"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d={ind.icon} />
+                </svg>
+              </div>
+              <div class="flex-1">
+                <h2 class="text-xl font-semibold text-gray-900">{ind.name}</h2>
+                <p class="mt-2 text-sm text-gray-600">{ind.description}</p>
+                <div class="mt-4">
+                  <span class="text-xs font-medium text-gray-500 uppercase tracking-wide">
+                    {t('solutionsByIndustry.recommendedCraft') || 'Recommended Craft'}
+                  </span>
+                  <ul class="mt-2 space-y-1">
+                    {ind.craft.map((c) => (
+                      <li class="flex items-center gap-2 text-sm text-gray-600">
+                        <span class="w-1.5 h-1.5 rounded-full bg-gray-400 flex-shrink-0" />
+                        {c}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div class="mt-3 flex items-center gap-4">
+                  <span class="text-xs text-gray-400">{ind.certs.join(' · ')}</span>
+                </div>
+                <a
+                  href={ind.link}
+                  class="mt-4 inline-flex text-sm font-medium text-sky-600 hover:text-sky-700 hover:underline"
+                >
+                  {t('solutionsByIndustry.learnMore') || 'Learn more'} →
+                </a>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+
+    <section class="mt-16 bg-gray-50 rounded-2xl p-8 border border-gray-200 text-center">
+      <h2 class="text-2xl font-semibold text-gray-900">
+        {t('solutionsByIndustry.ctaTitle') || 'Need a Custom Solution?'}
+      </h2>
+      <p class="mt-4 text-gray-500">
+        {
+          t('solutionsByIndustry.ctaDesc') ||
+            'Our OEM/ODM team can design and manufacture custom inflatable watercraft for your specific industry requirements.'
+        }
+      </p>
+      <div class="mt-6 flex justify-center gap-4">
+        <a
+          href={`/${lang}/oem-odm-manufacturer`}
+          class="px-8 py-4 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition"
+          >{t('solutionsByIndustry.ctaBtn') || 'OEM/ODM Services'}</a
+        >
+        <a
+          href={`/${lang}/contact`}
+          class="px-8 py-4 border border-gray-200 text-gray-700 rounded-full font-semibold hover:border-gray-400 transition"
+          >{t('solutionsByIndustry.contactBtn') || 'Contact Us'}</a
+        >
+      </div>
+    </section>
+  </section>
+
+  <ExperienceLayer
+    title={t('solutionsByIndustry.expTitle') || 'Industry Solutions in Action'}
+    subtitle={t('solutionsByIndustry.expSub') ||
+      'Real examples of how Aquafarer watercraft perform across different industry sectors.'}
+    stories={[
+      {
+        quote:
+          t('solutionsByIndustry.story1.quote') ||
+          'We deployed two Aquafarer RIBs during the coastal flooding — they were the only vessels that could navigate the debris-filled waters at low tide.',
+        narrative:
+          t('solutionsByIndustry.story1.narrative') ||
+          "During a severe coastal flooding event, a municipal SAR team deployed Aquafarer RIBs for evacuation operations. The boats' shallow draft allowed access to flooded neighborhoods unreachable by larger vessels. Despite debris and continuous operation for 14 hours, the Hypalon fabric showed no signs of wear.",
+        context: t('solutionsByIndustry.story1.context') || 'Coastal flood rescue, Southeast Asia, 2024',
+        source: t('solutionsByIndustry.story1.source') || 'Municipal SAR Team Lead',
+      },
+      {
+        quote:
+          t('solutionsByIndustry.story2.quote') ||
+          'Our dive boat runs 6 days a week, 50 weeks a year. After two years, the Hypalon fabric still looks new.',
+        narrative:
+          t('solutionsByIndustry.story2.narrative') ||
+          'A dive charter operation in the Maldives runs an Aquafarer RIB for daily dive support. After 600+ operating days, the hull shows no significant UV degradation and no seam separation.',
+        context: t('solutionsByIndustry.story2.context') || 'Dive charter operations, Maldives, 2022-2025',
+        source: t('solutionsByIndustry.story2.source') || 'Charter Company Owner',
+      },
+    ]}
+  />
+  <RelatedPages
+    title={t('solutionsByIndustry.relatedTitle') || 'Explore More'}
+    subtitle={t('solutionsByIndustry.relatedSub') || 'Related solutions and resources'}
+    links={[
+      {
+        title: t('solutionsByIndustry.rel1') || 'Solutions by Use Case',
+        description:
+          t('solutionsByIndustry.rel1desc') || 'Match your specific use case to the right Aquafarer solution.',
+        href: `/${lang}/solutions/by-use-case`,
+        label: t('solutionsByIndustry.rel1label') || 'Decision Tool',
+      },
+      {
+        title: t('solutionsByIndustry.rel2') || 'Commercial Workboats',
+        description:
+          t('solutionsByIndustry.rel2desc') || 'Durable RIBs and workboats for daily commercial marine operations.',
+        href: `/${lang}/commercial-workboats`,
+        label: t('solutionsByIndustry.rel2label') || 'Workboats',
+      },
+      {
+        title: t('solutionsByIndustry.rel3') || 'OEM/ODM Manufacturing',
+        description:
+          t('solutionsByIndustry.rel3desc') || 'Custom manufacturing services for global brands and organizations.',
+        href: `/${lang}/oem-odm-manufacturer`,
+        label: t('solutionsByIndustry.rel3label') || 'OEM',
+      },
+      {
+        title: t('solutionsByIndustry.rel4') || 'Engineering Perfection',
+        description:
+          t('solutionsByIndustry.rel4desc') ||
+          'Our engineering philosophy — precision manufacturing and rigorous quality control.',
+        href: `/${lang}/engineering-perfection`,
+        label: t('solutionsByIndustry.rel4label') || 'Philosophy',
+      },
+    ]}
+  />
+
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true">
+    <p>
+      {
+        t('solutionsByIndustry.aiBlock') ||
+          'Solutions by industry for Aquafarer inflatable watercraft. Six industry verticals: Search & Rescue, Disaster Relief & Humanitarian Aid, Commercial Marine Operations, Defense & Government, Hospitality & Tourism, Fishing & Aquaculture. All solutions CE certified and ISO manufactured.'
+      }
+    </p>
+  </section>
+  <script is:inline type="application/ld+json" set:html={faqSchema} />
+</Layout>

@@ -1,0 +1,182 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'lv' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline"
+    >&larr; Atpakaļ uz Pētniecības un izstrādes centru</a
+  >
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Laboratorija 03</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">RF metināšanas centrs</h1>
+      <p class="mt-3 text-lg text-muted">Dielektriskās savienošanas tehnoloģija metinājumiem, kas notur spiedienu</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-jungle-mandala-1.webp"
+        alt="Aquafarer RF metināšanas dielektrisko savienošanas process"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Zinātne aiz šīs šķiedras</h2>
+  <p>
+    Piepūšamā laiva ir tikpat uzticama kā tās šuves. Viens vāja šuve var apdraudēt visu nodalījumu — un jūrā nodalījuma
+    kļūme nav tikai neērtība; tā ir drošības riska situācija. Pie{SITE.name}, mēs esam ieguldījuši īpašā Radiofrekvenču
+    (RF) metināšanas centrā, kas apvieno rūpnieciskā līmeņa dielektriskās metināšanas preses ar stingru procesa kontroli
+    un metinājuma pēc testēšanu. Katrs šuvums, ko mēs ražojam, ir dokumentēts, izsekojams un sertificēts, lai atbilstu
+    vai pārsniegtu prasības — starptautiskajam standartam gaisa kuģiem, kas ir piepūšami.
+  </p>
+  <p>
+    RF metināšana izmanto augstas frekvences elektromagnētisko enerģiju (parasti 27,12 MHz), lai uzbudinātu polārās
+    molekulas PVC Hypalonaudumā vai pārklātā audumā, radot siltumu tieši materiāla saskares vietā. Atšķirībā no karstā
+    gaisa vai karstā ķīļa metināšanas, RF metināšana rada patiesu molekulāro saiti — divi auduma slāņi saplūst vienā
+    viendabīgā materiālā metināšanas zonā, radot savienojumu, kas ir tikpat stiprs kā pats mātes materiāls.
+  </p>
+
+  <h2>Metināšanas iekārtas un procesu vadība</h2>
+  <p>Mūsu metināšanas centrs ir aprīkots ar:</p>
+  <table>
+    <thead><tr><th>Mašīna</th><th>Jauda / Kapacitāte</th><th>Pielietojums</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Dielektriskā RF nospiešana 1</td><td>15 kW, platāns 2000 × 600 mm</td><td
+          >Galvenās gareniskās šuves, transoma un caurules savienojumi</td
+        ></tr
+      >
+      <tr
+        ><td>Dielektriskais RF spiediens 2</td><td>10 kW, platāka 1500 × 500 mm</td><td
+          >Baffle metinājumi, konusa stiprinājumi, vārstu ielāpi</td
+        ></tr
+      >
+      <tr
+        ><td>CNC vadāms RF metinātājs</td><td>8 kW, XYtable 2500 × 1200 mm</td><td
+          >Izliektas šuves, logotipu/paneļu reljefs, precīza aplīžu apstrāde</td
+        ></tr
+      >
+      <tr
+        ><td>Karstā ķīļa automātiskais metinātājs</td><td>Mainīga temperatūra, maksimāli 1,2 m/min</td><td
+          >Rezerves metode HypalonmateriāliemCSM</td
+        ></tr
+      >
+    </tbody>
+  </table>
+  <p>
+    Katrs RF preses aparāts ir aprīkots ar slēgtas cilpas temperatūras un spiediena uzraudzību. Metināšanas parametri —
+    jauda, preses laiks, dzesēšanas laiks, elektrodu spiediens — tiek programmēti pēc materiāla veida un reģistrēti mūsu
+    Ražošanas izpildes sistēmā (MES) pilnīgai izsekojamībai.
+  </p>
+
+  <h2>Metināšanas kvalitātes testi — katra šuve, katra laiva</h2>
+  <p>Metinājuma integritāte tiek pārbaudīta ar obligātu četru testu protokolu:</p>
+  <ol>
+    <li>
+      <strong>Vizuālā pārbaude</strong>— 100 % šuvju tiek vizuāli pārbaudītas uz izdegšanu, nepareizu izlīdzinājumu,
+      piesārņojumu vai nepilnīgu saplūšanu. Noraidījuma ātruma slieksnis: 0,5 % lineāro metru.
+    </li>
+    <li>
+      <strong>Pīla tests ()</strong>— 25 mm plata sloksne tiek izgriezta no testa kupona, kas sametināts ar katru
+      ražošanas partiju. Minimālā lobīšanās spēks: 120 N/25 mm PVC 1100 dtex.
+    </li>
+    <li>
+      <strong>Gaisa aiztures tests</strong>— Katra pabeigtā kamera tiek spiesta līdz 1,25 × darba spiedienam un tiek
+      turēta 24–48 stundas. Spiediena kritums nedrīkst pārsniegt 2 %.
+    </li>
+    <li>
+      <strong>Termiskā cikla tests</strong>— Parauga taloni tiek apstrādāti no -20 °C līdz +60 °C 50 ciklu garumā, pēc
+      tam vēlreiz testēti. Pieņemamais stiprības zudums: &lt; 10 %.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Pīlinga stiprības salīdzinājums — RF pret karstā gaisa metināšanu (PVC1100 dtex)
+    </p>
+    <div class="space-y-3">
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">RF Metināšana</span><div
+          class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded"
+        >
+          <div class="h-full bg-blue-600 rounded" style="width:92%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">184 N</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">Karstais gaiss</span><div
+          class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded"
+        >
+          <div class="h-full bg-gray-400 rounded" style="width:65%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">130 N</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">min</span><div class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded">
+          <div class="h-full bg-green-500 rounded" style="width:48%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">96 N</span>
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      RF metināšana konsekventi nodrošina 90–95 % no mātes materiāla izturības, kas ir krietni virs minimālā.
+    </p>
+  </div>
+
+  <h2>Profesionālā pieredze</h2>
+  <p>
+    Mūsu metināšanas komandu vada vecākais procesu inženieris ar 11 gadu pieredzi pārklātu tekstilizstrādājumu
+    dielektriskajā metināšanā. Katrs operators pabeidz 6 mēnešu iekšējo sertifikācijas programmu, pirms drīkst strādāt
+    ar ražošanas šuvēm. Atkārtota sertifikācija ir nepieciešama katru gadu, tostarp praktisks metinājuma tests, kas tiek
+    novērtēts pēc mūsu iekšējā Grade-A standarta (lobīšanās stiprība ≥ 160 N/25 mm).
+  </p>
+
+  <h2>Pielāgoti metināšanas risinājumi unikālām prasībām</h2>
+  <p>
+    Mēs saprotam, ka viena metināšanas specifikācija neder katrai lietojumprogrammai. Mūsu RF metināšanas centrs
+    regulāri izstrādā pielāgotas šuvju konfigurācijas klientiem ar īpašām prasībām:
+  </p>
+  <ul>
+    <li>
+      <strong>Daudzslāņu pastiprinājuma plāksteri</strong>— augstas nodiluma zonām, piemēram, berzes stīpām un
+      priekšgala konusiem, mēs izstrādājam daudzgājienu RF metinājumus, kas integrē nodilumam izturīgu ārējo slāni,
+      nezaudējot elastību.
+    </li>
+    <li>
+      <strong>Vadītspējas jeb RFopaque šuves</strong>— militārajiem vai novērošanas kuģiem, kuriem nepieciešama
+      elektromagnētiskā aizsardzība, mēs metinām vadītspējīgas sieta kārtas šuvju kaudzē.
+    </li>
+    <li>
+      <strong>Krāsu maiņas paneļu metināšana</strong>— divkrāsu auduma paneļi (piemēram, oranžs korpusa + pelēks
+      virspuse), kas metināti ar slēptu pārklājumu, lai saglabātu zīmola estētiku bez redzamas savienojuma līnijas.
+    </li>
+  </ul>
+
+  <h2>Mūsu apņemšanās pret tevi</h2>
+  <p>
+    Katra laiva, ko piegādājam, nes mūsu metinājuma kvalitātes garantiju: ja kāda šuve parastā servisā neizdodas
+    garantijas laikā, mēs bez maksas salabojam vai nomainām skarto kameru, un tiek veikta cēloņa pārbaude, lai novērstu
+    atkārtošanos. Tas nav vienkārši garantija — tā ir apņemšanās nepārtraukti pilnveidoties, balstoties uz reāliem
+    operacionāliem datiem.
+  </p>
+  <p>
+    Kad jūs izvēlaties{SITE.name}, jūs izvēlaties šuves, kas ir izgudrotas, pārbaudītas un dokumentētas — ne tikai
+    metinātas. Tā ir atšķirība starp laivu, kas peld, un laivu, kas darbojas.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Apspriediet savas metināšanas prasības</h2>
+    <p class="mt-2 text-sm text-muted">
+      Pielāgotas šuvju specifikācijas, materiālu savietojamība vai procesa validācija.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Sazinieties ar mūsu metināšanas komandu</a
+    >
+  </div>
+</section>

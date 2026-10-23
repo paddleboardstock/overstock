@@ -1,0 +1,196 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'hr' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">&larr; Natrag na R&D centar</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Laboratorij 05</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Radionica prototipa</h1>
+      <p class="mt-3 text-lg text-muted">Od CAD modela do broda spremnog za more — izrađen, opremljen i provjeren</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-ocean-voyager-1.webp"
+        alt="Aquafarer izrada prototipne radionice za brod"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Gdje dizajn postaje stvarnost</h2>
+  <p>
+    CAD model, bez obzira koliko detaljan bio, ne može otkriti kako će se brod stvarno ponašati dok ne dođe do vode.
+    Zato je naš Prototipski radionica dizajniran za pretvaranje inženjerskih podataka u fizičko, moreplovno plovilo što
+    je brže i preciznije moguće. Svaki novi{SITE.name}model — i svaka značajna prilagođena izrada — prolazi kroz ovu
+    radionicu prije nego što se krene s proizvodnim alatima.
+  </p>
+  <p>
+    Radionica je potpuno opremljena za istovremenu izradu trupa, tubusa i oplate. Ovaj pristup paralelnog rada smanjuje
+    vrijeme izrade prototipa na 8-12 tjedana od inženjerskog odobrenja, u usporedbi s industrijskim standardom od 16-20
+    tjedana. Kada vaša primjena zahtijeva specijalizirano rješenje, možemo prijeći od koncepta do provjere na vodi za
+    manje od tri mjeseca.
+  </p>
+
+  <h2>Mogućnosti radionice</h2>
+  <table>
+    <thead><tr><th>Radno mjesto</th><th>Oprema</th><th>Namjena</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Izrada trupa</td><td
+          >Pec za rotacijsko oblikovanje (HDPE), TIG zavarivanje (aluminij), kalupi za ručnu izradu (stakloplastika)</td
+        ><td>Proizvodnja trupa u punoj veličini u sve tri vrste materijala</td></tr
+      >
+      <tr
+        ><td>Sklapanje tubusa</td><td
+          >RF stroj za zavarivanje, postaja za tacking vrućim zrakom, priprema za test inflationa</td
+        ><td>Izrada tubusnih sklopova u punoj veličini sa svim pregradama, konusima i ventilima</td></tr
+      >
+      <tr
+        ><td>Oplata i oprema</td><td
+          >Dizalica motora (500 kg), okvir za maketu konzole, krimper za hidrauličke crijevo, ploča za električne
+          instalacije</td
+        ><td>Kompletno opremanje: motor, kormilo, kontrole, sustav goriva, elektronika, sjedenje</td></tr
+      >
+      <tr
+        ><td>Instrumentni modul</td><td
+          >GPS senzor brzine, mjerač protoka goriva, akcelerometri, niz termoparova, uređaj za bilježenje podataka</td
+        ><td>Ugradnja i kalibracija instrumenata za testiranje na moru</td></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>Put prototipa — korak po korak</h2>
+  <ol>
+    <li>
+      <strong>Predaja inženjeringa</strong>— Paket dizajna (3D model, FEA izvještaj, popis materijala, plan slojeva) se
+      službeno pregledava od strane voditelja radionice i projektanta. Sve proizvodne nedoumice se označavaju i
+      rješavaju prije početka rezanja.
+    </li>
+    <li>
+      <strong>Izrada trupa</strong>— Trup se gradi prema inženjerskoj specifikaciji. Za HDPE: program rotacijskog
+      oblikovanja se učitava iz Moldex3D simulacije. Za aluminij: CNC-rezane ploče se zavaruju u TIG bay-u prema
+      odobrenoj mapi zavarivanja. Za stakloplastiku: knjiga slojeva se slijedi sloj po sloj.
+    </li>
+    <li>
+      <strong>Izrada tubusa</strong>— Tkanina se reže koristeći CNC-predloške, a zatim se RF zavaruje u komore pune
+      veličine. Svaka komora se napuhuje na testni tlak i ostavlja 24 h za početnu stabilizaciju.
+    </li>
+    <li>
+      <strong>Montaža i opremanje</strong>— Trup i cijevi su spojeni. Motor je obješen, upravljanje i kontrole su
+      povezani, sustav goriva je instaliran, a svi električni krugovi su ožičeni i provjereni.
+    </li>
+    <li>
+      <strong>Statički testovi</strong>— Prije nego što čamac dotakne vodu, prolazi: provjeru plovnosti (+puna rezerva
+      opterećenja 30 %), test tlaka u sustavu goriva, test potpunog zaključavanja sustava upravljanja, električni test
+      kontinuiteta uzemljenja.
+    </li>
+    <li><strong>Program ispitivanja na moru</strong>— 20 sati testiranja u vodi, detaljno u nastavku.</li>
+    <li>
+      <strong>Recenzija prototipa</strong>— Održava se službeni sastanak za odobrenje s timovima za inženjering,
+      proizvodnju i kvalitetu. Sve potrebne promjene dizajna dokumentiraju se i uključuju u produkcijsko izdanje.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      20-satni program ispitivanja na moru — raspored testiranja
+    </p>
+    <div class="space-y-2 text-sm">
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">2 h</span><span class="flex-1"
+          >Manevriranje u luci — upravljanje pri malim brzinama, rikverc, provjera odbijanja</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">4 h</span><span class="flex-1"
+          >Proba brzine — GPS-potvrđena maksimalna brzina, brzina krstarenja, potrošnja goriva na točkama od 3 okretaja</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Test okretanja — taktički promjer, pomak i prijenos na 20 čv, lijevo i desno</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Test udaranja — ponovljeni pokušaji kroz 0,5–1,0 m sječe; akcelerometar na bazi sjedala kormila</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Test stabilnosti — statički kut pete s 4 + trapa posade na desnoj strani, offset opterećenje</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Izdržljivost — 3 sata neprekidno pri krstarećoj brzini; praćenje temperature (motor, gorivo, elektrika)</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">2 h</span><span class="flex-1"
+          >Završna inspekcija — pregled svih sustava nakon ispitivanja, zategnuti/provjeriti sve pričvršćivače,
+          dokumentirati nalaze</span
+        >
+      </div>
+    </div>
+  </div>
+
+  <h2>Prilagođeno prototipiranje za jedinstvene primjene</h2>
+  <p>
+    Radionica prototipa je mjesto gdje rješavamo probleme koje standardni proizvodni brodovi ne mogu riješiti. Nedavni
+    primjeri uključuju:
+  </p>
+  <ul>
+    <li>
+      Duljina 7,8 m RIB za organizaciju za potragu i spašavanje, koja zahtijeva prilagođenu kabinu s zaštitom od
+      prevrtanja, integriranim nosačima nosila i sonar kapsulom montiranom na pramcu — sve prototipirano, ugrađeno i
+      testirano u našem objektu.
+    </li>
+    <li>
+      Napuhivač dug 5,2 m za hidrografskog izvođača, s odrezanim krmnim dijelom, uklonjivim instrumentnim jarbolom i
+      džepovima za pretvarače kroz trup, dizajniranim da minimiziraju poremećaje protoka.
+    </li>
+    <li>
+      Električni tender dužine 4,5 m za superjahtu, gdje je prototip korišten za provjeru dometa, infrastrukture za
+      punjenje i razine buke prije nego što se klijent obvezao na flotu od četiri jahte.
+    </li>
+  </ul>
+
+  <h2>Naš tim za prototipiranje</h2>
+  <p>
+    Radionicu čini osam višestruko vještih pomorskih tehničara, svaki obučen u najmanje dvije od tri osnovne discipline
+    (trup, cijevi, užadi). Voditelj tima je majstor brodograditelj s 16 godina iskustva, od pojedinačnih izrada po mjeri
+    do serijskih serija. Svaki prototip dobiva posvećenog projektnog inženjera koji služi kao jedina kontakt osoba za
+    klijenta tijekom cijelog procesa izgradnje i ispitivanja.
+  </p>
+
+  <h2>Uključenost klijenta</h2>
+  <p>
+    Aktivno potičemo naše klijente da prisustvuju ključnim prekretnicama tijekom izgradnje prototipa — posebno početnom
+    pregledu opremanja i pomorskom ispitivanju. Vaše operativne povratne informacije tijekom ovih faza neprocjenjive su
+    za fino podešavanje broda prije nego što uđe u proizvodnju. Ne gradimo u vakuumu; gradimo u partnerstvu s vama.
+  </p>
+  <p>
+    20-satna probna plovidba na moru također je prilika za vaš tim da se upozna s upravljanjem brodom, rasporedom
+    sustava i zahtjevima za održavanjem, osiguravajući glatki prijelaz u službu nakon isporuke proizvodnih brodova.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Započnite svoj prototip projekt</h2>
+    <p class="mt-2 text-sm text-muted">Recite nam o brodu koji vam treba i predložit ćemo plan razvoja prototipa.</p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Kontaktirajte naš tim za prototipiranje</a
+    >
+  </div>
+</section>

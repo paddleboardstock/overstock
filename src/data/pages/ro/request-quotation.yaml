@@ -1,0 +1,306 @@
+hero_text:
+  tagline: Obțineți o Cotație
+  title: Solicitați o Cotație<br />pentru Proiectul Dvs.
+  subtitle: Spuneți-ne despre cerințele dvs. și echipa noastră vă va răspunde cu o cotație detaliată în termen de 2 zile lucrătoare.
+steps2_process:
+  title: Cum Funcționează
+  subtitle: Patru pași simpli, de la cerere până la cotație.
+  items:
+    - title: 'Pasul 1: Trimiteți Cerințele Dvs.'
+      description: Completați formularul de mai jos cu tipul de produs, cantitatea și specificațiile dvs. Cu cât oferiți mai multe detalii, cu atât cotația va fi mai precisă.
+      icon: tabler:file-text
+    - title: 'Pasul 2: Revizuim și Vă Consiliem'
+      description: Echipa noastră de ingineri revizuiește cerințele dvs. și poate lua legătura pentru clarificări. Oferim recomandări privind configurarea produsului și opțiunile disponibile.
+      icon: tabler:users
+    - title: 'Pasul 3: Primiți Cotația Dvs.'
+      description: Veți primi o cotație detaliată, inclusiv prețul unitar, MOQ, termenul de livrare, condițiile de plată și opțiunile de transport. De obicei în termen de 48 de ore.
+      icon: tabler:currency-dollar
+    - title: 'Pasul 4: Mostră și Producție'
+      description: După acceptarea cotației, trecem la producția mostrelor (dacă este cazul) sau direct la producția în masă. Actualizări regulate pe tot parcursul procesului.
+      icon: tabler:building-factory
+content_form:
+  tagline: Formular de Cotație
+  title: Spuneți-ne despre Proiectul Dvs.
+  subtitle: Toate câmpurile marcate cu * sunt obligatorii.
+  fields:
+    - name: Categorie Produs
+      type: select
+      options:
+        - RIB Barcă
+        - Barcă Gonflabilă
+        - SUP Placă
+        - Kajak Gonflabil
+        - Vestă de Salvare
+        - Accesoriu Marin
+        - OEM/ODM Personalizat
+    - name: Aplicație
+      type: select
+      options:
+        - Centrul de Scufundări
+        - Pescuit
+        - Turism Marin / Stațiune
+        - Căutare și Salvare
+        - Tender de iaht
+        - Ambarcațiune comercială de lucru
+        - Guvernamental / Militar
+        - OEM / Marca privată
+        - Personal / Recreativ
+        - Altele
+    - name: Cantitate
+      type: text
+      placeholder: de ex. 50 de unități
+    - name: Piață țintă
+      type: text
+      placeholder: de ex. Europa, America de Nord, Orientul Mijlociu
+    - name: Țara de livrare
+      type: text
+      placeholder: de ex. Italia, EAU, SUA, Australia
+    - name: Preferință material
+      type: select
+      options:
+        - Fără preferințe
+        - PVC de calitate marină (1100 dtex)
+        - Hypalon / CSM premium
+        - Cască din fibră de sticlă
+        - Cască din aluminiu
+    - name: Cerință motor
+      type: text
+      placeholder: de ex. 60 HP cu motor exterior, fără motor, motor dublu 115 HP
+    - name: Personalizare necesară
+      type: text
+      placeholder: de ex. culori personalizate, branding/logo, ambalaj, accesorii speciale
+    - name: Termen limită
+      type: text
+      placeholder: de ex. livrare în termen de 90 de zile
+    - name: Cerințe suplimentare
+      type: textarea
+      placeholder: Descrieți aplicația dumneavoastră, specificațiile tehnice sau orice cerințe speciale — includeți desene de referință, specificații sau linkuri dacă sunt disponibile
+    - name: Încărcați specificația
+      type: file
+      placeholder: Încărcați fișa de specificații, desenul sau documentul de referință (PDF, DWG, DXF)
+    - name: Încărcați logo / material grafic
+      type: file
+      placeholder: Încărcați logo-ul sau materialul pentru branding personalizat (AI, EPS, PNG)
+content_rfq_types:
+  tagline: Sistem RFQ în 3 niveluri
+  title: Alege Dreapta<br />Nivel de anchetă
+  subtitle: Proiectele diferite necesită niveluri diferite de detalii. Selectați formularul care corespunde etapei dvs. de achiziție.
+  items:
+    - title: Întrebare rapidă
+      description: 5-6 câmpuri, 30 de secunde. Pentru contact inițial, întrebări generale sau urmărirea descărcării de resurse. Răspundem în termen de 24 de ore cu informații de bază și pașii următori.
+      icon: tabler:bolt
+    - title: Cerere standard de ofertă
+      description: 8-10 câmpuri, 2 minute. Pentru cotații specifice de produse cu selecția modelului, cantitatea și cerințele de livrare. Primește o cotație detaliată în termen de 48 de ore.
+      icon: tabler:file-text
+    - title: Cerere de ofertă pentru proiect
+      description: 10-14 câmpuri, 5 minute. Pentru RIB, flota de stațiuni, salvare sau proiecte guvernamentale care necesită configurare personalizată, documentație de conformitate și planificare a aprovizionării pe mai mulți ani. Manager de proiect dedicat desemnat.
+      icon: tabler:clipboard-list
+form_quick:
+  title: Întrebare rapidă
+  subtitle: Contact rapid pentru întrebări generale și solicitări inițiale de informații.
+  fields:
+    - name: numeComplet
+      label: Nume complet
+      type: text
+      required: true
+      placeholder: Numele tău complet
+    - name: email de afaceri
+      label: Email de afaceri
+      type: email
+      required: true
+      placeholder: you@company.com
+    - name: numeCompanie
+      label: Numele Companiei
+      type: text
+      required: true
+      placeholder: Compania ta
+    - name: tip de cumpărător
+      label: Eu sunt un...
+      type: select
+      required: true
+      options:
+        - Distribuitor / Importator
+        - Proprietar de marcă / Marcă proprie
+        - Stațiune / Centru de apă
+        - Operator de închirieri
+        - Guvern / Agenție de Salvare
+        - Operator de scufundări / pescuit
+        - Inginer naval / Reconstructor
+        - Altele
+    - name: interesProdus
+      label: Interes pentru produs
+      type: multiselect
+      required: true
+      options:
+        - RIB Bărci
+        - Bărci gonflabile
+        - SUP Plăci
+        - Echipament de siguranță
+        - Accesorii
+        - OEM/ODM Personalizat
+    - name: message
+      label: De ce aveți nevoie?
+      type: textarea
+      required: false
+      placeholder: Scurtă descriere a cerințelor dumneavoastră...
+form_standard:
+  title: Cerere standard de ofertă
+  subtitle: Cerere detaliată de ofertă pentru produse și cantități specifice.
+  fields:
+    - name: numeComplet
+      label: Nume complet
+      type: text
+      required: true
+    - name: email de afaceri
+      label: Email de afaceri
+      type: email
+      required: true
+    - name: numeCompanie
+      label: Numele Companiei
+      type: text
+      required: true
+    - name: tip de cumpărător
+      label: Tip cumpărător
+      type: select
+      required: true
+    - name: modelProdus
+      label: Model / Tip Produs
+      type: text
+      required: true
+      placeholder: 'dex: AF580 RIB, AF380 Gonflabil'
+    - name: quantity
+      label: Cantitate estimată
+      type: text
+      required: true
+      placeholder: 'dex: 10-20 unități'
+    - name: piațăȚintă
+      label: Piață / Regiune Țintă
+      type: text
+      required: true
+      placeholder: 'dex: UE, America de Nord, Orientul Mijlociu'
+    - name: calendarLivrare
+      label: Livrare dorită
+      type: select
+      required: true
+      options:
+        - În termen de 30 de zile
+        - 30-60 zile
+        - 60-90 zile
+        - Planificare pentru mai târziu (90+ zile)
+        - Doar cercetare
+    - name: cerințeConformitate
+      label: Cerințe de conformitate
+      type: multiselect
+      required: false
+      options:
+        - CE / RCD 2013/53/EU
+        - UKCA
+        - USCG
+        - ISO 9001
+        - BSCI
+        - REACH
+        - Niciuna / Nesigur
+    - name: message
+      label: Detalii suplimentare
+      type: textarea
+      required: false
+form_project:
+  title: Cerere de ofertă pentru proiect
+  subtitle: Cercetare completă a proiectului pentru flotă, comenzi personalizate sau achiziții guvernamentale.
+  fields:
+    - name: numeComplet
+      label: Nume complet
+      type: text
+      required: true
+    - name: email de afaceri
+      label: Email de afaceri
+      type: email
+      required: true
+    - name: numeCompanie
+      label: Numele Companiei
+      type: text
+      required: true
+    - name: tip de cumpărător
+      label: Tip cumpărător
+      type: select
+      required: true
+    - name: tipProiect
+      label: Tip de proiect
+      type: select
+      required: true
+      options:
+        - Flotă Resort / Hotel
+        - Flotă de închiriere
+        - Flotă de salvare / patrulare
+        - Flotă centru de scufundări
+        - Achiziții guvernamentale
+        - Etichetă privată / OEM
+        - Comandă stoc dealer
+        - Altele
+    - name: tipuriAmbarcatiuni
+      label: Tipuri de ambarcațiuni necesare
+      type: multiselect
+      required: true
+      options:
+        - RIB Bărci
+        - Ambarcațiuni gonflabile / Bărci cu vâsle
+        - SUP Plăci
+        - Caiace
+        - Echipament de siguranță
+    - name: dimensiuneFlotă
+      label: Dimensiunea flotei / Interval cantitate
+      type: text
+      required: true
+      placeholder: ex., 20-50 de unități pe parcursul a 12 luni
+    - name: cerințePersonalizate
+      label: Necesități de configurație personalizată
+      type: textarea
+      required: false
+      placeholder: Dimensiunea corpului, materialul tubului, dispunerea punții, cerințe de branding...
+    - name: cerințeConformitate
+      label: Cerințe de conformitate și certificare
+      type: multiselect
+      required: true
+      options:
+        - CE / RCD 2013/53/EU
+        - UKCA
+        - USCG Tip III/V
+        - ISO 9001
+        - BSCI
+        - REACH / RoHS
+        - Certificare pe piața locală
+    - name: piațăȚintă
+      label: Piață țintă
+      type: text
+      required: true
+    - name: intervalBuget
+      label: Interval de Buget
+      type: select
+      required: false
+      options:
+        - Sub 10.000 USD
+        - $10,000 - $50,000
+        - $50,000 - $200,000
+        - $200,000+
+        - Prefer să nu spun
+    - name: calendarLivrare
+      label: Cronologie Proiect
+      type: select
+      required: true
+      options:
+        - Urgent (în termen de 30 de zile)
+        - Standard (30-60 de zile)
+        - Planificat (60-90 de zile)
+        - Planificare viitoare (peste 90 de zile)
+    - name: message
+      label: Detalii și Cerințe Proiect
+      type: textarea
+      required: false
+      placeholder: Descrieți proiectul dvs., aplicația, și orice cerințe specifice...
+cta:
+  title: Preferi să discuți prin email?
+  subtitle: Trimiteți cererea dvs. direct echipei noastre de vânzări și vă vom răspunde în 24 de ore.
+  actions:
+    - variant: primary
+      text: Trimiteți-ne un email direct
+      href: /contact

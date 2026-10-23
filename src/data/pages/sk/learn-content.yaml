@@ -1,0 +1,155 @@
+articles:
+  sup:
+    - title: SUP Základy — Príručka pre začiatočníkov
+      desc: Všetko, čo začínajúci potrebuje vedieť — typy dosiek, veľkosti pádiel, postoj a tipy na prvý deň.
+    - title: SUP Veľkostný sprievodca
+      desc: Nájdite správnu dĺžku, šírku a objem dosky podľa svojej váhy, zručnosti a štýlu pádlovania.
+    - title: Nafukovacia vs tvrdá doska
+      desc: Ktoré je pre vás správne? Porovnanie prenosnosti, výkonu, odolnosti a ceny.
+    - title: Stredne pokročilé techniky
+      desc: Zlepšite svoje pádlovanie pomocou pokročilých ťahov, techník otáčania a zvládania drsnej vody.
+    - title: Ako vybrať nafukovací SUP
+      desc: Navigujte kľúčové faktory — konštrukcia, hrúbka, nastavenie plutiev a súčasti príslušenstva.
+    - title: Bezpečnosť vo vode
+      desc: Základné bezpečnostné znalosti vrátane čítania počasia, výberu PFD, sebazáchrany a skupinového pádlovania.
+  inflatable-boat:
+    - title: Referencie materiálov
+      desc: PVC, Hypalon, drop-stitch, denier hodnotenia — pochopte, z čoho je vaše nafukovacie vybavenie vyrobené.
+    - title: PVC vs Hypalon
+      desc: Definitívne porovnanie PVC a Hypalon tkanín pre nafukovacie člny — odolnosť, UV odolnosť a cena.
+    - title: Drop-Stitch Vysvetlenie jadra
+      desc: Ako tisíce vnútorných vlákien vytvára pevnú platformu pri 12-15 PSI pre vysokovýkonný nafukovací SUPs.
+    - title: Prehľad nafukovacej technológie
+      desc: Ako sú konštruované nafukovacie člny a SUPs — od vrstvenia materiálu po ventilové systémy a zváranie švov.
+    - title: Príručka k pevným nafukovacím člnom (RIB)
+      desc: Všetko o konštrukcii RIB, typoch trupu, materiáloch trubíc a výbere správneho RIB pre vaše potreby.
+    - title: Nafukovací čln vs RIB
+      desc: Kľúčové rozdiely medzi tradičnými nafukovacími člnmi a pevnými nafukovacími člami pre rôzne použitie.
+  water-safety:
+    - title: Príručka bezpečnosti na vode
+      desc: Základné bezpečnostné znalosti pre každého veslára — počasie, PFD, sebazáchrana a protokoly skupinového pádlovania.
+    - title: Príručka o záchranných vestách a PFD
+      desc: Ako vybrať správne osobné plávacie zariadenie pre SUP, kajakovanie, člnkovanie a profesionálne použitie.
+    - title: Bezpečnostný kontrolný zoznam SUP
+      desc: Pred spustením do vody by mal každý stojaci paddleboardista nasledovať bezpečnostný kontrolný zoznam.
+    - title: Bezpečnosť pri pádlovaní v studenej vode
+      desc: Základné opatrenia, vybavenie a techniky pádlovania v studených vodách.
+    - title: Začiatočnícke chyby pri pádlovaní
+      desc: Bežné chyby, ktoré robia začiatočníci, a ako sa im vyhnúť pre bezpečnejší a príjemnejší zážitok.
+    - title: CE Vysvetlenie certifikácie
+      desc: Čo CE znamená certifikácia pre nafukovacie vodné plavidlá — štandardy, testovanie a prečo je to dôležité pre bezpečnosť.
+ui:
+  read_guide: Prečítajte si príručku →
+  card_tech: Inžinierstvo námornej bezpečnosti a testovanie materiálov
+  card_products: Preskúmajte Aquafarer celý katalóg produktov
+  card_trust: CE, ISO a BSCI súlad
+materials:
+  intro_p1: Výkon, odolnosť a bezpečnosť nafukovacieho vodného plavidla závisia takmer výlučne od materiálov použitých pri jeho konštrukcii. Od látky, ktorá tvorí trubice, až po závity SUP , ktoré doske dodávajú tuhosť, každý výber materiálu ovplyvňuje, ako sa produkt správa na vode a ako dlho vydrží.
+  intro_p2: 'Tento sprievodca pokrýva štyri základné materiály používané v moderných nafukovacích vodných plavidlách: PVC látku, Hypalon CSM gumu, drop-stitch konštrukciu jadra a EVA penovú podlahu. Pochopenie týchto materiálov vám pomôže vybrať si správny produkt podľa vašich potrieb a udržať ho na maximálnej životnosti.'
+  labels:
+    advantages: Výhody
+    limitations: Obmedzenia
+    best_for: 'Najlepšie pre:'
+  items:
+    - name: PVC (Polyvinylchlorid)
+      summary: Priemyselný štandard pre rekreačné nafukovacie člny a SUPs. Viacvrstvová laminovaná látka ponúka vynikajúci pomer pevnosti k hmotnosti za dostupnú cenu.
+      pros:
+        - Cenovo dostupné — o 30-50 % lacnejšie ako Hypalon
+        - Ľahké a ľahko ovládateľné
+        - UV Dobrý odpor pri správnych náteroch
+        - Široká škála farieb a povrchových úprav
+        - Ľahko sa opravuje pomocou PVC záplat a rozpúšťadiel
+      cons:
+        - Kratšia dĺžka života Hypalon ako (7-10 rokov)
+        - Menej flexibilné pri nízkych teplotách
+        - Nižšia chemická odolnosť
+        - Môže sa časom vyvinúť migrácia plastifikátora
+      best_for: SUPsRekreačné, cenovo dostupné lode, flotily na prenájom, sezónne využitie, sladkovodné a pobrežné prostredie.
+    - name: Hypalon (CSM Guma )
+      summary: Prémiový syntetický kaučukový materiál známy výnimočnou odolnosťou UV , odolnosťou a dlhou životnosťou. Zlatý štandard pre komerčné a vojenské nafukovacie člny.
+      pros:
+        - UV Výnimočná a ozónová odolnosť
+        - Životnosť 15-20 rokov pri správnej starostlivosti
+        - Vynikajúca flexibilita v chladnom počasí
+        - Vynikajúca odolnosť voči chemikáliám a olejom
+        - Udržuje si farbu dlhšie než PVC
+      cons:
+        - Výrazne drahšie než PVC
+        - Ťažšia gramáž látky
+        - Menej možností farieb
+        - Opravy vyžadujú špecializované lepidlá
+        - Menej výrobných zariadení po celom svete
+      best_for: Komerčné RIBs, pátracie a záchranné akcie, vojenské aplikácie, tropické podnebie, dlhodobé vlastníctvo flotily.
+    - name: Drop-Stitch Jadro
+      summary: Technológia, ktorá zmenila nafukovacie SUPs. Tisíce polyesterových vlákien spájajú vrchnú a spodnú vrstvu látky, čo umožňuje vysokotlakové nafúknutie pre pevný výkon tvrdého plášťa.
+      pros:
+        - Extrémne pevné pri 12-20 PSI
+        - Ľahké — 18-30 libier pre dosku plnej veľkosti
+        - Skladá sa do roviny pre uloženie a cestovanie
+        - Vynikajúca odolnosť proti nárazu
+        - Konzistentný výkon v rôznych teplotných rozsahoch
+      cons:
+        - Vyžaduje vysokotlakové čerpadlo
+        - Oprava prepichnutia zložitejšia než pri jednovrstvových
+        - Vyššie výrobné náklady než štandardné nafukovacie produkty
+        - Strata tlaku v priebehu času vyžaduje pravidelné dopĺňanie
+      best_for: Stand-up paddle dosky, kajaky, nafukovacie paluby pre člny, každá aplikácia vyžadujúca pevnú výkonnosť s nafukovacou prenosnosťou.
+    - name: EVA Penová paluba
+      summary: Pena uzavretých buniek EVA (etylén-vinyl acetát) používaná pre trakčné podložky na SUP doskách a palubách lodí. Poskytuje tlmenie, priľnavosť a tepelnú izoláciu.
+      pros:
+        - Vynikajúci protišmykový grip mokrý alebo suchý
+        - Tlmenie znižuje únavu pri dlhých pádlach
+        - Tepelná izolácia od studeného povrchu paluby
+        - UV a odolná voči slanej vode
+        - Dostupná v multicolor blokovom spájaní a laserom gravírovaných dizajnoch
+      cons:
+        - Môže sa opotrebovať pri intenzívnom používaní za 2-3 roky
+        - Musí byť správne spojený, aby sa predišlo delaminácii
+        - Nie je nosný — neovplyvňuje tuhosť
+        - Pridáva miernu hmotnosť (200–400 g na dosku)
+      best_for: SUP trakcia na palube, podložka na palubu lode, pohodlie sedadla kajaku, každá povrchová plocha vyžadujúca nesmykľavé držanie.
+  selection:
+    title: Sprievodca výberom materiálu
+    subtitle: 'Vyberte správny materiál podľa vášho hlavného použitia:'
+    headers:
+      - Použitie
+      - Odporúčaný materiál
+      - Prečo
+    rows:
+      - - Rekreačné SUP pádlovanie
+        - Drop-stitch PVC
+        - Ľahký, pevný, cenovo dostupný — ideálna rovnováha pre rekreačných pádlovačov
+      - - Rodinný čln / jazerná loď
+        - PVC (1100 denier)
+        - Nákladovo efektívny, ľahko opraviteľný, dostatočná odolnosť pre rekreačné použitie
+      - - Komerčný RIB / hliadková loď
+        - Hypalon CSM
+        - Maximálna odolnosť UV, životnosť 15–20 rokov, odolnosť voči chemikáliám a oleju
+      - - Prenájom flotily SUP dosky
+        - Drop-stitch PVC + EVA paluba
+        - Odolné, opraviteľné, dobrá hodnota pre vysokofrekvenčné používanie
+      - - Záchranné operácie
+        - Hypalon CSM
+        - Spoľahlivosť v extrémnych podmienkach, odolnosť pri nízkych teplotách, odolnosť voči chemikáliám
+      - - Turistický / expedčný kajak
+        - Drop-stitch PVC
+        - Pevný výkon s prenosnosťou vhodnou na cestovanie
+  deep_dive:
+    title: Podrobné sprievodce
+    topics:
+      - title: Námorná trieda PVC
+        desc: Viacvrstvová laminovaná PVC tkanina — vysvetlenie odolnosti UV, testovania odolnosti proti oderu a hodnotení denier.
+      - title: PVC vs Hypalon
+        desc: Definitívne porovnanie dvoch dominantných materiálov pre nafukovacie lode — cena, životnosť, odolnosť UV.
+      - title: Drop-Stitch Jadro
+        desc: Ako tisíce vnútorných vlákien vytvárajú pevné nafukovacie konštrukcie pri vysokom tlaku 12–15 PSI.
+      - title: RF zváracia technológia
+        desc: Vysokofrekvenčné zváranie vytvára silné, konzistentné švy — ako to funguje a prečo je to dôležité.
+      - title: PSI a výkon
+        desc: Prečo je tlak vzduchu dôležitý pre nafukovacie SUPs a lode — tuhosť, nosnosť a kvalita jazdy.
+      - title: Testovanie kvality
+        desc: Tlakové skúšky, testy plavnosti, UV starnutie a deštruktívne testovanie — náš proces kvality.
+      - title: EVA Penové paluby
+        desc: Penové podložky s uzavretými bunkami EVA — priľnavosť, pohodlie a odolnosť pre SUP a paluby lodí.
+      - title: Starostlivosť o materiál
+        desc: Čistenie, UV ochrana, prevencia plesní a osvedčené postupy skladovania nafukovacích produktov.

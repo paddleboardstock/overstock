@@ -1,0 +1,204 @@
+---
+import { SITE } from 'astrowind:config';
+const { lang = 'it' } = Astro.props;
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={`/${lang}/randdcenter`} class="text-sm text-gray-500 hover:underline">&larr; Torna al Centro R&S</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Lab 04</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Vasca di prova idrodinamica</h1>
+      <p class="mt-3 text-lg text-muted">
+        Validazione delle prestazioni prima del primo prototipo a grandezza naturale
+      </p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-design-discussion-original.webp"
+        alt="Test delle prestazioni nella vasca di prova idrodinamica Aquafarer"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Perché provare in vasca una piccola imbarcazione?</h2>
+  <p>
+    È un'idea sbagliata comune ritenere che i test idrodinamici siano riservati alle navi d'alto mare. In realtà, le
+    prestazioni di uno scafo planante di piccole dimensioni — come un RIB da 4u{2013}5 m — dipendono dalla forma della
+    parte immersa tanto quanto una petroliera dipende dal suo bulbo di prua. Angolo di assetto, superficie bagnata,
+    generazione di spray e ventilazione hanno tutti un effetto drammatico su velocità, consumo di carburante e comfort
+    di navigazione. In {SITE.name}, gestiamo una vasca di prova idrodinamica dedicata che ci consente di quantificare
+    questi effetti in scala di modello — prima di impegnare metallo e tessuto in un prototipo a grandezza naturale.
+  </p>
+  <p>
+    Testare in scala di modello (tipicamente da 1:3 a 1:5) ci dà la possibilità di iterare rapidamente e a basso costo
+    le forme dello scafo. Una settimana in vasca può generare gli stessi dati di prestazione che richiederebbero mesi di
+    tentativi ed errori a grandezza naturale — e a una frazione del costo.
+  </p>
+
+  <h2>Specifiche della struttura</h2>
+  <table>
+    <thead><tr><th>Parametro</th><th>Specifica</th></tr></thead>
+    <tbody>
+      <tr><td>Dimensioni della vasca</td><td>35 m (L) &times; 3.5 m (Largh.) &times; 1.8 m (Prof.)</td></tr>
+      <tr
+        ><td>Carrello di traino</td><td
+          >Azione elettrica a servomotore, velocità massima 12 m/s (23 kn), precisione della velocità &plusmn; 0.5 %</td
+        ></tr
+      >
+      <tr
+        ><td>Generatore di onde</td><td
+          >A battente, stati di mare regolari &amp; irregolari programmabili, Hs fino a 0.3 m in scala di modello</td
+        ></tr
+      >
+      <tr
+        ><td>Strumentazione</td><td
+          >Dinamometro a 6 componenti (resistenza, forza laterale, momento d'imbandata), accelerometri, inclinometri,
+          sonde per onde</td
+        ></tr
+      >
+      <tr
+        ><td>Acquisizione dati</td><td
+          >Campionamento a 1000 Hz per canale, visualizzazione in tempo reale + suite di post-elaborazione</td
+        ></tr
+      >
+      <tr
+        ><td>Fabbricazione dei modelli</td><td
+          >Fresatura CNC interna e stampa 3D per scafi modello fino a 1.8 m fuori tutto</td
+        ></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>Il nostro programma di test</h2>
+  <p>Un programma standard di sviluppo dello scafo nella nostra vasca segue questa sequenza:</p>
+  <ol>
+    <li>
+      <strong>Costruzione del modello</strong> — Un modello in scala 1:3.5 viene fresato a CNC da schiuma ad alta densità
+      e vetrato per la rigidità. Peso e baricentro vengono regolati per corrispondere alla condizione di pieno carico scalata
+      secondo Froude.
+    </li>
+    <li>
+      <strong>Corse di resistenza</strong> — Il modello viene rimorchiato a 8-10 velocità che coprono l'intervallo operativo.
+      La resistenza totale viene misurata e scomposta in componenti di attrito e residua utilizzando il metodo ITTC-1957.
+    </li>
+    <li>
+      <strong>Misurazione di assetto &amp; abbattimento</strong> — Assetto e abbattimento in navigazione vengono registrati
+      a ogni velocità. L'obiettivo è un angolo di assetto ottimale di 4-6&deg; per gli scafi plananti.
+    </li>
+    <li>
+      <strong>Rilievo della scia</strong> — I tagli trasversali delle onde vengono misurati a due velocità per valutare la
+      resistenza d'onda e identificare le interazioni ondose trasversali che potrebbero causare interferenze a poppa.
+    </li>
+    <li>
+      <strong>Tenuta al mare (opzionale)</strong> — Corse con mare di prua e mare al seguito in onde regolari per misurare
+      la resistenza aggiuntiva, l'accelerazione verticale e la probabilità di slamming.
+    </li>
+    <li>
+      <strong>Analisi dei dati &amp; raccomandazioni</strong> — Viene consegnato un rapporto completo con grafici comparativi,
+      curve velocità/potenza e raccomandazioni di progettazione specifiche per lo scafo a grandezza naturale.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Risultati tipici delle prove in vasca — Resistenza vs Velocità (scafo RIB 450, scala 1:3.5)
+    </p>
+    <div class="space-y-2">
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">5 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:18%"></div>
+        </div><span class="w-16 text-right">42 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">10 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:35%"></div>
+        </div><span class="w-16 text-right">81 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">15 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:52%"></div>
+        </div><span class="w-16 text-right">121 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">20 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:68%"></div>
+        </div><span class="w-16 text-right">158 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">25 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:85%"></div>
+        </div><span class="w-16 text-right">197 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">30 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:100%"></div>
+        </div><span class="w-16 text-right">232 N</span>
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      Resistenza in scala di modello (N) a velocità scalate secondo Froude. La previsione della potenza a grandezza
+      naturale segue il metodo di previsione delle prestazioni ITTC-1978.
+    </p>
+  </div>
+
+  <h2>Team di esperti</h2>
+  <p>
+    La nostra vasca è gestita da un idrodinamico con un dottorato in architettura navale e 8 anni di esperienza nelle
+    vasche di rimorchio presso un importante istituto europeo di ricerca marittima. È affiancato da un tecnico che
+    prepara tutti i modelli e la strumentazione. Il team segue le ITTC (International Towing Tank Conference)
+    Recommended Procedures per garantire che ogni test sia ripetibile, tracciabile e internazionalmente difendibile.
+  </p>
+
+  <h2>Prove in vasca per lo sviluppo di scafi personalizzati</h2>
+  <p>
+    La nostra vasca non è utilizzata solo per gli scafi progettati in casa — svolgiamo regolarmente programmi di test
+    per clienti che vogliono validare una forma di scafo personalizzata o indagare un problema di prestazioni:
+  </p>
+  <ul>
+    <li>
+      <strong>Confronto di forme di scafo</strong> — Due o più forme di scafo candidate testate in condizioni identiche, fornendo
+      un confronto oggettivo di resistenza/velocità/stabilità per informare la vostra scelta di progettazione.
+    </li>
+    <li>
+      <strong>Ottimizzazione degli appendici</strong> — Piastre interceptor, listelli di spray, trim tab e alette possono
+      essere testati in varie configurazioni per quantificare il loro contributo individuale alla riduzione della resistenza.
+    </li>
+    <li>
+      <strong>Studio di abbinamento del motore</strong> — I dati di resistenza vengono convertiti in una curva di previsione
+      della potenza, consentendovi di selezionare la potenza ottimale del motore per la velocità e il carico target.
+    </li>
+  </ul>
+
+  <h2>Perché testare con noi?</h2>
+  <p>
+    Non vi consegniamo solo un set di numeri grezzi. I nostri rapporti traducono i dati di vasca in raccomandazioni
+    ingegneristiche attuabili: «Alzate il listello di spray di 8 mm per ridurre la superficie bagnata a velocità di
+    crociera», «Aumentate l'angolo di fondo (deadrise) allo specchio di poppa di 3&deg; per ridurre l'accelerazione da
+    slamming», oppure «Spostate il baricentro longitudinale di 150 mm verso poppa per migliorare l'atteggiamento di
+    planata». Uscirete con una chiara comprensione di cosa cambiare e perché.
+  </p>
+  <p>
+    La nostra vasca è inoltre disponibile per test indipendenti di terze parti su base fee-for-service. Se state
+    sviluppando uno scafo e desiderate una valutazione idrodinamica imparziale ed eseguita professionalmente, vi
+    invitiamo a contattarci.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Prenotate una sessione di prova in vasca</h2>
+    <p class="mt-2 text-sm text-muted">
+      Che abbiate bisogno di un programma di sviluppo completo o di un singolo test comparativo, possiamo adattarci ai
+      vostri tempi.
+    </p>
+    <a
+      href={`/${lang}/contact`}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Contattate il nostro team di idrodinamica</a
+    >
+  </div>
+</section>

@@ -1,0 +1,211 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'id' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">&larr; Kembali ke Pusat R&D</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Lab 01</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">PVC Lab Kain</h1>
+      <p class="mt-3 text-lg text-muted">Pengujian material ilmiah — dari serat hingga tabung jadi</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/randd/aquafarer-pvc-material-lab.webp"
+        alt="Aquafarer PVC laboratorium pengujian bahan kain"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Dasar dari setiap perahu karet</h2>
+  <p>
+    Kain tabung adalah material tunggal yang paling penting dalam perahu karet. Kain ini harus mampu menahan paparan UV
+    secara terus-menerus, siklus pengisian udara berulang, abrasi terhadap dermaga dan puing-puing, serta perubahan suhu
+    yang ekstrem — semua itu sambil mempertahankan integritas strukturalnya selama bertahun-tahun. Di{SITE.name}, Lab
+    Kain PVC kami didedikasikan secara eksklusif untuk karakterisasi, validasi, dan peningkatan berkelanjutan dari kain
+    yang kami gunakan di setiap perahu yang kami bangun.
+  </p>
+  <p>
+    Kami tidak hanya mengandalkan lembar data pemasok. Setiap batch kain PVC dan Hypalon yang masuk ke bengkel kami
+    diuji secara independen di tempat. Hal ini menjamin bahwa spesifikasi material yang kami publikasikan adalah
+    performa material yang Anda terima — batch demi batch, tahun demi tahun.
+  </p>
+
+  <h2>Peralatan pengujian standar</h2>
+  <p>
+    Lab kain kami dilengkapi dengan instrumen tingkat industri yang sesuai dengan metode pengujian ISO, ASTM, dan EN:
+  </p>
+  <table>
+    <thead><tr><th>Peralatan</th><th>Parameter yang Diukur</th><th>Standar</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Penguji tarik universal (50 kN)</td><td>Gaya putus, regangan saat putus, propagasi sobekan</td><td
+          >/ ASTM D751</td
+        ></tr
+      >
+      <tr
+        ><td>Kamar penuaan sinar Xenon-arc</td><td>Ketahanan UV (perubahan warna, retensi kekuatan setelah 2000 jam)</td
+        ><td>/ ASTM G155</td></tr
+      >
+      <tr
+        ><td>Penguji lentur suhu rendah</td><td>Titik retak pada -30 &deg;C hingga -50 &deg;C</td><td
+          >ISO 4675 / ASTM D2136</td
+        ></tr
+      >
+      <tr
+        ><td>Penguji abrasi Taber</td><td>Kehilangan berat setelah 1000 siklus (roda CS-10)</td><td
+          >ASTM D3389 / ISO 5470-1</td
+        ></tr
+      >
+      <tr
+        ><td>Pengukur ketebalan (digital, resolusi 0,001 mm)</td><td>Keseragaman di seluruh lebar gulungan</td><td
+          >ISO 2286-3</td
+        ></tr
+      >
+      <tr><td>Penguji tekanan hidrostatik</td><td>Ketahanan penetrasi air</td><td>ISO 811</td></tr>
+    </tbody>
+  </table>
+  <p class="text-sm text-gray-500">
+    * Semua peralatan dikalibrasi setiap tahun oleh laboratorium yang terakreditasi pihak ketiga.
+  </p>
+
+  <h2>Dari data ke keputusan: alur kerja pengujian tipikal</h2>
+  <p>Ketika kandidat kain baru tiba, itu mengikuti proses kualifikasi tujuh langkah yang distandarisasi:</p>
+  <ol>
+    <li>
+      <strong>Pemeriksaan tanda terima</strong>— pemeriksaan visual untuk cacat permukaan, lubang jarum, dan kepatuhan
+      dimensi.
+    </li>
+    <li>
+      <strong>Pemetaan ketebalan</strong>— Pengukuran 20 titik di seluruh gulungan; CV 3% diperlukan untuk diterima.
+    </li>
+    <li>
+      <strong>Pengujian tarik</strong>— 5 spesimen dalam arah ulur dan lusi. Minimum 3500 N/50 mm untuk 1100 dtex PVC.
+    </li>
+    <li>
+      <strong>kondisioning UV</strong>— Paparan 1000 jam di ruang batin xenon; retensi kekuatan minimum 80% diperlukan.
+    </li>
+    <li>
+      <strong>Retak dingin</strong>— 4 jam pada -35 °C, kemudian dibengkokkan 180° di atas mandrel 25 mm. Tidak ada
+      retakan yang terlihat.
+    </li>
+    <li><strong>Tahan aus</strong>— 1000 siklus, kehilangan berat ≤ 0,05 g.</li>
+    <li>
+      <strong>Tanda persetujuan</strong>— hanya setelah semua tujuh gerbang dilewati, kain baru dilepaskan untuk
+      produksi.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Tipe PVC 1100 dtex — Retensi Tarik Setelah Paparan UV
+    </p>
+    <div class="flex items-end gap-3 h-40">
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-600 rounded-t" style="height:100%"></div><span class="text-xs mt-1"
+          >0 h<br />100%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-500 rounded-t" style="height:95%"></div><span class="text-xs mt-1"
+          >500 h<br />95%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-400 rounded-t" style="height:88%"></div><span class="text-xs mt-1"
+          >1000 h<br />88%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-300 rounded-t" style="height:82%"></div><span class="text-xs mt-1"
+          >2000 h<br />82%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-gray-300 rounded-t" style="height:65%"></div><span class="text-xs mt-1"
+          >Pesaing<br />~65%</span
+        >
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      Kain PVC 1100 dtex kami mempertahankan 80% kekuatan tarik setelah 2000 jam paparan busur-xenon, dibandingkan
+      dengan grade industri tipikal yang turun di bawah 70%.
+    </p>
+  </div>
+
+  <h2>Tim profesional kami</h2>
+  <p>
+    Laboratorium ini dijalankan oleh dua insinyur material penuh waktu, masing-masing memiliki gelar di bidang ilmu
+    polimer atau rekayasa tekstil dengan pengalaman industri minimal enam tahun. Mereka didukung oleh tiga teknisi yang
+    melakukan pengujian sehari-hari dan pencatatan data. Tim ini secara rutin berpartisipasi dalam uji coba round-robin
+    antar-laboratorium yang diselenggarakan oleh Organisasi Internasional untuk Standardisasi (ISO) untuk memvalidasi
+    akurasi metode pengujian kami.
+  </p>
+
+  <h2>Menyelesaikan tantangan material tersulit Anda</h2>
+  <p>
+    Setiap lingkungan laut itu berbeda. Sebuah kapal patroli yang beroperasi di Teluk Persia menghadapi kondisi UV dan
+    suhu yang sangat berbeda dibandingkan dengan kapal penyelamat di Laut Utara. Laboratorium Kain kami membantu Anda
+    memilih — atau mengembangkan — spesifikasi kain yang dioptimalkan untuk profil operasi Anda.
+  </p>
+  <p>Solusi kustom terbaru meliputi:</p>
+  <ul>
+    <li>
+      Campuran PVC tahan aus tinggi untuk klien militer yang perahunya sering terdampar di terumbu karang (+40% umur
+      pakai tahan aus).
+    </li>
+    <li>
+      Sebuah formulasi Hypalon suhu rendah untuk stasiun penelitian Arktik, diuji hingga -50 °C tanpa menjadi rapuh.
+    </li>
+    <li>
+      Sebuah kain oranye yang distabilkan warnanya untuk armada pencarian dan penyelamatan, mempertahankan visibilitas
+      setelah 3 tahun terpapar sinar matahari tropis.
+    </li>
+  </ul>
+  <p>
+    Kami tidak menjual kain "siap pakai" dan berharap itu cocok. Kami menguji, memvalidasi, dan merekomendasikan — atau
+    membuat — solusi yang disesuaikan untuk profil misi spesifik Anda. Itu adalah{SITE.name}perbedaan.
+  </p>
+
+  <h2>Bagaimana kami melayani Anda</h2>
+  <p>Ketika Anda membawa tantangan material kepada kami, berikut yang dapat Anda harapkan:</p>
+  <ol>
+    <li><strong>Konsultasi</strong>— kami membahas lingkungan operasional Anda, target kinerja, dan anggaran.</li>
+    <li><strong>Proposal</strong>— rencana uji coba dibuat dengan kriteria lulus/gagal yang jelas dan garis waktu.</li>
+    <li>
+      <strong>Pelaksanaan</strong>— laboratorium kami menjalankan uji coba dan menghasilkan laporan terperinci dengan
+      data mentah dan analisis perbandingan.
+    </li>
+    <li>
+      <strong>Rekomendasi</strong>— kami menyajikan spesifikasi kain, termasuk opsi alternatif jika beberapa material
+      memenuhi kebutuhan Anda.
+    </li>
+    <li>
+      <strong>Tindak Lanjut</strong>— setelah pengiriman, kami tetap tersedia untuk mendukung pertanyaan terkait
+      material yang digunakan.
+    </li>
+  </ol>
+  <p>
+    Tujuan kami bukan sekadar menjualkan perahu kepada Anda. Tujuannya adalah memastikan bahwa perahu yang Anda terima
+    berfungsi dengan andal dalam kondisi tempat Anda beroperasi — dan itu dimulai dari kain.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Perlu spesifikasi kain khusus?</h2>
+    <p class="mt-2 text-sm text-muted">Hubungi tim rekayasa material kami untuk mendiskusikan kebutuhan Anda.</p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Hubungi tim laboratorium kami</a
+    >
+  </div>
+</section>

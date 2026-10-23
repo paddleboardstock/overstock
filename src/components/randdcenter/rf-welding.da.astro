@@ -1,0 +1,179 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'da' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">← Tilbage til R&amp;D Center</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Lab 03</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">RF Svejsecenter</h1>
+      <p class="mt-3 text-lg text-muted">Dielektrisk bindingsteknologi til svejsninger, der holder under tryk</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-jungle-mandala-1.webp"
+        alt="Aquafarer RF-svejsning dielektrisk bindingsproces"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Videnskaben bag sømmen</h2>
+  <p>
+    En gummibåd er kun så pålidelig som dens sømme. En enkelt svag svejsning kan kompromittere et helt kammer - og til
+    søs er et kammerfejl ikke til besvær; det er en sikkerhedsrisiko. På {SITE.name}, har vi investeret i et dedikeret
+    Radio-Frequency (RF) svejsecenter, der kombinerer dielektriske svejsepresser af industriel kvalitet med streng
+    proceskontrol og test efter svejsning. Hver søm, vi producerer, er dokumenteret, sporbar og certificeret til at
+    opfylde eller overgå kravene i - den internationale standard for oppustelige fartøjer.
+  </p>
+  <p>
+    RF-svejsning bruger højfrekvent elektromagnetisk energi (typisk 27.12 MHz) til at excitere de polære molekyler i PVC
+    eller Hypalon-belagt stof, og genererer varme præcist ved materialets grænseflade. I modsætning til varmlufts- eller
+    varmkilesvejsning skaber RF-svejsning en ægte molekylær binding - de to stoflag smelter sammen til et enkelt
+    homogent materiale ved svejsezonen, hvilket producerer en samling, der er lige så stærk som selve grundmaterialet.
+  </p>
+
+  <h2>Svejseudstyr og processtyring</h2>
+  <p>Vores svejsecenter er udstyret med:</p>
+  <table>
+    <thead><tr><th>Maskine</th><th>Strøm / Kapacitet</th><th>Anvendelse</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Dielektrisk RF-presse 1</td><td>15 kW, plade 2000 × 600 mm</td><td
+          >Hoved langsgående sømme, tvær-til-rør samlinger</td
+        ></tr
+      >
+      <tr
+        ><td>Dielektrisk RF-presse 2</td><td>10 kW, plade 1500 × 500 mm</td><td
+          >Bafflesvejsninger, kegletilbehør, ventillapper</td
+        ></tr
+      >
+      <tr
+        ><td>CNC-styret RF-svejser</td><td>8 kW, XY-tabel 2500 × 1200 mm</td><td
+          >Buede sømme, logo/panelprægning, præcisionspatchwork</td
+        ></tr
+      >
+      <tr
+        ><td>Hotwedge automatisk svejser</td><td>Variabel temperatur, 1.2 m/min max</td><td
+          >Sikkerhedskopieringsmetode for Hypalon/CSM materialer</td
+        ></tr
+      >
+    </tbody>
+  </table>
+  <p>
+    Hver RF-presse er udstyret med lukket kredsløbstemperatur- og trykovervågning. Svejseparametre - effekt, pressetid,
+    afkølingstid, elektrodetryk - programmeres pr. materialetype og registreres i vores Manufacturing Execution System
+    (MES) for fuld sporbarhed.
+  </p>
+
+  <h2>Svejsekvalitetstest - hver søm, hver båd</h2>
+  <p>Svejseintegritet verificeres gennem en obligatorisk fire-test protokol:</p>
+  <ol>
+    <li>
+      <strong>Visuel inspektion</strong> — 100 % af sømmene inspiceres visuelt for gennembrænding, fejljustering, kontaminering
+      eller ufuldstændig sammensmeltning. Afvisningshastighedstærskel: 0.5 % af lineære meter.
+    </li>
+    <li>
+      <strong>Peel test ()</strong> — En 25 mm bred strimmel skæres fra en testkupon, der er svejset med hver produktionsbatch.
+      Minimum afrivningskraft: 120 N/25 mm for PVC 1100 dtex.
+    </li>
+    <li>
+      <strong>Lufttilbageholdelsestest</strong> — Hvert færdigt kammer sættes under tryk til 1.25 × arbejdstryk og holdes
+      i 24-48 timer. Trykfaldet må ikke overstige 2 %.
+    </li>
+    <li>
+      <strong>Termisk cykling test</strong> — Prøvekuponer cykles fra -20 °C til +60 °C i 50 cyklusser og testes derefter
+      igen. Acceptabelt styrketab: &lt; 10 %.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Afskalningsstyrke sammenligning — RF vs varmluftsvejsning (PVC 1100 dtex)
+    </p>
+    <div class="space-y-3">
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">RF svejsning</span><div
+          class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded"
+        >
+          <div class="h-full bg-blue-600 rounded" style="width:92%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">184 N</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">Varmluft</span><div
+          class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded"
+        >
+          <div class="h-full bg-gray-400 rounded" style="width:65%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">130 N</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium"> min</span><div class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded">
+          <div class="h-full bg-green-500 rounded" style="width:48%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">96 N</span>
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      RF-svejsning opnår konsekvent 90-95 % af modermaterialets styrke, langt over minimum.
+    </p>
+  </div>
+
+  <h2>Faglig ekspertise</h2>
+  <p>
+    Vores svejseteam ledes af en senior procesingeniør med 11 års erfaring i dielektrisk svejsning af coatede tekstiler.
+    Hver operatør gennemfører et 6-måneders internt certificeringsprogram, før de får lov til at arbejde på
+    produktionssømme. Gencertificering er påkrævet årligt, inklusive en praktisk svejsetest evalueret i forhold til
+    vores interne Grade-A standard (afskalningsstyrke ≥ 160 N/25 mm).
+  </p>
+
+  <h2>Skræddersyede svejseløsninger til unikke krav</h2>
+  <p>
+    Vi forstår, at én svejsespecifikation ikke passer til enhver applikation. Vores RF-svejsecenter udvikler
+    rutinemæssigt tilpassede sømkonfigurationer til kunder med særlige krav:
+  </p>
+  <ul>
+    <li>
+      <strong>Flerlags forstærkningsplastre</strong> — til områder med meget slid, såsom gnidningsstriber og buekegler, udvikler
+      vi multi-pass RF-svejsninger, der integrerer et slidbestandigt ydre lag uden at gå på kompromis med fleksibiliteten.
+    </li>
+    <li>
+      <strong>Ledende eller RF-gennemsigtige sømme</strong> — til militær- eller overvågningsfartøjer, der kræver elektromagnetisk
+      afskærmning, svejser vi ledende mesh-lag i sømmen.
+    </li>
+    <li>
+      <strong>Farveskift panel svejsning</strong> — tofarvede stofpaneler (f.eks. orange skrog + grå overside) svejset med
+      en skjult overlapning for at bevare mærkets æstetik uden en synlig samlingslinje.
+    </li>
+  </ul>
+
+  <h2>Vores engagement i dig</h2>
+  <p>
+    Hver båd, vi leverer, bærer vores svejsekvalitetsgaranti: Hvis en søm svigter under normal service inden for
+    garantiperioden, reparerer eller udskifter vi det berørte kammer uden omkostninger, og en rodårsagsundersøgelse
+    udføres for at forhindre gentagelse. Dette er ikke blot en garanti – det er en forpligtelse til løbende forbedringer
+    drevet af operationelle data fra den virkelige verden.
+  </p>
+  <p>
+    Når du vælger {SITE.name}, vælger du sømme, der er konstrueret, testet og dokumenteret - ikke kun svejset. Det er
+    forskellen mellem en båd, der flyder, og en båd, der præsterer.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Diskuter dine svejsekrav</h2>
+    <p class="mt-2 text-sm text-muted">
+      Brugerdefinerede sømspecifikationer, materialekompatibilitet eller procesvalidering.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Kontakt vores svejseteam</a
+    >
+  </div>
+</section>

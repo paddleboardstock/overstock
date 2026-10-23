@@ -1,0 +1,119 @@
+hero:
+  tagline: Inženjerski Belo papir
+  title: Drop-Stitch Tehnologija i materijalna nauka:<br />Inženjering modernih napumpljivih plovila
+  subtitle: Autoritativni tehnički priručnik koji pokriva drop-stitch osnovnu konstrukciju, PVC u odnosu na Hypalon poređenje materijala, testiranje krutosti posuda pod visokim pritiskom i standarde proizvodnje plovila.
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/randd/aquafarer-design-discussion-lab.webp
+    alt: Aquafarer R&D laboratorija — testiranje materijala i inženjering
+direct_answer: Drop-stitch tehnologija koristi hiljade unutrašnjih poliesterskih niti koje povezuju gornje i donje slojeve tkanine napumpljivog jezgra. Kada se napuni na 15–20 PSI, ove niti deluju kao zatezne članice, sprečavaju širenje i stvaraju krutu strukturu uporedivu sa konstrukcijom tvrdog omotača. U kombinaciji sa naprednim PVC ili Hypalon premazima tkanine i RF zavarivanjem, ovo omogućava prenosiva, visokoperformansna napumpljiva plovila pogodna za profesionalnu, komercijalnu i rekreativnu upotrebu.
+section_drop_stitch:
+  title: Drop-Stitch Strukturni Inženjering
+  subtitle: Kako hiljade niti pretvaraju fleksibilnu tkaninu u krutu strukturu
+  content: |
+    Drop-stitch (poznata i kao "drop-stitch tkanina" ili "drop-stitch jezgro") predstavlja proboj u inženjeringu napumpljivih struktura. Princip je obmanjujuće jednostavan: hiljade pojedinačnih poliesterskih niti istovremeno su utkane u dva odvojena sloja osnovne tkanine, povezujući gornje i donje panele pod uglom od 90 stepeni.
+
+    Kada je zapečaćena komora pod pritiskom, unutrašnji pritisak vazduha deluje podjednako u svim pravcima — pokušavajući da razdvoji gornje i donje panele u cilindrični oblik. Hiljade drop-stitch niti odolevaju ovom razdvajanju, prenoseći opterećenje u zatezanje duž ose niti. Rezultat je ravan, krut panel koji može izdržati 15–20 PSI unutrašnjeg pritiska.
+
+    Na 20 PSI, panel od 1 m² drop-stitch doživljava približno 14.000 kg ukupne unutrašnje sile — ali matica niti drži panel savršeno ravan. Ovo daje drop-stitch strukturama odnos snage i težine koji se može uporediti sa tradicionalnim krutim materijalima.
+section_materials:
+  title: PVC u odnosu na Hypalon — Tehničko poređenje materijala
+  subtitle: Objektivni podaci za informisan izbor materijala u proizvodnji napumpljivih plovila
+  table:
+    columns:
+      - header: Svojstvo
+      - header: PVC (Polivinil hlorid)
+      - header: Hypalon (CSM)
+    rows:
+      - property: UV otpornost
+        pvc: Dobro (sa UV stabilizatorima)
+        hypalon: Odlično (samo po sebi)
+      - property: Otpornost na habanje
+        pvc: Dobro
+        hypalon: Veoma dobro
+      - property: Vlačna čvrstoća
+        pvc: 3.000–5.000 N/5cm
+        hypalon: 2.500–4.000 N/5cm
+      - property: Težina po m²
+        pvc: 850–1,200 g
+        hypalon: 1,100–1,500 g
+      - property: Hladna fleksibilnost
+        pvc: -30°C
+        hypalon: -20°C
+      - property: Metod spajanja
+        pvc: RF zavarivanje / zavarivanje toplim vazduhom
+        hypalon: Lepljenje rukom (kontakt cement)
+      - property: Popravka
+        pvc: Laka (termičko zavarivanje ili lepak)
+        hypalon: Zahteva CSM lepak
+      - property: Trošak materijala
+        pvc: $8–15 / m²
+        hypalon: $20–40 / m²
+      - property: Životni vek (tropsko sunce)
+        pvc: 5–8 godina
+        hypalon: 10–15 godina
+      - property: Raspon boja
+        pvc: Širok (cijeli spektar boja)
+        hypalon: Ograničen (osnovne boje)
+      - property: Hemijska otpornost
+        pvc: Dobra (otpornost na gorivo/ulje)
+        hypalon: Izvrsna (širok spektar hemikalija)
+section_testing:
+  title: Protokoli testiranja i bezbednosti
+  subtitle: Okvir za kontrolu kvaliteta Aquafarer za svaku seriju proizvodnje
+  protocols:
+    - title: 1,25x test zadržavanja pritiska
+      description: Svaki sastavljeni rezervoar se naduva na 1,25x nazivnog radnog pritiska i zadržava 24–48 sati. Bilo koji pad pritiska veći od 2% pokreće odbacivanje i ponovni rad.
+      standard: ISO 6185
+    - title: Test otpornosti spoja na ljuštenje
+      description: Uzorci zavarivanja i lepljenja šavova iz svake proizvodne serije testirani su na otpornost na ljuštenje korišćenjem kalibrisane opreme za zatezanje. Minimalna otpornost 4 kN/m je potrebna.
+      standard: ISO 2411
+    - title: Test zatezanja tkanine
+      description: Dolazni rolni materijala prolaze test zatezanja i elongacije u pravcima osnova i pletiva. Prag odbacivanja ispod 3.000 N/5cm za PVC.
+      standard: ISO 1421
+    - title: UV Ubrzano izlaganje vremenskim uslovima
+      description: Uzorci materijala se izlažu 1.000+ sati ubrzanog UV izlaganja u QUV test komorama. Maksimalni gubitak zatezanja dozvoljen je 15%.
+      standard: ASTM G154
+    - title: Integritet ventila i priključaka
+      description: Svaka sklopka ventila se testira na integritet zaptivanja pri 1,25x nazivnog pritisa. Ventili za povratni tok se testiraju na performanse jednokratnog zaptivanja.
+      standard: ISO 12402
+section_manufacturing:
+  title: Standardi proizvodnje i sertifikati kvaliteta
+  subtitle: Usklađenost sa industrijskim standardima za pristup globalnom tržištu
+  standards:
+    - name: ISO 9001:2015
+      body: SGS Sertifikovan
+      scope: Sistem upravljanja kvalitetom u dizajnu, proizvodnji i isporuci
+    - name: CE 2013/53/EU
+      body: Obavešteno telo EU
+      scope: Direktiva za rekreativna plovila — dizajn trupa, stabilnost, plovnost, emisije
+    - name: BSCI
+      body: Amfore
+      scope: Društvena usklađenost — bezbednost radnika, poštena radna praksa, upravljanje životnom sredinom
+    - name: ISO 6185
+      body: Međunarodni standard
+      scope: Naduvavajući čamci — konstrukcija, stabilnost, plovnost, ispitivanje pritiska
+    - name: REACH
+      body: EU regulativa
+      scope: Hemijska bezbednost — ograničene supstance u materijalima i premazu
+section_faq:
+  title: Tehnička FAQ
+  questions:
+    - q: Kako se drop-stitch upoređuje sa tradicionalnom konstrukcijom od tvrdog omotača?
+      a: Savremeni drop-stitch umetci pri 20 PSI postižu 85–90% čvrstoće uporedivih EPS penastih/stakloplastičnih čvrstih ljuski, dok su u potpunosti ispustivi za transport. Kompromis je blago veća težina i manja krajnja krutost — ali za većinu rekreativnih i komercijalnih primena, razlika je zanemarljiva.
+    - q: Koja gustina niti se smatra vrhunskim kvalitetom?
+      a: Premium drop-stitch tkanine koriste 2 konca po kvadratnom inču (približno 3.100 konaca po m²) tkanih od 1.680 DTEX poliesterskog prediva. Tkanine osnovnog nivoa koriste 1 konac po kvadratnom inču sa 1.100 DTEX prediva.
+    - q: Može li Hypalon biti varen kao PVC?
+      a: Ne. Hypalon/CSM ne može biti RF zavareno. Mora se sastaviti korišćenjem kontakt lepka nanesenog ručno, što čini proizvodnju više radno intenzivnom i zavisnom od veštine operatera. PVC može biti RF zavareno ili zavareno toplim zrakom za dosledan, automatizovan kvalitet šava.
+    - q: Koji je maksimalni bezbedni pritisak za gumene čamce?
+      a: Standardne cevi za naduvavanje čamaca rade pri 8–12 PSI. Podovi Drop-stitch rade pri 12–20 PSI. Jezgra visokog pritiska drop-stitch (SUPs) mogu raditi pri 20–25 PSI. Svaki proizvod uključuje ventile za oslobađanje pritiska kalibrisane da spreče prekomerno naduvavanje.
+    - q: Koliko vremena je potrebno za izradu custom napuhanog čamca?
+      a: Standardna OEM proizvodnja traje 30–45 dana od potvrde porudžbine do FOB Qingdao. Prilagođeni razvoj kalupa dodaje 15–20 dana za proizvodnju i testiranje prototipa.
+cta:
+  title: Inženjerska konsultacija
+  subtitle: Imate li konkretno pitanje o materijalu ili dizajnu? Naš inženjerski tim je dostupan za tehničke diskusije.
+  actions:
+    - variant: primary
+      text: Pitajte naš inženjerski tim
+      href: /contact
+    - text: Istražite naš R&D centar
+      href: /randdcenter

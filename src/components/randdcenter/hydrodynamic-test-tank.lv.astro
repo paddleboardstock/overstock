@@ -1,0 +1,201 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'lv' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline"
+    >&larr; Atpakaļ uz Pētniecības un izstrādes centru</a
+  >
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Laboratorija 04</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Hidrodinamiskā testa tvertne</h1>
+      <p class="mt-3 text-lg text-muted">Veiktspējas pārbaude pirms pirmā pilna mēroga prototipa</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-design-discussion-original.webp"
+        alt="Aquafarer hidrodinamiskā testa tvertnes veiktspējas testēšana"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Kāpēc veikt tanku testēšanu mazai laivai?</h2>
+  <p>
+    Ir izplatīts maldīgs uzskats, ka hidrodinamiskā testēšana ir paredzēta tikai okeānā kursējošām kuģiem. Patiesībā
+    maza planējoša korpusa veiktspēja — piemēram, 4–5 m RIB — ir tikpat atkarīga no tā zemūdens formas kā tankera
+    veiktspēja ir atkarīga no tā bulta tipa prāmja. Slīpuma leņķis, slapjās virsmas platība, šļakatu rašanās un
+    ventilācija visi dramatiski ietekmē ātrumu, degvielas patēriņu un braukšanas komfortu. Pie{SITE.name}, mēs vadām
+    speciālu hidrodinamisko testu tvertni, kas ļauj mums kvantificēt šos efektus modeļa mērogā — pirms metāla un auduma
+    izmantošanas pilna izmēra prototipā.
+  </p>
+  <p>
+    Testēšana modeļa mērogā (parasti 1:3 līdz 1:5) dod mums iespēju ātri un izmaksu ziņā efektīvi iterēt korpusa formas.
+    Nedēļa tvertnē var radīt tādus pašus veiktspējas datus, kas prasītu mēnešus pilna mēroga mēģinājumu un kļūdu — un
+    par daļu no izmaksām.
+  </p>
+
+  <h2>Iekārtu specifikācijas</h2>
+  <table>
+    <thead><tr><th>Parametrs</th><th>Specifikācija</th></tr></thead>
+    <tbody>
+      <tr><td>Tvertnes izmēri</td><td>35 m (pa kreisi) × 3,5 m (pa kreisi) × 1,8 m (pa kreisi)</td></tr>
+      <tr
+        ><td>Vilkšanas vagons</td><td
+          >Elektriskā servomotorpiedziņa, maksimālais ātrums 12 m/s (23 mezgli), ātruma precizitāte ± 0,5 %</td
+        ></tr
+      >
+      <tr
+        ><td>Viļņu ģenerators</td><td
+          >Atloku tipa, programmējams regulārs un neregulārs jūras stāvoklis, Hs līdz 0,3 m modeļa mērogā</td
+        ></tr
+      >
+      <tr
+        ><td>Instrumentācija</td><td
+          >6 komponentu dinamometrs (pretestība, sānu spēks, virziena moments), akselerometri, inklinometri, viļņu
+          zondes</td
+        ></tr
+      >
+      <tr
+        ><td>Datu iegūšana</td><td
+          >Paraugu ņemšana ar 1000 Hz katrā kanālā, reāllaika displeja + pēcapstrādes komplekts</td
+        ></tr
+      >
+      <tr><td>Modeļu izgatavošana</td><td>Iekšējā CNC frēzēšana un 3D drukāšana modeļu korpusiem līdz 1,8 m LOA</td></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>Mūsu testēšanas programma</h2>
+  <p>Mūsu tankā standarta korpusa attīstības programma seko šādai secībai:</p>
+  <ol>
+    <li>
+      <strong>Modeļa izstrāde</strong>— 1:3,5 mēroga modelis CNCtiek apstrādāts no augstas blīvuma putām un stiklots
+      stingrībai. Svars un smaguma centrs tiek pielāgoti, lai atbilstu Froude mēroga pilnas slodzes apstākļiem.
+    </li>
+    <li>
+      <strong>Pretestības skrējieni</strong>— Modelis tiek vilkts ar 8-10 ātrumiem visā darbības diapazonā. Kopējā
+      pretestība tiek mērīta un sadalīta berzes un atlikušajos komponentos, izmantojot ITTC-1957 metodi.
+    </li>
+    <li>
+      <strong>Trima un grimšanas mērīšana</strong>— Pie katra ātruma tiek reģistrēta slīdošā līdzsvarošana un grimšana.
+      Mērķis ir optimāls noapaļošanas leņķis 4-6° korpusu planēšanai.
+    </li>
+    <li>
+      <strong>Wake aptauja</strong>— Šķērsviļņu griezumi tiek mērīti ar diviem ātrumiem, lai novērtētu viļņu veidošanās
+      pretestību un identificētu šķērsviļņu mijiedarbības, kas varētu izraisīt aizmugures traucējumus.
+    </li>
+    <li>
+      <strong>Jūras noturība (pēc izvēles)</strong>— Pretjūras un aizjūras virzieni regulāros viļņos, lai mērītu papildu
+      pretestību, vertikālo paātrinājumu un trieciena varbūtību.
+    </li>
+    <li>
+      <strong>Datu analīze un ieteikumi</strong>— Tiek sniegts pilns ziņojums ar salīdzinošām kartēm, ātruma/jaudas
+      līknēm un konkrētiem dizaina ieteikumiem pilna mēroga korpusam.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Tipiski tanku testu rezultāti — pretestība pret ātrumu (RIB450 korpuss, 1:3,5 mērogs)
+    </p>
+    <div class="space-y-2">
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">5 mezgli (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:18%"></div>
+        </div><span class="w-16 text-right">42 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">10 mezgli (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:35%"></div>
+        </div><span class="w-16 text-right">81 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">15 mezgli (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:52%"></div>
+        </div><span class="w-16 text-right">121 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">20 mezgli (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:68%"></div>
+        </div><span class="w-16 text-right">158 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">25 mezgli (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:85%"></div>
+        </div><span class="w-16 text-right">197 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">30 mezgli (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:100%"></div>
+        </div><span class="w-16 text-right">232 N</span>
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      Modeļa mēroga pretestība (N) pie Froude mēroga ātrumiem. Pilna mēroga jaudas prognoze seko ITTC-1978 veiktspējas
+      prognozēšanas metodei.
+    </p>
+  </div>
+
+  <h2>Ekspertu komanda</h2>
+  <p>
+    Mūsu tanku vada hidrodinamiķis ar doktora grādu kuģu arhitektūrā un 8 gadu pieredzi vilkšanas tvertnēs lielā Eiropas
+    jūras pētniecības institūtā. Viņu atbalsta tehniķis, kurš sagatavo visus modeļus un instrumentus. Komanda ievēro
+    ITTC (Starptautiskās vilkšanas tanku konferences) ieteiktās procedūras, lai nodrošinātu, ka katrs tests ir
+    atkārtojams, izsekojams un starptautiski aizsargājams.
+  </p>
+
+  <h2>Tanku testēšana pielāgotu korpusu izstrādei</h2>
+  <p>
+    Mūsu tanks netiek izmantots tikai pašu izstrādātiem korpusiem — mēs regulāri veicam testēšanas programmas klientiem,
+    kuri vēlas pārbaudīt pielāgotu korpusa formu vai izpētīt veiktspējas problēmas:
+  </p>
+  <ul>
+    <li>
+      <strong>Korpusa formu salīdzinājums</strong>— Divas vai vairākas kandidātu korpusa formas, kas testētas identiskos
+      apstākļos, nodrošinot objektīvu pretestības/ātruma/stabilitātes salīdzinājumu, lai informētu jūsu dizaina izvēli.
+    </li>
+    <li>
+      <strong>Piedēkļu optimizācija</strong>— Interceptoru plāksnes, smidzināšanas sliedes, trima tabulatūras un strēles
+      var tikt testētas dažādās konfigurācijās, lai kvantificētu to individuālo ieguldījumu pretestības samazināšanā.
+    </li>
+    <li>
+      <strong>Dzinēju saskaņošanas pētījums</strong>— Pretestības dati tiek pārvērsti jaudas prognozēšanas līknē, ļaujot
+      izvēlēties optimālo dzinēja jaudu mērķa ātrumam un kravnesībai.
+    </li>
+  </ul>
+
+  <h2>Kāpēc testēt pie mums?</h2>
+  <p>
+    Mēs jums nesniedzam tikai neapstrādātus skaitļus. Mūsu ziņojumi pārvērš tvertnes datus praktiskos inženiertehniskos
+    ieteikumos: "Paceliet smidzināšanas sliedi par 8 mm, lai samazinātu mitro virsmu kruīza ātrumā", "Palieliniet
+    deadrise pie pakaļgala par 3°, lai samazinātu trieciena paātrinājumu", vai "Pārvietojiet garenisko smaguma centru
+    par 150 mm atpakaļ, lai uzlabotu planēšanas stāvokli". Jūs dodaties prom ar skaidru izpratni par to, ko mainīt un
+    kāpēc.
+  </p>
+  <p>
+    Mūsu tanks ir pieejams arī neatkarīgiem trešās puses testiem par pakalpojuma maksu. Ja jūs izstrādājat korpusu un
+    vēlaties objektīvu, profesionāli veiktu hidrodinamisko novērtējumu, mēs priecāsimies par jūsu pieprasījumu.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Rezervē tanku testēšanas sesiju</h2>
+    <p class="mt-2 text-sm text-muted">
+      Neatkarīgi no tā, vai jums nepieciešama pilna attīstības programma vai viens salīdzinošs tests, mēs varam
+      pielāgoties jūsu grafikam.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Sazinieties ar mūsu hidrodinamikas komandu</a
+    >
+  </div>
+</section>

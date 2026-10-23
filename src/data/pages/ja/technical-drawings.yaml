@@ -1,0 +1,228 @@
+hero:
+  tagline: 製図とCAD
+  title: RIB およびインフレータブル ボート<br />技術図面および CAD のダウンロード
+  subtitle: プロジェクトの評価と仕様のための計画レベルの GA 図面、寸法シート、デッキ レイアウト。公開 PDF からプロジェクト レベルの STEP ファイルまで、適切なレベルで技術図面にアクセスします。
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/hero/production-dept.webp
+    alt: RIB ボートの技術図面と CAD のダウンロード
+direct_answer: Aquafarer は、一般手配書 (GA) PDF、寸法シート、デッキ レイアウト図面など、RIB ボートおよびインフレータブル ウォータークラフトの調達レベルの技術図面を提供します。より詳細な形式 (DXF/DWG、STEP/IGES) は、適切な問い合わせまたはプロジェクトの申請に応じて利用できます。
+stats:
+  - value: GA PDF
+    label: 無料ダウンロード
+    detail: モデルごとの一般的な配置
+  - value: DXF/DWG
+    label: ライトフォームアクセス
+    detail: 企画レベルの2D CAD
+  - value: ステップ/IGES
+    label: プロジェクトの申請
+    detail: 統合用3Dモデル
+  - value: NDAのみ
+    label: 構造図
+    detail: 船体積層、金型データ
+content_tiers:
+  tagline: ダウンロード階層
+  title: 4 つのアクセス レベル<br />— 適切な段階に適切な詳細を提供
+  subtitle: 当社は製造レベルのファイルではなく、調達レベルの図面を提供します。各層は、異なるプロジェクトの段階に対応します。
+  items:
+    - title: Tier 1 — 公開 PDF
+      description: PDF形式の一般配置図(GA)、4面寸法図、デッキレイアウト。無料でダウンロードできます。プロジェクト計画、スペース割り当て、および予備的な仕様レビューには十分です。
+      icon: tabler:file-type-pdf
+    - title: Tier 2 — ライトフォーム DXF/DWG
+      description: 計画レベルのレイアウト統合のための 2D CAD ファイル (DXF または DWG)。短い資格フォーム (会社名、プロジェクトの種類、使用目的) が必要です。構造データや製造データは含まれていません。
+      icon: tabler:file-code
+    - title: Tier 3 — プロジェクト アプリケーション STEP/IGES
+      description: システム統合、艤装設計、造船調整用の 3D モデル ファイル (STEP または IGES)。範囲、スケジュール、購入意図を伴うプロジェクトの申請が必要です。承認が必要です。
+      icon: tabler:cube
+    - title: Tier 4 — NDA エンジニアリング
+      description: 船体の構造図、積層スケジュール、チューブの切断拡張、および金型データ。注文が確認されたNDAのもとでのみ利用可能です。これらは製造レベルのファイルであり、一般に配布するためのものではありません。
+      icon: tabler:lock
+content_included:
+  tagline: 含まれるもの
+  title: 描画内容<br />機種別
+  subtitle: 各モデルには、B2B バイヤーおよびプロジェクト エンジニアにとって重要な計画情報をカバーする標準図面パッケージが含まれています。
+  items:
+    - title: 一般的な取り決め (GA)
+      description: 船体の形状、チューブの位置、コンソールの位置、座席、燃料システム、主要な寸法 (LOA、ビーム、チューブの直径、デッドライズ角度) を示す側面図、上面図、および断面図。改訂ステータスと著作権は表題欄に記載されています。
+      icon: tabler:layout
+    - title: 4面寸法図
+      description: 輸送計画のための全体的な寸法 (トレーラー上の高さ、コンテナのビーム、持ち上げるための重量) を含む側面図、正面図、背面図、および上面図。運用構成とトランスポート構成が含まれます。
+      icon: tabler:ruler-2
+    - title: デッキレイアウトと設備計画
+      description: コンソール ベース、シート位置、D リングの位置、ナビゲーション ライトの位置、ビルジ ポンプへのアクセス、バッテリー/燃料コンパートメント、および機器の取り付けポイントを示すトップダウン デッキ ビュー。独自のインターフェイスでは精度が制限されます。
+      icon: tabler:map
+    - title: 輸送および梱包図
+      description: 物流計画のためのコンテナの積載計画、クレードルの寸法、重量配分、吊り上げポイントの位置。標準およびカスタムのパッケージング オプションが含まれます。
+      icon: tabler:truck
+content_protection:
+  tagline: IP保護
+  title: 共有しない内容<br /> とその理由
+  subtitle: エンジニアリング知的財産を保護することで、バイヤーがプロジェクト計画に必要とするすべてのものを提供しながら、研究開発への投資を継続できるようになります。
+  items:
+    - title: 船体モールドコアデータ
+      description: プラグ アンド モールドの形状、CNC ツール パス、積層テンプレートは独自の製造資産です。これらは、確認された NDA 契約以外のアクセス層では共有されません。
+      icon: tabler:ban
+    - title: チューブの切断拡張
+      description: チューブ生地のフラット パターン カッティング ファイルは製造レベルのデータです。確認済みの製造注文を伴う NDA に基づいてのみ利用可能であり、契約当事者とのみ共有されます。
+      icon: tabler:ban
+    - title: 構造計算
+      description: 詳細な応力解析、FEA の結果、およびラミネートのスケジュールは、適合性評価プロセス中に通知機関および NDA に拘束されたクライアントとのみ共有される、コンプライアンスに敏感な文書です。
+      icon: tabler:ban
+    - title: 競合他社のスクリーニング
+      description: 当社は、競合他社、プロジェクトの背景を持たない学生、または正当な調達意図を持たない関係者からのものと思われる CAD アクセス要求を拒否する権利を留保します。
+      icon: tabler:shield
+content_models:
+  tagline: 利用可能なモデル
+  title: 技術図面<br />モデル別の入手可能性
+  subtitle: GA PDF ダウンロードは、当社の主要な RIB モデルおよびインフレータブル ボート モデルで利用できます。リストにない特定のモデルの図面については、お問い合わせください。
+  items:
+    - title: AF580リブ
+      description: 5.8 m RIB、GRP ディープ V ハル、ハイパロンまたは PVC チューブ、センター コンソール。 GA、寸法、デッキレイアウト、輸送計画が利用可能です。デザインカテゴリーC.
+      icon: tabler:sailboat
+    - title: AF520リブ
+      description: 5.2 m RIB、GRP 中程度 V 船体、Hypalon または PVC チューブ、サイドまたはセンター コンソール。 GA と寸法が利用可能です。デザインカテゴリーC.
+      icon: tabler:sailboat
+    - title: AF430リブ
+      description: 4.3 m RIB、GRP 船体、PVC チューブ、ティラーまたはコンソール。 GA と寸法が利用可能です。デザインカテゴリーC/D.
+      icon: tabler:sailboat
+    - title: AF380 インフレータブルボート
+      description: 3.8 m のインフレータブル ディンギー、アルミニウム床、PVC チューブ。 GA および梱包寸法が利用可能です。 EN ISO 6185に準拠。
+      icon: tabler:sailboat
+    - title: AF320 インフレータブルボート
+      description: 3.2mのインフレータブルボート、エアデッキフロア、PVCチューブ。 GA および梱包寸法が利用可能です。 EN ISO 6185に準拠。
+      icon: tabler:sailboat
+faq:
+  title: 技術図面 — よくある質問
+  questions:
+    - q: GA PDF は本当に無料でダウンロードできるのでしょうか?
+      a: はい。当社の主要モデルの概要PDFを無料でご利用いただけます。これらには、プロジェクトの評価、スペース割り当て、および予備的な仕様レビューに十分な計画レベルの情報が含まれています。
+    - q: DXF/DWG ファイルにアクセスするにはどうすればよいですか?
+      a: ダウンロード ページの短い認定フォームに、会社名、プロジェクトの種類、用途を記入してください。承認されたリクエストには、1 営業日以内に電子メールでダウンロード リンクが届きます。
+    - q: STEP/IGES 3D モデルを入手できますか?
+      a: STEP または IGES 3D モデル ファイルは、プロジェクト申請プロセスを通じて入手できます。プロジェクトの範囲、統合要件、タイムライン、購入意図を提供します。承認が必要となります – 通常 3 ～ 5 営業日以内。
+    - q: より詳細なファイルへのアクセスを制限するのはなぜですか?
+      a: 船体の形状、金型データ、構造計算は、長年にわたる研究開発投資を代表するものであり、中核となる製造知的財産です。当社は、新製品開発への継続的な投資能力を保護しながら、調達計画とプロジェクトの統合に必要なすべてを提供します。
+    - q: 図面には製造の詳細が含まれていますか?
+      a: いいえ。公開図面と簡易図面には、計画と仕様のための調達レベルの情報が含まれています。製造レベルの詳細（積層スケジュール、ツールパス、切断拡張）は、確認された注文を持つNDAの下でのみ共有されます。
+    - q: カスタムまたはセミカスタム RIB 構成の図面は利用できますか?
+      a: カスタム プロジェクトの図面は、OEM/ODM 開発プロセスの一環として作成されます。カスタム RIB プロジェクトを評価している場合は、要件をお知らせください。提案の一部としてプロジェクト固有の GA 図面を提供します。
+cta:
+  title: RIB プロジェクトの技術図面が必要ですか?
+  subtitle: 評価および統合作業のために、モデル固有の GA 図面、寸法シート、または CAD ファイルをリクエストします。
+  actions:
+    - variant: primary
+      text: 技術図面のリクエスト
+      href: /contact
+    - text: OEM/ODM サービスを見る
+      href: /oem-odm-rib-boats
+content_downloads:
+  tagline: "ダウンロードセンター"
+  title: CAD ダウンロード<br />モデルおよび階層ごと
+  subtitle: モデルとアクセス層を選択して技術図面をリクエストします。 GA PDF および DXF/DWG パックは無料です。ダウンロード リンクは、短い認定フォームの後に電子メールで配信されます。 STEP ファイルにはプロジェクトの承認が必要です。
+  models:
+    - name: AF580 RIB
+      length: 5.8 m
+      category: RIB
+      downloads:
+        - tier: Tier 1 — PDF
+          format: PDF
+          file: Aquafarer_RIB_AF580_General-Arrangement_Rev-A.pdf
+          size: ~1.2 MB
+          access: form
+          url: /technical-drawings#cad-form
+        - tier: Tier 1 — PDF
+          format: PDF
+          file: Aquafarer_RIB_AF580_4-View-Dimensions_Rev-A.pdf
+          size: ~0.8 MB
+          access: form
+          url: /technical-drawings#cad-form
+        - tier: Tier 2 — DXF
+          format: DXF
+          file: Aquafarer_RIB_AF580_2D-Planning-Pack_Rev-A.dxf
+          size: ~3.5 MB
+          access: form
+          url: /technical-drawings#cad-form
+        - tier: Tier 3 — STEP
+          format: STEP
+          file: Aquafarer_RIB_AF580_3D-Model_Rev-A.step
+          size: ~15 MB
+          access: project
+          url: /request-quotation
+    - name: AF520 RIB
+      length: 5.2 m
+      category: RIB
+      downloads:
+        - tier: Tier 1 — PDF
+          format: PDF
+          file: Aquafarer_RIB_AF520_General-Arrangement_Rev-A.pdf
+          size: ~1.0 MB
+          access: form
+          url: /technical-drawings#cad-form
+        - tier: Tier 1 — PDF
+          format: PDF
+          file: Aquafarer_RIB_AF520_4-View-Dimensions_Rev-A.pdf
+          size: ~0.7 MB
+          access: form
+          url: /technical-drawings#cad-form
+        - tier: Tier 2 — DXF
+          format: DXF
+          file: Aquafarer_RIB_AF520_2D-Planning-Pack_Rev-A.dxf
+          size: ~3.0 MB
+          access: form
+          url: /technical-drawings#cad-form
+    - name: AF430 RIB
+      length: 4.3 m
+      category: RIB
+      downloads:
+        - tier: Tier 1 — PDF
+          format: PDF
+          file: Aquafarer_RIB_AF430_General-Arrangement_Rev-A.pdf
+          size: ~0.9 MB
+          access: form
+          url: /technical-drawings#cad-form
+        - tier: Tier 1 — PDF
+          format: PDF
+          file: Aquafarer_RIB_AF430_4-View-Dimensions_Rev-A.pdf
+          size: ~0.6 MB
+          access: form
+          url: /technical-drawings#cad-form
+    - name: AF380 Inflatable
+      length: 3.8 m
+      category: "インフレータブルボート"
+      downloads:
+        - tier: Tier 1 — PDF
+          format: PDF
+          file: Aquafarer_IB_AF380_General-Arrangement_Rev-A.pdf
+          size: ~0.8 MB
+          access: form
+          url: /technical-drawings#cad-form
+        - tier: Tier 1 — PDF
+          format: PDF
+          file: Aquafarer_IB_AF380_Packed-Dimensions_Rev-A.pdf
+          size: ~0.5 MB
+          access: form
+          url: /technical-drawings#cad-form
+    - name: AF320 Inflatable
+      length: 3.2 m
+      category: "インフレータブルボート"
+      downloads:
+        - tier: Tier 1 — PDF
+          format: PDF
+          file: Aquafarer_IB_AF320_General-Arrangement_Rev-A.pdf
+          size: ~0.7 MB
+          access: form
+          url: /technical-drawings#cad-form
+content_version_control:
+  tagline: "バージョン管理"
+  title: 図面版<br />管理
+  subtitle: すべての図面は管理された改訂システムに従います。プロジェクト計画に図面を使用する前に、最新のリビジョンを持っていることを必ず確認してください。
+  items:
+    - title: "改訂履歴管理"
+      description: 各図面には、リビジョン コード (Rev-A、Rev-B、Rev-C)、発行日、最終レビュー日、適用可能なモデル/構成、単位、ファイル サイズ、および形式が含まれています。ダウンロードできるのは「最新」リビジョンのみです。
+      icon: tabler:git-branch
+    - title: 描画状況の通知
+      description: すべての公開図面には、「暫定的なレイアウトのみ — 建設、認証、または製造用途には使用できません。寸法は最終仕様と注文確認の対象となります。」とマークされています。これにより、双方が誤用から保護されます。
+      icon: tabler:alert-circle
+    - title: アップデート通知
+      description: モデルの仕様が変更されると、図面のリビジョンが更新され、以前のバージョンは「置き換え」とマークされます。 DXF/DWG パックをダウンロードした登録ユーザーには、重要なアップデートが電子メールで通知されます。
+      icon: tabler:bell
+

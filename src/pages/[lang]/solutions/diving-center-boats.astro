@@ -1,0 +1,146 @@
+---
+export const prerender = true;
+
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+import { getPageContent, setPageContentData } from '~/i18n/page-content';
+import __pageData from '~/i18n/generated/pages/solutions-diving-center-boats.ts';
+import { localizePageTitle } from '~/i18n/page-title';
+import { languages } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => getUiForLang(lang)?.[key] || '';
+setPageContentData(__pageData);
+const page = getPageContent(lang, 'solutions-diving-center-boats');
+
+const hero = page.hero ?? {};
+const stats = page.stats ?? {};
+const challenge = page.content_challenge ?? {};
+const solution = page.content_solution ?? {};
+const models = page.content_models ?? {};
+const benefits = page.content_benefits ?? {};
+const diveResorts = page.content_dive_resorts ?? {};
+const divingProfiles = page.content_diving_profiles ?? {};
+const segments = page.content_segments ?? {};
+const cta = page.cta ?? {};
+const lh = (h: string) => (h ? `/${lang}${h}` : h);
+const ctaActions = cta.actions?.map((a: any) => ({ ...a, href: lh(a.href) }));
+
+const metadata = {
+  title: localizePageTitle(page, `Diving Center RIB Boats — ${SITE.name} | Commercial Dive Operations`),
+  description:
+    'Purpose-built RIB boats for diving centers and commercial dive operations. Tank racks, dive ladders, stable platforms — configured for your operation.',
+};
+const crumbs = [
+  { name: t('nav.home') || 'Home', href: `/${lang}/` },
+  { name: 'Solutions', href: `/${lang}/solutions/` },
+  { name: 'Diving Center Boats' },
+];
+
+const faqSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What boats are best for diving centers?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'RIB boats with dive platform, equipment racks, and reinforced tubes. Hypalon/CSM recommended for chemical resistance.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can dive equipment be integrated?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Custom tank racks, dive platform extensions, and ladder configurations designed for diving operations.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What size RIB is recommended for diving?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: '4.0m to 6.5m RIBs accommodate 4-8 divers with equipment. Size depends on typical group size and distance to dive sites.',
+      },
+    },
+  ],
+});
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <Hero tagline={hero.tagline} image={hero.image} title={hero.title} subtitle={hero.subtitle} />
+  <Stats title={stats.title} stats={stats.stats} />
+  <Content
+    tagline={challenge.tagline}
+    title={challenge.title}
+    subtitle={challenge.subtitle}
+    content={challenge.paragraphs?.join('\n\n')}
+  />
+  <Content
+    tagline={solution.tagline}
+    title={solution.title}
+    subtitle={solution.subtitle}
+    content={solution.list?.map((i: string) => `- ${i}`).join('\n')}
+  />
+  <Content
+    tagline={models.tagline}
+    title={models.title}
+    subtitle={models.subtitle}
+    content={models.items?.map((i: any) => `**${i.title}:** ${i.description}`).join('\n\n')}
+  />
+  {
+    divingProfiles.items?.length > 0 && (
+      <Content
+        tagline={divingProfiles.tagline}
+        title={divingProfiles.title}
+        subtitle={divingProfiles.subtitle}
+        content={divingProfiles.items
+          ?.map(
+            (i: any) =>
+              `**${i.title}:** ${i.subtitle}\n\n${i.description}\n\n${i.features?.map((f: string) => `- ${f}`).join('\n')}`
+          )
+          .join('\n\n')}
+      />
+    )
+  }
+  <Content
+    tagline={diveResorts.tagline}
+    title={diveResorts.title}
+    subtitle={diveResorts.subtitle}
+    content={diveResorts.paragraphs?.join('\n\n')}
+  />
+  {
+    segments.items?.length > 0 && (
+      <Content
+        tagline={segments.tagline}
+        title={segments.title}
+        subtitle={segments.subtitle}
+        content={segments.items
+          ?.map(
+            (i: any) =>
+              `**${i.title}:** ${i.subtitle}\n\n${i.description}\n\n${i.features?.map((f: string) => `- ${f}`).join('\n')}`
+          )
+          .join('\n\n')}
+      />
+    )
+  }
+  <Content
+    tagline={benefits.tagline}
+    title={benefits.title}
+    subtitle={benefits.subtitle}
+    content={benefits.list?.map((i: string) => `- ${i}`).join('\n')}
+  />
+  <CallToAction title={cta.title} subtitle={cta.subtitle} actions={ctaActions} />
+  <script is:inline type="application/ld+json" set:html={faqSchema} />
+</Layout>

@@ -1,0 +1,321 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+import { languages, defaultLang } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+import RDe from '~/components/randdcenter/quality-inspection-lab.de.astro';
+import REs from '~/components/randdcenter/quality-inspection-lab.es.astro';
+import RFr from '~/components/randdcenter/quality-inspection-lab.fr.astro';
+import RIt from '~/components/randdcenter/quality-inspection-lab.it.astro';
+import REn from '~/components/randdcenter/quality-inspection-lab.en.astro';
+import RCs from '~/components/randdcenter/quality-inspection-lab.cs.astro';
+import RSv from '~/components/randdcenter/quality-inspection-lab.sv.astro';
+import RDa from '~/components/randdcenter/quality-inspection-lab.da.astro';
+import REl from '~/components/randdcenter/quality-inspection-lab.el.astro';
+import RNo from '~/components/randdcenter/quality-inspection-lab.no.astro';
+import RRu from '~/components/randdcenter/quality-inspection-lab.ru.astro';
+import RNl from '~/components/randdcenter/quality-inspection-lab.nl.astro';
+import RFi from '~/components/randdcenter/quality-inspection-lab.fi.astro';
+import RPl from '~/components/randdcenter/quality-inspection-lab.pl.astro';
+import RAr from '~/components/randdcenter/quality-inspection-lab.ar.astro';
+import RPt from '~/components/randdcenter/quality-inspection-lab.pt.astro';
+import RJa from '~/components/randdcenter/quality-inspection-lab.ja.astro';
+import RBg from '~/components/randdcenter/quality-inspection-lab.bg.astro';
+import REt from '~/components/randdcenter/quality-inspection-lab.et.astro';
+import RHe from '~/components/randdcenter/quality-inspection-lab.he.astro';
+import RHr from '~/components/randdcenter/quality-inspection-lab.hr.astro';
+import RHu from '~/components/randdcenter/quality-inspection-lab.hu.astro';
+import RId from '~/components/randdcenter/quality-inspection-lab.id.astro';
+import RKo from '~/components/randdcenter/quality-inspection-lab.ko.astro';
+import RLt from '~/components/randdcenter/quality-inspection-lab.lt.astro';
+import RLv from '~/components/randdcenter/quality-inspection-lab.lv.astro';
+import RMs from '~/components/randdcenter/quality-inspection-lab.ms.astro';
+import RRo from '~/components/randdcenter/quality-inspection-lab.ro.astro';
+import RSk from '~/components/randdcenter/quality-inspection-lab.sk.astro';
+import RSl from '~/components/randdcenter/quality-inspection-lab.sl.astro';
+import RSr from '~/components/randdcenter/quality-inspection-lab.sr.astro';
+import RTh from '~/components/randdcenter/quality-inspection-lab.th.astro';
+import RTl from '~/components/randdcenter/quality-inspection-lab.tl.astro';
+import RTr from '~/components/randdcenter/quality-inspection-lab.tr.astro';
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: any) => getUiForLang(lang || defaultLang)?.[key] || '';
+
+const META: Record<string, { title: string; description: string }> = {
+  en: {
+    title: 'Quality & Inspection Lab — ISO-Compliant RIB Testing & Certification',
+    description: `Independent quality verification for inflatable boats. Tensile testing, air-retention cycling, seam peel tests, and material certification. Contact our quality lab for third-party testing.`,
+  },
+  de: {
+    title: 'Qualitäts- und Prüflabor — ISO-konforme RIB-Prüfung und Zertifizierung',
+    description: `Unabhängige Qualitätsprüfung für Schlauchboote. Zugprüfungen, Luftdichtigkeitszyklen, Abziehversuche an Nähten und Materialzertifizierung. Kontaktieren Sie unser Qualitätslabor für Prüfungen durch Dritte.`,
+  },
+  es: {
+    title: 'Laboratorio de calidad e inspección — ensayos y certificación RIB conforme a ISO',
+    description: `Verificación independiente de calidad para barcos hinchables. Ensayos de tracción, ciclos de retención de aire, pruebas de pelado de costuras y certificación de materiales. Contacte con nuestro laboratorio de calidad para ensayos de terceros.`,
+  },
+  fr: {
+    title: "Laboratoire de qualité et d'inspection — essais et certification RIB conforme ISO",
+    description: `Vérification indépendante de la qualité des bateaux gonflables. Essais de traction, cycles de rétention d'air, tests de pelage des soudures et certification des matériaux. Contactez notre laboratoire de qualité pour des essais par des tiers.`,
+  },
+  it: {
+    title: 'Laboratorio di qualità e ispezione — prove e certificazione RIB conformi ISO',
+    description: `Verifica indipendente della qualità per barche gonfiabili. Prove di trazione, cicli di tenuta d'aria, test di pelatura delle saldature e certificazione dei materiali. Contattate il nostro laboratorio di qualità per prove di terzi.`,
+  },
+  cs: {
+    title: 'Laboratoř kvality a kontroly – ISO-Vyhovující RIB Testování a certifikace',
+    description:
+      'Nezávislé ověření kvality pro nafukovací čluny. Testování tahem, cyklování zadržování vzduchu, testy odlupování švů a certifikace materiálu. Kontaktujte naši laboratoř kvality pro testování třetí stranou.',
+  },
+  sv: {
+    title: 'Kvalitets- och inspektionslabb — ISO-kompatibel RIB Testning och certifiering',
+    description:
+      'Oberoende kvalitetskontroll för uppblåsbara båtar. Dragprovning, luftretentionscykling, sömavdragningstester och materialcertifiering. Kontakta vårt kvalitetslabb för tredjepartstestning.',
+  },
+  da: {
+    title: 'Kvalitets- og inspektionslaboratorium — ISO-kompatibel RIB Test og certificering',
+    description:
+      'Uafhængig kvalitetskontrol for gummibåde. Træktest, lufttilbageholdelsescykler, sømafskalningstest og materialecertificering. Kontakt vores kvalitetslaboratorium for tredjepartstest.',
+  },
+  el: {
+    title: 'Εργαστήριο ποιότητας και επιθεώρησης — ISO-Συμβατό RIB Δοκιμές και πιστοποίηση',
+    description:
+      'Ανεξάρτητος έλεγχος ποιότητας για φουσκωτά σκάφη. Δοκιμές εφελκυσμού, ανακύκλωση συγκράτησης αέρα, δοκιμές απολέπισης ραφών και πιστοποίηση υλικού. Επικοινωνήστε με το εργαστήριο ποιότητας για δοκιμές τρίτων.',
+  },
+  no: {
+    title: 'Kvalitets- og inspeksjonslaboratorium — ISO-kompatibel RIB Testing og sertifisering',
+    description:
+      'Uavhengig kvalitetsverifisering for gummibåter. Strekktesting, luftretensjonssykling, sømavskallingstester og materialsertifisering. Kontakt vårt kvalitetslaboratorium for tredjeparts testing.',
+  },
+  ru: {
+    title: 'Лаборатория качества и контроля — ISO-соответствие RIB Тестирование и сертификация',
+    description:
+      'Независимая проверка качества надувных лодок. Испытания на растяжение, циклическое удержание воздуха, испытания на отслаивание швов и сертификация материалов. Свяжитесь с нашей лабораторией качества для проведения независимого тестирования.',
+  },
+  nl: {
+    title: 'Kwaliteits- en inspectielaboratorium — ISO-compatibel RIB Testen en certificering',
+    description:
+      'Onafhankelijke kwaliteitsverificatie voor opblaasbare boten. Trekproeven, luchtretentiecycli, naadpeltests en materiaalcertificering. Neem contact op met ons kwaliteitslaboratorium voor testen door derden.',
+  },
+  fi: {
+    title: 'Laatu- ja tarkastuslaboratorio — ISO-Yhteensopiva RIB Testaus ja sertifiointi',
+    description:
+      'Riippumaton laadunvarmistus kumiveneille. Vetotestaus, ilmanpidätysjaksot, sauman kuoriutumistestit ja materiaalien sertifiointi. Ota yhteyttä laatulaboratorioon kolmannen osapuolen testausta varten.',
+  },
+  pl: {
+    title: 'Laboratorium jakości i kontroli — zgodne z ISO RIB Testowanie i certyfikacja',
+    description:
+      'Niezależna weryfikacja jakości pontonów. Testy rozciągania, cykle zatrzymywania powietrza, testy odrywania szwów i certyfikacja materiałów. Skontaktuj się z naszym laboratorium jakości w celu przeprowadzenia testów przez strony trzecie.',
+  },
+  ar: {
+    title: 'مختبر الجودة والفحص — ISO-متوافق مع RIB الاختبار والاعتماد',
+    description:
+      'التحقق المستقل من الجودة للقوارب القابلة للنفخ. اختبار الشد، ودورة احتجاز الهواء، واختبارات تقشير التماس، واعتماد المواد. اتصل بمختبر الجودة الخاص بنا لإجراء اختبارات الطرف الثالث.',
+  },
+  pt: {
+    title: 'Laboratório de qualidade e inspeção - ISO-Compliance RIB Teste e certificação',
+    description:
+      'Verificação independente de qualidade para barcos infláveis. Testes de tração, ciclos de retenção de ar, testes de descascamento de costuras e certificação de materiais. Contate nosso laboratório de qualidade para testes de terceiros.',
+  },
+  ja: {
+    title: '品質および検査ラボ — ISO 準拠の RIB テストおよび認証',
+    description:
+      'インフレータブルボートの独立した品質検証。引張試験、空気保持サイクル、縫い目剥離試験、および材料認証。サードパーティによるテストについては、当社の品質ラボにお問い合わせください。',
+  },
+  bg: {
+    title: 'Quality & Inspection Lab — ISO-Compliant RIB Testing & Certification',
+    description:
+      'Independent quality verification for inflatable boats. Tensile testing, air-retention cycling, seam peel tests, and material certification. Contact our quality lab for third-party testing.',
+  },
+  et: {
+    title: 'Quality & Inspection Lab — ISO-Compliant RIB Testing & Certification',
+    description:
+      'Independent quality verification for inflatable boats. Tensile testing, air-retention cycling, seam peel tests, and material certification. Contact our quality lab for third-party testing.',
+  },
+  he: {
+    title: 'Quality & Inspection Lab — ISO-Compliant RIB Testing & Certification',
+    description:
+      'Independent quality verification for inflatable boats. Tensile testing, air-retention cycling, seam peel tests, and material certification. Contact our quality lab for third-party testing.',
+  },
+  hr: {
+    title: 'Quality & Inspection Lab — ISO-Compliant RIB Testing & Certification',
+    description:
+      'Independent quality verification for inflatable boats. Tensile testing, air-retention cycling, seam peel tests, and material certification. Contact our quality lab for third-party testing.',
+  },
+  hu: {
+    title: 'Quality & Inspection Lab — ISO-Compliant RIB Testing & Certification',
+    description:
+      'Independent quality verification for inflatable boats. Tensile testing, air-retention cycling, seam peel tests, and material certification. Contact our quality lab for third-party testing.',
+  },
+  id: {
+    title: 'Quality & Inspection Lab — ISO-Compliant RIB Testing & Certification',
+    description:
+      'Independent quality verification for inflatable boats. Tensile testing, air-retention cycling, seam peel tests, and material certification. Contact our quality lab for third-party testing.',
+  },
+  ko: {
+    title: 'Quality & Inspection Lab — ISO-Compliant RIB Testing & Certification',
+    description:
+      'Independent quality verification for inflatable boats. Tensile testing, air-retention cycling, seam peel tests, and material certification. Contact our quality lab for third-party testing.',
+  },
+  lt: {
+    title: 'Quality & Inspection Lab — ISO-Compliant RIB Testing & Certification',
+    description:
+      'Independent quality verification for inflatable boats. Tensile testing, air-retention cycling, seam peel tests, and material certification. Contact our quality lab for third-party testing.',
+  },
+  lv: {
+    title: 'Quality & Inspection Lab — ISO-Compliant RIB Testing & Certification',
+    description:
+      'Independent quality verification for inflatable boats. Tensile testing, air-retention cycling, seam peel tests, and material certification. Contact our quality lab for third-party testing.',
+  },
+  ms: {
+    title: 'Quality & Inspection Lab — ISO-Compliant RIB Testing & Certification',
+    description:
+      'Independent quality verification for inflatable boats. Tensile testing, air-retention cycling, seam peel tests, and material certification. Contact our quality lab for third-party testing.',
+  },
+  ro: {
+    title: 'Quality & Inspection Lab — ISO-Compliant RIB Testing & Certification',
+    description:
+      'Independent quality verification for inflatable boats. Tensile testing, air-retention cycling, seam peel tests, and material certification. Contact our quality lab for third-party testing.',
+  },
+  sk: {
+    title: 'Quality & Inspection Lab — ISO-Compliant RIB Testing & Certification',
+    description:
+      'Independent quality verification for inflatable boats. Tensile testing, air-retention cycling, seam peel tests, and material certification. Contact our quality lab for third-party testing.',
+  },
+  sl: {
+    title: 'Quality & Inspection Lab — ISO-Compliant RIB Testing & Certification',
+    description:
+      'Independent quality verification for inflatable boats. Tensile testing, air-retention cycling, seam peel tests, and material certification. Contact our quality lab for third-party testing.',
+  },
+  sr: {
+    title: 'Quality & Inspection Lab — ISO-Compliant RIB Testing & Certification',
+    description:
+      'Independent quality verification for inflatable boats. Tensile testing, air-retention cycling, seam peel tests, and material certification. Contact our quality lab for third-party testing.',
+  },
+  th: {
+    title: 'Quality & Inspection Lab — ISO-Compliant RIB Testing & Certification',
+    description:
+      'Independent quality verification for inflatable boats. Tensile testing, air-retention cycling, seam peel tests, and material certification. Contact our quality lab for third-party testing.',
+  },
+  tl: {
+    title: 'Quality & Inspection Lab — ISO-Compliant RIB Testing & Certification',
+    description:
+      'Independent quality verification for inflatable boats. Tensile testing, air-retention cycling, seam peel tests, and material certification. Contact our quality lab for third-party testing.',
+  },
+  tr: {
+    title: 'Quality & Inspection Lab — ISO-Compliant RIB Testing & Certification',
+    description:
+      'Independent quality verification for inflatable boats. Tensile testing, air-retention cycling, seam peel tests, and material certification. Contact our quality lab for third-party testing.',
+  },
+};
+
+const crumbs = [
+  { name: t('nav.home') || 'Home', href: `/${lang}/` },
+  { name: 'R&D Center', href: `/${lang}/randdcenter` },
+  { name: 'Quality & Inspection Lab' },
+];
+
+const meta = META[lang] || META.en;
+
+const metadata = {
+  title: `${meta.title} | ${SITE.name}`,
+  description: meta.description,
+};
+
+const RanddBody: any =
+  (
+    {
+      de: RDe,
+      es: REs,
+      fr: RFr,
+      it: RIt,
+      cs: RCs,
+      sv: RSv,
+      da: RDa,
+      el: REl,
+      no: RNo,
+      ru: RRu,
+      nl: RNl,
+      fi: RFi,
+      pl: RPl,
+      ar: RAr,
+      pt: RPt,
+      ja: RJa,
+      bg: RBg,
+      et: REt,
+      he: RHe,
+      hr: RHr,
+      hu: RHu,
+      id: RId,
+      ko: RKo,
+      lt: RLt,
+      lv: RLv,
+      ms: RMs,
+      ro: RRo,
+      sk: RSk,
+      sl: RSl,
+      sr: RSr,
+      th: RTh,
+      tl: RTl,
+      tr: RTr,
+    } as Record<string, any>
+  )[lang] || REn;
+
+const faqSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What testing does the quality inspection lab perform?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Tensile strength, tear resistance, UV aging (ASTM G154), abrasion (ASTM D751), cold crack (ISO 4646), and pressure hold testing at 1.25x rated.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is the lab independent from production?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. The quality lab operates independently from production and reports directly to management. No batch ships without signed quality release.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What standards does the lab follow?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'ISO 9001:2015 quality management, ASTM G154 UV testing, ASTM D751 abrasion, ISO 6185 buoyancy, ISO 2859/AQL 2.5 sampling.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the defect-free rate?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: '99.3% defect-free rate per AQL 2.5 / ISO 2859 statistical sampling methodology.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I request test reports?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Material test reports, pressure test logs, and QC certificates are available upon request for OEM/ODM partners.',
+      },
+    },
+  ],
+});
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  {RanddBody && <RanddBody lang={lang} />}
+  <script is:inline type="application/ld+json" set:html={faqSchema} />
+</Layout>

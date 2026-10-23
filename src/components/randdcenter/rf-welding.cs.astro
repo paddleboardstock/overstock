@@ -1,0 +1,177 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'cs' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">← Zpět na R&amp;D Center</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Laboratoř 03</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">RF svářečské centrum</h1>
+      <p class="mt-3 text-lg text-muted">Technologie dielektrického spojování pro svary, které drží pod tlakem</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-jungle-mandala-1.webp"
+        alt="Aquafarer RF svařování proces dielektrického spojování"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Věda za švem</h2>
+  <p>
+    Nafukovací člun je tak spolehlivý, jak spolehlivé jsou jeho švy. Jediný slabý svar může ohrozit celou komoru – a na
+    moři není porucha komory nepříjemností; je to bezpečnostní riziko. Na {SITE.name}, investovali jsme do
+    specializovaného radiofrekvenčního (RF) svařovacího centra, které kombinuje průmyslové dielektrické svařovací lisy s
+    přísnou kontrolou procesu a testováním po svařování. Každý šev, který vyrábíme, je zdokumentován, sledovatelný a
+    certifikovaný, aby splňoval nebo překračoval požadavky — mezinárodního standardu pro nafukovací plavidla.
+  </p>
+  <p>
+    RF svařování využívá vysokofrekvenční elektromagnetickou energii (typicky 27.12 MHz) k excitaci polárních molekul v
+    tkanině potažené PVC nebo Hypalon, čímž se vytváří teplo přesně na rozhraní materiálu. Na rozdíl od svařování horkým
+    vzduchem nebo horkým klínem vytváří RF svařování skutečnou molekulární vazbu — dvě vrstvy tkaniny se v zóně svaru
+    spojí do jediného homogenního materiálu, čímž vznikne spoj, který je stejně pevný jako samotný základní materiál.
+  </p>
+
+  <h2>Svařovací zařízení a řízení procesu</h2>
+  <p>Naše svařovací centrum je vybaveno:</p>
+  <table>
+    <thead><tr><th>Stroj</th><th>Výkon / Kapacita</th><th>Aplikace</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Dielektrický RF lis 1</td><td>15 kW, deska 2000 × 600 mm</td><td
+          >Hlavní podélné švy, spoje mezi příčníkem a trubkou</td
+        ></tr
+      >
+      <tr
+        ><td>Dielektrický RF lis 2</td><td>10 kW, deska 1500 × 500 mm</td><td
+          >Přepážkové svary, kuželové nástavce, záplaty ventilů</td
+        ></tr
+      >
+      <tr
+        ><td>CNC řízená RF svářečka</td><td>8 kW, XY stůl 2500 × 1200 mm</td><td
+          >Zakřivené švy, ražba loga/panelu, precizní patchwork</td
+        ></tr
+      >
+      <tr
+        ><td>Automatická svářečka Hotwedge</td><td>Proměnná teplota, max. 1.2 m/min</td><td
+          >Metoda zálohování pro materiály Hypalon/CSM</td
+        ></tr
+      >
+    </tbody>
+  </table>
+  <p>
+    Každý lis RF je vybaven systémem monitorování teploty a tlaku v uzavřené smyčce. Parametry svařování – výkon, doba
+    lisování, doba chlazení, tlak elektrody – jsou naprogramovány podle typu materiálu a zaznamenány v našem výrobním
+    systému (MES) pro plnou sledovatelnost.
+  </p>
+
+  <h2>Testy kvality svaru – každý šev, každá loď</h2>
+  <p>Integrita svaru se ověřuje prostřednictvím povinného protokolu čtyř zkoušek:</p>
+  <ol>
+    <li>
+      <strong>Vizuální kontrola</strong> — 100 % švů je vizuálně zkontrolováno, zda nejsou propálené, nesouosé, znečištěné
+      nebo neúplné. Práh míry odmítnutí: 0.5 % lineárních metrů.
+    </li>
+    <li>
+      <strong>Odlupovací test ()</strong> — Ze zkušebního kupónu přivařeného ke každé výrobní šarži se vyřízne široký pásek
+      25 mm. Minimální síla odlupování: 120 N/25 mm pro PVC 1100 dtex.
+    </li>
+    <li>
+      <strong>Test retence vzduchu</strong> — Každá dokončená komora je natlakována na 1.25 × pracovní tlak a udržována po
+      dobu 24-48 hodin. Pokles tlaku nesmí překročit 2 %.
+    </li>
+    <li>
+      <strong>Test tepelného cyklování</strong> — Vzorové kupony jsou cyklovány od -20 °C do +60 °C po 50 cyklů a poté znovu
+      testovány odlupováním. Přijatelná ztráta pevnosti: &lt; 10 %.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Porovnání pevnosti v odlupování — RF vs horkovzdušné svařování (PVC 1100 dtex)
+    </p>
+    <div class="space-y-3">
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">RF svar</span><div
+          class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded"
+        >
+          <div class="h-full bg-blue-600 rounded" style="width:92%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">184 N</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">Horký vzduch</span><div
+          class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded"
+        >
+          <div class="h-full bg-gray-400 rounded" style="width:65%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">130 N</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium"> min</span><div class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded">
+          <div class="h-full bg-green-500 rounded" style="width:48%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">96 N</span>
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      RF svařování trvale dosahuje 90-95 % pevnosti základního materiálu, což je výrazně nad minimem.
+    </p>
+  </div>
+
+  <h2>Profesionální odbornost</h2>
+  <p>
+    Náš svářečský tým vede senior procesní inženýr s 11 lety zkušeností s dielektrickým svařováním potažených textilií.
+    Každý operátor absolvuje 6měsíční interní certifikační program, než bude moci pracovat na výrobních švech.
+    Každoročně je vyžadována recertifikace, včetně praktického testu svaru hodnoceného podle našeho interního standardu
+    Grade-A (pevnost v odlupování ≥ 160 N/25 mm).
+  </p>
+
+  <h2>Vlastní svářecí řešení pro jedinečné požadavky</h2>
+  <p>
+    Chápeme, že jedna specifikace svařování nevyhovuje každé aplikaci. Naše RF Welding Center rutinně vyvíjí vlastní
+    konfigurace švů pro klienty se speciálními požadavky:
+  </p>
+  <ul>
+    <li>
+      <strong>Vícevrstvé výztužné záplaty</strong> — pro oblasti s vysokým opotřebením, jako jsou třecí proužky a obloukové
+      kužely, vyvíjíme víceprůchodové RF svary, které integrují vnější vrstvu odolnou proti opotřebení, aniž by byla ohrožena
+      flexibilita.
+    </li>
+    <li>
+      <strong>Vodivé nebo RF neprůhledné švy</strong> — pro vojenská nebo sledovací plavidla vyžadující elektromagnetické
+      stínění svařujeme vrstvy vodivé sítě v rámci spoje.
+    </li>
+    <li>
+      <strong>Svařování panelů se změnou barvy</strong> — dvoubarevné látkové panely (např. oranžový trup + šedá vrchní strana)
+      svařené se skrytým přesahem pro zachování estetiky značky bez viditelné spojnice.
+    </li>
+  </ul>
+
+  <h2>Náš závazek vůči vám</h2>
+  <p>
+    Každá loď, kterou dodáváme, nese naši záruku kvality svaru: pokud některý šev selže při běžném provozu během záruční
+    doby, opravíme nebo vyměníme postiženou komoru zdarma a provedeme vyšetřování příčiny, abychom předešli opakování.
+    Nejedná se pouze o záruku – jde o závazek k neustálému zlepšování založenému na skutečných provozních datech.
+  </p>
+  <p>
+    Když si vyberete {SITE.name}, vybíráte švy, které jsou navrženy, testovány a zdokumentovány – nejen svařované. To je
+    rozdíl mezi lodí, která pluje, a lodí, která je výkonná.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Prodiskutujte své požadavky na svařování</h2>
+    <p class="mt-2 text-sm text-muted">Vlastní specifikace švů, kompatibilita materiálů nebo validace procesu.</p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Kontaktujte náš svářečský tým</a
+    >
+  </div>
+</section>

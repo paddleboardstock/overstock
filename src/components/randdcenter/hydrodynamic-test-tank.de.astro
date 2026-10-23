@@ -1,0 +1,194 @@
+---
+import { SITE } from 'astrowind:config';
+const { lang = 'de' } = Astro.props;
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={`/${lang}/randdcenter`} class="text-sm text-gray-500 hover:underline">&larr; Zurück zum F&amp;E-Zentrum</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Lab 04</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Hydrodynamischer Prüftank</h1>
+      <p class="mt-3 text-lg text-muted">Leistungsvalidierung vor dem ersten Prototyp in Originalgröße</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-design-discussion-original.webp"
+        alt="Leistungstests im hydrodynamischen Prüftank von Aquafarer"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Warum ein kleines Boot im Tank testen?</h2>
+  <p>
+    Es ist ein verbreiteter Irrglaube, dass hydrodynamische Tests Ozeanriesen vorbehalten seien. In Wirklichkeit hängt
+    die Leistung eines kleinen Gleitrumpfes — etwa eines 4–5 m langen RIB — genauso stark von seiner Unterwasserform ab
+    wie die eines Tankers von seinem Wulstbug. Trimmwinkel, benetzte Oberfläche, Sprayschwall und Ventilation haben
+    einen erheblichen Einfluss auf Geschwindigkeit, Kraftstoffverbrauch und Fahrkomfort. Bei {SITE.name} betreiben wir einen
+    eigenen hydrodynamischen Prüftank, mit dem wir diese Effekte im Modellmaßstab quantifizieren können — bevor Metall und
+    Gewebe in einen Prototyp in Originalgröße investiert werden.
+  </p>
+  <p>
+    Tests im Modellmaßstab (üblicherweise 1:3 bis 1:5) ermöglichen es uns, Rumpfformen schnell und kosteneffizient zu
+    iterieren. Eine Woche im Tank kann dieselben Leistungsdaten liefern, für die Monate von Versuch-und-Irrtum im
+    Originalmaßstab nötig wären — und das zu einem Bruchteil der Kosten.
+  </p>
+
+  <h2>Anlagen-Spezifikationen</h2>
+  <table>
+    <thead><tr><th>Parameter</th><th>Spezifikation</th></tr></thead>
+    <tbody>
+      <tr><td>Tankabmessungen</td><td>35 m (L) &times; 3.5 m (B) &times; 1.8 m (T)</td></tr>
+      <tr
+        ><td>Schleppwagen</td><td
+          >Elektrisch servogetrieben, max. Geschwindigkeit 12 m/s (23 kn), Geschwindigkeitsgenauigkeit &plusmn; 0.5 %</td
+        ></tr
+      >
+      <tr
+        ><td>Wellengenerator</td><td
+          >Klappentyp, programmierbare regelmäßige &amp; unregelmäßige Seegänge, Hs bis 0.3 m im Modellmaßstab</td
+        ></tr
+      >
+      <tr
+        ><td>Messausrüstung</td><td
+          >6-Komponenten-Dynamometer (Widerstand, Seitenkraft, Giermoment), Beschleunigungssensoren, Neigungsmesser,
+          Wellensonden</td
+        ></tr
+      >
+      <tr><td>Datenerfassung</td><td>Abtastung mit 1000 Hz pro Kanal, Echtzeitanzeige + Nachbearbeitungs-Suite</td></tr>
+      <tr><td>Modellbau</td><td>Interne CNC-Fräsung und 3D-Druck für Modellrümpfe bis 1.8 m LOA</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Unser Testprogramm</h2>
+  <p>Ein Standardprogramm zur Rumpfentwicklung in unserem Tank folgt dieser Reihenfolge:</p>
+  <ol>
+    <li>
+      <strong>Modellbau</strong> — Ein Modell im Maßstab 1:3.5 wird aus hochdichtem Schaum CNC-gefräst und zur Versteifung
+      laminiert. Gewicht und Schwerpunkt (CG) werden an den Froude-skalierten Volllastzustand angepasst.
+    </li>
+    <li>
+      <strong>Widerstandsmessfahrten</strong> — Das Modell wird bei 8-10 Geschwindigkeiten über den gesamten Betriebsbereich
+      geschleppt. Der Gesamtwiderstand wird gemessen und nach der ITTC-1957-Methode in Reibungs- und Restwiderstand zerlegt.
+    </li>
+    <li>
+      <strong>Trimm- &amp; Einsinkmessung</strong> — Fahrtrimm und Einsinkung werden bei jeder Geschwindigkeit aufgezeichnet.
+      Ziel ist ein optimaler Trimmwinkel von 4-6&deg; für Gleitrümpfe.
+    </li>
+    <li>
+      <strong>Kielwasservermessung</strong> — Bei zwei Geschwindigkeiten werden transversale Wellenschnitte gemessen, um den
+      Wellenwiderstand zu bewerten und transversale Welleninteraktionen zu erkennen, die Störungen am Heck verursachen könnten.
+    </li>
+    <li>
+      <strong>Seegangsverhalten (optional)</strong> — Fahrten in Gegen- und Folgewellen bei regelmäßigem Seegang zur Messung
+      des Zusatzwiderstands, der vertikalen Beschleunigung und der Slamming-Wahrscheinlichkeit.
+    </li>
+    <li>
+      <strong>Datenanalyse &amp; Empfehlungen</strong> — Ein vollständiger Bericht wird mit Vergleichsdiagrammen, Geschwindigkeits-/Leistungskurven
+      und konkreten Entwurfsempfehlungen für den Rumpf im Originalmaßstab geliefert.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Typische Testergebnisse — Widerstand vs. Geschwindigkeit (RIB-450-Rumpf, Maßstab 1:3.5)
+    </p>
+    <div class="space-y-2">
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">5 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:18%"></div>
+        </div><span class="w-16 text-right">42 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">10 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:35%"></div>
+        </div><span class="w-16 text-right">81 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">15 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:52%"></div>
+        </div><span class="w-16 text-right">121 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">20 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:68%"></div>
+        </div><span class="w-16 text-right">158 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">25 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:85%"></div>
+        </div><span class="w-16 text-right">197 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">30 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:100%"></div>
+        </div><span class="w-16 text-right">232 N</span>
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      Modellmaßstäblicher Widerstand (N) bei Froude-skalierten Geschwindigkeiten. Die Leistungsprognose im
+      Originalmaßstab folgt der ITTC-1978-Methode zur Leistungsvorhersage.
+    </p>
+  </div>
+
+  <h2>Fachkundiges Team</h2>
+  <p>
+    Unser Tank wird von einem Hydrodynamiker mit Promotion in Schiffsarchitektur und 8 Jahren Erfahrung mit Schlepptanks
+    an einem namhaften europäischen Schifffahrtsforschungsinstitut betrieben. Unterstützt wird er von einem Techniker,
+    der alle Modelle und die Messausrüstung vorbereitet. Das Team folgt den Recommended Procedures der ITTC
+    (International Towing Tank Conference), um sicherzustellen, dass jeder Test wiederholbar, nachvollziehbar und
+    international belastbar ist.
+  </p>
+
+  <h2>Tanktests für die individuelle Rumpfentwicklung</h2>
+  <p>
+    Unser Tank dient nicht nur hauseigenen Rumpfentwürfen — wir führen regelmäßig Testprogramme für Kunden durch, die
+    eine individuelle Rumpfform validieren oder ein Leistungsproblem untersuchen möchten:
+  </p>
+  <ul>
+    <li>
+      <strong>Rumpfform-Vergleich</strong> — Zwei oder mehr Kandidatenrumpfformen werden unter identischen Bedingungen getestet
+      und liefern einen objektiven Widerstands-/Geschwindigkeits-/Stabilitätsvergleich für Ihre Entwurfsentscheidung.
+    </li>
+    <li>
+      <strong>Anbauoptimierung</strong> — Interceptorplatten, Sprayleisten, Trimmklappen und Strakes können in verschiedenen
+      Konfigurationen getestet werden, um ihren jeweiligen Beitrag zur Widerstandsreduzierung zu quantifizieren.
+    </li>
+    <li>
+      <strong>Motorenabgleich-Studie</strong> — Die Widerstandsdaten werden in eine Leistungsprognosekurve überführt, sodass
+      Sie die optimale Motorleistung für Ihre Zielgeschwindigkeit und Nutzlast auswählen können.
+    </li>
+  </ul>
+
+  <h2>Warum mit uns testen?</h2>
+  <p>
+    Wir liefern Ihnen nicht nur eine Reihe von Rohdaten. Unsere Berichte übersetzen Tankdaten in umsetzbare technische
+    Empfehlungen: „Sprayleiste um 8 mm anheben, um die benetzte Oberfläche bei Reisegeschwindigkeit zu reduzieren",
+    „Spantwinkel am Spiegelheck um 3&deg; erhöhen, um die Slamming-Beschleunigung zu reduzieren" oder „Längsschwerpunkt
+    um 150 mm nach achtern verlegen, für ein besseres Gleitverhalten". Sie gehen mit einem klaren Verständnis dessen,
+    was geändert werden sollte und warum.
+  </p>
+  <p>
+    Unser Tank steht auch für unabhängige Drittanbieter-Tests auf Honorarbasis zur Verfügung. Wenn Sie einen Rumpf
+    entwickeln und eine unvoreingenommene, professionell durchgeführte hydrodynamische Bewertung wünschen, freuen wir
+    uns auf Ihre Anfrage.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Buchen Sie eine Tanktestsitzung</h2>
+    <p class="mt-2 text-sm text-muted">
+      Ob Sie ein vollständiges Entwicklungsprogramm oder einen einzelnen Vergleichstest benötigen — wir richten uns nach
+      Ihrem Zeitplan.
+    </p>
+    <a
+      href={`/${lang}/contact`}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Kontaktieren Sie unser Hydrodynamik-Team</a
+    >
+  </div>
+</section>

@@ -1,0 +1,119 @@
+hero:
+  tagline: Tekniskt whitepaper
+  title: Drop-Stitch-teknik och materialvetenskap:<br />Tekniken bakom moderna uppblåsbara vattenskotrar
+  subtitle: En auktoritativ teknisk referens som täcker kärnkonstruktionen med droppstygn, jämförelse av PVC vs Hypalon-material, styvhetstestning av högtryckskärl och tillverkningsstandarder för vattenskotrar.
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/randd/aquafarer-design-discussion-lab.webp
+    alt: Aquafarer FoU-laboratorium — materialtestning och ingenjörskonst
+direct_answer: Drop-stitch-tekniken använder tusentals interna polyestertrådar som förbinder de övre och nedre tygskikten i en uppblåsbar kärna. När de är uppblåsta till 15–20 PSI, fungerar dessa trådar som spänningselement, förhindrar utbuktning och skapar en styv struktur jämförbar med hårda skalkonstruktioner. I kombination med avancerade PVC- eller Hypalon-tygbeläggningar och RF-svetsning möjliggör detta bärbara, högpresterande uppblåsbara vattenskotrar som är lämpliga för professionell, kommersiell och rekreationsanvändning.
+section_drop_stitch:
+  title: Drop-Stitch Strukturteknik
+  subtitle: Hur tusentals trådar förvandlar flexibelt tyg till styv struktur
+  content: |-
+    Drop-stitch (även känd som "drop-stitch-tyg" eller "drop-stitch-kärna") representerar ett genombrott inom uppblåsbar strukturteknik. Principen är bedrägligt enkel: tusentals individuella polyestertrådar vävs samtidigt till två separata lager av bastyg, som förbinder de övre och nedre panelerna i en 90-graders vinkel.
+
+    När den förseglade kammaren är trycksatt, utövar det interna lufttrycket lika kraft i alla riktningar - och försöker trycka isär de övre och nedre panelerna till en cylindrisk form. De tusentals drop-stitch-trådarna motstår denna separation och överför belastningen till spänning längs trådens axel. Resultatet är en platt, styv panel som tål 15–20 PSI inre tryck.
+
+    Vid 20 PSI upplever en 1 m² drop-stitch-panel cirka 14 000 kg total inre kraft – men trådmatrisen håller den perfekt platt. Detta ger droppstygnstrukturer ett förhållande mellan styrka och vikt som konkurrerar med traditionella styva material.
+section_materials:
+  title: PVC vs Hypalon — Teknisk materialjämförelse
+  subtitle: Objektiva data för informerat materialval vid tillverkning av uppblåsbara vattenskotrar
+  table:
+    columns:
+      - header: Egendom
+      - header: PVC (polyvinylklorid)
+      - header: Hypalon (CSM)
+    rows:
+      - property: UV-beständighet
+        pvc: Bra (med UV-stabilisatorer)
+        hypalon: Utmärkt (inneboende)
+      - property: Nötningsbeständighet
+        pvc: Bra
+        hypalon: Mycket bra
+      - property: Draghållfasthet
+        pvc: 3 000–5 000 N/5 cm
+        hypalon: 2 500–4 000 N/5 cm
+      - property: Vikt per m²
+        pvc: 850–1 200 g
+        hypalon: 1 100–1 500 g
+      - property: Kall Flex
+        pvc: -30 °C
+        hypalon: -20 °C
+      - property: Sammanfogningsmetod
+        pvc: RF-svetsning / Varmluftssvetsning
+        hypalon: Handlimning (kontaktcement)
+      - property: Reparationsförmåga
+        pvc: Enkelt (värmesvets eller lim)
+        hypalon: Kräver CSM-lim
+      - property: Materialkostnad
+        pvc: 8–15 USD/m²
+        hypalon: 20–40 USD/m²
+      - property: Livslängd (tropisk sol)
+        pvc: 5–8 år
+        hypalon: 10–15 år
+      - property: Färgomfång
+        pvc: Brett (fullt färgspektrum)
+        hypalon: Begränsad (grundfärger)
+      - property: Kemisk beständighet
+        pvc: Bra (bränsle-/oljebeständiga kvaliteter)
+        hypalon: Utmärkt (brett kemiskt sortiment)
+section_testing:
+  title: Test- och säkerhetsprotokoll
+  subtitle: Aquafarers kvalitetssäkringsramverk för varje produktionsbatch
+  protocols:
+    - title: 1,25x nominellt tryckhållningstest
+      description: Varje sammansatt kärl blåses upp till 1,25x dess nominella arbetstryck och hålls i 24–48 timmar. Varje tryckfall som överstiger 2 % utlöser avstötning och omarbetning.
+      standard: ISO 6185
+    - title: Sömmens skalhållfasthetstest
+      description: Svets- och limsömprover från varje produktionssats testas med avseende på fläkhållfasthet med hjälp av kalibrerad spänningsutrustning. Minst 4 kN/m skalningsmotstånd krävs.
+      standard: ISO 2411
+    - title: Tygets dragprov
+      description: Inkommande tygrullar genomgår draghållfasthets- och töjningstest i både varp- och väftriktningar. Avslagströskel under 3 000 N/5cm för PVC.
+      standard: ISO 1421
+    - title: UV-accelererad vittring
+      description: Materialprover utsätts för 1 000+ timmars accelererad UV-exponering i QUV-testkammare. Max 15 % draghållfasthetsförlust tillåten.
+      standard: ASTM G154
+    - title: Ventil- och passningsintegritet
+      description: Varje ventilenhet testas för tätningsintegritet vid 1,25x märktryck. Återläckageventiler är testade för envägstätningsprestanda.
+      standard: ISO 12402
+section_manufacturing:
+  title: Tillverkningsstandarder och kvalitetscertifieringar
+  subtitle: Överensstämmelse med branschstandard för global marknadstillgång
+  standards:
+    - name: ISO 9001:2015
+      body: SGS-certifierad
+      scope: Kvalitetsledningssystem över design, produktion och leverans
+    - name: CE 2013/53/EU
+      body: EU anmält organ
+      scope: Direktivet för fritidsbåtar — skrovkonstruktion, stabilitet, flytning, utsläpp
+    - name: BSCI
+      body: Amfori
+      scope: Social efterlevnad — arbetarskydd, rättvist arbete, miljöledning
+    - name: ISO 6185
+      body: Internationell standard
+      scope: Uppblåsbara båtar — konstruktion, stabilitet, flytning, tryckprovning
+    - name: NÅ
+      body: EU:s förordning
+      scope: Kemikaliesäkerhet — begränsade ämnen i material och beläggningar
+section_faq:
+  title: Tekniska vanliga frågor
+  questions:
+    - q: Hur jämförs drop-stitch med traditionell hårdskalkonstruktion?
+      a: Moderna drop-stitch-kärnor vid 20 PSI uppnår 85–90 % av styvheten hos jämförbara EPS-skum/glasfiberhårda skal, samtidigt som de är helt tömbara för transport. Avvägningen är något högre vikt och lägre ultimat styvhet - men för de flesta rekreations- och kommersiella tillämpningar är skillnaden försumbar.
+    - q: Vilken trådtäthet anses vara premiumkvalitet?
+      a: Premiumtyger med droppstygn använder 2 trådar per kvadrattum (cirka 3 100 trådar per m²) vävda av 1 680 DTEX polyestergarn. Tyger för nybörjare använder 1 tråd per kvm med 1 100 DTEX-garn.
+    - q: Kan Hypalon svetsas som PVC?
+      a: Nej. Hypalon/CSM kan inte RF-svetsas. Den måste monteras med handapplicerat kontaktcement, vilket gör produktionen mer arbetsintensiv och sömmarna beroende av operatörens skicklighet. PVC kan RF-svetsas eller varmluftssvetsas för konsekvent, automatiserad sömkvalitet.
+    - q: Vilket är det maximala säkra trycket för gummibåtar?
+      a: Standard uppblåsbara båtrör fungerar vid 8–12 PSI. Drop-stitch-golv arbetar med 12–20 PSI. Högtryckssömskärnor (SUP) kan arbeta vid 20–25 PSI. Varje produkt inkluderar tryckavlastningsventiler som är kalibrerade för att förhindra överuppblåsning.
+    - q: Hur lång tid tar det att tillverka en anpassad uppblåsbar båt?
+      a: Standard OEM-produktion pågår 30–45 dagar från orderbekräftelse till FOB Qingdao. Anpassad formutveckling lägger till 15–20 dagar för prototypproduktion och testning.
+cta:
+  title: Ingenjörskonsultation
+  subtitle: Har du en specifik fråga om material eller design? Vårt ingenjörsteam finns tillgängligt för tekniska diskussioner.
+  actions:
+    - variant: primary
+      text: Fråga vårt ingenjörsteam
+      href: /contact
+    - text: Utforska vårt FoU-center
+      href: /randdcenter

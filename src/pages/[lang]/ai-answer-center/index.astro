@@ -1,0 +1,57 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { languages, defaultLang } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+import AnswerCenter from '~/components/ai/AnswerCenter.astro';
+import { AI_CATEGORIES } from '~/lib/ai-categories-l10n';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => getUiForLang(lang || defaultLang)?.[key] || '';
+
+const heroTitle = t('answerCenter.title');
+const heroSubtitle = t('answerCenter.subtitle');
+const placeholder = t('answerCenter.placeholder');
+const askButton = t('answerCenter.button');
+t('answerCenter.badge');
+t('answerCenter.suggested');
+t('answerCenter.explore');
+
+const categories = (AI_CATEGORIES[lang] || AI_CATEGORIES.en) as any[];
+
+const metadata = {
+  title: `${heroTitle} | ${SITE.name}`,
+  description: t('answerCenter.subtitle'),
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <JsonLd
+    data={{
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      headline: heroTitle,
+      description: metadata.description,
+      author: { '@type': 'Organization', name: SITE.name },
+    }}
+  />
+
+  <div class="max-w-6xl mx-auto px-4 py-10">
+    <AnswerCenter
+      lang={lang}
+      heroTitle={heroTitle}
+      heroSubtitle={heroSubtitle}
+      placeholder={placeholder}
+      askButton={askButton}
+      categories={categories}
+    />
+  </div>
+</Layout>

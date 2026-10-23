@@ -1,0 +1,179 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'no' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">← Tilbake til R&amp;D Center</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Lab 03</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">RF Sveisesenter</h1>
+      <p class="mt-3 text-lg text-muted">Dielektrisk bindingsteknologi for sveiser som holder under trykk</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-jungle-mandala-1.webp"
+        alt="Aquafarer RF-sveising dielektrisk bindingsprosess"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Vitenskapen bak sømmen</h2>
+  <p>
+    En gummibåt er bare så pålitelig som sømmene. En enkelt svak sveis kan kompromittere et helt kammer - og til sjøs er
+    en kammerfeil ikke en ulempe; det er en sikkerhetsrisiko. På {SITE.name}, har vi investert i et dedikert
+    radiofrekvenssveisesenter (RF) som kombinerer dielektriske sveisepresser av industrikvalitet med streng
+    prosesskontroll og testing etter sveising. Hver søm vi produserer er dokumentert, sporbar og sertifisert for å møte
+    eller overgå kravene til – den internasjonale standarden for oppblåsbare fartøyer.
+  </p>
+  <p>
+    RF-sveising bruker høyfrekvent elektromagnetisk energi (typisk 27.12 MHz) for å eksitere de polare molekylene i PVC
+    eller Hypalon-belagt stoff, og genererer varme nøyaktig ved materialgrensesnittet. I motsetning til varmlufts- eller
+    varmkilesveising, skaper RF-sveising en ekte molekylær binding - de to stofflagene smelter sammen til et enkelt
+    homogent materiale ved sveisesonen, og produserer en skjøt som er like sterk som selve hovedmaterialet.
+  </p>
+
+  <h2>Sveiseutstyr og prosesskontroll</h2>
+  <p>Vårt sveisesenter er utstyrt med:</p>
+  <table>
+    <thead><tr><th>Maskin</th><th>Strøm / Kapasitet</th><th>Søknad</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Dielektrisk RF-presse 1</td><td>15 kW, plate 2000 × 600 mm</td><td
+          >Hoved langsgående sømmer, akterspeil-til-rør skjøter</td
+        ></tr
+      >
+      <tr
+        ><td>Dielektrisk RF-presse 2</td><td>10 kW, plate 1500 × 500 mm</td><td
+          >Baffelsveiser, kjeglefester, ventillapper</td
+        ></tr
+      >
+      <tr
+        ><td>CNC-kontrollert RF sveiser</td><td>8 kW, XY-tabell 2500 × 1200 mm</td><td
+          >Buede sømmer, logo/panelpreging, presisjonspatchwork</td
+        ></tr
+      >
+      <tr
+        ><td>Hotwedge automatisk sveiser</td><td>Variabel temperatur, 1.2 m/min maks</td><td
+          >Sikkerhetskopieringsmetode for Hypalon/CSM materialer</td
+        ></tr
+      >
+    </tbody>
+  </table>
+  <p>
+    Hver RF-presse er utstyrt med lukket sløyfe-temperatur- og trykkovervåking. Sveiseparametere – kraft, pressetid,
+    kjøletid, elektrodetrykk – programmeres per materialtype og registreres i vårt produksjonsutførelsessystem (MES) for
+    full sporbarhet.
+  </p>
+
+  <h2>Sveisekvalitetstester - hver søm, hver båt</h2>
+  <p>Sveiseintegriteten verifiseres gjennom en obligatorisk fire-testprotokoll:</p>
+  <ol>
+    <li>
+      <strong>Visuell inspeksjon</strong> — 100 % av sømmene blir visuelt inspisert for gjennombrenning, feiljustering, forurensning
+      eller ufullstendig sammensmelting. Terskel for avvisningsfrekvens: 0.5 % av lineære meter.
+    </li>
+    <li>
+      <strong>Peel test ()</strong> — En 25 mm bred strimmel kuttes fra en testkupong sveiset med hver produksjonsbatch. Minimum
+      skrellekraft: 120 N/25 mm for PVC 1100 dtex.
+    </li>
+    <li>
+      <strong>Luftretensjonstest</strong> — Hvert fullført kammer settes under trykk til 1.25 × arbeidstrykk og holdes i 24-48
+      timer. Trykkfallet må ikke overstige 2 %.
+    </li>
+    <li>
+      <strong>Termisk sykkeltest</strong> — Prøvekuponger sykles fra -20 °C til +60 °C i 50 sykluser, og deretter skrelletestes
+      på nytt. Akseptabelt styrketap: &lt; 10 %.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Sammenligning av skrellstyrke — RF vs varmluftsveising (PVC 1100 dtex)
+    </p>
+    <div class="space-y-3">
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">RF sveis</span><div
+          class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded"
+        >
+          <div class="h-full bg-blue-600 rounded" style="width:92%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">184 N</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">Varmluft</span><div
+          class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded"
+        >
+          <div class="h-full bg-gray-400 rounded" style="width:65%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">130 N</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium"> min</span><div class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded">
+          <div class="h-full bg-green-500 rounded" style="width:48%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">96 N</span>
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      RF-sveising oppnår konsekvent 90-95 % av grunnmaterialets styrke, godt over minimum.
+    </p>
+  </div>
+
+  <h2>Fagekspertise</h2>
+  <p>
+    Vårt sveiseteam ledes av en senior prosessingeniør med 11 års erfaring i dielektrisk sveising av belagte tekstiler.
+    Hver operatør fullfører et 6-måneders internt sertifiseringsprogram før de får lov til å jobbe med
+    produksjonssømmer. Resertifisering kreves årlig, inkludert en praktisk sveisetest evaluert i forhold til vår interne
+    Grade-A standard (avskallingsstyrke ≥ 160 N/25 mm).
+  </p>
+
+  <h2>Skreddersydde sveiseløsninger for unike krav</h2>
+  <p>
+    Vi forstår at én sveisespesifikasjon ikke passer til alle bruksområder. Vårt RF-sveisesenter utvikler rutinemessig
+    tilpassede sømkonfigurasjoner for kunder med spesielle krav:
+  </p>
+  <ul>
+    <li>
+      <strong>Flerlags forsterkningslapper</strong> — For områder med høy slitasje som gniststriper og buekjegler utvikler
+      vi flerpass RF-sveiser som integrerer et slitesterkt ytre lag uten at det går på bekostning av fleksibiliteten.
+    </li>
+    <li>
+      <strong>Ledende eller RFopake sømmer</strong> — For militære fartøyer eller overvåkingsfartøyer som krever elektromagnetisk
+      skjerming, sveiser vi inn ledende netting i sømstabelen.
+    </li>
+    <li>
+      <strong>Sveising av fargeskiftpanel</strong> — tofargede stoffpaneler (f.eks. oransje skrog + grå overside) sveiset
+      med en skjult overlapping for å opprettholde merkevareestetikken uten en synlig skjøtelinje.
+    </li>
+  </ul>
+
+  <h2>Vår forpliktelse til deg</h2>
+  <p>
+    Hver båt vi leverer har vår sveisekvalitetsgaranti: hvis en søm svikter ved normal service innenfor garantiperioden,
+    reparerer eller erstatter vi det berørte kammeret uten kostnad, og en rotårsaksundersøkelse utføres for å forhindre
+    gjentakelse. Dette er ikke bare en garanti – det er en forpliktelse til kontinuerlig forbedring drevet av virkelige
+    driftsdata.
+  </p>
+  <p>
+    Når du velger {SITE.name}, velger du sømmer som er konstruert, testet og dokumentert – ikke bare sveiset. Det er
+    forskjellen på en båt som flyter og en båt som presterer.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Diskuter dine sveisekrav</h2>
+    <p class="mt-2 text-sm text-muted">
+      Egendefinerte sømspesifikasjoner, materialkompatibilitet eller prosessvalidering.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Ta kontakt med vårt sveiseteam</a
+    >
+  </div>
+</section>

@@ -1,0 +1,194 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'cs' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">← Zpět na R&amp;D Center</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Laboratoř 04</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Hydrodynamická zkušební nádrž</h1>
+      <p class="mt-3 text-lg text-muted">Ověření výkonu před prvním prototypem v plném měřítku</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-design-discussion-original.webp"
+        alt="Aquafarer testování výkonu hydrodynamické zkušební nádrže"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Proč testovat tank na malé lodi?</h2>
+  <p>
+    Je běžnou mylnou představou, že hydrodynamické testování je vyhrazeno pro zaoceánské lodě. Ve skutečnosti je výkon
+    malého hoblovacího trupu – jako je 4–5 m RIB – stejně závislý na jeho podvodním tvaru jako tankeru na jeho baňaté
+    přídi. Úhel sklonu, plocha smáčeného povrchu, tvorba postřiku a ventilace – to vše má dramatický vliv na rychlost,
+    spotřebu paliva a jízdní komfort. Na {SITE.name}, provozujeme vyhrazenou hydrodynamickou testovací nádrž, která nám
+    umožňuje kvantifikovat tyto efekty v modelovém měřítku – předtím, než použijeme kov a látku na prototyp v plné
+    velikosti.
+  </p>
+  <p>
+    Testování v měřítku modelu (typicky 1:3 až 1:5) nám umožňuje rychle a cenově výhodně opakovat tvary trupu. Týden v
+    nádrži může generovat stejná data o výkonu, která by vyžadovala měsíce plného pokusu a omylu – a za zlomek nákladů.
+  </p>
+
+  <h2>Specifikace zařízení</h2>
+  <table>
+    <thead><tr><th>Parametr</th><th>Specifikace</th></tr></thead>
+    <tbody>
+      <tr><td>Rozměry nádrže</td><td>35 m (D) × 3.5 m (Š) × 1.8 m (D)</td></tr>
+      <tr
+        ><td>Tažný kočár</td><td
+          >Elektrický servopohon, maximální rychlost 12 m/s (23 kn), přesnost rychlosti ± 0.5 %</td
+        ></tr
+      >
+      <tr
+        ><td>Generátor vln</td><td
+          >Klapka, programovatelné pravidelné a nepravidelné mořské stavy, Hs až 0.3 m v měřítku modelu</td
+        ></tr
+      >
+      <tr
+        ><td>Instrumentace</td><td
+          >6-komponentní dynamometr (odpor, boční síla, stáčivý moment), akcelerometry, sklonoměry, vlnové sondy</td
+        ></tr
+      >
+      <tr
+        ><td>Získávání dat</td><td
+          >Vzorkování při 1000 Hz na kanál, zobrazení v reálném čase + sada následného zpracování</td
+        ></tr
+      >
+      <tr><td>Výroba modelu</td><td>Vlastní CNC frézování a 3D tisk pro modely trupů do 1.8 m LOA</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Náš testovací program</h2>
+  <p>Standardní program vývoje trupu v našem tanku se řídí tímto sledem:</p>
+  <ol>
+    <li>
+      <strong>Stavba modelu</strong> — Model v měřítku 1:3.5 je CNC vyroben z pěny s vysokou hustotou a zasklen kvůli pevnosti.
+      Hmotnost a těžiště jsou upraveny tak, aby odpovídaly stavu plného zatížení podle Frouda.
+    </li>
+    <li>
+      <strong>Odpor běží</strong> — Model je tažen rychlostí 8-10 v provozním rozsahu. Celkový odpor se měří a rozkládá na
+      třecí a zbytkové složky metodou ITTC-1957.
+    </li>
+    <li>
+      <strong>Měření sklonu a potopení</strong> — Při každé rychlosti se zaznamenává jízdní sklon a pokles. Cílem je optimální
+      úhel sklonu 4-6° pro hoblování trupů.
+    </li>
+    <li>
+      <strong>Probuďte průzkum</strong> — Průřezy příčných vln se měří při dvou rychlostech, aby se posoudil odpor při vytváření
+      vln a identifikovaly se interakce příčných vln, které by mohly způsobit záďovou interferenci.
+    </li>
+    <li>
+      <strong>Námořní služby (volitelné)</strong> — Hlava-moře a následující-moře běží v pravidelných vlnách pro měření přidaného
+      odporu, vertikálního zrychlení a pravděpodobnosti nárazu.
+    </li>
+    <li>
+      <strong>Analýza dat a doporučení</strong> — Dodává se úplná zpráva se srovnávacími grafy, křivkami rychlosti/výkonu
+      a konkrétními návrhovými doporučeními pro trup v plném měřítku.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Typické výsledky testu tanku – odpor vs. rychlost (RIB 450 trup, 1:3.5 měřítko)
+    </p>
+    <div class="space-y-2">
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">5 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:18%"></div>
+        </div><span class="w-16 text-right">42 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">10 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:35%"></div>
+        </div><span class="w-16 text-right">81 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">15 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:52%"></div>
+        </div><span class="w-16 text-right">121 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">20 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:68%"></div>
+        </div><span class="w-16 text-right">158 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">25 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:85%"></div>
+        </div><span class="w-16 text-right">197 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">30 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:100%"></div>
+        </div><span class="w-16 text-right">232 N</span>
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      Odpor v modelovém měřítku (N) při Froudeho škálovaných rychlostech. Predikce výkonu v plném rozsahu se řídí
+      metodou predikce výkonu ITTC-1978.
+    </p>
+  </div>
+
+  <h2>Expertní tým</h2>
+  <p>
+    Náš tank provozuje hydrodynamik s doktorátem v oboru námořní architektury a 8 lety zkušeností s tažením tanků ve
+    významném evropském institutu pro námořní výzkum. Podporuje ho technik, který připravuje všechny modely a
+    přístrojové vybavení. Tým se řídí doporučenými postupy ITTC (International Towing Tank Conference), aby zajistil, že
+    každý test bude opakovatelný, sledovatelný a mezinárodně obhajitelný.
+  </p>
+
+  <h2>Tankové testování pro zakázkový vývoj trupu</h2>
+  <p>
+    Naše nádrž se nepoužívá pouze pro trupy navržené pro vlastní potřebu – pravidelně spouštíme testovací programy pro
+    klienty, kteří chtějí ověřit vlastní tvar trupu nebo prozkoumat problém s výkonem:
+  </p>
+  <ul>
+    <li>
+      <strong>Srovnání tvaru trupu</strong> — Dva nebo více kandidátských tvarů trupu testovaných za identických podmínek,
+      poskytujících objektivní srovnání odporu/rychlosti/stability, které je základem vašeho výběru návrhu.
+    </li>
+    <li>
+      <strong>Optimalizace přívěsku</strong> — Záchytné desky, postřikovací lišty, trimovací výstupky a pásy lze testovat
+      v různých konfiguracích, aby se kvantifikoval jejich individuální příspěvek ke snížení odporu.
+    </li>
+    <li>
+      <strong>Studie přizpůsobení motoru</strong> — Údaje o odporu jsou převedeny na křivku předpovědi výkonu, což vám umožní
+      vybrat optimální výkon motoru pro vaši cílovou rychlost a užitečné zatížení.
+    </li>
+  </ul>
+
+  <h2>Proč testovat s námi?</h2>
+  <p>
+    Neposkytneme vám pouze soubor hrubých čísel. Naše zprávy převádějí údaje o nádrži do použitelných technických
+    doporučení: „Zvedněte postřikovací lištu o 8 mm, abyste snížili smáčený povrch při cestovní rychlosti“, „Zvýšení
+    náklonu na zrcadle o 3°, abyste snížili zrychlení při nárazu“ nebo „Přesuňte podélné těžiště 150 mm dozadu pro lepší
+    hoblování“. Odcházíte s jasným pochopením toho, co změnit a proč.
+  </p>
+  <p>
+    Naše nádrž je také k dispozici pro nezávislé testování třetí stranou na základě poplatku za službu. Pokud vyvíjíte
+    trup a chcete nezaujaté, profesionálně provedené hydrodynamické posouzení, uvítáme váš dotaz.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Objednejte si test nádrže</h2>
+    <p class="mt-2 text-sm text-muted">
+      Ať už potřebujete úplný vývojový program nebo jeden srovnávací test, můžeme se přizpůsobit vašemu rozvrhu.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Kontaktujte náš hydrodynamický tým</a
+    >
+  </div>
+</section>

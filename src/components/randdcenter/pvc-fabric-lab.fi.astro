@@ -1,0 +1,208 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'fi' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">← Takaisin R&amp;D Centeriin</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Lab 01</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">PVC Kangaslaboratorio</h1>
+      <p class="mt-3 text-lg text-muted">Tieteellinen materiaalitestaus - kuidusta valmiiseen putkeen</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/randd/aquafarer-pvc-material-lab.webp"
+        alt="Aquafarer PVC kangasmateriaalien testauslaboratorio"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Jokaisen kumiveneen perusta</h2>
+  <p>
+    Putkikangas on kumiveneen kriittisin materiaali. Sen on kestettävä jatkuvaa UV altistumista, toistuvia
+    täyttöjaksoja, hankausta telakoille ja roskille sekä äärimmäisiä lämpötilavaihteluita – kaikki samalla kun sen
+    rakenteellinen eheys säilyy vuosia. klo {SITE.name}PVC Fabric Lab on omistettu yksinomaan jokaisessa rakentamassamme
+    veneessä käyttämiemme kankaiden karakterisointiin, validointiin ja jatkuvaan parantamiseen.
+  </p>
+  <p>
+    Emme luota pelkästään toimittajan tietolomakkeisiin. Jokainen PVC ja Hypalon kangaserä, joka saapuu työpajallemme,
+    testataan itsenäisesti talon sisällä. Tämä takaa, että julkaisemamme materiaalispesifikaatio vastaa saamaasi
+    materiaalin suorituskykyä – erä erän jälkeen, vuodesta toiseen.
+  </p>
+
+  <h2>Standardoidut testauslaitteet</h2>
+  <p>
+    Kangaslaboratoriomme on varustettu teollisuustason instrumenteilla, jotka ovat ISO-, ASTM- ja EN-testausmenetelmien
+    mukaisia:
+  </p>
+  <table>
+    <thead><tr><th>Laitteet</th><th>Mitatut parametrit</th><th>Vakio</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Yleiskäyttöinen vetotesteri (50 kN)</td><td>Murtovoima, murtovenymä, repeämien leviäminen</td><td>
+          / ASTM D751</td
+        ></tr
+      >
+      <tr
+        ><td>Xenon-kaari sääkammio</td><td>UV vastus (värin muutos, lujuuden säilyminen 2000 tunnin kuluttua)</td><td>
+          / ASTM G155</td
+        ></tr
+      >
+      <tr><td>Matalalämpöinen flex-testeri</td><td>Halkeamispiste -30 °C - -50 °C</td><td>ISO 4675 / ASTM D2136</td></tr
+      >
+      <tr
+        ><td>Taber-hankaustesti</td><td>Painonpudotus 1000 syklin jälkeen (CS-10 pyörä)</td><td
+          >ASTM D3389 / ISO 5470-1</td
+        ></tr
+      >
+      <tr
+        ><td>Paksuusmittari (digitaalinen, 0.001 mm resoluutio)</td><td>Tasaisuus rullan leveydellä</td><td
+          >ISO 2286-3</td
+        ></tr
+      >
+      <tr><td>Hydrostaattinen pään testeri</td><td>Veden tunkeutumiskestävyys</td><td>ISO 811</td></tr>
+    </tbody>
+  </table>
+  <p class="text-sm text-gray-500">
+    * Kaikki laitteet kalibroidaan vuosittain kolmannen osapuolen akkreditoiduissa laboratorioissa.
+  </p>
+
+  <h2>Tiedoista päätökseen: tyypillinen testityönkulku</h2>
+  <p>Kun uusi kangasehdokas saapuu, se noudattaa standardoitua seitsenvaiheista pätevöintiprosessia:</p>
+  <ol>
+    <li>
+      <strong>Kuitin tarkastus</strong> — pintavirheiden, reikien ja mittojen vaatimustenmukaisuuden silmämääräinen tarkastus.
+    </li>
+    <li>
+      <strong>Paksuuskartoitus</strong> — 20-pisteen mittaus telan poikki; CV &lt; 3% vaaditaan hyväksymiseen.
+    </li>
+    <li>
+      <strong>Vetovoiman testaus</strong> — 5 näytteitä loimi- ja kudesuunnassa. Vähintään 3500 N/50 mm kohteelle 1100 dtex
+      PVC.
+    </li>
+    <li>
+      <strong>UV ehdollistaminen</strong> — 1000 h altistus xenon-kaarikammiossa; Vähintään 80 % lujuuden säilytys vaaditaan.
+    </li>
+    <li>
+      <strong>Kylmä halkeama</strong> — 4 h -35 °C:ssa, sitten 180° taivuta 25 mm karan yli. Ei näkyvää halkeamia.
+    </li>
+    <li><strong>Kulutuskestävyys</strong> — 1000 sykliä, painonpudotus ≤ 0.05 g.</li>
+    <li>
+      <strong>Hyväksyntäkirjaus</strong> — kangas luovutetaan tuotantoon vasta sen jälkeen, kun kaikki seitsemän porttia on
+      ohitettu.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Tyypillinen PVC 1100 dtex – vetolujuus UV altistuksen jälkeen
+    </p>
+    <div class="flex items-end gap-3 h-40">
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-600 rounded-t" style="height:100%"></div><span class="text-xs mt-1"
+          >0 h<br />100%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-500 rounded-t" style="height:95%"></div><span class="text-xs mt-1"
+          >500 h<br />95%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-400 rounded-t" style="height:88%"></div><span class="text-xs mt-1"
+          >1000 h<br />88%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-300 rounded-t" style="height:82%"></div><span class="text-xs mt-1"
+          >2000 h<br />82%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-gray-300 rounded-t" style="height:65%"></div><span class="text-xs mt-1"
+          >Kilpailija<br />~65%</span
+        >
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      PVC 1100 dtex -kankaamme säilyttää &gt; 80 % vetolujuuden 2000 h xenon-kaarialtistuksen jälkeen verrattuna
+      tyypillisiin teollisuuden laatuihin, jotka putoavat alle 70 %.
+    </p>
+  </div>
+
+  <h2>Ammattitaitoinen tiimimme</h2>
+  <p>
+    Laboratoriossa työskentelee kaksi kokopäiväistä materiaaliinsinööriä, joilla kullakin on polymeeritieteen tai
+    tekstiilitekniikan tutkinto ja vähintään kuuden vuoden kokemus alalta. Niitä tukee kolme teknikkoa, jotka
+    suorittavat päivittäisiä testauksia ja tietojen kirjaamista. Tiimi osallistuu säännöllisesti Kansainvälisen
+    standardointijärjestön (ISO) järjestämiin laboratorioiden välisiin round robin -kokeisiin testausmenetelmiemme
+    tarkkuuden vahvistamiseksi.
+  </p>
+
+  <h2>Ratkaise vaikeimmat materiaalihaasteet</h2>
+  <p>
+    Jokainen meriympäristö on erilainen. Persianlahdella toimiva partiovene kohtaa huomattavasti erilaiset UV- ja
+    lämpötila-olosuhteet kuin Pohjanmerellä pelastusalukset. Kangaslaboratoriomme auttaa sinua valitsemaan – tai
+    kehittämään – toimintaprofiilillesi optimoidun kangaserittelyn.
+  </p>
+  <p>Viimeaikaisia mukautettuja ratkaisuja ovat mm.</p>
+  <ul>
+    <li>
+      Kulutusta kestävä PVC sekoitus sotilasasiakkaalle, jonka veneet rantautuvat säännöllisesti koralliriutoilla (+40 %
+      kulumisikä).
+    </li>
+    <li>Matalan lämpötilan Hypalon formulaatio arktiseen tutkimusasemaan, testattu -50 °C:ssa ilman haurastumista.</li>
+    <li>
+      Väristabiloitu oranssi kangas etsintä- ja pelastuslaivastolle, joka säilyttää näkyvyyden 3 vuoden trooppisen
+      auringonoton jälkeen.
+    </li>
+  </ul>
+  <p>
+    Emme myy "valmiita" kankaita ja toivomme, että ne toimivat. Testaamme, validoimme ja suosittelemme – tai luomme –
+    räätälöidyn ratkaisun juuri sinun tehtäväprofiiliisi. Se on {SITE.name} ero.
+  </p>
+
+  <h2>Kuinka palvelemme sinua</h2>
+  <p>Kun tuot meille materiaalihaasteen, voit odottaa seuraavaa:</p>
+  <ol>
+    <li><strong>Konsultointi</strong> — keskustelemme toimintaympäristöstäsi, tulostavoitteistasi ja budjetistasi.</li>
+    <li>
+      <strong>ehdotus</strong> — laaditaan testisuunnitelma, jossa on selkeät hyväksymis-/hylkäyskriteerit ja aikataulu.
+    </li>
+    <li>
+      <strong>Toteutus</strong> — Laboratoriomme suorittaa testit ja tuottaa yksityiskohtaisen raportin, joka sisältää raakatiedon
+      ja vertailevan analyysin.
+    </li>
+    <li>
+      <strong>Suositus</strong> — Esittelemme kangaserittelyn, mukaan lukien vaihtoehtoiset vaihtoehdot, jos useat materiaalit
+      vastaavat tarpeitasi.
+    </li>
+    <li>
+      <strong>Seuranta</strong> — Toimituksen jälkeen olemme käytettävissä auttamaan kaikissa käytössä oleviin materiaaleihin
+      liittyvissä kysymyksissä.
+    </li>
+  </ol>
+  <p>
+    Tavoitteemme ei ole vain myydä sinulle venettä. Sen tarkoituksena on varmistaa, että saamasi vene toimii
+    luotettavasti olosuhteissa, joissa työskentelet – ja se alkaa kankaasta.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Tarvitsetko mukautetun kangaserittelyn?</h2>
+    <p class="mt-2 text-sm text-muted">Ota yhteyttä materiaalisuunnittelutiimiimme keskustellaksesi tarpeistasi.</p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Ota yhteyttä laboratoriotiimiimme</a
+    >
+  </div>
+</section>

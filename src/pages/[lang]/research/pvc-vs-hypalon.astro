@@ -1,0 +1,496 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { languages, defaultLang } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+import LDe from '~/components/research/pvc-vs-hypalon.de.astro';
+import LEs from '~/components/research/pvc-vs-hypalon.es.astro';
+import LFr from '~/components/research/pvc-vs-hypalon.fr.astro';
+import LIt from '~/components/research/pvc-vs-hypalon.it.astro';
+import LCs from '~/components/research/pvc-vs-hypalon.cs.astro';
+import LSv from '~/components/research/pvc-vs-hypalon.sv.astro';
+import LDa from '~/components/research/pvc-vs-hypalon.da.astro';
+import LEl from '~/components/research/pvc-vs-hypalon.el.astro';
+import LNo from '~/components/research/pvc-vs-hypalon.no.astro';
+import LRu from '~/components/research/pvc-vs-hypalon.ru.astro';
+import LNl from '~/components/research/pvc-vs-hypalon.nl.astro';
+import LFi from '~/components/research/pvc-vs-hypalon.fi.astro';
+import LPl from '~/components/research/pvc-vs-hypalon.pl.astro';
+import LAr from '~/components/research/pvc-vs-hypalon.ar.astro';
+import LPt from '~/components/research/pvc-vs-hypalon.pt.astro';
+import LJa from '~/components/research/pvc-vs-hypalon.ja.astro';
+import LMs from '~/components/research/pvc-vs-hypalon.ms.astro';
+import LRo from '~/components/research/pvc-vs-hypalon.ro.astro';
+import LSk from '~/components/research/pvc-vs-hypalon.sk.astro';
+import LSl from '~/components/research/pvc-vs-hypalon.sl.astro';
+import LSr from '~/components/research/pvc-vs-hypalon.sr.astro';
+import LTh from '~/components/research/pvc-vs-hypalon.th.astro';
+import LTl from '~/components/research/pvc-vs-hypalon.tl.astro';
+import LTr from '~/components/research/pvc-vs-hypalon.tr.astro';
+import LBg from '~/components/research/pvc-vs-hypalon.bg.astro';
+import LEt from '~/components/research/pvc-vs-hypalon.et.astro';
+import LHe from '~/components/research/pvc-vs-hypalon.he.astro';
+import LHr from '~/components/research/pvc-vs-hypalon.hr.astro';
+import LHu from '~/components/research/pvc-vs-hypalon.hu.astro';
+import LId from '~/components/research/pvc-vs-hypalon.id.astro';
+import LKo from '~/components/research/pvc-vs-hypalon.ko.astro';
+import LLt from '~/components/research/pvc-vs-hypalon.lt.astro';
+import LLv from '~/components/research/pvc-vs-hypalon.lv.astro';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => getUiForLang(lang || defaultLang)?.[key] || '';
+
+const META: Record<string, { title: string; description: string }> = {
+  en: {
+    title: 'PVC vs Hypalon — Technical Comparison for Inflatable Boats',
+    description:
+      'Head-to-head comparison of PVC (polyvinyl chloride) and Hypalon (chlorosulfonated polyethylene) for inflatable boat construction: UV resistance, durability, repairability, weight, cost, and application-specific recommendations.',
+  },
+  de: {
+    title: 'PVC vs. Hypalon — technischer Vergleich für aufblasbare Boote',
+    description:
+      'Direkter Vergleich von PVC (Polyvinylchlorid) und Hypalon (chlorosulfoniertes Polyethylen) für den Bau aufblasbarer Boote: UV-Beständigkeit, Haltbarkeit, Reparierbarkeit, Gewicht, Kosten und anwendungsspezifische Empfehlungen.',
+  },
+  es: {
+    title: 'PVC vs. Hypalon — comparativa técnica para barcas hinchables',
+    description:
+      'Comparativa directa de PVC (cloruro de polivinilo) e Hypalon (polietileno clorosulfonado) para la construcción de embarcaciones hinchables: resistencia UV, durabilidad, reparabilidad, peso, coste y recomendaciones según la aplicación.',
+  },
+  fr: {
+    title: 'PVC vs Hypalon — comparaison technique pour bateaux gonflables',
+    description:
+      "Comparaison détaillée du PVC (chlorure de polyvinyle) et de l'Hypalon (polyéthylène chlorosulfoné) pour la construction de bateaux gonflables : résistance aux UV, durabilité, réparabilité, poids, coût et recommandations selon l'application.",
+  },
+  it: {
+    title: 'PVC vs Hypalon — confronto tecnico per natanti gonfiabili',
+    description:
+      "Confronto diretto tra PVC (cloruro di polivinile) e Hypalon (polietilene clorosolfonato) per la costruzione di natanti gonfiabili: resistenza ai raggi UV, durabilità, riparabilità, peso, costo e consigli in base all'applicazione.",
+  },
+  cs: {
+    title: 'PVC vs Hypalon – technické srovnání pro nafukovací čluny',
+    description:
+      'Přímé srovnání PVC (polyvinylchlorid) a Hypalon (chlorsulfonovaný polyethylen) pro konstrukci nafukovacích člunů: UV odolnost, životnost, opravitelnost, hmotnost, cena a doporučení pro konkrétní aplikaci.',
+  },
+  sv: {
+    title: 'PVC vs Hypalon — Teknisk jämförelse för uppblåsbara båtar',
+    description:
+      'Head-to-head jämförelse av PVC (polyvinylklorid) och Hypalon (klorsulfonerad polyeten) för uppblåsbar båtkonstruktion: UV motstånd, hållbarhet, reparerbarhet, vikt, kostnad och applikationsspecifika rekommendationer.',
+  },
+  da: {
+    title: 'PVC vs Hypalon — Teknisk sammenligning for gummibåde',
+    description:
+      'Head-to-head sammenligning af PVC (polyvinylchlorid) og Hypalon (chlorsulfoneret polyethylen) til oppustelig bådkonstruktion: UV modstand, holdbarhed, reparationsevne, vægt, pris og anvendelsesspecifikke anbefalinger.',
+  },
+  el: {
+    title: 'PVC vs Hypalon — Τεχνική σύγκριση για φουσκωτά σκάφη',
+    description:
+      'Σύγκριση από το κεφάλι με κεφάλι του PVC (πολυβινυλοχλωρίδιο) και του Hypalon (χλωροσουλφονωμένο πολυαιθυλένιο) για την κατασκευή φουσκωτών σκαφών: UV αντίσταση, ανθεκτικότητα, δυνατότητα επισκευής, βάρος, κόστος και συστάσεις για συγκεκριμένες εφαρμογές.',
+  },
+  no: {
+    title: 'PVC vs Hypalon — Teknisk sammenligning for gummibåter',
+    description:
+      'Head-to-head sammenligning av PVC (polyvinylklorid) og Hypalon (klorsulfonert polyetylen) for oppblåsbar båtkonstruksjon: UV motstand, holdbarhet, reparerbarhet, vekt, kostnad og bruksspesifikke anbefalinger.',
+  },
+  ru: {
+    title: 'PVC и Hypalon — техническое сравнение надувных лодок',
+    description:
+      'Прямое сравнение PVC (поливинилхлорид) и Hypalon (хлорсульфированный полиэтилен) для изготовления надувных лодок: устойчивость UV, долговечность, ремонтопригодность, вес, стоимость и рекомендации для конкретного применения.',
+  },
+  nl: {
+    title: 'PVC versus Hypalon — Technische vergelijking voor opblaasbare boten',
+    description:
+      'Head-to-head vergelijking van PVC (polyvinylchloride) en Hypalon (chloorgesulfoneerd polyethyleen) voor de constructie van opblaasbare boten: UV weerstand, duurzaamheid, repareerbaarheid, gewicht, kosten en toepassingsspecifieke aanbevelingen.',
+  },
+  fi: {
+    title: 'PVC vs Hypalon — Kumiveneiden tekninen vertailu',
+    description:
+      'Kumiveneiden PVC (polyvinyylikloridi) ja Hypalon (kloorisulfonoitu polyeteeni) vertailu: UV kestävyys, kestävyys, korjattavuus, paino, hinta ja sovelluskohtaiset suositukset.',
+  },
+  pl: {
+    title: 'PVC vs Hypalon — porównanie techniczne pontonów',
+    description:
+      'Bezpośrednie porównanie PVC (polichlorku winylu) i Hypalon (chlorosulfonowanego polietylenu) do budowy pontonów: UV wytrzymałość, trwałość, łatwość naprawy, waga, koszt i zalecenia dotyczące konkretnego zastosowania.',
+  },
+  ar: {
+    title: 'PVC vs Hypalon — مقارنة فنية للقوارب القابلة للنفخ',
+    description:
+      'مقارنة وجهاً لوجه بين PVC (كلوريد البوليفينيل) وHypalon (البولي إيثيلين المكلور سلفونات) لبناء القوارب القابلة للنفخ: UV المقاومة، والمتانة، وقابلية الإصلاح، والوزن، والتكلفة، والتوصيات الخاصة بالتطبيق.',
+  },
+  pt: {
+    title: 'PVC vs Hypalon — Comparação técnica para barcos infláveis',
+    description:
+      'Comparação direta de PVC (cloreto de polivinila) e Hypalon (polietileno clorossulfonado) para construção de barcos infláveis: resistência UV, durabilidade, reparabilidade, peso, custo e recomendações específicas de aplicação.',
+  },
+  ja: {
+    title: 'PVC vs Hypalon — インフレータブルボートの技術比較',
+    description:
+      'インフレータブルボート構造用の PVC (ポリ塩化ビニル) と Hypalon (クロロスルホン化ポリエチレン) の直接比較: UV 耐性、耐久性、修理可能性、重量、コスト、および用途固有の推奨事項。',
+  },
+  ms: {
+    title: 'PVC vs Hypalon — Perbandingan Teknikal untuk Bot Tiup',
+    description:
+      'Perbandingan langsung PVC (polivinil klorida) dan Hypalon (klorosulfonat polietilena) untuk pembinaan bot tiup: ketahanan UV, ketahanan, kemampuan diperbaiki, berat, kos, dan cadangan khusus aplikasi.',
+  },
+  ro: {
+    title: 'PVC vs Hypalon — Comparare tehnică pentru bărci gonflabile',
+    description:
+      'Comparație directă între PVC (policlorură de vinil) și Hypalon (clorosulfonat de polietilenă) pentru construcția bărcilor gonflabile: rezistență UV, durabilitate, reparabilitate, greutate, cost și recomandări specifice aplicației.',
+  },
+  sk: {
+    title: 'PVC vs Hypalon — Technické porovnanie nafukovacích lodí',
+    description:
+      'Priame porovnanie PVC (polyvinylchlorid) a Hypalon (chlorosulfónovaný polyetylén) pre konštrukciu nafukovacích lodí: odolnosť UV, trvanlivosť, opraviteľnosť, hmotnosť, cena a odporúčania pre konkrétne použitie.',
+  },
+  sl: {
+    title: 'PVC proti Hypalon — Tehnična primerjava za napihljive čolne',
+    description:
+      'Primerjava ena proti ena PVC (polivinilklorid) in Hypalon (klorosulfoniran polietilen) za konstrukcijo napihljivih čolnov: UV odpornost, vzdržljivost, popravila, teža, cena in priporočila za specifične uporabe.',
+  },
+  sr: {
+    title: 'PVC vs Hypalon — Tehničko poređenje za čamce na naduvavanje',
+    description:
+      'Head-to-head poređenje PVC (polivinil hlorid) i Hypalon (hlorosulfonirani polietilen) za izgradnju čamaca na napuhavanje: UV otpornost, trajnost, popravljivost, težina, troškovi i preporuke specifične za aplikaciju.',
+  },
+  th: {
+    title: 'PVC กับ Hypalon — การเปรียบเทียบทางเทคนิคสำหรับเรือเป่าลม',
+    description:
+      'การเปรียบเทียบแบบตัวต่อตัวระหว่าง PVC (โพลีไวนิลคลอไรด์) และ Hypalon (โพลีเอทิลีนคลอโรซัลโฟเนต) สำหรับการสร้างเรือเป่าลม: ความต้านทานต่อ UV ความทนทาน การซ่อมแซม น้ำหนัก ค่าใช้จ่าย และคำแนะนำเฉพาะการใช้งาน',
+  },
+  tl: {
+    title: 'PVC vs Hypalon — Teknikal na Paghahambing para sa Inflatable na Bangka',
+    description:
+      'Paghahambing ng PVC (polyvinyl chloride) at Hypalon (chlorosulfonated polyethylene) para sa konstruksiyon ng inflatable na bangka: UV resistance, tibay, kakayahang mag-ayos, bigat, gastos, at rekomendasyon para sa tiyak na aplikasyon.',
+  },
+  tr: {
+    title: 'PVC ve Hypalon — Şişme Tekneler için Teknik Karşılaştırma',
+    description:
+      'Şişme tekne üretimi için PVC (polivinil klorür) ve Hypalon (klorosülfonlu polietilen) başa baş karşılaştırması: UV direnci, dayanıklılığı, onarılabilirliği, ağırlığı, maliyeti ve uygulamaya özel öneriler.',
+  },
+  bg: {
+    title: 'PVC срещу Hypalon — Техническо сравнение за надуваеми лодки',
+    description:
+      'Сравнение лице в лице на PVC (поливинилхлорид) и Hypalon (хлоросулфониран полиетилен) за конструкция на надуваеми лодки: UV устойчивост, издръжливост, възможност за ремонт, тегло, цена и специфични препоръки за приложение.',
+  },
+  et: {
+    title: 'PVC vs Hypalon — Tehniline võrdlus täispuhutavate paatide jaoks',
+    description:
+      'Otse võrdlus PVC (polüvinüülkloriid) ja Hypalon (klorosulfonitud polüetüleen) vahel täispuhutavate paatide konstruktsioonis: UV vastupidavus, kestvus, parandatavus, kaal, maksumus ja rakenduspõhised soovitused.',
+  },
+  he: {
+    title: 'PVC מול Hypalon — השוואה טכנית לסירות מתנפחות',
+    description:
+      'השוואה ישירה של PVC (פוליוויניל כלוריד) ו-Hypalon (כלורוסולפונטאז’ פולי אתילן) לבניית סירות מתנפחות: עמידות ל-UV, עמידות כללית, יכולת תיקון, משקל, עלות והמלצות ספציפיות ליישום.',
+  },
+  hr: {
+    title: 'PVC protiv Hypalon — Tehničko uspoređivanje za napuhljive brodove',
+    description:
+      'Glavna usporedba PVC (polivinil klorid) i Hypalon (klorosulfonirani polietilen) za konstrukciju napuhljivih brodova: UV otpornost, izdržljivost, popravljivost, težina, cijena i preporuke specifične za primjenu.',
+  },
+  hu: {
+    title: 'PVC vs Hypalon — Műszaki összehasonlítás a felfújható hajókhoz',
+    description:
+      'PVC (polivinil-klorid) és Hypalon (klór-szulfonált polietilén) fej-fej melletti összehasonlítása a felfújható hajók készítésénél: UV ellenállás, tartósság, javíthatóság, súly, költség és alkalmazás-specifikus ajánlások.',
+  },
+  id: {
+    title: 'PVC vs Hypalon — Perbandingan Teknis untuk Perahu Karet',
+    description:
+      'Perbandingan langsung antara PVC (polivinil klorida) dan Hypalon (klorosulfonasi etilena) untuk konstruksi perahu karet: ketahanan UV, daya tahan, kemudahan perbaikan, berat, biaya, dan rekomendasi spesifik aplikasi.',
+  },
+  ko: {
+    title: 'PVC vs Hypalon — 인플레이션 보트 기술 비교',
+    description:
+      '인플레이션 보트 제작을 위한 PVC(폴리염화비닐)과 Hypalon(염소술포네이트 폴리에틸렌)의 비교: UV 저항성, 내구성, 수리 가능성, 무게, 비용 및 적용별 추천 사항.',
+  },
+  lt: {
+    title: 'PVC vs Hypalon — techninis pripučiamų valtų palyginimas',
+    description:
+      'Tiesioginis PVC (polivinilchlorido) ir Hypalon (chlorosulfonuoto polietileno) palyginimas pripučiamų valtų konstrukcijoje: UV atsparumas, patvarumas, taisomumas, svoris, kaina ir taikymo specifinės rekomendacijos.',
+  },
+  lv: {
+    title: 'PVC pret Hypalon — tehniska salīdzināšana uzpūšamajām laivām',
+    description:
+      'Tieša salīdzināšana starp PVC (polivinilhlorīds) un Hypalon (hlorosulfonēts polietilēns) uzpūšamo laivu konstrukcijai: UV izturība, ilgmūžība, remontspēja, svars, izmaksas un lietošanas specifiski ieteikumi.',
+  },
+};
+const meta = META[lang] || META.en;
+const ResearchBody: any =
+  (
+    {
+      de: LDe,
+      es: LEs,
+      fr: LFr,
+      it: LIt,
+      cs: LCs,
+      sv: LSv,
+      da: LDa,
+      el: LEl,
+      no: LNo,
+      ru: LRu,
+      nl: LNl,
+      fi: LFi,
+      pl: LPl,
+      ar: LAr,
+      pt: LPt,
+      ja: LJa,
+      ms: LMs,
+      ro: LRo,
+      sk: LSk,
+      sl: LSl,
+      sr: LSr,
+      th: LTh,
+      tl: LTl,
+      tr: LTr,
+      bg: LBg,
+      et: LEt,
+      he: LHe,
+      hr: LHr,
+      hu: LHu,
+      id: LId,
+      ko: LKo,
+      lt: LLt,
+      lv: LLv,
+    } as Record<string, any>
+  )[lang] || null;
+
+const metadata = {
+  title: `${meta.title} | ${SITE.name}`,
+  description: meta.description,
+  ignoreTitleTemplate: true,
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: meta.title,
+  description: metadata.description,
+  author: { '@type': 'Organization', name: SITE.name },
+  datePublished: '2024-02-10',
+  dateModified: '2025-05-15',
+};
+
+const faqSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is the main difference between PVC and Hypalon?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'PVC is a thermoplastic welded with RF energy — lighter and more affordable. Hypalon (CSM) is a synthetic rubber glued by hand — more UV-resistant and longer-lasting.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Which lasts longer?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Hypalon/CSM: 10-15 years. PVC: 5-8 years. Hypalon resists UV, ozone, and chemical degradation better.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can PVC be recycled?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'PVC is recyclable through specialized processes. Hypalon/CSM is not recyclable but has a longer service life reducing replacement frequency.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What temperature range does each handle?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'PVC remains flexible to -20°C (with cold crack testing per ISO 4646). Hypalon handles extreme heat better, making it preferred for tropical/commercial use.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Does Aquafarer offer both materials?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Marine-grade PVC (0.9-1.2mm) is standard. Hypalon/CSM (1,680 DTEX) available for commercial and custom OEM orders.',
+      },
+    },
+  ],
+});
+---
+
+<Layout metadata={metadata}>
+  <JsonLd data={jsonLd} />
+
+  <article class="max-w-4xl mx-auto px-6 py-16">
+    <nav class="text-sm text-gray-500 mb-8">
+      <a href={`/${lang}/`} class="hover:text-sky-600">{SITE.name}</a>
+      <span class="mx-2">/</span>
+      <a href={`/${lang}/research`} class="hover:text-sky-600">{t('home.research.title')}</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-900">{t('home.research.pvcHypalon')}</span>
+    </nav>
+
+    <div class="mb-4">
+      <span
+        class="inline-block text-xs font-semibold uppercase tracking-wider text-sky-600 bg-sky-50 px-3 py-1 rounded-full"
+        >Materials</span
+      >
+      <span class="ml-3 text-sm text-gray-400">10 min read</span>
+    </div>
+
+    <h1 class="text-4xl font-bold text-gray-900 mb-6">{t('home.research.pvcHypalon')}</h1>
+    <p class="text-xl text-gray-500 mb-12 leading-relaxed">{t('home.research.pvcHypalon.desc')}</p>
+
+    <div class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600">
+      {
+        ResearchBody ? (
+          <ResearchBody lang={lang} />
+        ) : (
+          <div class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600">
+            <h2>Material Overview</h2>
+
+            <h3>PVC (Polyvinyl Chloride)</h3>
+            <p>
+              PVC is a thermoplastic polymer used extensively in inflatable boat manufacturing. For marine applications,
+              it is typically reinforced with a polyester scrim (1,100 – 1,680 DTEX) and coated on both sides. Modern
+              marine PVC formulations include UV stabilizers and plasticizers to improve flexibility and weather
+              resistance.
+            </p>
+
+            <h3>Hypalon (CSM – Chlorosulfonated Polyethylene)</h3>
+            <p>
+              Hypalon is a synthetic rubber compound (now produced generically as CSM after DuPont discontinued the
+              Hypalon trademark). It is renowned for exceptional UV and ozone resistance, making it the preferred
+              material for professional and military-grade inflatable boats that spend extended periods in direct
+              sunlight.
+            </p>
+
+            <h2>Side-by-Side Comparison</h2>
+            <table class="w-full text-sm border-collapse">
+              <thead>
+                <tr class="bg-gray-100">
+                  <th class="p-3 text-left font-semibold text-gray-900 border">Property</th>
+                  <th class="p-3 text-left font-semibold text-gray-900 border">PVC</th>
+                  <th class="p-3 text-left font-semibold text-gray-900 border">Hypalon (CSM)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <>
+                    <td class="p-3 border font-medium">UV resistance</td>
+                    <td class="p-3 border">Good (with stabilizers)</td>
+                    <td class="p-3 border">Excellent (inherent)</td>
+                  </>
+                </tr>
+                <tr>
+                  <>
+                    <td class="p-3 border font-medium">Abrasion resistance</td>
+                    <td class="p-3 border">Good</td>
+                    <td class="p-3 border">Very good</td>
+                  </>
+                </tr>
+                <tr>
+                  <>
+                    <td class="p-3 border font-medium">Tensile strength</td>
+                    <td class="p-3 border">3,000 – 5,000 N/5cm</td>
+                    <td class="p-3 border">2,500 – 4,000 N/5cm</td>
+                  </>
+                </tr>
+                <tr>
+                  <>
+                    <td class="p-3 border font-medium">Weight (per m&sup2;)</td>
+                    <td class="p-3 border">850 – 1,200 g</td>
+                    <td class="p-3 border">1,100 – 1,500 g</td>
+                  </>
+                </tr>
+                <tr>
+                  <>
+                    <td class="p-3 border font-medium">Cold flex (low temp)</td>
+                    <td class="p-3 border">-30&deg;C</td>
+                    <td class="p-3 border">-20&deg;C</td>
+                  </>
+                </tr>
+                <tr>
+                  <>
+                    <td class="p-3 border font-medium">Repairability</td>
+                    <td class="p-3 border">Easy (heat weld or adhesive)</td>
+                    <td class="p-3 border">Requires special CSM adhesive</td>
+                  </>
+                </tr>
+                <tr>
+                  <>
+                    <td class="p-3 border font-medium">Joining method</td>
+                    <td class="p-3 border">RF welding, hot air welding</td>
+                    <td class="p-3 border">Hand gluing (contact cement)</td>
+                  </>
+                </tr>
+                <tr>
+                  <>
+                    <td class="p-3 border font-medium">Cost (material)</td>
+                    <td class="p-3 border">$8 – $15 / m&sup2;</td>
+                    <td class="p-3 border">$20 – $40 / m&sup2;</td>
+                  </>
+                </tr>
+                <tr>
+                  <>
+                    <td class="p-3 border font-medium">Lifespan (tropical sun)</td>
+                    <td class="p-3 border">5 – 8 years</td>
+                    <td class="p-3 border">10 – 15 years</td>
+                  </>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2>Which Should You Choose?</h2>
+
+            <h3>Choose PVC When:</h3>
+            <ul>
+              <li>Budget is a primary concern</li>
+              <li>The boat will be stored out of direct sunlight</li>
+              <li>Weight matters (PVC is 15 – 25% lighter)</li>
+              <li>You need cold-weather flexibility below -20&deg;C</li>
+              <li>You want a wider range of color options</li>
+            </ul>
+
+            <h3>Choose Hypalon When:</h3>
+            <ul>
+              <li>The boat will be moored or stored in direct sunlight</li>
+              <li>You are in a tropical or high-UV environment</li>
+              <li>Maximum durability and lifespan are the priority</li>
+              <li>You are equipping professional or commercial fleets</li>
+              <li>Abrasion from sand, concrete, or docks is a concern</li>
+            </ul>
+
+            <h2>Manufacturing Differences</h2>
+            <p>
+              PVC boats are manufactured using RF (radio frequency) welding or hot air welding, which creates a
+              molecular bond between the coated fabric layers. This allows for automated, consistent production with
+              high throughput. Hypalon boats are assembled using hand-gluing with contact cement. Each seam is manually
+              rolled and pressed, making Hypalon production more labor-intensive.
+            </p>
+
+            <h2>Aquafarer Recommendation</h2>
+            <p>
+              For most recreational users, modern high-quality PVC with UV stabilizers offers the best balance of cost,
+              weight, performance, and durability. Aquafarer uses 1,680 DTEX marine PVC with a three-layer coating for
+              its consumer and OEM product lines. For commercial and government clients requiring extended UV exposure,
+              we offer Hypalon fabrication on request.
+            </p>
+          </div>
+        )
+      }
+    </div>
+
+    <div class="mt-16 pt-8 border-t border-gray-200">
+      <a href={`/${lang}/research`} class="text-sky-600 hover:text-sky-700 font-medium"
+        >&larr; {t('home.research.tagline')}</a
+      >
+    </div>
+  </article>
+  <script is:inline type="application/ld+json" set:html={faqSchema} />
+</Layout>

@@ -1,0 +1,130 @@
+hero_text:
+  tagline: צור קשר
+  title: צור קשר
+contact_form:
+  id: form
+  title: שלח לנו הודעה
+  subtitle: לציטוטים, שאלות טכניות או פניות לשיתוף פעולה, שלחו לנו הודעה. אנו משתנים תוך יום עסקים אחד.
+  email_to: info@aquafarer.com
+  submit_button: שלח בקשה → קבל הצעת מחיר
+  success_message: תודה! ההודעה שלך נחתה בתיבת הדואר הנכנס שלנו. אנחנו נענה בתוך יום עסקים אחד.
+  error_message: משהו השתבש בשליחת ההודעה שלך. אנא נסה שוב או שלח לנו דוא"ל ישירות.
+  default_country_code: '+1'
+  captcha:
+    label: 'אנטי-ספאם: אנא פתרו את הבא'
+  fields:
+    - name: שם פרטי
+      label: שם פרטי
+      row: 1
+    - name: שם משפחה
+      label: שם משפחה
+      row: 1
+    - name: שם חברה
+      label: שם חברה
+      row: 2
+    - name: address
+      label: כתובת
+      row: 3
+    - name: zip
+      label: מיקוד
+      row: 4
+    - name: country
+      label: מדינה
+      row: 4
+      type: select
+      optionsKey: countries
+    - name: email
+      label: דואר אלקטרוני
+      row: 5
+      type: email
+    - name: tel
+      label: טל
+      row: 5
+      type: tel
+      withCountryCode: true
+    - name: נפח הזמנה
+      label: נפח הזמנה מוערך
+      row: 6
+      type: select
+      options:
+        - value: ''
+          label: בחר את הנפח המשוער שלך...
+        - value: sample
+          label: דגימות / אב-טיפוסים בלבד
+        - value: 5-10
+          label: 5–10 יחידות (סטנדרט MOQ)
+        - value: 100-500
+          label: 100–500 יחידות
+        - value: 500-plus
+          label: 500+ יחידות (תמחור לפי נפח)
+    - name: customization
+      label: נדרשת התאמה אישית?
+      row: 7
+      type: select
+      options:
+        - value: ''
+          label: בחר סוג התאמה אישית...
+        - value: none
+          label: מוצר סטנדרטי (ללא התאמה אישית)
+        - value: logo
+          label: לוגו מותאם אישית / מיתוג בלבד
+        - value: full
+          label: מלא OEM (גודל, צבע, גרפיקה, אריזה)
+        - value: consultation
+          label: לא בטוח — צריך ייעוץ
+    - name: productInterest
+      label: קטגוריות מוצרים מעניינות
+      row: 8
+      type: select
+      options:
+        - value: ''
+          label: בחר קטגוריית מוצר...
+        - value: all
+          label: כל המוצרים / קטלוג מלא
+        - value: sup
+          label: SUP לוחות / פדלוורדים
+        - value: kayak
+          label: קיאקים מתנפחים
+        - value: rib
+          label: RIB סירות
+        - value: dinghy
+          label: דינגי / טנדרים
+        - value: safety
+          label: ציוד בטיחות / אפודי הצלה
+        - value: accessory
+          label: ציוד נלווה (משאבות, משוטים, תיקים)
+    - name: subject
+      label: נושא
+      row: 9
+    - name: message
+      label: הודעה
+      row: 10
+      type: textarea
+      rows: 6
+features2_other_ways:
+  title: דרכים נוספות ליצור איתנו קשר
+  columns: 3
+  items:
+    - title: פניות מכירה
+      description: ציטוטים, קונפיגורציות, בקשות סוחרים והזמנות בסיטונאות.
+      icon: tabler:shopping-bag
+    - title: תמיכה טכנית
+      description: אחריות, תיקונים, חלפים ושאלות הפעלה.
+      icon: tabler:tool
+    - title: עיתונות & שיתופי פעולה
+      description: ערכת מדיה, חסויות ושיתופי פעולה בתעשייה.
+      icon: tabler:news
+    - title: טלפון
+      description: +1 279 732 3333 (מפקדה בארה"ב) · +86 13305324192 (מפעל)
+      icon: tabler:headset
+    - title: דואר אלקטרוני
+      description: info@aquafarer.com
+      icon: tabler:mail
+    - title: מפקדה עולמית & חיוב
+      description: Aquafarer LLC, ניו מקסיקו, ארצות הברית
+      icon: tabler:map-pin
+map:
+  title: המיקום שלנו
+  subtitle: בקרו במרכז הייצור שלנו בQingdao
+  address: אזור הפיתוח הכלכלי, Laixi, Qingdao, סין, 266600
+  zoom: 15

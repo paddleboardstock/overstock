@@ -1,0 +1,306 @@
+hero_text:
+  tagline: Dapatkan Sebutharga
+  title: Permohonan Sebutharga<br />untuk Projek Anda
+  subtitle: Beritahu kami mengenai keperluan anda dan pasukan kami akan memberi respons dengan sebutharga terperinci dalam masa 2 hari bekerja.
+steps2_process:
+  title: Bagaimana Ia Berfungsi
+  subtitle: Empat langkah mudah dari pertanyaan hingga sebutharga.
+  items:
+    - title: 'Langkah 1: Hantar Keperluan Anda'
+      description: Isi borang di bawah dengan jenis produk, kuantiti, dan spesifikasi anda. Lagi banyak maklumat yang anda berikan, lagi tepat sebutharga yang kami sediakan.
+      icon: tabler:file-text
+    - title: 'Langkah 2: Kami Menyemak & Memberi Nasihat'
+      description: Pasukan kejuruteraan kami menyemak keperluan anda dan mungkin menghubungi anda untuk penjelasan. Kami memberikan cadangan mengenai konfigurasi produk dan pilihan.
+      icon: tabler:users
+    - title: 'Langkah 3: Terima Sebutharga Anda'
+      description: Anda akan menerima sebutharga terperinci termasuk harga unit, MOQ, tempoh siap, syarat pembayaran, dan pilihan penghantaran. Biasanya dalam 48 jam.
+      icon: tabler:currency-dollar
+    - title: 'Langkah 4: Sampel & Pengeluaran'
+      description: Selepas penerimaan sebutharga, kami meneruskan kepada pengeluaran sampel (jika berkenaan) atau terus ke pengeluaran besar-besaran. Kemas kini berkala sepanjang proses.
+      icon: tabler:building-factory
+content_form:
+  tagline: Borang Sebutharga
+  title: Beritahu Kami Mengenai Projek Anda
+  subtitle: Semua ruangan yang bertanda * adalah wajib.
+  fields:
+    - name: Kategori Produk
+      type: select
+      options:
+        - RIB Bot
+        - Bot Tiup
+        - SUP Papan
+        - Kayak Tiup
+        - Jaket Keselamatan
+        - Aksesori Marin
+        - OEM/ODM Custom
+    - name: Aplikasi
+      type: select
+      options:
+        - Pusat Menyelam
+        - Memancing
+        - Pelancongan Marin / Resort
+        - Carian & Penyelamatan
+        - Tender Yacht
+        - Bot Kerja Komersial
+        - Kerajaan / Tentera
+        - OEM / Label Peribadi
+        - Peribadi / Rekreasi
+        - Lain-lain
+    - name: Kuantiti
+      type: text
+      placeholder: 'contoh: 50 unit'
+    - name: Pasaran Sasaran
+      type: text
+      placeholder: 'contoh: Eropah, Amerika Utara, Timur Tengah'
+    - name: Negara Penghantaran
+      type: text
+      placeholder: 'contoh: Itali, UAE, USA, Australia'
+    - name: Keutamaan Bahan
+      type: select
+      options:
+        - Tiada Keutamaan
+        - PVC Gred Marin (1100 dtex)
+        - Hypalon / CSM Premium
+        - Sarung Fiberglass
+        - Sarung Aluminium
+    - name: Keperluan Enjin
+      type: text
+      placeholder: 'contoh: 60 HP enjin luar, tiada enjin, twin 115 HP'
+    - name: Penyediaan Khusus Diperlukan
+      type: text
+      placeholder: 'contoh: warna khusus, penjenamaan/logo, pembungkusan, kelengkapan khas'
+    - name: Garis Masa
+      type: text
+      placeholder: 'contoh: penghantaran dalam masa 90 hari'
+    - name: Keperluan Tambahan
+      type: textarea
+      placeholder: Terangkan aplikasi anda, spesifikasi teknikal, atau sebarang keperluan khas — sertakan lukisan rujukan, spesifikasi, atau pautan jika ada
+    - name: Muat Naik Spesifikasi
+      type: file
+      placeholder: Muat naik helaian spesifikasi, lukisan, atau dokumen rujukan anda (PDF, DWG, DXF)
+    - name: Muat Naik Logo / Seni
+      type: file
+      placeholder: Muat naik logo atau seni anda untuk penjenamaan khusus (AI, EPS, PNG)
+content_rfq_types:
+  tagline: Sistem RFQ 3-Tier
+  title: Pilih Tahap<br />Pertanyaan Yang Betul
+  subtitle: Projek berbeza memerlukan tahap perincian yang berbeza. Pilih borang yang sepadan dengan peringkat pembelian anda.
+  items:
+    - title: Pertanyaan Pantas
+      description: 5-6 medan, 30 saat. Untuk hubungan awal, soalan umum, atau susulan muat turun sumber. Kami akan membalas dalam masa 24 jam dengan maklumat asas dan langkah seterusnya.
+      icon: tabler:bolt
+    - title: RFQ Standard
+      description: 8-10 medan, 2 minit. Untuk sebut harga produk tertentu dengan pemilihan model, kuantiti, dan keperluan penghantaran. Terima sebut harga terperinci dalam masa 48 jam.
+      icon: tabler:file-text
+    - title: RFQ Projek
+      description: 10-14 medan, 5 minit. Untuk RIB, armada resort, penyelamatan, atau projek kerajaan yang memerlukan konfigurasi tersuai, dokumentasi pematuhan, dan perancangan bekalan multi-tahun. Pengurus projek khusus akan ditugaskan.
+      icon: tabler:clipboard-list
+form_quick:
+  title: Pertanyaan Pantas
+  subtitle: Hubungan pantas untuk soalan umum dan permintaan maklumat awal.
+  fields:
+    - name: fullName
+      label: Nama Penuh
+      type: text
+      required: true
+      placeholder: Nama penuh anda
+    - name: businessEmail
+      label: Email Perniagaan
+      type: email
+      required: true
+      placeholder: you@company.com
+    - name: companyName
+      label: Nama Syarikat
+      type: text
+      required: true
+      placeholder: Syarikat anda
+    - name: buyerType
+      label: Saya adalah seorang...
+      type: select
+      required: true
+      options:
+        - Pengedar / Importer
+        - Pemilik Jenama / Label Peribadi
+        - Resort / Pusat Air
+        - Operator Sewaan
+        - Agensi Kerajaan / Penyelamat
+        - Operator Menyelam / Memancing
+        - Jurutera Marin / Penyelenggara semula
+        - Lain-lain
+    - name: productInterest
+      label: Minat Produk
+      type: multiselect
+      required: true
+      options:
+        - RIB Bot
+        - Bot Tiup
+        - Papan SUP
+        - Peralatan Keselamatan
+        - Aksesori
+        - OEM/ODM Tersuai
+    - name: message
+      label: Apa yang anda perlukan?
+      type: textarea
+      required: false
+      placeholder: Penerangan ringkas tentang keperluan anda...
+form_standard:
+  title: RFQ Standard
+  subtitle: Permintaan sebut harga terperinci untuk produk dan kuantiti tertentu.
+  fields:
+    - name: fullName
+      label: Nama Penuh
+      type: text
+      required: true
+    - name: businessEmail
+      label: Email Perniagaan
+      type: email
+      required: true
+    - name: companyName
+      label: Nama Syarikat
+      type: text
+      required: true
+    - name: buyerType
+      label: Jenis Pembeli
+      type: select
+      required: true
+    - name: modelProduk
+      label: Model / Jenis Produk
+      type: text
+      required: true
+      placeholder: contoh, AF580 RIB, AF380 Tiup
+    - name: quantity
+      label: Anggaran Kuantiti
+      type: text
+      required: true
+      placeholder: contoh, 10-20 unit
+    - name: pasaranSasaran
+      label: Pasaran / Wilayah Sasaran
+      type: text
+      required: true
+      placeholder: contoh, EU, Amerika Utara, Timur Tengah
+    - name: garisMasaPenghantaran
+      label: Penghantaran Yang Dikehendaki
+      type: select
+      required: true
+      options:
+        - Dalam 30 hari
+        - 30-60 hari
+        - 60-90 hari
+        - Merancang lebih awal (90+ hari)
+        - Hanya membuat kajian
+    - name: kepatuhanDiperlukan
+      label: Keperluan Kepatuhan
+      type: multiselect
+      required: false
+      options:
+        - CE / RCD 2013/53/EU
+        - UKCA
+        - USCG
+        - ISO 9001
+        - BSCI
+        - REACH
+        - Tiada / Tidak pasti
+    - name: message
+      label: Maklumat Tambahan
+      type: textarea
+      required: false
+form_project:
+  title: RFQ Projek
+  subtitle: Pertanyaan projek menyeluruh untuk armada, pesanan khas, atau perolehan kerajaan.
+  fields:
+    - name: fullName
+      label: Nama Penuh
+      type: text
+      required: true
+    - name: businessEmail
+      label: Email Perniagaan
+      type: email
+      required: true
+    - name: companyName
+      label: Nama Syarikat
+      type: text
+      required: true
+    - name: buyerType
+      label: Jenis Pembeli
+      type: select
+      required: true
+    - name: projectType
+      label: Jenis Projek
+      type: select
+      required: true
+      options:
+        - Armada Resort / Hotel
+        - Armada Sewa
+        - Armada Menyelamat / Rondaan
+        - Armada Pusat Menyelam
+        - Perolehan Kerajaan
+        - Label Peribadi / OEM
+        - Pesanan Stok Pengedar
+        - Lain-lain
+    - name: boatTypes
+      label: Jenis Bot Yang Diperlukan
+      type: multiselect
+      required: true
+      options:
+        - RIB Bot
+        - Bot Tiup / Bot Kecil
+        - Papan SUP
+        - Kayak
+        - Peralatan Keselamatan
+    - name: fleetSize
+      label: Saiz Armada / Julat Kuantiti
+      type: text
+      required: true
+      placeholder: contoh, 20-50 unit dalam 12 bulan
+    - name: customRequirements
+      label: Keperluan Konfigurasi Khas
+      type: textarea
+      required: false
+      placeholder: Saiz hull, bahan tiub, susun atur dek, keperluan penjenamaan...
+    - name: kepatuhanDiperlukan
+      label: Keperluan Pematuhan & Pensijilan
+      type: multiselect
+      required: true
+      options:
+        - CE / RCD 2013/53/EU
+        - UKCA
+        - USCG Jenis III/V
+        - ISO 9001
+        - BSCI
+        - REACH / RoHS
+        - Pensijilan pasaran tempatan
+    - name: pasaranSasaran
+      label: Pasaran Sasaran
+      type: text
+      required: true
+    - name: Julat Bajet
+      label: Julat Bajet
+      type: select
+      required: false
+      options:
+        - Di bawah $10,000
+        - $10,000 - $50,000
+        - $50,000 - $200,000
+        - $200,000+
+        - Lebih suka tidak menyatakan
+    - name: garisMasaPenghantaran
+      label: Garis Masa Projek
+      type: select
+      required: true
+      options:
+        - Segera (dalam 30 hari)
+        - Standard (30-60 hari)
+        - Dirancang (60-90 hari)
+        - Perancangan masa depan (lebih 90 hari)
+    - name: message
+      label: Perincian & Keperluan Projek
+      type: textarea
+      required: false
+      placeholder: Huraikan projek anda, aplikasi, dan sebarang keperluan spesifik...
+cta:
+  title: Lebih suka berunding melalui e-mel?
+  subtitle: Hantar pertanyaan anda terus kepada pasukan jualan kami dan kami akan membalas dalam masa 24 jam.
+  actions:
+    - variant: primary
+      text: E-mel kami terus
+      href: /contact

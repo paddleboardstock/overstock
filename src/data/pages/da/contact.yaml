@@ -1,0 +1,132 @@
+hero_text:
+  tagline: Kontakt
+  title: KONTAKT OS
+  subtitle: Vi er her for at hjælpe dig. Kontakt os vedrørende produktspørgsmål, OEM/ODM partnerskaber eller andre spørgsmål.
+
+contact_form:
+  id: form
+  title: Send os en besked
+  subtitle: Tilbud, tekniske spørgsmål eller partnerskabshenvendelser – skriv til os. Vi svarer inden for én arbejdsdag.
+  email_to: info@aquafarer.com
+  submit_button: Send forespørgsel → Få et tilbud
+  success_message: Tak! Din besked er landet i vores indbakke. Vi svarer inden for én arbejdsdag.
+  error_message: Noget gik galt ved afsendelse af din besked. Prøv igen eller send os en e-mail direkte.
+  default_country_code: '+1'
+  captcha:
+    label: 'Anti-spam: løs venligst følgende'
+  fields:
+    - name: firstName
+      label: Fornavn
+      row: 1
+    - name: lastName
+      label: Efternavn
+      row: 1
+    - name: companyName
+      label: Virksomhedsnavn
+      row: 2
+    - name: address
+      label: Adresse
+      row: 3
+    - name: zip
+      label: Postnummer
+      row: 4
+    - name: country
+      label: Land
+      row: 4
+      type: select
+      optionsKey: countries
+    - name: email
+      label: E-mail
+      row: 5
+      type: email
+    - name: tel
+      label: Telefon
+      row: 5
+      type: tel
+      withCountryCode: true
+    - name: orderVolume
+      label: Forventet ordremængde
+      row: 6
+      type: select
+      options:
+        - value: ''
+          label: Vælg forventet mængde...
+        - value: sample
+          label: Kun prøver / prototyper
+        - value: '5-10'
+          label: 50–100 enheder (standard MOQ)
+        - value: '100-500'
+          label: 100–500 enheder
+        - value: '500-plus'
+          label: 500+ enheder (volumenpriser)
+    - name: customization
+      label: Brug for tilpasning?
+      row: 7
+      type: select
+      options:
+        - value: ''
+          label: Vælg tilpasningstype...
+        - value: none
+          label: Standardprodukt (uden tilpasning)
+        - value: logo
+          label: Kun tilpasset logo / branding
+        - value: full
+          label: Fuld OEM (størrelse, farve, grafik, emballage)
+        - value: consultation
+          label: Ikke sikker — har brug for rådgivning
+    - name: productInterest
+      label: Produktkategorier af interesse
+      row: 8
+      type: select
+      options:
+        - value: ''
+          label: Vælg produktkategori...
+        - value: all
+          label: Alle produkter / fuld katalog
+        - value: sup
+          label: SUP boards / paddleboards
+        - value: kayak
+          label: Opsvulmelige kajakker
+        - value: rib
+          label: RIB-både
+        - value: dinghy
+          label: Joller / tenderbåde
+        - value: safety
+          label: Sikkerhedsudstyr / redningsveste
+        - value: accessory
+          label: Tilbehør (pumper, årer, tasker)
+    - name: subject
+      label: Emne
+      row: 9
+    - name: message
+      label: Besked
+      row: 10
+      type: textarea
+      rows: 6
+features2_other_ways:
+  title: Andre måder at kontakte os
+  columns: 3
+  items:
+    - title: Salgshenvendelser
+      description: Tilbud, konfigurationer, forhandleransøgninger og bulkordrer.
+      icon: tabler:shopping-bag
+    - title: Teknisk support
+      description: Garanti, reparationer, reservedele og driftsrelaterede spørgsmål.
+      icon: tabler:tool
+    - title: Presse og partnerskaber
+      description: Mediesæt, sponsorater og branchesamarbejde.
+      icon: tabler:news
+    - title: Telefon
+      description: +86 13305324192
+      icon: tabler:headset
+    - title: E-mail
+      description: info@aquafarer.com
+      icon: tabler:mail
+    - title: Hovedkontor
+      description: Economic Development Zone, Laixi, Qingdao, Kina, 266600
+      icon: tabler:map-pin
+map:
+  title: Vores beliggenhed
+  subtitle: Besøg os på hovedkontoret
+  address: Economic Development Zone, Laixi, Qingdao, Kina, 266600
+  zoom: 15

@@ -1,0 +1,191 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'tl' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">&larr; Bumalik sa R&D Center</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Laboratoryo 03</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">RF Welding Center</h1>
+      <p class="mt-3 text-lg text-muted">
+        Teknolohiyang dielectric na pagbubuklod para sa mga hinang na nananatili sa ilalim ng presyon
+      </p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-jungle-mandala-1.webp"
+        alt="Aquafarer RF welding na proseso ng dielectric bonding"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Ang agham sa likod ng tahi</h2>
+  <p>
+    Ang isang bangkang inflatable ay kasing-tiwala lamang ng mga tahi nito. Isang mahinang weld lang ay maaaring
+    makaapekto sa buong chamber — at sa dagat, ang pagkasira ng chamber ay hindi simpleng abala; ito ay isang panganib
+    sa kaligtasan. Sa{SITE.name}, kami ay naglaan ng pondo sa isang dedikadong Radio-Frequency (RF) Welding Center na
+    pinagsasama ang industrial-grade dielectric welding presses sa mahigpit na kontrol sa proseso at post-weld testing.
+    Bawat tahi na aming ginagawa ay naitala, masusubaybayan, at sertipikado upang matugunan o higitan ang mga kahilingan
+    ng — ang pandaigdigang pamantayan para sa mga inflatable na sasakyan.
+  </p>
+  <p>
+    Ang RF welding ay gumagamit ng high-frequency electromagnetic energy (karaniwang 27.12 MHz) upang pukawin ang mga
+    polar na molekula sa loob ng PVC o Hypalon-coated na tela, na lumilikha ng init nang tumpak sa interface ng
+    materyal. Hindi tulad ng hot-air o hot-wedge welding, ang RF welding ay lumilikha ng tunay na molekular na ugnayan —
+    ang dalawang layer ng tela ay nagsasanib upang maging isang homogeneous na materyal sa weld zone, na nagreresulta sa
+    isang kasukasuan na kasing tibay ng mismong materyal na pinagmulan.
+  </p>
+
+  <h2>Kagamitan sa pag-su-welding at kontrol ng proseso</h2>
+  <p>Ang aming sentro ng welding ay may kagamitan ng:</p>
+  <table>
+    <thead><tr><th>Makina</th><th>Lakas / Kakayahan</th><th>Aplikasyon</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Dielectric RF press 1</td><td>15 kW, platen 2000 × 600 mm</td><td
+          >Pangunahing pahabang tahi, mga kasukasuan mula sa transom hanggang tubo</td
+        ></tr
+      >
+      <tr
+        ><td>Dielectric RF press 2</td><td>10 kW, platen 1500 × 500 mm</td><td
+          >Mga hinanakit na hinang, mga pantakip na kono, mga tambalan ng balbula</td
+        ></tr
+      >
+      <tr
+        ><td>RF welder na kontrolado ng CNC</td><td>8 kW, XYtable 2500 × 1200 mm</td><td
+          >Baluktot na tahi, pag-imprenta ng logo/panel, tumpak na pagkakabit ng patse</td
+        ></tr
+      >
+      <tr
+        ><td>Awtomatikong pampagdugtong ng Hotwedge</td><td>Nagbabagong temperatura, 1.2 m/min maximum</td><td
+          >Paraan ng backup para sa mga materyales na Hypalon/CSM</td
+        ></tr
+      >
+    </tbody>
+  </table>
+  <p>
+    Ang bawat RF press ay may kasamang closed-loop na pagmamanman ng temperatura at presyon. Ang mga parameter ng
+    welding — kuryente, oras ng press, oras ng pagpapalamig, presyon ng elektrod — ay pinoprograma batay sa uri ng
+    materyal at itinatala sa aming Manufacturing Execution System (MES) para sa ganap na traceability.
+  </p>
+
+  <h2>Mga pagsusuri sa kalidad ng hinang — bawat tahi, bawat bangka</h2>
+  <p>Ang integridad ng hinang ay sinusuri sa pamamagitan ng sapilitang apat na pagsusuri:</p>
+  <ol>
+    <li>
+      <strong>Biswal na inspeksyon</strong>— 100 % ng mga tahi ay biswal na iniinspeksyon para sa pagkasunog, maling
+      pagkakahanay, kontaminasyon, o hindi kumpletong pagsasanib. Hangganan ng porsyento ng pagtanggi: 0.5 % ng linear
+      na metro.
+    </li>
+    <li>
+      <strong>Pagsubok sa pagbabalat ()</strong>— Isang 25 mm na malawak na piraso ang hiniwa mula sa isang test coupon
+      na hinangin kasama ng bawat batch ng produksyon. Minimum na puwersa ng paghila: 120 N/25 mm para sa PVC 1100 dtex.
+    </li>
+    <li>
+      <strong>Pagsubok sa pagpigil ng hangin</strong>— Ang bawat kumpletong silid ay pinapailalim sa presyon na 1.25 ×
+      ng working pressure at hinahawakan sa loob ng 24-48 na oras. Ang pagbaba ng presyon ay hindi dapat lumampas sa 2
+      %.
+    </li>
+    <li>
+      <strong>Pagsubok sa thermal cycling</strong>— Ang mga sample coupon ay pinapaikot mula -20 °C hanggang +60 °C sa
+      loob ng 50 cycle, pagkatapos ay sinusubukan muli ang pagkapilas. Katanggap-tanggap na pagkawala ng lakas: 10 %.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Paghahambing ng Lakas ng Balat — RF vs Hot-Air Welding (PVC 1100 dtex)
+    </p>
+    <div class="space-y-3">
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">RF Nagtahi</span><div
+          class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded"
+        >
+          <div class="h-full bg-blue-600 rounded" style="width:92%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">184 N</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">Mainit na Hangin</span><div
+          class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded"
+        >
+          <div class="h-full bg-gray-400 rounded" style="width:65%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">130 N</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">minuto</span><div
+          class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded"
+        >
+          <div class="h-full bg-green-500 rounded" style="width:48%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">96 N</span>
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      Ang RF welding ay palaging nakakamit ng 90-95% ng lakas ng pangunahing materyal, na higit sa minimum.
+    </p>
+  </div>
+
+  <h2>Propesyonal na kadalubhasaan</h2>
+  <p>
+    Ang aming welding team ay pinamumunuan ng isang senior process engineer na may 11 taong karanasan sa dielectric
+    welding ng coated textiles. Bawat operator ay kumukumpleto sa isang 6-buwang in-house certification programme bago
+    payagang magtrabaho sa production seams. Kinakailangan ang recertification taun-taon, kabilang ang isang praktikal
+    na weld test na sinusuri ayon sa aming internal na Grade-A standard (peel strength ≥ 160 N/25 mm).
+  </p>
+
+  <h2>Pasadyang mga solusyon sa welding para sa natatanging mga pangangailangan</h2>
+  <p>
+    Nauunawaan namin na ang isang welding specification ay hindi akma sa bawat aplikasyon. Ang aming RF Welding Center
+    ay karaniwang bumubuo ng mga custom na configuration ng tahi para sa mga kliyenteng may espesyal na pangangailangan:
+  </p>
+  <ul>
+    <li>
+      <strong>Maramihang patong na pampatibay na mga patch</strong>— para sa mga lugar na mataas ang pagkasuot tulad ng
+      rubbing strakes at bow cones, bumubuo kami ng multi-pass RF welds na nag-iintegrate ng lupon na panlaban sa
+      pagkasuot nang hindi isinasakripisyo ang pagiging flexible.
+    </li>
+    <li>
+      <strong>Mga tahi na konduktibo o RFopaque</strong>— para sa mga sasakyang pandigma o pang-surveillance na
+      nangangailangan ng electromagnetic shielding, hinihian namin ng conductive mesh na mga patong ang loob ng seam
+      stack-up.
+    </li>
+    <li>
+      <strong>Pagwelding ng panel na nagbabago ng kulay</strong>— mga panel ng tela na may dalawang kulay (hal. kahel na
+      katawan + abong itaas) na hinang gamit ang nakatagong overlap upang mapanatili ang estetika ng tatak nang walang
+      nakikitang linya ng pagkakahiwalay.
+    </li>
+  </ul>
+
+  <h2>Ang aming pangako sa iyo</h2>
+  <p>
+    Ang bawat bangka na aming ihahatid ay may dalang garantiya sa kalidad ng aming pag-welding: kung ang anumang tahi ay
+    pumalya sa normal na paggamit sa loob ng panahon ng garantiya, ay aayusin o papalitan namin ang apektadong bahagi
+    nang walang bayad, at isasagawa ang isang pagsisiyasat sa ugat ng sanhi upang maiwasan ang pag-uulit. Ito ay hindi
+    simpleng garantiya lamang — ito ay isang pangako sa patuloy na pagpapabuti na pinapatakbo ng totoong datos ng
+    operasyon.
+  </p>
+  <p>
+    Kapag pinili mo{SITE.name}, pinipili mo ang mga tahi na dinisenyo, sinubok, at naitala — hindi lamang hinang. Iyan
+    ang kaibahan ng isang bangkang lumulutang at isang bangkang mahusay gumana.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Talakayin ang iyong mga kinakailangan sa welding</h2>
+    <p class="mt-2 text-sm text-muted">
+      Mga natatanging pagtutukoy ng tahi, pagkakatugma ng materyal, o bisa ng proseso.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Makipag-ugnayan sa aming koponan sa welding</a
+    >
+  </div>
+</section>

@@ -1,0 +1,199 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'ms' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">&larr; Kembali ke Pusat R&D</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Makmal 05</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Bengkel Prototaip</h1>
+      <p class="mt-3 text-lg text-muted">Daripada model CAD ke bot sedia laut — dibina, dipasang, dan terbukti</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-ocean-voyager-1.webp"
+        alt="Aquafarer bengkel prototaip pembuatan bot"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Di mana reka bentuk menjadi kenyataan</h2>
+  <p>
+    Model CAD, tidak kira seterperinci mana, tidak dapat mendedahkan bagaimana sebuah bot akan benar-benar dikendalikan
+    sehingga ia bertemu dengan air. Itulah sebabnya Bengkel Prototaip kami direka untuk menterjemahkan data kejuruteraan
+    ke dalam kraf laut fizikal dengan secepat dan setepat mungkin. Setiap baru{SITE.name}model — dan setiap binaan khas
+    yang penting — melalui bengkel ini sebelum alat pengeluaran dimulakan.
+  </p>
+  <p>
+    Bengkel ini lengkap dilengkapi untuk pembuatan serentak bagi badan bot, tiub, dan peralatan rigging. Pendekatan
+    aliran kerja selari ini mengurangkan masa prototaip kepada 8-12 minggu dari pelepasan kejuruteraan, berbanding norma
+    industri iaitu 16-20 minggu. Apabila aplikasi anda memerlukan penyelesaian khusus, kami boleh bergerak dari konsep
+    ke pengesahan di air dalam masa kurang dari tiga bulan.
+  </p>
+
+  <h2>Keupayaan bengkel</h2>
+  <table>
+    <thead><tr><th>Stesen kerja</th><th>Peralatan</th><th>Tujuan</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Pembuatan badan bot</td><td
+          >Oven acuan putaran (HDPE), bengkel kimpalan TIG (aluminium), acuan lapisan tangan (fiberglass)</td
+        ><td>Pengeluaran badan bot berskala penuh dalam ketiga-tiga jenis bahan</td></tr
+      >
+      <tr
+        ><td>Pemasangan tiub</td><td>Press kimpalan RF, stesen susun udara panas, jig ujian inflasi</td><td
+          >Pembuatan pemasangan tiub bersaiz penuh dengan semua baffle, kon, dan injap</td
+        ></tr
+      >
+      <tr
+        ><td>Rigging & pemasangan</td><td
+          >Pengangkat enjin (500 kg), rangka tiruan konsol, pemampat hos hidraulik, papan pemasangan elektrik</td
+        ><td>Pemasangan lengkap: enjin, stereng, kawalan, sistem bahan api, elektronik, tempat duduk</td></tr
+      >
+      <tr
+        ><td>Teluk instrumen</td><td
+          >Sensor kelajuan GPS, meter aliran bahan api, accelerometer, susunan termokopel, pencatat data</td
+        ><td>Pemasangan dan kalibrasi instrumen ujian laut</td></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>Perjalanan prototaip — langkah demi langkah</h2>
+  <ol>
+    <li>
+      <strong>Serah kejuruteraan</strong>— Pakej reka bentuk (model 3D, laporan FEA, bil bahan, jadual lapisan) secara
+      rasmi dikaji oleh ketua bengkel dan jurutera projek. Sebarang kebimbangan pembuatan ditandai dan diselesaikan
+      sebelum pemotongan bermula.
+    </li>
+    <li>
+      <strong>Pengeluaran badan bot</strong>— Badan bot dibina mengikut spesifikasi kejuruteraan. Untuk HDPE: program
+      acuan putaran dimuatkan dari simulasi Moldex3D. Untuk aluminium: plat yang dipotong CNC dikimpal di bengkel TIG
+      mengikut peta kimpalan yang diluluskan. Untuk fiberglass: buku lapisan diikuti lapisan demi lapisan.
+    </li>
+    <li>
+      <strong>Pembuatan tiub</strong>— Kain dipotong menggunakan templat corak CNC, kemudian dikimpal RF ke dalam bilik
+      saiz penuh. Setiap bilik ditiup hingga tekanan ujian dan dibiarkan selama 24 jam untuk penstabilan awal.
+    </li>
+    <li>
+      <strong>Pemasangan & rigging</strong>— Lambung dan tiub dipadankan. Enjin digantung, sistem stereng dan kawalan
+      disambungkan, sistem bahan api dipasang, dan semua litar elektrik disambungkan dan disahkan.
+    </li>
+    <li>
+      <strong>Ujian statik</strong>— Sebelum bot mencecah air, ia menjalani: pemeriksaan kebuayaan (beban penuh + 30%
+      rizab), ujian tekanan sistem bahan api, ujian kitaran stereng penuh, ujian kesinambungan pengikatan bumi elektrik.
+    </li>
+    <li><strong>Program ujian laut</strong>— 20 jam ujian dalam air, diperincikan di bawah.</li>
+    <li>
+      <strong>Tinjauan prototaip</strong>— Mesyuarat pengesahan rasmi diadakan dengan pasukan kejuruteraan, pengeluaran,
+      dan kualiti. Sebarang perubahan reka bentuk yang diperlukan didokumenkan dan dimasukkan ke dalam pelepasan
+      pengeluaran.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Program Ujian Laut 20-Jam — Jadual Ujian
+    </p>
+    <div class="space-y-2 text-sm">
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">2 h</span><span class="flex-1"
+          >Manuver di pelabuhan — pengendalian kelajuan rendah, reverse, pemeriksaan fender</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">4 h</span><span class="flex-1"
+          >Ujian kelajuan — kelajuan maksimum disahkan GPS, kelajuan pelayaran, penggunaan bahan api pada 3 titik RPM</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Ujian pusingan — diameter taktikal, advance, dan transfer pada 20 kn, belah kiri dan kanan</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Ujian hentaman air — berulang kali melalui ombak 0.5–1.0 m; accelerometer di pangkal kerusi stereng</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Ujian kestabilan — sudut condong statik dengan 4 kru + peralatan ke kanan, beban tidak seimbang</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Larian daya tahan — 3 jam berterusan pada kelajuan pelayaran; pemantauan suhu (enjin, bahan api, elektrik)</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">2 h</span><span class="flex-1"
+          >Pemeriksaan akhir — pemeriksaan pasca-ujian semua sistem, ketatkan/periksa semua pengikat, dokumenkan
+          penemuan</span
+        >
+      </div>
+    </div>
+  </div>
+
+  <h2>Prototip khusus untuk aplikasi unik</h2>
+  <p>
+    Bengkel Prototaip adalah tempat kami menyelesaikan masalah yang bot pengeluaran standard tidak dapat tangani. Contoh
+    terkini termasuk:
+  </p>
+  <ul>
+    <li>
+      Sebuah RIB 7.8 m untuk organisasi pencarian dan penyelamatan, memerlukan struktur kabin khas dengan perlindungan
+      terbalik, pemasangan stretcher terintegrasi, dan pod sonar di haluan — semua diprototaip, dipasang, dan diuji di
+      fasiliti kami.
+    </li>
+    <li>
+      Sebuah bot tiup 5.2 m untuk kontraktor tinjauan hidrograp, dengan transom dipangkas, tiang instrumen boleh
+      tanggal, dan poket transmisi melalui lambung direka untuk meminimumkan gangguan aliran.
+    </li>
+    <li>
+      Sebuah tender 4.5 m dengan pemanduan elektrik untuk superyacht, di mana prototaip digunakan untuk mengesahkan
+      jarak, infrastruktur pengecasan, dan tahap bunyi sebelum pelanggan membuat komitmen kepada armada empat unit.
+    </li>
+  </ul>
+
+  <h2>Pasukan prototaip kami</h2>
+  <p>
+    Bengkel ini dikendalikan oleh lapan juruteknik marin multi- kemahiran, masing-masing dilatih dalam
+    sekurang-kurangnya dua daripada tiga disiplin teras (lambung, tiub, rigging). Ketua pasukan adalah pembuat bot utama
+    dengan pengalaman 16 tahun merangkumi binaan khas satu-off hingga siri pengeluaran. Setiap prototaip diberikan
+    seorang jurutera projek yang berdedikasi yang berkhidmat sebagai satu titik hubungan untuk pelanggan sepanjang
+    proses binaan dan ujian.
+  </p>
+
+  <h2>Penglibatan pelanggan</h2>
+  <p>
+    Kami secara aktif menggalakkan pelanggan kami hadir pada pencapaian utama semasa binaan prototaip — terutamanya
+    semakan pemasangan awal dan ujian laut. Maklum balas operasi anda pada peringkat ini amat berharga dalam
+    menyesuaikan bot sebelum ia memasuki pengeluaran. Kami tidak membina secara bersendirian; kami membina bersama anda.
+  </p>
+  <p>
+    Ujian laut 20-jam juga merupakan peluang bagi pasukan anda untuk membiasakan diri dengan pengendalian bot, susun
+    atur sistem, dan keperluan penyelenggaraan, memastikan peralihan lancar ke perkhidmatan apabila bot pengeluaran
+    diserahkan.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Mulakan projek prototaip anda</h2>
+    <p class="mt-2 text-sm text-muted">
+      Beritahu kami tentang bot yang anda perlukan dan kami akan mencadangkan pelan pembangunan prototaip.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Hubungi pasukan prototaip kami</a
+    >
+  </div>
+</section>

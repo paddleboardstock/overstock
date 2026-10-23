@@ -1,0 +1,137 @@
+hero:
+  tagline: Laadunvalvonta
+  title: Laadunvalvontajärjestelmä<br /> OEM merenkulun valmistukseen
+  subtitle: Monivaiheinen tarkastusprosessi, joka kattaa saapuvat materiaalit, prosessissa olevan tuotannon, painekoetestauksen, lopullisen kokoonpanon ja ennen lähettämistä tapahtuvan tarkastuksen. Jokainen erä on jäljitettävissä, jokainen testi kirjataan.
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-pressure-testing.webp
+    alt: Aquafarer laadunvalvonta- ja painekoeprosessi
+stats:
+  title: QC numeroiden mukaan
+  stats:
+    - title: Yksiköt painekokeessa
+      amount: 100%
+    - title: Maksimipainetappio
+      amount: <5%
+    - title: QC-tarkastajat
+      amount: '12'
+    - title: Tallenteet säilytetty
+      amount: 10 vuotta
+content_system:
+  tagline: QC-järjestelmän yleiskatsaus
+  title: Integroitu laadunvalvontakehys
+  subtitle: Laatujärjestelmämme toimii itsenäisesti tuotannosta ja raportoi suoraan johdolle. Yhtään erää ei lähetetä ilman allekirjoitettua laatulupaa laatulaboratoriosta.
+  items:
+    - title: Itsenäinen laatulaboratorio
+      description: Laadunvalvontalaboratoriomme toimii erillisenä toimintona tuotannosta. Laadunvalvonnan tarkastajat raportoivat laatupäällikölle, eivät tuotantopäällikölle. Tämä organisatorinen riippumattomuus varmistaa, että laatupäätökset tehdään objektiivisesti — tuotannon määräajat eivät koskaan syrjäytä laatuvaatimuksia.
+      features:
+        - Raportoi suoraan johdolle, riippumaton tuotannosta
+        - Valtuutettu keskeyttämään tuotannon laatuongelmien vuoksi
+        - 12 omistautunutta QC-tarkastajaa kaikilla vaiheilla
+        - Kaikki testauslaitteet kalibroidaan vuosittain
+    - title: Eräjäljittävyys
+      description: Jokaiselle raaka-ainetoimitukselle annetaan ainutlaatuinen eränumero ERP-järjestelmässämme. Materiaalin saapumisesta tuotantoon aina valmiiseen tuotteeseen asti jokaisen veneen materiaaliluettelo linkittyy takaisin alkuperäisiin toimittajaeriin. Tämä mahdollistaa täydellisen jäljitettävyyden ylösvirtaan kaikissa laatu- tai vaatimustenmukaisuutta koskevissa kyselyissä.
+      features:
+        - ERP-pohjainen erien seuranta materiaalista valmiiseen tuotteeseen
+        - Fyysiset erämerkinnät jokaisessa työmääräyksessä
+        - 100 % materiaalin peitto — PVC, Hypalon, laitteisto, liimat
+        - Tietueet säilytetään 10 vuotta (CE 2013/53/EU-vaatimus)
+    - title: Standardit ja vaatimustenmukaisuus
+      description: Laatukontrollimenettelymme ovat linjassa kansainvälisten standardien kanssa. Tuotteet ovat CE sertifioitu EU:n vapaa-ajan aluksia koskevan direktiivin 2013/53/EU mukaisesti. Laatujärjestelmämme on ISO 9001 -sertifioitu. Sosiaalinen vastuullisuus ylläpidetään BSCI-sertifioinnin kautta.
+      features:
+        - CE-sertifiointi (EU 2013/53/EU)
+        - ISO 9001:2015 laadunhallinta
+        - BSCI sosiaalisen vaatimustenmukaisuuden sertifiointi
+        - REACH ja RoHS-materiaalien vaatimustenmukaisuus
+        - UKCA-sertifiointi Brexitin jälkeen
+content_inspection:
+  tagline: Tarkastuksen vaiheet
+  title: Kuuden vaiheen tarkastusprosessi
+  subtitle: Jokainen tuote käy läpi 6 tarkastusvaihetta, joissa on dokumentoidut laatutarkistuspisteet. Virheet havaitaan varhain, korjaavat toimenpiteet tehdään välittömästi, ja jokainen erä on täysin jäljitettävissä.
+  stages:
+    - stage: '1'
+      title: Saapuvien materiaalien tarkastus
+      description: Kaikki saapuvat materiaalit kirjataan erä-/lottonumeron mukaan ja asetetaan karanteeniin, kunnes laadunvalvonta (QC) vahvistaa ne. PVC/Hypalon kangasrullat testataan vetolujuuden (ASTM D751), repimislujuuden (ISO 4674) ja paksuuden osalta. Drop-stitch ytimet, venttiilit, liimat ja laitteistot tarkastetaan visuaalisesti ja mitataan vaatimusten mukaisesti.
+      checks: Vetolujuus ASTM D751, repäisykestävyys ISO 4674, paksuusmittari, liiman viskositeetti, visuaalinen virhetarkastus
+      threshold: 100 % eristä testattu. Hylkää, jos vetolujuus < 90 % spesifikaatiosta, repeytys < spesifikaatiomin tai mikä tahansa visuaalinen vika
+    - stage: '2'
+      title: Prosessissa oleva laadunvalvonta — Leikkaus ja valmistelu
+      description: CNC-leikatut paneelit tarkistetaan mittojen osalta CAD-lähdetiedostoihin verrattuna joka 20. paneelilta. Reunojen laatua tarkastellaan hapsuuntumisen, epätasaisten leikkausten tai mittapoikkeamien varalta. Paneelien lukumäärä varmennetaan BOM:n mukaan jokaisen tuotantosarjan osalta ennen kuin materiaalit siirtyvät hitsaukseen.
+      checks: Mittojen tarkistus CAD DXF -tiedostoja vastaan, reunan laadun tarkastus, paneelien määrän tarkistus
+      threshold: Sallittu poikkeama ±0,5 mm. Hylkää erä, jos yli 2 % poikkeaa sallitusta
+    - stage: '3'
+      title: Prosessissa tehtävä laadunvalvonta — Hitsaus ja liimaus
+      description: Tuotannon aikana hitsauksen laatua seurataan jatkuvasti. Kuorintakokeita (ASTM D751) suoritetaan näytteille joka 50. yksikön kohdalla. Hitsin leveyttä mitataan suhteessa spesifikaatioon. Kuuma-ilman lämpötila-asiakirjat tarkistetaan johdonmukaisuuden varmistamiseksi. Jokainen sauma tarkastetaan visuaalisesti takavalossa kanavoinnin tai tyhjien kohtien varalta.
+      checks: Kuorintatesti ASTM D751 joka 50 yksikköä, hitsin leveyden mittaus, kuuma-ilman lämpötilan lokin tarkastus, taustavalon sauman tarkastus
+      threshold: Irtoamisen lujuus vähintään 8 N/cm. Hitsausleveyden toleranssi ±1 mm. Kaikki näkyvä kanavointi = hylkää
+    - stage: '4'
+      title: Kokoonpanon laadunvalvonta
+      description: Jokainen yksikkö noudattaa 100-pisteistä kokoonpanotarkistuslistaa, jonka tiiminvetäjä on hyväksynyt. Venttiilin toiminto testataan 10 avaus/sulku-syklillä. Laitteiston momentti tarkistetaan. Visuaalinen tarkastus kattaa pinnan viimeistelyn, värin yhdenmukaisuuden, etikettien sijoittelun ja lisävarusteiden täydellisyyden.
+      checks: 100 kohdan tarkistuslista per yksikkö, venttiilin toimintatesti, laitteiston momentin tarkistus, visuaalinen tarkastus
+      threshold: 'Nollavikoja koskeva käytäntö turvallisuuden kannalta kriittisille kohteille (venttiilit, D-renkaat, kahvat). Pienet kosmeettiset tuotteet: AQL 2,5 (ISO 2859)'
+    - stage: '5'
+      title: Painetestaus
+      description: Jokainen kammio täytetään 1,25× nimellispaineeseen ja pidetään siinä 24–48 tuntia. Painemittarit kirjaavat jatkuvasti koko pitoajan aikana. Lämpötilakompensoidut mittaukset varmistavat tarkkuuden. Kaikki kammot, joissa paine laskee yli 5 %, hylätään ja lähetetään saumojen uudelleentarkastukseen sekä koko tuotantoerä testataan uudelleen 100 %:sti.
+      checks: 24–48 tunnin paineenpidon loki, anturin kalibrointi tarkistettu päivittäin, lämpötilakorjattu lukema, sauman uudelleentestaus korjauksen jälkeen
+      threshold: Enintään 5 % paineen alenema 24 tunnin aikana vakaan lämpötilan ollessa. Ylitys = koko erän 100 % uusintatestaus
+    - stage: '6'
+      title: Lopputarkastus ja lähetyksen vapautus
+      description: Viimeinen visuaalinen ja toiminnallinen tarkastus ennen pakkausta. Pintavirheet, värin yhtenäisyys, tarran/BIN:n tarkistus, pakkauksen eheys ja lisävarusteiden täydellisyys tarkistetaan asiakastilauksen mukaisesti. Yksiköt pakataan tyhjiöpakkaukseen, laatikoidaan ja lavetetaan. Lopullinen laadunvalvonnan hyväksyntä vaaditaan ennen kuin mikään tuote poistuu tehtaasta.
+      checks: Täydellinen visuaalinen tarkastus, lisävarusteluettelo SKU:ta kohden, pakkauksen pudotustesti (1 m satunnaisnäyte), tunnisten/viivakoodin tarkistustarkistus
+      threshold: AQL 2,5 merkittävät viat, AQL 4,0 vähäiset viat. Nollatoleranssi turvallisuusvirheille. 100 % yksiköistä visuaalisesti tarkastettu
+content_equipment:
+  tagline: Testauslaitteet
+  title: QC-laboratorio<br />Laitteet
+  subtitle: Laadunvalvontalaboratoriomme on varusteltu erikoistuneilla testauslaitteilla materiaalin varmentamiseen, hitsausten eheyyden tarkistamiseen ja tuotteiden suorituskyvyn varmentamiseen.
+  columns: 3
+  items:
+    - title: Vetokone
+      description: Mittaa kankaan vetolujuuden ja venymän ASTM D751 -standardin mukaisesti. Käytetään kaikkien PVC, Hypalon ja drop-stitch kangaspakkausten saapuvan laadunvalvonnassa.
+      icon: tabler:scale
+    - title: Lämpötilakammio
+      description: Ympäristökammio UV vastustuksen testaukseen (ASTM G154) ja matalan lämpötilan joustavuuden testaukseen. Simuloi äärimmäisiä käyttöolosuhteita.
+      icon: tabler:temperature
+    - title: Painesensorit ja lokit
+      description: Digitaaliset paineanturit jatkuvalla datan tallennuksella 24–48 tunnin ilmanpidon testeihin. Lämpötilakorjattu tarkkuuden takaamiseksi.
+      icon: tabler:wind
+    - title: Kuorintakoejärjestelmä
+      description: Kalibroitu irrotuskoestuslaitteisto hitsaussauman lujuuden tarkistamista varten. Satunnaisotokset jokaisesta tuotantosarjasta.
+      icon: tabler:files
+    - title: Vuodonilmaisu säiliö
+      description: Vesisäiliö upotettuun vuototestaukseen tyhjennetyille kammioille. Seinämä- ja venttiilitiiviyden tarkistaminen visuaalisella kuplien havaitsemisella.
+      icon: tabler:ripple
+    - title: Tarkastustyökalut
+      description: Kalibroidut mittausvälineet — paksuusmittarit, vääntömomenttiavaimet, mittamikrometrit, kovuustesterit tuotannon laadunvalvontapisteille.
+      icon: tabler:tools
+content_metrics:
+  tagline: QC-suorituskyky
+  title: Laatukontrollin mittarit
+  subtitle: Todelliset läpäisy/hylkäystiedot tuotantolinjaltamme. Näitä mittareita seurataan päivittäin ja johto tarkastelee niitä kuukausittain.
+  columns: 3
+  items:
+    - title: 100 % yksiköstä testattu
+      description: Jokainen veneen osa testataan paineella ennen lähetystä. Ei otanta — 100 % tarkastus paineenkestävyyden varmistamiseksi.
+      icon: tabler:check
+    - title: <5% paineen lasku
+      description: Suurin sallittu paineen häviö 24–48 tunnin aikana 1,25× nimellispainetta käytettäessä. Mikä tahansa kammio, joka ylittää tämän kynnysarvon, aiheuttaa erän uudelleentestauksen.
+      icon: tabler:gauge
+    - title: AQL 2,5
+      description: Sallittu laatutaso suurille virheille standardin ISO 2859 otantamenettelyn mukaan. Nollatoleranssi turvallisuuskriittisille virheille.
+      icon: tabler:clipboard-check
+    - title: 24–48 tunnin pidätys
+      description: 'Paineen kesto vaihtelee tuoteryhmittäin. RIB kammiot: 48 tuntia. SUP ja ilmatäytteiset veneet: 24–48 tuntia.'
+      icon: tabler:clock
+    - title: 1,25× testipaine
+      description: Turvamarginaali jokaisessa kammiassa — testattu 25 % yli nimellispainetason varmistaakseen marginaalin suurimpiin käyttölämpötiloihin nähden.
+      icon: tabler:arrow-up
+    - title: 0 % turvallisuuspuutteita
+      description: Nollatoleranssipolitiikka turvallisuuskriittisissä vioissa — venttiilit, D-renkaat, saumat ja kellutuslokerot. Mikä tahansa virhe = 100 % uudelleentarkastus.
+      icon: tabler:shield
+cta:
+  title: Pyydä laatudokumentaatio
+  subtitle: Tarjoamme täydellisiä laadullisia dokumentaatiopaketteja, mukaan lukien testiraportit, materiaalitodistukset ja vaatimustenmukaisuusselvitykset jokaisen lähetyksen yhteydessä. Ota meihin yhteyttä saadaksesi näytteitä.
+  actions:
+    - variant: primary
+      text: Pyydä laadunvalvonnan dokumentaatiota
+      href: /contact
+    - text: Näytä testausprotokollat
+      href: /quality

@@ -1,0 +1,130 @@
+hero_text:
+  tagline: Kontakt
+  title: STUPITE U KONTAKT
+contact_form:
+  id: form
+  title: Pošaljite nam poruku
+  subtitle: Za ponude, tehnička pitanja ili upite o partnerstvu, javite nam se. Odgovaramo u roku jednog radnog dana.
+  email_to: info@aquafarer.com
+  submit_button: Pošalji upit → Zatraži ponudu
+  success_message: Hvala! Vaša poruka stigla je u naš inbox. Odgovorit ćemo u roku jednog radnog dana.
+  error_message: Nešto je pošlo po zlu prilikom slanja vaše poruke. Molimo pokušajte ponovno ili nam pošaljite e-poštu izravno.
+  default_country_code: '+1'
+  captcha:
+    label: 'Protiv neželjene pošte: molimo riješite sljedeće'
+  fields:
+    - name: ime
+      label: Ime
+      row: 1
+    - name: prezime
+      label: Prezime
+      row: 1
+    - name: imeTvrtke
+      label: Naziv tvrtke
+      row: 2
+    - name: address
+      label: Adresa
+      row: 3
+    - name: zip
+      label: Poštanski broj
+      row: 4
+    - name: country
+      label: Država
+      row: 4
+      type: select
+      optionsKey: countries
+    - name: email
+      label: E-mail
+      row: 5
+      type: email
+    - name: tel
+      label: TEL
+      row: 5
+      type: tel
+      withCountryCode: true
+    - name: količina narudžbe
+      label: Procijenjeni obujam narudžbe
+      row: 6
+      type: select
+      options:
+        - value: ''
+          label: Odaberite svoju procijenjenu količinu...
+        - value: sample
+          label: Samo uzorci / prototipovi
+        - value: 5-10
+          label: 5–10 jedinica (Standard MOQ)
+        - value: 100-500
+          label: 100–500 jedinica
+        - value: 500-plus
+          label: 500+ jedinica (Cijene po količini)
+    - name: customization
+      label: Je li potrebna prilagodba?
+      row: 7
+      type: select
+      options:
+        - value: ''
+          label: Odaberite vrstu prilagodbe...
+        - value: none
+          label: Standardni proizvod (bez prilagodbe)
+        - value: logo
+          label: Prilagođeni logotip / samo brendiranje
+        - value: full
+          label: Cijeli OEM (veličina, boja, grafika, pakiranje)
+        - value: consultation
+          label: Nisam siguran — potrebna konzultacija
+    - name: Interes za proizvod
+      label: Kategorije proizvoda od interesa
+      row: 8
+      type: select
+      options:
+        - value: ''
+          label: Odaberite kategoriju proizvoda...
+        - value: all
+          label: Svi proizvodi / Cjelokupni katalog
+        - value: sup
+          label: SUP Daske / Paddleboardi
+        - value: kayak
+          label: Napuhavajući kajaci
+        - value: rib
+          label: RIB Čamci
+        - value: dinghy
+          label: Gumeni čamci / Tenderi
+        - value: safety
+          label: Sigurnosna oprema / Prsluci za spašavanje
+        - value: accessory
+          label: Dodaci (pumpe, vesla, torbe)
+    - name: subject
+      label: Predmet
+      row: 9
+    - name: message
+      label: Poruka
+      row: 10
+      type: textarea
+      rows: 6
+features2_other_ways:
+  title: Drugi načini da nas kontaktirate
+  columns: 3
+  items:
+    - title: Upiti za prodaju
+      description: Ponude, konfiguracije, aplikacije za distributere i narudžbe u velikim količinama.
+      icon: tabler:shopping-bag
+    - title: Tehnička podrška
+      description: Jamstvo, popravci, rezervni dijelovi i pitanja vezana uz rad.
+      icon: tabler:tool
+    - title: Mediji i partnerstva
+      description: Medijski paketi, sponzorstva i suradnja u industriji.
+      icon: tabler:news
+    - title: Telefon
+      description: +1 279 732 3333 (US HQ) · +86 13305324192 (tvornica)
+      icon: tabler:headset
+    - title: Email
+      description: info@aquafarer.com
+      icon: tabler:mail
+    - title: Globalni HQ & Fakturiranje
+      description: Aquafarer LLC, New Mexico, Sjedinjene Američke Države
+      icon: tabler:map-pin
+map:
+  title: Naša lokacija
+  subtitle: Posjetite naš proizvodni centar u Qingdau
+  address: Zone ekonomski razvoj, Laixi, Qingdao, Kina, 266600
+  zoom: 15

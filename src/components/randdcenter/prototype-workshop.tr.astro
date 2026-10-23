@@ -1,0 +1,194 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'tr' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">&larr; AR-GE Merkezine Geri</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Laboratuvar 05</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Prototip Atölyesi</h1>
+      <p class="mt-3 text-lg text-muted">
+        CAD modelden denize hazır tekneye — inşa edilmiş, monte edilmiş ve test edilmiş
+      </p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-ocean-voyager-1.webp"
+        alt="Aquafarer prototip atölyesi tekne üretimi"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Tasarımın gerçeğe dönüştüğü yer</h2>
+  <p>
+    Bir CAD modeli, ne kadar ayrıntılı olursa olsun, bir teknenin suyla buluşana kadar gerçekte nasıl davranacağını
+    gösteremez. İşte bu yüzden Prototip Atölyemiz, mühendislik verilerini mümkün olan en hızlı ve doğru şekilde
+    fiziksel, denize elverişli bir araca dönüştürmek için tasarlandı. Her yeni{SITE.name}model — ve her önemli özel
+    yapım — üretim aletlerine geçilmeden önce bu atölyeden geçer.
+  </p>
+  <p>
+    Atölye, gövde, tüpler ve donanımın eşzamanlı üretimi için tamamen donatılmıştır. Bu paralel çalışma yöntemi,
+    mühendislik onayından prototipin teslimine kadar süreyi sektördeki 16-20 hafta normuna kıyasla 8-12 haftaya düşürür.
+    Uygulamanız özel bir çözüm gerektirdiğinde, kavramdan su üzerinde doğrulamaya üç aydan kısa sürede geçebiliriz.
+  </p>
+
+  <h2>Atölye Yetkinlikleri</h2>
+  <table>
+    <thead><tr><th>İş İstasyonu</th><th>Ekipman</th><th>Amaç</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Gövde üretimi</td><td
+          >Rotasyonel döküm fırını (HDPE), TIG kaynak bölümü (alüminyum), el yatırma kalıpları (fiberglas)</td
+        ><td>Üç malzeme türünde tam ölçekli gövde üretimi</td></tr
+      >
+      <tr
+        ><td>Tüp montajı</td><td>RF kaynak presi, sıcak hava tutkal istasyonu, basınç testi tertibatı</td><td
+          >Tüm baffle, koni ve valflerle tam boy tüp montajlarının üretimi</td
+        ></tr
+      >
+      <tr
+        ><td>Donanım ve montaj</td><td
+          >Motor vinci (500 kg), konsol maket çerçevesi, hidrolik hortum sıkma aparatı, elektrik tesisat tablası</td
+        ><td>Tam donanım: motor, direksiyon, kontroller, yakıt sistemi, elektronik, oturma</td></tr
+      >
+      <tr
+        ><td>Enstrümantasyon bölümü</td><td
+          >GPS hız sensörü, yakıt debimetresi, ivmeölçerler, termokupl dizisi, veri kaydedici</td
+        ><td>Deneme denizi enstrümantasyonu kurulumu ve kalibrasyonu</td></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>Prototip yolculuğu — adım adım</h2>
+  <ol>
+    <li>
+      <strong>Mühendislik teslimi</strong>— Tasarım paketi (3D model, FEA raporu, malzeme listesi, yerleşim takvimi)
+      resmi olarak atölye şefi ve proje mühendisi tarafından incelenir. Herhangi bir üretim sorunu tespit edilir ve
+      kesim başlamadan önce çözülür.
+    </li>
+    <li>
+      <strong>Gövde üretimi</strong>— Gövde, mühendislik spesifikasyonuna göre üretilir. HDPE için: rotasyonel döküm
+      programı Moldex3D simülasyonundan yüklenir. Alüminyum için: CNC-kesim plakalar onaylanmış kaynak haritasına göre
+      TIG bölümünde kaynaklanır. Fiberglas için: kat kitapçığı kat kat izlenir.
+    </li>
+    <li>
+      <strong>Tüp üretimi</strong>— Kumaş CNC-şablon kalıpları kullanılarak kesilir, ardından RF ile tam boy odalara
+      kaynaklanır. Her oda test basıncına şişirilir ve başlangıç stabilizasyonu için 24 saat bırakılır.
+    </li>
+    <li>
+      <strong>Montaj ve donanım</strong>— Gövde ve borular birbirine bağlanmış. Motor asılıdır, direksiyon ve kontroller
+      bağlanır, yakıt sistemi kurulur ve tüm elektrik devreleri kablolanıp doğrulanır.
+    </li>
+    <li>
+      <strong>Statik testler</strong>— Tekne suya değmeden önce: kaldırma kontrolü (tam yük + %30 rezerv), yakıt sistemi
+      basınç testi, direksiyon sistemi tam kilitli döngü testi, elektriksel toprak bağ sürekliliği testi.
+    </li>
+    <li><strong>Deniz deneme programı</strong>— Aşağıda detaylandırılan 20 saatlik su içi testler.</li>
+    <li>
+      <strong>Prototip incelemesi</strong>— Mühendislik, üretim ve kalite ekipleriyle resmi bir onay toplantısı yapılır.
+      Gerekli tasarım değişiklikleri belgelenir ve üretim sürümüne dahil edilir.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      20 Saatlik Deniz Deneme Programı — Test Programı
+    </p>
+    <div class="space-y-2 text-sm">
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">2 h</span><span class="flex-1"
+          >Liman manevrası — düşük hızlı sürüş, geri sürme, çamurluk kontrolü</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">4 h</span><span class="flex-1"
+          >Hız denemesi — GPS tarafından doğrulanan maksimum hız, seyir hızı, 3 RPM noktasında yakıt tüketimi</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Dönüş testi — taktik çap, ilerleme ve transfer 20 kn, sol ve sancak</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Çarpma testi — 0,5–1,0 m kesme mesafesinde tekrarlanan denemeler; dümen koltuğu tabanında ivmeölçer</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Stabilite testi — 4 + mürettebat dişlisi sağa doğru sabit topuk açısı, kaydırılmış yük</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Dayanıklılık koşusu — seyir hızında 3 saat kesintisiz; sıcaklık izleme (motor, yakıt, elektrik)</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">2 h</span><span class="flex-1"
+          >Son inceleme — tüm sistemlerin duruşma sonrası denetimi, tüm bağlantı elemanlarının sıkılması/kontrolü,
+          bulguların belgelenmesi</span
+        >
+      </div>
+    </div>
+  </div>
+
+  <h2>Benzersiz uygulamalar için özel prototipleme</h2>
+  <p>
+    Prototip Atölyesi, standart üretim teknelerinin çözemediği sorunları çözdüğümüz yer alır. Son örnekler şunlardır:
+  </p>
+  <ul>
+    <li>
+      RIB Bir arama ve kurtarma organizasyonu için 7,8 m uzunluğunda, devrilme koruması, entegre sedye montajları ve baş
+      sonar podu ile özel bir kabin yapısı gerektiriyor — hepsi tesisimizde prototiplenmiş, takılmış ve test edilmiştir.
+    </li>
+    <li>
+      Hidrografik araştırma müteahhidi için 5,2 m uzunluğunda şişirilebilir bir cihaz; kısaltılmış bir transom,
+      çıkarılabilir alet direği ve akış bozulmasını en aza indirmek için gövdeden geç dönüştürücü cepleri bulunuyor.
+    </li>
+    <li>
+      Bir süperyat için elektrikli tahrikli 4,5 m tender olan bir gemidir; prototip, müşterinin dört kişilik filoya
+      karar vermeden önce menzil, şarj altyapısı ve gürültü seviyelerini doğrulamak için kullanılmıştır.
+    </li>
+  </ul>
+
+  <h2>Prototip ekibimiz</h2>
+  <p>
+    Atölyede, her biri üç temel disiplinin (gövde, tüp, donanım) en az ikisinde çapraz eğitim alan sekiz çok yönlü deniz
+    teknisyeni tarafından görevlendirilmektedir. Ekip lideri, özel tek seferlik yapımlardan üretim serilerine kadar 16
+    yıllık deneyime sahip usta bir tekne yapımcısıdır. Her prototipe, inşaat ve deneme süreci boyunca müşterinin tek
+    temas noktası olarak hizmet eden özel bir proje mühendisi atanır.
+  </p>
+
+  <h2>Müşteri katılımı</h2>
+  <p>
+    Müşterilerimizi prototip yapımı sırasında önemli dönüm noktalarına katılmaya aktif olarak teşvik ediyoruz —
+    özellikle ilk donanım incelemesi ve deniz denemesi. Bu aşamalarda operasyonel geri bildiriminiz, tekneyi üretime
+    girmeden önce ince ayar yapmada paha biçilmezdir. Biz boşlukta inşa etmiyoruz; sizinle ortaklık içinde inşa
+    ediyoruz.
+  </p>
+  <p>
+    20 saatlik deniz denemesi, ekibinizin teknenin idarəsi, sistem düzeni ve bakım gereksinimlerini öğrenmesi için bir
+    fırsattır; böylece üretim tekneleri teslim edildiğinde sorunsuz bir hizmete geçiş sağlanır.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Prototip projenize başlayın</h2>
+    <p class="mt-2 text-sm text-muted">İhtiyacınız olan tekneden bahsedersiniz, prototip geliştirme planı öneririz.</p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Prototip ekibimizle iletişime geçin</a
+    >
+  </div>
+</section>

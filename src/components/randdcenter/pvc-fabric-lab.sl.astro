@@ -1,0 +1,212 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'sl' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline"
+    >&larr; Nazaj na Raziskovalni in razvojni center</a
+  >
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Laboratorij 01</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">PVC Laboratorij za tkanine</h1>
+      <p class="mt-3 text-lg text-muted">Znanstveno testiranje materialov — od vlaken do končne cevi</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/randd/aquafarer-pvc-material-lab.webp"
+        alt="Aquafarer PVC laboratorij za testiranje tekstilnega materiala"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Osnova vsake napihljive čolne</h2>
+  <p>
+    Tkanina cevi je ena najpomembnejših materialov na napihljivem čolnu. Mora zdržati stalno izpostavljenost UV,
+    ponavljajoče se cikle napihovanja, drgnjenje ob pomole in odpadke ter ekstremna temperaturna nihanja — vse to ob
+    ohranjanju svoje strukturne celovitosti več let. Pri{SITE.name}, naš PVC Fabric Lab je namenjen izključno
+    karakterizaciji, validaciji in nenehnemu izboljševanju tkanin, ki jih uporabljamo v vsaki ladji, ki jo izdelamo.
+  </p>
+  <p>
+    Ne zanašamo se le na podatkovne liste dobaviteljev. Vsaka serija PVC in Hypalon tkanine, ki pride v naše delavnico,
+    je neodvisno testirana v lastnem laboratoriju. To zagotavlja, da je specifikacija materiala, ki jo objavimo,
+    dejanska zmogljivost materiala, ki jo prejmete — serija za serijo, leto za letom.
+  </p>
+
+  <h2>Standardizirana testna oprema</h2>
+  <p>
+    Naš laboratorij za tkanine je opremljen z industrijskimi instrumenti, ki ustrezajo ISO, ASTM in EN testnim metodam:
+  </p>
+  <table>
+    <thead><tr><th>Oprema</th><th>Merjeni parametri</th><th>Standard</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Univerzalni natezni tester (50 kN)</td><td
+          >Sila pri pretrganju, podaljšek pri trganju, širjenje raztrgane površine</td
+        ><td>/ ASTM D751</td></tr
+      >
+      <tr
+        ><td>Xenon-lučna vremenska komora</td><td>Odpornost UV (sprememba barve, ohranitev trdnosti po 2000 h)</td><td
+          >/ ASTM G155</td
+        ></tr
+      >
+      <tr
+        ><td>Tester upogibanja pri nizki temperaturi</td><td>Točka razpoka pri -30 &deg;C do -50 &deg;C</td><td
+          >ISO 4675 / ASTM D2136</td
+        ></tr
+      >
+      <tr
+        ><td>Taber tester obrabe</td><td>Izguba teže po 1000 ciklih (kolo CS-10)</td><td>ASTM D3389 / ISO 5470-1</td
+        ></tr
+      >
+      <tr
+        ><td>Merilnik debeline (digitalni, ločljivost 0,001 mm)</td><td>Enakomernost čez širino zvitka</td><td
+          >ISO 2286-3</td
+        ></tr
+      >
+      <tr><td>Tester hidrostatnega tlaka</td><td>Odpornost proti prehodu vode</td><td>ISO 811</td></tr>
+    </tbody>
+  </table>
+  <p class="text-sm text-gray-500">* Vso opremo vsako leto kalibrirajo akreditirani laboratoriji tretjih oseb.</p>
+
+  <h2>Od podatkov do odločitve: tipičen potek testiranja</h2>
+  <p>Ko prispe nov kandidat za tkanino, sledi standardiziranemu sedemstopenjskemu procesu kvalifikacije:</p>
+  <ol>
+    <li>
+      <strong>Prejemni pregled</strong>— vizualni pregled površinskih napak, lukenj in skladnosti z dimenzijami.
+    </li>
+    <li>
+      <strong>Mapiranje debeline</strong>— 20-točkovno merjenje po celotnem zvitku; za sprejem je potreben CV 3 %.
+    </li>
+    <li>
+      <strong>Vlečno testiranje</strong>— 5 vzorcev v osnovni in vtisni smeri. Najmanj 3500 N/50 mm za 1100 dtex PVC.
+    </li>
+    <li>
+      <strong>UV pogojevanje</strong>— 1000 ur izpostavljenosti v ksenonski ark svetilki; zahtevano je ohranjanje vsaj
+      80 % trdnosti.
+    </li>
+    <li>
+      <strong>Hladen razpok</strong>— 4 h pri -35 °C, nato 180° upogib preko 25 mm vložka. Nobenih vidnih razpok.
+    </li>
+    <li><strong>Odpornost proti obrabi</strong>— 1000 ciklov, izguba mase ≤ 0,05 g.</li>
+    <li>
+      <strong>Potrditev odobritve</strong>— tkanina se sprosti za proizvodnjo šele po prehodu vseh sedmih stopenj.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Tipična PVC 1100 dtex — Ohranitev vlečne trdnosti po izpostavljenosti UV
+    </p>
+    <div class="flex items-end gap-3 h-40">
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-600 rounded-t" style="height:100%"></div><span class="text-xs mt-1"
+          >0 h<br />100%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-500 rounded-t" style="height:95%"></div><span class="text-xs mt-1"
+          >500 h<br />95%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-400 rounded-t" style="height:88%"></div><span class="text-xs mt-1"
+          >1000 h<br />88%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-300 rounded-t" style="height:82%"></div><span class="text-xs mt-1"
+          >2000 h<br />82%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-gray-300 rounded-t" style="height:65%"></div><span class="text-xs mt-1"
+          >Konkurenca<br />~65%</span
+        >
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      Naša PVC 1100 dtex tkanina ohrani 80 % vlečne trdnosti po 2000 urah izpostavljenosti ksenonskemu loku, v
+      primerjavi s tipičnimi industrijskimi razredi, ki padejo pod 70 %.
+    </p>
+  </div>
+
+  <h2>Naša strokovna ekipa</h2>
+  <p>
+    Laboratorij vodi dva redno zaposlena materialna inženirja, vsak z diplomo iz polimernih znanosti ali tekstilnega
+    inženiringa, z najmanj šestletnimi izkušnjami v industriji. Podpirajo jih trije tehniki, ki opravljajo vsakodnevna
+    testiranja in beleženje podatkov. Ekipa redno sodeluje v medlaboratorijskih krogih, ki jih organizira Mednarodna
+    organizacija za standardizacijo (ISO), da potrdi natančnost naših testnih metod.
+  </p>
+
+  <h2>Reševanje vaših najzahtevnejših materialnih izzivov</h2>
+  <p>
+    Vsako morsko okolje je drugačno. Patruljna ladja v Perzijskem zalivu se sooča z bistveno drugačnimi UV in
+    temperaturnimi pogoji kot reševalna ladja v Severnem morju. Naš Laboratorij za tkanine vam pomaga izbrati — ali
+    razviti — specifikacijo tkanine, optimizirano za vaš delovni profil.
+  </p>
+  <p>Nedavne prilagojene rešitve vključujejo:</p>
+  <ul>
+    <li>
+      — Tekoče odporna PVC mešanica za vojaškega naročnika, katerih ladje redno pristajajo na koralnih grebenih (+40 %
+      življenjska doba obrabe).
+    </li>
+    <li>
+      — Formulacija za nizke temperature Hypalon za arktično raziskovalno postajo, testirano do -50 °C brez krhkosti.
+    </li>
+    <li>
+      — Barvno stabilizirana oranžna tkanina za floto iskanja in reševanja, ki ohranja vidnost po treh letih
+      izpostavljenosti tropičnemu soncu.
+    </li>
+  </ul>
+  <p>
+    Ne prodajamo 'standardnih' tkanin in upamo, da bodo ustrezale. Testiramo, potrjujemo in priporočamo — ali ustvarimo
+    — prilagojeno rešitev za vaš specifični profil misije. To je{SITE.name}razlika.
+  </p>
+
+  <h2>Kako vam služimo</h2>
+  <p>Ko nam predstavite materialni izziv, lahko pričakujete naslednje:</p>
+  <ol>
+    <li><strong>Posvet</strong>— razpravljamo o vašem operativnem okolju, ciljih učinkovitosti in proračunu.</li>
+    <li>
+      <strong>Predlog</strong>— načrt testiranja je pripravljen z jasnimi merili za uspeh/neuspeh in časovnim
+      razporedom.
+    </li>
+    <li>
+      <strong>Izvršitev</strong>— naša laboratorija izvaja teste in pripravlja podrobno poročilo z surovi podatki in
+      primerjalno analizo.
+    </li>
+    <li>
+      <strong>Priporočilo</strong>— predstavljamo specifikacijo tkanine, vključno z alternativnimi možnostmi, če več
+      materialov izpolnjuje vaše zahteve.
+    </li>
+    <li>
+      <strong>Spremljanje</strong>— po dostavi ostajamo na voljo za podporo pri kakršnih koli vprašanjih glede
+      materialov v uporabi.
+    </li>
+  </ol>
+  <p>
+    Naš cilj ni zgolj prodati vam čoln. Naš cilj je zagotoviti, da čoln, ki ga prejmete, deluje zanesljivo v pogojih, v
+    katerih ga uporabljate — in to se začne s tkanino.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Potrebujete specifikacijo po meri za tkanino?</h2>
+    <p class="mt-2 text-sm text-muted">
+      Kontaktirajte naš inženirski tim za materiale, da se pogovorite o vaših zahtevah.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Kontaktirajte naš laboratorijski tim</a
+    >
+  </div>
+</section>

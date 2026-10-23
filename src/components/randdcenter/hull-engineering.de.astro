@@ -1,0 +1,182 @@
+---
+import { SITE } from 'astrowind:config';
+const { lang = 'de' } = Astro.props;
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={`/${lang}/randdcenter`} class="text-sm text-gray-500 hover:underline">&larr; Zurück zum F&amp;E-Zentrum</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Lab 02</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Rumpftechnik-Studio</h1>
+      <p class="mt-3 text-lg text-muted">Digitale Simulation, strukturelle Intelligenz, individueller Rumpfentwurf</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/design discussaquafarer-inflatable-boat-aquafarer-factory-exterior.webp"
+        alt="CAD-Arbeitsplatz für Rumpftechnik bei Aquafarer"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Wo Festigkeit auf Hydrodynamik trifft</h2>
+  <p>
+    Der Rumpf ist das Rückgrat jedes RIB oder Schlauchboots. Er muss leicht genug sein, um effizient zu gleiten, robust
+    genug, um Stoßbelastungen aufzunehmen, und über einen weiten Temperaturbereich dimensionsstabil bleiben. Bei
+    {SITE.name} vereint unser Rumpftechnik-Studio fortschrittliche CAD-Modellierung, Finite-Elemente-Analyse (FEA) und jahrzehntelange
+    praktische Erfahrung im Schiffsentwurf — zu Rümpfen, die für ihre vorgesehene Aufgabe optimiert sind, nicht zu generischen
+    Formen aus dem Katalog.
+  </p>
+  <p>
+    Wir arbeiten mit drei primären Rumpfwerkstoffen — rotationsgeformtem HDPE, geschweißtem Aluminium in Schiffsqualität
+    und handlaminiertem Glasfaser — und verfügen über die technische Kompetenz, jeden davon intern zu entwerfen, zu
+    simulieren und zu validieren.
+  </p>
+
+  <h2>Entwurfswerkzeuge und Normen</h2>
+  <p>Unsere digitale Entwicklungsumgebung umfasst:</p>
+  <table>
+    <thead><tr><th>Fähigkeit</th><th>Software / Werkzeug</th><th>Anwendung</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>3D-Parametermodellierung</td><td>SolidWorks Professional</td><td
+          >Rumpfhaut, Längsstringer-System, Motorhalterung, Deckslayout</td
+        ></tr
+      >
+      <tr
+        ><td>Finite-Elemente-Analyse</td><td>ANSYS Mechanical &amp; LS-DYNA</td><td
+          >Spannungsverteilung, Modalanalyse, Crash-/Aufprallsimulation</td
+        ></tr
+      >
+      <tr
+        ><td>Numerische Strömungsmechanik</td><td>Ansys Fluent / Star-CCM+</td><td
+          >Vorhersage des hydrodynamischen Widerstands, Trimmoptimierung</td
+        ></tr
+      >
+      <tr
+        ><td>Laminattechnik</td><td>ESAComp / CADEC</td><td>Glasfaser-Lagenaufbau, Kernauswahl, Gewichtsabschätzung</td
+        ></tr
+      >
+      <tr
+        ><td>Formfüllsimulation</td><td>Moldex3D</td><td
+          >Wanddickenprognose für das Rotationsformen (Kunststoff-Formverfahren)</td
+        ></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>Unser Entwicklungsablauf</h2>
+  <p>
+    Jeder Rumpfentwurf — ob Standardmodell oder komplett individuelles Projekt — durchläuft einen strengen Prozess in
+    fünf Stufen:
+  </p>
+  <ol>
+    <li>
+      <strong>Konzept- &amp; Anforderungsanalyse</strong> — Wir treffen uns mit Ihnen, um Nutzlast, Geschwindigkeitsbereich,
+      Seegangsfähigkeit, Schleppanforderungen und eventuelle Sonderausrüstung (Decksluken, Konsolenpositionen, Kraftstofftank-Integration)
+      festzulegen.
+    </li>
+    <li>
+      <strong>3D-Flächenmodellierung &amp; hydrostatische Berechnung</strong> — Die Rumpfform wird in SolidWorks modelliert
+      und mit integrierten Analysetools auf hydrostatische Stabilität (GM, aufrichtender Hebelarm) geprüft.
+    </li>
+    <li>
+      <strong>Strukturelle FEA</strong> — Die Lastfälle werden definiert: statisch (Besatzung + Ausrüstung), dynamisch (Gleitaufprall
+      bei 5g) und Slamming (Absinken von einer Wellenkuppe bei 3 m/s). Die Spannungsverläufe werden geprüft; ein Sicherheitsfaktor
+      &ge; 2.5 ist zwingend.
+    </li>
+    <li>
+      <strong>CFD-Widerstandsoptimierung</strong> — Der Rumpf wird bei drei Beladungszuständen und fünf Geschwindigkeiten
+      simuliert. Benetzte Oberfläche, Trimmwinkel und Restwiderstand werden iterativ reduziert.
+    </li>
+    <li>
+      <strong>Entwurfsprüfung &amp; Freigabe</strong> — Das vollständige Entwicklungspaket (3D-Modell, FEA-Bericht, CFD-Bericht,
+      Gewichtsschätzung, Laminatbuch) wird vor der Freigabe an die Prototypenwerkstatt von unserem leitenden Schiffsarchitekten
+      geprüft.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      FEA-Spannungsverteilung — RIB-450-Patrouillenrumpf (Aluminium 5083)
+    </p>
+    <div class="grid grid-cols-2 gap-4 text-sm">
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">2.8 : 1</span>
+        <span class="text-gray-500">Sicherheitsfaktor bei maximaler Nutzlast</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">15.2 %</span>
+        <span class="text-gray-500">Widerstandsreduzierung gegenüber der Vorgängergeneration</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">87 kN/m&sup2;</span>
+        <span class="text-gray-500">Spitzen-Slamdruck (Auslegungsgrenze)</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">18 000 h</span>
+        <span class="text-gray-500">Kumulierte FEA-Rechenlaufzeit im Jahr 2025</span>
+      </div>
+    </div>
+  </div>
+
+  <h2>Individualisierung: Ihr Rumpf, Ihre Regeln</h2>
+  <p>
+    Keine zwei Betreiber haben identische Anforderungen. Ein Hafenpatrouillen-RIB braucht einen Flach-V-Rumpf für
+    Stabilität bei niedriger Geschwindigkeit; ein schnelles Abfangeinsatzboot braucht ein tiefes V mit Sprayleisten; ein
+    Tauchunterstützungsboot braucht eine große Breite und ein niedriges Spiegelheck. Wir zwingen Ihren Einsatzzweck
+    nicht in eine vorgefertigte Rumpfform. Wir entwerfen ausgehend von Ihrer Spezifikation.
+  </p>
+  <p>Beispiele aktueller individueller Rumpfentwicklungsprojekte:</p>
+  <ul>
+    <li>
+      Ein um 6.8 m gestreckter HDPE-Rumpf für einen Karibik-Reiseveranstalter, mit verstärktem Bug für Strandlandungen
+      (+15 % Bodenstärke).
+    </li>
+    <li>
+      Ein leichtes 7.2 m Aluminium-RIB für eine Küstenwache, mit integrierten Kraftstofftank-Schwallblechen und
+      Versteifungen der Ausrüstungsschränke.
+    </li>
+    <li>
+      Ein 5.5 m Glasfaser-Tauchboot mit abgesenktem Spiegelheck und doppelten Batterieboxen, ausgelegt für einfaches
+      Wiederanbordgehen von Schnorchlern.
+    </li>
+  </ul>
+
+  <h2>Unsere Ingenieure</h2>
+  <p>
+    Das Studio wird von einem leitenden Schiffsarchitekten mit 14 Jahren Erfahrung im Entwurf von Schnellfahrzeugen
+    geführt, unterstützt von zwei Maschinenbauingenieuren, die auf FEA und CFD spezialisiert sind. Alle drei besitzen
+    weiterführende Abschlüsse in Meerestechnik oder Schiffsarchitektur von international anerkannten Universitäten. Das
+    Team veröffentlicht regelmäßig in Fachzeitschriften und präsentiert auf Konferenzen wie der International Conference
+    on High-Performance Marine Vehicles.
+  </p>
+
+  <h2>Arbeiten Sie mit uns an Ihrem nächsten Rumpf</h2>
+  <p>
+    Vom ersten Konzeptentwurf bis zum abschließenden Spannungsbericht ist unser Rumpftechnik-Studio Ihr Partner bei der
+    Entwicklung eines Bootes, das nicht nur gebaut — sondern konstruiert ist. Wir investieren die Simulationsstunden im
+    Vorfeld, damit jede Schweißnaht, jede Laminatschicht und jede Kurve des Rumpfes einen Grund hat.
+  </p>
+  <p>
+    Ob Sie eine kleine Änderung an einem bestehenden Modell oder einen völlig neuen Entwurf auf der grünen Wiese
+    benötigen — wir sind bereit, Ihre Anforderungen zu besprechen.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Starten Sie Ihre Rumpfentwurfs-Beratung</h2>
+    <p class="mt-2 text-sm text-muted">
+      Beschreiben Sie uns Ihr Einsatzprofil, und wir schlagen Ihnen einen Entwicklungsweg vor.
+    </p>
+    <a
+      href={`/${lang}/contact`}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Kontaktieren Sie unser Entwicklungsteam</a
+    >
+  </div>
+</section>

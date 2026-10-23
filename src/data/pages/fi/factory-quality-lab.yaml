@@ -1,0 +1,60 @@
+hero:
+  tagline: Laadunvalvontalaboratorio
+  title: Testauslaboratorio & laadunvarmistus
+  subtitle: Itsenäinen laatulaboratorio ISO 9001-prosesseilla — jokainen yksikkö testataan ennen toimitusta
+
+intro: Aquafarer ylläpitää omaa laadunvalvontalaboratoriota, joka toimii tuotannosta riippumatta. Jokainen raaka-aine-erä ja jokainen valmis vene käy läpi dokumentoidut tarkastusprotokollat ennen vapauttamista. QC-tiimimme raportoi suoraan johdolle, mikä varmistaa puolueettomat laatupäätökset.
+
+highlights:
+  - value: 100%
+    label: Painetestatut yksiköt
+    detail: Jokainen kammio, jokainen vene
+  - value: 48 h
+    label: Ilmanpidätystestin kesto
+    detail: 1,25-kertaisella nimellispaineella
+  - value: '&lt;5%'
+    label: Suurin sallittu paineen lasku
+    detail: 24 tunnin pitoajan aikana
+  - value: AQL 2.5
+    label: Suurten vikojen raja-arvo
+    detail: ISO 2859 -otannan mukaan
+
+test_procedures:
+  - title: Raaka-aineiden tarkastus
+    description: Jokainen saapuva PVC:n, Hypalonin, drop-stitch-kankaan ja tarvikkeiden erä testataan ennen hyväksymistä. Vetolujuus (ASTM D751), repäisylujuus (ISO 4674) ja UV-kestävyys varmistetaan. Vaatimustenmukaisuutta ei täyttävät materiaalit asetetaan karanteeniin ja palautetaan.
+    standards:
+      - ASTM D751 (veto)
+      - ISO 4674 (repäisy)
+      - ISO 4892 (UV)
+  - title: QC-tarkistuspisteet prosessissa
+    description: Tuotannon operaattorit suorittavat itsetarkastuksen jokaisessa vaiheessa. QC-auditöijät tekevät satunnaisotannan vuoron aikana. Hitsisaumojen kuorintakokeet suoritetaan 50 yksikön välein. Mitatarkastukset tehdään joka 20. paneelissa.
+    standards:
+      - ASTM D751 (kuorinta)
+      - Sisäinen 100 pisteen tarkistuslista
+      - ISO 2859 -otanta
+  - title: 48 tunnin ilmanpidätystesti
+    description: Jokainen putken kammio pumpataan 125 %:iin nimellispaineesta ja pidetään 48 tuntia. Paineanturit kirjaavat jatkuvasti lämpötilakompensaatiolla. Kammio, jonka paineen lasku ylittää 5 %, käynnistää erän automaattisen uudelleentarkastuksen.
+    standards:
+      - ISO 6185
+      - CE 2013/53/EU
+  - title: Kuormitus- & tasapainotestit
+    description: Valmiit veneet testataan suurimmalla nimelliskapasiteetilla vakauden, vapaalaidan ja käsittelyn osalta. Jokainen alus käy läpi vesitestin ennen lopputarkastuksen hyväksyntää.
+    standards:
+      - ISO 12217
+      - CE 2013/53/EU
+
+equipment:
+  - name: Universaali testauskone (veto)
+    spec: 5 kN, ASTM D751 -mukainen
+  - name: Paineenlaskutesteri
+    spec: Monikanavainen, 0–50 psi, dataloggaus
+  - name: UV-vanhennuskammio
+    spec: ISO 4892, 1,000 tunnin syklit
+  - name: Paksuusmittari (digitaalinen)
+    spec: Tarkkuus 0,01 mm
+  - name: Kuorintatesteri (hitsisauma)
+    spec: Moottoroitu, 50 N kapasiteetti
+  - name: Lämpökammio
+    spec: "-40 °C:sta +100 °C:een"
+  - name: Vuotojen havaitsemisallas
+    spec: 6 m × 2 m, valaistu

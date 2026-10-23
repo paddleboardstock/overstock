@@ -1,0 +1,60 @@
+hero:
+  tagline: Laboratorium Kontroli Jakości
+  title: Laboratorium Badań i Zapewniania Jakości
+  subtitle: Niezależne laboratorium jakości z procesami ISO 9001 — każda jednostka testowana przed wysyłką
+
+intro: Aquafarer prowadzi dedykowane laboratorium kontroli jakości działające niezależnie od produkcji. Każda partia surowca i każda ukończona łódź przechodzi udokumentowane protokoły kontroli przed zwolnieniem. Nasz zespół QC raportuje bezpośrednio do zarządu, co zapewnia bezstronne decyzje dotyczące jakości.
+
+highlights:
+  - value: 100%
+    label: Jednostki poddane próbom ciśnieniowym
+    detail: Każda komora, każda łódź
+  - value: 48 h
+    label: Czas trwania testu utrzymania powietrza
+    detail: Przy 1,25× ciśnienia nominalnego
+  - value: '&lt;5%'
+    label: Maksymalny dopuszczalny spadek ciśnienia
+    detail: W ciągu 24-godzinnego okresu utrzymania
+  - value: AQL 2.5
+    label: Próg wad głównych
+    detail: Zgodnie z pobieraniem próbek ISO 2859
+
+test_procedures:
+  - title: Kontrola Surowców
+    description: Każda partia przychodząca PVC, Hypalonu, tkaniny drop-stitch i okuć jest testowana przed przyjęciem. Weryfikowana jest wytrzymałość na rozciąganie (ASTM D751), odporność na rozdarcie (ISO 4674) i odporność na UV. Materiały niezgodne są poddawane kwarantannie i zwracane.
+    standards:
+      - ASTM D751 (rozciąganie)
+      - ISO 4674 (rozdarcie)
+      - ISO 4892 (UV)
+  - title: Punkty Kontrolne QC w Procesie
+    description: Operatorzy produkcji wykonują samokontrolę na każdym etapie. Audytorzy QC przeprowadzają losowe pobieranie próbek w trakcie zmiany. Próby odrywania spoin wykonuje się co 50 jednostek. Kontrole wymiarowe odbywają się przy każdym 20. panelu.
+    standards:
+      - ASTM D751 (odrywanie)
+      - Wewnętrzna 100-punktowa lista kontrolna
+      - Pobieranie próbek ISO 2859
+  - title: 48-Godzinny Test Utrzymania Powietrza
+    description: Każda komora pontonu jest napompowywana do 125% ciśnienia nominalnego i utrzymywana przez 48 godzin. Czujniki ciśnienia rejestrują dane w sposób ciągły z kompensacją temperatury. Każda komora ze spadkiem ciśnienia przekraczającym 5% uruchamia automatyczną ponowną kontrolę partii.
+    standards:
+      - ISO 6185
+      - CE 2013/53/EU
+  - title: Testy Obciążenia i Równowagi
+    description: Ukończone łodzie są testowane przy maksymalnej pojemności nominalnej pod kątem stabilności, wolnej burty i prowadzenia. Każda jednostka przechodzi testy na wodzie przed zatwierdzeniem w końcowej kontroli.
+    standards:
+      - ISO 12217
+      - CE 2013/53/EU
+
+equipment:
+  - name: Uniwersalna Maszyna Badawcza (rozciąganie)
+    spec: 5 kN, zgodność z ASTM D751
+  - name: Tester Spadku Ciśnienia
+    spec: Wielokanałowy, 0–50 psi, rejestracja danych
+  - name: Komora Starzeniowa UV
+    spec: ISO 4892, cykle 1,000 h
+  - name: Miernik Grubości (cyfrowy)
+    spec: Rozdzielczość 0,01 mm
+  - name: Tester Odrywania (spoiny)
+    spec: Z napędem, udźwig 50 N
+  - name: Komora Temperaturowa
+    spec: "-40 °C do +100 °C"
+  - name: Zbiornik do Wykrywania Nieszczelności
+    spec: 6 m × 2 m, oświetlony

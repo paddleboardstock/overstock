@@ -1,0 +1,209 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'nl' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">← Terug naar R&amp;D-centrum</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Laboratorium 06</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Kwaliteits- en inspectielaboratorium</h1>
+      <p class="mt-3 text-lg text-muted">Onafhankelijke verificatie – elke test is vóór levering geslaagd</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-uv-resistance-testing.webp"
+        alt="Aquafarer kwaliteitsinspectielaboratorium UV testen"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Vertrouw, maar verifieer</h2>
+  <p>
+    Elke boot die onze werkplaats verlaat, draagt het certificaat dat hij een gedefinieerde reeks kwaliteitsinspecties
+    en materiaaltests heeft doorstaan. Ons Quality &amp; Inspection Lab is een onafhankelijke functie binnen de
+    organisatie – het rapporteert rechtstreeks aan de directeur, niet aan de productie – en zorgt ervoor dat geen enkele
+    commerciële druk de inspectiepoort in gevaar kan brengen. Als een materiaalpartij of een voltooide boot niet voldoet
+    aan de gepubliceerde specificatie, heeft het laboratorium de bevoegdheid om de verzending stop te zetten totdat de
+    non-conformiteit is opgelost.
+  </p>
+  <p>
+    Het laboratorium werkt volgens een kwaliteitsmanagementsysteem dat is afgestemd op de principes, en onze
+    testmethoden zijn waar van toepassing gebaseerd op ISO, ASTM en EN-normen. We houden gedetailleerde gegevens bij van
+    elke uitgevoerde test, waardoor een volledige traceerbaarheidsketen ontstaat, van de ontvangst van de grondstoffen
+    tot de uiteindelijke levering van de boot.
+  </p>
+
+  <h2>Testapparatuur en mogelijkheden</h2>
+  <table>
+    <thead><tr><th>Apparatuur</th><th>Tests uitgevoerd</th><th>Standaard / Methode</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Universele testmachine (50 kN)</td><td>Treksterkte (stof), pelweerstand (naden), scheurvoortplanting</td
+        ><td>, ISO 4674</td></tr
+      >
+      <tr
+        ><td>Luchtretentie-testbank (programmeerbaar)</td><td
+          >1000-cyclus opblaas-/leegloopduur, 24-48 h drukhoudtest</td
+        ><td> (intern)</td></tr
+      >
+      <tr
+        ><td>Naadpelmal (gemotoriseerde 180° schil)</td><td>Las- en lijmnaadafpelsterkte bij 100 mm/min</td><td>
+          / ASTM D1876</td
+        ></tr
+      >
+      <tr
+        ><td>Hydrostatische hoofdtester</td><td>Waterpenetratieweerstand van de stof (0 — 00 mbar)</td><td>ISO 811</td
+        ></tr
+      >
+      <tr
+        ><td>Digitale diktemeter en micrometer</td><td>Doekdikte, buiswanddikte, lijmfilmdikte</td><td>ISO 2286-3</td
+        ></tr
+      >
+      <tr
+        ><td>Milieu kamer</td><td
+          >Temperatuurconditionering (-40 °C tot +80 °C) voor koudescheur- en hitteverouderingstests</td
+        ><td>ISO 188, ISO 4675</td></tr
+      >
+      <tr
+        ><td>Kleurenspectrofotometer</td><td>Delta-E-kleurmeting na blootstelling aan UV</td><td
+          >ISO 105-A05 / ASTM D2244</td
+        ></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>De inspectiepoorten – van materiaal tot levering</h2>
+  <p>
+    Elke boot volgt een gedefinieerd kwaliteitsplan met verplichte inspectiepunten. Geen enkele boot kan een poort
+    overslaan; elke poort moet worden afgetekend door een kwaliteitsinspecteur voordat de volgende productiefase begint.
+  </p>
+
+  <div class="not-prose my-8">
+    <div class="relative">
+      <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-blue-200 dark:bg-blue-800"></div>
+      <div class="space-y-6 relative">
+        {
+          [
+            {
+              gate: 'Gate 1',
+              label: 'Incoming material inspection',
+              desc: 'Fabric batch, adhesive batch, hardware — all checked against incoming specification before release to production.',
+            },
+            {
+              gate: 'Gate 2',
+              label: 'In-process weld inspection',
+              desc: 'First-off weld coupon tested (peel + visual) at start of each production shift.',
+            },
+            {
+              gate: 'Gate 3',
+              label: 'Chamber air test',
+              desc: 'Each chamber pressurised to 1.25 x working pressure, held 24-48 h. Data logged per serial number.',
+            },
+            {
+              gate: 'Gate 4',
+              label: 'Pre-delivery inspection',
+              desc: 'Complete boat inspected: all fasteners torqued, systems functional, no cosmetic defects. 100-point checklist.',
+            },
+            {
+              gate: 'Gate 5',
+              label: 'Final certification',
+              desc: 'Test reports compiled, inspection records reviewed, Certificate of Conformance issued.',
+            },
+          ].map((g) => (
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs font-bold z-10">
+                {g.gate}
+              </div>
+              <div class="flex-1 p-3 rounded-lg bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800">
+                <p class="text-sm font-semibold">{g.label}</p>
+                <p class="text-xs text-gray-500 mt-1">{g.desc}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+
+  <h2>Belangrijke kwaliteitsstatistieken (2025 voortschrijdend gemiddelde)</h2>
+  <div class="not-prose my-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">99.7 %</span>
+      <span class="text-xs text-gray-500">First-pass-opbrengst (stofbatch)</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">&lt; 0.2 %</span>
+      <span class="text-xs text-gray-500">Afkeurpercentage las (lineaire meter)</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">100 %</span>
+      <span class="text-xs text-gray-500">Kamers luchtgetest vóór montage</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600"></span>
+      <span class="text-xs text-gray-500">Naleving van de ontwerpcategorie</span>
+    </div>
+  </div>
+
+  <h2>Ons kwaliteitsteam</h2>
+  <p>
+    Het laboratorium wordt bemand door een kwaliteitsmanager (10 jaar in maritieme QA, ASQ Certified Quality Engineer),
+    twee kwaliteitsinspecteurs (elk met niveau 2 NDT-certificering in visuele tests) en een materiaaltechnicus die
+    verantwoordelijk is voor alle fysieke tests. Het team ondergaat jaarlijks bekwaamheidstests via een onafhankelijke
+    externe leverancier om ervoor te zorgen dat onze testresultaten accuraat en reproduceerbaar blijven.
+  </p>
+
+  <h2>Onafhankelijk testen voor klanten</h2>
+  <p>
+    Ons Kwaliteits- en Inspectielab is beschikbaar voor onafhankelijke testdiensten. Als u een stofspecificatie moet
+    verifiëren, een nieuw lijmsysteem moet valideren of een testrapport van een derde partij moet verkrijgen voor een
+    inkoopkwalificatie, kunnen wij de tests uitvoeren volgens de toepasselijke norm en een gecertificeerd testrapport
+    afgeven.
+  </p>
+  <p>Voorbeelden van recent testwerk van derden:</p>
+  <ul>
+    <li>
+      Vergelijking van de afpelsterkte van vijf concurrerende zelfklevende filmproducten voor een Europees militair
+      inkoopprogramma.
+    </li>
+    <li>
+      Versnelde verouderingsstudie (UV + thermische cycli) voor een nieuwe oranje gepigmenteerde PVC-formulering, met
+      regelmatige tussentijdse metingen met tussenpozen van 500 uur.
+    </li>
+    <li>Validatie van luchtretentie van 50 prototype schottenkleppen voor een nieuw hogedrukbuisontwerp.</li>
+  </ul>
+
+  <h2>Onze toewijding aan u</h2>
+  <p>
+    Wanneer u een ontvangt {SITE.name} boot, ontvangt u ook het kwaliteitsdossier ervan: een samengesteld overzicht van de
+    testresultaten die op uw specifieke boot van toepassing zijn. Partijcertificaat van stof, lasafpeltests, luchttestlogboeken
+    in de kamer en inspectiechecklist vóór levering. Elk nummer is traceerbaar. Elke inspecteur wordt geïdentificeerd. Dit
+    is niet alleen maar papierwerk; het is onze belofte dat wat we hebben geleverd, ook is wat we hebben gespecificeerd.
+  </p>
+  <p>
+    Als u zich ooit zorgen maakt over de kwaliteit, kunt u rechtstreeks contact opnemen met het laboratorium. De
+    contactgegevens staan afgedrukt op uw conformiteitscertificaat. We nemen elke vraag serieus en streven ernaar om
+    binnen 48 uur een formeel onderzoek in te stellen.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Onafhankelijke tests of kwaliteitsverificatie nodig?</h2>
+    <p class="mt-2 text-sm text-muted">
+      Ons laboratorium accepteert testwerk van derden. Neem contact met ons op als u uw wensen kenbaar maakt.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Neem contact op met het kwaliteitslab</a
+    >
+  </div>
+</section>

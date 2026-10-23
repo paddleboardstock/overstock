@@ -1,0 +1,137 @@
+hero:
+  tagline: Kvaliteedikontroll
+  title: Kvaliteedikontrolli süsteem<br />ette OEM Mere Tööstus
+  subtitle: Mitmeastmeline kontrolliprotsess, mis hõlmab sisendmaterjale, tootmisprotsessi, survekatseid, lõplikku kokkupanekut ja enne saatmist kontrollimist. Iga partii on jälgitav, iga test on registreeritud.
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-pressure-testing.webp
+    alt: Aquafarer kvaliteedikontrolli ja survekatsetamise protsess
+stats:
+  title: Kvaliteedikontroll numbritega
+  stats:
+    - title: Üksused survekatsetatud
+      amount: 100%
+    - title: Maksimaalne rõhukadu
+      amount: <5%
+    - title: Kvaliteedikontrolli inspektorid
+      amount: '12'
+    - title: Arhiivis hoitud andmed
+      amount: 10 aastat
+content_system:
+  tagline: Kvaliteedikontrolli süsteemi ülevaade
+  title: Integreeritud kvaliteet<br />Kontrolliraamistik
+  subtitle: Meie kvaliteedikontrolli süsteem töötab sõltumatult tootmisest ja annab aru otse juhtkonnale. Ühtegi partiid ei saadeta välja ilma kvaliteedilabori allkirjastatud kvaliteediväljastuseta.
+  items:
+    - title: Sõltumatu kvaliteedilabor
+      description: Meie kvaliteedilabor töötab tootmisest eraldi funktsioonina. Kvaliteedikontrolli inspektorid esitavad aruandeid kvaliteedijuhile, mitte tootmisdirektorile. See organisatsiooniline sõltumatus tagab, et kvaliteedialased otsused tehakse objektiivselt — tootmisajad ei ülejuhata kunagi kvaliteedinõudeid.
+      features:
+        - Aruandlus otse juhtkonnale, sõltumatu tootmisest
+        - Volitatud tootmise peatamiseks kvaliteediprobleemide tõttu
+        - 12 pühendunud kvaliteedikontrolli inspektorit kõigil etappidel
+        - Kõik testseadmed kalibreeritakse igal aastal
+    - title: Partii jälgitavus
+      description: Iga toores materjali partiiile määratakse meie ERP süsteemis unikaalne partiinumber. Alates materjali saabumisest kuni tootmiseni ja valmistoote valmistamiseni seob iga paadi materjalide nimekiri tagasi algsete tarnijate partiidega. See võimaldab täielikku ülesvoolu jälgitavust igaks kvaliteedi- või vastavuskontrolli päringuks.
+      features:
+        - ERP-põhine partii jälgimine materjalist valmis tooteni
+        - Füüsilised partiimärgid iga töökorralduse kohta
+        - 100% materjalikate — PVC, Hypalon, riistvara, liimid
+        - Andmed säilitatakse 10 aastat (CE 2013/53/EL nõue)
+    - title: Standardid ja vastavus
+      description: Meie kvaliteedikontrolli protseduurid vastavad rahvusvahelistele standarditele. Tooted on CE sertifitseeritud Euroopa Liidu vaba aja sõidukite direktiivi 2013/53/EL alusel. Meie kvaliteedijuhtimissüsteem on ISO 9001 sertifitseeritud. Sotsiaalne vastavus on tagatud BSCI sertifikaadi kaudu.
+      features:
+        - CE sertifitseerimine (EL 2013/53/EL)
+        - ISO 9001:2015 kvaliteedijuhtimine
+        - BSCI Sotsiaalse vastavuse sertifitseerimine
+        - REACH ja RoHS materjalide vastavus
+        - UKCA Sertifitseerimine pärast Brexiti
+content_inspection:
+  tagline: Inspekteerimisetapid
+  title: Kuueastmeline<br />Inspekteerimisprotsess
+  subtitle: Iga toode läbib kuus kontrollietappi, kus on dokumenteeritud kvaliteedikontrollpunktid. Defektid avastatakse varakult, parandusmeetmed on kohesed ja iga partii on täielikult jälgitav.
+  stages:
+    - stage: '1'
+      title: Sissetulevate materjalide kontroll
+      description: Kõik sissetulevad materjalid logitakse partii/partii numbri järgi ja hoitakse karantiini kuni kvaliteedikontrolli kinnitamiseni. PVC/Hypalon kangarulle testitakse tõmbetugevuse (ASTM D751), rebenemiskindluse (ISO4674) ja paksuse osas.Drop-stitch Südamikke, ventiile, liime ja riistvara kontrollitakse visuaalselt ja mõõdetakse vastavalt spetsifikatsioonidele.
+      checks: Tõmbetugevus ASTM D751, rebenemiskindlus ISO 4674, paksusmõõtur, liimi viskoossus, visuaalne defektide uuring
+      threshold: 100% testitud partiidest. Tagasi lükata, kui tõmbetugevus < 90% spetsifikatsioonist, rebimiskindlus < spetsifikatsiooni miinimumist või esineb visuaalne defekt
+    - stage: '2'
+      title: Protsessis olev kvaliteedikontroll — lõikamine ja ettevalmistus
+      description: CNC-lõigatud paneelid kontrollitakse mõõtmete järgi CAD-lähtefailidega iga 20. paneeli järel. Servakvaliteeti kontrollitakse kulumise, ebaühtlaste lõigete või mõõtmete nihke suhtes. Paneelide arv kontrollitakse iga tootmispartii BOM-i alusel enne, kui materjalid liiguvad keevitusse.
+      checks: Mõõtmete kontroll CAD DXF failide vastu, serva kvaliteedi kontroll, paneeli arvu kontroll
+      threshold: Tolerants ±0,5 mm. Lükka partii tagasi, kui >2% on tolerantsidest väljas.
+    - stage: '3'
+      title: Protsessi kvaliteedikontroll — keevitamine ja liimimine
+      description: Tootmise käigus jälgitakse keevituskvaliteeti pidevalt. Iga 50 ühiku järel viiakse läbi proovidele koorimisteste (ASTM D751). Keevituse laiust mõõdetakse vastavalt spetsifikatsioonidele. Kuumaõhu temperatuurilogid vaadatakse üle järjepidevuse tagamiseks. Iga õmblust kontrollitakse visuaalselt tagantvalguse all kanaliseerimise või tühimike suhtes.
+      checks: Koorimistest ASTM D751 iga 50 ühiku järel, keevituse laiuse mõõtmine, kuuma õhu temperatuuri logi ülevaatus, taustvalgustuse õmbluse kontroll
+      threshold: Koorimistugevus miinimum 8 N/cm. Keevituse laiuse tolerants ±1mm. Iga nähtav kanalisatsioon = tõrjumine
+    - stage: '4'
+      title: Assamblee kvaliteedikontroll
+      description: Iga üksus järgib meeskonna juhi poolt allkirjastatud 100-punktilist kokkupaneku kontrollnimekirja. Klapi funktsiooni testitakse 10 avamise/sulgemise tsükli jooksul. Riistvara pöördemoment kontrollitakse. Visuaalne kontroll hõlmab pinnaviimistlust, värvikonsistentsi, siltide paigutust ja lisavarustuse terviklikkust.
+      checks: 100-punktiline kontrollnimekiri ühiku kohta, klapifunktsiooni test, riistvaraline pöördemomendi kontroll, visuaalne kontroll
+      threshold: 'Nullvigu poliitika ohutuskriitiliste esemete (ventiilid, D-rõngad, käepidemed) osas. Väikesed kosmeetilised: AQL 2,5 (ISO 2859)'
+    - stage: '5'
+      title: Rõhutestimine
+      description: Iga kamber täidetakse 1,25× nimirõhuni ja hoitakse 24–48 tundi. Rõhuandurid logivad pidevalt kogu ooteperioodi vältel. Temperatuurikompenseeritud mõõtmised tagavad täpsuse. Iga kamber, mis ületab 5% rõhulanguse, lükatakse tagasi ja saadetakse õmbluse uuesti kontrollile, kus kogu tootmispartii testitakse 100% uuesti.
+      checks: 24–48h rõhu hoidmise logi, anduri kalibreerimine iga päev, temperatuuri kompenseeritud näit, õmbluse uuesti test pärast remonti
+      threshold: Maksimaalne 5% rõhulangus 24 tunni jooksul stabiilsel temperatuuril. Ületamine = kogu partii 100% uuesti testimine
+    - stage: '6'
+      title: Lõplik kontroll ja saadetise vabastamine
+      description: Lõplik visuaalne ja funktsionaalne kontroll enne pakkimist. Pinnadefektid, värvikonsistents, sildi/BIN kontroll, pakendi terviklikkus ja lisavarustuse terviklikkus kontrollitakse kliendi tellimuse vastu. Ühikud pakendatakse vaakumpakendisse, karpidesse ja alettidesse pannakse. Lõplik kvaliteedikontrolli kinnitamine on vajalik enne, kui toode tehasest lahkub.
+      checks: Täielik visuaalne kontroll, tarvikute kontrollnimekiriSKU, pakendi kukkumise test (1 m juhuslik valim), sildi/vöötkoodi skaneerimise kontroll
+      threshold: AQL 2,5 suuremat defekti, AQL 4,0 väiksemat. Nulltolerants ohutusega seotud defektidele. 100% üksustest visuaalselt kontrollitud
+content_equipment:
+  tagline: Testimisseadmed
+  title: QC Labor<br />Varustus
+  subtitle: Meie kvaliteedilabor on varustatud spetsiaalse testseadmetega materjali kontrollimiseks, keevituste terviklikkuse ning toote jõudluse valideerimiseks.
+  columns: 3
+  items:
+    - title: Tõmbetesti masin
+      description: Mõõdab kangaste tõmbetugevust ja venivust vastavalt ASTM D751-le. Kasutatakse kõikide PVC, Hypalon ja drop-stitch kangapartii sissetuleva QC kontrolli jaoks.
+      icon: tabler:scale
+    - title: Temperatuurikamber
+      description: Keskkonnakamber UV vastupanu testimiseks (ASTM G154) ja madala temperatuuri painduvuse testimiseks. Simuleerib äärmuslikke töötingimusi.
+      icon: tabler:temperature
+    - title: Rõhuandurid ja andurilogijad
+      description: Digitaalsed rõhuandurid pideva andmete logimisega 24–48-tunniste õhu säilituskatsete jaoks. Temperatuuri kompenseerimine täpsuse tagamiseks.
+      icon: tabler:wind
+    - title: Eraldustesti seadmed
+      description: Kalibreeritud liimi- ja keevitusõmbluse tugevuse testi seadmed. Juhuslikud proovid igast tootmispartiist.
+      icon: tabler:files
+    - title: Lekkevann
+      description: Veepaak uppunud lekke testimiseks täidetud kambrites. Visuaalne mullide tuvastamine õmbluse ja ventiili terviklikkuse kontrolliks.
+      icon: tabler:ripple
+    - title: Kontrolli tööriistad
+      description: Kalibreeritud mõõteseadmed — paksusmõõturid, pöördemomendi võtmed, mõõdikud, kõvadustesterid tootmise QC punktides.
+      icon: tabler:tools
+content_metrics:
+  tagline: QC tulemuslikkus
+  title: Kvaliteedikontroll<br />Mõõdikud
+  subtitle: Tõelised läbis-/ebaõnnestunud andmed meie tootmisliinilt. Need mõõdikud jälgitakse iga päev ja juhatus vaatab need üle igakuiselt.
+  columns: 3
+  items:
+    - title: 100% Üksustest Testitud
+      description: Iga paadi iga kambrit testitakse rõhu all enne saatmist. Mitteühekordne proovimine — 100% kontroll rõhu terviklikkuse üle.
+      icon: tabler:check
+    - title: <5% Rõhulangus
+      description: Maksimaalne lubatud rõhkukaotus 24–48 tunni jooksul 1,25× nimirõhult. Kõik kambrid, mis ületavad selle piiri, käivitavad partiide uuestitestimise.
+      icon: tabler:gauge
+    - title: AQL 2,5
+      description: Suuremate defektide aktsepteeritud kvaliteeditasem ISO 2859 proovivõtustandardi järgi. Nulltolerants ohutusega seotud kriitiliste defektide suhtes.
+      icon: tabler:clipboard-check
+    - title: 24–48-Tunnine Hoidmine
+      description: 'Rõhu hoidmise kestus varieerub tootekategooria järgi. RIB kambrid: 48 tundi. SUP ja täispuhutavad paadid: 24–48 tundi.'
+      icon: tabler:clock
+    - title: 1,25× Testrõhk
+      description: Ohutusvaru iga kambri jaoks — testitud 25% üle nimirõhu, et tagada varu maksimaalsetest töötingimustest kõrgemal.
+      icon: tabler:arrow-up
+    - title: 0% Ohutusdefektid
+      description: Nulltolerantsi poliitika ohutusele kriitiliste defektide suhtes — klapid, D-rõngad, õmblused ja ujuvuskambrid. Iga defekt = 100% uuesti kontroll.
+      icon: tabler:shield
+cta:
+  title: Küsi kvaliteedidokumentatsiooni
+  subtitle: Pakume täielikke kvaliteedidokumentatsiooni pakette, sealhulgas testiaruandeid, materjalitunnistusi ja vastavusdeklaratsioone iga saadetisega. Võta meiega ühendust proovide jaoks.
+  actions:
+    - variant: primary
+      text: Küsi kvaliteedikontrolli dokumentatsiooni
+      href: /contact
+    - text: Vaata testimisprotokolle
+      href: /quality

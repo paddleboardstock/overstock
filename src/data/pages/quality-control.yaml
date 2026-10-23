@@ -1,0 +1,137 @@
+hero:
+  tagline: Quality Control
+  title: 'Quality Control System<br />for OEM Marine Manufacturing'
+  subtitle: 'Multi-stage inspection process covering incoming materials, in-process production, pressure testing, final assembly, and pre-shipment verification. Every batch is traceable, every test is recorded.'
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-pressure-testing.webp
+    alt: Aquafarer quality control and pressure testing process
+stats:
+  title: QC by the Numbers
+  stats:
+    - title: Units Pressure-Tested
+      amount: '100%'
+    - title: Max Pressure Drop
+      amount: '<5%'
+    - title: QC Inspectors
+      amount: '12'
+    - title: Records Retained
+      amount: 10 years
+content_system:
+  tagline: QC System Overview
+  title: 'Integrated Quality<br />Control Framework'
+  subtitle: 'Our QC system operates independently from production and reports directly to management. No batch is shipped without signed quality release from the quality lab.'
+  items:
+    - title: Independent Quality Lab
+      description: 'Our quality lab operates as a separate function from production. QC inspectors report to the Quality Manager, not the Production Director. This organizational independence ensures that quality decisions are made objectively — production deadlines never override quality requirements.'
+      features:
+        - Reports directly to management, independent of production
+        - Authorized to halt production for quality issues
+        - 12 dedicated QC inspectors across all stages
+        - All test equipment calibrated annually
+    - title: Batch Traceability
+      description: "Every batch of raw material is assigned a unique lot number in our ERP system. From material arrival through production to finished product, each boat's bill of materials links back to original supplier batches. This enables full upstream traceability for any quality or compliance inquiry."
+      features:
+        - ERP-based lot tracking from material to finished product
+        - Physical batch tags on each work order
+        - 100% material coverage — PVC, Hypalon, hardware, adhesives
+        - Records retained for 10 years (CE 2013/53/EU requirement)
+    - title: Standards & Compliance
+      description: 'Our QC procedures are aligned with international standards. Products are CE certified under EU Recreational Craft Directive 2013/53/EU. Our quality management system is ISO 9001 certified. Social compliance is maintained through BSCI certification.'
+      features:
+        - CE certification (EU 2013/53/EU)
+        - ISO 9001:2015 quality management
+        - BSCI social compliance certification
+        - REACH and RoHS material compliance
+        - UKCA post-Brexit certification
+content_inspection:
+  tagline: Inspection Stages
+  title: 'Six-Stage<br />Inspection Process'
+  subtitle: 'Every product passes through 6 inspection stages with documented QC checkpoints. Defects are caught early, corrective actions are immediate, and every batch is fully traceable.'
+  stages:
+    - stage: '1'
+      title: Incoming Material Inspection
+      description: 'All incoming materials are logged by batch/lot number and quarantined until QC sign-off. PVC/Hypalon fabric rolls are tested for tensile strength (ASTM D751), tear resistance (ISO 4674), and thickness. Drop-stitch cores, valves, adhesives, and hardware are visually inspected and measured against specifications.'
+      checks: 'Tensile strength ASTM D751, tear resistance ISO 4674, thickness gauge, adhesive viscosity, visual defect scan'
+      threshold: '100% of batches tested. Reject if tensile < 90% of spec, tear < spec min, or any visual defect'
+    - stage: '2'
+      title: In-Process QC — Cutting & Prep
+      description: 'CNC-cut panels are dimensionally checked against CAD source files every 20th panel. Edge quality is inspected for fraying, uneven cuts, or dimensional drift. Panel count is verified against the BOM for each production batch before materials move to welding.'
+      checks: 'Dimensional check against CAD DXF files, edge quality inspection, panel count verification'
+      threshold: 'Tolerance ±0.5mm. Reject batch if >2% out of tolerance'
+    - stage: '3'
+      title: In-Process QC — Welding & Bonding
+      description: 'During production, weld quality is continuously monitored. Peel tests (ASTM D751) are conducted on samples every 50 units. Weld width is measured against specification. Hot-air temperature logs are reviewed for consistency. Every seam is visually inspected under backlight for channeling or voids.'
+      checks: 'Peel test ASTM D751 every 50 units, weld width measurement, hot-air temperature log review, backlight seam inspection'
+      threshold: 'Peel strength min 8 N/cm. Weld width tolerance ±1mm. Any visible channeling = reject'
+    - stage: '4'
+      title: Assembly QC
+      description: 'Each unit follows a 100-point assembly checklist signed off by the team lead. Valve function is tested through 10 open/close cycles. Hardware torque is verified. Visual inspection covers surface finish, color consistency, label placement, and accessory completeness.'
+      checks: '100-point checklist per unit, valve function test, hardware torque verification, visual inspection'
+      threshold: 'Zero-defect policy on safety-critical items (valves, D-rings, handles). Minor cosmetic: AQL 2.5 (ISO 2859)'
+    - stage: '5'
+      title: Pressure Testing
+      description: 'Every chamber is inflated to 1.25× rated pressure and held for 24-48 hours. Pressure sensors log continuously throughout the hold period. Temperature-compensated readings ensure accuracy. Any chamber exceeding 5% pressure drop is rejected and sent for seam re-inspection with 100% re-test of the entire production batch.'
+      checks: '24-48h pressure hold log, sensor calibration verified daily, temperature-compensated reading, seam re-test after repair'
+      threshold: 'Max 5% pressure drop over 24h at stable temp. Exceeding = 100% re-test of entire batch'
+    - stage: '6'
+      title: Final Inspection & Shipment Release
+      description: 'Final visual and functional inspection before packing. Surface defects, color consistency, label/BIN verification, packaging integrity, and accessory completeness are checked against the customer order. Units are vacuum-packed, boxed, and palletized. Final QC sign-off is required before any product leaves the factory.'
+      checks: 'Full visual inspection, accessory checklist per SKU, packaging drop test (1m random sample), label/bar code scan verification'
+      threshold: 'AQL 2.5 major defects, AQL 4.0 minor. Zero tolerance safety defects. 100% of units visually inspected'
+content_equipment:
+  tagline: Testing Equipment
+  title: 'QC Lab<br />Equipment'
+  subtitle: 'Our quality lab is equipped with specialized testing equipment for material verification, weld integrity, and product performance validation.'
+  columns: 3
+  items:
+    - title: Tensile Testing Machine
+      description: 'Measures fabric tensile strength and elongation per ASTM D751. Used for incoming QC of all PVC, Hypalon, and drop-stitch fabric batches.'
+      icon: tabler:scale
+    - title: Temperature Chamber
+      description: 'Environmental chamber for UV resistance testing (ASTM G154) and low-temperature flexibility testing. Simulates extreme operating conditions.'
+      icon: tabler:temperature
+    - title: Pressure Sensors & Loggers
+      description: 'Digital pressure sensors with continuous data logging for 24-48 hour air retention tests. Temperature-compensated for accuracy.'
+      icon: tabler:wind
+    - title: Peel Test Rig
+      description: 'Calibrated peel testing equipment for weld seam strength verification. Random samples from every production batch.'
+      icon: tabler:files
+    - title: Leak Detection Tank
+      description: 'Water tank for submerged leak testing of inflated chambers. Visual bubble detection for seam and valve integrity verification.'
+      icon: tabler:ripple
+    - title: Inspection Tools
+      description: 'Calibrated measurement tools — thickness gauges, torque wrenches, dimensional calipers, hardness testers for production QC stations.'
+      icon: tabler:tools
+content_metrics:
+  tagline: QC Performance
+  title: 'Quality Control<br />Metrics'
+  subtitle: 'Real pass/fail data from our production line. These metrics are monitored daily and reviewed monthly by management.'
+  columns: 3
+  items:
+    - title: 100% Units Tested
+      description: 'Every chamber of every boat is pressure-tested before shipping. No sampling — 100% inspection on pressure integrity.'
+      icon: tabler:check
+    - title: <5% Pressure Drop
+      description: 'Maximum allowable pressure loss over 24-48 hours at 1.25× rated pressure. Any chamber exceeding this threshold triggers batch re-test.'
+      icon: tabler:gauge
+    - title: AQL 2.5
+      description: 'Acceptable Quality Level for major defects per ISO 2859 sampling standard. Zero tolerance on safety-critical defects.'
+      icon: tabler:clipboard-check
+    - title: 24-48 Hour Hold
+      description: 'Pressure hold duration varies by product category. RIB chambers: 48 hours. SUP and inflatable boats: 24-48 hours.'
+      icon: tabler:clock
+    - title: 1.25× Test Pressure
+      description: 'Safety margin on every chamber — tested at 25% above rated pressure to ensure margin above maximum operating conditions.'
+      icon: tabler:arrow-up
+    - title: 0% Safety Defects
+      description: 'Zero tolerance policy on safety-critical defects — valves, D-rings, seams, and buoyancy chambers. Any defect = 100% re-inspection.'
+      icon: tabler:shield
+cta:
+  title: 'Request quality documentation'
+  subtitle: 'We provide full quality documentation packages including test reports, material certifications, and conformity declarations with every shipment. Contact us for samples.'
+  actions:
+    - variant: primary
+      text: Request QC documentation
+      href: /contact
+    - text: View testing protocols
+      href: /quality

@@ -1,0 +1,190 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'no' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">← Tilbake til R&amp;D Center</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Lab 04</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Hydrodynamisk testtank</h1>
+      <p class="mt-3 text-lg text-muted">Validerer ytelse før den første fullskala prototypen</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-design-discussion-original.webp"
+        alt="Aquafarer hydrodynamisk testtank ytelsestesting"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Hvorfor tankteste en liten båt?</h2>
+  <p>
+    Det er en vanlig misforståelse at hydrodynamisk testing er forbeholdt havgående skip. I virkeligheten er ytelsen til
+    et lite planende skrog – for eksempel en 4–5 m RIB – like avhengig av dens undervannsform som en tankbåt er på sin
+    bulbøse baug. Trimvinkel, fuktet overflate, spraygenerering og ventilasjon har alle en dramatisk effekt på
+    hastighet, drivstofforbruk og kjørekomfort. På {SITE.name}, driver vi en dedikert hydrodynamisk testtank som lar oss
+    kvantifisere disse effektene i modellskala - før vi forplikter metall og stoff til en prototype i full størrelse.
+  </p>
+  <p>
+    Testing i modellskala (vanligvis 1:3 til 1:5) gir oss muligheten til å gjenta skrogformer raskt og
+    kostnadseffektivt. En uke i tanken kan generere de samme ytelsesdataene som ville kreve måneder med fullskala
+    prøving og feiling - og til en brøkdel av prisen.
+  </p>
+
+  <h2>Anleggsspesifikasjoner</h2>
+  <table>
+    <thead><tr><th>Parameter</th><th>Spesifikasjon</th></tr></thead>
+    <tbody>
+      <tr><td>Tankdimensjoner</td><td>35 m (L) × 3.5 m (B) × 1.8 m (D)</td></tr>
+      <tr
+        ><td>Slepevogn</td><td>Elektrisk servodrevet, maks hastighet 12 m/s (23 kn), hastighetsnøyaktighet ± 0.5 %</td
+        ></tr
+      >
+      <tr
+        ><td>Bølgegenerator</td><td
+          >Flap-type, programmerbare vanlige og uregelmessige sjøtilstander, Hs opp til 0.3 m i modellskala</td
+        ></tr
+      >
+      <tr
+        ><td>Instrumentering</td><td
+          >6-komponent dynamometer (motstand, sidekraft, girmoment), akselerometre, inklinometre, bølgesonder</td
+        ></tr
+      >
+      <tr><td>Datainnsamling</td><td>Sampling ved 1000 Hz per kanal, sanntidsvisning + etterbehandlingssuite</td></tr>
+      <tr><td>Modellfabrikasjon</td><td>Intern CNC fresing og 3D-utskrift for modellskrog opp til 1.8 m LOA</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Vårt testprogram</h2>
+  <p>Et standard skrogutviklingsprogram i tanken vår følger denne sekvensen:</p>
+  <ol>
+    <li>
+      <strong>Modellbygg</strong> — En skalamodell 1:3.5 er CNC-bearbeidet av skum med høy tetthet og glassert for stivhet.
+      Vekt og CG er justert for å matche Froude-skalert full-last tilstand.
+    </li>
+    <li>
+      <strong>Motstanden løper</strong> — Modellen slepes med 8-10 hastigheter som spenner over driftsområdet. Total motstand
+      måles og dekomponeres til friksjons- og restkomponenter ved hjelp av ITTC-1957-metoden.
+    </li>
+    <li>
+      <strong>Trim- og synkemåling</strong> — Løpetrim og synking registreres ved hver hastighet. En optimal trimvinkel på
+      4-6° for planende skrog er målet.
+    </li>
+    <li>
+      <strong>Våkneundersøkelse</strong> — Tverrbølgekutt måles ved to hastigheter for å vurdere bølgedannende motstand og
+      identifisere tverrbølgeinteraksjoner som kan forårsake hekkinterferens.
+    </li>
+    <li>
+      <strong>Seakeeping (valgfritt)</strong> — Head-sjø og følge-sjø løper i vanlige bølger for å måle økt motstand, vertikal
+      akselerasjon og smellesannsynlighet.
+    </li>
+    <li>
+      <strong>Dataanalyse og anbefalinger</strong> — En fullstendig rapport leveres med sammenlignende diagrammer, hastighet/effektkurver
+      og spesifikke designanbefalinger for fullskala skrog.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Typiske tanktestresultater — motstand vs hastighet (RIB 450 skrog, 1:3.5 skala)
+    </p>
+    <div class="space-y-2">
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">5 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:18%"></div>
+        </div><span class="w-16 text-right">42 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">10 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:35%"></div>
+        </div><span class="w-16 text-right">81 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">15 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:52%"></div>
+        </div><span class="w-16 text-right">121 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">20 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:68%"></div>
+        </div><span class="w-16 text-right">158 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">25 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:85%"></div>
+        </div><span class="w-16 text-right">197 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">30 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:100%"></div>
+        </div><span class="w-16 text-right">232 N</span>
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      Modellskalamotstand (N) ved Froude-skalerte hastigheter. Fullskala effektprediksjon følger ITTC-1978
+      ytelsesprediksjonsmetoden.
+    </p>
+  </div>
+
+  <h2>Ekspertteam</h2>
+  <p>
+    Tanken vår drives av en hydrodynamiker med doktorgrad i marinearkitektur og 8 års erfaring med slepetanker ved et
+    stort europeisk maritimt forskningsinstitutt. Han får støtte av en tekniker som klargjør alle modeller og
+    instrumentering. Teamet følger ITTC (International Towing Tank Conference) anbefalte prosedyrer for å sikre at hver
+    test er repeterbar, sporbar og internasjonalt forsvarlig.
+  </p>
+
+  <h2>Tanktesting for tilpasset skrogutvikling</h2>
+  <p>
+    Tanken vår brukes ikke bare til husdesignede skrog – vi kjører regelmessig testprogrammer for kunder som ønsker å
+    validere en tilpasset skrogform eller undersøke et ytelsesproblem:
+  </p>
+  <ul>
+    <li>
+      <strong>Skrog-form sammenligning</strong> — To eller flere kandidatskrogformer testet under identiske forhold, og gir
+      en objektiv sammenligning av motstand/hastighet/stabilitet for å informere ditt designvalg.
+    </li>
+    <li>
+      <strong>Optimalisering av vedlegg</strong> — Interceptorplater, sprøyteskinner, trimfliker og strakes kan testes i forskjellige
+      konfigurasjoner for å kvantifisere deres individuelle bidrag til reduksjon av luftmotstand.
+    </li>
+    <li>
+      <strong>Motor-matching studie</strong> — Motstandsdata konverteres til en kraftprediksjonskurve, slik at du kan velge
+      den optimale motorhestekraften for målhastighet og nyttelast.
+    </li>
+  </ul>
+
+  <h2>Hvorfor teste hos oss?</h2>
+  <p>
+    Vi gir deg ikke bare et sett med råtall. Våre rapporter oversetter tankdata til praktiske tekniske anbefalinger:
+    "Hev spray-skinnen med 8 mm for å redusere fuktet overflate ved cruisehastighet", "Øk dødstigningen ved akterspeilet
+    med 3° for å redusere slakende akselerasjon", eller "Flytt det langsgående tyngdepunktet 150 mm akterover for
+    forbedret planingsstilling". Du går derfra med en klar forståelse av hva du skal endre og hvorfor.
+  </p>
+  <p>
+    Tanken vår er også tilgjengelig for uavhengig tredjepartstesting på gebyr-for-service-basis. Hvis du utvikler et
+    skrog og ønsker en objektiv, profesjonelt utført hydrodynamisk vurdering, tar vi gjerne imot din henvendelse.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Bestill en tankprøveøkt</h2>
+    <p class="mt-2 text-sm text-muted">
+      Enten du trenger et fullstendig utviklingsprogram eller en enkelt sammenlignende test, kan vi imøtekomme
+      timeplanen din.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Kontakt vårt hydrodynamikkteam</a
+    >
+  </div>
+</section>

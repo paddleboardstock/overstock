@@ -1,0 +1,68 @@
+hero:
+  tagline: Meritekninen osaaminen
+  title: 'Vuosikymmenten meritekniikka<br />jokaisessa rungossa'
+  subtitle: 'Aquafarer yhdistää syvän materiaalitieteen, tarkan valmistuksen ja todelliset koeajot tuottaakseen aluksia, jotka toimivat silloin kun on ratkaisevaa.'
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-production-department.webp
+    alt: Aquafarerin meritekniikka- ja tuotekehitystiimi työssään
+expertise_materials:
+  tagline: Materiaalitiede
+  title: 'Oikea materiaali<br />jokaiseen käyttöön'
+  subtitle: 'Käytämme kolmea perusmateriaalia — kukin valittu tiettyihin käyttötarkoituksiin ja suorituskykyvaatimuksiin.'
+  columns: 3
+  items:
+    - title: Merikäyttöön soveltuva PVC
+      description: '1100 denierin PVC-kangas — monipuolisin materiaalimme. UV-vakautettu, kulutusta kestävä ja REACH-vaatimusten mukainen. Ihanteellinen vapaa-ajan veneisiin, SUP-lautoihin ja kajakkeihin, joissa paino ja kustannustehokkuus ratkaisevat.'
+      icon: tabler:droplet
+    - title: Premium-luokan Hypalon/CSM
+      description: 'Ylivoimainen kemikaalinkesto ja UV-vakaus. Hypalon-veneet voivat kestää 15-20 vuotta oikein hoidettuina. Suositellaan kaupallisiin, pelastus- ja sotilaskäyttöön, jossa pitkäikäisyys on kriittistä.'
+      icon: tabler:shield
+    - title: Lasikuitu ja alumiini
+      description: 'Syvä-V lasikuiturungot RIB- ja partioaluksiin — aaltoja viiltävä suorituskyky kovissa olosuhteissa. Alumiinirungot raskaisiin kaupallisiin työaluksiin, jotka vaativat maksimaalisen lujuuden ja kuormakapasiteetin.'
+      icon: tabler:building-arch
+expertise_manufacturing:
+  tagline: Valmistuskyvyt
+  title: 'Tarkka valmistus<br />jokaisessa vaiheessa'
+  subtitle: '12 000 m²:n tehtaamme on varustettu erikoiskoneilla jokaiselle tuotantovaiheelle.'
+  columns: 2
+  items:
+    - title: CNC-leikkaus
+      description: 'Tietokoneohjattu leikkaus takaa tarkat, toistettavat kangaspaneelit minimaalisella hukalla. Jokainen osa istuu täsmälleen suunnitellusti.'
+      icon: tabler:cpu
+    - title: Suurtaajuushitsaus
+      description: 'Teollinen HF-hitsaus luo saumat, jotka ovat perusmateriaalia vahvempia. Tasainen lämpötila- ja paineensäätö varmistaa ilmatiiviit saumat jokaisessa erässä.'
+      icon: tabler:bolt
+    - title: Drop-stitch-ytimen kokoaminen
+      description: 'Tuhansien polyesterilankojen side yhdistää kankaan ylä- ja alapinnan mahdollistaen korkeapaineisen täyttämisen (15-20 PSI) jäykille ja vakaille SUP-lautoille ja lattioille.'
+      icon: tabler:building-arch
+    - title: Painekoe
+      description: 'Jokainen ilmalla täytettävä tuote painekoestetaan ennen toimitusta. RIB-putket testataan 1,25-kertaisella nimellispaineella — jos kestää siinä, kestää vedessä.'
+      icon: tabler:wind
+    - title: Saumalujuustesti
+      description: 'Jokaisesta tuotantoerästä otetut satunnaisnäytteet käyvät läpi tuhoavat saumalujuustestit. Tulokset kirjataan ja voidaan jäljittää tiettyihin tuotantoeriin.'
+      icon: tabler:files
+    - title: Vesikoe
+      description: 'Jokainen RIB-malli käy meritestit ennen sertifiointia. Todelliset testit rannikko-olosuhteissa validoivat suorituskyvyn, käsittelyn ja vakauden.'
+      icon: tabler:ripple
+expertise_design:
+  tagline: Suunnittelu & tekniikka
+  title: 'Suunniteltu todellisiin olosuhteisiin'
+  subtitle: 'Suunnittelufilosofiamme alkaa siitä, miten venettä tullaan käyttämään — sen jälkeen rakennamme tekniikan sen ympärille.'
+  items:
+    - title: Syvä-V runkosuunnittelu
+      description: "Lasikuiturungoissamme on lasketut V-kulmat, optimoitu kunkin mallin pituuteen ja käyttötarkoitukseen. Jyrkempi V kovan meren suorituskykyyn, matalampi vakauteen."
+    - title: Monikammioturvallisuus
+      description: 'Jokaisessa veneessä on 3-7 itsenäistä ilmakammiota. Jos yksi lohko vaurioituu, loput kammiot pitävät veneen pinnalla ja käyttökunnossa.'
+    - title: Ergonominen asettelu
+      description: 'Konsolin sijainti, putken korkeus ja istuinten sijoittelu on suunniteltu käyttäjän mukavuudelle pitkäaikaisessa käytössä — partioinnissa, kalastuksessa tai kuljetuksessa.'
+    - title: Räätälöity kokoonpano
+      description: 'Putkien värit, konsolin kokoonpano, polttoainekapasiteetti, lisävarustekiinnikkeet — jokainen malli voidaan räätälöidä tiettyihin käyttövaatimuksiin.'
+cta:
+  title: 'Onko sinulla tietty käyttötarkoitus mielessä?'
+  subtitle: 'Insinööritiimimme neuvoo materiaalivalinnoissa, suunnittelussa ja valmistuksessa projektisi tueksi.'
+  actions:
+    - variant: primary
+      text: Kysy insinööreiltämme
+      href: /contact
+    - text: Katso tuotevalikoima
+      href: /products

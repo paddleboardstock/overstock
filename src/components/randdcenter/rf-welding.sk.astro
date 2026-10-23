@@ -1,0 +1,180 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'sk' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">← Späť do R&D centra</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Laboratórium 03</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">RF zváracie centrum</h1>
+      <p class="mt-3 text-lg text-muted">Technológia dielektrického zvárania pre zvarové spoje odolné voči tlaku</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-jungle-mandala-1.webp"
+        alt="Aquafarer RF zváranie dielektrického viazacieho procesu"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Veda za švom</h2>
+  <p>
+    Nafukovacia loď je spoľahlivá len tak, ako sú jej švy. Jediný slabý zvar môže ohroziť celú komoru — a na mori
+    porucha komory nie je nepohodlie; je to bezpečnostné riziko. Na{SITE.name}, investovali sme do špecializovaného
+    Centra zvárania rádiovou frekvenciou (RF), ktoré kombinuje priemyselné dielektrické zváracie lisy s dôslednou
+    kontrolou procesu a testovaním po zváraní. Každý šev, ktorý vyrobíme, je zdokumentovaný, sledovateľný a
+    certifikovaný tak, aby spĺňal alebo prekračoval požiadavky — medzinárodného štandardu pre nafukovacie plavidlá.
+  </p>
+  <p>
+    RF zváranie využíva vysokofrekvenčnú elektromagnetickú energiu (typicky 27,12 MHz) na excitáciu polárnych molekúl vo
+    PVC alebo Hypalon-potiahnutej tkanine, čím presne na rozhraní materiálov generuje teplo. Na rozdiel od horúceho
+    vzduchu alebo horúceho klinového zvárania, RF zváranie vytvára skutočný molekulárny spoj — dve vrstvy tkaniny sa
+    zhrúžia do jedného homogénneho materiálu v oblasti zvaru, čím vznikne spoj tak pevný ako samotný základný materiál.
+  </p>
+
+  <h2>Zváracie zariadenia a kontrola procesu</h2>
+  <p>Naše zváracie centrum je vybavené:</p>
+  <table>
+    <thead><tr><th>Stroj</th><th>Výkon / Kapacita</th><th>Použitie</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Dielektrický RF lis 1</td><td>15 kW, platňa 2000 × 600 mm</td><td
+          >Hlavné pozdĺžne švy, spoje medzi záďou a rúrou</td
+        ></tr
+      >
+      <tr
+        ><td>Dielektrický RF lis 2</td><td>10 kW, platňa 1500 × 500 mm</td><td
+          >Zvary prepážok, pripojenia ku kužeľom, záplaty ventilov</td
+        ></tr
+      >
+      <tr
+        ><td>CNC riadený RF zvárač</td><td>8 kW, XY stôl 2500 × 1200 mm</td><td
+          >Klenuté švy, embosovanie loga/panelov, precízne záplaty</td
+        ></tr
+      >
+      <tr
+        ><td>Automatický horúci klin</td><td>Premenná teplota, max. 1,2 m/min</td><td
+          >Záložná metóda pre materiály Hypalon/CSM</td
+        ></tr
+      >
+    </tbody>
+  </table>
+  <p>
+    Každý RF lis je vybavený monitorovaním teploty a tlaku v uzavretom okruhu. Parametre zvárania — výkon, čas
+    lisovania, doba chladenia, tlak elektródy — sú naprogramované podľa typu materiálu a zaznamenávané v našom systéme
+    riadenia výroby (MES) pre úplnú sledovateľnosť.
+  </p>
+
+  <h2>Testy kvality zvárania — každý šev, každý čln</h2>
+  <p>Integrita zvaru sa overuje povinným protokolom štyroch testov:</p>
+  <ol>
+    <li>
+      <strong>Vizuálna kontrola</strong>— 100 % švov sa vizuálne kontroluje na prepálenie, nesúlad, kontamináciu alebo
+      neúplné spojenie. Práh chybovosti: 0,5 % lineárnych metrov.
+    </li>
+    <li>
+      <strong>Peel test ()</strong>— Z testovacieho kupónu zváraného pri každej výrobnej várke sa vyreže 25 mm široký
+      pásik. Minimálna sila odlupovania: 120 N/25 mm pre PVC 1100 dtex.
+    </li>
+    <li>
+      <strong>Test zadržiavania vzduchu</strong>— Každá hotová komora je natlakovaná na pracovný tlak 1,25 × a držaná
+      24-48 hodín. Pokles tlaku nesmie presiahnuť 2 %.
+    </li>
+    <li>
+      <strong>Test termálneho cyklovania</strong>— Vzorkové kupóny sa cyklujú od -20 °C do +60 °C počas 50 cyklov, potom
+      sa opäť testujú peel-testom. Prijateľná strata pevnosti: &lt; 10 %.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Porovnanie pevnosti proti odlupovaniu — RF vs zváranie horúcim vzduchom (PVC1100 dtex)
+    </p>
+    <div class="space-y-3">
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">RF zváranie</span><div
+          class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded"
+        >
+          <div class="h-full bg-blue-600 rounded" style="width:92%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">184 N</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">Horúci vzduch</span><div
+          class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded"
+        >
+          <div class="h-full bg-gray-400 rounded" style="width:65%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">130 N</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">min</span><div class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded">
+          <div class="h-full bg-green-500 rounded" style="width:48%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">96 N</span>
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      RF zváranie konzistentne dosahuje 90-95 % pevnosti materského materiálu, čo je výrazne nad minimálnou hranicou.
+    </p>
+  </div>
+
+  <h2>Odborná odbornosť</h2>
+  <p>
+    Náš zvárací tím vedie skúsený procesný inžinier s 11-ročnými skúsenosťami v dielektrickom zváraní potiahnutých
+    textílií. Každý operátor absolvuje 6-mesačný interný certifikačný program predtým, než môže pracovať na výrobných
+    spojoch. Recertifikácia je povinná každoročne, vrátane praktického testu zvárania hodnoteného podľa nášho interného
+    štandardu Grade-A (pevnosť proti odlupovaniu ≥ 160 N/25 mm).
+  </p>
+
+  <h2>Vlastné zváracie riešenia pre jedinečné požiadavky</h2>
+  <p>
+    Chápeme, že jedna špecifikácia zvárania nevyhovuje každej aplikácii. Naše RF zváracie centrum pravidelne vyvíja
+    vlastné konfigurácie švov pre klientov so špeciálnymi požiadavkami:
+  </p>
+  <ul>
+    <li>
+      <strong>Viacvrstvové posilňovacie záplaty</strong>— pre oblasti s vysokým opotrebením, ako sú trecie latky a
+      oblúkové kužele, vyvíjame viacpriechodové RF zváračky, ktoré integrujú opotrebiteľnú vonkajšiu vrstvu bez
+      kompromisov v flexibilite.
+    </li>
+    <li>
+      <strong>Vodivé alebo RFopaque švy</strong>— pre vojenské alebo prieskumné plavidlá vyžadujúce elektromagnetické
+      tienenie zvárame do vodivých sieťových vrstiev v rámci vrstvy spojov.
+    </li>
+    <li>
+      <strong>Zváranie panelov s zmenou farby</strong>— dvojfarebné textilné panely (napr. oranžový trup + sivý vrch)
+      zvárané skrytým prekrytím na zachovanie estetiky značky bez viditeľnej spojovej línie.
+    </li>
+  </ul>
+
+  <h2>Náš záväzok voči vám</h2>
+  <p>
+    Každá loď, ktorú dodajeme, má našu záruku kvality zvárania: ak sa v bežnej prevádzke počas záručnej doby zlyhá
+    akýkoľvek šv, poškodenú komoru opravíme alebo vymeníme bezplatne a vykonáme vyšetrovanie príčiny, aby sa predišlo
+    opakovaniu. Nejde len o záruku — je to záväzok k neustálemu zlepšovaniu založenému na reálnych prevádzkových
+    údajoch.
+  </p>
+  <p>
+    Keď si vyberiete{SITE.name}, vyberáte si spoje, ktoré sú navrhnuté, testované a zdokumentované — nie len zvárané. To
+    je rozdiel medzi loďou, ktorá pláva, a loďou, ktorá podáva výkon.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Diskutujte o svojich požiadavkách na zváranie</h2>
+    <p class="mt-2 text-sm text-muted">
+      Vlastné špecifikácie spojov, kompatibilita materiálov alebo validácia procesu.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Kontaktujte náš zvárací tím</a
+    >
+  </div>
+</section>

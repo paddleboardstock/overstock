@@ -1,0 +1,91 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+
+const metadata = {
+  title: `SUP Knowledge — Stand-Up Paddle Board Guides & Tips — ${SITE.name}`,
+  description:
+    'Everything about stand-up paddle boarding — choosing your first board, paddle techniques, sizing, safety, and advanced touring.',
+};
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Learn', href: '/learn/sup' }, { name: 'SUP' }];
+
+const topics = [
+  {
+    title: 'SUP Basics',
+    desc: 'Board types, paddle sizing, stance, and first-day tips for beginners.',
+    href: '/v2/beginner-sup-guide',
+  },
+  {
+    title: 'SUP Size Guide',
+    desc: 'Find the right board length, width, and volume for your weight and skill level.',
+    href: '/size-guide',
+  },
+  {
+    title: 'Paddle Techniques',
+    desc: 'Forward stroke, sweep stroke, draw stroke, and low brace — master essential moves.',
+    href: '/v2/sup-paddle-guide',
+  },
+  {
+    title: 'Inflatable vs Hard Board',
+    desc: 'Portability, performance, durability, and cost compared side by side.',
+    href: '/compare/inflatable-vs-hardboard',
+  },
+  {
+    title: 'SUP Safety Checklist',
+    desc: 'Essential safety practices including weather checks, PFD use, leash rules, and self-rescue.',
+    href: '/learn/water-safety',
+  },
+  {
+    title: 'Touring Essentials',
+    desc: 'Planning multi-hour paddles — navigation, hydration, and reading wind forecasts.',
+    href: '/v2/touring-sup-guide',
+  },
+  {
+    title: 'SUP Maintenance',
+    desc: 'Cleaning, storage, and repair tips to extend the life of your inflatable SUP.',
+    href: '/v2/inflatable-sup-maintenance',
+  },
+  {
+    title: 'Intermediate Techniques',
+    desc: 'Step up your paddling with advanced strokes, turning, and rough-water handling.',
+    href: '/learn/intermediate-techniques',
+  },
+];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <JsonLd
+    type="Article"
+    article={{
+      headline: metadata.title,
+      description: metadata.description,
+      datePublished: '2024-11-05',
+      dateModified: '2025-05-20',
+    }}
+  />
+  <section class="px-6 py-16 max-w-5xl mx-auto text-center">
+    <p class="text-sm font-semibold text-primary uppercase tracking-wider">SUP Knowledge</p>
+    <h1 class="mt-3 text-4xl md:text-5xl font-bold">Stand-Up Paddle Board Guides</h1>
+    <p class="mt-3 text-lg text-muted max-w-2xl mx-auto">
+      From choosing your first board to advanced touring techniques — everything about SUP.
+    </p>
+  </section>
+
+  <section class="px-6 pb-20 max-w-6xl mx-auto">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {
+        topics.map((t) => (
+          <a
+            href={t.href}
+            class="group block bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-all hover:-translate-y-0.5"
+          >
+            <h3 class="font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">{t.title}</h3>
+            <p class="mt-2 text-sm text-gray-500 leading-relaxed">{t.desc}</p>
+            <span class="mt-4 inline-flex text-sm font-medium text-sky-600 group-hover:text-sky-700">Read guide →</span>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+</Layout>

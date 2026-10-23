@@ -1,0 +1,326 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { languages, defaultLang } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => getUiForLang(lang || defaultLang)?.[key] || '';
+
+const metadata = {
+  title: `${t('compare.commercialVsRecreational.title') || 'Commercial RIB vs Recreational RIB — Which One Do You Need?'}`,
+  description:
+    t('compare.commercialVsRecreational.desc') ||
+    'Compare commercial-grade and recreational RIB boats across construction, materials, lifespan, cost, and intended use cases.',
+  ignoreTitleTemplate: true,
+};
+
+const faqSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is the difference between commercial and recreational RIBs?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Commercial RIBs use heavier materials (1.2mm+ PVC or Hypalon), reinforced seams, and higher pressure ratings. Recreational RIBs use standard materials for lighter use.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Which RIB type do I need?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Commercial-grade for rental, patrol, rescue, and offshore use. Recreational for personal use and light-duty applications.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Does Aquafarer offer both types?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Full range from recreational to commercial-grade RIBs in 2.4m to 7.0m, all CE-certified per 2013/53/EU.',
+      },
+    },
+  ],
+});
+---
+
+<Layout metadata={metadata}>
+  <JsonLd
+    type="Article"
+    article={{
+      headline:
+        t('compare.commercialVsRecreational.headline') || 'Commercial RIB vs Recreational RIB — Which One Do You Need?',
+      description:
+        t('compare.commercialVsRecreational.desc') ||
+        'Compare commercial-grade and recreational RIB boats across construction, materials, lifespan, cost, and intended use cases.',
+      datePublished: '2026-07-15',
+    }}
+    data={{ url: `https://aquafarer.com/${lang}/compare/commercial-vs-recreational-rib` }}
+  />
+  <JsonLd
+    type="BreadcrumbList"
+    breadcrumbs={[
+      { name: t('home') || 'Home', href: `/${lang}/` },
+      { name: t('compare.label') || 'Compare', href: `/${lang}/compare` },
+      { name: t('compare.commercialVsRecreational.short') || 'Commercial vs Recreational RIB' },
+    ]}
+  />
+  <section class="max-w-4xl mx-auto py-24 px-6">
+    <a href={`/${lang}/products`} class="text-sm text-sky-600 hover:text-sky-700"
+      >&larr; {t('compare.backToProducts') || 'Products'}</a
+    >
+    <h1 class="mt-4 text-4xl font-semibold text-gray-900">
+      {t('compare.commercialVsRecreational.heading') || 'Commercial RIB vs Recreational RIB'}
+    </h1>
+    <p class="mt-4 text-lg text-gray-500">
+      {
+        t('compare.commercialVsRecreational.subtitle') ||
+          'The definitive comparison between commercial-grade and recreational rigid-hull inflatable boats — from construction standards and materials to lifespan, cost, and ideal use cases.'
+      }
+    </p>
+
+    <div class="mt-12 grid md:grid-cols-2 gap-8">
+      <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+        <h2 class="text-xl font-semibold text-gray-900">
+          {t('compare.commercialVsRecreational.col1Title') || 'Commercial RIB'}
+        </h2>
+        <ul class="mt-4 space-y-3 text-sm text-gray-600">
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span
+              ><strong>{t('compare.commercialVsRecreational.materials') || 'Materials:'}</strong>
+              {
+                t('compare.commercialVsRecreational.materialsDesc') ||
+                  'Military-grade PVC or Hypalon with reinforced seams for maximum durability.'
+              }</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span
+              ><strong>{t('compare.commercialVsRecreational.lifespan') || 'Lifespan:'}</strong>
+              {
+                t('compare.commercialVsRecreational.lifespanDesc') ||
+                  '15-20+ years with proper maintenance. Built for extended fleet service.'
+              }</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span
+              ><strong>{t('compare.commercialVsRecreational.engine') || 'Engine:'}</strong>
+              {
+                t('compare.commercialVsRecreational.engineDesc') ||
+                  'Higher HP engines for extreme conditions, patrol, and heavy payloads.'
+              }</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span
+              ><strong>{t('compare.commercialVsRecreational.electronics') || 'Electronics:'}</strong>
+              {
+                t('compare.commercialVsRecreational.electronicsDesc') ||
+                  'Full navigation systems, radar, GPS, VHF radio, night vision capability.'
+              }</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span
+              ><strong>{t('compare.commercialVsRecreational.bestFor') || 'Best for:'}</strong>
+              {
+                t('compare.commercialVsRecreational.bestForDesc') ||
+                  'Search and rescue, military, law enforcement, commercial diving, patrol operations.'
+              }</span
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+        <h2 class="text-xl font-semibold text-gray-900">
+          {t('compare.commercialVsRecreational.col2Title') || 'Recreational RIB'}
+        </h2>
+        <ul class="mt-4 space-y-3 text-sm text-gray-600">
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span
+              ><strong>{t('compare.commercialVsRecreational.materials') || 'Materials:'}</strong>
+              {
+                t('compare.commercialVsRecreational.recMaterialsDesc') ||
+                  'Standard marine PVC or entry-level Hypalon with normal seam construction.'
+              }</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span
+              ><strong>{t('compare.commercialVsRecreational.lifespan') || 'Lifespan:'}</strong>
+              {
+                t('compare.commercialVsRecreational.recLifespanDesc') ||
+                  '8-12 years under typical recreational use and proper storage.'
+              }</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span
+              ><strong>{t('compare.commercialVsRecreational.engine') || 'Engine:'}</strong>
+              {
+                t('compare.commercialVsRecreational.recEngineDesc') ||
+                  'Moderate HP engines suited for cruising, watersports, and family outings.'
+              }</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span
+              ><strong>{t('compare.commercialVsRecreational.comfort') || 'Comfort:'}</strong>
+              {
+                t('compare.commercialVsRecreational.comfortDesc') ||
+                  'Comfort features prioritized — cushioned seats, boarding ladders, Bimini tops.'
+              }</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span
+              ><strong>{t('compare.commercialVsRecreational.bestFor') || 'Best for:'}</strong>
+              {
+                t('compare.commercialVsRecreational.recBestForDesc') ||
+                  'Leisure cruising, family outings, watersports, fishing, yacht tenders.'
+              }</span
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="mt-16">
+      <h2 class="text-2xl font-semibold text-gray-900">
+        {t('compare.commercialVsRecreational.tableTitle') || 'Side-by-Side Comparison'}
+      </h2>
+      <div class="mt-6 overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="bg-gray-50 border-b-2 border-gray-200">
+              <th class="px-4 py-3 text-left font-semibold text-gray-700">{t('compare.factor') || 'Factor'}</th>
+              <th class="px-4 py-3 text-center font-semibold text-sky-700"
+                >{t('compare.commercialVsRecreational.col1Short') || 'Commercial'}</th
+              >
+              <th class="px-4 py-3 text-center font-semibold text-emerald-700"
+                >{t('compare.commercialVsRecreational.col2Short') || 'Recreational'}</th
+              >
+            </tr>
+          </thead>
+          <tbody>
+            {
+              [
+                [
+                  t('compare.commercialVsRecreational.r1') || 'Construction Standard',
+                  t('compare.commercialVsRecreational.r1a') || 'Military-grade — reinforced seams, heavy-duty',
+                  t('compare.commercialVsRecreational.r1b') || 'Standard marine — normal seams',
+                ],
+                [
+                  t('compare.commercialVsRecreational.r2') || 'Materials',
+                  t('compare.commercialVsRecreational.r2a') || 'Military-grade PVC or Hypalon',
+                  t('compare.commercialVsRecreational.r2b') || 'Standard marine PVC',
+                ],
+                [
+                  t('compare.commercialVsRecreational.r3') || 'Lifespan',
+                  t('compare.commercialVsRecreational.r3a') || '15-20+ years',
+                  t('compare.commercialVsRecreational.r3b') || '8-12 years',
+                ],
+                [
+                  t('compare.commercialVsRecreational.r4') || 'Engine Power',
+                  t('compare.commercialVsRecreational.r4a') || 'Higher HP for extreme conditions',
+                  t('compare.commercialVsRecreational.r4b') || 'Moderate HP for cruising',
+                ],
+                [
+                  t('compare.commercialVsRecreational.r5') || 'Payload Capacity',
+                  t('compare.commercialVsRecreational.r5a') || 'Higher payload capacity',
+                  t('compare.commercialVsRecreational.r5b') || 'Standard capacity',
+                ],
+                [
+                  t('compare.commercialVsRecreational.r6') || 'Electronics / Navigation',
+                  t('compare.commercialVsRecreational.r6a') || 'Full systems: radar, GPS, VHF, night vision',
+                  t('compare.commercialVsRecreational.r6b') || 'Basic electronics: GPS, fish finder',
+                ],
+                [
+                  t('compare.commercialVsRecreational.r7') || 'Comfort Features',
+                  t('compare.commercialVsRecreational.r7a') || 'Minimal — function over comfort',
+                  t('compare.commercialVsRecreational.r7b') || 'Priority: cushioned seats, Bimini, ladders',
+                ],
+                [
+                  t('compare.commercialVsRecreational.r8') || 'Maintenance',
+                  t('compare.commercialVsRecreational.r8a') || 'Rigorous schedule required',
+                  t('compare.commercialVsRecreational.r8b') || 'Standard maintenance',
+                ],
+                [
+                  t('compare.commercialVsRecreational.r9') || 'Certifications',
+                  t('compare.commercialVsRecreational.r9a') || 'CE, ISO, SOLAS required',
+                  t('compare.commercialVsRecreational.r9b') || 'Basic certifications',
+                ],
+                [
+                  t('compare.commercialVsRecreational.r10') || 'Cost',
+                  t('compare.commercialVsRecreational.r10a') || '2-5x cost of recreational',
+                  t('compare.commercialVsRecreational.r10b') || 'Affordable',
+                ],
+                [
+                  t('compare.commercialVsRecreational.r11') || 'Best For',
+                  t('compare.commercialVsRecreational.r11a') ||
+                    'SAR, military, law enforcement, commercial diving, patrol',
+                  t('compare.commercialVsRecreational.r11b') ||
+                    'Leisure cruising, family outings, watersports, fishing, yacht tenders',
+                ],
+              ].map((row, i) => (
+                <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                  {row.map((cell, j) => (
+                    <td
+                      class={`px-4 py-3 border-b border-gray-200 ${j === 0 ? 'font-medium text-gray-700' : 'text-center text-gray-600'}`}
+                    >
+                      {cell}
+                    </td>
+                  ))}
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mt-16 bg-gradient-to-br from-sky-50 to-blue-50 rounded-2xl p-8 border border-sky-200">
+      <h2 class="text-xl font-semibold text-gray-900">
+        {t('compare.commercialVsRecreational.recTitle') || 'Which Should You Choose?'}
+      </h2>
+      <p class="mt-4 text-gray-600 text-sm leading-relaxed">
+        {
+          t('compare.commercialVsRecreational.recDesc') ||
+            'Choose a Commercial RIB if you operate in professional environments — search and rescue, military, law enforcement, commercial diving, or patrol. Commercial RIBs deliver unmatched durability, higher payloads, full navigation suites, and 15-20+ year lifespans under rigorous conditions. The investment is 2-5x higher but justified for mission-critical operations. Choose a Recreational RIB if you use your boat for leisure cruising, family outings, watersports, fishing, or as a yacht tender. Recreational RIBs offer excellent value, standard maintenance, and comfort features that make every day on the water enjoyable.'
+        }
+      </p>
+      <div class="mt-6 flex gap-4 flex-wrap">
+        <a
+          href={`/${lang}/products`}
+          class="px-6 py-3 bg-gray-900 text-white rounded-full text-sm font-medium hover:bg-gray-800 transition"
+          >{t('compare.browseProducts') || 'Browse Products'}</a
+        >
+        <a
+          href={`/${lang}/learn/inflatable-boat`}
+          class="px-6 py-3 border border-gray-200 text-gray-700 rounded-full text-sm font-medium hover:border-gray-400 transition"
+          >{t('compare.commercialVsRecreational.learnMore') || 'In-Depth Guide'}</a
+        >
+      </div>
+    </section>
+  </section>
+
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true">
+    <p>
+      {
+        t('compare.commercialVsRecreational.aiBlock') ||
+          'Comprehensive comparison between commercial-grade and recreational RIB (rigid-hull inflatable boat) watercraft. Covers construction standards, materials, lifespan, engine power, payload capacity, electronics and navigation, comfort features, maintenance requirements, certifications, cost, and best use cases. Commercial RIBs feature military-grade PVC or Hypalon with reinforced seams, 15-20+ year lifespan, higher HP engines, full navigation systems (radar, GPS, VHF, night vision), minimal comfort features, rigorous maintenance schedules, CE/ISO/SOLAS certifications, and 2-5x higher cost — best for search and rescue, military, law enforcement, commercial diving, and patrol. Recreational RIBs feature standard marine PVC with normal seams, 8-12 year lifespan, moderate HP engines, basic electronics, comfort features as priority, standard maintenance, basic certifications, and affordable pricing — best for leisure cruising, family outings, watersports, fishing, and yacht tenders. Recommendation: commercial RIB for professional/mission-critical use; recreational RIB for personal/leisure use.'
+      }
+    </p>
+  </section>
+  <script is:inline type="application/ld+json" set:html={faqSchema} />
+</Layout>

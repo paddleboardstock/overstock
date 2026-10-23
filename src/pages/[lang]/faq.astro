@@ -1,0 +1,200 @@
+---
+const PAGE_DESC: Record<string, { description: string }> = {
+  de: {
+    description:
+      'Häufig gestellte Fragen zu aufblasbaren SUP-Boards, Kajaks, Dinghys, RIBs, Sicherheitsausrüstung und Wassersport.',
+  },
+  es: {
+    description:
+      'Preguntas frecuentes sobre tablas de SUP inflables, kayaks, dinghies, RIB, equipos de seguridad y deportes acuáticos.',
+  },
+  fr: {
+    description:
+      'Questions fréquentes sur les planches de SUP gonflables, kayaks, annexes, RIB, équipements de sécurité et sports nautiques.',
+  },
+  it: {
+    description:
+      'Domande frequenti su tavole SUP gonfiabili, kayak, dinghy, RIB, attrezzature di sicurezza e sport acquatici.',
+  },
+  cs: {
+    description:
+      'Časté dotazy k nafukovacím SUP prknům, kajakům, člunům, RIB, bezpečnostnímu vybavení a vodním sportům.',
+  },
+  sv: {
+    description:
+      'Vanliga frågor om SUP uppblåsbara brädor, kajaker, jollar, RIB, säkerhetsutrustning och vattensporter.',
+  },
+  da: {
+    description:
+      "Ofte stillede spørgsmål om SUP oppustelige brædder, kajakker, joller, RIB'er, sikkerhedsudstyr og vandsport.",
+  },
+  el: {
+    description:
+      'Συχνές ερωτήσεις σχετικά με SUP φουσκωτές σανίδες, καγιάκ, λέμβους, RIB, εξοπλισμό ασφαλείας και θαλάσσια σπορ.',
+  },
+  no: {
+    description: 'Vanlige spørsmål om SUP oppblåsbare brett, kajakker, joller, RIB-er, sikkerhetsutstyr og vannsport.',
+  },
+  ru: {
+    description:
+      'Часто задаваемые вопросы о надувных досках SUP, каяках, лодках, надувных лодках, защитном снаряжении и водных видах спорта.',
+  },
+  nl: {
+    description:
+      "Veelgestelde vragen over SUP opblaasbare boards, kajaks, rubberboten, RIB's, veiligheidsuitrusting en watersporten.",
+  },
+  fi: {
+    description:
+      'Usein kysyttyjä kysymyksiä SUP puhallettavista laudoista, kajakeista, veneistä, RIB:istä, turvavarusteista ja vesiurheilusta.',
+  },
+  pl: {
+    description:
+      'Często zadawane pytania dotyczące SUP nadmuchiwanych desek, kajaków, pontonów, RIB-ów, sprzętu bezpieczeństwa i sportów wodnych.',
+  },
+  ar: {
+    description:
+      'الأسئلة المتداولة حول SUP الألواح القابلة للنفخ، وقوارب الكاياك، والزوارق، والأضلاع، ومعدات السلامة، والرياضات المائية.',
+  },
+  pt: {
+    description:
+      'Perguntas frequentes sobre SUP pranchas infláveis, caiaques, botes, RIBs, equipamentos de segurança e esportes aquáticos.',
+  },
+  ja: {
+    description:
+      'SUP インフレータブル ボード、カヤック、ディンギー、RIB、安全装置、ウォーター スポーツに関するよくある質問。',
+  },
+};
+const PAGE_META: Record<string, { title: string }> = {
+  de: { title: 'Häufige Fragen' },
+  es: { title: 'Preguntas frecuentes' },
+  fr: { title: 'Questions fréquentes' },
+  it: { title: 'Domande frequenti' },
+  pt: { title: 'Perguntas frequentes' },
+  ar: { title: 'الأسئلة الشائعة' },
+  ru: { title: 'Часто задаваемые вопросы' },
+  pl: { title: 'Częste pytania' },
+  nl: { title: 'Veelgestelde vragen' },
+  sv: { title: 'Vanliga frågor' },
+  no: { title: 'Ofte stilte spørsmål' },
+  el: { title: 'Συχνές ερωτήσεις' },
+  fi: { title: 'Usein kysytyt kysymykset' },
+  da: { title: 'Ofte stillede spørgsmål' },
+  cs: { title: 'Časté dotazy' },
+  ja: { title: 'よくある質問' },
+};
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+import JsonLd from '~/components/common/JsonLd.astro';
+import Tldr from '~/components/common/Tldr.astro';
+import { FAQS_BY_LANG } from '~/lib/faq-l10n';
+import { FAQS_BY_LANG_MT, FAQ_PAGE_META_MT } from '~/lib/faq-l10n-mt';
+import { guides } from '~/data/guides';
+import { languages, defaultLang } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({
+    params: { lang },
+  }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => getUiForLang(lang || defaultLang)?.[key] || '';
+const metadata = {
+  title: PAGE_META[lang]?.title || FAQ_PAGE_META_MT[lang]?.title || `FAQ — ${SITE.name}`,
+  description:
+    PAGE_DESC[lang]?.description ||
+    FAQ_PAGE_META_MT[lang]?.description ||
+    'Frequently asked questions about inflatable SUP boards, kayaks, dinghies, RIBs, safety equipment, and water sports.',
+};
+
+const faqs = (FAQS_BY_LANG[lang] || FAQS_BY_LANG_MT[lang] || FAQS_BY_LANG.en) as any[];
+
+const categories = [...new Set(faqs.map((f) => f.category))];
+
+const faqSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is the MOQ for OEM orders?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: '2-5 units for RIB boats, 5-10 units for SUP boards per SKU with existing molds. Custom molds require 200+ units.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the lead time?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: '30-45 days FOB Qingdao for standard orders. Prototypes 7-14 days. Rush production available for an additional fee.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What warranty is offered?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: '5-year warranty on boats, kayaks, and RIBs. 2-year warranty on SUP boards and accessories. Covers manufacturing defects.',
+      },
+    },
+  ],
+});
+---
+
+<Layout metadata={metadata}>
+  <meta name="ai-intent" content="faq,water-sports-questions,sup-buying-faq" />
+
+  <section class="max-w-3xl mx-auto py-24 px-6" data-ai-block="faq">
+    <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">{t('faq.pageLabel')}</span>
+    <h1 class="mt-4 text-4xl font-semibold text-gray-900">{t('faq.title')}</h1>
+    <p class="mt-4 text-lg text-gray-500">{t('faq.pageDesc')}</p>
+
+    <Tldr summary={t('home.tldr.summary')} className="mt-8" />
+  </section>
+
+  {
+    categories.map((cat) => (
+      <section class="max-w-3xl mx-auto pb-16 px-6">
+        <h2 class="text-xl font-semibold text-gray-900 mb-6">{t('faq.category.' + cat) || cat}</h2>
+        <div class="space-y-4">
+          {faqs
+            .filter((f) => f.category === cat)
+            .map((item) => (
+              <details class="bg-white border border-gray-200 rounded-xl overflow-hidden group">
+                <summary class="px-6 py-4 font-semibold text-gray-900 cursor-pointer hover:bg-gray-50 transition-colors list-none flex items-center justify-between">
+                  <span>{item.question}</span>
+                  <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0">▼</span>
+                </summary>
+                <div class="px-6 pb-4 space-y-3">
+                  <p class="text-gray-600 leading-relaxed">{item.answer}</p>
+                  {item.relatedGuides.length > 0 && (
+                    <div class="flex flex-wrap gap-2 text-sm">
+                      {item.relatedGuides.map((slug: string) => {
+                        const g = guides.find((gg) => gg.slug === slug);
+                        return g ? (
+                          <a
+                            href={`/${lang}/guides/${slug}`}
+                            class="px-3 py-1 bg-sky-50 text-sky-700 rounded-full hover:bg-sky-100 transition-colors"
+                          >
+                            {g.title}
+                          </a>
+                        ) : null;
+                      })}
+                    </div>
+                  )}
+                </div>
+              </details>
+            ))}
+        </div>
+      </section>
+    ))
+  }
+
+  <JsonLd type="FAQPage" faqs={faqs.map((f) => ({ q: f.question, a: f.answer }))} />
+  <script is:inline type="application/ld+json" set:html={faqSchema} />
+</Layout>

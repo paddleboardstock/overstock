@@ -1,0 +1,306 @@
+hero_text:
+  tagline: Pyydä tarjous
+  title: Pyydä tarjous<br />projektillesi
+  subtitle: Kerro meille tarpeistasi, niin tiimimme vastaa yksityiskohtaisella tarjouksella 2 arkipäivän kuluessa.
+steps2_process:
+  title: Miten se toimii
+  subtitle: Neljä yksinkertaista vaihetta kyselystä tarjoukseen.
+  items:
+    - title: 'Vaihe 1: Lähetä vaatimuksesi'
+      description: Täytä alla oleva lomake ja kerro tuotteesi tyyppi, määrä ja tekniset tiedot. Mitä yksityiskohtaisemmin annat, sitä tarkempi tarjouksesi on.
+      icon: tabler:file-text
+    - title: 'Vaihe 2: Tarkistamme ja neuvomme'
+      description: Suunnittelutiimimme tarkistaa vaatimukset ja voi ottaa sinuun yhteyttä saadakseen lisätietoja. Annamme suosituksia tuotteen kokoonpanosta ja vaihtoehdoista.
+      icon: tabler:users
+    - title: 'Vaihe 3: Vastaanota tarjous'
+      description: Saat yksityiskohtaisen tarjouksen, joka sisältää yksikköhinnan, MOQ:n, toimitusajan, maksuehdot ja toimitusvaihtoehdot. Yleensä 48 tunnin sisällä.
+      icon: tabler:currency-dollar
+    - title: 'Vaihe 4: Näyte ja tuotanto'
+      description: Tarjouksen hyväksymisen jälkeen siirrymme näytetuotantoon (tarvittaessa) tai suoraan massatuotantoon. Säännölliset päivitykset koko prosessin ajan.
+      icon: tabler:building-factory
+content_form:
+  tagline: Tarjouslomake
+  title: Kerro meille projektistasi
+  subtitle: Kaikki *-merkityt kentät ovat pakollisia.
+  fields:
+    - name: Tuoteluokka
+      type: valitse
+      options:
+        - RIB-vene
+        - Ilmatäytteinen vene
+        - SUP-lauta
+        - Ilmatäytteinen kajakki
+        - Pelastusliivi
+        - Venetarvike
+        - Räätälöity OEM/ODM
+    - name: Sovellus
+      type: valitse
+      options:
+        - Sukelluskeskus
+        - Kalastus
+        - Meriturismi / Lomakeskus
+        - Etsintä ja pelastus
+        - Tender-vene
+        - Kaupallinen työvene
+        - Viranomainen / Sotilas
+        - OEM / Oma tuotemerkki
+        - Henkilökohtainen / Vapaa-aika
+        - Muu
+    - name: Määrä
+      type: teksti
+      placeholder: esim. 50 yksikköä
+    - name: Kohdemarkkinat
+      type: teksti
+      placeholder: esim. Eurooppa, Pohjois-Amerikka, Lähi-itä
+    - name: Toimitusmaa
+      type: teksti
+      placeholder: esim. Italia, Arabiemiirikunnat, USA, Australia
+    - name: Materiaalien etusija
+      type: valitse
+      options:
+        - Ei mieltymystä
+        - Merikäyttöön soveltuva PVC (1100 dtex)
+        - Premium-Hypalon / CSM
+        - Lasikuiturunko
+        - Alumiinirunko
+    - name: Moottorin vaatimus
+      type: teksti
+      placeholder: esim. 60 hv perämoottori, ei moottoria, kaksois 115 hv
+    - name: Mukauttaminen vaaditaan
+      type: teksti
+      placeholder: esim. mukautetut värit, brändäys/logo, pakkaus, erikoisvarusteet
+    - name: Aikajana
+      type: teksti
+      placeholder: esim. toimitus 90 päivän sisällä
+    - name: Lisävaatimukset
+      type: tekstialue
+      placeholder: Kuvaile sovelluksesi, tekniset tiedot tai mahdolliset erityisvaatimukset – sisällytä viitepiirustukset, tekniset tiedot tai linkit, jos ne ovat saatavilla
+    - name: Lataa määritys
+      type: tiedosto
+      placeholder: Lataa tekninen taulukko, piirustus tai viiteasiakirja (PDF, DWG, DXF)
+    - name: Lataa logo / taideteos
+      type: tiedosto
+      placeholder: Lataa logosi tai kuvitus mukautettua brändäystä varten (AI, EPS, PNG)
+content_rfq_types:
+  tagline: 3-tasoinen tarjouspyyntöjärjestelmä
+  title: Valitse oikea<br />kyselytaso
+  subtitle: Eri projektit vaativat eri tasoisia yksityiskohtia. Valitse ostovaihettasi vastaava lomake.
+  items:
+    - title: Pikakysely
+      description: 5-6 kenttää, 30 sekuntia. Ensikontaktia, yleisiä kysymyksiä tai resurssien latausseurantaa varten. Vastaamme 24 tunnin kuluessa perustiedot ja seuraavat vaiheet.
+      icon: tabler:bolt
+    - title: Normaali tarjouspyyntö
+      description: 8-10 kenttää, 2 minuuttia. Tietyt tuotetarjoukset mallien valinnalla, määrällä ja toimitusvaatimuksilla. Saat yksityiskohtaisen tarjouksen 48 tunnin sisällä.
+      icon: tabler:file-text
+    - title: Projektin tarjouspyyntö
+      description: 10-14 kenttää, 5 minuuttia. RIB-, lomakeskuksen laivasto-, pelastus- tai valtion hankkeisiin, jotka vaativat mukautetun konfiguroinnin, vaatimustenmukaisuusdokumentaation ja monivuotisen toimitussuunnittelun. Nimetty projektipäällikkö.
+      icon: tabler:clipboard-list
+form_quick:
+  title: Pikakysely
+  subtitle: Nopea yhteydenotto yleisiin kysymyksiin ja alustaviin tietopyyntöihin.
+  fields:
+    - name: täysi nimi
+      label: Koko nimi
+      type: teksti
+      required: true
+      placeholder: Koko nimesi
+    - name: yritysSähköposti
+      label: Yrityksen sähköposti
+      type: sähköposti
+      required: true
+      placeholder: sinä@yritys.com
+    - name: yrityksen nimi
+      label: Yrityksen nimi
+      type: teksti
+      required: true
+      placeholder: Sinun yrityksesi
+    - name: ostajatyyppi
+      label: Olen a...
+      type: valitse
+      required: true
+      options:
+        - Jakelija / Maahantuoja
+        - Brändin omistaja / Oma tuotemerkki
+        - Lomakeskus / Vesilajikeskus
+        - Vuokraamo
+        - Viranomainen / Pelastusorganisaatio
+        - Sukellus-/kalastusoperaattori
+        - Meri-insinööri / refit
+        - Muu
+    - name: tuoteKiinnostus
+      label: Tuotteen kiinnostus
+      type: monivalinta
+      required: true
+      options:
+        - RIB-veneet
+        - Ilmatäytteiset veneet
+        - SUP-laudat
+        - Turvavarusteet
+        - Tarvikkeet
+        - Räätälöity OEM/ODM
+    - name: viesti
+      label: Mitä tarvitset?
+      type: tekstialue
+      required: false
+      placeholder: Lyhyt kuvaus tarpeistasi...
+form_standard:
+  title: Normaali tarjouspyyntö
+  subtitle: Yksityiskohtainen tarjouspyyntö tietyistä tuotteista ja määristä.
+  fields:
+    - name: täysi nimi
+      label: Koko nimi
+      type: teksti
+      required: true
+    - name: yritysSähköposti
+      label: Yrityksen sähköposti
+      type: sähköposti
+      required: true
+    - name: yrityksen nimi
+      label: Yrityksen nimi
+      type: teksti
+      required: true
+    - name: ostajatyyppi
+      label: Ostajan tyyppi
+      type: valitse
+      required: true
+    - name: tuotemalli
+      label: Tuotteen malli/tyyppi
+      type: teksti
+      required: true
+      placeholder: esim. AF580 RIB, AF380 puhallettava
+    - name: määrä
+      label: Arvioitu määrä
+      type: teksti
+      required: true
+      placeholder: esim. 10-20 yksikköä
+    - name: kohdemarkkina
+      label: Kohdemarkkina/alue
+      type: teksti
+      required: true
+      placeholder: esim. EU, Pohjois-Amerikka, Lähi-itä
+    - name: toimitusaikajana
+      label: Haluttu toimitus
+      type: valitse
+      required: true
+      options:
+        - 30 päivän kuluessa
+        - 30-60 päivää
+        - 60-90 päivää
+        - Suunnittelu etukäteen (90+ päivää)
+        - Vain tutustumassa
+    - name: noudattaminenPakollinen
+      label: Vaatimusten noudattaminen
+      type: monivalinta
+      required: false
+      options:
+        - CE / RCD 2013/53/EU
+        - UKCA
+        - USCG
+        - ISO 9001
+        - BSCI
+        - REACH
+        - Ei mitään / Ei varma
+    - name: viesti
+      label: Lisätiedot
+      type: tekstialue
+      required: false
+form_project:
+  title: Projektin tarjouspyyntö
+  subtitle: Kattava projektikysely kalusto-, räätälöityjä tai julkisia hankintoja varten.
+  fields:
+    - name: täysi nimi
+      label: Koko nimi
+      type: teksti
+      required: true
+    - name: yritysSähköposti
+      label: Yrityksen sähköposti
+      type: sähköposti
+      required: true
+    - name: yrityksen nimi
+      label: Yrityksen nimi
+      type: teksti
+      required: true
+    - name: ostajatyyppi
+      label: Ostajan tyyppi
+      type: valitse
+      required: true
+    - name: projektityyppi
+      label: Projektin tyyppi
+      type: valitse
+      required: true
+      options:
+        - Resort-/hotelliveneistö
+        - Vuokraveneistö
+        - Pelastus-/partioveneistö
+        - Sukelluskeskuksen veneistö
+        - Julkishankinta
+        - Oma tuotemerkki / OEM
+        - Jälleenmyyjän varastotilaus
+        - Muu
+    - name: venetyypit
+      label: Vaaditut venetyypit
+      type: monivalinta
+      required: true
+      options:
+        - RIB-veneet
+        - Ilmatäytteiset veneet / dingit
+        - SUP-laudat
+        - Kajakit
+        - Turvavarusteet
+    - name: laivaston koko
+      label: Laivaston koko/määrä vaihteluväli
+      type: teksti
+      required: true
+      placeholder: esim. 20-50 yksikköä 12 kuukauden aikana
+    - name: mukautetut vaatimukset
+      label: Mukautetut konfigurointitarpeet
+      type: tekstialue
+      required: false
+      placeholder: Rungon koko, putken materiaali, kannen asettelu, brändäysvaatimukset...
+    - name: noudattaminenPakollinen
+      label: Vaatimustenmukaisuus ja sertifiointivaatimukset
+      type: monivalinta
+      required: true
+      options:
+        - CE / RCD 2013/53/EU
+        - UKCA
+        - USCG Type III/V
+        - ISO 9001
+        - BSCI
+        - REACH / RoHS
+        - Sertifiointi paikallisille markkinoille
+    - name: kohdemarkkina
+      label: Kohdemarkkinat
+      type: teksti
+      required: true
+    - name: budjettialue
+      label: Budjettialue
+      type: valitse
+      required: false
+      options:
+        - Alle $10,000
+        - $10,000 - $50,000
+        - $50,000 - $200,000
+        - $200,000+
+        - En halua kertoa
+    - name: toimitusaikajana
+      label: Projektin aikajana
+      type: valitse
+      required: true
+      options:
+        - Kiireellinen (30 päivän kuluessa)
+        - Normaali (30-60 päivää)
+        - Suunniteltu (60-90 päivää)
+        - Tulevaisuuden suunnittelu (90+ päivää)
+    - name: viesti
+      label: Projektin tiedot ja vaatimukset
+      type: tekstialue
+      required: false
+      placeholder: Kuvaile projektisi, hakemuksesi ja mahdolliset erityisvaatimukset...
+cta:
+  title: Keskusteletko mieluummin sähköpostitse?
+  subtitle: Lähetä kyselysi suoraan myyntitiimiimme, niin vastaamme 24 tunnin kuluessa.
+  actions:
+    - variant: primary
+      text: Lähetä meille sähköpostia suoraan
+      href: /contact

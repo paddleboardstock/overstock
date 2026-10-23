@@ -1,0 +1,56 @@
+hero:
+  tagline: Kvaliteedikontrolli labor
+  title: Testimislabor & kvaliteedi tagamine
+  subtitle: Sõltumatu kvaliteedilabor, millel on ISO 9001 protsessid — iga üksus testitakse enne saatmist
+intro: Aquafarer haldab spetsiaalset kvaliteedikontrolli laborit, mis töötab sõltumatult tootmisest. Iga toorainepartii ja iga valmis paat läbib dokumenteeritud inspekteerimisprotokollid enne vabastamist. Meie QC meeskond raportib otse juhtkonnale, tagades erapooletud kvaliteedialased otsused.
+highlights:
+  - value: 100%
+    label: Üksused survekatsetatud
+    detail: Iga kamber, iga paat
+  - value: 48 h
+    label: Õhu säilitamise testi kestus
+    detail: 1,25× nimipressures
+  - value: <5%
+    label: Maksimaalne lubatud rõhudrop
+    detail: 24-tunnise hoidmisaja jooksul
+  - value: AQL 2,5
+    label: Peamiste puuduste lävend
+    detail: ISO 2859 proovivõtt
+test_procedures:
+  - title: Tooraine kontroll
+    description: Iga saabuv PVC, Hypalon, drop-stitch kangaste ja tarvikute partii testitakse enne vastuvõtmist. Kontrollitakse tõmbetugevust (ASTM D751), rebenemiskindlust (ISO 4674) ja UV vastupidavust. Mittesobivad materjalid asetatakse karantiini ja tagastatakse.
+    standards:
+      - ASTM D751 (tõmme)
+      - ISO 4674 (rebimine)
+      - ISO 4892 (UV)
+  - title: Protsessi käigus QC kontrollpunktid
+    description: Tootmise operaatorid teostavad igal etapil enesekontrolli. QC audiitorid viivad läbi juhusliku proovivõtu kogu vahetuse jooksul. Keevituste koorimisteste tehakse iga 50 ühiku järel. Mõõtmete kontroll toimub iga 20. paneeli juures.
+    standards:
+      - ASTM D751 (koorimine)
+      - Sise 100-punktiline kontrollnimekiri
+      - ISO 2859 proovivõtt
+  - title: 48-tunnine õhuhoidmise test
+    description: Iga torukamber pumpatakse täis 125% nimipressurest ja hoitakse 48 tundi. Rõhuandurid logivad pidevalt koos temperatuuri kompensatsiooniga. Kui mõni kamber ületab 5% rõhudropi, käivitatakse automaatne partii uuesti ülevaatus.
+    standards:
+      - ISO 6185
+      - CE 2013/53/EL
+  - title: Koormuse ja tasakaalu testimine
+    description: Valmis paate testitakse maksimaalse nimivõimsuse juures stabiilsuse, vettpidavuse ja käsitsemise osas. Iga alus läbib vee testimise enne lõplikku inspekteerimise kinnitust.
+    standards:
+      - ISO 12217
+      - CE 2013/53/EL
+equipment:
+  - name: Universaalne testimasin (venitus)
+    spec: 5 kN, ASTM D751 nõuetele vastav
+  - name: Rõhulekke testija
+    spec: Mitmekanaliline, 0–50 psi, andmete salvestamine
+  - name: UV Ilmastikukamber
+    spec: ISO 4892, 1 000 h tsüklit
+  - name: Paksusemõõtja (digitaalne)
+    spec: 0,01 mm lahutusvõime
+  - name: Koorimisstendi (keevitus)
+    spec: Mootoriga, 50 N kandevõime
+  - name: Temperatuurikamber
+    spec: -40 °C kuni +100 °C
+  - name: Lekkevann
+    spec: 6 m × 2 m, valgustusega

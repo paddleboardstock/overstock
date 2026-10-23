@@ -1,0 +1,306 @@
+hero_text:
+  tagline: Dapatkan Penawaran
+  title: Minta Penawaran<br />untuk Proyek Anda
+  subtitle: Ceritakan kebutuhan Anda kepada kami dan tim kami akan merespons dengan penawaran rinci dalam 2 hari kerja.
+steps2_process:
+  title: Cara Kerjanya
+  subtitle: Empat langkah sederhana dari permintaan hingga penawaran.
+  items:
+    - title: 'Langkah 1: Kirim Kebutuhan Anda'
+      description: Isi formulir di bawah ini dengan jenis produk, jumlah, dan spesifikasi Anda. Semakin rinci informasi yang Anda berikan, semakin akurat penawaran Anda.
+      icon: tabler:file-text
+    - title: 'Langkah 2: Kami Meninjau & Memberi Saran'
+      description: Tim teknik kami meninjau kebutuhan Anda dan mungkin menghubungi Anda untuk klarifikasi. Kami memberikan rekomendasi tentang konfigurasi produk dan opsi.
+      icon: tabler:users
+    - title: 'Langkah 3: Terima Penawaran Anda'
+      description: Anda menerima penawaran rinci termasuk harga unit, MOQ, waktu pengerjaan, syarat pembayaran, dan opsi pengiriman. Biasanya dalam 48 jam.
+      icon: tabler:currency-dollar
+    - title: 'Langkah 4: Sampel & Produksi'
+      description: Setelah penawaran diterima, kami melanjutkan ke produksi sampel (jika berlaku) atau langsung ke produksi massal. Pembaruan rutin selama proses.
+      icon: tabler:building-factory
+content_form:
+  tagline: Formulir Penawaran
+  title: Ceritakan Tentang Proyek Anda
+  subtitle: Semua kolom bertanda * wajib diisi.
+  fields:
+    - name: Kategori Produk
+      type: select
+      options:
+        - RIB Perahu
+        - Perahu Tiup
+        - SUP Board
+        - Kayak Tiup
+        - Rompi Pelampung
+        - Aksesori Laut
+        - Kustom OEM/ODM
+    - name: Aplikasi
+      type: select
+      options:
+        - Pusat Menyelam
+        - Penangkapan ikan
+        - Pariwisata Laut / Resor
+        - Pencarian & Penyelamatan
+        - Tender Yacht
+        - Kapal Kerja Komersial
+        - Pemerintah / Militer
+        - OEM / Label Pribadi
+        - Pribadi / Rekreasi
+        - Lainnya
+    - name: Jumlah
+      type: text
+      placeholder: misal 50 unit
+    - name: Pasar Sasaran
+      type: text
+      placeholder: misal Eropa, Amerika Utara, Timur Tengah
+    - name: Negara Pengiriman
+      type: text
+      placeholder: misal Italia, UAE, USA, Australia
+    - name: Preferensi Material
+      type: select
+      options:
+        - Tidak Ada Preferensi
+        - PVC Kelas Laut (1100 dtex)
+        - Hypalon / CSM Premium
+        - Lambung Fiberglass
+        - Lambung Aluminium
+    - name: Kebutuhan Mesin
+      type: text
+      placeholder: misal 60 HP outboard, tanpa mesin, twin 115 HP
+    - name: Kustomisasi Diperlukan
+      type: text
+      placeholder: misal warna kustom, branding/logo, kemasan, perlengkapan khusus
+    - name: Garis Waktu
+      type: text
+      placeholder: misal pengiriman dalam 90 hari
+    - name: Persyaratan Tambahan
+      type: textarea
+      placeholder: Jelaskan aplikasi Anda, spesifikasi teknis, atau persyaratan khusus — sertakan gambar referensi, spesifikasi, atau tautan jika tersedia
+    - name: Unggah Spesifikasi
+      type: file
+      placeholder: Unggah lembar spesifikasi, gambar, atau dokumen referensi Anda (PDF, DWG, DXF)
+    - name: Unggah Logo / Karya Seni
+      type: file
+      placeholder: Unggah logo atau karya seni Anda untuk branding kustom (AI, EPS, PNG)
+content_rfq_types:
+  tagline: Sistem RFQ 3-Tingkat
+  title: Pilih Tingkat<br />Pertanyaan yang Tepat
+  subtitle: Proyek yang berbeda membutuhkan tingkat detail yang berbeda. Pilih formulir yang sesuai dengan tahap pembelian Anda.
+  items:
+    - title: Pertanyaan Cepat
+      description: 5-6 kolom, 30 detik. Untuk kontak awal, pertanyaan umum, atau tindak lanjut unduhan sumber daya. Kami merespons dalam 24 jam dengan informasi dasar dan langkah selanjutnya.
+      icon: tabler:bolt
+    - title: RFQ Standar
+      description: 8-10 kolom, 2 menit. Untuk kutipan produk spesifik dengan pemilihan model, jumlah, dan persyaratan pengiriman. Terima kutipan rinci dalam 48 jam.
+      icon: tabler:file-text
+    - title: RFQ Proyek
+      description: 10-14 kolom, 5 menit. Untuk RIB, armada resor, penyelamatan, atau proyek pemerintah yang memerlukan konfigurasi khusus, dokumentasi kepatuhan, dan perencanaan pasokan multi-tahun. Manajer proyek khusus ditugaskan.
+      icon: tabler:clipboard-list
+form_quick:
+  title: Pertanyaan Cepat
+  subtitle: Kontak cepat untuk pertanyaan umum dan permintaan informasi awal.
+  fields:
+    - name: namaLengkap
+      label: Nama Lengkap
+      type: text
+      required: true
+      placeholder: Nama lengkap Anda
+    - name: emailBisnis
+      label: Email Bisnis
+      type: email
+      required: true
+      placeholder: you@company.com
+    - name: namaPerusahaan
+      label: Nama Perusahaan
+      type: text
+      required: true
+      placeholder: Perusahaan Anda
+    - name: tipePembeli
+      label: Saya adalah...
+      type: select
+      required: true
+      options:
+        - Distributor / Importir
+        - Pemilik Merek / Label Pribadi
+        - Resor / Pusat Air
+        - Operator Penyewaan
+        - Pemerintah / Lembaga Penyelamatan
+        - Operator Menyelam / Memancing
+        - Insinyur / Perakit Ulang Kapal
+        - Lainnya
+    - name: minatProduk
+      label: Minat Produk
+      type: multiselect
+      required: true
+      options:
+        - RIB Perahu
+        - Perahu Karet
+        - SUP Papan
+        - Peralatan Keamanan
+        - Aksesoris
+        - OEM/ODM Kustom
+    - name: message
+      label: Apa yang Anda butuhkan?
+      type: textarea
+      required: false
+      placeholder: Deskripsi singkat tentang kebutuhan Anda...
+form_standard:
+  title: RFQ Standar
+  subtitle: Permintaan penawaran rinci untuk produk dan jumlah tertentu.
+  fields:
+    - name: namaLengkap
+      label: Nama Lengkap
+      type: text
+      required: true
+    - name: emailBisnis
+      label: Email Bisnis
+      type: email
+      required: true
+    - name: namaPerusahaan
+      label: Nama Perusahaan
+      type: text
+      required: true
+    - name: tipePembeli
+      label: Jenis Pembeli
+      type: select
+      required: true
+    - name: modelProduk
+      label: Model / Tipe Produk
+      type: text
+      required: true
+      placeholder: misalnya, AF580 RIB, AF380 Inflatable
+    - name: quantity
+      label: Perkiraan Jumlah
+      type: text
+      required: true
+      placeholder: misalnya, 10-20 unit
+    - name: pasarTarget
+      label: Target Pasar / Wilayah
+      type: text
+      required: true
+      placeholder: misalnya, UE, Amerika Utara, Timur Tengah
+    - name: jadwalPengiriman
+      label: Pengiriman yang Diinginkan
+      type: select
+      required: true
+      options:
+        - Dalam 30 hari
+        - 30-60 hari
+        - 60-90 hari
+        - Merencanakan sebelumnya (90+ hari)
+        - Hanya meneliti
+    - name: kepatuhanDiperlukan
+      label: Persyaratan Kepatuhan
+      type: multiselect
+      required: false
+      options:
+        - CE / RCD 2013/53/EU
+        - UKCA
+        - USCG
+        - ISO 9001
+        - BSCI
+        - REACH
+        - Tidak ada / Tidak yakin
+    - name: message
+      label: Detail Tambahan
+      type: textarea
+      required: false
+form_project:
+  title: RFQ Proyek
+  subtitle: Permintaan proyek komprehensif untuk armada, kustom, atau pengadaan pemerintah.
+  fields:
+    - name: namaLengkap
+      label: Nama Lengkap
+      type: text
+      required: true
+    - name: emailBisnis
+      label: Email Bisnis
+      type: email
+      required: true
+    - name: namaPerusahaan
+      label: Nama Perusahaan
+      type: text
+      required: true
+    - name: tipePembeli
+      label: Jenis Pembeli
+      type: select
+      required: true
+    - name: projectType
+      label: Jenis Proyek
+      type: select
+      required: true
+      options:
+        - Armada Resort / Hotel
+        - Armada Sewa
+        - Armada Penyelamatan / Patroli
+        - Armada Pusat Menyelam
+        - Pengadaan Pemerintah
+        - Label Pribadi / OEM
+        - Pesanan Stok Dealer
+        - Lainnya
+    - name: boatTypes
+      label: Jenis Perahu yang Diperlukan
+      type: multiselect
+      required: true
+      options:
+        - RIB Perahu
+        - Perahu Karet / Perahu Kecil
+        - SUP Papan
+        - Kayak
+        - Peralatan Keamanan
+    - name: fleetSize
+      label: Ukuran Armada / Kisaran Jumlah
+      type: text
+      required: true
+      placeholder: misalnya, 20-50 unit selama 12 bulan
+    - name: customRequirements
+      label: Kebutuhan Konfigurasi Kustom
+      type: textarea
+      required: false
+      placeholder: Ukuran lambung, bahan tabung, tata letak dek, persyaratan merek...
+    - name: kepatuhanDiperlukan
+      label: Persyaratan Kepatuhan & Sertifikasi
+      type: multiselect
+      required: true
+      options:
+        - CE / RCD 2013/53/EU
+        - UKCA
+        - USCG Tipe III/V
+        - ISO 9001
+        - BSCI
+        - REACH / RoHS
+        - Sertifikasi pasar lokal
+    - name: pasarTarget
+      label: Pasar Sasaran
+      type: text
+      required: true
+    - name: budgetRange
+      label: Rentang Anggaran
+      type: select
+      required: false
+      options:
+        - Di bawah $10,000
+        - $10,000 - $50,000
+        - $50,000 - $200,000
+        - $200,000+
+        - Lebih baik tidak mengatakan
+    - name: jadwalPengiriman
+      label: Garis Waktu Proyek
+      type: select
+      required: true
+      options:
+        - Mendesak (dalam 30 hari)
+        - Standar (30-60 hari)
+        - Direncanakan (60-90 hari)
+        - Perencanaan masa depan (lebih dari 90 hari)
+    - name: message
+      label: Detail & Persyaratan Proyek
+      type: textarea
+      required: false
+      placeholder: Jelaskan proyek, aplikasi, dan persyaratan spesifik Anda...
+cta:
+  title: Lebih suka berdiskusi lewat email?
+  subtitle: Kirim pertanyaan Anda langsung ke tim penjualan kami dan kami akan merespons dalam 24 jam.
+  actions:
+    - variant: primary
+      text: Kirim email langsung kepada kami
+      href: /contact

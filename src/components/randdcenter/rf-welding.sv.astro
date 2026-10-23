@@ -1,0 +1,178 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'sv' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">← Tillbaka till R&amp;D Center</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Lab 03</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">RF Svetscenter</h1>
+      <p class="mt-3 text-lg text-muted">Dielektrisk bindningsteknik för svetsar som håller under tryck</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-jungle-mandala-1.webp"
+        alt="Aquafarer RF-svets dielektrisk bindningsprocess"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Vetenskapen bakom sömmen</h2>
+  <p>
+    En gummibåt är bara så pålitlig som dess sömmar. En enda svag svets kan äventyra en hel kammare — och till sjöss är
+    ett kammarfel inte en olägenhet; det är en säkerhetsrisk. På {SITE.name}, har vi investerat i ett dedikerat
+    radiofrekvenssvetscenter (RF) som kombinerar dielektriska svetspressar av industriell kvalitet med rigorös
+    processkontroll och eftersvetstestning. Varje söm vi producerar är dokumenterad, spårbar och certifierad för att
+    uppfylla eller överträffa kraven i — den internationella standarden för uppblåsbara båtar.
+  </p>
+  <p>
+    RF-svetsning använder högfrekvent elektromagnetisk energi (vanligtvis 27.12 MHz) för att excitera de polära
+    molekylerna i PVC eller Hypalon-belagd väv, vilket genererar värme exakt vid materialgränssnittet. Till skillnad
+    från varmlufts- eller varmkilsvetsning skapar RF-svetsning en sann molekylär bindning - de två tygskikten smälter
+    samman till ett enda homogent material vid svetszonen, vilket ger en fog som är lika stark som själva
+    modermaterialet.
+  </p>
+
+  <h2>Svetsutrustning och processkontroll</h2>
+  <p>Vårt svetscenter är utrustat med:</p>
+  <table>
+    <thead><tr><th>Maskin</th><th>Effekt / Kapacitet</th><th>Ansökan</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Dielektrisk RF-press 1</td><td>15 kW, platta 2000 × 600 mm</td><td
+          >Huvudsakliga längsgående sömmar, akterspegel-till-rör-skarvar</td
+        ></tr
+      >
+      <tr
+        ><td>Dielektrisk RF-press 2</td><td>10 kW, platta 1500 × 500 mm</td><td
+          >Baffelsvetsar, konfästen, ventillappar</td
+        ></tr
+      >
+      <tr
+        ><td>CNC-styrd RF-svets</td><td>8 kW, XY-tabell 2500 × 1200 mm</td><td
+          >Böjda sömmar, logotyp/panelprägling, precisionspatchwork</td
+        ></tr
+      >
+      <tr
+        ><td>Hotwedge automatisk svetsare</td><td>Variabel temperatur, 1.2 m/min max</td><td
+          >Säkerhetskopieringsmetod för Hypalon/CSM material</td
+        ></tr
+      >
+    </tbody>
+  </table>
+  <p>
+    Varje RF-press är utrustad med en sluten temperatur- och tryckövervakning. Svetsparametrar – effekt, presstid,
+    kyltid, elektrodtryck – programmeras per materialtyp och registreras i vårt Manufacturing Execution System (MES) för
+    full spårbarhet.
+  </p>
+
+  <h2>Svetskvalitetstester — varje söm, varje båt</h2>
+  <p>Svetsintegriteten verifieras genom ett obligatoriskt fyra-testprotokoll:</p>
+  <ol>
+    <li>
+      <strong>Visuell inspektion</strong> — 100 % av sömmarna inspekteras visuellt för genombränning, felinriktning, kontaminering
+      eller ofullständig sammansmältning. Avvisningsfrekvenströskel: 0.5 % av linjära meter.
+    </li>
+    <li>
+      <strong>Skalprov ()</strong> — En 25 mm bred remsa skärs från en testkupong som svetsas med varje produktionssats. Minsta
+      avdragningskraft: 120 N/25 mm för PVC 1100 dtex.
+    </li>
+    <li>
+      <strong>Luftretentionstest</strong> — Varje färdig kammare trycksätts till 1.25 × arbetstryck och hålls i 24-48 timmar.
+      Tryckfallet får inte överstiga 2 %.
+    </li>
+    <li>
+      <strong>Termiskt cykeltest</strong> — Provkuponger cyklas från -20 °C till +60 °C under 50 cykler och testas sedan igen.
+      Acceptabel styrkaförlust: &lt; 10 %.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Jämförelse av skalstyrka — RF vs varmluftssvetsning (PVC 1100 dtex)
+    </p>
+    <div class="space-y-3">
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">RF-svets</span><div
+          class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded"
+        >
+          <div class="h-full bg-blue-600 rounded" style="width:92%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">184 N</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">Varmluft</span><div
+          class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded"
+        >
+          <div class="h-full bg-gray-400 rounded" style="width:65%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">130 N</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium"> min</span><div class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded">
+          <div class="h-full bg-green-500 rounded" style="width:48%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">96 N</span>
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      RF-svetsning uppnår konsekvent 90-95 % av modermaterialets styrka, långt över minimum.
+    </p>
+  </div>
+
+  <h2>Professionell expertis</h2>
+  <p>
+    Vårt svetsteam leds av en senior processingenjör med 11 års erfarenhet av dielektrisk svetsning av belagda
+    textilier. Varje operatör genomför ett 6-månaders internt certifieringsprogram innan de tillåts arbeta med
+    produktionssömmar. Omcertifiering krävs årligen, inklusive ett praktiskt svetstest utvärderat mot vår interna
+    Grade-A-standard (avdragningshållfasthet ≥ 160 N/25 mm).
+  </p>
+
+  <h2>Skräddarsydda svetslösningar för unika krav</h2>
+  <p>
+    Vi förstår att en svetsspecifikation inte passar alla applikationer. Vårt RF-svetscenter utvecklar rutinmässigt
+    anpassade sömkonfigurationer för kunder med speciella krav:
+  </p>
+  <ul>
+    <li>
+      <strong>Flerlagers förstärkningslappar</strong> — för områden med högt slitage som gnidningslister och stråkkoner utvecklar
+      vi flerpassage RF-svetsar som integrerar ett slitstarkt yttre skikt utan att kompromissa med flexibiliteten.
+    </li>
+    <li>
+      <strong>Ledande eller RF-opaka sömmar</strong> — för militära fartyg eller övervakningsfartyg som kräver elektromagnetisk
+      skärmning, svetsar vi in ledande nätskikt i sömstapeln.
+    </li>
+    <li>
+      <strong>Färgbyte panel svetsning</strong> — tygpaneler i två färger (t.ex. orange skrov + grå ovansida) svetsade med
+      en dold överlappning för att bibehålla märkets estetik utan en synlig foglinje.
+    </li>
+  </ul>
+
+  <h2>Vårt engagemang för dig</h2>
+  <p>
+    Varje båt som vi levererar har vår svetskvalitetsgaranti: om någon söm misslyckas vid normal service inom
+    garantiperioden reparerar eller byter vi ut den drabbade kammaren utan kostnad, och en rotorsaksundersökning utförs
+    för att förhindra återfall. Detta är inte bara en garanti – det är ett åtagande till ständiga förbättringar som
+    drivs av verklig verksamhetsdata.
+  </p>
+  <p>
+    När du väljer {SITE.name}, väljer du sömmar som är konstruerade, testade och dokumenterade – inte bara svetsade. Det
+    är skillnaden mellan en båt som flyter och en båt som presterar.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Diskutera dina svetskrav</h2>
+    <p class="mt-2 text-sm text-muted">Anpassade sömspecifikationer, materialkompatibilitet eller processvalidering.</p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Kontakta vårt svetsteam</a
+    >
+  </div>
+</section>

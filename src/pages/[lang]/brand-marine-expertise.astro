@@ -1,0 +1,96 @@
+---
+export const prerender = true;
+
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+import { getPageContent, setPageContentData } from '~/i18n/page-content';
+import __pageData from '~/i18n/generated/pages/brand-marine-expertise.ts';
+import { localizePageTitle } from '~/i18n/page-title';
+import { languages } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => getUiForLang(lang)?.[key] || '';
+setPageContentData(__pageData);
+const page = getPageContent(lang, 'brand-marine-expertise');
+
+const hero = page.hero ?? {};
+const materials = page.expertise_materials ?? {};
+const manufacturing = page.expertise_manufacturing ?? {};
+const design = page.expertise_design ?? {};
+const cta = page.cta ?? {};
+const lh = (h: string) => (h ? `/${lang}${h}` : h);
+const ctaActions = cta.actions?.map((a: any) => ({ ...a, href: lh(a.href) }));
+
+const metadata = {
+  title: localizePageTitle(page, `Marine Engineering Expertise — ${SITE.name} | Material Science & Manufacturing`),
+  description:
+    "Aquafarer's marine engineering expertise spans PVC/Hypalon fabrication, deep-V hull design, drop stitch technology, and precision manufacturing.",
+};
+const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: 'Brand' }, { name: 'Marine Expertise' }];
+
+const faqSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is Aquafarer marine expertise?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: '12+ years of inflatable watercraft manufacturing, 25+ engineers averaging 7+ years experience, covering hull design, materials science, RF welding, and quality engineering.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What product categories does Aquafarer specialize in?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'SUP boards, RIB boats, inflatable boats, kayaks, and dinghies — 64 CE-certified models across 5 categories.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can Aquafarer handle custom engineering?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Custom 3D CAD modeling, CNC mold engineering, and prototyping for OEM/ODM projects with dedicated engineering support.',
+      },
+    },
+  ],
+});
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <Hero tagline={hero.tagline} image={hero.image} title={hero.title} subtitle={hero.subtitle} />
+  <Features3
+    tagline={materials.tagline}
+    title={materials.title}
+    subtitle={materials.subtitle}
+    columns={materials.columns}
+    items={materials.items}
+  />
+  <Features3
+    tagline={manufacturing.tagline}
+    title={manufacturing.title}
+    subtitle={manufacturing.subtitle}
+    columns={manufacturing.columns}
+    items={manufacturing.items}
+  />
+  <Content
+    tagline={design.tagline}
+    title={design.title}
+    subtitle={design.subtitle}
+    content={design.items?.map((i: any) => `**${i.title}:** ${i.description}`).join('\n\n')}
+  />
+  <CallToAction title={cta.title} subtitle={cta.subtitle} actions={ctaActions} />
+  <script is:inline type="application/ld+json" set:html={faqSchema} />
+</Layout>

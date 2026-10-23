@@ -1,0 +1,182 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'pt' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">← Voltar para Centro de P&amp;D</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Laboratório 02</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Estúdio de Engenharia de Casco</h1>
+      <p class="mt-3 text-lg text-muted">Simulação digital, inteligência estrutural, design de casco personalizado</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/design discussaquafarer-inflatable-boat-aquafarer-factory-exterior.webp"
+        alt="Aquafarer estação de trabalho de design CAD de engenharia de casco"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Onde a força encontra a hidrodinâmica</h2>
+  <p>
+    O casco é a espinha dorsal de qualquer RIB ou barco inflável. Deve ser leve o suficiente para aplainar com
+    eficiência, forte o suficiente para absorver cargas de impacto e dimensionalmente estável em uma ampla faixa de
+    temperatura. No {SITE.name}, nosso Hull Engineering Studio combina modelagem CAD avançada, análise de elementos
+    finitos (FEA) e décadas de experiência prática em arquitetura naval para fornecer cascos otimizados para a missão
+    pretendida - e não formas genéricas adaptadas de um catálogo.
+  </p>
+  <p>
+    Trabalhamos com três materiais primários de casco – HDPE moldado rotacionalmente, alumínio soldado de grau marítimo
+    e fibra de vidro colocada à mão – e temos a capacidade de engenharia para projetar, simular e validar cada um deles
+    internamente.
+  </p>
+
+  <h2>Ferramentas e padrões de design</h2>
+  <p>Nosso ambiente de engenharia digital inclui:</p>
+  <table>
+    <thead><tr><th>Capacidade</th><th>Software/Ferramenta</th><th>Aplicativo</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Modelagem paramétrica 3D</td><td>Profissional SolidWorks</td><td
+          >Superfície do casco, sistema de longarinas, suporte do motor, layout do convés</td
+        ></tr
+      >
+      <tr
+        ><td>Análise de elementos finitos</td><td>ANSYS Mecânica e LS-DYNA</td><td
+          >Mapeamento de tensão, análise modal, simulação de colisão/impacto</td
+        ></tr
+      >
+      <tr
+        ><td>Dinâmica de fluidos computacional</td><td>Ansys Fluente / Star-CCM+</td><td
+          >Previsão de arrasto hidrodinâmico, otimização de trim</td
+        ></tr
+      >
+      <tr
+        ><td>Engenharia de laminados</td><td>ESAComp/CADEC</td><td
+          >Empilhamento de camadas de fibra de vidro, seleção de núcleos, estimativa de peso</td
+        ></tr
+      >
+      <tr
+        ><td>Simulação de fluxo de molde</td><td>Moldex3D</td><td>Previsão de espessura de parede em rotomoldagem</td
+        ></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>Nosso fluxo de trabalho de engenharia</h2>
+  <p>
+    Cada projeto de casco, seja um modelo padrão ou um projeto totalmente personalizado, segue um rigoroso processo de
+    cinco etapas:
+  </p>
+  <ol>
+    <li>
+      <strong>Levantamento de conceitos e requisitos</strong> — Nos reunimos com você para definir a carga útil, o envelope
+      de velocidade, a capacidade do estado do mar, os requisitos de reboque e qualquer equipamento especial da missão (escotilhas
+      do convés, posições do console, integração do tanque de combustível).
+    </li>
+    <li>
+      <strong>Superfície 3D e cálculo hidrostático</strong> — A forma do casco é modelada no SolidWorks e verificada quanto
+      à estabilidade hidrostática (GM, braço endireitador) usando ferramentas de análise integradas.
+    </li>
+    <li>
+      <strong>FEA Estrutural</strong> — Os casos de carga são definidos: estático (tripulação + equipamento), dinâmico (impactos
+      de planeio a 5g) e de impacto (queda da crista de uma onda a 3 m/s). Os contornos de tensão são revisados; fator de
+      segurança ≥ 2.5 é obrigatório.
+    </li>
+    <li>
+      <strong>Otimização de arrasto CFD</strong> — O casco é simulado em três condições de carga e cinco velocidades. A área
+      de superfície molhada, o ângulo de corte e a resistência residual são reduzidos iterativamente.
+    </li>
+    <li>
+      <strong>Revisão e lançamento do design</strong> — O pacote completo de engenharia (modelo 3D, relatório FEA, relatório
+      CFD, estimativa de peso, livro de lonas) é revisado por nosso arquiteto naval sênior antes de ser liberado para a oficina
+      de protótipos.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Distribuição de Tensão FEA — RIB 450 Casco de Patrulha (Alumínio 5083)
+    </p>
+    <div class="grid grid-cols-2 gap-4 text-sm">
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">2.8 : 1</span>
+        <span class="text-gray-500">Fator de segurança na carga útil máxima</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">15.2 %</span>
+        <span class="text-gray-500">Redução de arrasto versus geração anterior</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">87 kN/m&sup2;</span>
+        <span class="text-gray-500">Pressão máxima de impacto (limite de projeto)</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">18 000 h</span>
+        <span class="text-gray-500">Tempo de execução FEA cumulativo em 2025</span>
+      </div>
+    </div>
+  </div>
+
+  <h2>Personalização: seu casco, suas regras</h2>
+  <p>
+    Não existem dois operadores com requisitos idênticos. Uma patrulha portuária RIB precisa de um casco em V raso para
+    estabilidade em baixa velocidade; uma embarcação de interceptação rápida precisa de um V profundo com trilhos de
+    pulverização; um barco de apoio ao mergulho precisa de uma boca larga e uma popa baixa. Não forçamos sua aplicação a
+    um formato de casco pré-existente. Projetamos a partir de sua especificação para cima.
+  </p>
+  <p>Exemplos de projetos recentes de engenharia de casco personalizado:</p>
+  <ul>
+    <li>
+      Um casco esticado de 6.8 m HDPE para um operador turístico caribenho, com proa reforçada para desembarques na
+      praia (+15% de espessura do fundo).
+    </li>
+    <li>
+      Um 7.2 m RIB de alumínio leve para uma guarda costeira, com defletores de tanque de combustível integrados e
+      reforços de armário de equipamentos.
+    </li>
+    <li>
+      Um barco de mergulho de fibra de vidro 5.5 m com popa reduzida e caixas de bateria duplas, projetado para
+      facilitar o embarque do mergulhador com snorkel.
+    </li>
+  </ul>
+
+  <h2>Nossos engenheiros</h2>
+  <p>
+    O estúdio é liderado por um arquiteto naval sênior com 14 anos de experiência em projetos de embarcações de alta
+    velocidade, apoiado por dois engenheiros mecânicos especializados em FEA e CFD. Todos os três possuem diplomas
+    avançados em engenharia naval ou arquitetura naval de universidades reconhecidas internacionalmente. A equipe
+    publica regularmente em revistas do setor e faz apresentações em conferências como a Conferência Internacional sobre
+    Veículos Marítimos de Alto Desempenho.
+  </p>
+
+  <h2>Faça parceria conosco em seu próximo casco</h2>
+  <p>
+    Desde o primeiro esboço conceitual até o relatório final de tensão, nosso Hull Engineering Studio é seu parceiro na
+    criação de um barco que não é apenas construído, mas projetado. Investimos antecipadamente as horas de simulação
+    para que cada solda, cada camada laminada e cada curva do casco estejam presentes por um motivo.
+  </p>
+  <p>
+    Se você precisa de uma pequena modificação em um modelo existente ou de um projeto completamente limpo, estamos
+    prontos para discutir suas necessidades.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Comece sua consultoria de projeto de casco</h2>
+    <p class="mt-2 text-sm text-muted">Conte-nos sobre o perfil da sua missão e proporemos um caminho de engenharia.</p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Contate nossa equipe de engenharia</a
+    >
+  </div>
+</section>

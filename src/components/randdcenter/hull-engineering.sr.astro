@@ -1,0 +1,178 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'sr' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">← Nazad na R &D centar</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Januar 02</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Hul Inženjering Studio</h1>
+      <p class="mt-3 text-lg text-muted">Digitalna simulacija, strukturna inteligencija, prilagođeni dizajn trupa</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/design discussaquafarer-inflatable-boat-aquafarer-factory-exterior.webp"
+        alt="Aquafarer CAD radna stanica za projektovanje trupova"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Gde se snaga susreće sa hidrodinamikom</h2>
+  <p>
+    Koncepcionni deo je kičma svakog RIB ili gumenog čamca. Mora biti dovoljno lagan da efikasno klizi po površini vode,
+    dovoljno jak da apsorbuje udarne sile i dimenzionalno stabilan u širokom temperaturnom opsegu. Na{SITE.name}, naš
+    Hull Engineering Studio kombinuje napredno CAD modelovanje, analizu konačnih elemenata (FEA) i decenije praktičnog
+    iskustva u brodogradnji kako bi isporučio trupa koji su optimizovani za svoju namenu — a ne generičke oblike
+    prilagođene iz kataloga.
+  </p>
+  <p>
+    Radimo sa tri primarna materijala trupa - rotaciono oblikovanim HDPE-om, zavarenim aluminijumom morskog razreda i
+    ručno postavljenim fiberglasom - i imamo inženjersku sposobnost da dizajniramo, simuliramo i potvrdimo svaki od njih
+    u kući.
+  </p>
+
+  <h2>Alati i standardi za dizajn</h2>
+  <p>Naše digitalno inženjersko okruženje uključuje:</p>
+  <table>
+    <thead><tr><th>Sposobnost</th><th>Softver / Alat</th><th>Pretraga</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>3D parametarsko modeliranje</td><td>SolidVorks Profesionalac</td><td
+          >Trup površina, stringer sistem, motor nosač, paluba raspored</td
+        ></tr
+      >
+      <tr
+        ><td>Analiza konačnih elemenata</td><td>ANSIS Mašinski &amp; LS-DINA</td><td
+          >Mapiranje stresa, modalna analiza, simulacija sudara / uticaja</td
+        ></tr
+      >
+      <tr
+        ><td>Računarska dinamika fluida</td><td>Ansis Fluent / Star-CCM+</td><td
+          >Hidrodinamičko predviđanje otpora, trim optimizacija</td
+        ></tr
+      >
+      <tr
+        ><td>Laminatni inženjering</td><td>ESAComp / CADEC</td><td
+          >Staklena vlakna sloj slaganje, izbor jezgra, procena težine</td
+        ></tr
+      >
+      <tr><td>Simulacija protoka kalupa</td><td>Srpski/srpski</td><td>Rotomoulding zid-debljina predviđanje</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Naš inženjerski tok rada</h2>
+  <p>
+    Svaki dizajn trupa, bilo da se radi o standardnom modelu ili potpuno prilagođenom projektu, prati rigorozan proces u
+    pet faza:
+  </p>
+  <ol>
+    <li>
+      <strong>Prikupljanje koncepta i zahteva</strong>— Sastajemo se sa vama da definišemo nosivost, brzinu kovertu,
+      sposobnost stanja mora, zahteve za vuču i bilo koju specijalnu opremu za misije (otvori na palubi, pozicije
+      konzole, integracija rezervoara za gorivo).
+    </li>
+    <li>
+      <strong>3D površinska obrada i hidrostatički obračun</strong>— Oblik trupa je modeliran u SolidVorks-u i proveren
+      za hidrostatsku stabilnost (GM, ispravljanje ruke) pomoću ugrađenih alata za analizu.
+    </li>
+    <li>
+      <strong>Strukturni FEA</strong>— Definisani su slučajevi opterećenja: statički (oprema za posadu + ), dinamički
+      (udari planiranja na 5g) i udaranje (padanje sa grebena talasa na 3 m / s). Konture stresa se pregledavaju; faktor
+      sigurnosti ≥ 2.5 je obavezan.
+    </li>
+    <li>
+      <strong>CFD drag optimizacija</strong>— Trup se simulira na tri uslova opterećenja i pet brzina. Vlažna površina,
+      ugao trima i preostali otpor se iterativno smanjuju.
+    </li>
+    <li>
+      <strong>Pregled i izdanje dizajna</strong>— Kompletan inženjerski paket (3D model, FEA izveštaj, CFD izveštaj,
+      procena težine, knjiga slojeva) je pregledan od strane našeg višeg pomorskog arhitekte pre puštanja u radionicu
+      prototipa.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      FEA raspodela napona — RIB 450 patrolni trup (Aluminijum 5083)
+    </p>
+    <div class="grid grid-cols-2 gap-4 text-sm">
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">2.8 : 1</span>
+        <span class="text-gray-500">Faktor bezbednosti pri maksimalnoj nosivosti</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">15.2 %</span>
+        <span class="text-gray-500">Smanjenje otpora u odnosu na prethodnu generaciju</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">87 kN/m²</span>
+        <span class="text-gray-500">Peak slamming pritisak (granica dizajna)</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">18 000 h</span>
+        <span class="text-gray-500">Kumulativno vreme izvođenja FEA u 2025. godini</span>
+      </div>
+    </div>
+  </div>
+
+  <h2>Prilagođavanje: vaš trup, vaša pravila</h2>
+  <p>
+    Nijedna dva operatera nemaju identične zahteve. Lučkoj patroli RIB je potreban plitki V trup za stabilnost pri maloj
+    brzini; brodu za brzo presretanje potreban je duboki V sa šinama za prskanje; brodu za podršku ronjenju potreban je
+    širok snop i niski krmeni sjede. Ne prisiljavamo vašu aplikaciju u već postojeći oblik trupa. Dizajniramo od vaše
+    specifikacije naviše.
+  </p>
+  <p>Primeri nedavnih projekata inženjeringa trupa:</p>
+  <ul>
+    <li>
+      Rastegnuti trup od 6,8 m HDPE za karipskog turoperatora, sa ojačanim lukom za sletanje na plažu (+debljina dna
+      KSNUMKS%).
+    </li>
+    <li>
+      Lagani aluminijum KSNUMKS m RIB za obalsku stražu, sa integrisanim pregradama rezervoara za gorivo i ukrućenjima
+      za opremu.
+    </li>
+    <li>
+      Fiberglas KSNUMKS m ronilački brod sa smanjenim krmenim zrcalom i dvostrukim kutijama za baterije, dizajniran za
+      lako ponovno ukrcavanje.
+    </li>
+  </ul>
+
+  <h2>Naši inženjeri</h2>
+  <p>
+    Studio vodi viši pomorski arhitekta sa KSNUMKS godina iskustva u dizajnu brzih plovila, uz podršku dva mašinska
+    inženjera specijalizovana za FEA i CFD. Sva trojica imaju napredne diplome iz pomorskog inženjerstva ili pomorske
+    arhitekture sa međunarodno priznatih univerziteta. Tim redovno objavljuje u industrijskim časopisima i predstavlja
+    na konferencijama kao što je Međunarodna konferencija o morskim vozilima visokih performansi.
+  </p>
+
+  <h2>Partner sa nama na sledećem trupu</h2>
+  <p>
+    Od prve skice koncepta do konačnog izveštaja o stresu, naš Hull Engineering Studio je vaš partner u stvaranju broda
+    koji nije samo izgrađen - već i projektovan. Ulažemo sate simulacije unapred, tako da je svaki zavar, svaki sloj
+    laminata i svaka krivina trupa tu sa razlogom.
+  </p>
+  <p>
+    Bez obzira da li vam je potrebna manja modifikacija postojećeg modela ili potpuno čist dizajn, spremni smo da
+    razgovaramo o vašim zahtevima.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Započnite konsultacije o dizajnu trupa</h2>
+    <p class="mt-2 text-sm text-muted">Recite nam nešto o svom profilu misije i mi ćemo predložiti inženjerski put.</p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Kontaktirajte naš inženjerski tim</a
+    >
+  </div>
+</section>

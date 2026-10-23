@@ -1,0 +1,182 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'sl' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline"
+    >&larr; Nazaj na Raziskovalni in razvojni center</a
+  >
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Laboratorij 03</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">RF center za varjenje</h1>
+      <p class="mt-3 text-lg text-muted">Tehnologija dielektričnega lepljenja za varjene spoje, ki prenesejo pritisk</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-jungle-mandala-1.webp"
+        alt="Aquafarer RF varilni dielektrični lepilni proces"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Znanost za šivom</h2>
+  <p>
+    Napihljiv čoln je zanesljiv le toliko, kot so zanesljivi njegovi šivi. En sam šibek var lahko ogrozi celotno komoro
+    — in na morju neuspeh komore ni le nevšečnost; je varnostno tveganje. V{SITE.name}smo vlagali v namensko Centro za
+    RF (radijsko frekvenčno) varjenje, ki združuje industrijske dielektrične varilne preše z natančnim nadzorom procesa
+    in testiranjem po varjenju. Vsak šiv, ki ga izdelamo, je dokumentiran, sledljiv in certificiran, da izpolnjuje ali
+    presega zahteve — mednarodnega standarda za napihljive plovila.
+  </p>
+  <p>
+    RF varjenje uporablja visoko frekvenčno elektromagnetno energijo (običajno 27,12 MHz) za vzbujanje polarnih molekul
+    znotraj tkanine prevlečene z PVC ali Hypalon, kar generira toploto natančno na vmesni površini materiala. Za razliko
+    od varjenja z vročim zrakom ali vročim klinom, RF varjenje ustvarja pravo molekulsko vez — dve plasti tkanine se
+    združita v enoten homogeni material na območju varjenja, kar proizvede spoj, ki je tako močan kot osnovni material.
+  </p>
+
+  <h2>Oprema za varjenje in nadzor procesa</h2>
+  <p>Naš varilni center je opremljen z:</p>
+  <table>
+    <thead><tr><th>Stroj</th><th>Moč / Kapaciteta</th><th>Aplikacija</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Dielektrična RF preša 1</td><td>15 kW, platen 2000 × 600 mm</td><td
+          >Glavni vzdolžni šivi, spoji od krme do cevi</td
+        ></tr
+      >
+      <tr
+        ><td>Dielektrična RF preša 2</td><td>10 kW, platen 1500 × 500 mm</td><td
+          >Varjenje prekatov, pritrditev stožcev, obliži ventilov</td
+        ></tr
+      >
+      <tr
+        ><td>RF varilni CNC stroj</td><td>8 kW, XY miza 2500 × 1200 mm</td><td
+          >Upognjeni šivi, relief logotipov/panelov, natančno oblaganje</td
+        ></tr
+      >
+      <tr
+        ><td>Avtomatski vroči klin varilec</td><td>Spremenljiva temperatura, max 1,2 m/min</td><td
+          >Nadomestna metoda za materiale Hypalon/CSM</td
+        ></tr
+      >
+    </tbody>
+  </table>
+  <p>
+    Vsaka RF preša je opremljena z zaprtim regulacijskim krogom za spremljanje temperature in tlaka. Parametri varjenja
+    — moč, čas preše, čas hlajenja, tlačna sila elektrode — so programirani glede na vrsto materiala in zapisani v našem
+    Sistem upravljanja proizvodnje (MES) za popolno sledljivost.
+  </p>
+
+  <h2>Preizkusi kakovosti varov — vsak šiv, vsak čoln</h2>
+  <p>Integriteta varov se preverja z obveznim protokolom štirih testov:</p>
+  <ol>
+    <li>
+      <strong>Vizualni pregled</strong>— 100 % šivov se vizualno pregleda za pregrevanje, napačno poravnavo,
+      kontaminacijo ali nepopolno fuzijo. Prag zavrnitve: 0,5 % linearnih metrov.
+    </li>
+    <li>
+      <strong>Test luščenja ()</strong>— Iz testnega vzorca, zvarjenega z vsako proizvodno serijo, se odreže 25 mm širok
+      trak. Minimalna sila luščenja: 120 N/25 mm za PVC 1100 dtex.
+    </li>
+    <li>
+      <strong>Test zadrževanja zraka</strong>— Vsaka dokončana komora se napihne na 1,25 × delovni tlak in drži 24–48
+      ur. Padci tlaka ne smejo presegati 2 %.
+    </li>
+    <li>
+      <strong>Test toplotnega cikliranja</strong>— Vzorce se ciklično segreva od -20 °C do + 60 °C za 50 ciklov, nato se
+      ponovno testira luščilna trdnost. Sprejemljiva izguba trdnosti: 10 %.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Primerjava luščilne trdnosti — RF proti varjenju z vročim zrakom (PVC 1100 dtex)
+    </p>
+    <div class="space-y-3">
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">RF zvar</span><div
+          class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded"
+        >
+          <div class="h-full bg-blue-600 rounded" style="width:92%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">184 N</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">Vroč zrak</span><div
+          class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded"
+        >
+          <div class="h-full bg-gray-400 rounded" style="width:65%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">130 N</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">min</span><div class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded">
+          <div class="h-full bg-green-500 rounded" style="width:48%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">96 N</span>
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      RF varjenje dosledno dosega 90–95 % trdnosti osnovnega materiala, kar je precej nad minimalno vrednostjo.
+    </p>
+  </div>
+
+  <h2>Strokovno znanje</h2>
+  <p>
+    Naša varilska ekipa je vodena s strani starejšega procesnega inženirja z 11 leti izkušenj z dielektričnim varjenjem
+    prevlečenih tekstilij. Vsak operater opravi 6-mesečni notranji certifikacijski program, preden mu je dovoljeno delo
+    na proizvodnih zvarih. Ponovna certificiranje je zahtevana vsako leto, vključno s praktičnim testom varjenja,
+    ocenjenim po notranjem standardu Grade-A (luščilna trdnost ≥ 160 N/25 mm).
+  </p>
+
+  <h2>Prilagojene rešitve varjenja za posebne zahteve</h2>
+  <p>
+    Zavedamo se, da ena varilna specifikacija ne ustreza vsaki aplikaciji. Naš RF varilni center običajno razvija
+    prilagojene konfiguracije šivov za stranke s posebnimi zahtevami:
+  </p>
+  <ul>
+    <li>
+      <strong>Večplastne ojačitvene obloge</strong>— za območja z visoko obrabo, kot so drsni trakovi in sprednji
+      stožci, razvijamo večprehodno RF varjenje, ki vključuje obrabno odporno zunanje plast, ne da bi pri tem izgubili
+      fleksibilnost.
+    </li>
+    <li>
+      <strong>Prevodne ali RF neprosojne šive</strong>— za vojaške ali nadzorne plovila, ki zahtevajo elektromagnetno
+      zaščito, varimo prevodne mrežne plasti znotraj sklopa šiva.
+    </li>
+    <li>
+      <strong>Varjenje večbarvnih panelov</strong>— dvobarvni tkaninski paneli (npr. oranžen trup + sivi zgornji del)
+      varjeni s skritim preklopom, da se ohrani estetski videz blagovne znamke brez vidne linije spoja.
+    </li>
+  </ul>
+
+  <h2>Naša zaveza vam</h2>
+  <p>
+    Vsako plovilo, ki ga dostavimo, nosi našo garancijo kakovosti varjenja: če kateri koli šiv odpove pri običajni
+    uporabi v obdobju garancije, brezplačno popravimo ali zamenjamo prizadeto komoro in izvedemo analizo vzroka napake,
+    da preprečimo ponovitev. To ni le garancija — to je zaveza k stalnemu izboljševanju, ki ga vodijo podatki iz
+    realnega sveta.
+  </p>
+  <p>
+    Ko izbereš{SITE.name}, izbirate šive, ki so zasnovani, preizkušeni in dokumentirani — ne le zvarjeni. To je razlika
+    med čolnom, ki plava, in čolnom, ki deluje.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Razpravljajte o svojih zahtevah za varjenje</h2>
+    <p class="mt-2 text-sm text-muted">
+      Prilagojene specifikacije šivov, združljivost materialov ali validacija procesa.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Kontaktirajte našo varilsko ekipo</a
+    >
+  </div>
+</section>

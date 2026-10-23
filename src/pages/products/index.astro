@@ -1,0 +1,150 @@
+---
+import merge from 'lodash.merge';
+import Layout from '~/layouts/PageLayout.astro';
+import ProductCard from '~/components/widgets/ProductCard.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Icon from '~/components/ui/Icon.astro';
+
+import { SITE } from 'astrowind:config';
+import {
+  getProducts,
+  getProductCategories,
+  isProductsEnabled,
+  isProductsListEnabled,
+  CATEGORY_SLUG_TO_URL,
+} from '~/utils/products';
+import { PRODUCT_LIST, getCanonical, getPermalink } from '~/utils/permalinks';
+import type { MetaData } from '~/types';
+
+const products = await getProducts();
+const categories = await getProductCategories();
+const rawCategory = (Astro.url?.searchParams?.get('category') ?? '') as
+  'rib' | 'inflatable' | 'accessory' | 'sup' | 'kayak' | 'service' | '';
+const activeCategory =
+  rawCategory === 'rib' ||
+  rawCategory === 'inflatable' ||
+  rawCategory === 'accessory' ||
+  rawCategory === 'sup' ||
+  rawCategory === 'kayak' ||
+  rawCategory === 'service'
+    ? rawCategory
+    : null;
+const filteredProducts = activeCategory ? products.filter((p) => p.category === activeCategory) : products;
+const totalCount = products.length;
+const hidden = !isProductsEnabled() || !isProductsListEnabled();
+
+const metadata = merge(
+  {
+    title: `Inflatable Boat & SUP Products \u2014 OEM Manufacturer | ${SITE.name}`,
+    description: `Inflatable SUP boards, kayaks, dinghies, RIBs and accessories \u2014 64 CE-certified models, OEM/ODM bulk wholesale, factory-direct pricing.`,
+    canonical: getCanonical(getPermalink(PRODUCT_LIST)),
+    robots: { index: !hidden, follow: true },
+    openGraph: { type: 'website' },
+  },
+  {}
+) as MetaData;
+---
+
+<Layout metadata={metadata}>
+  <section class="px-4 md:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-6xl">
+    <header class="mb-8 md:mb-12 text-center max-w-3xl mx-auto">
+      <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">Catalog</p>
+      <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">
+        Inflatable Boats, SUPs, Kayaks & RIBs — 64 CE-Certified Models
+      </h1>
+      <p class="mt-3 md:mt-4 mx-auto text-xl text-gray-500 dark:text-slate-400 font-medium">
+        Premium inflatable boats, RIBs, accessories and engineered products — built for life on the water.
+      </p>
+    </header>
+
+    {
+      categories.length > 0 && (
+        <WidgetWrapper containerClass="mb-10">
+          <div class="flex flex-wrap items-center justify-center gap-2">
+            <a
+              href={getPermalink(PRODUCT_LIST)}
+              class:list={[
+                'inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium border transition-colors',
+                !activeCategory
+                  ? 'bg-primary text-white border-primary dark:bg-blue-500 dark:border-blue-500'
+                  : 'bg-white dark:bg-slate-800 border-gray-200 dark:border-slate-700 text-default dark:text-slate-200 hover:bg-gray-50 dark:hover:bg-slate-700',
+              ]}
+            >
+              <Icon name="tabler:layout-grid" class="w-4 h-4" />
+              All ({totalCount})
+            </a>
+            {categories.map((c) => (
+              <a
+                href={`/${CATEGORY_SLUG_TO_URL[c.slug]}`}
+                class:list={[
+                  'inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium border transition-colors',
+                  activeCategory === c.slug
+                    ? 'bg-primary text-white border-primary dark:bg-blue-500 dark:border-blue-500'
+                    : 'bg-white dark:bg-slate-800 border-gray-200 dark:border-slate-700 text-default dark:text-slate-200 hover:bg-gray-50 dark:hover:bg-slate-700',
+                ]}
+              >
+                {c.title} ({c.count})
+              </a>
+            ))}
+          </div>
+        </WidgetWrapper>
+      )
+    }
+
+    <!-- Catalog Downloads -->
+    <WidgetWrapper containerClass="mb-10">
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a
+          href="/catalogs/aquafarer-sup-catalog.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-4 py-2 bg-sky-50 dark:bg-sky-900/30 border border-sky-200 dark:border-sky-800 text-sky-700 dark:text-sky-300 text-sm font-medium rounded-full hover:bg-sky-100 dark:hover:bg-sky-900/50 transition-colors"
+        >
+          <Icon name="tabler:download" class="w-4 h-4" />
+          Download SUP Board Catalog
+        </a>
+        <a
+          href="/catalogs/aquafarer-inflatable-boat-catalog.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-50 dark:bg-emerald-900/30 border border-emerald-200 dark:border-emerald-800 text-emerald-700 dark:text-emerald-300 text-sm font-medium rounded-full hover:bg-emerald-100 dark:hover:bg-emerald-900/50 transition-colors"
+        >
+          <Icon name="tabler:download" class="w-4 h-4" />
+          Download Inflatable Boat Catalog
+        </a>
+      </div>
+    </WidgetWrapper>
+
+    {
+      filteredProducts.length === 0 ? (
+        <div class="text-center py-16 text-muted dark:text-slate-400">
+          <Icon name="tabler:package-off" class="w-12 h-12 mx-auto mb-4" />
+          <p class="text-lg">No products in this category yet.</p>
+          <a
+            class="text-primary dark:text-blue-400 hover:underline mt-2 inline-block"
+            href={getPermalink(PRODUCT_LIST)}
+          >
+            View all products
+          </a>
+        </div>
+      ) : (
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {filteredProducts.map((p) => (
+            <ProductCard product={p} />
+          ))}
+        </div>
+      )
+    }
+  </section>
+
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true">
+    <p>
+      Aquafarer product catalog: inflatable SUP boards (all-around, touring, yoga, fishing, adventure, surf), inflatable
+      kayaks (single and tandem models for recreational touring, river running, expedition travel), inflatable dinghies
+      (compact tenders, fishing boats, sport boats), rigid inflatable boats (RIB models for recreational, commercial,
+      and rescue use), marine accessories (life jackets, pumps, paddles, repair kits, bags), OEM/ODM services (custom
+      design, private label, contract manufacturing). 64 CE-certified models across the catalog. Factory-direct and
+      wholesale pricing available.
+    </p>
+  </section>
+</Layout>

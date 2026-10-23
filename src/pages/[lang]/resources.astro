@@ -1,0 +1,171 @@
+---
+const PAGE_DESC: Record<string, { description: string }> = {
+  de: {
+    description:
+      'Laden Sie Produktkataloge, OEM-Herstellungsleitfäden, Einkäufer-Checklisten und technische Dokumentationen für die Beschaffung von Meeresausrüstung herunter.',
+  },
+  es: {
+    description:
+      'Descargue catálogos de productos, guías de fabricación OEM, listas de verificación para compradores y documentación técnica para la adquisición de equipos marinos.',
+  },
+  fr: {
+    description:
+      "Téléchargez des catalogues produits, des guides de fabrication OEM, des listes de contrôle pour acheteurs et la documentation technique pour l'approvisionnement en équipement marin.",
+  },
+  it: {
+    description:
+      "Scarica cataloghi di prodotti, guide alla produzione OEM, checklist per gli acquirenti e documentazione tecnica per l'approvvigionamento di attrezzature nautiche.",
+  },
+  cs: {
+    description:
+      'Stáhněte si produktové katalogy, příručky OEM výroby, checklisty pro kupující a technickou dokumentaci pro nákup námořního vybavení.',
+  },
+  sv: {
+    description:
+      'Ladda ner produktkataloger, OEM tillverkningsguider, checklistor för köpare och teknisk dokumentation för inköp av marinutrustning.',
+  },
+  da: {
+    description:
+      'Download produktkataloger, OEM produktionsvejledninger, købertjeklister og teknisk dokumentation til indkøb af marineudstyr.',
+  },
+  el: {
+    description:
+      'Κατεβάστε καταλόγους προϊόντων, OEM οδηγούς κατασκευής, λίστες ελέγχου αγοραστών και τεχνική τεκμηρίωση για την προμήθεια θαλάσσιου εξοπλισμού.',
+  },
+  no: {
+    description:
+      'Last ned produktkataloger, OEM produksjonsveiledninger, kjøpersjekklister og teknisk dokumentasjon for anskaffelse av marint utstyr.',
+  },
+  ru: {
+    description:
+      'Загрузите каталоги продукции, руководства по производству OEM, контрольные списки для покупателей и техническую документацию для закупки морского оборудования.',
+  },
+  nl: {
+    description:
+      'Download productcatalogi, OEM productiehandleidingen, checklists voor kopers en technische documentatie voor de aanschaf van maritieme uitrusting.',
+  },
+  fi: {
+    description:
+      'Lataa tuoteluetteloita, OEM valmistusoppaita, ostajien tarkistuslistoja ja teknistä dokumentaatiota laivavarusteiden hankintaa varten.',
+  },
+  pl: {
+    description:
+      'Pobierz katalogi produktów, OEM przewodniki produkcyjne, listy kontrolne dla kupujących i dokumentację techniczną dotyczącą zamówień wyposażenia morskiego.',
+  },
+  ar: {
+    description:
+      'قم بتنزيل كتالوجات المنتجات وأدلة التصنيع OEM وقوائم مراجعة المشتري والوثائق الفنية لشراء المعدات البحرية.',
+  },
+  pt: {
+    description:
+      'Baixe catálogos de produtos, guias de fabricação OEM, listas de verificação de compradores e documentação técnica para aquisição de equipamentos marítimos.',
+  },
+  ja: {
+    description:
+      '製品カタログ、OEM 製造ガイド、購入者チェックリスト、海洋機器調達のための技術文書をダウンロードしてください。',
+  },
+};
+const PAGE_META: Record<string, { title: string }> = {
+  de: { title: 'Ressourcen' },
+  es: { title: 'Recursos' },
+  fr: { title: 'Ressources' },
+  it: { title: 'Risorse' },
+  pt: { title: 'Recursos' },
+  ar: { title: 'الموارد' },
+  ru: { title: 'Ресурсы' },
+  pl: { title: 'Zasoby' },
+  nl: { title: 'Bronnen' },
+  sv: { title: 'Resurser' },
+  no: { title: 'Ressurser' },
+  el: { title: 'Πόροι' },
+  fi: { title: 'Resurssit' },
+  da: { title: 'Ressourcer' },
+  cs: { title: 'Zdroje' },
+  ja: { title: 'リソース' },
+};
+export const prerender = true;
+
+import Features3 from '~/components/widgets/Features3.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+import { getPageContent, setPageContentData } from '~/i18n/page-content';
+import __pageData from '~/i18n/generated/pages/resources.ts';
+import { localizePageTitle } from '~/i18n/page-title';
+import { languages } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => getUiForLang(lang)?.[key] || '';
+setPageContentData(__pageData);
+const page = getPageContent(lang, 'resources');
+
+const hero = page.hero_text ?? {};
+const downloads = page.features3_downloads ?? {};
+const faqs = page.faqs ?? {};
+const cta = page.cta ?? {};
+const lh = (h: string) => (h ? `/${lang}${h}` : h);
+const ctaActions = cta.actions?.map((a: any) => ({ ...a, href: lh(a.href) }));
+
+const metadata = {
+  title: localizePageTitle(
+    page,
+    PAGE_META[lang]?.title || `Resources — ${SITE.name} | Product Catalogs & Buyer Guides`
+  ),
+  description:
+    PAGE_DESC[lang]?.description ||
+    'Download product catalogs, OEM manufacturing guides, buyer checklists, and technical documentation for marine equipment procurement.',
+};
+const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: 'Resources' }];
+
+const faqSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What resources are available?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Technical drawings, compliance documentation, product specifications, CAD files, and industry guides for OEM/ODM buyers.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Are resources free to access?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'PDF GA drawings and product specifications are free. DXF/DWG requires a light form. STEP/IGES requires project application.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I request additional documentation?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Material test reports, pressure test logs, and QC certificates available upon request for OEM/ODM partners.',
+      },
+    },
+  ],
+});
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <HeroText tagline={hero.tagline} title={hero.title} subtitle={hero.subtitle} />
+  <Features3
+    tagline={downloads.tagline}
+    title={downloads.title}
+    subtitle={downloads.subtitle}
+    columns={downloads.columns}
+    items={downloads.items}
+  />
+  <FAQs title={faqs.title} subtitle={faqs.subtitle} columns={faqs.columns} items={faqs.items} />
+  <CallToAction title={cta.title} subtitle={cta.subtitle} actions={ctaActions} />
+  <script is:inline type="application/ld+json" set:html={faqSchema} />
+</Layout>

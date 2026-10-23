@@ -1,0 +1,244 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { products } from '~/data/products';
+import { getPageContent, setPageContentData } from '~/i18n/page-content';
+import __pageData from '~/i18n/generated/pages/safety.ts';
+
+const lang = Astro.locals.lang;
+
+setPageContentData(__pageData);
+const page = getPageContent(lang, 'safety') || {};
+const hero = page.hero || {};
+const trustBar = page.trust_bar || {};
+const certifications = page.certifications || [];
+const testimonial = page.testimonial || {};
+const related = page.related || {};
+
+const metadata = {
+  title: `Safety Standards & Certification — CE, SOLAS, ISO 9001 — ${SITE.name}`,
+  description:
+    'Aquafarer safety certifications: CE (EU 2016/425), SOLAS (LSA Code), USCG Type III/V, BSCI, REACH/RoHS, ISO 9001:2015. Independent testing by TÜV Rheinland, SGS, and Intertek.',
+  ignoreTitleTemplate: true,
+};
+
+const safetyProducts = products.filter((p) => p.id === 'life-vest-classic' || p.id === 'life-vest-pro');
+const siteUrl = 'https://aquafarer.com';
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Safety Standards' }];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <meta
+    name="ai-intent"
+    content="water-safety-equipment,ce-certified-life-vests,marine-safety-standards,solas-compliance,iso-9001-marine-safety"
+  />
+  <JsonLd
+    type="Article"
+    article={{
+      headline: 'Safety Standards & Certification — CE, SOLAS, ISO 9001',
+      description:
+        'Aquafarer safety certifications: CE (EU 2016/425) by TÜV Rheinland, SOLAS (LSA Code), USCG Type III/V, BSCI social compliance, REACH/RoHS, and ISO 9001:2015 quality management.',
+      datePublished: '2026-07-07',
+    }}
+    data={{ url: `${siteUrl}/safety` }}
+  />
+
+  <section class="bg-gradient-to-br from-[#001830] via-[#002d4a] to-[#003355] text-white py-24 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <span class="text-xs font-medium uppercase tracking-[0.2em] text-sky-300">{hero.tagline || 'Safety'}</span>
+      <h1 class="mt-4 text-4xl md:text-5xl font-bold tracking-tight">
+        {hero.title || 'Safety Standards & Certification'}
+      </h1>
+      <p class="mt-4 text-lg text-sky-100/80 max-w-3xl mx-auto">{hero.subtitle}</p>
+    </div>
+  </section>
+
+  {
+    trustBar.items && trustBar.items.length > 0 && (
+      <section class="px-6 py-12 mx-auto max-w-6xl -mt-8 relative z-10">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {trustBar.items.map((s: any) => (
+            <div class="text-center p-5 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 shadow-sm">
+              <span class="block text-2xl font-bold text-[#06b6d4]">{s.value}</span>
+              <span class="block text-sm font-semibold text-gray-900 mt-1">{s.label}</span>
+              {s.sub && <span class="block text-xs text-gray-500 mt-0.5">{s.sub}</span>}
+            </div>
+          ))}
+        </div>
+      </section>
+    )
+  }
+
+  <section class="px-6 py-16 mx-auto max-w-5xl">
+    <div class="text-center mb-12">
+      <p class="text-sm font-semibold text-[#06b6d4] uppercase tracking-wider">Certifications & Standards</p>
+      <h2 class="mt-2 text-3xl font-bold text-gray-900">Internationally Recognized Safety Compliance</h2>
+      <p class="mt-3 text-gray-500 max-w-2xl mx-auto">
+        Every certification is verified by independent notified bodies and subject to annual surveillance audits.
+      </p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-6">
+      {
+        certifications.length > 0 ? (
+          certifications.map((cert: any) => (
+            <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl p-6 hover:shadow-md transition-shadow">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center shrink-0">
+                  <svg
+                    class="w-5 h-5 text-green-600"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                    />
+                  </svg>
+                </div>
+                <h2 class="text-lg font-bold text-gray-900">{cert.title}</h2>
+              </div>
+              {cert.standard && (
+                <span class="inline-block mb-2 px-2.5 py-0.5 bg-sky-50 text-sky-700 rounded text-xs font-mono">
+                  {cert.standard}
+                </span>
+              )}
+              <p class="text-sm text-gray-600 leading-relaxed">{cert.body || cert.description}</p>
+            </div>
+          ))
+        ) : (
+          <p class="text-gray-500 col-span-2 text-center py-8">Certification data loading.</p>
+        )
+      }
+    </div>
+  </section>
+
+  <!-- Safety Products -->
+  {
+    safetyProducts.length > 0 && (
+      <section class="px-6 py-16 mx-auto max-w-5xl">
+        <div class="text-center mb-10">
+          <span class="text-sm font-semibold text-[#06b6d4] tracking-[0.15em] uppercase">Safety Products</span>
+          <h2 class="mt-2 text-3xl font-bold text-gray-900">Our Life Vest Range</h2>
+          <p class="mt-3 text-gray-500">
+            From sheltered waters to offshore operations — certified protection for every environment.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-6">
+          {safetyProducts.map((s) => (
+            <div class="bg-white border-2 border-green-100 rounded-2xl p-6 hover:border-green-300 transition-colors">
+              <h3 class="font-bold text-gray-900 text-lg">{s.name}</h3>
+              <p class="mt-2 text-sm text-gray-600 leading-relaxed">{s.desc}</p>
+              <div class="mt-4 flex flex-wrap gap-2">
+                {s.safety_rules.map((r) => (
+                  <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs font-medium">{r}</span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+    )
+  }
+
+  <!-- Testing Process -->
+  <section class="px-6 py-16 mx-auto max-w-5xl">
+    <div class="bg-gray-50 dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-8 md:p-12">
+      <div class="text-center mb-10">
+        <span class="text-sm font-semibold text-[#06b6d4] tracking-[0.15em] uppercase">Our Testing Process</span>
+        <h2 class="mt-2 text-3xl font-bold text-gray-900">How We Test for Safety</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8 text-center">
+        <div>
+          <div class="text-3xl font-bold text-[#06b6d4]">1.25x</div>
+          <p class="mt-2 text-sm text-gray-600">
+            Working pressure inflation test — every chamber is inflated to 1.25x rated pressure for a 24-48h pressure
+            hold
+          </p>
+        </div>
+        <div>
+          <div class="text-3xl font-bold text-[#06b6d4]">24hr</div>
+          <p class="mt-2 text-sm text-gray-600">
+            Buoyancy retention test — life vests are submerged for 24 hours to verify flotation performance
+          </p>
+        </div>
+        <div>
+          <div class="text-3xl font-bold text-[#06b6d4]">100%</div>
+          <p class="mt-2 text-sm text-gray-600">
+            Every boat undergoes mandatory seam peel verification, air retention, and full systems check before shipping
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {
+    testimonial.quote && (
+      <section class="px-6 py-16 mx-auto max-w-5xl">
+        <div class="bg-gradient-to-br from-sky-50 to-white dark:from-gray-900 dark:to-gray-950 rounded-2xl border border-sky-100 dark:border-gray-800 p-8 md:p-12">
+          <div class="grid md:grid-cols-5 gap-8 items-center">
+            <div class="md:col-span-3">
+              <span class="text-sm font-semibold text-[#06b6d4] uppercase tracking-wider">What Our Partners Say</span>
+              <blockquote class="mt-4 text-lg text-gray-700 dark:text-gray-300 leading-relaxed italic">
+                &ldquo;{testimonial.quote}&rdquo;
+              </blockquote>
+              <div class="mt-4 flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-sky-100 flex items-center justify-center text-sky-700 font-bold">
+                  {testimonial.author?.charAt(0) || 'C'}
+                </div>
+                <div>
+                  <p class="font-semibold text-gray-900 text-sm">{testimonial.author}</p>
+                  <p class="text-xs text-gray-500">
+                    {testimonial.title}, {testimonial.company} &middot; {testimonial.location}
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="md:col-span-2">
+              <div class="p-5 bg-white dark:bg-gray-900 rounded-xl border border-gray-200">
+                <h3 class="font-bold text-gray-900 text-sm">Third-Party Verified</h3>
+                <p class="mt-2 text-sm text-gray-600 leading-relaxed">
+                  All safety certifications are issued by independent notified bodies — TÜV Rheinland, SGS, and
+                  Intertek. We do not self-certify.
+                </p>
+                <a href="/trust" class="mt-3 inline-flex text-sm font-medium text-[#06b6d4] hover:text-sky-700">
+                  See all certifications &rarr;
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  <!-- Related Links -->
+  <section class="px-6 pb-20 mx-auto max-w-4xl">
+    <div class="flex flex-wrap justify-center gap-3 text-sm">
+      <span class="text-gray-400 font-medium">Explore more:</span>
+      {
+        (related.links && related.links.length > 0 ? related.links : []).map((link: any) => (
+          <a
+            href={link.url}
+            class="px-3 py-1.5 bg-white rounded-lg border border-gray-200 text-gray-700 hover:border-sky-300 hover:text-sky-600 transition-colors"
+          >
+            {link.text} &rarr;
+          </a>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="sr-only" data-ai-block="constraint" aria-hidden="true">
+    <p>
+      Aquafarer safety equipment is designed for controlled training, recreational, and professional marine
+      environments. Not designed for extreme sports, high-speed racing, or unregulated adventure activities without
+      proper certification. Certified to CE (EU 2016/425, EN ISO 12402), SOLAS (Chapter III, LSA Code), USCG Type III/V
+      (46 CFR Part 160). ISO 9001:2015 certified by TÜV Rheinland. BSCI social compliance audited by SGS. REACH and RoHS
+      compliant.
+    </p>
+  </section>
+</Layout>

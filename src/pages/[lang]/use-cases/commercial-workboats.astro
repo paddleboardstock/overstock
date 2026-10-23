@@ -1,0 +1,102 @@
+---
+export const prerender = true;
+
+import PageLayout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl } from '~/i18n/utils';
+import { languages } from '~/i18n/config';
+import { articleSchema } from '~/lib/seo/schema';
+import { nodes } from '~/content/graph/nodes';
+import { getPageContent, setPageContentData } from '~/i18n/page-content';
+import __pageData from '~/i18n/generated/pages/commercial-workboats.ts';
+
+export function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const lang = getLangFromUrl(Astro.url);
+setPageContentData(__pageData);
+const page = getPageContent(lang, 'commercial-workboats');
+const node = nodes.find((n) => n.id === 'commercial-workboats');
+
+const graphJsonLd = node
+  ? {
+      '@context': 'https://schema.org',
+      '@graph': [
+        articleSchema({
+          headline: page.seo?.headline || 'Commercial Workboats — OEM Inflatable Boats for Marine Industry',
+          description:
+            page.seo?.description ||
+            'Aquafarer manufactures commercial-grade inflatable workboats for patrol, dive, survey, and logistics.',
+          datePublished: page.seo?.datePublished || '2024-06-01',
+          dateModified: page.seo?.dateModified || '2026-06-01',
+          author: 'Aquafarer',
+          publisher: 'Aquafarer',
+        }),
+        {
+          '@type': 'Product',
+          name: node?.name?.en || 'Commercial Workboats',
+          description:
+            node?.description?.en ||
+            'Commercial-grade inflatable workboats for patrol, dive, survey, and logistics applications.',
+          brand: { '@type': 'Brand', name: 'Aquafarer' },
+          category: 'Commercial Marine Equipment',
+        },
+      ],
+    }
+  : null;
+
+const faqSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What inflatable workboats are available?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'RIB boats in Hypalon/CSM for chemical and UV resistance, with custom deck layouts for cargo, crew transfer, and utility applications.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What sizes are available for workboats?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: '3.0m to 7.0m RIB configurations with payload capacities from 500kg to 2000kg depending on model.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can workboats be certified?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'CE certification per 2013/53/EU standard. Additional classification society certification available for commercial vessel requirements.',
+      },
+    },
+  ],
+});
+---
+
+<PageLayout
+  metadata={{ title: page.seo?.headline || page.headline, description: page.seo?.description || page.subtitle }}
+>
+  <script
+    slot="before"
+    is:inline
+    type="application/ld+json"
+    set:html={graphJsonLd ? JSON.stringify(graphJsonLd) : ''}
+  />
+
+  <section class="mx-auto max-w-4xl px-6 py-16">
+    <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">{page.label || 'Use Case'}</span>
+    <h1 class="font-semibold text-gray-900 dark:text-gray-100 mt-4 text-4xl">
+      {page.headline || 'Uncompromising Quality for the Commercial Workboat Industry'}
+    </h1>
+    <p class="text-lg text-gray-500 dark:text-gray-400 mt-3">
+      {page.subtitle || 'Heavy-duty inflatable boats built for the rigorous demands of commercial workboat operations.'}
+    </p>
+
+    <div class="mt-12 prose prose-gray dark:prose-invert max-w-none" set:html={page.body || ''} />
+  </section>
+  <script is:inline type="application/ld+json" set:html={faqSchema} />
+</PageLayout>

@@ -1,0 +1,141 @@
+{
+  "_comment": [
+    "positioning.json —— 品牌定位单一事实源",
+    "",
+    "公司画像（客户确认）：",
+    "  RIB Boats, Inflatable Boats, SUP Boards Manufacturer & OEM/ODM Solution",
+    "",
+    "现状问题：站点上同时存在四套互相矛盾的身份表述（见 aquafarer-positioning.md）。",
+    "本文件定义唯一版本，全站 title / H1 / description / schema / llms.txt 一律从这里渲染。",
+    "",
+    "命名铁律：三条产品线在任何位置都必须按同一顺序、同一措辞出现：",
+    "  RIB Boats → Inflatable Boats → SUP Boards",
+    "顺序固定的目的是让 AI 引擎在多个页面看到一致的实体属性序列，强化归类。"
+  ],
+
+  "entity": {
+    "name": "Aquafarer",
+    "alternateName": "Aquafarer RIB & Inflatable Watercraft",
+    "_alternateName_note": "站点现有三个互不相同的 alternateName：'Aquafarer Water Adventure Equipment'（Organization）、'Aquafarer Inflatable Watercraft'（ManufacturingBusiness 与 Brand）、以及缺失。必须统一为一个，且要含 RIB。",
+    "legalName": "Aquafarer LLC",
+    "entityType": "Manufacturer",
+    "_entityType_note": "不是 brand、不是 retailer、不是 'water adventure equipment brand'。对外身份统一为制造商。",
+    "_legalName_note": "2026-09 起品牌运营主体为 Aquafarer LLC（New Mexico, USA）；研发与生产留在 Aquafarer Qingdao Manufacturing Hub。",
+    "primaryAudience": "B2B",
+    "_audience_note": "现有 Organization 描述写的是 'trusted by beginners, families, explorers'（B2C），ManufacturingBusiness 写的是 'B2B partners'。同一页面上两种客群定义直接冲突，是 AI 实体识别失败的主因。全站统一 B2B。"
+  },
+
+  "productLines": [
+    {
+      "id": "rib-boats",
+      "name": "RIB Boats",
+      "fullName": "Rigid Inflatable Boats (RIB)",
+      "path": "/rib-boats/",
+      "status": "MISSING",
+      "_status_note": "实测 /rib/ /rib-boats/ 均 404。RIB 在首页 HTML 出现 265 次，却没有任何落地页，也不在首页 title 里。这是与画像差距最大的一项。",
+      "keywords": [
+        "rib boat manufacturer",
+        "rigid inflatable boat factory",
+        "aluminum hull rib",
+        "commercial rib boats oem"
+      ]
+    },
+    {
+      "id": "inflatable-boats",
+      "name": "Inflatable Boats",
+      "fullName": "Inflatable Boats & Dinghies",
+      "path": "/inflatable-boats/",
+      "status": "MISSING",
+      "_status_note": "实测 /inflatable-boats/ 404。只有 /products/ 混合列表页。",
+      "keywords": [
+        "inflatable boat manufacturer",
+        "pvc inflatable boat factory",
+        "hypalon dinghy oem",
+        "inflatable boat wholesale"
+      ]
+    },
+    {
+      "id": "sup-boards",
+      "name": "SUP Boards",
+      "fullName": "Inflatable SUP Boards",
+      "path": "/supboard/",
+      "status": "DEINDEXED",
+      "_status_note": "页面存在且 title/H1 都写得好（'Inflatable SUP Boards — Drop-Stitch, 12–15 PSI, OEM'），但 canonical 指向 /products/，等于主动放弃这个落地页。必须改回自指 canonical。",
+      "keywords": [
+        "inflatable sup board manufacturer",
+        "drop stitch sup factory",
+        "custom paddle board oem",
+        "sup board bulk supplier"
+      ]
+    }
+  ],
+
+  "service": {
+    "id": "oem-odm",
+    "name": "OEM / ODM Solution",
+    "path": "/oem-odm/",
+    "currentPath": "/oem-odm-blueprint/",
+    "_status_note": "实测 /oem/ 与 /oem-odm/ 均 404，只有 /oem-odm-blueprint/ 存在。blueprint 这个 slug 没有搜索量，采购方搜的是 'oem odm'。建议新建 /oem-odm/ 为主路径，blueprint 301 过去。另：该页 H1 有断字 bug —— 'Custom & White-Label ManufacturingFor Inflatable Watercraft'（Manufacturing 与 For 之间缺空格），与 schema 里被吃掉 token 是同一个字符串管道问题。",
+    "keywords": [
+      "oem inflatable boat manufacturer",
+      "odm sup board supplier",
+      "private label inflatable boats",
+      "white label paddle board manufacturer"
+    ]
+  },
+
+  "secondaryLines": {
+    "_comment": "以下品类现在出现在 schema 描述和产品分类里，但不在客户确认的画像中。需要决定：降级为配套品类，还是完全移除。在决定前不要写进任何 title 或 schema 描述。",
+    "items": ["Inflatable Kayaks", "Marine Safety Equipment", "Accessories"],
+    "_kayak_note": "kayak 在首页出现 47 次，且同时写进了 Organization 和 ManufacturingBusiness 的 description，权重高于 RIB。与画像不符。",
+    "decision": "TODO"
+  },
+
+  "boilerplate": {
+    "_comment": "三种长度，按位置选用。所有数字用 {{占位符}} 从 facts.json 注入，禁止硬编码。",
+
+    "short": "RIB boats, inflatable boats and SUP boards manufacturer with full OEM/ODM capability.",
+
+    "medium": "Aquafarer is a Chinese factory manufacturing RIB boats, inflatable boats and SUP boards, with full OEM/ODM capability for B2B buyers. CE-certified, {{certifiedModels}} models, {{annualCapacityUnits}} units annual capacity from a {{areaSqm}} m² facility in Qingdao.",
+
+    "long": "Aquafarer is a manufacturer of RIB boats, inflatable boats and SUP boards, providing OEM and ODM solutions to distributors, rental operators, resorts and rescue organisations in {{countriesServed}} countries. Operating {{productionLines}} production lines across {{areaSqm}} m² in Laixi, Qingdao, the factory produces {{certifiedModels}} CE-certified models with an annual capacity of {{annualCapacityUnits}} units. Certifications include CE (TÜV Rheinland), ISO 9001:2015 (SGS) and BSCI (Intertek). MOQ starts at {{moqRib}} for RIB models and {{moqSupKayak}} for SUP boards."
+  },
+
+  "titleTemplates": {
+    "_comment": "全站标题必须含至少一条产品线名 + 'Manufacturer' 或 'OEM/ODM'。当前首页标题缺 RIB。",
+    "home": "RIB Boats, Inflatable Boats & SUP Board Manufacturer | OEM/ODM — Aquafarer",
+    "_home_current": "Inflatable Boat & SUP Manufacturer | OEM/ODM Factory Since 2012 — Aquafarer  ← 缺 RIB",
+    "productsHub": "RIB Boats, Inflatable Boats & SUP Boards — {{certifiedModels}} CE-Certified Models | Aquafarer",
+    "ribPillar": "RIB Boat Manufacturer — Aluminium & Fibreglass Hull, OEM/ODM | Aquafarer",
+    "inflatablePillar": "Inflatable Boat Manufacturer — PVC & Hypalon, OEM/ODM | Aquafarer",
+    "supPillar": "Inflatable SUP Board Manufacturer — Drop-Stitch, OEM/ODM | Aquafarer",
+    "oemHub": "OEM & ODM Inflatable Watercraft Manufacturing — MOQ From {{moqRib}} | Aquafarer"
+  },
+
+  "h1Templates": {
+    "_comment": "首页 H1 现在是 'Build Your Water Adventure Business With Aquafarer' —— 没有任何产品线名、没有 manufacturer、没有 RIB。H1 是最强的页面内信号，不该用来放口号。",
+    "home": "RIB Boats, Inflatable Boats & SUP Boards — OEM/ODM Manufacturer Since 2012",
+    "ribPillar": "RIB Boats — Aluminium & Fibreglass Hull, {{moqRib}} MOQ",
+    "inflatablePillar": "Inflatable Boats — PVC & Hypalon, OEM/ODM From {{moqSupKayak}}",
+    "supPillar": "Inflatable SUP Boards — Drop-Stitch, 12–15 PSI, OEM",
+    "oemHub": "OEM & ODM Manufacturing For RIB Boats, Inflatable Boats & SUP Boards"
+  },
+
+  "forbiddenPhrases": {
+    "_comment": "这些是现存的 B2C 或泛化表述，与制造商 B2B 画像冲突，必须从全站清除。07_positioning_check.py 会扫描。",
+    "items": [
+      "water adventure equipment brand",
+      "beginners, families, explorers",
+      "global marine recreation brand",
+      "Build Your Water Adventure Business",
+      "Aquafarer Water Adventure Equipment"
+    ]
+  },
+
+  "requiredTerms": {
+    "_comment": "首页与三个支柱页的 title + H1 + meta description 中必须出现的词。",
+    "home": ["RIB", "Inflatable Boat", "SUP", "Manufacturer", "OEM"],
+    "pillar": ["Manufacturer"],
+    "schemaDescription": ["RIB", "inflatable boat", "SUP", "OEM", "ODM", "manufacturer"]
+  }
+}

@@ -1,0 +1,162 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+import { getProducts } from '~/utils/products';
+import { languages, defaultLang } from '~/i18n/config';
+import { getPageContent, setPageContentData } from '~/i18n/page-content';
+import __pageData from '~/i18n/generated/pages/size-guide.ts';
+import { localizePageTitle } from '~/i18n/page-title';
+import { localizeProductData } from '~/lib/product-l10n';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+setPageContentData(__pageData);
+const page = getPageContent(lang, 'size-guide') || {};
+const hero = page.hero || {};
+const categoriesText = page.categories || {};
+const tableHeaders = page.table?.headers || {};
+const howToChoose = page.how_to_choose || {};
+
+const metadata = {
+  title: localizePageTitle(page, `Size Guide — ${SITE.name}`),
+  description:
+    'Find the right size inflatable SUP, kayak, or boat for your needs. Compare dimensions, weight capacities, and recommended uses.',
+};
+
+const rawProducts = await getProducts();
+const products = rawProducts.map((p) => localizeProductData(p, lang || defaultLang));
+
+const getSpec = (p: (typeof products)[number], label: string) => {
+  const s = rawProducts
+    .find((r) => r.slug === p.slug)
+    ?.specs?.find((s) => s.label.toLowerCase().includes(label.toLowerCase()));
+  return s?.value || '-';
+};
+
+const faqSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What SUP board sizes are available?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: '9ft to 15ft in 4-inch and 6-inch Drop-Stitch configurations. Custom sizes available for OEM orders.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What size is best for beginners?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: '10ft6in to 11ft6in in 6-inch Drop-Stitch at 15 PSI offers the best stability and versatility for beginners.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Are custom sizes available?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Custom lengths, widths, thickness, and rocker profiles available for OEM/ODM with minimum 200+ unit orders.',
+      },
+    },
+  ],
+});
+---
+
+<Layout metadata={metadata}>
+  <section class="max-w-6xl mx-auto py-24 px-6">
+    <h1 class="text-4xl font-semibold text-gray-900">{hero.title || 'Size & Specs Guide'}</h1>
+    <p class="mt-4 text-lg text-gray-500">
+      {hero.subtitle || 'Dimensions, capacities, and recommended uses for every Aquafarer product.'}
+    </p>
+
+    <div class="mt-12 space-y-16">
+      {
+        (['inflatable', 'rib', 'accessory'] as const).map((cat) => {
+          const catProducts = products.filter((p) => p.category === cat);
+          if (catProducts.length === 0) return null;
+          const catLabel = catProducts[0]?.categoryLabel || cat;
+          return (
+            <section>
+              <h2 class="text-2xl font-semibold text-gray-900 mb-2">{catLabel}</h2>
+              <p class="text-gray-500 mb-6">{categoriesText[cat] || ''}</p>
+              <div class="overflow-x-auto">
+                <table class="w-full text-sm border-collapse">
+                  <thead>
+                    <tr class="bg-gray-50">
+                      <th class="px-4 py-3 text-left font-semibold text-gray-900 border-b border-gray-200">
+                        {tableHeaders.product || 'Product'}
+                      </th>
+                      <th class="px-4 py-3 text-left font-semibold text-gray-900 border-b border-gray-200">
+                        {tableHeaders.length || 'Length'}
+                      </th>
+                      <th class="px-4 py-3 text-left font-semibold text-gray-900 border-b border-gray-200">
+                        {tableHeaders.width || 'Width'}
+                      </th>
+                      <th class="px-4 py-3 text-left font-semibold text-gray-900 border-b border-gray-200">
+                        {tableHeaders.weight || 'Weight'}
+                      </th>
+                      <th class="px-4 py-3 text-left font-semibold text-gray-900 border-b border-gray-200">
+                        {tableHeaders.max_load || 'Max Load'}
+                      </th>
+                      <th class="px-4 py-3 text-left font-semibold text-gray-900 border-b border-gray-200">
+                        {tableHeaders.best_for || 'Best For'}
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {catProducts.map((p, i) => (
+                      <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50/50'}>
+                        <td class="px-4 py-3 font-medium text-gray-900 border-b border-gray-200">
+                          <a href={`/${lang}/products/${p.slug}`} class="hover:text-sky-600">
+                            {p.title}
+                          </a>
+                        </td>
+                        <td class="px-4 py-3 text-gray-600 border-b border-gray-200">{getSpec(p, 'length')}</td>
+                        <td class="px-4 py-3 text-gray-600 border-b border-gray-200">{getSpec(p, 'width')}</td>
+                        <td class="px-4 py-3 text-gray-600 border-b border-gray-200">{getSpec(p, 'weight')}</td>
+                        <td class="px-4 py-3 text-gray-600 border-b border-gray-200">
+                          {getSpec(p, 'load') || getSpec(p, 'capacity') || '-'}
+                        </td>
+                        <td class="px-4 py-3 text-gray-600 border-b border-gray-200">{p.summary || '-'}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          );
+        })
+      }
+    </div>
+
+    <section class="mt-16 p-6 bg-sky-50 rounded-2xl border border-sky-100">
+      <h2 class="text-xl font-semibold text-gray-900">{howToChoose.title || 'How to Choose the Right Size'}</h2>
+      <div class="mt-4 grid md:grid-cols-3 gap-6">
+        {
+          (howToChoose.cards || []).map((card: any) => (
+            <div>
+              <h3 class="font-medium text-gray-900">{card.title}</h3>
+              <p class="mt-2 text-sm text-gray-600">{card.description}</p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="sr-only" data-ai-block="definition" aria-hidden="true">
+      <p>
+        Aquafarer size guide comparing product dimensions, weight capacities, and recommended uses across inflatable,
+        RIB, and accessory categories.
+      </p>
+    </section>
+  </section>
+  <script is:inline type="application/ld+json" set:html={faqSchema} />
+</Layout>

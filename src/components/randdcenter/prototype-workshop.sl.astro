@@ -1,0 +1,205 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'sl' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline"
+    >&larr; Nazaj na Raziskovalni in razvojni center</a
+  >
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Laboratorij 05</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Delavnica prototipov</h1>
+      <p class="mt-3 text-lg text-muted">
+        Od CAD modela do na morje pripravljene ladje — zgrajena, opremljena in preizkušena
+      </p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-ocean-voyager-1.webp"
+        alt="Aquafarer prototipna delavnica izdelave čolnov"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Kjer se dizajn spremeni v resničnost</h2>
+  <p>
+    CAD model, ne glede na to, kako podroben je, ne more razkriti, kako bo čoln dejansko plul, dokler ne pride na vodo.
+    Zato je naš Prototipni delavnica zasnovana tako, da inženirske podatke čim hitreje in natančneje pretvori v fizično,
+    morskega plovila. Vsak nov{SITE.name}model — in vsak pomemben po meri izdelan kos — gre skozi to delavnico, preden
+    se proizvodno orodje uporabi.
+  </p>
+  <p>
+    Delavnica je popolnoma opremljena za sočasno izdelavo trupa, cevi in jader. Ta pristop vzporednega delovnega procesa
+    skrajša čas izdelave prototipa na 8-12 tednov od objave inženirske rešitve, v primerjavi z industrijskim standardom
+    16-20 tednov. Ko vaša aplikacija zahteva specializirano rešitev, lahko preidemo od koncepta do preverjanja na vodi v
+    manj kot treh mesecih.
+  </p>
+
+  <h2>Delavske sposobnosti</h2>
+  <table>
+    <thead><tr><th>Delovna postaja</th><th>Oprema</th><th>Namen</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Izdelava trupa</td><td
+          >Pec za rotacijsko oblikovanje (HDPE), TIG varilna postaja (aluminij), kalupi za ročno polaganje (steklena
+          vlakna)</td
+        ><td>Polna proizvodnja trupov v vseh treh vrstah materialov</td></tr
+      >
+      <tr
+        ><td>Sestava cevi</td><td>RF varilni stiskalnik, postaja za vroč zrak, pripomoček za test napihovanja</td><td
+          >Izdelava sestavkov cevi polne velikosti z vsemi pregradami, stožci in ventili</td
+        ></tr
+      >
+      <tr
+        ><td>Opremljanje in montaža</td><td
+          >Dvigalo motorja (500 kg), okvir makete konzole, stiskalnik za hidravlične cevi, plošča za električni kabelski
+          snop</td
+        ><td>Popolna oprema: motor, krmilo, krmilni sistem, gorivni sistem, elektronika, sedeži</td></tr
+      >
+      <tr
+        ><td>Oprema za instrumentacijo</td><td
+          >Senzor hitrosti GPS, merilnik pretoka goriva, pospeškomeri, niz termočlenov, zapisovalnik podatkov</td
+        ><td>Namestitev in kalibracija inštrumentacije za preizkuse na morju</td></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>Potovanje prototipa — korak za korakom</h2>
+  <ol>
+    <li>
+      <strong>Inženirska predaja</strong>— Oblikovalni paket (3D model, FEA poročilo, seznam materialov, razpored
+      polstenja) formalno pregleda vodja delavnice in projektni inženir. Morebitne proizvodne težave se označijo in
+      rešijo, preden se začne s rezanjem.
+    </li>
+    <li>
+      <strong>Proizvodnja trupa</strong>— Trup je zgrajen po inženirski specifikaciji. Za HDPE: program rotacijske
+      oblike je naložen iz simulacije Moldex3D. Za aluminij: CNC-rezane plošče so zvarjene v TIG delavnici po odobreni
+      karti varjenja. Za steklena vlakna: knjiga slojev se sledi sloj za slojem.
+    </li>
+    <li>
+      <strong>Izdelava cevi</strong>— Tkanina je izrezana z uporabo CNC-predlog, nato pa RF-varjena v celovite komore.
+      Vsaka komora je napihnjena do testnega tlaka in pustjena 24 ur za začetno stabilizacijo.
+    </li>
+    <li>
+      <strong>Sestavljanje in oprema</strong>— Trup in cevi so povezani. Motor je obešen, krmiljenje in krmilni sistemi
+      so povezani, gorivni sistem je nameščen, vsa električna vezja pa so ožičena in preverjena.
+    </li>
+    <li>
+      <strong>Statični testi</strong>— Preden se čoln dotakne vode, opravi: preverjanje vzgona (polna + obremenitev 30 %
+      rezerve), preizkus tlaka v sistemu goriva, preizkus popolnega zaklepa krmilnega sistema, električni test
+      kontinuitete zemeljske vezi.
+    </li>
+    <li><strong>Program preizkusov na morju</strong>— 20 ur testiranja v vodi, podrobno opisano spodaj.</li>
+    <li>
+      <strong>Pregled prototipa</strong>— Poteka uradni sestanek ob podpisu z inženirskimi, proizvodnimi in kakovostnimi
+      ekipami. Vse potrebne spremembe oblikovanja so dokumentirane in vključene v proizvodno izdajo.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      20-urni program preizkusov na morju — urnik testiranj
+    </p>
+    <div class="space-y-2 text-sm">
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">2 h</span><span class="flex-1"
+          >Manevriranje v pristanišču — upravljanje pri nizkih hitrostih, vzvratno, preverjanje blatnikov</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">4 h</span><span class="flex-1"
+          >Preizkus hitrosti — GPS-potrjena največja hitrost, potovalna hitrost, poraba goriva pri točkah 3 vrtljajev na
+          minuto</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Preizkus zavijanja — taktični premer, napredovanje in prenos pri 20 kn, levo in desno</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Preizkus zasukanja — ponavljajoči se prehodi skozi 0,5–1,0 m vrtenje; pospeškometer na podstavku sedeža
+          krmila</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Test stabilnosti — statični kot naklona s štirimi + podvozji posadke na desni strani, zamaknjena obremenitev</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Vzdržljivostna vožnja — 3 ure neprekinjeno pri potovalni hitrosti; spremljanje temperature (motor, gorivo,
+          elektrika)</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">2 h</span><span class="flex-1"
+          >Končni pregled — pregled vseh sistemov po preizkusu, zategnjenje/preverjanje vseh pritrdilnih elementov,
+          dokumentiranje ugotovitev</span
+        >
+      </div>
+    </div>
+  </div>
+
+  <h2>Prilagojeno prototipiranje za edinstvene aplikacije</h2>
+  <p>
+    Delavnica prototipov je kraj, kjer rešujemo probleme, ki jih standardni serijski čolni ne morejo rešiti. Nedavni
+    primeri vključujejo:
+  </p>
+  <ul>
+    <li>
+      7,8 m RIB za iskalno-reševalno organizacijo, ki zahteva prilagojeno kabino z zaščito pred prevrnjenjem,
+      integriranimi nosili in sonarjem na premcu — vse prototipirano, nameščeno in preizkušeno v naši ustanovi.
+    </li>
+    <li>
+      5,2 m visok napihljiv objekt za hidrografske raziskave, z zmanjšanim krmnim delom, odstranljivim instrumentnim
+      drogom in pretvorniki skozi trup, zasnovanimi za zmanjšanje motenj toka.
+    </li>
+    <li>
+      Električni 4,5 m dolg tender za superjahto, kjer je bil prototip uporabljen za preverjanje dosega, polnilne
+      infrastrukture in ravni hrupa, preden se je naročnik zavezal k floti štirih jaht.
+    </li>
+  </ul>
+
+  <h2>Naša ekipa za prototipiranje</h2>
+  <p>
+    Delavnico zaposluje osem večkvalificiranih pomorskih tehnikov, vsak usposobljen v vsaj dveh od treh osnovnih
+    disciplin (trup, cevi, oprema za opremo). Vodja ekipe je mojster graditelj čolnov s 16 leti izkušenj, od izdelave po
+    meri do serijskih serijskih projektov. Vsak prototip ima dodeljenega namenskega projektnega inženirja, ki je edina
+    kontaktna točka za naročnika skozi celoten proces gradnje in preizkusa.
+  </p>
+
+  <h2>Vključenost strank</h2>
+  <p>
+    Aktivno spodbujamo naše stranke, da se udeležijo ključnih mejnikov med gradnjo prototipa — zlasti začetnega pregleda
+    opremljanja in preizkusa na morju. Vaše operativne povratne informacije v teh fazah so neprecenljive pri
+    izpopolnjevanju ladje pred začetkom proizvodnje. Ne gradimo v vakuumu; gradimo v partnerstvu z vami.
+  </p>
+  <p>
+    20-urni preizkus na morju je tudi priložnost za vašo ekipo, da se seznani z upravljanjem, razporeditvijo sistemov in
+    vzdrževalnimi zahtevami čolna, kar zagotavlja nemoten prehod v uporabo, ko so proizvodni čolni dostavljeni.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Začni svoj prototipni projekt</h2>
+    <p class="mt-2 text-sm text-muted">
+      Povejte nam o čolnu, ki ga potrebujete, in predlagali bomo načrt razvoja prototipa.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Kontaktirajte našo ekipo za prototipiranje</a
+    >
+  </div>
+</section>

@@ -1,0 +1,167 @@
+hero:
+  tagline: Aquafarer Akadémia
+  title: Oktatási Központ
+  subtitle: Útmutatók és oktatóanyagok minden szinthez — a SUP alapoktól a haladó mentési technikákig
+categories:
+  - level: Kezdő
+    color: from-green-500 to-emerald-600
+    badge: bg-green-100 text-green-700
+    guides:
+      - title: SUP Alapok
+        desc: Tanuld meg a szörfdeszkázás alapjait — a testtartást, az evezéstechnikát és az egyensúlyt.
+        slug: beginner-sup-guide
+      - title: Evezőtechnikák
+        desc: Előrecsapás, söprésszerű csapás, húzós csapás és alacsony támasz — sajátítsd el az alapvető lapátmozdulatokat.
+        slug: sup-paddle-guide
+      - title: Biztonság az első
+        desc: Alapvető biztonsági gyakorlatok, beleértve az időjárás-ellenőrzést, PFD használatát, pórázszabályokat és az önmentést.
+        slug: sup-safety-guide
+  - level: Közbülső
+    color: from-blue-500 to-indigo-600
+    badge: bg-blue-100 text-blue-700
+    guides:
+      - title: Túrafelszerelések
+        desc: Többórás evezések tervezése — navigáció, hidratáció, tempó és szél-előrejelzések olvasása.
+        slug: touring-sup-guide
+      - title: Időjárás olvasat
+        desc: Elemzd a tengeri előrejelzéseket, azonosítsd a felhőmintákat, és értsd meg a szél vízre gyakorolt hatásait.
+        slug: weather-planning-water-sports
+      - title: Navigáció alapjai
+        desc: Térképolvasás, iránytű használata, GPS pontok és útvonaltervezés a parti evezéshez.
+        slug: sup-navigation-guide
+      - title: Árapály Tudatosság
+        desc: A dagályciklusok, áramlatok és azok a kilövési időzítésre és útvonaltervezésre gyakorolt hatásának megértése.
+        slug: understanding-tides
+  - level: Fejlett
+    color: from-purple-500 to-violet-600
+    badge: bg-purple-100 text-purple-700
+    guides:
+      - title: Többnapos utazás tervezése
+        desc: Expedíciós logisztika — felszerelés kiválasztása, ételtervezés, biztonsági protokollok és vészhelyzeti kapcsolatok.
+        slug: sup-travel-guide
+      - title: Mentési technikák
+        desc: Önmentés, T-mentés, eszkimó-mentés kajakoknak és vontatási protokollok nyílt vízen.
+        slug: sup-self-rescue
+      - title: Éjszakai evezés
+        desc: Navigáció sötétben — világítási követelmények, útvonalemlékezet, csoportkommunikáció és veszélytudatosság.
+        slug: sup-navigation-guide
+  - level: Karbantartás
+    color: from-amber-500 to-orange-600
+    badge: bg-amber-100 text-amber-700
+    guides:
+      - title: Tisztítás és ápolás
+        desc: Édesvízzel történő öblítés, UV védelem, penészmegelőzés és megfelelő szárítási technikák minden egyes alkalom után.
+        slug: inflatable-sup-maintenance
+      - title: Tárolási útmutató
+        desc: A legjobb gyakorlatok a felfújható deszkák és hajók tárolására — defláció, hajtogatás, hőmérséklet-szabályozás és elmaradási idő.
+        slug: inflatable-sup-storage
+      - title: Javítási alapok
+        desc: Javítsd ki apró dyukásokat, varrásszivárgásokat és szelepproblémákat PVC javítókészletekkel és javítási technikákkal.
+        slug: inflatable-sup-repair
+      - title: Szelepkarbantartás
+        desc: Azonosítsa a szeleptípusokat (Halkey-Roberts, Boston, Leafield), tisztítsa meg a törmeléket, és cserélje ki a hibás szárakat.
+        slug: inflatable-sup-repair
+knowledge_center_tagline: Tudásközpont
+knowledge_center_title: Tengeri felszerelések és ipari útmutatók
+knowledge_center_subtitle: Szakértői tudás és vásárlási útmutatók tengerészeti szakembereknek, flottaüzemeltetőknek és vízi sportrajongóknak.
+knowledge_sections:
+  - title: RIB Hajótudás
+    tagline: Merev felfújható hajó vezetők
+    desc: Minden, ami RIB a hajókról szól — hajótesttervezés, anyagok, motorválasztás, karbantartás, valamint vásárlási tanácsok kereskedelmi és szabadidős használatra.
+    guides:
+      - title: Hogyan válasszuk a megfelelő RIB hajót
+        desc: Teljes útmutató a RIB méret, hajtóműteljesítmény, csőanyag, hajótest típusa és célzott felhasználás kiválasztásához.
+        href: /v2/inflatable-boat-buying-guide
+      - title: RIB vs Fújható csónak
+        desc: Merev felfújható csónakok vs hagyományos felfújható csónakok — a hajótest kialakítása, teljesítménye, tartóssága és kapacitása összehasonlítva.
+        href: /compare/rib-vs-dinghy
+      - title: Kereskedelmi RIB vs szabadidős RIB
+        desc: Kereskedelmi minőségű vs RIB szabadidős hajók — építési szabványok, anyagok, élettartam, költség és tanúsítványok.
+        href: /compare/commercial-vs-recreational-rib
+      - title: Alumínium vs üvegszálas test
+        desc: Hasonlítsa össze az alumínium és üvegszálas RIB hajótesteket hajók súlya, költsége, tartóssága és korrózióállósága szerint.
+        href: /compare/aluminum-vs-fiberglass
+  - title: Fújható hajó útmutató
+    tagline: Fújható vízi járművek ismerete
+    desc: Átfogó útmutatók a felfújható csónakokról — PVC vsHypalon. , az építési módszerekről, biztonsági szabványokról és karbantartási legjobb gyakorlatokról.
+    guides:
+      - title: PVC vs Hypalon Anyag útmutató
+        desc: Határozott összehasonlítás a PVC Hypalon CSM felfújható csónaképítés és a felfújható hajók építése között.
+        href: /compare/pvc-vs-hypalon
+      - title: Hogyan készülnek felfújható csónakok
+        desc: Gyártási folyamat — anyagvágás, HF hegesztés, varrásépítés, nyomástesztelés és minőségellenőrzés.
+        href: /learn/inflatable-technology
+      - title: Fújható hajó biztonsági útmutató
+        desc: Biztonsági szabványok, teherszállítási kapacitás, megfelelő felfújás, indulás előtti ellenőrzések és vészhelyzeti eljárások.
+        href: /learn/water-safety
+      - title: Fújható hajó karbantartás
+        desc: UV Felfújható csónakok tisztítása, tárolása, védelme, télenkészítése és RIBsjavítása és .
+        href: /v2/inflatable-boat-maintenance
+  - title: Hajóismeret
+    tagline: Felfújható Hajó & RIB Hub
+    desc: Műszaki útmutatók a felfújható hajótípusokról, anyagokról, építési módszerekről, karbantartásról és biztonságról — a csónakoktól RIBs.
+    guides:
+      - title: Felfújható Hajótípusok
+        desc: Csónakok, RIBs, kajakok és motorcsónakok — ismerd meg a különbségeket és válaszd ki a megfelelőt.
+        href: /v2/inflatable-boat-buying-guide
+      - title: Drop-Stitch Technológia
+        desc: Hogyan hoznak létre ezrek belső szálai merev, magas nyomású felfújható szerkezeteket.
+        href: /learn/drop-stitch-core
+      - title: Anyagreferencia
+        desc: PVC denier értékelések, szövetsúlyok, UV ellenállás és tengeri minőségű anyagok magyarázata.
+        href: /learn/materials
+      - title: RIB vs gumicsónak
+        desc: Hasonlítsd össze a merev felfújható hajókat a hagyományos felfújható csónakokkal különböző felhasználási esetekhez.
+        href: /compare/rib-vs-dinghy
+  - title: SUP Tudás
+    tagline: Álló Evezőtábla Útmutatók
+    desc: Minden az SUP táblákról — felfújható vs merev, tábla méretek, anyagtechnológia és szakértői tanácsok minden tudásszinthez.
+    guides:
+      - title: Felfújható vs Kemény SUP
+        desc: Hasonlítsd össze az iSUP-okat és kemény epoxi táblákat hordozhatóság, tartósság, teljesítmény és ár-érték arány szerint.
+        href: /learn/sup
+      - title: SUP Tábla Méretek Útmutató
+        desc: Hogyan befolyásolja a hossz, szélesség és vastagság a stabilitást, sebességet és manőverezhetőséget.
+        href: /learn/sup
+      - title: SUP Karbantartás & Gondozás
+        desc: Tisztítás, tárolás, UV védelem és javítási tippek a felfújható SUP táblákhoz.
+        href: /v2/inflatable-sup-maintenance
+      - title: Az Első SUP Kiválasztása
+        desc: Kezdő útmutató a megfelelő álló evezőtábla kiválasztásához testsúly, tudásszint és tervezett használat alapján.
+        href: /learn/sup
+  - title: Búvárfelszerelés Útmutató
+    tagline: Kereskedelmi Búvárhajó Ismeretek
+    desc: Speciális útmutatók búvárhajókról, búvár RIBs és felszerelésről búvárközpontok, búvármesterek és kereskedelmi búvár csapatok számára.
+    guides:
+      - title: A Legjobb RIB Hajó Búvárközpontoknak
+        desc: Hogyan válassz megfelelő búvár RIB a búvárközpontodhoz — kapacitás, konfiguráció és költségvetési szempontok.
+        href: /solutions-diving-center-boats
+      - title: Búvár RIB Konfiguráció Útmutató
+        desc: Alapvető jellemzők búvár RIBs esetén — palacktartók, létrarendszerek, búvárplatform és felszereléstárolás.
+        href: /solutions-diving-center-boats
+  - title: Jacht Motorcsónak Útmutató
+    tagline: Szuperjacht és Tengeri Tender Megoldások
+    desc: Útmutatók a tökéletes jacht tender kiválasztásához — felfújható tenderek, RIB tenderek, tárolási megoldások és tender kiegészítők.
+    guides:
+      - title: Hogyan válasszunk jacht tender-t
+        desc: Tényezők, amelyeket figyelembe kell venni jacht tender kiválasztásakor — méret, anyag, motor és tárolás.
+        href: /solutions-yacht-tender-solutions
+      - title: Felfújható vs RIB tenderek
+        desc: Hasonlítsa össze a felfújható csónak tendereket a merev felfújható hajó tenderekkel a teljesítmény, tartósság és tárolhatóság szempontjából.
+        href: /compare/rib-vs-dinghy
+  - title: Mentőfelszerelés útmutató
+    tagline: Kereső- és mentő vízi járművek ismerete
+    desc: Szakmai útmutatók a mentőcsónakokról, SAR vízi járművekről és a partszolgálat, úszómesterek és katasztrófaelhárító csapatok számára készült vészhelyzeti felszerelésről.
+    guides:
+      - title: SAR csónak kiválasztási útmutató
+        desc: Hogyan válasszuk ki a megfelelő kereső- és mentőcsónakot — sebesség, kapacitás, tartósság és speciális felszerelési igények.
+        href: /solutions-rescue-watercraft
+      - title: Kereskedelmi RIB mentési műveletekhez
+        desc: Miért a kereskedelmi minőségű RIBs a világszerte a profi kereső- és mentőcsapatok által preferált választás.
+        href: /use-cases/search-and-rescue
+read_guide: Olvassa el az útmutatót →
+cta:
+  title: Nem biztos, hogy hol kezdje?
+  desc: Vegye igénybe a képességfelmérő kvízünket, hogy megtalálja az Ön szintjének megfelelő útmutatókat és felszerelést.
+  label: Lépjen kapcsolatba velünk →
+  link: /contact

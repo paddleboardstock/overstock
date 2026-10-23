@@ -1,0 +1,215 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'pl' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">← Powrót do Centrum badawczo-rozwojowe</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Laboratorium 01</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">PVC Laboratorium Tkaniny</h1>
+      <p class="mt-3 text-lg text-muted">Naukowe badania materiałów — od włókna po gotową rurę</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/randd/aquafarer-pvc-material-lab.webp"
+        alt="Aquafarer PVC laboratorium badania materiałów tekstylnych"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Podstawa każdego pontonu</h2>
+  <p>
+    Tkanina rurowa jest najważniejszym materiałem w pontonie. Musi wytrzymać stałą ekspozycję na UV, powtarzające się
+    cykle pompowania, ścieranie o doki i gruz oraz ekstremalne wahania temperatury – a wszystko to przy jednoczesnym
+    zachowaniu integralności strukturalnej przez lata. Na {SITE.name}, nasze PVC Fabric Lab zajmuje się wyłącznie
+    charakteryzacją, walidacją i ciągłym ulepszaniem tkanin, których używamy w każdej łodzi, którą budujemy.
+  </p>
+  <p>
+    Nie polegamy wyłącznie na kartach danych dostawców. Każda partia tkaniny PVC i Hypalon, która trafia do naszego
+    warsztatu, jest niezależnie testowana w naszej firmie. Gwarantuje to, że publikowana przez nas specyfikacja
+    materiałowa odpowiada wydajności materiału, którą otrzymujesz — partia po partii, rok po roku.
+  </p>
+
+  <h2>Standaryzowany sprzęt testujący</h2>
+  <p>
+    Nasze laboratorium tkanin jest wyposażone w przyrządy klasy przemysłowej zgodne z metodami testowymi ISO, ASTM i EN:
+  </p>
+  <table>
+    <thead><tr><th>Sprzęt</th><th>Zmierzone parametry</th><th>Standard</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Uniwersalny tester rozciągania (50 kN)</td><td
+          >Siła zrywająca, wydłużenie przy zerwaniu, propagacja rozdarcia</td
+        ><td> / ASTM D751</td></tr
+      >
+      <tr
+        ><td>Komora wietrzenia łukiem ksenonowym</td><td
+          >UV odporność (zmiana koloru, utrzymanie wytrzymałości po 2000 h)</td
+        ><td> / ASTM G155</td></tr
+      >
+      <tr
+        ><td>Tester elastyczności w niskiej temperaturze</td><td
+          >Temperatura pękania w temperaturze od -30 °C do -50 °C</td
+        ><td>ISO 4675 / ASTM D2136</td></tr
+      >
+      <tr
+        ><td>Tester ścieralności Tabera</td><td>Utrata masy ciała po 1000 cyklach (koło CS-10)</td><td
+          >ASTM D3389 / ISO 5470-1</td
+        ></tr
+      >
+      <tr
+        ><td>Grubościomierz (cyfrowy, rozdzielczość 0.001 mm)</td><td>Jednolitość na całej szerokości rolki</td><td
+          >ISO 2286-3</td
+        ></tr
+      >
+      <tr><td>Tester głowicy hydrostatycznej</td><td>Odporność na przenikanie wody</td><td>ISO 811</td></tr>
+    </tbody>
+  </table>
+  <p class="text-sm text-gray-500">
+    * Cały sprzęt jest kalibrowany co roku przez akredytowane laboratoria stron trzecich.
+  </p>
+
+  <h2>Od danych do decyzji: typowy przebieg testu</h2>
+  <p>Kiedy pojawia się nowy kandydat na tkaninę, następuje ustandaryzowany, siedmioetapowy proces kwalifikacji:</p>
+  <ol>
+    <li>
+      <strong>Kontrola odbioru</strong> — kontrola wzrokowa pod kątem wad powierzchniowych, dziur i zgodności wymiarowej.
+    </li>
+    <li>
+      <strong>Mapowanie grubości</strong> — 20-punktowy pomiar w poprzek rolki; Do akceptacji wymagane jest CV &lt; 3%.
+    </li>
+    <li>
+      <strong>Próba rozciągania</strong> — 5 okazów w kierunku osnowy i wątku. Minimum 3500 N/50 mm dla 1100 dtex PVC.
+    </li>
+    <li>
+      <strong>UV kondycjonowanie</strong> — 1000 h ekspozycja w komorze łuku ksenonowego; wymagane minimum 80 % zachowania
+      wytrzymałości.
+    </li>
+    <li>
+      <strong>Zimne pęknięcie</strong> — 4 h w temperaturze -35 °C, następnie 180° zgiąć się na trzpieniu 25 mm. Brak widocznych
+      pęknięć.
+    </li>
+    <li><strong>Odporność na ścieranie</strong> — 1000 cykli, utrata masy ciała ≤ 0.05 g.</li>
+    <li>
+      <strong>Podpisanie zgody</strong> — dopiero po przekroczeniu wszystkich siedmiu bramek tkanina zostaje dopuszczona do
+      produkcji.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Typowy PVC 1100 dtex — Trwałość przy rozciąganiu po ekspozycji UV
+    </p>
+    <div class="flex items-end gap-3 h-40">
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-600 rounded-t" style="height:100%"></div><span class="text-xs mt-1"
+          >0 h<br />100%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-500 rounded-t" style="height:95%"></div><span class="text-xs mt-1"
+          >500 h<br />95%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-400 rounded-t" style="height:88%"></div><span class="text-xs mt-1"
+          >1000 h<br />88%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-300 rounded-t" style="height:82%"></div><span class="text-xs mt-1"
+          >2000 h<br />82%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-gray-300 rounded-t" style="height:65%"></div><span class="text-xs mt-1"
+          >Konkurent<br />~65%</span
+        >
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      Nasza tkanina PVC 1100 dtex zachowuje &gt; 80% wytrzymałości na rozciąganie po ekspozycji na łuk ksenonowy 2000 h
+      w porównaniu do typowych gatunków przemysłowych, które spadają poniżej 70%.
+    </p>
+  </div>
+
+  <h2>Nasz profesjonalny zespół</h2>
+  <p>
+    W laboratorium pracuje dwóch pełnoetatowych inżynierów materiałowych, z których każdy posiada dyplom z nauk o
+    polimerach lub inżynierii tekstylnej i ma co najmniej sześcioletnie doświadczenie w branży. Wspiera ich trzech
+    techników, którzy na co dzień testują i rejestrują dane. Zespół regularnie uczestniczy w międzylaboratoryjnych
+    badaniach okrężnych organizowanych przez Międzynarodową Organizację Normalizacyjną (ISO) w celu sprawdzenia
+    dokładności naszych metod badawczych.
+  </p>
+
+  <h2>Rozwiązywanie najtrudniejszych wyzwań materialnych</h2>
+  <p>
+    Każde środowisko morskie jest inne. Łódź patrolowa działająca w Zatoce Perskiej stawia czoła zupełnie innym UV i
+    warunkom temperaturowym niż statek ratowniczy na Morzu Północnym. Nasze laboratorium tkanin pomoże Ci wybrać – lub
+    opracować – specyfikację tkaniny zoptymalizowaną pod kątem Twojego profilu operacyjnego.
+  </p>
+  <p>Najnowsze rozwiązania niestandardowe obejmują:</p>
+  <ul>
+    <li>
+      Mieszanka o wysokiej odporności na ścieranie PVC dla klienta wojskowego, którego łodzie regularnie wypływają na
+      brzeg na rafach koralowych (+40% odporności na ścieranie).
+    </li>
+    <li>
+      Preparat niskotemperaturowy Hypalon dla stacji badawczej w Arktyce, testowany do -50 °C bez utraty kruchości.
+    </li>
+    <li>
+      Pomarańczowa tkanina o stabilizowanej barwie dla floty poszukiwawczo-ratowniczej, utrzymująca widoczność po 3
+      latach ekspozycji na tropikalne słońce.
+    </li>
+  </ul>
+  <p>
+    Nie sprzedajemy gotowych tkanin i mamy nadzieję, że się sprawdzą. Testujemy, sprawdzamy i rekomendujemy — lub
+    tworzymy — rozwiązanie dostosowane do konkretnego profilu Twojej misji. To jest {SITE.name} różnica.
+  </p>
+
+  <h2>Jak Ci służymy</h2>
+  <p>Jeśli stawiasz przed nami istotne wyzwanie, możesz się spodziewać:</p>
+  <ol>
+    <li><strong>Konsultacja</strong> — omawiamy Twoje środowisko operacyjne, cele wydajnościowe i budżet.</li>
+    <li>
+      <strong>Wniosek</strong> — sporządzono plan testów z jasnymi kryteriami pozytywnego/negatywnego wyniku i harmonogramem.
+    </li>
+    <li>
+      <strong>Wykonanie</strong> — nasze laboratorium przeprowadza testy i sporządza szczegółowy raport z surowymi danymi
+      i analizą porównawczą.
+    </li>
+    <li>
+      <strong>Zalecenie</strong> — przedstawiamy specyfikację tkaniny, uwzględniającą alternatywne opcje, jeśli wiele materiałów
+      spełnia Twoje wymagania.
+    </li>
+    <li>
+      <strong>Podejmować właściwe kroki</strong> — po dostawie pozostajemy dostępni, aby odpowiedzieć na wszelkie pytania
+      dotyczące materiałów w trakcie usługi.
+    </li>
+  </ol>
+  <p>
+    Naszym celem nie jest po prostu sprzedaż Ci łodzi. Ma to na celu zapewnienie, że łódź, którą otrzymasz, będzie
+    działać niezawodnie w warunkach, w jakich pływasz — a to zaczyna się od materiału.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Potrzebujesz niestandardowej specyfikacji tkaniny?</h2>
+    <p class="mt-2 text-sm text-muted">
+      Skontaktuj się z naszym zespołem inżynierii materiałowej, aby omówić swoje wymagania.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Skontaktuj się z naszym zespołem laboratoryjnym</a
+    >
+  </div>
+</section>

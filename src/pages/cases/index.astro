@@ -1,0 +1,36 @@
+---
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+import { getPageContent, setPageContentData } from '~/i18n/page-content';
+import __pageData from '~/i18n/generated/pages/cases.ts';
+
+const lang = 'en';
+setPageContentData(__pageData);
+const page = getPageContent(lang, 'cases');
+
+const hero = page.hero ?? {};
+const cases = page.features3_cases ?? {};
+const cta = page.cta ?? {};
+const ctaActions = cta.actions?.map((a: any) => ({ ...a, href: a.href }));
+
+const metadata = {
+  title: `Case Studies — ${SITE.name}`,
+  description: hero.subtitle || '',
+};
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Case Studies' }];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <Hero tagline={hero.tagline} title={hero.title} subtitle={hero.subtitle} />
+  <Features3
+    tagline={cases.tagline}
+    title={cases.title}
+    subtitle={cases.subtitle}
+    items={cases.items}
+    columns={cases.columns}
+  />
+  <CallToAction title={cta.title} subtitle={cta.subtitle} actions={ctaActions} />
+</Layout>

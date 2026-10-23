@@ -1,0 +1,73 @@
+hero:
+  tagline: 'Wiedza o eksploracji wody'
+  title: 'Ucz się'
+  subtitle: |
+    Przewodniki, tutoriale i dogłębne analizy — wszystko, czego potrzebujesz, aby<br />
+    pewnie eksplorować wodę. Od wyboru pierwszego SUP po opanowanie zaawansowanych technik.
+  taglineSection: 'Wiedza dla każdego wioślarza. Od początkującego po profesjonalistę.'
+
+featured:
+  tagline: 'Polecane tematy'
+  title: 'Rozpocznij swoją podróż edukacyjną'
+  subtitle: 'Niezależnie od tego, czy dopiero zaczynasz przygodę ze sportami wodnymi, czy chcesz podnieść swoje umiejętności, nasze przewodniki są dla Ciebie.'
+  items:
+    - title: 'Podstawy SUP'
+      description: 'Wszystko, co początkujący musi wiedzieć — rodzaje desek, rozmiar wiosła, postawa i porady na pierwszy dzień.'
+      icon: 'tabler:lifebuoy'
+      href: '/learn/sup'
+    - title: 'Nadmuchiwany vs sztywny SUP'
+      description: 'Który jest dla Ciebie? Porównujemy przenośność, wydajność, trwałość i koszt obok siebie.'
+      icon: 'tabler:arrows-left-right'
+      href: '/compare/inflatable-vs-hardboard'
+    - title: 'Bezpieczeństwo wodne'
+      description: 'Niezbędna wiedza o bezpieczeństwie, którą powinien posiadać każdy wioślarz — pogoda, kamizelki ratunkowe, samoratownictwo i więcej.'
+      icon: 'tabler:shield'
+      href: '/learn/water-safety'
+    - title: 'Przewodnik materiałowy'
+      description: 'PVC vs Hypalon, technologia drop-stitch, wskaźniki denier — zrozum, z czego wykonany jest Twój sprzęt.'
+      icon: 'tabler:hexagons'
+      href: '/learn/materials'
+    - title: 'Przewodnik rozmiarów SUP'
+      description: 'Znajdź odpowiednią długość, szerokość i objętość deski dla swojej wagi, umiejętności i stylu wiosłowania.'
+      icon: 'tabler:ruler'
+      href: '/size-guide'
+    - title: 'Techniki średniozaawansowane'
+      description: 'Podnieś poziom wiosłowania dzięki zaawansowanym ruchom, technikom skręcania i radzeniu sobie w trudnych warunkach wodnych.'
+      icon: 'tabler:ripple'
+      href: '/learn/intermediate-techniques'
+
+categories:
+  tagline: 'Kategorie'
+  title: 'Odkrywaj według tematu'
+  subtitle: 'Cała treść edukacyjna podzielona według poziomu umiejętności i zainteresowań.'
+  columns:
+    - title: 'Początkujący'
+      items:
+        - 'Podstawy SUP — zacznij tutaj'
+        - 'Nadmuchiwany vs sztywny SUP'
+        - 'Podstawy bezpieczeństwa wodnego'
+        - 'Jak wybrać swój SUP'
+        - 'Przewodnik pompowania i pakowania'
+    - title: 'Średniozaawansowany'
+      items:
+        - 'Techniki wiosłowania'
+        - 'Technologia nadmuchiwana'
+        - 'Referencje materiałowe'
+        - 'Porównanie PVC vs Hypalon'
+        - 'Wyjaśnienie rdzenia drop-stitch'
+    - title: 'Zaawansowany i profesjonalny'
+      items:
+        - 'Operacje floty'
+        - 'Sprzęt klasy komercyjnej'
+        - 'Protokoły bezpieczeństwa i ratownictwa'
+        - 'Niestandardowe konstrukcje i OEM'
+
+cta:
+  title: 'Masz jeszcze pytania?'
+  subtitle: 'Zapytaj naszego przewodnika AI o spersonalizowane odpowiedzi dotyczące sprzętu, bezpieczeństwa i technik.'
+  actions:
+    - variant: primary
+      text: 'Zapytaj doradcę wodnego AI'
+      href: '#ai-guide'
+    - text: 'Przeglądaj wszystkie przewodniki'
+      href: '/academy'

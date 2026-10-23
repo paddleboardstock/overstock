@@ -1,0 +1,277 @@
+---
+import JsonLd from '~/components/common/JsonLd.astro';
+import AiQuickAnswer from '~/components/common/AiQuickAnswer.astro';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
+const { lang = 'ro' } = Astro.props;
+const t = (key: string) => getUiForLang(lang)?.[key] || '';
+---
+
+<JsonLd
+  type="Article"
+  article={{
+    headline: 'Ghid pentru bărci gonflabile — Resursa completă',
+    description:
+      'Un ghid cuprinzător al bărcilor gonflabile care acoperă tipurile, metodele de construcție, compararea materialelor, criteriile de selecție, standardele de siguranță și întreținerea.',
+    datePublished: '2026-07-07',
+  }}
+  data={{ url: 'https://aquafarer.com/marine-industry/' }}
+/>
+
+<JsonLd
+  type="BreadcrumbList"
+  breadcrumbs={[
+    { name: t('nav.home') || 'Home', href: `/${lang}/` },
+    { name: 'Industria Maritimă', href: `/${lang}/marine-industry` },
+    { name: 'Ghid pentru bărci gonflabile', href: `/${lang}/marine-industry/` },
+  ]}
+/>
+
+<AiQuickAnswer
+  entityType="Ghid"
+  quickAnswer="O barcă pneumatică este o ambarcațiune ușoară construită cu tuburi flexibile din material textil (sponsoane) umplute cu aer comprimat pentru a asigura flotabilitatea. Bărcile pneumatice moderne includ bărci de salvare, RIBs (bărci rigide pneumatice), caiace pneumatice și plăci de paddle stand-up. Ele sunt construite din materiale PVC sau Hypalon CSM folosind sudură RF sau cusături lipite manual, cu construcție drop-stitch care permite podele rigide la presiune înaltă."
+  facts={[
+    { label: 'Dimensiunea pieței globale', value: '$2.8B (2026)' },
+    { label: 'Materiale primare', value: 'PVC / Hypalon CSM' },
+    { label: 'Durata de viață', value: '8-20+ de ani' },
+    { label: 'CE Certificare', value: 'Obligatoriu (UE)' },
+  ]}
+/>
+
+<section class="max-w-4xl mx-auto py-16 px-6">
+  <h1 class="text-4xl font-semibold text-gray-900">Ghid pentru bărci gonflabile</h1>
+  <p class="mt-4 text-lg text-gray-500">
+    Resursa de referință pentru ambarcațiunile gonflabile — de la bărcile de agrement până la RIBs ambarcațiuni
+    profesionale și specializate de salvare.
+  </p>
+
+  <nav class="mt-8 flex flex-wrap gap-2">
+    {
+      ['Types', 'Construction', 'Materials', 'Selection', 'Safety', 'Maintenance', 'Standards'].map((section) => (
+        <a
+          href={`#${section.toLowerCase()}`}
+          class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition"
+        >
+          {section}
+        </a>
+      ))
+    }
+  </nav>
+
+  <section id="types" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Tipuri de bărci gonflabile</h2>
+    <div class="mt-8 grid gap-6">
+      {
+        [
+          {
+            title: 'Bărci gonflabile',
+            desc: 'Bărci mici, portabile, pentru transport, pescuit și utilizare recreativă pe distanțe scurte. De obicei 2-4 m, propulsate de motoare exterioare mici (2-15 HP) sau vâsle. Cea mai accesibilă opțiune de început.',
+            icon: '🚤',
+          },
+          {
+            title: 'Bărci rigide gonflabile (RIBs)',
+            desc: 'Bărci performante cu un corp rigid din fibră de sticlă, aluminiu sau HDPE și sponsoni gonflabili. Lungimi de 3-12 m, motoare de 15-300+ HP din exterior. Folosite pentru patrulare, salvare, scufundări și croaziere offshore.',
+            icon: '⚡',
+          },
+          {
+            title: 'Caiace gonflabile',
+            desc: 'Caiace portabile realizate din materiale PVC sau TPU. Disponibile în configurații simple și tandem pentru turism recreativ, navigare pe râuri și călătorii de expediție.',
+            icon: '🛶',
+          },
+          {
+            title: 'Plăci de paddle gonflabile pentru stat în picioare (SUPs)',
+            desc: 'Drop-stitch a construit plăci de paddling care se umflă până la punți rigide la înaltă presiune. Modele disponibile pentru toate utilizările, turism, yoga, pescuit și surf.',
+            icon: '🏄',
+          },
+          {
+            title: 'Bărci de salvare (SAR)',
+            desc: 'Specializat RIBs pentru operațiuni de căutare și salvare. Dispune de pardoseli cu auto-evacuare a apei, console frontale, cârlige de tractare și scheme de culoare de înaltă vizibilitate. Certificat CE pentru utilizare în salvare.',
+            icon: '🆘',
+          },
+          {
+            title: 'Ambarcațiuni comerciale de lucru',
+            desc: 'Greu de întrebuințat RIBs pentru suport în scufundări, patrulare, sondaje și operațiuni maritime comerciale. Construcție Hypalon CSM, corp consolidat și amenajări de calitate profesională.',
+            icon: '⚙️',
+          },
+        ].map((item) => (
+          <div class="flex gap-4 p-5 bg-gray-50 rounded-xl border border-gray-200">
+            <span class="text-2xl flex-shrink-0">{item.icon}</span>
+            <div>
+              <h3 class="font-semibold text-gray-900">{item.title}</h3>
+              <p class="mt-1 text-sm text-gray-600">{item.desc}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section id="construction" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Metode de construcție</h2>
+    <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Sudură RF (Frecvență Înaltă)</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Folosește energie electromagnetică pentru a PVC fuziona straturile la nivel molecular. Creează cele mai
+          rezistente straturi etanșe. Comun la PVC bărci de înaltă calitate șiSUPs. Necesită utilaje specializate și
+          operare calificată.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Lipire manuală / Legături chimice</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Adezivul în două părți leagă panourile textile. Metoda principală pentru Hypalon CSM bărci (nu poate fi sudată
+          RF). Necesită o pregătire precisă a suprafeței, umiditate controlată și un timp adecvat de întărire pentru o
+          rezistență optimă a cusăturii.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Drop-Stitch Nucleu</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Mii de fire de poliester leagă straturile superioare și PVC inferioară, permițând umflarea la presiune înaltă
+          (15-25PSI) pentru performanța plăcilor rigide. Densitatea firului (15-50 filete/cm²) determină rigiditatea și
+          greutatea.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Sudură termică</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Sudură cu aer cald sau pană caldă, folosită pentru cusături și întăriri. Comună în RIB construcții mai mari.
+          Mai puțin precisă decât sudura RF, dar eficientă pentru Hypalon PVC țesături rezistente și rezistente.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="materials" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Compararea materialelor</h2>
+    <div class="mt-6 overflow-x-auto">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="bg-gray-50 border-b-2 border-gray-200">
+            <th class="px-4 py-3 text-left font-semibold text-gray-700">Proprietate</th>
+            <th class="px-4 py-3 text-center font-semibold text-sky-700">PVC</th>
+            <th class="px-4 py-3 text-center font-semibold text-emerald-700">Hypalon CSM</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            [
+              ['Relative Cost', '$ (budget)', '$$$ (premium)'],
+              ['UV Resistance', 'Good (with coating)', 'Excellent (inherent)'],
+              ['Abrasion Resistance', 'Moderate-Good', 'Excellent'],
+              ['Chemical Resistance', 'Good', 'Excellent'],
+              ['Cold Flexibility', 'Stiffens below 0°C', 'Flexible to -20°C'],
+              ['Lifespan', '8-12 years', '15-20+ years'],
+              ['Seam Method', 'RF welding', 'Hand gluing'],
+              ['Repair', 'PVC glue (easy)', '2-part adhesive (moderate)'],
+            ].map((row, i) => (
+              <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                {row.map((cell, j) => (
+                  <td
+                    class={`px-4 py-3 border-b border-gray-200 ${j === 0 ? 'font-medium text-gray-700' : 'text-center text-gray-600'}`}
+                  >
+                    {cell}
+                  </td>
+                ))}
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-4 text-sm text-gray-500">
+      Modernul PVC de calitate militară (1100-1670 dtex) oferă durabilitate excelentă pentru majoritatea utilizatorilor
+      recreativi la jumătate din costul Hypalon. Hypalon este preferat pentru flote comerciale, climate tropicale și
+      aplicații critice.
+    </p>
+    <a
+      href={`/${lang}/learn/pvc-vs-hypalon`}
+      class="mt-4 inline-block text-sky-600 hover:text-sky-700 text-sm font-medium">Ghid detaliat PVC vs Hypalon →</a
+    >
+  </section>
+
+  <section id="selection" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Cum să alegi o barcă gonflabilă</h2>
+    <div class="mt-8 grid md:grid-cols-3 gap-6">
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">1. Definiți scopul utilizării</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>Recreațional: barcă mică sau SUP</li>
+          <li>Performanță: RIB (15-60 HP)</li>
+          <li>Comercial: RIB (100+ HP)</li>
+          <li>Fitness: SUP gonflabil</li>
+          <li>Călătorie: caiac gonflabil</li>
+        </ul>
+      </div>
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">2. Stabiliți bugetul</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>$200-$800: SUP gonflabil</li>
+          <li>$500-$2,000: barcă mică + cu motor</li>
+          <li>$3,000-$8,000: RIB de intrare</li>
+          <li>$8,000-$20,000: RIB premium</li>
+          <li>$20,000+: RIB comercial</li>
+        </ul>
+      </div>
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">3. Luați în considerare materialul</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>PVC: prietenos cu bugetul, ușor</li>
+          <li>Hypalon: premium, durată lungă</li>
+          <li>Drop-Stitch: performanță rigidă</li>
+          <li>Greutate material: 1100-1670 dtex</li>
+          <li>Strat: UV + strat anti-înțepare</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="safety" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Siguranță și standarde</h2>
+    <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">CE Certificare</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Toate bărcile gonflabile vândute în UE necesită marcaj CE conform Directivei pentru ambarcațiuni de recreere
+          (RCD) 2013/53/UE. Certificarea acoperă categoria de design (A-D), flotabilitatea, stabilitatea și capacitatea
+          de încărcare. Bărcile Aquafarer sunt certificate CE pentru uz recreativ și de salvare.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Standard</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Standard internațional pentru bărci gonflabile specificând cerințele pentru materiale, cusături, supape și
+          testarea performanței. Tipurile I-IV acoperă totul, de la bărci mici cu vâsle până la RIBs mari.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Echipament esențial de siguranță</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Jachete de salvare/PFD-uri (CE 12402), coarde de aruncat, găleată/stingător de incendiu, lumini de navigație
+          (noaptea), radio VHF, trusă de prim ajutor, ancoră și vâslă sau combustibil de rezervă.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Operare sigură</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          NU depăși niciodată capacitatea maximă de pe plăcuță. Verifică siguranța supapei înainte de lansare.
+          Distribuie greutatea uniform. Monitorizează condițiile meteorologice. Depune un plan de navigație. Urmează un
+          curs de siguranță nautică.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="maintenance" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Întreținere și îngrijire</h2>
+    <div class="mt-8 space-y-4 text-sm text-gray-600">
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <>
+          <span class="text-sky-600 font-bold flex-shrink-0">1.</span>
+          <span>Clătește cu apă dulce după fiecare utilizare în apă sărată. Uscă complet înainte de depozitare.</span>
+        </>
+      </div>
+    </div>
+  </section>
+</section>

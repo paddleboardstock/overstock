@@ -1,0 +1,60 @@
+hero:
+  tagline: Laboratorium voor kwaliteitscontrole
+  title: Testlaboratorium & kwaliteitsborging
+  subtitle: Onafhankelijk kwaliteitslaboratorium met ISO 9001-processen — elke eenheid getest vóór verzending
+
+intro: Aquafarer beschikt over een eigen kwaliteitscontrolelaboratorium dat onafhankelijk van de productie werkt. Elke partij grondstoffen en elke voltooide boot doorloopt gedocumenteerde inspectieprotocollen voordat deze wordt vrijgegeven. Ons QC-team rapporteert direct aan het management, wat onpartijdige kwaliteitsbeslissingen garandeert.
+
+highlights:
+  - value: 100%
+    label: Eenheden drukgetest
+    detail: Elke kamer, elke boot
+  - value: 48 h
+    label: Duur van de luchtretentietest
+    detail: Bij 1,25× nominale druk
+  - value: '&lt;5%'
+    label: Maximaal toegestane drukval
+    detail: Over een periode van 24 uur
+  - value: AQL 2.5
+    label: Drempelwaarde voor grote defecten
+    detail: Volgens ISO 2859-steekproeven
+
+test_procedures:
+  - title: Inspectie van Grondstoffen
+    description: Elke inkomende partij PVC, Hypalon, drop-stitch doek en hardware wordt getest vóór acceptatie. Treksterkte (ASTM D751), scheurweerstand (ISO 4674) en UV-bestendigheid worden geverifieerd. Niet-conforme materialen worden in quarantaine geplaatst en teruggestuurd.
+    standards:
+      - ASTM D751 (trek)
+      - ISO 4674 (scheur)
+      - ISO 4892 (UV)
+  - title: QC-controlepunten in het proces
+    description: Productiemedewerkers voeren op elke fase zelfinspectie uit. QC-auditors nemen gedurende de shift steekproeven. Peltests op lasnaden worden elke 50 eenheden uitgevoerd. Dimensionele controles vinden bij elk 20e paneel plaats.
+    standards:
+      - ASTM D751 (pel)
+      - Interne 100-punten checklist
+      - ISO 2859-steekproeven
+  - title: 48-uurs luchtretentietest
+    description: Elke tubekamer wordt opgepompt tot 125% van de nominale druk en 48 uur vastgehouden. Druksensoren registreren continu met temperatuurcompensatie. Elke kamer met meer dan 5% drukval activeert automatische herinspectie van de partij.
+    standards:
+      - ISO 6185
+      - CE 2013/53/EU
+  - title: Belastings- & balanstests
+    description: Voltooide boten worden getest op maximale nominale capaciteit voor stabiliteit, vrijboord en handelbaarheid. Elk vaartuig ondergaat watertests vóór goedkeuring bij de eindinspectie.
+    standards:
+      - ISO 12217
+      - CE 2013/53/EU
+
+equipment:
+  - name: Universele Testmachine (trek)
+    spec: 5 kN, conform ASTM D751
+  - name: Drukvaltester
+    spec: Multikanaals, 0–50 psi, datalogging
+  - name: UV-verouderingskamer
+    spec: ISO 4892, cycli van 1,000 uur
+  - name: Diktemeter (digitaal)
+    spec: Resolutie 0,01 mm
+  - name: Peltester (lasnaad)
+    spec: Gemotoriseerd, 50 N capaciteit
+  - name: Temperatuurkamer
+    spec: "-40 °C tot +100 °C"
+  - name: Lekkagedetectietank
+    spec: 6 m × 2 m, verlicht

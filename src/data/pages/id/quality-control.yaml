@@ -1,0 +1,137 @@
+hero:
+  tagline: Kontrol Kualitas
+  title: Sistem Pengendalian Mutu<br />untuk OEM Marine Manufacturing
+  subtitle: Proses inspeksi multi-tahap yang mencakup bahan masuk, produksi dalam proses, pengujian tekanan, perakitan akhir, dan verifikasi sebelum pengiriman. Setiap batch dapat ditelusuri, setiap pengujian dicatat.
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-pressure-testing.webp
+    alt: proses pengendalian kualitas dan pengujian tekanan
+stats:
+  title: QC Menurut Angka
+  stats:
+    - title: Unit yang Diuji Tekanan
+      amount: 100%
+    - title: Penurunan Tekanan Maksimal
+      amount: <5%
+    - title: Inspektur QC
+      amount: '12'
+    - title: Catatan Disimpan
+      amount: 10 tahun
+content_system:
+  tagline: Tinjauan Sistem QC
+  title: Kualitas Terpadu<br />Kerangka Kontrol
+  subtitle: Sistem QC kami beroperasi secara independen dari produksi dan melapor langsung kepada manajemen. Tidak ada batch yang dikirim tanpa persetujuan kualitas yang ditandatangani dari laboratorium kualitas.
+  items:
+    - title: Laboratorium Kualitas Independen
+      description: Laboratorium kualitas kami beroperasi sebagai fungsi yang terpisah dari produksi. Inspektur QC melapor kepada Manajer Kualitas, bukan Direktur Produksi. Kemandirian organisasi ini memastikan bahwa keputusan kualitas dibuat secara objektif — tenggat waktu produksi tidak pernah mengesampingkan persyaratan kualitas.
+      features:
+        - Melapor langsung kepada manajemen, independen dari produksi
+        - Diberi wewenang untuk menghentikan produksi karena masalah kualitas
+        - 12 petugas QC khusus di semua tahap
+        - Semua peralatan uji dikalibrasi setiap tahun
+    - title: Ketertelusuran Batch
+      description: Setiap batch bahan baku diberikan nomor lot unik di sistem ERP kami. Dari kedatangan bahan hingga produksi dan produk jadi, setiap daftar bahan per perahu terhubung kembali ke batch pemasok asli. Ini memungkinkan penelusuran hulu penuh untuk setiap pertanyaan terkait kualitas atau kepatuhan.
+      features:
+        - Pelacakan lot berbasis ERP dari bahan hingga produk jadi
+        - Label batch fisik pada setiap pesanan kerja
+        - Cakupan bahan 100% — PVC, Hypalon, perangkat keras, perekat
+        - Catatan disimpan selama 10 tahun (CE persyaratan 2013/53/UE)
+    - title: Standar & Kepatuhan
+      description: Prosedur QC kami selaras dengan standar internasional. Produk bersertifikat CE di bawah EU Recreational Craft Directive 2013/53/EU. Sistem manajemen kualitas kami bersertifikat ISO 9001. Kepatuhan sosial dijaga melalui sertifikasi BSCI.
+      features:
+        - sertifikasi CE (UE 2013/53/UE)
+        - ISO 9001:2015 manajemen kualitas
+        - BSCI sertifikasi kepatuhan sosial
+        - REACH dan RoHS kepatuhan material
+        - UKCA sertifikasi pasca-Brexit
+content_inspection:
+  tagline: Tahap Inspeksi
+  title: enam tahap<br />Proses Inspeksi
+  subtitle: Setiap produk melewati 6 tahap inspeksi dengan pos pemeriksaan QC yang terdokumentasi. Cacat dideteksi lebih awal, tindakan korektif dilakukan segera, dan setiap batch dapat dilacak sepenuhnya.
+  stages:
+    - stage: '1'
+      title: Inspeksi Material Masuk
+      description: Semua material yang masuk dicatat berdasarkan nomor batch/lot dan dikarantina hingga QC menyetujui. PVC/Hypalon gulungan kain diuji kekuatan tarik (ASTM D751), ketahanan sobek (ISO4674), dan ketebalan.Drop-stitch Inti, katup, perekat, dan perangkat keras diperiksa secara visual dan diukur sesuai spesifikasi.
+      checks: Kekuatan tarik ASTM D751, tahan robek ISO 4674, pengukur ketebalan, viskositas perekat, pemindaian cacat visual
+      threshold: 100% dari batch diuji. Tolak jika tarik < 90% dari spesifikasi, sobek < minimum spesifikasi, atau ada cacat visual
+    - stage: '2'
+      title: QC Dalam Proses — Pemotongan & Persiapan
+      description: CNC-panel potong diperiksa secara dimensi terhadap file sumber CAD setiap panel ke-20. Kualitas tepi diperiksa untuk kerusakan yang terurai, potongan tidak merata, atau pergeseran dimensi. Jumlah panel diverifikasi terhadap BOM untuk setiap batch produksi sebelum material dipindahkan ke pengelasan.
+      checks: Pemeriksaan dimensi terhadap file CAD DXF, inspeksi kualitas tepi, verifikasi jumlah panel
+      threshold: Toleransi ±0,5mm. Tolak batch jika >2% keluar dari toleransi
+    - stage: '3'
+      title: QC Dalam Proses — Pengelasan & Pengikatan
+      description: Selama produksi, kualitas las terus dipantau. Tes peel (ASTM D751) dilakukan pada sampel setiap 50 unit. Lebar las diukur sesuai spesifikasi. Log suhu udara panas ditinjau untuk konsistensi. Setiap sambungan diperiksa secara visual di bawah cahaya latar untuk saluran atau rongga.
+      checks: Uji peel ASTM D751 setiap 50 unit, pengukuran lebar las, tinjauan log suhu udara panas, inspeksi sambungan lampu latar
+      threshold: Kekuatan pengelupasan minimum 8 N/cm. Toleransi lebar las ±1mm. Setiap saluran yang terlihat = ditolak
+    - stage: '4'
+      title: QC Perakitan
+      description: Setiap unit mengikuti daftar periksa perakitan 100 poin yang ditandatangani oleh pemimpin tim. Fungsi katup diuji melalui 10 siklus buka/tutup. Torsi perangkat keras diverifikasi. Inspeksi visual mencakup hasil akhir permukaan, konsistensi warna, penempatan label, dan kelengkapan aksesori.
+      checks: Daftar periksa 100 poin per unit, uji fungsi katup, verifikasi torsi perangkat keras, inspeksi visual
+      threshold: 'Kebijakan nol cacat pada barang kritis keselamatan (katup, cincin D, pegangan). Kosmetik kecil: AQL 2,5 (ISO 2859)'
+    - stage: '5'
+      title: Pengujian Tekanan
+      description: Setiap ruang dipompa hingga tekanan terukur 1,25× dan dipertahankan selama 24-48 jam. Sensor tekanan mencatat secara terus-menerus selama periode penahanan. Pembacaan yang dikompensasi suhu memastikan akurasi. Setiap ruang yang melebihi penurunan tekanan 5% ditolak dan dikirim untuk inspeksi ulang sambungan dengan pengujian ulang 100% seluruh batch produksi.
+      checks: Log tahan tekanan 24-48 jam, kalibrasi sensor diverifikasi setiap hari, pembacaan yang dikompensasi suhu, pengujian ulang sambungan setelah perbaikan
+      threshold: Penurunan tekanan maksimal 5% selama 24 jam pada suhu stabil. Melebihi = 100% pengujian ulang seluruh batch
+    - stage: '6'
+      title: Inspeksi Akhir & Pelepasan Pengiriman
+      description: Inspeksi visual dan fungsional akhir sebelum pengemasan. Cacat permukaan, konsistensi warna, verifikasi label/bin, integritas kemasan, dan kelengkapan aksesori diperiksa terhadap pesanan pelanggan. Unit dikemas vakum, dibungkus, dan dipaletisasi. Persetujuan QC akhir diperlukan sebelum produk keluar dari pabrik.
+      checks: Pemeriksaan visual penuh, daftar periksa aksesori sesuai SKU, uji jatuh kemasan (sampel acak 1m), verifikasi pemindaian label/kode batang
+      threshold: AQL 2,5 cacat utama, AQL 4,0 cacat minor. Nol toleransi untuk cacat keselamatan. 100% unit diperiksa secara visual
+content_equipment:
+  tagline: Peralatan Pengujian
+  title: Lab QC<br />Peralatan
+  subtitle: Laboratorium kualitas kami dilengkapi dengan peralatan pengujian khusus untuk verifikasi material, integritas pengelasan, dan validasi kinerja produk.
+  columns: 3
+  items:
+    - title: Mesin Uji Tarik
+      description: Mengukur kekuatan tarik dan perpanjangan kain sesuai ASTM D751. Digunakan untuk QC masuk semua batch kain PVC, Hypalon, dan drop-stitch.
+      icon: tabler:scale
+    - title: Ruang Suhu
+      description: Kamar lingkungan untuk pengujian ketahanan UV (ASTM G154) dan pengujian fleksibilitas pada suhu rendah. Mensimulasikan kondisi operasi ekstrem.
+      icon: tabler:temperature
+    - title: Sensor & Pencatat Tekanan
+      description: Sensor tekanan digital dengan pencatatan data terus-menerus untuk uji retensi udara 24-48 jam. Dikompensasi suhu untuk akurasi.
+      icon: tabler:wind
+    - title: Perangkat Uji Kupas
+      description: Peralatan uji pengelupasan terkalibrasi untuk verifikasi kekuatan sambungan las. Sampel acak dari setiap batch produksi.
+      icon: tabler:files
+    - title: Tangki Deteksi Kebocoran
+      description: Tangki air untuk pengujian kebocoran bawah air pada ruang yang dipompa. Deteksi gelembung secara visual untuk verifikasi integritas jahitan dan katup.
+      icon: tabler:ripple
+    - title: Alat Inspeksi
+      description: Alat ukur yang dikalibrasi — pengukur ketebalan, kunci torsi, jangka sorong dimensi, penguji kekerasan untuk stasiun QC produksi.
+      icon: tabler:tools
+content_metrics:
+  tagline: Kinerja QC
+  title: Kontrol Kualitas<br />Metrik
+  subtitle: Data lolos/gagal nyata dari lini produksi kami. Metrik ini dipantau setiap hari dan ditinjau setiap bulan oleh manajemen.
+  columns: 3
+  items:
+    - title: 100% Unit Diuji
+      description: Setiap ruang setiap perahu diuji tekanan sebelum dikirim. Tidak ada pengambilan sampel — 100% inspeksi pada integritas tekanan.
+      icon: tabler:check
+    - title: <Penurunan Tekanan <5%
+      description: Kehilangan tekanan maksimum yang diperbolehkan selama 24-48 jam pada 1,25× tekanan nominal. Setiap ruang yang melebihi ambang ini memicu pengujian ulang batch.
+      icon: tabler:gauge
+    - title: AQL 2,5
+      description: Tingkat Kualitas yang Dapat Diterima untuk cacat utama sesuai standar pengambilan sampel ISO 2859. Toleransi nol untuk cacat yang berisiko pada keselamatan.
+      icon: tabler:clipboard-check
+    - title: Penahanan 24-48 Jam
+      description: 'Durasi tahan tekanan bervariasi menurut kategori produk. RIB ruang: 48 jam. SUP dan perahu karet: 24-48 jam.'
+      icon: tabler:clock
+    - title: 1,25× Tekanan Uji
+      description: Margin keselamatan pada setiap ruang — diuji pada 25% di atas tekanan yang ditetapkan untuk memastikan margin di atas kondisi operasi maksimum.
+      icon: tabler:arrow-up
+    - title: 0% Cacat Keselamatan
+      description: Kebijakan toleransi nol untuk cacat yang kritis terhadap keselamatan — katup, cincin D, sambungan, dan ruang apung. Setiap cacat = 100% inspeksi ulang.
+      icon: tabler:shield
+cta:
+  title: Minta dokumentasi kualitas
+  subtitle: Kami menyediakan paket dokumentasi kualitas lengkap termasuk laporan uji, sertifikasi bahan, dan deklarasi kesesuaian dengan setiap pengiriman. Hubungi kami untuk sampel.
+  actions:
+    - variant: primary
+      text: Minta dokumentasi QC
+      href: /contact
+    - text: Lihat protokol pengujian
+      href: /quality

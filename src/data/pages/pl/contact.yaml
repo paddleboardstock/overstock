@@ -1,0 +1,131 @@
+hero_text:
+  tagline: Kontakt
+  title: SKONTAKTUJ SIĘ Z NAMI
+contact_form:
+  id: form
+  title: Wyślij wiadomość
+  subtitle: W sprawie wyceny, pytań technicznych lub partnerstwa – napisz do nas. Odpowiadamy w ciągu jednego dnia roboczego.
+  email_to: info@aquafarer.com
+  submit_button: Wyślij
+  success_message: Dziękujemy! Twoja wiadomość została odebrana. Odpowiemy w ciągu jednego dnia roboczego.
+  error_message: Wystąpił błąd podczas wysyłania. Spróbuj ponownie lub napisz bezpośrednio na adres e-mail.
+  default_country_code: '+1'
+  captcha:
+    label: 'Antyspam: rozwiąż następujące zadanie'
+  fields:
+    - name: firstName
+      label: Imię
+      row: 1
+    - name: lastName
+      label: Nazwisko
+      row: 1
+    - name: companyName
+      label: Firma
+      row: 2
+    - name: address
+      label: Adres
+      row: 3
+    - name: zip
+      label: Kod pocztowy
+      row: 4
+    - name: country
+      label: Kraj
+      row: 4
+      type: select
+      optionsKey: countries
+    - name: email
+      label: Email
+      row: 5
+      type: email
+    - name: tel
+      label: Telefon
+      row: 5
+      type: tel
+      withCountryCode: true
+    - name: orderVolume
+      label: Szacowana wielkość zamówienia
+      row: 6
+      type: select
+      options:
+        - value: ''
+          label: Wybierz szacowaną wielkość...
+        - value: sample
+          label: Tylko próbki / prototypy
+        - value: '5-10'
+          label: 50–100 sztuk (standardowe MOQ)
+        - value: '100-500'
+          label: 100–500 sztuk
+        - value: '500-plus'
+          label: 500+ sztuk (ceny hurtowe)
+    - name: customization
+      label: Potrzebujesz personalizacji?
+      row: 7
+      type: select
+      options:
+        - value: ''
+          label: Wybierz typ personalizacji...
+        - value: none
+          label: Produkt standardowy (bez personalizacji)
+        - value: logo
+          label: Tylko logo / branding
+        - value: full
+          label: Pełne OEM (rozmiar, kolor, grafika, opakowanie)
+        - value: consultation
+          label: Nie jestem pewien — potrzebuję konsultacji
+    - name: productInterest
+      label: Interesujące kategorie produktów
+      row: 8
+      type: select
+      options:
+        - value: ''
+          label: Wybierz kategorię produktu...
+        - value: all
+          label: Wszystkie produkty / pełny katalog
+        - value: sup
+          label: Deski SUP / paddleboardy
+        - value: kayak
+          label: Kajaki pneumatyczne
+        - value: rib
+          label: Łodzie RIB
+        - value: dinghy
+          label: Łodzie / tenderki
+        - value: safety
+          label: Sprzęt bezpieczeństwa / kamizelki ratunkowe
+        - value: accessory
+          label: Akcesoria (pompy, wiosła, torby)
+
+    - name: subject
+      label: Temat
+      row: 9
+    - name: message
+      label: Wiadomość
+      row: 10
+      type: textarea
+      rows: 6
+features2_other_ways:
+  title: Inne sposoby kontaktu
+  columns: 3
+  items:
+    - title: Zapytania handlowe
+      description: Wyceny, konfiguracje, zgłoszenia dealerskie i zamówienia hurtowe.
+      icon: tabler:shopping-bag
+    - title: Wsparcie techniczne
+      description: Gwarancja, naprawy, części i pytania eksploatacyjne.
+      icon: tabler:tool
+    - title: Prasa i partnerstwa
+      description: Pakiety medialne, sponsoring i współpraca branżowa.
+      icon: tabler:news
+    - title: Telefon
+      description: '+86 13305324192'
+      icon: tabler:headset
+    - title: E-mail
+      description: info@aquafarer.com
+      icon: tabler:mail
+    - title: Siedziba główna
+      description: Economic Development Zone, Laixi, Qingdao, China, 266600
+      icon: tabler:map-pin
+map:
+  title: Nasza lokalizacja
+  subtitle: Odwiedź nas
+  address: Economic Development Zone, Laixi, Qingdao, China, 266600
+  zoom: 15

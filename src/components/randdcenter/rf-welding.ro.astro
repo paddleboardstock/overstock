@@ -1,0 +1,186 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'ro' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline"
+    >← Înapoi la Centrul de Cercetare și Dezvoltare</a
+  >
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Laborator 03</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Centrul de sudură RF</h1>
+      <p class="mt-3 text-lg text-muted">Tehnologia de lipire dielectrică pentru suduri care rezistă sub presiune</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-jungle-mandala-1.webp"
+        alt="Aquafarer proces de lipire dielectrica prin sudare RF"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Știința din spatele cusăturii</h2>
+  <p>
+    O barcă gonflabilă este la fel de fiabilă ca și cusăturile sale. O singură sudură slabă poate compromite întreaga
+    cameră — iar pe mare, o defecțiune a camerei nu este doar un inconvenient; este un pericol pentru siguranță. La{
+      SITE.name
+    }, am investit într-un Centru dedicat de Sudură cu Radiofrecvență (RF) care combină prese de sudură dielectrice de
+    nivel industrial cu un control riguros al procesului și teste post-sudură. Fiecare cusătură pe care o realizăm este
+    documentată, trasabilă și certificată pentru a îndeplini sau depăși cerințele standardului internațional pentru
+    ambarcațiuni gonflabile.
+  </p>
+  <p>
+    Sudura RF utilizează energie electromagnetică de înaltă frecvență (tipic 27,12 MHz) pentru a excita moleculele
+    polare din țesătura acoperită cu PVC sau Hypalon, generând căldură precis la interfața materialului. Spre deosebire
+    de sudura cu aer fierbinte sau cu pană fierbinte, sudura RF creează o legătură moleculară veritabilă — cele două
+    straturi de țesătură se contopesc într-un material omogen la zona de sudură, producând o îmbinare la fel de
+    puternică ca materialul de bază.
+  </p>
+
+  <h2>Echipamente de sudură și controlul procesului</h2>
+  <p>Centrul nostru de sudură este echipat cu:</p>
+  <table>
+    <thead><tr><th>Mașină</th><th>Putere / Capacitate</th><th>Aplicație</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Presă dielectrică RF 1</td><td>15 kW, platou 2000 × 600 mm</td><td
+          >Cusături longitudinale principale, îmbinări transom-tub</td
+        ></tr
+      >
+      <tr
+        ><td>Presă dielectrică RF 2</td><td>10 kW, platou 1500 × 500 mm</td><td
+          >Suduri deflectoare, atașamente conice, petice pentru supape</td
+        ></tr
+      >
+      <tr
+        ><td>Sudor RF controlat CNC</td><td>8 kW, masă XY 2500 × 1200 mm</td><td
+          >Cusături curbate, embossing logo/panel, lucrări precise de peticire</td
+        ></tr
+      >
+      <tr
+        ><td>Sudor automat cu pană fierbinte</td><td>Temperatură variabilă, max. 1,2 m/min</td><td
+          >Metodă de rezervă pentru materialele Hypalon/CSM</td
+        ></tr
+      >
+    </tbody>
+  </table>
+  <p>
+    Fiecare presă RF este echipată cu monitorizare în buclă închisă a temperaturii și presiunii. Parametrii de sudură —
+    putere, timp de presare, timp de răcire, presiunea electrodului — sunt programați pentru fiecare tip de material și
+    înregistrați în Sistemul nostru de Execuție a Producției (MES) pentru trasabilitate completă.
+  </p>
+
+  <h2>Teste de calitate a sudurii — fiecare cusătură, fiecare barcă</h2>
+  <p>Integritatea sudurii este verificată printr-un protocol obligatoriu în patru teste:</p>
+  <ol>
+    <li>
+      <strong>Inspecție vizuală</strong>— 100 % din cusături sunt inspectate vizual pentru ardere, decalaj, contaminare
+      sau fuziune incompletă. Pragul ratei de respingere: 0,5 % din metri liniari.
+    </li>
+    <li>
+      <strong>Test de decojire ()</strong>— Se taie o bandă lată de 25 mm dintr-o probă de test sudată cu fiecare lot de
+      producție. Forța minimă de dezlipire: 120 N/25 mm pentru PVC 1100 dtex.
+    </li>
+    <li>
+      <strong>Test de păstrare a aerului</strong>— Fiecare cameră completă este presurizată la 1,25 × presiunea de lucru
+      și menținută timp de 24-48 de ore. Scăderea presiunii nu trebuie să depășească 2 %.
+    </li>
+    <li>
+      <strong>Test de cicluri termice</strong>— Probele sunt supuse ciclurilor de la -20 °C la + 60 °C timp de 50 de
+      cicluri, apoi testate din nou la dezlipire. Pierderea de rezistență acceptabilă: 10 %.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Compararea rezistenței la dezlipire — RF vs Sudură cu aer cald (PVC 1100 dtex)
+    </p>
+    <div class="space-y-3">
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">Sudură RF</span><div
+          class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded"
+        >
+          <div class="h-full bg-blue-600 rounded" style="width:92%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">184 N</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">Aer cald</span><div
+          class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded"
+        >
+          <div class="h-full bg-gray-400 rounded" style="width:65%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">130 N</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">min</span><div class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded">
+          <div class="h-full bg-green-500 rounded" style="width:48%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">96 N</span>
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      Sudarea RF obține constant 90-95 % din rezistența materialului de bază, mult peste minimul cerut.
+    </p>
+  </div>
+
+  <h2>Expertiză profesională</h2>
+  <p>
+    Echipa noastră de sudură este condusă de un inginer senior de proces cu 11 ani de experiență în sudarea dielectrică
+    a textilelor acoperite. Fiecare operator finalizează un program de certificare intern de 6 luni înainte de a fi
+    autorizat să lucreze la cusăturile de producție. Recertificarea este necesară anual, incluzând un test practic de
+    sudură evaluat conform standardului nostru intern Grade-A (rezistența la dezlipire ≥ 160 N/25 mm).
+  </p>
+
+  <h2>Soluții de sudură personalizate pentru cerințe unice</h2>
+  <p>
+    Înțelegem că o singură specificație de sudură nu se potrivește fiecărei aplicații. Centrul nostru de sudură RF
+    dezvoltă în mod regulat configurații personalizate de cusături pentru clienți cu cerințe speciale:
+  </p>
+  <ul>
+    <li>
+      <strong>Patch-uri de consolidare multi-strat</strong>— pentru zone cu uzură ridicată, cum ar fi brâurile de
+      frecare și conurile de prova, dezvoltăm suduri RF cu mai multe treceri care integrează un strat exterior rezistent
+      la uzură fără a compromite flexibilitatea.
+    </li>
+    <li>
+      <strong>Cusături conductive sau opace RF</strong>— pentru nave militare sau de supraveghere care necesită
+      protecție electromagnetică, sudăm straturi de plasă conductivă în stiva de cusături.
+    </li>
+    <li>
+      <strong>Sudarea panourilor bicolore</strong>— panouri de țesătură cu două culori (de exemplu, casco portocaliu +
+      partea superioară gri) sudate cu o suprapunere ascunsă pentru a menține estetica mărcii fără o linie de îmbinare
+      vizibilă.
+    </li>
+  </ul>
+
+  <h2>Angajamentul nostru față de tine</h2>
+  <p>
+    Fiecare barcă pe care o livrăm poartă garanția calității cusăturilor noastre: dacă vreo cusătură cedează în timpul
+    utilizării normale în perioada de garanție, reparăm sau înlocuim camera afectată fără costuri și se efectuează o
+    investigație a cauzei principale pentru a preveni reapariția. Aceasta nu este doar o garanție — este un angajament
+    pentru îmbunătățire continuă bazată pe date operaționale reale.
+  </p>
+  <p>
+    Când alegi{SITE.name}, alegi cusături care sunt proiectate, testate și documentate — nu doar sudate. Aceasta este
+    diferența dintre o barcă care plutește și o barcă care performează.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Discutați cerințele dvs. de sudură</h2>
+    <p class="mt-2 text-sm text-muted">
+      Specificații personalizate de cusături, compatibilitate a materialelor sau validarea procesului.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Contactați echipa noastră de sudură</a
+    >
+  </div>
+</section>

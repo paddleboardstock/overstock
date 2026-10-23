@@ -1,0 +1,188 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'ko' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">&larr; R&D 센터로 돌아가기</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">실험 06</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">품질 및 검사 실험실</h1>
+      <p class="mt-3 text-lg text-muted">독립적 검증 — 배송 전에 모든 테스트 통과</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-uv-resistance-testing.webp"
+        alt="Aquafarer 품질 검사 실험실 UV 테스트"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>믿되, 확인하라</h2>
+  <p>
+    우리 작업장을 떠나는 모든 보트는 정해진 품질 검사 및 재료 테스트를 통과했음을 증명하는 인증서를 가지고 있습니다.
+    우리 품질 및 검사 연구소는 조직 내 독립된 기능으로, 생산 부서가 아닌 전무이사에게 직접 보고하여 어떠한 상업적 압력도
+    검사 기준을 침해하지 못하도록 보장합니다. 만약 재료 배치나 완성된 보트가 공표된 사양을 만족하지 못할 경우, 연구소는
+    불일치가 해결될 때까지 출하를 중단할 권한을 가지고 있습니다.
+  </p>
+  <p>
+    이 실험실은 원칙에 맞춘 품질 관리 시스템 하에서 운영되며, 우리의 시험 방법은 적용 가능한 경우 ISO, ASTM 및 EN 기준을
+    기반으로 합니다. 우리는 수행된 모든 시험에 대한 자세한 기록을 유지하며, 원자재 수령부터 최종 보트 배송까지 완전한
+    추적 가능성 체인을 생성합니다.
+  </p>
+
+  <h2>시험 장비 및 능력</h2>
+  <table>
+    <thead><tr><th>장비</th><th>수행된 테스트</th><th>표준 / 방법</th></tr></thead>
+    <tbody>
+      <tr><td>만능 재료 시험기 (50 kN)</td><td>인장 강도(직물), 박리 저항(솔기), 찢김 전파</td><td>, ISO 4674</td></tr>
+      <tr
+        ><td>공기 유지 시험 장치(프로그래밍 가능)</td><td>1000회 사이클 팽창/수축 내구성, 24-48시간 압력 유지 시험</td
+        ><td>(내부)</td></tr
+      >
+      <tr
+        ><td>심 절단 지그 (모터식 180° 박리)</td><td>100 mm/min에서 용접 및 접착 이음부 인장강도</td><td
+          >/ ASTM D1876</td
+        ></tr
+      >
+      <tr><td>정수압 헤드 테스터</td><td>원단의 방수 저항력 (0 — 00 mbar)</td><td>ISO 811</td></tr>
+      <tr
+        ><td>디지털 두께 게이지 및 마이크로미터</td><td>원단 두께, 튜브 벽 두께, 접착 필름 두께</td><td>ISO 2286-3</td
+        ></tr
+      >
+      <tr
+        ><td>환경 챔버</td><td>냉균열 및 열노화 시험을 위한 온도 조절 (-40°C에서 +80°C까지)</td><td
+          >ISO 188, ISO 4675</td
+        ></tr
+      >
+      <tr><td>색상 분광광도계</td><td>UV 노출 후 델타-E 색상 측정</td><td>ISO 105-A05 / ASTM D2244</td></tr>
+    </tbody>
+  </table>
+
+  <h2>검사 게이트 — 자재에서 납품까지</h2>
+  <p>
+    모든 보트는 필수 점검 지점이 포함된 정의된 품질 계획을 따릅니다. 어떤 보트도 검문소(gate)를 건너뛸 수 없으며, 각
+    검문소는 다음 생산 단계가 시작되기 전에 품질 검사관의 승인을 받아야 합니다.
+  </p>
+
+  <div class="not-prose my-8">
+    <div class="relative">
+      <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-blue-200 dark:bg-blue-800"></div>
+      <div class="space-y-6 relative">
+        {
+          [
+            {
+              gate: 'Gate 1',
+              label: '입고 자재 검사',
+              desc: '원단 배치, 접착제 배치, 하드웨어 — 모두 생산에 투입되기 전에 입고 사양과 대조하여 확인됩니다.',
+            },
+            {
+              gate: 'Gate 2',
+              label: '공정 중 용접 검사',
+              desc: '각 생산 교대 시작 시 첫 번째 용접 쿠폰을 시험함(박리 + 육안 검사).',
+            },
+            {
+              gate: 'Gate 3',
+              label: '챔버 공기 테스트',
+              desc: '각 챔버를 작업 압력의 1.25배로 압력 조정하고 24-48시간 유지합니다. 데이터는 일련번호별로 기록됩니다.',
+            },
+            {
+              gate: 'Gate 4',
+              label: '출고 전 점검',
+              desc: '완전한 보트 점검 완료: 모든 체결 장치 토크 확인, 시스템 작동 확인, 외관 결함 없음. 100점 체크리스트.',
+            },
+            {
+              gate: 'Gate 5',
+              label: '최종 인증',
+              desc: '테스트 보고서 작성, 검사 기록 검토, 적합성 인증서 발급.',
+            },
+          ].map((g) => (
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs font-bold z-10">
+                {g.gate}
+              </div>
+              <div class="flex-1 p-3 rounded-lg bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800">
+                <p class="text-sm font-semibold">{g.label}</p>
+                <p class="text-xs text-gray-500 mt-1">{g.desc}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+
+  <h2>주요 품질 지표 (2025 이동 평균)</h2>
+  <div class="not-prose my-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">99.7 %</span>
+      <span class="text-xs text-gray-500">초기 합격률 (원단 배치)</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600"> 0.2 %</span>
+      <span class="text-xs text-gray-500">용접 불량률(선미터)</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">100 %</span>
+      <span class="text-xs text-gray-500">조립 전에 챔버 공기 테스트 완료</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600"></span>
+      <span class="text-xs text-gray-500">디자인 카테고리 준수</span>
+    </div>
+  </div>
+
+  <h2>우리 품질 팀</h2>
+  <p>
+    이 실험실에는 품질 관리자(해양 품질 보증 10년 경력, ASQ 공인 품질 엔지니어), 두 명의 품질 검사관(각각 시각 검사 분야
+    레벨 2 NDT 자격 소지), 그리고 모든 물리적 시험을 담당하는 재료 기술자가 근무하고 있습니다. 팀은 시험 결과의 정확성과
+    재현성을 보장하기 위해 독립 제3자 기관을 통한 연례 능력 평가를 받습니다.
+  </p>
+
+  <h2>클라이언트를 위한 독립 테스트</h2>
+  <p>
+    저희 품질 및 검사 연구소는 독립적인 시험 서비스를 제공합니다. 원단 사양을 확인하거나, 새로운 접착제 시스템을
+    검증하거나, 조달 자격을 위한 제3자 시험 보고서를 받아야 하는 경우, 저희는 해당 표준에 맞춰 시험을 수행하고 인증 시험
+    보고서를 발행할 수 있습니다.
+  </p>
+  <p>최근 제3자 테스트 작업의 예:</p>
+  <ul>
+    <li>유럽 군사 조달 프로그램을 위한 다섯 가지 경쟁 접착 필름 제품의 박리 강도 비교.</li>
+    <li>
+      신규 오렌지 색소 PVC 제형에 대한 가속 노화 연구(UV + 열 사이클링), 500시간 간격으로 정기적인 중간 측정 포함.
+    </li>
+    <li>신형 고압 튜브 설계를 위한 50개 프로토타입 배플 밸브의 공기 유지 검증.</li>
+  </ul>
+
+  <h2>당신에 대한 우리의 약속</h2>
+  <p>
+    받을 때{SITE.name}보트와 함께, 귀하는 또한 귀하의 특정 보트에 적용되는 테스트 결과를 모은 품질 도서를 받게 됩니다.
+    원자재 배치 증명서, 용접 박리 테스트, 챔버 공기 테스트 기록, 출고 전 점검 체크리스트. 모든 숫자는 추적 가능합니다.
+    모든 검사자는 식별됩니다. 이것은 단순한 서류 작업이 아닙니다 — 이것은 우리가 제공한 것이 우리가 명시한 것이라는
+    우리의 약속입니다.
+  </p>
+  <p>
+    품질에 대한 우려가 있는 경우, 인증서에 인쇄된 연락처를 통해 실험실에 직접 연락할 수 있습니다. 우리는 모든 문의를
+    진지하게 받아들이며 48시간 이내에 공식 조사를 약속합니다.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">독립적인 테스트나 품질 검증이 필요하신가요?</h2>
+    <p class="mt-2 text-sm text-muted">
+      저희 연구실은 제3자 시험 업무를 수락합니다 — 요구 사항을 가지고 저희에게 연락하세요.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >품질 실험실에 연락하십시오</a
+    >
+  </div>
+</section>

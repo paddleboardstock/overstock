@@ -1,0 +1,73 @@
+hero:
+  tagline: 'Water Exploration Knowledge'
+  title: 'Learn'
+  subtitle: |
+    Guides, tutorials, and deep dives — everything you need to explore<br />
+    water with confidence. From choosing your first SUP to mastering advanced techniques.
+  taglineSection: 'Knowledge for every paddler. From beginner to professional.'
+
+featured:
+  tagline: 'Featured Topics'
+  title: 'Start your learning journey'
+  subtitle: 'Whether you are new to water sports or looking to level up, our guides have you covered.'
+  items:
+    - title: 'SUP Basics'
+      description: 'Everything a beginner needs to know — board types, paddle sizing, stance, and first-day tips.'
+      icon: 'tabler:lifebuoy'
+      href: '/learn/sup'
+    - title: 'Inflatable vs Hard Board'
+      description: 'Which is right for you? We compare portability, performance, durability, and cost side by side.'
+      icon: 'tabler:arrows-left-right'
+      href: '/compare/inflatable-vs-hardboard'
+    - title: 'Water Safety'
+      description: 'Essential safety knowledge every paddler should have — weather, PFDs, self-rescue, and more.'
+      icon: 'tabler:shield'
+      href: '/learn/water-safety'
+    - title: 'Materials Guide'
+      description: 'PVC vs Hypalon, drop-stitch technology, denier ratings — understand what your gear is made of.'
+      icon: 'tabler:hexagons'
+      href: '/learn/materials'
+    - title: 'SUP Size Guide'
+      description: 'Find the right board length, width, and volume for your weight, skill, and paddling style.'
+      icon: 'tabler:ruler'
+      href: '/size-guide'
+    - title: 'Intermediate Techniques'
+      description: 'Step up your paddling with advanced strokes, turning techniques, and rough-water handling.'
+      icon: 'tabler:ripple'
+      href: '/learn/intermediate-techniques'
+
+categories:
+  tagline: 'Categories'
+  title: 'Explore by topic'
+  subtitle: 'All learning content organized by skill level and interest.'
+  columns:
+    - title: 'Beginner'
+      items:
+        - 'SUP Basics — start here'
+        - 'Inflatable vs Hard Board'
+        - 'Water Safety Essentials'
+        - 'How to Choose Your SUP'
+        - 'Pump & Pack Guide'
+    - title: 'Intermediate'
+      items:
+        - 'Paddling Techniques'
+        - 'Inflatable Technology'
+        - 'Materials Reference'
+        - 'PVC vs Hypalon Comparison'
+        - 'Drop-Stitch Core Explained'
+    - title: 'Advanced & Professional'
+      items:
+        - 'Fleet Operations'
+        - 'Commercial-Grade Equipment'
+        - 'Safety & Rescue Protocols'
+        - 'Custom Builds & OEM'
+
+cta:
+  title: 'Still have questions?'
+  subtitle: 'Ask our AI guide for personalized answers about gear, safety, and techniques.'
+  actions:
+    - variant: primary
+      text: 'Ask the Water Advisor AI'
+      href: '#ai-guide'
+    - text: 'Browse all guides'
+      href: '/academy'

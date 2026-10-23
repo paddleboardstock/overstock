@@ -1,0 +1,376 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import AiQuickAnswer from '~/components/common/AiQuickAnswer.astro';
+
+const metadata = {
+  title: 'Inflatable Boat Guide — Complete Resource on Types, Materials, Selection & Safety',
+  description:
+    'A comprehensive guide to inflatable boats covering types, construction methods, materials comparison, selection criteria, safety standards, and maintenance.',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <JsonLd
+    type="Article"
+    article={{
+      headline: 'Inflatable Boat Guide — The Complete Resource',
+      description:
+        'A comprehensive guide to inflatable boats covering types, construction methods, materials comparison, selection criteria, safety standards, and maintenance.',
+      datePublished: '2026-07-07',
+    }}
+    data={{ url: 'https://aquafarer.com/marine-industry/' }}
+  />
+
+  <JsonLd
+    type="BreadcrumbList"
+    breadcrumbs={[
+      { name: 'Home', href: '/' },
+      { name: 'Marine Industry', href: '/marine-industry' },
+      { name: 'Inflatable Boat Guide', href: '/marine-industry/' },
+    ]}
+  />
+
+  <AiQuickAnswer
+    entityType="Guide"
+    quickAnswer="An inflatable boat is a lightweight watercraft constructed with flexible fabric tubes (sponsons) filled with pressurized air to provide buoyancy. Modern inflatable boats include dinghies, RIBs (rigid inflatable boats), inflatable kayaks, and stand-up paddle boards. They are built from PVC or Hypalon CSM fabrics using RF welding or hand-glued seams, with drop-stitch construction enabling high-pressure rigid floors."
+    facts={[
+      { label: 'Global Market Size', value: '$2.8B (2026)' },
+      { label: 'Primary Materials', value: 'PVC / Hypalon CSM' },
+      { label: 'Lifespan Range', value: '8-20+ years' },
+      { label: 'CE Certification', value: 'Required (EU)' },
+    ]}
+  />
+
+  <section class="max-w-4xl mx-auto py-16 px-6">
+    <h1 class="text-4xl font-semibold text-gray-900">Inflatable Boat Guide</h1>
+    <p class="mt-4 text-lg text-gray-500">
+      The definitive resource on inflatable watercraft — from recreational dinghies to professional RIBs and specialty
+      rescue vessels.
+    </p>
+
+    <nav class="mt-8 flex flex-wrap gap-2">
+      {
+        ['Types', 'Construction', 'Materials', 'Selection', 'Safety', 'Maintenance', 'Standards'].map((section) => (
+          <a
+            href={`#${section.toLowerCase()}`}
+            class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition"
+          >
+            {section}
+          </a>
+        ))
+      }
+    </nav>
+
+    <section id="types" class="mt-16">
+      <h2 class="text-2xl font-semibold text-gray-900">Types of Inflatable Boats</h2>
+      <div class="mt-8 grid gap-6">
+        {
+          [
+            {
+              title: 'Inflatable Dinghies',
+              desc: 'Small, portable boats for tendering, fishing, and short-distance recreational use. Typically 2-4m, powered by small outboards (2-15 HP) or oars. Most affordable entry point.',
+              icon: '🚤',
+            },
+            {
+              title: 'Rigid Inflatable Boats (RIBs)',
+              desc: 'High-performance boats with a rigid fiberglass, aluminum, or HDPE hull and inflatable sponsons. 3-12m lengths, 15-300+ HP outboards. Used for patrol, rescue, diving, and offshore cruising.',
+              icon: '⚡',
+            },
+            {
+              title: 'Inflatable Kayaks',
+              desc: 'Portable kayaks made from PVC or TPU fabrics. Available in single and tandem configurations for recreational touring, river running, and expedition travel.',
+              icon: '🛶',
+            },
+            {
+              title: 'Inflatable Stand-Up Paddle Boards (SUPs)',
+              desc: 'Drop-stitch constructed paddle boards that inflate to rigid high-pressure decks. All-around, touring, yoga, fishing, and surf models available.',
+              icon: '🏄',
+            },
+            {
+              title: 'Rescue Boats (SAR)',
+              desc: 'Specialized RIBs for search and rescue operations. Features self-bailing floors, forward consoles, towing bits, and high-visibility color schemes. CE-certified for rescue use.',
+              icon: '🆘',
+            },
+            {
+              title: 'Commercial Workboats',
+              desc: 'Heavy-duty RIBs for dive support, patrol, survey, and commercial marine operations. Hypalon CSM construction, reinforced hulls, and professional-grade fit-out.',
+              icon: '⚙️',
+            },
+          ].map((item) => (
+            <div class="flex gap-4 p-5 bg-gray-50 rounded-xl border border-gray-200">
+              <span class="text-2xl flex-shrink-0">{item.icon}</span>
+              <div>
+                <h3 class="font-semibold text-gray-900">{item.title}</h3>
+                <p class="mt-1 text-sm text-gray-600">{item.desc}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section id="construction" class="mt-16">
+      <h2 class="text-2xl font-semibold text-gray-900">Construction Methods</h2>
+      <div class="mt-8 grid md:grid-cols-2 gap-6">
+        <div class="p-6 rounded-xl border border-gray-200">
+          <h3 class="font-semibold text-gray-900">RF Welding (High-Frequency)</h3>
+          <p class="mt-2 text-sm text-gray-600">
+            Uses electromagnetic energy to fuse PVC layers at molecular level. Creates the strongest airtight seams.
+            Common in high-quality PVC boats and SUPs. Requires specialized machinery and skilled operation.
+          </p>
+        </div>
+        <div class="p-6 rounded-xl border border-gray-200">
+          <h3 class="font-semibold text-gray-900">Hand Gluing / Chemical Bonding</h3>
+          <p class="mt-2 text-sm text-gray-600">
+            Two-part adhesive bonds fabric panels. Primary method for Hypalon CSM boats (cannot be RF welded). Requires
+            precise surface preparation, controlled humidity, and proper curing time for optimal seam strength.
+          </p>
+        </div>
+        <div class="p-6 rounded-xl border border-gray-200">
+          <h3 class="font-semibold text-gray-900">Drop-Stitch Core</h3>
+          <p class="mt-2 text-sm text-gray-600">
+            Thousands of polyester threads connect top and bottom PVC layers, enabling high-pressure inflation (15-25
+            PSI) for rigid board performance. Thread density (15-50 threads/cm²) determines rigidity and weight.
+          </p>
+        </div>
+        <div class="p-6 rounded-xl border border-gray-200">
+          <h3 class="font-semibold text-gray-900">Heat Welding</h3>
+          <p class="mt-2 text-sm text-gray-600">
+            Hot air or hot wedge welding used for seams and reinforcements. Common in larger RIB construction. Less
+            precise than RF welding but effective for Hypalon and heavy-duty PVC fabrics.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="materials" class="mt-16">
+      <h2 class="text-2xl font-semibold text-gray-900">Materials Comparison</h2>
+      <div class="mt-6 overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="bg-gray-50 border-b-2 border-gray-200">
+              <th class="px-4 py-3 text-left font-semibold text-gray-700">Property</th>
+              <th class="px-4 py-3 text-center font-semibold text-sky-700">PVC</th>
+              <th class="px-4 py-3 text-center font-semibold text-emerald-700">Hypalon CSM</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              [
+                ['Relative Cost', '$ (budget)', '$$$ (premium)'],
+                ['UV Resistance', 'Good (with coating)', 'Excellent (inherent)'],
+                ['Abrasion Resistance', 'Moderate-Good', 'Excellent'],
+                ['Chemical Resistance', 'Good', 'Excellent'],
+                ['Cold Flexibility', 'Stiffens below 0°C', 'Flexible to -20°C'],
+                ['Lifespan', '8-12 years', '15-20+ years'],
+                ['Seam Method', 'RF welding', 'Hand gluing'],
+                ['Repair', 'PVC glue (easy)', '2-part adhesive (moderate)'],
+              ].map((row, i) => (
+                <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                  {row.map((cell, j) => (
+                    <td
+                      class={`px-4 py-3 border-b border-gray-200 ${j === 0 ? 'font-medium text-gray-700' : 'text-center text-gray-600'}`}
+                    >
+                      {cell}
+                    </td>
+                  ))}
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+      <p class="mt-4 text-sm text-gray-500">
+        Modern military-grade PVC (1100-1670 dtex) offers excellent durability for most recreational users at half the
+        cost of Hypalon. Hypalon is preferred for commercial fleets, tropical climates, and mission-critical
+        applications.
+      </p>
+      <a href="/compare/pvc-vs-hypalon" class="mt-4 inline-block text-sky-600 hover:text-sky-700 text-sm font-medium"
+        >In-Depth PVC vs Hypalon Guide →</a
+      >
+    </section>
+
+    <section id="selection" class="mt-16">
+      <h2 class="text-2xl font-semibold text-gray-900">How to Choose an Inflatable Boat</h2>
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+          <h3 class="font-semibold text-gray-900">1. Define Your Use Case</h3>
+          <ul class="mt-3 space-y-2 text-sm text-gray-600">
+            <li>Recreational: Dinghy or SUP</li>
+            <li>Performance: RIB (15-60 HP)</li>
+            <li>Commercial: RIB (100+ HP)</li>
+            <li>Fitness: Inflatable SUP</li>
+            <li>Travel: Inflatable kayak</li>
+          </ul>
+        </div>
+        <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+          <h3 class="font-semibold text-gray-900">2. Set Your Budget</h3>
+          <ul class="mt-3 space-y-2 text-sm text-gray-600">
+            <li>$200-$800: Inflatable SUP</li>
+            <li>$500-$2,000: Dinghy + motor</li>
+            <li>$3,000-$8,000: Entry RIB</li>
+            <li>$8,000-$20,000: Premium RIB</li>
+            <li>$20,000+: Commercial RIB</li>
+          </ul>
+        </div>
+        <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+          <h3 class="font-semibold text-gray-900">3. Consider Material</h3>
+          <ul class="mt-3 space-y-2 text-sm text-gray-600">
+            <li>PVC: Budget-friendly, light</li>
+            <li>Hypalon: Premium, long-lived</li>
+            <li>Drop-Stitch: Rigid performance</li>
+            <li>Fabric weight: 1100-1670 dtex</li>
+            <li>Coating: UV + puncture layers</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="safety" class="mt-16">
+      <h2 class="text-2xl font-semibold text-gray-900">Safety & Standards</h2>
+      <div class="mt-8 grid md:grid-cols-2 gap-6">
+        <div class="p-6 rounded-xl border border-gray-200">
+          <h3 class="font-semibold text-gray-900">CE Certification</h3>
+          <p class="mt-2 text-sm text-gray-600">
+            All inflatable boats sold in the EU require CE marking under Recreational Craft Directive (RCD) 2013/53/EU.
+            Certification covers design category (A-D), buoyancy, stability, and load capacity. Aquafarer boats are
+            CE-certified for recreational and rescue use.
+          </p>
+        </div>
+        <div class="p-6 rounded-xl border border-gray-200">
+          <h3 class="font-semibold text-gray-900">Standard</h3>
+          <p class="mt-2 text-sm text-gray-600">
+            International standard for inflatable boats specifying requirements for materials, seams, valves, and
+            performance testing. Types I-IV cover everything from small dinghies to large RIBs.
+          </p>
+        </div>
+        <div class="p-6 rounded-xl border border-gray-200">
+          <h3 class="font-semibold text-gray-900">Essential Safety Equipment</h3>
+          <p class="mt-2 text-sm text-gray-600">
+            Life jackets/PFDs (CE 12402), throw ropes, bailer/fire extinguisher, navigation lights (night), VHF radio,
+            first aid kit, anchor, and spare paddle or fuel.
+          </p>
+        </div>
+        <div class="p-6 rounded-xl border border-gray-200">
+          <h3 class="font-semibold text-gray-900">Safe Operation</h3>
+          <p class="mt-2 text-sm text-gray-600">
+            NEVER exceed max capacity plate. Check valve security before launch. Distribute weight evenly. Monitor
+            weather conditions. File a float plan. Take a boating safety course.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="maintenance" class="mt-16">
+      <h2 class="text-2xl font-semibold text-gray-900">Maintenance & Care</h2>
+      <div class="mt-8 space-y-4 text-sm text-gray-600">
+        <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+          <span class="text-sky-600 font-bold flex-shrink-0">1.</span><span
+            >Rinse with fresh water after every saltwater use. Dry completely before storage.</span
+          >
+        </div>
+        <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+          <span class="text-sky-600 font-bold flex-shrink-0">2.</span><span
+            >Store partially inflated in a cool, dry place away from direct sunlight and extreme temperatures.</span
+          >
+        </div>
+        <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+          <span class="text-sky-600 font-bold flex-shrink-0">3.</span><span
+            >Check valves and seams before each season. Apply silicone lubricant to valve cores annually.</span
+          >
+        </div>
+        <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+          <span class="text-sky-600 font-bold flex-shrink-0">4.</span><span
+            >Clean with mild soap and water. Never use solvents, bleach, or pressure washers on fabric.</span
+          >
+        </div>
+        <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+          <span class="text-sky-600 font-bold flex-shrink-0">5.</span><span
+            >Repair punctures promptly with manufacturer-recommended patch kits. For Hypalon, use two-part adhesive
+            only.</span
+          >
+        </div>
+        <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+          <span class="text-sky-600 font-bold flex-shrink-0">6.</span><span
+            >Replace valves every 3-5 years. Replace fabric at end of service life (visible wear, porosity, seam
+            separation).</span
+          >
+        </div>
+      </div>
+    </section>
+
+    <section id="standards" class="mt-16">
+      <h2 class="text-2xl font-semibold text-gray-900">Industry Applications</h2>
+      <div class="mt-8 grid md:grid-cols-3 gap-4">
+        {
+          [
+            {
+              title: 'Recreational Boating',
+              desc: 'Family outings, watersports, fishing, camping, and leisure cruising on lakes, rivers, and coastal waters.',
+            },
+            {
+              title: 'Search & Rescue',
+              desc: 'Coast guard, lifeguard, and emergency response teams using specialized RIBs for rapid deployment and rough-water rescue.',
+            },
+            {
+              title: 'Commercial Marine',
+              desc: 'Dive support, patrol, survey, tourism transport, and offshore logistics where durability and reliability are critical.',
+            },
+            {
+              title: 'Military & Defense',
+              desc: 'Tactical RIBs for naval operations, troop transport, boarding actions, and covert insertions.',
+            },
+            {
+              title: 'Humanitarian Aid',
+              desc: 'Disaster relief organizations deploy inflatable boats for flood rescue, supply transport, and medical evacuation.',
+            },
+            {
+              title: 'OEM Manufacturing',
+              desc: 'Custom private-label production for brands, retailers, and specialized operators seeking unique specifications.',
+            },
+          ].map((app) => (
+            <div class="p-4 bg-gray-50 rounded-xl border border-gray-200">
+              <h3 class="font-semibold text-sm text-gray-900">{app.title}</h3>
+              <p class="mt-1 text-xs text-gray-500">{app.desc}</p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="mt-16 bg-gradient-to-br from-sky-50 to-blue-50 rounded-2xl p-8 border border-sky-200">
+      <h2 class="text-xl font-semibold text-gray-900">Explore Aquafarer Inflatable Boats</h2>
+      <p class="mt-4 text-sm text-gray-600">
+        Aquafarer designs and manufactures CE-certified inflatable boats, SUPs, kayaks, and RIBs for recreational,
+        professional, and OEM markets. All boats built with military-grade PVC or Hypalon CSM fabrics using advanced RF
+        welding or hand-glued construction.
+      </p>
+      <div class="mt-6 flex gap-4 flex-wrap">
+        <a
+          href="/products"
+          class="px-6 py-3 bg-gray-900 text-white rounded-full text-sm font-medium hover:bg-gray-800 transition"
+          >View Products</a
+        >
+        <a
+          href="/academy"
+          class="px-6 py-3 border border-gray-200 text-gray-700 rounded-full text-sm font-medium hover:border-gray-400 transition"
+          >Learning Center</a
+        >
+      </div>
+    </section>
+  </section>
+
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true">
+    <p>
+      Comprehensive inflatable boat guide covering types (dinghies, RIBs, kayaks, SUPs, rescue boats, commercial
+      workboats), construction methods (RF welding, hand gluing, drop-stitch core, heat welding), materials (PVC fabric,
+      Hypalon CSM), selection criteria (use case, budget, materials comparison), safety standards (CE certification,
+      essential equipment), maintenance (cleaning, storage, repairs, valve care), and industry applications
+      (recreational, SAR, commercial, military, humanitarian, OEM).
+    </p>
+  </section>
+</Layout>

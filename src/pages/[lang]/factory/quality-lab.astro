@@ -1,0 +1,231 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+import { languages, defaultLang } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+import { getPageContent, setPageContentData } from '~/i18n/page-content';
+import __pageData from '~/i18n/generated/pages/factory-quality-lab.ts';
+import { localizePageTitle } from '~/i18n/page-title';
+import Tldr from '~/components/common/Tldr.astro';
+import TrustBadges from '~/components/common/TrustBadges.astro';
+
+interface HighlightItem {
+  value: string;
+  label: string;
+  detail: string;
+}
+
+interface ProcedureItem {
+  title: string;
+  description: string;
+  standards?: string[] | string;
+}
+
+interface EquipmentItem {
+  name: string;
+  spec: string;
+}
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => getUiForLang(lang || defaultLang)?.[key] || '';
+setPageContentData(__pageData);
+const page = getPageContent(lang, 'factory-quality-lab');
+
+const hero = page.hero ?? {};
+const intro = page.intro ?? '';
+const highlights: HighlightItem[] = page.highlights ?? [];
+const procedures: ProcedureItem[] = page.test_procedures ?? [];
+const labEquipment: EquipmentItem[] = page.equipment ?? [];
+
+const crumbs = [
+  { name: t('nav.home') || 'Home', href: '/' + (lang || '') + '/' },
+  { name: 'Factory', href: '/' + (lang || '') + '/factory' },
+  { name: hero.title },
+];
+
+const metadata = {
+  title: localizePageTitle(page, hero.title + ' — ' + SITE.name),
+  description: intro?.slice(0, 160) || SITE.name + ' quality control laboratory and testing.',
+};
+
+const tldrSummary =
+  'The Aquafarer quality lab operates independently from production, performing tensile, peel, UV, and pressure testing per ISO 9001:2015 protocols. 100% of units undergo 1.25x rated pressure hold testing. Defect-free rate: 99.3% per AQL 2.5 / ISO 2859.';
+
+const tldrPoints = [
+  'Independent lab separated from production for unbiased quality verification',
+  '100% pressure testing at 1.25x rated pressure for 24-48h hold per unit',
+  'ISO 9001:2015 quality management system governing all test protocols',
+  '99.3% defect-free rate measured per AQL 2.5 / ISO 2859 sampling methodology',
+  'Multi-standard compliance: CE, ISO, UKCA, BSCI, REACH, USCG verified',
+];
+
+const faqSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What testing does the Aquafarer quality lab perform?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Independent lab performs tensile, peel, UV (ASTM G154), abrasion (ASTM D751), pressure, and dimensional testing on every production batch.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is 100% pressure testing performed?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Every inflatable unit undergoes 24-48h hold at 1.25x rated pressure with max 5% drop tolerance.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the defect-free rate?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: '99.3% defect-free rate measured per AQL 2.5 / ISO 2859 sampling methodology.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What standards does the lab follow?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'ISO 9001:2015 quality management, ASTM G154 UV testing, ASTM D751 abrasion, ISO 6185 buoyancy.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I request quality documentation?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. QC manuals, test reports, and factory audit documentation available upon request via the contact page.',
+      },
+    },
+  ],
+});
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <meta
+    name="ai-intent"
+    content="inflatable-boat-quality-control,marine-product-testing,iso-9001-boat-factory,ce-certification-testing"
+  />
+  <script type="application/ld+json" set:html={faqSchema} />
+  <section class="px-6 sm:px-6 py-16 sm:py-20 lg:py-24 mx-auto max-w-5xl text-center">
+    <a href={'/' + (lang || '') + '/factory'} class="text-sm text-gray-500 hover:underline">&larr; Back to Factory</a>
+    <p class="mt-4 text-sm font-semibold text-primary uppercase tracking-wider">{hero.tagline}</p>
+    <h1 class="mt-3 text-4xl md:text-5xl font-bold">{hero.title}</h1>
+    <p class="mt-3 text-lg text-muted">{hero.subtitle}</p>
+  </section>
+
+  <section class="px-6 sm:px-6 pb-8 mx-auto max-w-4xl">
+    <Tldr summary={tldrSummary} points={tldrPoints} />
+  </section>
+
+  <section class="px-6 sm:px-6 pb-16 mx-auto max-w-4xl">
+    <div
+      class="border-l-4 border-blue-500 rounded-r-xl bg-blue-50/80 dark:bg-slate-800/50 px-6 py-5"
+      data-ai-block="direct-answer"
+    >
+      <p class="text-sm text-gray-700 dark:text-slate-300 leading-relaxed">{tldrSummary}</p>
+    </div>
+  </section>
+
+  {
+    intro && (
+      <section class="px-6 sm:px-6 pb-16 mx-auto max-w-4xl">
+        <p class="text-muted leading-relaxed">{intro}</p>
+      </section>
+    )
+  }
+
+  {
+    highlights.length > 0 && (
+      <section class="px-6 sm:px-6 pb-8 mx-auto max-w-6xl">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+          {highlights.map((s: HighlightItem) => (
+            <div class="text-center p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+              <span class="block text-3xl font-bold text-primary" set:html={s.value} />
+              <span class="block text-sm text-muted mt-1">{s.label}</span>
+              <span class="block text-xs text-muted mt-1">{s.detail}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+    )
+  }
+
+  {
+    procedures.length > 0 && (
+      <section class="px-6 sm:px-6 py-16 mx-auto max-w-6xl">
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold text-primary uppercase tracking-wider">
+            {t('factory.testProcedures') || 'Test Procedures'}
+          </p>
+          <h2 class="mt-2 text-3xl font-bold">{t('factory.qualityTesting') || 'Quality Testing Procedures'}</h2>
+        </div>
+        <div class="grid md:grid-cols-2 gap-6">
+          {procedures.map((p: ProcedureItem) => (
+            <div class="p-6 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+              <h3 class="text-lg font-bold">{p.title}</h3>
+              <p class="mt-3 text-sm text-muted leading-relaxed">{p.description}</p>
+              {p.standards && (
+                <div class="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+                  <span class="text-xs font-semibold text-primary uppercase tracking-wider">Standards</span>
+                  <p class="mt-1 text-xs text-muted">
+                    {Array.isArray(p.standards) ? p.standards.join(', ') : p.standards}
+                  </p>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+    )
+  }
+
+  {
+    labEquipment.length > 0 && (
+      <section class="px-6 sm:px-6 py-16 mx-auto max-w-5xl bg-gray-50 dark:bg-gray-900 rounded-2xl">
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold text-primary uppercase tracking-wider">
+            {t('factory.labEquipment') || 'Lab Equipment'}
+          </p>
+          <h2 class="mt-2 text-3xl font-bold">{t('factory.testingEquipment') || 'Testing Equipment'}</h2>
+        </div>
+        <div class="max-w-3xl mx-auto space-y-3">
+          {labEquipment.map((eq: EquipmentItem) => (
+            <div class="flex items-center justify-between p-4 rounded-lg bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800">
+              <span class="font-medium">{eq.name}</span>
+              <span class="text-sm text-muted">{eq.spec}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+    )
+  }
+
+  <TrustBadges layout="compact" bg="px-6 sm:px-6 py-12 mx-auto max-w-6xl" />
+
+  <section class="px-6 sm:px-6 py-16 mx-auto max-w-4xl text-center">
+    <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+      <h2 class="text-xl font-bold">{t('factory.needDocs') || 'Need quality documentation?'}</h2>
+      <p class="mt-2 text-sm text-muted">
+        {t('factory.needDocsDesc') || 'Request our QC manual, test reports, or factory audit documentation.'}
+      </p>
+      <a
+        href={'/' + (lang || '') + '/contact'}
+        class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+        >{t('factory.requestDocs') || 'Request documentation'} →</a
+      >
+    </div>
+  </section>
+</Layout>

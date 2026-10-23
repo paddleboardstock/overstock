@@ -1,0 +1,2693 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+import { getLocalizedProducts } from '~/utils/product-i18n';
+
+import AiQuickAnswer from '~/components/common/AiQuickAnswer.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import TrustBadges from '~/components/common/TrustBadges.astro';
+import Tldr from '~/components/common/Tldr.astro';
+import Icon from '~/components/ui/Icon.astro';
+import { getContentV2Records } from '~/data/content-v2';
+import cfg from '~/config.yaml';
+const branding = (cfg as any)?.branding || {};
+import { pageContentData } from '~/i18n/generated/site-data';
+import { languages as langMap, defaultLang } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+import { getPageContent, setPageContentData } from '~/i18n/page-content';
+import __pageData from '~/i18n/generated/pages/home.ts';
+
+export async function getStaticPaths() {
+  return Object.keys(langMap).map((lang) => ({
+    params: { lang },
+  }));
+}
+
+const { lang } = Astro.params;
+const L = (p: string) => `/${lang}${p || '/'}`;
+setPageContentData(__pageData);
+const page = getPageContent(lang);
+const t = (key: string) => getUiForLang(lang || defaultLang)?.[key] || '';
+
+const heroTitle = String(page?.hero?.title || SITE.name)
+  .replace(/<[^>]*>/g, ' ')
+  .replace(/\s+/g, ' ')
+  .trim();
+const truncateTo = (s: string, max: number): string => {
+  if (s.length <= max) return s;
+  const cut = s.slice(0, max);
+  const lastSpace = cut.lastIndexOf(' ');
+  return (lastSpace > max * 0.6 ? cut.slice(0, lastSpace) : cut) + '…';
+};
+const heroSubtitle = truncateTo(
+  String(page?.hero?.subtitle || SITE?.description || '')
+    .replace(/<[^>]*>/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim(),
+  155
+);
+const metadata = {
+  title: heroTitle || SITE.name,
+  description: heroSubtitle || SITE?.description,
+};
+
+interface HeroSlide {
+  image: string;
+  label: string;
+  categories: string[];
+}
+const heroImagesData = pageContentData[`${lang}/site-hero-images`] || pageContentData['en/site-hero-images'] || {};
+const heroSlides: HeroSlide[] = (heroImagesData as any)?.slides?.filter((s: any) => s?.image?.trim()) || [
+  {
+    image: 'https://assets.aquafarer.com/images/aquafarer/categories/aquafarer-rib-boat-category.webp',
+    label: 'RIB Boats',
+    categories: ['RIB'],
+  },
+  {
+    image: 'https://assets.aquafarer.com/images/aquafarer/categories/aquafarer-dinghy-category.webp',
+    label: 'Inflatable Boats',
+    categories: ['INFLATABLE'],
+  },
+  {
+    image: 'https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-cheetah-surge-1.webp',
+    label: 'SUP Boards',
+    categories: ['SUP'],
+  },
+];
+
+const topGuidesData = pageContentData[`${lang}/site-top-guides`] || pageContentData['en/site-top-guides'] || {};
+const techCardsData = pageContentData[`${lang}/site-tech-cards`] || pageContentData['en/site-tech-cards'] || {};
+const productVisualsData =
+  pageContentData[`${lang}/site-product-visuals`] || pageContentData['en/site-product-visuals'] || {};
+const useCasesData = pageContentData[`${lang}/site-use-cases`] || pageContentData['en/site-use-cases'] || {};
+const proofPointsData = pageContentData[`${lang}/site-proof-points`] || pageContentData['en/site-proof-points'] || {};
+const testimonialsData = pageContentData[`${lang}/site-testimonials`] || pageContentData['en/site-testimonials'] || {};
+const learnData = pageContentData[`${lang}/site-learning-center`] || pageContentData['en/site-learning-center'] || {};
+
+const guideRecords = getContentV2Records(lang || defaultLang);
+const topGuideSlugs = topGuidesData.guides || [
+  'cost-to-start-sup-rental-business',
+  'private-label-vs-white-label',
+  'building-resort-water-sports-center',
+];
+const homeGuides = guideRecords.filter((c) => topGuideSlugs.includes(c.slug));
+const siteBase = String(SITE.site).replace(/\/+$/, '');
+
+const defaultVisuals: Record<string, string> = {
+  'sup-explorer-11': 'https://assets.aquafarer.com/images/aquafarer/products/aquafarer-sup-allround-board.webp',
+  'airdeck-360': 'https://assets.aquafarer.com/images/aquafarer/products/aquafarer-inflatable-boat.webp',
+  'rib-330': 'https://assets.aquafarer.com/images/aquafarer/products/rib/aquafarer-rib-330-boat.webp',
+  'rib-450-patrol': 'https://assets.aquafarer.com/images/aquafarer/products/rib/aquafarer-rib-450-patrol-boat.webp',
+  'life-vest-classic': 'https://assets.aquafarer.com/images/aquafarer/products/aquafarer-life-vest-classic.webp',
+  'life-vest-pro': 'https://assets.aquafarer.com/images/aquafarer/products/aquafarer-life-vest-pro-front.webp',
+  'oars-pump-set': 'https://assets.aquafarer.com/images/aquafarer/products/aquafarer-electric-pump.webp',
+  'zb-mt350': 'https://assets.aquafarer.com/images/aquafarer/products/aquafarer-zb-mt350-inflatable-dinghy.webp',
+};
+const rawVisuals = ((productVisualsData as any)?.visuals || []) as Array<{ id: string; image: string }>;
+const yamlVisuals = Object.fromEntries(rawVisuals.map((v) => [v.id, v.image]).filter(([, img]) => img));
+const productVisuals: Record<string, string> = { ...defaultVisuals, ...yamlVisuals };
+
+const defaultUseCases = [
+  {
+    title: 'Beginner Water Sports',
+    desc: 'Stable SUP boards and kayaks for first-time users.',
+    scenario:
+      'A family visiting a lake for the weekend wants to try paddle boarding. They need stable, easy-to-launch equipment with clear safety guidance.',
+    solution:
+      'The SUP Explorer 11 provides wide-body stability for beginners. The Life Vest Classic ensures CE-certified flotation. The Dual-Action Pump inflates both boards in under 10 minutes.',
+    products: ['SUP Explorer 11', 'Life Vest Classic', 'Dual-Action Pump'],
+    img: 'https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-cheetah-surge-1.webp',
+  },
+  {
+    title: 'Outdoor Exploration',
+    desc: 'Portable kayaks and dinghies for rivers, lakes, and coastal trips.',
+    scenario:
+      'An outdoor enthusiast plans a week-long river trip and needs a boat that packs small, inflates at camp, and handles varying currents.',
+    solution:
+      'The Kayak Lite packs into a backpack and inflates in under 4 minutes. Its drop-stitch construction handles lakes, slow rivers, and coastal paddling.',
+    products: ['Inflatable Kayak Lite', 'Carbon Paddle', 'Life Vest Classic'],
+    img: 'https://assets.aquafarer.com/images/aquafarer/products/aquafarer-inflatable-boat.webp',
+  },
+  {
+    title: 'Professional Operations',
+    desc: 'Commercial-grade RIBs for tour operators and emergency response.',
+    scenario:
+      'A coastal tour operator needs a fleet of durable boats that run daily trips in varying sea conditions and meet commercial safety regulations.',
+    solution:
+      'The RIB 330 and RIB 450 Patrol use fiberglass deep-V hulls with Hypalon tubes for all-weather durability. Multiple units can be deployed with consistent performance.',
+    products: ['RIB 330', 'RIB 450 Patrol', 'Life Vest Pro'],
+    img: 'https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-leviathan-wake-1.webp',
+  },
+  {
+    title: 'Family Recreation',
+    desc: 'Spacious dinghies for day trips, fishing, and watersports.',
+    scenario:
+      'A family of four wants a stable boat for weekend lake outings, fishing trips, and towing a tube for the kids.',
+    solution:
+      'The AirDeck 360 seats up to five with a reinforced air deck floor. It inflates at the launch site, stores in the car, and handles both calm lakes and sheltered coastal waters.',
+    products: ['AirDeck 360', 'Life Vest Classic', 'Dual-Action Pump'],
+    img: 'https://assets.aquafarer.com/images/aquafarer/products/rib/aquafarer-rib-330-boat.webp',
+  },
+];
+const rawCases = ((useCasesData as any)?.cases || []) as Array<{
+  id: string;
+  title: string;
+  desc: string;
+  scenario: string;
+  solution: string;
+  products: string[];
+  image: string;
+}>;
+const useCases = rawCases.length
+  ? rawCases.map((u) => ({
+      title: u.title,
+      desc: u.desc,
+      scenario: u.scenario,
+      solution: u.solution,
+      products: u.products,
+      img: u.image,
+    }))
+  : defaultUseCases;
+
+const rawPoints = ((proofPointsData as any)?.points || []) as Array<{
+  id: string;
+  metric: string;
+  label: string;
+  detail: string;
+}>;
+const defaultProofPoints = [
+  {
+    metric: '64',
+    label: 'CE-certified models across 5 categories',
+    detail: 'RIB, Inflatable Boat, SUP Board, Safety Equipment, Accessory',
+  },
+  { metric: '50+', label: 'countries served', detail: 'Global distribution network across EU, US, ASIA' },
+  { metric: '2012', label: 'founded', detail: 'Over a decade of water sports manufacturing' },
+  {
+    metric: 'ISO',
+    label: 'CE certified per applicable EU directives',
+    detail: '64 CE-certified models meet international safety standards',
+  },
+];
+const proofPoints = rawPoints.length
+  ? rawPoints.map((p) => ({ metric: p.metric, label: p.label, detail: p.detail }))
+  : defaultProofPoints;
+
+const rawTestimonials = ((testimonialsData as any)?.testimonials || []) as Array<{
+  name: string;
+  quote: string;
+  rating: number;
+}>;
+const testimonials = [0, 1, 2]
+  .map((i) => ({
+    quote: t(`home.community.review${i + 1}`) || rawTestimonials[i]?.quote || '',
+    name: t(`home.community.review${i + 1}.author`) || rawTestimonials[i]?.name || '',
+    rating: rawTestimonials[i]?.rating || 5,
+  }))
+  .filter((x) => x.quote);
+
+const catalogCategories = [
+  { key: 'RIB', label: t('home.catalog.rib') || 'RIB Boats', desc: t('home.catalog.rib.desc') || '' },
+  {
+    key: 'INFLATABLE',
+    label: t('home.catalog.inflatable') || 'Inflatable Boats',
+    desc: t('home.catalog.inflatable.desc') || '',
+    keys: ['INFLATABLE', 'SIB_ALUMINUM', 'SIB_DROPSTITCH', 'WHITEWATER_RAFT', 'TACTICAL_RAFT'],
+  },
+  { key: 'SUP', label: t('home.catalog.sup') || 'SUP Boards', desc: t('home.catalog.sup.desc') || '' },
+  {
+    key: 'ACCESSORY',
+    label: t('home.catalog.accessory') || 'Accessories',
+    desc: t('home.catalog.accessory.desc') || '',
+    keys: ['ACCESSORY', 'DROPSTITCH_SEAT'],
+  },
+  {
+    key: 'KAYAK',
+    label: t('home.catalog.kayak') || 'Kayaks',
+    desc: '',
+    keys: ['KABOAT', 'KAYAK_FULL_DROPSTITCH', 'KAYAK_HYBRID'],
+  },
+  { key: 'CATAMARAN', label: t('home.catalog.catamaran') || 'Catamarans', desc: '', keys: ['HIGH_SPEED_CATAMARAN'] },
+];
+const localizedProducts = getLocalizedProducts(lang || defaultLang);
+const groupedProducts: Record<string, typeof localizedProducts> = {};
+for (const cat of catalogCategories) {
+  const keys: string[] = cat.keys ?? [cat.key];
+  groupedProducts[cat.key] = localizedProducts.filter((p) => keys.includes(p.category)).slice(0, 6);
+}
+
+const catLabelKeys: Record<string, string> = {
+  RIB: 'home.catalog.rib',
+  INFLATABLE: 'home.catalog.inflatable',
+  SIB_ALUMINUM: 'home.catalog.inflatable',
+  SIB_DROPSTITCH: 'home.catalog.inflatable',
+  WHITEWATER_RAFT: 'home.catalog.inflatable',
+  TACTICAL_RAFT: 'home.catalog.inflatable',
+  SUP: 'home.catalog.sup',
+  ACCESSORY: 'home.catalog.accessory',
+  DROPSTITCH_SEAT: 'home.catalog.accessory',
+  KABOAT: 'home.catalog.kayak',
+  KAYAK_FULL_DROPSTITCH: 'home.catalog.kayak',
+  KAYAK_HYBRID: 'home.catalog.kayak',
+  HIGH_SPEED_CATAMARAN: 'home.catalog.catamaran',
+};
+
+const RULE_L10N_KEYS: Record<string, string> = {
+  'CE certified per EN ISO 12402': 'ceEnIso',
+  'all crew in PFDs at all times': 'crewPfds',
+  'carry VHF radio for coastal touring': 'vhfCoastal',
+  'check mounting straps for wear': 'checkStraps',
+  'check weather before departure': 'weatherDeparture',
+  'check weather before paddling': 'weatherPaddling',
+  'communications check before departure': 'commsCheck',
+  'crew must be trained': 'crewTrained',
+  'daily safety inspection required': 'dailyInspection',
+  'distribute load evenly': 'distributeLoad',
+  'do not exceed max load': 'maxLoad',
+  'do not exceed max pressure rating': 'maxPressure',
+  'do not exceed weight rating': 'weightRating',
+  'emergency beacon required for sea operations': 'beaconSea',
+  'emergency kit required': 'emergencyKit',
+  'engine kill switch required': 'killSwitch',
+  'ensure pump is properly connected before use': 'pumpConnected',
+  'guide certification mandatory': 'guideCertMandatory',
+  'guide must be certified': 'guideCertified',
+  'helmets required for all occupants': 'helmets',
+  'leash recommended': 'leashRecommended',
+  'leash recommended in wind': 'leashWind',
+  'leash required': 'leashRequired',
+  'life vest recommended': 'vestRecommended',
+  'life vest required': 'vestRequired',
+  'life vest required for all occupants': 'vestOccupants',
+  'life vest required for all passengers': 'vestPassengers',
+  'professional crew recommended': 'proCrew',
+  'secure all gear for capsize recovery': 'secureGear',
+  'secure seat before use': 'secureSeat',
+  'spray skirt recommended for cold water': 'spraySkirt',
+  'throw rope accessible at all times': 'throwRope',
+  'VHF radio recommended': 'vhfRecommended',
+  'VHF radio required': 'vhfRequired',
+};
+const localizeRule = (rule: string): string => t(`home.rules.${RULE_L10N_KEYS[rule] || ''}`) || rule;
+
+const boards = [
+  {
+    label: t('home.boards.allAround') || 'All-Around',
+    desc: t('home.boards.allAround.desc') || 'Versatile SUP boards for paddlers of all skill levels.',
+    img: 'https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-cheetah-surge-1.webp',
+  },
+  {
+    label: t('home.boards.touringSup') || 'Touring SUP',
+    desc: t('home.boards.touringSup.desc') || 'Long-distance boards for exploration and adventure.',
+    img: 'https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-ocean-voyager-1.webp',
+  },
+  {
+    label: t('home.boards.ultraCompact') || 'Ultra-Compact',
+    desc: t('home.boards.ultraCompact.desc') || 'Short, portable boards for easy travel and storage.',
+    img: 'https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-tropical-breeze-1.webp',
+  },
+  {
+    label: t('home.boards.ultraStable') || 'Ultra-Stable',
+    desc: t('home.boards.ultraStable.desc') || 'Extra-wide platforms for maximum balance and confidence.',
+    img: 'https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-leviathan-wake-1.webp',
+  },
+  {
+    label: t('home.boards.whitewater') || 'Whitewater',
+    desc: t('home.boards.whitewater.desc') || 'Rugged boards engineered for river rapids.',
+    img: 'https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-dolphin-wave-1.webp',
+  },
+  {
+    label: t('home.boards.sports') || 'Sports',
+    desc: t('home.boards.sports.desc') || 'Performance boards for racing and athletic paddling.',
+    img: 'https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-ocean-pulse-1.webp',
+  },
+  {
+    label: t('home.boards.yoga') || 'Yoga',
+    desc: t('home.boards.yoga.desc') || 'Spacious decks designed for yoga and fitness.',
+    img: 'https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-flowing-lotus-1.webp',
+  },
+  {
+    label: t('home.boards.surf') || 'Surf',
+    desc: t('home.boards.surf.desc') || 'Agile boards for catching waves and surf riding.',
+    img: 'https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-jungle-mandala-1.webp',
+  },
+  {
+    label: t('home.boards.kidsSups') || 'Kids SUPs',
+    desc: t('home.boards.kidsSups.desc') || 'Smaller, lighter boards designed for children.',
+    img: 'https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-medusa-glow-1.webp',
+  },
+];
+
+const researchCards = [
+  {
+    href: L('/research/drop-stitch-technology'),
+    category: t('home.research.cat.technology') || 'Technology',
+    title: t('home.research.dropStitch') || 'How Drop Stitch Works',
+    desc:
+      t('home.research.dropStitch.desc') ||
+      'The engineering behind thousands of internal threads that transform flexible PVC into a rigid high-pressure core.',
+  },
+  {
+    href: L('/research/pvc-vs-hypalon'),
+    category: t('home.research.cat.materials') || 'Materials',
+    title: t('home.research.pvcHypalon') || 'PVC vs Hypalon',
+    desc:
+      t('home.research.pvcHypalon.desc') ||
+      'Technical comparison of durability, UV resistance, repairability, weight, and cost.',
+  },
+  {
+    href: L('/research/ce-certification-guide'),
+    category: t('home.research.cat.compliance') || 'Compliance',
+    title: t('home.research.ceCertification') || 'How CE Certification Works',
+    desc:
+      t('home.research.ceCertification.desc') ||
+      'Full CE certification process for inflatable watercraft: directives, testing, notified bodies.',
+  },
+  {
+    href: L('/research/sup-thickness-guide'),
+    category: t('home.research.cat.engineering') || 'Engineering',
+    title: t('home.research.supThickness') || 'How to Choose SUP Thickness',
+    desc:
+      t('home.research.supThickness.desc') ||
+      'How board thickness affects rigidity, weight, stability, tracking, and performance.',
+  },
+  {
+    href: L('/research/oem-buyer-guide'),
+    category: t('home.research.cat.sourcing') || 'Sourcing',
+    title: t('home.research.oemBuyer') || 'OEM Buyer Guide',
+    desc:
+      t('home.research.oemBuyer.desc') ||
+      'Comprehensive guide for sourcing inflatable watercraft from Asian manufacturers.',
+  },
+];
+
+const customerTypes = page.content_customer_types ?? {};
+const defaultWhoItems = [
+  {
+    title: 'Water Sports Clubs',
+    description:
+      'Start or upgrade your SUP club, kayak club, surf school or training center with complete equipment packages and support.',
+    icon: '&#127754;',
+    cta: 'Build My Club Package &rarr;',
+    href: '/solutions/clubs',
+  },
+  {
+    title: 'Resorts & Hotels',
+    description:
+      'Create a premium waterfront guest experience with rental fleets, safety systems, custom branding, and staff training programs.',
+    icon: '&#127796;',
+    cta: 'Design My Resort Solution &rarr;',
+    href: '/solutions/resorts',
+  },
+  {
+    title: 'Rental Business',
+    description:
+      'Build a profitable water sports rental operation with commercial-grade fleets, fleet management support, and zero storage cost.',
+    icon: '&#128176;',
+    cta: 'Start Rental Fleet &rarr;',
+    href: '/solutions/rental-business',
+  },
+  {
+    title: 'Water Brand Entrepreneurs',
+    description:
+      'Launch your own water sports brand with private label manufacturing, custom design, packaging, and low MOQs for startups.',
+    icon: '&#127775;',
+    cta: 'Launch My Brand &rarr;',
+    href: '/solutions/entrepreneurs',
+  },
+];
+interface WhoItem {
+  title: string;
+  description: string;
+  icon: string;
+  cta: string;
+  href: string;
+}
+const whoItems: WhoItem[] = customerTypes?.items?.length
+  ? customerTypes.items.map((it: any) => ({
+      title: it.title,
+      description: it.description,
+      icon: it.icon || '&#127754;',
+      cta: it.cta || t('cta.requestQuote') || 'Learn more',
+      href: it.cta_href || '/contact',
+    }))
+  : defaultWhoItems;
+
+interface FaqItem {
+  q: string;
+  a: string;
+  category?: string;
+}
+const defaultFaqItems: FaqItem[] = [
+  {
+    q: 'What is the difference between a RIB and an inflatable boat?',
+    a: 'A RIB (Rigid Inflatable Boat) combines a solid fiberglass or aluminum hull with inflatable tubes, offering superior handling in rough water. An inflatable boat has a fully flexible hull made entirely of PVC or Hypalon tubes — lighter and more portable but less capable in challenging conditions.',
+    category: 'rib',
+  },
+  {
+    q: 'What size engine do I need for a RIB?',
+    a: "Engine size depends on your RIB length and intended use. A 3.3 m RIB typically handles 15–20 HP for recreation. A 4.5 m patrol RIB needs 40–60 HP for planing speeds. Always check the manufacturer's max engine rating — exceeding it voids warranty and safety certification.",
+    category: 'rib',
+  },
+  {
+    q: 'Are RIBs suitable for beginners?',
+    a: 'Smaller RIBs (2.5–3.3 m) with 10–20 HP engines are suitable for beginners in calm waters. Larger RIBs require boating experience due to higher speeds and handling characteristics. We recommend starting with an inflatable dinghy if you are new to boating.',
+    category: 'rib',
+  },
+  {
+    q: 'How do I maintain Hypalon tubes on my RIB?',
+    a: 'Hypalon tubes require minimal maintenance. Rinse with fresh water after saltwater use, avoid prolonged UV exposure when deflated, and clean with mild soap and water. Hypalon naturally resists UV and ozone degradation, lasting 15–20+ years with proper care.',
+    category: 'rib',
+  },
+  {
+    q: 'How long do inflatable boats last?',
+    a: 'PVC inflatable boats last 8–12 years with proper care. Hypalon boats can last 15–20+ years. Key factors: UV exposure, storage conditions (inflated vs deflated), frequency of use, and maintenance. Proper inflation, fresh water rinsing, and avoiding sharp objects extend lifespan significantly.',
+    category: 'inflatable',
+  },
+  {
+    q: 'Can I leave my inflatable boat inflated all season?',
+    a: 'Yes, but with precautions. Inflate to the rated pressure and check weekly as temperature changes affect pressure. UV exposure is the main enemy — use a cover if storing outdoors. Partially deflate and store indoors during extended idle periods for maximum tube life.',
+    category: 'inflatable',
+  },
+  {
+    q: 'What maintenance do inflatable boats need?',
+    a: 'Basic maintenance: rinse with fresh water after each use, dry thoroughly before storage, check for leaks at seams and valves, lubricate valves yearly with silicone grease, and store in a cool dry place. Avoid dragging on concrete — use a launching trolley when possible.',
+    category: 'inflatable',
+  },
+  {
+    q: 'Can inflatable boats be repaired?',
+    a: 'Yes. Small punctures and seam leaks can be repaired with a PVC repair kit — clean the area, apply adhesive, patch, and roll out air bubbles. Larger damage may require professional repair. Hypalon requires two-part adhesive and more careful preparation.',
+    category: 'inflatable',
+  },
+  {
+    q: 'Is SUP hard to learn?',
+    a: 'Not at all. Most beginners stand up and paddle within their first session. Our All-Around SUP series features extra-wide stable platforms designed specifically for first-time paddlers. Start on calm water and you will be cruising in minutes.',
+    category: 'sup',
+  },
+  {
+    q: 'What is the weight limit?',
+    a: 'Our All-Around SUPs support up to 220 lbs. The Touring and Yoga series support up to 250 lbs. For tandem use or heavier loads, our Kayak and Dinghy products offer higher capacity options.',
+    category: 'sup',
+  },
+  {
+    q: 'Can I travel with an inflatable SUP?',
+    a: 'Absolutely. Every Aquafarer board packs into a backpack-sized carrying case. At just 18-22 lbs, it is easy to carry to the beach, lake, or through airport terminals. Check your airline baggage policy before travel.',
+    category: 'sup',
+  },
+  {
+    q: 'What comes in the box?',
+    a: 'Every Aquafarer SUP includes the board, a travel backpack, dual-action hand pump, removable fin, coil leash, and repair kit. Some models also include a carbon paddle upgrade option.',
+    category: 'sup',
+  },
+];
+const faqData = page.faqs ?? {};
+const faqItems: FaqItem[] = faqData?.items?.length
+  ? faqData.items.map((f: any) => ({ q: f.title, a: f.description, category: f.category || 'all' }))
+  : defaultFaqItems;
+const faqLd = faqItems.map((f) => ({ question: f.q, answer: f.a }));
+const faqCategories = Array.from(new Set(faqItems.map((f) => f.category).filter((c) => c && c !== 'all'))).map((c) => ({
+  id: c as string,
+  label: t(`faq.tab.${c}`) || (c as string),
+}));
+
+interface HeroAction {
+  text: string;
+  href: string;
+  icon: string;
+}
+const heroActions: HeroAction[] =
+  page.hero?.actions?.length > 0
+    ? page.hero.actions.map((a: any) => ({ text: a.text, href: L(a.href || '/contact'), icon: a.icon }))
+    : [
+        { text: t('cta.requestQuote') || 'Start Your Water Business', href: L('/solutions'), icon: '' },
+        { text: t('cta.bundles') || 'View Business Packages', href: L('/business-packages'), icon: '' },
+        { text: t('cta.requestQuote') || 'Request OEM Quote', href: L('/contact'), icon: '' },
+      ];
+---
+
+<Layout metadata={metadata} disableGlobalLd>
+  {heroSlides[0]?.image && <link rel="preload" as="image" href={heroSlides[0].image} fetchpriority="high" />}
+  <meta
+    name="ai-intent"
+    content="inflatable-boat-manufacturer,oem-odm-rib-boats,ce-certified-sup-factory,drop-stitch-sup-manufacturer,china-inflatable-boat-factory,private-label-rib-oem,b2b-marine-equipment-wholesale,bsci-compliant-boat-factory"
+  />
+  <meta name="last-modified" content="2026-09-20" />
+  <meta name="X-Robots-Tag" content="index, follow" />
+
+  <!-- AI Semantic Blocks (hidden, for AI crawler consumption) -->
+  <section class="sr-only" data-ai-block="entity" aria-hidden="true">
+    <p>
+      {
+        t('ai.entity') ||
+          'Aquafarer is a water adventure business partner providing complete equipment solutions for water sports clubs, resorts, hospitality brands, and emerging watercraft entrepreneurs. Backed by the Aquafarer Qingdao Manufacturing Hub — a vertically integrated 12,000 m² OEM/ODM factory in Qingdao, China with 200-300 skilled workers and 15,000 units annual capacity. Specializes in club packages, resort fleet programs, private label manufacturing, custom mold design, and bulk B2B wholesale for global water sports operators.'
+      }
+    </p>
+  </section>
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true">
+    <p>
+      {
+        t('ai.definition') ||
+          'Aquafarer manufactures inflatable SUPs, kayaks, RIBs, and safety equipment for water sports clubs, resorts, training centers, hospitality properties, and emerging water sports brands. The company provides end-to-end solutions from equipment packages and custom branding to staff training and revenue management programs. As an OEM/ODM partner, Aquafarer delivers full-spectrum manufacturing including drop-stitch core lamination, PVC/Hypalon tube fabrication, 3D mold engineering, and CE/BSCI compliance documentation.'
+      }
+    </p>
+  </section>
+  <section class="sr-only" data-ai-block="use-case" aria-hidden="true">
+    <p>
+      {
+        t('ai.useCase') ||
+          'Aquafarer products and programs serve water sports clubs launching rental operations, resorts creating guest waterfront experiences, entrepreneurs building their own water sports brands, as well as beginner SUP training, long-distance touring, family recreation, professional marine patrol, and water safety programs.'
+      }
+    </p>
+  </section>
+  <section class="sr-only" data-ai-block="comparison" aria-hidden="true">
+    <p>
+      {
+        t('ai.comparison') ||
+          'Compared to rigid hard-board watercraft, Aquafarer inflatable products prioritize portability, storage convenience, and impact absorption while maintaining rigidity through drop-stitch core technology at 12-15 PSI.'
+      }
+    </p>
+  </section>
+  <section class="sr-only" data-ai-block="constraint" aria-hidden="true">
+    <p>
+      {
+        t('ai.constraint') ||
+          'Aquafarer products are designed for training, recreation, and professional marine operations. Not designed for professional competition surfing, high-speed ocean racing, or extreme sports competitions.'
+      }
+    </p>
+  </section>
+  <section class="sr-only" data-ai-block="process" aria-hidden="true">
+    <p>
+      {
+        t('ai.process') ||
+          "Aquafarer's OEM/ODM process: (1) Specification & design brief, (2) 3D mold prototyping, (3) Material selection and sample production, (4) CE factory audit and compliance, (5) Bulk production with inline QC testing, (6) FOB Qingdao logistics and global shipping. MOQ starts at 5–10 units (SUP/kayak), 2–5 units (RIB). Custom mold: negotiable."
+      }
+    </p>
+  </section>
+
+  <!-- Hero: Bright Ocean Pro v3 -->
+  <section
+    class="relative min-h-[90vh] flex items-center overflow-hidden"
+    style="background: linear-gradient(135deg, #06b6d4, #22d3ee);"
+  >
+    <!-- Carousel background images -->
+    {
+      heroSlides.map((slide, _i) => (
+        <div
+          data-carousel-slide
+          class="absolute inset-0 transition-opacity duration-700 ease-in-out {_i === 0 ? 'opacity-100' : 'opacity-0'}"
+        >
+          <img
+            src={slide.image}
+            alt={slide.label || 'Aquafarer workshop'}
+            class="w-full h-full object-cover"
+            width="1600"
+            height="900"
+            loading={_i === 0 ? 'eager' : 'lazy'}
+            fetchpriority={_i === 0 ? 'high' : 'auto'}
+          />
+          <div
+            class="absolute inset-0"
+            style="background: linear-gradient(135deg, rgba(6,182,212,0.75), rgba(34,211,238,0.55));"
+          />
+        </div>
+      ))
+    }
+    <!-- Wave animation SVG -->
+    <div class="absolute bottom-0 left-0 right-0 h-24 md:h-32 z-10">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none" class="w-full h-full">
+        <path
+          d="M0,40 C360,120 720,0 1080,80 C1260,120 1350,60 1440,40 L1440,120 L0,120 Z"
+          fill="#f8fafc"
+          opacity="0.15"></path>
+        <path
+          d="M0,60 C240,20 480,100 720,60 C960,20 1200,100 1440,60 L1440,120 L0,120 Z"
+          fill="#f8fafc"
+          opacity="0.1"
+          style="animation: waveMove 6s ease-in-out infinite alternate;"></path>
+      </svg>
+    </div>
+    <!-- Floating glow orbs -->
+    <div class="absolute top-20 left-10 w-72 h-72 rounded-full bg-white/5 blur-3xl"></div>
+    <div class="absolute bottom-20 right-10 w-96 h-96 rounded-full bg-cyan-300/10 blur-3xl"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-6 w-full">
+      <div class="flex items-center gap-12">
+        <div class="flex-1 text-center md:text-left">
+          <div class="reveal">
+            <span class="inline-block text-xs font-medium tracking-[0.2em] uppercase text-white/70 mb-4"
+              >{
+                page.hero?.tagline ||
+                  t('hero.taglineSection') ||
+                  'Your Water Adventure Business Partner · Qingdao · Since 2012'
+              }</span
+            >
+            <h1
+              class="text-5xl md:text-7xl font-bold tracking-tight leading-[1.1] text-balance text-white drop-shadow-xl"
+              set:html={page.hero?.title ||
+                'RIB Boats, Inflatable Boats <br class="hidden md:block" /> &amp; SUP Boards — OEM/ODM Manufacturer Since 2012'}
+            />
+            <p
+              class="mt-6 text-lg md:text-xl text-white/85 max-w-xl text-pretty leading-relaxed"
+              set:html={page.hero?.subtitle ||
+                `<strong class="text-white font-semibold">Aquafarer</strong> — RIB boat, inflatable boat and SUP board manufacturer with full OEM/ODM capability.<br /> From factory-direct production to complete solutions<br /> for clubs, resorts and emerging brands. CE certified per applicable EU directives. Global shipping.`}
+            />
+            <div class="mt-10 flex items-center gap-4 flex-wrap justify-center md:justify-start">
+              {
+                heroActions.map((action, i) =>
+                  i < 2 ? (
+                    <a
+                      href={action.href}
+                      class:list={[
+                        'inline-flex items-center gap-2 rounded-full font-semibold transition-all',
+                        i === 0
+                          ? 'px-8 py-4 bg-[#fb923c] hover:bg-orange-600 text-white shadow-lg hover:shadow-xl hover:-translate-y-0.5'
+                          : 'px-8 py-4 border-2 border-white/40 text-white font-medium hover:bg-white/10 backdrop-blur-sm',
+                      ]}
+                    >
+                      {action.icon && <Icon name={action.icon} class="w-5 h-5" />}
+                      {action.text}
+                      {i === 0 && <span>→</span>}
+                    </a>
+                  ) : (
+                    <a
+                      href={action.href}
+                      class="inline-flex items-center gap-2 px-6 py-3 border border-white/30 text-white/80 text-sm font-medium rounded-full hover:bg-white/10 transition-all backdrop-blur-sm"
+                    >
+                      {action.icon && <Icon name={action.icon} class="w-5 h-5" />}
+                      {action.text}
+                    </a>
+                  )
+                )
+              }
+            </div>
+          </div>
+        </div>
+        <div class="hidden lg:block flex-1">
+          <div class="relative">
+            <img
+              src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-ocean-voyager-1.webp"
+              alt={page.hero?.image?.alt || 'SUP Ocean Voyager'}
+              class="w-full max-w-md mx-auto object-contain drop-shadow-2xl"
+              style="filter: drop-shadow(0 20px 60px rgba(0,0,0,0.2)); animation: floatBoard 4s ease-in-out infinite;"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Carousel dots -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-3">
+      {
+        heroSlides.map((_, _i) => (
+          <button
+            data-carousel-dot
+            class="w-2.5 h-2.5 rounded-full transition-all duration-300 border border-white/50 {_i === 0 ? 'bg-white scale-125' : 'bg-transparent'}"
+          />
+        ))
+      }
+    </div>
+  </section>
+  <!-- Quick Answer -->
+  <section class="max-w-6xl mx-auto px-6 pt-8">
+    <AiQuickAnswer
+      quickAnswer={t('ai.quickAnswer') ||
+        'Aquafarer is a Chinese manufacturer of RIB boats, inflatable boats, and SUP boards. Founded in 2012 in Qingdao, China, the company runs ISO 9001:2015 certified production with full OEM/ODM capability, serving B2B buyers, brands, and professional operators across 50+ countries.'}
+      facts={[
+        { label: t('ai.fact.industry') || 'Industry', value: t('ai.fact.industry.value') || 'Marine Manufacturing' },
+        {
+          label: t('ai.fact.products') || 'Products',
+          value: t('ai.fact.products.value') || 'RIB Boats, Inflatable Boats, SUP Boards',
+        },
+        {
+          label: t('ai.fact.applications') || 'Applications',
+          value: t('ai.fact.applications.value') || 'Tender, Fishing, Rescue, Rental Business',
+        },
+        {
+          label: t('ai.fact.manufacturing') || 'Manufacturing',
+          value: t('ai.fact.manufacturing.value') || 'OEM/ODM, CE & 15,000 units/year',
+        },
+      ]}
+    />
+  </section>
+
+  <!-- Trust Bar - Certifications & Stats -->
+  <section class="border-b border-gray-100 bg-white py-6 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex flex-wrap items-center justify-center gap-3 mb-4">
+        <span
+          class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-green-50 border border-green-200 rounded-full text-xs font-semibold text-green-700"
+          >&#10003; {t('home.badges.ce') || 'CE Certified (TÜV Rheinland)'}</span
+        >
+        <span
+          class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-50 border border-blue-200 rounded-full text-xs font-semibold text-blue-700"
+          >&#10003; {t('home.badges.iso') || 'ISO 9001:2015 (SGS)'}</span
+        >
+        <span
+          class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-purple-50 border border-purple-200 rounded-full text-xs font-semibold text-purple-700"
+          >&#10003; {t('home.badges.bsci') || 'BSCI Verified (Intertek)'}</span
+        >
+        <span
+          class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-amber-50 border border-amber-200 rounded-full text-xs font-semibold text-amber-700"
+          >&#10003; {t('home.badges.ukca') || 'UKCA Marked'}</span
+        >
+        <span
+          class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-cyan-50 border border-cyan-200 rounded-full text-xs font-semibold text-cyan-700"
+          >&#10003; {t('home.badges.reach') || 'REACH & RoHS'}</span
+        >
+        <span
+          class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-rose-50 border border-rose-200 rounded-full text-xs font-semibold text-rose-700"
+          >&#10003; {t('home.badges.warranty') || '5-Year Boat Warranty'}</span
+        >
+      </div>
+      <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-1 text-xs text-gray-400">
+        <span>12,000 m² {t('home.factory.floor') || 'Factory'}</span>
+        <span>&middot;</span>
+        <span>200-300 {t('home.factory.workers') || 'Workforce'}</span>
+        <span>&middot;</span>
+        <span>15,000 {t('home.factory.units') || 'Annual Capacity'}</span>
+        <span>&middot;</span>
+        <span>50+ {t('home.factory.countries') || 'Countries Served'}</span>
+        <span>&middot;</span>
+        <span>99.3% {t('home.factory.defectFree') || 'Defect-Free Rate (per internal QC sampling, AQL 2.5)'}</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Top Guides (SEO Entry) -->
+  <section class="max-w-6xl mx-auto py-12 px-6">
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <span class="text-sm font-medium text-sky-600 tracking-wide uppercase"
+        >{t('home.guides.badge') || topGuidesData.badge || 'Top Guides'}</span
+      >
+      <h2 class="mt-4 text-4xl font-semibold text-gray-900">
+        {t('home.guides.title') || topGuidesData.heading || 'Start here before you buy'}
+      </h2>
+      <p class="mt-4 text-lg text-gray-500">
+        {
+          t('home.guides.subtitle') ||
+            topGuidesData.description ||
+            'Three beginner guides that cover the essentials — surfboard selection, wetsuit fit, and your first session.'
+        }
+      </p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {
+        homeGuides.map((c) => (
+          <a
+            href={L(`/v2/${c.slug}`)}
+            class="group block bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-all hover:-translate-y-0.5"
+          >
+            <span class="text-xs font-semibold uppercase tracking-wider text-sky-600">{c.type.replace('-', ' ')}</span>
+            <h3 class="mt-3 text-xl font-semibold text-gray-900 group-hover:text-sky-700 transition-colors">
+              {c.title}
+            </h3>
+            <p class="mt-2 text-sm text-gray-500 line-clamp-2">{c.description}</p>
+            <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-sky-600 group-hover:text-sky-700">
+              {t('home.guides.read') || 'Read guide →'}
+            </span>
+          </a>
+        ))
+      }
+    </div>
+    <div class="mt-8 text-center">
+      <a href={L(topGuidesData.browseHref || '/v2')} class="text-sm font-medium text-sky-600 hover:text-sky-700"
+        >{t('home.guides.browse') || topGuidesData.browseText || 'Browse all 20 guides and comparisons →'}</a
+      >
+    </div>
+  </section>
+
+  <!-- Latest Research -->
+  <section class="bg-white py-12 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-sm font-medium text-sky-600 tracking-wide uppercase"
+          >{t('home.research.tagline') || 'Latest Research'}</span
+        >
+        <h2 class="mt-4 text-4xl font-semibold text-gray-900">{t('home.research.title') || 'Knowledge Center'}</h2>
+        <p class="mt-4 text-lg text-gray-500">
+          {
+            t('home.research.subtitle') ||
+              'In-depth technical research on inflatable watercraft materials, construction, safety standards, and manufacturing — written for engineers, buyers, and informed enthusiasts.'
+          }
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        {
+          researchCards.map((card) => (
+            <a
+              href={card.href}
+              class="group bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all"
+            >
+              <span class="text-xs font-semibold text-sky-600 uppercase tracking-wide">{card.category}</span>
+              <h3 class="mt-3 text-base font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">
+                {card.title}
+              </h3>
+              <p class="mt-1 text-xs text-gray-500 line-clamp-2">{card.desc}</p>
+            </a>
+          ))
+        }
+      </div>
+      <div class="mt-8 text-center">
+        <a href={L('/research')} class="text-sm font-medium text-sky-600 hover:text-sky-700"
+          >{t('home.research.browse') || 'View all research &rarr;'}</a
+        >
+      </div>
+    </div>
+  </section>
+
+  <!-- Evidence -->
+  <section class="bg-white py-12 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-sm font-medium text-sky-600 tracking-wide uppercase"
+          >{t('home.evidence.tagline') || 'Proof & Results'}</span
+        >
+        <h2 class="mt-4 text-4xl font-semibold text-gray-900">{t('home.evidence.title') || 'Evidence'}</h2>
+        <p class="mt-4 text-lg text-gray-500">
+          {
+            t('home.evidence.subtitle') ||
+              'Real case studies, certifications, test data, and deployment photos that demonstrate our manufacturing capability and product quality.'
+          }
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <a
+          href={L('/evidence')}
+          class="group bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all flex flex-col"
+        >
+          <div class="text-3xl mb-3">&#128203;</div>
+          <h3 class="text-base font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">
+            {t('home.evidence.caseStudies') || 'Case Studies'}
+          </h3>
+          <p class="mt-1 text-xs text-gray-500 line-clamp-2 flex-1">
+            {
+              t('home.evidence.caseStudies.desc') ||
+                'Real OEM partnerships: retail private-label, startup drop-stitch kayak, Australian RIB distributor — with measurable outcomes.'
+            }
+          </p>
+          <span class="mt-3 text-xs font-medium text-sky-600"
+            >{t('home.evidence.read') || 'View case studies &rarr;'}</span
+          >
+        </a>
+        <a
+          href={L('/evidence')}
+          class="group bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all flex flex-col"
+        >
+          <div class="text-3xl mb-3">&#9989;</div>
+          <h3 class="text-base font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">
+            {t('home.evidence.certifications') || 'Certifications'}
+          </h3>
+          <p class="mt-1 text-xs text-gray-500 line-clamp-2 flex-1">
+            {
+              t('home.evidence.certifications.desc') ||
+                'CE, ISO 9001, BSCI, REACH, RoHS, AS 1799 — certifications covering our 64 CE-certified models, factory quality system, and material compliance for global markets.'
+            }
+          </p>
+          <span class="mt-3 text-xs font-medium text-sky-600"
+            >{t('home.evidence.read') || 'View certifications &rarr;'}</span
+          >
+        </a>
+        <a
+          href={L('/evidence')}
+          class="group bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all flex flex-col"
+        >
+          <div class="text-3xl mb-3">&#128202;</div>
+          <h3 class="text-base font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">
+            {t('home.evidence.testResults') || 'Test Results'}
+          </h3>
+          <p class="mt-1 text-xs text-gray-500 line-clamp-2 flex-1">
+            {
+              t('home.evidence.testResults.desc') ||
+                '100% pressure-tested. AQL 2.5. 24-48h hold at 1.25x rated pressure. Zero tolerance on safety defects.'
+            }
+          </p>
+          <span class="mt-3 text-xs font-medium text-sky-600">{t('home.evidence.read') || 'View test data &rarr;'}</span
+          >
+        </a>
+      </div>
+      <div class="mt-8 text-center">
+        <a href={L('/evidence')} class="text-sm font-medium text-sky-600 hover:text-sky-700"
+          >{t('home.evidence.browse') || 'View all evidence &rarr;'}</a
+        >
+      </div>
+    </div>
+  </section>
+
+  <!-- Brand Philosophy -->
+  <section class="max-w-6xl mx-auto py-12 px-6" id="philosophy">
+    <Tldr
+      summary={t('home.tldr.summary') ||
+        'Aquafarer designs and manufactures inflatable watercraft and safety equipment for controlled water environments — lakes, sheltered bays, rivers, training facilities, and coastal waters. Founded in 2012, with 64 CE-certified models per applicable EU directives, built from marine-grade PVC or Hypalon with drop-stitch construction.'}
+      points={[
+        t('home.tldr.point1') ||
+          '64 CE-certified models across 5 categories: RIB, Inflatable Boat, SUP Board, Safety Equipment, Accessory',
+        t('home.tldr.point2') || 'Serves recreational, commercial, and professional users in 50+ countries',
+        t('home.tldr.point3') ||
+          'All products rated for specific skill levels, water conditions, and safety requirements',
+      ]}
+    />
+    <div class="mt-16 grid md:grid-cols-3 gap-8">
+      <div class="bg-white border border-gray-200 rounded-2xl hover:shadow-md transition-shadow overflow-hidden">
+        <div
+          class="h-36 bg-cover bg-center"
+          style="background-image: url('https://assets.aquafarer.com/images/aquafarer/hero/aquafarer-hero-design-concept.webp')"
+        >
+        </div>
+        <div class="p-6">
+          <h3 class="text-lg font-semibold text-gray-900">
+            {t('home.philosophy.env.title') || 'Environment-First Design'}
+          </h3>
+          <p class="mt-3 text-gray-500 text-sm leading-relaxed">
+            {
+              t('home.philosophy.env.desc') ||
+                'Every product is rated for specific water conditions — calm, moderate, or challenging — with clear safety guidelines. No universal claims. Just honest, test-verified capability.'
+            }
+          </p>
+        </div>
+      </div>
+      <div class="bg-white border border-gray-200 rounded-2xl hover:shadow-md transition-shadow overflow-hidden">
+        <div
+          class="h-36 bg-cover bg-center"
+          style="background-image: url('https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-medusa-glow-1.webp')"
+        >
+        </div>
+        <div class="p-6">
+          <h3 class="text-lg font-semibold text-gray-900">
+            {t('home.philosophy.skill.title') || 'Controlled-Skill Progression'}
+          </h3>
+          <p class="mt-3 text-gray-500 text-sm leading-relaxed">
+            {
+              t('home.philosophy.skill.desc') ||
+                'Products organized by skill — beginner, intermediate, advanced — so every user finds the right platform for their ability. Training wheels to professional tools, all within one system.'
+            }
+          </p>
+        </div>
+      </div>
+      <div class="bg-white border border-gray-200 rounded-2xl hover:shadow-md transition-shadow overflow-hidden">
+        <div
+          class="h-36 bg-cover bg-center"
+          style="background-image: url('https://assets.aquafarer.com/images/aquafarer/categories/aquafarer-rescue-operations.webp')"
+        >
+        </div>
+        <div class="p-6">
+          <h3 class="text-lg font-semibold text-gray-900">
+            {t('home.philosophy.safety.title') || 'Safety-as-Standard'}
+          </h3>
+          <p class="mt-3 text-gray-500 text-sm leading-relaxed">
+            {
+              t('home.philosophy.safety.desc') ||
+                'CE certification is not optional. Every vessel undergoes pressure, buoyancy, and load testing. Safety rules are embedded in every product spec, not buried in fine print.'
+            }
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem →Solution -->
+  <section class="bg-gray-50 py-12 px-6" id="problem">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-sm font-medium text-sky-600 tracking-wide uppercase"
+          >{t('home.problem.tagline') || 'The challenge'}</span
+        >
+        <h2 class="mt-4 text-4xl font-semibold text-gray-900">
+          {t('home.problem.title') || 'Water sports equipment is rarely matched to the user'}
+        </h2>
+        <p class="mt-4 text-lg text-gray-500">
+          {
+            t('home.problem.subtitle') ||
+              'Most gear is built for either extreme performance or budget recreation. Little exists for the middle ground — controlled, safe, skill-building water experiences where the equipment matches both the environment and the user\u2019s ability.'
+          }
+        </p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-2xl border border-gray-200 hover:shadow-md transition-shadow overflow-hidden">
+          <div
+            class="h-36 bg-cover bg-center"
+            style="background-image: url('https://assets.aquafarer.com/images/aquafarer/hero/factory-gate.webp')"
+          >
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-semibold text-gray-900">
+              {t('home.problem.wrongGear') || 'Wrong gear for the water'}
+            </h3>
+            <p class="mt-3 text-gray-500 text-sm leading-relaxed">
+              {
+                t('home.problem.wrongGear.desc') ||
+                  'A beginner\u2019s board taken into open chop. A touring kayak used for whitewater. Equipment pushed beyond its design envelope leads to unsafe situations and poor experiences.'
+              }
+            </p>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 hover:shadow-md transition-shadow overflow-hidden">
+          <div
+            class="h-36 bg-cover bg-center"
+            style="background-image: url('https://assets.aquafarer.com/images/aquafarer/categories/aquafarer-accessories-category.webp')"
+          >
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-semibold text-gray-900">
+              {t('home.problem.oneSize') || 'One-size-fits-none ratings'}
+            </h3>
+            <p class="mt-3 text-gray-500 text-sm leading-relaxed">
+              {
+                t('home.problem.oneSize.desc') ||
+                  'Most brands label everything "for all skill levels." Without clear water condition ratings and safety guidance, users cannot make informed decisions about what is safe for their environment.'
+              }
+            </p>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 hover:shadow-md transition-shadow overflow-hidden">
+          <div
+            class="h-36 bg-cover bg-center"
+            style="background-image: url('https://assets.aquafarer.com/images/aquafarer/categories/aquafarer-rib-boat-category.webp')"
+          >
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-semibold text-gray-900">
+              {t('home.problem.solution.title') || 'How Aquafarer solves this'}
+            </h3>
+            <p class="mt-3 text-gray-500 text-sm leading-relaxed">
+              {
+                t('home.problem.solution.desc') ||
+                  'Every product specifies skill level, water conditions, safety rules, and environment suitability. The right gear for the right user in the right water, every time.'
+              }
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who We Help -->
+  <section class="max-w-7xl mx-auto py-16 px-6" id="who-we-help" data-ai-block="audience">
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <span class="text-sm font-medium text-sky-600 tracking-wide uppercase"
+        >{t('home.whoWeHelp.tagline') || 'Who We Help'}</span
+      >
+      <h2 class="mt-4 text-4xl font-semibold text-gray-900">
+        {t('home.whoWeHelp.title') || 'Build Your Water Business With Aquafarer'}
+      </h2>
+      <p class="mt-4 text-lg text-gray-500">
+        {
+          t('home.whoWeHelp.subtitle') ||
+            'Complete solutions for water sports clubs, resorts, rental operators, and emerging brands — from equipment to branding to operations.'
+        }
+      </p>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {
+        whoItems.map((item) => (
+          <a
+            href={L(item.href)}
+            class="group block p-6 rounded-2xl border border-gray-200 bg-white hover:shadow-lg hover:border-sky-200 transition-all"
+          >
+            <div class="w-12 h-12 rounded-xl bg-sky-50 flex items-center justify-center text-2xl mb-4 text-sky-600">
+              {item.icon.includes(':') ? <Icon name={item.icon} class="w-7 h-7" /> : <Fragment set:html={item.icon} />}
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 group-hover:text-sky-600 transition-colors">{item.title}</h3>
+            <p class="mt-2 text-sm text-gray-500 leading-relaxed">{item.description}</p>
+            <span class="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-sky-600 group-hover:gap-2 transition-all">
+              {item.cta}
+            </span>
+          </a>
+        ))
+      }
+    </div>
+    <div class="mt-12 text-center">
+      <a
+        href={L('/business-packages')}
+        class="inline-flex items-center gap-2 px-8 py-4 font-semibold rounded-full bg-[#fb923c] text-white hover:bg-orange-600 shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5"
+      >
+        {t('home.whoWeHelp.compare') || 'Compare Business Packages'} &rarr;
+      </a>
+      <a
+        href={L('/success-stories')}
+        class="ml-4 inline-flex items-center gap-2 px-8 py-4 font-semibold rounded-full border-2 border-gray-300 text-gray-700 hover:border-gray-400 hover:bg-gray-50 transition-all"
+      >
+        {t('home.whoWeHelp.stories') || 'Read Success Stories'} &rarr;
+      </a>
+    </div>
+  </section>
+
+  <!-- Business Guides -->
+  <section class="bg-gray-50 py-16 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-sm font-medium text-sky-600 tracking-wide uppercase"
+          >{t('home.businessGuides.tagline') || 'Business Guides'}</span
+        >
+        <h2 class="mt-4 text-4xl font-semibold text-gray-900">
+          {t('home.businessGuides.title') || 'Build and Scale Your Water Business'}
+        </h2>
+        <p class="mt-4 text-lg text-gray-500">
+          {
+            t('home.businessGuides.subtitle') ||
+              'Expert guides on starting and growing a profitable water sports business — from rental operations to private label branding.'
+          }
+        </p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {
+          guideRecords
+            .filter((c) => c.type === 'business-guide')
+            .slice(0, 4)
+            .map((c) => (
+              <a
+                href={L(`/v2/${c.slug}`)}
+                class="group block bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-all hover:-translate-y-0.5"
+              >
+                <span class="text-xs font-semibold uppercase tracking-wider text-sky-600">
+                  {c.type.replace('-', ' ')}
+                </span>
+                <h3 class="mt-3 text-lg font-semibold text-gray-900 group-hover:text-sky-700 transition-colors">
+                  {c.title}
+                </h3>
+                <p class="mt-2 text-sm text-gray-500 line-clamp-3">{c.description}</p>
+                <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-sky-600 group-hover:text-sky-700">
+                  {t('home.guides.read') || 'Read guide →'}
+                </span>
+              </a>
+            ))
+        }
+      </div>
+      <div class="mt-10 text-center">
+        <a
+          href={L('/v2')}
+          class="inline-flex items-center gap-2 px-8 py-4 font-semibold rounded-full border-2 border-gray-300 text-gray-700 hover:border-gray-400 hover:bg-gray-50 transition-all"
+        >
+          {t('home.businessGuides.browse') || 'Browse All Business Guides'} →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scenario-Based Product Preview -->
+  <section class="max-w-6xl mx-auto py-12 px-6" id="products-preview" data-ai-block="use-case">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="text-sm font-medium text-sky-600 tracking-wide uppercase"
+        >{t('home.preview.tagline') || 'Find your match'}</span
+      >
+      <h2 class="mt-4 text-4xl font-semibold text-gray-900">
+        {t('home.preview.title') || 'Three scenarios, three solutions'}
+      </h2>
+      <p class="mt-4 text-lg text-gray-500">
+        {
+          t('home.preview.subtitle') ||
+            'Real product pairings for real situations — each matched to skill level, water type, and safety needs.'
+        }
+      </p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div
+        class="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow"
+        data-ai-use-case="beginner"
+      >
+        <div class="h-52 bg-gradient-to-br from-sky-400 to-blue-500 overflow-hidden">
+          <img
+            src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-tropical-breeze-1.webp"
+            alt={t('home.alt.beginner') || 'SUP Tropical Breeze'}
+            class="w-full h-full object-cover opacity-80"
+            loading="lazy"
+          />
+        </div>
+        <div class="p-6">
+          <span class="text-xs font-semibold uppercase tracking-wider text-sky-600"
+            >{t('home.preview.beginner.label') || 'Beginner'}</span
+          >
+          <h3 class="mt-2 text-xl font-semibold text-gray-900">
+            {t('home.preview.beginner.title') || 'Taking your first strokes'}
+          </h3>
+          <p class="mt-2 text-sm text-gray-500">
+            {
+              t('home.preview.beginner.desc') ||
+                'You want to try paddle boarding on calm lakes. You need stability, clear safety guidance, and gear that won\u2019t sink your confidence.'
+            }
+          </p>
+          <div class="mt-5 space-y-3">
+            <a
+              href={L('/products')}
+              class="flex items-center justify-between p-3 bg-sky-50 rounded-xl hover:bg-sky-100 transition-colors"
+            >
+              <div>
+                <span class="text-sm font-semibold text-gray-900"
+                  >{t('home.preview.beginner.product1') || 'SUP Boards'}</span
+                >
+                <p class="text-xs text-gray-500">
+                  {t('home.preview.beginner.product1.desc') || 'Beginner-friendly inflatable SUPs'}
+                </p>
+              </div>
+              <span class="text-sky-600 text-sm font-medium">→</span>
+            </a>
+            <a
+              href={L('/products')}
+              class="flex items-center justify-between p-3 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors"
+            >
+              <div>
+                <span class="text-sm font-semibold text-gray-900"
+                  >{t('home.preview.beginner.product2') || 'Life Vests & Safety'}</span
+                >
+                <p class="text-xs text-gray-500">
+                  {t('home.preview.beginner.product2.desc') || 'CE-certified flotation'}
+                </p>
+              </div>
+              <span class="text-sky-600 text-sm font-medium">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow"
+        data-ai-use-case="family"
+      >
+        <div class="h-52 bg-gradient-to-br from-sky-400 to-blue-500 overflow-hidden">
+          <img
+            src="https://assets.aquafarer.com/images/aquafarer/products/aquafarer-inflatable-boat.webp"
+            alt={t('home.alt.family') || 'Family recreation'}
+            class="w-full h-full object-cover opacity-80"
+            loading="lazy"
+          />
+        </div>
+        <div class="p-6">
+          <span class="text-xs font-semibold uppercase tracking-wider text-sky-600"
+            >{t('home.preview.family.label') || 'Family'}</span
+          >
+          <h3 class="mt-2 text-xl font-semibold text-gray-900">
+            {t('home.preview.family.title') || 'A family day on the water'}
+          </h3>
+          <p class="mt-2 text-sm text-gray-500">
+            {
+              t('home.preview.family.desc') ||
+                'Weekend lake trips with the family. You need a stable, spacious boat that inflates at the launch site and packs in the car.'
+            }
+          </p>
+          <div class="mt-5 space-y-3">
+            <a
+              href={L('/products')}
+              class="flex items-center justify-between p-3 bg-sky-50 rounded-xl hover:bg-sky-100 transition-colors"
+            >
+              <div>
+                <span class="text-sm font-semibold text-gray-900"
+                  >{t('home.preview.family.product1') || 'Inflatable Boats'}</span
+                >
+                <p class="text-xs text-gray-500">
+                  {t('home.preview.family.product1.desc') || 'Family-friendly inflatable boats'}
+                </p>
+              </div>
+              <span class="text-sky-600 text-sm font-medium">→</span>
+            </a>
+            <a
+              href={L('/products')}
+              class="flex items-center justify-between p-3 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors"
+            >
+              <div>
+                <span class="text-sm font-semibold text-gray-900"
+                  >{t('home.preview.family.product2') || 'Pumps & Accessories'}</span
+                >
+                <p class="text-xs text-gray-500">
+                  {t('home.preview.family.product2.desc') || 'Rapid inflation at launch site'}
+                </p>
+              </div>
+              <span class="text-sky-600 text-sm font-medium">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow"
+        data-ai-use-case="professional"
+      >
+        <div class="h-52 bg-gradient-to-br from-sky-400 to-blue-500 overflow-hidden">
+          <img
+            src="https://assets.aquafarer.com/images/aquafarer/products/rib/aquafarer-rib-450-patrol-boat.webp"
+            alt={t('home.alt.professional') || 'Professional operations'}
+            class="w-full h-full object-cover opacity-80"
+            loading="lazy"
+          />
+        </div>
+        <div class="p-6">
+          <span class="text-xs font-semibold uppercase tracking-wider text-sky-600"
+            >{t('home.preview.pro.label') || 'Professional'}</span
+          >
+          <h3 class="mt-2 text-xl font-semibold text-gray-900">
+            {t('home.preview.pro.title') || 'Patrol and rescue operations'}
+          </h3>
+          <p class="mt-2 text-sm text-gray-500">
+            {
+              t('home.preview.pro.desc') ||
+                'Law enforcement or SAR teams need all-weather durability, consistent performance across multiple units, and commercial-grade reliability.'
+            }
+          </p>
+          <div class="mt-5 space-y-3">
+            <a
+              href={L('/products')}
+              class="flex items-center justify-between p-3 bg-sky-50 rounded-xl hover:bg-sky-100 transition-colors"
+            >
+              <div>
+                <span class="text-sm font-semibold text-gray-900">{t('home.preview.pro.product1') || 'RIB Boats'}</span>
+                <p class="text-xs text-gray-500">
+                  {t('home.preview.pro.product1.desc') || 'Deep-V hulls, Hypalon tubes'}
+                </p>
+              </div>
+              <span class="text-sky-600 text-sm font-medium">→</span>
+            </a>
+            <a
+              href={L('/products')}
+              class="flex items-center justify-between p-3 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors"
+            >
+              <div>
+                <span class="text-sm font-semibold text-gray-900"
+                  >{t('home.preview.pro.product2') || 'Life Vests & Safety'}</span
+                >
+                <p class="text-xs text-gray-500">
+                  {t('home.preview.pro.product2.desc') || 'Professional-grade safety gear'}
+                </p>
+              </div>
+              <span class="text-sky-600 text-sm font-medium">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Trust Layer + CTA -->
+  <section class="relative py-12 px-6 text-white overflow-hidden">
+    <div class="absolute inset-0">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/news/aquafarer-quality-news.webp"
+        alt={t('home.trust.alt') || 'Aquafarer quality testing process'}
+        class="w-full h-full object-cover"
+        loading="lazy"
+      />
+      <div class="absolute inset-0 bg-gradient-to-br from-gray-900/85 via-gray-900/70 to-gray-800/85"></div>
+    </div>
+    <div class="relative max-w-6xl mx-auto">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+        {
+          proofPoints.map((pt) => (
+            <div class="text-center">
+              <div class="text-4xl font-bold text-sky-400">{pt.metric}</div>
+              <div class="mt-2 text-lg font-semibold">{pt.label}</div>
+              <div class="mt-1 text-sm text-white/60">{pt.detail}</div>
+            </div>
+          ))
+        }
+      </div>
+      <div class="mb-12">
+        <TrustBadges />
+      </div>
+      <div class="text-center">
+        <h2 class="text-3xl font-semibold">{t('home.trust.ctaTitle') || 'Start your water journey today'}</h2>
+        <p class="mt-3 text-white/70">
+          {t('home.trust.ctaSubtitle') || 'CE-certified models, every purchase backed by warranty.'}
+        </p>
+        <div class="mt-8 flex items-center justify-center gap-4 flex-wrap">
+          <a
+            href={L('/products')}
+            class="inline-flex items-center gap-2 px-8 py-4 bg-[#fb923c] hover:bg-orange-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all"
+          >
+            {t('home.trust.ctaProducts') || 'Browse all products'}
+          </a>
+          <a
+            href={L('/products')}
+            class="inline-flex items-center gap-2 px-8 py-4 border-2 border-white/30 text-white rounded-full font-medium hover:bg-white/10 transition-all"
+          >
+            {t('home.trust.ctaViewAll') || 'View all products'}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Factory Strength Bar -->
+  <section class="bg-gray-50 dark:bg-gray-900 border-y border-gray-200 dark:border-gray-800">
+    <div class="max-w-6xl mx-auto px-6 py-10">
+      <div class="text-center mb-8">
+        <span class="text-sm font-semibold text-primary uppercase tracking-wider"
+          >{t('home.factory.tagline') || 'Aquafarer Qingdao Manufacturing Hub'}</span
+        >
+        <h2 class="mt-2 text-2xl font-bold text-gray-900 dark:text-white">
+          {t('home.factory.title') || 'Direct Factory Engineering & Reliable Global Supply'}
+        </h2>
+        <p class="mt-3 text-sm text-muted max-w-2xl mx-auto">
+          {
+            t('home.factory.subtitle') ||
+              'Backed by our dedicated Qingdao Manufacturing Hub, Aquafarer provides commercial-grade inflatable boats, rigid inflatable boats (RIBs), and stand-up paddleboards (SUPs) — responsive OEM/ODM solutions, stringent QC standards, and competitive factory-direct pricing for distributors and partners worldwide.'
+          }
+        </p>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="text-center">
+          <div class="text-3xl font-bold text-sky-600">12,000 m²</div>
+          <div class="mt-1 text-sm text-muted">{t('home.factory.floor') || 'Qingdao Manufacturing Hub floor'}</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-bold text-sky-600">200-300</div>
+          <div class="mt-1 text-sm text-muted">{t('home.factory.workers') || 'Skilled workers'}</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-bold text-sky-600">15,000</div>
+          <div class="mt-1 text-sm text-muted">{t('home.factory.units') || 'Boats produced annually'}</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-bold text-sky-600">50+</div>
+          <div class="mt-1 text-sm text-muted">{t('home.factory.countries') || 'Countries served'}</div>
+        </div>
+      </div>
+      <div class="flex flex-wrap justify-center gap-4 mt-6 text-xs font-medium text-muted uppercase tracking-wider">
+        <span class="px-3 py-1.5 bg-white dark:bg-gray-800 rounded-full border border-gray-200 dark:border-gray-700"
+          >{t('home.factory.iso') || 'ISO 9001'}
+        </span>
+        <span class="px-3 py-1.5 bg-white dark:bg-gray-800 rounded-full border border-gray-200 dark:border-gray-700"
+          >{t('home.factory.ce') || 'CE'}
+        </span>
+        <span class="px-3 py-1.5 bg-white dark:bg-gray-800 rounded-full border border-gray-200 dark:border-gray-700"
+          >{t('home.factory.bsci') || 'BSCI Certified'}</span
+        >
+        <span class="px-3 py-1.5 bg-white dark:bg-gray-800 rounded-full border border-gray-200 dark:border-gray-700"
+          >{t('home.factory.oem') || 'OEM/ODM'}</span
+        >
+      </div>
+      <div class="text-center mt-6">
+        <a href={L('/factory')} class="text-sm font-semibold text-sky-600 hover:text-sky-700 hover:underline">
+          {t('home.factory.tour') || 'Tour our factory'} →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- B2B Buyers Center / Resources -->
+  <section class="max-w-6xl mx-auto px-6 py-16" id="resources">
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <span class="text-sm font-semibold text-sky-600 tracking-[0.15em] uppercase"
+        >{t('home.resources.buyersCenter') || 'Buyers Center'}</span
+      >
+      <h2 class="mt-4 text-4xl font-bold text-gray-900">
+        {t('home.resources.b2bHeading') || 'Resources for B2B Partners'}
+      </h2>
+      <p class="mt-4 text-lg text-gray-500">
+        {
+          t('home.resources.b2bSubtitle') ||
+            'Download product catalogs, quality reports, and compliance documentation to evaluate Aquafarer as your OEM/ODM partner.'
+        }
+      </p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <a
+        href={L('/media')}
+        class="group bg-white rounded-2xl border border-gray-200 p-8 hover:shadow-lg transition-all hover:-translate-y-0.5"
+      >
+        <div class="w-14 h-14 bg-sky-50 rounded-2xl flex items-center justify-center mb-5 text-sky-600">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            ><path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+            ></path></svg
+          >
+        </div>
+        <h3 class="text-lg font-semibold text-gray-900 group-hover:text-sky-700 transition-colors">
+          {t('home.resources.catalog') || '2026 OEM Product Catalog'}
+        </h3>
+        <p class="mt-2 text-sm text-gray-500">
+          {
+            t('home.resources.catalog.desc') ||
+              'Complete product lineup with specs, MOQ (5–10 SUP/kayak, 2–5 RIB), pricing tiers, and customization options. PDF format.'
+          }
+        </p>
+        <span
+          class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-sky-600 group-hover:gap-2 transition-all"
+          >{t('home.resources.download') || 'Download PDF'} →</span
+        >
+      </a>
+      <a
+        href={L('/quality')}
+        class="group bg-white rounded-2xl border border-gray-200 p-8 hover:shadow-lg transition-all hover:-translate-y-0.5"
+      >
+        <div class="w-14 h-14 bg-emerald-50 rounded-2xl flex items-center justify-center mb-5 text-emerald-600">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            ><path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+            ></path></svg
+          >
+        </div>
+        <h3 class="text-lg font-semibold text-gray-900 group-hover:text-emerald-700 transition-colors">
+          {t('home.resources.qcReport') || 'QC &amp; Testing Standards Report'}
+        </h3>
+        <p class="mt-2 text-sm text-gray-500">
+          {
+            t('home.resources.qcReport.desc') ||
+              '24-hour pressure hold tests, UV aging per ISO, tensile strength validation. Full methodology disclosed.'
+          }
+        </p>
+        <span
+          class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-emerald-600 group-hover:gap-2 transition-all"
+          >{t('home.resources.viewReport') || 'View Report'} →</span
+        >
+      </a>
+      <a
+        href={L('/factory')}
+        class="group bg-white rounded-2xl border border-gray-200 p-8 hover:shadow-lg transition-all hover:-translate-y-0.5"
+      >
+        <div class="w-14 h-14 bg-amber-50 rounded-2xl flex items-center justify-center mb-5 text-amber-600">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            ><path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+            ></path></svg
+          >
+        </div>
+        <h3 class="text-lg font-semibold text-gray-900 group-hover:text-amber-700 transition-colors">
+          {t('home.resources.factoryTour') || 'Factory Audit &amp; Virtual Tour'}
+        </h3>
+        <p class="mt-2 text-sm text-gray-500">
+          {
+            t('home.resources.factoryTour.desc') ||
+              '12,000 m² workshop, BSCI social compliance on-site, certified lines. Schedule a live video walkthrough.'
+          }
+        </p>
+        <span
+          class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-amber-600 group-hover:gap-2 transition-all"
+          >{t('home.resources.factoryTour.cta') || 'Tour Factory'} →</span
+        >
+      </a>
+    </div>
+    <div class="mt-10 text-center">
+      <p class="text-sm text-gray-400">
+        {t('home.resources.b2bNote') || 'All resources available for registered B2B partners.'}
+      </p>
+      <a
+        href={L('/contact')}
+        class="mt-3 inline-flex items-center gap-1 text-sm font-medium text-sky-600 hover:text-sky-700"
+      >
+        {t('home.resources.requestAccess') || 'Request access to gated resources'} →
+      </a>
+    </div>
+  </section>
+
+  <!-- AI Overview (visible + AI-crawlable) -->
+  <section
+    class="ai-summary bg-blue-50/80 dark:bg-slate-800/50 border-l-4 border-blue-500 rounded-r-xl px-6 py-5 max-w-6xl mx-auto mt-8 mb-8"
+    aria-label="AI overview"
+  >
+    <div class="flex items-start gap-3">
+      <span class="text-blue-600 dark:text-blue-400 text-xs font-semibold uppercase tracking-wider flex-shrink-0 mt-0.5"
+        >{t('home.ai.label') || 'AI Overview'}</span
+      >
+      <div class="space-y-1.5 text-sm text-gray-700 dark:text-slate-300 leading-relaxed">
+        <p>
+          <strong>Aquafarer</strong>
+          {
+            t('ai.overview.p1') ||
+              ' designs and manufactures professional-grade inflatable water sports equipment — SUP boards, kayaks, dinghies, RIBs, safety gear, and accessories.'
+          }
+        </p>
+        <p>
+          {
+            t('ai.overview.p2') ||
+              "Aquafarer's 64 CE-certified models are built from marine-grade PVC or Hypalon with drop-stitch construction for rigidity at 12-15 PSI. The product line covers five categories across all skill levels, from beginner SUP boards to professional patrol RIBs used by law enforcement and rescue teams."
+          }
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <JsonLd type="FAQPage" faqs={faqLd} />
+  <JsonLd type="BreadcrumbList" breadcrumbs={[{ name: 'Home', item: L('/') }]} />
+  {
+    homeGuides.length > 0 && (
+      <script
+        is:inline
+        type="application/ld+json"
+        set:html={JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'ItemList',
+          name: 'Top Guides',
+          itemListElement: homeGuides.map((g, i) => ({
+            '@type': 'ListItem',
+            position: i + 1,
+            name: g.title,
+            url: `${siteBase}/${lang}/v2/${g.slug}`,
+          })),
+        })}
+      />
+    )
+  }
+
+  <!-- Our Boards -->
+  <section id="products" class="max-w-6xl mx-auto py-12 px-6">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="text-sm font-semibold text-[#06b6d4] tracking-[0.15em] uppercase"
+        >{t('home.products.tagline') || 'Our Boards'}</span
+      >
+      <h2 class="mt-4 text-4xl font-bold text-gray-900">{t('home.products.title') || 'Performance Meets Freedom'}</h2>
+      <p class="mt-4 text-lg text-gray-500">
+        {
+          t('home.products.subtitle') ||
+            'Every Aquafarer board is engineered for ocean, lake, and river — built to perform, designed to inspire.'
+        }
+      </p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {
+        boards.map((board) => (
+          <a
+            href={L('/supboard/')}
+            class="group relative rounded-2xl overflow-hidden bg-white border border-gray-200 hover:shadow-xl transition-all duration-300"
+          >
+            <div class="aspect-[4/3] overflow-hidden">
+              <img
+                src={board.img}
+                alt={board.label}
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+            </div>
+            <div class="p-5">
+              <h3 class="text-lg font-bold text-gray-900">{board.label}</h3>
+              <p class="text-sm text-gray-400 mt-0.5">{board.desc}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm font-medium text-[#06b6d4] group-hover:gap-2 transition-all">
+                {t('home.viewCategory') || 'View'} <span>→</span>
+              </span>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- Product Catalog -->
+  <section class="bg-gray-50 py-12 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-sm font-medium text-sky-600 tracking-wide uppercase"
+          >{t('home.catalog.tagline') || 'Product Catalog'}</span
+        >
+        <h2 class="mt-4 text-4xl font-semibold text-gray-900">
+          {t('home.catalog.title') || 'Complete product lineup'}
+        </h2>
+        <p class="mt-4 text-lg text-gray-500">
+          {
+            t('home.catalog.subtitle') ||
+              'Every product with structured specs — skill level, water type, region, and safety requirements.'
+          }
+        </p>
+      </div>
+
+      {
+        catalogCategories.map((cat) => {
+          const items = groupedProducts[cat.key];
+          if (!items || items.length === 0) return null;
+          return (
+            <div class="mb-16 last:mb-0">
+              <div class="mb-8">
+                <h3 class="text-2xl font-bold text-gray-900">{cat.label}</h3>
+                {cat.desc && <p class="mt-1 text-gray-500">{cat.desc}</p>}
+              </div>
+              <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {items.map((p) => {
+                  const img = productVisuals[p.id] || '';
+                  return (
+                    <div class="bg-white rounded-2xl overflow-hidden border border-gray-200 hover:shadow-md transition-shadow">
+                      <div class="h-48 bg-gradient-to-br from-gray-100 to-gray-200 relative overflow-hidden">
+                        {img ? (
+                          <>
+                            <img src={img} alt={p.name} class="w-full h-full object-cover" loading="lazy" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                          </>
+                        ) : (
+                          <div class="flex items-center justify-center h-full text-gray-400 text-sm">
+                            {t(catLabelKeys[p.category] || '') || p.category}
+                          </div>
+                        )}
+                      </div>
+                      <div class="p-6">
+                        <h3 class="font-semibold text-gray-900 text-lg">{p.name}</h3>
+                        <p class="text-gray-500 mt-2 text-sm">{p.desc}</p>
+                        <div class="mt-4 flex flex-wrap gap-2 text-xs">
+                          <span class="px-2 py-1 bg-sky-50 text-sky-700 rounded-full font-medium">
+                            {t(catLabelKeys[p.category] || '') || p.category}
+                          </span>
+                          <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded-full">
+                            {t(`home.skill.${p.skill}`) || p.skill}
+                          </span>
+                          <span class="px-2 py-1 bg-gray-100 text-gray-500 rounded-full">
+                            {t(`home.safety.${p.safety_level}`) || p.safety_level}
+                          </span>
+                          {p.environment.slice(0, 2).map((e) => (
+                            <span class="px-2 py-1 bg-gray-100 text-gray-500 rounded-full">
+                              {t(`home.env.${e}`) || e}
+                            </span>
+                          ))}
+                        </div>
+                        {p.safety_rules.length > 0 && (
+                          <p class="mt-3 text-xs text-amber-600 flex items-center gap-1">
+                            <span>⚠</span> {p.safety_rules.map((r) => localizeRule(r)).join(', ')}
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          );
+        })
+      }
+    </div>
+  </section>
+
+  <!-- Technology -->
+  <section class="max-w-6xl mx-auto py-12 px-6">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="text-sm font-semibold text-[#06b6d4] tracking-[0.15em] uppercase"
+        >{t('home.technology.tagline') || 'Technology'}</span
+      >
+      <h2 class="mt-4 text-4xl font-bold text-gray-900">{t('home.technology.title') || 'Built to Perform'}</h2>
+      <p class="mt-4 text-lg text-gray-500">
+        {t('home.technology.subtitle') || 'Precision materials and construction methods that set Aquafarer apart.'}
+      </p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      {
+        ((techCardsData as any)?.cards || []).map((card: any) => (
+          <div class="relative bg-white border border-gray-200 rounded-2xl p-8 text-center hover:shadow-md transition-shadow overflow-hidden">
+            <div class="absolute inset-0">
+              <img
+                src={
+                  card.image || 'https://assets.aquafarer.com/images/aquafarer/products/rib/aquafarer-rib-330-boat.webp'
+                }
+                alt={card.title || 'Aquafarer technology'}
+                class="w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-white/75" />
+            </div>
+            <div class="relative">
+              <div class="w-20 h-20 bg-white/90 border border-gray-200 rounded-2xl flex items-center justify-center mx-auto text-3xl font-bold text-gray-700">
+                {card.badge || '?'}
+              </div>
+              <h3 class="mt-6 text-lg font-semibold text-gray-900">{card.title || ''}</h3>
+              <p class="mt-3 text-gray-500 text-sm leading-relaxed">{card.description || ''}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- Why Aquafarer -->
+  <section class="bg-gray-50 py-12 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-sm font-semibold text-[#06b6d4] tracking-[0.15em] uppercase"
+          >{t('home.why.tagline') || 'Why Aquafarer'}</span
+        >
+        <h2 class="mt-4 text-4xl font-bold text-gray-900">{t('home.why.title') || 'Quality You Can Trust'}</h2>
+        <p class="mt-4 text-lg text-gray-500">
+          {t('home.why.subtitle') || 'Built with precision. Tested relentlessly. Backed by warranty.'}
+        </p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div
+          class="bg-white rounded-2xl border border-gray-200 hover:shadow-md transition-shadow overflow-hidden flex flex-col md:flex-row"
+        >
+          <div
+            class="h-48 md:h-auto md:w-48 shrink-0 bg-cover bg-center"
+            style="background-image: url('https://assets.aquafarer.com/images/aquafarer/why/aquafarer-quality-test.webp')"
+          >
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-semibold text-gray-900">{t('home.why.quality') || 'Quality You Can Trust'}</h3>
+            <ul class="mt-3 text-sm text-gray-500 space-y-2">
+              <li class="flex gap-2">
+                <span class="text-[#06b6d4] mt-0.5">&#10003;</span>
+                {
+                  t('home.why.quality.point1') ||
+                    'Unbreakable — built with High-Density PVC to endure the toughest conditions.'
+                }
+              </li>
+              <li class="flex gap-2">
+                <span class="text-[#06b6d4] mt-0.5">&#10003;</span>
+                {
+                  t('home.why.quality.point2') ||
+                    'Precision-engineered — flawless seams and airtight integrity for worry-free adventures.'
+                }
+              </li>
+              <li class="flex gap-2">
+                <span class="text-[#06b6d4] mt-0.5">&#10003;</span>
+                {t('home.why.quality.point3') || 'Relentlessly tested — proven to outperform, outlast, and outshine.'}
+              </li>
+            </ul>
+            <a
+              href={L('/about')}
+              class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[#06b6d4] hover:underline"
+              >{t('home.why.viewMore') || 'View More'} →</a
+            >
+          </div>
+        </div>
+        <div
+          class="bg-white rounded-2xl border border-gray-200 hover:shadow-md transition-shadow overflow-hidden flex flex-col md:flex-row"
+        >
+          <div
+            class="h-48 md:h-auto md:w-48 shrink-0 bg-cover bg-center"
+            style="background-image: url('https://assets.aquafarer.com/images/aquafarer/why/aquafarer-stock-boat.webp')"
+          >
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-semibold text-gray-900">
+              {t('home.why.availability') || 'Availability and Lead Times'}
+            </h3>
+            <ul class="mt-3 text-sm text-gray-500 space-y-2">
+              <li class="flex gap-2">
+                <span class="text-[#06b6d4] mt-0.5">&#10003;</span>
+                {
+                  t('home.why.availability.point1') ||
+                    'Ready when you are — No Wait. Stock You Can See: Real-time updates so you know what\u2019s ready to ship.'
+                }
+              </li>
+              <li class="flex gap-2">
+                <span class="text-[#06b6d4] mt-0.5">&#10003;</span>
+                {
+                  t('home.why.availability.point2') ||
+                    'Fast-Tracked Gear: In-stock orders ship in 2-3 days; urgent needs get VIP treatment.'
+                }
+              </li>
+              <li class="flex gap-2">
+                <span class="text-[#06b6d4] mt-0.5">&#10003;</span>
+                {
+                  t('home.why.availability.point3') ||
+                    'No Surprises: Clear timelines, delay alerts, and instant solutions if plans change.'
+                }
+              </li>
+            </ul>
+            <a
+              href={L('/about')}
+              class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[#06b6d4] hover:underline"
+              >{t('home.why.viewMore') || 'View More'} →</a
+            >
+          </div>
+        </div>
+        <div
+          class="bg-white rounded-2xl border border-gray-200 hover:shadow-md transition-shadow overflow-hidden flex flex-col md:flex-row"
+        >
+          <div
+            class="h-48 md:h-auto md:w-48 shrink-0 bg-cover bg-center"
+            style="background-image: url('https://assets.aquafarer.com/images/aquafarer/why/aquafarer-fair-price.webp')"
+          >
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-semibold text-gray-900">{t('home.why.price') || 'Premium Quality, Fair Price'}</h3>
+            <ul class="mt-3 text-sm text-gray-500 space-y-2">
+              <li class="flex gap-2">
+                <span class="text-[#06b6d4] mt-0.5">&#10003;</span>
+                {
+                  t('home.why.price.point1') ||
+                    'Transparent Cost Breakdown: See exactly what you\u2019re paying for highest durability and performance standards.'
+                }
+              </li>
+              <li class="flex gap-2">
+                <span class="text-[#06b6d4] mt-0.5">&#10003;</span>
+                {
+                  t('home.why.price.point2') ||
+                    'Price Match Guarantee: We\u2019ll match the price and add a free 1-year warranty extension.'
+                }
+              </li>
+              <li class="flex gap-2">
+                <span class="text-[#06b6d4] mt-0.5">&#10003;</span>
+                {
+                  t('home.why.price.point3') ||
+                    'Built to Last, Designed to Save: No planned obsolescence — products endure years of use.'
+                }
+              </li>
+            </ul>
+            <a
+              href={L('/about')}
+              class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[#06b6d4] hover:underline"
+              >{t('home.why.viewMore') || 'View More'} →</a
+            >
+          </div>
+        </div>
+        <div
+          class="bg-white rounded-2xl border border-gray-200 hover:shadow-md transition-shadow overflow-hidden flex flex-col md:flex-row"
+        >
+          <div
+            class="h-48 md:h-auto md:w-48 shrink-0 bg-cover bg-center"
+            style="background-image: url('https://assets.aquafarer.com/images/aquafarer/why/aquafarer-warranties.webp')"
+          >
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-semibold text-gray-900">
+              {t('home.why.warranty') || 'Product Liability and Warranties'}
+            </h3>
+            <ul class="mt-3 text-sm text-gray-500 space-y-2">
+              <li class="flex gap-2">
+                <span class="text-[#06b6d4] mt-0.5">&#10003;</span>
+                {
+                  t('home.why.warranty.point1') ||
+                    'Industry-Leading Warranty Coverage: 5-year limited warranty on boat tube fabric, seams, and hull; 2-year on SUP and accessories.'
+                }
+              </li>
+              <li class="flex gap-2">
+                <span class="text-[#06b6d4] mt-0.5">&#10003;</span>
+                {
+                  t('home.why.warranty.point2') ||
+                    'Certified Compliance: Products meet or exceed CE per applicable EU directives, ISO quality standards, and USCG Type III/V approval (life vests) where applicable.'
+                }
+              </li>
+              <li class="flex gap-2">
+                <span class="text-[#06b6d4] mt-0.5">&#10003;</span>
+                {
+                  t('home.why.warranty.point3') ||
+                    'Stress-Free Repairs: File a claim in minutes, get a fix or replacement in days.'
+                }
+              </li>
+            </ul>
+            <a
+              href={L('/about')}
+              class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[#06b6d4] hover:underline"
+              >{t('home.why.viewMore') || 'View More'} →</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Cases -->
+  <section class="max-w-6xl mx-auto py-12 px-6" data-ai-block="use-case">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="text-sm font-medium text-sky-600 tracking-wide uppercase"
+        >{t('home.useCases.tagline') || 'Use Cases'}</span
+      >
+      <h2 class="mt-4 text-4xl font-semibold text-gray-900">
+        {t('home.useCases.title') || 'Built for real water experiences'}
+      </h2>
+      <p class="mt-4 text-lg text-gray-500">
+        {
+          t('home.useCases.subtitle') ||
+            'From first-time paddlers to professional operators — Aquafarer equips every water adventure.'
+        }
+      </p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-8">
+      {
+        useCases.map((u) => (
+          <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-md transition-shadow">
+            <div class="h-48 overflow-hidden">
+              <img src={u.img} alt={u.title} class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-900">{u.title}</h3>
+              <p class="text-gray-500 mt-2">{u.desc}</p>
+              <div class="mt-4 p-4 bg-gray-50 rounded-xl">
+                <p class="text-sm font-medium text-gray-700">{t('home.useCases.scenario') || 'Scenario'}</p>
+                <p class="mt-1 text-sm text-gray-600">{u.scenario}</p>
+              </div>
+              <div class="mt-3 p-4 bg-sky-50 rounded-xl">
+                <p class="text-sm font-medium text-sky-700">{t('home.useCases.solution') || 'Solution'}</p>
+                <p class="mt-1 text-sm text-gray-600">{u.solution}</p>
+              </div>
+              <div class="mt-3 flex flex-wrap gap-2">
+                {u.products.map((pr) => (
+                  <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full font-medium">{pr}</span>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+    <div class="mt-8 text-center">
+      <a href={L('/use-cases')} class="text-sm font-medium text-sky-600 hover:text-sky-700"
+        >{t('home.useCases.browse') || 'View all use cases &rarr;'}</a
+      >
+    </div>
+  </section>
+
+  <!-- AI Ask -->
+  <section id="ask" class="max-w-6xl mx-auto py-12 px-6 text-center">
+    <div class="max-w-3xl mx-auto mb-12">
+      <span class="text-sm font-medium text-sky-600 tracking-wide uppercase"
+        >{t('home.ask.tagline') || 'AI Product Guide'}</span
+      >
+      <h2 class="mt-4 text-4xl font-semibold text-gray-900">{t('home.ask.title') || 'Find the right product'}</h2>
+      <p class="mt-4 text-lg text-gray-500">
+        {
+          t('home.ask.subtitle') ||
+            'Ask our AI to compare products, recommend based on your skill level and water type, or check safety requirements.'
+        }
+      </p>
+    </div>
+    <div class="max-w-2xl mx-auto">
+      <div class="flex gap-3">
+        <input
+          id="q"
+          class="flex-1 px-5 py-4 border border-gray-300 rounded-xl text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-400 text-lg"
+          placeholder={t('home.ask.placeholder') || 'Which SUP is good for a beginner on a lake?'}
+        />
+        <button
+          id="ask-btn"
+          class="px-8 py-4 bg-gray-900 text-white rounded-xl font-semibold hover:bg-gray-800 transition-colors shrink-0"
+          >{t('home.ask.button') || 'Ask'}</button
+        >
+      </div>
+      <pre
+        id="out"
+        class="mt-8 text-left text-sm text-gray-700 bg-white border border-gray-200 rounded-2xl p-8 hidden whitespace-pre-wrap leading-relaxed">
+      </pre>
+    </div>
+  </section>
+  <!-- Lifestyle -->
+  <section class="relative py-16 px-6 overflow-hidden">
+    <div class="absolute inset-0">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/hero/aquafarer-hero-design-concept.webp"
+        alt={t('home.lifestyle.alt') || 'Ocean'}
+        class="w-full h-full object-cover"
+        loading="lazy"
+      />
+      <div
+        class="absolute inset-0"
+        style="background: linear-gradient(135deg, rgba(6,182,212,0.7), rgba(34,211,238,0.5));"
+      >
+      </div>
+    </div>
+    <div class="relative text-center max-w-3xl mx-auto">
+      <span class="text-sm font-semibold text-white/80 tracking-[0.15em] uppercase"
+        >{t('home.lifestyle.tagline') || 'Lifestyle'}</span
+      >
+      <h2
+        class="mt-6 text-4xl md:text-5xl font-bold text-white leading-tight"
+        set:html={t('home.lifestyle.title') || 'We don\u2019t sell boards.<br />We unlock freedom on water.'}
+      />
+      <p class="mt-6 text-lg text-white/80 max-w-2xl mx-auto">
+        {
+          t('home.lifestyle.subtitle') ||
+            'Every Aquafarer board is your ticket to explore new horizons — from misty morning lakes to endless ocean swells.'
+        }
+      </p>
+      <div class="mt-10 grid grid-cols-2 sm:grid-cols-3 gap-4 max-w-lg mx-auto">
+        <img
+          src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-jungle-mandala-1.webp"
+          alt="SUP Jungle Mandala"
+          class="rounded-xl aspect-square object-cover"
+          loading="lazy"
+        />
+        <img
+          src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-dolphin-wave-1.webp"
+          alt="SUP Dolphin Wave"
+          class="rounded-xl aspect-square object-cover"
+          loading="lazy"
+        />
+        <img
+          src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-ocean-pulse-1.webp"
+          alt="SUP Ocean Pulse"
+          class="rounded-xl aspect-square object-cover"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Community -->
+  <section class="max-w-6xl mx-auto py-12 px-6">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="text-sm font-semibold text-[#06b6d4] tracking-[0.15em] uppercase"
+        >{t('home.community.tagline') || 'Community'}</span
+      >
+      <h2 class="mt-4 text-4xl font-bold text-gray-900">
+        {t('home.community.title') || 'Real Riders. Real Adventures.'}
+      </h2>
+      <p class="mt-4 text-lg text-gray-500">
+        {
+          t('home.community.subtitle') ||
+            'Join thousands of paddlers exploring lakes, rivers, and coastlines with Aquafarer.'
+        }
+      </p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="rounded-2xl overflow-hidden aspect-[4/3]">
+        <img
+          src="https://assets.aquafarer.com/images/aquafarer/categories/aquafarer-rib-boat-category.webp"
+          alt={t('home.category.ribs') || 'RIB Boat'}
+          class="w-full h-full object-cover"
+          loading="lazy"
+        />
+      </div>
+      <div class="rounded-2xl overflow-hidden aspect-[4/3]">
+        <img
+          src="https://assets.aquafarer.com/images/aquafarer/products/aquafarer-inflatable-boat.webp"
+          alt={t('home.category.inflatables') || 'Inflatable Boat'}
+          class="w-full h-full object-cover"
+          loading="lazy"
+        />
+      </div>
+      <div class="rounded-2xl overflow-hidden aspect-[4/3]">
+        <img
+          src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-ocean-voyager-1.webp"
+          alt={t('home.category.sups') || 'SUP Ocean Voyager'}
+          class="w-full h-full object-cover"
+          loading="lazy"
+        />
+      </div>
+    </div>
+    <div class="mt-12 grid md:grid-cols-3 gap-8">
+      {
+        testimonials.map((tm) => (
+          <div class="bg-white border border-gray-200 rounded-2xl p-6">
+            <div class="flex text-amber-400 text-lg">{'⭐'.repeat(tm.rating || 5)}</div>
+            <p class="mt-4 text-gray-600 text-sm italic">"{tm.quote}"</p>
+            <p class="mt-3 text-sm font-semibold text-gray-900">—{tm.name}</p>
+          </div>
+        ))
+      }
+    </div>
+    <div class="text-center mt-10">
+      <p
+        class="text-gray-500"
+        set:html={t('home.community.cta') ||
+          'Tag <span class="font-semibold text-gray-700">@aquafarer</span> on Instagram to share your adventure.'}
+      />
+      <div class="mt-4 flex justify-center gap-4">
+        <a
+          href="https://www.instagram.com/aquafarer"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-xl font-semibold hover:bg-gray-800 transition-colors text-sm"
+        >
+          {t('home.community.follow') || 'Follow on Instagram'} →
+        </a>
+      </div>
+    </div>
+    <!-- Gallery Albums -->
+    <div class="mt-16">
+      <div class="text-center mb-10">
+        <span class="text-sm font-semibold text-[#06b6d4] tracking-[0.15em] uppercase"
+          >{t('home.gallery.tagline') || 'Gallery'}</span
+        >
+        <h3 class="mt-2 text-2xl font-bold text-gray-900">{t('home.gallery.title') || 'Customer Adventures'}</h3>
+      </div>
+      <div class="mb-12">
+        <h4 class="text-lg font-bold text-gray-900 mb-1">{t('home.gallery.rib') || 'RIB Boats'}</h4>
+        <p class="text-sm text-gray-500 mb-4">
+          {
+            t('home.gallery.rib.desc') ||
+              'Customers using Aquafarer RIBs for patrol, rescue, fishing and family adventures.'
+          }
+        </p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div class="rounded-xl overflow-hidden bg-gray-100 aspect-[4/3]">
+            <img
+              src="https://assets.aquafarer.com/images/aquafarer/use-cases/aquafarer-professional-use-case.webp"
+              alt={t('home.gallery.rib') || 'RIB Boats in action'}
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
+          </div>
+          <div class="rounded-xl overflow-hidden bg-gray-100 aspect-[4/3]">
+            <img
+              src="https://assets.aquafarer.com/images/aquafarer/categories/aquafarer-rib-boat-category.webp"
+              alt={t('home.gallery.rib') || 'RIB Boats on water'}
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
+          </div>
+          <div class="rounded-xl overflow-hidden bg-gray-100 aspect-[4/3]">
+            <img
+              src="https://assets.aquafarer.com/images/aquafarer/products/rib/aquafarer-rib-330-boat.webp"
+              alt={t('home.gallery.rib') || 'RIB 330 cruising'}
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="mb-12">
+        <h4 class="text-lg font-bold text-gray-900 mb-1">{t('home.gallery.sup') || 'SUP Boards'}</h4>
+        <p class="text-sm text-gray-500 mb-4">
+          {
+            t('home.gallery.sup.desc') ||
+              'Paddlers exploring lakes, rivers and coastlines on Aquafarer inflatable SUPs.'
+          }
+        </p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div class="rounded-xl overflow-hidden bg-gray-100 aspect-[4/3]">
+            <img
+              src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-ocean-voyager-1.webp"
+              alt={t('home.gallery.sup') || 'SUP Ocean Voyager'}
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
+          </div>
+          <div class="rounded-xl overflow-hidden bg-gray-100 aspect-[4/3]">
+            <img
+              src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-cheetah-surge-1.webp"
+              alt={t('home.gallery.sup') || 'SUP Cheetah Surge'}
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
+          </div>
+          <div class="rounded-xl overflow-hidden bg-gray-100 aspect-[4/3]">
+            <img
+              src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-tropical-breeze-1.webp"
+              alt={t('home.gallery.sup') || 'SUP Tropical Breeze'}
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="mb-12">
+        <h4 class="text-lg font-bold text-gray-900 mb-1">{t('home.gallery.inflatable') || 'Inflatable Boats'}</h4>
+        <p class="text-sm text-gray-500 mb-4">
+          {
+            t('home.gallery.inflatable.desc') ||
+              'Families and explorers enjoying Aquafarer inflatable boats on lakes and coastal waters.'
+          }
+        </p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div class="rounded-xl overflow-hidden bg-gray-100 aspect-[4/3]">
+            <img
+              src="https://assets.aquafarer.com/images/aquafarer/use-cases/aquafarer-family-use-case.webp"
+              alt={t('home.gallery.inflatable') || 'Family on inflatable boat'}
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
+          </div>
+          <div class="rounded-xl overflow-hidden bg-gray-100 aspect-[4/3]">
+            <img
+              src="https://assets.aquafarer.com/images/aquafarer/products/aquafarer-inflatable-boat-1.webp"
+              alt={t('home.gallery.inflatable') || 'Inflatable boat on water'}
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
+          </div>
+          <div class="rounded-xl overflow-hidden bg-gray-100 aspect-[4/3]">
+            <img
+              src="https://assets.aquafarer.com/images/aquafarer/products/aquafarer-inflatable-boat.webp"
+              alt={t('home.gallery.inflatable') || 'Inflatable boat adventure'}
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+        <a
+          href={L('/gallery')}
+          class="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-xl font-semibold hover:bg-gray-800 transition-colors text-sm"
+          >{t('home.gallery.cta') || 'View Full Gallery'} →</a
+        >
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Proof -->
+  <section class="py-12 px-6 bg-gradient-to-br from-sky-50 to-blue-50">
+    <div class="max-w-6xl mx-auto text-center">
+      <span class="text-sm font-medium text-sky-600 tracking-wide uppercase"
+        >{t('home.social.tagline') || 'Social × SEO × Brand'}</span
+      >
+      <h2 class="mt-4 text-3xl md:text-4xl font-semibold text-gray-900">
+        {t('home.social.title') || 'Every guide, everywhere'}
+      </h2>
+      <p class="mt-4 text-lg text-gray-500 max-w-3xl mx-auto">
+        {
+          t('home.social.subtitle') ||
+            'Each article automatically generates posts for TikTok, Instagram, X, Pinterest, and Reddit — so your content works across every platform.'
+        }
+      </p>
+      <div class="mt-10 flex items-center justify-center gap-4 flex-wrap">
+        <a
+          href={L('/journal')}
+          class="px-8 py-4 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition"
+          >{t('home.social.cta') || 'Browse Journal'} →</a
+        >
+        <a
+          href="/internal/seo/social"
+          class="px-8 py-4 border-2 border-gray-300 text-gray-700 rounded-full font-semibold hover:border-gray-400 transition"
+          >{t('home.social.pipeline') || 'Social Pipeline'}</a
+        >
+      </div>
+    </div>
+  </section>
+
+  <!-- Learning Center -->
+  <section class="bg-gray-50 py-12 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-sm font-medium text-sky-600 tracking-wide uppercase"
+          >{t('home.learn.tagline') || (learnData as any)?.tagline || 'Learn'}</span
+        >
+        <h2 class="mt-4 text-4xl font-semibold text-gray-900">
+          {t('home.learn.title') || (learnData as any)?.title || 'New to SUP?'}
+        </h2>
+        <p class="mt-4 text-lg text-gray-500">
+          {
+            t('home.learn.subtitle') ||
+              (learnData as any)?.subtitle ||
+              'Everything you need to know before you hit the water.'
+          }
+        </p>
+      </div>
+      <div class="grid md:grid-cols-4 gap-6">
+        {
+          ((learnData as any)?.cards || []).map((card: { href: string; image: string; title: string }, i: number) => (
+            <a
+              href={L(card.href)}
+              class="group bg-white rounded-2xl border border-gray-200 hover:shadow-md transition-shadow overflow-hidden block"
+            >
+              <div class="aspect-[4/3] bg-cover bg-center" style={"background-image: url('" + card.image + "')"} />
+              <div class="p-5 text-center">
+                <h3 class="font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">
+                  {t(`home.learn.guide${i + 1}`) || card.title}
+                </h3>
+              </div>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Resources -->
+  <section class="bg-white py-12 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-sm font-medium text-sky-600 tracking-wide uppercase"
+          >{t('home.resources.title') || 'Resources'}</span
+        >
+        <h2 class="mt-4 text-3xl font-semibold text-gray-900">{t('home.resources.heading') || 'Explore More'}</h2>
+        <p class="mt-2 text-gray-500">
+          {t('home.resources.subtitle') || 'Manufacturing insights, engineering expertise, and product comparisons.'}
+        </p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <a
+          href={L('/oem-process')}
+          class="group bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all"
+        >
+          <span class="text-xs font-semibold text-sky-600 uppercase tracking-wide"
+            >{t('home.resources.manufacturing') || 'Manufacturing'}</span
+          >
+          <h3 class="mt-2 font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">
+            {t('home.resources.oemTitle') || 'OEM Manufacturing Process'}
+          </h3>
+          <p class="mt-1 text-sm text-gray-500">
+            {t('home.resources.oemDesc') || 'From inquiry to FOB shipping — the complete 8-step OEM journey.'}
+          </p>
+        </a>
+        <a
+          href={L('/engineering-team')}
+          class="group bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all"
+        >
+          <span class="text-xs font-semibold text-sky-600 uppercase tracking-wide"
+            >{t('home.resources.team') || 'Team'}</span
+          >
+          <h3 class="mt-2 font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">
+            {t('home.resources.engineeringTitle') || 'Engineering &amp; R&amp;D Team'}
+          </h3>
+          <p class="mt-1 text-sm text-gray-500">
+            {t('home.resources.engineeringDesc') || 'Meet the 25+ engineers behind every Aquafarer product.'}
+          </p>
+        </a>
+        <a
+          href={L('/compare/rib-vs-dinghy')}
+          class="group bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all"
+        >
+          <span class="text-xs font-semibold text-sky-600 uppercase tracking-wide"
+            >{t('home.resources.compare') || 'Compare'}</span
+          >
+          <h3 class="mt-2 font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">
+            {t('home.resources.ribVsDinghy') || 'RIB vs Inflatable Dinghy'}
+          </h3>
+          <p class="mt-1 text-sm text-gray-500">
+            {t('home.resources.ribVsDinghyDesc') || 'Which boat is right for you? Side-by-side comparison.'}
+          </p>
+        </a>
+      </div>
+      <div class="mt-16 flex flex-wrap items-center justify-center gap-x-16 gap-y-4 py-12 border-t border-gray-200">
+        <span class="text-base text-gray-400 tracking-wider uppercase font-semibold"
+          >{t('home.resources.certifications') || 'Certifications'}</span
+        >
+        <span class="inline-flex items-center gap-3 text-lg text-gray-600"
+          ><span
+            class="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center text-xl font-bold text-white shrink-0"
+            >&#x2713;</span
+          >
+          {t('home.resources.ce') || 'CE'}
+        </span>
+        <span class="inline-flex items-center gap-3 text-lg text-gray-600"
+          ><span
+            class="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center text-xl font-bold text-white shrink-0"
+            >&#x2713;</span
+          >
+          {t('home.resources.bsci') || 'BSCI Certified'}</span
+        >
+        <span class="inline-flex items-center gap-3 text-lg text-gray-600"
+          ><span
+            class="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center text-xl font-bold text-white shrink-0"
+            >&#x2713;</span
+          >
+          {t('home.resources.reach') || 'REACH Compliant'}</span
+        >
+        <span class="inline-flex items-center gap-3 text-lg text-gray-600"
+          ><span
+            class="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center text-xl font-bold text-white shrink-0"
+            >&#x2713;</span
+          >
+          {t('home.resources.oemBadge') || 'OEM/ODM'}</span
+        >
+      </div>
+      <div class="flex flex-wrap items-center justify-center gap-10 py-10 border-t border-gray-200">
+        <span class="text-base text-gray-400 tracking-wider uppercase font-semibold"
+          >{t('home.resources.brandPartners') || 'Brand Partners'}</span
+        >
+        <img
+          src="https://assets.aquafarer.com/images/aquafarer/brands/aquafarer-wavefella-logo.webp"
+          alt="Wavefella"
+          class="h-16 opacity-50 grayscale hover:opacity-80 hover:grayscale-0 transition"
+          loading="lazy"
+        />
+        <img
+          src="https://assets.aquafarer.com/images/aquafarer/brands/aquafarer-foida-logo.webp"
+          alt="Foida"
+          class="h-16 opacity-50 grayscale hover:opacity-80 hover:grayscale-0 transition"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bg-gray-50 py-12 px-6" id="faq" data-ai-block="faq">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-16">
+        <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">{t('faq.pageLabel') || 'FAQ'}</span>
+        <h2 class="mt-4 text-4xl font-semibold text-gray-900">{t('faq.title') || 'Frequently asked questions'}</h2>
+      </div>
+      {
+        faqCategories.length > 0 && (
+          <div class="flex flex-wrap justify-center gap-2 mb-10" data-faq-tabs>
+            {faqCategories.map((cat) => (
+              <button
+                data-faq-tab={cat.id}
+                class:list={[
+                  'px-4 py-2 text-sm font-medium rounded-full border transition',
+                  cat.id === faqCategories[0].id
+                    ? 'bg-gray-900 text-white border-gray-900'
+                    : 'bg-white text-gray-600 border-gray-300 hover:border-gray-400',
+                ]}
+              >
+                {cat.label}
+              </button>
+            ))}
+          </div>
+        )
+      }
+      <div class="space-y-4" data-faq-list>
+        {
+          faqItems.map((item) => (
+            <details
+              data-faq-item
+              data-category={item.category || 'all'}
+              class="bg-white border border-gray-200 rounded-xl overflow-hidden group"
+            >
+              <summary class="px-6 py-4 font-semibold text-gray-900 cursor-pointer hover:bg-gray-50 transition-colors list-none flex items-center justify-between">
+                <span>{item.q}</span>
+                <span class="text-gray-400 group-open:rotate-180 transition-transform">▼</span>
+              </summary>
+              <div class="px-6 pb-4">
+                <p class="text-gray-600 leading-relaxed">{item.a}</p>
+              </div>
+            </details>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="bg-gray-50 py-12 px-6" id="contact">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <span class="text-sm font-semibold text-[#06b6d4] tracking-[0.15em] uppercase"
+          >{t('home.contact.label') || 'Get in touch'}</span
+        >
+        <h2 class="mt-4 text-4xl font-bold text-gray-900">{t('home.contact.title') || 'Contact Aquafarer'}</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden text-center">
+          <div class="h-32 relative overflow-hidden bg-gray-200 flex items-center justify-center">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8153.834118981908!2d120.5261!3d36.8861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDUzJzEwLjAiTiAxMjDCsDMxJzM0LjAiRQ!5e0!3m2!1sen!2sus!4v1"
+              class="w-full h-full object-cover"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title={t('home.contact.map') || 'Map of Aquafarer location'}></iframe>
+            <svg class="absolute w-8 h-8 text-red-500 drop-shadow-lg" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+              ></path>
+            </svg>
+          </div>
+          <div class="p-6">
+            <h3 class="font-semibold text-gray-900">{t('home.contact.address') || 'Address'}</h3>
+            <p
+              class="mt-2 text-gray-500 text-sm"
+              set:html={branding.address || 'Economic Development Zone, Laixi, Qingdao, China, 266600'}
+            />
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden text-center">
+          <div
+            class="h-32 bg-cover bg-center"
+            style="background-image: url('https://assets.aquafarer.com/images/Helen-contact-480x463.webp')"
+          >
+          </div>
+          <div class="p-6">
+            <h3 class="font-semibold text-gray-900">{t('home.contact.phone') || 'Phone'}</h3>
+            <p class="mt-2 text-gray-500 text-sm">{branding.phone || '213-557-7888'}</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden text-center">
+          <div
+            class="h-32 bg-cover bg-center"
+            style="background-image: url('https://assets.aquafarer.com/images/aquafarer/use-cases/aquafarer-professional-use-case.webp')"
+          >
+          </div>
+          <div class="p-6">
+            <h3 class="font-semibold text-gray-900">{t('home.contact.email') || 'Email'}</h3>
+            <p class="mt-2 text-gray-500 text-sm">{branding.email || 'info@aquafarer.com'}</p>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-12">
+        <a
+          href={L('/contact')}
+          class="inline-flex items-center gap-2 px-8 py-4 bg-[#fb923c] hover:bg-orange-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all"
+        >
+          {t('home.contact.cta') || 'Send us a message'} →
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script is:inline>
+  (function () {
+    // Carousel
+    const slides = document.querySelectorAll('[data-carousel-slide]');
+    const dots = document.querySelectorAll('[data-carousel-dot]');
+    if (slides.length > 1) {
+      let current = 0;
+      let interval = setInterval(next, 5000);
+      function goTo(i) {
+        if (i === current) return;
+        slides[current].classList.remove('opacity-100');
+        slides[current].classList.add('opacity-0');
+        dots[current].classList.remove('bg-white', 'scale-125');
+        dots[current].classList.add('bg-transparent');
+        current = i;
+        slides[current].classList.remove('opacity-0');
+        slides[current].classList.add('opacity-100');
+        dots[current].classList.remove('bg-transparent');
+        dots[current].classList.add('bg-white', 'scale-125');
+      }
+      function next() {
+        goTo((current + 1) % slides.length);
+      }
+      dots.forEach(function (dot) {
+        dot.addEventListener('click', function () {
+          clearInterval(interval);
+          goTo(parseInt(this.getAttribute('data-carousel-dot')));
+          interval = setInterval(next, 5000);
+        });
+      });
+    }
+
+    // FAQ filter (only when category tabs exist)
+    const faqTabs = document.querySelector('[data-faq-tabs]');
+    const faqList = document.querySelector('[data-faq-list]');
+    if (faqTabs && faqList) {
+      const faqAllItems = faqList.querySelectorAll('[data-faq-item]');
+      const tabBtns = faqTabs.querySelectorAll('[data-faq-tab]');
+      function filterFaq(cat) {
+        tabBtns.forEach(function (btn) {
+          const isActive = btn.getAttribute('data-faq-tab') === cat;
+          if (isActive) {
+            btn.classList.add('bg-gray-900', 'text-white', 'border-gray-900');
+            btn.classList.remove('bg-white', 'text-gray-600', 'border-gray-300');
+          } else {
+            btn.classList.remove('bg-gray-900', 'text-white', 'border-gray-900');
+            btn.classList.add('bg-white', 'text-gray-600', 'border-gray-300');
+          }
+        });
+        faqAllItems.forEach(function (item) {
+          item.style.display = item.getAttribute('data-category') === cat ? '' : 'none';
+        });
+      }
+      faqTabs.addEventListener('click', function (e) {
+        const btn = e.target.closest('[data-faq-tab]');
+        if (btn) filterFaq(btn.getAttribute('data-faq-tab'));
+      });
+      if (tabBtns.length > 0) {
+        filterFaq(tabBtns[0].getAttribute('data-faq-tab'));
+      }
+    }
+
+    // AI Ask
+    const btn = document.getElementById('ask-btn');
+    const input = document.getElementById('q');
+    const out = document.getElementById('out');
+    if (!btn || !input || !out) return;
+
+    btn.addEventListener('click', async function () {
+      const q = input.value.trim();
+      if (!q) return;
+      out.classList.add('hidden');
+      out.textContent = 'Thinking...';
+      out.classList.remove('hidden');
+
+      try {
+        const res = await fetch('/api/ask', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ question: q }),
+        });
+        const data = await res.json();
+        out.textContent = res.ok && data.answer ? data.answer : 'Error: ' + (data.error || 'Request failed');
+      } catch (err) {
+        out.textContent = 'Error: ' + err.message;
+      }
+    });
+  })();
+</script>

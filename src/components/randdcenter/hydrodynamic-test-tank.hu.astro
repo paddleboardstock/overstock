@@ -1,0 +1,201 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'hu' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">&larr; Vissza a K+F Központba</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Labor 04</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Hidrodinamikai tesztmedence</h1>
+      <p class="mt-3 text-lg text-muted">A teljes méretű első prototípus előtti teljesítmény érvényesítése</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-design-discussion-original.webp"
+        alt="Aquafarer hidrodinamikai tesztmedence teljesítményvizsgálat"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Miért teszteljünk egy kis hajót medencében?</h2>
+  <p>
+    Gyakori tévhit, hogy a hidrodinamikai tesztelés csak óceánjáró hajókra van fenntartva. Valójában egy kis
+    tervezőtestű hajó — például egy 4–5 m RIB — teljesítménye éppoly mértékben függ a víz alatti formájától, mint egy
+    tanker a púpos orrától. A dőlés szöge, a nedvesített felület nagysága, a permetképződés és a szellőzés mind drámai
+    hatással vannak a sebességre, az üzemanyag-fogyasztásra és az utazási kényelemre.{SITE.name}, egy dedikált
+    hidrodinamikai tesztmedencét üzemeltetünk, amely lehetővé teszi számunkra, hogy ezeket a hatásokat modellméretben
+    kvantifikáljuk — mielőtt fémet és anyagot köteleznénk el egy teljes méretű prototípushoz.
+  </p>
+  <p>
+    A modellméretű tesztelés (általában 1:3 és 1:5 között) lehetővé teszi, hogy gyorsan és költséghatékonyan iteráljuk a
+    hajótestek formáját. Egy hét a medencében ugyanazokat a teljesítményadatokat adhatja, amelyek teljes méretű
+    próbálkozásokkal hónapokat igényelnének — és a költség töredékéből.
+  </p>
+
+  <h2>Létesítmény specifikációk</h2>
+  <table>
+    <thead><tr><th>Paraméter</th><th>Specifikáció</th></tr></thead>
+    <tbody>
+      <tr><td>Medence méretei</td><td>35 m (H) × 3,5 m (Sz) × 1,8 m (M)</td></tr>
+      <tr
+        ><td>Húzókocsi</td><td>Elektromos szervóhajtású, max sebesség 12 m/s (23 csomó), sebességpontosság ± 0,5 %</td
+        ></tr
+      >
+      <tr
+        ><td>Hullámgenerátor</td><td
+          >Billentőlap-típusú, programozható szabályos és szabálytalan tengerállapot, Hs akár 0,3 m modellméreten</td
+        ></tr
+      >
+      <tr
+        ><td>Méréstechnika</td><td
+          >6-összetevős dinamométer (ellenállás, oldalerő, iránytengelyi nyomaték), gyorsulásmérők, dőlésmérők,
+          hullámszenzorok</td
+        ></tr
+      >
+      <tr
+        ><td>Adatgyűjtés</td><td>Csatornánként 1000 Hz mintavételezés, valós idejű kijelző + utófeldolgozó rendszer</td
+        ></tr
+      >
+      <tr
+        ><td>Modellkészítés</td><td
+          >Saját műhelyben CNC marással és 3D nyomtatással, akár 1,8 m hosszú hajótestmodellekhez</td
+        ></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>Tesztprogramunk</h2>
+  <p>Egy standard hajótest-fejlesztési program a medencénkben a következő sorrendet követi:</p>
+  <ol>
+    <li>
+      <strong>Modellkészítés</strong>— Egy 1:3,5 arányú modell magas sűrűségű habból CNC-marással készül és üvegezéssel
+      merevítjük. A súly és súlypont úgy van beállítva, hogy megfeleljen a Froude-arányos teljes terhelésnek.
+    </li>
+    <li>
+      <strong>Ellenállás mérések</strong>— A modellt 8–10 sebességnél vontatjuk a működési tartományban. A teljes
+      ellenállást mérjük, és felbontjuk súrlódási és maradék összetevőkre az ITTC-1957 módszerrel.
+    </li>
+    <li>
+      <strong>Dőlésszög és süllyedés mérése</strong>— A futási dőlésszöget és süllyedést minden sebességnél rögzítjük. A
+      síkban sikló hajótestek optimális dőlésszöge 4–6°.
+    </li>
+    <li>
+      <strong>Wake felmérés</strong>— A keresztirányú hullámvágásokat két sebességgel mérik, hogy felmérjék a
+      hullámkeleti ellenállást és azonosítsák a keresztirányú hullámkölcsönhatásokat, amelyek a hátsó belső
+      interferenciát okozhatják.
+    </li>
+    <li>
+      <strong>Tengerészeti (opcionális)</strong>— Fej-tenger és utána tengeri futások rendszeres hullámokban, hogy
+      mérjék a további ellenállást, a függőleges gyorsulást és a csapódási valószínűséget.
+    </li>
+    <li>
+      <strong>Adatelemzés és ajánlások</strong>— Teljes jelentés kerül elő összehasonlító táblázatokkal,
+      sebesség/teljesítménygörbékkel és specifikus tervezési ajánlásokkal a teljes méretű hajótestre.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Tipikus harckocsiteszt eredmények — ellenállás vs sebesség (RIB450 test, 1:3,5 méretarány)
+    </p>
+    <div class="space-y-2">
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">5 csomó (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:18%"></div>
+        </div><span class="w-16 text-right">42 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">10 csomó (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:35%"></div>
+        </div><span class="w-16 text-right">81 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">15 csomó (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:52%"></div>
+        </div><span class="w-16 text-right">121 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">20 csomó (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:68%"></div>
+        </div><span class="w-16 text-right">158 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">25 csomó (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:85%"></div>
+        </div><span class="w-16 text-right">197 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">30 csomó (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:100%"></div>
+        </div><span class="w-16 text-right">232 N</span>
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      Modell-méretű ellenállás (N) Froude-skálázott sebességeknél. A teljes méretarányú teljesítmény-előrejelzés az
+      ITTC-1978 teljesítmény-előrejelző módszert követi.
+    </p>
+  </div>
+
+  <h2>Szakértő csapat</h2>
+  <p>
+    A tartályunkat egy hidrodinamikus üzemelteti, aki PhD-vel rendelkezik tengerészeti építészetből, és 8 év vontató
+    tartály tapasztalattal rendelkezik egy nagy európai tengeri kutatóintézetben. Egy technikus támogatja, aki minden
+    modellt és műszert előkészít. A csapat követi az ITTC (International Towing Tank Conference) ajánlott eljárásait,
+    hogy minden teszt ismételhető, nyomon követhető és nemzetközileg védhető legyen.
+  </p>
+
+  <h2>Tartálytesztek egyedi hajótestfejlesztéshez</h2>
+  <p>
+    Tartályunkat nemcsak házilag tervezett hajótestekhez használják — rendszeresen tesztprogramokat futtatunk olyan
+    ügyfelek számára, akik egyedi hajótestformát szeretnének validálni vagy teljesítményproblémát vizsgálni:
+  </p>
+  <ul>
+    <li>
+      <strong>Hajótest-alak összehasonlítás</strong>— Két vagy több jelölt hajótestformát tesztelnek azonos körülmények
+      között, így objektív ellenállás/sebesség/stabilitás összehasonlítást biztosítva a tervezési döntés
+      megalapításához.
+    </li>
+    <li>
+      <strong>Appendage optimization</strong>— Az elfogó lemezek, permetezősínek, szegélylapok és sztrákok különböző
+      konfigurációkban tesztelhetők, hogy számszerűsítsék egyéni hozzájárulásukat a légellenállás csökkentéséhez.
+    </li>
+    <li>
+      <strong>Motor-matching tanulmány</strong>— Az ellenállási adatokat teljesítmény-előrejelző görbévé alakítják át,
+      lehetővé téve az optimális motor lóerőt kiválasztva a célsebességhez és a hasznos terheléshez.
+    </li>
+  </ul>
+
+  <h2>Miért tesztelsz velünk?</h2>
+  <p>
+    Nem csak nyers számokat adunk meg. Jelentéseink a tartály adatait gyakorlati mérnöki ajánlásokká alakítják: "Emeld
+    meg a permetezősínt 8 mm-rel, hogy csökkentsd a nedves felületet utazósebességnél", "Növeld a keresztvonal
+    felemelkedését 3°-kal, hogy csökkentsd a csapódó gyorsulást", vagy "A hosszanti súlypontot 150 mm-rel hátra mozgasd
+    a jobb síkolási helyzet érdekében". Világos értéssel távozol, mit kell megváltoztatni és miért.
+  </p>
+  <p>
+    Tartályunk független harmadik fél tesztelésére is elérhető szolgáltatásdíj alapján. Ha hajótestet fejleszt, és
+    elfogulatlan, professzionálisan végzett hidrodinamikai értékelést szeretne, szívesen fogadjuk a kérdését.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Foglalj egy tartályteszt alkalmat</h2>
+    <p class="mt-2 text-sm text-muted">
+      Akár teljes fejlesztési programra, akár egyetlen összehasonlító tesztre van szüksége, mi alkalmazkodunk az
+      időbeosztásához.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Vegye fel a kapcsolatot hidrodinamikai csapatunkkal</a
+    >
+  </div>
+</section>

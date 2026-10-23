@@ -1,0 +1,278 @@
+---
+import JsonLd from '~/components/common/JsonLd.astro';
+import AiQuickAnswer from '~/components/common/AiQuickAnswer.astro';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
+const { lang = 'lv' } = Astro.props;
+const t = (key: string) => getUiForLang(lang)?.[key] || '';
+---
+
+<JsonLd
+  type="Article"
+  article={{
+    headline: 'Piepūšamo laivu ceļvedis — pilnīgs resurss',
+    description:
+      'Visaptverošs ceļvedis par piepūšamajām laivām, aptverot tipus, būvniecības metodes, materiālu salīdzinājumu, atlases kritērijus, drošības standartus un apkopi.',
+    datePublished: '2026-07-07',
+  }}
+  data={{ url: 'https://aquafarer.com/marine-industry/' }}
+/>
+
+<JsonLd
+  type="BreadcrumbList"
+  breadcrumbs={[
+    { name: t('nav.home') || 'Home', href: `/${lang}/` },
+    { name: 'Jūras rūpniecība', href: `/${lang}/marine-industry` },
+    { name: 'Piepūšamo laivu ceļvedis', href: `/${lang}/marine-industry/` },
+  ]}
+/>
+
+<AiQuickAnswer
+  entityType="Ceļvedis"
+  quickAnswer="Piepūšamā laiva ir viegls ūdens transports, kas izgatavots no elastīgu auduma caurulēm (spānsoniem), kas piepildītas ar spiedienu gaisu, lai nodrošinātu peldspēju. Mūsdienu piepūšamajās laivās ietilpst peldlīdzekļi, RIBs (cietās piepūšamās laivas), piepūšamie kajaki un stāvpesalu dēļi. Tās tiek izgatavotas no PVC vai Hypalon CSM audumiem, izmantojot RF metināšanu vai roku laka šuves, ar drop-stitch konstrukciju, kas ļauj izmantot augsta spiediena cietos grīdas risinājumus."
+  facts={[
+    { label: 'Globālais tirgus lielums', value: '$2.8B (2026)' },
+    { label: 'Primārie materiāli', value: 'PVC Hypalon CSM/' },
+    { label: 'Dzīves ilguma diapazons', value: '8–20+ gadi' },
+    { label: 'CE Sertifikācija', value: 'Nepieciešams (ES)' },
+  ]}
+/>
+
+<section class="max-w-4xl mx-auto py-16 px-6">
+  <h1 class="text-4xl font-semibold text-gray-900">Piepūšamo laivu ceļvedis</h1>
+  <p class="mt-4 text-lg text-gray-500">
+    Galvenais resurss par piepūšamajiem ūdens transportlīdzekļiem — no atpūtas laivām līdz profesionāliem RIBs un
+    specializētiem glābšanas kuģiem.
+  </p>
+
+  <nav class="mt-8 flex flex-wrap gap-2">
+    {
+      ['Types', 'Construction', 'Materials', 'Selection', 'Safety', 'Maintenance', 'Standards'].map((section) => (
+        <a
+          href={`#${section.toLowerCase()}`}
+          class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition"
+        >
+          {section}
+        </a>
+      ))
+    }
+  </nav>
+
+  <section id="types" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Piepūšamo laivu veidi</h2>
+    <div class="mt-8 grid gap-6">
+      {
+        [
+          {
+            title: 'Piepūšamie dingi',
+            desc: 'Mažas, pārnēsājamas laivas piegādei, makšķerēšanai un īslaicīgai rekreācijai. Parasti 2-4 m garas, aprīkotas ar nelieliem ārbordiem (2-15 HP) vai airiem. Pieejamākā ieejas punkts.',
+            icon: '🚤',
+          },
+          {
+            title: 'Cietās piepūšamās laivas (RIBs)',
+            desc: 'Augstas veiktspējas laivas ar stingru stikla šķiedras, alumīnija vai HDPE korpusu un uzpūšamiem spārniem. Garums 3-12 m, 15-300+ HP ārbordjustas. Izmanto patrulēšanai, glābšanai, niršanai un jūrassporto ceļojumiem.',
+            icon: '⚡',
+          },
+          {
+            title: 'Uzpūšamie kajaki',
+            desc: 'Pārnēsājami kajaki, izgatavoti no PVC vai TPU audumiem. Pieejami vienvietīgā un divvietīgā versijā atpūtas tūrisma, upju pārgājienu un ekspedīciju ceļojumiem.',
+            icon: '🛶',
+          },
+          {
+            title: 'Uzpūšamās stāvvietas airu dēļi (SUPs)',
+            desc: 'Drop-stitch konstrukcijas airu dēļi, kas uzpūšas līdz stingrai augstspiediena virsmai. Pieejami universāli, tūrisma, jogas, makšķerēšanas un sērfa modeļi.',
+            icon: '🏄',
+          },
+          {
+            title: 'Glābšanas laivas (SAR)',
+            desc: 'Speciāli RIBs meklēšanas un glābšanas operācijām. Ir pašatvērjoša grīda, priekšējās konsoļi, vilkšanas stiprinājumi un augstas redzamības krāsu shēmas. CE sertificēts glābšanas lietošanai.',
+            icon: '🆘',
+          },
+          {
+            title: 'Komerciālās darba laivas',
+            desc: 'Smagās RIBs niršanas atbalstam, patrulēšanai, izpētei un komerciālām jūras darbībām. Hypalon CSM konstrukcija, pastiprināti korpusi un profesionāla aprīkojuma iekārtojums.',
+            icon: '⚙️',
+          },
+        ].map((item) => (
+          <div class="flex gap-4 p-5 bg-gray-50 rounded-xl border border-gray-200">
+            <span class="text-2xl flex-shrink-0">{item.icon}</span>
+            <div>
+              <h3 class="font-semibold text-gray-900">{item.title}</h3>
+              <p class="mt-1 text-sm text-gray-600">{item.desc}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section id="construction" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Būvniecības metodes</h2>
+    <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">RF metināšana (augstas frekvences)</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Izmanto elektromagnētisko enerģiju, lai molekulārā līmenī sapludinātu PVC slāņus. Izveido visstiprākās,
+          hermētiskākās šuves. Bieži sastopams augstas kvalitātes PVC laivās un SUPs. Nepieciešama specializēta tehnika
+          un prasmīga darbība.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Roku līmēšana / ķīmiskā saistīšana</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Divdaļīgas līmēšanas saites auduma paneļiem. Galvenā metode Hypalon CSM laivām (nevar tikt metināta ar RF
+          metināšanu). Nepieciešama precīza virsmas sagatavošana, kontrolēts mitrums un pareizs sacietēšanas laiks, lai
+          nodrošinātu optimālu šuves stiprību.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Drop-Stitch Kodols</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Tūkstošiem poliestera vītņu savieno PVC augšējo un apakšējo slāni, nodrošinot augsta spiediena piepūli (15-25)
+          PSIcietā dēļa veiktspējai. Vītnes blīvums (15-50 vītnes/cm²) nosaka stingrību un svaru.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Siltuma metināšana</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Karstā gaisa vai karstā ķīļa metināšana tiek izmantota šuvēm un pastiprinājumiem. Izplatīta lielākās RIB
+          konstrukcijās. Mazāk precīza nekā RF metināšana, bet efektīva Hypalon smagiem PVC audumiem.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="materials" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Materiālu salīdzinājums</h2>
+    <div class="mt-6 overflow-x-auto">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="bg-gray-50 border-b-2 border-gray-200">
+            <th class="px-4 py-3 text-left font-semibold text-gray-700">Īpašums</th>
+            <th class="px-4 py-3 text-center font-semibold text-sky-700">PVC</th>
+            <th class="px-4 py-3 text-center font-semibold text-emerald-700">Hypalon CSM</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            [
+              ['Relative Cost', '$ (budget)', '$$$ (premium)'],
+              ['UV Resistance', 'Good (with coating)', 'Excellent (inherent)'],
+              ['Abrasion Resistance', 'Moderate-Good', 'Excellent'],
+              ['Chemical Resistance', 'Good', 'Excellent'],
+              ['Cold Flexibility', 'Stiffens below 0°C', 'Flexible to -20°C'],
+              ['Lifespan', '8-12 years', '15-20+ years'],
+              ['Seam Method', 'RF welding', 'Hand gluing'],
+              ['Repair', 'PVC glue (easy)', '2-part adhesive (moderate)'],
+            ].map((row, i) => (
+              <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                {row.map((cell, j) => (
+                  <td
+                    class={`px-4 py-3 border-b border-gray-200 ${j === 0 ? 'font-medium text-gray-700' : 'text-center text-gray-600'}`}
+                  >
+                    {cell}
+                  </td>
+                ))}
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-4 text-sm text-gray-500">
+      Mūsdienīgs militārās kvalitātes PVC (1100-1670 dtex) nodrošina lielisku izturību lielākajai daļai atpūtas
+      lietotāju par pusi no Hypalon cenas. Hypalon ir ieteicams komerciālām flotēm, tropu klimatos un kritiski svarīgām
+      misijām.
+    </p>
+    <a
+      href={`/${lang}/learn/pvc-vs-hypalon`}
+      class="mt-4 inline-block text-sky-600 hover:text-sky-700 text-sm font-medium"
+      >Padziļināta PVC vs Hypalon rokasgrāmata →</a
+    >
+  </section>
+
+  <section id="selection" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Kā izvēlēties piepūšamo laivu</h2>
+    <div class="mt-8 grid md:grid-cols-3 gap-6">
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">1. Definējiet savu lietošanas mērķi</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>Atpūta: Jolle vai SUP</li>
+          <li>Veiktspēja: RIB (15-60 HP)</li>
+          <li>Komerciāli: RIB (100+ HP)</li>
+          <li>Fitnesa: Piepūšamais SUP</li>
+          <li>Ceļojumi: Piepūšamais kajaks</li>
+        </ul>
+      </div>
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">2. Noteikt budžetu</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>$200-$800: Piepūšamais SUP</li>
+          <li>$500-$2,000: Jolle + motors</li>
+          <li>$3,000-$8,000: Ienākošais RIB</li>
+          <li>$8,000-$20,000: Premium RIB</li>
+          <li>$20,000+: Komerciālais RIB</li>
+        </ul>
+      </div>
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">3. Apsveriet materiālu</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>PVC: Budžetam draudzīgs, viegls</li>
+          <li>Hypalon: Premium, ilgmūžīgs</li>
+          <li>Drop-Stitch: Stingra veiktspēja</li>
+          <li>Auduma svars: 1100-1670 dtex</li>
+          <li>Pārklājums: UV + caurduršanas slāņi</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="safety" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Drošība un standarti</h2>
+    <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">CE Sertifikācija</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Visām piepūšamajām laivām, kas pārdotas ES, ir nepieciešama CE marķēšana saskaņā ar Atpūtas kuģu direktīvu
+          (RCD) 2013/53/EU. Sertifikācija aptver dizaina kategoriju (A-D), peldspēju, stabilitāti un kravas kapacitāti.
+          Aquafarer laivas ir CE sertificētas atpūtas un glābšanas lietošanai.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Standarts</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Starptautiskais standarts piepūšamajām laivām, kas nosaka prasības materiāliem, šuvēm, vārstiem un veiktspējas
+          testēšanai. I–IV tipi aptver visu, sākot no maziem laivu piepūtējiem līdz lieliem RIBs.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Nepieciešamā drošības aprīkojuma комплекts</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Glābšanas vestes/PFD (CE 12402), metami virves, lāpsta/ugunsdzēsības aparāts, navigācijas lukturi (naktī), VHF
+          radio, pirmās palīdzības komplekts, enkurs un rezerves airis vai degviela.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Droša ekspluatācija</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          NEPĀRSNIEDZiet maksimālās ietilpības plāksni. Pārbaudiet vārstu nostiprinājumu pirms ūdenslauciena. Vienmērīgi
+          sadaliet svaru. Uzraugiet laika apstākļus. Iesniedziet pludiņplānu. Apmeklējiet laivu drošības kursu.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="maintenance" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Apkope un kopšana</h2>
+    <div class="mt-8 space-y-4 text-sm text-gray-600">
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <>
+          <span class="text-sky-600 font-bold flex-shrink-0">1.</span>
+          <span
+            >Pēc katras lietošanas sālsūdenī noskalojiet ar svaigu ūdeni. Pilnībā nožāvējiet pirms uzglabāšanas.</span
+          >
+        </>
+      </div>
+    </div>
+  </section>
+</section>

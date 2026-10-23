@@ -1,0 +1,323 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { languages, defaultLang } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => getUiForLang(lang || defaultLang)?.[key] || '';
+
+const metadata = {
+  title: `${t('compare.supVsRib.title') || 'Inflatable SUP vs RIB Boat — Which Watercraft Is Right for You?'}`,
+  description:
+    t('compare.supVsRib.desc') ||
+    'Compare inflatable stand-up paddle boards and rigid inflatable boats across portability, performance, cost, and use cases.',
+  ignoreTitleTemplate: true,
+};
+
+const faqSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is the difference between SUP and RIB?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'SUP boards are stand-up paddle platforms for recreation and fitness. RIB boats are rigid-inflatable motorized craft for professional and commercial use.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Which is more profitable for rental?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'SUP boards have lower cost and higher volume. RIB boats have higher per-unit margin. Many rental operators offer both.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I order both from Aquafarer?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Mixed-model container orders combining SUP boards, kayaks, and RIB boats for fleet pricing.',
+      },
+    },
+  ],
+});
+---
+
+<Layout metadata={metadata}>
+  <JsonLd
+    type="Article"
+    article={{
+      headline: t('compare.supVsRib.headline') || 'Inflatable SUP vs RIB Boat — Which Watercraft Is Right for You?',
+      description:
+        t('compare.supVsRib.desc') ||
+        'Compare inflatable stand-up paddle boards and rigid inflatable boats across portability, performance, cost, and use cases.',
+      datePublished: '2026-07-07',
+    }}
+    data={{ url: `https://aquafarer.com/${lang}/compare/sup-vs-rib` }}
+  />
+  <JsonLd
+    type="BreadcrumbList"
+    breadcrumbs={[
+      { name: t('home') || 'Home', href: `/${lang}/` },
+      { name: t('compare.label') || 'Compare', href: `/${lang}/compare` },
+      { name: t('compare.supVsRib.short') || 'SUP vs RIB' },
+    ]}
+  />
+  <section class="max-w-4xl mx-auto py-24 px-6">
+    <a href={`/${lang}/products`} class="text-sm text-sky-600 hover:text-sky-700"
+      >&larr; {t('compare.backToProducts') || 'Products'}</a
+    >
+    <h1 class="mt-4 text-4xl font-semibold text-gray-900">
+      {t('compare.supVsRib.heading') || 'Inflatable SUP vs RIB Boat'}
+    </h1>
+    <p class="mt-4 text-lg text-gray-500">
+      {
+        t('compare.supVsRib.subtitle') ||
+          'A practical comparison between two very different watercraft — the portable paddle board and the high-performance rigid inflatable boat.'
+      }
+    </p>
+
+    <div class="mt-12 grid md:grid-cols-2 gap-8">
+      <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+        <h2 class="text-xl font-semibold text-gray-900">{t('compare.supVsRib.col1Title') || 'Inflatable SUP'}</h2>
+        <ul class="mt-4 space-y-3 text-sm text-gray-600">
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span
+              ><strong>{t('compare.supVsRib.propulsion') || 'Propulsion:'}</strong>
+              {
+                t('compare.supVsRib.supPropDesc') || 'Human-powered with paddle. No fuel, engine, or maintenance costs.'
+              }</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span
+              ><strong>{t('compare.supVsRib.portability') || 'Portability:'}</strong>
+              {
+                t('compare.supVsRib.supPortDesc') ||
+                  'Deflates to backpack size. Weighs 18-30 lbs. Fits in any car or closet.'
+              }</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span
+              ><strong>{t('compare.supVsRib.cost') || 'Cost:'}</strong>
+              {
+                t('compare.supVsRib.supCostDesc') ||
+                  '$200-$800 all-in (board, paddle, pump, leash). No ongoing fuel costs.'
+              }</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span
+              ><strong>{t('compare.supVsRib.fitness') || 'Fitness:'}</strong>
+              {
+                t('compare.supVsRib.supFitDesc') ||
+                  'Full-body workout. Core engagement, balance, cardiovascular benefit with every session.'
+              }</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span
+              ><strong>{t('compare.supVsRib.bestFor') || 'Best for:'}</strong>
+              {
+                t('compare.supVsRib.supBestDesc') ||
+                  'Fitness paddling, touring, yoga, fishing, family recreation, travel, beginners.'
+              }</span
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+        <h2 class="text-xl font-semibold text-gray-900">{t('compare.supVsRib.col2Title') || 'RIB Boat'}</h2>
+        <ul class="mt-4 space-y-3 text-sm text-gray-600">
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span
+              ><strong>{t('compare.supVsRib.propulsion') || 'Propulsion:'}</strong>
+              {
+                t('compare.supVsRib.ribPropDesc') ||
+                  'Outboard motor (15-150+ HP). Requires fuel, oil, and regular engine maintenance.'
+              }</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span
+              ><strong>{t('compare.supVsRib.portability') || 'Portability:'}</strong>
+              {
+                t('compare.supVsRib.ribPortDesc') ||
+                  'Trailer required. 150-500+ kg. Needs garage, marina, or boat storage.'
+              }</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span
+              ><strong>{t('compare.supVsRib.cost') || 'Cost:'}</strong>
+              {
+                t('compare.supVsRib.ribCostDesc') ||
+                  '$3,000-$15,000+ (boat + motor + trailer). Ongoing fuel and maintenance costs.'
+              }</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span
+              ><strong>{t('compare.supVsRib.performance') || 'Performance:'}</strong>
+              {
+                t('compare.supVsRib.ribPerfDesc') ||
+                  '25-40+ knots. Carries multiple passengers and heavy gear. Handles rough water.'
+              }</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span
+              ><strong>{t('compare.supVsRib.bestFor') || 'Best for:'}</strong>
+              {
+                t('compare.supVsRib.ribBestDesc') ||
+                  'Offshore cruising, search and rescue, commercial operations, watersports towing, group outings.'
+              }</span
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="mt-16">
+      <h2 class="text-2xl font-semibold text-gray-900">
+        {t('compare.supVsRib.tableTitle') || 'Side-by-Side Comparison'}
+      </h2>
+      <div class="mt-6 overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="bg-gray-50 border-b-2 border-gray-200">
+              <th class="px-4 py-3 text-left font-semibold text-gray-700">{t('compare.factor') || 'Factor'}</th>
+              <th class="px-4 py-3 text-center font-semibold text-sky-700"
+                >{t('compare.supVsRib.supShort') || 'Inflatable SUP'}</th
+              >
+              <th class="px-4 py-3 text-center font-semibold text-emerald-700"
+                >{t('compare.supVsRib.ribShort') || 'RIB Boat'}</th
+              >
+            </tr>
+          </thead>
+          <tbody>
+            {
+              [
+                [
+                  t('compare.supVsRib.r1') || 'Propulsion',
+                  t('compare.supVsRib.r1a') || 'Human (paddle)',
+                  t('compare.supVsRib.r1b') || 'Outboard motor (15-150+ HP)',
+                ],
+                [
+                  t('compare.supVsRib.r2') || 'Top Speed',
+                  t('compare.supVsRib.r2a') || '3-5 mph (paddling)',
+                  t('compare.supVsRib.r2b') || '25-40+ knots',
+                ],
+                [
+                  t('compare.supVsRib.r3') || 'Range',
+                  t('compare.supVsRib.r3a') || '5-15 miles (stamina limited)',
+                  t('compare.supVsRib.r3b') || '50-200+ miles (fuel dependent)',
+                ],
+                [
+                  t('compare.supVsRib.r4') || 'Passengers',
+                  t('compare.supVsRib.r4a') || '1 (solo)',
+                  t('compare.supVsRib.r4b') || '4-12 (model dependent)',
+                ],
+                [
+                  t('compare.supVsRib.r5') || 'Cargo Capacity',
+                  t('compare.supVsRib.r5a') || 'Minimal (deck storage)',
+                  t('compare.supVsRib.r5b') || 'High (lockers + deck space)',
+                ],
+                [
+                  t('compare.supVsRib.r6') || 'Weight',
+                  t('compare.supVsRib.r6a') || '18-30 lbs',
+                  t('compare.supVsRib.r6b') || '150-500+ kg',
+                ],
+                [
+                  t('compare.supVsRib.r7') || 'Entry Cost',
+                  t('compare.supVsRib.r7a') || '$200-$500',
+                  t('compare.supVsRib.r7b') || '$3,000-$8,000',
+                ],
+                [
+                  t('compare.supVsRib.r8') || 'Running Cost',
+                  t('compare.supVsRib.r8a') || '$0 (no fuel)',
+                  t('compare.supVsRib.r8b') || '$$ (fuel + maintenance)',
+                ],
+                [
+                  t('compare.supVsRib.r9') || 'Storage',
+                  t('compare.supVsRib.r9a') || 'Closet or car trunk',
+                  t('compare.supVsRib.r9b') || 'Garage or marina slip',
+                ],
+                [
+                  t('compare.supVsRib.r10') || 'Rough Water',
+                  t('compare.supVsRib.r10a') || 'Limited (calm conditions)',
+                  t('compare.supVsRib.r10b') || 'Excellent',
+                ],
+                [
+                  t('compare.supVsRib.r11') || 'Fitness Benefit',
+                  t('compare.supVsRib.r11a') || 'Full-body workout',
+                  t('compare.supVsRib.r11b') || 'Minimal',
+                ],
+                [
+                  t('compare.supVsRib.r12') || 'License Required',
+                  t('compare.supVsRib.r12a') || 'No',
+                  t('compare.supVsRib.r12b') || 'Boat license (varies)',
+                ],
+              ].map((row, i) => (
+                <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                  {row.map((cell, j) => (
+                    <td
+                      class={`px-4 py-3 border-b border-gray-200 ${j === 0 ? 'font-medium text-gray-700' : 'text-center text-gray-600'}`}
+                    >
+                      {cell}
+                    </td>
+                  ))}
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mt-16 bg-gradient-to-br from-sky-50 to-blue-50 rounded-2xl p-8 border border-sky-200">
+      <h2 class="text-xl font-semibold text-gray-900">
+        {t('compare.supVsRib.recTitle') || 'Which Should You Choose?'}
+      </h2>
+      <p class="mt-4 text-gray-600 text-sm leading-relaxed">
+        {
+          t('compare.supVsRib.recDesc') ||
+            'Choose an inflatable SUP if you want an affordable, portable, fitness-oriented watercraft for solo paddling on calm waters. Choose a RIB if you need real boat capability — speed, range, passenger capacity, and rough-water performance. Many water enthusiasts start with a SUP for fitness and recreation, then add a RIB when they need to explore further.'
+        }
+      </p>
+      <div class="mt-6 flex gap-4 flex-wrap">
+        <a
+          href={`/${lang}/products`}
+          class="px-6 py-3 bg-gray-900 text-white rounded-full text-sm font-medium hover:bg-gray-800 transition"
+          >{t('compare.browseProducts') || 'Browse Products'}</a
+        >
+        <a
+          href={`/${lang}/guides`}
+          class="px-6 py-3 border border-gray-200 text-gray-700 rounded-full text-sm font-medium hover:border-gray-400 transition"
+          >{t('compare.buyingGuides') || 'Buying Guides'}</a
+        >
+      </div>
+    </section>
+  </section>
+
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true">
+    <p>
+      {
+        t('compare.supVsRib.aiBlock') ||
+          'Comprehensive comparison between inflatable stand-up paddle boards (iSUPs) and rigid inflatable boats (RIBs). Covers propulsion, speed, range, passenger capacity, cargo, weight, portability, cost, storage, licensing, rough water capability, and fitness benefit. Inflatable SUPs are human-powered, backpack-portable, $200-$500 entry cost, zero running costs. RIBs are motorized, trailer-transported, $3,000-$8,000+ entry cost, ongoing fuel costs.'
+      }
+    </p>
+  </section>
+  <script is:inline type="application/ld+json" set:html={faqSchema} />
+</Layout>

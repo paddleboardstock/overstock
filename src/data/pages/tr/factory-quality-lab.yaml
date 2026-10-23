@@ -1,0 +1,56 @@
+hero:
+  tagline: Kalite Kontrol Laboratuvarı
+  title: Test Laboratuvarı ve Kalite Güvencesi
+  subtitle: Bağımsız kalite laboratuvarı, ISO 9001 süreçleri ile — her birim sevkiyat öncesi test edilir
+intro: Aquafarer, üretimden bağımsız olarak faaliyet gösteren özel bir kalite kontrol laboratuvarı işletmektedir. Ham madde her parti ve her bitmiş tekne, serbest bırakılmadan önce belgelenmiş denetim protokollerinden geçer. QC ekibimiz doğrudan yönetime rapor verir, tarafsız kalite kararlarını sağlar.
+highlights:
+  - value: 100%
+    label: Birimler basınca tabi tutuldu
+    detail: Her hazne, her tekne
+  - value: 48 h
+    label: Hava tutma test süresi
+    detail: 1.25× nominal basınçta
+  - value: '&lt;5%'
+    label: İzin verilen maksimum basınç düşüşü
+    detail: 24 saatlik bekletme süresi boyunca
+  - value: AQL 2,5
+    label: Ana kusur eşiği
+    detail: ISO 2859 numune alma başına
+test_procedures:
+  - title: Hammadde Denetimi
+    description: PVC, Hypalon, drop-stitch kumaş ve donanımın her gelen partisi kabul öncesi test edilir. Çekme dayanıklılığı (ASTM D751), yırtılma direnci (ISO 4674) ve UV direnci doğrulanır. Uygun olmayan malzemeler karantinaya alınır ve iade edilir.
+    standards:
+      - ASTM D751 (çekme)
+      - ISO 4674 (yırtılma)
+      - ISO 4892 (UV)
+  - title: Süreç İçi QC Kontrol Noktaları
+    description: Üretim operatörleri her aşamada kendi kendine denetim yapar. QC denetçileri vardiya boyunca rastgele örnekleme gerçekleştirir. Kaynak soyulma testleri her 50 birimde yapılır. Boyutsal kontroller her 20. panelde yapılır.
+    standards:
+      - ASTM D751 (soyulma)
+      - İç 100 maddelik kontrol listesi
+      - ISO 2859 numune alma
+  - title: 48 Saatlik Hava Tutma Testi
+    description: Her tüp hazne, nominal basıncın %125’ine şişirilir ve 48 saat tutulur. Basınç sensörleri sıcaklık telafisi ile sürekli kayıt yapar. %5 basınç düşüşünü aşan herhangi bir hazne otomatik olarak parti yeniden denetimini tetikler.
+    standards:
+      - ISO 6185
+      - CE 2013/53/EU
+  - title: Yük ve Denge Testi
+    description: Tamamlanan tekneler, maksimum nominal kapasitede denge, serbest bordo ve kullanımı için test edilir. Her gemi, nihai muayene onayından önce su testinden geçirilir.
+    standards:
+      - ISO 12217
+      - CE 2013/53/EU
+equipment:
+  - name: Evrensel Test Makinesi (çekme)
+    spec: 5 kN, ASTM D751 standartlarına uygun
+  - name: Basınç Sızıntı Test Cihazı
+    spec: Çok kanallı, 0–50 psi, veri kaydı
+  - name: UV Hava Koşullarına Dayanıklılık Kabini
+    spec: ISO 4892, 1.000 saat döngü
+  - name: Kalınlık Ölçer (dijital)
+    spec: 0,01 mm çözünürlük
+  - name: Soyma Test Cihazı (kaynak)
+    spec: Motorlu, 50 N kapasite
+  - name: Sıcaklık Kabini
+    spec: -40 °C ila +100 °C
+  - name: Sızıntı Tespit Tankı
+    spec: 6 m × 2 m, aydınlatmalı

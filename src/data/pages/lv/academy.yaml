@@ -1,0 +1,167 @@
+hero:
+  tagline: Aquafarer Akadēmija
+  title: Mācību centrs
+  subtitle: Ceļveži un apmācības visiem prasmju līmeņiem — no SUP pamatiem līdz uzlabotām glābšanas tehnikām
+categories:
+  - level: Iesācējs
+    color: from-green-500 to-emerald-600
+    badge: bg-green-100 text-green-700
+    guides:
+      - title: SUP Pamatinformācija
+        desc: Iemācieties stāvēšanas dēļošanu — stāja, airēšanas tehnika un līdzsvars.
+        slug: beginner-sup-guide
+      - title: Dēļu airēšanas tehnikas
+        desc: Priekšējā airēšana, šķērsairis, vilkšanas airēšana un zems balsts — apgūstiet pamata dēļa airēšanas kustības.
+        slug: sup-paddle-guide
+      - title: Drošība pirmajā vietā
+        desc: Svarīgākās drošības prakses, tostarp laika apstākļu pārbaudes, PFD izmantošana, siksniņu noteikumi un pašglābšanās.
+        slug: sup-safety-guide
+  - level: Vidēja līmeņa
+    color: from-blue-500 to-indigo-600
+    badge: bg-blue-100 text-blue-700
+    guides:
+      - title: Ekskursiju pamati
+        desc: Plānojot vairākas stundas ilgas airēšanas — navigācija, ūdens patēriņš, temps un vēja prognožu interpretēšana.
+        slug: touring-sup-guide
+      - title: Laika apstākļu lasīšana
+        desc: Interpretēt jūras prognozes, atpazīt mākoņu veidus un saprast vēja ietekmi uz ūdeni.
+        slug: weather-planning-water-sports
+      - title: Navigācijas pamati
+        desc: Kartes lasīšana, kompasa lietošana, GPS punktu noteikšana un maršruta plānošana piekrastes airēšanai.
+        slug: sup-navigation-guide
+      - title: Paisuma un bēguma izpratne
+        desc: Izturība par paisuma cikliem, straumēm un to, kā tās ietekmē starta laiku un maršrutu.
+        slug: understanding-tides
+  - level: Papildu
+    color: from-purple-500 to-violet-600
+    badge: bg-purple-100 text-purple-700
+    guides:
+      - title: Daudzu dienu ceļojuma plānošana
+        desc: Ekspedīcijas loģistika — aprīkojuma izvēle, pārtikas plānošana, drošības protokoli un ārkārtas kontakti.
+        slug: sup-travel-guide
+      - title: Glābšanas tehnikas
+        desc: Pašglābšanās, T-glābšana, eskimosku glābšana kajakiem un vilkšanas protokoli atklātā ūdenī.
+        slug: sup-self-rescue
+      - title: Nakts airēšana
+        desc: Navigācija pēc tumsas — apgaismojuma prasības, maršruta atcerēšanās, grupas komunikācija un apdraudējuma izpratne.
+        slug: sup-navigation-guide
+  - level: Apkope
+    color: from-amber-500 to-orange-600
+    badge: bg-amber-100 text-amber-700
+    guides:
+      - title: Tīrīšana un kopšana
+        desc: Mazgāšana svaigā ūdenī, UV aizsardzība, pelējuma novēršana un pareiza žāvēšanas tehnika pēc katras sesijas.
+        slug: inflatable-sup-maintenance
+      - title: Uzglabāšanas ceļvedis
+        desc: Labākās prakses uzpūšamo dēļu un laivu glabāšanai — izpūšana, locīšana, temperatūras kontrole un glabāšanas ilgums.
+        slug: inflatable-sup-storage
+      - title: Remonta pamati
+        desc: Salabojiet nelielus punkcijas caurumus, šuvju noplūdes un vārstu problēmas ar PVC remonta komplektiem un līmēšanas paņēmieniem.
+        slug: inflatable-sup-repair
+      - title: Vārstu apkope
+        desc: Identificējiet vārstu tipus (Halkey-Roberts, Boston, Leafield), notīriet netīrumus un nomainiet bojātos vārstu stūrus.
+        slug: inflatable-sup-repair
+knowledge_center_tagline: Zināšanu centrs
+knowledge_center_title: Jūras aprīkojuma un nozares ceļveži
+knowledge_center_subtitle: Ekspertu zināšanas un iepirkšanās ceļveži jūras profesionāļiem, flotes operatoriem un ūdenssporta entuziastiem.
+knowledge_sections:
+  - title: RIB Laivu zināšanas
+    tagline: Cietajā karkasā uzpūtamo laivu ceļveži
+    desc: Viss par RIB laivām — korpusa dizains, materiāli, dzinēja izvēle, apkope un pirkšanas padomi komerciālai un atpūtas lietošanai.
+    guides:
+      - title: Kā izvēlēties pareizo RIB laivu
+        desc: Pilnīgs ceļvedis RIB izvēlē — izmērs, dzinēja jauda, cauruļu materiāls, korpusa tips un paredzētais lietojums.
+        href: /v2/inflatable-boat-buying-guide
+      - title: RIB vs uzpūšamā laiva
+        desc: Cietā karkasa uzpūtāmā laiva pret tradicionālo uzpūšamo peldi — salīdzina korpusa dizainu, veiktspēju, izturību un ietilpību.
+        href: /compare/rib-vs-dinghy
+      - title: Komerciāls RIB pret izklaide RIB
+        desc: Komerciālas kvalitātes vs atpūtas RIB laivas — būvniecības standarti, materiāli, kalpošanas ilgums, cena un sertifikāti.
+        href: /compare/commercial-vs-recreational-rib
+      - title: Alumīnija vs stiklašķiedras korpuss
+        desc: Salīdzina alumīnija un stiklašķiedras korpusus RIB laivām pēc svara, izmaksām, izturības un korozijas izturības.
+        href: /compare/aluminum-vs-fiberglass
+  - title: Uzpūšamo laivu ceļvedis
+    tagline: Uzpūšamo ūdenslīdzekļu zināšanas
+    desc: Visaptveroši ceļveži par uzpūšamajām laivām — PVC vs Hypalon, būvniecības metodes, drošības standarti un labākās apkopes prakses.
+    guides:
+      - title: PVC vs Hypalon materiālu ceļvedis
+        desc: Galīga salīdzināšana starp PVC un Hypalon CSM uzpūšamo laivu būvniecībā.
+        href: /compare/pvc-vs-hypalon
+      - title: Kā tiek ražotas uzpūšamās laivas
+        desc: Ražošanas process — materiāla griešana, HF metināšana, šuvju būve, spiediena pārbaude un kvalitātes kontrole.
+        href: /learn/inflatable-technology
+      - title: Uzpūšamās laivas drošības ceļvedis
+        desc: Drošības standarti, slodzes kapacitāte, pareiza uzpūšana, pirmsbraukšanas pārbaudes un ārkārtas procedūras.
+        href: /learn/water-safety
+      - title: Uzpūšamās laivas apkope
+        desc: Tīrīšana, uzglabāšana, UV aizsardzība, ziemas sagatavošana un uzpūšamo laivu un RIBs remonts.
+        href: /v2/inflatable-boat-maintenance
+  - title: Laivu zināšanas
+    tagline: Piepūšamā laiva un RIB centrs
+    desc: Tehniskie ceļveži, kas aptver piepūšamo laivu veidus, materiālus, būvniecības metodes, apkopi un drošību — no laivām līdz RIBs.
+    guides:
+      - title: Piepūšamo laivu veidi
+        desc: Laiviņas, RIBskajaki un tenderi — iepazīstieties ar atšķirībām un izvēlieties pareizo.
+        href: /v2/inflatable-boat-buying-guide
+      - title: Drop-Stitch Tehnoloģija
+        desc: Kā tūkstošiem iekšējo vītņu veido stingras, augsta spiediena piepūšamas struktūras.
+        href: /learn/drop-stitch-core
+      - title: Materiālu atsauce
+        desc: PVC Izskaidroti nolieguma rādītāji, auduma svars, UV pretestība un jūras klases materiāli.
+        href: /learn/materials
+      - title: RIB pret laivu
+        desc: Salīdziniet stingras piepūšamās laivas ar tradicionālajām piepūšamajām švertlaivām dažādiem lietošanas gadījumiem.
+        href: /compare/rib-vs-dinghy
+  - title: SUP Zināšanas
+    tagline: Stand-up airēšanas dēļu ceļveži
+    desc: Viss par SUP dēļiem — piepūšamie pret stingrajiem, dēļu izmēri, materiālu tehnoloģijas un ekspertu padomi visiem prasmju līmeņiem.
+    guides:
+      - title: Piepūšamais pret cieto SUP
+        desc: Salīdziniet iSUP un cietās epoksīda plates pēc pārnēsājamības, izturības, veiktspējas un vērtības.
+        href: /learn/sup
+      - title: SUP Dēļa izmēru ceļvedis
+        desc: Kā garums, platums un biezums ietekmē stabilitāti, ātrumu un manevrētspēju.
+        href: /learn/sup
+      - title: SUP Uzturēšana un kopšana
+        desc: UV Padomi par piepūšamo dēļu tīrīšanu, uzglabāšanu, aizsardzību un remontu SUP .
+        href: /v2/inflatable-sup-maintenance
+      - title: Izvēloties savu pirmo SUP
+        desc: Iesācēju ceļvedis, kā izvēlēties pareizo stāvošo airēšanas dēli atbilstoši jūsu svaram, prasmju līmenim un paredzētajam lietojumam.
+        href: /learn/sup
+  - title: Niršanas aprīkojuma ceļvedis
+    tagline: Zināšanas par komerciālo niršanas laivu
+    desc: Specializēti gidi uz niršanas laivām, niršanas RIBsun aprīkojuma niršanas centriem, niršanas operatoriem un komerciālām niršanas komandām.
+    guides:
+      - title: Labākā RIB laiva niršanas centriem
+        desc: Kā izvēlēties piemērotāko niršanas RIB centru — kapacitāte, konfigurācija un budžeta apsvērumi.
+        href: /solutions-diving-center-boats
+      - title: Niršanas RIB konfigurācijas ceļvedis
+        desc: Būtiskas niršanas funkcijas RIBs — tvertņu plaukti, kāpņu sistēmas, niršanas platforma un aprīkojuma uzglabāšana.
+        href: /solutions-diving-center-boats
+  - title: Jahtu apkalpes gids
+    tagline: Superjahtas un jūras palīglaivu risinājumi
+    desc: Ceļveži perfektas jahtas palīglaivas izvēlē — piepūšamās palīglaivas, RIB palīglaivas, uzglabāšanas risinājumi un palīglaivu piederumi.
+    guides:
+      - title: Kā izvēlēties jahtas palīglaivu
+        desc: Faktori, kas jāņem vērā, izvēloties palīglaivu savai jahtai — lielums, materiāls, dzinējs un uzglabāšana.
+        href: /solutions-yacht-tender-solutions
+      - title: Piepūšamās vs RIB palīglaivas
+        desc: Salīdzini piepūšamās dēļa palīglaivas ar cietās piepūšamās laivas palīglaivām pēc veiktspējas, izturības un uzglabāšanas iespējām.
+        href: /compare/rib-vs-dinghy
+  - title: Glābšanas aprīkojuma ceļvedis
+    tagline: Meklēšanas un glābšanas ūdens transporta zināšanas
+    desc: Profesionāli ceļveži par glābšanas laivām, SAR ūdens transporta līdzekļiem un ārkārtas reaģēšanas aprīkojumu piekrastes apsardzei, glābējiem un katastrofu seku mazināšanas komandām.
+    guides:
+      - title: SAR laivas izvēles ceļvedis
+        desc: Kā izvēlēties pareizo meklēšanas un glābšanas laivu — ātrums, ietilpība, izturība un speciālās aprīkojuma prasības.
+        href: /solutions-rescue-watercraft
+      - title: Komerc RIB glābšanas operācijām
+        desc: Kāpēc profesionālās meklēšanas un glābšanas komandām visā pasaulē priekšroka tiek dota komerciālā līmeņa RIBs.
+        href: /use-cases/search-and-rescue
+read_guide: Izlasiet rokasgrāmatu →
+cta:
+  title: Nezini, ar ko sākt?
+  desc: Izpildi mūsu prasmju novērtēšanas testu, lai atrastu pareizos ceļvežus un aprīkojumu savam līmenim.
+  label: Sazinies ar mums →
+  link: /contact

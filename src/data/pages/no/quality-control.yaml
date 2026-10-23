@@ -1,0 +1,137 @@
+hero:
+  tagline: Kvalitetskontroll
+  title: Kvalitetskontrollsystem<br /> for OEM maritim produksjon
+  subtitle: Flertrinns inspeksjonsprosess som dekker innkommende materialer, produksjon underveis, trykktesting, sluttmontering og verifisering før utsendelse. Hver batch er sporbar, hver test blir registrert.
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-pressure-testing.webp
+    alt: Aquafarer kvalitetskontroll- og trykktestprosess
+stats:
+  title: QC etter tallene
+  stats:
+    - title: Enheter trykktestet
+      amount: 100%
+    - title: Maks trykkfall
+      amount: <5%
+    - title: QC-inspektører
+      amount: '12'
+    - title: Beholdte opptegnelser
+      amount: 10 år
+content_system:
+  tagline: QC-systemoversikt
+  title: Integrert kvalitetskontrollrammeverk
+  subtitle: Vårt kvalitetskontrollsystem opererer uavhengig av produksjonen og rapporterer direkte til ledelsen. Ingen batch sendes uten signert kvalitetsgodkjenning fra kvalitetslaboratoriet.
+  items:
+    - title: Uavhengig kvalitetslaboratorium
+      description: Vårt kvalitetslaboratorium fungerer som en separat funksjon fra produksjonen. QC-inspektører rapporterer til kvalitetsleder, ikke produksjonssjefen. Denne organisatoriske uavhengigheten sikrer at kvalitetsbeslutninger tas objektivt — produksjonsfrister overstyrer aldri kvalitetskrav.
+      features:
+        - Rapporterer direkte til ledelsen, uavhengig av produksjon
+        - Autoriserte til å stoppe produksjonen på grunn av kvalitetsproblemer
+        - 12 dedikerte QC-inspektører på alle stadier
+        - Alt testutstyr kalibreres årlig
+    - title: Partisporbarhet
+      description: Hver batch av råvarer får et unikt partisjonsnummer i vårt ERP-system. Fra materialets ankomst gjennom produksjon til ferdig produkt, kobles hver båtens stykliste tilbake til de opprinnelige leverandørpartiene. Dette muliggjør full oppstrøms sporbarhet for enhver kvalitets- eller samsvarshenvendelse.
+      features:
+        - ERP-basert partiovervåkning fra materiale til ferdig produkt
+        - Fysiske batchmerker på hver arbeidsordre
+        - 100 % materialdekning — PVC, Hypalon, maskinvare, lim
+        - Opplysninger beholdes i 10 år (CE 2013/53/EU krav)
+    - title: Standarder og samsvar
+      description: Våre kvalitetskontrollprosedyrer er i samsvar med internasjonale standarder. Produkter er CE sertifisert under EU-direktivet for fritidsbåter 2013/53/EU. Vårt kvalitetsstyringssystem er ISO 9001-sertifisert. Sosial etterlevelse opprettholdes gjennom BSCI sertifisering.
+      features:
+        - CE-sertifisering (EU 2013/53/EU)
+        - ISO 9001:2015 kvalitetsledelse
+        - BSCI sertifisering for sosial etterlevelse
+        - REACH og RoHS-materialoverholdelse
+        - UKCA-sertifisering etter Brexit
+content_inspection:
+  tagline: Inspeksjonsstadier
+  title: Seks-trinns inspeksjonsprosess
+  subtitle: Hvert produkt går gjennom 6 inspeksjonsstadier med dokumenterte kvalitetskontrollpunkter. Feil oppdages tidlig, korrigerende tiltak iverksettes umiddelbart, og hver batch er fullt sporbar.
+  stages:
+    - stage: '1'
+      title: Inkommende materialinspeksjon
+      description: Alt innkommende materiale blir loggført med partinummer og satt i karantene inntil QC-godkjenning. PVC/Hypalon stoffruller testes for strekkfasthet (ASTM D751), rivemotstand (ISO 4674) og tykkelse. Drop-stitch kjerner, ventiler, lim og maskinvare blir visuelt inspisert og målt mot spesifikasjonene.
+      checks: Dra styrke ASTM D751, rivestyrke ISO 4674, tykkelsesmåler, limviskositet, visuell defektskontroll
+      threshold: 100 % av batchene testet. Avvis hvis strekk < 90 % av spesifikasjonen, rive < spesifikasjonsminimum, eller visuell defekt
+    - stage: '2'
+      title: QC under prosess — Kutting og forberedelse
+      description: CNC-kuttede paneler kontrolleres dimensjonsmessig mot CAD-kildefiler for hver 20. panel. Kantkvaliteten inspiseres for frynser, ujevne kutt eller dimensjonsavvik. Panelantallet verifiseres mot stykliste for hver produksjonsbatch før materialene går videre til sveising.
+      checks: Dimensjonssjekk mot CAD DXF-filer, inspeksjon av kantkvalitet, verifisering av panelantall
+      threshold: Toleranse ±0,5 mm. Forkast parti hvis >2 % er utenfor toleranse
+    - stage: '3'
+      title: Kvalitetskontroll under produksjon — Sveising og liming
+      description: Under produksjon blir sveisekvaliteten kontinuerlig overvåket. Peeltester (ASTM D751) utføres på prøver hver 50. enhet. Sveisebredde måles mot spesifikasjon. Loggfiler for varmlufttemperatur gjennomgås for konsistens. Hvert søm inspiseres visuelt under baklys for kanalisering eller hulrom.
+      checks: Peel-test ASTM D751 hver 50. enhet, måling av sveisbredden, gjennomgang av logg for varmluftstemperatur, inspeksjon av søm med baklys
+      threshold: Skjærfasthet min 8 N/cm. Sveisbredde toleranse ±1 mm. Synlig kanal = avvis
+    - stage: '4'
+      title: Monteringskontroll
+      description: Hver enhet følger en monteringssjekkliste på 100 poeng som signeres av teamlederen. Ventilens funksjon testes gjennom 10 åpne/lukke-sykluser. Maskinvaremomentet verifiseres. Visuell inspeksjon omfatter overflatefinish, fargekonsistens, plassering av etiketter og fullstendighet av tilbehør.
+      checks: 100-punkts sjekkliste per enhet, ventilfunksjonstest, kontroll av maskinvaremoment, visuell inspeksjon
+      threshold: 'Nulldefektpolicy på sikkerhetskritiske gjenstander (ventiler, D-ringer, håndtak). Mindre kosmetikk: AQL 2,5 (ISO 2859)'
+    - stage: '5'
+      title: Trykktesting
+      description: Hvert kammer blir pumpet opp til 1,25× nominelt trykk og holdt i 24-48 timer. Trykksensorer logger kontinuerlig gjennom hele holdeperioden. Temperaturkompenserte målinger sikrer nøyaktighet. Ethvert kammer som overskrider 5 % trykkfall, blir avvist og sendt til ny inspeksjon av sømmene med 100 % retest av hele produksjonsbatchen.
+      checks: 24-48 timers trykkhold-logg, sensor kalibrering verifisert daglig, temperaturkompensert avlesning, søm re-test etter reparasjon
+      threshold: Maks 5% trykkfall over 24 timer ved stabil temperatur. Overskridelse = 100% retest av hele batchen
+    - stage: '6'
+      title: Sluttkontroll og utsendingsfrigivelse
+      description: Endelig visuell og funksjonell inspeksjon før pakking. Overflatefeil, fargekonsistens, kontroll av etikett/BIN, emballasjens integritet og kompletthet av tilbehør blir sjekket mot kundeordren. Enheter blir vakuumpakket, satt i esker og plassert på paller. Endelig kvalitetskontrollsignering kreves før noe produkt forlater fabrikken.
+      checks: Full visuell inspeksjon, tilbehørssjekkliste per SKU, emballasjetapptest (1 m tilfeldig prøve), etikett/strekkodeskanning verifisering
+      threshold: AQL 2,5 store feil, AQL 4,0 små. Nulltoleranse for sikkerhetsfeil. 100 % av enhetene visuelt inspisert
+content_equipment:
+  tagline: Testutstyr
+  title: QC-lab<br />utstyr
+  subtitle: Vårt kvalitetslaboratorium er utstyrt med spesialisert testutstyr for materialverifisering, sveisens integritet og produktprestasjon.
+  columns: 3
+  items:
+    - title: Trekkprøvemaskin
+      description: Måler stoffets strekkstyrke og forlengelse i henhold til ASTM D751. Brukes for innkommende kvalitetskontroll av alle PVC, Hypalon og drop-stitch stoffpartier.
+      icon: tabler:scale
+    - title: Temperaturkammer
+      description: Miljøkammer for UV motstandstesting (ASTM G154) og lavtemperaturfleksibilitetstesting. Simulerer ekstreme driftsforhold.
+      icon: tabler:temperature
+    - title: Trykksensorer og loggere
+      description: Digitale trykksensorer med kontinuerlig datalogging for 24-48 timers luftretensjonstester. Temperaturkompensert for nøyaktighet.
+      icon: tabler:wind
+    - title: Skrelletest-stativ
+      description: Kalibrert avskrellingstestutstyr for verifisering av sveiseforsterkningen. Tilfeldige prøver fra hver produksjonsbatch.
+      icon: tabler:files
+    - title: Lekkasjedeteksjonstank
+      description: Vanntank for neddykket lekkasjetesting av oppblåste kamre. Visuell bobledeteksjon for kontroll av sømmer og ventilers integritet.
+      icon: tabler:ripple
+    - title: Inspeksjonsverktøy
+      description: Kalibrerte måleverktøy — tykkelsesmålere, momentnøkler, dimensjonskalipere, hardhetstestere for produksjons-KS-stasjoner.
+      icon: tabler:tools
+content_metrics:
+  tagline: QC-ytelse
+  title: Kvalitetskontroll<br />Målinger
+  subtitle: Reelle bestått/ikke bestått-data fra vår produksjonslinje. Disse målingene overvåkes daglig og gjennomgås månedlig av ledelsen.
+  columns: 3
+  items:
+    - title: 100 % enheter testet
+      description: Hvert kammer på hver båt blir trykktestet før levering. Ingen prøvetaking — 100 % inspeksjon av trykkintegritet.
+      icon: tabler:check
+    - title: <5% Trykkfall
+      description: Maksimalt tillatt trykktap over 24-48 timer ved 1,25× nominelt trykk. Enhver kammer som overskrider denne terskelen utløser ny batch-test.
+      icon: tabler:gauge
+    - title: AQL 2,5
+      description: Akseptabelt kvalitetsnivå for store feil per ISO 2859 utvalgsstandard. Nulltoleranse for sikkerhetskritiske feil.
+      icon: tabler:clipboard-check
+    - title: 24-48 timers overvåking
+      description: 'Varigheten av trykkhold varierer etter produktkategori. RIB kamre: 48 timer. SUP og oppblåsbare båter: 24-48 timer.'
+      icon: tabler:clock
+    - title: 1,25× testtrykk
+      description: Sikkerhetsmargin på hvert kammer — testet ved 25 % over nominelt trykk for å sikre margin over maksimale driftsforhold.
+      icon: tabler:arrow-up
+    - title: 0 % sikkerhetsfeil
+      description: Nulltoleransepolitikk for sikkerhetskritiske feil — ventiler, D-ringer, sømmer og oppdriftskamre. Enhver feil = 100 % nykontroll.
+      icon: tabler:shield
+cta:
+  title: Be om kvalitetsdokumentasjon
+  subtitle: Vi tilbyr komplette kvalitetsdokumentasjonspakker inkludert testrapporter, materialsertifikater og samsvarserklæringer med hver levering. Kontakt oss for prøver.
+  actions:
+    - variant: primary
+      text: Be om QC-dokumentasjon
+      href: /contact
+    - text: Vis testprotokoller
+      href: /quality

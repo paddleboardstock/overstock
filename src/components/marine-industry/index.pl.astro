@@ -1,0 +1,381 @@
+---
+const { lang = 'pl' } = Astro.props;
+import JsonLd from '~/components/common/JsonLd.astro';
+import AiQuickAnswer from '~/components/common/AiQuickAnswer.astro';
+const t = (_key: string) => '';
+---
+
+<JsonLd
+  type="Article"
+  article={{
+    headline: 'Przewodnik po pontonach — kompletne źródło informacji',
+    description:
+      'Obszerny przewodnik po pontonach obejmujący typy łodzi, metody budowy, porównanie materiałów, kryteria wyboru, standardy bezpieczeństwa i konserwację.',
+    datePublished: '2026-07-07',
+  }}
+  data={{ url: 'https://aquafarer.com/marine-industry/' }}
+/>
+
+<JsonLd
+  type="BreadcrumbList"
+  breadcrumbs={[
+    { name: t('nav.home') || 'Home', href: `/${lang}/` },
+    { name: 'Przemysł morski', href: `/${lang}/marine-industry` },
+    { name: 'Przewodnik po pontonach', href: `/${lang}/marine-industry/` },
+  ]}
+/>
+
+<AiQuickAnswer
+  entityType="Leitfaden"
+  quickAnswer="Ponton to lekka jednostka pływająca, której elastyczne rurki z tkaniny (komory wypornościowe) są wypełnione sprężonym powietrzem w celu wytworzenia pływalności. Nowoczesne pontony obejmują pontony, RIB (sztywne pontony), nadmuchiwane kajaki i deski wiosłowe na stojąco. Wykonane są z tkanin PVC lub Hypalon-CSM metodą zgrzewania HF lub szwów klejonych ręcznie; Konstrukcja Drop-Stitch pozwala na wykonanie wysokociśnieniowych, sztywnych podłóg."
+  facts={[
+    { label: 'Globalny zasięg rynku', value: '$2.8B (2026)' },
+    { label: 'Materiały pierwotne', value: 'PVC / Hypalon CSM' },
+    { label: 'życie', value: '8-20+ Jahre' },
+    { label: 'Certyfikat CE', value: 'Erforderlich (EU)' },
+  ]}
+/>
+
+<section class="max-w-4xl mx-auto py-16 px-6">
+  <h1 class="text-4xl font-semibold text-gray-900">Przewodnik po pontonach</h1>
+  <p class="mt-4 text-lg text-gray-500">
+    Kompletne źródło informacji na temat nadmuchiwanych jednostek pływających — od rekreacyjnych pontonów, przez
+    profesjonalne RIBy, po specjalistyczne łodzie ratownicze.
+  </p>
+
+  <nav class="mt-8 flex flex-wrap gap-2">
+    {
+      [
+        { label: 'Typen', id: 'types' },
+        { label: 'Konstruktion', id: 'construction' },
+        { label: 'Materialien', id: 'materials' },
+        { label: 'Auswahl', id: 'selection' },
+        { label: 'Sicherheit', id: 'safety' },
+        { label: 'Wartung', id: 'maintenance' },
+        { label: 'Standards', id: 'standards' },
+      ].map((s) => (
+        <a
+          href={`#${s.id}`}
+          class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition"
+        >
+          {s.label}
+        </a>
+      ))
+    }
+  </nav>
+
+  <section id="types" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Rodzaje pontonów</h2>
+    <div class="mt-8 grid gap-6">
+      {
+        [
+          {
+            title: 'Aufblasbare Dinghys',
+            desc: 'Kleine, tragbare Boote für Zubringerdienste, Angeln und kurze Freizeitfahrten. Typischerweise 2-4 m lang, mit kleinen Außenbordern (2-15 PS) oder Riemen angetrieben. Der günstigste Einstieg.',
+            icon: '🚤',
+          },
+          {
+            title: 'Festrumpf-Schlauchboote (RIBs)',
+            desc: 'Leistungsstarke Boote mit starrem Rumpf aus GFK, Aluminium oder HDPE und aufblasbaren Auftriebskammern. Längen von 3-12 m, Außenbordmotoren mit 15-300+ PS. Einsatz bei Patrouille, Rettung, Tauchen und Hochseefahrten.',
+            icon: '⚡',
+          },
+          {
+            title: 'Aufblasbare Kajaks',
+            desc: 'Tragbare Kajaks aus PVC- oder TPU-Gewebe. Erhältlich in Einzel- und Tandemausführung für Freizeittouren, Flussfahrten und Expeditionen.',
+            icon: '🛶',
+          },
+          {
+            title: 'Aufblasbare Stand-Up-Paddle-Boards (SUPs)',
+            desc: 'In Drop-Stitch-Konstruktion gefertigte Paddle-Boards, die sich zu starren Hochdruckdecks aufpumpen lassen. Erhältlich als Allround-, Touring-, Yoga-, Angel- und Surf-Modelle.',
+            icon: '🏄',
+          },
+          {
+            title: 'Rettungsboote (SAR)',
+            desc: 'Spezialisierte RIBs für Such- und Rettungseinsätze. Mit selbstlenzendem Boden, Mittelkonsole, Schleppösen und Signalfarben. Für den Rettungseinsatz CE-zertifiziert.',
+            icon: '🆘',
+          },
+          {
+            title: 'Kommerzielle Arbeitsboote',
+            desc: 'Robuste RIBs für Tauchunterstützung, Patrouille, Vermessung und kommerzielle maritime Einsätze. Hypalon-CSM-Konstruktion, verstärkte Rümpfe und professionelle Ausstattung.',
+            icon: '⚙️',
+          },
+        ].map((item) => (
+          <div class="flex gap-4 p-5 bg-gray-50 rounded-xl border border-gray-200">
+            <span class="text-2xl flex-shrink-0">{item.icon}</span>
+            <div>
+              <h3 class="font-semibold text-gray-900">{item.title}</h3>
+              <p class="mt-1 text-sm text-gray-600">{item.desc}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section id="construction" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Metody konstrukcyjne</h2>
+    <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Spawanie HF (wysoka częstotliwość)</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Wykorzystuje energię elektromagnetyczną do łączenia warstw PVC na poziomie molekularnym. Tworzy najsilniejsze,
+          szczelne szwy. Powszechnie stosowane w wysokiej jakości łodziach PVC i deskach SUP. Wymaga specjalnych maszyn
+          i przeszkolonych operatorów.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Klejenie ręczne/wiązanie chemiczne</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Klej dwuskładnikowy łączy panele tkaniny. Główna metoda dla łodzi Hypalon-CSM (nie spawalnych metodą HF).
+          Wymaga precyzyjnego przygotowania powierzchni, kontrolowanej wilgotności i wystarczającego czasu utwardzania,
+          aby uzyskać optymalną wytrzymałość szwu.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Drop-Stitch rdzeń</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Tysiące nici poliestrowych łączy górną i dolną warstwę PVC, umożliwiając napompowanie do wysokiego ciśnienia
+          (15-25 PSI) w celu zachowania sztywnej płyty. Gęstość nici (15-50 nici/cm²) określa sztywność i wagę.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Zgrzewanie na gorąco</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Zgrzewanie szwów i wzmocnień gorącym powietrzem lub gorącym klinem. Powszechne przy produkcji większych
+          żeberek. Mniej precyzyjne niż spawanie HF, ale skuteczne w przypadku tkanin Hypalon i ciężkich PVC.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="materials" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Porównanie materiałów</h2>
+    <div class="mt-6 overflow-x-auto">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="bg-gray-50 border-b-2 border-gray-200">
+            <th class="px-4 py-3 text-left font-semibold text-gray-700">Charakterystyczny</th>
+            <th class="px-4 py-3 text-center font-semibold text-sky-700">PVC</th>
+            <th class="px-4 py-3 text-center font-semibold text-emerald-700">Hypalon CSM</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            [
+              ['Relative Kosten', '$ (Budget)', '$$$ (Premium)'],
+              ['UV-Beständigkeit', 'Gut (mit Beschichtung)', 'Hervorragend (materialeigen)'],
+              ['Abriebfestigkeit', 'Mittel-Gut', 'Hervorragend'],
+              ['Chemikalienbeständigkeit', 'Gut', 'Hervorragend'],
+              ['Kälteflexibilität', 'Versteift unter 0°C', 'Flexibel bis -20°C'],
+              ['Lebensdauer', '8-12 Jahre', '15-20+ Jahre'],
+              ['Nahtmethode', 'HF-Schweißen', 'Handverklebung'],
+              ['Reparatur', 'PVC-Kleber (einfach)', '2K-Kleber (mittel)'],
+            ].map((row, i) => (
+              <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                {row.map((cell, j) => (
+                  <td
+                    class={`px-4 py-3 border-b border-gray-200 ${j === 0 ? 'font-medium text-gray-700' : 'text-center text-gray-600'}`}
+                  >
+                    {cell}
+                  </td>
+                ))}
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-4 text-sm text-gray-500">
+      Nowoczesna klasa wojskowa PVC (1100-1670 dtex) zapewnia doskonałą trwałość większości użytkowników rekreacyjnych
+      za połowę ceny Hypalon. Hypalon jest preferowany w przypadku flot komercyjnych, klimatów tropikalnych i zastosowań
+      krytycznych dla bezpieczeństwa.
+    </p>
+    <a
+      href={`/${lang}/learn/pvc-vs-hypalon`}
+      class="mt-4 inline-block text-sky-600 hover:text-sky-700 text-sm font-medium"
+      >Szczegółowy przewodnik: PVC kontra Hypalon →</a
+    >
+  </section>
+
+  <section id="selection" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Jak wybrać ponton</h2>
+    <div class="mt-8 grid md:grid-cols-3 gap-6">
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">1. Określ zamierzone zastosowanie</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>Czas wolny: ponton lub SUP</li>
+          <li>Moc: RIB (15-60 KM)</li>
+          <li>Komercyjne: RIB (100+ PS)</li>
+          <li>Fitness: nadmuchiwany SUP</li>
+          <li>Podróż: nadmuchiwany kajak</li>
+        </ul>
+      </div>
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">2. Ustal swój budżet</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>$200-$800: nadmuchiwane SUP</li>
+          <li>$500-$2,000: Ponton + silnik</li>
+          <li>$3,000-$8,000: Poziom podstawowy RIB</li>
+          <li>$8,000-$20,000: Premium RIB</li>
+          <li>$20,000+: Komercyjny RIB</li>
+        </ul>
+      </div>
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">3. Rozważ materiał</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>PVC: Niedrogi, lekki</li>
+          <li>Hypalon: Wysokiej jakości, trwałe</li>
+          <li>Drop-Stitch: Sztywna moc</li>
+          <li>Grubość tkaniny: 1100-1670 dtex</li>
+          <li>Powłoka: UV i warstwy chroniące przed przebiciem</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="safety" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Bezpieczeństwo i standardy</h2>
+    <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Certyfikat CE</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Wszystkie pontony sprzedawane w UE wymagają oznakowania CE zgodnie z dyrektywą o statkach rekreacyjnych (RCD)
+          2013/53/UE. Certyfikacja obejmuje kategorię projektową (A-D), pływalność, stabilność i nośność. Łodzie
+          Aquafarer posiadają CE certyfikat do użytku rekreacyjnego i ratowniczego.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">standard</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Międzynarodowa norma dotycząca pontonów określa wymagania dotyczące materiałów, szwów, zaworów i testów
+          wydajności. Typy I-IV obejmują wszystko, od małych pontonów po duże RIB-y.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Niezbędne wyposażenie bezpieczeństwa</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Kamizelki ratunkowe/kamizelki ratunkowe (CE 12402), liny do rzucania, pompa zęzowa/gaśnica, światła
+          nawigacyjne (w nocy), radio UKF, apteczka, kotwica i zapasowe wiosło lub paliwo.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Bezpieczna obsługa</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          NIGDY nie przekraczaj maksymalnego obciążenia podanego na tabliczce znamionowej. Przed uruchomieniem sprawdź
+          zawory. Rozłóż ciężar równomiernie. Obserwuj warunki pogodowe. Zapisz plan podróży. Weź udział w kursie
+          bezpieczeństwa żeglarskiego.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="maintenance" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Konserwacja i pielęgnacja</h2>
+    <div class="mt-8 space-y-4 text-sm text-gray-600">
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <span class="text-sky-600 font-bold flex-shrink-0">1.</span><span
+          >Po każdym użyciu w słonej wodzie należy przepłukać świeżą wodą. Całkowicie wysuszyć przed przechowywaniem.</span
+        >
+      </div>
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <span class="text-sky-600 font-bold flex-shrink-0">2.</span><span
+          >Przechowywać częściowo napompowany w chłodnym, suchym miejscu, z dala od bezpośredniego światła słonecznego i
+          ekstremalnych temperatur.</span
+        >
+      </div>
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <span class="text-sky-600 font-bold flex-shrink-0">3.</span><span
+          >Przed każdym sezonem sprawdzaj zawory i szwy. Co roku spryskaj korpusy zaworów sprayem silikonowym.</span
+        >
+      </div>
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <span class="text-sky-600 font-bold flex-shrink-0">4.</span><span
+          >Czyścić łagodnym mydłem i wodą. Nigdy nie używaj rozpuszczalników, wybielaczy ani myjek wysokociśnieniowych
+          do czyszczenia tkanin.</span
+        >
+      </div>
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <span class="text-sky-600 font-bold flex-shrink-0">5.</span><span
+          >Uszkodzenia należy natychmiast naprawić za pomocą zestawów naprawczych zalecanych przez producenta. Do
+          Hypalon należy używać wyłącznie kleju dwuskładnikowego.</span
+        >
+      </div>
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <span class="text-sky-600 font-bold flex-shrink-0">6.</span><span
+          >Wymieniać zawory co 3-5 lat. Odnów tkaninę po zakończeniu jej żywotności (widoczne zużycie, porowatość,
+          rozwarstwienie szwów).</span
+        >
+      </div>
+    </div>
+  </section>
+
+  <section id="standards" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Zastosowania branżowe</h2>
+    <div class="mt-8 grid md:grid-cols-3 gap-4">
+      {
+        [
+          {
+            title: 'Freizeitbootfahren',
+            desc: 'Familienausflüge, Wassersport, Angeln, Camping und Freizeitfahrten auf Seen, Flüssen und Küstengewässern.',
+          },
+          {
+            title: 'Suche & Rettung',
+            desc: 'Küstenwache, Rettungsschwimmer und Notfallteams setzen spezialisierte RIBs für schnellen Einsatz und Rettung in rauer See ein.',
+          },
+          {
+            title: 'Kommerzielle Schifffahrt',
+            desc: 'Tauchunterstützung, Patrouille, Vermessung, Touristentransport und Offshore-Logistik, bei denen Haltbarkeit und Zuverlässigkeit entscheidend sind.',
+          },
+          {
+            title: 'Militär & Verteidigung',
+            desc: 'Taktische RIBs für Marineoperationen, Truppentransport, Entereinsätze und verdeckte Landungen.',
+          },
+          {
+            title: 'Humanitäre Hilfe',
+            desc: 'Katastrophenschutzorganisationen setzen aufblasbare Boote für Hochwasserrettung, Versorgungstransporte und medizinische Evakuierungen ein.',
+          },
+          {
+            title: 'OEM-Fertigung',
+            desc: 'Individuelle Private-Label-Produktion für Marken, Händler und spezialisierte Betreiber mit besonderen Anforderungen.',
+          },
+        ].map((app) => (
+          <div class="p-4 bg-gray-50 rounded-xl border border-gray-200">
+            <h3 class="font-semibold text-sm text-gray-900">{app.title}</h3>
+            <p class="mt-1 text-xs text-gray-500">{app.desc}</p>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="mt-16 bg-gradient-to-br from-sky-50 to-blue-50 rounded-2xl p-8 border border-sky-200">
+    <h2 class="text-xl font-semibold text-gray-900">Odkryj pontony firmy Aquafarer</h2>
+    <p class="mt-4 text-sm text-gray-600">
+      Aquafarer projektuje i produkuje certyfikowane pontony, SUP, kajaki i RIB-y CE do użytku na rynku rekreacyjnym,
+      zawodowym i OEM. Wszystkie łodzie produkowane są z tkanin wojskowych PVC lub Hypalon-CSM — przy użyciu
+      nowoczesnego spawania HF lub klejenia ręcznego.
+    </p>
+    <div class="mt-6 flex gap-4 flex-wrap">
+      <a
+        href={`/${lang}/products`}
+        class="px-6 py-3 bg-gray-900 text-white rounded-full text-sm font-medium hover:bg-gray-800 transition"
+        >Zobacz produkty</a
+      >
+      <a
+        href={`/${lang}/academy`}
+        class="px-6 py-3 border border-gray-200 text-gray-700 rounded-full text-sm font-medium hover:border-gray-400 transition"
+        >Centrum Nauki</a
+      >
+    </div>
+  </section>
+</section>
+
+<section class="sr-only" data-ai-block="definition" aria-hidden="true">
+  <p>
+    Obszerny przewodnik po pontonach z typami łodzi (pontony, RIBy, kajaki, SUP, łodzie ratunkowe, komercyjne łodzie
+    robocze), metodami budowy (spawanie HF, klejenie ręczne, rdzeń Drop-Stitch, zgrzewanie na gorąco), materiałami
+    (tkanina PVC, Hypalon CSM), kryteriami wyboru (przeznaczenie, budżet, porównanie materiałów), normami bezpieczeństwa
+    (certyfikat CE, podstawowe wyposażenie), konserwacją (czyszczenie, przechowywanie, naprawy, konserwacja zaworów) i
+    zastosowania przemysłowe (rekreacyjne, SAR, komercyjne, wojskowe, humanitarne, OEM).
+  </p>
+</section>

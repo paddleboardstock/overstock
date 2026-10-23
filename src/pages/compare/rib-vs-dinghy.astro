@@ -1,0 +1,184 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+
+const metadata = {
+  title: 'RIB vs Inflatable Dinghy — Which Boat Is Right for You?',
+  description:
+    'Compare rigid inflatable boats (RIBs) vs inflatable dinghies across performance, durability, cost, portability, and use cases. Find the right boat for your needs.',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <JsonLd
+    type="Article"
+    article={{
+      headline: 'RIB vs Inflatable Dinghy — Which Boat Is Right for You?',
+      description:
+        'Compare rigid inflatable boats (RIBs) vs inflatable dinghies across performance, durability, cost, portability, and use cases.',
+      datePublished: '2026-07-07',
+    }}
+    data={{ url: 'https://aquafarer.com/compare/rib-vs-dinghy' }}
+  />
+  <JsonLd
+    type="BreadcrumbList"
+    breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Compare', href: '/compare' }, { name: 'RIB vs Dinghy' }]}
+  />
+  <section class="max-w-4xl mx-auto py-24 px-6">
+    <a href="/products" class="text-sm text-sky-600 hover:text-sky-700">&larr; Products</a>
+    <h1 class="mt-4 text-4xl font-semibold text-gray-900">RIB vs Inflatable Dinghy</h1>
+    <p class="mt-4 text-lg text-gray-500">
+      A practical comparison between rigid inflatable boats and inflatable dinghies to help you choose the right vessel
+      for your boating needs.
+    </p>
+
+    <div class="mt-12 grid md:grid-cols-2 gap-8">
+      <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+        <h2 class="text-xl font-semibold text-gray-900">Rigid Inflatable Boat (RIB)</h2>
+        <ul class="mt-4 space-y-3 text-sm text-gray-600">
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span
+              ><strong>Hull:</strong> Fiberglass deep-V hull provides superior handling, planing capability, and rough-water
+              performance.</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span
+              ><strong>Performance:</strong> Planing hull design allows 25-40+ knot speeds. Excellent in choppy conditions
+              and open water.</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span
+              ><strong>Durability:</strong> Hypalon tubes on professional models last 15-20 years. Rigid hull adds structural
+              integrity.</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span
+              ><strong>Capacity:</strong> Higher load capacity. Suitable for heavy outboard motors (15-150 HP) and multiple
+              passengers with gear.</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span
+              ><strong>Best for:</strong> Search and rescue, law enforcement, commercial operations, offshore cruising, high-speed
+              transit.</span
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+        <h2 class="text-xl font-semibold text-gray-900">Inflatable Dinghy</h2>
+        <ul class="mt-4 space-y-3 text-sm text-gray-600">
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span
+              ><strong>Hull:</strong> Fully inflatable with air deck, slatted floor, or roll-up floor. No rigid components.</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span
+              ><strong>Performance:</strong> Lower speed (5-15 knots). Best on protected waters, lakes, and gentle rivers.
+              Not suitable for rough seas.</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span
+              ><strong>Durability:</strong> Marine-grade PVC lasts 8-12 years. Soft-sided construction absorbs impacts without
+              damage.</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span
+              ><strong>Portability:</strong> Deflates completely. Fits in a duffel bag or car trunk. No trailer or roof rack
+              needed.</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span
+              ><strong>Best for:</strong> Yacht tender, family recreation, lake fishing, calm water cruising, budget-friendly
+              boating.</span
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="mt-16">
+      <h2 class="text-2xl font-semibold text-gray-900">Side-by-Side Comparison</h2>
+      <div class="mt-6 overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="bg-gray-50 border-b-2 border-gray-200">
+              <th class="px-4 py-3 text-left font-semibold text-gray-700">Factor</th>
+              <th class="px-4 py-3 text-center font-semibold text-sky-700">RIB</th>
+              <th class="px-4 py-3 text-center font-semibold text-emerald-700">Dinghy</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              [
+                ['Hull Type', 'Fiberglass deep-V', 'Fully inflatable (PVC)'],
+                ['Top Speed', '25-40+ knots', '5-15 knots'],
+                ['Motor Power', '15-150 HP', '2-15 HP'],
+                ['Rough Water', 'Excellent', 'Limited (protected waters)'],
+                ['Portability', 'Trailer required', 'Fits in car trunk'],
+                ['Setup Time', 'Launch from trailer (5 min)', 'Inflate on site (10-15 min)'],
+                ['Durability', '15-20 years (Hypalon)', '8-12 years (PVC)'],
+                ['Weight (3m model)', '150-250 kg', '25-45 kg'],
+                ['Price (entry)', '$3,000-$8,000', '$300-$1,500'],
+                ['Maintenance', 'Moderate (hull + tubes)', 'Low (rinse and dry)'],
+                ['Storage', 'Garage or marina', 'Closet or car trunk'],
+              ].map((row, i) => (
+                <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                  {row.map((cell, j) => (
+                    <td
+                      class={`px-4 py-3 border-b border-gray-200 ${j === 0 ? 'font-medium text-gray-700' : 'text-center text-gray-600'}`}
+                    >
+                      {cell}
+                    </td>
+                  ))}
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mt-16 bg-gradient-to-br from-sky-50 to-blue-50 rounded-2xl p-8 border border-sky-200">
+      <h2 class="text-xl font-semibold text-gray-900">Which Should You Choose?</h2>
+      <p class="mt-4 text-gray-600 text-sm leading-relaxed">
+        Choose a <strong>RIB</strong> if you need a high-performance vessel for rough water, commercial operations, patrol
+        duties, or offshore cruising. The investment in a rigid hull pays off in speed, handling, and longevity. Choose an
+        <strong>inflatable dinghy</strong> if you need a portable, affordable, and versatile boat for tender duty, family
+        recreation, lake fishing, or as a first boat. Many boaters own both — a RIB for serious boating and a dinghy for tender
+        and casual use.
+      </p>
+      <div class="mt-6 flex gap-4 flex-wrap">
+        <a
+          href="/products"
+          class="px-6 py-3 bg-gray-900 text-white rounded-full text-sm font-medium hover:bg-gray-800 transition"
+          >Browse Products</a
+        >
+        <a
+          href="/guides"
+          class="px-6 py-3 border border-gray-200 text-gray-700 rounded-full text-sm font-medium hover:border-gray-400 transition"
+          >Buying Guides</a
+        >
+      </div>
+    </section>
+  </section>
+
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true">
+    <p>
+      Comprehensive comparison between rigid inflatable boats (RIBs) and inflatable dinghies. Covers hull type, speed,
+      motor power, rough water capability, portability, setup time, durability, weight, price, maintenance, and storage.
+      RIBs feature fiberglass deep-V hulls, 25-40+ knot speeds, 15-150 HP motors, excellent rough water handling,
+      trailer transport, and 15-20 year lifespan. Inflatable dinghies feature fully PVC construction, 5-15 knot speeds,
+      2-15 HP motors, protected water use only, car trunk portability, and 8-12 year lifespan. Recommendation: RIB for
+      commercial/rough water, dinghy for tender/recreational use.
+    </p>
+  </section>
+</Layout>

@@ -1,0 +1,216 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'ro' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline"
+    >← Înapoi la Centrul de Cercetare și Dezvoltare</a
+  >
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Laborator 06</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Laborator de Calitate și Inspecție</h1>
+      <p class="mt-3 text-lg text-muted">Verificare independentă — fiecare test trecut înainte de livrare</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-uv-resistance-testing.webp"
+        alt="Aquafarer laborator de inspectare a calității UV testare"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Încredere, dar verificare</h2>
+  <p>
+    Fiecare ambarcațiune care părăsește atelierul nostru poartă certificarea că a trecut un set definit de inspecții de
+    calitate și teste ale materialelor. Laboratorul nostru de Calitate și Inspecție este o funcție independentă în
+    cadrul organizației — raportează direct directorului general, nu producției — asigurând că nicio presiune comercială
+    nu poate compromite poarta de inspecție. Dacă un lot de materiale sau o ambarcațiune finalizată nu corespunde
+    specificațiilor publicate, laboratorul are autoritatea de a opri expedierea până la rezolvarea neconformității.
+  </p>
+  <p>
+    Laboratorul operează conform unui sistem de management al calității aliniat cu principii, iar metodele noastre de
+    testare se bazează pe standardele ISO, ASTM și EN ori de câte ori este aplicabil. Păstrăm înregistrări detaliate ale
+    fiecărui test efectuat, creând un lanț complet de trasabilitate de la primirea materiilor prime până la livrarea
+    finală a ambarcațiunii.
+  </p>
+
+  <h2>Echipamente de testare și capacități</h2>
+  <table>
+    <thead><tr><th>Echipament</th><th>Teste efectuate</th><th>Standard / Metodă</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Mașină universală de testare (50 kN)</td><td
+          >Rezistența la tracțiune (material), rezistența la dezlipire (cusături), propagarea rupturii</td
+        ><td>, ISO 4674</td></tr
+      >
+      <tr
+        ><td>Banc de testare a retenției de aer (programabil)</td><td
+          >Rezistența la 1000 cicluri de umflare/deflare, test de menținere a presiunii timp de 24-48 h</td
+        ><td>(intern)</td></tr
+      >
+      <tr
+        ><td>Dispozitiv de dezlipire a cusăturilor (motor 180°)</td><td
+          >Rezistența la dezlipire a cusăturilor sudate și lipite la 100 mm/min</td
+        ><td>/ ASTM D1876</td></tr
+      >
+      <tr
+        ><td>Tester de rezistență hidrostatică</td><td>Rezistența la penetrarea apei a materialului (0 — 00 mbar)</td
+        ><td>ISO 811</td></tr
+      >
+      <tr
+        ><td>Micrometru și indicator digital de grosime</td><td
+          >Grosimea materialului, grosimea pereților tubului, grosimea filmului adeziv</td
+        ><td>ISO 2286-3</td></tr
+      >
+      <tr
+        ><td>Cameră de mediu</td><td
+          >Condizionarea temperaturii (-40 °C până la +80 °C) pentru teste de crăpare la rece și îmbătrânire termică</td
+        ><td>ISO 188, ISO 4675</td></tr
+      >
+      <tr
+        ><td>Spectrofotometru de culoare</td><td>Măsurarea culorii Delta-E după UV expunere</td><td
+          >ISO 105-A05 / ASTM D2244</td
+        ></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>Porțile de inspecție — de la material la livrare</h2>
+  <p>
+    Fiecare barcă urmează un plan de calitate bine definit, cu puncte obligatorii de inspecție. Nicio barcă nu poate
+    sări peste o poartă; fiecare barcă trebuie aprobată de un inspector de calitate înainte de a începe următoarea etapă
+    de producție.
+  </p>
+
+  <div class="not-prose my-8">
+    <div class="relative">
+      <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-blue-200 dark:bg-blue-800"></div>
+      <div class="space-y-6 relative">
+        {
+          [
+            {
+              gate: 'Gate 1',
+              label: 'Inspecția materialelor la recepție',
+              desc: 'Lot de material textil, lot de adeziv, accesorii — toate verificate conform specificațiilor la recepție înainte de a fi eliberate către producție.',
+            },
+            {
+              gate: 'Gate 2',
+              label: 'Inspecția sudurilor în proces',
+              desc: 'Primul coupon de sudură testat (dezlipire + vizual) la începutul fiecărui schimb de producție.',
+            },
+            {
+              gate: 'Gate 3',
+              label: 'Testul aerului din cameră',
+              desc: 'Fiecare cameră este presurizată la 1,25 x presiunea de lucru, menținută 24-48 de ore. Datele sunt înregistrate pe număr de serie.',
+            },
+            {
+              gate: 'Gate 4',
+              label: 'Inspectie pre-livrare',
+              desc: 'Ambarcațiunea complet inspectată: toate elementele de fixare strânse la cuplu, sistemele funcționale, fără defecte cosmetice. Listă de verificare de 100 de puncte.',
+            },
+            {
+              gate: 'Gate 5',
+              label: 'Certificare finală',
+              desc: 'Rapoarte de testare compilate, înregistrările inspecțiilor revizuite, Certificat de Conformitate emis.',
+            },
+          ].map((g) => (
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs font-bold z-10">
+                {g.gate}
+              </div>
+              <div class="flex-1 p-3 rounded-lg bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800">
+                <p class="text-sm font-semibold">{g.label}</p>
+                <p class="text-xs text-gray-500 mt-1">{g.desc}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+
+  <h2>Indicatori cheie de calitate (medie mobilă 2025)</h2>
+  <div class="not-prose my-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">99.7 %</span>
+      <span class="text-xs text-gray-500">Randament la prima trecere (batch din material textil)</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">&lt; 0,2%</span>
+      <span class="text-xs text-gray-500">Rata de respingere a sudurii (metru liniar)</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">100 %</span>
+      <span class="text-xs text-gray-500">Camere testate în aer înainte de asamblare</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600"></span>
+      <span class="text-xs text-gray-500">Conformitatea categoriei de proiectare</span>
+    </div>
+  </div>
+
+  <h2>Echipa noastră de calitate</h2>
+  <p>
+    Laboratorul este format dintr-un manager de calitate (10 ani în QA marin, Inginer de Calitate Certificat ASQ), doi
+    inspectori de calitate (fiecare cu certificare NDT de Nivel 2 în testare vizuală) și un tehnician de materiale
+    responsabil de toate testele fizice. Echipa efectuează anual teste de competență prin intermediul unui furnizor
+    independent terț pentru a se asigura că rezultatele testelor noastre rămân precise și reproductibile.
+  </p>
+
+  <h2>Testare independentă pentru clienți</h2>
+  <p>
+    Laboratorul nostru de Calitate și Inspecție este disponibil pentru servicii independente de testare. Dacă aveți
+    nevoie să verificați o specificație a materialului, să validați un nou sistem de adezivi sau să obțineți un raport
+    de testare de la o terță parte pentru o calificare de achiziție, putem efectua testele conform standardului
+    aplicabil și emite un raport certificat de testare.
+  </p>
+  <p>Exemple de lucrări recente de testare realizate de terți:</p>
+  <ul>
+    <li>
+      Comparație a rezistenței peeling-ului a cinci produse competitive de film adeziv pentru un program european de
+      achiziții militare.
+    </li>
+    <li>
+      Studiu accelerat al îmbătrânirii (UV + ciclu termic) pentru o PVC nouă formulă pigmentată portocaliu, cu
+      măsurători interimare regulate la intervale de 500 de ore.
+    </li>
+    <li>
+      Validarea retenției aerului a 50 de supape prototip de deflecare pentru un nou design de tub de înaltă presiune.
+    </li>
+  </ul>
+
+  <h2>Angajamentul nostru față de tine</h2>
+  <p>
+    Când primiți o{SITE.name}barcă, primiți de asemenea dosarul ei de calitate — un registru compilat al rezultatelor
+    testelor care se aplică bărcii dumneavoastră. Certificat de lot de material textil, teste de dezlipire a sudurii,
+    jurnale de testare a aerului din cameră și lista de verificare a inspecției înainte de livrare. Fiecare număr este
+    urmărit. Fiecare inspector este identificat. Acest lucru nu este doar hârtie — este promisiunea noastră că ceea ce
+    am livrat este ceea ce am specificat.
+  </p>
+  <p>
+    Dacă aveți vreodată o problemă de calitate, puteți contacta direct laboratorul — datele de contact sunt tipărite pe
+    certificatul dumneavoastră de conformitate. Luăm fiecare întrebare în serios și ne angajăm într-o investigație
+    formală în termen de 48 de ore.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Ai nevoie de testare independentă sau verificare a calității?</h2>
+    <p class="mt-2 text-sm text-muted">
+      Laboratorul nostru acceptă lucrări de testare de la terți — contactați-ne cu cerințele dumneavoastră.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Contactează laboratorul de calitate</a
+    >
+  </div>
+</section>

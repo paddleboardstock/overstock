@@ -1,0 +1,296 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+
+const metadata = {
+  title: `Materials Science — PVC, Hypalon & Drop-Stitch Technology — ${SITE.name}`,
+  description:
+    'Deep dives into the materials behind Aquafarer products — marine-grade PVC, Hypalon CSM, drop-stitch core, RF welding, and quality testing.',
+};
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Learn' }, { name: 'Materials' }];
+
+const topics = [
+  {
+    title: 'Marine-Grade PVC',
+    desc: 'Multi-layer laminated PVC fabric — UV resistance, abrasion testing, and denier ratings explained.',
+    href: '/v2/pvc-vs-hypalon-boats',
+  },
+  {
+    title: 'PVC vs Hypalon',
+    desc: 'The definitive comparison of the two dominant inflatable boat materials — cost, lifespan, UV resistance.',
+    href: '/learn/pvc-vs-hypalon',
+  },
+  {
+    title: 'Drop-Stitch Core',
+    desc: 'How thousands of internal threads create rigid, high-pressure inflatable structures at 12-15 PSI.',
+    href: '/learn/drop-stitch-core',
+  },
+  {
+    title: 'RF Welding Technology',
+    desc: 'High-frequency welding creates strong, consistent seams — how it works and why it matters.',
+    href: '/learn/inflatable-technology',
+  },
+  {
+    title: 'PSI & Performance',
+    desc: 'Why air pressure matters for inflatable SUPs and boats — rigidity, weight capacity, and ride quality.',
+    href: '/v2/sup-pump-guide',
+  },
+  {
+    title: 'Quality Testing',
+    desc: 'Pressure testing, buoyancy tests, UV aging, and destructive testing — our quality process.',
+    href: '/quality',
+  },
+  {
+    title: 'EVA Foam Decks',
+    desc: 'Closed-cell EVA foam deck pads — traction, comfort, and durability for SUP and boat decks.',
+    href: '/learn/sup-size-guide',
+  },
+  {
+    title: 'Material Care',
+    desc: 'Cleaning, UV protection, mildew prevention, and storage best practices for inflatable products.',
+    href: '/v2/inflatable-sup-storage',
+  },
+];
+
+const materials = [
+  {
+    name: 'PVC (Polyvinyl Chloride)',
+    summary:
+      'The industry standard for recreational inflatable boats and SUPs. Multi-layer laminated fabric offers excellent strength-to-weight ratio at an accessible price point.',
+    pros: [
+      'Affordable — 30-50% cheaper than Hypalon',
+      'Lightweight and easy to handle',
+      'Good UV resistance with proper coatings',
+      'Wide range of colors and finishes',
+      'Easy to repair with PVC patches and solvent adhesive',
+    ],
+    cons: [
+      'Shorter lifespan than Hypalon (7-10 years)',
+      'Less flexible in cold temperatures',
+      'Lower chemical resistance',
+      'Can develop plasticizer migration over time',
+    ],
+    bestFor:
+      'Recreational SUPs, budget-friendly boats, rental fleets, seasonal use, freshwater and coastal environments.',
+    image: 'https://assets.aquafarer.com/images/aquafarer/tech/tech-pvc-material.webp',
+  },
+  {
+    name: 'Hypalon (CSM Rubber)',
+    summary:
+      'Premium synthetic rubber material known for exceptional durability, UV resistance, and longevity. The gold standard for commercial and military-grade inflatable boats.',
+    pros: [
+      'Exceptional UV and ozone resistance',
+      'Lifespan of 15-20 years with proper care',
+      'Excellent cold-weather flexibility',
+      'Superior chemical and oil resistance',
+      'Retains color longer than PVC',
+    ],
+    cons: [
+      'Significantly more expensive than PVC',
+      'Heavier fabric weight',
+      'Fewer color options',
+      'Repairs require specialized adhesives',
+      'Fewer manufacturing facilities worldwide',
+    ],
+    bestFor: 'Commercial RIBs, search and rescue, military applications, tropical climates, long-term fleet ownership.',
+    image: 'https://assets.aquafarer.com/images/aquafarer/tech/tech-hypalon-tubes.webp',
+  },
+  {
+    name: 'Drop-Stitch Core',
+    summary:
+      'The technology that revolutionized inflatable SUPs. Thousands of polyester threads connect the top and bottom fabric layers, allowing high-pressure inflation for rigid, hard-shell performance.',
+    pros: [
+      'Extremely rigid at 12-20 PSI',
+      'Lightweight — 18-30 lbs for full-size board',
+      'Folds flat for storage and travel',
+      'Excellent impact resistance',
+      'Consistent performance across temperature ranges',
+    ],
+    cons: [
+      'Requires high-pressure pump',
+      'Puncture repair more complex than single-layer',
+      'Higher manufacturing cost than standard inflatables',
+      'Pressure loss over time requires periodic topping up',
+    ],
+    bestFor:
+      'Stand-up paddle boards, kayaks, air decks for inflatable boats, any application requiring rigid performance with inflatable portability.',
+    image: 'https://assets.aquafarer.com/images/aquafarer/tech/tech-drop-stitch.webp',
+  },
+  {
+    name: 'EVA Foam Deck',
+    summary:
+      'Closed-cell EVA (ethylene-vinyl acetate) foam used for traction pads on SUP boards and boat decks. Provides cushioning, grip, and thermal insulation.',
+    pros: [
+      'Excellent non-slip grip wet or dry',
+      'Cushioning reduces fatigue on long paddles',
+      'Thermal insulation from cold deck surface',
+      'UV and saltwater resistant',
+      'Available in multi-color block piecing and laser-engraved designs',
+    ],
+    cons: [
+      'Can wear with heavy use over 2-3 years',
+      'Must be properly bonded to prevent delamination',
+      'Not structural — does not affect rigidity',
+      'Adds slight weight (200-400 g per board)',
+    ],
+    bestFor: 'SUP deck traction, boat deck padding, kayak seat comfort, any surface requiring slip-resistant footing.',
+    image: 'https://assets.aquafarer.com/images/aquafarer/tech/tech-air-deck.webp',
+  },
+];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <JsonLd
+    type="Article"
+    article={{
+      headline: metadata.title,
+      description: metadata.description,
+      datePublished: '2025-01-10',
+      dateModified: '2025-06-01',
+    }}
+  />
+  <section class="px-6 py-16 max-w-5xl mx-auto text-center">
+    <p class="text-sm font-semibold text-primary uppercase tracking-wider">Materials Science</p>
+    <h1 class="mt-3 text-4xl md:text-5xl font-bold">Material & Construction Guides</h1>
+    <p class="mt-3 text-lg text-muted max-w-2xl mx-auto">
+      Deep dives into PVC, Hypalon, drop-stitch technology, and the engineering behind Aquafarer products.
+    </p>
+  </section>
+
+  <section class="px-6 pb-8 max-w-5xl mx-auto">
+    <div class="prose prose-gray max-w-none">
+      <p class="text-lg leading-relaxed">
+        The performance, durability, and safety of an inflatable watercraft depend almost entirely on the materials used
+        in its construction. From the fabric that forms the tubes to the threads that give a SUP board its rigidity,
+        every material choice affects how the product performs on the water and how long it lasts.
+      </p>
+      <p class="text-lg leading-relaxed">
+        This guide covers the four core materials used in modern inflatable watercraft: <strong>PVC fabric</strong>, <strong
+          >Hypalon CSM rubber</strong
+        >, <strong>drop-stitch core construction</strong>, and <strong>EVA foam decking</strong>. Understanding these
+        materials will help you choose the right product for your needs and maintain it for maximum lifespan.
+      </p>
+    </div>
+  </section>
+
+  <section class="px-6 pb-16 max-w-5xl mx-auto space-y-16">
+    {
+      materials.map((m, i) => (
+        <div class="grid md:grid-cols-2 gap-8 items-start">
+          <div class={i % 2 === 1 ? 'md:order-2' : ''}>
+            <h2 class="text-2xl font-bold text-gray-900">{m.name}</h2>
+            <p class="mt-3 text-gray-600 leading-relaxed">{m.summary}</p>
+            <div class="mt-4 grid grid-cols-2 gap-4">
+              <div>
+                <h4 class="text-sm font-semibold text-green-700 uppercase tracking-wide">Advantages</h4>
+                <ul class="mt-2 space-y-1">
+                  {m.pros.map((pro) => (
+                    <li class="text-sm text-gray-600 flex items-start gap-1.5">
+                      <span class="text-green-500 mt-0.5 shrink-0">+</span>
+                      {pro}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h4 class="text-sm font-semibold text-red-600 uppercase tracking-wide">Limitations</h4>
+                <ul class="mt-2 space-y-1">
+                  {m.cons.map((con) => (
+                    <li class="text-sm text-gray-600 flex items-start gap-1.5">
+                      <span class="text-red-400 mt-0.5 shrink-0">-</span>
+                      {con}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+            <p class="mt-4 text-sm text-gray-500">
+              <strong class="text-gray-700">Best for:</strong> {m.bestFor}
+            </p>
+          </div>
+          <div class={i % 2 === 1 ? 'md:order-1' : ''}>
+            <img src={m.image} alt={m.name} class="w-full rounded-xl" loading={i < 2 ? 'eager' : 'lazy'} />
+          </div>
+        </div>
+      ))
+    }
+  </section>
+
+  <section class="px-6 pb-16 max-w-5xl mx-auto">
+    <div class="rounded-xl bg-gray-50 border border-gray-200 p-8">
+      <h2 class="text-2xl font-bold text-gray-900 text-center">Material Selection Guide</h2>
+      <p class="mt-3 text-gray-600 text-center max-w-2xl mx-auto">
+        Choose the right material based on your primary use case:
+      </p>
+      <div class="mt-8 overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-gray-300">
+              <th class="text-left py-3 px-4 font-semibold text-gray-900">Use Case</th>
+              <th class="text-left py-3 px-4 font-semibold text-gray-900">Recommended Material</th>
+              <th class="text-left py-3 px-4 font-semibold text-gray-900">Why</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-gray-200">
+              <td class="py-3 px-4 text-gray-700">Recreational SUP paddling</td>
+              <td class="py-3 px-4"><span class="font-medium">Drop-stitch PVC</span></td>
+              <td class="py-3 px-4 text-gray-600">Lightweight, rigid, affordable — ideal balance for casual paddlers</td
+              >
+            </tr>
+            <tr class="border-b border-gray-200">
+              <td class="py-3 px-4 text-gray-700">Family dinghy / lake boat</td>
+              <td class="py-3 px-4"><span class="font-medium">PVC (1100 denier)</span></td>
+              <td class="py-3 px-4 text-gray-600"
+                >Cost-effective, easy to repair, sufficient durability for recreational use</td
+              >
+            </tr>
+            <tr class="border-b border-gray-200">
+              <td class="py-3 px-4 text-gray-700">Commercial RIB / patrol boat</td>
+              <td class="py-3 px-4"><span class="font-medium">Hypalon CSM</span></td>
+              <td class="py-3 px-4 text-gray-600"
+                >Maximum UV resistance, 15-20 year lifespan, chemical/oil resistance</td
+              >
+            </tr>
+            <tr class="border-b border-gray-200">
+              <td class="py-3 px-4 text-gray-700">Rental fleet SUP boards</td>
+              <td class="py-3 px-4"><span class="font-medium">Drop-stitch PVC + EVA deck</span></td>
+              <td class="py-3 px-4 text-gray-600">Durable, repairable, good value for high-turnover usage</td>
+            </tr>
+            <tr class="border-b border-gray-200">
+              <td class="py-3 px-4 text-gray-700">Search & rescue operations</td>
+              <td class="py-3 px-4"><span class="font-medium">Hypalon CSM</span></td>
+              <td class="py-3 px-4 text-gray-600"
+                >Reliability in extreme conditions, cold flexibility, chemical resistance</td
+              >
+            </tr>
+            <tr class="border-b border-gray-200">
+              <td class="py-3 px-4 text-gray-700">Touring / expedition kayak</td>
+              <td class="py-3 px-4"><span class="font-medium">Drop-stitch PVC</span></td>
+              <td class="py-3 px-4 text-gray-600">Rigid performance with packable portability for travel</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="px-6 pb-20 max-w-6xl mx-auto">
+    <h2 class="text-2xl font-bold text-gray-900 text-center mb-10">Deep Dive Guides</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {
+        topics.map((t) => (
+          <a
+            href={t.href}
+            class="group block bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-all hover:-translate-y-0.5"
+          >
+            <h3 class="font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">{t.title}</h3>
+            <p class="mt-2 text-sm text-gray-500 leading-relaxed">{t.desc}</p>
+            <span class="mt-4 inline-flex text-sm font-medium text-sky-600 group-hover:text-sky-700">Read guide →</span>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+</Layout>

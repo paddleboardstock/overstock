@@ -1,0 +1,371 @@
+---
+const { lang = 'ja' } = Astro.props;
+import JsonLd from '~/components/common/JsonLd.astro';
+import AiQuickAnswer from '~/components/common/AiQuickAnswer.astro';
+const t = (_key: string) => '';
+---
+
+<JsonLd
+  type="Article"
+  article={{
+    headline: 'インフレータブル ボート ガイド — 完全なリソース',
+    description:
+      'ボートの種類、工法、材質の比較、選定基準、安全基準、メンテナンスなどを網羅したインフレータブルボートの総合ガイド。',
+    datePublished: '2026-07-07',
+  }}
+  data={{ url: 'https://aquafarer.com/marine-industry/' }}
+/>
+
+<JsonLd
+  type="BreadcrumbList"
+  breadcrumbs={[
+    { name: t('nav.home') || 'Home', href: `/${lang}/` },
+    { name: '海洋産業', href: `/${lang}/marine-industry` },
+    { name: 'インフレータブル ボート ガイド', href: `/${lang}/marine-industry/` },
+  ]}
+/>
+
+<AiQuickAnswer
+  entityType="Leitfaden"
+  quickAnswer="インフレータブル ボートは、浮力を生み出すために柔軟な布製チューブ (浮力室) に圧縮空気が充填されている軽量の水上バイクです。最新のインフレータブル ボートには、ディンギー、RIB (リジッド インフレータブル ボート)、インフレータブル カヤック、スタンドアップ パドル ボードなどがあります。 PVC または Hypalon-CSM 生地から、HF 溶接または手接着の縫い目を使用して作られています。 Drop-Stitch 構造により、高圧の剛性床が可能になります。"
+  facts={[
+    { label: '世界市場の範囲', value: '$2.8B (2026)' },
+    { label: '主な材料', value: 'PVC / Hypalon CSM' },
+    { label: '人生', value: '8-20+ Jahre' },
+    { label: 'CE 認証', value: 'Erforderlich (EU)' },
+  ]}
+/>
+
+<section class="max-w-4xl mx-auto py-16 px-6">
+  <h1 class="text-4xl font-semibold text-gray-900">インフレータブル ボート ガイド</h1>
+  <p class="mt-4 text-lg text-gray-500">
+    レクリエーション用ディンギーからプロ用RIB、特殊救助ボートに至るまで、インフレータブルウォータークラフトに関する決定的なリソース。
+  </p>
+
+  <nav class="mt-8 flex flex-wrap gap-2">
+    {
+      [
+        { label: 'Typen', id: 'types' },
+        { label: 'Konstruktion', id: 'construction' },
+        { label: 'Materialien', id: 'materials' },
+        { label: 'Auswahl', id: 'selection' },
+        { label: 'Sicherheit', id: 'safety' },
+        { label: 'Wartung', id: 'maintenance' },
+        { label: 'Standards', id: 'standards' },
+      ].map((s) => (
+        <a
+          href={`#${s.id}`}
+          class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition"
+        >
+          {s.label}
+        </a>
+      ))
+    }
+  </nav>
+
+  <section id="types" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">ゴムボートの種類</h2>
+    <div class="mt-8 grid gap-6">
+      {
+        [
+          {
+            title: 'Aufblasbare Dinghys',
+            desc: 'Kleine, tragbare Boote für Zubringerdienste, Angeln und kurze Freizeitfahrten. Typischerweise 2-4 m lang, mit kleinen Außenbordern (2-15 PS) oder Riemen angetrieben. Der günstigste Einstieg.',
+            icon: '🚤',
+          },
+          {
+            title: 'Festrumpf-Schlauchboote (RIBs)',
+            desc: 'Leistungsstarke Boote mit starrem Rumpf aus GFK, Aluminium oder HDPE und aufblasbaren Auftriebskammern. Längen von 3-12 m, Außenbordmotoren mit 15-300+ PS. Einsatz bei Patrouille, Rettung, Tauchen und Hochseefahrten.',
+            icon: '⚡',
+          },
+          {
+            title: 'Aufblasbare Kajaks',
+            desc: 'Tragbare Kajaks aus PVC- oder TPU-Gewebe. Erhältlich in Einzel- und Tandemausführung für Freizeittouren, Flussfahrten und Expeditionen.',
+            icon: '🛶',
+          },
+          {
+            title: 'Aufblasbare Stand-Up-Paddle-Boards (SUPs)',
+            desc: 'In Drop-Stitch-Konstruktion gefertigte Paddle-Boards, die sich zu starren Hochdruckdecks aufpumpen lassen. Erhältlich als Allround-, Touring-, Yoga-, Angel- und Surf-Modelle.',
+            icon: '🏄',
+          },
+          {
+            title: 'Rettungsboote (SAR)',
+            desc: 'Spezialisierte RIBs für Such- und Rettungseinsätze. Mit selbstlenzendem Boden, Mittelkonsole, Schleppösen und Signalfarben. Für den Rettungseinsatz CE-zertifiziert.',
+            icon: '🆘',
+          },
+          {
+            title: 'Kommerzielle Arbeitsboote',
+            desc: 'Robuste RIBs für Tauchunterstützung, Patrouille, Vermessung und kommerzielle maritime Einsätze. Hypalon-CSM-Konstruktion, verstärkte Rümpfe und professionelle Ausstattung.',
+            icon: '⚙️',
+          },
+        ].map((item) => (
+          <div class="flex gap-4 p-5 bg-gray-50 rounded-xl border border-gray-200">
+            <span class="text-2xl flex-shrink-0">{item.icon}</span>
+            <div>
+              <h3 class="font-semibold text-gray-900">{item.title}</h3>
+              <p class="mt-1 text-sm text-gray-600">{item.desc}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section id="construction" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">施工方法</h2>
+    <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">HF溶接（高周波）</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          電磁エネルギーを使用して PVC
+          層を分子レベルで融合します。最も強力な気密性の高い縫い目を実現します。高品質のPVCボートやSUPによく見られます。特別な機械と訓練を受けたオペレーターが必要です。
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">ハンドボンディング・ケミカルボンディング</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          2 液型接着剤でファブリック パネルを接続します。 Hypalon-CSM ボート (HF 溶接不可)
+          の主な方法。最適な縫い目の強度を得るには、正確な表面処理、湿度の制御、および十分な硬化時間が必要です。
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Drop-Stitch コア</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          何千ものポリエステル糸が上部と下部の PVC 層を接続し、高圧 (15-25 PSI) までの膨張を可能にし、リジッド
+          ボードの動作を実現します。糸の密度 (15-50 糸/cm²) によって剛性と重量が決まります。
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">熱間溶接</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          熱風溶接またはホットウェッジ溶接で継ぎ目と補強を行います。より大きな RIB を生成する場合によく発生します。 HF
+          溶接ほど精度は劣りますが、Hypalon および厚い PVC 生地には効果的です。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="materials" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">材質比較</h2>
+    <div class="mt-6 overflow-x-auto">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="bg-gray-50 border-b-2 border-gray-200">
+            <th class="px-4 py-3 text-left font-semibold text-gray-700">特性</th>
+            <th class="px-4 py-3 text-center font-semibold text-sky-700">PVC</th>
+            <th class="px-4 py-3 text-center font-semibold text-emerald-700">Hypalon CSM</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            [
+              ['Relative Kosten', '$ (Budget)', '$$$ (Premium)'],
+              ['UV-Beständigkeit', 'Gut (mit Beschichtung)', 'Hervorragend (materialeigen)'],
+              ['Abriebfestigkeit', 'Mittel-Gut', 'Hervorragend'],
+              ['Chemikalienbeständigkeit', 'Gut', 'Hervorragend'],
+              ['Kälteflexibilität', 'Versteift unter 0°C', 'Flexibel bis -20°C'],
+              ['Lebensdauer', '8-12 Jahre', '15-20+ Jahre'],
+              ['Nahtmethode', 'HF-Schweißen', 'Handverklebung'],
+              ['Reparatur', 'PVC-Kleber (einfach)', '2K-Kleber (mittel)'],
+            ].map((row, i) => (
+              <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                {row.map((cell, j) => (
+                  <td
+                    class={`px-4 py-3 border-b border-gray-200 ${j === 0 ? 'font-medium text-gray-700' : 'text-center text-gray-600'}`}
+                  >
+                    {cell}
+                  </td>
+                ))}
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-4 text-sm text-gray-500">
+      現代の軍用グレード PVC (1100-1670 dtex) は、Hypalon
+      の半分のコストで、ほとんどの娯楽ユーザーに優れた耐久性を提供します。 Hypalon
+      は、商用艦隊、熱帯気候、および安全性が重要な用途に適しています。
+    </p>
+    <a
+      href={`/${lang}/learn/pvc-vs-hypalon`}
+      class="mt-4 inline-block text-sky-600 hover:text-sky-700 text-sm font-medium">詳細ガイド: PVC 対 Hypalon →</a
+    >
+  </section>
+
+  <section id="selection" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">ゴムボートの選び方</h2>
+    <div class="mt-8 grid md:grid-cols-3 gap-6">
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">1。使用目的を定義する</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>自由時間: ディンギーまたは SUP</li>
+          <li>パワー: RIB (15-60 HP)</li>
+          <li>コマーシャル: RIB (100+ PS)</li>
+          <li>フィットネス: インフレータブル SUP</li>
+          <li>旅行: インフレータブルカヤック</li>
+        </ul>
+      </div>
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">2。予算を設定する</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>$200-$800: インフレータブル SUP</li>
+          <li>$500-$2,000: ディンギー + エンジン</li>
+          <li>$3,000-$8,000: エントリーレベル RIB</li>
+          <li>$8,000-$20,000: プレミアム RIB</li>
+          <li>$20,000+: コマーシャル RIB</li>
+        </ul>
+      </div>
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">3。素材を検討する</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>PVC: 安価、軽い</li>
+          <li>Hypalon: プレミアム、長持ち</li>
+          <li>Drop-Stitch: リジッドパワー</li>
+          <li>生地の厚さ：1100-1670 dtex</li>
+          <li>コーティング: UV およびパンク防止層</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="safety" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">安全性と規格</h2>
+    <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">CE 認証</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          EU で販売されるすべてのインフレータブル ボートには、レクリエーション工芸指令 (RCD) 2013/53/EU に従って、CE
+          マークが必要です。この認証には、設計カテゴリー (A ～ D)、浮力、安定性、耐荷重が含まれます。 Aquafarer
+          ボートはレクリエーションおよび救助用として CE 認定を受けています。
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">標準</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          インフレータブルボートの国際規格では、材料、縫い目、バルブ、性能テストの要件が指定されています。タイプ I ～ IV
+          は小型ディンギーから大型 RIB まですべてをカバーします。
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">必須の安全装備</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          救命胴衣/救命胴衣 (CE 12402)、スローライン、ビルジポンプ/消火器、航行灯 (夜間)、VHF
+          ラジオ、応急処置キット、アンカーおよび予備パドルまたは燃料。
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">安全な操作</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          銘板にかかる最大荷重を決して超えないようにしてください。発射前にバルブを確認してください。重量を均等に分散させます。気象条件を観察してください。旅行計画を保存します。ボート安全講習を受講してください。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="maintenance" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">メンテナンスとお手入れ</h2>
+    <div class="mt-8 space-y-4 text-sm text-gray-600">
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <span class="text-sky-600 font-bold flex-shrink-0">1.</span><span
+          >塩水で使用した後は毎回真水ですすいでください。保管する前に完全に乾燥させてください。</span
+        >
+      </div>
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <span class="text-sky-600 font-bold flex-shrink-0">2.</span><span
+          >部分的に膨張した状態で、直射日光や極端な温度を避け、涼しく乾燥した場所に保管してください。</span
+        >
+      </div>
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <span class="text-sky-600 font-bold flex-shrink-0">3.</span><span
+          >季節ごとにバルブと継ぎ目をチェックしてください。バルブ本体は年に一度シリコンスプレーで処理してください。</span
+        >
+      </div>
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <span class="text-sky-600 font-bold flex-shrink-0">4.</span><span
+          >中性洗剤と水で洗ってください。布地には溶剤、漂白剤、高圧洗浄機を絶対に使用しないでください。</span
+        >
+      </div>
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <span class="text-sky-600 font-bold flex-shrink-0">5.</span><span
+          >メーカーが推奨する修理キットを使用して、損傷を直ちに修理してください。 Hypalon の場合は、2
+          液型接着剤のみを使用してください。</span
+        >
+      </div>
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <span class="text-sky-600 font-bold flex-shrink-0">6.</span><span
+          >バルブは3-5年ごとに交換してください。生地の寿命が終わったら（目に見える磨耗、穴あき、縫い目の剥がれ）、生地を新しくします。</span
+        >
+      </div>
+    </div>
+  </section>
+
+  <section id="standards" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">産業用途</h2>
+    <div class="mt-8 grid md:grid-cols-3 gap-4">
+      {
+        [
+          {
+            title: 'Freizeitbootfahren',
+            desc: 'Familienausflüge, Wassersport, Angeln, Camping und Freizeitfahrten auf Seen, Flüssen und Küstengewässern.',
+          },
+          {
+            title: 'Suche & Rettung',
+            desc: 'Küstenwache, Rettungsschwimmer und Notfallteams setzen spezialisierte RIBs für schnellen Einsatz und Rettung in rauer See ein.',
+          },
+          {
+            title: 'Kommerzielle Schifffahrt',
+            desc: 'Tauchunterstützung, Patrouille, Vermessung, Touristentransport und Offshore-Logistik, bei denen Haltbarkeit und Zuverlässigkeit entscheidend sind.',
+          },
+          {
+            title: 'Militär & Verteidigung',
+            desc: 'Taktische RIBs für Marineoperationen, Truppentransport, Entereinsätze und verdeckte Landungen.',
+          },
+          {
+            title: 'Humanitäre Hilfe',
+            desc: 'Katastrophenschutzorganisationen setzen aufblasbare Boote für Hochwasserrettung, Versorgungstransporte und medizinische Evakuierungen ein.',
+          },
+          {
+            title: 'OEM-Fertigung',
+            desc: 'Individuelle Private-Label-Produktion für Marken, Händler und spezialisierte Betreiber mit besonderen Anforderungen.',
+          },
+        ].map((app) => (
+          <div class="p-4 bg-gray-50 rounded-xl border border-gray-200">
+            <h3 class="font-semibold text-sm text-gray-900">{app.title}</h3>
+            <p class="mt-1 text-xs text-gray-500">{app.desc}</p>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="mt-16 bg-gradient-to-br from-sky-50 to-blue-50 rounded-2xl p-8 border border-sky-200">
+    <h2 class="text-xl font-semibold text-gray-900">Aquafarer のゴムボートを発見</h2>
+    <p class="mt-4 text-sm text-gray-600">
+      Aquafarer は、レクリエーション、プロフェッショナル、OEM 市場向けに、CE 認定のインフレータブル
+      ボート、SUP、カヤック、RIB を設計および製造しています。すべてのボートは、最新の HF
+      溶接または手作業による接着を使用して、軍用グレードの PVC または Hypalon ～ CSM 生地で製造されています。
+    </p>
+    <div class="mt-6 flex gap-4 flex-wrap">
+      <a
+        href={`/${lang}/products`}
+        class="px-6 py-3 bg-gray-900 text-white rounded-full text-sm font-medium hover:bg-gray-800 transition"
+        >製品を見る</a
+      >
+      <a
+        href={`/${lang}/academy`}
+        class="px-6 py-3 border border-gray-200 text-gray-700 rounded-full text-sm font-medium hover:border-gray-400 transition"
+        >ラーニングセンター</a
+      >
+    </div>
+  </section>
+</section>
+
+<section class="sr-only" data-ai-block="definition" aria-hidden="true">
+  <p>
+    ボートタイプ (ディンギー、RIB、カヤック、SUP、救命ボート、商用作業ボート)、工法 (HF 溶接、手接着、Drop-Stitch
+    コア、熱溶接)、材料 (PVC 生地、Hypalon CSM)、選択基準 (使用目的、予算、材料の比較)、安全基準 (CE
+    認証、必須装備)、メンテナンス (洗浄、保管、修理、バルブケア) および産業用途
+    (レクリエーション、SAR、商業、軍事、人道、OEM)。
+  </p>
+</section>

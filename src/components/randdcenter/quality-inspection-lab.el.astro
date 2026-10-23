@@ -1,0 +1,214 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'el' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">← Επιστροφή στο Κέντρο Ε&amp;Α</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Εργαστήριο 06</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Εργαστήριο Ποιότητας &amp; Επιθεώρησης</h1>
+      <p class="mt-3 text-lg text-muted">Ανεξάρτητη επαλήθευση — κάθε δοκιμή που περνά πριν από την παράδοση</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-uv-resistance-testing.webp"
+        alt="Aquafarer εργαστήριο ποιοτικού ελέγχου UV δοκιμή"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Εμπιστευτείτε, αλλά επαληθεύστε</h2>
+  <p>
+    Κάθε σκάφος που φεύγει από το εργαστήριό μας φέρει την πιστοποίηση ότι έχει περάσει ένα καθορισμένο σύνολο
+    επιθεωρήσεων ποιότητας και δοκιμών υλικών. Το Εργαστήριο Ποιότητας &amp; Επιθεώρησης είναι μια ανεξάρτητη λειτουργία
+    εντός του οργανισμού — αναφέρεται απευθείας στον διευθύνοντα σύμβουλο και όχι στην παραγωγή — διασφαλίζοντας ότι
+    καμία εμπορική πίεση δεν μπορεί να θέσει σε κίνδυνο την πύλη επιθεώρησης. Εάν μια παρτίδα υλικού ή ένα ολοκληρωμένο
+    σκάφος δεν πληροί τις δημοσιευμένες προδιαγραφές, το εργαστήριο έχει την εξουσία να σταματήσει την αποστολή μέχρι να
+    επιλυθεί η μη συμμόρφωση.
+  </p>
+  <p>
+    Το εργαστήριο λειτουργεί σύμφωνα με ένα σύστημα διαχείρισης ποιότητας ευθυγραμμισμένο με αρχές και οι μέθοδοι
+    δοκιμών μας βασίζονται στα πρότυπα ISO, ASTM και EN όπου ισχύουν. Διατηρούμε λεπτομερή αρχεία για κάθε δοκιμή που
+    εκτελείται, δημιουργώντας μια πλήρη αλυσίδα ιχνηλασιμότητας από την παραλαβή της πρώτης ύλης έως την τελική παράδοση
+    του σκάφους.
+  </p>
+
+  <h2>Δοκιμή εξοπλισμού και δυνατοτήτων</h2>
+  <table>
+    <thead><tr><th>Εξοπλισμός</th><th>Πραγματοποιήθηκαν δοκιμές</th><th>Πρότυπο / Μέθοδος</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Μηχάνημα δοκιμής γενικής χρήσης (50 kN)</td><td
+          >Αντοχή σε εφελκυσμό (ύφασμα), αντοχή στο ξεφλούδισμα (ραφές), διάδοση σε σχίσιμο</td
+        ><td>, ISO 4674</td></tr
+      >
+      <tr
+        ><td>Εξέδρα δοκιμών συγκράτησης αέρα (προγραμματιζόμενο)</td><td
+          >1000-κύκλος φούσκωμα/αντοχή αποπληθωρισμού, 24-48 h δοκιμή διατήρησης πίεσης</td
+        ><td> (εσωτερικός)</td></tr
+      >
+      <tr
+        ><td>Seam-peel jig (με κινητήρα 180° ξεφλούδισμα)</td><td
+          >Δύναμη αποκόλλησης συγκόλλησης και κολλημένης ραφής σε 100 mm/min</td
+        ><td> / ASTM D1876</td></tr
+      >
+      <tr
+        ><td>Υδροστατικός ελεγκτής κεφαλής</td><td>Αντοχή στη διείσδυση νερού του υφάσματος (0 — 00 mbar)</td><td
+          >ISO 811</td
+        ></tr
+      >
+      <tr
+        ><td>Ψηφιακό μετρητή πάχους &amp; μικρόμετρο</td><td
+          >Πάχος υφάσματος, πάχος τοιχώματος σωλήνα, πάχος κολλητικής μεμβράνης</td
+        ><td>ISO 2286-3</td></tr
+      >
+      <tr
+        ><td>Περιβαλλοντικό Επιμελητήριο</td><td
+          >Ρύθμιση θερμοκρασίας (-40 °C έως +80 °C) για δοκιμές ψυχρής ρωγμής και θερμικής γήρανσης</td
+        ><td>ISO 188, ISO 4675</td></tr
+      >
+      <tr
+        ><td>Φασματοφωτόμετρο χρώματος</td><td>Μέτρηση χρώματος Delta-E μετά από έκθεση UV</td><td
+          >ISO 105-A05 / ASTM D2244</td
+        ></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>Οι πύλες επιθεώρησης — από το υλικό μέχρι την παράδοση</h2>
+  <p>
+    Κάθε σκάφος ακολουθεί ένα καθορισμένο σχέδιο ποιότητας με υποχρεωτικά σημεία επιθεώρησης. Κανένα σκάφος δεν μπορεί
+    να παραλείψει μια πύλη. κάθε πύλη πρέπει να υπογραφεί από έναν επιθεωρητή ποιότητας πριν ξεκινήσει το επόμενο στάδιο
+    παραγωγής.
+  </p>
+
+  <div class="not-prose my-8">
+    <div class="relative">
+      <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-blue-200 dark:bg-blue-800"></div>
+      <div class="space-y-6 relative">
+        {
+          [
+            {
+              gate: 'Gate 1',
+              label: 'Incoming material inspection',
+              desc: 'Fabric batch, adhesive batch, hardware — all checked against incoming specification before release to production.',
+            },
+            {
+              gate: 'Gate 2',
+              label: 'In-process weld inspection',
+              desc: 'First-off weld coupon tested (peel + visual) at start of each production shift.',
+            },
+            {
+              gate: 'Gate 3',
+              label: 'Chamber air test',
+              desc: 'Each chamber pressurised to 1.25 x working pressure, held 24-48 h. Data logged per serial number.',
+            },
+            {
+              gate: 'Gate 4',
+              label: 'Pre-delivery inspection',
+              desc: 'Complete boat inspected: all fasteners torqued, systems functional, no cosmetic defects. 100-point checklist.',
+            },
+            {
+              gate: 'Gate 5',
+              label: 'Final certification',
+              desc: 'Test reports compiled, inspection records reviewed, Certificate of Conformance issued.',
+            },
+          ].map((g) => (
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs font-bold z-10">
+                {g.gate}
+              </div>
+              <div class="flex-1 p-3 rounded-lg bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800">
+                <p class="text-sm font-semibold">{g.label}</p>
+                <p class="text-xs text-gray-500 mt-1">{g.desc}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+
+  <h2>Βασικές μετρήσεις ποιότητας (2025 κυλιόμενος μέσος όρος)</h2>
+  <div class="not-prose my-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">99.7 %</span>
+      <span class="text-xs text-gray-500">Απόδοση πρώτου περάσματος (παρτίδα υφάσματος)</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">&lt; 0.2 %</span>
+      <span class="text-xs text-gray-500">Ρυθμός απόρριψης συγκόλλησης (γραμμικό μέτρο)</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">100 %</span>
+      <span class="text-xs text-gray-500">Οι θάλαμοι ελέγχθηκαν με αέρα πριν από τη συναρμολόγηση</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600"></span>
+      <span class="text-xs text-gray-500">Συμμόρφωση κατηγορίας σχεδιασμού</span>
+    </div>
+  </div>
+
+  <h2>Η ποιοτική μας ομάδα</h2>
+  <p>
+    Το εργαστήριο στελεχώνεται από έναν υπεύθυνο ποιότητας (10 χρόνια στο ναυτικό QA, ASQ Certified Quality Engineer),
+    δύο επιθεωρητές ποιότητας (ο καθένας με πιστοποίηση επιπέδου 2 NDT στις οπτικές δοκιμές) και έναν τεχνικό υλικών
+    υπεύθυνος για όλες τις φυσικές δοκιμές. Η ομάδα υποβάλλεται σε ετήσια δοκιμή επάρκειας μέσω ενός ανεξάρτητου τρίτου
+    παρόχου για να διασφαλίσει ότι τα αποτελέσματα των δοκιμών μας παραμένουν ακριβή και αναπαραγώγιμα.
+  </p>
+
+  <h2>Ανεξάρτητες δοκιμές για πελάτες</h2>
+  <p>
+    Το Εργαστήριο Ποιότητας &amp; Επιθεώρησης είναι διαθέσιμο για ανεξάρτητες υπηρεσίες δοκιμών. Εάν χρειάζεται να
+    επαληθεύσετε μια προδιαγραφή υφάσματος, να επικυρώσετε ένα νέο σύστημα κόλλας ή να λάβετε μια έκθεση δοκιμής τρίτου
+    μέρους για πιστοποίηση προμήθειας, μπορούμε να εκτελέσουμε τις δοκιμές σύμφωνα με το ισχύον πρότυπο και να εκδόσουμε
+    μια πιστοποιημένη έκθεση δοκιμής.
+  </p>
+  <p>Παραδείγματα πρόσφατων εργασιών δοκιμών τρίτων:</p>
+  <ul>
+    <li>
+      Σύγκριση αντοχής φλοιού πέντε ανταγωνιστικών προϊόντων συγκολλητικής μεμβράνης για ένα ευρωπαϊκό πρόγραμμα
+      στρατιωτικών προμηθειών.
+    </li>
+    <li>
+      Μελέτη επιταχυνόμενης γήρανσης (UV + θερμικός κύκλος) για ένα νέο σκεύασμα PVC με πορτοκαλί χρώμα, με τακτικές
+      ενδιάμεσες μετρήσεις σε διαστήματα 500 ωρών.
+    </li>
+    <li>Επικύρωση διατήρησης αέρα των 50 πρωτότυπων βαλβίδων διαφράγματος για νέο σχεδιασμό σωλήνα υψηλής πίεσης.</li>
+  </ul>
+
+  <h2>Η δέσμευσή μας προς εσάς</h2>
+  <p>
+    Όταν λαμβάνετε ένα {SITE.name} σκάφος, λαμβάνετε επίσης τον φάκελο ποιότητάς του — ένα συγκεντρωμένο αρχείο των αποτελεσμάτων
+    δοκιμών που ισχύουν για το συγκεκριμένο σκάφος σας. Πιστοποιητικό παρτίδας υφάσματος, δοκιμές αποφλοίωσης συγκόλλησης,
+    αρχεία καταγραφής δοκιμής αέρα θαλάμου και λίστα ελέγχου επιθεώρησης πριν από την παράδοση. Κάθε αριθμός είναι ανιχνεύσιμος.
+    Κάθε επιθεωρητής προσδιορίζεται. Αυτό δεν είναι απλώς γραφειοκρατία — είναι η υπόσχεσή μας ότι αυτό που παραδώσαμε είναι
+    αυτό που καθορίσαμε.
+  </p>
+  <p>
+    Εάν έχετε κάποια ανησυχία για την ποιότητα, μπορείτε να επικοινωνήσετε απευθείας με το εργαστήριο — τα στοιχεία
+    επικοινωνίας είναι τυπωμένα στο πιστοποιητικό συμμόρφωσής σας. Λαμβάνουμε κάθε ερώτημα στα σοβαρά και δεσμευόμαστε
+    για επίσημη έρευνα εντός 48 ωρών.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Χρειάζεστε ανεξάρτητες δοκιμές ή επαλήθευση ποιότητας;</h2>
+    <p class="mt-2 text-sm text-muted">
+      Το εργαστήριό μας δέχεται εργασίες δοκιμών τρίτων — επικοινωνήστε μαζί μας με τις απαιτήσεις σας.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Επικοινωνήστε με το εργαστήριο ποιότητας</a
+    >
+  </div>
+</section>

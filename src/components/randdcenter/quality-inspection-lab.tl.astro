@@ -1,0 +1,218 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'tl' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">&larr; Bumalik sa R&D Center</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Lab 06</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Laboratoryo ng Kalidad at Inspeksyon</h1>
+      <p class="mt-3 text-lg text-muted">Independiyenteng beripikasyon — bawat pagsubok ay ipinasa bago ipadala</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-uv-resistance-testing.webp"
+        alt="Aquafarer laboratoryo para sa inspeksyon ng kalidad UV pagsusuri"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Magtiwala, ngunit beripikahin</h2>
+  <p>
+    Bawat bangka na umaalis sa aming workshop ay may kasamang sertipikasyon na ito ay nakapasa sa isang tinukoy na hanay
+    ng pagsusuri sa kalidad at pagsubok sa materyal. Ang aming Laboratorio ng Kalidad at Inspeksyon ay isang
+    independiyenteng bahagi ng organisasyon — direktang nag-uulat sa managing director, hindi sa produksyon — tinitiyak
+    na walang komersyal na presyon ang makakaapekto sa inspeksyon. Kung ang isang batch ng materyal o tapos na bangka ay
+    hindi tumutugon sa inilathalang espesipikasyon, may awtoridad ang laboratorio na ipahinto ang pagpapadala hanggang
+    sa maresolba ang hindi pagsunod.
+  </p>
+  <p>
+    Ang laboratorio ay gumagana sa ilalim ng isang sistema ng pamamahala sa kalidad na naaayon sa mga prinsipyo, at ang
+    aming mga pamamaraan ng pagsusuri ay batay sa ISO, ASTM, at EN na pamantayan kung saan naaangkop. Nananatili kaming
+    may detalyadong talaan ng bawat pagsusuri na isinagawa, na lumilikha ng kumpletong tatak ng pagsubaybay mula sa
+    pagtanggap ng hilaw na materyal hanggang sa huling paghahatid ng bangka.
+  </p>
+
+  <h2>Kagamitan sa Pagsusuri at Kakayahan</h2>
+  <table>
+    <thead><tr><th>Kagamitan</th><th>Mga Pagsubok na Isinagawa</th><th>Pamantayan / Pamamaraan</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Universal testing machine (50 kN)</td><td
+          >Tensile strength (tela), resistensya sa pagtuklap (mga tahi), propagation ng punit</td
+        ><td>, ISO 4674</td></tr
+      >
+      <tr
+        ><td>Air-retention test rig (programmable)</td><td
+          >1000-cycle inflation/deflation endurance, 24-48 h pressure-hold test</td
+        ><td>(internal)</td></tr
+      >
+      <tr
+        ><td>Seam-peel jig (motorised 180° peel)</td><td>Weld at glued-seam peel strength sa 100 mm/min</td><td
+          >/ ASTM D1876</td
+        ></tr
+      >
+      <tr
+        ><td>Hydrostatic head tester</td><td>Pagtutol sa pagpasok ng tubig ng tela (0 — 00 mbar)</td><td>ISO 811</td
+        ></tr
+      >
+      <tr
+        ><td>Digital thickness gauge & micrometre</td><td
+          >Kapal ng tela, kapal ng pader ng tubo, kapal ng adhesive-film</td
+        ><td>ISO 2286-3</td></tr
+      >
+      <tr
+        ><td>Environmental chamber</td><td
+          >Temperature conditioning (-40 °C hanggang + 80 °C) para sa cold-crack at heat-ageing tests</td
+        ><td>ISO 188, ISO 4675</td></tr
+      >
+      <tr
+        ><td>Kulay na spektropometriko</td><td>Pagsukat ng kulay na Delta-E pagkatapos ng UV na pagkakalantad</td><td
+          >ISO 105-A05 / ASTM D2244</td
+        ></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>Ang mga pintuan ng inspeksyon — mula sa materyal hanggang sa paghahatid</h2>
+  <p>
+    Ang bawat bangka ay sumusunod sa isang tinukoy na plano sa kalidad na may mga obligadong puntos ng inspeksyon.
+    Walang bangka na maaaring laktawan ang isang gate; ang bawat gate ay dapat lagdaan ng isang tagasuri ng kalidad bago
+    magsimula ang susunod na yugto ng produksyon.
+  </p>
+
+  <div class="not-prose my-8">
+    <div class="relative">
+      <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-blue-200 dark:bg-blue-800"></div>
+      <div class="space-y-6 relative">
+        {
+          [
+            {
+              gate: 'Gate 1',
+              label: 'Pagsusuri ng darating na materyal',
+              desc: 'Batch ng tela, batch ng pandikit, kasangkapan — lahat ay sinuri laban sa papasok na espesipikasyon bago ilabas sa produksyon.',
+            },
+            {
+              gate: 'Gate 2',
+              label: 'Inspeksyon ng hinang habang proseso',
+              desc: 'Unang subok ng weld coupon (peel + visual) sa simula ng bawat shift ng produksyon.',
+            },
+            {
+              gate: 'Gate 3',
+              label: 'Pagsubok ng hangin sa silid',
+              desc: 'Bawat silid ay pinapresyur hanggang 1.25 x ng working pressure, pinanatili ng 24-48 h. Data ay inilolog bawat serial number.',
+            },
+            {
+              gate: 'Gate 4',
+              label: 'Pagsusuri bago i-deliver',
+              desc: 'Kumpletong barko ay sinuri: lahat ng turnilyo ay na-torque, ang mga sistema ay gumagana, walang depektong pangkosmetiko. 100-puntong tseklist.',
+            },
+            {
+              gate: 'Gate 5',
+              label: 'Panghuling sertipikasyon',
+              desc: 'Mga ulat sa pagsusuri ay pinagsama, mga rekord ng inspeksyon ay nirepaso, Certificate of Conformance ay inisyu.',
+            },
+          ].map((g) => (
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs font-bold z-10">
+                {g.gate}
+              </div>
+              <div class="flex-1 p-3 rounded-lg bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800">
+                <p class="text-sm font-semibold">{g.label}</p>
+                <p class="text-xs text-gray-500 mt-1">{g.desc}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+
+  <h2>Pangunahing mga sukatan ng kalidad (2025 na pinagsamang average)</h2>
+  <div class="not-prose my-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">99.7 %</span>
+      <span class="text-xs text-gray-500">Unang-pass na ani (batch ng tela)</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600"> 0.2 %</span>
+      <span class="text-xs text-gray-500">Porsyento ng pagtanggi sa hinang (linear na metro)</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">100 %</span>
+      <span class="text-xs text-gray-500">Ang mga silid ay sinubok sa hangin bago buuin</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600"></span>
+      <span class="text-xs text-gray-500">Pagsunod sa kategorya ng disenyo</span>
+    </div>
+  </div>
+
+  <h2>Ang aming koponan sa kalidad</h2>
+  <p>
+    Ang laboratoryo ay pinamamahalaan ng isang quality manager (10 taon sa marine QA, ASQ Certified Quality Engineer),
+    dalawang quality inspector (bawat isa ay may Level 2 NDT certification sa visual testing), at isang materials
+    technician na responsable sa lahat ng pisikal na pagsusuri. Ang koponan ay sumasailalim sa taunang proficiency
+    testing sa pamamagitan ng isang independiyenteng third-party provider upang matiyak na ang aming mga resulta ng
+    pagsusuri ay nananatiling tama at maaaring ulitin.
+  </p>
+
+  <h2>Independiyenteng pagsusuri para sa mga kliyente</h2>
+  <p>
+    Ang aming Quality & Inspection Lab ay available para sa mga independiyenteng serbisyo ng pagsubok. Kung kailangan
+    mong patunayan ang espesipikasyon ng tela, beripikahin ang isang bagong sistema ng pandikit, o kumuha ng ulat ng
+    pagsubok mula sa ikatlong partido para sa kwalipikasyon sa pagbili, maaari naming isagawa ang mga pagsubok ayon sa
+    naaangkop na pamantayan at magbigay ng sertipikadong ulat ng pagsubok.
+  </p>
+  <p>Mga halimbawa ng kamakailang trabaho sa pagsubok ng ikatlong partido:</p>
+  <ul>
+    <li>
+      Paghahambing ng lakas ng pagbabalat ng limang kompetitibong produktong pandikit na pelikula para sa isang
+      programang pamimili ng militar sa Europa.
+    </li>
+    <li>
+      Pag-aaral ng pinabilis na pagtanda (UV + thermal cycling) para sa isang bagong orange-pigmented na PVC
+      formulasyon, na may regular na panandaliang pagsukat sa bawat 500 h na pagitan.
+    </li>
+    <li>
+      Pagpapatunay ng pagpigil ng hangin sa 50 prototype na baffle valve para sa bagong disenyo ng mataas na presyon na
+      tubo.
+    </li>
+  </ul>
+
+  <h2>Ang aming pangako sa iyo</h2>
+  <p>
+    Kapag nakatanggap ka ng{SITE.name}bangka, natatanggap mo rin ang kalidad na dosyé nito — isang pinagsama-samang
+    talaan ng mga resulta ng pagsusuri na akma sa iyong partikular na bangka. Sertipiko ng batch ng materyal, mga
+    pagsusuri sa paghihiwalay ng hinang, talaan ng pagsusuri sa hangin ng silid, at checklist ng pagsusuri bago ihatid.
+    Bawat numero ay masusubaybayan. Bawat inspektor ay nakikilala. Ito ay hindi lamang mga papeles — ito ay aming
+    pangako na ang aming naihatid ay ayon sa aming tinukoy.
+  </p>
+  <p>
+    Kung sakali mang magkaroon ka ng alalahanin sa kalidad, maaari kang direktang makipag-ugnayan sa lab — nakalimbag
+    ang mga detalye ng contact sa iyong sertipiko ng pagsunod. Seryoso naming tinutugunan ang bawat katanungan at
+    nangangako kami ng pormal na imbestigasyon sa loob ng 48 na oras.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Kailangan ng independiyenteng pagsusuri o beripikasyon ng kalidad?</h2>
+    <p class="mt-2 text-sm text-muted">
+      Tumatanggap ang aming laboratoryo ng mga pagsusuri mula sa ikatlong partido — makipag-ugnayan sa amin tungkol sa
+      iyong mga kinakailangan.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Makipag-ugnayan sa laboratoryo ng kalidad</a
+    >
+  </div>
+</section>

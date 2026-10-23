@@ -1,0 +1,127 @@
+---
+export const prerender = true;
+
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { getPageContent, setPageContentData } from '~/i18n/page-content';
+import __pageData from '~/i18n/generated/pages/authority.ts';
+import { localizePageTitle } from '~/i18n/page-title';
+import { languages } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => getUiForLang(lang)?.[key] || '';
+setPageContentData(__pageData);
+const page = getPageContent(lang, 'authority');
+
+const hero = page.hero ?? {};
+const stats = page.stats ?? {};
+const brand = page.features3_brand ?? {};
+const trust = page.features3_trust ?? {};
+const leadership = page.features3_leadership ?? {};
+const cta = page.cta ?? {};
+const lh = (h: string) => (h ? `/${lang}${h}` : h);
+const ctaActions = cta.actions?.map((a: any) => ({ ...a, href: lh(a.href) }));
+const localizedBrandItems = brand.items?.map((item: any) => ({
+  ...item,
+  link: item.link ? `/${lang}${item.link}` : item.link,
+}));
+const localizedTrustItems = trust.items?.map((item: any) => ({
+  ...item,
+  link: item.link ? `/${lang}${item.link}` : item.link,
+}));
+
+const metadata = {
+  title: localizePageTitle(page, `Authority Center — ${SITE.name} | Why Industry Professionals Trust Aquafarer`),
+  description:
+    'Certifications, team expertise, manufacturing credentials, and proof of quality. Everything that makes Aquafarer a trusted commercial RIB manufacturer.',
+};
+const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: 'Authority Center' }];
+
+const faqSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What authority does Aquafarer have in the marine industry?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: '12+ years manufacturing, 64 CE-certified models, ISO 9001:2015 (SGS), BSCI audit, 200-300 workers, 15,000 annual units shipped to 50+ countries.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Are quality claims independently verified?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. ISO 9001 by SGS, BSCI social compliance, CE compliance, and 99.3% defect-free rate per AQL 2.5 / ISO 2859.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can third-party inspectors verify claims?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. SGS, BV, TÜV, and other inspection agencies are welcome at our Qingdao facility.',
+      },
+    },
+  ],
+});
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <Hero tagline={hero.tagline} image={hero.image} title={hero.title} subtitle={hero.subtitle} />
+  <Stats title={stats.title} stats={stats.stats} />
+  <Features3
+    tagline={brand.tagline}
+    title={brand.title}
+    subtitle={brand.subtitle}
+    columns={brand.columns}
+    items={localizedBrandItems}
+  />
+  <Features3
+    tagline={trust.tagline}
+    title={trust.title}
+    subtitle={trust.subtitle}
+    columns={trust.columns}
+    items={localizedTrustItems}
+  />
+  <Features3
+    tagline={leadership.tagline}
+    title={leadership.title}
+    subtitle={leadership.subtitle}
+    columns={leadership.columns}
+    items={leadership.items}
+  />
+  <CallToAction title={cta.title} subtitle={cta.subtitle} actions={ctaActions} />
+  <JsonLd
+    type="Service"
+    service={{
+      name: 'Aquafarer Authority Center — Trust & Credentials',
+      description:
+        'Certifications, team expertise, manufacturing credentials, and quality evidence for commercial RIB manufacturing.',
+      serviceType: 'Brand Authority',
+      areaServed: ['Global'],
+      url: `/${lang}/authority`,
+      items: [
+        { name: 'About Aquafarer', description: 'Company history and manufacturing story since 2012' },
+        { name: 'Marine Expertise', description: 'Material science and engineering capabilities' },
+        { name: 'Global Presence', description: '50+ countries served worldwide' },
+        { name: 'Certifications', description: 'CE, ISO 9001, UKCA, BSCI, REACH compliance' },
+        { name: 'Quality & Testing', description: 'Rigorous testing for every production batch' },
+        { name: 'Team & Leadership', description: '50+ R&D engineers and industry experts' },
+      ],
+    }}
+  />
+  <script is:inline type="application/ld+json" set:html={faqSchema} />
+</Layout>

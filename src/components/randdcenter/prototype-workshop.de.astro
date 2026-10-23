@@ -1,0 +1,205 @@
+---
+import { SITE } from 'astrowind:config';
+const { lang = 'de' } = Astro.props;
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={`/${lang}/randdcenter`} class="text-sm text-gray-500 hover:underline">&larr; Zurück zum F&amp;E-Zentrum</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Lab 05</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Prototypenwerkstatt</h1>
+      <p class="mt-3 text-lg text-muted">Vom CAD-Modell zum seetüchtigen Boot — gebaut, ausgerüstet und erprobt</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-ocean-voyager-1.webp"
+        alt="Bootsfertigung in der Prototypenwerkstatt von Aquafarer"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Wo Entwurf zur Realität wird</h2>
+  <p>
+    Ein CAD-Modell kann — egal wie detailliert es ist — nicht zeigen, wie sich ein Boot tatsächlich verhält, bis es aufs
+    Wasser kommt. Deshalb ist unsere Prototypenwerkstatt darauf ausgelegt, Entwicklungsdaten so schnell und präzise wie
+    möglich in ein physisches, seetüchtiges Boot zu übersetzen. Jedes neue {SITE.name}-Modell — und jeder bedeutende
+    Sonderbau — durchläuft diese Werkstatt, bevor die Produktionswerkzeuge gebaut werden.
+  </p>
+  <p>
+    Die Werkstatt ist vollständig für die gleichzeitige Fertigung von Rumpf, Schläuchen und Rigging ausgestattet. Dieser
+    parallele Arbeitsablauf verkürzt die Prototypen-Vorlaufzeit nach der Entwicklungsfreigabe auf 8-12 Wochen,
+    verglichen mit dem Branchendurchschnitt von 16-20 Wochen. Wenn Ihre Anwendung eine Speziallösung erfordert, können
+    wir in weniger als drei Monaten vom Konzept zur Wassererprobung gelangen.
+  </p>
+
+  <h2>Leistungsfähigkeit der Werkstatt</h2>
+  <table>
+    <thead><tr><th>Arbeitsstation</th><th>Ausrüstung</th><th>Zweck</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Rumpfherstellung</td><td
+          >Rotationsformofen (HDPE), TIG-Schweißkabine (Aluminium), Handlaminier-Formen (Glasfaser)</td
+        ><td>Rumpfproduktion in Originalgröße in allen drei Werkstoffarten</td></tr
+      >
+      <tr
+        ><td>Schlauchmontage</td><td>HF-Schweißpresse, Heißluft-Heftstation, Aufblas-Prüfvorrichtung</td><td
+          >Fertigung von Schlauchbaugruppen in Originalgröße mit allen Schwallborden, Konen und Ventilen</td
+        ></tr
+      >
+      <tr
+        ><td>Rigging &amp; Ausrüstung</td><td
+          >Motorhebezeug (500 kg), Konsolen-Mock-up-Rahmen, hydraulische Schlauchcrimpzange, Kabelbaumbrett</td
+        ><td>Komplette Ausrüstung: Motor, Ruderanlage, Bedienelemente, Kraftstoffsystem, Elektronik, Sitzplätze</td></tr
+      >
+      <tr
+        ><td>Instrumentierungsbereich</td><td
+          >GPS-Geschwindigkeitssensor, Kraftstoffdurchflussmesser, Beschleunigungssensoren, Thermoelement-Array,
+          Datenlogger</td
+        ><td>Installation und Kalibrierung der Messinstrumente für die Seeerprobung</td></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>Der Weg zum Prototyp — Schritt für Schritt</h2>
+  <ol>
+    <li>
+      <strong>Technische Übergabe</strong> — Das Entwicklungspaket (3D-Modell, FEA-Bericht, Stückliste, Laminierplan) wird
+      formell vom Werkstattleiter und dem Projektleiter geprüft. Fertigungsbedenken werden angesprochen und gelöst, bevor
+      mit dem Zuschnitt begonnen wird.
+    </li>
+    <li>
+      <strong>Rumpfproduktion</strong> — Der Rumpf wird gemäß der technischen Spezifikation gebaut. Bei HDPE: Das Rotationsformprogramm
+      wird aus der Moldex3D-Simulation übernommen. Bei Aluminium: Die CNC-geschnittenen Bleche werden in der TIG-Kabine gemäß
+      der freigegebenen Schweißkarte geschweißt. Bei Glasfaser: Das Laminatbuch wird Schicht für Schicht befolgt.
+    </li>
+    <li>
+      <strong>Schlauchfertigung</strong> — Das Gewebe wird mit CNC-Schnittschablonen zugeschnitten und anschließend per HF-Schweißung
+      zu Kammern in Originalgröße verbunden. Jede Kammer wird auf Prüfdruck aufgeblasen und zur ersten Stabilisierung 24 h
+      stehen gelassen.
+    </li>
+    <li>
+      <strong>Montage &amp; Rigging</strong> — Rumpf und Schläuche werden verbunden. Der Motor wird eingehängt, Ruderanlage
+      und Bedienelemente werden angeschlossen, das Kraftstoffsystem wird installiert und alle Stromkreise werden verdrahtet
+      und geprüft.
+    </li>
+    <li>
+      <strong>Statische Tests</strong> — Bevor das Boot ins Wasser kommt, durchläuft es: Auftriebsprüfung (Volllast + 30 %
+      Reserve), Druckprüfung des Kraftstoffsystems, Zyklustest der Ruderanlage bis zum vollen Einschlag, Durchgangsprüfung
+      der elektrischen Erdverbindungen.
+    </li>
+    <li><strong>Seeerprobungsprogramm</strong> — 20 Stunden Test auf dem Wasser, unten im Detail beschrieben.</li>
+    <li>
+      <strong>Prototypen-Review</strong> — Ein formelles Freigabe-Meeting findet mit Entwicklungs-, Produktions- und Qualitätsteams
+      statt. Erforderliche Entwurfsänderungen werden dokumentiert und in die Produktionsfreigabe aufgenommen.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      20-Stunden-Seeerprobungsprogramm — Testplan
+    </p>
+    <div class="space-y-2 text-sm">
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">2 h</span><span class="flex-1"
+          >Hafenmanöver — Handhabung bei niedriger Geschwindigkeit, Rückwärtsfahrt, Fender-Check</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">4 h</span><span class="flex-1"
+          >Geschwindigkeitstest — per GPS verifizierte Höchstgeschwindigkeit, Reisegeschwindigkeit, Kraftstoffverbrauch
+          bei 3 Drehzahlpunkten</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Wendetest — taktischer Durchmesser, Vorlauf und Querversatz bei 20 kn, Backbord und Steuerbord</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Slamming-Test — wiederholte Fahrten durch 0.5-1.0 m kurze See; Beschleunigungssensor an der
+          Steuerstandssitzbasis</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Stabilitätstest — statischer Krängungswinkel mit 4 Personen Besatzung + Ausrüstung nach Steuerbord,
+          außermittige Last</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Dauerfahrt — 3 h ununterbrochen bei Reisegeschwindigkeit; Temperaturüberwachung (Motor, Kraftstoff, Elektrik)</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">2 h</span><span class="flex-1"
+          >Endkontrolle — Inspektion aller Systeme nach der Erprobung, Befestigungen nachziehen/prüfen, Ergebnisse
+          dokumentieren</span
+        >
+      </div>
+    </div>
+  </div>
+
+  <h2>Individueller Prototypenbau für besondere Anwendungen</h2>
+  <p>
+    Die Prototypenwerkstatt ist der Ort, an dem wir die Probleme lösen, die Serienboote nicht bewältigen können.
+    Aktuelle Beispiele sind:
+  </p>
+  <ul>
+    <li>
+      Ein 7.8 m RIB für eine Such- und Rettungsorganisation mit individueller Kabinenstruktur mit Überrollschutz,
+      integrierten Tragenhalterungen und einem am Bug montierten Sonarträger — alles in unserer Anlage prototypisiert,
+      ausgerüstet und getestet.
+    </li>
+    <li>
+      Ein 5.2 m Schlauchboot für einen hydrografischen Vermessungsdienstleister, mit abgesenktem Spiegelheck,
+      abnehmbarem Instrumentenmast und durch den Rumpf geführten Geberaufnahmen, die Strömungsstörungen minimieren.
+    </li>
+    <li>
+      Ein elektrisch angetriebenes 4.5 m Beiboot für eine Superyacht, bei dem der Prototyp zur Validierung von
+      Reichweite, Ladeinfrastruktur und Geräuschpegeln diente, bevor sich der Kunde für eine Flotte von vier Booten
+      entschied.
+    </li>
+  </ul>
+
+  <h2>Unser Prototypen-Team</h2>
+  <p>
+    Die Werkstatt wird von acht vielseitig ausgebildeten Bootsbautechnikern betrieben, die jeweils in mindestens zwei
+    der drei Kerndisziplinen (Rumpf, Schlauch, Rigging) geschult sind. Der Teamleiter ist ein Bootsbaumeister mit 16
+    Jahren Erfahrung, die von individuellen Einzelanfertigungen bis zu Serienproduktionen reicht. Jedem Prototyp wird
+    ein eigener Projektleiter zugeordnet, der während des gesamten Bau- und Erprobungsprozesses der einzige
+    Ansprechpartner für den Kunden ist.
+  </p>
+
+  <h2>Einbindung des Kunden</h2>
+  <p>
+    Wir ermutigen unsere Kunden ausdrücklich, an den wichtigsten Meilensteinen des Prototypenbaus teilzunehmen —
+    insbesondere an der ersten Ausrüstungsprüfung und der Seeerprobung. Ihr operatives Feedback in diesen Phasen ist von
+    unschätzbarem Wert für die Feinabstimmung des Bootes, bevor es in Produktion geht. Wir bauen nicht im luftleeren
+    Raum; wir bauen in Partnerschaft mit Ihnen.
+  </p>
+  <p>
+    Die 20-stündige Seeerprobung ist auch eine Gelegenheit für Ihr Team, sich mit dem Fahrverhalten des Bootes, der
+    Systemanordnung und den Wartungsanforderungen vertraut zu machen, sodass ein reibungsloser Übergang in den Betrieb
+    gewährleistet ist, wenn die Serienboote geliefert werden.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Starten Sie Ihr Prototypenprojekt</h2>
+    <p class="mt-2 text-sm text-muted">
+      Beschreiben Sie uns das Boot, das Sie benötigen, und wir schlagen Ihnen einen Prototypen-Entwicklungsplan vor.
+    </p>
+    <a
+      href={`/${lang}/contact`}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Kontaktieren Sie unser Prototypen-Team</a
+    >
+  </div>
+</section>

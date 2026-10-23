@@ -1,0 +1,183 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'tl' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">&larr; Bumalik sa R&D Center</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Lab 02</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Hull Engineering Studio</h1>
+      <p class="mt-3 text-lg text-muted">
+        Digital na simulasyon, estruktural na katalinuhan, custom na disenyo ng hull
+      </p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/design discussaquafarer-inflatable-boat-aquafarer-factory-exterior.webp"
+        alt="Aquafarer workstation sa CAD design ng hull engineering"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Kung saan nagtatagpo ang lakas at hydrodynamics</h2>
+  <p>
+    Ang hull ay ang gulugod ng anumang RIB o inflatable na bangka. Dapat itong maging sapat na magaang upang magsagawa
+    ng planing nang mahusay, sapat na matibay upang masipsip ang impact loads, at matatag sa sukat sa malawak na saklaw
+    ng temperatura. Sa{SITE.name}, ang aming Hull Engineering Studio ay pinagsasama ang advanced CAD modelling, finite
+    element analysis (FEA), at dekada ng praktikal na karanasan sa naval-architecture upang makapaghatid ng mga hull na
+    na-optimize para sa kanilang inaasahang misyon — hindi mga karaniwang hugis na hiniram mula sa katalogo.
+  </p>
+  <p>
+    Nakikipagtulungan kami sa tatlong pangunahing materyales ng hull — rotationally moulded HDPE, welded marine-grade
+    aluminium, at hand-laid fibreglass — at mayroon kaming kakayahan sa engineering upang idisenyo, simulahin, at
+    i-validate ang bawat isa nang sa loob mismo ng kumpanya.
+  </p>
+
+  <h2>Mga kasangkapan sa disenyo at pamantayan</h2>
+  <p>Kasama sa aming digital engineering environment ang:</p>
+  <table>
+    <thead><tr><th>Kakayahan</th><th>Software / Kasangkapan</th><th>Aplikasyon</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>3D parametric modeling</td><td>SolidWorks Professional</td><td
+          >Surface ng hull, sistema ng stringer, bracket ng makina, layout ng deck</td
+        ></tr
+      >
+      <tr
+        ><td>Finite element analysis</td><td>ANSYS Mechanical & LS-DYNA</td><td
+          >Stress mapping, modal analysis, crash/impact simulation</td
+        ></tr
+      >
+      <tr
+        ><td>Computational fluid dynamics</td><td>Ansys Fluent / Star-CCM+</td><td
+          >Pagtataya ng hydrodynamic drag, optimisasyon ng trim</td
+        ></tr
+      >
+      <tr
+        ><td>Laminate engineering</td><td>ESAComp / CADEC</td><td
+          >Pag-stack ng fibreglass layer, pagpili ng core, pagtataya ng timbang</td
+        ></tr
+      >
+      <tr><td>Mould flow simulation</td><td>Moldex3D</td><td>Pagpapataya ng kapal ng wall sa rotomoulding</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Aming workflow sa engineering</h2>
+  <p>
+    Bawat disenyo ng hull, maging ito man ay isang standard na modelo o ganap na custom na proyekto, ay sumusunod sa
+    isang masusing limang-yugto na proseso:
+  </p>
+  <ol>
+    <li>
+      <strong>Concept & requirements gathering</strong>— Nakikipagpulong kami sa iyo upang tukuyin ang payload, speed
+      envelope, kakayahan sa sea-state, mga pangangailangan sa paghila, at anumang espesyal na kagamitan sa misyon (deck
+      hatches, posisyon ng console, integrasyon ng fuel-tank).
+    </li>
+    <li>
+      <strong>3D na pagsusuri at kalkulasyon ng hydrostatic</strong>— Ang anyo ng hull ay minomodelo sa SolidWorks at
+      sinusuri para sa hydrostatic stability (GM, righting arm) gamit ang mga built-in na analysis tool.
+    </li>
+    <li>
+      <strong>Estruktural na FEA</strong>— Tinukoy ang mga load case: static (+crew gear), dynamic (planing impacts sa
+      5g), at slamming (pagbaba mula sa wave crest sa 3 m/s). Sinusuri ang stress contours; kinakailangan ang safety
+      factor ≥ 2.5.
+    </li>
+    <li>
+      <strong>CFD drag optimization</strong>— Ang hull ay ginagaya sa tatlong kondisyon ng paglo-load at limang bilis.
+      Ang wetted surface area, trim angle, at residual resistance ay paulit-ulit na binabawasan.
+    </li>
+    <li>
+      <strong>Pagsusuri at paglabas ng disenyo</strong>— Ang kumpletong engineering package (3D model, FEA report, CFD
+      report, weight estimate, ply book) ay nire-review ng aming senior naval architect bago ilabas sa prototype
+      workshop.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Pamamahagi ng Stress ng FEA — RIB 450 Patrol Hull (Aluminium 5083)
+    </p>
+    <div class="grid grid-cols-2 gap-4 text-sm">
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">2.8 : 1</span>
+        <span class="text-gray-500">Safety factor sa pinakamataas na payload</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">15.2 %</span>
+        <span class="text-gray-500">Pagbawas ng drag kumpara sa nakaraang henerasyon</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">87 kN/m²</span>
+        <span class="text-gray-500">Peak slamming pressure (limitasyon sa disenyo)</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">18 000 h</span>
+        <span class="text-gray-500">Kabuuang oras ng FEA sa 2025</span>
+      </div>
+    </div>
+  </div>
+
+  <h2>Pag-customize: ang iyong hull, ang iyong mga patakaran</h2>
+  <p>
+    Walang dalawang operator na may magkaparehong pangangailangan. Ang harbour-patrol RIB ay nangangailangan ng
+    shallow-V hull para sa katatagan sa mababang bilis; ang fast-interception craft ay nangangailangan ng deep-V na may
+    spray rails; ang dive-support boat ay nangangailangan ng malapad na beam at mababang transom. Hindi namin pinipilit
+    ang iyong aplikasyon sa pre-existing hull shape. Nagdidisenyo kami mula sa iyong specification pataas.
+  </p>
+  <p>Mga halimbawa ng mga kamakailang proyekto ng custom hull engineering:</p>
+  <ul>
+    <li>
+      Isang pinalawak na 6.8 m HDPE hull para sa isang Caribbean tour operator, na may pinatibay na bow para sa beach
+      landings (+15% kapal ng ilalim).
+    </li>
+    <li>
+      Isang magaan na aluminium na 7.2 m RIB para sa coast guard, na may integrated fuel-tank baffles at
+      equipment-locker stiffeners.
+    </li>
+    <li>
+      Isang fiberglass na 5.5 m dive boat na may pinaikling transom at twin battery boxes, na dinisenyo para sa madaling
+      snorkeller reboarding.
+    </li>
+  </ul>
+
+  <h2>Ang aming mga inhinyero</h2>
+  <p>
+    Pinamumunuan ang studio ng isang senior naval architect na may 14 na taon ng karanasan sa disenyo ng high-speed
+    craft, na sinusuportahan ng dalawang mechanical engineer na dalubhasa sa FEA at CFD. Lahat ng tatlo ay may mga
+    advanced na degree sa marine engineering o naval architecture mula sa mga internationally recognized na unibersidad.
+    Regular na naglalathala ang team sa mga industry journal at nagpepresenta sa mga conference tulad ng International
+    Conference on High-Performance Marine Vehicles.
+  </p>
+
+  <h2>Makipag-partner sa amin para sa iyong susunod na hull</h2>
+  <p>
+    Mula sa unang concept sketch hanggang sa huling stress report, ang aming Hull Engineering Studio ang iyong katuwang
+    sa paglikha ng isang bangka na hindi lang basta ginawa — kundi in-engineer. Inilaan namin ang simulation hours nang
+    maaga upang bawat weld, bawat laminate layer, at bawat kurba ng hull ay may dahilan.
+  </p>
+  <p>
+    Kung kailangan mo man ng maliit na pagbabago sa umiiral na modelo o ganap na malinis na disenyo, handa kaming
+    talakayin ang iyong mga pangangailangan.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Simulan ang iyong konsultasyon sa disenyo ng hull</h2>
+    <p class="mt-2 text-sm text-muted">
+      Ikwento mo sa amin ang tungkol sa iyong mission profile at magmumungkahi kami ng engineering path.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Makipag-ugnayan sa aming engineering team</a
+    >
+  </div>
+</section>

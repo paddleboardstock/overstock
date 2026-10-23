@@ -1,0 +1,382 @@
+---
+const { lang = 'ru' } = Astro.props;
+import JsonLd from '~/components/common/JsonLd.astro';
+import AiQuickAnswer from '~/components/common/AiQuickAnswer.astro';
+const t = (_key: string) => '';
+---
+
+<JsonLd
+  type="Article"
+  article={{
+    headline: 'Руководство по надувным лодкам — полный ресурс',
+    description:
+      'Подробное руководство по надувным лодкам, охватывающее типы лодок, методы строительства, сравнение материалов, критерии выбора, стандарты безопасности и техническое обслуживание.',
+    datePublished: '2026-07-07',
+  }}
+  data={{ url: 'https://aquafarer.com/marine-industry/' }}
+/>
+
+<JsonLd
+  type="BreadcrumbList"
+  breadcrumbs={[
+    { name: t('nav.home') || 'Home', href: `/${lang}/` },
+    { name: 'Морская промышленность', href: `/${lang}/marine-industry` },
+    { name: 'Руководство по надувным лодкам', href: `/${lang}/marine-industry/` },
+  ]}
+/>
+
+<AiQuickAnswer
+  entityType="Leitfaden"
+  quickAnswer="Надувная лодка — легкое плавсредство, гибкие тканевые трубки (камеры плавучести) которого наполнены сжатым воздухом для создания плавучести. Современные надувные лодки включают шлюпки, РИБы (жесткие надувные лодки), надувные каяки и доски для серфинга стоя. Изготавливаются из тканей __ПХ0__ или __ПН1__-__ПН3__ с использованием высокочастотной сварки или ручно-клееных швов; Конструкция Drop-Stitch позволяет создавать жесткие полы, выдерживающие высокое давление."
+  facts={[
+    { label: 'Глобальный рынок', value: '$2.8B (2026)' },
+    { label: 'Первичные материалы', value: 'PVC / Hypalon CSM' },
+    { label: 'жизнь', value: '8-20+ Jahre' },
+    { label: 'сертификация CE', value: 'Erforderlich (EU)' },
+  ]}
+/>
+
+<section class="max-w-4xl mx-auto py-16 px-6">
+  <h1 class="text-4xl font-semibold text-gray-900">Руководство по надувным лодкам</h1>
+  <p class="mt-4 text-lg text-gray-500">
+    Лучший ресурс по надувным судам — от прогулочных лодок до профессиональных надувных лодок и специальных спасательных
+    лодок.
+  </p>
+
+  <nav class="mt-8 flex flex-wrap gap-2">
+    {
+      [
+        { label: 'Typen', id: 'types' },
+        { label: 'Konstruktion', id: 'construction' },
+        { label: 'Materialien', id: 'materials' },
+        { label: 'Auswahl', id: 'selection' },
+        { label: 'Sicherheit', id: 'safety' },
+        { label: 'Wartung', id: 'maintenance' },
+        { label: 'Standards', id: 'standards' },
+      ].map((s) => (
+        <a
+          href={`#${s.id}`}
+          class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition"
+        >
+          {s.label}
+        </a>
+      ))
+    }
+  </nav>
+
+  <section id="types" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Виды надувных лодок</h2>
+    <div class="mt-8 grid gap-6">
+      {
+        [
+          {
+            title: 'Aufblasbare Dinghys',
+            desc: 'Kleine, tragbare Boote für Zubringerdienste, Angeln und kurze Freizeitfahrten. Typischerweise 2-4 m lang, mit kleinen Außenbordern (2-15 PS) oder Riemen angetrieben. Der günstigste Einstieg.',
+            icon: '🚤',
+          },
+          {
+            title: 'Festrumpf-Schlauchboote (RIBs)',
+            desc: 'Leistungsstarke Boote mit starrem Rumpf aus GFK, Aluminium oder HDPE und aufblasbaren Auftriebskammern. Längen von 3-12 m, Außenbordmotoren mit 15-300+ PS. Einsatz bei Patrouille, Rettung, Tauchen und Hochseefahrten.',
+            icon: '⚡',
+          },
+          {
+            title: 'Aufblasbare Kajaks',
+            desc: 'Tragbare Kajaks aus PVC- oder TPU-Gewebe. Erhältlich in Einzel- und Tandemausführung für Freizeittouren, Flussfahrten und Expeditionen.',
+            icon: '🛶',
+          },
+          {
+            title: 'Aufblasbare Stand-Up-Paddle-Boards (SUPs)',
+            desc: 'In Drop-Stitch-Konstruktion gefertigte Paddle-Boards, die sich zu starren Hochdruckdecks aufpumpen lassen. Erhältlich als Allround-, Touring-, Yoga-, Angel- und Surf-Modelle.',
+            icon: '🏄',
+          },
+          {
+            title: 'Rettungsboote (SAR)',
+            desc: 'Spezialisierte RIBs für Such- und Rettungseinsätze. Mit selbstlenzendem Boden, Mittelkonsole, Schleppösen und Signalfarben. Für den Rettungseinsatz CE-zertifiziert.',
+            icon: '🆘',
+          },
+          {
+            title: 'Kommerzielle Arbeitsboote',
+            desc: 'Robuste RIBs für Tauchunterstützung, Patrouille, Vermessung und kommerzielle maritime Einsätze. Hypalon-CSM-Konstruktion, verstärkte Rümpfe und professionelle Ausstattung.',
+            icon: '⚙️',
+          },
+        ].map((item) => (
+          <div class="flex gap-4 p-5 bg-gray-50 rounded-xl border border-gray-200">
+            <span class="text-2xl flex-shrink-0">{item.icon}</span>
+            <div>
+              <h3 class="font-semibold text-gray-900">{item.title}</h3>
+              <p class="mt-1 text-sm text-gray-600">{item.desc}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section id="construction" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Методы строительства</h2>
+    <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">ВЧ сварка (высокая частота)</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Использует электромагнитную энергию для соединения слоев PVC на молекулярном уровне. Создает прочные
+          герметичные швы. Часто встречается на высококачественных лодках и SUP-серфингах PVC. Требуются специальные
+          машины и обученные операторы.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Ручное склеивание/химическое склеивание</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Двухкомпонентный клей соединяет тканевые панели. Основной метод для лодок Hypalon-CSM (несвариваемых
+          ВЧ-сваркой). Требует точной подготовки поверхности, контролируемой влажности и достаточного времени
+          отверждения для оптимальной прочности шва.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Drop-Stitch ядро</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Тысячи полиэфирных нитей соединяют верхний и нижний слои PVC, позволяя надувать доску под высоким давлением
+          (15-25 PSI) и обеспечивать жесткость доски. Плотность нити (15-50 нитей/см²) определяет жесткость и вес.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Горячая сварка</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Сварка горячим воздухом или горячим клином для швов и усилений. Часто встречается при производстве более
+          крупных РИБ. Менее точна, чем высокочастотная сварка, но эффективна для тканей Hypalon и тяжелых тканей PVC.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="materials" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Сравнение материалов</h2>
+    <div class="mt-6 overflow-x-auto">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="bg-gray-50 border-b-2 border-gray-200">
+            <th class="px-4 py-3 text-left font-semibold text-gray-700">Характеристика</th>
+            <th class="px-4 py-3 text-center font-semibold text-sky-700">PVC</th>
+            <th class="px-4 py-3 text-center font-semibold text-emerald-700">Hypalon CSM</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            [
+              ['Relative Kosten', '$ (Budget)', '$$$ (Premium)'],
+              ['UV-Beständigkeit', 'Gut (mit Beschichtung)', 'Hervorragend (materialeigen)'],
+              ['Abriebfestigkeit', 'Mittel-Gut', 'Hervorragend'],
+              ['Chemikalienbeständigkeit', 'Gut', 'Hervorragend'],
+              ['Kälteflexibilität', 'Versteift unter 0°C', 'Flexibel bis -20°C'],
+              ['Lebensdauer', '8-12 Jahre', '15-20+ Jahre'],
+              ['Nahtmethode', 'HF-Schweißen', 'Handverklebung'],
+              ['Reparatur', 'PVC-Kleber (einfach)', '2K-Kleber (mittel)'],
+            ].map((row, i) => (
+              <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                {row.map((cell, j) => (
+                  <td
+                    class={`px-4 py-3 border-b border-gray-200 ${j === 0 ? 'font-medium text-gray-700' : 'text-center text-gray-600'}`}
+                  >
+                    {cell}
+                  </td>
+                ))}
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-4 text-sm text-gray-500">
+      Современный армейский класс PVC (1100-1670 dtex) обеспечивает превосходную долговечность для большинства
+      пользователей-любителей за половину стоимости Hypalon. Hypalon предпочтителен для коммерческих автопарков,
+      тропического климата и приложений, где важна безопасность.
+    </p>
+    <a
+      href={`/${lang}/learn/pvc-vs-hypalon`}
+      class="mt-4 inline-block text-sky-600 hover:text-sky-700 text-sm font-medium"
+      >Подробное руководство: PVC и Hypalon →</a
+    >
+  </section>
+
+  <section id="selection" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Как выбрать надувную лодку</h2>
+    <div class="mt-8 grid md:grid-cols-3 gap-6">
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">1. Определите предполагаемое использование</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>Свободное время: лодка или SUP.</li>
+          <li>Мощность: RIB (15-60 л.с.)</li>
+          <li>Коммерческий: RIB (100+ PS)</li>
+          <li>Фитнес: надувной SUP</li>
+          <li>Путешествие: надувной каяк</li>
+        </ul>
+      </div>
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">2. Установите свой бюджет</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>$200-$800: Надувной SUP</li>
+          <li>$500-$2,000: Лодка + двигатель</li>
+          <li>$3,000-$8,000: начальный уровень RIB</li>
+          <li>$8,000-$20,000: Премиум RIB</li>
+          <li>$20,000+: Коммерческий RIB</li>
+        </ul>
+      </div>
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">3. Рассмотрим материал</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>PVC: Недорогой, легкий.</li>
+          <li>Hypalon: Премиум, долговечный</li>
+          <li>Drop-Stitch: Жесткая сила</li>
+          <li>Толщина ткани: 1100-1670 дтекс</li>
+          <li>Покрытие: UV и слои защиты от проколов.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="safety" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Безопасность и стандарты</h2>
+    <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">сертификация CE</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Все надувные лодки, продаваемые в ЕС, требуют маркировки CE в соответствии с Директивой о прогулочных судах
+          (RCD) 2013/53/EU. Сертификация охватывает категорию конструкции (AD), плавучесть, остойчивость и
+          грузоподъемность. Лодки Aquafarer сертифицированы CE для использования в рекреационных и спасательных целях.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">стандартный</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Международный стандарт для надувных лодок определяет требования к материалам, швам, клапанам и испытаниям на
+          производительность. Типы I–IV охватывают все: от небольших лодок до больших надувных лодок.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Основное оборудование для обеспечения безопасности</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Спасательные жилеты/спасательные жилеты (CE 12402), тросы, трюмный насос/огнетушитель, навигационные огни
+          (ночные), УКВ-радио, аптечка, якорь и запасное весло или топливо.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Безопасная эксплуатация</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          НИКОГДА не превышайте максимальную нагрузку, указанную на паспортной табличке. Перед запуском проверьте
+          клапаны. Распределите вес равномерно. Наблюдайте за погодными условиями. Сохраните план поездки. Пройдите курс
+          по безопасности катания на лодке.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="maintenance" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Обслуживание и уход</h2>
+    <div class="mt-8 space-y-4 text-sm text-gray-600">
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <span class="text-sky-600 font-bold flex-shrink-0">1.</span><span
+          >Промывайте пресной водой после каждого использования в соленой воде. Полностью высушите перед хранением.</span
+        >
+      </div>
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <span class="text-sky-600 font-bold flex-shrink-0">2.</span><span
+          >Храните частично надутым в прохладном, сухом месте, вдали от прямых солнечных лучей и экстремальных
+          температур.</span
+        >
+      </div>
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <span class="text-sky-600 font-bold flex-shrink-0">3.</span><span
+          >Проверяйте клапаны и швы перед каждым сезоном. Ежегодно обрабатывайте корпуса клапанов силиконовым спреем.</span
+        >
+      </div>
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <span class="text-sky-600 font-bold flex-shrink-0">4.</span><span
+          >Очистите мягким мылом и водой. Никогда не используйте для очистки ткани растворители, отбеливатели или
+          очистители под высоким давлением.</span
+        >
+      </div>
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <span class="text-sky-600 font-bold flex-shrink-0">5.</span><span
+          >Немедленно устраните любые повреждения, используя ремонтные комплекты, рекомендованные производителем. Для
+          Hypalon используйте только двухкомпонентный клей.</span
+        >
+      </div>
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <span class="text-sky-600 font-bold flex-shrink-0">6.</span><span
+          >Заменяйте клапаны каждые 3-5 лет. Обновите ткань по окончании срока ее службы (видимый износ, пористость,
+          расслоение швов).</span
+        >
+      </div>
+    </div>
+  </section>
+
+  <section id="standards" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Промышленные приложения</h2>
+    <div class="mt-8 grid md:grid-cols-3 gap-4">
+      {
+        [
+          {
+            title: 'Freizeitbootfahren',
+            desc: 'Familienausflüge, Wassersport, Angeln, Camping und Freizeitfahrten auf Seen, Flüssen und Küstengewässern.',
+          },
+          {
+            title: 'Suche & Rettung',
+            desc: 'Küstenwache, Rettungsschwimmer und Notfallteams setzen spezialisierte RIBs für schnellen Einsatz und Rettung in rauer See ein.',
+          },
+          {
+            title: 'Kommerzielle Schifffahrt',
+            desc: 'Tauchunterstützung, Patrouille, Vermessung, Touristentransport und Offshore-Logistik, bei denen Haltbarkeit und Zuverlässigkeit entscheidend sind.',
+          },
+          {
+            title: 'Militär & Verteidigung',
+            desc: 'Taktische RIBs für Marineoperationen, Truppentransport, Entereinsätze und verdeckte Landungen.',
+          },
+          {
+            title: 'Humanitäre Hilfe',
+            desc: 'Katastrophenschutzorganisationen setzen aufblasbare Boote für Hochwasserrettung, Versorgungstransporte und medizinische Evakuierungen ein.',
+          },
+          {
+            title: 'OEM-Fertigung',
+            desc: 'Individuelle Private-Label-Produktion für Marken, Händler und spezialisierte Betreiber mit besonderen Anforderungen.',
+          },
+        ].map((app) => (
+          <div class="p-4 bg-gray-50 rounded-xl border border-gray-200">
+            <h3 class="font-semibold text-sm text-gray-900">{app.title}</h3>
+            <p class="mt-1 text-xs text-gray-500">{app.desc}</p>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="mt-16 bg-gradient-to-br from-sky-50 to-blue-50 rounded-2xl p-8 border border-sky-200">
+    <h2 class="text-xl font-semibold text-gray-900">Откройте для себя надувные лодки от Aquafarer</h2>
+    <p class="mt-4 text-sm text-gray-600">
+      Aquafarer разрабатывает и производит сертифицированные CE надувные лодки, SUP, каяки и надувные лодки для
+      рекреационного, профессионального и OEM рынков. Все лодки изготавливаются из тканей военного класса PVC или
+      Hypalon-CSM — с использованием современной высокочастотной сварки или ручного склеивания.
+    </p>
+    <div class="mt-6 flex gap-4 flex-wrap">
+      <a
+        href={`/${lang}/products`}
+        class="px-6 py-3 bg-gray-900 text-white rounded-full text-sm font-medium hover:bg-gray-800 transition"
+        >Посмотреть продукты</a
+      >
+      <a
+        href={`/${lang}/academy`}
+        class="px-6 py-3 border border-gray-200 text-gray-700 rounded-full text-sm font-medium hover:border-gray-400 transition"
+        >Учебный центр</a
+      >
+    </div>
+  </section>
+</section>
+
+<section class="sr-only" data-ai-block="definition" aria-hidden="true">
+  <p>
+    Комплексное руководство по надувным лодкам с типами лодок (шлюпки, РИБы, каяки, SUP, спасательные шлюпки,
+    коммерческие рабочие лодки), методами строительства (ВЧ-сварка, ручное соединение, сердцевина Drop-Stitch,
+    термосварка), материалами (ткань PVC, Hypalon CSM), критериями выбора (назначение, бюджет, сравнение материалов),
+    стандартами безопасности (сертификация CE, необходимое оборудование), техническим обслуживанием (очистка, хранение,
+    ремонт, уход за клапанами) и промышленные применения (рекреационные, поисково-спасательные, коммерческие, военные,
+    гуманитарные, OEM).
+  </p>
+</section>

@@ -1,0 +1,189 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'ja' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">← 研究開発センターに戻る</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">研究室05</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">試作工房</h1>
+      <p class="mt-3 text-lg text-muted">CAD モデルから海上対応ボートまで、構築、装備、実証済み</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-ocean-voyager-1.webp"
+        alt="Aquafarer プロトタイプワークショップボートの製作"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>デザインが現実になる場所</h2>
+  <p>
+    CAD
+    モデルは、どれほど詳細であっても、ボートが水に接触するまで実際にどのように動作するかを明らかにすることはできません。そのため、当社のプロトタイプ
+    ワークショップは、エンジニアリング
+    データを可能な限り迅速かつ正確に物理的な航行船に変換するように設計されています。すべての新しい {SITE.name} モデルとすべての重要なカスタム
+    ビルドは、実稼働ツールがコミットされる前にこのワークショップを通過します。
+  </p>
+  <p>
+    ワークショップには、船体、チューブ、艤装を同時に製造できる設備が完備されています。この並行ワークフロー
+    アプローチにより、プロトタイプのリードタイムは、業界標準の 16-20 週間と比較して、エンジニアリング リリースから 8-12
+    週間に短縮されます。お客様のアプリケーションが特殊なソリューションを必要とする場合、コンセプトから水上検証まで 3
+    か月以内に移行できます。
+  </p>
+
+  <h2>ワークショップの機能</h2>
+  <table>
+    <thead><tr><th>ワークステーション</th><th>装置</th><th>目的</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>船体の製造</td><td
+          >回転成形オーブン (HDPE)、TIG 溶接ベイ (アルミニウム)、ハンドレイアップ金型 (グラスファイバー)</td
+        ><td>3 つの材料タイプすべてで本格的な船体を生産</td></tr
+      >
+      <tr
+        ><td>チューブアセンブリ</td><td>RF溶接プレス、熱風タッキングステーション、インフレーション試験治具</td><td
+          >すべてのバッフル、コーン、バルブを備えたフルサイズのチューブアセンブリの製造</td
+        ></tr
+      >
+      <tr
+        ><td>リギングとフィッティング</td><td
+          >エンジンホイスト (500 kg)、コンソールモックアップフレーム、油圧ホースクリンパー、電気ハーネスボード</td
+        ><td>完全な艤装: エンジン、ステアリング、コントロール、燃料システム、電子機器、座席</td></tr
+      >
+      <tr
+        ><td>計装ベイ</td><td>GPS 速度センサー、燃料流量計、加速度計、熱電対アレイ、データロガー</td><td
+          >海上試運転計器の設置と校正</td
+        ></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>プロトタイプの旅 — ステップバイステップ</h2>
+  <ol>
+    <li>
+      <strong>エンジニアリングの引き継ぎ</strong> — 設計パッケージ (3D モデル、FEA レポート、部品表、レイアップ スケジュール)
+      は、ワークショップ リーダーとプロジェクト エンジニアによって正式にレビューされます。製造上の問題にはフラグが付けられ、切断が開始される前に解決されます。
+    </li>
+    <li>
+      <strong>船体製造</strong> — 船体はエンジニアリング仕様に従って建造されます。 HDPE の場合: 回転成形プログラムは Moldex3D
+      シミュレーションからロードされます。アルミニウムの場合: CNC カット プレートは、承認された溶接マップに従って TIG ベイで溶接されます。グラスファイバーの場合:
+      プライブックを層ごとに重ねていきます。
+    </li>
+    <li>
+      <strong>チューブの製造</strong> — CNC パターンのテンプレートを使用して生地を切断し、フルサイズのチャンバーに RF 溶接します。各チャンバーはテスト圧力まで膨張され、初期安定化のために
+      24 時間放置されます。
+    </li>
+    <li>
+      <strong>組み立てと装備</strong> — 船体とチューブが嵌合されます。エンジンが吊り下げられ、ステアリングとコントロールが接続され、燃料システムが取り付けられ、すべての電気回路が配線されて検証されます。
+    </li>
+    <li>
+      <strong>静的テスト</strong> — ボートが水に触れる前に、浮力チェック (全荷重 + 30 % 予備)、燃料システムの圧力テスト、ステアリング
+      システムのフルロック サイクル テスト、電気アース接続の導通テストが行われます。
+    </li>
+    <li><strong>海上トライアルプログラム</strong> — 20 時間の水中テスト。詳細は以下で説明します。</li>
+    <li>
+      <strong>試作レビュー</strong> — エンジニアリング、生産、品質チームとの正式な承認会議が開催されます。必要な設計変更はすべて文書化され、製品リリースに組み込まれます。
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      20 時間の海上トライアル プログラム — テスト スケジュール
+    </p>
+    <div class="space-y-2 text-sm">
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">2 h</span><span class="flex-1"
+          >港湾操縦 - 低速ハンドリング、リバース、フェンダーチェック</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">4 h</span><span class="flex-1"
+          >速度トライアル — GPS で検証された最高速度、巡航速度、3 RPM ポイントでの燃料消費量</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >旋回テスト — 20 kn、左舷、右舷での戦術直径、前進、および移動</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >スラムテスト — 0.5–1.0 m チョップを繰り返し実行。ヘルムシートベースの加速度計</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >安定性テスト — 4 乗組員 + 右舷へのギアによる静的ヒール角度、オフセット荷重</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >耐久走行 - 巡航速度で 3 時間継続。温度監視 (エンジン、燃料、電気)</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">2 h</span><span class="flex-1"
+          >最終検査 - すべてのシステムの試用後の検査、すべての留め具の締め付け/チェック、所見の文書化</span
+        >
+      </div>
+    </div>
+  </div>
+
+  <h2>独自のアプリケーション向けのカスタム プロトタイピング</h2>
+  <p>
+    プロトタイプワークショップでは、標準的な量産ボートでは対処できない問題を解決します。最近の例には次のようなものがあります。
+  </p>
+  <ul>
+    <li>
+      捜索救助組織向けの 7.8 m RIB。横転防止機能を備えたカスタム キャビン構造、一体型ストレッチャー
+      マウント、船首に取り付けられたソナー
+      ポッドが必要です。これらはすべて当社の施設で試作、取り付け、テストされています。
+    </li>
+    <li>
+      水路測量請負業者向けの 5.2 m
+      膨張式で、カットダウントランサム、取り外し可能な計器マスト、流れの乱れを最小限に抑えるように設計されたハル貫通トランスデューサーポケットを備えています。
+    </li>
+    <li>
+      4.5 メートルのスーパーヨット用電気駆動テンダー。顧客が 4
+      隻の船団を契約する前に、プロトタイプを使用して航続距離、充電インフラ、騒音レベルを検証しました。
+    </li>
+  </ul>
+
+  <h2>私たちのプロトタイピングチーム</h2>
+  <p>
+    このワークショップには、8 人の多技能の海洋技術者が配置されており、それぞれが 3 つの主要分野 (船体、チューブ、艤装)
+    のうち少なくとも 2
+    つについて複合訓練を受けています。チームのリーダーは、カスタムの一回限りの建造から量産シリーズまで、16
+    年の経験を持つマスター ボートビルダーです。すべてのプロトタイプには専任のプロジェクト
+    エンジニアが割り当てられ、構築と試用のプロセス全体を通じてクライアントの単一窓口として機能します。
+  </p>
+
+  <h2>クライアントの関与</h2>
+  <p>
+    当社では、お客様に対し、プロトタイプ製作中の主要なマイルストーン、特に初期のフィッティングレビューと海上試験に参加することを積極的に推奨しています。これらの段階での操作上のフィードバックは、生産に入る前にボートを微調整する上で非常に貴重です。私たちは何もないところで構築するのではありません。私たちはあなたと協力して構築します。
+  </p>
+  <p>
+    20 時間の海上トライアルは、チームがボートの取り扱い、システム
+    レイアウト、メンテナンス要件を理解し、量産ボートの納入時にサービスにスムーズに移行できるようにする機会でもあります。
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">プロトタイププロジェクトを開始する</h2>
+    <p class="mt-2 text-sm text-muted">ご希望のボートをお知らせいただき、試作開発プランをご提案させていただきます。</p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >プロトタイピングチームにお問い合わせください</a
+    >
+  </div>
+</section>

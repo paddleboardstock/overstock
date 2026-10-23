@@ -1,0 +1,306 @@
+hero_text:
+  tagline: Ontvang een offerte
+  title: Vraag een offerte aan<br />voor uw project
+  subtitle: Vertel ons uw wensen en ons team zal binnen 2 werkdagen reageren met een gedetailleerde offerte.
+steps2_process:
+  title: Hoe het werkt
+  subtitle: Vier eenvoudige stappen van aanvraag tot offerte.
+  items:
+    - title: 'Stap 1: Dien uw vereisten in'
+      description: Vul het onderstaande formulier in met uw producttype, hoeveelheid en specificaties. Hoe meer details u verstrekt, hoe nauwkeuriger uw offerte.
+      icon: tabler:file-text
+    - title: 'Stap 2: Wij beoordelen en adviseren'
+      description: Ons technische team beoordeelt uw vereisten en kan contact met u opnemen voor opheldering. Wij geven aanbevelingen over productconfiguratie en opties.
+      icon: tabler:users
+    - title: 'Stap 3: Ontvang uw offerte'
+      description: U ontvangt een gedetailleerde offerte inclusief eenheidsprijs, MOQ, doorlooptijd, betalingsvoorwaarden en verzendopties. Meestal binnen 48 uur.
+      icon: tabler:currency-dollar
+    - title: 'Stap 4: Monster en productie'
+      description: Na acceptatie van de offerte gaan wij over tot monsterproductie (indien van toepassing) of direct tot massaproductie. Regelmatige updates gedurende het hele proces.
+      icon: tabler:building-factory
+content_form:
+  tagline: Offerteformulier
+  title: Vertel ons over uw project
+  subtitle: Alle velden met * zijn verplicht.
+  fields:
+    - name: Productcategorie
+      type: selecteren
+      options:
+        - RIB-boot
+        - Opblaasboot
+        - SUP-board
+        - Opblaaskajak
+        - Reddingsvest
+        - Watersportaccessoire
+        - Aangepast OEM/ODM
+    - name: Sollicitatie
+      type: selecteren
+      options:
+        - Duikcentrum
+        - Vissen
+        - Maritiem toerisme / Resort
+        - Zoeken en redden
+        - Yachttender
+        - Commercieel werkvaartuig
+        - Overheid / Militair
+        - OEM / Eigen merk
+        - Persoonlijk / Vrije tijd
+        - Anders
+    - name: Hoeveelheid
+      type: tekst
+      placeholder: bijv. 50 eenheden
+    - name: Doelmarkt
+      type: tekst
+      placeholder: bijv. Europa, Noord-Amerika, Midden-Oosten
+    - name: Leveringsland
+      type: tekst
+      placeholder: bijv. Italië, VAE, VS, Australië
+    - name: Materiaalvoorkeur
+      type: selecteren
+      options:
+        - Geen voorkeur
+        - PVC van marinekwaliteit (1100 dtex)
+        - Premium-Hypalon / CSM
+        - Romp van glasvezel
+        - Romp van aluminium
+    - name: Motorvereiste
+      type: tekst
+      placeholder: bijv. 60 pk buitenboordmotor, geen motor, dubbele 115 pk
+    - name: Maatwerk vereist
+      type: tekst
+      placeholder: bijv. aangepaste kleuren, branding/logo, verpakking, speciale fittingen
+    - name: Tijdlijn
+      type: tekst
+      placeholder: bijv. levering binnen 90 dagen
+    - name: Aanvullende vereisten
+      type: tekstgebied
+      placeholder: Beschrijf uw toepassing, technische specificaties of eventuele speciale vereisten; voeg referentietekeningen, specificaties of links toe, indien beschikbaar
+    - name: Specificatie uploaden
+      type: bestand
+      placeholder: Upload uw specificatieblad, tekening of referentiedocument (PDF, DWG, DXF)
+    - name: Logo/kunstwerk uploaden
+      type: bestand
+      placeholder: Upload uw logo of artwork voor aangepaste branding (AI, EPS, PNG)
+content_rfq_types:
+  tagline: 3-tier offerteaanvraagsysteem
+  title: Kies het juiste<br />onderzoeksniveau
+  subtitle: Verschillende projecten hebben verschillende detailniveaus nodig. Selecteer het formulier dat bij uw aankoopfase past.
+  items:
+    - title: Snel onderzoek
+      description: 5-6 velden, 30 seconden. Voor het eerste contact, algemene vragen of vervolgacties voor het downloaden van bronnen. Wij reageren binnen 24 uur met basisinformatie en vervolgstappen.
+      icon: tabler:bolt
+    - title: Standaard offerteaanvraag
+      description: 8-10 velden, 2 minuten. Voor specifieke productoffertes met modelselectie, hoeveelheid en leveringsvereisten. Ontvang binnen 48 uur een gedetailleerde offerte.
+      icon: tabler:file-text
+    - title: Project-offerteaanvraag
+      description: 10-14 velden, 5 minuten. Voor RIB-, resortvloot-, reddings- of overheidsprojecten die aangepaste configuratie, nalevingsdocumentatie en meerjarige leveringsplanning vereisen. Toegewijde projectmanager toegewezen.
+      icon: tabler:clipboard-list
+form_quick:
+  title: Snel onderzoek
+  subtitle: Snel contact voor algemene vragen en eerste informatieverzoeken.
+  fields:
+    - name: volledige naam
+      label: Volledige naam
+      type: tekst
+      required: true
+      placeholder: Je volledige naam
+    - name: zakelijkE-mail
+      label: Zakelijke e-mail
+      type: e-mail
+      required: true
+      placeholder: jij@bedrijf.com
+    - name: bedrijfsnaam
+      label: Bedrijfsnaam
+      type: tekst
+      required: true
+      placeholder: Jouw bedrijf
+    - name: koperType
+      label: ik ben een...
+      type: selecteren
+      required: true
+      options:
+        - Distributeur / Importeur
+        - Merkeigenaar / Eigen merk
+        - Resort / Watersportcentrum
+        - Verhuurbedrijf
+        - Overheid / Reddingsorganisatie
+        - Duik-/visbedrijf
+        - Maritiem ingenieur / refitspecialist
+        - Anders
+    - name: productInteresse
+      label: Productinteresse
+      type: meervoudig selecteren
+      required: true
+      options:
+        - RIB-boten
+        - Opblaasboten
+        - SUP-boards
+        - Veiligheidsuitrusting
+        - Accessoires
+        - Aangepast OEM/ODM
+    - name: bericht
+      label: Wat heb je nodig?
+      type: tekstgebied
+      required: false
+      placeholder: Korte omschrijving van uw wensen...
+form_standard:
+  title: Standaard offerteaanvraag
+  subtitle: Gedetailleerde offerteaanvraag voor specifieke producten en hoeveelheden.
+  fields:
+    - name: volledige naam
+      label: Volledige naam
+      type: tekst
+      required: true
+    - name: zakelijkE-mail
+      label: Zakelijke e-mail
+      type: e-mail
+      required: true
+    - name: bedrijfsnaam
+      label: Bedrijfsnaam
+      type: tekst
+      required: true
+    - name: koperType
+      label: Kopertype
+      type: selecteren
+      required: true
+    - name: productmodel
+      label: Productmodel/type
+      type: tekst
+      required: true
+      placeholder: bijv. AF580 RIB, AF380 opblaasbaar
+    - name: hoeveelheid
+      label: Geschatte hoeveelheid
+      type: tekst
+      required: true
+      placeholder: bijvoorbeeld 10-20 eenheden
+    - name: doelMarkt
+      label: Doelmarkt/regio
+      type: tekst
+      required: true
+      placeholder: bijvoorbeeld de EU, Noord-Amerika, het Midden-Oosten
+    - name: leveringTijdlijn
+      label: Gewenste levering
+      type: selecteren
+      required: true
+      options:
+        - Binnen 30 dagen
+        - 30-60 dagen
+        - 60-90 dagen
+        - Vooruitplannen (90+ dagen)
+        - Alleen onderzoek
+    - name: nalevingVereist
+      label: Nalevingsvereisten
+      type: meervoudig selecteren
+      required: false
+      options:
+        - CE / RCD 2013/53/EU
+        - UKCA
+        - USCG
+        - ISO 9001
+        - BSCI
+        - REACH
+        - Geen / Weet niet zeker
+    - name: bericht
+      label: Aanvullende details
+      type: tekstgebied
+      required: false
+form_project:
+  title: Project-offerteaanvraag
+  subtitle: Uitgebreid projectonderzoek voor vloot-, maatwerk- of overheidsaanbestedingen.
+  fields:
+    - name: volledige naam
+      label: Volledige naam
+      type: tekst
+      required: true
+    - name: zakelijkE-mail
+      label: Zakelijke e-mail
+      type: e-mail
+      required: true
+    - name: bedrijfsnaam
+      label: Bedrijfsnaam
+      type: tekst
+      required: true
+    - name: koperType
+      label: Kopertype
+      type: selecteren
+      required: true
+    - name: Projecttype
+      label: Projecttype
+      type: selecteren
+      required: true
+      options:
+        - Resort-/hotelvloot
+        - Verhuurvloot
+        - Reddings-/patrouillevloot
+        - Vloot van duikcentrum
+        - Overheidsaanbestedingen
+        - Eigen merk / OEM
+        - Voorraadbestelling dealer
+        - Anders
+    - name: bootTypen
+      label: Boottypen vereist
+      type: meervoudig selecteren
+      required: true
+      options:
+        - RIB-boten
+        - Opblaasboten / dinghy's
+        - SUP-boards
+        - Kajaks
+        - Veiligheidsuitrusting
+    - name: vlootgrootte
+      label: Vlootgrootte/kwantiteitsbereik
+      type: tekst
+      required: true
+      placeholder: bijvoorbeeld 20-50 eenheden gedurende 12 maanden
+    - name: aangepaste vereisten
+      label: Aangepaste configuratiebehoeften
+      type: tekstgebied
+      required: false
+      placeholder: Rompgrootte, buismateriaal, dekindeling, merkvereisten...
+    - name: nalevingVereist
+      label: Nalevings- en certificeringsvereisten
+      type: meervoudig selecteren
+      required: true
+      options:
+        - CE / RCD 2013/53/EU
+        - UKCA
+        - USCG Type III/V
+        - ISO 9001
+        - BSCI
+        - REACH / RoHS
+        - Certificering voor lokale markt
+    - name: doelMarkt
+      label: Doelmarkt
+      type: tekst
+      required: true
+    - name: budgetbereik
+      label: Budgetbereik
+      type: selecteren
+      required: false
+      options:
+        - Onder $10,000
+        - $10,000 - $50,000
+        - $50,000 - $200,000
+        - $200,000+
+        - Zeg ik liever niet
+    - name: leveringTijdlijn
+      label: Projecttijdlijn
+      type: selecteren
+      required: true
+      options:
+        - Dringend (binnen 30 dagen)
+        - Standaard (30-60 dagen)
+        - Gepland (60-90 dagen)
+        - Toekomstplanning (90+ dagen)
+    - name: bericht
+      label: Projectdetails en vereisten
+      type: tekstgebied
+      required: false
+      placeholder: Beschrijf uw project, toepassing en eventuele specifieke vereisten...
+cta:
+  title: Liever per e-mail bespreken?
+  subtitle: Stuur uw vraag rechtstreeks naar ons verkoopteam en wij reageren binnen 24 uur.
+  actions:
+    - variant: primary
+      text: E-mail ons direct
+      href: /contact

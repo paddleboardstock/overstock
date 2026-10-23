@@ -1,0 +1,155 @@
+---
+export const prerender = true;
+
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+import { getPageContent, setPageContentData } from '~/i18n/page-content';
+import __pageData from '~/i18n/generated/pages/community.ts';
+import { localizePageTitle, localizePageDescription } from '~/i18n/page-title';
+import { languages } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => getUiForLang(lang)?.[key] || '';
+setPageContentData(__pageData);
+const page = getPageContent(lang, 'community');
+
+const hero = page.hero ?? {};
+const stats = page.stats ?? {};
+const stories = page.stories ?? {};
+const adventures_cta = page.adventures_cta ?? {};
+const locations = page.locations ?? {};
+const cta = page.cta ?? {};
+
+const metadata = {
+  title: localizePageTitle(page, `Community — ${SITE.name} Explorer Stories & Adventures`),
+  description: localizePageDescription(
+    page,
+    `Real stories from the ${SITE.name} community. Read adventures from paddlers, families, and professionals who use our gear on the water worldwide.`
+  ),
+};
+const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: 'Community' }];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <Hero tagline={hero.tagline} image={hero.image} title={hero.title} subtitle={hero.subtitle} />
+
+  <Stats title={stats.title} stats={stats.stats} />
+
+  <!-- Explorer Stories -->
+  <section class="max-w-6xl mx-auto py-20 px-6">
+    <div class="text-center max-w-3xl mx-auto mb-14">
+      <span class="text-sm font-medium text-sky-600 tracking-wide uppercase"
+        >{stories.tagline || 'Explorer Stories'}</span
+      >
+      <h2 class="mt-4 text-4xl font-semibold text-gray-900 dark:text-slate-100">
+        {stories.title || 'Real adventures from real people'}
+      </h2>
+      <p class="mt-4 text-lg text-gray-500 dark:text-slate-400">{stories.subtitle || ''}</p>
+    </div>
+    <div class="space-y-12">
+      {
+        (stories.items || []).map((item: any) => (
+          <div class="flex flex-col md:flex-row gap-8 items-start bg-white dark:bg-slate-800 rounded-2xl p-8 border border-gray-200 dark:border-slate-700">
+            {item.image && (
+              <div class="w-full md:w-64 h-48 rounded-xl overflow-hidden flex-shrink-0 bg-gray-100 dark:bg-slate-700">
+                <img src={item.image} alt={item.name || ''} class="w-full h-full object-cover" loading="lazy" />
+              </div>
+            )}
+            <div class="flex-1">
+              <div class="flex items-center gap-2 text-xs text-gray-400 dark:text-slate-500 mb-2">
+                {item.location && <span>{item.location}</span>}
+              </div>
+              <blockquote class="text-gray-700 dark:text-slate-300 leading-relaxed mb-4">
+                &ldquo;{item.content || ''}&rdquo;
+              </blockquote>
+              <div>
+                <span class="font-semibold text-gray-900 dark:text-slate-100">{item.name || ''}</span>
+                {item.title && <span class="text-sm text-gray-500 dark:text-slate-400 ml-2">&mdash; {item.title}</span>}
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- Global Locations -->
+  <section class="bg-gray-50 dark:bg-slate-900/50 py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-sm font-medium text-sky-600 tracking-wide uppercase"
+          >{locations.tagline || 'Global Community'}</span
+        >
+        <h2 class="mt-4 text-4xl font-semibold text-gray-900 dark:text-slate-100">
+          {locations.title || 'Where Aquafarer travels'}
+        </h2>
+        <p class="mt-4 text-lg text-gray-500 dark:text-slate-400">{locations.subtitle || ''}</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {
+          (locations.regions || []).map((region: any) => (
+            <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-gray-200 dark:border-slate-700">
+              <h3 class="font-semibold text-gray-900 dark:text-slate-100 mb-2">{region.title || ''}</h3>
+              <p class="text-sm text-gray-500 dark:text-slate-400 leading-relaxed">{region.description || ''}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Share Your Adventure CTA -->
+  <section class="py-20 px-6 text-center">
+    <div class="max-w-2xl mx-auto">
+      <span class="text-sm font-medium text-sky-600 tracking-wide uppercase"
+        >{adventures_cta.tagline || 'Share Your Adventure'}</span
+      >
+      <h2 class="mt-4 text-4xl font-semibold text-gray-900 dark:text-slate-100">
+        {adventures_cta.title || 'Your story could be here'}
+      </h2>
+      <p class="mt-4 text-lg text-gray-500 dark:text-slate-400">{adventures_cta.subtitle || ''}</p>
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        {
+          adventures_cta.instagram && (
+            <a
+              href="https://www.instagram.com/aquafarer_watersports/"
+              class="px-8 py-4 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition"
+            >
+              {adventures_cta.instagram}
+            </a>
+          )
+        }
+        {
+          adventures_cta.youtube && (
+            <a
+              href="https://www.youtube.com/@Aquafarer"
+              class="px-8 py-4 border-2 border-gray-200 text-gray-700 dark:text-slate-300 rounded-full font-semibold hover:border-gray-400 transition"
+            >
+              {adventures_cta.youtube}
+            </a>
+          )
+        }
+        {
+          adventures_cta.facebook && (
+            <a
+              href="https://www.facebook.com/profile.php?id=61572404318679"
+              class="px-8 py-4 border-2 border-gray-200 text-gray-700 dark:text-slate-300 rounded-full font-semibold hover:border-gray-400 transition"
+            >
+              {adventures_cta.facebook}
+            </a>
+          )
+        }
+      </div>
+    </div>
+  </section>
+
+  <CallToAction title={cta.title} subtitle={cta.subtitle} actions={cta.actions} />
+</Layout>

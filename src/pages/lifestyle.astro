@@ -1,0 +1,126 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+
+const metadata = {
+  title: `Lifestyle — ${SITE.name}`,
+  description: `The ${SITE.name} lifestyle — built for those who live on the water. Explore our ethos, community stories, and what drives every design decision.`,
+};
+
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Lifestyle' }];
+
+const values = [
+  {
+    icon: '🌊',
+    title: 'Born on the Water',
+    desc: 'Every design starts with understanding how water behaves. We engineer from the edge of conditions inward — because the ocean is our teacher, not our workplace.',
+  },
+  {
+    icon: '🔧',
+    title: 'Built to Last',
+    desc: 'The most sustainable product is the one that does not need replacing. Marine-grade materials, drop-stitch cores rated to 15 PSI, and seams that outlast the season.',
+  },
+  {
+    icon: '🏆',
+    title: 'Accessible by Design',
+    desc: 'Water sports should not be a luxury. Professional-grade performance at a price that makes sense for families, guides, and small operators — not just commercial fleets.',
+  },
+  {
+    icon: '🌍',
+    title: 'Global Community',
+    desc: 'From the coast of Qingdao to lakes in Europe, rivers in Southeast Asia, and bays in the Americas — our customers share one thing: a love for being on the water.',
+  },
+  {
+    icon: '♻️',
+    title: 'Responsible Manufacturing',
+    desc: 'CNC-optimised nesting cuts material waste below 5%. Durable construction reduces replacement cycles. We build for longevity because that is the most sustainable choice.',
+  },
+  {
+    icon: '🤝',
+    title: 'Support That Lasts',
+    desc: 'Twenty-year-old hulls still call us for spare parts. Our warranty response averages 24 hours. We do not disappear after the sale — we are here for the life of the product.',
+  },
+];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <section
+    class="relative min-h-[50vh] flex items-center justify-center text-center text-white overflow-hidden bg-gradient-to-br from-[#001830] via-[#002d4a] to-[#003355]"
+  >
+    <div class="relative z-10 max-w-4xl mx-auto px-6 py-24">
+      <p class="text-sm font-semibold uppercase tracking-wider text-sky-400">{SITE.name}</p>
+      <h1 class="mt-4 text-5xl md:text-7xl font-bold tracking-tight leading-[1.1]">The Aquafarer<br />Lifestyle</h1>
+      <p class="mt-6 text-lg text-white/70 max-w-2xl mx-auto">
+        Built for those who live on the water — from weekend explorers to commercial operators who depend on their gear
+        every day.
+      </p>
+    </div>
+  </section>
+
+  <section class="max-w-6xl mx-auto py-24 px-6">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">Our Ethos</span>
+      <h2 class="mt-4 text-3xl font-semibold text-gray-900">More than a product. A philosophy.</h2>
+      <p class="mt-4 text-lg text-gray-500">
+        Six principles that shape every decision we make — from material selection to customer support.
+      </p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {
+        values.map((v) => (
+          <div class="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-md transition-shadow">
+            <span class="text-3xl">{v.icon}</span>
+            <h3 class="mt-4 text-lg font-semibold text-gray-900">{v.title}</h3>
+            <p class="mt-3 text-sm text-gray-500 leading-relaxed">{v.desc}</p>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="bg-gray-50 dark:bg-slate-900/50 py-24 px-6">
+    <div class="max-w-6xl mx-auto text-center">
+      <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">Community</span>
+      <h2 class="mt-4 text-3xl font-semibold text-gray-900">Join the Aquafarer Community</h2>
+      <p class="mt-4 text-lg text-gray-500 max-w-2xl mx-auto">
+        Follow our journey and share your own adventures on the water.
+      </p>
+      <div class="mt-10 flex justify-center gap-4 flex-wrap">
+        <a
+          href="https://www.instagram.com/aquafarer"
+          class="px-8 py-4 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition"
+          >Follow on Instagram</a
+        >
+        <a
+          href="https://www.youtube.com/@Aquafarer"
+          class="px-8 py-4 border-2 border-gray-200 text-gray-700 rounded-full font-semibold hover:border-gray-400 transition"
+          >Subscribe on YouTube</a
+        >
+        <a
+          href="https://x.com/aquafarer"
+          class="px-8 py-4 border-2 border-gray-200 text-gray-700 rounded-full font-semibold hover:border-gray-400 transition"
+          >Follow on X</a
+        >
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-6xl mx-auto py-24 px-6 text-center">
+    <h2 class="text-3xl font-semibold text-gray-900">Start your journey</h2>
+    <p class="mt-4 text-lg text-gray-500 max-w-2xl mx-auto">
+      64 CE-certified models. Backed by warranty. Designed for real life on the water.
+    </p>
+    <div class="mt-10 flex justify-center gap-4">
+      <a
+        href="/products"
+        class="px-10 py-4 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition"
+        >Explore Products →</a
+      >
+      <a
+        href="/about"
+        class="px-10 py-4 border-2 border-gray-200 text-gray-700 rounded-full font-semibold hover:border-gray-400 transition"
+        >About Us</a
+      >
+    </div>
+  </section>
+</Layout>

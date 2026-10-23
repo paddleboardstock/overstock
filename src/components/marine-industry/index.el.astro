@@ -1,0 +1,383 @@
+---
+const { lang = 'el' } = Astro.props;
+import JsonLd from '~/components/common/JsonLd.astro';
+import AiQuickAnswer from '~/components/common/AiQuickAnswer.astro';
+const t = (_key: string) => '';
+---
+
+<JsonLd
+  type="Article"
+  article={{
+    headline: 'Οδηγός φουσκωτών σκαφών — Ο πλήρης πόρος',
+    description:
+      'Ένας ολοκληρωμένος οδηγός για φουσκωτά σκάφη που καλύπτει τύπους σκαφών, μεθόδους κατασκευής, σύγκριση υλικών, κριτήρια επιλογής, πρότυπα ασφαλείας και συντήρηση.',
+    datePublished: '2026-07-07',
+  }}
+  data={{ url: 'https://aquafarer.com/marine-industry/' }}
+/>
+
+<JsonLd
+  type="BreadcrumbList"
+  breadcrumbs={[
+    { name: t('nav.home') || 'Home', href: `/${lang}/` },
+    { name: 'Ναυτιλιακή βιομηχανία', href: `/${lang}/marine-industry` },
+    { name: 'Οδηγός φουσκωτών σκαφών', href: `/${lang}/marine-industry/` },
+  ]}
+/>
+
+<AiQuickAnswer
+  entityType="Leitfaden"
+  quickAnswer="Ένα φουσκωτό σκάφος είναι ένα ελαφρύ σκάφος του οποίου οι εύκαμπτοι υφασμάτινοι σωλήνες (θάλαμοι άνωσης) είναι γεμάτοι με πεπιεσμένο αέρα για να δημιουργήσουν άνωση. Τα σύγχρονα φουσκωτά σκάφη περιλαμβάνουν λέμβους, RIB (άκαμπτα φουσκωτά σκάφη), φουσκωτά καγιάκ και σανίδες κουπί stand-up. Είναι κατασκευασμένα από PVC ή Hypalon-CSM υφάσματα με συγκόλληση HF ή ραφές με κόλλα στο χέρι. Η κατασκευή Drop-Stitch επιτρέπει τα υψηλής πίεσης, άκαμπτα δάπεδα."
+  facts={[
+    { label: 'Πεδίο εφαρμογής της παγκόσμιας αγοράς', value: '$2.8B (2026)' },
+    { label: 'Πρωτογενή υλικά', value: 'PVC / Hypalon CSM' },
+    { label: 'ζωή', value: '8-20+ Jahre' },
+    { label: 'CE πιστοποίηση', value: 'Erforderlich (EU)' },
+  ]}
+/>
+
+<section class="max-w-4xl mx-auto py-16 px-6">
+  <h1 class="text-4xl font-semibold text-gray-900">Οδηγός φουσκωτών σκαφών</h1>
+  <p class="mt-4 text-lg text-gray-500">
+    Ο οριστικός πόρος για φουσκωτά σκάφη — από λέμβους αναψυχής έως επαγγελματικά RIB μέχρι εξειδικευμένα σκάφη
+    διάσωσης.
+  </p>
+
+  <nav class="mt-8 flex flex-wrap gap-2">
+    {
+      [
+        { label: 'Typen', id: 'types' },
+        { label: 'Konstruktion', id: 'construction' },
+        { label: 'Materialien', id: 'materials' },
+        { label: 'Auswahl', id: 'selection' },
+        { label: 'Sicherheit', id: 'safety' },
+        { label: 'Wartung', id: 'maintenance' },
+        { label: 'Standards', id: 'standards' },
+      ].map((s) => (
+        <a
+          href={`#${s.id}`}
+          class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition"
+        >
+          {s.label}
+        </a>
+      ))
+    }
+  </nav>
+
+  <section id="types" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Τύποι φουσκωτών σκαφών</h2>
+    <div class="mt-8 grid gap-6">
+      {
+        [
+          {
+            title: 'Aufblasbare Dinghys',
+            desc: 'Kleine, tragbare Boote für Zubringerdienste, Angeln und kurze Freizeitfahrten. Typischerweise 2-4 m lang, mit kleinen Außenbordern (2-15 PS) oder Riemen angetrieben. Der günstigste Einstieg.',
+            icon: '🚤',
+          },
+          {
+            title: 'Festrumpf-Schlauchboote (RIBs)',
+            desc: 'Leistungsstarke Boote mit starrem Rumpf aus GFK, Aluminium oder HDPE und aufblasbaren Auftriebskammern. Längen von 3-12 m, Außenbordmotoren mit 15-300+ PS. Einsatz bei Patrouille, Rettung, Tauchen und Hochseefahrten.',
+            icon: '⚡',
+          },
+          {
+            title: 'Aufblasbare Kajaks',
+            desc: 'Tragbare Kajaks aus PVC- oder TPU-Gewebe. Erhältlich in Einzel- und Tandemausführung für Freizeittouren, Flussfahrten und Expeditionen.',
+            icon: '🛶',
+          },
+          {
+            title: 'Aufblasbare Stand-Up-Paddle-Boards (SUPs)',
+            desc: 'In Drop-Stitch-Konstruktion gefertigte Paddle-Boards, die sich zu starren Hochdruckdecks aufpumpen lassen. Erhältlich als Allround-, Touring-, Yoga-, Angel- und Surf-Modelle.',
+            icon: '🏄',
+          },
+          {
+            title: 'Rettungsboote (SAR)',
+            desc: 'Spezialisierte RIBs für Such- und Rettungseinsätze. Mit selbstlenzendem Boden, Mittelkonsole, Schleppösen und Signalfarben. Für den Rettungseinsatz CE-zertifiziert.',
+            icon: '🆘',
+          },
+          {
+            title: 'Kommerzielle Arbeitsboote',
+            desc: 'Robuste RIBs für Tauchunterstützung, Patrouille, Vermessung und kommerzielle maritime Einsätze. Hypalon-CSM-Konstruktion, verstärkte Rümpfe und professionelle Ausstattung.',
+            icon: '⚙️',
+          },
+        ].map((item) => (
+          <div class="flex gap-4 p-5 bg-gray-50 rounded-xl border border-gray-200">
+            <span class="text-2xl flex-shrink-0">{item.icon}</span>
+            <div>
+              <h3 class="font-semibold text-gray-900">{item.title}</h3>
+              <p class="mt-1 text-sm text-gray-600">{item.desc}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section id="construction" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Μέθοδοι κατασκευής</h2>
+    <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Συγκόλληση HF (υψηλής συχνότητας)</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Χρησιμοποιεί ηλεκτρομαγνητική ενέργεια για τη σύντηξη PVC στρωμάτων σε μοριακό επίπεδο. Δημιουργεί τις πιο
+          δυνατές αεροστεγείς ραφές. Κοινό σε υψηλής ποιότητας PVC σκάφη και SUP. Απαιτεί ειδικά μηχανήματα και
+          εκπαιδευμένους χειριστές.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Συγκόλληση χεριών/χημική συγκόλληση</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Η κόλλα δύο συστατικών συνδέει τα υφασμάτινα πάνελ. Η κύρια μέθοδος για Hypalon-CSM σκάφη (χωρίς συγκόλληση
+          HF). Απαιτεί ακριβή προετοιμασία της επιφάνειας, ελεγχόμενη υγρασία και επαρκή χρόνο σκλήρυνσης για βέλτιστη
+          αντοχή ραφής.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Drop-Stitch πυρήνας</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Χιλιάδες πολυεστερικά νήματα συνδέουν το επάνω και το κάτω στρώμα PVC, επιτρέποντας το φούσκωμα σε υψηλή πίεση
+          (15-25 PSI) για άκαμπτη συμπεριφορά της σανίδας. Η πυκνότητα του νήματος (15-50 νήματα/cm²) καθορίζει την
+          ακαμψία και το βάρος.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Θερμή συγκόλληση</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Συγκόλληση θερμού αέρα ή θερμής σφήνας για ραφές και ενισχύσεις. Συνηθισμένο κατά την παραγωγή μεγαλύτερων
+          RIB. Λιγότερο ακριβής από τη συγκόλληση HF αλλά αποτελεσματική για Hypalon και βαριά PVC υφάσματα.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="materials" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Σύγκριση υλικών</h2>
+    <div class="mt-6 overflow-x-auto">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="bg-gray-50 border-b-2 border-gray-200">
+            <th class="px-4 py-3 text-left font-semibold text-gray-700">Χαρακτηριστικός</th>
+            <th class="px-4 py-3 text-center font-semibold text-sky-700">PVC</th>
+            <th class="px-4 py-3 text-center font-semibold text-emerald-700">Hypalon CSM</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            [
+              ['Relative Kosten', '$ (Budget)', '$$$ (Premium)'],
+              ['UV-Beständigkeit', 'Gut (mit Beschichtung)', 'Hervorragend (materialeigen)'],
+              ['Abriebfestigkeit', 'Mittel-Gut', 'Hervorragend'],
+              ['Chemikalienbeständigkeit', 'Gut', 'Hervorragend'],
+              ['Kälteflexibilität', 'Versteift unter 0°C', 'Flexibel bis -20°C'],
+              ['Lebensdauer', '8-12 Jahre', '15-20+ Jahre'],
+              ['Nahtmethode', 'HF-Schweißen', 'Handverklebung'],
+              ['Reparatur', 'PVC-Kleber (einfach)', '2K-Kleber (mittel)'],
+            ].map((row, i) => (
+              <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                {row.map((cell, j) => (
+                  <td
+                    class={`px-4 py-3 border-b border-gray-200 ${j === 0 ? 'font-medium text-gray-700' : 'text-center text-gray-600'}`}
+                  >
+                    {cell}
+                  </td>
+                ))}
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-4 text-sm text-gray-500">
+      Ο σύγχρονος στρατιωτικός βαθμός PVC (1100-1670 dtex) προσφέρει εξαιρετική αντοχή στους περισσότερους ψυχαγωγικούς
+      χρήστες στο μισό κόστος του Hypalon. Το Hypalon προτιμάται για εμπορικούς στόλους, τροπικά κλίματα και κρίσιμες
+      για την ασφάλεια εφαρμογές.
+    </p>
+    <a
+      href={`/${lang}/learn/pvc-vs-hypalon`}
+      class="mt-4 inline-block text-sky-600 hover:text-sky-700 text-sm font-medium"
+      >Αναλυτικός οδηγός: PVC έναντι Hypalon →</a
+    >
+  </section>
+
+  <section id="selection" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Πώς να επιλέξετε ένα φουσκωτό σκάφος</h2>
+    <div class="mt-8 grid md:grid-cols-3 gap-6">
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">1. Καθορίστε τη χρήση για την οποία προορίζετε</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>Ελεύθερος χρόνος: Βάρκα ή SUP</li>
+          <li>Ισχύς: RIB (15-60 HP)</li>
+          <li>Εμπορικό: RIB (100+ PS)</li>
+          <li>Γυμναστήριο: φουσκωτό SUP</li>
+          <li>Ταξίδι: φουσκωτό καγιάκ</li>
+        </ul>
+      </div>
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">2. Ορίστε τον προϋπολογισμό σας</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>$200-$800: Φουσκωτό SUP</li>
+          <li>$500-$2,000: Βάρκα + κινητήρας</li>
+          <li>$3,000-$8,000: επίπεδο εισόδου RIB</li>
+          <li>$8,000-$20,000: Premium RIB</li>
+          <li>$20,000+: Εμπορικό RIB</li>
+        </ul>
+      </div>
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">3. Εξετάστε το υλικό</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>PVC: Φθηνό, ελαφρύ</li>
+          <li>Hypalon: Premium, μακράς διαρκείας</li>
+          <li>Drop-Stitch: Άκαμπτη ισχύς</li>
+          <li>Πάχος υφάσματος: 1100-1670 dtex</li>
+          <li>Επικάλυψη: UV και προστατευτικά στρώματα διάτρησης</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="safety" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Ασφάλεια &amp; Πρότυπα</h2>
+    <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">CE πιστοποίηση</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Όλα τα φουσκωτά σκάφη που πωλούνται στην ΕΕ απαιτούν τη σήμανση CE σύμφωνα με την Οδηγία για τα σκάφη αναψυχής
+          (RCD) 2013/53/EU. Η πιστοποίηση καλύπτει την κατηγορία σχεδιασμού (A-D), την άνωση, τη σταθερότητα και την
+          ικανότητα φόρτωσης. Τα Aquafarer σκάφη είναι CE πιστοποιημένα για χρήση αναψυχής και διάσωσης.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">πρότυπο</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Το διεθνές πρότυπο για τα φουσκωτά σκάφη καθορίζει απαιτήσεις για υλικά, ραφές, βαλβίδες και δοκιμές απόδοσης.
+          Οι τύποι I-IV καλύπτουν τα πάντα, από μικρές λέμβους έως μεγάλες RIB.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Βασικός εξοπλισμός ασφαλείας</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Σωσίβια/σωσίβια (CE 12402), πετονιές, αντλία υδροσυλλεκτών/πυροσβεστήρας, φώτα πλοήγησης (νύχτα), ραδιόφωνο
+          VHF, κιτ πρώτων βοηθειών, άγκυρα και εφεδρικό κουπί ή καύσιμο.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Ασφαλής λειτουργία</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          ΠΟΤΕ μην υπερβαίνετε το μέγιστο φορτίο στην πινακίδα τύπου. Ελέγξτε τις βαλβίδες πριν από την εκκίνηση.
+          Κατανείμετε το βάρος ομοιόμορφα. Παρατηρήστε τις καιρικές συνθήκες. Αποθηκεύστε ένα σχέδιο ταξιδιού.
+          Παρακολουθήστε ένα μάθημα ασφάλειας στη βαρκάδα.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="maintenance" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Συντήρηση &amp; Φροντίδα</h2>
+    <div class="mt-8 space-y-4 text-sm text-gray-600">
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <span class="text-sky-600 font-bold flex-shrink-0">1.</span><span
+          >Ξεπλύνετε με φρέσκο νερό μετά από κάθε χρήση σε αλατόνερο. Στεγνώστε εντελώς πριν την αποθηκεύσετε.</span
+        >
+      </div>
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <span class="text-sky-600 font-bold flex-shrink-0">2.</span><span
+          >Φυλάσσεται μερικώς φουσκωμένο σε δροσερό, ξηρό μέρος, μακριά από το άμεσο ηλιακό φως και ακραίες
+          θερμοκρασίες.</span
+        >
+      </div>
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <span class="text-sky-600 font-bold flex-shrink-0">3.</span><span
+          >Ελέγξτε τις βαλβίδες και τις ραφές πριν από κάθε σεζόν. Επεξεργάζεστε τα σώματα των βαλβίδων ετησίως με σπρέι
+          σιλικόνης.</span
+        >
+      </div>
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <span class="text-sky-600 font-bold flex-shrink-0">4.</span><span
+          >Καθαρίστε με ήπιο σαπούνι και νερό. Μην χρησιμοποιείτε ποτέ διαλύτες, λευκαντικά ή καθαριστικά υψηλής πίεσης
+          στο ύφασμα.</span
+        >
+      </div>
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <span class="text-sky-600 font-bold flex-shrink-0">5.</span><span
+          >Επισκευάστε αμέσως τυχόν ζημιές χρησιμοποιώντας κιτ επισκευής που συνιστά ο κατασκευαστής. Για Hypalon
+          χρησιμοποιήστε μόνο κόλλα δύο συστατικών.</span
+        >
+      </div>
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <span class="text-sky-600 font-bold flex-shrink-0">6.</span><span
+          >Αντικαταστήστε τις βαλβίδες κάθε 3-5 χρόνια. Ανανεώστε το ύφασμα στο τέλος της ζωής του (ορατή φθορά,
+          πορώδες, διαχωρισμός ραφών).</span
+        >
+      </div>
+    </div>
+  </section>
+
+  <section id="standards" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Βιομηχανικές εφαρμογές</h2>
+    <div class="mt-8 grid md:grid-cols-3 gap-4">
+      {
+        [
+          {
+            title: 'Freizeitbootfahren',
+            desc: 'Familienausflüge, Wassersport, Angeln, Camping und Freizeitfahrten auf Seen, Flüssen und Küstengewässern.',
+          },
+          {
+            title: 'Suche & Rettung',
+            desc: 'Küstenwache, Rettungsschwimmer und Notfallteams setzen spezialisierte RIBs für schnellen Einsatz und Rettung in rauer See ein.',
+          },
+          {
+            title: 'Kommerzielle Schifffahrt',
+            desc: 'Tauchunterstützung, Patrouille, Vermessung, Touristentransport und Offshore-Logistik, bei denen Haltbarkeit und Zuverlässigkeit entscheidend sind.',
+          },
+          {
+            title: 'Militär & Verteidigung',
+            desc: 'Taktische RIBs für Marineoperationen, Truppentransport, Entereinsätze und verdeckte Landungen.',
+          },
+          {
+            title: 'Humanitäre Hilfe',
+            desc: 'Katastrophenschutzorganisationen setzen aufblasbare Boote für Hochwasserrettung, Versorgungstransporte und medizinische Evakuierungen ein.',
+          },
+          {
+            title: 'OEM-Fertigung',
+            desc: 'Individuelle Private-Label-Produktion für Marken, Händler und spezialisierte Betreiber mit besonderen Anforderungen.',
+          },
+        ].map((app) => (
+          <div class="p-4 bg-gray-50 rounded-xl border border-gray-200">
+            <h3 class="font-semibold text-sm text-gray-900">{app.title}</h3>
+            <p class="mt-1 text-xs text-gray-500">{app.desc}</p>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="mt-16 bg-gradient-to-br from-sky-50 to-blue-50 rounded-2xl p-8 border border-sky-200">
+    <h2 class="text-xl font-semibold text-gray-900">Ανακαλύψτε τα φουσκωτά σκάφη από Aquafarer</h2>
+    <p class="mt-4 text-sm text-gray-600">
+      Η Aquafarer σχεδιάζει και κατασκευάζει CE πιστοποιημένα φουσκωτά σκάφη, SUP, καγιάκ και RIB για τις αγορές
+      αναψυχής, επαγγελματικής και OEM. Όλα τα σκάφη κατασκευάζονται με υφάσματα στρατιωτικής ποιότητας PVC ή
+      Hypalon-CSM — με μοντέρνα συγκόλληση HF ή συγκόλληση με το χέρι.
+    </p>
+    <div class="mt-6 flex gap-4 flex-wrap">
+      <a
+        href={`/${lang}/products`}
+        class="px-6 py-3 bg-gray-900 text-white rounded-full text-sm font-medium hover:bg-gray-800 transition"
+        >Προβολή προϊόντων</a
+      >
+      <a
+        href={`/${lang}/academy`}
+        class="px-6 py-3 border border-gray-200 text-gray-700 rounded-full text-sm font-medium hover:border-gray-400 transition"
+        >Κέντρο Εκμάθησης</a
+      >
+    </div>
+  </section>
+</section>
+
+<section class="sr-only" data-ai-block="definition" aria-hidden="true">
+  <p>
+    Πλήρης οδηγός για φουσκωτά σκάφη με τύπους σκαφών (λέμβους, RIB, καγιάκ, SUP, σωσίβιες λέμβους, εμπορικές λέμβους
+    εργασίας), μεθόδους κατασκευής (συγκόλληση HF, συγκόλληση με το χέρι, Drop-Stitch πυρήνας, θερμική συγκόλληση),
+    υλικά (PVC ύφασμα, Hypalon CSM_), κριτήρια ασφαλείας (τελική σύγκριση, χρήση), επιλογή (CE πιστοποίηση, βασικός
+    εξοπλισμός), συντήρηση (καθαρισμός, αποθήκευση, επισκευές, φροντίδα βαλβίδων) και βιομηχανικές εφαρμογές
+    (ψυχαγωγικές, SAR, εμπορικές, στρατιωτικές, ανθρωπιστικές, OEM).
+  </p>
+</section>

@@ -1,0 +1,196 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+import { languages } from '~/i18n/config';
+import { getPageContent, setPageContentData } from '~/i18n/page-content';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+import __pageData from '~/i18n/generated/pages/randdcenter.ts';
+import { localizePageTitle, localizePageDescription } from '~/i18n/page-title';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => getUiForLang(lang)?.[key] || '';
+
+setPageContentData(__pageData);
+const page = getPageContent(lang, 'randdcenter');
+
+const { hero, intro, capabilities, rd_numbers, rd_services, labs_section } = page;
+
+const mission = page.mission ?? { tagline: '', title: '', pillars: [] };
+const missionPillars = mission.pillars ?? [];
+const vision = page.vision ?? { tagline: '', title: '', body: '' };
+
+const pillarIconPaths: Record<string, string> = {
+  lightning: 'M13 10V3L4 14h7v7l9-11h-7z',
+  design:
+    'M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2-1v2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5',
+  globe:
+    'M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z',
+  shield:
+    'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z',
+};
+
+const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: hero.tagline }];
+
+const metadata = {
+  title: localizePageTitle(page, `R&D Center — ${SITE.name}`),
+  description: localizePageDescription(
+    page,
+    `${SITE.name} Research & Development — PVC fabric testing, hull engineering, RF welding, hydrodynamic testing, and quality control for inflatable boats and RIBs. Custom R&D services available.`
+  ),
+};
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <section class="px-6 sm:px-6 py-16 sm:py-20 lg:py-24 mx-auto max-w-5xl text-center">
+    <p class="text-sm font-semibold text-primary uppercase tracking-wider">{hero.tagline}</p>
+    <h1 class="mt-3 text-4xl md:text-5xl font-bold">{hero.title}</h1>
+    <p class="mt-3 text-lg text-muted">{hero.subtitle}</p>
+  </section>
+
+  <section class="px-6 sm:px-6 pb-16 mx-auto max-w-4xl">
+    {intro.map((p: any, i: any) => <p class={`text-muted leading-relaxed${i > 0 ? ' mt-6' : ''}`}>{p}</p>)}
+  </section>
+
+  <!-- Mission -->
+  <section class="px-6 sm:px-6 pb-16 mx-auto max-w-5xl">
+    <div class="text-center mb-10">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">{mission.tagline}</p>
+      <h2 class="mt-2 text-3xl font-bold">{mission.title}</h2>
+    </div>
+    <div class="grid md:grid-cols-4 gap-6">
+      {
+        missionPillars.map((p: any) => (
+          <div class="p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 text-center">
+            <div class="w-12 h-12 rounded-full bg-sky-100 flex items-center justify-center mx-auto mb-3">
+              <svg class="w-6 h-6 text-sky-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d={pillarIconPaths[p.icon] || pillarIconPaths.lightning}
+                />
+              </svg>
+            </div>
+            <h3 class="font-bold text-sm uppercase tracking-wide">{p.title}</h3>
+            <p class="text-sm text-muted mt-2">{p.desc}</p>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="px-6 sm:px-6 pb-16 mx-auto max-w-6xl">
+    <div class="text-center mb-12">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">{capabilities.tagline}</p>
+      <h2 class="mt-2 text-3xl font-bold">{capabilities.title}</h2>
+      <p class="mt-3 text-muted max-w-2xl mx-auto">{capabilities.subtitle}</p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-6">
+      {
+        capabilities.groups.map((cap: any) => (
+          <div class="p-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950">
+            <h3 class="text-lg font-bold mb-3">{cap.title}</h3>
+            <ul class="space-y-2">
+              {cap.items.map((item: any) => (
+                <li class="flex items-start gap-2 text-sm text-muted">
+                  <span class="mt-1 w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="px-6 sm:px-6 pb-16 mx-auto max-w-4xl">
+    <div class="text-center mb-12">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">{rd_numbers.tagline}</p>
+      <h2 class="mt-2 text-3xl font-bold">{rd_numbers.title}</h2>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+      {
+        rd_numbers.stats.map((stat: any) => (
+          <div class="p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 text-center">
+            <span class="block text-3xl font-bold text-primary">{stat.value}</span>
+            <span class="text-sm text-muted mt-1">{stat.label}</span>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="px-6 sm:px-6 pb-16 mx-auto max-w-4xl">
+    <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+      <div class="text-center mb-8">
+        <p class="text-sm font-semibold text-primary uppercase tracking-wider">{rd_services.tagline}</p>
+        <h2 class="mt-2 text-2xl font-bold">{rd_services.title}</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6 text-sm">
+        {
+          rd_services.services.map((svc: any) => (
+            <div class="p-5 rounded-lg bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800">
+              <h3 class="font-bold mb-2">{svc.title}</h3>
+              <p class="text-muted">{svc.desc}</p>
+            </div>
+          ))
+        }
+      </div>
+      <div class="text-center mt-8">
+        <a
+          href={`/${lang}${rd_services.cta_link}`}
+          class="inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+        >
+          {rd_services.cta}
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vision -->
+  <section class="px-6 sm:px-6 pb-16 mx-auto max-w-4xl">
+    <div
+      class="rounded-xl bg-gradient-to-br from-sky-50 to-blue-50 dark:from-gray-900 dark:to-gray-950 border border-sky-200 dark:border-gray-800 p-8 md:p-12 text-center"
+    >
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">{vision.tagline}</p>
+      <h2 class="mt-2 text-2xl md:text-3xl font-bold">{vision.title}</h2>
+      <p class="mt-4 text-muted leading-relaxed max-w-3xl mx-auto">{vision.body}</p>
+    </div>
+  </section>
+
+  <section class="px-6 sm:px-6 pb-20 mx-auto max-w-6xl">
+    <div class="text-center mb-12">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">{labs_section.tagline}</p>
+      <h2 class="mt-2 text-3xl font-bold">{labs_section.title}</h2>
+    </div>
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {
+        labs_section.labs.map((lab: any) => (
+          <a
+            href={`/${lang}${lab.href}`}
+            class="block rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 overflow-hidden shadow-sm hover:shadow-md transition-shadow hover:border-primary/50 group"
+          >
+            <div class="aspect-[4/3] overflow-hidden bg-gray-100 dark:bg-gray-900">
+              <img
+                src={lab.image}
+                alt={lab.title}
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                loading="lazy"
+              />
+            </div>
+            <div class="p-5">
+              <h3 class="text-lg font-bold group-hover:text-primary transition-colors">{lab.title}</h3>
+              <p class="mt-2 text-sm text-muted">{lab.description}</p>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+</Layout>

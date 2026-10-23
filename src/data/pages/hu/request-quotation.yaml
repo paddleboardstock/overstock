@@ -1,0 +1,306 @@
+hero_text:
+  tagline: Árajánlat kérése
+  title: Kérjen árajánlatot<br />projektjéhez
+  subtitle: Mondja el nekünk igényeit, és csapatunk 2 munkanapon belül részletes árajánlattal fog válaszolni.
+steps2_process:
+  title: Hogyan Működik
+  subtitle: Négy egyszerű lépés a megkereséstől az árajánlatig.
+  items:
+    - title: '1. lépés: Küldje el igényeit'
+      description: Töltse ki az alábbi űrlapot a terméktípussal, mennyiséggel és specifikációkkal. Minél több részletet ad meg, annál pontosabb árajánlatot kap.
+      icon: tabler:file-text
+    - title: '2. lépés: Átvizsgáljuk és tanácsot adunk'
+      description: Mérnöki csapatunk áttekinti igényeit, és szükség esetén felveheti Önnel a kapcsolatot pontosításért. Ajánlásokat adunk a termék konfigurációjára és lehetőségeire.
+      icon: tabler:users
+    - title: '3. lépés: Kapja meg árajánlatát'
+      description: Részletes árajánlatot kap, beleértve az egységárakat, MOQ, szállítási határidőt, fizetési feltételeket és szállítási lehetőségeket. Általában 48 órán belül.
+      icon: tabler:currency-dollar
+    - title: '4. lépés: Minták és gyártás'
+      description: Az árajánlat elfogadását követően mintagyártásba (ha alkalmazható) vagy közvetlenül a tömegtermelésbe kezdünk. A folyamat során rendszeres tájékoztatás.
+      icon: tabler:building-factory
+content_form:
+  tagline: Árajánlat űrlap
+  title: Mondja el projektjét
+  subtitle: Minden *-gal jelölt mező kitöltése kötelező.
+  fields:
+    - name: Termékkategória
+      type: select
+      options:
+        - RIB Csónak
+        - Felfújható hajó
+        - SUP Hajótest
+        - Felfújható kajak
+        - Mentőmellény
+        - Tengeri kiegészítő
+        - Egyéni OEM/ODM
+    - name: Alkalmazás
+      type: select
+      options:
+        - Búvárközpont
+        - Halászat
+        - Tengeri turizmus / Üdülőhely
+        - Keresés és mentés
+        - Jacht kishajó
+        - Kereskedelmi munkahajó
+        - Kormányzati / Katonai
+        - OEM / Saját márka
+        - Személyes / Szabadidős
+        - Egyéb
+    - name: Mennyiség
+      type: text
+      placeholder: iępl. 50 egység
+    - name: Célpiac
+      type: text
+      placeholder: Pl. Európa, Észak-Amerika, Közel-Kelet
+    - name: Szállítási ország
+      type: text
+      placeholder: Pl. Olaszország, UAE, USA, Ausztrália
+    - name: Anyagpreferencia
+      type: select
+      options:
+        - Nincs preferencia
+        - Tengeri minőségű PVC (1100 dtex)
+        - Prémium Hypalon / CSM
+        - Üvegszálas ház
+        - Alumínium ház
+    - name: Motor Követelmény
+      type: text
+      placeholder: Pl. 60 HP külmotor, motor nélkül, dupla 115 HP
+    - name: Személyre szabás szükséges
+      type: text
+      placeholder: Pl. egyedi színek, márkázás/logó, csomagolás, speciális felszerelés
+    - name: Idővonal
+      type: text
+      placeholder: Pl. szállítás 90 napon belül
+    - name: További követelmények
+      type: textarea
+      placeholder: Írd le az alkalmazásodat, műszaki specifikációidat vagy bármilyen különleges követelményt — csatolj hivatkozási rajzokat, specifikációkat vagy linkeket, ha elérhetők
+    - name: Specifikáció feltöltése
+      type: file
+      placeholder: Töltsd fel a specifikációs lapodat, rajzodat vagy hivatkozási dokumentumodat (PDF, DWG, DXF)
+    - name: Logó / Grafika feltöltése
+      type: file
+      placeholder: Töltsd fel a logódat vagy grafikádat az egyedi márkázáshoz (AI, EPS, PNG)
+content_rfq_types:
+  tagline: 3 szintű RFQ rendszer
+  title: Válassza ki a megfelelő<br />Ajánlatkérési szintet
+  subtitle: A különböző projektek különböző részletességet igényelnek. Válassza ki azt az űrlapot, amely megfelel a beszerzési szakaszának.
+  items:
+    - title: Gyors ajánlatkérés
+      description: 5-6 mező, 30 másodperc. Kezdeti kapcsolatfelvételhez, általános kérdésekhez vagy erőforrás-letöltési követésekhez. 24 órán belül válaszolunk alapinformációkkal és a következő lépésekkel.
+      icon: tabler:bolt
+    - title: Szabványos RFQ
+      description: 8-10 mező, 2 perc. Specifikus termékajánlatokhoz modellkiválasztással, mennyiséggel és szállítási követelményekkel. 48 órán belül részletes árajánlatot kap.
+      icon: tabler:file-text
+    - title: Projekt RFQ
+      description: 10-14 mező, 5 perc. RIB, üdülőhelyi flották, mentés vagy kormányzati projektek esetén, amelyek egyedi konfigurációt, megfelelőségi dokumentációt és többéves ellátási tervet igényelnek. Kijelölt projektmenedzser kerül hozzárendelésre.
+      icon: tabler:clipboard-list
+form_quick:
+  title: Gyors ajánlatkérés
+  subtitle: Gyors kapcsolat az általános kérdésekhez és kezdeti információkéréshez.
+  fields:
+    - name: fullName
+      label: Teljes név
+      type: text
+      required: true
+      placeholder: Teljes neve
+    - name: businessEmail
+      label: Üzleti e-mail
+      type: email
+      required: true
+      placeholder: you@company.com
+    - name: companyName
+      label: Cégnév
+      type: text
+      required: true
+      placeholder: Az Ön cége
+    - name: buyerType
+      label: Én vagyok...
+      type: select
+      required: true
+      options:
+        - Disztribútor / Importőr
+        - Márkatulajdonos / Saját márka
+        - Üdülőhely / Vízközpont
+        - Bérbeadási szolgáltató
+        - Kormányzati / Mentő ügynökség
+        - Búvár- / Horgászüzemeltető
+        - Hajózási mérnök / Átalakító
+        - Egyéb
+    - name: productInterest
+      label: Termékérdeklődés
+      type: multiselect
+      required: true
+      options:
+        - RIB Csónakok
+        - Felfújható csónakok
+        - SUP Táblák
+        - Biztonsági berendezések
+        - Kiegészítők
+        - OEM/ODM Egyedi
+    - name: message
+      label: Mire van szüksége?
+      type: textarea
+      required: false
+      placeholder: Rövid leírás az igényeiről...
+form_standard:
+  title: Szabványos RFQ
+  subtitle: Részletes árajánlat kérése konkrét termékekre és mennyiségekre.
+  fields:
+    - name: fullName
+      label: Teljes név
+      type: text
+      required: true
+    - name: businessEmail
+      label: Üzleti e-mail
+      type: email
+      required: true
+    - name: companyName
+      label: Cégnév
+      type: text
+      required: true
+    - name: buyerType
+      label: Vevő típusa
+      type: select
+      required: true
+    - name: termékModell
+      label: Termék modell / típus
+      type: text
+      required: true
+      placeholder: pl. AF580 RIB, AF380 Felfújható
+    - name: quantity
+      label: Becsült mennyiség
+      type: text
+      required: true
+      placeholder: pl. 10-20 darab
+    - name: célpiac
+      label: Célpiac / régió
+      type: text
+      required: true
+      placeholder: pl. EU, Észak-Amerika, Közel-Kelet
+    - name: szállításiIdő
+      label: Kívánt szállítás
+      type: select
+      required: true
+      options:
+        - 30 napon belül
+        - 30-60 nap
+        - 60-90 nap
+        - Előre tervezve (90+ nap)
+        - Csak kutatom
+    - name: megfelelőségiKövetelmények
+      label: Megfelelőségi követelmények
+      type: multiselect
+      required: false
+      options:
+        - CE / RCD 2013/53/EU
+        - UKCA
+        - USCG
+        - ISO 9001
+        - BSCI
+        - REACH
+        - Nincs / Nem biztos
+    - name: message
+      label: További részletek
+      type: textarea
+      required: false
+form_project:
+  title: Projekt RFQ
+  subtitle: Átfogó projektfelmérés flották, egyedi vagy kormányzati beszerzések esetén.
+  fields:
+    - name: fullName
+      label: Teljes név
+      type: text
+      required: true
+    - name: businessEmail
+      label: Üzleti e-mail
+      type: email
+      required: true
+    - name: companyName
+      label: Cégnév
+      type: text
+      required: true
+    - name: buyerType
+      label: Vevő típusa
+      type: select
+      required: true
+    - name: projectType
+      label: Projekt típusa
+      type: select
+      required: true
+      options:
+        - Üdülőhely / Szálloda flotta
+        - Bérelhető flotta
+        - Mentő / Járőrfeladatot ellátó flotta
+        - Búvárközpont flotta
+        - Kormányzati beszerzés
+        - Saját márka / OEM
+        - Forgalmazói készletrendelés
+        - Egyéb
+    - name: boatTypes
+      label: Szükséges hajótípusok
+      type: multiselect
+      required: true
+      options:
+        - RIB Csónakok
+        - Felfújható hajók / Csónakok
+        - SUP Táblák
+        - Kajakok
+        - Biztonsági berendezések
+    - name: fleetSize
+      label: Flottaméret / Mennyiségi tartomány
+      type: text
+      required: true
+      placeholder: Pl. 20-50 egység 12 hónap alatt
+    - name: customRequirements
+      label: Egyedi konfigurációs igények
+      type: textarea
+      required: false
+      placeholder: Hajótest mérete, csőanyag, fedélzeti elrendezés, márkajelzés követelmények...
+    - name: megfelelőségiKövetelmények
+      label: Megfelelőségi és tanúsítási követelmények
+      type: multiselect
+      required: true
+      options:
+        - CE / RCD 2013/53/EU
+        - UKCA
+        - USCG III/V típus
+        - ISO 9001
+        - BSCI
+        - REACH / RoHS
+        - Helyi piaci tanúsítás
+    - name: célpiac
+      label: Célpiac
+      type: text
+      required: true
+    - name: költségvetési_tartomány
+      label: Költségvetési tartomány
+      type: select
+      required: false
+      options:
+        - 10 000 USD alatt
+        - $10,000 - $50,000
+        - $50,000 - $200,000
+        - $200,000+
+        - Nem szeretném megadni
+    - name: szállításiIdő
+      label: Projekt ütemezése
+      type: select
+      required: true
+      options:
+        - Sürgős (30 napon belül)
+        - Normál (30-60 nap)
+        - Tervezett (60-90 nap)
+        - Jövőbeni tervezés (90+ nap)
+    - name: message
+      label: Projekt részletei és követelményei
+      type: textarea
+      required: false
+      placeholder: Írja le projektjét, alkalmazását és bármilyen specifikus követelményt...
+cta:
+  title: Emailben szeretné megbeszélni?
+  subtitle: Küldje el érdeklődését közvetlenül értékesítési csapatunknak, és 24 órán belül válaszolunk.
+  actions:
+    - variant: primary
+      text: Küldjön nekünk e-mailt közvetlenül
+      href: /contact

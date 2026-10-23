@@ -1,0 +1,137 @@
+hero:
+  tagline: Kontrola kvaliteta
+  title: Sistem kontrole kvaliteta<br />za OEM Marine Manufacturing
+  subtitle: Višestepeni inspekcioni proces koji obuhvata dolazne materijale, proizvodnju u toku, testiranje pod pritiskom, konačnu montažu i proveru pre slanja. Svaka serija je pratljiva, svaki test je zabeležen.
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-pressure-testing.webp
+    alt: Aquafarer proces kontrole kvaliteta i testiranja pod pritiskom
+stats:
+  title: Kontrola kvaliteta po brojevima
+  stats:
+    - title: Jedinice testirane na pritisak
+      amount: 100%
+    - title: Maksimalni pad pritiska
+      amount: <5%
+    - title: QC inspektori
+      amount: '12'
+    - title: Zadržani zapisi
+      amount: 10 godina
+content_system:
+  tagline: Pregled QC sistema
+  title: Integrisani kvalitet<br />Okvir kontrole
+  subtitle: Naš QC sistem funkcioniše nezavisno od proizvodnje i izveštava direktno menadžment. Nijedna serija se ne šalje bez potpisanog odobrenja kvaliteta iz laboratorije za kvalitet.
+  items:
+    - title: Nezavisna laboratorija za kvalitet
+      description: Naša laboratorija za kontrolu kvaliteta funkcioniše kao posebna jedinica od proizvodnje. Kontrolori kvaliteta izveštavaju Menadžeru za kvalitet, a ne Direktoru proizvodnje. Ova organizaciona nezavisnost osigurava da se odluke o kvalitetu donose objektivno — rokovi proizvodnje nikada ne nadjačavaju zahteve za kvalitetom.
+      features:
+        - Prijavljuje se direktno upravi, nezavisno od proizvodnje
+        - Ovlašćen da zaustavi proizvodnju zbog problema sa kvalitetom
+        - 12 posvećenih QC inspektora u svim fazama
+        - Sva test oprema se kalibriše godišnje
+    - title: Serijska sledljivost
+      description: Svaka serija sirovina dobija jedinstveni broj serije u našem ERP sistemu. Od dolaska materijala, preko proizvodnje, do gotovog proizvoda, svaki bilans materijala za plovilo povezan je sa originalnim serijama dobavljača. Ovo omogućava potpunu uzlaznu sledljivost za bilo kakav upit vezan za kvalitet ili usklađenost.
+      features:
+        - Praćenje serija zasnovano na ERP od materijala do gotovog proizvoda
+        - Fizičke serijske oznake na svakom radnom nalogu
+        - 100% pokrivenost materijalom — PVC, Hypalon, hardver, lepak
+        - Zapisnici se čuvaju 10 godina (CE zahtev 2013/53/EU)
+    - title: Standardi i usklađenost
+      description: Naši QC postupci su usklađeni sa međunarodnim standardima. Proizvodi su CE sertifikovani u skladu sa EU Direktivom o rekreativnim plovilima 2013/53/EU. Naš sistem upravljanja kvalitetom je ISO 9001 sertifikovan. Društvena usklađenost se održava kroz BSCI sertifikaciju.
+      features:
+        - CE sertifikacija (EU 2013/53/EU)
+        - ISO 9001:2015 Upravljanje kvalitetom
+        - BSCI Sertifikacija socijalne usklađenosti
+        - REACH i RoHS materijalna usklađenost
+        - UKCA post-Brekit sertifikacija
+content_inspection:
+  tagline: Faze inspekcije
+  title: Šest faza<br />Proces inspekcije
+  subtitle: Svaki proizvod prolazi kroz 6 faza inspekcije sa dokumentovanim kontrolnim punktovima kontrole kvaliteta. Nedostaci su uhvaćeni rano, korektivne mere su neposredne, a svaka serija je u potpunosti sledljiva.
+  stages:
+    - stage: '1'
+      title: Dolazni materijal Inspekcija
+      description: Svi dolazni materijali su prijavljeni po broju serije / partije i u karantinu do KC potpisivanja. PVC/Hypalon tkanina rolne su testirani na zateznu čvrstoću (ASTM D751), otpornost na kidanje (ISO4674), i debljine.Drop-stitch Jezgra, ventili, lepkovi, i hardver su vizuelno pregledani i mereni u odnosu na specifikacije.
+      checks: Zatezna čvrstoća ASTM D751, otpornost na kidanje ISO 4674, merač debljine, lepljiva viskoznost, vizuelni defekt skeniranje
+      threshold: 100% batcheva testirano. Odbiti ako je vlačna čvrstoća < 90% specifikacije, poderanje < minimalne specifikacije ili bilo koji vizuelni nedostatak
+    - stage: '2'
+      title: Kontrola kvaliteta u procesu — Sečenje i priprema
+      description: CNC-cut paneli se dimenzionalno proveravaju u odnosu na CAD izvorne datoteke svakog 20. panela. Kvalitet ivice se pregleda za habanje, neravnomerne rezove ili dimenzionalni drift. Broj panela se verifikuje u odnosu na BOM za svaku proizvodnu seriju pre nego što materijali pređu na zavarivanje.
+      checks: Dimenzionalna provera u odnosu na CAD DXF fajlove, inspekcija kvaliteta ivica, provera broja panela
+      threshold: Tolerancija ±0.5mm. Odbaci seriju ako >2% od tolerancije
+    - stage: '3'
+      title: In-Process QC — Zavarivanje i lepljenje
+      description: Tokom proizvodnje, kvalitet vara se kontinuirano prati. Peel testovi (ASTM D751) se sprovode na uzorcima svakih 50 jedinica. Širina zavarivanja se meri u odnosu na specifikaciju. Evidencija temperature toplog vazduha se pregleda za doslednost. Svaki šav je vizuelno pregledan pod pozadinskim osvetljenjem za kanalisanje ili praznine.
+      checks: Peel test ASTM D751 svakih 50 jedinice, merenje širina vara, topao vazduh temperatura dnevnik pregled, pozadinsko osvetljenje šav inspekcija
+      threshold: Čvrstoća pilinga min 8 N / cm. Tolerancija širine zavarivanja ±1mm. Bilo vidljivo kanalisanje = odbaciti
+    - stage: '4'
+      title: Skupština KC
+      description: Svaka jedinica prati kontrolnu listu od 100 tačaka koju je potpisao vođa tima. Funkcija ventila se testira kroz 10 ciklusa otvaranja / zatvaranja. Hardverski obrtni moment je verifikovan. Vizuelni pregled pokriva završnu obradu, konzistentnost boja, postavljanje etiketa i kompletnost dodatne opreme.
+      checks: Kontrolna lista od 100 tačaka po jedinici, test funkcije ventila, verifikacija obrtnog momenta hardvera, vizuelni pregled
+      threshold: 'Politika nulte tolerancije na greške kod bezbednosno kritičnih stavki (ventili, D-prstenovi, ručke). Sitne kozmetičke nepravilnosti: AQL 2,5 (ISO 2859)'
+    - stage: '5'
+      title: Testiranje pritiska
+      description: Svaka komora je naduvana do 1,25× nazivnog pritiska i održava se 24-48 sati. Senzori pritiska se prijavljuju neprekidno tokom perioda čekanja. Očitavanja sa kompenzacijom temperature osiguravaju tačnost. Svaka komora koja prelazi pad pritiska od 5% je odbačena i poslata na ponovnu inspekciju šava sa 100% ponovnim testiranjem cele proizvodne serije.
+      checks: 24-48h zadržavanje pritiska dnevnik, kalibracija senzor verifikovan svakodnevno, temperatura-kompenzovano čitanje, šav ponovo test nakon popravke
+      threshold: Mak 5% pad pritiska tokom 24h na stabilnoj temperaturi. Prekoračenje = 100% ponovo test cele serije
+    - stage: '6'
+      title: Završna inspekcija i oslobađanje pošiljke
+      description: Završna vizuelna i funkcionalna inspekcija pre pakovanja. Površinski nedostaci, konzistentnost boja, verifikacija etikete / BIN-a, integritet pakovanja i kompletnost dodatne opreme proveravaju se u odnosu na narudžbu kupca. Jedinice su vakumirane, u kutiji i paletizovane. Konačno potpisivanje kontrole kvaliteta je potrebno pre nego što bilo koji proizvod napusti fabriku.
+      checks: Potpuna vizuelna inspekcija, kontrola dodatne opreme prema SKU, test pakovanja padom (nasumični uzorak od 1 m), verifikacija skeniranja etiketa/šifara
+      threshold: AQL 2,5 glavnih nedostataka, AQL 4,0 manja. Nulta tolerancija za bezbednosne nedostatke. 100% jedinica vizuelno pregledano
+content_equipment:
+  tagline: Oprema za testiranje
+  title: QC laboratorija<br />Oprema
+  subtitle: Naš laboratorija za kontrolu kvaliteta je opremljena specijalizovanom opremom za verifikaciju materijala, integritet zavarivanja i validaciju performansi proizvoda.
+  columns: 3
+  items:
+    - title: Mašina za ispitivanje zatezne čvrstoće
+      description: Meri zateznu čvrstoću i elongaciju tkanine prema ASTM D751. Koristi se za ulaznu kontrolu kvaliteta svih PVC, Hypalon i drop-stitch serija tkanine.
+      icon: tabler:scale
+    - title: Komora za temperaturu
+      description: Okolina komora za testiranje otpornosti na UV (ASTM G154) i testiranje fleksibilnosti na niskim temperaturama. Simulira ekstremne uslove rada.
+      icon: tabler:temperature
+    - title: Senzori pritiska i zapisnici
+      description: Digitalni senzori pritiska sa kontinuiranim zapisivanjem podataka za testove zadržavanja vazduha 24-48 sati. Temperaturno kompensovani za tačnost.
+      icon: tabler:wind
+    - title: Mašina za ljuštenje (Peel Test Rig)
+      description: Kalibrisana oprema za testiranje ljuštenja za verifikaciju čvrstoće zavarenih šavova. Nasumični uzorci iz svake proizvodne serije.
+      icon: tabler:files
+    - title: Tank za detekciju curenja
+      description: Rezervoar za vodu za testiranje curenja potapanjem napumpanih komora. Vizuelno otkrivanje mehurića za verifikaciju integriteta šavova i ventila.
+      icon: tabler:ripple
+    - title: Instrumenti za inspekciju
+      description: Kalibrirani merni alati — merači debljine, moment ključevi, dimenzionalni šubleri, testeri tvrdoće za QC stanice u proizvodnji.
+      icon: tabler:tools
+content_metrics:
+  tagline: Performanse QC
+  title: Kontrola kvaliteta<br />Metrike
+  subtitle: Stvarni podaci prolaz/pad sa naše proizvodne linije. Ove metrike se svakodnevno prate i mesečno pregledaju od strane uprave.
+  columns: 3
+  items:
+    - title: 100% testiranih jedinica
+      description: Svaka komora svakog čamca je testirana na pritisak pre slanja. Nema uzorkovanja — 100% inspekcija integriteta pritiska.
+      icon: tabler:check
+    - title: <5% pada pritiska
+      description: Maksimalni dozvoljeni pad pritiska tokom 24-48 sati pri 1,25× nazivne vrednosti pritiska. Svaka komora koja pređe ovaj prag pokreće ponovni test serije.
+      icon: tabler:gauge
+    - title: AQL 2,5
+      description: Prihvativi nivo kvaliteta za glavne nedostatke prema ISO standardu uzorkovanja 2859. Nulta tolerancija za kritične bezbednosne nedostatke.
+      icon: tabler:clipboard-check
+    - title: 24-48 sati zadržavanja
+      description: 'Trajanje zadržavanja pritiska varira prema kategoriji proizvoda. RIB komore: 48 sati. SUP i napuhavajući čamci: 24-48 sati.'
+      icon: tabler:clock
+    - title: Test pritiska 1,25×
+      description: Sigurnosni margin u svakoj komori — testirano na 25% iznad nazivne pritiska kako bi se osigurao margin iznad maksimalnih radnih uslova.
+      icon: tabler:arrow-up
+    - title: 0% Sigurnosnih defekata
+      description: Politika nulte tolerancije za kritične sigurnosne defekte — ventili, D-prstenovi, šavovi i komore za plovnost. Bilo koji defekt = 100% ponovna inspekcija.
+      icon: tabler:shield
+cta:
+  title: Zatraži dokumentaciju o kvalitetu
+  subtitle: Obezbeđujemo kompletne pakete dokumentacije o kvalitetu uključujući izveštaje o testiranju, sertifikate materijala i izjave o usklađenosti sa svakom pošiljkom. Kontaktirajte nas za uzorke.
+  actions:
+    - variant: primary
+      text: Zatraži QC dokumentaciju
+      href: /contact
+    - text: Pregled protokola testiranja
+      href: /quality

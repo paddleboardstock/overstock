@@ -1,0 +1,137 @@
+hero:
+  tagline: Control de Calidad
+  title: 'Sistema de Control de Calidad<br />para la Fabricación Marina OEM'
+  subtitle: 'Proceso de inspección en múltiples etapas que cubre materiales entrantes, producción en proceso, pruebas de presión, ensamblaje final y verificación previa al envío. Cada lote es trazable, cada prueba queda registrada.'
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-pressure-testing.webp
+    alt: Proceso de control de calidad y pruebas de presión de Aquafarer
+stats:
+  title: Control de Calidad en Cifras
+  stats:
+    - title: Unidades Sometidas a Prueba de Presión
+      amount: '100%'
+    - title: Caída Máxima de Presión
+      amount: '<5%'
+    - title: Inspectores de Calidad
+      amount: '12'
+    - title: Registros Conservados
+      amount: 10 años
+content_system:
+  tagline: Resumen del Sistema de Calidad
+  title: 'Marco Integrado de<br />Control de Calidad'
+  subtitle: 'Nuestro sistema de calidad opera de forma independiente a la producción y reporta directamente a la dirección. Ningún lote sale sin la liberación de calidad firmada por el laboratorio de calidad.'
+  items:
+    - title: Laboratorio de Calidad Independiente
+      description: 'Nuestro laboratorio de calidad funciona como una función separada de la producción. Los inspectores de calidad reportan al Gerente de Calidad, no al Director de Producción. Esta independencia organizativa garantiza que las decisiones de calidad se tomen de forma objetiva: los plazos de producción nunca prevalecen sobre los requisitos de calidad.'
+      features:
+        - Reporta directamente a la dirección, con independencia de la producción
+        - Autorizado para detener la producción por problemas de calidad
+        - 12 inspectores de calidad dedicados en todas las etapas
+        - Todo el equipo de pruebas se calibra anualmente
+    - title: Trazabilidad de Lotes
+      description: "Cada lote de materia prima recibe un número de lote único en nuestro sistema ERP. Desde la llegada del material hasta la producción y el producto terminado, la lista de materiales de cada embarcación remite a los lotes originales del proveedor. Esto permite la trazabilidad ascendente completa ante cualquier consulta de calidad o cumplimiento."
+      features:
+        - Seguimiento de lotes basado en ERP desde el material hasta el producto terminado
+        - Etiquetas físicas de lote en cada orden de trabajo
+        - 'Cobertura del 100% de los materiales: PVC, Hypalon, herrajes, adhesivos'
+        - Registros conservados durante 10 años (requisito CE 2013/53/EU)
+    - title: Normas y Cumplimiento
+      description: 'Nuestros procedimientos de calidad están alineados con las normas internacionales. Los productos cuentan con certificación CE bajo la Directiva de Embarcaciones de Recreo de la UE 2013/53/EU. Nuestro sistema de gestión de calidad está certificado ISO 9001. El cumplimiento social se mantiene mediante la certificación BSCI.'
+      features:
+        - Certificación CE (UE 2013/53/EU)
+        - Gestión de calidad ISO 9001:2015
+        - Certificación de cumplimiento social BSCI
+        - Cumplimiento de materiales REACH y RoHS
+        - Certificación UKCA posterior al Brexit
+content_inspection:
+  tagline: Etapas de Inspección
+  title: 'Proceso de Inspección<br />en Seis Etapas'
+  subtitle: 'Cada producto pasa por 6 etapas de inspección con puntos de control de calidad documentados. Los defectos se detectan a tiempo, las acciones correctivas son inmediatas y cada lote es totalmente trazable.'
+  stages:
+    - stage: '1'
+      title: Inspección de Materiales Entrantes
+      description: 'Todos los materiales entrantes se registran por número de lote y se ponen en cuarentena hasta el visto bueno de calidad. Los rollos de tela PVC/Hypalon se prueban para resistencia a la tracción (ASTM D751), resistencia al desgarro (ISO 4674) y grosor. Los núcleos drop-stitch, válvulas, adhesivos y herrajes se inspeccionan visualmente y se miden contra las especificaciones.'
+      checks: 'Resistencia a la tracción ASTM D751, resistencia al desgarro ISO 4674, medidor de grosor, viscosidad del adhesivo, escaneo visual de defectos'
+      threshold: 'Se prueba el 100% de los lotes. Rechazo si tracción < 90% de la especificación, desgarro < mínimo de especificación o cualquier defecto visible'
+    - stage: '2'
+      title: Control de Calidad en Proceso — Corte y Preparación
+      description: 'Los paneles cortados con CNC se verifican dimensionalmente contra los archivos fuente CAD cada 20 paneles. La calidad del borde se inspecciona para detectar deshilachados, cortes desiguales o desviaciones dimensionales. Se verifica el conteo de paneles contra la BOM de cada lote de producción antes de que los materiales pasen a soldadura.'
+      checks: 'Verificación dimensional contra archivos CAD DXF, inspección de calidad del borde, verificación del conteo de paneles'
+      threshold: 'Tolerancia ±0,5 mm. Rechazo del lote si >2% está fuera de tolerancia'
+    - stage: '3'
+      title: Control de Calidad en Proceso — Soldadura y Unión
+      description: 'Durante la producción, la calidad de la soldadura se monitorea continuamente. Se realizan pruebas de pelado (ASTM D751) en muestras cada 50 unidades. El ancho de la soldadura se mide contra la especificación. Se revisan los registros de temperatura del aire caliente para verificar la consistencia. Cada costura se inspecciona visualmente con retroiluminación para detectar canalizaciones o vacíos.'
+      checks: 'Prueba de pelado ASTM D751 cada 50 unidades, medición del ancho de soldadura, revisión del registro de temperatura del aire caliente, inspección de costuras con retroiluminación'
+      threshold: 'Resistencia mínima al pelado 8 N/cm. Tolerancia del ancho de soldadura ±1 mm. Cualquier canalización visible = rechazo'
+    - stage: '4'
+      title: Control de Calidad de Ensamblaje
+      description: 'Cada unidad sigue una lista de verificación de ensamblaje de 100 puntos firmada por el líder del equipo. La función de la válvula se prueba a través de 10 ciclos de apertura/cierre. Se verifica el torque del herraje. La inspección visual cubre el acabado superficial, la consistencia del color, la colocación de las etiquetas y la completitud de los accesorios.'
+      checks: 'Lista de verificación de 100 puntos por unidad, prueba de función de válvula, verificación del torque del herraje, inspección visual'
+      threshold: 'Política de cero defectos en artículos críticos para la seguridad (válvulas, D-rings, manijas). Defectos cosméticos menores: AQL 2.5 (ISO 2859)'
+    - stage: '5'
+      title: Pruebas de Presión
+      description: 'Cada cámara se infla a 1,25× la presión nominal y se mantiene durante 24–48 horas. Los sensores de presión registran continuamente durante todo el período de retención. Las lecturas compensadas por temperatura garantizan la precisión. Cualquier cámara que supere una caída de presión del 5% se rechaza y se envía para re-inspección de costuras con re-prueba del 100% de todo el lote de producción.'
+      checks: 'Registro de retención de presión de 24–48 h, verificación diaria de calibración del sensor, lectura compensada por temperatura, re-prueba de costuras después de la reparación'
+      threshold: 'Máx. 5% de caída de presión en 24 h a temperatura estable. Exceder = re-prueba del 100% de todo el lote'
+    - stage: '6'
+      title: Inspección Final y Liberación de Envío
+      description: 'Inspección visual y funcional final antes del empaque. Los defectos superficiales, la consistencia del color, la verificación de etiquetas/BIN, la integridad del embalaje y la completitud de los accesorios se verifican contra el pedido del cliente. Las unidades se empaquetan al vacío, se encajan y se paletizan. Se requiere la aprobación final de calidad antes de que cualquier producto salga de la fábrica.'
+      checks: 'Inspección visual completa, lista de accesorios por SKU, prueba de caída del embalaje (muestra aleatoria de 1 m), verificación de escaneo de etiquetas/códigos de barras'
+      threshold: 'AQL 2.5 defectos mayores, AQL 4.0 menores. Cero tolerancia para defectos de seguridad. 100% de unidades inspeccionadas visualmente'
+content_equipment:
+  tagline: Equipo de Pruebas
+  title: 'Equipo del<br />Laboratorio de Calidad'
+  subtitle: 'Nuestro laboratorio de calidad está equipado con equipos de prueba especializados para la verificación de materiales, la integridad de las soldaduras y la validación del rendimiento del producto.'
+  columns: 3
+  items:
+    - title: Máquina de Pruebas de Tracción
+      description: 'Mide la resistencia a la tracción y el alargamiento del tejido según ASTM D751. Se usa para el control de entrada de todos los lotes de tela PVC, Hypalon y drop-stitch.'
+      icon: tabler:scale
+    - title: Cámara de Temperatura
+      description: 'Cámara ambiental para pruebas de resistencia UV (ASTM G154) y pruebas de flexibilidad a baja temperatura. Simula condiciones operativas extremas.'
+      icon: tabler:temperature
+    - title: Sensores y Registradores de Presión
+      description: 'Sensores de presión digitales con registro continuo de datos para pruebas de retención de aire de 24–48 horas. Compensados por temperatura para mayor precisión.'
+      icon: tabler:wind
+    - title: Banco de Pruebas de Pelado
+      description: 'Equipo de prueba de pelado calibrado para la verificación de la resistencia de las costuras soldadas. Muestras aleatorias de cada lote de producción.'
+      icon: tabler:files
+    - title: Tanque de Detección de Fugas
+      description: 'Tanque de agua para pruebas de fugas por inmersión de cámaras infladas. Detección visual de burbujas para verificar la integridad de costuras y válvulas.'
+      icon: tabler:ripple
+    - title: Herramientas de Inspección
+      description: 'Herramientas de medición calibradas: medidores de grosor, llaves dinamométricas, calibradores dimensionales, durómetros para las estaciones de control de calidad de producción.'
+      icon: tabler:tools
+content_metrics:
+  tagline: Rendimiento de Calidad
+  title: 'Métricas de<br />Control de Calidad'
+  subtitle: 'Datos reales de aprobado/rechazado de nuestra línea de producción. Estas métricas se monitorean a diario y se revisan mensualmente por la dirección.'
+  columns: 3
+  items:
+    - title: 100% de Unidades Probadas
+      description: 'Cada cámara de cada embarcación se somete a pruebas de presión antes del envío. Sin muestreo: inspección del 100% de la integridad de presión.'
+      icon: tabler:check
+    - title: Caída de Presión <5%
+      description: 'Pérdida de presión máxima permitida en 24-48 horas a 1,25× la presión nominal. Cualquier cámara que exceda este umbral activa la re-prueba del lote.'
+      icon: tabler:gauge
+    - title: AQL 2.5
+      description: 'Nivel de Calidad Aceptable para defectos mayores según el estándar de muestreo ISO 2859. Cero tolerancia en defectos críticos para la seguridad.'
+      icon: tabler:clipboard-check
+    - title: Retención de 24–48 Horas
+      description: 'La duración de la retención de presión varía según la categoría del producto. Cámaras RIB: 48 horas. SUP y lanchas inflables: 24-48 horas.'
+      icon: tabler:clock
+    - title: Presión de Prueba 1,25×
+      description: 'Margen de seguridad en cada cámara: probado al 25% por encima de la presión nominal para garantizar margen por encima de las condiciones operativas máximas.'
+      icon: tabler:arrow-up
+    - title: 0% de Defectos de Seguridad
+      description: 'Política de cero tolerancia en defectos críticos para la seguridad: válvulas, D-rings, costuras y cámaras de flotabilidad. Cualquier defecto = re-inspección del 100%.'
+      icon: tabler:shield
+cta:
+  title: 'Solicite la documentación de calidad'
+  subtitle: 'Proporcionamos paquetes completos de documentación de calidad que incluyen informes de pruebas, certificaciones de materiales y declaraciones de conformidad con cada envío. Contáctenos para obtener muestras.'
+  actions:
+    - variant: primary
+      text: Solicitar documentación de calidad
+      href: /contact
+    - text: Ver los protocolos de pruebas
+      href: /quality

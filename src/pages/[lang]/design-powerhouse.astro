@@ -1,0 +1,416 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+import { languages, defaultLang } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+import ExperienceLayer from '~/components/content/ExperienceLayer.astro';
+import RelatedPages from '~/components/content/RelatedPages.astro';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => getUiForLang(lang || defaultLang)?.[key] || '';
+
+const _ = (key: string, fallback: string) => {
+  const v = t(key);
+  return v && v !== key ? v : fallback;
+};
+
+const metadata = {
+  title: `${_('designPowerhouse.title', 'Design & Innovation — R&D Powerhouse for Inflatable Watercraft')} | ${SITE.name}`,
+  description: _(
+    'designPowerhouse.desc',
+    `${SITE.name} is more than a factory — we are a design-driven manufacturer. In-house R&D, hydrodynamic simulation, custom ODM solutions, and advanced material engineering for global B2B partners.`
+  ),
+};
+
+const crumbs = [
+  { name: t('nav.home') || 'Home', href: `/${lang}/` },
+  { name: _('designPowerhouse.nav', 'Design & Innovation') },
+];
+
+const stats = [
+  { value: '14+', label: _('designPowerhouse.stat1', 'In-House Engineers') },
+  { value: '8+', label: _('designPowerhouse.stat2', 'Registered Patents') },
+  { value: '6', label: _('designPowerhouse.stat3', 'Specialized Labs') },
+  { value: '50+', label: _('designPowerhouse.stat4', 'Countries Exported') },
+];
+
+const capabilities = [
+  {
+    title: _('designPowerhouse.cap1', 'Hydrodynamic Simulation'),
+    desc: _(
+      'designPowerhouse.cap1desc',
+      'Advanced CFD and CAD v4.2 hull curvature optimization for tracking, speed, and stability matching rigid craft.'
+    ),
+  },
+  {
+    title: _('designPowerhouse.cap2', 'Ergonomic Engineering'),
+    desc: _(
+      'designPowerhouse.cap2desc',
+      'Precision seat placement, rider-centric chamber architecture, and drop-stitch internal geometry for maximum comfort and control.'
+    ),
+  },
+  {
+    title: _('designPowerhouse.cap3', 'Advanced Material Science'),
+    desc: _(
+      'designPowerhouse.cap3desc',
+      'Marine-grade PVC, reinforced drop-stitch panels, Hypalon CSM, and UV-resistant coatings tested for extreme conditions.'
+    ),
+  },
+  {
+    title: _('designPowerhouse.cap4', 'Custom Mold & Tooling'),
+    desc: _(
+      'designPowerhouse.cap4desc',
+      'CNC-machined custom molds for SUP boards, kayak hulls, and RIB components. Prototype samples in 15-20 working days.'
+    ),
+  },
+  {
+    title: _('designPowerhouse.cap5', 'Trend-Driven Graphic Design'),
+    desc: _(
+      'designPowerhouse.cap5desc',
+      'Localized artwork, brand identity integration, and bespoke colorway development for global consumer markets.'
+    ),
+  },
+  {
+    title: _('designPowerhouse.cap6', 'Bespoke Accessory Ecosystems'),
+    desc: _(
+      'designPowerhouse.cap6desc',
+      'Complete OEM accessory packages — pumps, paddles, fins, bags, repair kits — engineered to match your product line.'
+    ),
+  },
+];
+
+const faqSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What design capabilities does Aquafarer have?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: '3D CAD hull design, CNC-machined aluminum molds, digital UV and screen printing, and full OEM/ODM customization from concept to container.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I get custom product designs?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Share your specs or concept — our engineering team develops CAD drawings, produces prototypes, and manufactures custom products.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the design-to-production timeline?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'CAD modeling: 3-5 days. Prototype: 7-14 days. Production: 30-45 days FOB Qingdao after sample approval.',
+      },
+    },
+  ],
+});
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <section
+    class="relative px-6 sm:px-6 py-20 sm:py-28 lg:py-32 mx-auto max-w-6xl text-center"
+    style="background: linear-gradient(135deg, #0c4a6e, #0891b2);"
+  >
+    <div class="relative z-10 max-w-4xl mx-auto">
+      <p class="text-sm font-semibold text-cyan-200 uppercase tracking-wider">
+        {_('designPowerhouse.badge', 'R&D & Design Powerhouse')}
+      </p>
+      <h1 class="mt-4 text-4xl md:text-6xl font-bold text-white">
+        {_('designPowerhouse.heading', 'Beyond Manufacturing: Your Strategic Design Partner')}
+      </h1>
+      <p class="mt-6 text-lg md:text-xl text-cyan-100 max-w-3xl mx-auto">
+        {
+          _(
+            'designPowerhouse.subtitle',
+            "We don't just assemble products — we engineer experiences. Partner with Aquafarer for proprietary R&D, advanced hydrodynamic design, and turnkey ODM solutions that set your brand apart."
+          )
+        }
+      </p>
+      <div class="mt-10 flex items-center gap-4 flex-wrap justify-center">
+        <a
+          href={`/${lang}/contact`}
+          class="inline-flex items-center gap-2 px-8 py-4 bg-[#fb923c] hover:bg-orange-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all"
+        >
+          {_('designPowerhouse.cta', 'Start Your ODM Project')}
+        </a>
+        <a
+          href={`/${lang}/oem-odm-manufacturer`}
+          class="inline-flex items-center gap-2 px-8 py-4 border-2 border-white/40 text-white font-medium rounded-full hover:bg-white/10 transition-all"
+        >
+          {_('designPowerhouse.cta2', 'Explore OEM Capabilities')}
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-y border-gray-100 bg-white">
+    <div class="max-w-6xl mx-auto px-6 py-8 grid grid-cols-2 md:grid-cols-4 gap-6">
+      {
+        stats.map((s) => (
+          <div class="text-center">
+            <div class="text-3xl md:text-4xl font-bold text-cyan-700">{s.value}</div>
+            <div class="mt-1 text-sm text-gray-500">{s.label}</div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="px-6 sm:px-6 py-20 mx-auto max-w-6xl">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <p class="text-sm font-semibold text-primary uppercase tracking-wider">
+          {_('designPowerhouse.s1badge', 'Proprietary R&D & Engineering')}
+        </p>
+        <h2 class="mt-3 text-3xl md:text-4xl font-bold">
+          {_('designPowerhouse.s1title', 'Engineered by Experts, Proven by Performance')}
+        </h2>
+        <p class="mt-4 text-gray-600 leading-relaxed">
+          {
+            _(
+              'designPowerhouse.s1p1',
+              "At Aquafarer, we don't just assemble products; we engineer experiences. Our in-house R&D team consists of veteran marine engineers, industrial designers, and water sports enthusiasts. We leverage advanced hydrodynamic simulation and computer-aided design (CAD v4.2) to optimize hull panel curvature, ensuring every inflatable kayak and stand-up paddle board delivers trackability, speed, and rock-solid stability that match rigid crafts."
+            )
+          }
+        </p>
+        <p class="mt-4 text-gray-600 leading-relaxed">
+          {
+            _(
+              'designPowerhouse.s1p2',
+              'Every curve, seam, and attachment point is meticulously planned and analyzed before a single panel is cut. Our digital prototyping workflow reduces development time by 40% while improving first-pass yield rates.'
+            )
+          }
+        </p>
+      </div>
+      <div class="bg-gradient-to-br from-cyan-50 to-sky-100 rounded-2xl p-8">
+        <img
+          src="https://assets.aquafarer.com/images/aquafarer/hero/tech-meeting-small.webp"
+          alt="Engineering design session"
+          class="w-full rounded-xl shadow-lg"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="px-6 sm:px-6 py-20 mx-auto max-w-6xl bg-gray-50 dark:bg-gray-900">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div class="order-2 md:order-1 bg-gradient-to-br from-cyan-50 to-sky-100 rounded-2xl p-8">
+        <img
+          src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-ocean-voyager-1.webp"
+          alt="SUP Ocean Voyager"
+          class="w-full rounded-xl shadow-lg"
+        />
+      </div>
+      <div class="order-1 md:order-2">
+        <p class="text-sm font-semibold text-primary uppercase tracking-wider">
+          {_('designPowerhouse.s2badge', 'Ergonomics & Material Integration')}
+        </p>
+        <h2 class="mt-3 text-3xl md:text-4xl font-bold">{_('designPowerhouse.s2title', 'Design That Performs')}</h2>
+        <p class="mt-4 text-gray-600 leading-relaxed">
+          {
+            _(
+              'designPowerhouse.s2p1',
+              'Design is nothing without performance. Our design philosophy centers around rider ergonomics — from precise ergonomic seat placement to engineered drop-stitch internal chamber architecture. We continuously innovate with military-grade PVC, reinforced drop-stitch hull panels, and UV-resistant coatings to push the boundaries of what inflatable watercraft can achieve.'
+            )
+          }
+        </p>
+        <p class="mt-4 text-gray-600 leading-relaxed">
+          {
+            _(
+              'designPowerhouse.s2p2',
+              'Our material science team works alongside designers to select the optimal fabric, coating, and reinforcement combination for every product category — whether whitewater kayaks, fishing SUPs, or commercial RIBs.'
+            )
+          }
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="px-6 sm:px-6 py-20 mx-auto max-w-6xl">
+    <div class="text-center mb-12">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">
+        {_('designPowerhouse.capBadge', 'Core Capabilities')}
+      </p>
+      <h2 class="mt-3 text-3xl md:text-4xl font-bold">{_('designPowerhouse.capTitle', 'What We Engineer')}</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {
+        capabilities.map((c) => (
+          <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow">
+            <h3 class="text-lg font-bold">{c.title}</h3>
+            <p class="mt-2 text-sm text-gray-500 dark:text-gray-400 leading-relaxed">{c.desc}</p>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="px-6 sm:px-6 py-20 mx-auto max-w-6xl" style="background: linear-gradient(135deg, #0f172a, #1e293b);">
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="text-sm font-semibold text-cyan-300 uppercase tracking-wider">
+        {_('designPowerhouse.odmBadge', 'Turnkey ODM & White-Label Solutions')}
+      </p>
+      <h2 class="mt-3 text-3xl md:text-4xl font-bold text-white">
+        {_('designPowerhouse.odmTitle', 'From Sketch to Shelf')}
+      </h2>
+      <p class="mt-4 text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto">
+        {
+          _(
+            'designPowerhouse.odmDesc',
+            'Whether you come with a rough sketch on a napkin or a fully-fledged brand concept, our design team brings it to life. We offer comprehensive ODM services, including customized hull geometry, localized trend-driven graphic designs, branding placement, and bespoke accessory ecosystems. We empower global brands to stand out in a crowded market with high-signature products.'
+          )
+        }
+      </p>
+      <div class="mt-8 grid sm:grid-cols-3 gap-4 text-left">
+        <div class="bg-white/10 rounded-xl p-5 backdrop-blur-sm">
+          <div class="text-cyan-300 text-xl font-bold">01</div>
+          <h3 class="mt-2 text-white font-semibold">{_('designPowerhouse.odmStep1', 'Concept & Design')}</h3>
+          <p class="mt-1 text-sm text-gray-400">
+            {
+              _(
+                'designPowerhouse.odmStep1desc',
+                'From sketch to 3D model — we refine your vision with engineering rigor.'
+              )
+            }
+          </p>
+        </div>
+        <div class="bg-white/10 rounded-xl p-5 backdrop-blur-sm">
+          <div class="text-cyan-300 text-xl font-bold">02</div>
+          <h3 class="mt-2 text-white font-semibold">{_('designPowerhouse.odmStep2', 'Prototype & Validate')}</h3>
+          <p class="mt-1 text-sm text-gray-400">
+            {
+              _(
+                'designPowerhouse.odmStep2desc',
+                'CNC molds, sample production, and performance testing before production.'
+              )
+            }
+          </p>
+        </div>
+        <div class="bg-white/10 rounded-xl p-5 backdrop-blur-sm">
+          <div class="text-cyan-300 text-xl font-bold">03</div>
+          <h3 class="mt-2 text-white font-semibold">{_('designPowerhouse.odmStep3', 'Brand & Scale')}</h3>
+          <p class="mt-1 text-sm text-gray-400">
+            {
+              _(
+                'designPowerhouse.odmStep3desc',
+                'Your branding, your packaging — manufactured at scale with CE compliance.'
+              )
+            }
+          </p>
+        </div>
+      </div>
+      <div class="mt-10">
+        <a
+          href={`/${lang}/oem-odm-manufacturer`}
+          class="inline-flex items-center gap-2 px-8 py-4 bg-[#fb923c] hover:bg-orange-600 text-white font-semibold rounded-full shadow-lg transition-all"
+        >
+          {_('designPowerhouse.odmCta', 'Explore Our ODM Process')}
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="px-6 sm:px-6 py-20 mx-auto max-w-5xl text-center">
+    <h2 class="text-3xl md:text-4xl font-bold">
+      {_('designPowerhouse.ctaTitle', 'Ready to Engineer Your Next Product Line?')}
+    </h2>
+    <p class="mt-4 text-lg text-muted max-w-2xl mx-auto">
+      {
+        _(
+          'designPowerhouse.ctaSub',
+          "Partner with Aquafarer's design and R&D team. From concept to container, we deliver innovation at scale."
+        )
+      }
+    </p>
+    <div class="mt-8 flex items-center gap-4 flex-wrap justify-center">
+      <a
+        href={`/${lang}/contact`}
+        class="inline-flex items-center gap-2 px-8 py-4 bg-[#fb923c] hover:bg-orange-600 text-white font-semibold rounded-full shadow-lg transition-all"
+      >
+        {_('designPowerhouse.ctaBtn', 'Contact Our Design Team')}
+      </a>
+      <a
+        href={`/${lang}/randdcenter`}
+        class="inline-flex items-center gap-2 px-8 py-4 border-2 border-gray-300 text-gray-700 font-medium rounded-full hover:bg-gray-50 transition-all"
+      >
+        {_('designPowerhouse.ctaBtn2', 'Visit R&D Center')}
+      </a>
+    </div>
+  </section>
+  <ExperienceLayer
+    title={_('designPowerhouse.expTitle', 'Design Stories from the Studio')}
+    subtitle={_(
+      'designPowerhouse.expSub',
+      'How our design team turns concepts into production-ready inflatable watercraft.'
+    )}
+    stories={[
+      {
+        quote:
+          'The client wanted a SUP that could be inflated to 25 PSI — beyond what anyone in the industry thought was possible for a drop-stitch board. Our team spent 6 months on material selection and developed a new triple-layer fabric construction that made it work.',
+        narrative:
+          "A premium brand requested a high-pressure SUP board (25 PSI vs the industry standard 15-20 PSI) for maximum rigidity. Aquafarer's R&D team tested 14 fabric combinations, developed a new triple-layer drop-stitch construction with reinforced rail bands, and created a custom valve system rated for 30 PSI. The final product exceeded the client's performance targets and became one of their best-selling models.",
+        context: 'High-pressure SUP development, 2024',
+        source: 'Lead R&D Engineer',
+      },
+      {
+        quote:
+          "We reduced the client's assembly time by 40% simply by redesigning the valve placement and fin attachment system. Small changes in the design phase create massive savings in production.",
+        narrative:
+          "An existing OEM client wanted to reduce production costs without changing the board's performance characteristics. Aquafarer's design team analyzed the entire manufacturing workflow and identified opportunities: repositioning the valve for easier automated installation, redesigning the fin box for snap-in vs screw-in attachment, and optimizing the drop-stitch thread pattern to reduce material waste. The cumulative changes reduced per-unit production time by 40% while maintaining the same performance specifications.",
+        context: 'Manufacturing optimization project, 2024',
+        source: 'Senior Industrial Designer',
+      },
+    ]}
+  />
+  <RelatedPages
+    title={_('designPowerhouse.relatedTitle', 'Explore Design & Engineering')}
+    subtitle={_('designPowerhouse.relatedSub', "More resources from Aquafarer's innovation ecosystem")}
+    links={[
+      {
+        title: _('designPowerhouse.rel1', 'R&D Center'),
+        description: _(
+          'designPowerhouse.rel1desc',
+          'Six specialized labs including PVC Fabric Lab, Hydrodynamic Test Tank, and Prototype Workshop.'
+        ),
+        href: `/${lang}/randdcenter`,
+        label: 'R&D',
+      },
+      {
+        title: _('designPowerhouse.rel2', 'OEM/ODM Manufacturing'),
+        description: _(
+          'designPowerhouse.rel2desc',
+          'Full-service OEM/ODM: private label, custom design, and contract manufacturing.'
+        ),
+        href: `/${lang}/oem-odm-manufacturer`,
+        label: 'Service',
+      },
+      {
+        title: _('designPowerhouse.rel3', 'Engineering Perfection'),
+        description: _(
+          'designPowerhouse.rel3desc',
+          'Our engineering philosophy covering material selection, design, and quality control.'
+        ),
+        href: `/${lang}/engineering-perfection`,
+        label: 'Philosophy',
+      },
+      {
+        title: _('designPowerhouse.rel4', 'Technology Overview'),
+        description: _('designPowerhouse.rel4desc', 'Deep dive into inflatable watercraft technology and materials.'),
+        href: `/${lang}/learn/inflatable-technology`,
+        label: 'Technology',
+      },
+    ]}
+  />
+  <script is:inline type="application/ld+json" set:html={faqSchema} />
+</Layout>

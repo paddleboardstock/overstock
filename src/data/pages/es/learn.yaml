@@ -1,0 +1,73 @@
+hero:
+  tagline: 'Conocimiento de Exploración Acuática'
+  title: 'Aprende'
+  subtitle: |
+    Guías, tutoriales e inmersiones profundas — todo lo que necesitas para explorar<br />
+    el agua con confianza. Desde elegir tu primer SUP hasta dominar técnicas avanzadas.
+  taglineSection: 'Conocimiento para cada remero. Desde principiante hasta profesional.'
+
+featured:
+  tagline: 'Temas Destacados'
+  title: 'Comienza tu viaje de aprendizaje'
+  subtitle: 'Ya sea que seas nuevo en los deportes acuáticos o quieras avanzar al siguiente nivel, nuestras guías te cubren.'
+  items:
+    - title: 'Conceptos Básicos de SUP'
+      description: 'Todo lo que un principiante necesita saber — tipos de tablas, tamaño del remo, postura y consejos para el primer día.'
+      icon: 'tabler:lifebuoy'
+      href: '/learn/sup'
+    - title: 'Tabla Inflable vs Rígida'
+      description: '¿Cuál es la adecuada para ti? Comparamos portabilidad, rendimiento, durabilidad y costo lado a lado.'
+      icon: 'tabler:arrows-left-right'
+      href: '/compare/inflatable-vs-hardboard'
+    - title: 'Seguridad Acuática'
+      description: 'Conocimientos esenciales de seguridad que todo remero debería tener — clima, PFD, autorrescate y más.'
+      icon: 'tabler:shield'
+      href: '/learn/water-safety'
+    - title: 'Guía de Materiales'
+      description: 'PVC vs Hypalon, tecnología drop-stitch, clasificaciones denier — entiende de qué está hecho tu equipo.'
+      icon: 'tabler:hexagons'
+      href: '/learn/materials'
+    - title: 'Guía de Tamaños SUP'
+      description: 'Encuentra el largo, ancho y volumen de tabla adecuados para tu peso, habilidad y estilo de remo.'
+      icon: 'tabler:ruler'
+      href: '/size-guide'
+    - title: 'Técnicas Intermedias'
+      description: 'Mejora tu remo con brazadas avanzadas, técnicas de giro y manejo en aguas agitadas.'
+      icon: 'tabler:ripple'
+      href: '/learn/intermediate-techniques'
+
+categories:
+  tagline: 'Categorías'
+  title: 'Explora por tema'
+  subtitle: 'Todo el contenido de aprendizaje organizado por nivel de habilidad e interés.'
+  columns:
+    - title: 'Principiante'
+      items:
+        - 'Conceptos Básicos de SUP — empieza aquí'
+        - 'Tabla Inflable vs Rígida'
+        - 'Fundamentos de Seguridad Acuática'
+        - 'Cómo Elegir tu SUP'
+        - 'Guía de Bomba y Empaque'
+    - title: 'Intermedio'
+      items:
+        - 'Técnicas de Remo'
+        - 'Tecnología Inflable'
+        - 'Referencia de Materiales'
+        - 'Comparación PVC vs Hypalon'
+        - 'Núcleo Drop-Stitch Explicado'
+    - title: 'Avanzado y Profesional'
+      items:
+        - 'Operaciones de Flota'
+        - 'Equipos de Grado Comercial'
+        - 'Protocolos de Seguridad y Rescate'
+        - 'Construcciones Personalizadas y OEM'
+
+cta:
+  title: '¿Aún tienes preguntas?'
+  subtitle: 'Pregunta a nuestro guía AI para respuestas personalizadas sobre equipos, seguridad y técnicas.'
+  actions:
+    - variant: primary
+      text: 'Preguntar a Water Advisor AI'
+      href: '#ai-guide'
+    - text: 'Ver todas las guías'
+      href: '/academy'

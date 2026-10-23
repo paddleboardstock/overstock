@@ -1,0 +1,137 @@
+hero:
+  tagline: Kontrol ng Kalidad
+  title: Sistema ng Kontrol sa Kalidad<br />para sa OEM Marine Manufacturing
+  subtitle: Proseso ng multi-stage na inspeksyon na sumasaklaw sa mga dumarating na materyales, produksiyong nasa proseso, pagsusuri ng presyon, huling pagpupulong, at pag-verify bago ipadala. Ang bawat batch ay nasusubaybayan, bawat pagsusuri ay naitatala.
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-pressure-testing.webp
+    alt: Aquafarer proseso ng pagkokontrol ng kalidad at pagsubok ng presyon
+stats:
+  title: QC ayon sa Numero
+  stats:
+    - title: Mga Unit na Sinubok sa Presyon
+      amount: 100%
+    - title: Pinakamataas na Pagbaba ng Presyon
+      amount: <5%
+    - title: Mga Inspektor ng QC
+      amount: '12'
+    - title: Mga Tala na Itinatabi
+      amount: 10 taon
+content_system:
+  tagline: Pangkalahatang-ideya ng Sistema ng QC
+  title: Pinagsamang Kalidad<br />Balangkas ng Kontrol
+  subtitle: Ang aming QC system ay gumagana nang independiyente mula sa produksiyon at direktang nag-uulat sa pamamahala. Walang batch na ipinapadala nang walang pirma ng quality release mula sa quality lab.
+  items:
+    - title: Independiyenteng Lab ng Kalidad
+      description: Ang aming kalidad na laboratoryo ay gumagana bilang isang hiwalay na function mula sa produksyon. Ang mga QC inspector ay nag-uulat sa Quality Manager, hindi sa Production Director. Tinitiyak ng organisasyonal na kalayaan na ito na ang mga desisyon sa kalidad ay ginagawa nang obhetibo — ang mga takdang panahon sa produksyon ay hindi kailanman pinapalampas ang mga kinakailangan sa kalidad.
+      features:
+        - Nagre-report nang direkta sa pamamahala, independyente sa produksyon
+        - May pahintulot na itigil ang produksyon dahil sa mga isyu sa kalidad
+        - 12 nakatuong QC inspector sa lahat ng yugto
+        - Lahat ng kagamitan sa pagsusuri ay kinakalibrate taun-taon
+    - title: Pagsubaybay ng Bulto
+      description: Bawat batch ng hilaw na materyal ay binibigyan ng natatanging numero ng lote sa aming ERP system. Mula sa pagdating ng materyal hanggang sa produksiyon at sa tapos na produkto, ang bawat bill of materials ng bapor ay naka-link pabalik sa orihinal na batch ng supplier. Ito ay nagbibigay-daan sa ganap na pagsubaybay sa upstream para sa anumang katanungan tungkol sa kalidad o pagsunod sa regulasyon.
+      features:
+        - Pagsubaybay ng lote batay sa ERP mula sa materyal hanggang sa tapos na produkto
+        - Pisikal na batch na mga tag sa bawat work order
+        - 100% na saklaw ng materyal — PVC, Hypalon, hardware, pandikit
+        - Mga rekord na pinananatili sa loob ng 10 taon (CE 2013/53/EU na kinakailangan)
+    - title: Pamantayan at Pagsunod
+      description: Ang aming mga pamamaraan sa QC ay naaayon sa mga pamantayan ng internasyonal. Ang mga produkto ay CE sertipikado sa ilalim ng EU Recreational Craft Directive 2013/53/EU. Ang aming sistema ng pamamahala ng kalidad ay ISO 9001 sertipikado. Ang pagsunod sa panlipunan ay pinananatili sa pamamagitan ng BSCI sertipikasyon.
+      features:
+        - sertipikasyon ng CE (EU 2013/53/EU)
+        - ISO 9001:2015 pamamahala ng kalidad
+        - BSCI sertipikasyon ng pagsunod sa lipunan
+        - REACH at RoHS pagsunod sa materyales
+        - UKCA sertipikasyon pagkatapos ng Brexit
+content_inspection:
+  tagline: Mga Yugto ng Inspeksyon
+  title: anim na yugto<br />Proseso ng Inspeksyon
+  subtitle: Bawat produkto ay dumadaan sa 6 na yugto ng inspeksyon na may dokumentadong QC checkpoints. Maagang natutukoy ang mga depekto, agad na may mga aksyong pangwawasto, at bawat batch ay ganap na natutunton.
+  stages:
+    - stage: '1'
+      title: Inspeksyon ng Papasok na Materyal
+      description: Lahat ng papasok na materyales ay itinatala ayon sa batch/lot number at ini-quarantine hanggang sa QC sign-off. PVC/Hypalon ang mga roll ng tela ay sinusuri para sa tensile strength (ASTM D751), tear resistance (ISO4674), at kapal.Drop-stitch Ang mga core, balbula, pandikit, at hardware ay biswal na sinusuri at sinusukat ayon sa mga espesipikasyon.
+      checks: Tensile strength ASTM D751, tear ISO resistance 4674, thickness gauge, adhesive viscosity, visual defect scan
+      threshold: 100% ng mga batch ay sinubok. Tanggihan kung ang tensile ay < 90% ng spec, tear < pinakamababa ng spec, o may anumang visual na depekto
+    - stage: '2'
+      title: In-Process QC — Pagputol at Paghahanda
+      description: CNC-ang mga cut panel ay sinusuri sa dimensyon laban sa CAD source files tuwing ika-20 panel. Sinusuri ang kalidad ng gilid para sa fraying, hindi pantay na hiwa, o dimensional drift. Ang bilang ng panel ay sinusuri laban sa BOM para sa bawat batch ng produksyon bago ilipat ang mga materyales sa welding.
+      checks: Pagsusuri ng sukat laban sa mga CAD DXF na file, inspeksyon ng kalidad ng gilid, beripikasyon ng bilang ng panel
+      threshold: Toleransya ±0.5mm. Tanggihan ang batch kung >2% na lampas sa tolerance
+    - stage: '3'
+      title: In-Process QC — Welding at Bonding
+      description: Sa panahon ng produksyon, patuloy na minomonitor ang kalidad ng weld. Isinasagawa ang peel tests (ASTM D751) sa mga sample bawat 50 yunit. Sinusukat ang lapad ng weld ayon sa espesipikasyon. Sinusuri ang hot-air temperature logs para sa konsistensi. Bawat tahi ay sinusuri nang biswal sa ilalim ng backlight para sa channeling o voids.
+      checks: Peel test ASTM D751 bawat 50 yunit, pagsukat ng lapad ng weld, pagsusuri ng hot-air temperature log, inspeksyon ng backlight seam
+      threshold: 'Lakas ng balat: min 8 N/cm. Tolerance sa lapad ng weld ±1mm. Anumang nakikitang channeling = tinatanggihan'
+    - stage: '4'
+      title: Assembly QC
+      description: Bawat unit ay sumusunod sa 100-point assembly checklist na pinirmahan ng team lead. Sinusubukan ang valve function sa 10 open/close cycles. Sinusuri ang hardware torque. Ang visual inspection ay sumasaklaw sa surface finish, color consistency, label placement, at accessory completeness.
+      checks: 100-point checklist bawat unit, valve function test, hardware torque verification, visual inspection
+      threshold: 'Patakarang zero-depekto sa mga item na kritikal sa kaligtasan (mga balbula, D-ring, hawakan). Maliit na kosmetiko: AQL 2.5 (ISO 2859)'
+    - stage: '5'
+      title: Pagsusuri sa Presyon
+      description: Bawat chamber ay pinapalobo sa 1.25× rated pressure at pinananatili ng 24-48 oras. Ang mga pressure sensor ay patuloy na naglo-log sa buong panahon ng paghawak. Tinitiyak ng temperature-compensated readings ang katumpakan. Anumang chamber na lumampas sa 5% pressure drop ay tinatanggihan at ipinapadala para sa seam re-inspection na may 100% muling pagsusuri ng buong batch ng produksyon.
+      checks: 24-48h na pressure hold log, sensor calibration na sinusuri araw-araw, temperature-compensated reading, seam re-test pagkatapos ng repair
+      threshold: Pinakamataas na 5% pagbaba ng presyon sa loob ng 24 oras sa matatag na temperatura. Lumampas = 100% muling pagsusuri ng buong batch
+    - stage: '6'
+      title: Pangwakas na Inspeksyon at Paglabas ng Pagpapadala
+      description: Panghuling visual at functional na inspeksyon bago i-pack. Ang mga depekto sa ibabaw, pagkakapare-pareho ng kulay, beripikasyon ng label/BIN, integridad ng packaging, at kumpletong accessory ay sinusuri laban sa order ng customer. Ang mga unit ay vacuum-packed, boxed, at palletized. Kinakailangan ang pinal na QC sign-off bago umalis ang anumang produkto sa pabrika.
+      checks: Kompletong visual na inspeksyon, checklist ng mga aksesorya ayon sa SKU, packaging drop test (1m random sample), beripikasyon ng label/bar code scan
+      threshold: AQL 2.5 pangunahing depekto, AQL 4.0 menor depekto. Zero tolerance sa mga depekto sa kaligtasan. 100% ng mga yunit na na-inspect nang biswal
+content_equipment:
+  tagline: Kagamitan sa Pagsubok
+  title: QC Lab<br />Mga Kagamitan
+  subtitle: Ang aming kalidad na laboratorio ay may kagamitan sa pagsusuri na espesyal para sa beripikasyon ng materyal, integridad ng welding, at pagpapatunay ng pagganap ng produkto.
+  columns: 3
+  items:
+    - title: Tensile Testing Machine
+      description: Sinusukat ang tensile strength at elongation ng tela ayon sa ASTM D751. Ginagamit para sa incoming QC ng lahat ng PVC, Hypalon, at drop-stitch na batch ng tela.
+      icon: tabler:scale
+    - title: Silid ng Temperatura
+      description: Environmental chamber para sa UV resistance testing (ASTM G154) at low-temperature flexibility testing. Nagsisimula ng matinding kundisyon ng operasyon.
+      icon: tabler:temperature
+    - title: Pressure Sensors & Loggers
+      description: Digital pressure sensors na may tuloy-tuloy na data logging para sa 24-48 na oras na air retention tests. Temperature-compensated para sa katumpakan.
+      icon: tabler:wind
+    - title: Peel Test Rig
+      description: Calibrated na kagamitan sa peel testing para sa beripikasyon ng lakas ng weld seam. Random samples mula sa bawat batch sa produksiyon.
+      icon: tabler:files
+    - title: Tangke para sa Pagtuklas ng Tagas
+      description: Water tank para sa submerged leak testing ng inflated chambers. Visual bubble detection para sa beripikasyon ng integridad ng seam at balbula.
+      icon: tabler:ripple
+    - title: Inspection Tools
+      description: Calibrated na kagamitan sa pagsukat — thickness gauges, torque wrenches, dimensional calipers, hardness testers para sa QC stations sa produksiyon.
+      icon: tabler:tools
+content_metrics:
+  tagline: QC Performance
+  title: Kontrol ng Kalidad<br />Mga Sukatan
+  subtitle: Tunay na pass/fail data mula sa aming linya ng produksiyon. Ang mga sukatan na ito ay binabantayan araw-araw at nire-review buwan-buwan ng pamunuan.
+  columns: 3
+  items:
+    - title: 100% Yunit na Nasusubok
+      description: Bawat silid ng bawat bangka ay sinusuri sa presyon bago ipadala. Walang sampling — 100% inspeksyon sa integridad ng presyon.
+      icon: tabler:check
+    - title: <5% Pressure Drop
+      description: Maximum na pinapayagang pagkawala ng presyon sa loob ng 24-48 na oras sa 1.25× rated pressure. Anumang silid na lumalampas sa threshold na ito ay magti-trigger ng batch re-test.
+      icon: tabler:gauge
+    - title: AQL 2.5
+      description: Katanggap-tanggap na Antas ng Kalidad para sa pangunahing depekto ayon sa pamantayan ng sampling ng ISO 2859. Zero tolerance sa safety-critical defects.
+      icon: tabler:clipboard-check
+    - title: 24-48 Hour Hold
+      description: 'Ang tagal ng pressure hold ay nag-iiba ayon sa kategorya ng produkto. RIB chambers: 48 na oras. SUP at inflatable boats: 24-48 na oras.'
+      icon: tabler:clock
+    - title: 1.25× Test Pressure
+      description: Margin ng kaligtasan sa bawat kamara — sinusubok sa 25% higit sa itinakdang presyon upang matiyak ang margin sa itaas ng pinakamataas na kondisyon ng operasyon.
+      icon: tabler:arrow-up
+    - title: 0% Depekto sa Kaligtasan
+      description: Zero tolerance na patakaran sa mga depekto na kritikal sa kaligtasan — mga balbula, D-rings, tahi, at mga kamara ng buoyancy. Anumang depekto = 100% muling inspeksyon.
+      icon: tabler:shield
+cta:
+  title: Hilingin ang dokumentasyon ng kalidad
+  subtitle: Nagbibigay kami ng buong pakete ng dokumentasyon ng kalidad kabilang ang mga ulat ng pagsubok, sertipikasyon ng materyales, at pahayag ng pagsunod sa bawat padala. Makipag-ugnayan sa amin para sa mga halimbawa.
+  actions:
+    - variant: primary
+      text: Hilingin ang dokumentasyon ng QC
+      href: /contact
+    - text: Tingnan ang mga protocol ng pagsubok
+      href: /quality

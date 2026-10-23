@@ -1,0 +1,119 @@
+hero:
+  tagline: Buku Putih Teknik
+  title: Drop-Stitch Teknologi & Ilmu Material:<br />Rekayasa di Balik Kendaraan Air Tiup Modern
+  subtitle: Referensi teknis yang otoritatif yang mencakup konstruksi inti drop-stitch, perbandingan material PVC vs Hypalon, pengujian kekakuan wadah bertekanan tinggi, dan standar pembuatan kapal.
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/randd/aquafarer-design-discussion-lab.webp
+    alt: Aquafarer laboratorium R&D — pengujian material dan rekayasa
+direct_answer: Teknologi Drop-stitch menggunakan ribuan benang poliester internal yang menghubungkan lapisan kain atas dan bawah dari inti yang dapat dipompa. Ketika dipompa hingga 15–20 PSI, benang-benang ini berfungsi sebagai anggota tegangan, mencegah pembengkakan dan menciptakan struktur kaku yang sebanding dengan konstruksi cangkang keras. Dikombinasikan dengan pelapisan kain PVC atau Hypalon yang canggih dan pengelasan RF, ini memungkinkan perahu karet portabel berkinerja tinggi yang cocok untuk penggunaan profesional, komersial, dan rekreasi.
+section_drop_stitch:
+  title: Drop-Stitch Rekayasa Struktur
+  subtitle: Bagaimana ribuan benang mengubah kain fleksibel menjadi struktur kaku
+  content: |
+    Drop-stitch (juga dikenal sebagai "drop-stitch kain" atau "drop-stitch inti") merupakan terobosan dalam rekayasa struktur tiup. Prinsipnya tampak sederhana: ribuan benang poliester individu ditenun secara bersamaan ke dalam dua lapisan kain dasar terpisah, menghubungkan panel atas dan bawah pada sudut 90 derajat.
+
+    Ketika ruang tertutup diberi tekanan, tekanan udara internal memberikan gaya secara merata ke segala arah — mencoba mendorong panel atas dan bawah terpisah menjadi bentuk silinder. Ribuan drop-stitch ulir menahan pemisahan ini, mentransfer beban menjadi tegangan sepanjang sumbu ulir. Hasilnya adalah panel datar dan kaku yang dapat menahan tekanan internal sebesar 15–20 PSI.
+
+    Pada 20 PSI, sebuah panel 1 m² drop-stitch mengalami sekitar 14.000 kg total gaya internal — namun matriks benang menahannya tetap datar. Ini memberikan struktur drop-stitch rasio kekuatan terhadap berat yang menyaingi bahan kaku tradisional.
+section_materials:
+  title: PVC vs Hypalon — Perbandingan Bahan Teknis
+  subtitle: Data objektif untuk pemilihan material yang tepat dalam pembuatan kendaraan air tiup
+  table:
+    columns:
+      - header: Properti
+      - header: PVC (Polivinil Klorida)
+      - header: Hypalon (CSM)
+    rows:
+      - property: Resistensi UV
+        pvc: Bagus (dengan UV penstabil)
+        hypalon: Luar biasa (melekat)
+      - property: Ketahanan Abrasi
+        pvc: Bagus
+        hypalon: Sangat Bagus
+      - property: Kekuatan Tarik
+        pvc: 3.000–5.000 N/5cm
+        hypalon: 2.500–4.000 N/5cm
+      - property: Berat per m²
+        pvc: 850–1,200 g
+        hypalon: 1,100–1,500 g
+      - property: Fleks Dingin
+        pvc: -30°C
+        hypalon: -20°C
+      - property: Metode Bergabung
+        pvc: Pengelasan RF / Pengelasan udara panas
+        hypalon: Perekat tangan (lem kontak)
+      - property: Kemampuan untuk diperbaiki
+        pvc: Mudah (las panas atau perekat)
+        hypalon: Memerlukan perekat CSM
+      - property: Biaya Material
+        pvc: $8–15 / m²
+        hypalon: $20–40 / m²
+      - property: Umur Pakai (matahari tropis)
+        pvc: 5–8 tahun
+        hypalon: 10–15 tahun
+      - property: Rentang Warna
+        pvc: Luas (spektra warna penuh)
+        hypalon: Terbatas (warna dasar)
+      - property: Ketahanan Kimia
+        pvc: Baik (tingkat ketahanan bahan terhadap bahan bakar/minyak)
+        hypalon: Sangat Baik (rentang bahan kimia luas)
+section_testing:
+  title: Protokol Pengujian & Keselamatan
+  subtitle: Kerangka jaminan kualitas Aquafarer untuk setiap batch produksi
+  protocols:
+    - title: Uji Tahan Tekanan 1,25x
+      description: Setiap wadah yang dirakit dikembangkan tekanan hingga 1,25x tekanan operasi yang ditetapkan dan ditahan selama 24–48 jam. Setiap penurunan tekanan lebih dari 2% akan memicu penolakan dan pengerjaan ulang.
+      standard: ISO 6185
+    - title: Uji Kekuatan Lepas Jahitan
+      description: Sampel jahitan las dan lem dari setiap batch produksi diuji kekuatan lepasnya menggunakan peralatan tegangan terkalibrasi. Minimal ketahanan lepas 4 kN/m diperlukan.
+      standard: ISO 2411
+    - title: Uji Tarik Kain
+      description: Gulungan kain yang masuk diuji kekuatan tarik dan regangannya baik arah lusi maupun pakan. Batas penolakan di bawah 3.000 N/5cm untuk PVC.
+      standard: ISO 1421
+    - title: ' Percepatan Penuaan Cuaca'
+      description: Sampel bahan dikenai 1.000+ jam paparan UV yang dipercepat dalam kamar uji QUV. Maksimal kehilangan kekuatan tarik 15% diperbolehkan.
+      standard: ASTM G154
+    - title: Integritas Katup & Fitting
+      description: Setiap rakitan katup diuji untuk integritas segel pada tekanan 1,25x tekanan yang ditetapkan. Katup balik diuji untuk kinerja segel satu arah.
+      standard: ISO 12402
+section_manufacturing:
+  title: Standar Manufaktur & Sertifikasi Kualitas
+  subtitle: Kepatuhan standar industri untuk akses pasar global
+  standards:
+    - name: ISO 9001:2015
+      body: SGS Tersertifikasi
+      scope: Sistem manajemen kualitas di seluruh desain, produksi, dan pengiriman
+    - name: CE 2013/53/EU
+      body: Badan Notifikasi UE
+      scope: Direktif Kapal Rekreasi — desain lambung, stabilitas, daya apung, emisi
+    - name: BSCI
+      body: Amfori
+      scope: Kepatuhan sosial — keselamatan pekerja, tenaga kerja yang adil, manajemen lingkungan
+    - name: ISO 6185
+      body: Standar Internasional
+      scope: Perahu karet — konstruksi, stabilitas, daya apung, uji tekanan
+    - name: REACH
+      body: Regulasi UE
+      scope: Keamanan kimia — zat terbatas dalam material dan pelapis
+section_faq:
+  title: FAQ Teknis
+  questions:
+    - q: Bagaimana drop-stitch dibandingkan dengan konstruksi keras tradisional?
+      a: Inti drop-stitch modern pada 20 PSI mencapai 85–90% kekakuan dari EPS foam/fiberglass hard shell yang sebanding, sambil sepenuhnya dapat dikempiskan untuk transportasi. Perbedaannya adalah bobot sedikit lebih berat dan kekakuan ultimate yang lebih rendah — tetapi untuk sebagian besar aplikasi rekreasi dan komersial, perbedaan ini dapat diabaikan.
+    - q: Berapa kepadatan benang yang dianggap kualitas premium?
+      a: Kain drop-stitch premium menggunakan 2 benang per inci persegi (sekitar 3.100 benang per m²) yang ditenun dari 1.680 benang poliester DTEX. Kain tingkat dasar menggunakan 1 benang per inci persegi dengan 1.100 benang DTEX.
+    - q: Apakah Hypalon bisa dilas seperti PVC?
+      a: Tidak. Hypalon/CSM tidak dapat dilas RF. Itu harus dirakit menggunakan lem kontak yang diaplikasikan secara manual, yang membuat produksi lebih memakan tenaga kerja dan sambungan tergantung pada keterampilan operator. PVC dapat dilas RF atau las udara panas untuk kualitas sambungan otomatis yang konsisten.
+    - q: Berapa tekanan maksimum aman untuk perahu karet?
+      a: Tabung perahu karet standar beroperasi pada 8–12 PSI. Lantai Drop-stitch beroperasi pada 12–20 PSI. Inti drop-stitch bertekanan tinggi (SUPs) dapat beroperasi pada 20–25 PSI. Setiap produk dilengkapi dengan katup pengaman tekanan yang dikalibrasi untuk mencegah pengisian berlebihan.
+    - q: Berapa lama waktu yang dibutuhkan untuk memproduksi perahu karet kustom?
+      a: Produksi OEM standar memakan waktu 30–45 hari dari konfirmasi pesanan hingga FOB Qingdao. Pengembangan cetakan khusus menambah 15–20 hari untuk produksi prototipe dan pengujian.
+cta:
+  title: Konsultasi Teknik
+  subtitle: Memiliki pertanyaan spesifik tentang material atau desain? Tim teknik kami tersedia untuk diskusi teknis.
+  actions:
+    - variant: primary
+      text: Tanya Tim Teknik Kami
+      href: /contact
+    - text: Jelajahi Pusat R&D Kami
+      href: /randdcenter

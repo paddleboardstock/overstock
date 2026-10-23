@@ -1,0 +1,306 @@
+hero_text:
+  tagline: Kumuha ng Quote
+  title: Humiling ng Pagtataya<br />para sa Inyong Proyekto
+  subtitle: Ikwento sa amin ang inyong mga pangangailangan at ang aming koponan ay tutugon ng detalyadong pagtataya sa loob ng 2 araw ng negosyo.
+steps2_process:
+  title: Paano Ito Gumagana
+  subtitle: Apat na simpleng hakbang mula sa pagtatanong hanggang sa pagtataya.
+  items:
+    - title: 'Hakbang 1: Isumite ang Inyong Mga Pangangailangan'
+      description: Punan ang form sa ibaba ng uri ng inyong produkto, dami, at mga espesipikasyon. Mas marami kayong detalye na ibibigay, mas tumpak ang aming pagtataya.
+      icon: tabler:file-text
+    - title: 'Hakbang 2: Susuriin at Magbibigay ng Payo'
+      description: Susuriin ng aming engineering team ang inyong mga pangangailangan at maaaring makipag-ugnayan para sa paglilinaw. Magbibigay kami ng mga rekomendasyon sa konfigurasyon ng produkto at mga opsyon.
+      icon: tabler:users
+    - title: 'Hakbang 3: Tanggapin ang Inyong Quote'
+      description: Makakatanggap kayo ng detalyadong pagtataya kasama ang presyo kada unit, MOQ, lead time, mga termino sa pagbabayad, at mga opsyon sa pagpapadala. Karaniwan sa loob ng 48 oras.
+      icon: tabler:currency-dollar
+    - title: 'Hakbang 4: Sample at Produksyon'
+      description: Pagkatapos tanggapin ang quote, magpapatuloy kami sa paggawa ng sample (kung naaangkop) o direkta sa mass production. May regular na mga update sa buong proseso.
+      icon: tabler:building-factory
+content_form:
+  tagline: Form ng Pagtataya
+  title: Ikwento sa Amin ang Inyong Proyekto
+  subtitle: Lahat ng patlang na may * ay kinakailangan.
+  fields:
+    - name: Kategorya ng Produkto
+      type: select
+      options:
+        - RIB Bangka
+        - Inflatable na Bangka
+        - SUP Board
+        - Inflatable na Kayak
+        - Life Vest
+        - Marine Accessory
+        - Custom OEM/ODM
+    - name: Aplikasyon
+      type: select
+      options:
+        - Diving Center
+        - Pangingisda
+        - Marine Tourism / Resort
+        - Paghahanap at Pagsagip
+        - Tender ng Yate
+        - Komersyal na Bangka-Pangtrabaho
+        - Gobiyerno / Militar
+        - OEM / Pribadong Tatak
+        - Pang-personal / Panglibangan
+        - Iba Pa
+    - name: Dami
+      type: text
+      placeholder: hal. 50 yunit
+    - name: Target na Merkado
+      type: text
+      placeholder: hal. Europa, Hilagang Amerika, Gitnang Silangan
+    - name: Bansang Paghahatiran
+      type: text
+      placeholder: hal. Italya, UAE, USA, Australia
+    - name: Paboritong Materyal
+      type: select
+      options:
+        - Walang Paborito
+        - Marine-Grade PVC (1100 dtex)
+        - Premium Hypalon / CSM
+        - Hull na gawa sa Fiberglass
+        - Hull na gawa sa Aluminum
+    - name: Kinakailangang Engine
+      type: text
+      placeholder: hal. 60 HP outboard, walang engine, twin 115 HP
+    - name: Kinakailangang Pag-customize
+      type: text
+      placeholder: hal. custom na kulay, branding/logo, packaging, espesyal na fittings
+    - name: Timeline
+      type: text
+      placeholder: hal. paghahatid sa loob ng 90 araw
+    - name: Karagdagang Mga Pangangailangan
+      type: textarea
+      placeholder: Ilarawan ang iyong aplikasyon, teknikal na espesipikasyon, o anumang espesyal na pangangailangan — isama ang reference na mga guhit, espesipikasyon, o mga link kung available
+    - name: I-upload ang Espesipikasyon
+      type: file
+      placeholder: I-upload ang iyong spec sheet, guhit, o reference na dokumento (PDF, DWG, DXF)
+    - name: I-upload ang Logo / Artwork
+      type: file
+      placeholder: I-upload ang iyong logo o artwork para sa custom na branding (AI, EPS, PNG)
+content_rfq_types:
+  tagline: 3-Hakbang na RFQ Sistema
+  title: Piliin ang Tamang<br />Antas ng Pagtatanong
+  subtitle: Iba't ibang proyekto ay nangangailangan ng iba't ibang antas ng detalye. Pumili ng form na naaangkop sa iyong yugto ng pagbili.
+  items:
+    - title: Mabilis na Pagtatanong
+      description: 5-6 na patlang, 30 segundo. Para sa paunang pakikipag-ugnayan, karaniwang mga tanong, o follow-up sa pag-download ng resource. Sumagot kami sa loob ng 24 na oras na may pangunahing impormasyon at mga susunod na hakbang.
+      icon: tabler:bolt
+    - title: Karaniwang RFQ
+      description: 8-10 na patlang, 2 minuto. Para sa espesipikong quotation ng produkto na may pagpili ng modelo, dami, at mga kinakailangan sa paghahatid. Tumanggap ng detalyadong quotation sa loob ng 48 oras.
+      icon: tabler:file-text
+    - title: Proyekto RFQ
+      description: 10-14 na patlang, 5 minuto. Para sa RIB, fleet ng resort, rescue, o proyekto ng gobyerno na nangangailangan ng pasadyang pagsasaayos, dokumentasyon ng pagsunod, at multi-taong plano ng suplay. Itinalaga ang dedikadong project manager.
+      icon: tabler:clipboard-list
+form_quick:
+  title: Mabilis na Pagtatanong
+  subtitle: Mabilis na pakikipag-ugnayan para sa karaniwang tanong at paunang kahilingan ng impormasyon.
+  fields:
+    - name: pangalanBuong
+      label: Buong Pangalan
+      type: text
+      required: true
+      placeholder: Ang iyong buong pangalan
+    - name: emailNegosyo
+      label: Email sa Negosyo
+      type: email
+      required: true
+      placeholder: you@company.com
+    - name: pangalanKompanya
+      label: Pangalan ng Kumpanya
+      type: text
+      required: true
+      placeholder: Ang iyong kumpanya
+    - name: uriNgMamimili
+      label: Ako ay isang...
+      type: select
+      required: true
+      options:
+        - Distributor / Importer
+        - May-ari ng Brand / Private Label
+        - Resort / Water Center
+        - Operator ng Rental
+        - Ahensya ng Gobyerno / Rescue
+        - Operator ng Diving / Pangingisda
+        - Inhinyero sa Maritima / Refitter
+        - Iba Pa
+    - name: interesNaProdukto
+      label: Interes sa Produkto
+      type: multiselect
+      required: true
+      options:
+        - RIB Mga Bangka
+        - Nabubuong Bangka
+        - SUP Mga Board
+        - Kagamitan sa Kaligtasan
+        - Aksesorya
+        - OEM/ODM Pasadya
+    - name: message
+      label: Ano ang kailangan mo?
+      type: textarea
+      required: false
+      placeholder: Maikling paglalarawan ng iyong mga pangangailangan...
+form_standard:
+  title: Karaniwang RFQ
+  subtitle: Detalyadong kahilingan ng sipi para sa tiyak na mga produkto at dami.
+  fields:
+    - name: pangalanBuong
+      label: Buong Pangalan
+      type: text
+      required: true
+    - name: emailNegosyo
+      label: Email sa Negosyo
+      type: email
+      required: true
+    - name: pangalanKompanya
+      label: Pangalan ng Kumpanya
+      type: text
+      required: true
+    - name: uriNgMamimili
+      label: Uri ng Mamimili
+      type: select
+      required: true
+    - name: modeloNgProdukto
+      label: Modelo / Uri ng Produkto
+      type: text
+      required: true
+      placeholder: eh., AF580 RIB, AF380 Pampalobo
+    - name: quantity
+      label: Tinatayang Dami
+      type: text
+      required: true
+      placeholder: eh., 10-20 yunit
+    - name: targetMarket
+      label: Target na Merkado / Rehiyon
+      type: text
+      required: true
+      placeholder: eh., EU, Hilagang Amerika, Gitnang Silangan
+    - name: orasNgPaghahatid
+      label: Nais na Paghahatid
+      type: select
+      required: true
+      options:
+        - Sa loob ng 30 araw
+        - 30-60 araw
+        - 60-90 araw
+        - Plano nang maaga (90+ araw)
+        - Nagsasaliksik lamang
+    - name: kinakailangangPagsunod
+      label: Mga Kinakailangan sa Pagsunod
+      type: multiselect
+      required: false
+      options:
+        - CE / RCD 2013/53/EU
+        - UKCA
+        - USCG
+        - ISO 9001
+        - BSCI
+        - REACH
+        - Wala / Hindi sigurado
+    - name: message
+      label: Karagdagang Detalye
+      type: textarea
+      required: false
+form_project:
+  title: Proyekto RFQ
+  subtitle: Komprehensibong pagtatanong tungkol sa proyekto para sa fleet, customized, o pamahalaang pagbili.
+  fields:
+    - name: pangalanBuong
+      label: Buong Pangalan
+      type: text
+      required: true
+    - name: emailNegosyo
+      label: Email sa Negosyo
+      type: email
+      required: true
+    - name: pangalanKompanya
+      label: Pangalan ng Kumpanya
+      type: text
+      required: true
+    - name: uriNgMamimili
+      label: Uri ng Mamimili
+      type: select
+      required: true
+    - name: projectType
+      label: Uri ng Proyekto
+      type: select
+      required: true
+      options:
+        - Resort / Hotel Fleet
+        - Rental Fleet
+        - Rescue / Patrol Fleet
+        - Diving Center Fleet
+        - Pamahalaang Pagbili
+        - Private Label / OEM
+        - Dealer Stock Order
+        - Iba Pa
+    - name: boatTypes
+      label: Mga Uri ng Bangka na Kailangan
+      type: multiselect
+      required: true
+      options:
+        - RIB Mga Bangka
+        - Inflatable Boats / Dinghies
+        - SUP Mga Board
+        - Mga Kayak
+        - Kagamitan sa Kaligtasan
+    - name: fleetSize
+      label: Sukat ng Fleet / Saklaw ng Dami
+      type: text
+      required: true
+      placeholder: hal., 20-50 yunit sa loob ng 12 buwan
+    - name: customRequirements
+      label: Mga Pangangailangan sa Custom na Konpigurasyon
+      type: textarea
+      required: false
+      placeholder: Haba ng hull, materyal ng tubo, ayos ng deck, mga kinakailangan sa branding...
+    - name: kinakailangangPagsunod
+      label: Mga Kinakailangan sa Pagsunod at Sertipikasyon
+      type: multiselect
+      required: true
+      options:
+        - CE / RCD 2013/53/EU
+        - UKCA
+        - USCG Uri III/V
+        - ISO 9001
+        - BSCI
+        - REACH / RoHS
+        - Sertipikasyon sa lokal na merkado
+    - name: targetMarket
+      label: Target na Merkado
+      type: text
+      required: true
+    - name: saklawNgBadyet
+      label: Saklaw ng Badyet
+      type: select
+      required: false
+      options:
+        - Mas mababa sa $10,000
+        - $10,000 - $50,000
+        - $50,000 - $200,000
+        - $200,000+
+        - Mas gusto hindi sabihin
+    - name: orasNgPaghahatid
+      label: Timeline ng Proyekto
+      type: select
+      required: true
+      options:
+        - Madalas (sa loob ng 30 araw)
+        - Karaniwan (30-60 araw)
+        - Pinaplano (60-90 araw)
+        - Panghinaharap na pagpaplano (90+ araw)
+    - name: message
+      label: Detalye at Mga Kinakailangan ng Proyekto
+      type: textarea
+      required: false
+      placeholder: Ilarawan ang iyong proyekto, aplikasyon, at anumang tiyak na kinakailangan...
+cta:
+  title: Mas gusto bang talakayin sa pamamagitan ng email?
+  subtitle: Ipadala ang iyong pagtatanong nang direkta sa aming sales team at kami ay tutugon sa loob ng 24 na oras.
+  actions:
+    - variant: primary
+      text: Mag-email sa amin nang direkta
+      href: /contact

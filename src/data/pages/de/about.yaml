@@ -1,0 +1,153 @@
+hero:
+  tagline: Über uns
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-factory-building.webp
+    alt: Aquafarer Werkstatt
+  title: |
+    Schiffstechnik, <br />
+    auf die <span class="text-accent dark:text-white">Aquafarer</span>-Art
+  subtitle: 'Wir begannen in einer Küstenwerkstatt mit einem Boot und einer unbeirrbaren Überzeugung: Marineprodukte sollten so konstruiert sein, als ob es darauf ankommt – denn das tun sie. Heute liefern wir in über 40 Länder, aber jeder Rumpf durchläuft noch immer dieselben Hände, die das Unternehmen gegründet haben.'
+
+stats:
+  title: In Zahlen
+  columns: 4
+  stats:
+    - title: Ausgelieferte Rümpfe
+      amount: '2,400+'
+    - title: Belieferte Länder
+      amount: '50+'
+    - title: Jahre kombinierte Erfahrung
+      amount: '60'
+    - title: Durchschnittliche Reaktionszeit (Std.)
+      amount: '24'
+
+features3_what_we_build:
+  title: Was wir bauen
+  subtitle: Eine fokussierte Produktlinie, die wir in- und auswendig kennen – keine halbfertigen Experimente, kein Badge-Engineering.
+  columns: 3
+  isBeforeContent: true
+  items:
+    - title: RIB-Boote
+      description: Aluminiumrumpf-RIBs von 3,3 m bis 7,5 m. Konzipiert für Patrouillen-, Tauch-, Angel- und Familiennutzung.
+      icon: tabler:ship
+    - title: Schlauchboote
+      description: PVC- und Hypalon-Schlauchboote von 2,4 m bis 4,2 m. Leicht, robust und einfach zu verstauen.
+      icon: tabler:speedboat
+    - title: Superyacht-Tender
+      description: Kompakte, hochspezifizierte RIBs, maßgeschneidert auf das Design Ihres Mutterschiffs.
+      icon: tabler:crown
+
+features3_more:
+  columns: 3
+  isAfterContent: true
+  items:
+    - title: Zubehör
+      description: Riemen, Pumpen, Abdeckungen, Trockentaschen, Kraftstofftanks und Elektronik. Alle auf unsere Boote abgestimmt.
+      icon: tabler:package
+    - title: Umbau & Reparatur
+      description: Interne Schlauchreparatur, Elektroniknachrüstung und Motor-Upgrades.
+      icon: tabler:tool
+    - title: Sonderanfertigungen
+      description: Projektbezogenes Design für gewerbliche, wissenschaftliche und militärische Kunden.
+      icon: tabler:hammer
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-design-discussion-2.webp
+    alt: Sonderanfertigung eines Bootes
+
+steps2_values:
+  title: Unsere Werte
+  subtitle: Drei Grundsätze, die jedes Produkt von Anfang an geprägt haben.
+  items:
+    - title: Bauen, als ob Ihre Familie darin sitzt
+      description: Jeder Rumpf, jede Schweißnaht und jedes Bauteil wird so behandelt, als ob unsere eigenen Familien es nutzen würden.
+      icon: tabler:heart
+    - title: Technik vor dem Verkauf
+      description: Wenn eine Spezifikation falsch ist, ändern wir die Spezifikation – niemals den Kunden.
+      icon: tabler:settings
+    - title: Support, der über die Garantie hinausgeht
+      description: Zwanzig Jahre alte Rümpfe rufen uns noch immer wegen Ersatzteilen an – und wir gehen noch immer ran.
+      icon: tabler:headset
+
+steps2_milestones:
+  title: Meilensteine
+  subtitle: Eine kurze Version der Aquafarer-Geschichte.
+  isReversed: true
+  items:
+    - title: Gegründet in einer Küstenwerkstatt
+      description: Gestartet von zwei Schiffsarchitekten mit einer CNC-Fräse und einer unbeirrbaren Idee.
+      icon: tabler:building-factory
+    - title: Erste 1.000 ausgelieferte Rümpfe
+      description: Im siebten Jahr erreicht, hauptsächlich durch Mundpropaganda und Stammkunden.
+      icon: tabler:circle-check
+    - title: Internationales Exportprogramm
+      description: Lieferung in 50+ Länder mit lokalen Support-Partnern auf fünf Kontinenten.
+      icon: tabler:world
+    - title: Eine neue globale Betriebsstruktur
+      description: 'Im September 2026 ging der Markenbetrieb von der Qingdao Vatrad Group auf Aquafarer LLC (New Mexico, USA) über; der Fertigungsstandort Qingdao verantwortet weiterhin F&E, Produktion und Direktexport ab Werk.'
+      icon: tabler:building-skyscraper
+
+features2_locations:
+  title: Unsere Standorte
+  tagline: Finden Sie uns
+  columns: 3
+  items:
+    - title: Hauptsitz & Werkstatt
+      description: Küstenindustriepark, Gebäude 4 – geöffnet Mo–Fr für Besuche nach Vereinbarung.
+    - title: EU-Servicezentrum
+      description: Mittelmeerhafen – Umbau, Reparatur und Garantiesupport für europäische Kunden.
+    - title: APAC-Partnernetzwerk
+      description: Autorisierte Servicepartner in Australien, Japan, Singapur und Hongkong.
+brand_hub_tagline: Marke
+brand_hub_title: Entdecken Sie unsere Marke
+brand_hub_subtitle: Tauchen Sie ein in unsere maritime Ingenieurskunst, globale Präsenz und die Prinzipien, die uns antreiben.
+brand_hub_cards:
+  - title: Maritime Expertise
+    desc: 'Jahrzehnte der Materialwissenschaft, Präzisionsfertigung und realen Tests — von der PVC/Hypalon-Fertigung bis zum Deep-V-Rumpfdesign und der Drop-Stitch-Technologie.'
+    link: /brand-marine-expertise
+    link_label: 'Mehr erfahren →'
+  - title: Globale Präsenz
+    desc: 'Versand in über 50 Länder von unserer Qingdao-Anlage mit autorisierten Servicepartnern in Europa, Asien-Pazifik und Amerika.'
+    link: /brand-global-presence
+    link_label: 'Mehr erfahren →'
+  - title: Warum Aquafarer
+    desc: 'Vertikale Integration, Doppelzertifizierung (ISO 9001 + BSCI), CE-Konformität und niedrige MOQs — entwickelt für Marken, Händler und Regierungsbehörden.'
+    link: /brand-why-aquafarer
+    link_label: 'Mehr erfahren →'
+
+production_section:
+  tagline: 'Produktionsexzellenz'
+  title: 'Exquisites Handwerk sichergestellt'
+  description: 'Die Aquafarer-Produktionslinie ist der Herstellung hochwertiger, langlebiger und leistungsstarker Schlauchbootprodukte gewidmet.'
+  cards:
+    - title: 'Erfahrenes Technikerteam'
+      items:
+        - 'Fachwissen über PVC, Hypalon und Marinematerialien'
+        - 'Präzises Handwerk beim Zuschnitt, der Verklebung und dem Zubehöreinbau'
+        - 'Kontinuierliche Schulungen zu den neuesten Produktionstechnologien'
+    - title: 'Fortgeschrittene Produktionsausrüstung'
+      items:
+        - 'CNC-Schneidanlagen für präzisen Stoffzuschnitt mit minimalen Fehlern'
+        - 'Hochpräzises Warm-/Kaltverkleben für luftdichte, langlebige Nähte'
+        - 'Professionelle Geräte zur Luftdichtigkeits- und Zugfestigkeitsprüfung'
+    - title: 'Ausgereiftes Managementsystem'
+      items:
+        - 'Standardisierte Produktionsprozesse mit klaren Qualitätsstandards'
+        - 'Lean-Produktionsphilosophie zur Abfallreduzierung und Effizienzsteigerung'
+        - 'Effizientes Lieferkettenmanagement mit zuverlässigen Lieferantenpartnerschaften'
+    - title: 'Strenge Qualitätskontrolle'
+      items:
+        - 'Zertifiziertes Qualitätsmanagementsystem'
+        - 'Mehrstufige Inspektion: Rohmaterial, in der Fertigung, Endkontrolle'
+        - 'Strenge Luftdichtigkeits- und Haltbarkeitstests vor dem Versand'
+
+global_ops_section:
+  tagline: 'Globale Betriebsarchitektur'
+  title_html: 'Eine Marke, <span class="text-white/90">zwei Zentren</span>'
+  description_html: 'Seit September 2026 wird Aquafarer von der <strong class="text-white">Aquafarer LLC</strong> (New Mexico, USA) betrieben — der globalen Einheit für Vertrieb, gewerbliche B2B-Verkäufe, Verträge, Abrechnung und Kundendienst. F&E, Produktion und Qualitätskontrolle bleiben am <strong class="text-white">Aquafarer-Fertigungsstandort Qingdao</strong>, der jede Bestellung ab Werk verschickt, FOB Qingdao. Der Übergang hat geändert, wer Ihren Vertrag unterzeichnet — nicht, wer Ihr Boot baut.'
+  stats:
+    - value: '2,400+'
+      label: 'Weltweit gelieferte Rümpfe'
+    - value: '50+'
+      label: 'Exportländer'
+    - value: '10+'
+      label: 'Jahre Fertigungserfahrung'

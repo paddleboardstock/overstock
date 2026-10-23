@@ -1,0 +1,228 @@
+hero:
+  tagline: Technické výkresy a CAD
+  title: RIB & nafukovací člun<br />Stažení technických výkresů a CAD
+  subtitle: Výkresy GA na úrovni plánování, listy rozměrů a rozvržení paluby pro hodnocení a specifikaci projektu. Získejte přístup k technickým výkresům na správné úrovni – od veřejných souborů PDF po soubory STEP na úrovni projektu.
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/hero/production-dept.webp
+    alt: Technické výkresy RIB člunů a CAD soubory ke stažení
+direct_answer: Aquafarer poskytuje technické výkresy na úrovni nákupu pro RIB čluny a nafukovací plavidla – včetně souborů PDF s celkovým uspořádáním (GA), rozměrových listů a výkresů rozložení paluby. Formáty s vyššími detaily (DXF/DWG, STEP/IGES) jsou k dispozici na základě kvalifikovaného dotazu nebo projektové žádosti.
+stats:
+  - value: GA PDF
+    label: Zdarma ke stažení
+    detail: Obecné uspořádání podle modelu
+  - value: DXF/DWG
+    label: Přístup k lehké formě
+    detail: 2D CAD na úrovni plánování
+  - value: STEP/IGES
+    label: Žádost o projekt
+    detail: 3D model pro integraci
+  - value: Pouze NDA
+    label: Konstrukční výkresy
+    detail: Laminování trupu, data formy
+content_tiers:
+  tagline: Stáhnout Tiers
+  title: Čtyři úrovně přístupu<br />— Správný detail pro správnou scénu
+  subtitle: Poskytujeme výkresy na úrovni nákupu, nikoli soubory na úrovni výroby. Každá úroveň odpovídá jiné fázi projektu.
+  items:
+    - title: Úroveň 1 — Veřejné PDF
+      description: Obecné uspořádání (GA), 4-pohledový rozměrový výkres a rozložení paluby ve formátu PDF. K dispozici ke stažení zdarma. Dostatečná pro plánování projektu, alokaci prostoru a předběžnou kontrolu specifikací.
+      icon: tabler:file-type-pdf
+    - title: Úroveň 2 — Light Form DXF/DWG
+      description: 2D CAD soubory (DXF nebo DWG) pro integraci rozvržení na úrovni plánování. Vyžaduje krátký kvalifikační formulář (název společnosti, typ projektu, zamýšlené použití). Nejsou zahrnuty žádné konstrukční nebo výrobní údaje.
+      icon: tabler:file-code
+    - title: Úroveň 3 — Projektová aplikace STEP/IGES
+      description: Soubory 3D modelů (STEP nebo IGES) pro systémovou integraci, návrh vybavení nebo koordinaci námořní architektury. Vyžaduje projektovou žádost s rozsahem, časovou osou a záměrem nákupu. Podléhá schválení.
+      icon: tabler:cube
+    - title: Úroveň 4 – NDA Engineering
+      description: Strukturální výkresy trupu, plány laminace, expanze řezání trubek a data formy. Dostupné pouze v rámci NDA s potvrzenými objednávkami. Toto jsou soubory na úrovni výroby – nejsou určeny pro veřejnou distribuci.
+      icon: tabler:lock
+content_included:
+  tagline: Co je zahrnuto
+  title: Obsah výkresu<br />Na model
+  subtitle: Každý model má standardní výkresový balíček obsahující základní plánovací informace pro B2B nákupčí a projektové inženýry.
+  items:
+    - title: obecné ujednání (GA)
+      description: Boční profil, pohled shora a příčný řez zobrazující tvar trupu, polohu trubky, umístění konzoly, sedlo, palivový systém a klíčové rozměry (LOA, nosník, průměr trubky, úhel náklonu). Stav revize a autorská práva jsou uvedeny v záhlaví.
+      icon: tabler:layout
+    - title: Rozměrový výkres se 4 pohledy
+      description: Boční, přední, zadní a horní pohledy s celkovými rozměry pro plánování přepravy (výška na přívěsu, nosník pro kontejner, hmotnost pro zvedání). Zahrnuje provozní a přepravní konfigurace.
+      icon: tabler:ruler-2
+    - title: Rozložení paluby a plán vybavení
+      description: Pohled shora dolů zobrazující základnu konzoly, polohy sedadel, umístění D-kroužků, polohy navigačních světel, přístup k drenážnímu čerpadlu, přihrádku na baterii/palivo a upevňovací body zařízení. Omezená přesnost na proprietárních rozhraních.
+      icon: tabler:map
+    - title: Kreslení dopravy a balení
+      description: Plán nakládání kontejnerů, rozměry kolébky, rozložení hmotnosti a pozice zvedacích bodů pro plánování logistiky. Zahrnuje standardní a vlastní možnosti balení.
+      icon: tabler:truck
+content_protection:
+  tagline: IP ochrana
+  title: Co nesdílíme<br />& Proč
+  subtitle: Ochrana našeho inženýrského IP zajišťuje, že můžeme pokračovat v investicích do výzkumu a vývoje a zároveň poskytovat vše, co kupující potřebují pro plánování projektu.
+  items:
+    - title: Údaje o jádru formy trupu
+      description: Geometrie zástrčky a formy, dráhy CNC nástrojů a laminovací šablony jsou vlastní výrobní aktiva. Nejsou sdíleny na žádné úrovni přístupu mimo potvrzené smlouvy NDA.
+      icon: tabler:ban
+    - title: Rozšíření pro řezání trubek
+      description: Řezací pilníky s plochým vzorem pro hadicovou tkaninu jsou data na úrovni výroby. Dostupné pouze v rámci NDA s potvrzenými výrobními objednávkami a sdílené pouze se smluvní stranou.
+      icon: tabler:ban
+    - title: Strukturální výpočty
+      description: Podrobná analýza napětí, výsledky FEA a harmonogramy laminátů jsou dokumenty citlivé na shodu, které jsou během procesu posuzování shody sdíleny pouze s notifikovanými osobami a klienty vázanými na NDA.
+      icon: tabler:ban
+    - title: Screening konkurentů
+      description: Vyhrazujeme si právo odmítnout žádosti o přístup ke CAD, které se zdají být od konkurentů, studentů bez kontextu projektu nebo stran bez legitimního záměru získat zakázku.
+      icon: tabler:shield
+content_models:
+  tagline: Dostupné modely
+  title: Technický nákres<br />Dostupnost podle modelu
+  subtitle: GA PDF ke stažení jsou k dispozici pro naše hlavní modely RIB a nafukovacích člunů. Kontaktujte nás pro konkrétní modelové výkresy, které nejsou uvedeny.
+  items:
+    - title: AF580 RIB
+      description: 5,8 m RIB, GRP deep-V trup, Hypalon nebo PVC trubky, středová konzola. GA, rozměry, rozložení paluby a plán dopravy k dispozici. Kategorie designu C.
+      icon: tabler:sailboat
+    - title: AF520 RIB
+      description: 5,2 m RIB, GRP středně V trup, Hypalon nebo PVC trubky, boční nebo středová konzola. GA a rozměry k dispozici. Kategorie designu C.
+      icon: tabler:sailboat
+    - title: AF430 RIB
+      description: 4,3 m RIB, GRP trup, PVC trubky, kormidlo nebo konzola. GA a rozměry k dispozici. Kategorie designu C/D.
+      icon: tabler:sailboat
+    - title: Nafukovací člun AF380
+      description: 3,8 m nafukovací člun, hliníková podlaha, PVC trubek. Dostupné rozměry GA a balení. Vyhovuje normě EN ISO 6185.
+      icon: tabler:sailboat
+    - title: Nafukovací člun AF320
+      description: Nafukovací člun 3,2 m, podlaha vzduchové paluby, PVC trubek. Dostupné rozměry GA a balení. Vyhovuje normě EN ISO 6185.
+      icon: tabler:sailboat
+content_downloads:
+  tagline: Centrum stahování
+  title: CAD ke stažení<br />Podle modelu a úrovně
+  subtitle: Vyberte model a získejte přístup k technickým výkresům. GA PDF a DXF/DWG balíčky jsou zdarma — odkaz ke stažení je doručen e-mailem po krátkém kvalifikačním formuláři; Soubory STEP vyžadují schválení projektu.
+  models:
+    - name: AF580 RIB
+      length: 5,8 m
+      category: RIB
+      downloads:
+        - tier: Úroveň 1 – PDF
+          format: PDF
+          file: Aquafarer_RIB_AF580_General-Arrangement_Rev-A.pdf
+          size: ~1,2 MB
+          access: formulář
+          url: /technical-drawings#cad-form
+        - tier: Úroveň 1 – PDF
+          format: PDF
+          file: Aquafarer_RIB_AF580_4-View-Dimensions_Rev-A.pdf
+          size: ~0,8 MB
+          access: formulář
+          url: /technical-drawings#cad-form
+        - tier: Úroveň 2 – DXF
+          format: DXF
+          file: Aquafarer_RIB_AF580_2D-Planning-Pack_Rev-A.dxf
+          size: ~3,5 MB
+          access: formulář
+          url: /technical-drawings#cad-form
+        - tier: Úroveň 3 — KROK
+          format: KROK
+          file: Aquafarer_RIB_AF580_3D-Model_Rev-A.step
+          size: ~15 MB
+          access: projekt
+          url: /request-quotation
+    - name: AF520 RIB
+      length: 5,2 m
+      category: RIB
+      downloads:
+        - tier: Úroveň 1 – PDF
+          format: PDF
+          file: Aquafarer_RIB_AF520_General-Arrangement_Rev-A.pdf
+          size: ~1,0 MB
+          access: formulář
+          url: /technical-drawings#cad-form
+        - tier: Úroveň 1 – PDF
+          format: PDF
+          file: Aquafarer_RIB_AF520_4-View-Dimensions_Rev-A.pdf
+          size: ~0,7 MB
+          access: formulář
+          url: /technical-drawings#cad-form
+        - tier: Úroveň 2 – DXF
+          format: DXF
+          file: Aquafarer_RIB_AF520_2D-Planning-Pack_Rev-A.dxf
+          size: ~3,0 MB
+          access: formulář
+          url: /technical-drawings#cad-form
+    - name: AF430 RIB
+      length: 4,3 m
+      category: RIB
+      downloads:
+        - tier: Úroveň 1 – PDF
+          format: PDF
+          file: Aquafarer_RIB_AF430_General-Arrangement_Rev-A.pdf
+          size: ~0,9 MB
+          access: formulář
+          url: /technical-drawings#cad-form
+        - tier: Úroveň 1 – PDF
+          format: PDF
+          file: Aquafarer_RIB_AF430_4-View-Dimensions_Rev-A.pdf
+          size: ~0,6 MB
+          access: formulář
+          url: /technical-drawings#cad-form
+    - name: AF380 nafukovací
+      length: 3,8 m
+      category: Nafukovací člun
+      downloads:
+        - tier: Úroveň 1 – PDF
+          format: PDF
+          file: Aquafarer_IB_AF380_General-Arrangement_Rev-A.pdf
+          size: ~0,8 MB
+          access: formulář
+          url: /technical-drawings#cad-form
+        - tier: Úroveň 1 – PDF
+          format: PDF
+          file: Aquafarer_IB_AF380_Packed-Dimensions_Rev-A.pdf
+          size: ~0,5 MB
+          access: formulář
+          url: /technical-drawings#cad-form
+    - name: AF320 nafukovací
+      length: 3,2 m
+      category: Nafukovací člun
+      downloads:
+        - tier: Úroveň 1 – PDF
+          format: PDF
+          file: Aquafarer_IB_AF320_General-Arrangement_Rev-A.pdf
+          size: ~0,7 MB
+          access: formulář
+          url: /technical-drawings#cad-form
+content_version_control:
+  tagline: Kontrola verzí
+  title: Verze výkresu<br />Správa
+  subtitle: Každý výkres se řídí systémem řízených revizí. Před použitím výkresů pro plánování projektu vždy ověřte, že máte aktuální revizi.
+  items:
+    - title: Sledování revizí
+      description: Každý výkres nese kód revize (Rev-A, Rev-B, Rev-C), datum vydání, datum poslední revize, použitelný model/konfiguraci, jednotky, velikost souboru a formát. Ke stažení je k dispozici pouze "Aktuální" revize.
+      icon: tabler:git-branch
+    - title: Oznámení o stavu výkresu
+      description: Všechny veřejné výkresy jsou označeny "Pouze předběžné rozvržení — ne pro konstrukci, certifikaci nebo výrobní použití. Rozměry podléhají konečné specifikaci a potvrzení objednávky." To chrání obě strany před nesprávným použitím.
+      icon: tabler:alert-circle
+    - title: Aktualizovat oznámení
+      description: Když se změní specifikace modelu, aktualizuje se revize výkresu a předchozí verze jsou označeny jako „Nahrazeno“. Registrovaní uživatelé, kteří si stáhli balíčky DXF/DWG, jsou informováni o významných aktualizacích prostřednictvím e-mailu.
+      icon: tabler:bell
+faq:
+  title: Technické výkresy — Často kladené otázky
+  questions:
+    - q: Jsou GA PDF opravdu zdarma?
+      a: Ano. Soubory PDF s obecnými podmínkami pro naše hlavní modely jsou k dispozici zdarma – vyplňte níže uvedený krátký kvalifikační formulář a odkaz ke stažení vám bude doručen e-mailem do 1 pracovního dne. Obsahují informace na úrovni plánování dostatečné pro vyhodnocení projektu, přidělení prostoru a předběžné přezkoumání specifikací.
+    - q: Jak získám přístup k souborům DXF/DWG?
+      a: Vyplňte krátký kvalifikační formulář na stránce stahování s názvem vaší společnosti, typem projektu a zamýšleným použitím. Schválené žádosti obdrží odkaz ke stažení e-mailem do 1 pracovního dne.
+    - q: Mohu získat 3D modely STEP/IGES?
+      a: Soubory 3D modelů STEP nebo IGES jsou k dispozici prostřednictvím našeho procesu projektové žádosti. Uveďte rozsah projektu, požadavky na integraci, časovou osu a záměr nákupu. Podléhá schválení – obvykle do 3–5 pracovních dnů.
+    - q: Proč omezujete přístup k souborům s vyššími detaily?
+      a: Geometrie trupu, údaje o formách a strukturální výpočty představují roky investic do výzkumu a vývoje a jsou hlavním výrobním IP. Poskytujeme vše potřebné pro plánování nákupu a integraci projektů a zároveň chráníme naši schopnost pokračovat v investicích do vývoje nových produktů.
+    - q: Obsahují výkresy výrobní detaily?
+      a: Ne. Veřejné výkresy a výkresy v lehké formě obsahují informace na úrovni nákupu pro plánování a specifikaci. Podrobnosti na úrovni výroby (plány laminace, dráhy nástroje, rozšíření řezání) jsou sdíleny pouze v rámci NDA s potvrzenými objednávkami.
+    - q: Jsou k dispozici výkresy pro vlastní nebo semi-vlastní konfigurace RIB?
+      a: Vlastní projektové výkresy jsou připravovány jako součást vývojového procesu OEM/ODM. Pokud hodnotíte zakázkový projekt RIB, kontaktujte nás se svými požadavky a my jako součást návrhu poskytneme výkresy GA specifické pro daný projekt.
+cta:
+  title: Potřebujete technické výkresy pro svůj projekt RIB?
+  subtitle: Vyžádejte si výkresy GA, kótovací listy nebo soubory CAD specifické pro daný model pro vaše hodnocení a integraci.
+  actions:
+    - variant: primary
+      text: Vyžádejte si technické výkresy
+      href: /contact
+    - text: Zobrazit OEM/ODM služby
+      href: /oem-odm-rib-boats
+

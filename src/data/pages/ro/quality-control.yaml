@@ -1,0 +1,137 @@
+hero:
+  tagline: Controlul calității
+  title: Sistem de control al calității<br />pentru OEM Producție Marină
+  subtitle: Proces de inspecție în mai multe etape care acoperă materialele primite, producția în curs, testarea presiunii, asamblarea finală și verificarea înainte de expediere. Fiecare lot este trasabil, fiecare test este înregistrat.
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-pressure-testing.webp
+    alt: Aquafarer proces de control al calității și testare a presiunii
+stats:
+  title: Controlul calității prin cifre
+  stats:
+    - title: Unități testate sub presiune
+      amount: 100%
+    - title: Cădere maximă de presiune
+      amount: <5%
+    - title: Inspectorii de control al calității
+      amount: '12'
+    - title: Înregistrări Păstrate
+      amount: 10 ani
+content_system:
+  tagline: Prezentare generală a sistemului QC
+  title: Calitate integrată<br />Cadru de control
+  subtitle: Sistemul nostru de control al calității funcționează independent de producție și raportează direct managementului. Niciun lot nu este expediat fără eliberarea calității semnată de laboratorul de calitate.
+  items:
+    - title: Laborator de Calitate Independent
+      description: Laboratorul nostru de calitate funcționează ca o funcție separată de producție. Inspectorii QC raportează Managerului de Calitate, nu Directorului de Producție. Această independență organizațională asigură faptul că deciziile privind calitatea sunt luate obiectiv — termenele de producție nu prevalează niciodată asupra cerințelor de calitate.
+      features:
+        - Raportează direct conducerii, independent de producție
+        - Autorizat să oprească producția din cauza problemelor de calitate
+        - 12 inspectori QC dedicați în toate etapele
+        - Toate echipamentele de testare sunt calibrate anual
+    - title: Trasabilitatea lotului
+      description: Fiecare lot de materie primă primește un număr unic de lot în sistemul nostru ERP. De la sosirea materialului, prin producție, până la produsul finit, fiecare fișă a materialului fiecărei bărci se leagă înapoi de loturile originale ale furnizorului. Acest lucru permite trasabilitate completă în sus pentru orice întrebare legată de calitate sau conformitate.
+      features:
+        - Urmărirea loturilor bazată pe ERP, de la material la produsul finit
+        - Etichete fizice de lot pe fiecare ordin de lucru
+        - Acoperire completă a materialului de 100% — PVC, Hypalon, hardware, adezivi
+        - Înregistrări păstrate timp de 10 ani (CE cerința 2013/53/UE)
+    - title: Standarde și conformitate
+      description: Procedurile noastre de control al calității sunt aliniate cu standardele internaționale. Produsele sunt CE certificate conform Directivei UE privind navele de agrement 2013/53/UE. Sistemul nostru de management al calității este certificat ISO 9001. Conformitatea socială este menținută prin certificarea BSCI.
+      features:
+        - certificare CE (UE 2013/53/UE)
+        - ISO 9001:2015 managementul calității
+        - BSCI Certificarea conformității sociale
+        - REACH și RoHS conformitatea materialelor
+        - UKCA Certificarea post-Brexit
+content_inspection:
+  tagline: Etapele de inspecție
+  title: Șase Etape<br />Procesul de inspecție
+  subtitle: Fiecare produs trece prin 6 etape de inspecție cu puncte de control QC documentate. Defectele sunt depistate devreme, acțiunile corective sunt imediate, iar fiecare lot este complet trasabil.
+  stages:
+    - stage: '1'
+      title: Inspecția materialelor de sosire
+      description: Toate materialele primite sunt înregistrate după lot/număr de lot și puse în carantină până la aprobarea controlului calității. PVC/Hypalon rolele de material textil sunt testate pentru rezistență la tracțiune (ASTM D751), rezistență la rupere (ISO4674) și grosime.Drop-stitch Miezurile, supapele, adezivurile și materialele sunt inspectate vizual și măsurate conform specificațiilor.
+      checks: Rezistență la tracțiune ASTM D751, rezistență la ISO ruptură 4674, indicator de grosime, vâscozitate adezivă, scanare a defectelor vizuale
+      threshold: 100% dintre loturi au fost testate. Se respinge dacă rezistența la tracțiune < 90% din specificație, ruperea < minimul specificației sau există vreun defect vizual
+    - stage: '2'
+      title: Controlul calității în proces — Tăiere și pregătire
+      description: CNC- panourile tăiate sunt verificate dimensional față de fișierele sursă CAD la fiecare 20 de panou. Calitatea marginilor este inspectată pentru destrămare, tăieturi inegale sau derive dimensionale. Numărul panourilor este verificat în raport cu BOM pentru fiecare lot de producție înainte ca materialele să treacă la sudură.
+      checks: Verificarea dimensională față de fișierele CAD DXF, inspecția calității muchiilor, verificarea numărului de panouri
+      threshold: Toleranță ±0,5mm. Respinge lotul dacă >2% din toleranță
+    - stage: '3'
+      title: Controlul calității în proces — Sudură și lipire
+      description: În timpul producției, calitatea sudurii este monitorizată continuu. Testele de peeling (ASTM D751) se efectuează pe probe la fiecare 50 de unități. Lățimea sudurii este măsurată în raport cu specificațiile. Jurnalele de temperatură a aerului cald sunt revizuite pentru consistență. Fiecare îmbinare este inspectată vizual sub iluminare din spate pentru canalizări sau goluri.
+      checks: Test de decolare ASTM D751 la fiecare 50 de unități, măsurarea lățimii sudurii, revizuirea registrului temperaturii aerului cald, inspecția cusăturilor de iluminare din spate
+      threshold: Rezistența la cojire minim 8 N/cm. Toleranța lățimii ±sudurii 1 mm. Orice canalizare vizibilă = respingere
+    - stage: '4'
+      title: Controlul calității asamblării
+      description: Fiecare unitate urmează o listă de verificare a asamblării în 100 de puncte, aprobată de liderul echipei. Funcționarea supapelor este testată prin 10 cicluri de deschidere/închidere. Cuplul hardware este verificat. Inspecția vizuală acoperă finisajul suprafeței, consistența culorii, plasarea etichetei și completitudinea accesoriilor.
+      checks: Listă de verificare de 100 de puncte per unitate, test de funcție al supapelor, verificare cuplu hardware, inspecție vizuală
+      threshold: 'Politică zero-defect pentru articole critice pentru siguranță (supape, inele D, mânere). Cosmetic minor: AQL 2,5 (ISO 2859)'
+    - stage: '5'
+      title: Testarea Presiunii
+      description: Fiecare cameră este umflată la o presiune nominală de 1,25× și menținută timp de 24-48 de ore. Senzorii de presiune înregistrează continuu pe toată durata perioadei de păstrare. Citirile compensate de temperatură asigură acuratețea. Orice cameră care depășește o cădere de presiune de 5% este respinsă și trimisă la reinspecție a cusăturii cu retestare 100% a întregului lot de producție.
+      checks: Jurnal de menținere a presiunii pe 24-48 de ore, calibrarea senzorului verificată zilnic, citire compensată de temperatură, retestare a cusăturii după reparație
+      threshold: Scădere maximă de 5% a presiunii pe 24 de ore la temperatura stabilă. Depășire = 100% retestare a întregului lot
+    - stage: '6'
+      title: Inspecția finală și eliberarea expedierii
+      description: Inspecția vizuală și funcțională finală înainte de ambalare. Defectele de suprafață, consistența culorii, verificarea etichetei/BIN, integritatea ambalajului și completitudinea accesoriilor sunt verificate în raport cu comanda clientului. Unitățile sunt ambalate în vid, ambalate și paletizate. Este necesară aprobarea finală a controlului calității înainte ca orice produs să părăsească fabrica.
+      checks: Inspecție vizuală completă, listă de verificare a accesoriilor conform SKU, test de cădere a ambalajului (eșantion aleatoriu de 1 m), verificarea scanării etichetei/codului de bare
+      threshold: AQL 2,5 defecte majore, AQL 4,0 minore. Defecte de siguranță zero toleranță. 100% din unități inspectate vizual
+content_equipment:
+  tagline: Echipament de testare
+  title: Laborator QC<br />Echipamente
+  subtitle: Laboratorul nostru de calitate este echipat cu echipamente de testare specializate pentru verificarea materialelor, integritatea sudurilor și validarea performanței produsului.
+  columns: 3
+  items:
+    - title: Mașină de testare a tracțiunii
+      description: Măsoară rezistența la tracțiune și alungirea materialului conform ASTM D751. Utilizat pentru controlul calității la recepție al tuturor loturilor de materiale PVC, Hypalon și drop-stitch.
+      icon: tabler:scale
+    - title: Cameră de temperatură
+      description: Cameră de mediu pentru testarea rezistenței la UV (ASTM G154) și testarea flexibilității la temperaturi scăzute. Simulează condiții extreme de operare.
+      icon: tabler:temperature
+    - title: Senzori și înregistratoare de presiune
+      description: Senzori de presiune digitali cu înregistrare continuă a datelor pentru teste de retenție a aerului de 24-48 de ore. Compensați pentru temperatură pentru acuratețe.
+      icon: tabler:wind
+    - title: Banc de testare pentru desprindere
+      description: Echipamente calibrate de testare a dezlipirii pentru verificarea rezistenței cusăturii. Mostre aleatorii din fiecare lot de producție.
+      icon: tabler:files
+    - title: Tanc de detectare a scurgerilor
+      description: Rezervor de apă pentru testarea scurgerilor subacvatice a camerelor umflate. Detectarea vizuală a bulelor pentru verificarea integrității cusăturilor și a supapelor.
+      icon: tabler:ripple
+    - title: Instrumente de inspecție
+      description: Instrumente de măsurare calibrate — calibre de grosime, chei dinamometrice, șublere dimensionale, teste de duritate pentru stațiile de control al calității în producție.
+      icon: tabler:tools
+content_metrics:
+  tagline: Performanța QC
+  title: Controlul calității<br />Metrice
+  subtitle: Date reale de trecere/respingere de pe linia noastră de producție. Aceste metrici sunt monitorizate zilnic și revizuite lunar de conducere.
+  columns: 3
+  items:
+    - title: 100% Unități Testate
+      description: Fiecare cameră a fiecărei bărci este testată la presiune înainte de expediere. Nicio eșantionare - inspecție 100% a integrității presiunii.
+      icon: tabler:check
+    - title: <Scădere de presiune <5%
+      description: Pierdere maximă admisă de presiune pe o perioadă de 24-48 de ore la 1,25× presiunea nominală. Orice cameră care depășește acest prag declanșează retestarea lotului.
+      icon: tabler:gauge
+    - title: AQL 2,5
+      description: Nivel de calitate acceptabil pentru defecte majore conform standardului de eșantionare ISO 2859. Toleranță zero pentru defecte critice de siguranță.
+      icon: tabler:clipboard-check
+    - title: Reținere de 24-48 de ore
+      description: 'Durata menținerii presiunii variază în funcție de categoria de produs. RIB camere: 48 de ore. SUP și bărci pneumatice: 24-48 de ore.'
+      icon: tabler:clock
+    - title: 1,25× Presiune de test
+      description: Marjă de siguranță pentru fiecare cameră — testată la 25% peste presiunea nominală pentru a asigura o marjă peste condițiile maxime de funcționare.
+      icon: tabler:arrow-up
+    - title: 0% Defecte de siguranță
+      description: Politică de toleranță zero pentru defectele critice de siguranță — supape, inele D, cusături și camere de flotabilitate. Orice defect = 100% re-inspectare.
+      icon: tabler:shield
+cta:
+  title: Solicitați documentația de calitate
+  subtitle: Oferim pachete complete de documentație de calitate, inclusiv rapoarte de testare, certificate de materiale și declarații de conformitate pentru fiecare livrare. Contactați-ne pentru mostre.
+  actions:
+    - variant: primary
+      text: Solicitați documentația QC
+      href: /contact
+    - text: Vizualizați protocoalele de testare
+      href: /quality

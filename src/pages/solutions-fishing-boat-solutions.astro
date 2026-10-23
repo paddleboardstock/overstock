@@ -1,0 +1,69 @@
+---
+export const prerender = true;
+
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+
+const metadata = {
+  title: `Inflatable Boats & RIBs for Fishing Professionals — ${SITE.name}`,
+  description:
+    'Stable, fuel-efficient, and durable fishing boats for commercial and recreational fishing applications. Rod holders, fishfinders, bait wells — configured for your needs.',
+};
+const crumbs = [
+  { name: 'Home', href: '/' },
+  { name: 'Solutions', href: '/solutions/' },
+  { name: 'Fishing Boat Solutions' },
+];
+const ctaActions = [
+  { variant: 'primary' as const, text: 'Configure your fishing boat', href: '/contact' },
+  { text: 'View marine products', href: '/products' },
+];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <Hero
+    tagline="Fishing Operations"
+    title={'Inflatable Boats & RIBs<br />For Fishing Professionals'}
+    subtitle="Stable, fuel-efficient, and durable — Aquafarer fishing boats are built for long days on the water in commercial and recreational fishing applications."
+    image={{
+      src: 'https://assets.aquafarer.com/images/aquafarer/use-cases/aquafarer-professional-use-case.webp',
+      alt: 'Aquafarer inflatable boat configured for fishing operations',
+    }}
+  />
+  <Stats
+    title="Recommended Fishing Models"
+    stats={[
+      { title: 'AirDeck 360', amount: '3.6m — 6 persons' },
+      { title: 'RIB 390', amount: '3.9m — 6 persons' },
+      { title: 'RIB 480', amount: '4.8m — 8 persons' },
+      { title: 'RIB 520', amount: '5.2m — 10 persons' },
+    ]}
+  />
+  <Content
+    tagline="The Challenge"
+    title={'Fishing Boats Need<br />Stability, Range & Durability'}
+    subtitle="Whether you are running a charter fishing business or supplying commercial fisheries, your boat needs to perform reliably day after day."
+    content={'Fishing boats need stable platforms for working lines, handling catch, and moving around the deck safely. Inflatables and RIBs offer inherent stability through their tube design — a significant advantage over rigid hulls of similar length.\n\nFuel efficiency matters for fishing operations where operating costs directly impact profitability. RIBs and inflatable boats are lighter than equivalent rigid boats, requiring less power and burning less fuel.\n\nDurability in marine environments is essential. Saltwater, UV exposure, and constant use demand materials that can withstand harsh conditions without degradation.\n\nAquafarer fishing configurations include rod holders, fishfinders, bait wells, and storage solutions designed for serious fishing applications.'}
+  />
+  <Content
+    tagline="Our Solution"
+    title="Fishing-Ready Configurations"
+    subtitle="Every Aquafarer fishing boat can be configured for your specific fishing application."
+    content={'- Rod holder mounting — factory-installed or ready for aftermarket installation\n- Fishfinder/GPS mounting plate at console position\n- Bait well or livewell options for charter and commercial operators\n- Cooler/storage configurations for catch handling\n- Deep-V hull for offshore capability — stable at rest, smooth at speed\n- PVC or Hypalon tube options — Hypalon for extended UV exposure\n- Outboard range from 15 HP to 115 HP depending on model and application'}
+  />
+  <Content
+    tagline="Key Benefits"
+    title="Why Aquafarer for Fishing Operations"
+    subtitle="Fuel-efficient, stable fishing platforms trusted by commercial and charter operators worldwide."
+    content={'- Lightweight inflatable/RIB hull — better fuel efficiency than rigid boats\n- Stable platform — ideal for working lines and handling catch\n- Hypalon tube option for extended UV and saltwater exposure\n- Custom rod holder, fishfinder, bait well configurations\n- Outboard range from 15 HP to 115 HP for any application\n- CE-certified — meets European safety standards for commercial use'}
+  />
+  <CallToAction
+    title="Set up your fishing boat"
+    subtitle="Contact us with your fishing application, target species, and operating waters — we will recommend the right configuration."
+    actions={ctaActions}
+  />
+</Layout>

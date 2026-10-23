@@ -1,0 +1,169 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+
+const metadata = {
+  title: `Production Capacity — Inflatable Boat Factory Output & Lead Times | ${SITE.name}`,
+  description: `${SITE.name} factory capacity: 12,000 m² facility, 15,000 boats/year, 200-300 workers, 6 specialized workshops for SUP, RIB, dinghy, kayak, and safety equipment production. OEM order lead time 30–45 days.`,
+};
+
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Factory', href: '/factory' }, { name: 'Production Capacity' }];
+
+const highlights = [
+  { value: '12,000 m²', label: 'Total manufacturing floor', detail: 'Across 6 specialized workshops' },
+  { value: '15,000', label: 'Boats produced annually', detail: 'SUPs, kayaks, RIBs, dinghies, safety gear' },
+  { value: '200-300', label: 'Skilled workforce', detail: '25+ engineers, 2 shifts/day' },
+  { value: '50+', label: 'Export countries', detail: 'EU, US, AU, Middle East, Asia' },
+  { value: '30–45', label: 'Standard lead time (days)', detail: 'From PO confirmation to FOB' },
+  { value: '10+', label: 'Years of export experience', detail: 'Since 2012' },
+];
+
+const workshops = [
+  {
+    title: 'SUP Board Production',
+    description:
+      '4 parallel assembly lines for inflatable SUP boards. Each line can produce 50–80 boards per shift. Digital printing and screen printing stations run concurrently. Annual SUP capacity: 8,000+ boards.',
+    output: '8,000+ SUPs/year',
+  },
+  {
+    title: 'RIB Boat Production',
+    description:
+      'Dedicated fiberglass hull workshop with 6 mould stations for RIB hulls up to 7.6 m. Tube welding and assembly area handles 3–5 RIBs simultaneously. Annual RIB capacity: 2,000+ boats.',
+    output: '2,000+ RIBs/year',
+  },
+  {
+    title: 'Inflatable Boat & Dinghy',
+    description:
+      'Multi-purpose production lines for inflatable boats, kayaks, and dinghies. Hot-air welding stations, RF dielectric presses, and assembly workstations are reconfigured based on order mix. Annual capacity: 5,000+ units.',
+    output: '5,000+ units/year',
+  },
+  {
+    title: 'Safety Equipment',
+    description:
+      'Separate clean-room production area for life vests and safety equipment. Dedicated sewing, foam insertion, and testing stations. Annual life vest capacity: 50,000+ units.',
+    output: '50,000+ life vests/year',
+  },
+];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <meta name="ai-intent" content="inflatable-boat-factory-capacity,rib-boat-manufacturer-china,oem-boat-production" />
+  <section class="px-6 sm:px-6 py-16 sm:py-20 lg:py-24 mx-auto max-w-5xl text-center">
+    <a href="/factory" class="text-sm text-gray-500 hover:underline">&larr; Back to Factory</a>
+    <p class="mt-4 text-sm font-semibold text-primary uppercase tracking-wider">{SITE.name}</p>
+    <h1 class="mt-3 text-4xl md:text-5xl font-bold">Production Capacity</h1>
+    <p class="mt-3 text-lg text-muted">12,000 m² facility producing 15,000 boats per year with room to scale</p>
+  </section>
+
+  <section class="px-6 sm:px-6 pb-16 mx-auto max-w-4xl">
+    <p class="text-muted leading-relaxed">
+      {SITE.name} operates one of the largest dedicated inflatable boat manufacturing facilities in Qingdao, China. Our 12,000
+      m² factory is organized into six specialized workshops operating in parallel, giving us the capacity to produce over
+      15,000 boats annually across SUP, kayak, dinghy, RIB, and safety equipment lines.
+    </p>
+  </section>
+
+  <section class="px-6 sm:px-6 pb-8 mx-auto max-w-6xl">
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+      {
+        highlights.map((s) => (
+          <div class="text-center p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+            <span class="block text-3xl font-bold text-primary">{s.value}</span>
+            <span class="block text-sm text-muted mt-1">{s.label}</span>
+            <span class="block text-xs text-muted mt-1">{s.detail}</span>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="px-6 sm:px-6 py-16 mx-auto max-w-6xl">
+    <div class="text-center mb-12">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">By Product Line</p>
+      <h2 class="mt-2 text-3xl font-bold">Production Capacity by Category</h2>
+      <p class="mt-3 text-muted max-w-2xl mx-auto">
+        Dedicated production lines for each product category, running in parallel for maximum throughput.
+      </p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-6">
+      {
+        workshops.map((w) => (
+          <div class="p-6 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+            <div class="flex items-center justify-between mb-3">
+              <h3 class="text-xl font-bold">{w.title}</h3>
+              <span class="text-sm font-semibold text-primary">{w.output}</span>
+            </div>
+            <p class="text-sm text-muted leading-relaxed">{w.description}</p>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- OEM Capacity Table -->
+  <section class="px-6 sm:px-6 py-16 mx-auto max-w-5xl bg-gray-50 dark:bg-gray-900 rounded-2xl">
+    <div class="text-center mb-12">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">OEM Terms</p>
+      <h2 class="mt-2 text-3xl font-bold">OEM Production Terms</h2>
+      <p class="mt-3 text-muted max-w-2xl mx-auto">
+        Flexible terms designed for brands of all sizes — from startups to Fortune 500 retailers.
+      </p>
+    </div>
+    <div class="max-w-3xl mx-auto space-y-3">
+      <div
+        class="flex items-center justify-between p-4 rounded-lg bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800"
+      >
+        <span class="font-medium">Minimum Order Quantity</span>
+        <span class="text-sm text-muted text-right">SUP: 5–10 units | RIB: 2–5 units | Custom mould: 200+ units</span>
+      </div>
+      <div
+        class="flex items-center justify-between p-4 rounded-lg bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800"
+      >
+        <span class="font-medium">Standard Lead Time</span>
+        <span class="text-sm text-muted">30–45 days from PO confirmation</span>
+      </div>
+      <div
+        class="flex items-center justify-between p-4 rounded-lg bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800"
+      >
+        <span class="font-medium">Sample Lead Time</span>
+        <span class="text-sm text-muted">15–20 days</span>
+      </div>
+      <div
+        class="flex items-center justify-between p-4 rounded-lg bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800"
+      >
+        <span class="font-medium">Payment Terms</span>
+        <span class="text-sm text-muted">T/T 30% deposit + 70% before shipment</span>
+      </div>
+      <div
+        class="flex items-center justify-between p-4 rounded-lg bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800"
+      >
+        <span class="font-medium">Shipping Terms</span>
+        <span class="text-sm text-muted">FOB Qingdao, CIF, DDP available</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true">
+    <p>
+      {SITE.name} inflatable boat factory production capacity. 12,000 m² facility in Qingdao, China producing 15,000 boats
+      annually. Six workshops: SUP boards (8,000+/year), RIB boats (2,000+/year), inflatable boats and dinghies (5,000+/year),
+      safety equipment (50,000+ life vests/year). 200-300 skilled workers, 25+ engineers, 2 shifts per day. Standard OEM lead
+      time 30–45 days. Export to 50+ countries since 2012. RIB boat manufacturer China, inflatable boat factory, OEM boat
+      production capacity.
+    </p>
+  </section>
+
+  <section class="px-6 sm:px-6 py-16 mx-auto max-w-4xl text-center">
+    <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+      <h2 class="text-xl font-bold">Interested in our production capacity?</h2>
+      <p class="mt-2 text-sm text-muted">
+        Contact our sales team for current lead times and available production slots.
+      </p>
+      <a
+        href="/contact"
+        class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+        >Contact sales →</a
+      >
+    </div>
+  </section>
+</Layout>

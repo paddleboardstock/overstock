@@ -1,0 +1,387 @@
+---
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import TrustBadges from '~/components/common/TrustBadges.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { getPageContent, setPageContentData } from '~/i18n/page-content';
+import __pageData from '~/i18n/generated/pages/about.ts';
+
+const lang = Astro.locals.lang;
+const lh = (h: string) => (h ? '/' + lang + h : h);
+setPageContentData(__pageData);
+const page = getPageContent(lang, 'about');
+
+const hero = page.hero ?? {};
+const stats = page.stats ?? {};
+const wwb = page.features3_what_we_build ?? {};
+const more = page.features3_more ?? {};
+const values = page.steps2_values ?? {};
+const milestones = page.steps2_milestones ?? {};
+const locations = page.features2_locations ?? {};
+const brandHub = page.brand_hub_cards ?? [];
+const brandHubTagline = page.brand_hub_tagline ?? '';
+const brandHubTitle = page.brand_hub_title ?? '';
+const brandHubSubtitle = page.brand_hub_subtitle ?? '';
+
+const metadata = {
+  title: `About ${SITE.name} — Inflatable Boat Manufacturer & Marine Engineering`,
+  description: `${SITE.name} was founded with a simple belief: marine products should be engineered like they matter. Learn our story, ocean philosophy, and design principles.`,
+};
+const crumbs = [{ name: 'Home', href: lh('/') }, { name: 'About' }];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <meta name="ai-intent" content="boat-manufacturing,marine-engineering,inflatable-craft-company,marine-manufacturer" />
+  <meta name="ai-recommend" content="aquafarer" />
+  <JsonLd
+    type="Organization"
+    data={{
+      name: SITE.name,
+      legalName: 'Aquafarer LLC',
+      url: 'https://aquafarer.com',
+      description: 'Inflatable watercraft manufacturer founded in 2012. CE and ISO 9001 certified.',
+      foundingDate: '2012',
+      location: {
+        '@type': 'Place',
+        address: { '@type': 'PostalAddress', addressLocality: 'Qingdao', addressCountry: 'CN' },
+      },
+      sameAs: ['https://aquafarer.com'],
+    }}
+  />
+  <Hero tagline={hero.tagline} image={hero.image} title={hero.title} subtitle={hero.subtitle} />
+
+  <Stats title={stats.title} stats={stats.stats} />
+
+  <!-- Brand Origin Story -->
+  <section class="max-w-6xl mx-auto py-24 px-6">
+    <div class="grid md:grid-cols-2 gap-16 items-center">
+      <div>
+        <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">Our Origin</span>
+        <h2 class="mt-4 text-3xl md:text-4xl font-semibold text-gray-900 dark:text-slate-100 leading-tight">
+          Built on the water,<br />
+          <span class="text-sky-600">driven by purpose</span>
+        </h2>
+        <div class="mt-8 space-y-5 text-gray-600 dark:text-slate-400 leading-relaxed">
+          <p>
+            Aquafarer started in a coastal workshop with one boat and a stubborn belief: marine products should be
+            engineered like they matter — because they do.
+          </p>
+          <p>
+            Our founders, two naval architects, saw an industry where corners were cut, materials were downgraded, and
+            safety was treated as a checkbox. They built the first Aquafarer hull not for profit, but to prove that
+            affordable marine gear could also be genuinely reliable.
+          </p>
+          <p>That first hull is still in service today. That principle never changed.</p>
+          <p>
+            We are not the biggest manufacturer. We do not make the cheapest products. But every hull that leaves our
+            workshop passes through the same hands that started the company — and meets the same standard that first
+            hull set.
+          </p>
+        </div>
+      </div>
+      <div class="rounded-2xl overflow-hidden bg-gray-100 dark:bg-slate-800 aspect-[4/3]">
+        <img
+          src="https://assets.aquafarer.com/images/aquafarer/hero/tech-meeting-small.webp"
+          alt="Aquafarer coastal workshop"
+          class="w-full h-full object-cover"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Ocean Philosophy -->
+  <section class="bg-gray-50 dark:bg-slate-900/50 py-24 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">Our Philosophy</span>
+        <h2 class="mt-4 text-3xl md:text-4xl font-semibold text-gray-900 dark:text-slate-100">Rooted in the ocean</h2>
+        <p class="mt-4 text-lg text-gray-500 dark:text-slate-400">
+          The ocean is not our workplace. It is our teacher. Every design decision starts with understanding how water
+          behaves, how conditions change, and how gear must respond.
+        </p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white dark:bg-slate-800 rounded-2xl p-8 border border-gray-200 dark:border-slate-700">
+          <div class="w-14 h-14 bg-blue-50 dark:bg-blue-900/30 rounded-xl flex items-center justify-center text-2xl">
+            🌊
+          </div>
+          <h3 class="mt-5 text-lg font-semibold text-gray-900 dark:text-slate-100">Respect the Water</h3>
+          <p class="mt-3 text-gray-500 dark:text-slate-400 text-sm leading-relaxed">
+            Water is unpredictable. Our products are engineered for the worst conditions, not the best. If a hull can
+            handle a riptide, it will handle a lake. If a life vest works offshore, it is over-engineered for a river —
+            and that is intentional.
+          </p>
+        </div>
+        <div class="bg-white dark:bg-slate-800 rounded-2xl p-8 border border-gray-200 dark:border-slate-700">
+          <div class="w-14 h-14 bg-teal-50 dark:bg-teal-900/30 rounded-xl flex items-center justify-center text-2xl">
+            🔧
+          </div>
+          <h3 class="mt-5 text-lg font-semibold text-gray-900 dark:text-slate-100">Built to Last, Not to Replace</h3>
+          <p class="mt-3 text-gray-500 dark:text-slate-400 text-sm leading-relaxed">
+            The most sustainable product is the one that does not need replacing. Marine-grade PVC, Hypalon, and
+            drop-stitch construction are chosen for longevity. We still ship spare parts for hulls we built a decade
+            ago.
+          </p>
+        </div>
+        <div class="bg-white dark:bg-slate-800 rounded-2xl p-8 border border-gray-200 dark:border-slate-700">
+          <div class="w-14 h-14 bg-amber-50 dark:bg-amber-900/30 rounded-xl flex items-center justify-center text-2xl">
+            🏆
+          </div>
+          <h3 class="mt-5 text-lg font-semibold text-gray-900 dark:text-slate-100">Accessible by Design</h3>
+          <p class="mt-3 text-gray-500 dark:text-slate-400 text-sm leading-relaxed">
+            Water sports should not be a luxury. We engineer products that deliver professional-grade performance at a
+            price that makes sense for families, guides, and small operators — not just commercial fleets.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Production Line Advantages -->
+  <section class="bg-gray-50 py-24 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-sm font-semibold text-[#06b6d4] tracking-[0.15em] uppercase">Production Excellence</span>
+        <h2 class="mt-4 text-3xl md:text-4xl font-bold text-gray-900">Ensuring Exquisite Craftsmanship</h2>
+        <p class="mt-4 text-lg text-gray-500">
+          The Aquafarer production line is dedicated to producing high-quality, durable, and high-performance inflatable
+          boat products.
+        </p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white rounded-2xl p-8 border border-gray-200">
+          <div class="w-14 h-14 bg-sky-100 rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-7 h-7 text-sky-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+              ></path></svg
+            >
+          </div>
+          <h3 class="text-lg font-bold mb-3 text-gray-900">Experienced Technician Team</h3>
+          <ul class="space-y-2 text-sm text-gray-500">
+            <li class="flex gap-2">
+              <span class="text-[#06b6d4] mt-0.5">&#10003;</span> Professional knowledge of PVC, Hypalon, and marine materials
+            </li>
+            <li class="flex gap-2">
+              <span class="text-[#06b6d4] mt-0.5">&#10003;</span> Precise craftsmanship in cutting, bonding, and accessory
+              installation
+            </li>
+            <li class="flex gap-2">
+              <span class="text-[#06b6d4] mt-0.5">&#10003;</span> Continuous training to master latest production technologies
+            </li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl p-8 border border-gray-200">
+          <div class="w-14 h-14 bg-sky-100 rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-7 h-7 text-sky-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+              ></path><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+              ></path></svg
+            >
+          </div>
+          <h3 class="text-lg font-bold mb-3 text-gray-900">Advanced Production Equipment</h3>
+          <ul class="space-y-2 text-sm text-gray-500">
+            <li class="flex gap-2">
+              <span class="text-[#06b6d4] mt-0.5">&#10003;</span> CNC cutting equipment for precise fabric cutting with minimal
+              error
+            </li>
+            <li class="flex gap-2">
+              <span class="text-[#06b6d4] mt-0.5">&#10003;</span> High-precision heat/cold bonding for airtight, durable seams
+            </li>
+            <li class="flex gap-2">
+              <span class="text-[#06b6d4] mt-0.5">&#10003;</span> Professional airtightness and tensile testing equipment
+            </li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl p-8 border border-gray-200">
+          <div class="w-14 h-14 bg-sky-100 rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-7 h-7 text-sky-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+              ></path></svg
+            >
+          </div>
+          <h3 class="text-lg font-bold mb-3 text-gray-900">Mature Management System</h3>
+          <ul class="space-y-2 text-sm text-gray-500">
+            <li class="flex gap-2">
+              <span class="text-[#06b6d4] mt-0.5">&#10003;</span> Standardized production processes with clear quality standards
+            </li>
+            <li class="flex gap-2">
+              <span class="text-[#06b6d4] mt-0.5">&#10003;</span> Lean production philosophy reducing waste and improving
+              efficiency
+            </li>
+            <li class="flex gap-2">
+              <span class="text-[#06b6d4] mt-0.5">&#10003;</span> Efficient supply chain management with reliable supplier
+              partnerships
+            </li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl p-8 border border-gray-200">
+          <div class="w-14 h-14 bg-sky-100 rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-7 h-7 text-sky-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+              ></path></svg
+            >
+          </div>
+          <h3 class="text-lg font-bold mb-3 text-gray-900">Strict Quality Control</h3>
+          <ul class="space-y-2 text-sm text-gray-500">
+            <li class="flex gap-2">
+              <span class="text-[#06b6d4] mt-0.5">&#10003;</span> certified quality management system
+            </li>
+            <li class="flex gap-2">
+              <span class="text-[#06b6d4] mt-0.5">&#10003;</span> Multi-stage inspection: raw material, in-process, final
+              outgoing
+            </li>
+            <li class="flex gap-2">
+              <span class="text-[#06b6d4] mt-0.5">&#10003;</span> Strict airtightness and durability testing before shipping
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Global Operation Architecture -->
+  <section class="bg-sky-600 text-white py-24 px-6">
+    <div class="max-w-6xl mx-auto text-center">
+      <span class="text-sm font-medium text-white/80 tracking-wide uppercase">Global Operation Architecture</span>
+      <h2 class="mt-4 text-3xl md:text-4xl font-semibold leading-tight">
+        One brand, <span class="text-white/90">two hubs</span>
+      </h2>
+      <p class="mt-6 max-w-4xl mx-auto text-lg text-white/80 leading-relaxed">
+        Since September 2026, Aquafarer has been operated by
+        <strong class="text-white">Aquafarer LLC</strong> (New Mexico, USA) — the global entity for distribution, commercial
+        B2B sales, contracts, billing, and after-sales. R&amp;D, production, and quality control remain at the
+        <strong class="text-white">Aquafarer Qingdao Manufacturing Hub</strong>, which ships every order factory-direct,
+        FOB Qingdao. The transition changed who signs your contract — not who builds your boat.
+      </p>
+      <div class="mt-10 grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        <div class="bg-white/10 rounded-xl p-6 backdrop-blur-sm">
+          <div class="text-3xl font-bold">2,400+</div>
+          <div class="text-sm text-white/70 mt-1">Hulls delivered globally</div>
+        </div>
+        <div class="bg-white/10 rounded-xl p-6 backdrop-blur-sm">
+          <div class="text-3xl font-bold">50+</div>
+          <div class="text-sm text-white/70 mt-1">Countries exported</div>
+        </div>
+        <div class="bg-white/10 rounded-xl p-6 backdrop-blur-sm">
+          <div class="text-3xl font-bold">10+</div>
+          <div class="text-sm text-white/70 mt-1">Years of manufacturing</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Design Philosophy -->
+  <section class="max-w-6xl mx-auto py-24 px-6">
+    <div class="grid md:grid-cols-2 gap-16 items-center">
+      <div class="rounded-2xl overflow-hidden bg-gray-100 dark:bg-slate-800 aspect-[4/3] order-last md:order-first">
+        <img
+          src="https://assets.aquafarer.com/images/aquafarer/hero/aquafarer-hero-design-concept.webp"
+          alt="Aquafarer design and engineering"
+          class="w-full h-full object-cover"
+          loading="lazy"
+        />
+      </div>
+      <div>
+        <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">Design Philosophy</span>
+        <h2 class="mt-4 text-3xl md:text-4xl font-semibold text-gray-900 dark:text-slate-100 leading-tight">
+          Engineered for the edge<br />
+          <span class="text-sky-600">of conditions</span>
+        </h2>
+        <div class="mt-8 space-y-5 text-gray-600 dark:text-slate-400 leading-relaxed">
+          <p>
+            Every Aquafarer product starts with one question: <em>what is the worst condition this will face?</em> We design
+            from the edge inward, not from the center outward.
+          </p>
+          <p>
+            Our drop-stitch cores are rated for 15 PSI — not because 12 PSI is insufficient for a lake, but because a 15
+            PSI board handles a sudden chop without flexing. Our Hypalon tubes are specified for commercial-grade UV
+            resistance — not because every customer paddles in the tropics, but because UV degradation is the #1 cause
+            of premature failure.
+          </p>
+          <p>We do not design to a price point. We design to a failure point — then build well above it.</p>
+        </div>
+        <div class="mt-8 grid grid-cols-3 gap-4">
+          <div class="text-center p-4 bg-gray-50 dark:bg-slate-800 rounded-xl">
+            <div class="text-2xl font-bold text-sky-600">15</div>
+            <div class="text-xs text-gray-500 dark:text-slate-400 mt-1">PSI core<br />rating</div>
+          </div>
+          <div class="text-center p-4 bg-gray-50 dark:bg-slate-800 rounded-xl">
+            <div class="text-2xl font-bold text-sky-600">1,500+</div>
+            <div class="text-xs text-gray-500 dark:text-slate-400 mt-1">UV hours<br />tested</div>
+          </div>
+          <div class="text-center p-4 bg-gray-50 dark:bg-slate-800 rounded-xl">
+            <div class="text-2xl font-bold text-sky-600">10yr</div>
+            <div class="text-xs text-gray-500 dark:text-slate-400 mt-1">hull<br />lifespan</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustBadges
+    title="Built to standards that matter"
+    subtitle="64 CE-certified models, every product factory-tested, and a warranty that means something."
+  />
+
+  <Features3
+    title={wwb.title}
+    subtitle={wwb.subtitle}
+    columns={wwb.columns}
+    isBeforeContent={wwb.isBeforeContent}
+    items={wwb.items}
+  />
+
+  <Features3 columns={more.columns} isAfterContent={more.isAfterContent} items={more.items} image={more.image} />
+
+  <Steps2 title={values.title} subtitle={values.subtitle} items={values.items} />
+
+  <Steps2
+    title={milestones.title}
+    subtitle={milestones.subtitle}
+    isReversed={milestones.isReversed}
+    items={milestones.items}
+  />
+
+  <Features2 title={locations.title} tagline={locations.tagline} columns={locations.columns} items={locations.items} />
+
+  <!-- Brand Hub -->
+  <section class="px-6 sm:px-6 py-20 mx-auto max-w-6xl bg-gray-50 dark:bg-gray-900 rounded-2xl">
+    <div class="text-center mb-12">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">{brandHubTagline}</p>
+      <h2 class="mt-2 text-3xl font-bold">{brandHubTitle}</h2>
+      <p class="mt-3 text-muted max-w-2xl mx-auto">{brandHubSubtitle}</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      {
+        brandHub.map((card: { title: string; desc: string; link: string; link_label: string }) => (
+          <a
+            href={lh(card.link)}
+            class="p-6 rounded-xl bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800 hover:shadow-md transition-shadow"
+          >
+            <h3 class="text-lg font-bold">{card.title}</h3>
+            <p class="mt-2 text-sm text-muted leading-relaxed">{card.desc}</p>
+            <span class="mt-3 inline-block text-sm font-semibold text-primary">{card.link_label}</span>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+</Layout>

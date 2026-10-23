@@ -1,0 +1,195 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'sr' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">← Nazad na R &D centar</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Lab 04</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Hidrodinamički testni bazen</h1>
+      <p class="mt-3 text-lg text-muted">Validacija performansi pre prvog prototipa pune veličine</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-design-discussion-original.webp"
+        alt="Aquafarer ispitivanje performansi hidrodinamičkog ispitnog bazena"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Zašto testirati malu čamac u bazenu?</h2>
+  <p>
+    Postoji uobičajena zabluda da su hidrodinamička testiranja rezervisana za brodove za plovidbu okeanom. U stvarnosti,
+    performanse male planirajuće kobilice — kao što je 4–5 m RIB — zavise od njenog podvodnog oblika jednako kao što
+    tanker zavisi od svog lukobroda. Ugao trimovanja, površina u dodiru sa vodom, stvaranje prskanja i ventilacija svi
+    imaju dramatičan uticaj na brzinu, potrošnju goriva i udobnost vožnje. U{SITE.name}, upravljamo posvećenim
+    hidrodinamičkim test bazenom koji nam omogućava da kvantifikujemo ove efekte u razmeri modela — pre nego što se
+    odlučimo za metal i krpu kod prototipa pune veličine.
+  </p>
+  <p>
+    Testiranje na nivou modela (obično 1:3 do 1:5) daje nam mogućnost da brzo i ekonomično menjamo oblike trupa. Nedelja
+    u bazenu može proizvesti iste podatke o performansama koje bi zahtevale mesece pokušaja i grešaka u punoj skali — i
+    to uz delić troškova.
+  </p>
+
+  <h2>Specifikacije objekta</h2>
+  <table>
+    <thead><tr><th>Parametar</th><th>Specifikacija</th></tr></thead>
+    <tbody>
+      <tr><td>Dimenzije bazena</td><td>35 m (D) × 3,5 m (Š) × 1,8 m (V)</td></tr>
+      <tr
+        ><td>Prikolica za vuču</td><td
+          >Električna s servo pogonom, maksimalna brzina 12 m/s (23 čv), tačnost brzine ± 0,5 %</td
+        ></tr
+      >
+      <tr
+        ><td>Generator talasa</td><td
+          >Tipa krila (flap), programabilni regularni i neregularni morski talasi, Hs do 0,3 m na nivou modela</td
+        ></tr
+      >
+      <tr
+        ><td>Instrumentacija</td><td
+          >6-komponentni dinamometar (otpor, bočna sila, moment kursa), akcelerometri, inklinomeri, meriči talasa</td
+        ></tr
+      >
+      <tr
+        ><td>Prikupljanje podataka</td><td>Uzorak 1000 Hz po kanalu, real-time prikaz + softver za post-procesiranje</td
+        ></tr
+      >
+      <tr><td>Izrada modela</td><td>Unutrašnja CNC obrada i 3D štampa za modele trupova do 1,8 m LOA</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Naš program testiranja</h2>
+  <p>Standardni program razvoja trupa u našem bazenu sledi ovu sekvencu:</p>
+  <ol>
+    <li>
+      <strong>Izrada modela</strong>— Model u razmeri 1:3,5 CNC obrađen od foam visokog gustine i ojačan staklom za
+      čvrstoću. Težina i CG se podešavaju da odgovaraju Froudovoj razmeri pune teretne ekipe.
+    </li>
+    <li>
+      <strong>Merenje otpora</strong>— Model se vuče pri 8–10 brzina koje pokrivaju operativni opseg. Ukupni otpor se
+      meri i razlaže na trenje i rezidualne komponente pomoću ITTC-1957 metode.
+    </li>
+    <li>
+      <strong>Merenje trimovanja i potonulosti</strong>— Radni trim i potonulost se beleže pri svakoj brzini. Cilj je
+      optimalni ugao trimovanja od 4-6° za planirajuće trupove.
+    </li>
+    <li>
+      <strong>Istraživanje buđenja</strong>— Poprečni talasni rezovi se mere na dve brzine kako bi se procenio otpor
+      talasa i identifikovale interakcije poprečnih talasa koje bi mogle izazvati stroge smetnje.
+    </li>
+    <li>
+      <strong>Pomorstvo (opcionalno)</strong>— Head-more i sledeće-more teče u pravilnim talasima za merenje dodatnog
+      otpora, vertikalnog ubrzanja i verovatnoće udaranja.
+    </li>
+    <li>
+      <strong>Analiza podataka i preporuke</strong>— Kompletan izveštaj se isporučuje sa uporednim grafikonima,
+      krivuljama brzine / snage i specifičnim preporukama za dizajn trupa u punom obimu.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Tipični rezultati testiranja tenkova — Otpor vs brzina (RIB450 trup, 1:3.5 skala)
+    </p>
+    <div class="space-y-2">
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">5 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:18%"></div>
+        </div><span class="w-16 text-right">42 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">10 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:35%"></div>
+        </div><span class="w-16 text-right">81 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">15 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:52%"></div>
+        </div><span class="w-16 text-right">121 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">20 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:68%"></div>
+        </div><span class="w-16 text-right">158 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">25 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:85%"></div>
+        </div><span class="w-16 text-right">197 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">30 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:100%"></div>
+        </div><span class="w-16 text-right">232 N</span>
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      Otpor modela skale (N) pri brzinama Froude-skaliranim. Predviđanje snage u punom obimu prati ITTC-1978 metod
+      predviđanja performansi.
+    </p>
+  </div>
+
+  <h2>Stručni tim</h2>
+  <p>
+    Našim rezervoarom upravlja hidrodinamičar sa doktoratom iz pomorske arhitekture i KSNUMKS godina iskustva u vuči
+    rezervoara na velikom evropskom pomorskom istraživačkom institutu. On je podržan od strane tehničara koji priprema
+    sve modele i instrumente. Tim prati ITTC (Međunarodna konferencija o vučnim rezervoarima) Preporučene procedure kako
+    bi se osiguralo da je svaki test ponovljiv, sledljiv i međunarodno odbranjiv.
+  </p>
+
+  <h2>Testiranje rezervoara za razvoj trupa po narudžbi</h2>
+  <p>
+    Naš rezervoar se ne koristi samo za trupove dizajnirane u kući - redovno vodimo programe testiranja za klijente koji
+    žele da potvrde prilagođeni oblik trupa ili istraže problem sa performansama:
+  </p>
+  <ul>
+    <li>
+      <strong>Upoređivanje oblika trupa</strong>— Dva ili više oblika trupa kandidata testiranih pod identičnim
+      uslovima, pružajući objektivno poređenje otpora / brzine / stabilnosti kako bi informisali vaš izbor dizajna.
+    </li>
+    <li>
+      <strong>Optimizacija dodatka</strong>— Presretačke ploče, šine za prskanje, trim jezičci i trake mogu se testirati
+      u različitim konfiguracijama kako bi se kvantifikovao njihov individualni doprinos smanjenju otpora.
+    </li>
+    <li>
+      <strong>Studija podudaranja motora</strong>— Podaci o otporu se pretvaraju u krivulju predviđanja snage,
+      omogućavajući vam da izaberete optimalnu konjsku snagu motora za vašu ciljnu brzinu i nosivost.
+    </li>
+  </ul>
+
+  <h2>Zašto testirati kod nas?</h2>
+  <p>
+    Mi vam ne dajemo samo skup sirovih brojeva. Naši izveštaji prevode podatke o rezervoaru u delotvorne inženjerske
+    preporuke: "Podignite sprej-šinu za 8 mm da biste smanjili vlažnu površinu pri brzini krstarenja", "Povećajte mrtvi
+    porast na krmenom zrcaku za 3 ° da biste smanjili ubrzanje zalupljavanja", ili "Pomerite uzdužni centar gravitacije
+    150 mm krme za poboljšani stav planiranja". Odlazite sa jasnim razumevanjem šta da promenite i zašto.
+  </p>
+  <p>
+    Naš rezervoar je takođe dostupan za nezavisno testiranje treće strane na osnovu naknade za uslugu. Ako razvijate
+    trup i želite nepristrasnu, profesionalno izvedenu hidrodinamičku procenu, pozdravljamo vaš upit.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Rezervišite sesiju testiranja rezervoara</h2>
+    <p class="mt-2 text-sm text-muted">
+      Bez obzira da li vam je potreban kompletan razvojni program ili jedan uporedni test, možemo prilagoditi vaš
+      raspored.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Kontaktirajte naš tim za hidrodinamiku</a
+    >
+  </div>
+</section>

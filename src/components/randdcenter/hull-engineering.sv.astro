@@ -1,0 +1,175 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'sv' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">← Tillbaka till R&amp;D Center</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Lab 02</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Hull Engineering Studio</h1>
+      <p class="mt-3 text-lg text-muted">Digital simulering, strukturell intelligens, anpassad skrovdesign</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/design discussaquafarer-inflatable-boat-aquafarer-factory-exterior.webp"
+        alt="Aquafarer skrovteknik CAD-design arbetsstation"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Där styrka möter hydrodynamik</h2>
+  <p>
+    Skrovet är ryggraden i alla RIB eller uppblåsbara båtar. Den måste vara tillräckligt lätt för att hyvla effektivt,
+    stark nog att absorbera stötbelastningar och dimensionsstabil över ett brett temperaturområde. På {SITE.name},
+    kombinerar vår Hull Engineering Studio avancerad CAD-modellering, finita elementanalys (FEA) och decennier av
+    praktisk erfarenhet av marinarkitektur för att leverera skrov som är optimerade för sitt avsedda uppdrag – inte
+    generiska former anpassade från en katalog.
+  </p>
+  <p>
+    Vi arbetar med tre primära skrovmaterial – rotationsgjuten HDPE, svetsad aluminium av marin kvalitet och handlagt
+    glasfiber – och har den tekniska förmågan att designa, simulera och validera var och en internt.
+  </p>
+
+  <h2>Designverktyg och standarder</h2>
+  <p>Vår digitala ingenjörsmiljö inkluderar:</p>
+  <table>
+    <thead><tr><th>Förmåga</th><th>Programvara / Verktyg</th><th>Ansökan</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>3D parametrisk modellering</td><td>SolidWorks Professional</td><td
+          >Skrovyta, stringersystem, motorfäste, däckslayout</td
+        ></tr
+      >
+      <tr
+        ><td>Finita elementanalys</td><td>ANSYS Mekanisk &amp; LS-DYNA</td><td
+          >Stresskartläggning, modalanalys, krasch/påverkanssimulering</td
+        ></tr
+      >
+      <tr
+        ><td>Beräkningsvätskedynamik</td><td>Ansys Fluent / Star-CCM+</td><td
+          >Hydrodynamisk dragförutsägelse, trimoptimering</td
+        ></tr
+      >
+      <tr><td>Laminatteknik</td><td>ESAComp / CADEC</td><td>Glasfiberlager stapling, kärnval, viktuppskattning</td></tr>
+      <tr
+        ><td>Simulering av mögelflöde</td><td>Moldex3D</td><td>Förutsägelse av rotationsgjutning av väggtjocklek</td
+        ></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>Vårt tekniska arbetsflöde</h2>
+  <p>
+    Varje skrovdesign, oavsett om det är en standardmodell eller ett helt anpassat projekt, följer en rigorös process i
+    fem steg:
+  </p>
+  <ol>
+    <li>
+      <strong>Koncept &amp; kravsamling</strong> — Vi träffar dig för att definiera nyttolast, hastighetsområde, sjötillståndskapacitet,
+      bogseringskrav och all speciell uppdragsutrustning (däcksluckor, konsolpositioner, bränsletankintegration).
+    </li>
+    <li>
+      <strong>3D-beläggning och hydrostatisk beräkning</strong> — Skrovformen är modellerad i SolidWorks och kontrollerad
+      för hydrostatisk stabilitet (GM, rätande arm) med inbyggda analysverktyg.
+    </li>
+    <li>
+      <strong>Strukturell FEA</strong> — Belastningsfall definieras: statiska (besättning + redskap), dynamiska (planande
+      stötar vid 5 g) och smällande (fall från en vågtopp vid 3 m/s). Stresskonturer ses över; säkerhetsfaktor ≥ 2.5 är obligatorisk.
+    </li>
+    <li>
+      <strong>CFD-dragoptimering</strong> — Skrovet simuleras vid tre lastningsförhållanden och fem hastigheter. Våt yta,
+      trimningsvinkel och restmotstånd reduceras iterativt.
+    </li>
+    <li>
+      <strong>Designgranskning &amp; release</strong> — Det kompletta ingenjörspaketet (3D-modell, FEA-rapport, CFD-rapport,
+      viktuppskattning, lagerbok) granskas av vår senior marinarkitekt innan den släpps till prototypverkstaden.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      FEA Stress Distribution — RIB 450 Patrullskrov (aluminium 5083)
+    </p>
+    <div class="grid grid-cols-2 gap-4 text-sm">
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">2.8 : 1</span>
+        <span class="text-gray-500">Säkerhetsfaktor vid max nyttolast</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">15.2 %</span>
+        <span class="text-gray-500">Drag reduktion jämfört med föregående generation</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">87 kN/m&sup2;</span>
+        <span class="text-gray-500">Högsta smälltryck (designgräns)</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">18 000 h</span>
+        <span class="text-gray-500">Kumulativ FEA-körtid i 2025</span>
+      </div>
+    </div>
+  </div>
+
+  <h2>Anpassning: ditt skrov, dina regler</h2>
+  <p>
+    Inga två operatörer har identiska krav. En hamnpatrull RIB behöver ett grunt V-skrov för stabilitet vid låg
+    hastighet; en snabbavlyssningsfarkost behöver ett djupt V med sprayskenor; en dykstödsbåt behöver en bred stråle och
+    en låg akterspegel. Vi tvingar inte din ansökan till en redan existerande skrovform. Vi designar från din
+    specifikation och uppåt.
+  </p>
+  <p>Exempel på senaste skrovtekniska projekt:</p>
+  <ul>
+    <li>
+      Ett sträckt 6.8 m HDPE-skrov för en karibisk researrangör, med en förstärkt bog för strandlandningar (+15 %
+      bottentjocklek).
+    </li>
+    <li>
+      En lätt aluminium 7.2 m RIB för en kustbevakning, med integrerade bränsletankbafflar och förstyvningar för
+      utrustningsskåp.
+    </li>
+    <li>
+      En dykbåt av glasfiber 5.5 m med en nedskuren akterspegel och dubbla batterilådor, designad för enkel
+      ombordstigning av snorklare.
+    </li>
+  </ul>
+
+  <h2>Våra ingenjörer</h2>
+  <p>
+    Studion leds av en senior marinarkitekt med 14 års erfarenhet av höghastighetshantverksdesign, med stöd av två
+    mekaniska ingenjörer specialiserade på FEA och CFD. Alla tre har avancerade grader i marinteknik eller
+    marinarkitektur från internationellt erkända universitet. Teamet publicerar regelbundet i branschtidskrifter och
+    presenterar vid konferenser som International Conference on High-Performance Marine Vehicles.
+  </p>
+
+  <h2>Samarbeta med oss på ditt nästa skrov</h2>
+  <p>
+    Från den första konceptskissen till den slutliga stressrapporten är vår Hull Engineering Studio din partner för att
+    skapa en båt som inte bara är byggd – utan konstruerad. Vi investerar simuleringstimmarna i förväg så att varje
+    svets, varje laminatlager och varje kurva i skrovet finns där av en anledning.
+  </p>
+  <p>
+    Oavsett om du behöver en mindre modifiering av en befintlig modell eller en helt ren design, är vi redo att
+    diskutera dina krav.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Starta din konsultation för skrovdesign</h2>
+    <p class="mt-2 text-sm text-muted">
+      Berätta för oss om din uppdragsprofil så kommer vi att föreslå en ingenjörsväg.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Kontakta vårt ingenjörsteam</a
+    >
+  </div>
+</section>

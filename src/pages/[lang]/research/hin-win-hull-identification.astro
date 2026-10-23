@@ -1,0 +1,470 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { languages, defaultLang } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+import LDe from '~/components/research/hin-win-hull-identification.de.astro';
+import LEs from '~/components/research/hin-win-hull-identification.es.astro';
+import LFr from '~/components/research/hin-win-hull-identification.fr.astro';
+import LIt from '~/components/research/hin-win-hull-identification.it.astro';
+import LCs from '~/components/research/hin-win-hull-identification.cs.astro';
+import LSv from '~/components/research/hin-win-hull-identification.sv.astro';
+import LDa from '~/components/research/hin-win-hull-identification.da.astro';
+import LEl from '~/components/research/hin-win-hull-identification.el.astro';
+import LNo from '~/components/research/hin-win-hull-identification.no.astro';
+import LRu from '~/components/research/hin-win-hull-identification.ru.astro';
+import LNl from '~/components/research/hin-win-hull-identification.nl.astro';
+import LFi from '~/components/research/hin-win-hull-identification.fi.astro';
+import LPl from '~/components/research/hin-win-hull-identification.pl.astro';
+import LAr from '~/components/research/hin-win-hull-identification.ar.astro';
+import LPt from '~/components/research/hin-win-hull-identification.pt.astro';
+import LJa from '~/components/research/hin-win-hull-identification.ja.astro';
+import LMs from '~/components/research/hin-win-hull-identification.ms.astro';
+import LRo from '~/components/research/hin-win-hull-identification.ro.astro';
+import LSk from '~/components/research/hin-win-hull-identification.sk.astro';
+import LSl from '~/components/research/hin-win-hull-identification.sl.astro';
+import LSr from '~/components/research/hin-win-hull-identification.sr.astro';
+import LTh from '~/components/research/hin-win-hull-identification.th.astro';
+import LTl from '~/components/research/hin-win-hull-identification.tl.astro';
+import LTr from '~/components/research/hin-win-hull-identification.tr.astro';
+import LBg from '~/components/research/hin-win-hull-identification.bg.astro';
+import LEt from '~/components/research/hin-win-hull-identification.et.astro';
+import LHe from '~/components/research/hin-win-hull-identification.he.astro';
+import LHr from '~/components/research/hin-win-hull-identification.hr.astro';
+import LHu from '~/components/research/hin-win-hull-identification.hu.astro';
+import LId from '~/components/research/hin-win-hull-identification.id.astro';
+import LKo from '~/components/research/hin-win-hull-identification.ko.astro';
+import LLt from '~/components/research/hin-win-hull-identification.lt.astro';
+import LLv from '~/components/research/hin-win-hull-identification.lv.astro';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => getUiForLang(lang || defaultLang)?.[key] || '';
+
+const META: Record<string, { title: string; description: string }> = {
+  en: {
+    title: 'HIN/WIN: Hull Identification Number Requirements Under RCD 2013/53/EU',
+    description:
+      'Complete guide to HIN/WIN (Hull Identification Number) requirements under EU Recreational Craft Directive 2013/53/EU. Number composition, marking methods, installation rules, builder plate separation, and manufacturing compliance notes.',
+  },
+  de: {
+    title: 'HIN/WIN: Anforderungen an die Rumpfidentifikationsnummer nach RCD 2013/53/EU',
+    description:
+      'Vollständiger Leitfaden zu den HIN/WIN-Anforderungen (Rumpfidentifikationsnummer) nach EU-Sportboote-Richtlinie 2013/53/EU. Nummernaufbau, Kennzeichnungsverfahren, Anbringungsregeln, Abgrenzung zur Herstellerplakette und Hinweise zur Fertigungskonformität.',
+  },
+  es: {
+    title: 'HIN/WIN: requisitos del número de identificación de casco según RCD 2013/53/UE',
+    description:
+      'Guía completa de los requisitos de HIN/WIN (número de identificación de casco) según la Directiva europea de embarcaciones de recreo 2013/53/UE. Composición del número, métodos de marcado, reglas de instalación, separación de la placa del constructor y notas de conformidad de fabricación.',
+  },
+  fr: {
+    title: 'HIN/WIN : exigences relatives au numéro d’identification de coque selon la directive RCD 2013/53/UE',
+    description:
+      'Guide complet des exigences HIN/WIN (numéro d’identification de coque) au titre de la directive européenne sur les embarcations de plaisance 2013/53/UE. Composition du numéro, méthodes de marquage, règles d’installation, distinction avec la plaque constructeur et notes de conformité de fabrication.',
+  },
+  it: {
+    title: 'HIN/WIN: requisiti del numero di identificazione dello scafo ai sensi della direttiva RCD 2013/53/UE',
+    description:
+      'Guida completa ai requisiti HIN/WIN (numero di identificazione dello scafo) ai sensi della direttiva UE sulle imbarcazioni da diporto 2013/53/UE. Composizione del numero, metodi di marcatura, regole di installazione, separazione dalla targhetta del costruttore e note di conformità di produzione.',
+  },
+  cs: {
+    title: 'HIN/WIN: Požadavky na identifikační číslo trupu podle RCD 2013/53/EU',
+    description:
+      'Kompletní průvodce požadavky na HIN/WIN (identifikační číslo trupu) podle směrnice EU o rekreačních plavidlech 2013/53/EU. Složení čísel, způsoby značení, pravidla instalace, oddělení stavebních desek a poznámky o shodě při výrobě.',
+  },
+  sv: {
+    title: 'HIN/WIN: Krav på skrovidentifikationsnummer under RCD 2013/53/EU',
+    description:
+      'Komplett guide till kraven HIN/WIN (skrovidentifikationsnummer) enligt EU:s direktiv för fritidsbåtar 2013/53/EU. Nummersammansättning, märkningsmetoder, installationsregler, separation av byggplåtar och noteringar om överensstämmelse med tillverkningen.',
+  },
+  da: {
+    title: 'HIN/WIN: Krav til skrogidentifikationsnummer under RCD 2013/53/EU',
+    description:
+      'Komplet vejledning til HIN/WIN (skrogidentifikationsnummer) krav i henhold til EU-direktivet om fritidsfartøjer 2013/53/EU. Nummersammensætning, mærkningsmetoder, installationsregler, adskillelse af byggeplader og noter om overholdelse af fremstilling.',
+  },
+  el: {
+    title: 'HIN/WIN: Απαιτήσεις αριθμού αναγνώρισης Hull Under RCD 2013/53/EU',
+    description:
+      'Πλήρης οδηγός για τις απαιτήσεις HIN/WIN (Hull Identification Number) σύμφωνα με την Οδηγία 2013/53/ΕΕ για τα σκάφη αναψυχής της ΕΕ. Σύνθεση αριθμών, μέθοδοι σήμανσης, κανόνες εγκατάστασης, διαχωρισμός πινακίδων κατασκευής και σημειώσεις συμμόρφωσης κατασκευής.',
+  },
+  no: {
+    title: 'HIN/WIN: Krav til skrogidentifikasjonsnummer under RCD 2013/53/EU',
+    description:
+      'Komplett veiledning til HIN/WIN (skrogidentifikasjonsnummer) krav i henhold til EUs direktiv for fritidsfartøy 2013/53/EU. Nummersammensetning, merkemetoder, installasjonsregler, separasjon av byggeplater og merknader om samsvar med produksjonen.',
+  },
+  ru: {
+    title: 'HIN/WIN: Требования к идентификационному номеру корпуса согласно RCD 2013/53/EU',
+    description:
+      'Полное руководство по требованиям HIN/WIN (идентификационный номер корпуса) в соответствии с Директивой ЕС о прогулочных судах 2013/53/EU. Состав номера, способы маркировки, правила монтажа, разделение заводских табличек и примечания о соответствии требованиям производства.',
+  },
+  nl: {
+    title: 'HIN/WIN: Rompidentificatienummervereisten onder RCD 2013/53/EU',
+    description:
+      'Volledige gids met HIN/WIN-vereisten (rompidentificatienummer) onder de EU-richtlijn pleziervaartuigen 2013/53/EU. Nummersamenstelling, markeringsmethoden, installatieregels, scheiding van bouwplaten en opmerkingen over productieconformiteit.',
+  },
+  fi: {
+    title: 'HIN/WIN: Rungon tunnistenumeroa koskevat vaatimukset RCD 2013/53/EU',
+    description:
+      'Täydellinen opas HIN/WIN (rungon tunnusnumero) vaatimuksiin EU:n huvivenedirektiivin 2013/53/EU mukaisesti. Numeroiden koostumus, merkintämenetelmät, asennussäännöt, rakennuslevyjen erotus ja valmistusohjeita.',
+  },
+  pl: {
+    title: 'HIN/WIN: Wymagania dotyczące numeru identyfikacyjnego kadłuba zgodnie z RCD 2013/53/UE',
+    description:
+      'Kompletny przewodnik po wymaganiach HIN/WIN (numer identyfikacyjny kadłuba) zgodnie z dyrektywą UE 2013/53/UE w sprawie rekreacyjnych jednostek pływających. Skład liczbowy, metody znakowania, zasady instalacji, separacja płyt konstrukcyjnych i uwagi dotyczące zgodności produkcyjnej.',
+  },
+  ar: {
+    title: 'HIN/WIN: متطلبات رقم تعريف الهيكل بموجب RCD 2013/53/EU',
+    description:
+      'الدليل الكامل لمتطلبات HIN/WIN (رقم تعريف الهيكل) بموجب توجيه الاتحاد الأوروبي للمركبات الترفيهية 2013/53/EU. تكوين الأرقام وطرق وضع العلامات وقواعد التثبيت وفصل لوحة البناء وملاحظات الامتثال للتصنيع.',
+  },
+  pt: {
+    title: 'HIN/WIN: Requisitos de número de identificação do casco sob RCD 2013/53/UE',
+    description:
+      'Guia completo para os requisitos de HIN/WIN (Número de identificação do casco) sob a Diretiva de Embarcações de Recreio da UE 2013/53/UE. Composição numérica, métodos de marcação, regras de instalação, separação da placa de construção e notas de conformidade de fabricação.',
+  },
+  ja: {
+    title: 'HIN/WIN: RCD 2013/53/EU に基づく船体識別番号要件',
+    description:
+      'EU レクリエーショナルクラフト指令 2013/53/EU に基づく HIN/WIN (船体識別番号) 要件に関する完全なガイド。番号の構成、マーキング方法、取り付けルール、ビルダープレートの分離、および製造上のコンプライアンスに関する注意事項。',
+  },
+  ms: {
+    title: 'HIN/WIN: Keperluan Nombor Pengenalan Lambung Di Bawah RCD 2013/53/EU',
+    description:
+      'Panduan lengkap mengenai keperluan HIN/WIN (Nombor Pengenalan Lambung) di bawah Arahan Perahu Rekreasi EU 2013/53/EU. Komposisi nombor, kaedah penandaan, peraturan pemasangan, pemisahan plat pembina, dan nota pematuhan pembuatan.',
+  },
+  ro: {
+    title: 'HIN/WIN: Cerințele privind Numărul de Identificare al Corpului Submersibil conform RCD 2013/53/UE',
+    description:
+      'Ghid complet al cerințelor HIN/WIN (Număr de Identificare al Corpului Submersibil) conform Directivei UE privind Ambarcațiunile de Recreere 2013/53/UE. Compoziția numărului, metodele de marcare, regulile de instalare, separarea plăcuței constructorului și note privind conformitatea fabricației.',
+  },
+  sk: {
+    title: 'HIN/WIN: Požiadavky na číslo identifikácie trupu podľa RCD 2013/53/EÚ',
+    description:
+      'Kompletný sprievodca požiadavkami na HIN/WIN (číslo identifikácie trupu) podľa Smernice EÚ o rekreačných plavidlách 2013/53/EÚ. Zloženie čísla, spôsoby označovania, pravidlá inštalácie, oddelenie štítku výrobcu a poznámky o súlade výroby.',
+  },
+  sl: {
+    title: 'HIN/WIN: Zahteve za identifikacijsko številko trupa po RCD 2013/53/EU',
+    description:
+      'Popoln vodnik po zahtevah HIN/WIN (identifikacijska številka trupa) po Direktivi EU o rekreativnih plovilih 2013/53/EU. Sestava številke, metode označevanja, pravila namestitve, ločitev ploščice proizvajalca in opombe o skladnosti proizvodnje.',
+  },
+  sr: {
+    title: 'HIN/WIN: Zahtevi za identifikacioni broj broda prema RCD 2013/53/EU',
+    description:
+      'Kompletan vodič za HIN/WIN (Identifikacioni broj broda) zahteve prema EU Direktivama o plovilima za rekreaciju 2013/53/EU. Sastav broja, metode označavanja, pravila postavljanja, odvajanje pločice proizvođača i napomene o usklađenosti proizvodnje.',
+  },
+  th: {
+    title: 'HIN/WIN: ข้อกำหนดหมายเลขระบุตัวเรือภายใต้ RCD 2013/53/EU',
+    description:
+      'คู่มือครบถ้วนเกี่ยวกับข้อกำหนด HIN/WIN (หมายเลขระบุตัวเรือ) ภายใต้คำสั่งการทำเรือสันทนาการของสหภาพยุโรป 2013/53/EU การจัดองค์ประกอบของหมายเลข วิธีการทำเครื่องหมาย กฎการติดตั้ง การแยกแผ่นผู้สร้าง และบันทึกการปฏิบัติตามการผลิต',
+  },
+  tl: {
+    title: 'HIN/WIN: Mga Kailangan sa Hull Identification Number Ayon sa RCD 2013/53/EU',
+    description:
+      'Kumpletong gabay sa mga kinakailangan sa HIN/WIN (Hull Identification Number) ayon sa EU Recreational Craft Directive 2013/53/EU. Komposisyon ng numero, mga pamamaraan ng pagmamarka, mga patakaran sa pag-install, paghihiwalay ng builder plate, at mga tala sa pagsunod sa paggawa.',
+  },
+  tr: {
+    title: 'HIN/WIN: RCD 2013/53/EU Kapsamında Gövde Tanımlama Numarası Gereksinimleri',
+    description:
+      'AB Rekreasyonel Tekne Direktifi 2013/53/EU kapsamındaki HIN/WIN (Gövde Tanımlama Numarası) gereksinimleri için tam kılavuz. Numara bileşimi, işaretleme yöntemleri, montaj kuralları, üretici plakasının ayrılması ve üretim uyumluluk notları.',
+  },
+  bg: {
+    title: 'HIN/WIN: Изисквания за идентификационен номер на корпуса съгласно RCD 2013/53/ЕС',
+    description:
+      'Пълен наръчник за изискванията за HIN/WIN (идентификационен номер на корпуса) съгласно Директивата на ЕС за развлекателни плавателни съдове 2013/53/ЕС. Състав на номера, методи за маркиране, правила за инсталиране, разделяне на табелката на производителя и бележки за съответствие при производство.',
+  },
+  et: {
+    title: 'HIN/WIN: Kere identifitseerimisnumbri nõuded vastavalt RCD 2013/53/EL',
+    description:
+      'Täielik juhend HIN/WIN (Kere identifitseerimisnumbri) nõuete kohta EL-i vabaajaaluste direktiivi 2013/53/EL kohaselt. Numbri koostis, märkimismeetodid, paigaldusreeglid, tootjaplaadi eraldamine ja tootmisnõuetele vastavuse märkused.',
+  },
+  he: {
+    title: 'HIN/WIN: דרישות מספר זיהוי גוף הספינה לפי RCD 2013/53/UE',
+    description:
+      'מדריך מלא לדרישות HIN/WIN (מספר זיהוי גוף) לפי דירקטיבת כלי השיט הפנאי של האיחוד האירופי 2013/53/EU. הרכב המספר, שיטות סימון, כללי התקנה, הפרדת פלטת הבנאי והערות ציות לייצור.',
+  },
+  hr: {
+    title: 'HIN/WIN: Zahtjevi za identifikacijski broj trupa prema RCD 2013/53/EU',
+    description:
+      'Potpuni vodič za zahtjeve HIN/WIN (identifikacijski broj trupa) prema EU Direktivi o plovilima za rekreaciju 2013/53/EU. Sastav broja, metode označavanja, pravila instalacije, odvajanje pločice proizvođača i napomene o usklađenosti proizvodnje.',
+  },
+  hu: {
+    title: 'HIN/WIN: Hajótest-azonosító szám követelményei a RCD 2013/53/EU szerint',
+    description:
+      'Teljes útmutató a HIN/WIN (Hajóazonosító szám) követelményekhez az EU 2013/53/EU szabadidős hajók irányelv alapján. A szám összetétele, jelölési módszerek, beszerelési szabályok, a gyártói tábla elkülönítése és a gyártási megfelelőségi megjegyzések.',
+  },
+  id: {
+    title: 'HIN/WIN: Persyaratan Nomor Identifikasi Lambung Menurut RCD 2013/53/EU',
+    description:
+      'Panduan lengkap tentang persyaratan HIN/WIN (Nomor Identifikasi Lambung) menurut Direktif Kapal Rekreasi Uni Eropa 2013/53/EU. Komposisi nomor, metode penandaan, aturan pemasangan, pemisahan pelat pembuat, dan catatan kepatuhan produksi.',
+  },
+  ko: {
+    title: 'HIN/WIN: RCD 2013/53/EU에 따른 선체 식별 번호 요구 사항',
+    description:
+      'EU 레크리에이션 크래프트 지침 2013/53/EU에 따른 HIN/WIN(선체 식별 번호) 요구 사항에 대한 완전한 안내서. 번호 구성, 표시 방법, 설치 규칙, 제작자 판 분리, 제조 준수 사항.',
+  },
+  lt: {
+    title: 'HIN/WIN: Korpuso identifikavimo numerio reikalavimai pagal RCD 2013/53/ES',
+    description:
+      'Pilnas gidas apie HIN/WIN (Korpuso identifikavimo numerį) reikalavimus pagal ES laisvalaikio transporto priemonių direktyvą 2013/53/ES. Numerio sudėtis, žymėjimo metodai, montavimo taisyklės, gamintojo plokštelės atskyrimas ir gamybos atitikties pastabos.',
+  },
+  lv: {
+    title: 'HIN/WIN: Korpusa identifikācijas numura prasības saskaņā ar RCD 2013/53/ES',
+    description:
+      'Pilnīgs ceļvedis par HIN/WIN (korpusa identifikācijas numura) prasībām saskaņā ar ES Atpūtas kuģu direktīvu 2013/53/ES. Numura sastāvs, marķēšanas metodes, uzstādīšanas noteikumi, būvētāja plāksnes atdalīšana un ražošanas atbilstības norādījumi.',
+  },
+};
+const meta = META[lang] || META.en;
+const ResearchBody: any =
+  (
+    {
+      de: LDe,
+      es: LEs,
+      fr: LFr,
+      it: LIt,
+      cs: LCs,
+      sv: LSv,
+      da: LDa,
+      el: LEl,
+      no: LNo,
+      ru: LRu,
+      nl: LNl,
+      fi: LFi,
+      pl: LPl,
+      ar: LAr,
+      pt: LPt,
+      ja: LJa,
+      ms: LMs,
+      ro: LRo,
+      sk: LSk,
+      sl: LSl,
+      sr: LSr,
+      th: LTh,
+      tl: LTl,
+      tr: LTr,
+      bg: LBg,
+      et: LEt,
+      he: LHe,
+      hr: LHr,
+      hu: LHu,
+      id: LId,
+      ko: LKo,
+      lt: LLt,
+      lv: LLv,
+    } as Record<string, any>
+  )[lang] || null;
+
+const metadata = {
+  title: meta.title + ' | ' + SITE.name,
+  description: meta.description,
+  ignoreTitleTemplate: true,
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: meta.title,
+  description: metadata.description,
+  author: { '@type': 'Organization', name: SITE.name },
+  datePublished: '2024-06-01',
+  dateModified: '2025-04-20',
+};
+
+const faqSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is a HIN/WIN number on a boat?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'HIN (Hull Identification Number) or WIN (Watercraft Identification Number) is a unique code permanently marked on every recreational craft per RCD 2013/53/EU. It includes country code, manufacturer code (MIC), serial number, production date and model year.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Where must the HIN/WIN be marked on a RIB?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'The primary HIN/WIN must be on the starboard side of the transom, upper area, readable without disassembly. A second hidden mark must be placed internally for anti-theft and traceability. Both must be permanent and match the DoC.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I use adhesive stickers for HIN/WIN marking?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'No. RCD and EN ISO 10087 require permanent marking methods appropriate to the hull material — such as stamping, laser etching, mold-formed characters, or welded/fixed metal plates. Adhesive labels, removable plates, and easily fading ink are not acceptable as the sole identification.',
+      },
+    },
+  ],
+});
+---
+
+<Layout metadata={metadata}>
+  <JsonLd data={jsonLd} />
+
+  <article class="max-w-4xl mx-auto px-6 py-16">
+    <nav class="text-sm text-gray-500 mb-8">
+      <a href={'/' + lang + '/'} class="hover:text-sky-600">{SITE.name}</a>
+      <span class="mx-2">/</span>
+      <a href={'/' + lang + '/research'} class="hover:text-sky-600">{t('home.research.title')}</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-900">{t('home.research.hinWin')}</span>
+    </nav>
+
+    <div class="mb-4">
+      <span
+        class="inline-block text-xs font-semibold uppercase tracking-wider text-sky-600 bg-sky-50 px-3 py-1 rounded-full"
+        >Compliance</span
+      >
+      <span class="ml-3 text-sm text-gray-400">8 min read</span>
+    </div>
+
+    <h1 class="text-4xl font-bold text-gray-900 mb-6">{t('home.research.hinWin')}</h1>
+    <p class="text-xl text-gray-500 mb-12 leading-relaxed">{t('home.research.hinWin.desc')}</p>
+
+    <div class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600">
+      {
+        ResearchBody ? (
+          <ResearchBody lang={lang} />
+        ) : (
+          <div class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600">
+            <h2>What Is HIN/WIN?</h2>
+            <p>
+              Every recreational craft from 2.5 m to 24 m placed on the EU market must have a unique Watercraft
+              Identification Number (WIN). The industry still commonly uses HIN (Hull Identification Number) or CIN
+              (Craft Identification Number). RCD II (Directive 2013/53/EU, in force since 18 January 2016) requires
+              this. It is NOT the same as a Chinese ship identification number, IMO number, or vessel registration
+              number.
+            </p>
+
+            <h2>Number Composition</h2>
+            <p>Per RCD II Annex I Part A 2.1, the ID must contain at minimum:</p>
+            <ul>
+              <li>Country of manufacture code (2-letter ISO, e.g. CN)</li>
+              <li>
+                Manufacturer Identification Code (MIC) — assigned by EU member state authority, cannot be self-invented
+              </li>
+              <li>Unique serial number (5 digits, manufacturer-managed, must be unique per MIC)</li>
+              <li>Month of manufacture (A–L = Jan–Dec)</li>
+              <li>Year of manufacture (last 2 digits)</li>
+              <li>Model year (1 digit)</li>
+            </ul>
+            <p>Common 14-character format: CC + MIC + SSSSS + M + YY + Y</p>
+            <p>Example: CNABC12345D526 = China, MIC ABC, serial 12345, April 2026, model year 2026</p>
+
+            <h2>Marking and Installation Requirements</h2>
+
+            <h3>Visible primary mark</h3>
+            <p>
+              Starboard side of transom, upper area. Must be readable without disassembly. Avoid obstruction by outboard
+              motor, ladders, or fenders.
+            </p>
+
+            <h3>Hidden secondary mark</h3>
+            <p>
+              Internal/hidden location for anti-theft and traceability. Position recorded in production records but not
+              publicly disclosed.
+            </p>
+
+            <h3>Permanency requirements by hull material</h3>
+            <ul>
+              <li>
+                <strong>FRP/GRP:</strong> Mold-formed raised/sunken characters, laminated-in plate, or resin-sealed
+                durable mark
+              </li>
+              <li>
+                <strong>Aluminum:</strong> Stamping, mechanical engraving, laser etching, or reliably fixed metal ID
+                plate
+              </li>
+              <li>
+                <strong>Steel:</strong> Stamping, engraving, or welded steel number plate
+              </li>
+              <li>
+                <strong>Wood:</strong> Deep engraving, embedded durable plate, or epoxy-sealed
+              </li>
+              <li>
+                <strong>PE/thermoplastic:</strong> In-mold forming, laser etching, or verified permanent embedded mark
+              </li>
+              <li>
+                <strong>Inflatable boats:</strong> Durable nameplate or structural fixed marking per manufacturer
+                specification — plain adhesive stickers are NOT acceptable
+              </li>
+            </ul>
+
+            <p>Methods that should NOT be used as the sole HIN/WIN:</p>
+            <ul>
+              <li>Ordinary adhesive labels, easy-peel stickers</li>
+              <li>Simply removable screw-on plates</li>
+              <li>Easily fading ink or paint</li>
+              <li>Only printed in manual/invoice/DoC without physical hull marking</li>
+            </ul>
+
+            <h2>HIN/WIN vs CE Builder Plate</h2>
+            <p>
+              These are TWO SEPARATE requirements. RCD requires them to be installed separately. CE marking goes on the
+              builder plate, NOT on the HIN/WIN.
+            </p>
+            <p>Typical arrangement:</p>
+            <ul>
+              <li>Starboard transom exterior: Permanent HIN/WIN</li>
+              <li>Internal hidden location: Second permanent HIN/WIN</li>
+              <li>Cockpit/interior visible location: Independently fixed CE builder plate</li>
+            </ul>
+
+            <h2>Manufacturing and Certification Notes</h2>
+            <ul>
+              <li>
+                <strong>MIC first:</strong> Must obtain valid MIC before marking — cannot invent a 3-character code for
+                export batches
+              </li>
+              <li>
+                <strong>One boat one code:</strong> Same HIN/WIN must never be used for two boats
+              </li>
+              <li>
+                <strong>Data consistency:</strong> Hull mark, hidden mark, builder plate, EU DoC, owner manual,
+                technical file, and sales materials must all match
+              </li>
+              <li>
+                <strong>Do not re-mark casually:</strong> If HIN/WIN is incorrectly marked, create a controlled
+                nonconformance and correction record
+              </li>
+              <li>
+                <strong>PCA vessels:</strong> Post-Construction Assessment boats need special handling — builder plate
+                must include "post-construction assessment" text
+              </li>
+              <li>
+                <strong>Record retention:</strong> Keep technical files and DoC at least 10 years; HIN allocation,
+                marking photos, positions, serial number register and hidden mark positions should be in the
+                traceability archive
+              </li>
+            </ul>
+
+            <h2>What This Means for B2B Buyers</h2>
+            <p>Verify that:</p>
+            <ul>
+              <li>Each boat has a unique, permanently marked HIN/WIN</li>
+              <li>The HIN/WIN on the hull matches the DoC and production records</li>
+              <li>The manufacturer has a valid MIC from an EU authority</li>
+              <li>Hidden secondary marks exist and are documented</li>
+            </ul>
+          </div>
+        )
+      }
+    </div>
+
+    <div class="mt-16 pt-8 border-t border-gray-200">
+      <a href={'/' + lang + '/research'} class="text-sky-600 hover:text-sky-700 font-medium"
+        >&larr; {t('home.research.tagline')}</a
+      >
+    </div>
+  </article>
+  <script is:inline type="application/ld+json" set:html={faqSchema} />
+</Layout>

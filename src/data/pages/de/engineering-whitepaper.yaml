@@ -1,0 +1,119 @@
+hero:
+  tagline: Technisches Whitepaper
+  title: Drop-Stitch-Technologie und Materialwissenschaft:<br />Die Technik hinter modernen aufblasbaren Wasserfahrzeugen
+  subtitle: Eine maßgebliche technische Referenz zu Drop-Stitch-Kernkonstruktionen, zum Materialvergleich zwischen PVC und Hypalon, zur Prüfung der Steifigkeit von Hochdruckbehältern und zu Herstellungsstandards für Wasserfahrzeuge.
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/randd/aquafarer-design-discussion-lab.webp
+    alt: Forschungs- und Entwicklungslabor Aquafarer – Materialprüfung und -technik
+direct_answer: Bei der Drop-Stitch-Technologie werden Tausende innenliegende Polyesterfäden verwendet, die die obere und untere Stoffschicht eines aufblasbaren Kerns verbinden. Beim Aufpumpen auf 15–20 PSI wirken diese Fäden als Zugelemente, verhindern ein Ausbeulen und erzeugen eine starre Struktur, die mit einer Hartschalenkonstruktion vergleichbar ist. In Kombination mit fortschrittlichen PVC- oder Hypalon-Gewebebeschichtungen und HF-Schweißen ermöglicht dies tragbare, leistungsstarke aufblasbare Wasserfahrzeuge, die für den professionellen, kommerziellen und Freizeitgebrauch geeignet sind.
+section_drop_stitch:
+  title: Drop-Stitch-Konstruktion
+  subtitle: Wie tausende Fäden flexibles Gewebe in eine starre Struktur verwandeln
+  content: |-
+    Drop-Stitch (auch bekannt als „Drop-Stitch-Gewebe“ oder „Drop-Stitch-Kern“) stellt einen Durchbruch in der Konstruktion aufblasbarer Strukturen dar. Das Prinzip ist täuschend einfach: Tausende einzelner Polyesterfäden werden gleichzeitig in zwei separate Schichten des Grundgewebes eingewebt und verbinden die Ober- und Unterseite im 90-Grad-Winkel.
+
+    Wenn die versiegelte Kammer unter Druck gesetzt wird, übt der innere Luftdruck eine gleichmäßige Kraft in alle Richtungen aus und versucht, die obere und untere Platte in eine zylindrische Form auseinanderzudrücken. Die Tausenden von Fallmaschenfäden widerstehen dieser Trennung und übertragen die Last in Spannung entlang der Fadenachse. Das Ergebnis ist eine flache, starre Platte, die einem Innendruck von 15–20 PSI standhält.
+
+    Bei 20 PSI erfährt eine 1 m² große Drop-Stitch-Platte eine innere Gesamtkraft von etwa 14.000 kg – dennoch hält die Fadenmatrix sie perfekt flach. Dies verleiht Drop-Stitch-Strukturen ein Verhältnis von Festigkeit zu Gewicht, das mit herkömmlichen starren Materialien mithalten kann.
+section_materials:
+  title: PVC vs. Hypalon – Technischer Materialvergleich
+  subtitle: Objektive Daten für eine fundierte Materialauswahl bei der Herstellung von aufblasbaren Wasserfahrzeugen
+  table:
+    columns:
+      - header: Eigentum
+      - header: PVC (Polyvinylchlorid)
+      - header: Hypalon (CSM)
+    rows:
+      - property: UV-Beständigkeit
+        pvc: Gut (mit UV-Stabilisatoren)
+        hypalon: Ausgezeichnet (inhärent)
+      - property: Abriebfestigkeit
+        pvc: Gut
+        hypalon: Sehr gut
+      - property: Zugfestigkeit
+        pvc: 3.000–5.000 N/5cm
+        hypalon: 2.500–4.000 N/5 cm
+      - property: Gewicht pro m²
+        pvc: 850–1.200 g
+        hypalon: 1.100–1.500 g
+      - property: Kalter Flex
+        pvc: -30°C
+        hypalon: -20°C
+      - property: Verbindungsmethode
+        pvc: HF-Schweißen / Heißluftschweißen
+        hypalon: Handkleben (Kontaktzement)
+      - property: Reparierbarkeit
+        pvc: Einfach (Heißschweißen oder Kleben)
+        hypalon: Erfordert CSM-Kleber
+      - property: Materialkosten
+        pvc: 8–15 $/m²
+        hypalon: 20–40 $/m²
+      - property: Lebensdauer (tropische Sonne)
+        pvc: 5–8 Jahre
+        hypalon: 10–15 Jahre
+      - property: Farbbereich
+        pvc: Breit (volles Farbspektrum)
+        hypalon: Limitiert (Grundfarben)
+      - property: Chemische Beständigkeit
+        pvc: Gut (kraftstoff-/ölbeständige Qualitäten)
+        hypalon: Hervorragend (breites chemisches Spektrum)
+section_testing:
+  title: Test- und Sicherheitsprotokolle
+  subtitle: Der Qualitätssicherungsrahmen von Aquafarer für jede Produktionscharge
+  protocols:
+    - title: 1,25-facher Nenndruckhaltetest
+      description: Jeder zusammengebaute Behälter wird auf das 1,25-fache seines Nennbetriebsdrucks aufgeblasen und 24–48 Stunden lang gehalten. Jeder Druckabfall über 2 % löst Ausschuss und Nacharbeit aus.
+      standard: ISO 6185
+    - title: Nahtschälfestigkeitstest
+      description: Schweiß- und Klebenahtproben aus jeder Produktionscharge werden mit kalibrierten Spannungsgeräten auf Schälfestigkeit geprüft. Mindestens 4 kN/m Schälwiderstand erforderlich.
+      standard: ISO 2411
+    - title: Stoffzugtest
+      description: Eingehende Stoffrollen werden einer Zugfestigkeits- und Dehnungsprüfung in Kett- und Schussrichtung unterzogen. Ablehnungsschwelle unter 3.000 N/5cm für PVC.
+      standard: ISO 1421
+    - title: UV-beschleunigte Bewitterung
+      description: Materialproben werden in QUV-Testkammern mehr als 1.000 Stunden lang einer beschleunigten UV-Bestrahlung ausgesetzt. Maximal 15 % Zugfestigkeitsverlust zulässig.
+      standard: ASTM G154
+    - title: Ventil- und Armaturenintegrität
+      description: Jede Ventilbaugruppe wird bei 1,25-fachem Nenndruck auf Dichtheit geprüft. Rücklaufventile werden auf ihre Einweg-Dichtungsleistung getestet.
+      standard: ISO 12402
+section_manufacturing:
+  title: Herstellungsstandards und Qualitätszertifizierungen
+  subtitle: Einhaltung von Industriestandards für den globalen Marktzugang
+  standards:
+    - name: ISO 9001:2015
+      body: SGS-zertifiziert
+      scope: Qualitätsmanagementsystem für Design, Produktion und Lieferung
+    - name: CE 2013/53/EU
+      body: Von der EU benannte Stelle
+      scope: Sportbootrichtlinie – Rumpfdesign, Stabilität, Schwimmfähigkeit, Emissionen
+    - name: BSCI
+      body: amfori
+      scope: Soziale Compliance – Arbeitssicherheit, faire Arbeit, Umweltmanagement
+    - name: ISO 6185
+      body: Internationaler Standard
+      scope: Schlauchboote – Konstruktion, Stabilität, Schwimmfähigkeit, Druckprüfung
+    - name: ERREICHEN
+      body: EU-Verordnung
+      scope: Chemische Sicherheit – eingeschränkte Stoffe in Materialien und Beschichtungen
+section_faq:
+  title: Technische FAQ
+  questions:
+    - q: Wie schneidet Drop-Stitch im Vergleich zur herkömmlichen Hartschalenkonstruktion ab?
+      a: Moderne Drop-Stitch-Kerne erreichen bei 20 PSI 85–90 % der Steifigkeit vergleichbarer Hartschalen aus EPS-Schaum/Glasfaser und lassen sich für den Transport vollständig entlüften. Der Kompromiss ist ein etwas höheres Gewicht und eine geringere Endsteifigkeit – aber für die meisten Freizeit- und kommerziellen Anwendungen ist der Unterschied vernachlässigbar.
+    - q: Welche Fadendichte gilt als Premiumqualität?
+      a: Premium-Drop-Stitch-Stoffe verwenden 2 Fäden pro Quadratzoll (ca. 3.100 Fäden pro m²), gewebt aus 1.680 DTEX-Polyestergarn. Stoffe der Einstiegsklasse verwenden 1 Faden pro Quadratmeter mit 1.100 DTEX-Garn.
+    - q: Kann Hypalon wie PVC geschweißt werden?
+      a: Nein. Hypalon/CSM kann nicht hochfrequenzgeschweißt werden. Der Zusammenbau muss mit von Hand aufgetragenem Kontaktkleber erfolgen, was die Produktion arbeitsintensiver macht und die Nähte von den Fähigkeiten des Bedieners abhängig macht. PVC kann für eine gleichbleibende, automatisierte Nahtqualität hochfrequenz- oder heißluftgeschweißt werden.
+    - q: Was ist der maximale Sicherheitsdruck für Schlauchboote?
+      a: Standardschläuche für Schlauchboote arbeiten mit 8–12 PSI. Drop-Stitch-Böden arbeiten mit 12–20 PSI. Hochdruck-Drop-Stitch-Kerne (SUPs) können bei 20–25 PSI betrieben werden. Jedes Produkt verfügt über Druckentlastungsventile, die kalibriert sind, um ein Überpumpen zu verhindern.
+    - q: Wie lange dauert die Herstellung eines maßgeschneiderten Schlauchbootes?
+      a: Die Standard-OEM-Produktion dauert 30–45 Tage von der Auftragsbestätigung bis zum FOB Qingdao. Durch die kundenspezifische Formenentwicklung werden 15–20 Tage für die Prototypenfertigung und -prüfung benötigt.
+cta:
+  title: Ingenieurberatung
+  subtitle: Haben Sie eine spezielle Frage zu Material oder Design? Unser Engineering-Team steht Ihnen für technische Gespräche zur Verfügung.
+  actions:
+    - variant: primary
+      text: Fragen Sie unser Engineering-Team
+      href: /contact
+    - text: Entdecken Sie unser Forschungs- und Entwicklungszentrum
+      href: /randdcenter

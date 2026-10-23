@@ -1,0 +1,195 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'tr' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">&larr; AR-GE Merkezine Geri</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Laboratuvar 04</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Hidrodinamik Test Tankı</h1>
+      <p class="mt-3 text-lg text-muted">İlk tam ölçekli prototipten önce performansı doğrulamak</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-design-discussion-original.webp"
+        alt="Aquafarer hidrodinamik test tankı performans testi"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Neden küçük bir tekneyi tankta test etmek gerekir?</h2>
+  <p>
+    Hidrodinamik testlerin yalnızca denize açılan gemiler için yapıldığına dair yaygın bir yanlış kanı vardır. Gerçekte,
+    4–5 m RIB gibi küçük bir planör gövdenin performansı, bir tanker kadar su altı şekline bağlıdır. Trim açısı, ıslak
+    yüzey alanı, su püskürtme ve havalandırma hız, yakıt tüketimi ve sürüş konforu üzerinde dramatik bir etkiye
+    sahiptir.{SITE.name}, bu etkileri model ölçeğinde ölçmemize olanak tanıyan özel bir hidrodinamik test tankı
+    işletiyoruz — tam boyutlu bir prototipe metal ve kumaş ayırmadan önce.
+  </p>
+  <p>
+    Model ölçeğinde test yapmak (genellikle 1:3 ila 1:5), gövde şekillerini hızlı ve maliyet etkin şekilde tekrar
+    geliştirme olanağı sağlar. Tankta bir hafta, tam ölçekli deneme-yanılma yöntemine göre aylar sürecek aynı performans
+    verisini üretebilir — hem de maliyetinin çok daha azıyla.
+  </p>
+
+  <h2>Tesis özellikleri</h2>
+  <table>
+    <thead><tr><th>Parametre</th><th>Özellik</th></tr></thead>
+    <tbody>
+      <tr><td>Tank boyutları</td><td>35 m (U) × 3,5 m (G) × 1,8 m (D)</td></tr>
+      <tr
+        ><td>Çekme arabası</td><td>Elektrikli servo kumandalı, maksimum hız 12 m/s (23 kn), hız doğruluğu ±% 0,5</td
+        ></tr
+      >
+      <tr
+        ><td>Dalga oluşturucu</td><td
+          >Kama tipi, programlanabilir düzgün ve düzensiz deniz durumları, model ölçeğinde Hs 0,3 m'ye kadar</td
+        ></tr
+      >
+      <tr
+        ><td>Enstrümantasyon</td><td
+          >6 bileşenli dinamometre (direnç, yan kuvvet, sapma momenti), ivmeölçerler, eğimölçerler, dalga sensörleri</td
+        ></tr
+      >
+      <tr
+        ><td>Veri toplama</td><td>Kanal başına 1000 Hz örnekleme, gerçek zamanlı görüntüleme + sonrası işleme paketi</td
+        ></tr
+      >
+      <tr><td>Model üretimi</td><td>1,8 m LOA'ya kadar model gövdeler için dahili CNC frezeleme ve 3D baskı</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Test programımız</h2>
+  <p>Tankımızdaki standart gövde geliştirme programı şu sırayı izler:</p>
+  <ol>
+    <li>
+      <strong>Model üretimi</strong>— 1:3,5 ölçeğinde bir model yüksek yoğunluklu köpükten CNC işlenir ve sertlik için
+      cam ile kaplanır. Ağırlık ve ağırlık merkezi, Froude ölçekli tam yük koşuluna uygun şekilde ayarlanır.
+    </li>
+    <li>
+      <strong>Direnç testleri</strong>— Model, çalışma aralığını kapsayan 8-10 hızda çekilir. Toplam direnç ölçülür ve
+      ITTC-1957 yöntemi kullanılarak sürtünme ve artık bileşenlerine ayrılır.
+    </li>
+    <li>
+      <strong>Trim ve batma ölçümü</strong>— Her hızda çalışma trim ve batma kaydedilir. Planör tip gövdeler için
+      optimum trim açısı hedefi 4-6°’dir.
+    </li>
+    <li>
+      <strong>Kuyruk Dalga Ölçümü</strong>— Dalga oluşum direncini değerlendirmek ve kıç bölgesinde girişime neden
+      olabilecek boyuna dalga etkileşimlerini belirlemek için iki farklı hızda enine dalga kesitleri ölçülür.
+    </li>
+    <li>
+      <strong>Seakeeping (isteğe bağlı)</strong>— İlave direnç, dikey ivme ve çarpma olasılığını ölçmek için düzenli
+      dalgalarda baş dalga ve arkadan dalga testleri.
+    </li>
+    <li>
+      <strong>Veri analizi ve öneriler</strong>— Tam ölçekli gövde için karşılaştırmalı grafikler, hız/güç eğrileri ve
+      spesifik tasarım önerilerini içeren tam bir rapor sunulur.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Tipik Havuz Testi Sonuçları — Direnç vs Hız (RIB 450 gövde, 1:3,5 ölçek)
+    </p>
+    <div class="space-y-2">
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">5 kN (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:18%"></div>
+        </div><span class="w-16 text-right">42 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">10 kN (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:35%"></div>
+        </div><span class="w-16 text-right">81 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">15 kN (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:52%"></div>
+        </div><span class="w-16 text-right">121 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">20 kN (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:68%"></div>
+        </div><span class="w-16 text-right">158 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">25 kN (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:85%"></div>
+        </div><span class="w-16 text-right">197 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">30 kN (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:100%"></div>
+        </div><span class="w-16 text-right">232 N</span>
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      Froude ölçekli hızlarda model ölçeğinde direnç (N). Tam ölçekli güç tahmini ITTC-1978 performans tahmin yöntemi
+      ile yapılır.
+    </p>
+  </div>
+
+  <h2>Uzman ekip</h2>
+  <p>
+    Havuzumuz, deniz mimarisi alanında doktora sahibi ve büyük bir Avrupa denizcilik araştırma enstitüsünde 8 yıllık
+    çekme havuzu deneyimine sahip bir hidrodinamik uzmanı tarafından işletilmektedir. Tüm modelleri ve
+    enstrümantasyonları hazırlayan bir teknisyen tarafından desteklenmektedir. Ekip, her testin tekrarlanabilir,
+    izlenebilir ve uluslararası olarak savunulabilir olmasını sağlamak için ITTC (Uluslararası Çekme Havuzu Konferansı)
+    Önerilen Prosedürlerine uyar.
+  </p>
+
+  <h2>Özel gövde geliştirme için havuz testi</h2>
+  <p>
+    Havuzumuz sadece kendi tasarladığımız gövdeler için kullanılmaz — düzenli olarak, özel bir gövde şekli doğrulamak
+    veya performans sorununu incelemek isteyen müşteriler için test programları yürütürüz:
+  </p>
+  <ul>
+    <li>
+      <strong>Gövde şekli karşılaştırması</strong>— İki veya daha fazla aday gövde şekli aynı koşullar altında test
+      edilir ve tasarım seçiminizi bilgilendirmek için nesnel bir sürtünme/hız/kararlılık karşılaştırması sağlar.
+    </li>
+    <li>
+      <strong>Ek parçaların optimizasyonu</strong>— İzleyici plakaları, sprey rayları, trim tablaları ve strake’ler
+      çeşitli konfigürasyonlarda test edilerek sürtünme azaltımına bireysel katkıları nicel olarak belirlenebilir.
+    </li>
+    <li>
+      <strong>Motor eşleştirme çalışması</strong>— Direnç verileri güç tahmin eğrisine dönüştürülür, böylece hedef hız
+      ve yük için optimum motor beygir gücünü seçmenize olanak tanır.
+    </li>
+  </ul>
+
+  <h2>Bizimle neden test yapmalısınız?</h2>
+  <p>
+    Sadece ham sayılar vermezsiniz. Raporlarımız havuz verilerini uygulanabilir mühendislik önerilerine çevirir: "Seyir
+    hızında ıslanmış yüzeyi azaltmak için sprey rayını 8 mm yükseltin", "Çarpma ivmesini azaltmak için kıçta deadrise’ı
+    3° artırın" veya "Planlama duruşunu iyileştirmek için boylamasına ağırlık merkezini 150 mm geriye hareket ettirin".
+    Neyi ve neden değiştireceğinizi açık bir şekilde anlarsınız.
+  </p>
+  <p>
+    Havuzumuz ayrıca bağımsız üçüncü taraf testleri için ücretli hizmet bazında da kullanılabilir. Bir gövde
+    geliştiriyorsanız ve tarafsız, profesyonel bir hidrodinamik değerlendirme istiyorsanız, başvurunuzu memnuniyetle
+    karşılarız.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Havuz testi seansınızı rezerve edin</h2>
+    <p class="mt-2 text-sm text-muted">
+      Tam bir geliştirme programına veya yalnızca bir karşılaştırmalı teste ihtiyacınız olsun, programınıza uygun
+      şekilde yardımcı olabiliriz.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Hidrodinamik ekibimizle iletişime geçin</a
+    >
+  </div>
+</section>

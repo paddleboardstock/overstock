@@ -1,0 +1,306 @@
+hero_text:
+  tagline: Ottieni un preventivo
+  title: Richiedi un preventivo<br />per il tuo progetto
+  subtitle: Raccontaci le tue esigenze e il nostro team ti risponderà con un preventivo dettagliato entro 2 giorni lavorativi.
+steps2_process:
+  title: Come funziona
+  subtitle: Quattro semplici passaggi dalla richiesta al preventivo.
+  items:
+    - title: 'Passaggio 1: invia i tuoi requisiti'
+      description: Compila il modulo sottostante con il tipo di prodotto, la quantità e le specifiche. Più dettagli fornirai, più accurato sarà il tuo preventivo.
+      icon: tabler:file-text
+    - title: 'Passaggio 2: esaminiamo e consigliamo'
+      description: Il nostro team tecnico esamina le tue esigenze e potrebbe contattarti per chiarimenti. Forniamo consigli sulla configurazione e le opzioni del prodotto.
+      icon: tabler:users
+    - title: 'Passaggio 3: ricevi il tuo preventivo'
+      description: Riceverai un preventivo dettagliato che include prezzo unitario, MOQ, tempi di consegna, termini di pagamento e opzioni di spedizione. Normalmente entro 48 ore.
+      icon: tabler:currency-dollar
+    - title: 'Passaggio 4: campione e produzione'
+      description: Dopo l'accettazione del preventivo, si procede alla produzione del campione (se applicabile) o direttamente alla produzione in serie. Aggiornamenti regolari durante tutto il processo.
+      icon: tabler:building-factory
+content_form:
+  tagline: Modulo di preventivo
+  title: Raccontaci del tuo progetto
+  subtitle: Tutti i campi con * sono obbligatori.
+  fields:
+    - name: Categoria di prodotto
+      type: selezionare
+      options:
+        - Barca RIB
+        - Gommone
+        - Tavola SUP
+        - Kayak gonfiabile
+        - Giubbotto salvagente
+        - Accessorio marino
+        - OEM/ODM personalizzato
+    - name: Applicazione
+      type: selezionare
+      options:
+        - Centro subacqueo
+        - Pesca
+        - Turismo marino / Resort
+        - Ricerca e soccorso
+        - Tender per yacht
+        - Imbarcazione da lavoro commerciale
+        - Governo / Militare
+        - OEM / Marchio privato
+        - Personale / Ricreativo
+        - Altro
+    - name: Quantità
+      type: testo
+      placeholder: per esempio. 50 unità
+    - name: Mercato di riferimento
+      type: testo
+      placeholder: per esempio. Europa, Nord America, Medio Oriente
+    - name: Paese di consegna
+      type: testo
+      placeholder: per esempio. Italia, Emirati Arabi Uniti, Stati Uniti, Australia
+    - name: Preferenza materiale
+      type: selezionare
+      options:
+        - Nessuna preferenza
+        - PVC di grado marino (1100 dtex)
+        - Hypalon premium / CSM
+        - Scafo in fibra di vetro
+        - Scafo in alluminio
+    - name: Requisiti del motore
+      type: testo
+      placeholder: per esempio. Fuoribordo 60 HP, senza motore, gemello 115 HP
+    - name: Personalizzazione richiesta
+      type: testo
+      placeholder: per esempio. colori personalizzati, marchio/logo, packaging, allestimenti speciali
+    - name: Cronologia
+      type: testo
+      placeholder: per esempio. consegna entro 90 giorni
+    - name: Requisiti aggiuntivi
+      type: 'Area di Testo '
+      placeholder: 'Descrivi la tua applicazione, le specifiche tecniche o eventuali requisiti speciali: includi disegni di riferimento, specifiche o collegamenti se disponibili'
+    - name: Carica specifica
+      type: file
+      placeholder: Carica la tua scheda tecnica, disegno o documento di riferimento (PDF, DWG, DXF)
+    - name: Carica logo/opera d'arte
+      type: file
+      placeholder: Carica il tuo logo o grafica per un branding personalizzato (AI, EPS, PNG)
+content_rfq_types:
+  tagline: Sistema di richiesta di offerta a 3 livelli
+  title: Scegli il<br />livello di richiesta giusto
+  subtitle: Progetti diversi richiedono livelli di dettaglio diversi. Seleziona il modulo che corrisponde alla tua fase di acquisto.
+  items:
+    - title: Richiesta rapida
+      description: 5-6 campi, 30 secondi. Per il contatto iniziale, domande generali o follow-up sul download delle risorse. Rispondiamo entro 24 ore con informazioni di base e passaggi successivi.
+      icon: tabler:bolt
+    - title: Richiesta di offerta standard
+      description: 8-10 campi, 2 minuti. Per preventivi di prodotti specifici con selezione del modello, quantità e requisiti di consegna. Ricevi un preventivo dettagliato entro 48 ore.
+      icon: tabler:file-text
+    - title: Richiesta di offerta di progetto
+      description: 10-14 campi, 5 minuti. Per RIB, flotte di resort, progetti di salvataggio o governativi che richiedono configurazione personalizzata, documentazione di conformità e pianificazione della fornitura pluriennale. Assegnato un project manager dedicato.
+      icon: tabler:clipboard-list
+form_quick:
+  title: Richiesta rapida
+  subtitle: Contatto rapido per domande generali e richieste di informazioni iniziali.
+  fields:
+    - name: nome e cognome
+      label: Nome e cognome
+      type: testo
+      required: true
+      placeholder: Il tuo nome completo
+    - name: businessEmail
+      label: E-mail aziendale
+      type: e-mail
+      required: true
+      placeholder: tu@azienda.com
+    - name: nomeazienda
+      label: Nome dell'azienda
+      type: testo
+      required: true
+      placeholder: La tua azienda
+    - name: acquirenteTipo
+      label: Sono un...
+      type: selezionare
+      required: true
+      options:
+        - Distributore / Importatore
+        - Titolare di marca / Marchio privato
+        - Resort / Centro acquatico
+        - Operatore di noleggio
+        - Governo / Agenzia di soccorso
+        - Operatore di immersioni / pesca
+        - Ingegnere marino / specialista refit
+        - Altro
+    - name: prodottoInteresse
+      label: Interesse per il prodotto
+      type: selezione multipla
+      required: true
+      options:
+        - Barche RIB
+        - Gommoni
+        - Tavole SUP
+        - Attrezzatura di sicurezza
+        - Accessori
+        - OEM/ODM personalizzato
+    - name: messaggio
+      label: Di che cosa hai bisogno?
+      type: 'Area di Testo '
+      required: false
+      placeholder: Breve descrizione delle vostre esigenze...
+form_standard:
+  title: Richiesta di offerta standard
+  subtitle: Richiesta di preventivo dettagliata per prodotti e quantità specifici.
+  fields:
+    - name: nome e cognome
+      label: Nome e cognome
+      type: testo
+      required: true
+    - name: businessEmail
+      label: E-mail aziendale
+      type: e-mail
+      required: true
+    - name: nomeazienda
+      label: Nome dell'azienda
+      type: testo
+      required: true
+    - name: acquirenteTipo
+      label: Tipologia acquirente
+      type: selezionare
+      required: true
+    - name: prodottoModello
+      label: Modello/Tipo di prodotto
+      type: testo
+      required: true
+      placeholder: ad esempio, AF580 RIB, AF380 gonfiabile
+    - name: quantità
+      label: Quantità stimata
+      type: testo
+      required: true
+      placeholder: ad esempio, 10-20 unità
+    - name: targetMarket
+      label: Mercato/regione di destinazione
+      type: testo
+      required: true
+      placeholder: ad esempio, UE, Nord America, Medio Oriente
+    - name: consegnaTimeline
+      label: Consegna desiderata
+      type: selezionare
+      required: true
+      options:
+        - Entro 30 giorni
+        - 30-60 giorni
+        - 60-90 giorni
+        - Pianificazione anticipata (90+ giorni)
+        - Solo ricerca
+    - name: complianceRequired
+      label: Requisiti di conformità
+      type: selezione multipla
+      required: false
+      options:
+        - CE / RCD 2013/53/EU
+        - UKCA
+        - USCG
+        - ISO 9001
+        - BSCI
+        - REACH
+        - Nessuna / Non sicuro
+    - name: messaggio
+      label: Ulteriori dettagli
+      type: 'Area di Testo '
+      required: false
+form_project:
+  title: Richiesta di offerta di progetto
+  subtitle: Richiesta completa di progetti per flotte, appalti personalizzati o governativi.
+  fields:
+    - name: nome e cognome
+      label: Nome e cognome
+      type: testo
+      required: true
+    - name: businessEmail
+      label: E-mail aziendale
+      type: e-mail
+      required: true
+    - name: nomeazienda
+      label: Nome dell'azienda
+      type: testo
+      required: true
+    - name: acquirenteTipo
+      label: Tipologia acquirente
+      type: selezionare
+      required: true
+    - name: tipoprogetto
+      label: Tipo di progetto
+      type: selezionare
+      required: true
+      options:
+        - Flotta per resort / hotel
+        - Flotta a noleggio
+        - Flotta di soccorso / pattugliamento
+        - Flotta del centro subacqueo
+        - Appalti pubblici
+        - Marchio privato / OEM
+        - Ordine di stock per rivenditore
+        - Altro
+    - name: barcaTipi
+      label: Tipi di barche richiesti
+      type: selezione multipla
+      required: true
+      options:
+        - Barche RIB
+        - Gommoni / dinghi
+        - Tavole SUP
+        - Kayak
+        - Attrezzatura di sicurezza
+    - name: flottaSize
+      label: Gamma di dimensioni/quantità della flotta
+      type: testo
+      required: true
+      placeholder: ad esempio, 20-50 unità in 12 mesi
+    - name: requisiti personalizzati
+      label: Esigenze di configurazione personalizzata
+      type: 'Area di Testo '
+      required: false
+      placeholder: Dimensioni dello scafo, materiale dei tubi, disposizione del ponte, requisiti del marchio...
+    - name: complianceRequired
+      label: Requisiti di conformità e certificazione
+      type: selezione multipla
+      required: true
+      options:
+        - CE / RCD 2013/53/EU
+        - UKCA
+        - USCG Type III/V
+        - ISO 9001
+        - BSCI
+        - REACH / RoHS
+        - Certificazione del mercato locale
+    - name: targetMarket
+      label: Mercato di riferimento
+      type: testo
+      required: true
+    - name: budgetRange
+      label: Gamma di budget
+      type: selezionare
+      required: false
+      options:
+        - Meno di $10,000
+        - $10,000 - $50,000
+        - $50,000 - $200,000
+        - $200,000+
+        - Preferisco non dirlo
+    - name: consegnaTimeline
+      label: Cronologia del progetto
+      type: selezionare
+      required: true
+      options:
+        - Urgente (entro 30 giorni)
+        - Standard (30-60 giorni)
+        - Pianificato (60-90 giorni)
+        - Pianificazione futura (90+ giorni)
+    - name: messaggio
+      label: Dettagli e requisiti del progetto
+      type: 'Area di Testo '
+      required: false
+      placeholder: Descrivi il tuo progetto, la tua applicazione ed eventuali requisiti specifici...
+cta:
+  title: Preferisci discutere via e-mail?
+  subtitle: Invia la tua richiesta direttamente al nostro team di vendita e ti risponderemo entro 24 ore.
+  actions:
+    - variant: primary
+      text: Inviaci un'e-mail direttamente
+      href: /contact

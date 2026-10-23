@@ -1,0 +1,204 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'tr' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">&larr; AR-GE Merkezine Geri</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Laboratuvar 06</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Kalite ve Muayene Laboratuvarı</h1>
+      <p class="mt-3 text-lg text-muted">Bağımsız doğrulama — teslimattan önce her test geçildi</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-uv-resistance-testing.webp"
+        alt="Aquafarer kalite kontrol laboratuvarı UV testi"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Güven, ama doğrula</h2>
+  <p>
+    Atölyemizden çıkan her tekne, belirlenmiş bir dizi kalite muayenesini ve malzeme testini geçtiğini gösteren
+    sertifikayla birlikte gelir. Kalite ve Muayene Laboratuvarımız organizasyon içinde bağımsız bir işlevdir — doğrudan
+    genel müdüre rapor verir, üretime değil — böylece hiçbir ticari baskının muayene kapısını tehlikeye atamayacağından
+    emin olunur. Eğer bir malzeme partisi veya tamamlanmış bir tekne yayınlanmış şartlara uymuyorsa, laboratuvar
+    uygunsuzluk çözülene kadar sevkiyatı durdurma yetkisine sahiptir.
+  </p>
+  <p>
+    Laboratuvar, ilkelere uygun bir kalite yönetim sistemi altında çalışır ve test yöntemlerimiz, uygulanabilir olduğu
+    yerlerde, ISO, ASTM ve EN standartlarına dayanmaktadır. Yapılan her testin ayrıntılı kayıtlarını tutarız, böylelikle
+    ham malzeme kabulünden nihai tekne teslimine kadar eksiksiz bir izlenebilirlik zinciri oluşturulur.
+  </p>
+
+  <h2>Test ekipmanları ve yetenekler</h2>
+  <table>
+    <thead><tr><th>Ekipman</th><th>Gerçekleştirilen Testler</th><th>Standart / Yöntem</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Evrensel test makinesi (50 kN)</td><td
+          >Çekme dayanımı (kumaş), dikiş soyulma direnci, yırtılma yayılması</td
+        ><td>, ISO 4674</td></tr
+      >
+      <tr
+        ><td>Hava tutma test düzeneği (programlanabilir)</td><td
+          >1000 döngü şişirme/indirme dayanıklılığı, 24-48 saat basınç testi</td
+        ><td>(iç)</td></tr
+      >
+      <tr
+        ><td>Dikiş soyma aparatları (motorlu 180° soyma)</td><td
+          >100 mm/dk hızında kaynak ve yapıştırılmış dikiş soyma dayanımı</td
+        ><td>/ ASTM D1876</td></tr
+      >
+      <tr><td>Hidrostatik basınç test cihazı</td><td>Kumaşın su geçirmezliği (0 — 100 mbar)</td><td>ISO 811</td></tr>
+      <tr
+        ><td>Dijital kalınlık ölçer ve mikrometre</td><td
+          >Kumaş kalınlığı, tüp duvar kalınlığı, yapıştırıcı film kalınlığı</td
+        ><td>ISO 2286-3</td></tr
+      >
+      <tr
+        ><td>Çevresel oda</td><td
+          >Soğuk çatlama ve ısıya dayanıklılık testleri için sıcaklık koşullandırması (-40 °C ile +80 °C)</td
+        ><td>ISO 188, ISO 4675</td></tr
+      >
+      <tr
+        ><td>Renk spektrofotometresi</td><td>Pozlamadan sonra Delta-E renk ölçümü UV</td><td
+          >ISO 105-A05 / ASTM D2244</td
+        ></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>Denetim kapıları — malzemeden teslimata</h2>
+  <p>
+    Her tekne, zorunlu denetim noktaları olan belirli bir kalite planını takip eder. Hiçbir tekne bir kapıyı atlayamaz;
+    her kapı, bir sonraki üretim aşaması başlamadan önce bir kalite denetçisi tarafından onaylanmalıdır.
+  </p>
+
+  <div class="not-prose my-8">
+    <div class="relative">
+      <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-blue-200 dark:bg-blue-800"></div>
+      <div class="space-y-6 relative">
+        {
+          [
+            {
+              gate: 'Gate 1',
+              label: 'Gelen malzeme muayenesi',
+              desc: 'Kumaş partisi, yapıştırıcı partisi, donanım — üretime bırakılmadan önce gelen spesifikasyona karşı hepsi kontrol edilir.',
+            },
+            {
+              gate: 'Gate 2',
+              label: 'İşlem sırasında kaynak denetimi',
+              desc: 'Her üretim vardiyasının başında ilk kaynak numunesi test edildi (soyma + görsel).',
+            },
+            {
+              gate: 'Gate 3',
+              label: 'Oda hava testi',
+              desc: 'Her bölüm çalışma basıncının 1,25 katına kadar basınçlandırıldı, 24-48 saat boyunca tutuldu. Veriler seri numarasına göre kaydedildi.',
+            },
+            {
+              gate: 'Gate 4',
+              label: 'Teslim öncesi muayene',
+              desc: 'Tüm tekne kontrol edildi: tüm bağlantı elemanları torklandı, sistemler çalışır durumda, kozmetik kusur yok. 100 maddelik kontrol listesi.',
+            },
+            {
+              gate: 'Gate 5',
+              label: 'Son sertifikasyon',
+              desc: 'Test raporları derlendi, muayene kayıtları gözden geçirildi, Uygunluk Sertifikası verildi.',
+            },
+          ].map((g) => (
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs font-bold z-10">
+                {g.gate}
+              </div>
+              <div class="flex-1 p-3 rounded-lg bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800">
+                <p class="text-sm font-semibold">{g.label}</p>
+                <p class="text-xs text-gray-500 mt-1">{g.desc}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+
+  <h2>Temel kalite ölçütleri (2025 ortalaması)</h2>
+  <div class="not-prose my-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">99.7 %</span>
+      <span class="text-xs text-gray-500">İlk geçiş verimi (kumaş partisi)</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">&lt; %0,2</span>
+      <span class="text-xs text-gray-500">Kaynak reddetme oranı (doğrusal metre)</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">100 %</span>
+      <span class="text-xs text-gray-500">Montajdan önce hava testinden geçen odalar</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600"></span>
+      <span class="text-xs text-gray-500">Tasarım kategorisi uyumu</span>
+    </div>
+  </div>
+
+  <h2>Kaliteli ekibimiz</h2>
+  <p>
+    Laboratuvarda bir kalite yöneticisi (10 yıllık deniz kalite kalitesi deneyimi, ASQ Sertifikalı Kalite Mühendisi),
+    iki kalite denetçisi (her biri görsel testlerde Seviye 2 NDT sertifikasına sahip) ve tüm fiziksel testlerden sorumlu
+    bir malzeme teknisyeni bulunmaktadır. Ekip, test sonuçlarımızın doğru ve tekrarlanabilir kalmasını sağlamak için
+    bağımsız üçüncü taraf sağlayıcı aracılığıyla yıllık yeterlilik testlerinden geçmektedir.
+  </p>
+
+  <h2>İstemciler için bağımsız test</h2>
+  <p>
+    Kalite ve Denetim Laboratuvarımız bağımsız test hizmetleri için mevcuttur. Bir kumaş spesifikasyonunu doğrulamanız,
+    yeni bir yapışkan sistemini doğrulamanız veya satın alma yeterliliği için üçüncü taraf test raporu almanız
+    gerekiyorsa, testleri ilgili standarda göre yapabilir ve sertifikalı test raporu yayımlayabiliriz.
+  </p>
+  <p>Son dönemde üçüncü taraf test çalışmalarına örnekler:</p>
+  <ul>
+    <li>
+      Avrupa askeri tedarik programı için beş rekabetçi yapışkan film ürününün soyulma dayanıklılığı karşılaştırması.
+    </li>
+    <li>
+      Yeni turuncu pigmentli formülasyon için hızlandırılmış yaşlanma çalışması (UV + termal döngü) PVC ve 500 saat
+      aralıklarla düzenli ara ölçümlerle.
+    </li>
+    <li>Yeni yüksek basınçlı tüp tasarımı için 50 prototip baffle valfin hava tutma doğrulaması.</li>
+  </ul>
+
+  <h2>Sana olan bağlılığımız</h2>
+  <p>
+    Bir ... aldığınızda{SITE.name}tekne, ayrıca teknenize özel geçerli test sonuçlarının derlendiği kalite dosyasını da
+    alırsınız. Kumaş parti sertifikası, kaynak soyulma testleri, oda hava testi kayıtları ve teslim öncesi kontrol
+    listesi. Her sayı izlenebilir durumdadır. Her müfettiş tanımlanmıştır. Bu sadece evrak işleri değildir — teslim
+    ettiğimizin belirttiğimiz gibi olduğunu gösteren sözümüzdür.
+  </p>
+  <p>
+    Kalite endişeniz olursa, doğrudan laboratuvarla iletişime geçebilirsiniz — iletişim bilgileri uygunluk
+    sertifikanızda yazılmıştır. Her sorguyu ciddiye alıyoruz ve 48 saat içinde resmi bir soruşturma başlatmaya söz
+    veriyoruz.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Bağımsız test veya kalite doğrulaması mı gerekiyor?</h2>
+    <p class="mt-2 text-sm text-muted">
+      Laboratuvarımız üçüncü taraf test çalışmalarını kabul eder — ihtiyaçlarınız için bizimle iletişime geçin.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Kalite laboratuvarıyla iletişime geçin</a
+    >
+  </div>
+</section>

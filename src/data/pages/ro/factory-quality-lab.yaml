@@ -1,0 +1,56 @@
+hero:
+  tagline: Laborator de Control al Calității
+  title: Laborator de Testare & Asigurarea Calității
+  subtitle: Laborator de calitate independent cu procese ISO 9001 — fiecare unitate testată înainte de expediere
+intro: Aquafarer operează un laborator de control al calității dedicat, care funcționează independent de producție. Fiecare lot de materie primă și fiecare barcă finită trece prin protocoale de inspecție documentate înainte de eliberare. Echipa noastră de QC raportează direct conducerii, asigurând decizii imparțiale privind calitatea.
+highlights:
+  - value: 100%
+    label: Unități testate la presiune
+    detail: Fiecare cameră, fiecare barcă
+  - value: 48 h
+    label: Durata testului de reținere a aerului
+    detail: La 1,25× presiunea nominală
+  - value: '&lt;5%'
+    label: Pierdere maximă permisă de presiune
+    detail: Pe durata de 24 de ore de menținere
+  - value: AQL 2,5
+    label: Prag defect major
+    detail: Conform prelevării ISO 2859
+test_procedures:
+  - title: Inspecția materiilor prime
+    description: Fiecare lot de PVC, Hypalon, drop-stitch stofă și accesorii primite este testat înainte de acceptare. Rezistența la tracțiune (ASTM D751), rezistența la rupere (ISO 4674) și rezistența UV sunt verificate. Materialele neconforme sunt puse în carantină și returnate.
+    standards:
+      - ASTM D751 (tracțiune)
+      - ISO 4674 (rupere)
+      - ISO 4892 (UV)
+  - title: Puncte de Control QC În Proces
+    description: Operatorii de producție efectuează auto-inspecția la fiecare etapă. Auditorii QC realizează prelevări aleatorii pe durata turei. Testele de decojire a sudurii se efectuează la fiecare 50 de unități. Verificările dimensionale au loc la fiecare 20-lea panou.
+    standards:
+      - ASTM D751 (decojire)
+      - Listă de verificare internă de 100 de puncte
+      - Prelevare ISO 2859
+  - title: Testul de retenție a aerului de 48 de ore
+    description: Fiecare cameră a tubului este umflată la 125% din presiunea nominală și menținută timp de 48 de ore. Senzorii de presiune înregistrează continuu cu compensare de temperatură. Orice cameră care depășește o scădere de presiune de 5% declanșează re-inspecția automată a lotului.
+    standards:
+      - ISO 6185
+      - CE 2013/53/UE
+  - title: Testarea încărcării și echilibrului
+    description: Bărcile finalizate sunt testate la capacitatea maximă nominală pentru stabilitate, francbord și manevrabilitate. Fiecare vas trece prin test de apă înainte de aprobarea inspecției finale.
+    standards:
+      - ISO 12217
+      - CE 2013/53/UE
+equipment:
+  - name: Mașină de testare universală (tragere)
+    spec: 5 kN, conform ASTM D751
+  - name: Tester de scădere a presiunii
+    spec: Multi-canal, 0–50 psi, înregistrare a datelor
+  - name: UV Cameră de intemperii
+    spec: ISO 4892, 1.000 cicluri h
+  - name: Grosimetru (digital)
+    spec: Rezoluție 0,01 mm
+  - name: Tester de descoperire (sudură)
+    spec: Motorizat, capacitate 50 N
+  - name: Cameră de temperatură
+    spec: -40 °C până la +100 °C
+  - name: Tanc de detectare a scurgerilor
+    spec: 6 m × 2 m, iluminat

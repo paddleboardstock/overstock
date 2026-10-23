@@ -1,0 +1,172 @@
+hero:
+  tagline: Aquafarer Academy
+  title: Learning Center
+  subtitle: Guides and tutorials for every skill level — from SUP basics to advanced rescue techniques
+
+categories:
+  - level: Beginner
+    color: from-green-500 to-emerald-600
+    badge: bg-green-100 text-green-700
+    guides:
+      - title: SUP Basics
+        desc: Learn the fundamentals of stand-up paddleboarding — stance, stroke technique, and balance.
+        slug: beginner-sup-guide
+      - title: Paddle Techniques
+        desc: Forward stroke, sweep stroke, draw stroke, and low brace — master the essential paddle moves.
+        slug: sup-paddle-guide
+      - title: Safety First
+        desc: Essential safety practices including weather checks, PFD use, leash rules, and self-rescue.
+        slug: sup-safety-guide
+  - level: Intermediate
+    color: from-blue-500 to-indigo-600
+    badge: bg-blue-100 text-blue-700
+    guides:
+      - title: Touring Essentials
+        desc: Planning multi-hour paddles — navigation, hydration, pacing, and reading wind forecasts.
+        slug: touring-sup-guide
+      - title: Weather Reading
+        desc: Interpret marine forecasts, identify cloud patterns, and understand wind effects on water.
+        slug: weather-planning-water-sports
+      - title: Navigation Basics
+        desc: Chart reading, compass use, GPS waypoints, and route planning for coastal paddling.
+        slug: sup-navigation-guide
+      - title: Tidal Awareness
+        desc: Understanding tide cycles, currents, and how they affect launch timing and routing.
+        slug: understanding-tides
+  - level: Advanced
+    color: from-purple-500 to-violet-600
+    badge: bg-purple-100 text-purple-700
+    guides:
+      - title: Multi-Day Trip Planning
+        desc: Expedition logistics — gear selection, food planning, safety protocols, and emergency contacts.
+        slug: sup-travel-guide
+      - title: Rescue Techniques
+        desc: Self-rescue, T-rescue, eskimo rescue for kayaks, and towing protocols for open water.
+        slug: sup-self-rescue
+      - title: Night Paddling
+        desc: Navigation after dark — lighting requirements, route memory, group communication, and hazard awareness.
+        slug: sup-navigation-guide
+  - level: Maintenance
+    color: from-amber-500 to-orange-600
+    badge: bg-amber-100 text-amber-700
+    guides:
+      - title: Cleaning & Care
+        desc: Freshwater rinsing, UV protection, mildew prevention, and proper drying techniques after every session.
+        slug: inflatable-sup-maintenance
+      - title: Storage Guide
+        desc: Best practices for storing inflatable boards and boats — deflation, folding, temperature control, and shelf life.
+        slug: inflatable-sup-storage
+      - title: Repair Basics
+        desc: Fix small punctures, seam leaks, and valve issues with PVC repair kits and patch techniques.
+        slug: inflatable-sup-repair
+      - title: Valve Maintenance
+        desc: Identify valve types (Halkey-Roberts, Boston, Leafield), clean debris, and replace faulty stems.
+        slug: inflatable-sup-repair
+
+knowledge_center_tagline: 'Knowledge Center'
+knowledge_center_title: 'Marine Equipment & Industry Guides'
+knowledge_center_subtitle: 'Expert knowledge and buying guides for marine professionals, fleet operators, and water sports enthusiasts.'
+
+knowledge_sections:
+  - title: 'RIB Boat Knowledge'
+    tagline: 'Rigid Inflatable Boat Guides'
+    desc: 'Everything about RIB boats — hull design, materials, engine selection, maintenance, and buying advice for commercial and recreational use.'
+    guides:
+      - title: 'How to Choose the Right RIB Boat'
+        desc: 'Complete guide to selecting a RIB — size, engine power, tube material, hull type, and intended use.'
+        href: '/v2/inflatable-boat-buying-guide'
+      - title: 'RIB vs Inflatable Boat'
+        desc: 'Rigid inflatable boat vs traditional inflatable dinghy — hull design, performance, durability, and capacity compared.'
+        href: '/compare/rib-vs-dinghy'
+      - title: 'Commercial RIB vs Recreational RIB'
+        desc: 'Commercial-grade vs recreational RIB boats — construction standards, materials, lifespan, cost, and certifications.'
+        href: '/compare/commercial-vs-recreational-rib'
+      - title: 'Aluminum vs Fiberglass Hull'
+        desc: 'Compare aluminum and fiberglass hulls for RIB boats across weight, cost, durability, and corrosion resistance.'
+        href: '/compare/aluminum-vs-fiberglass'
+  - title: 'Inflatable Boat Guide'
+    tagline: 'Inflatable Watercraft Knowledge'
+    desc: 'Comprehensive guides on inflatable boats — PVC vs Hypalon, construction methods, safety standards, and maintenance best practices.'
+    guides:
+      - title: 'PVC vs Hypalon Material Guide'
+        desc: 'Definitive comparison between PVC and Hypalon CSM for inflatable boat construction.'
+        href: '/compare/pvc-vs-hypalon'
+      - title: 'How Inflatable Boats Are Made'
+        desc: 'Manufacturing process — material cutting, HF welding, seam construction, pressure testing, and quality control.'
+        href: '/learn/inflatable-technology'
+      - title: 'Inflatable Boat Safety Guide'
+        desc: 'Safety standards, load capacity, proper inflation, pre-departure checks, and emergency procedures.'
+        href: '/learn/water-safety'
+      - title: 'Inflatable Boat Maintenance'
+        desc: 'Cleaning, storage, UV protection, winterization, and repair of inflatable boats and RIBs.'
+        href: '/v2/inflatable-boat-maintenance'
+  - title: 'Boat Knowledge'
+    tagline: 'Inflatable Boat & RIB Hub'
+    desc: 'Technical guides covering inflatable boat types, materials, construction methods, maintenance, and safety — from dinghies to RIBs.'
+    guides:
+      - title: 'Inflatable Boat Types'
+        desc: 'Dinghies, RIBs, kayaks, and tenders — learn the differences and choose the right one.'
+        href: '/v2/inflatable-boat-buying-guide'
+      - title: 'Drop-Stitch Technology'
+        desc: 'How thousands of internal threads create rigid, high-pressure inflatable structures.'
+        href: '/learn/drop-stitch-core'
+      - title: 'Materials Reference'
+        desc: 'PVC denier ratings, fabric weights, UV resistance, and marine-grade materials explained.'
+        href: '/learn/materials'
+      - title: 'RIB vs Dinghy'
+        desc: 'Compare rigid inflatable boats with traditional inflatable dinghies for different use cases.'
+        href: '/compare/rib-vs-dinghy'
+  - title: 'SUP Knowledge'
+    tagline: 'Stand-Up Paddleboard Guides'
+    desc: 'Everything about SUP boards — inflatable vs rigid, board dimensions, material technology, and expert advice for all skill levels.'
+    guides:
+      - title: 'Inflatable vs Hard SUP'
+        desc: 'Compare iSUPs and hard epoxy boards across portability, durability, performance, and value.'
+        href: '/learn/sup'
+      - title: 'SUP Board Dimensions Guide'
+        desc: 'How length, width, and thickness affect stability, speed, and maneuverability.'
+        href: '/learn/sup'
+      - title: 'SUP Maintenance & Care'
+        desc: 'Cleaning, storage, UV protection, and repair tips for inflatable SUP boards.'
+        href: '/v2/inflatable-sup-maintenance'
+      - title: 'Choosing Your First SUP'
+        desc: "Beginner's guide to selecting the right stand-up paddleboard for your weight, skill level, and intended use."
+        href: '/learn/sup'
+  - title: 'Diving Equipment Guide'
+    tagline: 'Commercial Dive Boat Knowledge'
+    desc: 'Specialized guides on dive boats, dive RIBs, and equipment for diving centers, dive operators, and commercial diving teams.'
+    guides:
+      - title: 'Best RIB Boat for Diving Centers'
+        desc: 'How to choose the right dive RIB for your diving center — capacity, configuration, and budget considerations.'
+        href: '/solutions-diving-center-boats'
+      - title: 'Dive RIB Configuration Guide'
+        desc: 'Essential features for dive RIBs — tank racks, ladder systems, dive platform, and equipment storage.'
+        href: '/solutions-diving-center-boats'
+  - title: 'Yacht Tender Guide'
+    tagline: 'Superyacht & Marine Tender Solutions'
+    desc: 'Guides on selecting the perfect yacht tender — inflatable tenders, RIB tenders, storage solutions, and tender accessories.'
+    guides:
+      - title: 'How to Choose a Yacht Tender'
+        desc: 'Factors to consider when selecting a tender for your yacht — size, material, engine, and storage.'
+        href: '/solutions-yacht-tender-solutions'
+      - title: 'Inflatable vs RIB Tenders'
+        desc: 'Compare inflatable dinghy tenders with rigid inflatable boat tenders for performance, durability, and stowability.'
+        href: '/compare/rib-vs-dinghy'
+  - title: 'Rescue Equipment Guide'
+    tagline: 'Search & Rescue Watercraft Knowledge'
+    desc: 'Professional guides on rescue boats, SAR watercraft, and emergency response equipment for coast guard, lifeguards, and disaster relief teams.'
+    guides:
+      - title: 'SAR Boat Selection Guide'
+        desc: 'How to choose the right search and rescue boat — speed, capacity, durability, and specialized equipment requirements.'
+        href: '/solutions-rescue-watercraft'
+      - title: 'Commercial RIB for Rescue Operations'
+        desc: 'Why commercial-grade RIBs are the preferred choice for professional search and rescue teams worldwide.'
+        href: '/use-cases/search-and-rescue'
+
+read_guide: Read guide →
+
+cta:
+  title: Not sure where to start?
+  desc: Take our skill assessment quiz to find the right guides and gear for your level.
+  label: Contact us →
+  link: /contact

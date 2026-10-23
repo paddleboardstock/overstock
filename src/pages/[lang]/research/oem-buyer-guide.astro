@@ -1,0 +1,498 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { languages, defaultLang } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+import LDe from '~/components/research/oem-buyer-guide.de.astro';
+import LEs from '~/components/research/oem-buyer-guide.es.astro';
+import LFr from '~/components/research/oem-buyer-guide.fr.astro';
+import LIt from '~/components/research/oem-buyer-guide.it.astro';
+import LCs from '~/components/research/oem-buyer-guide.cs.astro';
+import LSv from '~/components/research/oem-buyer-guide.sv.astro';
+import LDa from '~/components/research/oem-buyer-guide.da.astro';
+import LEl from '~/components/research/oem-buyer-guide.el.astro';
+import LNo from '~/components/research/oem-buyer-guide.no.astro';
+import LRu from '~/components/research/oem-buyer-guide.ru.astro';
+import LNl from '~/components/research/oem-buyer-guide.nl.astro';
+import LFi from '~/components/research/oem-buyer-guide.fi.astro';
+import LPl from '~/components/research/oem-buyer-guide.pl.astro';
+import LAr from '~/components/research/oem-buyer-guide.ar.astro';
+import LPt from '~/components/research/oem-buyer-guide.pt.astro';
+import LJa from '~/components/research/oem-buyer-guide.ja.astro';
+import LMs from '~/components/research/oem-buyer-guide.ms.astro';
+import LRo from '~/components/research/oem-buyer-guide.ro.astro';
+import LSk from '~/components/research/oem-buyer-guide.sk.astro';
+import LSl from '~/components/research/oem-buyer-guide.sl.astro';
+import LSr from '~/components/research/oem-buyer-guide.sr.astro';
+import LTh from '~/components/research/oem-buyer-guide.th.astro';
+import LTl from '~/components/research/oem-buyer-guide.tl.astro';
+import LTr from '~/components/research/oem-buyer-guide.tr.astro';
+import LBg from '~/components/research/oem-buyer-guide.bg.astro';
+import LEt from '~/components/research/oem-buyer-guide.et.astro';
+import LHe from '~/components/research/oem-buyer-guide.he.astro';
+import LHr from '~/components/research/oem-buyer-guide.hr.astro';
+import LHu from '~/components/research/oem-buyer-guide.hu.astro';
+import LId from '~/components/research/oem-buyer-guide.id.astro';
+import LKo from '~/components/research/oem-buyer-guide.ko.astro';
+import LLt from '~/components/research/oem-buyer-guide.lt.astro';
+import LLv from '~/components/research/oem-buyer-guide.lv.astro';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => getUiForLang(lang || defaultLang)?.[key] || '';
+
+const META: Record<string, { title: string; description: string }> = {
+  en: {
+    title: 'OEM Buyer Guide — Sourcing Inflatable Watercraft from Asia',
+    description:
+      'Comprehensive guide for sourcing inflatable boats, SUPs, kayaks, and RIBs from Asian manufacturers: factory evaluation checklist, QC protocols, compliance verification, MOQ negotiation, shipping terms, and common pitfalls.',
+  },
+  de: {
+    title: 'OEM-Einkaufsführer — aufblasbare Wasserfahrzeuge aus Asien beschaffen',
+    description:
+      'Umfassender Leitfaden zur Beschaffung von Schlauchbooten, SUPs, Kajaks und RIBs bei asiatischen Herstellern: Checkliste zur Fabrikbewertung, QC-Protokolle, Konformitätsprüfung, MOQ-Verhandlung, Versandbedingungen und häufige Fallstricke.',
+  },
+  es: {
+    title: 'Guía del comprador OEM — abastecimiento de embarcaciones hinchables desde Asia',
+    description:
+      'Guía completa para abastecer barcas hinchables, SUP, kayaks y RIB de fabricantes asiáticos: lista de verificación de evaluación de fábrica, protocolos de control de calidad, verificación de conformidad, negociación de MOQ, términos de envío y errores comunes.',
+  },
+  fr: {
+    title: "Guide de l'acheteur OEM — approvisionnement en embarcations gonflables depuis l'Asie",
+    description:
+      "Guide complet pour s'approvisionner en bateaux gonflables, SUPs, kayaks et RIB auprès de fabricants asiatiques : check-list d'évaluation d'usine, protocoles de contrôle qualité, vérification de conformité, négociation MOQ, conditions d'expédition et pièges courants.",
+  },
+  it: {
+    title: "Guida all'acquisto OEM — approvvigionamento di natanti gonfiabili dall'Asia",
+    description:
+      "Guida completa per l'approvvigionamento di gommoni, SUP, kayak e RIB da produttori asiatici: check-list di valutazione della fabbrica, protocolli di controllo qualità, verifica della conformità, negoziazione MOQ, termini di spedizione ed errori comuni.",
+  },
+  cs: {
+    title: 'OEM Průvodce kupujícího – Nákup nafukovacích plavidel z Asie',
+    description:
+      'Komplexní průvodce pro získávání nafukovacích člunů, SUP, kajaků a RIB od asijských výrobců: kontrolní seznam pro hodnocení továrny, protokoly kontroly kvality, ověřování souladu, vyjednávání o MOQ, dodací podmínky a běžná úskalí.',
+  },
+  sv: {
+    title: 'OEM Köpguide — Köp uppblåsbara vattenskotrar från Asien',
+    description:
+      'Omfattande guide för att köpa uppblåsbara båtar, SUP:ar, kajaker och RIB:er från asiatiska tillverkare: checklista för fabriksutvärdering, QC-protokoll, verifiering av efterlevnad, MOQ-förhandling, fraktvillkor och vanliga fallgropar.',
+  },
+  da: {
+    title: 'OEM Købervejledning — Indkøb af oppustelige fartøjer fra Asien',
+    description:
+      "Omfattende guide til indkøb af oppustelige både, SUP'er, kajakker og RIB'er fra asiatiske producenter: fabriksevalueringstjekliste, QC-protokoller, overensstemmelsesverifikation, MOQ-forhandling, forsendelsesbetingelser og almindelige faldgruber.",
+  },
+  el: {
+    title: 'OEM Οδηγός αγοραστών — Προμήθεια φουσκωτών σκαφών από την Ασία',
+    description:
+      'Πλήρης οδηγός για την προμήθεια φουσκωτών σκαφών, SUP, καγιάκ και RIB από Ασιάτες κατασκευαστές: λίστα ελέγχου εργοστασιακής αξιολόγησης, πρωτόκολλα QC, επαλήθευση συμμόρφωσης, διαπραγμάτευση MOQ, όροι αποστολής και κοινές παγίδες.',
+  },
+  no: {
+    title: 'OEM Kjøperveiledning — Kjøp oppblåsbare vannscootere fra Asia',
+    description:
+      'Omfattende veiledning for innkjøp av oppblåsbare båter, SUP-er, kajakker og RIB-er fra asiatiske produsenter: sjekkliste for fabrikkevaluering, QC-protokoller, samsvarsverifisering, MOQ-forhandling, fraktvilkår og vanlige fallgruver.',
+  },
+  ru: {
+    title: 'OEM Руководство для покупателя — поиск надувных гидроциклов из Азии',
+    description:
+      'Комплексное руководство по поиску надувных лодок, SUP, каяков и надувных лодок от азиатских производителей: контрольный список заводской оценки, протоколы контроля качества, проверка соответствия, согласование минимального заказа, условия доставки и типичные ошибки.',
+  },
+  nl: {
+    title: 'OEM Kopersgids — Koop opblaasbare waterscooters uit Azië',
+    description:
+      "Uitgebreide gids voor het kopen van opblaasbare boten, SUP's, kajaks en RIB's van Aziatische fabrikanten: checklist voor fabrieksevaluatie, QC-protocollen, nalevingscontrole, MOQ-onderhandelingen, verzendingsvoorwaarden en veelvoorkomende valkuilen.",
+  },
+  fi: {
+    title: 'OEM Ostajan opas — puhallettavien vesikulkuneuvojen hankinta Aasiasta',
+    description:
+      'Kattava opas kumiveneiden, SUP-veneiden, kajakkien ja RIB-veneiden hankintaan aasialaisilta valmistajilta: tehdasarvioinnin tarkistuslista, laadunvalvontaprotokollat, vaatimustenmukaisuuden todentaminen, MOQ-neuvottelut, toimitusehdot ja yleiset sudenkuopat.',
+  },
+  pl: {
+    title: 'OEM Przewodnik dla kupujących — Pozyskiwanie nadmuchiwanych jednostek pływających z Azji',
+    description:
+      'Kompleksowy przewodnik dotyczący pozyskiwania pontonów, SUP, kajaków i RIBów od azjatyckich producentów: lista kontrolna oceny fabrycznej, protokoły kontroli jakości, weryfikacja zgodności, negocjacje MOQ, warunki wysyłki i typowe pułapki.',
+  },
+  ar: {
+    title: 'OEM دليل المشتري - تحديد مصادر المركبات المائية القابلة للنفخ من آسيا',
+    description:
+      'دليل شامل للحصول على القوارب القابلة للنفخ، وSUPs، وقوارب الكاياك، والأضلاع من الشركات المصنعة الآسيوية: قائمة مراجعة تقييم المصنع، وبروتوكولات مراقبة الجودة، والتحقق من الامتثال، والتفاوض بشأن موك، وشروط الشحن، والمزالق الشائعة.',
+  },
+  pt: {
+    title: 'OEM Guia do comprador - Compra de embarcações infláveis ​​​​da Ásia',
+    description:
+      'Guia abrangente para aquisição de barcos infláveis, SUPs, caiaques e RIBs de fabricantes asiáticos: lista de verificação de avaliação de fábrica, protocolos de controle de qualidade, verificação de conformidade, negociação de MOQ, termos de envio e armadilhas comuns.',
+  },
+  ja: {
+    title: 'OEM バイヤー ガイド — アジアからのインフレータブル水上バイクの調達',
+    description:
+      'アジアのメーカーからインフレータブル ボート、SUP、カヤック、RIB を調達するための包括的なガイド: 工場評価チェックリスト、QC プロトコル、コンプライアンス検証、MOQ 交渉、出荷条件、一般的な落とし穴。',
+  },
+  ms: {
+    title: 'OEM Panduan Pembeli — Mendapatkan Kenderaan Air Inflatable dari Asia',
+    description:
+      'Panduan menyeluruh untuk mendapatkan bot tiup, SUPs, kayak, dan RIBs daripada pengeluar Asia: senarai semak penilaian kilang, protokol QC, pengesahan pematuhan, perundingan MOQ, terma penghantaran, dan perangkap biasa.',
+  },
+  ro: {
+    title: 'OEM Ghidul cumpărătorului — Achiziționarea de ambarcațiuni gonflabile din Asia',
+    description:
+      'Ghid complet pentru achiziționarea bărcilor gonflabile, SUPs, caiacuri și RIBs de la producători asiatici: listă de verificare a evaluării fabricii, protocoale QC, verificarea conformității, negocierea MOQ, termeni de expediere și capcane comune.',
+  },
+  sk: {
+    title: 'OEM Sprievodca kupujúceho — Získavanie nafukovacích plavidiel z Ázie',
+    description:
+      'Komplexný sprievodca pre získavanie nafukovacích člnov, SUPs, kajakov a RIBs od ázijských výrobcov: kontrolný zoznam hodnotenia tovární, protokoly QC, overovanie súladu, vyjednávanie MOQ, podmienky dodania a bežné úskalia.',
+  },
+  sl: {
+    title: 'OEM Vodnik za kupce — Pridobivanje napihljivih vodnih plovil iz Azije',
+    description:
+      'Celovit vodič za pridobivanje napihljivih čolnov, SUPs, kajakov in RIBs od azijskih proizvajalcev: kontrolni seznam ocene tovarne, protokoli kontrole kakovosti, preverjanje skladnosti, MOQ pogajanja, pogoji pošiljanja in običajne pasti.',
+  },
+  sr: {
+    title: 'OEM Vodič za kupce — Nabavka napuhanih plovila iz Azije',
+    description:
+      'Sveobuhvatan vodič za nabavku napuhanih čamaca, SUPs, kajaka i RIBs od azijskih proizvođača: kontrolna lista za evaluaciju fabrike, protokoli QC, verifikacija usklađenosti, MOQ pregovaranje, uslovi isporuke i uobičajene zamke.',
+  },
+  th: {
+    title: 'OEM คู่มือผู้ซื้อ — การจัดหาพาหนะน้ำแบบเป่าลมจากเอเชีย',
+    description:
+      'คู่มือครบวงจรสำหรับการจัดหากระดานโต้คลื่นเป่าลม, SUPs, เรือคายัค, และ RIBs จากผู้ผลิตในเอเชีย: รายการตรวจสอบการประเมินโรงงาน, โปรโตคอล QC, การตรวจสอบความสอดคล้อง, การเจรจา MOQ, ข้อตกลงการจัดส่ง, และข้อควรระวังทั่วไป',
+  },
+  tl: {
+    title: 'OEM Gabay ng Mamimili — Pagkuha ng Inflatable Watercraft mula sa Asya',
+    description:
+      'Komprehensibong gabay para sa pagkuha ng inflatable boats, SUPs, kayaks, at RIBs mula sa mga tagagawa sa Asya: checklist sa ebalwasyon ng pabrika, mga protocol ng QC, beripikasyon ng compliance, MOQ pakikipag-ayos, mga termino sa pagpapadala, at mga karaniwang pagkakamali.',
+  },
+  tr: {
+    title: "OEM Alıcı Kılavuzu — Asya'dan Şişme Su Taşıtları Tedariki",
+    description:
+      'Asya üreticilerinden şişme botlar, SUPs, kayaklar ve RIBs tedariki için kapsamlı kılavuz: fabrika değerlendirme kontrol listesi, kalite kontrol protokolleri, uyumluluk doğrulama, MOQ müzakeresi, nakliye koşulları ve yaygın tuzaklar.',
+  },
+  bg: {
+    title: 'OEM Ръководство за купувачи — Закупуване на надуваеми водни съдове от Азия',
+    description:
+      'Комплексно ръководство за закупуване на надуваеми лодки, SUPs, каяци и RIBs от азиатски производители: контролен списък за оценка на фабриката, протоколи за КК, проверка на съответствието, преговори MOQ, условия на доставка и често срещани капани.',
+  },
+  et: {
+    title: 'OEM Ostja juhend — Täispuhutavate veesõidukite hankimine Aasiast',
+    description:
+      'Terviklik juhend täispuhutavate paatide, SUPs, kajakkide ja RIBs hankimiseks Aasia tootjatelt: tehase hindamise kontrollnimekiri, QC protokollid, vastavuse kontroll, MOQ läbirääkimined, saatmistingimused ja levinumad lõksud.',
+  },
+  he: {
+    title: 'OEM מדריך רוכשים — רכישת כלי מים מתנפחים מאסיה',
+    description:
+      'מדריך מקיף לרכישת סירות מתנפחות, SUPs, קיאקים ו-RIBs מיצרנים אסייתיים: רשימת בדיקה להערכת המפעל, פרוטוקולי QC, אימות ציות, משא ומתן MOQ, תנאי משלוח ומלכודות נפוצות.',
+  },
+  hr: {
+    title: 'OEM Vodič za kupce — Nabava napuhanih plovila iz Azije',
+    description:
+      'Sveobuhvatan vodič za nabavu napuhanih brodova, SUPs, kajaka i RIBs od azijskih proizvođača: kontrolni popis procjene tvornice, protokoli kontrole kvalitete, provjera usklađenosti, MOQ pregovaranje, uvjeti otpreme i uobičajene zamke.',
+  },
+  hu: {
+    title: 'OEM Vevői útmutató — Felfújható vízi járművek beszerzése Ázsiából',
+    description:
+      'Átfogó útmutató felfújható hajók, SUPs, kajakok és RIBs ázsiai gyártóktól történő beszerzéséhez: gyárértékelési ellenőrzőlista, minőség-ellenőrzési protokollok, megfelelőség ellenőrzése, MOQ tárgyalás, szállítási feltételek és gyakori buktatók.',
+  },
+  id: {
+    title: 'OEM Panduan Pembeli — Mendapatkan Kendaraan Air Karet dari Asia',
+    description:
+      'Panduan komprehensif untuk mendapatkan perahu karet tiup, SUPs, kayak, dan RIBs dari produsen Asia: daftar periksa evaluasi pabrik, protokol QC, verifikasi kepatuhan, negosiasi MOQ, ketentuan pengiriman, dan jebakan umum.',
+  },
+  ko: {
+    title: 'OEM 구매자 가이드 — 아시아에서 인플레이션 수상 보트 조달하기',
+    description:
+      '아시아 제조업체로부터 고무보트, SUPs, 카약 및 RIBs를 소싱하기 위한 종합 가이드: 공장 평가 체크리스트, QC 프로토콜, 준수 검증, MOQ 협상, 배송 조건 및 일반적인 함정.',
+  },
+  lt: {
+    title: 'OEM Pirkėjo vadovas — pripučiamų vandens laivų tiekimas iš Azijos',
+    description:
+      'Išsamus vadovas pripučiamų valtelių, SUPs, kajakų ir RIBs tiekimui iš azijietiškų gamintojų: gamyklos vertinimo kontrolinis sąrašas, kokybės kontrolės protokolai, atitikties patikra, MOQ derybos, siuntimo sąlygos ir dažniausios klaidos.',
+  },
+  lv: {
+    title: 'OEM Pircēja ceļvedis — Piepūšamo ūdens transportlīdzekļu iegāde no Āzijas',
+    description:
+      'Visaptverošs ceļvedis piepūšamo laivu, SUPskajaku un RIBs Āzijas ražotāju preču iegādei: rūpnīcu novērtējuma kontrolsaraksts, kvalitātes kontroles protokoli, atbilstības pārbaude, MOQ sarunas, piegādes nosacījumi un biežākās problēmas.',
+  },
+};
+const meta = META[lang] || META.en;
+const ResearchBody: any =
+  (
+    {
+      de: LDe,
+      es: LEs,
+      fr: LFr,
+      it: LIt,
+      cs: LCs,
+      sv: LSv,
+      da: LDa,
+      el: LEl,
+      no: LNo,
+      ru: LRu,
+      nl: LNl,
+      fi: LFi,
+      pl: LPl,
+      ar: LAr,
+      pt: LPt,
+      ja: LJa,
+      ms: LMs,
+      ro: LRo,
+      sk: LSk,
+      sl: LSl,
+      sr: LSr,
+      th: LTh,
+      tl: LTl,
+      tr: LTr,
+      bg: LBg,
+      et: LEt,
+      he: LHe,
+      hr: LHr,
+      hu: LHu,
+      id: LId,
+      ko: LKo,
+      lt: LLt,
+      lv: LLv,
+    } as Record<string, any>
+  )[lang] || null;
+
+const metadata = {
+  title: `${meta.title} | ${SITE.name}`,
+  description: meta.description,
+  ignoreTitleTemplate: true,
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: meta.title,
+  description: metadata.description,
+  author: { '@type': 'Organization', name: SITE.name },
+  datePublished: '2024-05-08',
+  dateModified: '2025-06-10',
+};
+
+const faqSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What should I look for in an OEM inflatable boat manufacturer?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Direct factory (not trading company), ISO 9001 certification, CE compliance, transparent QC process, low MOQs, and willingness to accommodate factory audits.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the typical OEM process?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Design brief, material selection, prototyping, pressure testing, CE/ISO inspection, and FOB shipping. 30-45 days standard lead time.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How do I verify manufacturer claims?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Request ISO certificates, CE Declarations of Conformity, BSCI audit reports, and schedule a factory audit. Third-party inspection (SGS/BV) recommended.',
+      },
+    },
+  ],
+});
+---
+
+<Layout metadata={metadata}>
+  <JsonLd data={jsonLd} />
+
+  <article class="max-w-4xl mx-auto px-6 py-16">
+    <nav class="text-sm text-gray-500 mb-8">
+      <a href={`/${lang}/`} class="hover:text-sky-600">{SITE.name}</a>
+      <span class="mx-2">/</span>
+      <a href={`/${lang}/research`} class="hover:text-sky-600">{t('home.research.title')}</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-900">{t('home.research.oemBuyer')}</span>
+    </nav>
+
+    <div class="mb-4">
+      <span
+        class="inline-block text-xs font-semibold uppercase tracking-wider text-sky-600 bg-sky-50 px-3 py-1 rounded-full"
+        >Sourcing</span
+      >
+      <span class="ml-3 text-sm text-gray-400">12 min read</span>
+    </div>
+
+    <h1 class="text-4xl font-bold text-gray-900 mb-6">{t('home.research.oemBuyer')}</h1>
+    <p class="text-xl text-gray-500 mb-12 leading-relaxed">{t('home.research.oemBuyer.desc')}</p>
+
+    <div class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600">
+      {
+        ResearchBody ? (
+          <ResearchBody lang={lang} />
+        ) : (
+          <div class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600">
+            <h2>1. Pre-Qualification: What to Look for in a Factory</h2>
+
+            <h3>Compliance Certificates</h3>
+            <ul>
+              <li>
+                <strong>ISO 9001:2015</strong> – Quality management system
+              </li>
+              <li>
+                <strong>CE certification</strong> – Verify the Notified Body number
+              </li>
+              <li>
+                <strong>BSCI / SMETA / SEDEX</strong> – Social compliance audits
+              </li>
+              <li>
+                <strong>REACH / RoHS</strong> – Material compliance declarations
+              </li>
+            </ul>
+
+            <h3>Manufacturing Capabilities</h3>
+            <ul>
+              <li>Drop-stitch core weaving in-house vs. outsourced</li>
+              <li>PVC coating / lamination line</li>
+              <li>RF welding and hot air welding equipment</li>
+              <li>In-house mold making (CNC machining)</li>
+              <li>Testing lab (pressure testing, UV aging, tensile testing)</li>
+            </ul>
+
+            <h3>Experience Verification</h3>
+            <ul>
+              <li>Years in inflatable watercraft manufacturing (5+ years minimum)</li>
+              <li>Number of engineers on staff</li>
+              <li>Existing OEM/ODM clients (request references)</li>
+              <li>Export destinations – are they already shipping to your target market?</li>
+            </ul>
+
+            <h2>2. Quality Control Protocols</h2>
+            <p>
+              Material incoming QC: tensile strength (ASTM D751 or ISO 1421), tear resistance (ASTM D2261 or ISO 4674),
+              adhesion strength, UV aging spot checks.
+            </p>
+            <p>
+              In-process QC: seam strength monitoring every 50 units, valve torque verification, drop-stitch thread
+              density checks, dimensional checks against CAD drawings.
+            </p>
+            <p>
+              Final inspection: 100% inflation hold test (24 hours, max 5% drop), visual inspection, valve function
+              test, random sample testing (AQL 2.5 or 4.0 per ISO 2859).
+            </p>
+
+            <h2>3. Compliance Documentation Checklist</h2>
+            <ul>
+              <li>Declaration of Conformity (DoC) referencing correct EU directive</li>
+              <li>CE certificate from notified body</li>
+              <li>Test report from accredited lab</li>
+              <li>Material safety data sheets (MSDS)</li>
+              <li>REACH compliance declaration</li>
+              <li>Bill of Materials with supplier traceability</li>
+              <li>Factory inspection report</li>
+            </ul>
+
+            <h2>4. MOQ Negotiation</h2>
+            <table class="w-full text-sm border-collapse">
+              <thead>
+                <tr class="bg-gray-100">
+                  <th class="p-3 text-left font-semibold text-gray-900 border">Product Type</th>
+                  <th class="p-3 text-left font-semibold text-gray-900 border">Standard MOQ</th>
+                  <th class="p-3 text-left font-semibold text-gray-900 border">Negotiable Range</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <>
+                    <td class="p-3 border">SUP Boards</td>
+                    <td class="p-3 border">50 – 100 units</td>
+                    <td class="p-3 border">5 – 10 units (trial)</td>
+                  </>
+                </tr>
+                <tr>
+                  <>
+                    <td class="p-3 border">Kayaks</td>
+                    <td class="p-3 border">50 – 100 units</td>
+                    <td class="p-3 border">5 – 10 units (trial)</td>
+                  </>
+                </tr>
+                <tr>
+                  <>
+                    <td class="p-3 border">Inflatable Boats</td>
+                    <td class="p-3 border">50 – 100 units</td>
+                    <td class="p-3 border">2 – 5 units (trial)</td>
+                  </>
+                </tr>
+                <tr>
+                  <>
+                    <td class="p-3 border">RIB Boats</td>
+                    <td class="p-3 border">20 – 50 units</td>
+                    <td class="p-3 border">2 – 5 units (trial)</td>
+                  </>
+                </tr>
+                <tr>
+                  <>
+                    <td class="p-3 border">Safety / Accessories</td>
+                    <td class="p-3 border">200 – 500 units</td>
+                    <td class="p-3 border">50 – 100 units (trial)</td>
+                  </>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2>5. Logistics and Shipping</h2>
+            <p>
+              Common Incoterms: <strong>FOB</strong> (Factory delivers to departure port – most common),{' '}
+              <strong>EXW</strong> (Buyer arranges all shipping from factory door), <strong>CIF</strong> (Factory pays
+              freight and insurance to destination port).
+            </p>
+            <p>
+              Inflatable products are low-weight, high-volume – volumetric weight (DIM) often determines shipping cost.
+              Request vacuum-packed packaging to reduce volume by 50–60%. Sea freight from China to EU: 25–35 days; to
+              US West Coast: 15–20 days.
+            </p>
+
+            <h2>6. Common Pitfalls</h2>
+            <ul>
+              <li>
+                <strong>No factory audit:</strong> Always perform or commission a third-party audit (QIMA, SGS, Bureau
+                Veritas)
+              </li>
+              <li>
+                <strong>Verbal specs only:</strong> Detailed technical specification sheet signed by both parties
+              </li>
+              <li>
+                <strong>Skipping sample approval:</strong> Written sign-off on samples before bulk production
+              </li>
+              <li>
+                <strong>No QC during production:</strong> Third-party inspection during production (DUPRO) and before
+                shipment (PSI)
+              </li>
+              <li>
+                <strong>Ignoring compliance:</strong> Verify CE/UKCA certification before production
+              </li>
+            </ul>
+
+            <h2>7. Why Aquafarer</h2>
+            <p>
+              Aquafarer has been manufacturing OEM/ODM inflatable watercraft since 2012. With a 12,000 m&sup2; ISO 9001
+              certified facility, 25+ engineers, and 64 CE-certified models across our product lines, we meet every
+              criterion in this guide. We offer trial MOQs for new partners and full compliance documentation packages.
+            </p>
+          </div>
+        )
+      }
+    </div>
+
+    <div class="mt-16 pt-8 border-t border-gray-200">
+      <a href={`/${lang}/research`} class="text-sky-600 hover:text-sky-700 font-medium"
+        >&larr; {t('home.research.tagline')}</a
+      >
+    </div>
+  </article>
+  <script is:inline type="application/ld+json" set:html={faqSchema} />
+</Layout>

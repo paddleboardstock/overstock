@@ -1,0 +1,73 @@
+hero:
+  tagline: 'Wissen rund ums Wasser'
+  title: 'Lernen'
+  subtitle: |
+    Anleitungen, Tutorials und tiefgehende Einblicke – alles, was du brauchst, um<br />
+    das Wasser mit Vertrauen zu erkunden. Von der ersten SUP bis zu fortgeschrittenen Techniken.
+  taglineSection: 'Wissen für jeden Paddler. Vom Anfänger bis zum Profi.'
+
+featured:
+  tagline: 'Empfohlene Themen'
+  title: 'Starte deine Lernreise'
+  subtitle: 'Egal, ob du neu im Wassersport bist oder deine Fähigkeiten verbessern möchtest – unsere Anleitungen sind genau das Richtige.'
+  items:
+    - title: 'SUP-Grundlagen'
+      description: 'Alles, was ein Anfänger wissen muss – Boardtypen, Paddelgröße, Haltung und Tipps für den ersten Tag.'
+      icon: 'tabler:lifebuoy'
+      href: '/learn/sup'
+    - title: 'Aufblasbar vs. Hartboard'
+      description: 'Was ist das Richtige für dich? Wir vergleichen Tragbarkeit, Leistung, Haltbarkeit und Kosten im Detail.'
+      icon: 'tabler:arrows-left-right'
+      href: '/compare/inflatable-vs-hardboard'
+    - title: 'Sicherheit auf dem Wasser'
+      description: 'Wichtige Sicherheitskenntnisse für jeden Paddler – Wetter, Schwimmwesten, Selbstrettung und mehr.'
+      icon: 'tabler:shield'
+      href: '/learn/water-safety'
+    - title: 'Materialleitfaden'
+      description: 'PVC vs. Hypalon, Drop-Stitch-Technologie, Denier-Werte – verstehe, woraus deine Ausrüstung besteht.'
+      icon: 'tabler:hexagons'
+      href: '/learn/materials'
+    - title: 'SUP-Größentabelle'
+      description: 'Finde die richtige Boardlänge, -breite und -volumen für dein Gewicht, Können und deinen Paddelstil.'
+      icon: 'tabler:ruler'
+      href: '/size-guide'
+    - title: 'Fortgeschrittene Techniken'
+      description: 'Verbessere dein Paddeln mit fortgeschrittenen Schlägen, Wendetechniken und dem Umgang mit rauer See.'
+      icon: 'tabler:ripple'
+      href: '/learn/intermediate-techniques'
+
+categories:
+  tagline: 'Kategorien'
+  title: 'Nach Thema erkunden'
+  subtitle: 'Alle Lerninhalte nach Schwierigkeitsgrad und Interesse organisiert.'
+  columns:
+    - title: 'Anfänger'
+      items:
+        - 'SUP-Grundlagen – hier beginnen'
+        - 'Aufblasbar vs. Hartboard'
+        - 'Wichtige Sicherheitstipps'
+        - 'So wählst du dein SUP'
+        - 'Pump- und Packanleitung'
+    - title: 'Fortgeschrittene'
+      items:
+        - 'Paddeltechniken'
+        - 'Aufblastechnologie'
+        - 'Materialübersicht'
+        - 'PVC vs. Hypalon Vergleich'
+        - 'Drop-Stitch-Kern erklärt'
+    - title: 'Fortgeschritten & Profi'
+      items:
+        - 'Flottenbetrieb'
+        - 'Professionelle Ausrüstung'
+        - 'Sicherheits- und Rettungsprotokolle'
+        - 'Sonderanfertigungen & OEM'
+
+cta:
+  title: 'Noch Fragen?'
+  subtitle: 'Frag unseren KI-Assistenten für persönliche Antworten zu Ausrüstung, Sicherheit und Techniken.'
+  actions:
+    - variant: primary
+      text: 'Frag den Water Advisor AI'
+      href: '#ai-guide'
+    - text: 'Alle Anleitungen durchstöbern'
+      href: '/academy'

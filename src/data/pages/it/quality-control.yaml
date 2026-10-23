@@ -1,0 +1,137 @@
+hero:
+  tagline: Controllo Qualità
+  title: 'Sistema di Controllo Qualità<br />per la Produzione Nautica OEM'
+  subtitle: 'Processo di ispezione multi-fase che copre materiali in ingresso, produzione in processo, test di pressione, assemblaggio finale e verifica pre-spedizione. Ogni lotto è rintracciabile, ogni test è registrato.'
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-pressure-testing.webp
+    alt: Processo di controllo qualità e test di pressione di Aquafarer
+stats:
+  title: Il Controllo Qualità in Cifre
+  stats:
+    - title: Unità Testate in Pressione
+      amount: '100%'
+    - title: Caduta di Pressione Massima
+      amount: '<5%'
+    - title: Ispettori di Qualità
+      amount: '12'
+    - title: Registrazioni Conservate
+      amount: 10 anni
+content_system:
+  tagline: Panoramica del Sistema Qualità
+  title: 'Quadro Integrato di<br />Controllo Qualità'
+  subtitle: 'Il nostro sistema di controllo qualità opera in modo indipendente dalla produzione e riferisce direttamente alla direzione. Nessun lotto lascia la fabbrica senza il rilascio qualità firmato dal laboratorio qualità.'
+  items:
+    - title: Laboratorio Qualità Indipendente
+      description: 'Il nostro laboratorio qualità opera come funzione separata dalla produzione. Gli ispettori qualità riferiscono al Quality Manager, non al Direttore di Produzione. Questa indipendenza organizzativa garantisce che le decisioni di qualità siano prese in modo oggettivo: le scadenze di produzione non prevalgono mai sui requisiti di qualità.'
+      features:
+        - Riferisce direttamente alla direzione, indipendentemente dalla produzione
+        - Autorizzato a fermare la produzione per problemi di qualità
+        - 12 ispettori qualità dedicati in tutte le fasi
+        - Tutte le apparecchiature di test calibrate annualmente
+    - title: Rintracciabilità dei Lotti
+      description: 'Ogni lotto di materia prima riceve un numero di lotto univoco nel nostro sistema ERP. Dall''arrivo dei materiali alla produzione fino al prodotto finito, la distinta base di ogni imbarcazione riporta ai lotti originali dei fornitori. Ciò consente la piena rintracciabilità a monte per qualsiasi indagine di qualità o conformità.'
+      features:
+        - Tracciamento lotti basato su ERP, dal materiale al prodotto finito
+        - Etichette fisiche di lotto su ogni ordine di lavoro
+        - 'Copertura 100% dei materiali: PVC, Hypalon, ferramenta, adesivi'
+        - Registrazioni conservate per 10 anni (requisito CE 2013/53/EU)
+    - title: Norme e Conformità
+      description: 'Le nostre procedure di qualità sono allineate agli standard internazionali. I prodotti sono certificati CE ai sensi della Direttiva Europea 2013/53/EU sulle imbarcazioni da diporto. Il nostro sistema di gestione della qualità è certificato ISO 9001. La conformità sociale è mantenuta tramite la certificazione BSCI.'
+      features:
+        - Certificazione CE (UE 2013/53/EU)
+        - Gestione della qualità ISO 9001:2015
+        - Certificazione di conformità sociale BSCI
+        - Conformità materiali REACH e RoHS
+        - Certificazione UKCA post-Brexit
+content_inspection:
+  tagline: Fasi di Ispezione
+  title: 'Processo di Ispezione<br />in Sei Fasi'
+  subtitle: 'Ogni prodotto passa attraverso 6 fasi di ispezione con punti di controllo qualità documentati. I difetti vengono rilevati precocemente, le azioni correttive sono immediate e ogni lotto è completamente rintracciabile.'
+  stages:
+    - stage: '1'
+      title: Ispezione dei Materiali in Ingresso
+      description: 'Tutti i materiali in ingresso vengono registrati per numero di lotto e messi in quarantena fino al nullaosta qualità. I rotoli di tessuto PVC/Hypalon vengono testati per resistenza alla trazione (ASTM D751), resistenza alla lacerazione (ISO 4674) e spessore. I nuclei drop-stitch, le valvole, gli adesivi e la ferramenta vengono ispezionati visivamente e misurati rispetto alle specifiche.'
+      checks: 'Resistenza alla trazione ASTM D751, resistenza alla lacerazione ISO 4674, calibro di spessore, viscosità dell''adesivo, scansione visiva dei difetti'
+      threshold: 'Testato il 100% dei lotti. Rifiuto se trazione < 90% della specifica, lacerazione < minimo di specifica o qualsiasi difetto visibile'
+    - stage: '2'
+      title: Controllo in Processo — Taglio e Preparazione
+      description: 'I pannelli tagliati a CNC vengono verificati dimensionalmente rispetto ai file sorgente CAD ogni 20 pannelli. La qualità dei bordi viene ispezionata per sfilacciature, tagli irregolari o derive dimensionali. Il conteggio dei pannelli viene verificato rispetto alla BOM per ogni lotto di produzione prima che i materiali passino alla saldatura.'
+      checks: 'Verifica dimensionale rispetto ai file DXF CAD, ispezione della qualità dei bordi, verifica del conteggio dei pannelli'
+      threshold: 'Tolleranza ±0,5 mm. Rifiuto del lotto se >2% fuori tolleranza'
+    - stage: '3'
+      title: Controllo in Processo — Saldatura e Giunzione
+      description: 'Durante la produzione, la qualità delle saldature viene monitorata in continuo. I test di scollamento (ASTM D751) vengono eseguiti su campioni ogni 50 unità. La larghezza della saldatura viene misurata rispetto alla specifica. I registri della temperatura dell''aria calda vengono esaminati per verificarne la costanza. Ogni cucitura viene ispezionata visivamente in controluce per individuare canalizzazioni o vuoti.'
+      checks: 'Test di scollamento ASTM D751 ogni 50 unità, misurazione della larghezza di saldatura, revisione dei registri di temperatura dell''aria calda, ispezione delle cuciture in controluce'
+      threshold: 'Resistenza allo scollamento min. 8 N/cm. Tolleranza larghezza saldatura ±1 mm. Qualsiasi canalizzazione visibile = rifiuto'
+    - stage: '4'
+      title: Controllo Qualità di Assemblaggio
+      description: 'Ogni unità segue una checklist di assemblaggio a 100 punti firmata dal capo squadra. Il funzionamento della valvola viene testato su 10 cicli di apertura/chiusura. Viene verificata la coppia di serraggio della ferramenta. L''ispezione visiva copre finitura superficiale, costanza del colore, posizionamento delle etichette e completezza degli accessori.'
+      checks: 'Checklist a 100 punti per unità, test di funzionamento della valvola, verifica della coppia di serraggio della ferramenta, ispezione visiva'
+      threshold: 'Politica zero difetti sugli articoli critici per la sicurezza (valvole, anelli D, maniglie). Difetti estetici minori: AQL 2,5 (ISO 2859)'
+    - stage: '5'
+      title: Test di Pressione
+      description: 'Ogni camera viene gonfiata a 1,25× la pressione nominale e mantenuta per 24–48 ore. I sensori di pressione registrano in continuo per tutto il periodo di mantenimento. Le letture compensate in temperatura garantiscono la precisione. Qualsiasi camera che superi una caduta di pressione del 5% viene rifiutata e inviata a re-ispezione delle cuciture con re-test al 100% dell''intero lotto di produzione.'
+      checks: 'Registro di mantenimento pressione 24–48 h, verifica giornaliera della calibrazione dei sensori, lettura compensata in temperatura, re-test delle cuciture dopo la riparazione'
+      threshold: 'Caduta di pressione max. 5% in 24 h a temperatura stabile. Superamento = re-test al 100% dell''intero lotto'
+    - stage: '6'
+      title: Ispezione Finale e Rilascio di Spedizione
+      description: 'Ispezione visiva e funzionale finale prima dell''imballaggio. Difetti superficiali, costanza del colore, verifica di etichette/BIN, integrità dell''imballaggio e completezza degli accessori vengono verificati rispetto all''ordine del cliente. Le unità vengono confezionate sottovuoto, inscatolate e pallettizzate. Il nullaosta qualità finale è richiesto prima che qualsiasi prodotto lasci la fabbrica.'
+      checks: 'Ispezione visiva completa, checklist accessori per SKU, test di caduta dell''imballaggio (campione casuale di 1 m), verifica con scansione di etichette/codici a barre'
+      threshold: 'AQL 2,5 difetti maggiori, AQL 4,0 minori. Tolleranza zero per difetti di sicurezza. 100% delle unità ispezionate visivamente'
+content_equipment:
+  tagline: Apparecchiature di Test
+  title: 'Apparecchiature<br />del Laboratorio Qualità'
+  subtitle: 'Il nostro laboratorio qualità è dotato di apparecchiature specializzate per la verifica dei materiali, l''integrità delle saldature e la validazione delle prestazioni di prodotto.'
+  columns: 3
+  items:
+    - title: Macchina per Test di Trazione
+      description: 'Misura la resistenza alla trazione e l''allungamento dei tessuti secondo ASTM D751. Utilizzata per il controllo in ingresso di tutti i lotti di tessuto PVC, Hypalon e drop-stitch.'
+      icon: tabler:scale
+    - title: Camera di Temperatura
+      description: 'Camera climatica per test di resistenza ai raggi UV (ASTM G154) e di flessibilità a bassa temperatura. Simula condizioni operative estreme.'
+      icon: tabler:temperature
+    - title: Sensori e Registratori di Pressione
+      description: 'Sensori di pressione digitali con registrazione continua dei dati per test di tenuta d''aria di 24–48 ore. Compensati in temperatura per la precisione.'
+      icon: tabler:wind
+    - title: Banco per Test di Scollamento
+      description: 'Apparecchiatura calibrata per la verifica della resistenza delle cuciture saldate. Campioni casuali da ogni lotto di produzione.'
+      icon: tabler:files
+    - title: Vasca per Rilevamento Perdite
+      description: 'Vasca d''acqua per test di tenuta in immersione delle camere gonfiate. Rilevamento visivo delle bolle per verificare l''integrità di cuciture e valvole.'
+      icon: tabler:ripple
+    - title: Strumenti di Ispezione
+      description: 'Strumenti di misura calibrati: calibri di spessore, chiavi dinamometriche, calibri dimensionali, durometri per le postazioni di controllo qualità in produzione.'
+      icon: tabler:tools
+content_metrics:
+  tagline: Prestazioni del Controllo Qualità
+  title: 'Indicatori di<br />Controllo Qualità'
+  subtitle: 'Dati reali di conformità/non conformità dalla nostra linea di produzione. Questi indicatori vengono monitorati quotidianamente e rivisti mensilmente dalla direzione.'
+  columns: 3
+  items:
+    - title: 100% di Unità Testate
+      description: 'Ogni camera di ogni imbarcazione viene testata in pressione prima della spedizione. Nessun campionamento: ispezione al 100% dell''integrità in pressione.'
+      icon: tabler:check
+    - title: Caduta di Pressione <5%
+      description: 'Perdita di pressione massima consentita in 24-48 ore a 1,25× la pressione nominale. Qualsiasi camera che superi questa soglia attiva il re-test del lotto.'
+      icon: tabler:gauge
+    - title: AQL 2,5
+      description: 'Livello di qualità accettabile per i difetti maggiori secondo lo standard di campionamento ISO 2859. Tolleranza zero sui difetti critici per la sicurezza.'
+      icon: tabler:clipboard-check
+    - title: Mantenimento 24–48 Ore
+      description: 'La durata di mantenimento della pressione varia in base alla categoria di prodotto. Camere RIB: 48 ore. SUP e imbarcazioni gonfiabili: 24-48 ore.'
+      icon: tabler:clock
+    - title: Pressione di Test 1,25×
+      description: 'Margine di sicurezza su ogni camera: testata al 25% sopra la pressione nominale per garantire margine oltre le condizioni operative massime.'
+      icon: tabler:arrow-up
+    - title: 0% Difetti di Sicurezza
+      description: 'Politica di tolleranza zero sui difetti critici per la sicurezza: valvole, anelli D, cuciture e camere di galleggiamento. Qualsiasi difetto = re-ispezione al 100%.'
+      icon: tabler:shield
+cta:
+  title: 'Richiedi la documentazione di qualità'
+  subtitle: 'Forniamo pacchetti completi di documentazione di qualità, inclusi rapporti di test, certificazioni dei materiali e dichiarazioni di conformità con ogni spedizione. Contattateci per i campioni.'
+  actions:
+    - variant: primary
+      text: Richiedi la documentazione di controllo qualità
+      href: /contact
+    - text: Vedi i protocolli di test
+      href: /quality

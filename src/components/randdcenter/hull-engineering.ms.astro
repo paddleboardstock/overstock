@@ -1,0 +1,182 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'ms' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">&larr; Kembali ke Pusat R&D</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Makmal 02</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Studio Kejuruteraan Lambung</h1>
+      <p class="mt-3 text-lg text-muted">Simulasi digital, kepintaran struktur, reka bentuk lambung tersuai</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/design discussaquafarer-inflatable-boat-aquafarer-factory-exterior.webp"
+        alt="Aquafarer stesen kerja reka bentuk CAD kejuruteraan lambung"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Di mana kekuatan bertemu hidrodinamik</h2>
+  <p>
+    Lambung adalah tulang belakang bagi mana-mana RIB atau bot tiup. Ia mestilah cukup ringan untuk meluncur dengan
+    cekap, cukup kuat untuk menyerap beban hentakan, dan stabil dari segi dimensi di seluruh julat suhu yang luas. Pada{
+      SITE.name
+    }, Studio Kejuruteraan Hull kami menggabungkan pemodelan CAD lanjutan, analisis elemen terhingga (FEA), dan beberapa
+    dekad pengalaman praktikal dalam seni bina kapal untuk menghasilkan hull yang dioptimumkan untuk misi yang
+    dimaksudkan — bukan bentuk generik yang diubah suai daripada katalog.
+  </p>
+  <p>
+    Kami bekerja dengan tiga bahan lambung utama — HDPE yang dibentuk putaran, aluminium gred marin yang dikimpal, dan
+    gentian kaca yang diletakkan tangan — dan mempunyai kemampuan kejuruteraan untuk mereka bentuk, mensimulasikan, dan
+    mengesahkan setiap satu di dalam rumah.
+  </p>
+
+  <h2>Alat dan standard reka bentuk</h2>
+  <p>Persekitaran kejuruteraan digital kami merangkumi:</p>
+  <table>
+    <thead><tr><th>Keupayaan</th><th>Perisian / Alat</th><th>Aplikasi</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Pemodelan parametrik 3D</td><td>SolidWorks Profesional</td><td
+          >Permukaan lambung, sistem stringer, pendakap enjin, susun atur dek</td
+        ></tr
+      >
+      <tr
+        ><td>Analisis elemen terhingga</td><td>ANSYS Mechanical & LS-DYNA</td><td
+          >Pemetaan tegasan, analisis modal, simulasi kemalangan / hentakan</td
+        ></tr
+      >
+      <tr
+        ><td>Dinamika bendalir berkomputasi</td><td>Ansys Fluent / Star-CCM+</td><td
+          >Ramalan rintangan hidrodinamik, pengoptimuman trim</td
+        ></tr
+      >
+      <tr
+        ><td>Kejuruteraan laminat</td><td>ESAComp / CADEC</td><td
+          >Susunan lapisan gentian kaca, pemilihan teras, anggaran berat</td
+        ></tr
+      >
+      <tr><td>Simulasi aliran acuan</td><td>Moldex3D</td><td>Ramalan ketebalan dinding rotomolding</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Aliran kerja kejuruteraan kami</h2>
+  <p>
+    Setiap reka bentuk lambung, sama ada model standard atau projek tersuai sepenuhnya, mengikuti proses lima peringkat
+    yang ketat:
+  </p>
+  <ol>
+    <li>
+      <strong>Konsep & pengumpulan keperluan</strong>— Kami bertemu dengan anda untuk menentukan muatan, lapisan
+      kelajuan, keupayaan keadaan laut, keperluan penundaan, dan sebarang peralatan misi khas (pintu dek, posisi konsol,
+      integrasi bahan api-tangki).
+    </li>
+    <li>
+      <strong>Pengiraan permukaan 3D &amp; hidrostatik</strong>— Bentuk badan kapal dimodelkan dalam SolidWorks dan
+      diperiksa untuk kestabilan hidrostatik (GM, lengan pengerusikan) menggunakan alat analisis terbina dalam.
+    </li>
+    <li>
+      <strong>FEA Struktur</strong>— Kes beban ditakrifkan: statik (+peralatan kru), dinamik (hentaman pelanda pada 5g),
+      dan hentakan (jatuh dari puncak ombak pada 3 m/s). Kontur tegasan disemak semula; faktor keselamatan ≥ 2.5 adalah
+      wajib.
+    </li>
+    <li>
+      <strong>Pengoptimuman seretan CFD</strong>— Badan kapal disimulasikan pada tiga keadaan beban dan lima kelajuan.
+      Luas permukaan basah, sudut trim, dan rintangan sisa dikurangkan secara berulang.
+    </li>
+    <li>
+      <strong>Ulasan &amp; pelepasan reka bentuk</strong>— Pakej kejuruteraan lengkap (model 3D, laporan FEA, laporan
+      CFD, anggaran berat, buku lapis) disemak oleh arkitek tentera laut kanan kami sebelum dikeluarkan ke bengkel
+      prototaip.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Pengagihan Tekanan FEA — RIB Badan Rondaan 450 (Aluminium 5083)
+    </p>
+    <div class="grid grid-cols-2 gap-4 text-sm">
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">2.8 : 1</span>
+        <span class="text-gray-500">Faktor keselamatan pada muatan maksimum</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">15.2 %</span>
+        <span class="text-gray-500">Pengurangan seretan berbanding generasi sebelumnya</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">87 kN/m²</span>
+        <span class="text-gray-500">Tekanan puncak slamming (had reka bentuk)</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">18 000 h</span>
+        <span class="text-gray-500">Tempoh ejen FEA terkumpul pada tahun 2025</span>
+      </div>
+    </div>
+  </div>
+
+  <h2>Penyesuaian: badan kapal anda, peraturan anda</h2>
+  <p>
+    Tiada dua pengendali mempunyai keperluan yang sama. Rondaan pelabuhan RIB memerlukan badan V cetek untuk kestabilan
+    pada kelajuan rendah; kapal pemintas pantas memerlukan enjin V dalam dengan rel semburan; bot sokongan menyelam
+    memerlukan lebar lebar dan transom rendah. Kami tidak memaksa aplikasi anda ke bentuk badan kapal sedia ada. Kami
+    mereka bentuk dari spesifikasi anda ke atas.
+  </p>
+  <p>Contoh projek kejuruteraan badan kapal tersuai terkini:</p>
+  <ul>
+    <li>
+      Badan HDPE 6.8 m yang diregangkan untuk pengendali pelancongan Caribbean, dengan haluan yang diperkuat untuk
+      pendaratan di pantai (+ketebalan dasar 15%).
+    </li>
+    <li>
+      Aluminium ringan 7.2 m RIB untuk pengawal pantai, dengan penyangga tangki bahan api bersepadu dan penguat loker
+      peralatan.
+    </li>
+    <li>
+      Sebuah bot selam fiberglass sepanjang 5.5 m dengan transom yang dipotong dan kotak bateri berkembar, direka untuk
+      memudahkan penyelam snorkel untuk naik semula.
+    </li>
+  </ul>
+
+  <h2>Jurutera kami</h2>
+  <p>
+    Studio ini diketuai oleh seorang arkitek tentera laut kanan dengan pengalaman 14 tahun dalam reka bentuk kapal
+    berkelajuan tinggi, disokong oleh dua jurutera mekanikal yang pakar dalam FEA dan CFD. Ketiga-tiganya memiliki
+    ijazah lanjutan dalam kejuruteraan marin atau seni bina kapal dari universiti yang diiktiraf antarabangsa. Pasukan
+    ini kerap menerbitkan dalam jurnal industri dan membentangkan di persidangan seperti Persidangan Antarabangsa
+    mengenai Kenderaan Marin Berprestasi Tinggi.
+  </p>
+
+  <h2>Bekerjasama dengan kami untuk lambung anda yang seterusnya</h2>
+  <p>
+    Dari lakaran konsep pertama hingga laporan tekanan akhir, Studio Kejuruteraan Hull kami adalah rakan kongsi anda
+    dalam mencipta bot yang bukan sahaja dibina — tetapi juga direka bentuk. Kami melaburkan jam simulasi terlebih
+    dahulu supaya setiap kimpalan, setiap lapisan laminasi, dan setiap lengkungan badan kapal ada atas sebab tertentu.
+  </p>
+  <p>
+    Sama ada anda memerlukan pengubahsuaian kecil pada model sedia ada atau reka bentuk yang sepenuhnya bersih, kami
+    sedia membincangkan keperluan anda.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Mulakan konsultasi reka bentuk badan kapal anda</h2>
+    <p class="mt-2 text-sm text-muted">
+      Beritahu kami tentang profil misi anda dan kami akan mencadangkan laluan kejuruteraan.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Hubungi pasukan kejuruteraan kami</a
+    >
+  </div>
+</section>

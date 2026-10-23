@@ -1,0 +1,48 @@
+hero:
+  tagline: Process
+  title: Manufacturing Process
+  subtitle: From raw material to sea-ready boat — every step under our control
+  back_label: Back to Factory
+  back_link: /factory
+
+intro: Unlike brands that outsource production to third-party factories, Aquafarer owns and operates its entire manufacturing chain. This vertical integration allows us to maintain strict quality control at every stage, respond quickly to custom requirements, and deliver consistent product quality batch after batch. Here is how a boat is built in our facility.
+
+steps:
+  - step: '01'
+    title: Material Receipt & Inspection
+    description: Every incoming batch of PVC fabric, fiberglass mat, resin, and hardware is inspected against specification. Fabric samples are tested for tensile strength, thickness uniformity, and UV resistance before release to production. Non-conforming materials are quarantined and returned.
+    duration: 1–2 days
+  - step: '02'
+    title: Automatic PVC Cutting
+    description: Approved fabrics are laid on the automatic CNC cutting machine and cut with sub-millimetre accuracy. Computer-optimised nesting arranges panels to minimise waste — typically below 5%. Cut panels are labelled by boat model and chamber, then bundled for transfer to the welding workshop.
+    duration: 2–4 hours per boat kit
+  - step: '03'
+    title: Tube Heat Sealing & Welding
+    description: Panels are tacked and bonded using heat sealing machines with hot-air welding at controlled temperatures of 200–600 °C. Main seams are reinforced with RF dielectric welding for airtight, high-strength joints. Completed chambers are inflated to 1.25× working pressure for 30-minute air-retention validation.
+    duration: 1–2 days per boat
+  - step: '04'
+    title: Fiberglass RIB Hull Moulding
+    description: RIB boat hulls are produced using hand-lay-up fibreglass moulding. Layers of fiberglass mat and woven roving are hand-rolled with polyester or vinylester resin in precision moulds. Each layer is vacuum-bagged for consistent laminate quality. The hull is finished with gelcoat for a high-gloss, UV-resistant marine surface.
+    duration: 2–4 days per hull
+  - step: '05'
+    title: SUP Printing & Decoration
+    description: SUP board deck graphics are applied using digital printing for full-colour photo-quality designs, and screen printing for durable logos and repeating patterns. Prints are cured and sealed for UV and abrasion resistance.
+    duration: 1–2 days
+  - step: '06'
+    title: Final Assembly & Rigging
+    description: Fiberglass hulls and PVC tube assemblies are mated on the assembly line. The engine is mounted, steering and throttle controls are connected, fuel system is installed, and the full electrical harness is wired. Each boat follows a 100-point assembly checklist with mandatory sign-off at each stage.
+    duration: 2–3 days
+  - step: '07'
+    title: Quality Testing & Inspection
+    description: 'Every completed boat undergoes mandatory quality gate: chamber air-retention test, systems function check, fastener torque verification, and cosmetic inspection. Custom and prototype builds also receive in-water sea trials covering speed, handling, stability, and endurance.'
+    duration: 1–2 days
+  - step: '08'
+    title: Packing & Shipping
+    description: Boats are deflated, folded per procedure, packed in heavy-duty woven bags or plywood crates, and loaded for shipment. Each package is labelled with model, serial number, and destination. We coordinate with freight forwarders for FCL and LCL container shipments worldwide.
+    duration: 1 day
+
+cta:
+  title: See our equipment and machinery
+  desc: Explore the industrial-grade equipment behind every Aquafarer boat.
+  label: View equipment →
+  link: /factory/equipment

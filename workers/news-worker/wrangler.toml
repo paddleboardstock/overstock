@@ -1,0 +1,48 @@
+name = "aquafarer-news"
+main = "index.ts"
+compatibility_date = "2026-07-08"
+compatibility_flags = ["nodejs_compat"]
+
+routes = [
+  # Paths may only end with a wildcard (Cloudflare zone route syntax); the
+  # /{lang}/news prefixes must be listed explicitly.
+  { pattern = "aquafarer.com/news*", zone_name = "aquafarer.com" },
+  { pattern = "aquafarer.com/fr/news*", zone_name = "aquafarer.com" },
+  { pattern = "aquafarer.com/de/news*", zone_name = "aquafarer.com" },
+  { pattern = "aquafarer.com/es/news*", zone_name = "aquafarer.com" },
+  { pattern = "aquafarer.com/pt/news*", zone_name = "aquafarer.com" },
+  { pattern = "aquafarer.com/ar/news*", zone_name = "aquafarer.com" },
+  { pattern = "aquafarer.com/it/news*", zone_name = "aquafarer.com" },
+  { pattern = "aquafarer.com/ru/news*", zone_name = "aquafarer.com" },
+  { pattern = "aquafarer.com/pl/news*", zone_name = "aquafarer.com" },
+  { pattern = "aquafarer.com/nl/news*", zone_name = "aquafarer.com" },
+  { pattern = "aquafarer.com/sv/news*", zone_name = "aquafarer.com" },
+  { pattern = "aquafarer.com/no/news*", zone_name = "aquafarer.com" },
+  { pattern = "aquafarer.com/el/news*", zone_name = "aquafarer.com" },
+  { pattern = "aquafarer.com/fi/news*", zone_name = "aquafarer.com" },
+  { pattern = "aquafarer.com/da/news*", zone_name = "aquafarer.com" },
+  { pattern = "aquafarer.com/rss.xml", zone_name = "aquafarer.com" },
+  { pattern = "aquafarer.com/fr/rss.xml", zone_name = "aquafarer.com" },
+  { pattern = "aquafarer.com/de/rss.xml", zone_name = "aquafarer.com" },
+  { pattern = "aquafarer.com/es/rss.xml", zone_name = "aquafarer.com" },
+  { pattern = "aquafarer.com/pt/rss.xml", zone_name = "aquafarer.com" },
+  { pattern = "aquafarer.com/ar/rss.xml", zone_name = "aquafarer.com" },
+  { pattern = "aquafarer.com/it/rss.xml", zone_name = "aquafarer.com" },
+  { pattern = "aquafarer.com/ru/rss.xml", zone_name = "aquafarer.com" },
+  { pattern = "aquafarer.com/pl/rss.xml", zone_name = "aquafarer.com" },
+  { pattern = "aquafarer.com/nl/rss.xml", zone_name = "aquafarer.com" },
+  { pattern = "aquafarer.com/sv/rss.xml", zone_name = "aquafarer.com" },
+  { pattern = "aquafarer.com/no/rss.xml", zone_name = "aquafarer.com" },
+  { pattern = "aquafarer.com/el/rss.xml", zone_name = "aquafarer.com" },
+  { pattern = "aquafarer.com/fi/rss.xml", zone_name = "aquafarer.com" },
+  { pattern = "aquafarer.com/da/rss.xml", zone_name = "aquafarer.com" },
+  { pattern = "aquafarer.com/sitemap-news.xml", zone_name = "aquafarer.com" },
+  { pattern = "aquafarer.com/llms/news*", zone_name = "aquafarer.com" },
+]
+
+# D1 (created via: wrangler d1 create aquafarer-db) — shared with admin-worker/contact-worker
+[[d1_databases]]
+binding = "DB"
+database_name = "aquafarer-db"
+database_id = "REPLACE_WITH_D1_DATABASE_ID"
+migrations_dir = "../../migrations"

@@ -1,0 +1,188 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'he' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">← חזרה למרכז מו"פ</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">מעבדה 06</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">מעבדת איכות ובדיקה</h1>
+      <p class="mt-3 text-lg text-muted">אימות עצמאי — כל בדיקה עוברת לפני המסירה</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-uv-resistance-testing.webp"
+        alt="Aquafarer מעבדת בדיקת איכות UV בדיקות"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>לסמוך, אבל לבדוק</h2>
+  <p>
+    כל סירה שיוצאת מהמוסך שלנו נושאת את ההסמכה שהיא עברה סט מוגדר של בדיקות איכות ובדיקות חומרים. מעבדת האיכות והבדיקות
+    שלנו היא פונקציה עצמאית בתוך הארגון — היא מדווחת ישירות למנכ"ל, ולא לייצור — מה שמבטיח ששום לחץ מסחרי לא יפגע בשער
+    הבדיקות. אם אצוות חומר או סירה מלאה אינם עומדים במפרט המפורסם, למעבדה יש הסמכות לעצור את המשלוח עד שהאי-התאמה תיפתר.
+  </p>
+  <p>
+    המעבדה פועלת תחת מערכת ניהול איכות המותאמת לעקרונות, ושיטות הבדיקה שלנו מבוססות על ISO, ASTM ותקני EN היכן שמותר.
+    אנו שומרים רישומים מפורטים של כל בדיקה שנערכה, ויוצרים שרשרת מעקב מלאה מהקבלת חומרי גלם ועד למסירת הסירה הסופית.
+  </p>
+
+  <h2>ציוד ובדיקות</h2>
+  <table>
+    <thead><tr><th>ציוד</th><th>בדיקות שבוצעו</th><th>סטנדרט / שיטה</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>מכונת בדיקה אוניברסלית (50 kN)</td><td>חוזק מתיחה (בדים), עמידות לקילוף (תפירות), הפצת קרעים</td><td
+          >, ISO 4674</td
+        ></tr
+      >
+      <tr
+        ><td>מתקן בדיקת איטום אוויר (תכנותי)</td><td
+          >עמידות לניפוח/ירידה למשך 1000 מחזורים, בדיקת החזקת לחץ 24-48 שעות</td
+        ><td>(פנימי)</td></tr
+      >
+      <tr
+        ><td>מתקן קילוף תפרים (מונע 180° קילוף)</td><td>חוזק קילוף של תפרים מומתחים ומודבקים בקצב 100 מ"מ לדקה</td><td
+          >/ ASTM D1876</td
+        ></tr
+      >
+      <tr><td>בודק ראש הידרוסטטי</td><td>עמידות חדירת מים של בד (0 — 00 mbar)</td><td>ISO 811</td></tr>
+      <tr
+        ><td>מד דיגיטלי ועובר חיטק (מיקרומטר)</td><td>עובי בד, עובי דפנות צינור, עובי סרט הדבקה</td><td>ISO 2286-3</td
+        ></tr
+      >
+      <tr
+        ><td>תא סביבתי</td><td>תנאי טמפרטורה (-40 °C עד +80 °C) לבדיקה של סדקים קרים והזדקנות מחוממת</td><td
+          >ISO 188, ISO 4675</td
+        ></tr
+      >
+      <tr><td>ספקטרופוטומטר לצבע</td><td>מדידת צבע דלתא-E לאחר UV חשיפה</td><td>ISO 105-A05 / ASTM D2244</td></tr>
+    </tbody>
+  </table>
+
+  <h2>שערי הבדיקה — מהחומר ועד המשלוח</h2>
+  <p>
+    כל סירה פועלת לפי תוכנית איכות מוגדרת עם נקודות בדיקה חובה. אף סירה לא יכולה לדלג על שער; כל שער חייב להיות מאושר על
+    ידי בודק איכות לפני תחילת שלב הייצור הבא.
+  </p>
+
+  <div class="not-prose my-8">
+    <div class="relative">
+      <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-blue-200 dark:bg-blue-800"></div>
+      <div class="space-y-6 relative">
+        {
+          [
+            {
+              gate: 'Gate 1',
+              label: 'בדיקת חומר נכנס',
+              desc: 'אצוות בדים, אצוות דבק, חומרה — הכל נבדק מול מפרט נכנס לפני שחרור לייצור.',
+            },
+            {
+              gate: 'Gate 2',
+              label: 'בדיקת ריתוך בתהליך',
+              desc: 'קופון ריתוך ראשון נבדק (פיפל + חזותי) בתחילת כל משמרת ייצור.',
+            },
+            {
+              gate: 'Gate 3',
+              label: 'בדיקת אוויר בחדר',
+              desc: 'כל תא לוחץ ללחץ של 1.25 פי לחץ העבודה, נשמר 24-48 שעות. נתונים נרשמים לפי מספר סידורי.',
+            },
+            {
+              gate: 'Gate 4',
+              label: 'בדיקה לפני מסירה',
+              desc: 'סירה שלמה נבדקה: כל הברגים מהודקים, המערכות פונקציונליות, אין פגמים קוסמטיים. רשימת בדיקה של 100 נקודות.',
+            },
+            {
+              gate: 'Gate 5',
+              label: 'תעודה סופית',
+              desc: 'דו"חות בדיקה נאספו, רשומות בדיקה נבדקו, מוצעת תעודת תאימות.',
+            },
+          ].map((g) => (
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs font-bold z-10">
+                {g.gate}
+              </div>
+              <div class="flex-1 p-3 rounded-lg bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800">
+                <p class="text-sm font-semibold">{g.label}</p>
+                <p class="text-xs text-gray-500 mt-1">{g.desc}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+
+  <h2>מדדי איכות מרכזיים (ממוצע מתגלגל לשנת 2025)</h2>
+  <div class="not-prose my-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">99.7 %</span>
+      <span class="text-xs text-gray-500">תפוקת מעבר ראשון (אצווה של בד)</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">&lt; 0.2%</span>
+      <span class="text-xs text-gray-500">קצב דחיית ריתוך (מטר ליניארי)</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">100 %</span>
+      <span class="text-xs text-gray-500">תאים שנבדקו באוויר לפני ההרכבה</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600"></span>
+      <span class="text-xs text-gray-500">עמידה בקטגוריות עיצוב</span>
+    </div>
+  </div>
+
+  <h2>צוות האיכות שלנו</h2>
+  <p>
+    המעבדה מאוישת על ידי מנהל איכות (10 שנים באיכות ימית, מהנדס איכות מוסמך ASQ), שני בודקי איכות (כל אחד עם הסמכת NDT
+    רמה 2 בבדיקות ויזואליות), וטכנאי חומרים האחראי על כל הבדיקות הפיזיות. הצוות עובר בדיקות מיומנות שנתיות דרך ספק
+    חיצוני עצמאי כדי להבטיח שתוצאות הבדיקות שלנו נשארות מדויקות וניתנות לשחזור.
+  </p>
+
+  <h2>בדיקות עצמאיות ללקוחות</h2>
+  <p>
+    מעבדת האיכות והבדיקה שלנו זמינה לשירותי בדיקה עצמאיים. אם אתה צריך לאמת מפרט בד, לאמת מערכת דבק חדשה, או לקבל דוח
+    בדיקה מצד שלישי להסמכת רכישה, נוכל לבצע את הבדיקות לפי התקן הרלוונטי ולהנפיק דוח בדיקה מוסמך.
+  </p>
+  <p>דוגמאות לעבודות בדיקה אחרונות של צד שלישי:</p>
+  <ul>
+    <li>השוואת חוזק הקליפה של חמישה מוצרי סרט דבק תחרותיים לתוכנית רכש צבאית אירופית.</li>
+    <li>
+      מחקר הזדקנות מואץ (UV + מחזור תרמי) עבור פורמולה חדשה עם פיגמנט כתום PVC , עם מדידות ביניים קבועות בפרקי זמן של
+      500 שעות.
+    </li>
+    <li>אימות החזקת אוויר של 50 שסתומי מחסום אב-טיפוס לעיצוב צינור לחץ גבוה חדש.</li>
+  </ul>
+
+  <h2>המחויבות שלנו אליך</h2>
+  <p>
+    כאשר אתה מקבל{SITE.name}סירה, אתה גם מקבל את דוח האיכות שלה — רשומה מסודרת של תוצאות הבדיקות החלות על הסירה הספציפית
+    שלך. תעודת אצווה של חומר, בדיקות קילוף ריתוך, רישומי בדיקות אוויר בחדר, ורשימת בדיקה לפני מסירה. כל מספר ניתן למעקב.
+    כל מפקח מזוהה. זה לא רק ניירת — זו ההבטחה שלנו שהמה שסיפקנו הוא מה שציינו במפרט.
+  </p>
+  <p>
+    אם אי פעם יש לך בעיית איכות, תוכל לפנות ישירות למעבדה — פרטי הקשר מודפסים בתעודת ההתאמה שלך. אנו מתייחסים לכל שאלה
+    ברצינות ומתחייבים לחקירה רשמית בתוך 48 שעות.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">צריך בדיקות עצמאיות או אימות איכות?</h2>
+    <p class="mt-2 text-sm text-muted">המעבדה שלנו מקבלת עבודות בדיקה חיצוניות — צרו איתנו קשר עם הדרישות שלכם.</p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >צרו קשר עם מעבדת האיכות</a
+    >
+  </div>
+</section>

@@ -1,0 +1,321 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+import { languages, defaultLang } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+import RDe from '~/components/randdcenter/hydrodynamic-test-tank.de.astro';
+import REs from '~/components/randdcenter/hydrodynamic-test-tank.es.astro';
+import RFr from '~/components/randdcenter/hydrodynamic-test-tank.fr.astro';
+import RIt from '~/components/randdcenter/hydrodynamic-test-tank.it.astro';
+import REn from '~/components/randdcenter/hydrodynamic-test-tank.en.astro';
+import RCs from '~/components/randdcenter/hydrodynamic-test-tank.cs.astro';
+import RSv from '~/components/randdcenter/hydrodynamic-test-tank.sv.astro';
+import RDa from '~/components/randdcenter/hydrodynamic-test-tank.da.astro';
+import REl from '~/components/randdcenter/hydrodynamic-test-tank.el.astro';
+import RNo from '~/components/randdcenter/hydrodynamic-test-tank.no.astro';
+import RRu from '~/components/randdcenter/hydrodynamic-test-tank.ru.astro';
+import RNl from '~/components/randdcenter/hydrodynamic-test-tank.nl.astro';
+import RFi from '~/components/randdcenter/hydrodynamic-test-tank.fi.astro';
+import RPl from '~/components/randdcenter/hydrodynamic-test-tank.pl.astro';
+import RAr from '~/components/randdcenter/hydrodynamic-test-tank.ar.astro';
+import RPt from '~/components/randdcenter/hydrodynamic-test-tank.pt.astro';
+import RJa from '~/components/randdcenter/hydrodynamic-test-tank.ja.astro';
+import RBg from '~/components/randdcenter/hydrodynamic-test-tank.bg.astro';
+import REt from '~/components/randdcenter/hydrodynamic-test-tank.et.astro';
+import RHe from '~/components/randdcenter/hydrodynamic-test-tank.he.astro';
+import RHr from '~/components/randdcenter/hydrodynamic-test-tank.hr.astro';
+import RHu from '~/components/randdcenter/hydrodynamic-test-tank.hu.astro';
+import RId from '~/components/randdcenter/hydrodynamic-test-tank.id.astro';
+import RKo from '~/components/randdcenter/hydrodynamic-test-tank.ko.astro';
+import RLt from '~/components/randdcenter/hydrodynamic-test-tank.lt.astro';
+import RLv from '~/components/randdcenter/hydrodynamic-test-tank.lv.astro';
+import RMs from '~/components/randdcenter/hydrodynamic-test-tank.ms.astro';
+import RRo from '~/components/randdcenter/hydrodynamic-test-tank.ro.astro';
+import RSk from '~/components/randdcenter/hydrodynamic-test-tank.sk.astro';
+import RSl from '~/components/randdcenter/hydrodynamic-test-tank.sl.astro';
+import RSr from '~/components/randdcenter/hydrodynamic-test-tank.sr.astro';
+import RTh from '~/components/randdcenter/hydrodynamic-test-tank.th.astro';
+import RTl from '~/components/randdcenter/hydrodynamic-test-tank.tl.astro';
+import RTr from '~/components/randdcenter/hydrodynamic-test-tank.tr.astro';
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: any) => getUiForLang(lang || defaultLang)?.[key] || '';
+
+const META: Record<string, { title: string; description: string }> = {
+  en: {
+    title: 'Hydrodynamic Test Tank — Scale-Model Towing & Hull Optimisation',
+    description: `Validate your RIB hull performance with our hydrodynamic test tank. Scale-model towing, planing analysis, and fuel efficiency testing. Book a tank test session today.`,
+  },
+  de: {
+    title: 'Hydrodynamischer Testtank — Schleppversuche im Modellmaßstab und Rumpfoptimierung',
+    description: `Validieren Sie die Leistung Ihres RIB-Rumpfes in unserem hydrodynamischen Testtank. Schleppversuche im Modellmaßstab, Gleitanalyse und Tests zur Kraftstoffeffizienz. Buchen Sie noch heute eine Testsitzung.`,
+  },
+  es: {
+    title: 'Canal de ensayos hidrodinámicos — remolque a escala y optimización de cascos',
+    description: `Valide el rendimiento de su casco RIB con nuestro canal de ensayos hidrodinámicos. Remolque a escala, análisis de planeo y pruebas de eficiencia de combustible. Reserve su sesión de pruebas hoy mismo.`,
+  },
+  fr: {
+    title: "Bassin d'essais hydrodynamiques — remorquage à échelle réduite et optimisation de coques",
+    description: `Validez les performances de votre coque RIB avec notre bassin d'essais hydrodynamiques. Remorquage à échelle réduite, analyse du déjaugeage et tests d'efficacité énergétique. Réservez votre session d'essai dès aujourd'hui.`,
+  },
+  it: {
+    title: 'Vasca di prova idrodinamica — rimorchio in scala e ottimizzazione degli scafi',
+    description: `Verificate le prestazioni del vostro scafo RIB con la nostra vasca di prova idrodinamica. Rimorchio in scala, analisi del planing e test di efficienza dei consumi. Prenotate la vostra sessione di prova oggi.`,
+  },
+  cs: {
+    title: 'Hydrodynamická zkušební nádrž — Optimalizace tažení a trupu v měřítku',
+    description:
+      'Ověřte výkon svého trupu RIB pomocí naší hydrodynamické testovací nádrže. Modelové tažení, analýza hoblování a testování spotřeby paliva. Objednejte si test nádrže ještě dnes.',
+  },
+  sv: {
+    title: 'Hydrodynamisk testtank — bogsering och skrovoptimering i skalen',
+    description:
+      'Validera din RIB skrovprestanda med vår hydrodynamiska testtank. Bogsering i skalen, hyvlingsanalys och bränsleeffektivitetstestning. Boka en tanktestsession idag.',
+  },
+  da: {
+    title: 'Hydrodynamisk testtank — skalamodel bugsering og skrogoptimering',
+    description:
+      'Valider dit RIB skrogs ydeevne med vores hydrodynamiske testtank. Skalamodel bugsering, planeanalyse og brændstofeffektivitetstest. Book en tanktestsession i dag.',
+  },
+  el: {
+    title: 'Υδροδυναμική δεξαμενή δοκιμής — Ρυμούλκηση μοντέλων κλίμακας και βελτιστοποίηση κύτους',
+    description:
+      'Επικυρώστε την απόδοση της γάστρας RIB σας με τη δεξαμενή υδροδυναμικής δοκιμής μας. Ρυμούλκηση μοντέλου κλίμακας, ανάλυση πλανίσματος και δοκιμή απόδοσης καυσίμου. Κάντε κράτηση για μια συνεδρία δοκιμής δεξαμενής σήμερα.',
+  },
+  no: {
+    title: 'Hydrodynamisk testtank — slepe- og skrogoptimalisering i skalamodell',
+    description:
+      'Valider din RIB skrogytelse med vår hydrodynamiske testtank. Skalamodellsleping, planingsanalyse og drivstoffeffektivitetstesting. Bestill en tankprøveøkt i dag.',
+  },
+  ru: {
+    title: 'Гидродинамический испытательный резервуар — буксировка масштабной модели и оптимизация корпуса',
+    description:
+      'Проверьте характеристики своего корпуса RIB с помощью нашего гидродинамического испытательного резервуара. Буксировка масштабной модели, анализ глиссирования и тестирование топливной экономичности. Запишитесь на испытание танка сегодня.',
+  },
+  nl: {
+    title: 'Hydrodynamische testtank - schaalmodel slepen en rompoptimalisatie',
+    description:
+      'Valideer uw RIB rompprestaties met onze hydrodynamische testtank. Slepen op schaalmodel, plananalyse en testen van brandstofefficiëntie. Boek vandaag nog een tanktestsessie.',
+  },
+  fi: {
+    title: 'Hydrodynaaminen testisäiliö – mittakaavallinen hinaus ja rungon optimointi',
+    description:
+      'Vahvista RIB runkosi suorituskyky hydrodynaamisella testisäiliöllämme. Pienoismallin hinaus, höyläysanalyysi ja polttoainetehokkuuden testaus. Varaa tankkitesti jo tänään.',
+  },
+  pl: {
+    title: 'Zbiornik do testów hydrodynamicznych — holowanie modeli w zmniejszonej skali i optymalizacja kadłuba',
+    description:
+      'Sprawdź wydajność kadłuba RIB za pomocą naszego hydrodynamicznego zbiornika testowego. Holowanie modeli w zmniejszonej skali, analiza planowania i testowanie zużycia paliwa. Zarezerwuj sesję testową czołgu już dziś.',
+  },
+  ar: {
+    title: 'خزان الاختبار الهيدروديناميكي - نموذج مصغر للقطر وتحسين الهيكل',
+    description:
+      'تحقق من صحة أداء بدن RIB الخاص بك من خلال خزان الاختبار الهيدروديناميكي الخاص بنا. سحب النماذج المصغرة، وتحليل التخطيط، واختبار كفاءة استهلاك الوقود. احجز جلسة اختبار الخزان اليوم.',
+  },
+  pt: {
+    title: 'Tanque de teste hidrodinâmico — Reboque de modelo em escala e otimização do casco',
+    description:
+      'Valide o desempenho do seu casco RIB com nosso tanque de teste hidrodinâmico. Reboque de modelo em escala, análise de planejamento e testes de eficiência de combustível. Agende hoje mesmo uma sessão de teste de tanque.',
+  },
+  ja: {
+    title: '流体力学試験タンク — スケールモデルの曳航と船体の最適化',
+    description:
+      '当社の流体力学テストタンクを使用して、RIB 船体の性能を検証してください。縮尺模型の牽引、滑走解析、燃費試験。今すぐタンクテストセッションを予約してください。',
+  },
+  bg: {
+    title: 'Hydrodynamic Test Tank — Scale-Model Towing & Hull Optimisation',
+    description:
+      'Validate your RIB hull performance with our hydrodynamic test tank. Scale-model towing, planing analysis, and fuel efficiency testing. Book a tank test session today.',
+  },
+  et: {
+    title: 'Hydrodynamic Test Tank — Scale-Model Towing & Hull Optimisation',
+    description:
+      'Validate your RIB hull performance with our hydrodynamic test tank. Scale-model towing, planing analysis, and fuel efficiency testing. Book a tank test session today.',
+  },
+  he: {
+    title: 'Hydrodynamic Test Tank — Scale-Model Towing & Hull Optimisation',
+    description:
+      'Validate your RIB hull performance with our hydrodynamic test tank. Scale-model towing, planing analysis, and fuel efficiency testing. Book a tank test session today.',
+  },
+  hr: {
+    title: 'Hydrodynamic Test Tank — Scale-Model Towing & Hull Optimisation',
+    description:
+      'Validate your RIB hull performance with our hydrodynamic test tank. Scale-model towing, planing analysis, and fuel efficiency testing. Book a tank test session today.',
+  },
+  hu: {
+    title: 'Hydrodynamic Test Tank — Scale-Model Towing & Hull Optimisation',
+    description:
+      'Validate your RIB hull performance with our hydrodynamic test tank. Scale-model towing, planing analysis, and fuel efficiency testing. Book a tank test session today.',
+  },
+  id: {
+    title: 'Hydrodynamic Test Tank — Scale-Model Towing & Hull Optimisation',
+    description:
+      'Validate your RIB hull performance with our hydrodynamic test tank. Scale-model towing, planing analysis, and fuel efficiency testing. Book a tank test session today.',
+  },
+  ko: {
+    title: 'Hydrodynamic Test Tank — Scale-Model Towing & Hull Optimisation',
+    description:
+      'Validate your RIB hull performance with our hydrodynamic test tank. Scale-model towing, planing analysis, and fuel efficiency testing. Book a tank test session today.',
+  },
+  lt: {
+    title: 'Hydrodynamic Test Tank — Scale-Model Towing & Hull Optimisation',
+    description:
+      'Validate your RIB hull performance with our hydrodynamic test tank. Scale-model towing, planing analysis, and fuel efficiency testing. Book a tank test session today.',
+  },
+  lv: {
+    title: 'Hydrodynamic Test Tank — Scale-Model Towing & Hull Optimisation',
+    description:
+      'Validate your RIB hull performance with our hydrodynamic test tank. Scale-model towing, planing analysis, and fuel efficiency testing. Book a tank test session today.',
+  },
+  ms: {
+    title: 'Hydrodynamic Test Tank — Scale-Model Towing & Hull Optimisation',
+    description:
+      'Validate your RIB hull performance with our hydrodynamic test tank. Scale-model towing, planing analysis, and fuel efficiency testing. Book a tank test session today.',
+  },
+  ro: {
+    title: 'Hydrodynamic Test Tank — Scale-Model Towing & Hull Optimisation',
+    description:
+      'Validate your RIB hull performance with our hydrodynamic test tank. Scale-model towing, planing analysis, and fuel efficiency testing. Book a tank test session today.',
+  },
+  sk: {
+    title: 'Hydrodynamic Test Tank — Scale-Model Towing & Hull Optimisation',
+    description:
+      'Validate your RIB hull performance with our hydrodynamic test tank. Scale-model towing, planing analysis, and fuel efficiency testing. Book a tank test session today.',
+  },
+  sl: {
+    title: 'Hydrodynamic Test Tank — Scale-Model Towing & Hull Optimisation',
+    description:
+      'Validate your RIB hull performance with our hydrodynamic test tank. Scale-model towing, planing analysis, and fuel efficiency testing. Book a tank test session today.',
+  },
+  sr: {
+    title: 'Hydrodynamic Test Tank — Scale-Model Towing & Hull Optimisation',
+    description:
+      'Validate your RIB hull performance with our hydrodynamic test tank. Scale-model towing, planing analysis, and fuel efficiency testing. Book a tank test session today.',
+  },
+  th: {
+    title: 'Hydrodynamic Test Tank — Scale-Model Towing & Hull Optimisation',
+    description:
+      'Validate your RIB hull performance with our hydrodynamic test tank. Scale-model towing, planing analysis, and fuel efficiency testing. Book a tank test session today.',
+  },
+  tl: {
+    title: 'Hydrodynamic Test Tank — Scale-Model Towing & Hull Optimisation',
+    description:
+      'Validate your RIB hull performance with our hydrodynamic test tank. Scale-model towing, planing analysis, and fuel efficiency testing. Book a tank test session today.',
+  },
+  tr: {
+    title: 'Hydrodynamic Test Tank — Scale-Model Towing & Hull Optimisation',
+    description:
+      'Validate your RIB hull performance with our hydrodynamic test tank. Scale-model towing, planing analysis, and fuel efficiency testing. Book a tank test session today.',
+  },
+};
+
+const crumbs = [
+  { name: t('nav.home') || 'Home', href: `/${lang}/` },
+  { name: 'R&D Center', href: `/${lang}/randdcenter` },
+  { name: 'Hydrodynamic Test Tank' },
+];
+
+const meta = META[lang] || META.en;
+
+const metadata = {
+  title: `${meta.title} | ${SITE.name}`,
+  description: meta.description,
+};
+
+const RanddBody: any =
+  (
+    {
+      de: RDe,
+      es: REs,
+      fr: RFr,
+      it: RIt,
+      cs: RCs,
+      sv: RSv,
+      da: RDa,
+      el: REl,
+      no: RNo,
+      ru: RRu,
+      nl: RNl,
+      fi: RFi,
+      pl: RPl,
+      ar: RAr,
+      pt: RPt,
+      ja: RJa,
+      bg: RBg,
+      et: REt,
+      he: RHe,
+      hr: RHr,
+      hu: RHu,
+      id: RId,
+      ko: RKo,
+      lt: RLt,
+      lv: RLv,
+      ms: RMs,
+      ro: RRo,
+      sk: RSk,
+      sl: RSl,
+      sr: RSr,
+      th: RTh,
+      tl: RTl,
+      tr: RTr,
+    } as Record<string, any>
+  )[lang] || REn;
+
+const faqSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What hydrodynamic testing is performed?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Hull efficiency testing, stability verification per ISO 12217, buoyancy testing per ISO 6185, and maneuverability assessment under various load conditions.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is this testing required for CE certification?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Stability and buoyancy testing per ISO 12217 and ISO 6185 are required for CE certification of recreational craft per 2013/53/EU.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What size vessels can be tested?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Testing covers all Aquafarer product sizes from 8ft dinghies to 22ft RIB boats, and SUP boards from 9ft to 15ft.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Are test results documented?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. All test results are documented, traceable, and retained for 10 years. Available for OEM partners upon NDA.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can third-party testing be arranged?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. We accommodate SGS, BV, TÜV, and other third-party inspection agencies for independent verification.',
+      },
+    },
+  ],
+});
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  {RanddBody && <RanddBody lang={lang} />}
+  <script is:inline type="application/ld+json" set:html={faqSchema} />
+</Layout>

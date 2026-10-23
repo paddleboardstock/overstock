@@ -1,0 +1,204 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'nl' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">← Terug naar R&amp;D-centrum</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Laboratorium 05</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Prototypewerkplaats</h1>
+      <p class="mt-3 text-lg text-muted">Van CAD-model tot zeeklare boot: gebouwd, gemonteerd en beproefd</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-ocean-voyager-1.webp"
+        alt="Aquafarer prototype workshop bootfabricage"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Waar design werkelijkheid wordt</h2>
+  <p>
+    Een CAD-model, hoe gedetailleerd ook, kan niet onthullen hoe een boot zich daadwerkelijk zal gedragen totdat hij het
+    water raakt. Daarom is onze Prototype Workshop ontworpen om technische gegevens zo snel en nauwkeurig mogelijk te
+    vertalen naar een fysiek, zeegaand vaartuig. Elke nieuwe {SITE.name} model – en elke belangrijke custom build – passeert
+    deze workshop voordat de productietools worden vastgelegd.
+  </p>
+  <p>
+    De werkplaats is volledig uitgerust voor het gelijktijdig vervaardigen van romp, buizen en tuigage. Deze parallelle
+    workflow-aanpak verkort de doorlooptijd van prototypen tot 8-12 weken vanaf de technische release, vergeleken met de
+    industrienorm van 16-20 weken. Wanneer uw toepassing een gespecialiseerde oplossing vereist, kunnen we in minder dan
+    drie maanden van concept naar validatie op het water overstappen.
+  </p>
+
+  <h2>Workshop mogelijkheden</h2>
+  <table>
+    <thead><tr><th>Werkstation</th><th>Apparatuur</th><th>Doel</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Vervaardiging van de romp</td><td
+          >Rotatiegietoven (HDPE), TIG-lasruimte (aluminium), handoplegmallen (glasvezel)</td
+        ><td>Volledige cascoproductie in alle drie de materiaalsoorten</td></tr
+      >
+      <tr
+        ><td>Buismontage</td><td>RF-laspers, hetelucht-hechtstation, opblaastestmal</td><td
+          >Fabricage van volledige buisconstructies met alle schotten, kegels en kleppen</td
+        ></tr
+      >
+      <tr
+        ><td>Tuigage &amp; montage</td><td
+          >Motortakel (500 kg), mock-upframe van de console, krimptang voor hydraulische slangen, elektrische
+          kabelboomplaat</td
+        ><td
+          >Complete uitrusting: motor, stuurinrichting, bedieningselementen, brandstofsysteem, elektronica, stoelen</td
+        ></tr
+      >
+      <tr
+        ><td>Instrumentatie baai</td><td
+          >GPS-snelheidssensor, brandstofstroommeter, versnellingsmeters, thermokoppelarray, datalogger</td
+        ><td>Installatie en kalibratie van instrumentatie op zee</td></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>Het prototypetraject — stap voor stap</h2>
+  <ol>
+    <li>
+      <strong>Techniek overdracht</strong> — Het ontwerppakket (3D-model, FEA-rapport, stuklijst, lay-outschema) wordt formeel
+      beoordeeld door de werkplaatsleider en de projectingenieur. Eventuele productieproblemen worden gemarkeerd en opgelost
+      voordat het snijden begint.
+    </li>
+    <li>
+      <strong>Romp productie</strong> — De romp is gebouwd volgens de technische specificatie. Voor HDPE: het rotatiegietprogramma
+      wordt geladen vanuit de Moldex3D-simulatie. Voor aluminium: de CNC-gesneden platen worden in de TIG-ruimte gelast volgens
+      het goedgekeurde lasschema. Voor glasvezel: het lagenboek wordt laag voor laag gevolgd.
+    </li>
+    <li>
+      <strong>Buis fabricage</strong> — De stof wordt gesneden met behulp van CNC-patroonsjablonen en vervolgens RF-gelast
+      in kamers op volledige grootte. Elke kamer wordt opgeblazen om de druk te testen en 24 uur te laten staan voor initiële
+      stabilisatie.
+    </li>
+    <li>
+      <strong>Montage &amp; tuigage</strong> — Romp en buizen zijn gekoppeld. De motor is opgehangen, de besturing en bedieningselementen
+      zijn aangesloten, het brandstofsysteem is geïnstalleerd en alle elektrische circuits zijn bedraad en gecontroleerd.
+    </li>
+    <li>
+      <strong>Statische tests</strong> — Voordat de boot het water raakt, ondergaat hij: controle van het drijfvermogen (vollast
+      + 30 % reserve), druktest van het brandstofsysteem, cyclustest van het stuursysteem met volledige vergrendeling, test
+      van de elektrische aardverbinding.
+    </li>
+    <li><strong>Proefprogramma op zee</strong> — 20 uur testen in het water, hieronder beschreven.</li>
+    <li>
+      <strong>Prototypebeoordeling</strong> — Er wordt een formele sign-off meeting gehouden met de engineering-, productie-
+      en kwaliteitsteams. Alle vereiste ontwerpwijzigingen worden gedocumenteerd en opgenomen in de productierelease.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      20-uur proefvaartprogramma — Testschema
+    </p>
+    <div class="space-y-2 text-sm">
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">2 h</span><span class="flex-1"
+          >Manoeuvreren in de haven - handling bij lage snelheid, achteruit, controle van de spatborden</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">4 h</span><span class="flex-1"
+          >Snelheidsproef — GPS-geverifieerde topsnelheid, kruissnelheid, brandstofverbruik bij 3 RPM-punten</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Draaitest — tactische diameter, voortgang en overdracht op 20 kn, bakboord en stuurboord</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Slamming-test — herhaalde runs tot 0.5–1.0 m chop; versnellingsmeter op stuurstoelbasis</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Stabiliteitstest — statische hellingshoek met 4 bemanning + uitrusting aan stuurboord, offsetbelasting</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Duurloop — 3 h continu op kruissnelheid; temperatuurbewaking (motor, brandstof, elektrisch)</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">2 h</span><span class="flex-1"
+          >Eindinspectie – inspectie na de proef van alle systemen, alle bevestigingsmiddelen vastdraaien/controleren,
+          bevindingen documenteren</span
+        >
+      </div>
+    </div>
+  </div>
+
+  <h2>Prototyping op maat voor unieke toepassingen</h2>
+  <p>
+    In de Prototype Workshop lossen we de problemen op die standaardproductieboten niet kunnen oplossen. Recente
+    voorbeelden zijn onder meer:
+  </p>
+  <ul>
+    <li>
+      Een 7.8 m RIB voor een zoek- en reddingsorganisatie, die een aangepaste cabinestructuur nodig heeft met
+      kantelbeveiliging, geïntegreerde brancardbevestigingen en een op de boeg gemonteerde sonarpod - allemaal
+      geprototypeerd, gemonteerd en getest in onze faciliteit.
+    </li>
+    <li>
+      Een opblaasbare 5.2 m voor een hydrografische onderzoeksaannemer, met een ingekorte spiegel, verwijderbare
+      instrumentmast en transducerzakken door de romp ontworpen om stromingsverstoring tot een minimum te beperken.
+    </li>
+    <li>
+      Een elektrisch aangedreven 4.5 m aanbesteding voor een superjacht, waarbij het prototype werd gebruikt om de
+      actieradius, de oplaadinfrastructuur en het geluidsniveau te valideren voordat de klant zich engageerde voor een
+      vloot van vier.
+    </li>
+  </ul>
+
+  <h2>Ons prototypeteam</h2>
+  <p>
+    De werkplaats wordt bemand door acht veelzijdige maritieme technici, elk getraind in ten minste twee van de drie
+    kerndisciplines (romp, buis, tuigage). De teamleider is een meesterbotenbouwer met 16 jaar ervaring, variërend van
+    eenmalige maatwerkconstructies tot productieseries. Elk prototype krijgt een toegewijde projectingenieur toegewezen
+    die gedurende het hele bouw- en proefproces als enig aanspreekpunt voor de klant fungeert.
+  </p>
+
+  <h2>Betrokkenheid van de klant</h2>
+  <p>
+    We moedigen onze klanten actief aan om belangrijke mijlpalen bij te wonen tijdens de bouw van het prototype, met
+    name de eerste beoordeling van de uitrusting en de proefvaart. Uw operationele feedback tijdens deze fasen is van
+    onschatbare waarde bij het verfijnen van de boot voordat deze in productie gaat. Wij bouwen geen vacuüm in; wij
+    bouwen samen met u.
+  </p>
+  <p>
+    De proefvaart van 20 uur is ook een gelegenheid voor uw team om vertrouwd te raken met de bediening van de boot, de
+    systeemindeling en de onderhoudsvereisten, zodat een soepele overgang naar de service wordt gegarandeerd wanneer de
+    productieboten worden afgeleverd.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Start uw prototypeproject</h2>
+    <p class="mt-2 text-sm text-muted">
+      Vertel ons welke boot u nodig heeft en wij stellen een prototype-ontwikkelingsplan voor.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Neem contact op met ons prototypeteam</a
+    >
+  </div>
+</section>

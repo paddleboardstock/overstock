@@ -1,0 +1,196 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'cs' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">← Zpět na R&amp;D Center</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Laboratoř 05</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Prototypový workshop</h1>
+      <p class="mt-3 text-lg text-muted">Od modelu CAD po loď připravenou na moře – postavená, vybavená a osvědčená</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-ocean-voyager-1.webp"
+        alt="Aquafarer výroba prototypu dílenského člunu"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Kde se design stává realitou</h2>
+  <p>
+    CAD model, bez ohledu na to, jak podrobný, nemůže odhalit, jak se loď ve skutečnosti bude chovat, dokud nenarazí na
+    vodu. Proto je naše prototypová dílna navržena tak, aby převáděla technická data do fyzického námořního plavidla co
+    nejrychleji a nejpřesněji. Každý nový {SITE.name} model – a každá významná zakázková stavba – prochází touto dílnou před
+    tím, než dojde k nasazení výrobních nástrojů.
+  </p>
+  <p>
+    Dílna je plně vybavena pro současnou výrobu trupu, trubek a takeláže. Tento přístup založený na paralelním pracovním
+    postupu zkracuje dobu přípravy prototypu na 8-12 týdnů od uvedení na trh ve srovnání s průmyslovou normou 16-20
+    týdnů. Když vaše aplikace vyžaduje specializované řešení, můžeme přejít od konceptu k ověření na vodě za méně než
+    tři měsíce.
+  </p>
+
+  <h2>Možnosti dílny</h2>
+  <table>
+    <thead><tr><th>Pracovní stanice</th><th>Zařízení</th><th>Účel</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Výroba trupu</td><td
+          >Rotační formovací pec (HDPE), svařovací kout TIG (hliník), ruční pokládka formy (sklolaminát)</td
+        ><td>Kompletní výroba trupu ve všech třech typech materiálů</td></tr
+      >
+      <tr
+        ><td>Montáž trubek</td><td>RF svařovací lis, horkovzdušná lepicí stanice, zkušební přípravek pro nafukování</td
+        ><td>Výroba trubkových sestav plné velikosti se všemi přepážkami, kužely a ventily</td></tr
+      >
+      <tr
+        ><td>Výstroj a montáž</td><td
+          >Motorový kladkostroj (500 kg), modelový rám konzoly, hydraulický krimpovač hadic, deska elektrického svazku</td
+        ><td>Kompletní výbava: motor, řízení, ovládání, palivový systém, elektronika, sedadla</td></tr
+      >
+      <tr
+        ><td>Přístrojová šachta</td><td
+          >GPS snímač rychlosti, průtokoměr paliva, akcelerometry, pole termočlánků, datalogger</td
+        ><td>Instalace a kalibrace námořních zkušebních přístrojů</td></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>Cesta prototypu — krok za krokem</h2>
+  <ol>
+    <li>
+      <strong>Předání inženýrství</strong> — Návrhový balíček (3D model, zpráva FEA, kusovník, rozvrh rozvržení) formálně
+      zkontroluje vedoucí dílny a projektový inženýr. Jakékoli výrobní problémy jsou označeny a vyřešeny před zahájením řezání.
+    </li>
+    <li>
+      <strong>Výroba trupu</strong> — Trup je postaven podle technické specifikace. Pro HDPE: rotační lisovací program je
+      načten ze simulace Moldex3D. Pro hliník: CNC-řezané plechy jsou svařeny v TIG šachtě podle schválené svarové mapy. Pro
+      sklolaminát: po knize vrstev následuje vrstva po vrstvě.
+    </li>
+    <li>
+      <strong>Výroba trubek</strong> — Tkanina je nařezána pomocí šablon CNC-pattern a poté RF-svařena do komor plné velikosti.
+      Každá komora se nafoukne na zkušební tlak a nechá se 24 h pro počáteční stabilizaci.
+    </li>
+    <li>
+      <strong>Montáž a vybavení</strong> — Trup a trubky jsou spojeny. Motor je zavěšen, řízení a ovládací prvky jsou připojeny,
+      palivový systém je nainstalován a všechny elektrické obvody jsou zapojeny a ověřeny.
+    </li>
+    <li>
+      <strong>Statické testy</strong> — Než se loď dotkne vody, podstoupí: kontrolu vztlaku (plné zatížení + 30 % rezerva),
+      zkoušku tlaku palivového systému, zkoušku cyklu úplného zablokování systému řízení, zkoušku kontinuity elektrického
+      uzemnění.
+    </li>
+    <li><strong>Námořní zkušební program</strong> — 20 hodin testování ve vodě, podrobně popsáno níže.</li>
+    <li>
+      <strong>Recenze prototypu</strong> — Koná se formální schůzka s týmy inženýrů, výroby a kvality. Veškeré požadované
+      konstrukční změny jsou zdokumentovány a začleněny do produkční verze.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      20-Hour Sea Trial Program — Plán testů
+    </p>
+    <div class="space-y-2 text-sm">
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">2 h</span><span class="flex-1"
+          >Manévrování v přístavu — ovládání při nízké rychlosti, couvání, kontrola blatníků</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">4 h</span><span class="flex-1"
+          >Rychlostní zkouška — GPS ověřená nejvyšší rychlost, cestovní rychlost, spotřeba paliva při 3 bodech otáček za
+          minutu</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Test otáčení – taktický průměr, postup a přesun na 20 kn, levoboku a pravoboku</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Slamming test — opakované běhy přes 0.5–1.0 m sekání; akcelerometr na základně sedadla kormidla</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Test stability — statický úhel náklonu s posádkou 4 + převod na pravoboku, přesazené zatížení</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Vytrvalostní běh — 3 h nepřetržitě při cestovní rychlosti; sledování teploty (motor, palivo, elektrika)</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">2 h</span><span class="flex-1"
+          >Závěrečná kontrola — kontrola po zkušebním provozu všech systémů, dotažení/kontrola všech upevňovacích prvků,
+          zdokumentování nálezů</span
+        >
+      </div>
+    </div>
+  </div>
+
+  <h2>Vlastní prototypování pro jedinečné aplikace</h2>
+  <p>
+    Prototypová dílna je místo, kde řešíme problémy, které standardní produkční lodě nemohou řešit. Mezi nedávné
+    příklady patří:
+  </p>
+  <ul>
+    <li>
+      7.8 m RIB pro pátrací a záchrannou organizaci vyžadující vlastní konstrukci kabiny s ochranou proti převrácení,
+      integrovanými držáky nosítek a sonarovým pouzdrem namontovaným na přídi – vše prototypováno, namontováno a
+      testováno v našem zařízení.
+    </li>
+    <li>
+      Nafukovací člun 5.2 m pro dodavatele hydrografického průzkumu se zkrácenou příčkou, odnímatelným přístrojovým
+      stožárem a průchozími kapsami na snímače navrženými tak, aby minimalizovaly rušení proudění.
+    </li>
+    <li>
+      Výběrové řízení na elektrický pohon 4.5 m na superjachtu, kde byl prototyp použit k ověření dojezdu,
+      infrastruktury nabíjení a hladin hluku, než se klient zavázal k flotile čtyř.
+    </li>
+  </ul>
+
+  <h2>Náš prototypový tým</h2>
+  <p>
+    Na workshopu pracuje osm více kvalifikovaných námořních techniků, z nichž každý je proškolen alespoň ve dvou ze tří
+    základních disciplín (trup, trubka, lanoví). Vedoucí týmu je mistr stavitel lodí s 16 lety zkušeností od zakázkových
+    jednorázových sestavení až po výrobní série. Každému prototypu je přidělen specializovaný projektový inženýr, který
+    slouží jako jediné kontaktní místo pro klienta během procesu výstavby a zkušebního procesu.
+  </p>
+
+  <h2>Zapojení klienta</h2>
+  <p>
+    Aktivně podporujeme naše klienty, aby se účastnili klíčových milníků během stavby prototypu – zejména počáteční
+    kontroly vybavení a námořní zkoušky. Vaše provozní zpětná vazba během těchto fází je neocenitelná při dolaďování
+    lodi před jejím uvedením do výroby. Nestavíme ve vakuu; budujeme ve spolupráci s vámi.
+  </p>
+  <p>
+    20hodinová námořní zkouška je také příležitostí pro váš tým, aby se seznámil s manipulací s lodí, uspořádáním
+    systémů a požadavky na údržbu a zajistil tak hladký přechod do provozu po dodání produkčních lodí.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Spusťte svůj prototypový projekt</h2>
+    <p class="mt-2 text-sm text-muted">
+      Řekněte nám o lodi, kterou potřebujete, a my vám navrhneme plán vývoje prototypu.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Kontaktujte náš prototypový tým</a
+    >
+  </div>
+</section>

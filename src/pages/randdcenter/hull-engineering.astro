@@ -1,0 +1,20 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+
+const crumbs = [
+  { name: 'Home', href: '/' },
+  { name: 'R&D Center', href: '/randdcenter' },
+  { name: 'Hull Engineering Studio' },
+];
+
+const metadata = {
+  title: `Hull Engineering Studio — CAD, FEA & Custom RIB Hull Design | ${SITE.name}`,
+  description: `Explore our Hull Engineering Studio for CAD design, finite element analysis (FEA), and custom HDPE/aluminium/fibre glass hull development. Contact our engineering team to start your next RIB project.`,
+};
+import HullEngineeringEn from '~/components/randdcenter/hull-engineering.en.astro';
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <HullEngineeringEn lang="en" />
+</Layout>

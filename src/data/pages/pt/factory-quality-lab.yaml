@@ -1,0 +1,60 @@
+hero:
+  tagline: Laboratório de Controle de Qualidade
+  title: Laboratório de Ensaios & Garantia de Qualidade
+  subtitle: Laboratório de qualidade independente com processos ISO 9001 — cada unidade testada antes do envio
+
+intro: A Aquafarer opera um laboratório dedicado de controle de qualidade que funciona de forma independente da produção. Cada lote de matéria-prima e cada barco acabado passa por protocolos de inspeção documentados antes da liberação. Nosso time de QC reporta diretamente à gerência, garantindo decisões de qualidade imparciais.
+
+highlights:
+  - value: 100%
+    label: Unidades testadas sob pressão
+    detail: Cada câmara, cada barco
+  - value: 48 h
+    label: Duração do teste de retenção de ar
+    detail: Com 1,25× a pressão nominal
+  - value: '&lt;5%'
+    label: Queda de pressão máxima permitida
+    detail: Ao longo do período de manutenção de 24 horas
+  - value: AQL 2.5
+    label: Limiar de defeitos graves
+    detail: Conforme amostragem ISO 2859
+
+test_procedures:
+  - title: Inspeção de Matéria-Prima
+    description: Cada lote recebido de PVC, Hypalon, tecido drop-stitch e ferragens é testado antes da aceitação. Resistência à tração (ASTM D751), resistência ao rasgo (ISO 4674) e resistência UV são verificadas. Materiais não conformes são colocados em quarentena e devolvidos.
+    standards:
+      - ASTM D751 (tração)
+      - ISO 4674 (rasgo)
+      - ISO 4892 (UV)
+  - title: Pontos de Verificação de QC no Processo
+    description: Operadores de produção realizam autoinspeção em cada etapa. Auditores de QC conduzem amostragem aleatória ao longo do turno. Testes de pelagem de solda são realizados a cada 50 unidades. Verificações dimensionais ocorrem a cada 20 painéis.
+    standards:
+      - ASTM D751 (pelagem)
+      - Checklist interno de 100 pontos
+      - Amostragem ISO 2859
+  - title: Teste de Retenção de Ar de 48 Horas
+    description: Cada câmara do tubo é inflada a 125% da pressão nominal e mantida por 48 horas. Sensores de pressão registram continuamente com compensação de temperatura. Qualquer câmara com queda de pressão superior a 5% dispara reinspeção automática do lote.
+    standards:
+      - ISO 6185
+      - CE 2013/53/EU
+  - title: Teste de Carga & Equilíbrio
+    description: Barcos concluídos são testados na capacidade nominal máxima quanto a estabilidade, bordo livre e desempenho. Cada embarcação passa por teste na água antes da aprovação na inspeção final.
+    standards:
+      - ISO 12217
+      - CE 2013/53/EU
+
+equipment:
+  - name: Máquina Universal de Ensaios (tração)
+    spec: 5 kN, em conformidade com ASTM D751
+  - name: Testador de Decaimento de Pressão
+    spec: Multicanal, 0–50 psi, registro de dados
+  - name: Câmara de Envelhecimento UV
+    spec: ISO 4892, ciclos de 1,000 h
+  - name: Medidor de Espessura (digital)
+    spec: Resolução de 0,01 mm
+  - name: Testador de Pelagem (solda)
+    spec: Motorizado, capacidade de 50 N
+  - name: Câmara de Temperatura
+    spec: "-40 °C a +100 °C"
+  - name: Tanque de Detecção de Vazamentos
+    spec: 6 m × 2 m, iluminado

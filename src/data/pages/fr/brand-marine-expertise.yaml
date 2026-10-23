@@ -1,0 +1,68 @@
+hero:
+  tagline: Expertise marine
+  title: "Des décennies d'ingénierie marine<br />dans chaque coque"
+  subtitle: "Aquafarer combine une science des matériaux approfondie, une fabrication de précision et des tests en conditions réelles pour produire des embarcations performantes quand cela compte."
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-production-department.webp
+    alt: "Équipe d'ingénierie marine et de R&D d'Aquafarer au travail"
+expertise_materials:
+  tagline: Science des matériaux
+  title: 'Choisir le bon matériau<br />pour chaque application'
+  subtitle: "Nous travaillons avec trois matériaux de base — chacun sélectionné pour des cas d'utilisation et des exigences de performance spécifiques."
+  columns: 3
+  items:
+    - title: PVC de qualité marine
+      description: "Tissu PVC 1100 deniers — notre matériau le plus polyvalent. Stabilisé UV, résistant à l'abrasion et conforme REACH. Idéal pour les bateaux de loisir, les planches de SUP et les kayaks où le poids et le rapport coût-efficacité comptent."
+      icon: tabler:droplet
+    - title: Hypalon/CSM premium
+      description: 'Résistance chimique supérieure et stabilité aux UV. Les bateaux en Hypalon peuvent durer 15-20 ans avec un entretien approprié. Recommandé pour les applications commerciales, de secours et militaires où la durabilité à long terme est essentielle.'
+      icon: tabler:shield
+    - title: Fibre de verre et aluminium
+      description: "Des coques en V profond en fibre de verre pour les RIB et les bateaux de patrouille — des performances qui tranchent les vagues dans les conditions difficiles. Des coques en aluminium pour les bateaux de travail commerciaux lourds exigeant une résistance et une capacité de charge maximales."
+      icon: tabler:building-arch
+expertise_manufacturing:
+  tagline: Capacités de fabrication
+  title: 'Fabrication de précision<br />à chaque étape'
+  subtitle: "Notre installation de 12 000 m² est équipée de machines spécialisées pour chaque étape de la production."
+  columns: 2
+  items:
+    - title: Découpe CNC
+      description: "La découpe contrôlée par ordinateur garantit des panneaux de tissu précis et reproductibles avec un minimum de pertes. Chaque pièce s'ajuste exactement comme prévu."
+      icon: tabler:cpu
+    - title: Soudage haute fréquence
+      description: "Le soudage HF industriel crée des coutures plus résistantes que le matériau de base. Un contrôle constant de la température et de la pression garantit des joints étanches à l'air sur chaque série de production."
+      icon: tabler:bolt
+    - title: Assemblage du noyau drop-stitch
+      description: 'Des milliers de fils de polyester relient les couches de tissu supérieure et inférieure, permettant une inflation haute pression (15-20 PSI) pour des planches de SUP et des fonds rigides et stables.'
+      icon: tabler:building-arch
+    - title: Tests de pression
+      description: "Chaque produit gonflable est testé sous pression avant expédition. Les flotteurs de RIB sont testés à 1,25x la pression nominale — s'ils tiennent à ce niveau, ils performeront sur l'eau."
+      icon: tabler:wind
+    - title: Tests de résistance des coutures
+      description: "Des échantillons aléatoires de chaque lot de production subissent des tests destructifs de résistance des coutures. Les résultats sont consignés et traçables jusqu'aux séries de production spécifiques."
+      icon: tabler:files
+    - title: Tests sur l'eau
+      description: "Chaque modèle de RIB effectue des essais en mer avant certification. Les tests en conditions côtières réelles valident les performances, le comportement et la stabilité."
+      icon: tabler:ripple
+expertise_design:
+  tagline: Design & ingénierie
+  title: 'Conçu pour des conditions réelles'
+  subtitle: "Notre philosophie de conception part de l'usage prévu du bateau — puis construit l'ingénierie autour de cet usage."
+  items:
+    - title: Conception de coque en V profond
+      description: "Nos coques en fibre de verre présentent des angles de quille calculés, optimisés pour la longueur et l'usage prévu de chaque modèle. Un V plus prononcé pour les eaux agitées, plus plat pour la stabilité."
+    - title: Sécurité multi-chambres
+      description: "Chaque bateau dispose de 3 à 7 chambres à air indépendantes. Si un compartiment est endommagé, les chambres restantes maintiennent le bateau à flot et opérationnel."
+    - title: Agencement ergonomique
+      description: "La position de la console, la hauteur des flotteurs et le placement des sièges sont conçus pour le confort de l'opérateur lors d'utilisations prolongées — que ce soit en patrouille, à la pêche ou pour le transport."
+    - title: Configuration personnalisée
+      description: "Couleurs des flotteurs, configuration de la console, capacité de carburant, supports d'accessoires — chaque modèle peut être personnalisé pour répondre à des exigences opérationnelles spécifiques."
+cta:
+  title: 'Vous avez une application spécifique en tête ?'
+  subtitle: "Notre équipe d'ingénierie peut vous conseiller sur le choix des matériaux, la conception et la fabrication de votre projet."
+  actions:
+    - variant: primary
+      text: Demander conseil à nos ingénieurs
+      href: /contact
+    - text: Voir la gamme de produits
+      href: /products

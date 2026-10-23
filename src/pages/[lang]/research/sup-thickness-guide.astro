@@ -1,0 +1,445 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { languages, defaultLang } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+import LDe from '~/components/research/sup-thickness-guide.de.astro';
+import LEs from '~/components/research/sup-thickness-guide.es.astro';
+import LFr from '~/components/research/sup-thickness-guide.fr.astro';
+import LIt from '~/components/research/sup-thickness-guide.it.astro';
+import LCs from '~/components/research/sup-thickness-guide.cs.astro';
+import LSv from '~/components/research/sup-thickness-guide.sv.astro';
+import LDa from '~/components/research/sup-thickness-guide.da.astro';
+import LEl from '~/components/research/sup-thickness-guide.el.astro';
+import LNo from '~/components/research/sup-thickness-guide.no.astro';
+import LRu from '~/components/research/sup-thickness-guide.ru.astro';
+import LNl from '~/components/research/sup-thickness-guide.nl.astro';
+import LFi from '~/components/research/sup-thickness-guide.fi.astro';
+import LPl from '~/components/research/sup-thickness-guide.pl.astro';
+import LAr from '~/components/research/sup-thickness-guide.ar.astro';
+import LPt from '~/components/research/sup-thickness-guide.pt.astro';
+import LJa from '~/components/research/sup-thickness-guide.ja.astro';
+import LMs from '~/components/research/sup-thickness-guide.ms.astro';
+import LRo from '~/components/research/sup-thickness-guide.ro.astro';
+import LSk from '~/components/research/sup-thickness-guide.sk.astro';
+import LSl from '~/components/research/sup-thickness-guide.sl.astro';
+import LSr from '~/components/research/sup-thickness-guide.sr.astro';
+import LTh from '~/components/research/sup-thickness-guide.th.astro';
+import LTl from '~/components/research/sup-thickness-guide.tl.astro';
+import LTr from '~/components/research/sup-thickness-guide.tr.astro';
+import LBg from '~/components/research/sup-thickness-guide.bg.astro';
+import LEt from '~/components/research/sup-thickness-guide.et.astro';
+import LHe from '~/components/research/sup-thickness-guide.he.astro';
+import LHr from '~/components/research/sup-thickness-guide.hr.astro';
+import LHu from '~/components/research/sup-thickness-guide.hu.astro';
+import LId from '~/components/research/sup-thickness-guide.id.astro';
+import LKo from '~/components/research/sup-thickness-guide.ko.astro';
+import LLt from '~/components/research/sup-thickness-guide.lt.astro';
+import LLv from '~/components/research/sup-thickness-guide.lv.astro';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => getUiForLang(lang || defaultLang)?.[key] || '';
+
+const META: Record<string, { title: string; description: string }> = {
+  en: {
+    title: 'How to Choose SUP Thickness — Engineering Analysis',
+    description:
+      'Technical guide to inflatable SUP board thickness: how 4", 5", and 6" boards differ in rigidity, weight, stability, tracking, and performance. Thickness recommendations for touring, yoga, surfing, racing, and all-around paddling.',
+  },
+  de: {
+    title: 'So wählen Sie die richtige SUP-Dicke — technische Analyse',
+    description:
+      'Technischer Leitfaden zur Dicke aufblasbarer SUP-Boards: Wie sich Boards mit 4", 5" und 6" in Steifigkeit, Gewicht, Stabilität, Spurverhalten und Leistung unterscheiden. Dickenempfehlungen für Touring, Yoga, Surfen, Rennen und Allround-Paddeln.',
+  },
+  es: {
+    title: 'Cómo elegir el grosor del SUP — análisis técnico',
+    description:
+      'Guía técnica sobre el grosor de las tablas de SUP hinchables: cómo difieren las tablas de 4", 5" y 6" en rigidez, peso, estabilidad, derrota y rendimiento. Recomendaciones de grosor para touring, yoga, surf, carreras y remo polivalente.',
+  },
+  fr: {
+    title: "Comment choisir l'épaisseur de votre SUP — analyse technique",
+    description:
+      'Guide technique sur l\'épaisseur des planches de SUP gonflables : différences entre les planches de 4", 5" et 6" en rigidité, poids, stabilité, tenue de cap et performances. Recommandations d\'épaisseur pour le touring, le yoga, le surf, la course et la pagaie polyvalente.',
+  },
+  it: {
+    title: 'Come scegliere lo spessore del SUP — analisi tecnica',
+    description:
+      'Guida tecnica allo spessore delle tavole SUP gonfiabili: come le tavole da 4", 5" e 6" differiscono per rigidità, peso, stabilità, deriva e prestazioni. Consigli sullo spessore per touring, yoga, surf, gara e pagaiata polivalente.',
+  },
+  cs: {
+    title: 'Jak zvolit tloušťku SUP — Technická analýza',
+    description:
+      'Technický průvodce tloušťkou nafukovacího prkna SUP: jak se liší prkna 4", 5" a 6" v tuhosti, hmotnosti, stabilitě, sledování a výkonu. Doporučená tloušťka pro turistiku, jógu, surfování, závody a všestranné pádlování.',
+  },
+  sv: {
+    title: 'Hur man väljer SUP tjocklek — Teknisk analys',
+    description:
+      'Teknisk guide till uppblåsbara SUP brädor tjocklek: hur 4", 5" och 6" brädor skiljer sig i styvhet, vikt, stabilitet, spårning och prestanda. Tjockleksrekommendationer för touring, yoga, surfing, racing och all-around paddling.',
+  },
+  da: {
+    title: 'Sådan vælger du SUP tykkelse — Teknisk analyse',
+    description:
+      'Teknisk guide til oppustelige SUP boardtykkelser: hvordan 4", 5" og 6" boards adskiller sig i stivhed, vægt, stabilitet, sporing og ydeevne. Tykkelseanbefalinger til touring, yoga, surfing, racing og all-around paddling.',
+  },
+  el: {
+    title: 'Πώς να επιλέξετε SUP Πάχος — Μηχανική Ανάλυση',
+    description:
+      'Τεχνικός οδηγός για φουσκωτό πάχος σανίδας SUP: πώς διαφέρουν οι σανίδες 4", 5" και 6" ως προς την ακαμψία, το βάρος, τη σταθερότητα, την παρακολούθηση και την απόδοση. Προτάσεις πάχους για περιηγήσεις, γιόγκα, σερφ, αγώνες και κωπηλασία παντού.',
+  },
+  no: {
+    title: 'Hvordan velge SUP tykkelse — ingeniøranalyse',
+    description:
+      'Teknisk veiledning til oppblåsbare SUP-bretttykkelser: hvordan 4", 5" og 6"-brett er forskjellige i stivhet, vekt, stabilitet, sporing og ytelse. Tykkelsesanbefalinger for turer, yoga, surfing, racing og allsidig padling.',
+  },
+  ru: {
+    title: 'Как выбрать толщину SUP — инженерный анализ',
+    description:
+      'Техническое руководство по толщине надувной доски SUP: чем доски размером 4, 5 и 6 дюймов отличаются по жесткости, весу, устойчивости, управляемости и характеристикам. Рекомендации по толщине для туризма, йоги, серфинга, гонок и гребли.',
+  },
+  nl: {
+    title: 'Hoe u een dikte van SUP kiest: technische analyse',
+    description:
+      'Technische gids voor opblaasbare SUP boarddikte: hoe boards van 4", 5" en 6" verschillen in stijfheid, gewicht, stabiliteit, tracking en prestaties. Aanbevelingen voor dikte voor toeren, yoga, surfen, racen en allround peddelen.',
+  },
+  fi: {
+    title: 'Kuinka valita SUP paksuus — tekninen analyysi',
+    description:
+      'Tekninen opas puhallettavien SUP-laudan paksuuteen: kuinka 4", 5" ja 6" laudat eroavat jäykkyydestä, painosta, vakaudesta, seurannasta ja suorituskyvystä. Paksuussuositukset retkeilyyn, joogaan, surffaukseen, kilpa-ajoon ja kaikkeen melontaan.',
+  },
+  pl: {
+    title: 'Jak wybrać grubość SUP — analiza inżynierska',
+    description:
+      'Przewodnik techniczny dotyczący grubości nadmuchiwanych desek SUP: czym różnią się deski 4”, 5” i 6” pod względem sztywności, wagi, stabilności, prowadzenia i wydajności. Zalecenia dotyczące grubości dla turystyki, jogi, surfingu, wyścigów i wszechstronnego wiosłowania.',
+  },
+  ar: {
+    title: 'كيفية اختيار سمك SUP - التحليل الهندسي',
+    description:
+      'الدليل الفني لسمك لوح SUP القابل للنفخ: كيف تختلف الألواح مقاس 4 و5 و6 بوصات من حيث الصلابة والوزن والثبات والتتبع والأداء. توصيات السُمك للتجول واليوجا وركوب الأمواج والسباق والتجديف الشامل.',
+  },
+  pt: {
+    title: 'Como escolher a espessura SUP - Análise de engenharia',
+    description:
+      'Guia técnico para espessura de prancha inflável SUP: como as pranchas de 4", 5" e 6" diferem em rigidez, peso, estabilidade, rastreamento e desempenho. Recomendações de espessura para passeios, ioga, surf, corrida e remo versátil.',
+  },
+  ja: {
+    title: 'SUP の厚さを選択する方法 — エンジニアリング分析',
+    description:
+      'インフレータブル SUP ボードの厚さに関するテクニカル ガイド: 4 インチ、5 インチ、および 6 インチのボードの剛性、重量、安定性、トラッキング、パフォーマンスの違い。ツーリング、ヨガ、サーフィン、レース、およびオールラウンド パドリングに推奨される厚さ。',
+  },
+  ms: {
+    title: 'Bagaimana Memilih Ketebalan SUP — Analisis Kejuruteraan',
+    description:
+      'Panduan teknikal mengenai ketebalan papan tiup SUP: bagaimana papan 4", 5", dan 6" berbeza dari segi kekuatan, berat, kestabilan, penjejakan, dan prestasi. Cadangan ketebalan untuk jelajah, yoga, berselancar, perlumbaan, dan kayuhan serba guna.',
+  },
+  ro: {
+    title: 'Cum să Alegi Grosimea SUP — Analiză Tehnică',
+    description:
+      'Ghid tehnic pentru grosimea plăcilor gonflabile SUP: cum diferă plăcile de 4", 5" și 6" în ceea ce privește rigiditatea, greutatea, stabilitatea, urmărirea traseului și performanța. Recomandări de grosime pentru touring, yoga, surfing, curse și paddling general.',
+  },
+  sk: {
+    title: 'Ako vybrať hrúbku SUP – technická analýza',
+    description:
+      'Technický sprievodca hrúbkou nafukovacích SUP dosiek: ako sa 4", 5" a 6" dosky líšia v tuhosti, hmotnosti, stabilite, sledovaní a výkone. Odporúčania hrúbky pre touring, jogu, surfovanie, preteky a univerzálne pádlovanie.',
+  },
+  sl: {
+    title: 'Kako izbrati debelino SUP — inženirska analiza',
+    description:
+      'Tehnični vodnik za debelino napihljivih SUP desk: kako se 4", 5" in 6" deske razlikujejo po togosti, teži, stabilnosti, sledenju in zmogljivosti. Priporočila za debelino za tour, jogo, surfanje, dirke in splošno veslanje.',
+  },
+  sr: {
+    title: 'Kako izabrati SUP debljinu — inženjerska analiza',
+    description:
+      'Tehnički vodič za debljinu naduvavanja SUP daske: kako se daske od 4", 5" i 6" razlikuju po rigidnosti, težini, stabilnosti, vođenju i performansama. Preporuke debljine za touring, jogu, surfovanje, trke i svestrano veslanje.',
+  },
+  th: {
+    title: 'วิธีการเลือกความหนา SUP — การวิเคราะห์วิศวกรรม',
+    description:
+      'คู่มือทางเทคนิคเกี่ยวกับความหนาของกระดาน SUP แบบพอง: ความแตกต่างของกระดาน 4 นิ้ว, 5 นิ้ว และ 6 นิ้ว ในด้านความแข็ง น้ำหนัก ความมั่นคง การควบคุมทิศทาง และประสิทธิภาพ คำแนะนำเกี่ยวกับความหนาสำหรับการทัวร์ โยคะ โต้คลื่น แข่ง และพายโดยรอบ',
+  },
+  tl: {
+    title: 'Paano Pumili ng SUP na Kapal — Pagsusuri ng Inhinyeriya',
+    description:
+      'Teknikal na gabay sa kapal ng inflatable SUP na board: kung paano nagkakaiba ang 4", 5", at 6" na mga board sa tigas, timbang, katatagan, pagpapanatili ng direksyon, at pagganap. Mga rekomendasyon sa kapal para sa touring, yoga, surfing, karera, at pangkalahatang pagpaddle.',
+  },
+  tr: {
+    title: 'SUP Kalınlığını Nasıl Seçmeli — Mühendislik Analizi',
+    description:
+      'Şişme SUP tahta kalınlıkları hakkında teknik rehber: 4", 5" ve 6" tahtaların rijitlik, ağırlık, stabilite, iz takip ve performans açısından farkları. Tur, yoga, sörf, yarış ve genel kullanım için kalınlık önerileri.',
+  },
+  bg: {
+    title: 'Как да изберем SUP дебелина — инженерно проучване',
+    description:
+      'Техническо ръководство за дебелината на надуваемата SUP дъска: как дъските с 4", 5" и 6" се различават по твърдост, тегло, стабилност, тракция и производителност. Препоръки за дебелина за туризъм, йога, сърф, състезания и универсално гребане.',
+  },
+  et: {
+    title: 'Kuidas valida SUP paksust — Tehniline analüüs',
+    description:
+      'Tehniline juhend täispuhutavate SUP laudade paksuse kohta: kuidas 4", 5" ja 6" lauad erinevad jäikuses, kaalus, stabiilsuses, jälgimises ja jõudluses. Paksussoovitused touringuks, joogaks, surfamiseks, võidusõiduks ja üldiseks sõudmiseks.',
+  },
+  he: {
+    title: 'כיצד לבחור עובי SUP — ניתוח הנדסי',
+    description:
+      'מדריך טכני לעובי הלוח המתנפח SUP: איך לוחות בעובי 4", 5" ו-6" שונים בנוקשות, במשקל, בייצוב, בעקיבה ובביצועים. המלצות לעובי ללוחות טיולים, יוגה, גלישה, מירוצים ושליחות כללית.',
+  },
+  hr: {
+    title: 'Kako odabrati debljinu SUP — inženjerska analiza',
+    description:
+      'Tehnički vodič za debljinu napuhavajuće SUP daske: kako se daske od 4, 5 i 6 inča razlikuju po krutosti, težini, stabilnosti, praćenju i performansama. Preporuke debljine za turizam, jogu, surfing, utrke i sve vrste veslanja.',
+  },
+  hu: {
+    title: 'Hogyan válasszuk ki a SUP vastagságot – Műszaki elemzés',
+    description:
+      'Műszaki útmutató felfújható SUP deszkák vastagságához: hogyan különböznek a 4", 5" és 6" deszkák merevségben, súlyban, stabilitásban, nyomvonalban és teljesítményben. Vastagsági ajánlások túrázásra, jógára, szörfözésre, versenyzésre és minden típusú evezéshez.',
+  },
+  id: {
+    title: 'Cara Memilih Ketebalan SUP — Analisis Teknik',
+    description:
+      'Panduan teknis untuk ketebalan papan SUP yang dapat dipompa: bagaimana papan 4", 5", dan 6" berbeda dalam kekakuan, berat, stabilitas, pelacakan, dan performa. Rekomendasi ketebalan untuk touring, yoga, selancar, balap, dan dayung serba guna.',
+  },
+  ko: {
+    title: 'SUP 두께 선택 방법 — 공학 분석',
+    description:
+      '팽창식 SUP 보드 두께 기술 가이드: 4인치, 5인치, 6인치 보드가 강성, 무게, 안정성, 트래킹, 성능 면에서 어떻게 다른가. 투어링, 요가, 서핑, 레이싱, 그리고 전반적인 패들링을 위한 두께 권장사항.',
+  },
+  lt: {
+    title: 'Kaip pasirinkti SUP storį — inžinerinė analizė',
+    description:
+      'Techninis vadovas apie pripučiamų SUP lentų storį: kaip 4", 5" ir 6" lentos skiriasi standumu, svoriu, stabilumu, trajektorija ir našumu. Storio rekomendacijos turizmui, jogai, banglenčių sportui, varžyboms ir universaliniam irklavimui.',
+  },
+  lv: {
+    title: 'Kā izvēlēties SUP biezumu — inženierijas analīze',
+    description:
+      'Tehniskais ceļvedis uz piepūšamo SUP dēļu biezumu: kā 4", 5" un 6" dēļi atšķiras stingrībā, svarā, stabilitātē, ievirzē un sniegumā. Biezuma ieteikumi tūrisma, jogas, sērfošanas, sacensību un universālā airēšanas nolūkiem.',
+  },
+};
+const meta = META[lang] || META.en;
+const ResearchBody: any =
+  (
+    {
+      de: LDe,
+      es: LEs,
+      fr: LFr,
+      it: LIt,
+      cs: LCs,
+      sv: LSv,
+      da: LDa,
+      el: LEl,
+      no: LNo,
+      ru: LRu,
+      nl: LNl,
+      fi: LFi,
+      pl: LPl,
+      ar: LAr,
+      pt: LPt,
+      ja: LJa,
+      ms: LMs,
+      ro: LRo,
+      sk: LSk,
+      sl: LSl,
+      sr: LSr,
+      th: LTh,
+      tl: LTl,
+      tr: LTr,
+      bg: LBg,
+      et: LEt,
+      he: LHe,
+      hr: LHr,
+      hu: LHu,
+      id: LId,
+      ko: LKo,
+      lt: LLt,
+      lv: LLv,
+    } as Record<string, any>
+  )[lang] || null;
+
+const metadata = {
+  title: `${meta.title} | ${SITE.name}`,
+  description: meta.description,
+  ignoreTitleTemplate: true,
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: meta.title,
+  description: metadata.description,
+  author: { '@type': 'Organization', name: SITE.name },
+  datePublished: '2024-04-12',
+  dateModified: '2025-06-01',
+};
+
+const faqSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What thickness SUP should I choose?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: '4-inch (10cm) for all-around recreational use at 15 PSI. 6-inch (15cm) for larger riders or performance at up to 20 PSI.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Does thickness affect stability?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Thicker boards sit higher in the water, offering more volume and stability for heavier riders. Thinner boards are more responsive for experienced paddlers.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What pressure should I inflate to?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: '4-inch: 15 PSI. 6-inch: up to 20 PSI. Always test at 1.25x rated pressure per Aquafarer QC standards.',
+      },
+    },
+  ],
+});
+---
+
+<Layout metadata={metadata}>
+  <JsonLd data={jsonLd} />
+
+  <article class="max-w-4xl mx-auto px-6 py-16">
+    <nav class="text-sm text-gray-500 mb-8">
+      <a href={`/${lang}/`} class="hover:text-sky-600">{SITE.name}</a>
+      <span class="mx-2">/</span>
+      <a href={`/${lang}/research`} class="hover:text-sky-600">{t('home.research.title')}</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-900">{t('home.research.supThickness')}</span>
+    </nav>
+
+    <div class="mb-4">
+      <span
+        class="inline-block text-xs font-semibold uppercase tracking-wider text-sky-600 bg-sky-50 px-3 py-1 rounded-full"
+        >Engineering</span
+      >
+      <span class="ml-3 text-sm text-gray-400">6 min read</span>
+    </div>
+
+    <h1 class="text-4xl font-bold text-gray-900 mb-6">{t('home.research.supThickness')}</h1>
+    <p class="text-xl text-gray-500 mb-12 leading-relaxed">{t('home.research.supThickness.desc')}</p>
+
+    <div class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600">
+      {
+        ResearchBody ? (
+          <ResearchBody lang={lang} />
+        ) : (
+          <div class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600">
+            <h2>The Three Standard Thicknesses</h2>
+
+            <h3>4" (10 cm) – Touring & Performance</h3>
+            <ul>
+              <li>Highest rigidity – less flex under load</li>
+              <li>Lightest – less material, less air volume</li>
+              <li>Excellent tracking – reduced side-to-side rocking</li>
+              <li>Fastest – reduced drag, easier glide</li>
+              <li>Best for: Touring, racing, fitness paddling, experienced paddlers</li>
+            </ul>
+
+            <h3>5" (12.7 cm) – All-Around</h3>
+            <ul>
+              <li>Good rigidity – balanced flex-to-stiffness ratio</li>
+              <li>Moderate weight – standard material usage</li>
+              <li>Good primary + secondary stability</li>
+              <li>Best for: Recreational paddling, beginners, casual lake and river use</li>
+            </ul>
+
+            <h3>6" (15.2 cm) – Stability & Yoga</h3>
+            <ul>
+              <li>Highest primary stability – massive buoyancy</li>
+              <li>Heaviest – more PVC material, larger air volume</li>
+              <li>Slowest – more drag, harder to maintain glide</li>
+              <li>Best for: Yoga/fitness, heavy paddlers (100+ kg), very choppy conditions</li>
+            </ul>
+
+            <h2>Engineering Analysis</h2>
+            <p>
+              The stiffness of an inflatable SUP is governed by internal air pressure and the moment of inertia of the
+              board's cross-section. At 20 PSI, a 4" board shows approximately 30% less deflection under load than a 6"
+              board of the same width and length. Primary stability comes from waterline width and buoyancy; secondary
+              stability is influenced by rail shape and board width.
+            </p>
+
+            <h2>Thickness by Paddler Weight</h2>
+            <table class="w-full text-sm border-collapse">
+              <thead>
+                <tr class="bg-gray-100">
+                  <th class="p-3 text-left font-semibold text-gray-900 border">Paddler Weight</th>
+                  <th class="p-3 text-left font-semibold text-gray-900 border">Recommended Thickness</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <>
+                    <td class="p-3 border">Under 65 kg (143 lbs)</td>
+                    <td class="p-3 border">4"</td>
+                  </>
+                </tr>
+                <tr>
+                  <>
+                    <td class="p-3 border">65 – 90 kg (143 – 198 lbs)</td>
+                    <td class="p-3 border">5"</td>
+                  </>
+                </tr>
+                <tr>
+                  <>
+                    <td class="p-3 border">90 – 115 kg (198 – 253 lbs)</td>
+                    <td class="p-3 border">5" or 6"</td>
+                  </>
+                </tr>
+                <tr>
+                  <>
+                    <td class="p-3 border">Over 115 kg (253 lbs)</td>
+                    <td class="p-3 border">6"</td>
+                  </>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2>Thickness vs. PSI Trade-off</h2>
+            <p>
+              A common misconception is that higher PSI can compensate for excessive thickness. At 25 PSI, a 6" board
+              shows more flex than a 4" board at 15 PSI because the geometric moment of inertia dominates the stiffness
+              equation. For performance-oriented paddlers, a thinner board at lower pressure outperforms a thicker board
+              at higher pressure.
+            </p>
+
+            <h2>Aquafarer Lineup</h2>
+            <ul>
+              <li>
+                <strong>4" boards:</strong> Cheetah Touring series – 12' x 30" x 4" touring SUPs for fitness and
+                distance paddling
+              </li>
+              <li>
+                <strong>5" boards:</strong> Cheetah All-Round series – 10'6" x 32" x 5" for recreational use
+              </li>
+              <li>
+                <strong>6" boards:</strong> Cheetah Ultra-Stable series – 10' x 34" x 6" for yoga, large paddlers, and
+                photography platforms
+              </li>
+            </ul>
+            <p>All boards utilize 1,680 DTEX drop-stitch cores with 20 PSI rated pressure and 1.2 mm PVC laminates.</p>
+          </div>
+        )
+      }
+    </div>
+
+    <div class="mt-16 pt-8 border-t border-gray-200">
+      <a href={`/${lang}/research`} class="text-sky-600 hover:text-sky-700 font-medium"
+        >&larr; {t('home.research.tagline')}</a
+      >
+    </div>
+  </article>
+  <script is:inline type="application/ld+json" set:html={faqSchema} />
+</Layout>

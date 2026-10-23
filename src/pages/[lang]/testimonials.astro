@@ -1,0 +1,177 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { languages, defaultLang } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+import { getPageContent, setPageContentData } from '~/i18n/page-content';
+import __pageData from '~/i18n/generated/pages/testimonials.ts';
+import { localizePageTitle } from '~/i18n/page-title';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => getUiForLang(lang || defaultLang)?.[key] || '';
+setPageContentData(__pageData);
+const page = getPageContent(lang, 'testimonials');
+
+const hero = page.hero ?? {};
+const stats = page.stats ?? {};
+const categories = page.categories ?? [];
+const testimonials = page.testimonials ?? [];
+const cta = page.cta ?? {};
+
+const crumbs = [{ name: t('nav.home'), href: `/${lang}/` }, { name: 'Testimonials' }];
+
+const metadata = {
+  title: localizePageTitle(page, `Testimonials — ${SITE.name}`),
+  description: hero.subtitle?.slice(0, 160) || 'See why customers worldwide trust Aquafarer.',
+  ignoreTitleTemplate: true,
+};
+const lh = (h: string) => (h ? `/${lang}${h}` : h);
+
+const faqSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What do partners say about Aquafarer?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Partners highlight consistent quality across production runs, responsive engineering support, and reliable lead times. See our testimonials section.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Are testimonials verified?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. All testimonials are from verified B2B partners with whom we have ongoing manufacturing relationships.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I visit the factory before committing?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. We welcome on-site and virtual factory tours. See our Factory Audit page for preparation checklist.',
+      },
+    },
+  ],
+});
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <section
+    class="relative py-20 px-6 overflow-hidden bg-gradient-to-br from-[#001830] via-[#002d4a] to-[#003355] text-white"
+  >
+    <div class="relative z-10 max-w-5xl mx-auto text-center">
+      <span class="text-sm font-semibold text-sky-300 tracking-[0.2em] uppercase">{hero.tagline}</span>
+      <h1 class="mt-4 text-4xl md:text-5xl font-bold leading-tight" set:html={hero.title} />
+      <p class="mt-6 text-lg text-white/80 max-w-3xl mx-auto">{hero.subtitle}</p>
+    </div>
+  </section>
+
+  <section class="bg-white border-b border-gray-100 py-12 px-6">
+    <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      {
+        stats.stats?.map((s: any) => (
+          <div>
+            <div class="text-3xl font-bold text-sky-600">{s.amount}</div>
+            <div class="text-sm text-gray-500 mt-1">{s.title}</div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="max-w-6xl mx-auto py-16 px-6">
+    <div class="space-y-16">
+      {
+        categories.map((cat: any) => {
+          const catTestimonials = testimonials.filter((t: any) => t.category === cat.id);
+          if (catTestimonials.length === 0) return null;
+          return (
+            <div>
+              <div class="mb-8">
+                <span class="inline-block text-xs font-bold text-sky-600 bg-sky-50 px-3 py-1 rounded-full mb-2">
+                  {cat.label}
+                </span>
+                <div class="h-px bg-gray-200 mt-2" />
+              </div>
+              <div class="grid md:grid-cols-2 gap-6">
+                {catTestimonials.map((tItem: any) => (
+                  <div class="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-shadow">
+                    <div class="flex items-center gap-1 mb-3">
+                      {Array.from({ length: tItem.rating || 5 }).map(() => (
+                        <span class="text-amber-400 text-sm">&#9733;</span>
+                      ))}
+                    </div>
+                    <p class="text-gray-600 leading-relaxed">&ldquo;{tItem.content}&rdquo;</p>
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                      <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-sky-100 flex items-center justify-center">
+                          <span class="text-sm font-bold text-sky-600">{tItem.name?.charAt(0)}</span>
+                        </div>
+                        <div>
+                          <div class="text-sm font-semibold text-gray-900">{tItem.name}</div>
+                          <div class="text-xs text-gray-500">{tItem.title}</div>
+                          {tItem.location && <div class="text-xs text-gray-400">{tItem.location}</div>}
+                        </div>
+                      </div>
+                      {tItem.product && (
+                        <div class="mt-2 text-xs text-sky-600 font-medium">
+                          {t('testimonials.product') || 'Product'}: {tItem.product}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          );
+        })
+      }
+    </div>
+  </section>
+
+  {
+    cta.title && (
+      <section class="px-6 py-20 text-center bg-gradient-to-br from-gray-900 to-gray-800 text-white">
+        <h2 class="text-3xl md:text-4xl font-bold">{cta.title}</h2>
+        {cta.subtitle && <p class="mt-4 text-lg text-white/70 max-w-2xl mx-auto">{cta.subtitle}</p>}
+        <div class="mt-10 flex items-center justify-center gap-4 flex-wrap">
+          {cta.actions?.map((action: any) => (
+            <a
+              href={lh(action.href)}
+              class={`inline-flex items-center gap-2 px-8 py-4 font-semibold rounded-full shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5 ${action.variant === 'primary' ? 'bg-[#fb923c] hover:bg-orange-600 text-white' : 'border-2 border-white/30 text-white hover:bg-white/10'}`}
+            >
+              {action.text} {action.variant === 'primary' ? '<span>→</span>' : ''}
+            </a>
+          ))}
+        </div>
+      </section>
+    )
+  }
+
+  <JsonLd
+    type="Service"
+    service={{
+      name: 'Aquafarer Customer Testimonials',
+      description: 'Customer reviews from clubs, resorts, entrepreneurs, and owners worldwide.',
+      serviceType: 'Testimonials',
+      areaServed: ['Global'],
+      url: `/${lang}/testimonials`,
+      items: testimonials.map((tItem: any) => ({
+        name: tItem.name,
+        description: tItem.content?.slice(0, 100),
+      })),
+    }}
+  />
+  <script is:inline type="application/ld+json" set:html={faqSchema} />
+</Layout>

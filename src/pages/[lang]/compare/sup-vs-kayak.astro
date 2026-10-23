@@ -1,0 +1,307 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { languages, defaultLang } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => getUiForLang(lang || defaultLang)?.[key] || '';
+
+const metadata = {
+  title: `${t('compare.supVsKayak.title') || 'Inflatable SUP vs Kayak — Which One Is Right for You?'}`,
+  description:
+    t('compare.supVsKayak.desc') ||
+    'Compare inflatable stand-up paddle boards and kayaks across stability, speed, storage, learning curve, and use cases. Find the right watercraft for your needs.',
+  ignoreTitleTemplate: true,
+};
+
+const faqSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Should I choose SUP or kayak for my business?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'SUP boards for fitness, recreation, and rental popularity. Kayaks for touring, fishing, and multi-person use. Both are strong rental performers.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Which has higher rental demand?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'SUP boards currently have higher rental demand globally, but kayaks offer year-round appeal and multi-person configurations.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Does Aquafarer offer both?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Inflatable SUP boards (9ft-15ft) and kayaks (1-3 person), all in commercial-grade Drop-Stitch construction.',
+      },
+    },
+  ],
+});
+---
+
+<Layout metadata={metadata}>
+  <JsonLd
+    type="Article"
+    article={{
+      headline: t('compare.supVsKayak.headline') || 'Inflatable SUP vs Kayak — Which One Is Right for You?',
+      description:
+        t('compare.supVsKayak.desc') ||
+        'Compare inflatable stand-up paddle boards and kayaks across stability, speed, storage, learning curve, and use cases.',
+      datePublished: '2026-07-06',
+    }}
+    data={{ url: `https://aquafarer.com/${lang}/compare/sup-vs-kayak` }}
+  />
+  <JsonLd
+    type="BreadcrumbList"
+    breadcrumbs={[
+      { name: t('home') || 'Home', href: `/${lang}/` },
+      { name: t('compare.label') || 'Compare', href: `/${lang}/compare` },
+      { name: t('compare.supVsKayak.short') || 'SUP vs Kayak' },
+    ]}
+  />
+  <section class="max-w-4xl mx-auto py-24 px-6">
+    <a href={`/${lang}/products`} class="text-sm text-sky-600 hover:text-sky-700"
+      >&larr; {t('compare.backToProducts') || 'Products'}</a
+    >
+    <h1 class="mt-4 text-4xl font-semibold text-gray-900">
+      {t('compare.supVsKayak.heading') || 'Inflatable SUP vs Kayak'}
+    </h1>
+    <p class="mt-4 text-lg text-gray-500">
+      {
+        t('compare.supVsKayak.subtitle') ||
+          'A practical comparison to help you choose the right inflatable watercraft for your lifestyle, skill level, and budget.'
+      }
+    </p>
+
+    <div class="mt-12 grid md:grid-cols-2 gap-8">
+      <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+        <h2 class="text-xl font-semibold text-gray-900">{t('compare.supVsKayak.col1Title') || 'Inflatable SUP'}</h2>
+        <ul class="mt-4 space-y-3 text-sm text-gray-600">
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span
+              ><strong>{t('compare.supVsKayak.stability') || 'Stability:'}</strong>
+              {
+                t('compare.supVsKayak.stabilityDesc') ||
+                  'Wide deck (32"+) provides excellent primary stability. Better for yoga, fishing, photography.'
+              }</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span
+              ><strong>{t('compare.supVsKayak.speed') || 'Speed:'}</strong>
+              {
+                t('compare.supVsKayak.speedDesc') ||
+                  'Faster on flat water. Touring boards (12\'6"+) can cover 3-5 mph cruising speed.'
+              }</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span
+              ><strong>{t('compare.supVsKayak.storage') || 'Storage:'}</strong>
+              {
+                t('compare.supVsKayak.storageDesc') ||
+                  'Deflates to backpack size. Fits in car trunk, closet, or checked luggage.'
+              }</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span
+              ><strong>{t('compare.supVsKayak.learning') || 'Learning:'}</strong>
+              {
+                t('compare.supVsKayak.learningDesc') ||
+                  'Easy to learn standing balance. Most beginners stand up within the first session.'
+              }</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span
+              ><strong>{t('compare.supVsKayak.bestFor') || 'Best for:'}</strong>
+              {
+                t('compare.supVsKayak.bestForDesc') ||
+                  'Fitness paddling, touring, yoga, fishing, surf, whitewater, family recreation.'
+              }</span
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+        <h2 class="text-xl font-semibold text-gray-900">{t('compare.supVsKayak.col2Title') || 'Inflatable Kayak'}</h2>
+        <ul class="mt-4 space-y-3 text-sm text-gray-600">
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span
+              ><strong>{t('compare.supVsKayak.stability') || 'Stability:'}</strong>
+              {
+                t('compare.supVsKayak.kayakStabilityDesc') ||
+                  'Seated position gives lower center of gravity. Less likely to tip. Better for rough water.'
+              }</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span
+              ><strong>{t('compare.supVsKayak.speed') || 'Speed:'}</strong>
+              {
+                t('compare.supVsKayak.kayakSpeedDesc') ||
+                  'Slower than SUP on flat water. Longer touring kayaks can match SUP speed with less effort.'
+              }</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span
+              ><strong>{t('compare.supVsKayak.storage') || 'Storage:'}</strong>
+              {
+                t('compare.supVsKayak.kayakStorageDesc') ||
+                  'Also deflates compactly. Tandem kayaks take slightly more packed volume than solo boards.'
+              }</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span
+              ><strong>{t('compare.supVsKayak.learning') || 'Learning:'}</strong>
+              {
+                t('compare.supVsKayak.kayakLearningDesc') ||
+                  'Intuitive seated position. Minimal balance required. Quickest path to paddling on open water.'
+              }</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span
+              ><strong>{t('compare.supVsKayak.bestFor') || 'Best for:'}</strong>
+              {
+                t('compare.supVsKayak.kayakBestForDesc') ||
+                  'River touring, lake camping, tandem paddling, expedition travel, fishing, families with children.'
+              }</span
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="mt-16">
+      <h2 class="text-2xl font-semibold text-gray-900">
+        {t('compare.supVsKayak.tableTitle') || 'Quick Decision Guide'}
+      </h2>
+      <div class="mt-6 overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="bg-gray-50 border-b-2 border-gray-200">
+              <th class="px-4 py-3 text-left font-semibold text-gray-700">{t('compare.factor') || 'Factor'}</th>
+              <th class="px-4 py-3 text-center font-semibold text-sky-700">{t('compare.supVsKayak.short') || 'SUP'}</th>
+              <th class="px-4 py-3 text-center font-semibold text-emerald-700"
+                >{t('compare.supVsKayak.kayakShort') || 'Kayak'}</th
+              >
+            </tr>
+          </thead>
+          <tbody>
+            {
+              [
+                [
+                  t('compare.supVsKayak.r1') || 'Learning Curve',
+                  t('compare.supVsKayak.r1a') || 'Moderate (standing balance)',
+                  t('compare.supVsKayak.r1b') || 'Easy (seated)',
+                ],
+                [
+                  t('compare.supVsKayak.r2') || 'Stability',
+                  t('compare.supVsKayak.r2a') || 'Good on flat water',
+                  t('compare.supVsKayak.r2b') || 'Excellent in all conditions',
+                ],
+                [
+                  t('compare.supVsKayak.r3') || 'Speed',
+                  t('compare.supVsKayak.r3a') || 'Fast (touring mode)',
+                  t('compare.supVsKayak.r3b') || 'Moderate (recreational)',
+                ],
+                [
+                  t('compare.supVsKayak.r4') || 'Portability',
+                  t('compare.supVsKayak.r4a') || 'Excellent (backpack size)',
+                  t('compare.supVsKayak.r4b') || 'Very good (duffel size)',
+                ],
+                [
+                  t('compare.supVsKayak.r5') || 'Storage Capacity',
+                  t('compare.supVsKayak.r5a') || 'Limited (deck only)',
+                  t('compare.supVsKayak.r5b') || 'Good (cockpit + hatches)',
+                ],
+                [
+                  t('compare.supVsKayak.r6') || 'Wind Resistance',
+                  t('compare.supVsKayak.r6a') || 'Vulnerable (standing)',
+                  t('compare.supVsKayak.r6b') || 'Low profile (seated)',
+                ],
+                [
+                  t('compare.supVsKayak.r7') || 'Family Friendly',
+                  t('compare.supVsKayak.r7a') || 'SUP + Yak board combo',
+                  t('compare.supVsKayak.r7b') || 'Tandem kayaks for 2',
+                ],
+                [
+                  t('compare.supVsKayak.r8') || 'Fitness Value',
+                  t('compare.supVsKayak.r8a') || 'High (full body balance)',
+                  t('compare.supVsKayak.r8b') || 'Moderate (upper body)',
+                ],
+                [
+                  t('compare.supVsKayak.r9') || 'Price Range (entry)',
+                  t('compare.supVsKayak.r9a') || '$200-$500',
+                  t('compare.supVsKayak.r9b') || '$150-$400',
+                ],
+              ].map((row, i) => (
+                <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                  {row.map((cell, j) => (
+                    <td
+                      class={`px-4 py-3 border-b border-gray-200 ${j === 0 ? 'font-medium text-gray-700' : 'text-center text-gray-600'}`}
+                    >
+                      {cell}
+                    </td>
+                  ))}
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mt-16 bg-gradient-to-br from-sky-50 to-blue-50 rounded-2xl p-8 border border-sky-200">
+      <h2 class="text-xl font-semibold text-gray-900">
+        {t('compare.supVsKayak.recTitle') || 'Which Should You Choose?'}
+      </h2>
+      <p class="mt-4 text-gray-600 text-sm leading-relaxed">
+        {
+          t('compare.supVsKayak.recDesc') ||
+            'Choose a SUP if you want a full-body workout, enjoy standing paddling on calm waters, and value maximum portability. Choose a kayak if you prefer seated paddling, plan to tackle rivers or open water, or need a family-friendly tandem option. Many paddlers own both — SUP for fitness and flat days, kayak for touring and rougher conditions.'
+        }
+      </p>
+      <div class="mt-6 flex gap-4 flex-wrap">
+        <a
+          href={`/${lang}/products`}
+          class="px-6 py-3 bg-gray-900 text-white rounded-full text-sm font-medium hover:bg-gray-800 transition"
+          >{t('compare.browseProducts') || 'Browse Products'}</a
+        >
+        <a
+          href={`/${lang}/guides`}
+          class="px-6 py-3 border border-gray-200 text-gray-700 rounded-full text-sm font-medium hover:border-gray-400 transition"
+          >{t('compare.readGuides') || 'Read Guides'}</a
+        >
+      </div>
+    </section>
+  </section>
+
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true">
+    <p>
+      {
+        t('compare.supVsKayak.aiBlock') ||
+          'Comprehensive comparison between inflatable stand-up paddle boards (iSUPs) and inflatable kayaks. Covers stability, speed, storage, learning curve, portability, wind resistance, fitness value, family suitability, and price range. Inflatable SUPs offer better speed and portability, standing position for fitness, and wide stability for yoga/fishing. Inflatable kayaks offer easier seated paddling, better wind resistance, tandem options, and greater storage capacity.'
+      }
+    </p>
+  </section>
+  <script is:inline type="application/ld+json" set:html={faqSchema} />
+</Layout>

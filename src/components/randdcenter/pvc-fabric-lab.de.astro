@@ -1,0 +1,217 @@
+---
+import { SITE } from 'astrowind:config';
+const { lang = 'de' } = Astro.props;
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={`/${lang}/randdcenter`} class="text-sm text-gray-500 hover:underline">&larr; Zurück zum F&amp;E-Zentrum</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Lab 01</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">PVC-Stofflabor</h1>
+      <p class="mt-3 text-lg text-muted">Wissenschaftliche Materialprüfung — von der Faser bis zum fertigen Schlauch</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/randd/aquafarer-pvc-material-lab.webp"
+        alt="Materialprüflabor für PVC-Gewebe von Aquafarer"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Das Fundament jedes Schlauchboots</h2>
+  <p>
+    Das Schlauchgewebe ist das wichtigste Einzelmaterial in einem Schlauchboot. Es muss dauerhafter UV-Einstrahlung,
+    wiederholten Aufblaszyklen, Abrieb an Stegen und Treibgut sowie extremen Temperaturschwankungen standhalten — und
+    dabei über Jahre hinweg seine strukturelle Integrität bewahren. Bei {SITE.name} ist unser PVC-Stofflabor ausschließlich
+    der Charakterisierung, Validierung und kontinuierlichen Verbesserung der Gewebe gewidmet, die wir in jedem Boot verwenden,
+    das wir bauen.
+  </p>
+  <p>
+    Wir verlassen uns nicht allein auf Datenblätter der Lieferanten. Jede Charge PVC- und Hypalon-Gewebe, die unsere
+    Werkstatt erreicht, wird intern unabhängig geprüft. So wird garantiert, dass die von uns veröffentlichte
+    Materialspezifikation auch die Materialleistung ist, die Sie erhalten — Charge für Charge, Jahr für Jahr.
+  </p>
+
+  <h2>Genormte Prüfausrüstung</h2>
+  <p>
+    Unser Stofflabor ist mit Industrieinstrumenten ausgestattet, die den Prüfverfahren nach ISO, ASTM und EN
+    entsprechen:
+  </p>
+  <table>
+    <thead><tr><th>Ausrüstung</th><th>Gemessene Parameter</th><th>Norm</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Universalzugprüfmaschine (50 kN)</td><td>Bruchkraft, Bruchdehnung, Weiterreißwiderstand</td><td>
+          / ASTM D751</td
+        ></tr
+      >
+      <tr
+        ><td>Xenon-Bewitterungskammer</td><td>UV-Beständigkeit (Farbänderung, Festigkeitserhalt nach 2000 h)</td><td>
+          / ASTM G155</td
+        ></tr
+      >
+      <tr
+        ><td>Tieftemperatur-Knickprüfgerät</td><td>Risspunkt bei -30 &deg;C bis -50 &deg;C</td><td
+          >ISO 4675 / ASTM D2136</td
+        ></tr
+      >
+      <tr
+        ><td>Taber-Abriebprüfgerät</td><td>Gewichtsverlust nach 1000 Zyklen (CS-10-Radscheibe)</td><td
+          >ASTM D3389 / ISO 5470-1</td
+        ></tr
+      >
+      <tr
+        ><td>Dickemessgerät (digital, Auflösung 0.001 mm)</td><td>Gleichmäßigkeit über die Rollenbreite</td><td
+          >ISO 2286-3</td
+        ></tr
+      >
+      <tr><td>Hydrostatisches Dichtigkeitsprüfgerät</td><td>Wasserdurchdringungswiderstand</td><td>ISO 811</td></tr>
+    </tbody>
+  </table>
+  <p class="text-sm text-gray-500">* Sämtliche Geräte werden jährlich durch akkreditierte Drittlabore kalibriert.</p>
+
+  <h2>Von Daten zur Entscheidung: ein typischer Prüfablauf</h2>
+  <p>
+    Wenn ein neues Gewebekandidat eintrifft, durchläuft er einen standardisierten Qualifizierungsprozess in sieben
+    Schritten:
+  </p>
+  <ol>
+    <li>
+      <strong>Wareneingangsprüfung</strong> — Sichtprüfung auf Oberflächendefekte, Nadellöcher und Maßhaltigkeit.
+    </li>
+    <li>
+      <strong>Dickervermessung</strong> — 20-Punkt-Messung über die gesamte Rollenbreite; für die Annahme ist ein CV &lt;
+      3 % erforderlich.
+    </li>
+    <li>
+      <strong>Zugprüfung</strong> — 5 Probekörper in Kett- und Schussrichtung. Mindestens 3500 N/50 mm für PVC 1100 dtex.
+    </li>
+    <li>
+      <strong>UV-Konditionierung</strong> — 1000 h Belastung in der Xenon-Kammer; mindestens 80 % Festigkeitserhalt erforderlich.
+    </li>
+    <li>
+      <strong>Kältebruchprüfung</strong> — 4 h bei -35 &deg;C, anschließend 180&deg;-Biegung über einen 25-mm-Dorn. Keine
+      sichtbaren Risse.
+    </li>
+    <li><strong>Abriebfestigkeit</strong> — 1000 Zyklen, Gewichtsverlust &le; 0.05 g.</li>
+    <li>
+      <strong>Freigabesignatur</strong> — erst nachdem alle sieben Tore bestanden sind, wird das Gewebe für die Produktion
+      freigegeben.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Typisches PVC 1100 dtex — Zugfestigkeitserhalt nach UV-Belastung
+    </p>
+    <div class="flex items-end gap-3 h-40">
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-600 rounded-t" style="height:100%"></div><span class="text-xs mt-1"
+          >0 h<br />100%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-500 rounded-t" style="height:95%"></div><span class="text-xs mt-1"
+          >500 h<br />95%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-400 rounded-t" style="height:88%"></div><span class="text-xs mt-1"
+          >1000 h<br />88%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-300 rounded-t" style="height:82%"></div><span class="text-xs mt-1"
+          >2000 h<br />82%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-gray-300 rounded-t" style="height:65%"></div><span class="text-xs mt-1"
+          >Wettbewerber<br />~65%</span
+        >
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      Unser PVC-1100-dtex-Gewebe behält nach 2000 h Xenon-Bewitterung mehr als 80 % seiner Zugfestigkeit, während
+      typische Branchenqualitäten auf unter 70 % fallen.
+    </p>
+  </div>
+
+  <h2>Unser professionelles Team</h2>
+  <p>
+    Das Labor wird von zwei hauptamtlichen Materialingenieuren betrieben, die jeweils einen Abschluss in
+    Polymerwissenschaft oder Textiltechnik und mindestens sechs Jahre Branchenerfahrung besitzen. Unterstützt werden sie
+    von drei Technikern, die die täglichen Prüfungen und die Datenerfassung durchführen. Das Team nimmt regelmäßig an
+    Ringversuchen zwischen Laboratorien teil, die von der International Organization for Standardization (ISO)
+    organisiert werden, um die Genauigkeit unserer Prüfverfahren zu validieren.
+  </p>
+
+  <h2>Lösungen für Ihre anspruchsvollsten Materialherausforderungen</h2>
+  <p>
+    Jede Meeresumgebung ist anders. Ein Patrouillenboot im Persischen Golf ist völlig anderen UV- und
+    Temperaturbedingungen ausgesetzt als ein Rettungsboot in der Nordsee. Unser Stofflabor hilft Ihnen, eine
+    Gewebespezifikation auszuwählen — oder zu entwickeln —, die für Ihr Einsatzprofil optimiert ist.
+  </p>
+  <p>Aktuelle kundenspezifische Lösungen umfassen:</p>
+  <ul>
+    <li>
+      Ein hochabriebfestes PVC-Gemisch für einen Militärkunden, dessen Boote regelmäßig auf Korallenriffen stranden (+40
+      % Abrieblebensdauer).
+    </li>
+    <li>
+      Eine Tieftemperatur-Hypalon-Formulierung für eine arktische Forschungsstation, geprüft bis -50 &deg;C ohne
+      Versprödung.
+    </li>
+    <li>
+      Ein farbstabilisiertes orangefarbenes Gewebe für eine Such- und Rettungsflotte, das nach 3 Jahren tropischer
+      Sonneneinstrahlung seine Sichtbarkeit behält.
+    </li>
+  </ul>
+  <p>
+    Wir verkaufen keine Gewebe „von der Stange" in der Hoffnung, dass sie funktionieren. Wir testen, validieren und
+    empfehlen — oder entwickeln — eine maßgeschneiderte Lösung für Ihr spezifisches Einsatzprofil. Das ist der
+    {SITE.name}-Unterschied.
+  </p>
+
+  <h2>Wie wir Sie unterstützen</h2>
+  <p>Wenn Sie eine Materialherausforderung zu uns bringen, können Sie Folgendes erwarten:</p>
+  <ol>
+    <li><strong>Beratung</strong> — wir besprechen Ihre Betriebsumgebung, Leistungsziele und Ihr Budget.</li>
+    <li>
+      <strong>Angebot</strong> — ein Prüfplan wird mit klaren Bestehens-/Nichterfüllungskriterien und einem Zeitplan erstellt.
+    </li>
+    <li>
+      <strong>Durchführung</strong> — unser Labor führt die Prüfungen durch und erstellt einen detaillierten Bericht mit Rohdaten
+      und Vergleichsanalysen.
+    </li>
+    <li>
+      <strong>Empfehlung</strong> — wir legen eine Gewebespezifikation vor, einschließlich Alternativen, falls mehrere Materialien
+      Ihre Anforderungen erfüllen.
+    </li>
+    <li>
+      <strong>Nachbetreuung</strong> — nach der Lieferung bleiben wir für Fragen zu Materialien im Einsatz erreichbar.
+    </li>
+  </ol>
+  <p>
+    Unser Ziel ist es nicht, Ihnen einfach ein Boot zu verkaufen. Es geht darum, sicherzustellen, dass das Boot, das Sie
+    erhalten, unter Ihren Betriebsbedingungen zuverlässig funktioniert — und das beginnt mit dem Gewebe.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Benötigen Sie eine individuelle Gewebespezifikation?</h2>
+    <p class="mt-2 text-sm text-muted">
+      Kontaktieren Sie unser Materialtechnik-Team, um Ihre Anforderungen zu besprechen.
+    </p>
+    <a
+      href={`/${lang}/contact`}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Kontaktieren Sie unser Labor-Team</a
+    >
+  </div>
+</section>

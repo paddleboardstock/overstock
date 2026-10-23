@@ -1,0 +1,189 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'ar' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">← العودة إلى مركز البحث والتطوير</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">معمل 01</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">PVC معمل الأقمشة</h1>
+      <p class="mt-3 text-lg text-muted">اختبار المواد العلمية - من الألياف إلى الأنبوب النهائي</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/randd/aquafarer-pvc-material-lab.webp"
+        alt="Aquafarer PVC معمل فحص مواد النسيج"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>أساس كل قارب قابل للنفخ</h2>
+  <p>
+    يعتبر النسيج الأنبوبي المادة الأكثر أهمية في القارب القابل للنفخ. يجب أن يتحمل التعرض المستمر UV، ودورات التضخم
+    المتكررة، والتآكل ضد الأرصفة والحطام، والتقلبات الشديدة في درجات الحرارة - كل ذلك مع الحفاظ على سلامته الهيكلية
+    لسنوات. في {SITE.name}، مختبر الأقمشة PVC الخاص بنا مخصص حصريًا لتوصيف الأقمشة التي نستخدمها في كل قارب نقوم ببنائه
+    والتحقق من صحتها وتحسينها المستمر.
+  </p>
+  <p>
+    نحن لا نعتمد فقط على أوراق بيانات الموردين. يتم اختبار كل دفعة من القماش PVC وHypalon التي تدخل ورشة العمل الخاصة
+    بنا بشكل مستقل داخل الشركة. وهذا يضمن أن مواصفات المواد التي ننشرها هي أداء المواد التي تتلقاها - دفعة تلو الأخرى،
+    سنة بعد سنة.
+  </p>
+
+  <h2>معدات الاختبار القياسية</h2>
+  <p>تم تجهيز معمل النسيج الخاص بنا بأدوات صناعية تتوافق مع طرق اختبار ISO وASTM وEN:</p>
+  <table>
+    <thead><tr><th>معدات</th><th>المعلمات المقاسة</th><th>معيار</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>اختبار الشد العالمي (50 كيلو نيوتن)</td><td>قوة الكسر، الاستطالة عند الكسر، انتشار الدموع</td><td>
+          / أستم D751</td
+        ></tr
+      >
+      <tr
+        ><td>غرفة التجوية بقوس زينون</td><td>المقاومة UV (تغير اللون، الاحتفاظ بالقوة بعد 2000 h)</td><td>
+          / أستم G155</td
+        ></tr
+      >
+      <tr
+        ><td>اختبار مرن لدرجة الحرارة المنخفضة</td><td>نقطة التشقق عند -30 درجة مئوية إلى -50 درجة مئوية</td><td
+          >ISO 4675 / ASTM D2136</td
+        ></tr
+      >
+      <tr
+        ><td>جهاز اختبار التآكل تابر</td><td>فقدان الوزن بعد دورات 1000 (عجلة CS-10)</td><td>أستم D3389 / ISO 5470-1</td
+        ></tr
+      >
+      <tr><td>مقياس السُمك (رقمي، دقة 0.001 mm)</td><td>التوحيد عبر عرض لفة</td><td>ISO 2286-3</td></tr>
+      <tr><td>جهاز اختبار الرأس الهيدروستاتيكي</td><td>مقاومة اختراق الماء</td><td>ISO 811</td></tr>
+    </tbody>
+  </table>
+  <p class="text-sm text-gray-500">* تتم معايرة جميع المعدات سنويًا بواسطة مختبرات معتمدة تابعة لجهات خارجية.</p>
+
+  <h2>من البيانات إلى القرار: سير عمل اختباري نموذجي</h2>
+  <p>عندما يصل مرشح جديد للنسيج، فإنه يتبع عملية تأهيل موحدة مكونة من سبع خطوات:</p>
+  <ol>
+    <li>
+      <strong>فحص الاستلام</strong> - الفحص البصري للعيوب السطحية والثقوب ومطابقة الأبعاد.
+    </li>
+    <li>
+      <strong>رسم الخرائط سمك</strong> — 20-قياس النقاط عبر اللفة؛ السيرة الذاتية &lt; 3% مطلوبة للقبول.
+    </li>
+    <li>
+      <strong>اختبار الشد</strong> — 5 العينات في اتجاهات السداة واللحمة. الحد الأدنى 3500 N/50 mm لـ 1100 dtex PVC.
+    </li>
+    <li>
+      <strong>UV تكييف</strong> — 1000 ح التعريض الضوئي في غرفة قوس الزينون؛ الحد الأدنى 80٪ من الاحتفاظ بالقوة مطلوب.
+    </li>
+    <li>
+      <strong>الكراك البارد</strong> — 4 h عند -35 درجة مئوية، ثم 180° ينحني فوق شياق 25 mm. لا يوجد تكسير مرئي.
+    </li>
+    <li><strong>مقاومة التآكل</strong> — 1000 دورات، فقدان الوزن ≥ 0.05 جم.</li>
+    <li>
+      <strong>توقيع الموافقة</strong> - فقط بعد اجتياز البوابات السبع يتم إطلاق القماش للإنتاج.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      نموذجي PVC 1100 dtex — احتباس الشد بعد التعرض UV
+    </p>
+    <div class="flex items-end gap-3 h-40">
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-600 rounded-t" style="height:100%"></div><span class="text-xs mt-1"
+          >0 h<br />100%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-500 rounded-t" style="height:95%"></div><span class="text-xs mt-1"
+          >500 h<br />95%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-400 rounded-t" style="height:88%"></div><span class="text-xs mt-1"
+          >1000 h<br />88%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-300 rounded-t" style="height:82%"></div><span class="text-xs mt-1"
+          >2000 h<br />82%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-gray-300 rounded-t" style="height:65%"></div><span class="text-xs mt-1"
+          >منافس<br />~65%</span
+        >
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      يحتفظ نسيج PVC 1100 dtex الخاص بنا بـ &gt; 80 % قوة الشد بعد 2000 h التعرض لقوس الزينون، مقارنة بالدرجات الصناعية
+      النموذجية التي تنخفض إلى أقل من 70 %.
+    </p>
+  </div>
+
+  <h2>فريقنا المحترف</h2>
+  <p>
+    يعمل في المختبر اثنان من مهندسي المواد المتفرغين، يحمل كل منهما شهادة جامعية في علوم البوليمر أو هندسة النسيج مع ما
+    لا يقل عن ست سنوات من الخبرة الصناعية. ويدعمهم ثلاثة فنيين يقومون بإجراء الاختبارات اليومية وتسجيل البيانات. ويشارك
+    الفريق بانتظام في التجارب الدورية بين المختبرات التي تنظمها المنظمة الدولية للمعايير (ISO) للتحقق من دقة طرق
+    الاختبار لدينا.
+  </p>
+
+  <h2>حل أصعب التحديات المادية الخاصة بك</h2>
+  <p>
+    كل بيئة بحرية مختلفة. يواجه زورق دورية يعمل في الخليج العربي ظروفًا ودرجات حرارة مختلفة إلى حد كبير مقارنة بمركب
+    الإنقاذ في بحر الشمال. يساعدك مختبر النسيج الخاص بنا على تحديد - أو تطوير - مواصفات النسيج التي تم تحسينها لملف
+    تعريف التشغيل الخاص بك.
+  </p>
+  <p>تشمل الحلول المخصصة الحديثة ما يلي:</p>
+  <ul>
+    <li>مزيج عالي التآكل PVC للعميل العسكري الذي ترسو قواربه بانتظام على الشعاب المرجانية (+40٪ عمر التآكل).</li>
+    <li>تركيبة Hypalon منخفضة الحرارة لمحطة أبحاث القطب الشمالي، تم اختبارها إلى -50 درجة مئوية دون تقصف.</li>
+    <li>
+      نسيج برتقالي ثابت اللون لأسطول البحث والإنقاذ، ويحافظ على الرؤية بعد 3 سنوات من التعرض لأشعة الشمس الاستوائية.
+    </li>
+  </ul>
+  <p>
+    نحن لا نبيع الأقمشة "الجاهزة للاستخدام" ونأمل أن تنجح. نحن نقوم باختبار والتحقق من صحة والتوصية - أو إنشاء - حل مخصص
+    لملف تعريف مهمتك المحدد. هذا هو {SITE.name} اختلاف.
+  </p>
+
+  <h2>كيف نخدمك</h2>
+  <p>عندما تجلب لنا تحديًا ماديًا، إليك ما يمكنك توقعه:</p>
+  <ol>
+    <li><strong>التشاور</strong> — نناقش بيئة التشغيل لديك وأهداف الأداء والميزانية.</li>
+    <li><strong>عرض</strong> - تتم صياغة خطة الاختبار بمعايير النجاح/الفشل الواضحة وجدول زمني.</li>
+    <li>
+      <strong>تنفيذ</strong> — يقوم مختبرنا بإجراء الاختبارات وينتج تقريرًا تفصيليًا يحتوي على البيانات الأولية والتحليل المقارن.
+    </li>
+    <li>
+      <strong>توصية</strong> - نقدم مواصفات القماش، بما في ذلك الخيارات البديلة إذا كانت المواد المتعددة تلبي متطلباتك.
+    </li>
+    <li>
+      <strong>المتابعة</strong> - بعد التسليم، نظل جاهزين لدعم أي أسئلة مادية أثناء الخدمة.
+    </li>
+  </ol>
+  <p>
+    هدفنا ليس مجرد بيع قارب لك. الهدف هو التأكد من أن القارب الذي تستلمه يعمل بشكل موثوق في الظروف التي تعمل فيها - وهذا
+    يبدأ بالقماش.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">هل تحتاج إلى مواصفات مخصصة للنسيج؟</h2>
+    <p class="mt-2 text-sm text-muted">اتصل بفريق هندسة المواد لدينا لمناقشة متطلباتك.</p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >اتصل بفريق المختبر لدينا</a
+    >
+  </div>
+</section>

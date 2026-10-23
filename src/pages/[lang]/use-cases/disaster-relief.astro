@@ -1,0 +1,102 @@
+---
+export const prerender = true;
+
+import PageLayout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl } from '~/i18n/utils';
+import { languages } from '~/i18n/config';
+import { articleSchema } from '~/lib/seo/schema';
+import { nodes } from '~/content/graph/nodes';
+import { getPageContent, setPageContentData } from '~/i18n/page-content';
+import __pageData from '~/i18n/generated/pages/disaster-relief.ts';
+
+export function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const lang = getLangFromUrl(Astro.url);
+setPageContentData(__pageData);
+const page = getPageContent(lang, 'disaster-relief');
+const node = nodes.find((n) => n.id === 'disaster-relief');
+
+const graphJsonLd = node
+  ? {
+      '@context': 'https://schema.org',
+      '@graph': [
+        articleSchema({
+          headline: page.seo?.headline || 'Disaster Relief Inflatable Boats — OEM Manufacturing for Humanitarian Aid',
+          description:
+            page.seo?.description ||
+            'Aquafarer manufactures inflatable boats engineered for disaster relief and humanitarian aid operations. Flood rescue, MEDEVAC, aid delivery.',
+          datePublished: page.seo?.datePublished || '2024-06-01',
+          dateModified: page.seo?.dateModified || '2026-06-01',
+          author: 'Aquafarer',
+          publisher: 'Aquafarer',
+        }),
+        {
+          '@type': 'Product',
+          name: node?.name?.en || 'Disaster Relief Inflatable Boats',
+          description:
+            node?.description?.en ||
+            'Inflatable boats engineered for disaster relief, humanitarian aid, and emergency response operations.',
+          brand: { '@type': 'Brand', name: 'Aquafarer' },
+          category: 'Emergency Response Equipment',
+        },
+      ],
+    }
+  : null;
+
+const faqSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What boats are used for disaster relief?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Lightweight, portable inflatable boats and RIBs that can be air-dropped or quickly deployed. Rapid inflation, durable construction.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can Aquafarer supply emergency fleets quickly?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Stock availability for standard models. Emergency production prioritization available for disaster response organizations.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What features do relief boats need?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Quick-inflation valves, reinforced grab lines, high-visibility colors, and compact storage for transport to disaster zones.',
+      },
+    },
+  ],
+});
+---
+
+<PageLayout
+  metadata={{ title: page.seo?.headline || page.headline, description: page.seo?.description || page.subtitle }}
+>
+  <script
+    slot="before"
+    is:inline
+    type="application/ld+json"
+    set:html={graphJsonLd ? JSON.stringify(graphJsonLd) : ''}
+  />
+
+  <section class="mx-auto max-w-4xl px-6 py-16">
+    <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">{page.label || 'Use Case'}</span>
+    <h1 class="font-semibold text-gray-900 dark:text-gray-100 mt-4 text-4xl">
+      {page.headline || 'Engineered for Excellence in Disaster Relief and Humanitarian Aid'}
+    </h1>
+    <p class="text-lg text-gray-500 dark:text-gray-400 mt-3">
+      {page.subtitle || 'Lifelines in crisis — delivering critical performance when it matters most.'}
+    </p>
+
+    <div class="mt-12 prose prose-gray dark:prose-invert max-w-none" set:html={page.body || ''} />
+  </section>
+  <script is:inline type="application/ld+json" set:html={faqSchema} />
+</PageLayout>

@@ -1,0 +1,119 @@
+site:
+  name: Aquafarer
+  site: 'https://aquafarer.com'
+  base: '/'
+  trailingSlash: true
+  googleSiteVerificationId: ''
+metadata:
+  title:
+    default: Aquafarer — Современные решения для надувных лодок и технических изделий
+    template: '%s — Aquafarer'
+  description: 'Aquafarer проектирует и производит высококачественные надувные лодки, RIB и технические изделия. Ознакомьтесь с каталогом, спецификациями и ресурсами.'
+  keywords:
+    - Aquafarer
+    - надувная лодка
+    - RIB
+    - ПВХ
+    - маринистика
+    - инженерия
+  author: Aquafarer
+  robots:
+    index: true
+    follow: true
+  openGraph:
+    site_name: Aquafarer
+    images:
+      - url: '~/assets/images/default.webp'
+        width: 1200
+        height: 628
+    type: website
+    locale: ru_RU
+  twitter:
+    handle: '@Aquafarer'
+    site: '@Aquafarer'
+    cardType: summary_large_image
+i18n:
+  textDirection: ltr
+apps:
+  blog:
+    isEnabled: true
+    postsPerPage: 6
+    post:
+      isEnabled: true
+      permalink: '/news/%slug%'
+      robots:
+        index: true
+        follow: true
+    list:
+      isEnabled: true
+      pathname: 'news'
+      robots:
+        index: true
+        follow: true
+    category:
+      isEnabled: true
+      pathname: 'news/category'
+      robots:
+        index: true
+        follow: true
+    tag:
+      isEnabled: true
+      pathname: 'news/tag'
+      robots:
+        index: false
+        follow: true
+    isRelatedPostsEnabled: true
+    relatedPostsCount: 4
+  products:
+    isEnabled: true
+    productsPerPage: 12
+    product:
+      isEnabled: true
+      permalink: '/products/%slug%'
+      robots:
+        index: true
+        follow: true
+    list:
+      isEnabled: true
+      pathname: 'products'
+      robots:
+        index: true
+        follow: true
+analytics:
+  vendors:
+    googleAnalytics:
+      id: null
+ui:
+  theme: 'system'
+
+# --- Per-language site settings ---
+siteSettings:
+  siteName: 'Aquafarer — Вейвфелла'
+  siteTagline: 'Aquafarer — Вейвфелла — Премиальные надувные лодки, SUP и снаряжение для водных видов спорта'
+  siteDescription: 'Aquafarer проектирует и производит премиальные надувные лодки, доски для сапсёрфинга и снаряжение для водных видов спорта.'
+  organization:
+    name: 'Aquafarer — Вейвфелла'
+    logo: ''
+    contactEmail: info@aquafarer.com
+    contactPhone: '+86 13305324192'
+    address: 'Economic Development Zone, Laixi, Qingdao, China, 266600'
+
+branding:
+  site_name: 'Aquafarer — Вейвфеллер'
+  logo_image: ''
+  logo_alt: 'Aquafarer logo'
+  copyright: '© {year} {site_name} · Все права защищены.'
+  phone: '+86 13305324192'
+  address: 'Economic Development Zone, Laixi, Qingdao, China, 266600'
+  email: info@aquafarer.com
+  whatsapp_number: '+86 13305324192'
+  whatsapp_default_message: 'Здравствуйте, хочу узнать о товаре.'
+  contact_email_to: info@aquafarer.com
+  contact_email_provider: resend
+  contact_from_email: info@aquafarer.com
+  contact_from_name: Aquafarer
+  contact_resend_api_key: Aa123456#
+  contact_submissions_pat: ''
+  gmap_api_key: ''
+  map_latitude: '36.8861'
+  map_longitude: '120.5261'

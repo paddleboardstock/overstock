@@ -1,0 +1,119 @@
+hero:
+  tagline: Libro bianco sull'ingegneria
+  title: Tecnologia Drop-Stitch e scienza dei materiali:<br />L'ingegneria dietro le moderne imbarcazioni gonfiabili
+  subtitle: Un riferimento tecnico autorevole che copre la costruzione del nucleo con punto a goccia, il confronto tra i materiali PVC e Hypalon, i test di rigidità dei recipienti ad alta pressione e gli standard di produzione delle imbarcazioni.
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/randd/aquafarer-design-discussion-lab.webp
+    alt: 'Laboratorio di ricerca e sviluppo Aquafarer: test e ingegneria dei materiali'
+direct_answer: La tecnologia Drop-stitch utilizza migliaia di fili interni di poliestere che collegano gli strati di tessuto superiore e inferiore di un nucleo gonfiabile. Quando gonfiati a 15-20 PSI, questi fili agiscono come elementi di tensione, prevenendo il rigonfiamento e creando una struttura rigida paragonabile alla costruzione a guscio rigido. Combinato con rivestimenti avanzati in tessuto PVC o Hypalon e saldatura RF, ciò consente di realizzare moto d'acqua portatili e gonfiabili ad alte prestazioni adatte per uso professionale, commerciale e ricreativo.
+section_drop_stitch:
+  title: Ingegneria strutturale Drop-Stitch
+  subtitle: Come migliaia di fili trasformano il tessuto flessibile in una struttura rigida
+  content: |-
+    Il punto a goccia (noto anche come "tessuto a punto a goccia" o "nucleo a punto a goccia") rappresenta una svolta nell'ingegneria delle strutture gonfiabili. Il principio è sorprendentemente semplice: migliaia di singoli fili di poliestere vengono intrecciati contemporaneamente in due strati separati di tessuto di base, collegando i pannelli superiore e inferiore con un angolo di 90 gradi.
+
+    Quando la camera sigillata è pressurizzata, la pressione dell'aria interna esercita una forza equamente in tutte le direzioni, cercando di separare i pannelli superiore e inferiore in una forma cilindrica. Le migliaia di fili del punto goccia resistono a questa separazione, trasferendo il carico in tensione lungo l'asse del filo. Il risultato è un pannello piatto e rigido in grado di resistere a 15–20 PSI di pressione interna.
+
+    A 20 PSI, un pannello con punto a goccia di 1 m² subisce circa 14.000 kg di forza interna totale, ma la matrice del filo lo mantiene perfettamente piatto. Ciò conferisce alle strutture drop-stitch un rapporto resistenza/peso che rivaleggia con i tradizionali materiali rigidi.
+section_materials:
+  title: 'PVC vs Hypalon: confronto tra materiali tecnici'
+  subtitle: Dati oggettivi per la selezione informata dei materiali nella produzione di imbarcazioni gonfiabili
+  table:
+    columns:
+      - header: Proprietà
+      - header: PVC (cloruro di polivinile)
+      - header: Hypalon (CSM)
+    rows:
+      - property: Resistenza ai raggi UV
+        pvc: Buono (con stabilizzatori UV)
+        hypalon: Eccellente (inerente)
+      - property: Resistenza all'abrasione
+        pvc: Bene
+        hypalon: Molto bene
+      - property: Resistenza alla trazione
+        pvc: 3.000–5.000 N/5 cm
+        hypalon: 2.500–4.000 N/5 cm
+      - property: Peso al mq
+        pvc: 850–1.200 grammi
+        hypalon: 1.100–1.500 g
+      - property: Flessione fredda
+        pvc: -30°C
+        hypalon: -20&#176;C
+      - property: Metodo di unione
+        pvc: Saldatura RF / Saldatura ad aria calda
+        hypalon: Incollaggio a mano (cemento a contatto)
+      - property: Riparabilità
+        pvc: Facile (saldatura a caldo o adesivo)
+        hypalon: Richiede adesivo CSM
+      - property: Costo del materiale
+        pvc: $ 8-15 / m²
+        hypalon: $ 20–40 / m²
+      - property: Durata della vita (sole tropicale)
+        pvc: 5–8 anni
+        hypalon: 10-15 anni
+      - property: Gamma di colori
+        pvc: Ampio (spettro di colori completo)
+        hypalon: Limitato (colori base)
+      - property: Resistenza chimica
+        pvc: Buono (quali resistenti a carburante/olio)
+        hypalon: Eccellente (ampia gamma chimica)
+section_testing:
+  title: Test e protocolli di sicurezza
+  subtitle: Il quadro di garanzia della qualità di Aquafarer per ogni lotto di produzione
+  protocols:
+    - title: Test di mantenimento della pressione nominale 1,25x
+      description: Ogni recipiente assemblato viene gonfiato a 1,25 volte la sua pressione operativa nominale e mantenuto per 24-48 ore. Qualsiasi caduta di pressione superiore al 2% provoca il rifiuto e la rilavorazione.
+      standard: ISO6185
+    - title: Test di resistenza alla pelatura della cucitura
+      description: I campioni di cordoni di saldatura e colla di ciascun lotto di produzione vengono testati per verificarne la resistenza alla pelatura utilizzando apparecchiature di tensione calibrate. È richiesta una resistenza minima alla pelatura di 4 kN/m.
+      standard: ISO2411
+    - title: Prova di trazione del tessuto
+      description: I rotoli di tessuto in entrata vengono sottoposti a test di resistenza alla trazione e allungamento sia nella direzione dell'ordito che della trama. Soglia di rigetto inferiore a 3.000 N/5 cm per il PVC.
+      standard: ISO 1421
+    - title: Invecchiamento accelerato dai raggi UV
+      description: I campioni di materiale sono sottoposti a oltre 1.000 ore di esposizione UV accelerata nelle camere di prova QUV. È consentita una perdita massima di resistenza alla trazione del 15%.
+      standard: ASTM G154
+    - title: Integrità di valvole e raccordi
+      description: Ogni gruppo valvola viene testato per l'integrità della tenuta a 1,25 volte la pressione nominale. Le valvole antiperdita sono testate per le prestazioni di tenuta unidirezionali.
+      standard: ISO 12402
+section_manufacturing:
+  title: Standard di produzione e certificazioni di qualità
+  subtitle: Conformità agli standard di settore per l'accesso al mercato globale
+  standards:
+    - name: ISO9001:2015
+      body: Certificato SGS
+      scope: Sistema di gestione della qualità attraverso la progettazione, la produzione e la consegna
+    - name: CE 2013/53/UE
+      body: Organismo notificato UE
+      scope: 'Direttiva sulle imbarcazioni da diporto: progettazione dello scafo, stabilità, galleggiamento, emissioni'
+    - name: BSCI
+      body: Amfori
+      scope: 'Conformità sociale: sicurezza dei lavoratori, lavoro equo, gestione ambientale'
+    - name: ISO6185
+      body: Norma internazionale
+      scope: 'Gommoni: costruzione, stabilità, galleggiamento, prove di pressione'
+    - name: PORTATA
+      body: Regolamento UE
+      scope: 'Sicurezza chimica: sostanze soggette a restrizioni nei materiali e nei rivestimenti'
+section_faq:
+  title: Domande frequenti tecniche
+  questions:
+    - q: Come si confronta il punto goccia con la tradizionale costruzione a guscio rigido?
+      a: I moderni nuclei drop-stitch a 20 PSI raggiungono l'85-90% della rigidità di gusci rigidi comparabili in schiuma EPS/fibra di vetro, pur essendo completamente sgonfiabili per il trasporto. Il compromesso è un peso leggermente superiore e una rigidità ultima inferiore, ma per la maggior parte delle applicazioni ricreative e commerciali la differenza è trascurabile.
+    - q: Quale densità del filo è considerata di qualità premium?
+      a: I tessuti premium a punto goccia utilizzano 2 fili per pollice quadrato (circa 3.100 fili per m²) tessuti con filato di poliestere 1.680 DTEX. I tessuti entry-level utilizzano 1 filo per pollice quadrato con filato 1.100 DTEX.
+    - q: L'Hypalon può essere saldato come il PVC?
+      a: No. Hypalon/CSM non può essere saldato a RF. Deve essere assemblato utilizzando cemento a contatto applicato a mano, il che rende la produzione più laboriosa e le cuciture dipendono dall'abilità dell'operatore. Il PVC può essere saldato a radiofrequenza o ad aria calda per una qualità di cucitura costante e automatizzata.
+    - q: Qual è la pressione massima di sicurezza per i gommoni?
+      a: I tubi standard per gommoni funzionano a 8–12 PSI. I pavimenti con punto goccia funzionano a 12-20 PSI. I nuclei drop-stitch (SUP) ad alta pressione possono funzionare a 20–25 PSI. Ogni prodotto include valvole limitatrici di pressione calibrate per evitare un gonfiaggio eccessivo.
+    - q: Quanto tempo ci vuole per produrre un gommone personalizzato?
+      a: La produzione OEM standard dura 30-45 giorni dalla conferma dell'ordine al FOB Qingdao. Lo sviluppo di stampi personalizzati aggiunge 15-20 giorni per la produzione e il test dei prototipi.
+cta:
+  title: Consulenza ingegneristica
+  subtitle: Hai una domanda specifica sul materiale o sul design? Il nostro team di ingegneri è a disposizione per discussioni tecniche.
+  actions:
+    - variant: primary
+      text: Chiedi al nostro team di ingegneri
+      href: /contact
+    - text: Esplora il nostro centro di ricerca e sviluppo
+      href: /randdcenter

@@ -1,0 +1,177 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'fi' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">← Takaisin R&amp;D Centeriin</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Lab 02</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Hull Engineering Studio</h1>
+      <p class="mt-3 text-lg text-muted">Digitaalinen simulointi, rakenneäly, mukautettu rungon suunnittelu</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/design discussaquafarer-inflatable-boat-aquafarer-factory-exterior.webp"
+        alt="Aquafarer runkotekniikan CAD-suunnittelutyöasema"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Missä vahvuus kohtaa hydrodynamiikan</h2>
+  <p>
+    Runko on minkä tahansa RIB tai kumiveneen selkäranka. Sen on oltava riittävän kevyt höyläämään tehokkaasti,
+    riittävän vahva sietämään iskukuormituksia ja mitoiltaan vakaa laajalla lämpötila-alueella. klo {SITE.name}, Hull
+    Engineering Studiossamme yhdistyvät edistynyt CAD-mallinnus, finite element -analyysi (FEA) ja vuosikymmenien
+    käytännön laivaston arkkitehtuurikokemus tuottaakseen runkoja, jotka on optimoitu niiden aiottuun tehtävään – ei
+    luettelosta mukautettuja yleisiä muotoja.
+  </p>
+  <p>
+    Työskentelemme kolmen ensisijaisen runkomateriaalin kanssa – pyörivästi muovatun HDPE:n, hitsatun merialumiinin ja
+    käsintehdyn lasikuidun – ja meillä on tekniset valmiudet suunnitella, simuloida ja validoida jokainen niistä itse.
+  </p>
+
+  <h2>Suunnittelutyökalut ja standardit</h2>
+  <p>Digitaalinen suunnitteluympäristömme sisältää:</p>
+  <table>
+    <thead><tr><th>Kyky</th><th>Ohjelmisto / työkalu</th><th>Sovellus</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>3D-parametrinen mallinnus</td><td>SolidWorks Professional</td><td
+          >Rungon pinta, kiinnitysjärjestelmä, moottorin kannatin, kannen asettelu</td
+        ></tr
+      >
+      <tr
+        ><td>Äärillisten elementtien analyysi</td><td>ANSYS Mechanical &amp; LS-DYNA</td><td
+          >Stressikartoitus, modaalianalyysi, törmäys-/iskusimulaatio</td
+        ></tr
+      >
+      <tr
+        ><td>Laskennallinen virtausdynamiikka</td><td>Ansys Fluent / Star-CCM+</td><td
+          >Hydrodynaaminen vastuksen ennustaminen, trimmauksen optimointi</td
+        ></tr
+      >
+      <tr
+        ><td>Laminaattitekniikka</td><td>ESAComp / CADEC</td><td
+          >Lasikuitukerroksen pinoaminen, ytimen valinta, painon arviointi</td
+        ></tr
+      >
+      <tr><td>Muottivirtauksen simulointi</td><td>Moldex3D</td><td>Rotomuovauksen seinän paksuuden ennuste</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Suunnittelutyömme</h2>
+  <p>
+    Jokainen rungon suunnittelu, oli se sitten vakiomalli tai täysin räätälöity projekti, noudattaa tiukkaa
+    viisivaiheista prosessia:
+  </p>
+  <ol>
+    <li>
+      <strong>Konseptien ja vaatimusten kerääminen</strong> — Tapaamme kanssasi määritelläksemme hyötykuorman, nopeusalueen,
+      meritilan kyvyn, hinausvaatimukset ja mahdolliset erikoisvarusteet (kannen luukut, konsoliasennot, polttoainesäiliön
+      integrointi).
+    </li>
+    <li>
+      <strong>3D-pinnoitus ja hydrostaattinen laskenta</strong> — Rungon muoto on mallinnettu SolidWorksissa ja sen hydrostaattinen
+      vakaus (GM, oikaiseva varsi) tarkistetaan sisäänrakennettujen analyysityökalujen avulla.
+    </li>
+    <li>
+      <strong>Rakenteellinen FEA</strong> — Kuormatilanteet määritellään: staattinen (miehistö + vaihde), dynaaminen (höyläysiskut
+      5 g:n kohdalla) ja iskevä (pudotus aallonharjalta nopeudella 3 m/s). Jännitysmuodot tarkistetaan; varmuuskerroin ≥ 2.5
+      on pakollinen.
+    </li>
+    <li>
+      <strong>CFD-vedon optimointi</strong> — Runkoa simuloidaan kolmella lastaustilalla ja viidellä nopeudella. Märkä pinta-ala,
+      trimmikulma ja jäännösvastus vähenevät toistuvasti.
+    </li>
+    <li>
+      <strong>Suunnittelun tarkistus ja julkaisu</strong> — Vanhempi laivaston arkkitehtimme tarkistaa täydellisen suunnittelupaketin
+      (3D-malli, FEA-raportti, CFD-raportti, painoarvio, kerroskirja) ennen kuin luovutetaan prototyyppipajalle.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      FEA Stress Distribution – RIB 450 Patrol Hull (alumiini 5083)
+    </p>
+    <div class="grid grid-cols-2 gap-4 text-sm">
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">2.8 : 1</span>
+        <span class="text-gray-500">Turvallisuuskerroin suurimmalla hyötykuormalla</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">15.2 %</span>
+        <span class="text-gray-500">Vedon vähennys verrattuna edelliseen sukupolveen</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">87 kN/m&sup2;</span>
+        <span class="text-gray-500">Huippuiskupaine (suunnitteluraja)</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">18 000 h</span>
+        <span class="text-gray-500">FEA:n kumulatiivinen suoritusaika 2025</span>
+      </div>
+    </div>
+  </div>
+
+  <h2>Räätälöinti: runko, sinun säännöt</h2>
+  <p>
+    Kahdella operaattorilla ei ole samanlaisia vaatimuksia. Satamapartio RIB tarvitsee matalan V-rungon vakauttamiseksi
+    alhaisella nopeudella; nopea sieppausalus tarvitsee syvä-V:n suihkutuskisoilla; sukellustukivene tarvitsee leveän
+    palkin ja matalan peräpeilin. Emme pakota hakemustasi olemassa olevaan rungon muotoon. Suunnittelemme toiveistasi
+    ylöspäin.
+  </p>
+  <p>Esimerkkejä viimeaikaisista mukautetuista rungon suunnitteluprojekteista:</p>
+  <ul>
+    <li>
+      Karibian matkanjärjestäjälle venytetty 6.8 m HDPE-runko, jossa vahvistettu keula rantalaskua varten (+15 %
+      pohjapaksuus).
+    </li>
+    <li>
+      Kevyt alumiininen 7.2 m RIB rannikkovartiolaitokseen, integroiduilla polttoainesäiliön ohjauslevyillä ja
+      varustekaappien jäykisteillä.
+    </li>
+    <li>
+      Lasikuituinen 5.5 m sukellusvene, jossa on leikattu peräpeili ja kaksi akkulaatikkoa, suunniteltu helpottamaan
+      snorklaajien paluuta.
+    </li>
+  </ul>
+
+  <h2>Meidän insinöörit</h2>
+  <p>
+    Studiota johtaa vanhempi laivaston arkkitehti, jolla on 14 vuoden kokemus suurten nopeuksien alusten suunnittelusta
+    ja jota tukee kaksi FEA:han ja CFD:hen erikoistunutta koneinsinööriä. Kaikilla kolmella on korkeakoulututkinnot
+    merenkulkutekniikasta tai laivaston arkkitehtuurista kansainvälisesti tunnustetuista yliopistoista. Tiimi julkaisee
+    säännöllisesti alan lehdissä ja esiintyy konferensseissa, kuten International Conference on High-Performance Marine
+    Vehicles.
+  </p>
+
+  <h2>Ole kanssamme kumppani seuraavassa rungossasi</h2>
+  <p>
+    Ensimmäisestä konseptiluonnoksesta lopulliseen stressiraporttiin Hull Engineering Studiomme on kumppanisi luomassa
+    venettä, joka ei ole vain rakennettu – vaan myös suunniteltu. Panostamme simulaatiotunnit etukäteen, jotta jokainen
+    hitsi, jokainen laminaattikerros ja rungon jokainen kaari on olemassa syystä.
+  </p>
+  <p>
+    Tarvitsetpa pientä muutosta olemassa olevaan malliin tai täysin puhtaan suunnittelun, olemme valmiita keskustelemaan
+    tarpeistasi.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Aloita rungon suunnittelukonsultointi</h2>
+    <p class="mt-2 text-sm text-muted">Kerro meille tehtäväprofiilistasi, niin ehdotamme suunnittelupolkua.</p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Ota yhteyttä suunnittelutiimiimme</a
+    >
+  </div>
+</section>

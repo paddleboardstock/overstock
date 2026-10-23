@@ -1,0 +1,155 @@
+hero:
+  tagline: About us
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-factory-building.webp
+    alt: Aquafarer factory and workshop
+  title: |
+    Marine engineering, <br />
+    built the <span class="text-accent dark:text-white">Aquafarer</span> way
+  subtitle: 'We started in a coastal workshop with one boat and a stubborn belief: marine products should be engineered like they matter, because they do. Today we ship to over 50 countries, but every hull still passes through the same hands that started the company.'
+
+stats:
+  title: By the numbers
+  columns: 4
+  stats:
+    - title: Hulls delivered
+      amount: '2,400+'
+    - title: Countries shipped
+      amount: '50+'
+    - title: Years of combined experience
+      amount: '60'
+    - title: Average warranty response (hours)
+      amount: '24'
+
+features3_what_we_build:
+  title: What we build
+  subtitle: A focused product line that we know inside out — no half-finished experiments, no badge-engineering.
+  columns: 3
+  isBeforeContent: true
+  items:
+    - title: RIB boats
+      description: Aluminium-hull RIBs from 3.3 m to 7.5 m. Designed for patrol, dive, fishing and family use.
+      icon: tabler:ship
+    - title: Inflatable boats
+      description: PVC and Hypalon inflatable dinghies from 2.4 m to 4.2 m. Light, tough and easy to stow.
+      icon: tabler:speedboat
+    - title: Superyacht tenders
+      description: Compact, high-spec RIBs custom-built to match the look of your mothership.
+      icon: tabler:crown
+
+features3_more:
+  columns: 3
+  isAfterContent: true
+  items:
+    - title: Accessories
+      description: Oars, pumps, covers, dry-bags, fuel tanks and electronics. All matched to our boats.
+      icon: tabler:package
+    - title: Refit & repair
+      description: In-house tube replacement, electronics retrofit and engine upgrades.
+      icon: tabler:tool
+    - title: Custom builds
+      description: Project-by-project design for commercial, scientific and military customers.
+      icon: tabler:hammer
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-design-discussion-2.webp
+    alt: Boat design and engineering discussion
+
+steps2_values:
+  title: Our values
+  subtitle: Three principles that have shaped every product since day one.
+  items:
+    - title: Build like it carries your family
+      description: Every hull, weld and fastener is treated as if our own families will use it.
+      icon: tabler:heart
+    - title: Engineer before we sell
+      description: If a spec is wrong, we change the spec — never the customer.
+      icon: tabler:settings
+    - title: Support that outlasts the warranty
+      description: Twenty-year-old hulls still call us for spare parts, and we still pick up.
+      icon: tabler:headset
+
+steps2_milestones:
+  title: Milestones
+  subtitle: A short version of the Aquafarer story.
+  isReversed: true
+  items:
+    - title: Founded in a coastal workshop
+      description: Started by two naval architects with a CNC mill and a stubborn idea.
+      icon: tabler:building-factory
+    - title: First 1,000 hulls delivered
+      description: Reached in our seventh year, mostly through word of mouth and repeat customers.
+      icon: tabler:circle-check
+    - title: International export programme
+      description: Now shipping to 50+ countries with localised support partners on five continents.
+      icon: tabler:world
+    - title: A new global operating structure
+      description: 'In September 2026, brand operations moved from Qingdao Vatrad Group to Aquafarer LLC (New Mexico, USA); the Qingdao manufacturing hub continues R&D, production, and factory-direct export.'
+      icon: tabler:building-skyscraper
+
+features2_locations:
+  title: Our locations
+  tagline: Find us
+  columns: 3
+  items:
+    - title: Headquarters & workshop
+      description: Coastal industrial park, building 4 — open Mon–Fri for visits by appointment.
+    - title: EU service centre
+      description: Mediterranean port — refit, repair and warranty support for European customers.
+    - title: APAC partner network
+      description: Authorised service partners in Australia, Japan, Singapore and Hong Kong.
+
+brand_hub_tagline: Brand
+brand_hub_title: Explore Our Brand
+brand_hub_subtitle: Dive deeper into our marine engineering expertise, global presence, and the principles that drive us.
+
+brand_hub_cards:
+  - title: Marine Expertise
+    desc: Decades of material science, precision manufacturing, and real-world testing — from PVC/Hypalon fabrication to deep-V hull design and drop-stitch technology.
+    link: /brand-marine-expertise
+    link_label: 'Learn more →'
+  - title: Global Presence
+    desc: Shipping to 50+ countries from our Qingdao facility with authorized service partners across Europe, Asia-Pacific, and the Americas.
+    link: /brand-global-presence
+    link_label: 'Learn more →'
+  - title: Why Aquafarer
+    desc: Vertical integration, dual certification (ISO 9001 + BSCI), CE compliance, and low MOQs — built for brands, distributors, and government agencies.
+    link: /brand-why-aquafarer
+    link_label: 'Learn more →'
+
+production_section:
+  tagline: 'Production Excellence'
+  title: 'Ensuring Exquisite Craftsmanship'
+  description: 'The Aquafarer production line is dedicated to producing high-quality, durable, and high-performance inflatable boat products.'
+  cards:
+    - title: 'Experienced Technician Team'
+      items:
+        - 'Professional knowledge of PVC, Hypalon, and marine materials'
+        - 'Precise craftsmanship in cutting, bonding, and accessory installation'
+        - 'Continuous training to master latest production technologies'
+    - title: 'Advanced Production Equipment'
+      items:
+        - 'CNC cutting equipment for precise fabric cutting with minimal error'
+        - 'High-precision heat/cold bonding for airtight, durable seams'
+        - 'Professional airtightness and tensile testing equipment'
+    - title: 'Mature Management System'
+      items:
+        - 'Standardized production processes with clear quality standards'
+        - 'Lean production philosophy reducing waste and improving efficiency'
+        - 'Efficient supply chain management with reliable supplier partnerships'
+    - title: 'Strict Quality Control'
+      items:
+        - 'certified quality management system'
+        - 'Multi-stage inspection: raw material, in-process, final outgoing'
+        - 'Strict airtightness and durability testing before shipping'
+
+global_ops_section:
+  tagline: 'Global Operation Architecture'
+  title_html: 'One brand, <span class="text-white/90">two hubs</span>'
+  description_html: 'Since September 2026, Aquafarer has been operated by <strong class="text-white">Aquafarer LLC</strong> (New Mexico, USA) — the global entity for distribution, commercial B2B sales, contracts, billing, and after-sales. R&D, production, and quality control remain at the <strong class="text-white">Aquafarer Qingdao Manufacturing Hub</strong>, which ships every order factory-direct, FOB Qingdao. The transition changed who signs your contract — not who builds your boat.'
+  stats:
+    - value: '2,400+'
+      label: 'Hulls delivered globally'
+    - value: '50+'
+      label: 'Countries exported'
+    - value: '10+'
+      label: 'Years of manufacturing'

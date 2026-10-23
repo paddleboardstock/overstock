@@ -1,0 +1,82 @@
+hero:
+  tagline: İş Paketleri
+  title: Kurulmaya Hazır Su İşletmesi<br />Her Aşama İçin Paketler
+  subtitle: Su sporları kulüpleri, tatil köyleri ve marka başlangıçları için önceden yapılandırılmış ekipman paketleri — şeffaf fiyatlandırma, hızlı teslimat ve tam özelleştirme seçenekleri ile.
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/use-cases/aquafarer-outdoor-adventure.webp
+    alt: Aquafarer iş ekipmanı paketleri
+direct_answer: Aquafarer, her aşamadaki su sporları işletmecileri için tasarlanmış üç önceden yapılandırılmış iş paketini sunar. Club Starter Paketi, yeni kulüpler ve okullar için kürekler, pompalar, onarım kitleri ve güvenlik ekipmanları ile birlikte 10 SUPs içerir. Resort Premium Paketi, oteller ve konaklama tesisleri için 50–100 birim, depolama sistemleri, marka çalışmaları ve eğitim kılavuzları sağlar. Brand Launch Paketi, kendi su sporları markasını başlatan girişimciler için ürün seçimi, özel logo tasarımı, paketleme, üretim ve nakliyeyi sunar. Tüm paketler, fabrika fiyatları, CE sertifikasyonu ve küresel lojistik desteği içerir.
+packages:
+  - id: club-starter
+    tag: Best Seller
+    name: Kulüp Başlangıç Paketi
+    subtitle: Paddle kulübünüzü başlatmak veya yükseltmek için ihtiyacınız olan her şey
+    target: SUP kulüpler, kayak kulüpleri, sörf okulları, eğitim merkezleri
+    price_label: $4,800'dan itibaren
+    line_items:
+      - item: 10 SUP tahta veya kano
+      - item: 10 eşleştirilmiş kürek
+      - item: 10 yüksek verimli pompa
+      - item: 10 onarım kiti
+      - item: Kulüp logosu olan 10 can yeleği
+      - item: Panolarda kulüp markalaması
+      - item: Güvenlik levha seti
+      - item: Başlangıç dersi rehberi PDF
+    cta_text: Kulüp Paketini Al
+    cta_href: /contact
+  - id: resort-premium
+    tag: Premium
+    name: Tatil Köyü Premium Paketi
+    subtitle: Oteller ve tatil köyleri için konuklara yönelik tam su aktiviteleri programı
+    target: Plaj tatil köyleri, göl kenarı otelleri, ekolojik tatil köyleri, yat kulüpleri
+    price_label: Özel Teklif
+    line_items:
+      - item: 50–100 SUPs, kayaks veya karışık filolar
+      - item: Tüm ekipmanlarda tam tatil köyü markalaması
+      - item: Kiralık kalitede kürekler ve can yelekleri
+      - item: Ticari depolama raf sistemi
+      - item: Endüstriyel pompalar ile şişirme istasyonu
+      - item: Güvenlik sistemi (şamandıralar, işaretler, kurtarma tahtası)
+      - item: Personel eğitim programı
+      - item: Gelir yönetimi oyun kitabı
+    cta_text: Tatil Paketi Alın
+    cta_href: /contact
+  - id: brand-launch
+    tag: Entrepreneur
+    name: Marka Lansmanı Paketi
+    subtitle: Marka fikrinizi genellikle 60–90 gün içinde gönderilen bir ürüne dönüştürün
+    target: Amazon satıcıları, influencerlar, bölgesel dağıtıcılar
+    price_label: 6.500$'dan başlayan fiyatlarla
+    line_items:
+      - item: Ürün seçimi danışmanlığı
+      - item: Panolarda özel logo tasarımı
+      - item: Özel renk eşleştirme
+      - item: Markalı perakende ambalaj
+      - item: Etiketler ve kullanım kılavuzu
+      - item: CE sertifikasyon belgeleri
+      - item: Üretim örnekleri
+      - item: FOB Qingdao nakliyesi
+    cta_text: Markamı Başlat
+    cta_href: /contact
+faq:
+  title: Paket SSS
+  questions:
+    - q: Paketler için minimum sipariş miktarı nedir?
+      a: Club Starter Paketi minimum 10 birim içerir. Resort ve Marka paketleri ihtiyaçlarınıza göre MOQs ile özelleştirilebilir.
+    - q: Teslimat ne kadar sürer?
+      a: Standart üretim sipariş onayından itibaren 30–45 gün sürer. Hızlandırılmış üretim ek ücret karşılığında mevcuttur.
+    - q: Ekipman renklerini ve markalamayı özelleştirebilir miyim?
+      a: Evet. Tüm paketlerde tam özelleştirme vardır — pano renkleri, logo baskıları ve ambalaj tasarımı.
+    - q: Satış sonrası destek sağlıyor musunuz?
+      a: Evet. Her paket, çevrimiçi bakım kılavuzlarımıza, video eğitimlerimize ve yedek parça sipariş sistemine erişim içerir.
+cta:
+  title: Hangi Paket Size Uygun Belli Değil mi?
+  subtitle: 3 hızlı soruyu yanıtlayın, işletmeniz için mükemmel paketi önerelim.
+  actions:
+    - variant: primary
+      text: Önerilen Paketi Alın
+      href: /contact
+    - text: Kitleye Göre Çözümleri Görüntüle
+      href: /solutions
+    - text: Başarı Hikayelerini Okuyun
+      href: /success-stories

@@ -1,0 +1,119 @@
+hero:
+  tagline: Informe técnico de ingeniería
+  title: Tecnología Drop-Stitch y ciencia de materiales:<br />La ingeniería detrás de las modernas embarcaciones inflables
+  subtitle: Una referencia técnica autorizada que cubre la construcción del núcleo con punto de caída, la comparación de materiales de PVC versus Hypalon, pruebas de rigidez de recipientes de alta presión y estándares de fabricación de embarcaciones.
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/randd/aquafarer-design-discussion-lab.webp
+    alt: 'Laboratorio de I+D de Aquafarer: pruebas e ingeniería de materiales'
+direct_answer: La tecnología Drop-Stitch utiliza miles de hilos internos de poliéster que conectan las capas de tela superior e inferior de un núcleo inflable. Cuando se inflan a 15-20 PSI, estos hilos actúan como miembros de tensión, evitando que se abulten y creando una estructura rígida comparable a la construcción rígida. Combinado con revestimientos avanzados de tela de PVC o Hypalon y soldadura por RF, esto permite una embarcación inflable portátil de alto rendimiento adecuada para uso profesional, comercial y recreativo.
+section_drop_stitch:
+  title: Ingeniería estructural con punto de caída
+  subtitle: Cómo miles de hilos transforman un tejido flexible en una estructura rígida
+  content: |-
+    El drop-stitch (también conocido como "tejido drop-stitch" o "núcleo drop-stitch") representa un gran avance en la ingeniería de estructuras inflables. El principio es engañosamente simple: miles de hilos de poliéster individuales se tejen simultáneamente en dos capas separadas de tejido base, conectando los paneles superior e inferior en un ángulo de 90 grados.
+
+    Cuando se presuriza la cámara sellada, la presión del aire interno ejerce fuerza igualmente en todas las direcciones, tratando de separar los paneles superior e inferior para darles una forma cilíndrica. Los miles de hilos de punto caído resisten esta separación, transfiriendo la carga en tensión a lo largo del eje del hilo. El resultado es un panel plano y rígido que puede soportar entre 15 y 20 PSI de presión interna.
+
+    A 20 PSI, un panel de costura caída de 1 m² experimenta aproximadamente 14 000 kg de fuerza interna total; sin embargo, la matriz del hilo lo mantiene perfectamente plano. Esto proporciona a las estructuras de punto caído una relación resistencia-peso que rivaliza con los materiales rígidos tradicionales.
+section_materials:
+  title: 'PVC vs Hypalon: comparación de materiales técnicos'
+  subtitle: Datos objetivos para una selección informada de materiales en la fabricación de embarcaciones inflables
+  table:
+    columns:
+      - header: Propiedad
+      - header: PVC (Cloruro de polivinilo)
+      - header: Hypalon (CSM)
+    rows:
+      - property: Resistencia a los rayos UV
+        pvc: Bueno (con estabilizadores UV)
+        hypalon: Excelente (inherente)
+      - property: Resistencia a la abrasión
+        pvc: Bien
+        hypalon: Muy bien
+      - property: Resistencia a la tracción
+        pvc: 3000–5000 N/5 cm
+        hypalon: 2500-4000 N/5 cm
+      - property: Peso por m²
+        pvc: 850-1200 gramos
+        hypalon: 1.100–1.500 gramos
+      - property: Flexión en frío
+        pvc: -30°C
+        hypalon: -20 °C
+      - property: Método de unión
+        pvc: Soldadura por RF / Soldadura por aire caliente
+        hypalon: Pegado manual (cemento de contacto)
+      - property: Reparabilidad
+        pvc: Fácil (soldadura por calor o adhesivo)
+        hypalon: Requiere adhesivo CSM
+      - property: Costo de materiales
+        pvc: 8–15 $/m²
+        hypalon: 20–40 $/m²
+      - property: Esperanza de vida (sol tropical)
+        pvc: 5 a 8 años
+        hypalon: 10 a 15 años
+      - property: Gama de colores
+        pvc: Amplio (espectro de color completo)
+        hypalon: Limitado (colores básicos)
+      - property: Resistencia química
+        pvc: Bueno (grados resistentes al combustible/aceite)
+        hypalon: Excelente (amplia gama química)
+section_testing:
+  title: Protocolos de prueba y seguridad
+  subtitle: El marco de garantía de calidad de Aquafarer para cada lote de producción
+  protocols:
+    - title: Prueba de retención de presión nominal de 1,25x
+      description: Cada recipiente ensamblado se infla a 1,25 veces su presión operativa nominal y se mantiene durante 24 a 48 horas. Cualquier caída de presión superior al 2% provoca rechazo y retrabajo.
+      standard: ISO 6185
+    - title: Prueba de resistencia al pelado de costuras
+      description: Se prueban muestras de soldadura y costura de pegamento de cada lote de producción para determinar su resistencia al pelado utilizando equipos de tensión calibrados. Se requiere una resistencia mínima al pelado de 4 kN/m.
+      standard: ISO 2411
+    - title: Prueba de tracción de la tela
+      description: Los rollos de tela entrantes se someten a pruebas de resistencia a la tracción y alargamiento tanto en la dirección de la urdimbre como de la trama. Umbral de rechazo inferior a 3.000 N/5 cm para PVC.
+      standard: ISO 1421
+    - title: Meteorización acelerada por rayos UV
+      description: Las muestras de material se someten a más de 1000 horas de exposición UV acelerada en cámaras de prueba QUV. Se permite una pérdida máxima de resistencia a la tracción del 15%.
+      standard: ASTM G154
+    - title: Integridad de válvulas y accesorios
+      description: Cada conjunto de válvula se prueba para determinar la integridad del sello a una presión nominal de 1,25 veces. Las válvulas antirretorno se prueban para determinar el rendimiento del sello unidireccional.
+      standard: ISO 12402
+section_manufacturing:
+  title: Estándares de fabricación y certificaciones de calidad
+  subtitle: Cumplimiento de estándares industriales para acceso al mercado global
+  standards:
+    - name: Norma ISO 9001:2015
+      body: Certificado SGS
+      scope: Sistema de gestión de calidad en diseño, producción y entrega.
+    - name: CE 2013/53/UE
+      body: Organismo notificado de la UE
+      scope: 'Directiva sobre embarcaciones de recreo: diseño del casco, estabilidad, flotación, emisiones'
+    - name: B$.
+      body: Amforí
+      scope: 'Cumplimiento social: seguridad de los trabajadores, trabajo justo, gestión ambiental'
+    - name: ISO 6185
+      body: Estándar internacional
+      scope: 'Embarcaciones inflables: construcción, estabilidad, flotación, pruebas de presión.'
+    - name: ALCANZAR
+      body: Reglamento de la UE
+      scope: 'Seguridad química: sustancias restringidas en materiales y revestimientos'
+section_faq:
+  title: Preguntas técnicas frecuentes
+  questions:
+    - q: ¿Cómo se compara el drop-stitch con la construcción tradicional de carcasa rígida?
+      a: Los modernos núcleos de costura a 20 PSI logran entre el 85% y el 90% de la rigidez de las carcasas duras de espuma EPS/fibra de vidrio comparables, a la vez que son completamente desinflables para el transporte. La compensación es un peso ligeramente mayor y una rigidez final menor, pero para la mayoría de las aplicaciones comerciales y recreativas, la diferencia es insignificante.
+    - q: ¿Qué densidad de hilo se considera de primera calidad?
+      a: Las telas de punto caído de primera calidad utilizan 2 hilos por pulgada cuadrada (aproximadamente 3100 hilos por m²) tejidos con hilo de poliéster 1680 DTEX. Las telas de nivel básico utilizan 1 hilo por pulgada cuadrada con hilo de 1100 DTEX.
+    - q: ¿Se puede soldar Hypalon como el PVC?
+      a: No. Hypalon/CSM no se puede soldar por RF. Debe ensamblarse utilizando cemento de contacto aplicado a mano, lo que hace que la producción requiera más mano de obra y las uniones dependan de la habilidad del operador. El PVC se puede soldar por radiofrecuencia o por aire caliente para obtener una calidad de costura constante y automatizada.
+    - q: ¿Cuál es la presión máxima segura para embarcaciones inflables?
+      a: Los tubos inflables estándar para botes funcionan a entre 8 y 12 PSI. Los pisos de punto caído funcionan a entre 12 y 20 PSI. Los núcleos de costura por caída (SUP) de alta presión pueden funcionar a entre 20 y 25 PSI. Cada producto incluye válvulas de alivio de presión calibradas para evitar el inflado excesivo.
+    - q: ¿Cuánto tiempo se tarda en fabricar una embarcación neumática a medida?
+      a: La producción OEM estándar dura entre 30 y 45 días desde la confirmación del pedido hasta FOB Qingdao. El desarrollo de moldes personalizados añade entre 15 y 20 días a la producción y prueba de prototipos.
+cta:
+  title: Consulta de ingeniería
+  subtitle: ¿Tiene alguna pregunta específica sobre material o diseño? Nuestro equipo de ingeniería está disponible para discusiones técnicas.
+  actions:
+    - variant: primary
+      text: Pregunte a nuestro equipo de ingeniería
+      href: /contact
+    - text: Explore nuestro centro de I+D
+      href: /randdcenter
