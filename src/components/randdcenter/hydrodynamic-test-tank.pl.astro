@@ -1,0 +1,200 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'pl' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">← Powrót do Centrum badawczo-rozwojowe</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Laboratorium 04</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Zbiornik do testów hydrodynamicznych</h1>
+      <p class="mt-3 text-lg text-muted">Sprawdzanie wydajności przed pierwszym pełnowymiarowym prototypem</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-design-discussion-original.webp"
+        alt="Aquafarer Testowanie wydajności zbiornika do testów hydrodynamicznych"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Po co przeprowadzać testy czołgowe małej łodzi?</h2>
+  <p>
+    Powszechnym błędnym przekonaniem jest, że badania hydrodynamiczne są zarezerwowane dla statków oceanicznych. W
+    rzeczywistości osiągi małego kadłuba ślizgowego — takiego jak 4–5 m RIB — zależą w takim samym stopniu od jego
+    podwodnego kształtu, jak tankowiec od bulwiastego dziobu. Kąt trymu, powierzchnia zwilżona, wytwarzanie aerozolu i
+    wentylacja mają ogromny wpływ na prędkość, zużycie paliwa i komfort jazdy. Na {SITE.name}, dysponujemy specjalnym
+    zbiornikiem do testów hydrodynamicznych, który pozwala nam określić ilościowo te efekty w skali modelu — przed
+    zastosowaniem metalu i tkaniny w pełnowymiarowym prototypie.
+  </p>
+  <p>
+    Testowanie w skali modelu (zwykle od 1:3 do 1:5) daje nam możliwość szybkiego i ekonomicznego iterowania kształtów
+    kadłuba. Tydzień w zbiorniku może wygenerować te same dane dotyczące wydajności, które wymagałyby miesięcy prób i
+    błędów na pełną skalę – i to za ułamek kosztów.
+  </p>
+
+  <h2>Specyfikacje obiektu</h2>
+  <table>
+    <thead><tr><th>Parametr</th><th>Specyfikacja</th></tr></thead>
+    <tbody>
+      <tr><td>Wymiary zbiornika</td><td>35 m (dł.) × 3.5 m (szer.) × 1.8 m (gł.)</td></tr>
+      <tr
+        ><td>Wózek holowniczy</td><td
+          >Napęd elektryczny, maksymalna prędkość 12 m/s (23 kn), dokładność prędkości ± 0.5 %</td
+        ></tr
+      >
+      <tr
+        ><td>Generator fal</td><td
+          >Klapowe, programowalne regularne i nieregularne stany morza, Hs do 0.3 m w skali modelu</td
+        ></tr
+      >
+      <tr
+        ><td>Oprzyrządowanie</td><td
+          >6-dynamometr składowy (opór, siła boczna, moment odchylający), akcelerometry, inklinometry, sondy falowe</td
+        ></tr
+      >
+      <tr
+        ><td>Pozyskiwanie danych</td><td
+          >Próbkowanie przy 1000 Hz na kanał, wyświetlanie w czasie rzeczywistym + pakiet przetwarzania końcowego</td
+        ></tr
+      >
+      <tr><td>Wykonanie modelu</td><td>Własne frezowanie CNC i druk 3D modeli kadłubów do 1.8 m LOA</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Nasz program testowy</h2>
+  <p>Standardowy program rozwoju kadłuba w naszym czołgu przebiega według następującej sekwencji:</p>
+  <ol>
+    <li>
+      <strong>Budowa modelu</strong> — Model w skali 1:3.5 jest wykonany maszynowo w skali CNC z pianki o dużej gęstości i
+      przeszklony w celu zapewnienia sztywności. Masa i środek ciężkości są dostosowane tak, aby odpowiadały stanowi pełnego
+      obciążenia w skali Froude'a.
+    </li>
+    <li>
+      <strong>Działa opór</strong> — Model jest holowany z prędkością 8-10 w całym zakresie roboczym. Całkowity opór jest
+      mierzony i rozkładany na składowe cierne i resztkowe przy użyciu metody ITTC-1957.
+    </li>
+    <li>
+      <strong>Pomiar trymu i zanurzenia</strong> — Przy każdej prędkości rejestruje się przegłębienie i opadanie. Docelowym
+      celem jest optymalny kąt trymu 4-6° dla kadłubów ślizgowych.
+    </li>
+    <li>
+      <strong>Ankieta dotycząca przebudzenia</strong> — Pomiary cięć fal poprzecznych przy dwóch prędkościach umożliwiają
+      ocenę oporu wytwarzania fal i identyfikację interakcji fal poprzecznych, które mogą powodować zakłócenia na rufie.
+    </li>
+    <li>
+      <strong>Morze morskie (opcjonalnie)</strong> — Przepływy od strony morza i morza w regularnych falach w celu pomiaru
+      dodatkowego oporu, przyspieszenia pionowego i prawdopodobieństwa uderzenia.
+    </li>
+    <li>
+      <strong>Analiza danych i rekomendacje</strong> — Dostarczany jest pełny raport z wykresami porównawczymi, krzywymi prędkości/mocy
+      i szczegółowymi zaleceniami projektowymi dla pełnowymiarowego kadłuba.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Typowe wyniki testów czołgu — opór w funkcji prędkości (kadłub RIB 450, skala 1:3.5)
+    </p>
+    <div class="space-y-2">
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">5 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:18%"></div>
+        </div><span class="w-16 text-right">42 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">10 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:35%"></div>
+        </div><span class="w-16 text-right">81 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">15 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:52%"></div>
+        </div><span class="w-16 text-right">121 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">20 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:68%"></div>
+        </div><span class="w-16 text-right">158 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">25 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:85%"></div>
+        </div><span class="w-16 text-right">197 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">30 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:100%"></div>
+        </div><span class="w-16 text-right">232 N</span>
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      Opór w skali modelu (N) przy prędkościach w skali Froude'a. Pełnowymiarowe przewidywanie mocy jest zgodne z metodą
+      przewidywania wydajności ITTC-1978.
+    </p>
+  </div>
+
+  <h2>Zespół ekspertów</h2>
+  <p>
+    Nasz zbiornik jest obsługiwany przez hydrodynamika z doktoratem z architektury morskiej i 8 lat doświadczenia w
+    holowaniu czołgów w głównym europejskim instytucie badań morskich. Wspiera go technik, który przygotowuje wszystkie
+    modele i oprzyrządowanie. Zespół postępuje zgodnie z zalecanymi procedurami ITTC (Międzynarodowej Konferencji
+    Czołgów Holowniczych), aby zapewnić, że każdy test jest powtarzalny, identyfikowalny i możliwy do obrony na poziomie
+    międzynarodowym.
+  </p>
+
+  <h2>Testowanie czołgów w celu opracowania niestandardowego kadłuba</h2>
+  <p>
+    Nasz zbiornik jest używany nie tylko w kadłubach projektowanych na zamówienie — regularnie przeprowadzamy programy
+    testowe dla klientów, którzy chcą sprawdzić niestandardowy kształt kadłuba lub zbadać problem z wydajnością:
+  </p>
+  <ul>
+    <li>
+      <strong>Porównanie formy kadłuba</strong> — Dwa lub więcej potencjalnych kształtów kadłuba przetestowanych w identycznych
+      warunkach, zapewniających obiektywne porównanie oporu/prędkości/stabilności w celu podjęcia decyzji projektowej.
+    </li>
+    <li>
+      <strong>Optymalizacja dodatków</strong> — Płyty przechwytujące, szyny natryskowe, zaczepy trymujące i listwy można testować
+      w różnych konfiguracjach, aby określić ilościowo ich indywidualny wpływ na zmniejszenie oporu.
+    </li>
+    <li>
+      <strong>Badanie dopasowania silnika</strong> — Dane dotyczące oporu są konwertowane na krzywą przewidywanej mocy, co
+      pozwala wybrać optymalną moc silnika dla docelowej prędkości i ładunku.
+    </li>
+  </ul>
+
+  <h2>Dlaczego warto testować u nas?</h2>
+  <p>
+    Nie dajemy Ci tylko zestawu surowych liczb. W naszych raportach dane dotyczące zbiornika przekładają się na
+    praktyczne zalecenia inżynieryjne: „Podnieś szynę natryskową o 8 mm, aby zmniejszyć zwilżoną powierzchnię przy
+    prędkości przelotowej”, „Zwiększ podwyższenie na pawęży o 3°, aby zmniejszyć przyspieszenie uderzenia” lub „Przesuń
+    wzdłużny środek ciężkości 150 mm do tyłu, aby poprawić sterowność”. Wychodzisz z jasnym zrozumieniem, co i dlaczego
+    zmienić.
+  </p>
+  <p>
+    Nasz zbiornik jest również dostępny do niezależnych testów przez strony trzecie na zasadzie opłaty za usługę. Jeśli
+    opracowujesz kadłub i chcesz uzyskać bezstronną, profesjonalnie wykonaną ocenę hydrodynamiczną, czekamy na Twoje
+    zapytanie.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Zarezerwuj sesję testową czołgu</h2>
+    <p class="mt-2 text-sm text-muted">
+      Niezależnie od tego, czy potrzebujesz pełnego programu rozwojowego, czy pojedynczego testu porównawczego, możemy
+      dostosować się do Twojego harmonogramu.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Skontaktuj się z naszym zespołem hydrodynamiki</a
+    >
+  </div>
+</section>

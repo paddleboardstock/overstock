@@ -1,0 +1,244 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import Tldr from '~/components/common/Tldr.astro';
+import TrustBadges from '~/components/common/TrustBadges.astro';
+import { SITE } from 'astrowind:config';
+import { languages, defaultLang } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+import { getPageContent, setPageContentData } from '~/i18n/page-content';
+import __pageData from '~/i18n/generated/pages/factory-oem-capability.ts';
+import { localizePageTitle } from '~/i18n/page-title';
+
+interface HighlightItem {
+  value: string;
+  label: string;
+  detail: string;
+}
+
+interface ServiceItem {
+  title: string;
+  description: string;
+}
+
+interface MoqRow {
+  product: string;
+  standard_moq?: string;
+  standard?: string;
+  custom_moq?: string;
+  custom?: string;
+  lead_time?: string;
+  lead?: string;
+}
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => getUiForLang(lang || defaultLang)?.[key] || '';
+setPageContentData(__pageData);
+const page = getPageContent(lang, 'factory-oem-capability');
+
+const hero: Record<string, string> = page.hero ?? {};
+const intro: string = page.intro ?? '';
+const highlights: HighlightItem[] = page.highlight ?? [];
+const services: ServiceItem[] = page.services ?? [];
+const moqTable: MoqRow[] = page.moq_table ?? [];
+
+const crumbs = [
+  { name: t('nav.home') || 'Home', href: '/' + lang + '/' },
+  { name: 'Factory', href: '/' + lang + '/factory' },
+  { name: hero.title },
+];
+
+const metadata = {
+  title: localizePageTitle(page, hero.title + ' \u2014 ' + SITE.name),
+  description: intro?.slice(0, 160) || SITE.name + ' OEM and private label manufacturing services.',
+};
+
+const tldrSummary =
+  'Aquafarer provides full-spectrum OEM/ODM manufacturing. Custom branding, private label, and white-label services for SUP boards, RIB boats, kayaks. MOQ from 2-5 units (RIB) and 5-10 units (SUP). CE/ISO/BSCI/REACH/UKCA compliant.';
+
+const tldrPoints: string[] = [
+  'Custom branding: logo, graphics, packaging, hang tags',
+  'Material options: PVC 0.9-1.2mm, Hypalon/CSM, Drop-Stitch core',
+  'Low MOQs: 2-5 RIB, 5-10 SUP, 5-10 kayak per SKU',
+  'Full compliance: CE 2013/53/EU, ISO 9001:2015, BSCI, REACH, UKCA',
+  '7-14 day sample production, 30-45 day FOB Qingdao delivery',
+];
+
+const faqSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What OEM services does Aquafarer offer?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Full-spectrum OEM/ODM: custom branding, private label, white-label, custom mold engineering, material selection, and retail-ready packaging.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the minimum order quantity?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Standard models: 2-5 units (RIB), 5-10 units (SUP/kayak). Custom molds: 200+ units. We work with startups to find feasible entry points.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What materials are available?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Marine-grade PVC (0.9-1.2mm), Hypalon/CSM (1,680 DTEX), premium Drop-Stitch core fabrics, and commercial-grade EVA deck pads.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How long does sample production take?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: '7-14 working days after design approval. Rush samples available at 5-7 days for an additional fee.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What compliance documentation is included?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'CE Declaration of Conformity per 2013/53/EU, ISO 9001:2015 certificate, BSCI audit report, REACH compliance statement, and UKCA documentation.',
+      },
+    },
+  ],
+});
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <meta
+    name="ai-intent"
+    content="oem-inflatable-boat-manufacturer,rib-boat-oem,private-label-sup,white-label-inflatable-boats,custom-boat-manufacturing-china"
+  />
+  <script is:inline type="application/ld+json" set:html={faqSchema} />
+  <section class="px-6 sm:px-6 py-16 sm:py-20 lg:py-24 mx-auto max-w-5xl text-center">
+    <a href={'/' + lang + '/factory'} class="text-sm text-gray-500 hover:underline">&larr; Back to Factory</a>
+    <p class="mt-4 text-sm font-semibold text-primary uppercase tracking-wider">{hero.tagline}</p>
+    <h1 class="mt-3 text-4xl md:text-5xl font-bold">{hero.title}</h1>
+    <p class="mt-3 text-lg text-muted">{hero.subtitle}</p>
+  </section>
+
+  <section class="px-6 sm:px-6 pb-8 mx-auto max-w-4xl">
+    <Tldr summary={tldrSummary} points={tldrPoints} />
+  </section>
+
+  <section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl">
+    <div class="bg-blue-50/60 dark:bg-slate-800/40 border-l-4 border-blue-500 rounded-r-xl px-6 py-4">
+      <p class="text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider mb-2">
+        Quick Answer &mdash; AI Summary
+      </p>
+      <p class="text-sm text-gray-700 dark:text-slate-300 leading-relaxed">{tldrSummary}</p>
+    </div>
+  </section>
+
+  {
+    intro && (
+      <section class="px-6 sm:px-6 pb-16 mx-auto max-w-4xl">
+        <p class="text-muted leading-relaxed">{intro}</p>
+      </section>
+    )
+  }
+
+  {
+    highlights.length > 0 && (
+      <section class="px-6 sm:px-6 pb-8 mx-auto max-w-6xl">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+          {highlights.map((s: HighlightItem) => (
+            <div class="text-center p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+              <span class="block text-3xl font-bold text-primary">{s.value}</span>
+              <span class="block text-sm text-muted mt-1">{s.label}</span>
+              <span class="block text-xs text-muted mt-1">{s.detail}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+    )
+  }
+
+  {
+    services.length > 0 && (
+      <section class="px-6 sm:px-6 py-16 mx-auto max-w-6xl">
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold text-primary uppercase tracking-wider">
+            {t('factory.oemServices') || 'OEM Services'}
+          </p>
+          <h2 class="mt-2 text-3xl font-bold">{t('factory.whatWeOffer') || 'What We Offer'}</h2>
+        </div>
+        <div class="grid md:grid-cols-2 gap-6">
+          {services.map((s: ServiceItem) => (
+            <div class="p-6 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+              <h3 class="text-lg font-bold">{s.title}</h3>
+              <p class="mt-3 text-sm text-muted leading-relaxed">{s.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    )
+  }
+
+  {
+    moqTable.length > 0 && (
+      <section class="px-6 sm:px-6 py-16 mx-auto max-w-5xl bg-gray-50 dark:bg-gray-900 rounded-2xl">
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold text-primary uppercase tracking-wider">
+            {t('factory.moqLeadTime') || 'MOQ & Lead Time'}
+          </p>
+          <h2 class="mt-2 text-3xl font-bold">{t('factory.minOrderQty') || 'Minimum Order Quantities'}</h2>
+        </div>
+        <div class="overflow-x-auto max-w-4xl mx-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-gray-300 dark:border-gray-700">
+                <th class="text-left py-3 px-4 font-semibold">{t('factory.product') || 'Product'}</th>
+                <th class="text-left py-3 px-4 font-semibold">{t('factory.standardMoq') || 'Standard MOQ'}</th>
+                <th class="text-left py-3 px-4 font-semibold">{t('factory.customMoq') || 'Custom MOQ'}</th>
+                <th class="text-left py-3 px-4 font-semibold">{t('factory.leadTime') || 'Lead Time'}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {moqTable.map((row: MoqRow) => (
+                <tr class="border-b border-gray-200 dark:border-gray-800">
+                  <td class="py-3 px-4 font-medium">{row.product}</td>
+                  <td class="py-3 px-4 text-muted">{row.standard_moq || row.standard}</td>
+                  <td class="py-3 px-4 text-muted">{row.custom_moq || row.custom}</td>
+                  <td class="py-3 px-4 text-muted">{row.lead_time || row.lead}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+    )
+  }
+
+  <TrustBadges layout="row" />
+
+  <section class="px-6 sm:px-6 py-16 mx-auto max-w-4xl text-center">
+    <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+      <h2 class="text-xl font-bold">{t('factory.startOem') || 'Start your OEM project'}</h2>
+      <p class="mt-2 text-sm text-muted">
+        {
+          t('factory.startOemDesc') ||
+            'Tell us about your requirements and we will provide a detailed proposal within 48 hours.'
+        }
+      </p>
+      <a
+        href={'/' + lang + '/contact'}
+        class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+        >{t('factory.getQuote') || 'Get a quote'} &rarr;</a
+      >
+    </div>
+  </section>
+</Layout>

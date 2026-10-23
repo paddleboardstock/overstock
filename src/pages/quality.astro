@@ -1,0 +1,272 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+
+const metadata = {
+  title: `Quality Testing & Assurance — ISO & ASTM Certified — ${SITE.name}`,
+  description: `${SITE.name}'s quality testing program \u2014 8 protocols: pressure, UV (ASTM G154), abrasion (ASTM D751), buoyancy (ISO 6185), watertightness. ISO 9001. Every boat and SUP verified before shipping.`,
+  ignoreTitleTemplate: true,
+};
+
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Quality Testing' }];
+
+const tests = [
+  {
+    title: 'Pressure Testing',
+    standard: 'ISO 6185-1 | Internal Spec AF-PT-001',
+    description:
+      'Inflatable chambers are pressurized to 1.25x the recommended operating limit and held for 24-48 hours. Pressure decay is measured to validate airtightness and structural integrity of materials and seams.',
+    image: 'https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-pressure-testing.webp',
+  },
+  {
+    title: 'Impact Testing',
+    standard: 'Internal Spec AF-IT-002',
+    description:
+      'Products are subjected to controlled impacts from standardized drop weights and pendulum apparatus. This assesses puncture resistance, tear propagation, and structural resilience against collisions with obstacles, docks, and debris.',
+    image: 'https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-production-department.webp',
+  },
+  {
+    title: 'UV Resistance Testing',
+    standard: 'ASTM G154 | ISO 4892-3',
+    description:
+      'Material samples are exposed to UVA-340 lamps in accelerated weathering chambers for 1,000+ hours. We measure color change (Delta E), gloss retention, and tensile strength loss to validate UV stabilizer packages.',
+    image: 'https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-uv-resistance-testing.webp',
+  },
+  {
+    title: 'Abrasion Resistance Testing',
+    standard: 'ASTM D751 (Taber) | ISO 5470-1',
+    description:
+      'Material samples are subjected to CS-10 abrasive wheels under 500g/1,000g loads for 1,000 cycles. Mass loss and visual wear grading determine coating durability against sand, gravel, and repeated launching.',
+    image: 'https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-pvc-material-testing.webp',
+  },
+  {
+    title: 'Low-Temperature Performance Testing',
+    standard: 'Internal Spec AF-LT-003 | MIL-STD-810G',
+    description:
+      'Assembled products and material coupons are conditioned at -20°C, -10°C, and 0°C for 24 hours then flex-tested. We verify that PVC and Hypalon remain flexible without cracking or delamination.',
+    image: 'https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-factory-exterior.webp',
+  },
+  {
+    title: 'Buoyancy & Load Capacity Testing',
+    standard: 'ISO 6185-1 | ISO 12402',
+    description:
+      "Products are incrementally loaded to 1.25x rated capacity in a controlled pool. Freeboard, stability, and self-draining performance are recorded. Every model's rated capacity is mathematically and empirically verified.",
+    image: 'https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-stock-boat-inventory.webp',
+  },
+  {
+    title: 'Maneuverability Testing',
+    standard: 'Internal Spec AF-MT-004',
+    description:
+      'On-water trials measure turning radius, acceleration, planing time, and paddle/motor response across a range of load conditions. Real-world handling characteristics are validated against design targets.',
+    image: 'https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-dolphin-wave-1.webp',
+  },
+  {
+    title: 'Watertightness Testing',
+    standard: 'ISO 6185-1 §7.3 | Internal Spec AF-WT-005',
+    description:
+      'Every assembled product is spray-tested at 0.5 bar on all seams, valves, and fittings. A 5-minute pressurized submersion test validates chamber and valve watertightness. Zero-leak standard before shipping.',
+    image:
+      'https://assets.aquafarer.com/images/aquafarer/factory/producing departmentaquafarer-inflatable-boat-aquafarer-factory-exterior.webp',
+  },
+];
+
+const trustStats = [
+  { value: '100%', label: 'Units tested before shipping', sub: 'Zero-sampling — every unit' },
+  { value: '8', label: 'Testing protocols', sub: 'Mechanical · Thermal · UV · Abrasion' },
+  { value: 'ISO 9001', label: 'Quality management certified', sub: 'TÜV Rheinland audited' },
+  { value: '1,200+', label: 'Projects quality-approved', sub: 'Since 2012' },
+];
+
+const badges = [
+  { name: 'CE 6185', body: 'TÜV Rheinland', url: '/trust' },
+  { name: 'ISO 9001', body: 'TÜV Rheinland', url: '/trust' },
+  { name: 'UKCA', body: 'Intertek', url: '/trust' },
+  { name: 'BSCI', body: 'Amfori', url: '/trust' },
+  { name: 'REACH', body: 'ECHA Compliant', url: '/trust' },
+  { name: 'USCG', body: 'Type III / Type V', url: '/trust' },
+];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <JsonLd
+    type="Article"
+    article={{
+      headline: 'Quality Testing & Assurance — ISO & ASTM Certified Testing Program',
+      description:
+        "Aquafarer's 8-protocol quality testing program: pressure, impact, UV (ASTM G154), abrasion (ASTM D751), low-temp, buoyancy (ISO 6185), maneuverability, and watertightness testing. ISO 9001 certified quality management.",
+      datePublished: '2026-07-07',
+    }}
+    data={{ url: 'https://aquafarer.com/quality' }}
+  />
+
+  <section class="bg-gradient-to-br from-[#001830] via-[#002d4a] to-[#003355] text-white py-24 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <span class="text-xs font-medium uppercase tracking-[0.2em] text-sky-300">Quality Assurance</span>
+      <h1 class="mt-4 text-4xl md:text-5xl font-bold tracking-tight">Performance & Quality Testing</h1>
+      <p class="mt-4 text-lg text-sky-100/80 max-w-3xl mx-auto">
+        Every {SITE.name} inflatable boat and SUP undergoes rigorous performance and quality testing at our R&D Center before
+        it ships. Eight protocols, zero sampling — every unit verified.
+      </p>
+    </div>
+  </section>
+
+  <section class="px-6 py-12 mx-auto max-w-6xl -mt-8 relative z-10">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      {
+        trustStats.map((s) => (
+          <div class="text-center p-5 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 shadow-sm">
+            <span class="block text-2xl font-bold text-[#06b6d4]">{s.value}</span>
+            <span class="block text-sm font-semibold text-gray-900 mt-1">{s.label}</span>
+            <span class="block text-xs text-gray-500 mt-0.5">{s.sub}</span>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="px-6 py-8 mx-auto max-w-5xl">
+    <div class="flex flex-wrap justify-center gap-3">
+      {
+        badges.map((b) => (
+          <a
+            href={b.url}
+            class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-medium text-gray-700 hover:border-sky-300 hover:text-sky-600 transition-colors shadow-sm"
+          >
+            <span class="w-2 h-2 rounded-full bg-[#06b6d4]" />
+            {b.name}
+            <span class="text-gray-400">—</span>
+            <span class="text-gray-500 font-normal">{b.body}</span>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="px-6 py-16 mx-auto max-w-6xl">
+    <div class="text-center mb-12">
+      <p class="text-sm font-semibold text-[#06b6d4] uppercase tracking-wider">Testing Procedures</p>
+      <h2 class="mt-2 text-3xl font-bold text-gray-900">Rigorous Testing at Every Stage</h2>
+      <p class="mt-3 text-gray-500 max-w-2xl mx-auto">
+        Each test follows documented internal protocols aligned with international standards. Test results are recorded,
+        traceable, and reviewed by our independent quality lab.
+      </p>
+    </div>
+    <div class="space-y-8">
+      {
+        tests.map((t, i) => (
+          <div
+            class={`grid md:grid-cols-2 gap-8 items-center ${i % 2 === 1 ? 'md:[direction:rtl]' : ''}`}
+            style={i % 2 === 1 ? 'direction:rtl' : ''}
+          >
+            <div style={i % 2 === 1 ? 'direction:ltr' : ''}>
+              <h3 class="text-xl font-bold text-gray-900">{t.title}</h3>
+              <span class="inline-block mt-1 px-3 py-0.5 bg-sky-50 text-sky-700 rounded-full text-xs font-mono font-medium">
+                {t.standard}
+              </span>
+              <p class="mt-3 text-gray-600 leading-relaxed">{t.description}</p>
+            </div>
+            <div style={i % 2 === 1 ? 'direction:ltr' : ''}>
+              <img src={t.image} alt={t.title} class="w-full h-64 object-cover rounded-xl" loading="lazy" />
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="px-6 py-16 mx-auto max-w-5xl">
+    <div
+      class="bg-gradient-to-br from-sky-50 to-white dark:from-gray-900 dark:to-gray-950 rounded-2xl border border-sky-100 dark:border-gray-800 p-8 md:p-12"
+    >
+      <div class="grid md:grid-cols-5 gap-8 items-center">
+        <div class="md:col-span-3">
+          <span class="text-sm font-semibold text-[#06b6d4] uppercase tracking-wider">What Our Partners Say</span>
+          <blockquote class="mt-4 text-lg text-gray-700 dark:text-gray-300 leading-relaxed italic">
+            "The level of documentation and traceability Aquafarer provides for quality testing exceeds what we've seen
+            from Chinese manufacturers. Each shipment includes a full test report with standards references and
+            pass/fail data."
+          </blockquote>
+          <div class="mt-4 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-sky-100 flex items-center justify-center text-sky-700 font-bold">
+              MH
+            </div>
+            <div>
+              <p class="font-semibold text-gray-900 text-sm">Marcus Hansen</p>
+              <p class="text-xs text-gray-500">Procurement Manager, Nordic Marine Supply · Sweden</p>
+            </div>
+          </div>
+        </div>
+        <div class="md:col-span-2">
+          <div class="p-5 bg-white dark:bg-gray-900 rounded-xl border border-gray-200">
+            <h3 class="font-bold text-gray-900 text-sm">Independent Quality Lab</h3>
+            <p class="mt-2 text-sm text-gray-600 leading-relaxed">
+              Our quality lab operates independently from production and reports directly to management. No batch is
+              shipped without signed quality release.
+            </p>
+            <a href="/trust" class="mt-3 inline-flex text-sm font-medium text-[#06b6d4] hover:text-sky-700"
+              >See our trust certifications →</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="px-6 py-16 mx-auto max-w-4xl">
+    <div class="rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-8">
+      <h2 class="text-2xl font-bold text-center text-gray-900">Our Commitment</h2>
+      <p class="mt-4 text-gray-600 leading-relaxed text-center max-w-3xl mx-auto">
+        Through these rigorous testing procedures, {SITE.name} provides customers with the assurance that our inflatable SUPs
+        and boats are not only high-performing but also built to last — ensuring countless enjoyable and safe adventures on
+        the water. Our quality lab operates independently from production and reports directly to management.
+      </p>
+      <div class="text-center mt-8">
+        <a
+          href="/contact"
+          class="inline-block px-6 py-3 bg-[#06b6d4] text-white font-semibold rounded-md hover:bg-[#0891b2] transition-colors"
+        >
+          Request testing documentation →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="px-6 pb-20 mx-auto max-w-4xl">
+    <div class="flex flex-wrap justify-center gap-3 text-sm">
+      <span class="text-gray-400 font-medium">Explore more:</span>
+      <a
+        href="/trust"
+        class="px-3 py-1.5 bg-white rounded-lg border border-gray-200 text-gray-700 hover:border-sky-300 hover:text-sky-600 transition-colors"
+        >Certifications & Trust →</a
+      >
+      <a
+        href="/engineering-team"
+        class="px-3 py-1.5 bg-white rounded-lg border border-gray-200 text-gray-700 hover:border-sky-300 hover:text-sky-600 transition-colors"
+        >Engineering Team →</a
+      >
+      <a
+        href="/randdcenter"
+        class="px-3 py-1.5 bg-white rounded-lg border border-gray-200 text-gray-700 hover:border-sky-300 hover:text-sky-600 transition-colors"
+        >R&D Center →</a
+      >
+      <a
+        href="/warranty"
+        class="px-3 py-1.5 bg-white rounded-lg border border-gray-200 text-gray-700 hover:border-sky-300 hover:text-sky-600 transition-colors"
+        >Warranty →</a
+      >
+    </div>
+  </section>
+
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true">
+    <p>
+      Aquafarer quality testing and assurance program. Eight testing protocols: pressure testing (ISO 6185-1,
+      over-pressure verification for airtightness), impact testing (puncture and collision resistance), UV resistance
+      testing (ASTM G154, simulated sunlight 1000+ hours), abrasion resistance testing (ASTM D751 / ISO 5470-1, Taber
+      wheel method), low-temperature performance testing (MIL-STD-810G, down to -20°C), buoyancy and load capacity
+      testing (ISO 6185-1, 1.25x rated capacity), maneuverability testing (on-water handling and turning radius), and
+      watertightness testing (ISO 6185-1 §7.3, spray and submersion). 100% of units tested. ISO 9001 certified by TÜV
+      Rheinland. Quality lab operates independently from production.
+    </p>
+  </section>
+</Layout>

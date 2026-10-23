@@ -1,0 +1,178 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'hu' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">&larr; Vissza a K+F Központba</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Labor 02</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Hajótest Mérnöki Stúdió</h1>
+      <p class="mt-3 text-lg text-muted">Digitális szimuláció, szerkezeti intelligencia, egyedi hajótest tervezés</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/design discussaquafarer-inflatable-boat-aquafarer-factory-exterior.webp"
+        alt="Aquafarer hajótest mérnöki CAD tervező munkaállomás"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Ahol az erő találkozik a hidrodinamikával</h2>
+  <p>
+    A hajótest bármely RIB vagy felfújható hajó gerince. Olyan könnyűnek kell lennie, hogy hatékonyan siklásra képes
+    legyen, elég erősnek ahhoz, hogy elnyelje az ütközési terheléseket, és méretstabil legyen széles
+    hőmérséklet-tartományban. Amikor{SITE.name}, Hajótesttervező Stúdiónk ötvözi a fejlett CAD-modellezést, a
+    végeselemes elemzést (FEA) és a több évtizedes gyakorlati hajóépítészeti tapasztalatot, hogy olyan hajótesteket
+    készítsen, amelyek az adott feladatra optimalizáltak — nem pedig katalógusból átvett, általános formák.
+  </p>
+  <p>
+    Három fő hajótest anyaggal dolgozunk — forgácsolt HDPE, hegesztett tengeri minőségű alumínium és kézzel rakott
+    üvegszál —, és megvan a mérnöki képességünk, hogy mindegyiket saját magunk tervezzük, szimuláljuk és validáljuk.
+  </p>
+
+  <h2>Tervező eszközök és szabványok</h2>
+  <p>Digitális mérnöki környezetünk a következőket tartalmazza:</p>
+  <table>
+    <thead><tr><th>Képesség</th><th>Szoftver / Eszköz</th><th>Alkalmazás</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>3D paraméteres modellezés</td><td>SolidWorks Professional</td><td
+          >Hajótest felület, stringer rendszer, motor tartó, fedélzet elrendezés</td
+        ></tr
+      >
+      <tr
+        ><td>Véges elemes analízis</td><td>ANSYS Mechanical & LS-DYNA</td><td
+          >Feszültségtérkép, módus elemzés, ütközés/sérülés szimuláció</td
+        ></tr
+      >
+      <tr
+        ><td>Számítógépes áramlástani vizsgálat</td><td>Ansys Fluent / Star-CCM+</td><td
+          >Hidrodinamikai ellenállás előrejelzés, trim optimizálás</td
+        ></tr
+      >
+      <tr
+        ><td>Laminát mérnökség</td><td>ESAComp / CADEC</td><td
+          >Üvegszál réteg felrakási sorrend, maganyag kiválasztás, tömegbecslés</td
+        ></tr
+      >
+      <tr><td>Formaáramlás szimuláció</td><td>Moldex3D</td><td>Forgácsolt falvastagság előrejelzés</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Mérnöki munkafolyamatunk</h2>
+  <p>
+    Minden hajótest-terv, legyen az egy standard modell vagy teljesen egyedi projekt, egy szigorú, ötlépcsős folyamatot
+    követ:
+  </p>
+  <ol>
+    <li>
+      <strong>Koncepció & követelmények összegyűjtése</strong>— Találkozunk Önnel, hogy meghatározzuk a hasznos terhét,
+      a sebességhatárt, a tengeri állapot-képességeket, vontatási követelményeket és bármilyen speciális feladatot
+      (fedélzeti nyílások, konzol pozíciók, üzemanyag-tartály integráció).
+    </li>
+    <li>
+      <strong>3D felület és hidrosztatikus számítás</strong>— A hajótestformát SolidWorks modellezi, és beépített elemző
+      eszközökkel (GM, jobbkar) ellenőrizik a hidrosztatikus stabilitást.
+    </li>
+    <li>
+      <strong>Strukturális FEA</strong>— A terhelési esetek definiálódnak: statikus (személyzeti + felszerelés),
+      dinamikus (5 g-os síkosítási ütközések) és slamming (hullámcsúcsról 3 m/s sebességgel történő leesés). A
+      feszültség kontúrokat felülvizsgálják; a 2,5-ös ≥ biztonsági tényező kötelező.
+    </li>
+    <li>
+      <strong>CFD légellenállás optimalizálása</strong>— A hajótest három terhelési feltételen és öt sebességen
+      szimulálják. A nedves felület, a trim szög és a maradék ellenállás iteratív módon csökken.
+    </li>
+    <li>
+      <strong>Tervezési áttekintés és megjelenés</strong>— A teljes mérnöki csomagot (3D modell, FEA-jelentés, CFD
+      jelentés, súlybecslés, réteglemez könyv) a vezető haditengerészeti építészünk áttekinti, mielőtt kiadnánk a
+      prototípus műhelybe.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      FEA feszültségelosztás — RIB 450 járőrhajótest (alumínium 5083)
+    </p>
+    <div class="grid grid-cols-2 gap-4 text-sm">
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">2.8 : 1</span>
+        <span class="text-gray-500">Maximális hasznos tehernél biztonsági tényező</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">15.2 %</span>
+        <span class="text-gray-500">Ellenálláscsökkentés az előző generációhoz képest</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">87 kN/m²</span>
+        <span class="text-gray-500">Csúcscsapónyomás (tervezési korlát)</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">18 000 h</span>
+        <span class="text-gray-500">Összesített FEA futási idő 2025-ben</span>
+      </div>
+    </div>
+  </div>
+
+  <h2>Testreszabás: a hajótested, a te szabályaid</h2>
+  <p>
+    Nincs két üzemeltetőnek azonos követelménye. Egy kikötőjárőrnek RIB sekély V törzsre van szüksége a stabilitás
+    érdekében alacsony sebességen; egy gyors elfogó hajónak mély V-re van szüksége permetező sínekkel; egy
+    merülőtámaszhajónak széles szélességre és alacsony keresztirányra van szüksége. Nem kényszerítjük az Ön alkalmazását
+    meglévő törzsformára. Az Ön specifikációjától felfelé tervezünk.
+  </p>
+  <p>Példák a legutóbbi egyedi hajótestmérnöki projektekre:</p>
+  <ul>
+    <li>
+      Egy kinyújtott 6,8 m HDPE törzs egy karibi túraszervező számára, megerősített orrral a partraszállásokhoz (+15%
+      aljvastagság).
+    </li>
+    <li>
+      Könnyű alumínium, 7,2 RIB méteres a parti őrség számára, integrált üzemanyagtartály tartókkal és
+      felszerelés-tároló merevítőkkel
+    </li>
+    <li>
+      Egy üvegszálas 5,5 méteres merülőhajó lerövidített főhajóval és két akkumulátoros dobozzal, amelyet a snorkelező
+      könnyű visszaszálláshoz terveztek.
+    </li>
+  </ul>
+
+  <h2>Mérnökeink</h2>
+  <p>
+    A stúdiót egy tapasztalt tengerészmérnök vezeti, aki 14 éves tapasztalattal rendelkezik a nagysebességű
+    hajótervezésben, akit két gépészmérnök támogat, akik a FEA és CFD szakosodottak. Mindhárman magasabb szintű
+    diplomával rendelkeznek tengerészmérnöki vagy hajóépítészeti szakon nemzetközileg elismert egyetemeken. A csapat
+    rendszeresen publikál ipari folyóiratokban, és olyan konferenciákon tart előadásokat, mint például a Nemzetközi Nagy
+    Teljesítményű Tengeri Járművek Konferenciája.
+  </p>
+
+  <h2>Csatlakozz hozzánk a következő hajótestednél</h2>
+  <p>
+    Az első koncepcióvázlattól a végső stresszjelentésig a Hull Engineering Studio partnere egy olyan hajó
+    megalkotásában, amely nemcsak megépült — hanem mérnöki eredetű. A szimulációs órákat előre fordítjuk, hogy minden
+    hegesztés, minden laminált réteg és a hajótest íve oka legyen.
+  </p>
+  <p>
+    Akár egy meglévő modell kisebb módosítására, akár teljesen tiszta lapra szánt tervezésre van szüksége, készen állunk
+    arra, hogy megbeszéljük az igényeit.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Kezdje el a hajótest tervezési tanácsadását</h2>
+    <p class="mt-2 text-sm text-muted">Meséljen a küldetésprofiljáról, és mi mérnöki útvonalat ajánlunk.</p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Vegye fel a kapcsolatot mérnöki csapatunkkal.</a
+    >
+  </div>
+</section>

@@ -1,0 +1,231 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import evidenceData from '~/data/site/evidence.yaml';
+
+interface CaseStudy {
+  id: string;
+  client: string;
+  product: string;
+  industry: string;
+  challenge: string;
+  solution: string;
+  result: string;
+  image: string;
+  tags: string[];
+  outcome_metrics: { label: string; value: string }[];
+}
+
+interface Certification {
+  name: string;
+  body: string;
+  desc: string;
+}
+interface TestResult {
+  metric: string;
+  value: string;
+  detail: string;
+}
+interface SpecSheet {
+  name: string;
+  href: string;
+}
+interface DeploymentPhoto {
+  image: string;
+  caption: string;
+  context: string;
+}
+
+const d = evidenceData as any;
+const caseStudies: CaseStudy[] = d.case_studies ?? [];
+const certifications: Certification[] = d.certifications ?? [];
+const testResults: TestResult[] = d.test_results ?? [];
+const specSheets: SpecSheet[] = d.spec_sheets ?? [];
+const deploymentPhotos: DeploymentPhoto[] = d.deployment_photos ?? [];
+
+const metadata = {
+  title: `Evidence & Proof | ${SITE.name}`,
+  description: `Real case studies, certifications, test data, and deployment photos from Aquafarer's inflatable watercraft manufacturing.`,
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <JsonLd
+    data={{
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      headline: 'Evidence & Proof',
+      description: metadata.description,
+      author: { '@type': 'Organization', name: SITE.name },
+    }}
+  />
+  <JsonLd
+    data={{
+      '@context': 'https://schema.org',
+      '@type': 'Dataset',
+      name: 'Aquafarer Product Test Results',
+      description:
+        'Quality control test results for inflatable watercraft including pressure testing, defect thresholds, and safety margins.',
+      about: 'Marine Equipment Quality Testing',
+      measurementTechnique: 'ISO 2859 sampling, 24h pressure hold at 1.25x rated pressure',
+      variableMeasured: testResults.map((t) => t.metric),
+      author: { '@type': 'Organization', name: SITE.name },
+    }}
+  />
+
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <nav class="text-sm text-gray-500 mb-8">
+      <a href="/" class="hover:text-sky-600">{SITE.name}</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-900">Evidence</span>
+    </nav>
+
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">Proof & Results</span>
+      <h1 class="mt-4 text-4xl font-bold text-gray-900">Evidence</h1>
+      <p class="mt-4 text-lg text-gray-500">
+        Real case studies, certifications, test data, and deployment photos that demonstrate our manufacturing
+        capability and product quality.
+      </p>
+    </div>
+
+    <!-- Case Studies -->
+    <section class="mb-20">
+      <h2 class="text-2xl font-bold text-gray-900 mb-8">Case Studies</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        {
+          caseStudies.map((cs) => (
+            <a
+              href={`/evidence/case-studies/${cs.id}`}
+              class="group bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg transition-all hover:-translate-y-0.5 flex flex-col"
+            >
+              <div class="h-48 bg-gray-100 overflow-hidden">
+                <img
+                  src={cs.image}
+                  alt={cs.product}
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+              </div>
+              <div class="p-6 flex flex-col flex-1">
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="text-xs font-semibold uppercase tracking-wider text-sky-600 bg-sky-50 px-3 py-1 rounded-full">
+                    {cs.industry}
+                  </span>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-900 group-hover:text-sky-700 transition-colors mb-2">
+                  {cs.client}
+                </h3>
+                <p class="text-sm text-gray-500 mb-1">{cs.product}</p>
+                <p class="text-xs text-gray-400 line-clamp-3 mt-1">{cs.challenge}</p>
+                <div class="mt-4 flex flex-wrap gap-2">
+                  {cs.outcome_metrics.slice(0, 3).map((m) => (
+                    <span class="text-xs bg-gray-50 border border-gray-200 rounded-lg px-2 py-1">
+                      <strong class="text-gray-900">{m.value}</strong>
+                      <span class="text-gray-500"> {m.label}</span>
+                    </span>
+                  ))}
+                </div>
+                <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-sky-600 group-hover:text-sky-700">
+                  View Case Study &rarr;
+                </span>
+              </div>
+            </a>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="mb-20">
+      <div class="flex items-center justify-between mb-8">
+        <h2 class="text-2xl font-bold text-gray-900">Certifications & Compliance</h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {
+          certifications.map((cert) => (
+            <div class="bg-white border border-gray-200 rounded-2xl p-6">
+              <h3 class="text-lg font-semibold text-gray-900 mb-1">{cert.name}</h3>
+              <p class="text-xs text-gray-400 mb-3">Certified by: {cert.body}</p>
+              <p class="text-sm text-gray-500 leading-relaxed">{cert.desc}</p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- Test Results -->
+    <section class="mb-20">
+      <h2 class="text-2xl font-bold text-gray-900 mb-8">Quality Test Results</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {
+          testResults.map((tr) => (
+            <div class="bg-white border border-gray-200 rounded-2xl p-6 text-center">
+              <div class="text-3xl font-bold text-sky-600 mb-2">{tr.value}</div>
+              <h3 class="text-sm font-semibold text-gray-900 mb-1">{tr.metric}</h3>
+              <p class="text-xs text-gray-500">{tr.detail}</p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- Spec Sheets -->
+    <section class="mb-20">
+      <h2 class="text-2xl font-bold text-gray-900 mb-8">Product Specifications</h2>
+      <div class="grid md:grid-cols-4 gap-4">
+        {
+          specSheets.map((s) => (
+            <a
+              href={s.href}
+              class="bg-white border border-gray-200 rounded-2xl p-6 text-center hover:shadow-md transition-all hover:-translate-y-0.5 group"
+            >
+              <h3 class="text-sm font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">{s.name}</h3>
+              <span class="mt-2 inline-block text-xs font-medium text-sky-600">View specs &rarr;</span>
+            </a>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- Deployment Gallery -->
+    <section class="mb-20">
+      <h2 class="text-2xl font-bold text-gray-900 mb-8">Deployment Gallery</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+        {
+          deploymentPhotos.map((p) => (
+            <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden group">
+              <div class="h-48 bg-gray-100 overflow-hidden">
+                <img
+                  src={p.image}
+                  alt={p.caption}
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+              </div>
+              <div class="p-4">
+                <p class="text-xs text-gray-500 mb-1">{p.caption}</p>
+                <span class="text-xs font-medium text-sky-600">{p.context}</span>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-gradient-to-r from-sky-600 to-blue-700 rounded-2xl p-10 text-center text-white">
+      <h2 class="text-2xl font-bold mb-3">Want to see more?</h2>
+      <p class="text-sky-100 max-w-xl mx-auto mb-6">
+        Contact our team for detailed test reports, certification documents, and case study references.
+      </p>
+      <a
+        href="/contact"
+        class="inline-block bg-white text-sky-700 font-semibold px-8 py-3 rounded-xl hover:bg-sky-50 transition-colors"
+        >Request Documentation</a
+      >
+    </section>
+  </div>
+</Layout>

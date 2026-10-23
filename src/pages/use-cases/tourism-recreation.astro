@@ -1,0 +1,69 @@
+---
+import PageLayout from '~/layouts/PageLayout.astro';
+import { articleSchema } from '~/lib/seo/schema';
+import { nodes } from '~/content/graph/nodes';
+import { getPageContent, setPageContentData } from '~/i18n/page-content';
+import __pageData from '~/i18n/generated/pages/tourism-recreation.ts';
+
+const lang = 'en';
+setPageContentData(__pageData);
+const page = getPageContent(lang, 'tourism-recreation');
+const tourismNode = nodes.find((n) => n.id === 'tourism-recreation');
+
+const graphJsonLd = tourismNode
+  ? {
+      '@context': 'https://schema.org',
+      '@graph': [
+        articleSchema({
+          headline: page.seo?.headline || 'Inflatable Boats for Tourism & Recreation — OEM Manufacturing',
+          description:
+            page.seo?.description ||
+            'Aquafarer manufactures premium inflatable boats for tourism and recreation: whitewater rafts, fishing boats, dinghies, SUP boards. OEM/ODM with CE certification.',
+          datePublished: page.seo?.datePublished || '2024-06-01',
+          dateModified: page.seo?.dateModified || '2026-06-01',
+          author: 'Aquafarer',
+          publisher: 'Aquafarer',
+        }),
+        {
+          '@type': 'Product',
+          name: tourismNode?.name?.en || 'Tourism & Recreation Inflatable Boats',
+          description:
+            tourismNode?.description?.en || 'Premium inflatable boats for tourism and recreation applications.',
+          brand: { '@type': 'Brand', name: 'Aquafarer' },
+          category: 'Tourism & Recreation Equipment',
+        },
+      ],
+    }
+  : null;
+
+const metadata = {
+  title: page.seo?.headline || 'Inflatable Boats for Tourism & Recreation — OEM Manufacturing',
+  description:
+    page.seo?.description ||
+    'Aquafarer manufactures premium inflatable boats for tourism and recreation: whitewater rafts, fishing boats, dinghies, SUP boards. OEM/ODM with CE certification.',
+};
+---
+
+<PageLayout metadata={metadata}>
+  <script
+    slot="before"
+    is:inline
+    type="application/ld+json"
+    set:html={graphJsonLd ? JSON.stringify(graphJsonLd) : ''}
+  />
+
+  <section class="mx-auto max-w-4xl px-6 py-16">
+    <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">{page.label || 'Use Case'}</span>
+    <h1 class="font-semibold text-gray-900 dark:text-gray-100 mt-4 text-4xl">
+      {page.headline || 'Engineering Perfection in Inflatable Boat Manufacturing'}
+    </h1>
+    <p class="text-lg text-gray-500 dark:text-gray-400 mt-3">
+      {
+        page.subtitle ||
+          'From whitewater rafting to yacht tenders, Aquafarer sets the benchmark for durability and performance.'
+      }
+    </p>
+
+    <div class="mt-12 prose prose-gray dark:prose-invert max-w-none" set:html={page.body || ''} />
+  </section>
+</PageLayout>

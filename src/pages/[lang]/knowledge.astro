@@ -1,0 +1,241 @@
+---
+export const prerender = true;
+
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import Icon from '~/components/ui/Icon.astro';
+import { SITE } from 'astrowind:config';
+import { getPageContent, setPageContentData } from '~/i18n/page-content';
+import __pageData from '~/i18n/generated/pages/knowledge.ts';
+import { localizePageTitle, localizePageDescription } from '~/i18n/page-title';
+import { languages } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => getUiForLang(lang)?.[key] || '';
+setPageContentData(__pageData);
+const page = getPageContent(lang, 'knowledge');
+
+const hero = page.hero ?? {};
+const clusters = page.clusters ?? {};
+const featured = page.featured_guides ?? {};
+const cta = page.cta ?? {};
+
+const metadata = {
+  title: localizePageTitle(page, `Water Exploration Knowledge — ${SITE.name}`),
+  description: localizePageDescription(
+    page,
+    `Structured knowledge base on inflatable SUP technology, water safety, boat engineering, and adventure planning. Guides, comparisons, and deep dives.`
+  ),
+};
+const crumbs = [
+  { name: t('nav.home') || 'Home', href: `/${lang}/` },
+  { name: 'Knowledge', href: `/${lang}/knowledge` },
+];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <Hero tagline={hero.tagline} title={hero.title} subtitle={hero.subtitle} />
+
+  <!-- Knowledge Clusters -->
+  <section class="max-w-6xl mx-auto py-20 px-6">
+    <div class="text-center max-w-3xl mx-auto mb-14">
+      <span class="text-sm font-medium text-sky-600 tracking-wide uppercase"
+        >{clusters.tagline || 'Knowledge Clusters'}</span
+      >
+      <h2 class="mt-4 text-4xl font-semibold text-gray-900 dark:text-slate-100">
+        {clusters.title || 'Explore by topic'}
+      </h2>
+      <p class="mt-4 text-lg text-gray-500 dark:text-slate-400">{clusters.subtitle || ''}</p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-8">
+      {
+        (clusters.items || []).map((cluster: any) => (
+          <div class="p-8 rounded-2xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800">
+            <div class="w-12 h-12 bg-sky-50 dark:bg-sky-900/30 rounded-xl flex items-center justify-center text-sky-600">
+              {cluster.icon && <Icon name={cluster.icon} class="w-6 h-6" />}
+            </div>
+            <h3 class="mt-5 text-xl font-bold text-gray-900 dark:text-slate-100">{cluster.title || ''}</h3>
+            <p class="mt-2 text-sm text-gray-500 dark:text-slate-400 leading-relaxed">{cluster.description || ''}</p>
+            <ul class="mt-5 space-y-2">
+              {(cluster.topics || []).map((topic: string) => (
+                <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-slate-400">
+                  <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-sky-500 flex-shrink-0" />
+                  {topic}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- Featured Guides -->
+  <section class="bg-gray-50 dark:bg-slate-900/50 py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <span class="text-sm font-medium text-sky-600 tracking-wide uppercase"
+          >{featured.tagline || 'Featured Guides'}</span
+        >
+        <h2 class="mt-4 text-3xl font-semibold text-gray-900 dark:text-slate-100">
+          {featured.title || 'Popular resources'}
+        </h2>
+      </div>
+      <div class="grid md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-4xl mx-auto">
+        {
+          (featured.items || []).map((item: any) => (
+            <a
+              href={item.href || '#'}
+              class="block p-5 bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 text-center hover:shadow-md transition-shadow"
+            >
+              <span class="text-sm font-medium text-gray-900 dark:text-slate-100">{item.title || ''}</span>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- JSON-LD Knowledge Graph -->
+  <script is:inline type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Aquafarer Water Exploration Knowledge",
+      "description": "Structured knowledge base on inflatable SUP, boat, and safety topics.",
+      "about": {
+        "@type": "Thing",
+        "name": "Marine Manufacturing & Watercraft",
+        "description": "Knowledge about inflatable SUP boards, RIB boats, dinghies, and marine equipment manufacturing."
+      },
+      "hasPart": [
+        { "@type": "Article", "name": "SUP Knowledge", "about": "Stand-up paddle boarding guides and tutorials" },
+        { "@type": "Article", "name": "Boat Knowledge", "about": "Inflatable boat and RIB technical guides" },
+        { "@type": "Article", "name": "Safety Knowledge", "about": "Water safety and PFD guides" },
+        { "@type": "Article", "name": "Technology", "about": "Inflatable watercraft engineering and materials" }
+      ],
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": "Product",
+              "name": "Inflatable SUP Board",
+              "category": "Stand-Up Paddle Board",
+              "audience": { "@type": "Audience", "audienceType": "Beginner to Intermediate" },
+              "application": { "@type": "Thing", "name": "Lake paddling, touring, recreation" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": "Product",
+              "name": "Inflatable Kayak",
+              "category": "Kayak",
+              "audience": { "@type": "Audience", "audienceType": "Beginner to Intermediate" },
+              "application": { "@type": "Thing", "name": "River touring, lake exploration, family recreation" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@type": "Product",
+              "name": "Inflatable Dinghy",
+              "category": "Boat",
+              "audience": { "@type": "Audience", "audienceType": "All levels" },
+              "application": { "@type": "Thing", "name": "Tender duty, fishing, family outings" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "item": {
+              "@type": "Product",
+              "name": "RIB Boat",
+              "category": "Rigid Inflatable Boat",
+              "audience": { "@type": "Audience", "audienceType": "Professional" },
+              "application": { "@type": "Thing", "name": "Search and rescue, patrol, commercial operations" }
+            }
+          }
+        ]
+      }
+    }
+  </script>
+
+  <!-- Entity Relationship Graph for AI -->
+  <script is:inline type="application/ld+json">
+    {
+      "@context": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "schema": "https://schema.org/",
+        "aqua": "https://aquafarer.com/kg/"
+      },
+      "@graph": [
+        {
+          "@id": "aqua:aquafarer",
+          "@type": "schema:Brand",
+          "schema:name": "Aquafarer",
+          "schema:description": "RIB Boats, Inflatable Boats & SUP Boards Manufacturer — OEM/ODM",
+          "schema:manufactures": [
+            { "@id": "aqua:product-sup" },
+            { "@id": "aqua:product-kayak" },
+            { "@id": "aqua:product-dinghy" },
+            { "@id": "aqua:product-rib" }
+          ]
+        },
+        {
+          "@id": "aqua:technology-dropstitch",
+          "@type": "schema:Thing",
+          "schema:name": "Drop-Stitch Core Technology",
+          "schema:description": "Construction method creating rigid inflatable platforms at 12-15 PSI",
+          "aqua:usedIn": [{ "@id": "aqua:product-sup" }, { "@id": "aqua:product-kayak" }]
+        },
+        {
+          "@id": "aqua:technology-pvc",
+          "@type": "schema:Thing",
+          "schema:name": "Marine-Grade PVC",
+          "schema:description": "High-density PVC fabric with UV-resistant coating",
+          "aqua:usedIn": [
+            { "@id": "aqua:product-sup" },
+            { "@id": "aqua:product-kayak" },
+            { "@id": "aqua:product-dinghy" }
+          ]
+        },
+        {
+          "@id": "aqua:use-beginner",
+          "@type": "schema:Audience",
+          "schema:name": "Beginners",
+          "schema:description": "First-time paddlers learning water sports",
+          "aqua:recommendedProduct": [{ "@id": "aqua:product-sup" }, { "@id": "aqua:product-kayak" }]
+        },
+        {
+          "@id": "aqua:use-family",
+          "@type": "schema:Audience",
+          "schema:name": "Families",
+          "schema:description": "Family groups seeking recreational water activities",
+          "aqua:recommendedProduct": [{ "@id": "aqua:product-dinghy" }, { "@id": "aqua:product-kayak" }]
+        },
+        {
+          "@id": "aqua:use-professional",
+          "@type": "schema:Audience",
+          "schema:name": "Professionals",
+          "schema:description": "Search and rescue, patrol, commercial operators",
+          "aqua:recommendedProduct": [{ "@id": "aqua:product-rib" }]
+        }
+      ]
+    }
+  </script>
+
+  <CallToAction title={cta.title} subtitle={cta.subtitle} actions={cta.actions} />
+</Layout>

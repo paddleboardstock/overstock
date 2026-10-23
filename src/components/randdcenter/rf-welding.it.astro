@@ -1,0 +1,185 @@
+---
+import { SITE } from 'astrowind:config';
+const { lang = 'it' } = Astro.props;
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={`/${lang}/randdcenter`} class="text-sm text-gray-500 hover:underline">&larr; Torna al Centro R&S</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Lab 03</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Centro saldatura RF</h1>
+      <p class="mt-3 text-lg text-muted">
+        Tecnologia di giunzione dielettrica per saldature che resistono sotto pressione
+      </p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-jungle-mandala-1.webp"
+        alt="Processo di giunzione dielettrica per saldatura RF Aquafarer"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>La scienza dietro la cucitura</h2>
+  <p>
+    Un'imbarcazione gonfiabile è affidabile quanto le sue cuciture. Una singola saldatura debole può compromettere
+    un'intera camera — e in mare, il cedimento di una camera non è un inconveniente; è un pericolo per la sicurezza. In
+    {SITE.name}, abbiamo investito in un Centro di saldatura a radiofrequenza (RF) dedicato che combina presse
+    dielettriche di saldatura di grado industriale con un rigoroso controllo di processo e prove post-saldatura. Ogni
+    cucitura che produciamo è documentata, tracciabile e certificata per soddisfare o superare i requisiti di — la norma
+    internazionale per i natanti gonfiabili.
+  </p>
+  <p>
+    La saldatura RF utilizza energia elettromagnetica ad alta frequenza (tipicamente 27.12 MHz) per eccitare le molecole
+    polari all'interno del tessuto rivestito in PVC o Hypalon, generando calore precisamente all'interfaccia del
+    materiale. A differenza della saldatura ad aria calda o a cuneo caldo, la saldatura RF crea un vero legame
+    molecolare — i due strati di tessuto si fondono in un unico materiale omogeneo nella zona di saldatura, producendo
+    un giunto forte quanto il materiale originale stesso.
+  </p>
+
+  <h2>Apparecchiature di saldatura e controllo di processo</h2>
+  <p>Il nostro centro di saldatura è dotato di:</p>
+  <table>
+    <thead><tr><th>Macchina</th><th>Potenza / Capacità</th><th>Applicazione</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Pressa dielettrica RF 1</td><td>15 kW, piatto 2000 &times; 600 mm</td><td
+          >Cuciture longitudinali principali, giunzioni specchio di poppa-tubolare</td
+        ></tr
+      >
+      <tr
+        ><td>Pressa dielettrica RF 2</td><td>10 kW, piatto 1500 &times; 500 mm</td><td
+          >Saldature delle paratie, attacchi dei coni, toppe delle valvole</td
+        ></tr
+      >
+      <tr
+        ><td>Saldatrice RF a controllo CNC</td><td>8 kW, tavola XY 2500 &times; 1200 mm</td><td
+          >Cuciture curve, goffratura di loghi/pannelli, rattoppi di precisione</td
+        ></tr
+      >
+      <tr
+        ><td>Saldatrice automatica a cuneo caldo</td><td>Temperatura variabile, max 1.2 m/min</td><td
+          >Metodo di riserva per materiali Hypalon/CSM</td
+        ></tr
+      >
+    </tbody>
+  </table>
+  <p>
+    Ogni pressa RF è dotata di monitoraggio a circuito chiuso di temperatura e pressione. I parametri di saldatura —
+    potenza, tempo di pressatura, tempo di raffreddamento, pressione dell'elettrodo — sono programmati per tipo di
+    materiale e registrati nel nostro Manufacturing Execution System (MES) per una completa tracciabilità.
+  </p>
+
+  <h2>Prove di qualità delle saldature — ogni cucitura, ogni imbarcazione</h2>
+  <p>L'integrità della saldatura viene verificata tramite un protocollo obbligatorio di quattro prove:</p>
+  <ol>
+    <li>
+      <strong>Ispezione visiva</strong> — il 100 % delle cuciture viene ispezionato visivamente per bruciature, disallineamento,
+      contaminazione o fusione incompleta. Soglia del tasso di scarto: 0.5 % dei metri lineari.
+    </li>
+    <li>
+      <strong>Prova di pelatura ()</strong> — una striscia larga 25 mm viene tagliata da un provino saldato con ogni lotto
+      di produzione. Forza minima di pelatura: 120 N/25 mm per PVC 1100 dtex.
+    </li>
+    <li>
+      <strong>Prova di ritenzione d'aria</strong> — ogni camera completata viene pressurizzata a 1.25 volte la pressione di
+      esercizio e mantenuta per 24-48 ore. La caduta di pressione non deve superare il 2 %.
+    </li>
+    <li>
+      <strong>Prova di ciclo termico</strong> — i provini campione vengono sottoposti a 50 cicli da -20 &deg;C a +60 &deg;C,
+      poi sottoposti nuovamente a prova di pelatura. Perdita di resistenza accettabile: &lt; 10 %.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Confronto della resistenza alla pelatura — RF vs saldatura ad aria calda (PVC 1100 dtex)
+    </p>
+    <div class="space-y-3">
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">Saldatura RF</span><div
+          class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded"
+        >
+          <div class="h-full bg-blue-600 rounded" style="width:92%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">184 N</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">Aria calda</span><div
+          class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded"
+        >
+          <div class="h-full bg-gray-400 rounded" style="width:65%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">130 N</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">Minimo</span><div
+          class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded"
+        >
+          <div class="h-full bg-green-500 rounded" style="width:48%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">96 N</span>
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      La saldatura RF raggiunge costantemente il 90-95 % della resistenza del materiale originale, ben al di sopra del
+      minimo.
+    </p>
+  </div>
+
+  <h2>Competenza professionale</h2>
+  <p>
+    Il nostro team di saldatura è guidato da un ingegnere di processo senior con 11 anni di esperienza nella saldatura
+    dielettrica di tessuti rivestiti. Ogni operatore completa un programma di certificazione interno di 6 mesi prima di
+    poter lavorare sulle cuciture di produzione. La ricertificazione è richiesta annualmente, inclusa una prova pratica
+    di saldatura valutata secondo il nostro standard interno Grade-A (resistenza alla pelatura &ge; 160 N/25 mm).
+  </p>
+
+  <h2>Soluzioni di saldatura personalizzate per requisiti unici</h2>
+  <p>
+    Sappiamo che una specifica di saldatura non si adatta a ogni applicazione. Il nostro Centro saldatura RF sviluppa
+    regolarmente configurazioni di cucitura personalizzate per clienti con requisiti speciali:
+  </p>
+  <ul>
+    <li>
+      <strong>Toppe di rinforzo multistrato</strong> — per le zone ad alto attrito come listelli di sfregamento e coni di
+      prua, sviluppiamo saldature RF multi-passo che integrano uno strato esterno resistente all'usura senza compromettere
+      la flessibilità.
+    </li>
+    <li>
+      <strong>Cuciture conduttive o opache alle RF</strong> — per imbarcazioni militari o di sorveglianza che richiedono schermatura
+      elettromagnetica, saldiamo strati di rete conduttiva all'interno della stratificazione della cucitura.
+    </li>
+    <li>
+      <strong>Saldatura di pannelli bicolore</strong> — pannelli di tessuto bicolore (ad es. scafo arancione + parte superiore
+      grigia) saldati con una sovrapposizione nascosta per mantenere l'estetica del marchio senza una linea di giunzione visibile.
+    </li>
+  </ul>
+
+  <h2>Il nostro impegno verso di voi</h2>
+  <p>
+    Ogni imbarcazione che consegniamo porta la nostra garanzia di qualità delle saldature: se una cucitura cede in
+    condizioni d'uso normali entro il periodo di garanzia, ripariamo o sostituiamo la camera interessata senza alcun
+    costo, e viene condotta un'indagine sulla causa principale per prevenire il ripetersi. Non è semplicemente una
+    garanzia — è un impegno al miglioramento continuo guidato dai dati operativi reali.
+  </p>
+  <p>
+    Quando scegliete {SITE.name}, scegliete cuciture progettate, provate e documentate — non solo saldate. Questa è la
+    differenza tra un'imbarcazione che galleggia e un'imbarcazione che funziona.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Discutete i vostri requisiti di saldatura</h2>
+    <p class="mt-2 text-sm text-muted">
+      Specifiche di cucitura personalizzate, compatibilità dei materiali o validazione del processo.
+    </p>
+    <a
+      href={`/${lang}/contact`}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Contattate il nostro team di saldatura</a
+    >
+  </div>
+</section>

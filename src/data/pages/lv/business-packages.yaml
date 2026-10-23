@@ -1,0 +1,82 @@
+hero:
+  tagline: Biznesa komplekti
+  title: Gatavā ūdens uzņēmuma izvietošana<br />Paketes katram posmam
+  subtitle: Iepriekš konfigurēti aprīkojuma komplekti ūdenssporta klubiem, kūrortiem un zīmolu jaunuzņēmumiem — ar caurspīdīgām cenām, ātru piegādi un pilnīgu pielāgošanas iespēju.
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/use-cases/aquafarer-outdoor-adventure.webp
+    alt: Aquafarer uzņēmējdarbības aprīkojuma pakas
+direct_answer: Aquafarer piedāvā trīs iepriekš konfigurētus biznesa pakotņu risinājumus ūdenssporta operatoriem katrā darbības posmā. Club Starter pakotne ietver 10 SUPs ar airiem, sūknē, remonta komplektiem un drošības aprīkojumu jaunajiem klubiem un skolām. Resort Premium pakotne nodrošina 50–100 vienības ar uzglabāšanas sistēmām, zīmola vizualizāciju un apmācību ceļvežiem viesnīcām un tūrisma objektiem. Brand Launch pakotne piedāvā produktu izvēli, individuāla logotipa dizainu, iepakošanu, ražošanu un piegādi uzņēmējiem, kas uzsāk savu ūdenssporta zīmolu. Visas pakotnes ietver ražotāja tiešo cenu, CE sertifikāciju un globālo loģistikas atbalstu.
+packages:
+  - id: club-starter
+    tag: Best Seller
+    name: Kluba sākuma komplekts
+    subtitle: Viss, kas jums nepieciešams, lai uzsāktu vai uzlabotu savu airēšanas klubu
+    target: SUP klubi, kajaku klubi, sērfošanas skolas, treniņu centri
+    price_label: No $4 800
+    line_items:
+      - item: 10 SUP dēļi vai kajaki
+      - item: 10 atbilstoši airi
+      - item: 10 augstas jaudas sūkņi
+      - item: 10 remonta komplekti
+      - item: 10 glābšanas vestes ar kluba logo
+      - item: Kluba zīmols uz dēļiem
+      - item: Drošības zīmju komplekts
+      - item: Sākuma nodarbību ceļvedis PDF
+    cta_text: Iegūt kluba paketi
+    cta_href: /contact
+  - id: resort-premium
+    tag: Premium
+    name: Atpūtas kompleksa Premium pakete
+    subtitle: Pilns viesu ūdens aktivitāšu programma viesnīcām un kūrortiem
+    target: Pludmales kūrorti, viesnīcas pie ezera, ekokūrorti, jahtu klubi
+    price_label: Pielāgota cena
+    line_items:
+      - item: 50–100 SUPs, kajaki vai jaukta flote
+      - item: Pilnīga kūrorta zīmola uzlīme uz visām iekārtām
+      - item: Nomai piemēroti airi un PFD
+      - item: Komercpārdošanas plauktu sistēma
+      - item: Inflācijas stacija ar rūpnieciskajiem sūkņiem
+      - item: Drošības sistēma (bojes, zīmes, glābšanas dēlis)
+      - item: Personāla apmācību programma
+      - item: Ieņēmumu pārvaldības rokasgrāmata
+    cta_text: Saņemt kūrorta paketi
+    cta_href: /contact
+  - id: brand-launch
+    tag: Entrepreneur
+    name: Zīmola palaišanas pakete
+    subtitle: Pārvērtiet savu zīmola ideju par nosūtītu produktu — parasti 60–90 dienu laikā
+    target: Amazon pārdevēji, ietekmētāji, reģionālie izplatītāji
+    price_label: No 6 500 USD
+    line_items:
+      - item: Konsultācijas par produktu izvēli
+      - item: Pielāgota logotipa dizains uz dēļiem
+      - item: Pielāgota krāsu saskaņošana
+      - item: Zīmola mazumtirdzniecības iepakojums
+      - item: Karodziņi un lietošanas instrukcija
+      - item: CE sertifikācijas dokumentācija
+      - item: Ražošanas paraugi
+      - item: FOB Qingdao piegāde
+    cta_text: Palaidiet manu zīmolu
+    cta_href: /contact
+faq:
+  title: Paketes Biežāk uzdotie jautājumi
+  questions:
+    - q: Kāds ir minimālais pasūtījuma daudzums paketēm?
+      a: Kluba sākuma paketei ir minimālais daudzums 10 vienības. Kūrorta un zīmola paketes tiek pielāgotas jūsu vajadzībām ar elastīgu MOQs.
+    - q: Cik ilgi ilgst piegāde?
+      a: Standarta ražošana ir 30–45 dienas no pasūtījuma apstiprināšanas. Ātrāka ražošana ir pieejama par papildu maksu.
+    - q: Vai es varu pielāgot aprīkojuma krāsas un zīmolu?
+      a: Jā. Visas paketes ietver pilnu pielāgošanu — dēļu krāsas, logotipu druku un iepakojuma dizainu.
+    - q: Vai jūs nodrošināt pēc-pārdošanas atbalstu?
+      a: Jā. Katru paketi papildina piekļuve mūsu tiešsaistes uzturēšanas ceļvežiem, video pamācībām un rezerves daļu pasūtīšanas sistēmai.
+cta:
+  title: Nezinu, kura pakete der?
+  subtitle: Atbildiet uz 3 ātriem jautājumiem, un mēs ieteiksim ideālo paketi jūsu biznesam.
+  actions:
+    - variant: primary
+      text: Saņemt ieteicamo paketi
+      href: /contact
+    - text: Skatīt risinājumus pēc auditorijas
+      href: /solutions
+    - text: Lasiet Veiksmes stāstus
+      href: /success-stories

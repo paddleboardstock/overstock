@@ -1,0 +1,225 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import ExperienceLayer from '~/components/content/ExperienceLayer.astro';
+import RelatedPages from '~/components/content/RelatedPages.astro';
+
+const metadata = {
+  title: 'Solutions by Industry — Inflatable Watercraft for Every Sector',
+  description:
+    'Find the right inflatable watercraft solution for your industry. Government, commercial, recreational, industrial — Aquafarer manufactures CE-certified boats for every sector.',
+  ignoreTitleTemplate: true,
+};
+
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Solutions by Industry' }];
+
+const industries = [
+  {
+    name: 'Search & Rescue',
+    color: 'from-red-50 to-orange-50',
+    border: 'border-red-200',
+    icon: 'M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z',
+    description:
+      'Rapid-deployment inflatable boats for water rescue, flood response, and coastal patrol. Lightweight for helicopter transport, durable for extended operations.',
+    craft: ['RIBs (16-24ft rescue configurations)', 'Inflatable rescue boats', 'Patrol craft with console'],
+    certifications: ['SOLAS compliant options', 'CE rescue craft directive'],
+    link: '/search-rescue-operations',
+  },
+  {
+    name: 'Disaster Relief & Humanitarian Aid',
+    color: 'from-amber-50 to-yellow-50',
+    border: 'border-amber-200',
+    icon: 'M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 12.5V17a2 2 0 01-2 2H6a2 2 0 01-2-2V9a2 2 0 012-2h3.5a2 2 0 012 2v.5M15 12.5V17a2 2 0 01-2 2H6',
+    description:
+      'Inflatable craft for emergency response, medical evacuation, supply transport, and temporary bridge ferries in disaster zones.',
+    craft: ['Heavy-duty inflatable boats', 'Dinghies for supply transport', 'High-capacity tenders'],
+    certifications: ['CE certified', 'UV/harsh environment tested'],
+    link: '/disaster-relief-humanitarian-aid',
+  },
+  {
+    name: 'Commercial Marine Operations',
+    color: 'from-sky-50 to-blue-50',
+    border: 'border-sky-200',
+    icon: 'M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z',
+    description:
+      'Workboats for dive support, passenger transport, fish farming, and marine construction. Durable Hypalon and PVC configurations for daily commercial use.',
+    craft: ['Commercial RIB workboats', 'Dive support vessels', 'Passenger tenders', 'Fish farm service boats'],
+    certifications: ['CE commercial craft', ''],
+    link: '/commercial-workboats',
+  },
+  {
+    name: 'Defense & Government',
+    color: 'from-gray-50 to-slate-50',
+    border: 'border-gray-200',
+    icon: 'M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4',
+    description:
+      'Military-grade inflatable craft for reconnaissance, troop transport, coastal patrol, and special operations. Custom configurations available.',
+    craft: ['Military-spec RIBs', 'Coastal patrol boats', 'Special operations craft'],
+    certifications: ['Military-grade Hypalon', 'NBC resistant options', 'Stealth profile options'],
+    link: '/oem-odm-manufacturer',
+  },
+  {
+    name: 'Hospitality & Tourism',
+    color: 'from-teal-50 to-emerald-50',
+    border: 'border-teal-200',
+    icon: 'M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7',
+    description:
+      'Resort and rental fleet supply including SUPs, kayaks, and tenders. High-durability rental-grade construction with custom branding options.',
+    craft: ['Rental-grade SUPs (reinforced)', 'Hotel beach tenders', 'Guided tour kayaks', 'Kids watercraft'],
+    certifications: ['CE recreational craft', 'Commercial fleet grade'],
+    link: '/products',
+  },
+  {
+    name: 'Fishing & Aquaculture',
+    color: 'from-cyan-50 to-blue-50',
+    border: 'border-cyan-200',
+    icon: 'M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197',
+    description:
+      'Fishing-specific SUPs, kayaks, and workboats for recreational anglers and commercial aquaculture operations.',
+    craft: ['Fishing SUPs (wide/stable)', 'Fishing kayaks (rod holders)', 'Aquaculture service boats'],
+    certifications: ['CE recreational', 'Food-safe material options'],
+    link: '/products',
+  },
+];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <section class="max-w-6xl mx-auto py-24 px-6">
+    <h1 class="mt-4 text-4xl font-semibold text-gray-900">Solutions by Industry</h1>
+    <p class="mt-4 text-lg text-gray-500">
+      Find the right inflatable watercraft for your industry. Each solution is backed by CE certification, ISO quality
+      management, and a 12,000 m² manufacturing facility.
+    </p>
+
+    <div class="mt-16 space-y-8">
+      {
+        industries.map((ind) => (
+          <div
+            class={`bg-gradient-to-br ${ind.color} rounded-2xl border ${ind.border} p-8 hover:shadow-md transition-shadow`}
+          >
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl bg-white/80 flex items-center justify-center flex-shrink-0">
+                <svg
+                  class="w-6 h-6 text-gray-700"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d={ind.icon} />
+                </svg>
+              </div>
+              <div class="flex-1">
+                <h2 class="text-xl font-semibold text-gray-900">{ind.name}</h2>
+                <p class="mt-2 text-sm text-gray-600">{ind.description}</p>
+                <div class="mt-4">
+                  <span class="text-xs font-medium text-gray-500 uppercase tracking-wide">Recommended Craft</span>
+                  <ul class="mt-2 space-y-1">
+                    {ind.craft.map((c) => (
+                      <li class="flex items-center gap-2 text-sm text-gray-600">
+                        <span class="w-1.5 h-1.5 rounded-full bg-gray-400 flex-shrink-0" />
+                        {c}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div class="mt-3 flex items-center gap-4">
+                  <span class="text-xs text-gray-400">{ind.certifications.join(' · ')}</span>
+                </div>
+                <a
+                  href={ind.link}
+                  class="mt-4 inline-flex text-sm font-medium text-sky-600 hover:text-sky-700 hover:underline"
+                >
+                  Learn more →
+                </a>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+
+    <section class="mt-16 bg-gray-50 rounded-2xl p-8 border border-gray-200 text-center">
+      <h2 class="text-2xl font-semibold text-gray-900">Need a Custom Solution?</h2>
+      <p class="mt-4 text-gray-500">
+        Our OEM/ODM team can design and manufacture custom inflatable watercraft for your specific industry
+        requirements.
+      </p>
+      <div class="mt-6 flex justify-center gap-4">
+        <a
+          href="/oem-odm-manufacturer"
+          class="px-8 py-4 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition"
+          >OEM/ODM Services</a
+        >
+        <a
+          href="/contact"
+          class="px-8 py-4 border border-gray-200 text-gray-700 rounded-full font-semibold hover:border-gray-400 transition"
+          >Contact Us</a
+        >
+      </div>
+    </section>
+  </section>
+
+  <ExperienceLayer
+    title="Industry Solutions in Action"
+    subtitle="Real examples of how Aquafarer watercraft perform across different industry sectors."
+    stories={[
+      {
+        quote:
+          'We deployed two Aquafarer RIBs during the coastal flooding — they were the only vessels that could navigate the debris-filled waters at low tide.',
+        narrative:
+          "During a severe coastal flooding event, a municipal SAR team deployed Aquafarer RIBs for evacuation operations. The boats' shallow draft allowed access to flooded neighborhoods unreachable by larger vessels. Despite debris and continuous operation for 14 hours, the Hypalon fabric showed no signs of wear.",
+        context: 'Coastal flood rescue, Southeast Asia, 2024',
+        source: 'Municipal SAR Team Lead',
+      },
+      {
+        quote:
+          'Our dive boat runs 6 days a week, 50 weeks a year. After two years, the Hypalon fabric still looks new.',
+        narrative:
+          'A dive charter operation in the Maldives runs an Aquafarer RIB for daily dive support. The boat is launched and recovered 4 times daily, exposed to intense tropical sun and saltwater. After 600+ operating days, the hull shows no significant UV degradation and no seam separation.',
+        context: 'Dive charter operations, Maldives, 2022-2025',
+        source: 'Charter Company Owner',
+      },
+    ]}
+  />
+  <RelatedPages
+    title="Explore More"
+    subtitle="Related solutions and resources"
+    links={[
+      {
+        title: 'Solutions by Use Case',
+        description: 'Match your specific use case to the right Aquafarer solution.',
+        href: '/solutions/by-use-case',
+        label: 'Decision Tool',
+      },
+      {
+        title: 'Commercial Workboats',
+        description: 'Durable RIBs and workboats for daily commercial marine operations.',
+        href: '/commercial-workboats',
+        label: 'Workboats',
+      },
+      {
+        title: 'OEM/ODM Manufacturing',
+        description: 'Custom manufacturing services for global brands and organizations.',
+        href: '/oem-odm-manufacturer',
+        label: 'OEM',
+      },
+      {
+        title: 'Engineering Perfection',
+        description: 'Our engineering philosophy — precision manufacturing and rigorous quality control.',
+        href: '/engineering-perfection',
+        label: 'Philosophy',
+      },
+    ]}
+  />
+
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true">
+    <p>
+      Solutions by industry for Aquafarer inflatable watercraft. Six industry verticals: Search & Rescue (RIBs, rescue
+      boats, patrol craft), Disaster Relief & Humanitarian Aid (heavy-duty inflatable boats, dinghies, high-capacity
+      tenders), Commercial Marine Operations (dive support, passenger transport, fish farming), Defense & Government
+      (military RIBs, coastal patrol, special operations), Hospitality & Tourism (rental-grade SUPs, hotel tenders,
+      guided tour kayaks), Fishing & Aquaculture (fishing SUPs, fishing kayaks, aquaculture service boats). All
+      solutions CE certified and ISO manufactured. OEM/ODM custom design available for all industries.
+    </p>
+  </section>
+</Layout>

@@ -1,0 +1,294 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import Tldr from '~/components/common/Tldr.astro';
+import TrustBadges from '~/components/common/TrustBadges.astro';
+import { SITE } from 'astrowind:config';
+import { languages } from '~/i18n/config';
+import { getPageContent, setPageContentData } from '~/i18n/page-content';
+import __pageData from '~/i18n/generated/pages/quality.ts';
+import { localizePageTitle, localizePageDescription } from '~/i18n/page-title';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => getUiForLang(lang)?.[key] || '';
+const lh = (h: string) => (h ? '/' + lang + h : h);
+setPageContentData(__pageData);
+const page = getPageContent(lang, 'quality') || {};
+const hero = page.hero || {};
+const trustBar = page.trust_bar || {};
+const badges = page.badges || [];
+const testimonial = page.testimonial || {};
+const tests = page.tests || [];
+const commitment = page.commitment || {};
+const testingSection = page.testing_section || {};
+
+const interp = (s: any) => (typeof s === 'string' ? s.replace(/\{SITE\}/g, SITE.name) : s);
+
+const metadata = {
+  title: localizePageTitle(page, `Quality Testing & Assurance — ISO & ASTM Certified — ${SITE.name}`),
+  description: localizePageDescription(
+    page,
+    `${SITE.name}'s quality testing program: 8 protocols including pressure, UV (ASTM G154), abrasion (ASTM D751), buoyancy (ISO 6185), and watertightness testing. ISO 9001 certified. Every inflatable boat and SUP verified before shipping.`
+  ),
+  ignoreTitleTemplate: true,
+};
+
+const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: hero.tagline }];
+const siteUrl = 'https://aquafarer.com';
+
+const tldrSummary =
+  'Aquafarer operates an 8-protocol quality testing program covering pressure, impact, UV (ASTM G154), abrasion (ASTM D751), low-temperature, buoyancy (ISO 6185), maneuverability, and watertightness. ISO 9001:2015 certified. 99.3% defect-free rate per AQL 2.5 / ISO 2859.';
+
+const tldrPoints = [
+  '8 testing protocols: pressure, impact, UV (ASTM G154), abrasion (ASTM D751), low-temperature, buoyancy (ISO 6185), maneuverability, and watertightness',
+  'ISO 9001:2015 quality management system certified by SGS',
+  '99.3% defect-free rate measured per AQL 2.5 / ISO 2859 sampling',
+  'Every unit undergoes 24-48h hold at 1.25x rated pressure with max 5% drop tolerance',
+  'ASTM G154 UV accelerated weathering and ASTM D751 coating abrasion resistance testing',
+];
+
+const directAnswerHtml =
+  '<div class="direct-answer border-l-4 border-blue-600 bg-blue-50 dark:bg-slate-800/50 rounded-r-xl px-6 py-5 my-8"><p class="text-sm text-gray-700 dark:text-slate-300 leading-relaxed">' +
+  tldrSummary +
+  '</p></div>';
+
+const faqSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What quality testing does Aquafarer perform?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: '8-protocol testing: pressure, impact, UV (ASTM G154), abrasion (ASTM D751), low-temperature, buoyancy (ISO 6185), maneuverability, and watertightness.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is Aquafarer ISO 9001 certified?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. ISO 9001:2015 quality management system certified by SGS.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the defect-free rate?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: '99.3% defect-free rate measured per AQL 2.5 / ISO 2859 sampling.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How are pressure tests conducted?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Every unit undergoes 24-48h hold at 1.25x rated pressure with max 5% drop tolerance.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What standards are followed for UV and abrasion testing?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'ASTM G154 for UV accelerated weathering, ASTM D751 for coating abrasion resistance.',
+      },
+    },
+  ],
+});
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <JsonLd
+    type="Article"
+    article={{
+      headline: 'Quality Testing & Assurance — ISO & ASTM Certified Testing Program',
+      description:
+        "Aquafarer's 8-protocol quality testing program: pressure, impact, UV (ASTM G154), abrasion (ASTM D751), low-temp, buoyancy (ISO 6185), maneuverability, and watertightness testing. ISO 9001 certified quality management.",
+      datePublished: '2026-07-07',
+    }}
+    data={{ url: `${siteUrl}/quality` }}
+  />
+
+  <section class="bg-gradient-to-br from-[#001830] via-[#002d4a] to-[#003355] text-white py-24 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <span class="text-xs font-medium uppercase tracking-[0.2em] text-sky-300">{hero.tagline}</span>
+      <h1 class="mt-4 text-4xl md:text-5xl font-bold tracking-tight">{hero.title}</h1>
+      <p class="mt-4 text-lg text-sky-100/80 max-w-3xl mx-auto">{hero.subtitle}</p>
+    </div>
+  </section>
+
+  <div class="px-6 mx-auto max-w-5xl py-10">
+    <Tldr summary={tldrSummary} points={tldrPoints} />
+  </div>
+
+  <div class="px-6 mx-auto max-w-5xl" set:html={directAnswerHtml} />
+
+  {
+    trustBar.items && trustBar.items.length > 0 && (
+      <section class="px-6 py-12 mx-auto max-w-6xl -mt-8 relative z-10">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {trustBar.items.map((s: any) => (
+            <div class="text-center p-5 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 shadow-sm">
+              <span class="block text-2xl font-bold text-[#06b6d4]">{s.value}</span>
+              <span class="block text-sm font-semibold text-gray-900 mt-1">{s.label}</span>
+              {s.sub && <span class="block text-xs text-gray-500 mt-0.5">{s.sub}</span>}
+            </div>
+          ))}
+        </div>
+      </section>
+    )
+  }
+
+  {
+    badges.length > 0 && (
+      <section class="px-6 py-8 mx-auto max-w-5xl">
+        <div class="flex flex-wrap justify-center gap-3">
+          {badges.map((b: any) => (
+            <a
+              href={lh(b.url)}
+              class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-medium text-gray-700 hover:border-sky-300 hover:text-sky-600 transition-colors shadow-sm"
+            >
+              <span class="w-2 h-2 rounded-full bg-[#06b6d4]" />
+              {b.name}
+              <span class="text-gray-400">&mdash;</span>
+              <span class="text-gray-500 font-normal">{b.body}</span>
+            </a>
+          ))}
+        </div>
+      </section>
+    )
+  }
+
+  <section class="px-6 sm:px-6 py-16 mx-auto max-w-6xl">
+    <div class="text-center mb-12">
+      <p class="text-sm font-semibold text-[#06b6d4] uppercase tracking-wider">{testingSection.tagline}</p>
+      <h2 class="mt-2 text-3xl font-bold text-gray-900">{testingSection.title}</h2>
+      <p class="mt-3 text-gray-500 max-w-2xl mx-auto">
+        Each test follows documented internal protocols aligned with international standards. Test results are recorded,
+        traceable, and reviewed by our independent quality lab.
+      </p>
+    </div>
+    <div class="space-y-8">
+      {
+        tests.map((t: any, i: any) => (
+          <div
+            class={`grid md:grid-cols-2 gap-8 items-center ${i % 2 === 1 ? 'md:[direction:rtl]' : ''}`}
+            style={i % 2 === 1 ? 'direction:rtl' : ''}
+          >
+            <div style={i % 2 === 1 ? 'direction:ltr' : ''}>
+              <h3 class="text-xl font-bold text-gray-900">{t.title}</h3>
+              {t.standard && (
+                <span class="inline-block mt-1 px-3 py-0.5 bg-sky-50 text-sky-700 rounded-full text-xs font-mono font-medium">
+                  {t.standard}
+                </span>
+              )}
+              <p class="mt-3 text-gray-600 leading-relaxed">{t.description}</p>
+            </div>
+            <div style={i % 2 === 1 ? 'direction:ltr' : ''}>
+              <img src={t.image} alt={t.title} class="w-full h-64 object-cover rounded-xl" loading="lazy" />
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  {
+    testimonial.quote && (
+      <section class="px-6 py-16 mx-auto max-w-5xl">
+        <div class="bg-gradient-to-br from-sky-50 to-white dark:from-gray-900 dark:to-gray-950 rounded-2xl border border-sky-100 dark:border-gray-800 p-8 md:p-12">
+          <div class="grid md:grid-cols-5 gap-8 items-center">
+            <div class="md:col-span-3">
+              <span class="text-sm font-semibold text-[#06b6d4] uppercase tracking-wider">What Our Partners Say</span>
+              <blockquote class="mt-4 text-lg text-gray-700 dark:text-gray-300 leading-relaxed italic">
+                &ldquo;{testimonial.quote}&rdquo;
+              </blockquote>
+              <div class="mt-4 flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-sky-100 flex items-center justify-center text-sky-700 font-bold">
+                  {testimonial.author?.charAt(0) || 'C'}
+                </div>
+                <div>
+                  <p class="font-semibold text-gray-900 text-sm">{testimonial.author}</p>
+                  <p class="text-xs text-gray-500">
+                    {testimonial.title}, {testimonial.company} &middot; {testimonial.location}
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="md:col-span-2">
+              <div class="p-5 bg-white dark:bg-gray-900 rounded-xl border border-gray-200">
+                <h3 class="font-bold text-gray-900 text-sm">Independent Quality Lab</h3>
+                <p class="mt-2 text-sm text-gray-600 leading-relaxed">
+                  Our quality lab operates independently from production and reports directly to management. No batch is
+                  shipped without signed quality release.
+                </p>
+                <a href={lh('/trust')} class="mt-3 inline-flex text-sm font-medium text-[#06b6d4] hover:text-sky-700">
+                  See our trust certifications &rarr;
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  {
+    commitment.title && (
+      <section class="px-6 sm:px-6 py-16 mx-auto max-w-4xl">
+        <div class="rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-8">
+          <h2 class="text-2xl font-bold text-center text-gray-900">{commitment.title}</h2>
+          <p class="mt-4 text-gray-600 leading-relaxed text-center max-w-3xl mx-auto">{interp(commitment.body)}</p>
+          <div class="text-center mt-8">
+            <a
+              href={lh(commitment.cta_link)}
+              class="inline-block px-6 py-3 bg-[#06b6d4] text-white font-semibold rounded-md hover:bg-[#0891b2] transition-colors"
+            >
+              {commitment.cta} &rarr;
+            </a>
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  <TrustBadges layout="row" bg="max-w-6xl mx-auto px-6 py-12" />
+
+  <section class="px-6 pb-20 mx-auto max-w-4xl">
+    <div class="flex flex-wrap justify-center gap-3 text-sm">
+      <span class="text-gray-400 font-medium">Explore more:</span>
+      <a
+        href={lh('/trust')}
+        class="px-3 py-1.5 bg-white rounded-lg border border-gray-200 text-gray-700 hover:border-sky-300 hover:text-sky-600 transition-colors"
+        >Certifications &amp; Trust &rarr;</a
+      >
+      <a
+        href={lh('/engineering-team')}
+        class="px-3 py-1.5 bg-white rounded-lg border border-gray-200 text-gray-700 hover:border-sky-300 hover:text-sky-600 transition-colors"
+        >Engineering Team &rarr;</a
+      >
+      <a
+        href={lh('/randdcenter')}
+        class="px-3 py-1.5 bg-white rounded-lg border border-gray-200 text-gray-700 hover:border-sky-300 hover:text-sky-600 transition-colors"
+        >R&amp;D Center &rarr;</a
+      >
+      <a
+        href={lh('/warranty')}
+        class="px-3 py-1.5 bg-white rounded-lg border border-gray-200 text-gray-700 hover:border-sky-300 hover:text-sky-600 transition-colors"
+        >Warranty &rarr;</a
+      >
+    </div>
+  </section>
+
+  <script is:inline type="application/ld+json" set:html={faqSchema} />
+</Layout>

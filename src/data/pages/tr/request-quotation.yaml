@@ -1,0 +1,306 @@
+hero_text:
+  tagline: Teklif Al
+  title: Teklif Talep Et<br />Projeniz için
+  subtitle: Bize gereksinimlerinizi anlatın, ekibimiz 2 iş günü içinde ayrıntılı bir teklif ile yanıt verecektir.
+steps2_process:
+  title: Nasıl Çalışır
+  subtitle: Soruşturmadan teklif almaya dört basit adım.
+  items:
+    - title: 'Adım 1: Gereksinimlerinizi Gönderin'
+      description: Ürün türünüzü, miktarınızı ve özelliklerinizi aşağıdaki formda doldurun. Ne kadar fazla detay verirseniz, teklifiniz o kadar doğru olur.
+      icon: tabler:file-text
+    - title: 'Adım 2: İnceliyoruz ve Tavsiye Veriyoruz'
+      description: Mühendislik ekibimiz gereksinimlerinizi gözden geçirir ve gerekirse açıklama için sizinle iletişime geçebilir. Ürün yapılandırması ve seçenekleri konusunda önerilerde bulunuruz.
+      icon: tabler:users
+    - title: 'Adım 3: Teklifinizi Alın'
+      description: Birim fiyatlandırma, MOQ, teslim süresi, ödeme koşulları ve nakliye seçeneklerini içeren ayrıntılı bir teklif alırsınız. Genellikle 48 saat içinde.
+      icon: tabler:currency-dollar
+    - title: 'Adım 4: Numune ve Üretim'
+      description: Teklif kabulünden sonra, numune üretimine (uygulanabiliyorsa) veya doğrudan seri üretime geçiyoruz. Süreç boyunca düzenli güncellemeler yapılır.
+      icon: tabler:building-factory
+content_form:
+  tagline: Teklif Formu
+  title: Projeniz Hakkında Bize Anlatın
+  subtitle: '* ile işaretli tüm alanlar zorunludur.'
+  fields:
+    - name: Ürün Kategorisi
+      type: select
+      options:
+        - RIB Tekne
+        - Şişme Bot
+        - SUP Kurulu
+        - Şişme Kano
+        - Can Yeleği
+        - Deniz Aksesuarı
+        - Özel OEM/ODM
+    - name: Başvuru
+      type: select
+      options:
+        - Dalış Merkezi
+        - Balık tutma
+        - Deniz Turizmi / Tatil Köyü
+        - Arama ve Kurtarma
+        - Yat Servis Botu
+        - Ticari İş Botu
+        - Hükümet / Askeri
+        - OEM / Özel Marka
+        - Kişisel / Eğlence
+        - Diğer
+    - name: Miktar
+      type: text
+      placeholder: o. 50 birim
+    - name: Hedef Pazar
+      type: text
+      placeholder: o. Avrupa, Kuzey Amerika, Orta Doğu
+    - name: Teslim Ülkesi
+      type: text
+      placeholder: o. İtalya, BAE, ABD, Avustralya
+    - name: Malzeme Tercihi
+      type: select
+      options:
+        - Tercih Yok
+        - Deniz Sınıfı PVC (1100 dtex)
+        - Premium Hypalon / CSM
+        - Fiberglas Gövde
+        - Alüminyum Gövde
+    - name: Motor Gereksinimi
+      type: text
+      placeholder: o. 60 HP dıştan takma, motorsuz, çift 115 HP
+    - name: Özelleştirme Gerekiyor
+      type: text
+      placeholder: o. özel renkler, marka/logo, ambalaj, özel donanım
+    - name: Zaman Çizelgesi
+      type: text
+      placeholder: o. teslimat 90 gün içinde
+    - name: Ek Gereksinimler
+      type: textarea
+      placeholder: Uygulamanızı, teknik özelliklerinizi veya özel gereksinimlerinizi açıklayın — mevcutsa referans çizimleri, teknik özellikler veya bağlantılar dahil edin
+    - name: Teknik Şartname Yükle
+      type: file
+      placeholder: Şartname sayfanızı, çiziminizi veya referans belgenizi yükleyin (PDF, DWG, DXF)
+    - name: Logo / Tasarım Yükle
+      type: file
+      placeholder: Özel markalama için logonuzu veya tasarımınızı yükleyin (AI, EPS, PNG)
+content_rfq_types:
+  tagline: 3 Katmanlı RFQ Sistemi
+  title: Doğruyu Seç<br />Soru Düzeyi
+  subtitle: Farklı projeler farklı ayrıntı seviyeleri gerektirir. Satın alma aşamanıza uyan formu seçin.
+  items:
+    - title: Hızlı Sorgulama
+      description: 5-6 alan, 30 saniye. İlk temas, genel sorular veya kaynak indirme takipleri için. Temel bilgiler ve sonraki adımlarla 24 saat içinde cevap veriyoruz.
+      icon: tabler:bolt
+    - title: Standart RFQ
+      description: 8-10 alan, 2 dakika. Model seçimi, miktar ve teslimat gereksinimleri ile belirli ürün teklifleri için. 48 saat içinde detaylı bir teklif alın.
+      icon: tabler:file-text
+    - title: Proje RFQ
+      description: 10-14 alan, 5 dakika. RIB için, özel yapılandırma, uyumluluk belgeleri ve çok yıllık tedarik planlaması gerektiren tatil köyü filosu, kurtarma veya devlet projeleri. Tahsis edilmiş proje yöneticisi atanmıştır.
+      icon: tabler:clipboard-list
+form_quick:
+  title: Hızlı Sorgulama
+  subtitle: Genel sorular ve ilk bilgi talepleri için hızlı iletişim.
+  fields:
+    - name: tamAd
+      label: Tam Ad
+      type: text
+      required: true
+      placeholder: Tam adınız
+    - name: iş e-postası
+      label: İş E-postası
+      type: email
+      required: true
+      placeholder: you@company.com
+    - name: şirketAdı
+      label: Şirket Adı
+      type: text
+      required: true
+      placeholder: Şirketiniz
+    - name: alıcıTürü
+      label: Ben bir...
+      type: select
+      required: true
+      options:
+        - Distribütör / İthalatçı
+        - Marka Sahibi / Özel Etiket
+        - Tatil Köyü / Su Merkezi
+        - Kiralama Operatörü
+        - Hükûmet / Kurtarma Ajansı
+        - Dalış / Balıkçılık Operatörü
+        - Gemi Mühendisi / Yenileyici
+        - Diğer
+    - name: ürünİlgi
+      label: Ürün İlgisi
+      type: multiselect
+      required: true
+      options:
+        - RIB Tekneler
+        - Şişme Botlar
+        - SUP Yönetim Kurulları
+        - Güvenlik Ekipmanları
+        - Aksesuarlar
+        - OEM/ODM Özel
+    - name: message
+      label: Neye ihtiyacın var?
+      type: textarea
+      required: false
+      placeholder: İhtiyaçlarınızın kısa açıklaması...
+form_standard:
+  title: Standart RFQ
+  subtitle: Belirli ürünler ve miktarlar için ayrıntılı teklif talebi.
+  fields:
+    - name: tamAd
+      label: Tam Ad
+      type: text
+      required: true
+    - name: iş e-postası
+      label: İş E-postası
+      type: email
+      required: true
+    - name: şirketAdı
+      label: Şirket Adı
+      type: text
+      required: true
+    - name: alıcıTürü
+      label: Alıcı Tipi
+      type: select
+      required: true
+    - name: productModel
+      label: Ürün Modeli / Tipi
+      type: text
+      required: true
+      placeholder: örneğin, AF580RIB, AF380 Şişirilebilir
+    - name: quantity
+      label: Tahmini Miktar
+      type: text
+      required: true
+      placeholder: örneğin, 10-20 birim
+    - name: targetMarket
+      label: Hedef Pazar / Bölge
+      type: text
+      required: true
+      placeholder: örneğin, AB, Kuzey Amerika, Orta Doğu
+    - name: teslimat zaman çizelgesi
+      label: İstenilen Teslimat
+      type: select
+      required: true
+      options:
+        - 30 gün içinde
+        - 30-60 gün
+        - 60-90 gün
+        - İleriye Planlama (90+ gün)
+        - Sadece araştırıyorum
+    - name: Uyumluluk Gerekli
+      label: Uyum Gereksinimleri
+      type: multiselect
+      required: false
+      options:
+        - CE / RCD 2013/53/AB
+        - UKCA
+        - USCG
+        - ISO 9001
+        - BSCI
+        - REACH
+        - Yok / Emin değil
+    - name: message
+      label: Ek Detaylar
+      type: textarea
+      required: false
+form_project:
+  title: Proje RFQ
+  subtitle: Filo, özel veya devlet alımları için kapsamlı proje sorgulaması.
+  fields:
+    - name: tamAd
+      label: Tam Ad
+      type: text
+      required: true
+    - name: iş e-postası
+      label: İş E-postası
+      type: email
+      required: true
+    - name: şirketAdı
+      label: Şirket Adı
+      type: text
+      required: true
+    - name: alıcıTürü
+      label: Alıcı Tipi
+      type: select
+      required: true
+    - name: projectType
+      label: Proje Türü
+      type: select
+      required: true
+      options:
+        - Tatil Köyü / Otel Filo
+        - Kiralama Filo
+        - Kurtarma / Devriye Filo
+        - Dalış Merkezi Filo
+        - Devlet Alımı
+        - Özel Marka / OEM
+        - Bayii Stok Siparişi
+        - Diğer
+    - name: boatTypes
+      label: Gerekli Tekne Türleri
+      type: multiselect
+      required: true
+      options:
+        - RIB Tekneler
+        - Şişme Botlar / Küçük Botlar
+        - SUP Yönetim Kurulları
+        - Kano
+        - Güvenlik Ekipmanları
+    - name: fleetSize
+      label: Filo Büyüklüğü / Miktar Aralığı
+      type: text
+      required: true
+      placeholder: örn., 12 ayda 20-50 adet
+    - name: customRequirements
+      label: Özel Konfigürasyon İhtiyaçları
+      type: textarea
+      required: false
+      placeholder: Gövde boyutu, tüp malzemesi, güverte düzeni, marka gereksinimleri...
+    - name: Uyumluluk Gerekli
+      label: Uyumluluk ve Sertifikasyon Gereksinimleri
+      type: multiselect
+      required: true
+      options:
+        - CE / RCD 2013/53/AB
+        - UKCA
+        - USCG Tip III/V
+        - ISO 9001
+        - BSCI
+        - REACH / RoHS
+        - Yerel pazar sertifikasyonu
+    - name: targetMarket
+      label: Hedef Pazar
+      type: text
+      required: true
+    - name: bütçeAralığı
+      label: Bütçe Aralığı
+      type: select
+      required: false
+      options:
+        - 10.000$ Altında
+        - $10,000 - $50,000
+        - $50,000 - $200,000
+        - $200,000+
+        - Söylememeyi tercih ederim
+    - name: teslimat zaman çizelgesi
+      label: Proje Zaman Çizelgesi
+      type: select
+      required: true
+      options:
+        - Acil (30 gün içinde)
+        - Standart (30-60 gün)
+        - Planlı (60-90 gün)
+        - Gelecek planlaması (90 günden fazla)
+    - name: message
+      label: Proje Detayları ve Gereksinimler
+      type: textarea
+      required: false
+      placeholder: Projenizi, uygulamanızı ve herhangi bir özel gereksinimi açıklayın...
+cta:
+  title: E-posta ile tartışmayı mı tercih edersiniz?
+  subtitle: Sorgunuzu doğrudan satış ekibimize gönderin, 24 saat içinde yanıt vereceğiz.
+  actions:
+    - variant: primary
+      text: Bize doğrudan e-posta gönderin
+      href: /contact

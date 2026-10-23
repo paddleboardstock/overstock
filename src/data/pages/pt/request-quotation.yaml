@@ -1,0 +1,306 @@
+hero_text:
+  tagline: Obtenha uma cotação
+  title: Solicite um orçamento<br />para seu projeto
+  subtitle: Conte-nos sobre suas necessidades e nossa equipe responderá com um orçamento detalhado em até 2 dias úteis.
+steps2_process:
+  title: Como funciona
+  subtitle: Quatro etapas simples, da consulta à cotação.
+  items:
+    - title: 'Etapa 1: envie seus requisitos'
+      description: Preencha o formulário abaixo com seu tipo de produto, quantidade e especificações. Quanto mais detalhes você fornecer, mais precisa será sua cotação.
+      icon: tabler:file-text
+    - title: 'Etapa 2: revisamos e aconselhamos'
+      description: Nossa equipe de engenharia analisa suas necessidades e pode entrar em contato com você para esclarecimentos. Fornecemos recomendações sobre configuração e opções de produtos.
+      icon: tabler:users
+    - title: 'Etapa 3: receba sua cotação'
+      description: Você recebe uma cotação detalhada incluindo preço unitário, MOQ, prazo de entrega, condições de pagamento e opções de envio. Normalmente em 48 horas.
+      icon: tabler:currency-dollar
+    - title: 'Etapa 4: Amostra e Produção'
+      description: Após a aceitação do orçamento, procedemos à produção de amostras (se aplicável) ou diretamente à produção em massa. Atualizações regulares ao longo do processo.
+      icon: tabler:building-factory
+content_form:
+  tagline: Formulário de cotação
+  title: Conte-nos sobre seu projeto
+  subtitle: Todos os campos com * são obrigatórios.
+  fields:
+    - name: Categoria de produto
+      type: selecione
+      options:
+        - Barco RIB
+        - Barco insuflável
+        - Prancha SUP
+        - Caiaque insuflável
+        - Colete salva-vidas
+        - Acessório marinho
+        - OEM/ODM personalizado
+    - name: Aplicativo
+      type: selecione
+      options:
+        - Centro de Mergulho
+        - Pesca
+        - Turismo Marítimo / Resort
+        - Busca e Salvamento
+        - Tender de Iate
+        - Barco de trabalho comercial
+        - Governo / Militar
+        - OEM / Marca Própria
+        - Pessoal / Recreativo
+        - Outro
+    - name: Quantidade
+      type: texto
+      placeholder: por exemplo 50 unidades
+    - name: Mercado-alvo
+      type: texto
+      placeholder: por exemplo Europa, América do Norte, Médio Oriente
+    - name: País de entrega
+      type: texto
+      placeholder: por exemplo Itália, Emirados Árabes Unidos, EUA, Austrália
+    - name: Preferência de materiais
+      type: selecione
+      options:
+        - Sem Preferência
+        - PVC de Grau Marinho (1100 dtex)
+        - Hypalon Premium / CSM
+        - Casco de Fibra de Vidro
+        - Casco de Alumínio
+    - name: Requisito do motor
+      type: texto
+      placeholder: por exemplo Motor de popa de 60 HP, sem motor, duplo 115 HP
+    - name: Personalização necessária
+      type: texto
+      placeholder: por exemplo cores personalizadas, marca/logotipo, embalagem, acessórios especiais
+    - name: Linha do tempo
+      type: texto
+      placeholder: por exemplo entrega em 90 dias
+    - name: Requisitos Adicionais
+      type: área de texto
+      placeholder: Descreva sua aplicação, especificações técnicas ou quaisquer requisitos especiais — inclua desenhos de referência, especificações ou links, se disponíveis
+    - name: Especificação de upload
+      type: arquivo
+      placeholder: Carregue sua folha de especificações, desenho ou documento de referência (PDF, DWG, DXF)
+    - name: Carregar logotipo/arte
+      type: arquivo
+      placeholder: Faça upload do seu logotipo ou arte para uma marca personalizada (AI, EPS, PNG)
+content_rfq_types:
+  tagline: Sistema de RFQ de 3 níveis
+  title: Escolha o<br />Nível de Consulta Correto
+  subtitle: Diferentes projetos precisam de diferentes níveis de detalhe. Selecione o formulário que corresponde ao seu estágio de compra.
+  items:
+    - title: Consulta rápida
+      description: 5-6 campos, 30 segundos. Para contato inicial, dúvidas gerais ou acompanhamento de download de recursos. Respondemos dentro de 24 horas com informações básicas e próximos passos.
+      icon: tabler:bolt
+    - title: RFQ padrão
+      description: 8 a 10 campos, 2 minutos. Para cotações de produtos específicos com requisitos de seleção de modelo, quantidade e entrega. Receba um orçamento detalhado em 48 horas.
+      icon: tabler:file-text
+    - title: Solicitação de cotação do projeto
+      description: 10-14 campos, 5 minutos. Para RIB, frota de resort, resgate ou projetos governamentais que exigem configuração personalizada, documentação de conformidade e planejamento de fornecimento plurianual. Gerente de projeto dedicado designado.
+      icon: tabler:clipboard-list
+form_quick:
+  title: Consulta rápida
+  subtitle: Contato rápido para dúvidas gerais e pedidos de informações iniciais.
+  fields:
+    - name: nome completo
+      label: Nome completo
+      type: texto
+      required: true
+      placeholder: Seu nome completo
+    - name: e-mail comercial
+      label: E-mail comercial
+      type: e-mail
+      required: true
+      placeholder: você@empresa.com
+    - name: nome da empresa
+      label: nome da empresa
+      type: texto
+      required: true
+      placeholder: Sua empresa
+    - name: compradorType
+      label: Eu sou um...
+      type: selecione
+      required: true
+      options:
+        - Distribuidor / Importador
+        - Proprietário de Marca / Marca Própria
+        - Resort / Centro Aquático
+        - Operador de Aluguer
+        - Governo / Agência de Resgate
+        - Operador de Mergulho / Pesca
+        - Engenheiro marítimo / especialista em refit
+        - Outro
+    - name: interesse do produto
+      label: Interesse no produto
+      type: seleção múltipla
+      required: true
+      options:
+        - Barcos RIB
+        - Barcos insufláveis
+        - Pranchas SUP
+        - Equipamento de Segurança
+        - Acessórios
+        - OEM/ODM personalizado
+    - name: mensagem
+      label: O que você precisa?
+      type: área de texto
+      required: false
+      placeholder: Breve descrição de suas necessidades...
+form_standard:
+  title: RFQ padrão
+  subtitle: Solicitação de orçamento detalhado para produtos e quantidades específicas.
+  fields:
+    - name: nome completo
+      label: Nome completo
+      type: texto
+      required: true
+    - name: e-mail comercial
+      label: E-mail comercial
+      type: e-mail
+      required: true
+    - name: nome da empresa
+      label: nome da empresa
+      type: texto
+      required: true
+    - name: compradorType
+      label: Tipo de comprador
+      type: selecione
+      required: true
+    - name: modelo de produto
+      label: Modelo/Tipo de Produto
+      type: texto
+      required: true
+      placeholder: por exemplo, AF580 RIB, AF380 inflável
+    - name: quantidade
+      label: Quantidade estimada
+      type: texto
+      required: true
+      placeholder: por exemplo, 10-20 unidades
+    - name: mercado alvo
+      label: Mercado alvo/região
+      type: texto
+      required: true
+      placeholder: por exemplo, UE, América do Norte, Oriente Médio
+    - name: Cronograma de entrega
+      label: Entrega Desejada
+      type: selecione
+      required: true
+      options:
+        - Em até 30 dias
+        - 30-60 dias
+        - 60-90 dias
+        - Planeamento Antecipado (90+ dias)
+        - Apenas em pesquisa
+    - name: conformidadeObrigatório
+      label: Requisitos de conformidade
+      type: seleção múltipla
+      required: false
+      options:
+        - CE / RCD 2013/53/EU
+        - UKCA
+        - USCG
+        - ISO 9001
+        - BSCI
+        - REACH
+        - Nenhuma / Não tenho certeza
+    - name: mensagem
+      label: Detalhes Adicionais
+      type: área de texto
+      required: false
+form_project:
+  title: Solicitação de cotação do projeto
+  subtitle: Consulta abrangente de projetos para frotas, alfândegas ou compras governamentais.
+  fields:
+    - name: nome completo
+      label: Nome completo
+      type: texto
+      required: true
+    - name: e-mail comercial
+      label: E-mail comercial
+      type: e-mail
+      required: true
+    - name: nome da empresa
+      label: nome da empresa
+      type: texto
+      required: true
+    - name: compradorType
+      label: Tipo de comprador
+      type: selecione
+      required: true
+    - name: tipo de projeto
+      label: Tipo de projeto
+      type: selecione
+      required: true
+      options:
+        - Frota de Resort / Hotel
+        - Frota de Aluguer
+        - Frota de Resgate / Patrulha
+        - Frota de Centro de Mergulho
+        - Contratação pública
+        - Marca Própria / OEM
+        - Encomenda de Stock para Revendedor
+        - Outro
+    - name: tipos de barco
+      label: Tipos de barco necessários
+      type: seleção múltipla
+      required: true
+      options:
+        - Barcos RIB
+        - Barcos insufláveis / Dingues
+        - Pranchas SUP
+        - Caiaques
+        - Equipamento de Segurança
+    - name: frotaSize
+      label: Tamanho da frota/faixa de quantidade
+      type: texto
+      required: true
+      placeholder: por exemplo, 20-50 unidades em 12 meses
+    - name: requisitos personalizados
+      label: Necessidades de configuração personalizada
+      type: área de texto
+      required: false
+      placeholder: Tamanho do casco, material do tubo, layout do convés, requisitos de marca...
+    - name: conformidadeObrigatório
+      label: Requisitos de conformidade e certificação
+      type: seleção múltipla
+      required: true
+      options:
+        - CE / RCD 2013/53/EU
+        - UKCA
+        - USCG Type III/V
+        - ISO 9001
+        - BSCI
+        - REACH / RoHS
+        - Certificação do Mercado Local
+    - name: mercado alvo
+      label: Mercado-alvo
+      type: texto
+      required: true
+    - name: faixa de orçamento
+      label: Faixa de orçamento
+      type: selecione
+      required: false
+      options:
+        - Menos de $10,000
+        - $10,000 - $50,000
+        - $50,000 - $200,000
+        - $200,000+
+        - Prefiro não dizer
+    - name: Cronograma de entrega
+      label: Cronograma do Projeto
+      type: selecione
+      required: true
+      options:
+        - Urgente (em até 30 dias)
+        - Padrão (30-60 dias)
+        - Planeado (60-90 dias)
+        - Planeamento Futuro (90+ dias)
+    - name: mensagem
+      label: Detalhes e requisitos do projeto
+      type: área de texto
+      required: false
+      placeholder: Descreva seu projeto, aplicação e quaisquer requisitos específicos...
+cta:
+  title: Prefere discutir por e-mail?
+  subtitle: Envie sua consulta diretamente para nossa equipe de vendas e responderemos em 24 horas.
+  actions:
+    - variant: primary
+      text: Envie-nos um e-mail diretamente
+      href: /contact

@@ -1,0 +1,197 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'ar' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">← العودة إلى مركز البحث والتطوير</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">معمل 06</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">معمل الجودة والفحص</h1>
+      <p class="mt-3 text-lg text-muted">التحقق المستقل - تم اجتياز كل اختبار قبل التسليم</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-uv-resistance-testing.webp"
+        alt="Aquafarer مختبر فحص الجودة UV الاختبار"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>ثق، ولكن تحقق</h2>
+  <p>
+    يحمل كل قارب يغادر ورشة العمل لدينا شهادة بأنه اجتاز مجموعة محددة من فحوصات الجودة واختبارات المواد. يعد مختبر
+    الجودة والفحص الخاص بنا بمثابة وظيفة مستقلة داخل المنظمة - فهو يقدم تقاريره مباشرة إلى المدير الإداري، وليس إلى
+    الإنتاج - مما يضمن عدم تعرض أي ضغط تجاري للإضرار ببوابة التفتيش. إذا كانت مجموعة المواد أو القارب المكتمل لا يستوفي
+    المواصفات المنشورة، فإن المختبر لديه السلطة لإيقاف الشحن حتى يتم حل عدم المطابقة.
+  </p>
+  <p>
+    يعمل المختبر وفقًا لنظام إدارة الجودة المتوافق مع المبادئ، وتعتمد طرق الاختبار لدينا على معايير ISO وASTM وEN حيثما
+    ينطبق ذلك. نحن نحتفظ بسجلات مفصلة لكل اختبار يتم إجراؤه، مما يؤدي إلى إنشاء سلسلة تتبع كاملة بدءًا من استلام المواد
+    الخام وحتى تسليم القارب النهائي.
+  </p>
+
+  <h2>معدات الاختبار والقدرات</h2>
+  <table>
+    <thead><tr><th>معدات</th><th>تم إجراء الاختبارات</th><th>المعيار / الطريقة</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>آلة الاختبار العالمية (50 كيلو نيوتن)</td><td
+          >قوة الشد (النسيج)، مقاومة التقشير (الدرزات)، انتشار التمزق</td
+        ><td>, ISO 4674</td></tr
+      >
+      <tr
+        ><td>جهاز اختبار احتباس الهواء (قابل للبرمجة)</td><td>1000-دورة التضخم/تحمل الانكماش، 24-48 h اختبار الضغط</td
+        ><td> (داخلي)</td></tr
+      >
+      <tr
+        ><td>رقصة تقشير التماس (قشرة آلية 180°)</td><td>قوة تقشير اللحام والغراء عند 100 mm/دقيقة</td><td>
+          / أستم D1876</td
+        ></tr
+      >
+      <tr
+        ><td>جهاز اختبار الرأس الهيدروستاتيكي</td><td>مقاومة اختراق الماء للنسيج (0 — 00 ملي بار)</td><td>ISO 811</td
+        ></tr
+      >
+      <tr
+        ><td>مقياس السماكة الرقمي والميكرومتر</td><td>سمك النسيج، سمك جدار الأنبوب، سمك الفيلم اللاصق</td><td
+          >ISO 2286-3</td
+        ></tr
+      >
+      <tr
+        ><td>الغرفة البيئية</td><td
+          >تكييف درجة الحرارة (-40 درجة مئوية إلى +80 درجة مئوية) لاختبارات التشقق البارد والشيخوخة الحرارية</td
+        ><td>ISO 188, ISO 4675</td></tr
+      >
+      <tr><td>مقياس الطيف الضوئي الملون</td><td>قياس لون Delta-E بعد التعرض UV</td><td>ISO 105-A05 / ASTM D2244</td></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>بوابات التفتيش – من المواد إلى التسليم</h2>
+  <p>
+    يتبع كل قارب خطة جودة محددة مع نقاط تفتيش إلزامية. لا يمكن لأي قارب أن يتخطى البوابة؛ يجب أن يتم التوقيع على كل
+    بوابة من قبل مفتش الجودة قبل بدء مرحلة الإنتاج التالية.
+  </p>
+
+  <div class="not-prose my-8">
+    <div class="relative">
+      <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-blue-200 dark:bg-blue-800"></div>
+      <div class="space-y-6 relative">
+        {
+          [
+            {
+              gate: 'Gate 1',
+              label: 'Incoming material inspection',
+              desc: 'Fabric batch, adhesive batch, hardware — all checked against incoming specification before release to production.',
+            },
+            {
+              gate: 'Gate 2',
+              label: 'In-process weld inspection',
+              desc: 'First-off weld coupon tested (peel + visual) at start of each production shift.',
+            },
+            {
+              gate: 'Gate 3',
+              label: 'Chamber air test',
+              desc: 'Each chamber pressurised to 1.25 x working pressure, held 24-48 h. Data logged per serial number.',
+            },
+            {
+              gate: 'Gate 4',
+              label: 'Pre-delivery inspection',
+              desc: 'Complete boat inspected: all fasteners torqued, systems functional, no cosmetic defects. 100-point checklist.',
+            },
+            {
+              gate: 'Gate 5',
+              label: 'Final certification',
+              desc: 'Test reports compiled, inspection records reviewed, Certificate of Conformance issued.',
+            },
+          ].map((g) => (
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs font-bold z-10">
+                {g.gate}
+              </div>
+              <div class="flex-1 p-3 rounded-lg bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800">
+                <p class="text-sm font-semibold">{g.label}</p>
+                <p class="text-xs text-gray-500 mt-1">{g.desc}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+
+  <h2>مقاييس الجودة الرئيسية (2025 المتوسط المتداول)</h2>
+  <div class="not-prose my-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">99.7 %</span>
+      <span class="text-xs text-gray-500">إنتاجية التمريرة الأولى (دفعة القماش)</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">&lt; 0.2 %</span>
+      <span class="text-xs text-gray-500">معدل رفض اللحام (المتر الخطي)</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">100 %</span>
+      <span class="text-xs text-gray-500">تم اختبار الغرف بالهواء قبل التجميع</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600"></span>
+      <span class="text-xs text-gray-500">الامتثال لفئة التصميم</span>
+    </div>
+  </div>
+
+  <h2>فريق الجودة لدينا</h2>
+  <p>
+    يعمل في المختبر مدير جودة (10 سنة في ضمان الجودة البحرية، ومهندس جودة معتمد من ASQ)، واثنين من مفتشي الجودة (كل
+    منهما حاصل على شهادة المستوى 2 NDT في الاختبار البصري)، وفني مواد مسؤول عن جميع الاختبارات المادية. يخضع الفريق
+    لاختبار الكفاءة السنوي من خلال مزود طرف ثالث مستقل للتأكد من أن نتائج الاختبار لدينا تظل دقيقة وقابلة للتكرار.
+  </p>
+
+  <h2>اختبار مستقل للعملاء</h2>
+  <p>
+    مختبر الجودة والفحص الخاص بنا متاح لخدمات الاختبار المستقلة. إذا كنت بحاجة إلى التحقق من مواصفات النسيج، أو التحقق
+    من صحة نظام لاصق جديد، أو الحصول على تقرير اختبار من طرف ثالث لمؤهلات الشراء، فيمكننا إجراء الاختبارات وفقًا
+    للمعايير المعمول بها وإصدار تقرير اختبار معتمد.
+  </p>
+  <p>أمثلة على أعمال اختبار الطرف الثالث الأخيرة:</p>
+  <ul>
+    <li>مقارنة قوة التقشير لخمسة منتجات أفلام لاصقة تنافسية لبرنامج المشتريات العسكرية الأوروبية.</li>
+    <li>
+      دراسة الشيخوخة المتسارعة (UV + التدوير الحراري) لتركيبة جديدة ذات صبغة برتقالية PVC، مع قياسات مؤقتة منتظمة على
+      فترات 500 ساعة.
+    </li>
+    <li>التحقق من صحة احتباس الهواء للصمامات الحاجزة النموذجية 50 لتصميم أنبوب الضغط العالي الجديد.</li>
+  </ul>
+
+  <h2>التزامنا تجاهك</h2>
+  <p>
+    عندما تتلقى أ {SITE.name} القارب، ستتلقى أيضًا ملف الجودة الخاص به - وهو سجل مجمع لنتائج الاختبار التي تنطبق على القارب
+    الخاص بك. شهادة دفعة القماش، واختبارات تقشير اللحام، وسجلات اختبار هواء الغرفة، وقائمة فحص الفحص قبل التسليم. كل رقم يمكن
+    تتبعه. يتم تحديد هوية كل مفتش. هذه ليست مجرد أوراق، بل هي وعدنا بأن ما قمنا بتسليمه هو ما حددناه.
+  </p>
+  <p>
+    إذا كانت لديك أي مخاوف تتعلق بالجودة، يمكنك الاتصال بالمختبر مباشرة - تتم طباعة تفاصيل الاتصال على شهادة المطابقة
+    الخاصة بك. نحن نأخذ كل استفسار على محمل الجد ونلتزم بإجراء تحقيق رسمي خلال 48 ساعات.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">هل تحتاج إلى اختبار مستقل أو التحقق من الجودة؟</h2>
+    <p class="mt-2 text-sm text-muted">
+      يقبل مختبرنا أعمال الاختبار التي تجريها جهات خارجية - اتصل بنا وأخبرنا بمتطلباتك.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >اتصل بمختبر الجودة</a
+    >
+  </div>
+</section>

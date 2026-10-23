@@ -1,0 +1,60 @@
+hero:
+  tagline: Laboratorium for kvalitetskontroll
+  title: Testlaboratorium & kvalitetssikring
+  subtitle: Uavhengig kvalitetslaboratorium med ISO 9001-prosesser — hver enhet testes før forsendelse
+
+intro: Aquafarer driver et eget kvalitetskontrollaboratorium som arbeider uavhengig av produksjonen. Hvert parti råstoff og hver ferdig båt går gjennom dokumenterte inspeksjonsprotokoller før frigivelse. Vårt QC-team rapporterer direkte til ledelsen, noe som sikrer upartiske kvalitetsbeslutninger.
+
+highlights:
+  - value: 100%
+    label: Enheter trykktestet
+    detail: Hvert kammer, hver båt
+  - value: 48 h
+    label: Varighet for luftretensjonstest
+    detail: Ved 1,25× nominelt trykk
+  - value: '&lt;5%'
+    label: Maks tillatt trykkfall
+    detail: Over en 24-timers holdetid
+  - value: AQL 2.5
+    label: Grenseverdi for store feil
+    detail: Etter ISO 2859-prøvetaking
+
+test_procedures:
+  - title: Råstoffinspeksjon
+    description: Hvert inngående parti av PVC, Hypalon, drop-stitch-stoff og beslag testes før godkjenning. Strekkfasthet (ASTM D751), rivfasthet (ISO 4674) og UV-motstand verifiseres. Ikke-konforme materialer settes i karantene og returneres.
+    standards:
+      - ASTM D751 (strekk)
+      - ISO 4674 (riving)
+      - ISO 4892 (UV)
+  - title: QC-kontrollpunkter i prosessen
+    description: Produksjonsoperatører utfører egenkontroll i hvert trinn. QC-auditører gjennomfører tilfeldig prøvetaking gjennom skiftet. Sveisekløyvingstester utføres hver 50. enhet. Dimensjonskontroller gjøres ved hvert 20. panel.
+    standards:
+      - ASTM D751 (kløyving)
+      - Intern 100-punkts sjekkliste
+      - ISO 2859-prøvetaking
+  - title: 48-timers luftretensjonstest
+    description: Hvert tubekammer blåses opp til 125% av nominelt trykk og holdes i 48 timer. Trykksensorer logger kontinuerlig med temperaturkompensasjon. Et kammer som overskrider 5% trykkfall utløser automatisk reinspeksjon av partiet.
+    standards:
+      - ISO 6185
+      - CE 2013/53/EU
+  - title: Belastnings- & balansetest
+    description: Ferdige båter testes ved maksimal nominell kapasitet for stabilitet, fribord og gangegenskaper. Hvert fartøy gjennomgår vanntest før godkjenning i sluttinspeksjonen.
+    standards:
+      - ISO 12217
+      - CE 2013/53/EU
+
+equipment:
+  - name: Universell testmaskin (strekk)
+    spec: 5 kN, i samsvar med ASTM D751
+  - name: Trykkfallstester
+    spec: Flerkanals, 0–50 psi, datalogging
+  - name: UV-aldringskammer
+    spec: ISO 4892, 1,000 h-sykluser
+  - name: Tykkelsmåler (digital)
+    spec: Oppløsning 0,01 mm
+  - name: Kløyvingstester (sveis)
+    spec: Motorisert, 50 N kapasitet
+  - name: Temperaturkammer
+    spec: "-40 °C til +100 °C"
+  - name: Tank for lekkasjedeteksjon
+    spec: 6 m × 2 m, belyst

@@ -1,0 +1,42 @@
+---
+import Hero from '~/components/widgets/Hero.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+import { getPageContent, setPageContentData } from '~/i18n/page-content';
+import __pageData from '~/i18n/generated/pages/partners.ts';
+
+const lang = 'en';
+setPageContentData(__pageData);
+const page = getPageContent(lang, 'partners');
+
+const hero = page.hero ?? {};
+const benefits = page.features3_benefits ?? {};
+const how = page.steps2_how ?? {};
+const cta2 = page.cta2 ?? {};
+const cta = page.cta ?? {};
+const ctaActions = cta.actions?.map((a: any) => ({ ...a, href: a.href }));
+const cta2Actions = cta2.actions?.map((a: any) => ({ ...a, href: a.href }));
+
+const metadata = {
+  title: `Partner Program — ${SITE.name}`,
+  description: hero.subtitle || '',
+};
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Partners' }];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <Hero tagline={hero.tagline} title={hero.title} subtitle={hero.subtitle} />
+  <Features3
+    tagline={benefits.tagline}
+    title={benefits.title}
+    subtitle={benefits.subtitle}
+    items={benefits.items}
+    columns={benefits.columns}
+  />
+  <Steps2 tagline={how.tagline} title={how.title} subtitle={how.subtitle} items={how.items} image={how.image} />
+  <CallToAction title={cta2.title} subtitle={cta2.subtitle} actions={cta2Actions} />
+  <CallToAction title={cta.title} subtitle={cta.subtitle} actions={ctaActions} />
+</Layout>

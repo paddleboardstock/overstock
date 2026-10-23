@@ -1,0 +1,130 @@
+hero_text:
+  tagline: Kontak
+  title: HUBUNGI KAMI
+contact_form:
+  id: form
+  title: Kirimkan pesan kepada kami
+  subtitle: Untuk penawaran, pertanyaan teknis, atau permintaan kemitraan, kirimkan pesan kepada kami. Kami akan membalas dalam satu hari kerja.
+  email_to: info@aquafarer.com
+  submit_button: Kirim Permintaan → Dapatkan Penawaran
+  success_message: Terima kasih! Pesan Anda telah masuk ke kotak masuk kami. Kami akan membalas dalam satu hari kerja.
+  error_message: Ada kesalahan saat mengirim pesan Anda. Silakan coba lagi atau kirim email langsung kepada kami.
+  default_country_code: '+1'
+  captcha:
+    label: 'Anti-spam: silakan selesaikan berikut ini'
+  fields:
+    - name: firstName
+      label: Nama Depan
+      row: 1
+    - name: lastName
+      label: Nama Belakang
+      row: 1
+    - name: companyName
+      label: Nama Perusahaan
+      row: 2
+    - name: address
+      label: Alamat
+      row: 3
+    - name: zip
+      label: Kode Pos
+      row: 4
+    - name: country
+      label: Negara
+      row: 4
+      type: select
+      optionsKey: countries
+    - name: email
+      label: E-mail
+      row: 5
+      type: email
+    - name: tel
+      label: TEL
+      row: 5
+      type: tel
+      withCountryCode: true
+    - name: orderVolume
+      label: Perkiraan Volume Pesanan
+      row: 6
+      type: select
+      options:
+        - value: ''
+          label: Pilih perkiraan volume Anda...
+        - value: sample
+          label: Hanya Sampel / Prototipe
+        - value: 5-10
+          label: 5–10 unit (Standar MOQ)
+        - value: 100-500
+          label: 100–500 unit
+        - value: 500-plus
+          label: 500+ unit (Harga khusus volume)
+    - name: customization
+      label: Perlu Kustomisasi?
+      row: 7
+      type: select
+      options:
+        - value: ''
+          label: Pilih jenis kustomisasi...
+        - value: none
+          label: Produk standar (tanpa kustomisasi)
+        - value: logo
+          label: Logo / Merek Kustom saja
+        - value: full
+          label: Lengkap OEM (ukuran, warna, grafis, kemasan)
+        - value: consultation
+          label: Tidak yakin — perlu konsultasi
+    - name: minatProduk
+      label: Kategori Produk yang Menarik
+      row: 8
+      type: select
+      options:
+        - value: ''
+          label: Pilih kategori produk...
+        - value: all
+          label: Semua produk / Katalog lengkap
+        - value: sup
+          label: SUP Papan / Papan Dayung
+        - value: kayak
+          label: Perahu Kano Tiup
+        - value: rib
+          label: RIB Perahu
+        - value: dinghy
+          label: Perahu Kecil / Perahu Tunda
+        - value: safety
+          label: Peralatan Keselamatan / Pelampung
+        - value: accessory
+          label: Aksesori (pompa, dayung, tas)
+    - name: subject
+      label: Subjek
+      row: 9
+    - name: message
+      label: Pesan
+      row: 10
+      type: textarea
+      rows: 6
+features2_other_ways:
+  title: Cara lain untuk menghubungi kami
+  columns: 3
+  items:
+    - title: Pertanyaan penjualan
+      description: Kutipan, konfigurasi, aplikasi dealer, dan pesanan dalam jumlah besar.
+      icon: tabler:shopping-bag
+    - title: Dukungan teknis
+      description: Garansi, perbaikan, suku cadang, dan pertanyaan operasional.
+      icon: tabler:tool
+    - title: Pers dan kemitraan
+      description: Kit media, sponsor, dan kolaborasi industri.
+      icon: tabler:news
+    - title: Telepon
+      description: +1 279 732 3333 (Kantor Pusat AS) · +86 13305324192 (pabrik)
+      icon: tabler:headset
+    - title: Surel
+      description: info@aquafarer.com
+      icon: tabler:mail
+    - title: Kantor Pusat & Penagihan
+      description: Aquafarer LLC, New Mexico, Amerika Serikat
+      icon: tabler:map-pin
+map:
+  title: Lokasi Kami
+  subtitle: Kunjungi pusat manufaktur kami di Qingdao
+  address: Zona Pengembangan Ekonomi, Laixi, Qingdao, Cina, 266600
+  zoom: 15

@@ -1,0 +1,130 @@
+hero_text:
+  tagline: Контакт
+  title: СВЪРЖЕТЕ СЕ С НАС
+contact_form:
+  id: form
+  title: Изпратете ни съобщение
+  subtitle: За цитати, технически въпроси или запитвания за партньорство, пишете ни. Отговаряме в рамките на един работен ден.
+  email_to: info@aquafarer.com
+  submit_button: Изпратете запитване → Получете оферта
+  success_message: Благодарим! Вашето съобщение е получено във входящата ни поща. Ще отговорим в рамките на един работен ден.
+  error_message: Нещо се обърка при изпращането на вашето съобщение. Моля, опитайте отново или ни изпратете имейл директно.
+  default_country_code: '+1'
+  captcha:
+    label: 'Антиспам: моля, решете следното'
+  fields:
+    - name: първоИме
+      label: Собствено име
+      row: 1
+    - name: фамилия
+      label: Фамилия
+      row: 1
+    - name: имеНаФирмата
+      label: Име на компанията
+      row: 2
+    - name: address
+      label: Адрес
+      row: 3
+    - name: zip
+      label: Пощенски код
+      row: 4
+    - name: country
+      label: Държава
+      row: 4
+      type: select
+      optionsKey: countries
+    - name: email
+      label: Имейл
+      row: 5
+      type: email
+    - name: tel
+      label: Тел
+      row: 5
+      type: tel
+      withCountryCode: true
+    - name: обем на поръчката
+      label: Прогнозен обем на поръчката
+      row: 6
+      type: select
+      options:
+        - value: ''
+          label: Изберете вашия приблизителен обем...
+        - value: sample
+          label: Само проби / прототипи
+        - value: 5-10
+          label: 5–10 единици (Стандарт MOQ)
+        - value: 100-500
+          label: 100–500 единици
+        - value: 500-plus
+          label: 500+ единици (Обемно ценообразуване)
+    - name: customization
+      label: Необходима ли е персонализация?
+      row: 7
+      type: select
+      options:
+        - value: ''
+          label: Изберете тип персонализация...
+        - value: none
+          label: Стандартен продукт (без персонализация)
+        - value: logo
+          label: Само персонализирано лого / брандиране
+        - value: full
+          label: Пълно OEM (размер, цвят, графики, опаковка)
+        - value: consultation
+          label: Не съм сигурен — нуждая се от консултация
+    - name: интерес към продукта
+      label: Категории продукти, които представляват интерес
+      row: 8
+      type: select
+      options:
+        - value: ''
+          label: Изберете категория продукт...
+        - value: all
+          label: Всички продукти / Пълен каталог
+        - value: sup
+          label: SUP Дъски / Падълбордове
+        - value: kayak
+          label: Надуваеми каяци
+        - value: rib
+          label: RIB Лодки
+        - value: dinghy
+          label: Дингита / Тендери
+        - value: safety
+          label: Съоръжения за безопасност / Спасителни жилетки
+        - value: accessory
+          label: Аксесоари (помпи, гребла, чанти)
+    - name: subject
+      label: Тема
+      row: 9
+    - name: message
+      label: Съобщение
+      row: 10
+      type: textarea
+      rows: 6
+features2_other_ways:
+  title: Други начини да ни достигнете
+  columns: 3
+  items:
+    - title: Запитвания за продажби
+      description: Оферти, конфигурации, заявления за дилъри и поръчки на едро.
+      icon: tabler:shopping-bag
+    - title: Техническа поддръжка
+      description: Гаранция, ремонти, резервни части и въпроси относно експлоатацията.
+      icon: tabler:tool
+    - title: Преса и партньорства
+      description: Медийни пакети, спонсорство и индустриално сътрудничество.
+      icon: tabler:news
+    - title: Телефон
+      description: +1 279 732 3333 (САЩ главен офис) · +86 13305324192 (фабрика)
+      icon: tabler:headset
+    - title: Имейл
+      description: info@aquafarer.com
+      icon: tabler:mail
+    - title: Глобален главен офис и фактуриране
+      description: Aquafarer LLC, Ню Мексико, Съединени щати
+      icon: tabler:map-pin
+map:
+  title: Нашето местоположение
+  subtitle: Посетете нашия производствен център в Цингдао
+  address: Икономическа зона за развитие, Лайси, Цингдао, Китай, 266600
+  zoom: 15

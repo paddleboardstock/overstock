@@ -1,0 +1,189 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+import { languages } from '~/i18n/config';
+import { getPageContent, setPageContentData } from '~/i18n/page-content';
+import __pageData from '~/i18n/generated/pages/factory-process.ts';
+import { localizePageTitle, localizePageDescription } from '~/i18n/page-title';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+import Tldr from '~/components/common/Tldr.astro';
+import TrustBadges from '~/components/common/TrustBadges.astro';
+
+interface ProcessStep {
+  step: string | number;
+  title: string;
+  duration: string;
+  description: string;
+}
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => getUiForLang(lang)?.[key] || '';
+setPageContentData(__pageData);
+const page = getPageContent(lang, 'factory-process');
+
+const hero: Record<string, string> = page.hero ?? {};
+const intro: string = page.intro ?? '';
+const steps: ProcessStep[] = page.steps ?? [];
+const cta: Record<string, string> = page.cta ?? {};
+
+const crumbs = [
+  { name: t('nav.home') || 'Home', href: '/' + lang + '/' },
+  { name: 'Factory', href: '/' + lang + '/factory' },
+  { name: hero.title },
+];
+
+const metadata = {
+  title: localizePageTitle(page, 'Manufacturing Process \u2014 From Raw Material to Finished Boat | ' + SITE.name),
+  description: localizePageDescription(
+    page,
+    SITE.name +
+      ' manufacturing process: material inspection, PVC automatic cutting, fiberglass lay-up, heat sealing, SUP digital printing, assembly, quality testing, and shipping.'
+  ),
+};
+
+const tldrSummary =
+  'Aquafarer follows a rigorous multi-stage manufacturing process from raw material inspection through cutting, welding, printing, assembly, 1.25x rated pressure testing, and final QC. ISO 9001:2015 certified. 99.3% defect-free rate per AQL 2.5 / ISO 2859.';
+
+const tldrPoints: string[] = [
+  'Raw material inspection: tensile, tear, UV testing',
+  'Automatic CNC cutting and high-frequency RF welding',
+  'Digital UV printing and custom branding',
+  '1.25x rated pressure hold for 24-48h on every unit',
+  '100-point final inspection with AQL 2.5 sampling',
+];
+
+const faqSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is the Aquafarer manufacturing process?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Multi-stage process: material inspection, CNC cutting, RF welding, printing/branding, assembly, 1.25x pressure testing, and 100-point final inspection per AQL 2.5 / ISO 2859.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How long does production take?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Standard orders: 30-45 days. Rush orders: 15-20 days with priority surcharge. Sample production: 7-14 days after design approval.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What quality checks are performed?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Material tensile/tear/UV testing, weld peel testing, backlight seam inspection, 24-48h pressure hold at 1.25x rated, and 100-point final checklist.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the defect-free rate?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: '99.3% defect-free rate measured per AQL 2.5 / ISO 2859 statistical sampling methodology.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I visit the factory during production?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. We welcome on-site and third-party factory audits. Virtual video tours also available. See our Factory Audit page for preparation checklist.',
+      },
+    },
+  ],
+});
+
+const howtoSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'Aquafarer Manufacturing Process',
+  description: 'Multi-stage manufacturing process from raw material to finished boat.',
+  step: steps.map((s: ProcessStep, i: number) => ({
+    '@type': 'HowToStep',
+    position: i + 1,
+    name: s.title,
+    text: s.description,
+  })),
+});
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+    <a href={'/' + lang + (hero.back_link || '/factory')} class="text-sm text-gray-500 hover:underline"
+      >&larr; {hero.back_label || 'Back to Factory'}</a
+    >
+    <div class="mt-4 max-w-3xl">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">{hero.tagline}</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">{hero.title}</h1>
+      <p class="mt-3 text-lg text-muted">{hero.subtitle}</p>
+    </div>
+  </section>
+
+  <section class="px-6 sm:px-6 pb-8 mx-auto max-w-4xl">
+    <Tldr summary={tldrSummary} points={tldrPoints} />
+  </section>
+
+  <section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl">
+    <div class="bg-blue-50/60 dark:bg-slate-800/40 border-l-4 border-blue-500 rounded-r-xl px-6 py-4">
+      <p class="text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider mb-2">
+        Quick Answer &mdash; AI Summary
+      </p>
+      <p class="text-sm text-gray-700 dark:text-slate-300 leading-relaxed">{tldrSummary}</p>
+    </div>
+  </section>
+
+  <section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl">
+    <p class="text-muted leading-relaxed mb-12">
+      {intro}
+    </p>
+
+    <div class="space-y-10">
+      {
+        steps.map((s: ProcessStep) => (
+          <div class="relative pl-16">
+            <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center text-sm font-bold">
+              {s.step}
+            </div>
+            <div class="border-l-2 border-gray-200 dark:border-gray-700 pl-8 pb-2">
+              <div class="flex items-start justify-between gap-4">
+                <h2 class="text-xl font-bold">{s.title}</h2>
+                <span class="text-xs text-muted whitespace-nowrap shrink-0 mt-1">{s.duration}</span>
+              </div>
+              <p class="mt-2 text-muted leading-relaxed">{s.description}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <TrustBadges layout="row" />
+
+  <section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+    <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+      <h2 class="text-xl font-bold">{cta.title}</h2>
+      <p class="mt-2 text-sm text-muted">{cta.desc}</p>
+      <a
+        href={'/' + lang + (cta.link || '/factory/equipment')}
+        class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >
+        {cta.label || 'View equipment \u2192'}
+      </a>
+    </div>
+  </section>
+
+  <script is:inline type="application/ld+json" set:html={faqSchema} />
+  <script is:inline type="application/ld+json" set:html={howtoSchema} />
+</Layout>

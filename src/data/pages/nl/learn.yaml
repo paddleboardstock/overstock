@@ -1,0 +1,73 @@
+hero:
+  tagline: 'Waterverkenning Kennis'
+  title: 'Leer'
+  subtitle: |
+    Gidsen, tutorials en diepgaande duiken — alles wat je nodig hebt om het water<br />
+    met vertrouwen te verkennen. Van het kiezen van je eerste SUP tot het beheersen van geavanceerde technieken.
+  taglineSection: 'Kennis voor elke peddelaar. Van beginner tot professional.'
+
+featured:
+  tagline: 'Aanbevolen Onderwerpen'
+  title: 'Begin je leerreis'
+  subtitle: 'Of je nu nieuw bent in watersport of je vaardigheden wilt verbeteren, onze gidsen hebben je gedekt.'
+  items:
+    - title: 'SUP Basis'
+      description: 'Alles wat een beginner moet weten — boardtypes, peddelmaat, houding en tips voor de eerste dag.'
+      icon: 'tabler:lifebuoy'
+      href: '/learn/sup'
+    - title: 'Opblaasbaar vs Hardboard'
+      description: 'Wat past bij jou? We vergelijken draagbaarheid, prestaties, duurzaamheid en kosten.'
+      icon: 'tabler:arrows-left-right'
+      href: '/compare/inflatable-vs-hardboard'
+    - title: 'Waterveiligheid'
+      description: 'Essentiële veiligheidskennis voor elke peddelaar — weer, PFDs, zelfredding en meer.'
+      icon: 'tabler:shield'
+      href: '/learn/water-safety'
+    - title: 'Materialengids'
+      description: 'PVC vs Hypalon, drop-stitch technologie, denier waarden — begrijp waar je uitrusting van gemaakt is.'
+      icon: 'tabler:hexagons'
+      href: '/learn/materials'
+    - title: 'SUP Maatgids'
+      description: 'Vind de juiste boardlengte, -breedte en -volume voor jouw gewicht, vaardigheid en peddelstijl.'
+      icon: 'tabler:ruler'
+      href: '/size-guide'
+    - title: 'Gevorderde Technieken'
+      description: 'Verbeter je peddelen met geavanceerde slagen, draaitechnieken en ruwwaterbehandeling.'
+      icon: 'tabler:ripple'
+      href: '/learn/intermediate-techniques'
+
+categories:
+  tagline: 'Categorieën'
+  title: 'Verken op onderwerp'
+  subtitle: 'Alle leermateriaal geordend op vaardigheidsniveau en interesse.'
+  columns:
+    - title: 'Beginner'
+      items:
+        - 'SUP Basis — begin hier'
+        - 'Opblaasbaar vs Hardboard'
+        - 'Waterveiligheid Essentieel'
+        - 'Hoe Kies Je Je SUP'
+        - 'Pomp- & Pakgids'
+    - title: 'Gevorderd'
+      items:
+        - 'Peddeltechnieken'
+        - 'Opblaasbare Technologie'
+        - 'Materialen Referentie'
+        - 'PVC vs Hypalon Vergelijking'
+        - 'Drop-Stitch Kern Uitgelegd'
+    - title: 'Gevorderd & Professioneel'
+      items:
+        - 'Vlootoperaties'
+        - 'Commerciële Uitrusting'
+        - 'Veiligheids- & Reddingsprotocollen'
+        - 'Maatwerk & OEM'
+
+cta:
+  title: 'Nog vragen?'
+  subtitle: 'Vraag onze AI-gids voor persoonlijke antwoorden over uitrusting, veiligheid en technieken.'
+  actions:
+    - variant: primary
+      text: 'Vraag de Water Advisor AI'
+      href: '#ai-guide'
+    - text: 'Bekijk alle gidsen'
+      href: '/academy'

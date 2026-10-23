@@ -1,0 +1,81 @@
+---
+export const prerender = true;
+
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+
+const metadata = {
+  title: `Diving Center RIB Boats — ${SITE.name} | Commercial Dive Operations`,
+  description:
+    'Purpose-built RIB boats for diving centers and commercial dive operations — large decks, dive ladders, tank storage, and marine-grade durability for daily multi-trip diving operations.',
+};
+const crumbs = [
+  { name: 'Home', href: '/' },
+  { name: 'Solutions', href: '/solutions/' },
+  { name: 'Diving Center Boats' },
+];
+const ctaActions = [
+  { variant: 'primary' as const, text: 'Configure your boat', href: '/contact' },
+  { text: 'View all RIB models', href: '/products' },
+];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <Hero
+    tagline="Diving Operations"
+    title={'RIB Boats Built for Commercial<br />Diving Centers & Daily Operations'}
+    subtitle="Stable, spacious platforms designed for daily multi-trip diving operations — with large equipment decks, diver-friendly boarding systems, and marine-grade durability for tropical saltwater environments."
+    image={{
+      src: 'https://assets.aquafarer.com/images/aquafarer/products/rib/aquafarer-rib-450-patrol-boat.webp',
+      alt: 'Aquafarer RIB boat configured for diving center and commercial dive operations',
+    }}
+  />
+  <Stats
+    title="Popular Diving RIB Models"
+    stats={[
+      { title: 'RIB 500', amount: '5.0m — 8 persons' },
+      { title: 'RIB 520', amount: '5.2m — 10 persons' },
+      { title: 'RIB 550', amount: '5.5m — 10 persons' },
+      { title: 'RIB 580', amount: '5.8m — 12 persons' },
+    ]}
+  />
+  <Content
+    tagline="The Challenge"
+    title={'Why Dive Centers Need<br />Purpose-Built Boats'}
+    subtitle="Diving operations place unique demands on watercraft — requirements that general-purpose boats often fail to meet."
+    content={'Commercial diving centers operate 200-300 days per year, running 3-5 diving trips daily. Each trip requires transporting 10-20 scuba tanks, full BCD equipment, regulators, fins, masks, safety gear, instructor equipment, and passengers. A general-purpose boat simply cannot handle this operational intensity.\n\n**Limited deck space** — Most recreational boats are designed for speed and passenger comfort, not equipment handling. When tanks, gear, and divers share the same space, preparation time increases, movement becomes difficult, and safety risks grow.\n\n**Difficult diver boarding** — International tourists, first-time divers, and older travelers need safe, easy entry and exit. A high boarding position, limited hand support, and unstable platforms create discomfort and safety hazards — especially when divers are carrying 30kg of equipment.\n\n**Saltwater corrosion and UV damage** — Tropical environments accelerate material degradation. Standard PVC tubes can fade, leak, and require replacement within 3 years. Corrosion of metal components increases maintenance costs and operational downtime.\n\n**Stability at rest** — Divers need a stable platform when gearing up, entering the water, and climbing back onboard. Insufficient stability creates safety risks and negatively impacts the customer experience.\n\n**High operating costs** — Fuel efficiency matters when running multiple trips every day. A boat that consumes more fuel directly reduces profit margins. Commercial diving operators care more about daily operating cost than top speed.'}
+  />
+  <Content
+    tagline="Our Solution"
+    title="Designed Around Real<br />Diving Operations"
+    subtitle="Every Aquafarer diving RIB is configured for the specific needs of commercial dive centers — not adapted from a recreational boat design."
+    content={'- Large working deck layout — designed for scuba tank storage, equipment preparation, and diver movement, not just passenger seating\n- Professional diving ladder system with stainless steel handrails — wide, low-step boarding for safe and easy diver entry and exit\n- Extra-wide Hypalon or PVC tubes — provides a stable boarding platform and improves buoyancy when divers move around the deck\n- Integrated tank storage racks — keeps weight low, deck clear, and equipment organized for faster trip turnaround\n- Non-slip EVA deck surface — reduces slipping risk when the deck is wet and divers are moving in heavy gear\n- Console positioned for clear visibility of divers in the water — critical for instructor safety monitoring\n- Engine options from 40 HP to 115 HP — single or twin configuration, optimized for fuel efficiency over multiple daily trips\n- Marine-grade construction — heavy-duty tube materials with UV and saltwater resistance, reinforced structure for daily commercial use\n- Custom dive ladder and platform configurations — matched to your operating water depth and diver profile\n- Equipment mounting plates for sonar, GPS, and communication gear'}
+  />
+  <Content
+    tagline="Recommended Models"
+    title="Diving RIB Configurations"
+    subtitle="Our most popular diving RIB models — each available with custom dive-specific configuration."
+    content={'**RIB 500 Diver:** 5.0m fiberglass RIB with dive ladder, tank racks, non-slip deck, and 60 HP outboard. Ideal for small diving schools and sheltered water operations running 1-2 trips daily. Capacity: 8 persons.\n\n**RIB 520 Diver:** 5.2m RIB with enhanced stability, extended range fuel tank, dive ladder, tank storage, and 90 HP engine. Suitable for coastal dive centers running multiple daily trips. Capacity: 10 persons.\n\n**RIB 550 Diver:** 5.5m RIB with large deck layout, professional dive ladder, tank racks, and heavy-duty tubes. Designed for resort diving operations with mixed passenger groups. Capacity: 10 persons.\n\n**RIB 580 Diver Pro:** 5.8m heavy-duty RIB with twin engine option, integrated dive platform, full navigation suite, and maximum deck space. For professional dive operations in exposed waters running 3-5 trips daily. Capacity: 12 persons.'}
+  />
+  <Content
+    tagline="For Dive Resorts"
+    title={'Premium Dive RIBs<br />For Resort Hospitality Operations'}
+    subtitle="Luxury diving RIBs designed for guest comfort, brand image, and peak season capacity — where the boat experience matters as much as the dive itself."
+    content={'Dive resorts are different from commercial diving centers. Your guests are tourists paying for a premium experience — and the boat is a key part of that experience. A functional workboat that looks industrial or uncomfortable will damage the luxury perception that your resort has built.\n\n**Brand image matters** — Guests at five-star resorts expect equipment that matches the property quality. A basic or worn-out boat sends the wrong message, especially to VIP guests and repeat visitors who compare their experience across properties.\n\n**Comfort drives satisfaction** — Long rides to dive sites should be enjoyable, not uncomfortable. Premium seating, sunshade protection, smooth boarding, and stable platforms directly impact guest reviews and return rates.\n\n**Peak season capacity** — During high season, your dive operation may run 4-6 trips daily. You need a boat that can handle the intensity without compromising the guest experience. Downtime or delays directly affect revenue and reputation.\n\nAquafarer offers Premium Dive RIB configurations with custom upholstery, resort-branded color schemes and logos, comfortable seating with backrests, T-top or Bimini sunshade options, premium sound systems for marine use, and non-slip teak-style EVA decking — turning your dive boat into a mobile ambassador for your resort brand.'}
+  />
+  <Content
+    tagline="Key Benefits"
+    title="Why Aquafarer for<br />Dive Operations"
+    subtitle="Purpose-built dive RIBs trusted by commercial diving centers in 30+ countries — built for daily operation, not occasional use."
+    content={'- Built for 200-300 operating days per year — not a weekend boat, but a daily working platform\n- Hypalon or military-grade PVC tubes — maximum durability in tropical saltwater environments with UV resistance\n- Wide tube design provides stable boarding platform for geared divers — safer entry and exit for all experience levels\n- Deck layout optimized for equipment workflow — tanks, gear, and passengers each have dedicated space\n- Custom dive ladder and platform configurations — no standard solution, every boat matched to your operation\n- Engine redundancy options (single/twin) — operational safety when divers are in the water\n- Lower daily operating costs — optimized fuel efficiency and reduced maintenance requirements\n- Fast delivery: 30-60 days from order to shipment for standard configurations'}
+  />
+  <CallToAction
+    title="Configure your diving RIB"
+    subtitle="Tell us your diver capacity, daily trip frequency, operating waters, and preferred engine — we will recommend the optimal configuration for your diving business."
+    actions={ctaActions}
+  />
+</Layout>

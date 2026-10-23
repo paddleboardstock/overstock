@@ -1,0 +1,131 @@
+hero_text:
+  tagline: Contact
+  title: PRENEZ CONTACT
+contact_form:
+  id: form
+  title: Envoyez-nous un message
+  subtitle: Pour des devis, des questions techniques ou des demandes de partenariat, écrivez-nous. Nous répondons sous un jour ouvré.
+  email_to: info@aquafarer.com
+  submit_button: Envoyer le message
+  success_message: Merci ! Votre message a bien été reçu. Nous répondrons sous un jour ouvré.
+  error_message: Une erreur s'est produite lors de l'envoi. Veuillez réessayer ou nous envoyer un e-mail directement.
+  default_country_code: '+1'
+  captcha:
+    label: 'Anti-spam : veuillez résoudre le calcul suivant'
+  fields:
+    - name: firstName
+      label: Prénom
+      row: 1
+    - name: lastName
+      label: Nom
+      row: 1
+    - name: companyName
+      label: Entreprise
+      row: 2
+    - name: address
+      label: Adresse
+      row: 3
+    - name: zip
+      label: Code postal
+      row: 4
+    - name: country
+      label: Pays
+      row: 4
+      type: select
+      optionsKey: countries
+    - name: email
+      label: E-mail
+      row: 5
+      type: email
+    - name: tel
+      label: TÉL
+      row: 5
+      type: tel
+      withCountryCode: true
+    - name: orderVolume
+      label: Volume de commande estimé
+      row: 6
+      type: select
+      options:
+        - value: ''
+          label: Sélectionnez le volume estimé...
+        - value: sample
+          label: Échantillons / prototypes uniquement
+        - value: '5-10'
+          label: 50–100 unités (MOQ standard)
+        - value: '100-500'
+          label: 100–500 unités
+        - value: '500-plus'
+          label: 500+ unités (tarification volume)
+    - name: customization
+      label: Personnalisation nécessaire ?
+      row: 7
+      type: select
+      options:
+        - value: ''
+          label: Sélectionnez le type de personnalisation...
+        - value: none
+          label: Produit standard (sans personnalisation)
+        - value: logo
+          label: Logo / marque personnalisée uniquement
+        - value: full
+          label: OEM complet (taille, couleur, graphismes, emballage)
+        - value: consultation
+          label: Pas sûr — besoin de conseil
+    - name: productInterest
+      label: Catégories de produits d'intérêt
+      row: 8
+      type: select
+      options:
+        - value: ''
+          label: Sélectionnez une catégorie de produit...
+        - value: all
+          label: Tous les produits / catalogue complet
+        - value: sup
+          label: Paddleboards SUP
+        - value: kayak
+          label: Kayaks gonflables
+        - value: rib
+          label: Bateaux RIB
+        - value: dinghy
+          label: Anneces / tender
+        - value: safety
+          label: Équipement de sécurité / gilets de sauvetage
+        - value: accessory
+          label: Accessoires (pompes, pagaies, sacs)
+
+    - name: subject
+      label: Sujet
+      row: 9
+    - name: message
+      label: Message
+      row: 10
+      type: textarea
+      rows: 6
+features2_other_ways:
+  title: Autres moyens de nous joindre
+  columns: 3
+  items:
+    - title: Ventes
+      description: Devis, configurations, demandes de revendeur et commandes en gros.
+      icon: tabler:shopping-bag
+    - title: Support technique
+      description: Garantie, réparations, pièces détachées et questions d'utilisation.
+      icon: tabler:tool
+    - title: Presse et partenariats
+      description: Kits média, parrainage et collaboration industrielle.
+      icon: tabler:news
+    - title: Téléphone
+      description: '+1 279 732 3333 (siège US) · +86 13305324192 (usine)'
+      icon: tabler:headset
+    - title: E-mail
+      description: info@aquafarer.com
+      icon: tabler:mail
+    - title: Siège mondial & facturation
+      description: Aquafarer LLC, Nouveau-Mexique, États-Unis
+      icon: tabler:map-pin
+map:
+  title: Notre emplacement
+  subtitle: Visitez notre site de production à Qingdao
+  address: Economic Development Zone, Laixi, Qingdao, China, 266600
+  zoom: 15

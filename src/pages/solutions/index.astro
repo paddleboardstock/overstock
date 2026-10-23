@@ -1,0 +1,64 @@
+---
+export const prerender = true;
+
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { getPageContent, setPageContentData } from '~/i18n/page-content';
+import __pageData from '~/i18n/generated/pages/solutions.ts';
+
+setPageContentData(__pageData);
+const page = getPageContent('en', 'solutions');
+
+const hero = page.hero ?? {};
+const stats = page.stats ?? {};
+const solutions = page.features3_solutions ?? {};
+const cta = page.cta ?? {};
+
+const metadata = {
+  title: `Solutions for Clubs, Resorts & Industry — ${SITE.name} | Water Business Partner`,
+  description:
+    'Water sports solutions for clubs, resorts, hospitality brands, and entrepreneurs. Purpose-built RIB boats and inflatable watercraft for diving, rescue, fishing, and marine tourism.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline={hero.tagline} image={hero.image} title={hero.title} subtitle={hero.subtitle} />
+  <Stats title={stats.title} stats={stats.stats} />
+  <Features3
+    tagline={solutions.tagline}
+    title={solutions.title}
+    subtitle={solutions.subtitle}
+    columns={solutions.columns}
+    items={solutions.items}
+  />
+  <CallToAction title={cta.title} subtitle={cta.subtitle} actions={cta.actions} />
+  <JsonLd
+    type="Service"
+    service={{
+      name: 'Water Sports Business Solutions — Clubs, Resorts & Industry',
+      description:
+        'Equipment packages and custom watercraft for water sports clubs, resorts, hospitality brands, entrepreneurs, diving centers, rescue services, fishing, and marine tourism.',
+      serviceType: 'Business Solutions',
+      areaServed: ['Global'],
+      url: '/solutions',
+      items: [
+        {
+          name: 'Water Sports Clubs',
+          description: 'Equipment packages and branding for SUP clubs, kayak clubs, surf schools',
+        },
+        { name: 'Resorts & Hotels', description: 'Premium water sports programs for hospitality properties' },
+        { name: 'Water Brand Entrepreneurs', description: 'Private label OEM/ODM for new water sports brands' },
+        { name: 'Diving Center Boats', description: 'RIB boats and support craft for dive operations' },
+        { name: 'Rescue Watercraft', description: 'Search and rescue inflatable boats' },
+        { name: 'Marine Tourism', description: 'Tour boats and guest transport vessels' },
+        { name: 'Fishing Boats', description: 'Small craft for commercial and sport fishing' },
+        { name: 'Yacht Tenders', description: 'Custom tender boats for superyachts' },
+      ],
+    }}
+  />
+</Layout>

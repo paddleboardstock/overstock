@@ -1,0 +1,108 @@
+{
+  "_comment": [
+    "单一事实源（Single Source of Truth）—— 治 GEO 头号问题：全站数字自相矛盾。",
+    "2026-08-09 已定值：slogan（用户指定）、countriesServed=50+、压测=1.25x/24-48h（用户确认）、",
+    "primaryPhone=+86 13305324192（用户确认）、logo=/logo-512.png（已生成 public/）。",
+    "2026-09-18：品牌运营主体由 Qingdao Vatrad Group 转为 Aquafarer LLC（New Mexico, USA）：",
+    "legalName → Aquafarer LLC；salesUsPhone → +1-279-732-3333；email → info@aquafarer.com。",
+    "规则：首页文案、llms.txt、全部 JSON-LD、各语言页面，数字与事实一律从本文件渲染。"
+  ],
+
+  "brand": {
+    "name": "Aquafarer",
+    "legalName": "Aquafarer LLC",
+    "alternateName": "Aquafarer RIB & Inflatable Watercraft",
+    "slogan": "RIB Boats, Inflatable Boats, SUP Boards Manufacturer & OEM ODM Solution Team",
+    "description": "Aquafarer is a manufacturer of RIB boats, inflatable boats and SUP boards, providing OEM and ODM solutions to distributors, rental operators, resorts and rescue organisations in 50+ countries. Operating 6 production lines across 12000 m² in Laixi, Qingdao, the factory produces 64 CE-certified models with an annual capacity of 15000 units. Certifications include CE (TÜV Rheinland), ISO 9001:2015 (SGS) and BSCI (Intertek). MOQ starts at 2-5 units for RIB models and 5-10 units for SUP boards.",
+    "foundingYear": 2012,
+    "url": "https://aquafarer.com"
+  },
+
+  "factory": {
+    "areaSqm": 12000,
+    "city": "Laixi",
+    "prefecture": "Qingdao",
+    "province": "Shandong",
+    "country": "CN",
+    "postalCode": "266600",
+    "streetAddress": "Economic Development Zone, Laixi",
+    "productionLines": 6,
+    "workforceMin": 200,
+    "workforceMax": 300,
+    "annualCapacityUnits": 15000,
+    "certifiedModels": 64
+  },
+
+  "reach": {
+    "countriesServed": "50+",
+    "regions": ["EU", "North America", "Asia-Pacific", "Middle East", "Africa"]
+  },
+
+  "catalog": {
+    "certifiedModels": 64,
+    "categories": ["RIB", "Inflatable Boat", "SUP Board", "Safety Equipment", "Accessory"],
+    "categoryCount": 5,
+    "featuredProductCount": "8 featured products"
+  },
+
+  "quality": {
+    "defectFreeRate": "99.3%",
+    "defectFreeRateNote": "Based on AQL 2.5 per ISO 2859 sampling inspection of outgoing shipments over the trailing 12-month period",
+    "pressureTest": {
+      "multiplier": "1.25x",
+      "holdHours": "24-48h",
+      "full": "24-48h hold at 1.25x rated pressure"
+    },
+    "samplingStandard": "AQL 2.5 per ISO 2859",
+    "testCoverage": "100% pressure-tested"
+  },
+
+  "certifications": [
+    { "name": "CE", "body": "TÜV Rheinland" },
+    { "name": "ISO 9001:2015", "body": "SGS", "since": 2022 },
+    { "name": "BSCI", "body": "Intertek" },
+    { "name": "UKCA", "body": null },
+    { "name": "REACH", "body": null },
+    { "name": "RoHS", "body": null },
+    { "name": "AS 1799", "body": null }
+  ],
+
+  "commercial": {
+    "moqSupKayak": "5-10 units",
+    "moqRib": "2-5 units",
+    "samplingLeadTimeDays": "15-20",
+    "productionLeadTimeDays": "30-45",
+    "warrantyBoat": "5-year limited warranty on tube fabric, seams, and fiberglass hull structure",
+    "warrantySup": "2-year warranty on SUP boards and accessories",
+    "warrantyNote": "5-year covers primary tube fabric integrity, seam air-holding capability, and fiberglass hull structure; 2-year covers SUP boards, inflation valves, and accessories"
+  },
+
+  "contact": {
+    "primaryPhone": "+86 13305324192",
+    "salesUsPhone": "+1-279-732-3333",
+    "email": "info@aquafarer.com",
+    "availableLanguages": ["English", "Chinese"]
+  },
+
+  "social": {
+    "linkedin": "https://www.linkedin.com/company/aquafarer",
+    "youtube": "https://www.youtube.com/@Aquafarer",
+    "x": "https://x.com/aquafarer",
+    "instagram": "https://www.instagram.com/aquafarer",
+    "facebook": "https://www.facebook.com/aquafarer",
+    "rss": "https://aquafarer.com/rss.xml"
+  },
+
+  "founder": {
+    "name": "David Chen",
+    "jobTitle": "Founder & CEO",
+    "personalLinkedin": "",
+    "credentials": []
+  },
+
+  "logo": {
+    "url": "https://aquafarer.com/logo-512.png",
+    "width": 512,
+    "height": 512
+  }
+}

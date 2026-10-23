@@ -1,0 +1,201 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'hu' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">&larr; Vissza a K+F Központba</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Labor 06</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Minőség- és ellenőrzési labor</h1>
+      <p class="mt-3 text-lg text-muted">Független ellenőrzés — minden tesztet teljesítünk a szállítás előtt</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-uv-resistance-testing.webp"
+        alt="Aquafarer minőségellenőrző laboratórium UV tesztelés"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Bízzon, de ellenőrizzen</h2>
+  <p>
+    Minden hajó, amely elhagyja a műhelyünket, rendelkezik a tanúsítvánnyal, amely igazolja, hogy egy meghatározott
+    minőségellenőrzési és anyagvizsgálati sorozatot teljesített. Minőség- és Ellenőrzési Laborunk a szervezeten belül
+    független funkció — közvetlenül az ügyvezető igazgatónak jelent, nem a gyártásnak — biztosítva, hogy semmilyen
+    kereskedelmi nyomás ne befolyásolhassa az ellenőrzési kaput. Ha egy anyagbatch vagy egy kész hajó nem felel meg a
+    közzétett specifikációnak, a labor jogosult a szállítást felfüggeszteni, amíg az eltérés meg nincs oldva.
+  </p>
+  <p>
+    A labor egy minőségirányítási rendszer szerint működik, amely összhangban van az alapelvekkel, és tesztmódszereink
+    az ISO, ASTM és EN szabványokon alapulnak, ahol alkalmazható. Részletes nyilvántartást vezetünk minden elvégzett
+    tesztről, létrehozva egy teljes nyomonkövethetőségi láncot a nyersanyag beérkezésétől a végső hajó kiszállításáig.
+  </p>
+
+  <h2>Tesztberendezések és képességek</h2>
+  <table>
+    <thead><tr><th>Felszerelés</th><th>Elvégzett tesztek</th><th>Szabvány / Módszer</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Univerzális vizsgáló gép (50 kN)</td><td
+          >Húzóerő (szövet), tapadás-ellenállás (varrások), hasadás terjedés</td
+        ><td>, ISO 4674</td></tr
+      >
+      <tr
+        ><td>Légzárás teszt berendezés (programozható)</td><td
+          >1000 ciklusos felfújás/lemeztetés ellenállóképesség, 24-48 órás nyomástartás teszt</td
+        ><td>(belső)</td></tr
+      >
+      <tr
+        ><td>Varrás-tapadás vizsgáló (motoros 180°-os hámlasztás)</td><td
+          >Hegesztett és ragasztott varrás tapadási szilárdság 100 mm/perc sebességnél</td
+        ><td>/ ASTM D1876</td></tr
+      >
+      <tr><td>Hidrosztatikus nyomásmérő</td><td>Szövet vízáteresztő képessége (0 — 100 mbar)</td><td>ISO 811</td></tr>
+      <tr
+        ><td>Digitális vastagságmérő és mikrométer</td><td>Szövetvastagság, csőfal vastagság, ragasztófilm vastagság</td
+        ><td>ISO 2286-3</td></tr
+      >
+      <tr
+        ><td>Környezeti kamra</td><td
+          >Hőmérséklet kondicionálás (-40 °C-tól +80 °C-ig) hidegrepedés és hőöregedési tesztekhez</td
+        ><td>ISO 188, ISO 4675</td></tr
+      >
+      <tr
+        ><td>Szín spektrofotométer</td><td>Delta-E színmérés UV expozíció után</td><td>ISO 105-A05 / ASTM D2244</td></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>Az ellenőrző kapuk — az anyagtól a szállításig</h2>
+  <p>
+    Minden hajó egy meghatározott minőségi tervet követ, kötelező ellenőrzési pontokkal. Egyetlen hajó sem hagyhatja ki
+    a kaput; minden kapukat minőségellenőrnek kell jóváhagynia a következő gyártási szakasz előtt.
+  </p>
+
+  <div class="not-prose my-8">
+    <div class="relative">
+      <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-blue-200 dark:bg-blue-800"></div>
+      <div class="space-y-6 relative">
+        {
+          [
+            {
+              gate: 'Gate 1',
+              label: 'Bejövő anyag ellenőrzése',
+              desc: 'A szövetadag, a ragasztóadag és a hardver — mindegyiket az érkező specifikációhoz ellenőrzik, mielőtt a gyártásba kerülne.',
+            },
+            {
+              gate: 'Gate 2',
+              label: 'Folyamat közbeni hegesztésellenőrzés',
+              desc: 'Az első hegesztési próbadarabot (peel + vizuális) minden termelési műszak elején tesztelik.',
+            },
+            {
+              gate: 'Gate 3',
+              label: 'Kamrai levegőteszt',
+              desc: 'Minden kamrát 1,25-szörös üzemi nyomásra fognak nyomni, 24-48 órán át tartják. Az adatokat sorozatszám szerint rögzítik.',
+            },
+            {
+              gate: 'Gate 4',
+              label: 'Előzetes átadási ellenőrzés',
+              desc: 'A teljes hajót ellenőrizték: minden rögzítőelem meghúzva, a rendszerek működőképesek, nincs esztétikai hiba. 100 pontos ellenőrzőlista.',
+            },
+            {
+              gate: 'Gate 5',
+              label: 'Végső tanúsítás',
+              desc: 'A tesztjelentéseket összeállították, az ellenőrzési jegyzőkönyveket áttekintették, és kibocsátották a Megfelelőségi Igazolást.',
+            },
+          ].map((g) => (
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs font-bold z-10">
+                {g.gate}
+              </div>
+              <div class="flex-1 p-3 rounded-lg bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800">
+                <p class="text-sm font-semibold">{g.label}</p>
+                <p class="text-xs text-gray-500 mt-1">{g.desc}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+
+  <h2>Kulcsfontosságú minőségi mutatók (2025-ös gördülő átlag)</h2>
+  <div class="not-prose my-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">99.7 %</span>
+      <span class="text-xs text-gray-500">Első átmeneti hozamot (anyag tétel)</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">&lt; 0,2%</span>
+      <span class="text-xs text-gray-500">Hegesztési visszautasítási arány (lineáris méter)</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">100 %</span>
+      <span class="text-xs text-gray-500">Kamrák légvizsgálatot végeztek az összeszerelés előtt</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600"></span>
+      <span class="text-xs text-gray-500">Tervezési kategóriáknak megfelelés</span>
+    </div>
+  </div>
+
+  <h2>Minőségi csapatunk</h2>
+  <p>
+    A laborban egy minőségmenedzser (10 év tengeri minőségbiztosítási tapasztalat, ASQ minősített minőségi mérnök), két
+    minőségellenőr (mindkettő 2. szintű NDT vizuális tesztelési minősítéssel), valamint egy anyagtechnikus, aki minden
+    fizikai tesztelésért felelős. A csapat évente független harmadik fél által végzett szakképzettségi teszteken
+    keresztül végez, hogy biztosítsa teszteredményeink pontosságát és ismételhetőségét.
+  </p>
+
+  <h2>Független tesztelés kliensek számára</h2>
+  <p>
+    Minőség- és ellenőrzési laborunk független tesztelési szolgáltatások számára elérhető. Ha anyagspecifikációt kell
+    ellenőriznie, új ragasztórendszert validálnia, vagy harmadik féltől származó tesztjelentést kell szereznie
+    beszerzési minősítéshez, akkor a megfelelő szabvány szerint végezzük el a teszteket, és tanúsított tesztjelentést is
+    kiadunk.
+  </p>
+  <p>Példák a legutóbbi harmadik féltől végzett tesztelési munkákra:</p>
+  <ul>
+    <li>Öt versenytárs ragasztófólia összehasonlítása egy európai katonai beszerzési programhoz.</li>
+    <li>
+      Gyorsított öregedési vizsgálat (UV + termikus ciklus) egy új narancssárga PVC pigmentált formuláció számára,
+      rendszeres interimi mérésekkel 500 órás időközönként.
+    </li>
+    <li>50 prototípus kereszttartószelep légvisszatartásának validálása egy új nagynyomású cső kialakításhoz.</li>
+  </ul>
+
+  <h2>Elkötelezettségünk irántad</h2>
+  <p>
+    Amikor kapsz egy{SITE.name}hajó, Ön megkapja a minőségi dossziéját is — egy összegyűjtött jegyzőkönyvet a
+    teszteredményekről, amelyek az Ön konkrét hajójára vonatkoznak. Anyagbatch tanúsítvány, hegesztési felhúzási
+    tesztek, kamrai levegőteszt naplók és az előzetes átadási ellenőrzőlista. Minden szám nyomon követhető. Minden
+    ellenőr azonosítható. Ez nem csupán papírmunkát jelent — ez a mi ígéretünk, hogy azt szállítottuk, amit
+    meghatároztunk.
+  </p>
+  <p>
+    Ha valaha minőségi aggályod adódik, közvetlenül felveheti a kapcsolatot a laborral — az elérhetőségi adatok a
+    megfelelőségi igazoláson vannak nyomtatva. Minden kérdést komolyan vessünk, és 48 órán belül hivatalos vizsgálatot
+    vállalunk.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Független tesztelésre vagy minőségellenőrzésre van szükség?</h2>
+    <p class="mt-2 text-sm text-muted">
+      Laborunk elfogadja a harmadik féltől származó tesztelési munkákat — keresse velünk a szükségleteit.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Lépjen kapcsolatba a minőségi laborral</a
+    >
+  </div>
+</section>

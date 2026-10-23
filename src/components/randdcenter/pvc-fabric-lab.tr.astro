@@ -1,0 +1,207 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'tr' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">&larr; AR-GE Merkezine Geri</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Laboratuvar 01</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">PVC Kumaş Laboratuvarı</h1>
+      <p class="mt-3 text-lg text-muted">Bilimsel malzeme testi — liften bitmiş tüpe</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/randd/aquafarer-pvc-material-lab.webp"
+        alt="Aquafarer PVC kumaş malzeme test laboratuvarı"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Her şişme botun temeli</h2>
+  <p>
+    Tüp kumaşı, şişme bir botta en kritik malzemedir. Sürekli UV maruziyetine, tekrar eden şişirme döngülerine,
+    iskeleler ve enkazlarla temas sonucu oluşan aşınmaya ve aşırı sıcaklık değişimlerine dayanmalıdır — tüm bunları
+    yaparken yapısal bütünlüğünü yıllarca koruması gerekir.{SITE.name}, bizim PVC Kumaş Laboratuvarımız, inşa ettiğimiz
+    her teknede kullandığımız kumaşların karakterizasyonu, doğrulanması ve sürekli iyileştirilmesine tamamen adanmıştır.
+  </p>
+  <p>
+    Tedarikçi veri sayfalarına sadece güvenmiyoruz. Atölyemize giren her PVC ve Hypalon kumaş partisi, bağımsız olarak
+    kurum içerisinde test edilir. Bu, yayımladığımız malzeme spesifikasyonunun aldığınız malzeme performansı olmasını
+    garanti eder — parti parti, yıl yıl.
+  </p>
+
+  <h2>Standardize edilmiş test ekipmanları</h2>
+  <p>Kumaş laboratuvarımız, ISO, ASTM ve EN test yöntemlerine uygun endüstriyel sınıf cihazlarla donatılmıştır:</p>
+  <table>
+    <thead><tr><th>Ekipman</th><th>Ölçülen Parametreler</th><th>Standart</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Evrensel çekme testi cihazı (50 kN)</td><td>Kopma kuvveti, kopma anındaki uzama, yırtık yayılması</td><td
+          >/ ASTM D751</td
+        ></tr
+      >
+      <tr
+        ><td>Ksenon-ark hava koşullarına dayanıklılık odası</td><td
+          >UV direnci (renk değişimi, 2000 saat sonrası güç koruma)</td
+        ><td>/ ASTM G155</td></tr
+      >
+      <tr
+        ><td>Düşük sıcaklık eğilme test cihazı</td><td>-30 °C ila -50 °C'de çatlama noktası</td><td
+          >ISO 4675 / ASTM D2136</td
+        ></tr
+      >
+      <tr
+        ><td>Taber aşınma test cihazı</td><td>1000 döngü sonrası ağırlık kaybı (CS-10 tekerlek)</td><td
+          >ASTM D3389 / ISO 5470-1</td
+        ></tr
+      >
+      <tr
+        ><td>Kalınlık ölçer (dijital, 0,001 mm çözünürlük)</td><td>Rulo genişliği boyunca uniformite</td><td
+          >ISO 2286-3</td
+        ></tr
+      >
+      <tr><td>Hidrostatik basınç test cihazı</td><td>Su sızdırmazlık direnci</td><td>ISO 811</td></tr>
+    </tbody>
+  </table>
+  <p class="text-sm text-gray-500">
+    * Tüm ekipmanlar yılda bir üçüncü taraf akredite laboratuvarlar tarafından kalibre edilir.
+  </p>
+
+  <h2>Veriden karara: tipik bir test iş akışı</h2>
+  <p>Yeni bir kumaş adayları geldiğinde, standartlaştırılmış yedi adımlı bir uygunluk sürecinden geçer:</p>
+  <ol>
+    <li>
+      <strong>Alım muayenesi</strong>— yüzey kusurları, iğne delikleri ve boyutsal uygunluk açısından görsel kontrol.
+    </li>
+    <li>
+      <strong>Kalınlık haritalama</strong>— rulo boyunca 20 nokta ölçümü; kabul için CV %3 gereklidir.
+    </li>
+    <li>
+      <strong>Çekme testi</strong>— atkı ve çözgü yönde 5 numune. 1100 dtex için minimum 3500 N/50 mm PVC.
+    </li>
+    <li>
+      <strong>UV koşullandırma</strong>— ksenon-ark odasında 1000 saat maruz bırakma; minimum %80 dayanım korunumu
+      gereklidir.
+    </li>
+    <li>
+      <strong>Soğuk çatlama</strong>— -35 °C’de 4 saat, ardından 25 mm mandrel üzerinden 180° bükme. Görünür çatlama
+      yok.
+    </li>
+    <li><strong>Aşınma direnci</strong>— 1000 döngü, ağırlık kaybı ≤ 0,05 g.</li>
+    <li>
+      <strong>Onay imzası</strong>— tüm yedi aşama geçildikten sonra kumaş üretime dahil edilir.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Tipik PVC 1100 dtex — UV maruziyet sonrası çekme dayanımı korunumu
+    </p>
+    <div class="flex items-end gap-3 h-40">
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-600 rounded-t" style="height:100%"></div><span class="text-xs mt-1"
+          >0 h<br />100%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-500 rounded-t" style="height:95%"></div><span class="text-xs mt-1"
+          >500 h<br />95%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-400 rounded-t" style="height:88%"></div><span class="text-xs mt-1"
+          >1000 h<br />88%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-300 rounded-t" style="height:82%"></div><span class="text-xs mt-1"
+          >2000 h<br />82%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-gray-300 rounded-t" style="height:65%"></div><span class="text-xs mt-1"
+          >Rakip<br />~65%</span
+        >
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      Bizim PVC 1100 dtex kumaş, 2000 saat ksenon-ark maruziyetten sonra %80’den fazla çekme dayanımını korurken, tipik
+      endüstri sınıfları %70’in altına düşer.
+    </p>
+  </div>
+
+  <h2>Profesyonel ekibimiz</h2>
+  <p>
+    Laboratuvar, polimer bilimi veya tekstil mühendisliği alanında dereceye sahip ve en az altı yıllık endüstri deneyimi
+    olan iki tam zamanlı malzeme mühendisi ile çalışmaktadır. Günlük test ve veri kaydı yapan üç teknisyen tarafından
+    desteklenirler. Ekip, test yöntemlerimizin doğruluğunu doğrulamak için Uluslararası Standardizasyon Organizasyonu
+    (ISO) tarafından düzenlenen laboratuvarlar arası round-robin denemelerine düzenli olarak katılır.
+  </p>
+
+  <h2>Zor malzeme sorunlarınızı çözmek</h2>
+  <p>
+    Her deniz ortamı farklıdır. Basra Körfezi’nde görev yapan bir devriye botu, Kuzey Denizi’ndeki bir kurtarma
+    aracından tamamen farklı UV ve sıcaklık koşullarıyla karşı karşıyadır. Kumaş Laboratuvarımız, işletim profiliniz
+    için optimize edilmiş bir kumaş spesifikasyonu seçmenize veya geliştirmenize yardımcı olur.
+  </p>
+  <p>Son özelleştirilmiş çözümler şunları içerir:</p>
+  <ul>
+    <li>
+      — Botları düzenli olarak mercan resiflerine yanaşan bir askeri müşteri için yüksek aşınma dayanımlı PVC karışımı
+      (%40 aşınma ömrü).
+    </li>
+    <li>— Kutup araştırma istasyonu için düşük sıcaklık formülasyonu, -50 °C’de kırılmadan test edilmiştir.</li>
+    <li>
+      — Kurtarma filosu için renk sabitlenmiş turuncu kumaş, 3 yıl süresince tropikal güneşe maruz kaldığında
+      görünürlüğünü korur.
+    </li>
+  </ul>
+  <p>
+    Biz "hazır" kumaşlar satmıyor ve işe yarayacağını ummuyoruz. Test ediyor, doğruluyor ve öneriyoruz — ya da özel
+    görev profilinize uygun bir çözüm yaratıyoruz. Bu,{SITE.name}fark.
+  </p>
+
+  <h2>Size nasıl hizmet ederiz</h2>
+  <p>Bize bir malzeme ile ilgili bir sorun getirdiğinizde, işte bekleyebileceğiniz süreç:</p>
+  <ol>
+    <li><strong>Danışmanlık</strong>— çalışma ortamınızı, performans hedeflerinizi ve bütçenizi tartışıyoruz.</li>
+    <li><strong>Teklif</strong>— net geçme/kalma kriterleri ve bir zaman çizelgesi ile bir test planı hazırlanır.</li>
+    <li>
+      <strong>Uygulama</strong>— laboratuvarımız testleri yürütür ve ham veri ve karşılaştırmalı analiz içeren ayrıntılı
+      bir rapor hazırlar.
+    </li>
+    <li>
+      <strong>Öneri</strong>— gereksinimlerinizi karşılayan birden fazla malzeme varsa alternatif seçenekleri de
+      içerecek şekilde bir kumaş spesifikasyonu sunarız.
+    </li>
+    <li>
+      <strong>Takip</strong>— teslimattan sonra hizmetteki malzeme ile ilgili her türlü sorunu desteklemek için hazır
+      bulunuruz.
+    </li>
+  </ol>
+  <p>
+    Amacımız size sadece bir tekne satmak değildir. Amacımız, aldığınız teknenin çalıştığınız koşullarda güvenilir bir
+    şekilde performans göstermesini sağlamaktır — ve bu kumaşla başlar.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Özel bir kumaş spesifikasyonuna mı ihtiyacınız var?</h2>
+    <p class="mt-2 text-sm text-muted">
+      Gereksinimlerinizi tartışmak için malzeme mühendisliği ekibimizle iletişime geçin.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Laboratuvar ekibimizle iletişime geçin</a
+    >
+  </div>
+</section>

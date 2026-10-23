@@ -1,0 +1,137 @@
+hero:
+  tagline: Kvalitātes kontrole
+  title: Kvalitātes kontroles sistēma<br />priekš OEM jūras ražošanas
+  subtitle: Daudzpakāpju pārbaudes process, kas aptver ienākošos materiālus, ražošanas procesu, spiediena pārbaudi, galīgo montāžu un pirmsnosūtīšanas pārbaudi. Katras partijas izsekojamība ir nodrošināta, katra testa rezultāti tiek dokumentēti.
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-pressure-testing.webp
+    alt: Aquafarer kvalitātes kontroles un spiediena pārbaudes process
+stats:
+  title: QC skaitļos
+  stats:
+    - title: Vienības, kas pārbaudītas ar spiedienu
+      amount: 100%
+    - title: Maksimālais spiediena zudums
+      amount: <5%
+    - title: KC inspektori
+      amount: '12'
+    - title: Saglabātie ieraksti
+      amount: 10 gadi
+content_system:
+  tagline: Kvalitātes kontroles sistēmas pārskats
+  title: Integrēta kvalitātes<br />kontroles struktūra
+  subtitle: Mūsu KC sistēma darbojas neatkarīgi no ražošanas un tieši ziņo vadībai. Neviena partija netiek nosūtīta bez parakstītas kvalitātes atbrīvošanas no kvalitātes laboratorijas.
+  items:
+    - title: Neatkarīga kvalitātes laboratorija
+      description: Mūsu kvalitātes laboratorija darbojas kā atsevišķa funkcija no ražošanas. KC inspektori ziņo Kvalitātes vadītājam, nevis Ražošanas direktoram. Šī organizatoriskā neatkarība nodrošina, ka kvalitātes lēmumi tiek pieņemti objektīvi — ražošanas termiņi nekad nepārspēj kvalitātes prasības.
+      features:
+        - Tieši ziņo vadībai, neatkarīgi no ražošanas
+        - Pilnvarota apturēt ražošanu kvalitātes jautājumu dēļ
+        - 12 speciāli KC inspektori visos posmos
+        - Visa testēšanas aparatūra tiek kalibrēta reizi gadā
+    - title: Partijas izsekojamība
+      description: Katrai izejvielu partijai tiek piešķirts unikāls sērijas numurs mūsu ERP sistēmā. No materiālu saņemšanas līdz ražošanai un gatavam produktam katras laivas materiālu saraksts saistās ar oriģinālo piegādātāju partijām. Tas ļauj nodrošināt pilnīgu augšupejošu izsekojamību jebkurā kvalitātes vai atbilstības jautājumā.
+      features:
+        - ERP-balstīta partijas izsekošana no materiāla līdz gatavam produktam
+        - Fiziskas partijas birkas katrā darba uzdevumā
+        - 100% materiālu pārklājums — PVC, Hypalon, aparatūra, līmes
+        - Ieraksti tiek saglabāti 10 gadus (CE 2013/53/EU prasība)
+    - title: Standarti un atbilstība
+      description: Mūsu KC procedūras atbilst starptautiskajiem standartiem. Produkti ir CE sertificēti saskaņā ar ES atpūtas kuģu direktīvu 2013/53/EU. Mūsu kvalitātes vadības sistēma ir ISO 9001 sertificēta. Sociālā atbilstība tiek uzturēta ar BSCI sertifikāciju.
+      features:
+        - CE sertifikācija (ES 2013/53/EU)
+        - ISO 9001:2015 Kvalitātes vadība
+        - BSCI Sociālās atbilstības sertifikācija
+        - REACH un RoHS materiālu atbilstība
+        - UKCA pēc Brexit sertifikācija
+content_inspection:
+  tagline: Pārbaudes posmi
+  title: Sešu posmu<br />Inspekcijas process
+  subtitle: Katrs produkts iziet cauri 6 pārbaudes posmiem ar dokumentētiem kvalitātes kontroles punktiem. Defekti tiek atklāti agri, koriģējošas darbības tiek veiktas nekavējoties, un katra partija ir pilnībā izsekojama.
+  stages:
+    - stage: '1'
+      title: Ienākošo materiālu inspekcija
+      description: Visi ienākošie materiāli tiek reģistrēti pēc partijas/partijas numura un karantīnā līdz kvalitātes kontroles apstiprinājumam. PVC/Hypalon auduma ruļļi tiek testēti pēc stiepes izturības (ASTM D751), plīsuma izturības (ISO4674) un biezuma.Drop-stitch Serdes, vārsti, līmes un aparatūra tiek vizuāli pārbaudītas un salīdzinātas ar specifikācijām.
+      checks: Stiepes izturība ASTM D751, plīsuma izturība ISO 4674, biezuma mērītājs, līmes viskozitāte, redzes defekta skenēšana
+      threshold: 100% no partijām testētas. Nērt, ja stiepes izturība < 90% no specifikācijas, plīsums < specifikācijas minimuma vai ja ir kāda vizuāla defekta
+    - stage: '2'
+      title: Procesa kvalitātes kontrole — griešana un sagatavošana
+      description: CNC-grieztie paneļi tiek dimensiju ziņā pārbaudīti pret CAD avota failiem ik pēc 20. paneļa. Malu kvalitāte tiek pārbaudīta uz plīsumu, nevienmērīgiem griezumiem vai dimensiju novirzi. Paneļu skaits tiek pārbaudīts pret BOM katrai ražošanas partijai pirms materiālu pārejas uz metināšanu.
+      checks: Dimensiju pārbaude pret CAD DXF failiem, malu kvalitātes pārbaude, paneļu skaita verificēšana
+      threshold: Tolerance ±0,5 mm. Noraidīt partiju, ja >2% no tolerances
+    - stage: '3'
+      title: Procesa kvalitātes kontrole — metināšana un līmēšana
+      description: Ražošanas laikā metinājuma kvalitāte tiek nepārtraukti uzraudzīta. Paraugiem ik pēc 50 vienībām tiek veikti noņemšanas testi (ASTM D751). Metinājuma platums tiek mērīts pēc specifikācijām. Karstā gaisa temperatūras žurnāli tiek pārskatīti konsekvences pārbaudei. Katra šuve tiek vizuāli pārbaudīta aizmugures apgaismojumā, lai konstatētu kanālus vai tukšumus.
+      checks: Peel tests ASTM D751 ik pēc 50 vienībām, metinājuma platuma mērījums, karstā gaisa temperatūras žurnāla pārskatīšana, apgaismojuma šuves pārbaude
+      threshold: Lobīšanās stiprība minimāli 8 N/cm. Metinājuma platuma tolerance ±1 mm. Jebkura redzama kanālu deformācija = noraidīts
+    - stage: '4'
+      title: Montāžas kvalitātes kontrole
+      description: Katra vienība seko 100 punktu montāžas kontrolsarakstam, ko apstiprina komandas vadītājs. Vārstu darbība tiek pārbaudīta 10 atvēršanas/aizvēršanas ciklos. Aparatūras griezes moments tiek pārbaudīts. Vizuālā pārbaude aptver virsmas apdari, krāsu konsekvenci, etiķešu izvietojumu un piederumu pilnību.
+      checks: 100 punktu kontrolsaraksts katrai vienībai, vārstu funkcijas tests, aparatūras griezes momenta pārbaude, vizuālā pārbaude
+      threshold: 'Nulles defektu politika drošībai kritiskām detaļām (vārsti, D gredzeni, rokturi). Nelieli kosmētiski trūkumi: AQL 2,5 (ISO 2859)'
+    - stage: '5'
+      title: Spiediena Pārbaude
+      description: Katra kamera tiek uzpūsta līdz 1,25× nominālajam spiedienam un tiek turēta 24–48 stundas. Spiediena sensori nepārtraukti reģistrē visu gaidīšanas periodu. Temperatūras kompensētie rādījumi nodrošina precizitāti. Jebkura kamera, kas pārsniedz 5% spiediena kritumu, tiek noraidīta un nosūtīta uz šuvju atkārtotu pārbaudi ar 100% atkārtotu testu visai ražošanas partijai.
+      checks: 24-48 stundu spiediena turēšanas žurnāls, sensora kalibrācija katru dienu pārbaudīta, temperatūras kompensēts rādījums, šuves atkārtota pārbaude pēc remonta
+      threshold: Maksimāli 5% spiediena kritums 24 stundu laikā pie stabilas temperatūras. Pārsniegt = 100% atkārtota pārbaude visai partijai
+    - stage: '6'
+      title: Galīgā pārbaude un nosūtīšanas atbrīvošana
+      description: Galīgā vizuālā un funkcionālā pārbaude pirms iepakošanas. Virsmas defekti, krāsu konsekvence, etiķešu/BIN pārbaude, iepakojuma integritāte un piederumu pilnība tiek pārbaudīti pret klienta pasūtījumu. Vienības tiek vakuumā iepakotas, iepakotas kastēs un paletizētas. Pirms jebkura produkta iziešanas no rūpnīcas nepieciešama galīgā kvalitātes kontroles apstiprināšana.
+      checks: Pilna vizuālā apskate, piederumu kontrolsaraksts saskaņā ar SKU, iepakojuma kritiena tests (1 m nejaušs paraugs), etiķetes / svītrkoda skenēšanas pārbaude
+      threshold: AQL 2,5 galvenās defekti, AQL 4,0 sekundārās. Drošības defektiem nav pieļaujamības. 100% vienību vizuāli pārbaudītas
+content_equipment:
+  tagline: Testēšanas aprīkojums
+  title: Kvalitātes kontroles laboratorija<br />Aprīkojums
+  subtitle: Mūsu kvalitātes laboratorija ir aprīkota ar specializētu testēšanas aprīkojumu materiālu pārbaudei, metinājumu integritātei un produkta darbības spējas pārbaudei.
+  columns: 3
+  items:
+    - title: Stiepes testēšanas iekārta
+      description: Mēra auduma stiepes izturību un pagarinājumu saskaņā ar ASTM D751. Lieto visu PVC, Hypalon un drop-stitch auduma partiju ierašanās kvalitātes kontrolei.
+      icon: tabler:scale
+    - title: Temperatūras kamera
+      description: Vides kamera UV izturības testēšanai (ASTM G154) un zemas temperatūras elastības testēšanai. Simulē ekstremālus darba apstākļus.
+      icon: tabler:temperature
+    - title: Spiediena sensori un reģistratori
+      description: Digitālie spiediena sensori ar nepārtrauktu datu reģistrēšanu 24–48 stundu gaisa noturības testiem. Temperatūras kompensēti precizitātes nodrošināšanai.
+      icon: tabler:wind
+    - title: Lupšanas testa iekārta
+      description: Kalibrēta lobīšanās testēšanas iekārta metinājuma šuvju izturības pārbaudei. Nejauši paraugi no katras ražošanas partijas.
+      icon: tabler:files
+    - title: Noplūdes noteikšanas tvertne
+      description: Ūdens tvertne iegremdētai noplūdes pārbaudei uzpūstās kamerās. Vizuāla burbuļu noteikšana, lai pārbaudītu šuvju un vārstu hermētiskumu.
+      icon: tabler:ripple
+    - title: Pārbaudes rīki
+      description: Kalibrēti mērīšanas rīki — biezuma mērinstrumenti, griezes momenta uzgriežņu atslēgas, dimensiju skaitītāji, cietības testeri ražošanas kvalitātes kontroles stacijām.
+      icon: tabler:tools
+content_metrics:
+  tagline: Kvalitātes kontroles veiktspēja
+  title: Kvalitātes kontrole<br />Metrika
+  subtitle: Reāli pārejas/nepārejas dati no mūsu ražošanas līnijas. Šie rādītāji tiek uzraudzīti ikdienā un vadības apskatīti ik mēnesi.
+  columns: 3
+  items:
+    - title: 100% vienības pārbaudītas
+      description: Katra katra laivas kamera tiek pārbaudīta spiedienam pirms nosūtīšanas. Nav izlases — 100% pārbaude spiediena izturībai.
+      icon: tabler:check
+    - title: <5% spiediena kritums
+      description: Maksimālais pieļaujamais spiediena zudums 24-48 stundu laikā pie 1,25× nominālā spiediena. Jebkura kamera, kas pārsniedz šo robežu, izraisa partijas atkārtotu pārbaudi.
+      icon: tabler:gauge
+    - title: AQL 2,5
+      description: Pieņemamais kvalitātes līmenis galvenajām defektu kategorijām saskaņā ar ISO 2859 paraugu ņemšanas standartu. Nulles tolerance drošībai kritiskiem defektiem.
+      icon: tabler:clipboard-check
+    - title: 24–48 stundu aizturēšana
+      description: 'Spiediena noturēšanas ilgums atšķiras pēc produktu kategorijas. RIB kameras: 48 stundas. SUP un piepūšamās laivas: 24-48 stundas.'
+      icon: tabler:clock
+    - title: 1,25× testa spiediens
+      description: Drošības rezerve katrā kamerā — pārbaudīta 25% virs nominālā spiediena, lai nodrošinātu rezervi virs maksimālajiem darba apstākļiem.
+      icon: tabler:arrow-up
+    - title: 0% drošības defekti
+      description: Nulles tolerances politika attiecībā uz drošības kritiskiem defektiem — vārsti, D gredzeni, šuves un peldspējas kameras. Jebkurš defekts = 100% atkārtota pārbaude.
+      icon: tabler:shield
+cta:
+  title: Pieprasīt kvalitātes dokumentāciju
+  subtitle: Mēs nodrošinām pilnus kvalitātes dokumentāciju paketējumus, ieskaitot testu protokolus, materiālu sertifikātus un atbilstības deklarācijas ar katru sūtījumu. Sazinieties ar mums par paraugiem.
+  actions:
+    - variant: primary
+      text: Pieprasīt QC dokumentāciju
+      href: /contact
+    - text: Skatīt testēšanas protokolus
+      href: /quality

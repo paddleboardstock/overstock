@@ -1,0 +1,237 @@
+hero:
+  tagline: Technical Drawings & CAD
+  title: 'RIB & Inflatable Boat<br />Technical Drawings & CAD Downloads'
+  subtitle: 'Planning-level GA drawings, dimension sheets, and deck layouts for project evaluation and specification. Access technical drawings at the right level — from public PDFs to project-level STEP files.'
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/hero/production-dept.webp
+    alt: RIB boat technical drawings and CAD downloads
+
+direct_answer: 'Aquafarer provides procurement-level technical drawings for RIB boats and inflatable watercraft — including general arrangement (GA) PDFs, dimension sheets, and deck layout drawings. Higher-detail formats (DXF/DWG, STEP/IGES) are available upon qualified inquiry or project application.'
+
+stats:
+  - value: GA PDF
+    label: Free Download
+    detail: General arrangement per model
+  - value: DXF/DWG
+    label: Light Form Access
+    detail: Planning-level 2D CAD
+  - value: STEP/IGES
+    label: Project Application
+    detail: 3D model for integration
+  - value: NDA Only
+    label: Structural Drawings
+    detail: Hull lamination, mold data
+
+content_tiers:
+  tagline: Download Tiers
+  title: 'Four Access Levels<br />— The Right Detail for the Right Stage'
+  subtitle: 'We provide procurement-level drawings, not manufacturing-level files. Each tier matches a different project stage.'
+  items:
+    - title: 'Tier 1 — Public PDF'
+      description: 'General arrangement (GA), 4-view dimension drawing, and deck layout in PDF format. Available for free download. Sufficient for project planning, space allocation, and preliminary specification review.'
+      icon: tabler:file-type-pdf
+    - title: 'Tier 2 — Light Form DXF/DWG'
+      description: '2D CAD files (DXF or DWG) for planning-level layout integration. Requires a short qualification form (company name, project type, intended use). No structural or manufacturing data included.'
+      icon: tabler:file-code
+    - title: 'Tier 3 — Project Application STEP/IGES'
+      description: '3D model files (STEP or IGES) for system integration, outfitting design, or naval architecture coordination. Requires project application with scope, timeline, and purchase intent. Subject to approval.'
+      icon: tabler:cube
+    - title: 'Tier 4 — NDA Engineering'
+      description: 'Hull structural drawings, lamination schedules, tube cutting expansions, and mold data. Available only under NDA with confirmed orders. These are manufacturing-level files — not for public distribution.'
+      icon: tabler:lock
+
+content_included:
+  tagline: What Is Included
+  title: 'Drawing Contents<br />Per Model'
+  subtitle: 'Each model has a standard drawing package covering the essential planning information for B2B buyers and project engineers.'
+  items:
+    - title: 'General Arrangement (GA)'
+      description: 'Side profile, top view, and cross-section showing hull form, tube position, console location, seating, fuel system, and key dimensions (LOA, beam, tube diameter, deadrise angle). Revision status and copyright noted on title block.'
+      icon: tabler:layout
+    - title: '4-View Dimension Drawing'
+      description: 'Side, front, rear, and top views with overall dimensions for transport planning (height on trailer, beam for container, weight for lifting). Includes operational and transport configurations.'
+      icon: tabler:ruler-2
+    - title: 'Deck Layout & Equipment Plan'
+      description: 'Top-down deck view showing console base, seat positions, D-ring locations, navigation light positions, bilge pump access, battery/fuel compartment, and equipment mounting points. Limited precision on proprietary interfaces.'
+      icon: tabler:map
+    - title: 'Transport & Packaging Drawing'
+      description: 'Container loading plan, cradle dimensions, weight distribution, and lifting point positions for logistics planning. Includes standard and custom packaging options.'
+      icon: tabler:truck
+
+content_protection:
+  tagline: IP Protection
+  title: 'What We Do Not Share<br />& Why'
+  subtitle: 'Protecting our engineering IP ensures we can continue investing in R&D while still providing everything buyers need for project planning.'
+  items:
+    - title: 'Hull Mold Core Data'
+      description: 'Plug and mold geometry, CNC tool paths, and lamination templates are proprietary manufacturing assets. They are not shared at any access tier outside confirmed NDA contracts.'
+      icon: tabler:ban
+    - title: 'Tube Cutting Expansions'
+      description: 'Flat-pattern cutting files for tube fabric are manufacturing-level data. Available only under NDA with confirmed production orders and shared only with the contracting party.'
+      icon: tabler:ban
+    - title: 'Structural Calculations'
+      description: 'Detailed stress analysis, FEA results, and laminate schedules are compliance-sensitive documents shared only with Notified Bodies and NDA-bound clients during the conformity assessment process.'
+      icon: tabler:ban
+    - title: 'Competitor Screening'
+      description: 'We reserve the right to decline CAD access requests that appear to be from competitors, students without project context, or parties without legitimate procurement intent.'
+      icon: tabler:shield
+
+content_models:
+  tagline: Available Models
+  title: 'Technical Drawing<br />Availability by Model'
+  subtitle: 'GA PDF downloads are available for our main RIB and inflatable boat models. Contact us for specific model drawings not listed.'
+  items:
+    - title: 'AF580 RIB'
+      description: '5.8 m RIB, GRP deep-V hull, Hypalon or PVC tubes, center console. GA, dimensions, deck layout, and transport plan available. Design Category C.'
+      icon: tabler:sailboat
+    - title: 'AF520 RIB'
+      description: '5.2 m RIB, GRP moderate-V hull, Hypalon or PVC tubes, side or center console. GA and dimensions available. Design Category C.'
+      icon: tabler:sailboat
+    - title: 'AF430 RIB'
+      description: '4.3 m RIB, GRP hull, PVC tubes, tiller or console. GA and dimensions available. Design Category C/D.'
+      icon: tabler:sailboat
+    - title: 'AF380 Inflatable Boat'
+      description: '3.8 m inflatable dinghy, aluminum floor, PVC tubes. GA and packing dimensions available. EN ISO 6185 compliant.'
+      icon: tabler:sailboat
+    - title: 'AF320 Inflatable Boat'
+      description: '3.2 m inflatable boat, air deck floor, PVC tubes. GA and packing dimensions available. EN ISO 6185 compliant.'
+      icon: tabler:sailboat
+
+content_downloads:
+  tagline: Download Center
+  title: 'CAD Downloads<br />Per Model & Tier'
+  subtitle: 'Select a model and access tier to request technical drawings. GA PDFs and DXF/DWG packs are free — the download link is delivered by email after a short qualification form; STEP files require project approval.'
+  models:
+    - name: 'AF580 RIB'
+      length: '5.8 m'
+      category: 'RIB'
+      downloads:
+        - tier: 'Tier 1 — PDF'
+          format: 'PDF'
+          file: 'Aquafarer_RIB_AF580_General-Arrangement_Rev-A.pdf'
+          size: '~1.2 MB'
+          access: 'form'
+          url: '/technical-drawings#cad-form'
+        - tier: 'Tier 1 — PDF'
+          format: 'PDF'
+          file: 'Aquafarer_RIB_AF580_4-View-Dimensions_Rev-A.pdf'
+          size: '~0.8 MB'
+          access: 'form'
+          url: '/technical-drawings#cad-form'
+        - tier: 'Tier 2 — DXF'
+          format: 'DXF'
+          file: 'Aquafarer_RIB_AF580_2D-Planning-Pack_Rev-A.dxf'
+          size: '~3.5 MB'
+          access: 'form'
+          url: '/technical-drawings#cad-form'
+        - tier: 'Tier 3 — STEP'
+          format: 'STEP'
+          file: 'Aquafarer_RIB_AF580_3D-Model_Rev-A.step'
+          size: '~15 MB'
+          access: 'project'
+          url: '/request-quotation'
+    - name: 'AF520 RIB'
+      length: '5.2 m'
+      category: 'RIB'
+      downloads:
+        - tier: 'Tier 1 — PDF'
+          format: 'PDF'
+          file: 'Aquafarer_RIB_AF520_General-Arrangement_Rev-A.pdf'
+          size: '~1.0 MB'
+          access: 'form'
+          url: '/technical-drawings#cad-form'
+        - tier: 'Tier 1 — PDF'
+          format: 'PDF'
+          file: 'Aquafarer_RIB_AF520_4-View-Dimensions_Rev-A.pdf'
+          size: '~0.7 MB'
+          access: 'form'
+          url: '/technical-drawings#cad-form'
+        - tier: 'Tier 2 — DXF'
+          format: 'DXF'
+          file: 'Aquafarer_RIB_AF520_2D-Planning-Pack_Rev-A.dxf'
+          size: '~3.0 MB'
+          access: 'form'
+          url: '/technical-drawings#cad-form'
+    - name: 'AF430 RIB'
+      length: '4.3 m'
+      category: 'RIB'
+      downloads:
+        - tier: 'Tier 1 — PDF'
+          format: 'PDF'
+          file: 'Aquafarer_RIB_AF430_General-Arrangement_Rev-A.pdf'
+          size: '~0.9 MB'
+          access: 'form'
+          url: '/technical-drawings#cad-form'
+        - tier: 'Tier 1 — PDF'
+          format: 'PDF'
+          file: 'Aquafarer_RIB_AF430_4-View-Dimensions_Rev-A.pdf'
+          size: '~0.6 MB'
+          access: 'form'
+          url: '/technical-drawings#cad-form'
+    - name: 'AF380 Inflatable'
+      length: '3.8 m'
+      category: 'Inflatable Boat'
+      downloads:
+        - tier: 'Tier 1 — PDF'
+          format: 'PDF'
+          file: 'Aquafarer_IB_AF380_General-Arrangement_Rev-A.pdf'
+          size: '~0.8 MB'
+          access: 'form'
+          url: '/technical-drawings#cad-form'
+        - tier: 'Tier 1 — PDF'
+          format: 'PDF'
+          file: 'Aquafarer_IB_AF380_Packed-Dimensions_Rev-A.pdf'
+          size: '~0.5 MB'
+          access: 'form'
+          url: '/technical-drawings#cad-form'
+    - name: 'AF320 Inflatable'
+      length: '3.2 m'
+      category: 'Inflatable Boat'
+      downloads:
+        - tier: 'Tier 1 — PDF'
+          format: 'PDF'
+          file: 'Aquafarer_IB_AF320_General-Arrangement_Rev-A.pdf'
+          size: '~0.7 MB'
+          access: 'form'
+          url: '/technical-drawings#cad-form'
+
+content_version_control:
+  tagline: Version Control
+  title: 'Drawing Version<br />Management'
+  subtitle: 'Every drawing follows a controlled revision system. Always verify you have the current revision before using drawings for project planning.'
+  items:
+    - title: 'Revision Tracking'
+      description: 'Each drawing carries a revision code (Rev-A, Rev-B, Rev-C), issue date, last-reviewed date, applicable model/configuration, units, file size, and format. Only the "Current" revision is available for download.'
+      icon: tabler:git-branch
+    - title: 'Drawing Status Notice'
+      description: 'All public drawings are marked "Preliminary layout only — not for construction, certification, or production use. Dimensions subject to final specification and order confirmation." This protects both parties from misapplication.'
+      icon: tabler:alert-circle
+    - title: 'Update Notifications'
+      description: 'When a model specification changes, the drawing revision is updated and previous versions are marked "Superseded." Registered users who downloaded DXF/DWG packs are notified of significant updates via email.'
+      icon: tabler:bell
+
+faq:
+  title: Technical Drawings — Frequently Asked Questions
+  questions:
+    - q: Are the GA PDFs really free?
+      a: 'Yes. General arrangement PDFs for our main models are available at no cost — complete the short qualification form below and the download link is delivered by email within 1 business day. They contain planning-level information sufficient for project evaluation, space allocation, and preliminary specification review.'
+    - q: How do I access DXF/DWG files?
+      a: 'Complete the short qualification form on the download page with your company name, project type, and intended use. Approved requests receive a download link via email within 1 business day.'
+    - q: Can I get STEP/IGES 3D models?
+      a: 'STEP or IGES 3D model files are available through our project application process. Provide your project scope, integration requirements, timeline, and purchase intent. Subject to approval — typically within 3-5 business days.'
+    - q: Why do you restrict access to higher-detail files?
+      a: 'Hull geometry, mold data, and structural calculations represent years of R&D investment and are core manufacturing IP. We provide everything needed for procurement planning and project integration while protecting our ability to continue investing in new product development.'
+    - q: Do the drawings include manufacturing details?
+      a: 'No. Public and light-form drawings contain procurement-level information for planning and specification. Manufacturing-level details (lamination schedules, tool paths, cutting expansions) are shared only under NDA with confirmed orders.'
+    - q: Are drawings available for custom or semi-custom RIB configurations?
+      a: 'Custom project drawings are prepared as part of the OEM/ODM development process. If you are evaluating a custom RIB project, contact us with your requirements and we will provide project-specific GA drawings as part of the proposal.'
+
+cta:
+  title: 'Need technical drawings for your RIB project?'
+  subtitle: 'Request model-specific GA drawings, dimension sheets, or CAD files for your evaluation and integration work.'
+  actions:
+    - variant: primary
+      text: Request Technical Drawings
+      href: /contact
+    - text: View OEM/ODM Services
+      href: /oem-odm-rib-boats

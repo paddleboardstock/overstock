@@ -1,0 +1,155 @@
+hero:
+  tagline: "私たちについて"
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-factory-building.webp
+    alt: Aquafarerの工場と作業場
+  title: |
+    海洋工学を、<br />
+    <span class="text-accent dark:text-white">Aquafarer</span> 流に築く
+  subtitle: '私たちは沿岸の作業場で、1艘の船と「海洋製品はその価値に見合うかたちで設計されるべきだ」という揺るぎない信念から始めました。今日では50か国以上へ出荷していますが、すべての船体は今なお、創業当時と同じ手によって仕上げられています。'
+
+stats:
+  title: "数字で見る"
+  columns: 4
+  stats:
+    - title: "納入船体数"
+      amount: '2,400+'
+    - title: "出荷国"
+      amount: '50+'
+    - title: "通算経験年数"
+      amount: '60'
+    - title: "平均保証応答時間（時間）"
+      amount: '24'
+
+features3_what_we_build:
+  title: "私たちの製品"
+  subtitle: "熟知し尽くした集中的な製品ラインナップ — 中途半端な実験製品も、バッジエンジニアリングもありません。"
+  columns: 3
+  isBeforeContent: true
+  items:
+    - title: RIBボート
+      description: 3.3 m～7.5 m のアルミ船体 RIB。巡回、ダイビング、釣り、ファミリー用途に設計。
+      icon: tabler:ship
+    - title: "インフレータブルボート"
+      description: 2.4 m～4.2 m の PVC・Hypalon 製インフレータブルディンギー。軽量、頑丈、収納も簡単。
+      icon: tabler:speedboat
+    - title: "スーパーヨットテンダー"
+      description: "母船の外観に合わせてオーダーメイドされる、コンパクトで高スペックな RIB。"
+      icon: tabler:crown
+
+features3_more:
+  columns: 3
+  isAfterContent: true
+  items:
+    - title: "アクセサリー"
+      description: "オール、ポンプ、カバー、ドライバッグ、燃料タンク、電子機器。すべて当社の船に合わせています。"
+      icon: tabler:package
+    - title: "改装・修理"
+      description: "自社内で行うチューブ交換、電子機器の後付け、エンジンのアップグレード。"
+      icon: tabler:tool
+    - title: "カスタム製作"
+      description: "商業、科学、軍事のお客様向けにプロジェクト単位で設計。"
+      icon: tabler:hammer
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-design-discussion-2.webp
+    alt: "ボート設計・エンジニアリングの打ち合わせ"
+
+steps2_values:
+  title: "私たちの価値観"
+  subtitle: "初日からすべての製品を形作ってきた3つの原則。"
+  items:
+    - title: "家族が乗る船として造る"
+      description: "すべての船体、溶接、締結金具を、私たち自身の家族が使うものとして扱います。"
+      icon: tabler:heart
+    - title: "販売の前にエンジニアリング"
+      description: "仕様に誤りがあれば、変えるのは仕様です — お客様ではありません。"
+      icon: tabler:settings
+    - title: "保証期間を超えるサポート"
+      description: 20年前の船体から今も部品の問い合わせがあり、私たちも今も応えます。
+      icon: tabler:headset
+
+steps2_milestones:
+  title: "沿革"
+  subtitle: Aquafarer の物語の短いバージョン。
+  isReversed: true
+  items:
+    - title: "沿岸の作業場で創業"
+      description: 2人の造船技術者と1台の CNC フライス盤、そして揺るがないアイデアから始まりました。
+      icon: tabler:building-factory
+    - title: "初の1,000船体を出荷"
+      description: "主に口コミとリピーターのお客様に支えられ、7年目に達成。"
+      icon: tabler:circle-check
+    - title: "国際輸出プログラム"
+      description: "現在、5大陸に現地サポートパートナーを置き、50か国以上へ出荷しています。"
+      icon: tabler:world
+    - title: "新たなグローバル運営体制"
+      description: '2026年9月、ブランド運営は Qingdao Vatrad Group から Aquafarer LLC（米国ニューメキシコ州）へ移管されました。青島の製造拠点は引き続き研究開発、生産、工場直輸出を担当します。'
+      icon: tabler:building-skyscraper
+
+features2_locations:
+  title: "私たちの拠点"
+  tagline: "所在地"
+  columns: 3
+  items:
+    - title: "本社・作業場"
+      description: "沿岸工業団地4号棟 — 月～金曜日、予約制で見学可能。"
+    - title: EUサービスセンター
+      description: "地中海の港 — 欧州のお客様向けに改装、修理、保証サポートを提供。"
+    - title: APAC パートナーネットワーク
+      description: "オーストラリア、日本、シンガポール、香港に公認サービスパートナー。"
+
+brand_hub_tagline: "ブランド"
+brand_hub_title: "私たちのブランドを探る"
+brand_hub_subtitle: "当社の海洋エンジニアリングの専門性、グローバルな存在感、そして私たちを動かす原則を、より深くご覧ください。"
+
+brand_hub_cards:
+  - title: "マリンの専門性"
+    desc: PVC/Hypalon 加工からディープV船体設計、ドロップスティッチ技術まで — 数十年にわたる材料科学、精密製造、実環境テストの蓄積。
+    link: /brand-marine-expertise
+    link_label: "詳しくはこちら →"
+  - title: "グローバル展開"
+    desc: "青島の工場から50か国以上へ出荷。欧州、アジア太平洋、南北アメリカに公認サービスパートナーを配置。"
+    link: /brand-global-presence
+    link_label: "詳しくはこちら →"
+  - title: Aquafarerが選ばれる理由
+    desc: "垂直統合、二重認証（ISO 9001 + BSCI）、CE 適合、低 MOQ — ブランド、ディストリビューター、政府機関のために。"
+    link: /brand-why-aquafarer
+    link_label: "詳しくはこちら →"
+
+production_section:
+  tagline: '生産の卓越性'
+  title: '精緻な職人技の確保'
+  description: 'Aquafarer の生産ラインは、高品質で耐久性に優れ、高性能なインフレータブルボート製品の生産に特化しています。'
+  cards:
+    - title: '経験豊富な技術者チーム'
+      items:
+        - 'PVC、Hypalon、海洋素材に関する専門知識'
+        - '切断、接着、アクセサリー取り付けにおける精緻な職人技'
+        - '最新の生産技術を習得するための継続的な研修'
+    - title: '先進的な生産設備'
+      items:
+        - '誤差を最小限に抑えた精密な生地裁断を実現する CNC 切断設備'
+        - '気密性と耐久性のあるシームを実現する高精度の熱・冷間接着'
+        - 'プロ仕様の気密試験・引張試験設備'
+    - title: '成熟した管理システム'
+      items:
+        - '明確な品質基準に基づく標準化された生産プロセス'
+        - '無駄を削減し効率を高めるリーン生産の理念'
+        - '信頼できるサプライヤーとの提携による効率的なサプライチェーン管理'
+    - title: '厳格な品質管理'
+      items:
+        - '認証済み品質マネジメントシステム'
+        - '多段階検査：原材料、工程内、最終出荷'
+        - '出荷前の厳格な気密性・耐久性テスト'
+
+global_ops_section:
+  tagline: 'グローバル運営アーキテクチャ'
+  title_html: '一つのブランド、<span class="text-white/90">二つの拠点</span>'
+  description_html: '2026年9月以降、Aquafarer は <strong class="text-white">Aquafarer LLC</strong>（米国ニューメキシコ州）によって運営されています — 流通、商用 B2B 販売、契約、請求、アフターサービスを担うグローバル法人です。研究開発、生産、品質管理は <strong class="text-white">Aquafarer 青島製造拠点</strong>に残り、すべてのご注文を FOB 青島で工場直送します。この移行で変わったのは契約書に署名する主体 — あなたの船を造る主体ではありません。'
+  stats:
+    - value: '2,400+'
+      label: '世界に納入された船体'
+    - value: '50+'
+      label: "輸出国"
+    - value: '10+'
+      label: '製造年数'

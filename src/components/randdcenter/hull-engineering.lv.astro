@@ -1,0 +1,180 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'lv' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline"
+    >&larr; Atpakaļ uz Pētniecības un izstrādes centru</a
+  >
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Laboratorija 02</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Korpusa inženierijas studija</h1>
+      <p class="mt-3 text-lg text-muted">Digitālā simulācija, struktūru inteliģence, pielāgota korpusa dizains</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/design discussaquafarer-inflatable-boat-aquafarer-factory-exterior.webp"
+        alt="Aquafarer korpusa inženierijas CAD dizaina darba stacija"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Kur spēks satiekas ar hidrodinamiku</h2>
+  <p>
+    Korpuss ir jebkura RIB vai piepūšamās laivas mugurkauls. Tam jābūt pietiekami vieglam, lai efektīvi slidotu,
+    pietiekami stipram, lai absorbētu triecienu slodzes, un dimensiju ziņā stabilam plašā temperatūras diapazonā. Pie{
+      SITE.name
+    }, mūsu Vaļu Inženierijas Studija apvieno progresīvu CAD modelēšanu, galīgo elementu analīzi (FEA) un daudzu gadu
+    praktisku kuģu arhitektūras pieredzi, lai piegādātu vaļus, kas ir optimizēti to paredzētajai misijai — nevis
+    vispārējas formas, kas pielāgotas no kataloga.
+  </p>
+  <p>
+    Mēs strādājam ar trim galvenajiem korpusa materiāliem — rotācijas veidotais HDPE, metināts jūras klases alumīnijs un
+    manuāli klāts stikla audums — un mums ir inženierijas spēja katru no tiem izstrādāt, simulēt un verificēt iekšēji.
+  </p>
+
+  <h2>Dizaina rīki un standarti</h2>
+  <p>Mūsu digitālā inženierijas vide ietver:</p>
+  <table>
+    <thead><tr><th>Spēja</th><th>Programmatūra / Rīks</th><th>Pielietojums</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>3D parametriskā modelēšana</td><td>SolidWorks Professional</td><td
+          >Korpusa virsma, stingera sistēma, dzinēja kronšteins, klāja izkārtojums</td
+        ></tr
+      >
+      <tr
+        ><td>Finišu elementu analīze</td><td>ANSYS Mechanical & LS-DYNA</td><td
+          >Stresa karšu veidošana, modālā analīze, sadursmes/trieciena simulācija</td
+        ></tr
+      >
+      <tr
+        ><td>Kompjuterizētā plūsmu dinamika</td><td>Ansys Fluent / Star-CCM+</td><td
+          >Hidrodinamikas pretestības prognoze, pielāgošanas optimizācija</td
+        ></tr
+      >
+      <tr
+        ><td>Lamināta inženierija</td><td>ESAComp / CADEC</td><td
+          >Stikla auduma slāņu izvietojums, kodola izvēle, masas novērtējums</td
+        ></tr
+      >
+      <tr><td>Veidnes plūsmas simulācija</td><td>Moldex3D</td><td>Rotomoldēšanas sienas biezuma prognoze</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Mūsu inženierijas darba plūsma</h2>
+  <p>
+    Katra korpusa dizains, neatkarīgi no tā, vai tas ir standarta modelis vai pilnībā pielāgots projekts, ievēro stingru
+    piecu posmu procesu:
+  </p>
+  <ol>
+    <li>
+      <strong>Koncepta izstrāde un prasību vākšana</strong>— Mēs tiekamies ar jums, lai definētu kravu, ātruma
+      ierobežojumu, jūras stāvokļa spējas, vilkšanas prasības un jebkādu īpašu misijas aprīkojumu (klāja lūkas, konsoles
+      pozīcijas, degvielas tvertnes integrāciju).
+    </li>
+    <li>
+      <strong>3D seguma un hidrostatiskā aprēķināšana</strong>— Korpusa forma tiek modelēta SolidWorks un pārbaudīta
+      hidrostatiskā stabilitāte (GM, stabilizācijas roka), izmantojot iebūvētus analīzes rīkus.
+    </li>
+    <li>
+      <strong>Strukturālā FEA</strong>— Slodzes gadījumi ir definēti: statisks (apkalpes + aprīkojums), dinamisks
+      (planēšanas triecieni pie 5g) un trieciens (krišana no viļņa virsotnes ar ātrumu 3 m/s). Tiek pārskatītas
+      sprieguma kontūras; drošības koeficients ≥ 2,5 ir obligāts.
+    </li>
+    <li>
+      <strong>CFD pretestības optimizācija</strong>— Korpuss tiek simulēts trīs slodzes apstākļos un piecos ātrumos.
+      Mitrinātā virsmas laukums, balansēšanas leņķis un atlikusī pretestība tiek iteratīvi samazināti.
+    </li>
+    <li>
+      <strong>Dizaina apskats un izdošana</strong>— Pilnu inženiertehnisko komplektu (3D modelis, FEA ziņojums, CFD
+      ziņojums, svara novērtējums, saplākšņu grāmata) pārskata mūsu vecākais kuģu arhitekts pirms nodošanas prototipa
+      darbnīcai.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      FEA sprieguma sadalījums — RIB 450 patruļas korpuss (alumīnijs 5083)
+    </p>
+    <div class="grid grid-cols-2 gap-4 text-sm">
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">2.8 : 1</span>
+        <span class="text-gray-500">Drošības koeficients pie maksimālās kravnesības</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">15.2 %</span>
+        <span class="text-gray-500">Pretestības samazināšana salīdzinājumā ar iepriekšējo paaudzi</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">87 kN/m²</span>
+        <span class="text-gray-500">Maksimālais trieciena spiediens (projektētā robeža)</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">18 000 h</span>
+        <span class="text-gray-500">Kopējais FEA izpildes laiks 2025. gadā</span>
+      </div>
+    </div>
+  </div>
+
+  <h2>Pielāgošana: tavs korpuss, tavi noteikumi</h2>
+  <p>
+    Nevienam operatoram nav identisku prasību. Ostas patruļai RIB nepieciešams sekls V formas korpuss stabilitātei pie
+    zema ātruma; ātras pārtveršanas kuģim nepieciešams dziļš V ar smidzināšanas sliedēm; niršanas atbalsta laivai
+    nepieciešams plats korpuss un zems pakaļgals. Mēs neuzspiežam jūsu pieteikumu jau esošai korpusa formai. Mēs
+    projektējam pēc jūsu specifikācijas uz augšu.
+  </p>
+  <p>Piemēri nesenajiem pielāgotajiem korpusa inženierijas projektiem:</p>
+  <ul>
+    <li>
+      Izstiepts 6,8 m HDPE korpuss Karību jūras tūroperatoram, ar pastiprinātu priekšgalu pludmales izkāpšanai (+15 %
+      grunts biezums).
+    </li>
+    <li>
+      Viegls alumīnija 7,2 m garums RIB krasta apsardzei, ar integrētām degvielas tvertņu barjerām un aprīkojuma skapju
+      stiprinājumiem.
+    </li>
+    <li>
+      Stiklašķiedras 5,5 m gara niršanas laiva ar samazinātu pakaļgalu un divām bateriju kastēm, paredzēta vieglai
+      snorkelētāja atkārtotai iekāpšanai.
+    </li>
+  </ul>
+
+  <h2>Mūsu inženieri</h2>
+  <p>
+    Studiju vada vecākais kuģu arhitekts ar 14 gadu pieredzi ātrgaitas kuģu projektēšanā, kuru atbalsta divi mehānikas
+    inženieri, kas specializējas FEA un CFD. Visiem trim ir augstākās izglītības grādi jūras inženierijā vai kuģu
+    arhitektūrā no starptautiski atzītām universitātēm. Komanda regulāri publicējas nozares žurnālos un uzstājas
+    konferencēs, piemēram, Starptautiskajā augstas veiktspējas jūras transportlīdzekļu konferencē.
+  </p>
+
+  <h2>Sadarbojies ar mums nākamajā korpusā</h2>
+  <p>
+    No pirmās koncepcijas skices līdz galīgajam sprieguma ziņojumam mūsu korpusa inženierijas studija ir jūsu partneris,
+    radot laivu, kas ne tikai tiek būvēta — bet arī inženierēta. Mēs ieguldām simulācijas stundas jau sākumā, lai katrs
+    metinājums, katra lamināta kārta un katra korpusa līkne būtu tur ar iemeslu.
+  </p>
+  <p>
+    Neatkarīgi no tā, vai jums nepieciešamas nelielas izmaiņas esošam modelim vai pilnīgi jauns dizains, mēs esam gatavi
+    apspriest jūsu prasības.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Sāciet savu korpusa dizaina konsultāciju</h2>
+    <p class="mt-2 text-sm text-muted">Pastāstiet par savu misijas profilu, un mēs piedāvāsim inženierijas ceļu.</p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Sazinieties ar mūsu inženieru komandu</a
+    >
+  </div>
+</section>

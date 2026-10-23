@@ -1,0 +1,279 @@
+---
+import JsonLd from '~/components/common/JsonLd.astro';
+import AiQuickAnswer from '~/components/common/AiQuickAnswer.astro';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
+const { lang = 'hu' } = Astro.props;
+const t = (key: string) => getUiForLang(lang)?.[key] || '';
+---
+
+<JsonLd
+  type="Article"
+  article={{
+    headline: 'Fújható hajó útmutató — a teljes forrás',
+    description:
+      'Átfogó útmutató a felfújható hajókhoz, amely tartalmazza a típusokat, építési módszereket, anyagok összehasonlítását, kiválasztási kritériumokat, biztonsági standardokat és karbantartást.',
+    datePublished: '2026-07-07',
+  }}
+  data={{ url: 'https://aquafarer.com/marine-industry/' }}
+/>
+
+<JsonLd
+  type="BreadcrumbList"
+  breadcrumbs={[
+    { name: t('nav.home') || 'Home', href: `/${lang}/` },
+    { name: 'Tengeripar', href: `/${lang}/marine-industry` },
+    { name: 'Fújható hajó útmutató', href: `/${lang}/marine-industry/` },
+  ]}
+/>
+
+<AiQuickAnswer
+  entityType="Útmutató"
+  quickAnswer="A felfújható csónak egy könnyű vízi jármű, amely rugalmas szövetcsövekből (oldalsó ballonok) készül, melyeket nyomás alatt lévő levegővel töltenek meg, hogy felhajtóerőt biztosítsanak. A modern felfújható csónakok közé tartoznak a kishajók, RIBs (merev felfújható csónakok), felfújható kajakok és álló evezős deszkák. PVC vagy Hypalon CSM szövetekből készülnek, RF-hegesztéssel vagy kézzel ragasztott varratokkal, drop-stitch szerkezettel, amely lehetővé teszi a nagy nyomású merev padlót."
+  facts={[
+    { label: 'Globális piac mérete', value: '$2.8B (2026)' },
+    { label: 'Elsődleges anyagok', value: 'PVC / Hypalon CSM' },
+    { label: 'Élettartam tartomány', value: '8-20+ év' },
+    { label: 'CE Tanúsítás', value: 'Kötelező (EU)' },
+  ]}
+/>
+
+<section class="max-w-4xl mx-auto py-16 px-6">
+  <h1 class="text-4xl font-semibold text-gray-900">Fújható hajó útmutató</h1>
+  <p class="mt-4 text-lg text-gray-500">
+    A felfújható vízi járművek meghatározó forrása — a szabadidős csónakoktól a professzionális RIBs és speciális
+    mentőhajókig.
+  </p>
+
+  <nav class="mt-8 flex flex-wrap gap-2">
+    {
+      ['Types', 'Construction', 'Materials', 'Selection', 'Safety', 'Maintenance', 'Standards'].map((section) => (
+        <a
+          href={`#${section.toLowerCase()}`}
+          class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition"
+        >
+          {section}
+        </a>
+      ))
+    }
+  </nav>
+
+  <section id="types" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Fújható csónaktípusok</h2>
+    <div class="mt-8 grid gap-6">
+      {
+        [
+          {
+            title: 'Felfújható csónakok',
+            desc: 'Kis, hordozható hajók kikötői közlekedésre, horgászatra és rövidtávú rekreációs használatra. Általában 2-4 m hosszúak, kis külmotorral (2-15 HP) vagy evezővel hajthatók. A legmegfizethetőbb belépő szint.',
+            icon: '🚤',
+          },
+          {
+            title: 'Kemény felfújható hajók (RIBs)',
+            desc: 'Nagy teljesítményű hajók merev üvegszálas, alumínium vagy HDPE testtel és felfújható oldalsó ballonokkal. 3-12 m hosszúság, 15-300+ HP külmotorokkal. Őrzésre, mentésre, búvárkodásra és tengeri túrázásra használják.',
+            icon: '⚡',
+          },
+          {
+            title: 'Felfújható kajakok',
+            desc: 'Hordozható kajakok PVC vagy TPU szövetből. Egy- és kétszemélyes kivitelben elérhetők rekreációs túrázásra, folyóvízi evezésre és expedíciós utazásokra.',
+            icon: '🛶',
+          },
+          {
+            title: 'Felfújható álló evezős deszkák (SUPs)',
+            desc: 'Drop-stitch anyagból készült evezős deszkák, amelyek merev, nagy nyomású fedélzetté felfújhatók. Minden típusú, túra, jóga, horgászat és szörf modellek elérhetők.',
+            icon: '🏄',
+          },
+          {
+            title: 'Mentőhajók (SAR)',
+            desc: 'Speciális RIBs keresésre és mentésre. Önzáródó padlóval, elülső konzolokkal, vontatókapcsokkal és nagy láthatóságú színkombinációval rendelkezik. CE tanúsítvánnyal mentéshez.',
+            icon: '🆘',
+          },
+          {
+            title: 'Kereskedelmi munkahajók',
+            desc: 'Nehéz RIBs búvársegítéshez, járőrözéshez, felméréshez és kereskedelmi tengeri műveletekhez. Hypalon CSM kivitel, megerősített test és professzionális felszereltség.',
+            icon: '⚙️',
+          },
+        ].map((item) => (
+          <div class="flex gap-4 p-5 bg-gray-50 rounded-xl border border-gray-200">
+            <span class="text-2xl flex-shrink-0">{item.icon}</span>
+            <div>
+              <h3 class="font-semibold text-gray-900">{item.title}</h3>
+              <p class="mt-1 text-sm text-gray-600">{item.desc}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section id="construction" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Építési módszerek</h2>
+    <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">RF hegesztés (nagyfrekvenciás)</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Elektromágneses energiát használ a PVC rétegek molekuláris szintű összeolvadására. A legerősebb légzárkózó
+          varrásokat hozza létre. Gyakori a kiváló PVC minőségű hajóknál SUPsés . Speciális gépeket és szakszerű
+          kezelést igényel.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Kézi ragasztás / kémiai kötés</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Kétrészes ragasztó köti a szövetpaneleket. A Hypalon CSM hajók elsődleges módszere (nem hegeszthető RF-vel).
+          Pontos felületi előkészítést, szabályozott páratartalmat és megfelelő kötési időt igényel az optimális
+          varrásszilárdság érdekében.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Drop-Stitch Mag</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Több ezer poliészter menet köti össze a felső és alsó PVC rétegeket, lehetővé téve a nagy nyomású felfújást
+          (15-25 PSIfát) a merev deszlapteljesítmény érdekében. A menetsűrűség (15-50 menet/cm²) határozza meg a
+          merevséget és a súlyt.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Hőhegesztés</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Forró levegő vagy forró ékhegesztés varratokhoz és megerősítésekhez használt. Gyakori nagyobb RIB
+          szerkezetekben. Kevésbé precíz, mint az RF hegesztés, de hatékony Hypalon és nehéz PVC minőségű anyagoknál.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="materials" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Anyagok összehasonlítása</h2>
+    <div class="mt-6 overflow-x-auto">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="bg-gray-50 border-b-2 border-gray-200">
+            <th class="px-4 py-3 text-left font-semibold text-gray-700">Tulajdon</th>
+            <th class="px-4 py-3 text-center font-semibold text-sky-700">PVC</th>
+            <th class="px-4 py-3 text-center font-semibold text-emerald-700">Hypalon CSM</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            [
+              ['Relative Cost', '$ (budget)', '$$$ (premium)'],
+              ['UV Resistance', 'Good (with coating)', 'Excellent (inherent)'],
+              ['Abrasion Resistance', 'Moderate-Good', 'Excellent'],
+              ['Chemical Resistance', 'Good', 'Excellent'],
+              ['Cold Flexibility', 'Stiffens below 0°C', 'Flexible to -20°C'],
+              ['Lifespan', '8-12 years', '15-20+ years'],
+              ['Seam Method', 'RF welding', 'Hand gluing'],
+              ['Repair', 'PVC glue (easy)', '2-part adhesive (moderate)'],
+            ].map((row, i) => (
+              <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                {row.map((cell, j) => (
+                  <td
+                    class={`px-4 py-3 border-b border-gray-200 ${j === 0 ? 'font-medium text-gray-700' : 'text-center text-gray-600'}`}
+                  >
+                    {cell}
+                  </td>
+                ))}
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-4 text-sm text-gray-500">
+      Modern katonai minőségű PVC (1100-1670 dtex) kiváló tartósságot biztosít a legtöbb szabadidős felhasználó számára,
+      a költség fele Hypalonárával.Hypalon Előnyben részesíti kereskedelmi flották, trópusi éghajlatok és
+      küldetéskritikus alkalmazások esetén.
+    </p>
+    <a
+      href={`/${lang}/learn/pvc-vs-hypalon`}
+      class="mt-4 inline-block text-sky-600 hover:text-sky-700 text-sm font-medium"
+      >Részletes PVC vs Hypalon útmutató →</a
+    >
+  </section>
+
+  <section id="selection" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Hogyan válasszunk felfújható csónakot</h2>
+    <div class="mt-8 grid md:grid-cols-3 gap-6">
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">1. Határozd meg a felhasználási esetedet</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>Szabadidős cél: Csónaka vagy SUP</li>
+          <li>Teljesítmény: RIB (15-60HP)</li>
+          <li>Reklám: RIB (100+HP)</li>
+          <li>Fitnesz: Felfújható SUP</li>
+          <li>Utazás: Fújható kajak</li>
+        </ul>
+      </div>
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">2. Állítsd be a költségvetésedet</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>$200-$800: Fújható SUP</li>
+          <li>500-2000 dollár: + Csónaka motor</li>
+          <li>3 000–8 000 dollár: Felvétel RIB</li>
+          <li>8 000-20 000 dollár: Prémium RIB</li>
+          <li>20 000 +dollár: Reklám RIB</li>
+        </ul>
+      </div>
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">3. Vegyék figyelembe az anyagot</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>PVC: Költségbarát, könnyű</li>
+          <li>Hypalon: Prémium életű, hosszú életű</li>
+          <li>Drop-Stitch: Merev teljesítmény</li>
+          <li>Anyag súlya: 1100-1670 dtex</li>
+          <li>Borítás: UV + szúró rétegek</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="safety" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Biztonság és szabványok</h2>
+    <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">CE Tanúsítás</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Az EU-ban forgalmazott összes felfújható hajónak megköveteli CE a Recreational Craft Directive RCD()
+          2013/53/EU szerinti jelölést. A tanúsítás a tervezési kategóriát (A-D), felhajtóképességet, stabilitást és
+          teherbírásságot fed.Aquafarer A hajók CEszabadidős és mentőeszközök számára tanúsítottak.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Szabvány</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Nemzetközi szabvány felfújható csónakokra, amely előírja az anyagokra, varratokra, szelepekre és
+          teljesítménytesztelésre vonatkozó követelményeket. Az I-IV típusok mindenre kiterjednek a kis gumicsónakoktól
+          a nagy RIBs.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Alapvető biztonsági felszerelés</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Mentőmellények/PFD-k (CE 12402), dobókötelek, szivattyú/tűzoltó készülék, navigációs fények (éjszaka), VHF
+          rádió, elsősegélycsomag, horgony és pótevőlapát vagy üzemanyag.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Biztonságos üzemeltetés</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          SOHA ne lépje túl a maximális kapacitást jelző táblát. Ellenőrizze a szelep biztonságát a vízre bocsátás
+          előtt. Ossza el egyenletesen a súlyt. Figyelje az időjárási viszonyokat. Készítsen úszótervet. Vegyen részt
+          hajóbiztonsági tanfolyamon.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="maintenance" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Karbantartás és ápolás</h2>
+    <div class="mt-8 space-y-4 text-sm text-gray-600">
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <>
+          <span class="text-sky-600 font-bold flex-shrink-0">1.</span>
+          <span>Minden sós vízi használat után öblítse le friss vízzel. Tárolás előtt teljesen szárítsa meg.</span>
+        </>
+      </div>
+    </div>
+  </section>
+</section>

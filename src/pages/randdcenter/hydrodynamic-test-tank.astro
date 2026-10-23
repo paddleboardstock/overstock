@@ -1,0 +1,20 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+
+const crumbs = [
+  { name: 'Home', href: '/' },
+  { name: 'R&D Center', href: '/randdcenter' },
+  { name: 'Hydrodynamic Test Tank' },
+];
+
+const metadata = {
+  title: `Hydrodynamic Test Tank — Scale-Model Towing & Hull Optimisation | ${SITE.name}`,
+  description: `Validate your RIB hull performance with our hydrodynamic test tank. Scale-model towing, planing analysis, and fuel efficiency testing. Book a tank test session today.`,
+};
+import HydrodynamicTestTankEn from '~/components/randdcenter/hydrodynamic-test-tank.en.astro';
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <HydrodynamicTestTankEn lang="en" />
+</Layout>

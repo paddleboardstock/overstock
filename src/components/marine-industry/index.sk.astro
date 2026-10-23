@@ -1,0 +1,275 @@
+---
+import JsonLd from '~/components/common/JsonLd.astro';
+import AiQuickAnswer from '~/components/common/AiQuickAnswer.astro';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
+const { lang = 'sk' } = Astro.props;
+const t = (key: string) => getUiForLang(lang)?.[key] || '';
+---
+
+<JsonLd
+  type="Article"
+  article={{
+    headline: 'Sprievodca nafukovacími člnmi — Kompletný zdroj',
+    description:
+      'Komplexný sprievodca nafukovacími člnmi pokrývajúci typy, stavebné metódy, porovnanie materiálov, kritériá výberu, bezpečnostné normy a údržbu.',
+    datePublished: '2026-07-07',
+  }}
+  data={{ url: 'https://aquafarer.com/marine-industry/' }}
+/>
+
+<JsonLd
+  type="BreadcrumbList"
+  breadcrumbs={[
+    { name: t('nav.home') || 'Home', href: `/${lang}/` },
+    { name: 'Námorný priemysel', href: `/${lang}/marine-industry` },
+    { name: 'Sprievodca nafukovacím člnom', href: `/${lang}/marine-industry/` },
+  ]}
+/>
+
+<AiQuickAnswer
+  entityType="Sprievodca"
+  quickAnswer="Nafukovacia loď je ľahké plavidlo vyrobené z flexibilných látkových trubíc (spónz), naplnených stlačeným vzduchom, ktoré poskytujú vztlak. Moderné nafukovacie lode zahŕňajú člny, RIBs (pevné nafukovacie lode), nafukovacie kajaky a paddle boardy na státie. Sú vyrobené z PVC alebo Hypalon CSM látok pomocou RF zvárania alebo ručne lepených švíkov, pričom drop-stitch konštrukcia umožňuje pevné podlahy s vysokým tlakom."
+  facts={[
+    { label: 'Globálna veľkosť trhu', value: '$2.8B (2026)' },
+    { label: 'Primárne materiály', value: 'PVC / Hypalon CSM' },
+    { label: 'Rozsah životnosti', value: '8-20+ rokov' },
+    { label: 'CE Certifikácia', value: 'Povinné (EÚ)' },
+  ]}
+/>
+
+<section class="max-w-4xl mx-auto py-16 px-6">
+  <h1 class="text-4xl font-semibold text-gray-900">Sprievodca nafukovacím člnom</h1>
+  <p class="mt-4 text-lg text-gray-500">
+    Definitívny zdroj o nafukovacích vodných plavidlách — od rekreačných člnov až po RIBs profesionálne a špecializované
+    záchranné plavidlá.
+  </p>
+
+  <nav class="mt-8 flex flex-wrap gap-2">
+    {
+      ['Types', 'Construction', 'Materials', 'Selection', 'Safety', 'Maintenance', 'Standards'].map((section) => (
+        <a
+          href={`#${section.toLowerCase()}`}
+          class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition"
+        >
+          {section}
+        </a>
+      ))
+    }
+  </nav>
+
+  <section id="types" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Typy nafukovacích člnov</h2>
+    <div class="mt-8 grid gap-6">
+      {
+        [
+          {
+            title: 'Nafukovacie člny',
+            desc: 'Malé, prenosné člny na dopravu, rybolov a krátke rekreačné použitie. Typicky 2-4 m, poháňané malými vonkajšími motormi (2-15 HP) alebo veslami. Najdostupnejšia vstupná možnosť.',
+            icon: '🚤',
+          },
+          {
+            title: 'Pevné nafukovacie člny (RIBs)',
+            desc: 'Vysokovýkonné člny s pevným trupom z laminátu, hliníka alebo HDPE a nafukovacími bokmi. Dĺžky 3-12 m, prívodné motory 15-300+ HP. Používané na hliadky, záchranu, potápanie a diaľkovú plavbu.',
+            icon: '⚡',
+          },
+          {
+            title: 'Nafukovacie kajaky',
+            desc: 'Prenosné kajaky vyrobené z PVC alebo TPU tkanín. K dispozícii v jedinom a tandemovom prevedení pre rekreačné výlety, splavovanie riek a expedície.',
+            icon: '🛶',
+          },
+          {
+            title: 'Nafukovacie paddle boardy na státie (SUPs)',
+            desc: 'Drop-stitch konštruoval paddle boardy, ktoré sa nafúkajú do pevných vysokotlakových palúb. K dispozícii sú modely na univerzálne použitie, touring, jogu, rybolov a surfovanie.',
+            icon: '🏄',
+          },
+          {
+            title: 'Záchranné člny (SAR)',
+            desc: 'Špecializovaný RIBs pre vyhľadávacie a záchranné operácie. Vybavený samočistiacimi podlahami, prednými konzolami, ťahovými bodmi a farebnými schémami s vysokou viditeľnosťou. CE-certifikovaný na záchranné použitie.',
+            icon: '🆘',
+          },
+          {
+            title: 'Obchodné pracovné lode',
+            desc: 'Ťažký RIBs na podporu potápania, hliadkovanie, prieskum a komerčné námorné operácie. Hypalon CSM konštrukcia, zosilnené trupy a profesionálna výbava.',
+            icon: '⚙️',
+          },
+        ].map((item) => (
+          <div class="flex gap-4 p-5 bg-gray-50 rounded-xl border border-gray-200">
+            <span class="text-2xl flex-shrink-0">{item.icon}</span>
+            <div>
+              <h3 class="font-semibold text-gray-900">{item.title}</h3>
+              <p class="mt-1 text-sm text-gray-600">{item.desc}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section id="construction" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Stavebné metódy</h2>
+    <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">RF zváranie (vysokofrekvenčné)</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Používa elektromagnetickú energiu na fúziu PVC vrstiev na molekulárnej úrovni. Vytvára najsilnejšie
+          vzduchotesné spoje. PVC Bežné na kvalitných lodiach aSUPs. Vyžaduje špecializované stroje a zručnú obsluhu.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Ručné lepenie / chemické spojovanie</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Dvojdielne lepidlo spája textilné panely. Primárna metóda pre Hypalon CSM lode (nie je možné zvárať RF).
+          Vyžaduje presnú prípravu povrchu, kontrolovanú vlhkosť a správny čas vytvrdnutia pre optimálnu pevnosť švu.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Drop-Stitch Jadro</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Tisíce polyesterových nití spájajú PVC hornú a spodnú vrstvu, čo umožňuje vysokotlakové nafukovanie (15-25PSI)
+          pre výkon tuhej dosky. Hustota nite (15-50 vlákien/cm²) určuje tuhosť a hmotnosť.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Tepelné zváranie</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Zváranie horúcim vzduchom alebo horúcim klinom používané na švy a výstuže. Bežné pri RIB väčších
+          konštrukciách. Menej presné ako RF zváranie, ale účinné pre Hypalon PVC a odolné látky.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="materials" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Porovnanie materiálov</h2>
+    <div class="mt-6 overflow-x-auto">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="bg-gray-50 border-b-2 border-gray-200">
+            <th class="px-4 py-3 text-left font-semibold text-gray-700">Nehnuteľnosti</th>
+            <th class="px-4 py-3 text-center font-semibold text-sky-700">PVC</th>
+            <th class="px-4 py-3 text-center font-semibold text-emerald-700">Hypalon CSM</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            [
+              ['Relative Cost', '$ (budget)', '$$$ (premium)'],
+              ['UV Resistance', 'Good (with coating)', 'Excellent (inherent)'],
+              ['Abrasion Resistance', 'Moderate-Good', 'Excellent'],
+              ['Chemical Resistance', 'Good', 'Excellent'],
+              ['Cold Flexibility', 'Stiffens below 0°C', 'Flexible to -20°C'],
+              ['Lifespan', '8-12 years', '15-20+ years'],
+              ['Seam Method', 'RF welding', 'Hand gluing'],
+              ['Repair', 'PVC glue (easy)', '2-part adhesive (moderate)'],
+            ].map((row, i) => (
+              <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                {row.map((cell, j) => (
+                  <td
+                    class={`px-4 py-3 border-b border-gray-200 ${j === 0 ? 'font-medium text-gray-700' : 'text-center text-gray-600'}`}
+                  >
+                    {cell}
+                  </td>
+                ))}
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-4 text-sm text-gray-500">
+      Moderná vojenská trieda PVC (1100-1670 dtex) ponúka vynikajúcu odolnosť pre väčšinu rekreačných používateľov za
+      polovicu ceny Hypalon. Hypalon je preferovaná pre komerčné flotily, tropické podnebie a aplikácie kritické pre
+      misiu.
+    </p>
+    <a
+      href={`/${lang}/learn/pvc-vs-hypalon`}
+      class="mt-4 inline-block text-sky-600 hover:text-sky-700 text-sm font-medium"
+      >Hlboký PVC vs Hypalon sprievodca →</a
+    >
+  </section>
+
+  <section id="selection" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Ako si vybrať nafukovací čln</h2>
+    <div class="mt-8 grid md:grid-cols-3 gap-6">
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">1. Určte svoj účel použitia</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>Rekreačné: Čln alebo SUP</li>
+          <li>Výkonnostné: RIB (15-60 HP)</li>
+          <li>Komerčné: RIB (100+ HP)</li>
+          <li>Fitness: Nafukovací SUP</li>
+          <li>Cestovanie: Nafukovací kajak</li>
+        </ul>
+      </div>
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">2. Stanovte svoj rozpočet</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>$200-$800: Nafukovací SUP</li>
+          <li>$500-$2 000: Čln + s motorom</li>
+          <li>$3 000-$8 000: Vstupný RIB</li>
+          <li>$8 000-$20 000: Prémiový RIB</li>
+          <li>$20 000+: Komerčný RIB</li>
+        </ul>
+      </div>
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">3. Zvážte materiál</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>PVC: Cenovo dostupný, ľahký</li>
+          <li>Hypalon: Prémiový, dlhá životnosť</li>
+          <li>Drop-Stitch: Pevný výkon</li>
+          <li>Hmotnosť textílie: 1100-1670 dtex</li>
+          <li>Povrchová úprava: UV + vrstvy proti prepichnutiu</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="safety" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Bezpečnosť a normy</h2>
+    <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">CE Certifikácia</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Všetky nafukovacie člny predávané v EÚ vyžadujú CE označenie podľa Smernice o rekreačných plavidlách (RCD)
+          2013/53/EU. Certifikácia pokrýva kategóriu dizajnu (A-D), vztlak, stabilitu a nosnosť. Aquafarer člny sú CE
+          certifikované pre rekreačné a záchranárske použitie.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Štandard</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Medzinárodný štandard pre nafukovacie člny špecifikujúci požiadavky na materiály, švy, ventily a testovanie
+          výkonnosti. Typy I-IV pokrývajú všetko od malých člnov po veľké RIBs.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Základné bezpečnostné vybavenie</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Záchranné vesty/PFD (CE 12402), hádzacie lano, kýblik/hasicí prístroj, navigačné svetlá (noc), VHF
+          rádiostanica, lekárnička, kotva a náhradné pádlo alebo palivo.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Bezpečná prevádzka</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          NIKDY neprekračujte maximálnu kapacitu uvedenú na štítku. Skontrolujte pevnosť ventilov pred spustením.
+          Rovnomerne rozdeľte hmotnosť. Sledujte poveternostné podmienky. Predložte plán plavby. Absolvujte kurz
+          bezpečnosti pri vedení člnu.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="maintenance" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Údržba a starostlivosť</h2>
+    <div class="mt-8 space-y-4 text-sm text-gray-600">
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <>
+          <span class="text-sky-600 font-bold flex-shrink-0">1.</span>
+          <span>Po každom použití v slanej vode opláchnite sladkou vodou. Pred uskladnením dôkladne osušte.</span>
+        </>
+      </div>
+    </div>
+  </section>
+</section>

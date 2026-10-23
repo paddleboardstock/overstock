@@ -1,0 +1,182 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+
+const metadata = {
+  title: 'Inflatable SUP vs RIB Boat — Which Watercraft Is Right for You?',
+  description:
+    'Compare inflatable stand-up paddle boards and rigid inflatable boats across portability, performance, cost, and use cases. Choose the right watercraft for your lifestyle.',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <JsonLd
+    type="Article"
+    article={{
+      headline: 'Inflatable SUP vs RIB Boat — Which Watercraft Is Right for You?',
+      description:
+        'Compare inflatable stand-up paddle boards and rigid inflatable boats across portability, performance, cost, and use cases.',
+      datePublished: '2026-07-07',
+    }}
+    data={{ url: 'https://aquafarer.com/compare/sup-vs-rib' }}
+  />
+  <JsonLd
+    type="BreadcrumbList"
+    breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Compare', href: '/compare' }, { name: 'SUP vs RIB' }]}
+  />
+  <section class="max-w-4xl mx-auto py-24 px-6">
+    <a href="/products" class="text-sm text-sky-600 hover:text-sky-700">&larr; Products</a>
+    <h1 class="mt-4 text-4xl font-semibold text-gray-900">Inflatable SUP vs RIB Boat</h1>
+    <p class="mt-4 text-lg text-gray-500">
+      A practical comparison between two very different watercraft — the portable paddle board and the high-performance
+      rigid inflatable boat. Understand which one fits your needs.
+    </p>
+
+    <div class="mt-12 grid md:grid-cols-2 gap-8">
+      <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+        <h2 class="text-xl font-semibold text-gray-900">Inflatable SUP</h2>
+        <ul class="mt-4 space-y-3 text-sm text-gray-600">
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span
+              ><strong>Propulsion:</strong> Human-powered with paddle. No fuel, engine, or maintenance costs.</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span
+              ><strong>Portability:</strong> Deflates to backpack size. Weighs 18-30 lbs. Fits in any car or closet.</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span
+              ><strong>Cost:</strong> $200-$800 all-in (board, paddle, pump, leash). No ongoing fuel costs.</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span
+              ><strong>Fitness:</strong> Full-body workout. Core engagement, balance, cardiovascular benefit with every session.</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span
+              ><strong>Best for:</strong> Fitness paddling, touring, yoga, fishing, family recreation, travel, beginners.</span
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+        <h2 class="text-xl font-semibold text-gray-900">RIB Boat</h2>
+        <ul class="mt-4 space-y-3 text-sm text-gray-600">
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span
+              ><strong>Propulsion:</strong> Outboard motor (15-150+ HP). Requires fuel, oil, and regular engine maintenance.</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span
+              ><strong>Portability:</strong> Trailer required. 150-500+ kg. Needs garage, marina, or boat storage.</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span
+              ><strong>Cost:</strong> $3,000-$15,000+ (boat + motor + trailer). Ongoing fuel and maintenance costs.</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span
+              ><strong>Performance:</strong> 25-40+ knots. Carries multiple passengers and heavy gear. Handles rough water.</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span
+              ><strong>Best for:</strong> Offshore cruising, search and rescue, commercial operations, watersports towing,
+              group outings.</span
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="mt-16">
+      <h2 class="text-2xl font-semibold text-gray-900">Side-by-Side Comparison</h2>
+      <div class="mt-6 overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="bg-gray-50 border-b-2 border-gray-200">
+              <th class="px-4 py-3 text-left font-semibold text-gray-700">Factor</th>
+              <th class="px-4 py-3 text-center font-semibold text-sky-700">Inflatable SUP</th>
+              <th class="px-4 py-3 text-center font-semibold text-emerald-700">RIB Boat</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              [
+                ['Propulsion', 'Human (paddle)', 'Outboard motor (15-150+ HP)'],
+                ['Top Speed', '3-5 mph (paddling)', '25-40+ knots'],
+                ['Range', '5-15 miles (limited by stamina)', '50-200+ miles (fuel dependent)'],
+                ['Passengers', '1 (solo)', '4-12 (model dependent)'],
+                ['Cargo Capacity', 'Minimal (deck storage)', 'High (lockers + deck space)'],
+                ['Weight', '18-30 lbs', '150-500+ kg'],
+                ['Packed Size', 'Backpack (33" x 15" x 10")', 'Trailer (12-20 ft)'],
+                ['Setup Time', '5-10 min (inflate)', '5 min (launch trailer)'],
+                ['Entry Cost', '$200-$500', '$3,000-$8,000'],
+                ['Running Cost', '$0 (no fuel)', '$$ (fuel + maintenance)'],
+                ['Storage', 'Closet or car trunk', 'Garage or marina slip'],
+                ['License Required', 'No', 'Boat license (varies)'],
+                ['Rough Water', 'Limited (calm conditions)', 'Excellent'],
+                ['Fitness Benefit', 'Full-body workout', 'Minimal'],
+                ['Lifespan (inflatable)', '3-5 years (frequent use)', '15-20 years (Hypalon)'],
+              ].map((row, i) => (
+                <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                  {row.map((cell, j) => (
+                    <td
+                      class={`px-4 py-3 border-b border-gray-200 ${j === 0 ? 'font-medium text-gray-700' : 'text-center text-gray-600'}`}
+                    >
+                      {cell}
+                    </td>
+                  ))}
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mt-16 bg-gradient-to-br from-sky-50 to-blue-50 rounded-2xl p-8 border border-sky-200">
+      <h2 class="text-xl font-semibold text-gray-900">Which Should You Choose?</h2>
+      <p class="mt-4 text-gray-600 text-sm leading-relaxed">
+        Choose an <strong>inflatable SUP</strong> if you want an affordable, portable, fitness-oriented watercraft for solo
+        paddling on calm waters. It's the best entry point to watersports with zero ongoing costs and easy storage. Choose
+        a <strong>RIB</strong> if you need real boat capability — speed, range, passenger capacity, and rough-water performance.
+        A RIB is a serious investment for serious boating. Many water enthusiasts start with a SUP for fitness and recreation,
+        then add a RIB when they need to explore further, carry family, or engage in watersports like wakeboarding and towing.
+      </p>
+      <div class="mt-6 flex gap-4 flex-wrap">
+        <a
+          href="/products"
+          class="px-6 py-3 bg-gray-900 text-white rounded-full text-sm font-medium hover:bg-gray-800 transition"
+          >Browse Products</a
+        >
+        <a
+          href="/guides"
+          class="px-6 py-3 border border-gray-200 text-gray-700 rounded-full text-sm font-medium hover:border-gray-400 transition"
+          >Buying Guides</a
+        >
+      </div>
+    </section>
+  </section>
+
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true">
+    <p>
+      Comprehensive comparison between inflatable stand-up paddle boards (iSUPs) and rigid inflatable boats (RIBs).
+      Covers propulsion, speed, range, passenger capacity, cargo, weight, portability, setup time, cost, storage,
+      licensing, rough water capability, fitness benefit, and lifespan. Inflatable SUPs are human-powered paddle boards
+      weighing 18-30 lbs, packing to backpack size, costing $200-$800, with zero running costs and closet storage. RIBs
+      are motorized boats with 25-40+ knot speeds, 150-500+ kg weight, trailer transport, $3,000-$15,000+ entry cost,
+      ongoing fuel costs, requiring garage or marina storage. Recommendation: SUP for solo fitness/recreation on calm
+      waters; RIB for power boating, groups, rough water, and commercial use. Many users start with a SUP and add a RIB
+      later as their boating needs grow.
+    </p>
+  </section>
+</Layout>

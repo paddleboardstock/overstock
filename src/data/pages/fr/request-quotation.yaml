@@ -1,0 +1,306 @@
+hero_text:
+  tagline: Obtenez un devis
+  title: Demandez un devis<br />pour votre projet
+  subtitle: Faites-nous part de vos besoins et notre équipe vous répondra avec un devis détaillé dans les 2 jours ouvrables.
+steps2_process:
+  title: Comment ça marche
+  subtitle: Quatre étapes simples de la demande de renseignements au devis.
+  items:
+    - title: 'Étape 1 : Soumettez vos exigences'
+      description: Remplissez le formulaire ci-dessous avec votre type de produit, la quantité et les spécifications. Plus vous fournissez de détails, plus votre devis est précis.
+      icon: tabler:file-text
+    - title: 'Étape 2 : Nous examinons et conseillons'
+      description: Notre équipe d’ingénierie examine vos besoins et peut vous contacter pour obtenir des éclaircissements. Nous fournissons des recommandations sur la configuration et les options du produit.
+      icon: tabler:users
+    - title: 'Étape 3 : Recevez votre devis'
+      description: Vous recevez un devis détaillé comprenant le prix unitaire, le MOQ, le délai de livraison, les conditions de paiement et les options d'expédition. Généralement dans les 48 heures.
+      icon: tabler:currency-dollar
+    - title: 'Étape 4 : Échantillon et production'
+      description: Après acceptation du devis, nous procédons à la production d’échantillons (le cas échéant) ou directement à la production en série. Mises à jour régulières tout au long du processus.
+      icon: tabler:building-factory
+content_form:
+  tagline: Formulaire de devis
+  title: Parlez-nous de votre projet
+  subtitle: Tous les champs avec * sont obligatoires.
+  fields:
+    - name: Catégorie de produit
+      type: sélectionner
+      options:
+        - Bateau RIB
+        - Bateau pneumatique
+        - Planche SUP
+        - Kayak pneumatique
+        - Gilet de sauvetage
+        - Accessoire marin
+        - OEM/ODM personnalisé
+    - name: Application
+      type: sélectionner
+      options:
+        - Centre de plongée
+        - Pêche
+        - Tourisme marin / Resort
+        - Recherche et sauvetage
+        - Annexe de yacht
+        - Bateau de travail commercial
+        - Gouvernement / Militaire
+        - OEM / Marque propre
+        - Personnel / Loisirs
+        - Autre
+    - name: Quantité
+      type: texte
+      placeholder: par ex. 50 unités
+    - name: Marché cible
+      type: texte
+      placeholder: par ex. Europe, Amérique du Nord, Moyen-Orient
+    - name: Pays de livraison
+      type: texte
+      placeholder: par ex. Italie, Émirats arabes unis, États-Unis, Australie
+    - name: Préférence matérielle
+      type: sélectionner
+      options:
+        - Aucune préférence
+        - PVC qualité marine (1100 dtex)
+        - Hypalon premium / CSM
+        - Coque en fibre de verre
+        - Coque en aluminium
+    - name: Exigence du moteur
+      type: texte
+      placeholder: par ex. Hors-bord 60 CV, sans moteur, twin 115 CV
+    - name: Personnalisation requise
+      type: texte
+      placeholder: par ex. couleurs personnalisées, marque/logo, emballage, accessoires spéciaux
+    - name: Chronologie
+      type: texte
+      placeholder: par ex. livraison sous 90 jours
+    - name: Exigences supplémentaires
+      type: zone de texte
+      placeholder: Décrivez votre application, vos spécifications techniques ou toute exigence particulière – incluez des dessins de référence, des spécifications ou des liens si disponibles
+    - name: Télécharger la spécification
+      type: déposer
+      placeholder: Téléchargez votre fiche technique, votre dessin ou votre document de référence (PDF, DWG, DXF)
+    - name: Télécharger un logo/une illustration
+      type: déposer
+      placeholder: Téléchargez votre logo ou votre illustration pour une personnalisation personnalisée (AI, EPS, PNG)
+content_rfq_types:
+  tagline: Système de demande de prix à 3 niveaux
+  title: Choisissez le bon<br />Niveau d'enquête
+  subtitle: Différents projets nécessitent différents niveaux de détail. Sélectionnez le formulaire qui correspond à votre étape d'achat.
+  items:
+    - title: Demande rapide
+      description: 5-6 champs, 30 secondes. Pour un premier contact, des questions générales ou un suivi du téléchargement de ressources. Nous répondons dans les 24 heures avec des informations de base et les prochaines étapes.
+      icon: tabler:bolt
+    - title: Demande de prix standard
+      description: 8-10 champs, 2 minutes. Pour des devis de produits spécifiques avec sélection de modèle, quantité et exigences de livraison. Recevez un devis détaillé sous 48 heures.
+      icon: tabler:file-text
+    - title: Demande de prix pour le projet
+      description: 10-14 champs, 5 minutes. Pour les projets RIB, de flotte de villégiature, de sauvetage ou gouvernementaux nécessitant une configuration personnalisée, une documentation de conformité et une planification d'approvisionnement sur plusieurs années. Chef de projet dédié assigné.
+      icon: tabler:clipboard-list
+form_quick:
+  title: Demande rapide
+  subtitle: Contact rapide pour les questions générales et les premières demandes d’informations.
+  fields:
+    - name: nom et prénom
+      label: Nom et prénom
+      type: texte
+      required: true
+      placeholder: Votre nom complet
+    - name: entrepriseEmail
+      label: Courriel professionnel
+      type: e-mail
+      required: true
+      placeholder: vous@entreprise.com
+    - name: Nom de l'entreprise
+      label: Nom de l'entreprise
+      type: texte
+      required: true
+      placeholder: Votre entreprise
+    - name: Type d'acheteur
+      label: Je suis un...
+      type: sélectionner
+      required: true
+      options:
+        - Distributeur / Importateur
+        - Propriétaire de marque / Marque propre
+        - Resort / Centre nautique
+        - Loueur
+        - Gouvernement / Organisme de secours
+        - Opérateur plongée / pêche
+        - Ingénieur marin / spécialiste refit
+        - Autre
+    - name: produitIntérêt
+      label: Intérêt pour le produit
+      type: sélection multiple
+      required: true
+      options:
+        - Bateaux RIB
+        - Bateaux pneumatiques
+        - Planches SUP
+        - Équipement de sécurité
+        - Accessoires
+        - OEM/ODM personnalisé
+    - name: message
+      label: De quoi avez-vous besoin?
+      type: zone de texte
+      required: false
+      placeholder: Brève description de vos besoins...
+form_standard:
+  title: Demande de prix standard
+  subtitle: Demande de devis détaillé pour des produits et quantités spécifiques.
+  fields:
+    - name: nom et prénom
+      label: Nom et prénom
+      type: texte
+      required: true
+    - name: entrepriseEmail
+      label: Courriel professionnel
+      type: e-mail
+      required: true
+    - name: Nom de l'entreprise
+      label: Nom de l'entreprise
+      type: texte
+      required: true
+    - name: Type d'acheteur
+      label: Type d'acheteur
+      type: sélectionner
+      required: true
+    - name: produitModèle
+      label: Modèle/type de produit
+      type: texte
+      required: true
+      placeholder: par exemple, AF580 RIB, AF380 Gonflable
+    - name: quantité
+      label: Quantité estimée
+      type: texte
+      required: true
+      placeholder: par exemple, 10 à 20 unités
+    - name: Marché cible
+      label: Marché cible/région
+      type: texte
+      required: true
+      placeholder: par exemple, UE, Amérique du Nord, Moyen-Orient
+    - name: chronologie de livraison
+      label: Livraison souhaitée
+      type: sélectionner
+      required: true
+      options:
+        - Sous 30 jours
+        - 30-60 jours
+        - 60-90 jours
+        - Anticipation (90+ jours)
+        - Simple recherche
+    - name: conformitéObligatoire
+      label: Exigences de conformité
+      type: sélection multiple
+      required: false
+      options:
+        - CE / RCD 2013/53/EU
+        - UKCA
+        - USCG
+        - ISO 9001
+        - BSCI
+        - REACH
+        - Aucune / Pas sûr
+    - name: message
+      label: Détails supplémentaires
+      type: zone de texte
+      required: false
+form_project:
+  title: Demande de prix pour le projet
+  subtitle: Demande de projet complète pour les marchés de flotte, personnalisés ou gouvernementaux.
+  fields:
+    - name: nom et prénom
+      label: Nom et prénom
+      type: texte
+      required: true
+    - name: entrepriseEmail
+      label: Courriel professionnel
+      type: e-mail
+      required: true
+    - name: Nom de l'entreprise
+      label: Nom de l'entreprise
+      type: texte
+      required: true
+    - name: Type d'acheteur
+      label: Type d'acheteur
+      type: sélectionner
+      required: true
+    - name: Type de projet
+      label: Type de projet
+      type: sélectionner
+      required: true
+      options:
+        - Flotte de resort / hôtel
+        - Flotte de location
+        - Flotte de sauvetage / patrouille
+        - Flotte de centre de plongée
+        - Marchés publics
+        - Marque propre / OEM
+        - Commande de stock revendeur
+        - Autre
+    - name: Types de bateaux
+      label: Types de bateaux requis
+      type: sélection multiple
+      required: true
+      options:
+        - Bateaux RIB
+        - Bateaux pneumatiques / annexes
+        - Planches SUP
+        - Kayaks
+        - Équipement de sécurité
+    - name: Taille de la flotte
+      label: Taille de la flotte/gamme de quantité
+      type: texte
+      required: true
+      placeholder: par exemple, 20 à 50 unités sur 12 mois
+    - name: Exigences personnalisées
+      label: Besoins de configuration personnalisée
+      type: zone de texte
+      required: false
+      placeholder: Taille de la coque, matériau des tubes, disposition du pont, exigences en matière de marque...
+    - name: conformitéObligatoire
+      label: Exigences de conformité et de certification
+      type: sélection multiple
+      required: true
+      options:
+        - CE / RCD 2013/53/EU
+        - UKCA
+        - USCG Type III/V
+        - ISO 9001
+        - BSCI
+        - REACH / RoHS
+        - Certification du marché local
+    - name: Marché cible
+      label: Marché cible
+      type: texte
+      required: true
+    - name: budgetPlage
+      label: Gamme budgétaire
+      type: sélectionner
+      required: false
+      options:
+        - Moins de $10,000
+        - $10,000 - $50,000
+        - $50,000 - $200,000
+        - $200,000+
+        - Je préfère ne pas dire
+    - name: chronologie de livraison
+      label: Chronologie du projet
+      type: sélectionner
+      required: true
+      options:
+        - Urgent (sous 30 jours)
+        - Standard (30-60 jours)
+        - Planifié (60-90 jours)
+        - Planification future (90+ jours)
+    - name: message
+      label: Détails et exigences du projet
+      type: zone de texte
+      required: false
+      placeholder: Décrivez votre projet, votre application et toute exigence spécifique...
+cta:
+  title: Vous préférez discuter par email?
+  subtitle: Envoyez votre demande directement à notre équipe commerciale et nous vous répondrons dans les 24 heures.
+  actions:
+    - variant: primary
+      text: Envoyez-nous un email directement
+      href: /contact

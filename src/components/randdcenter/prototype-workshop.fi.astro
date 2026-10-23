@@ -1,0 +1,196 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'fi' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">← Takaisin R&amp;D Centeriin</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Lab 05</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Prototyyppityöpaja</h1>
+      <p class="mt-3 text-lg text-muted">CAD-mallista merivalmiin veneeseen – rakennettu, asennettu ja todistettu</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-ocean-voyager-1.webp"
+        alt="Aquafarer prototyypin työpajaveneen valmistus"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Missä suunnittelusta tulee todellisuutta</h2>
+  <p>
+    CAD-malli, olipa kuinka yksityiskohtainen tahansa, ei voi paljastaa, kuinka vene todella käsittelee, ennen kuin se
+    kohtaa veden. Siksi prototyyppityöpajamme on suunniteltu muuntamaan tekniset tiedot fyysiseksi, merialukseksi
+    mahdollisimman nopeasti ja tarkasti. Jokainen uusi {SITE.name} malli – ja jokainen merkittävä räätälöity rakennelma –
+    kulkee tämän konepajan läpi ennen tuotantotyökalujen sitoutumista.
+  </p>
+  <p>
+    Työpaja on täysin varustettu rungon, putkien ja takilan samanaikaista valmistusta varten. Tämä rinnakkainen
+    työnkulkutapa lyhentää prototyypin läpimenoaikaa 8-12 viikkoon suunnittelun julkaisusta verrattuna alan normiin
+    16-20 viikkoa. Kun sovelluksesi vaatii erikoisratkaisua, voimme siirtyä konseptista vesivalidointiin alle kolmessa
+    kuukaudessa.
+  </p>
+
+  <h2>Työpajan ominaisuudet</h2>
+  <table>
+    <thead><tr><th>Työasema</th><th>Laitteet</th><th>Tarkoitus</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Rungon valmistus</td><td
+          >Pyörivä muovausuuni (HDPE), TIG-hitsauspaikka (alumiini), käsin levitettävät muotit (lasikuitu)</td
+        ><td>Täyden mittakaavan runkotuotanto kaikissa kolmessa materiaalityypissä</td></tr
+      >
+      <tr
+        ><td>Putken kokoonpano</td><td>RF-hitsauspuristin, kuumailmaliitosasema, täyttötestijig</td><td
+          >Täysikokoisten putkikokoonpanojen valmistus kaikilla ohjauslevyillä, kartioilla ja venttiileillä</td
+        ></tr
+      >
+      <tr
+        ><td>Kiinnitys ja asennus</td><td
+          >Moottorinostin (500 kg), konsolin mallirunko, hydrauliletkun puristin, sähköjohtosarja</td
+        ><td>Täydellinen varustelu: moottori, ohjaus, säätimet, polttoainejärjestelmä, elektroniikka, istuimet</td></tr
+      >
+      <tr
+        ><td>Instrumentointipaikka</td><td
+          >GPS-nopeussensori, polttoaineen virtausmittari, kiihtyvyysmittarit, lämpöparijärjestelmä, dataloggeri</td
+        ><td>Merikoeinstrumenttien asennus ja kalibrointi</td></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>Prototyyppimatka – askel askeleelta</h2>
+  <ol>
+    <li>
+      <strong>Tekniikan luovutus</strong> — Työpajan johtaja ja projektin insinööri tarkastavat muodollisesti suunnittelupaketin
+      (3D-malli, FEA-raportti, materiaaliluettelo, asennusaikataulu). Kaikki valmistusongelmat merkitään ja ratkaistaan ennen
+      leikkaamisen aloittamista.
+    </li>
+    <li>
+      <strong>Rungon tuotanto</strong> — Runko on rakennettu teknisten eritelmien mukaan. HDPE: rotaatiomuovausohjelma ladataan
+      Moldex3D-simulaatiosta. Alumiinille: CNC-leikatut levyt hitsataan TIG-paikkaan hyväksytyn hitsauskartan mukaisesti.
+      Lasikuitulle: kerroskirjaa seurataan kerros kerrokselta.
+    </li>
+    <li>
+      <strong>Putken valmistus</strong> — Kangas leikataan käyttäen CNC-kuviomalleja ja hitsataan sitten RF-hitsauksella täysikokoisiin
+      kammioihin. Jokainen kammio täytetään koepaineeseen ja jätetään 24 tunniksi alustavaksi stabiloitumiseksi.
+    </li>
+    <li>
+      <strong>Kokoaminen &amp; takila</strong> — Runko ja putket paritetaan. Moottori on ripustettu, ohjaus ja hallintalaitteet
+      on kytketty, polttoainejärjestelmä on asennettu ja kaikki sähköpiirit on kytketty ja tarkastettu.
+    </li>
+    <li>
+      <strong>Staattiset testit</strong> — Ennen kuin vene koskettaa veteen, se käy läpi: kelluvuustarkistuksen (täysi kuorma
+      + 30 % reservi), polttoainejärjestelmän painetesti, ohjausjärjestelmän täyslukitusjaksotesti, sähköisen maasidoksen
+      jatkuvuustesti.
+    </li>
+    <li><strong>Merikoeohjelma</strong> — 20 tuntia vedessä tapahtuvaa testausta, kuvattu alla.</li>
+    <li>
+      <strong>Prototyypin tarkistus</strong> — Järjestetään virallinen ilmoittautumiskokous suunnittelu-, tuotanto- ja laatutiimien
+      kanssa. Tarvittavat suunnittelumuutokset dokumentoidaan ja sisällytetään tuotantojulkaisuun.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      20-Tunnin merikokeiluohjelma — Testiaikataulu
+    </p>
+    <div class="space-y-2 text-sm">
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">2 h</span><span class="flex-1"
+          >Ohjaus satamassa — alhainen käsittely, peruutus, lokasuojan tarkistus</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">4 h</span><span class="flex-1"
+          >Nopeuskoe – GPS-varmennettu huippunopeus, matkanopeus, polttoaineenkulutus 3 RPM-pisteissä</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Kääntymistesti – taktinen halkaisija, eteneminen ja siirto 20 kn:lla, vasemmalla ja oikealla</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Slamming-testi — toistetut juoksut 0.5–1.0 m:n läpi; kiihtyvyysmittari ruorin istuimen pohjassa</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Vakavuustesti – staattinen kantakulma 4 miehistöllä + vaihde oikealle, offset-kuorma</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Kestävyysajo — 3 h jatkuvaa matkalentonopeudella; lämpötilan valvonta (moottori, polttoaine, sähkö)</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">2 h</span><span class="flex-1"
+          >Lopputarkastus — kaikkien järjestelmien jälkitarkastus, kiristä/tarkista kaikki kiinnikkeet, dokumentoi
+          havainnot</span
+        >
+      </div>
+    </div>
+  </div>
+
+  <h2>Mukautettu prototyyppi ainutlaatuisiin sovelluksiin</h2>
+  <p>
+    Prototyyppityöpaja on paikka, jossa ratkaisemme ongelmia, joihin standardituotantoveneet eivät pysty ratkaisemaan.
+    Viimeaikaisia esimerkkejä ovat:
+  </p>
+  <ul>
+    <li>
+      7.8 m RIB etsintä- ja pelastusorganisaatiolle, joka vaatii mukautetun hyttirakenteen, jossa on kaatumissuoja,
+      integroidut paarit ja keulaan asennettava kaikuluotain – kaikki prototyyppi, asennettu ja testattu laitoksessamme.
+    </li>
+    <li>
+      5.2 m puhallettava vesimittausurakoitsijalle, jossa on leikattu peräpeili, irrotettava instrumenttimasto ja rungon
+      läpi kulkevat anturitaskut, jotka on suunniteltu minimoimaan virtaushäiriöt.
+    </li>
+    <li>
+      Sähkökäyttöinen 4.5 m tarjous superjahdille, jossa prototyyppiä käytettiin kantomatkan, latausinfrastruktuurin ja
+      melutasojen vahvistamiseen ennen kuin asiakas sitoutui neljän hengen laivastoon.
+    </li>
+  </ul>
+
+  <h2>Prototyyppitiimimme</h2>
+  <p>
+    Työpajassa työskentelee kahdeksan moniosaista meriteknikkoa, joista jokainen on koulutettu vähintään kahdella
+    kolmesta ydinlajista (runko, putki, takila). Tiimin johtaja on veneenrakentaja, jolla on 16 vuoden kokemus
+    räätälöityjen kertaluonteisten rakennusten tuotantosarjoista. Jokaiselle prototyypille on nimetty oma
+    projektiinsinööri, joka toimii asiakkaan ainoana yhteyspisteenä koko rakennus- ja kokeiluprosessin ajan.
+  </p>
+
+  <h2>Asiakkaan osallistuminen</h2>
+  <p>
+    Kannustamme asiakkaitamme aktiivisesti osallistumaan tärkeimpiin virstanpylväisiin prototyypin rakentamisen aikana –
+    erityisesti alkuperäiseen sovituskatsaukseen ja merikokeeseen. Käyttöpalautteesi näiden vaiheiden aikana on
+    korvaamatonta veneen hienosäädössä ennen sen tuotantoa. Emme rakenna tyhjiössä; rakennamme yhteistyössä kanssasi.
+  </p>
+  <p>
+    20 tunnin merikoe on myös mahdollisuus tiimillesi tutustua veneen käsittelyyn, järjestelmien layoutiin ja
+    huoltovaatimuksiin, mikä varmistaa sujuvan siirtymisen huoltoon tuotantoveneiden toimittamisen yhteydessä.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Aloita prototyyppiprojektisi</h2>
+    <p class="mt-2 text-sm text-muted">
+      Kerro meille tarvitsemasi vene, niin ehdotamme prototyypin kehityssuunnitelmaa.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Ota yhteyttä prototyyppitiimiimme</a
+    >
+  </div>
+</section>

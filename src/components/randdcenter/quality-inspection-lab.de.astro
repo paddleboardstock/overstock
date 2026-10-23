@@ -1,0 +1,211 @@
+---
+import { SITE } from 'astrowind:config';
+const { lang = 'de' } = Astro.props;
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={`/${lang}/randdcenter`} class="text-sm text-gray-500 hover:underline">&larr; Zurück zum F&amp;E-Zentrum</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Lab 06</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Qualitäts- &amp; Inspektionslabor</h1>
+      <p class="mt-3 text-lg text-muted">Unabhängige Verifizierung — jede Prüfung bestanden vor der Auslieferung</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-uv-resistance-testing.webp"
+        alt="UV-Prüfung im Qualitäts- und Inspektionslabor von Aquafarer"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Vertrauen, aber prüfen</h2>
+  <p>
+    Jedes Boot, das unsere Werkstatt verlässt, trägt die Zertifizierung, dass es eine definierte Reihe von
+    Qualitätskontrollen und Materialprüfungen bestanden hat. Unser Qualitäts- &amp; Inspektionslabor ist eine
+    unabhängige Funktion innerhalb des Unternehmens — es berichtet direkt an die Geschäftsleitung, nicht an die
+    Produktion —, sodass kein wirtschaftlicher Druck das Inspektionstor beeinträchtigen kann. Wenn eine Materialcharge
+    oder ein fertiges Boot nicht der veröffentlichten Spezifikation entspricht, hat das Labor die Befugnis, den Versand
+    zu stoppen, bis die Nichtkonformität behoben ist.
+  </p>
+  <p>
+    Das Labor arbeitet nach einem Qualitätsmanagementsystem, das an Grundsätzen ausgerichtet ist, und unsere
+    Prüfverfahren basieren — wo immer anwendbar — auf ISO-, ASTM- und EN-Normen. Wir führen detaillierte Aufzeichnungen
+    über jede durchgeführte Prüfung und schaffen so eine vollständige Rückverfolgbarkeitskette vom Rohmaterialeingang
+    bis zur Auslieferung des fertigen Bootes.
+  </p>
+
+  <h2>Prüfausrüstung und -fähigkeiten</h2>
+  <table>
+    <thead><tr><th>Ausrüstung</th><th>Durchgeführte Prüfungen</th><th>Norm / Verfahren</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Universalprüfmaschine (50 kN)</td><td
+          >Zugfestigkeit (Gewebe), Schälwiderstand (Nähte), Weiterreißwiderstand</td
+        ><td>, ISO 4674</td></tr
+      >
+      <tr
+        ><td>Luftdichtheits-Prüfvorrichtung (programmierbar)</td><td
+          >1000 Zyklen Aufblasen/Entlüften im Dauerbetrieb, 24-48-h Druckhalteversuch</td
+        ><td> (intern)</td></tr
+      >
+      <tr
+        ><td>Nahtschälvorrichtung (motorisiert, 180&deg;-Schälung)</td><td
+          >Schälfestigkeit von Schweiß- und Klebenähten bei 100 mm/min</td
+        ><td> / ASTM D1876</td></tr
+      >
+      <tr
+        ><td>Hydrostatisches Dichtigkeitsprüfgerät</td><td>Wasserdurchdringungswiderstand des Gewebes (0–100 mbar)</td
+        ><td>ISO 811</td></tr
+      >
+      <tr
+        ><td>Digitales Dickemessgerät &amp; Mikrometer</td><td>Gewebedicke, Schlauchwanddicke, Klebefolienstärke</td><td
+          >ISO 2286-3</td
+        ></tr
+      >
+      <tr
+        ><td>Klimakammer</td><td
+          >Temperaturkonditionierung (-40 &deg;C bis +80 &deg;C) für Kältebruch- und Wärmealterungsprüfungen</td
+        ><td>ISO 188, ISO 4675</td></tr
+      >
+      <tr
+        ><td>Farbspektrophotometer</td><td>Delta-E-Farbmessung nach UV-Belastung</td><td>ISO 105-A05 / ASTM D2244</td
+        ></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>Die Inspektionstore — vom Material bis zur Auslieferung</h2>
+  <p>
+    Jedes Boot folgt einem definierten Qualitätsplan mit verbindlichen Inspektionspunkten. Kein Boot kann ein Tor
+    überspringen; jedes Tor muss von einem Qualitätsprüfer freigegeben werden, bevor die nächste Produktionsstufe
+    beginnt.
+  </p>
+
+  <div class="not-prose my-8">
+    <div class="relative">
+      <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-blue-200 dark:bg-blue-800"></div>
+      <div class="space-y-6 relative">
+        {
+          [
+            {
+              gate: 'Tor 1',
+              label: 'Wareneingangsprüfung',
+              desc: 'Gewebecharge, Klebstoffcharge, Beschläge — alles wird vor der Freigabe zur Produktion gegen die Eingangsspezifikation geprüft.',
+            },
+            {
+              gate: 'Tor 2',
+              label: 'Schweißprüfung im Prozess',
+              desc: 'Das erste Schweißmuster jeder Produktionsschicht wird geprüft (Schälung + Sichtprüfung).',
+            },
+            {
+              gate: 'Tor 3',
+              label: 'Kammer-Druckprüfung',
+              desc: 'Jede Kammer wird auf den 1.25-fachen Betriebsdruck aufgebracht und 24-48 h gehalten. Die Daten werden pro Seriennummer protokolliert.',
+            },
+            {
+              gate: 'Tor 4',
+              label: 'Prüfung vor Auslieferung',
+              desc: 'Das komplette Boot wird geprüft: alle Befestigungen angezogen, Systeme funktionsfähig, keine kosmetischen Mängel. 100-Punkte-Checkliste.',
+            },
+            {
+              gate: 'Tor 5',
+              label: 'Endzertifizierung',
+              desc: 'Prüfberichte werden zusammengestellt, Inspektionsaufzeichnungen geprüft, Konformitätsbescheinigung ausgestellt.',
+            },
+          ].map((g) => (
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs font-bold z-10">
+                {g.gate}
+              </div>
+              <div class="flex-1 p-3 rounded-lg bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800">
+                <p class="text-sm font-semibold">{g.label}</p>
+                <p class="text-xs text-gray-500 mt-1">{g.desc}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+
+  <h2>Wichtige Qualitätskennzahlen (gleitender Jahresdurchschnitt 2025)</h2>
+  <div class="not-prose my-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">99.7 %</span>
+      <span class="text-xs text-gray-500">Erstdurchlauf-Ausbeute (Gewebecharge)</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">&lt; 0.2 %</span>
+      <span class="text-xs text-gray-500">Schweißfehlerquote (laufender Meter)</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">100 %</span>
+      <span class="text-xs text-gray-500">Kammern vor der Montage luftgeprüft</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600"></span>
+      <span class="text-xs text-gray-500">Konformität mit der Entwurfskategorie</span>
+    </div>
+  </div>
+
+  <h2>Unser Qualitätsteam</h2>
+  <p>
+    Das Labor wird von einem Qualitätsmanager (10 Jahre Erfahrung im maritimen Qualitätswesen, ASQ Certified Quality
+    Engineer), zwei Qualitätsprüfern (jeweils mit NDT-Zertifizierung der Stufe 2 in Sichtprüfung) und einem
+    Materialtechniker betrieben, der für sämtliche physikalischen Prüfungen zuständig ist. Das Team nimmt jährlich an
+    Eignungsprüfungen durch einen unabhängigen Drittanbieter teil, um sicherzustellen, dass unsere Prüfergebnisse genau
+    und reproduzierbar bleiben.
+  </p>
+
+  <h2>Unabhängige Prüfung für Kunden</h2>
+  <p>
+    Unser Qualitäts- &amp; Inspektionslabor steht für unabhängige Prüfdienstleistungen zur Verfügung. Wenn Sie eine
+    Gewebespezifikation verifizieren, ein neues Klebstoffsystem validieren oder für eine Beschaffungsqualifizierung
+    einen Prüfbericht durch Dritte benötigen, führen wir die Prüfungen nach der geltenden Norm durch und stellen einen
+    zertifizierten Prüfbericht aus.
+  </p>
+  <p>Beispiele aktueller Prüfaufträge durch Dritte:</p>
+  <ul>
+    <li>
+      Schälfestigkeitsvergleich von fünf konkurrierenden Klebefolienprodukten für ein europäisches
+      Militärbeschaffungsprogramm.
+    </li>
+    <li>
+      Beschleunigte Alterungsstudie (UV + thermische Zyklen) für eine neue orange pigmentierte PVC-Formulierung mit
+      regelmäßigen Zwischenmessungen in 500-h-Intervallen.
+    </li>
+    <li>Luftdichtigkeitsvalidierung von 50 Prototyp-Schwallventilen für ein neues Hochdruck-Schlauchdesign.</li>
+  </ul>
+
+  <h2>Unser Versprechen an Sie</h2>
+  <p>
+    Wenn Sie ein {SITE.name}-Boot erhalten, erhalten Sie auch seine Qualitätsakte — eine zusammengestellte Dokumentation
+    der Prüfergebnisse, die für Ihr konkretes Boot gelten. Gewebe-Chargezertifikat, Schälversuche an Schweißnähten,
+    Luftdichtigkeitsprotokolle der Kammern und die Checkliste der Prüfung vor Auslieferung. Jede Zahl ist
+    rückverfolgbar. Jeder Prüfer ist identifiziert. Das ist kein bloßes Papierwerk — es ist unser Versprechen, dass das,
+    was wir liefern, dem entspricht, was wir spezifiziert haben.
+  </p>
+  <p>
+    Sollten Sie jemals ein Qualitätsanliegen haben, können Sie das Labor direkt kontaktieren — die Kontaktdaten sind auf
+    Ihrer Konformitätsbescheinigung aufgedruckt. Wir nehmen jede Anfrage ernst und verpflichten uns zu einer formellen
+    Untersuchung innerhalb von 48 Stunden.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Benötigen Sie unabhängige Prüfung oder Qualitätsverifizierung?</h2>
+    <p class="mt-2 text-sm text-muted">
+      Unser Labor übernimmt Prüfaufträge Dritter — kontaktieren Sie uns mit Ihren Anforderungen.
+    </p>
+    <a
+      href={`/${lang}/contact`}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Kontaktieren Sie das Qualitätslabor</a
+    >
+  </div>
+</section>

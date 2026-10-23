@@ -1,0 +1,16 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'R&D Center', href: '/randdcenter' }, { name: 'PVC Fabric Lab' }];
+
+const metadata = {
+  title: `PVC Fabric Lab — Material Testing for Inflatable Boats | ${SITE.name}`,
+  description: `Scientific material testing from fibre to finished tube. Tensile strength, UV weathering, low-temperature flexibility, and abrasion resistance for PVC fabrics. Contact our lab team for a custom fabric specification.`,
+};
+import PvcFabricLabEn from '~/components/randdcenter/pvc-fabric-lab.en.astro';
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <PvcFabricLabEn lang="en" />
+</Layout>

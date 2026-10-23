@@ -1,0 +1,183 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'et' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">&larr; Tagasi AR-keskusesse</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Labor 03</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">RF-keevituskeskus</h1>
+      <p class="mt-3 text-lg text-muted">
+        Dielektriline liimimistehnoloogia keevisõmbluste jaoks, mis peavad vastu rõhule
+      </p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-jungle-mandala-1.webp"
+        alt="Aquafarer RF keevitus dielektriline liimimisprotsess"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Õmbluse teadus</h2>
+  <p>
+    Täispuhutav paat on usaldusväärne ainult nii palju kui selle õmblused. Üksainsa nõrk keevitus võib kahjustada kogu
+    kambriseina — ja merel ei ole kambrikahjustus ebamugavus; see on ohutusrisk.{SITE.name}, oleme investeerinud
+    spetsiaalsesse raadiosageduslikku (RF) keevituskeskusse, mis ühendab tööstusliku tasemega dielektrilised
+    keevituspressid rangete protsessikontrollide ja keevitusejärgse testimisega. Iga meie valmistatud õmblus on
+    dokumenteeritud, jälgitav ja sertifitseeritud, et vastata või ületada — rahvusvahelise standardi õhutatavate
+    sõidukite nõudeid.
+  </p>
+  <p>
+    RF-keevitus kasutab kõrgsageduslikku elektromagnetenergiat (tavaliselt 27,12 MHz), et ergutada polaarmolekule PVC
+    või Hypalon-kattega kangas, tekitades kuumust täpselt materjalide liidese kohal. Erinevalt kuumõhu- või kuumnuga
+    keevitusest loob RF-keevitus tõelise molekulaarse sideme — kaks kangakihi sulanduvad keevituspiirkonnas ühtseks
+    homogeenseks materjaliks, luues liite, mis on sama tugev kui baas materjal ise.
+  </p>
+
+  <h2>Keevitusseadmed ja protsessi kontroll</h2>
+  <p>Meie keevituskeskus on varustatud järgmisega:</p>
+  <table>
+    <thead><tr><th>Masin</th><th>Võimsus / maht</th><th>Rakendus</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Dielektriline RF-press 1</td><td>15 kW, pressiplaat 2000 × 600 mm</td><td
+          >Peamised pikilised õmblused, ahtrist toruni ühendused</td
+        ></tr
+      >
+      <tr
+        ><td>Dielektriline RF-press 2</td><td>10 kW, pressiplaat 1500 × 500 mm</td><td
+          >Hõlmikõmblused, kooni lisad, ventiili plaastrid</td
+        ></tr
+      >
+      <tr
+        ><td>CNC juhitav RF-keevitus</td><td>8 kW, XY-laud 2500 × 1200 mm</td><td
+          >Kumerad õmblused, logo/paneeli embossimine, täppisplaastritöö</td
+        ></tr
+      >
+      <tr
+        ><td>Kuumnuga automaatne keevitus</td><td>Muutuv temperatuur, max 1,2 m/min</td><td
+          >Varumeetod Hypalon/CSM materjalide jaoks</td
+        ></tr
+      >
+    </tbody>
+  </table>
+  <p>
+    Iga RF-press on varustatud suletud kontuuriga temperatuuri ja rõhu jälgimisega. Keevitingimused — võimsus,
+    pressimise aeg, jahutusaeg, elektroodi rõhk — programmeeritakse vastavalt materjalitüübile ja salvestatakse meie
+    tootmise juhtimissüsteemi (MES) täieliku jälgitavuse tagamiseks.
+  </p>
+
+  <h2>Keevitusproovi kvaliteedi testid — iga õmblus, iga paat</h2>
+  <p>Keevituse terviklikkust kontrollitakse kohustusliku nelja testi protokolli abil:</p>
+  <ol>
+    <li>
+      <strong>Visuaalne kontroll</strong>— 100 % õmblustest kontrollitakse visuaalselt läbi läbi põlemise, sihtimise,
+      saastumise või mittetäieliku sulamise osas. Tagasilükkamise lävi: 0,5 % lineaarmeetrit.
+    </li>
+    <li>
+      <strong>Koorimiskatse ()</strong>— 25 mm laiune riba lõigatakse igast tootmisbatchiga keevitatud katseproovist.
+      Minimaalne rebimisjõud: 120 N/25 mm PVC 1100 dtex jaoks.
+    </li>
+    <li>
+      <strong>Õhutiheduse test</strong>— Iga lõpetatud kamber pressuriseeritakse 1,25 × töötlusrõhuni ja hoitakse 24–48
+      tundi. Rõhulangus ei tohi ületada 2 %.
+    </li>
+    <li>
+      <strong>Termiline tsüklitest</strong>— Prooviproovid tsüklitakse vahemikus -20 °C kuni +60 °C 50 tsüklit, seejärel
+      testitakse uuesti rebitavust. Lubatud tugevuse kadu: 10 %.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Rebitugevuse võrdlus — RF vs kuumaõhu keevitamine (PVC 1100 dtex)
+    </p>
+    <div class="space-y-3">
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">RF keevitus</span><div
+          class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded"
+        >
+          <div class="h-full bg-blue-600 rounded" style="width:92%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">184 N</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">Kuumaõhk</span><div
+          class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded"
+        >
+          <div class="h-full bg-gray-400 rounded" style="width:65%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">130 N</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">mina</span><div class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded">
+          <div class="h-full bg-green-500 rounded" style="width:48%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">96 N</span>
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      RF keevitus saavutab järjepidevalt 90–95 % ematerjali tugevusest, mis on oluliselt üle minimaalse piiri.
+    </p>
+  </div>
+
+  <h2>Professionaalne asjatundlikkus</h2>
+  <p>
+    Meie keevitustiimi juhib vanemprotsessiinsener, kellel on 11-aastane kogemus kaetud tekstiilide dielektrilises
+    keevitamises. Iga operaator läbib 6-kuulise sisesertifitseerimisprogrammi enne, kui tal lubatakse töötada
+    tootmissaumadega. Ümbersertifitseerimine on vajalik igal aastal, sealhulgas praktiline keevitustest, mis hinnatakse
+    meie sisemise A-klassi standardi (rebimisjõud ≥ 160 N/25 mm) alusel.
+  </p>
+
+  <h2>Kohandatud keevituslahendused unikaalsetele nõudmistele</h2>
+  <p>
+    Mõistame, et üks keevitusspetsifikatsioon ei sobi iga rakenduse jaoks. Meie RF keevituskeskus arendab rutiinselt
+    klientidele spetsiaalseid saumikonfiguratsioone, kellel on erilised nõudmised:
+  </p>
+  <ul>
+    <li>
+      <strong>Mitmekihilised tugevduslahendused</strong>— kõrge kuluvusega alade, nagu hõõrdumisribad ja
+      vöötkonstruktsioonide esiosas olevad koonid, jaoks arendame mitmekihilisi RF-keevitusi, mis integreerivad
+      kulumiskindla väliskihi ilma paindlikkust ohverdamata.
+    </li>
+    <li>
+      <strong>Juhtivad või RF-opaalsed saumed</strong>— sõjaliste või luurepaatide jaoks, mis vajavad elektromagnetilist
+      kaitset, keevitame saumipakkide sisse juhtiva võrgukihi.
+    </li>
+    <li>
+      <strong>Värvimuutusega paneelide keevitus</strong>— kahevärvilised kangaspaneelid (nt oranž kere + hall ülaosa)
+      keevitatakse peidetud ülekattega, et säilitada brändi esteetikat ilma nähtava liitumisjooneta.
+    </li>
+  </ul>
+
+  <h2>Meie pühendumus teile</h2>
+  <p>
+    Iga paat, mille me tarnime, kannab meie keevituskvaliteedi garantiid: kui mõni saume normaalsel kasutusel
+    garantiiperioodil läbi ei pea, parandame või asendame kahjustatud kambrikoguse tasuta ning viiakse läbi
+    põhjusanalüüs kordumise vältimiseks. See ei ole lihtsalt garantii — see on pühendumus pidevale täiustamisele, mida
+    juhivad reaalse maailma toimimisandmed.
+  </p>
+  <p>
+    Kui sa valid{SITE.name}, te valite õmblusi, mis on insenertehniliselt kavandatud, testitud ja dokumenteeritud —
+    mitte ainult keevitatud. See on erinevus ujuva ja hästi toimiva paadi vahel.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Arutage oma keevitusnõudeid</h2>
+    <p class="mt-2 text-sm text-muted">
+      Kohandatud saumispetsifikatsioonid, materjalide ühilduvus või protsessi valideerimine.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Võtke ühendust meie keevitustiimiga</a
+    >
+  </div>
+</section>

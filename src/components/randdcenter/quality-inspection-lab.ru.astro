@@ -1,0 +1,212 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'ru' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline"
+    >← Вернуться назад на Центр исследований и разработок</a
+  >
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Лаборатория 06</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Лаборатория качества и контроля</h1>
+      <p class="mt-3 text-lg text-muted">Независимая проверка — все испытания пройдены перед доставкой</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-uv-resistance-testing.webp"
+        alt="Aquafarer лаборатория контроля качества UV тестирование"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Доверяй, но проверяй</h2>
+  <p>
+    Каждая лодка, покидающая нашу мастерскую, имеет сертификат о том, что она прошла определенный набор проверок
+    качества и испытаний материалов. Наша лаборатория качества и контроля является независимой функцией внутри
+    организации — она подчиняется непосредственно управляющему директору, а не производству, — гарантируя, что никакое
+    коммерческое давление не сможет поставить под угрозу контрольные ворота. Если партия материала или готовая лодка не
+    соответствует опубликованным спецификациям, лаборатория имеет право приостановить отгрузку до устранения
+    несоответствия.
+  </p>
+  <p>
+    В лаборатории действует система управления качеством, соответствующая принципам, а наши методы испытаний основаны на
+    стандартах ISO, ASTM и EN, где это применимо. Мы ведем подробные записи каждого проведенного испытания, создавая
+    полную цепочку отслеживания от получения сырья до окончательной доставки лодки.
+  </p>
+
+  <h2>Испытательное оборудование и возможности</h2>
+  <table>
+    <thead><tr><th>Оборудование</th><th>Проведенных тестов</th><th>Стандарт/Метод</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Универсальная испытательная машина (50 кН)</td><td
+          >Прочность на разрыв (ткань), устойчивость к отслаиванию (швы), распространение разрыва.</td
+        ><td>, ISO 4674</td></tr
+      >
+      <tr
+        ><td>Стенд для испытания удержания воздуха (программируемый)</td><td
+          >1000 цикл накачивания/сдувания, 24-48 ч испытание на удержание давления</td
+        ><td> (внутренний)</td></tr
+      >
+      <tr
+        ><td>Приспособление для снятия швов (механизированное отделение 180°)</td><td
+          >Прочность на отслаивание сварных и клеевых швов при 100 mm/мин.</td
+        ><td> / АСТМ Д1876</td></tr
+      >
+      <tr><td>Тестер гидростатического напора</td><td>Водонепроницаемость ткани (0 — 00 мбар)</td><td>ISO 811</td></tr>
+      <tr
+        ><td>Цифровой толщиномер и микрометр</td><td>Толщина ткани, толщина стенки трубки, толщина клейкой пленки</td
+        ><td>ISO 2286-3</td></tr
+      >
+      <tr
+        ><td>Экологическая палата</td><td
+          >Температурное выдерживание (от -40 °C до +80 °C) для испытаний на холодное растрескивание и тепловое
+          старение.</td
+        ><td>ISO 188, ISO 4675</td></tr
+      >
+      <tr
+        ><td>Цветной спектрофотометр</td><td>Измерение цвета Delta-E после воздействия UV</td><td
+          >ISO 105-A05 / ASTM D2244</td
+        ></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>Инспекционные ворота — от материала до доставки</h2>
+  <p>
+    Каждое судно следует определенному плану качества с обязательными точками проверки. Ни одна лодка не может миновать
+    ворота; перед началом следующего этапа производства каждые ворота должны быть подписаны инспектором по качеству.
+  </p>
+
+  <div class="not-prose my-8">
+    <div class="relative">
+      <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-blue-200 dark:bg-blue-800"></div>
+      <div class="space-y-6 relative">
+        {
+          [
+            {
+              gate: 'Gate 1',
+              label: 'Incoming material inspection',
+              desc: 'Fabric batch, adhesive batch, hardware — all checked against incoming specification before release to production.',
+            },
+            {
+              gate: 'Gate 2',
+              label: 'In-process weld inspection',
+              desc: 'First-off weld coupon tested (peel + visual) at start of each production shift.',
+            },
+            {
+              gate: 'Gate 3',
+              label: 'Chamber air test',
+              desc: 'Each chamber pressurised to 1.25 x working pressure, held 24-48 h. Data logged per serial number.',
+            },
+            {
+              gate: 'Gate 4',
+              label: 'Pre-delivery inspection',
+              desc: 'Complete boat inspected: all fasteners torqued, systems functional, no cosmetic defects. 100-point checklist.',
+            },
+            {
+              gate: 'Gate 5',
+              label: 'Final certification',
+              desc: 'Test reports compiled, inspection records reviewed, Certificate of Conformance issued.',
+            },
+          ].map((g) => (
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs font-bold z-10">
+                {g.gate}
+              </div>
+              <div class="flex-1 p-3 rounded-lg bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800">
+                <p class="text-sm font-semibold">{g.label}</p>
+                <p class="text-xs text-gray-500 mt-1">{g.desc}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+
+  <h2>Ключевые показатели качества (скользящее среднее 2025)</h2>
+  <div class="not-prose my-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">99.7 %</span>
+      <span class="text-xs text-gray-500">Выход за первый проход (партия ткани)</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">&lt; 0.2 %</span>
+      <span class="text-xs text-gray-500">Процент бракованных сварных швов (погонный метр)</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">100 %</span>
+      <span class="text-xs text-gray-500">Камеры проходят испытания на воздухе перед сборкой</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600"></span>
+      <span class="text-xs text-gray-500">Соответствие категории дизайна</span>
+    </div>
+  </div>
+
+  <h2>Наша команда качества</h2>
+  <p>
+    В лаборатории работают менеджер по качеству (10 лет работы в области морского контроля качества, сертифицированный
+    инженер по качеству ASQ), два инспектора по качеству (каждый с сертификатом неразрушающего контроля уровня 2 по
+    визуальным испытаниям) и техник по материалам, ответственный за все физические испытания. Команда проходит ежегодную
+    проверку квалификации у независимого стороннего поставщика, чтобы гарантировать, что результаты наших тестов
+    остаются точными и воспроизводимыми.
+  </p>
+
+  <h2>Независимое тестирование для клиентов</h2>
+  <p>
+    Наша лаборатория качества и контроля готова предоставить независимые услуги по тестированию. Если вам необходимо
+    проверить характеристики ткани, утвердить новую клеевую систему или получить сторонний отчет об испытаниях для
+    квалификации закупок, мы можем провести испытания в соответствии с применимым стандартом и выдать сертифицированный
+    отчет об испытаниях.
+  </p>
+  <p>Примеры недавней работы по стороннему тестированию:</p>
+  <ul>
+    <li>
+      Сравнение прочности на отслаивание пяти конкурентоспособных клейких пленок для европейской программы военных
+      закупок.
+    </li>
+    <li>
+      Исследование ускоренного старения (UV + термоциклирование) для нового состава PVC с оранжевым пигментом с
+      регулярными промежуточными измерениями с интервалом 500 часа.
+    </li>
+    <li>
+      Проверка удержания воздуха прототипа перегородочных клапанов 50 для новой конструкции трубки высокого давления.
+    </li>
+  </ul>
+
+  <h2>Наши обязательства перед вами</h2>
+  <p>
+    Когда вы получите {SITE.name} лодки, вы также получаете ее досье качества — составленную запись результатов испытаний,
+    применимых к вашей конкретной лодке. Сертификат партии ткани, тесты на отслаивание сварных швов, журналы испытаний воздуха
+    в камере и контрольный список проверок перед поставкой. Каждый номер отслеживается. Каждый инспектор идентифицирован.
+    Это не просто оформление документов — это наше обещание, что мы поставили именно то, что указали.
+  </p>
+  <p>
+    Если у вас возникнут проблемы с качеством, вы можете напрямую связаться с лабораторией — контактная информация
+    указана в вашем сертификате соответствия. Мы серьезно относимся к каждому запросу и обязуемся провести официальное
+    расследование в течение 48 часов.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Необходимо независимое тестирование или проверка качества?</h2>
+    <p class="mt-2 text-sm text-muted">
+      Наша лаборатория принимает сторонние тестовые работы — свяжитесь с нами и сообщите о своих требованиях.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Свяжитесь с лабораторией качества</a
+    >
+  </div>
+</section>

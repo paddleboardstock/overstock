@@ -1,0 +1,574 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { languages, defaultLang } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+import LDe from '~/components/research/rcd-technical-file-guide.de.astro';
+import LEs from '~/components/research/rcd-technical-file-guide.es.astro';
+import LFr from '~/components/research/rcd-technical-file-guide.fr.astro';
+import LIt from '~/components/research/rcd-technical-file-guide.it.astro';
+import LCs from '~/components/research/rcd-technical-file-guide.cs.astro';
+import LSv from '~/components/research/rcd-technical-file-guide.sv.astro';
+import LDa from '~/components/research/rcd-technical-file-guide.da.astro';
+import LEl from '~/components/research/rcd-technical-file-guide.el.astro';
+import LNo from '~/components/research/rcd-technical-file-guide.no.astro';
+import LRu from '~/components/research/rcd-technical-file-guide.ru.astro';
+import LNl from '~/components/research/rcd-technical-file-guide.nl.astro';
+import LFi from '~/components/research/rcd-technical-file-guide.fi.astro';
+import LPl from '~/components/research/rcd-technical-file-guide.pl.astro';
+import LAr from '~/components/research/rcd-technical-file-guide.ar.astro';
+import LPt from '~/components/research/rcd-technical-file-guide.pt.astro';
+import LJa from '~/components/research/rcd-technical-file-guide.ja.astro';
+import LMs from '~/components/research/rcd-technical-file-guide.ms.astro';
+import LRo from '~/components/research/rcd-technical-file-guide.ro.astro';
+import LSk from '~/components/research/rcd-technical-file-guide.sk.astro';
+import LSl from '~/components/research/rcd-technical-file-guide.sl.astro';
+import LSr from '~/components/research/rcd-technical-file-guide.sr.astro';
+import LTh from '~/components/research/rcd-technical-file-guide.th.astro';
+import LTl from '~/components/research/rcd-technical-file-guide.tl.astro';
+import LTr from '~/components/research/rcd-technical-file-guide.tr.astro';
+import LBg from '~/components/research/rcd-technical-file-guide.bg.astro';
+import LEt from '~/components/research/rcd-technical-file-guide.et.astro';
+import LHe from '~/components/research/rcd-technical-file-guide.he.astro';
+import LHr from '~/components/research/rcd-technical-file-guide.hr.astro';
+import LHu from '~/components/research/rcd-technical-file-guide.hu.astro';
+import LId from '~/components/research/rcd-technical-file-guide.id.astro';
+import LKo from '~/components/research/rcd-technical-file-guide.ko.astro';
+import LLt from '~/components/research/rcd-technical-file-guide.lt.astro';
+import LLv from '~/components/research/rcd-technical-file-guide.lv.astro';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => getUiForLang(lang || defaultLang)?.[key] || '';
+
+const META: Record<string, { title: string; description: string }> = {
+  en: {
+    title: 'RCD Technical File: Complete Guide for RIB Manufacturers',
+    description:
+      'Deep guide to building a compliant RCD 2013/53/EU technical file for RIB and inflatable boat manufacturers. Three-tier document system, 12-module directory, RIB-specific focus areas, essential requirements compliance matrix, and change control procedures.',
+  },
+  de: {
+    title: 'RCD-Technikakte: vollständiger Leitfaden für RIB-Hersteller',
+    description:
+      'Umfassender Leitfaden zum Aufbau einer konformen Technikakte nach RCD 2013/53/EU für RIB- und Schlauchboot-Hersteller. Dreistufiges Dokumentensystem, 12-Modul-Verzeichnis, RIB-spezifische Schwerpunkte, Konformitätsmatrix der Grundanforderungen und Änderungskontrolle.',
+  },
+  es: {
+    title: 'Expediente técnico RCD: guía completa para fabricantes de RIB',
+    description:
+      'Guía profunda para elaborar un expediente técnico conforme a la directiva RCD 2013/53/UE para fabricantes de RIB y embarcaciones inflables. Sistema documental de tres niveles, directorio de 12 módulos, áreas de enfoque específicas para RIB, matriz de cumplimiento de requisitos esenciales y control de cambios.',
+  },
+  fr: {
+    title: 'Dossier technique RCD : guide complet pour les fabricants de RIB',
+    description:
+      'Guide approfondi pour constituer un dossier technique conforme à la directive RCD 2013/53/UE pour les fabricants de RIB et de bateaux gonflables. Système documentaire à trois niveaux, répertoire en 12 modules, points de vigilance propres aux RIB, matrice de conformité aux exigences essentielles et contrôle des modifications.',
+  },
+  it: {
+    title: 'Fascicolo tecnico RCD: guida completa per i costruttori di RIB',
+    description:
+      'Guida approfondita alla costruzione di un fascicolo tecnico conforme alla direttiva RCD 2013/53/UE per i costruttori di RIB e natanti gonfiabili. Sistema documentale a tre livelli, directory a 12 moduli, aree di focus specifiche per i RIB, matrice di conformità ai requisiti essenziali e controllo delle modifiche.',
+  },
+  cs: {
+    title: 'RCD Technický soubor: Kompletní průvodce pro RIB výrobce',
+    description:
+      'Podrobný průvodce vytvořením technické dokumentace vyhovující RCD 2013/53/EU pro výrobce RIB a nafukovacích člunů. Třívrstvý dokumentový systém, 12modulový adresář, RIB-specifické oblasti zájmu, matice dodržování základních požadavků a postupy řízení změn.',
+  },
+  sv: {
+    title: 'RCD Teknisk fil: Komplett guide för RIB-tillverkare',
+    description:
+      'Djup guide till att bygga en kompatibel teknisk fil RCD 2013/53/EU för tillverkare av RIB och gummibåtar. Dokumentsystem i tre nivåer, katalog med 12 moduler, RIB-specifika fokusområden, matris för överensstämmelse med väsentliga krav och procedurer för ändringskontroll.',
+  },
+  da: {
+    title: 'RCD Teknisk fil: Komplet vejledning til RIB-producenter',
+    description:
+      'Dyb vejledning til opbygning af en kompatibel RCD 2013/53/EU teknisk fil for RIB og gummibådsproducenter. Tre-lags dokumentsystem, 12-modul bibliotek, RIB-specifikke fokusområder, overholdelsesmatrix for væsentlige krav og ændringskontrolprocedurer.',
+  },
+  el: {
+    title: 'RCD Τεχνικό αρχείο: Πλήρης οδηγός για RIB Κατασκευαστές',
+    description:
+      'Βαθύς οδηγός για τη δημιουργία ενός συμβατού τεχνικού αρχείου RCD 2013/53/EU για RIB και κατασκευαστές φουσκωτών σκαφών. Σύστημα εγγράφων τριών επιπέδων, κατάλογος 12 μονάδων, RIB-συγκεκριμένες περιοχές εστίασης, πίνακας συμμόρφωσης βασικών απαιτήσεων και διαδικασίες ελέγχου αλλαγών.',
+  },
+  no: {
+    title: 'RCD Teknisk fil: Komplett veiledning for RIB-produsenter',
+    description:
+      'Dyp guide til å bygge en kompatible RCD 2013/53/EU teknisk fil for produsenter av RIB og gummibåter. Tre-lags dokumentsystem, 12-moduls katalog, RIB-spesifikke fokusområder, matrise for overholdelse av essensielle krav og prosedyrer for endringskontroll.',
+  },
+  ru: {
+    title: 'Технический файл RCD: Полное руководство для производителей RIB',
+    description:
+      'Подробное руководство по созданию технического файла, соответствующего требованиям RCD 2013/53/EU, для RIB и производителей надувных лодок. Трехуровневая система документов, каталог из 12 модулей, области деятельности, специфичные для RIB, матрица соответствия основным требованиям и процедуры контроля изменений.',
+  },
+  nl: {
+    title: 'RCD Technisch dossier: complete gids voor RIB-fabrikanten',
+    description:
+      'Uitgebreide handleiding voor het opbouwen van een technisch dossier dat voldoet aan RCD 2013/53/EU voor fabrikanten van RIB en opblaasbare boten. Documentsysteem met drie niveaus, directory met 12 modules, RIB-specifieke aandachtsgebieden, matrix voor naleving van essentiële vereisten en procedures voor wijzigingsbeheer.',
+  },
+  fi: {
+    title: 'RCD Tekninen tiedosto: täydellinen opas RIB valmistajille',
+    description:
+      'Syvä opas RCD 2013/53/EU -standardin mukaisen teknisen tiedoston rakentamiseen RIB- ja kumiveneiden valmistajille. Kolmiportainen dokumenttijärjestelmä, 12 moduulin hakemisto, RIB-kohtaiset painopistealueet, olennaisten vaatimusten noudattamismatriisi ja muutoksenhallintamenettelyt.',
+  },
+  pl: {
+    title: 'RCD Dokumentacja techniczna: Kompletny przewodnik dla producentów RIB',
+    description:
+      'Szczegółowy przewodnik dotyczący tworzenia dokumentacji technicznej zgodnej z RCD 2013/53/UE dla RIB i producentów pontonów. Trójpoziomowy system dokumentów, 12-modułowy katalog, obszary tematyczne specyficzne dla RIB, macierz zgodności z zasadniczymi wymaganiami i procedury kontroli zmian.',
+  },
+  ar: {
+    title: 'RCD الملف الفني: الدليل الكامل لمصنعي RIB',
+    description:
+      'دليل شامل لبناء ملف فني متوافق مع RCD 2013/53/EU لمصنعي RIB والقوارب القابلة للنفخ. نظام مستندات ثلاثي الطبقات، ودليل مكون من 12 وحدة، ومجالات التركيز الخاصة بـ RIB، ومصفوفة الامتثال للمتطلبات الأساسية، وإجراءات التحكم في التغيير.',
+  },
+  pt: {
+    title: 'Arquivo Técnico RCD: Guia Completo para Fabricantes RIB',
+    description:
+      'Guia detalhado para construir um arquivo técnico compatível com RCD 2013/53/UE para RIB e fabricantes de barcos infláveis. Sistema de documentos de três camadas, diretório de 12 módulos, áreas de foco específicas de RIB, matriz de conformidade de requisitos essenciais e procedimentos de controle de mudanças.',
+  },
+  ja: {
+    title: 'RCD テクニカル ファイル: RIB メーカー向け完全ガイド',
+    description:
+      'RIB およびインフレータブル ボート メーカー向けに、準拠した RCD 2013/53/EU 技術ファイルを作成するための詳細なガイド。 3 層ドキュメント システム、12 モジュール ディレクトリ、RIB 固有の重点領域、必須要件コンプライアンス マトリックス、および変更管理手順。',
+  },
+  ms: {
+    title: 'RCD Fail Teknikal: Panduan Lengkap untuk Pengilang RIB',
+    description:
+      'Panduan mendalam untuk membina fail teknikal RCD 2013/53/EU yang mematuhi untuk pengilang RIB dan bot tiup. Sistem dokumen tiga lapisan, direktori 12 modul, kawasan fokus khusus RIB, matriks pematuhan keperluan penting, dan prosedur kawalan perubahan.',
+  },
+  ro: {
+    title: 'RCD Dosar Tehnic: Ghid Complet pentru RIB Producători',
+    description:
+      'Ghid detaliat pentru construirea unui dosar tehnic conform RCD 2013/53/EU pentru RIB și producătorii de bărci pneumatice. Sistem de documente pe trei niveluri, director de 12 module, domenii de focus specifice RIB, matrice de conformitate cu cerințele esențiale și proceduri de control al modificărilor.',
+  },
+  sk: {
+    title: 'RCD Technická dokumentácia: Kompletný sprievodca pre RIB výrobcov',
+    description:
+      'Hlboký sprievodca tvorbou súladnej RCD 2013/53/EÚ technickej dokumentácie pre RIB a výrobcov nafukovacích lodí. Trojvrstvový systém dokumentov, adresár 12 modulov, RIB-špecifické fokusové oblasti, matica súladu s požiadavkami a postupy riadenia zmien.',
+  },
+  sl: {
+    title: 'RCD Tehnična datoteka: Celovit vodič za RIB proizvajalce',
+    description:
+      'Poglobljen vodič za izdelavo skladne RCD 2013/53/EU tehnične datoteke za proizvajalce RIB in napihljivih čolnov. Tristopenjski sistem dokumentov, imenik 12 modulov, specifična področja RIB, matrika skladnosti bistvenih zahtev in postopki nadzora sprememb.',
+  },
+  sr: {
+    title: 'RCD Tehnička dokumentacija: Kompletan vodič za RIB proizvođače',
+    description:
+      'Dubinski vodič za izradu usklađene RCD tehničke dokumentacije 2013/53/EU za RIB i proizvođače napuhanih čamaca. Sistem dokumentacije u tri nivoa, direktorijum od 12 modula, specifična fokusna područja RIB, matrica usklađenosti sa ključnim zahtevima i procedure kontrole promena.',
+  },
+  th: {
+    title: 'RCD ไฟล์ทางเทคนิค: คู่มือฉบับสมบูรณ์สำหรับ RIB ผู้ผลิต',
+    description:
+      'คู่มือเชิงลึกสำหรับการสร้างไฟล์ทางเทคนิค RCD 2013/53/EU ที่สอดคล้องกฎระเบียบสำหรับผู้ผลิต RIB และเรือเป่าลม ระบบเอกสารสามชั้น, ไดเรกทอรี 12 โมดูล, เน้นพื้นที่เฉพาะ RIB, ตารางความสอดคล้องข้อกำหนดสำคัญ และขั้นตอนการควบคุมการเปลี่ยนแปลง',
+  },
+  tl: {
+    title: 'RCD Technical File: Kumpletong Gabay para sa RIB Mga Tagagawa',
+    description:
+      'Malalim na gabay sa paggawa ng sumusunod sa regulasyon na RCD 2013/53/EU technical file para sa RIB at inflatable boat na mga tagagawa. Tatlong-tier na sistema ng dokumento, 12-module na direktoryo, mga partikular na pokus ng RIB, matrix ng pagsunod sa mahahalagang kinakailangan, at mga pamamaraan sa kontrol ng pagbabago.',
+  },
+  tr: {
+    title: 'RCD Teknik Dosya: RIB Üreticileri için Tam Kılavuz',
+    description:
+      'RIB ve şişme tekne üreticileri için 2013/53/AB teknik dosyası oluşturmayla ilgili derin kılavuz. Üç katmanlı belge sistemi, 12 modüllü dizin, RIB-spesifik odak alanları, zorunlu gereksinimler uyum matrisi ve değişiklik kontrol prosedürleri.',
+  },
+  bg: {
+    title: 'RCD Технически файл: Пълен наръчник за производители на RIB',
+    description:
+      'Дълбок наръчник за създаване на съвместим RCD технически файл според 2013/53/ЕС за производители на RIB и надуваеми лодки. Система от документи в три нива, справочник с 12 модула, специфични за RIB области на фокус, матрица за съответствие с основните изисквания и процедури за контрол на промените.',
+  },
+  et: {
+    title: 'RCD Tehniline fail: Täielik RIB juhend tootjatele',
+    description:
+      'Sügav juhend nõuetele vastava RCD 2013/53/EU tehnilise faili koostamiseks RIB täispuhutavate paaditootjate jaoks. Kolmetasandiline dokumendisüsteem, 12-mooduliline kataloog, RIB-spetsiifilised fookusvaldkonnad, oluliste nõuete vastavusmaatriks ja muudatuste kontrolli protseduurid.',
+  },
+  he: {
+    title: 'RCD קובץ טכני: מדריך מלא לRIB יצרנים',
+    description:
+      'מדריך מעמיק לבניית קובץ טכני תואם RCD 2013/53/EU עבור יצרני RIB וסירות מנופחות. מערכת מסמכים בת שלושה שלבים, מדריך מודולים של 12 מודולים, אזורי מיקוד ספציפיים לRIB, מטריצה של ציות לדרישות חיוניות, ונהלי בקרת שינויים.',
+  },
+  hr: {
+    title: 'RCD Tehnička mapa: Potpuni vodič za RIB Proizvođače',
+    description:
+      'Dubinski vodič za izradu usklađene RCD 2013/53/EU tehničke mape za proizvođače RIB i napuhanih brodova. Sustav dokumenata u tri razine, direktorij od 12 modula, RIB-specifična područja fokusa, matrica usklađenosti osnovnih zahtjeva i postupci kontrole promjena.',
+  },
+  hu: {
+    title: 'RCD Műszaki Dokumentáció: Teljes Útmutató RIB Gyártók számára',
+    description:
+      'Részletes útmutató egy RCD 2013/53/EU szerinti, RIB és felfújható hajó gyártók számára készített műszaki dokumentáció elkészítéséhez. Háromszintű dokumentumrendszer, 12 modulból álló könyvtár, RIB-specifikus fókuszterületek, alapvető követelményeknek való megfelelés mátrixa és változáskezelési eljárások.',
+  },
+  id: {
+    title: 'RCD Berkas Teknis: Panduan Lengkap untuk RIB Produsen',
+    description:
+      'Panduan mendalam untuk membangun berkas teknis RCD 2013/53/EU yang sesuai untuk RIB dan produsen perahu karet. Sistem dokumen tiga tingkatan, direktori 12 modul, area fokus spesifik RIB, matriks kepatuhan persyaratan penting, dan prosedur kontrol perubahan.',
+  },
+  ko: {
+    title: 'RCD 기술 파일: RIB 제조업체를 위한 완전 가이드',
+    description:
+      'RIB 및 인플레이션 보트 제조업체를 위한 규정 준수 RCD 2013/53/EU 기술 파일 작성에 대한 심층 가이드. 3단계 문서 시스템, 12개 모듈 디렉토리, RIB별 집중 영역, 필수 요구 사항 준수 매트릭스 및 변경 관리 절차.',
+  },
+  lt: {
+    title: 'RCD Techninis Failas: Pilnas Gairių Vadovas RIB Gamintojams',
+    description:
+      'Išsamus vadovas, kaip sukurti atitinkantį RCD 2013/53/ES techninį failą RIB ir pripučiamų laivų gamintojams. Trijų lygių dokumentų sistema, 12 modulio katalogas, RIB-specifinės sritys, esminių reikalavimų atitikties matrica ir pakeitimų valdymo procedūros.',
+  },
+  lv: {
+    title: 'RCD Tehniskā dokumentācija: Pilnīgs ceļvedis RIB ražotājiem',
+    description:
+      'Padziļināts ceļvedis atbilstošas RCD 2013/53/ES tehniskās dokumentācijas izveidei RIB un piepūšamo laivu ražotājiem. Trīs līmeņu dokumentu sistēma, 12 moduļu direktorijs, RIB specifiskas fokusa jomas, būtisko prasību atbilstības matrica un izmaiņu kontroles procedūras.',
+  },
+};
+const meta = META[lang] || META.en;
+const ResearchBody: any =
+  (
+    {
+      de: LDe,
+      es: LEs,
+      fr: LFr,
+      it: LIt,
+      cs: LCs,
+      sv: LSv,
+      da: LDa,
+      el: LEl,
+      no: LNo,
+      ru: LRu,
+      nl: LNl,
+      fi: LFi,
+      pl: LPl,
+      ar: LAr,
+      pt: LPt,
+      ja: LJa,
+      ms: LMs,
+      ro: LRo,
+      sk: LSk,
+      sl: LSl,
+      sr: LSr,
+      th: LTh,
+      tl: LTl,
+      tr: LTr,
+      bg: LBg,
+      et: LEt,
+      he: LHe,
+      hr: LHr,
+      hu: LHu,
+      id: LId,
+      ko: LKo,
+      lt: LLt,
+      lv: LLv,
+    } as Record<string, any>
+  )[lang] || null;
+
+const metadata = {
+  title: meta.title + ' | ' + SITE.name,
+  description: meta.description,
+  ignoreTitleTemplate: true,
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: meta.title,
+  description: metadata.description,
+  author: { '@type': 'Organization', name: SITE.name },
+  datePublished: '2024-06-15',
+  dateModified: '2025-06-01',
+};
+
+const faqSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What must be in an RCD technical file for RIB boats?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Product identity, compliance strategy, design drawings, structural calculations, material specifications, system diagrams, stability/buoyancy calculations, test reports, supplier documentation, HIN/WIN records, builder plate layout, owner manual, production conformity plan, and NB certification records. Per RCD 2013/53/EU Annex IX.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How long must RCD technical files be retained?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'At least 10 years after the last unit of that model is placed on the EU market, per RCD II Article 7(3).',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the three-tier document system for RCD compliance?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Master Technical File proves the design type complies, Model Variant Pack proves variants stay within the certification boundary, and Single-Boat Traceability Pack proves each actual boat matches the approved type. All linked by HIN/WIN and model version.',
+      },
+    },
+  ],
+});
+---
+
+<Layout metadata={metadata}>
+  <JsonLd data={jsonLd} />
+
+  <article class="max-w-4xl mx-auto px-6 py-16">
+    <nav class="text-sm text-gray-500 mb-8">
+      <a href={'/' + lang + '/'} class="hover:text-sky-600">{SITE.name}</a>
+      <span class="mx-2">/</span>
+      <a href={'/' + lang + '/research'} class="hover:text-sky-600">{t('home.research.title')}</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-900">{t('home.research.rcdTechFile')}</span>
+    </nav>
+
+    <div class="mb-4">
+      <span
+        class="inline-block text-xs font-semibold uppercase tracking-wider text-sky-600 bg-sky-50 px-3 py-1 rounded-full"
+        >Compliance</span
+      >
+      <span class="ml-3 text-sm text-gray-400">12 min read</span>
+    </div>
+
+    <h1 class="text-4xl font-bold text-gray-900 mb-6">{t('home.research.rcdTechFile')}</h1>
+    <p class="text-xl text-gray-500 mb-12 leading-relaxed">{t('home.research.rcdTechFile.desc')}</p>
+
+    <div class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600">
+      {
+        ResearchBody ? (
+          <ResearchBody lang={lang} />
+        ) : (
+          <div class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600">
+            <h2>What Is the RCD Technical File?</h2>
+            <p>
+              The RCD technical file is not a product manual or marketing brochure. It is a complete evidence chain
+              proving the boat complies with the Recreational Craft Directive (2013/53/EU) from initial design through
+              manufacturing to final verification. It must demonstrate that every requirement of the applicable Annex
+              has been addressed, that the methods and standards used are appropriate, and that production processes
+              consistently reproduce the approved type.
+            </p>
+            <p>
+              Per RCD II Article 7(3), the technical file must be retained for at least 10 years after the last unit of
+              that model is placed on the EU market. This retention period applies to the manufacturer or the authorized
+              representative established within the EU.
+            </p>
+
+            <h2>Three-Tier Document System</h2>
+            <p>
+              A well-structured RCD technical file operates on three tiers, each answering a distinct compliance
+              question and linked together by model identification and HIN/WIN traceability.
+            </p>
+            <table class="w-full text-sm border-collapse">
+              <thead>
+                <tr class="bg-gray-100">
+                  <th class="p-3 text-left font-semibold text-gray-900 border">Tier</th>
+                  <th class="p-3 text-left font-semibold text-gray-900 border">Object</th>
+                  <th class="p-3 text-left font-semibold text-gray-900 border">Core Question</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="p-3 border">Master Technical File</td>
+                  <td class="p-3 border">Approved design type</td>
+                  <td class="p-3 border">Does the design comply with RCD requirements?</td>
+                </tr>
+                <tr>
+                  <td class="p-3 border">Model Variant Pack</td>
+                  <td class="p-3 border">Certified variants within the type</td>
+                  <td class="p-3 border">Do variants stay within the certification boundary?</td>
+                </tr>
+                <tr>
+                  <td class="p-3 border">Single-Boat Traceability Pack</td>
+                  <td class="p-3 border">Each individual boat produced</td>
+                  <td class="p-3 border">Does each boat match the approved type?</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2>12-Module File Directory</h2>
+            <p>
+              The technical file should be organized into discrete modules, each covering a specific compliance domain.
+              This modular structure simplifies audits, change control, and variant management.
+            </p>
+
+            <h3>01 Product Identity</h3>
+            <p>
+              Model definition, certification boundary, design category, hull identification, and variant register.
+              Establishes what is and is not covered by the file.
+            </p>
+
+            <h3>02 RCD Compliance Strategy</h3>
+            <p>
+              Applicable conformity assessment modules, notified body information, list of applied harmonized standards,
+              and rationale for any deviations or alternative solutions.
+            </p>
+
+            <h3>03 General Design</h3>
+            <p>
+              General arrangement drawings, principal dimensions, weight and center of gravity data, and design category
+              justification per ISO 8666.
+            </p>
+
+            <h3>04 Structural Design</h3>
+            <p>
+              Hull, deck, transom, bulkheads, and structural connections. Includes scantling calculations or test-based
+              evidence per ISO 12215 or equivalent.
+            </p>
+
+            <h3>05 Materials and Processes</h3>
+            <p>
+              Bill of Materials, material specifications, lamination cards (for GRP), adhesive system specifications,
+              and process control records for critical bonds.
+            </p>
+
+            <h3>06 System Drawings</h3>
+            <p>
+              Electrical system, fuel system, drainage, steering system, and engine installation drawings with
+              applicable ISO compliance references.
+            </p>
+
+            <h3>07 Safety and Performance</h3>
+            <p>
+              Stability calculations, buoyancy calculations, freeboard measurements, maximum load determination, and
+              maximum engine power calculations per ISO 12217 and ISO 8666.
+            </p>
+
+            <h3>08 Testing and Inspection</h3>
+            <p>
+              Prototype test records, production test records, third-party test reports, and calibration certificates
+              for test equipment.
+            </p>
+
+            <h3>09 Supplier Compliance</h3>
+            <p>
+              Critical component list, supplier Declarations of Conformity, incoming inspection procedures, and material
+              certificate traceability.
+            </p>
+
+            <h3>10 Marking and Consumer Information</h3>
+            <p>
+              HIN/WIN coding and placement, builder plate layout and content, CE marking application, and owner manual
+              compliance checklist.
+            </p>
+
+            <h3>11 Production Conformity</h3>
+            <p>
+              Quality control plan, inspection procedures at key production stages, change control procedure, and
+              non-conformance handling.
+            </p>
+
+            <h3>12 Certification Records</h3>
+            <p>
+              Notified body contracts, type examination certificates, audit reports, and Declaration of Conformity
+              archive.
+            </p>
+
+            <h2>RIB-Specific Focus Areas</h2>
+
+            <h3>Tube Material and Bonding</h3>
+            <p>
+              For RIB manufacturers, the tube assembly is the most compliance-critical subsystem. The technical file
+              must include PVC or CSM material specifications with tensile strength, tear resistance, and UV stability
+              data; adhesive system specifications including pot life, cure schedule, and peel strength requirements;
+              bonding procedure cards detailing surface preparation, ambient conditions, adhesive application, and
+              roll-out sequence; chamber arrangement drawings showing individual chamber volumes, partition positions,
+              and pressure relief valve locations; and pressure test methods with acceptance criteria per ISO 6185 or
+              equivalent.
+            </p>
+
+            <h3>Transom and Maximum Power</h3>
+            <p>
+              The technical file must document maximum engine power and weight as determined per ISO 8666 and ISO 11592;
+              transom structure drawings including core material, laminate schedule, and engine mounting bolt pattern;
+              and engine mounting requirements including transom reinforcement, through-bolt specifications, and load
+              distribution analysis.
+            </p>
+
+            <h3>HIN/WIN and Builder Plate</h3>
+            <p>
+              HIN/WIN coding must follow ISO 10087 format. The file must document coding rules including manufacturer
+              code, model year, and serial number allocation; visible and hidden marking positions with photographs or
+              drawings; and material and permanency requirements ensuring the mark survives the service life of the
+              craft. The RCD requires CE marking on the builder plate, separate from the HIN/WIN. The builder plate must
+              display design category, maximum persons, maximum load, and engine power per ISO 14945.
+            </p>
+
+            <h2>Essential Requirements Compliance Matrix</h2>
+            <p>
+              The compliance matrix maps each RCD Annex I essential requirement to the standard used and the evidence
+              document that demonstrates compliance. It is the single most important navigation tool in the technical
+              file.
+            </p>
+            <table class="w-full text-sm border-collapse">
+              <thead>
+                <tr class="bg-gray-100">
+                  <th class="p-3 text-left font-semibold text-gray-900 border">RCD Clause</th>
+                  <th class="p-3 text-left font-semibold text-gray-900 border">Applicable?</th>
+                  <th class="p-3 text-left font-semibold text-gray-900 border">Standard Used</th>
+                  <th class="p-3 text-left font-semibold text-gray-900 border">Evidence Document</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="p-3 border">Annex I 3.1 Stability</td>
+                  <td class="p-3 border">Yes</td>
+                  <td class="p-3 border">ISO 12217-1</td>
+                  <td class="p-3 border">Module 07 Stability Report</td>
+                </tr>
+                <tr>
+                  <td class="p-3 border">Annex I 3.3 Buoyancy</td>
+                  <td class="p-3 border">Yes</td>
+                  <td class="p-3 border">ISO 12217-1</td>
+                  <td class="p-3 border">Module 07 Buoyancy Report</td>
+                </tr>
+                <tr>
+                  <td class="p-3 border">Annex I 5.1 Electrical</td>
+                  <td class="p-3 border">Conditional</td>
+                  <td class="p-3 border">ISO 10133</td>
+                  <td class="p-3 border">Module 06 Electrical Drawing</td>
+                </tr>
+                <tr>
+                  <td class="p-3 border">Annex I 3.5 Load capacity</td>
+                  <td class="p-3 border">Yes</td>
+                  <td class="p-3 border">ISO 8666</td>
+                  <td class="p-3 border">Module 07 Load Calculation</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2>Change Control</h2>
+            <p>
+              Any change that could affect compliance must be assessed for impact before implementation. The following
+              changes always require a compliance impact assessment:
+            </p>
+            <ul>
+              <li>Hull mold changes (new plug, modified lines)</li>
+              <li>Material supplier changes (resin, gelcoat, core, tube fabric)</li>
+              <li>Engine power changes (different max power rating)</li>
+              <li>Maximum persons or load changes</li>
+              <li>New T-top, hardtop, or fuel tank installation</li>
+              <li>Tube chamber arrangement changes (addition, removal, repositioning)</li>
+              <li>Standard updates (when a cited harmonized standard is superseded)</li>
+            </ul>
+
+            <h2>What This Means for B2B Buyers</h2>
+            <p>
+              For distributors, fleet operators, and OEM buyers, the technical file is your assurance that the product
+              you are purchasing is legally compliant and traceable. Verify the following before placing an order:
+            </p>
+            <ul>
+              <li>A model-specific Declaration of Conformity exists for the exact configuration you are purchasing</li>
+              <li>HIN/WIN is traceable to the technical file and production records</li>
+              <li>The technical file covers the actual configuration including any options or modifications</li>
+              <li>Production conformity is documented with inspection records and change control logs</li>
+            </ul>
+          </div>
+        )
+      }
+    </div>
+
+    <div class="mt-16 pt-8 border-t border-gray-200">
+      <a href={'/' + lang + '/research'} class="text-sky-600 hover:text-sky-700 font-medium"
+        >&larr; {t('home.research.tagline')}</a
+      >
+    </div>
+  </article>
+  <script is:inline type="application/ld+json" set:html={faqSchema} />
+</Layout>

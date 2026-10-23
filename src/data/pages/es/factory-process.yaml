@@ -1,0 +1,48 @@
+hero:
+  tagline: Proceso
+  title: Proceso de fabricación
+  subtitle: De la materia prima al barco listo para navegar — cada paso bajo nuestro control
+  back_label: Volver a la fábrica
+  back_link: /factory
+
+intro: A diferencia de las marcas que subcontratan la producción a fábricas de terceros, Aquafarer posee y opera toda su cadena de fabricación. Esta integración vertical nos permite mantener un estricto control de calidad en cada etapa, responder rápidamente a los requisitos personalizados y entregar una calidad de producto constante lote tras lote. Así es como se construye un barco en nuestras instalaciones.
+
+steps:
+  - step: '01'
+    title: Recepción e inspección de materiales
+    description: Cada lote entrante de tela de PVC, mat de fibra de vidrio, resina y herrajes se inspecciona según las especificaciones. Las muestras de tela se prueban para verificar resistencia a la tracción, uniformidad de espesor y resistencia a los rayos UV antes de liberarlas a producción. Los materiales no conformes se ponen en cuarentena y se devuelven.
+    duration: 1–2 días
+  - step: '02'
+    title: Corte automático de PVC
+    description: Las telas aprobadas se colocan en la máquina de corte CNC automática y se cortan con precisión submilimétrica. El anidado optimizado por computadora dispone los paneles para minimizar el desperdicio — normalmente por debajo del 5%. Los paneles cortados se etiquetan por modelo de barco y cámara, y luego se agrupan para su traslado al taller de soldadura.
+    duration: 2–4 horas por kit de barco
+  - step: '03'
+    title: Termosellado y soldadura de tubos
+    description: Los paneles se fijan y unen mediante máquinas de termosellado con soldadura de aire caliente a temperaturas controladas de 200–600 °C. Las costuras principales se refuerzan con soldadura dieléctrica RF para uniones herméticas y de alta resistencia. Las cámaras terminadas se inflan a 1,25 veces la presión de trabajo durante una validación de retención de aire de 30 minutos.
+    duration: 1–2 días por barco
+  - step: '04'
+    title: Moldeo del casco RIB de fibra de vidrio
+    description: Los cascos de los botes RIB se producen mediante moldeo de fibra de vidrio con laminado manual. Las capas de mat de fibra de vidrio y roving tejido se enrollan a mano con resina de poliéster o viniléster en moldes de precisión. Cada capa se embolsa al vacío para lograr una calidad de laminado constante. El casco se termina con gelcoat para obtener una superficie marina de alto brillo y resistente a los rayos UV.
+    duration: 2–4 días por casco
+  - step: '05'
+    title: Impresión y decoración de SUP
+    description: Los gráficos de la cubierta de las tablas de SUP se aplican mediante impresión digital para diseños fotográficos a todo color y serigrafía para logotipos duraderos y patrones repetitivos. Las impresiones se curan y sellan para resistir los rayos UV y la abrasión.
+    duration: 1–2 días
+  - step: '06'
+    title: Ensamblaje final y aparejado
+    description: Los cascos de fibra de vidrio y los conjuntos de tubos de PVC se acoplan en la línea de ensamblaje. Se monta el motor, se conectan los controles de dirección y acelerador, se instala el sistema de combustible y se cablea todo el arnés eléctrico. Cada barco sigue una lista de verificación de ensamblaje de 100 puntos con aprobación obligatoria en cada etapa.
+    duration: 2–3 días
+  - step: '07'
+    title: Pruebas de calidad e inspección
+    description: 'Cada barco terminado pasa por una puerta de calidad obligatoria: prueba de retención de aire de las cámaras, comprobación del funcionamiento de los sistemas, verificación del par de apriete de los fijadores e inspección estética. Las construcciones personalizadas y los prototipos también reciben pruebas de navegación en el agua que cubren velocidad, manejo, estabilidad y resistencia.'
+    duration: 1–2 días
+  - step: '08'
+    title: Embalaje y envío
+    description: Los barcos se desinflan, se pliegan según el procedimiento, se embalan en bolsas tejidas de alta resistencia o cajas de contrachapado, y se cargan para su envío. Cada paquete se etiqueta con el modelo, el número de serie y el destino. Coordinamos con los transitarios para los envíos de contenedores FCL y LCL en todo el mundo.
+    duration: 1 día
+
+cta:
+  title: Conoce nuestro equipamiento y maquinaria
+  desc: Explora el equipamiento de grado industrial detrás de cada barco Aquafarer.
+  label: Ver equipamiento →
+  link: /factory/equipment

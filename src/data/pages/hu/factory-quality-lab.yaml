@@ -1,0 +1,56 @@
+hero:
+  tagline: Minőségellenőrző Laboratórium
+  title: Tesztlaboratórium & Minőségbiztosítás
+  subtitle: Független minőségi labor ISO 9001 folyamatokkal — minden egység tesztelve szállítás előtt
+intro: Aquafarer egy dedikált minőségellenőrző laboratóriumot működtet, amely független a termeléstől. Minden nyersanyag- és késztermék-tétel dokumentált ellenőrzési protokollokon megy keresztül a kiadás előtt. QC csapatunk közvetlenül a vezetőségnek jelent, biztosítva az elfogulatlan minőségi döntéseket.
+highlights:
+  - value: 100%
+    label: Egységek nyomáspróbája
+    detail: Minden kamra, minden csónak
+  - value: 48 h
+    label: Légtartó képesség teszt hossza
+    detail: 1,25× névleges nyomáson
+  - value: '&lt;5%'
+    label: Maximálisan megengedett nyomáscsökkenés
+    detail: 24 órás tartás alatt
+  - value: AQL 2,5
+    label: Jelentős hiba küszöbértéke
+    detail: ISO 2859 mintavétel szerint
+test_procedures:
+  - title: Nyersanyag-ellenőrzés
+    description: Minden beérkező PVC, Hypalon, drop-stitch szövet- és hardvertételt tesztelünk a befogadás előtt. Ellenőrizzük a szakítószilárdságot (ASTM D751), a szakadási ellenállást (ISO 4674) és a UV ellenállást. A nem megfelelõ anyagokat karanténba helyezzük és visszaküldjük.
+    standards:
+      - ASTM D751 (szakítószilárdság)
+      - ISO 4674 (szakadás)
+      - ISO 4892 (UV)
+  - title: Folyamatközi QC Ellenőrzési Pontok
+    description: A termelési operátorok minden szakaszban önellenőrzést végeznek. A QC auditorok véletlenszerű mintavételt végeznek a műszak során. A hegesztett illesztések leválasztási tesztjét 50 egységenként végzik. Méretellenőrzés minden 20. panel esetén történik.
+    standards:
+      - ASTM D751 (leválasztás)
+      - Belső 100-pontos ellenőrzőlista
+      - ISO 2859 mintavétel
+  - title: 48 órás légtartási teszt
+    description: Minden csőkamrát 125%-os névleges nyomásra felfújnak és 48 órán át tartanak. A nyomásérzékelők folyamatosan logolnak hőmérséklet-kompenzációval. Bármely kamra, amely 5%-nál nagyobb nyomáscsökkenést mutat, automatikus tétel újbóli ellenőrzést vált ki.
+    standards:
+      - ISO 6185
+      - CE 2013/53/EU
+  - title: Terhelés- és egyensúlyvizsgálat
+    description: A kész csónakokat a maximális névleges terhelés mellett tesztelik a stabilitás, szabad fedélzet és kezelhetőség szempontjából. Minden hajó vízteszten esik át a végső ellenőrzési jóváhagyás előtt.
+    standards:
+      - ISO 12217
+      - CE 2013/53/EU
+equipment:
+  - name: Univerzális vizsgáló gép (húzó)
+    spec: 5 kN, ASTM D751 kompatibilis
+  - name: Nyomáscsökkenés-tesztelő
+    spec: Többcsatornás, 0–50 psi, adatnaplózás
+  - name: UV Időjárásállósági kamra
+    spec: ISO 4892, 1 000 órás ciklusok
+  - name: Vastagságmérő (digitális)
+    spec: 0,01 mm felbontás
+  - name: Húzópróba készülék (hegesztés)
+    spec: Motoros, 50 N kapacitás
+  - name: Hőmérsékletkamra
+    spec: -40 °C-tól +100 °C-ig
+  - name: Szivárgásérzékelő tartály
+    spec: 6 m × 2 m, világított

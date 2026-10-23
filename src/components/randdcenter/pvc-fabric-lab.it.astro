@@ -1,0 +1,223 @@
+---
+import { SITE } from 'astrowind:config';
+const { lang = 'it' } = Astro.props;
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={`/${lang}/randdcenter`} class="text-sm text-gray-500 hover:underline">&larr; Torna al Centro R&S</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Lab 01</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Laboratorio tessuti PVC</h1>
+      <p class="mt-3 text-lg text-muted">Prove scientifiche sui materiali — dalla fibra al tubolare finito</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/randd/aquafarer-pvc-material-lab.webp"
+        alt="Laboratorio di prova dei materiali per tessuti PVC Aquafarer"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Il fondamento di ogni imbarcazione gonfiabile</h2>
+  <p>
+    Il tessuto del tubolare è il materiale singolarmente più critico di un'imbarcazione gonfiabile. Deve resistere
+    all'esposizione costante ai raggi UV, ai cicli ripetuti di gonfiaggio, all'abrasione contro moli e detriti e a
+    sbalzi di temperatura estremi — tutto mantenendo la sua integrità strutturale per anni. In {SITE.name}, il nostro
+    Laboratorio tessuti PVC è dedicato esclusivamente alla caratterizzazione, alla validazione e al miglioramento
+    continuo dei tessuti che utilizziamo in ogni imbarcazione che costruiamo.
+  </p>
+  <p>
+    Non ci affidiamo esclusivamente alle schede tecniche dei fornitori. Ogni lotto di tessuto PVC e Hypalon che entra
+    nella nostra officina viene testato in modo indipendente internamente. Questo garantisce che la specifica di
+    materiale che pubblichiamo è la prestazione che ricevete — lotto dopo lotto, anno dopo anno.
+  </p>
+
+  <h2>Apparecchiature di prova standardizzate</h2>
+  <p>
+    Il nostro laboratorio tessuti è dotato di strumenti di grado industriale conformi ai metodi di prova ISO, ASTM ed
+    EN:
+  </p>
+  <table>
+    <thead><tr><th>Apparecchiatura</th><th>Parametri misurati</th><th>Norma</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Macchina universale di trazione (50 kN)</td><td
+          >Forza di rottura, allungamento a rottura, propagazione della lacerazione</td
+        ><td> / ASTM D751</td></tr
+      >
+      <tr
+        ><td>Camera di invecchiamento ad arco allo xeno</td><td
+          >Resistenza ai UV (cambiamento di colore, ritenzione di resistenza dopo 2000 h)</td
+        ><td> / ASTM G155</td></tr
+      >
+      <tr
+        ><td>Apparecchio di piegamento a bassa temperatura</td><td>Punto di rottura da -30 &deg;C a -50 &deg;C</td><td
+          >ISO 4675 / ASTM D2136</td
+        ></tr
+      >
+      <tr
+        ><td>Apparecchio di abrasione Taber</td><td>Perdita di peso dopo 1000 cicli (ruota CS-10)</td><td
+          >ASTM D3389 / ISO 5470-1</td
+        ></tr
+      >
+      <tr
+        ><td>Spessimetro (digitale, risoluzione 0.001 mm)</td><td>Uniformità lungo la larghezza del rotolo</td><td
+          >ISO 2286-3</td
+        ></tr
+      >
+      <tr
+        ><td>Apparecchio di pressione idrostatica</td><td>Resistenza alla penetrazione dell'acqua</td><td>ISO 811</td
+        ></tr
+      >
+    </tbody>
+  </table>
+  <p class="text-sm text-gray-500">
+    * Tutte le apparecchiature vengono calibrate annualmente da laboratori accreditati di terze parti.
+  </p>
+
+  <h2>Dai dati alla decisione: un flusso di prova tipico</h2>
+  <p>Quando arriva un nuovo candidato tessuto, segue un processo di qualificazione standardizzato in sette passaggi:</p>
+  <ol>
+    <li>
+      <strong>Ispezione di ricevimento</strong> — controllo visivo per difetti superficiali, microfori e conformità dimensionale.
+    </li>
+    <li>
+      <strong>Mappatura dello spessore</strong> — misurazione su 20 punti lungo il rotolo; per l'accettazione è richiesto
+      un CV &lt; 3 %.
+    </li>
+    <li>
+      <strong>Prova di trazione</strong> — 5 provini nelle direzioni ordito e trama. Minimo 3500 N/50 mm per PVC 1100 dtex.
+    </li>
+    <li>
+      <strong>Condizionamento UV</strong> — esposizione di 1000 h nella camera ad arco allo xeno; richiesta una ritenzione
+      di resistenza minima dell'80 %.
+    </li>
+    <li>
+      <strong>Rottura a freddo</strong> — 4 h a -35 &deg;C, poi piegatura a 180&deg; su un mandrino da 25 mm. Nessuna screpolatura
+      visibile.
+    </li>
+    <li><strong>Resistenza all'abrasione</strong> — 1000 cicli, perdita di peso &le; 0.05 g.</li>
+    <li>
+      <strong>Approvazione finale</strong> — solo dopo il superamento di tutti e sette i passaggi il tessuto viene rilasciato
+      per la produzione.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      PVC tipico 1100 dtex — ritenzione della resistenza a trazione dopo esposizione UV
+    </p>
+    <div class="flex items-end gap-3 h-40">
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-600 rounded-t" style="height:100%"></div><span class="text-xs mt-1"
+          >0 h<br />100%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-500 rounded-t" style="height:95%"></div><span class="text-xs mt-1"
+          >500 h<br />95%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-400 rounded-t" style="height:88%"></div><span class="text-xs mt-1"
+          >1000 h<br />88%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-300 rounded-t" style="height:82%"></div><span class="text-xs mt-1"
+          >2000 h<br />82%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-gray-300 rounded-t" style="height:65%"></div><span class="text-xs mt-1"
+          >Concorrente<br />~65%</span
+        >
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      Il nostro tessuto PVC 1100 dtex conserva oltre l'80 % della resistenza a trazione dopo 2000 h di esposizione ad
+      arco allo xeno, rispetto ai gradi industriali tipici che scendono sotto il 70 %.
+    </p>
+  </div>
+
+  <h2>Il nostro team di professionisti</h2>
+  <p>
+    Il laboratorio è gestito da due ingegneri dei materiali a tempo pieno, ciascuno in possesso di una laurea in scienza
+    dei polimeri o ingegneria tessile con almeno sei anni di esperienza nel settore. Sono supportati da tre tecnici che
+    eseguono le prove quotidiane e la registrazione dei dati. Il team partecipa regolarmente a prove interlaboratorio
+    round-robin organizzate dall'International Organization for Standardization (ISO) per validare l'accuratezza dei
+    nostri metodi di prova.
+  </p>
+
+  <h2>Affrontare le sfide più difficili sui materiali</h2>
+  <p>
+    Ogni ambiente marino è diverso. Un pattugliatore che opera nel Golfo Persico affronta condizioni UV e di temperatura
+    molto diverse rispetto a un'unità di soccorso nel Mare del Nord. Il nostro Laboratorio tessuti vi aiuta a
+    selezionare — o sviluppare — una specifica di tessuto ottimizzata per il vostro profilo operativo.
+  </p>
+  <p>Soluzioni personalizzate recenti includono:</p>
+  <ul>
+    <li>
+      Una miscela PVC ad alta resistenza all'abrasione per un cliente militare le cui imbarcazioni si arenano
+      regolarmente su barriere coralline (+40 % di durata dell'abrasione).
+    </li>
+    <li>
+      Una formulazione Hypalon a bassa temperatura per una stazione di ricerca artica, provata fino a -50 &deg;C senza
+      infragilimento.
+    </li>
+    <li>
+      Un tessuto arancione a colore stabilizzato per una flotta di ricerca e soccorso, che mantiene la visibilità dopo 3
+      anni di esposizione al sole tropicale.
+    </li>
+  </ul>
+  <p>
+    Non vendiamo tessuti "pronti all'uso" sperando che funzionino. Proviamo, validiamo e raccomandiamo — oppure creiamo
+    — una soluzione su misura per il vostro specifico profilo di missione. Questa è la differenza di
+    {SITE.name}.
+  </p>
+
+  <h2>Come vi serviamo</h2>
+  <p>Quando ci portate una sfida sui materiali, ecco cosa potete aspettarvi:</p>
+  <ol>
+    <li>
+      <strong>Consulenza</strong> — discutiamo del vostro ambiente operativo, degli obiettivi di prestazione e del budget.
+    </li>
+    <li>
+      <strong>Proposta</strong> — viene redatto un piano di prova con criteri di superamento/fallimento chiari e una tempistica.
+    </li>
+    <li>
+      <strong>Esecuzione</strong> — il nostro laboratorio esegue le prove e produce un rapporto dettagliato con dati grezzi
+      e analisi comparativa.
+    </li>
+    <li>
+      <strong>Raccomandazione</strong> — presentiamo una specifica di tessuto, incluse opzioni alternative se più materiali
+      soddisfano i vostri requisiti.
+    </li>
+    <li>
+      <strong>Assistenza post-consegna</strong> — dopo la consegna, restiamo a disposizione per supportare qualsiasi domanda
+      sui materiali in servizio.
+    </li>
+  </ol>
+  <p>
+    Il nostro obiettivo non è semplicemente vendervi un'imbarcazione. È garantire che l'imbarcazione che ricevete
+    funzioni in modo affidabile nelle condizioni in cui operate — e tutto inizia dal tessuto.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Avete bisogno di una specifica di tessuto personalizzata?</h2>
+    <p class="mt-2 text-sm text-muted">
+      Contattate il nostro team di ingegneria dei materiali per discutere i vostri requisiti.
+    </p>
+    <a
+      href={`/${lang}/contact`}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Contattate il nostro team di laboratorio</a
+    >
+  </div>
+</section>

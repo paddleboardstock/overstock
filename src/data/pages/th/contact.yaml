@@ -1,0 +1,130 @@
+hero_text:
+  tagline: ติดต่อ
+  title: ติดต่อเรา
+contact_form:
+  id: form
+  title: ส่งข้อความถึงเรา
+  subtitle: สำหรับการขอใบเสนอราคา คำถามทางเทคนิค หรือการสอบถามเกี่ยวกับความร่วมมือ กรุณาส่งข้อความมาให้เรา เราจะตอบกลับภายในหนึ่งวันทำการ
+  email_to: info@aquafarer.com
+  submit_button: ส่งคำถาม → ขอใบเสนอราคา
+  success_message: ขอบคุณ! ข้อความของคุณได้ถูกส่งเข้ากล่องจดหมายของเราแล้ว เราจะตอบกลับภายในหนึ่งวันทำการ
+  error_message: เกิดข้อผิดพลาดในการส่งข้อความของคุณ โปรดลองอีกครั้งหรือส่งอีเมลถึงเราโดยตรง
+  default_country_code: '+1'
+  captcha:
+    label: 'ป้องกันสแปม: กรุณาแก้ปัญหาต่อไปนี้'
+  fields:
+    - name: ชื่อจริง
+      label: ชื่อ
+      row: 1
+    - name: นามสกุล
+      label: นามสกุล
+      row: 1
+    - name: ชื่อบริษัท
+      label: ชื่อบริษัท
+      row: 2
+    - name: address
+      label: ที่อยู่
+      row: 3
+    - name: zip
+      label: รหัสไปรษณีย์ / รหัสโพสต์
+      row: 4
+    - name: country
+      label: ประเทศ
+      row: 4
+      type: select
+      optionsKey: countries
+    - name: email
+      label: อีเมล
+      row: 5
+      type: email
+    - name: tel
+      label: โทรศัพท์
+      row: 5
+      type: tel
+      withCountryCode: true
+    - name: ปริมาณการสั่งซื้อ
+      label: ประมาณปริมาณการสั่งซื้อ
+      row: 6
+      type: select
+      options:
+        - value: ''
+          label: เลือกปริมาณที่คุณประมาณไว้...
+        - value: sample
+          label: ตัวอย่าง / โปรโตไทป์เท่านั้น
+        - value: 5-10
+          label: 5–10 หน่วย (มาตรฐาน MOQ)
+        - value: 100-500
+          label: 100–500 หน่วย
+        - value: 500-plus
+          label: 500+ หน่วย (ราคาตามปริมาณ)
+    - name: customization
+      label: ต้องการปรับแต่งหรือไม่?
+      row: 7
+      type: select
+      options:
+        - value: ''
+          label: เลือกประเภทการปรับแต่ง...
+        - value: none
+          label: ผลิตภัณฑ์มาตรฐาน (ไม่ปรับแต่ง)
+        - value: logo
+          label: โลโก้ / แบรนด์ที่กำหนดเองเท่านั้น
+        - value: full
+          label: เต็มรูปแบบ OEM (ขนาด, สี, กราฟิก, บรรจุภัณฑ์)
+        - value: consultation
+          label: ไม่แน่ใจ — ต้องการคำปรึกษา
+    - name: ความสนใจของผลิตภัณฑ์
+      label: หมวดหมู่ผลิตภัณฑ์ที่สนใจ
+      row: 8
+      type: select
+      options:
+        - value: ''
+          label: เลือกหมวดหมู่ผลิตภัณฑ์...
+        - value: all
+          label: สินค้าทั้งหมด / แคตตาล็อกเต็ม
+        - value: sup
+          label: SUP กระดาน / กระดานพาย
+        - value: kayak
+          label: เรือคายัคแบบเป่าลม
+        - value: rib
+          label: RIB เรือ
+        - value: dinghy
+          label: เรือเล็ก / เรือช่วย
+        - value: safety
+          label: อุปกรณ์ความปลอดภัย / เสื้อชูชีพ
+        - value: accessory
+          label: อุปกรณ์เสริม (ปั๊ม, ไม้พาย, กระเป๋า)
+    - name: subject
+      label: เรื่อง
+      row: 9
+    - name: message
+      label: ข้อความ
+      row: 10
+      type: textarea
+      rows: 6
+features2_other_ways:
+  title: วิธีการติดต่อเราแบบอื่น
+  columns: 3
+  items:
+    - title: ข้อสงสัยเกี่ยวกับการขาย
+      description: ใบเสนอราคา, การปรับแต่ง, การสมัครตัวแทนจำหน่าย และคำสั่งซื้อจำนวนมาก
+      icon: tabler:shopping-bag
+    - title: การสนับสนุนทางเทคนิค
+      description: การรับประกัน, การซ่อม, ชิ้นส่วนอะไหล่ และคำถามเกี่ยวกับการใช้งาน
+      icon: tabler:tool
+    - title: สื่อและความร่วมมือ
+      description: ชุดสื่อ, การสนับสนุน และความร่วมมือในอุตสาหกรรม
+      icon: tabler:news
+    - title: โทรศัพท์
+      description: +1 279 732 3333 (สำนักงานใหญ่สหรัฐอเมริกา) · +86 13305324192 (โรงงาน)
+      icon: tabler:headset
+    - title: อีเมล
+      description: info@aquafarer.com
+      icon: tabler:mail
+    - title: สำนักงานใหญ่ระดับโลก & การเรียกเก็บเงิน
+      description: Aquafarer LLC, นิวเม็กซิโก, สหรัฐอเมริกา
+      icon: tabler:map-pin
+map:
+  title: ที่ตั้งของเรา
+  subtitle: เยี่ยมชมศูนย์การผลิตชิงเต่า
+  address: เขตพัฒนาเศรษฐกิจ, ไหลซี, ชิงเต่า, ประเทศจีน, 266600
+  zoom: 15

@@ -1,0 +1,479 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { languages, defaultLang } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+import LDe from '~/components/research/rcd-design-categories.de.astro';
+import LEs from '~/components/research/rcd-design-categories.es.astro';
+import LFr from '~/components/research/rcd-design-categories.fr.astro';
+import LIt from '~/components/research/rcd-design-categories.it.astro';
+import LCs from '~/components/research/rcd-design-categories.cs.astro';
+import LSv from '~/components/research/rcd-design-categories.sv.astro';
+import LDa from '~/components/research/rcd-design-categories.da.astro';
+import LEl from '~/components/research/rcd-design-categories.el.astro';
+import LNo from '~/components/research/rcd-design-categories.no.astro';
+import LRu from '~/components/research/rcd-design-categories.ru.astro';
+import LNl from '~/components/research/rcd-design-categories.nl.astro';
+import LFi from '~/components/research/rcd-design-categories.fi.astro';
+import LPl from '~/components/research/rcd-design-categories.pl.astro';
+import LAr from '~/components/research/rcd-design-categories.ar.astro';
+import LPt from '~/components/research/rcd-design-categories.pt.astro';
+import LJa from '~/components/research/rcd-design-categories.ja.astro';
+import LMs from '~/components/research/rcd-design-categories.ms.astro';
+import LRo from '~/components/research/rcd-design-categories.ro.astro';
+import LSk from '~/components/research/rcd-design-categories.sk.astro';
+import LSl from '~/components/research/rcd-design-categories.sl.astro';
+import LSr from '~/components/research/rcd-design-categories.sr.astro';
+import LTh from '~/components/research/rcd-design-categories.th.astro';
+import LTl from '~/components/research/rcd-design-categories.tl.astro';
+import LTr from '~/components/research/rcd-design-categories.tr.astro';
+import LBg from '~/components/research/rcd-design-categories.bg.astro';
+import LEt from '~/components/research/rcd-design-categories.et.astro';
+import LHe from '~/components/research/rcd-design-categories.he.astro';
+import LHr from '~/components/research/rcd-design-categories.hr.astro';
+import LHu from '~/components/research/rcd-design-categories.hu.astro';
+import LId from '~/components/research/rcd-design-categories.id.astro';
+import LKo from '~/components/research/rcd-design-categories.ko.astro';
+import LLt from '~/components/research/rcd-design-categories.lt.astro';
+import LLv from '~/components/research/rcd-design-categories.lv.astro';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => getUiForLang(lang || defaultLang)?.[key] || '';
+
+const META: Record<string, { title: string; description: string }> = {
+  en: {
+    title: 'RCD Design Categories Explained: A, B, C and D',
+    description:
+      'Understanding RCD design categories A, B, C and D under 2013/53/EU. Wind and wave limits, impact on RIB design, compliance module selection, and how to choose the right category for your RIB.',
+  },
+  de: {
+    title: 'RCD-Auslegungskategorien erklärt: A, B, C und D',
+    description:
+      'Alles über die Auslegungskategorien A, B, C und D nach 2013/53/EU: Wind- und Wellengrenzen, Auswirkungen auf die RIB-Konstruktion, Auswahl des Konformitätsmoduls und die passende Kategorie für Ihr RIB.',
+  },
+  es: {
+    title: 'Categorías de diseño RCD explicadas: A, B, C y D',
+    description:
+      'Todo sobre las categorías de diseño A, B, C y D según 2013/53/UE: límites de viento y oleaje, impacto en el diseño de RIB, selección del módulo de conformidad y cómo elegir la categoría adecuada para su RIB.',
+  },
+  fr: {
+    title: 'Catégories de conception RCD expliquées : A, B, C et D',
+    description:
+      'Comprendre les catégories de conception A, B, C et D selon 2013/53/UE : limites de vent et de vagues, impact sur la conception des RIB, choix du module de conformité et sélection de la bonne catégorie pour votre RIB.',
+  },
+  it: {
+    title: 'Categorie di progettazione RCD spiegate: A, B, C e D',
+    description:
+      'Tutto sulle categorie di progettazione A, B, C e D secondo 2013/53/UE: limiti di vento e onde, impatto sul progetto dei RIB, scelta del modulo di conformità e come selezionare la categoria giusta per il tuo RIB.',
+  },
+  cs: {
+    title: 'RCD Vysvětlení kategorií designu: A, B, C a D',
+    description:
+      'Pochopení RCD kategorií designu A, B, C a D podle směrnice 2013/53/EU. Limity větru a vln, dopad na design RIB, výběr modulu shody a jak vybrat správnou kategorii pro váš RIB.',
+  },
+  sv: {
+    title: 'RCD Förklarade designkategorier: A, B, C och D',
+    description:
+      'Förstå RCD designkategorierna A, B, C och D under 2013/53/EU. Vind- och våggränser, påverkan på RIB design, val av överensstämmelsemodul och hur man väljer rätt kategori för din RIB.',
+  },
+  da: {
+    title: 'RCD Designkategorier forklaret: A, B, C og D',
+    description:
+      'Forståelse af RCD designkategori A, B, C og D under 2013/53/EU. Vind- og bølgegrænser, indvirkning på RIB-design, valg af overholdelsesmodul, og hvordan man vælger den rigtige kategori til din RIB.',
+  },
+  el: {
+    title: 'RCD Κατηγορίες σχεδίασης Επεξήγηση: A, B, C και D',
+    description:
+      'Κατανόηση RCD κατηγοριών σχεδιασμού A, B, C και D σύμφωνα με το 2013/53/EU. Όρια ανέμου και κυμάτων, επιπτώσεις στη σχεδίαση RIB, επιλογή μονάδας συμμόρφωσης και πώς να επιλέξετε τη σωστή κατηγορία για το RIB σας.',
+  },
+  no: {
+    title: 'RCD Designkategorier forklart: A, B, C og D',
+    description:
+      'Forstå RCD designkategoriene A, B, C og D under 2013/53/EU. Vind- og bølgegrenser, innvirkning på RIB-design, valg av samsvarsmodul og hvordan du velger riktig kategori for din RIB.',
+  },
+  ru: {
+    title: 'RCD Объяснение категорий дизайна: A, B, C и D',
+    description:
+      'Понимание категорий дизайна RCD A, B, C и D в соответствии с 2013/53/EU. Ограничения по ветру и волнению, влияние на конструкцию RIB, выбор модуля соответствия и как выбрать правильную категорию для вашего RIB.',
+  },
+  nl: {
+    title: 'RCD Ontwerpcategorieën uitgelegd: A, B, C en D',
+    description:
+      'Inzicht in de RCD ontwerpcategorieën A, B, C en D onder 2013/53/EU. Wind- en golflimieten, impact op het RIB-ontwerp, selectie van compliance-modules en hoe u de juiste categorie voor uw RIB kiest.',
+  },
+  fi: {
+    title: 'RCD Suunnittelukategoriat selitetty: A, B, C ja D',
+    description:
+      'RCD suunnitteluluokkien A, B, C ja D ymmärtäminen 2013/53/EU mukaisesti. Tuulen ja aallon rajat, vaikutus RIB-suunnitteluun, vaatimustenmukaisuusmoduulien valinta ja oikean luokan valinta RIB-laitteellesi.',
+  },
+  pl: {
+    title: 'RCD Objaśnienie kategorii projektowych: A, B, C i D',
+    description:
+      'Zrozumienie RCD kategorii projektowych A, B, C i D zgodnie z dyrektywą 2013/53/UE. Ograniczenia wiatru i fal, wpływ na projekt RIB, wybór modułu zgodności i wybór właściwej kategorii dla RIB.',
+  },
+  ar: {
+    title: 'RCD شرح فئات التصميم: أ، ب، ج، د',
+    description:
+      'فهم فئات التصميم RCD A وB وC وD بموجب 2013/53/EU. حدود الرياح والأمواج، والتأثير على تصميم RIB، واختيار وحدة الامتثال، وكيفية اختيار الفئة المناسبة لـ RIB الخاص بك.',
+  },
+  pt: {
+    title: 'RCD Categorias de design explicadas: A, B, C e D',
+    description:
+      'Compreendendo as categorias de design RCD A, B, C e D sob 2013/53/UE. Limites de vento e ondas, impacto no projeto do RIB, seleção do módulo de conformidade e como escolher a categoria certa para o seu RIB.',
+  },
+  ja: {
+    title: 'RCD デザイン カテゴリの説明: A、B、C、D',
+    description:
+      '2013/53/EU に基づく RCD 設計カテゴリ A、B、C、D を理解する。風と波の制限、RIB 設計への影響、コンプライアンス モジュールの選択、RIB に適切なカテゴリを選択する方法。',
+  },
+  ms: {
+    title: 'RCD Kategori Reka Bentuk Dijelaskan: A, B, C dan D',
+    description:
+      'Memahami kategori reka bentuk RCD A, B, C dan D di bawah 2013/53/EU. Had angin dan gelombang, kesan ke atas reka bentuk RIB, pemilihan modul pematuhan, dan cara memilih kategori yang sesuai untuk RIB anda.',
+  },
+  ro: {
+    title: 'RCD Categorii de design explicate: A, B, C și D',
+    description:
+      'Înțelegerea RCD categoriilor de proiectare A, B, C și D conform anilor 2013/53/EU. Limite ale vântului și valurilor, impactul asupra RIB proiectării, selecția modulului de conformitate și cum să alegi categoria potrivită pentru RIBtine.',
+  },
+  sk: {
+    title: 'Vysvetlenie kategórií návrhu: A, B, C a D',
+    description:
+      'Porozumenie kategóriám návrhu A, B, C a D podľa 2013/53/EÚ. Limity vetra a vĺn, dopad na návrh lode, výber modulu súladu a ako zvoliť správnu kategóriu pre vašu loď.',
+  },
+  sl: {
+    title: 'RCD Pojasnjene kategorije načrtov: A, B, C in D',
+    description:
+      'Razumevanje RCD kategorij načrtov A, B, C in D po 2013/53/EU. Omejitve vetra in valov, vpliv na RIB načrt, izbira modula skladnosti in kako izbrati pravo kategorijo za vaš RIB.',
+  },
+  sr: {
+    title: 'Objašnjenje kategorija dizajna: A, B, C i D',
+    description:
+      'Razumevanje kategorija dizajna A, B, C i D prema 2013/53/EU. Ograničenja vetra i talasa, uticaj na dizajn RIB, izbor modula usklađenosti i kako odabrati pravu kategoriju za vaš RIB.',
+  },
+  th: {
+    title: 'RCD อธิบายหมวดหมู่การออกแบบ: A, B, C และ D',
+    description:
+      'ทําความเข้าใจRCDหมวดหมู่การออกแบบ A, B, C และ D ภายใต้ 2013/53/EU ขีดจํากัดลมและคลื่น ผลกระทบต่อRIBการออกแบบ การเลือกโมดูลการปฏิบัติตามข้อกําหนด และวิธีการเลือกหมวดหมู่ที่เหมาะสมสําหรับคุณRIB',
+  },
+  tl: {
+    title: 'RCD Paliwanag ng Design Categories: A, B, C at D',
+    description:
+      'Pag-unawa sa RCD design categories A, B, C at D sa ilalim ng 2013/53/EU. Mga limitasyon sa hangin at alon, epekto sa disenyo ng RIB, pagpili ng compliance module, at kung paano piliin ang tamang kategorya para sa iyong RIB.',
+  },
+  tr: {
+    title: 'RCD Tasarım Kategorileri Açıklaması: A, B, C ve D',
+    description:
+      "2013/53/EU kapsamında tasarım kategorileri A, B, C ve D'nin anlaşılması. Rüzgar ve dalga sınırları, RIB tasarımına etkisi, uyum modülü seçimi ve RIB için doğru kategoriyi nasıl seçeceğiniz.",
+  },
+  bg: {
+    title: 'RCD Обяснени категории дизайн: A, B, C и D',
+    description:
+      'Разбиране RCD на дизайнерски категории A, B, C и D според 2013/53/EU. Ограничения на вятъра и вълните, влияние върху RIB дизайна, избор на модул за съответствие и как да изберете правилната категория за RIBвашата .',
+  },
+  et: {
+    title: 'RCD Disainikategooriate selgitus: A, B, C ja D',
+    description:
+      'Mõistmine RCD disainikategooriaid A, B, C ja D vastavalt 2013/53/EL. Tuule- ja lainetusetid, mõju RIB disainile, vastavusmooduli valik ja kuidas valida õige kategooria oma RIB jaoks.',
+  },
+  he: {
+    title: 'RCD הסבר קטגוריות עיצוב: A, B, C ו-D',
+    description:
+      'הבנת קטגוריות עיצוב A, B, C ו-D לפי 2013/53/EU. גבולות רוח וגלים, השפעה על עיצוב RIB, בחירת מודול תאימות, ואיך לבחור את הקטגוריה הנכונה עבור RIB שלך.',
+  },
+  hr: {
+    title: 'RCD Objašnjene kategorije dizajna: A, B, C i D',
+    description:
+      'Razumijevanje kategorija dizajna RCD A, B, C i D prema 2013/53/EU. Granice vjetra i valova, utjecaj na dizajn RIB, odabir modula sukladnosti i kako odabrati pravu kategoriju za vaš RIB.',
+  },
+  hu: {
+    title: 'RCD Tervezési kategóriák magyarázat: A, B, C és D',
+    description:
+      'Az RCD A, B, C és D tervezési kategóriák megértése a 2013/53/EU alatt. Szél- és hullámkorlátok, hatás a RIB tervezésre, megfelelőségi modul kiválasztása, valamint a megfelelő kategóriák kiválasztása RIBa saját szintedhez.',
+  },
+  id: {
+    title: 'RCD Penjelasan Kategori Desain: A, B, C dan D',
+    description:
+      'Memahami kategori desain RCD A, B, C dan D menurut 2013/53/EU. Batas angin dan gelombang, dampak pada desain RIB, pemilihan modul kepatuhan, dan cara memilih kategori yang tepat untuk RIB Anda.',
+  },
+  ko: {
+    title: 'RCD 설계 카테고리 설명: A, B, C 및 D',
+    description:
+      '2013/53/EU에 따른 RCD 설계 카테고리 A, B, C 및 D 이해. 풍속 및 파도 제한, RIB 설계에 미치는 영향, 준수 모듈 선택, 그리고 당신의 RIB에 적합한 카테고리 선택 방법.',
+  },
+  lt: {
+    title: 'RCD Dizaino kategorijos paaiškintos: A, B, C ir D',
+    description:
+      'Suprasti RCD dizaino kategorijas A, B, C ir D pagal 2013/53/ES. Vėjo ir bangos ribos, poveikis RIB dizainui, atitikties modulio pasirinkimas ir kaip pasirinkti tinkamą kategoriją jūsų RIB.',
+  },
+  lv: {
+    title: 'RCD Dizaina kategoriju skaidrojums: A, B, C un D',
+    description:
+      'Sapratne par RCD dizaina kategorijām A, B, C un D saskaņā ar 2013/53/EU. Vēja un viļņu ierobežojumi, ietekme uz RIB dizainu, atbilstības moduļa izvēle un kā izvēlēties pareizo kategoriju jūsu RIB.',
+  },
+};
+const meta = META[lang] || META.en;
+const ResearchBody: any =
+  (
+    {
+      de: LDe,
+      es: LEs,
+      fr: LFr,
+      it: LIt,
+      cs: LCs,
+      sv: LSv,
+      da: LDa,
+      el: LEl,
+      no: LNo,
+      ru: LRu,
+      nl: LNl,
+      fi: LFi,
+      pl: LPl,
+      ar: LAr,
+      pt: LPt,
+      ja: LJa,
+      ms: LMs,
+      ro: LRo,
+      sk: LSk,
+      sl: LSl,
+      sr: LSr,
+      th: LTh,
+      tl: LTl,
+      tr: LTr,
+      bg: LBg,
+      et: LEt,
+      he: LHe,
+      hr: LHr,
+      hu: LHu,
+      id: LId,
+      ko: LKo,
+      lt: LLt,
+      lv: LLv,
+    } as Record<string, any>
+  )[lang] || null;
+
+const metadata = {
+  title: `${meta.title} | ${SITE.name}`,
+  description: meta.description,
+  ignoreTitleTemplate: true,
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: meta.title,
+  description: metadata.description,
+  author: { '@type': 'Organization', name: SITE.name },
+  datePublished: '2024-06-15',
+  dateModified: '2025-04-20',
+};
+
+const faqSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is the difference between RCD design category A and C?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Category A is designed for ocean conditions exceeding Beaufort 8 wind and 4 m significant wave height. Category C is for inshore use up to Beaufort 6 and 2 m waves. Category A requires substantially stronger structure, stability, and systems verification.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I label my RIB as Category B for marketing purposes?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'No. Design category must be supported by design calculations, prototype testing, and applicable standard evidence. Labeling a Category C boat as Category B without engineering verification violates RCD and creates liability risk.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What does significant wave height (Hs) mean?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Significant wave height is the average height of the highest one-third of waves, not the maximum individual wave. Individual waves can be much higher than Hs. This is the standard measure used in RCD design category definitions.',
+      },
+    },
+  ],
+});
+---
+
+<Layout metadata={metadata}>
+  <JsonLd data={jsonLd} />
+
+  <article class="max-w-4xl mx-auto px-6 py-16">
+    <nav class="text-sm text-gray-500 mb-8">
+      <a href={'/' + lang + '/'} class="hover:text-sky-600">{SITE.name}</a>
+      <span class="mx-2">/</span>
+      <a href={'/' + lang + '/research'} class="hover:text-sky-600">{t('home.research.title')}</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-900">{t('home.research.rcdCategories')}</span>
+    </nav>
+
+    <div class="mb-4">
+      <span
+        class="inline-block text-xs font-semibold uppercase tracking-wider text-sky-600 bg-sky-50 px-3 py-1 rounded-full"
+        >Compliance</span
+      >
+      <span class="ml-3 text-sm text-gray-400">6 min read</span>
+    </div>
+
+    <h1 class="text-4xl font-bold text-gray-900 mb-6">{t('home.research.rcdCategories')}</h1>
+    <p class="text-xl text-gray-500 mb-12 leading-relaxed">{t('home.research.rcdCategories.desc')}</p>
+
+    <div class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600">
+      {
+        ResearchBody ? (
+          <ResearchBody lang={lang} />
+        ) : (
+          <div class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600">
+            <h2>What Are RCD Design Categories?</h2>
+            <p>
+              Design categories (A&ndash;D) under RCD 2013/53/EU define the environmental conditions a boat is designed
+              to handle. They are NOT quality grades or marketing levels&mdash;they represent specific wind and wave
+              design parameters. Selecting the wrong category creates compliance and liability risk.
+            </p>
+
+            <h2>Category Comparison Table</h2>
+            <table class="w-full text-sm border-collapse">
+              <thead>
+                <tr class="bg-gray-100">
+                  <th class="p-3 text-left font-semibold text-gray-900 border">Category</th>
+                  <th class="p-3 text-left font-semibold text-gray-900 border">Navigation Environment</th>
+                  <th class="p-3 text-left font-semibold text-gray-900 border">Wind Limit</th>
+                  <th class="p-3 text-left font-semibold text-gray-900 border">Significant Wave Height (Hs)</th>
+                  <th class="p-3 text-left font-semibold text-gray-900 border">Typical Products</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="p-3 border">A</td>
+                  <td class="p-3 border">Ocean</td>
+                  <td class="p-3 border">Exceeds Beaufort 8</td>
+                  <td class="p-3 border">Exceeds 4 m</td>
+                  <td class="p-3 border">Blue water cruising vessels</td>
+                </tr>
+                <tr>
+                  <td class="p-3 border">B</td>
+                  <td class="p-3 border">Offshore</td>
+                  <td class="p-3 border">Up to Beaufort 8</td>
+                  <td class="p-3 border">Up to 4 m</td>
+                  <td class="p-3 border">Offshore cruising, larger sea-going RIBs</td>
+                </tr>
+                <tr>
+                  <td class="p-3 border">C</td>
+                  <td class="p-3 border">Inshore</td>
+                  <td class="p-3 border">Up to Beaufort 6</td>
+                  <td class="p-3 border">Up to 2 m</td>
+                  <td class="p-3 border">Most recreational RIBs, near-shore fishing boats</td>
+                </tr>
+                <tr>
+                  <td class="p-3 border">D</td>
+                  <td class="p-3 border">Sheltered waters</td>
+                  <td class="p-3 border">Up to Beaufort 4</td>
+                  <td class="p-3 border">Up to 0.3 m (occasional 0.5 m)</td>
+                  <td class="p-3 border">Inland waterway, lake, harbor craft</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2>What Is Significant Wave Height?</h2>
+            <p>
+              Hs is NOT the tallest individual wave. It is the average height of the highest one-third of waves
+              observed. Individual maximum waves can be significantly higher than Hs. Example: If forecast says Hs 1.8 m
+              with wind force 5&ndash;6, this is still within Category C. If Hs is 2.3 m even with only force 4&ndash;5
+              wind, it exceeds Category C limits.
+            </p>
+
+            <h2>Impact on RIB Design</h2>
+            <p>Upgrading from C to A affects the entire boat:</p>
+            <ul>
+              <li>
+                <strong>Hull &amp; deck structure:</strong> Higher wave impact loads affect shell, deck, bulkheads,
+                connections, handrails, seat bases
+              </li>
+              <li>
+                <strong>Stability &amp; buoyancy:</strong> Must meet requirements under all load conditions for the
+                target category
+              </li>
+              <li>
+                <strong>Water ingress &amp; drainage:</strong> Hatches, openings, side doors, and self-draining capacity
+                must handle more severe conditions
+              </li>
+              <li>
+                <strong>Tube system:</strong> Chamber division, airtightness, valves, materials, bonding&mdash;all must
+                support the target category safety conclusions
+              </li>
+              <li>
+                <strong>Systems &amp; operating limits:</strong> Fuel, electrical, steering, max power, max load, max
+                persons&mdash;all must match the target category
+              </li>
+              <li>
+                For 8&ndash;24 m RIBs with larger engines, EN ISO 6185-4 also distinguishes between sheltered/inshore
+                (Category C/D) and more exposed waters (Category B)
+              </li>
+            </ul>
+
+            <h2>Which Category Is Right for Your RIB?</h2>
+            <p>Practical guidance:</p>
+            <ul>
+              <li>
+                Lakes, rivers, harbors, near-shore short recreation, dive shuttle: Category C is usually appropriate
+              </li>
+              <li>Cross-sea, further offshore, more open conditions: Consider Category B at minimum</li>
+              <li>
+                Category A is a high-level ocean/open-sea designation&mdash;do not assign it just because "the boat is
+                big and has a powerful engine"
+              </li>
+              <li>
+                Design category must be consistent across: sales contract, dealer marketing, builder plate, owner
+                manual, max persons/load, and test/calculation reports
+              </li>
+              <li>
+                Marketing a Category C RIB as "ocean-going all-weather boat" creates significant compliance and product
+                liability risk
+              </li>
+            </ul>
+
+            <h2>Compliance Module Selection</h2>
+            <p>Which modules apply based on category:</p>
+            <ul>
+              <li>
+                Category C, LH &lt; 12 m, full harmonized standard compliance: Module A (self-declaration) may be
+                possible
+              </li>
+              <li>Category C, LH &lt; 12 m, NOT full standard compliance: Module A1, or B+C/B+D</li>
+              <li>Category A/B, any length: NB involvement required (B+D recommended for volume production)</li>
+              <li>Category D: Module A possible but must still have complete technical file</li>
+            </ul>
+
+            <h2>What This Means for B2B Buyers</h2>
+            <p>Verify that:</p>
+            <ul>
+              <li>Design category matches intended use</li>
+              <li>Builder plate category matches DoC and manual</li>
+              <li>The boat was actually tested/calculated for the stated category (not just labeled higher)</li>
+              <li>Dealer marketing does not overstate the design category</li>
+            </ul>
+          </div>
+        )
+      }
+    </div>
+
+    <div class="mt-16 pt-8 border-t border-gray-200">
+      <a href={'/' + lang + '/research'} class="text-sky-600 hover:text-sky-700 font-medium"
+        >&larr; {t('home.research.tagline')}</a
+      >
+    </div>
+  </article>
+  <script is:inline type="application/ld+json" set:html={faqSchema} />
+</Layout>

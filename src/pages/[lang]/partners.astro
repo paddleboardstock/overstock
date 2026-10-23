@@ -1,0 +1,110 @@
+---
+export const prerender = true;
+
+import Hero from '~/components/widgets/Hero.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { getPageContent, setPageContentData } from '~/i18n/page-content';
+import __pageData from '~/i18n/generated/pages/partners.ts';
+import { localizePageTitle } from '~/i18n/page-title';
+import { languages } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => getUiForLang(lang)?.[key] || '';
+setPageContentData(__pageData);
+const page = getPageContent(lang, 'partners') || {};
+
+const hero = page.hero ?? {};
+const programs = page.content_programs ?? {};
+const benefits = page.content_benefits ?? {};
+const process = page.content_process ?? {};
+const cta = page.cta ?? {};
+
+const lh = (h: string) => (h ? `/${lang}${h}` : h);
+const ctaActions = cta.actions?.map((a: any) => ({ ...a, href: lh(a.href) }));
+
+const metadata = {
+  title: localizePageTitle(page, `Partners — ${SITE.name} | Distributor & Dealer Program`),
+  description:
+    'Become an Aquafarer partner. Join our global distribution network serving marine dealers, OEM partners, and equipment retailers in 50+ countries.',
+};
+const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: 'Partners' }];
+
+const faqSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What partnership models are available?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'OEM/ODM manufacturing, dealership distribution, rental fleet supply, and custom project partnerships for specific industries.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How do I become a dealer?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Apply through our Dealers and Distributors page. Requirements include initial container order commitment and territory coverage.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What support do partners receive?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Product training, marketing materials, technical documentation, priority lead times, and dedicated account management.',
+      },
+    },
+  ],
+});
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <Hero tagline={hero.tagline} image={hero.image} title={hero.title} subtitle={hero.subtitle} />
+  <Features3
+    tagline={programs.tagline}
+    title={programs.title}
+    subtitle={programs.subtitle}
+    columns={programs.columns}
+    items={programs.items}
+  />
+  <Content
+    tagline={benefits.tagline}
+    title={benefits.title}
+    subtitle={benefits.subtitle}
+    content={benefits.list?.map((i: string) => (i ? `- ${i}` : '')).join('\n')}
+  />
+  <Steps2 title={process.title} subtitle={process.subtitle} items={process.items} />
+  <CallToAction title={cta.title} subtitle={cta.subtitle} actions={ctaActions} />
+  <JsonLd
+    type="Service"
+    service={{
+      name: 'Marine Equipment Distribution & Partnership Programs',
+      description:
+        'Distributor, dealer, OEM/ODM, brand, government, and resort partner programs for inflatable boats and marine equipment.',
+      serviceType: 'Distribution & Partnership',
+      areaServed: ['Global'],
+      url: `/${lang}/partners`,
+      items: [
+        { name: 'Distributor Program', description: 'Exclusive territory distribution with volume pricing' },
+        { name: 'Dealer Program', description: 'Direct dealer pricing and marketing support' },
+        { name: 'OEM/ODM Manufacturing', description: 'Custom branding and product specifications' },
+        { name: 'Brand Partnership', description: 'Co-branding and private label programs' },
+      ],
+    }}
+  />
+  <script is:inline type="application/ld+json" set:html={faqSchema} />
+</Layout>

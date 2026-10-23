@@ -1,0 +1,131 @@
+hero_text:
+  tagline: Contatti
+  title: CONTATTACI
+contact_form:
+  id: form
+  title: Inviaci un messaggio
+  subtitle: Per preventivi, domande tecniche o richieste di partnership, scrivici. Rispondiamo entro un giorno lavorativo.
+  email_to: info@aquafarer.com
+  submit_button: Invia messaggio
+  success_message: Grazie! Il tuo messaggio è stato ricevuto. Ti risponderemo entro un giorno lavorativo.
+  error_message: Si è verificato un errore durante l'invio. Riprova o scrivici direttamente via email.
+  default_country_code: '+1'
+  captcha:
+    label: 'Anti-spam: risolvi il seguente problema'
+  fields:
+    - name: firstName
+      label: Nome
+      row: 1
+    - name: lastName
+      label: Cognome
+      row: 1
+    - name: companyName
+      label: Azienda
+      row: 2
+    - name: address
+      label: Indirizzo
+      row: 3
+    - name: zip
+      label: CAP
+      row: 4
+    - name: country
+      label: Paese
+      row: 4
+      type: select
+      optionsKey: countries
+    - name: email
+      label: Email
+      row: 5
+      type: email
+    - name: tel
+      label: Telefono
+      row: 5
+      type: tel
+      withCountryCode: true
+    - name: orderVolume
+      label: Volume d'ordine stimato
+      row: 6
+      type: select
+      options:
+        - value: ''
+          label: Seleziona il volume stimato...
+        - value: sample
+          label: Solo campioni / prototipi
+        - value: '5-10'
+          label: 50–100 unità (MOQ standard)
+        - value: '100-500'
+          label: 100–500 unità
+        - value: '500-plus'
+          label: 500+ unità (prezzi per volume)
+    - name: customization
+      label: Necessita personalizzazione?
+      row: 7
+      type: select
+      options:
+        - value: ''
+          label: Seleziona il tipo di personalizzazione...
+        - value: none
+          label: Prodotto standard (senza personalizzazione)
+        - value: logo
+          label: Solo logo / branding personalizzato
+        - value: full
+          label: OEM completo (dimensioni, colore, grafica, imballaggio)
+        - value: consultation
+          label: Non sono sicuro — necessito consulenza
+    - name: productInterest
+      label: Categorie di prodotti di interesse
+      row: 8
+      type: select
+      options:
+        - value: ''
+          label: Seleziona la categoria di prodotto...
+        - value: all
+          label: Tutti i prodotti / catalogo completo
+        - value: sup
+          label: SUP / paddleboard
+        - value: kayak
+          label: Kayak gonfiabili
+        - value: rib
+          label: Barche RIB
+        - value: dinghy
+          label: Scafi / tender
+        - value: safety
+          label: Attrezzature di sicurezza / giubbotti salvagente
+        - value: accessory
+          label: Accessori (pompe, pagaie, borse)
+
+    - name: subject
+      label: Oggetto
+      row: 9
+    - name: message
+      label: Messaggio
+      row: 10
+      type: textarea
+      rows: 6
+features2_other_ways:
+  title: Altri modi per contattarci
+  columns: 3
+  items:
+    - title: Richieste commerciali
+      description: Preventivi, configurazioni, candidature rivenditori e ordini all'ingrosso.
+      icon: tabler:shopping-bag
+    - title: Supporto tecnico
+      description: Garanzia, riparazioni, ricambi e domande operative.
+      icon: tabler:tool
+    - title: Stampa e partnership
+      description: Kit media, sponsorizzazioni e collaborazioni di settore.
+      icon: tabler:news
+    - title: Telefono
+      description: '+1 279 732 3333 (sede USA) · +86 13305324192 (fabbrica)'
+      icon: tabler:headset
+    - title: Email
+      description: info@aquafarer.com
+      icon: tabler:mail
+    - title: Sede globale e fatturazione
+      description: Aquafarer LLC, Nuovo Messico, Stati Uniti
+      icon: tabler:map-pin
+map:
+  title: La nostra sede
+  subtitle: Visitate il nostro hub produttivo a Qingdao
+  address: Zona di Sviluppo Economico, Laixi, Qingdao, Cina, 266600
+  zoom: 15

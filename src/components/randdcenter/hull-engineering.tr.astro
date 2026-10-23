@@ -1,0 +1,177 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'tr' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">&larr; AR-GE Merkezine Geri</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Laboratuvar 02</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Hull Mühendislik Stüdyosu</h1>
+      <p class="mt-3 text-lg text-muted">Dijital simülasyon, yapısal zeka, özel gövde tasarımı</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/design discussaquafarer-inflatable-boat-aquafarer-factory-exterior.webp"
+        alt="Aquafarer gövde mühendisliği CAD tasarım iş istasyonu"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Güç ile hidrodinamiğin buluştuğu yer</h2>
+  <p>
+    Gövde, herhangi bir RIB veya şişme teknenin belkemiğidir. Verimli bir şekilde planyaj yapabilecek kadar hafif, darbe
+    yüklerini absorbe edebilecek kadar güçlü ve geniş bir sıcaklık aralığında boyutsal olarak stabil olmalıdır.{
+      SITE.name
+    }, Gövde Mühendisliği Stüdyomuz, amaçlanan görev için optimize edilmiş gövdeler sunmak için gelişmiş CAD modelleme,
+    sonlu eleman analizi (FEA) ve onlarca yıllık pratik deniz mimarlığı deneyimini birleştirir — katalogdan uyarlanmış
+    genel şekiller değil.
+  </p>
+  <p>
+    Üç ana gövde malzemesiyle çalışıyoruz — rotasyon kalıplı HDPE, kaynaklı deniz sınıfı alüminyum ve el ile döşenmiş
+    fiberglas — ve her birini dahili olarak tasarlama, simüle etme ve doğrulama mühendislik yeteneğine sahibiz.
+  </p>
+
+  <h2>Tasarım araçları ve standartları</h2>
+  <p>Dijital mühendislik ortamımız şunları içerir:</p>
+  <table>
+    <thead><tr><th>Yetenek</th><th>Yazılım / Araç</th><th>Başvuru</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>3D parametrik modelleme</td><td>SolidWorks Profesyonel</td><td
+          >Gövde yüzeyi, uzunluk destek sistemi, motor braketi, güverte düzeni</td
+        ></tr
+      >
+      <tr
+        ><td>Sonlu eleman analizi</td><td>ANSYS Mechanical & LS-DYNA</td><td
+          >Gerilme haritalama, modal analiz, çarpma/etki simülasyonu</td
+        ></tr
+      >
+      <tr
+        ><td>Hesaplamalı akışkanlar dinamiği</td><td>Ansys Fluent / Star-CCM+</td><td
+          >Hidrodinamik sürükleme tahmini, trim optimizasyonu</td
+        ></tr
+      >
+      <tr
+        ><td>Lamine mühendisliği</td><td>ESAComp / CADEC</td><td
+          >Fiberglas katman dizilimi, çekirdek seçimi, ağırlık tahmini</td
+        ></tr
+      >
+      <tr><td>Kalıp akış simülasyonu</td><td>Moldex3D</td><td>Rotomolding duvar kalınlığı tahmini</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Mühendislik iş akışımız</h2>
+  <p>
+    Her gövde tasarımı, standart bir model veya tamamen özel bir proje olsun, titiz bir beş aşamalı süreci takip eder:
+  </p>
+  <ol>
+    <li>
+      <strong>Kavram ve gereksinim toplama</strong>— Yük, hız zarfı, deniz durumu yeteneği, çekme gereksinimleri ve özel
+      görev ekipmanlarını (güverte kapakları, konsol pozisyonları, yakıt tankı entegrasyonu) tanımlamak için sizinle
+      buluşuyoruz.
+    </li>
+    <li>
+      <strong>3D yüzey kaplama ve hidrostatik hesaplama</strong>— Gövde formu SolidWorks'te modellenmiş ve yerleşik
+      analiz araçlarıyla hidrostatik stabilitesi (GM, sağ kol) kontrol edilmiştir.
+    </li>
+    <li>
+      <strong>Yapısal FEA</strong>— Yük durumları tanımlanır: statik (mürettebat + ekipmanı), dinamik (5g'de planlama
+      çarpışmaları) ve slamming (dalga tepesinden 3 m/s hızda düşme). Gerilme konturları gözden geçirilir; 2.5 ≥
+      güvenlik faktörü zorunludur.
+    </li>
+    <li>
+      <strong>CFD sürüklenme optimizasyonu</strong>— Gövde üç yükleme koşulunda ve beş hızda simüle edilir. Islak yüzey
+      alanı, trim açısı ve kalıntı direnç iteratif olarak azaltılır.
+    </li>
+    <li>
+      <strong>Tasarım incelemesi ve sürüm</strong>— Tam mühendislik paketi (3D model, FEA raporu, CFD raporu, ağırlık
+      tahmini, kontrplak defteri) prototip atölyesine gönderilmeden önce kıdemli deniz mimarımız tarafından incelenir.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      FEA Gerilme Dağılımı — RIB 450 Devriye Gövdesi (Alüminyum 5083)
+    </p>
+    <div class="grid grid-cols-2 gap-4 text-sm">
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">2.8 : 1</span>
+        <span class="text-gray-500">Maksimum yük seviyesinde güvenlik faktörü</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">15.2 %</span>
+        <span class="text-gray-500">Sürtünme azaltma önceki nesle karşılaştırıldığında</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">87 kN/m²</span>
+        <span class="text-gray-500">Zirve çarpma basıncı (tasarım sınırı)</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">18 000 h</span>
+        <span class="text-gray-500">2025'te FEA süresinin kümülatif süresi</span>
+      </div>
+    </div>
+  </div>
+
+  <h2>Özelleştirme: gövdeniz, kurallarınız</h2>
+  <p>
+    İki operatörün aynı gereksinimi yoktur. Liman devriyesi, RIB düşük hızda stabilite için sığ V gövdeye ihtiyaç duyar;
+    hızlı müdahale aracı için sprey raylı derin V gerekir; dalış destek teknesi geniş bir genişlik ve düşük bir kap
+    gerektirir. Uygulamanızı önceden var olan gövde şekline zorlamıyoruz. Sizin spesifikasyonunuzdan itibaren tasarım
+    yapıyoruz.
+  </p>
+  <p>Son zamanlarda özel gövde mühendisliği projelerine örnekler:</p>
+  <ul>
+    <li>
+      Karayipler tur operatörü için uzatılmış 6,8 m HDPE gövde, sahil inişleri için güçlendirilmiş bir baş (+%15 dip
+      kalınlığı).
+    </li>
+    <li>
+      Sahil güvenlik için 7,2 m uzunluğunda hafif RIB alüminyum, entegre yakıt tankı baffle'ları ve ekipman dolabı
+      sertleştiricileri içeriyordu.
+    </li>
+    <li>
+      Kısaltılmış bir transom ve çift batarya kutularına sahip, kolayca şnorkelle yeniden binmek için tasarlanmış 5,5 m
+      uzunluğunda fiberglas bir dalış teknesi.
+    </li>
+  </ul>
+
+  <h2>Mühendislerimiz</h2>
+  <p>
+    Stüdyo, yüksek hızlı tekneler tasarımında 14 yıllık deneyime sahip kıdemli bir denizcilik mimarı tarafından
+    yönetilmekte olup, FEA ve CFD alanında uzmanlaşmış iki mekanik mühendis tarafından desteklenmektedir. Üçü de
+    uluslararası tanınmış üniversitelerden deniz mühendisliği veya deniz mimarlığı alanında ileri derecelere sahiptir.
+    Ekip, sektör dergilerinde düzenli olarak yayınlar yapar ve Uluslararası Yüksek Performanslı Deniz Araçları
+    Konferansı gibi konferanslarda sunum yapar.
+  </p>
+
+  <h2>Bir sonraki gövdenizde bizimle ortak olun</h2>
+  <p>
+    İlk konsept taslağından son stres raporuna kadar, Gövde Mühendislik Stüdyomuz, sadece inşa edilmiş değil, aynı
+    zamanda mühendislik yapılmış bir tekne yaratmada sizin ortağınızdır. Her kaynak, her laminat tabakası ve gövdenin
+    her eğrisinin bir sebebi için simülasyon saatlerini önceden ayırıyoruz.
+  </p>
+  <p>
+    Mevcut bir modelde küçük bir değişiklik ya da tamamen temiz bir tasarıma ihtiyacınız olsun, gereksinimlerinizden
+    danışmaya hazırız.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Gövde tasarım danışmanlığınıza başlayın</h2>
+    <p class="mt-2 text-sm text-muted">Görev profilinizden bahsedin, mühendislik yolunu önereceğiz.</p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Mühendislik ekibimizle iletişime geçin</a
+    >
+  </div>
+</section>

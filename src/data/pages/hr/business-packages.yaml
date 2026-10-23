@@ -1,0 +1,82 @@
+hero:
+  tagline: Poslovni Paketi
+  title: Spremni za implementaciju paketi za vodeni biznis<br />Paketi za svaku fazu
+  subtitle: Prekonfigurirani paketi opreme za klubove vodenih sportova, odmarališta i startupe brendova — s transparentnim cijenama, brzom dostavom i potpunim opcijama prilagodbe.
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/use-cases/aquafarer-outdoor-adventure.webp
+    alt: Aquafarer paketi poslovne opreme
+direct_answer: Aquafarer nudi tri prekonfigurirana poslovna paketa dizajnirana za operatore vodenih sportova u svakoj fazi. Paket Club Starter uključuje 10 SUPs s veslima, pumpama, kompletima za popravak i sigurnosnom opremom za nove klubove i škole. Paket Resort Premium opskrbljuje 50–100 jedinica sa sustavima za pohranu, brendiranjem i vodičima za obuku za hotele i ugostiteljske objekte. Paket Brand Launch pruža odabir proizvoda, dizajn prilagođenog logotipa, pakiranje, proizvodnju i slanje za poduzetnike koji pokreću vlastiti brend vodenih sportova. Svi paketi uključuju cijene direktno iz tvornice, CE certifikaciju i podršku globalnoj logistici.
+packages:
+  - id: club-starter
+    tag: Best Seller
+    name: Paket Club Starter
+    subtitle: Sve što vam je potrebno za pokretanje ili unapređenje vašeg kluba veslanja
+    target: SUP klubovi, kajak klubovi, škole surfanja, centri za obuku
+    price_label: Od 4.800 $
+    line_items:
+      - item: 10 SUP dasaka ili kajaka
+      - item: 10 odgovarajućih vesala
+      - item: 10 visokoučinkovitih pumpi
+      - item: 10 kompleta za popravak
+      - item: 10 prsluka za spašavanje s logotipom kluba
+      - item: Brendiranje kluba na daskama
+      - item: Set sigurnosnih znakova
+      - item: PDF vodič za početničke lekcije
+    cta_text: Nabavite paket za klub
+    cta_href: /contact
+  - id: resort-premium
+    tag: Premium
+    name: Paket Resort Premium
+    subtitle: Cjelokupni program vodenih aktivnosti za goste hotela i odmarališta
+    target: Pješčana odmarališta, hoteli uz jezero, eko odmarališta, jahtaški klubovi
+    price_label: Prilagođen upit
+    line_items:
+      - item: 50–100 SUPs, kajaka ili mješovite flote
+      - item: Potpuno brendiranje odmarališta na svu opremu
+      - item: Vesla i prsluci za najam
+      - item: Komercijalni sustav polica za pohranu
+      - item: Stanica za napuhavanje s industrijskim pumpama
+      - item: Sigurnosni sustav (bove, znakovi, daske za spašavanje)
+      - item: Program obuke osoblja
+      - item: Priručnik za upravljanje prihodima
+    cta_text: Nabavi paket za odmarališta
+    cta_href: /contact
+  - id: brand-launch
+    tag: Entrepreneur
+    name: Paket za lansiranje brenda
+    subtitle: Pretvori svoju ideju brenda u isporučen proizvod — obično u 60–90 dana
+    target: Prodavači na Amazonu, influenceri, regionalni distributeri
+    price_label: Od 6.500 USD
+    line_items:
+      - item: Konzultacije za odabir proizvoda
+      - item: Dizajn prilagođenog logotipa na daskama
+      - item: Prilagođavanje boja
+      - item: Maloprodajno pakiranje s brendom
+      - item: Oznake i uputstvo za uporabu
+      - item: CE dokumentacija za certifikaciju
+      - item: Proizvodni uzorci
+      - item: FOB slanje iz Qingdaua
+    cta_text: Pokreni moj brend
+    cta_href: /contact
+faq:
+  title: Često postavljana pitanja o paketu
+  questions:
+    - q: Koja je minimalna količina narudžbe za pakete?
+      a: Club Starter paket ima minimalno 10 jedinica. Paketi Resort i Brand prilagođeni su vašim potrebama s fleksibilnim MOQs.
+    - q: Koliko traje isporuka?
+      a: Standardna proizvodnja traje 30–45 dana od potvrde narudžbe. Ubrzana proizvodnja dostupna je uz dodatnu naknadu.
+    - q: Mogu li prilagoditi boje opreme i brendiranje?
+      a: Da. Svi paketi uključuju potpunu prilagodbu — boje dasaka, otisak logotipa i dizajn pakiranja.
+    - q: Nudite li podršku nakon prodaje?
+      a: Da. Svaki paket uključuje pristup našim online vodičima za održavanje, video tutorijalima i sustavu narudžbe rezervnih dijelova.
+cta:
+  title: Niste sigurni koji paket odgovara?
+  subtitle: Odgovorite na 3 brza pitanja i preporučit ćemo savršen paket za vaše poslovanje.
+  actions:
+    - variant: primary
+      text: Nabavi preporučeni paket
+      href: /contact
+    - text: Pogledaj rješenja prema publici
+      href: /solutions
+    - text: Čitajte priče o uspjehu
+      href: /success-stories

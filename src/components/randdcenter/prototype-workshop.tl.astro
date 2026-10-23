@@ -1,0 +1,207 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'tl' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">&larr; Bumalik sa R&D Center</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Laboratoryo 05</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Pagawaan ng Prototype</h1>
+      <p class="mt-3 text-lg text-muted">
+        Mula sa CAD na modelo hanggang sa bangkang handa na sa dagat — ginawa, nilagyan, at napatunayan
+      </p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-ocean-voyager-1.webp"
+        alt="pagsasanay sa paggawa ng prototype na bangka"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Kung saan nagiging realidad ang disenyo</h2>
+  <p>
+    Ang isang CAD na modelo, gaano man ito ka detalyado, ay hindi maaaring ipakita kung paano aktwal na hahawakan ng
+    isang bangka hanggang sa ito ay makarating sa tubig. Iyon ang dahilan kung bakit ang aming Prototype Workshop ay
+    idinisenyo upang isalin ang datos ng inhinyeriya sa isang pisikal, panlakasugang sasakyan nang mabilis at tumpak
+    hangga't maaari. Bawat bago{SITE.name}Ang modelo — at bawat mahalagang pasadyang paggawa — ay dumadaan sa workshop
+    na ito bago ang produksyon ng kagamitan ay maisagawa.
+  </p>
+  <p>
+    Ang workshop ay lubos na kagamitan para sa sabay-sabay na paggawa ng hull, tubes, at rigging. Ang parallel-workflow
+    na pamamaraang ito ay nagpapababa ng oras ng paggawa ng prototype sa 8-12 linggo mula sa paglabas ng engineering,
+    kumpara sa karaniwang 16-20 linggo sa industriya. Kapag ang iyong aplikasyon ay nangangailangan ng espesyal na
+    solusyon, maaari kaming lumipat mula sa konsepto hanggang sa beripikasyon sa tubig sa loob ng tatlong buwan.
+  </p>
+
+  <h2>Kakayahan ng workshop</h2>
+  <table>
+    <thead><tr><th>Istasyon ng trabaho</th><th>Kagamitan</th><th>Layunin</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Paggawa ng balangkas ng barko</td><td
+          >Pugon para sa rotational moulding (HDPE), TIG welding bay (aluminyo), hand-lay-up na mga hulma (fibreglass)</td
+        ><td>Ganap na produksyon ng katawan sa lahat ng tatlong uri ng materyal</td></tr
+      >
+      <tr
+        ><td>Pagpupulong ng tubo</td><td>RF welding press, hot-air tacking station, inflation test jig</td><td
+          >Paggawa ng buo at buong-laki na mga asembliya ng tubo na may lahat ng baffles, kono, at mga balbula</td
+        ></tr
+      >
+      <tr
+        ><td>Paglalagay ng kagamitan at pagsasaayos</td><td
+          >Pang-angat ng makina (500 kg), batayang mock-up ng console, panggipit ng hydraulic hose, board ng electrical
+          harness</td
+        ><td>Kumpletong kagamitan: makina, manibela, mga kontrol, sistema ng gasolina, elektronika, mga upuan</td></tr
+      >
+      <tr
+        ><td>Kuwarto ng instrumentasyon</td><td
+          >GPS speed sensor, fuel-flow meter, accelerometers, thermocouple array, data-logger</td
+        ><td>Pag-install at kalibrasyon ng instrumento para sa pagsubok sa dagat</td></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>Ang paglalakbay ng prototype — hakbang-hakbang</h2>
+  <ol>
+    <li>
+      <strong>Pagsasalin ng inhinyeriya</strong>— Ang package ng disenyo (3D model, ulat ng FEA, listahan ng materyales,
+      iskedyul ng layup) ay pormal na nire-review ng workshop lead at ng project engineer. Anumang mga alalahanin sa
+      paggawa ay tinutukoy at nilulutas bago magsimula ang pagputol.
+    </li>
+    <li>
+      <strong>Produksyon ng katawan ng barko</strong>— Ang katawan ay binuo ayon sa espesipikasyon ng inhinyeriya. Para
+      sa HDPE: ang rotational moulding na programa ay inilalagay mula sa Moldex3D simulation. Para sa aluminyo: ang
+      CNC-cut na mga plato ay hinahabi sa TIG bay alinsunod sa aprubadong mapa ng hinahabi. Para sa fibreglass: ang ply
+      book ay sinusunod layer ayon sa layer.
+    </li>
+    <li>
+      <strong>Paggawa ng tubo</strong>— Ang tela ay pinuputol gamit ang CNC-pattern na mga template, pagkatapos ay
+      RF-welded upang maging buong-laking mga chamber. Ang bawat chamber ay pinupuno ng hangin hanggang sa test pressure
+      at iniwan ng 24 na oras para sa paunang pag-stabilize.
+    </li>
+    <li>
+      <strong>Pag-assemble at rigging</strong>— Pinagsama ang hull at mga tubo. Isinabit ang makina, nakakonekta ang
+      steering at mga kontrol, naka-install ang fuel system, at lahat ng electrical circuit ay naka-wire at na-verify.
+    </li>
+    <li>
+      <strong>Mga static na pagsusuri</strong>— Bago tumama ang bangka sa tubig, sumasailalim ito sa: pagsusuri ng
+      buoyancy (full load + 30% reserve), pagsusuri sa presyon ng fuel system, full-lock cycle test ng steering system,
+      pagsusuri sa electrical earth-bond continuity.
+    </li>
+    <li><strong>Programa ng pagsubok sa dagat</strong>— 20 oras ng pagsusuri sa tubig, na detalyado sa ibaba.</li>
+    <li>
+      <strong>Pagsusuri ng Prototype</strong>— Isang pormal na pagpupulong para sa pagpirma ang isinasagawa kasama ang
+      mga koponan ng engineering, produksyon, at kalidad. Anumang kinakailangang pagbabago sa disenyo ay idinodokumento
+      at isinama sa release ng produksyon.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      20-Oras na Sea Trial Programme — Iskedyul ng Pagsubok
+    </p>
+    <div class="space-y-2 text-sm">
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">2 h</span><span class="flex-1"
+          >Harbour manoeuvring — mababang bilis na paghawak, pag-atras, fendering check</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">4 h</span><span class="flex-1"
+          >Speed trial — GPS-verified na pinakamataas na bilis, cruise speed, konsumo ng gasolina sa 3 RPM points</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Pagsubok sa pagliko — taktikal na diyametro, pag-usad, at paglilipat sa 20 kn, kaliwa at starboard</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Slamming test — paulit-ulit na takbo sa 0.5–1.0 m chop; accelerometer sa base ng helm seat</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Stability test — static heel angle na may 4 crew + gear sa starboard, offset load</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Endurance run — 3 oras tuloy-tuloy sa cruise speed; pagmamanman ng temperatura (makina, gasolina, elektrikal)</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">2 h</span><span class="flex-1"
+          >Pangwakas na inspeksyon — post-trial inspection ng lahat ng sistema, higpitan/suriin ang lahat ng fastener,
+          idokumento ang mga natuklasan</span
+        >
+      </div>
+    </div>
+  </div>
+
+  <h2>Custom na prototyping para sa natatanging mga aplikasyon</h2>
+  <p>
+    Ang Prototype Workshop ang lugar kung saan namin nilulutas ang mga problemang hindi kayang tugunan ng mga karaniwang
+    production boats. Mga kamakailang halimbawa ay:
+  </p>
+  <ul>
+    <li>
+      Isang 7.8 m RIB para sa isang search-and-rescue na organisasyon, na nangangailangan ng custom cabin structure na
+      may proteksyon laban sa pag-ikot, integrated stretcher mounts, at bow-mounted sonar pod — lahat ay prototyped,
+      nilagyan, at sinubukan sa aming pasilidad.
+    </li>
+    <li>
+      Isang inflatable na 5.2 m para sa hydrographic survey contractor, na may pinaikling transom, natatanggal na
+      instrument mast, at through-hull transducer pockets na idinisenyo upang mabawasan ang pagkagambala ng daloy.
+    </li>
+    <li>
+      Isang electric-drive na 4.5 m tender para sa isang superyacht, kung saan ginamit ang prototype upang beripikahin
+      ang range, charging infrastructure, at antas ng ingay bago mag-commit ang kliyente sa isang fleet na may apat na
+      tao.
+    </li>
+  </ul>
+
+  <h2>Ang aming prototyping team</h2>
+  <p>
+    Ang workshop ay binubuo ng walong multi-skilled marine technicians, bawat isa ay cross-trained sa hindi bababa sa
+    dalawa sa tatlong pangunahing disiplina (hull, tube, rigging). Ang team lead ay isang master boatbuilder na may 16
+    na taon ng karanasan mula sa custom one-off builds hanggang production series. Bawat prototype ay may dedikadong
+    project engineer na nagsisilbing nag-iisang contact point para sa kliyente sa buong proseso ng paggawa at pagsubok.
+  </p>
+
+  <h2>Pakikilahok ng kliyente</h2>
+  <p>
+    Aktibo naming hinihikayat ang aming mga kliyente na dumalo sa mga mahahalagang milestone sa paggawa ng prototype —
+    lalo na ang initial fit-out review at sea trial. Napakahalaga ng iyong operational feedback sa mga yugtong ito sa
+    pag-fine tuning ng bangka bago ito pumasok sa produksyon. Hindi kami nagtatayo nang hiwalay; gumagawa kami sa
+    pakikipagtulungan sa iyo.
+  </p>
+  <p>
+    Ang 20-oras na sea trial ay pagkakataon din para sa iyong koponan na maging pamilyar sa handling, layout ng sistema,
+    at mga pangangailangan sa maintenance ng bangka, upang matiyak ang maayos na paglipat sa serbisyo kapag naihatid na
+    ang mga production boat.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Simulan ang iyong prototype na proyekto</h2>
+    <p class="mt-2 text-sm text-muted">
+      Ikwento mo sa amin ang tungkol sa bangka na kailangan mo at magmumungkahi kami ng prototype development plan.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Makipag-ugnayan sa aming prototyping team</a
+    >
+  </div>
+</section>

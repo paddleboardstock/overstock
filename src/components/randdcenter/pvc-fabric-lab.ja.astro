@@ -1,0 +1,179 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'ja' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">← 研究開発センターに戻る</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">研究室01</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">PVC ファブリックラボ</h1>
+      <p class="mt-3 text-lg text-muted">科学的な材料試験 – 繊維から完成したチューブまで</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/randd/aquafarer-pvc-material-lab.webp"
+        alt="Aquafarer PVC 布地材料試験室"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>すべてのゴムボートの基礎</h2>
+  <p>
+    チューブ生地はインフレータブルボートにおいて最も重要な素材です。構造的な完全性を何年にもわたって維持しながら、一定の
+    UV への曝露、繰り返しの膨張サイクル、ドックや破片との摩耗、極端な温度変化に耐える必要があります。で {
+      SITE.name
+    }、当社の PVC ファブリック
+    ラボは、当社が製造するすべてのボートで使用するファブリックの特性評価、検証、および継続的な改善に専念しています。
+  </p>
+  <p>
+    私たちはサプライヤーのデータシートのみに依存するわけではありません。私たちのワークショップに入る PVC および Hypalon
+    生地のすべてのバッチは、社内で個別にテストされます。これにより、当社が公開する材料仕様が、ロットごと、毎年、お客様が受け取る材料性能と同じであることが保証されます。
+  </p>
+
+  <h2>標準化された試験装置</h2>
+  <p>当社のファブリックラボには、ISO、ASTM、および EN テスト方法に準拠した工業グレードの機器が備えられています。</p>
+  <table>
+    <thead><tr><th>装置</th><th>測定されたパラメータ</th><th>標準</th></tr></thead>
+    <tbody>
+      <tr><td>万能引張試験機 (50 kN)</td><td>破断力、破断伸び、引裂き伝播</td><td> / ASTM D751</td></tr>
+      <tr
+        ><td>キセノンアーク耐候性チャンバー</td><td>UV 耐性 (色の変化、2000 時間後の強度保持)</td><td>
+          / ASTM G155</td
+        ></tr
+      >
+      <tr><td>低温屈曲試験機</td><td>-30 °C ～ -50 °C の亀裂点</td><td>ISO 4675 / ASTM D2136</td></tr>
+      <tr
+        ><td>テーバー摩耗試験機</td><td>1000 サイクル後の体重減少 (CS-10 ホイール)</td><td>ASTM D3389 / ISO 5470-1</td
+        ></tr
+      >
+      <tr><td>厚さ計 (デジタル、0.001 mm 分解能)</td><td>ロール幅全体の均一性</td><td>ISO 2286-3</td></tr>
+      <tr><td>静圧ヘッドテスター</td><td>耐水浸透性</td><td>ISO 811</td></tr>
+    </tbody>
+  </table>
+  <p class="text-sm text-gray-500">* すべての機器は、第三者認定研究所によって毎年校正されます。</p>
+
+  <h2>データから意思決定まで: 典型的なテスト ワークフロー</h2>
+  <p>新しいファブリック候補が到着すると、標準化された 7 段階の認定プロセスに従います。</p>
+  <ol>
+    <li>
+      <strong>受入検査</strong> — 表面の欠陥、ピンホール、寸法適合性を目視チェックします。
+    </li>
+    <li>
+      <strong>厚さのマッピング</strong> — ロール全体の 20 点の測定。承認するにはCV &lt; 3% が必要です。
+    </li>
+    <li>
+      <strong>引張試験</strong> — 5 縦糸方向と横糸方向の標本。 1100 dtex PVC の場合、最小 3500 N/50 mm。
+    </li>
+    <li>
+      <strong>UV コンディショニング</strong> — 1000 時間キセノンアークチャンバー内での曝露。最小 80 % の強度保持が必要です。
+    </li>
+    <li>
+      <strong>コールドクラック</strong> — 35 °C で 4 時間、その後 25 mm マンドレル上で 180° 曲げます。目に見える亀裂はありません。
+    </li>
+    <li><strong>耐摩耗性</strong> — 1000 サイクル、体重減少 ≤ 0.05 g。</li>
+    <li>
+      <strong>承認サインオフ</strong> — 7 つのゲートをすべて通過した後にのみ、生地が生産用にリリースされます。
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      典型的な PVC 1100 dtex — UV 暴露後の引張保持率
+    </p>
+    <div class="flex items-end gap-3 h-40">
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-600 rounded-t" style="height:100%"></div><span class="text-xs mt-1"
+          >0 h<br />100%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-500 rounded-t" style="height:95%"></div><span class="text-xs mt-1"
+          >500 h<br />95%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-400 rounded-t" style="height:88%"></div><span class="text-xs mt-1"
+          >1000 h<br />88%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-300 rounded-t" style="height:82%"></div><span class="text-xs mt-1"
+          >2000 h<br />82%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-gray-300 rounded-t" style="height:65%"></div><span class="text-xs mt-1"
+          >競合他社<br />~65%</span
+        >
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      当社の PVC 1100 dtex ファブリックは、2000 時間のキセノンアーク曝露後も、70 %
+      未満に低下する一般的な業界グレードと比較して、80 % 以上の引張強度を保持します。
+    </p>
+  </div>
+
+  <h2>私たちの専門チーム</h2>
+  <p>
+    このラボには、ポリマー科学または繊維工学の学位を取得し、業界で最低 6 年の経験を持つ 2
+    人のフルタイムの材料エンジニアがスタッフを配置しています。これらは、日々のテストとデータ記録を実行する 3
+    人の技術者によってサポートされています。チームは、国際標準化機構 (ISO)
+    が主催する研究室間のラウンドロビン試験に定期的に参加し、試験方法の精度を検証しています。
+  </p>
+
+  <h2>最も困難な物質的課題を解決する</h2>
+  <p>
+    海洋環境はそれぞれ異なります。ペルシャ湾で活動する巡視船は、北海の救助船とは大きく異なるUVおよび温度条件に直面しています。当社のファブリック
+    ラボは、お客様の運用プロファイルに最適化されたファブリック仕様の選択、または開発をお手伝いします。
+  </p>
+  <p>最近のカスタム ソリューションには次のようなものがあります。</p>
+  <ul>
+    <li>定期的にサンゴ礁に着岸するボートを所有する軍の顧客向けの高摩耗性 PVC ブレンド (摩耗寿命 +40 %)。</li>
+    <li>北極研究ステーション用の低温 Hypalon 配合物。-50 °C まで試験され、脆化は見られません。</li>
+    <li>捜索救助隊向けの色安定化オレンジ生地。熱帯の太陽に3年さらされた後も視認性を維持します。</li>
+  </ul>
+  <p>
+    私たちは「既製」の生地を販売していませんので、それらが機能することを願っています。当社は、お客様の特定のミッション
+    プロファイルに合わせたソリューションをテスト、検証、推奨、または作成します。それが、 {SITE.name} 違い。
+  </p>
+
+  <h2>私たちがどのようにお客様にサービスを提供するか</h2>
+  <p>あなたが私たちに重大な課題を持ち込んだ場合、次のことが期待できます。</p>
+  <ol>
+    <li><strong>相談</strong> — お客様の運用環境、パフォーマンス目標、予算について話し合います。</li>
+    <li><strong>提案</strong> — テスト計画は、明確な合否基準とスケジュールに従って作成されます。</li>
+    <li>
+      <strong>実行</strong> — 私たちの研究室はテストを実行し、生データと比較分析を含む詳細なレポートを作成します。
+    </li>
+    <li>
+      <strong>おすすめ</strong> — 複数の素材がお客様の要件を満たす場合の代替オプションを含む、生地の仕様を提示します。
+    </li>
+    <li>
+      <strong>フォローアップ</strong> — 納品後も、サービス中の重要な質問に引き続き対応します。
+    </li>
+  </ol>
+  <p>
+    私たちの目標は、単にボートを販売することではありません。それは、受け取ったボートが操業する条件下で確実に機能することを保証するためであり、それは生地から始まります。
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">カスタムの生地仕様が必要ですか?</h2>
+    <p class="mt-2 text-sm text-muted">
+      お客様の要件については、当社の材料エンジニアリング チームにお問い合わせください。
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >ラボチームにお問い合わせください</a
+    >
+  </div>
+</section>

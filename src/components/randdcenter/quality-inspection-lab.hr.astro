@@ -1,0 +1,203 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'hr' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">&larr; Natrag na R&D centar</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Laboratorij 06</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Laboratorij za kvalitetu i inspekciju</h1>
+      <p class="mt-3 text-lg text-muted">Neovisna verifikacija — svaki test je položen prije isporuke</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-uv-resistance-testing.webp"
+        alt="Aquafarer laboratorij za inspekciju kvalitete UV ispitivanje"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Vjeruj, ali provjeri</h2>
+  <p>
+    Svaki čamac koji napusti našu radionicu nosi certifikat da je prošao definirani set inspekcija kvalitete i
+    ispitivanja materijala. Naš Laboratorij za kvalitetu i inspekciju je neovisna funkcija unutar organizacije — izravno
+    izvještava upravnog direktora, a ne proizvodnju — osiguravajući da nijedan komercijalni pritisak ne može ugroziti
+    prijelaz inspekcije. Ako serija materijala ili završeni čamac ne zadovoljava objavljene specifikacije, laboratorij
+    ima ovlasti zaustaviti isporuku dok se ne otklone nedosljednosti.
+  </p>
+  <p>
+    Laboratorij djeluje u okviru sustava upravljanja kvalitetom usklađenog s principima, a naše metode testiranja
+    temelje se na ISO, ASTM i EN standardima gdje je primjenjivo. Vodimo detaljne zapise o svakom provedenom testu,
+    stvarajući potpun lanac sljedivosti od primitka sirovina do konačne isporuke čamca.
+  </p>
+
+  <h2>Testna oprema i mogućnosti</h2>
+  <table>
+    <thead><tr><th>Oprema</th><th>Izvedeni testovi</th><th>Standard / Metoda</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Univerzalna ispitna mašina (50 kN)</td><td
+          >Vlačna čvrstoća (tkanina), otpornost na ljuštenje (šavovi), propagacija poderotine</td
+        ><td>, ISO 4674</td></tr
+      >
+      <tr
+        ><td>Uređaj za test zadržavanja zraka (programabilni)</td><td
+          >Otpornost na 1000 ciklusa napuhavanja/sakupljanja, 24-48 h test zadržavanja tlaka</td
+        ><td>(unutarnji)</td></tr
+      >
+      <tr
+        ><td>Pribor za ljuštenje šavova (motorni 180° ljuštenje)</td><td
+          >Čvrstoća zavarenih i ljepila šavova pri 100 mm/min</td
+        ><td>/ ASTM D1876</td></tr
+      >
+      <tr
+        ><td>Tester hidrostatickog stupca</td><td>Otpornost tkanine na prodiranje vode (0 — 00 mbar)</td><td>ISO 811</td
+        ></tr
+      >
+      <tr
+        ><td>Digitalni mjerač debljine & mikrometar</td><td
+          >Debljina tkanine, debljina stijenke cijevi, debljina sloja ljepila</td
+        ><td>ISO 2286-3</td></tr
+      >
+      <tr
+        ><td>Okolišna komora</td><td
+          >Temperaturno kondicioniranje (-40 °C do +80 °C) za testove lomljivosti na hladno i starenje na toplinu</td
+        ><td>ISO 188, ISO 4675</td></tr
+      >
+      <tr
+        ><td>Spektrofotometar boja</td><td>Delta-E mjerenje boje nakon UV izlaganja</td><td>ISO 105-A05 / ASTM D2244</td
+        ></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>Inspekcijska vrata — od materijala do isporuke</h2>
+  <p>
+    Svaki brod slijedi definirani plan kvalitete s obaveznim inspekcijskim točkama. Nijedan brod ne smije preskočiti
+    kapiju; svaka kapija mora biti odobrena od strane inspektora kvalitete prije početka sljedeće faze proizvodnje.
+  </p>
+
+  <div class="not-prose my-8">
+    <div class="relative">
+      <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-blue-200 dark:bg-blue-800"></div>
+      <div class="space-y-6 relative">
+        {
+          [
+            {
+              gate: 'Gate 1',
+              label: 'Pregled dolaznog materijala',
+              desc: 'Serija tkanine, serija ljepila, oprema — sve provjereno prema specifikaciji dolaska prije puštanja u proizvodnju.',
+            },
+            {
+              gate: 'Gate 2',
+              label: 'Inspekcija zavara u procesu',
+              desc: 'Prvi uzorak zavara testiran (ljuštenje + vizualno) na početku svake proizvodne smjene.',
+            },
+            {
+              gate: 'Gate 3',
+              label: 'Ispitivanje zraka u komori',
+              desc: 'Svaka komora natopljena na 1,25 puta radnog tlaka, zadržana 24-48 sati. Podaci bilježeni po serijskom broju.',
+            },
+            {
+              gate: 'Gate 4',
+              label: 'Pregled prije isporuke',
+              desc: 'Cijeli čamac pregledan: svi spojni elementi zategnuti, sustavi funkcionalni, nema kozmetičkih oštećenja. Kontrolni popis od 100 točaka.',
+            },
+            {
+              gate: 'Gate 5',
+              label: 'Završna certifikacija',
+              desc: 'Izvještaji o ispitivanju sastavljeni, zapisi pregleda pregledani, izdan Certifikat o sukladnosti.',
+            },
+          ].map((g) => (
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs font-bold z-10">
+                {g.gate}
+              </div>
+              <div class="flex-1 p-3 rounded-lg bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800">
+                <p class="text-sm font-semibold">{g.label}</p>
+                <p class="text-xs text-gray-500 mt-1">{g.desc}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+
+  <h2>Ključne metrike kvalitete (prosjek za 2025.)</h2>
+  <div class="not-prose my-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">99.7 %</span>
+      <span class="text-xs text-gray-500">Prvi prolaz (serija tkanine)</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">&lt; 0,2 %</span>
+      <span class="text-xs text-gray-500">Stopa odbacivanja zavara (linearni metar)</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">100 %</span>
+      <span class="text-xs text-gray-500">Komore testirane zrakom prije sastavljanja</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600"></span>
+      <span class="text-xs text-gray-500">Usklađenost s kategorijama dizajna</span>
+    </div>
+  </div>
+
+  <h2>Naš kvalitetni tim</h2>
+  <p>
+    Laboratorij zapošljava voditelj kvalitete (10 godina u pomorskoj kontroli kvalitete, ASQ certificirani inženjer
+    kvalitete), dva inspektora kvalitete (svaki s NDT certifikatom razine 2 za vizualno testiranje) i tehničar za
+    materijale odgovoran za sva fizička ispitivanja. Tim svake godine prolazi testiranje stručnosti preko neovisnog
+    pružatelja usluga kako bi se osiguralo da naši rezultati testova ostanu točni i ponovljivi.
+  </p>
+
+  <h2>Neovisno testiranje za klijente</h2>
+  <p>
+    Naš Laboratorij za kvalitetu i inspekciju dostupan je za neovisne usluge testiranja. Ako trebate provjeriti
+    specifikaciju tkanine, potvrditi novi sustav ljepila ili pribaviti izvještaj treće strane za kvalifikaciju za
+    nabavu, možemo provesti testove prema važećem standardu i izdati certificirano izvješće o testiranju.
+  </p>
+  <p>Primjeri nedavnog rada na testiranju trećih strana:</p>
+  <ul>
+    <li>Usporedba pet konkurentskih proizvoda za ljepljivu foliju u europskom vojnom programu nabave.</li>
+    <li>
+      Studija ubrzanog starenja (UV + termalno cikliranje) za novu formulaciju s narančastim pigmentom PVC , s redovitim
+      privremenim mjerenjima u intervalima od 500 sati.
+    </li>
+    <li>Validacija zadržavanja zraka za 50 prototipnih pregradnih ventila za novi dizajn visokotlačne cijevi.</li>
+  </ul>
+
+  <h2>Naša predanost vama</h2>
+  <p>
+    Kada primite{SITE.name}brod, također primate njegov dosje o kvaliteti — sastavljen zapis rezultata testova koji se
+    odnose na vaš specifični brod. Certifikat serije tkanine, testovi ljuštenja zavara, dnevnici ispitivanja zraka u
+    komori i kontrolni popis pregleda prije isporuke. Svaki broj je praćen. Svaki inspektor je identificiran. Ovo nije
+    samo papirologija — to je naše obećanje da ono što smo isporučili odgovara onome što smo specificirali.
+  </p>
+  <p>
+    Ako ikada imate problema s kvalitetom, možete izravno kontaktirati laboratorij — kontakt podaci su ispisani na vašem
+    certifikatu o usklađenosti. Svaki upit shvaćamo ozbiljno i obvezujemo se na formalnu istragu u roku od 48 sati.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Trebate li neovisno testiranje ili provjeru kvalitete?</h2>
+    <p class="mt-2 text-sm text-muted">
+      Naš laboratorij prihvaća testiranje od strane trećih strana — kontaktirajte nas s vašim zahtjevima.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Kontaktirajte laboratorij za kvalitetu</a
+    >
+  </div>
+</section>

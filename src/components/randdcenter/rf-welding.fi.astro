@@ -1,0 +1,178 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'fi' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">← Takaisin R&amp;D Centeriin</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Lab 03</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">RF-hitsauskeskus</h1>
+      <p class="mt-3 text-lg text-muted">Dielektrinen liimaustekniikka paineen alaisena kestäville hitseille</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-jungle-mandala-1.webp"
+        alt="Aquafarer RF-hitsaus dielektrinen liimausprosessi"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Tiede sauman takana</h2>
+  <p>
+    Kumivene on vain niin luotettava kuin sen saumat. Yksikin heikko hitsi voi vaarantaa koko kammion – ja merellä
+    kammion rikkoutuminen ei ole haittaa; se on turvallisuusriski. klo {SITE.name}, olemme investoineet erityiseen
+    radiotaajuiseen (RF) hitsauskeskukseen, jossa yhdistyvät teollisuustason dielektriset hitsauspuristimet, tiukka
+    prosessinohjaus ja hitsauksen jälkeinen testaus. Jokainen valmistamamme sauma on dokumentoitu, jäljitettävissä ja
+    sertifioitu täyttämään tai ylittämään - puhallettavien veneiden kansainvälisen standardin vaatimukset.
+  </p>
+  <p>
+    RF-hitsaus käyttää korkeataajuista sähkömagneettista energiaa (tyypillisesti 27.12 MHz) polaaristen molekyylien
+    virittämiseen PVC- tai Hypalon-pinnoitetun kankaan sisällä, jolloin lämpöä syntyy tarkasti materiaalin rajapinnassa.
+    Toisin kuin kuumailma- tai kuumakiilahitsaus, RF-hitsaus luo todellisen molekyylisidoksen – kaksi kangaskerrosta
+    sulautuvat yhdeksi homogeeniseksi materiaaliksi hitsausvyöhykkeellä, jolloin muodostuu liitos, joka on yhtä vahva
+    kuin itse perusmateriaali.
+  </p>
+
+  <h2>Hitsauslaitteet ja prosessinohjaus</h2>
+  <p>Hitsauskeskuksemme on varustettu:</p>
+  <table>
+    <thead><tr><th>Kone</th><th>Teho / Kapasiteetti</th><th>Sovellus</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Dielektrinen RF-puristin 1</td><td>15 kW, levy 2000 × 600 mm</td><td
+          >Pääpituussaumat, peräpeilin liitokset putkeen</td
+        ></tr
+      >
+      <tr
+        ><td>Dielektrinen RF-puristin 2</td><td>10 kW, levy 1500 × 500 mm</td><td
+          >Ohjaussaumat, kartiokiinnitykset, venttiilipaikat</td
+        ></tr
+      >
+      <tr
+        ><td>CNC-ohjattu RF-hitsauskone</td><td>8 kW, XYtable 2500 × 1200 mm</td><td
+          >Kaarevat saumat, logo/paneeli kohokuviointi, tarkka tilkkutyö</td
+        ></tr
+      >
+      <tr
+        ><td>Automaattinen kuumakiilahitsauskone</td><td>Muuttuva lämpötila, 1.2 m/min max</td><td
+          >Varmuuskopiointimenetelmä Hypalon/CSM materiaaleille</td
+        ></tr
+      >
+    </tbody>
+  </table>
+  <p>
+    Jokainen RF-puristin on varustettu suljetun piirin lämpötilan ja paineen valvonnalla. Hitsausparametrit – teho,
+    puristusaika, jäähdytysaika, elektrodin paine – ohjelmoidaan materiaalityypin mukaan ja kirjataan MES (Manufacturing
+    Execution System) -järjestelmäämme täydellisen jäljitettävyyden takaamiseksi.
+  </p>
+
+  <h2>Hitsauksen laatutestit – jokainen sauma, jokainen vene</h2>
+  <p>Hitsauksen eheys varmistetaan pakollisen neljän testin protokollalla:</p>
+  <ol>
+    <li>
+      <strong>Silmämääräinen tarkastus</strong> — 100 % saumoista tarkastetaan silmämääräisesti läpipalamisen, kohdistusvirheen,
+      likaantumisen tai epätäydellisen yhteensulautumisen varalta. Hylkäyksen kynnys: 0.5 % lineaarisista metreistä.
+    </li>
+    <li>
+      <strong>Kuorintatesti ()</strong> — Jokaisella tuotantoerällä hitsatusta testikuponista leikataan 25 mm leveä nauha.
+      Pienin kuorintavoima: 120 N/25 mm kohteelle PVC 1100 dtex.
+    </li>
+    <li>
+      <strong>Ilmanpidätystesti</strong> — Jokainen valmis kammio paineistetaan 1.25 × työpaineeseen ja pidetään 24-48 tuntia.
+      Painehäviö ei saa ylittää 2 %.
+    </li>
+    <li>
+      <strong>Lämpöpyöräilytesti</strong> — Näytekuponkeja vaihdetaan välillä -20 °C arvosta +60 °C 50 syklin ajan, minkä
+      jälkeen ne testataan uudelleen. Hyväksyttävä lujuushäviö: &lt; 10 %.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Kuoriutumislujuuden vertailu – RF vs kuumailmahitsaus (PVC 1100 dtex)
+    </p>
+    <div class="space-y-3">
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">RF-hitsaus</span><div
+          class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded"
+        >
+          <div class="h-full bg-blue-600 rounded" style="width:92%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">184 N</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">Kuuma ilma</span><div
+          class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded"
+        >
+          <div class="h-full bg-gray-400 rounded" style="width:65%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">130 N</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium"> min</span><div class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded">
+          <div class="h-full bg-green-500 rounded" style="width:48%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">96 N</span>
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      RF-hitsaus saavuttaa jatkuvasti 90-95 % perusmateriaalin lujuudesta, selvästi yli minimin.
+    </p>
+  </div>
+
+  <h2>Ammattimainen asiantuntemus</h2>
+  <p>
+    Hitsaustiimiämme johtaa vanhempi prosessiinsinööri, jolla on 11 vuoden kokemus pinnoitettujen tekstiilien
+    dielektrisestä hitsauksesta. Jokainen kuljettaja suorittaa 6 kuukauden sisäisen sertifiointiohjelman ennen kuin hän
+    saa työskennellä tuotantosaumoilla. Uudelleensertifiointi vaaditaan vuosittain, mukaan lukien käytännön
+    hitsaustesti, joka on arvioitu sisäisen A-luokan standardimme mukaan (kuoriutumislujuus ≥ 160 N/25 mm).
+  </p>
+
+  <h2>Räätälöidyt hitsausratkaisut ainutlaatuisiin tarpeisiin</h2>
+  <p>
+    Ymmärrämme, että yksi hitsausspesifikaatio ei sovi kaikkiin sovelluksiin. RF-hitsauskeskuksemme kehittää
+    rutiininomaisesti mukautettuja saumakokoonpanoja asiakkaille, joilla on erityisiä vaatimuksia:
+  </p>
+  <ul>
+    <li>
+      <strong>Monikerroksiset vahvistuspaikat</strong> — Kehitämme erittäin kuluville alueille, kuten hankaustalleille ja
+      keulakartiolle, monivaiheisia RF-hitsauksia, jotka integroivat kulutusta kestävän ulkokerroksen joustavuutta tinkimättä.
+    </li>
+    <li>
+      <strong>Johtavat tai läpinäkymättömät saumat</strong> — Sähkömagneettista suojausta vaativissa sotilas- tai valvonta-aluksissa
+      hitsaamme johtavia verkkokerroksia sauman pinossa.
+    </li>
+    <li>
+      <strong>Värinvaihtopaneelin hitsaus</strong> — kaksiväriset kangaspaneelit (esim. oranssi runko + harmaa yläpuoli),
+      jotka on hitsattu piilotetulla päällekkäisyydellä brändin esteettisyyden säilyttämiseksi ilman näkyvää liitoslinjaa.
+    </li>
+  </ul>
+
+  <h2>Sitoutumisemme sinulle</h2>
+  <p>
+    Jokaisella toimittamamme veneellä on hitsauksen laatutakuu: jos jokin sauma epäonnistuu normaalissa käytössä
+    takuuaikana, korjaamme tai vaihdamme vahingoittuneen kammion veloituksetta ja toistumisen estämiseksi suoritetaan
+    perussyytutkimus. Tämä ei ole pelkkä takuu – se on sitoutuminen jatkuvaan parantamiseen todellisen käyttötiedon
+    pohjalta.
+  </p>
+  <p>
+    Kun valitset {SITE.name}, valitset saumat, jotka on suunniteltu, testattu ja dokumentoitu – ei vain hitsattu. Tämä
+    on ero veneen, joka kelluu, ja veneen, joka toimii.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Keskustele hitsausvaatimuksistasi</h2>
+    <p class="mt-2 text-sm text-muted">Mukautetut saumatiedot, materiaalien yhteensopivuus tai prosessin validointi.</p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Ota yhteyttä hitsaustiimiimme</a
+    >
+  </div>
+</section>

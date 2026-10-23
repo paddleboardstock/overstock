@@ -1,0 +1,204 @@
+---
+import { SITE } from 'astrowind:config';
+const { lang = 'es' } = Astro.props;
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={`/${lang}/randdcenter`} class="text-sm text-gray-500 hover:underline">&larr; Volver al Centro de I+D</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Lab 04</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Canal de Ensayos Hidrodinámicos</h1>
+      <p class="mt-3 text-lg text-muted">Validando el rendimiento antes del primer prototipo a escala real</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-design-discussion-original.webp"
+        alt="Pruebas de rendimiento en el canal de ensayos hidrodinámicos de Aquafarer"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>¿Por qué ensayar en canal un barco pequeño?</h2>
+  <p>
+    Es un error común pensar que los ensayos hidrodinámicos están reservados a los buques oceánicos. En realidad, el
+    rendimiento de un casco de planeo pequeño — como un RIB de 4–5 m — depende tanto de su forma sumergida como un
+    petrolero de su bulbo de proa. El ángulo de trimado, la superficie mojada, la generación de salpicaduras y la
+    ventilación tienen un efecto drástico en la velocidad, el consumo de combustible y el confort de navegación. En
+    {SITE.name}, operamos un canal de ensayos hidrodinámicos dedicado que nos permite cuantificar estos efectos a escala
+    de modelo — antes de comprometer metal y tejido en un prototipo a tamaño real.
+  </p>
+  <p>
+    Ensayar a escala de modelo (normalmente de 1:3 a 1:5) nos permite iterar rápidamente sobre las formas del casco y de
+    forma rentable. Una semana en el canal puede generar los mismos datos de rendimiento que requerirían meses de prueba
+    y error a escala real — y a una fracción del coste.
+  </p>
+
+  <h2>Especificaciones de las instalaciones</h2>
+  <table>
+    <thead><tr><th>Parámetro</th><th>Especificación</th></tr></thead>
+    <tbody>
+      <tr><td>Dimensiones del canal</td><td>35 m (L) &times; 3.5 m (W) &times; 1.8 m (D)</td></tr>
+      <tr
+        ><td>Carro de remolque</td><td
+          >Accionado por servomotor eléctrico, velocidad máxima 12 m/s (23 kn), precisión de velocidad &plusmn; 0.5 %</td
+        ></tr
+      >
+      <tr
+        ><td>Generador de olas</td><td
+          >Tipo aleta, estados de mar regulares &amp; irregulares programables, Hs hasta 0.3 m a escala de modelo</td
+        ></tr
+      >
+      <tr
+        ><td>Instrumentación</td><td
+          >Dinamómetro de 6 componentes (resistencia, fuerza lateral, momento de guiñada), acelerómetros, inclinómetros,
+          sondas de ola</td
+        ></tr
+      >
+      <tr
+        ><td>Adquisición de datos</td><td
+          >Muestreo a 1000 Hz por canal, visualización en tiempo real + suite de postprocesado</td
+        ></tr
+      >
+      <tr
+        ><td>Fabricación de modelos</td><td
+          >Fresado CNC interno e impresión 3D para cascos modelo de hasta 1.8 m de eslora</td
+        ></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>Nuestro programa de ensayos</h2>
+  <p>Un programa estándar de desarrollo de cascos en nuestro canal sigue esta secuencia:</p>
+  <ol>
+    <li>
+      <strong>Construcción del modelo</strong> — Se fabrica por CNC un modelo a escala 1:3.5 a partir de espuma de alta densidad
+      y se lamina para darle rigidez. El peso y el centro de gravedad se ajustan para que coincidan con la condición de plena
+      carga escalada según Froude.
+    </li>
+    <li>
+      <strong>Carreras de resistencia</strong> — El modelo se remolca a 8-10 velocidades que abarcan el rango operativo. La
+      resistencia total se mide y se descompone en componentes friccional y residual mediante el método ITTC-1957.
+    </li>
+    <li>
+      <strong>Medición de trimado y asentamiento</strong> — El trimado y el asentamiento dinámicos se registran a cada velocidad.
+      Se persigue un ángulo de trimado óptimo de 4-6&deg; para cascos de planeo.
+    </li>
+    <li>
+      <strong>Estudio de la estela</strong> — Se miden los cortes transversales de la ola a dos velocidades para evaluar la
+      resistencia por olas e identificar interacciones transversales de ola que puedan causar interferencias en la popa.
+    </li>
+    <li>
+      <strong>Comportamiento en la mar (opcional)</strong> — Carreras con mar de proa y de popa en olas regulares para medir
+      la resistencia adicional, la aceleración vertical y la probabilidad de golpe.
+    </li>
+    <li>
+      <strong>Análisis de datos y recomendaciones</strong> — Se entrega un informe completo con gráficos comparativos, curvas
+      velocidad/potencia y recomendaciones de diseño específicas para el casco a escala real.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Resultados típicos de ensayo en canal — Resistencia frente a velocidad (casco RIB 450, escala 1:3.5)
+    </p>
+    <div class="space-y-2">
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">5 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:18%"></div>
+        </div><span class="w-16 text-right">42 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">10 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:35%"></div>
+        </div><span class="w-16 text-right">81 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">15 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:52%"></div>
+        </div><span class="w-16 text-right">121 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">20 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:68%"></div>
+        </div><span class="w-16 text-right">158 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">25 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:85%"></div>
+        </div><span class="w-16 text-right">197 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">30 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:100%"></div>
+        </div><span class="w-16 text-right">232 N</span>
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      Resistencia a escala de modelo (N) a velocidades escaladas según Froude. La predicción de potencia a escala real
+      sigue el método de predicción de rendimiento ITTC-1978.
+    </p>
+  </div>
+
+  <h2>Equipo de expertos</h2>
+  <p>
+    Nuestro canal está operado por un hidrodinámico con doctorado en arquitectura naval y 8 años de experiencia en
+    canales de remolque en un importante instituto europeo de investigación marítima. Cuenta con el apoyo de un técnico
+    que prepara todos los modelos e instrumentos. El equipo sigue los Procedimientos Recomendados de la ITTC
+    (Conferencia Internacional de Canales de Remolque) para garantizar que cada ensayo sea repetible, trazable y
+    defendible a nivel internacional.
+  </p>
+
+  <h2>Ensayos en canal para el desarrollo de cascos personalizados</h2>
+  <p>
+    Nuestro canal no se utiliza solo para los cascos diseñados por la casa — realizamos con regularidad programas de
+    ensayo para clientes que quieren validar una forma de casco personalizada o investigar un problema de rendimiento:
+  </p>
+  <ul>
+    <li>
+      <strong>Comparación de formas de casco</strong> — Dos o más formas candidatas ensayadas en condiciones idénticas, lo
+      que proporciona una comparación objetiva de resistencia/velocidad/estabilidad para fundamentar su decisión de diseño.
+    </li>
+    <li>
+      <strong>Optimización de apéndices</strong> — Las placas interceptoras, los spray rails, los aletones de trimado y los
+      strakes pueden ensayarse en distintas configuraciones para cuantificar su contribución individual a la reducción de
+      la resistencia.
+    </li>
+    <li>
+      <strong>Estudio de adecuación del motor</strong> — Los datos de resistencia se convierten en una curva de predicción
+      de potencia, lo que le permite seleccionar la potencia de motor óptima para su velocidad y carga útil objetivo.
+    </li>
+  </ul>
+
+  <h2>¿Por qué ensayar con nosotros?</h2>
+  <p>
+    No le damos simplemente un conjunto de cifras en bruto. Nuestros informes traducen los datos del canal en
+    recomendaciones de ingeniería accionables: «Eleve el spray rail 8 mm para reducir la superficie mojada a velocidad
+    de crucero», «Aumente el deadrise en el espejo de popa 3&deg; para reducir la aceleración de golpe» o «Desplace el
+    centro de gravedad longitudinal 150 mm hacia popa para mejorar la actitud de planeo». Usted se marcha con una idea
+    clara de qué cambiar y por qué.
+  </p>
+  <p>
+    Nuestro canal también está disponible para ensayos independientes de terceros sobre la base de pago por servicio. Si
+    está desarrollando un casco y desea una evaluación hidrodinámica imparcial y ejecutada profesionalmente, agradecemos
+    su consulta.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Reserve una sesión de ensayo en el canal</h2>
+    <p class="mt-2 text-sm text-muted">
+      Tanto si necesita un programa de desarrollo completo como una única prueba comparativa, podemos adaptarnos a su
+      calendario.
+    </p>
+    <a
+      href={`/${lang}/contact`}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Contacte con nuestro equipo de hidrodinámica</a
+    >
+  </div>
+</section>

@@ -1,0 +1,442 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { languages, defaultLang } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+import CeDe from '~/components/research/ce-certification-guide.de.astro';
+import CeEs from '~/components/research/ce-certification-guide.es.astro';
+import CeFr from '~/components/research/ce-certification-guide.fr.astro';
+import CeIt from '~/components/research/ce-certification-guide.it.astro';
+import CeCs from '~/components/research/ce-certification-guide.cs.astro';
+import CeSv from '~/components/research/ce-certification-guide.sv.astro';
+import CeDa from '~/components/research/ce-certification-guide.da.astro';
+import CeEl from '~/components/research/ce-certification-guide.el.astro';
+import CeNo from '~/components/research/ce-certification-guide.no.astro';
+import CeRu from '~/components/research/ce-certification-guide.ru.astro';
+import CeNl from '~/components/research/ce-certification-guide.nl.astro';
+import CeFi from '~/components/research/ce-certification-guide.fi.astro';
+import CePl from '~/components/research/ce-certification-guide.pl.astro';
+import CeAr from '~/components/research/ce-certification-guide.ar.astro';
+import CePt from '~/components/research/ce-certification-guide.pt.astro';
+import CeJa from '~/components/research/ce-certification-guide.ja.astro';
+import CeMs from '~/components/research/ce-certification-guide.ms.astro';
+import CeRo from '~/components/research/ce-certification-guide.ro.astro';
+import CeSk from '~/components/research/ce-certification-guide.sk.astro';
+import CeSl from '~/components/research/ce-certification-guide.sl.astro';
+import CeSr from '~/components/research/ce-certification-guide.sr.astro';
+import CeTh from '~/components/research/ce-certification-guide.th.astro';
+import CeTl from '~/components/research/ce-certification-guide.tl.astro';
+import CeTr from '~/components/research/ce-certification-guide.tr.astro';
+import CeBg from '~/components/research/ce-certification-guide.bg.astro';
+import CeEt from '~/components/research/ce-certification-guide.et.astro';
+import CeHe from '~/components/research/ce-certification-guide.he.astro';
+import CeHr from '~/components/research/ce-certification-guide.hr.astro';
+import CeHu from '~/components/research/ce-certification-guide.hu.astro';
+import CeId from '~/components/research/ce-certification-guide.id.astro';
+import CeKo from '~/components/research/ce-certification-guide.ko.astro';
+import CeLt from '~/components/research/ce-certification-guide.lt.astro';
+import CeLv from '~/components/research/ce-certification-guide.lv.astro';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => getUiForLang(lang || defaultLang)?.[key] || '';
+
+const META: Record<string, { title: string; description: string }> = {
+  en: {
+    title: 'How CE Certification Works for Inflatable Watercraft',
+    description:
+      'Complete guide to CE certification for inflatable boats, SUPs, and kayaks. Applicable directives (2013/53/EU RCD, PPE 2016/425), testing protocols, notified bodies, technical file requirements, and manufacturer obligations.',
+  },
+  de: {
+    title: 'So funktioniert die CE-Zertifizierung für aufblasbare Wasserfahrzeuge',
+    description:
+      'Vollständiger Leitfaden zur CE-Zertifizierung für Schlauchboote, SUPs und Kajaks. Anwendbare Richtlinien (2013/53/EU RCD, PPE 2016/425), Prüfprotokolle, benannte Stellen, Anforderungen an die technische Dokumentation und Herstellerpflichten.',
+  },
+  es: {
+    title: 'Cómo funciona la certificación CE para embarcaciones hinchables',
+    description:
+      'Guía completa sobre la certificación CE para barcas hinchables, SUP y kayaks. Directivas aplicables (2013/53/EU RCD, PPE 2016/425), protocolos de ensayo, organismos notificados, requisitos del expediente técnico y obligaciones del fabricante.',
+  },
+  fr: {
+    title: 'Comment fonctionne la certification CE pour les embarcations gonflables',
+    description:
+      'Guide complet sur la certification CE pour bateaux gonflables, SUPs et kayaks. Directives applicables (2013/53/EU RCD, PPE 2016/425), protocoles de test, organismes notifiés, exigences du dossier technique et obligations du fabricant.',
+  },
+  it: {
+    title: 'Come funziona la certificazione CE per i natanti gonfiabili',
+    description:
+      'Guida completa alla certificazione CE per gommoni, SUP e kayak. Direttive applicabili (2013/53/EU RCD, PPE 2016/425), protocolli di prova, organismi notificati, requisiti del fascicolo tecnico e obblighi del fabbricante.',
+  },
+  cs: {
+    title: 'Jak funguje certifikace CE pro nafukovací vodní skútry',
+    description:
+      'Kompletní průvodce certifikací CE pro nafukovací čluny, SUP a kajaky. Platné směrnice (2013/53/EU RCD, PPE 2016/425), zkušební protokoly, notifikované osoby, požadavky na technickou dokumentaci a povinnosti výrobce.',
+  },
+  sv: {
+    title: 'Hur CE-certifiering fungerar för uppblåsbara vattenskotrar',
+    description:
+      'Komplett guide till CE-certifiering för uppblåsbara båtar, SUP:er och kajaker. Tillämpliga direktiv (2013/53/EU RCD, PPE 2016/425), testprotokoll, anmälda organ, krav på teknisk fil och tillverkarens skyldigheter.',
+  },
+  da: {
+    title: 'Sådan fungerer CE-certificering for oppustelige vandfartøjer',
+    description:
+      "Komplet guide til CE certificering for gummibåde, SUP'er og kajakker. Gældende direktiver (2013/53/EU RCD, PPE 2016/425), testprotokoller, bemyndigede organer, krav til tekniske filer og fabrikantens forpligtelser.",
+  },
+  el: {
+    title: 'Πώς λειτουργεί η πιστοποίηση CE για φουσκωτά σκάφη',
+    description:
+      'Πλήρης οδηγός για την πιστοποίηση CE για φουσκωτά σκάφη, SUP και καγιάκ. Ισχύουσες οδηγίες (2013/53/EU RCD, PPE 2016/425), πρωτόκολλα δοκιμών, κοινοποιημένοι φορείς, απαιτήσεις τεχνικού φακέλου και υποχρεώσεις κατασκευαστή.',
+  },
+  no: {
+    title: 'Hvordan CE-sertifisering fungerer for oppblåsbare vannscootere',
+    description:
+      'Komplett guide til CE-sertifisering for gummibåter, SUP-er og kajakker. Gjeldende direktiver (2013/53/EU RCD, PPE 2016/425), testprotokoller, meldte organer, krav til tekniske filer og produsentens forpliktelser.',
+  },
+  ru: {
+    title: 'Как работает сертификация CE для надувных гидроциклов',
+    description:
+      'Полное руководство по сертификации CE для надувных лодок, SUP-серфинга и каяков. Применимые директивы (2013/53/EU RCD, PPE 2016/425), протоколы испытаний, уполномоченные органы, требования к техническим файлам и обязательства производителя.',
+  },
+  nl: {
+    title: 'Hoe CE-certificering werkt voor opblaasbare waterscooters',
+    description:
+      "Volledige gids voor CE-certificering voor opblaasbare boten, SUP's en kajaks. Toepasselijke richtlijnen (2013/53/EU RCD, PPE 2016/425), testprotocollen, aangemelde instanties, technische dossiervereisten en verplichtingen van fabrikanten.",
+  },
+  fi: {
+    title: 'Miten puhallettavien vesikulkuneuvojen CE-sertifiointi toimii',
+    description:
+      'Täydellinen opas CE-sertifiointiin kumiveneille, SUP:ille ja kajakkeille. Sovellettavat direktiivit (2013/53/EU RCD, PPE 2016/425), testausprotokollat, ilmoitetut laitokset, teknisten tiedostojen vaatimukset ja valmistajan velvoitteet.',
+  },
+  pl: {
+    title: 'Jak działa certyfikacja CE w przypadku nadmuchiwanych jednostek pływających',
+    description:
+      'Kompletny przewodnik po certyfikacji CE dla pontonów, desek SUP i kajaków. Obowiązujące dyrektywy (2013/53/UE RCD, PPE 2016/425), protokoły badań, jednostki notyfikowane, wymagania dotyczące dokumentacji technicznej i obowiązki producenta.',
+  },
+  ar: {
+    title: 'كيف تعمل شهادة CE للمركبات المائية القابلة للنفخ',
+    description:
+      'الدليل الكامل لشهادة CE للقوارب القابلة للنفخ وSUPs وقوارب الكاياك. التوجيهات المعمول بها (2013/53/EU RCD، معدات الوقاية الشخصية 2016/425)، وبروتوكولات الاختبار، والهيئات المبلغة، ومتطلبات الملفات الفنية، والتزامات الشركة المصنعة.',
+  },
+  pt: {
+    title: 'Como funciona a certificação CE para embarcações infláveis',
+    description:
+      'Guia completo para certificação CE para barcos infláveis, SUPs e caiaques. Diretivas aplicáveis ​​(2013/53/UE RCD, PPE 2016/425), protocolos de teste, organismos notificados, requisitos de arquivos técnicos e obrigações do fabricante.',
+  },
+  ja: {
+    title: 'インフレータブルウォータークラフトに対するCE認定の仕組み',
+    description:
+      'インフレータブル ボート、SUP、カヤックの CE 認定への完全なガイド。適用される指令 (2013/53/EU RCD、PPE 2016/425)、試験プロトコル、認証機関、技術ファイル要件、および製造業者の義務。',
+  },
+  ms: {
+    title: 'Bagaimana CE Pensijilan Berfungsi untuk Kenderaan Air Boleh Tiup',
+    description:
+      'Panduan lengkap untuk pensijilan CE bagi bot tiup, SUPs, dan kayak. Arahan yang berkenaan (2013/53/EU RCD, PPE 2016/425), protokol ujian, badan yang dimaklumkan, keperluan fail teknikal, dan obligasi pengeluar.',
+  },
+  ro: {
+    title: 'Cum Funcționează Certificarea CE pentru Ambarcațiuni Gonflabile',
+    description:
+      'Ghid complet pentru certificarea CE a bărcilor gonflabile, SUPs și a caiacurilor. Directive aplicabile (2013/53/UE RCD, EPI 2016/425), protocoale de testare, organisme notificate, cerințe pentru dosarul tehnic și obligațiile producătorului.',
+  },
+  sk: {
+    title: 'Ako funguje CE certifikácia pre nafukovacie vodné plavidlá',
+    description:
+      'Kompletný sprievodca CE certifikáciou nafukovacích lodí, SUPs a kajakov. Platné smernice (2013/53/EÚ RCD, OOP 2016/425), testovacie protokoly, notifikované orgány, požiadavky na technický spis a povinnosti výrobcov.',
+  },
+  sl: {
+    title: 'Kako deluje CE certifikacija za napihljive vodne plovbe',
+    description:
+      'Popoln vodič za CE certifikacijo napihljivih čolnov, SUPs in kajakov. Uveljavljive direktive (2013/53/EU RCD, OOP 2016/425), protokoli testiranja, obveščeni organi, zahteve za tehnične datoteke in obveznosti proizvajalcev.',
+  },
+  sr: {
+    title: 'Kako CE sertifikacija funkcioniše za napuhavajuće plovilo',
+    description:
+      'Kompletan vodič za CE sertifikaciju napuhavajućih čamaca, SUPs i kajaka. Primjenjive direktive (2013/53/EU RCD, PPE 2016/425), protokoli testiranja, obaveštena tela, zahtevi za tehničku dokumentaciju i obaveze proizvođača.',
+  },
+  th: {
+    title: 'การรับรอง CE ทำงานอย่างไรสำหรับเรือเป่าลม',
+    description:
+      'คู่มือสมบูรณ์สำหรับการรับรอง CE สำหรับเรือเป่าลม, SUPs, และเรือคายัค ข้อกำหนดที่ใช้บังคับ (2013/53/EU RCD, PPE 2016/425), โปรโตคอลการทดสอบ, หน่วยงานที่ได้รับแจ้ง, ข้อกำหนดไฟล์เทคนิค, และภาระผูกพันของผู้ผลิต',
+  },
+  tl: {
+    title: 'Paano Gumagana ang CE Certification para sa Inflatable Watercraft',
+    description:
+      'Kompletong gabay sa CE certification para sa mga inflatable boat, SUPs, at kayak. Mga naaangkop na direktiba (2013/53/EU RCD, PPE 2016/425), mga protocol sa pagsubok, mga notified bodies, mga kinakailangan sa technical file, at mga obligasyon ng gumawa.',
+  },
+  tr: {
+    title: 'Şişme Su Araçları için CE Sertifikası Nasıl Çalışır',
+    description:
+      'Şişme tekneler, SUPs ve kayıklar için CE sertifikası hakkında eksiksiz rehber. Uygulanabilir yönergeler (2013/53/AB RCD, KKE 2016/425), test protokolleri, bilgilendirilmiş kuruluşlar, teknik dosya gereksinimleri ve üretici yükümlülükleri.',
+  },
+  bg: {
+    title: 'Как работи сертифицирането CE за надуваеми плавателни съдове',
+    description:
+      'Пълен наръчник за сертифициране CE на надуваеми лодки, SUPs и каяци. Приложими директиви (2013/53/ЕС RCD, СИЗ 2016/425), протоколи за тестване, уведомени органи, изисквания за техническа документация и задължения на производителя.',
+  },
+  et: {
+    title: 'Kuidas CE sertifitseerimine töötab täispuhutavate veesõidukite jaoks',
+    description:
+      'Täitlik juhend CE sertifitseerimise kohta täispuhutavate paatide, SUPs ja kajakite jaoks. Kohaldatavad direktiivid (2013/53/EU RCD, PPE 2016/425), testimisprotokollid, teavitatud asutused, tehnilise faili nõuded ja tootja kohustused.',
+  },
+  he: {
+    title: 'איך תעודת CE עובדת לכלי שיט מתנפחים',
+    description:
+      'המדריך המלא לתקנת CE לסירות מתנפחות, SUPs, וקיאקים. הוראות ישימות (2013/53/האיחוד האירופי RCD, ציוד מגן אישי 2016/425), פרוטוקולי בדיקה, גופים מוכרים, דרישות קובץ טכני, וחובות היצרן.',
+  },
+  hr: {
+    title: 'Kako CE certifikacija funkcionira za napuhavajuća plovila',
+    description:
+      'Potpuni vodič za CE certifikaciju za napuhavajuće čamce, SUPs i kajake. Primjenjive direktive (2013/53/EU RCD, PPE 2016/425), protokoli testiranja, obaviještena tijela, zahtjevi tehničke dokumentacije i obveze proizvođača.',
+  },
+  hu: {
+    title: 'Hogyan működik a CE tanúsítás a felfújható vízi járműveknél',
+    description:
+      'Teljes útmutató a CE tanúsításhoz felfújható hajók, SUPs és kajakok esetében. Alkalmazandó irányelvek (2013/53/EU RCD, PPE 2016/425), tesztelési protokollok, bejelentett szervezetek, műszaki dokumentáció követelményei és a gyártók kötelezettségei.',
+  },
+  id: {
+    title: 'Bagaimana CE Sertifikasi Bekerja untuk Perahu Karet',
+    description:
+      'Panduan lengkap untuk sertifikasi CE untuk perahu karet, SUPs, dan kayak. Arahan yang berlaku (2013/53/EU RCD, APD 2016/425), protokol pengujian, badan yang diberitahukan, persyaratan berkas teknis, dan kewajiban produsen.',
+  },
+  ko: {
+    title: '에어로빅 수상 기구용 CE 인증 작동 방식',
+    description:
+      '에어로빅 보트, SUPs, 카약용 CE 인증에 대한 완전 가이드. 적용 가능한 지침(2013/53/EU RCD, PPE 2016/425), 테스트 프로토콜, 공인 기관, 기술 파일 요구 사항, 제조업체 의무.',
+  },
+  lt: {
+    title: 'Kaip CE sertifikacija veikia pripučiamoms vandens transporto priemonėms',
+    description:
+      'Išsamus vadovas apie CE sertifikaciją pripučiamoms valtims, SUPs ir baidarėms. Taikytinos direktyvos (2013/53/ES RCD, APS 2016/425), testavimo protokolai, praneštos institucijos, techninio failo reikalavimai ir gamintojų įsipareigojimai.',
+  },
+  lv: {
+    title: 'Kā CE sertifikācija darbojas piepūšamiem ūdens transportlīdzekļiem',
+    description:
+      'Pilnīgs ceļvedis CE sertifikācijai piepūšamām laivām, SUPs un kajakiem. Piemērojami direktīvas (2013/53/ES RCD, AAD 2016/425), testēšanas protokoli, paziņotās iestādes, tehniskās dokumentācijas prasības un ražotāja pienākumi.',
+  },
+};
+const meta = META[lang] || META.en;
+
+const ResearchBody: any =
+  (
+    {
+      de: CeDe,
+      es: CeEs,
+      fr: CeFr,
+      it: CeIt,
+      cs: CeCs,
+      sv: CeSv,
+      da: CeDa,
+      el: CeEl,
+      no: CeNo,
+      ru: CeRu,
+      nl: CeNl,
+      fi: CeFi,
+      pl: CePl,
+      ar: CeAr,
+      pt: CePt,
+      ja: CeJa,
+      ms: CeMs,
+      ro: CeRo,
+      sk: CeSk,
+      sl: CeSl,
+      sr: CeSr,
+      th: CeTh,
+      tl: CeTl,
+      tr: CeTr,
+      bg: CeBg,
+      et: CeEt,
+      he: CeHe,
+      hr: CeHr,
+      hu: CeHu,
+      id: CeId,
+      ko: CeKo,
+      lt: CeLt,
+      lv: CeLv,
+    } as Record<string, any>
+  )[lang] || null;
+
+const metadata = {
+  title: `${meta.title} | ${SITE.name}`,
+  description: meta.description,
+  ignoreTitleTemplate: true,
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: meta.title,
+  description: metadata.description,
+  author: { '@type': 'Organization', name: SITE.name },
+  datePublished: '2024-03-05',
+  dateModified: '2025-04-20',
+};
+
+const faqSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What CE certification is required for inflatable boats?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Recreational craft per EU Directive 2013/53/EU (RCD). Requires stability, buoyancy, and construction compliance per ISO 6185 and ISO 12217.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How long does CE certification take?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'For standard models with existing compliance documentation: concurrent with production. New models: 4-8 weeks including testing and documentation.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What does a CE Declaration of Conformity include?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Product identification, applicable directives, applied standards, manufacturer details, and signed declaration. Required for every CE-marked product.',
+      },
+    },
+  ],
+});
+---
+
+<Layout metadata={metadata}>
+  <JsonLd data={jsonLd} />
+
+  <article class="max-w-4xl mx-auto px-6 py-16">
+    <nav class="text-sm text-gray-500 mb-8">
+      <a href={`/${lang}/`} class="hover:text-sky-600">{SITE.name}</a>
+      <span class="mx-2">/</span>
+      <a href={`/${lang}/research`} class="hover:text-sky-600">{t('home.research.title')}</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-900">{t('home.research.ceCertification')}</span>
+    </nav>
+
+    <div class="mb-4">
+      <span
+        class="inline-block text-xs font-semibold uppercase tracking-wider text-sky-600 bg-sky-50 px-3 py-1 rounded-full"
+        >Compliance</span
+      >
+      <span class="ml-3 text-sm text-gray-400">7 min read</span>
+    </div>
+
+    <h1 class="text-4xl font-bold text-gray-900 mb-6">{t('home.research.ceCertification')}</h1>
+    <p class="text-xl text-gray-500 mb-12 leading-relaxed">{t('home.research.ceCertification.desc')}</p>
+
+    <div class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600">
+      {
+        ResearchBody ? (
+          <ResearchBody lang={lang} />
+        ) : (
+          <div class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600">
+            <h2>What Is CE Certification?</h2>
+            <p>
+              CE marking (Conformit&eacute; Europ&eacute;enne) indicates that a product meets EU health, safety, and
+              environmental requirements. For inflatable watercraft, the relevant regulatory framework depends on the
+              product category.
+            </p>
+
+            <h2>Applicable Directives</h2>
+
+            <h3>Recreational Craft Directive (2013/53/EU)</h3>
+            <p>
+              The primary directive for most inflatable boats, SUPs, and kayaks. It applies to recreational craft from
+              2.5 m to 24 m hull length, partially completed boats (for OEM supply), and personal watercraft.
+            </p>
+
+            <h3>Personal Protective Equipment Regulation (2016/425)</h3>
+            <p>
+              Life jackets, buoyancy aids, and safety equipment supplied with watercraft must meet PPE Regulation
+              requirements, including type examination (Module B) by a notified body and production quality assurance
+              (Module D or E).
+            </p>
+
+            <h2>The Certification Process</h2>
+            <ol>
+              <li>Product classification: Determine craft design category (A – D per ISO 8666)</li>
+              <li>
+                Applicable standards: EN ISO 6185 (Parts 1 – 4), EN ISO 10087 (HIN), EN ISO 14945 (builder's plate)
+              </li>
+              <li>
+                Technical file preparation: Design drawings, Bill of Materials, material certificates, risk assessment
+              </li>
+              <li>Type testing: Buoyancy, stability, load capacity, material testing, seam strength, air retention</li>
+              <li>Factory production control: Notified body audit of manufacturing processes</li>
+              <li>Declaration of Conformity: Manufacturer signs DoC, affixes CE marking</li>
+            </ol>
+
+            <h2>Notified Bodies for Inflatable Watercraft</h2>
+            <p>
+              Common NBs include Bureau Veritas (France), DNV GL (Germany), RINA (Italy), T&Uuml;V Rheinland / T&Uuml;V
+              S&Uuml;D (Germany).
+            </p>
+
+            <h2>Timeline and Costs</h2>
+            <table class="w-full text-sm border-collapse">
+              <thead>
+                <tr class="bg-gray-100">
+                  <th class="p-3 text-left font-semibold text-gray-900 border">Phase</th>
+                  <th class="p-3 text-left font-semibold text-gray-900 border">Duration</th>
+                  <th class="p-3 text-left font-semibold text-gray-900 border">Typical Cost (EUR)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <>
+                    <td class="p-3 border">Technical file preparation</td>
+                    <td class="p-3 border">2 – 4 weeks</td>
+                    <td class="p-3 border">2,000 – 5,000</td>
+                  </>
+                </tr>
+                <tr>
+                  <>
+                    <td class="p-3 border">Type testing</td>
+                    <td class="p-3 border">4 – 8 weeks</td>
+                    <td class="p-3 border">8,000 – 20,000</td>
+                  </>
+                </tr>
+                <tr>
+                  <>
+                    <td class="p-3 border">Factory audit</td>
+                    <td class="p-3 border">1 – 2 days (on-site)</td>
+                    <td class="p-3 border">3,000 – 6,000</td>
+                  </>
+                </tr>
+                <tr>
+                  <>
+                    <td class="p-3 border">Total (first product)</td>
+                    <td class="p-3 border">8 – 14 weeks</td>
+                    <td class="p-3 border">13,000 – 31,000</td>
+                  </>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2>What This Means for Buyers</h2>
+            <p>
+              When purchasing CE-certified inflatable boats, always verify the CE marking is on the builder's plate, a
+              valid DoC exists, the Notified Body number is listed, and the owner's manual includes safety instructions
+              in your local language. Aquafarer's 64 CE-certified models include recreational craft and PFDs, with full
+              traceability to the notified body audit reports. We provide DoCs and test summaries upon request.
+            </p>
+          </div>
+        )
+      }
+    </div>
+
+    <div class="mt-16 pt-8 border-t border-gray-200">
+      <a href={`/${lang}/research`} class="text-sky-600 hover:text-sky-700 font-medium"
+        >&larr; {t('home.research.tagline')}</a
+      >
+    </div>
+  </article>
+  <script is:inline type="application/ld+json" set:html={faqSchema} />
+</Layout>

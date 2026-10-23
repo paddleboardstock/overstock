@@ -1,0 +1,277 @@
+---
+const PAGE_DESC: Record<string, { description: string }> = {
+  de: {
+    description:
+      'OEM/ODM-Hersteller von Schlauchbooten und SUP-Boards. Individuelle Designs, Private Label, Großserienproduktion. Mindestabnahme 5–10 Einheiten (SUP/Kajak), 2–5 Einheiten (RIB), CE-zertifiziert, 30 Tage Vorlaufzeit. Direkt ab Werk in China.',
+  },
+  es: {
+    description:
+      'Fabricante OEM/ODM de barcos inflables y tablas de SUP. Diseños personalizados, marca privada, producción en serie. MOQ 5–10 unidades (SUP/kayak), 2–5 unidades (RIB), certificación CE, plazo de entrega de 30 días. Directo de fábrica en China.',
+  },
+  fr: {
+    description:
+      "Fabricant OEM/ODM d'annexes gonflables et de planches de SUP. Conceptions personnalisées, marque privée, production en série. MOQ 5–10 unités (SUP/kayak), 2–5 unités (RIB), certifié CE, délai de 30 jours. Usine directe en Chine.",
+  },
+  it: {
+    description:
+      'Produttore OEM/ODM di gommoni e tavole SUP. Design personalizzati, private label, produzione in serie. MOQ 5–10 unità (SUP/kayak), 2–5 unità (RIB), certificato CE, tempi di consegna di 30 giorni. Direttamente dalla fabbrica in Cina.',
+  },
+  cs: {
+    description:
+      'OEM/ODM výrobce nafukovacích člunů a desek SUP. Individuální návrhy, privátní značka, velkosériová výroba. Minimální objednávka 5-10 jednotek (SUP/Kayak), 2-5 jednotek (RIB), certifikováno CE, dodací lhůta 30 dní. Přímo z továrny v Číně.',
+  },
+  sv: {
+    description:
+      'OEM/ODM tillverkare av uppblåsbara båtar och SUP brädor. Individuell design, private label, storskalig produktion. Minsta beställning 5-10 enheter (SUP/kajak), 2-5 enheter (RIB), CE certifierade, 30 dagars ledtid. Direkt från fabriken i Kina.',
+  },
+  da: {
+    description:
+      'OEM/ODM producent af gummibåde og SUP boards. Individuelle designs, private label, produktion i stor skala. Minimumsbestilling 5-10 enheder (SUP/kajak), 2-5 enheder (RIB), CE certificeret, 30 dages leveringstid. Direkte fra fabrikken i Kina.',
+  },
+  el: {
+    description:
+      'OEM/ODM κατασκευαστής φουσκωτών σκαφών και SUP σανίδων. Μεμονωμένα σχέδια, ιδιωτική ετικέτα, μεγάλης κλίμακας παραγωγή. Ελάχιστη παραγγελία 5-10 μονάδες (SUP/Καγιάκ), 2-5 μονάδες (RIB), CE πιστοποίηση, χρόνος παράδοσης 30 ημέρες. Απευθείας από το εργοστάσιο στην Κίνα.',
+  },
+  no: {
+    description:
+      'OEM/ODM produsent av oppblåsbare båter og SUP brett. Individuelle design, private label, storskala produksjon. Minimumsbestilling 5-10 enheter (SUP/kajakk), 2-5 enheter (RIB), CE sertifisert, 30 dagers leveringstid. Direkte fra fabrikken i Kina.',
+  },
+  ru: {
+    description:
+      'OEM/ODM производитель надувных лодок и досок SUP. Индивидуальный дизайн, частная торговая марка, крупносерийное производство. Минимальный заказ 5–10 единиц (SUP/каяк), 2–5 единиц (RIB), сертификат CE, срок выполнения заказа 30 дней. Прямо с завода в Китае.',
+  },
+  nl: {
+    description:
+      'OEM/ODM fabrikant van opblaasbare boten en SUP boards. Individuele ontwerpen, private label, grootschalige productie. Minimale bestelling 5-10 eenheden (SUP/Kayak), 2-5 eenheden (RIB), CE gecertificeerd, 30 dagen levertijd. Rechtstreeks uit de fabriek in China.',
+  },
+  fi: {
+    description:
+      'OEM/ODM puhallettavien veneiden ja SUP lautojen valmistaja. Yksilölliset mallit, oma merkki, suurtuotanto. Minimitilaus 5-10 yksikköä (SUP/kajakki), 2-5 yksikköä (RIB), CE sertifioitu, toimitusaika 30 päivää. Suoraan Kiinan tehtaalta.',
+  },
+  pl: {
+    description:
+      'OEM/ODM producent pontonów i desek SUP. Projekty indywidualne, marka własna, produkcja na dużą skalę. Minimalne zamówienie 5-10 sztuk (SUP/Kajak), 2-5 jednostek (RIB), certyfikat CE, czas realizacji 30 dni. Bezpośrednio z fabryki w Chinach.',
+  },
+  ar: {
+    description:
+      'OEM/ODM الشركة المصنعة للقوارب القابلة للنفخ وألواح SUP. التصاميم الفردية، العلامة الخاصة، الإنتاج على نطاق واسع. الحد الأدنى للطلب 5-10 وحدات (SUP/كاياك)، 2-5 وحدات (RIB)، CE معتمدة، مهلة 30 يومًا. مباشرة من المصنع في الصين.',
+  },
+  pt: {
+    description:
+      'OEM/ODM fabricante de barcos infláveis ​​e pranchas SUP. Projetos individuais, marca própria, produção em larga escala. Pedido mínimo de 5 a 10 unidades (SUP/Kayak), 2 a 5 unidades (RIB), certificado CE, prazo de entrega de 30 dias. Diretamente da fábrica na China.',
+  },
+  ja: {
+    description:
+      'OEM/ODM インフレータブル ボートと SUP ボードのメーカー。個別のデザイン、プライベートブランド、大規模生産。最小注文数は 5 ～ 10 ユニット (SUP/Kayak)、2 ～ 5 ユニット (RIB)、CE 認定、リードタイムは 30 日です。中国の工場から直接お届けします。',
+  },
+};
+const PAGE_META: Record<string, { title: string }> = {
+  de: { title: 'Maßanfertigung' },
+  es: { title: 'Personalización' },
+  fr: { title: 'Sur mesure' },
+  it: { title: 'Personalizzazione' },
+  pt: { title: 'Personalização' },
+  ar: { title: 'التخصيص' },
+  ru: { title: 'На заказ' },
+  pl: { title: 'Personalizacja' },
+  nl: { title: 'Maatwerk' },
+  sv: { title: 'Skräddarsytt' },
+  no: { title: 'Skreddersydd' },
+  el: { title: 'Κατασκευή κατά παραγγελία' },
+  fi: { title: 'Räätälöinti' },
+  da: { title: 'Skræddersyet' },
+  cs: { title: 'Vyrobeno na zakázku' },
+  ja: { title: 'カスタムメイド' },
+};
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import { languages } from '~/i18n/config';
+import { getPageContent, setPageContentData } from '~/i18n/page-content';
+import __pageData from '~/i18n/generated/pages/custom.ts';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => getUiForLang(lang)?.[key] || '';
+setPageContentData(__pageData);
+const page = getPageContent(lang, 'custom') || {};
+const hero = page.hero || {};
+const stepsSection = page.steps_section || {};
+const steps = stepsSection.steps || [];
+const servicesSection = page.services_section || {};
+const services = servicesSection.items || [];
+const capabilitiesSection = page.capabilities_section || {};
+const capabilities = capabilitiesSection.capabilities || [];
+const whySection = page.why_section || {};
+const points = whySection.points || [];
+const contact = whySection.contact || {};
+
+const metadata = {
+  title: PAGE_META[lang]?.title || 'Custom Lab — OEM/ODM Inflatable Watercraft Manufacturer',
+  description:
+    PAGE_DESC[lang]?.description ||
+    'OEM/ODM inflatable boat & SUP manufacturer. Custom designs, private label, bulk production. MOQ 5–10 units (SUP/kayak), 2–5 units (RIB), CE certified, 30-day lead time. China factory direct.',
+};
+
+const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: 'Custom Lab' }];
+
+const faqSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What custom options are available?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Custom hull design, tube configuration, deck layout, materials (PVC or Hypalon), branding, colors, and packaging.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How do I start a custom project?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Submit your requirements via the Request Quotation form. Our engineering team develops CAD drawings and prototypes for approval.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the MOQ for custom products?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Custom products with new molds require 200+ units. Modifications to existing models may qualify for lower MOQs.',
+      },
+    },
+  ],
+});
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <section
+    class="relative min-h-[60vh] flex items-center justify-center text-center text-white overflow-hidden bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a]"
+  >
+    <div class="relative z-10 max-w-4xl mx-auto px-6 py-24">
+      <p class="text-sm font-semibold uppercase tracking-wider text-sky-400">{hero.tagline}</p>
+      <h1 class="mt-4 text-5xl md:text-7xl font-bold tracking-tight leading-[1.1]" set:html={hero.title} />
+      <p class="mt-6 text-lg text-white/70 max-w-2xl mx-auto">{hero.subtitle}</p>
+      <div class="mt-10 flex justify-center gap-4 flex-wrap">
+        <a
+          href={`/${lang}${hero.footer_link || '/contact'}`}
+          class="px-8 py-4 bg-white text-gray-900 rounded-full font-semibold hover:bg-gray-50 transition"
+        >
+          {hero.cta} →
+        </a>
+        <a
+          href={`/${lang}/factory`}
+          class="px-8 py-4 border border-white/30 text-white rounded-full font-medium hover:bg-white/10 transition"
+        >
+          Visit our factory
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-6xl mx-auto py-24 px-6">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">{stepsSection.tagline}</span>
+      <h2 class="mt-4 text-3xl font-semibold text-gray-900">{stepsSection.title}</h2>
+      <p class="mt-4 text-lg text-gray-500">{stepsSection.subtitle}</p>
+    </div>
+    <div class="grid md:grid-cols-4 gap-6">
+      {
+        steps.map((s: any) => (
+          <div class="relative bg-white border border-gray-200 rounded-2xl p-6 text-center hover:shadow-md transition-shadow">
+            <span class="block text-4xl font-bold text-sky-600/20">{s.num}</span>
+            <h3 class="mt-2 text-lg font-semibold text-gray-900">{s.title}</h3>
+            <p class="mt-2 text-sm text-gray-500">{s.desc}</p>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="bg-gray-50 py-24 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">{servicesSection.tagline}</span>
+        <h2 class="mt-4 text-3xl font-semibold text-gray-900">{servicesSection.title}</h2>
+        <p class="mt-4 text-lg text-gray-500">{servicesSection.subtitle}</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {
+          services.map((svc: any) => (
+            <div class="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-shadow">
+              <span class="text-3xl">{svc.icon}</span>
+              <h3 class="mt-4 font-semibold text-gray-900">{svc.title}</h3>
+              <p class="mt-2 text-sm text-gray-500">{svc.desc}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-6xl mx-auto py-24 px-6">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">{capabilitiesSection.tagline}</span>
+      <h2 class="mt-4 text-3xl font-semibold text-gray-900">{capabilitiesSection.title}</h2>
+      <p class="mt-4 text-lg text-gray-500">{capabilitiesSection.subtitle}</p>
+    </div>
+    <div class="max-w-4xl mx-auto divide-y divide-gray-200 border border-gray-200 rounded-2xl overflow-hidden">
+      {
+        capabilities.map((c: any) => (
+          <div class="flex items-center justify-between px-8 py-5 bg-white hover:bg-gray-50 transition-colors">
+            <span class="font-medium text-gray-900 w-1/3">{c.label}</span>
+            <span class="text-gray-600 text-sm w-2/3">{c.value}</span>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="max-w-6xl mx-auto py-24 px-6">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">{whySection.tagline}</span>
+        <h2 class="mt-4 text-3xl font-semibold text-gray-900">{whySection.title}</h2>
+        <ul class="mt-8 space-y-4">
+          {
+            points.map((p: any) => (
+              <li class="flex gap-3">
+                <span class="text-sky-600 font-bold shrink-0">&mdash;</span>
+                <span class="text-gray-600">
+                  <strong class="text-gray-900">{p.highlight}</strong>
+                  {p.text.slice((p.highlight || '').length)}
+                </span>
+              </li>
+            ))
+          }
+        </ul>
+        <a
+          href={`/${lang}${whySection.cta_link || '/contact'}`}
+          class="mt-8 inline-flex px-6 py-3 bg-gray-900 text-white rounded-xl font-semibold hover:bg-gray-800 transition text-sm"
+        >
+          {whySection.cta} →
+        </a>
+      </div>
+      <div
+        class="rounded-2xl overflow-hidden bg-gradient-to-br from-sky-50 to-blue-50 border border-sky-200 p-8 text-center"
+      >
+        <p class="text-lg font-semibold text-sky-900">{contact.title}</p>
+        <p class="mt-2 text-sm text-sky-700">{contact.desc}</p>
+        <a
+          href={`/${lang}/contact`}
+          class="mt-6 inline-flex px-8 py-3 bg-sky-600 text-white rounded-full font-semibold hover:bg-sky-700 transition"
+        >
+          Contact us
+        </a>
+      </div>
+    </div>
+  </section>
+  <script is:inline type="application/ld+json" set:html={faqSchema} />
+</Layout>

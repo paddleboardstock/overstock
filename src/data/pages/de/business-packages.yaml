@@ -1,0 +1,82 @@
+hero:
+  tagline: Business-Pakete
+  title: Einsatzbereite Wassergeschäftspakete für jede Phase
+  subtitle: Vorkonfigurierte Ausrüstungspakete für Wassersportvereine, Resorts und Marken-Startups – mit transparenten Preisen, schneller Lieferung und umfassenden Anpassungsoptionen.
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/use-cases/aquafarer-outdoor-adventure.webp
+    alt: Aquafarer-Business-Ausstattungspakete
+direct_answer: Aquafarer bietet drei vorkonfigurierte Business-Pakete für Wassersportbetreiber in jeder Phase an. Das Club-Starterpaket umfasst 10 SUPs mit Paddeln, Pumpen, Reparatursets und Sicherheitsausrüstung für aufstrebende Clubs und Schulen. Das Resort-Premium-Paket umfasst 50–100 Einheiten mit Lagersystemen, Branding und Schulungshandbüchern für Hotels und Gastronomiebetriebe. Das Markeneinführungspaket umfasst Produktauswahl, individuelles Logo-Design, Verpackung, Produktion und Versand für Unternehmer, die ihr eigenes Wassersportlabel auf den Markt bringen. Alle Pakete beinhalten Preise direkt ab Werk, CE-Zertifizierung und globale Logistikunterstützung.
+packages:
+  - id: club-starter
+    tag: Best Seller
+    name: Club-Starterpaket
+    subtitle: Alles, was Sie brauchen, um Ihren Paddelclub zu gründen oder zu aktualisieren
+    target: SUP-Clubs, Kajakclubs, Surfschulen, Trainingszentren
+    price_label: Ab 4.800 $
+    line_items:
+      - item: 10 SUP-Boards oder Kajaks
+      - item: 10 passende Paddel
+      - item: 10 Hochleistungspumpen
+      - item: 10 Reparatursätze
+      - item: 10 Schwimmwesten mit Vereinslogo
+      - item: Club-Branding auf Tafeln
+      - item: Sicherheitsbeschilderungsset
+      - item: Leitfaden für Anfänger im PDF-Format
+    cta_text: Get Club Package
+    cta_href: /contact
+  - id: resort-premium
+    tag: Premium
+    name: Resort-Premium-Paket
+    subtitle: Komplettes Gäste-Wasseraktivitätenprogramm für Hotels und Resorts
+    target: Strandresorts, Hotels am See, Öko-Resorts, Yachtclubs
+    price_label: Individuelles Angebot
+    line_items:
+      - item: 50–100 SUPs, Kajaks oder gemischte Flotte
+      - item: Vollständiges Resort-Branding auf allen Geräten
+      - item: Paddel und Rettungswesten in Mietqualität
+      - item: Kommerzielles Lagerregalsystem
+      - item: Füllstation mit Industriepumpen
+      - item: Sicherheitssystem (Bojen, Schilder, Rettungstafel)
+      - item: Schulungsprogramm für Mitarbeiter
+      - item: Playbook zum Revenue Management
+    cta_text: Get Resort Package
+    cta_href: /contact
+  - id: brand-launch
+    tag: Entrepreneur
+    name: Markeneinführungspaket
+    subtitle: Verwandeln Sie Ihre Markenidee in ein versandtes Produkt – in der Regel innerhalb von 60–90 Tagen
+    target: Amazon-Verkäufer, Influencer, regionale Distributoren
+    price_label: Ab 6.500 $
+    line_items:
+      - item: Beratung zur Produktauswahl
+      - item: Individuelles Logo-Design auf Tafeln
+      - item: Individuelle Farbanpassung
+      - item: Markenverpackung für den Einzelhandel
+      - item: Hängeetiketten und Bedienungsanleitung
+      - item: CE-Zertifizierungsdokumentation
+      - item: Produktionsmuster
+      - item: FOB Qingdao-Versand
+    cta_text: Launch My Brand
+    cta_href: /contact
+faq:
+  title: Paket-FAQ
+  questions:
+    - q: Was ist die Mindestbestellmenge für Pakete?
+      a: Das Club-Starterpaket umfasst mindestens 10 Einheiten. Resort- und Markenpakete werden mit flexiblen Mindestbestellmengen an Ihre Bedürfnisse angepasst.
+    - q: Wie lange dauert die Lieferung?
+      a: Die Standardproduktion dauert 30–45 Tage ab Auftragsbestätigung. Eine beschleunigte Produktion ist gegen eine zusätzliche Gebühr möglich.
+    - q: Kann ich die Farben und das Branding der Ausrüstung anpassen?
+      a: Ja. Alle Pakete beinhalten eine vollständige Anpassung – Kartonfarben, Logodrucke und Verpackungsdesign.
+    - q: Bieten Sie After-Sales-Support an?
+      a: Ja. Jedes Paket beinhaltet den Zugang zu unseren Online-Wartungshandbüchern, Video-Tutorials und unserem Ersatzteilbestellsystem.
+cta:
+  title: Sie sind sich nicht sicher, welches Paket passt?
+  subtitle: Beantworten Sie drei kurze Fragen und wir empfehlen Ihnen das perfekte Paket für Ihr Unternehmen.
+  actions:
+    - variant: primary
+      text: Holen Sie sich das empfohlene Paket
+      href: /contact
+    - text: Lösungen nach Zielgruppe anzeigen
+      href: /solutions
+    - text: Lesen Sie Erfolgsgeschichten
+      href: /success-stories

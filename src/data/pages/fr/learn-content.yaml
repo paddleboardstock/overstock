@@ -1,0 +1,155 @@
+articles:
+  sup:
+    - title: Bases du SUP — Guide du débutant
+      desc: 'Tout ce qu''un débutant doit savoir : types de planches, taille de pagaie, posture et conseils pour la première sortie.'
+    - title: Guide des tailles de SUP
+      desc: Trouvez la longueur, la largeur et le volume adaptés à votre poids, votre niveau et votre style de pagaie.
+    - title: SUP gonflable vs planche rigide
+      desc: Laquelle vous convient ? Portabilité, performance, durabilité et coût comparés.
+    - title: Techniques intermédiaires
+      desc: Améliorez votre pagaie avec des coups avancés, des techniques de virage et la gestion des eaux agitées.
+    - title: Comment choisir un SUP gonflable
+      desc: 'Les facteurs clés : construction, épaisseur, configuration des ailerons et accessoires inclus.'
+    - title: Sécurité nautique
+      desc: 'Connaissances essentielles de sécurité : lecture de la météo, choix du gilet de sauvetage (PFD), auto-sauvetage et pagayage en groupe.'
+  inflatable-boat:
+    - title: Référence des matériaux
+      desc: PVC, Hypalon, drop-stitch, denier — comprenez de quoi est faite votre embarcation gonflable.
+    - title: PVC vs Hypalon
+      desc: 'La comparaison définitive des tissus PVC et Hypalon pour bateaux gonflables : durabilité, résistance aux UV et coût.'
+    - title: Le noyau drop-stitch expliqué
+      desc: Comment des milliers de fils internes créent une plateforme rigide à 12-15 PSI pour les SUP gonflables hautes performances.
+    - title: Aperçu de la technologie gonflable
+      desc: 'Comment sont construits les bateaux et SUP gonflables : du drapage des matériaux aux systèmes de valves et au soudage des coutures.'
+    - title: Guide des bateaux rigides gonflables (RIB)
+      desc: Tout sur la construction des RIB, les types de coque, les matériaux de flotteurs et le choix du RIB adapté à vos besoins.
+    - title: Bateau gonflable vs RIB
+      desc: Les différences clés entre les annexes gonflables traditionnelles et les bateaux à coque rigide selon l’usage.
+  water-safety:
+    - title: Guide de sécurité nautique
+      desc: 'Connaissances essentielles de sécurité pour chaque pagayeur : météo, gilets de sauvetage (PFD), auto-sauvetage et protocoles de pagayage en groupe.'
+    - title: Guide des gilets et PFD
+      desc: Comment choisir le bon dispositif de flottaison pour le SUP, le kayak, la navigation et un usage professionnel.
+    - title: Checklist de sécurité SUP
+      desc: La checklist de sécurité avant le départ que tout pratiquant de paddle doit suivre.
+    - title: Sécurité en eau froide
+      desc: Précautions, équipement et techniques essentiels pour pagayer dans des conditions d'eau froide.
+    - title: Erreurs de débutant en pagaie
+      desc: Les erreurs fréquentes des novices et comment les éviter pour une expérience plus sûre et agréable.
+    - title: Certification CE expliquée
+      desc: 'Ce que la certification CE signifie pour les embarcations gonflables : normes, tests et importance pour la sécurité.'
+ui:
+  read_guide: Lire le guide →
+  card_tech: Ingénierie de sécurité marine et essais de matériaux
+  card_products: Découvrez le catalogue complet de produits Aquafarer
+  card_trust: Conformité CE, ISO et BSCI
+materials:
+  intro_p1: Les performances, la durabilité et la sécurité d'une embarcation gonflable dépendent presque entièrement des matériaux utilisés dans sa construction. Du tissu qui forme les flotteurs aux fils qui donnent sa rigidité à une planche de SUP, chaque choix de matériau influence le comportement du produit sur l'eau et sa durée de vie.
+  intro_p2: 'Ce guide couvre les quatre matériaux principaux utilisés dans les embarcations gonflables modernes : le tissu PVC, le caoutchouc Hypalon CSM, la construction à noyau drop-stitch et les ponts en mousse EVA. Comprendre ces matériaux vous aidera à choisir le produit adapté à vos besoins et à l''entretenir pour une durée de vie maximale.'
+  labels:
+    advantages: Avantages
+    limitations: Limites
+    best_for: 'Idéal pour :'
+  items:
+    - name: PVC (chlorure de polyvinyle)
+      summary: La norme de l'industrie pour les bateaux gonflables et les SUP de loisir. Le tissu laminé multicouche offre un excellent rapport résistance-poids à un prix accessible.
+      pros:
+        - Abordable — 30 à 50 % moins cher que l'Hypalon
+        - Léger et facile à manipuler
+        - Bonne résistance aux UV avec les revêtements adaptés
+        - Large choix de couleurs et de finitions
+        - Facile à réparer avec des patchs PVC et une colle solvante
+      cons:
+        - Durée de vie plus courte que l'Hypalon (7 à 10 ans)
+        - Moins flexible par temps froid
+        - Résistance chimique plus faible
+        - Peut développer une migration des plastifiants avec le temps
+      best_for: SUP de loisir, bateaux économiques, flottes de location, usage saisonnier, eaux douces et environnements côtiers.
+    - name: Hypalon (caoutchouc CSM)
+      summary: Matériau en caoutchouc synthétique haut de gamme, réputé pour sa durabilité exceptionnelle, sa résistance aux UV et sa longévité. La référence pour les bateaux gonflables professionnels et de qualité militaire.
+      pros:
+        - Résistance exceptionnelle aux UV et à l'ozone
+        - Durée de vie de 15 à 20 ans avec un entretien adapté
+        - Excellente flexibilité par temps froid
+        - Résistance supérieure aux produits chimiques et aux hydrocarbures
+        - Conserve sa couleur plus longtemps que le PVC
+      cons:
+        - Nettement plus cher que le PVC
+        - Tissu plus lourd
+        - Moins d'options de couleurs
+        - Les réparations exigent des colles spécialisées
+        - Moins d'usines de fabrication dans le monde
+      best_for: RIB professionnels, recherche et sauvetage, applications militaires, climats tropicaux, possession de flotte à long terme.
+    - name: Noyau drop-stitch
+      summary: La technologie qui a révolutionné les SUP gonflables. Des milliers de fils de polyester relient les couches supérieure et inférieure du tissu, permettant un gonflage à haute pression pour des performances dignes d'une planche rigide.
+      pros:
+        - Extrêmement rigide à 12-20 PSI
+        - Léger — 18-30 lbs pour une planche grande taille
+        - Se replie à plat pour le stockage et les voyages
+        - Excellente résistance aux impacts
+        - Performances constantes quelle que soit la température
+      cons:
+        - Nécessite une pompe haute pression
+        - Réparation des perforations plus complexe que sur une seule couche
+        - Coût de fabrication plus élevé que les gonflables standards
+        - Perte de pression dans le temps nécessitant un regonflage périodique
+      best_for: Planches de stand-up paddle, kayaks, ponts gonflables pour bateaux, toute application exigeant rigidité et portabilité gonflable.
+    - name: Pont en mousse EVA
+      summary: Mousse EVA à cellules fermées (éthylène-acétate de vinyle) utilisée pour les tapis de traction des planches de SUP et des ponts de bateaux. Apporte amorti, adhérence et isolation thermique.
+      pros:
+        - Excellente adhérence antidérapante, mouillée ou sèche
+        - L'amorti réduit la fatigue sur les longues pagayades
+        - Isolation thermique contre les ponts froids
+        - Résistante aux UV et à l'eau de mer
+        - Disponible en assemblages multicolores et motifs gravés au laser
+      cons:
+        - Peut s'user avec un usage intensif après 2 à 3 ans
+        - Doit être correctement collée pour éviter le délaminage
+        - Non structurelle — n'affecte pas la rigidité
+        - Ajoute un léger poids (200-400 g par planche)
+      best_for: Traction de pont SUP, revêtement de pont de bateau, confort d'assise kayak, toute surface nécessitant un appui antidérapant.
+  selection:
+    title: Guide de choix des matériaux
+    subtitle: 'Choisissez le bon matériau selon votre usage principal :'
+    headers:
+      - Usage
+      - Matériau recommandé
+      - Pourquoi
+    rows:
+      - - SUP de loisir
+        - PVC drop-stitch
+        - Léger, rigide, abordable — l'équilibre idéal pour les pagayeurs occasionnels
+      - - Annexe familiale / bateau de lac
+        - PVC (1100 denier)
+        - Rapport qualité-prix, facile à réparer, durabilité suffisante pour un usage de loisir
+      - - RIB professionnel / patrouilleur
+        - Hypalon CSM
+        - Résistance maximale aux UV, durée de vie de 15-20 ans, résistance chimique et aux hydrocarbures
+      - - Flotte de SUP de location
+        - PVC drop-stitch + pont EVA
+        - Durable, réparable, bon rapport qualité-prix pour un usage intensif
+      - - Opérations de recherche et sauvetage
+        - Hypalon CSM
+        - Fiabilité en conditions extrêmes, flexibilité à froid, résistance chimique
+      - - Kayak de randonnée / expédition
+        - PVC drop-stitch
+        - Performances rigides avec une portabilité pliable pour voyager
+  deep_dive:
+    title: Guides approfondis
+    topics:
+      - title: PVC de qualité marine
+        desc: Tissu PVC laminé multicouche — résistance aux UV, tests d'abrasion et indices denier expliqués.
+      - title: PVC vs Hypalon
+        desc: La comparaison définitive des deux matériaux dominants des bateaux gonflables — coût, durée de vie, résistance aux UV.
+      - title: Noyau drop-stitch
+        desc: Comment des milliers de fils internes créent des structures gonflables rigides à haute pression à 12-15 PSI.
+      - title: Technologie de soudage HF
+        desc: Le soudage haute fréquence crée des coutures solides et régulières — fonctionnement et importance.
+      - title: PSI et performances
+        desc: Pourquoi la pression de l'air compte pour les SUP et bateaux gonflables — rigidité, charge utile et confort de navigation.
+      - title: Tests qualité
+        desc: Tests de pression, tests de flottabilité, vieillissement UV et tests destructifs — notre processus qualité.
+      - title: Ponts en mousse EVA
+        desc: Tapis de pont en mousse EVA à cellules fermées — traction, confort et durabilité pour les ponts de SUP et de bateaux.
+      - title: Entretien des matériaux
+        desc: Nettoyage, protection UV, prévention des moisissures et bonnes pratiques de stockage des produits gonflables.

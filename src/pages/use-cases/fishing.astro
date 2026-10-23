@@ -1,0 +1,68 @@
+---
+import PageLayout from '~/layouts/PageLayout.astro';
+import { articleSchema } from '~/lib/seo/schema';
+import { nodes } from '~/content/graph/nodes';
+import { getPageContent, setPageContentData } from '~/i18n/page-content';
+import __pageData from '~/i18n/generated/pages/fishing.ts';
+
+const lang = 'en';
+setPageContentData(__pageData);
+const page = getPageContent(lang, 'fishing');
+const fishingNode = nodes.find((n) => n.id === 'fishing');
+
+const graphJsonLd = fishingNode
+  ? {
+      '@context': 'https://schema.org',
+      '@graph': [
+        articleSchema({
+          headline: page.seo?.headline || 'Fishing from an Inflatable SUP or Kayak: Complete Guide',
+          description:
+            page.seo?.description ||
+            'Learn why inflatable paddle boards and kayaks are excellent fishing platforms — stability, portability, gear compatibility, and recommended board types.',
+          datePublished: page.seo?.datePublished || '2024-03-01',
+          dateModified: page.seo?.dateModified || '2026-06-01',
+          author: 'Aquafarer',
+          publisher: 'Aquafarer',
+        }),
+        {
+          '@type': 'Product',
+          name: fishingNode.name.en,
+          description: fishingNode.description.en,
+          brand: { '@type': 'Brand', name: 'Aquafarer' },
+          category: 'Water Sports Equipment',
+        },
+      ],
+    }
+  : null;
+
+const metadata = {
+  title: page.seo?.headline || 'Fishing from an Inflatable SUP or Kayak: Complete Guide',
+  description:
+    page.seo?.description ||
+    'Learn why inflatable paddle boards and kayaks are excellent fishing platforms — stability, portability, gear compatibility, and recommended board types.',
+};
+---
+
+<PageLayout metadata={metadata}>
+  <script
+    slot="before"
+    is:inline
+    type="application/ld+json"
+    set:html={graphJsonLd ? JSON.stringify(graphJsonLd) : ''}
+  />
+
+  <section class="mx-auto max-w-4xl px-6 py-16">
+    <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">{page.label || 'Use Case'}</span>
+    <h1 class="font-semibold text-gray-900 dark:text-gray-100 mt-4 text-4xl">
+      {page.headline || 'Fishing from an Inflatable SUP or Kayak'}
+    </h1>
+    <p class="text-lg text-gray-500 dark:text-gray-400 mt-3">
+      {
+        page.subtitle ||
+          'Why inflatable watercraft are becoming the go-to choice for anglers who want quiet, shallow-water access to the best fishing spots.'
+      }
+    </p>
+
+    <div class="mt-12 prose prose-gray dark:prose-invert max-w-none" set:html={page.body || ''} />
+  </section>
+</PageLayout>

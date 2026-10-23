@@ -1,0 +1,88 @@
+hero:
+  tagline: Business Packages
+  title: 'Ready-to-Deploy Water Business<br />Packages For Every Stage'
+  subtitle: 'Pre-configured equipment packages for water sports clubs, resorts, and brand startups — with transparent pricing, fast delivery, and full customization options.'
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/use-cases/aquafarer-outdoor-adventure.webp
+    alt: Aquafarer business equipment packages
+
+direct_answer: 'Aquafarer offers three pre-configured business packages designed for water sports operators at every stage. The Club Starter Package includes 10 SUPs with paddles, pumps, repair kits, and safety gear for emerging clubs and schools. The Resort Premium Package supplies 50–100 units with storage systems, branding, and training guides for hotels and hospitality properties. The Brand Launch Package provides product selection, custom logo design, packaging, production, and shipping for entrepreneurs launching their own water sports label. All packages include factory-direct pricing, CE certification, and global logistics support.'
+
+packages:
+  - id: club-starter
+    tag: Best Seller
+    name: Club Starter Package
+    subtitle: Everything you need to launch or upgrade your paddle club
+    target: SUP clubs, kayak clubs, surf schools, training centers
+    price_label: From $4,800
+    line_items:
+      - item: 10 SUP boards or kayaks
+      - item: 10 matching paddles
+      - item: 10 high-output pumps
+      - item: 10 repair kits
+      - item: 10 life vests with club logo
+      - item: Club branding on boards
+      - item: Safety signage set
+      - item: Beginner lesson guide PDF
+    cta_text: Get Club Package
+    cta_href: '/contact'
+
+  - id: resort-premium
+    tag: Premium
+    name: Resort Premium Package
+    subtitle: Complete guest water activities program for hotels and resorts
+    target: Beach resorts, lakeside hotels, eco resorts, yacht clubs
+    price_label: Custom Quote
+    line_items:
+      - item: 50–100 SUPs, kayaks, or mixed fleet
+      - item: Full resort branding on all equipment
+      - item: Rental-grade paddles and PFDs
+      - item: Commercial storage rack system
+      - item: Inflation station with industrial pumps
+      - item: Safety system (buoys, signs, rescue board)
+      - item: Staff training program
+      - item: Revenue management playbook
+    cta_text: Get Resort Package
+    cta_href: '/contact'
+
+  - id: brand-launch
+    tag: Entrepreneur
+    name: Brand Launch Package
+    subtitle: Turn your brand idea into a shipped product — typically in 60–90 days
+    target: Amazon sellers, influencers, regional distributors
+    price_label: From $6,500
+    line_items:
+      - item: Product selection consultation
+      - item: Custom logo design on boards
+      - item: Custom color matching
+      - item: Branded retail packaging
+      - item: Hang tags and instruction manual
+      - item: CE certification documentation
+      - item: Production samples
+      - item: FOB Qingdao shipping
+    cta_text: Launch My Brand
+    cta_href: '/contact'
+
+faq:
+  title: Package FAQ
+  questions:
+    - q: What is the minimum order quantity for packages?
+      a: Club Starter Package has a minimum of 10 units. Resort and Brand packages are customized to your needs with flexible MOQs.
+    - q: How long does delivery take?
+      a: Standard production is 30–45 days from order confirmation. Expedited production is available for an additional fee.
+    - q: Can I customize the equipment colors and branding?
+      a: Yes. All packages include full customization — board colors, logo prints, and packaging design.
+    - q: Do you provide after-sales support?
+      a: Yes. Every package includes access to our online maintenance guides, video tutorials, and spare parts ordering system.
+
+cta:
+  title: Not Sure Which Package Fits?
+  subtitle: Answer 3 quick questions and we'll recommend the perfect package for your business.
+  actions:
+    - variant: primary
+      text: Get Recommended Package
+      href: /contact
+    - text: View Solutions by Audience
+      href: /solutions
+    - text: Read Success Stories
+      href: /success-stories

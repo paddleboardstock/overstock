@@ -1,0 +1,180 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'hu' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">&larr; Vissza a K+F Központba</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Labor 03</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">RF hegesztőközpont</h1>
+      <p class="mt-3 text-lg text-muted">Dielektromos kötési technológia nyomás alatt tartó hegesztésekhez</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-jungle-mandala-1.webp"
+        alt="Aquafarer RF hegesztési dielektromos kötési eljárás"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>A varrat mögötti tudomány</h2>
+  <p>
+    A felfújható csónak csak annyira megbízható, amennyire a varrásai. Egyetlen gyenge hegesztés tönkretehet egy teljes
+    kamrát — és a tengeren a kamra meghibásodása nem egyszerű kellemetlenség; ez egy biztonsági kockázat. A{SITE.name},
+    befektettünk egy dedikált Rádiófrekvenciás (RF) Hegesztési Központba, amely ipari minőségű dielektromos
+    hegesztőprészeket ötvöz szigorú folyamatellenőrzéssel és hegesztés utáni teszteléssel. Minden varratot, amit
+    készítünk, dokumentálunk, nyomon követhető, és tanúsítvánnyal rendelkezik, hogy megfeleljen vagy meghaladja a —
+    nemzetközi szabvány követelményeit felfújható járművekhez.
+  </p>
+  <p>
+    Az RF hegesztés nagy frekvenciájú elektromágneses energiát (általában 27,12 MHz) használ a PVC vagy Hypalon bevonatú
+    szövet poláris molekuláinak gerjesztésére, így a hő pontosan az anyaghatáron keletkezik. Ellentétben a forrólevegős
+    vagy forróéles hegesztéssel, az RF hegesztés valódi molekuláris kötést hoz létre — a két szövetréteg a hegesztési
+    zónában egyetlen homogén anyaggá olvad, és olyan erős kötést eredményez, mint maguk az anyagok.
+  </p>
+
+  <h2>Hegesztő berendezések és folyamatvezérlés</h2>
+  <p>Hegesztő központunk a következőkkel van felszerelve:</p>
+  <table>
+    <thead><tr><th>Gép</th><th>Teljesítmény / Kapacitás</th><th>Alkalmazás</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Dielektromos RF sajtó 1</td><td>15 kW, asztallap 2000 × 600 mm</td><td
+          >Fő hosszanti varratok, bölcső-tömlő csatlakozások</td
+        ></tr
+      >
+      <tr
+        ><td>Dielektromos RF sajtó 2</td><td>10 kW, asztallap 1500 × 500 mm</td><td
+          >Terelőhegesztések, kúpos csatlakozások, szelepfoltok</td
+        ></tr
+      >
+      <tr
+        ><td>CNC vezérelt RF hegesztő</td><td>8 kW, XY-tábla 2500 × 1200 mm</td><td
+          >Ívelt varratok, logó/panel dombornyomás, precíz foltművészet</td
+        ></tr
+      >
+      <tr
+        ><td>Hotwedge automata hegesztő</td><td>Változó hőmérséklet, max. 1,2 m/perc</td><td
+          >Biztonsági mentési módszer a(z) Hypalon/CSM anyagokhoz</td
+        ></tr
+      >
+    </tbody>
+  </table>
+  <p>
+    Minden RF sajtó zárt hurkú hőmérséklet- és nyomásfigyeléssel van felszerelve. A hegesztési paraméterek —
+    teljesítmény, sajtóidő, hűtési idő, elektróda nyomás — anyagtípusonként programozottak, és teljes nyomonkövethetőség
+    érdekében rögzítésre kerülnek a Gyártás Végrehajtási Rendszerünkben (MES).
+  </p>
+
+  <h2>Hegesztési minőségellenőrzések — minden varrat, minden hajó</h2>
+  <p>A hegesztés integritását egy kötelező négytesztes protokollal ellenőrzik:</p>
+  <ol>
+    <li>
+      <strong>Látványos ellenőrzés</strong>— A varratok 100%-át vizuálisan ellenőrzik átégés, eltolódás, szennyeződés
+      vagy hiányos összeolvadás szempontjából. Elutasítási arány küszöbértéke: a lineáris méterek 0,5%-a.
+    </li>
+    <li>
+      <strong>Hámozási teszt ()</strong>— Egy 25 mm széles szalagot vágnak egy tesztkuponból, amelyet minden gyártási
+      tételhez hegesztettek. Minimális hámlási erő: 120 N/25 mm PVC 1100 dtex esetén.
+    </li>
+    <li>
+      <strong>Légtartási teszt</strong>— Minden kész kamrát 1,25 × munkanyomásra nyomás alá helyeznek, és 24-48 órán át
+      tartják. A nyomásesés nem haladhatja meg a 2%-ot.
+    </li>
+    <li>
+      <strong>Hőciklus teszt</strong>— A mintakuponokat 50 cikluson át -20 °C-tól +60 °C-ig körbeiktik, majd ismét
+      lehúzással teszteljük. Elfogadható erősségvesztés: &lt; 10%.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Hámozási szilárdság összehasonlítása — RF vs forró levegős hegesztés (PVC1100 dtex)
+    </p>
+    <div class="space-y-3">
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">RF hegesztés</span><div
+          class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded"
+        >
+          <div class="h-full bg-blue-600 rounded" style="width:92%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">184 N</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">Hot Air</span><div
+          class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded"
+        >
+          <div class="h-full bg-gray-400 rounded" style="width:65%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">130 N</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">perc</span><div class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded">
+          <div class="h-full bg-green-500 rounded" style="width:48%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">96 N</span>
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      Az RF hegesztés következetesen eléri az alapanyag szilárdságának 90-95%-át, ami jóval a minimumnál haladja.
+    </p>
+  </div>
+
+  <h2>Szakmai szakértelem</h2>
+  <p>
+    Hegesztőcsapatunkat egy vezető folyamatmérnök vezeti, aki 11 éves tapasztalattal rendelkezik bevont textíliák
+    dielektromos hegesztésében. Minden operátor 6 hónapos belső tanúsítási programot teljesít, mielőtt gyártási
+    varrásokon dolgozhat. Évente újra tanúsításra van szükség, beleértve egy gyakorlati hegesztési tesztet, amelyet a
+    belső A szintű szabványunk szerint értékelnek (hámlási szilárdság ≥ 160 N/25 mm).
+  </p>
+
+  <h2>Egyedi hegesztési megoldások egyedi igényekhez</h2>
+  <p>
+    Tudjuk, hogy egyetlen hegesztési specifikáció nem illik minden alkalmazáshoz. RF Hegesztőközpontunk rutinszerűen
+    fejleszt egyedi varráskonfigurációkat speciális igényű ügyfelek számára:
+  </p>
+  <ul>
+    <li>
+      <strong>Többrétegű megerősítési foltok</strong>— olyan nagy kopású területekre, mint a dörzsölő strake-ok és az
+      orrkúpok, többáteresztő RF hegesztőket fejlesztünk, amelyek kopásálló külső réteget integrálnak anélkül, hogy a
+      rugalmasságot veszik figyelembe.
+    </li>
+    <li>
+      <strong>Vezető vagy RFopátán varrások</strong>— katonai vagy megfigyelő hajók esetében, amelyek elektromágneses
+      árnyékolásra szorulnak, vezető hálórétegeket hegesztünk a varrásréteg be.
+    </li>
+    <li>
+      <strong>Színváltó panel hegesztés</strong>— kétszínű szövetpanelek (pl. narancssárga + törzsszürke felső rész),
+      amelyeket rejtett átfedéssel hegesztettek, hogy megőrizzék a márka esztétikáját, látható csatlakozási vonal
+      nélkül.
+    </li>
+  </ul>
+
+  <h2>Elkötelezettségünk irántad</h2>
+  <p>
+    Minden hajónk, akinek szállítunk hegesztési minőségi garanciát: ha a garancia idején bármilyen varrat meghibásodik a
+    normál szerviz során, ingyenesen megjavítjuk vagy kicseréljük az érintett kamrát, és gyökérvizsgálatot végeznek a
+    megismétlés megelőzése érdekében. Ez nem csupán garancia — ez a folyamatos fejlesztés iránti elkötelezettség,
+    amelyet valós működési adatok vezérelnek.
+  </p>
+  <p>
+    Amikor választasz{SITE.name}, olyan varratokat választ, amelyeket megterveztek, teszteltek és dokumentáltak — nem
+    csak hegesztettek. Ez a különbség egy úszó hajó és egy jól teljesítő hajó között.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Beszéljétek meg a hegesztési igényeidet</h2>
+    <p class="mt-2 text-sm text-muted">Egyedi varrásspecifikációk, anyagkompatibilitás vagy folyamatellenőrzés.</p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Kapcsolatba lépj hegesztőcsapatunkkal</a
+    >
+  </div>
+</section>

@@ -1,0 +1,218 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'hu' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">&larr; Vissza a K+F Központba</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Labor 01</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">PVC Szövettan Laboratory</h1>
+      <p class="mt-3 text-lg text-muted">Tudományos anyagvizsgálat — a száltól a kész csőig</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/randd/aquafarer-pvc-material-lab.webp"
+        alt="Aquafarer PVC szövetanyag vizsgáló laboratórium"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Minden felfújható csónak alapja</h2>
+  <p>
+    A csőanyag a felfújható hajó legfontosabb anyaga. Ellen kell állnia az állandó UV hatásnak, a többszöri felfújási
+    ciklusoknak, a dokkoknak és törmelékeknek való dörzsölődésnek, valamint a szélsőséges hőmérsékletingadozásoknak –
+    mindezt úgy, hogy évekig megőrizze szerkezeti integritását. A{SITE.name}, a mi PVC Szövet Laborunk kizárólag a
+    szöveteink jellemzésére, érvényesítésére és folyamatos fejlesztésére van kijelölve, amelyeket minden általunk
+    épített hajóban használunk.
+  </p>
+  <p>
+    Nem támaszkodunk kizárólag a beszállítói adatlapokra. Minden PVC és Hypalon szövetbútor, amely a műhelyünkbe kerül,
+    függetlenül, házon belül tesztelve van. Ez garantálja, hogy a közzétett anyag specifikáció a tényleges
+    anyagteljesítménnyel egyezik — szállítmányról szállítmányra, évről évre.
+  </p>
+
+  <h2>Szabványosított tesztelő berendezés</h2>
+  <p>
+    Szövetlaborunk ipari szabványú eszközökkel van felszerelve, amelyek megfelelnek a ISO, az ASTM és az EN vizsgálati
+    módszereknek:
+  </p>
+  <table>
+    <thead><tr><th>Felszerelés</th><th>Mért paraméterek</th><th>Normál</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Univerzális húzópróba gép (50 kN)</td><td>Szakítószilárdság, szakadási nyúlás, hasadás terjedése</td><td
+          >/ ASTM D751</td
+        ></tr
+      >
+      <tr
+        ><td>Xenon ív időjárásállósági kamra</td><td
+          >UV ellenállás (színváltozás, szilárdság megtartása 2000 óra után)</td
+        ><td>/ ASTM G155</td></tr
+      >
+      <tr
+        ><td>Alacsony hőmérsékletű hajlíthatóság-tesztelő</td><td>Repedési pont -30 °C és -50 °C között</td><td
+          >ISO 4675 / ASTM D2136</td
+        ></tr
+      >
+      <tr
+        ><td>Taber kopásvizsgáló</td><td>Tömegcsökkenés 1000 ciklus után (CS-10 kerék)</td><td
+          >ASTM D3389 / ISO 5470-1</td
+        ></tr
+      >
+      <tr
+        ><td>Vastagságmérő (digitális, 0,001 mm felbontás)</td><td>Egységesség a tekercsszélességen belül</td><td
+          >ISO 2286-3</td
+        ></tr
+      >
+      <tr><td>Hidrosztatikus nyomásmérő</td><td>Vízáteresztő ellenállás</td><td>ISO 811</td></tr>
+    </tbody>
+  </table>
+  <p class="text-sm text-gray-500">
+    * Minden berendezést évente kalibrálnak harmadik fél által akkreditált laboratóriumok.
+  </p>
+
+  <h2>Adattól a döntésig: egy tipikus tesztfolyamat</h2>
+  <p>Amikor egy új anyagjelölt megérkezik, egy szabványosított, hétlépcsős minősítési folyamaton megy keresztül:</p>
+  <ol>
+    <li>
+      <strong>Átvételi ellenőrzés</strong>— vizuális felületellenőrzés hibák, lyukak és méretmegfelelés szempontjából.
+    </li>
+    <li>
+      <strong>Vastagságtérképezés</strong>— 20 pontos mérés a tekercsen keresztül; a CV 3 % az elfogadáshoz szükséges.
+    </li>
+    <li>
+      <strong>Húzószilárdság vizsgálat</strong>— 5 próbadarab hossz- és keresztirányban. Minimum 3500 N/50 mm 1100 dtex
+      esetén PVC.
+    </li>
+    <li>
+      <strong>UV kondicionálás</strong>— 1000 óra expozíció xenon-ívműszerben; legalább 80 % erősség-megtartás
+      szükséges.
+    </li>
+    <li>
+      <strong>Hidegtörés</strong>— 4 óra -35 °C-on, majd 180°-os hajlítás 25 mm-es magon. Látható repedés nem
+      megengedett.
+    </li>
+    <li><strong>Kopásállóság</strong>— 1000 ciklus, súlyveszteség ≤ 0,05 g.</li>
+    <li>
+      <strong>Jóváhagyás</strong>— csak az összes hét mérföldkő teljesítése után engedik az anyagot a gyártásba.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Tipikus PVC 1100 dtex — Húzószilárdság megőrzése UV expozíció után
+    </p>
+    <div class="flex items-end gap-3 h-40">
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-600 rounded-t" style="height:100%"></div><span class="text-xs mt-1"
+          >0 h<br />100%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-500 rounded-t" style="height:95%"></div><span class="text-xs mt-1"
+          >500 h<br />95%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-400 rounded-t" style="height:88%"></div><span class="text-xs mt-1"
+          >1000 h<br />88%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-300 rounded-t" style="height:82%"></div><span class="text-xs mt-1"
+          >2000 h<br />82%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-gray-300 rounded-t" style="height:65%"></div><span class="text-xs mt-1"
+          >Versenytárs<br />~65%</span
+        >
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      A mi PVC 1100 dtex anyagunk 80 % húzószilárdságot megtart 2000 óra xenon-ívműszer expozíció után, míg az ipari
+      szabványos anyagok 70 % alá esnek.
+    </p>
+  </div>
+
+  <h2>Professzionális csapatunk</h2>
+  <p>
+    A laborban két teljes munkaidős anyagmérnök dolgozik, mindketten polimer tudomány vagy textilmérnöki diplomával,
+    legalább hat év iparági tapasztalattal. Őket három technikus támogatja, akik a napi tesztelést és adatnaplózást
+    végzik. A csapat rendszeresen részt vesz az ISO (ISO) által szervezett laborok közötti körvizsgálatokon, hogy
+    validálja tesztmódszereink pontosságát.
+  </p>
+
+  <h2>A legnehezebb anyagproblémák megoldása</h2>
+  <p>
+    Minden tengeri környezet más. Egy járőrhajó a Perzsa-öbölben teljesen más UV és hőmérsékleti körülményekkel
+    szembesül, mint egy mentőhajó az Északi-tengeren. Anyaglaborunk segít kiválasztani — vagy kifejleszteni — egy
+    anyag-specifikációt, amely optimalizált az Ön üzemeltetési profiljához.
+  </p>
+  <p>Legutóbbi egyedi megoldások:</p>
+  <ul>
+    <li>
+      Egy nagy kopásállóságú PVC keverék egy katonai ügyfélnek, akinek hajói rendszeresen homokzátonyon fenekelnek (+40
+      % kopásélettartam).
+    </li>
+    <li>Alacsony hőmérsékletű Hypalon formuláció egy sarki kutatóállomás számára, -50 °C-ig tesztelve törés nélkül.</li>
+    <li>
+      Színstabilizált narancssárga anyag egy kereső-mentő flottának, amely 3 év trópusi napsugárzás után is láthatóságot
+      biztosít.
+    </li>
+  </ul>
+  <p>
+    Mi nem árulunk „polcról levehető” szöveteket és nem reméljük, hogy működni fognak. Tesztelünk, érvényesítünk, és
+    ajánlunk — vagy létrehozunk — egy testreszabott megoldást az Ön konkrét küldetésprofiljához. Ez a{
+      SITE.name
+    }különbség.
+  </p>
+
+  <h2>Hogyan szolgáljuk Önt</h2>
+  <p>Amikor egy fontos kihívással fordulsz hozzánk, ezt várhatod:</p>
+  <ol>
+    <li>
+      <strong>Tanácsadás</strong>— megvitatjuk az üzemeltetési környezetét, a teljesítménycélokat és a költségvetést.
+    </li>
+    <li>
+      <strong>Javaslat</strong>— egy teszttervet készítenek világos siker/vesztes kritériumokkal és egy ütemtervvel.
+    </li>
+    <li>
+      <strong>Végrehajtás</strong>— a laboratóriumunk végzi a teszteket, és részletes jelentést készít nyers adatokról
+      és összehasonlító elemzésről.
+    </li>
+    <li>
+      <strong>Ajánlás</strong>— bemutatjuk a szövet specifikációját, beleértve az alternatív lehetőségeket is, ha több
+      anyag is megfelel az Ön követelményeinek.
+    </li>
+    <li>
+      <strong>Utókövetés</strong>— a szállítást követően továbbra is rendelkezésre állunk bármilyen szolgálat közbeni
+      anyaggal kapcsolatos kérdés támogatására.
+    </li>
+  </ol>
+  <p>
+    A célunk nem csupán az, hogy eladjunk Önnek egy hajót. Az, hogy biztosítsuk, a kapott hajó megbízhatóan működjön az
+    Ön által használt körülmények között — és ez a szövettel kezdődik.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Szüksége van egy egyedi textília specifikációra?</h2>
+    <p class="mt-2 text-sm text-muted">
+      Vegye fel a kapcsolatot anyagtechnikai csapatunkkal, hogy megbeszéljék az igényeit.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Lépjen kapcsolatba laboratóriumi csapatunkkal</a
+    >
+  </div>
+</section>

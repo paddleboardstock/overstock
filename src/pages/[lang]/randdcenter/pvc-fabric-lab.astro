@@ -1,0 +1,321 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+import { languages, defaultLang } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+import RDe from '~/components/randdcenter/pvc-fabric-lab.de.astro';
+import REs from '~/components/randdcenter/pvc-fabric-lab.es.astro';
+import RFr from '~/components/randdcenter/pvc-fabric-lab.fr.astro';
+import RIt from '~/components/randdcenter/pvc-fabric-lab.it.astro';
+import REn from '~/components/randdcenter/pvc-fabric-lab.en.astro';
+import RCs from '~/components/randdcenter/pvc-fabric-lab.cs.astro';
+import RSv from '~/components/randdcenter/pvc-fabric-lab.sv.astro';
+import RDa from '~/components/randdcenter/pvc-fabric-lab.da.astro';
+import REl from '~/components/randdcenter/pvc-fabric-lab.el.astro';
+import RNo from '~/components/randdcenter/pvc-fabric-lab.no.astro';
+import RRu from '~/components/randdcenter/pvc-fabric-lab.ru.astro';
+import RNl from '~/components/randdcenter/pvc-fabric-lab.nl.astro';
+import RFi from '~/components/randdcenter/pvc-fabric-lab.fi.astro';
+import RPl from '~/components/randdcenter/pvc-fabric-lab.pl.astro';
+import RAr from '~/components/randdcenter/pvc-fabric-lab.ar.astro';
+import RPt from '~/components/randdcenter/pvc-fabric-lab.pt.astro';
+import RJa from '~/components/randdcenter/pvc-fabric-lab.ja.astro';
+import RBg from '~/components/randdcenter/pvc-fabric-lab.bg.astro';
+import REt from '~/components/randdcenter/pvc-fabric-lab.et.astro';
+import RHe from '~/components/randdcenter/pvc-fabric-lab.he.astro';
+import RHr from '~/components/randdcenter/pvc-fabric-lab.hr.astro';
+import RHu from '~/components/randdcenter/pvc-fabric-lab.hu.astro';
+import RId from '~/components/randdcenter/pvc-fabric-lab.id.astro';
+import RKo from '~/components/randdcenter/pvc-fabric-lab.ko.astro';
+import RLt from '~/components/randdcenter/pvc-fabric-lab.lt.astro';
+import RLv from '~/components/randdcenter/pvc-fabric-lab.lv.astro';
+import RMs from '~/components/randdcenter/pvc-fabric-lab.ms.astro';
+import RRo from '~/components/randdcenter/pvc-fabric-lab.ro.astro';
+import RSk from '~/components/randdcenter/pvc-fabric-lab.sk.astro';
+import RSl from '~/components/randdcenter/pvc-fabric-lab.sl.astro';
+import RSr from '~/components/randdcenter/pvc-fabric-lab.sr.astro';
+import RTh from '~/components/randdcenter/pvc-fabric-lab.th.astro';
+import RTl from '~/components/randdcenter/pvc-fabric-lab.tl.astro';
+import RTr from '~/components/randdcenter/pvc-fabric-lab.tr.astro';
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: any) => getUiForLang(lang || defaultLang)?.[key] || '';
+
+const META: Record<string, { title: string; description: string }> = {
+  en: {
+    title: 'PVC Fabric Lab — Material Testing for Inflatable Boats',
+    description: `Scientific material testing from fibre to finished tube. Tensile strength, UV weathering, low-temperature flexibility, and abrasion resistance for PVC fabrics. Contact our lab team for a custom fabric specification.`,
+  },
+  de: {
+    title: 'PVC-Gewebelabor — Materialprüfung für Schlauchboote',
+    description: `Wissenschaftliche Materialprüfung von der Faser bis zum fertigen Schlauch. Zugfestigkeit, UV-Bewitterung, Tieftemperaturflexibilität und Abriebfestigkeit von PVC-Geweben. Kontaktieren Sie unser Labor für eine individuelle Gewebespezifikation.`,
+  },
+  es: {
+    title: 'Laboratorio de tejidos PVC — pruebas de materiales para barcos hinchables',
+    description: `Pruebas científicas de materiales, de la fibra al tubo terminado. Resistencia a la tracción, envejecimiento UV, flexibilidad a baja temperatura y resistencia a la abrasión de tejidos de PVC. Contacte con nuestro equipo de laboratorio para una especificación de tejido personalizada.`,
+  },
+  fr: {
+    title: 'Laboratoire de tissus PVC — essais de matériaux pour bateaux gonflables',
+    description: `Essais scientifiques de matériaux, de la fibre au flotteur fini. Résistance à la traction, vieillissement UV, flexibilité à basse température et résistance à l'abrasion des tissus PVC. Contactez notre équipe de laboratoire pour une spécification de tissu sur mesure.`,
+  },
+  it: {
+    title: 'Laboratorio tessuti PVC — prove sui materiali per barche gonfiabili',
+    description: `Prove scientifiche sui materiali, dalla fibra al tubolare finito. Resistenza alla trazione, invecchiamento UV, flessibilità a bassa temperatura e resistenza all'abrasione dei tessuti PVC. Contattate il nostro team di laboratorio per una specifica di tessuto personalizzata.`,
+  },
+  cs: {
+    title: 'PVC Fabric Lab — Testování materiálů pro nafukovací čluny',
+    description:
+      'Vědecké testování materiálů od vlákna po hotovou trubku. Pevnost v tahu, UV povětrnostní vlivy, flexibilita při nízkých teplotách a odolnost proti oděru pro tkaniny PVC. Obraťte se na náš laboratorní tým pro vlastní specifikaci tkaniny.',
+  },
+  sv: {
+    title: 'PVC Tyglab — Materialtestning för uppblåsbara båtar',
+    description:
+      'Vetenskaplig materialtestning från fiber till färdigt rör. Draghållfasthet, UV väderpåverkan, flexibilitet vid låg temperatur och nötningsbeständighet för PVC tyger. Kontakta vårt labbteam för en anpassad tygspecifikation.',
+  },
+  da: {
+    title: 'PVC Fabric Lab — Materialetest til gummibåde',
+    description:
+      'Videnskabelig materialetest fra fiber til færdigt rør. Trækstyrke, UV vejrlig, lav temperatur fleksibilitet og slidstyrke for PVC stoffer. Kontakt vores laboratorieteam for en tilpasset stofspecifikation.',
+  },
+  el: {
+    title: 'PVC Fabric Lab — Δοκιμές υλικών για φουσκωτά σκάφη',
+    description:
+      'Επιστημονική δοκιμή υλικού από ίνα έως τελικό σωλήνα. Αντοχή σε εφελκυσμό, UV καιρικές συνθήκες, ευελιξία σε χαμηλές θερμοκρασίες και αντοχή στην τριβή για PVC υφάσματα. Επικοινωνήστε με την ομάδα του εργαστηρίου μας για προσαρμοσμένες προδιαγραφές υφάσματος.',
+  },
+  no: {
+    title: 'PVC Stofflab — Materialtesting for gummibåter',
+    description:
+      'Vitenskapelig materialtesting fra fiber til ferdig rør. Strekkstyrke, UV forvitring, lavtemperaturfleksibilitet og slitestyrke for PVC stoffer. Kontakt laboratorieteamet vårt for en tilpasset stoffspesifikasjon.',
+  },
+  ru: {
+    title: 'PVC Лаборатория тканей — испытания материалов для надувных лодок',
+    description:
+      'Научные испытания материалов от волокна до готовой трубки. Прочность на разрыв, устойчивость к атмосферным воздействиям UV, гибкость при низких температурах и стойкость к истиранию для тканей PVC. Свяжитесь с командой нашей лаборатории для получения индивидуальной спецификации ткани.',
+  },
+  nl: {
+    title: 'PVC Fabric Lab — Materiaaltesten voor opblaasbare boten',
+    description:
+      'Wetenschappelijke materiaaltesten van vezel tot afgewerkte buis. Treksterkte, UV verwering, flexibiliteit bij lage temperaturen en slijtvastheid voor PVC stoffen. Neem contact op met ons laboratoriumteam voor een stofspecificatie op maat.',
+  },
+  fi: {
+    title: 'PVC Kangaslaboratorio — Kumiveneiden materiaalitestaus',
+    description:
+      'Tieteellinen materiaalitestaus kuidusta valmiiseen putkeen. Vetolujuus, UV säänkesto, joustavuus alhaisissa lämpötiloissa ja kulutuskestävyys PVC -kankaille. Ota yhteyttä laboratoriotiimiimme saadaksesi mukautetun kangaserittelyn.',
+  },
+  pl: {
+    title: 'PVC Laboratorium Tkanin — Testowanie materiałów na pontony',
+    description:
+      'Naukowe badanie materiałów od włókna do gotowej rury. Wytrzymałość na rozciąganie, warunki atmosferyczne UV, elastyczność w niskich temperaturach i odporność na ścieranie w przypadku tkanin PVC. Skontaktuj się z naszym zespołem laboratoryjnym, aby uzyskać niestandardową specyfikację tkaniny.',
+  },
+  ar: {
+    title: 'PVC معمل الأقمشة — اختبار المواد للقوارب القابلة للنفخ',
+    description:
+      'اختبار المواد العلمية من الألياف إلى الأنبوب النهائي. قوة الشد، والعوامل الجوية UV، والمرونة في درجات الحرارة المنخفضة، ومقاومة التآكل للأقمشة PVC. اتصل بفريق المختبر لدينا للحصول على مواصفات النسيج المخصصة.',
+  },
+  pt: {
+    title: 'PVC Laboratório de Tecidos — Teste de Materiais para Barcos Infláveis',
+    description:
+      'Testes de materiais científicos, desde a fibra até o tubo acabado. Resistência à tração, intemperismo UV, flexibilidade em baixas temperaturas e resistência à abrasão para tecidos PVC. Entre em contato com nossa equipe de laboratório para obter uma especificação de tecido personalizada.',
+  },
+  ja: {
+    title: 'PVC ファブリック ラボ — インフレータブル ボートの材料テスト',
+    description:
+      'ファイバーから完成したチューブまでの科学的な材料テスト。 PVC 生地の引張強度、UV 耐候性、低温柔軟性、および耐摩耗性。カスタムファブリック仕様については、当社のラボチームにお問い合わせください。',
+  },
+  bg: {
+    title: 'PVC Fabric Lab — Material Testing for Inflatable Boats',
+    description:
+      'Scientific material testing from fibre to finished tube. Tensile strength, UV weathering, low-temperature flexibility, and abrasion resistance for PVC fabrics. Contact our lab team for a custom fabric specification.',
+  },
+  et: {
+    title: 'PVC Fabric Lab — Material Testing for Inflatable Boats',
+    description:
+      'Scientific material testing from fibre to finished tube. Tensile strength, UV weathering, low-temperature flexibility, and abrasion resistance for PVC fabrics. Contact our lab team for a custom fabric specification.',
+  },
+  he: {
+    title: 'PVC Fabric Lab — Material Testing for Inflatable Boats',
+    description:
+      'Scientific material testing from fibre to finished tube. Tensile strength, UV weathering, low-temperature flexibility, and abrasion resistance for PVC fabrics. Contact our lab team for a custom fabric specification.',
+  },
+  hr: {
+    title: 'PVC Fabric Lab — Material Testing for Inflatable Boats',
+    description:
+      'Scientific material testing from fibre to finished tube. Tensile strength, UV weathering, low-temperature flexibility, and abrasion resistance for PVC fabrics. Contact our lab team for a custom fabric specification.',
+  },
+  hu: {
+    title: 'PVC Fabric Lab — Material Testing for Inflatable Boats',
+    description:
+      'Scientific material testing from fibre to finished tube. Tensile strength, UV weathering, low-temperature flexibility, and abrasion resistance for PVC fabrics. Contact our lab team for a custom fabric specification.',
+  },
+  id: {
+    title: 'PVC Fabric Lab — Material Testing for Inflatable Boats',
+    description:
+      'Scientific material testing from fibre to finished tube. Tensile strength, UV weathering, low-temperature flexibility, and abrasion resistance for PVC fabrics. Contact our lab team for a custom fabric specification.',
+  },
+  ko: {
+    title: 'PVC Fabric Lab — Material Testing for Inflatable Boats',
+    description:
+      'Scientific material testing from fibre to finished tube. Tensile strength, UV weathering, low-temperature flexibility, and abrasion resistance for PVC fabrics. Contact our lab team for a custom fabric specification.',
+  },
+  lt: {
+    title: 'PVC Fabric Lab — Material Testing for Inflatable Boats',
+    description:
+      'Scientific material testing from fibre to finished tube. Tensile strength, UV weathering, low-temperature flexibility, and abrasion resistance for PVC fabrics. Contact our lab team for a custom fabric specification.',
+  },
+  lv: {
+    title: 'PVC Fabric Lab — Material Testing for Inflatable Boats',
+    description:
+      'Scientific material testing from fibre to finished tube. Tensile strength, UV weathering, low-temperature flexibility, and abrasion resistance for PVC fabrics. Contact our lab team for a custom fabric specification.',
+  },
+  ms: {
+    title: 'PVC Fabric Lab — Material Testing for Inflatable Boats',
+    description:
+      'Scientific material testing from fibre to finished tube. Tensile strength, UV weathering, low-temperature flexibility, and abrasion resistance for PVC fabrics. Contact our lab team for a custom fabric specification.',
+  },
+  ro: {
+    title: 'PVC Fabric Lab — Material Testing for Inflatable Boats',
+    description:
+      'Scientific material testing from fibre to finished tube. Tensile strength, UV weathering, low-temperature flexibility, and abrasion resistance for PVC fabrics. Contact our lab team for a custom fabric specification.',
+  },
+  sk: {
+    title: 'PVC Fabric Lab — Material Testing for Inflatable Boats',
+    description:
+      'Scientific material testing from fibre to finished tube. Tensile strength, UV weathering, low-temperature flexibility, and abrasion resistance for PVC fabrics. Contact our lab team for a custom fabric specification.',
+  },
+  sl: {
+    title: 'PVC Fabric Lab — Material Testing for Inflatable Boats',
+    description:
+      'Scientific material testing from fibre to finished tube. Tensile strength, UV weathering, low-temperature flexibility, and abrasion resistance for PVC fabrics. Contact our lab team for a custom fabric specification.',
+  },
+  sr: {
+    title: 'PVC Fabric Lab — Material Testing for Inflatable Boats',
+    description:
+      'Scientific material testing from fibre to finished tube. Tensile strength, UV weathering, low-temperature flexibility, and abrasion resistance for PVC fabrics. Contact our lab team for a custom fabric specification.',
+  },
+  th: {
+    title: 'PVC Fabric Lab — Material Testing for Inflatable Boats',
+    description:
+      'Scientific material testing from fibre to finished tube. Tensile strength, UV weathering, low-temperature flexibility, and abrasion resistance for PVC fabrics. Contact our lab team for a custom fabric specification.',
+  },
+  tl: {
+    title: 'PVC Fabric Lab — Material Testing for Inflatable Boats',
+    description:
+      'Scientific material testing from fibre to finished tube. Tensile strength, UV weathering, low-temperature flexibility, and abrasion resistance for PVC fabrics. Contact our lab team for a custom fabric specification.',
+  },
+  tr: {
+    title: 'PVC Fabric Lab — Material Testing for Inflatable Boats',
+    description:
+      'Scientific material testing from fibre to finished tube. Tensile strength, UV weathering, low-temperature flexibility, and abrasion resistance for PVC fabrics. Contact our lab team for a custom fabric specification.',
+  },
+};
+
+const crumbs = [
+  { name: t('nav.home') || 'Home', href: `/${lang}/` },
+  { name: 'R&D Center', href: `/${lang}/randdcenter` },
+  { name: 'PVC Fabric Lab' },
+];
+
+const meta = META[lang] || META.en;
+
+const metadata = {
+  title: `${meta.title} | ${SITE.name}`,
+  description: meta.description,
+};
+
+const RanddBody: any =
+  (
+    {
+      de: RDe,
+      es: REs,
+      fr: RFr,
+      it: RIt,
+      cs: RCs,
+      sv: RSv,
+      da: RDa,
+      el: REl,
+      no: RNo,
+      ru: RRu,
+      nl: RNl,
+      fi: RFi,
+      pl: RPl,
+      ar: RAr,
+      pt: RPt,
+      ja: RJa,
+      bg: RBg,
+      et: REt,
+      he: RHe,
+      hr: RHr,
+      hu: RHu,
+      id: RId,
+      ko: RKo,
+      lt: RLt,
+      lv: RLv,
+      ms: RMs,
+      ro: RRo,
+      sk: RSk,
+      sl: RSl,
+      sr: RSr,
+      th: RTh,
+      tl: RTl,
+      tr: RTr,
+    } as Record<string, any>
+  )[lang] || REn;
+
+const faqSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What PVC testing is performed?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Tensile strength (N/5cm), tear resistance, coating adhesion, UV stability (ASTM G154), cold crack resistance (ISO 4646), and coating weight verification.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What PVC grades does Aquafarer use?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: '0.9mm PVC (1,100 DTEX) for standard models, 1.2mm PVC (1,680 DTEX) for premium/commercial, and custom specifications for OEM orders.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Are materials REACH compliant?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. All PVC and adhesive materials comply with EU REACH regulation. Material safety data sheets available upon request.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How is UV resistance tested?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Per ASTM G154 accelerated weathering standard — concentrated UV exposure simulating years of sunlight, measuring tensile strength retention.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the cold crack test?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Per ISO 4646, materials are tested at -20°C to verify flexibility and seam integrity in cold conditions.',
+      },
+    },
+  ],
+});
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  {RanddBody && <RanddBody lang={lang} />}
+  <script is:inline type="application/ld+json" set:html={faqSchema} />
+</Layout>

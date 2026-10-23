@@ -1,0 +1,56 @@
+hero:
+  tagline: Laboratórium kontroly kvality
+  title: Testovacie laboratórium a zabezpečenie kvality
+  subtitle: Nezávislá laboratórium kvality s procesmi ISO 9001 — každá jednotka testovaná pred odoslaním
+intro: Aquafarer prevádzkuje špecializované laboratórium kontroly kvality, ktoré funguje nezávisle od výroby. Každá várka surovín a každá hotová loď prechádza dokumentovanými kontrolnými protokolmi pred uvoľnením. Náš tím QC podáva správy priamo manažmentu, čo zaručuje nestranné rozhodovanie o kvalite.
+highlights:
+  - value: 100%
+    label: Testované jednotky pod tlakom
+    detail: Každá komora, každá loď
+  - value: 48 h
+    label: Doba testu udržania vzduchu
+    detail: Pri 1,25× menovitom tlaku
+  - value: '&lt;5%'
+    label: Maximálny dovolený pokles tlaku
+    detail: Po dobu 24 hodín
+  - value: AQL 2,5
+    label: Hraničná hodnota vážnych vad
+    detail: Podľa ISO 2859 odberu vzoriek
+test_procedures:
+  - title: Inšpekcia surovín
+    description: Každá prichádzajúca várka PVC, Hypalon, drop-stitch látky a hardvéru je testovaná pred akceptáciou. Overuje sa ťahová pevnosť (ASTM D751), odolnosť proti trhaniu (ISO 4674) a odolnosť UV. Materiály, ktoré nespĺňajú normy, sú umiestnené do karantény a vrátené.
+    standards:
+      - ASTM D751 (ťah)
+      - ISO 4674 (trh)
+      - ISO 4892 (UV)
+  - title: Kontrolné body QK počas výroby
+    description: Operátori výroby vykonávajú vlastnú kontrolu na každom stupni. Audítori QK vykonávajú náhodný odber vzoriek počas celej zmeny. Testy odlúčenia zvaru sa vykonávajú každých 50 jednotiek. Rozmerové kontroly sa robia každého 20. panelu.
+    standards:
+      - ASTM D751 (odlúčenie)
+      - Interný 100-bodový kontrolný zoznam
+      - ISO 2859 odber vzoriek
+  - title: 48-hodinový test zadržiavania vzduchu
+    description: Každá komora trubice sa nafúkne na 125% menovitého tlaku a udržiava sa 48 hodín. Snímače tlaku zaznamenávajú priebežne s kompenzáciou teploty. Ak ktorákoľvek komora prekročí 5% pokles tlaku, spustí sa automatická opätovná kontrola várky.
+    standards:
+      - ISO 6185
+      - CE 2013/53/EÚ
+  - title: Testovanie zaťaženia a vyváženia
+    description: Dokončené lode sa testujú pri maximálnej menovitej kapacite pre stabilitu, svetlú výšku a ovládanie. Každé plavidlo podstúpi skúšku vo vode pred konečným schválením kontrolou.
+    standards:
+      - ISO 12217
+      - CE 2013/53/EÚ
+equipment:
+  - name: Univerzálna skúšobná stroj (ťažná)
+    spec: 5 kN, v súlade s ASTM D751
+  - name: Tester úniku tlaku
+    spec: Viackanálový, 0–50 psi, s ukladaním dát
+  - name: UV Komora na starnutie
+    spec: ISO 4892, 1 000 h cyklov
+  - name: Meradlo hrúbky (digitálne)
+    spec: Rozlíšenie 0,01 mm
+  - name: Tester odlupovania (zváranie)
+    spec: Motorový, kapacita 50 N
+  - name: Teplotná komora
+    spec: -40 °C až +100 °C
+  - name: Nádrž na detekciu únikov
+    spec: 6 m × 2 m, osvetlená

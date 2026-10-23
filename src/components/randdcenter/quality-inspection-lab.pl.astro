@@ -1,0 +1,215 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'pl' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">← Powrót do Centrum badawczo-rozwojowe</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Laboratorium 06</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Laboratorium Jakości i Kontroli</h1>
+      <p class="mt-3 text-lg text-muted">Niezależna weryfikacja – każdy test przeszedł przed dostawą</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-uv-resistance-testing.webp"
+        alt="Aquafarer laboratorium kontroli jakości UV badania"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Ufaj, ale sprawdzaj</h2>
+  <p>
+    Każda łódź opuszczająca nasz warsztat posiada certyfikat potwierdzający, że przeszła określony zestaw kontroli
+    jakości i testów materiałowych. Nasze Laboratorium Jakości i Kontroli jest niezależną funkcją w organizacji —
+    podlega bezpośrednio dyrektorowi zarządzającemu, a nie produkcji — zapewniając, że żadna presja handlowa nie może
+    zagrozić bramce inspekcyjnej. Jeżeli partia materiału lub ukończona łódź nie spełnia opublikowanych specyfikacji,
+    laboratorium ma prawo wstrzymać wysyłkę do czasu usunięcia niezgodności.
+  </p>
+  <p>
+    Laboratorium działa w oparciu o zgodny z zasadami system zarządzania jakością, a nasze metody testowe opierają się
+    na normach ISO, ASTM i EN, tam gdzie ma to zastosowanie. Prowadzimy szczegółowe zapisy każdego przeprowadzonego
+    testu, tworząc kompletny łańcuch identyfikowalności od odbioru surowców do końcowej dostawy łodzi.
+  </p>
+
+  <h2>Testuj sprzęt i możliwości</h2>
+  <table>
+    <thead><tr><th>Sprzęt</th><th>Wykonane testy</th><th>Norma/metoda</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Uniwersalna maszyna wytrzymałościowa (50 kN)</td><td
+          >Wytrzymałość na rozciąganie (tkanina), odporność na odrywanie (szwy), rozprzestrzenianie się rozdarcia</td
+        ><td>, ISO 4674</td></tr
+      >
+      <tr
+        ><td>Stanowisko do badania zatrzymywania powietrza (programowalne)</td><td
+          >Wytrzymałość na inflację/deflację w cyklu 1000, 24-48 h test utrzymania ciśnienia</td
+        ><td> (wewnętrzny)</td></tr
+      >
+      <tr
+        ><td>Przyrząd do odklejania szwów (zmotoryzowany 180° odrywania)</td><td
+          >Wytrzymałość na odrywanie spoin i szwów klejonych przy 100 mm/min</td
+        ><td> / ASTM D1876</td></tr
+      >
+      <tr
+        ><td>Tester głowicy hydrostatycznej</td><td>Odporność tkaniny na przenikanie wody (0 — 00 mbar)</td><td
+          >ISO 811</td
+        ></tr
+      >
+      <tr
+        ><td>Cyfrowy miernik grubości i mikrometr</td><td
+          >Grubość tkaniny, grubość ścianki tuby, grubość warstwy klejącej</td
+        ><td>ISO 2286-3</td></tr
+      >
+      <tr
+        ><td>Komora środowiskowa</td><td
+          >Kondycjonowanie temperaturowe (-40 °C do +80 °C) do badań pękania na zimno i starzenia pod wpływem ciepła</td
+        ><td>ISO 188, ISO 4675</td></tr
+      >
+      <tr
+        ><td>Spektrofotometr kolorowy</td><td>Pomiar koloru Delta-E po ekspozycji UV</td><td
+          >ISO 105-A05 / ASTM D2244</td
+        ></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>Bramy inspekcyjne — od materiału po dostawę</h2>
+  <p>
+    Każda łódź przestrzega określonego planu jakości z obowiązkowymi punktami kontroli. Żadna łódź nie może ominąć
+    bramy; każda brama musi zostać podpisana przez inspektora jakości przed rozpoczęciem kolejnego etapu produkcji.
+  </p>
+
+  <div class="not-prose my-8">
+    <div class="relative">
+      <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-blue-200 dark:bg-blue-800"></div>
+      <div class="space-y-6 relative">
+        {
+          [
+            {
+              gate: 'Gate 1',
+              label: 'Incoming material inspection',
+              desc: 'Fabric batch, adhesive batch, hardware — all checked against incoming specification before release to production.',
+            },
+            {
+              gate: 'Gate 2',
+              label: 'In-process weld inspection',
+              desc: 'First-off weld coupon tested (peel + visual) at start of each production shift.',
+            },
+            {
+              gate: 'Gate 3',
+              label: 'Chamber air test',
+              desc: 'Each chamber pressurised to 1.25 x working pressure, held 24-48 h. Data logged per serial number.',
+            },
+            {
+              gate: 'Gate 4',
+              label: 'Pre-delivery inspection',
+              desc: 'Complete boat inspected: all fasteners torqued, systems functional, no cosmetic defects. 100-point checklist.',
+            },
+            {
+              gate: 'Gate 5',
+              label: 'Final certification',
+              desc: 'Test reports compiled, inspection records reviewed, Certificate of Conformance issued.',
+            },
+          ].map((g) => (
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs font-bold z-10">
+                {g.gate}
+              </div>
+              <div class="flex-1 p-3 rounded-lg bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800">
+                <p class="text-sm font-semibold">{g.label}</p>
+                <p class="text-xs text-gray-500 mt-1">{g.desc}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+
+  <h2>Kluczowe wskaźniki jakości (2025 średnia krocząca)</h2>
+  <div class="not-prose my-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">99.7 %</span>
+      <span class="text-xs text-gray-500">Wydajność pierwszego przejścia (partia tkaniny)</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">&lt; 0.2 %</span>
+      <span class="text-xs text-gray-500">Wskaźnik odrzutów spoin (w metrach bieżących)</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">100 %</span>
+      <span class="text-xs text-gray-500">Komory testowane na powietrzu przed montażem</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600"></span>
+      <span class="text-xs text-gray-500">Zgodność kategorii projektowej</span>
+    </div>
+  </div>
+
+  <h2>Nasz zespół ds. jakości</h2>
+  <p>
+    W laboratorium pracuje kierownik ds. jakości (10 lat pracy w branży morskiej ds. kontroli jakości, certyfikowany
+    inżynier jakości ASQ), dwóch inspektorów jakości (każdy z certyfikatem NDT na poziomie 2 w zakresie badań
+    wizualnych) oraz technik materiałowy odpowiedzialny za wszystkie badania fizyczne. Zespół przechodzi coroczne testy
+    biegłości przeprowadzane przez niezależnego zewnętrznego dostawcę, aby mieć pewność, że wyniki naszych testów
+    pozostają dokładne i powtarzalne.
+  </p>
+
+  <h2>Niezależne testy dla klientów</h2>
+  <p>
+    Nasze laboratorium jakości i kontroli jest dostępne dla niezależnych usług testowych. Jeśli chcesz zweryfikować
+    specyfikację tkaniny, zatwierdzić nowy system klejący lub uzyskać raport z testów strony trzeciej w celu
+    kwalifikacji zakupowej, możemy przeprowadzić testy zgodnie z obowiązującą normą i wystawić certyfikowany raport z
+    testów.
+  </p>
+  <p>Przykłady ostatnich prac testowych stron trzecich:</p>
+  <ul>
+    <li>
+      Porównanie wytrzymałości na odrywanie pięciu konkurencyjnych produktów z folii samoprzylepnej w ramach
+      europejskiego programu zamówień wojskowych.
+    </li>
+    <li>
+      Badanie przyspieszonego starzenia (UV + cykle termiczne) dla nowego preparatu PVC z pigmentem pomarańczowym, z
+      regularnymi pomiarami pośrednimi w odstępach 500 h.
+    </li>
+    <li>
+      Walidacja zatrzymywania powietrza prototypowych zaworów przegrodowych 50 dla nowej konstrukcji rury
+      wysokociśnieniowej.
+    </li>
+  </ul>
+
+  <h2>Nasze zaangażowanie wobec Ciebie</h2>
+  <p>
+    Kiedy otrzymasz A {SITE.name} łodzi, otrzymasz także jej dokumentację dotyczącą jakości — skompilowany zapis wyników testów
+    mających zastosowanie do Twojej konkretnej łodzi. Certyfikat partii tkaniny, testy odrywania spoin, dzienniki testów powietrza
+    w komorze i lista kontrolna kontroli przed dostawą. Każdy numer jest identyfikowalny. Każdy inspektor jest identyfikowany.
+    To nie tylko papierkowa robota — to nasza obietnica, że dostarczyliśmy to, co określiliśmy.
+  </p>
+  <p>
+    Jeśli kiedykolwiek będziesz mieć wątpliwości dotyczące jakości, możesz skontaktować się bezpośrednio z laboratorium
+    — dane kontaktowe są wydrukowane na Twoim certyfikacie zgodności. Każde zapytanie traktujemy poważnie i
+    zobowiązujemy się do formalnego dochodzenia w ciągu 48 godzin.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Potrzebujesz niezależnych testów lub weryfikacji jakości?</h2>
+    <p class="mt-2 text-sm text-muted">
+      Nasze laboratorium akceptuje prace testowe stron trzecich — skontaktuj się z nami, aby przedstawić swoje
+      wymagania.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Skontaktuj się z laboratorium jakości</a
+    >
+  </div>
+</section>

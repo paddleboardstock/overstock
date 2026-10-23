@@ -1,0 +1,131 @@
+hero_text:
+  tagline: Επικοινωνία
+  title: ΕΠΙΚΟΙΝΩΝΗΣΤΕ ΜΑΖΙ ΜΑΣ
+contact_form:
+  id: form
+  title: Στείλτε μήνυμα
+  subtitle: Για προσφορά, τεχνικές ερωτήσεις ή συνεργασία – γράψτε μας. Απαντάμε εντός μίας εργάσιμης ημέρας.
+  email_to: info@aquafarer.com
+  submit_button: Αποστολή
+  success_message: Ευχαριστούμε! Το μήνυμά σας ελήφθη. Θα απαντήσουμε εντός μίας εργάσιμης ημέρας.
+  error_message: Παρουσιάστηκε σφάλμα κατά την αποστολή. Δοκιμάστε ξανά ή γράψτε απευθείας στο email.
+  default_country_code: '+1'
+  captcha:
+    label: 'Antispam: λύστε την παρακάτω άσκηση'
+  fields:
+    - name: firstName
+      label: Όνομα
+      row: 1
+    - name: lastName
+      label: Επώνυμο
+      row: 1
+    - name: companyName
+      label: Εταιρεία
+      row: 2
+    - name: address
+      label: Διεύθυνση
+      row: 3
+    - name: zip
+      label: Ταχ. Κώδικας
+      row: 4
+    - name: country
+      label: Χώρα
+      row: 4
+      type: select
+      optionsKey: countries
+    - name: email
+      label: Email
+      row: 5
+      type: email
+    - name: tel
+      label: Τηλέφωνο
+      row: 5
+      type: tel
+      withCountryCode: true
+    - name: orderVolume
+      label: Εκτιμώμενος όγκος παραγγελίας
+      row: 6
+      type: select
+      options:
+        - value: ''
+          label: Επιλέξτε τον εκτιμώμενο όγκο...
+        - value: sample
+          label: Μόνο δείγματα / πρωτότυπα
+        - value: '5-10'
+          label: 50–100 μονάδες (τυπική MOQ)
+        - value: '100-500'
+          label: 100–500 μονάδες
+        - value: '500-plus'
+          label: 500+ μονάδες (τιμολόγηση όγκου)
+    - name: customization
+      label: Χρειάζεστε προσαρμογή;
+      row: 7
+      type: select
+      options:
+        - value: ''
+          label: Επιλέξτε τύπο προσαρμογής...
+        - value: none
+          label: Τυπικό προϊόν (χωρίς προσαρμογή)
+        - value: logo
+          label: Μόνο προσαρμοσμένο λογότυπο / επωνυμία
+        - value: full
+          label: Πλήρες OEM (μέγεθος, χρώμα, γραφικά, συσκευασία)
+        - value: consultation
+          label: Δεν είμαι σίγουρος — χρειάζομαι συμβουλή
+    - name: productInterest
+      label: Κατηγορίες προϊόντων ενδιαφέροντος
+      row: 8
+      type: select
+      options:
+        - value: ''
+          label: Επιλέξτε κατηγορία προϊόντος...
+        - value: all
+          label: Όλα τα προϊόντα / πλήρης κατάλογος
+        - value: sup
+          label: SUP / σανίδες κωπηλασίας
+        - value: kayak
+          label: Φουσκωτά καγιάκ
+        - value: rib
+          label: Σκάφη RIB
+        - value: dinghy
+          label: Φουσκωτές βάρκες / tenders
+        - value: safety
+          label: Εξοπλισμός ασφαλείας / σωσίβια
+        - value: accessory
+          label: Αξεσουάρ (αντλίες, κουπιά, τσάντες)
+
+    - name: subject
+      label: Θέμα
+      row: 9
+    - name: message
+      label: Μήνυμα
+      row: 10
+      type: textarea
+      rows: 6
+features2_other_ways:
+  title: Άλλοι τρόποι επικοινωνίας
+  columns: 3
+  items:
+    - title: Εμπορικά ερωτήματα
+      description: Προσφορές, διαμορφώσεις, αιτήματα αντιπροσώπων και χονδρικές παραγγελίες.
+      icon: tabler:shopping-bag
+    - title: Τεχνική υποστήριξη
+      description: Εγγύηση, επισκευές, ανταλλακτικά και ερωτήσεις λειτουργίας.
+      icon: tabler:tool
+    - title: Τύπος και συνεργασίες
+      description: Πακέτα μέσων, χορηγίες και βιομηχανικές συνεργασίες.
+      icon: tabler:news
+    - title: Τηλέφωνο
+      description: '+86 13305324192'
+      icon: tabler:headset
+    - title: E-mail
+      description: info@aquafarer.com
+      icon: tabler:mail
+    - title: Έδρα
+      description: Economic Development Zone, Laixi, Qingdao, China, 266600
+      icon: tabler:map-pin
+map:
+  title: Η τοποθεσία μας
+  subtitle: Επισκεφθείτε μας
+  address: Economic Development Zone, Laixi, Qingdao, China, 266600
+  zoom: 15

@@ -1,0 +1,205 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'fi' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">← Takaisin R&amp;D Centeriin</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Lab 06</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Laatu- ja tarkastuslaboratorio</h1>
+      <p class="mt-3 text-lg text-muted">Riippumaton tarkastus – jokainen testi läpäistiin ennen toimitusta</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-uv-resistance-testing.webp"
+        alt="Aquafarer laaduntarkastuslaboratorio UV testaus"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Luota, mutta varmista</h2>
+  <p>
+    Jokaisella konepajastamme lähtevällä veneellä on todistus siitä, että se on läpäissyt määritellyt laatutarkastukset
+    ja materiaalitestit. Laatu- ja tarkastuslaboratoriomme on organisaatiossa itsenäinen toiminto – se raportoi suoraan
+    toimitusjohtajalle, ei tuotannolle – ja varmistaa, että mikään kaupallinen paine ei voi vaarantaa tarkastusporttia.
+    Jos materiaalierä tai valmis vene ei täytä julkaistuja määrityksiä, laboratoriolla on valtuudet keskeyttää lähetys,
+    kunnes vaatimustenvastaisuus on korjattu.
+  </p>
+  <p>
+    Laboratorio toimii periaatteiden mukaisen laadunhallintajärjestelmän alaisuudessa, ja testausmenetelmämme perustuvat
+    ISO-, ASTM- ja EN-standardeihin soveltuvin osin. Ylläpidämme yksityiskohtaista kirjaa jokaisesta suoritetusta
+    testistä ja luomme täydellisen jäljitettävyysketjun raaka-aineen vastaanottamisesta lopulliseen veneen toimitukseen.
+  </p>
+
+  <h2>Testauslaitteet ja -ominaisuudet</h2>
+  <table>
+    <thead><tr><th>Laitteet</th><th>Testit suoritettu</th><th>Standardi / menetelmä</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Universaali testauskone (50 kN)</td><td
+          >Vetolujuus (kangas), kuoriutumiskestävyys (saumat), repeytymisen eteneminen</td
+        ><td>, ISO 4674</td></tr
+      >
+      <tr
+        ><td>Ilmanpidätystestilaite (ohjelmoitava)</td><td
+          >1000-syklin täyttö/tyhjennyskestävyys, 24-48 h paineenpitotesti</td
+        ><td> (sisäinen)</td></tr
+      >
+      <tr
+        ><td>Sauman kuorintajigi (moottoroitu 180° kuorinta)</td><td
+          >Hitsauksen ja liimasauman kuoriutumislujuus 100 mm/min</td
+        ><td> / ASTM D1876</td></tr
+      >
+      <tr><td>Hydrostaattinen pään testeri</td><td>Kankaan vedenläpäisynkestävyys (0 — 00 mbar)</td><td>ISO 811</td></tr
+      >
+      <tr
+        ><td>Digitaalinen paksuusmittari ja mikrometri</td><td
+          >Kankaan paksuus, putken seinämän paksuus, liimakalvon paksuus</td
+        ><td>ISO 2286-3</td></tr
+      >
+      <tr
+        ><td>Ympäristökammio</td><td
+          >Lämpötilakäsittely (-40 °C - +80 °C) kylmähalkeilu- ja lämpövanhentamistestejä varten</td
+        ><td>ISO 188, ISO 4675</td></tr
+      >
+      <tr
+        ><td>Värispektrofotometri</td><td>Delta-E värimittaus UV valotuksen jälkeen</td><td>ISO 105-A05 / ASTM D2244</td
+        ></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>Tarkastusportit – materiaalista toimitukseen</h2>
+  <p>
+    Jokainen vene noudattaa määriteltyä laatusuunnitelmaa pakollisine tarkastuspisteineen. Mikään vene ei voi ohittaa
+    porttia; Laaduntarkastajan on allekirjoitettava jokainen portti ennen seuraavan tuotantovaiheen alkamista.
+  </p>
+
+  <div class="not-prose my-8">
+    <div class="relative">
+      <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-blue-200 dark:bg-blue-800"></div>
+      <div class="space-y-6 relative">
+        {
+          [
+            {
+              gate: 'Gate 1',
+              label: 'Incoming material inspection',
+              desc: 'Fabric batch, adhesive batch, hardware — all checked against incoming specification before release to production.',
+            },
+            {
+              gate: 'Gate 2',
+              label: 'In-process weld inspection',
+              desc: 'First-off weld coupon tested (peel + visual) at start of each production shift.',
+            },
+            {
+              gate: 'Gate 3',
+              label: 'Chamber air test',
+              desc: 'Each chamber pressurised to 1.25 x working pressure, held 24-48 h. Data logged per serial number.',
+            },
+            {
+              gate: 'Gate 4',
+              label: 'Pre-delivery inspection',
+              desc: 'Complete boat inspected: all fasteners torqued, systems functional, no cosmetic defects. 100-point checklist.',
+            },
+            {
+              gate: 'Gate 5',
+              label: 'Final certification',
+              desc: 'Test reports compiled, inspection records reviewed, Certificate of Conformance issued.',
+            },
+          ].map((g) => (
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs font-bold z-10">
+                {g.gate}
+              </div>
+              <div class="flex-1 p-3 rounded-lg bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800">
+                <p class="text-sm font-semibold">{g.label}</p>
+                <p class="text-xs text-gray-500 mt-1">{g.desc}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+
+  <h2>Tärkeimmät laatutiedot (2025 liukuva keskiarvo)</h2>
+  <div class="not-prose my-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">99.7 %</span>
+      <span class="text-xs text-gray-500">Ensikierron tuotto (kangaserä)</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">&lt; 0.2 %</span>
+      <span class="text-xs text-gray-500">Hitsauksen hylkäysaste (lineaarimetri)</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">100 %</span>
+      <span class="text-xs text-gray-500">Kammiot ilmatestattu ennen kokoamista</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600"></span>
+      <span class="text-xs text-gray-500">Suunnittelukategorian noudattaminen</span>
+    </div>
+  </div>
+
+  <h2>Laadukas tiimimme</h2>
+  <p>
+    Laboratoriossa työskentelee laatupäällikkö (10 vuotta merenkulun laadunvarmistuksessa, ASQ Certified Quality
+    Engineer), kaksi laaduntarkastajaa (kummallakin tason 2 NDT-sertifiointi visuaalisessa testauksessa) ja
+    materiaaliteknikko, joka vastaa kaikista fyysisistä testauksista. Tiimi käy läpi vuosittain pätevyystestauksen
+    riippumattoman kolmannen osapuolen palveluntarjoajan kautta varmistaakseen, että testitulokset pysyvät tarkkoja ja
+    toistettavissa.
+  </p>
+
+  <h2>Riippumaton testaus asiakkaille</h2>
+  <p>
+    Laatu- ja tarkastuslaboratoriomme on käytettävissä riippumattomille testauspalveluille. Jos sinun on tarkistettava
+    kangasspesifikaatio, validoitava uusi liimajärjestelmä tai hankittava kolmannen osapuolen testiraportti hankinnan
+    hyväksyntää varten, voimme suorittaa testit sovellettavan standardin mukaisesti ja antaa sertifioidun testiraportin.
+  </p>
+  <p>Esimerkkejä viimeaikaisista kolmannen osapuolen testaustöistä:</p>
+  <ul>
+    <li>
+      Viiden kilpailukykyisen liimakalvotuotteen kuoriutumislujuusvertailu eurooppalaiseen sotilashankintaohjelmaan.
+    </li>
+    <li>
+      Nopeutettu ikääntymistutkimus (UV + lämpökierto) uudelle oranssipigmenttiselle PVC-formulaatiolle, säännöllisillä
+      välimittauksilla 500 tunnin välein.
+    </li>
+    <li>50 prototyypin ohjausventtiilien ilmanpidätysvalmius uutta korkeapaineputkisuunnittelua varten.</li>
+  </ul>
+
+  <h2>Sitoutumisemme sinulle</h2>
+  <p>
+    Kun saat a {SITE.name} veneen, saat myös sen laatuaineiston – kootun tietueen testituloksista, jotka koskevat sinun veneesi.
+    Kangaserätodistus, hitsin kuoriutumistestit, kammion ilmatestauslokit ja toimitusta edeltävän tarkastuksen tarkistuslista.
+    Jokainen numero on jäljitettävissä. Jokainen tarkastaja tunnistetaan. Tämä ei ole pelkkää paperityötä – se on lupauksemme,
+    että toimitamme sen, mitä määritimme.
+  </p>
+  <p>
+    Jos sinulla on laatuongelmia, voit ottaa yhteyttä suoraan laboratorioon – yhteystiedot on painettu
+    vaatimustenmukaisuustodistukseesi. Otamme jokaisen kyselyn vakavasti ja sitoudumme muodolliseen tutkimukseen 48
+    tunnin kuluessa.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Tarvitsetko riippumatonta testausta tai laadunvarmistusta?</h2>
+    <p class="mt-2 text-sm text-muted">
+      Laboratoriomme hyväksyy kolmannen osapuolen testaustyöt – ota meihin yhteyttä ja kerro tarpeistasi.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Ota yhteyttä laatulaboratorioon</a
+    >
+  </div>
+</section>

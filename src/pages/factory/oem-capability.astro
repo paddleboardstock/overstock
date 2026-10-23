@@ -1,0 +1,198 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+
+const metadata = {
+  title: `OEM/ODM Inflatable Boat Manufacturer — Custom RIB & SUP Manufacturing | ${SITE.name}`,
+  description: `${SITE.name} OEM/ODM manufacturing: custom inflatable SUP, RIB, kayak, and dinghy production. Private label, custom branding, mold development, CE certification. MOQ from 5 units. ISO 9001 & BSCI certified factory.`,
+};
+
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Factory', href: '/factory' }, { name: 'OEM Capability' }];
+
+const highlights = [
+  { value: '10+', label: 'Years OEM experience', detail: 'Since 2012' },
+  { value: '50+', label: 'Export countries', detail: 'Global reach' },
+  { value: '200+', label: 'Custom projects delivered', detail: 'Across all product lines' },
+  { value: '30–45', label: 'Standard lead time (days)', detail: 'From PO to FOB' },
+  { value: '2–5', label: 'RIB MOQ (units)', detail: 'Standard models' },
+  { value: 'ISO 9001', label: 'Quality certified', detail: '+ BSCI social compliance' },
+];
+
+const services = [
+  {
+    title: 'Product Design & Engineering',
+    description:
+      'Our in-house R&D team works with your concept or spec to develop CAD drawings, 3D models, and prototypes. We offer mold design, hull shape optimization, and material selection guidance.',
+  },
+  {
+    title: 'Custom Branding & Graphics',
+    description:
+      'Full-color digital printing, screen printing, embossing, and label options. We develop brand-specific deck graphics, tube branding, and retail-ready packaging.',
+  },
+  {
+    title: 'Material & Specification Customization',
+    description:
+      'Choose from PVC (standard, eco-friendly, fire-retardant), Hypalon/CSM, drop-stitch, and hybrid constructions. Custom tube colors, fabric weights, and reinforcement options.',
+  },
+  {
+    title: 'Packaging & Logistics',
+    description:
+      'Custom retail packaging, private-label boxes, vacuum packing, palletizing, and container loading. FOB Qingdao, CIF, or DDP shipping terms available.',
+  },
+];
+
+const moqTable = [
+  { product: 'Inflatable SUP Boards', standard: '5–10 units', custom: '200+ units', lead: '30–45 days' },
+  { product: 'RIB Boats', standard: '2–5 units', custom: '50+ units', lead: '45–60 days' },
+  { product: 'Inflatable Kayaks', standard: '10–20 units', custom: '200+ units', lead: '30–45 days' },
+  { product: 'Dinghies & Tenders', standard: '10–20 units', custom: '200+ units', lead: '30–45 days' },
+  { product: 'Life Vests & Safety', standard: '100–500 units', custom: '1,000+ units', lead: '20–30 days' },
+];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <meta
+    name="ai-intent"
+    content="oem-inflatable-boat-manufacturer,rib-boat-oem,private-label-sup,white-label-inflatable-boats,custom-boat-manufacturing-china"
+  />
+  <section class="px-6 sm:px-6 py-16 sm:py-20 lg:py-24 mx-auto max-w-5xl text-center">
+    <a href="/factory" class="text-sm text-gray-500 hover:underline">&larr; Back to Factory</a>
+    <p class="mt-4 text-sm font-semibold text-primary uppercase tracking-wider">OEM/ODM Services</p>
+    <h1 class="mt-3 text-4xl md:text-5xl font-bold">OEM & Private Label Manufacturing</h1>
+    <p class="mt-3 text-lg text-muted">
+      From concept to container — customize every detail of your inflatable watercraft line
+    </p>
+  </section>
+
+  <section class="px-6 sm:px-6 pb-16 mx-auto max-w-4xl">
+    <p class="text-muted leading-relaxed">
+      {SITE.name} offers comprehensive OEM and ODM services for brands, distributors, and government agencies worldwide. With
+      10+ years of export experience and a 12,000 m² ISO 9001 & BSCI certified factory, we handle everything from product
+      design and mold development to full-scale production, packaging, and logistics.
+    </p>
+  </section>
+
+  <section class="px-6 sm:px-6 pb-8 mx-auto max-w-6xl">
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+      {
+        highlights.map((s) => (
+          <div class="text-center p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+            <span class="block text-3xl font-bold text-primary">{s.value}</span>
+            <span class="block text-sm text-muted mt-1">{s.label}</span>
+            <span class="block text-xs text-muted mt-1">{s.detail}</span>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="px-6 sm:px-6 py-16 mx-auto max-w-6xl">
+    <div class="text-center mb-12">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">OEM Services</p>
+      <h2 class="mt-2 text-3xl font-bold">What We Offer</h2>
+      <p class="mt-3 text-muted max-w-2xl mx-auto">
+        End-to-end OEM/ODM services tailored to your brand and market requirements.
+      </p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-6">
+      {
+        services.map((s) => (
+          <div class="p-6 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+            <h3 class="text-lg font-bold">{s.title}</h3>
+            <p class="mt-3 text-sm text-muted leading-relaxed">{s.description}</p>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- MOQ Table -->
+  <section class="px-6 sm:px-6 py-16 mx-auto max-w-5xl bg-gray-50 dark:bg-gray-900 rounded-2xl">
+    <div class="text-center mb-12">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">MOQ & Lead Time</p>
+      <h2 class="mt-2 text-3xl font-bold">Minimum Order Quantities</h2>
+      <p class="mt-3 text-muted max-w-2xl mx-auto">
+        Flexible MOQs designed to support both startups and established brands.
+      </p>
+    </div>
+    <div class="overflow-x-auto max-w-4xl mx-auto">
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="border-b border-gray-300 dark:border-gray-700">
+            <th class="text-left py-3 px-4 font-semibold">Product</th>
+            <th class="text-left py-3 px-4 font-semibold">Standard MOQ</th>
+            <th class="text-left py-3 px-4 font-semibold">Custom MOQ</th>
+            <th class="text-left py-3 px-4 font-semibold">Lead Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            moqTable.map((row) => (
+              <tr class="border-b border-gray-200 dark:border-gray-800">
+                <td class="py-3 px-4 font-medium">{row.product}</td>
+                <td class="py-3 px-4 text-muted">{row.standard}</td>
+                <td class="py-3 px-4 text-muted">{row.custom}</td>
+                <td class="py-3 px-4 text-muted">{row.lead}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Why Aquafarer for OEM -->
+  <section class="px-6 sm:px-6 py-16 mx-auto max-w-6xl">
+    <div class="text-center mb-12">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Why Choose Us</p>
+      <h2 class="mt-2 text-3xl font-bold">Why Brands Choose {SITE.name}</h2>
+      <p class="mt-3 text-muted max-w-2xl mx-auto">
+        What sets us apart from other inflatable boat manufacturers in China.
+      </p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="p-6 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+        <h3 class="text-lg font-bold">Vertical Integration</h3>
+        <p class="mt-3 text-sm text-muted">
+          We own our factory, molds, and supply chain — no middlemen, no subcontractors. This gives us control over
+          quality, cost, and delivery.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+        <h3 class="text-lg font-bold">Dual Certification</h3>
+        <p class="mt-3 text-sm text-muted">
+          ISO 9001 quality management and BSCI social compliance certification. Factory audit reports available upon
+          request.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+        <h3 class="text-lg font-bold">CE Compliance</h3>
+        <p class="mt-3 text-sm text-muted">
+          All standard models carry CE 2013/53/EU certification. Custom models can be CE certified through our
+          established process.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+        <h3 class="text-lg font-bold">Low MOQ</h3>
+        <p class="mt-3 text-sm text-muted">
+          Start with as few as 5 units for standard models. We help emerging brands launch without overcommitting
+          inventory.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="px-6 sm:px-6 py-16 mx-auto max-w-4xl text-center">
+    <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+      <h2 class="text-xl font-bold">Start your OEM project</h2>
+      <p class="mt-2 text-sm text-muted">
+        Tell us about your requirements and we will provide a detailed proposal within 48 hours.
+      </p>
+      <a
+        href="/contact"
+        class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+        >Get a quote →</a
+      >
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,130 @@
+hero_text:
+  tagline: İletişim
+  title: İLETİŞİME GEÇİN
+contact_form:
+  id: form
+  title: Bize bir mesaj gönderin
+  subtitle: Teklifler, teknik sorular veya işbirliği talepleri için bize bir mesaj bırakın. Bir iş günü içinde yanıt veriyoruz.
+  email_to: info@aquafarer.com
+  submit_button: Sorgu Gönder → Teklif Al
+  success_message: Teşekkürler! Mesajınız gelen kutumuza ulaştı. Bir iş günü içinde yanıt vereceğiz.
+  error_message: Mesajınız gönderilirken bir sorun oluştu. Lütfen tekrar deneyin veya doğrudan e-posta gönderin.
+  default_country_code: '+1'
+  captcha:
+    label: 'Spam karşıtı: lütfen aşağıdakini çözün'
+  fields:
+    - name: firstName
+      label: Ad
+      row: 1
+    - name: lastName
+      label: Soyad
+      row: 1
+    - name: companyName
+      label: Şirket Adı
+      row: 2
+    - name: address
+      label: Adres
+      row: 3
+    - name: zip
+      label: Posta / Zip Kodu
+      row: 4
+    - name: country
+      label: Ülke
+      row: 4
+      type: select
+      optionsKey: countries
+    - name: email
+      label: E-posta
+      row: 5
+      type: email
+    - name: tel
+      label: TEL
+      row: 5
+      type: tel
+      withCountryCode: true
+    - name: siparişHacmi
+      label: Tahmini Sipariş Hacmi
+      row: 6
+      type: select
+      options:
+        - value: ''
+          label: Tahmini hacminizi seçin...
+        - value: sample
+          label: Sadece numuneler / prototipler
+        - value: 5-10
+          label: 5–10 birim (Standart MOQ)
+        - value: 100-500
+          label: 100–500 birim
+        - value: 500-plus
+          label: 500+ birim (Hacim fiyatlandırması)
+    - name: customization
+      label: Özelleştirme Gerekiyor mu?
+      row: 7
+      type: select
+      options:
+        - value: ''
+          label: Özelleştirme türünü seçin...
+        - value: none
+          label: Standart ürün (özelleştirme yok)
+        - value: logo
+          label: Özel Logo / Marka yalnızca
+        - value: full
+          label: Tam OEM (boyut, renk, grafikler, ambalaj)
+        - value: consultation
+          label: Emin değil — danışmanlık gerekiyor
+    - name: Ürün ilgisi
+      label: İlgilenilen Ürün Kategorileri
+      row: 8
+      type: select
+      options:
+        - value: ''
+          label: Ürün kategorisi seçin...
+        - value: all
+          label: Tüm ürünler / Tam katalog
+        - value: sup
+          label: SUP Panolar / Paddleboardlar
+        - value: kayak
+          label: Şişme Kano
+        - value: rib
+          label: RIB Tekneler
+        - value: dinghy
+          label: Botlar / Yardımcı Botlar
+        - value: safety
+          label: Güvenlik Ekipmanları / Can Yelekleri
+        - value: accessory
+          label: Aksesuarlar (pompalara, kürekler, çantalar)
+    - name: subject
+      label: Konu
+      row: 9
+    - name: message
+      label: Mesaj
+      row: 10
+      type: textarea
+      rows: 6
+features2_other_ways:
+  title: Bize ulaşmanın diğer yolları
+  columns: 3
+  items:
+    - title: Satış soruları
+      description: Teklifler, konfigürasyonlar, bayi başvuruları ve toplu siparişler.
+      icon: tabler:shopping-bag
+    - title: Teknik destek
+      description: Garanti, tamir, yedek parça ve kullanım ile ilgili sorular.
+      icon: tabler:tool
+    - title: Basın & ortaklıklar
+      description: Medya kitleri, sponsorluk ve sektör işbirlikleri.
+      icon: tabler:news
+    - title: Telefon
+      description: +1 279 732 3333 (ABD Merkez) · +86 13305324192 (fabrika)
+      icon: tabler:headset
+    - title: E-posta
+      description: info@aquafarer.com
+      icon: tabler:mail
+    - title: Küresel Merkez & Fatura
+      description: Aquafarer LLC, New Mexico, ABD
+      icon: tabler:map-pin
+map:
+  title: Konumumuz
+  subtitle: Qingdao üretim merkezimizi ziyaret edin
+  address: Ekonomik Kalkınma Bölgesi, Laixi, Qingdao, Çin, 266600
+  zoom: 15

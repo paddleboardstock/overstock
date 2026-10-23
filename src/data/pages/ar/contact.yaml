@@ -1,0 +1,131 @@
+hero_text:
+  tagline: اتصل بنا
+  title: تواصل معنا
+contact_form:
+  id: form
+  title: أرسل لنا رسالة
+  subtitle: للاستفسار عن الأسعار أو الأسئلة الفنية أو استفسارات الشراكة، أرسل لنا رسالة. نرد خلال يوم عمل واحد.
+  email_to: info@aquafarer.com
+  submit_button: إرسال الرسالة
+  success_message: شكراً! رسالتك قد وصلت إلى صندوق الوارد لدينا. سنرد خلال يوم عمل واحد.
+  error_message: حدث خطأ أثناء إرسال رسالتك. يرجى المحاولة مرة أخرى أو مراسلتنا مباشرة عبر البريد الإلكتروني.
+  default_country_code: '+1'
+  captcha:
+    label: 'مكافحة البريد المزعج: يرجى حل ما يلي'
+  fields:
+    - name: firstName
+      label: الاسم الأول
+      row: 1
+    - name: lastName
+      label: اسم العائلة
+      row: 1
+    - name: companyName
+      label: اسم الشركة
+      row: 2
+    - name: address
+      label: العنوان
+      row: 3
+    - name: zip
+      label: الرمز البريدي
+      row: 4
+    - name: country
+      label: الدولة
+      row: 4
+      type: select
+      optionsKey: countries
+    - name: email
+      label: البريد الإلكتروني
+      row: 5
+      type: email
+    - name: tel
+      label: الهاتف
+      row: 5
+      type: tel
+      withCountryCode: true
+    - name: orderVolume
+      label: حجم الطلب التقديري
+      row: 6
+      type: select
+      options:
+        - value: ''
+          label: اختر الحجم التقديري...
+        - value: sample
+          label: عينات / نماذج أولية فقط
+        - value: '5-10'
+          label: 50–100 وحدة (الحد الأدنى القياسي للطلب)
+        - value: '100-500'
+          label: 100–500 وحدة
+        - value: '500-plus'
+          label: 500+ وحدة (تسعير الكميات)
+    - name: customization
+      label: هل تحتاج إلى تخصيص؟
+      row: 7
+      type: select
+      options:
+        - value: ''
+          label: اختر نوع التخصيص...
+        - value: none
+          label: منتج قياسي (بدون تخصيص)
+        - value: logo
+          label: شعار / علامة تجارية مخصصة فقط
+        - value: full
+          label: OEM كامل (الحجم, اللون, الرسومات, التغليف)
+        - value: consultation
+          label: لست متأكداً — أحتاج استشارة
+    - name: productInterest
+      label: فئات المنتجات المهمة
+      row: 8
+      type: select
+      options:
+        - value: ''
+          label: اختر فئة المنتج...
+        - value: all
+          label: جميع المنتجات / الكتالوج الكامل
+        - value: sup
+          label: ألواح SUP / ألواح التجديف
+        - value: kayak
+          label: قوارب كاياك قابلة للنفخ
+        - value: rib
+          label: قوارب RIB
+        - value: dinghy
+          label: قوارب دنجي / الزوارق
+        - value: safety
+          label: معدات السلامة / سترات النجاة
+        - value: accessory
+          label: الملحقات (مضخات, مجاديف, حقائب)
+
+    - name: subject
+      label: الموضوع
+      row: 9
+    - name: message
+      label: الرسالة
+      row: 10
+      type: textarea
+      rows: 6
+features2_other_ways:
+  title: طرق أخرى للتواصل معنا
+  columns: 3
+  items:
+    - title: استفسارات المبيعات
+      description: عروض الأسعار، التهيئة، طلبات الوكالة والطلبات بالجملة.
+      icon: tabler:shopping-bag
+    - title: الدعم الفني
+      description: الضمان، الإصلاحات، قطع الغيار وأسئلة التشغيل.
+      icon: tabler:tool
+    - title: الإعلام والشراكات
+      description: الحزم الإعلامية، الرعاية والتعاون الصناعي.
+      icon: tabler:news
+    - title: الهاتف
+      description: '+86 13305324192'
+      icon: tabler:headset
+    - title: البريد الإلكتروني
+      description: info@aquafarer.com
+      icon: tabler:mail
+    - title: المقر الرئيسي
+      description: Economic Development Zone, Laixi, Qingdao, China, 266600
+      icon: tabler:map-pin
+map:
+  title: موقعنا
+  subtitle: زرنا في مقرنا الرئيسي
+  address: Economic Development Zone, Laixi, Qingdao, China, 266600
+  zoom: 15

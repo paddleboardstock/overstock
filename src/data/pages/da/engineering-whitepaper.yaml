@@ -1,0 +1,119 @@
+hero:
+  tagline: Teknisk hvidbog
+  title: Drop-Stitch-teknologi og materialevidenskab:<br />Tekniken bag moderne oppustelige vandfartøjer
+  subtitle: En autoritativ teknisk reference, der dækker drop-stitch-kernekonstruktion, PVC vs Hypalon-materialesammenligning, højtryksbeholders stivhedstest og standarder for fremstilling af vandfartøjer.
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/randd/aquafarer-design-discussion-lab.webp
+    alt: Aquafarer R&D-laboratorium — materialeprøvning og teknik
+direct_answer: Drop-stitch-teknologi bruger tusindvis af interne polyestertråde, der forbinder de øverste og nederste stoflag af en oppustelig kerne. Når de er oppustet til 15-20 PSI, fungerer disse tråde som spændingselementer, der forhindrer udbulning og skaber en stiv struktur, der kan sammenlignes med hårdskalkonstruktion. Kombineret med avancerede PVC- eller Hypalon-stofbelægninger og RF-svejsning muliggør dette bærbare, højtydende oppustelige vandfartøjer velegnet til professionel, kommerciel og rekreativ brug.
+section_drop_stitch:
+  title: Drop-Stitch Strukturteknik
+  subtitle: Hvordan tusindvis af tråde forvandler fleksibelt stof til stiv struktur
+  content: |-
+    Drop-stitch (også kendt som "drop-stitch-stof" eller "drop-stitch-kerne") repræsenterer et gennembrud inden for oppustelige strukturkonstruktioner. Princippet er vildledende enkelt: tusindvis af individuelle polyestertråde væves samtidigt i to separate lag af basisstof, der forbinder top- og bundpaneler i en 90-graders vinkel.
+
+    Når det forseglede kammer sættes under tryk, udøver det indre lufttryk ensartet kraft i alle retninger - forsøger at skubbe top- og bundpanelerne fra hinanden til en cylindrisk form. De tusindvis af drop-stitch-tråde modstår denne adskillelse og overfører belastningen til spænding langs trådaksen. Resultatet er et fladt, stift panel, der kan modstå 15–20 PSI internt tryk.
+
+    Ved 20 PSI oplever et 1 m² drop-stitch-panel cirka 14.000 kg total indre kraft - alligevel holder trådmatricen det perfekt fladt. Dette giver drop-stitch-strukturer et styrke-til-vægt-forhold, der konkurrerer med traditionelle stive materialer.
+section_materials:
+  title: PVC vs Hypalon — Teknisk materialesammenligning
+  subtitle: Objektive data for informeret materialevalg i fremstilling af oppustelige fartøjer
+  table:
+    columns:
+      - header: Ejendom
+      - header: PVC (polyvinylklorid)
+      - header: Hypalon (CSM)
+    rows:
+      - property: UV-modstand
+        pvc: God (med UV-stabilisatorer)
+        hypalon: Fremragende (iboende)
+      - property: Slidstyrke
+        pvc: God
+        hypalon: Meget god
+      - property: Trækstyrke
+        pvc: 3.000–5.000 N/5 cm
+        hypalon: 2.500–4.000 N/5 cm
+      - property: Vægt pr. m²
+        pvc: 850–1.200 g
+        hypalon: 1.100–1.500 g
+      - property: Kold Flex
+        pvc: -30°C
+        hypalon: -20°C
+      - property: Sammenføjningsmetode
+        pvc: RF svejsning / Varmluftsvejsning
+        hypalon: Håndlimning (kontaktcement)
+      - property: Reparationsevne
+        pvc: Nem (varmesvejsning eller klæbemiddel)
+        hypalon: Kræver CSM klæbemiddel
+      - property: Materialeomkostninger
+        pvc: 8-15 USD/m²
+        hypalon: 20-40 USD/m²
+      - property: Levetid (tropisk sol)
+        pvc: 5-8 år
+        hypalon: 10-15 år
+      - property: Farveområde
+        pvc: Bred (fuldt farvespektrum)
+        hypalon: Begrænset (grundfarver)
+      - property: Kemisk resistens
+        pvc: God (brændstof/olie resistente kvaliteter)
+        hypalon: Fremragende (bredt kemisk udvalg)
+section_testing:
+  title: Test- og sikkerhedsprotokoller
+  subtitle: Aquafarers kvalitetssikringsramme for hvert produktionsparti
+  protocols:
+    - title: 1,25x nominel trykholdtest
+      description: Hver samlet beholder pustes op til 1,25x dets nominelle driftstryk og holdes i 24-48 timer. Ethvert trykfald på mere end 2 % udløser afvisning og efterbearbejdning.
+      standard: ISO 6185
+    - title: Sømafskalningsstyrketest
+      description: Svejse- og limsømprøver fra hver produktionsbatch testes for skrælningsstyrke ved hjælp af kalibreret spændingsudstyr. Minimum 4 kN/m skrælningsmodstand påkrævet.
+      standard: ISO 2411
+    - title: Stoftrækprøve
+      description: Indgående stofruller gennemgår trækstyrke- og forlængelsestest i både kæde- og skudretninger. Afvisningstærskel under 3.000 N/5cm for PVC.
+      standard: ISO 1421
+    - title: UV-accelereret forvitring
+      description: Materialeprøver udsættes for 1.000+ timers accelereret UV-eksponering i QUV-testkamre. Maksimalt 15 % trækstyrketab tilladt.
+      standard: ASTM G154
+    - title: Ventil & fittingsintegritet
+      description: Hver ventilenhed testes for tætningsintegritet ved 1,25x nominelt tryk. Tilbageløbsventiler er testet for envejs tætningsydelse.
+      standard: ISO 12402
+section_manufacturing:
+  title: Produktionsstandarder og kvalitetscertificeringer
+  subtitle: Overholdelse af industristandarder for global markedsadgang
+  standards:
+    - name: ISO 9001:2015
+      body: SGS certificeret
+      scope: Kvalitetsstyringssystem på tværs af design, produktion og levering
+    - name: CE 2013/53/EU
+      body: EU notificeret organ
+      scope: Direktivet om fritidsfartøjer — skrogdesign, stabilitet, flotation, emissioner
+    - name: BSCI
+      body: Amfori
+      scope: Social overholdelse — arbejdstagersikkerhed, retfærdigt arbejde, miljøledelse
+    - name: ISO 6185
+      body: international biologisk standard
+      scope: Oppustelige både — konstruktion, stabilitet, flotation, trykprøvning
+    - name: NÅ
+      body: EU-forordning
+      scope: Kemikaliesikkerhed — begrænsede stoffer i materialer og belægninger
+section_faq:
+  title: Tekniske ofte stillede spørgsmål
+  questions:
+    - q: Hvordan er drop-stitch sammenlignet med traditionel hard-shell-konstruktion?
+      a: Moderne drop-stitch-kerner ved 20 PSI opnår 85-90 % af stivheden af sammenlignelige EPS-skum/fiberglas-hårde skaller, samtidig med at de kan tømmes fuldt ud til transport. Afvejningen er lidt højere vægt og lavere ultimativ stivhed - men for de fleste rekreative og kommercielle applikationer er forskellen ubetydelig.
+    - q: Hvilken trådtæthed betragtes som førsteklasses kvalitet?
+      a: Premium drop-stitch-stoffer bruger 2 tråde pr. kvadrattomme (ca. 3.100 tråde pr. m²) vævet af 1.680 DTEX polyestergarn. Indgangsstoffer bruger 1 tråd pr. m2 med 1.100 DTEX-garn.
+    - q: Kan Hypalon svejses som PVC?
+      a: Nej. Hypalon/CSM kan ikke RF-svejses. Det skal samles ved hjælp af håndpåført kontaktcement, hvilket gør produktionen mere arbejdskrævende og sømme afhængig af operatørens færdigheder. PVC kan RF-svejses eller varmluftsvejses for ensartet, automatiseret sømkvalitet.
+    - q: Hvad er det maksimale sikre tryk for gummibåde?
+      a: Standard oppustelige bådrør fungerer ved 8–12 PSI. Drop-stitch-gulve fungerer ved 12–20 PSI. Højtryks drop-stitch cores (SUP'er) kan fungere ved 20–25 PSI. Hvert produkt inkluderer trykaflastningsventiler, der er kalibreret til at forhindre overoppustning.
+    - q: Hvor lang tid tager det at fremstille en tilpasset gummibåd?
+      a: Standard OEM-produktion kører 30-45 dage fra ordrebekræftelse til FOB Qingdao. Skræddersyet formudvikling tilføjer 15-20 dage til prototypeproduktion og -testning.
+cta:
+  title: Ingeniørrådgivning
+  subtitle: Har du et specifikt spørgsmål om materiale eller design? Vores ingeniørteam er til rådighed for tekniske diskussioner.
+  actions:
+    - variant: primary
+      text: Spørg vores ingeniørteam
+      href: /contact
+    - text: Udforsk vores R&D Center
+      href: /randdcenter

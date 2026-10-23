@@ -1,0 +1,130 @@
+hero_text:
+  tagline: Hubungi
+  title: BERHUBUNG
+contact_form:
+  id: form
+  title: Hantar kami mesej
+  subtitle: Untuk sebutharga, pertanyaan teknikal atau pertanyaan perkongsian, hantarkan mesej kepada kami. Kami akan membalas dalam satu hari bekerja.
+  email_to: info@aquafarer.com
+  submit_button: Hantar Pertanyaan → Dapatkan Sebutharga
+  success_message: Terima Kasih! Mesej anda telah sampai ke peti masuk kami. Kami akan membalas dalam satu hari bekerja.
+  error_message: Terdapat masalah menghantar mesej anda. Sila cuba lagi atau emel kami secara langsung.
+  default_country_code: '+1'
+  captcha:
+    label: 'Anti-spam: sila selesaikan yang berikut'
+  fields:
+    - name: firstName
+      label: Nama Pertama
+      row: 1
+    - name: lastName
+      label: Nama Akhir
+      row: 1
+    - name: companyName
+      label: Nama Syarikat
+      row: 2
+    - name: address
+      label: Alamat
+      row: 3
+    - name: zip
+      label: Poskod / Kode Pos
+      row: 4
+    - name: country
+      label: Negara
+      row: 4
+      type: select
+      optionsKey: countries
+    - name: email
+      label: E-mel
+      row: 5
+      type: email
+    - name: tel
+      label: TEL
+      row: 5
+      type: tel
+      withCountryCode: true
+    - name: orderVolume
+      label: Anggaran Jumlah Pesanan
+      row: 6
+      type: select
+      options:
+        - value: ''
+          label: Pilih anggaran jumlah anda...
+        - value: sample
+          label: Hanya Sampel / Prototip
+        - value: 5-10
+          label: 5–10 unit (Standard MOQ)
+        - value: 100-500
+          label: 100–500 unit
+        - value: 500-plus
+          label: 500+ unit (Harga volume)
+    - name: customization
+      label: Perlu Penyesuaian?
+      row: 7
+      type: select
+      options:
+        - value: ''
+          label: Pilih jenis penyesuaian...
+        - value: none
+          label: Produk standard (tiada penyesuaian)
+        - value: logo
+          label: Logo / Penjenamaan Tersuai sahaja
+        - value: full
+          label: Penuh OEM (saiz, warna, grafik, pembungkusan)
+        - value: consultation
+          label: Tidak pasti — perlukan konsultasi
+    - name: minatProduk
+      label: Kategori Produk yang Diminati
+      row: 8
+      type: select
+      options:
+        - value: ''
+          label: Pilih kategori produk...
+        - value: all
+          label: Semua produk / Katalog penuh
+        - value: sup
+          label: SUP Papan / Papan Dayung
+        - value: kayak
+          label: Kayak Tiup
+        - value: rib
+          label: RIB Bot
+        - value: dinghy
+          label: Perahu Kecil / Tender
+        - value: safety
+          label: Peralatan Keselamatan / Jaket Kehidupan
+        - value: accessory
+          label: Aksesori (pam, dayung, beg)
+    - name: subject
+      label: Subjek
+      row: 9
+    - name: message
+      label: Mesej
+      row: 10
+      type: textarea
+      rows: 6
+features2_other_ways:
+  title: Cara lain untuk menghubungi kami
+  columns: 3
+  items:
+    - title: Pertanyaan jualan
+      description: Sebutharga, konfigurasi, permohonan pengedar dan pesanan pukal.
+      icon: tabler:shopping-bag
+    - title: Sokongan teknikal
+      description: Jaminan, pembaikan, alat ganti dan soalan pengendalian.
+      icon: tabler:tool
+    - title: Akhbar & perkongsian
+      description: Kit media, penajaan dan kerjasama industri.
+      icon: tabler:news
+    - title: Telefon
+      description: +1 279 732 3333 (Ibu Pejabat AS) · +86 13305324192 (kilang)
+      icon: tabler:headset
+    - title: Emel
+      description: info@aquafarer.com
+      icon: tabler:mail
+    - title: Ibu Pejabat Global & Pengebilan
+      description: Aquafarer LLC, New Mexico, Amerika Syarikat
+      icon: tabler:map-pin
+map:
+  title: Lokasi Kami
+  subtitle: Lawati pusat pembuatan kami di Qingdao
+  address: Zon Pembangunan Ekonomi, Laixi, Qingdao, China, 266600
+  zoom: 15

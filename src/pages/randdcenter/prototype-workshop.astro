@@ -1,0 +1,20 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+
+const crumbs = [
+  { name: 'Home', href: '/' },
+  { name: 'R&D Center', href: '/randdcenter' },
+  { name: 'Prototype Workshop' },
+];
+
+const metadata = {
+  title: `Prototype Workshop — Full-Scale RIB Prototyping & Sea Trials | ${SITE.name}`,
+  description: `From CAD to sea-ready boat in 8-12 weeks. Our Prototype Workshop builds, rigs, and sea-trials custom RIBs and inflatable boats. Start your prototype project today.`,
+};
+import PrototypeWorkshopEn from '~/components/randdcenter/prototype-workshop.en.astro';
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <PrototypeWorkshopEn lang="en" />
+</Layout>

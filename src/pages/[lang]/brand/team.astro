@@ -1,0 +1,126 @@
+---
+export const prerender = true;
+
+import Hero from '~/components/widgets/Hero.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { getPageContent, setPageContentData } from '~/i18n/page-content';
+import __pageData from '~/i18n/generated/pages/brand-team.ts';
+import { localizePageTitle } from '~/i18n/page-title';
+import { languages } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => getUiForLang(lang)?.[key] || '';
+setPageContentData(__pageData);
+const page = getPageContent(lang, 'brand-team') || {};
+
+const hero = page.hero ?? {};
+const founding = page.founding ?? {};
+const leadership = page.leadership ?? {};
+const philosophy = page.philosophy ?? {};
+const cta = page.cta ?? {};
+
+// Use local image path in dev mode so team-all.webp displays without CDN upload
+const isDev = import.meta.env.DEV;
+const heroImage =
+  isDev && hero.image?.src?.includes('team-all.webp') ? { ...hero.image, src: '/images/team-all.webp' } : hero.image;
+
+const lh = (h: string) => (h ? `/${lang}${h}` : h);
+const ctaActions = cta.actions?.map((a: any) => ({ ...a, href: lh(a.href) }));
+
+const metadata = {
+  title: localizePageTitle(page, `Team — ${SITE.name} | Marine Engineering & Leadership`),
+  description:
+    'Meet the Aquafarer team — marine engineers, material scientists, and manufacturing experts with decades of combined experience in inflatable boat design and production.',
+};
+const crumbs = [
+  { name: t('nav.home') || 'Home', href: `/${lang}/` },
+  { name: 'Brand', href: `/${lang}/brand/` },
+  { name: 'Team' },
+];
+
+const faqSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'How large is the Aquafarer team?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: '200-300 skilled workers, 25+ engineers averaging 7+ years experience, dedicated quality lab staff, and B2B sales support team.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What engineering expertise is available?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Hull design, materials science, RF welding engineering, quality systems, and compliance documentation — all in-house.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I work with specific team members?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Dedicated account managers are assigned to OEM/ODM partners. Engineering contact available throughout project development.',
+      },
+    },
+  ],
+});
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <Hero tagline={hero.tagline} image={heroImage} title={hero.title} subtitle={hero.subtitle} />
+  <Features3
+    tagline={founding.tagline}
+    title={founding.title}
+    subtitle={founding.subtitle}
+    columns={4}
+    items={founding.items}
+  />
+  <Features3
+    tagline={leadership.tagline}
+    title={leadership.title}
+    subtitle={leadership.subtitle}
+    columns={leadership.columns}
+    items={leadership.items}
+  />
+  <Content
+    tagline={philosophy.tagline}
+    title={philosophy.title}
+    subtitle={philosophy.subtitle}
+    content={philosophy.list?.map((i: string) => (i ? `- ${i}` : '')).join('\n')}
+  />
+  <CallToAction title={cta.title} subtitle={cta.subtitle} actions={ctaActions} />
+  {
+    leadership.items
+      ?.filter((m: any) => m.name && m.title)
+      .map((m: any) => (
+        <JsonLd
+          type="Person"
+          data={{
+            name: m.name,
+            givenName: m.name?.split(' ')[0],
+            familyName: m.name?.split(' ').slice(1).join(' '),
+            jobTitle: m.title,
+            description: m.description,
+            url: m.name === 'Toby Liu' ? `/${lang}/brand/team` : undefined,
+            worksFor: { name: 'Aquafarer', '@type': 'Organization' },
+            knowsAbout: ['RIB boats', 'marine manufacturing', 'inflatable boats'],
+          }}
+        />
+      ))
+  }
+  <script is:inline type="application/ld+json" set:html={faqSchema} />
+</Layout>

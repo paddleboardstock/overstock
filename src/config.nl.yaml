@@ -1,0 +1,119 @@
+site:
+  name: Aquafarer
+  site: 'https://aquafarer.com'
+  base: '/'
+  trailingSlash: true
+  googleSiteVerificationId: ''
+metadata:
+  title:
+    default: Aquafarer — Moderne oplossingen voor opblaasbare boten en technische producten
+    template: '%s — Aquafarer'
+  description: 'Aquafarer ontwerpt en produceert hoogwaardige opblaasbare boten, RIBs en technische producten. Bekijk de catalogus, specificaties en bronnen.'
+  keywords:
+    - Aquafarer
+    - opblaasbare boot
+    - RIB
+    - PVC
+    - maritiem
+    - techniek
+  author: Aquafarer
+  robots:
+    index: true
+    follow: true
+  openGraph:
+    site_name: Aquafarer
+    images:
+      - url: '~/assets/images/default.webp'
+        width: 1200
+        height: 628
+    type: website
+    locale: nl_NL
+  twitter:
+    handle: '@Aquafarer'
+    site: '@Aquafarer'
+    cardType: summary_large_image
+i18n:
+  textDirection: ltr
+apps:
+  blog:
+    isEnabled: true
+    postsPerPage: 6
+    post:
+      isEnabled: true
+      permalink: '/news/%slug%'
+      robots:
+        index: true
+        follow: true
+    list:
+      isEnabled: true
+      pathname: 'news'
+      robots:
+        index: true
+        follow: true
+    category:
+      isEnabled: true
+      pathname: 'news/category'
+      robots:
+        index: true
+        follow: true
+    tag:
+      isEnabled: true
+      pathname: 'news/tag'
+      robots:
+        index: false
+        follow: true
+    isRelatedPostsEnabled: true
+    relatedPostsCount: 4
+  products:
+    isEnabled: true
+    productsPerPage: 12
+    product:
+      isEnabled: true
+      permalink: '/products/%slug%'
+      robots:
+        index: true
+        follow: true
+    list:
+      isEnabled: true
+      pathname: 'products'
+      robots:
+        index: true
+        follow: true
+analytics:
+  vendors:
+    googleAnalytics:
+      id: null
+ui:
+  theme: 'system'
+
+# ----- Per-language site settings -----
+siteSettings:
+  siteName: 'Aquafarer'
+  siteTagline: "Aquafarer — Premium opblaasbare boten, SUP's & watersportuitrusting"
+  siteDescription: "Aquafarer ontwerpt en produceert premium opblaasbare boten, SUP's en watersportuitrusting."
+  organization:
+    name: 'Aquafarer'
+    logo: ''
+    contactEmail: info@aquafarer.com
+    contactPhone: '+86 13305324192'
+    address: 'Economic Development Zone, Laixi, Qingdao, China, 266600'
+
+branding:
+  site_name: 'Aquafarer'
+  logo_image: ''
+  logo_alt: 'Aquafarer logo'
+  copyright: '© {year} {site_name} · Alle rechten voorbehouden.'
+  phone: '+86 13305324192'
+  address: 'Economic Development Zone, Laixi, Qingdao, China, 266600'
+  email: info@aquafarer.com
+  whatsapp_number: '+86 13305324192'
+  whatsapp_default_message: 'Hallo, ik wil informeren naar een product.'
+  contact_email_to: info@aquafarer.com
+  contact_email_provider: resend
+  contact_from_email: info@aquafarer.com
+  contact_from_name: Aquafarer
+  contact_resend_api_key: Aa123456#
+  contact_submissions_pat: ''
+  gmap_api_key: ''
+  map_latitude: '36.8861'
+  map_longitude: '120.5261'

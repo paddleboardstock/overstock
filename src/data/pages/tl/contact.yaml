@@ -1,0 +1,130 @@
+hero_text:
+  tagline: Kontak
+  title: MAKIPAG-UGNAYAN
+contact_form:
+  id: form
+  title: Magpadala sa amin ng mensahe
+  subtitle: Para sa mga quote, teknikal na tanong o mga pakikipagtulungan, magpadala sa amin ng mensahe. Sumasagot kami sa loob ng isang araw ng negosyo.
+  email_to: info@aquafarer.com
+  submit_button: Magpadala ng Pagtatanong → Kumuha ng Quote
+  success_message: Salamat! Ang iyong mensahe ay natanggap na sa aming inbox. Sasagutin namin ito sa loob ng isang araw ng negosyo.
+  error_message: May nagkamali sa pagpapadala ng iyong mensahe. Pakisubukang muli o mag-email sa amin nang direkta.
+  default_country_code: '+1'
+  captcha:
+    label: 'Anti-spam: pakisolve ang sumusunod'
+  fields:
+    - name: firstName
+      label: Pangalan
+      row: 1
+    - name: lastName
+      label: Apelyido
+      row: 1
+    - name: companyName
+      label: Pangalan ng Kumpanya
+      row: 2
+    - name: address
+      label: Address
+      row: 3
+    - name: zip
+      label: Zip / Postal Code
+      row: 4
+    - name: country
+      label: Bansa
+      row: 4
+      type: select
+      optionsKey: countries
+    - name: email
+      label: E-mail
+      row: 5
+      type: email
+    - name: tel
+      label: TEL
+      row: 5
+      type: tel
+      withCountryCode: true
+    - name: orderVolume
+      label: Tinatayang Dami ng Order
+      row: 6
+      type: select
+      options:
+        - value: ''
+          label: Piliin ang iyong tinatayang dami...
+        - value: sample
+          label: Mga Sample / Prototype lamang
+        - value: 5-10
+          label: 5–10 yunit (Standard MOQ)
+        - value: 100-500
+          label: 100–500 yunit
+        - value: 500-plus
+          label: 500+ yunit (Presyo sa dami)
+    - name: customization
+      label: Kailangan ng Customization?
+      row: 7
+      type: select
+      options:
+        - value: ''
+          label: Piliin ang uri ng customization...
+        - value: none
+          label: Standard na produkto (walang customization)
+        - value: logo
+          label: Pasadyang Logo / Branding lamang
+        - value: full
+          label: Buong OEM (laki, kulay, grapiko, packaging)
+        - value: consultation
+          label: Hindi sigurado — kailangan ng konsultasyon
+    - name: interesSaProdukto
+      label: Mga Kategorya ng Produkto na Interesado
+      row: 8
+      type: select
+      options:
+        - value: ''
+          label: Pumili ng kategorya ng produkto...
+        - value: all
+          label: Lahat ng produkto / Buong katalogo
+        - value: sup
+          label: SUP Mga Board / Paddleboards
+        - value: kayak
+          label: Mga Inflatable Kayaks
+        - value: rib
+          label: RIB Mga Bangka
+        - value: dinghy
+          label: Dinghies / Tenders
+        - value: safety
+          label: Kagamitan sa Kaligtasan / Life Vests
+        - value: accessory
+          label: Mga Aksesorya (pampump, sagwan, bag)
+    - name: subject
+      label: Paksa
+      row: 9
+    - name: message
+      label: Mensahe
+      row: 10
+      type: textarea
+      rows: 6
+features2_other_ways:
+  title: Iba pang paraan upang makipag-ugnayan sa amin
+  columns: 3
+  items:
+    - title: Mga inquiry sa benta
+      description: Mga quotation, konfigurasyon, aplikasyon para sa dealer at maramihang order.
+      icon: tabler:shopping-bag
+    - title: Suportang teknikal
+      description: Warranty, pagkukumpuni, ekstrang bahagi at mga tanong sa operasyon.
+      icon: tabler:tool
+    - title: Press & pakikipag-partner
+      description: Mga media kit, sponsorship at kolaborasyong pang-industriya.
+      icon: tabler:news
+    - title: Telepono
+      description: +1 279 732 3333 (US HQ) · +86 13305324192 (pabrika)
+      icon: tabler:headset
+    - title: Email
+      description: info@aquafarer.com
+      icon: tabler:mail
+    - title: Global HQ & Billing
+      description: Aquafarer LLC, New Mexico, Estados Unidos
+      icon: tabler:map-pin
+map:
+  title: Aming Lokasyon
+  subtitle: Bisitahin ang aming hub ng paggawa sa Qingdao
+  address: Economic Development Zone, Laixi, Qingdao, China, 266600
+  zoom: 15

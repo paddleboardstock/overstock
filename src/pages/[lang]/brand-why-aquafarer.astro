@@ -1,0 +1,86 @@
+---
+export const prerender = true;
+
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+import { getPageContent, setPageContentData } from '~/i18n/page-content';
+import __pageData from '~/i18n/generated/pages/brand-why-aquafarer.ts';
+import { localizePageTitle } from '~/i18n/page-title';
+import { languages } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => getUiForLang(lang)?.[key] || '';
+setPageContentData(__pageData);
+const page = getPageContent(lang, 'brand-why-aquafarer');
+
+const hero = page.hero ?? {};
+const stats = page.stats ?? {};
+const reasons = page.features3_reasons ?? {};
+const testimonials = page.testimonials ?? {};
+const cta = page.cta ?? {};
+const lh = (h: string) => (h ? `/${lang}${h}` : h);
+const ctaActions = cta.actions?.map((a: any) => ({ ...a, href: lh(a.href) }));
+
+const metadata = {
+  title: localizePageTitle(page, `Why Choose ${SITE.name} — OEM/ODM Marine Manufacturer`),
+  description:
+    'Seven reasons why global brands choose Aquafarer: real manufacturing, engineering-led design, certified quality, flexible OEM/ODM, global logistics, lifetime support.',
+};
+const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: 'Brand' }, { name: 'Why Aquafarer' }];
+
+const faqSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Why choose Aquafarer over competitors?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Direct factory (no trading company), 64 CE-certified models, ISO 9001 (SGS), 99.3% defect-free rate, and flexible MOQs from 2-10 units.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What makes Aquafarer different?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Vertically integrated manufacturing with in-house engineering, quality lab, and compliance documentation — not a trading company.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How do I verify Aquafarer claims?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Factory audits welcome. ISO 9001, BSCI, and CE certificates available for review. Third-party inspection accommodated.',
+      },
+    },
+  ],
+});
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <Hero tagline={hero.tagline} image={hero.image} title={hero.title} subtitle={hero.subtitle} />
+  <Stats title={stats.title} stats={stats.stats} />
+  <Features3
+    tagline={reasons.tagline}
+    title={reasons.title}
+    subtitle={reasons.subtitle}
+    columns={reasons.columns}
+    items={reasons.items}
+  />
+  <Testimonials tagline={testimonials.tagline} title={testimonials.title} testimonials={testimonials.items} />
+  <CallToAction title={cta.title} subtitle={cta.subtitle} actions={ctaActions} />
+  <script is:inline type="application/ld+json" set:html={faqSchema} />
+</Layout>

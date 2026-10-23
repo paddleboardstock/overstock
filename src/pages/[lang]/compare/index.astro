@@ -1,0 +1,165 @@
+---
+const PAGE_META: Record<string, { title: string }> = {
+  de: { title: 'Vergleiche & Kaufratgeber' },
+  es: { title: 'Comparativas y guías de compra' },
+  fr: { title: 'Comparatifs et guides d’achat' },
+  it: { title: 'Confronti e guide all’acquisto' },
+  pt: { title: 'Comparações e guias de compra' },
+  ar: { title: 'المقارنات وأدلة الشراء' },
+  ru: { title: 'Сравнения и руководства по покупке' },
+  pl: { title: 'Porównania i przewodniki zakupowe' },
+  nl: { title: 'Vergelijkingen en koopgidsen' },
+  sv: { title: 'Jämförelser och köpguider' },
+  no: { title: 'Sammenligninger og kjøpeguides' },
+  el: { title: 'Συγκρίσεις και οδηγοί αγοράς' },
+  fi: { title: 'Vertailut ja ostajan oppaat' },
+  da: { title: 'Sammenligninger og købeguider' },
+  cs: { title: 'Srovnání a nákupní průvodce' },
+  ja: { title: '比較と購入ガイド' },
+};
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { languages, defaultLang } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => getUiForLang(lang || defaultLang)?.[key] || '';
+
+const comparisons = [
+  {
+    slug: 'pvc-vs-hypalon',
+    title: t('compare.pvcVsHypalon'),
+    desc: t('compare.pvcVsHypalon.desc'),
+    image: 'https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-pvc-material-testing.webp',
+  },
+  {
+    slug: 'sup-vs-rib',
+    title: t('compare.supVsRib'),
+    desc: t('compare.supVsRib.desc'),
+    image: 'https://assets.aquafarer.com/images/aquafarer/hero/factory-gate.webp',
+  },
+  {
+    slug: 'sup-vs-kayak',
+    title: t('compare.supVsKayak'),
+    desc: t('compare.supVsKayak.desc'),
+    image: 'https://assets.aquafarer.com/images/aquafarer/products/aquafarer-inflatable-boat.webp',
+  },
+  {
+    slug: 'rib-vs-dinghy',
+    title: t('compare.ribVsDinghy'),
+    desc: t('compare.ribVsDinghy.desc'),
+    image: 'https://assets.aquafarer.com/images/aquafarer/products/rib/aquafarer-rib-330-boat.webp',
+  },
+  {
+    slug: 'inflatable-vs-hardboard',
+    title: t('compare.inflatableVsHard'),
+    desc: t('compare.inflatableVsHard.desc'),
+    image: 'https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-ocean-voyager-1.webp',
+  },
+  {
+    slug: 'aluminum-vs-fiberglass',
+    title: t('compare.aluminumVsFiberglass.short'),
+    desc: t('compare.aluminumVsFiberglass.desc'),
+    image: 'https://assets.aquafarer.com/images/aquafarer/products/rib/aquafarer-rib-600.webp',
+  },
+  {
+    slug: 'commercial-vs-recreational-rib',
+    title: t('compare.commercialVsRecreational.short'),
+    desc: t('compare.commercialVsRecreational.desc'),
+    image: 'https://assets.aquafarer.com/images/aquafarer/products/rib/aquafarer-rib-330-boat.webp',
+  },
+  {
+    slug: 'aquafarer-vs-traditional-manufacturers',
+    title: t('compare.aquafarerVsTraditional.short'),
+    desc: t('compare.aquafarerVsTraditional.desc'),
+    image: 'https://assets.aquafarer.com/images/aquafarer/team/aquafarer-meeting-overseas.webp',
+  },
+];
+
+const metadata = {
+  title: PAGE_META[lang]?.title || `Comparisons & Buying Guides | ${SITE.name}`,
+  description: t('compare.hubDesc'),
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <JsonLd
+    data={{
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      headline: 'Comparisons & Buying Guides',
+      description: metadata.description,
+      author: { '@type': 'Organization', name: SITE.name },
+    }}
+  />
+
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <nav class="text-sm text-gray-500 mb-8">
+      <a href={`/${lang}/`} class="hover:text-sky-600">{SITE.name}</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-900">{t('compare.label')}</span>
+    </nav>
+
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">{t('compare.label')}</span>
+      <h1 class="mt-4 text-4xl font-bold text-gray-900">{t('compare.hubTitle')}</h1>
+      <p class="mt-4 text-lg text-gray-500">{t('compare.hubDesc')}</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Product Comparison Table -->
+      <a
+        href={`/${lang}/products/compare`}
+        class="group bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg transition-all hover:-translate-y-0.5 flex flex-col"
+      >
+        <div class="h-44 bg-gradient-to-br from-sky-100 to-blue-50 flex items-center justify-center">
+          <span class="text-5xl">&#128202;</span>
+        </div>
+        <div class="p-6 flex flex-col flex-1">
+          <h2 class="text-lg font-semibold text-gray-900 group-hover:text-sky-700 transition-colors mb-2">
+            {t('compare.productCompare')}
+          </h2>
+          <p class="text-sm text-gray-500 line-clamp-3 flex-1">{t('compare.productCompare.desc')}</p>
+          <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-sky-600 group-hover:text-sky-700"
+            >{t('compare.view')}</span
+          >
+        </div>
+      </a>
+
+      {
+        comparisons.map((c) => (
+          <a
+            href={`/${lang}/compare/${c.slug}`}
+            class="group bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg transition-all hover:-translate-y-0.5 flex flex-col"
+          >
+            <div class="h-44 bg-gray-100 overflow-hidden">
+              <img
+                src={c.image}
+                alt={c.title}
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <h2 class="text-lg font-semibold text-gray-900 group-hover:text-sky-700 transition-colors mb-2">
+                {c.title}
+              </h2>
+              <p class="text-sm text-gray-500 line-clamp-3 flex-1">{c.desc}</p>
+              <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-sky-600 group-hover:text-sky-700">
+                {t('compare.view')}
+              </span>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</Layout>

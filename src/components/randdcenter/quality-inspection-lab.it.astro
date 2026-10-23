@@ -1,0 +1,216 @@
+---
+import { SITE } from 'astrowind:config';
+const { lang = 'it' } = Astro.props;
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={`/${lang}/randdcenter`} class="text-sm text-gray-500 hover:underline">&larr; Torna al Centro R&S</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Lab 06</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Laboratorio qualità &amp; ispezione</h1>
+      <p class="mt-3 text-lg text-muted">Verifica indipendente — ogni prova superata prima della consegna</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-uv-resistance-testing.webp"
+        alt="Prove UV nel laboratorio di qualità e ispezione Aquafarer"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Fiducia, ma verifica</h2>
+  <p>
+    Ogni imbarcazione che lascia la nostra officina porta la certificazione di aver superato un insieme definito di
+    ispezioni di qualità e prove sui materiali. Il nostro Laboratorio di qualità &amp; ispezione è una funzione
+    indipendente all'interno dell'organizzazione — riferisce direttamente all'amministratore delegato, non alla
+    produzione — garantendo che nessuna pressione commerciale possa compromettere il cancello di ispezione. Se un lotto
+    di materiale o un'imbarcazione completata non soddisfa la specifica pubblicata, il laboratorio ha l'autorità di
+    bloccare la spedizione fino alla risoluzione della non conformità.
+  </p>
+  <p>
+    Il laboratorio opera secondo un sistema di gestione della qualità allineato ai principi, e i nostri metodi di prova
+    si basano su standard ISO, ASTM ed EN ove applicabili. Manteniamo registrazioni dettagliate di ogni prova eseguita,
+    creando una catena di tracciabilità completa dalla ricezione della materia prima alla consegna finale
+    dell'imbarcazione.
+  </p>
+
+  <h2>Apparecchiature di prova e capacità</h2>
+  <table>
+    <thead><tr><th>Apparecchiatura</th><th>Prove eseguite</th><th>Norma / Metodo</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Macchina universale di prova (50 kN)</td><td
+          >Resistenza a trazione (tessuto), resistenza alla pelatura (giunture), propagazione della lacerazione</td
+        ><td>, ISO 4674</td></tr
+      >
+      <tr
+        ><td>Banco di prova di ritenzione d'aria (programmabile)</td><td
+          >Resistenza a 1000 cicli di gonfiaggio/sgonfiaggio, prova di mantenimento pressione di 24-48 h</td
+        ><td> (interno)</td></tr
+      >
+      <tr
+        ><td>Attrezzatura di pelatura delle giunture (pelatura motorizzata a 180&deg;)</td><td
+          >Resistenza alla pelatura di giunture saldate e incollate a 100 mm/min</td
+        ><td> / ASTM D1876</td></tr
+      >
+      <tr
+        ><td>Apparecchio di pressione idrostatica</td><td
+          >Resistenza alla penetrazione dell'acqua del tessuto (0–100 mbar)</td
+        ><td>ISO 811</td></tr
+      >
+      <tr
+        ><td>Spessimetro digitale &amp; micrometro</td><td
+          >Spessore del tessuto, spessore della parete del tubolare, spessore della pellicola adesiva</td
+        ><td>ISO 2286-3</td></tr
+      >
+      <tr
+        ><td>Camera climatica</td><td
+          >Condizionamento termico (da -40 &deg;C a +80 &deg;C) per prove di rottura a freddo e invecchiamento termico</td
+        ><td>ISO 188, ISO 4675</td></tr
+      >
+      <tr
+        ><td>Spettrofotometro per il colore</td><td>Misurazione del colore Delta-E dopo esposizione UV</td><td
+          >ISO 105-A05 / ASTM D2244</td
+        ></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>I cancelli di ispezione — dal materiale alla consegna</h2>
+  <p>
+    Ogni imbarcazione segue un piano di qualità definito con punti di ispezione obbligatori. Nessuna imbarcazione può
+    saltare un cancello; ogni cancello deve essere approvato da un ispettore di qualità prima che inizi la fase di
+    produzione successiva.
+  </p>
+
+  <div class="not-prose my-8">
+    <div class="relative">
+      <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-blue-200 dark:bg-blue-800"></div>
+      <div class="space-y-6 relative">
+        {
+          [
+            {
+              gate: 'Cancello 1',
+              label: 'Ispezione dei materiali in ingresso',
+              desc: 'Lotto di tessuto, lotto di adesivo, ferramenta — tutto verificato rispetto alla specifica di ingresso prima del rilascio alla produzione.',
+            },
+            {
+              gate: 'Cancello 2',
+              label: 'Ispezione delle saldature in lavorazione',
+              desc: 'Il primo campione di saldatura di ogni turno di produzione viene provato (pelatura + controllo visivo).',
+            },
+            {
+              gate: 'Cancello 3',
+              label: "Prova d'aria della camera",
+              desc: 'Ogni camera viene pressurizzata a 1.25 volte la pressione di esercizio e mantenuta per 24-48 h. I dati vengono registrati per numero di serie.',
+            },
+            {
+              gate: 'Cancello 4',
+              label: 'Ispezione pre-consegna',
+              desc: "L'imbarcazione completa viene ispezionata: tutti i fissaggi serrati, sistemi funzionanti, nessun difetto estetico. Checklist di 100 punti.",
+            },
+            {
+              gate: 'Cancello 5',
+              label: 'Certificazione finale',
+              desc: 'Vengono compilati i rapporti di prova, riesaminati i registri di ispezione ed emesso il Certificato di Conformità.',
+            },
+          ].map((g) => (
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs font-bold z-10">
+                {g.gate}
+              </div>
+              <div class="flex-1 p-3 rounded-lg bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800">
+                <p class="text-sm font-semibold">{g.label}</p>
+                <p class="text-xs text-gray-500 mt-1">{g.desc}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+
+  <h2>Indicatori chiave di qualità (media mobile 2025)</h2>
+  <div class="not-prose my-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">99.7 %</span>
+      <span class="text-xs text-gray-500">Resa di primo passaggio (lotto di tessuto)</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">&lt; 0.2 %</span>
+      <span class="text-xs text-gray-500">Tasso di scarto delle saldature (metro lineare)</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">100 %</span>
+      <span class="text-xs text-gray-500">Camere collaudate ad aria prima dell'assemblaggio</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600"></span>
+      <span class="text-xs text-gray-500">Conformità alla categoria di progettazione</span>
+    </div>
+  </div>
+
+  <h2>Il nostro team di qualità</h2>
+  <p>
+    Il laboratorio è gestito da un quality manager (10 anni nella garanzia qualità navale, ASQ Certified Quality
+    Engineer), due ispettori di qualità (ciascuno con certificazione NDT di livello 2 nel controllo visivo) e un tecnico
+    dei materiali responsabile di tutte le prove fisiche. Il team svolge annualmente test di competenza tramite un
+    fornitore indipendente di terze parti per garantire che i nostri risultati di prova rimangano accurati e
+    riproducibili.
+  </p>
+
+  <h2>Prove indipendenti per i clienti</h2>
+  <p>
+    Il nostro Laboratorio di qualità &amp; ispezione è disponibile per servizi di prova indipendenti. Se avete bisogno
+    di verificare una specifica di tessuto, validare un nuovo sistema adesivo o ottenere un rapporto di prova di terze
+    parti per una qualificazione di approvvigionamento, possiamo eseguire le prove secondo la norma applicabile ed
+    emettere un rapporto di prova certificato.
+  </p>
+  <p>Esempi di recenti lavori di prova di terze parti:</p>
+  <ul>
+    <li>
+      Confronto della resistenza alla pelatura di cinque prodotti di pellicola adesiva concorrenti per un programma di
+      approvvigionamento militare europeo.
+    </li>
+    <li>
+      Studio di invecchiamento accelerato (UV + cicli termici) per una nuova formulazione PVC pigmentata di arancione,
+      con misurazioni intermedie regolari a intervalli di 500 h.
+    </li>
+    <li>
+      Validazione della ritenzione d'aria di 50 valvole di paratia prototipo per un nuovo design di tubolare ad alta
+      pressione.
+    </li>
+  </ul>
+
+  <h2>Il nostro impegno verso di voi</h2>
+  <p>
+    Quando ricevete un'imbarcazione {SITE.name}, ricevete anche il suo dossier di qualità — una documentazione compilata
+    dei risultati di prova applicabili alla vostra imbarcazione specifica. Certificato del lotto di tessuto, prove di
+    pelatura delle saldature, registri della prova d'aria delle camere e checklist dell'ispezione pre-consegna. Ogni
+    numero è tracciabile. Ogni ispettore è identificato. Non è solo documentazione — è la nostra promessa che ciò che
+    abbiamo consegnato è ciò che abbiamo specificato.
+  </p>
+  <p>
+    Se avete mai un dubbio sulla qualità, potete contattare direttamente il laboratorio — i recapiti sono stampati sul
+    vostro certificato di conformità. Prendiamo sul serio ogni richiesta e ci impegniamo a un'indagine formale entro 48
+    ore.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Avete bisogno di prove indipendenti o di verifica della qualità?</h2>
+    <p class="mt-2 text-sm text-muted">
+      Il nostro laboratorio accetta lavori di prova di terze parti — contattateci con i vostri requisiti.
+    </p>
+    <a
+      href={`/${lang}/contact`}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Contattate il laboratorio di qualità</a
+    >
+  </div>
+</section>

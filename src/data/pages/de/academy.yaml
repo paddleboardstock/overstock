@@ -1,0 +1,174 @@
+hero:
+  tagline: Aquafarer Akademie
+  title: Lernzentrum
+  subtitle: Anleitungen und Tutorials für jedes Könnensniveau – von SUP-Grundlagen bis zu fortgeschrittenen Rettungstechniken
+
+categories:
+  - level: Anfänger
+    color: from-green-500 to-emerald-600
+    badge: bg-green-100 text-green-700
+    guides:
+      - title: SUP-Grundlagen
+        desc: Lernen Sie die Grundlagen des Stand-Up-Paddelns – Haltung, Schlagtechnik und Gleichgewicht.
+        slug: beginner-sup-guide
+      - title: Paddeltechniken
+        desc: Vorwärtsschlag, Bogenschlag, Ziehschlag und Tiefenstütz – beherrschen Sie die wesentlichen Paddelbewegungen.
+        slug: sup-paddle-guide
+      - title: Sicherheit zuerst
+        desc: Grundlegende Sicherheitspraktiken einschließlich Wettercheck, Schwimmwestenpflicht, Leinenregeln und Selbstrettung.
+        slug: sup-safety-guide
+  - level: Fortgeschritten
+    color: from-blue-500 to-indigo-600
+    badge: bg-blue-100 text-blue-700
+    guides:
+      - title: Touren-Grundlagen
+        desc: Planung von mehrstündigen Paddeltouren – Navigation, Flüssigkeitszufuhr, Tempo und Windvorhersagen lesen.
+        slug: touring-sup-guide
+      - title: Wetter lesen
+        desc: Interpretieren von Seewettervorhersagen, Erkennen von Wolkenmustern und Verstehen von Windeffekten auf dem Wasser.
+        slug: weather-planning-water-sports
+      - title: Navigationsgrundlagen
+        desc: Kartenlesen, Kompassnutzung, GPS-Wegpunkte und Routenplanung für Küstenpaddeltouren.
+        slug: sup-navigation-guide
+      - title: Gezeitenbewusstsein
+        desc: Verständnis von Gezeitenzyklen, Strömungen und deren Auswirkungen auf Startzeitpunkt und Routenführung.
+        slug: understanding-tides
+  - level: Fortgeschritten
+    color: from-purple-500 to-violet-600
+    badge: bg-purple-100 text-purple-700
+    guides:
+      - title: Mehrtägige Reiseplanung
+        desc: Expeditionslogistik – Ausrüstungsauswahl, Essensplanung, Sicherheitsprotokolle und Notfallkontakte.
+        slug: sup-travel-guide
+      - title: Rettungstechniken
+        desc: Selbstrettung, T-Rettung, Eskimo-Rettung für Kajaks und Schleppverfahren auf offenem Wasser.
+        slug: sup-self-rescue
+      - title: Nachtpaddeln
+        desc: Navigation bei Dunkelheit – Beleuchtungsanforderungen, Routenerinnerung, Gruppenkommunikation und Gefahrenbewusstsein.
+        slug: sup-navigation-guide
+  - level: Wartung
+    color: from-amber-500 to-orange-600
+    badge: bg-amber-100 text-amber-700
+    guides:
+      - title: Reinigung & Pflege
+        desc: Süßwasserspülung, UV-Schutz, Schimmelprävention und richtige Trocknungstechniken nach jeder Session.
+        slug: inflatable-sup-maintenance
+      - title: Aufbewahrungsanleitung
+        desc: Best Practices für die Lagerung aufblasbarer Bretter und Boote – Entlüftung, Falten, Temperaturkontrolle und Haltbarkeit.
+        slug: inflatable-sup-storage
+      - title: Reparatur-Grundlagen
+        desc: Kleine Durchstiche, Nahtundichtigkeiten und Ventilprobleme mit PVC-Reparatursets und Flicktechniken beheben.
+        slug: inflatable-sup-repair
+      - title: Ventilwartung
+        desc: Ventiltypen identifizieren (Halkey-Roberts, Boston, Leafield), Schmutz entfernen und defekte Ventilschäfte ersetzen.
+        slug: inflatable-sup-repair
+
+knowledge_center_tagline: Wissenszentrum
+
+knowledge_center_title: Ratgeber zu Bootsausrüstung & maritimer Industrie
+
+knowledge_center_subtitle: Fachwissen und Kaufberatung für Maritim-Profis, Flottenbetreiber und Wassersportbegeisterte.
+
+knowledge_sections:
+  - title: 'RIB-Boote: Wissen'
+    tagline: Ratgeber zu Rigid Inflatable Boats
+    desc: Alles über RIB-Boote — Rumpfdesign, Materialien, Motorwahl, Wartung und Kaufberatung für kommerzielle und private Nutzung.
+    guides:
+      - title: Wie Sie das richtige RIB-Boot wählen
+        desc: Vollständiger Ratgeber zur RIB-Auswahl — Größe, Motorleistung, Schlauchmaterial, Rumpftyp und Einsatzzweck.
+        href: /v2/inflatable-boat-buying-guide
+      - title: RIB vs. Schlauchboot
+        desc: Festrumpfschlauchboot vs. klassisches Schlauchboot — Rumpfdesign, Fahrleistung, Haltbarkeit und Kapazität im Vergleich.
+        href: /compare/rib-vs-dinghy
+      - title: Gewerbliches RIB vs. Freizeit-RIB
+        desc: Gewerbliche vs. private RIB-Boote — Bauweisen, Materialien, Lebensdauer, Kosten und Zertifizierungen im Vergleich.
+        href: /compare/commercial-vs-recreational-rib
+      - title: Aluminium- vs. GFK-Rumpf
+        desc: Aluminium- und Fiberglas-Rümpfe für RIB-Boote im Vergleich — Gewicht, Kosten, Haltbarkeit und Korrosionsbeständigkeit.
+        href: /compare/aluminum-vs-fiberglass
+  - title: Schlauchboot-Ratgeber
+    tagline: Wissen zu Schlauchbooten
+    desc: Umfassende Ratgeber zu Schlauchbooten — PVC vs. Hypalon, Bauverfahren, Sicherheitsnormen und beste Wartungspraktiken.
+    guides:
+      - title: 'Materialratgeber: PVC vs. Hypalon'
+        desc: Der definitive Vergleich zwischen PVC und Hypalon (CSM) für den Schlauchbootbau.
+        href: /compare/pvc-vs-hypalon
+      - title: So entstehen Schlauchboote
+        desc: Fertigungsprozess — Materialzuschnitt, HF-Schweißen, Nahtkonstruktion, Druckprüfung und Qualitätskontrolle.
+        href: /learn/inflatable-technology
+      - title: Sicherheitsratgeber für Schlauchboote
+        desc: Sicherheitsnormen, Zuladung, korrektes Aufpumpen, Kontrollen vor dem Auslaufen und Notfallverfahren.
+        href: /learn/water-safety
+      - title: Schlauchboot-Wartung
+        desc: Reinigung, Lagerung, UV-Schutz, Wintervorbereitung und Reparatur von Schlauchbooten und RIBs.
+        href: /v2/inflatable-boat-maintenance
+  - title: Boots-Wissen
+    tagline: Schlauchboote & RIBs im Überblick
+    desc: Technische Ratgeber zu Schlauchboot-Typen, Materialien, Bauverfahren, Wartung und Sicherheit — vom Beiboot bis zum RIB.
+    guides:
+      - title: Schlauchboot-Typen
+        desc: Beiboote, RIBs, Kajaks und Tender — lernen Sie die Unterschiede kennen und wählen Sie das Richtige.
+        href: /v2/inflatable-boat-buying-guide
+      - title: Drop-Stitch-Technologie
+        desc: Wie tausende interne Fäden steife, hochdruckfeste Strukturen schaffen.
+        href: /learn/drop-stitch-core
+      - title: Material-Referenz
+        desc: PVC-Denier-Angaben, Flächengewichte, UV-Beständigkeit und maritime Werkstoffe verständlich erklärt.
+        href: /learn/materials
+      - title: RIB vs. Beiboot
+        desc: Vergleich von Festrumpf-Schlauchbooten mit klassischen Schlauchbeibooten für verschiedene Einsatzzwecke.
+        href: /compare/rib-vs-dinghy
+  - title: SUP-Wissen
+    tagline: Stand-Up-Paddleboarding-Ratgeber
+    desc: Alles über SUP-Boards — aufblasbar vs. hart, Boardmaße, Materialtechnologie und Expertenratschläge für jedes Könnensniveau.
+    guides:
+      - title: Aufblasbares vs. hartes SUP
+        desc: iSUPs und Epoxy-Hardboards im Vergleich — Transportabilität, Haltbarkeit, Performance und Preis-Leistung.
+        href: /learn/sup
+      - title: Ratgeber zu SUP-Boardmaßen
+        desc: Wie Länge, Breite und Dicke Stabilität, Geschwindigkeit und Manövrierfähigkeit beeinflussen.
+        href: /learn/sup
+      - title: SUP-Wartung & Pflege
+        desc: Tipps zu Reinigung, Lagerung, UV-Schutz und Reparatur für aufblasbare SUP-Boards.
+        href: /v2/inflatable-sup-maintenance
+      - title: Ihr erstes SUP-Board wählen
+        desc: Einsteiger-Ratgeber zur Auswahl des richtigen Stand-Up-Paddleboards — abgestimmt auf Gewicht, Können und Einsatzzweck.
+        href: /learn/sup
+  - title: Tauchausrüstungs-Ratgeber
+    tagline: Wissen zu gewerblichen Tauchbooten
+    desc: Spezialisierte Ratgeber zu Tauchbooten, Tauch-RIBs und Ausrüstung für Tauchbasen, Tauchveranstalter und gewerbliche Tauchteams.
+    guides:
+      - title: Das beste RIB für Tauchbasen
+        desc: Wie Sie das richtige Tauch-RIB für Ihre Tauchbasis wählen — Kapazität, Konfiguration und Budget.
+        href: /solutions-diving-center-boats
+      - title: Konfigurationsratgeber für Tauch-RIBs
+        desc: Wesentliche Ausstattung für Tauch-RIBs — Flaschenhalterungen, Leitersysteme, Tauchplattform und Ausrüstungslagerung.
+        href: /solutions-diving-center-boats
+  - title: Yacht-Tender-Ratgeber
+    tagline: Superyacht- & Tenderlösungen
+    desc: Ratgeber zur Auswahl des perfekten Yacht-Tenders — Schlauchboot-Tender, RIB-Tender, Lagerlösungen und Tender-Zubehör.
+    guides:
+      - title: Wie Sie einen Yacht-Tender wählen
+        desc: Was Sie bei der Auswahl eines Tenders für Ihre Yacht beachten sollten — Größe, Material, Motor und Unterbringung.
+        href: /solutions-yacht-tender-solutions
+      - title: Schlauchboot-Tender vs. RIB-Tender
+        desc: Vergleich von Schlauchboot-Tendern und RIB-Tendern hinsichtlich Performance, Haltbarkeit und Verstauung.
+        href: /compare/rib-vs-dinghy
+  - title: Rettungsausrüstungs-Ratgeber
+    tagline: Wissen zu SAR-Wasserfahrzeugen
+    desc: Professionelle Ratgeber zu Rettungsbooten, SAR-Wasserfahrzeugen und Notfallausrüstung für Küstenwache, Rettungsschwimmer und Katastrophenschutzteams.
+    guides:
+      - title: Auswahlratgeber für SAR-Boote
+        desc: Wie Sie das richtige Such- und Rettungsboot wählen — Geschwindigkeit, Kapazität, Haltbarkeit und Anforderungen an Spezialausrüstung.
+        href: /solutions-rescue-watercraft
+      - title: Gewerbliche RIBs für Rettungseinsätze
+        desc: Warum RIBs in gewerblicher Qualität weltweit die erste Wahl professioneller Such- und Rettungsteams sind.
+        href: /use-cases/search-and-rescue
+
+read_guide: Leitfaden lesen →
+
+cta:
+  title: Nicht sicher, wo Sie anfangen sollen?
+  desc: Machen Sie unser Einstufungsquiz, um die richtigen Anleitungen und Ausrüstung für Ihr Niveau zu finden.
+  label: Kontaktieren Sie uns →
+  link: /contact

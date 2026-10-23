@@ -1,0 +1,119 @@
+hero:
+  tagline: Biała księga inżynieryjna
+  title: Technologia drop-stitch i materiałoznawstwo:<br />Inżynieria stojąca za nowoczesnymi nadmuchiwanymi jednostkami pływającymi
+  subtitle: Autorytatywna dokumentacja techniczna obejmująca konstrukcję rdzenia typu drop-stitch, porównanie materiałów PVC i Hypalon, badania sztywności zbiorników wysokociśnieniowych oraz standardy produkcji jednostek pływających.
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/randd/aquafarer-design-discussion-lab.webp
+    alt: Laboratorium badawczo-rozwojowe Aquafarer — badania i inżynieria materiałowa
+direct_answer: Technologia drop-stitch wykorzystuje tysiące wewnętrznych nici poliestrowych łączących górną i dolną warstwę tkaniny nadmuchiwanego rdzenia. Po napompowaniu do 15–20 PSI gwinty te działają jak elementy napinające, zapobiegając wybrzuszeniom i tworząc sztywną konstrukcję porównywalną do konstrukcji z twardą skorupą. W połączeniu z zaawansowanymi powłokami z PCV lub Hypalonu i spawaniem RF, umożliwia to przenośną, nadmuchiwaną jednostkę pływającą o wysokiej wydajności, odpowiednią do użytku profesjonalnego, komercyjnego i rekreacyjnego.
+section_drop_stitch:
+  title: Inżynieria konstrukcyjna metodą drop-stitch
+  subtitle: Jak tysiące nici przekształcają elastyczną tkaninę w sztywną strukturę
+  content: |-
+    Ścieg typu drop-stitch (znany również jako „tkanina typu drop-stitch” lub „rdzeń typu drop-stitch”) stanowi przełom w inżynierii konstrukcji nadmuchiwanych. Zasada jest zwodniczo prosta: tysiące pojedynczych nici poliestrowych jest wplecionych jednocześnie w dwie oddzielne warstwy tkaniny bazowej, łącząc górny i dolny panel pod kątem 90 stopni.
+
+    Kiedy szczelna komora znajduje się pod ciśnieniem, wewnętrzne ciśnienie powietrza wywiera taką samą siłę we wszystkich kierunkach, próbując rozsunąć górny i dolny panel, nadając mu cylindryczny kształt. Tysiące nici typu drop-stitch opiera się temu rozdzieleniu, przenosząc obciążenie na napięcie wzdłuż osi nici. Rezultatem jest płaski, sztywny panel, który wytrzymuje ciśnienie wewnętrzne 15–20 PSI.
+
+    Przy ciśnieniu 20 PSI panel typu drop-stitch o powierzchni 1 m² poddawany jest działaniu około 14 000 kg całkowitej siły wewnętrznej, a mimo to matryca nici utrzymuje go idealnie płasko. Dzięki temu konstrukcje typu drop-stitch mają stosunek wytrzymałości do masy porównywalny z tradycyjnymi sztywnymi materiałami.
+section_materials:
+  title: PVC vs Hypalon — porównanie materiałów technicznych
+  subtitle: Obiektywne dane umożliwiające świadomy wybór materiałów w produkcji nadmuchiwanych jednostek pływających
+  table:
+    columns:
+      - header: Nieruchomość
+      - header: PVC (polichlorek winylu)
+      - header: Hypalon (CSM)
+    rows:
+      - property: Odporność na promieniowanie UV
+        pvc: Dobry (ze stabilizatorami UV)
+        hypalon: Doskonały (wrodzony)
+      - property: Odporność na ścieranie
+        pvc: Dobry
+        hypalon: Bardzo dobry
+      - property: Wytrzymałość na rozciąganie
+        pvc: 3 000–5 000 N/5 cm
+        hypalon: 2500–4000 N/5 cm
+      - property: Waga na m²
+        pvc: 850–1200 g
+        hypalon: 1100–1500 g
+      - property: Zimny Flex
+        pvc: -30°C
+        hypalon: -20°C
+      - property: Metoda łączenia
+        pvc: Spawanie RF / Spawanie gorącym powietrzem
+        hypalon: Klejenie ręczne (cement kontaktowy)
+      - property: Możliwość naprawy
+        pvc: Łatwe (zgrzewanie lub klej)
+        hypalon: Wymaga kleju CSM
+      - property: Koszt materiału
+        pvc: 8–15 USD / m²
+        hypalon: 20–40 USD / m²
+      - property: Długość życia (tropikalne słońce)
+        pvc: 5–8 lat
+        hypalon: 10–15 lat
+      - property: Zakres kolorów
+        pvc: Szerokie (pełne spektrum kolorów)
+        hypalon: Limitowana (kolory podstawowe)
+      - property: Odporność chemiczna
+        pvc: Dobra (gatunki odporne na paliwo/olej)
+        hypalon: Doskonały (szeroki zakres chemiczny)
+section_testing:
+  title: Protokoły testowania i bezpieczeństwa
+  subtitle: Ramy zapewnienia jakości Aquafarer dla każdej partii produkcyjnej
+  protocols:
+    - title: Test utrzymywania ciśnienia znamionowego 1,25x
+      description: Każde zmontowane naczynie jest napełniane do 1,25-krotności znamionowego ciśnienia roboczego i utrzymywane przez 24–48 godzin. Jakikolwiek spadek ciśnienia przekraczający 2% powoduje odrzucenie i ponowną obróbkę.
+      standard: ISO6185
+    - title: Test wytrzymałości na odrywanie szwów
+      description: Próbki spoin i spoin klejonych z każdej partii produkcyjnej są badane pod kątem wytrzymałości na odrywanie przy użyciu skalibrowanego sprzętu napinającego. Wymagana wytrzymałość na odrywanie minimum 4 kN/m.
+      standard: ISO2411
+    - title: Próba rozciągania tkaniny
+      description: Przychodzące rolki tkaniny poddawane są testom wytrzymałości na rozciąganie i wydłużeniu zarówno w kierunku osnowy, jak i wątku. Próg odrzucenia poniżej 3000 N/5 cm dla PVC.
+      standard: ISO1421
+    - title: Przyspieszone promieniowanie UV
+      description: Próbki materiałów poddawane są ponad 1000 godzinom przyspieszonej ekspozycji na promieniowanie UV w komorach testowych QUV. Dopuszczalna maksymalna utrata wytrzymałości na rozciąganie wynosząca 15%.
+      standard: ASTM G154
+    - title: Integralność zaworu i złączki
+      description: Każdy zespół zaworu jest testowany pod kątem integralności uszczelnienia przy ciśnieniu znamionowym 1,25x. Zawory zwrotne są testowane pod kątem działania uszczelnienia jednokierunkowego.
+      standard: ISO12402
+section_manufacturing:
+  title: Standardy produkcyjne i certyfikaty jakości
+  subtitle: Zgodność ze standardami branżowymi w zakresie dostępu do rynku globalnego
+  standards:
+    - name: ISO 9001:2015
+      body: Certyfikat SGS
+      scope: System zarządzania jakością w całym procesie projektowania, produkcji i dostawy
+    - name: CE 2013/53/UE
+      body: Jednostka notyfikowana UE
+      scope: Dyrektywa w sprawie statków rekreacyjnych — konstrukcja kadłuba, stabilność, pływalność, emisje
+    - name: BSCI
+      body: Amfori
+      scope: Compliance społeczna — bezpieczeństwo pracowników, uczciwa praca, zarządzanie środowiskiem
+    - name: ISO6185
+      body: Norma międzynarodowa
+      scope: Łodzie nadmuchiwane — konstrukcja, stabilność, pływalność, próby ciśnieniowe
+    - name: ZASIĘG
+      body: Rozporządzenie UE
+      scope: Bezpieczeństwo chemiczne — substancje objęte ograniczeniami w materiałach i powłokach
+section_faq:
+  title: Często zadawane pytania techniczne
+  questions:
+    - q: Jak ścieg typu drop-stitch wypada w porównaniu z tradycyjną konstrukcją typu hard-shell?
+      a: Nowoczesne rdzenie typu drop-stitch przy ciśnieniu 20 PSI osiągają 85–90% sztywności porównywalnych twardych skorup z pianki EPS/włókna szklanego, a jednocześnie są w pełni nadmuchiwane na czas transportu. Kompromis polega na nieco większej masie i niższej sztywności końcowej, ale w większości zastosowań rekreacyjnych i komercyjnych różnica jest nieistotna.
+    - q: Jaka gęstość nici jest uważana za jakość premium?
+      a: Wysokiej jakości tkaniny typu drop-stitch wykorzystują 2 nitki na cal kwadratowy (około 3100 nitek na m²) tkane z przędzy poliestrowej 1680 DTEX. Tkaniny podstawowe wykorzystują 1 nitkę na cal kwadratowy i przędzę 1100 DTEX.
+    - q: Czy Hypalon można spawać jak PCV?
+      a: Nie. Hypalon/CSM nie może być spawany RF. Należy go zmontować przy użyciu ręcznie nakładanego cementu kontaktowego, co sprawia, że produkcja jest bardziej pracochłonna, a szwy zależne od umiejętności operatora. PCV można zgrzewać RF lub gorącym powietrzem, aby uzyskać stałą, zautomatyzowaną jakość spoin.
+    - q: Jakie jest maksymalne bezpieczne ciśnienie dla pontonów?
+      a: Standardowe dętki do pontonów działają przy ciśnieniu 8–12 PSI. Podłogi typu drop-stitch działają przy ciśnieniu 12–20 PSI. Wysokociśnieniowe rdzenie typu drop-stitch (SUP) mogą pracować przy ciśnieniu 20–25 PSI. Każdy produkt zawiera ciśnieniowe zawory bezpieczeństwa skalibrowane tak, aby zapobiegać nadmiernemu napompowaniu.
+    - q: Ile czasu zajmuje wyprodukowanie niestandardowego pontonu?
+      a: Standardowa produkcja OEM trwa 30–45 dni od potwierdzenia zamówienia do FOB Qingdao. Opracowanie niestandardowej formy wydłuża czas produkcji i testowania prototypów o 15–20 dni.
+cta:
+  title: Konsultacje inżynieryjne
+  subtitle: Masz konkretne pytanie dotyczące materiału lub projektu? Nasz zespół inżynierów jest dostępny do dyskusji technicznych.
+  actions:
+    - variant: primary
+      text: Zapytaj nasz zespół inżynierów
+      href: /contact
+    - text: Poznaj nasze centrum badawczo-rozwojowe
+      href: /randdcenter

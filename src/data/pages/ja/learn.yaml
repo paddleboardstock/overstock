@@ -1,0 +1,73 @@
+hero:
+  tagline: 'ウォーター探検の知識'
+  title: '学ぶ'
+  subtitle: |
+    ガイド、チュートリアル、深掘り解説 — 自信を持って水を探検するのに必要なすべて。<br />
+    初めての SUP 選びから高度なテクニックの習得まで。
+  taglineSection: 'あらゆるパドラーのための知識。初心者からプロまで。'
+
+featured:
+  tagline: '注目トピック'
+  title: '学びの旅を始めましょう'
+  subtitle: 'ウォータースポーツが初めての方も、レベルアップを目指す方も、当社のガイドがサポートします。'
+  items:
+    - title: 'SUP の基本'
+      description: '初心者が知っておくべきすべて — ボードの種類、パドルのサイズ、スタンス、初日のコツ。'
+      icon: 'tabler:lifebuoy'
+      href: '/learn/sup'
+    - title: 'インフレータブル vs ハードボード'
+      description: 'どちらがあなたに合っていますか？携帯性、性能、耐久性、コストを並べて比較します。'
+      icon: 'tabler:arrows-left-right'
+      href: '/compare/inflatable-vs-hardboard'
+    - title: '水上の安全'
+      description: 'すべてのパドラーに必要な安全知識 — 天候、ライフジャケット、セルフレスキューなど。'
+      icon: 'tabler:shield'
+      href: '/learn/water-safety'
+    - title: '素材ガイド'
+      description: 'PVC とハイパロンの比較、ドロップステッチ技術、デニール値 — ギアの素材を理解しましょう。'
+      icon: 'tabler:hexagons'
+      href: '/learn/materials'
+    - title: 'SUP サイズガイド'
+      description: '体重、スキル、パドリングスタイルに合ったボードの長さ、幅、体積を見つけましょう。'
+      icon: 'tabler:ruler'
+      href: '/size-guide'
+    - title: '中級テクニック'
+      description: '高度なストローク、ターンテクニック、荒れた水面での操作でパドリングをレベルアップ。'
+      icon: 'tabler:ripple'
+      href: '/learn/intermediate-techniques'
+
+categories:
+  tagline: 'カテゴリー'
+  title: 'トピック別に探す'
+  subtitle: 'スキルレベルと関心別に整理されたすべての学習コンテンツ。'
+  columns:
+    - title: '初心者'
+      items:
+        - 'SUP の基本 — まずはここから'
+        - 'インフレータブル vs ハードボード'
+        - '水上安全の必需知識'
+        - 'SUP の選び方'
+        - 'ポンプ・収納ガイド'
+    - title: '中級者'
+      items:
+        - 'パドリングテクニック'
+        - 'インフレータブル技術'
+        - '素材リファレンス'
+        - 'PVC とハイパロンの比較'
+        - 'ドロップステッチコアの解説'
+    - title: '上級者・プロ'
+      items:
+        - 'フリート運用'
+        - '商業グレードの器材'
+        - '安全・救助プロトコル'
+        - 'カスタムビルド・OEM'
+
+cta:
+  title: 'まだ質問がありますか？'
+  subtitle: 'ギア、安全、テクニックについてのパーソナライズされた回答を AI ガイドにお尋ねください。'
+  actions:
+    - variant: primary
+      text: 'ウォーターアドバイザー AI に質問'
+      href: '#ai-guide'
+    - text: 'すべてのガイドを見る'
+      href: '/academy'

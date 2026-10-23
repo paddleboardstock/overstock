@@ -1,0 +1,80 @@
+---
+export const prerender = true;
+
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { getPageContent, setPageContentData } from '~/i18n/page-content';
+import __pageData from '~/i18n/generated/pages/solutions.ts';
+import { localizePageTitle } from '~/i18n/page-title';
+import { languages } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => getUiForLang(lang)?.[key] || '';
+setPageContentData(__pageData);
+const page = getPageContent(lang, 'solutions');
+
+const hero = page.hero ?? {};
+const stats = page.stats ?? {};
+const solutions = page.features3_solutions ?? {};
+const cta = page.cta ?? {};
+const lh = (h: string) => (h ? `/${lang}${h}` : h);
+const ctaActions = cta.actions?.map((a: any) => ({ ...a, href: lh(a.href) }));
+const localizedItems = solutions.items?.map((item: any) => ({
+  ...item,
+  link: item.link ? `/${lang}${item.link}` : item.link,
+}));
+
+const metadata = {
+  title: localizePageTitle(page, `Solutions for Clubs, Resorts & Industry — ${SITE.name} | Water Business Partner`),
+  description:
+    'Water sports solutions for clubs, resorts, hospitality brands, and entrepreneurs. Purpose-built RIB boats and inflatable watercraft for diving, rescue, fishing, and marine tourism.',
+};
+const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: 'Solutions' }];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <Hero tagline={hero.tagline} image={hero.image} title={hero.title} subtitle={hero.subtitle} />
+  <Stats title={stats.title} stats={stats.stats} />
+  <Features3
+    tagline={solutions.tagline}
+    title={solutions.title}
+    subtitle={solutions.subtitle}
+    columns={solutions.columns}
+    items={localizedItems}
+  />
+  <CallToAction title={cta.title} subtitle={cta.subtitle} actions={ctaActions} />
+  <JsonLd
+    type="Service"
+    service={{
+      name: 'Water Sports Business Solutions — Clubs, Resorts & Industry',
+      description:
+        'Equipment packages and custom watercraft for water sports clubs, resorts, hospitality brands, entrepreneurs, diving centers, rescue services, fishing, and marine tourism.',
+      serviceType: 'Business Solutions',
+      areaServed: ['Global'],
+      url: `/${lang}/solutions`,
+      items: [
+        {
+          name: 'Water Sports Clubs',
+          description: 'Equipment packages and branding for SUP clubs, kayak clubs, surf schools',
+        },
+        { name: 'Resorts & Hotels', description: 'Premium water sports programs for hospitality properties' },
+        { name: 'Water Brand Entrepreneurs', description: 'Private label OEM/ODM for new water sports brands' },
+        { name: 'Diving Center Boats', description: 'RIB boats and support craft for dive operations' },
+        { name: 'Rescue Watercraft', description: 'Search and rescue inflatable boats' },
+        { name: 'Marine Tourism', description: 'Tour boats and guest transport vessels' },
+        { name: 'Fishing Boats', description: 'Small craft for commercial and sport fishing' },
+        { name: 'Yacht Tenders', description: 'Custom tender boats for superyachts' },
+      ],
+    }}
+  />
+</Layout>

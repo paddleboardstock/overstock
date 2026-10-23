@@ -1,0 +1,68 @@
+hero:
+  tagline: Experiencia marina
+  title: 'Décadas de ingeniería marina<br />en cada casco'
+  subtitle: 'Aquafarer combina ciencia de materiales avanzada, fabricación de precisión y pruebas en condiciones reales para producir embarcaciones que rinden cuando importa.'
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-production-department.webp
+    alt: Equipo de ingeniería marina e I+D de Aquafarer en el trabajo
+expertise_materials:
+  tagline: Ciencia de materiales
+  title: 'El material adecuado<br />para cada aplicación'
+  subtitle: 'Trabajamos con tres materiales principales, cada uno seleccionado para casos de uso específicos y requisitos de rendimiento.'
+  columns: 3
+  items:
+    - title: PVC de grado marino
+      description: 'Tejido de PVC de 1100 deniers: nuestro material más versátil. Estabilizado frente a los rayos UV, resistente a la abrasión y conforme a REACH. Ideal para embarcaciones recreativas, tablas de SUP y kayaks donde el peso y la eficiencia de costes importan.'
+      icon: tabler:droplet
+    - title: Hypalon/CSM premium
+      description: 'Resistencia química superior y estabilidad UV. Los barcos de Hypalon pueden durar 15-20 años con un cuidado adecuado. Recomendado para aplicaciones comerciales, de rescate y militares donde la durabilidad a largo plazo es fundamental.'
+      icon: tabler:shield
+    - title: Fibra de vidrio y aluminio
+      description: 'Cascos de fibra de vidrio en V profunda para RIB y lanchas de patrulla: rendimiento que corta las olas en condiciones adversas. Cascos de aluminio para embarcaciones de trabajo comerciales de alta exigencia que requieren máxima resistencia y capacidad de carga.'
+      icon: tabler:building-arch
+expertise_manufacturing:
+  tagline: Capacidades de fabricación
+  title: 'Fabricación de precisión<br />en cada paso'
+  subtitle: 'Nuestra instalación de 12.000 m² está equipada con maquinaria especializada para cada etapa de la producción.'
+  columns: 2
+  items:
+    - title: Corte CNC
+      description: 'El corte controlado por computadora garantiza paneles de tejido precisos y repetibles con un desperdicio mínimo. Cada pieza encaja exactamente como fue diseñada.'
+      icon: tabler:cpu
+    - title: Soldadura de alta frecuencia
+      description: 'La soldadura HF industrial crea costuras más resistentes que el material base. El control constante de temperatura y presión garantiza sellados herméticos en cada serie de producción.'
+      icon: tabler:bolt
+    - title: Montaje del núcleo drop-stitch
+      description: 'Miles de hilos de poliéster conectan las capas superior e inferior del tejido, permitiendo la inflación a alta presión (15-20 PSI) para tablas de SUP y suelos rígidos y estables.'
+      icon: tabler:building-arch
+    - title: Pruebas de presión
+      description: 'Cada producto hinchable se somete a pruebas de presión antes del envío. Los tubos de los RIB se prueban a 1,25x la presión nominal: si aguanta ahí, rendirá en el agua.'
+      icon: tabler:wind
+    - title: Pruebas de resistencia de costuras
+      description: 'Muestras aleatorias de cada lote de producción se someten a pruebas destructivas de resistencia de costuras. Los resultados se registran y son trazables hasta series de producción concretas.'
+      icon: tabler:files
+    - title: Pruebas en el agua
+      description: 'Cada modelo de RIB realiza pruebas de mar antes de la certificación. Las pruebas en condiciones costeras reales validan rendimiento, maniobrabilidad y estabilidad.'
+      icon: tabler:ripple
+expertise_design:
+  tagline: Diseño e ingeniería
+  title: 'Ingeniería para condiciones reales'
+  subtitle: 'Nuestra filosofía de diseño comienza por cómo se usará el barco y luego construye la ingeniería en torno a ese caso de uso.'
+  items:
+    - title: Diseño de casco en V profunda
+      description: 'Nuestros cascos de fibra de vidrio presentan ángulos de astilla muerta (deadrise) calculados y optimizados para la eslora y el uso previsto de cada modelo. V más pronunciada para aguas agitadas, más plana para estabilidad.'
+    - title: Seguridad de múltiples cámaras
+      description: 'Cada barco cuenta con 3-7 cámaras de aire independientes. Si un compartimento se ve comprometido, las cámaras restantes mantienen el barco a flote y operativo.'
+    - title: Distribución ergonómica
+      description: 'La posición de la consola, la altura del tubo y la colocación de los asientos se diseñan para la comodidad del operador en uso prolongado, ya sea patrullando, pescando o transportando.'
+    - title: Configuración personalizada
+      description: 'Colores de los tubos, configuración de la consola, capacidad de combustible, soportes de accesorios: cada modelo puede personalizarse para cumplir requisitos operativos específicos.'
+cta:
+  title: '¿Tiene una aplicación específica en mente?'
+  subtitle: 'Nuestro equipo de ingeniería puede asesorarle sobre selección de materiales, diseño y fabricación para su proyecto.'
+  actions:
+    - variant: primary
+      text: Consulte a nuestros ingenieros
+      href: /contact
+    - text: Ver la gama de productos
+      href: /products

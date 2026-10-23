@@ -1,0 +1,58 @@
+---
+import Hero from '~/components/widgets/Hero.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+import { getPageContent, setPageContentData } from '~/i18n/page-content';
+import __pageData from '~/i18n/generated/pages/brand-team.ts';
+
+const lang = 'en';
+setPageContentData(__pageData);
+const page = getPageContent(lang, 'brand-team') || {};
+
+const hero = page.hero ?? {};
+const founding = page.founding ?? {};
+const leadership = page.leadership ?? {};
+const philosophy = page.philosophy ?? {};
+const cta = page.cta ?? {};
+
+const isDev = import.meta.env.DEV;
+const heroImage =
+  isDev && hero.image?.src?.includes('team-all.webp') ? { ...hero.image, src: '/images/team-all.webp' } : hero.image;
+
+const ctaActions = cta.actions?.map((a: any) => ({ ...a, href: a.href }));
+
+const metadata = {
+  title: `Team — ${SITE.name} | Marine Engineering & Leadership`,
+  description:
+    'Meet the Aquafarer team — marine engineers, material scientists, and manufacturing experts with decades of combined experience in inflatable boat design and production.',
+};
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Our Team' }];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <Hero tagline={hero.tagline} image={heroImage} title={hero.title} subtitle={hero.subtitle} />
+  <Features3
+    tagline={founding.tagline}
+    title={founding.title}
+    subtitle={founding.subtitle}
+    columns={4}
+    items={founding.items}
+  />
+  <Features3
+    tagline={leadership.tagline}
+    title={leadership.title}
+    subtitle={leadership.subtitle}
+    columns={leadership.columns}
+    items={leadership.items}
+  />
+  <Content
+    tagline={philosophy.tagline}
+    title={philosophy.title}
+    subtitle={philosophy.subtitle}
+    content={philosophy.list?.map((i: string) => (i ? `- ${i}` : '')).join('\n')}
+  />
+  <CallToAction title={cta.title} subtitle={cta.subtitle} actions={ctaActions} />
+</Layout>

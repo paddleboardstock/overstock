@@ -1,0 +1,206 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'lt' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">&larr; Atgal į MTEP centrą</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Laboratorija 06</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Kokybės ir tikrinimo laboratorija</h1>
+      <p class="mt-3 text-lg text-muted">Nepriklausomas patikrinimas — kiekvienas testas išlaikytas prieš pristatymą</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-uv-resistance-testing.webp"
+        alt="Aquafarer kokybės tikrinimo laboratorija UV testavimas"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Pasitikėk, bet tikrink</h2>
+  <p>
+    Kiekviena valtis, paliekanti mūsų dirbtuves, turi sertifikatą, patvirtinantį, kad ji išlaikė nustatytą kokybės
+    patikrinimų ir medžiagų testų rinkinį. Mūsų Kokybės ir Patikros Laboratorija yra nepriklausoma organizacijos
+    funkcija — ji tiesiogiai atskaitinga generaliniam direktoriui, o ne gamybai — užtikrinant, kad jokia komercinė
+    įtampa negalėtų paveikti patikros vartų. Jei medžiagų partija arba baigta valtis neatitinka paskelbtos
+    specifikacijos, laboratorija turi įgaliojimus sustabdyti siuntimą, kol neatitiktis nebus išspręsta.
+  </p>
+  <p>
+    Laboratorija veikia pagal kokybės vadybos sistemą, suderintą su principais, o mūsų bandymo metodai grindžiami ISO,
+    ASTM ir EN standartais, kur tik taikoma. Mes palaikome detalią kiekvieno atlikto bandymo apskaitą, sukurdami visišką
+    sekamumo grandinę nuo žaliavų gavimo iki galutinio laivo pristatymo.
+  </p>
+
+  <h2>Bandymų įranga ir galimybės</h2>
+  <table>
+    <thead><tr><th>Įranga</th><th>Atlikti testai</th><th>Standartas / Metodas</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Universalus bandymų aparatas (50 kN)</td><td
+          >Tempimo stipris (audinys), lupimosi atsparumas (siūlės), plyšimo plitimas</td
+        ><td>, ISO 4674</td></tr
+      >
+      <tr
+        ><td>Oro sulaikymo bandymo stendas (programuojamas)</td><td
+          >1000 ciklų infliacijos/defliacijos ištvermė, 24–48 val. slėgio išlaikymo testas</td
+        ><td>(vidinis)</td></tr
+      >
+      <tr
+        ><td>Siūlių lupimo įtaisas (variklinis 180° lupimas)</td><td
+          >Suvirinto ir klijuoto siūlės atsparumas lupimu esant 100 mm/min</td
+        ><td>/ ASTM D1876</td></tr
+      >
+      <tr
+        ><td>Hidrostatiško slėgio testeris</td><td>Audinio atsparumas vandens prasiskverbimui (0 — 00 mbar)</td><td
+          >ISO 811</td
+        ></tr
+      >
+      <tr
+        ><td>Skaitmeninis storio matuoklis ir mikrometras</td><td
+          >Audinio storis, vamzdžio sienelės storis, klijų plėvelės storis</td
+        ><td>ISO 2286-3</td></tr
+      >
+      <tr
+        ><td>Aplinkos kamera</td><td
+          >Temperatūros kondicionavimas (-40 °C iki +80 °C) šalčio skilimo ir šilumos senėjimo bandymams</td
+        ><td>ISO 188, ISO 4675</td></tr
+      >
+      <tr
+        ><td>Spalvų spektrofotometras</td><td>Delta-E spalvos matavimas po UV ekspozicijos</td><td
+          >ISO 105-A05 / ASTM D2244</td
+        ></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>Apžiūros vartai – nuo medžiagų iki pristatymo</h2>
+  <p>
+    Kiekvienas laivas laikosi aiškaus kokybės plano su privalomais patikros taškais. Nė vienas laivas negali praleisti
+    vartų; kiekvienus vartus turi patvirtinti kokybės inspektorius prieš pradedant kitą gamybos etapą.
+  </p>
+
+  <div class="not-prose my-8">
+    <div class="relative">
+      <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-blue-200 dark:bg-blue-800"></div>
+      <div class="space-y-6 relative">
+        {
+          [
+            {
+              gate: 'Gate 1',
+              label: 'Atvykstančių medžiagų tikrinimas',
+              desc: 'Audinio partija, klijų partija, techninė įranga – visi patikrinami pagal gaunamą specifikaciją prieš išleidžiant į gamybą.',
+            },
+            {
+              gate: 'Gate 2',
+              label: 'Suvirinimo proceso patikra',
+              desc: 'Pirmiausia kiekvienos gamybos pamainos pradžioje išbandomas suvirinimo pavyzdys (lukštas + vizualiai).',
+            },
+            {
+              gate: 'Gate 3',
+              label: 'Kameros oro testas',
+              desc: 'Kiekviena kamera slėgiama iki 1,25 karto darbinio slėgio, laikoma 24–48 valandas. Duomenys registruojami pagal serijos numerį.',
+            },
+            {
+              gate: 'Gate 4',
+              label: 'Priešparduotinė patikra',
+              desc: 'Patikrintas visas laivas: visi tvirtinimo elementai priveržti, sistemos veikia, kosmetinių defektų nėra. 100 punktų kontrolinis sąrašas.',
+            },
+            {
+              gate: 'Gate 5',
+              label: 'Galutinė sertifikacija',
+              desc: 'Sudaryti bandomųjų ataskaitos, peržiūrėti patikros įrašai, išduotas atitikties sertifikatas.',
+            },
+          ].map((g) => (
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs font-bold z-10">
+                {g.gate}
+              </div>
+              <div class="flex-1 p-3 rounded-lg bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800">
+                <p class="text-sm font-semibold">{g.label}</p>
+                <p class="text-xs text-gray-500 mt-1">{g.desc}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+
+  <h2>Pagrindiniai kokybės rodikliai (2025 m. slenkantis vidurkis)</h2>
+  <div class="not-prose my-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">99.7 %</span>
+      <span class="text-xs text-gray-500">Pirmojo pralaidumo išeiga (audinio partija)</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">&lt; 0,2 %</span>
+      <span class="text-xs text-gray-500">Suvirinimo atmetimo greitis (linijinis metras)</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">100 %</span>
+      <span class="text-xs text-gray-500">Kameros, išbandytos ore prieš surinkimą</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600"></span>
+      <span class="text-xs text-gray-500">Dizaino kategorijų atitiktis</span>
+    </div>
+  </div>
+
+  <h2>Mūsų kokybiška komanda</h2>
+  <p>
+    Laboratorijoje dirba kokybės vadovas (10 metų jūrų kokybės užtikrinimo srityje, ASQ sertifikuotas kokybės
+    inžinierius), du kokybės inspektoriai (kiekvienas turi 2 lygio NDT sertifikatą vizualiniame testavime) ir medžiagų
+    technikas, atsakingas už visus fizinius testus. Komanda kasmet atlieka įgūdžių testavimą per nepriklausomą
+    trečiosios šalies tiekėją, kad mūsų testų rezultatai išliktų tikslūs ir pakartojami.
+  </p>
+
+  <h2>Nepriklausomas testavimas klientams</h2>
+  <p>
+    Mūsų Kokybės ir inspekcijos laboratorija teikia nepriklausomas testavimo paslaugas. Jei reikia patikrinti audinio
+    specifikaciją, patvirtinti naują klijų sistemą arba gauti nepriklausomą testavimo ataskaitą pirkimo kvalifikacijai,
+    galime atlikti testus pagal taikomus standartus ir išduoti sertifikuotą testavimo ataskaitą.
+  </p>
+  <p>Naujausių trečiųjų šalių testavimo pavyzdžiai:</p>
+  <ul>
+    <li>Penkių konkurencingų lipnios plėvelės produktų elastingumo palyginimas Europos karinių pirkimų programai.</li>
+    <li>
+      Pagreitinto senėjimo tyrimas (UV + terminis ciklavimas) naujai oranžinės pigmentacijos PVC formulei, su
+      reguliariais tarpiniais matavimais kas 500 valandų.
+    </li>
+    <li>Oro sulaikymo patvirtinimas 50 prototipinių pertvarinių vožtuvų naujam aukšto slėgio vamzdžio dizainui.</li>
+  </ul>
+
+  <h2>Mūsų įsipareigojimas tau</h2>
+  <p>
+    Kai gausite{SITE.name}valtis, jūs taip pat gaunate jos kokybės bylą — surinktą įrašą apie bandymų rezultatus, kurie
+    taikomi jūsų konkrečiai valčiai. Žaliavos partijos sertifikatas, suvirinimo plėšimo bandymai, kamerų oro bandymų
+    žurnalai ir priešpristatymo patikros sąrašas. Kiekvienas skaičius yra atsekamas. Kiekvienas inspektorius yra
+    identifikuotas. Tai ne vien tik dokumentai — tai mūsų pažadas, kad tai, ką pristatėme, atitinka tai, ką nurodėme.
+  </p>
+  <p>
+    Jei kada nors kiltų kokybės problemų, galite tiesiogiai susisiekti su laboratorija – kontaktiniai duomenys yra
+    atspausdinti ant jūsų atitikties pažymėjimo. Mes rimtai vertiname kiekvieną užklausą ir įsipareigojame pradėti
+    oficialų tyrimą per 48 valandas.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Reikia nepriklausomo testavimo ar kokybės patikrinimo?</h2>
+    <p class="mt-2 text-sm text-muted">
+      Mūsų laboratorija priima trečiųjų šalių testavimo darbus – susisiekite su mumis dėl savo poreikių.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Susisiekite su kokybės laboratorija</a
+    >
+  </div>
+</section>

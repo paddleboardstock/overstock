@@ -1,0 +1,137 @@
+hero:
+  tagline: Qualitätskontrolle
+  title: 'Qualitätskontrollsystem<br />für die OEM-Schiffbaufertigung'
+  subtitle: 'Mehrstufiger Prüfprozess von Wareneingang über Produktion und Druckprüfung bis zur Endmontage und Vorversand-Verifizierung. Jede Charge ist rückverfolgbar, jeder Test wird dokumentiert.'
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-pressure-testing.webp
+    alt: Qualitätskontrolle und Druckprüfungsprozess bei Aquafarer
+stats:
+  title: Qualitätskontrolle in Zahlen
+  stats:
+    - title: Druckgeprüfte Einheiten
+      amount: '100%'
+    - title: Max. Druckabfall
+      amount: '<5%'
+    - title: QC-Inspektoren
+      amount: '12'
+    - title: Aufbewahrte Aufzeichnungen
+      amount: 10 Jahre
+content_system:
+  tagline: Überblick QC-System
+  title: 'Integriertes Qualitäts-<br />kontrollsystem'
+  subtitle: 'Unser QC-System arbeitet unabhängig von der Produktion und berichtet direkt an die Geschäftsleitung. Keine Charge verlässt das Werk ohne unterschriebene Qualitätsfreigabe aus dem Qualitätslabor.'
+  items:
+    - title: Unabhängiges Qualitätslabor
+      description: 'Unser Qualitätslabor agiert als von der Produktion getrennte Funktion. QC-Inspektoren berichten an den Qualitätsmanager, nicht an den Produktionsleiter. Diese organisatorische Unabhängigkeit stellt sicher, dass Qualitätsentscheidungen objektiv getroffen werden — Produktionsfristen setzen sich nie über Qualitätsanforderungen hinweg.'
+      features:
+        - Berichtet direkt an die Geschäftsleitung, unabhängig von der Produktion
+        - Befugt, die Produktion bei Qualitätsproblemen zu stoppen
+        - 12 dedizierte QC-Inspektoren in allen Stufen
+        - Alle Prüfgeräte werden jährlich kalibriert
+    - title: Chargenrückverfolgbarkeit
+      description: 'Jede Rohstoffcharge erhält in unserem ERP-System eine eindeutige Losnummer. Vom Materialeingang über die Produktion bis zum Endprodukt verweist die Stückliste jedes Bootes auf die ursprünglichen Lieferchargen. Das ermöglicht vollständige Upstream-Rückverfolgbarkeit bei jeder Qualitäts- oder Konformitätsanfrage.'
+      features:
+        - ERP-basierte Losverfolgung vom Material bis zum Endprodukt
+        - Physische Chargenetiketten an jedem Arbeitsauftrag
+        - 100% Materialabdeckung — PVC, Hypalon, Beschläge, Klebstoffe
+        - Aufzeichnungen werden 10 Jahre aufbewahrt (CE-2013/53/EU-Anforderung)
+    - title: Normen & Konformität
+      description: 'Unsere QC-Verfahren sind an internationalen Normen ausgerichtet. Produkte sind gemäß der EU-Richtlinie für Sportboote 2013/53/EU CE-zertifiziert. Unser Qualitätsmanagementsystem ist nach ISO 9001 zertifiziert. Die Sozialkonformität wird durch die BSCI-Zertifizierung sichergestellt.'
+      features:
+        - CE-Zertifizierung (EU 2013/53/EU)
+        - ISO-9001:2015-Qualitätsmanagement
+        - BSCI-Zertifizierung der Sozialkonformität
+        - Materialkonformität gemäß REACH und RoHS
+        - UKCA-Zertifizierung nach dem Brexit
+content_inspection:
+  tagline: Prüfstufen
+  title: 'Sechsstufiger<br />Prüfprozess'
+  subtitle: 'Jedes Produkt durchläuft 6 Prüfstufen mit dokumentierten QC-Kontrollpunkten. Defekte werden früh erkannt, Korrekturmaßnahmen erfolgen sofort, und jede Charge ist vollständig rückverfolgbar.'
+  stages:
+    - stage: '1'
+      title: Wareneingangskontrolle
+      description: 'Alle eingehenden Materialien werden nach Charge/Losnummer erfasst und bis zur QC-Freigabe gesperrt. PVC/Hypalon-Geweberollen werden auf Zugfestigkeit (ASTM D751), Weiterreißfestigkeit (ISO 4674) und Dicke geprüft. Drop-Stitch-Kerne, Ventile, Klebstoffe und Beschläge werden visuell geprüft und gegen die Spezifikationen vermessen.'
+      checks: 'Zugfestigkeit ASTM D751, Weiterreißfestigkeit ISO 4674, Dickenmessung, Klebstoffviskosität, visueller Fehlerscan'
+      threshold: '100% der Chargen geprüft. Ablehnung bei Zugfestigkeit < 90% der Spezifikation, Weiterreißfestigkeit < Spez-Minimum oder jedem sichtbaren Fehler'
+    - stage: '2'
+      title: In-Prozess-QC — Zuschnitt & Vorbereitung
+      description: 'CNC-geschnittene Bahnen werden anhand der CAD-Quelldateien auf Maßhaltigkeit geprüft — jedes 20. Panel. Die Kantenqualität wird auf Ausfransen, ungleichmäßige Schnitte oder Maßabweichungen kontrolliert. Die Panelanzahl wird vor dem Übergang zur Schweißung gegen die Stückliste jeder Produktionscharge verifiziert.'
+      checks: 'Maßprüfung gegen CAD-DXF-Dateien, Kantenqualitätsprüfung, Prüfung der Panelanzahl'
+      threshold: 'Toleranz ±0,5 mm. Chargenablehnung bei >2% außerhalb der Toleranz'
+    - stage: '3'
+      title: In-Prozess-QC — Schweißen & Fügen
+      description: 'Während der Produktion wird die Schweißqualität kontinuierlich überwacht. Schältests (ASTM D751) werden an Proben alle 50 Einheiten durchgeführt. Die Schweißnahtbreite wird gegen die Spezifikation gemessen. Heißluft-Temperaturprotokolle werden auf Konsistenz geprüft. Jede Naht wird im Gegenlicht auf Kanalbildung oder Hohlräume untersucht.'
+      checks: 'Schältest ASTM D751 alle 50 Einheiten, Messung der Schweißnahtbreite, Prüfung der Heißluft-Temperaturprotokolle, Gegenlicht-Nahtprüfung'
+      threshold: 'Schälfestigkeit min. 8 N/cm. Schweißnahttoleranz ±1 mm. Jede sichtbare Kanalbildung = Ablehnung'
+    - stage: '4'
+      title: Montage-QC
+      description: 'Jede Einheit durchläuft eine 100-Punkte-Montagecheckliste, die vom Teamleiter unterschrieben wird. Die Ventilfunktion wird über 10 Öffnungs-/Schließzyklen getestet. Das Anzugsmoment der Beschläge wird verifiziert. Die Sichtprüfung umfasst Oberflächengüte, Farbkonsistenz, Etikettenplatzierung und Zubehörvollständigkeit.'
+      checks: '100-Punkte-Checkliste je Einheit, Ventilfunktionstest, Drehmomentverifizierung der Beschläge, Sichtprüfung'
+      threshold: 'Null-Fehler-Politik bei sicherheitskritischen Teilen (Ventile, D-Ringe, Griffe). Geringfügige kosmetische Mängel: AQL 2.5 (ISO 2859)'
+    - stage: '5'
+      title: Druckprüfung
+      description: 'Jede Kammer wird auf den 1,25-fachen Nenndruck aufgepumpt und 24–48 Stunden gehalten. Drucksensoren protokollieren kontinuierlich während der gesamten Haltezeit. Temperaturkompensierte Messwerte gewährleisten Genauigkeit. Jede Kammer mit einem Druckabfall über 5% wird abgelehnt und zur Nahtnachprüfung mit 100% komplettem Nachtest der gesamten Produktionscharge geschickt.'
+      checks: '24–48-Stunden-Druckhalteprotokoll, tägliche Sensorkalibrierungsprüfung, temperaturkompensierte Messung, Nahttest nach Reparatur'
+      threshold: 'Max. 5% Druckabfall über 24 h bei stabiler Temperatur. Überschreitung = 100% Nachtest der gesamten Charge'
+    - stage: '6'
+      title: Endkontrolle & Versandfreigabe
+      description: 'Finale Sicht- und Funktionsprüfung vor der Verpackung. Oberflächendefekte, Farbkonsistenz, Etiketten-/BIN-Verifizierung, Verpackungsintegrität und Zubehörvollständigkeit werden gegen die Kundenbestellung geprüft. Einheiten werden vakuumverpackt, verpackt und palettiert. Vor dem Verlassen des Werks ist die abschließende QC-Freigabe erforderlich.'
+      checks: 'Vollständige Sichtprüfung, Zubehörcheckliste je SKU, Verpackungs-Falltest (1-m-Stichprobe), Etiketten-/Barcode-Scanverifizierung'
+      threshold: 'AQL 2.5 Hauptfehler, AQL 4.0 Nebenfehler. Null Toleranz bei Sicherheitsfehlern. 100% der Einheiten visuell geprüft'
+content_equipment:
+  tagline: Prüfausrüstung
+  title: 'QC-Labor-<br />ausrüstung'
+  subtitle: 'Unser Qualitätslabor ist mit spezieller Prüfausrüstung für Materialverifizierung, Schweißnahtintegrität und Produktleistungsvalidierung ausgestattet.'
+  columns: 3
+  items:
+    - title: Zugprüfmaschine
+      description: 'Misst Gewebezugfestigkeit und Dehnung nach ASTM D751. Wird bei der Wareneingangskontrolle aller PVC-, Hypalon- und Drop-Stitch-Gewebechargen eingesetzt.'
+      icon: tabler:scale
+    - title: Temperaturkammer
+      description: 'Umweltkammer für UV-Beständigkeitstests (ASTM G154) und Tieftemperatur-Flexibilitätstests. Simuliert extreme Betriebsbedingungen.'
+      icon: tabler:temperature
+    - title: Drucksensoren & Logger
+      description: 'Digitale Drucksensoren mit kontinuierlicher Datenaufzeichnung für 24–48-Stunden-Luftdichtheitstests. Temperaturkompensiert für Genauigkeit.'
+      icon: tabler:wind
+    - title: Schälprüfstand
+      description: 'Kalibrierte Schälprüfausrüstung zur Verifizierung der Schweißnahtfestigkeit. Stichproben aus jeder Produktionscharge.'
+      icon: tabler:files
+    - title: Lecktestbehälter
+      description: 'Wassertank für Tauchlecktests aufgeblasener Kammern. Sichtbare Blasenerkennung zur Verifizierung von Naht- und Ventilintegrität.'
+      icon: tabler:ripple
+    - title: Prüfwerkzeuge
+      description: 'Kalibrierte Messwerkzeuge — Dickenmessgeräte, Drehmomentschlüssel, Messschieber, Härteprüfer für die QC-Stationen in der Produktion.'
+      icon: tabler:tools
+content_metrics:
+  tagline: QC-Leistung
+  title: 'Qualitätskontroll-<br>kennzahlen'
+  subtitle: 'Reale Pass/Fail-Daten aus unserer Produktionslinie. Diese Kennzahlen werden täglich überwacht und monatlich von der Geschäftsleitung überprüft.'
+  columns: 3
+  items:
+    - title: 100% getestete Einheiten
+      description: 'Jede Kammer jedes Bootes wird vor dem Versand druckgeprüft. Kein Stichprobenverfahren — 100% Prüfung der Druckintegrität.'
+      icon: tabler:check
+    - title: <5% Druckabfall
+      description: 'Maximal zulässiger Druckverlust über 24 Stunden bei dem 1,25-fachen Nenndruck. Jede Kammer, die diesen Schwellenwert überschreitet, löst einen Chargenachtest aus.'
+      icon: tabler:gauge
+    - title: AQL 2.5
+      description: 'Annehmbare Qualitätsgrenzlage für Hauptfehler nach ISO-2859-Stichprobennorm. Null Toleranz bei sicherheitskritischen Fehlern.'
+      icon: tabler:clipboard-check
+    - title: 24–48-Stunden-Haltezeit
+      description: 'Die Druckhaltezeit variiert je nach Produktkategorie. RIB-Kammern: 48 Stunden. SUP und Schlauchboote: 24 Stunden.'
+      icon: tabler:clock
+    - title: 1,25× Prüfdruck
+      description: 'Sicherheitsreserve bei jeder Kammer — geprüft bei 25% über Nenndruck, um eine Marge oberhalb der maximalen Betriebsbedingungen sicherzustellen.'
+      icon: tabler:arrow-up
+    - title: 0% Sicherheitsfehler
+      description: 'Null-Toleranz-Politik bei sicherheitskritischen Fehlern — Ventile, D-Ringe, Nähte und Auftriebskammern. Jeder Fehler = 100% Nachprüfung.'
+      icon: tabler:shield
+cta:
+  title: 'Qualitätsdokumentation anfordern'
+  subtitle: 'Wir liefern vollständige Qualitätsdokumentationspakete inklusive Testberichten, Materialzertifikaten und Konformitätserklärungen mit jeder Lieferung. Kontaktieren Sie uns für Muster.'
+  actions:
+    - variant: primary
+      text: QC-Dokumentation anfordern
+      href: /contact
+    - text: Testprotokolle ansehen
+      href: /quality

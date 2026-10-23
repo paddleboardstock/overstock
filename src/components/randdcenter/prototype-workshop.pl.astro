@@ -1,0 +1,206 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'pl' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">← Powrót do Centrum badawczo-rozwojowe</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Laboratorium 05</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Warsztat prototypowy</h1>
+      <p class="mt-3 text-lg text-muted">
+        Od modelu CAD po łódź gotową do transportu morskiego — zbudowaną, zamontowaną i sprawdzoną
+      </p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-ocean-voyager-1.webp"
+        alt="Aquafarer produkcja prototypowej łodzi warsztatowej"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Gdzie projekt staje się rzeczywistością</h2>
+  <p>
+    Model CAD, niezależnie od tego, jak szczegółowy, nie jest w stanie ujawnić, jak łódź będzie się faktycznie
+    zachowywać, dopóki nie zetknie się z wodą. Dlatego też nasz warsztat prototypowy został zaprojektowany tak, aby jak
+    najszybciej i najdokładniej przełożyć dane inżynieryjne na fizyczny, pełnomorski statek. Każde nowe {SITE.name} model
+    — i każda znacząca konstrukcja niestandardowa — przechodzi przez ten warsztat przed zatwierdzeniem oprzyrządowania produkcyjnego.
+  </p>
+  <p>
+    Warsztat jest w pełni wyposażony do jednoczesnej produkcji kadłuba, rur i olinowania. To podejście oparte na
+    równoległym przepływie pracy skraca czas realizacji prototypu do 8-12 tygodni od wydania technicznego w porównaniu z
+    normą branżową wynoszącą 16-20 tygodni. Jeśli Twoja aplikacja wymaga specjalistycznego rozwiązania, możemy przejść
+    od koncepcji do walidacji na wodzie w czasie krótszym niż trzy miesiące.
+  </p>
+
+  <h2>Możliwości warsztatu</h2>
+  <table>
+    <thead><tr><th>Stacja robocza</th><th>Sprzęt</th><th>Zamiar</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Wykonanie kadłuba</td><td
+          >Piec do formowania rotacyjnego (HDPE), stanowisko do spawania TIG (aluminium), formy do ręcznego układania
+          (włókno szklane)</td
+        ><td>Produkcja kadłubów na pełną skalę ze wszystkich trzech rodzajów materiałów</td></tr
+      >
+      <tr
+        ><td>Zespół rurki</td><td
+          >Prasa spawalnicza RF, stacja sczepiania gorącym powietrzem, przyrząd do pomiaru napompowania</td
+        ><td>Produkcja pełnowymiarowych zespołów rurowych ze wszystkimi przegrodami, stożkami i zaworami</td></tr
+      >
+      <tr
+        ><td>Olinowanie i dopasowanie</td><td
+          >Podnośnik silnika (500 kg), rama makiety konsoli, zaciskarka węży hydraulicznych, tablica wiązek
+          elektrycznych</td
+        ><td>Kompletne wyposażenie: silnik, układ kierowniczy, sterowanie, układ paliwowy, elektronika, siedzenia</td
+        ></tr
+      >
+      <tr
+        ><td>Zatoka oprzyrządowania</td><td
+          >Czujnik prędkości GPS, miernik przepływu paliwa, akcelerometry, układ termopar, rejestrator danych</td
+        ><td>Instalacja i kalibracja oprzyrządowania do prób morskich</td></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>Droga prototypu — krok po kroku</h2>
+  <ol>
+    <li>
+      <strong>Przekazanie inżynieryjne</strong> — Pakiet projektowy (model 3D, raport FEA, zestawienie materiałów, harmonogram
+      układania) jest formalnie sprawdzany przez kierownika warsztatu i inżyniera projektu. Wszelkie problemy produkcyjne
+      są sygnalizowane i rozwiązywane przed rozpoczęciem cięcia.
+    </li>
+    <li>
+      <strong>Produkcja kadłuba</strong> — Kadłub jest zbudowany zgodnie ze specyfikacją techniczną. W przypadku HDPE: program
+      do formowania rotacyjnego jest ładowany z symulacji Moldex3D. W przypadku aluminium: płyty cięte CNC są spawane w komorze
+      TIG zgodnie z zatwierdzoną mapą spoin. W przypadku włókna szklanego: warstwa po warstwie jest nakładana na sklejkę.
+    </li>
+    <li>
+      <strong>Produkcja rur</strong> — Tkanina jest cięta przy użyciu szablonów CNC, a następnie zgrzewana metodą RF w pełnowymiarowe
+      komory. Każdą komorę napełnia się do ciśnienia próbnego i pozostawia na 24 h w celu wstępnej stabilizacji.
+    </li>
+    <li>
+      <strong>Montaż i olinowanie</strong> — Kadłub i rury są połączone. Silnik jest zawieszony, układ kierowniczy i elementy
+      sterujące są podłączone, układ paliwowy jest zainstalowany, a wszystkie obwody elektryczne są okablowane i sprawdzone.
+    </li>
+    <li>
+      <strong>Testy statyczne</strong> — Zanim łódź dotknie wody, poddawana jest: kontroli pływalności (pełne obciążenie +
+      30 % rezerwy), próbie ciśnieniowej układu paliwowego, próbie pełnego cyklu blokady układu sterowego, próbie ciągłości
+      uziemienia elektrycznego.
+    </li>
+    <li><strong>Program prób morskich</strong> — 20 godzin testów w wodzie, szczegółowo opisanych poniżej.</li>
+    <li>
+      <strong>Przegląd prototypu</strong> — Odbywa się formalne spotkanie zatwierdzające z zespołami inżynieryjnymi, produkcyjnymi
+      i jakościowymi. Wszelkie wymagane zmiany projektowe są dokumentowane i włączane do wersji produkcyjnej.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      20-godzinny program prób morskich — harmonogram testów
+    </p>
+    <div class="space-y-2 text-sm">
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">2 h</span><span class="flex-1"
+          >Manewrowanie w porcie — prowadzenie przy małych prędkościach, bieg wsteczny, kontrola odbojnic</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">4 h</span><span class="flex-1"
+          >Próba prędkości — prędkość maksymalna zweryfikowana przez GPS, prędkość przelotowa, zużycie paliwa w punktach
+          3 RPM</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Próba skrętu — średnica taktyczna, postęp i transfer przy 20 węzłów, na lewej i prawej burcie</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Próba trzaskania – powtarzane przebiegi przez siekanie 0.5–1.0 m; akcelerometr na podstawie siedzenia steru</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Próba stateczności — statyczny kąt przechyłu z załogą 4 + bieg na prawą burtę, obciążenie przesunięte</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Bieg długodystansowy — 3 h ciągły przy prędkości przelotowej; monitorowanie temperatury (silnika, paliwa,
+          elektryki)</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">2 h</span><span class="flex-1"
+          >Kontrola końcowa — kontrola po próbna wszystkich systemów, dokręcenie/sprawdzenie wszystkich elementów
+          złącznych, udokumentowanie ustaleń</span
+        >
+      </div>
+    </div>
+  </div>
+
+  <h2>Niestandardowe prototypowanie dla unikalnych zastosowań</h2>
+  <p>
+    Warsztat prototypowy to miejsce, w którym rozwiązujemy problemy, których nie są w stanie rozwiązać standardowe
+    łodzie produkcyjne. Najnowsze przykłady obejmują:
+  </p>
+  <ul>
+    <li>
+      7.8 m RIB dla organizacji poszukiwawczo-ratowniczych, wymagającej niestandardowej konstrukcji kabiny z
+      zabezpieczeniem przy przewróceniu, zintegrowanymi mocowaniami do noszy i modułem sonaru montowanym na dziobie –
+      wszystko prototypowane, montowane i testowane w naszym zakładzie.
+    </li>
+    <li>
+      Ponton o średnicy 5.2 m dla wykonawcy badań hydrograficznych, ze ściętą pawężą, zdejmowanym masztem przyrządowym i
+      kieszeniami na przetworniki w kadłubie, zaprojektowanymi w celu minimalizacji zakłóceń przepływu.
+    </li>
+    <li>
+      Przetarg na superjacht z napędem elektrycznym o długości 4.5 m, w którym prototyp wykorzystano do sprawdzenia
+      zasięgu, infrastruktury ładowania i poziomu hałasu, zanim klient zdecydował się na flotę składającą się z czterech
+      osób.
+    </li>
+  </ul>
+
+  <h2>Nasz zespół prototypowy</h2>
+  <p>
+    W warsztacie pracuje ośmiu wszechstronnie wykwalifikowanych techników morskich, każdy przeszkolony w co najmniej
+    dwóch z trzech podstawowych dziedzin (kadłub, rura, olinowanie). Kierownik zespołu jest mistrzem szkutnictwa z
+    16-letnim doświadczeniem, obejmującym zarówno jednorazowe konstrukcje niestandardowe, jak i serie produkcyjne. Do
+    każdego prototypu przypisany jest dedykowany inżynier projektu, który stanowi pojedynczy punkt kontaktowy dla
+    klienta przez cały proces budowy i prób.
+  </p>
+
+  <h2>Zaangażowanie klienta</h2>
+  <p>
+    Aktywnie zachęcamy naszych klientów do wzięcia udziału w kluczowych etapach budowy prototypu — w szczególności
+    podczas wstępnego przeglądu wyposażenia i prób morskich. Twoje uwagi operacyjne na tych etapach są nieocenione przy
+    dostrajaniu łodzi przed wejściem do produkcji. Nie budujemy w próżni; budujemy we współpracy z Tobą.
+  </p>
+  <p>
+    20-godzinna próba morska to także szansa dla Twojego zespołu na zapoznanie się z obsługą łodzi, układem systemów i
+    wymaganiami konserwacyjnymi, zapewniając płynne przejście do eksploatacji po dostarczeniu łodzi produkcyjnych.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Rozpocznij swój projekt prototypowy</h2>
+    <p class="mt-2 text-sm text-muted">
+      Opowiedz nam o łodzi, której potrzebujesz, a my zaproponujemy plan rozwoju prototypu.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Skontaktuj się z naszym zespołem zajmującym się prototypowaniem</a
+    >
+  </div>
+</section>

@@ -1,0 +1,212 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'ms' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">&larr; Kembali ke Pusat R&D</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Makmal 01</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">PVC Makmal Kain</h1>
+      <p class="mt-3 text-lg text-muted">Ujian bahan saintifik — dari gentian hingga tiub siap</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/randd/aquafarer-pvc-material-lab.webp"
+        alt="Aquafarer PVC makmal ujian bahan fabrik"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Asas setiap bot tiup</h2>
+  <p>
+    Kain tiub adalah bahan yang paling kritikal dalam bot tiup. Ia mesti tahan terhadap pendedahan berterusan UV,
+    kitaran inflasi berulang, abrasi terhadap dermaga dan serpihan, serta perubahan suhu yang melampau — semua ini
+    sambil mengekalkan integriti struktur selama bertahun-tahun. Di{SITE.name}, PVC Makmal Kain kami didedikasikan
+    sepenuhnya untuk pencirian, pengesahan, dan penambahbaikan berterusan kain yang kami gunakan dalam setiap bot yang
+    kami bina.
+  </p>
+  <p>
+    Kami tidak bergantung sepenuhnya pada helaian data pembekal. Setiap kumpulan kain PVC dan Hypalon yang memasuki
+    bengkel kami diuji secara bebas di dalam makmal. Ini menjamin bahawa spesifikasi bahan yang kami terbitkan adalah
+    prestasi bahan yang anda terima — lot demi lot, tahun demi tahun.
+  </p>
+
+  <h2>Peralatan ujian piawai</h2>
+  <p>Makmal kain kami dilengkapi dengan instrument gred industri yang mematuhi kaedah ujian ISO, ASTM, dan EN:</p>
+  <table>
+    <thead><tr><th>Peralatan</th><th>Parameter yang Diukur</th><th>Piawai</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Penguji tegangan sejagat (50 kN)</td><td
+          >Kekuatan putus, kelenturan pada titik putus, penyebaran koyakan</td
+        ><td>/ ASTM D751</td></tr
+      >
+      <tr
+        ><td>Ruang penuaan cahaya xenon-arc</td><td
+          >Ketahanan UV (perubahan warna, pengekalan kekuatan selepas 2000 jam)</td
+        ><td>/ ASTM G155</td></tr
+      >
+      <tr
+        ><td>Penguji lenturan suhu rendah</td><td>Titik retak pada -30 °C hingga -50 °C</td><td
+          >ISO 4675 / ASTM D2136</td
+        ></tr
+      >
+      <tr
+        ><td>Penguji haus Taber</td><td>Kehilangan berat selepas 1000 kitaran (roda CS-10)</td><td
+          >ASTM D3389 / ISO 5470-1</td
+        ></tr
+      >
+      <tr
+        ><td>Pengukur ketebalan (digital, resolusi 0.001 mm)</td><td>Keseragaman merentasi lebar gulungan</td><td
+          >ISO 2286-3</td
+        ></tr
+      >
+      <tr><td>Penguji kepala hidrostatik</td><td>Ketahanan penembusan air</td><td>ISO 811</td></tr>
+    </tbody>
+  </table>
+  <p class="text-sm text-gray-500">
+    * Semua peralatan dikalibrasi setiap tahun oleh makmal pihak ketiga yang diakreditasi.
+  </p>
+
+  <h2>Dari data ke keputusan: aliran kerja ujian tipikal</h2>
+  <p>Apabila calon fabrik baru tiba, ia mengikuti proses kelayakan piawai tujuh langkah:</p>
+  <ol>
+    <li>
+      <strong>Pemeriksaan resit</strong>— pemeriksaan visual untuk kecacatan permukaan, lubang jarum, dan pematuhan
+      dimensi.
+    </li>
+    <li>
+      <strong>Pemetaan ketebalan</strong>— pengukuran 20 mata merentasi gulungan; CV &lt; 3% diperlukan untuk
+      penerimaan.
+    </li>
+    <li>
+      <strong>Ujian tegangan</strong>— 5 spesimen dalam arah warp dan weft. Minimum 3500 N/50 mm untuk 1100 dtexPVC.
+    </li>
+    <li>
+      <strong>UV pengkondisian</strong>— pendedahan 1000 jam dalam ruang xenon-arc; minimum 80% pengekalan kekuatan
+      diperlukan.
+    </li>
+    <li>
+      <strong>Retak sejuk</strong>— 4 jam pada -35 °C, kemudian 180° bengkok di atas manderel 25 mm. Tiada retakan yang
+      kelihatan.
+    </li>
+    <li><strong>Ketahanan lelas</strong>— 1000 kitaran, penurunan berat badan ≤ 0.05 g.</li>
+    <li>
+      <strong>Penandatanganan kelulusan</strong>— hanya selepas kesemua tujuh pintu dilepasi, fabrik akan dilepaskan
+      untuk pengeluaran.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Tipikal PVC 1100 dtex — Pengekalan Tegangan Selepas UV Pendedahan
+    </p>
+    <div class="flex items-end gap-3 h-40">
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-600 rounded-t" style="height:100%"></div><span class="text-xs mt-1"
+          >0 h<br />100%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-500 rounded-t" style="height:95%"></div><span class="text-xs mt-1"
+          >500 h<br />95%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-400 rounded-t" style="height:88%"></div><span class="text-xs mt-1"
+          >1000 h<br />88%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-300 rounded-t" style="height:82%"></div><span class="text-xs mt-1"
+          >2000 h<br />82%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-gray-300 rounded-t" style="height:65%"></div><span class="text-xs mt-1"
+          >Pesaing<br />~65%</span
+        >
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      Fabrik PVC 1100 dtex kami mengekalkan kekuatan tegangan &gt; 80% selepas pendedahan xenon-arc selama 2000 jam,
+      berbanding gred industri biasa yang jatuh di bawah 70%.
+    </p>
+  </div>
+
+  <h2>Pasukan profesional kami</h2>
+  <p>
+    Makmal ini dikendalikan oleh dua jurutera bahan sepenuh masa, masing-masing memegang ijazah dalam sains polimer atau
+    kejuruteraan tekstil dengan sekurang-kurangnya enam tahun pengalaman industri. Mereka disokong oleh tiga juruteknik
+    yang menjalankan ujian harian dan pencatatan data. Pasukan ini secara berkala mengambil bahagian dalam ujian bulat
+    antara makmal yang dianjurkan oleh Pertubuhan Piawaian Antarabangsa (ISO) untuk mengesahkan ketepatan kaedah ujian
+    kami.
+  </p>
+
+  <h2>Menyelesaikan cabaran bahan paling sukar anda</h2>
+  <p>
+    Setiap persekitaran marin adalah berbeza. Bot rondaan yang beroperasi di Teluk Parsi menghadapi keadaan dan suhu
+    yang sangat berbeza UV berbanding kapal penyelamat di Laut Utara. Makmal Fabrik kami membantu anda memilih — atau
+    membangunkan — spesifikasi fabrik yang dioptimumkan untuk profil operasi anda.
+  </p>
+  <p>Penyelesaian tersuai terkini termasuk:</p>
+  <ul>
+    <li>
+      Campuran abrasi tinggi PVC untuk pelanggan tentera yang botnya kerap terdampar di terumbu karang (+40% hayat
+      geseran).
+    </li>
+    <li>Hypalon Formulasi suhu rendah untuk stesen penyelidikan Artik, diuji sehingga -50 °C tanpa kerapuhan.</li>
+    <li>
+      Kain jingga yang distabilkan warna untuk armada pencarian dan penyelamatan, mengekalkan penglihatan selepas 3
+      tahun terdedah kepada matahari tropika.
+    </li>
+  </ul>
+  <p>
+    Kami tidak menjual kain 'sedia ada' dan berharap ia berfungsi. Kami menguji, mengesahkan, dan mengesyorkan — atau
+    mencipta — penyelesaian yang disesuaikan untuk profil misi khusus anda. Itu adalah{SITE.name}perbezaan.
+  </p>
+
+  <h2>Bagaimana kami berkhidmat kepada anda</h2>
+  <p>Apabila anda membawa cabaran material kepada kami, ini yang boleh anda jangkakan:</p>
+  <ol>
+    <li><strong>Perundingan</strong>— kami membincangkan persekitaran operasi anda, sasaran prestasi, dan bajet.</li>
+    <li><strong>Cadangan</strong>— pelan ujian dirangka dengan kriteria lepas/gagal yang jelas dan garis masa.</li>
+    <li>
+      <strong>Pelaksanaan</strong>— makmal kami menjalankan ujian dan menghasilkan laporan terperinci dengan data mentah
+      dan analisis perbandingan.
+    </li>
+    <li>
+      <strong>Syor</strong>— kami membentangkan spesifikasi kain, termasuk pilihan alternatif jika beberapa material
+      memenuhi keperluan anda.
+    </li>
+    <li>
+      <strong>Tindak lanjut</strong>— selepas penghantaran, kami tetap tersedia untuk menyokong sebarang pertanyaan
+      material semasa perkhidmatan.
+    </li>
+  </ol>
+  <p>
+    Matlamat kami bukan semata-mata untuk menjual bot kepada anda. Ia adalah untuk memastikan bot yang anda terima
+    berfungsi dengan boleh dipercayai dalam keadaan operasi anda — dan itu bermula dengan kain.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Perlukan spesifikasi kain khusus?</h2>
+    <p class="mt-2 text-sm text-muted">
+      Hubungi pasukan kejuruteraan material kami untuk membincangkan keperluan anda.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Hubungi pasukan makmal kami</a
+    >
+  </div>
+</section>

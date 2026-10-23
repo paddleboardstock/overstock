@@ -1,0 +1,203 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'ms' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">&larr; Kembali ke Pusat R&D</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Makmal 06</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Makmal Kualiti & Pemeriksaan</h1>
+      <p class="mt-3 text-lg text-muted">Pengesahan bebas — setiap ujian disahkan lulus sebelum penghantaran</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-uv-resistance-testing.webp"
+        alt="Aquafarer makmal pemeriksaan kualiti UV ujian"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Percaya, tetapi sahkan</h2>
+  <p>
+    Setiap bot yang meninggalkan bengkel kami membawa pensijilan bahawa ia telah lulus satu set pemeriksaan kualiti dan
+    ujian bahan yang ditentukan. Makmal Kualiti & Pemeriksaan kami adalah fungsi bebas dalam organisasi — ia melapor
+    terus kepada pengarah urusan, bukan kepada pengeluaran — memastikan tiada tekanan komersial yang boleh menjejaskan
+    pintu pemeriksaan. Jika satu batch bahan atau bot siap tidak memenuhi spesifikasi yang diterbitkan, makmal berhak
+    menghentikan penghantaran sehingga ketidakpatuhan diselesaikan.
+  </p>
+  <p>
+    Makmal ini beroperasi di bawah sistem pengurusan kualiti yang sejajar dengan prinsip, dan kaedah ujian kami
+    berasaskan piawaian ISO, ASTM, dan EN di mana berkenaan. Kami mengekalkan rekod terperinci bagi setiap ujian yang
+    dijalankan, mewujudkan rantaian kebolehkesanan lengkap dari penerimaan bahan mentah hingga penghantaran bot akhir.
+  </p>
+
+  <h2>Peralatan dan keupayaan ujian</h2>
+  <table>
+    <thead><tr><th>Peralatan</th><th>Ujian yang Dilakukan</th><th>Piawaian / Kaedah</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Mesin ujian universal (50 kN)</td><td
+          >Kekuatan tegangan (kain), ketahanan kupas (jahitan), propagasi koyakkan</td
+        ><td>, ISO 4674</td></tr
+      >
+      <tr
+        ><td>Rig ujian penahanan udara (boleh diprogram)</td><td
+          >Ketahanan inflasi/deflasi 1000 kitaran, ujian pengekalan tekanan 24-48 jam</td
+        ><td>(dalam)</td></tr
+      >
+      <tr
+        ><td>Jig kupas jahitan (dimotorkan 180° kupas)</td><td>Kekuatan kupas weld dan jahitan gam pada 100 mm/min</td
+        ><td>/ ASTM D1876</td></tr
+      >
+      <tr><td>Penguji kepala hidrostatik</td><td>Ketahanan penembusan air kain (0 — 00 mbar)</td><td>ISO 811</td></tr>
+      <tr
+        ><td>Pengukur ketebalan digital & mikrometer</td><td
+          >Ketebalan kain, ketebalan dinding tiub, ketebalan filem pelekat</td
+        ><td>ISO 2286-3</td></tr
+      >
+      <tr
+        ><td>Bilik persekitaran</td><td
+          >Penyediaan suhu (-40 °C hingga +80 °C) untuk ujian retak sejuk dan penuaan haba</td
+        ><td>ISO 188, ISO 4675</td></tr
+      >
+      <tr
+        ><td>Spektrofotometer warna</td><td>Pengukuran warna Delta-E selepas UV pendedahan</td><td
+          >ISO 105-A05 / ASTM D2244</td
+        ></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>Pintu pemeriksaan — dari bahan ke penghantaran</h2>
+  <p>
+    Setiap bot mengikuti pelan kualiti yang ditetapkan dengan titik pemeriksaan wajib. Tiada bot boleh melangkau pintu
+    gerbang; setiap pintu mesti ditandatangani oleh pemeriksa kualiti sebelum peringkat pengeluaran seterusnya bermula.
+  </p>
+
+  <div class="not-prose my-8">
+    <div class="relative">
+      <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-blue-200 dark:bg-blue-800"></div>
+      <div class="space-y-6 relative">
+        {
+          [
+            {
+              gate: 'Gate 1',
+              label: 'Pemeriksaan bahan masuk',
+              desc: 'Kumpulan kain, kumpulan pelekat, perkakasan — semuanya diperiksa mengikut spesifikasi yang diterima sebelum dilepaskan untuk pengeluaran.',
+            },
+            {
+              gate: 'Gate 2',
+              label: 'Pemeriksaan kimpalan dalam proses',
+              desc: 'Kupon kimpalan pertama diuji (kulit + visual) pada permulaan setiap syif pengeluaran.',
+            },
+            {
+              gate: 'Gate 3',
+              label: 'Ujian udara bilik',
+              desc: 'Setiap ruang diberi tekanan sehingga 1.25 x tekanan kerja, ditahan selama 24-48 jam. Data direkodkan mengikut nombor siri.',
+            },
+            {
+              gate: 'Gate 4',
+              label: 'Pemeriksaan sebelum penghantaran',
+              desc: 'Bot lengkap diperiksa: semua pengikat dipasangkan dengan tork, sistem berfungsi, tiada kecacatan kosmetik. Senarai semak 100 mata.',
+            },
+            {
+              gate: 'Gate 5',
+              label: 'Pensijilan akhir',
+              desc: 'Laporan ujian disusun, rekod pemeriksaan ditinjau, Sijil Pemenuhan dikeluarkan.',
+            },
+          ].map((g) => (
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs font-bold z-10">
+                {g.gate}
+              </div>
+              <div class="flex-1 p-3 rounded-lg bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800">
+                <p class="text-sm font-semibold">{g.label}</p>
+                <p class="text-xs text-gray-500 mt-1">{g.desc}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+
+  <h2>Metrik kualiti utama (purata gulung 2025)</h2>
+  <div class="not-prose my-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">99.7 %</span>
+      <span class="text-xs text-gray-500">Hasil laluan pertama (kelompok fabrik)</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600"> 0.2 %</span>
+      <span class="text-xs text-gray-500">Kadar penolakan kimpalan (meter linear)</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">100 %</span>
+      <span class="text-xs text-gray-500">Ruang yang diuji udara sebelum pemasangan</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600"></span>
+      <span class="text-xs text-gray-500">Pematuhan kategori reka bentuk</span>
+    </div>
+  </div>
+
+  <h2>Pasukan kualiti kami</h2>
+  <p>
+    Makmal ini dikendalikan oleh seorang pengurus kualiti (10 tahun dalam QA marin, Jurutera Kualiti Bertauliah ASQ),
+    dua pemeriksa kualiti (masing-masing dengan pensijilan NDT Tahap 2 dalam ujian visual), dan seorang juruteknik bahan
+    yang bertanggungjawab untuk semua ujian fizikal. Pasukan menjalani ujian kecekapan tahunan melalui penyedia pihak
+    ketiga bebas untuk memastikan keputusan ujian kami kekal tepat dan boleh diulang.
+  </p>
+
+  <h2>Ujian bebas untuk pelanggan</h2>
+  <p>
+    Makmal Kualiti & Pemeriksaan kami tersedia untuk perkhidmatan ujian bebas. Jika anda perlu mengesahkan spesifikasi
+    fabrik, mengesahkan sistem pelekat baru, atau mendapatkan laporan ujian pihak ketiga untuk kelayakan perolehan, kami
+    boleh menjalankan ujian mengikut piawaian yang berkenaan dan mengeluarkan laporan ujian yang diperakui.
+  </p>
+  <p>Contoh kerja ujian pihak ketiga terkini:</p>
+  <ul>
+    <li>
+      Perbandingan kekuatan pengelupasan lima produk filem pelekat pesaing untuk program perolehan ketenteraan Eropah.
+    </li>
+    <li>
+      Kajian penuaan dipercepatkan (UV + kitaran terma) untuk formulasi pigmen oren baru PVC , dengan pengukuran interim
+      berkala pada selang 500 jam.
+    </li>
+    <li>Pengesahan penahanan udara 50 injap baffle prototaip untuk reka bentuk tiub tekanan tinggi yang baharu.</li>
+  </ul>
+
+  <h2>Komitmen kami kepada anda</h2>
+  <p>
+    Apabila anda menerima seorang{SITE.name}kapal, anda juga menerima dossier kualitinya — rekod kompilasi keputusan
+    ujian yang terpakai kepada kapal khusus anda. Sijil batch fabrik, ujian kepingan kimpalan, log ujian udara bilik,
+    dan senarai semak pemeriksaan pra-penyampaian. Setiap nombor boleh dijejak. Setiap pemeriksa dikenalpasti. Ini bukan
+    sekadar kertas kerja — ia adalah janji kami bahawa apa yang kami sampaikan adalah apa yang kami nyatakan.
+  </p>
+  <p>
+    Jika anda mempunyai kebimbangan kualiti, anda boleh menghubungi makmal secara langsung — butiran hubungan dicetak
+    pada sijil pematuhan anda. Kami mengambil setiap pertanyaan dengan serius dan komited untuk menjalankan siasatan
+    rasmi dalam masa 48 jam.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Perlukan ujian bebas atau pengesahan kualiti?</h2>
+    <p class="mt-2 text-sm text-muted">
+      Makmal kami menerima kerja ujian pihak ketiga — hubungi kami dengan keperluan anda.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Hubungi makmal kualiti</a
+    >
+  </div>
+</section>

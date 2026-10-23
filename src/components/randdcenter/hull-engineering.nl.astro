@@ -1,0 +1,180 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'nl' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">← Terug naar R&amp;D-centrum</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Laboratorium 02</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Hull Engineering Studio</h1>
+      <p class="mt-3 text-lg text-muted">Digitale simulatie, structurele intelligentie, aangepast rompontwerp</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/design discussaquafarer-inflatable-boat-aquafarer-factory-exterior.webp"
+        alt="Aquafarer casco engineering CAD-ontwerpwerkstation"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Waar kracht en hydrodynamica samenkomen</h2>
+  <p>
+    De romp is de ruggengraat van elke RIB- of opblaasboot. Het moet licht genoeg zijn om efficiënt te schaven, sterk
+    genoeg om schokbelastingen te absorberen en maatvast te zijn over een breed temperatuurbereik. Bij {
+      SITE.name
+    }combineert onze Hull Engineering Studio geavanceerde CAD-modellering, eindige elementenanalyse (FEA) en tientallen
+    jaren praktische ervaring met scheepsarchitectuur om rompen te leveren die zijn geoptimaliseerd voor hun beoogde
+    missie - geen generieke vormen die zijn aangepast uit een catalogus.
+  </p>
+  <p>
+    We werken met drie primaire rompmaterialen – rotatiegegoten HDPE, gelast aluminium van maritieme kwaliteit en met de
+    hand gelegd glasvezel – en beschikken over de technische capaciteiten om elk materiaal intern te ontwerpen,
+    simuleren en valideren.
+  </p>
+
+  <h2>Ontwerptools en standaarden</h2>
+  <p>Onze digitale engineeringomgeving omvat:</p>
+  <table>
+    <thead><tr><th>Vermogen</th><th>Software/tool</th><th>Sollicitatie</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>3D parametrische modellering</td><td>SolidWorks Professioneel</td><td
+          >Rompoppervlak, stringersysteem, motorbeugel, dekindeling</td
+        ></tr
+      >
+      <tr
+        ><td>Eindige elementenanalyse</td><td>ANSYS Mechanisch &amp; LS-DYNA</td><td
+          >Stresskartering, modale analyse, crash-/impactsimulatie</td
+        ></tr
+      >
+      <tr
+        ><td>Computationele vloeistofdynamica</td><td>Ansys Fluent / Star-CCM+</td><td
+          >Hydrodynamische weerstandsvoorspelling, trimoptimalisatie</td
+        ></tr
+      >
+      <tr
+        ><td>Laminaat techniek</td><td>ESAComp / CADEC</td><td
+          >Stapelen van glasvezellagen, kernselectie, gewichtsschatting</td
+        ></tr
+      >
+      <tr><td>Vormstroomsimulatie</td><td>Moldex3D</td><td>Voorspelling van wanddikte bij rotatiegieten</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Onze technische workflow</h2>
+  <p>
+    Elk rompontwerp, of het nu een standaardmodel is of een volledig op maat gemaakt project, volgt een rigoureus proces
+    van vijf fasen:
+  </p>
+  <ol>
+    <li>
+      <strong>Verzamelen van concepten en eisen</strong> — We ontmoeten u om het laadvermogen, het snelheidsbereik, de capaciteit
+      op zee, de sleepvereisten en eventuele speciale missieuitrusting (dekluiken, consoleposities, integratie van brandstoftanks)
+      te definiëren.
+    </li>
+    <li>
+      <strong>3D-verhardingen en hydrostatische berekeningen</strong> — De rompvorm wordt gemodelleerd in SolidWorks en gecontroleerd
+      op hydrostatische stabiliteit (GM, richtarm) met behulp van ingebouwde analysetools.
+    </li>
+    <li>
+      <strong>Structurele FEA</strong> — Belastingsgevallen worden gedefinieerd: statisch (bemanning + uitrusting), dynamisch
+      (planerende botsingen bij 5 g) en dichtslaand (dalen vanaf een golftop bij 3 m/s). Spanningscontouren worden beoordeeld;
+      veiligheidsfactor ≥ 2.5 is verplicht.
+    </li>
+    <li>
+      <strong>Optimalisatie van CFD-weerstand</strong> — De romp wordt gesimuleerd bij drie beladingsomstandigheden en vijf
+      snelheden. Het bevochtigde oppervlak, de trimhoek en de restweerstand worden iteratief verminderd.
+    </li>
+    <li>
+      <strong>Ontwerpbeoordeling en release</strong> — Het volledige engineeringpakket (3D-model, FEA-rapport, CFD-rapport,
+      gewichtsschatting, lagenboek) wordt beoordeeld door onze senior scheepsarchitect voordat het wordt vrijgegeven aan de
+      prototypewerkplaats.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      FEA-spanningsverdeling — RIB 450 Patrouilleromp (aluminium 5083)
+    </p>
+    <div class="grid grid-cols-2 gap-4 text-sm">
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">2.8 : 1</span>
+        <span class="text-gray-500">Veiligheidsfactor bij maximaal laadvermogen</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">15.2 %</span>
+        <span class="text-gray-500">Vermindering van luchtweerstand vergeleken met de vorige generatie</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">87 kN/m&sup2;</span>
+        <span class="text-gray-500">Piekslagdruk (ontwerplimiet)</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">18 000 h</span>
+        <span class="text-gray-500">Cumulatieve FEA-runtime in 2025</span>
+      </div>
+    </div>
+  </div>
+
+  <h2>Maatwerk: uw romp, uw regels</h2>
+  <p>
+    Geen twee operators hebben identieke eisen. Een havenpatrouille RIB heeft een ondiepe V-romp nodig voor stabiliteit
+    bij lage snelheid; een snel onderscheppingsvaartuig heeft een diepe V met sproeirails nodig; een
+    duikondersteuningsboot heeft een brede breedte en een lage spiegel nodig. Wij forceren uw aanvraag niet in een reeds
+    bestaande rompvorm. Wij ontwerpen vanaf uw specificatie naar boven.
+  </p>
+  <p>Voorbeelden van recente maatwerk casco engineering projecten:</p>
+  <ul>
+    <li>
+      Een verlengde HDPE-romp van 6.8 m voor een Caribische touroperator, met een versterkte boeg voor strandlandingen
+      (+15 % bodemdikte).
+    </li>
+    <li>
+      Een lichtgewicht aluminium 7.2 m RIB voor een kustwacht, met geïntegreerde schotten voor de brandstoftank en
+      verstijvers voor de uitrustingskasten.
+    </li>
+    <li>
+      Een glasvezelduikboot van 5.5 m met een ingekorte spiegel en dubbele accubakken, ontworpen om gemakkelijk weer aan
+      boord van de snorkelaar te kunnen komen.
+    </li>
+  </ul>
+
+  <h2>Onze ingenieurs</h2>
+  <p>
+    De studio wordt geleid door een senior scheepsarchitect met 14 jaar ervaring in het ontwerpen van
+    hogesnelheidsvaartuigen, ondersteund door twee werktuigbouwkundigen gespecialiseerd in FEA en CFD. Alle drie hebben
+    ze een hogere graad in scheepsbouwkunde of scheepsbouwkunde behaald aan internationaal erkende universiteiten. Het
+    team publiceert regelmatig in vaktijdschriften en presenteert op conferenties zoals de International Conference on
+    High-Performance Marine Vehicles.
+  </p>
+
+  <h2>Werk met ons samen aan uw volgende romp</h2>
+  <p>
+    Vanaf de eerste conceptschets tot het uiteindelijke stressrapport is onze Hull Engineering Studio uw partner bij het
+    creëren van een boot die niet alleen wordt gebouwd, maar ook wordt ontwikkeld. We investeren de simulatie-uren
+    vooraf, zodat elke las, elke laminaatlaag en elke ronding van de romp er met een reden is.
+  </p>
+  <p>
+    Of u nu een kleine aanpassing aan een bestaand model nodig heeft of een volledig strak ontwerp, wij staan klaar om
+    uw wensen te bespreken.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Start uw rompontwerpadvies</h2>
+    <p class="mt-2 text-sm text-muted">Vertel ons over uw missieprofiel en wij stellen een engineeringtraject voor.</p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Neem contact op met ons engineeringteam</a
+    >
+  </div>
+</section>

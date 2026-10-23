@@ -1,0 +1,73 @@
+hero:
+  tagline: 'Vannutforskningskunnskap'
+  title: 'Lær'
+  subtitle: |
+    Guider, veiledninger og dypdykk — alt du trenger for å utforske<br />
+    vann med tillit. Fra å velge ditt første SUP til å mestre avanserte teknikker.
+  taglineSection: 'Kunnskap for enhver padler. Fra nybegynner til profesjonell.'
+
+featured:
+  tagline: 'Utvalgte emner'
+  title: 'Start læringsreisen din'
+  subtitle: 'Enten du er ny innen vannsport eller ønsker å ta det til neste nivå, har guidene våre deg dekket.'
+  items:
+    - title: 'SUP-grunnleggende'
+      description: 'Alt en nybegynner trenger å vite — bretttyper, padlestørrelse, holdning og tips for første dag.'
+      icon: 'tabler:lifebuoy'
+      href: '/learn/sup'
+    - title: 'Oppblåsbart vs hardt brett'
+      description: 'Hvilket er riktig for deg? Vi sammenligner bærbarhet, ytelse, holdbarhet og pris side om side.'
+      icon: 'tabler:arrows-left-right'
+      href: '/compare/inflatable-vs-hardboard'
+    - title: 'Vannsikkerhet'
+      description: 'Viktig sikkerhetskunnskap enhver padler bør ha — vær, redningsvester, selvevakuering og mer.'
+      icon: 'tabler:shield'
+      href: '/learn/water-safety'
+    - title: 'Materialguide'
+      description: 'PVC vs Hypalon, drop-stitch-teknologi, denier-vurderinger — forstå hva utstyret ditt er laget av.'
+      icon: 'tabler:hexagons'
+      href: '/learn/materials'
+    - title: 'SUP-størrelsesguide'
+      description: 'Finn riktig brettlengde, -bredde og -volum for vekten din, ferdighetsnivå og padlestil.'
+      icon: 'tabler:ruler'
+      href: '/size-guide'
+    - title: 'Mellomliggende teknikker'
+      description: 'Forbedre padlingen din med avanserte tak, vendeteknikker og håndtering i urolig vann.'
+      icon: 'tabler:ripple'
+      href: '/learn/intermediate-techniques'
+
+categories:
+  tagline: 'Kategorier'
+  title: 'Utforsk etter emne'
+  subtitle: 'Alt læringsinnhold organisert etter ferdighetsnivå og interesse.'
+  columns:
+    - title: 'Nybegynner'
+      items:
+        - 'SUP-grunnleggende — start her'
+        - 'Oppblåsbart vs hardt brett'
+        - 'Vannsikkerhetsgrunnleggende'
+        - 'Hvordan velge ditt SUP'
+        - 'Pumpe- og pakkeguide'
+    - title: 'Mellomliggende'
+      items:
+        - 'Padleteknikker'
+        - 'Oppblåsbar teknologi'
+        - 'Materialreferanse'
+        - 'PVC vs Hypalon sammenligning'
+        - 'Drop-Stitch kjerne forklart'
+    - title: 'Avansert og profesjonell'
+      items:
+        - 'Flåteoperasjoner'
+        - 'Kommersielt utstyr'
+        - 'Sikkerhets- og redningsprotokoller'
+        - 'Tilpassede bygg og OEM'
+
+cta:
+  title: 'Har du fortsatt spørsmål?'
+  subtitle: 'Spør AI-guiden vår for personlige svar om utstyr, sikkerhet og teknikker.'
+  actions:
+    - variant: primary
+      text: 'Spør Water Advisor AI'
+      href: '#ai-guide'
+    - text: 'Bla gjennom alle guider'
+      href: '/academy'

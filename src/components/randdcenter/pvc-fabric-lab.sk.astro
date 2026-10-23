@@ -1,0 +1,213 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'sk' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">← Späť do R&D centra</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Laboratórium 01</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">PVC Textilné laboratórium</h1>
+      <p class="mt-3 text-lg text-muted">Vedecké testovanie materiálov — od vlákna po hotovú trubicu</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/randd/aquafarer-pvc-material-lab.webp"
+        alt="Aquafarer PVC laboratórium na testovanie textilných materiálov"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Základ každého nafukovacieho člna</h2>
+  <p>
+    Rúrková tkanina je jediným najdôležitejším materiálom v nafukovacej lodi. Musí odolávať neustálemu UV vystaveniu,
+    opakovaným cyklom nafukovania, oderu o móla a trosky, a extrémnym výkyvom teplôt — a pritom zachovať svoju
+    konštrukčnú integritu po celé roky. Pri{SITE.name}, náš PVC Fabric Lab je výlučne venovaný charakterizácii,
+    overovaniu a neustálemu zlepšovaniu látok, ktoré používame v každej lodi, ktorú stavame.
+  </p>
+  <p>
+    Nepoliehame sa len na technické listy dodávateľov. Každá várka PVC a Hypalon textílie, ktorá vstúpi do našej dielne,
+    je nezávisle testovaná interne. To zaručuje, že špecifikácia materiálu, ktorú publikujeme, je výkonom materiálu,
+    ktorý aj dostanete — dávka za dávkou, rok za rokom.
+  </p>
+
+  <h2>Štandardizované testovacie zariadenia</h2>
+  <p>
+    Naše textilné laboratórium je vybavené priemyselnými prístrojmi, ktoré zodpovedajú testovacím metódam ISO, ASTM a
+    EN:
+  </p>
+  <table>
+    <thead><tr><th>Vybavenie</th><th>Merané parametre</th><th>Štandard</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Univerzálny skúšač ťahom (50 kN)</td><td
+          >Sila pri pretrhnutí, predĺženie pri pretrhnutí, šírenie trhliny</td
+        ><td>/ ASTM D751</td></tr
+      >
+      <tr
+        ><td>Komora na ohlinovanie Xenónovým oblúkom</td><td
+          >Odolnosť proti UV (zmena farby, udržanie pevnosti po 2000 h)</td
+        ><td>/ ASTM G155</td></tr
+      >
+      <tr
+        ><td>Skúšač ohybu pri nízkych teplotách</td><td>Bod prasknutia pri -30 °C až -50 °C</td><td
+          >ISO 4675 / ASTM D2136</td
+        ></tr
+      >
+      <tr
+        ><td>Skúšač odierania Taber</td><td>Strata hmotnosti po 1000 cykloch (koleso CS-10)</td><td
+          >ASTM D3389 / ISO 5470-1</td
+        ></tr
+      >
+      <tr
+        ><td>Merač hrúbky (digitálny, rozlíšenie 0,001 mm)</td><td>Jednotnosť naprieč šírkou rolky</td><td
+          >ISO 2286-3</td
+        ></tr
+      >
+      <tr><td>Hydrostatický tester hlavy</td><td>Odolnosť proti prieniku vody</td><td>ISO 811</td></tr>
+    </tbody>
+  </table>
+  <p class="text-sm text-gray-500">
+    * Všetko vybavenie je každoročne kalibrované akreditovanými laboratóriami nezávislých strán.
+  </p>
+
+  <h2>Od údajov k rozhodnutiu: typický testovací pracovný postup</h2>
+  <p>Keď dorazí nový kandidát na tkaninu, prechádza štandardizovaným sedemstupňovým procesom kvalifikácie:</p>
+  <ol>
+    <li>
+      <strong>Kontrola účtenky</strong>— vizuálna kontrola povrchových defektov, dierok a rozmerovej zhody.
+    </li>
+    <li>
+      <strong>Mapovanie hrúbky</strong>— Meranie cez valec na 20 bodoch; pre prijatie je požadované CV 3 %.
+    </li>
+    <li>
+      <strong>Tápačné skúšanie</strong>— 5 vzoriek v osiach osnovy a útku. Minimálne 3500 N/50 mm pre 1100 dtex PVC.
+    </li>
+    <li>
+      <strong>UV kondicionovanie</strong>— 1000 h vystavenia v xenónovej oblúkovej komore; požadovaná minimálna
+      zachovaná pevnosť 80 %.
+    </li>
+    <li>
+      <strong>Studená trhlina</strong>— 4 h pri -35 °C, potom 180° ohyb cez 25 mm tŕň. Žiadne viditeľné praskliny.
+    </li>
+    <li><strong>Odolnosť proti oderu</strong>— 1000 cyklov, strata hmotnosti ≤ 0,05 g.</li>
+    <li>
+      <strong>Schválenie podpisom</strong>— až po prejdení všetkých siedmich brán je tkanina uvoľnená na výrobu.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Typické PVC 1100 dtex — Retencia pevnosti v ťahu po UV expozícii
+    </p>
+    <div class="flex items-end gap-3 h-40">
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-600 rounded-t" style="height:100%"></div><span class="text-xs mt-1"
+          >0 h<br />100%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-500 rounded-t" style="height:95%"></div><span class="text-xs mt-1"
+          >500 h<br />95%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-400 rounded-t" style="height:88%"></div><span class="text-xs mt-1"
+          >1000 h<br />88%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-300 rounded-t" style="height:82%"></div><span class="text-xs mt-1"
+          >2000 h<br />82%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-gray-300 rounded-t" style="height:65%"></div><span class="text-xs mt-1"
+          >Súper<br />~65%</span
+        >
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      Naša tkanina PVC 1100 dtex si zachováva 80 % pevnosti v ťahu po 2000 hodinách vystavenia xenónovému lúču, v
+      porovnaní s typickými priemyselnými triedami, ktoré klesajú pod 70 %.
+    </p>
+  </div>
+
+  <h2>Náš profesionálny tím</h2>
+  <p>
+    Laboratórium je obsadené dvoma materiálovými inžiniermi na plný úväzok, každý s diplomom v oblasti polymerovej vedy
+    alebo textilného inžinierstva a minimálne šesťročnými skúsenosťami v priemysle. Podporujú ich traja technici, ktorí
+    vykonávajú každodenné testovanie a zaznamenávanie údajov. Tím sa pravidelne zúčastňuje medzilaboratórnych
+    kolovoďových testov organizovaných Medzinárodnou organizáciou pre normalizáciu (ISO) na overenie presnosti našich
+    testovacích metód.
+  </p>
+
+  <h2>Riešenie vašich najnáročnejších materiálových problémov</h2>
+  <p>
+    Každé morského prostredie je odlišné. Hliadkové plavidlo pôsobiace v Perzskom zálive čelí úplne odlišným UV a
+    teplotným podmienkam než záchranná loď v Severnom mori. Naše Laboratórium textílií vám pomáha vybrať — alebo vyvinúť
+    — špecifikáciu látky, ktorá je optimalizovaná pre váš prevádzkový profil.
+  </p>
+  <p>Nedávne vlastné riešenia zahŕňajú:</p>
+  <ul>
+    <li>
+      Vysoko odolná proti oderu PVC zmes pre vojenského klienta, ktorého lode pravidelne pristávajú na koralových
+      útesoch (+40 % životnosť proti oderu).
+    </li>
+    <li>Nízko-teplotná Hypalon formulácia pre arktickú výskumnú stanicu, testovaná pri -50 °C bez zraniteľnosti.</li>
+    <li>
+      Farebná stabilizovaná oranžová látka pre záchrannú flotilu, ktorá si zachováva viditeľnosť aj po 3 rokoch
+      vystavenia tropickému slnku.
+    </li>
+  </ul>
+  <p>
+    Nepredávame „hotové“ látky a nečakáme, že budú fungovať. Testujeme, overujeme a odporúčame — alebo vytvárame —
+    riešenie šité na mieru pre váš konkrétny profil misie. To je{SITE.name}rozdiel.
+  </p>
+
+  <h2>Ako vám slúžime</h2>
+  <p>Keď nám predložíte zásadnú výzvu týkajúcu sa materiálu, môžete očakávať toto:</p>
+  <ol>
+    <li><strong>Konzultácia</strong>— diskutujeme o vašom prevádzkovom prostredí, cieľoch výkonu a rozpočte.</li>
+    <li>
+      <strong>Návrh</strong>— vypracuje sa testovací plán s jasnými kritériami pre úspech/neúspech a časovým
+      harmonogramom.
+    </li>
+    <li>
+      <strong>Realizácia</strong>— naša laboratórium vykonáva testy a pripravuje podrobnú správu s surovými údajmi a
+      komparatívnou analýzou.
+    </li>
+    <li>
+      <strong>Odporúčanie</strong>— predstavíme špecifikáciu látky vrátane alternatívnych možností, ak viacero
+      materiálov spĺňa vaše požiadavky.
+    </li>
+    <li>
+      <strong>Dohľad po dodaní</strong>— po dodaní zostávame k dispozícii na podporu akýchkoľvek otázok týkajúcich sa
+      materiálu počas používania.
+    </li>
+  </ol>
+  <p>
+    Naším cieľom nie je len predať vám loď. Naším cieľom je zabezpečiť, aby loď, ktorú dostanete, fungovala spoľahlivo v
+    podmienkach, v ktorých ju používate — a to začína pri látke.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Potrebujete špecifikáciu látky na mieru?</h2>
+    <p class="mt-2 text-sm text-muted">
+      Kontaktujte náš tím materiálového inžinierstva, aby ste prediskutovali vaše požiadavky.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Kontaktujte náš laboratórny tím</a
+    >
+  </div>
+</section>

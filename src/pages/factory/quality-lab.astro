@@ -1,0 +1,151 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+
+const metadata = {
+  title: `Testing Laboratory — Inflatable Boat Quality Control & Testing | ${SITE.name}`,
+  description: `${SITE.name} quality control laboratory: 48-hour air retention testing, tensile strength verification, UV weathering, peel testing, and load/balance certification. ISO 9001 certified processes.`,
+};
+
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Factory', href: '/factory' }, { name: 'Quality Lab' }];
+
+const highlights = [
+  { value: '100%', label: 'Units pressure-tested', detail: 'Every chamber, every boat' },
+  { value: '48 h', label: 'Air retention test duration', detail: 'At 1.25× rated pressure' },
+  { value: '&lt;5%', label: 'Max allowed pressure drop', detail: 'Over 24-hour hold period' },
+  { value: 'AQL 2.5', label: 'Major defect threshold', detail: 'Per ISO 2859 sampling' },
+  { value: 'Zero', label: 'Tolerance on safety defects', detail: 'Valves, seams, buoyancy' },
+  { value: '10 yr', label: 'Records retention', detail: 'Per CE 2013/53/EU' },
+];
+
+const procedures = [
+  {
+    title: 'Raw Material Inspection',
+    description:
+      'Every incoming batch of PVC, Hypalon, drop-stitch fabric, and hardware is tested before acceptance. Tensile strength (ASTM D751), tear resistance (ISO 4674), and UV resistance are verified.',
+    standards: 'ASTM D751, ISO 4674, ISO 4892',
+  },
+  {
+    title: 'In-Process QC Checkpoints',
+    description:
+      'Production operators perform self-inspection at each stage. QC auditors conduct random sampling throughout the shift. Weld peel tests every 50 units. Dimensional checks every 20th panel.',
+    standards: 'ASTM D751 (peel), ISO 2859 sampling',
+  },
+  {
+    title: '48-Hour Air Retention Test',
+    description:
+      'Every tube chamber is inflated to 125% of rated pressure and held for 48 hours. Pressure sensors log continuously with temperature compensation. Exceeding 5% drop triggers batch re-inspection.',
+    standards: 'ISO 6185, CE 2013/53/EU',
+  },
+  {
+    title: 'Load & Balance Testing',
+    description:
+      'Completed boats tested at maximum rated capacity for stability, freeboard, and handling. Each vessel undergoes water testing before final inspection.',
+    standards: 'ISO 12217, CE 2013/53/EU',
+  },
+];
+
+const labEquipment = [
+  { name: 'Universal Testing Machine', spec: '5 kN, tensile/peel per ASTM D751' },
+  { name: 'Pressure Decay Tester', spec: 'Multi-channel, 0–50 psi, datalogging' },
+  { name: 'UV Weathering Chamber', spec: 'ISO 4892, 1,000 h cycles' },
+  { name: 'Thickness Gauge', spec: 'Digital, 0.01 mm resolution' },
+  { name: 'Peel Tester', spec: 'Motorized, 50 N capacity' },
+  { name: 'Temperature Chamber', spec: '-40 °C to +100 °C' },
+  { name: 'Leak Detection Tank', spec: '6 m × 2 m, illuminated' },
+];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <meta
+    name="ai-intent"
+    content="inflatable-boat-quality-control,marine-product-testing,iso-9001-boat-factory,ce-certification-testing"
+  />
+  <section class="px-6 sm:px-6 py-16 sm:py-20 lg:py-24 mx-auto max-w-5xl text-center">
+    <a href="/factory" class="text-sm text-gray-500 hover:underline">&larr; Back to Factory</a>
+    <p class="mt-4 text-sm font-semibold text-primary uppercase tracking-wider">Quality Control</p>
+    <h1 class="mt-3 text-4xl md:text-5xl font-bold">Testing Laboratory & Quality Assurance</h1>
+    <p class="mt-3 text-lg text-muted">
+      Independent quality lab with ISO 9001 processes — every unit tested before shipment
+    </p>
+  </section>
+
+  <section class="px-6 sm:px-6 pb-16 mx-auto max-w-4xl">
+    <p class="text-muted leading-relaxed">
+      {SITE.name} operates a dedicated quality control laboratory that operates independently from production. Every batch
+      of raw material and every finished boat passes through documented inspection protocols before release. Our QC team reports
+      directly to management, ensuring impartial quality decisions.
+    </p>
+  </section>
+
+  <section class="px-6 sm:px-6 pb-8 mx-auto max-w-6xl">
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+      {
+        highlights.map((s) => (
+          <div class="text-center p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+            <span class="block text-3xl font-bold text-primary" set:html={s.value} />
+            <span class="block text-sm text-muted mt-1">{s.label}</span>
+            <span class="block text-xs text-muted mt-1">{s.detail}</span>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="px-6 sm:px-6 py-16 mx-auto max-w-6xl">
+    <div class="text-center mb-12">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Test Procedures</p>
+      <h2 class="mt-2 text-3xl font-bold">Quality Testing Procedures</h2>
+      <p class="mt-3 text-muted max-w-2xl mx-auto">
+        Every boat passes through 4 stages of quality verification before it leaves our factory.
+      </p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-6">
+      {
+        procedures.map((p) => (
+          <div class="p-6 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+            <h3 class="text-lg font-bold">{p.title}</h3>
+            <p class="mt-3 text-sm text-muted leading-relaxed">{p.description}</p>
+            <div class="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+              <span class="text-xs font-semibold text-primary uppercase tracking-wider">Standards</span>
+              <p class="mt-1 text-xs text-muted">{p.standards}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="px-6 sm:px-6 py-16 mx-auto max-w-5xl bg-gray-50 dark:bg-gray-900 rounded-2xl">
+    <div class="text-center mb-12">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Lab Equipment</p>
+      <h2 class="mt-2 text-3xl font-bold">Testing Equipment</h2>
+      <p class="mt-3 text-muted max-w-2xl mx-auto">
+        Our quality lab is equipped with calibrated testing instruments for mechanical, environmental, and pressure
+        testing.
+      </p>
+    </div>
+    <div class="max-w-3xl mx-auto space-y-3">
+      {
+        labEquipment.map((eq) => (
+          <div class="flex items-center justify-between p-4 rounded-lg bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800">
+            <span class="font-medium">{eq.name}</span>
+            <span class="text-sm text-muted">{eq.spec}</span>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="px-6 sm:px-6 py-16 mx-auto max-w-4xl text-center">
+    <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+      <h2 class="text-xl font-bold">Need quality documentation?</h2>
+      <p class="mt-2 text-sm text-muted">Request our QC manual, test reports, or factory audit documentation.</p>
+      <a
+        href="/contact"
+        class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+        >Request documentation →</a
+      >
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,82 @@
+hero:
+  tagline: Forfaits Affaires
+  title: Entreprise d'eau prête à déployer<br />Des forfaits pour chaque étape
+  subtitle: Packs d'équipements préconfigurés pour les clubs de sports nautiques, les centres de villégiature et les startups de marques — avec des prix transparents, une livraison rapide et des options de personnalisation complètes.
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/use-cases/aquafarer-outdoor-adventure.webp
+    alt: Forfaits d’équipements professionnels Aquafarer
+direct_answer: Aquafarer propose trois packages professionnels préconfigurés conçus pour les opérateurs de sports nautiques à chaque étape. Le Club Starter Package comprend 10 SUP avec pagaies, pompes, kits de réparation et équipement de sécurité pour les clubs et écoles émergents. Le forfait Resort Premium fournit 50 à 100 unités avec des systèmes de stockage, une image de marque et des guides de formation pour les hôtels et les propriétés hôtelières. Le package de lancement de marque propose la sélection de produits, la conception de logo personnalisé, l'emballage, la production et l'expédition pour les entrepreneurs qui lancent leur propre marque de sports nautiques. Tous les forfaits incluent des prix directs en usine, la certification CE et un support logistique mondial.
+packages:
+  - id: club-starter
+    tag: Best Seller
+    name: Forfait de démarrage du club
+    subtitle: Tout ce dont vous avez besoin pour lancer ou améliorer votre club de paddle
+    target: Clubs SUP, clubs kayak, écoles de surf, centres de formation
+    price_label: À partir de 4 800 $
+    line_items:
+      - item: 10 planches SUP ou kayaks
+      - item: 10 pagaies assorties
+      - item: 10 pompes à haut débit
+      - item: 10 kits de réparation
+      - item: 10 gilets de sauvetage avec logo du club
+      - item: Marquage du club sur les tableaux
+      - item: Ensemble de signalisation de sécurité
+      - item: Guide de cours pour débutants PDF
+    cta_text: Get Club Package
+    cta_href: /contact
+  - id: resort-premium
+    tag: Premium
+    name: Forfait Premium Complexe
+    subtitle: Programme complet d'activités nautiques pour les hôtels et les centres de villégiature
+    target: Stations balnéaires, hôtels au bord du lac, centres de villégiature écologiques, clubs nautiques
+    price_label: Devis personnalisé
+    line_items:
+      - item: 50 à 100 SUP, kayaks ou flotte mixte
+      - item: Marquage complet du complexe sur tous les équipements
+      - item: Pagaies et VFI de location
+      - item: Système de rack de stockage commercial
+      - item: Station de gonflage avec pompes industrielles
+      - item: Système de sécurité (bouées, panneaux, panneau de secours)
+      - item: Programme de formation du personnel
+      - item: Manuel de gestion des revenus
+    cta_text: Get Resort Package
+    cta_href: /contact
+  - id: brand-launch
+    tag: Entrepreneur
+    name: Forfait de lancement de marque
+    subtitle: Transformez votre idée de marque en produit expédié — en général en 60–90 jours
+    target: Vendeurs Amazon, influenceurs, distributeurs régionaux
+    price_label: À partir de 6 500 $
+    line_items:
+      - item: Conseil en matière de sélection de produits
+      - item: Création de logo personnalisé sur les tableaux
+      - item: Correspondance des couleurs personnalisée
+      - item: Emballage de vente au détail de marque
+      - item: Étiquettes volantes et manuel d'instructions
+      - item: Documentation de certification CE
+      - item: Échantillons de production
+      - item: Expédition FOB Qingdao
+    cta_text: Launch My Brand
+    cta_href: /contact
+faq:
+  title: FAQ sur les forfaits
+  questions:
+    - q: Quelle est la quantité minimum de commande pour les colis ?
+      a: Le forfait Club Starter comprend un minimum de 10 unités. Les forfaits Resort et Brand sont personnalisés selon vos besoins avec des MOQ flexibles.
+    - q: Combien de temps prend la livraison ?
+      a: La production standard est de 30 à 45 jours à compter de la confirmation de la commande. Une production accélérée est disponible moyennant des frais supplémentaires.
+    - q: Puis-je personnaliser les couleurs et la marque de l'équipement ?
+      a: "Oui. Tous les forfaits incluent une personnalisation complète : couleurs du tableau, impressions de logo et conception de l'emballage."
+    - q: Fournissez-vous un support après-vente ?
+      a: Oui. Chaque forfait comprend l'accès à nos guides de maintenance en ligne, à nos didacticiels vidéo et à notre système de commande de pièces détachées.
+cta:
+  title: Vous ne savez pas quel forfait vous convient ?
+  subtitle: Répondez à 3 questions rapides et nous vous recommanderons le forfait idéal pour votre entreprise.
+  actions:
+    - variant: primary
+      text: Obtenir le forfait recommandé
+      href: /contact
+    - text: Afficher les solutions par public
+      href: /solutions
+    - text: Lire des histoires de réussite
+      href: /success-stories

@@ -1,0 +1,137 @@
+hero:
+  tagline: Kawalan Kualiti
+  title: Sistem Kawalan Kualiti<br />untuk OEM Pembuatan Marin
+  subtitle: Proses pemeriksaan berperingkat yang merangkumi bahan masuk, pengeluaran dalam proses, ujian tekanan, pemasangan akhir, dan pengesahan sebelum penghantaran. Setiap kumpulan boleh dijejak, setiap ujian direkodkan.
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-pressure-testing.webp
+    alt: proses kawalan kualiti dan ujian tekanan
+stats:
+  title: QC mengikut Nombor
+  stats:
+    - title: Unit Diuji Tekanan
+      amount: 100%
+    - title: Jatuhan Tekanan Maksimum
+      amount: <5%
+    - title: Jurutera Pemeriksa QC
+      amount: '12'
+    - title: Rekod Disimpan
+      amount: 10 tahun
+content_system:
+  tagline: Gambaran Keseluruhan Sistem QC
+  title: Kualiti Bersepadu<br />Rangka Kerja Kawalan
+  subtitle: Sistem QC kami beroperasi secara bebas daripada pengeluaran dan melapor terus kepada pengurusan. Tiada satu batch pun dihantar tanpa pelepasan kualiti yang ditandatangani dari makmal kualiti.
+  items:
+    - title: Makmal Kualiti Bebas
+      description: Makmal kualiti kami beroperasi sebagai fungsi yang berasingan daripada pengeluaran. Pemeriksa QC melaporkan kepada Pengurus Kualiti, bukan Pengarah Pengeluaran. Kemerdekaan organisasi ini memastikan keputusan kualiti dibuat secara objektif — tarikh akhir pengeluaran tidak pernah menggantikan keperluan kualiti.
+      features:
+        - Melapor terus kepada pengurusan, bebas daripada pengeluaran
+        - Dibenarkan untuk menghentikan pengeluaran kerana isu kualiti
+        - 12 pemeriksa QC khas di semua peringkat
+        - Semua peralatan ujian dikalibrasi setiap tahun
+    - title: Keterkesanan Jejak Kumpulan
+      description: Setiap kumpulan bahan mentah diberikan nombor lot unik dalam sistem ERP kami. Dari ketibaan bahan hingga pengeluaran dan produk siap, setiap senarai bahan bot dikaitkan kembali kepada kumpulan pembekal asal. Ini membolehkan jejak hulu penuh untuk sebarang pertanyaan kualiti atau pematuhan.
+      features:
+        - Penjejakan lot berasaskan ERP dari bahan kepada produk siap
+        - Tag kumpulan fizikal pada setiap pesanan kerja
+        - 100% liputan bahan — PVC, Hypalon, perkakasan, pelekat
+        - Rekod disimpan selama 10 tahun (CE keperluan 2013/53/EU)
+    - title: Standard & Pematuhan
+      description: Prosedur QC kami selaras dengan piawaian antarabangsa. Produk disahkan CE di bawah Arahan Kraf Rekreasi EU 2013/53/EU. Sistem pengurusan kualiti kami disahkan ISO 9001. Pematuhan sosial dikekalkan melalui pensijilan BSCI.
+      features:
+        - pensijilan CE (EU 2013/53/EU)
+        - ISO 9001:2015 pengurusan kualiti
+        - pensijilan pematuhan sosial
+        - Pematuhan bahan REACH dan RoHS
+        - pensijilan pasca-Brexit
+content_inspection:
+  tagline: Tahap Pemeriksaan
+  title: Enam Peringkat<br />Proses Pemeriksaan
+  subtitle: Setiap produk melalui 6 peringkat pemeriksaan dengan titik pemeriksaan QC yang didokumentasikan. Kecacatan dikesan awal, tindakan pembetulan diambil dengan segera, dan setiap kumpulan boleh dijejaki sepenuhnya.
+  stages:
+    - stage: '1'
+      title: Pemeriksaan Bahan Masuk
+      description: Semua bahan masuk direkod mengikut nombor batch/lote dan dikarantin sehingga kelulusan QC. Gulungan kain PVC/Hypalon diuji untuk kekuatan tegangan (ASTM D751), ketahanan koyakan (ISO 4674), dan ketebalan. Teras Drop-stitch, injap, pelekat, dan perkakasan diperiksa secara visual dan diukur mengikut spesifikasi.
+      checks: Kekuatan tegangan ASTM D751, rintangan koyak ISO 4674, pengukur ketebalan, kelikatan pelekat, imbasan kecacatan visual
+      threshold: 100% daripada kumpulan diuji. Tolak jika tegangan < 90% daripada spesifikasi, koyak < minimum spesifikasi, atau sebarang kecacatan visual
+    - stage: '2'
+      title: QC Dalam Proses — Pemotongan & Persiapan
+      description: Panel yang dipotong diukur dimensinya mengikut fail sumber CAD setiap panel ke-20. Kualiti tepi diperiksa untuk memastikan tiada kekoyakan, potongan yang tidak rata, atau perubahan dimensi. Bilangan panel disahkan mengikut BOM bagi setiap kumpulan pengeluaran sebelum bahan-bahan dipindahkan ke proses pengelasan.
+      checks: Pemeriksaan dimensi terhadap fail CAD DXF, pemeriksaan kualiti tepi, pengesahan bilangan panel
+      threshold: Toleransi ±0.5mm. Tolak batch jika >2% melebihi toleransi
+    - stage: '3'
+      title: QC Dalam Proses — Pengelasan & Pelekatan
+      description: Semasa pengeluaran, kualiti kimpalan dipantau secara berterusan. Ujian kupasan (ASTM D751) dijalankan pada sampel setiap 50 unit. Lebar kimpalan diukur mengikut spesifikasi. Log suhu udara panas disemak untuk konsistensi. Setiap sambungan diperiksa secara visual di bawah cahaya belakang untuk saluran atau kekosongan.
+      checks: Ujian kupas ASTM D751 setiap 50 unit, pengukuran lebar kimpalan, semakan log suhu udara panas, pemeriksaan jahitan lampu belakang
+      threshold: Kekuatan kupasan min 8 N/cm. Toleransi lebar kimpalan ±1mm. Sebarang saluran yang kelihatan = tolak
+    - stage: '4'
+      title: Kawalan Kualiti Perhimpunan
+      description: Setiap unit mengikuti senarai semak pemasangan 100 mata yang disahkan oleh ketua pasukan. Fungsi injap diuji melalui 10 kitaran buka/tutup. Tork perkakasan disahkan. Pemeriksaan visual merangkumi kemasan permukaan, konsistensi warna, penempatan label, dan kelengkapan aksesori.
+      checks: Senarai semak 100 mata setiap unit, ujian fungsi injap, pengesahan tork perkakasan, pemeriksaan visual
+      threshold: 'Polisi sifar kecacatan pada item kritikal keselamatan (injap, cincin D, pemegang). Kosmetik kecil: AQL 2.5 (ISO 2859)'
+    - stage: '5'
+      title: ujian tekanan
+      description: Setiap ruang dipam sehingga 1.25× tekanan terkadar dan dikekalkan selama 24-48 jam. Sensor tekanan mencatat secara berterusan sepanjang tempoh pengekalan. Bacaan yang dikompensasikan dengan suhu memastikan ketepatan. Mana-mana ruang yang melebihi penurunan tekanan 5% ditolak dan dihantar untuk pemeriksaan semula jahitan dengan ujian semula 100% bagi keseluruhan kumpulan pengeluaran.
+      checks: Log tahanan tekanan 24-48 jam, kalibrasi sensor disahkan setiap hari, bacaan dilaraskan dengan suhu, ujian semula jahitan selepas pembaikan
+      threshold: Kehilangan tekanan maksimum 5% dalam 24 jam pada suhu yang stabil. Melebihi = 100% ujian semula bagi keseluruhan batch
+    - stage: '6'
+      title: Pemeriksaan Akhir & Pelepasan Penghantaran
+      description: Pemeriksaan visual dan fungsional akhir sebelum pembungkusan. Cacat permukaan, konsistensi warna, pengesahan label/BIN, integriti pembungkusan, dan kesempurnaan aksesori diperiksa mengikut pesanan pelanggan. Unit dibungkus vakum, dimasukkan ke dalam kotak, dan dipaletkan. Tandatangan QC akhir diperlukan sebelum sebarang produk keluar dari kilang.
+      checks: Pemeriksaan visual penuh, senarai semak aksesori mengikut SKU, ujian jatuh pembungkusan (sampel rawak 1m), pengesahan imbasan label/bar kod
+      threshold: AQL 2.5 kecacatan utama, AQL 4.0 kecacatan kecil. Kecacatan keselamatan sifar. 100% unit diperiksa secara visual
+content_equipment:
+  tagline: Peralatan Ujian
+  title: Makmal QC<br />Peralatan
+  subtitle: Makmal kualiti kami dilengkapi dengan peralatan ujian khusus untuk pengesahan bahan, keteguhan kimpalan, dan pengesahan prestasi produk.
+  columns: 3
+  items:
+    - title: Mesin Ujian Tegangan
+      description: Mengukur kekuatan tegangan fabrik dan pelebaran mengikut ASTM D751. Digunakan untuk QC masuk semua PVC, Hypalon, dan drop-stitch batch fabrik.
+      icon: tabler:scale
+    - title: Bilik Suhu
+      description: Bilik alam sekitar untuk ujian ketahanan UV (ASTM G154) dan ujian fleksibiliti suhu rendah. Mensimulasikan keadaan operasi yang ekstrem.
+      icon: tabler:temperature
+    - title: Sensor Tekanan & Perekod
+      description: Sensor tekanan digital dengan perekodan data berterusan untuk ujian ketahanan udara 24-48 jam. Diselaraskan dengan suhu untuk ketepatan.
+      icon: tabler:wind
+    - title: Peralatan Ujian Kupas
+      description: Peralatan ujian kupas yang telah ditala untuk pengesahan kekuatan jahitan kimpalan. Sampel rawak dari setiap batch pengeluaran.
+      icon: tabler:files
+    - title: Tangki Pengesanan Kebocoran
+      description: Tangki air untuk ujian kebocoran terendam bagi bilik yang dipam. Pengesanan gelembung visual untuk pengesahan integriti jahitan dan injap.
+      icon: tabler:ripple
+    - title: Alat Pemeriksaan
+      description: Alat pengukuran yang telah ditala — pengukur ketebalan, kunci tork, kaliper dimensi, penguji kekerasan untuk stesen QC pengeluaran.
+      icon: tabler:tools
+content_metrics:
+  tagline: Prestasi QC
+  title: Kawalan Kualiti<br />Metrik
+  subtitle: Data lulus/gagal sebenar dari garis pengeluaran kami. Metrik ini dipantau setiap hari dan disemak setiap bulan oleh pengurusan.
+  columns: 3
+  items:
+    - title: 100% Unit Diuji
+      description: Setiap bilik setiap bot diuji tekanan sebelum penghantaran. Tiada pensampelan — 100% pemeriksaan integriti tekanan.
+      icon: tabler:check
+    - title: <5% Penurunan Tekanan
+      description: Kehilangan tekanan maksimum yang dibenarkan dalam 24-48 jam pada 1.25× tekanan dinilai. Mana-mana bilik yang melebihi ambang ini akan mencetuskan ujian semula batch.
+      icon: tabler:gauge
+    - title: AQL 2.5
+      description: Tahap Kualiti Boleh Diterima untuk kecacatan utama mengikut standard pensampelan ISO 2859. Toleransi sifar terhadap kecacatan kritikal keselamatan.
+      icon: tabler:clipboard-check
+    - title: Pegangan 24-48 Jam
+      description: 'Tempoh pegangan tekanan berbeza mengikut kategori produk. Bilik RIB: 48 jam. SUP dan bot tiup: 24-48 jam.'
+      icon: tabler:clock
+    - title: Tekanan Ujian 1.25×
+      description: Margin keselamatan pada setiap ruang — diuji pada 25% di atas tekanan yang dinilai untuk memastikan margin melebihi keadaan operasi maksimum.
+      icon: tabler:arrow-up
+    - title: 0% Kecacatan Keselamatan
+      description: Dasar toleransi sifar terhadap kecacatan kritikal keselamatan — injap, cincin D, jahitan, dan ruang apungan. Sebarang kecacatan = 100% pemeriksaan semula.
+      icon: tabler:shield
+cta:
+  title: Minta dokumentasi kualiti
+  subtitle: Kami menyediakan pakej dokumentasi kualiti penuh termasuk laporan ujian, sijil bahan, dan deklarasi pematuhan dengan setiap penghantaran. Hubungi kami untuk sampel.
+  actions:
+    - variant: primary
+      text: Minta dokumentasi QC
+      href: /contact
+    - text: Lihat protokol ujian
+      href: /quality

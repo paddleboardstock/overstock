@@ -1,0 +1,168 @@
+hero:
+  tagline: Aquafarer Akademiet
+  title: Læringssenter
+  subtitle: Veiledninger og veiledninger for alle ferdighetsnivåer - fra SUP grunnleggende til avanserte redningsteknikker
+categories:
+  - level: Nybegynner
+    color: from-green-500 to-emerald-600
+    badge: bg-green-100 text-green-700
+    guides:
+      - title: SUP Grunnleggende
+        desc: Lær det grunnleggende om stand-up paddleboarding - holdning, slagteknikk og balanse.
+        slug: beginner-sup-guide
+      - title: Padleteknikker
+        desc: Foroverslag, sveipeslag, trekkslag og lav stag - mestr de essensielle padlebevegelsene.
+        slug: sup-paddle-guide
+      - title: Sikkerhet først
+        desc: Viktige sikkerhetsrutiner, inkludert værsjekker, bruk av PFD, båndregler og selvredning.
+        slug: sup-safety-guide
+  - level: Middels
+    color: from-blue-500 to-indigo-600
+    badge: bg-blue-100 text-blue-700
+    guides:
+      - title: Det grunnleggende om turer
+        desc: Planlegger flertimers padleårer – navigasjon, hydrering, pacing og lesing av vindvarsler.
+        slug: touring-sup-guide
+      - title: Væravlesning
+        desc: Tolk marine prognoser, identifiser skymønstre og forstå vindeffekter på vann.
+        slug: weather-planning-water-sports
+      - title: Grunnleggende navigasjon
+        desc: Kartlesing, kompassbruk, GPS-veipunkter og ruteplanlegging for kystpadling.
+        slug: sup-navigation-guide
+      - title: Tidevannsbevissthet
+        desc: Forstå tidevannssykluser, strømmer og hvordan de påvirker lanseringstidspunktet og ruting.
+        slug: understanding-tides
+  - level: Avansert
+    color: from-purple-500 to-violet-600
+    badge: bg-purple-100 text-purple-700
+    guides:
+      - title: Planlegging av flere dagers tur
+        desc: Ekspedisjonslogistikk - utstyrsvalg, matplanlegging, sikkerhetsprotokoller og nødkontakter.
+        slug: sup-travel-guide
+      - title: Redningsteknikker
+        desc: Selvredning, T-redning, eskimoredning for kajakker, og slepeprotokoller for åpent vann.
+        slug: sup-self-rescue
+      - title: Nattpadling
+        desc: Navigasjon etter mørkets frembrudd – belysningskrav, ruteminne, gruppekommunikasjon og farebevissthet.
+        slug: sup-navigation-guide
+  - level: Vedlikehold
+    color: from-amber-500 to-orange-600
+    badge: bg-amber-100 text-amber-700
+    guides:
+      - title: Rengjøring og stell
+        desc: Ferskvannsskylling, UV-beskyttelse, muggforebygging og riktige tørketeknikker etter hver økt.
+        slug: inflatable-sup-maintenance
+      - title: Oppbevaringsveiledning
+        desc: Beste praksis for oppbevaring av oppblåsbare brett og båter – tømming, folding, temperaturkontroll og holdbarhet.
+        slug: inflatable-sup-storage
+      - title: Grunnleggende reparasjoner
+        desc: Fiks små punkteringer, sømlekkasjer og ventilproblemer med PVC reparasjonssett og lappeteknikker.
+        slug: inflatable-sup-repair
+      - title: Ventilvedlikehold
+        desc: Identifiser ventiltyper (Halkey-Roberts, Boston, Leafield), rengjør rusk og bytt ut defekte stengler.
+        slug: inflatable-sup-repair
+knowledge_center_tagline: Kunnskapssenter
+knowledge_center_title: Marine utstyr og industriguider
+knowledge_center_subtitle: Ekspertkunnskap og kjøpsguider for marine fagfolk, flåteoperatører og vannsportentusiaster.
+knowledge_sections:
+  - title: RIB Båtkunnskap
+    tagline: Stive gummibåtguider
+    desc: Alt om RIB båter — skrogdesign, materialer, motorvalg, vedlikehold og kjøpsråd for kommersiell og rekreasjonsbruk.
+    guides:
+      - title: Hvordan velge riktig RIB båt
+        desc: Komplett veiledning for valg av en RIB — størrelse, motorkraft, rørmateriale, skrogtype og tiltenkt bruk.
+        href: /v2/inflatable-boat-buying-guide
+      - title: RIB vs gummibåt
+        desc: Stiv oppblåsbar båt kontra tradisjonell oppblåsbar jolle – skrogdesign, ytelse, holdbarhet og kapasitet sammenlignet.
+        href: /compare/rib-vs-dinghy
+      - title: Kommersiell RIB vs rekreasjon RIB
+        desc: Båter av kommersiell kvalitet kontra rekreasjons-RIB – konstruksjonsstandarder, materialer, levetid, kostnader og sertifiseringer.
+        href: /compare/commercial-vs-recreational-rib
+      - title: Aluminium vs glassfiberskrog
+        desc: Sammenlign aluminium- og glassfiberskrog for RIB båter på tvers av vekt, pris, holdbarhet og korrosjonsbestandighet.
+        href: /compare/aluminum-vs-fiberglass
+  - title: Guide for gummibåt
+    tagline: Kunnskap om oppblåsbare vannscootere
+    desc: Omfattende veiledninger om oppblåsbare båter – PVC vs Hypalon, konstruksjonsmetoder, sikkerhetsstandarder og beste praksis for vedlikehold.
+    guides:
+      - title: PVC vs Hypalon Materialguide
+        desc: Definitiv sammenligning mellom PVC og Hypalon CSM for oppblåsbar båtkonstruksjon.
+        href: /compare/pvc-vs-hypalon
+      - title: Hvordan oppblåsbare båter lages
+        desc: Produksjonsprosess - materialkutting, HF-sveising, sømkonstruksjon, trykktesting og kvalitetskontroll.
+        href: /learn/inflatable-technology
+      - title: Sikkerhetsguide for oppblåsbar båt
+        desc: Sikkerhetsstandarder, lastekapasitet, riktig oppblåsing, kontroller før avgang og nødprosedyrer.
+        href: /learn/water-safety
+      - title: Vedlikehold av gummibåt
+        desc: Rengjøring, lagring, UV-beskyttelse, vinterisering og reparasjon av gummibåter og RIB-er.
+        href: /v2/inflatable-boat-maintenance
+  - title: Båtkunnskap
+    tagline: Gummibåt og RIB Hub
+    desc: Tekniske guider som dekker typer oppblåsbare båter, materialer, konstruksjonsmetoder, vedlikehold og sikkerhet - fra joller til RIB-er.
+    guides:
+      - title: Oppblåsbare båttyper
+        desc: Joller, RIB-er, kajakker og tenders – lær forskjellene og velg den rette.
+        href: /v2/inflatable-boat-buying-guide
+      - title: Drop-Stitch-teknologi
+        desc: Hvordan tusenvis av innvendige gjenger skaper stive, høytrykks oppblåsbare strukturer.
+        href: /learn/drop-stitch-core
+      - title: Materialreferanse
+        desc: PVC denier-vurderinger, stoffvekter, UV-motstand og materialer av marinekvalitet forklart.
+        href: /learn/materials
+      - title: RIB vs Jolle
+        desc: Sammenlign stive oppblåsbare båter med tradisjonelle oppblåsbare joller for forskjellige bruksområder.
+        href: /compare/rib-vs-dinghy
+  - title: SUP Kunnskap
+    tagline: Guider for stand-up padlebrett
+    desc: Alt om SUP brett - oppblåsbare vs stive, brettdimensjoner, materialteknologi og ekspertråd for alle ferdighetsnivåer.
+    guides:
+      - title: Oppblåsbar vs Hard SUP
+        desc: Sammenlign iSUP-er og harde epoksyplater på tvers av portabilitet, holdbarhet, ytelse og verdi.
+        href: /learn/sup
+      - title: SUP Veiledning for brettdimensjoner
+        desc: Hvordan lengde, bredde og tykkelse påvirker stabilitet, hastighet og manøvrerbarhet.
+        href: /learn/sup
+      - title: SUP Vedlikehold og stell
+        desc: Rengjøring, lagring, UV-beskyttelse og reparasjonstips for oppblåsbare SUP-brett.
+        href: /v2/inflatable-sup-maintenance
+      - title: Velge din første SUP
+        desc: Nybegynnerveiledning for å velge riktig padlebrett for din vekt, ferdighetsnivå og tiltenkte bruk.
+        href: /learn/sup
+  - title: Guide for dykkerutstyr
+    tagline: Kommersiell dykkebåtkunnskap
+    desc: Spesialiserte guider på dykkebåter, dykker-RIB-er og utstyr for dykkesentre, dykkeoperatører og kommersielle dykkerteam.
+    guides:
+      - title: Beste RIB båt for dykkesentre
+        desc: Hvordan velge riktig dykk RIB for dykkesenteret ditt – kapasitet, konfigurasjon og budsjetthensyn.
+        href: /solutions-diving-center-boats
+      - title: Dykk RIB Konfigurasjonsveiledning
+        desc: Viktige funksjoner for dykker-RIB-er - tankstativ, stigesystemer, dykkeplattform og utstyrslagring.
+        href: /solutions-diving-center-boats
+  - title: Yacht anbudsguide
+    tagline: Løsninger for superyachter og marine tenderbåter
+    desc: Veiledninger for å velge den perfekte yacht-tenderen - oppblåsbare tenders, RIB tenders, lagringsløsninger og ømt tilbehør.
+    guides:
+      - title: Hvordan velge et yachtanbud
+        desc: Faktorer du bør vurdere når du velger et anbud for din yacht - størrelse, materiale, motor og lagring.
+        href: /solutions-yacht-tender-solutions
+      - title: Oppblåsbare vs RIB Anbud
+        desc: Sammenlign oppblåsbare gummibåter med stive oppblåsbare båter for ytelse, holdbarhet og oppbevaring.
+        href: /compare/rib-vs-dinghy
+  - title: Veiledning for redningsutstyr
+    tagline: Kunnskap om søk og redning vannscooter
+    desc: Profesjonelle guider på redningsbåter, SAR vannscootere og beredskapsutstyr for kystvakt, livreddere og katastrofehjelpsteam.
+    guides:
+      - title: SAR Båtvalgsguide
+        desc: Hvordan velge riktig søke- og redningsbåt – hastighet, kapasitet, holdbarhet og spesialisert utstyrskrav.
+        href: /solutions-rescue-watercraft
+      - title: Kommersiell RIB for redningsaksjoner
+        desc: Hvorfor kommersielle RIB-er er det foretrukne valget for profesjonelle søke- og redningsteam over hele verden.
+        href: /use-cases/search-and-rescue
+read_guide: Les veiledningen →
+cta:
+  title: Ikke sikker på hvor du skal begynne?
+  desc: Ta vår ferdighetsvurderingsquiz for å finne de riktige veiledningene og utstyret for ditt nivå.
+  label: Kontakt oss →
+  link: /contact
+

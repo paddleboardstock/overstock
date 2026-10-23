@@ -1,0 +1,306 @@
+hero_text:
+  tagline: Gaukite pasiūlymą
+  title: Užsisakykite pasiūlymą<br />savo projektui
+  subtitle: Pasakykite mums apie savo reikalavimus, o mūsų komanda atsakys su detalizuotu pasiūlymu per 2 darbo dienas.
+steps2_process:
+  title: Kaip tai veikia
+  subtitle: Keturi paprasti žingsniai nuo užklausos iki pasiūlymo.
+  items:
+    - title: '1 žingsnis: Pateikite savo reikalavimus'
+      description: Užpildykite žemiau esančią formą su savo produkto tipu, kiekiu ir specifikacijomis. Kuo daugiau detalių pateiksite, tuo tikslesnis bus jūsų pasiūlymas.
+      icon: tabler:file-text
+    - title: '2 žingsnis: Mes peržiūrime ir patariame'
+      description: Mūsų inžinerijos komanda peržiūri jūsų reikalavimus ir gali susisiekti su jumis dėl patikslinimų. Teikiame rekomendacijas dėl produkto konfigūracijos ir pasirinkimų.
+      icon: tabler:users
+    - title: '3 žingsnis: Gavote savo pasiūlymą'
+      description: Gaunate detalizuotą pasiūlymą, įskaitant vieneto kainą, MOQ, pristatymo laiką, mokėjimo sąlygas ir siuntimo galimybes. Paprastai per 48 valandas.
+      icon: tabler:currency-dollar
+    - title: '4 žingsnis: Pavyzdys ir gamyba'
+      description: Po pasiūlymo patvirtinimo pradedame pavyzdinio gamybos procesą (jeigu taikoma) arba tiesiogiai masinę gamybą. Nuolatiniai atnaujinimai viso proceso metu.
+      icon: tabler:building-factory
+content_form:
+  tagline: Pasiūlymo forma
+  title: Pasakykite mums apie savo projektą
+  subtitle: Visi laukai, pažymėti *, yra privalomi.
+  fields:
+    - name: Produkto kategorija
+      type: select
+      options:
+        - RIB Valtis
+        - Pripučiamas valtis
+        - SUP Lentė
+        - Pripučiama baidarė
+        - Gelbėjimosi liemenė
+        - Jūrinė papildoma įranga
+        - Tinkintas OEM/ODM
+    - name: Pritaikymas
+      type: select
+      options:
+        - Nardytojų centras
+        - Žvejyba
+        - Jūrinis turizmas / kurortas
+        - Paieška ir gelbėjimas
+        - Jachtos priedas
+        - Komercinis darbo laivas
+        - Vyriausybinis / Karinis
+        - OEM / Privatūs ženklai
+        - Asmeninis / Pramoginis
+        - Kita
+    - name: Kiekis
+      type: text
+      placeholder: pvz., 50 vienetų
+    - name: Tikslinė rinka
+      type: text
+      placeholder: pvz., Europa, Šiaurės Amerika, Artimieji Rytai
+    - name: Pristatymo šalis
+      type: text
+      placeholder: pvz., Italija, JAE, JAV, Australija
+    - name: Medžiagos pageidavimai
+      type: select
+      options:
+        - Be pageidavimų
+        - Jūrinei aplinkai tinkama PVC (1100 dtex)
+        - Premium Hypalon / CSM
+        - Stiklo pluošto korpusas
+        - Aliuminio korpusas
+    - name: Variklio reikalavimai
+      type: text
+      placeholder: pvz., 60 HP išoriniai, be variklio, dvigubas 115 HP
+    - name: Reikalingas pritaikymas
+      type: text
+      placeholder: pvz., pasirinktų spalvų, prekių ženklo/logotipo, pakavimo, specialių tvirtinimų pritaikymas
+    - name: Laikotarpis
+      type: text
+      placeholder: pvz., pristatymas per 90 dienų
+    - name: Papildomi reikalavimai
+      type: textarea
+      placeholder: Apibūdinkite savo panaudojimą, technines specifikacijas ar bet kokius specialius reikalavimus — pridėkite nuorodas į brėžinius, specifikacijas ar saitų, jei yra
+    - name: Specifikacijos įkėlimas
+      type: file
+      placeholder: Įkelkite savo specifikacijų lapą, brėžinį ar referencinį dokumentą (PDF, DWG, DXF)
+    - name: Logotipo / meno kūrinio įkėlimas
+      type: file
+      placeholder: Įkelkite savo logotipą ar meno kūrinį, skirtą individualiam ženklinimui (AI, EPS, PNG)
+content_rfq_types:
+  tagline: 3 lygių RFQ sistema
+  title: Pasirink teisingą<br />Tyrimo lygis
+  subtitle: Skirtingiems projektams reikia skirtingo detalumo lygio. Pasirinkite formą, kuri atitinka jūsų pirkimo etapą.
+  items:
+    - title: Greita užklausa
+      description: 5–6 laukai, 30 sekundžių. Pradiniam kontaktui, bendriems klausimams ar išteklių atsisiuntimui papildomiems klausimams. Atsakome per 24 valandas su pagrindine informacija ir tolesniais žingsniais.
+      icon: tabler:bolt
+    - title: Standartinis RFQ
+      description: 8–10 laukų, 2 minutės. Konkretiems produktų pasiūlymams su modelio pasirinkimu, kiekiu ir pristatymo reikalavimais. Gaukite išsamų pasiūlymą per 48 valandas.
+      icon: tabler:file-text
+    - title: RFQ projektas
+      description: 10–14 laukų, 5 minutės. Skirta RIB, kurortiniam parkui, gelbėjimo ar vyriausybiniams projektams, kuriems reikalinga individuali konfigūracija, atitikties dokumentacija ir daugiamečiai tiekimo planavimas. Paskirtas specialus projektų vadovas.
+      icon: tabler:clipboard-list
+form_quick:
+  title: Greita užklausa
+  subtitle: Greitas kontaktas bendriems klausimams ir pradiniams informacijos prašymams.
+  fields:
+    - name: Pilnas vardas
+      label: Pilnas vardas
+      type: text
+      required: true
+      placeholder: Tavo pilnas vardas
+    - name: businessEmail
+      label: Verslo el. paštas
+      type: email
+      required: true
+      placeholder: you@company.com
+    - name: Įmonės pavadinimas
+      label: Įmonės pavadinimas
+      type: text
+      required: true
+      placeholder: Tavo įmonė
+    - name: buyerType
+      label: Aš esu...
+      type: select
+      required: true
+      options:
+        - Platintojas / Importuotojas
+        - Prekės ženklo savininkas / privati etiketė
+        - Kurortas / Vandens centras
+        - Nuomos operatorius
+        - Vyriausybė / Gelbėjimo agentūra
+        - Nardymo / žvejybos operatorius
+        - Jūrų inžinierius / remontuotojas
+        - Kita
+    - name: produktasSusidomėjimas
+      label: Produkto susidomėjimas
+      type: multiselect
+      required: true
+      options:
+        - RIB Valtys
+        - Pripučiamos valtys
+        - SUP Lentos
+        - Saugos įranga
+        - Priedai
+        - OEM/ODM Paprotys
+    - name: message
+      label: Ko tau reikia?
+      type: textarea
+      required: false
+      placeholder: Trumpas jūsų reikalavimų aprašymas...
+form_standard:
+  title: Standartinis RFQ
+  subtitle: Išsamus pasiūlymų prašymas konkretiems produktams ir kiekiams.
+  fields:
+    - name: Pilnas vardas
+      label: Pilnas vardas
+      type: text
+      required: true
+    - name: businessEmail
+      label: Verslo el. paštas
+      type: email
+      required: true
+    - name: Įmonės pavadinimas
+      label: Įmonės pavadinimas
+      type: text
+      required: true
+    - name: buyerType
+      label: Pirkėjo tipas
+      type: select
+      required: true
+    - name: productModel
+      label: Produkto modelis / tipas
+      type: text
+      required: true
+      placeholder: pvz., AF580, RIBAF380 pripučiamas
+    - name: quantity
+      label: Apskaičiuotas kiekis
+      type: text
+      required: true
+      placeholder: pvz., 10–20 vienetų
+    - name: targetMarket
+      label: Tikslinė rinka / regionas
+      type: text
+      required: true
+      placeholder: pvz., ES, Šiaurės Amerika, Artimieji Rytai
+    - name: Pristatymo laiko juosta
+      label: Pageidaujamas pristatymas
+      type: select
+      required: true
+      options:
+        - Per 30 dienų
+        - 30–60 dienų
+        - 60–90 dienų
+        - Planavimas iš anksto (90+ dienų)
+        - Tiesiog tyrinėju
+    - name: ComplianceRequired
+      label: Atitikties reikalavimai
+      type: multiselect
+      required: false
+      options:
+        - CE / RCD 2013/53/ES
+        - UKCA
+        - USCG
+        - ISO 9001
+        - BSCI
+        - REACH
+        - Nėra / Nežinau
+    - name: message
+      label: Papildoma informacija
+      type: textarea
+      required: false
+form_project:
+  title: RFQ projektas
+  subtitle: Išsami projekto užklausa dėl laivyno, individualių ar vyriausybinės pirkimo projektų.
+  fields:
+    - name: Pilnas vardas
+      label: Pilnas vardas
+      type: text
+      required: true
+    - name: businessEmail
+      label: Verslo el. paštas
+      type: email
+      required: true
+    - name: Įmonės pavadinimas
+      label: Įmonės pavadinimas
+      type: text
+      required: true
+    - name: buyerType
+      label: Pirkėjo tipas
+      type: select
+      required: true
+    - name: projectType
+      label: Projekto tipas
+      type: select
+      required: true
+      options:
+        - Poilsio / viešbučių laivynas
+        - Nuomos laivynas
+        - Gelbėjimo / patrulių laivynas
+        - Nardytojų centro laivynas
+        - Vyriausybinis pirkimas
+        - Privati etikė / OEM
+        - Prekybininko atsargų užsakymas
+        - Kita
+    - name: boatTypes
+      label: Reikalingi laivų tipai
+      type: multiselect
+      required: true
+      options:
+        - RIB Valtys
+        - Pripučiamieji kateriai / valtis
+        - SUP Lentos
+        - Baidarės
+        - Saugos įranga
+    - name: fleetSize
+      label: Laivyno dydis / Kiekio intervalas
+      type: text
+      required: true
+      placeholder: pvz., 20-50 vienetų per 12 mėnesių
+    - name: customRequirements
+      label: Individualūs konfigūracijos poreikiai
+      type: textarea
+      required: false
+      placeholder: Korpuso dydis, vamzdžių medžiaga, denio išdėstymas, prekės ženklo reikalavimai...
+    - name: ComplianceRequired
+      label: Atitikties ir sertifikavimo reikalavimai
+      type: multiselect
+      required: true
+      options:
+        - CE / RCD 2013/53/ES
+        - UKCA
+        - USCG III/V tipas
+        - ISO 9001
+        - BSCI
+        - REACH / RoHS
+        - Vietinės rinkos sertifikavimas
+    - name: targetMarket
+      label: Tikslinė rinka
+      type: text
+      required: true
+    - name: biudžetoDiapazonas
+      label: Biudžeto diapazonas
+      type: select
+      required: false
+      options:
+        - Mažiau nei 10 000 USD
+        - $10,000 - $50,000
+        - $50,000 - $200,000
+        - $200,000+
+        - Nenoriu sakyti
+    - name: Pristatymo laiko juosta
+      label: Projekto laikotarpis
+      type: select
+      required: true
+      options:
+        - Skubus (per 30 dienų)
+        - Standartinis (30–60 dienų)
+        - Planuojamas (60–90 dienų)
+        - Ateities planavimas (daugiau nei 90 dienų)
+    - name: message
+      label: Projekto detalės ir reikalavimai
+      type: textarea
+      required: false
+      placeholder: Apibūdinkite savo projektą, programą ir bet kokius specifinius reikalavimus...
+cta:
+  title: Norite aptarti el. paštu?
+  subtitle: Siųskite savo užklausą tiesiogiai mūsų pardavimų komandai ir mes atsakysime per 24 valandas.
+  actions:
+    - variant: primary
+      text: Siųskite mums el. laišką tiesiogiai
+      href: /contact

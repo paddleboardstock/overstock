@@ -1,0 +1,227 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+
+const metadata = {
+  title: `How to Choose SUP Thickness — Engineering Analysis | ${SITE.name}`,
+  description: `Technical guide to inflatable SUP board thickness: how 4", 5", and 6" boards differ in rigidity, weight, stability, tracking, and performance. Thickness recommendations for touring, yoga, surfing, racing, and all-around paddling.`,
+  ignoreTitleTemplate: true,
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'How to Choose SUP Thickness — Engineering Analysis',
+  description: metadata.description,
+  author: { '@type': 'Organization', name: SITE.name },
+  datePublished: '2024-04-12',
+  dateModified: '2025-06-01',
+};
+---
+
+<Layout metadata={metadata}>
+  <JsonLd data={jsonLd} />
+
+  <article class="max-w-4xl mx-auto px-6 py-16">
+    <nav class="text-sm text-gray-500 mb-8">
+      <a href="/" class="hover:text-sky-600">{SITE.name}</a>
+      <span class="mx-2">/</span>
+      <a href="/research" class="hover:text-sky-600">Research</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-900">SUP Thickness Guide</span>
+    </nav>
+
+    <div class="mb-4">
+      <span
+        class="inline-block text-xs font-semibold uppercase tracking-wider text-sky-600 bg-sky-50 px-3 py-1 rounded-full"
+        >Engineering</span
+      >
+      <span class="ml-3 text-sm text-gray-400">6 min read</span>
+    </div>
+
+    <h1 class="text-4xl font-bold text-gray-900 mb-6">How to Choose SUP Thickness</h1>
+    <p class="text-xl text-gray-500 mb-12 leading-relaxed">
+      Board thickness directly affects rigidity, weight, stability, tracking, and overall performance. This guide
+      explains the trade-offs so you can choose the right thickness for your paddling style.
+    </p>
+
+    <div class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600">
+      <h2>The Three Standard Thicknesses</h2>
+      <p>
+        Inflatable SUPs are manufactured in three standard thickness profiles, each optimized for different performance
+        characteristics:
+      </p>
+
+      <h3>4" (10 cm) <span class="text-gray-800 font-semibold">–</span> Touring & Performance</h3>
+      <ul>
+        <li>
+          <strong>Rigidity:</strong> Highest <span class="text-gray-800 font-semibold">–</span> thinner profile means less
+          flex under load
+        </li>
+        <li>
+          <strong>Weight:</strong> Lightest <span class="text-gray-800 font-semibold">–</span> less material, less air volume
+        </li>
+        <li>
+          <strong>Stability:</strong> Lower primary stability <span class="text-gray-800 font-semibold">–</span> narrower
+          platform, less buoyancy
+        </li>
+        <li>
+          <strong>Tracking:</strong> Excellent <span class="text-gray-800 font-semibold">–</span> reduced side-to-side rocking
+          on the water surface
+        </li>
+        <li>
+          <strong>Speed:</strong> Fastest <span class="text-gray-800 font-semibold">–</span> reduced drag, easier glide
+        </li>
+        <li><strong>Best for:</strong> Touring, racing, fitness paddling, experienced paddlers</li>
+      </ul>
+
+      <h3>5" (12.7 cm) <span class="text-gray-800 font-semibold">–</span> All-Around</h3>
+      <ul>
+        <li>
+          <strong>Rigidity:</strong> Good <span class="text-gray-800 font-semibold">–</span> balanced flex-to-stiffness ratio
+        </li>
+        <li>
+          <strong>Weight:</strong> Moderate <span class="text-gray-800 font-semibold">–</span> standard material usage
+        </li>
+        <li><strong>Stability:</strong> Good primary + secondary stability</li>
+        <li>
+          <strong>Tracking:</strong> Good <span class="text-gray-800 font-semibold">–</span> acceptable for most conditions
+        </li>
+        <li>
+          <strong>Speed:</strong> Moderate <span class="text-gray-800 font-semibold">–</span> good glide with reasonable stability
+        </li>
+        <li><strong>Best for:</strong> Recreational paddling, beginners, casual lake and river use</li>
+      </ul>
+
+      <h3>6" (15.2 cm) <span class="text-gray-800 font-semibold">–</span> Stability & Yoga</h3>
+      <ul>
+        <li>
+          <strong>Rigidity:</strong> Lowest <span class="text-gray-800 font-semibold">–</span> more flex due to increased
+          leverage on side walls
+        </li>
+        <li>
+          <strong>Weight:</strong> Heaviest <span class="text-gray-800 font-semibold">–</span> more PVC material, larger air
+          volume
+        </li>
+        <li>
+          <strong>Stability:</strong> Highest primary stability <span class="text-gray-800 font-semibold">–</span> massive
+          buoyancy
+        </li>
+        <li>
+          <strong>Tracking:</strong> Reduced <span class="text-gray-800 font-semibold">–</span> wider profile, more wind resistance
+        </li>
+        <li>
+          <strong>Speed:</strong> Slowest <span class="text-gray-800 font-semibold">–</span> more drag, harder to maintain
+          glide
+        </li>
+        <li>
+          <strong>Best for:</strong> Yoga/fitness, heavy paddlers (100+ kg), very choppy conditions, floating platforms
+        </li>
+      </ul>
+
+      <h2>Engineering Analysis: How Thickness Affects Performance</h2>
+
+      <h3>Rigidity</h3>
+      <p>
+        The stiffness of an inflatable SUP is governed by two factors: internal air pressure and the <strong
+          >moment of inertia</strong
+        > of the board's cross-section. For a given pressure, a thinner board is stiffer because the top and bottom panels
+        are closer together, reducing the leverage that allows flex. At 20 PSI, a 4" board shows approximately 30% less deflection
+        under load than a 6" board of the same width and length.
+      </p>
+
+      <h3>Stability</h3>
+      <p>Stability comes from two sources:</p>
+      <ul>
+        <li>
+          <strong>Primary stability</strong>
+          <span class="text-gray-800 font-semibold">–</span> the resistance to initial tipping. This is driven by the waterline
+          width and buoyancy. A 6" board displaces more water and provides a more stable initial platform.
+        </li>
+        <li>
+          <strong>Secondary stability</strong>
+          <span class="text-gray-800 font-semibold">–</span> the resistance to tipping further as the rail submerges. This
+          is influenced by rail shape and board width. Thinner boards tend to have better secondary stability because the
+          rail engages progressively.
+        </li>
+      </ul>
+
+      <h3>Tracking</h3>
+      <p>
+        A thinner board sits deeper in the water (less buoyancy per unit length), which increases the effective
+        waterline length. This improves directional stability <span class="text-gray-800 font-semibold">—</span> the board
+        is less affected by crosswinds and paddle strokes.
+      </p>
+
+      <h2>Thickness by Paddler Weight</h2>
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="bg-gray-100">
+            <th class="p-3 text-left font-semibold text-gray-900 border">Paddler Weight</th>
+            <th class="p-3 text-left font-semibold text-gray-900 border">Recommended Thickness</th>
+            <th class="p-3 text-left font-semibold text-gray-900 border">Reasoning</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            ><td class="p-3 border">Under 65 kg (143 lbs)</td><td class="p-3 border">4"</td><td class="p-3 border"
+              >Sufficient buoyancy, maximum rigidity and speed</td
+            ></tr
+          >
+          <tr
+            ><td class="p-3 border"
+              >65 <span class="text-gray-800 font-semibold">–</span> 90 kg (143 <span
+                class="text-gray-800 font-semibold">–</span
+              > 198 lbs)</td
+            ><td class="p-3 border">5"</td><td class="p-3 border">Best balance of performance and stability</td></tr
+          >
+          <tr
+            ><td class="p-3 border"
+              >90 <span class="text-gray-800 font-semibold">–</span> 115 kg (198 <span
+                class="text-gray-800 font-semibold">–</span
+              > 253 lbs)</td
+            ><td class="p-3 border">5" or 6"</td><td class="p-3 border"
+              >6" for stability priority, 5" for performance</td
+            ></tr
+          >
+          <tr
+            ><td class="p-3 border">Over 115 kg (253 lbs)</td><td class="p-3 border">6"</td><td class="p-3 border"
+              >Required for adequate buoyancy and stability</td
+            ></tr
+          >
+        </tbody>
+      </table>
+
+      <h2>Thickness vs. PSI: The Real- World Trade-off</h2>
+      <p>
+        A common misconception is that higher PSI can compensate for excessive thickness. However, even at 25 PSI, a 6"
+        board will show more flex than a 4" board at 15 PSI because the geometric moment of inertia dominates the
+        stiffness equation. For performance-oriented paddlers, a thinner board at lower pressure will outperform a
+        thicker board at higher pressure.
+      </p>
+
+      <h2>Aquafarer Lineup</h2>
+      <p>Aquafarer offers SUPs in all three thickness profiles:</p>
+      <ul>
+        <li>
+          <strong>4" boards:</strong> Cheetah Touring series <span class="text-gray-800 font-semibold">–</span> 12' x 30"
+          x 4" touring SUPs for fitness and distance paddling
+        </li>
+        <li>
+          <strong>5" boards:</strong> Cheetah All-Round series <span class="text-gray-800 font-semibold">–</span> 10'6" x
+          32" x 5" for recreational use
+        </li>
+        <li>
+          <strong>6" boards:</strong> Cheetah Ultra-Stable series <span class="text-gray-800 font-semibold">–</span> 10' x
+          34" x 6" for yoga, large paddlers, and photography platforms
+        </li>
+      </ul>
+      <p>All boards utilize 1,680 DTEX drop-stitch cores with 20 PSI rated pressure and 1.2 mm PVC laminates.</p>
+    </div>
+
+    <div class="mt-16 pt-8 border-t border-gray-200">
+      <a href="/research" class="text-sky-600 hover:text-sky-700 font-medium">&larr; Back to Research</a>
+    </div>
+  </article>
+</Layout>

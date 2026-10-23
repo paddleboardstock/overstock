@@ -1,0 +1,203 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'cs' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">← Zpět na R&amp;D Center</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Laboratoř 06</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Laboratoř kvality a kontroly</h1>
+      <p class="mt-3 text-lg text-muted">Nezávislé ověření – každý test provedený před dodáním</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-uv-resistance-testing.webp"
+        alt="Aquafarer laboratoř kontroly kvality UV testování"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Důvěřuj, ale prověřuj</h2>
+  <p>
+    Každá loď, která opouští naši dílnu, nese certifikaci, že prošla definovanou sadou kontrol kvality a materiálových
+    zkoušek. Naše Laboratoř kvality a kontroly je nezávislou funkcí v rámci organizace – podléhá přímo generálnímu
+    řediteli, nikoli výrobě – zajišťuje, že žádný komerční tlak nemůže ohrozit kontrolní bránu. Pokud šarže materiálu
+    nebo dokončená loď nesplňují zveřejněné specifikace, laboratoř má pravomoc zastavit zásilku, dokud nebude neshoda
+    vyřešena.
+  </p>
+  <p>
+    Laboratoř funguje pod systémem řízení kvality v souladu s principy a naše testovací metody jsou založeny na normách
+    ISO, ASTM a EN, kdekoli je to možné. Uchováváme podrobné záznamy o každém provedeném testu, čímž vytváříme kompletní
+    řetězec sledovatelnosti od příjmu surovin až po konečnou dodávku lodí.
+  </p>
+
+  <h2>Testujte vybavení a schopnosti</h2>
+  <table>
+    <thead><tr><th>Zařízení</th><th>Testy provedeny</th><th>Standard / Metoda</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Univerzální testovací stroj (50 kN)</td><td
+          >Pevnost v tahu (látka), odolnost proti odlupování (švy), šíření trhlin</td
+        ><td>, ISO 4674</td></tr
+      >
+      <tr
+        ><td>Testovací zařízení pro zadržení vzduchu (programovatelné)</td><td
+          >1000-cyklus nafouknutí/vypuštění, 24-48 h test udržení tlaku</td
+        ><td> (vnitřní)</td></tr
+      >
+      <tr
+        ><td>Přípravek na odlupování švů (motorizované odlupování 180°)</td><td
+          >Pevnost svaru a odlupování lepeného švu při 100 mm/min</td
+        ><td> / ASTM D1876</td></tr
+      >
+      <tr
+        ><td>Tester hydrostatické hlavy</td><td>Odolnost tkaniny proti pronikání vody (0 — 00 mbar)</td><td>ISO 811</td
+        ></tr
+      >
+      <tr
+        ><td>Digitální tloušťkoměr a mikrometr</td><td
+          >Tloušťka tkaniny, tloušťka stěny trubky, tloušťka lepicí fólie</td
+        ><td>ISO 2286-3</td></tr
+      >
+      <tr
+        ><td>Ekologická komora</td><td
+          >Teplotní úprava (-40 °C až +80 °C) pro testy trhlin za studena a stárnutí za tepla</td
+        ><td>ISO 188, ISO 4675</td></tr
+      >
+      <tr
+        ><td>Barevný spektrofotometr</td><td>Měření barev Delta-E po expozici UV</td><td>ISO 105-A05 / ASTM D2244</td
+        ></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>Kontrolní brány – od materiálu až po dodávku</h2>
+  <p>
+    Každá loď se řídí definovaným plánem kvality s povinnými kontrolními body. Žádná loď nemůže přeskočit bránu; každá
+    brána musí být před zahájením další výrobní fáze podepsána inspektorem kvality.
+  </p>
+
+  <div class="not-prose my-8">
+    <div class="relative">
+      <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-blue-200 dark:bg-blue-800"></div>
+      <div class="space-y-6 relative">
+        {
+          [
+            {
+              gate: 'Gate 1',
+              label: 'Incoming material inspection',
+              desc: 'Fabric batch, adhesive batch, hardware — all checked against incoming specification before release to production.',
+            },
+            {
+              gate: 'Gate 2',
+              label: 'In-process weld inspection',
+              desc: 'First-off weld coupon tested (peel + visual) at start of each production shift.',
+            },
+            {
+              gate: 'Gate 3',
+              label: 'Chamber air test',
+              desc: 'Each chamber pressurised to 1.25 x working pressure, held 24-48 h. Data logged per serial number.',
+            },
+            {
+              gate: 'Gate 4',
+              label: 'Pre-delivery inspection',
+              desc: 'Complete boat inspected: all fasteners torqued, systems functional, no cosmetic defects. 100-point checklist.',
+            },
+            {
+              gate: 'Gate 5',
+              label: 'Final certification',
+              desc: 'Test reports compiled, inspection records reviewed, Certificate of Conformance issued.',
+            },
+          ].map((g) => (
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs font-bold z-10">
+                {g.gate}
+              </div>
+              <div class="flex-1 p-3 rounded-lg bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800">
+                <p class="text-sm font-semibold">{g.label}</p>
+                <p class="text-xs text-gray-500 mt-1">{g.desc}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+
+  <h2>Klíčové metriky kvality (2025 klouzavý průměr)</h2>
+  <div class="not-prose my-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">99.7 %</span>
+      <span class="text-xs text-gray-500">Výtěžnost prvního průchodu (dávka látky)</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">&lt; 0.2 %</span>
+      <span class="text-xs text-gray-500">Míra zmetkovitosti svaru (lineární metr)</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">100 %</span>
+      <span class="text-xs text-gray-500">Komory před montáží vzduchově testovány</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600"></span>
+      <span class="text-xs text-gray-500">Shoda konstrukční kategorie</span>
+    </div>
+  </div>
+
+  <h2>Náš kvalitní tým</h2>
+  <p>
+    V laboratoři pracuje manažer kvality (10 let v námořní QA, ASQ Certified Quality Engineer), dva inspektoři kvality
+    (každý s certifikací NDT úrovně 2 ve vizuálním testování) a materiálový technik odpovědný za veškeré fyzické
+    testování. Tým prochází každoročním testováním odbornosti prostřednictvím nezávislého poskytovatele třetí strany,
+    aby bylo zajištěno, že naše výsledky testů zůstanou přesné a reprodukovatelné.
+  </p>
+
+  <h2>Nezávislé testování pro klienty</h2>
+  <p>
+    Naše Laboratoř kvality a kontroly je k dispozici pro nezávislé testovací služby. Pokud potřebujete ověřit
+    specifikaci tkaniny, validovat nový adhezivní systém nebo získat zkušební protokol třetí strany pro kvalifikaci
+    nákupu, můžeme provést testy podle platné normy a vystavit certifikovaný zkušební protokol.
+  </p>
+  <p>Příklady nedávných testovacích prací třetích stran:</p>
+  <ul>
+    <li>Srovnání pevnosti v odlupování pěti konkurenčních lepicích fólií pro evropský vojenský program nákupu.</li>
+    <li>
+      Studie zrychleného stárnutí (UV + tepelné cyklování) pro nové složení PVC s oranžovým pigmentem, s pravidelnými
+      průběžnými měřeními v intervalech 500 h.
+    </li>
+    <li>Ověření zadržování vzduchu u prototypů 50 přepážkových ventilů pro nový design vysokotlaké trubky.</li>
+  </ul>
+
+  <h2>Náš závazek vůči vám</h2>
+  <p>
+    Když obdržíte a {SITE.name} loď, obdržíte také její dokumentaci kvality – kompilovaný záznam výsledků testů, které se
+    vztahují na vaši konkrétní loď. Certifikát šarže tkaniny, testy odlupování svaru, protokoly o zkoušce vzduchu v komoře
+    a kontrolní seznam kontrol před dodáním. Každé číslo je dohledatelné. Každý inspektor je identifikován. To není jen papírování
+    – je to náš slib, že to, co jsme dodali, je to, co jsme specifikovali.
+  </p>
+  <p>
+    Pokud budete mít někdy problém s kvalitou, můžete se obrátit přímo na laboratoř – kontaktní údaje jsou vytištěny na
+    vašem certifikátu o shodě. Každý dotaz bereme vážně a zavazujeme se k formálnímu šetření do 48 hodin.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Potřebujete nezávislé testování nebo ověření kvality?</h2>
+    <p class="mt-2 text-sm text-muted">
+      Naše laboratoř přijímá testovací práce třetích stran – kontaktujte nás se svými požadavky.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Kontaktujte laboratoř kvality</a
+    >
+  </div>
+</section>

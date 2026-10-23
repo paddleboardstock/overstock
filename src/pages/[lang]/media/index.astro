@@ -1,0 +1,108 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+import { languages } from '~/i18n/config';
+import { getPageContent, setPageContentData } from '~/i18n/page-content';
+import __pageData from '~/i18n/generated/pages/media.ts';
+import { localizePageTitle, localizePageDescription } from '~/i18n/page-title';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => getUiForLang(lang)?.[key] || '';
+setPageContentData(__pageData);
+const page = getPageContent(lang, 'media');
+
+const hero = page.hero ?? {};
+const sections = page.sections ?? [];
+const requestAccess = page.request_access ?? 'Request access →';
+const cta = page.cta ?? {};
+
+const metadata = {
+  title: localizePageTitle(page, `${hero.title} — ${SITE.name} Brand Assets`),
+  description: localizePageDescription(
+    page,
+    `Download product images, logos, brand kits, PDF catalogs, and marketing videos for ${SITE.name} inflatable boats and SUP boards.`
+  ),
+};
+const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: hero.title }];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <section class="px-6 sm:px-6 py-16 sm:py-20 lg:py-24 mx-auto max-w-5xl text-center">
+    <p class="text-sm font-semibold text-primary uppercase tracking-wider">{hero.tagline}</p>
+    <h1 class="mt-3 text-4xl md:text-5xl font-bold">{hero.title}</h1>
+    <p class="mt-3 text-lg text-muted">{hero.subtitle}</p>
+  </section>
+
+  {
+    sections.map((sec: any) => (
+      <section class="px-6 sm:px-6 pb-16 mx-auto max-w-6xl" data-ai-block="media-section" id={sec.id}>
+        <div class="mb-8">
+          <h2 class="text-2xl font-bold text-gray-900">{sec.title}</h2>
+          <p class="mt-1 text-sm text-muted">{sec.desc}</p>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {sec.items.map((item: any) => (
+            <div class="group bg-white border border-gray-200 rounded-xl p-5 hover:shadow-md transition-all cursor-pointer">
+              <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center text-lg">
+                {sec.id === 'videos' ? '▶️' : sec.id === 'catalogs' ? '📄' : sec.id === 'logo-brand-kit' ? '🎨' : '🖼️'}
+              </div>
+              {item.url ? (
+                <a
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="mt-3 block font-medium text-gray-900 text-sm group-hover:text-sky-600 transition-colors"
+                >
+                  {item.name}
+                </a>
+              ) : (
+                <h3 class="mt-3 font-medium text-gray-900 text-sm group-hover:text-sky-600 transition-colors">
+                  {item}
+                </h3>
+              )}
+              <p class="mt-1 text-xs text-gray-400">
+                {item.url
+                  ? t('media.downloadPdf') || 'Download PDF'
+                  : t('media.availableForDownload') || 'Available for download'}
+              </p>
+            </div>
+          ))}
+        </div>
+        {sec.id !== 'videos' ? (
+          <div class="mt-4 text-right">
+            <a href={`/${lang}/contact`} class="text-sm font-medium text-sky-600 hover:text-sky-700">
+              {requestAccess}
+            </a>
+          </div>
+        ) : null}
+      </section>
+    ))
+  }
+
+  <section class="bg-gray-50 py-20 px-6">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-2xl font-bold text-gray-900">{cta.title}</h2>
+      <p class="mt-2 text-sm text-muted">{cta.desc}</p>
+      <div class="mt-8 flex justify-center gap-4 flex-wrap">
+        {
+          (cta.links || []).map((link: any) => (
+            <a
+              href={`/${lang}${link.href}`}
+              class="flex flex-col items-center px-6 py-4 bg-white border border-gray-200 rounded-xl hover:shadow-md transition-all min-w-[180px]"
+            >
+              <span class="font-semibold text-gray-900 text-sm">{link.label} →</span>
+              <span class="mt-1 text-xs text-gray-400">{link.desc}</span>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</Layout>

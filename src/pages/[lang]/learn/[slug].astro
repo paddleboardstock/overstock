@@ -1,0 +1,661 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { languages, defaultLang } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+import { getPageContent, setPageContentData } from '~/i18n/page-content';
+import __pageData from '~/i18n/generated/pages/learn-content.ts';
+
+export function getStaticPaths() {
+  const slugs = [
+    'sup',
+    'inflatable-boat',
+    'water-safety',
+    'sup-basics',
+    'drop-stitch-core',
+    'inflatable-technology',
+    'intermediate-techniques',
+    'materials',
+    'pvc-vs-hypalon',
+    'safety-in-water-sports',
+    'sup-size-guide',
+  ];
+  const paths: Array<{ params: { lang: string; slug: string } }> = [];
+  for (const lang of Object.keys(languages)) {
+    for (const slug of slugs) {
+      paths.push({ params: { lang, slug } });
+    }
+  }
+  return paths;
+}
+
+const { lang, slug } = Astro.params;
+const t = (key: string) => getUiForLang(lang || defaultLang)?.[key] || '';
+setPageContentData(__pageData);
+const content = getPageContent(lang || defaultLang, 'learn-content');
+
+const LEARN_PAGES: Record<
+  string,
+  { title: string; description: string; articles: Array<{ title: string; desc: string; href: string }> }
+> = {
+  sup: {
+    title: 'SUP Knowledge — Inflatable SUP Guides & Resources | Aquafarer',
+    description:
+      'Complete SUP knowledge hub covering beginner guides, board sizing, technique tutorials, safety tips, and inflatable SUP technology.',
+    articles: [
+      {
+        title: "SUP Basics — Beginner's Guide",
+        desc: 'Everything a beginner needs to know — board types, paddle sizing, stance, and first-day tips.',
+        href: '/learn/sup',
+      },
+      {
+        title: 'SUP Size Guide',
+        desc: 'Find the right board length, width, and volume for your weight, skill, and paddling style.',
+        href: '/size-guide',
+      },
+      {
+        title: 'Inflatable vs Hard Board',
+        desc: 'Which is right for you? Portability, performance, durability, and cost compared.',
+        href: '/compare/inflatable-vs-hardboard',
+      },
+      {
+        title: 'Intermediate Techniques',
+        desc: 'Step up your paddling with advanced strokes, turning techniques, and rough-water handling.',
+        href: '/learn/intermediate-techniques',
+      },
+      {
+        title: 'How to Choose an Inflatable SUP',
+        desc: 'Navigate the key factors — construction, thickness, fin setup, and included accessories.',
+        href: '/guides/how-to-choose-your-sup/',
+      },
+      {
+        title: 'Water Safety',
+        desc: 'Essential safety knowledge including weather reading, PFD selection, self-rescue, and group paddling.',
+        href: '/learn/water-safety',
+      },
+    ],
+  },
+  'inflatable-boat': {
+    title: 'Inflatable Boat Knowledge — Technology & Materials | Aquafarer',
+    description:
+      'Deep dive into inflatable boat and SUP technology. Learn about drop-stitch construction, PVC vs Hypalon materials, marine-grade engineering, and quality standards.',
+    articles: [
+      {
+        title: 'Materials Reference',
+        desc: 'PVC, Hypalon, drop-stitch, denier ratings — understand what your inflatable gear is made of.',
+        href: '/learn/materials',
+      },
+      {
+        title: 'PVC vs Hypalon',
+        desc: 'The definitive comparison of PVC and Hypalon fabrics for inflatable boats — durability, UV resistance, and cost.',
+        href: '/learn/materials',
+      },
+      {
+        title: 'Drop-Stitch Core Explained',
+        desc: 'How thousands of internal threads create a rigid platform at 12-15 PSI for high-performance inflatable SUPs.',
+        href: '/learn/materials',
+      },
+      {
+        title: 'Inflatable Technology Overview',
+        desc: 'How inflatable boats and SUPs are constructed — from material layup to valve systems and seam welding.',
+        href: '/learn/materials',
+      },
+      {
+        title: 'Rigid Inflatable Boat (RIB) Guide',
+        desc: 'Everything about RIB construction, hull types, tube materials, and choosing the right RIB for your needs.',
+        href: '/v2/inflatable-boat-buying-guide',
+      },
+      {
+        title: 'Inflatable Boat vs RIB',
+        desc: 'Key differences between traditional inflatable dinghies and rigid-hull inflatable boats for various use cases.',
+        href: '/compare/rib-vs-dinghy',
+      },
+    ],
+  },
+  'water-safety': {
+    title: 'Water Safety Knowledge — Safe Paddling Guides | Aquafarer',
+    description:
+      'Comprehensive water safety resources for SUP, kayaking, and boating. Learn about PFD selection, weather reading, self-rescue, cold water safety, and CE certification.',
+    articles: [
+      {
+        title: 'Water Safety Guide',
+        desc: 'Essential safety knowledge for every paddler — weather, PFDs, self-rescue, and group paddling protocols.',
+        href: '/learn/water-safety',
+      },
+      {
+        title: 'Life Jacket & PFD Guide',
+        desc: 'How to choose the right personal flotation device for SUP, kayaking, boating, and professional use.',
+        href: '/v2/life-jacket-buying-guide',
+      },
+      {
+        title: 'SUP Safety Checklist',
+        desc: 'Pre-launch safety checklist every stand-up paddle boarder should follow before hitting the water.',
+        href: '/v2/sup-safety-guide',
+      },
+      {
+        title: 'Cold Water Paddling Safety',
+        desc: 'Essential precautions, gear, and techniques for paddling in cold water conditions.',
+        href: '/v2/cold-water-safety-guide',
+      },
+      {
+        title: 'Beginner Paddling Mistakes',
+        desc: 'Common mistakes first-time paddlers make and how to avoid them for a safer, more enjoyable experience.',
+        href: '/guides/beginner-guide/',
+      },
+      {
+        title: 'CE Certification Explained',
+        desc: 'What CE certification means for inflatable watercraft — the standards, testing, and why it matters for safety.',
+        href: '/trust',
+      },
+    ],
+  },
+  'sup-basics': {
+    title: "SUP Basics — Beginner's Guide to Stand-Up Paddle Boarding",
+    description:
+      "Everything you need to know to start stand-up paddle boarding. Gear guides, sizing advice, safety tips, and beginner techniques from Aquafarer's knowledge center.",
+    articles: [],
+  },
+  'drop-stitch-core': {
+    title: 'Drop-Stitch Core Technology — How Inflatable SUPs Achieve Rigidity',
+    description:
+      'Deep dive into drop-stitch construction technology: how thousands of polyester threads create rigid inflatable platforms at 15-25 PSI. Thread density, fabric integration, manufacturing process, and performance comparisons.',
+    articles: [],
+  },
+  'inflatable-technology': {
+    title: 'Inflatable Watercraft Technology — Materials, Construction & Engineering',
+    description:
+      'How inflatable boats and SUPs are built — material layup, drop-stitch cores, valve systems, RF welding, and quality testing. Understand what makes a durable, high-performance inflatable.',
+    articles: [],
+  },
+  'intermediate-techniques': {
+    title: 'Intermediate SUP & Kayak Techniques — Beyond the Basics',
+    description:
+      'Level up your paddling skills with advanced paddle strokes, rough water handling, wind management, self-rescue techniques, and group paddling etiquette. For paddlers ready to move beyond beginner skills.',
+    articles: [],
+  },
+  materials: {
+    title: 'Inflatable Watercraft Materials — PVC, Hypalon, EVA & Drop-Stitch Fabric',
+    description:
+      'Comprehensive guide to materials used in inflatable watercraft manufacturing: military-grade PVC, Hypalon (CSM), EVA foam decking, drop-stitch fabric, carbon fiber, and aluminum alloys. Specifications, applications, and selection criteria.',
+    articles: [],
+  },
+  'pvc-vs-hypalon': {
+    title: 'PVC vs Hypalon Inflatable Boat Material — Complete Comparison',
+    description:
+      "Detailed comparison of PVC vs Hypalon (CSM) for inflatable boats, RIBs, and dinghies. Durability, cost, repairability, UV resistance, temperature range, and application recommendations with data from Aquafarer's PVC Fabric Lab.",
+    articles: [],
+  },
+  'safety-in-water-sports': {
+    title: 'Water Sports Safety — Essential Knowledge for Paddlers',
+    description:
+      'Essential safety knowledge for every paddler — weather reading, PFD selection, self-rescue, and group paddling protocols.',
+    articles: [],
+  },
+  'sup-size-guide': {
+    title: 'SUP Size Guide — How to Choose the Right Board Length, Width & Volume',
+    description:
+      'Comprehensive SUP sizing guide covering board length, width, thickness, volume (liters), and rider weight matching. Find the right inflatable SUP size for your weight, skill level, and paddling activity.',
+    articles: [],
+  },
+};
+
+const LEARN_META: Record<string, Record<string, { title: string; description: string }>> = {
+  de: {
+    sup: {
+      title: 'SUP-Wissen — Ratgeber & Ressourcen für aufblasbare SUPs',
+      description:
+        'Komplettes SUP-Wissenszentrum mit Einsteigerratgebern, Boardgrößen, Technik-Tutorials, Sicherheitstipps und aufblasbarer SUP-Technologie.',
+    },
+    'inflatable-boat': {
+      title: 'Schlauchboot-Wissen — Technologie & Materialien',
+      description:
+        'Tiefgang in Schlauchboot- und SUP-Technologie. Lernen Sie Drop-Stitch-Konstruktion, PVC- vs. Hypalon-Materialien, Meerestechnik in Marinequalität und Qualitätsstandards kennen.',
+    },
+    'water-safety': {
+      title: 'Wassersicherheit — Ratgeber für sicheres Paddeln',
+      description:
+        'Umfassende Wassersicherheits-Ressourcen für SUP, Kajak und Boot. Lernen Sie Schwimmwestenauswahl, Wetterkunde, Selbstrettung, Kaltwassersicherheit und CE-Zertifizierung kennen.',
+    },
+    'sup-basics': {
+      title: 'SUP-Grundlagen — Einsteigerratgeber für Stand-Up-Paddling',
+      description:
+        'Alles, was Sie zum Einstieg ins Stand-Up-Paddling wissen müssen. Ausrüstungsratgeber, Größenberatung, Sicherheitstipps und Einsteigertechniken aus dem Wissenszentrum von Aquafarer.',
+    },
+    'drop-stitch-core': {
+      title: 'Drop-Stitch-Kerntechnologie — Wie aufblasbare SUPs Steifigkeit erreichen',
+      description:
+        'Tiefgehende Einblicke in die Drop-Stitch-Konstruktion: Wie Tausende Polyesterfäden bei 15-25 PSI steife aufblasbare Plattformen schaffen. Fadendichte, Stoffintegration, Herstellungsprozess und Leistungsvergleiche.',
+    },
+    'inflatable-technology': {
+      title: 'Technologie aufblasbarer Wasserfahrzeuge — Materialien, Konstruktion & Technik',
+      description:
+        'Wie aufblasbare Boote und SUPs gebaut werden — Materialaufbau, Drop-Stitch-Kerne, Ventilsysteme, HF-Schweißen und Qualitätstests. Verstehen Sie, was ein langlebiges, leistungsstarkes aufblasbares Produkt ausmacht.',
+    },
+    'intermediate-techniques': {
+      title: 'Fortgeschrittene SUP- & Kajaktechniken — Über die Grundlagen hinaus',
+      description:
+        'Verbessern Sie Ihre Paddelfähigkeiten mit fortgeschrittenen Paddelschlägen, Handling bei rauem Wasser, Windmanagement, Selbstrettungstechniken und Gruppenpaddel-Etikette. Für Paddler, die bereit sind, über die Anfängerstufe hinauszugehen.',
+    },
+    materials: {
+      title: 'Materialien aufblasbarer Wasserfahrzeuge — PVC, Hypalon, EVA & Drop-Stitch-Gewebe',
+      description:
+        'Umfassender Leitfaden zu Materialien für die Fertigung aufblasbarer Wasserfahrzeuge: PVC in Militärqualität, Hypalon (CSM), EVA-Deckbeläge, Drop-Stitch-Gewebe, Carbonfaser und Aluminiumlegierungen. Spezifikationen, Anwendungen und Auswahlkriterien.',
+    },
+    'pvc-vs-hypalon': {
+      title: 'PVC vs. Hypalon für Schlauchboote — Vollständiger Vergleich',
+      description:
+        'Detaillierter Vergleich von PVC vs. Hypalon (CSM) für Schlauchboote, RIBs und Dingis. Haltbarkeit, Kosten, Reparierbarkeit, UV-Beständigkeit, Temperaturbereich und Anwendungsempfehlungen mit Daten aus dem PVC-Fabriklabor von Aquafarer.',
+    },
+    'safety-in-water-sports': {
+      title: 'Sicherheit im Wassersport — Wichtiges Wissen für Paddler',
+      description:
+        'Wichtige Sicherheitskenntnisse für jeden Paddler — Wetterkunde, Schwimmwestenauswahl, Selbstrettung und Gruppenpaddel-Protokolle.',
+    },
+    'sup-size-guide': {
+      title: 'SUP-Größenratgeber — Die richtige Boardlänge, -breite & -volumen wählen',
+      description:
+        'Umfassender SUP-Größenratgeber zu Boardlänge, -breite, -dicke, Volumen (Liter) und Gewichtsabstimmung. Finden Sie die richtige aufblasbare SUP-Größe für Ihr Gewicht, Könnensniveau und Ihre Paddelaktivität.',
+    },
+  },
+  es: {
+    sup: {
+      title: 'Conocimiento SUP — Guías y recursos sobre SUP hinchable',
+      description:
+        'Centro de conocimiento SUP completo con guías para principiantes, tamaños de tablas, tutoriales de técnica, consejos de seguridad y tecnología de SUP hinchable.',
+    },
+    'inflatable-boat': {
+      title: 'Conocimiento de botes inflables — Tecnología y materiales',
+      description:
+        'Conozca en profundidad la tecnología de botes inflables y SUP. Aprenda sobre la construcción drop-stitch, los materiales PVC vs Hypalon, la ingeniería de grado marino y los estándares de calidad.',
+    },
+    'water-safety': {
+      title: 'Seguridad acuática — Guías para remar con seguridad',
+      description:
+        'Recursos completos de seguridad acuática para SUP, kayak y navegación. Aprenda sobre la selección de chalecos salvavidas (PFD), lectura del clima, autorrescate, seguridad en aguas frías y certificación CE.',
+    },
+    'sup-basics': {
+      title: 'Fundamentos de SUP — Guía para principiantes del paddle surf',
+      description:
+        'Todo lo que necesita saber para empezar con el paddle surf. Guías de equipo, consejos de tamaño, consejos de seguridad y técnicas para principiantes del centro de conocimiento de Aquafarer.',
+    },
+    'drop-stitch-core': {
+      title: 'Tecnología de núcleo drop-stitch — Cómo logran rigidez los SUP hinchables',
+      description:
+        'Profundice en la construcción drop-stitch: cómo miles de hilos de poliéster crean plataformas inflables rígidas a 15-25 PSI. Densidad de hilos, integración de tejido, proceso de fabricación y comparaciones de rendimiento.',
+    },
+    'inflatable-technology': {
+      title: 'Tecnología de embarcaciones inflables — Materiales, construcción e ingeniería',
+      description:
+        'Cómo se construyen los botes y SUP inflables: capas de material, núcleos drop-stitch, sistemas de válvulas, soldadura por RF y pruebas de calidad. Entienda qué hace duradera y de alto rendimiento una embarcación inflable.',
+    },
+    'intermediate-techniques': {
+      title: 'Técnicas intermedias de SUP y kayak — Más allá de lo básico',
+      description:
+        'Mejore sus habilidades de remo con paladas avanzadas, manejo en aguas agitadas, gestión del viento, técnicas de autorrescate y etiqueta de remada en grupo. Para remadores listos para ir más allá del nivel principiante.',
+    },
+    materials: {
+      title: 'Materiales para embarcaciones inflables — PVC, Hypalon, EVA y tejido drop-stitch',
+      description:
+        'Guía completa de los materiales usados en la fabricación de embarcaciones inflables: PVC de grado militar, Hypalon (CSM), cubiertas de espuma EVA, tejido drop-stitch, fibra de carbono y aleaciones de aluminio. Especificaciones, aplicaciones y criterios de selección.',
+    },
+    'pvc-vs-hypalon': {
+      title: 'PVC vs Hypalon para botes inflables — Comparación completa',
+      description:
+        'Comparación detallada de PVC vs Hypalon (CSM) para botes inflables, RIBs y lanchas. Durabilidad, coste, reparabilidad, resistencia a los rayos UV, rango de temperatura y recomendaciones de aplicación con datos del Laboratorio de Tejido PVC de Aquafarer.',
+    },
+    'safety-in-water-sports': {
+      title: 'Seguridad en los deportes acuáticos — Conocimiento esencial para remadores',
+      description:
+        'Conocimiento esencial de seguridad para cada remador: lectura del clima, selección de chalecos salvavidas (PFD), autorrescate y protocolos de remada en grupo.',
+    },
+    'sup-size-guide': {
+      title: 'Guía de tamaños de SUP — Cómo elegir la longitud, anchura y volumen correctos',
+      description:
+        'Guía completa de tallas de SUP que cubre longitud, anchura, grosor, volumen (litros) y coincidencia con el peso del remador. Encuentre el SUP hinchable adecuado para su peso, nivel de habilidad y actividad.',
+    },
+  },
+  fr: {
+    sup: {
+      title: 'Connaissance SUP — Guides et ressources sur le SUP gonflable',
+      description:
+        'Centre de connaissances SUP complet couvrant les guides débutants, les tailles de planches, les tutoriels de technique, les conseils de sécurité et la technologie du SUP gonflable.',
+    },
+    'inflatable-boat': {
+      title: 'Connaissance des bateaux gonflables — Technologie et matériaux',
+      description:
+        "Plongez dans la technologie des bateaux gonflables et des SUP. Découvrez la construction drop-stitch, les matériaux PVC vs Hypalon, l'ingénierie de qualité marine et les normes de qualité.",
+    },
+    'water-safety': {
+      title: 'Sécurité nautique — Guides pour pagayer en toute sécurité',
+      description:
+        "Ressources complètes de sécurité nautique pour le SUP, le kayak et la navigation. Apprenez le choix des gilets de sauvetage (PFD), la lecture de la météo, l'auto-sauvetage, la sécurité en eau froide et la certification CE.",
+    },
+    'sup-basics': {
+      title: 'Bases du SUP — Guide du débutant en paddle boarding',
+      description:
+        "Tout ce qu'il faut savoir pour débuter le paddle boarding. Guides d'équipement, conseils de taille, conseils de sécurité et techniques de débutant du centre de connaissances Aquafarer.",
+    },
+    'drop-stitch-core': {
+      title: 'Technologie du noyau drop-stitch — Comment les SUP gonflables atteignent leur rigidité',
+      description:
+        'Plongez dans la construction drop-stitch : comment des milliers de fils de polyester créent des plateformes gonflables rigides à 15-25 PSI. Densité des fils, intégration du tissu, processus de fabrication et comparaisons de performances.',
+    },
+    'inflatable-technology': {
+      title: 'Technologie des embarcations gonflables — Matériaux, construction et ingénierie',
+      description:
+        'Comment sont fabriqués les bateaux et SUP gonflables — stratification des matériaux, noyaux drop-stitch, systèmes de valves, soudure RF et tests de qualité. Comprenez ce qui rend une embarcation gonflable durable et performante.',
+    },
+    'intermediate-techniques': {
+      title: 'Techniques intermédiaires de SUP et de kayak — Au-delà des bases',
+      description:
+        "Améliorez vos compétences de pagaie avec des coups de pagaie avancés, la gestion des eaux agitées, le management du vent, les techniques d'auto-sauvetage et l'étiquette de pagayage en groupe. Pour les pagayeurs prêts à dépasser le niveau débutant.",
+    },
+    materials: {
+      title: 'Matériaux des embarcations gonflables — PVC, Hypalon, EVA et tissu drop-stitch',
+      description:
+        "Guide complet des matériaux utilisés dans la fabrication des embarcations gonflables : PVC de qualité militaire, Hypalon (CSM), ponts en mousse EVA, tissu drop-stitch, fibre de carbone et alliages d'aluminium. Spécifications, applications et critères de sélection.",
+    },
+    'pvc-vs-hypalon': {
+      title: 'PVC vs Hypalon pour bateaux gonflables — Comparaison complète',
+      description:
+        "Comparaison détaillée du PVC vs Hypalon (CSM) pour bateaux gonflables, RIB et annexes. Durabilité, coût, réparabilité, résistance aux UV, plage de température et recommandations d'application avec les données du Laboratoire de Tissu PVC d'Aquafarer.",
+    },
+    'safety-in-water-sports': {
+      title: 'Sécurité dans les sports nautiques — Connaissances essentielles pour les pagayeurs',
+      description:
+        'Connaissances essentielles de sécurité pour chaque pagayeur — lecture de la météo, choix du gilet de sauvetage (PFD), auto-sauvetage et protocoles de pagayage en groupe.',
+    },
+    'sup-size-guide': {
+      title: 'Guide des tailles de SUP — Choisir la bonne longueur, largeur et volume',
+      description:
+        "Guide complet des tailles de SUP couvrant la longueur, la largeur, l'épaisseur, le volume (litres) et l'adéquation au poids du pagayeur. Trouvez la taille de SUP gonflable adaptée à votre poids, votre niveau et votre activité.",
+    },
+  },
+  it: {
+    sup: {
+      title: 'Conoscenza SUP — Guide e risorse sul SUP gonfiabile',
+      description:
+        'Centro di conoscenza SUP completo con guide per principianti, misure delle tavole, tutorial di tecnica, consigli di sicurezza e tecnologia dei SUP gonfiabili.',
+    },
+    'inflatable-boat': {
+      title: 'Conoscenza dei gommoni — Tecnologia e materiali',
+      description:
+        "Approfondimento sulla tecnologia di gommoni e SUP. Scoprite la costruzione drop-stitch, i materiali PVC vs Hypalon, l'ingegneria di grado marino e gli standard di qualità.",
+    },
+    'water-safety': {
+      title: 'Sicurezza in acqua — Guide per pagaiare in sicurezza',
+      description:
+        "Risorse complete sulla sicurezza in acqua per SUP, kayak e imbarcazioni. Scoprite la scelta dei giubbotti salvagente (PFD), la lettura del meteo, l'autorescat, la sicurezza in acque fredde e la certificazione CE.",
+    },
+    'sup-basics': {
+      title: 'Basi del SUP — Guida per principianti al paddle boarding',
+      description:
+        "Tutto quello che serve per iniziare il paddle boarding. Guide sull'attrezzatura, consigli sulle misure, consigli di sicurezza e tecniche per principianti dal centro di conoscenza di Aquafarer.",
+    },
+    'drop-stitch-core': {
+      title: 'Tecnologia del nucleo drop-stitch — Come i SUP gonfiabili raggiungono la rigidità',
+      description:
+        'Approfondimento sulla costruzione drop-stitch: come migliaia di fili di poliestere creano piattaforme gonfiabili rigide a 15-25 PSI. Densità dei fili, integrazione del tessuto, processo di produzione e confronti di prestazioni.',
+    },
+    'inflatable-technology': {
+      title: 'Tecnologia delle imbarcazioni gonfiabili — Materiali, costruzione e ingegneria',
+      description:
+        "Come vengono costruite imbarcazioni e SUP gonfiabili — stratificazione dei materiali, nuclei drop-stitch, sistemi di valvole, saldatura RF e test di qualità. Capite cosa rende un'imbarcazione gonfiabile durevole e ad alte prestazioni.",
+    },
+    'intermediate-techniques': {
+      title: 'Tecniche intermedie di SUP e kayak — Oltre le basi',
+      description:
+        'Migliorate le vostre abilità di pagaiata con colpi avanzati, gestione di acque mosse, gestione del vento, tecniche di autorescat ed etichetta della pagaiata di gruppo. Per pagaiatori pronti ad andare oltre il livello principiante.',
+    },
+    materials: {
+      title: 'Materiali delle imbarcazioni gonfiabili — PVC, Hypalon, EVA e tessuto drop-stitch',
+      description:
+        'Guida completa ai materiali usati nella produzione di imbarcazioni gonfiabili: PVC di grado militare, Hypalon (CSM), deck in schiuma EVA, tessuto drop-stitch, fibra di carbonio e leghe di alluminio. Specifiche, applicazioni e criteri di selezione.',
+    },
+    'pvc-vs-hypalon': {
+      title: 'PVC vs Hypalon per gommoni — Confronto completo',
+      description:
+        "Confronto dettagliato tra PVC e Hypalon (CSM) per gommoni, RIB e tender. Durabilità, costi, riparabilità, resistenza ai raggi UV, intervallo di temperature e raccomandazioni d'uso con i dati del Laboratorio Tessuti PVC di Aquafarer.",
+    },
+    'safety-in-water-sports': {
+      title: 'Sicurezza negli sport acquatici — Conoscenze essenziali per i pagaiatori',
+      description:
+        'Conoscenze essenziali di sicurezza per ogni pagaiatore — lettura del meteo, scelta del giubbotto salvagente (PFD), autorescat e protocolli di pagaiata di gruppo.',
+    },
+    'sup-size-guide': {
+      title: 'Guida alle misure SUP — Scegliere lunghezza, larghezza e volume giusti',
+      description:
+        'Guida completa alle misure dei SUP: lunghezza, larghezza, spessore, volume (litri) e abbinamento al peso del pagaiatore. Trova la misura giusta di SUP gonfiabile per il tuo peso, livello di abilità e attività.',
+    },
+  },
+};
+
+const page = LEARN_PAGES[slug];
+const pageMeta = LEARN_META[lang]?.[slug];
+const pageTitle = pageMeta ? pageMeta.title : t('learn.' + slug + '.title') || page.title;
+const pageDesc = pageMeta ? pageMeta.description : t('learn.' + slug + '.description') || page.description;
+const artL10n = content.articles?.[slug];
+const lArticles = (page.articles || []).map((a, idx) => ({
+  ...a,
+  title: artL10n?.[idx]?.title || a.title,
+  desc: artL10n?.[idx]?.desc || a.desc,
+  href: a.href.startsWith('/guides/')
+    ? `/${lang}${a.href}`
+    : a.href.startsWith('/learn/')
+      ? `/${lang}${a.href}`
+      : a.href.startsWith('/') && !a.href.startsWith('//')
+        ? `/${lang}${a.href}`
+        : a.href,
+}));
+const readGuide = content.ui?.read_guide || 'Read guide →';
+const cardTech = content.ui?.card_tech || 'Marine safety engineering and material testing';
+const cardProducts = content.ui?.card_products || 'Explore the full Aquafarer product catalog';
+const cardTrust = content.ui?.card_trust || 'CE, ISO and BSCI compliance';
+const mat = slug === 'materials' ? content.materials : undefined;
+const MATERIAL_IMAGES = [
+  'https://assets.aquafarer.com/images/aquafarer/tech/tech-pvc-material.webp',
+  'https://assets.aquafarer.com/images/aquafarer/tech/tech-hypalon-tubes.webp',
+  'https://assets.aquafarer.com/images/aquafarer/tech/tech-drop-stitch.webp',
+  'https://assets.aquafarer.com/images/aquafarer/tech/tech-air-deck.webp',
+];
+const TOPIC_HREFS = [
+  '/v2/pvc-vs-hypalon-boats',
+  '/learn/pvc-vs-hypalon',
+  '/learn/drop-stitch-core',
+  '/learn/inflatable-technology',
+  '/v2/sup-pump-guide',
+  '/quality',
+  '/learn/sup-size-guide',
+  '/v2/inflatable-sup-storage',
+];
+const deepDive: Array<{ title: string; desc: string; href: string }> = (mat?.deep_dive?.topics || []).map(
+  (tp: { title: string; desc: string }, i: number) => ({
+    title: tp.title,
+    desc: tp.desc,
+    href: `/${lang}${TOPIC_HREFS[i] || TOPIC_HREFS[0]}`,
+  })
+);
+
+const metadata = {
+  title: pageTitle,
+  description: pageDesc,
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <JsonLd
+    type="BreadcrumbList"
+    breadcrumbs={[
+      { name: t('nav.home') || 'Home', href: `/${lang}` },
+      { name: t('nav.learn') || 'Learn', href: `/${lang}/knowledge` },
+      { name: pageTitle },
+    ]}
+  />
+
+  <section class="max-w-5xl mx-auto px-6 pt-24 pb-4" data-ai-block="definition">
+    <h1 class="text-4xl font-semibold text-gray-900 dark:text-slate-100">{pageTitle}</h1>
+    <p class="mt-4 text-lg text-gray-500 dark:text-slate-400 max-w-3xl">{pageDesc}</p>
+
+    {
+      lArticles.length > 0 && (
+        <div class="mt-16 grid md:grid-cols-2 gap-6">
+          {lArticles.map((a) => (
+            <a
+              href={a.href}
+              class="group block p-6 rounded-2xl border border-gray-200 dark:border-slate-700 hover:shadow-lg hover:border-sky-300 dark:hover:border-sky-600 transition-all"
+            >
+              <h2 class="font-semibold text-gray-900 dark:text-slate-100 group-hover:text-sky-600 transition-colors">
+                {a.title}
+              </h2>
+              <p class="mt-2 text-sm text-gray-500 dark:text-slate-400 leading-relaxed">{a.desc}</p>
+              <span class="mt-3 inline-block text-sm font-medium text-sky-600">{readGuide}</span>
+            </a>
+          ))}
+        </div>
+      )
+    }
+  </section>
+
+  {
+    slug === 'materials' && mat && (
+      <>
+        <section class="px-6 pb-8 max-w-5xl mx-auto">
+          <div class="prose prose-gray dark:prose-invert max-w-none">
+            <p class="text-lg leading-relaxed">{mat.intro_p1}</p>
+            <p class="text-lg leading-relaxed">{mat.intro_p2}</p>
+          </div>
+        </section>
+
+        <section class="px-6 pb-16 max-w-5xl mx-auto space-y-16">
+          {mat.items.map((m: any, i: number) => (
+            <div class="grid md:grid-cols-2 gap-8 items-start">
+              <div class={i % 2 === 1 ? 'md:order-2' : ''}>
+                <h2 class="text-2xl font-bold text-gray-900 dark:text-slate-100">{m.name}</h2>
+                <p class="mt-3 text-gray-600 dark:text-slate-300 leading-relaxed">{m.summary}</p>
+                <div class="mt-4 grid grid-cols-2 gap-4">
+                  <div>
+                    <h4 class="text-sm font-semibold text-green-700 uppercase tracking-wide">
+                      {mat.labels.advantages}
+                    </h4>
+                    <ul class="mt-2 space-y-1">
+                      {m.pros.map((pro: string) => (
+                        <li class="text-sm text-gray-600 dark:text-slate-300 flex items-start gap-1.5">
+                          <span class="text-green-500 mt-0.5 shrink-0">+</span>
+                          {pro}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 class="text-sm font-semibold text-red-600 uppercase tracking-wide">{mat.labels.limitations}</h4>
+                    <ul class="mt-2 space-y-1">
+                      {m.cons.map((con: string) => (
+                        <li class="text-sm text-gray-600 dark:text-slate-300 flex items-start gap-1.5">
+                          <span class="text-red-400 mt-0.5 shrink-0">-</span>
+                          {con}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+                <p class="mt-4 text-sm text-gray-500 dark:text-slate-400">
+                  <strong class="text-gray-700 dark:text-slate-200">{mat.labels.best_for}</strong> {m.best_for}
+                </p>
+              </div>
+              <div class={i % 2 === 1 ? 'md:order-1' : ''}>
+                <img
+                  src={MATERIAL_IMAGES[i]}
+                  alt={m.name}
+                  class="w-full rounded-xl"
+                  loading={i < 2 ? 'eager' : 'lazy'}
+                />
+              </div>
+            </div>
+          ))}
+        </section>
+
+        <section class="px-6 pb-16 max-w-5xl mx-auto">
+          <div class="rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-200 dark:border-slate-700 p-8">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-slate-100 text-center">{mat.selection.title}</h2>
+            <p class="mt-3 text-gray-600 dark:text-slate-300 text-center max-w-2xl mx-auto">{mat.selection.subtitle}</p>
+            <div class="mt-8 overflow-x-auto">
+              <table class="w-full text-sm">
+                <thead>
+                  <tr class="border-b border-gray-300 dark:border-slate-600">
+                    {mat.selection.headers.map((h: string) => (
+                      <th class="text-left py-3 px-4 font-semibold text-gray-900 dark:text-slate-100">{h}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {mat.selection.rows.map((row: string[]) => (
+                    <tr class="border-b border-gray-200 dark:border-slate-700">
+                      <td class="py-3 px-4 text-gray-700 dark:text-slate-300">{row[0]}</td>
+                      <td class="py-3 px-4">
+                        <span class="font-medium text-gray-900 dark:text-slate-100">{row[1]}</span>
+                      </td>
+                      <td class="py-3 px-4 text-gray-600 dark:text-slate-300">{row[2]}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section class="px-6 pb-20 max-w-6xl mx-auto">
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-slate-100 text-center mb-10">{mat.deep_dive.title}</h2>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {deepDive.map((tp) => (
+              <a
+                href={tp.href}
+                class="group block bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-2xl p-6 hover:shadow-lg transition-all hover:-translate-y-0.5"
+              >
+                <h3 class="font-semibold text-gray-900 dark:text-slate-100 group-hover:text-sky-600 transition-colors">
+                  {tp.title}
+                </h3>
+                <p class="mt-2 text-sm text-gray-500 dark:text-slate-400 leading-relaxed">{tp.desc}</p>
+                <span class="mt-4 inline-flex text-sm font-medium text-sky-600 group-hover:text-sky-700">
+                  {readGuide}
+                </span>
+              </a>
+            ))}
+          </div>
+        </section>
+      </>
+    )
+  }
+
+  <section class="max-w-5xl mx-auto px-6 pb-16">
+    <div class="grid md:grid-cols-3 gap-4 text-sm">
+      <a
+        href={`/${lang}/technology`}
+        class="block p-4 rounded-xl border border-gray-200 dark:border-slate-700 hover:border-sky-300 dark:hover:border-sky-600 transition"
+      >
+        <span class="font-medium text-sky-600">{t('nav.technology') || 'Technology'}</span>
+        <p class="mt-1 text-gray-500 dark:text-slate-400">
+          {cardTech}
+        </p>
+      </a>
+      <a
+        href={`/${lang}/products`}
+        class="block p-4 rounded-xl border border-gray-200 dark:border-slate-700 hover:border-sky-300 dark:hover:border-sky-600 transition"
+      >
+        <span class="font-medium text-sky-600">{t('product.pageTitle') || 'Products'}</span>
+        <p class="mt-1 text-gray-500 dark:text-slate-400">
+          {cardProducts}
+        </p>
+      </a>
+      <a
+        href={`/${lang}/trust`}
+        class="block p-4 rounded-xl border border-gray-200 dark:border-slate-700 hover:border-sky-300 dark:hover:border-sky-600 transition"
+      >
+        <span class="font-medium text-sky-600">{t('nav.trust') || 'Trust'}</span>
+        <p class="mt-1 text-gray-500 dark:text-slate-400">{cardTrust}</p>
+      </a>
+    </div>
+  </section>
+</Layout>

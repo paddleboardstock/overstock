@@ -1,0 +1,130 @@
+hero_text:
+  tagline: Yhteystiedot
+  title: OTA YHTEYTTÄ
+contact_form:
+  id: form
+  title: Lähetä meille viesti
+  subtitle: Tarjouksia, teknisiä kysymyksiä tai kumppanuustiedusteluja varten, lähetä meille viesti. Vastaamme yhden arkipäivän kuluessa.
+  email_to: info@aquafarer.com
+  submit_button: Lähetä tiedustelu → Pyydä tarjous
+  success_message: Kiitos! Viestisi on saapunut postilaatikkoomme. Vastaamme yhden arkipäivän kuluessa.
+  error_message: Viestisi lähettämisessä tapahtui virhe. Yritä uudelleen tai lähetä sähköpostia suoraan.
+  default_country_code: '+1'
+  captcha:
+    label: 'Roskapostinsuojaus: ratkaise seuraava'
+  fields:
+    - name: firstName
+      label: Etunimi
+      row: 1
+    - name: lastName
+      label: Sukunimi
+      row: 1
+    - name: companyName
+      label: Yrityksen nimi
+      row: 2
+    - name: address
+      label: Osoite
+      row: 3
+    - name: zip
+      label: Postinumero
+      row: 4
+    - name: country
+      label: Maa
+      row: 4
+      type: select
+      optionsKey: countries
+    - name: email
+      label: Sähköposti
+      row: 5
+      type: email
+    - name: tel
+      label: Puhelin
+      row: 5
+      type: tel
+      withCountryCode: true
+    - name: orderVolume
+      label: Arvioitu tilausmäärä
+      row: 6
+      type: select
+      options:
+        - value: ''
+          label: Valitse arvioitu määrä...
+        - value: sample
+          label: Vain näytteet / prototyypit
+        - value: '5-10'
+          label: 50–100 yksikköä (vakio MOQ)
+        - value: '100-500'
+          label: 100–500 yksikköä
+        - value: '500-plus'
+          label: 500+ yksikköä (volyymihinnoittelu)
+    - name: customization
+      label: Tarvitaanko räätälöintiä?
+      row: 7
+      type: select
+      options:
+        - value: ''
+          label: Valitse räätälöintityyppi...
+        - value: none
+          label: Vakiotuote (ei räätälöintiä)
+        - value: logo
+          label: Vain oma logo / brändäys
+        - value: full
+          label: Täysi OEM (koko, väri, grafiikka, pakkaus)
+        - value: consultation
+          label: En ole varma — tarvitsen konsultaatiota
+    - name: productInterest
+      label: Kiinnostavat tuoteryhmät
+      row: 8
+      type: select
+      options:
+        - value: ''
+          label: Valitse tuoteryhmä...
+        - value: all
+          label: Kaikki tuotteet / koko katalogi
+        - value: sup
+          label: SUP-laudat / Melontalautailulautaset
+        - value: kayak
+          label: Kuminen kajakki
+        - value: rib
+          label: RIB-veneet
+        - value: dinghy
+          label: Kuminen jolla / Tenderit
+        - value: safety
+          label: Turvallisuusvarusteet / Pelastusliivit
+        - value: accessory
+          label: Tarvikkeet (pumput, airot, laukut)
+    - name: subject
+      label: Aihe
+      row: 9
+    - name: message
+      label: Viesti
+      row: 10
+      type: textarea
+      rows: 6
+features2_other_ways:
+  title: Muita tapoja tavoittaa meidät
+  columns: 3
+  items:
+    - title: Myyntitiedustelut
+      description: Tarjoukset, kokoonpanot, jälleenmyyntihakemukset ja irtotilaukset.
+      icon: tabler:shopping-bag
+    - title: Tekninen tuki
+      description: Takuu, korjaukset, varaosat ja käyttökysymykset.
+      icon: tabler:tool
+    - title: Media ja kumppanuudet
+      description: Mediakitit, sponsorointi ja alan yhteistyö.
+      icon: tabler:news
+    - title: Puhelin
+      description: '+86 13305324192'
+      icon: tabler:headset
+    - title: Sähköposti
+      description: info@aquafarer.com
+      icon: tabler:mail
+    - title: Pääkonttori
+      description: Economic Development Zone, Laixi, Qingdao, Kiina, 266600
+      icon: tabler:map-pin
+map:
+  title: Sijaintimme
+  subtitle: Vieraile pääkonttorillamme
+  address: Economic Development Zone, Laixi, Qingdao, Kiina, 266600
+  zoom: 15

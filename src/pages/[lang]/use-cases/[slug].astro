@@ -1,0 +1,135 @@
+---
+export const prerender = true;
+
+import PageLayout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl } from '~/i18n/utils';
+import { languages, defaultLang } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+import { nodes } from '~/content/graph/nodes';
+import { useCaseFromNode } from '~/lib/geo-v4/templates';
+import { articleSchema } from '~/lib/seo/schema';
+import JsonLd from '~/components/common/JsonLd.astro';
+
+export function getStaticPaths() {
+  const paths: { params: { lang: string; slug: string } }[] = [];
+  for (const lang of Object.keys(languages)) {
+    for (const node of nodes.filter((n) => n.type === 'use-case')) {
+      const page = useCaseFromNode(node, lang);
+      if (page) {
+        const slug = (node.slug && node.slug[lang]) || node.id;
+        paths.push({ params: { lang, slug } });
+      }
+    }
+  }
+  return paths;
+}
+
+const lang = getLangFromUrl(Astro.url);
+const t = (key: string) => getUiForLang(lang || defaultLang)?.[key] || '';
+const { slug } = Astro.params;
+const node = nodes.find((n) => (n.slug && (n.slug[lang] || n.id)) === slug);
+const page = node ? useCaseFromNode(node, lang) : null;
+
+const useCaseCrumbs = page
+  ? [
+      { name: t('nav.home') || 'Home', href: `/${lang}/` },
+      { name: t('useCase.label'), href: `/${lang}/solutions/by-use-case` },
+      { name: page.title },
+    ]
+  : [];
+
+const relatedProductNodes = node
+  ? nodes.filter((n) => n.type === 'product-category' && n.related.includes(node.id))
+  : [];
+
+const PRODUCT_NODE_TO_HUB: Record<string, string> = {
+  'inflatable-sup': 'supboard',
+  'inflatable-kayak': 'inflatable-boats',
+  dinghy: 'inflatable-boats',
+  rib: 'rib-boats',
+  'safety-equipment': 'accessory',
+  accessory: 'accessory',
+};
+
+const graphJsonLd = page
+  ? {
+      '@context': 'https://schema.org',
+      '@graph': [
+        articleSchema({
+          headline: page.title,
+          description: page.description,
+          datePublished: '2024-02-01',
+          dateModified: '2026-06-01',
+          author: 'Aquafarer',
+          publisher: 'Aquafarer',
+        }),
+      ],
+    }
+  : null;
+---
+
+{
+  page && (
+    <PageLayout breadcrumbs={useCaseCrumbs} metadata={{ title: page.title, description: page.description }}>
+      <script
+        slot="before"
+        is:inline
+        type="application/ld+json"
+        set:html={graphJsonLd ? JSON.stringify(graphJsonLd) : ''}
+      />
+      <section class="mx-auto max-w-4xl px-6 py-16">
+        <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">{t('useCase.label')}</span>
+        <h1 class="font-semibold text-gray-900 dark:text-gray-100 mt-4 text-4xl">{page.title}</h1>
+        <p class="text-lg text-gray-500 dark:text-gray-400 mt-3">{page.description}</p>
+        <div class="mt-12 prose prose-gray dark:prose-invert max-w-none">
+          {page.sections.map((s) => (
+            <>
+              <h2>{s.h2}</h2>
+              {Array.isArray(s.content) ? (
+                <ul>
+                  {s.content.map((item) => (
+                    <li set:html={item.replace(/^- /, '')} />
+                  ))}
+                </ul>
+              ) : (
+                <p set:html={s.content} />
+              )}
+            </>
+          ))}
+          {page.faq.length > 0 && <h2>{t('faq.title')}</h2>}
+          {page.faq.map((f) => (
+            <>
+              <h3>{f.q}</h3>
+              <p>{f.a}</p>
+            </>
+          ))}
+        </div>
+      </section>
+
+      {page.faq.length > 0 && <JsonLd type="FAQPage" faqs={page.faq} />}
+
+      {relatedProductNodes.length > 0 && (
+        <section class="max-w-4xl mx-auto px-6 pb-16">
+          <h2 class="text-xl font-semibold text-gray-900 mb-6">{t('related.products')}</h2>
+          <div class="grid md:grid-cols-3 gap-4">
+            {relatedProductNodes.map((p) => {
+              const pName = p.name?.[lang] || p.name?.en || p.id;
+              const hubSlug = PRODUCT_NODE_TO_HUB[p.id] || 'products';
+              return (
+                <a
+                  href={`/${lang}/${hubSlug}`}
+                  class="block p-4 bg-white rounded-xl border border-gray-200 hover:shadow-md transition-shadow"
+                >
+                  <h3 class="text-sm font-semibold text-gray-900">{pName}</h3>
+                  <span class="mt-2 inline-flex items-center text-xs font-medium text-sky-600">
+                    {t('home.guides.read')} →
+                  </span>
+                </a>
+              );
+            })}
+          </div>
+        </section>
+      )}
+    </PageLayout>
+  )
+}

@@ -1,0 +1,131 @@
+hero_text:
+  tagline: "お問い合わせ"
+  title: 連絡する
+contact_form:
+  id: form
+  title: メッセージを送ってください
+  subtitle: 見積り、技術的なご質問、パートナーシップに関するお問い合わせは、お気軽にご連絡ください。1営業日以内にご返信いたします。
+  email_to: info@aquafarer.com
+  submit_button: お問い合わせ送信 → 見積りを取得
+  success_message: ありがとうございます！お客様のメッセージは受信いたしました。1営業日以内にご返信いたします。
+  error_message: メッセージの送信中に問題が発生しました。もう一度お試しいただくか、直接メールにてご連絡ください。
+  default_country_code: '+1'
+  captcha:
+    label: スパム防止：以下をお答えください
+  fields:
+    - name: firstName
+      label: "名"
+      row: 1
+    - name: lastName
+      label: "姓"
+      row: 1
+    - name: companyName
+      label: "会社名"
+      row: 2
+    - name: address
+      label: "住所"
+      row: 3
+    - name: zip
+      label: "郵便番号"
+      row: 4
+    - name: country
+      label: "国"
+      row: 4
+      type: select
+      optionsKey: countries
+    - name: email
+      label: "メールアドレス"
+      row: 5
+      type: email
+    - name: tel
+      label: TEL
+      row: 5
+      type: tel
+      withCountryCode: true
+    - name: orderVolume
+      label: 推定注文数量
+      row: 6
+      type: select
+      options:
+        - value: ''
+          label: 推定数量をお選びください...
+        - value: sample
+          label: サンプル・試作品のみ
+        - value: 5-10
+          label: 5〜10台（標準MOQ）
+        - value: 100-500
+          label: 100〜500台
+        - value: 500-plus
+          label: 500台以上（ボリューム価格）
+    - name: customization
+      label: カスタマイズは必要ですか？
+      row: 7
+      type: select
+      options:
+        - value: ''
+          label: カスタマイズの種類をお選びください...
+        - value: none
+          label: 標準製品（カスタマイズなし）
+        - value: logo
+          label: カスタムロゴ・ブランディングのみ
+        - value: full
+          label: フルOEM（サイズ、カラー、グラフィック、パッケージ）
+        - value: consultation
+          label: わからない — 相談が必要
+    - name: productInterest
+      label: 関心のある製品カテゴリ
+      row: 8
+      type: select
+      options:
+        - value: ''
+          label: 製品カテゴリをお選びください...
+        - value: all
+          label: すべての製品 / フルカタログ
+        - value: sup
+          label: SUPボード / パドルボード
+        - value: kayak
+          label: "インフレータブルカヤック"
+        - value: rib
+          label: RIBボート
+        - value: dinghy
+          label: "ディンギー / テンダー"
+        - value: safety
+          label: 安全装備 / ライフジャケット
+        - value: accessory
+          label: アクセサリー（ポンプ、オール、バッグ）
+    - name: subject
+      label: "件名"
+      row: 9
+    - name: message
+      label: "メッセージ"
+      row: 10
+      type: textarea
+      rows: 6
+features2_other_ways:
+  title: その他のお問い合わせ方法
+  columns: 3
+  items:
+    - title: "販売のお問い合わせ"
+      description: 見積り、構成、販売代理店申請、大量注文。
+      icon: tabler:shopping-bag
+    - title: "テクニカルサポート"
+      description: 保証、修理、スペアパーツ、使用に関するご質問。
+      icon: tabler:tool
+    - title: プレス＆パートナーシップ
+      description: メディアキット、スポンサーシップ、業界コラボレーション。
+      icon: tabler:news
+    - title: "電話"
+      description: +1 279 732 3333（米国本社）· +86 13305324192（工場）
+      icon: tabler:headset
+    - title: "メール"
+      description: info@aquafarer.com
+      icon: tabler:mail
+    - title: "グローバル本社・請求先"
+      description: Aquafarer LLC、ニューメキシコ州、アメリカ合衆国
+      icon: tabler:map-pin
+map:
+  title: 私たちの所在地
+  subtitle: 私たちの青島製造拠点をご覧ください
+  address: Economic Development Zone, Laixi, Qingdao, China, 266600
+  zoom: 15
+

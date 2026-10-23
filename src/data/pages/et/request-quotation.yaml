@@ -1,0 +1,306 @@
+hero_text:
+  tagline: Hangi hinnapakkumine
+  title: Esita hinnapäring<br />oma projekti jaoks
+  subtitle: Räägi meile oma nõuetest ja meie meeskond vastab üksikasjaliku hinnapakkumisega 2 tööpäeva jooksul.
+steps2_process:
+  title: Kuidas see töötab
+  subtitle: Neli lihtsat sammu päringust hinnapakkumiseni.
+  items:
+    - title: 'Samm 1: Esita oma nõuded'
+      description: Täida allolev vorm oma toote tüübi, koguse ja spetsifikatsioonidega. Mida rohkem detaile esitad, seda täpsem on hinnapakkumine.
+      icon: tabler:file-text
+    - title: 'Samm 2: Me vaatame üle ja anname nõu'
+      description: Meie insenerimeeskond vaatab üle sinu nõuded ja võib võta sinuga ühendust selgituste saamiseks. Annan soovitusi toote konfiguratsiooni ja valikute kohta.
+      icon: tabler:users
+    - title: 'Samm 3: Saate oma hinnapakkumise'
+      description: Saad üksikasjaliku hinnapakkumise, mis sisaldab ühiku hinda, MOQ, tarneaega, maksetingimusi ja saatmisvõimalusi. Tavaliselt 48 tunni jooksul.
+      icon: tabler:currency-dollar
+    - title: 'Samm 4: Proov ja tootmine'
+      description: Pärast hinnapakkumise aktsepteerimist jätkame proovitootmisega (kui see on kohaldatav) või otse massitootmisega. Regulaarne uuendamine kogu protsessi vältel.
+      icon: tabler:building-factory
+content_form:
+  tagline: Hinnapakkumise vorm
+  title: Räägi meile oma projektist
+  subtitle: Kõik väljad, millel on *, on kohustuslikud.
+  fields:
+    - name: Toote kategooria
+      type: select
+      options:
+        - RIB paat
+        - Täispuhutav paat
+        - SUP laua
+        - Täispuhutav süst
+        - Päästevest
+        - Merenduslik tarvik
+        - Kohandatud OEM/ODM
+    - name: Rakendus
+      type: select
+      options:
+        - Sukeldumiskeskus
+        - Kalapüük
+        - Mereturism / kuurort
+        - Otsing ja pääste
+        - Jahtide abilaev
+        - Kaubanduslik töölaev
+        - Valitsus / Sõjavägi
+        - OEM / Eramärgis
+        - Isiklik / Vaba aja kasutus
+        - Muu
+    - name: Kogus
+      type: text
+      placeholder: nt 50 ühikut
+    - name: Sihtturg
+      type: text
+      placeholder: nt Euroopa, Põhja-Ameerika, Lähis-Ida
+    - name: Tarneaeg riik
+      type: text
+      placeholder: nt Itaalia, UAE, USA, Austraalia
+    - name: Materjali eelistus
+      type: select
+      options:
+        - Ilma eelistuseta
+        - Meretööstuse PVC (1100 dtex)
+        - Premium Hypalon / CSM
+        - Klaaskiust korpus
+        - Alumiiniumist korpus
+    - name: Mootori nõuded
+      type: text
+      placeholder: nt 60 HP välimootor, ilma mootorita, kaks 115 HP
+    - name: Kohandamise vajadus
+      type: text
+      placeholder: nt kohandatud värvid, bränd/logo, pakend, spetsiaalsed lisaseadmed
+    - name: Ajakava
+      type: text
+      placeholder: nt tarne 90 päeva jooksul
+    - name: Täiendavad nõuded
+      type: textarea
+      placeholder: Kirjeldage oma rakendust, tehnilisi spetsifikatsioone või erisoove — lisage viidetele joonised, spetsifikatsioonid või lingid, kui need on olemas
+    - name: Laadi spetsifikatsioon üles
+      type: file
+      placeholder: Laadige üles oma spetsifikatsioonileht, joonis või viitedokument (PDF, DWG, DXF)
+    - name: Laadige üles logo / kunstiteos
+      type: file
+      placeholder: Laadige oma logo või kunstiteos kohandatud brändingu jaoks (AI, EPS, PNG)
+content_rfq_types:
+  tagline: 3-tasandiline RFQ süsteem
+  title: Valige õige<br />Päringu tase
+  subtitle: Erinevad projektid vajavad erinevat detailide taset. Valige vorm, mis vastab teie ostufaasile.
+  items:
+    - title: Kiirpäring
+      description: 5-6 väli, 30 sekundit. Esialgseks kontaktiks, üldisteks küsimusteks või ressursside allalaadimise järelepärimisteks. Vastame 24 tunni jooksul põhiinfo ja järgnevate sammudega.
+      icon: tabler:bolt
+    - title: Tavaline RFQ
+      description: 8-10 väli, 2 minutit. Konkreetsete toodete hinnapäringuteks koos mudelivaliku, koguse ja tarne nõuetega. Saate üksikasjaliku hinnapakkumise 48 tunni jooksul.
+      icon: tabler:file-text
+    - title: Projekt RFQ
+      description: 10-14 väli, 5 minutit. RIB, puhkekeskuse varustuse, pääste- või valitsusprojektide jaoks, mis vajavad kohandatud konfiguratsiooni, nõuetele vastavuse dokumentatsiooni ja mitmeaastast tarneplaneerimist. Määratakse pühendunud projektijuht.
+      icon: tabler:clipboard-list
+form_quick:
+  title: Kiirpäring
+  subtitle: Kiire kontakt üldiste küsimuste ja esialgsete info päringute korral.
+  fields:
+    - name: täisnimi
+      label: Täisnimi
+      type: text
+      required: true
+      placeholder: Teie täisnimi
+    - name: äriemail
+      label: Ärimeil
+      type: email
+      required: true
+      placeholder: sina@ettevõte.com
+    - name: ettevõtteNimi
+      label: Ettevõtte nimi
+      type: text
+      required: true
+      placeholder: Teie ettevõte
+    - name: ostjaTüüp
+      label: Ma olen...
+      type: select
+      required: true
+      options:
+        - Hulgimüüja / Impordija
+        - Brändi omanik / Eramärgiga toode
+        - Puhkekeskus / Veekeskus
+        - Üürifirma operaator
+        - Valitsus / Päästeagentuur
+        - Sukeldumis- / Kalapüügioperaator
+        - Meremehhaaniku / Parandaja
+        - Muu
+    - name: tootehuvi
+      label: Tootehuvi
+      type: multiselect
+      required: true
+      options:
+        - RIB Paadid
+        - Täispuhutavad paadid
+        - SUP Tahvlid
+        - Ohutusvarustus
+        - Aksessuaarid
+        - OEM/ODM Kohandatud
+    - name: message
+      label: Mida vajate?
+      type: textarea
+      required: false
+      placeholder: Lühike kirjelduse teie nõudmistest...
+form_standard:
+  title: Tavaline RFQ
+  subtitle: Üksikasjalik hinnapäring konkreetsete toodete ja koguste kohta.
+  fields:
+    - name: täisnimi
+      label: Täisnimi
+      type: text
+      required: true
+    - name: äriemail
+      label: Ärimeil
+      type: email
+      required: true
+    - name: ettevõtteNimi
+      label: Ettevõtte nimi
+      type: text
+      required: true
+    - name: ostjaTüüp
+      label: Ostjatüüp
+      type: select
+      required: true
+    - name: toote mudel
+      label: Toote mudel / tüüp
+      type: text
+      required: true
+      placeholder: nt AF580 RIB, AF380 Täispuhutav
+    - name: quantity
+      label: Hinnanguline kogus
+      type: text
+      required: true
+      placeholder: nt 10-20 ühikut
+    - name: sihtturg
+      label: Sihtturg / piirkond
+      type: text
+      required: true
+      placeholder: nt EL, Põhja-Ameerika, Lähis-Ida
+    - name: tarneväljavaade
+      label: Soovitud tarne
+      type: select
+      required: true
+      options:
+        - 30 päeva jooksul
+        - 30–60 päeva
+        - 60–90 päeva
+        - Planeerimine ette (üle 90 päeva)
+        - Ainult uurimine
+    - name: kokkuleppeVajalik
+      label: Nõuete järgimise nõuded
+      type: multiselect
+      required: false
+      options:
+        - CE / RCD 2013/53/EL
+        - UKCA
+        - USCG
+        - ISO 9001
+        - BSCI
+        - REACH
+        - Puudub / Pole kindel
+    - name: message
+      label: Lisainfo
+      type: textarea
+      required: false
+form_project:
+  title: Projekt RFQ
+  subtitle: Üksikasjalik projektipäring laevastiku, eritellimuse või valitsuse hankele.
+  fields:
+    - name: täisnimi
+      label: Täisnimi
+      type: text
+      required: true
+    - name: äriemail
+      label: Ärimeil
+      type: email
+      required: true
+    - name: ettevõtteNimi
+      label: Ettevõtte nimi
+      type: text
+      required: true
+    - name: ostjaTüüp
+      label: Ostjatüüp
+      type: select
+      required: true
+    - name: projektTüüp
+      label: Projekti tüüp
+      type: select
+      required: true
+      options:
+        - Kuurorti / Hotelli laevastik
+        - Rendilaevastik
+        - Pääste / Patrullilaevastik
+        - Sukeldumiskeskuse laevastik
+        - Valitsuse hanked
+        - Era-label / OEM
+        - Müüja laoseisu tellimus
+        - Muu
+    - name: paadiTüübid
+      label: Nõutavad paaditüübid
+      type: multiselect
+      required: true
+      options:
+        - RIB Paadid
+        - Täispuhutavad paadid / Paadid
+        - SUP Tahvlid
+        - Kajakid
+        - Ohutusvarustus
+    - name: laevastikuSuurus
+      label: Laevastiku suurus / Koguse vahemik
+      type: text
+      required: true
+      placeholder: nt 20–50 ühikut 12 kuu jooksul
+    - name: kohandatud nõuded
+      label: Kohandatud seadistamise vajadused
+      type: textarea
+      required: false
+      placeholder: Paatide suurus, toru materjal, tekikujundus, brändingu nõuded...
+    - name: kokkuleppeVajalik
+      label: Vastavus- ja sertifitseerimisnõuded
+      type: multiselect
+      required: true
+      options:
+        - CE / RCD 2013/53/EL
+        - UKCA
+        - USCG Tüüp III/V
+        - ISO 9001
+        - BSCI
+        - REACH / RoHS
+        - Kohaliku turu sertifitseerimine
+    - name: sihtturg
+      label: Sihtturg
+      type: text
+      required: true
+    - name: eelarveulatus
+      label: Eelarve vahemik
+      type: select
+      required: false
+      options:
+        - Alla 10 000 dollari
+        - $10,000 - $50,000
+        - $50,000 - $200,000
+        - $200,000+
+        - Eelistaks mitte öelda
+    - name: tarneväljavaade
+      label: Projekti ajakava
+      type: select
+      required: true
+      options:
+        - Kriitiline (30 päeva jooksul)
+        - Standardne (30–60 päeva)
+        - Plaanitakse (60–90 päeva)
+        - Tuleviku planeerimine (90+ päeva)
+    - name: message
+      label: Projekti üksikasjad ja nõuded
+      type: textarea
+      required: false
+      placeholder: Kirjeldage oma projekti, rakendust ja kõiki konkreetseid nõudeid...
+cta:
+  title: Eelistate arutada e-posti teel?
+  subtitle: Saatke oma päring otse meie müügimeeskonnale ja me vastame 24 tunni jooksul.
+  actions:
+    - variant: primary
+      text: Saatke meile e-kiri otse
+      href: /contact

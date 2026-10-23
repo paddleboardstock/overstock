@@ -1,0 +1,137 @@
+hero:
+  tagline: Kontrola kvality
+  title: Systém kontroly kvality<br />pre OEM námornú výrobu
+  subtitle: Viacstupňový kontrolný proces zahŕňajúci prichádzajúce materiály, priebežnú výrobu, tlakové testovanie, finálnu montáž a overenie pred odoslaním. Každá šarža je sledovateľná, každý test je zaznamenaný.
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-pressure-testing.webp
+    alt: Aquafarer Proces kontroly kvality a tlakového testovania
+stats:
+  title: QC podľa čísel
+  stats:
+    - title: Jednotky testované tlakom
+      amount: 100%
+    - title: Maximálny pokles tlaku
+      amount: <5%
+    - title: Inšpektori QC
+      amount: '12'
+    - title: Zachované záznamy
+      amount: 10 rokov
+content_system:
+  tagline: Prehľad systému QC
+  title: Integrovaná kvalita<br />Riadiaci rámec
+  subtitle: Náš systém kontroly kvality funguje nezávisle od výroby a priamo podáva správy manažmentu. Žiadna šarža nie je odoslaná bez podpísaného schválenia kvality z laboratória kvality.
+  items:
+    - title: Nezávislé laboratórium kvality
+      description: Naše laboratórium kvality funguje ako samostatná funkcia od výroby. Inšpektori kontroly kvality podliehajú manažérovi kvality, nie riaditeľovi výroby. Táto organizačná nezávislosť zabezpečuje, že rozhodnutia o kvalite sa robia objektívne — termíny výroby nikdy neprevažujú nad požiadavkami na kvalitu.
+      features:
+        - Podlieha priamo manažmentu, nezávisle od produkcie
+        - Oprávnený zastaviť výrobu pre problémy s kvalitou
+        - 12 špecializovaných kontrolných inšpektorov vo všetkých fázach
+        - Všetky testovacie zariadenia kalibrované ročne
+    - title: Dávková sledovateľnosť
+      description: Každá várka surovín má v našom systéme priradené jedinečné číslo šarže ERP . Od príchodu materiálu cez výrobu až po hotový produkt sa zoznam materiálov každej lode napája späť na pôvodné dávky dodávateľov. To umožňuje plnú sledovateľnosť pri akejkoľvek kontrole kvality alebo dodržiavania predpisov.
+      features:
+        - ERP-založené sledovanie lotu od materiálu po hotový produkt
+        - Fyzické dávkové štítky na každom pracovnom príkaze
+        - 100% pokrytie materiálu — PVC, Hypalon, hardvér, lepidlá
+        - Záznamy uchovávané 10 rokov (CEpožiadavka 2013/53/EÚ)
+    - title: Normy a súlad
+      description: Naše postupy kontroly kvality sú v súlade s medzinárodnými normami. Produkty sú certifikované CE podľa smernice EÚ o rekreačných plavidlách 2013/53/EÚ. Náš systém riadenia kvality je certifikovaný ISO 9001. Sociálna súladnosť sa udržiava BSCI prostredníctvom certifikácie.
+      features:
+        - CE certifikácia (EÚ 2013/53/EÚ)
+        - ISO 9001:2015 Riadenie kvality
+        - BSCI Certifikácia sociálnej súladnosti
+        - REACH a RoHS materiálová súladnosť
+        - UKCA Certifikácia po Brexite
+content_inspection:
+  tagline: Inšpekčné fázy
+  title: Šesťstupňové<br />Inšpekčný proces
+  subtitle: Každý produkt prechádza 6 kontrolnými fázami s dokumentovanými kontrolnými bodmi kontroly kvality. Chyby sa odhalia včas, nápravné opatrenia sú okamžité a každá šarža je plne sledovateľná.
+  stages:
+    - stage: '1'
+      title: Inšpekcia prichádzajúceho materiálu
+      description: Všetky prichádzajúce materiály sú zaznamenávané podľa čísla šarže/šarže a umiestnené do karantény až do schválenia kontrolou kvality. PVC/Hypalon Textilné kotúče sa testujú na pevnosť v ťahu (ASTM D751), odolnosť voči roztrhnutiu (ISO4674) a hrúbku.Drop-stitch Jadrá, ventily, lepidlá a hardvér sa vizuálne kontrolujú a merajú podľa špecifikácií.
+      checks: Pevnosť v ťahu ASTM D751, odolnosť proti trhnutiu ISO 4674, hrúbkomer, lepiaca viskozita, vizuálny sken defektov
+      threshold: 100 % testovaných batérií. Zamietnuť, ak ťažnosť < 90 % špecifikácie, roztrhnutie < minimálna špecifikácia alebo akýkoľvek vizuálny defekt
+    - stage: '2'
+      title: Kontrola kvality v procese — rezanie a príprava
+      description: CNC-rezané panely sa rozmerovo kontrolujú voči CAD zdrojovým súborom každých 20. panelov. Kvalita hrán sa kontroluje na rozstrapkanie, nerovnomerné rezy alebo rozmerový posun. Počet panelov sa overuje podľa BOM pre každú výrobnú šaržu pred prechodom materiálov na zváranie.
+      checks: Kontrola rozmerov voči CAD DXF súborom, kontrola kvality hrán, overenie počtu panelov
+      threshold: Tolerancia ±0,5 mm. Odmietnuť dávku, ak >2 % mimo tolerancie
+    - stage: '3'
+      title: Kontrola kvality počas procesu — zváranie a spájanie
+      description: Počas výroby sa kvalita zvaru neustále monitoruje. Testy odlupovania (ASTM D751) sa vykonávajú na vzorkách každých 50 jednotiek. Šírka zvaru sa meria podľa špecifikácie. Záznamy teploty horúceho vzduchu sa kontrolujú z hľadiska konzistencie. Každý spoj je vizuálne kontrolovaný pod podsvietením na prítomnosť kanála alebo dutín.
+      checks: Peel test ASTM D751 každých 50 jednotiek, meranie šírky zvaru, prehľad horúceho vzduchového záznamu o teplote, kontrola spojov podsvietenia
+      threshold: Izolačná pevnosť minimálne 8 N/cm. Tolerancia šírky zvaru ±1 mm. Akékoľvek viditeľné kanálovanie = odmietnutie
+    - stage: '4'
+      title: Montážna kontrola kvality
+      description: Každá jednotka nasleduje 100-bodový kontrolný zoznam montáže, ktorý podpisuje vedúci tímu. Funkcia ventilu sa testuje počas 10 cyklov otvorenia/zatvárania. Overuje sa krútiaci moment hardvéru. Vizuálna kontrola pokrýva povrchovú úpravu, farebnú konzistenciu, umiestnenie štítkov a kompletnosť príslušenstva.
+      checks: 100-bodový kontrolný zoznam na jednotku, test funkcie ventilu, overenie krútiaceho momentu hardvéru, vizuálna kontrola
+      threshold: 'Politika nulových chýb pri bezpečnostne kritických položkách (ventily, D-krúžky, rukoväte). Menšie kozmetické: AQL 2,5 (ISO 2859)'
+    - stage: '5'
+      title: Tlakové testovanie
+      description: Každá komora sa nafúkne na 1,25× menovitý tlak a drží sa 24-48 hodín. Tlakové senzory zaznamenávajú nepretržite počas celej doby držania. Teplotou kompenzované hodnoty zabezpečujú presnosť. Každá komora s poklesom tlaku presahuje 5 % sa odmieta a posiela na opätovnú kontrolu spoja s 100% opätovným testom celej výrobnej série.
+      checks: 24-48 hodín záznam zadržiavania tlaku, denná kalibrácia senzora, teplota kompenzovaná meranie, opätovné otestovanie spoja po oprave
+      threshold: Maximálny pokles tlaku 5 % počas 24 hodín pri stabilnej teplote. Prekročenie = 100 % opätovné testovanie celej dávky
+    - stage: '6'
+      title: Záverečná kontrola a uvoľnenie zásádky
+      description: Záverečná vizuálna a funkčná kontrola pred balením. Povrchové chyby, farebná konzistencia, overenie etikety/BIN, integrita balenia a kompletnosť príslušenstva sa kontrolujú podľa zákazníckej objednávky. Jednotky sa vákuovo balia, balia a paletizujú. Pred opustením akéhokoľvek produktu je potrebné konečné schválenie kontroly kvality.
+      checks: Úplná vizuálna kontrola, kontrolný zoznam príslušenstva podľa SKU, test pádu balenia (náhodný vzor 1 m), overenie čiarového kódu/štítku skenerom
+      threshold: AQL 2,5 vážne chyby, AQL 4,0 menšie. Žiadne bezpečnostné chyby netolerované. 100 % jednotiek vizuálne kontrolovaných
+content_equipment:
+  tagline: Testovacie vybavenie
+  title: QC laboratórium<br />Zariadenia
+  subtitle: Naše laboratórium kvality je vybavené špeciálnym testovacím vybavením na overenie materiálov, integrity zvárania a validáciu výkonu produktu.
+  columns: 3
+  items:
+    - title: Stroj na ťahové skúšky
+      description: Meria ťahovú pevnosť a predĺženie látky podľa ASTM D751. Používa sa na vstupnú kontrolu QC všetkých PVC, Hypalon a drop-stitch dávok látok.
+      icon: tabler:scale
+    - title: Teplotná komora
+      description: Klimatická komora na testovanie odolnosti UV (ASTM G154) a testovanie flexibility pri nízkej teplote. Simuluje extrémne prevádzkové podmienky.
+      icon: tabler:temperature
+    - title: Tlakové senzory a záznamníky
+      description: Digitálne tlakové senzory s kontinuálnym záznamom dát pre 24-48 hodinové testy udržania vzduchu. Teplotne kompenzované pre presnosť.
+      icon: tabler:wind
+    - title: Prístroj na skúšku odlupovania
+      description: Kalibrované zariadenie na testovanie pevnosti zváracích švov. Náhodné vzorky z každej výrobnej dávky.
+      icon: tabler:files
+    - title: Nádrž na detekciu únikov
+      description: Vodná nádrž na testovanie tesnosti ponorením nafúknutých komôr. Vizuálna detekcia bubliniek na overenie integrity švov a ventilov.
+      icon: tabler:ripple
+    - title: Inšpekčné nástroje
+      description: Kalibrované meracie nástroje — meradlá hrúbky, momentové kľúče, dimenzionálne posuvné meradlá, tvrdosť testery pre QC stanice výroby.
+      icon: tabler:tools
+content_metrics:
+  tagline: Výkonnosť QC
+  title: Kontrola kvality<br />Metódy merania
+  subtitle: Skutočné údaje o prechode/zlyhaní z našej výrobnej linky. Tieto metriky sú monitorované denne a mesačne revidované vedením.
+  columns: 3
+  items:
+    - title: 100 % Jednotiek testovaných
+      description: Každá komora každej lode je tlakovo testovaná pred odoslaním. Žiadne vzorkovanie — 100 % kontrola integrity tlaku.
+      icon: tabler:check
+    - title: <5 % Pokles tlaku
+      description: Maximálne prípustná strata tlaku za 24-48 hodín pri tlaku 1,25× nominálneho tlaku. Každá komora, ktorá prekročí tento prah, vyvoláva opätovný test dávky.
+      icon: tabler:gauge
+    - title: AQL 2,5
+      description: Prijateľná úroveň kvality pre vážne chyby podľa štandardu vzorkovania ISO 2859. Žiadna tolerancia na bezpečnostne kritické chyby.
+      icon: tabler:clipboard-check
+    - title: 24-48 Hodinové udržanie
+      description: 'Trvanie udržania tlaku sa líši podľa kategórie produktu. Komory RIB: 48 hodín. SUP a nafukovacie čluny: 24-48 hodín.'
+      icon: tabler:clock
+    - title: Testovací tlak 1,25×
+      description: Bezpečnostná rezerva v každej komore — testovaná pri 25 % nad menovitým tlakom, aby sa zabezpečila rezerva nad maximálnymi prevádzkovými podmienkami.
+      icon: tabler:arrow-up
+    - title: 0 % bezpečnostných chýb
+      description: Politika nulovej tolerancie voči bezpečnostne kritickým chybám — ventily, D-krúžky, švy a výtlakové komory. Akákoľvek chyba = 100 % opakovaná kontrola.
+      icon: tabler:shield
+cta:
+  title: Požiadať o dokumentáciu kvality
+  subtitle: Poskytujeme kompletné balíky dokumentácie kvality vrátane testovacích protokolov, certifikátov materiálov a deklarácií zhody pri každej dodávke. Kontaktujte nás pre vzorky.
+  actions:
+    - variant: primary
+      text: Požiadať o dokumentáciu QC
+      href: /contact
+    - text: Zobraziť testovacie protokoly
+      href: /quality

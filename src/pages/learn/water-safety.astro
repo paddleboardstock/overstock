@@ -1,0 +1,91 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+
+const metadata = {
+  title: `Water Safety — Paddling Safety Guides & Tips — ${SITE.name}`,
+  description:
+    'Essential safety knowledge for every paddler — PFD selection, weather reading, self-rescue techniques, and equipment checklists.',
+};
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Learn' }, { name: 'Water Safety' }];
+
+const topics = [
+  {
+    title: 'SUP Safety Checklist',
+    desc: 'Pre-launch checklist covering weather, equipment, PFD, leash, and communication.',
+    href: '/v2/sup-safety-guide',
+  },
+  {
+    title: 'Life Jacket Guide',
+    desc: 'PFD types, fit, certification, and when each type is required by law.',
+    href: '/v2/life-jacket-buying-guide',
+  },
+  {
+    title: 'Weather Reading',
+    desc: 'Interpret marine forecasts, identify cloud patterns, and understand wind effects on water.',
+    href: '/v2/weather-planning-water-sports',
+  },
+  {
+    title: 'Self-Rescue Techniques',
+    desc: 'Self-rescue, T-rescue, and re-entry techniques for SUP and kayak paddlers.',
+    href: '/v2/sup-self-rescue',
+  },
+  {
+    title: 'Ocean Safety',
+    desc: 'Tides, currents, rip awareness, and safe paddling practices for coastal environments.',
+    href: '/v2/ocean-safety-and-responsibility',
+  },
+  {
+    title: 'River Safety',
+    desc: 'Reading river features, understanding flow rates, and safety protocols for moving water.',
+    href: '/v2/ocean-kayaking-beginners',
+  },
+  {
+    title: 'Night Paddling',
+    desc: 'Navigation after dark — lighting requirements, route memory, and hazard awareness.',
+    href: '/v2/sup-navigation-guide',
+  },
+  {
+    title: 'Safety Equipment',
+    desc: 'Essential safety gear — whistles, lights, communication devices, and first aid kits.',
+    href: '/safety',
+  },
+];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <JsonLd
+    type="Article"
+    article={{
+      headline: metadata.title,
+      description: metadata.description,
+      datePublished: '2024-10-15',
+      dateModified: '2025-05-30',
+    }}
+  />
+  <section class="px-6 py-16 max-w-5xl mx-auto text-center">
+    <p class="text-sm font-semibold text-primary uppercase tracking-wider">Water Safety</p>
+    <h1 class="mt-3 text-4xl md:text-5xl font-bold">Paddling Safety Guides</h1>
+    <p class="mt-3 text-lg text-muted max-w-2xl mx-auto">
+      Essential safety knowledge for every paddler — from PFD selection to self-rescue techniques.
+    </p>
+  </section>
+
+  <section class="px-6 pb-20 max-w-6xl mx-auto">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {
+        topics.map((t) => (
+          <a
+            href={t.href}
+            class="group block bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-all hover:-translate-y-0.5"
+          >
+            <h3 class="font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">{t.title}</h3>
+            <p class="mt-2 text-sm text-gray-500 leading-relaxed">{t.desc}</p>
+            <span class="mt-4 inline-flex text-sm font-medium text-sky-600 group-hover:text-sky-700">Read guide →</span>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+</Layout>

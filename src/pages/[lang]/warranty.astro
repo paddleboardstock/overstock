@@ -1,0 +1,194 @@
+---
+const PAGE_DESC: Record<string, { description: string }> = {
+  de: {
+    description:
+      'Aquafarer 5-jährige eingeschränkte Garantie für Schlauchboote, SUPs und Meeresprodukte. Garantiebedingungen für Schlauchgewebe, Nähte, Rumpfstruktur und Ventile.',
+  },
+  es: {
+    description:
+      'Cobertura de garantía limitada de 5 años de Aquafarer para barcos inflables, tablas de SUP y productos marinos. Condiciones de garantía para tejido de cámaras, costuras, estructura del casco y válvulas.',
+  },
+  fr: {
+    description:
+      'Garantie limitée de 5 ans Aquafarer pour les bateaux gonflables, planches de SUP et produits marins. Conditions de garantie pour tissu des flotteurs, coutures, structure de coque et valves.',
+  },
+  it: {
+    description:
+      'Garanzia limitata di 5 anni Aquafarer per gommoni, SUP e prodotti nautici. Termini di garanzia per tessuto dei tubolari, cuciture, struttura dello scafo e valvole.',
+  },
+  cs: {
+    description:
+      'Aquafarer 5letá omezená záruka na nafukovací čluny, SUP a námořní produkty. Záruční podmínky pro tkaninu trubek, švy, konstrukci trupu a ventily.',
+  },
+  sv: {
+    description:
+      'Aquafarer 5-års begränsad garanti på uppblåsbara båtar, SUP:er och marina produkter. Garantivillkor för rörformigt tyg, sömmar, skrovstruktur och ventiler.',
+  },
+  da: {
+    description:
+      "Aquafarer 5-års begrænset garanti på oppustelige både, SUP'er og marineprodukter. Garantibetingelser for rørformet stof, sømme, skrogstruktur og ventiler.",
+  },
+  el: {
+    description:
+      'Aquafarer 5 χρόνια περιορισμένη εγγύηση σε φουσκωτά σκάφη, SUP και ναυτιλιακά προϊόντα. Προϋποθέσεις εγγύησης για σωληνωτό ύφασμα, ραφές, δομή γάστρας και βαλβίδες.',
+  },
+  no: {
+    description:
+      'Aquafarer 5-års begrenset garanti på oppblåsbare båter, SUP-er og marine produkter. Garantibetingelser for rørformet stoff, sømmer, skrogstruktur og ventiler.',
+  },
+  ru: {
+    description:
+      'Aquafarer 5-летняя ограниченная гарантия на надувные лодки, сапы и морскую продукцию. Гарантийные условия на трубчатую ткань, швы, конструкцию корпуса и клапаны.',
+  },
+  nl: {
+    description:
+      "Aquafarer 5 jaar beperkte garantie op opblaasbare boten, SUP's en maritieme producten. Garantievoorwaarden voor buisweefsel, naden, rompconstructie en kleppen.",
+  },
+  fi: {
+    description:
+      'Aquafarer 5 vuoden rajoitettu takuu kumiveneille, SUP:ille ja merituotteille. Takuuehdot putkimaiselle kankaalle, saumoille, runkorakenteelle ja venttiileille.',
+  },
+  pl: {
+    description:
+      'Aquafarer 5-letnia ograniczona gwarancja na pontony, deski SUP i produkty morskie. Warunki gwarancji na tkaninę rurową, szwy, konstrukcję kadłuba i zawory.',
+  },
+  ar: {
+    description:
+      'Aquafarer ضمان محدود لمدة 5 سنوات على القوارب القابلة للنفخ وSUPs والمنتجات البحرية. شروط الضمان للنسيج الأنبوبي، والدرزات، وهيكل الهيكل والصمامات.',
+  },
+  pt: {
+    description:
+      'Aquafarer Garantia limitada de 5 anos para barcos infláveis, SUPs e produtos náuticos. Condições de garantia para tecido tubular, costuras, estrutura do casco e válvulas.',
+  },
+  ja: {
+    description:
+      'Aquafarer インフレータブル ボート、SUP、マリン製品に対する 5 年間の限定保証。管状生地、縫い目、船体構造、バルブの保証条件。',
+  },
+};
+const PAGE_META: Record<string, { title: string }> = {
+  de: { title: 'Garantie' },
+  es: { title: 'Garantía' },
+  fr: { title: 'Garantie' },
+  it: { title: 'Garanzia' },
+  pt: { title: 'Garantia' },
+  ar: { title: 'الضمان' },
+  ru: { title: 'Гарантия' },
+  pl: { title: 'Gwarancja' },
+  nl: { title: 'Garantie' },
+  sv: { title: 'Garanti' },
+  no: { title: 'Garanti' },
+  el: { title: 'Εγγύηση' },
+  fi: { title: 'Takuu' },
+  da: { title: 'Garanti' },
+  cs: { title: 'Záruka' },
+  ja: { title: '保証' },
+};
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+import { languages } from '~/i18n/config';
+import { getPageContent, setPageContentData } from '~/i18n/page-content';
+import __pageData from '~/i18n/generated/pages/warranty.ts';
+import { localizePageTitle } from '~/i18n/page-title';
+import { articleSchema } from '~/lib/seo/schema';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => getUiForLang(lang)?.[key] || '';
+setPageContentData(__pageData);
+const page = getPageContent(lang, 'warranty') || {};
+
+const metadata = {
+  title: localizePageTitle(page, PAGE_META[lang]?.title || `Warranty — ${SITE.name}`),
+  description:
+    PAGE_DESC[lang]?.description ||
+    'Aquafarer 5-year limited warranty coverage for inflatable boats, SUPs, and marine products. Tube fabric, seams, hull structure, and valve warranty terms.',
+};
+
+const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: 'Warranty' }];
+
+const graphJsonLd = articleSchema({
+  headline: page.headline || 'Aquafarer Manufacturer Limited Warranty',
+  description: page.seo?.description || 'Aquafarer 5-year limited warranty on inflatable marine products.',
+  datePublished: page.seo?.datePublished || '2024-01-01',
+  dateModified: page.seo?.dateModified || '2026-06-01',
+  author: SITE.name,
+  publisher: SITE.name,
+});
+
+const faqSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What warranty does Aquafarer offer?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: '5-year warranty on boats and kayaks, 2-year warranty on SUP boards, covering manufacturing defects in materials and workmanship.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What does the warranty cover?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Manufacturing defects in materials and workmanship including seam failures, valve defects, and material delamination under normal use.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is not covered by warranty?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Normal wear and tear, damage from misuse, improper storage, unauthorized modifications, and cosmetic issues that do not affect performance.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How do I make a warranty claim?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Contact your authorized dealer or submit a claim via the contact page with your proof of purchase, product serial number, and photos of the defect.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Does the warranty apply to commercial use?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. The same warranty terms apply to commercial and recreational use, provided the product is used within its rated specifications.',
+      },
+    },
+  ],
+});
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <script
+    slot="before"
+    is:inline
+    type="application/ld+json"
+    set:html={graphJsonLd ? JSON.stringify(graphJsonLd) : ''}
+  />
+
+  <section class="max-w-4xl mx-auto py-24 px-6">
+    <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">{page.label || 'Warranty'}</span>
+    <h1 class="mt-4 text-4xl font-semibold text-gray-900 dark:text-gray-100">
+      {page.headline || 'Manufacturer Limited Warranty'}
+    </h1>
+    <p class="mt-4 text-lg text-gray-500 dark:text-gray-400">
+      {page.subtitle || 'Aquafarer stands behind the quality of every product we manufacture.'}
+    </p>
+  </section>
+
+  <section class="max-w-4xl mx-auto pb-24 px-6">
+    <div class="prose prose-gray dark:prose-invert max-w-none" set:html={page.body || ''} />
+  </section>
+  <script is:inline type="application/ld+json" set:html={faqSchema} />
+</Layout>

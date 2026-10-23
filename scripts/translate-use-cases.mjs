@@ -1,0 +1,211 @@
+#!/usr/bin/env node
+/**
+ * translate-use-cases.mjs
+ *
+ * `/{lang}/use-cases/<slug>/` is rendered by `src/lib/geo-v4/templates.ts`
+ * (`useCaseFromNode`) from the `use-case` nodes in `src/content/graph/nodes.ts`.
+ * Those nodes carry `name` in 35 languages but `description`, `features`,
+ * `useCases` and `faq` only in en/de/es/fr/it, and `useCaseFromNode` hardcodes the
+ * English section headings — so every other locale shows an English body.
+ *
+ * This script translates the English fields of the six rendered nodes plus the four
+ * section headings and writes `src/lib/use-cases-l10n-mt.ts`. `useCaseFromNode`
+ * prefers the curated node fields and falls back to this map, so nothing curated is
+ * overwritten. (`fishing` is skipped: `use-cases/fishing.astro` is a static page that
+ * takes precedence over the `[slug]` route.)
+ *
+ * Usage:
+ *   node scripts/translate-use-cases.mjs                 # translate + emit
+ *   node scripts/translate-use-cases.mjs --langs=bg,ko   # subset
+ *   node scripts/translate-use-cases.mjs --dry-run       # no API calls
+ *   node scripts/translate-use-cases.mjs --emit-only     # rewrite from cache
+ *   node scripts/translate-use-cases.mjs --force         # ignore cached data
+ *
+ * Requires Node >= 22.18 (native TypeScript type stripping) to import the node graph.
+ */
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath, pathToFileURL } from 'node:url';
+import { createEngine, fixTokenSpacing } from './lib/translate-lib.mjs';
+
+const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const LANGS_ALL = 'bg et he hr hu id ko lt lv ms ro sk sl sr th tl tr'.split(' ');
+const CACHE_FILE = path.resolve(ROOT, '.cache', 'use-cases-cache.json');
+const OUT_JSON = path.resolve(ROOT, '.cache', 'use-cases-out.json');
+const OUT_TS = path.resolve(ROOT, 'src/lib/use-cases-l10n-mt.ts');
+const NODES_SRC = path.resolve(ROOT, 'src/content/graph/nodes.ts');
+
+const SKIP_IDS = new Set(['fishing']);
+const HEADINGS = {
+  whatIs: 'What is this use case?',
+  keyFeatures: 'Key Features',
+  scenarios: 'Scenarios',
+  recommended: 'Recommended Equipment',
+};
+
+const argOf = (n) => {
+  const a = process.argv.find((s) => s.startsWith(`--${n}=`));
+  return a ? a.slice(n.length + 3) : null;
+};
+const LANGS = (argOf('langs') || LANGS_ALL.join(','))
+  .split(',')
+  .map((s) => s.trim())
+  .filter(Boolean);
+const DRY_RUN = process.argv.includes('--dry-run');
+const EMIT_ONLY = process.argv.includes('--emit-only');
+const FORCE = process.argv.includes('--force');
+
+const sanitizeText = (s) =>
+  fixTokenSpacing(
+    String(s)
+      .replace(/<\/?[A-Za-z][^>]{0,120}>/g, '')
+      .trim()
+  );
+
+async function loadNodes() {
+  const mod = await import(pathToFileURL(NODES_SRC).href);
+  const nodes = (mod.nodes || []).filter((n) => n.type === 'use-case' && !SKIP_IDS.has(n.id));
+  if (!nodes.length) throw new Error('no use-case nodes');
+  return nodes;
+}
+
+async function translateUnits(engine, units, lang) {
+  const list = [...units];
+  const map = new Map();
+  const { batchChars, batchLines } = engine.opts;
+  for (let i = 0; i < list.length;) {
+    const chunk = [];
+    let chars = 0;
+    while (
+      i < list.length &&
+      (chunk.length === 0 || (chunk.length < batchLines && chars + list[i].length + 1 <= batchChars))
+    ) {
+      chars += list[i].length + 1;
+      chunk.push(list[i]);
+      i++;
+    }
+    const out = await engine.translateBatch(chunk, lang);
+    chunk.forEach((t, k) => map.set(t, out[k]));
+  }
+  return map;
+}
+
+const enItems = (node) => ({
+  description: node.description?.en || '',
+  features: node.features?.en || [],
+  useCases: node.useCases?.en || [],
+  faq: node.faq?.en || [],
+});
+
+function emit(data, nodes) {
+  // Emit every cached locale (not just --langs) so a subset run never drops the rest.
+  const lanes = Object.keys(data).filter((l) => data[l]);
+  const pages = {};
+  const headings = {};
+  for (const lang of lanes) {
+    pages[lang] = {};
+    for (const node of nodes) {
+      const src = enItems(node);
+      const tr = data[lang].nodes[node.id];
+      pages[lang][node.id] = {
+        description: sanitizeText(tr.description) || src.description,
+        features: src.features.map((f, i) => sanitizeText(tr.features[i]) || f),
+        useCases: src.useCases.map((u, i) => sanitizeText(tr.useCases[i]) || u),
+        faq: src.faq.map((f, i) => ({ q: sanitizeText(tr.faq[i].q) || f.q, a: sanitizeText(tr.faq[i].a) || f.a })),
+      };
+    }
+    headings[lang] = {
+      whatIs: sanitizeText(data[lang].headings.whatIs) || HEADINGS.whatIs,
+      keyFeatures: sanitizeText(data[lang].headings.keyFeatures) || HEADINGS.keyFeatures,
+      scenarios: sanitizeText(data[lang].headings.scenarios) || HEADINGS.scenarios,
+      recommended: sanitizeText(data[lang].headings.recommended) || HEADINGS.recommended,
+    };
+  }
+  const body = [
+    '/**',
+    ' * Machine translations for `/{lang}/use-cases/<slug>/`.',
+    ' *',
+    ' * Generated by `scripts/translate-use-cases.mjs` from the English fields of the',
+    ' * `use-case` nodes in `src/content/graph/nodes.ts` plus the four section headings',
+    ' * that `useCaseFromNode` used to hardcode in English. Node fields that already',
+    ' * carry the locale always win at runtime.',
+    ' */',
+    'export interface UseCaseL10n {',
+    '  description: string;',
+    '  features: string[];',
+    '  useCases: string[];',
+    '  faq: Array<{ q: string; a: string }>;',
+    '}',
+    '',
+    'export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = ' +
+      JSON.stringify(pages, null, 2) +
+      ';',
+    '',
+    'export const USE_CASE_HEADINGS_MT: Record<',
+    '  string,',
+    '  { whatIs: string; keyFeatures: string; scenarios: string; recommended: string }',
+    '> = ' + JSON.stringify(headings, null, 2) + ';',
+    '',
+  ].join('\n');
+  fs.writeFileSync(OUT_TS, body, 'utf8');
+  return lanes;
+}
+
+async function main() {
+  const nodes = await loadNodes();
+  const items = new Map(nodes.map((n) => [n.id, enItems(n)]));
+  let data = fs.existsSync(OUT_JSON) ? JSON.parse(fs.readFileSync(OUT_JSON, 'utf8')) : {};
+  if (FORCE) for (const l of LANGS) delete data[l];
+
+  if (!EMIT_ONLY) {
+    const engine = createEngine({ cacheFile: CACHE_FILE, dryRun: DRY_RUN, log: console.log });
+    engine.load();
+    const units = new Set(Object.values(HEADINGS));
+    for (const it of items.values()) {
+      units.add(it.description);
+      for (const f of it.features) units.add(f);
+      for (const u of it.useCases) units.add(u);
+      for (const f of it.faq) {
+        units.add(f.q);
+        units.add(f.a);
+      }
+    }
+    units.delete('');
+    console.log(`nodes=${nodes.length} units=${units.size} cache=${engine.cacheSize}`);
+    if (!DRY_RUN) {
+      await engine.refreshSession();
+      console.log('Bing session ok');
+    }
+    const t0 = Date.now();
+    for (const lang of LANGS) {
+      const a0 = engine.stats.apiCalls;
+      const map = await translateUnits(engine, units, lang);
+      const tr = (s) => sanitizeText(map.get(s) ?? s) || s;
+      data[lang] = { nodes: {}, headings: {} };
+      for (const node of nodes) {
+        const it = items.get(node.id);
+        data[lang].nodes[node.id] = {
+          description: tr(it.description),
+          features: it.features.map(tr),
+          useCases: it.useCases.map(tr),
+          faq: it.faq.map((f) => ({ q: tr(f.q), a: tr(f.a) })),
+        };
+      }
+      for (const [k, v] of Object.entries(HEADINGS)) data[lang].headings[k] = tr(v);
+      engine.save();
+      if (!DRY_RUN) fs.writeFileSync(OUT_JSON, JSON.stringify(data), 'utf8');
+      console.log(`  ${lang}: ${nodes.length} nodes, api=${engine.stats.apiCalls - a0}`);
+    }
+    console.log(`translate done in ${Math.round((Date.now() - t0) / 1000)}s (api=${engine.stats.apiCalls})`);
+  }
+
+  if (!DRY_RUN) {
+    const lanes = emit(data, nodes);
+    console.log(`use-cases-l10n-mt.ts written: ${lanes.length} locales`);
+  }
+}
+
+main().catch((e) => {
+  console.error('FATAL:', e.message);
+  process.exit(1);
+});

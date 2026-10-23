@@ -1,0 +1,81 @@
+---
+export const prerender = true;
+
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+import { getPageContent, setPageContentData } from '~/i18n/page-content';
+import __pageData from '~/i18n/generated/pages/cases.ts';
+import { localizePageTitle } from '~/i18n/page-title';
+import { languages } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => getUiForLang(lang)?.[key] || '';
+setPageContentData(__pageData);
+const page = getPageContent(lang, 'cases');
+
+const hero = page.hero ?? {};
+const cases = page.features3_cases ?? {};
+const cta = page.cta ?? {};
+const lh = (h: string) => (h ? `/${lang}${h}` : h);
+const ctaActions = cta.actions?.map((a: any) => ({ ...a, href: lh(a.href) }));
+
+const metadata = {
+  title: localizePageTitle(page, `Case Studies — ${SITE.name} | OEM/ODM Marine Manufacturing Projects`),
+  description:
+    'Real projects from around the world: diving center fleets, OEM partnerships, rescue boat supply, resort equipment packages, and more.',
+};
+const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: 'Case Studies' }];
+const caseYears = ['2023', '2024', '2024', '2025', '2025', '2025', '2024', '2026', '2025', '2026', '2026', '2026'];
+const siteUrl = 'https://aquafarer.com';
+const caseSchemas = (cases.items || [])
+  .filter((c: any) => c.customer && c.country)
+  .map((c: any, i: any) => ({
+    '@type': 'CaseStudy',
+    '@id': `${siteUrl}/cases/#case-${i}`,
+    name: c.title,
+    description: c.description || `${c.customer} — ${c.challenge?.slice(0, 200)}`,
+    image: c.image,
+    customer: {
+      '@type': 'Organization',
+      name: c.customer,
+      address: { '@type': 'PostalAddress', addressCountry: c.country },
+    },
+    about: { '@type': 'Thing', name: c.industry || 'Marine Equipment' },
+    knowsAbout: c.product,
+    datePublished: caseYears[i] || '2026',
+    ...(c.quote
+      ? {
+          review: {
+            '@type': 'Review',
+            reviewBody: c.quote,
+            author: { '@type': 'Organization', name: c.customer },
+          },
+        }
+      : {}),
+  }));
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <script
+    is:inline
+    type="application/ld+json"
+    set:html={JSON.stringify({ '@context': 'https://schema.org', '@graph': caseSchemas })}
+  />
+  <Hero tagline={hero.tagline} image={hero.image} title={hero.title} subtitle={hero.subtitle} />
+  <Features3
+    tagline={cases.tagline}
+    title={cases.title}
+    subtitle={cases.subtitle}
+    columns={cases.columns}
+    items={cases.items}
+  />
+  <CallToAction title={cta.title} subtitle={cta.subtitle} actions={ctaActions} />
+</Layout>

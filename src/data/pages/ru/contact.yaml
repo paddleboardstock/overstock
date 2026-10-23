@@ -1,0 +1,131 @@
+hero_text:
+  tagline: Контакты
+  title: СВЯЖИТЕСЬ С НАМИ
+contact_form:
+  id: form
+  title: Отправьте нам сообщение
+  subtitle: По вопросам цен, техническим вопросам или партнёрству — напишите нам. Мы отвечаем в течение одного рабочего дня.
+  email_to: info@aquafarer.com
+  submit_button: Отправить
+  success_message: Спасибо! Ваше сообщение получено. Мы ответим в течение одного рабочего дня.
+  error_message: Произошла ошибка при отправке. Попробуйте снова или напишите нам напрямую по электронной почте.
+  default_country_code: '+1'
+  captcha:
+    label: 'Антиспам: решите следующую задачу'
+  fields:
+    - name: firstName
+      label: Имя
+      row: 1
+    - name: lastName
+      label: Фамилия
+      row: 1
+    - name: companyName
+      label: Компания
+      row: 2
+    - name: address
+      label: Адрес
+      row: 3
+    - name: zip
+      label: Индекс
+      row: 4
+    - name: country
+      label: Страна
+      row: 4
+      type: select
+      optionsKey: countries
+    - name: email
+      label: Email
+      row: 5
+      type: email
+    - name: tel
+      label: Телефон
+      row: 5
+      type: tel
+      withCountryCode: true
+    - name: orderVolume
+      label: Предполагаемый объем заказа
+      row: 6
+      type: select
+      options:
+        - value: ''
+          label: Выберите предполагаемый объем...
+        - value: sample
+          label: Только образцы / прототипы
+        - value: '5-10'
+          label: 50–100 единиц (стандартный MOQ)
+        - value: '100-500'
+          label: 100–500 единиц
+        - value: '500-plus'
+          label: 500+ единиц (оптовые цены)
+    - name: customization
+      label: Нужна кастомизация?
+      row: 7
+      type: select
+      options:
+        - value: ''
+          label: Выберите тип кастомизации...
+        - value: none
+          label: Стандартный продукт (без кастомизации)
+        - value: logo
+          label: Только логотип / брендирование
+        - value: full
+          label: Полный OEM (размер, цвет, графика, упаковка)
+        - value: consultation
+          label: Не уверен — нужна консультация
+    - name: productInterest
+      label: Интересующие категории продуктов
+      row: 8
+      type: select
+      options:
+        - value: ''
+          label: Выберите категорию продукта...
+        - value: all
+          label: Все продукты / полный каталог
+        - value: sup
+          label: SUP доски / paddleboard
+        - value: kayak
+          label: Надувные байдарки
+        - value: rib
+          label: Лодки RIB
+        - value: dinghy
+          label: Шлюпки / тендеры
+        - value: safety
+          label: Спасательное оборудование / жилеты
+        - value: accessory
+          label: Аксессуары (насосы, весла, сумки)
+
+    - name: subject
+      label: Тема
+      row: 9
+    - name: message
+      label: Сообщение
+      row: 10
+      type: textarea
+      rows: 6
+features2_other_ways:
+  title: Другие способы связаться с нами
+  columns: 3
+  items:
+    - title: Отдел продаж
+      description: Цены, конфигурации, заявки дилеров и оптовые заказы.
+      icon: tabler:shopping-bag
+    - title: Техподдержка
+      description: Гарантия, ремонт, запчасти и вопросы эксплуатации.
+      icon: tabler:tool
+    - title: Пресса и партнёрства
+      description: Медиа-киты, спонсорство и отраслевое сотрудничество.
+      icon: tabler:news
+    - title: Телефон
+      description: '+86 13305324192'
+      icon: tabler:headset
+    - title: Электронная почта
+      description: info@aquafarer.com
+      icon: tabler:mail
+    - title: Головной офис
+      description: Economic Development Zone, Laixi, Qingdao, China, 266600
+      icon: tabler:map-pin
+map:
+  title: Наше местоположение
+  subtitle: Приезжайте в гости
+  address: Economic Development Zone, Laixi, Qingdao, China, 266600
+  zoom: 15

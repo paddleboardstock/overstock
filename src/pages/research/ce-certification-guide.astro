@@ -1,0 +1,186 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+
+const metadata = {
+  title: `How CE Certification Works for Inflatable Watercraft | ${SITE.name}`,
+  description: `Complete guide to CE certification for inflatable boats, SUPs, and kayaks. Applicable directives (2013/53/EU RCD, PPE 2016/425), testing protocols, notified bodies, technical file requirements, and manufacturer obligations.`,
+  ignoreTitleTemplate: true,
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'How CE Certification Works for Inflatable Watercraft',
+  description: metadata.description,
+  author: { '@type': 'Organization', name: SITE.name },
+  datePublished: '2024-03-05',
+  dateModified: '2025-04-20',
+};
+---
+
+<Layout metadata={metadata}>
+  <JsonLd data={jsonLd} />
+
+  <article class="max-w-4xl mx-auto px-6 py-16">
+    <nav class="text-sm text-gray-500 mb-8">
+      <a href="/" class="hover:text-sky-600">{SITE.name}</a>
+      <span class="mx-2">/</span>
+      <a href="/research" class="hover:text-sky-600">Research</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-900">CE Certification Guide</span>
+    </nav>
+
+    <div class="mb-4">
+      <span
+        class="inline-block text-xs font-semibold uppercase tracking-wider text-sky-600 bg-sky-50 px-3 py-1 rounded-full"
+        >Compliance</span
+      >
+      <span class="ml-3 text-sm text-gray-400">7 min read</span>
+    </div>
+
+    <h1 class="text-4xl font-bold text-gray-900 mb-6">How CE Certification Works</h1>
+    <p class="text-xl text-gray-500 mb-12 leading-relaxed">
+      CE certification is a mandatory requirement for placing inflatable watercraft on the European market. It is not
+      optional, and it is not a single certificate <span class="text-gray-800 font-semibold">—</span> it is a compliance framework
+      with multiple directives, standards, and testing protocols.
+    </p>
+
+    <div class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600">
+      <h2>What Is CE Certification?</h2>
+      <p>
+        CE marking (Conformit<span class="text-gray-800 font-semibold">é</span> Europ<span
+          class="text-gray-800 font-semibold">é</span
+        >enne) indicates that a product meets EU health, safety, and environmental requirements. For inflatable
+        watercraft, the relevant regulatory framework depends on the product category.
+      </p>
+
+      <h2>Applicable Directives</h2>
+
+      <h3>Recreational Craft Directive (2013/53/EU)</h3>
+      <p>The primary directive for most inflatable boats, SUPs, and kayaks. It applies to:</p>
+      <ul>
+        <li>Recreational craft from 2.5 m to 24 m hull length</li>
+        <li>Partially completed boats (for OEM supply)</li>
+        <li>Personal watercraft and inflatable boats used for recreation</li>
+      </ul>
+      <p>
+        Key requirements include hull identification (HIN), maximum load capacity plate, builder's plate, owner's manual
+        in EU languages, and conformity assessment by a notified body for craft Category A and B (ocean/offshore)
+      </p>
+
+      <h3>Personal Protective Equipment Regulation (2016/425)</h3>
+      <p>
+        Life jackets, buoyancy aids, and safety equipment supplied with watercraft must meet PPE Regulation
+        requirements, which include:
+      </p>
+      <ul>
+        <li>Type examination (Module B) by a notified body</li>
+        <li>Production quality assurance (Module D or E)</li>
+        <li>User instructions in official EU languages</li>
+      </ul>
+
+      <h2>The Certification Process</h2>
+      <ol>
+        <li>
+          <strong>Product classification:</strong> Determine craft design category (A <span
+            class="text-gray-800 font-semibold">–</span
+          > D per ISO 8666) based on intended use, meaning: A (ocean), B (offshore), C (inshore), D (sheltered waters)
+        </li>
+        <li>
+          <strong>Applicable standards:</strong> Identify relevant harmonized standards. For inflatable boats: EN ISO 6185
+          (Parts 1 <span class="text-gray-800 font-semibold">–</span> 4), EN ISO 10087 (HIN), EN ISO 14945 (builder's plate),
+          EN ISO 10240 (owner's manual)
+        </li>
+        <li>
+          <strong>Technical file preparation:</strong> Include design drawings, Bill of Materials, material certificates (PVC
+          manufacturer, scrim reinforcement, adhesive), manufacturing process descriptions, risk assessment per EN ISO 12100,
+          and Declaration of Conformity (DoC)
+        </li>
+        <li>
+          <strong>Type testing:</strong> Testing at an accredited lab covers: buoyancy and flotation (loaded and unloaded
+          per EN ISO 6185-3), stability (static and dynamic for powered inflatables), load capacity verification, material
+          testing (tensile strength, tear resistance, UV aging, cold flex), seam strength, valve performance and air retention
+          (24-hour pressure drop test)
+        </li>
+        <li>
+          <strong>Factory production control (FPC):</strong> Notified body audit of manufacturing processes <span
+            class="text-gray-800 font-semibold">—</span
+          > material traceability, in-process QC, final inspection, calibration records, non-conformance procedures
+        </li>
+        <li>
+          <strong>Declaration of Conformity:</strong> Manufacturer signs the DoC, affixes CE marking, and maintains technical
+          file for 10 years after last unit produced
+        </li>
+      </ol>
+
+      <h2>Notified Bodies for Inflatable Watercraft</h2>
+      <p>
+        A Notified Body (NB) must be involved for Category A and B craft. Common NBs for inflatable watercraft include:
+      </p>
+      <ul>
+        <li>Bureau Veritas (France)</li>
+        <li>DNV GL (Germany / Norway)</li>
+        <li>RINA (Italy)</li>
+        <li>Lloyd's Register (UK <span class="text-gray-800 font-semibold">–</span> pre-Brexit, now UKCA)</li>
+        <li>
+          T<span class="text-gray-800 font-semibold">Ü</span>V Rheinland / T<span class="text-gray-800 font-semibold"
+            >Ü</span
+          >V S<span class="text-gray-800 font-semibold">Ü</span>D (Germany)
+        </li>
+      </ul>
+
+      <h2>Timeline and Costs</h2>
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="bg-gray-100">
+            <th class="p-3 text-left font-semibold text-gray-900 border">Phase</th>
+            <th class="p-3 text-left font-semibold text-gray-900 border">Duration</th>
+            <th class="p-3 text-left font-semibold text-gray-900 border">Typical Cost (EUR)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            ><td class="p-3 border">Technical file preparation</td><td class="p-3 border"
+              >2 <span class="text-gray-800 font-semibold">–</span> 4 weeks</td
+            ><td class="p-3 border">2,000 <span class="text-gray-800 font-semibold">–</span> 5,000</td></tr
+          >
+          <tr
+            ><td class="p-3 border">Type testing</td><td class="p-3 border"
+              >4 <span class="text-gray-800 font-semibold">–</span> 8 weeks</td
+            ><td class="p-3 border">8,000 <span class="text-gray-800 font-semibold">–</span> 20,000</td></tr
+          >
+          <tr
+            ><td class="p-3 border">Factory audit</td><td class="p-3 border"
+              >1 <span class="text-gray-800 font-semibold">–</span> 2 days (on-site)</td
+            ><td class="p-3 border">3,000 <span class="text-gray-800 font-semibold">–</span> 6,000</td></tr
+          >
+          <tr
+            ><td class="p-3 border">Total (first product)</td><td class="p-3 border"
+              >8 <span class="text-gray-800 font-semibold">–</span> 14 weeks</td
+            ><td class="p-3 border">13,000 <span class="text-gray-800 font-semibold">–</span> 31,000</td></tr
+          >
+        </tbody>
+      </table>
+
+      <h2>What This Means for Buyers</h2>
+      <p>When purchasing CE-certified inflatable boats, always verify:</p>
+      <ul>
+        <li>The CE marking is affixed to the builder's plate, not just printed on packaging</li>
+        <li>A valid Declaration of Conformity exists and references the correct directive (2013/53/EU)</li>
+        <li>The Notified Body number (e.g., 0123, 0062) is listed on the plate and DoC</li>
+        <li>The HIN is permanently embossed on the boat</li>
+        <li>The owner's manual includes safety instructions in your local language</li>
+      </ul>
+      <p>
+        Aquafarer's 64 CE-certified models include recreational craft and PFDs, with full traceability to the notified
+        body audit reports. We provide DoCs and test summaries upon request.
+      </p>
+    </div>
+
+    <div class="mt-16 pt-8 border-t border-gray-200">
+      <a href="/research" class="text-sky-600 hover:text-sky-700 font-medium">&larr; Back to Research</a>
+    </div>
+  </article>
+</Layout>

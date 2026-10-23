@@ -1,0 +1,213 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+
+const metadata = {
+  title: 'Aluminum Hull vs Fiberglass Hull for RIB Boats',
+  description:
+    'Compare aluminum and fiberglass hulls for RIB boats, inflatable boats, and rigid inflatables across weight, cost, durability, corrosion resistance, and more.',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <JsonLd
+    type="Article"
+    article={{
+      headline: 'Aluminum Hull vs Fiberglass Hull for RIB Boats',
+      description:
+        'Compare aluminum and fiberglass hulls for RIB boats, inflatable boats, and rigid inflatables across weight, cost, durability, corrosion resistance, and more.',
+      datePublished: '2026-07-15',
+    }}
+    data={{ url: 'https://aquafarer.com/compare/aluminum-vs-fiberglass' }}
+  />
+  <JsonLd
+    type="BreadcrumbList"
+    breadcrumbs={[
+      { name: 'Home', href: '/' },
+      { name: 'Compare', href: '/compare' },
+      { name: 'Aluminum vs Fiberglass' },
+    ]}
+  />
+  <section class="max-w-4xl mx-auto py-24 px-6">
+    <a href="/products" class="text-sm text-sky-600 hover:text-sky-700">&larr; Products</a>
+    <h1 class="mt-4 text-4xl font-semibold text-gray-900">Aluminum Hull vs Fiberglass Hull for RIB Boats</h1>
+    <p class="mt-4 text-lg text-gray-500">
+      A detailed comparison between aluminum and fiberglass hull construction for rigid inflatable boats — covering
+      weight, cost, durability, corrosion resistance, repairability, fuel efficiency, noise, and customization options.
+    </p>
+
+    <div class="mt-12 grid md:grid-cols-2 gap-8">
+      <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+        <h2 class="text-xl font-semibold text-gray-900">Aluminum Hull</h2>
+        <ul class="mt-4 space-y-3 text-sm text-gray-600">
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span
+              ><strong>Weight:</strong> Lighter than fiberglass. Better fuel efficiency and higher payload capacity.</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span
+              ><strong>Cost:</strong> Higher initial cost than fiberglass. Premium pricing for welded aluminum construction.</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span
+              ><strong>Durability:</strong> Extremely durable. Resistant to impacts, punctures, and abrasion in harsh conditions.</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span
+              ><strong>Corrosion Resistance:</strong> Excellent in saltwater with proper marine-grade alloy and coatings.</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span
+              ><strong>Best for:</strong> Commercial, military, law enforcement, and demanding workboat applications.</span
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+        <h2 class="text-xl font-semibold text-gray-900">Fiberglass Hull</h2>
+        <ul class="mt-4 space-y-3 text-sm text-gray-600">
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span
+              ><strong>Weight:</strong> Heavier than aluminum. Requires more power to achieve same speed.</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span
+              ><strong>Cost:</strong> Lower initial cost. More affordable for recreational boaters and tourism operators.</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span
+              ><strong>Durability:</strong> Good durability. Can crack on hard impacts but easier to repair than aluminum.</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span
+              ><strong>Corrosion Resistance:</strong> Requires maintenance in saltwater. Prone to osmotic blistering if gelcoat
+              is damaged.</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span
+              ><strong>Best for:</strong> Recreational boating, leisure, diving, tourism, and family use.</span
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="mt-16">
+      <h2 class="text-2xl font-semibold text-gray-900">Side-by-Side Comparison</h2>
+      <div class="mt-6 overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="bg-gray-50 border-b-2 border-gray-200">
+              <th class="px-4 py-3 text-left font-semibold text-gray-700">Factor</th>
+              <th class="px-4 py-3 text-center font-semibold text-sky-700">Aluminum</th>
+              <th class="px-4 py-3 text-center font-semibold text-emerald-700">Fiberglass</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              [
+                [
+                  'Weight',
+                  'Lighter — better fuel efficiency, higher payload',
+                  'Heavier — more power needed for same speed',
+                ],
+                ['Cost', 'Higher initial cost (premium welded construction)', 'Lower initial cost (more affordable)'],
+                [
+                  'Durability',
+                  'Extremely durable — impact and puncture resistant',
+                  'Good durability — can crack on hard impact',
+                ],
+                [
+                  'Corrosion Resistance',
+                  'Excellent in saltwater (marine-grade alloy)',
+                  'Requires maintenance — risk of osmotic blistering',
+                ],
+                [
+                  'Repairability',
+                  'Difficult — requires professional welding',
+                  'Easier — gelcoat and fiberglass repair',
+                ],
+                [
+                  'Fuel Efficiency',
+                  'Better — lighter hull reduces fuel consumption',
+                  'Slightly less efficient — heavier hull',
+                ],
+                [
+                  'Noise / Vibration',
+                  'More vibration and noise transmission',
+                  'Quieter ride — fiberglass dampens vibration',
+                ],
+                [
+                  'Customization',
+                  'Limited — welded fabrication constraints',
+                  'Highly customizable — custom mold shapes possible',
+                ],
+                [
+                  'Best For',
+                  'Commercial, military, law enforcement, workboats',
+                  'Recreational, leisure, diving, tourism, family',
+                ],
+              ].map((row, i) => (
+                <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                  {row.map((cell, j) => (
+                    <td
+                      class={`px-4 py-3 border-b border-gray-200 ${j === 0 ? 'font-medium text-gray-700' : 'text-center text-gray-600'}`}
+                    >
+                      {cell}
+                    </td>
+                  ))}
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mt-16 bg-gradient-to-br from-sky-50 to-blue-50 rounded-2xl p-8 border border-sky-200">
+      <h2 class="text-xl font-semibold text-gray-900">Which Should You Choose?</h2>
+      <p class="mt-4 text-gray-600 text-sm leading-relaxed">
+        Choose an <strong>aluminum hull</strong> if you operate in demanding commercial, military, or law enforcement environments
+        where impact resistance, longevity in saltwater, and fuel efficiency are top priorities. Aluminum's higher upfront
+        cost is offset by exceptional durability and lower lifetime maintenance for heavy-use vessels. Choose a <strong
+          >fiberglass hull</strong
+        > if you are a recreational boater, dive operator, or tourism business looking for a more affordable option with a
+        quieter ride, easier repairability, and the ability to customize hull shapes. Fiberglass offers excellent value for
+        leisure-focused RIB applications.
+      </p>
+      <div class="mt-6 flex gap-4 flex-wrap">
+        <a
+          href="/products"
+          class="px-6 py-3 bg-gray-900 text-white rounded-full text-sm font-medium hover:bg-gray-800 transition"
+          >Browse Products</a
+        >
+        <a
+          href="/compare/aluminum-vs-fiberglass"
+          class="px-6 py-3 border border-gray-200 text-gray-700 rounded-full text-sm font-medium hover:border-gray-400 transition"
+          >In-Depth Guide</a
+        >
+      </div>
+    </section>
+  </section>
+
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true">
+    <p>
+      Comprehensive comparison between aluminum hull and fiberglass hull construction for RIB boats and rigid inflatable
+      boats. Covers weight, cost, durability, corrosion resistance, repairability, fuel efficiency, noise/vibration,
+      customization, and best-use applications. Aluminum hulls are lighter, more durable in saltwater, more expensive,
+      difficult to repair, noisier, and better for commercial/military/law enforcement. Fiberglass hulls are heavier,
+      more affordable, easier to repair, quieter, highly customizable, and better for
+      recreational/leisure/diving/tourism. Recommendation: aluminum for commercial/workboat applications requiring
+      maximum durability; fiberglass for recreational/tourism use prioritizing value, comfort, and customization.
+    </p>
+  </section>
+</Layout>

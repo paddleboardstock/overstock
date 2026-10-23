@@ -1,0 +1,306 @@
+hero_text:
+  tagline: Dobijte Ponudu
+  title: Zatražite Ponudu<br />za Vaš Projekat
+  subtitle: Recite nam o vašim zahtevima i naš tim će odgovoriti sa detaljnom ponudom u roku od 2 radna dana.
+steps2_process:
+  title: Kako Funkcioniše
+  subtitle: Četiri jednostavna koraka od upita do ponude.
+  items:
+    - title: 'Korak 1: Pošaljite Svoje Zahteve'
+      description: Popunite obrazac ispod sa tipom proizvoda, količinom i specifikacijama. Što više detalja date, tačnija će biti vaša ponuda.
+      icon: tabler:file-text
+    - title: 'Korak 2: Pregledamo & Dajemo Savet'
+      description: Naš inženjerski tim pregleda vaše zahteve i može vas kontaktirati radi pojašnjenja. Pružamo preporuke o konfiguraciji proizvoda i opcijama.
+      icon: tabler:users
+    - title: 'Korak 3: Primi Svoju Ponudu'
+      description: Dobijate detaljnu ponudu koja uključuje cenu po jedinici, MOQ, rok isporuke, uslove plaćanja i opcije slanja. Obično u roku od 48 sati.
+      icon: tabler:currency-dollar
+    - title: 'Korak 4: Uzorak & Proizvodnja'
+      description: Nakon prihvatanja ponude, prelazimo na proizvodnju uzorka (ako je primenljivo) ili direktno na masovnu proizvodnju. Redovna ažuriranja tokom celog procesa.
+      icon: tabler:building-factory
+content_form:
+  tagline: Obrazac za Ponudu
+  title: Recite Nam o Vašem Projektu
+  subtitle: Sva polja označena sa * su obavezna.
+  fields:
+    - name: Kategorija Proizvoda
+      type: select
+      options:
+        - RIB Čamac
+        - Naduvavajući Čamac
+        - SUP Daska
+        - Naduvavajući Kajak
+        - Prsluk za Spašavanje
+        - Morski Aksesoar
+        - Prilagođeni OEM/ODM
+    - name: Primena
+      type: select
+      options:
+        - Ronioci Centar
+        - Ribolov
+        - Morski Turizam / Rizort
+        - Traganje i spašavanje
+        - Brod za jahtu
+        - Komercijalni radni brod
+        - Vladin / Vojski
+        - OEM / Privatna oznaka
+        - Lični / Rekreativni
+        - Ostalo
+    - name: Količina
+      type: text
+      placeholder: npr. 50 jedinica
+    - name: Ciljno tržište
+      type: text
+      placeholder: npr. Evropa, Severna Amerika, Bliski Istok
+    - name: Zemlja isporuke
+      type: text
+      placeholder: npr. Italija, UAE, SAD, Australija
+    - name: Preferenca materijala
+      type: select
+      options:
+        - Bez preferencija
+        - Materijal marine klase PVC (1100 dtex)
+        - Premium Hypalon / CSM
+        - Stakloplastični trup
+        - Aluminijumski trup
+    - name: Zahtjev za motor
+      type: text
+      placeholder: npr. 60 HP vanbrodski, bez motora, dvostruki 115 HP
+    - name: Potrebna prilagodba
+      type: text
+      placeholder: npr. prilagođene boje, brendiranje/logo, pakovanje, posebne armature
+    - name: Vremenski okvir
+      type: text
+      placeholder: npr. isporuka u roku od 90 dana
+    - name: Dodatni zahtevi
+      type: textarea
+      placeholder: Opišite vašu primenu, tehničke specifikacije ili bilo koje posebne zahteve — uključite referentne crteže, specifikacije ili linkove ako su dostupni
+    - name: Otpremite specifikaciju
+      type: file
+      placeholder: Otpremite svoj list sa specifikacijama, crtež ili referentni dokument (PDF, DWG, DXF)
+    - name: Otpremite logo / umetničko delo
+      type: file
+      placeholder: Otpremite svoj logo ili umetničko delo za prilagođeno brendiranje (AI, EPS, PNG)
+content_rfq_types:
+  tagline: 3-nivoski RFQ sistem
+  title: Izaberite pravi<br />Nivo upita
+  subtitle: Različiti projekti zahtevaju različit nivo detalja. Izaberite obrazac koji odgovara vašem stadijumu kupovine.
+  items:
+    - title: Brzi upit
+      description: 5-6 polja, 30 sekundi. Za inicijalni kontakt, opšta pitanja ili praćenje preuzimanja resursa. Odgovaramo u roku od 24 sata sa osnovnim informacijama i narednim koracima.
+      icon: tabler:bolt
+    - title: Standardni RFQ
+      description: 8-10 polja, 2 minuta. Za specifične ponude proizvoda sa izborom modela, količinom i zahtevima za isporuku. Dobijte detaljnu ponudu u roku od 48 sati.
+      icon: tabler:file-text
+    - title: Projektni RFQ
+      description: 10-14 polja, 5 minuta. Za RIB, resortske flote, spasilačke ili vladine projekte koji zahtevaju prilagođenu konfiguraciju, dokumentaciju o usklađenosti i višegodišnje planiranje snabdevanja. Imenovan posvećeni menadžer projekta.
+      icon: tabler:clipboard-list
+form_quick:
+  title: Brzi upit
+  subtitle: Brz kontakt za opšta pitanja i inicijalne zahteve za informacijama.
+  fields:
+    - name: fullName
+      label: Puno ime
+      type: text
+      required: true
+      placeholder: Vaše puno ime
+    - name: businessEmail
+      label: Poslovni email
+      type: email
+      required: true
+      placeholder: you@company.com
+    - name: companyName
+      label: Ime kompanije
+      type: text
+      required: true
+      placeholder: Vaša kompanija
+    - name: buyerType
+      label: Ja sam...
+      type: select
+      required: true
+      options:
+        - Distributer / uvoznik
+        - Vlasnik brenda / privatna marka
+        - Resort / vodeni centar
+        - Operater iznajmljivanja
+        - Vladina / spasilačka agencija
+        - Operater za ronjenje / ribolov
+        - Pomorski inženjer / rekonfiktor
+        - Ostalo
+    - name: productInterest
+      label: Interes za proizvod
+      type: multiselect
+      required: true
+      options:
+        - RIB čamci
+        - Napuhavajući čamci
+        - SUP Daske
+        - Oprema za bezbednost
+        - Dodaci
+        - OEM/ODM Po meri
+    - name: message
+      label: Šta vam je potrebno?
+      type: textarea
+      required: false
+      placeholder: Kratak opis vaših zahteva...
+form_standard:
+  title: Standardni RFQ
+  subtitle: Detaljan zahtev za ponudu za specifične proizvode i količine.
+  fields:
+    - name: fullName
+      label: Puno ime
+      type: text
+      required: true
+    - name: businessEmail
+      label: Poslovni email
+      type: email
+      required: true
+    - name: companyName
+      label: Ime kompanije
+      type: text
+      required: true
+    - name: buyerType
+      label: Tip kupca
+      type: select
+      required: true
+    - name: modelProizvoda
+      label: Model / tip proizvoda
+      type: text
+      required: true
+      placeholder: i.e., AF580 RIB, AF380 na naduvavanje
+    - name: quantity
+      label: Procenjena količina
+      type: text
+      required: true
+      placeholder: i.e., 10-20 jedinica
+    - name: targetMarket
+      label: Ciljno tržište / region
+      type: text
+      required: true
+      placeholder: i.e., EU, Severna Amerika, Bliski istok
+    - name: deliveryTimeline
+      label: Željena isporuka
+      type: select
+      required: true
+      options:
+        - U roku od 30 dana
+        - 30-60 dana
+        - 60-90 dana
+        - Planiranje unapred (90+ dana)
+        - Samo istražujem
+    - name: complianceRequired
+      label: Zahtevi za usaglašenost
+      type: multiselect
+      required: false
+      options:
+        - CE / RCD 2013/53/EU
+        - UKCA
+        - USCG
+        - ISO 9001
+        - BSCI
+        - REACH
+        - Nije poznato / Nije sigurno
+    - name: message
+      label: Dodatni detalji
+      type: textarea
+      required: false
+form_project:
+  title: Projektni RFQ
+  subtitle: Kompletna upit za projekat flote, prilagođenu ili državnu nabavku.
+  fields:
+    - name: fullName
+      label: Puno ime
+      type: text
+      required: true
+    - name: businessEmail
+      label: Poslovni email
+      type: email
+      required: true
+    - name: companyName
+      label: Ime kompanije
+      type: text
+      required: true
+    - name: buyerType
+      label: Tip kupca
+      type: select
+      required: true
+    - name: projectType
+      label: Tip projekta
+      type: select
+      required: true
+      options:
+        - Flota odmarališta / hotela
+        - Flota za najam
+        - Flota spasilačkih / patrolnih brodova
+        - Flota centra za ronjenje
+        - Državna nabavka
+        - Privatna oznaka / OEM
+        - Porudžbina zaliha dilera
+        - Ostalo
+    - name: boatTypes
+      label: Potrebni tipovi brodova
+      type: multiselect
+      required: true
+      options:
+        - RIB čamci
+        - Gumeni čamci / čamci
+        - SUP Daske
+        - Kajaci
+        - Oprema za bezbednost
+    - name: fleetSize
+      label: Veličina flote / Raspon količina
+      type: text
+      required: true
+      placeholder: npr., 20-50 jedinica tokom 12 meseci
+    - name: customRequirements
+      label: Potrebe za prilagođenom konfiguracijom
+      type: textarea
+      required: false
+      placeholder: Veličina trupa, materijal tubusa, raspored palube, zahtevi za brendiranjem...
+    - name: complianceRequired
+      label: Zahtevi za usklađenost i sertifikaciju
+      type: multiselect
+      required: true
+      options:
+        - CE / RCD 2013/53/EU
+        - UKCA
+        - USCG Tip III/V
+        - ISO 9001
+        - BSCI
+        - REACH / RoHS
+        - Sertifikacija za lokalno tržište
+    - name: targetMarket
+      label: Ciljno tržište
+      type: text
+      required: true
+    - name: budgetRange
+      label: Opseg budžeta
+      type: select
+      required: false
+      options:
+        - Ispod 10.000 $
+        - $10,000 - $50,000
+        - $50,000 - $200,000
+        - $200,000+
+        - Radije ne bih rekao
+    - name: deliveryTimeline
+      label: Vremenski okvir projekta
+      type: select
+      required: true
+      options:
+        - Hitno (u roku od 30 dana)
+        - Standardno (30-60 dana)
+        - Planirano (60-90 dana)
+        - Buduće planiranje (više od 90 dana)
+    - name: message
+      label: Detalji i zahtevi projekta
+      type: textarea
+      required: false
+      placeholder: Opišite svoj projekat, aplikaciju i sve specifične zahteve...
+cta:
+  title: Radije biste da razgovaramo putem e-pošte?
+  subtitle: Pošaljite svoj upit direktno našem prodajnom timu i odgovorićemo u roku od 24 sata.
+  actions:
+    - variant: primary
+      text: Pošaljite nam e-poštu direktno
+      href: /contact

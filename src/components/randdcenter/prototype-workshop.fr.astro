@@ -1,0 +1,208 @@
+---
+import { SITE } from 'astrowind:config';
+const { lang = 'fr' } = Astro.props;
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={`/${lang}/randdcenter`} class="text-sm text-gray-500 hover:underline">&larr; Retour au Centre R&amp;D</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Lab 05</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Atelier de prototypes</h1>
+      <p class="mt-3 text-lg text-muted">Du modèle CAD au bateau prêt pour la mer — construit, équipé et éprouvé</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-ocean-voyager-1.webp"
+        alt="Fabrication de bateaux à l'atelier de prototypes Aquafarer"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Là où la conception devient réalité</h2>
+  <p>
+    Un modèle CAD, aussi détaillé soit-il, ne peut révéler comment un bateau se comportera réellement tant qu'il n'a pas
+    touché l'eau. C'est pourquoi notre Atelier de prototypes est conçu pour traduire les données d'ingénierie en un
+    engin physique apte à la navigation aussi rapidement et précisément que possible. Chaque nouveau modèle {SITE.name}
+    — et chaque construction sur mesure significative — passe par cet atelier avant que l'outillage de production ne soit
+    engagé.
+  </p>
+  <p>
+    L'atelier est entièrement équipé pour la fabrication simultanée de la coque, des tubes et du gréement. Cette
+    approche de flux parallèles réduit le délai de prototypage à 8-12 semaines à partir de la sortie d'ingénierie,
+    contre une norme industrielle de 16-20 semaines. Lorsque votre application exige une solution spécialisée, nous
+    pouvons passer du concept à la validation sur l'eau en moins de trois mois.
+  </p>
+
+  <h2>Capacités de l'atelier</h2>
+  <table>
+    <thead><tr><th>Poste de travail</th><th>Équipement</th><th>Objectif</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Fabrication de coque</td><td
+          >Four de moulage rotatif (HDPE), poste de soudage TIG (aluminium), moules de stratification manuelle (fibre de
+          verre)</td
+        ><td>Production de coques pleine échelle dans les trois types de matériaux</td></tr
+      >
+      <tr
+        ><td>Assemblage des tubes</td><td
+          >Presse de soudage RF, poste de pointage à air chaud, gabarit de test de gonflage</td
+        ><td>Fabrication d'assemblages de tubes pleine taille avec toutes les cloisons, cônes et valves</td></tr
+      >
+      <tr
+        ><td>Gréement &amp; équipement</td><td
+          >Palan moteur (500 kg), châssis factice de console, sertisseuse de flexibles hydrauliques, planche
+          d'assemblage des faisceaux électriques</td
+        ><td>Équipement complet : moteur, direction, commandes, système de carburant, électronique, sièges</td></tr
+      >
+      <tr
+        ><td>Baie d'instrumentation</td><td
+          >Capteur de vitesse GPS, débitmètre de carburant, accéléromètres, réseau de thermocouples, enregistreur de
+          données</td
+        ><td>Installation et calibrage de l'instrumentation d'essais en mer</td></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>Le parcours du prototype — étape par étape</h2>
+  <ol>
+    <li>
+      <strong>Transfert d'ingénierie</strong> — Le dossier de conception (modèle 3D, rapport FEA, nomenclature, planning de
+      stratification) est formellement examiné par le responsable d'atelier et l'ingénieur de projet. Tout souci de fabrication
+      est signalé et résolu avant le début de la découpe.
+    </li>
+    <li>
+      <strong>Production de la coque</strong> — La coque est construite selon la spécification d'ingénierie. Pour le HDPE
+      : le programme de moulage rotatif est chargé à partir de la simulation Moldex3D. Pour l'aluminium : les plaques découpées
+      CNC sont soudées au poste TIG conformément au plan de soudure approuvé. Pour la fibre de verre : le carnet de laminage
+      est suivi couche par couche.
+    </li>
+    <li>
+      <strong>Fabrication des tubes</strong> — Le tissu est découpé à l'aide de gabarits CNC, puis soudé par RF en chambres
+      pleine taille. Chaque chambre est gonflée à la pression d'essai et laissée 24 h pour la stabilisation initiale.
+    </li>
+    <li>
+      <strong>Assemblage &amp; gréement</strong> — La coque et les tubes sont accouplés. Le moteur est suspendu, la direction
+      et les commandes sont connectées, le système de carburant est installé, et tous les circuits électriques sont câblés
+      et vérifiés.
+    </li>
+    <li>
+      <strong>Essais statiques</strong> — Avant que le bateau ne touche l'eau, il subit : contrôle de flottabilité (pleine
+      charge + 30 % de réserve), test de pression du système de carburant, test de cycle complet de braquage de la direction,
+      test de continuité de la liaison équipotentielle électrique.
+    </li>
+    <li><strong>Programme d'essais en mer</strong> — 20 heures d'essais dans l'eau, détaillées ci-dessous.</li>
+    <li>
+      <strong>Revue du prototype</strong> — Une réunion formelle de validation est tenue avec les équipes d'ingénierie, de
+      production et qualité. Toute modification de conception requise est documentée et intégrée à la version de production.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Programme d'essais en mer de 20 heures — Planning des essais
+    </p>
+    <div class="space-y-2 text-sm">
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">2 h</span><span class="flex-1"
+          >Manœuvres portuaires — manœuvre à basse vitesse, marche arrière, contrôle des défenses</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">4 h</span><span class="flex-1"
+          >Essai de vitesse — vitesse maximale vérifiée par GPS, vitesse de croisière, consommation à 3 points de régime</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Essai de virage — diamètre tactique, avance et transfert à 20 kn, bâbord et tribord</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Essai de slamming — passages répétés dans une mer courte de 0.5–1.0 m ; accéléromètre à la base du siège de
+          barre</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Essai de stabilité — angle de gîte statique avec 4 membres d'équipage + matériel à tribord, charge décentrée</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Essai d'endurance — 3 h en continu à la vitesse de croisière ; surveillance des températures (moteur,
+          carburant, électricité)</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">2 h</span><span class="flex-1"
+          >Inspection finale — inspection post-essai de tous les systèmes, resserrage et vérification de toutes les
+          fixations, documentation des constats</span
+        >
+      </div>
+    </div>
+  </div>
+
+  <h2>Prototypage sur mesure pour des applications uniques</h2>
+  <p>
+    L'Atelier de prototypes est l'endroit où nous résolvons les problèmes que les bateaux de production standard ne
+    peuvent pas traiter. Des exemples récents incluent :
+  </p>
+  <ul>
+    <li>
+      Un RIB de 7.8 m pour une organisation de recherche et sauvetage, nécessitant une structure de cabine sur mesure
+      avec protection anti-retournement, des supports intégrés pour civières et un pod sonar monté à l'étrave — le tout
+      prototypé, équipé et testé dans nos installations.
+    </li>
+    <li>
+      Un gonflable de 5.2 m pour un prestataire de levés hydrographiques, avec un tableau arrière abaissé, un mât
+      d'instrumentation amovible et des puits de transducteurs traversant la coque conçus pour minimiser les
+      perturbations d'écoulement.
+    </li>
+    <li>
+      Une annexe de 4.5 m à propulsion électrique pour un superyacht, où le prototype a servi à valider l'autonomie,
+      l'infrastructure de recharge et les niveaux de bruit avant que le client ne s'engage sur une flotte de quatre
+      unités.
+    </li>
+  </ul>
+
+  <h2>Notre équipe de prototypage</h2>
+  <p>
+    L'atelier est composé de huit techniciens marins polyvalents, chacun formé dans au moins deux des trois disciplines
+    principales (coque, tube, gréement). Le responsable d'équipe est un charpentier de marine maître avec 16 ans
+    d'expérience couvrant des constructions uniques sur mesure jusqu'aux séries de production. Chaque prototype se voit
+    attribuer un ingénieur de projet dédié qui sert d'interlocuteur unique pour le client tout au long du processus de
+    construction et d'essais.
+  </p>
+
+  <h2>Implication du client</h2>
+  <p>
+    Nous encourageons activement nos clients à assister aux étapes clés pendant la construction du prototype —
+    particulièrement la revue initiale d'équipement et l'essai en mer. Vos retours opérationnels à ces étapes sont
+    inestimables pour peaufiner le bateau avant qu'il n'entre en production. Nous ne construisons pas dans une bulle ;
+    nous construisons en partenariat avec vous.
+  </p>
+  <p>
+    L'essai en mer de 20 heures est aussi une occasion pour votre équipe de se familiariser avec le comportement du
+    bateau, l'agencement des systèmes et les exigences de maintenance, assurant une transition en douceur vers le
+    service lorsque les bateaux de production sont livrés.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Lancez votre projet de prototype</h2>
+    <p class="mt-2 text-sm text-muted">
+      Parlez-nous du bateau dont vous avez besoin et nous vous proposerons un plan de développement de prototype.
+    </p>
+    <a
+      href={`/${lang}/contact`}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Contactez notre équipe de prototypage</a
+    >
+  </div>
+</section>

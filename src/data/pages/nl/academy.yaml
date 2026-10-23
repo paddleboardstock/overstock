@@ -1,0 +1,168 @@
+hero:
+  tagline: Aquafarer Academie
+  title: Leercentrum
+  subtitle: Gidsen en tutorials voor elk vaardigheidsniveau — van SUP basis tot geavanceerde reddingstechnieken
+categories:
+  - level: Beginner
+    color: from-green-500 to-emerald-600
+    badge: bg-green-100 text-green-700
+    guides:
+      - title: SUP Basis
+        desc: 'Leer de basisprincipes van stand-up paddleboarden: houding, slagtechniek en balans.'
+        slug: beginner-sup-guide
+      - title: Peddeltechnieken
+        desc: 'Voorwaartse slag, sweepslag, trekslag en lage brace: beheers de essentiële peddelbewegingen.'
+        slug: sup-paddle-guide
+      - title: Veiligheid eerst
+        desc: Essentiële veiligheidspraktijken, waaronder weercontroles, PFD-gebruik, lijnregels en zelfredding.
+        slug: sup-safety-guide
+  - level: Tussenliggend
+    color: from-blue-500 to-indigo-600
+    badge: bg-blue-100 text-blue-700
+    guides:
+      - title: Essentiële reisbenodigdheden
+        desc: Paddles van meerdere uren plannen - navigatie, hydratatie, tempo en windvoorspellingen lezen.
+        slug: touring-sup-guide
+      - title: Weer lezen
+        desc: Interpreteer mariene voorspellingen, identificeer wolkenpatronen en begrijp windeffecten op water.
+        slug: weather-planning-water-sports
+      - title: Basisbeginselen van navigatie
+        desc: Kaartlezen, kompasgebruik, GPS-waypoints en routeplanning voor peddelen langs de kust.
+        slug: sup-navigation-guide
+      - title: Getijdenbewustzijn
+        desc: Inzicht in getijdencycli, stromingen en hoe deze de timing en route van lancering beïnvloeden.
+        slug: understanding-tides
+  - level: Geavanceerd
+    color: from-purple-500 to-violet-600
+    badge: bg-purple-100 text-purple-700
+    guides:
+      - title: Meerdaagse reisplanning
+        desc: Expeditielogistiek - uitrustingskeuze, voedselplanning, veiligheidsprotocollen en contacten voor noodgevallen.
+        slug: sup-travel-guide
+      - title: Reddingstechnieken
+        desc: Zelfredding, T-redding, eskimo-redding voor kajaks en sleepprotocollen voor open water.
+        slug: sup-self-rescue
+      - title: Nacht peddelen
+        desc: 'Navigatie in het donker: verlichtingsvereisten, routegeheugen, groepscommunicatie en gevaarbewustzijn.'
+        slug: sup-navigation-guide
+  - level: Onderhoud
+    color: from-amber-500 to-orange-600
+    badge: bg-amber-100 text-amber-700
+    guides:
+      - title: Reiniging en onderhoud
+        desc: Spoelen met zoet water, UV-bescherming, schimmelpreventie en goede droogtechnieken na elke sessie.
+        slug: inflatable-sup-maintenance
+      - title: Gids voor opslag
+        desc: 'Beste praktijken voor het opslaan van opblaasbare planken en boten: leeglopen, opvouwen, temperatuurregeling en houdbaarheid.'
+        slug: inflatable-sup-storage
+      - title: Basisprincipes van reparatie
+        desc: Repareer kleine lekke banden, naadlekken en klepproblemen met PVC reparatiesets en patchtechnieken.
+        slug: inflatable-sup-repair
+      - title: Ventielonderhoud
+        desc: Identificeer kleptypes (Halkey-Roberts, Boston, Leafield), verwijder vuil en vervang defecte stelen.
+        slug: inflatable-sup-repair
+knowledge_center_tagline: Kenniscentrum
+knowledge_center_title: Gidsen voor maritieme uitrusting en industrie
+knowledge_center_subtitle: Deskundige kennis en aankoopgidsen voor maritieme professionals, wagenparkbeheerders en watersportliefhebbers.
+knowledge_sections:
+  - title: RIB Bootkennis
+    tagline: Stijve opblaasbare bootgidsen
+    desc: 'Alles over RIB boten: rompontwerp, materialen, motorkeuze, onderhoud en aankoopadvies voor commercieel en recreatief gebruik.'
+    guides:
+      - title: Hoe u de juiste RIB-boot kiest
+        desc: Volledige gids voor het selecteren van een RIB — grootte, motorvermogen, buismateriaal, romptype en beoogd gebruik.
+        href: /v2/inflatable-boat-buying-guide
+      - title: RIB versus opblaasbare boot
+        desc: Stijve opblaasbare boot versus traditionele opblaasbare rubberboot – rompontwerp, prestaties, duurzaamheid en capaciteit vergeleken.
+        href: /compare/rib-vs-dinghy
+      - title: Commercieel RIB versus recreatief RIB
+        desc: Commerciële versus recreatieve boten RIB – constructienormen, materialen, levensduur, kosten en certificeringen.
+        href: /compare/commercial-vs-recreational-rib
+      - title: Aluminium versus glasvezel romp
+        desc: Vergelijk aluminium en glasvezel rompen voor RIB boten op het gebied van gewicht, kosten, duurzaamheid en corrosiebestendigheid.
+        href: /compare/aluminum-vs-fiberglass
+  - title: Gids voor opblaasbare boten
+    tagline: Kennis van opblaasbare vaartuigen
+    desc: Uitgebreide handleidingen over opblaasbare boten — PVC versus Hypalon, constructiemethoden, veiligheidsnormen en best practices op het gebied van onderhoud.
+    guides:
+      - title: PVC versus Hypalon Materiaalgids
+        desc: Definitieve vergelijking tussen PVC en Hypalon CSM voor de constructie van opblaasbare boten.
+        href: /compare/pvc-vs-hypalon
+      - title: Hoe opblaasbare boten worden gemaakt
+        desc: Productieproces - materiaal snijden, HF-lassen, naadconstructie, druktesten en kwaliteitscontrole.
+        href: /learn/inflatable-technology
+      - title: Veiligheidsgids voor opblaasbare boten
+        desc: Veiligheidsnormen, laadvermogen, correct oppompen, controles vóór vertrek en noodprocedures.
+        href: /learn/water-safety
+      - title: Onderhoud van opblaasbare boten
+        desc: Reiniging, opslag, UV-bescherming, winterklaar maken en reparatie van opblaasbare boten en RIB's.
+        href: /v2/inflatable-boat-maintenance
+  - title: Bootkennis
+    tagline: Opblaasboot & RIB Hub
+    desc: Technische gidsen over typen opblaasbare boten, materialen, constructiemethoden, onderhoud en veiligheid - van rubberboten tot RIB's.
+    guides:
+      - title: Soorten opblaasbare boten
+        desc: "Rubberboten, RIB's, kajaks en tenders: leer de verschillen en kies de juiste."
+        href: /v2/inflatable-boat-buying-guide
+      - title: Drop-Stitch-technologie
+        desc: Hoe duizenden interne draden stijve, opblaasbare hogedrukstructuren creëren.
+        href: /learn/drop-stitch-core
+      - title: Materiaalreferentie
+        desc: PVC denierwaarden, stofgewichten, UV-bestendigheid en materialen van maritieme kwaliteit uitgelegd.
+        href: /learn/materials
+      - title: RIB versus rubberboot
+        desc: Vergelijk stijve opblaasbare boten met traditionele opblaasbare rubberboten voor verschillende gebruiksscenario's.
+        href: /compare/rib-vs-dinghy
+  - title: SUP Kennis
+    tagline: Stand-up paddleboard-gidsen
+    desc: Alles over SUP boards – opblaasbaar versus stijf, boardafmetingen, materiaaltechnologie en deskundig advies voor alle vaardigheidsniveaus.
+    guides:
+      - title: Opblaasbaar versus hard SUP
+        desc: Vergelijk iSUP's en harde epoxyplaten op het gebied van draagbaarheid, duurzaamheid, prestaties en waarde.
+        href: /learn/sup
+      - title: SUP Gids voor bordafmetingen
+        desc: Hoe lengte, breedte en dikte de stabiliteit, snelheid en manoeuvreerbaarheid beïnvloeden.
+        href: /learn/sup
+      - title: SUP Onderhoud en verzorging
+        desc: Tips voor het reinigen, opbergen, UV-bescherming en reparatie van opblaasbare SUP boards.
+        href: /v2/inflatable-sup-maintenance
+      - title: Je eerste SUP kiezen
+        desc: Beginnersgids voor het selecteren van het juiste stand-up paddleboard voor uw gewicht, vaardigheidsniveau en beoogde gebruik.
+        href: /learn/sup
+  - title: Gids voor duikuitrusting
+    tagline: Kennis van commerciële duikboten
+    desc: Gespecialiseerde gidsen over duikboten, duik-RIB's en uitrusting voor duikcentra, duikoperators en commerciële duikteams.
+    guides:
+      - title: Beste RIB Boot voor duikcentra
+        desc: Hoe u de juiste duik RIB kiest voor uw duikcentrum – capaciteit, configuratie en budgetoverwegingen.
+        href: /solutions-diving-center-boats
+      - title: Duik RIB Configuratiegids
+        desc: "Essentiële kenmerken voor duik-RIB's: tankrekken, laddersystemen, duikplatform en opslag van uitrusting."
+        href: /solutions-diving-center-boats
+  - title: Gids voor jachttenders
+    tagline: Superjacht- en maritieme tenderoplossingen
+    desc: 'Gidsen voor het selecteren van de perfecte jachttender: opblaasbare tenders, RIB tenders, opslagoplossingen en tenderaccessoires.'
+    guides:
+      - title: Hoe u een jachttender kiest
+        desc: 'Factoren waarmee u rekening moet houden bij het selecteren van een tender voor uw jacht: grootte, materiaal, motor en opslag.'
+        href: /solutions-yacht-tender-solutions
+      - title: Opblaasbaar versus RIB Tenders
+        desc: Vergelijk opblaasbare rubberboottenders met stijve opblaasbare boottenders voor prestaties, duurzaamheid en opbergbaarheid.
+        href: /compare/rib-vs-dinghy
+  - title: Gids voor reddingsuitrusting
+    tagline: Kennis van zoek- en reddingsvaartuigen
+    desc: Professionele gidsen op reddingsboten, SAR waterscooters en noodhulpapparatuur voor kustwacht, strandwachten en rampenbestrijdingsteams.
+    guides:
+      - title: SAR Gids voor bootselectie
+        desc: 'Hoe u de juiste zoek- en reddingsboot kiest: snelheid, capaciteit, duurzaamheid en vereisten voor gespecialiseerde uitrusting.'
+        href: /solutions-rescue-watercraft
+      - title: Commercieel RIB voor reddingsoperaties
+        desc: Waarom RIB's van commerciële kwaliteit de voorkeur hebben voor professionele zoek- en reddingsteams over de hele wereld.
+        href: /use-cases/search-and-rescue
+read_guide: Lees gids →
+cta:
+  title: Weet u niet zeker waar u moet beginnen?
+  desc: Doe onze vaardigheidsbeoordelingsquiz om de juiste gidsen en uitrusting voor uw niveau te vinden.
+  label: Neem contact met ons op →
+  link: /contact
+

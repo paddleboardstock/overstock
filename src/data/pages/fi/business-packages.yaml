@@ -1,0 +1,82 @@
+hero:
+  tagline: Yrityspaketit
+  title: Käyttöönottovalmiit vesiliiketoiminnan<br />paketit jokaiseen vaiheeseen
+  subtitle: Valmiiksi konfiguroidut varustepaketit vesiurheiluseuroille, lomakeskuksille ja tuotemerkkien aloittelijoille – läpinäkyvä hinnoittelu, nopea toimitus ja täydelliset räätälöintivaihtoehdot.
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/use-cases/aquafarer-outdoor-adventure.webp
+    alt: Aquafarer yritysvarustepaketit
+direct_answer: Aquafarer tarjoaa kolme esikonfiguroitua yrityspakettia, jotka on suunniteltu vesiurheilun jokaisessa vaiheessa. Klubin aloituspaketti sisältää 10 SUP-autoa meloineen, pumppuineen, korjaussarjoineen ja turvavarusteineen nouseville klubeille ja kouluille. Resort Premium Package toimittaa 50–100 yksikköä varastojärjestelmät, brändäyksen ja koulutusoppaat hotelleille ja majoituskohteille. Brand Launch Package tarjoaa tuotevalikoiman, mukautetun logosuunnittelun, pakkaamisen, tuotannon ja toimituksen yrittäjille, jotka lanseeraavat oman vesiurheilumerkin. Kaikki paketit sisältävät tehtaan suoran hinnoittelun, CE-sertifioinnin ja maailmanlaajuisen logistiikan tuen.
+packages:
+  - id: club-starter
+    tag: Best Seller
+    name: Klubin aloituspaketti
+    subtitle: Kaikki mitä tarvitset meloaklubin käynnistämiseen tai päivittämiseen
+    target: SUP-seurat, kajakkikerhot, surffauskoulut, koulutuskeskukset
+    price_label: Alkaen 4 800 dollaria
+    line_items:
+      - item: 10 SUP-lautaa tai kajakkia
+      - item: 10 yhteensopivaa melaa
+      - item: 10 korkeatehoista pumppua
+      - item: 10 korjaussarjaa
+      - item: 10 pelastusliiviä seuran logolla
+      - item: Klubin brändäys tauluissa
+      - item: Turvamerkkisetti
+      - item: Aloittelijan oppituntiopas PDF
+    cta_text: Get Club Package
+    cta_href: /contact
+  - id: resort-premium
+    tag: Premium
+    name: Resort Premium -paketti
+    subtitle: Täydellinen vesiaktiviteettiohjelma hotelleille ja lomakeskuksille
+    target: Rantakohteet, järvenrantahotellit, ekologiset lomakohteet, pursiseurat
+    price_label: Mukautettu lainaus
+    line_items:
+      - item: 50–100 SUPia, kajakkeja tai sekalaista laivastoa
+      - item: Täydellinen lomakeskusbrändi kaikissa laitteissa
+      - item: Vuokraluokan melat ja PFD:t
+      - item: Kaupallinen säilytystelinejärjestelmä
+      - item: Täyttöasema teollisuuspumpuilla
+      - item: Turvajärjestelmä (poijut, kyltit, pelastuslauta)
+      - item: Henkilökunnan koulutusohjelma
+      - item: Tulojenhallinnan pelikirja
+    cta_text: Get Resort Package
+    cta_href: /contact
+  - id: brand-launch
+    tag: Entrepreneur
+    name: Brändin julkaisupaketti
+    subtitle: Muuta brändiideasi toimitetuksi tuotteeksi — yleensä 60–90 päivässä
+    target: Amazon-myyjät, vaikuttajat, alueelliset jakelijat
+    price_label: Alkaen 6 500 dollaria
+    line_items:
+      - item: Tuotevalintaneuvonta
+      - item: Räätälöity logosuunnittelu tauluille
+      - item: Mukautettu värisovitus
+      - item: Merkkipakkaus vähittäismyyntiin
+      - item: Ripusta tunnisteet ja käyttöohje
+      - item: CE-sertifiointiasiakirjat
+      - item: Tuotantonäytteet
+      - item: FOB Qingdaon toimitus
+    cta_text: Launch My Brand
+    cta_href: /contact
+faq:
+  title: Paketin UKK
+  questions:
+    - q: Mikä on pakettien vähimmäistilausmäärä?
+      a: Klubin aloituspaketissa on vähintään 10 yksikköä. Resort- ja Brand-paketit räätälöidään tarpeidesi mukaan joustavilla MOQ-ratkaisuilla.
+    - q: Kauanko toimitus kestää?
+      a: Vakiotuotanto on 30–45 päivää tilausvahvistuksesta. Nopeutettu tuotanto on saatavilla lisämaksusta.
+    - q: Voinko mukauttaa laitteiden värejä ja tuotemerkkiä?
+      a: Kyllä. Kaikki paketit sisältävät täyden räätälöinnin – taulun värit, logopainatukset ja pakkaussuunnittelun.
+    - q: Tarjoatko myynnin jälkeistä tukea?
+      a: Kyllä. Jokainen paketti sisältää pääsyn online-huoltooppaihimme, opetusvideoihimme ja varaosien tilausjärjestelmäämme.
+cta:
+  title: Etkö ole varma, mikä paketti sopii?
+  subtitle: Vastaa kolmeen nopeaan kysymykseen, niin suosittelemme täydellisen paketin yrityksellesi.
+  actions:
+    - variant: primary
+      text: Hanki suositeltu paketti
+      href: /contact
+    - text: Katso ratkaisut yleisön mukaan
+      href: /solutions
+    - text: Lue menestystarinoita
+      href: /success-stories

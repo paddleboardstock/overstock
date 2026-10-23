@@ -1,0 +1,130 @@
+hero_text:
+  tagline: Kontakt
+  title: VÕTA ÜHENDUST
+contact_form:
+  id: form
+  title: Saada meile sõnum
+  subtitle: Pakkumiste, tehniliste küsimuste või partnerlussuhte päringute jaoks kirjutage meile. Vastame ühe tööpäeva jooksul.
+  email_to: info@aquafarer.com
+  submit_button: Saada päring → Hangi pakkumine
+  success_message: Aitäh! Teie sõnum on jõudnud meie postkasti. Vastame ühe tööpäeva jooksul.
+  error_message: Midagi läks sõnumi saatmisel valesti. Palun proovige uuesti või saatke meile otse e-kiri.
+  default_country_code: '+1'
+  captcha:
+    label: 'Rämpsposti vastane: palun lahendage järgmine'
+  fields:
+    - name: eesnimi
+      label: Eesnimi
+      row: 1
+    - name: perekonnanimi
+      label: Perekonnanimi
+      row: 1
+    - name: ettevõtteNimi
+      label: Ettevõtte nimi
+      row: 2
+    - name: address
+      label: Aadress
+      row: 3
+    - name: zip
+      label: Sihtnumber
+      row: 4
+    - name: country
+      label: Riik
+      row: 4
+      type: select
+      optionsKey: countries
+    - name: email
+      label: E-post
+      row: 5
+      type: email
+    - name: tel
+      label: TEL
+      row: 5
+      type: tel
+      withCountryCode: true
+    - name: tellimuse maht
+      label: Hinnanguline tellimuse maht
+      row: 6
+      type: select
+      options:
+        - value: ''
+          label: Valige oma hinnanguline maht...
+        - value: sample
+          label: Ainult proovid / prototüübid
+        - value: 5-10
+          label: 5–10 ühikut (Standard MOQ)
+        - value: 100-500
+          label: 100–500 ühikut
+        - value: 500-plus
+          label: 500+ ühikut (koguse hindadega)
+    - name: customization
+      label: Kas kohandamine on vajalik?
+      row: 7
+      type: select
+      options:
+        - value: ''
+          label: Vali kohandamise tüüp...
+        - value: none
+          label: Standardtoode (ilma kohandamiseta)
+        - value: logo
+          label: Ainult kohandatud logo / bränding
+        - value: full
+          label: Täielik OEM (suurus, värv, graafika, pakend)
+        - value: consultation
+          label: Ei ole kindel — vaja konsultatsiooni
+    - name: tootohuvi
+      label: Huvitatud tootekategooriad
+      row: 8
+      type: select
+      options:
+        - value: ''
+          label: Vali tootekategooria...
+        - value: all
+          label: Kõik tooted / Täielik kataloog
+        - value: sup
+          label: SUP Laudade / Lauasüstade
+        - value: kayak
+          label: Täispuhutavad kajakid
+        - value: rib
+          label: RIB Paadid
+        - value: dinghy
+          label: Väikesed paadid / abipaadid
+        - value: safety
+          label: Turvavarustus / Päästevestid
+        - value: accessory
+          label: Tarvikud (pumbad, aerud, kotid)
+    - name: subject
+      label: Teema
+      row: 9
+    - name: message
+      label: Sõnum
+      row: 10
+      type: textarea
+      rows: 6
+features2_other_ways:
+  title: Muud viisid meiega ühenduse võtmiseks
+  columns: 3
+  items:
+    - title: Müügipäringud
+      description: Pakkumised, konfiguratsioonid, edasimüüja taotlused ja hulgimüük.
+      icon: tabler:shopping-bag
+    - title: Tehniline tugi
+      description: Garantii, remondid, varuosad ja kasutusküsimused.
+      icon: tabler:tool
+    - title: Press & partnerlused
+      description: Meediakomplektid, sponsorlus ja tööstuse koostöö.
+      icon: tabler:news
+    - title: Telefon
+      description: +1 279 732 3333 (US HQ) · +86 13305324192 (tehas)
+      icon: tabler:headset
+    - title: E-post
+      description: info@aquafarer.com
+      icon: tabler:mail
+    - title: Globaalne peakorter & arveldus
+      description: Aquafarer LLC, New Mexico, Ameerika Ühendriigid
+      icon: tabler:map-pin
+map:
+  title: Meie asukoht
+  subtitle: Külastage meie Qingdao tootmiskeskust
+  address: Majandusarengu tsoon, Laixi, Qingdao, Hiina, 266600
+  zoom: 15

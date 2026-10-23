@@ -1,0 +1,181 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'sr' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">← Nazad na R &D centar</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Lab 03</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">RF Centar za zavarivanje</h1>
+      <p class="mt-3 text-lg text-muted">Dielektrična tehnologija zavarivanja za spojeve koji izdržavaju pritisak</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-jungle-mandala-1.webp"
+        alt="Aquafarer RF proces lemljenja dielektričnim spajanjem"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Nauka koja stoji iza šava</h2>
+  <p>
+    Napuhavajući čamac je pouzdan samo koliko i njegovi šavovi. Jedan slabi zavar može ugroziti čitavu komoru — a na
+    moru, kvar komore nije samo neprijatnost; to je bezbednosni rizik. U{SITE.name}, smo investirali u poseban Centar za
+    zavarivanje radio-frekvencijom (RF) koji kombinuje industrijske dielektrične presove za zavarivanje sa strogom
+    kontrolom procesa i post-zavarivačkim testiranjem. Svaki šav koji proizvedemo je dokumentovan, moguće ga je pratiti
+    i sertifikovan je da zadovolji ili premaši zahteve — međunarodnog standarda za napuhavajuća plovila.
+  </p>
+  <p>
+    RF zavarivanje koristi elektromagnetnu energiju visoke frekvencije (obično 27,12 MHz) da pobudi polarne molekule
+    unutar PVC ili Hypalon obloženog platna, generišući toplotu precizno na interfejsu materijala. Za razliku od
+    zavarivanja toplim zrakom ili toplom klinom, RF zavarivanje stvara pravi molekularni spoj — dva sloja platna se
+    spoje u materijal jedinstvene homogena strukture u zoni zavara, proizvodeći spoj koji je jednako jak kao i sam
+    osnovni materijal.
+  </p>
+
+  <h2>Oprema za zavarivanje i kontrola procesa</h2>
+  <p>Naš centar za zavarivanje je opremljen sa:</p>
+  <table>
+    <thead><tr><th>Mašina</th><th>Snaga / Kapacitet</th><th>Pretraga</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Dielektrična RF presa 1</td><td>15 kW, ploča 2000 × 600 mm</td><td
+          >Glavni longitudinalni šavovi, spojevi od pramca do cevi</td
+        ></tr
+      >
+      <tr
+        ><td>Dielektrična RF presa 2</td><td>10 kW, ploča 1500 × 500 mm</td><td
+          >Zavari pregrada, pričvršćivači za konus, zakrpe ventila</td
+        ></tr
+      >
+      <tr
+        ><td>CNC kontrolisani RF zavarivač</td><td>8 kW, XY sto 2500 × 1200 mm</td><td
+          >Zakrivljeni šavovi, utiskivanje logotipa/panela, precizne zakrpe</td
+        ></tr
+      >
+      <tr
+        ><td>Automatski zavarivač sa toplim klinom</td><td>Promenljiva temperatura, max 1,2 m/min</td><td
+          >Rezervna metoda za Hypalon/CSM materijale</td
+        ></tr
+      >
+    </tbody>
+  </table>
+  <p>
+    Svaka RF presa je opremljena zatvorenim sistemom za praćenje temperature i pritiska. Parametri zavarivanja — snaga,
+    vreme prise, vreme hlađenja, pritisak elektroda — se programiraju po vrsti materijala i beleže u našem Sistemu za
+    izvršenje proizvodnje (MES) za potpunu sledljivost.
+  </p>
+
+  <h2>Testovi kvaliteta zavara — svaki šav, svaki čamac</h2>
+  <p>Integritet zavara se proverava putem obaveznog protokola sa četiri testa:</p>
+  <ol>
+    <li>
+      <strong>Vizuelna inspekcija</strong>— 100 % šavova se vizuelno pregledaju na probijanje, nepodudaranje,
+      kontaminaciju ili nepotpunu fuziju. Prag stope odbacivanja: 0,5 % linearnih metara.
+    </li>
+    <li>
+      <strong>Test odvajanja ()</strong>— Traka širine 25 mm se seče sa probnog uzorka zavarivana sa svakom serijom
+      proizvodnje. Minimalna sila ljuštenja: 120 N/25 mm za PVC 1100 dtex.
+    </li>
+    <li>
+      <strong>Test zadržavanja vazduha</strong>— Svaka završena komora se pritiska na 1,25 × radnog pritiska i zadržava
+      24-48 sati. Pad pritiska ne sme preći 2 %.
+    </li>
+    <li>
+      <strong>Test termičkog ciklusa</strong>— Uzorci se ciklično zagrevaju od -20 °C do + 60 °C kroz 50 ciklusa, a
+      zatim se ponovo testira sila ljuštenja. Prihvatljiv gubitak čvrstoće: 10 %.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Uporedna čvrstoća ljuštenja — RF vs zavarivanje toplim zrakom (PVC 1100 dtex)
+    </p>
+    <div class="space-y-3">
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">RF zavarivanje</span><div
+          class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded"
+        >
+          <div class="h-full bg-blue-600 rounded" style="width:92%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">184 N</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">Topli zrak</span><div
+          class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded"
+        >
+          <div class="h-full bg-gray-400 rounded" style="width:65%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">130 N</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">min</span><div class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded">
+          <div class="h-full bg-green-500 rounded" style="width:48%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">96 N</span>
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      RF zavarivanje dosledno postiže 90-95 % čvrstoće matičnog materijala, mnogo iznad minimuma.
+    </p>
+  </div>
+
+  <h2>Profesionalna stručnost</h2>
+  <p>
+    Naš tim za zavarivanje predvodi viši procesni inženjer sa 11 godina iskustva u dielektričnom zavarivanju obloženih
+    tekstila. Svaki operater završava šestomesečni unutrašnji program sertifikacije pre nego što mu se dozvoli rad na
+    proizvodnim šavovima. Svake godine je potrebna re-sertifikacija, koja uključuje praktični test zavarivanja ocenjen
+    prema našem internom Grade-A standardu (sila ljuštenja ≥ 160 N/25 mm).
+  </p>
+
+  <h2>Prilagođena rešenja zavarivanja za posebne zahteve</h2>
+  <p>
+    Razumemo da jedna specifikacija zavarivanja ne odgovara za svaku primenu. Naš RF Zavarivački centar rutinski razvija
+    prilagođene konfiguracije šavova za klijente sa posebnim zahtevima:
+  </p>
+  <ul>
+    <li>
+      <strong>Višeslojni ojačani flasteri</strong>— za oblasti visoke potrošnje kao što su ivice trupa i lukovi,
+      razvijamo višestruka RF zavarivanja koja integrišu spoljašnji sloj otporan na habanje bez ugrožavanja
+      fleksibilnosti.
+    </li>
+    <li>
+      <strong>Provodne ili RF neprozirne šavove</strong>— za vojne ili nadzorne brodice koje zahtevaju elektromagnetno
+      oklopljavanje, zavarujemo u provodnim mrežastim slojevima unutar sloja šava.
+    </li>
+    <li>
+      <strong>Zavarivanje panela sa promenom boje</strong>— dvobojni paneli tkanine (npr. narandžasti trup + siva gornja
+      površina) zavareni sa skrivenim preklopom da bi se očuvala estetika brenda bez vidljive linije spoja.
+    </li>
+  </ul>
+
+  <h2>Naša posvećenost vama</h2>
+  <p>
+    Svaka čamac koji isporučujemo nosi našu garanciju kvaliteta zavara: ako bilo koji šav otkaže u normalnoj upotrebi
+    tokom garantnog perioda, popravljamo ili zamenjujemo pogođenu komoru besplatno, a sprovedeno je istraživanje uzroka
+    kako bi se sprečilo ponavljanje. Ovo nije samo garancija — to je posvećenost kontinuiranom poboljšanju zasnovanom na
+    podacima iz realnog rada.
+  </p>
+  <p>
+    Kada birate{SITE.name}, birate šavove koji su dizajnirani, testirani i dokumentovani — ne samo zavareni. To je
+    razlika između čamca koji pluta i čamca koji funkcioniše.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Razgovarajte o vašim zahtevima za zavarivanje</h2>
+    <p class="mt-2 text-sm text-muted">
+      Prilagođene specifikacije šavova, kompatibilnost materijala ili validacija procesa.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Kontaktirajte naš tim za zavarivanje</a
+    >
+  </div>
+</section>

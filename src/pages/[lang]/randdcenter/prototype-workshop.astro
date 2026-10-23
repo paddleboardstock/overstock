@@ -1,0 +1,321 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+import { languages, defaultLang } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+import RDe from '~/components/randdcenter/prototype-workshop.de.astro';
+import REs from '~/components/randdcenter/prototype-workshop.es.astro';
+import RFr from '~/components/randdcenter/prototype-workshop.fr.astro';
+import RIt from '~/components/randdcenter/prototype-workshop.it.astro';
+import REn from '~/components/randdcenter/prototype-workshop.en.astro';
+import RCs from '~/components/randdcenter/prototype-workshop.cs.astro';
+import RSv from '~/components/randdcenter/prototype-workshop.sv.astro';
+import RDa from '~/components/randdcenter/prototype-workshop.da.astro';
+import REl from '~/components/randdcenter/prototype-workshop.el.astro';
+import RNo from '~/components/randdcenter/prototype-workshop.no.astro';
+import RRu from '~/components/randdcenter/prototype-workshop.ru.astro';
+import RNl from '~/components/randdcenter/prototype-workshop.nl.astro';
+import RFi from '~/components/randdcenter/prototype-workshop.fi.astro';
+import RPl from '~/components/randdcenter/prototype-workshop.pl.astro';
+import RAr from '~/components/randdcenter/prototype-workshop.ar.astro';
+import RPt from '~/components/randdcenter/prototype-workshop.pt.astro';
+import RJa from '~/components/randdcenter/prototype-workshop.ja.astro';
+import RBg from '~/components/randdcenter/prototype-workshop.bg.astro';
+import REt from '~/components/randdcenter/prototype-workshop.et.astro';
+import RHe from '~/components/randdcenter/prototype-workshop.he.astro';
+import RHr from '~/components/randdcenter/prototype-workshop.hr.astro';
+import RHu from '~/components/randdcenter/prototype-workshop.hu.astro';
+import RId from '~/components/randdcenter/prototype-workshop.id.astro';
+import RKo from '~/components/randdcenter/prototype-workshop.ko.astro';
+import RLt from '~/components/randdcenter/prototype-workshop.lt.astro';
+import RLv from '~/components/randdcenter/prototype-workshop.lv.astro';
+import RMs from '~/components/randdcenter/prototype-workshop.ms.astro';
+import RRo from '~/components/randdcenter/prototype-workshop.ro.astro';
+import RSk from '~/components/randdcenter/prototype-workshop.sk.astro';
+import RSl from '~/components/randdcenter/prototype-workshop.sl.astro';
+import RSr from '~/components/randdcenter/prototype-workshop.sr.astro';
+import RTh from '~/components/randdcenter/prototype-workshop.th.astro';
+import RTl from '~/components/randdcenter/prototype-workshop.tl.astro';
+import RTr from '~/components/randdcenter/prototype-workshop.tr.astro';
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: any) => getUiForLang(lang || defaultLang)?.[key] || '';
+
+const META: Record<string, { title: string; description: string }> = {
+  en: {
+    title: 'Prototype Workshop — Full-Scale RIB Prototyping & Sea Trials',
+    description: `From CAD to sea-ready boat in 8-12 weeks. Our Prototype Workshop builds, rigs, and sea-trials custom RIBs and inflatable boats. Start your prototype project today.`,
+  },
+  de: {
+    title: 'Prototypen-Werkstatt — RIB-Prototypenbau im Originalmaßstab und Seeerprobung',
+    description: `In 8–12 Wochen vom CAD-Modell zum seetüchtigen Boot. Unsere Prototypen-Werkstatt baut, riggt und erprobt individuelle RIBs und Schlauchboote auf See. Starten Sie noch heute Ihr Prototypenprojekt.`,
+  },
+  es: {
+    title: 'Taller de prototipos — prototipado de RIB a escala real y pruebas de mar',
+    description: `Del CAD al barco listo para navegar en 8-12 semanas. Nuestro taller de prototipos construye, equipa y prueba en el mar RIB y barcos hinchables personalizados. Inicie hoy su proyecto de prototipo.`,
+  },
+  fr: {
+    title: 'Atelier de prototypes — prototypage RIB pleine échelle et essais en mer',
+    description: `Du CAD au bateau prêt à naviguer en 8 à 12 semaines. Notre atelier de prototypes construit, équipe et teste en mer des RIB et bateaux gonflables sur mesure. Lancez votre projet de prototype dès aujourd'hui.`,
+  },
+  it: {
+    title: 'Officina prototipi — prototipazione RIB a grandezza naturale e prove in mare',
+    description: `Dal CAD al battello pronto per il mare in 8-12 settimane. La nostra officina prototipi costruisce, equipaggia e prova in mare RIB e gommoni gonfiabili su misura. Avviate oggi il vostro progetto di prototipo.`,
+  },
+  cs: {
+    title: 'Prototypový workshop — Kompletní RIB Prototypování a zkoušky na moři',
+    description:
+      'Z CAD na loď připravenou k moři za 8-12 týdnů. Naše prototypová dílna vyrábí, montuje a námořní zkoušky na zakázku RIB a nafukovací čluny. Začněte svůj prototypový projekt ještě dnes.',
+  },
+  sv: {
+    title: 'Prototypverkstad — Fullskalig RIB Prototypframställning och sjöförsök',
+    description:
+      'Från CAD till sjöfärdig båt på 8-12 veckor. Vår prototypverkstad bygger, riggar och testar specialanpassade RIB:er och uppblåsbara båtar. Starta ditt prototypprojekt idag.',
+  },
+  da: {
+    title: 'Prototypeværksted — Fuldskala RIB Prototyping og søforsøg',
+    description:
+      "Fra CAD til havklar båd på 8-12 uger. Vores prototypeværksted bygger, rigger og prøver til søs tilpassede RIB'er og gummibåde. Start dit prototypeprojekt i dag.",
+  },
+  el: {
+    title: 'Εργαστήριο Πρωτοτύπων — Πλήρης κλίμακας RIB Πρωτότυπα & θαλάσσιες δοκιμές',
+    description:
+      'Από CAD σε πλοίο έτοιμο για θάλασσα σε 8-12 εβδομάδες. Το Prototype Workshop μας κατασκευάζει, εξέδρες και δοκιμάζει προσαρμοσμένα RIB και φουσκωτά σκάφη. Ξεκινήστε το πρωτότυπο έργο σας σήμερα.',
+  },
+  no: {
+    title: 'Prototypeverksted — Fullskala RIB Prototyping og sjøforsøk',
+    description:
+      'Fra CAD til sjøklar båt på 8-12 uker. Vårt prototypeverksted bygger, rigger og sjøprøver tilpassede RIB-er og oppblåsbare båter. Start prototypeprosjektet ditt i dag.',
+  },
+  ru: {
+    title: 'Мастерская прототипов — полномасштабное RIB Прототипирование и ходовые испытания',
+    description:
+      'От CAD до готового к работе судна за 8-12 недель. Наша мастерская прототипов производит, устанавливает и проводит ходовые испытания нестандартных надувных лодок и надувных лодок. Начните свой проект прототипа сегодня.',
+  },
+  nl: {
+    title: 'Prototypeworkshop - Volledige RIB Prototyping en proefvaarten',
+    description:
+      "Van CAD naar zeeklare boot in 8-12 weken. Onze Prototype Workshop bouwt, rigt en proefvaarten op maat gemaakte RIB's en opblaasbare boten. Start vandaag nog met uw prototypeproject.",
+  },
+  fi: {
+    title: 'Prototyyppityöpaja — Täysi mittakaavainen RIB Prototyyppi- ja merikokeet',
+    description:
+      'CAD:sta merivalmiiseen veneeseen 8-12 viikossa. Prototyyppityöpajamme rakentaa, lautat ja merikokeet räätälöityjä RIB-veneitä ja puhallettavia veneitä. Aloita prototyyppiprojektisi tänään.',
+  },
+  pl: {
+    title: 'Warsztaty prototypowe — pełnowymiarowe prototypowanie i próby morskie RIB',
+    description:
+      'Od CAD do łodzi gotowej do transportu morskiego w 8-12 tygodni. Nasz warsztat prototypowy buduje, montuje i przeprowadza próby morskie niestandardowe RIB-y i pontony. Rozpocznij swój projekt prototypowy już dziś.',
+  },
+  ar: {
+    title: 'ورشة عمل النماذج الأولية - RIB النماذج الأولية والتجارب البحرية واسعة النطاق',
+    description:
+      'من CAD إلى قارب جاهز للإبحار خلال 8-12 أسبوعًا. تقوم ورشة عمل النماذج الأولية الخاصة بنا ببناء الضلوع المطاطية والقوارب القابلة للنفخ والحفارات والتجارب البحرية. ابدأ مشروع النموذج الأولي الخاص بك اليوم.',
+  },
+  pt: {
+    title: 'Workshop de protótipos - Prototipagem RIB em escala real e testes no mar',
+    description:
+      'Do CAD ao barco pronto para o mar em 8 a 12 semanas. Nossa oficina de protótipos constrói, monta e testa RIBs personalizados e barcos infláveis. Comece seu projeto de protótipo hoje.',
+  },
+  ja: {
+    title: 'プロトタイプ ワークショップ — 本格的な RIB プロトタイピングと海上試験',
+    description:
+      'CAD から海上準備の整ったボートまで 8 ～ 12 週間かかります。当社のプロトタイプ ワークショップでは、カスタム RIB やインフレータブル ボートの構築、リグ、海上試験を行っています。今すぐプロトタイプ プロジェクトを始めましょう。',
+  },
+  bg: {
+    title: 'Prototype Workshop — Full-Scale RIB Prototyping & Sea Trials',
+    description:
+      'From CAD to sea-ready boat in 8-12 weeks. Our Prototype Workshop builds, rigs, and sea-trials custom RIBs and inflatable boats. Start your prototype project today.',
+  },
+  et: {
+    title: 'Prototype Workshop — Full-Scale RIB Prototyping & Sea Trials',
+    description:
+      'From CAD to sea-ready boat in 8-12 weeks. Our Prototype Workshop builds, rigs, and sea-trials custom RIBs and inflatable boats. Start your prototype project today.',
+  },
+  he: {
+    title: 'Prototype Workshop — Full-Scale RIB Prototyping & Sea Trials',
+    description:
+      'From CAD to sea-ready boat in 8-12 weeks. Our Prototype Workshop builds, rigs, and sea-trials custom RIBs and inflatable boats. Start your prototype project today.',
+  },
+  hr: {
+    title: 'Prototype Workshop — Full-Scale RIB Prototyping & Sea Trials',
+    description:
+      'From CAD to sea-ready boat in 8-12 weeks. Our Prototype Workshop builds, rigs, and sea-trials custom RIBs and inflatable boats. Start your prototype project today.',
+  },
+  hu: {
+    title: 'Prototype Workshop — Full-Scale RIB Prototyping & Sea Trials',
+    description:
+      'From CAD to sea-ready boat in 8-12 weeks. Our Prototype Workshop builds, rigs, and sea-trials custom RIBs and inflatable boats. Start your prototype project today.',
+  },
+  id: {
+    title: 'Prototype Workshop — Full-Scale RIB Prototyping & Sea Trials',
+    description:
+      'From CAD to sea-ready boat in 8-12 weeks. Our Prototype Workshop builds, rigs, and sea-trials custom RIBs and inflatable boats. Start your prototype project today.',
+  },
+  ko: {
+    title: 'Prototype Workshop — Full-Scale RIB Prototyping & Sea Trials',
+    description:
+      'From CAD to sea-ready boat in 8-12 weeks. Our Prototype Workshop builds, rigs, and sea-trials custom RIBs and inflatable boats. Start your prototype project today.',
+  },
+  lt: {
+    title: 'Prototype Workshop — Full-Scale RIB Prototyping & Sea Trials',
+    description:
+      'From CAD to sea-ready boat in 8-12 weeks. Our Prototype Workshop builds, rigs, and sea-trials custom RIBs and inflatable boats. Start your prototype project today.',
+  },
+  lv: {
+    title: 'Prototype Workshop — Full-Scale RIB Prototyping & Sea Trials',
+    description:
+      'From CAD to sea-ready boat in 8-12 weeks. Our Prototype Workshop builds, rigs, and sea-trials custom RIBs and inflatable boats. Start your prototype project today.',
+  },
+  ms: {
+    title: 'Prototype Workshop — Full-Scale RIB Prototyping & Sea Trials',
+    description:
+      'From CAD to sea-ready boat in 8-12 weeks. Our Prototype Workshop builds, rigs, and sea-trials custom RIBs and inflatable boats. Start your prototype project today.',
+  },
+  ro: {
+    title: 'Prototype Workshop — Full-Scale RIB Prototyping & Sea Trials',
+    description:
+      'From CAD to sea-ready boat in 8-12 weeks. Our Prototype Workshop builds, rigs, and sea-trials custom RIBs and inflatable boats. Start your prototype project today.',
+  },
+  sk: {
+    title: 'Prototype Workshop — Full-Scale RIB Prototyping & Sea Trials',
+    description:
+      'From CAD to sea-ready boat in 8-12 weeks. Our Prototype Workshop builds, rigs, and sea-trials custom RIBs and inflatable boats. Start your prototype project today.',
+  },
+  sl: {
+    title: 'Prototype Workshop — Full-Scale RIB Prototyping & Sea Trials',
+    description:
+      'From CAD to sea-ready boat in 8-12 weeks. Our Prototype Workshop builds, rigs, and sea-trials custom RIBs and inflatable boats. Start your prototype project today.',
+  },
+  sr: {
+    title: 'Prototype Workshop — Full-Scale RIB Prototyping & Sea Trials',
+    description:
+      'From CAD to sea-ready boat in 8-12 weeks. Our Prototype Workshop builds, rigs, and sea-trials custom RIBs and inflatable boats. Start your prototype project today.',
+  },
+  th: {
+    title: 'Prototype Workshop — Full-Scale RIB Prototyping & Sea Trials',
+    description:
+      'From CAD to sea-ready boat in 8-12 weeks. Our Prototype Workshop builds, rigs, and sea-trials custom RIBs and inflatable boats. Start your prototype project today.',
+  },
+  tl: {
+    title: 'Prototype Workshop — Full-Scale RIB Prototyping & Sea Trials',
+    description:
+      'From CAD to sea-ready boat in 8-12 weeks. Our Prototype Workshop builds, rigs, and sea-trials custom RIBs and inflatable boats. Start your prototype project today.',
+  },
+  tr: {
+    title: 'Prototype Workshop — Full-Scale RIB Prototyping & Sea Trials',
+    description:
+      'From CAD to sea-ready boat in 8-12 weeks. Our Prototype Workshop builds, rigs, and sea-trials custom RIBs and inflatable boats. Start your prototype project today.',
+  },
+};
+
+const crumbs = [
+  { name: t('nav.home') || 'Home', href: `/${lang}/` },
+  { name: 'R&D Center', href: `/${lang}/randdcenter` },
+  { name: 'Prototype Workshop' },
+];
+
+const meta = META[lang] || META.en;
+
+const metadata = {
+  title: `${meta.title} | ${SITE.name}`,
+  description: meta.description,
+};
+
+const RanddBody: any =
+  (
+    {
+      de: RDe,
+      es: REs,
+      fr: RFr,
+      it: RIt,
+      cs: RCs,
+      sv: RSv,
+      da: RDa,
+      el: REl,
+      no: RNo,
+      ru: RRu,
+      nl: RNl,
+      fi: RFi,
+      pl: RPl,
+      ar: RAr,
+      pt: RPt,
+      ja: RJa,
+      bg: RBg,
+      et: REt,
+      he: RHe,
+      hr: RHr,
+      hu: RHu,
+      id: RId,
+      ko: RKo,
+      lt: RLt,
+      lv: RLv,
+      ms: RMs,
+      ro: RRo,
+      sk: RSk,
+      sl: RSl,
+      sr: RSr,
+      th: RTh,
+      tl: RTl,
+      tr: RTr,
+    } as Record<string, any>
+  )[lang] || REn;
+
+const faqSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'How long does prototype production take?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: '7-14 working days after design approval for standard prototypes. Rush samples available at 5-7 days for an additional fee.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I request a custom prototype?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Share your target specs, reference product, or concept. Our engineering team develops CAD drawings and produces pre-production samples for your approval.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What testing do prototypes undergo?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: '1.25x rated pressure hold for 24-48h, seam peel testing, dimensional verification, and full 100-point quality checklist.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the cost of a prototype?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Prototype pricing depends on complexity and materials. Sample costs are often credited toward production orders. Contact us for a specific quote.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I get samples in my brand colors?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Pre-production samples include your brand colors, logo placement, and specified materials for full approval before production.',
+      },
+    },
+  ],
+});
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  {RanddBody && <RanddBody lang={lang} />}
+  <script is:inline type="application/ld+json" set:html={faqSchema} />
+</Layout>

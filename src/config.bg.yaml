@@ -1,0 +1,131 @@
+site:
+  name: Aquafarer
+  site: 'https://aquafarer.com'
+  base: '/'
+  trailingSlash: true
+  googleSiteVerificationId: ''
+
+# Default SEO metadata
+metadata:
+  title:
+    default: Aquafarer — Модерни решения за надуваеми лодки и технически продукти
+    template: '%s — Aquafarer'
+  description: 'Aquafarer проектира и произвежда надуваеми лодки, RIB и висококачествени технически продукти. Разгледайте нашия каталог, технически спецификации и ресурси.'
+  keywords:
+    - Aquafarer
+    - надуваема лодка
+    - RIB
+    - PVC
+    - морска индустрия
+    - инженеринг
+  author: Aquafarer
+  robots:
+    index: true
+    follow: true
+  openGraph:
+    site_name: Aquafarer
+    images:
+      - url: '~/assets/images/default.webp'
+        width: 1200
+        height: 628
+    type: website
+    locale: bg_BG
+  twitter:
+    handle: '@Aquafarer'
+    site: '@Aquafarer'
+    cardType: summary_large_image
+
+i18n:
+  textDirection: ltr
+
+apps:
+  blog:
+    isEnabled: true
+    postsPerPage: 6
+
+    post:
+      isEnabled: true
+      permalink: '/news/%slug%' # Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
+      robots:
+        index: true
+        follow: true
+
+    list:
+      isEnabled: true
+      pathname: 'news' # News main path
+      robots:
+        index: true
+        follow: true
+
+    category:
+      isEnabled: true
+      pathname: 'news/category' # /category/<slug>
+      robots:
+        index: true
+        follow: true
+
+    tag:
+      isEnabled: true
+      pathname: 'news/tag' # /tag/<slug>
+      robots:
+        index: false
+        follow: true
+
+    isRelatedPostsEnabled: true
+    relatedPostsCount: 4
+
+  products:
+    isEnabled: true
+    productsPerPage: 12
+    product:
+      isEnabled: true
+      permalink: '/products/%slug%'
+      robots:
+        index: true
+        follow: true
+    list:
+      isEnabled: true
+      pathname: 'products'
+      robots:
+        index: true
+        follow: true
+
+analytics:
+  vendors:
+    googleAnalytics:
+      id: null # or "G-XXXXXXXXXX"
+
+ui:
+  theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
+
+# --- Per-language site settings ---
+siteSettings:
+  siteName: 'Aquafarer'
+  siteTagline: 'Aquafarer — Надуваеми лодки, SUP и екипировка за водни спортове от висока класа'
+  siteDescription: 'Aquafarer проектира и произвежда надуваеми лодки, SUP дъски и висококачествена екипировка за водни спортове.'
+  organization:
+    name: 'Aquafarer'
+    logo: ''
+    contactEmail: info@aquafarer.com
+    contactPhone: '+86 13305324192'
+    address: 'Economic Development Zone, Laixi, Qingdao, China, 266600'
+
+branding:
+  site_name: 'Aquafarer'
+  logo_image: ''
+  logo_alt: 'Aquafarer logo'
+  copyright: '© {year} {site_name} · Всички права запазени.'
+  phone: '+86 13305324192'
+  address: 'Economic Development Zone, Laixi, Qingdao, China, 266600'
+  email: info@aquafarer.com
+  whatsapp_number: '+86 13305324192'
+  whatsapp_default_message: 'Здравейте, бих искал да попитам за продукт.'
+  contact_email_to: info@aquafarer.com
+  contact_email_provider: resend
+  contact_from_email: info@aquafarer.com
+  contact_from_name: Aquafarer
+  contact_resend_api_key: Aa123456#
+  contact_submissions_pat: ''
+  gmap_api_key: ''
+  map_latitude: '36.8861'
+  map_longitude: '120.5261'

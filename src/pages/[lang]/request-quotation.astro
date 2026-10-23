@@ -1,0 +1,525 @@
+---
+const PAGE_DESC: Record<string, { description: string }> = {
+  de: {
+    description:
+      'Reichen Sie Ihre Produktanforderungen ein und erhalten Sie ein detailliertes Angebot vom Aquafarer-Herstellungsteam. Antwort innerhalb von 2 Werktagen.',
+  },
+  es: {
+    description:
+      'Envíe sus requisitos de producto para recibir un presupuesto detallado del equipo de fabricación de Aquafarer. Respondemos en 2 días laborables.',
+  },
+  fr: {
+    description:
+      "Soumettez vos besoins produit pour obtenir un devis détaillé de l'équipe de fabrication Aquafarer. Réponse sous 2 jours ouvrés.",
+  },
+  it: {
+    description:
+      'Invia i tuoi requisiti di prodotto per ricevere un preventivo dettagliato dal team di produzione Aquafarer. Rispondiamo entro 2 giorni lavorativi.',
+  },
+  cs: {
+    description:
+      'Odešlete své požadavky na produkt a získejte podrobnou nabídku od výrobního týmu Aquafarer. Odpovídáme do 2 pracovních dnů.',
+  },
+  sv: {
+    description:
+      'Skicka in dina produktkrav och få en detaljerad offert från Aquafarers tillverkningsteam. Svara inom 2 arbetsdagar.',
+  },
+  da: {
+    description:
+      'Indsend dine produktkrav og modtag et detaljeret tilbud fra Aquafarer produktionsteam. Svar inden for 2 hverdage.',
+  },
+  el: {
+    description:
+      'Υποβάλετε τις απαιτήσεις του προϊόντος σας και λάβετε μια λεπτομερή προσφορά από την ομάδα κατασκευής Aquafarer. Απάντηση εντός 2 εργάσιμων ημερών.',
+  },
+  no: {
+    description:
+      'Send inn produktkravene dine og motta et detaljert tilbud fra Aquafarer produksjonsteam. Svar innen 2 virkedager.',
+  },
+  ru: {
+    description:
+      'Отправьте свои требования к продукту и получите подробное предложение от производственной группы Aquafarer. Ответ в течение 2 рабочих дней.',
+  },
+  nl: {
+    description:
+      'Dien uw productvereisten in en ontvang een gedetailleerde offerte van het productieteam van Aquafarer. Reageer binnen 2 werkdagen.',
+  },
+  fi: {
+    description:
+      'Lähetä tuotevaatimukset ja saat yksityiskohtaisen tarjouksen Aquafarer-valmistustiimiltä. Vastaa 2 työpäivän kuluessa.',
+  },
+  pl: {
+    description:
+      'Prześlij wymagania dotyczące produktu i otrzymaj szczegółową ofertę od zespołu produkcyjnego Aquafarer. Odpowiedź w ciągu 2 dni roboczych.',
+  },
+  ar: {
+    description: 'أرسل متطلبات منتجك واحصل على عرض أسعار تفصيلي من فريق التصنيع Aquafarer. الرد خلال يومي عمل.',
+  },
+  pt: {
+    description:
+      'Envie os requisitos do seu produto e receba uma cotação detalhada da equipe de fabricação Aquafarer. Resposta dentro de 2 dias úteis.',
+  },
+  ja: {
+    description:
+      '製品要件を送信し、Aquafarer 製造チームから詳細な見積もりを受け取ります。 2営業日以内にご返信ください。',
+  },
+};
+const PAGE_META: Record<string, { title: string }> = {
+  de: { title: 'Angebot anfordern' },
+  es: { title: 'Solicitar presupuesto' },
+  fr: { title: 'Demander un devis' },
+  it: { title: 'Richiedi un preventivo' },
+  pt: { title: 'Solicitar orçamento' },
+  ar: { title: 'اطلب عرض سعر' },
+  ru: { title: 'Запросить расчёт' },
+  pl: { title: 'Zapytanie ofertowe' },
+  nl: { title: 'Offerte aanvragen' },
+  sv: { title: 'Begär offert' },
+  no: { title: 'Be om tilbud' },
+  el: { title: 'Ζητήστε προσφορά' },
+  fi: { title: 'Pyydä tarjous' },
+  da: { title: 'Anmod om tilbud' },
+  cs: { title: 'Vyžádat nabídku' },
+  ja: { title: '見積もりを依頼する' },
+};
+export const prerender = true;
+
+import Steps2 from '~/components/widgets/Steps2.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import Icon from '~/components/ui/Icon.astro';
+import { SITE } from 'astrowind:config';
+import { getPageContent, setPageContentData } from '~/i18n/page-content';
+import __pageData from '~/i18n/generated/pages/request-quotation.ts';
+import { localizePageTitle } from '~/i18n/page-title';
+import { languages } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => getUiForLang(lang)?.[key] || '';
+setPageContentData(__pageData);
+const page = getPageContent(lang, 'request-quotation');
+
+const hero = page.hero_text ?? {};
+const process = page.steps2_process ?? {};
+const rfqTypes = page.content_rfq_types ?? {};
+const formQuick = page.form_quick ?? {};
+const formStandard = page.form_standard ?? {};
+const formProject = page.form_project ?? {};
+const cta = page.cta ?? {};
+const lh = (h: string) => (h ? `/${lang}${h}` : h);
+const ctaActions = cta.actions?.map((a: any) => ({ ...a, href: lh(a.href) }));
+
+const metadata = {
+  title: localizePageTitle(
+    page,
+    PAGE_META[lang]?.title || `Request a Quote — ${SITE.name} | OEM/ODM Marine Manufacturing`
+  ),
+  description:
+    PAGE_DESC[lang]?.description ||
+    "Submit your product requirements for a detailed quotation from Aquafarer's manufacturing team. We respond within 2 business days.",
+};
+const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: 'Request a Quote' }];
+
+function renderField(f: any, formId: string): string {
+  const id = `${formId}-${f.name}`;
+  const req = f.required ? 'required' : '';
+  const ph = f.placeholder ? `placeholder="${f.placeholder}"` : '';
+  const cls =
+    'py-2 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900';
+
+  if (f.type === 'textarea') {
+    return `<div>
+      <label for="${id}" class="block text-sm font-medium mb-1">${f.label}${f.required ? ' <span class="text-red-500">*</span>' : ''}</label>
+      <textarea id="${id}" name="${f.name}" rows="4" ${ph} ${req} class="${cls}"></textarea>
+    </div>`;
+  }
+
+  if (f.type === 'select') {
+    const options = (f.options || []).map((o: string) => `<option value="${o}">${o}</option>`).join('');
+    return `<div>
+      <label for="${id}" class="block text-sm font-medium mb-1">${f.label}${f.required ? ' <span class="text-red-500">*</span>' : ''}</label>
+      <select id="${id}" name="${f.name}" ${req} class="${cls}">
+        <option value="">Select...</option>
+        ${options}
+      </select>
+    </div>`;
+  }
+
+  if (f.type === 'multiselect') {
+    const checkboxes = (f.options || [])
+      .map(
+        (o: string) =>
+          `<label class="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300 cursor-pointer">
+        <input type="checkbox" name="${f.name}" value="${o}" class="h-4 w-4 rounded border-gray-300 dark:border-gray-600 text-primary focus:ring-primary" />
+        ${o}
+      </label>`
+      )
+      .join('');
+    return `<div>
+      <label class="block text-sm font-medium mb-2">${f.label}${f.required ? ' <span class="text-red-500">*</span>' : ''}</label>
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">${checkboxes}</div>
+    </div>`;
+  }
+
+  if (f.type === 'email') {
+    return `<div>
+      <label for="${id}" class="block text-sm font-medium mb-1">${f.label}${f.required ? ' <span class="text-red-500">*</span>' : ''}</label>
+      <input id="${id}" type="email" name="${f.name}" ${ph} ${req} class="${cls}" />
+    </div>`;
+  }
+
+  return `<div>
+    <label for="${id}" class="block text-sm font-medium mb-1">${f.label}${f.required ? ' <span class="text-red-500">*</span>' : ''}</label>
+    <input id="${id}" type="text" name="${f.name}" ${ph} ${req} class="${cls}" />
+  </div>`;
+}
+
+const faqSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'How do I request a quotation?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Use our 3-tier RFQ form: Quick (5-6 fields), Standard (8-10 fields), or Project (10-14 fields) depending on your needs.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How quickly will I receive a response?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Quick quotes within 24 hours. Standard and Project quotes within 48 hours with detailed specifications and pricing.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is there a minimum order for quotes?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'No minimum for quoting. MOQs apply at order placement: 2-5 units (RIB), 5-10 units (SUP) for standard models.',
+      },
+    },
+  ],
+});
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <HeroText tagline={hero.tagline} title={hero.title} subtitle={hero.subtitle} />
+  <Steps2 title={process.title} subtitle={process.subtitle} items={process.items} />
+
+  {
+    rfqTypes.items && rfqTypes.items.length > 0 && (
+      <section class="px-6 sm:px-6 py-16 mx-auto max-w-6xl">
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold text-primary uppercase tracking-wider">{rfqTypes.tagline}</p>
+          <h2 class="mt-2 text-3xl font-bold" set:html={rfqTypes.title} />
+          {rfqTypes.subtitle && <p class="mt-2 text-muted">{rfqTypes.subtitle}</p>}
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          {rfqTypes.items.map((item: any, idx: number) => (
+            <button
+              type="button"
+              data-rfq-tab={idx}
+              class="rfq-tab-btn p-6 rounded-xl border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-left hover:border-primary hover:shadow-md transition-all cursor-pointer"
+            >
+              <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                <Icon name={item.icon} class="w-6 h-6 text-primary" />
+              </div>
+              <h3 class="font-bold text-lg">{item.title}</h3>
+              <p class="mt-2 text-sm text-muted leading-relaxed">{item.description}</p>
+            </button>
+          ))}
+        </div>
+      </section>
+    )
+  }
+
+  <section class="px-6 sm:px-6 py-8 mx-auto max-w-3xl">
+    <div
+      class="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 shadow-lg overflow-hidden"
+    >
+      <div class="rfq-tab-bar flex border-b border-gray-200 dark:border-gray-700">
+        <button
+          type="button"
+          data-rfq-trigger="0"
+          class="rfq-trigger flex-1 py-4 px-6 text-sm font-semibold text-center border-b-2 border-primary text-primary bg-gray-50 dark:bg-gray-800 transition-colors"
+        >
+          <Icon name="tabler:bolt" class="w-4 h-4 mr-1" />
+          Quick Inquiry
+        </button>
+        <button
+          type="button"
+          data-rfq-trigger="1"
+          class="rfq-trigger flex-1 py-4 px-6 text-sm font-semibold text-center border-b-2 border-transparent text-muted hover:text-primary transition-colors"
+        >
+          <Icon name="tabler:file-text" class="w-4 h-4 mr-1" />
+          Standard RFQ
+        </button>
+        <button
+          type="button"
+          data-rfq-trigger="2"
+          class="rfq-trigger flex-1 py-4 px-6 text-sm font-semibold text-center border-b-2 border-transparent text-muted hover:text-primary transition-colors"
+        >
+          <Icon name="tabler:clipboard-list" class="w-4 h-4 mr-1" />
+          Project RFQ
+        </button>
+      </div>
+
+      <div class="p-6 sm:p-8">
+        <div data-rfq-panel="0" class="rfq-panel">
+          <h3 class="text-xl font-bold">{formQuick.title}</h3>
+          <p class="mt-1 text-sm text-muted">{formQuick.subtitle}</p>
+          <form
+            method="POST"
+            action="/api/contact"
+            class="mt-6 space-y-5"
+            data-contact-form
+            data-success-message="Thank you! Your inquiry has been received. We'll respond within 24 hours."
+            data-error-message="Something went wrong. Please try again."
+          >
+            <input type="hidden" name="rfqType" value="quick" />
+            <div
+              aria-hidden="true"
+              style="position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;opacity:0;pointer-events:none"
+            >
+              <label for="rfq-quick-email-confirm">Do not fill this</label>
+              <input id="rfq-quick-email-confirm" type="text" name="email_confirm" tabindex="-1" autocomplete="off" />
+            </div>
+            {(formQuick.fields || []).map((f: any) => <Fragment set:html={renderField(f, 'rfq-quick')} />)}
+            <div class="pt-2">
+              <button
+                type="submit"
+                class="inline-flex items-center gap-2 px-8 py-3 font-semibold rounded-full bg-[#fb923c] hover:bg-orange-600 text-white shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5"
+              >
+                Send Quick Inquiry →
+              </button>
+            </div>
+            <div data-form-status class="hidden text-sm font-medium"></div>
+          </form>
+        </div>
+
+        <div data-rfq-panel="1" class="rfq-panel hidden">
+          <h3 class="text-xl font-bold">{formStandard.title}</h3>
+          <p class="mt-1 text-sm text-muted">{formStandard.subtitle}</p>
+          <form
+            method="POST"
+            action="/api/contact"
+            class="mt-6 space-y-5"
+            data-contact-form
+            data-success-message="Thank you! Your RFQ has been received. We'll send a detailed quotation within 48 hours."
+            data-error-message="Something went wrong. Please try again."
+          >
+            <input type="hidden" name="rfqType" value="standard" />
+            <div
+              aria-hidden="true"
+              style="position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;opacity:0;pointer-events:none"
+            >
+              <label for="rfq-std-email-confirm">Do not fill this</label>
+              <input id="rfq-std-email-confirm" type="text" name="email_confirm" tabindex="-1" autocomplete="off" />
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {
+                (formStandard.fields || [])
+                  .slice(0, 4)
+                  .map((f: any) => <Fragment set:html={renderField(f, 'rfq-std')} />)
+              }
+            </div>
+            {(formStandard.fields || []).slice(4).map((f: any) => <Fragment set:html={renderField(f, 'rfq-std')} />)}
+            <div class="pt-2">
+              <button
+                type="submit"
+                class="inline-flex items-center gap-2 px-8 py-3 font-semibold rounded-full bg-[#fb923c] hover:bg-orange-600 text-white shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5"
+              >
+                Submit Standard RFQ →
+              </button>
+            </div>
+            <div data-form-status class="hidden text-sm font-medium"></div>
+          </form>
+        </div>
+
+        <div data-rfq-panel="2" class="rfq-panel hidden">
+          <h3 class="text-xl font-bold">{formProject.title}</h3>
+          <p class="mt-1 text-sm text-muted">{formProject.subtitle}</p>
+          <form
+            method="POST"
+            action="/api/contact"
+            class="mt-6 space-y-5"
+            data-contact-form
+            data-success-message="Thank you! Your project inquiry has been received. A dedicated project manager will contact you within 24 hours."
+            data-error-message="Something went wrong. Please try again."
+          >
+            <input type="hidden" name="rfqType" value="project" />
+            <div
+              aria-hidden="true"
+              style="position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;opacity:0;pointer-events:none"
+            >
+              <label for="rfq-proj-email-confirm">Do not fill this</label>
+              <input id="rfq-proj-email-confirm" type="text" name="email_confirm" tabindex="-1" autocomplete="off" />
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {
+                (formProject.fields || [])
+                  .slice(0, 4)
+                  .map((f: any) => <Fragment set:html={renderField(f, 'rfq-proj')} />)
+              }
+            </div>
+            {(formProject.fields || []).slice(4).map((f: any) => <Fragment set:html={renderField(f, 'rfq-proj')} />)}
+            <div class="pt-2">
+              <button
+                type="submit"
+                class="inline-flex items-center gap-2 px-8 py-3 font-semibold rounded-full bg-[#fb923c] hover:bg-orange-600 text-white shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5"
+              >
+                Submit Project RFQ →
+              </button>
+            </div>
+            <div data-form-status class="hidden text-sm font-medium"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CallToAction title={cta.title} subtitle={cta.subtitle} actions={ctaActions} />
+
+  <script is:inline>
+    (function () {
+      const triggers = document.querySelectorAll('.rfq-trigger');
+      const panels = document.querySelectorAll('.rfq-panel');
+      const tabBtns = document.querySelectorAll('.rfq-tab-btn');
+
+      function activate(idx) {
+        triggers.forEach(function (btn, i) {
+          if (i === idx) {
+            btn.classList.add('border-primary', 'text-primary', 'bg-gray-50', 'dark:bg-gray-800');
+            btn.classList.remove('border-transparent', 'text-muted');
+          } else {
+            btn.classList.remove('border-primary', 'text-primary', 'bg-gray-50', 'dark:bg-gray-800');
+            btn.classList.add('border-transparent', 'text-muted');
+          }
+        });
+        panels.forEach(function (p, i) {
+          if (i === idx) p.classList.remove('hidden');
+          else p.classList.add('hidden');
+        });
+        tabBtns.forEach(function (b, i) {
+          if (i === idx) {
+            b.classList.add('border-primary', 'shadow-md');
+            b.classList.remove('border-gray-200', 'dark:border-gray-700');
+          } else {
+            b.classList.remove('border-primary', 'shadow-md');
+            b.classList.add('border-gray-200', 'dark:border-gray-700');
+          }
+        });
+        const panelEl = panels[idx];
+        if (panelEl) {
+          panelEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      }
+
+      triggers.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          const idx = parseInt(btn.getAttribute('data-rfq-trigger') || '0', 10);
+          activate(idx);
+        });
+      });
+
+      tabBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          const idx = parseInt(btn.getAttribute('data-rfq-tab') || '0', 10);
+          activate(idx);
+        });
+      });
+    })();
+  </script>
+
+  <script is:inline>
+    (function () {
+      const forms = document.querySelectorAll('form[data-contact-form]');
+      forms.forEach(function (formEl) {
+        if (!(formEl instanceof HTMLFormElement)) return;
+        const statusEl = formEl.querySelector('[data-form-status]');
+        const successMsg = formEl.dataset.successMessage || 'Thanks!';
+        const errorMsg = formEl.dataset.errorMessage || 'Something went wrong.';
+
+        formEl.addEventListener('submit', async function (e) {
+          e.preventDefault();
+          const submitBtn = formEl.querySelector('button[type="submit"]');
+          const submitLabel = submitBtn ? submitBtn.textContent || 'Send' : 'Send';
+          if (submitBtn instanceof HTMLButtonElement) {
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending…';
+          }
+
+          const fd = new FormData(formEl);
+          const data = {};
+          for (const pair of fd.entries()) {
+            const key = pair[0];
+            const val = pair[1];
+            if (typeof val === 'string') {
+              if (data[key]) {
+                if (Array.isArray(data[key])) data[key].push(val.trim());
+                else data[key] = [data[key], val.trim()];
+              } else {
+                data[key] = val.trim();
+              }
+            }
+          }
+          if (Array.isArray(data.productInterest)) data.productInterest = data.productInterest.join(', ');
+          if (Array.isArray(data.complianceRequired)) data.complianceRequired = data.complianceRequired.join(', ');
+          if (Array.isArray(data.boatTypes)) data.boatTypes = data.boatTypes.join(', ');
+          delete data.email_confirm;
+          const langMeta = document.querySelector('meta[name="x-locale"]');
+          if (langMeta) data.locale = langMeta.getAttribute('content') || 'en';
+
+          try {
+            const controller = new AbortController();
+            const timeoutId = setTimeout(function () {
+              controller.abort();
+            }, 15000);
+            const res = await fetch('/api/contact', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(data),
+              signal: controller.signal,
+            });
+            clearTimeout(timeoutId);
+            const result = await res.json().catch(function () {
+              return {};
+            });
+            if (!res.ok || !result.success) {
+              showStatus(statusEl, result.error || errorMsg, 'error');
+              return;
+            }
+            showStatus(statusEl, successMsg, 'success');
+            formEl.reset();
+          } catch {
+            showStatus(statusEl, 'Network error — please check your connection and try again.', 'error');
+          } finally {
+            if (submitBtn instanceof HTMLButtonElement) {
+              submitBtn.disabled = false;
+              submitBtn.textContent = submitLabel;
+            }
+          }
+        });
+      });
+
+      function showStatus(el, msg, kind) {
+        if (!el) return;
+        el.classList.remove('hidden', 'text-green-600', 'text-red-600', 'dark:text-green-400', 'dark:text-red-400');
+        if (kind === 'success') el.classList.add('text-green-600', 'dark:text-green-400');
+        else el.classList.add('text-red-600', 'dark:text-red-400');
+        el.textContent = msg;
+      }
+    })();
+  </script>
+  <script is:inline type="application/ld+json" set:html={faqSchema} />
+</Layout>

@@ -1,0 +1,20 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+
+const crumbs = [
+  { name: 'Home', href: '/' },
+  { name: 'R&D Center', href: '/randdcenter' },
+  { name: 'Quality & Inspection Lab' },
+];
+
+const metadata = {
+  title: `Quality & Inspection Lab — ISO-Compliant RIB Testing & Certification | ${SITE.name}`,
+  description: `Independent quality verification for inflatable boats. Tensile testing, air-retention cycling, seam peel tests, and material certification. Contact our quality lab for third-party testing.`,
+};
+import QualityInspectionLabEn from '~/components/randdcenter/quality-inspection-lab.en.astro';
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <QualityInspectionLabEn lang="en" />
+</Layout>

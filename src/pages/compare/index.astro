@@ -1,0 +1,141 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+
+const comparisons = [
+  {
+    slug: 'pvc-vs-hypalon',
+    title: 'PVC vs Hypalon',
+    desc: 'The definitive comparison between PVC and Hypalon CSM — the two dominant inflatable boat materials worldwide.',
+    image: 'https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-pvc-material-testing.webp',
+  },
+  {
+    slug: 'sup-vs-rib',
+    title: 'SUP vs RIB',
+    desc: 'Compare stand-up paddle boards and rigid inflatable boats across use cases, performance, and cost.',
+    image: 'https://assets.aquafarer.com/images/aquafarer/hero/factory-gate.webp',
+  },
+  {
+    slug: 'sup-vs-kayak',
+    title: 'SUP vs Kayak',
+    desc: 'Which is right for you — a paddle board or a kayak? Stability, speed, portability, and learning curve compared.',
+    image: 'https://assets.aquafarer.com/images/aquafarer/products/aquafarer-inflatable-boat.webp',
+  },
+  {
+    slug: 'rib-vs-dinghy',
+    title: 'RIB vs Dinghy',
+    desc: 'Rigid inflatable boat vs traditional inflatable dinghy — hull design, performance, durability, and capacity.',
+    image: 'https://assets.aquafarer.com/images/aquafarer/products/rib/aquafarer-rib-330-boat.webp',
+  },
+  {
+    slug: 'inflatable-vs-hardboard',
+    title: 'Inflatable vs Hardboard',
+    desc: 'Inflatable SUP vs hard epoxy board — portability, performance, durability, storage, and cost compared.',
+    image: 'https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-ocean-voyager-1.webp',
+  },
+  {
+    slug: 'aluminum-vs-fiberglass',
+    title: 'Aluminum vs Fiberglass Hull',
+    desc: 'Aluminum vs fiberglass hulls for RIB boats — weight, cost, durability, corrosion resistance, and repairability compared.',
+    image: 'https://assets.aquafarer.com/images/aquafarer/products/rib/aquafarer-rib-600.webp',
+  },
+  {
+    slug: 'commercial-vs-recreational-rib',
+    title: 'Commercial vs Recreational RIB',
+    desc: 'Commercial-grade vs recreational RIB boats — construction, materials, lifespan, cost, and certifications compared.',
+    image: 'https://assets.aquafarer.com/images/aquafarer/products/rib/aquafarer-rib-330-boat.webp',
+  },
+  {
+    slug: 'aquafarer-vs-traditional-manufacturers',
+    title: 'Aquafarer vs Traditional Manufacturers',
+    desc: 'Compare Aquafarer with traditional boat manufacturers across quality, pricing, customization, MOQ, and delivery.',
+    image: 'https://assets.aquafarer.com/images/aquafarer/team/aquafarer-meeting-overseas.webp',
+  },
+];
+
+const metadata = {
+  title: `Comparisons & Buying Guides | ${SITE.name}`,
+  description: `Side-by-side comparisons of inflatable boat materials, types, and brands. PVC vs Hypalon, SUP vs RIB, SUP vs Kayak, RIB vs Dinghy, Inflatable vs Hardboard.`,
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <JsonLd
+    data={{
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      headline: 'Comparisons & Buying Guides',
+      description: metadata.description,
+      author: { '@type': 'Organization', name: SITE.name },
+    }}
+  />
+
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <nav class="text-sm text-gray-500 mb-8">
+      <a href="/" class="hover:text-sky-600">{SITE.name}</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-900">Compare</span>
+    </nav>
+
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">Compare</span>
+      <h1 class="mt-4 text-4xl font-bold text-gray-900">Comparisons & Buying Guides</h1>
+      <p class="mt-4 text-lg text-gray-500">
+        Side-by-side comparisons of inflatable boat materials, types, and brands to help you choose the right
+        watercraft.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Product Comparison Table -->
+      <a
+        href="/products/compare"
+        class="group bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg transition-all hover:-translate-y-0.5 flex flex-col"
+      >
+        <div class="h-44 bg-gradient-to-br from-sky-100 to-blue-50 flex items-center justify-center">
+          <span class="text-5xl">&#128202;</span>
+        </div>
+        <div class="p-6 flex flex-col flex-1">
+          <h2 class="text-lg font-semibold text-gray-900 group-hover:text-sky-700 transition-colors mb-2">
+            Product Comparison Table
+          </h2>
+          <p class="text-sm text-gray-500 line-clamp-3 flex-1">
+            Compare all Aquafarer products side by side across specifications, pricing, and skill levels.
+          </p>
+          <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-sky-600 group-hover:text-sky-700"
+            >View comparison &rarr;</span
+          >
+        </div>
+      </a>
+
+      {
+        comparisons.map((c) => (
+          <a
+            href={`/compare/${c.slug}`}
+            class="group bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg transition-all hover:-translate-y-0.5 flex flex-col"
+          >
+            <div class="h-44 bg-gray-100 overflow-hidden">
+              <img
+                src={c.image}
+                alt={c.title}
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <h2 class="text-lg font-semibold text-gray-900 group-hover:text-sky-700 transition-colors mb-2">
+                {c.title}
+              </h2>
+              <p class="text-sm text-gray-500 line-clamp-3 flex-1">{c.desc}</p>
+              <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-sky-600 group-hover:text-sky-700">
+                View comparison &rarr;
+              </span>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</Layout>

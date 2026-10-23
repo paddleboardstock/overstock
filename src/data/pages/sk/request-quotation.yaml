@@ -1,0 +1,306 @@
+hero_text:
+  tagline: Získať cenovú ponuku
+  title: Požiadajte o cenovú ponuku<br />pre váš projekt
+  subtitle: Povedzte nám o vašich požiadavkách a náš tím vám odpovie s podrobnou cenovou ponukou do 2 pracovných dní.
+steps2_process:
+  title: Ako to funguje
+  subtitle: Štyri jednoduché kroky od dopytu po cenovú ponuku.
+  items:
+    - title: 'Krok 1: Odoslať vaše požiadavky'
+      description: Vyplňte nasledujúci formulár so svojím typom produktu, množstvom a špecifikáciami. Čím viac detailov poskytnete, tým presnejšia bude vaša cenová ponuka.
+      icon: tabler:file-text
+    - title: 'Krok 2: Skontrolujeme a poradíme'
+      description: Náš inžiniersky tím skontroluje vaše požiadavky a môže vás kontaktovať pre objasnenie. Poskytujeme odporúčania ohľadom konfigurácie produktu a možností.
+      icon: tabler:users
+    - title: 'Krok 3: Prijmite vašu ponuku'
+      description: Dostanete podrobnú cenovú ponuku vrátane jednotkovej ceny, MOQ, dodacej doby, platobných podmienok a možností dopravy. Obvykle do 48 hodín.
+      icon: tabler:currency-dollar
+    - title: 'Krok 4: Vzorka a výroba'
+      description: Po akceptovaní ponuky pokračujeme vo výrobe vzorky (ak je to relevantné) alebo priamo do hromadnej výroby. Priebežné aktualizácie počas celého procesu.
+      icon: tabler:building-factory
+content_form:
+  tagline: Formulár cenovej ponuky
+  title: Povedzte nám o vašom projekte
+  subtitle: Všetky polia označené * sú povinné.
+  fields:
+    - name: Kategória produktu
+      type: select
+      options:
+        - RIB Loď
+        - Nafukovací čln
+        - SUP Paddleboard
+        - Nafukovací kajak
+        - Záchranná vesta
+        - Morský príslušenstvo
+        - Vlastný OEM/ODM
+    - name: Aplikácia
+      type: select
+      options:
+        - Potápačské centrum
+        - Rybolov
+        - Morský turizmus / Rezort
+        - Pátranie a záchrana
+        - Jachtársky tender
+        - Komerčná pracovná loď
+        - Vláda / Armáda
+        - OEM / Privátna značka
+        - Osobné / rekreačné aktivity
+        - Iné
+    - name: Množstvo
+      type: text
+      placeholder: napr. 50 jednotiek
+    - name: Cieľový trh
+      type: text
+      placeholder: napr. Európa, Severná Amerika, Blízky východ
+    - name: Krajina doručenia
+      type: text
+      placeholder: napr. Taliansko, SAE, USA, Austrália
+    - name: Preferencia materiálu
+      type: select
+      options:
+        - Žiadna preferencia
+        - Námorná trieda PVC (1100 dtex)
+        - Premium Hypalon / CSM
+        - Trup zo sklolaminátu
+        - Hliníkový trup
+    - name: Požiadavky na motor
+      type: text
+      placeholder: napr. 60 mimo HP motora, bez motora, dvojitý 115 HP
+    - name: Potrebná úprava
+      type: text
+      placeholder: napr. vlastné farby, značkovanie/logo, balenie, špeciálne vybavenie
+    - name: Časová os
+      type: text
+      placeholder: napr. doručenie do 90 dní
+    - name: Ďalšie požiadavky
+      type: textarea
+      placeholder: Opíšte svoju aplikáciu, technické špecifikácie alebo akékoľvek špeciálne požiadavky — zahrňte referenčné výkresy, špecifikácie alebo odkazy, ak sú dostupné
+    - name: Špecifikácia nahrávania
+      type: file
+      placeholder: Nahrajte svoj špecifikačný list, výkres alebo referenčný dokument (PDF, DWG, DXF)
+    - name: Nahrať logo / Umelecké dielo
+      type: file
+      placeholder: Nahrajte svoje logo alebo umelecké dielo pre vlastné branding (AI, EPS, PNG)
+content_rfq_types:
+  tagline: 3-stupňový RFQ systém
+  title: Vyberte správnu<br />úroveň dopytu
+  subtitle: Rôzne projekty vyžadujú rôzne úrovne detailov. Vyberte formulár, ktorý zodpovedá vášmu nákupnému štádiu.
+  items:
+    - title: Rýchly dopyt
+      description: 5-6 polí, 30 sekúnd. Na prvý kontakt, všeobecné otázky alebo následky sťahovania zdrojov. Odpovedáme do 24 hodín s základnými informáciami a ďalšími krokmi.
+      icon: tabler:bolt
+    - title: Štandardný RFQ
+      description: 8-10 polí, 2 minúty. Pre konkrétne cenové ponuky produktov s výberom modelu, množstva a požiadaviek na dodanie. Podrobnú ponuku obdržíte do 48 hodín.
+      icon: tabler:file-text
+    - title: Projektový RFQ
+      description: 10-14 polí, 5 minút. Pre RIB, rezortné flotily, záchranné alebo vládne projekty vyžadujúce vlastnú konfiguráciu, dokumentáciu zhody a plánovanie dodávok na viac rokov. Priradený dedikovaný projektový manažér.
+      icon: tabler:clipboard-list
+form_quick:
+  title: Rýchly dopyt
+  subtitle: Rýchly kontakt pre všeobecné otázky a počiatočné žiadosti o informácie.
+  fields:
+    - name: fullName
+      label: Celé meno
+      type: text
+      required: true
+      placeholder: Vaše celé meno
+    - name: businessEmail
+      label: Firemný e-mail
+      type: email
+      required: true
+      placeholder: vy@firma.com
+    - name: companyName
+      label: Názov spoločnosti
+      type: text
+      required: true
+      placeholder: Vaša spoločnosť
+    - name: buyerType
+      label: Som...
+      type: select
+      required: true
+      options:
+        - Distribútor / Importér
+        - Majiteľ značky / Súkromná značka
+        - Rezort / Vodné centrum
+        - Prevádzkovateľ požičovne
+        - Vládna / záchranná agentúra
+        - Prevádzkovateľ potápania / rybolovu
+        - Námorný inžinier / Refitter
+        - Iné
+    - name: productInterest
+      label: Záujem o produkt
+      type: multiselect
+      required: true
+      options:
+        - RIB Člny
+        - Nafukovacie člny
+        - SUP Dosky
+        - Bezpečnostné vybavenie
+        - Príslušenstvo
+        - OEM/ODM Zvyk
+    - name: message
+      label: Čo potrebuješ?
+      type: textarea
+      required: false
+      placeholder: Stručný popis vašich požiadaviek...
+form_standard:
+  title: Štandardný RFQ
+  subtitle: Podrobná žiadosť o cenovú ponuku na konkrétne produkty a množstvá.
+  fields:
+    - name: fullName
+      label: Celé meno
+      type: text
+      required: true
+    - name: businessEmail
+      label: Firemný e-mail
+      type: email
+      required: true
+    - name: companyName
+      label: Názov spoločnosti
+      type: text
+      required: true
+    - name: buyerType
+      label: Typ kupujúceho
+      type: select
+      required: true
+    - name: productModel
+      label: Model / typ produktu
+      type: text
+      required: true
+      placeholder: napr. AF580RIB, AF380 nafukovací
+    - name: quantity
+      label: Odhadované množstvo
+      type: text
+      required: true
+      placeholder: napr. 10-20 jednotiek
+    - name: targetMarket
+      label: Cieľový trh / región
+      type: text
+      required: true
+      placeholder: napr. EÚ, Severná Amerika, Blízky východ
+    - name: doručenieČasová os
+      label: Požadované doručenie
+      type: select
+      required: true
+      options:
+        - Do 30 dní
+        - 30-60 dní
+        - 60-90 dní
+        - Plánovanie dopredu (90+ dní)
+        - Len si robím prieskum
+    - name: complianceRequired
+      label: Požiadavky na súlad
+      type: multiselect
+      required: false
+      options:
+        - CE / RCD 2013/53/EÚ
+        - UKCA
+        - USCG
+        - ISO 9001
+        - BSCI
+        - REACH
+        - Žiadne / Nie som si istý
+    - name: message
+      label: Doplnkové informácie
+      type: textarea
+      required: false
+form_project:
+  title: Projektový RFQ
+  subtitle: Komplexný dotazník projektu pre flotilu, zákazkový projekt alebo vládnu zákazku.
+  fields:
+    - name: fullName
+      label: Celé meno
+      type: text
+      required: true
+    - name: businessEmail
+      label: Firemný e-mail
+      type: email
+      required: true
+    - name: companyName
+      label: Názov spoločnosti
+      type: text
+      required: true
+    - name: buyerType
+      label: Typ kupujúceho
+      type: select
+      required: true
+    - name: typProjektu
+      label: Typ projektu
+      type: select
+      required: true
+      options:
+        - Flotila rezortu / hotela
+        - Prenájom flotily
+        - Záchranná / hliadková flotila
+        - Flotila potápačského centra
+        - Vládna zákazka
+        - Súkromná značka / OEM
+        - Objednávka skladového tovaru predajcu
+        - Iné
+    - name: typLodí
+      label: Požadované typy lodí
+      type: multiselect
+      required: true
+      options:
+        - RIB Člny
+        - Nafukovacie lode / člny
+        - SUP Dosky
+        - Kajaky
+        - Bezpečnostné vybavenie
+    - name: veľkosťFlotily
+      label: Veľkosť flotily / Rozsah množstva
+      type: text
+      required: true
+      placeholder: napr. 20-50 kusov počas 12 mesiacov
+    - name: zákazkovéPožiadavky
+      label: Potrebné zákazkové konfigurácie
+      type: textarea
+      required: false
+      placeholder: Veľkosť trupu, materiál trubíc, rozloženie paluby, požiadavky na branding...
+    - name: complianceRequired
+      label: Požiadavky na súlad a certifikáciu
+      type: multiselect
+      required: true
+      options:
+        - CE / RCD 2013/53/EÚ
+        - UKCA
+        - USCG Typ III/V
+        - ISO 9001
+        - BSCI
+        - REACH / RoHS
+        - Certifikácia pre miestny trh
+    - name: targetMarket
+      label: Cieľový trh
+      type: text
+      required: true
+    - name: rozsahRozpočtu
+      label: Rozsah rozpočtu
+      type: select
+      required: false
+      options:
+        - Menej ako 10 000 $
+        - $10,000 - $50,000
+        - $50,000 - $200,000
+        - $200,000+
+        - Radšej neuvádzať
+    - name: doručenieČasová os
+      label: Časový harmonogram projektu
+      type: select
+      required: true
+      options:
+        - Urgentné (do 30 dní)
+        - Štandardné (30-60 dní)
+        - Plánované (60-90 dní)
+        - Budúce plánovanie (viac ako 90 dní)
+    - name: message
+      label: Detaily a požiadavky projektu
+      type: textarea
+      required: false
+      placeholder: Popíšte svoj projekt, aplikáciu a akékoľvek špecifické požiadavky...
+cta:
+  title: Radšej diskutovať e-mailom?
+  subtitle: Odošlite svoj dopyt priamo nášmu predajnému tímu a my odpovieme do 24 hodín.
+  actions:
+    - variant: primary
+      text: Napíšte nám priamo e-mail
+      href: /contact

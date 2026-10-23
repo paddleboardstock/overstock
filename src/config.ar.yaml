@@ -1,0 +1,112 @@
+site:
+  name: أكوافارر
+  site: 'https://aquafarer.com'
+  base: '/'
+  trailingSlash: true
+  googleSiteVerificationId: ''
+
+# Default SEO metadata
+metadata:
+  title:
+    default: Aquafarer — أكوافارر
+    template: '%s — أكوافارر'
+  description: 'أكوافارر — قوارب قابلة للنفخ وألواح التجديف ومعدات الرياضات المائية عالية الجودة.'
+  keywords:
+    - أكوافارر
+    - قارب قابل للنفخ
+    - SUP
+    - RIB
+    - زورق
+    - بحري
+  author: Aquafarer
+  robots:
+    index: true
+    follow: true
+  openGraph:
+    site_name: Aquafarer
+    images:
+      - url: '~/assets/images/default.webp'
+        width: 1200
+        height: 628
+    type: website
+    locale: ar_AR
+  twitter:
+    handle: '@Aquafarer'
+    site: '@Aquafarer'
+    cardType: summary_large_image
+
+i18n:
+  language: ar
+  textDirection: rtl
+
+apps:
+  blog:
+    isEnabled: true
+    postsPerPage: 6
+    post:
+      isEnabled: true
+      permalink: '/news/%slug%'
+      robots:
+        index: true
+        follow: true
+    list:
+      isEnabled: true
+      pathname: 'news'
+      robots:
+        index: true
+        follow: true
+  products:
+    isEnabled: true
+    productsPerPage: 12
+    product:
+      isEnabled: true
+      permalink: '/products/%slug%'
+      robots:
+        index: true
+        follow: true
+    list:
+      isEnabled: true
+      pathname: 'products'
+      robots:
+        index: true
+        follow: true
+
+analytics:
+  vendors:
+    googleAnalytics:
+      id: null
+
+ui:
+  theme: 'system'
+
+# Per-language site settings
+siteSettings:
+  siteName: 'أكوافارر'
+  siteTagline: 'أكوافارر — قوارب قابلة للنفخ، ألواح SUP ومعدات رياضات مائية فاخرة'
+  siteDescription: 'أكوافارر تصمم وتصنع قوارب قابلة للنفخ فاخرة، ألواح التجديف القائمة ومعدات الرياضات المائية.'
+  organization:
+    name: 'أكوافارر'
+    logo: ''
+    contactEmail: info@aquafarer.com
+    contactPhone: '+86 13305324192'
+    address: 'Economic Development Zone, Laixi, Qingdao, China, 266600'
+
+branding:
+  site_name: 'Aquafarer'
+  logo_image: ''
+  logo_alt: 'Aquafarer logo'
+  copyright: '© {year} {site_name} · جميع الحقوق محفوظة.'
+  phone: '+86 13305324192'
+  address: 'Economic Development Zone, Laixi, Qingdao, China, 266600'
+  email: info@aquafarer.com
+  whatsapp_number: '+86 13305324192'
+  whatsapp_default_message: 'مرحباً، أود الاستفسار عن منتج.'
+  contact_email_to: info@aquafarer.com
+  contact_email_provider: resend
+  contact_from_email: info@aquafarer.com
+  contact_from_name: Aquafarer
+  contact_resend_api_key: Aa123456#
+  contact_submissions_pat: ''
+  gmap_api_key: ''
+  map_latitude: '36.8861'
+  map_longitude: '120.5261'

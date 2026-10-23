@@ -1,0 +1,130 @@
+hero_text:
+  tagline: Kapcsolat
+  title: LÉPJEN KAPCSOLATBA
+contact_form:
+  id: form
+  title: Küldjön nekünk üzenetet
+  subtitle: Árajánlatok, műszaki kérdések vagy partnerségi megkeresések esetén írjon nekünk. Ügyfélszolgálatunk egy munkanapon belül válaszol.
+  email_to: info@aquafarer.com
+  submit_button: Kérdés küldése → Árajánlat kérés
+  success_message: Köszönjük! Üzenete megérkezett a postafiókunkba. Egy munkanapon belül válaszolunk.
+  error_message: Üzenete küldése sikertelen volt. Kérjük, próbálja újra, vagy küldjön közvetlenül e-mailt.
+  default_country_code: '+1'
+  captcha:
+    label: 'Spam elleni védelem: kérjük, oldja meg a következőt'
+  fields:
+    - name: firstName
+      label: Keresztnév
+      row: 1
+    - name: lastName
+      label: Vezetéknév
+      row: 1
+    - name: companyName
+      label: Cégnév
+      row: 2
+    - name: address
+      label: Cím
+      row: 3
+    - name: zip
+      label: Irányítószám
+      row: 4
+    - name: country
+      label: Ország
+      row: 4
+      type: select
+      optionsKey: countries
+    - name: email
+      label: E-mail
+      row: 5
+      type: email
+    - name: tel
+      label: TEL
+      row: 5
+      type: tel
+      withCountryCode: true
+    - name: orderVolume
+      label: Becsült rendelési mennyiség
+      row: 6
+      type: select
+      options:
+        - value: ''
+          label: Válassza ki a becsült mennyiséget...
+        - value: sample
+          label: Csak minták / prototípusok
+        - value: 5-10
+          label: 5–10 darab (Standard MOQ)
+        - value: 100-500
+          label: 100–500 darab
+        - value: 500-plus
+          label: 500+ darab (Nagykereskedelmi ár)
+    - name: customization
+      label: Szükséges testreszabás?
+      row: 7
+      type: select
+      options:
+        - value: ''
+          label: Válassza ki a testreszabás típusát...
+        - value: none
+          label: Standard termék (nincs testreszabás)
+        - value: logo
+          label: Csak egyedi logó / márka
+        - value: full
+          label: Teljes OEM (méret, szín, grafika, csomagolás)
+        - value: consultation
+          label: Nem biztos — konzultáció szükséges
+    - name: termékÉrdeklődés
+      label: Érdeklődési termékkategóriák
+      row: 8
+      type: select
+      options:
+        - value: ''
+          label: Válasszon termékkategóriát...
+        - value: all
+          label: Minden termék / Teljes katalógus
+        - value: sup
+          label: SUP Deszkák / Paddleboardok
+        - value: kayak
+          label: Felfújható kajakok
+        - value: rib
+          label: RIB Csónakok
+        - value: dinghy
+          label: Csónakok / Kisméretű hajók
+        - value: safety
+          label: Biztonsági felszerelés / Mentőmellények
+        - value: accessory
+          label: Kiegészítők (szivattyúk, evezők, táskák)
+    - name: subject
+      label: Tárgy
+      row: 9
+    - name: message
+      label: Üzenet
+      row: 10
+      type: textarea
+      rows: 6
+features2_other_ways:
+  title: Egyéb elérhetőségek
+  columns: 3
+  items:
+    - title: Értékesítési megkeresések
+      description: Árajánlatok, konfigurációk, kereskedői jelentkezések és nagy tételű rendelések.
+      icon: tabler:shopping-bag
+    - title: Műszaki támogatás
+      description: Garancia, javítások, alkatrészek és üzemeltetési kérdések.
+      icon: tabler:tool
+    - title: Sajtó és partnerségek
+      description: Médiacsomagok, szponzoráció és ipari együttműködés.
+      icon: tabler:news
+    - title: Telefon
+      description: +1 279 732 3333 (US HQ) · +86 13305324192 (gyár)
+      icon: tabler:headset
+    - title: Email
+      description: info@aquafarer.com
+      icon: tabler:mail
+    - title: Globális központ & Számlázás
+      description: Aquafarer LLC, New Mexico, Egyesült Államok
+      icon: tabler:map-pin
+map:
+  title: Helyszínünk
+  subtitle: Látogassa meg qingdaoi gyártóbázisunkat
+  address: Gazdasági Fejlesztési Zóna, Laixi, Qingdao, Kína, 266600
+  zoom: 15

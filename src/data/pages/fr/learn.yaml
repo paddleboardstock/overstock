@@ -1,0 +1,73 @@
+hero:
+  tagline: "Savoir sur l'Exploration Aquatique"
+  title: 'Apprendre'
+  subtitle: |
+    Guides, tutoriels et analyses approfondies — tout ce dont vous avez besoin pour explorer<br />
+    l'eau en toute confiance. Du choix de votre premier SUP à la maîtrise des techniques avancées.
+  taglineSection: 'Des connaissances pour chaque pagayeur. Du débutant au professionnel.'
+
+featured:
+  tagline: 'Sujets à la Une'
+  title: 'Commencez votre apprentissage'
+  subtitle: 'Que vous soyez novice en sports nautiques ou cherchiez à progresser, nos guides vous couvrent.'
+  items:
+    - title: 'Bases du SUP'
+      description: "Tout ce qu'un débutant doit savoir — types de planches, taille de pagaie, posture et conseils pour le premier jour."
+      icon: 'tabler:lifebuoy'
+      href: '/learn/sup'
+    - title: 'Gonflable vs Planche Rigide'
+      description: 'Quel est le bon choix pour vous ? Nous comparons portabilité, performance, durabilité et coût.'
+      icon: 'tabler:arrows-left-right'
+      href: '/compare/inflatable-vs-hardboard'
+    - title: 'Sécurité Nautique'
+      description: 'Connaissances de sécurité essentielles pour chaque pagayeur — météo, VFI, auto-sauvetage et plus.'
+      icon: 'tabler:shield'
+      href: '/learn/water-safety'
+    - title: 'Guide des Matériaux'
+      description: 'PVC vs Hypalon, technologie drop-stitch, indices denier — comprenez la composition de votre équipement.'
+      icon: 'tabler:hexagons'
+      href: '/learn/materials'
+    - title: 'Guide des Tailles SUP'
+      description: 'Trouvez la longueur, largeur et volume de planche adaptés à votre poids, niveau et style de pagayage.'
+      icon: 'tabler:ruler'
+      href: '/size-guide'
+    - title: 'Techniques Intermédiaires'
+      description: 'Améliorez votre pagayage avec des coups avancés, des techniques de virage et la gestion des eaux agitées.'
+      icon: 'tabler:ripple'
+      href: '/learn/intermediate-techniques'
+
+categories:
+  tagline: 'Catégories'
+  title: 'Explorer par thème'
+  subtitle: "Tout le contenu d'apprentissage organisé par niveau de compétence et centre d'intérêt."
+  columns:
+    - title: 'Débutant'
+      items:
+        - 'Bases du SUP — commencer ici'
+        - 'Gonflable vs Planche Rigide'
+        - 'Essentiels de Sécurité Nautique'
+        - 'Comment Choisir Votre SUP'
+        - 'Guide de Pompe et Emballage'
+    - title: 'Intermédiaire'
+      items:
+        - 'Techniques de Pagayage'
+        - 'Technologie Gonflable'
+        - 'Référence des Matériaux'
+        - 'Comparaison PVC vs Hypalon'
+        - 'Noyau Drop-Stitch Expliqué'
+    - title: 'Avancé & Professionnel'
+      items:
+        - 'Opérations de Flotte'
+        - 'Équipement Commercial'
+        - 'Protocoles de Sécurité et Sauvetage'
+        - 'Fabrications Sur Mesure & OEM'
+
+cta:
+  title: 'Encore des questions ?'
+  subtitle: "Demandez à notre guide IA des réponses personnalisées sur l'équipement, la sécurité et les techniques."
+  actions:
+    - variant: primary
+      text: 'Demander au Water Advisor AI'
+      href: '#ai-guide'
+    - text: 'Parcourir tous les guides'
+      href: '/academy'

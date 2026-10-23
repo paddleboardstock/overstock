@@ -1,0 +1,206 @@
+---
+import { SITE } from 'astrowind:config';
+const { lang = 'es' } = Astro.props;
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={`/${lang}/randdcenter`} class="text-sm text-gray-500 hover:underline">&larr; Volver al Centro de I+D</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Lab 05</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Taller de Prototipos</h1>
+      <p class="mt-3 text-lg text-muted">Del modelo CAD al barco listo para navegar — construido, equipado y probado</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-ocean-voyager-1.webp"
+        alt="Fabricación de embarcaciones en el taller de prototipos de Aquafarer"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Donde el diseño se convierte en realidad</h2>
+  <p>
+    Un modelo CAD, por muy detallado que sea, no puede revelar cómo se comportará realmente un barco hasta que toca el
+    agua. Por eso nuestro Taller de Prototipos está diseñado para traducir los datos de ingeniería en una embarcación
+    física y navegable lo más rápida y fielmente posible. Cada nuevo modelo de {SITE.name} — y cada construcción personalizada
+    significativa — pasa por este taller antes de comprometer las herramientas de producción.
+  </p>
+  <p>
+    El taller está totalmente equipado para la fabricación simultánea del casco, los tubos y el aparejo. Este enfoque de
+    flujo de trabajo paralelo reduce el plazo de construcción del prototipo a 8-12 semanas desde la liberación de
+    ingeniería, frente a las 16-20 semanas habituales en el sector. Cuando su aplicación exige una solución
+    especializada, podemos pasar del concepto a la validación en el agua en menos de tres meses.
+  </p>
+
+  <h2>Capacidades del taller</h2>
+  <table>
+    <thead><tr><th>Puesto de trabajo</th><th>Equipamiento</th><th>Finalidad</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Fabricación de cascos</td><td
+          >Horno de rotomoldeo (HDPE), puesto de soldadura TIG (aluminio), moldes de laminación manual (fibra de vidrio)</td
+        ><td>Producción de cascos a escala real en los tres tipos de material</td></tr
+      >
+      <tr
+        ><td>Montaje de tubos</td><td
+          >Prensa de soldadura RF, puesto de hilvanado con aire caliente, banco de pruebas de inflado</td
+        ><td>Fabricación de conjuntos de tubos a tamaño real con todos los mamparos, conos y válvulas</td></tr
+      >
+      <tr
+        ><td>Aparejo y equipamiento</td><td
+          >Polipasto de motor (500 kg), bastidor simulado de consola, crimpadora hidráulica de mangueras, banco de
+          arneses eléctricos</td
+        ><td>Equipamiento completo: motor, dirección, controles, sistema de combustible, electrónica, asientos</td></tr
+      >
+      <tr
+        ><td>Zona de instrumentación</td><td
+          >Sensor de velocidad GPS, caudalímetro de combustible, acelerómetros, matriz de termopares, registrador de
+          datos</td
+        ><td>Instalación y calibración de la instrumentación de pruebas de mar</td></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>El recorrido del prototipo — paso a paso</h2>
+  <ol>
+    <li>
+      <strong>Entrega de ingeniería</strong> — El paquete de diseño (modelo 3D, informe FEA, lista de materiales, plan de
+      laminado) es revisado formalmente por el responsable del taller y el ingeniero de proyecto. Cualquier preocupación de
+      fabricación se señala y resuelve antes de empezar a cortar.
+    </li>
+    <li>
+      <strong>Producción del casco</strong> — El casco se construye según la especificación de ingeniería. Para HDPE: el programa
+      de rotomoldeo se carga a partir de la simulación de Moldex3D. Para aluminio: las placas cortadas por CNC se sueldan
+      en el puesto TIG siguiendo el mapa de soldadura aprobado. Para fibra de vidrio: el libro de laminado se sigue capa por
+      capa.
+    </li>
+    <li>
+      <strong>Fabricación de tubos</strong> — El tejido se corta con plantillas patrón por CNC y luego se suelda por RF en
+      cámaras a tamaño real. Cada cámara se infla a la presión de prueba y se deja reposar 24 h para su estabilización inicial.
+    </li>
+    <li>
+      <strong>Montaje y aparejo</strong> — El casco y los tubos se acoplan. Se cuelga el motor, se conectan la dirección y
+      los controles, se instala el sistema de combustible y se cablean y verifican todos los circuitos eléctricos.
+    </li>
+    <li>
+      <strong>Pruebas estáticas</strong> — Antes de que el barco toque el agua, se somete a: comprobación de flotabilidad
+      (plena carga + 30 % de reserva), prueba de presión del sistema de combustible, prueba del ciclo completo de dirección
+      al tope, prueba de continuidad de la conexión a tierra eléctrica.
+    </li>
+    <li><strong>Programa de pruebas de mar</strong> — 20 horas de ensayos en el agua, detalladas a continuación.</li>
+    <li>
+      <strong>Revisión del prototipo</strong> — Se celebra una reunión formal de aprobación con los equipos de ingeniería,
+      producción y calidad. Cualquier cambio de diseño necesario se documenta e incorpora a la liberación de producción.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Programa de pruebas de mar de 20 horas — Calendario de ensayos
+    </p>
+    <div class="space-y-2 text-sm">
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">2 h</span><span class="flex-1"
+          >Maniobras en puerto — maniobrabilidad a baja velocidad, marcha atrás, comprobación de defensas</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">4 h</span><span class="flex-1"
+          >Prueba de velocidad — velocidad máxima verificada por GPS, velocidad de crucero, consumo de combustible en 3
+          puntos de RPM</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Prueba de giro — diámetro táctico, avance y transferencia a 20 kn, babor y estribor</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Prueba de golpe — pasadas repetidas a través de oleaje de 0.5–1.0 m; acelerómetro en la base del asiento del
+          timonel</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Prueba de estabilidad — ángulo de escora estático con 4 tripulantes + equipo a estribor, carga descentrada</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Carrera de resistencia — 3 h continuas a velocidad de crucero; monitorización de temperaturas (motor,
+          combustible, eléctrico)</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">2 h</span><span class="flex-1"
+          >Inspección final — inspección posterior a la prueba de todos los sistemas, apriete/verificación de todos los
+          herrajes, documentación de hallazgos</span
+        >
+      </div>
+    </div>
+  </div>
+
+  <h2>Prototipado a medida para aplicaciones singulares</h2>
+  <p>
+    El Taller de Prototipos es donde resolvemos los problemas que los barcos de producción estándar no pueden abordar.
+    Ejemplos recientes incluyen:
+  </p>
+  <ul>
+    <li>
+      Un RIB de 7.8 m para una organización de búsqueda y rescate, que requería una estructura de cabina personalizada
+      con protección antivuelco, soportes integrados para camilla y un pod de sonar montado en la proa — todo
+      prototipado, equipado y probado en nuestras instalaciones.
+    </li>
+    <li>
+      Un hinchable de 5.2 m para una contratista de levantamientos hidrográficos, con espejo de popa rebajado, mástil de
+      instrumentos desmontable y alojamientos para transductores a través del casco diseñados para minimizar la
+      perturbación del flujo.
+    </li>
+    <li>
+      Una auxiliar de propulsión eléctrica de 4.5 m para un superyate, donde el prototipo se utilizó para validar la
+      autonomía, la infraestructura de carga y los niveles de ruido antes de que el cliente se comprometiera a una flota
+      de cuatro unidades.
+    </li>
+  </ul>
+
+  <h2>Nuestro equipo de prototipado</h2>
+  <p>
+    El taller cuenta con ocho técnicos marinos polivalentes, cada uno con formación cruzada en al menos dos de las tres
+    disciplinas principales (casco, tubo, aparejo). El responsable del equipo es un maestro carpintero de ribera con 16
+    años de experiencia que abarca desde construcciones únicas a medida hasta series de producción. A cada prototipo se
+    le asigna un ingeniero de proyecto dedicado que actúa como punto de contacto único para el cliente durante todo el
+    proceso de construcción y pruebas.
+  </p>
+
+  <h2>Participación del cliente</h2>
+  <p>
+    Animamos activamente a nuestros clientes a asistir a los hitos clave durante la construcción del prototipo — en
+    particular la revisión inicial del equipamiento y la prueba de mar. Sus comentarios operativos durante estas etapas
+    son inestimables para afinar el barco antes de que entre en producción. No construimos en el vacío; construimos en
+    colaboración con usted.
+  </p>
+  <p>
+    La prueba de mar de 20 horas es también una oportunidad para que su equipo se familiarice con el manejo del barco,
+    la disposición de los sistemas y los requisitos de mantenimiento, lo que garantiza una transición fluida al servicio
+    cuando se entreguen los barcos de producción.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Inicie su proyecto de prototipo</h2>
+    <p class="mt-2 text-sm text-muted">
+      Cuéntenos qué barco necesita y le propondremos un plan de desarrollo de prototipo.
+    </p>
+    <a
+      href={`/${lang}/contact`}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Contacte con nuestro equipo de prototipado</a
+    >
+  </div>
+</section>

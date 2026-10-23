@@ -1,0 +1,130 @@
+hero_text:
+  tagline: Kontakt
+  title: DOSTAŤ SA DO KONTAKTU
+contact_form:
+  id: form
+  title: Pošlite nám správu
+  subtitle: Pre cenové ponuky, technické otázky alebo otázky týkajúce sa partnerstva nám napíšte. Odpovieme do jedného pracovného dňa.
+  email_to: info@aquafarer.com
+  submit_button: Poslať dopyt → Získať cenovú ponuku
+  success_message: Ďakujeme! Vaša správa dorazila do našej schránky. Odpovieme do jedného pracovného dňa.
+  error_message: Niečo sa pokazilo pri odosielaní vašej správy. Skúste to znova alebo nám pošlite e-mail priamo.
+  default_country_code: '+1'
+  captcha:
+    label: 'Anti-spam: vyriešte prosím nasledovné'
+  fields:
+    - name: firstName
+      label: Meno
+      row: 1
+    - name: lastName
+      label: Priezvisko
+      row: 1
+    - name: companyName
+      label: Názov spoločnosti
+      row: 2
+    - name: address
+      label: Adresa
+      row: 3
+    - name: zip
+      label: PSČ / Poštové smerovacie číslo
+      row: 4
+    - name: country
+      label: Krajina
+      row: 4
+      type: select
+      optionsKey: countries
+    - name: email
+      label: E-mail
+      row: 5
+      type: email
+    - name: tel
+      label: TEL
+      row: 5
+      type: tel
+      withCountryCode: true
+    - name: orderVolume
+      label: Odhadovaný objem objednávky
+      row: 6
+      type: select
+      options:
+        - value: ''
+          label: Vyberte svoj odhadovaný objem...
+        - value: sample
+          label: Iba vzorky / prototypy
+        - value: 5-10
+          label: 5–10 kusov (Štandard MOQ)
+        - value: 100-500
+          label: 100–500 kusov
+        - value: 500-plus
+          label: 500+ kusov (Cenové zvýhodnenie pri väčšom množstve)
+    - name: customization
+      label: Je potrebná prispôsobenie?
+      row: 7
+      type: select
+      options:
+        - value: ''
+          label: Vyberte typ prispôsobenia...
+        - value: none
+          label: Štandardný produkt (bez prispôsobenia)
+        - value: logo
+          label: Vlastné logo / branding iba
+        - value: full
+          label: Úplný OEM (veľkosť, farba, grafika, balenie)
+        - value: consultation
+          label: Nie som si istý — potrebujem konzultáciu
+    - name: záujem o produkt
+      label: Kategórie produktov, o ktoré máte záujem
+      row: 8
+      type: select
+      options:
+        - value: ''
+          label: Vyberte kategóriu produktu...
+        - value: all
+          label: Všetky produkty / Úplný katalóg
+        - value: sup
+          label: SUP Dosky / Paddleboardy
+        - value: kayak
+          label: Nafukovacie kajaky
+        - value: rib
+          label: RIB Lode
+        - value: dinghy
+          label: Člny / Dopravné člny
+        - value: safety
+          label: Bezpečnostné vybavenie / Záchranné vesty
+        - value: accessory
+          label: Príslušenstvo (čerpadlá, veslá, tašky)
+    - name: subject
+      label: Predmet
+      row: 9
+    - name: message
+      label: Správa
+      row: 10
+      type: textarea
+      rows: 6
+features2_other_ways:
+  title: Iné spôsoby, ako nás kontaktovať
+  columns: 3
+  items:
+    - title: Predajné dopyty
+      description: Cenové ponuky, konfigurácie, žiadosti od predajcov a hromadné objednávky.
+      icon: tabler:shopping-bag
+    - title: Technická podpora
+      description: Záruka, opravy, náhradné diely a prevádzkové otázky.
+      icon: tabler:tool
+    - title: Tlač a partnerstvá
+      description: Mediálne balíčky, sponzorstvo a spolupráca v priemysle.
+      icon: tabler:news
+    - title: Telefón
+      description: +1 279 732 3333 (ústredie v USA) · +86 13305324192 (fabrika)
+      icon: tabler:headset
+    - title: E-mail
+      description: info@aquafarer.com
+      icon: tabler:mail
+    - title: Globálne sídlo a fakturácia
+      description: Aquafarer s.r.o., Nové Mexiko, Spojené štáty
+      icon: tabler:map-pin
+map:
+  title: Naša lokalita
+  subtitle: Navštívte naše výrobné centrum v Qingdao
+  address: Zóna ekonomického rozvoja, Laixi, Qingdao, Čína, 266600
+  zoom: 15

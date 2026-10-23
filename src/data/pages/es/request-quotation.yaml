@@ -1,0 +1,306 @@
+hero_text:
+  tagline: Obtenga una cotización
+  title: Solicite una cotización<br />para su proyecto
+  subtitle: Cuéntenos sobre sus requisitos y nuestro equipo le responderá con una cotización detallada dentro de 2 días hábiles.
+steps2_process:
+  title: Cómo funciona
+  subtitle: Cuatro sencillos pasos desde la consulta hasta la cotización.
+  items:
+    - title: 'Paso 1: envíe sus requisitos'
+      description: Complete el siguiente formulario con el tipo de producto, cantidad y especificaciones. Cuanto más detalles proporcione, más precisa será su cotización.
+      icon: tabler:file-text
+    - title: 'Paso 2: Revisamos y asesoramos'
+      description: Nuestro equipo de ingeniería revisa sus requisitos y puede comunicarse con usted para obtener aclaraciones. Ofrecemos recomendaciones sobre la configuración y las opciones del producto.
+      icon: tabler:users
+    - title: 'Paso 3: Reciba su cotización'
+      description: Recibirá una cotización detallada que incluye precio unitario, MOQ, plazo de entrega, condiciones de pago y opciones de envío. Normalmente dentro de las 48 horas.
+      icon: tabler:currency-dollar
+    - title: 'Paso 4: Muestra y producción'
+      description: Luego de la aceptación de la cotización, procedemos a la producción de muestra (si corresponde) o directamente a la producción en masa. Actualizaciones periódicas durante todo el proceso.
+      icon: tabler:building-factory
+content_form:
+  tagline: Formulario de cotización
+  title: Cuéntanos sobre tu proyecto
+  subtitle: Todos los campos con * son obligatorios.
+  fields:
+    - name: Categoría de producto
+      type: seleccionar
+      options:
+        - Bote RIB
+        - Bote neumático
+        - Tabla SUP
+        - Kayak hinchable
+        - Chaleco salvavidas
+        - Accesorio marino
+        - OEM/ODM personalizado
+    - name: Solicitud
+      type: seleccionar
+      options:
+        - Centro de buceo
+        - Pesca
+        - Turismo marítimo / Resort
+        - Búsqueda y rescate
+        - Tender de yate
+        - Bote de trabajo comercial
+        - Gobierno / Militar
+        - OEM / Marca blanca
+        - Personal / Recreativo
+        - Otro
+    - name: Cantidad
+      type: texto
+      placeholder: p.ej. 50 unidades
+    - name: Mercado objetivo
+      type: texto
+      placeholder: p.ej. Europa, América del Norte, Medio Oriente
+    - name: País de entrega
+      type: texto
+      placeholder: p.ej. Italia, Emiratos Árabes Unidos, Estados Unidos, Australia
+    - name: Preferencia de materiales
+      type: seleccionar
+      options:
+        - Sin preferencia
+        - PVC de grado marino (1100 dtex)
+        - Hypalon premium / CSM
+        - Casco de fibra de vidrio
+        - Casco de aluminio
+    - name: Requisito del motor
+      type: texto
+      placeholder: p.ej. Fueraborda de 60 HP, sin motor, gemelo de 115 HP
+    - name: Personalización requerida
+      type: texto
+      placeholder: p.ej. colores personalizados, marca/logotipo, embalaje, accesorios especiales
+    - name: Línea de tiempo
+      type: texto
+      placeholder: p.ej. entrega dentro de 90 días
+    - name: Requisitos adicionales
+      type: área de texto
+      placeholder: Describa su aplicación, especificaciones técnicas o cualquier requisito especial; incluya dibujos de referencia, especificaciones o enlaces si están disponibles
+    - name: Cargar especificación
+      type: archivo
+      placeholder: Cargue su hoja de especificaciones, dibujo o documento de referencia (PDF, DWG, DXF)
+    - name: Subir logotipo/ilustraciones
+      type: archivo
+      placeholder: Cargue su logotipo o diseño gráfico para personalizar su marca (AI, EPS, PNG)
+content_rfq_types:
+  tagline: Sistema de RFQ de 3 niveles
+  title: Elija el nivel de consulta adecuado<br />
+  subtitle: Diferentes proyectos necesitan diferentes niveles de detalle. Seleccione el formulario que coincida con su etapa de compra.
+  items:
+    - title: Consulta rápida
+      description: 5-6 campos, 30 segundos. Para contacto inicial, preguntas generales o seguimiento de descarga de recursos. Respondemos dentro de las 24 horas con información básica y próximos pasos.
+      icon: tabler:bolt
+    - title: Solicitud de cotización estándar
+      description: 8-10 campos, 2 minutos. Para cotizaciones de productos específicos con selección de modelo, cantidad y requisitos de entrega. Reciba una cotización detallada dentro de las 48 horas.
+      icon: tabler:file-text
+    - title: Solicitud de cotización del proyecto
+      description: 10-14 campos, 5 minutos. Para proyectos RIB, flotas turísticas, rescate o gubernamentales que requieren configuración personalizada, documentación de cumplimiento y planificación de suministro para varios años. Gerente de proyecto dedicado asignado.
+      icon: tabler:clipboard-list
+form_quick:
+  title: Consulta rápida
+  subtitle: Contacto rápido para preguntas generales y solicitudes de información inicial.
+  fields:
+    - name: nombre completo
+      label: Nombre completo
+      type: texto
+      required: true
+      placeholder: Tu nombre completo
+    - name: negocioCorreo electrónico
+      label: Correo electrónico empresarial
+      type: correo electrónico
+      required: true
+      placeholder: usted@empresa.com
+    - name: nombre de empresa
+      label: nombre de empresa
+      type: texto
+      required: true
+      placeholder: tu empresa
+    - name: tipo de comprador
+      label: soy un...
+      type: seleccionar
+      required: true
+      options:
+        - Distribuidor / Importador
+        - Propietario de marca / Marca blanca
+        - Resort / Centro acuático
+        - Empresa de alquiler
+        - Gobierno / Agencia de rescate
+        - Operador de buceo / pesca
+        - Ingeniero naval / especialista en refit
+        - Otro
+    - name: interés del producto
+      label: Interés del producto
+      type: selección múltiple
+      required: true
+      options:
+        - Botes RIB
+        - Botes neumáticos
+        - Tablas SUP
+        - Equipo de seguridad
+        - Accesorios
+        - OEM/ODM personalizado
+    - name: mensaje
+      label: ¿Qué necesitas?
+      type: área de texto
+      required: false
+      placeholder: Breve descripción de sus requerimientos...
+form_standard:
+  title: Solicitud de cotización estándar
+  subtitle: Solicitud de cotización detallada para productos y cantidades específicas.
+  fields:
+    - name: nombre completo
+      label: Nombre completo
+      type: texto
+      required: true
+    - name: negocioCorreo electrónico
+      label: Correo electrónico empresarial
+      type: correo electrónico
+      required: true
+    - name: nombre de empresa
+      label: nombre de empresa
+      type: texto
+      required: true
+    - name: tipo de comprador
+      label: Tipo de comprador
+      type: seleccionar
+      required: true
+    - name: productomodelo
+      label: Modelo/tipo de producto
+      type: texto
+      required: true
+      placeholder: por ejemplo, AF580 RIB, AF380 inflable
+    - name: cantidad
+      label: Cantidad estimada
+      type: texto
+      required: true
+      placeholder: por ejemplo, 10-20 unidades
+    - name: mercado objetivo
+      label: Mercado objetivo/región
+      type: texto
+      required: true
+      placeholder: por ejemplo, UE, América del Norte, Medio Oriente
+    - name: entregaCronología
+      label: Entrega deseada
+      type: seleccionar
+      required: true
+      options:
+        - En 30 días
+        - 30-60 días
+        - 60-90 días
+        - Planificación anticipada (90+ días)
+        - Solo investigando
+    - name: cumplimientoRequerido
+      label: Requisitos de cumplimiento
+      type: selección múltiple
+      required: false
+      options:
+        - CE / RCD 2013/53/EU
+        - UKCA
+        - USCG
+        - ISO 9001
+        - BSCI
+        - REACH
+        - Ninguna / No estoy seguro
+    - name: mensaje
+      label: Detalles adicionales
+      type: área de texto
+      required: false
+form_project:
+  title: Solicitud de cotización del proyecto
+  subtitle: Consulta integral de proyectos para flotas, aduanas o adquisiciones gubernamentales.
+  fields:
+    - name: nombre completo
+      label: Nombre completo
+      type: texto
+      required: true
+    - name: negocioCorreo electrónico
+      label: Correo electrónico empresarial
+      type: correo electrónico
+      required: true
+    - name: nombre de empresa
+      label: nombre de empresa
+      type: texto
+      required: true
+    - name: tipo de comprador
+      label: Tipo de comprador
+      type: seleccionar
+      required: true
+    - name: tipo de proyecto
+      label: Tipo de proyecto
+      type: seleccionar
+      required: true
+      options:
+        - Flota de resort / hotel
+        - Flota de alquiler
+        - Flota de rescate / patrulla
+        - Flota de centro de buceo
+        - Contratación pública
+        - Marca blanca / OEM
+        - Pedido de stock para distribuidor
+        - Otro
+    - name: Tipos de barcos
+      label: Tipos de embarcaciones requeridas
+      type: selección múltiple
+      required: true
+      options:
+        - Botes RIB
+        - Botes neumáticos / dinghies
+        - Tablas SUP
+        - Kayaks
+        - Equipo de seguridad
+    - name: flotaTamaño
+      label: Tamaño de la flota/rango de cantidad
+      type: texto
+      required: true
+      placeholder: por ejemplo, 20-50 unidades durante 12 meses
+    - name: requisitos personalizados
+      label: Necesidades de configuración personalizada
+      type: área de texto
+      required: false
+      placeholder: Tamaño del casco, material de los tubos, disposición de la cubierta, requisitos de marca...
+    - name: cumplimientoRequerido
+      label: Requisitos de cumplimiento y certificación
+      type: selección múltiple
+      required: true
+      options:
+        - CE / RCD 2013/53/EU
+        - UKCA
+        - USCG Type III/V
+        - ISO 9001
+        - BSCI
+        - REACH / RoHS
+        - Certificación del mercado local
+    - name: mercado objetivo
+      label: Mercado objetivo
+      type: texto
+      required: true
+    - name: rango de presupuesto
+      label: Rango de presupuesto
+      type: seleccionar
+      required: false
+      options:
+        - Menos de $10,000
+        - $10,000 - $50,000
+        - $50,000 - $200,000
+        - $200,000+
+        - Prefiero no decirlo
+    - name: entregaCronología
+      label: Cronograma del proyecto
+      type: seleccionar
+      required: true
+      options:
+        - Urgente (en 30 días)
+        - Estándar (30-60 días)
+        - Planificado (60-90 días)
+        - Planificación futura (90+ días)
+    - name: mensaje
+      label: Detalles y requisitos del proyecto
+      type: área de texto
+      required: false
+      placeholder: Describa su proyecto, aplicación y cualquier requisito específico...
+cta:
+  title: ¿Prefieres discutir por correo electrónico?
+  subtitle: Envíe su consulta directamente a nuestro equipo de ventas y le responderemos dentro de las 24 horas.
+  actions:
+    - variant: primary
+      text: Envíenos un correo electrónico directamente
+      href: /contact

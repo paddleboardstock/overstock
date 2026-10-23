@@ -1,0 +1,150 @@
+site:
+  name: Aquafarer
+  site: 'https://aquafarer.com'
+  base: '/'
+  trailingSlash: true
+  googleSiteVerificationId: ''
+
+# Default SEO metadata
+metadata:
+  title:
+    default: Aquafarer | RIB Boats, Inflatable Boats & SUP Boards Manufacturer — OEM/ODM
+    template: '%s — Aquafarer'
+  description: 'RIB boats, inflatable boats and SUP boards manufacturer with full OEM/ODM capability. CE certified per applicable EU directives, 64 models, 15,000 units annual capacity.'
+  keywords:
+    - Aquafarer
+    - RIB boat manufacturer
+    - inflatable boat OEM
+    - SUP board ODM
+    - inflatable boats
+    - RIB boats factory
+    - drop stitch SUP
+    - OEM ODM manufacturer
+    - CE certified watercraft
+    - inflatable SUP manufacturer
+  author: Aquafarer
+  robots:
+    index: true
+    follow: true
+  openGraph:
+    site_name: Aquafarer
+    images:
+      - url: '~/assets/images/default.webp'
+        width: 1200
+        height: 628
+    type: website
+    locale: en_US
+  twitter:
+    handle: '@aquafarer'
+    site: '@aquafarer'
+    cardType: summary_large_image
+
+i18n:
+  textDirection: ltr
+
+apps:
+  blog:
+    isEnabled: true
+    postsPerPage: 6
+
+    post:
+      isEnabled: true
+      permalink: '/news/%slug%'
+      robots:
+        index: true
+        follow: true
+
+    list:
+      isEnabled: true
+      pathname: 'news'
+      robots:
+        index: true
+        follow: true
+
+    category:
+      isEnabled: true
+      pathname: 'news/category'
+      robots:
+        index: true
+        follow: true
+
+    tag:
+      isEnabled: true
+      pathname: 'news/tag'
+      robots:
+        index: false
+        follow: true
+
+    isRelatedPostsEnabled: true
+    relatedPostsCount: 4
+
+  products:
+    isEnabled: true
+    productsPerPage: 12
+    product:
+      isEnabled: true
+      permalink: '/products/%slug%'
+      robots:
+        index: true
+        follow: true
+    list:
+      isEnabled: true
+      pathname: 'products'
+      robots:
+        index: true
+        follow: true
+
+analytics:
+  vendors:
+    googleAnalytics:
+      id: null
+
+siteSettings:
+  siteName: Aquafarer
+  siteTagline: 'RIB Boats, Inflatable Boats & SUP Boards Manufacturer — OEM/ODM Factory Since 2012'
+  siteDescription: 'Chinese factory manufacturing RIB boats, inflatable boats and SUP boards, with full OEM/ODM capability for B2B buyers. CE certified per applicable EU directives, 64 models, 15,000 units annual capacity from a 12,000 m² facility in Qingdao. MOQ from 2-5 units (RIB), 5-10 units (SUP).'
+  organization:
+    name: Aquafarer
+    logo: ''
+    contactEmail: info@aquafarer.com
+    contactPhone: '+86 13305324192'
+    address: 'Economic Development Zone, Laixi, Qingdao, China, 266600'
+  socialLinks:
+    - platform: linkedin
+      url: 'https://www.linkedin.com/company/aquafarer'
+      icon: tabler:brand-linkedin
+    - platform: youtube
+      url: 'https://www.youtube.com/@Aquafarer'
+      icon: tabler:brand-youtube
+    - platform: x
+      url: 'https://x.com/aquafarer'
+      icon: tabler:brand-x
+    - platform: instagram
+      url: 'https://www.instagram.com/aquafarer'
+      icon: tabler:brand-instagram
+    - platform: facebook
+      url: 'https://www.facebook.com/aquafarer'
+      icon: tabler:brand-facebook
+    - platform: rss
+      url: /rss.xml
+
+ui:
+  theme: 'system'
+
+branding:
+  site_name: 'Aquafarer'
+  logo_image: ''
+  logo_alt: 'Aquafarer logo'
+  copyright: '© {year} {site_name} LLC. All Rights Reserved.'
+  phone: '+86 13305324192'
+  address: 'Economic Development Zone, Laixi, Qingdao, China, 266600'
+  email: info@aquafarer.com
+  whatsapp_number: '+86 13305324192'
+  whatsapp_default_message: 'Hello, I would like to inquire about a product.'
+  contact_email_to: info@aquafarer.com
+  # API keys moved to /keystatic (API Keys panel) or Cloudflare Worker secrets
+  # Run: wrangler secret put CONTACT_RESEND_API_KEY
+  contact_from_email: info@aquafarer.com
+  contact_from_name: Aquafarer
+  map_latitude: '36.8861'
+  map_longitude: '120.5261'

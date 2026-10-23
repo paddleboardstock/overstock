@@ -1,0 +1,273 @@
+---
+import JsonLd from '~/components/common/JsonLd.astro';
+import AiQuickAnswer from '~/components/common/AiQuickAnswer.astro';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
+const { lang = 'th' } = Astro.props;
+const t = (key: string) => getUiForLang(lang)?.[key] || '';
+---
+
+<JsonLd
+  type="Article"
+  article={{
+    headline: 'คู่มือเรือเป่าลม — แหล่งข้อมูลครบถ้วน',
+    description:
+      'คู่มือครบวงจรเกี่ยวกับเรือเป่าลม ครอบคลุมประเภท วิธีการก่อสร้าง การเปรียบเทียบวัสดุ เกณฑ์การคัดเลือก มาตรฐานความปลอดภัย และการบํารุงรักษา',
+    datePublished: '2026-07-07',
+  }}
+  data={{ url: 'https://aquafarer.com/marine-industry/' }}
+/>
+
+<JsonLd
+  type="BreadcrumbList"
+  breadcrumbs={[
+    { name: t('nav.home') || 'Home', href: `/${lang}/` },
+    { name: 'อุตสาหกรรมทางทะเล', href: `/${lang}/marine-industry` },
+    { name: 'คู่มือเรือเป่าลม', href: `/${lang}/marine-industry/` },
+  ]}
+/>
+
+<AiQuickAnswer
+  entityType="คู่มือ"
+  quickAnswer="เรือยางพองเป็นเรือขนาดเบาที่สร้างขึ้นด้วยท่อยางยืดหยุ่น (sponsons) ที่เติมอากาศแรงดันเพื่อให้ลอยน้ำ เรือยางพองสมัยใหม่รวมถึงเรือเล็ก (dinghies), RIBs (เรือยางแข็ง), เรือคายัคพอง, และกระดานพายยืน พวกมันสร้างจากผ้า PVC หรือ Hypalon CSM โดยใช้การเชื่อม RF หรือรอยต่อที่ติดกาวด้วยมือ โดยมีการก่อสร้าง drop-stitch ที่สามารถรองรับพื้นแข็งแรงดันสูง"
+  facts={[
+    { label: 'ขนาดตลาดโลก', value: '$2.8B (2026)' },
+    { label: 'วัสดุหลัก', value: 'PVC / Hypalon CSM' },
+    { label: 'ช่วงอายุการใช้งาน', value: '8-20+ ปี' },
+    { label: 'CE การรับรอง', value: 'ข้อกําหนด (EU)' },
+  ]}
+/>
+
+<section class="max-w-4xl mx-auto py-16 px-6">
+  <h1 class="text-4xl font-semibold text-gray-900">คู่มือเรือเป่าลม</h1>
+  <p class="mt-4 text-lg text-gray-500">
+    แหล่งข้อมูลที่ชัดเจนที่สุดเกี่ยวกับเรือเป่าลม —
+    ตั้งแต่เรือเล็กเพื่อการพักผ่อนไปจนถึงRIBsเรือกู้ภัยมืออาชีพและเฉพาะทาง
+  </p>
+
+  <nav class="mt-8 flex flex-wrap gap-2">
+    {
+      ['Types', 'Construction', 'Materials', 'Selection', 'Safety', 'Maintenance', 'Standards'].map((section) => (
+        <a
+          href={`#${section.toLowerCase()}`}
+          class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition"
+        >
+          {section}
+        </a>
+      ))
+    }
+  </nav>
+
+  <section id="types" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">ประเภทของเรือเป่าลม</h2>
+    <div class="mt-8 grid gap-6">
+      {
+        [
+          {
+            title: 'เรือยางลม',
+            desc: 'เรือขนาดเล็กที่พกพาได้ ใช้สำหรับเทนเดอริ่ง การตกปลา และการใช้เพื่อสันทนาการระยะสั้น มักมีความยาว 2-4 เมตร ขับเคลื่อนด้วยเครื่องยนต์นอกขนาดเล็ก (2-15 HP) หรือพาย เป็นจุดเริ่มต้นที่เข้าถึงได้มากที่สุด',
+            icon: '🚤',
+          },
+          {
+            title: 'เรือยางแข็ง (RIBs)',
+            desc: 'เรือสมรรถนะสูงที่มีตัวเรือไฟเบอร์กลาส อะลูมิเนียม หรือ HDPE แข็งแรง และสปอนสันเป่าลมได้ความยาว 3-12 เมตร มีเรือนอกเรือ 15-300 ลํา+ HP ใช้สําหรับการลาดตระเวน กู้ภัย ดําน้ํา และล่องเรือนอกชายฝั่ง',
+            icon: '⚡',
+          },
+          {
+            title: 'เรือคายัคเป่าลม',
+            desc: 'เรือคายัคแบบพกพาที่ทําจากPVCผ้า TPU มีให้เลือกทั้งแบบเดี่ยวและแบบคู่ สําหรับการท่องเที่ยวเพื่อพักผ่อน การแล่นในแม่น้ํา และการเดินทางสํารวจ',
+            icon: '🛶',
+          },
+          {
+            title: 'กระดานพายแบบยืนเป่าลม (SUPs)',
+            desc: 'Drop-stitch บอร์ดพายที่สร้างขึ้นซึ่งสามารถพองตัวเป็นดาดฟ้าแรงดันสูงที่แข็งแรงมีทั้งแบบพายรอบด้าน ทัวร์ โยคะ ตกปลา และเซิร์ฟให้เลือก',
+            icon: '🏄',
+          },
+          {
+            title: 'เรือกู้ภัย (SAR)',
+            desc: 'ออกแบบRIBsเฉพาะสําหรับการค้นหาและกู้ภัยมีพื้นแบบลากน้ําอัตโนมัติ คอนโซลด้านหน้า หัวลาก และโทนสีที่มองเห็นได้ชัดเจนCE- ได้รับการรับรองสําหรับการใช้งานกู้ภัย',
+            icon: '🆘',
+          },
+          {
+            title: 'เรือทํางานเชิงพาณิชย์',
+            desc: 'งานหนักRIBsสําหรับสนับสนุนการดําน้ํา ลาดตระเวน สํารวจ และปฏิบัติการทางทะเลเชิงพาณิชย์Hypalon CSM การก่อสร้าง ตัวเรือเสริมความแข็งแรง และอุปกรณ์ระดับมืออาชีพ',
+            icon: '⚙️',
+          },
+        ].map((item) => (
+          <div class="flex gap-4 p-5 bg-gray-50 rounded-xl border border-gray-200">
+            <span class="text-2xl flex-shrink-0">{item.icon}</span>
+            <div>
+              <h3 class="font-semibold text-gray-900">{item.title}</h3>
+              <p class="mt-1 text-sm text-gray-600">{item.desc}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section id="construction" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">วิธีการก่อสร้าง</h2>
+    <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">การเชื่อม RF (ความถี่สูง)</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          ใช้พลังงานแม่เหล็กไฟฟ้าในการหลอมรวมPVCชั้นต่าง ๆ
+          ในระดับโมเลกุลสร้างรอยต่อที่แน่นหนาและปิดสนิทที่สุดพบได้ทั่วไปในPVCเรือคุณภาพสูงและSUPsต้องการเครื่องจักรเฉพาะทางและช่างฝีมือ
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">การติดกาวด้วยมือ / การยึดติดทางเคมี</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          กาวสองส่วนยึดติดกับแผงผ้าวิธีหลักสําหรับHypalon CSM เรือ (ไม่สามารถเชื่อม RF
+          ได้)ต้องการการเตรียมพื้นผิวอย่างแม่นยํา ควบคุมความชื้น
+          และเวลาการอบแห้งที่เหมาะสมเพื่อความแข็งแรงของรอยต่อที่เหมาะสม
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Drop-Stitch แกนกลาง</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          เส้นด้ายโพลีเอสเตอร์นับพันเส้นเชื่อมต่อชั้นบนและPVCชั้นล่าง ช่วยให้สามารถเป่าลมด้วยแรงดันสูง (15-25PSI)
+          เพื่อประสิทธิภาพของแผ่นแข็งความหนาแน่นของเส้นด้าย (15-50 เกลียว/ซม.²) เป็นตัวกําหนดความแข็งแรงและน้ําหนัก
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">การเชื่อมด้วยความร้อน</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          การเชื่อมด้วยลมร้อนหรือการเชื่อมแบบลิ่มร้อนใช้สําหรับรอยต่อและเสริมแรงพบได้บ่อยในRIBงานก่อสร้างขนาดใหญ่ความแม่นยําน้อยกว่าการเชื่อม
+          RF แต่มีประสิทธิภาพสําหรับHypalon PVC ผ้าทนทาน
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="materials" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">การเปรียบเทียบวัสดุ</h2>
+    <div class="mt-6 overflow-x-auto">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="bg-gray-50 border-b-2 border-gray-200">
+            <th class="px-4 py-3 text-left font-semibold text-gray-700">ทรัพย์สิน</th>
+            <th class="px-4 py-3 text-center font-semibold text-sky-700">PVC</th>
+            <th class="px-4 py-3 text-center font-semibold text-emerald-700">Hypalon CSM</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            [
+              ['Relative Cost', '$ (budget)', '$$$ (premium)'],
+              ['UV Resistance', 'Good (with coating)', 'Excellent (inherent)'],
+              ['Abrasion Resistance', 'Moderate-Good', 'Excellent'],
+              ['Chemical Resistance', 'Good', 'Excellent'],
+              ['Cold Flexibility', 'Stiffens below 0°C', 'Flexible to -20°C'],
+              ['Lifespan', '8-12 years', '15-20+ years'],
+              ['Seam Method', 'RF welding', 'Hand gluing'],
+              ['Repair', 'PVC glue (easy)', '2-part adhesive (moderate)'],
+            ].map((row, i) => (
+              <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                {row.map((cell, j) => (
+                  <td
+                    class={`px-4 py-3 border-b border-gray-200 ${j === 0 ? 'font-medium text-gray-700' : 'text-center text-gray-600'}`}
+                  >
+                    {cell}
+                  </td>
+                ))}
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-4 text-sm text-gray-500">
+      เรือยางเกรดทหารสมัยใหม่ PVC (1100-1670 dtex) มีความทนทานยอดเยี่ยมสำหรับผู้ใช้งานทั่วไปในราคาครึ่งหนึ่งของ Hypalon
+      Hypalon เหมาะสำหรับกองเรือพาณิชย์ สภาพอากาศร้อนชื้น และงานสำคัญทางภารกิจ
+    </p>
+    <a
+      href={`/${lang}/learn/pvc-vs-hypalon`}
+      class="mt-4 inline-block text-sky-600 hover:text-sky-700 text-sm font-medium">คู่มือเชิงลึก PVC vs Hypalon →</a
+    >
+  </section>
+
+  <section id="selection" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">วิธีเลือกเรือยาง</h2>
+    <div class="mt-8 grid md:grid-cols-3 gap-6">
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">1. กำหนดกรณีการใช้งานของคุณ</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>เพื่อสันทนาการ: เรือเล็กหรือ SUP</li>
+          <li>สมรรถนะ: RIB (15-60 HP)</li>
+          <li>พาณิชย์: RIB (100+ HP)</li>
+          <li>ฟิตเนส: เรือยาง SUP</li>
+          <li>ท่องเที่ยว: เรือคายัคยาง</li>
+        </ul>
+      </div>
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">2. กำหนดงบประมาณของคุณ</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>$200-$800: เรือยาง SUP</li>
+          <li>$500-$2,000: เรือเล็ก + มอเตอร์</li>
+          <li>$3,000-$8,000: เรือเริ่มต้น RIB</li>
+          <li>$8,000-$20,000: พรีเมียม RIB</li>
+          <li>$20,000+: พาณิชย์ RIB</li>
+        </ul>
+      </div>
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">3. พิจารณาวัสดุ</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>PVC: ประหยัด, น้ำหนักเบา</li>
+          <li>Hypalon: พรีเมียม, อายุยาวนาน</li>
+          <li>Drop-Stitch: ประสิทธิภาพแข็งตัว</li>
+          <li>น้ำหนักผ้า: 1100-1670 dtex</li>
+          <li>การเคลือบ: UV + ชั้นกันรั่ว</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="safety" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">ความปลอดภัยและมาตรฐาน</h2>
+    <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">CE การรับรอง</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          เรือยางที่ขายในสหภาพยุโรปทั้งหมดต้องได้รับการทำเครื่องหมาย CE ตามคำสั่งเรียกเรือเพื่อสันทนาการ (Recreational
+          Craft Directive, RCD) 2013/53/EU การรับรองครอบคลุมหมวดการออกแบบ (A-D), ความลอยตัว, ความมั่นคง
+          และความจุในการบรรทุก เรือ Aquafarer ได้รับการรับรอง CE สำหรับการใช้งานสันทนาการและกู้ภัย
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">มาตรฐาน</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          มาตรฐานสากลสำหรับเรือเป่าลม กำหนดข้อกำหนดเกี่ยวกับวัสดุ รอยต่อ วาล์ว และการทดสอบสมรรถนะ ประเภท I-IV
+          ครอบคลุมทุกอย่างตั้งแต่เรือเล็กไปจนถึง RIBs
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">อุปกรณ์ความปลอดภัยที่จำเป็น</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          ชูชีพ/PFDs (CE 12402), เชือกโยน, ถังตักน้ำ/เครื่องดับเพลิง, ไฟเดินเรือ (กลางคืน), วิทยุ VHF, ชุดปฐมพยาบาล, สมอ
+          และไม้พายสำรองหรือเชื้อเพลิง
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">การใช้งานอย่างปลอดภัย</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          ห้ามเกินความจุสูงสุดที่ระบุ ตรวจสอบความแน่นของวาล์วก่อนปล่อยเรือ กระจายน้ำหนักอย่างสม่ำเสมอ
+          เฝ้าติดตามสภาพอากาศ ส่งแผนการเดินเรือ และเข้าหลักสูตรความปลอดภัยในการใช้เรือ
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="maintenance" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">การบำรุงรักษาและดูแล</h2>
+    <div class="mt-8 space-y-4 text-sm text-gray-600">
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <>
+          <span class="text-sky-600 font-bold flex-shrink-0">1.</span>
+          <span>ล้างด้วยน้ำจืดหลังใช้งานน้ำเค็มทุกครั้ง ทำให้แห้งสนิทก่อนเก็บ</span>
+        </>
+      </div>
+    </div>
+  </section>
+</section>

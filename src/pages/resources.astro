@@ -1,0 +1,39 @@
+---
+import Features3 from '~/components/widgets/Features3.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+import { getPageContent, setPageContentData } from '~/i18n/page-content';
+import __pageData from '~/i18n/generated/pages/resources.ts';
+
+const lang = 'en';
+setPageContentData(__pageData);
+const page = getPageContent(lang, 'resources');
+
+const hero = page.hero_text ?? {};
+const resources = page.features3_resources ?? {};
+const faqs = page.faqs ?? {};
+const cta = page.cta ?? {};
+const ctaActions = cta.actions?.map((a: any) => ({ ...a, href: a.href }));
+
+const metadata = {
+  title: `Resources — ${SITE.name}`,
+  description: hero.subtitle || '',
+};
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Resources' }];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <HeroText tagline={hero.tagline} title={hero.title} subtitle={hero.subtitle} />
+  <Features3
+    tagline={resources.tagline}
+    title={resources.title}
+    subtitle={resources.subtitle}
+    items={resources.items}
+    columns={resources.columns}
+  />
+  <FAQs title={faqs.title} items={faqs.items} />
+  <CallToAction title={cta.title} subtitle={cta.subtitle} actions={ctaActions} />
+</Layout>

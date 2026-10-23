@@ -1,0 +1,60 @@
+hero:
+  tagline: Qualitätskontrolllabor
+  title: Prüflabor & Qualitätssicherung
+  subtitle: Unabhängiges Qualitätslabor mit ISO 9001-Prozessen – jedes Gerät wird vor Versand geprüft
+
+intro: Aquafarer betreibt ein eigenes Qualitätskontrolllabor, das unabhängig von der Produktion arbeitet. Jede Rohmaterial-Charge und jedes fertige Boot durchläuft dokumentierte Prüfprotokolle, bevor es freigegeben wird. Unser QC-Team berichtet direkt an das Management und gewährleistet so unparteiische Qualitätsentscheidungen.
+
+highlights:
+  - value: 100%
+    label: Druckgeprüfte Einheiten
+    detail: Jede Kammer, jedes Boot
+  - value: 48 h
+    label: Dauer des Luftrückhalte-Tests
+    detail: Bei 1.25-fachem Nenndruck
+  - value: '&lt;5%'
+    label: Maximal zulässiger Druckabfall
+    detail: Über 24-stündige Haltezeit
+  - value: AQL 2.5
+    label: Grenzwert für Hauptfehler
+    detail: Gemäß ISO 2859-Stichprobenprüfung
+
+test_procedures:
+  - title: Rohmaterialprüfung
+    description: Jede eingehende Charge PVC, Hypalon, Drop-Stitch-Gewebe und Beschläge wird vor Annahme geprüft. Zugfestigkeit (ASTM D751), Weiterreißfestigkeit (ISO 4674) und UV-Beständigkeit werden verifiziert. Nicht konforme Materialien werden gesperrt und zurückgesendet.
+    standards:
+      - ASTM D751 (Zug)
+      - ISO 4674 (Weiterreiß)
+      - ISO 4892 (UV)
+  - title: In-Process-QC-Prüfpunkte
+    description: Produktionsmitarbeiter führen in jeder Stufe eine Selbstprüfung durch. QC-Auditoren entnehmen während der Schicht Stichproben. Schälprüfungen der Schweißnähte werden alle 50 Einheiten durchgeführt. Maßkontrollen erfolgen bei jedem 20. Bahnenteil.
+    standards:
+      - ASTM D751 (Schäl)
+      - Interne 100-Punkte-Checkliste
+      - ISO 2859-Stichprobenprüfung
+  - title: 48-Stunden-Luftrückhalte-Test
+    description: Jede Schlauchkammer wird auf 125% des Nenndrucks aufgepumpt und 48 Stunden lang gehalten. Drucksensoren protokollieren kontinuierlich mit Temperaturkompensation. Jede Kammer mit mehr als 5% Druckabfall löst eine automatische erneute Chargenprüfung aus.
+    standards:
+      - ISO 6185
+      - CE 2013/53/EU
+  - title: Belastungs- & Gleichgewichtstest
+    description: Fertige Boote werden bei maximaler Nennkapazität auf Stabilität, Freibord und Fahrverhalten geprüft. Jedes Wasserfahrzeug durchläuft vor der Endabnahme einen Wassertest.
+    standards:
+      - ISO 12217
+      - CE 2013/53/EU
+
+equipment:
+  - name: Universal-Prüfmaschine (Zug)
+    spec: 5 kN, konform mit ASTM D751
+  - name: Druckabfall-Prüfgerät
+    spec: Mehrkanalig, 0–50 psi, Datenlogger
+  - name: UV-Bewitterungskammer
+    spec: ISO 4892, 1,000-h-Zyklen
+  - name: Dickenmessgerät (digital)
+    spec: 0.01 mm Auflösung
+  - name: Schälprüfgerät (Schweißnaht)
+    spec: Motorisiert, 50 N Kapazität
+  - name: Temperaturkammer
+    spec: -40 °C bis +100 °C
+  - name: Leckageprüfbehälter
+    spec: 6 m × 2 m, beleuchtet

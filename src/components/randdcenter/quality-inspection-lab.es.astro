@@ -1,0 +1,217 @@
+---
+import { SITE } from 'astrowind:config';
+const { lang = 'es' } = Astro.props;
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={`/${lang}/randdcenter`} class="text-sm text-gray-500 hover:underline">&larr; Volver al Centro de I+D</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Lab 06</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Laboratorio de Calidad e Inspección</h1>
+      <p class="mt-3 text-lg text-muted">Verificación independiente — cada prueba superada antes de la entrega</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-uv-resistance-testing.webp"
+        alt="Pruebas UV en el laboratorio de inspección de calidad de Aquafarer"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Confíe, pero verifique</h2>
+  <p>
+    Todo barco que sale de nuestro taller lleva la certificación de haber superado un conjunto definido de inspecciones
+    de calidad y pruebas de materiales. Nuestro Laboratorio de Calidad e Inspección es una función independiente dentro
+    de la organización — depende directamente de la dirección general, no de producción—, lo que garantiza que ninguna
+    presión comercial pueda comprometer la puerta de inspección. Si un lote de material o un barco terminado no cumple
+    la especificación publicada, el laboratorio tiene autoridad para detener el envío hasta que se resuelva la no
+    conformidad.
+  </p>
+  <p>
+    El laboratorio opera bajo un sistema de gestión de calidad alineado con los principios de gestión de calidad, y
+    nuestros métodos de prueba se basan en los estándares ISO, ASTM y EN siempre que es aplicable. Mantenemos registros
+    detallados de cada prueba realizada, creando una cadena de trazabilidad completa desde la recepción de la materia
+    prima hasta la entrega final del barco.
+  </p>
+
+  <h2>Equipos de prueba y capacidades</h2>
+  <table>
+    <thead><tr><th>Equipo</th><th>Pruebas realizadas</th><th>Estándar / Método</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Máquina universal de ensayo (50 kN)</td><td
+          >Resistencia a la tracción (tela), resistencia al pelado (costuras), propagación del desgarro</td
+        ><td>, ISO 4674</td></tr
+      >
+      <tr
+        ><td>Banco de pruebas de retención de aire (programable)</td><td
+          >Resistencia a 1000 ciclos de inflado/desinflado, prueba de retención de presión de 24-48 h</td
+        ><td> (interno)</td></tr
+      >
+      <tr
+        ><td>Dispositivo de pelado de costuras (pelado motorizado de 180&deg;)</td><td
+          >Resistencia al pelado de costuras soldadas y encoladas a 100 mm/min</td
+        ><td> / ASTM D1876</td></tr
+      >
+      <tr
+        ><td>Equipo de ensayo de presión hidrostática</td><td
+          >Resistencia a la penetración del agua de la tela (0–100 mbar)</td
+        ><td>ISO 811</td></tr
+      >
+      <tr
+        ><td>Medidor de espesor digital &amp; micrómetro</td><td
+          >Espesor de la tela, espesor de la pared del tubo, espesor de la película adhesiva</td
+        ><td>ISO 2286-3</td></tr
+      >
+      <tr
+        ><td>Cámara ambiental</td><td
+          >Acondicionamiento térmico (-40 &deg;C a +80 &deg;C) para pruebas de agrietamiento en frío y envejecimiento
+          térmico</td
+        ><td>ISO 188, ISO 4675</td></tr
+      >
+      <tr
+        ><td>Espectrofotómetro de color</td><td>Medición del color Delta-E tras exposición UV</td><td
+          >ISO 105-A05 / ASTM D2244</td
+        ></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>Las puertas de inspección — del material a la entrega</h2>
+  <p>
+    Cada barco sigue un plan de calidad definido con puntos de inspección obligatorios. Ningún barco puede saltarse una
+    puerta; cada puerta debe ser firmada por un inspector de calidad antes de que comience la siguiente etapa de
+    producción.
+  </p>
+
+  <div class="not-prose my-8">
+    <div class="relative">
+      <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-blue-200 dark:bg-blue-800"></div>
+      <div class="space-y-6 relative">
+        {
+          [
+            {
+              gate: 'Gate 1',
+              label: 'Inspección de material entrante',
+              desc: 'Lote de tela, lote de adhesivo, herrajes — todo se comprueba contra la especificación de entrada antes de liberarse a producción.',
+            },
+            {
+              gate: 'Gate 2',
+              label: 'Inspección de soldadura en proceso',
+              desc: 'Se prueba el cupón de soldadura del primer artículo (pelado + visual) al inicio de cada turno de producción.',
+            },
+            {
+              gate: 'Gate 3',
+              label: 'Prueba de aire de la cámara',
+              desc: 'Cada cámara se presuriza a 1.25 x la presión de trabajo y se mantiene 24-48 h. Los datos se registran por número de serie.',
+            },
+            {
+              gate: 'Gate 4',
+              label: 'Inspección previa a la entrega',
+              desc: 'Inspección completa del barco: todos los herrajes apretados al par, sistemas funcionales, sin defectos cosméticos. Lista de verificación de 100 puntos.',
+            },
+            {
+              gate: 'Gate 5',
+              label: 'Certificación final',
+              desc: 'Se recopilan los informes de prueba, se revisan los registros de inspección y se emite el Certificado de Conformidad.',
+            },
+          ].map((g) => (
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs font-bold z-10">
+                {g.gate}
+              </div>
+              <div class="flex-1 p-3 rounded-lg bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800">
+                <p class="text-sm font-semibold">{g.label}</p>
+                <p class="text-xs text-gray-500 mt-1">{g.desc}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+
+  <h2>Métricas de calidad clave (media móvil de 2025)</h2>
+  <div class="not-prose my-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">99.7 %</span>
+      <span class="text-xs text-gray-500">Rendimiento al primer paso (lote de tela)</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">&lt; 0.2 %</span>
+      <span class="text-xs text-gray-500">Tasa de rechazo de soldaduras (metro lineal)</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">100 %</span>
+      <span class="text-xs text-gray-500">Cámaras probadas con aire antes del ensamblaje</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600"></span>
+      <span class="text-xs text-gray-500">Cumplimiento de la categoría de diseño</span>
+    </div>
+  </div>
+
+  <h2>Nuestro equipo de calidad</h2>
+  <p>
+    El laboratorio cuenta con un gerente de calidad (10 años en control de calidad marina, ASQ Certified Quality
+    Engineer), dos inspectores de calidad (cada uno con certificación NDT de nivel 2 en inspección visual) y un técnico
+    de materiales responsable de todas las pruebas físicas. El equipo participa anualmente en pruebas de competencia a
+    través de un proveedor independiente externo para garantizar que nuestros resultados de prueba sigan siendo precisos
+    y reproducibles.
+  </p>
+
+  <h2>Pruebas independientes para clientes</h2>
+  <p>
+    Nuestro Laboratorio de Calidad e Inspección está disponible para servicios de pruebas independientes. Si necesita
+    verificar una especificación de tela, validar un nuevo sistema adhesivo u obtener un informe de prueba de terceros
+    para una calificación de compras, podemos realizar las pruebas según el estándar aplicable y emitir un informe de
+    prueba certificado.
+  </p>
+  <p>Ejemplos de trabajos recientes de pruebas de terceros:</p>
+  <ul>
+    <li>
+      Comparación de la resistencia al pelado de cinco productos de película adhesiva de la competencia para un programa
+      militar europeo de adquisiciones.
+    </li>
+    <li>
+      Estudio de envejecimiento acelerado (UV + ciclos térmicos) para una nueva formulación de PVC pigmentado en
+      naranja, con mediciones intermedias regulares en intervalos de 500 h.
+    </li>
+    <li>
+      Validación de la retención de aire de 50 válvulas deflectoras de prototipo para un nuevo diseño de tubo de alta
+      presión.
+    </li>
+  </ul>
+
+  <h2>Nuestro compromiso con usted</h2>
+  <p>
+    Cuando recibe un barco de {SITE.name}, también recibe su expediente de calidad — un registro compilado de los
+    resultados de prueba que se aplican a su barco específico. Certificado de lote de tela, pruebas de pelado de
+    soldaduras, registros de prueba de aire de las cámaras y lista de verificación previa a la entrega. Cada número es
+    trazable. Cada inspector está identificado. Esto no es solo papeleo — es nuestra promesa de que lo que entregamos es
+    lo que especificamos.
+  </p>
+  <p>
+    Si alguna vez tiene una inquietud de calidad, puede contactar directamente con el laboratorio — los datos de
+    contacto están impresos en su certificado de conformidad. Nos tomamos cada consulta en serio y nos comprometemos a
+    una investigación formal en un plazo de 48 horas.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">¿Necesita pruebas independientes o verificación de calidad?</h2>
+    <p class="mt-2 text-sm text-muted">
+      Nuestro laboratorio acepta trabajos de pruebas de terceros — contacte con nosotros con sus requisitos.
+    </p>
+    <a
+      href={`/${lang}/contact`}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Contacte con el laboratorio de calidad</a
+    >
+  </div>
+</section>

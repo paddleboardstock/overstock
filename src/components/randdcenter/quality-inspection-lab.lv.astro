@@ -1,0 +1,211 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'lv' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline"
+    >&larr; Atpakaļ uz Pētniecības un izstrādes centru</a
+  >
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Laboratorija 06</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Kvalitātes un Pārbaudes laboratorija</h1>
+      <p class="mt-3 text-lg text-muted">Neatkarīga verifikācija — katrs tests izturēts pirms piegādes</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-uv-resistance-testing.webp"
+        alt="Aquafarer kvalitātes kontroles laboratorija UV testēšana"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Uzticies, bet pārbaudi</h2>
+  <p>
+    Katra laiva, kas atstāj mūsu darbnīcu, nes sertifikātu, ka tā ir izturējusi noteiktu kvalitātes pārbaudes un
+    materiālu testu komplektu. Mūsu Kvalitātes un Pārbaudes laboratorija ir neatkarīga funkcija organizācijā — tā tieši
+    atbild izpilddirektoram, nevis ražošanai — nodrošinot, ka neviena komerciāla spiediena dēļ nav apdraudēta pārbaudes
+    procesa kvalitāte. Ja materiālu partija vai pabeigta laiva neatbilst publicētajai specifikācijai, laboratorijai ir
+    pilnvaras apturēt piegādi līdz neatbilstības novēršanai.
+  </p>
+  <p>
+    Laboratorija darbojas saskaņā ar kvalitātes vadības sistēmu, kas saskaņota ar principiālajiem nosacījumiem, un mūsu
+    testu metodes balstās uz ISO, ASTM un EN standartiem, kur piemērojams. Mēs uzturam detalizētus ierakstus par katru
+    veiktu testu, veidojot pilnīgu caurspīdīguma ķēdi no izejmateriālu saņemšanas līdz galīgajai laivas piegādei.
+  </p>
+
+  <h2>Testēšanas iekārtas un iespējas</h2>
+  <table>
+    <thead><tr><th>Aprīkojums</th><th>Veiktie testi</th><th>Standarts / Metode</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Universāla testēšanas iekārta (50 kN)</td><td
+          >Pielūstošās izturības (audums), šuvju nolobīšanās izturība, plīsuma izplatība</td
+        ><td>, ISO 4674</td></tr
+      >
+      <tr
+        ><td>Gaisa noturības testēšanas ierīce (programmējama)</td><td
+          >1000 ciklu piepūšamības/saspiešanas izturība, 24-48 stundu spiediena noturības tests</td
+        ><td>(iekšējais)</td></tr
+      >
+      <tr
+        ><td>Šuvju nolobīšanās ierīce (motorizēta 180° nolobīšanās)</td><td
+          >Metinātu un līmētu šuvju nolobīšanās izturība 100 mm/min</td
+        ><td>/ ASTM D1876</td></tr
+      >
+      <tr
+        ><td>Hidrostatiskais galvas testeris</td><td>Auduma ūdens penetrācijas izturība (0 — 00 mbar)</td><td
+          >ISO 811</td
+        ></tr
+      >
+      <tr
+        ><td>Digitālais biezuma mērītājs un mikrometrs</td><td
+          >Auduma biezums, caurules sienas biezums, līmējošā plēves biezums</td
+        ><td>ISO 2286-3</td></tr
+      >
+      <tr
+        ><td>Vides kamera</td><td
+          >Temperatūras kondicionēšana (-40 °C līdz +80 °C) aukstuma plaisas un siltuma novecošanas testiem</td
+        ><td>ISO 188, ISO 4675</td></tr
+      >
+      <tr
+        ><td>Krāsu spektrofotomētrs</td><td>Delta-E krāsas mērījums pēc UV ekspozīcijas</td><td
+          >ISO 105-A05 / ASTM D2244</td
+        ></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>Inspekcijas vārti — no materiāla līdz piegādei</h2>
+  <p>
+    Katra laiva ievēro noteiktu kvalitātes plānu ar obligātām pārbaudes vietām. Neviena laiva nedrīkst izlaist vārtus;
+    katrs vārti jāapstiprina kvalitātes inspektoram pirms nākamā ražošanas posma sākuma.
+  </p>
+
+  <div class="not-prose my-8">
+    <div class="relative">
+      <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-blue-200 dark:bg-blue-800"></div>
+      <div class="space-y-6 relative">
+        {
+          [
+            {
+              gate: 'Gate 1',
+              label: 'Ienākošā materiāla pārbaude',
+              desc: 'Auduma sērija, līmes sērija, aparatūra — viss pārbaudīts pret ienākošo specifikāciju pirms nodošanas ražošanai.',
+            },
+            {
+              gate: 'Gate 2',
+              label: 'Procesa metinājuma pārbaude',
+              desc: 'Pirmais metinājuma paraugs tiek testēts (atvēršana + vizuāli) katras ražošanas maiņas sākumā.',
+            },
+            {
+              gate: 'Gate 3',
+              label: 'Kameras gaisa tests',
+              desc: 'Katru kameru saspiesta līdz 1,25 reizes darba spiedienam, tur 24-48 stundas. Dati reģistrēti pēc sērijas numura.',
+            },
+            {
+              gate: 'Gate 4',
+              label: 'Pirms piegādes pārbaude',
+              desc: 'Pilnīgi pārbaudīta laiva: visi stiprinājumi uzgriezti, sistēmas darbojas, kosmētiski defekti nav. 100 punktu kontrolsaraksts.',
+            },
+            {
+              gate: 'Gate 5',
+              label: 'Galīgā sertifikācija',
+              desc: 'Izstrādāti testa ziņojumi, pārskatīti pārbaudes ieraksti, izsniegts Atbilstības sertifikāts.',
+            },
+          ].map((g) => (
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs font-bold z-10">
+                {g.gate}
+              </div>
+              <div class="flex-1 p-3 rounded-lg bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800">
+                <p class="text-sm font-semibold">{g.label}</p>
+                <p class="text-xs text-gray-500 mt-1">{g.desc}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+
+  <h2>Galvenie kvalitātes rādītāji (2025. gada vidējais rādītājs)</h2>
+  <div class="not-prose my-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">99.7 %</span>
+      <span class="text-xs text-gray-500">Pirmās caurlaides iznākums (auduma partija)</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">&lt; 0,2 %</span>
+      <span class="text-xs text-gray-500">Metinājuma atgrūšanas ātrums (lineārais metrs)</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">100 %</span>
+      <span class="text-xs text-gray-500">Kameras, kas tika testētas gaisā pirms montāžas</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600"></span>
+      <span class="text-xs text-gray-500">Dizaina kategoriju atbilstība</span>
+    </div>
+  </div>
+
+  <h2>Mūsu kvalitatīvā komanda</h2>
+  <p>
+    Laboratorijā strādā kvalitātes vadītājs (10 gadi jūras kvalitātes nodrošināšanā, ASQ sertificēts kvalitātes
+    inženieris), divi kvalitātes inspektori (katram ar 2. līmeņa NDT sertifikātu vizuālajā testēšanā) un materiālu
+    tehniķis, kurš atbild par visiem fiziskajiem testiem. Komanda veic ikgadēju prasmju pārbaudi ar neatkarīga trešās
+    puses pakalpojumu sniedzēja starpniecību, lai nodrošinātu, ka mūsu testu rezultāti ir precīzi un atkārtojami.
+  </p>
+
+  <h2>Neatkarīga testēšana klientiem</h2>
+  <p>
+    Mūsu Kvalitātes un inspekcijas laboratorija ir pieejama neatkarīgiem testēšanas pakalpojumiem. Ja jums nepieciešams
+    pārbaudīt auduma specifikāciju, apstiprināt jaunu līmes sistēmu vai iegūt neatkarīgu testēšanas ziņojumu iepirkuma
+    kvalifikācijai, mēs varam veikt testus atbilstoši atbilstošajam standartam un izsniegt sertificētu testēšanas
+    ziņojumu.
+  </p>
+  <p>Piemēri nesenajiem trešo pušu testēšanas darbiem:</p>
+  <ul>
+    <li>
+      Piecu konkurējošu līmplēves produktu noņemšanas izturības salīdzinājums Eiropas militārā iepirkuma programmai.
+    </li>
+    <li>
+      Paātrinātas novecošanas pētījums (UV + termiskā ciklēšana) jaunai oranžās pigmentācijas PVC formulai ar regulāriem
+      starpposma mērījumiem ik pēc 500 stundām.
+    </li>
+    <li>Gaisa noturības validācija 50 prototipa baffle vārstu jaunam augstspiediena cauruļu dizainam.</li>
+  </ul>
+
+  <h2>Mūsu apņemšanās pret tevi</h2>
+  <p>
+    Kad jūs saņemat{SITE.name}laiva, jūs arī saņemat tās kvalitātes failu — apkopotu testu rezultātu ierakstu, kas
+    attiecas uz jūsu konkrēto laivu. Žakardu partijas sertifikāts, metinājumu plēšanas testi, kameras gaisa testu
+    žurnāli un piegādes priekšapstrādes pārbaudes saraksts. Katrs skaitlis ir izsekojams. Katrs inspektors ir
+    identificēts. Tas nav tikai papīrs — tas ir mūsu solījums, ka tas, ko mēs piegādājām, atbilst tam, ko mēs norādījām.
+  </p>
+  <p>
+    Ja jums kādreiz rodas kvalitātes problēmas, varat tieši sazināties ar laboratoriju — kontaktinformācija ir norādīta
+    jūsu atbilstības sertifikātā. Mēs katru jautājumu uztveram nopietni un apņemamies veikt formālu izmeklēšanu 48
+    stundu laikā.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Nepieciešama neatkarīga testēšana vai kvalitātes pārbaude?</h2>
+    <p class="mt-2 text-sm text-muted">
+      Mūsu laboratorija pieņem neatkarīgu testu darbus — sazinieties ar mums, lai uzzinātu par savām vajadzībām.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Sazinieties ar kvalitātes laboratoriju</a
+    >
+  </div>
+</section>

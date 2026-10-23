@@ -1,0 +1,82 @@
+hero:
+  tagline: Üzleti csomagok
+  title: Készen álló vízüzlet<br />Csomagok minden szakaszra
+  subtitle: Előre konfigurált felszereléscsomagok vízisport klubok, üdülőhelyek és márkaindítások számára — átlátható árakkal, gyors szállítással és teljes testreszabási lehetőségekkel.
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/use-cases/aquafarer-outdoor-adventure.webp
+    alt: Aquafarer üzleti felszereléscsomagok
+direct_answer: Aquafarer három előre konfigurált üzleti csomagot kínál a vízi sport üzemeltetők számára minden szinten. A Club Starter Package 10 SUPs-t tartalmaz evezőkkel, pumpákkal, javítókészletekkel és biztonsági felszereléssel a fejlődő klubok és iskolák számára. A Resort Premium Package 50–100 egységet biztosít tárolórendszerekkel, márkajelzéssel és képzési útmutatókkal a szállodák és vendéglátóhelyek részére. A Brand Launch Package termékválasztást, egyedi logótervezést, csomagolást, gyártást és szállítást kínál azoknak a vállalkozóknak, akik saját vízi sport márkájuk beindítását tervezik. Minden csomag gyári közvetlen árképzést, CE tanúsítványt és globális logisztikai támogatást tartalmaz.
+packages:
+  - id: club-starter
+    tag: Best Seller
+    name: Klub Kezdő Csomag
+    subtitle: Minden, amire szükséged van a kenus klubod indításához vagy fejlesztéséhez
+    target: SUP klubok, kajak klubok, szörf iskolák, edzőközpontok
+    price_label: 4 800 dollártól
+    line_items:
+      - item: 10 SUP deszka vagy kajak
+      - item: 10 illő evező
+      - item: 10 nagy teljesítményű szivattyú
+      - item: 10 javítókészlet
+      - item: 10 mentőmellény klublogóval
+      - item: Klub márkajelzés a táblákon
+      - item: Biztonsági jelzések készlet
+      - item: Kezdő leckeguide PDF
+    cta_text: Klubcsomag beszerzése
+    cta_href: /contact
+  - id: resort-premium
+    tag: Premium
+    name: Üdülőhely Prémium Csomag
+    subtitle: Teljes vendég vízi tevékenység program szállodák és üdülőhelyek számára
+    target: Tengerparti üdülőhelyek, tavak melletti hotelek, öko üdülőhelyek, jachtklubok
+    price_label: Egyedi árajánlat
+    line_items:
+      - item: 50–100 SUPs, kajakok vagy vegyes flották
+      - item: Teljes üdülőhely márkajelzés minden felszerelésen
+      - item: Bérelhető minőségű evezők és mentőmellények
+      - item: Kereskedelmi tárolóracks rendszer
+      - item: Inflációs állomás ipari szivattyúkkal
+      - item: Biztonsági rendszer (úszótestek, táblák, mentődeszka)
+      - item: Munkatársak képzési programja
+      - item: Bevételkezelési kézikönyv
+    cta_text: Szerezze be a Resort csomagot
+    cta_href: /contact
+  - id: brand-launch
+    tag: Entrepreneur
+    name: Márkaindítási csomag
+    subtitle: Alakítsa márkaötletét szállított termékké — általában 60–90 napon belül
+    target: Amazon eladók, influencerek, regionális forgalmazók
+    price_label: 6 500 USD-tól
+    line_items:
+      - item: Termékválasztási tanácsadás
+      - item: Egyedi logótervezés a táblákon
+      - item: Egyedi színillesztés
+      - item: Márkás kiskereskedelmi csomagolás
+      - item: Ár címkék és használati utasítás
+      - item: CE tanúsítvány dokumentáció
+      - item: Gyártási minták
+      - item: FOB Csincsiang szállítás
+    cta_text: Indítsa el márkáját
+    cta_href: /contact
+faq:
+  title: Csomag FAQ
+  questions:
+    - q: Mi a csomagok minimális rendelési mennyisége?
+      a: A Club Starter Csomag minimális mennyisége 10 darab. A Resort és Márka csomagok az Ön igényeihez igazíthatók rugalmas MOQs mellett.
+    - q: Mennyi ideig tart a szállítás?
+      a: A standard gyártás 30–45 nap a rendelés megerősítésétől számítva. A gyorsított gyártás további díj ellenében elérhető.
+    - q: Testreszabhatom a felszerelés színeit és márkáját?
+      a: Igen. Minden csomag teljes testreszabást tartalmaz — tábla színek, logó nyomatok és csomagolás tervezése.
+    - q: Biztosítanak-e értékesítés utáni támogatást?
+      a: Igen. Minden csomag hozzáférést biztosít online karbantartási útmutatóinkhoz, videó oktatóanyagokhoz és pótalkatrész-rendelési rendszerünkhöz.
+cta:
+  title: Nem biztos, melyik csomag a megfelelő?
+  subtitle: Válaszoljon 3 gyors kérdésre, és mi ajánljuk az üzletéhez legmegfelelőbb csomagot.
+  actions:
+    - variant: primary
+      text: Szerezze be az ajánlott csomagot
+      href: /contact
+    - text: Megoldások megtekintése közönség szerint
+      href: /solutions
+    - text: Olvassa el a sikertörténeteket
+      href: /success-stories

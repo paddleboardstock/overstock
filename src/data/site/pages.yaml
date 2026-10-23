@@ -1,0 +1,680 @@
+- slug: home
+  label: Home
+  path: /
+  permalink: /
+  file: src/data/pages/home.yaml
+  sections:
+    - { key: hero, type: hero, label: 'Hero Section (static, only used when no carousel)' }
+    - { key: hero_carousel, type: hero_carousel, label: 'Hero Carousel (3 switchable slides)' }
+    - { key: stats, type: stats, label: 'Statistics' }
+    - { key: features, type: features, label: 'Features Section (Why Choose Us)' }
+    - { key: featured_products, type: featured_products, label: 'Featured Products Section' }
+    - { key: content_workshop, type: content, label: 'Workshop Content Section' }
+    - { key: steps, type: steps, label: 'Steps Section (From Order to Delivery)' }
+    - { key: blog_latest, type: blog_latest, label: 'Latest Blog Section' }
+    - { key: faqs, type: faqs, label: 'FAQs' }
+    - { key: cta, type: cta, label: 'Bottom CTA Section' }
+
+- slug: about
+  label: About
+  path: /about
+  permalink: /about
+  file: src/data/pages/about.yaml
+  sections:
+    - { key: hero, type: hero, label: 'Top Hero' }
+    - { key: stats, type: stats, label: 'Statistics' }
+    - { key: brand_hub_tagline, type: content, label: 'Brand Hub Tagline' }
+    - { key: brand_hub_title, type: content, label: 'Brand Hub Title' }
+    - { key: brand_hub_subtitle, type: content, label: 'Brand Hub Subtitle' }
+    - { key: brand_hub_cards, type: features, label: 'Brand Hub Cards' }
+    - { key: features3_what_we_build, type: features3, label: 'What we build' }
+    - { key: features3_more, type: features3, label: 'More (with image)' }
+    - { key: steps2_values, type: steps2, label: 'Our values' }
+    - { key: steps2_milestones, type: steps2, label: 'Milestones' }
+    - { key: features2_locations, type: features2, label: 'Our locations' }
+
+- slug: about-aquafarer
+  label: About Aquafarer
+  path: /about/aquafarer
+  permalink: /about/aquafarer
+  file: src/data/pages/about-aquafarer.yaml
+  sections:
+    - { key: hero, type: hero, label: 'Top Hero' }
+    - { key: intro, type: content, label: 'Introduction' }
+    - { key: stats, type: stats, label: 'Statistics' }
+    - { key: factory_details, type: content, label: 'Factory Details' }
+    - { key: factory_section, type: content, label: 'Factory Section' }
+    - { key: values_section, type: features, label: 'Company Values' }
+    - { key: services_section, type: features, label: 'Services' }
+    - { key: certifications_section, type: features, label: 'Certifications' }
+    - { key: values, type: features, label: 'Values List' }
+    - { key: services, type: features, label: 'Service List' }
+    - { key: certifications, type: features, label: 'Certification List' }
+    - { key: cta, type: cta, label: 'Bottom CTA' }
+
+- slug: academy
+  label: Academy
+  path: /academy
+  permalink: /academy
+  file: src/data/pages/academy.yaml
+  sections:
+    - { key: hero, type: hero, label: 'Page Hero' }
+    - { key: categories, type: features, label: 'Learning Categories' }
+    - { key: knowledge_center_tagline, type: content, label: 'Knowledge Center Tagline' }
+    - { key: knowledge_center_title, type: content, label: 'Knowledge Center Title' }
+    - { key: knowledge_center_subtitle, type: content, label: 'Knowledge Center Subtitle' }
+    - { key: knowledge_sections, type: features, label: 'Knowledge Sections' }
+    - { key: read_guide, type: content, label: 'Read Guide Link Text' }
+    - { key: cta, type: cta, label: 'Bottom CTA' }
+
+- slug: aquafarer-story
+  label: Aquafarer Story
+  path: /aquafarer
+  permalink: /aquafarer
+  file: src/data/pages/aquafarer-story.yaml
+  sections:
+    - { key: hero, type: hero, label: 'Top Hero' }
+    - { key: stats, type: stats, label: 'Statistics' }
+    - { key: timeline, type: steps, label: 'Timeline' }
+    - { key: content_founding, type: content, label: 'Founding Story' }
+    - { key: content_growth, type: content, label: 'Growth Story' }
+    - { key: philosophy, type: content, label: 'Philosophy' }
+    - { key: engineeringDna, type: content, label: 'Engineering DNA' }
+    - { key: trustSignals, type: content, label: 'Trust Signals' }
+    - { key: comparison, type: content, label: 'Comparison' }
+    - { key: cta, type: cta, label: 'Bottom CTA' }
+
+- slug: brand
+  label: Brand
+  path: /brand
+  permalink: /brand
+  file: src/data/pages/brand.yaml
+  sections:
+    - { key: hero, type: hero, label: 'Top Hero' }
+    - { key: position, type: content, label: 'Brand Position' }
+    - { key: products_section, type: featured_products, label: 'Products Section' }
+    - { key: global_section, type: content, label: 'Global Section' }
+    - { key: social_section, type: content, label: 'Social Section' }
+    - { key: cta_section, type: cta, label: 'Bottom CTA' }
+
+- slug: brand-aquafarer
+  label: Brand Aquafarer
+  path: /brand/aquafarer
+  permalink: /brand/aquafarer
+  file: src/data/pages/brand-aquafarer.yaml
+  sections:
+    - { key: hero, type: hero, label: 'Top Hero' }
+    - { key: timeline, type: steps, label: 'Timeline' }
+    - { key: philosophy, type: content, label: 'Philosophy' }
+    - { key: engineeringDna, type: content, label: 'Engineering DNA' }
+    - { key: productEcosystem, type: features, label: 'Product Ecosystem' }
+    - { key: trustSignals, type: features, label: 'Trust Signals' }
+    - { key: comparison, type: content, label: 'Comparison' }
+
+- slug: brand-global-presence
+  label: Brand Global Presence
+  path: /brand-global-presence
+  permalink: /brand-global-presence
+  file: src/data/pages/brand-global-presence.yaml
+  sections:
+    - { key: hero, type: hero, label: 'Top Hero' }
+    - { key: stats, type: stats, label: 'Statistics' }
+    - { key: cta, type: cta, label: 'Bottom CTA' }
+
+- slug: brand-marine-expertise
+  label: Brand Marine Expertise
+  path: /brand-marine-expertise
+  permalink: /brand-marine-expertise
+  file: src/data/pages/brand-marine-expertise.yaml
+  sections:
+    - { key: hero, type: hero, label: 'Top Hero' }
+    - { key: expertise_materials, type: content, label: 'Materials Expertise' }
+    - { key: expertise_manufacturing, type: content, label: 'Manufacturing Expertise' }
+    - { key: expertise_design, type: content, label: 'Design Expertise' }
+    - { key: cta, type: cta, label: 'Bottom CTA' }
+
+- slug: brand-story
+  label: Brand Story
+  path: /brand-story
+  permalink: /brand-story
+  file: src/data/pages/brand-story.yaml
+  sections:
+    - { key: hero, type: hero, label: 'Top Hero' }
+    - { key: stats, type: stats, label: 'Statistics' }
+    - { key: content_founding, type: content, label: 'Founding Story' }
+    - { key: content_growth, type: content, label: 'Growth Story' }
+    - { key: content_mission, type: content, label: 'Mission' }
+    - { key: cta, type: cta, label: 'Bottom CTA' }
+
+- slug: brand-team
+  label: Brand Team
+  path: /brand/team
+  permalink: /brand/team
+  file: src/data/pages/brand-team.yaml
+  sections:
+    - { key: hero, type: hero, label: 'Top Hero' }
+    - { key: founding, type: content, label: 'Founding Team' }
+    - { key: leadership, type: testimonials, label: 'Leadership Team' }
+    - { key: philosophy, type: content, label: 'Philosophy' }
+    - { key: cta, type: cta, label: 'Bottom CTA' }
+
+- slug: brand-why-aquafarer
+  label: Brand Why Aquafarer
+  path: /brand-why-aquafarer
+  permalink: /brand-why-aquafarer
+  file: src/data/pages/brand-why-aquafarer.yaml
+  sections:
+    - { key: hero, type: hero, label: 'Top Hero' }
+    - { key: stats, type: stats, label: 'Statistics' }
+    - { key: testimonials, type: testimonials, label: 'Testimonials' }
+    - { key: cta, type: cta, label: 'Bottom CTA' }
+
+- slug: cases
+  label: Cases
+  path: /evidence
+  permalink: /evidence
+  file: src/data/pages/cases.yaml
+  sections:
+    - { key: hero, type: hero, label: 'Top Hero' }
+    - { key: cta, type: cta, label: 'Bottom CTA' }
+
+- slug: certifications
+  label: Certifications
+  path: /quality
+  permalink: /quality
+  file: src/data/pages/certifications.yaml
+  sections:
+    - { key: hero, type: hero, label: 'Top Hero' }
+    - { key: content_certifications, type: content, label: 'Certifications Content' }
+    - { key: content_factory, type: content, label: 'Factory Content' }
+    - { key: content_safety, type: content, label: 'Safety Content' }
+    - { key: cta, type: cta, label: 'Bottom CTA' }
+
+- slug: commercial-workboats
+  label: Commercial Workboats
+  path: /commercial-workboats
+  permalink: /commercial-workboats
+  file: src/data/pages/commercial-workboats.yaml
+  sections:
+    - { key: label, type: content, label: 'Page Label' }
+    - { key: headline, type: content, label: 'Headline' }
+    - { key: subtitle, type: content, label: 'Subtitle' }
+    - { key: seo, type: content, label: 'SEO Metadata' }
+    - { key: faqs, type: faqs, label: 'FAQs' }
+    - { key: body, type: content, label: 'Body Content' }
+
+- slug: community
+  label: Community
+  path: /community
+  permalink: /community
+  file: src/data/pages/community.yaml
+  sections:
+    - { key: hero, type: hero, label: 'Top Hero' }
+    - { key: stats, type: stats, label: 'Statistics' }
+    - { key: stories, type: testimonials, label: 'Stories' }
+    - { key: adventures_cta, type: cta, label: 'Adventures CTA' }
+    - { key: locations, type: features, label: 'Locations' }
+    - { key: cta, type: cta, label: 'Bottom CTA' }
+
+- slug: contact
+  label: Contact
+  path: /contact
+  permalink: /contact
+  file: src/data/pages/contact.yaml
+  sections:
+    - { key: hero_text, type: hero_text, label: 'Top HeroText' }
+    - { key: contact_form, type: contact, label: 'Contact Form' }
+    - { key: map, type: map, label: 'Google Maps Location' }
+
+- slug: custom
+  label: Custom Orders
+  path: /custom
+  permalink: /custom
+  file: src/data/pages/custom.yaml
+  sections:
+    - { key: hero, type: hero, label: 'Top Hero' }
+    - { key: steps_section, type: steps, label: 'Process Steps' }
+    - { key: services_section, type: features, label: 'Services' }
+    - { key: capabilities_section, type: features, label: 'Capabilities' }
+    - { key: why_section, type: features, label: 'Why Choose Us' }
+
+- slug: disaster-relief
+  label: Disaster Relief
+  path: /disaster-relief-humanitarian-aid
+  permalink: /disaster-relief-humanitarian-aid
+  file: src/data/pages/disaster-relief.yaml
+  sections:
+    - { key: label, type: content, label: 'Page Label' }
+    - { key: headline, type: content, label: 'Headline' }
+    - { key: subtitle, type: content, label: 'Subtitle' }
+    - { key: seo, type: content, label: 'SEO Metadata' }
+    - { key: faqs, type: faqs, label: 'FAQs' }
+    - { key: body, type: content, label: 'Body Content' }
+
+- slug: factory
+  label: Factory
+  path: /factory
+  permalink: /factory
+  file: src/data/pages/factory.yaml
+  sections:
+    - { key: hero, type: hero, label: 'Top Hero' }
+    - { key: intro, type: content, label: 'Introduction' }
+    - { key: stats, type: stats, label: 'Statistics' }
+    - { key: intelligence_tagline, type: content, label: 'Intelligence Tagline' }
+    - { key: intelligence_title, type: content, label: 'Intelligence Title' }
+    - { key: intelligence_cards, type: content, label: 'Intelligence Cards' }
+    - { key: workshops_section, type: features, label: 'Workshops' }
+    - { key: equipment_section, type: features, label: 'Equipment' }
+    - { key: qc_section, type: content, label: 'Quality Control' }
+    - { key: oem_section, type: content, label: 'OEM/ODM Section' }
+    - { key: faq_section, type: faqs, label: 'FAQs' }
+    - { key: production_flow, type: content, label: 'Production Flow' }
+    - { key: workforce, type: content, label: 'Workforce' }
+    - { key: material_traceability, type: content, label: 'Material Traceability' }
+    - { key: qc_dashboard, type: content, label: 'QC Dashboard' }
+    - { key: process_cta, type: cta, label: 'Process CTA' }
+
+- slug: factory-capacity
+  label: Factory Capacity
+  path: /factory/capacity
+  permalink: /factory/capacity
+  file: src/data/pages/factory-capacity.yaml
+  sections:
+    - { key: hero, type: hero, label: 'Top Hero' }
+    - { key: intro, type: content, label: 'Introduction' }
+    - { key: highlights, type: stats, label: 'Capacity Highlights' }
+    - { key: workshops, type: features, label: 'Workshops' }
+    - { key: oem_capacity, type: content, label: 'OEM Capacity Details' }
+
+- slug: factory-equipment
+  label: Factory Equipment
+  path: /factory/equipment
+  permalink: /factory/equipment
+  file: src/data/pages/factory-equipment.yaml
+  sections:
+    - { key: hero, type: hero, label: 'Top Hero' }
+    - { key: categories, type: features, label: 'Equipment Categories' }
+    - { key: cta, type: cta, label: 'Bottom CTA' }
+
+- slug: factory-oem-capability
+  label: Factory OEM Capability
+  path: /factory/oem-capability
+  permalink: /factory/oem-capability
+  file: src/data/pages/factory-oem-capability.yaml
+  sections:
+    - { key: hero, type: hero, label: 'Top Hero' }
+    - { key: intro, type: content, label: 'Introduction' }
+    - { key: highlight, type: content, label: 'Highlight' }
+    - { key: services, type: features, label: 'OEM Services' }
+    - { key: moq_table, type: content, label: 'MOQ Table' }
+    - { key: why_us, type: features, label: 'Why Choose Us' }
+
+- slug: factory-process
+  label: Factory Process
+  path: /factory/process
+  permalink: /factory/process
+  file: src/data/pages/factory-process.yaml
+  sections:
+    - { key: hero, type: hero, label: 'Top Hero' }
+    - { key: intro, type: content, label: 'Introduction' }
+    - { key: steps, type: steps, label: 'Process Steps' }
+    - { key: cta, type: cta, label: 'Bottom CTA' }
+
+- slug: factory-quality-lab
+  label: Factory Quality Lab
+  path: /factory/quality-lab
+  permalink: /factory/quality-lab
+  file: src/data/pages/factory-quality-lab.yaml
+  sections:
+    - { key: hero, type: hero, label: 'Top Hero' }
+    - { key: intro, type: content, label: 'Introduction' }
+    - { key: highlights, type: stats, label: 'Quality Highlights' }
+    - { key: test_procedures, type: steps, label: 'Test Procedures' }
+    - { key: equipment, type: features, label: 'Lab Equipment' }
+
+- slug: fishing
+  label: Fishing
+  path: /use-cases/fishing
+  permalink: /use-cases/fishing
+  file: src/data/pages/fishing.yaml
+  sections:
+    - { key: label, type: content, label: 'Page Label' }
+    - { key: headline, type: content, label: 'Headline' }
+    - { key: subtitle, type: content, label: 'Subtitle' }
+    - { key: seo, type: content, label: 'SEO Metadata' }
+    - { key: faqs, type: faqs, label: 'FAQs' }
+    - { key: body, type: content, label: 'Body Content' }
+
+- slug: gallery
+  label: Gallery
+  path: /gallery
+  permalink: /gallery
+  file: src/data/pages/gallery.yaml
+  sections:
+    - { key: hero, type: hero, label: 'Top Hero' }
+    - { key: albums, type: features, label: 'Photo Albums' }
+    - { key: cta, type: cta, label: 'Bottom CTA' }
+
+- slug: guides
+  label: Guides
+  path: /guides
+  permalink: /guides
+  file: src/data/pages/guides.yaml
+  sections:
+    - { key: hero, type: hero, label: 'Page Hero' }
+    - { key: size_guide, type: content, label: 'Size Guide Section' }
+
+- slug: inflatable-vs-hardboard
+  label: Inflatable vs Hardboard
+  path: /compare/inflatable-vs-hardboard
+  permalink: /compare/inflatable-vs-hardboard
+  file: src/data/pages/inflatable-vs-hardboard.yaml
+  sections:
+    - { key: label, type: content, label: 'Page Label' }
+    - { key: headline, type: content, label: 'Headline' }
+    - { key: subtitle, type: content, label: 'Subtitle' }
+    - { key: seo, type: content, label: 'SEO Metadata' }
+    - { key: faqs, type: faqs, label: 'FAQs' }
+    - { key: body, type: content, label: 'Body Content' }
+
+- slug: journal
+  label: Journal
+  path: /journal
+  permalink: /journal
+  file: src/data/pages/journal.yaml
+  sections:
+    - { key: hero, type: hero, label: 'Top Hero' }
+    - { key: latest, type: blog_latest, label: 'Latest Journal Posts' }
+    - { key: social_section, type: content, label: 'Social Section' }
+
+- slug: knowledge
+  label: Knowledge
+  path: /knowledge
+  permalink: /knowledge
+  file: src/data/pages/knowledge.yaml
+  sections:
+    - { key: hero, type: hero, label: 'Top Hero' }
+    - { key: clusters, type: features, label: 'Knowledge Clusters' }
+    - { key: featured_guides, type: content, label: 'Featured Guides' }
+    - { key: cta, type: cta, label: 'Bottom CTA' }
+
+- slug: learn
+  label: Learn
+  path: /learn
+  permalink: /learn
+  file: src/data/pages/learn.yaml
+  sections:
+    - { key: hero, type: hero, label: 'Top Hero' }
+    - { key: featured, type: content, label: 'Featured Content' }
+    - { key: categories, type: features, label: 'Learning Categories' }
+    - { key: cta, type: cta, label: 'Bottom CTA' }
+
+- slug: lifestyle
+  label: Lifestyle
+  path: /lifestyle
+  permalink: /lifestyle
+  file: src/data/pages/lifestyle.yaml
+  sections:
+    - { key: hero, type: hero, label: 'Top Hero' }
+    - { key: values, type: features, label: 'Brand Values' }
+    - { key: ethos_section, type: content, label: 'Ethos Section' }
+    - { key: community_section, type: content, label: 'Community Section' }
+    - { key: cta_section, type: cta, label: 'Bottom CTA' }
+
+- slug: maritime-safety-defense
+  label: Maritime Safety & Defense
+  path: /use-cases/maritime-safety-defense
+  permalink: /use-cases/maritime-safety-defense
+  file: src/data/pages/maritime-safety-defense.yaml
+  sections:
+    - { key: label, type: content, label: 'Page Label' }
+    - { key: headline, type: content, label: 'Headline' }
+    - { key: subtitle, type: content, label: 'Subtitle' }
+    - { key: seo, type: content, label: 'SEO Metadata' }
+    - { key: faqs, type: faqs, label: 'FAQs' }
+    - { key: body, type: content, label: 'Body Content' }
+
+- slug: media
+  label: Media
+  path: /media
+  permalink: /media
+  file: src/data/pages/media.yaml
+  sections:
+    - { key: hero, type: hero, label: 'Top Hero' }
+    - { key: sections, type: features, label: 'Media Sections' }
+    - { key: request_access, type: content, label: 'Request Access' }
+    - { key: cta, type: cta, label: 'Bottom CTA' }
+
+- slug: news
+  label: News
+  path: /news
+  permalink: /news
+  file: src/data/pages/news.yaml
+  sections:
+    - { key: hero_text, type: hero_text, label: 'Page Header (title, subtitle, tagline)' }
+
+- slug: partners
+  label: Partners
+  path: /partners
+  permalink: /partners
+  file: src/data/pages/partners.yaml
+  sections:
+    - { key: hero, type: hero, label: 'Top Hero' }
+    - { key: content_programs, type: content, label: 'Programs Content' }
+    - { key: content_benefits, type: content, label: 'Benefits Content' }
+    - { key: content_process, type: content, label: 'Process Content' }
+    - { key: cta, type: cta, label: 'Bottom CTA' }
+
+- slug: quality
+  label: Quality
+  path: /quality-testing
+  permalink: /quality-testing
+  file: src/data/pages/quality.yaml
+  sections:
+    - { key: hero, type: hero, label: 'Top Hero' }
+    - { key: stats, type: stats, label: 'Statistics' }
+    - { key: tests, type: features, label: 'Tests & Procedures' }
+    - { key: testing_section, type: content, label: 'Testing Section' }
+    - { key: commitment, type: content, label: 'Commitment' }
+
+- slug: randdcenter
+  label: R&D Center
+  path: /randdcenter
+  permalink: /randdcenter
+  file: src/data/pages/randdcenter.yaml
+  sections:
+    - { key: hero, type: hero, label: 'Top Hero' }
+    - { key: intro, type: content, label: 'Introduction' }
+    - { key: mission, type: content, label: 'Mission' }
+    - { key: pillars, type: features, label: 'Pillars' }
+    - { key: capabilities, type: features, label: 'Capabilities' }
+    - { key: rd_numbers, type: stats, label: 'R&D Numbers' }
+    - { key: rd_services, type: features, label: 'R&D Services' }
+    - { key: vision, type: content, label: 'Vision' }
+    - { key: labs_section, type: features, label: 'Labs Section' }
+
+- slug: request-quotation
+  label: Request Quotation
+  path: /request-quotation
+  permalink: /request-quotation
+  file: src/data/pages/request-quotation.yaml
+  sections:
+    - { key: hero_text, type: hero_text, label: 'Top HeroText' }
+    - { key: content_form, type: contact, label: 'Quotation Form' }
+    - { key: cta, type: cta, label: 'Bottom CTA' }
+
+- slug: resources
+  label: Resources
+  path: /resources
+  permalink: /resources
+  file: src/data/pages/resources.yaml
+  sections:
+    - { key: hero_text, type: hero_text, label: 'Top HeroText' }
+    - { key: faqs, type: faqs, label: 'FAQs' }
+    - { key: cta, type: cta, label: 'Bottom CTA' }
+
+- slug: safety
+  label: Safety
+  path: /safety
+  permalink: /safety
+  file: src/data/pages/safety.yaml
+  sections:
+    - { key: hero, type: hero, label: 'Top Hero' }
+    - { key: certifications, type: features, label: 'Certifications' }
+    - { key: related, type: content, label: 'Related Content' }
+
+- slug: search-and-rescue
+  label: Search & Rescue
+  path: /use-cases/search-and-rescue
+  permalink: /use-cases/search-and-rescue
+  file: src/data/pages/search-and-rescue.yaml
+  sections:
+    - { key: label, type: content, label: 'Page Label' }
+    - { key: headline, type: content, label: 'Headline' }
+    - { key: subtitle, type: content, label: 'Subtitle' }
+    - { key: seo, type: content, label: 'SEO Metadata' }
+    - { key: faqs, type: faqs, label: 'FAQs' }
+    - { key: body, type: content, label: 'Body Content' }
+
+- slug: size-guide
+  label: Size Guide
+  path: /size-guide
+  permalink: /size-guide
+  file: src/data/pages/size-guide.yaml
+  sections:
+    - { key: hero, type: hero, label: 'Top Hero' }
+    - { key: categories, type: features, label: 'Categories' }
+    - { key: table, type: content, label: 'Size Table' }
+    - { key: how_to_choose, type: content, label: 'How to Choose' }
+
+- slug: solutions
+  label: Solutions
+  path: /solutions
+  permalink: /solutions
+  file: src/data/pages/solutions.yaml
+  sections:
+    - { key: hero, type: hero, label: 'Top Hero' }
+    - { key: stats, type: stats, label: 'Statistics' }
+    - { key: cta, type: cta, label: 'Bottom CTA' }
+
+- slug: solutions-diving-center-boats
+  label: Solutions - Diving Center
+  path: /solutions/diving-center-boats
+  permalink: /solutions/diving-center-boats
+  file: src/data/pages/solutions-diving-center-boats.yaml
+  sections:
+    - { key: hero, type: hero, label: 'Top Hero' }
+    - { key: stats, type: stats, label: 'Statistics' }
+    - { key: content_challenge, type: content, label: 'Challenge' }
+    - { key: content_solution, type: content, label: 'Solution' }
+    - { key: content_models, type: content, label: 'Models' }
+    - { key: cta, type: cta, label: 'Bottom CTA' }
+
+- slug: solutions-fishing-boat-solutions
+  label: Solutions - Fishing Boats
+  path: /solutions/fishing-boat-solutions
+  permalink: /solutions/fishing-boat-solutions
+  file: src/data/pages/solutions-fishing-boat-solutions.yaml
+  sections:
+    - { key: hero, type: hero, label: 'Top Hero' }
+    - { key: stats, type: stats, label: 'Statistics' }
+    - { key: content_challenge, type: content, label: 'Challenge' }
+    - { key: content_solution, type: content, label: 'Solution' }
+    - { key: cta, type: cta, label: 'Bottom CTA' }
+
+- slug: solutions-marine-tourism-equipment
+  label: Solutions - Marine Tourism
+  path: /solutions/marine-tourism-equipment
+  permalink: /solutions/marine-tourism-equipment
+  file: src/data/pages/solutions-marine-tourism-equipment.yaml
+  sections:
+    - { key: hero, type: hero, label: 'Top Hero' }
+    - { key: stats, type: stats, label: 'Statistics' }
+    - { key: content_challenge, type: content, label: 'Challenge' }
+    - { key: content_solution, type: content, label: 'Solution' }
+    - { key: cta, type: cta, label: 'Bottom CTA' }
+
+- slug: solutions-rescue-watercraft
+  label: Solutions - Rescue Watercraft
+  path: /solutions/rescue-watercraft
+  permalink: /solutions/rescue-watercraft
+  file: src/data/pages/solutions-rescue-watercraft.yaml
+  sections:
+    - { key: hero, type: hero, label: 'Top Hero' }
+    - { key: stats, type: stats, label: 'Statistics' }
+    - { key: content_challenge, type: content, label: 'Challenge' }
+    - { key: content_solution, type: content, label: 'Solution' }
+    - { key: cta, type: cta, label: 'Bottom CTA' }
+
+- slug: solutions-yacht-tender-solutions
+  label: Solutions - Yacht Tenders
+  path: /solutions/yacht-tender-solutions
+  permalink: /solutions/yacht-tender-solutions
+  file: src/data/pages/solutions-yacht-tender-solutions.yaml
+  sections:
+    - { key: hero, type: hero, label: 'Top Hero' }
+    - { key: stats, type: stats, label: 'Statistics' }
+    - { key: content_challenge, type: content, label: 'Challenge' }
+    - { key: content_solution, type: content, label: 'Solution' }
+    - { key: cta, type: cta, label: 'Bottom CTA' }
+
+- slug: technology
+  label: Technology
+  path: /technology
+  permalink: /technology
+  file: src/data/pages/technology.yaml
+  sections:
+    - { key: hero, type: hero, label: 'Top Hero' }
+    - { key: sections, type: features, label: 'Technology Sections' }
+    - { key: related, type: content, label: 'Related Content' }
+
+- slug: tourism-recreation
+  label: Tourism & Recreation
+  path: /use-cases/tourism-recreation
+  permalink: /use-cases/tourism-recreation
+  file: src/data/pages/tourism-recreation.yaml
+  sections:
+    - { key: label, type: content, label: 'Page Label' }
+    - { key: headline, type: content, label: 'Headline' }
+    - { key: subtitle, type: content, label: 'Subtitle' }
+    - { key: seo, type: content, label: 'SEO Metadata' }
+    - { key: faqs, type: faqs, label: 'FAQs' }
+    - { key: body, type: content, label: 'Body Content' }
+
+- slug: trust
+  label: Trust
+  path: /trust
+  permalink: /trust
+  file: src/data/pages/trust.yaml
+  sections:
+    - { key: hero, type: hero, label: 'Top Hero' }
+    - { key: stats, type: stats, label: 'Statistics' }
+    - { key: testimonials, type: testimonials, label: 'Testimonials' }
+    - { key: faqs_rib, type: faqs, label: 'FAQs - RIB' }
+    - { key: faqs_inflatable, type: faqs, label: 'FAQs - Inflatable' }
+    - { key: faqs_sup, type: faqs, label: 'FAQs - SUP' }
+    - { key: cta, type: cta, label: 'Bottom CTA' }
+
+- slug: warranty
+  label: Warranty
+  path: /warranty
+  permalink: /warranty
+  file: src/data/pages/warranty.yaml
+  sections:
+    - { key: label, type: content, label: 'Page Label' }
+    - { key: headline, type: content, label: 'Headline' }
+    - { key: subtitle, type: content, label: 'Subtitle' }
+    - { key: seo, type: content, label: 'SEO Metadata' }
+    - { key: body, type: content, label: 'Body Content' }
+
+- slug: what-is-sup
+  label: What is SUP
+  path: /guides/what-is-sup
+  permalink: /guides/what-is-sup
+  file: src/data/pages/what-is-sup.yaml
+  sections:
+    - { key: label, type: content, label: 'Page Label' }
+    - { key: headline, type: content, label: 'Headline' }
+    - { key: subtitle, type: content, label: 'Subtitle' }
+    - { key: seo, type: content, label: 'SEO Metadata' }
+    - { key: body, type: content, label: 'Body Content' }

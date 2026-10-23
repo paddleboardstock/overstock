@@ -1,0 +1,178 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'id' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">&larr; Kembali ke Pusat R&D</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Lab 03</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Pusat Pengelasan RF</h1>
+      <p class="mt-3 text-lg text-muted">Teknologi perekat dielektrik untuk las yang tahan tekanan</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-jungle-mandala-1.webp"
+        alt="Aquafarer proses pengikatan dielektrik pengelasan RF"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Ilmu di balik jahitan</h2>
+  <p>
+    Perahu karet hanya seandalan sambungannya. Satu pengelasan yang lemah dapat melemahkan seluruh ruang — dan di laut,
+    kegagalan ruangan bukanlah ketidaknyamanan; itu adalah bahaya keselamatan. Pada{SITE.name}, kami telah berinvestasi
+    dalam Pusat Pengelasan Frekuensi Radio (RF) khusus yang menggabungkan press pengelasan dielektrik kelas industri
+    dengan kontrol proses yang ketat dan pengujian pasca-pengelasan. Setiap jahitan yang kami hasilkan didokumentasikan,
+    dapat ditelusuri, dan bersertifikat untuk memenuhi atau melampaui persyaratan standar internasional untuk kerajinan
+    tiup.
+  </p>
+  <p>
+    Pengelasan RF menggunakan energi elektromagnetik frekuensi tinggi (biasanya 27,12 MHz) untuk menggerakkan molekul
+    polar dalam kain berlapis PVC atau Hypalon, menghasilkan panas secara tepat pada antarmuka material. Berbeda dengan
+    pengelasan udara panas atau pengelasan dengan baji panas, pengelasan RF menciptakan ikatan molekuler sejati — kedua
+    lapisan kain menyatu menjadi satu material homogen di zona las, menghasilkan sambungan yang sekuat material asalnya.
+  </p>
+
+  <h2>Peralatan pengelasan dan pengendalian proses</h2>
+  <p>Pusat pengelasan kami dilengkapi dengan:</p>
+  <table>
+    <thead><tr><th>Mesin</th><th>Daya / Kapasitas</th><th>Aplikasi</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Press RF dielektrik 1</td><td>15 kW, platen 2000 × 600 mm</td><td
+          >Jahitan longitudinal utama, sambungan transom-ke-tabung</td
+        ></tr
+      >
+      <tr
+        ><td>Press RF dielektrik 2</td><td>10 kW, platen 1500 × 500 mm</td><td
+          >Las baffle, sambungan kerucut, tambalan katup</td
+        ></tr
+      >
+      <tr
+        ><td>Pengelas RF terkontrol CNC</td><td>8 kW, XY table 2500 × 1200 mm</td><td
+          >Jahitan melengkung, emboss logo/panel, tambalan presisi</td
+        ></tr
+      >
+      <tr
+        ><td>Pengelas otomatis hotwedge</td><td>Suhu variabel, 1,2 m/menit maks</td><td
+          >Metode cadangan untuk bahan Hypalon/CSM</td
+        ></tr
+      >
+    </tbody>
+  </table>
+  <p>
+    Setiap press RF dilengkapi dengan pemantauan temperatur dan tekanan loop tertutup. Parameter las — daya, waktu
+    tekan, waktu pendinginan, tekanan elektroda — diprogram sesuai jenis material dan dicatat dalam Sistem Eksekusi
+    Manufaktur (MES) kami untuk pelacakan penuh.
+  </p>
+
+  <h2>Pengujian kualitas las — setiap jahitan, setiap perahu</h2>
+  <p>Integritas las diverifikasi melalui protokol empat pengujian wajib:</p>
+  <ol>
+    <li>
+      <strong>Inspeksi visual</strong>— 100% jahitan diperiksa secara visual untuk kebakaran, kesalahan penyusunan,
+      kontaminasi, atau fusi yang tidak lengkap. Ambang tingkat penolakan: 0,5% dari meter linier.
+    </li>
+    <li>
+      <strong>Uji tarik ()</strong>— Sebuah strip selebar 25 mm dipotong dari contoh uji yang dilas dengan setiap batch
+      produksi. Gaya peel minimum: 120 N/25 mm untuk PVC 1100 dtex.
+    </li>
+    <li>
+      <strong>Uji retensi udara</strong>— Setiap kamar yang selesai ditekan hingga 1,25 × tekanan kerja dan ditahan
+      selama 24-48 jam. Penurunan tekanan tidak boleh melebihi 2 %.
+    </li>
+    <li>
+      <strong>Uji siklus termal</strong>— Contoh uji diputar dari -20 °C hingga +60 °C selama 50 siklus, lalu diuji peel
+      lagi. Kehilangan kekuatan yang dapat diterima: 10 %.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Perbandingan Kekuatan Peel — RF vs Pengelasan Panas (PVC 1100 dtex)
+    </p>
+    <div class="space-y-3">
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">Las RF</span><div
+          class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded"
+        >
+          <div class="h-full bg-blue-600 rounded" style="width:92%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">184 N</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">Las Udara Panas</span><div
+          class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded"
+        >
+          <div class="h-full bg-gray-400 rounded" style="width:65%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">130 N</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">menit</span><div class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded">
+          <div class="h-full bg-green-500 rounded" style="width:48%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">96 N</span>
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      Pengelasan RF secara konsisten mencapai 90-95 % dari kekuatan material induk, jauh di atas minimum.
+    </p>
+  </div>
+
+  <h2>Keahlian profesional</h2>
+  <p>
+    Tim pengelasan kami dipimpin oleh seorang insinyur proses senior dengan pengalaman 11 tahun dalam pengelasan
+    dielektrik pada tekstil berlapis. Setiap operator menyelesaikan program sertifikasi internal selama 6 bulan sebelum
+    diizinkan bekerja pada sambungan produksi. Sertifikasi ulang diperlukan setiap tahun, termasuk uji las praktis yang
+    dievaluasi berdasarkan standar internal Grade-A kami (kekuatan peel ≥ 160 N/25 mm).
+  </p>
+
+  <h2>Solusi pengelasan khusus untuk kebutuhan unik</h2>
+  <p>
+    Kami memahami bahwa satu spesifikasi pengelasan tidak cocok untuk semua aplikasi. Pusat Pengelasan RF kami secara
+    rutin mengembangkan konfigurasi sambungan khusus untuk klien dengan kebutuhan spesial:
+  </p>
+  <ul>
+    <li>
+      <strong>Tambalan penguatan multi-lapis</strong>— untuk area yang banyak aus seperti rubbing strakes dan bow cones,
+      kami mengembangkan las RF multi-lap yang mengintegrasikan lapisan luar tahan aus tanpa mengorbankan fleksibilitas.
+    </li>
+    <li>
+      <strong>Sambungan konduktif atau RFopaque</strong>— untuk kapal militer atau pengawasan yang membutuhkan pelindung
+      elektromagnetik, kami melas lapisan jala konduktif di dalam tumpukan sambungan.
+    </li>
+    <li>
+      <strong>Pengelasan panel warna ganda</strong>— panel kain dua warna (misal lambung oranye + bagian atas abu-abu)
+      dilas dengan overlap tersembunyi untuk mempertahankan estetika merek tanpa garis sambungan yang terlihat.
+    </li>
+  </ul>
+
+  <h2>Komitmen kami kepada Anda</h2>
+  <p>
+    Setiap perahu yang kami kirim dilengkapi dengan jaminan kualitas las kami: jika ada sambungan yang gagal dalam
+    penggunaan normal selama periode garansi, kami memperbaiki atau mengganti kamar yang terkena tanpa biaya, dan
+    dilakukan investigasi sebab-akarnya untuk mencegah terulangnya masalah. Ini bukan sekadar garansi — ini adalah
+    komitmen untuk perbaikan berkelanjutan yang didorong oleh data operasional nyata.
+  </p>
+  <p>
+    Ketika Anda memilih{SITE.name}, Anda memilih sambungan yang dirancang, diuji, dan didokumentasikan — bukan hanya
+    dilas. Itulah perbedaan antara perahu yang mengapung dan perahu yang berkinerja baik.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Diskusikan kebutuhan pengelasan Anda</h2>
+    <p class="mt-2 text-sm text-muted">Spesifikasi sambungan khusus, kompatibilitas material, atau validasi proses.</p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Hubungi tim pengelasan kami</a
+    >
+  </div>
+</section>

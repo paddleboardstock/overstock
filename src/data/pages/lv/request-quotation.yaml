@@ -1,0 +1,306 @@
+hero_text:
+  tagline: Iegūt piedāvājumu
+  title: Pieprasīt cenu<br />jūsu projektam
+  subtitle: Pastāstiet mums par savām prasībām, un mūsu komanda sniegs detalizētu piedāvājumu 2 darba dienu laikā.
+steps2_process:
+  title: Kā tas darbojas
+  subtitle: Četri vienkārši soļi no pieprasījuma līdz piedāvājumam.
+  items:
+    - title: '1. solis: Iesniedziet savas prasības'
+      description: Aizpildiet zemāk esošo veidlapu ar sava produkta veidu, daudzumu un specifikācijām. Jo vairāk detaļu sniegsiet, jo precīzāks būs jūsu piedāvājums.
+      icon: tabler:file-text
+    - title: '2. solis: Mēs pārskatām un sniedzam ieteikumus'
+      description: Mūsu inženiertehniskā komanda pārskata jūsu prasības un var sazināties ar jums skaidrojumu saņemšanai. Mēs sniedzam ieteikumus par produkta konfigurāciju un iespējām.
+      icon: tabler:users
+    - title: '3. solis: Saņemiet savu piedāvājumu'
+      description: Jūs saņemat detalizētu piedāvājumu, ieskaitot vienības cenu, MOQ, izpildes termiņu, maksājuma nosacījumus un piegādes iespējas. Parasti 48 stundu laikā.
+      icon: tabler:currency-dollar
+    - title: '4. solis: Paraugs un ražošana'
+      description: Pēc piedāvājuma pieņemšanas mēs turpinām ar parauga ražošanu (ja piemērojams) vai tieši masu ražošanu. Regulāras atjaunināšanas procesa laikā.
+      icon: tabler:building-factory
+content_form:
+  tagline: Piedāvājuma veidlapa
+  title: Pastāstiet mums par savu projektu
+  subtitle: Visa laukā ar * ir obligāta.
+  fields:
+    - name: Produkta kategorija
+      type: select
+      options:
+        - RIB Laiva
+        - Piepūšamā laiva
+        - SUP Dēlis
+        - Piepūšamais kajaks
+        - Glābšanas veste
+        - Jūras aksesuārs
+        - Pielāgots OEM/ODM
+    - name: Pielietojums
+      type: select
+      options:
+        - Niršanas centrs
+        - Makšķerēšana
+        - Jūras tūrisms / kūrorts
+        - Meklēšana un glābšana
+        - Jauthtenderis
+        - Komercs darbalaiva
+        - Valsts / Militārais
+        - OEM / Privāts zīmols
+        - Personiskais / Recreatīvais
+        - Cits
+    - name: Daudzums
+      type: text
+      placeholder: piemēram, 50 vienības
+    - name: Mērķa tirgus
+      type: text
+      placeholder: piemēram, Eiropa, Ziemeļamerika, Tuvie Austrumi
+    - name: Piegādes valsts
+      type: text
+      placeholder: piemēram, Itālija, AAE, ASV, Austrālija
+    - name: Materiālu preference
+      type: select
+      options:
+        - Bez preferencēm
+        - Jūras klases PVC (1100 dtex)
+        - Premium Hypalon / CSM
+        - Stikla šķiedras korpuss
+        - Alumīnija korpuss
+    - name: Dzinēja prasības
+      type: text
+      placeholder: piemēram, 60 HP ārbordā, bez dzinēja, dubultais 115 HP
+    - name: Nepieciešama pielāgošana
+      type: text
+      placeholder: piemēram, pielāgotas krāsas, zīmols/logotips, iepakojums, īpašas stiprinājumu detaļas
+    - name: Laika grafiks
+      type: text
+      placeholder: piemēram, piegāde 90 dienu laikā
+    - name: Papildu prasības
+      type: textarea
+      placeholder: Aprakstiet savu pielietojumu, tehniskās specifikācijas vai īpašas prasības — iekļaujiet atsauču rasējumus, specifikācijas vai saites, ja pieejamas
+    - name: Specifikācijas augšupielāde
+      type: file
+      placeholder: Augšupielādējiet savu specifikācijas lapu, rasējumu vai atsauces dokumentu (PDF, DWG, DXF)
+    - name: Logotipa / mākslas darba augšupielāde
+      type: file
+      placeholder: Augšupielādējiet savu logotipu vai mākslas darbu pielāgotam zīmolam (AI, EPS, PNG)
+content_rfq_types:
+  tagline: 3-līmeņu RFQ sistēma
+  title: Izvēlieties pareizo<br />Pakalpojuma pieprasījuma līmeni
+  subtitle: Dažādiem projektiem nepieciešami dažādi detaļas līmeņi. Izvēlieties veidlapu, kas atbilst jūsu pirkuma posmam.
+  items:
+    - title: Ātra aptauja
+      description: 5–6 lauki, 30 sekundes. Sākotnējai saziņai, vispārīgiem jautājumiem vai resursu lejupielādes turpinājumiem. Mēs atbildam 24 stundu laikā ar pamata informāciju un nākamajiem soļiem.
+      icon: tabler:bolt
+    - title: Standarta RFQ
+      description: 8–10 lauki, 2 minūtes. Konkrētu produktu cenu piedāvājumiem, iekļaujot modeļu izvēli, daudzumu un piegādes prasības. Detalizētu piedāvājumu saņemat 48 stundu laikā.
+      icon: tabler:file-text
+    - title: Projektu RFQ
+      description: 10–14 lauki, 5 minūtes. Par RIB, kūrorta floti, glābšanas vai valsts projektiem, kuriem nepieciešama pielāgota konfigurācija, atbilstības dokumentācija un vairāku gadu piegāžu plānošana. Tiek piešķirts dedzēts projektu vadītājs.
+      icon: tabler:clipboard-list
+form_quick:
+  title: Ātra aptauja
+  subtitle: Ātra saziņa vispārīgiem jautājumiem un sākotnējiem informācijas pieprasījumiem.
+  fields:
+    - name: fullName
+      label: Pilns vārds
+      type: text
+      required: true
+      placeholder: Jūsu pilns vārds
+    - name: businessEmail
+      label: Darba e-pasts
+      type: email
+      required: true
+      placeholder: you@company.com
+    - name: companyName
+      label: Uzņēmuma nosaukums
+      type: text
+      required: true
+      placeholder: Jūsu uzņēmums
+    - name: buyerType
+      label: Es esmu...
+      type: select
+      required: true
+      options:
+        - Izplatītājs / Importētājs
+        - Zīmola īpašnieks / Privātais zīmols
+        - Kūrorts / Ūdens centrs
+        - Nomas operators
+        - Valsts / Glābšanas aģentūra
+        - Dziļūdens / Zvejas operators
+        - Jūras inženieris / pārveidotājs
+        - Cits
+    - name: productInterest
+      label: Interese par produktu
+      type: multiselect
+      required: true
+      options:
+        - RIB Laivas
+        - Piepūšamās laivas
+        - SUP Dēļi
+        - Drošības aprīkojums
+        - Piederumi
+        - OEM/ODM Pielāgots
+    - name: message
+      label: Kas jums nepieciešams?
+      type: textarea
+      required: false
+      placeholder: Īss jūsu prasību apraksts...
+form_standard:
+  title: Standarta RFQ
+  subtitle: Detalizēts piedāvājuma pieprasījums konkrētiem produktiem un daudzumiem.
+  fields:
+    - name: fullName
+      label: Pilns vārds
+      type: text
+      required: true
+    - name: businessEmail
+      label: Darba e-pasts
+      type: email
+      required: true
+    - name: companyName
+      label: Uzņēmuma nosaukums
+      type: text
+      required: true
+    - name: buyerType
+      label: Pircēja tips
+      type: select
+      required: true
+    - name: produktaModelis
+      label: Produkta modelis / tips
+      type: text
+      required: true
+      placeholder: piem., AF580 RIB, AF380 Piepūšamais
+    - name: quantity
+      label: Paredzamais daudzums
+      type: text
+      required: true
+      placeholder: piem., 10-20 vienības
+    - name: tirgusMērķis
+      label: Mērķa tirgus / reģions
+      type: text
+      required: true
+      placeholder: piem., ES, Ziemeļamerika, Tuvie Austrumi
+    - name: piegādesLaiks
+      label: Vēlamā piegāde
+      type: select
+      required: true
+      options:
+        - 30 dienu laikā
+        - 30-60 dienu laikā
+        - 60-90 dienu laikā
+        - Plānošana uz priekšu (90+ dienas)
+        - Tikai izpēte
+    - name: prasībasAtbilstībai
+      label: Atbilstības prasības
+      type: multiselect
+      required: false
+      options:
+        - CE / RCD 2013/53/ES
+        - UKCA
+        - USCG
+        - ISO 9001
+        - BSCI
+        - REACH
+        - Nav / Neesmu pārliecināts
+    - name: message
+      label: Papildu informācija
+      type: textarea
+      required: false
+form_project:
+  title: Projektu RFQ
+  subtitle: Visaptverošs projekta pieprasījums flotei, pielāgotai vai valdības iepirkšanai.
+  fields:
+    - name: fullName
+      label: Pilns vārds
+      type: text
+      required: true
+    - name: businessEmail
+      label: Darba e-pasts
+      type: email
+      required: true
+    - name: companyName
+      label: Uzņēmuma nosaukums
+      type: text
+      required: true
+    - name: buyerType
+      label: Pircēja tips
+      type: select
+      required: true
+    - name: projectType
+      label: Projekta veids
+      type: select
+      required: true
+      options:
+        - Atpūtas / Viesnīcas flote
+        - Nomājamās flotes
+        - Glābšanas / Patruļas flote
+        - Dziļūdens centra flote
+        - Valdības iepirkums
+        - Privātais zīmols / OEM
+        - Dīlera noliktavas pasūtījums
+        - Cits
+    - name: boatTypes
+      label: Nepieciešamie laivu veidi
+      type: multiselect
+      required: true
+      options:
+        - RIB Laivas
+        - Piepūšamās laivas / laiviņas
+        - SUP Dēļi
+        - Kajaki
+        - Drošības aprīkojums
+    - name: fleetSize
+      label: Flotes lielums / daudzuma diapazons
+      type: text
+      required: true
+      placeholder: piem., 20-50 vienības 12 mēnešu laikā
+    - name: customRequirements
+      label: Pielāgotas konfigurācijas nepieciešamības
+      type: textarea
+      required: false
+      placeholder: Korpusa izmērs, cauruļu materiāls, klāja izkārtojums, zīmola prasības...
+    - name: prasībasAtbilstībai
+      label: Atbilstības un sertifikācijas prasības
+      type: multiselect
+      required: true
+      options:
+        - CE / RCD 2013/53/ES
+        - UKCA
+        - USCG III/V tips
+        - ISO 9001
+        - BSCI
+        - REACH / RoHS
+        - Vietējā tirgus sertifikācija
+    - name: tirgusMērķis
+      label: Mērķa tirgus
+      type: text
+      required: true
+    - name: budžetaDiapazons
+      label: Budžeta Diapazons
+      type: select
+      required: false
+      options:
+        - Mazāk par $10,000
+        - $10,000 - $50,000
+        - $50,000 - $200,000
+        - $200,000+
+        - Vēlos neizpaust
+    - name: piegādesLaiks
+      label: Projekta Laika Grafiks
+      type: select
+      required: true
+      options:
+        - Steidzami (30 dienu laikā)
+        - Standarta (30-60 dienas)
+        - Plānots (60-90 dienas)
+        - Nākotnes plānošana (vairāk nekā 90 dienas)
+    - name: message
+      label: Projekta Detaļas un Prasības
+      type: textarea
+      required: false
+      placeholder: Aprakstiet savu projektu, lietotni un jebkādas specifiskas prasības...
+cta:
+  title: Vēlaties pārrunāt pa e-pastu?
+  subtitle: Nosūtiet savu pieprasījumu tieši mūsu pārdošanas komandai, un mēs atbildēsim 24 stundu laikā.
+  actions:
+    - variant: primary
+      text: Rakstiet mums tieši e-pastu
+      href: /contact

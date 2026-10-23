@@ -1,0 +1,172 @@
+hero:
+  tagline: Aquafarer アカデミー
+  title: ラーニングセンター
+  subtitle: あらゆるスキルレベルのためのガイドとチュートリアル — SUP の基礎から高度な救助技術まで
+
+categories:
+  - level: 初級
+    color: from-green-500 to-emerald-600
+    badge: bg-green-100 text-green-700
+    guides:
+      - title: SUP の基礎
+        desc: スタンドアップパドルボーディングの基礎を学ぶ — スタンス、ストローク技術、バランス。
+        slug: beginner-sup-guide
+      - title: パドル技術
+        desc: フォワードストローク、スイープストローク、ドローストローク、ローブレース — 必須のパドル操作を習得。
+        slug: sup-paddle-guide
+      - title: 安全第一
+        desc: 天候確認、PFD の使用、リーシュルール、セルフレスキューを含む必須の安全プラクティス。
+        slug: sup-safety-guide
+  - level: 中級
+    color: from-blue-500 to-indigo-600
+    badge: bg-blue-100 text-blue-700
+    guides:
+      - title: ツーリングの要点
+        desc: 数時間のパドリングの計画 — ナビゲーション、水分補給、ペース配分、風予報の読み方。
+        slug: touring-sup-guide
+      - title: 天候の読み方
+        desc: 海洋予報を解釈し、雲のパターンを見分け、水上での風の影響を理解します。
+        slug: weather-planning-water-sports
+      - title: ナビゲーションの基礎
+        desc: 海図の読み方、コンパスの使用、GPS ウェイポイント、沿岸パドリングのためのルート計画。
+        slug: sup-navigation-guide
+      - title: 潮汐の知識
+        desc: 潮の周期、潮流、そしてそれらが進出タイミングとルートに与える影響を理解します。
+        slug: understanding-tides
+  - level: 上級
+    color: from-purple-500 to-violet-600
+    badge: bg-purple-100 text-purple-700
+    guides:
+      - title: 複数日トリップの計画
+        desc: 遠征のロジスティクス — 器材選定、食料計画、安全プロトコル、緊急連絡先。
+        slug: sup-travel-guide
+      - title: 救助技術
+        desc: セルフレスキュー、T レスキュー、カヤックのためのエスキモーレスキュー、外洋での曳航プロトコル。
+        slug: sup-self-rescue
+      - title: ナイトパドリング
+        desc: 暗闇でのナビゲーション — 照明要件、ルートの記憶、グループ通信、危険への意識。
+        slug: sup-navigation-guide
+  - level: メンテナンス
+    color: from-amber-500 to-orange-600
+    badge: bg-amber-100 text-amber-700
+    guides:
+      - title: 清掃・ケア
+        desc: 真水での洗浄、UV 保護、カビ防止、セッション後の適切な乾燥技術。
+        slug: inflatable-sup-maintenance
+      - title: 保管ガイド
+        desc: インフレータブルボードおよびボートの保管のベストプラクティス — 空気抜き、折りたたみ、温度管理、保管寿命。
+        slug: inflatable-sup-storage
+      - title: 修理の基礎
+        desc: PVC 修理キットとパッチ技術で、小さな穴、シーム漏れ、バルブの問題を修正。
+        slug: inflatable-sup-repair
+      - title: バルブメンテナンス
+        desc: バルブの種類（Halkey-Roberts、Boston、Leafield）を識別し、ゴミを清掃し、不良ステムを交換します。
+        slug: inflatable-sup-repair
+
+knowledge_center_tagline: 'ナレッジセンター'
+knowledge_center_title: '海洋機器・業界ガイド'
+knowledge_center_subtitle: '海洋プロフェッショナル、フリートオペレーター、ウォータースポーツ愛好家のための専門知識と購入ガイド。'
+
+knowledge_sections:
+  - title: 'RIB ボートの知識'
+    tagline: 'リジッドインフレータブルボートガイド'
+    desc: 'RIB ボートのすべて — 船体設計、材料、エンジン選定、メンテナンス、商用・レジャー用途の購入アドバイス。'
+    guides:
+      - title: '適切な RIB ボートの選び方'
+        desc: 'RIB 選択の完全ガイド — サイズ、エンジン出力、チューブ材料、船体タイプ、使用目的。'
+        href: '/v2/inflatable-boat-buying-guide'
+      - title: 'RIB とインフレータブルボートの比較'
+        desc: 'リジッドインフレータブルボートと従来のインフレータブルディンギーの比較 — 船体設計、性能、耐久性、積載能力。'
+        href: '/compare/rib-vs-dinghy'
+      - title: '商用 RIB とレジャー用 RIB の比較'
+        desc: '商用グレードとレジャー用 RIB ボート — 構造基準、材料、寿命、コスト、認証。'
+        href: '/compare/commercial-vs-recreational-rib'
+      - title: 'アルミニウムとグラスファイバー船体の比較'
+        desc: 'RIB ボートのアルミニウム船体とグラスファイバー船体を、重量、コスト、耐久性、耐食性で比較。'
+        href: '/compare/aluminum-vs-fiberglass'
+  - title: 'インフレータブルボートガイド'
+    tagline: 'インフレータブルウォータークラフトの知識'
+    desc: 'インフレータブルボートの包括的なガイド — PVC とハイパロンの比較、構造方法、安全基準、メンテナンスのベストプラクティス。'
+    guides:
+      - title: 'PVC とハイパロンの材料ガイド'
+        desc: 'インフレータブルボート構造における PVC とハイパロン CSM の決定的な比較。'
+        href: '/compare/pvc-vs-hypalon'
+      - title: 'インフレータブルボートの製造方法'
+        desc: '製造プロセス — 材料裁断、HF 溶接、シーム構造、圧力テスト、品質管理。'
+        href: '/learn/inflatable-technology'
+      - title: 'インフレータブルボート安全ガイド'
+        desc: '安全基準、積載能力、適切な空気圧、出航前チェック、緊急時手順。'
+        href: '/learn/water-safety'
+      - title: 'インフレータブルボートのメンテナンス'
+        desc: 'インフレータブルボートおよび RIB の清掃、保管、UV 保護、冬季準備、修理。'
+        href: '/v2/inflatable-boat-maintenance'
+  - title: 'ボートの知識'
+    tagline: 'インフレータブルボート・RIB ハブ'
+    desc: 'インフレータブルボートのタイプ、材料、構造方法、メンテナンス、安全をカバーする技術ガイド — ディンギーから RIB まで。'
+    guides:
+      - title: 'インフレータブルボートのタイプ'
+        desc: 'ディンギー、RIB、カヤック、テンダー — その違いを学び、適切なものを選びましょう。'
+        href: '/v2/inflatable-boat-buying-guide'
+      - title: 'ドロップステッチ技術'
+        desc: '何千本もの内部の糸がどのように剛性のある高圧インフレータブル構造を作るか。'
+        href: '/learn/drop-stitch-core'
+      - title: '材料リファレンス'
+        desc: 'PVC のデニール規格、生地の重量、耐 UV 性、海洋グレード材料の解説。'
+        href: '/learn/materials'
+      - title: 'RIB とディンギーの比較'
+        desc: '用途ごとに、リジッドインフレータブルボートと従来のインフレータブルディンギーを比較。'
+        href: '/compare/rib-vs-dinghy'
+  - title: 'SUP の知識'
+    tagline: 'スタンドアップパドルボードガイド'
+    desc: 'SUP ボードのすべて — インフレータブルとリジッドの比較、ボード寸法、材料技術、あらゆるスキルレベルのための専門アドバイス。'
+    guides:
+      - title: 'インフレータブル SUP とハード SUP の比較'
+        desc: 'iSUP とハードエポキシボードを、携帯性、耐久性、性能、価値で比較。'
+        href: '/learn/sup'
+      - title: 'SUP ボード寸法ガイド'
+        desc: '長さ、幅、厚さが安定性、速度、機動性に与える影響。'
+        href: '/learn/sup'
+      - title: 'SUP のメンテナンス・ケア'
+        desc: 'インフレータブル SUP ボードの清掃、保管、UV 保護、修理のヒント。'
+        href: '/v2/inflatable-sup-maintenance'
+      - title: '初めての SUP の選び方'
+        desc: "体重、スキルレベル、使用目的に合ったスタンドアップパドルボードを選ぶための初心者ガイド。"
+        href: '/learn/sup'
+  - title: 'ダイビング器材ガイド'
+    tagline: '商用ダイブボートの知識'
+    desc: 'ダイブボート、ダイブ RIB、ダイビングセンター・ダイブオペレーター・商用ダイビングチーム向け器材の専門ガイド。'
+    guides:
+      - title: 'ダイビングセンターに最適な RIB ボート'
+        desc: 'ダイビングセンターに適したダイブ RIB の選び方 — 収容力、構成、予算の考慮点。'
+        href: '/solutions-diving-center-boats'
+      - title: 'ダイブ RIB 構成ガイド'
+        desc: 'ダイブ RIB に必須の機能 — タンクラック、ラダーシステム、ダイブプラットフォーム、器材収納。'
+        href: '/solutions-diving-center-boats'
+  - title: 'ヨットテンダーガイド'
+    tagline: 'スーパーヨート・海洋テンダーソリューション'
+    desc: '完璧なヨットテンダー選びのガイド — インフレータブルテンダー、RIB テンダー、保管ソリューション、テンダーアクセサリー。'
+    guides:
+      - title: 'ヨットテンダーの選び方'
+        desc: 'ヨットに合うテンダーを選ぶ際の考慮点 — サイズ、材料、エンジン、保管。'
+        href: '/solutions-yacht-tender-solutions'
+      - title: 'インフレータブルテンダーと RIB テンダーの比較'
+        desc: 'インフレータブルディンギーテンダーとリジッドインフレータブルボートテンダーを、性能、耐久性、収納性で比較。'
+        href: '/compare/rib-vs-dinghy'
+  - title: '救助器材ガイド'
+    tagline: '捜索救助ウォータークラフトの知識'
+    desc: '救助ボート、SAR ウォータークラフト、沿岸警備隊・ライフガード・災害救援チーム向け緊急対応器材のプロフェッショナルガイド。'
+    guides:
+      - title: 'SAR ボート選定ガイド'
+        desc: '適切な捜索救助ボートの選び方 — 速度、収容力、耐久性、専門器材要件。'
+        href: '/solutions-rescue-watercraft'
+      - title: '救助活動向け商用 RIB'
+        desc: '世界中のプロフェッショナルな捜索救助チームが商用グレード RIB を好む理由。'
+        href: '/use-cases/search-and-rescue'
+
+read_guide: ガイドを読む →
+
+cta:
+  title: どこから始めればよいかお迷いですか?
+  desc: スキル診断クイズで、あなたのレベルに合ったガイドと器材を見つけましょう。
+  label: お問い合わせ →
+  link: /contact

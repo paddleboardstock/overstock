@@ -1,0 +1,168 @@
+hero:
+  tagline: Aquafarer Akatemia
+  title: Oppimiskeskus
+  subtitle: Oppaat ja opetusohjelmat jokaiselle taitotasolle – SUP perusasioista edistyneisiin pelastustekniikoihin
+categories:
+  - level: Aloittelija
+    color: from-green-500 to-emerald-600
+    badge: bg-green-100 text-green-700
+    guides:
+      - title: SUP Perusteet
+        desc: Opi seisovan melontalautailun perusteet – asento, vetotekniikka ja tasapaino.
+        slug: beginner-sup-guide
+      - title: Melatekniikat
+        desc: Eteenpäin suuntautuva veto, pyyhkäisylyönti, vetolyönti ja matala tuki – hallitse tärkeimmät melaliikkeet.
+        slug: sup-paddle-guide
+      - title: Turvallisuus ennen kaikkea
+        desc: Tärkeitä turvallisuuskäytäntöjä, mukaan lukien säätarkastukset, PFD:n käyttö, talutushihnasäännöt ja itsepelastus.
+        slug: sup-safety-guide
+  - level: Keskitason
+    color: from-blue-500 to-indigo-600
+    badge: bg-blue-100 text-blue-700
+    guides:
+      - title: Retkeilyn perusteet
+        desc: Usean tunnin melojen suunnittelu – navigointi, nesteytys, tahdistus ja tuuliennusteiden lukeminen.
+        slug: touring-sup-guide
+      - title: Sää lukeminen
+        desc: Tulkitse meriennusteita, tunnista pilvikuvioita ja ymmärrä tuulen vaikutuksia veteen.
+        slug: weather-planning-water-sports
+      - title: Navigoinnin perusteet
+        desc: Kartan lukeminen, kompassin käyttö, GPS-reittipisteet ja reitin suunnittelu rannikkomelontaan.
+        slug: sup-navigation-guide
+      - title: Vuorovesitietoisuus
+        desc: Vuorovesisyklien ja virtausten ymmärtäminen ja niiden vaikutus laukaisun ajoitukseen ja reititykseen.
+        slug: understanding-tides
+  - level: Edistynyt
+    color: from-purple-500 to-violet-600
+    badge: bg-purple-100 text-purple-700
+    guides:
+      - title: Monipäiväisen matkan suunnittelu
+        desc: Retkikunnan logistiikka — varusteiden valinta, ruoan suunnittelu, turvallisuusprotokollat ​​ja hätäkontaktit.
+        slug: sup-travel-guide
+      - title: Pelastustekniikat
+        desc: Itsepelastus, T-pelastus, eskimopelastus kajakkeille ja hinausprotokollat ​​avovesille.
+        slug: sup-self-rescue
+      - title: Yömelonta
+        desc: Navigointi pimeän jälkeen — valaistusvaatimukset, reittimuisti, ryhmäviestintä ja vaaratietoisuus.
+        slug: sup-navigation-guide
+  - level: Huolto
+    color: from-amber-500 to-orange-600
+    badge: bg-amber-100 text-amber-700
+    guides:
+      - title: Puhdistus & Hoito
+        desc: Makean veden huuhtelu, UV-suoja, homeen esto ja oikeat kuivaustekniikat jokaisen käyttökerran jälkeen.
+        slug: inflatable-sup-maintenance
+      - title: Säilytysopas
+        desc: Parhaat käytännöt puhallettavien lautojen ja veneiden säilytykseen — tyhjennys, taitto, lämpötilan säätö ja säilyvyys.
+        slug: inflatable-sup-storage
+      - title: Korjauksen perusteet
+        desc: Korjaa pienet puhkeamat, saumavuodot ja venttiiliongelmat PVC korjaussarjoilla ja paikkatekniikoilla.
+        slug: inflatable-sup-repair
+      - title: Venttiilien huolto
+        desc: Tunnista venttiilityypit (Halkey-Roberts, Boston, Leafield), puhdista roskat ja vaihda vialliset varret.
+        slug: inflatable-sup-repair
+knowledge_center_tagline: Tietokeskus
+knowledge_center_title: Laivavarusteet ja teollisuusoppaat
+knowledge_center_subtitle: Asiantuntevaa tietoa ja osto-oppaita merenkulun ammattilaisille, laivastonhaltijoille ja vesiurheilun harrastajille.
+knowledge_sections:
+  - title: RIB Venetieto
+    tagline: Jäykät puhallettavat veneen ohjaimet
+    desc: Kaikki RIB veneistä — rungon suunnittelu, materiaalit, moottorin valinta, huolto ja ostoneuvonta kaupalliseen ja virkistyskäyttöön.
+    guides:
+      - title: Kuinka valita oikea RIB vene
+        desc: Täydellinen opas RIB - koon, moottorin tehon, putken materiaalin, rungon tyypin ja käyttötarkoituksen valitsemiseen.
+        href: /v2/inflatable-boat-buying-guide
+      - title: RIB vs kumivene
+        desc: Jäykkä puhallettava vene vs. perinteinen puhallettava vene – rungon rakenne, suorituskyky, kestävyys ja kapasiteetti verrattuna.
+        href: /compare/rib-vs-dinghy
+      - title: Kaupallinen RIB vs virkistys RIB
+        desc: Kaupallisen luokan vs. huviveneet RIB – rakennusstandardit, materiaalit, käyttöikä, hinta ja sertifioinnit.
+        href: /compare/commercial-vs-recreational-rib
+      - title: Alumiini vs lasikuiturunko
+        desc: Vertaa RIB veneiden alumiini- ja lasikuiturunkoja painon, hinnan, kestävyyden ja korroosionkestävyyden suhteen.
+        href: /compare/aluminum-vs-fiberglass
+  - title: Kumiveneen opas
+    tagline: Puhallettavat vesikulkuneuvot
+    desc: Kattavat oppaat kumiveneistä — PVC vs Hypalon, rakennusmenetelmät, turvallisuusstandardit ja kunnossapidon parhaat käytännöt.
+    guides:
+      - title: PVC vs Hypalon Materiaaliopas
+        desc: Lopullinen vertailu PVC ja Hypalon CSM välillä kumiveneen rakentamisessa.
+        href: /compare/pvc-vs-hypalon
+      - title: Kuinka puhallettavat veneet valmistetaan
+        desc: Valmistusprosessi - materiaalin leikkaus, HF-hitsaus, sauman rakentaminen, painetestaus ja laadunvalvonta.
+        href: /learn/inflatable-technology
+      - title: Kumiveneen turvallisuusopas
+        desc: Turvallisuusstandardit, kantavuus, oikea täyttö, lähtöä edeltävät tarkastukset ja hätätoimenpiteet.
+        href: /learn/water-safety
+      - title: Kumiveneen huolto
+        desc: Kumiveneiden ja RIB-veneiden puhdistus, varastointi, UV-suojaus, talvehtiminen ja korjaus.
+        href: /v2/inflatable-boat-maintenance
+  - title: Veneen tieto
+    tagline: Kumivene & RIB napa
+    desc: Tekniset oppaat, jotka kattavat kumivenetyypit, materiaalit, rakennusmenetelmät, huollon ja turvallisuuden veneistä RIB-veneisiin.
+    guides:
+      - title: Kumivenetyypit
+        desc: Joillat, RIB:t, kajakit ja tarjouskilpailut – opi erot ja valitse oikea.
+        href: /v2/inflatable-boat-buying-guide
+      - title: Drop-stitch-tekniikka
+        desc: Kuinka tuhannet sisäkierteet luovat jäykkiä, korkealla paineella puhallettavia rakenteita.
+        href: /learn/drop-stitch-core
+      - title: Materiaalien viite
+        desc: PVC denierin arvot, kankaan painot, UV-kestävyys ja merikäyttöiset materiaalit selitetty.
+        href: /learn/materials
+      - title: RIB vs. jolla
+        desc: Vertaa jäykkiä kumiveneita perinteisiin puhallettaviin veneisiin eri käyttötarkoituksiin.
+        href: /compare/rib-vs-dinghy
+  - title: SUP Tietoa
+    tagline: Stand-Up-melontalaudan ohjaimet
+    desc: Kaikki SUP-laudoista – puhallettavat vs. jäykät, levyjen mitat, materiaalitekniikka ja asiantuntijaneuvoja kaikille taitotasoille.
+    guides:
+      - title: Ilmatäytteiset vs kovat SUP
+        desc: Vertaa iSUP-laitteita ja kovia epoksilevyjä kannettavuuden, kestävyyden, suorituskyvyn ja arvon suhteen.
+        href: /learn/sup
+      - title: SUP Taulukon mitat
+        desc: Kuinka pituus, leveys ja paksuus vaikuttavat vakauteen, nopeuteen ja ohjattavuuteen.
+        href: /learn/sup
+      - title: SUP Huolto ja hoito
+        desc: Puhdistus-, säilytys-, UV-suoja- ja korjausvinkkejä puhallettaville SUP-laudoille.
+        href: /v2/inflatable-sup-maintenance
+      - title: Ensimmäisen SUP valitseminen
+        desc: Aloittelijan opas oikean seisomamelalaudan valitsemiseen painosi, taitotasosi ja käyttötarkoituksen mukaan.
+        href: /learn/sup
+  - title: Sukellusvarusteiden opas
+    tagline: Kaupallisen sukellusveneen tuntemus
+    desc: Erikoisoppaat sukellusveneisiin, sukellus RIB:iin ja sukelluskeskusten, sukellusoperaattoreiden ja kaupallisten sukellusryhmien varusteisiin.
+    guides:
+      - title: Paras RIB vene sukelluskeskuksiin
+        desc: Kuinka valita oikea sukellus RIB sukelluskeskuksellesi – kapasiteetti, kokoonpano ja budjettinäkökohdat.
+        href: /solutions-diving-center-boats
+      - title: Sukellus RIB Asetusopas
+        desc: Tärkeimmät ominaisuudet sukellus RIB:ille — säiliötelineet, tikkaat, sukelluslava ja varusteiden säilytys.
+        href: /solutions-diving-center-boats
+  - title: Jahtien tender-veneopas
+    tagline: Ratkaisut superyachtille ja marine tender -veneisiin
+    desc: Oppaat täydellisen huvivenetarjouksen valitsemiseen – puhallettavat tarjoukset, RIB-tarjoukset, säilytysratkaisut ja tarjoustarvikkeet.
+    guides:
+      - title: Kuinka valita huvivenetarjous
+        desc: Tekijät, jotka on otettava huomioon valittaessa tarjousta huviveneellesi – koko, materiaali, moottori ja varastotila.
+        href: /solutions-yacht-tender-solutions
+      - title: Ilmatäytteiset vs RIB Tarjoukset
+        desc: Vertaa puhallettavia veneitä ja jäykkiä kumiveneiden osia suorituskyvyn, kestävyyden ja säilyvyyden suhteen.
+        href: /compare/rib-vs-dinghy
+  - title: Pelastusvälineiden opas
+    tagline: Tietoa haku- ja pelastusveneistä
+    desc: Ammattimaiset oppaat pelastusveneissä, SAR vesikulkuneuvoissa ja hätätilanteissa rannikkovartiostolle, hengenpelastajalle ja katastrofiapuryhmille.
+    guides:
+      - title: SAR Veneen valintaopas
+        desc: Oikean etsintä- ja pelastusveneen valinta – nopeus, kapasiteetti, kestävyys ja erikoisvarusteet.
+        href: /solutions-rescue-watercraft
+      - title: Kaupallinen RIB pelastustoimia varten
+        desc: Miksi kaupalliset RIB:t ovat ammattimaisten etsintä- ja pelastusryhmien ensisijainen valinta maailmanlaajuisesti.
+        href: /use-cases/search-and-rescue
+read_guide: Lue opas →
+cta:
+  title: Etkö ole varma mistä aloittaa?
+  desc: Vastaa taitojen arviointikyselyymme löytääksesi tasollesi sopivat oppaat ja varusteet.
+  label: Ota yhteyttä →
+  link: /contact
+

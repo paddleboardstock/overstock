@@ -1,0 +1,382 @@
+---
+const { lang = 'it' } = Astro.props;
+import JsonLd from '~/components/common/JsonLd.astro';
+import AiQuickAnswer from '~/components/common/AiQuickAnswer.astro';
+const t = (_key: string) => '';
+---
+
+<JsonLd
+  type="Article"
+  article={{
+    headline: 'Guida ai gommoni — La risorsa completa',
+    description:
+      'Una guida completa ai gommoni che copre tipologie, metodi di costruzione, confronto dei materiali, criteri di scelta, norme di sicurezza e manutenzione.',
+    datePublished: '2026-07-07',
+  }}
+  data={{ url: 'https://aquafarer.com/marine-industry/' }}
+/>
+
+<JsonLd
+  type="BreadcrumbList"
+  breadcrumbs={[
+    { name: t('nav.home') || 'Home', href: `/${lang}/` },
+    { name: 'Settore marino', href: `/${lang}/marine-industry` },
+    { name: 'Guida ai gommoni', href: `/${lang}/marine-industry/` },
+  ]}
+/>
+
+<AiQuickAnswer
+  entityType="Guida"
+  quickAnswer="Un gommone è un'imbarcazione leggera realizzata con tubolari in tessuto flessibile (sponsoni) riempiti con aria in pressione per garantire il galleggiamento. I gommoni moderni includono dinghy, RIB (gommoni a scafo rigido), kayak gonfiabili e stand-up paddle board. Sono costruiti con tessuti in PVC o Hypalon CSM mediante saldatura RF o cuciture incollate a mano, e la costruzione drop-stitch consente pavimenti rigidi ad alta pressione."
+  facts={[
+    { label: 'Dimensioni del mercato globale', value: '$2.8B (2026)' },
+    { label: 'Materiali principali', value: 'PVC / Hypalon CSM' },
+    { label: 'Durata di vita', value: '8-20+ anni' },
+    { label: 'Certificazione CE', value: 'Obbligatoria (UE)' },
+  ]}
+/>
+
+<section class="max-w-4xl mx-auto py-16 px-6">
+  <h1 class="text-4xl font-semibold text-gray-900">Guida ai gommoni</h1>
+  <p class="mt-4 text-lg text-gray-500">
+    La risorsa definitiva sulle imbarcazioni gonfiabili — dai dinghy da diporto ai RIB professionali e alle imbarcazioni
+    speciali per il soccorso.
+  </p>
+
+  <nav class="mt-8 flex flex-wrap gap-2">
+    {
+      [
+        { label: 'Tipi', id: 'types' },
+        { label: 'Costruzione', id: 'construction' },
+        { label: 'Materiali', id: 'materials' },
+        { label: 'Scelta', id: 'selection' },
+        { label: 'Sicurezza', id: 'safety' },
+        { label: 'Manutenzione', id: 'maintenance' },
+        { label: 'Norme', id: 'standards' },
+      ].map((s) => (
+        <a
+          href={`#${s.id}`}
+          class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition"
+        >
+          {s.label}
+        </a>
+      ))
+    }
+  </nav>
+
+  <section id="types" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Tipi di gommoni</h2>
+    <div class="mt-8 grid gap-6">
+      {
+        [
+          {
+            title: 'Dinghy gonfiabili',
+            desc: "Piccole imbarcazioni portatili per tender, pesca e uso ricreativo su brevi distanze. Tipicamente 2-4 m, motorizzate con piccoli fuoribordo (2-15 CV) o a remi. L'opzione più economica.",
+            icon: '🚤',
+          },
+          {
+            title: 'Gommoni a scafo rigido (RIBs)',
+            desc: 'Imbarcazioni ad alte prestazioni con scafo rigido in vetroresina, alluminio o HDPE e sponsoni gonfiabili. Lunghezze 3-12 m, fuoribordo 15-300+ CV. Utilizzati per pattugliamento, soccorso, immersioni e crociere offshore.',
+            icon: '⚡',
+          },
+          {
+            title: 'Kayak gonfiabili',
+            desc: 'Kayak portatili realizzati in tessuti PVC o TPU. Disponibili nelle versioni singola e tandem per touring ricreativo, discesa di fiumi e viaggi di spedizione.',
+            icon: '🛶',
+          },
+          {
+            title: 'Stand-up paddle board gonfiabili (SUP)',
+            desc: 'Tavole costruite con tecnica drop-stitch che si gonfiano fino a diventare ponti rigidi ad alta pressione. Disponibili modelli all-around, touring, yoga, pesca e surf.',
+            icon: '🏄',
+          },
+          {
+            title: 'Imbarcazioni di soccorso (SAR)',
+            desc: "RIB specializzati per operazioni di ricerca e soccorso. Dotati di pavimenti autosvuotanti, console centrale, bitte di traino e colorazioni ad alta visibilità. Certificati CE per l'uso di soccorso.",
+            icon: '🆘',
+          },
+          {
+            title: 'Imbarcazioni da lavoro commerciali',
+            desc: 'RIB pesanti per supporto subacqueo, pattugliamento, rilievi e operazioni marittime commerciali. Costruzione in Hypalon CSM, scafi rinforzati e allestimento di livello professionale.',
+            icon: '⚙️',
+          },
+        ].map((item) => (
+          <div class="flex gap-4 p-5 bg-gray-50 rounded-xl border border-gray-200">
+            <span class="text-2xl flex-shrink-0">{item.icon}</span>
+            <div>
+              <h3 class="font-semibold text-gray-900">{item.title}</h3>
+              <p class="mt-1 text-sm text-gray-600">{item.desc}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section id="construction" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Metodi di costruzione</h2>
+    <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Saldatura RF (ad alta frequenza)</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Utilizza energia elettromagnetica per fondere gli strati di PVC a livello molecolare. Crea le cuciture più
+          resistenti e stagne all\'aria. Comune nei gommoni in PVC di alta qualità e nei SUP. Richiede macchinari
+          specializzati e personale qualificato.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Incollaggio a mano / incollaggio chimico</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Un adesivo bicomponente unisce i pannelli di tessuto. È il metodo principale per i gommoni in Hypalon CSM (non
+          saldabili a RF). Richiede una precisa preparazione delle superfici, umidità controllata e un tempo di
+          polimerizzazione adeguato per una resistenza ottimale delle cuciture.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Nucleo drop-stitch</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Migliaia di fili in poliestere collegano gli strati superiore e inferiore del PVC, consentendo il gonfiaggio
+          ad alta pressione (15-25 PSI) per prestazioni da tavola rigida. La densità dei fili (15-50 fili/cm²) determina
+          rigidità e peso.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Saldatura a caldo</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Saldatura ad aria calda o a cuneo caldo per cuciture e rinforzi. Comune nella costruzione di RIB di grandi
+          dimensioni. Meno precisa della saldatura RF ma efficace per Hypalon e tessuti PVC pesanti.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="materials" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Confronto dei materiali</h2>
+    <div class="mt-6 overflow-x-auto">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="bg-gray-50 border-b-2 border-gray-200">
+            <th class="px-4 py-3 text-left font-semibold text-gray-700">Proprietà</th>
+            <th class="px-4 py-3 text-center font-semibold text-sky-700">PVC</th>
+            <th class="px-4 py-3 text-center font-semibold text-emerald-700">Hypalon CSM</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            [
+              ['Costo relativo', '$ (economico)', '$$$ (premium)'],
+              ['Resistenza ai raggi UV', 'Buona (con rivestimento)', 'Eccellente (intrinseca)'],
+              ["Resistenza all'abrasione", 'Moderata-Buona', 'Eccellente'],
+              ['Resistenza chimica', 'Buona', 'Eccellente'],
+              ['Flessibilità a freddo', 'Si irrigidisce sotto 0°C', 'Flessibile fino a -20°C'],
+              ['Durata di vita', '8-12 anni', '15-20+ anni'],
+              ['Metodo di cucitura', 'Saldatura RF', 'Incollaggio a mano'],
+              ['Riparazione', 'Colla PVC (facile)', 'Adesivo bicomponente (moderata)'],
+            ].map((row, i) => (
+              <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                {row.map((cell, j) => (
+                  <td
+                    class={`px-4 py-3 border-b border-gray-200 ${j === 0 ? 'font-medium text-gray-700' : 'text-center text-gray-600'}`}
+                  >
+                    {cell}
+                  </td>
+                ))}
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-4 text-sm text-gray-500">
+      Il PVC di grado militare moderno (1100-1670 dtex) offre un\'eccellente durata per la maggior parte degli utenti
+      ricreativi a metà del costo dell\'Hypalon. L\'Hypalon è preferito per flotte commerciali, climi tropicali e
+      applicazioni critiche.
+    </p>
+    <a
+      href={`/${lang}/learn/pvc-vs-hypalon`}
+      class="mt-4 inline-block text-sky-600 hover:text-sky-700 text-sm font-medium"
+      >Guida approfondita: PVC vs Hypalon →</a
+    >
+  </section>
+
+  <section id="selection" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Come scegliere un gommone</h2>
+    <div class="mt-8 grid md:grid-cols-3 gap-6">
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">1. Definisci il tuo utilizzo</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>Ricreativo: dinghy o SUP</li>
+          <li>Prestazioni: RIB (15-60 CV)</li>
+          <li>Commerciale: RIB (100+ CV)</li>
+          <li>Fitness: SUP gonfiabile</li>
+          <li>Viaggi: kayak gonfiabile</li>
+        </ul>
+      </div>
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">2. Definisci il tuo budget</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>$200-$800: SUP gonfiabile</li>
+          <li>$500-$2,000: dinghy + motore</li>
+          <li>$3,000-$8,000: RIB entry-level</li>
+          <li>$8,000-$20,000: RIB premium</li>
+          <li>$20,000+: RIB commerciale</li>
+        </ul>
+      </div>
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">3. Considera il materiale</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>PVC: economico, leggero</li>
+          <li>Hypalon: premium, longevo</li>
+          <li>Drop-stitch: prestazioni rigide</li>
+          <li>Peso del tessuto: 1100-1670 dtex</li>
+          <li>Rivestimento: strati UV + antipuntura</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="safety" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Sicurezza e norme</h2>
+    <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Certificazione CE</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Tutti i gommoni venduti nell\'UE richiedono la marcatura CE ai sensi della Direttiva sulle imbarcazioni da
+          diporto (RCD) 2013/53/UE. La certificazione copre la categoria di progettazione (A-D), il galleggiamento, la
+          stabilità e la capacità di carico. I gommoni Aquafarer sono certificati CE per uso ricreativo e di soccorso.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Norma</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          La norma internazionale per i gommoni specifica i requisiti per materiali, cuciture, valvole e prove di
+          prestazione. I tipi I-IV coprono tutto, dai piccoli dinghy ai grandi RIB.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Attrezzatura di sicurezza essenziale</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Giubbotti di salvataggio/maglie (CE 12402), cime da lancio, mestolo o estintore, luci di navigazione
+          (notturne), radio VHF, kit di primo soccorso, ancora e pagaia o carburante di riserva.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Utilizzo sicuro</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          NON superare MAI la capacità massima indicata sulla targhetta. Controllare le valvole prima della partenza.
+          Distribuire il peso in modo uniforme. Monitorare le condizioni meteorologiche. Lasciare un piano di
+          navigazione. Seguire un corso di sicurezza nautica.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="maintenance" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Manutenzione e cura</h2>
+    <div class="mt-8 space-y-4 text-sm text-gray-600">
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <span class="text-sky-600 font-bold flex-shrink-0">1.</span><span
+          >Sciacquare con acqua dolce dopo ogni utilizzo in acqua salata. Asciugare completamente prima del rimessaggio.</span
+        >
+      </div>
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <span class="text-sky-600 font-bold flex-shrink-0">2.</span><span
+          >Riporre parzialmente gonfio in un luogo fresco e asciutto, lontano dalla luce solare diretta e da temperature
+          estreme.</span
+        >
+      </div>
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <span class="text-sky-600 font-bold flex-shrink-0">3.</span><span
+          >Controllare valvole e cuciture prima di ogni stagione. Applicare lubrificante al silicone sui nuclei delle
+          valvole ogni anno.</span
+        >
+      </div>
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <span class="text-sky-600 font-bold flex-shrink-0">4.</span><span
+          >Pulire con sapone neutro e acqua. Non usare mai solventi, candeggina o idropulitrici sul tessuto.</span
+        >
+      </div>
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <span class="text-sky-600 font-bold flex-shrink-0">5.</span><span
+          >Riparare tempestivamente le forature con i kit di riparazione consigliati dal produttore. Per l\'Hypalon,
+          usare esclusivamente adesivo bicomponente.</span
+        >
+      </div>
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <span class="text-sky-600 font-bold flex-shrink-0">6.</span><span
+          >Sostituire le valvole ogni 3-5 anni. Sostituire il tessuto a fine vita utile (usura visibile, porosità,
+          separazione delle cuciture).</span
+        >
+      </div>
+    </div>
+  </section>
+
+  <section id="standards" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Applicazioni nel settore</h2>
+    <div class="mt-8 grid md:grid-cols-3 gap-4">
+      {
+        [
+          {
+            title: 'Nautica da diporto',
+            desc: 'Gite in famiglia, sport acquatici, pesca, campeggio e crociere di piacere su laghi, fiumi e acque costiere.',
+          },
+          {
+            title: 'Ricerca e soccorso',
+            desc: 'Guardia costiera, bagnini e squadre di emergenza utilizzano RIB specializzati per interventi rapidi e soccorso in mare mosso.',
+          },
+          {
+            title: 'Marina commerciale',
+            desc: 'Supporto subacqueo, pattugliamento, rilievi, trasporto turistico e logistica offshore dove durata e affidabilità sono fondamentali.',
+          },
+          {
+            title: 'Militare e difesa',
+            desc: 'RIB tattici per operazioni navali, trasporto truppe, azioni di abbordaggio e inserimenti clandestini.',
+          },
+          {
+            title: 'Aiuto umanitario',
+            desc: 'Le organizzazioni di soccorso in caso di calamità impiegano gommoni per soccorsi in caso di alluvioni, trasporto di rifornimenti ed evacuazioni mediche.',
+          },
+          {
+            title: 'Produzione OEM',
+            desc: 'Produzione personalizzata a marchio privato per brand, rivenditori e operatori specializzati che cercano specifiche uniche.',
+          },
+        ].map((app) => (
+          <div class="p-4 bg-gray-50 rounded-xl border border-gray-200">
+            <h3 class="font-semibold text-sm text-gray-900">{app.title}</h3>
+            <p class="mt-1 text-xs text-gray-500">{app.desc}</p>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="mt-16 bg-gradient-to-br from-sky-50 to-blue-50 rounded-2xl p-8 border border-sky-200">
+    <h2 class="text-xl font-semibold text-gray-900">Scopri i gommoni Aquafarer</h2>
+    <p class="mt-4 text-sm text-gray-600">
+      Aquafarer progetta e produce gommoni, SUP, kayak e RIB certificati CE per i mercati ricreativo, professionale e
+      OEM. Tutte le imbarcazioni sono realizzate con tessuti in PVC di grado militare o Hypalon CSM mediante saldatura
+      RF avanzata o costruzione incollata a mano.
+    </p>
+    <div class="mt-6 flex gap-4 flex-wrap">
+      <a
+        href={`/${lang}/products`}
+        class="px-6 py-3 bg-gray-900 text-white rounded-full text-sm font-medium hover:bg-gray-800 transition"
+        >Vedi i prodotti</a
+      >
+      <a
+        href={`/${lang}/academy`}
+        class="px-6 py-3 border border-gray-200 text-gray-700 rounded-full text-sm font-medium hover:border-gray-400 transition"
+        >Academy</a
+      >
+    </div>
+  </section>
+</section>
+
+<section class="sr-only" data-ai-block="definition" aria-hidden="true">
+  <p>
+    Guida completa ai gommoni che copre le tipologie (dinghy, RIB, kayak, SUP, imbarcazioni di soccorso, imbarcazioni da
+    lavoro commerciali), i metodi di costruzione (saldatura RF, incollaggio a mano, nucleo drop-stitch, saldatura a
+    caldo), i materiali (tessuto PVC, Hypalon CSM), i criteri di scelta (utilizzo, budget, confronto dei materiali), le
+    norme di sicurezza (certificazione CE, attrezzatura essenziale), la manutenzione (pulizia, rimessaggio, riparazioni,
+    cura delle valvole) e le applicazioni nel settore (diporto, SAR, commerciale, militare, umanitario, OEM).
+  </p>
+</section>

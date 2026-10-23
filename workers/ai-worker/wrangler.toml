@@ -1,0 +1,30 @@
+name = "aquafarer-ai"
+main = "index.ts"
+compatibility_date = "2026-07-08"
+compatibility_flags = ["nodejs_compat"]
+
+routes = [
+  { pattern = "aquafarer.com/api/chat*", zone_name = "aquafarer.com" },
+  { pattern = "aquafarer.com/api/ask*", zone_name = "aquafarer.com" },
+  { pattern = "aquafarer.com/api/search*", zone_name = "aquafarer.com" },
+  { pattern = "aquafarer.com/api/embed*", zone_name = "aquafarer.com" },
+  { pattern = "aquafarer.com/api/reindex*", zone_name = "aquafarer.com" },
+  { pattern = "aquafarer.com/api/ai/*", zone_name = "aquafarer.com" },
+]
+
+[triggers]
+crons = ["0 3 * * *"]
+
+[vars]
+SITE_ORIGIN = "https://aquafarer.com"
+
+[ai]
+binding = "AI"
+
+[[vectorize]]
+binding = "VECTORIZE"
+index_name = "ai-index-v2"
+
+[[r2_buckets]]
+binding = "DATA_BUCKET"
+bucket_name = "aquafarer-data"

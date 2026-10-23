@@ -1,0 +1,306 @@
+hero_text:
+  tagline: Holen Sie sich ein Angebot
+  title: Fordern Sie ein Angebot<br />für Ihr Projekt an
+  subtitle: Teilen Sie uns Ihre Anforderungen mit und unser Team wird Ihnen innerhalb von 2 Werktagen ein detailliertes Angebot unterbreiten.
+steps2_process:
+  title: Wie es funktioniert
+  subtitle: Vier einfache Schritte von der Anfrage bis zum Angebot.
+  items:
+    - title: 'Schritt 1: Senden Sie Ihre Anforderungen'
+      description: Füllen Sie das untenstehende Formular mit Ihrem Produkttyp, Ihrer Menge und Ihren Spezifikationen aus. Je detaillierter Sie Ihre Angaben machen, desto genauer ist Ihr Angebot.
+      icon: tabler:file-text
+    - title: 'Schritt 2: Wir prüfen und beraten'
+      description: Unser Engineering-Team prüft Ihre Anforderungen und kann sich zur Klärung mit Ihnen in Verbindung setzen. Wir geben Empfehlungen zur Produktkonfiguration und zu Optionen.
+      icon: tabler:users
+    - title: 'Schritt 3: Erhalten Sie Ihr Angebot'
+      description: Sie erhalten ein detailliertes Angebot einschließlich Stückpreis, Mindestbestellmenge, Lieferzeit, Zahlungsbedingungen und Versandoptionen. Normalerweise innerhalb von 48 Stunden.
+      icon: tabler:currency-dollar
+    - title: 'Schritt 4: Muster und Produktion'
+      description: Nach Annahme des Angebots gehen wir zur Musterproduktion (falls zutreffend) oder direkt zur Massenproduktion über. Regelmäßige Updates während des gesamten Prozesses.
+      icon: tabler:building-factory
+content_form:
+  tagline: Angebotsformular
+  title: Erzählen Sie uns von Ihrem Projekt
+  subtitle: Alle Felder mit * sind Pflichtfelder.
+  fields:
+    - name: Produktkategorie
+      type: wählen
+      options:
+        - RIB-Boot
+        - Schlauchboot
+        - SUP-Board
+        - Aufblasbares Kajak
+        - Schwimmweste
+        - Marinezubehör
+        - Individuelles OEM/ODM
+    - name: Anwendung
+      type: wählen
+      options:
+        - Tauchzentrum
+        - Angeln
+        - Maritimer Tourismus / Resort
+        - Suchen & Retten
+        - Yacht-Tender
+        - Kommerzielles Arbeitsboot
+        - Regierung / Militär
+        - OEM / Eigenmarke
+        - Privat / Freizeit
+        - Sonstiges
+    - name: Menge
+      type: Text
+      placeholder: z.B. 50 Einheiten
+    - name: Zielmarkt
+      type: Text
+      placeholder: z.B. Europa, Nordamerika, Naher Osten
+    - name: Lieferland
+      type: Text
+      placeholder: z.B. Italien, Vereinigte Arabische Emirate, USA, Australien
+    - name: Materialpräferenz
+      type: wählen
+      options:
+        - Keine Präferenz
+        - Seewasserfestes PVC (1100 dtex)
+        - Premium-Hypalon / CSM
+        - GFK-Rumpf
+        - Aluminiumrumpf
+    - name: Motoranforderung
+      type: Text
+      placeholder: z.B. 60 PS Außenbordmotor, kein Motor, Twin 115 PS
+    - name: Anpassung erforderlich
+      type: Text
+      placeholder: z.B. individuelle Farben, Branding/Logo, Verpackung, Sonderausstattung
+    - name: Zeitleiste
+      type: Text
+      placeholder: z.B. Lieferung innerhalb von 90 Tagen
+    - name: Zusätzliche Anforderungen
+      type: Textbereich
+      placeholder: Beschreiben Sie Ihre Anwendung, technische Spezifikationen oder besondere Anforderungen – fügen Sie Referenzzeichnungen, Spezifikationen oder Links hinzu, falls verfügbar
+    - name: Spezifikation hochladen
+      type: Datei
+      placeholder: Laden Sie Ihr Datenblatt, Ihre Zeichnung oder Ihr Referenzdokument hoch (PDF, DWG, DXF)
+    - name: Logo/Grafik hochladen
+      type: Datei
+      placeholder: Laden Sie Ihr Logo oder Bildmaterial für individuelles Branding hoch (AI, EPS, PNG)
+content_rfq_types:
+  tagline: 3-stufiges RFQ-System
+  title: Wählen Sie die richtige<br />Anfrageebene
+  subtitle: Unterschiedliche Projekte erfordern unterschiedliche Detaillierungsgrade. Wählen Sie das Formular aus, das zu Ihrer Kaufphase passt.
+  items:
+    - title: Schnelle Anfrage
+      description: 5-6 Felder, 30 Sekunden. Für den ersten Kontakt, allgemeine Fragen oder Folgeanfragen zum Herunterladen von Ressourcen. Wir antworten innerhalb von 24 Stunden mit grundlegenden Informationen und den nächsten Schritten.
+      icon: tabler:bolt
+    - title: Standard-Anfrage
+      description: 8-10 Felder, 2 Minuten. Für spezifische Produktangebote mit Modellauswahl, Menge und Lieferanforderungen. Erhalten Sie innerhalb von 48 Stunden ein detailliertes Angebot.
+      icon: tabler:file-text
+    - title: Projektanfrage
+      description: 10-14 Felder, 5 Minuten. Für RIB-, Resortflotten-, Rettungs- oder Regierungsprojekte, die eine individuelle Konfiguration, Compliance-Dokumentation und eine mehrjährige Versorgungsplanung erfordern. Dedizierter Projektmanager zugewiesen.
+      icon: tabler:clipboard-list
+form_quick:
+  title: Schnelle Anfrage
+  subtitle: Schneller Kontakt für allgemeine Fragen und erste Informationswünsche.
+  fields:
+    - name: vollständiger Name
+      label: Vollständiger Name
+      type: Text
+      required: true
+      placeholder: Ihr vollständiger Name
+    - name: businessEmail
+      label: Geschäfts-E-Mail
+      type: E-Mail
+      required: true
+      placeholder: you@company.com
+    - name: Name der Firma
+      label: Name der Firma
+      type: Text
+      required: true
+      placeholder: Ihr Unternehmen
+    - name: Käufertyp
+      label: Ich bin ein...
+      type: wählen
+      required: true
+      options:
+        - Distributor / Importeur
+        - Markeninhaber / Eigenmarke
+        - Resort / Wassersportzentrum
+        - Vermietbetreiber
+        - Behörde / Rettungsorganisation
+        - Tauch- / Angelbetrieb
+        - Schiffsingenieur / Refit-Spezialist
+        - Sonstiges
+    - name: ProduktInteresse
+      label: Produktinteresse
+      type: Mehrfachauswahl
+      required: true
+      options:
+        - RIB-Boote
+        - Schlauchboote
+        - SUP-Boards
+        - Sicherheitsausrüstung
+        - Zubehör
+        - Individuelles OEM/ODM
+    - name: Nachricht
+      label: Was brauchen Sie?
+      type: Textbereich
+      required: false
+      placeholder: Kurze Beschreibung Ihrer Anforderungen...
+form_standard:
+  title: Standard-Anfrage
+  subtitle: Detaillierte Angebotsanfrage für bestimmte Produkte und Mengen.
+  fields:
+    - name: vollständiger Name
+      label: Vollständiger Name
+      type: Text
+      required: true
+    - name: businessEmail
+      label: Geschäfts-E-Mail
+      type: E-Mail
+      required: true
+    - name: Name der Firma
+      label: Name der Firma
+      type: Text
+      required: true
+    - name: Käufertyp
+      label: Käufertyp
+      type: wählen
+      required: true
+    - name: Produktmodell
+      label: Produktmodell/-typ
+      type: Text
+      required: true
+      placeholder: z. B. AF580 RIB, AF380 Schlauchboot
+    - name: Menge
+      label: Geschätzte Menge
+      type: Text
+      required: true
+      placeholder: z. B. 10–20 Einheiten
+    - name: Zielmarkt
+      label: Zielmarkt/Region
+      type: Text
+      required: true
+      placeholder: z. B. EU, Nordamerika, Naher Osten
+    - name: LieferungZeitleiste
+      label: Gewünschte Lieferung
+      type: wählen
+      required: true
+      options:
+        - Innerhalb von 30 Tagen
+        - 30-60 Tage
+        - 60-90 Tage
+        - Vorausplanung (90+ Tage)
+        - Nur Recherche
+    - name: ComplianceErforderlich
+      label: Compliance-Anforderungen
+      type: Mehrfachauswahl
+      required: false
+      options:
+        - CE / RCD 2013/53/EU
+        - UKCA
+        - USCG
+        - ISO 9001
+        - BSCI
+        - REACH
+        - Keine / Nicht sicher
+    - name: Nachricht
+      label: Zusätzliche Details
+      type: Textbereich
+      required: false
+form_project:
+  title: Projektanfrage
+  subtitle: Umfassende Projektanfrage für Flotten-, Zoll- oder Regierungsbeschaffung.
+  fields:
+    - name: vollständiger Name
+      label: Vollständiger Name
+      type: Text
+      required: true
+    - name: businessEmail
+      label: Geschäfts-E-Mail
+      type: E-Mail
+      required: true
+    - name: Name der Firma
+      label: Name der Firma
+      type: Text
+      required: true
+    - name: Käufertyp
+      label: Käufertyp
+      type: wählen
+      required: true
+    - name: Projekttyp
+      label: Projekttyp
+      type: wählen
+      required: true
+      options:
+        - Resort-/Hotelflotte
+        - Vermietflotte
+        - Rettungs-/Patrouillenflotte
+        - Flotte des Tauchzentrums
+        - Öffentliche Beschaffung
+        - Eigenmarke / OEM
+        - Händlerlagerbestellung
+        - Sonstiges
+    - name: Bootstypen
+      label: Bootstypen erforderlich
+      type: Mehrfachauswahl
+      required: true
+      options:
+        - RIB-Boote
+        - Schlauchboote / Dinghis
+        - SUP-Boards
+        - Kajaks
+        - Sicherheitsausrüstung
+    - name: Flottengröße
+      label: Flottengröße/Mengenbereich
+      type: Text
+      required: true
+      placeholder: z. B. 20–50 Einheiten über 12 Monate
+    - name: benutzerdefinierteAnforderungen
+      label: Benutzerdefinierte Konfigurationsanforderungen
+      type: Textbereich
+      required: false
+      placeholder: Rumpfgröße, Rohrmaterial, Decklayout, Branding-Anforderungen ...
+    - name: ComplianceErforderlich
+      label: Compliance- und Zertifizierungsanforderungen
+      type: Mehrfachauswahl
+      required: true
+      options:
+        - CE / RCD 2013/53/EU
+        - UKCA
+        - USCG Type III/V
+        - ISO 9001
+        - BSCI
+        - REACH / RoHS
+        - Lokale Marktzertifizierung
+    - name: Zielmarkt
+      label: Zielmarkt
+      type: Text
+      required: true
+    - name: budgetRange
+      label: Budgetbereich
+      type: wählen
+      required: false
+      options:
+        - Unter $10,000
+        - $10,000 - $50,000
+        - $50,000 - $200,000
+        - $200,000+
+        - Keine Angabe
+    - name: LieferungZeitleiste
+      label: Projektzeitleiste
+      type: wählen
+      required: true
+      options:
+        - Dringend (innerhalb von 30 Tagen)
+        - Standard (30-60 Tage)
+        - Geplant (60-90 Tage)
+        - Zukunftsplanung (90+ Tage)
+    - name: Nachricht
+      label: Projektdetails und Anforderungen
+      type: Textbereich
+      required: false
+      placeholder: Beschreiben Sie Ihr Projekt, Ihre Anwendung und alle spezifischen Anforderungen ...
+cta:
+  title: Besprechen Sie lieber per E-Mail?
+  subtitle: Senden Sie Ihre Anfrage direkt an unser Vertriebsteam und wir werden innerhalb von 24 Stunden antworten.
+  actions:
+    - variant: primary
+      text: Schicken Sie uns direkt eine E-Mail
+      href: /contact

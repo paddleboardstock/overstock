@@ -1,0 +1,270 @@
+---
+import JsonLd from '~/components/common/JsonLd.astro';
+import AiQuickAnswer from '~/components/common/AiQuickAnswer.astro';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
+const { lang = 'he' } = Astro.props;
+const t = (key: string) => getUiForLang(lang)?.[key] || '';
+---
+
+<JsonLd
+  type="Article"
+  article={{
+    headline: 'מדריך סירות מתנפחת — המשאב המלא',
+    description:
+      'מדריך מקיף לסירות מתנפחות הכולל סוגים, שיטות בנייה, השוואת חומרים, קריטריוני בחירה, תקני בטיחות ותחזוקה.',
+    datePublished: '2026-07-07',
+  }}
+  data={{ url: 'https://aquafarer.com/marine-industry/' }}
+/>
+
+<JsonLd
+  type="BreadcrumbList"
+  breadcrumbs={[
+    { name: t('nav.home') || 'Home', href: `/${lang}/` },
+    { name: 'תעשיית הים', href: `/${lang}/marine-industry` },
+    { name: 'מדריך סירות מתנפחות', href: `/${lang}/marine-industry/` },
+  ]}
+/>
+
+<AiQuickAnswer
+  entityType="מדריך"
+  quickAnswer="סירה מתנפחת היא כלי שיט קל מבנה המורכב מצינורות בד גמישים (ספונסונים) שמלאים באוויר דחוס כדי לספק ציפה. סירות מתנפחות מודרניות כוללות סירות דינגי, RIBs (סירות מתנפחות קשיחות), קיאקים מתנפחים ולוחות חתירה בעמידה. הן נבנות מבדי PVC או Hypalon CSM תוך שימוש בתפרי רדיו תדר או דבקים ידניים, עם בנייה drop-stitch שמאפשרת רצפות קשיחות בלחץ גבוה."
+  facts={[
+    { label: 'גודל השוק הגלובלי', value: '$2.8B (2026)' },
+    { label: 'חומרים ראשוניים', value: 'PVC / Hypalon CSM' },
+    { label: 'טווח תוחלת חיים', value: '8-20+ שנים' },
+    { label: 'CE הסמכה', value: 'נדרש (אירופה)' },
+  ]}
+/>
+
+<section class="max-w-4xl mx-auto py-16 px-6">
+  <h1 class="text-4xl font-semibold text-gray-900">מדריך סירות מתנפחות</h1>
+  <p class="mt-4 text-lg text-gray-500">
+    המשאב הסופי לכלי שיט מתנפחים — מסירות נופש ועד RIBs כלי חילוץ מקצועיים ומיוחדים.
+  </p>
+
+  <nav class="mt-8 flex flex-wrap gap-2">
+    {
+      ['Types', 'Construction', 'Materials', 'Selection', 'Safety', 'Maintenance', 'Standards'].map((section) => (
+        <a
+          href={`#${section.toLowerCase()}`}
+          class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition"
+        >
+          {section}
+        </a>
+      ))
+    }
+  </nav>
+
+  <section id="types" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">סוגי סירות מתנפחות</h2>
+    <div class="mt-8 grid gap-6">
+      {
+        [
+          {
+            title: 'סירות מתנפחות',
+            desc: "סירות קטנות וניידות לשימוש כמעבורת, לדיג ולשימוש פנאי למרחק קצר. בדרך כלל 2-4 מ', מופעלות במנועי חוץ קטנים (2-15 HP) או במשוטים. נקודת כניסה הכי נוחה מבחינת עלות.",
+            icon: '🚤',
+          },
+          {
+            title: 'סירות קשיחות מתנפחות (RIBs)',
+            desc: "סירות ביצועים גבוהים עם גוף קשיח מפיברגלס, אלומיניום או HDPE וספונסונים מתנפחים. אורכים 3-12 מ', מנועי החוצה 15-300+ HP. משמשות לסיור, הצלה, צלילה ושיט חופי.",
+            icon: '⚡',
+          },
+          {
+            title: 'סירות קיאק מתנפחות',
+            desc: 'קיאקים ניידים עשויים מבדים PVC או TPU. זמינים בקונפיגורציות יחיד ותאום לסיורים פנאי, נהר וריזון למסעות.',
+            icon: '🛶',
+          },
+          {
+            title: 'לוחות חתירה מתנפחים (SUP) (SUPs)',
+            desc: 'לוחות חתירה Drop-stitch שנפחים לגגות קשיחים בלחץ גבוה. כוללים דגמים לכל שימוש, סיור, יוגה, דיג וגלישה.',
+            icon: '🏄',
+          },
+          {
+            title: 'סירות הצלה (SAR)',
+            desc: 'RIBs מיוחדות לפעולות חיפוש והצלה. כוללים רצפות משתלחות, קונסולות קדמיות, עוגני גרירה, ותלבושות צבע בולטות. מוסמכות CE לשימוש הצלה.',
+            icon: '🆘',
+          },
+          {
+            title: 'סירות עבודה מסחריות',
+            desc: 'RIBs חזקים לתמיכת צלילה, סיור, סקר, ופעולות מסחריות ימיות. בנייה Hypalon CSM, גופים מחוזקים, וציוד ברמה מקצועית.',
+            icon: '⚙️',
+          },
+        ].map((item) => (
+          <div class="flex gap-4 p-5 bg-gray-50 rounded-xl border border-gray-200">
+            <span class="text-2xl flex-shrink-0">{item.icon}</span>
+            <div>
+              <h3 class="font-semibold text-gray-900">{item.title}</h3>
+              <p class="mt-1 text-sm text-gray-600">{item.desc}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section id="construction" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">שיטות בנייה</h2>
+    <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">ריתוך RF (בתדר גבוה)</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          משתמש באנרגיה אלקטרומגנטית למיזוג PVC שכבות ברמה המולקולרית. יוצר את התפרים החזקים והאטומים ביותר. נפוץ PVC
+          בסירות איכותיות וSUPs-. דורש מכונות מיוחדות ותפעול מיומן.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">הדבקת יד / הדבקה כימית</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          חיבור דבק דו-חלקי ללוחות בד. השיטה העיקרית Hypalon CSM לסירות (לא ניתן לרתך ב-RF). דורשת הכנה מדויקת של פני
+          השטח, לחות מבוקרת וזמן ייבוש נכון לחוזק התפר האופטימלי.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Drop-Stitch ליבה</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          אלפי הברגות פוליאסטר מחברים PVC בין השכבות העליונות והתחתונה, ומאפשרים ניפוח בלחץ גבוה (15-25PSI) לביצועי לוח
+          קשיחים. צפיפות הברגה (15-50 הברגות לסמ"ר) קובעת קשיחות ומשקל.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">ריתוך חום</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          ריתוך אוויר חם או טריז חם המשמש לתפרים וחיזוקים. נפוץ RIB בבנייה גדולה. פחות מדויק מריתוך RF אך יעיל Hypalon
+          PVC לבדים כבדים.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="materials" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">השוואת חומרים</h2>
+    <div class="mt-6 overflow-x-auto">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="bg-gray-50 border-b-2 border-gray-200">
+            <th class="px-4 py-3 text-left font-semibold text-gray-700">נכס</th>
+            <th class="px-4 py-3 text-center font-semibold text-sky-700">PVC</th>
+            <th class="px-4 py-3 text-center font-semibold text-emerald-700">Hypalon CSM</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            [
+              ['Relative Cost', '$ (budget)', '$$$ (premium)'],
+              ['UV Resistance', 'Good (with coating)', 'Excellent (inherent)'],
+              ['Abrasion Resistance', 'Moderate-Good', 'Excellent'],
+              ['Chemical Resistance', 'Good', 'Excellent'],
+              ['Cold Flexibility', 'Stiffens below 0°C', 'Flexible to -20°C'],
+              ['Lifespan', '8-12 years', '15-20+ years'],
+              ['Seam Method', 'RF welding', 'Hand gluing'],
+              ['Repair', 'PVC glue (easy)', '2-part adhesive (moderate)'],
+            ].map((row, i) => (
+              <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                {row.map((cell, j) => (
+                  <td
+                    class={`px-4 py-3 border-b border-gray-200 ${j === 0 ? 'font-medium text-gray-700' : 'text-center text-gray-600'}`}
+                  >
+                    {cell}
+                  </td>
+                ))}
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-4 text-sm text-gray-500">
+      חומר צבאי מודרני PVC (1100-1670 דטקס) מציע עמידות מצוינת לרוב המשתמשים הפנאי במחצית העלות של Hypalon. Hypalon
+      מועדף לציים מסחריים, אקלים טרופי, ויישומים קריטיים למשימות.
+    </p>
+    <a
+      href={`/${lang}/learn/pvc-vs-hypalon`}
+      class="mt-4 inline-block text-sky-600 hover:text-sky-700 text-sm font-medium">מדריך מעמיק PVC מול Hypalon →</a
+    >
+  </section>
+
+  <section id="selection" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">איך לבחור סירה מתנפחת</h2>
+    <div class="mt-8 grid md:grid-cols-3 gap-6">
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">1. הגדר את מקרה השימוש שלך</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>פנאי: סירה קטנה או SUP</li>
+          <li>ביצועים: RIB (15-60 HP)</li>
+          <li>מסחרי: RIB (100+ HP)</li>
+          <li>כושר: מתנפח SUP</li>
+          <li>נסיעה: קיאק מתנפח</li>
+        </ul>
+      </div>
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">2. קבע את התקציב שלך</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>$200-$800: מתנפח SUP</li>
+          <li>$500-$2,000: מנוע סירה קטנה +</li>
+          <li>3,000$-8,000$: כניסה RIB</li>
+          <li>8,000$–20,000$: פרימיום RIB</li>
+          <li>20,000$+: מסחרי RIB</li>
+        </ul>
+      </div>
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">3. שקול חומר</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>PVC: ידידותי לתקציב, קל</li>
+          <li>Hypalon: פרימיום, עמיד לאורך זמן</li>
+          <li>Drop-Stitch: ביצועים נוקשים</li>
+          <li>משקל בד: 1100-1670 דטקס</li>
+          <li>ציפוי: UV + שכבות ניקוב</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="safety" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">בטיחות ותקנים</h2>
+    <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">CE הסמכה</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          כל הסירות המתנפחות הנמכרות באיחוד האירופי דורשות סימון CE בהתאם להנחיית כלי השיט הנופשיים (RCD) 2013/53/EU.
+          האישור כולל את קטגוריית העיצוב (A-D), צף, יציבות וקיבולת העמסה. סירות Aquafarer מוסמכות CE לשימוש נופש והצלה.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">תקן</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          תקן בינלאומי לסירות מתנפחות המפרט דרישות לחומרים, תפרים, שסתומים ובדיקות ביצועים. סוגים I-IV כוללים הכל,
+          מדינג'ים קטנים ועד RIBs גדולים.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">ציוד בטיחות חיוני</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          אפודי הצלה/מכשירי הצלה (CE 12402), חבל הצלה, דלי/מטף כיבוי אש, אורות ניווט (לילה), רדיו VHF, ערכת עזרה ראשונה,
+          עוגן, ומשוט או דלק חלופי.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">תפעול בטוח</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          לעולם אל תחרוג ממספר האנשים המרבי המצויין על צלחת הקיבולת. בדוק את אמינות השסתום לפני ההשקה. פזר את המשקל
+          באופן שווה. עקוב אחרי תנאי מזג האוויר. הגש תוכנית שיט. קח קורס בטיחות שיט.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="maintenance" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">תחזוקה וטיפול</h2>
+    <div class="mt-8 space-y-4 text-sm text-gray-600">
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <>
+          <span class="text-sky-600 font-bold flex-shrink-0">1.</span>
+          <span>שטוף במים מתוקים אחרי כל שימוש במים מלוחים. יבש לחלוטין לפני האחסון.</span>
+        </>
+      </div>
+    </div>
+  </section>
+</section>

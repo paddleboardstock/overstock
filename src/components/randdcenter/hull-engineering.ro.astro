@@ -1,0 +1,184 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'ro' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline"
+    >← Înapoi la Centrul de Cercetare și Dezvoltare</a
+  >
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Laborator 02</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Studio de Inginerie a Carenei</h1>
+      <p class="mt-3 text-lg text-muted">Simulare digitală, inteligență structurală, design personalizat al carenei</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/design discussaquafarer-inflatable-boat-aquafarer-factory-exterior.webp"
+        alt="Aquafarer stație de lucru pentru proiectarea CAD a carenei"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Unde rezistența întâlnește hidrodinamica</h2>
+  <p>
+    Carena este coloana vertebrală a oricărei RIB sau bărci gonflabile. Trebuie să fie suficient de ușoară pentru a
+    plana eficient, suficient de rezistentă pentru a absorbi încărcăturile de impact și dimensional stabilă pe o gamă
+    largă de temperaturi. La{SITE.name}, Studio-ul nostru de Inginerie a Carenei combină modelarea avansată CAD, analiza
+    prin elemente finite (FEA) și decenii de experiență practică în arhitectura navală pentru a oferi carene optimizate
+    pentru misiunea lor intenționată — nu forme generice adaptate dintr-un catalog.
+  </p>
+  <p>
+    Lucrăm cu trei materiale principale pentru carene — HDPE modelat prin rotație, aluminiu marin sudat și fibră de
+    sticlă aplicată manual — și deținem capacitatea inginerească de a proiecta, simula și valida fiecare în mod intern.
+  </p>
+
+  <h2>Instrumente și standarde de proiectare</h2>
+  <p>Mediul nostru digital de inginerie include:</p>
+  <table>
+    <thead><tr><th>Capabilitate</th><th>Software / Instrument</th><th>Aplicație</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Modelare 3D parametrică</td><td>SolidWorks Professional</td><td
+          >Suprafața carenei, sistemul de chingă, suport motor, aranjament punte</td
+        ></tr
+      >
+      <tr
+        ><td>Analiza prin elemente finite</td><td>ANSYS Mechanical & LS-DYNA</td><td
+          >Maparea stresului, analiza modală, simularea impactului/coliziunii</td
+        ></tr
+      >
+      <tr
+        ><td>Fluidodinamică computațională</td><td>Ansys Fluent / Star-CCM+</td><td
+          >Predicția tracțiunii hidrodinamice, optimizarea tangajului</td
+        ></tr
+      >
+      <tr
+        ><td>Inginerie laminate</td><td>ESAComp / CADEC</td><td
+          >Stratificarea fibrei de sticlă, selecția nucleului, estimarea greutății</td
+        ></tr
+      >
+      <tr
+        ><td>Simularea fluxului în matriță</td><td>Moldex3D</td><td>Predicția grosimii peretelui în rotomodelare</td
+        ></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>Fluxul nostru de lucru inginerești</h2>
+  <p>
+    Fiecare proiect de carenă, fie că este un model standard sau un proiect complet personalizat, urmează un proces
+    riguros în cinci etape:
+  </p>
+  <ol>
+    <li>
+      <strong>Concept & colectarea cerințelor</strong>— Ne întâlnim cu dumneavoastră pentru a defini încărcătura utilă,
+      învelișul vitezei, capacitatea de stare a mării, cerințele de remorcare și orice echipament special de misiune
+      (trape de punte, poziții pentru console, integrarea rezervorului de combustibil).
+    </li>
+    <li>
+      <strong>Suprafață 3D și calcul hidrostatic</strong>— Forma carenei este modelată în SolidWorks și verificată
+      pentru stabilitatea hidrostatică (GM, brațul de redresare) folosind instrumente de analiză integrate.
+    </li>
+    <li>
+      <strong>FEA structurală</strong>— Cazurile de încărcare sunt definite: statice (+echipament al echipajului),
+      dinamice (impacturi de planare la 5g) și slovituri (coborâre dintr-o creastă de val la 3 m/s). Sunt revizuite
+      contururile de tensiune; factorul de siguranță ≥ 2,5 este obligatoriu.
+    </li>
+    <li>
+      <strong>Optimizarea rezistenței la înaintarea CFD</strong>— Carcasa este simulată la trei condiții de încărcare și
+      cinci viteze. Suprafața umedă, unghiul de trim și rezistența reziduală sunt reduse iterativ.
+    </li>
+    <li>
+      <strong>Revizuire de proiectare și lansare</strong>— Pachetul complet de inginerie (model 3D, raport FEA, raport
+      CFD, estimare a greutății, carte de placaje) este revizuit de arhitectul nostru naval senior înainte de a fi
+      lansat la atelierul prototipului.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Distribuția tensiunilor FEA — RIB Carenă patrulare 450 (aluminiu 5083)
+    </p>
+    <div class="grid grid-cols-2 gap-4 text-sm">
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">2.8 : 1</span>
+        <span class="text-gray-500">Factor de siguranță la sarcina utilă maximă</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">15.2 %</span>
+        <span class="text-gray-500">Reducerea rezistenței la înainare vs generația anterioară</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">87 kN/m²</span>
+        <span class="text-gray-500">Presiunea maximă de lovitură (limită de proiectare)</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">18 000 h</span>
+        <span class="text-gray-500">Durata cumulată de execuție FEA în 2025</span>
+      </div>
+    </div>
+  </div>
+
+  <h2>Personalizare: carena ta, regulile tale</h2>
+  <p>
+    Niciun operator nu are cerințe identice. O patrulă portuară RIB are nevoie de o carenă în V puțin adânc pentru
+    stabilitate la viteză mică; o ambarcațiune de interceptare rapidă are nevoie de un V adânc cu șine de pulverizare; o
+    barcă de sprijin pentru scufundări are nevoie de o lățime largă și un pupa jos. Nu forțăm aplicația dumneavoastră să
+    adopte o formă preexistentă a corpului. Proiectăm de la specificațiile dumneavoastră în sus.
+  </p>
+  <p>Exemple de proiecte recente de inginerie personalizată a carcasei:</p>
+  <ul>
+    <li>
+      O carenă HDPE alungită de 6,8 m pentru un operator turistic din Caraibe, cu prova întărită pentru debarcările pe
+      plajă (+grosimea fundului de 15%).
+    </li>
+    <li>
+      Un cilindru ușor din aluminiu de 7,2 RIB m pentru o gardă de coastă, cu defletoare integrate pentru rezervoarele
+      de combustibil și rigidizări pentru dulapuri pentru echipamente.
+    </li>
+    <li>
+      O barcă de scufundări din fibră de sticlă de 5,5 m, cu pupa redusă și două cutii de baterii, proiectată pentru
+      reabordarea ușoară a snorkelerilor.
+    </li>
+  </ul>
+
+  <h2>Inginerii noștri</h2>
+  <p>
+    Studioul este condus de un arhitect naval senior cu 14 ani de experiență în proiectarea ambarcațiunilor de mare
+    viteză, susținut de doi ingineri mecanici specializați în FEA și CFD. Toți trei dețin diplome avansate în inginerie
+    marină sau arhitectură navală de la universități recunoscute internațional. Echipa publică regulat în reviste de
+    industrie și prezintă la conferințe precum International Conference on High-Performance Marine Vehicles.
+  </p>
+
+  <h2>Colaborează cu noi la următorul tău corp</h2>
+  <p>
+    De la prima schiță conceptuală până la raportul final de tensiune, Studioul nostru de Inginerie a Carenei este
+    partenerul tău în crearea unei bărci care nu este doar construită — ci și proiectată. Investim orele de simulare
+    dinainte, astfel încât fiecare sudură, fiecare strat laminat și fiecare curbă a corpului să existe cu un scop.
+  </p>
+  <p>
+    Indiferent dacă aveți nevoie de o modificare minoră la un model existent sau de un design complet curat, suntem gata
+    să discutăm cerințele dumneavoastră.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Începeți consultația pentru proiectarea carenei</h2>
+    <p class="mt-2 text-sm text-muted">
+      Povestiți-ne despre profilul misiunii dumneavoastră și vă vom propune o cale inginerească.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Contactează echipa noastră de inginerie</a
+    >
+  </div>
+</section>

@@ -1,0 +1,119 @@
+hero:
+  tagline: Tehnika valge paber
+  title: Drop-Stitch Tehnoloogia ja materjaliteadus:<br />Moodsa õhkutäidetava veesõiduki inseneritöö
+  subtitle: Autoriteetne tehniline käsiraamat, mis käsitleb drop-stitch tuumkonstruktsiooni, PVC võrreldes Hypalon materjaliga, kõrgsurve anumate jäikuse testimist ja veesõidukite tootmisstandardeid.
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/randd/aquafarer-design-discussion-lab.webp
+    alt: Aquafarer R&D labor — materjalide testimine ja inseneritöö
+direct_answer: Drop-stitch tehnoloogia kasutab tuhandeid sisemisi polüesterniite, mis ühendavad õhkutäidetava tuuma ülemise ja alumise kangakihi. Kui see täidetakse 15–20 PSI rõhuni, toimivad need niidid pingelisena ja takistavad paisumist, luues jäiga struktuuri, mis on võrreldav kõvakesta konstruktsiooniga. Koos arenenud PVC või Hypalon kangakatete ja RF-keevitusega võimaldab see luua kaasaskantavaid, kõrge jõudlusega õhkutäituvate veesõidukite, mis sobivad professionaalseks, kommertslikuks ja vabaajaliseks kasutamiseks.
+section_drop_stitch:
+  title: Drop-Stitch Struktuuriinseneria
+  subtitle: Kuidas tuhanded niidid muudavad paindliku kanga jäigaks struktuuriks
+  content: |
+    Drop-stitch (tuntud ka kui "drop-stitch kangas" või "drop-stitch tuum") tähistab läbimurret õhkutäituvate struktuuride inseneriteaduses. Põhimõte on petlikult lihtne: tuhanded individuaalsed polüesterniit on samaaegselt kootud kaheks eraldi baaskangaks, ühendades üle- ja alapaneelid 90-kraadise nurga all.
+
+    Kui suletud kambrit survestatakse, avaldab sisemine õhurõhk jõudu ühtlaselt kõikides suundades — püüdes suruda üle- ja alapaneele lahku silindrilise kujundi saavutamiseks. Tuhanded drop-stitch niidid vastupanu sellele lahknemisele, viies koormuse niidi telje suunas pingeks. Tulemuseks on lame, jäik paneel, mis suudab taluda 15–20 PSI sisemist rõhku.
+
+    20 PSI juures kogeb 1 m² drop-stitch paneel ligikaudu 14 000 kg kogusisendujõudu — ent niidivõrk hoiab selle täielikult lamen. See annab drop-stitch struktuuridele tugevuse-kaalu suhte, mis konkureerib traditsiooniliste jäikade materjalidega.
+section_materials:
+  title: PVC vs Hypalon — Tehniline materjalide võrdlus
+  subtitle: Objektiivsed andmed teadlikuks materjalivalikuks õhkutäituvate veesõidukite tootmisel
+  table:
+    columns:
+      - header: Omadus
+      - header: PVC (polüvinüülkloriid)
+      - header: Hypalon (CSM)
+    rows:
+      - property: UV-vastupidavus
+        pvc: Hea (koos UV stabilisaatoritega)
+        hypalon: Suurepärane (omane)
+      - property: Kulumiskindlus
+        pvc: Hea
+        hypalon: Väga hea
+      - property: Tõmbe tugevus
+        pvc: 3 000–5 000 N/5cm
+        hypalon: 2 500–4 000 N/5cm
+      - property: Kaal m² kohta
+        pvc: 850–1,200 g
+        hypalon: 1,100–1,500 g
+      - property: Külmpainduvus
+        pvc: -30°C
+        hypalon: -20°C
+      - property: Ühendusmeetod
+        pvc: RF-keevitus / kuumaõhu keevitus
+        hypalon: Käsitsi kleepimine (kontaktliim)
+      - property: Remondivõime
+        pvc: Lihtne (soojuskeevitus või liim)
+        hypalon: Nõuab CSM liimi
+      - property: Materjalikulu
+        pvc: $8–15 / m²
+        hypalon: $20–40 / m²
+      - property: Eluea pikkus (tropikaline päike)
+        pvc: 5–8 aastat
+        hypalon: 10–15 aastat
+      - property: Värvivalik
+        pvc: Lai (täisspektri värvid)
+        hypalon: Piiratud (põhivärvid)
+      - property: Keemiline vastupidavus
+        pvc: Hea (kütuse-/õli-kindlad klassid)
+        hypalon: Suurepärane (lai keemiline taluvus)
+section_testing:
+  title: Testimine ja ohutusprotokollid
+  subtitle: Aquafarer kvaliteedi tagamise raamistik iga tootmiserandi jaoks
+  protocols:
+    - title: 1,25x hinnatud rõhu hoidmise test
+      description: Iga kokkupandud anum täidetakse 1,25x selle hinnatud tööpingega ja hoitakse 24–48 tundi. Igasugune rõhulangus üle 2% põhjustab tagasilükkamise ja ümbertöötamise.
+      standard: ISO 6185
+    - title: Õmbluse eemaldamisjõu test
+      description: Iga tootmiserandi keevitus- ja liimiõmbluse proovid testitakse eemaldamisjõu suhtes kalibreeritud pingutusvarustuse abil. Nõutav minimaalne 4 kN/m eemaldamisjõud.
+      standard: ISO 2411
+    - title: Kanga tõmbetesti
+      description: Sissetulevad kangarullid läbivad tõmbejõu ja pikenduse testid nii lõimes kui põimes. Tagasilükkamise künnis alla 3,000 N/5cm PVC puhul.
+      standard: ISO 1421
+    - title: UV Kiirendatud ilmastikutingimustele vastupidavus
+      description: Materjaliproovid allutatakse 1,000+ tunnile kiirendatud UV kokkupuutes QUV testkambris. Lubatud on maksimaalselt 15% tõmbetugevuse kadu.
+      standard: ASTM G154
+    - title: Klapi ja ühenduse terviklikkus
+      description: Iga klapi komplekti testitakse tihendite terviklikkuse osas 1,25x hinnatud rõhu juures. Tagasi lekke klapid testitakse ühesuunalise tihendi jõudluse osas.
+      standard: ISO 12402
+section_manufacturing:
+  title: Tootmisstandardid ja kvaliteedisertifikaadid
+  subtitle: Tööstusstandardite vastavus globaalsele turule pääsemiseks
+  standards:
+    - name: ISO 9001:2015
+      body: SGS Sertifitseeritud
+      scope: Kvaliteedijuhtimissüsteem disaini, tootmise ja tarnimise valdkonnas
+    - name: CE 2013/53/EL
+      body: ELi teavitatud asutus
+      scope: Vabaaja veesõidukite direktiiv — kere disain, stabiilsus, ujuvus, heitgaasid
+    - name: BSCI
+      body: Amfori
+      scope: Sotsiaalne vastavus — töötajate ohutus, õiglane töö, keskkonnajuhtimine
+    - name: ISO 6185
+      body: Rahvusvaheline standard
+      scope: Täispuhutavad paadid — konstruktsioon, stabiilsus, ujuvus, rõhutestimine
+    - name: REACH
+      body: ELi regulatsioon
+      scope: Keemiline ohutus — piiratud ained materjalides ja katetes
+section_faq:
+  title: Tehniline KKK
+  questions:
+    - q: Kuidas drop-stitch see võrreldes traditsioonilise kõva kestaga ehitusega on?
+      a: Kaasaegsed drop-stitch 20-aastased PSI tuumad saavutavad 85–90% jäikusest võrreldes võrreldavate EPS-vaht/klaaskiuga kõvakestadega, olles samal ajal täielikult tühjendatavad transpordiks. Kompromiss on veidi suurem kaal ja madalam lõplik jäikus — kuid enamiku vabaaja- ja ärirakenduste puhul on vahe tühine.
+    - q: Millist keermetihedust peetakse esmaklassiliseks kvaliteediks?
+      a: drop-stitch Premium-kangad kasutavad 2 niiti ruuttolli kohta (umbes 3100 niiti/m²), mis on kootud 1680 DTEX polüesterlõngast. Algtaseme kangad kasutavad 1 niiti ruuttolli kohta ja 1100 DTEX lõnga.
+    - q: Kas seda saab Hypalon keevitada nagu PVC?
+      a: Ei. Hypalon/CSM ei saa RF-keevitada. See tuleb kokku panna käsitsi peale kantud kontakttsementiga, mis muudab tootmise töömahukamaks ja õmblused sõltuvad operaatori oskustest.PVC Saab olla RF-keevitatud või kuumaõhuga keevitatud, et tagada ühtlane ja automaatne õmbluskvaliteet.
+    - q: Mis on maksimaalne ohutu rõhk täispuhutavate paatide puhul?
+      a: Tavalised täispuhutavad paaditorud töötavad temperatuuril 8–12 PSI.Drop-stitch Põrandad töötavad 12–20 PSI. Kõrgsurve drop-stitch südamikud (SUPs) võivad töötada 20–25 PSIkraadil. Iga toode sisaldab rõhuleevendusventiile, mis on kalibreeritud ületäitmise vältimiseks.
+    - q: Kui kaua võtab aega eritellimusel täispuhutava paadi valmistamine?
+      a: OEM Standardtootmine kestab tellimuse kinnitamisest kuni Qingdaoni 30–45 FOB päeva. Eritellimusel vormide arendus lisab prototüüpide tootmisele ja testimisele 15–20 päeva.
+cta:
+  title: Insenerikonsultatsioon
+  subtitle: Kas teil on konkreetne materjali- või disainiküsimus? Meie insenerimeeskond on tehnilisteks aruteludeks kättesaadav.
+  actions:
+    - variant: primary
+      text: Küsi meie insenerimeeskonnalt
+      href: /contact
+    - text: Avasta meie teadus- ja arenduskeskus
+      href: /randdcenter

@@ -1,0 +1,382 @@
+---
+const { lang = 'de' } = Astro.props;
+import JsonLd from '~/components/common/JsonLd.astro';
+import AiQuickAnswer from '~/components/common/AiQuickAnswer.astro';
+const t = (_key: string) => '';
+---
+
+<JsonLd
+  type="Article"
+  article={{
+    headline: 'Leitfaden für aufblasbare Boote — Die vollständige Ressource',
+    description:
+      'Ein umfassender Leitfaden zu aufblasbaren Booten mit Bootstypen, Bauweisen, Materialvergleich, Auswahlkriterien, Sicherheitsstandards und Wartung.',
+    datePublished: '2026-07-07',
+  }}
+  data={{ url: 'https://aquafarer.com/marine-industry/' }}
+/>
+
+<JsonLd
+  type="BreadcrumbList"
+  breadcrumbs={[
+    { name: t('nav.home') || 'Home', href: `/${lang}/` },
+    { name: 'Marineindustrie', href: `/${lang}/marine-industry` },
+    { name: 'Leitfaden für aufblasbare Boote', href: `/${lang}/marine-industry/` },
+  ]}
+/>
+
+<AiQuickAnswer
+  entityType="Leitfaden"
+  quickAnswer="Ein aufblasbares Boot ist ein leichtes Wasserfahrzeug, dessen flexible Gewebeschläuche (Auftriebskammern) mit Druckluft gefüllt werden, um Auftrieb zu erzeugen. Zu den modernen aufblasbaren Booten zählen Dinghys, RIBs (Festrumpfschlauchboote), aufblasbare Kajaks und Stand-Up-Paddle-Boards. Sie werden aus PVC- oder Hypalon-CSM-Geweben per HF-Schweißen oder handgeklebten Nähten hergestellt; die Drop-Stitch-Konstruktion ermöglicht hochdruckfeste, starre Böden."
+  facts={[
+    { label: 'Globaler Marktumfang', value: '$2.8B (2026)' },
+    { label: 'Primärmaterialien', value: 'PVC / Hypalon CSM' },
+    { label: 'Lebensdauer', value: '8-20+ Jahre' },
+    { label: 'CE-Zertifizierung', value: 'Erforderlich (EU)' },
+  ]}
+/>
+
+<section class="max-w-4xl mx-auto py-16 px-6">
+  <h1 class="text-4xl font-semibold text-gray-900">Leitfaden für aufblasbare Boote</h1>
+  <p class="mt-4 text-lg text-gray-500">
+    Die maßgebliche Ressource zu aufblasbaren Wasserfahrzeugen — von Freizeit-Dinghys über professionelle RIBs bis hin
+    zu Spezialrettungsbooten.
+  </p>
+
+  <nav class="mt-8 flex flex-wrap gap-2">
+    {
+      [
+        { label: 'Typen', id: 'types' },
+        { label: 'Konstruktion', id: 'construction' },
+        { label: 'Materialien', id: 'materials' },
+        { label: 'Auswahl', id: 'selection' },
+        { label: 'Sicherheit', id: 'safety' },
+        { label: 'Wartung', id: 'maintenance' },
+        { label: 'Standards', id: 'standards' },
+      ].map((s) => (
+        <a
+          href={`#${s.id}`}
+          class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition"
+        >
+          {s.label}
+        </a>
+      ))
+    }
+  </nav>
+
+  <section id="types" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Arten aufblasbarer Boote</h2>
+    <div class="mt-8 grid gap-6">
+      {
+        [
+          {
+            title: 'Aufblasbare Dinghys',
+            desc: 'Kleine, tragbare Boote für Zubringerdienste, Angeln und kurze Freizeitfahrten. Typischerweise 2-4 m lang, mit kleinen Außenbordern (2-15 PS) oder Riemen angetrieben. Der günstigste Einstieg.',
+            icon: '🚤',
+          },
+          {
+            title: 'Festrumpf-Schlauchboote (RIBs)',
+            desc: 'Leistungsstarke Boote mit starrem Rumpf aus GFK, Aluminium oder HDPE und aufblasbaren Auftriebskammern. Längen von 3-12 m, Außenbordmotoren mit 15-300+ PS. Einsatz bei Patrouille, Rettung, Tauchen und Hochseefahrten.',
+            icon: '⚡',
+          },
+          {
+            title: 'Aufblasbare Kajaks',
+            desc: 'Tragbare Kajaks aus PVC- oder TPU-Gewebe. Erhältlich in Einzel- und Tandemausführung für Freizeittouren, Flussfahrten und Expeditionen.',
+            icon: '🛶',
+          },
+          {
+            title: 'Aufblasbare Stand-Up-Paddle-Boards (SUPs)',
+            desc: 'In Drop-Stitch-Konstruktion gefertigte Paddle-Boards, die sich zu starren Hochdruckdecks aufpumpen lassen. Erhältlich als Allround-, Touring-, Yoga-, Angel- und Surf-Modelle.',
+            icon: '🏄',
+          },
+          {
+            title: 'Rettungsboote (SAR)',
+            desc: 'Spezialisierte RIBs für Such- und Rettungseinsätze. Mit selbstlenzendem Boden, Mittelkonsole, Schleppösen und Signalfarben. Für den Rettungseinsatz CE-zertifiziert.',
+            icon: '🆘',
+          },
+          {
+            title: 'Kommerzielle Arbeitsboote',
+            desc: 'Robuste RIBs für Tauchunterstützung, Patrouille, Vermessung und kommerzielle maritime Einsätze. Hypalon-CSM-Konstruktion, verstärkte Rümpfe und professionelle Ausstattung.',
+            icon: '⚙️',
+          },
+        ].map((item) => (
+          <div class="flex gap-4 p-5 bg-gray-50 rounded-xl border border-gray-200">
+            <span class="text-2xl flex-shrink-0">{item.icon}</span>
+            <div>
+              <h3 class="font-semibold text-gray-900">{item.title}</h3>
+              <p class="mt-1 text-sm text-gray-600">{item.desc}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section id="construction" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Bauweisen</h2>
+    <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">HF-Schweißen (Hochfrequenz)</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Nutzt elektromagnetische Energie, um PVC-Schichten auf molekularer Ebene zu verschmelzen. Erzeugt die
+          stärksten luftdichten Nähte. Üblich bei hochwertigen PVC-Booten und SUPs. Erfordert spezielle Maschinen und
+          geschulte Bedienung.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Handverklebung / chemische Verbindung</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Zweikomponenten-Klebstoff verbindet die Gewebebahnen. Die Hauptmethode für Hypalon-CSM-Boote (nicht
+          HF-schweißbar). Erfordert präzise Oberflächenvorbereitung, kontrollierte Luftfeuchtigkeit und ausreichende
+          Aushärtezeit für optimale Nahtfestigkeit.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Drop-Stitch-Kern</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Tausende Polyesterfäden verbinden die obere und untere PVC-Schicht und ermöglichen das Aufpumpen auf hohen
+          Druck (15-25 PSI) für starres Board-Verhalten. Die Fadendichte (15-50 Fäden/cm²) bestimmt Steifigkeit und
+          Gewicht.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Heißschweißen</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Heißluft- oder Heizkeilschweißen für Nähte und Verstärkungen. Üblich bei der Fertigung größerer RIBs. Weniger
+          präzise als das HF-Schweißen, aber effektiv für Hypalon und schwere PVC-Gewebe.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="materials" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Materialvergleich</h2>
+    <div class="mt-6 overflow-x-auto">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="bg-gray-50 border-b-2 border-gray-200">
+            <th class="px-4 py-3 text-left font-semibold text-gray-700">Eigenschaft</th>
+            <th class="px-4 py-3 text-center font-semibold text-sky-700">PVC</th>
+            <th class="px-4 py-3 text-center font-semibold text-emerald-700">Hypalon CSM</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            [
+              ['Relative Kosten', '$ (Budget)', '$$$ (Premium)'],
+              ['UV-Beständigkeit', 'Gut (mit Beschichtung)', 'Hervorragend (materialeigen)'],
+              ['Abriebfestigkeit', 'Mittel-Gut', 'Hervorragend'],
+              ['Chemikalienbeständigkeit', 'Gut', 'Hervorragend'],
+              ['Kälteflexibilität', 'Versteift unter 0°C', 'Flexibel bis -20°C'],
+              ['Lebensdauer', '8-12 Jahre', '15-20+ Jahre'],
+              ['Nahtmethode', 'HF-Schweißen', 'Handverklebung'],
+              ['Reparatur', 'PVC-Kleber (einfach)', '2K-Kleber (mittel)'],
+            ].map((row, i) => (
+              <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                {row.map((cell, j) => (
+                  <td
+                    class={`px-4 py-3 border-b border-gray-200 ${j === 0 ? 'font-medium text-gray-700' : 'text-center text-gray-600'}`}
+                  >
+                    {cell}
+                  </td>
+                ))}
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-4 text-sm text-gray-500">
+      Modernes PVC in Militärqualität (1100-1670 dtex) bietet den meisten Freizeitnutzern eine hervorragende Haltbarkeit
+      zur Hälfte der Kosten von Hypalon. Hypalon wird für kommerzielle Flotten, tropische Klimazonen und
+      sicherheitskritische Anwendungen bevorzugt.
+    </p>
+    <a
+      href={`/${lang}/learn/pvc-vs-hypalon`}
+      class="mt-4 inline-block text-sky-600 hover:text-sky-700 text-sm font-medium"
+      >Ausführlicher Leitfaden: PVC vs. Hypalon →</a
+    >
+  </section>
+
+  <section id="selection" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">So wählen Sie ein aufblasbares Boot</h2>
+    <div class="mt-8 grid md:grid-cols-3 gap-6">
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">1. Definieren Sie Ihren Verwendungszweck</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>Freizeit: Dinghy oder SUP</li>
+          <li>Leistung: RIB (15-60 PS)</li>
+          <li>Kommerziell: RIB (100+ PS)</li>
+          <li>Fitness: aufblasbares SUP</li>
+          <li>Reisen: aufblasbares Kajak</li>
+        </ul>
+      </div>
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">2. Legen Sie Ihr Budget fest</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>$200-$800: Aufblasbares SUP</li>
+          <li>$500-$2,000: Dinghy + Motor</li>
+          <li>$3,000-$8,000: Einsteiger-RIB</li>
+          <li>$8,000-$20,000: Premium-RIB</li>
+          <li>$20,000+: Kommerzielles RIB</li>
+        </ul>
+      </div>
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">3. Material berücksichtigen</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>PVC: Preisgünstig, leicht</li>
+          <li>Hypalon: Premium, langlebig</li>
+          <li>Drop-Stitch: Starre Leistung</li>
+          <li>Gewebestärke: 1100-1670 dtex</li>
+          <li>Beschichtung: UV- und Durchstoßschutzschichten</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="safety" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Sicherheit & Standards</h2>
+    <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">CE-Zertifizierung</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Alle in der EU verkauften aufblasbaren Boote benötigen die CE-Kennzeichnung gemäß der Sportboot-Richtlinie
+          (RCD) 2013/53/EU. Die Zertifizierung umfasst die Konstruktionskategorie (A-D), Auftrieb, Stabilität und
+          Tragfähigkeit. Aquafarer-Boote sind für den Freizeit- und Rettungseinsatz CE-zertifiziert.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Norm</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Die internationale Norm für aufblasbare Boote legt Anforderungen an Materialien, Nähte, Ventile und
+          Leistungsprüfungen fest. Die Typen I-IV decken alles von kleinen Dinghys bis zu großen RIBs ab.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Unverzichtbare Sicherheitsausrüstung</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Schwimmwesten/Rettungswesten (CE 12402), Wurfleinen, Lenzpumpe/Feuerlöscher, Navigationslichter (nachts),
+          VHF-Funkgerät, Erste-Hilfe-Set, Anker sowie Ersatzpaddel oder -treibstoff.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Sicherer Betrieb</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          NIEMALS die maximale Belastung am Typenschild überschreiten. Vor dem Zuwasserlassen die Ventile prüfen. Das
+          Gewicht gleichmäßig verteilen. Die Wetterbedingungen beobachten. Einen Fahrtenplan hinterlegen. Einen
+          Bootssicherheitskurs besuchen.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="maintenance" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Wartung & Pflege</h2>
+    <div class="mt-8 space-y-4 text-sm text-gray-600">
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <span class="text-sky-600 font-bold flex-shrink-0">1.</span><span
+          >Nach jedem Salzwassereinsatz mit Süßwasser abspülen. Vor dem Einlagern vollständig trocknen.</span
+        >
+      </div>
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <span class="text-sky-600 font-bold flex-shrink-0">2.</span><span
+          >Teilweise aufgeblasen an einem kühlen, trockenen Ort lagern, fern von direkter Sonneneinstrahlung und
+          extremen Temperaturen.</span
+        >
+      </div>
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <span class="text-sky-600 font-bold flex-shrink-0">3.</span><span
+          >Vor jeder Saison Ventile und Nähte prüfen. Die Ventilkörper jährlich mit Silikonspray behandeln.</span
+        >
+      </div>
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <span class="text-sky-600 font-bold flex-shrink-0">4.</span><span
+          >Mit milder Seife und Wasser reinigen. Niemals Lösungsmittel, Bleichmittel oder Hochdruckreiniger am Gewebe
+          verwenden.</span
+        >
+      </div>
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <span class="text-sky-600 font-bold flex-shrink-0">5.</span><span
+          >Beschädigungen umgehend mit vom Hersteller empfohlenen Reparatursets beheben. Bei Hypalon ausschließlich
+          Zweikomponenten-Kleber verwenden.</span
+        >
+      </div>
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <span class="text-sky-600 font-bold flex-shrink-0">6.</span><span
+          >Ventile alle 3-5 Jahre ersetzen. Das Gewebe am Ende der Lebensdauer erneuern (sichtbare Abnutzung, Porosität,
+          Nahttrennung).</span
+        >
+      </div>
+    </div>
+  </section>
+
+  <section id="standards" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Branchenanwendungen</h2>
+    <div class="mt-8 grid md:grid-cols-3 gap-4">
+      {
+        [
+          {
+            title: 'Freizeitbootfahren',
+            desc: 'Familienausflüge, Wassersport, Angeln, Camping und Freizeitfahrten auf Seen, Flüssen und Küstengewässern.',
+          },
+          {
+            title: 'Suche & Rettung',
+            desc: 'Küstenwache, Rettungsschwimmer und Notfallteams setzen spezialisierte RIBs für schnellen Einsatz und Rettung in rauer See ein.',
+          },
+          {
+            title: 'Kommerzielle Schifffahrt',
+            desc: 'Tauchunterstützung, Patrouille, Vermessung, Touristentransport und Offshore-Logistik, bei denen Haltbarkeit und Zuverlässigkeit entscheidend sind.',
+          },
+          {
+            title: 'Militär & Verteidigung',
+            desc: 'Taktische RIBs für Marineoperationen, Truppentransport, Entereinsätze und verdeckte Landungen.',
+          },
+          {
+            title: 'Humanitäre Hilfe',
+            desc: 'Katastrophenschutzorganisationen setzen aufblasbare Boote für Hochwasserrettung, Versorgungstransporte und medizinische Evakuierungen ein.',
+          },
+          {
+            title: 'OEM-Fertigung',
+            desc: 'Individuelle Private-Label-Produktion für Marken, Händler und spezialisierte Betreiber mit besonderen Anforderungen.',
+          },
+        ].map((app) => (
+          <div class="p-4 bg-gray-50 rounded-xl border border-gray-200">
+            <h3 class="font-semibold text-sm text-gray-900">{app.title}</h3>
+            <p class="mt-1 text-xs text-gray-500">{app.desc}</p>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="mt-16 bg-gradient-to-br from-sky-50 to-blue-50 rounded-2xl p-8 border border-sky-200">
+    <h2 class="text-xl font-semibold text-gray-900">Entdecken Sie die Schlauchboote von Aquafarer</h2>
+    <p class="mt-4 text-sm text-gray-600">
+      Aquafarer entwirft und fertigt CE-zertifizierte Schlauchboote, SUPs, Kajaks und RIBs für den Freizeit-, Profi- und
+      OEM-Markt. Alle Boote werden mit PVC in Militärqualität oder Hypalon-CSM-Geweben hergestellt — per modernem
+      HF-Schweißen oder Handverklebung.
+    </p>
+    <div class="mt-6 flex gap-4 flex-wrap">
+      <a
+        href={`/${lang}/products`}
+        class="px-6 py-3 bg-gray-900 text-white rounded-full text-sm font-medium hover:bg-gray-800 transition"
+        >Produkte ansehen</a
+      >
+      <a
+        href={`/${lang}/academy`}
+        class="px-6 py-3 border border-gray-200 text-gray-700 rounded-full text-sm font-medium hover:border-gray-400 transition"
+        >Lernzentrum</a
+      >
+    </div>
+  </section>
+</section>
+
+<section class="sr-only" data-ai-block="definition" aria-hidden="true">
+  <p>
+    Umfassender Leitfaden zu aufblasbaren Booten mit Bootstypen (Dinghys, RIBs, Kajaks, SUPs, Rettungsboote,
+    kommerzielle Arbeitsboote), Bauweisen (HF-Schweißen, Handverklebung, Drop-Stitch-Kern, Heißschweißen), Materialien
+    (PVC-Gewebe, Hypalon CSM), Auswahlkriterien (Verwendungszweck, Budget, Materialvergleich), Sicherheitsstandards
+    (CE-Zertifizierung, unverzichtbare Ausrüstung), Wartung (Reinigung, Lagerung, Reparaturen, Ventilpflege) und
+    Branchenanwendungen (Freizeit, SAR, kommerziell, Militär, humanitär, OEM).
+  </p>
+</section>

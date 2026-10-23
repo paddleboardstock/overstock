@@ -1,0 +1,82 @@
+hero:
+  tagline: Verslo paketai
+  title: Paruošta diegti vandens verslas<br />Paketai kiekvienam etapui
+  subtitle: Iš anksto sukonfigūruoti įrangos paketai vandens sporto klubams, kurortams ir prekės ženklų startuoliams — su skaidriomis kainomis, greitu pristatymu ir pilnais pritaikymo pasirinkimais.
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/use-cases/aquafarer-outdoor-adventure.webp
+    alt: Aquafarer verslo įrangos paketai
+direct_answer: Aquafarer siūlo tris iš anksto sukonfigūruotus verslo paketus vandens sporto operatoriams kiekviename etape. Klubų pradinio paketo (Club Starter Package) sudėtyje yra 10 SUPs su irklų, siurblių, remonto komplektų ir saugos įrangos pradedančioms klubams ir mokykloms. Kurortų premium paketas (Resort Premium Package) tiekia 50–100 vienetų su sandėliavimo sistemomis, ženklinimu ir mokymo vadovais viešbučiams bei svetingumo objektams. Prekės ženklo paleidimo paketas (Brand Launch Package) suteikia produktų pasirinkimą, individualų logotipo dizainą, pakavimą, gamybą ir siuntimą verslininkams, pradedantiems savo vandens sporto prekės ženklą. Visi paketai apima gamyklines kainas, CE sertifikavimą ir pasaulinės logistikos palaikymą.
+packages:
+  - id: club-starter
+    tag: Best Seller
+    name: Klubo pradžios paketas
+    subtitle: Viskas, ko jums reikia, kad pradėtumėte ar atnaujintumėte savo irklavimo klubą
+    target: SUP klubai, baidarių klubai, banglenčių mokyklos, treniruočių centrai
+    price_label: Nuo 4 800 $
+    line_items:
+      - item: 10 SUP lentų arba baidarių
+      - item: 10 atitinkančių irklo
+      - item: 10 didelės galios siurblių
+      - item: 10 taisymo rinkinių
+      - item: 10 gelbėjimosi liemenių su klubo logotipu
+      - item: Klubo prekės ženklas ant lentų
+      - item: Saugos ženklų rinkinys
+      - item: Pradedančiųjų pamokų vadovas PDF
+    cta_text: Gauti klubo paketą
+    cta_href: /contact
+  - id: resort-premium
+    tag: Premium
+    name: Prabangi kurorto programa
+    subtitle: Pilnas svečių vandens pramogų programa viešbučiams ir kurortams
+    target: Paplūdimio kurortai, viešbučiai prie ežero, ekologiniai kurortai, jachtų klubai
+    price_label: Individuali citata
+    line_items:
+      - item: 50–100 SUPs, baidarės arba mišri flotilė
+      - item: Pilnas kurorto įvaizdis visuose įrenginiuose
+      - item: Nuomojami irklai ir asmeninės plaukimo pagalbos priemonės
+      - item: Komercinė sandėliavimo lentynų sistema
+      - item: Inflacijos stotis su pramoniniais siurbliais
+      - item: Apsaugos sistema (plūdurai, ženklai, gelbėjimo lenta)
+      - item: Personalo mokymo programa
+      - item: Pajamų valdymo vadovas
+    cta_text: Įsigykite kurorto paketą
+    cta_href: /contact
+  - id: brand-launch
+    tag: Entrepreneur
+    name: Prekės ženklo pristatymo paketas
+    subtitle: Paverskite savo prekės ženklo idėją į siunčiamą produktą – paprastai per 60–90 dienų
+    target: Amazon pardavėjai, influenceriai, regioniniai platintojai
+    price_label: Nuo $6,500
+    line_items:
+      - item: Produkto pasirinkimo konsultacija
+      - item: Individualus logotipo dizainas ant lentų
+      - item: Individualus spalvų suderinimas
+      - item: Prekės ženklo mažmeninė pakuotė
+      - item: Pakabinimo žymos ir instrukcijų vadovas
+      - item: CE Sertifikavimo dokumentacija
+      - item: Gamybos pavyzdžiai
+      - item: FOB Qingdao laivyba
+    cta_text: Pristatyk savo prekės ženklą
+    cta_href: /contact
+faq:
+  title: Paketo DUK
+  questions:
+    - q: Koks yra minimalus siuntinių užsakymo kiekis?
+      a: Club Starter paketas turi mažiausiai 10 vienetų. Kurorto ir prekės ženklo paketai yra pritaikyti pagal jūsų poreikius su lanksčiu MOQs.
+    - q: Kiek laiko trunka pristatymas?
+      a: Standartinė gamyba trunka 30–45 dienas nuo užsakymo patvirtinimo. Pagreitinta gamyba siūloma už papildomą mokestį.
+    - q: Ar galiu pritaikyti įrangos spalvas ir prekės ženklą?
+      a: Taip. Visi paketai apima pilną pritaikymą – kartonų spalvas, logotipo spaudinius ir pakuotės dizainą.
+    - q: Ar teikiate pagalbą po pardavimo?
+      a: Taip. Kiekvienas paketas apima prieigą prie mūsų internetinių priežiūros vadovų, vaizdo pamokų ir atsarginių dalių užsakymo sistemos.
+cta:
+  title: Nesu tikras, kuris paketas tinka?
+  subtitle: Atsakykite į 3 trumpus klausimus ir mes rekomenduosime tobulą paketą jūsų verslui.
+  actions:
+    - variant: primary
+      text: Gaukite rekomenduojamą paketą
+      href: /contact
+    - text: Peržiūrėti sprendimus pagal auditoriją
+      href: /solutions
+    - text: Skaitykite sėkmės istorijas
+      href: /success-stories

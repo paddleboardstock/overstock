@@ -1,0 +1,45 @@
+hero:
+  tagline: Proces
+  title: Výrobný proces
+  subtitle: Od surovín až po loď pripravenú na more — každý krok je pod našou kontrolou
+  back_label: Späť do továrne
+  back_link: /factory
+intro: Na rozdiel od značiek, ktoré outsourcujú výrobu tretím stranám, Aquafarer vlastnia a prevádzkujú celý svoj výrobný reťazec. Táto vertikálna integrácia nám umožňuje udržiavať prísnu kontrolu kvality v každej fáze, rýchlo reagovať na vlastné požiadavky a dodávať konzistentnú kvalitu produktu šarža za šaržou. Takto sa v našom závode stavia loď.
+steps:
+  - step: '01'
+    title: Prijatie materiálu a kontrola
+    description: Každá prichádzajúca várka PVC látky, sklených vlákien, živice a kovania je kontrolovaná podľa špecifikácií. Vzorky látok sa testujú na pevnosť v ťahu, rovnomernosť hrúbky a UV odolnosť pred uvedením do výroby. Nekonformné materiály sú umiestnené do karantény a vrátené.
+    duration: 1–2 dni
+  - step: '02'
+    title: PVC Automatické rezanie
+    description: Schválené látky sa ukladajú na CNC automatický rezací stroj a režú s presnosťou pod milimeter. Počítačom optimalizované zahniezdenie usporadúva panely tak, aby minimalizovali odpad — zvyčajne pod 5 %. Rezané panely sú označené modelom lode a komorou a následne zabalené na prepravu do zváračskej dielne.
+    duration: 2–4 hodiny na každý člnový kit
+  - step: '03'
+    title: Tepelné tesnenie a zváranie trubiek
+    description: Panely sa pripínajú a lepia pomocou tepelných zváracích strojov s horúcim vzduchom pri kontrolovaných teplotách 200–600 °C. Hlavné spoje sú spevnené RF dielektrickým zváraním pre vzduchotesné, vysoko pevné spoje. Hotové komory sa nafúknu na pracovný tlak 1,25× pre 30-minútovú validáciu zadržiavania vzduchu.
+    duration: 1–2 dni na loď
+  - step: '04'
+    title: Lisovanie trupu zo sklolaminátu RIB
+    description: RIB Trupy lodí sa vyrábajú ručne ukladaným laminátovým tvarovaním. Vrstvy sklených rohoží a tkaných rovingov sa ručne valcujú polyesterovou alebo vinylesterovou živicou v presných formách. Každá vrstva je vákuovo zabalená pre konzistentnú kvalitu laminátu. Trup je dokončený gelcoatom pre UVlesklý, odolný morský povrch.
+    duration: 2–4 dni na trup
+  - step: '05'
+    title: SUP Tlač a dekorácia
+    description: SUP Grafika na doskových palubách sa aplikuje digitálnou tlačou pre farebné fotokvalitné dizajny a sieťotlačou pre odolné logá a opakujúce sa vzory. Tlače sa vytvrdzujú a utesňujú pre UV odolnosť voči odieraniu.
+    duration: 1–2 dni
+  - step: '06'
+    title: Konečná montáž a strojovňa
+    description: Na montážnej linke sa spájajú trupy a rúrkové zostavy zo sklolaminátu PVC . Motor je namontovaný, ovládanie riadenia a plynu je pripojené, palivový systém je nainštalovaný a celý elektrický zväzok je zapojený. Každá loď nasleduje 100-bodový kontrolný zoznam montáže s povinným schválením v každej fáze.
+    duration: 2–3 dni
+  - step: '07'
+    title: Kontrola kvality a inšpekcia
+    description: 'Každá dokončená loď prechádza povinnou kontrolou kvality: test zadržiavania vzduchu v komore, kontrolu funkčnosti systémov, overenie krútiaceho momentu spojovacích prvkov a kozmetickú kontrolu. Zákazkové a prototypové stavby tiež absolvujú námorné skúšky na vode pokrývajúce rýchlosť, ovládateľnosť, stabilitu a výdrž.'
+    duration: 1–2 dni
+  - step: '08'
+    title: Balenie a preprava
+    description: Lode sa vyfukujú, skladajú podľa postupu, balia do pevných tkaných vriec alebo preglejkových deben a nakladajú na prepravu. Každý balík je označený modelom, sériovým číslom a cieľovou destináciou. Koordinujeme s prepravcami pre prepravu FCL a LCL kontajnerových zásielok po celom svete.
+    duration: 1 deň
+cta:
+  title: Pozrite si naše vybavenie a stroje
+  desc: Preskúmajte priemyselné vybavenie za každou Aquafarer loďou.
+  label: Zobraziť vybavenie →
+  link: /factory/equipment

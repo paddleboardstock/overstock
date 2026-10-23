@@ -1,0 +1,131 @@
+hero_text:
+  tagline: Contact
+  title: NEEM CONTACT MET ONS OP
+contact_form:
+  id: form
+  title: Stuur een bericht
+  subtitle: Voor offertes, technische vragen of samenwerking — stuur ons een bericht. We reageren binnen één werkdag.
+  email_to: info@aquafarer.com
+  submit_button: Verzenden
+  success_message: Bedankt! Je bericht is ontvangen. We reageren binnen één werkdag.
+  error_message: Er is een fout opgetreden bij het verzenden. Probeer het opnieuw of stuur een e-mail rechtstreeks.
+  default_country_code: '+1'
+  captcha:
+    label: 'Antispam: los de volgende som op'
+  fields:
+    - name: firstName
+      label: Voornaam
+      row: 1
+    - name: lastName
+      label: Achternaam
+      row: 1
+    - name: companyName
+      label: Bedrijf
+      row: 2
+    - name: address
+      label: Adres
+      row: 3
+    - name: zip
+      label: Postcode
+      row: 4
+    - name: country
+      label: Land
+      row: 4
+      type: select
+      optionsKey: countries
+    - name: email
+      label: E-mail
+      row: 5
+      type: email
+    - name: tel
+      label: Telefoon
+      row: 5
+      type: tel
+      withCountryCode: true
+    - name: orderVolume
+      label: Geschat bestelvolume
+      row: 6
+      type: select
+      options:
+        - value: ''
+          label: Selecteer geschat volume...
+        - value: sample
+          label: Alleen monsters / prototypes
+        - value: '5-10'
+          label: 50–100 eenheden (standaard MOQ)
+        - value: '100-500'
+          label: 100–500 eenheden
+        - value: '500-plus'
+          label: 500+ eenheden (volumeprijzen)
+    - name: customization
+      label: Maatwerk nodig?
+      row: 7
+      type: select
+      options:
+        - value: ''
+          label: Selecteer maatwerktype...
+        - value: none
+          label: Standaardproduct (geen maatwerk)
+        - value: logo
+          label: Alleen aangepast logo / branding
+        - value: full
+          label: Volledige OEM (formaat, kleur, graphics, verpakking)
+        - value: consultation
+          label: Niet zeker — advies nodig
+    - name: productInterest
+      label: Interessante productcategorieën
+      row: 8
+      type: select
+      options:
+        - value: ''
+          label: Selecteer een productcategorie...
+        - value: all
+          label: Alle producten / volledige catalogus
+        - value: sup
+          label: SUP-planken / paddleboards
+        - value: kayak
+          label: Opblaasbare kajaks
+        - value: rib
+          label: RIB-boten
+        - value: dinghy
+          label: Bijboten / tenders
+        - value: safety
+          label: Veiligheidsuitrusting / reddingsvesten
+        - value: accessory
+          label: Accessoires (pompen, riemen, tassen)
+
+    - name: subject
+      label: Onderwerp
+      row: 9
+    - name: message
+      label: Bericht
+      row: 10
+      type: textarea
+      rows: 6
+features2_other_ways:
+  title: Andere contactmogelijkheden
+  columns: 3
+  items:
+    - title: Verkoopvragen
+      description: Offertes, configuraties, dealeraanvragen en groothandelsbestellingen.
+      icon: tabler:shopping-bag
+    - title: Technische ondersteuning
+      description: Garantie, reparaties, onderdelen en operationele vragen.
+      icon: tabler:tool
+    - title: Pers en partnerschappen
+      description: Mediapakketten, sponsoring en branche-samenwerking.
+      icon: tabler:news
+    - title: Telefoon
+      description: '+86 13305324192'
+      icon: tabler:headset
+    - title: E-mail
+      description: info@aquafarer.com
+      icon: tabler:mail
+    - title: Hoofdkantoor
+      description: Economische Ontwikkelingszone, Laixi, Qingdao, China, 266600
+      icon: tabler:map-pin
+map:
+  title: Onze locatie
+  subtitle: Bezoek ons
+  address: Economische Ontwikkelingszone, Laixi, Qingdao, China, 266600
+  zoom: 15

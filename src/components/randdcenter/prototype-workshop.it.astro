@@ -1,0 +1,210 @@
+---
+import { SITE } from 'astrowind:config';
+const { lang = 'it' } = Astro.props;
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={`/${lang}/randdcenter`} class="text-sm text-gray-500 hover:underline">&larr; Torna al Centro R&S</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Lab 05</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Officina prototipi</h1>
+      <p class="mt-3 text-lg text-muted">
+        Dal modello CAD al battello pronto per il mare — costruito, allestito e collaudato
+      </p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-ocean-voyager-1.webp"
+        alt="Fabbricazione di imbarcazioni nell'officina prototipi Aquafarer"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Dove il design diventa realtà</h2>
+  <p>
+    Un modello CAD, per quanto dettagliato, non può rivelare come un'imbarcazione si comporterà realmente finché non
+    tocca l'acqua. Ecco perché la nostra Officina prototipi è progettata per trasformare i dati ingegneristici in
+    un'imbarcazione fisica e navigabile il più rapidamente e accuratamente possibile. Ogni nuovo modello {SITE.name} — e ogni
+    costruzione personalizzata significativa — passa da questa officina prima che vengano impegnati gli stampi di produzione.
+  </p>
+  <p>
+    L'officina è completamente attrezzata per la fabbricazione simultanea di scafo, tubolari e rigging. Questo approccio
+    a flusso parallelo riduce i tempi di realizzazione del prototipo a 8-12 settimane dal rilascio ingegneristico,
+    rispetto alla norma del settore di 16-20 settimane. Quando la vostra applicazione richiede una soluzione
+    specializzata, possiamo passare dal concetto alla validazione in acqua in meno di tre mesi.
+  </p>
+
+  <h2>Capacità dell'officina</h2>
+  <table>
+    <thead><tr><th>Postazione di lavoro</th><th>Attrezzatura</th><th>Scopo</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Fabbricazione dello scafo</td><td
+          >Forno per rotostampaggio (HDPE), banco di saldatura TIG (alluminio), stampi per laminazione a mano
+          (vetroresina)</td
+        ><td>Produzione di scafi a grandezza naturale in tutti e tre i tipi di materiale</td></tr
+      >
+      <tr
+        ><td>Assemblaggio dei tubolari</td><td
+          >Pressa per saldatura RF, stazione di saldatura ad aria calda, attrezzatura di prova gonfiaggio</td
+        ><td>Fabbricazione di assemblaggi di tubolari a grandezza naturale con tutti i deflettori, coni e valvole</td
+        ></tr
+      >
+      <tr
+        ><td>Rigging &amp; allestimento</td><td
+          >Gru per motore (500 kg), telaio mock-up della consolle, crimpatrice per tubi idraulici, pannello per
+          cablaggio elettrico</td
+        ><td>Allestimento completo: motore, timoneria, comandi, sistema carburante, elettronica, sedute</td></tr
+      >
+      <tr
+        ><td>Banco strumentazione</td><td
+          >Sensore GPS di velocità, flussometro carburante, accelerometri, array di termocoppie, data-logger</td
+        ><td>Installazione e calibrazione della strumentazione per le prove in mare</td></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>Il percorso del prototipo — passo dopo passo</h2>
+  <ol>
+    <li>
+      <strong>Consegna tecnica</strong> — Il pacchetto di progettazione (modello 3D, rapporto FEA, distinta base, programma
+      di laminazione) viene formalmente revisionato dal responsabile dell'officina e dall'ingegnere di progetto. Eventuali
+      criticità produttive vengono segnalate e risolte prima di iniziare il taglio.
+    </li>
+    <li>
+      <strong>Produzione dello scafo</strong> — Lo scafo viene costruito secondo la specifica ingegneristica. Per l'HDPE:
+      il programma di rotostampaggio viene caricato dalla simulazione Moldex3D. Per l'alluminio: le lastre tagliate a CNC
+      vengono saldate nel banco TIG seguendo la mappa di saldatura approvata. Per la vetroresina: il laminato di progetto
+      viene seguito strato per strato.
+    </li>
+    <li>
+      <strong>Fabbricazione dei tubolari</strong> — Il tessuto viene tagliato utilizzando modelli CNC, quindi saldato a RF
+      in camere a grandezza naturale. Ogni camera viene gonfiata alla pressione di prova e lasciata per 24 h per la stabilizzazione
+      iniziale.
+    </li>
+    <li>
+      <strong>Assemblaggio &amp; rigging</strong> — Scafo e tubolari vengono accoppiati. Il motore viene montato, timoneria
+      e comandi vengono collegati, il sistema carburante viene installato e tutti i circuiti elettrici vengono cablati e verificati.
+    </li>
+    <li>
+      <strong>Test statici</strong> — Prima che l'imbarcazione tocchi l'acqua, vengono eseguiti: controllo di galleggiabilità
+      (pieno carico + 30 % di riserva), prova di pressione del sistema carburante, test a tutto sterzo del sistema di timoneria,
+      test di continuità dell'equipotenzialità elettrica.
+    </li>
+    <li><strong>Programma di prove in mare</strong> — 20 ore di test in acqua, descritti in dettaglio di seguito.</li>
+    <li>
+      <strong>Revisione del prototipo</strong> — Si tiene una riunione formale di approvazione con i team di ingegneria, produzione
+      e qualità. Eventuali modifiche progettuali necessarie vengono documentate e incorporate nel rilascio di produzione.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Programma di prove in mare di 20 ore — Calendario dei test
+    </p>
+    <div class="space-y-2 text-sm">
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">2 h</span><span class="flex-1"
+          >Manovre in porto — manovrabilità a bassa velocità, retromarcia, controllo dei parabordi</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">4 h</span><span class="flex-1"
+          >Prova di velocità — velocità massima verificata via GPS, velocità di crociera, consumo di carburante in 3
+          punti di regime</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Prova di virata — diametro tattico, avanzata e trasferimento a 20 kn, a dritta e a sinistra</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Prova di slamming — corse ripetute in mare formato 0.5–1.0 m; accelerometro sulla base del sedile del
+          timoniere</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Prova di stabilità — angolo di sbandamento statico con 4 membri dell'equipaggio + attrezzatura a dritta,
+          carico disassato</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Prova di durata — 3 h continue a velocità di crociera; monitoraggio delle temperature (motore, carburante,
+          elettrico)</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">2 h</span><span class="flex-1"
+          >Ispezione finale — ispezione post-prova di tutti i sistemi, serraggio/verifica di tutti i fissaggi,
+          documentazione dei risultati</span
+        >
+      </div>
+    </div>
+  </div>
+
+  <h2>Prototipazione personalizzata per applicazioni uniche</h2>
+  <p>
+    L'Officina prototipi è il luogo in cui risolviamo i problemi che le imbarcazioni di serie non possono affrontare.
+    Esempi recenti includono:
+  </p>
+  <ul>
+    <li>
+      Un RIB da 7.8 m per un'organizzazione di ricerca e soccorso, che richiedeva una struttura cabina personalizzata
+      con protezione anti-ribaltamento, attacchi integrati per barelle e un pod sonar a prua — tutto prototipato,
+      allestito e testato nella nostra struttura.
+    </li>
+    <li>
+      Un gommone gonfiabile da 5.2 m per un'impresa di rilievi idrografici, con specchio di poppa ribassato, albero
+      strumenti rimovibile e tasche passascafo per i trasduttori progettate per ridurre al minimo la perturbazione del
+      flusso.
+    </li>
+    <li>
+      Un tender elettrico da 4.5 m per un superyacht, in cui il prototipo è stato utilizzato per validare autonomia,
+      infrastruttura di ricarica e livelli di rumore prima che il cliente si impegnasse a una flotta di quattro unità.
+    </li>
+  </ul>
+
+  <h2>Il nostro team di prototipazione</h2>
+  <p>
+    L'officina è composta da otto tecnici marini polivalenti, ciascuno formato trasversalmente in almeno due delle tre
+    discipline principali (scafo, tubolare, rigging). Il capo team è un maestro costruttore di imbarcazioni con 16 anni
+    di esperienza che spazia dalle costruzioni singole su misura alle serie di produzione. Ogni prototipo ha un
+    ingegnere di progetto dedicato che funge da unico punto di contatto per il cliente durante l'intero processo di
+    costruzione e prova.
+  </p>
+
+  <h2>Coinvolgimento del cliente</h2>
+  <p>
+    Incoraggiamo attivamente i nostri clienti a presenziare alle tappe chiave della costruzione del prototipo — in
+    particolare alla revisione iniziale dell'allestimento e alla prova in mare. Il vostro feedback operativo in queste
+    fasi è prezioso per mettere a punto l'imbarcazione prima che entri in produzione. Non costruiamo nel vuoto;
+    costruiamo in partnership con voi.
+  </p>
+  <p>
+    La prova in mare di 20 ore è anche un'opportunità per il vostro team di familiarizzare con la manovrabilità
+    dell'imbarcazione, il layout dei sistemi e i requisiti di manutenzione, garantendo una transizione agevole al
+    servizio quando le imbarcazioni di serie verranno consegnate.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Avviate il vostro progetto di prototipo</h2>
+    <p class="mt-2 text-sm text-muted">
+      Parlateci dell'imbarcazione di cui avete bisogno e proporremo un piano di sviluppo del prototipo.
+    </p>
+    <a
+      href={`/${lang}/contact`}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Contattate il nostro team di prototipazione</a
+    >
+  </div>
+</section>

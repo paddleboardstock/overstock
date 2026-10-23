@@ -1,0 +1,91 @@
+hero:
+  tagline: Safety
+  title: Safety Standards & Certification
+  subtitle: Every Aquafarer product undergoes rigorous testing, and 64 CE-certified models meet international safety standards for recreational and professional use. ISO 9001 certified factory.
+
+trust_bar:
+  items:
+    - value: CE 6185
+      label: Recreational craft certified
+      sub: TÜV Rheinland tested
+    - value: SOLAS
+      label: Offshore safety compliant
+      sub: 24hr buoyancy verified
+    - value: ISO 9001
+      label: Quality management
+      sub: TÜV Rheinland audited
+    - value: '99.3%'
+      label: Defect-free rate
+      sub: AQL 2.5 per ISO 2859
+
+certifications:
+  - title: CE Certification (EU 2016/425)
+    standard: PPE Regulation (EU) 2016/425 | EN ISO 12402
+    description: All Aquafarer safety equipment complies with CE marking requirements under the European Personal Protective Equipment Regulation. Every product is independently tested by TÜV Rheinland, a European Notified Body. Our inflatable boats and RIBs meet Recreational Craft Directive 2013/53/EU (RCD) Category C and D requirements.
+    body: CE certification covers essential health and safety requirements for personal flotation devices and inflatable watercraft. TÜV Rheinland audits our production facility annually to verify ongoing compliance.
+  - title: SOLAS — Safety of Life at Sea
+    standard: SOLAS Chapter III | LSA Code
+    description: The Life Vest Pro complies with SOLAS regulations for offshore and commercial marine operations. Tested for 24-hour buoyancy retention, automatic inflation upon immersion, and performance in sea states up to Force 5. Meets Chapter III requirements for lifejackets on commercial vessels.
+    body: SOLAS approval requires independent testing by a notified body for buoyancy, strength, visibility, and automatic activation. Our Life Vest Pro carries full SOLAS type approval with MED certification.
+  - title: USCG Type III / Type V
+    standard: 46 CFR Part 160 | USCG Approval
+    description: Selected Aquafarer life vests meet United States Coast Guard classification for Type III (flotation aid) and Type V (special-use) devices. Suitable for sheltered waters, coastal cruising, and commercial operations requiring USCG-approved PFDs.
+    body: USCG approval requires testing by a CG-recognized independent lab. Type V approval includes hybrid inflatable designs that require manual or automatic activation.
+  - title: BSCI Social Compliance
+    standard: amfori BSCI Code of Conduct
+    description: Our factory is audited annually under the amfori Business Social Compliance Initiative (BSCI). This verifies ethical labor practices, workplace safety, fair working hours, and environmental management across our 12,000 m² production facility.
+    body: BSCI compliance is a prerequisite for European retailers and importers. Our current BSCI rating is "C" (Good), audited by SGS.
+  - title: REACH & RoHS Compliance
+    standard: EU REACH Regulation (EC) 1907/2006 | RoHS Directive 2011/65/EU
+    description: All PVC compounds, adhesives, and coatings used in Aquafarer products comply with EU REACH chemical safety regulations and RoHS hazardous substance restrictions. Material safety data sheets (MSDS) are available for each product line.
+    body: REACH compliance ensures no restricted SVHC substances above threshold limits. Regular third-party lab testing verifies ongoing compliance for every production batch.
+  - title: ISO 9001:2015 Quality Management
+    standard: ISO 9001:2015 | TÜV Rheinland Certified
+    description: Our quality management system is ISO 9001:2015 certified by TÜV Rheinland, covering design, production, testing, and after-sales service. Annual surveillance audits ensure continuous improvement and process control.
+    body: ISO 9001 certification requires documented quality policies, internal audits, management reviews, corrective action procedures, and traceable production records.
+
+testimonial:
+  quote: We've sourced safety equipment from multiple suppliers across Asia. Aquafarer is the only manufacturer that provided full CE documentation, SOLAS certificates, and third-party test reports upfront — without being asked.
+  author: Erik Lindström
+  title: Safety Officer
+  company: Baltic Marine Supply
+  location: Finland
+
+content_overpressure:
+  tagline: Overpressure Safety
+  title: 'RIB Tube Pressure<br />Management in Hot Climates'
+  subtitle: 'Inflatable tube pressure increases with temperature. Understanding and managing overpressure prevents damage and ensures safe operation in tropical and desert environments.'
+  items:
+    - title: 'Boyle Pressure Relief Valves'
+      description: 'Aquafarer RIB tubes are equipped with overpressure relief valves that automatically vent excess pressure above the rated maximum. Prevents seam stress and potential tube burst from solar heating.'
+      icon: tabler:gauge
+    - title: 'Morning-to-Noon Pressure Change'
+      description: 'A tube inflated to 3.5 PSI at 20C may reach 4.5+ PSI at 40C sun exposure. Always inflate to the lower end of the recommended range in hot climates and let the relief valve manage excess pressure.'
+      icon: tabler:sun
+    - title: 'Recommended Operating Pressures'
+      description: 'PVC tubes: 3.0-3.5 PSI operating, 4.5 PSI max. Hypalon tubes: 3.5-4.0 PSI operating, 5.0 PSI max. Always test at 1.25x rated (4.4 PSI for PVC, 5.0 PSI for Hypalon) per Aquafarer QC standards.'
+      icon: tabler:chart-bar
+    - title: 'Sun Exposure Best Practices'
+      description: 'Store RIBs in shaded areas when not in use. Use UV-protective covers for extended mooring. Check and adjust tube pressure before and after peak sun hours. Never exceed maximum rated pressure.'
+      icon: tabler:umbrella
+    - title: 'Emergency Depressurization'
+      description: 'If tube feels overly firm or relief valve is venting, release air via the Halkey-Roberts or military valve until pressure returns to operating range. Carry a pressure gauge for accurate readings.'
+      icon: tabler:alert-circle
+
+related:
+  title: Related
+  links:
+    - text: Quality Testing
+      url: /quality
+    - text: Certifications & Trust
+      url: /trust
+    - text: Engineering Team
+      url: /engineering-team
+    - text: Warranty
+      url: /warranty
+    - text: Safety Tips Guide
+      url: /guides/safety-tips
+    - text: Technology
+      url: /technology
+    - text: All Products
+      url: /products

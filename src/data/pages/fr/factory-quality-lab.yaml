@@ -1,0 +1,60 @@
+hero:
+  tagline: Laboratoire de Contrôle Qualité
+  title: Laboratoire de Test & Assurance Qualité
+  subtitle: Laboratoire qualité indépendant avec processus ISO 9001 — chaque unité testée avant expédition
+
+intro: Aquafarer exploite un laboratoire de contrôle qualité dédié, indépendant de la production. Chaque lot de matière première et chaque bateau fini passe par des protocoles d'inspection documentés avant libération. Notre équipe CQ rend compte directement à la direction, garantissant des décisions qualité impartiales.
+
+highlights:
+  - value: 100%
+    label: Unités testées sous pression
+    detail: Chaque chambre, chaque bateau
+  - value: 48 h
+    label: Durée du test de rétention d'air
+    detail: À 1.25× la pression nominale
+  - value: '&lt;5%'
+    label: Chute de pression maximale autorisée
+    detail: Sur une période de maintien de 24 heures
+  - value: AQL 2.5
+    label: Seuil de défaut majeur
+    detail: Selon l'échantillonnage ISO 2859
+
+test_procedures:
+  - title: Inspection des Matières Premières
+    description: Chaque lot entrant de PVC, Hypalon, tissu drop-stitch et quincaillerie est testé avant acceptation. La résistance à la traction (ASTM D751), la résistance au déchirement (ISO 4674) et la résistance aux UV sont vérifiées. Les matériaux non conformes sont mis en quarantaine et retournés.
+    standards:
+      - ASTM D751 (traction)
+      - ISO 4674 (déchirement)
+      - ISO 4892 (UV)
+  - title: Points de Contrôle CQ en Cours de Production
+    description: Les opérateurs de production effectuent une auto-inspection à chaque étape. Les auditeurs CQ réalisent un échantillonnage aléatoire tout au long de l'équipe. Des tests de pelage des soudures sont effectués toutes les 50 unités. Des contrôles dimensionnels sont effectués sur chaque 20e panneau.
+    standards:
+      - ASTM D751 (pelage)
+      - Checklist interne en 100 points
+      - Échantillonnage ISO 2859
+  - title: Test de Rétention d'Air de 48 Heures
+    description: Chaque chambre de tube est gonflée à 125 % de la pression nominale et maintenue pendant 48 heures. Les capteurs de pression enregistrent en continu avec compensation de température. Toute chambre dépassant 5 % de chute de pression déclenche une réinspection automatique du lot.
+    standards:
+      - ISO 6185
+      - CE 2013/53/EU
+  - title: Test de Charge & d'Équilibre
+    description: Les bateaux finis sont testés à la capacité nominale maximale pour la stabilité, le franc-bord et la maniabilité. Chaque embarcation subit un test sur l'eau avant l'approbation de l'inspection finale.
+    standards:
+      - ISO 12217
+      - CE 2013/53/EU
+
+equipment:
+  - name: Machine d'Essai Universelle (traction)
+    spec: 5 kN, conforme ASTM D751
+  - name: Testeur de Chute de Pression
+    spec: Multicanaux, 0–50 psi, enregistrement de données
+  - name: Chambre de Vieillissement UV
+    spec: ISO 4892, cycles de 1,000 h
+  - name: Jauge d'Épaisseur (numérique)
+    spec: Résolution 0.01 mm
+  - name: Testeur de Pelage (soudure)
+    spec: Motorisé, capacité 50 N
+  - name: Chambre de Température
+    spec: -40 °C à +100 °C
+  - name: Bac de Détection de Fuites
+    spec: 6 m × 2 m, éclairé

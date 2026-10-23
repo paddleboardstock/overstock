@@ -1,0 +1,182 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'pt' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">← Voltar para Centro de P&amp;D</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Laboratório 03</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Centro de soldagem RF</h1>
+      <p class="mt-3 text-lg text-muted">Tecnologia de ligação dielétrica para soldas que permanecem sob pressão</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-jungle-mandala-1.webp"
+        alt="Aquafarer Processo de ligação dielétrica de soldagem RF"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>A ciência por trás da costura</h2>
+  <p>
+    Um barco inflável é tão confiável quanto suas costuras. Uma única solda fraca pode comprometer uma câmara inteira –
+    e no mar, uma falha na câmara não é um inconveniente; é um risco à segurança. No {SITE.name}, investimos em um
+    Centro de Soldagem por Radiofrequência (RF) dedicado que combina prensas de soldagem dielétrica de nível industrial
+    com rigoroso controle de processo e testes pós-soldagem. Cada costura que produzimos é documentada, rastreável e
+    certificada para atender ou exceder os requisitos do padrão internacional para embarcações infláveis.
+  </p>
+  <p>
+    A soldagem RF utiliza energia eletromagnética de alta frequência (normalmente 27.12 MHz) para excitar as moléculas
+    polares dentro do tecido revestido com PVC ou Hypalon, gerando calor precisamente na interface do material. Ao
+    contrário da soldadura por ar quente ou por cunha quente, a soldadura RF cria uma verdadeira ligação molecular – as
+    duas camadas de tecido fundem-se num único material homogéneo na zona de soldadura, produzindo uma junta que é tão
+    forte como o próprio material original.
+  </p>
+
+  <h2>Equipamentos de soldagem e controle de processo</h2>
+  <p>Nosso centro de soldagem está equipado com:</p>
+  <table>
+    <thead><tr><th>Máquina</th><th>Potência / Capacidade</th><th>Aplicativo</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Prensa RF dielétrica 1</td><td>15 kW, placa 2000 × 600 mm</td><td
+          >Costuras longitudinais principais, juntas da popa ao tubo</td
+        ></tr
+      >
+      <tr
+        ><td>Prensa RF dielétrica 2</td><td>10 kW, placa 1500 × 500 mm</td><td
+          >Soldas de defletores, acessórios de cone, remendos de válvulas</td
+        ></tr
+      >
+      <tr
+        ><td>Soldador RF controlado por CNC</td><td>8 kW, tabela XY 2500 × 1200 mm</td><td
+          >Costuras curvas, gravação de logotipo/painel, patchwork de precisão</td
+        ></tr
+      >
+      <tr
+        ><td>Soldador automático Hotwedge</td><td>Temperatura variável, 1.2 m/min máx.</td><td
+          >Método de backup para materiais Hypalon/CSM</td
+        ></tr
+      >
+    </tbody>
+  </table>
+  <p>
+    Cada prensa RF é equipada com monitoramento de temperatura e pressão em circuito fechado. Os parâmetros de soldagem
+    — potência, tempo de prensagem, tempo de resfriamento, pressão do eletrodo — são programados por tipo de material e
+    registrados em nosso Sistema de Execução de Fabricação (MES) para total rastreabilidade.
+  </p>
+
+  <h2>Testes de qualidade de solda – cada costura, cada barco</h2>
+  <p>A integridade da solda é verificada através de um protocolo obrigatório de quatro testes:</p>
+  <ol>
+    <li>
+      <strong>Inspeção visual</strong> — 100 % das costuras são inspecionadas visualmente quanto a queimaduras, desalinhamento,
+      contaminação ou fusão incompleta. Limite de taxa de rejeição: 0.5 % de metros lineares.
+    </li>
+    <li>
+      <strong>Teste de descascamento ()</strong> — Uma tira larga 25 mm é cortada de uma amostra de teste soldada com cada
+      lote de produção. Força mínima de descascamento: 120 N/25 mm para PVC 1100 dtex.
+    </li>
+    <li>
+      <strong>Teste de retenção de ar</strong> — Cada câmara concluída é pressurizada a 1.25 × pressão de trabalho e mantida
+      por 24-48 horas. A queda de pressão não deve exceder 2%.
+    </li>
+    <li>
+      <strong>Teste de ciclagem térmica</strong> — Os cupons de amostra são ciclados de -20 °C a +60 °C para ciclos 50 e depois
+      testados novamente. Perda de resistência aceitável: &lt; 10%.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Comparação de resistência ao descascamento - RF vs soldagem com ar quente (PVC 1100 dtex)
+    </p>
+    <div class="space-y-3">
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">Solda RF</span><div
+          class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded"
+        >
+          <div class="h-full bg-blue-600 rounded" style="width:92%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">184 N</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">Ar quente</span><div
+          class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded"
+        >
+          <div class="h-full bg-gray-400 rounded" style="width:65%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">130 N</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium"> min</span><div class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded">
+          <div class="h-full bg-green-500 rounded" style="width:48%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">96 N</span>
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      A soldagem RF atinge consistentemente 90-95% da resistência do material original, bem acima do mínimo.
+    </p>
+  </div>
+
+  <h2>Experiência profissional</h2>
+  <p>
+    Nossa equipe de soldagem é liderada por um engenheiro de processo sênior com 11 anos de experiência em soldagem
+    dielétrica de têxteis revestidos. Cada operador conclui um programa de certificação interna de 6 meses antes de ser
+    autorizado a trabalhar nas costuras de produção. A recertificação é necessária anualmente, incluindo um teste
+    prático de soldagem avaliado de acordo com nosso padrão interno de Grau A (resistência ao descascamento ≥ 160 N/25
+    mm).
+  </p>
+
+  <h2>Soluções de soldagem personalizadas para requisitos exclusivos</h2>
+  <p>
+    Entendemos que uma especificação de soldagem não se adapta a todas as aplicações. Nosso Centro de Soldagem RF
+    desenvolve rotineiramente configurações de costura personalizadas para clientes com requisitos especiais:
+  </p>
+  <ul>
+    <li>
+      <strong>Patches de reforço multicamadas</strong> — para áreas de alto desgaste, como faixas de atrito e cones em arco,
+      desenvolvemos soldas RF multipasse que integram uma camada externa resistente ao desgaste sem comprometer a flexibilidade.
+    </li>
+    <li>
+      <strong>Costuras condutoras ou RFopacas</strong> — para embarcações militares ou de vigilância que necessitam de blindagem
+      eletromagnética, soldamos camadas de malha condutora dentro da camada de costura.
+    </li>
+    <li>
+      <strong>Soldagem de painel com mudança de cor</strong> — painéis de tecido de duas cores (por exemplo, casco laranja
+      + parte superior cinza) soldados com uma sobreposição oculta para manter a estética da marca sem uma linha de junção
+      visível.
+    </li>
+  </ul>
+
+  <h2>Nosso compromisso com você</h2>
+  <p>
+    Cada barco que entregamos traz nossa garantia de qualidade de soldagem: se alguma costura falhar em serviço normal
+    dentro do período de garantia, reparamos ou substituímos a câmara afetada sem nenhum custo, e uma investigação da
+    causa raiz é realizada para evitar a recorrência. Isto não é simplesmente uma garantia – é um compromisso com a
+    melhoria contínua impulsionada por dados operacionais do mundo real.
+  </p>
+  <p>
+    Quando você escolhe {SITE.name}, você está escolhendo costuras que são projetadas, testadas e documentadas – e não
+    apenas soldadas. Essa é a diferença entre um barco que flutua e um barco que funciona.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Discuta seus requisitos de soldagem</h2>
+    <p class="mt-2 text-sm text-muted">
+      Especificações de costura personalizadas, compatibilidade de materiais ou validação de processo.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Contate nossa equipe de soldagem</a
+    >
+  </div>
+</section>

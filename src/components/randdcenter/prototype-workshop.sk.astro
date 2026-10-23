@@ -1,0 +1,198 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'sk' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">← Späť do R&D centra</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Laboratórium 05</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Prototypová dielňa</h1>
+      <p class="mt-3 text-lg text-muted">
+        Od CAD modelu po loď pripravenú na plavbu — postavená, namontovaná a overená
+      </p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-ocean-voyager-1.webp"
+        alt="Aquafarer prototypová dielňa výroby lodí"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Kde sa dizajn stáva realitou</h2>
+  <p>
+    Model CAD, nech je akokoľvek podrobný, nemôže odhaliť, ako sa loď bude skutočne správať, kým sa nedostane na vodu.
+    Preto je naša Prototypová dielňa navrhnutá tak, aby prevádzala inžinierske údaje do fyzického, plavebného plavidla
+    čo najrýchlejšie a najpresnejšie. Každý nový{SITE.name}model — a každý významný vlastný výrobok — prechádza týmto
+    dielenským priestorom pred tým, než sa zaviaže výrobná príprava.
+  </p>
+  <p>
+    Dielňa je plne vybavená na súčasnú výrobu trupu, rúr a ráhna. Tento paralelný workflow skracuje čas prípravy
+    prototypu na 8-12 týždňov od technického vydania v porovnaní s priemyselným štandardom 16-20 týždňov. Keď vaša
+    aplikácia vyžaduje špecializované riešenie, môžeme prejsť od konceptu k overeniu na vode za menej ako tri mesiace.
+  </p>
+
+  <h2>Schopnosti dielne</h2>
+  <table>
+    <thead><tr><th>Pracovná stanica</th><th>Vybavenie</th><th>Účel</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Výroba trupu</td><td
+          >Rotačná formovacia pec (HDPE), TIG zváracia plošina (hliník), ručne ukladané formy (sklené vlákno)</td
+        ><td>Plná výroba trupu vo všetkých troch typoch materiálov</td></tr
+      >
+      <tr
+        ><td>Montáž trubiek</td><td
+          >RF zvárací lis, stanica na horúce vzduchové prichytávanie, prípravok na nafukovanie</td
+        ><td>Výroba plnohodnotných elektrónových zostáv so všetkými prepáčkami, kužeľmi a ventilmi</td></tr
+      >
+      <tr
+        ><td>Montáž a montáž</td><td
+          >Zdvihák motora (500 kg), rám konzoly, hydraulický krčovač hadice, doska elektrického zväzku</td
+        ><td>Kompletné vybavenie: motor, riadenie, ovládanie, palivový systém, elektronika, sedadlá</td></tr
+      >
+      <tr
+        ><td>Priestor pre prístroje</td><td
+          >GPS snímač rýchlosti, merač prietoku paliva, akcelerometre, pole termočlánkov, zapisovač dát</td
+        ><td>Inštalácia a kalibrácia námorných skúšobných prístrojov</td></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>Cesta prototypu — krok za krokom</h2>
+  <ol>
+    <li>
+      <strong>Odovzdanie inžinierstva</strong>— Návrhový balík (3D model, správa FEA, zoznam materiálov, harmonogram
+      skladania) je formálne kontrolovaný vedúcim dielne a projektovým inžinierom. Všetky výrobné výhrady sú označené a
+      vyriešené pred začiatkom rezania.
+    </li>
+    <li>
+      <strong>Výroba trupu</strong>— Trup je postavený podľa inžinierskej špecifikácie. Pre HDPE: program rotačného
+      formovania sa načítava zo simulácie Moldex3D. Pre hliník: -CNCrezané plechy sa zvárajú v TIG boxe podľa schválenej
+      mapy zvárania. Pre sklolaminát: preglejková kniha sa sleduje vrstva po vrstve.
+    </li>
+    <li>
+      <strong>Výroba trubiek</strong>— Tkanina sa reže pomocou CNCšablón typu -pattern a potom sa RF-zvára do
+      plnohodnotných komôr. Každá komora sa nafúkne na testovací tlak a nechá sa 24 hodín na počiatočnú stabilizáciu.
+    </li>
+    <li>
+      <strong>Montáž a lanovanie</strong>— Trup a trubice sú spojené. Motor je zavesený, riadenie a ovládanie sú
+      pripojené, palivový systém je nainštalovaný a všetky elektrické obvody sú zapojené a overené.
+    </li>
+    <li>
+      <strong>Statické testy</strong>— Predtým, než sa loď dotkne vody, prechádza: kontrolou vztlaku (rezerva plného
+      zaťaženia + 30 %), skúškou tlaku v palivovom systéme, skúškou plného uzamykania riadiaceho systému, skúškou
+      kontinuity elektrického uzemňovacieho spojenia.
+    </li>
+    <li><strong>Skúšobný program na mori</strong>— 20 hodín testovania vo vode, podrobne popísané nižšie.</li>
+    <li>
+      <strong>Recenzia prototypu</strong>— Koná sa formálne schvaľovacie stretnutie s tímami inžinierov, výroby a
+      kvality. Všetky potrebné zmeny dizajnu sú zdokumentované a začlenené do produkčného vyhlásenia.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      20-hodinový skúšobný program na mori — Harmonogram testov
+    </p>
+    <div class="space-y-2 text-sm">
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">2 h</span><span class="flex-1"
+          >Manévrovanie v prístave — ovládanie pri nízkych rýchlostiach, spiatočka, kontrola nárazníkov</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">4 h</span><span class="flex-1"
+          >Rýchlostná skúška — GPS overená maximálna rýchlosť, cestovná rýchlosť, spotreba paliva pri 3 otáčkach za
+          minútu</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Skúška otáčania — taktický priemer, posun a prechod pri 20 uzloch, ľavoboko a vpravo</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Test slamingu — opakované jazdy cez 0,5–1,0 m rozoberanie; akcelerometer na základni sedadla kormidla</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Test stability — statický uhol päty so 4 podvozkami posádky + na pravoboku, posunuté zaťaženie</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Vytrvalostná jazda — 3 hodiny nepretržite pri cestovnej rýchlosti; monitorovanie teploty (motor, palivo,
+          elektrika)</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">2 h</span><span class="flex-1"
+          >Záverečná kontrola — kontrola všetkých systémov po skúške, utiahnuti/skontrolovať všetky spojovacie prvky,
+          dokumentovať zistenia</span
+        >
+      </div>
+    </div>
+  </div>
+
+  <h2>Vlastné prototypovanie pre jedinečné aplikácie</h2>
+  <p>
+    Prototype workshop je miesto, kde riešime problémy, ktoré štandardné sériové lode nedokážu vyriešiť. Medzi nedávne
+    príklady patria:
+  </p>
+  <ul>
+    <li>
+      7,8 m RIB dlhý pre záchrannú organizáciu, vyžadujúcu na mieru vyrobenú kabínu s ochranou proti prevráteniu,
+      integrované nosidlá a sonarový modul namontovaný na prídi — všetko prototypované, namontované a testované v našom
+      zariadení.
+    </li>
+    <li>
+      5,2 m dlhý nafukovací objekt pre hydrografického prieskumného dodávateľa, s odrezaným záďovým rámom, odnímateľným
+      prístrojovým stožiarom a priehľadnými meničnými vreckami navrhnutými na minimalizáciu rušenia prúdenia.
+    </li>
+    <li>
+      Elektrický tender s dĺžkou 4,5 m pre superjachtu, kde prototyp slúžil na overenie doletu, nabíjacej infraštruktúry
+      a hlučnosti predtým, než sa klient zaviazal k flotile štyroch jacht.
+    </li>
+  </ul>
+
+  <h2>Náš prototypovací tím</h2>
+  <p>
+    Dielňu obsadzuje osem všestranných námorných technikov, z ktorých každý je preškolený aspoň v dvoch z troch hlavných
+    disciplín (trup, rúry, ráhna). Vedúcim tímu je majster staviteľ lodí s 16-ročnými skúsenosťami od individuálnych
+    jednorazových stavieb až po sériové sériové série. Každý prototyp má prideleného špecializovaného projektového
+    inžiniera, ktorý slúži ako jediný kontaktný bod pre klienta počas celého procesu stavby a skúšky.
+  </p>
+
+  <h2>Zapojenie klienta</h2>
+  <p>
+    Aktívne povzbudzujeme našich klientov, aby sa zúčastnili kľúčových míľnikov počas stavby prototypu — najmä
+    počiatočnej revízie vybavenia a skúšky na mori. Vaša prevádzková spätná väzba počas týchto fáz je neoceniteľná pri
+    dolaďovaní lode pred jej vstupom do výroby. Nestaviame vo vákuu; staviame v partnerstve s vami.
+  </p>
+  <p>
+    20-hodinová skúšobná plavba je tiež príležitosťou pre váš tím oboznámiť sa s ovládaním lode, usporiadaním systémov a
+    požiadavkami na údržbu, čím zabezpečí hladký prechod do prevádzky po dodaní výrobných lodí.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Začnite svoj prototypový projekt</h2>
+    <p class="mt-2 text-sm text-muted">Povedzte nám o lodi, ktorú potrebujete, a my navrhneme plán vývoja prototypu.</p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Kontaktujte náš prototypový tím</a
+    >
+  </div>
+</section>

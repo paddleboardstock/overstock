@@ -1,0 +1,311 @@
+hero_text:
+  tagline: Get a Quote
+  title: 'Request a Quotation<br />for Your Project'
+  subtitle: 'Tell us about your requirements and our team will respond with a detailed quotation within 2 business days.'
+steps2_process:
+  title: How It Works
+  subtitle: 'Four simple steps from inquiry to quotation.'
+  items:
+    - title: 'Step 1: Submit Your Requirements'
+      description: 'Fill out the form below with your product type, quantity, and specifications. The more detail you provide, the more accurate your quotation.'
+      icon: tabler:file-text
+    - title: 'Step 2: We Review & Advise'
+      description: 'Our engineering team reviews your requirements and may contact you for clarification. We provide recommendations on product configuration and options.'
+      icon: tabler:users
+    - title: 'Step 3: Receive Your Quote'
+      description: 'You receive a detailed quotation including unit pricing, MOQ, lead time, payment terms, and shipping options. Typically within 48 hours.'
+      icon: tabler:currency-dollar
+    - title: 'Step 4: Sample & Production'
+      description: 'After quote acceptance, we proceed to sample production (if applicable) or directly to mass production. Regular updates throughout the process.'
+      icon: tabler:building-factory
+content_form:
+  tagline: Quotation Form
+  title: 'Tell Us About Your Project'
+  subtitle: 'All fields with * are required.'
+  fields:
+    - name: Product Category
+      type: select
+      options:
+        - RIB Boat
+        - Inflatable Boat
+        - SUP Board
+        - Inflatable Kayak
+        - Life Vest
+        - Marine Accessory
+        - Custom OEM/ODM
+    - name: Application
+      type: select
+      options:
+        - Diving Center
+        - Fishing
+        - Marine Tourism / Resort
+        - Search & Rescue
+        - Yacht Tender
+        - Commercial Workboat
+        - Government / Military
+        - OEM / Private Label
+        - Personal / Recreational
+        - Other
+    - name: Quantity
+      type: text
+      placeholder: e.g. 50 units
+    - name: Target Market
+      type: text
+      placeholder: e.g. Europe, North America, Middle East
+    - name: Delivery Country
+      type: text
+      placeholder: e.g. Italy, UAE, USA, Australia
+    - name: Material Preference
+      type: select
+      options:
+        - No Preference
+        - Marine-Grade PVC (1100 dtex)
+        - Premium Hypalon / CSM
+        - Fiberglass Hull
+        - Aluminum Hull
+    - name: Engine Requirement
+      type: text
+      placeholder: e.g. 60 HP outboard, no engine, twin 115 HP
+    - name: Customization Required
+      type: text
+      placeholder: e.g. custom colors, branding/logo, packaging, special fittings
+    - name: Timeline
+      type: text
+      placeholder: e.g. delivery within 90 days
+    - name: Additional Requirements
+      type: textarea
+      placeholder: Describe your application, technical specifications, or any special requirements — include reference drawings, specifications, or links if available
+    - name: Upload Specification
+      type: file
+      placeholder: Upload your spec sheet, drawing, or reference document (PDF, DWG, DXF)
+    - name: Upload Logo / Artwork
+      type: file
+      placeholder: Upload your logo or artwork for custom branding (AI, EPS, PNG)
+
+content_rfq_types:
+  tagline: 3-Tier RFQ System
+  title: 'Choose the Right<br />Inquiry Level'
+  subtitle: 'Different projects need different levels of detail. Select the form that matches your buying stage.'
+  items:
+    - title: 'Quick Inquiry'
+      description: '5-6 fields, 30 seconds. For initial contact, general questions, or resource download follow-ups. We respond within 24 hours with basic information and next steps.'
+      icon: tabler:bolt
+    - title: 'Standard RFQ'
+      description: '8-10 fields, 2 minutes. For specific product quotations with model selection, quantity, and delivery requirements. Receive a detailed quotation within 48 hours.'
+      icon: tabler:file-text
+    - title: 'Project RFQ'
+      description: '10-14 fields, 5 minutes. For RIB, resort fleet, rescue, or government projects requiring custom configuration, compliance documentation, and multi-year supply planning. Dedicated project manager assigned.'
+      icon: tabler:clipboard-list
+
+form_quick:
+  title: Quick Inquiry
+  subtitle: 'Fast contact for general questions and initial information requests.'
+  fields:
+    - name: fullName
+      label: Full Name
+      type: text
+      required: true
+      placeholder: Your full name
+    - name: businessEmail
+      label: Business Email
+      type: email
+      required: true
+      placeholder: you@company.com
+    - name: companyName
+      label: Company Name
+      type: text
+      required: true
+      placeholder: Your company
+    - name: buyerType
+      label: I am a...
+      type: select
+      required: true
+      options:
+        - Distributor / Importer
+        - Brand Owner / Private Label
+        - Resort / Water Center
+        - Rental Operator
+        - Government / Rescue Agency
+        - Diving / Fishing Operator
+        - Marine Engineer / Refitter
+        - Other
+    - name: productInterest
+      label: Product Interest
+      type: multiselect
+      required: true
+      options:
+        - RIB Boats
+        - Inflatable Boats
+        - SUP Boards
+        - Safety Equipment
+        - Accessories
+        - OEM/ODM Custom
+    - name: message
+      label: What do you need?
+      type: textarea
+      required: false
+      placeholder: Brief description of your requirements...
+
+form_standard:
+  title: Standard RFQ
+  subtitle: 'Detailed quotation request for specific products and quantities.'
+  fields:
+    - name: fullName
+      label: Full Name
+      type: text
+      required: true
+    - name: businessEmail
+      label: Business Email
+      type: email
+      required: true
+    - name: companyName
+      label: Company Name
+      type: text
+      required: true
+    - name: buyerType
+      label: Buyer Type
+      type: select
+      required: true
+    - name: productModel
+      label: Product Model / Type
+      type: text
+      required: true
+      placeholder: e.g., AF580 RIB, AF380 Inflatable
+    - name: quantity
+      label: Estimated Quantity
+      type: text
+      required: true
+      placeholder: e.g., 10-20 units
+    - name: targetMarket
+      label: Target Market / Region
+      type: text
+      required: true
+      placeholder: e.g., EU, North America, Middle East
+    - name: deliveryTimeline
+      label: Desired Delivery
+      type: select
+      required: true
+      options:
+        - Within 30 days
+        - 30-60 days
+        - 60-90 days
+        - Planning ahead (90+ days)
+        - Just researching
+    - name: complianceRequired
+      label: Compliance Requirements
+      type: multiselect
+      required: false
+      options:
+        - CE / RCD 2013/53/EU
+        - UKCA
+        - USCG
+        - ISO 9001
+        - BSCI
+        - REACH
+        - None / Not sure
+    - name: message
+      label: Additional Details
+      type: textarea
+      required: false
+
+form_project:
+  title: Project RFQ
+  subtitle: 'Comprehensive project inquiry for fleet, custom, or government procurement.'
+  fields:
+    - name: fullName
+      label: Full Name
+      type: text
+      required: true
+    - name: businessEmail
+      label: Business Email
+      type: email
+      required: true
+    - name: companyName
+      label: Company Name
+      type: text
+      required: true
+    - name: buyerType
+      label: Buyer Type
+      type: select
+      required: true
+    - name: projectType
+      label: Project Type
+      type: select
+      required: true
+      options:
+        - Resort / Hotel Fleet
+        - Rental Fleet
+        - Rescue / Patrol Fleet
+        - Diving Center Fleet
+        - Government Procurement
+        - Private Label / OEM
+        - Dealer Stock Order
+        - Other
+    - name: boatTypes
+      label: Boat Types Required
+      type: multiselect
+      required: true
+      options:
+        - RIB Boats
+        - Inflatable Boats / Dinghies
+        - SUP Boards
+        - Kayaks
+        - Safety Equipment
+    - name: fleetSize
+      label: Fleet Size / Quantity Range
+      type: text
+      required: true
+      placeholder: e.g., 20-50 units over 12 months
+    - name: customRequirements
+      label: Custom Configuration Needs
+      type: textarea
+      required: false
+      placeholder: Hull size, tube material, deck layout, branding requirements...
+    - name: complianceRequired
+      label: Compliance & Certification Requirements
+      type: multiselect
+      required: true
+      options:
+        - CE / RCD 2013/53/EU
+        - UKCA
+        - USCG Type III/V
+        - ISO 9001
+        - BSCI
+        - REACH / RoHS
+        - Local market certification
+    - name: targetMarket
+      label: Target Market
+      type: text
+      required: true
+    - name: budgetRange
+      label: Budget Range
+      type: select
+      required: false
+      options:
+        - Under $10,000
+        - $10,000 - $50,000
+        - $50,000 - $200,000
+        - $200,000+
+        - Prefer not to say
+    - name: deliveryTimeline
+      label: Project Timeline
+      type: select
+      required: true
+      options:
+        - Urgent (within 30 days)
+        - Standard (30-60 days)
+        - Planned (60-90 days)
+        - Future planning (90+ days)
+    - name: message
+      label: Project Details & Requirements
+      type: textarea
+      required: false
+      placeholder: Describe your project, application, and any specific requirements...
+
+cta:
+  title: 'Prefer to discuss by email?'
+  subtitle: 'Send your inquiry directly to our sales team and we will respond within 24 hours.'
+  actions:
+    - variant: primary
+      text: Email us directly
+      href: /contact

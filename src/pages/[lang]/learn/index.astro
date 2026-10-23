@@ -1,0 +1,106 @@
+---
+export const prerender = true;
+
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import Icon from '~/components/ui/Icon.astro';
+import { SITE } from 'astrowind:config';
+import { getPageContent, setPageContentData } from '~/i18n/page-content';
+import __pageData from '~/i18n/generated/pages/learn.ts';
+import { localizePageTitle, localizePageDescription } from '~/i18n/page-title';
+import { languages } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => getUiForLang(lang)?.[key] || '';
+setPageContentData(__pageData);
+const page = getPageContent(lang, 'learn');
+
+const hero = page.hero ?? {};
+const featured = page.featured ?? {};
+const categories = page.categories ?? {};
+const cta = page.cta ?? {};
+
+const metadata = {
+  title: localizePageTitle(page, `Learn — ${SITE.name} Water Sports Guides & Knowledge`),
+  description: localizePageDescription(
+    page,
+    `Guides, tutorials, and deep dives on SUP, kayaking, boating, and water safety. Learn how to choose, use, and maintain your inflatable watercraft.`
+  ),
+};
+const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: 'Learn' }];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <Hero tagline={hero.tagline} title={hero.title} subtitle={hero.subtitle} />
+
+  <!-- Featured Topics -->
+  <section class="max-w-6xl mx-auto py-20 px-6">
+    <div class="text-center max-w-3xl mx-auto mb-14">
+      <span class="text-sm font-medium text-sky-600 tracking-wide uppercase"
+        >{featured.tagline || 'Featured Topics'}</span
+      >
+      <h2 class="mt-4 text-4xl font-semibold text-gray-900 dark:text-slate-100">
+        {featured.title || 'Start your learning journey'}
+      </h2>
+      <p class="mt-4 text-lg text-gray-500 dark:text-slate-400">{featured.subtitle || ''}</p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {
+        (featured.items || []).map((item: any) => (
+          <a
+            href={item.href || '#'}
+            class="group block p-6 rounded-2xl border border-gray-200 dark:border-slate-700 hover:shadow-lg transition-shadow"
+          >
+            <div class="w-10 h-10 bg-sky-50 dark:bg-sky-900/30 rounded-lg flex items-center justify-center text-sky-600">
+              {item.icon && <Icon name={item.icon} class="w-5 h-5" />}
+            </div>
+            <h3 class="mt-4 font-semibold text-gray-900 dark:text-slate-100 group-hover:text-sky-600 transition-colors">
+              {item.title || ''}
+            </h3>
+            <p class="mt-2 text-sm text-gray-500 dark:text-slate-400 leading-relaxed">{item.description || ''}</p>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="bg-gray-50 dark:bg-slate-900/50 py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-sm font-medium text-sky-600 tracking-wide uppercase"
+          >{categories.tagline || 'Categories'}</span
+        >
+        <h2 class="mt-4 text-4xl font-semibold text-gray-900 dark:text-slate-100">
+          {categories.title || 'Explore by topic'}
+        </h2>
+        <p class="mt-4 text-lg text-gray-500 dark:text-slate-400">{categories.subtitle || ''}</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        {
+          (categories.columns || []).map((col: any) => (
+            <div class="bg-white dark:bg-slate-800 rounded-2xl p-8 border border-gray-200 dark:border-slate-700">
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-slate-100 mb-4">{col.title || ''}</h3>
+              <ul class="space-y-3">
+                {(col.items || []).map((item: string) => (
+                  <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-slate-400">
+                    <span class="mt-1 w-1.5 h-1.5 rounded-full bg-sky-500 flex-shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <CallToAction title={cta.title} subtitle={cta.subtitle} actions={cta.actions} />
+</Layout>

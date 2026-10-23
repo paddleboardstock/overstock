@@ -1,0 +1,306 @@
+hero_text:
+  tagline: Få en offert
+  title: Begär en offert<br />för ditt projekt
+  subtitle: Berätta för oss om dina krav och vårt team kommer att svara med en detaljerad offert inom 2 arbetsdagar.
+steps2_process:
+  title: Hur det fungerar
+  subtitle: Fyra enkla steg från förfrågan till offert.
+  items:
+    - title: 'Steg 1: Skicka in dina krav'
+      description: Fyll i formuläret nedan med din produkttyp, kvantitet och specifikationer. Ju mer detaljer du anger, desto mer exakt är din offert.
+      icon: tabler:file-text
+    - title: 'Steg 2: Vi granskar och ger råd'
+      description: Vårt ingenjörsteam granskar dina krav och kan kontakta dig för ett förtydligande. Vi ger rekommendationer om produktkonfiguration och alternativ.
+      icon: tabler:users
+    - title: 'Steg 3: Få din offert'
+      description: Du får en detaljerad offert inklusive enhetspriser, MOQ, ledtid, betalningsvillkor och fraktalternativ. Vanligtvis inom 48 timmar.
+      icon: tabler:currency-dollar
+    - title: 'Steg 4: Prov & produktion'
+      description: Efter offertacceptans går vi vidare till provproduktion (om tillämpligt) eller direkt till massproduktion. Regelbundna uppdateringar under hela processen.
+      icon: tabler:building-factory
+content_form:
+  tagline: Offertformulär
+  title: Berätta för oss om ditt projekt
+  subtitle: Alla fält med * är obligatoriska.
+  fields:
+    - name: Produktkategori
+      type: välja
+      options:
+        - RIB-båt
+        - Uppblåsbar båt
+        - SUP-bräda
+        - Uppblåsbar kajak
+        - Flytväst
+        - Marintillbehör
+        - Skräddarsytt OEM/ODM
+    - name: Ansökan
+      type: välja
+      options:
+        - Dykcenter
+        - Fiske
+        - Marin turism / Resort
+        - Sök och räddning
+        - Yacht-tender
+        - Kommersiellt arbetsfartyg
+        - Myndighet / Militär
+        - OEM / Eget varumärke
+        - Privat / Fritid
+        - Annat
+    - name: Kvantitet
+      type: text
+      placeholder: till exempel 50 enheter
+    - name: Målmarknad
+      type: text
+      placeholder: till exempel Europa, Nordamerika, Mellanöstern
+    - name: Leveransland
+      type: text
+      placeholder: till exempel Italien, Förenade Arabemiraten, USA, Australien
+    - name: Materialpreferens
+      type: välja
+      options:
+        - Ingen preferens
+        - PVC i marinkvalitet (1100 dtex)
+        - Hypalon i premiumkvalitet / CSM
+        - Skrov i glasfiber
+        - Skrov i aluminium
+    - name: Motorkrav
+      type: text
+      placeholder: till exempel 60 hk utombordare, ingen motor, dubbla 115 hk
+    - name: Anpassning krävs
+      type: text
+      placeholder: till exempel anpassade färger, varumärke/logotyp, förpackningar, specialbeslag
+    - name: Tidslinje
+      type: text
+      placeholder: till exempel leverans inom 90 dagar
+    - name: Ytterligare krav
+      type: textområde
+      placeholder: Beskriv din applikation, tekniska specifikationer eller några speciella krav – inkludera referensritningar, specifikationer eller länkar om sådana finns
+    - name: Uppladdningsspecifikation
+      type: fil
+      placeholder: Ladda upp ditt specifikationsblad, ritning eller referensdokument (PDF, DWG, DXF)
+    - name: Ladda upp logotyp/konstverk
+      type: fil
+      placeholder: Ladda upp din logotyp eller konstverk för anpassat varumärke (AI, EPS, PNG)
+content_rfq_types:
+  tagline: 3-nivå RFQ-system
+  title: Välj rätt<br />Förfrågningsnivå
+  subtitle: Olika projekt behöver olika detaljnivåer. Välj det formulär som matchar ditt köpstadium.
+  items:
+    - title: Snabb förfrågan
+      description: 5-6 fält, 30 sekunder. För första kontakt, allmänna frågor eller resursnedladdningsuppföljningar. Vi svarar inom 24 timmar med grundläggande information och nästa steg.
+      icon: tabler:bolt
+    - title: Standardanbud
+      description: 8-10 fält, 2 minuter. För specifika produktofferter med modellval, kvantitet och leveranskrav. Få en detaljerad offert inom 48 timmar.
+      icon: tabler:file-text
+    - title: Projektanbud
+      description: 10-14 fält, 5 minuter. För RIB-, resortflotta-, räddnings- eller statliga projekt som kräver anpassad konfiguration, efterlevnadsdokumentation och flerårig leveransplanering. Dedikerad projektledare tilldelas.
+      icon: tabler:clipboard-list
+form_quick:
+  title: Snabb förfrågan
+  subtitle: Snabb kontakt för allmänna frågor och initiala informationsförfrågningar.
+  fields:
+    - name: fullständigt namn
+      label: Fullständigt namn
+      type: text
+      required: true
+      placeholder: Ditt fullständiga namn
+    - name: affärse-post
+      label: Företags-e-post
+      type: e-post
+      required: true
+      placeholder: du@företag.com
+    - name: företagsnamn
+      label: Företagsnamn
+      type: text
+      required: true
+      placeholder: Ditt företag
+    - name: Köpartyp
+      label: jag är en...
+      type: välja
+      required: true
+      options:
+        - Distributör / Importör
+        - Varumärkesägare / Eget varumärke
+        - Resort / Vattencenter
+        - Uthyrare
+        - Myndighet / Räddningsorganisation
+        - Dyk-/fiskeoperatör
+        - Mariningenjör / refit
+        - Annat
+    - name: produktintresse
+      label: Produktintresse
+      type: flerval
+      required: true
+      options:
+        - RIB-båtar
+        - Uppblåsbara båtar
+        - SUP-brädor
+        - Säkerhetsutrustning
+        - Tillbehör
+        - Skräddarsytt OEM/ODM
+    - name: meddelande
+      label: Vad behöver du?
+      type: textområde
+      required: false
+      placeholder: Kort beskrivning av dina behov...
+form_standard:
+  title: Standardanbud
+  subtitle: Detaljerad offertförfrågan för specifika produkter och kvantiteter.
+  fields:
+    - name: fullständigt namn
+      label: Fullständigt namn
+      type: text
+      required: true
+    - name: affärse-post
+      label: Företags-e-post
+      type: e-post
+      required: true
+    - name: företagsnamn
+      label: Företagsnamn
+      type: text
+      required: true
+    - name: Köpartyp
+      label: Köpartyp
+      type: välja
+      required: true
+    - name: produktmodell
+      label: Produktmodell/typ
+      type: text
+      required: true
+      placeholder: t.ex. AF580 RIB, AF380 Uppblåsbar
+    - name: kvantitet
+      label: Beräknad kvantitet
+      type: text
+      required: true
+      placeholder: t.ex. 10-20 enheter
+    - name: målmarknad
+      label: Målmarknad/region
+      type: text
+      required: true
+      placeholder: t.ex. EU, Nordamerika, Mellanöstern
+    - name: leveranstidslinje
+      label: Önskad leverans
+      type: välja
+      required: true
+      options:
+        - Inom 30 dagar
+        - 30-60 dagar
+        - 60-90 dagar
+        - Planera i förväg (90+ dagar)
+        - Undersöker bara
+    - name: efterlevnad Krävs
+      label: Efterlevnadskrav
+      type: flerval
+      required: false
+      options:
+        - CE / RCD 2013/53/EU
+        - UKCA
+        - USCG
+        - ISO 9001
+        - BSCI
+        - REACH
+        - Inga / Inte säker
+    - name: meddelande
+      label: Ytterligare detaljer
+      type: textområde
+      required: false
+form_project:
+  title: Projektanbud
+  subtitle: Omfattande projektförfrågan för flotta, anpassade eller statliga upphandlingar.
+  fields:
+    - name: fullständigt namn
+      label: Fullständigt namn
+      type: text
+      required: true
+    - name: affärse-post
+      label: Företags-e-post
+      type: e-post
+      required: true
+    - name: företagsnamn
+      label: Företagsnamn
+      type: text
+      required: true
+    - name: Köpartyp
+      label: Köpartyp
+      type: välja
+      required: true
+    - name: projekttyp
+      label: Projekttyp
+      type: välja
+      required: true
+      options:
+        - Resort-/hotellflotta
+        - Uthyrningsflotta
+        - Räddnings-/patrullflotta
+        - Flotta för dykcenter
+        - Offentlig upphandling
+        - Eget varumärke / OEM
+        - Lagerorder för återförsäljare
+        - Annat
+    - name: båttyper
+      label: Båttyper krävs
+      type: flerval
+      required: true
+      options:
+        - RIB-båtar
+        - Uppblåsbara båtar / jollar
+        - SUP-brädor
+        - Kajaker
+        - Säkerhetsutrustning
+    - name: Flottstorlek
+      label: Flottans storlek / kvantitetsområde
+      type: text
+      required: true
+      placeholder: t.ex. 20-50 enheter under 12 månader
+    - name: anpassade krav
+      label: Anpassad konfigurationsbehov
+      type: textområde
+      required: false
+      placeholder: Skrovstorlek, rörmaterial, däcklayout, varumärkeskrav...
+    - name: efterlevnad Krävs
+      label: Efterlevnads- och certifieringskrav
+      type: flerval
+      required: true
+      options:
+        - CE / RCD 2013/53/EU
+        - UKCA
+        - USCG Type III/V
+        - ISO 9001
+        - BSCI
+        - REACH / RoHS
+        - Certifiering för lokal marknad
+    - name: målmarknad
+      label: Målmarknad
+      type: text
+      required: true
+    - name: budgetRange
+      label: Budgetutbud
+      type: välja
+      required: false
+      options:
+        - Under 10 000 $
+        - $10,000 - $50,000
+        - $50,000 - $200,000
+        - $200,000+
+        - Uppger hellre inte
+    - name: leveranstidslinje
+      label: Projektets tidslinje
+      type: välja
+      required: true
+      options:
+        - Brådskande (inom 30 dagar)
+        - Standard (30-60 dagar)
+        - Planerat (60-90 dagar)
+        - Framtidsplanering (90+ dagar)
+    - name: meddelande
+      label: Projektdetaljer och krav
+      type: textområde
+      required: false
+      placeholder: Beskriv ditt projekt, din ansökan och eventuella specifika krav...
+cta:
+  title: Föredrar du att diskutera via e-post?
+  subtitle: Skicka din förfrågan direkt till vårt säljteam så svarar vi inom 24 timmar.
+  actions:
+    - variant: primary
+      text: Maila oss direkt
+      href: /contact

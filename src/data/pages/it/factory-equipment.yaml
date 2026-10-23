@@ -1,0 +1,80 @@
+hero:
+  tagline: 'Attrezzatura'
+  title: 'Attrezzature e Macchinari di Produzione'
+  subtitle: 'Attrezzature di grado industriale per taglio, saldatura, stampa e assemblaggio'
+  back_label: 'Torna alla Fabbrica'
+  back_link: /factory
+
+categories:
+  - title: 'Taglio e Preparazione dei Materiali'
+    items:
+      - name: 'Macchina da Taglio Automatica PVC'
+        spec: 'Controllata da CNC, 6.5 m × 2.5 m, precisione 0.1 mm'
+        desc: "Macchina da taglio automatica controllata da computer per tessuti PVC, Hypalon e drop-stitch. Il software di annidamento ottimizza l'utilizzo del materiale a meno del 5% di scarto."
+      - name: 'Stenditrice di Tessuto'
+        spec: 'Larghezza max 3 m, alimentazione a tensione controllata'
+        desc: 'Stende il tessuto in strati singoli o multipli con tensione controllata per prevenire la distorsione prima del taglio.'
+  - title: 'Saldatura e Unione dei Tubi'
+    items:
+      - name: 'Macchina di Saldatura a Caldo'
+        spec: 'Saldatura ad aria calda, variabile 200–600 °C, 0.5–5 m/min'
+        desc: 'Macchina di termosaldatura ad aria calda per unire e saldare le cuciture dei tubi PVC e Hypalon. Utilizzata per puntatura, sigillatura e fusione di camere tubo e giunti galleggianti.'
+      - name: 'Pressa RF Dielettrica'
+        spec: '15 kW, piastra 2000 × 600 mm'
+        desc: 'Pressa di saldatura a radiofrequenza per cuciture longitudinali principali, giunti scafo-tubo e fabbricazione di grandi camere.'
+      - name: 'Saldatrice RF Controllata da CNC'
+        spec: '8 kW, tavolo XY 2500 × 1200 mm'
+        desc: 'Saldatura programmabile di cuciture curve per geometrie complesse, goffratura di loghi e rappezzi di precisione.'
+  - title: 'Fabbricazione Scafo RIB'
+    items:
+      - name: 'Stampi in Fibra di Vetro a Posamento Manuale'
+        spec: 'Diversi stampi per scafi RIB fino a 6 m LOA'
+        desc: 'Stampaggio tradizionale in fibra di vetro a posamento manuale con sistemi di resina poliestere e vinilestere. Ogni strato è rullato a mano e sottoposto a vuoto per qualità e resistenza costanti del laminato.'
+      - name: 'Cabina di Spruzzatura Gelcoat'
+        spec: 'Temperatura controllata, ventilazione ad aria filtrata'
+        desc: 'Applicazione di gelcoat su scafi RIB. Offre una finitura lucida, resistente ai raggi UV, con controllo preciso dello spessore.'
+      - name: 'Router CNC (5 assi)'
+        spec: 'Volume 3 m × 2 m × 1 m, mandrino raffreddato ad acqua'
+        desc: 'Lavorazione di inserti scafo, stampi console, basi sedile e staffe personalizzate.'
+  - title: 'Stampa e Decorazione SUP'
+    items:
+      - name: 'Stampante Digitale'
+        spec: 'Inkjet ad alta risoluzione, larghezza di stampa fino a 2 m'
+        desc: "Stampa digitale diretta su tessuto per grafiche del fondo SUP a tutto colore. Stampa motivi personalizzati, sfumature e immagini di qualità foto con inchiostri a base d'acqua resistenti ai raggi UV."
+      - name: 'Macchina da Serigrafia'
+        spec: 'Manuale e semiautomatica, registrazione multicolore'
+        desc: 'Serigrafia per loghi di tavole SUP, marchi e motivi ripetuti. Offre stampe durevoli, opache con saturazione di colore vibrante.'
+  - title: 'Assemblaggio e Allestimento'
+    items:
+      - name: 'Argano per Motore'
+        spec: 'Capacità 500 kg, barra distanziatrice regolabile'
+        desc: 'Montaggio sicuro di motori fuoribordo da 2.5 a 60 cv.'
+      - name: 'Telaio Mock-Up Console'
+        spec: 'Altezza e angolo regolabili'
+        desc: "Pre-allestimento di sterzo, acceleratore e pannelli strumenti prima dell'installazione."
+      - name: 'Pressa per Tubi Idraulici'
+        spec: 'Fino a 1" ID, manometro digitale'
+        desc: 'Kit di tubi idraulici dello sterzo di lunghezza personalizzata con raccordi pressati.'
+      - name: 'Pannello Fasci Elettrici'
+        spec: '3 m × 1.5 m, schemi di cablaggio pre-stampati'
+        desc: 'Assemblaggio e collaudo di fasci elettrici completi fuori barca.'
+  - title: 'Test e Controllo Qualità'
+    items:
+      - name: 'Tensile Tester Universale'
+        spec: '50 kN, ASTM D751'
+        desc: 'Prova di forza di rottura, allungamento a rottura e propagazione dello strappo per lotti di tessuto.'
+      - name: 'Banco di Prova di Ritenzione Aria'
+        spec: 'Programmabile, mantenimento pressione 30 min'
+        desc: "Test automatizzato di mantenimento pressione per ogni camera tubo prima dell'assemblaggio."
+      - name: 'Tester di Scollamento Cuciture'
+        spec: 'Scollamento motorizzato 180° a 100 mm/min'
+        desc: 'Prova di resistenza allo scollamento di cuciture saldate e incollate secondo ISO 6185.'
+      - name: 'Camera di Invecchiamento ad Arco allo Xeno'
+        spec: '2000 h esposizione'
+        desc: 'Prova di resistenza UV per cambio colore e ritenzione di resistenza.'
+
+cta:
+  title: 'Interessato a una visita in fabbrica?'
+  desc: 'Accogliamo i visitatori nel nostro stabilimento di Qingdao. Vedi il nostro equipaggiamento e i processi di persona.'
+  label: 'Pianifica una visita →'
+  link: /contact

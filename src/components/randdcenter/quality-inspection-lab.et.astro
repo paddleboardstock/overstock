@@ -1,0 +1,204 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'et' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">&larr; Tagasi AR-keskusesse</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Labor 06</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Kvaliteedi- ja inspekteerimislabor</h1>
+      <p class="mt-3 text-lg text-muted">Sõltumatu kontroll — iga test läbitud enne kohaletoimetamist</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-uv-resistance-testing.webp"
+        alt="Aquafarer kvaliteedikontrolli labor UV testimine"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Usalda, aga kontrolli</h2>
+  <p>
+    Iga paat, mis meie töökodast lahkub, kannab sertifikaati, et see on läbinud määratletud kvaliteediinspektsioonide ja
+    materjalitestide komplekti. Meie Kvaliteedi- ja inspekteerimislabor on organisatsiooni sõltumatu üksus — see annab
+    aru otse tegevjuhile, mitte tootmisele — tagades, et mingisugune kaubanduslik surve ei kompromiteeri
+    inspekteerimisläve. Kui materjalipartii või valmis paat ei vasta avaldatud spetsifikatsioonile, on laboril õigus
+    peatada saatmine kuni mittevastavus on lahendatud.
+  </p>
+  <p>
+    Labor tegutseb kvaliteedijuhtimissüsteemi alusel, mis on kooskõlas põhimõtetega, ning meie testimismeetodid
+    põhinevad ISO, ASTM ja EN standarditel, kus see on kohaldatav. Me säilitame üksikasjalikke andmeid iga tehtud
+    testide kohta, luues täieliku jälgitavusahela alates toormaterjali vastuvõtmisest kuni lõpliku paadi
+    kohaletoimetamiseni.
+  </p>
+
+  <h2>Testseadmed ja võimekused</h2>
+  <table>
+    <thead><tr><th>Seadmed</th><th>Tehtud testid</th><th>Standard / meetod</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Universaalne testimismasin (50 kN)</td><td
+          >Tõmbetugevus (kangas), õmbluse koorimiskindlus, rebimisleviku test</td
+        ><td>, ISO 4674</td></tr
+      >
+      <tr
+        ><td>Õhu säilitamise testimisseade (programmeeritav)</td><td
+          >1000 tsükli jooksul täitmise/tühjendamise vastupidavus, 24–48 h rõhu hoidmise test</td
+        ><td>(sisest)</td></tr
+      >
+      <tr
+        ><td>Õmbluse koorimise seadeldis (mootoriga 180° koorimine)</td><td
+          >Keermestatud ja liimitud õmbluse koorimisjõud 100 mm/min</td
+        ><td>/ ASTM D1876</td></tr
+      >
+      <tr><td>Hüdrostaatiline peakohus tester</td><td>Kanga veepidavuse test (0 — 00 mbar)</td><td>ISO 811</td></tr>
+      <tr
+        ><td>Digitaalne paksusemõõtur & mikromeeter</td><td>Kanga paksus, toru seina paksus, liimi-kile paksus</td><td
+          >ISO 2286-3</td
+        ></tr
+      >
+      <tr
+        ><td>Keskkonnakamber</td><td
+          >Temperatuuri konditsioneerimine (-40 °C kuni +80 °C) külma-murru ja kuumakindluse testide jaoks</td
+        ><td>ISO 188, ISO 4675</td></tr
+      >
+      <tr
+        ><td>Värvispektrofotomeeter</td><td>Delta-E värvimõõtmine pärast UV valgustust</td><td
+          >ISO 105-A05 / ASTM D2244</td
+        ></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>Inspekteerimisväravad — materjalist kuni tarnimiseni</h2>
+  <p>
+    Iga paat järgib kindlaksmääratud kvaliteediplaani koos kohustuslike kontrollpunktidega. Ükski paat ei saa väravat
+    vahele jätta; iga värav peab enne järgmise tootmisetapi algust kvaliteediinspektori poolt heaks kiitma.
+  </p>
+
+  <div class="not-prose my-8">
+    <div class="relative">
+      <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-blue-200 dark:bg-blue-800"></div>
+      <div class="space-y-6 relative">
+        {
+          [
+            {
+              gate: 'Gate 1',
+              label: 'Sisendi materjali kontroll',
+              desc: 'Kangaeraldus, liimi eraldus, riistvara — kõik kontrollitakse saabuvate spetsifikatsioonide järgi enne tootmisse vabastamist.',
+            },
+            {
+              gate: 'Gate 2',
+              label: 'Protsessijooksu keevituse kontroll',
+              desc: 'Igal tootmismeeskonna vahetuse alguses testiti esimest keevituskupongi (peek + visuaalselt).',
+            },
+            {
+              gate: 'Gate 3',
+              label: 'Kambri õhu test',
+              desc: 'Iga kambrit pressuriseeriti 1,25 korda töörõhule, hoiti 24–48 tundi. Andmed logiti seerianumbri järgi.',
+            },
+            {
+              gate: 'Gate 4',
+              label: 'Eelpakkumise ülevaatus',
+              desc: 'Terve paat kontrolliti: kõik kinnitused pingutati, süsteemid töötasid, kosmeetilisi defekte ei tuvastatud. 100-punktiline kontrolnimekiri.',
+            },
+            {
+              gate: 'Gate 5',
+              label: 'Lõplik sertifitseerimine',
+              desc: 'Testiaruanded koostati, kontrolliandmed vaadati üle, väljastati vastavussertifikaat.',
+            },
+          ].map((g) => (
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs font-bold z-10">
+                {g.gate}
+              </div>
+              <div class="flex-1 p-3 rounded-lg bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800">
+                <p class="text-sm font-semibold">{g.label}</p>
+                <p class="text-xs text-gray-500 mt-1">{g.desc}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+
+  <h2>Olulised kvaliteedimõõdikud (2025. aasta liikuv keskmine)</h2>
+  <div class="not-prose my-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">99.7 %</span>
+      <span class="text-xs text-gray-500">Esimese läbipääsu saagikus (kangapartii)</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">&lt; 0,2%</span>
+      <span class="text-xs text-gray-500">Keevituse tagasilükkamise määr (lineaarne meeter)</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">100 %</span>
+      <span class="text-xs text-gray-500">Kambrid, mis testiti õhus enne kokkupanekut</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600"></span>
+      <span class="text-xs text-gray-500">Disainikategooria vastavus</span>
+    </div>
+  </div>
+
+  <h2>Meie kvaliteetmeeskond</h2>
+  <p>
+    Laboris töötab kvaliteedijuht (10 aastat merenduse kvaliteedikontrolli valdkonnas, ASQ sertifitseeritud
+    kvaliteediinsener), kaks kvaliteediinspektorit (mõlemal 2. taseme NDT visuaalse testimise sertifikaat) ning
+    materjalitehnik, kes vastutab kõigi füüsiliste testide eest. Meeskond läbib igal aastal pädevustesti sõltumatu
+    kolmanda osapoole pakkuja kaudu, et tagada meie testitulemuste täpsus ja korduvus.
+  </p>
+
+  <h2>Sõltumatu testimine klientidele</h2>
+  <p>
+    Meie kvaliteedi- ja inspekteerimislabor on saadaval sõltumatute testimisteenuste jaoks. Kui peate kontrollima
+    kangaspetsifikatsiooni, valideerima uut liimisüsteemi või hankima kolmanda osapoole testiraporti
+    hankekvalifikatsiooni saamiseks, saame teha testid vastava standardi järgi ja väljastada sertifitseeritud
+    testiraporti.
+  </p>
+  <p>Näited hiljutistest kolmanda osapoole testimistest:</p>
+  <ul>
+    <li>Viie konkurentsivõimelise liimkile toote koorimistugevuse võrdlus Euroopa sõjalise hangete programmi jaoks.</li>
+    <li>
+      Kiirendatud vananemisuuring (UV + termiline tsükkel) uue oranži-pigmendiga PVC koostise jaoks, regulaarsete
+      vahemõõtmistega 500 tunni järel.
+    </li>
+    <li>50 prototüübi õhukinnituse valideerimine uue kõrgsurvetoru disaini jaoks.</li>
+  </ul>
+
+  <h2>Meie pühendumus teile</h2>
+  <p>
+    Kui sa saad{SITE.name}paat, saate ka selle kvaliteedidokumendi — koostatud aruanne testitulemustest, mis kehtivad
+    teie konkreetse paadi kohta. Materjalieraldise sertifikaat, keevituse koorimistestid, kambrisisese õhu testide logid
+    ja enne tarnet läbiviidava kontrolli nimekiri. Iga number on jälgitav. Iga inspektor on tuvastatud. See ei ole
+    ainult paberimajandus — see on meie lubadus, et see, mida me tarnime, on see, mida me täpsustasime.
+  </p>
+  <p>
+    Kui teil tekib kvaliteediga seotud küsimus, võite otse laboriga ühendust võtta — kontaktandmed on trükitud teie
+    vastavussertifikaadile. Võtame iga päringu tõsiselt ja võtame kohustuse alustada ametlikku uurimist 48 tunni
+    jooksul.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Kas vajad sõltumatut testimist või kvaliteedikontrolli?</h2>
+    <p class="mt-2 text-sm text-muted">
+      Meie labor aktsepteerib kolmanda osapoole testimistöid — võtke meiega ühendust oma nõudmistega.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Võta ühendust kvaliteedilaboriga</a
+    >
+  </div>
+</section>

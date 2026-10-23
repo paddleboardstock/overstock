@@ -1,0 +1,205 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'lv' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline"
+    >&larr; Atpakaļ uz Pētniecības un izstrādes centru</a
+  >
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Laboratorija 05</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Prototipa darbnīca</h1>
+      <p class="mt-3 text-lg text-muted">No CAD modeļa līdz jūrai gatavai laivai — būvēta, uzstādīta un pārbaudīta</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-ocean-voyager-1.webp"
+        alt="Aquafarer prototipa darbnīca laivu izgatavošana"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Kur dizains kļūst par realitāti</h2>
+  <p>
+    CAD modelis, neatkarīgi no tā, cik detalizēts tas ir, nevar atklāt, kā laiva patiesībā uzvedīsies, līdz tā satiekas
+    ar ūdeni. Tāpēc mūsu prototipu darbnīca ir izstrādāta, lai inženiertehniskos datus pārvērstu fiziskā, jūrā piemērotā
+    kuģī pēc iespējas ātrāk un precīzāk. Katrs jaunais{SITE.name}modelis — un katrs nozīmīgais pielāgotais izstrādājums
+    — tiek izgatavots šajā darbnīcā pirms ražošanas instrumenti tiek apstiprināti.
+  </p>
+  <p>
+    Darbnīca ir pilnībā aprīkota vienlaicīgai korpusa, cauruļu un takelāžas izgatavošanai. Šī paralēlās darba plūsmas
+    pieeja samazina prototipa izstrādes laiku līdz 8–12 nedēļām no inženiertehniskās versijas, salīdzinot ar nozares
+    normu – 16–20 nedēļām. Kad jūsu lietojumprogramma prasa specializētu risinājumu, mēs varam pāriet no koncepcijas uz
+    ūdens validāciju mazāk nekā trīs mēnešos.
+  </p>
+
+  <h2>Darbnīcu iespējas</h2>
+  <table>
+    <thead><tr><th>Darba stacija</th><th>Aprīkojums</th><th>Mērķis</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Korpusa izgatavošana</td><td
+          >Rotējošā veidņu krāsns (HDPE), TIG metināšanas nodalījums (alumīnijs), roku kārtošanas veidnes (stikla
+          šķiedra)</td
+        ><td>Pilna mēroga korpusu ražošana visos trīs materiālu veidos</td></tr
+      >
+      <tr
+        ><td>Lampu komplekts</td><td
+          >RF metināšanas prese, karstā gaisa piespraušanas stacija, piepūšanas testa šablons</td
+        ><td>Pilna izmēra cauruļu komplektu izgatavošana ar visiem šķēršļiem, konusiem un vārstiem</td></tr
+      >
+      <tr
+        ><td>Aprīkojums un uzstādīšana</td><td
+          >Dzinēja pacēlājs (500 kg), konsoles maketa rāmis, hidrauliskais šļūtenes krimpētājs, elektriskā vadu plate</td
+        ><td>Pilns aprīkojums: dzinējs, stūre, vadība, degvielas sistēma, elektronika, sēdvietas</td></tr
+      >
+      <tr
+        ><td>Instrumentācijas nodalījums</td><td
+          >GPS ātruma sensors, degvielas plūsmas mērītājs, akselerometri, termopāru masīvs, datu reģistrators</td
+        ><td>Jūras izmēģinājumu instrumentu uzstādīšana un kalibrēšana</td></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>Prototipa ceļojums — soli pa solim</h2>
+  <ol>
+    <li>
+      <strong>Inženiertehniskā nodošana</strong>— Projektēšanas pakete (3D modelis, FEA ziņojums, materiālu saraksts,
+      izvietošanas grafiks) tiek formāli pārskatīta darbnīcas vadītāja un projekta inženiera. Jebkādas ražošanas
+      problēmas tiek atzīmētas un atrisinātas pirms griešanas sākuma.
+    </li>
+    <li>
+      <strong>Korpusa ražošana</strong>— Korpuss tiek būvēts atbilstoši inženiertehniskajai specifikācijai. HDPE:
+      rotācijas formēšanas programma tiek ielādēta no Moldex3D simulācijas. Alumīnijam: CNC-grieztās plāksnes tiek
+      metinātas TIG nodalījumā, sekojot apstiprinātajai metinājuma kartei. Stikla šķiedrai: saplāksnis tiek izmantots
+      slānis pa slānim.
+    </li>
+    <li>
+      <strong>Cauruļu izgatavošana</strong>— Audums tiek griezts, izmantojot CNC-parauga veidnes, pēc tam RF metināts
+      pilna izmēra kamerās. Katra kamera tiek piepūsta, lai pārbaudītu spiedienu, un atstāta 24 stundas sākotnējai
+      stabilizācijai.
+    </li>
+    <li>
+      <strong>Montāža un uzstādīšana</strong>— Korpuss un caurules ir savienotas. Dzinējs ir pieslēgts, stūre un vadības
+      ierīces savienotas, degvielas sistēma uzstādīta, un visi elektriskie ķēdes ir pieslēgtas un pārbaudītas.
+    </li>
+    <li>
+      <strong>Statiskie testi</strong>— Pirms laiva pieskaras ūdenim, tā iziet: peldspējas pārbaudi (pilna slodze + 30 %
+      rezerve), degvielas sistēmas spiediena testu, stūrēšanas sistēmas pilna bloķēšanas cikla testu, elektriskās zemes
+      saites nepārtrauktības testu.
+    </li>
+    <li><strong>Jūras izmēģinājumu programma</strong>— 20 stundas ilgas testēšanas ūdenī, sīkāk aprakstītas zemāk.</li>
+    <li>
+      <strong>Prototipa apskats</strong>— Tiek rīkota oficiāla noslēguma sanāksme ar inženieru, ražošanas un kvalitātes
+      komandām. Nepieciešamās dizaina izmaiņas tiek dokumentētas un iekļautas ražošanas laidienā.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      20 stundu jūras izmēģinājumu programma — izmēģinājumu grafiks
+    </p>
+    <div class="space-y-2 text-sm">
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">2 h</span><span class="flex-1"
+          >Ostas manevrēšana — zema ātruma vadāmība, atpakaļgaita, spārnu pārbaude</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">4 h</span><span class="flex-1"
+          >Ātruma izmēģinājums — GPS apstiprināts maksimālais ātrums, kruīza ātrums, degvielas patēriņš pie 3
+          apgriezieniem minūtē</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Pagrieziena tests — taktiskais diametrs, virzība uz priekšu un pārvietošana pie 20 mezgliem, pa kreisi un pa
+          labi</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Trieciena tests — atkārtoti braucieni cauri 0,5–1,0 m slīpumam; akselerometrs uz stūres sēdekļa pamatnes</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Stabilitātes tests — statisks papēža leņķis ar 4 apkalpes + aprīkojumu labajā pusē, nobīdīta slodze</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Izturības brauciens — 3 stundas nepārtraukti kruīza ātrumā; temperatūras uzraudzība (dzinējs, degviela,
+          elektrība)</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">2 h</span><span class="flex-1"
+          >Galīgā pārbaude — visu sistēmu pēcizmēģinājuma pārbaude, visu stiprinājumu pievilkšana/pārbaude, dokumentu
+          secinājumi</span
+        >
+      </div>
+    </div>
+  </div>
+
+  <h2>Pielāgota prototipēšana unikālām lietojumprogrammām</h2>
+  <p>
+    Prototipu darbnīca ir vieta, kur mēs risinām problēmas, ko standarta ražošanas laivas nespēj atrisināt. Nesenie
+    piemēri ir:
+  </p>
+  <ul>
+    <li>
+      7,8 m gara RIB meklēšanas un glābšanas organizācijai, kas prasa pielāgotu kabīnes konstrukciju ar apgāšanās
+      aizsardzību, integrētiem nestuvju stiprinājumiem un priekšgalā uzstādītu sonāra podu — viss izstrādāts, uzstādīts
+      un testēts mūsu objektā.
+    </li>
+    <li>
+      5,2 m gara piepūšamā ierīce hidrogrāfiskās izpētes līgumslēdzējam, ar samazinātu pakaļgalu, noņemamu instrumentu
+      mastu un caur korpusu izvietotām transduktora kabatām, kas paredzētas, lai samazinātu plūsmas traucējumus.
+    </li>
+    <li>
+      Elektriskais piedziņas 4,5 m tenderis superjahtai, kur prototips tika izmantots, lai pārbaudītu darbības rādiusu,
+      uzlādes infrastruktūru un trokšņa līmeni, pirms klients apņēmās izveidot četru kuģu floti.
+    </li>
+  </ul>
+
+  <h2>Mūsu prototipēšanas komanda</h2>
+  <p>
+    Darbnīcā strādā astoņi daudzpusīgi jūras tehniķi, katrs apmācīts vismaz divās no trim pamatdisciplīnām (korpuss,
+    caurules, takelāža). Komandas vadītājs ir meistars laivu būvētājs ar 16 gadu pieredzi, sākot no individuālām būvēm
+    līdz ražošanas sērijām. Katram prototipam tiek piešķirts īpašs projekta inženieris, kurš kalpo kā vienīgais
+    kontaktpunkts klientam visā būvniecības un izmēģinājuma procesā.
+  </p>
+
+  <h2>Klientu iesaiste</h2>
+  <p>
+    Mēs aktīvi mudinām klientus piedalīties galvenajos posmos prototipa izstrādes laikā — īpaši sākotnējā aprīkojuma
+    pārskatā un jūras izmēģinājumā. Jūsu operatīvā atgriezeniskā saite šajos posmos ir nenovērtējama, lai precīzi
+    pielāgotu kuģi pirms tā nonākšanas ražošanā. Mēs nebūvējam vakuumā; mēs būvējam sadarbībā ar jums.
+  </p>
+  <p>
+    20 stundu jūras izmēģinājums ir arī iespēja jūsu komandai iepazīties ar laivas vadāmību, sistēmu izkārtojumu un
+    apkopes prasībām, nodrošinot vienmērīgu pāreju uz servisu, kad ražošanas laivas tiek piegādātas.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Sāciet savu prototipa projektu</h2>
+    <p class="mt-2 text-sm text-muted">
+      Pastāstiet mums par laivu, kas jums nepieciešama, un mēs piedāvāsim prototipa izstrādes plānu.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Sazinieties ar mūsu prototipēšanas komandu</a
+    >
+  </div>
+</section>

@@ -1,0 +1,306 @@
+hero_text:
+  tagline: 見積もりを取得する
+  title: プロジェクトの見積もりをリクエスト<br />
+  subtitle: お客様の要件についてお知らせください。当社のチームが 2 営業日以内に詳細な見積もりを返信いたします。
+steps2_process:
+  title: 仕組み
+  subtitle: お問い合わせからお見積りまでの簡単4ステップ。
+  items:
+    - title: 'ステップ 1: 要件を送信する'
+      description: 以下のフォームに製品の種類、数量、仕様をご記入ください。より詳細に提供するほど、見積もりはより正確になります。
+      icon: tabler:file-text
+    - title: 'ステップ 2: レビューとアドバイスを行います'
+      description: 当社のエンジニアリング チームがお客様の要件を検討し、説明のためご連絡させていただく場合があります。製品構成やオプションに関する推奨事項を提供します。
+      icon: tabler:users
+    - title: 'ステップ 3: 見積もりを受け取る'
+      description: 単価、MOQ、リードタイム、支払い条件、配送オプションを含む詳細な見積もりが届きます。通常は 48 時間以内です。
+      icon: tabler:currency-dollar
+    - title: 'ステップ 4: サンプルと生産'
+      description: 見積もりの承諾後、サンプル生産 (該当する場合) または直接量産に進みます。プロセス全体を通じて定期的に更新。
+      icon: tabler:building-factory
+content_form:
+  tagline: お見積りフォーム
+  title: あなたのプロジェクトについて教えてください
+  subtitle: '* が付いているフィールドはすべて必須です。'
+  fields:
+    - name: 製品カテゴリー
+      type: 選択する
+      options:
+        - RIBボート
+        - "インフレータブルボート"
+        - SUPボード
+        - "インフレータブルカヤック"
+        - "ライフジャケット"
+        - "マリンアクセサリー"
+        - "カスタムOEM/ODM"
+    - name: 応用
+      type: 選択する
+      options:
+        - "ダイビングセンター"
+        - "釣り"
+        - "マリンツーリズム・リゾート"
+        - "捜索・救助"
+        - "ヨットテンダー"
+        - "商用作業艇"
+        - "政府・軍事"
+        - OEM・プライベートブランド
+        - "個人・レジャー"
+        - "その他"
+    - name: 量
+      type: 文章
+      placeholder: 例えば50台
+    - name: 対象市場
+      type: 文章
+      placeholder: 例えばヨーロッパ、北米、中東
+    - name: 配送国
+      type: 文章
+      placeholder: 例えばイタリア、アラブ首長国連邦、米国、オーストラリア
+    - name: 素材の好み
+      type: 選択する
+      options:
+        - "指定なし"
+        - "マリングレードPVC（1100 dtex）"
+        - "プレミアムハイパロン・CSM"
+        - "グラスファイバー船体"
+        - "アルミ船体"
+    - name: エンジン要件
+      type: 文章
+      placeholder: 例えば60 馬力船外機、エンジンなし、ツイン 115 馬力
+    - name: カスタマイズが必要です
+      type: 文章
+      placeholder: 例えばカスタムカラー、ブランディング/ロゴ、パッケージング、特別なフィッティング
+    - name: タイムライン
+      type: 文章
+      placeholder: 例えば90日以内に配達
+    - name: 追加の要件
+      type: テキストエリア
+      placeholder: アプリケーション、技術仕様、または特別な要件について説明します。参照図面、仕様、またはリンクがある場合はそれを含めます。
+    - name: アップロード仕様
+      type: ファイル
+      placeholder: 仕様シート、図面、または参考資料 (PDF、DWG、DXF) をアップロードします。
+    - name: ロゴ/アートワークをアップロードする
+      type: ファイル
+      placeholder: カスタムブランディング用のロゴまたはアートワークをアップロードします (AI、EPS、PNG)
+content_rfq_types:
+  tagline: 3層RFQシステム
+  title: 適切な<br />お問い合わせレベルを選択してください
+  subtitle: プロジェクトが異なれば、必要な詳細レベルも異なります。購入段階に合わせてフォームをお選びください。
+  items:
+    - title: クイックお問い合わせ
+      description: 5 ～ 6 フィールド、30 秒。最初の連絡、一般的な質問、またはリソースのダウンロードのフォローアップ用。基本情報と次のステップについて 24 時間以内に返信いたします。
+      icon: tabler:bolt
+    - title: 標準見積依頼
+      description: 8 ～ 10 フィールド、2 分。モデルの選択、数量、納期要件を含む特定の製品の見積もりについては。 48 時間以内に詳細な見積もりを受け取ります。
+      icon: tabler:file-text
+    - title: プロジェクトの見積依頼
+      description: 10 ～ 14 フィールド、5 分。カスタム構成、コンプライアンス文書、複数年にわたる供給計画を必要とする RIB、リゾート フリート、レスキュー、または政府プロジェクト向け。専任のプロジェクトマネージャーを配置。
+      icon: tabler:clipboard-list
+form_quick:
+  title: クイックお問い合わせ
+  subtitle: 一般的な質問や最初の情報リクエストについては、すぐにお問い合わせください。
+  fields:
+    - name: フルネーム
+      label: フルネーム
+      type: 文章
+      required: true
+      placeholder: あなたのフルネーム
+    - name: ビジネスメール
+      label: ビジネスメール
+      type: 電子メール
+      required: true
+      placeholder: you@company.com
+    - name: 会社名
+      label: 会社名
+      type: 文章
+      required: true
+      placeholder: あなたの会社
+    - name: 購入者の種類
+      label: 私は...
+      type: 選択する
+      required: true
+      options:
+        - "販売代理店・輸入業者"
+        - "ブランドオーナー・PB"
+        - "リゾート・ウォーターセンター"
+        - "レンタル事業者"
+        - "政府・救助機関"
+        - "ダイビング・釣り事業者"
+        - "マリンエンジニア・リフィット"
+        - "その他"
+    - name: 製品興味
+      label: 製品への関心
+      type: 複数選択
+      required: true
+      options:
+        - RIBボート
+        - "インフレータブルボート"
+        - SUPボード
+        - "安全装備"
+        - "アクセサリー"
+        - "カスタムOEM/ODM"
+    - name: メッセージ
+      label: あなたは何が必要ですか？
+      type: テキストエリア
+      required: false
+      placeholder: 要件の簡単な説明...
+form_standard:
+  title: 標準見積依頼
+  subtitle: 特定の製品と数量についての詳細な見積もりリクエスト。
+  fields:
+    - name: フルネーム
+      label: フルネーム
+      type: 文章
+      required: true
+    - name: ビジネスメール
+      label: ビジネスメール
+      type: 電子メール
+      required: true
+    - name: 会社名
+      label: 会社名
+      type: 文章
+      required: true
+    - name: 購入者の種類
+      label: 購入者のタイプ
+      type: 選択する
+      required: true
+    - name: 製品モデル
+      label: 製品型式・種類
+      type: 文章
+      required: true
+      placeholder: '例: AF580 RIB、AF380 インフレータブル'
+    - name: 量
+      label: 推定数量
+      type: 文章
+      required: true
+      placeholder: 例：10～20単位
+    - name: ターゲットマーケット
+      label: 対象市場/地域
+      type: 文章
+      required: true
+      placeholder: '例: EU、北米、中東'
+    - name: 配達タイムライン
+      label: ご希望の配達
+      type: 選択する
+      required: true
+      options:
+        - 30日以内
+        - 30〜60日
+        - 60〜90日
+        - "計画段階（90日以上）"
+        - "まだ検討中"
+    - name: コンプライアンス必須
+      label: コンプライアンス要件
+      type: 複数選択
+      required: false
+      options:
+        - CE / RCD 2013/53/EU
+        - UKCA
+        - USCG
+        - ISO 9001
+        - BSCI
+        - REACH
+        - "なし・不明"
+    - name: メッセージ
+      label: 追加の詳細
+      type: テキストエリア
+      required: false
+form_project:
+  title: プロジェクトの見積依頼
+  subtitle: フリート、カスタム、または政府調達に関する包括的なプロジェクトの問い合わせ。
+  fields:
+    - name: フルネーム
+      label: フルネーム
+      type: 文章
+      required: true
+    - name: ビジネスメール
+      label: ビジネスメール
+      type: 電子メール
+      required: true
+    - name: 会社名
+      label: 会社名
+      type: 文章
+      required: true
+    - name: 購入者の種類
+      label: 購入者のタイプ
+      type: 選択する
+      required: true
+    - name: プロジェクトタイプ
+      label: プロジェクトの種類
+      type: 選択する
+      required: true
+      options:
+        - "リゾート・ホテル船隊"
+        - "レンタル船隊"
+        - "救助・巡視船隊"
+        - "ダイビングセンター船隊"
+        - "政府調達"
+        - "プライベートブランド・OEM"
+        - "ディーラー在庫注文"
+        - "その他"
+    - name: ボートの種類
+      label: 必要なボートの種類
+      type: 複数選択
+      required: true
+      options:
+        - RIBボート
+        - "インフレータブルボート・ディンギー"
+        - SUPボード
+        - "カヤック"
+        - "安全装備"
+    - name: フリートサイズ
+      label: 艦隊のサイズ/数量の範囲
+      type: 文章
+      required: true
+      placeholder: '例: 12 か月で 20 ～ 50 ユニット'
+    - name: カスタム要件
+      label: カスタム構成のニーズ
+      type: テキストエリア
+      required: false
+      placeholder: 船体のサイズ、チューブの材質、デッキのレイアウト、ブランド要件...
+    - name: コンプライアンス必須
+      label: コンプライアンスと認証の要件
+      type: 複数選択
+      required: true
+      options:
+        - CE / RCD 2013/53/EU
+        - UKCA
+        - USCG Type III/V
+        - ISO 9001
+        - BSCI
+        - REACH / RoHS
+        - "ローカル市場認証"
+    - name: ターゲットマーケット
+      label: 対象市場
+      type: 文章
+      required: true
+    - name: 予算範囲
+      label: 予算範囲
+      type: 選択する
+      required: false
+      options:
+        - "$10,000未満"
+        - $10,000 - $50,000
+        - $50,000 - $200,000
+        - $200,000+
+        - "回答しない"
+    - name: 配達タイムライン
+      label: プロジェクトのタイムライン
+      type: 選択する
+      required: true
+      options:
+        - "至急（30日以内）"
+        - "標準（30〜60日）"
+        - "計画済み（60〜90日）"
+        - "将来計画（90日以上）"
+    - name: メッセージ
+      label: プロジェクトの詳細と要件
+      type: テキストエリア
+      required: false
+      placeholder: プロジェクト、アプリケーション、および特定の要件について説明してください...
+cta:
+  title: 電子メールでの相談をご希望ですか?
+  subtitle: お問い合わせを当社の営業チームに直接送信していただければ、24 時間以内に返答させていただきます。
+  actions:
+    - variant: primary
+      text: 直接メールでお問い合わせください
+      href: /contact

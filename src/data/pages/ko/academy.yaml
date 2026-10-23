@@ -1,0 +1,167 @@
+hero:
+  tagline: Aquafarer 아카데미
+  title: 학습 센터
+  subtitle: 모든 수준을 위한 가이드와 튜토리얼 — SUP 기초부터 고급 구조 기술까지
+categories:
+  - level: 초보자
+    color: from-green-500 to-emerald-600
+    badge: bg-green-100 text-green-700
+    guides:
+      - title: SUP 기본
+        desc: 스탠드업 패들보딩의 기본 배우기 — 자세, 패들 스트로크 기술, 균형.
+        slug: beginner-sup-guide
+      - title: 패들 기술
+        desc: 전진 스트로크, 스윕 스트로크, 드로우 스트로크, 로우 브레이스 — 필수 패들 동작 마스터.
+        slug: sup-paddle-guide
+      - title: 안전 우선
+        desc: 기상 체크, PFD 사용, 리쉬 규칙, 자기 구조 등 필수 안전 수칙.
+        slug: sup-safety-guide
+  - level: 중급
+    color: from-blue-500 to-indigo-600
+    badge: bg-blue-100 text-blue-700
+    guides:
+      - title: 투어 필수
+        desc: 장시간 패들링 계획 — 항해, 수분 섭취, 페이싱, 바람 예보 읽기.
+        slug: touring-sup-guide
+      - title: 기상 읽기
+        desc: 해양 예보 해석, 구름 패턴 식별, 수면에 대한 바람 영향 이해.
+        slug: weather-planning-water-sports
+      - title: 항해 기초
+        desc: 해도 읽기, 나침반 사용, GPS 웨이포인트, 연안 패들링 경로 계획.
+        slug: sup-navigation-guide
+      - title: 조수 인식
+        desc: 조수 주기와 해류 이해, 출항 시간과 경로에 미치는 영향.
+        slug: understanding-tides
+  - level: 고급의
+    color: from-purple-500 to-violet-600
+    badge: bg-purple-100 text-purple-700
+    guides:
+      - title: 다일 여행 계획
+        desc: 원정 물류 — 장비 선택, 음식 계획, 안전 수칙, 비상 연락처.
+        slug: sup-travel-guide
+      - title: 구조 기술
+        desc: 자기 구조, T-구조, 카약용 에스키모 구조, 개수에서 견인 프로토콜.
+        slug: sup-self-rescue
+      - title: 야간 패들링
+        desc: 어둠 속 항해 — 조명 요건, 경로 기억, 그룹 소통, 위험 인식.
+        slug: sup-navigation-guide
+  - level: 유지
+    color: from-amber-500 to-orange-600
+    badge: bg-amber-100 text-amber-700
+    guides:
+      - title: 청소 및 관리
+        desc: 담수 헹굼, UV 보호, 곰팡이 방지, 매 세션 후 올바른 건조 기술.
+        slug: inflatable-sup-maintenance
+      - title: 보관 가이드
+        desc: 팽창식 보드와 보트 보관을 위한 최선의 방법 — 공기 빼기, 접기, 온도 관리, 사용 수명.
+        slug: inflatable-sup-storage
+      - title: 수리 기초
+        desc: 작은 구멍, 이음새 누수, 밸브 문제를 PVC 수리 키트와 패치 기술로 수리합니다.
+        slug: inflatable-sup-repair
+      - title: 밸브 유지보수
+        desc: 밸브 유형(Halkey-Roberts, Boston, Leafield)을 확인하고, 이물질을 청소하며, 결함 있는 스템을 교체합니다.
+        slug: inflatable-sup-repair
+knowledge_center_tagline: 지식센터
+knowledge_center_title: 해양 장비 및 산업 가이드
+knowledge_center_subtitle: 해양 전문가, 선단 운영자 및 수상 스포츠 애호가를 위한 전문 지식과 구매 가이드.
+knowledge_sections:
+  - title: RIB 보트 지식
+    tagline: 경질 팽창식 보트 가이드
+    desc: RIB 보트에 대한 모든 정보 — 선체 디자인, 재료, 엔진 선택, 유지보수, 상업적 및 레크리에이션용 구매 조언.
+    guides:
+      - title: 올바른 RIB 보트 선택 방법
+        desc: RIB 선택을 위한 완벽한 가이드 — 크기, 엔진 출력, 튜브 재질, 선체 유형 및 사용 목적.
+        href: /v2/inflatable-boat-buying-guide
+      - title: RIB vs 팽창식 보트
+        desc: 경질 팽창식 보트와 전통적 팽창식 딩기의 비교 — 선체 설계, 성능, 내구성 및 수용력 비교.
+        href: /compare/rib-vs-dinghy
+      - title: 상업 RIB 대 오락 RIB
+        desc: 상업용 vs 레크리에이션 RIB 보트 — 건설 기준, 재료, 수명, 비용, 인증 비교.
+        href: /compare/commercial-vs-recreational-rib
+      - title: 알루미늄 vs 유리섬유 선체
+        desc: 무게, 비용, 내구성, 내식성을 기준으로 알루미늄과 유리섬유 선체 비교 — RIB 보트용.
+        href: /compare/aluminum-vs-fiberglass
+  - title: 팽창식 보트 가이드
+    tagline: 팽창식 수상 기구 지식
+    desc: 팽창식 보트에 관한 포괄적 가이드 — PVC vs Hypalon, 제작 방법, 안전 기준, 유지보수 최선의 방법.
+    guides:
+      - title: PVC vs Hypalon 재질 가이드
+        desc: 팽창식 보트 제작을 위한 PVC과 Hypalon CSM의 결정적 비교.
+        href: /compare/pvc-vs-hypalon
+      - title: 팽창식 보트 제작 방법
+        desc: 제조 과정 — 재료 절단, HF 용접, 이음새 제작, 압력 테스트, 품질 관리.
+        href: /learn/inflatable-technology
+      - title: 팽창식 보트 안전 가이드
+        desc: 안전 기준, 적재 용량, 올바른 공기 주입, 출항 전 점검, 비상 절차.
+        href: /learn/water-safety
+      - title: 팽창식 보트 유지보수
+        desc: 팽창식 보트 및 RIBs의 세척, 보관, UV 보호, 동절기 준비, 수리.
+        href: /v2/inflatable-boat-maintenance
+  - title: 보트 지식
+    tagline: 인플레이터블 보트 & RIB 허브
+    desc: 딩기에서 RIBs까지 인플레이터블 보트의 종류, 재료, 제작 방법, 유지 관리 및 안전에 대한 기술 안내서.
+    guides:
+      - title: 인플레이터블 보트 종류
+        desc: 딩기, RIBs, 카약 및 텐더 — 차이점을 배우고 적합한 보트를 선택하세요.
+        href: /v2/inflatable-boat-buying-guide
+      - title: Drop-Stitch 기술
+        desc: 수천 개의 내부 실이 단단한 고압 인플레이터블 구조를 만드는 방법.
+        href: /learn/drop-stitch-core
+      - title: 재료 참조
+        desc: PVC 데니어 등급, 원단 무게, UV 저항 및 해양 등급 재료 설명.
+        href: /learn/materials
+      - title: RIB 대 딩기
+        desc: 다양한 사용 사례에 대해 강체 인플레이터블 보트와 전통적인 인플레이터블 딩기를 비교하세요.
+        href: /compare/rib-vs-dinghy
+  - title: SUP 지식
+    tagline: 스탠드업 패들보드 가이드
+    desc: 인플레이터블 vs 강체, 보드 크기, 재료 기술 및 모든 수준의 전문가 조언을 포함한 SUP 보드에 관한 모든 것.
+    guides:
+      - title: 인플레이터블 vs 하드 SUP
+        desc: iSUP와 하드 에폭시 보드를 휴대성, 내구성, 성능 및 가치 면에서 비교하세요.
+        href: /learn/sup
+      - title: SUP 보드 크기 가이드
+        desc: 길이, 폭, 두께가 안정성, 속도 및 조작성에 미치는 영향.
+        href: /learn/sup
+      - title: SUP 유지 관리 및 관리
+        desc: 인플레이터블 SUP 보드의 청소, 보관, UV 보호 및 수리 팁.
+        href: /v2/inflatable-sup-maintenance
+      - title: 첫 SUP 선택하기
+        desc: 체중, 기술 수준 및 사용 목적에 맞는 적절한 스탠드업 패들보드를 선택하기 위한 초보자 가이드.
+        href: /learn/sup
+  - title: 다이빙 장비 가이드
+    tagline: 상업용 다이브 보트 지식
+    desc: 다이빙 센터, 다이브 운영자 및 상업 다이빙 팀을 위한 다이브 보트, 다이브 RIBs 및 장비에 관한 전문 가이드.
+    guides:
+      - title: 다이빙 센터에 가장 적합한 RIB 보트
+        desc: 다이빙 센터에 적합한 다이브 RIB를 선택하는 방법 — 수용 인원, 구성 및 예산 고려 사항.
+        href: /solutions-diving-center-boats
+      - title: 다이브 RIB 구성 가이드
+        desc: 다이브 RIBs의 필수 기능 — 탱크 랙, 사다리 시스템, 다이브 플랫폼 및 장비 저장.
+        href: /solutions-diving-center-boats
+  - title: 요트 텐더 가이드
+    tagline: 슈퍼요트 및 해양 텐더 솔루션
+    desc: 완벽한 요트 텐더 선택 가이드 — 인플레이션 텐더, RIB 텐더, 보관 솔루션 및 텐더 액세서리.
+    guides:
+      - title: 요트 텐더 선택 방법
+        desc: 요트용 텐더를 선택할 때 고려해야 할 요소 — 크기, 재질, 엔진 및 보관.
+        href: /solutions-yacht-tender-solutions
+      - title: 인플레이션 텐더 vs RIB 텐더
+        desc: 성능, 내구성 및 보관성을 위해 인플레이션 딩기 텐더와 강성 인플레이션 보트 텐더를 비교.
+        href: /compare/rib-vs-dinghy
+  - title: 구조 장비 가이드
+    tagline: 수색 및 구조 수상 차량 지식
+    desc: 해안 경비대, 안전요원, 재난 구호팀을 위해 구조 보트, SAR 수상 차량, 비상 대응 장비에 대한 전문 가이드.
+    guides:
+      - title: SAR 보트 선택 가이드
+        desc: 올바른 수색 및 구조 보트를 선택하는 방법 — 속도, 수용 능력, 내구성 및 전문 장비 요구 사항.
+        href: /solutions-rescue-watercraft
+      - title: 구조 작업용 상업용 RIB
+        desc: 세계 전문 수색 구조팀이 상업용 RIBs를 선호하는 이유.
+        href: /use-cases/search-and-rescue
+read_guide: 가이드 읽기 →
+cta:
+  title: 어디서 시작해야 할지 모르겠나요?
+  desc: 기술 평가 퀴즈를 통해 귀하의 수준에 맞는 가이드와 장비를 찾으세요.
+  label: 문의하기 →
+  link: /contact

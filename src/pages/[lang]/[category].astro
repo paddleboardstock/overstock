@@ -1,0 +1,366 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import Icon from '~/components/ui/Icon.astro';
+import { SITE } from 'astrowind:config';
+
+import { languages, defaultLang } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+import { getLocalizedProducts } from '~/utils/product-i18n';
+import { inflatableBoatCatalogPath } from '~/lib/catalogs';
+import { pageContentData } from '~/i18n/generated/site-data';
+import { urlSlugToCategory, CATEGORY_SLUG_TO_URL } from '~/utils/products';
+import { breadcrumbNode, collectionNode } from '~/utils/schema-graph';
+import type { MetaData } from '~/types';
+
+export async function getStaticPaths() {
+  const slugs = Object.values(CATEGORY_SLUG_TO_URL);
+  const paths: Array<{ params: { lang: string; category: string } }> = [];
+  Object.keys(languages).forEach((lang) => {
+    slugs.forEach((slug) => {
+      paths.push({ params: { lang, category: slug } });
+    });
+  });
+  return paths;
+}
+
+const { lang = defaultLang, category: urlSlug } = Astro.params;
+const activeCategory = urlSlugToCategory(urlSlug || '')!;
+
+if (!activeCategory) {
+  Astro.redirect('/' + lang + '/404');
+}
+
+const t = (key: string) => getUiForLang(lang || defaultLang)?.[key] || '';
+const categoryKey = (cat: string) =>
+  ({
+    RIB: 'ribs',
+    INFLATABLE: 'inflatables',
+    SUP: 'sups',
+    ACCESSORY: 'accessories',
+    KAYAK: 'kayaks',
+    KABOAT: 'kayaks',
+    KAYAK_FULL_DROPSTITCH: 'kayaks',
+    KAYAK_HYBRID: 'kayaks',
+    INFLATABLE_CATAMARAN: 'kayaks',
+    HIGH_SPEED_CATAMARAN: 'catamaran',
+    SIB_ALUMINUM: 'inflatables',
+    SIB_DROPSTITCH: 'inflatables',
+    WHITEWATER_RAFT: 'inflatables',
+    TACTICAL_RAFT: 'inflatables',
+    DROPSTITCH_SEAT: 'accessories',
+    rib: 'ribs',
+    inflatable: 'inflatables',
+    sup: 'sups',
+    accessory: 'accessories',
+    kayak: 'kayaks',
+  })[cat] || cat.toLowerCase();
+
+const localizedProducts = getLocalizedProducts(lang!);
+const filteredProducts = localizedProducts.filter((p) => p.category.toLowerCase() === activeCategory);
+
+const RIB_GENERIC = 'https://assets.aquafarer.com/images/aquafarer/products/rib/aquafarer-rib-generic.webp';
+const defaultVisuals: Record<string, string> = {
+  'sup-explorer-11': 'https://assets.aquafarer.com/images/aquafarer/products/aquafarer-sup-allround-board.webp',
+  'airdeck-360': 'https://assets.aquafarer.com/images/aquafarer/products/aquafarer-inflatable-boat.webp',
+  'rib-330': 'https://assets.aquafarer.com/images/aquafarer/products/rib/aquafarer-rib-330-boat.webp',
+  'rib-450-patrol': 'https://assets.aquafarer.com/images/aquafarer/products/rib/aquafarer-rib-450-patrol-boat.webp',
+  'life-vest-classic': 'https://assets.aquafarer.com/images/aquafarer/products/aquafarer-life-vest-classic.webp',
+  'life-vest-pro': 'https://assets.aquafarer.com/images/aquafarer/products/aquafarer-life-vest-pro-front.webp',
+  'oars-pump-set': 'https://assets.aquafarer.com/images/aquafarer/products/aquafarer-electric-pump.webp',
+  'zb-mt350': 'https://assets.aquafarer.com/images/aquafarer/products/aquafarer-zb-mt350-inflatable-dinghy.webp',
+  ap330: 'https://assets.aquafarer.com/images/aquafarer/products/rib/ap330/ap330-grey.webp',
+  ap360: 'https://assets.aquafarer.com/images/aquafarer/products/rib/ap360/ap360-grey.webp',
+  ap390: 'https://assets.aquafarer.com/images/aquafarer/products/rib/ap390/ap390-grey.webp',
+  ap420: 'https://assets.aquafarer.com/images/aquafarer/products/rib/ap420/ap420-grey.webp',
+  ap460: 'https://assets.aquafarer.com/images/aquafarer/products/rib/ap460/ap460-grey.webp',
+  ap520: 'https://assets.aquafarer.com/images/aquafarer/products/rib/ap520/ap520-grey-1.webp',
+  ap560: 'https://assets.aquafarer.com/images/aquafarer/products/rib/ap560/ap560-grey.webp',
+  ap660: 'https://assets.aquafarer.com/images/aquafarer/products/rib/ap660/ap660-grey.webp',
+  ap700: 'https://assets.aquafarer.com/images/aquafarer/products/rib/ap700/ap700-grey.webp',
+  ap760: 'https://assets.aquafarer.com/images/aquafarer/products/rib/ap760/aquafarer-ap760-grey.webp',
+  ap800: 'https://assets.aquafarer.com/images/aquafarer/products/rib/ap800/ap800-gery.webp',
+  ap900: 'https://assets.aquafarer.com/images/aquafarer/products/rib/ap900/ap900-grey.webp',
+  df420: 'https://assets.aquafarer.com/images/aquafarer/products/rib/df420/df420-gery-jpg.webp',
+  df460: 'https://assets.aquafarer.com/images/aquafarer/products/rib/df460/df460-grey.webp',
+  df500: 'https://assets.aquafarer.com/images/aquafarer/products/rib/df500/df500-grey.webp',
+  df540: 'https://assets.aquafarer.com/images/aquafarer/products/rib/df540/df540-grey.webp',
+  'df540-coaster': 'https://assets.aquafarer.com/images/aquafarer/products/rib/df540-coaster/df540-grey.webp',
+  df600: 'https://assets.aquafarer.com/images/aquafarer/products/rib/df600/df600-grey.webp',
+  df700: 'https://assets.aquafarer.com/images/aquafarer/products/rib/df700/df700-gery.webp',
+  df760: 'https://assets.aquafarer.com/images/aquafarer/products/rib/df760/df760-grey.webp',
+  df860: 'https://assets.aquafarer.com/images/aquafarer/products/rib/df860/df860-grey.webp',
+  ex7: 'https://assets.aquafarer.com/images/aquafarer/products/rib/ex7/ex7-black.webp',
+  ex9: 'https://assets.aquafarer.com/images/aquafarer/products/rib/ex9/ex9-black.webp',
+  sw240: 'https://assets.aquafarer.com/images/aquafarer/products/rib/sw240/gery.webp',
+  sw260: 'https://assets.aquafarer.com/images/aquafarer/products/rib/sw260/sw260-grey.webp',
+  sw290: 'https://assets.aquafarer.com/images/aquafarer/products/rib/sw290/sw290-grey.webp',
+  sw310: RIB_GENERIC,
+  sw340: RIB_GENERIC,
+  vr260: 'https://assets.aquafarer.com/images/aquafarer/products/rib/vr260/vr260-grey.webp',
+  vr290: 'https://assets.aquafarer.com/images/aquafarer/products/rib/vr290/vr290-grey.webp',
+  vr310: 'https://assets.aquafarer.com/images/aquafarer/products/rib/vr310/vr310-grey.webp',
+  vr340: 'https://assets.aquafarer.com/images/aquafarer/products/rib/vr340/vr340-grey.webp',
+  vr360: 'https://assets.aquafarer.com/images/aquafarer/products/rib/vr360/vr360-grey.webp',
+  vr380: 'https://assets.aquafarer.com/images/aquafarer/products/rib/vr380/vr380-grey.webp',
+  vr400: 'https://assets.aquafarer.com/images/aquafarer/products/rib/vr400/vr400-grey.webp',
+  vr420: 'https://assets.aquafarer.com/images/aquafarer/products/rib/vr420/vr420-grey.webp',
+  vr460: 'https://assets.aquafarer.com/images/aquafarer/products/rib/vr460/vr460-grey.webp',
+};
+const rawVisuals = ((
+  pageContentData[`${lang}/site-product-visuals`] ||
+  pageContentData['en/site-product-visuals'] ||
+  {}
+)?.visuals || []) as Array<{ id: string; image: string }>;
+const yamlVisuals = Object.fromEntries(rawVisuals.map((v) => [v.id, v.image]).filter(([, img]) => img));
+const productVisuals: Record<string, string> = { ...defaultVisuals, ...yamlVisuals };
+
+const categories = [...new Set(localizedProducts.map((p) => p.category))].filter(
+  (cat) => CATEGORY_SLUG_TO_URL[cat.toLowerCase() as keyof typeof CATEGORY_SLUG_TO_URL]
+);
+
+const RIB_SERIES: Record<string, { tag: string; label: string }> = {
+  apex: { tag: 'apex', label: 'Apex Performance' },
+  defender: { tag: 'defender', label: 'Defender' },
+  explorer: { tag: 'explorer', label: 'Explorer' },
+  swiftlitee: { tag: 'swiftlitee', label: 'Swiftlitee' },
+  versa: { tag: 'versa', label: 'Versa' },
+};
+
+function getRibSeries(id: string): string | null {
+  if (id.startsWith('ap')) return 'apex';
+  if (id.startsWith('df')) return 'defender';
+  if (id.startsWith('ex')) return 'explorer';
+  if (id.startsWith('sw')) return 'swiftlitee';
+  if (id.startsWith('vr')) return 'versa';
+  return null;
+}
+
+const isRibCategory = activeCategory === 'rib';
+const ribSeriesList = isRibCategory
+  ? Object.entries(RIB_SERIES)
+      .map(([key, val]) => ({
+        ...val,
+        key,
+        count: filteredProducts.filter((p) => getRibSeries(p.id) === key).length,
+      }))
+      .filter((s) => s.count > 0)
+  : [];
+
+const pageLabel = t('home.category.' + categoryKey(activeCategory)) || urlSlug;
+
+const metadata: MetaData = {
+  title: `${pageLabel} — ${SITE.name}`,
+  description: t('product.pageDesc') || `Browse ${SITE.name} ${pageLabel} products.`,
+};
+
+const catalogUrl = `/${lang}/${urlSlug}/`;
+const categoryGraph = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    ...collectionNode({
+      path: catalogUrl,
+      name: `Aquafarer ${pageLabel}`,
+      description: t('product.pageDesc') || `Browse ${SITE.name} ${pageLabel} products.`,
+      items: filteredProducts.map((p) => ({
+        name: p.name,
+        path: `/${lang}/products/${p.id}/`,
+        ...(productVisuals[p.id] ? { image: productVisuals[p.id] } : {}),
+      })),
+    }),
+    breadcrumbNode([
+      { name: t('nav.home') || 'Home', path: `/${lang}/` },
+      { name: pageLabel, path: catalogUrl },
+    ]),
+  ],
+};
+---
+
+<Layout metadata={metadata}>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(categoryGraph)} />
+  <section class="max-w-6xl mx-auto py-24 px-6">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">{t('product.catalog')}</span>
+      <h1 class="mt-4 text-4xl font-semibold text-gray-900 capitalize">
+        Aquafarer {t('home.category.' + categoryKey(activeCategory)) || urlSlug}
+      </h1>
+      <p class="mt-4 text-lg text-gray-500">Premium {pageLabel} — {t('product.pageDesc')}</p>
+    </div>
+
+    {
+      categories.length > 0 && (
+        <div class="flex flex-wrap items-center justify-center gap-2 mb-4">
+          <a
+            href={`/${lang}/products`}
+            class:list={[
+              'inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-semibold border transition-colors',
+              'bg-white border-gray-200 text-gray-600 hover:bg-gray-50',
+            ]}
+          >
+            {t('product.all') || 'All'} ({localizedProducts.length})
+          </a>
+          {categories.map((cat) => {
+            const catUrl = CATEGORY_SLUG_TO_URL[cat.toLowerCase() as keyof typeof CATEGORY_SLUG_TO_URL];
+            return (
+              <a
+                href={`/${lang}/${catUrl}`}
+                class:list={[
+                  'inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-semibold border transition-colors',
+                  activeCategory === cat.toLowerCase()
+                    ? 'bg-gray-900 text-white border-gray-900'
+                    : 'bg-white border-gray-200 text-gray-600 hover:bg-gray-50',
+                ]}
+              >
+                {t('home.category.' + categoryKey(cat)) || cat}(
+                {localizedProducts.filter((p) => p.category === cat).length})
+              </a>
+            );
+          })}
+        </div>
+      )
+    }
+
+    {
+      ribSeriesList.length > 0 && (
+        <div class="flex flex-wrap items-center justify-center gap-2 mb-12" id="series-pills">
+          <button
+            data-series="all"
+            class:list={[
+              'series-pill inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold border transition-colors cursor-pointer',
+              'bg-gray-900 text-white border-gray-900',
+            ]}
+          >
+            All Series ({filteredProducts.length})
+          </button>
+          {ribSeriesList.map((s) => (
+            <button
+              data-series={s.key}
+              class:list={[
+                'series-pill inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold border transition-colors cursor-pointer',
+                'bg-white border-gray-200 text-gray-600 hover:bg-gray-50',
+              ]}
+            >
+              {s.label} ({s.count})
+            </button>
+          ))}
+        </div>
+      )
+    }
+
+    {
+      (activeCategory === 'sup' || activeCategory === 'rib' || activeCategory === 'inflatable') && (
+        <div class="flex flex-wrap items-center justify-center gap-4 mb-12">
+          {activeCategory === 'sup' && (
+            <a
+              href="/catalogs/aquafarer-sup-catalog.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 px-4 py-2 bg-sky-50 border border-sky-200 text-sky-700 text-sm font-medium rounded-full hover:bg-sky-100 transition-colors"
+            >
+              <Icon name="tabler:download" class="w-4 h-4" />
+              {t('product.downloadSupCatalog')}
+            </a>
+          )}
+          {activeCategory !== 'sup' && (
+            <a
+              href={inflatableBoatCatalogPath(lang)}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-50 border border-emerald-200 text-emerald-700 text-sm font-medium rounded-full hover:bg-emerald-100 transition-colors"
+            >
+              <Icon name="tabler:download" class="w-4 h-4" />
+              {t('product.downloadBoatCatalog')}
+            </a>
+          )}
+        </div>
+      )
+    }
+
+    {
+      filteredProducts.length === 0 ? (
+        <div class="text-center py-16 text-gray-400">
+          <p class="text-lg">{t('product.noResults') || 'No products in this category.'}</p>
+          <a href={`/${lang}/products`} class="text-sky-600 hover:underline mt-2 inline-block">
+            {t('product.viewAll') || 'View all products'}
+          </a>
+        </div>
+      ) : (
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="product-grid">
+          {filteredProducts.map((p) => {
+            const series = getRibSeries(p.id);
+            return (
+              <div
+                class="bg-white rounded-2xl overflow-hidden border border-gray-200 hover:shadow-md transition-shadow product-card"
+                data-series={series || 'other'}
+              >
+                <a
+                  href={`/${lang}/products/${p.id}`}
+                  class="block aspect-[3/4] bg-gradient-to-br from-gray-100 to-gray-200 relative overflow-hidden group"
+                >
+                  {productVisuals[p.id] ? (
+                    <img
+                      src={productVisuals[p.id]}
+                      alt={p.name}
+                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div class="flex items-center justify-center h-full text-gray-400 text-sm">
+                      {t('home.category.' + categoryKey(p.category)) || p.category}
+                    </div>
+                  )}
+                </a>
+                <div class="p-6">
+                  <h3 class="font-semibold text-gray-900 text-lg">{p.name}</h3>
+                  <p class="text-gray-500 mt-2 text-sm">{p.desc}</p>
+                  <div class="mt-4 space-y-2">
+                    <a
+                      href={`/${lang}/contact?product=${encodeURIComponent(p.name)}`}
+                      class="block text-center px-4 py-2.5 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary/90 transition-colors"
+                    >
+                      {t('product.requestQuote') || 'Request Factory Quote'}
+                    </a>
+                    <a
+                      href={`/${lang}/contact?product=${encodeURIComponent(p.name)}&custom=1`}
+                      class="block text-center px-4 py-2 border border-primary text-primary text-sm font-medium rounded-lg hover:bg-primary/5 transition-colors"
+                    >
+                      {t('product.oemDetails') || 'Get OEM/ODM Details'}
+                    </a>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      )
+    }
+  </section>
+
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true">
+    <p>{SITE.name} {t('product.catalog')} — {pageLabel}.</p>
+  </section>
+
+  <script>
+    document.querySelectorAll('.series-pill').forEach((pill) => {
+      pill.addEventListener('click', () => {
+        const series = pill.getAttribute('data-series');
+        document.querySelectorAll('.series-pill').forEach((p) => {
+          p.classList.remove('bg-gray-900', 'text-white', 'border-gray-900');
+          p.classList.add('bg-white', 'border-gray-200', 'text-gray-600');
+        });
+        pill.classList.remove('bg-white', 'border-gray-200', 'text-gray-600');
+        pill.classList.add('bg-gray-900', 'text-white', 'border-gray-900');
+        document.querySelectorAll('.product-card').forEach((el) => {
+          const card = el as HTMLElement;
+          const cardSeries = card.getAttribute('data-series');
+          if (series === 'all' || cardSeries === series) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</Layout>

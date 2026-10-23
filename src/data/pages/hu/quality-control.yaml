@@ -1,0 +1,137 @@
+hero:
+  tagline: Minőségellenőrzés
+  title: Minőségellenőrzési rendszer<br />a OEM Tengeri Gyártás számára
+  subtitle: Többlépcsős ellenőrzési folyamat, amely lefedi a beérkező anyagokat, a gyártás folyamatban lévő szakaszait, a nyomáspróbákat, a végszerelést és a kiszállítás előtti ellenőrzést. Minden tétel nyomon követhető, minden teszt rögzítésre kerül.
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-pressure-testing.webp
+    alt: Aquafarer minőségellenőrzési és nyomáspróba folyamat
+stats:
+  title: Minőségellenőrzés számokban
+  stats:
+    - title: Egységek nyomáspróbázva
+      amount: 100%
+    - title: Maximális nyomásesés
+      amount: <5%
+    - title: Minőségellenőrzési ellenőrök
+      amount: '12'
+    - title: Megőrzött nyilvántartások
+      amount: 10 év
+content_system:
+  tagline: Minőségellenőrzési rendszer áttekintése
+  title: Integrált minőség<br />Irányítási keretrendszer
+  subtitle: A minőségellenőrzési rendszerünk függetlenül működik a termeléstől, és közvetlenül a vezetőségnek jelent. Egyetlen tétel sem kerül kiszállításra a minőségi labor aláírt minőségengedélye nélkül.
+  items:
+    - title: Független Minőségellenőrző Labor
+      description: Minőségellenőrző laboratóriumunk külön funkcióként működik a termeléstől. A minőségellenőrzési ellenőrök a minőségvezetőnek jelentenek, nem a termelési igazgatónak. Ez a szervezeti függetlenség biztosítja, hogy a minőséggel kapcsolatos döntések objektíven szülessenek — a termelési határidők soha nem írják felül a minőségi követelményeket.
+      features:
+        - Közvetlenül a menedzsmentnek jelent, a termeléstől függetlenül
+        - Fel van hatalmazva a termelés leállítására minőségi problémák esetén
+        - 12 elkötelezett minőségellenőrzési ellenőr minden szakaszban
+        - Minden tesztberendezést évente kalibrálnak
+    - title: Tétel nyomonkövethetősége
+      description: Minden nyersanyag-adagot egyedi tételszámmal látnak el a ERP rendszerünkben. A nyersanyag érkezésétől a gyártáson át a késztermékig, minden hajó anyagjegyzéke visszavezethető az eredeti beszállítói tételekre. Ez lehetővé teszi a teljes upstream nyomonkövethetőséget bármely minőségi vagy megfelelőségi kérdés esetén.
+      features:
+        - ERP-alapú tételkövetés az anyagtól a késztermékig
+        - Fizikai sorozatcímkék minden munkarenden
+        - 100% anyagborítás — PVC, Hypalon, hardver, ragasztók
+        - Az iratokat 10 évig megőrzik (CE 2013/53/EU követelmény)
+    - title: Szabványok és megfelelés
+      description: Minőségellenőrzési eljárásaink összhangban vannak a nemzetközi szabványokkal. Termékeink CE tanúsítvánnyal rendelkeznek az EU 2013/53/EU Szabadidős Hajók Irányelve szerint. Minőségirányítási rendszerünk ISO 9001 tanúsítvánnyal rendelkezik. A társadalmi megfelelést BSCI tanúsítvánnyal biztosítjuk.
+      features:
+        - CE tanúsítvány (EU 2013/53/EU)
+        - ISO 9001:2015 minőségirányítás
+        - BSCI Társadalmi megfelelőségi tanúsítás
+        - REACH és RoHS anyagi megfelelés
+        - UKCA A Brexit utáni tanúsítás
+content_inspection:
+  tagline: Ellenőrzési szakaszok
+  title: Hatfokozatú<br />Ellenőrzési folyamat
+  subtitle: Minden termék 6 ellenőrzési szakaszon megy keresztül, dokumentált minőségellenőrzési pontokkal. A hibákat korán észlelik, a korrekciós intézkedések azonnal megérkeznek, és minden tétel teljesen nyomon követhető.
+  stages:
+    - stage: '1'
+      title: Beérkező anyagellenőrzés
+      description: Minden beérkező anyagot tételszám szerint rögzítenek, és karanténban tartják a minőségellenőrzés jóváhagyásáig. PVC/Hypalon a textiltekercseket húzószilárdság (ASTM D751), szakadásállóság (ISO4674) és vastagság szempontjából tesztelik.Drop-stitch A magokat, szelepeket, ragasztókat és berendezéseket vizuálisan vizsgálják és mérik a specifikációk szerint.
+      checks: Húzószilárdság ASTM D751, ISO szakadásellenállás 4674, vastagságmérő, ragasztó viszkozitás, vizuális hibavizsgálat
+      threshold: A tesztelt minták 100%-a. Utasítsa el, ha a szakítószilárdság < 90% a specifikációnak, a szakítószilárdság < a specifikáció minimumának, vagy bármilyen vizuális hiba található
+    - stage: '2'
+      title: Folyamatban lévő minőségellenőrzés — vágás és előkészítés
+      description: CNC-a vágott paneleket minden 20. panelen CAD forrásfájlokkal mérik át. Az élminőséget ellenőrizik a kopás, egyenetlen vágások vagy dimenziós elcsúszás után. A panelek számát minden gyártási tételnél a BOM alapján ellenőrzik, mielőtt az anyagok hegesztésre kerülnek.
+      checks: Méretellenőrzés a CAD DXF fájlokhoz képest, élminőség-ellenőrzés, panelszám ellenőrzés
+      threshold: Tolerancia ±0,5mm. A adag elutasítása, ha >2% túlzott a toleranciától
+    - stage: '3'
+      title: Folyamatban lévő minőségellenőrzés — Hegesztés és kötés
+      description: A gyártás során a hegesztés minőségét folyamatosan figyelemmel kísérik. Minden 50 egységnél mintákon végeznek hámozási teszteket (ASTM D751). A hegesztési szélességet a specifikációk szerint mérik. A forró levegő hőmérsékleti naplóit átvizsgálják az állandóság érdekében. Minden varrást vizuálisan vizsgálják a háttérvilágítás alatt, hogy csatornázás vagy üregek legyenek.
+      checks: ASTM D751 hámozási teszt 50 egységenként, hegesztési szélesség mérése, forró levegő hőmérsékleti napló felülvizsgálata, hátfény varrásvizsgálat
+      threshold: Hámozási szilárdság minimum 8 N/cm. Hegesztési szélesség ±tűrőképesség 1mm. Bármilyen látható csatornázás = visszautasítás
+    - stage: '4'
+      title: Összeszerelés minőségellenőrzés
+      description: Minden egység egy 100 pontos összeszerelési ellenőrzőlistát követi, amelyet a csapatvezető írt alá. A szelepfunkciót 10 nyitás-zárás ciklus alatt tesztelik. A hardver nyomatékot ellenőrzik. A vizuális ellenőrzés a felületfelületet, színkonzisztenciát, címkék elhelyezését és a kiegészítő teljességét vizsgálja.
+      checks: 100 pontos ellenőrzőlista, szelepfunkció teszt, hardveres nyomatékellenőrzés, vizuális ellenőrzés
+      threshold: 'Zéró hibás politika a biztonságkritikus elemeknél (szelepek, D-gyűrűk, fogantyúk). Kis kozmetikai hiba: AQL 2,5 (ISO 2859)'
+    - stage: '5'
+      title: Nyomáspróba
+      description: Minden kamrát felfújnak 1,25× névnyomásra, és 24-48 órán át tartják meg. A nyomásérzékelők folyamatosan naplózzák a várakozási időszak alatt. A hőmérséklet-kompenzált mérések biztosítják a pontosságot. Bármely kamrá, amely meghaladja az 5%-os nyomásesést, elutasítják, és az egész gyártási adag 100%-os újratesztelésével újravizsgálásra kerülnek.
+      checks: 24-48 órás nyomástartó napló, naponta ellenőrizve az érzékelő kalibrációja, hőmérséklet-kompenzált mérés, varrás újravizsgálata javítás után
+      threshold: Maximális 5% nyomásesés 24 órán át stabil hőmérsékleten. Túlteljesítés = 100%-os újrateszt az egész adagot
+    - stage: '6'
+      title: Végső ellenőrzés és szállítási kiadás
+      description: Végső vizuális és funkcionális ellenőrzés csomagolás előtt. A felületi hibákat, színkonzisztenciát, címkézés/BIN ellenőrzést, csomagolási integritást és a kiegészítők teljességét ellenőrzik az ügyfélrendelés alapján. Az egységeket vákuumba csomagolják, dobozba helyezik és raklapba helyezik. A végleges minőségellenőrzés szükséges, mielőtt bármely termék elhagyja a gyárat.
+      checks: Teljes vizuális ellenőrzés, kiegészítő lista a SKU szerint, csomagolás ejtési teszt (1 m véletlenszerű minta), címke/barcode ellenőrzés
+      threshold: AQL 2,5 nagy hibák, AQL 4,0 kisebb hibák. Nulla tolerancia a biztonsági hibákra. Az egységek 100%-a vizuálisan ellenőrzött
+content_equipment:
+  tagline: Tesztelő berendezések
+  title: QC Labor<br />Felszerelések
+  subtitle: Minőségellenőrző laborunk speciális tesztelő berendezésekkel felszerelt az anyagellenőrzés, a hegesztési integritás és a termék teljesítményének validálása céljából.
+  columns: 3
+  items:
+    - title: Húzószilárdság vizsgáló gép
+      description: Az anyag húzószilárdságát és nyúlását méri az ASTM D751 szabvány szerint. Alkalmazható az összes PVC, Hypalon és drop-stitch anyagtétel beérkező QC ellenőrzésére.
+      icon: tabler:scale
+    - title: Hőmérsékletkamra
+      description: Környezeti kamra UV ellenállás teszthez (ASTM G154) és alacsony hőmérsékletű rugalmasság vizsgálathoz. Szélsőséges működési körülményeket szimulál.
+      icon: tabler:temperature
+    - title: Nyomásérzékelők és adatrögzítők
+      description: Digitális nyomásérzékelők folyamatos adatnaplózással 24-48 órás levegőtartó tesztekhez. Pontosság érdekében hőmérséklet-kompenzált.
+      icon: tabler:wind
+    - title: Húzópróba berendezés
+      description: Kalibrált húzóteszt berendezés a hegesztett varratok szilárdságának ellenőrzésére. Véletlenszerű minták minden gyártási tételből.
+      icon: tabler:files
+    - title: Szivárgásérzékelő tartály
+      description: Vízmedence a felfújt kamrák merített szivárgás teszteléséhez. Vizuális buborékészlelés a varrat és szelep integritásának ellenőrzésére.
+      icon: tabler:ripple
+    - title: Ellenőrző Eszközök
+      description: Kalibrált mérőeszközök — vastagságmérők, nyomatékkulcsok, méretmérő csavarhúzók, keménységmérők a gyártási QC állomásokhoz.
+      icon: tabler:tools
+content_metrics:
+  tagline: QC Teljesítmény
+  title: Minőségellenőrzés<br />Metrikák
+  subtitle: Valós siker/kudarc adatok a gyártósorról. Ezeket a metrikákat napi szinten figyeljük és havonta felülvizsgálja a vezetőség.
+  columns: 3
+  items:
+    - title: 100% Tesztelt Egységek
+      description: Minden csónak minden kamráját nyomáspróbának vetjük shipping előtt. Nincs mintavétel — 100% ellenőrzés a nyomás integritására.
+      icon: tabler:check
+    - title: <5% Nyomáscsökkenés
+      description: Maximálisan megengedett nyomásvesztés 24-48 órán át 1,25× névleges nyomáson. Bármely kamra, ami ezt a határt túllépi, tétel újratesztelését váltja ki.
+      icon: tabler:gauge
+    - title: AQL 2,5
+      description: Megengedett Minőségi Szint a nagy hibákra a ISO 2859 mintavételi szabvány szerint. Nulla tolerancia a biztonságkritikus hibákra.
+      icon: tabler:clipboard-check
+    - title: 24-48 Órás Tartás
+      description: 'A nyomástartás időtartama a termékkategóriától függ. RIB kamrák: 48 óra. SUP és felfújható csónakok: 24-48 óra.'
+      icon: tabler:clock
+    - title: 1,25× Tesztnyomás
+      description: Biztonsági tartalék minden kamránál — a tesztelés a névleges nyomás 25%-ával magasabb értéken történik, hogy a maximális működési feltételek feletti tartalék biztosított legyen.
+      icon: tabler:arrow-up
+    - title: 0% biztonsági hibák
+      description: Zéró tolerancia a biztonságkritikus hibákkal szemben — szelepek, D-gyűrűk, varratok és úsztató kamrák. Bármilyen hiba = 100%-os újbóli ellenőrzés.
+      icon: tabler:shield
+cta:
+  title: Minőségi dokumentáció igénylése
+  subtitle: Teljes minőségi dokumentációs csomagokat biztosítunk, beleértve a tesztjelentéseket, anyagminősítéseket és megfelelőségi nyilatkozatokat minden szállítmánnyal. Mintákért lépjen kapcsolatba velünk.
+  actions:
+    - variant: primary
+      text: QC dokumentáció igénylése
+      href: /contact
+    - text: Tesztelési protokollok megtekintése
+      href: /quality

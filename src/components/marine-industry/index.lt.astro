@@ -1,0 +1,274 @@
+---
+import JsonLd from '~/components/common/JsonLd.astro';
+import AiQuickAnswer from '~/components/common/AiQuickAnswer.astro';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
+const { lang = 'lt' } = Astro.props;
+const t = (key: string) => getUiForLang(lang)?.[key] || '';
+---
+
+<JsonLd
+  type="Article"
+  article={{
+    headline: 'Pripučiamų valčių vadovas — išsamus šaltinis',
+    description:
+      'Išsamus pripučiamų laivų vadovas, apimantis tipus, statybos metodus, medžiagų palyginimą, atrankos kriterijus, saugos standartus ir priežiūrą.',
+    datePublished: '2026-07-07',
+  }}
+  data={{ url: 'https://aquafarer.com/marine-industry/' }}
+/>
+
+<JsonLd
+  type="BreadcrumbList"
+  breadcrumbs={[
+    { name: t('nav.home') || 'Home', href: `/${lang}/` },
+    { name: 'Jūrų pramonė', href: `/${lang}/marine-industry` },
+    { name: 'Pripučiamų valčių gidas', href: `/${lang}/marine-industry/` },
+  ]}
+/>
+
+<AiQuickAnswer
+  entityType="Vadovas"
+  quickAnswer="Pripučiamas valtis yra lengvas vandens transporto priemonė, pagaminta iš lanksčių audinių vamzdelių (sponsonų), užpildytų suslėgtu oru, kad būtų suteikta plūdrumas. Šiuolaikinės pripučiamos valtys apima džinčius, RIBs (kietas pripučiamas valtis), pripučiamas baidares ir stovimojo irklavimo lentas. Jos gaminamos iš PVC arba Hypalon CSM audinių, naudojant RF suvirinimą arba rankomis klijuotas siūles, o drop-stitch konstrukcija leidžia turėti aukšto slėgio kietus grindis."
+  facts={[
+    { label: 'Pasaulinė rinkos dydis', value: '$2.8B (2026)' },
+    { label: 'Pagrindinės medžiagos', value: 'PVC Hypalon CSM/' },
+    { label: 'Gyvenimo trukmės diapazonas', value: '8–20+ metų' },
+    { label: 'CE Sertifikavimas', value: 'Reikalingi (ES)' },
+  ]}
+/>
+
+<section class="max-w-4xl mx-auto py-16 px-6">
+  <h1 class="text-4xl font-semibold text-gray-900">Pripučiamų valčių gidas</h1>
+  <p class="mt-4 text-lg text-gray-500">
+    Pagrindinis šaltinis apie pripučiamus vandens transporto priemones – nuo pramoginių valčių iki profesionalių RIBs ir
+    specializuotų gelbėjimo laivų.
+  </p>
+
+  <nav class="mt-8 flex flex-wrap gap-2">
+    {
+      ['Types', 'Construction', 'Materials', 'Selection', 'Safety', 'Maintenance', 'Standards'].map((section) => (
+        <a
+          href={`#${section.toLowerCase()}`}
+          class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition"
+        >
+          {section}
+        </a>
+      ))
+    }
+  </nav>
+
+  <section id="types" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Pripučiamų valčių tipai</h2>
+    <div class="mt-8 grid gap-6">
+      {
+        [
+          {
+            title: 'Pripučiami kateriai',
+            desc: 'Maži, nešiojami laiveliai, skirti persikelti, žvejybai ir trumpoms laisvalaikio kelionėms. Dažniausiai 2–4 m ilgio, varomi mažais išorinio variklio varikliais (2–15 HP) arba irkluojami. Patogiausia kainos prasme įsigyti.',
+            icon: '🚤',
+          },
+          {
+            title: 'Kietieji pripučiami kateriai (RIBs)',
+            desc: 'Didelės talpos valtys su standžia stiklo pluošto, aliuminio arba HDPE korpusu ir pripučiamais borteliais. Ilgis 3–12 m, varikliai 15–300+ HP. Naudojamos patruliavimui, gelbėjimui, nardyimui ir tolimoms kelionėms jūroje.',
+            icon: '⚡',
+          },
+          {
+            title: 'Pripučiamos baidarės',
+            desc: 'Nešiojamos baidarės pagamintos iš PVC arba TPU audinių. Galimos vienvietės ir dvivietės versijos laisvalaikio turams, upių plaukimui ir ekspedicijoms.',
+            icon: '🛶',
+          },
+          {
+            title: 'Pripučiamos stovimos irklentės (SUPs)',
+            desc: 'Drop-stitch pagamintos irklentės, kurios prisipučia iki tvirto aukšto slėgio denio. Galimos universalios, turizmo, jogos, žvejybos ir banglenčių versijos.',
+            icon: '🏄',
+          },
+          {
+            title: 'Gelbėjimo valtys (SAR)',
+            desc: 'Specializuotos RIBs paieškos ir gelbėjimo operacijoms. Turi savivalančius grindis, priekinę konsolę, vilkimo kilpas ir ryškių spalvų derinius. CE sertifikuotos gelbėjimui.',
+            icon: '🆘',
+          },
+          {
+            title: 'Komercinės darbo valtys',
+            desc: 'Didelės RIBs nardymo palaikymui, patruliavimui, tyrimams ir komercinėms jūrų operacijoms. Hypalon CSM konstrukcija, sustiprinti korpusai ir profesionalus įrengimas.',
+            icon: '⚙️',
+          },
+        ].map((item) => (
+          <div class="flex gap-4 p-5 bg-gray-50 rounded-xl border border-gray-200">
+            <span class="text-2xl flex-shrink-0">{item.icon}</span>
+            <div>
+              <h3 class="font-semibold text-gray-900">{item.title}</h3>
+              <p class="mt-1 text-sm text-gray-600">{item.desc}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section id="construction" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Statybos metodai</h2>
+    <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">RF suvirinimas (aukšto dažnio)</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Naudoja elektromagnetinę energiją PVC sluoksniams sujungti molekuliniame lygyje. Sukuria stipriausias
+          sandarias siūles. PVC Dažnas aukštos kokybės laivuose ir SUPs. Reikalauja specializuotos technikos ir įgudusio
+          valdymo.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Rankinis klijavimas / cheminis sujungimas</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Dviejų dalių klijai sujungia audinio plokštes. Pagrindinis būdas Hypalon CSM valtims (negali būti RF
+          suvirintas). Reikalauja tikslaus paviršiaus paruošimo, kontroliuojamos drėgmės ir tinkamo kietėjimo laiko, kad
+          būtų pasiektas optimalus siūlės stiprumas.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Drop-Stitch Branduolys</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Tūkstančiai poliesterio sriegių jungia viršutinį ir apatinį PVC sluoksnius, leidžiant aukšto slėgio pripūtimą
+          (15–25) PSIstandžios plokštės veikimui. Sriegio tankis (15–50 sriegių/cm²) lemia standumą ir svorį.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Terminis suvirinimas</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Karšto oro arba karšto pleišto suvirinimas naudojamas siūlėms ir armatūrai. Dažnas didesnėse RIB
+          konstrukcijose. Mažiau tikslus nei RF suvirinimas, bet efektyvus ir Hypalon tvirtiems PVC audiniams.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="materials" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Medžiagų palyginimas</h2>
+    <div class="mt-6 overflow-x-auto">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="bg-gray-50 border-b-2 border-gray-200">
+            <th class="px-4 py-3 text-left font-semibold text-gray-700">Nuosavybė</th>
+            <th class="px-4 py-3 text-center font-semibold text-sky-700">PVC</th>
+            <th class="px-4 py-3 text-center font-semibold text-emerald-700">Hypalon CSM</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            [
+              ['Relative Cost', '$ (budget)', '$$$ (premium)'],
+              ['UV Resistance', 'Good (with coating)', 'Excellent (inherent)'],
+              ['Abrasion Resistance', 'Moderate-Good', 'Excellent'],
+              ['Chemical Resistance', 'Good', 'Excellent'],
+              ['Cold Flexibility', 'Stiffens below 0°C', 'Flexible to -20°C'],
+              ['Lifespan', '8-12 years', '15-20+ years'],
+              ['Seam Method', 'RF welding', 'Hand gluing'],
+              ['Repair', 'PVC glue (easy)', '2-part adhesive (moderate)'],
+            ].map((row, i) => (
+              <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                {row.map((cell, j) => (
+                  <td
+                    class={`px-4 py-3 border-b border-gray-200 ${j === 0 ? 'font-medium text-gray-700' : 'text-center text-gray-600'}`}
+                  >
+                    {cell}
+                  </td>
+                ))}
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-4 text-sm text-gray-500">
+      Šiuolaikinė karinės klasės PVC (1100-1670 dtex) pasižymi puikiu patvarumu daugumai rekreacinių vartotojų už pusę
+      kainos. HypalonHypalon yra pageidaujama komerciniams laivynams, tropiniams klimatams ir kritinėms misijoms.
+    </p>
+    <a
+      href={`/${lang}/learn/pvc-vs-hypalon`}
+      class="mt-4 inline-block text-sky-600 hover:text-sky-700 text-sm font-medium">Išsamus PVC ir Hypalon gidas →</a
+    >
+  </section>
+
+  <section id="selection" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Kaip išsirinkti pripučiamą valtį</h2>
+    <div class="mt-8 grid md:grid-cols-3 gap-6">
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">1. Apibrėžkite savo naudojimo atvejį</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>Laisvalaikiui: valtis arba SUP</li>
+          <li>Pasirodymas: RIB (15-60)HP</li>
+          <li>Reklama: RIB (100)+ HP</li>
+          <li>Fizinis pasirengimas: pripučiamas SUP</li>
+          <li>Kelionės: pripučiama baidarė</li>
+        </ul>
+      </div>
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">2. Nustatykite savo biudžetą</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>$200-$800: pripučiamas SUP</li>
+          <li>$500-$2,000: + Vilties variklis</li>
+          <li>$3,000–$8,000: Įrašas RIB</li>
+          <li>$8,000–$20,000: premija RIB</li>
+          <li>$20,000+: Reklama RIB</li>
+        </ul>
+      </div>
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">3. Įvertinti medžiagą</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>PVC: Biudžetui draugiška, lengva</li>
+          <li>Hypalon: Premium, ilgaamžis</li>
+          <li>Drop-Stitch: Standus veikimas</li>
+          <li>Audinio svoris: 1100-1670 dtex</li>
+          <li>Danga: UV + pradūrimo sluoksniai</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="safety" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Sauga ir standartai</h2>
+    <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">CE Sertifikavimas</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Visos pripučiamos valtys, parduodamos ES, turi CE būti pažymėtos pagal Rekreacinių laivų direktyvą (RCD)
+          2013/53/ES. Sertifikavimas apima projektavimo kategoriją (A–D), plūdrumą, stabilumą ir apkrovos
+          talpą.Aquafarer Valtys CEyra -sertifikuotos rekreaciniam ir gelbėjimo naudojimui.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Standartas</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Tarptautinis pripučiamos valties standartas, nurodantis medžiagų, siūlių, vožtuvų ir našumo bandymų
+          reikalavimus. I–IV tipai apima viską nuo mažų plaustų iki didelių RIBs.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Būtina saugos įranga</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Gelbėjimosi liemenės/PFD (CE 12402), metamosios virvės, kibiras/gesintuvas, navigacijos žibintai (naktį), VHF
+          radijas, pirmosios pagalbos rinkinys, inkaras ir atsarginė irklas arba kuras.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Saugus valdymas</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Niekada neviršykite maksimalios talpos ženklo. Prieš paleidžiant patikrinkite vožtuvo saugumą. Svarmenis
+          paskirstykite tolygiai. Stebėkite oro sąlygas. Pateikite plaukimo planą. Dalyvaukite laivybos saugos kursuose.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="maintenance" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Priežiūra ir rūpinimasis</h2>
+    <div class="mt-8 space-y-4 text-sm text-gray-600">
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <>
+          <span class="text-sky-600 font-bold flex-shrink-0">1.</span>
+          <span>Po kiekvieno naudojimo jūroje nuplaukite švariu vandeniu. Prieš sandėliavimą gerai išdžiovinkite.</span>
+        </>
+      </div>
+    </div>
+  </section>
+</section>

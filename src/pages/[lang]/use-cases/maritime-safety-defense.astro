@@ -1,0 +1,102 @@
+---
+export const prerender = true;
+
+import PageLayout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl } from '~/i18n/utils';
+import { languages } from '~/i18n/config';
+import { articleSchema } from '~/lib/seo/schema';
+import { nodes } from '~/content/graph/nodes';
+import { getPageContent, setPageContentData } from '~/i18n/page-content';
+import __pageData from '~/i18n/generated/pages/maritime-safety-defense.ts';
+
+export function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const lang = getLangFromUrl(Astro.url);
+setPageContentData(__pageData);
+const page = getPageContent(lang, 'maritime-safety-defense');
+const node = nodes.find((n) => n.id === 'maritime-safety-defense');
+
+const graphJsonLd = node
+  ? {
+      '@context': 'https://schema.org',
+      '@graph': [
+        articleSchema({
+          headline: page.seo?.headline || 'Maritime Safety & Defense Inflatable Boats — OEM Manufacturing',
+          description:
+            page.seo?.description ||
+            'Aquafarer manufactures inflatable boats for maritime safety and defense applications: coastal patrol, force protection, rapid response.',
+          datePublished: page.seo?.datePublished || '2024-06-01',
+          dateModified: page.seo?.dateModified || '2026-06-01',
+          author: 'Aquafarer',
+          publisher: 'Aquafarer',
+        }),
+        {
+          '@type': 'Product',
+          name: node?.name?.en || 'Maritime Safety & Defense Inflatable Boats',
+          description:
+            node?.description?.en ||
+            'Inflatable boats engineered for maritime safety, coastal patrol, and defense operations.',
+          brand: { '@type': 'Brand', name: 'Aquafarer' },
+          category: 'Defense & Security Equipment',
+        },
+      ],
+    }
+  : null;
+
+const faqSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What products serve maritime safety and defense?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Patrol RIBs, intercept boats, and safety vessels in Hypalon/CSM with reinforced construction for professional operations.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Are defense-grade boats available?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Commercial-grade RIBs with reinforced construction. Defense-specific specifications require project-based engineering and certification.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What compliance is required?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'CE certification baseline. Additional classification society or government procurement specifications accommodated per project.',
+      },
+    },
+  ],
+});
+---
+
+<PageLayout
+  metadata={{ title: page.seo?.headline || page.headline, description: page.seo?.description || page.subtitle }}
+>
+  <script
+    slot="before"
+    is:inline
+    type="application/ld+json"
+    set:html={graphJsonLd ? JSON.stringify(graphJsonLd) : ''}
+  />
+
+  <section class="mx-auto max-w-4xl px-6 py-16">
+    <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">{page.label || 'Use Case'}</span>
+    <h1 class="font-semibold text-gray-900 dark:text-gray-100 mt-4 text-4xl">
+      {page.headline || 'Engineering Excellence for Marine Safety and Defense'}
+    </h1>
+    <p class="text-lg text-gray-500 dark:text-gray-400 mt-3">
+      {page.subtitle || 'Uncompromising quality for the most demanding maritime operational environments.'}
+    </p>
+
+    <div class="mt-12 prose prose-gray dark:prose-invert max-w-none" set:html={page.body || ''} />
+  </section>
+  <script is:inline type="application/ld+json" set:html={faqSchema} />
+</PageLayout>

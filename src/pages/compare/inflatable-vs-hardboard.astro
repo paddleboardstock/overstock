@@ -1,0 +1,182 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+
+const metadata = {
+  title: 'Inflatable vs Hard SUP Board — Which Is Better for You?',
+  description:
+    'Compare inflatable (iSUP) and hard/epoxy SUP boards across performance, durability, portability, cost, and use cases. Make an informed buying decision.',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <JsonLd
+    type="Article"
+    article={{
+      headline: 'Inflatable vs Hard SUP Board — Which Is Better for You?',
+      description:
+        'Compare inflatable (iSUP) and hard/epoxy SUP boards across performance, durability, portability, cost, and use cases. Make an informed buying decision.',
+      datePublished: '2026-07-06',
+    }}
+    data={{ url: 'https://aquafarer.com/compare/inflatable-vs-hardboard' }}
+  />
+  <JsonLd
+    type="BreadcrumbList"
+    breadcrumbs={[
+      { name: 'Home', href: '/' },
+      { name: 'Compare', href: '/compare' },
+      { name: 'Inflatable vs Hardboard' },
+    ]}
+  />
+  <section class="max-w-4xl mx-auto py-24 px-6">
+    <a href="/products" class="text-sm text-sky-600 hover:text-sky-700">&larr; Products</a>
+    <h1 class="mt-4 text-4xl font-semibold text-gray-900">Inflatable vs Hard SUP Board</h1>
+    <p class="mt-4 text-lg text-gray-500">
+      The definitive comparison between inflatable stand-up paddle boards (iSUPs) and rigid epoxy/fiberglass boards —
+      covering everything a buyer needs to know.
+    </p>
+
+    <div class="mt-12 grid md:grid-cols-2 gap-8">
+      <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+        <h2 class="text-xl font-semibold text-gray-900">Inflatable SUP (iSUP)</h2>
+        <ul class="mt-4 space-y-3 text-sm text-gray-600">
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span
+              ><strong>Portability:</strong> Deflates to backpack size. Fits in any car. Ideal for travelers and apartment
+              dwellers.</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span
+              ><strong>Durability:</strong> Drop-stitch PVC construction resists dings, scratches, and impacts. Won't snap
+              or crack.</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span
+              ><strong>Performance:</strong> Modern iSUPs closely match hard boards. Stiff enough for touring and surfing
+              at 15-20 PSI.</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span
+              ><strong>Storage:</strong> Fits in closet, under bed, or checked luggage. No roof rack needed.</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span
+              ><strong>Best for:</strong> Beginners, travelers, apartment living, whitewater, SUP yoga, fishing, families.</span
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+        <h2 class="text-xl font-semibold text-gray-900">Hard SUP (Epoxy/Fiberglass)</h2>
+        <ul class="mt-4 space-y-3 text-sm text-gray-600">
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span
+              ><strong>Portability:</strong> Rigid, bulky. Requires roof rack or large vehicle. Difficult to transport alone.</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span
+              ><strong>Durability:</strong> Prone to dings, cracks, and pressure dents. Requires careful handling and storage.</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span
+              ><strong>Performance:</strong> Superior glide and speed. Stiffer rails for sharper turns. Preferred by racers
+              and surfers.</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span
+              ><strong>Storage:</strong> Needs garage or wall space. Susceptible to heat damage in storage.</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span
+              ><strong>Best for:</strong> Racing, performance surfing, advanced paddlers, paddlers with storage space.</span
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="mt-16">
+      <h2 class="text-2xl font-semibold text-gray-900">Side-by-Side Comparison</h2>
+      <div class="mt-6 overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="bg-gray-50 border-b-2 border-gray-200">
+              <th class="px-4 py-3 text-left font-semibold text-gray-700">Factor</th>
+              <th class="px-4 py-3 text-center font-semibold text-sky-700">Inflatable SUP</th>
+              <th class="px-4 py-3 text-center font-semibold text-emerald-700">Hard SUP</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              [
+                ['Weight', '18-30 lbs', '20-35 lbs'],
+                ['Packed Size', '33" x 15" x 10"', '10-14 ft rigid'],
+                ['Setup Time', '5-10 min (inflate)', '0 (carry to water)'],
+                ['Durability', 'Excellent (ding-proof)', 'Moderate (crack-prone)'],
+                ['Glide Performance', 'Good (modern iSUPs)', 'Excellent'],
+                ['Surf Performance', 'Good (stiff iSUPs)', 'Excellent'],
+                ['Stiffness', 'Very good at 15-20 PSI', 'Inherently rigid'],
+                ['Price (entry)', '$200-$500', '$400-$800'],
+                ['Maintenance', 'Low (rinse and dry)', 'High (repair dings)'],
+                ['Resale Value', 'Good', 'Good (brand dependent)'],
+              ].map((row, i) => (
+                <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                  {row.map((cell, j) => (
+                    <td
+                      class={`px-4 py-3 border-b border-gray-200 ${j === 0 ? 'font-medium text-gray-700' : 'text-center text-gray-600'}`}
+                    >
+                      {cell}
+                    </td>
+                  ))}
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mt-16 bg-gradient-to-br from-sky-50 to-blue-50 rounded-2xl p-8 border border-sky-200">
+      <h2 class="text-xl font-semibold text-gray-900">The Verdict</h2>
+      <p class="mt-4 text-gray-600 text-sm leading-relaxed">
+        For 90% of paddlers, an <strong>inflatable SUP</strong> is the better choice. Modern drop-stitch technology has narrowed
+        the performance gap dramatically, while offering unmatched portability and durability. Choose a <strong
+          >hard board</strong
+        > only if you are a dedicated racer, performance surfer, or have guaranteed storage and transportation. Most paddlers
+        start with an iSUP and never look back.
+      </p>
+      <div class="mt-6 flex gap-4 flex-wrap">
+        <a
+          href="/products"
+          class="px-6 py-3 bg-gray-900 text-white rounded-full text-sm font-medium hover:bg-gray-800 transition"
+          >Shop Inflatable SUPs</a
+        >
+        <a
+          href="/guides"
+          class="px-6 py-3 border border-gray-200 text-gray-700 rounded-full text-sm font-medium hover:border-gray-400 transition"
+          >Buying Guides</a
+        >
+      </div>
+    </section>
+  </section>
+
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true">
+    <p>
+      Definitive comparison between inflatable stand-up paddle boards (iSUPs) and hard epoxy/fiberglass SUP boards.
+      Covers weight, packed size, setup time, durability, glide performance, surf performance, stiffness, price,
+      maintenance, and resale value. Inflatable SUPs offer superior portability, durability, storage convenience, and
+      value for money. Hard SUPs offer superior glide and surf performance for advanced paddlers. Recommendation: 90% of
+      paddlers should choose an inflatable SUP unless they are dedicated racers or performance surfers with guaranteed
+      storage and transportation.
+    </p>
+  </section>
+</Layout>

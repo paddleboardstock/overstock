@@ -1,0 +1,200 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'da' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">← Tilbage til R&amp;D Center</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Lab 01</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">PVC Fabric Lab</h1>
+      <p class="mt-3 text-lg text-muted">Videnskabelig materialetest - fra fiber til færdigt rør</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/randd/aquafarer-pvc-material-lab.webp"
+        alt="Aquafarer PVC testlaboratorium for stofmateriale"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Grundlaget for enhver gummibåd</h2>
+  <p>
+    Rørstoffet er det mest kritiske materiale i en gummibåd. Den skal modstå konstant UV-eksponering, gentagne
+    oppustningscyklusser, slid mod dokker og snavs og ekstreme temperaturudsving - alt imens dens strukturelle
+    integritet bevares i årevis. På {SITE.name}, vores PVC Fabric Lab er udelukkende dedikeret til karakterisering,
+    validering og løbende forbedring af de stoffer, vi bruger i hver båd, vi bygger.
+  </p>
+  <p>
+    Vi er ikke udelukkende afhængige af leverandørdatablade. Hvert parti PVC og Hypalon stof, der kommer ind på vores
+    værksted, testes uafhængigt internt. Dette garanterer, at den materialespecifikation, vi udgiver, er den
+    materialeydelse, du modtager - parti efter parti, år efter år.
+  </p>
+
+  <h2>Standardiseret testudstyr</h2>
+  <p>
+    Vores stoflaboratorium er udstyret med instrumenter af industriel kvalitet, der er i overensstemmelse med ISO, ASTM
+    og EN testmetoder:
+  </p>
+  <table>
+    <thead><tr><th>Udstyr</th><th>Parametre målt</th><th>Standard</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Universal træktester (50 kN)</td><td>Brudkraft, brudforlængelse, riveudbredelse</td><td>
+          / ASTM D751</td
+        ></tr
+      >
+      <tr
+        ><td>Xenon-bue forvitringskammer</td><td>UV modstand (farveændring, fastholdelse af styrke efter 2000 timer)</td
+        ><td> / ASTM G155</td></tr
+      >
+      <tr><td>Lav temperatur flex tester</td><td>Revnepunkt ved -30 °C til -50 °C</td><td>ISO 4675 / ASTM D2136</td></tr
+      >
+      <tr
+        ><td>Taber slid tester</td><td>Vægttab efter 1000 cyklusser (CS-10 hjul)</td><td>ASTM D3389 / ISO 5470-1</td
+        ></tr
+      >
+      <tr
+        ><td>Tykkelsesmåler (digital, 0.001 mm opløsning)</td><td>Ensartethed over rullebredden</td><td>ISO 2286-3</td
+        ></tr
+      >
+      <tr><td>Hydrostatisk hovedtester</td><td>Vandgennemtrængningsmodstand</td><td>ISO 811</td></tr>
+    </tbody>
+  </table>
+  <p class="text-sm text-gray-500">* Alt udstyr kalibreres årligt af tredjeparts akkrediterede laboratorier.</p>
+
+  <h2>Fra data til beslutning: en typisk test workflow</h2>
+  <p>Når en ny stofkandidat ankommer, følger den en standardiseret syv-trins kvalificeringsproces:</p>
+  <ol>
+    <li>
+      <strong>Kvitteringskontrol</strong> — visuel kontrol for overfladefejl, nålehuller og dimensionsoverensstemmelse.
+    </li>
+    <li>
+      <strong>Tykkelseskortlægning</strong> — 20-punktsmåling på tværs af rullen; CV &lt; 3% er påkrævet for at blive accepteret.
+    </li>
+    <li>
+      <strong>Trækprøvning</strong> — 5 prøver i kæde- og skudretninger. Minimum 3500 N/50 mm for 1100 dtex PVC.
+    </li>
+    <li>
+      <strong>UV konditionering</strong> — 1000 h eksponering i xenon-buekammer; minimum 80 % styrkeretention påkrævet.
+    </li>
+    <li>
+      <strong>Kold crack</strong> — 4 h ved -35 °C, derefter 180° bøj over en 25 mm dorn. Ingen synlig revnedannelse.
+    </li>
+    <li><strong>Slidstyrke</strong> — 1000 cyklusser, vægttab ≤ 0.05 g.</li>
+    <li>
+      <strong>Godkendelse sign-off</strong> — først efter at alle syv porte er passeret, frigives stoffet til produktion.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Typisk PVC 1100 dtex — trækfastholdelse efter UV eksponering
+    </p>
+    <div class="flex items-end gap-3 h-40">
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-600 rounded-t" style="height:100%"></div><span class="text-xs mt-1"
+          >0 h<br />100%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-500 rounded-t" style="height:95%"></div><span class="text-xs mt-1"
+          >500 h<br />95%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-400 rounded-t" style="height:88%"></div><span class="text-xs mt-1"
+          >1000 h<br />88%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-300 rounded-t" style="height:82%"></div><span class="text-xs mt-1"
+          >2000 h<br />82%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-gray-300 rounded-t" style="height:65%"></div><span class="text-xs mt-1"
+          >Konkurrent<br />~65%</span
+        >
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      Vores PVC 1100 dtex-stof bevarer &gt; 80 % trækstyrke efter 2000 h xenon-bueeksponering sammenlignet med typiske
+      industrikvaliteter, der falder til under 70 %.
+    </p>
+  </div>
+
+  <h2>Vores professionelle team</h2>
+  <p>
+    Laboratoriet er bemandet af to fuldtidsansatte materialeingeniører, der hver har en grad i polymervidenskab eller
+    tekstilteknik med minimum seks års brancheerfaring. De understøttes af tre teknikere, som udfører daglige test og
+    datalogning. Holdet deltager regelmæssigt i round-robin-forsøg mellem laboratorier arrangeret af International
+    Organization for Standardization (ISO) for at validere nøjagtigheden af vores testmetoder.
+  </p>
+
+  <h2>Løsning af dine hårdeste materielle udfordringer</h2>
+  <p>
+    Hvert havmiljø er anderledes. En patruljebåd, der opererer i Den Persiske Golf, står over for vidt andre UV og
+    temperaturforhold end et redningsfartøj i Nordsøen. Vores Fabric Lab hjælper dig med at vælge - eller udvikle - en
+    stofspecifikation, der er optimeret til din driftsprofil.
+  </p>
+  <p>Nylige tilpassede løsninger omfatter:</p>
+  <ul>
+    <li>
+      En PVC blanding med høj slidstyrke til en militær klient, hvis både regelmæssigt strander på koralrev (+40 %
+      slidtid).
+    </li>
+    <li>En lavtemperatur Hypalon formulering til en arktisk forskningsstation, testet til -50 °C uden skørhed.</li>
+    <li>
+      Et farvestabiliseret orange stof til en eftersøgnings- og redningsflåde, der bevarer synlighed efter 3 år med
+      tropisk soleksponering.
+    </li>
+  </ul>
+  <p>
+    Vi sælger ikke "hyldevare" stoffer og håber de virker. Vi tester, validerer og anbefaler - eller skaber - en
+    skræddersyet løsning til din specifikke missionsprofil. Det er den {SITE.name} forskel.
+  </p>
+
+  <h2>Hvordan vi betjener dig</h2>
+  <p>Når du bringer en materiel udfordring til os, er her, hvad du kan forvente:</p>
+  <ol>
+    <li><strong>Konsultation</strong> — vi diskuterer dit driftsmiljø, præstationsmål og budget.</li>
+    <li>
+      <strong>Forslag</strong> — Der udarbejdes en testplan med klare kriterier for bestået/ikke bestået og en tidslinje.
+    </li>
+    <li>
+      <strong>Udførelse</strong> — vores laboratorium kører testene og producerer en detaljeret rapport med rådata og sammenlignende
+      analyse.
+    </li>
+    <li>
+      <strong>Henstilling</strong> — vi præsenterer en stofspecifikation, inklusive alternative muligheder, hvis flere materialer
+      opfylder dine krav.
+    </li>
+    <li>
+      <strong>Opfølgning</strong> — efter levering forbliver vi til rådighed for at støtte eventuelle spørgsmål om materiale
+      i brug.
+    </li>
+  </ol>
+  <p>
+    Vores mål er ikke blot at sælge dig en båd. Det er for at sikre, at den båd, du modtager, fungerer pålideligt under
+    de forhold, du opererer under - og det starter med stoffet.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Har du brug for en brugerdefineret stofspecifikation?</h2>
+    <p class="mt-2 text-sm text-muted">Kontakt vores materialeingeniørteam for at diskutere dine krav.</p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Kontakt vores laboratorieteam</a
+    >
+  </div>
+</section>

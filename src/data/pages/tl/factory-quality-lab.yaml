@@ -1,0 +1,56 @@
+hero:
+  tagline: Laboratoryo para sa Kontrol ng Kalidad
+  title: Laboratoryo sa Pagsusuri at Pagtiyak ng Kalidad
+  subtitle: Independyenteng laboratorio ng kalidad na may ISO 9001 na proseso — bawat yunit ay sinusuri bago ipadala
+intro: Aquafarer nagpapatakbo ng nakalaang laboratoryo para sa kontrol ng kalidad na independenteng hiwalay sa produksyon. Bawat batch ng hilaw na materyales at bawat tapos na bangka ay sumasailalim sa dokumentadong protokol ng inspeksyon bago payagan. Ang aming QC team ay direktang nag-uulat sa pamunuan, na tinitiyak ang patas na desisyon sa kalidad.
+highlights:
+  - value: 100%
+    label: Mga yunit na sinubok sa presyon
+    detail: Bawat silid, bawat bangka
+  - value: 48 h
+    label: Tagal ng pagsubok ng pagpapanatili ng hangin
+    detail: Sa 1.25× na rated na presyon
+  - value: <5%
+    label: Maximum na pinapayagang pagbaba ng presyon
+    detail: Sa loob ng 24-oras na panahon ng pagtigil
+  - value: AQL 2.5
+    label: Threshold ng pangunahing depekto
+    detail: Ayon sa ISO 2859 na sampling
+test_procedures:
+  - title: Pagsusuri ng Hilaw na Materyal
+    description: Bawat bagong batch ng PVC, Hypalon, drop-stitch na tela, at kasangkapan ay sinusuri bago tanggapin. Sinusuri ang lakas ng pag-uunat (ASTM D751), resistensya sa punit (ISO 4674), at resistensya sa UV. Ang mga materyales na hindi pumasa sa pamantayan ay inilalagay sa kuwarantiya at ibinabalik.
+    standards:
+      - ASTM D751 (pag-uunat)
+      - ISO 4674 (punit)
+      - ISO 4892 (UV)
+  - title: Pagpapatupad ng QC sa Proseso
+    description: Ang mga production operator ay nagsasagawa ng sariling inspeksyon sa bawat yugto. Ang mga QC auditor ay gumagawa ng random sampling sa buong shift. Ang weld peel test ay isinasagawa bawat 50 yunit. Ang pagsuri sa sukat ay ginagawa sa bawat ika-20 panel.
+    standards:
+      - ASTM D751 (peel)
+      - Internal na 100-point checklist
+      - ISO 2859 sampling
+  - title: 48-Oras na Pagsusuri ng Pagpapanatili ng Hangin
+    description: Bawat tube chamber ay pinapalobo sa 125% ng rated na presyon at pinananatili ng 48 oras. Ang mga pressure sensor ay nagre-record nang tuloy-tuloy na may compensation sa temperatura. Ang anumang chamber na lumalagpas sa 5% pagbaba ng presyon ay awtomatikong nagti-trigger ng muling inspeksyon ng batch.
+    standards:
+      - ISO 6185
+      - CE 2013/53/EU
+  - title: Pagsusuri ng Load at Balanseng
+    description: Ang mga tapos na bangka ay sinusuri sa maximum rated na kapasidad para sa katatagan, freeboard, at paghawak. Bawat sasakyan ay sumasailalim sa pagsubok sa tubig bago ang huling approval ng inspeksyon.
+    standards:
+      - ISO 12217
+      - CE 2013/53/EU
+equipment:
+  - name: Pangkalahatang Makina sa Pagsusuri (tensile)
+    spec: 5 kN, sumusunod sa ASTM D751
+  - name: Tagapagsuri ng Pagbaba ng Presyon
+    spec: Maramihang channel, 0–50 psi, may datalogging
+  - name: UV Silid ng Pagbabagu-bago ng Panahon
+    spec: ISO 4892, 1,000 h na mga cycle
+  - name: Panukat ng Kapal (digital)
+    spec: 0.01 mm na resolusyon
+  - name: Tagapagsuri ng Pagbalat (weld)
+    spec: Motorized, may kapasidad na 50 N
+  - name: Silid ng Temperatura
+    spec: -40 °C hanggang +100 °C
+  - name: Tangke para sa Pagtuklas ng Tagas
+    spec: 6 m × 2 m, may ilaw

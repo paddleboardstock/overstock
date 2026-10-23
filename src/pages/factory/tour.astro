@@ -1,0 +1,156 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+import { factoryVideos } from '~/data/factory-videos';
+import Icon from '~/components/ui/Icon.astro';
+const totalDuration = factoryVideos.reduce(
+  (acc, v) => acc + parseInt(v.duration.split(':')[0]) * 60 + parseInt(v.duration.split(':')[1]),
+  0
+);
+const totalMin = Math.floor(totalDuration / 60);
+
+const metadata = {
+  title: `Factory Video Tour — Manufacturing Process | ${SITE.name}`,
+  description:
+    'Walk through our 12,000 m² facility. Watch raw materials become finished watercraft — from CNC cutting and heat welding to pressure testing and global shipping.',
+};
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Factory', href: '/factory' }, { name: 'Video Tour' }];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <section class="relative bg-gradient-to-b from-slate-900 to-slate-800 overflow-hidden">
+    <div
+      class="absolute inset-0 opacity-[0.03]"
+      style="background-image: radial-gradient(circle at 50% 50%, white 1px, transparent 1px); background-size: 40px 40px;"
+    >
+    </div>
+    <div class="relative max-w-5xl mx-auto px-4 sm:px-6 py-16 md:py-20 text-center">
+      <div
+        class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-sky-500/10 border border-sky-500/20 mb-4"
+      >
+        <Icon name="tabler:video" class="w-7 h-7 text-sky-400" />
+      </div>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4">Factory Video Tour</h1>
+      <p class="text-slate-400 max-w-2xl mx-auto text-base md:text-lg">
+        Walk through our 12,000 m² facility. See how raw materials become finished watercraft across {
+          factoryVideos.length
+        } production stages.
+      </p>
+      <div class="flex items-center justify-center gap-4 mt-6 text-sm text-slate-500">
+        <span class="flex items-center gap-1.5">
+          <Icon name="tabler:video-plus" class="w-4 h-4" />
+          {factoryVideos.length} videos
+        </span>
+        <span class="flex items-center gap-1.5">
+          <Icon name="tabler:clock" class="w-4 h-4" />
+          {totalMin}+ min total
+        </span>
+        <span class="flex items-center gap-1.5">
+          <Icon name="tabler:ruler" class="w-4 h-4" />
+          12,000 m² facility
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12 md:py-16">
+      <div class="relative">
+        <div
+          class="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-gray-200 dark:bg-slate-700 -translate-x-1/2 hidden md:block"
+        >
+        </div>
+        <div class="space-y-12 md:space-y-16">
+          {
+            factoryVideos.map((video, i) => (
+              <div class="relative md:grid md:grid-cols-2 md:gap-10 items-center" data-stage={video.stage}>
+                <div class={`${i % 2 === 0 ? 'md:order-1' : 'md:order-2'}`}>
+                  <div class="relative group rounded-xl overflow-hidden bg-gray-100 dark:bg-slate-800 aspect-video shadow-lg">
+                    <img
+                      src={video.thumbnail}
+                      alt={video.title}
+                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading={i < 2 ? 'eager' : 'lazy'}
+                    />
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors" />
+                    <div class="absolute inset-0 flex items-center justify-center">
+                      <div class="w-14 h-14 rounded-full bg-sky-500/90 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                        <Icon name="tabler:player-play-filled" class="w-6 h-6 text-white ml-0.5" />
+                      </div>
+                    </div>
+                    <div class="absolute bottom-3 right-3 bg-black/70 text-white text-xs px-2 py-1 rounded font-medium">
+                      {video.duration}
+                    </div>
+                  </div>
+                </div>
+
+                <div class={`mt-4 md:mt-0 ${i % 2 === 0 ? 'md:order-2' : 'md:order-1'}`}>
+                  <div class="flex items-center gap-2 mb-2">
+                    <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-sky-100 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400 text-xs font-bold">
+                      0{video.stage}
+                    </span>
+                    <span class="text-xs font-semibold text-sky-600 dark:text-sky-400 uppercase tracking-wider">
+                      {video.stage === '1' || video.stage === '8' ? 'Stage' : 'Stage'}
+                    </span>
+                  </div>
+                  <h2 class="text-xl md:text-2xl font-bold text-gray-900 dark:text-slate-100 mb-2">{video.title}</h2>
+                  <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">{video.description}</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-sky-50/50 dark:bg-slate-900/50 border-b border-gray-100 dark:border-slate-800">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 py-12 md:py-16 text-center">
+      <Icon name="tabler:shield-check" class="w-10 h-10 text-sky-500 mx-auto mb-3" />
+      <h2 class="text-xl md:text-2xl font-bold text-gray-900 dark:text-slate-100 mb-3">
+        Certified Quality at Every Stage
+      </h2>
+      <p class="text-sm text-gray-600 dark:text-slate-400 max-w-2xl mx-auto mb-6">
+        Every product is tested at multiple checkpoints throughout the manufacturing process. Our ISO 9001-certified
+        quality management system ensures consistent output across all production runs.
+      </p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <span
+          class="inline-block text-sm bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg px-4 py-2 text-gray-700 dark:text-slate-300 font-medium"
+          >ISO 9001</span
+        >
+        <span
+          class="inline-block text-sm bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg px-4 py-2 text-gray-700 dark:text-slate-300 font-medium"
+          >CE Certified</span
+        >
+        <span
+          class="inline-block text-sm bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg px-4 py-2 text-gray-700 dark:text-slate-300 font-medium"
+          >BSCI Compliant</span
+        >
+        <span
+          class="inline-block text-sm bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg px-4 py-2 text-gray-700 dark:text-slate-300 font-medium"
+          >100% Pressure Tested</span
+        >
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white dark:bg-slate-950">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 py-12 md:py-16 text-center">
+      <h2 class="text-xl md:text-2xl font-bold text-gray-900 dark:text-slate-100 mb-3">Visit Our Factory</h2>
+      <p class="text-sm text-gray-600 dark:text-slate-400 max-w-xl mx-auto mb-6">
+        We welcome B2B partners to tour our Qingdao facility. See the production line, meet our engineers, and discuss
+        your project in person.
+      </p>
+      <a
+        href="/contact"
+        class="inline-flex items-center gap-2 bg-sky-600 hover:bg-sky-700 text-white text-sm font-semibold px-6 py-3 rounded-lg transition-colors"
+      >
+        <Icon name="tabler:calendar" class="w-4 h-4" />
+        Schedule a Factory Visit
+      </a>
+    </div>
+  </section>
+</Layout>

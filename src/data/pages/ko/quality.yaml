@@ -1,0 +1,93 @@
+hero:
+  tagline: 품질 보증
+  title: 성능 및 품질 테스트
+  subtitle: 모든 Aquafarer 인플레이션 보트와 SUP는 출하 전에 저희 R&D 센터에서 엄격한 성능 및 품질 테스트를 거칩니다. 여덟 가지 프로토콜, 샘플링 없음 — 모든 단위를 검증합니다.
+trust_bar:
+  items:
+    - value: 100%
+      label: 출하 전 유닛 테스트
+      sub: 샘플링 없음 — 모든 유닛
+    - value: '8'
+      label: 테스트 프로토콜
+      sub: 기계적 · 열적 · UV · 마모
+    - value: ISO 9001
+      label: 품질 관리 인증
+      sub: TÜV 라인란드 감사
+    - value: 1,200+
+      label: 프로젝트 품질 승인
+      sub: 2012년부터
+badges:
+  - name: CE 6185
+    body: TÜV 라인란트
+    url: /trust
+  - name: ISO 9001
+    body: TÜV 라인란트
+    url: /trust
+  - name: UKCA
+    body: 인터텍
+    url: /trust
+  - name: BSCI
+    body: 암포리
+    url: /trust
+  - name: REACH
+    body: ECHA 준수
+    url: /trust
+  - name: USCG
+    body: 타입 III / 타입 V
+    url: /trust
+testimonial:
+  quote: Aquafarer가 제공하는 품질 테스트 문서화 및 추적 가능성 수준은 우리가 중국 제조업체에서 본 것을 능가합니다. 각 출하에는 기준 참조와 합격/불합격 데이터가 포함된 전체 테스트 보고서가 포함됩니다.
+  author: 마커스 한센
+  title: 조달 관리자
+  company: 노르딕 마린 서플라이
+  location: 스웨덴
+stats:
+  - value: 100%
+    label: 단위 압력 테스트 수행
+  - value: '8'
+    label: 테스트 프로토콜
+  - value: ISO 9001
+    label: 인증 품질 관리
+  - value: 3년
+    label: 제한 보증
+tests:
+  - title: 압력 시험
+    standard: ISO 6185-1 | 내부 사양 AF-PT-001
+    description: 팽창식 챔버는 권장 작동 한계의 1.25배로 압력을 받고 30분간 유지됩니다. 압력 감하를 측정하여 재료 및 이음새의 기밀성과 구조적 완전성을 검증합니다.
+    image: https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-pressure-testing.webp
+  - title: 충격 시험
+    standard: 내부 규격 AF-IT-002
+    description: 제품은 표준화된 낙하 추와 진자 장치에 의해 통제된 충격을 받습니다. 이 검사는 천공 저항성, 찢어 전파, 장애물, 부두, 잔해와의 충돌에 대한 구조적 복원력을 평가합니다.
+    image: https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-production-department.webp
+  - title: UV 저항 시험
+    standard: ASTM G154 |ISO 4892-3
+    description: 재료 샘플은 가속 풍상 챔버에서 UVA-340 램프에 1,000시간 노출됩니다+. 색 변화(델타 E), 광택 유지, 인장 강도 손실을 측정하여 UV 안정제 패키지를 검증합니다.
+    image: https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-uv-resistance-testing.webp
+  - title: 마모 저항 테스트
+    standard: ASTM D751 (테이버) |ISO 5470-1
+    description: 재료 샘플은 CS-10 연마 휠에 500g/1,000g 하중으로 1,000회 처리됩니다. 질량 손실과 시각적 마모 등급은 모래, 자갈, 반복 발사에 대한 코팅 내구성을 결정합니다.
+    image: https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-pvc-material-testing.webp
+  - title: 저온 성능 시험
+    standard: 내부 규격 AF-LT-003 | MIL-STD-810G
+    description: 조립된 제품과 재료 쿠폰은 -20°C, -10°C, 0°C에서 24시간 동안 조절한 후 플렉스 테스트를 거칩니다. 이를 검증 PVC 하여 Hypalon 균열이나 박리 없이 유연성을 유지합니다.
+    image: https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-factory-exterior.webp
+  - title: 부력 및 하중 용량 시험
+    standard: ISO 6185-1 |ISO 12402
+    description: 제품은 통제된 풀에서 1.25배 정격 용량으로 점진적으로 적재됩니다. 프리보드, 안정성, 자기 배수 성능이 기록됩니다. 모든 모델의 정격 용량은 수학적·실증적으로 검증되었습니다.
+    image: https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-stock-boat-inventory.webp
+  - title: 기동성 시험
+    standard: 내부 규격 AF-MT-004
+    description: 수상 시험에서는 다양한 하중 조건에서 회전 반경, 가속, 플래닝 시간, 패들/모터 반응을 측정합니다. 실제 조종 특성은 설계 목표에 대해 검증됩니다.
+    image: https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-dolphin-wave-1.webp
+  - title: 방수 검사
+    standard: ISO 6185-1 §7.3 | 내부 규격 AF-WT-005
+    description: 조립된 모든 제품은 모든 이음새, 밸브, 피팅에 0.5바 분사 테스트를 거칩니다. 5분간의 압력 침수 테스트로 챔버와 밸브의 방수 상태를 검증합니다. 출하 전 제로 누수 기준.
+    image: https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-production-department-2.webp
+testing_section:
+  tagline: 시험 절차
+  title: 모든 단계에서 엄격한 시험
+commitment:
+  title: 우리의 약속
+  body: 이러한 엄격한 테스트 절차를 통해 {SITE}는 고객에게 고성능일 뿐만 아니라 내구성도 뛰어나다는 확신을 제공하여 수많은 SUPs 즐겁고 안전한 수상 모험을 보장합니다. 품질 연구소는 생산과 독립적으로 운영되며 경영진에게 직접 보고합니다.
+  cta: 테스트 문서 요청
+  cta_link: /contact

@@ -1,0 +1,199 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import ExperienceLayer from '~/components/content/ExperienceLayer.astro';
+import RelatedPages from '~/components/content/RelatedPages.astro';
+
+const metadata = {
+  title: 'Solutions by Use Case — Find Your Inflatable Watercraft',
+  description:
+    'Match your use case to the right inflatable watercraft. From patrol and rescue to rental fleet and expedition — Aquafarer has the right solution.',
+  ignoreTitleTemplate: true,
+};
+
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Solutions by Use Case' }];
+
+const useCases = [
+  {
+    scenario: 'I need boats for water rescue and emergency response',
+    icon: 'M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z',
+    answer:
+      'Our RIB rescue boats (16-24ft) are designed for rapid deployment. Lightweight for helicopter transport, self-bailing floors, and console steering for operator control. Hypalon construction for extended UV exposure.',
+    cta: { text: 'View Rescue Boats', link: '/search-rescue-operations' },
+  },
+  {
+    scenario: 'I want to start a rental fleet at my beach resort',
+    icon: 'M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9',
+    answer:
+      'Rental-grade SUPs and kayaks with reinforced rails, UV-stabilized fabric, and commercial-grade valves. Custom branding available. Bulk pricing starts at 50+ units per model.',
+    cta: { text: 'Fleet Solutions', link: '/products' },
+  },
+  {
+    scenario: 'I need custom-branded products for my brand',
+    icon: 'M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z',
+    answer:
+      'Full OEM/ODM service: custom colors, logos, packaging, and tooling. MOQ 5–10 units for SUPs and kayaks, 2–5 units for RIBs. NDA protected. 45-60 day lead time from design approval.',
+    cta: { text: 'OEM/ODM Services', link: '/oem-odm-manufacturer' },
+  },
+  {
+    scenario: 'I need boats for military or government patrol',
+    icon: 'M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4',
+    answer:
+      'Military-grade RIBs with Hypalon fabric, NBC-resistant options, and stealth profiles. Custom console layouts, weapon mounts, and communication system integration available.',
+    cta: { text: 'Government Solutions', link: '/oem-odm-manufacturer' },
+  },
+  {
+    scenario: 'I need inflatable boats for humanitarian aid missions',
+    icon: 'M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 12.5V17a2 2 0 01-2 2H6a2 2 0 01-2-2V9a2 2 0 012-2h3.5a2 2 0 012 2v.5',
+    answer:
+      'Heavy-duty inflatable boats designed for disaster zones. Easy to transport, quick to deploy, and capable of carrying supplies or personnel. CE certified for safety compliance.',
+    cta: { text: 'Disaster Relief Solutions', link: '/disaster-relief-humanitarian-aid' },
+  },
+  {
+    scenario: 'I need workboats for dive support or marine operations',
+    icon: 'M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z',
+    answer:
+      'Commercial RIBs and workboats configured for dive support, equipment transport, and personnel transfer. Console steering, heavy-duty floors, and Hypalon or PVC options.',
+    cta: { text: 'Commercial Workboats', link: '/commercial-workboats' },
+  },
+  {
+    scenario: 'I want to manufacture my own SUP board design',
+    icon: 'M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4',
+    answer:
+      'We take your concept to production: industrial design, mold creation, prototyping, testing, and mass production. Our R&D center supports CAD/FEA simulation, hydrodynamic testing, and material selection.',
+    cta: { text: 'Design & Innovation', link: '/design-powerhouse' },
+  },
+  {
+    scenario: 'I need a single inflatable boat for personal/family use',
+    icon: 'M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6',
+    answer:
+      'Visit our product catalog to find the right board or boat. Our size guide and product comparisons help match you with the right model. All 64 models are CE certified with warranty.',
+    cta: { text: 'Shop Products', link: '/products' },
+  },
+];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <section class="max-w-4xl mx-auto py-24 px-6">
+    <h1 class="mt-4 text-4xl font-semibold text-gray-900">What Are You Looking For?</h1>
+    <p class="mt-4 text-lg text-gray-500">
+      Select your scenario below and get a direct recommendation for the right Aquafarer solution.
+    </p>
+
+    <div class="mt-12 space-y-4">
+      {
+        useCases.map((uc) => (
+          <details class="group bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-md transition-shadow">
+            <summary class="flex items-center gap-4 p-6 cursor-pointer list-none">
+              <div class="w-10 h-10 rounded-xl bg-gray-100 flex items-center justify-center flex-shrink-0">
+                <svg
+                  class="w-5 h-5 text-gray-600"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d={uc.icon} />
+                </svg>
+              </div>
+              <span class="flex-1 font-medium text-gray-900 text-sm leading-relaxed">{uc.scenario}</span>
+              <svg
+                class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <div class="px-6 pb-6 pt-2 border-t border-gray-100">
+              <p class="text-sm text-gray-600 leading-relaxed">{uc.answer}</p>
+              <a
+                href={uc.cta.link}
+                class="mt-4 inline-flex px-5 py-2.5 bg-gray-900 text-white rounded-full text-sm font-medium hover:bg-gray-800 transition"
+              >
+                {uc.cta.text} →
+              </a>
+            </div>
+          </details>
+        ))
+      }
+    </div>
+
+    <section class="mt-16 bg-gradient-to-br from-gray-50 to-sky-50 rounded-2xl p-8 border border-gray-200 text-center">
+      <h2 class="text-xl font-semibold text-gray-900">Still Not Sure?</h2>
+      <p class="mt-2 text-sm text-gray-500">
+        Contact our team for a personalized recommendation based on your specific requirements.
+      </p>
+      <a
+        href="/contact"
+        class="mt-6 inline-flex px-8 py-4 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition"
+        >Contact Us →</a
+      >
+    </section>
+  </section>
+
+  <ExperienceLayer
+    title="Real-World Results"
+    subtitle="How businesses and organizations use Aquafarer solutions in the field."
+    stories={[
+      {
+        quote:
+          'We deployed two Aquafarer RIBs during the coastal flooding — they were the only vessels that could navigate the debris-filled waters at low tide. The self-bailing floor kept us operational when other boats swamped.',
+        narrative:
+          'During a severe coastal flooding event, a municipal SAR team deployed Aquafarer RIBs for evacuation operations. Despite debris and continuous operation for 14 hours, the Hypalon fabric showed no signs of wear. The multi-chamber design provided redundancy when a submerged nail punctured one chamber — the boat remained fully operational on the remaining three chambers.',
+        context: 'Coastal flood rescue, Southeast Asia, 2024',
+        source: 'Municipal SAR Team Lead',
+      },
+      {
+        quote:
+          "We use our Aquafarer workboat for everything — fish farm inspections, equipment transport, and even as a safety boat for our dive team. It's the most versatile vessel in our fleet.",
+        narrative:
+          'A commercial aquaculture operation in Norway uses an Aquafarer RIB for daily service runs between fish farm cages. The boat handles cold North Sea conditions, transports equipment and personnel, and serves as a safety vessel for dive teams. After two harsh winters, the boat shows no cold-crack damage and continues to perform reliably.',
+        context: 'Aquaculture operations, Norway, 2023-2025',
+        source: 'Farm Operations Manager',
+      },
+    ]}
+  />
+  <RelatedPages
+    title="Explore More"
+    subtitle="Related solutions and resources"
+    links={[
+      {
+        title: 'Solutions by Industry',
+        description: 'Find the right inflatable watercraft for your industry sector.',
+        href: '/solutions/by-industry',
+        label: 'Overview',
+      },
+      {
+        title: 'Commercial Workboats',
+        description: 'Durable RIBs and workboats for daily commercial marine operations.',
+        href: '/commercial-workboats',
+        label: 'Workboats',
+      },
+      {
+        title: 'OEM/ODM Manufacturing',
+        description: 'Custom manufacturing services for global brands and organizations.',
+        href: '/oem-odm-manufacturer',
+        label: 'OEM',
+      },
+      {
+        title: 'Engineering Perfection',
+        description: 'Our engineering philosophy — precision manufacturing and rigorous quality control.',
+        href: '/engineering-perfection',
+        label: 'Philosophy',
+      },
+    ]}
+  />
+
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true">
+    <p>
+      Use case decision flow for Aquafarer inflatable watercraft. Eight scenarios with recommended solutions: water
+      rescue (RIB rescue boats 16-24ft), rental fleet (rental-grade SUPs and kayaks with custom branding), custom
+      branded products (OEM/ODM service, MOQ 5-10 SUP/kayak, 2-5 RIB), military patrol (military-grade Hypalon RIBs with
+      NBC resistance), humanitarian aid (heavy-duty inflatable boats for disaster zones), dive support (commercial RIBs
+      and workboats), custom SUP design (full ODM from concept to production), personal/family use (product catalog with
+      size guide and comparisons).
+    </p>
+  </section>
+</Layout>

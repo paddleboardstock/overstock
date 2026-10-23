@@ -1,0 +1,119 @@
+hero:
+  tagline: Inženierzinātņu baltā grāmata
+  title: Drop-Stitch Tehnoloģijas un materiālzinātne:<br />Mūsdienu piepūšamo ūdens transportlīdzekļu inženierija
+  subtitle: Autoritatīva tehniskā atsauce, kas aptver drop-stitch kodola konstrukciju, PVC Hypalon materiālu salīdzinājumu, augsta spiediena kuģa stingrības testēšanu un ūdens transportlīdzekļu ražošanas standartus.
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/randd/aquafarer-design-discussion-lab.webp
+    alt: Aquafarer Pētniecības un attīstības laboratorija — materiālu testēšana un inženierija
+direct_answer: Drop-stitch Tehnoloģija izmanto tūkstošiem iekšējo poliestera vītņu, kas savieno piepūšamā kodola augšējos un apakšējos auduma slāņus. Uzpūšot līdz 15–20, PSIšie vītņi darbojas kā sprieguma elementi, novēršot izspiešanos un radot stingru konstrukciju, kas līdzinās cietā apvalka konstrukcijai. Apvienojumā ar moderniem PVC Hypalon auduma pārklājumiem un RF metināšanu tas ļauj izmantot pārnēsājamus, augstas veiktspējas piepūšamus ūdens transportlīdzekļus, kas piemēroti profesionālai, komerciālai un atpūtas lietošanai.
+section_drop_stitch:
+  title: Drop-Stitch Būvinženierija
+  subtitle: Kā tūkstošiem pavedienu pārvērš elastīgu audumu stingrā struktūrā
+  content: |
+    Drop-stitch (zināms arī kā "drop-stitchaudums" vai "drop-stitchkodols") ir izrāviens piepūšamo konstrukciju inženierijā. Princips ir maldinoši vienkāršs: tūkstošiem atsevišķu poliestera pavedienu vienlaikus tiek ieausti divās atsevišķās pamatauduma kārtās, savienojot augšējo un apakšējo paneli 90 grādu leņķī.
+
+    Kad noslēgtā kamera tiek saspiesta, iekšējais gaisa spiediens izdala spēku vienmērīgi visos virzienos — cenšoties atdalīt augšējos un apakšējos paneļus cilindriskā formā. Tūkstošiem drop-stitch vītņu pretojas šai atdalīšanai, pārnesot slodzi spriegumā pa vītnes asi. Rezultātā ir plakans, stingrs panelis, kas spēj izturēt 15–20 iekšējo PSI spiedienu.
+
+    Pie 20 , PSI1 m² drop-stitch panelis piedzīvo aptuveni 14 000 kg kopējā iekšējā spēka — tomēr vītņu matrica to notur pilnīgi plakanu. Tas drop-stitch nodrošina konstrukcijām izturības un svara attiecību, kas sacenšas ar tradicionālajiem stingrajiem materiāliem.
+section_materials:
+  title: PVC pret Hypalon — tehnisko materiālu salīdzinājums
+  subtitle: Objektīvi dati par informētu materiālu izvēli piepūšamo ūdens transportlīdzekļu ražošanā
+  table:
+    columns:
+      - header: Īpašums
+      - header: PVC (polivinilhlorīds)
+      - header: Hypalon (CSM)
+    rows:
+      - property: UV Izturība
+        pvc: Labi (ar UV stabilizatoriem)
+        hypalon: Lieliski (raksturīgi)
+      - property: Nodilumizturība
+        pvc: Labi
+        hypalon: Ļoti labi
+      - property: Stiepes izturība
+        pvc: 3 000–5 000 N/5 cm
+        hypalon: 2 500–4 000 N/5 cm
+      - property: Svars uz m²
+        pvc: 850–1,200 g
+        hypalon: 1,100–1,500 g
+      - property: Cold Flex
+        pvc: -30°C
+        hypalon: -20°C
+      - property: Savienojuma metode
+        pvc: RF metināšana / Karstā gaisa metināšana
+        hypalon: Roku līmēšana (kontaktlīme)
+      - property: Labojamība
+        pvc: Viegli (karstā metināšana vai līme)
+        hypalon: Nepieciešama CSM līme
+      - property: Materiālu izmaksas
+        pvc: $8–15 / m²
+        hypalon: $20–40 / m²
+      - property: Kalpošanas laiks (tropu saulē)
+        pvc: 5–8 gadi
+        hypalon: 10–15 gadi
+      - property: Krāsu diapazons
+        pvc: Plašs (pilns krāsu spektrs)
+        hypalon: Ierobežots (pamatekkrāsas)
+      - property: Ķīmiskā izturība
+        pvc: Labs (degvielai/eļļai izturīgi veidi)
+        hypalon: Lielisks (plašs ķīmisko vielu diapazons)
+section_testing:
+  title: Testēšanas un drošības protokoli
+  subtitle: Aquafarer kvalitātes nodrošināšanas sistēma katram ražošanas partijai
+  protocols:
+    - title: 1,25x nominālā spiediena noturības tests
+      description: Katrs saliktais trauks tiek uzpūsts līdz 1,25x tā nominālajam darba spiedienam un turēts 24–48 stundas. Jebkura spiediena kritums, kas pārsniedz 2%, izraisa atlaišanu un pārstrādi.
+      standard: ISO 6185
+    - title: Šuvju atdalīšanās stiprības tests
+      description: Metināto un līmēto šuvju paraugi no katras ražošanas partijas tiek testēti atdalīšanās stiprībai, izmantojot kalibrētas vilkšanas iekārtas. Nepieciešama minimālā 4 kN/m atdalīšanās izturība.
+      standard: ISO 2411
+    - title: Auduma stiepes testa
+      description: Ienākošie auduma ruļļi tiek testēti stiepes stiprībā un pagarinājumā gan šķiedru, gan šķērsvirzienā. Atlaišanas slieksnis zem 3 000 N/5 cm PVC.
+      standard: ISO 1421
+    - title: UV Paātrināta laika iedarbība
+      description: Materiālu paraugus pakļauj 1 000+ stundu paātrinātai UV iedarbībai QUV testu kamerās. Atļauts maksimālais 15% stiepes stiprības zudums.
+      standard: ASTM G154
+    - title: Vārstu un savienojumu integritāte
+      description: Katram vārsta komplektam tiek testēta blīvuma integritāte pie 1,25x nominālā spiediena. Atpakaļ caurlaidīgie vārsti tiek testēti viena virziena blīvuma veiktspējai.
+      standard: ISO 12402
+section_manufacturing:
+  title: Ražošanas standarti un kvalitātes sertifikāti
+  subtitle: Nozares standartu atbilstība globālajam tirgum
+  standards:
+    - name: ISO 9001:2015
+      body: SGS Sertificēts
+      scope: Kvalitātes vadības sistēma dizainā, ražošanā un piegādē
+    - name: CE 2013/53/ES
+      body: ES Paziņotā institūcija
+      scope: Atpūtas kuģu direktīva — korpusa dizains, stabilitāte, flotācija, emisijas
+    - name: BSCI
+      body: Amfori
+      scope: Sociālā atbilstība — darbinieku drošība, godīga darba aizsardzība, vides pārvaldība
+    - name: ISO 6185
+      body: Starptautiskais standarts
+      scope: Piepūšamās laivas — konstrukcija, stabilitāte, peldēšana, spiediena testēšana
+    - name: REACH
+      body: ES regulējums
+      scope: Ķīmiskā drošība — ierobežotas vielas materiālos un pārklājumos
+section_faq:
+  title: Tehniskie biežāk uzdotie jautājumi
+  questions:
+    - q: Kā tas drop-stitch salīdzinās ar tradicionālo cietā apvalka konstrukciju?
+      a: Mūsdienu drop-stitch kodoli ar 20 mm PSI sasniedz 85–90% no salīdzināmas EPS putu/stikla šķiedras cieto korpusu stingrības, vienlaikus pilnībā atpūšoties transportēšanai. Kompromiss ir nedaudz lielāks svars un zemāka galīgā stingrība — taču lielākajai daļai atpūtas un komerciālo pielietojumu šī atšķirība ir nenozīmīga.
+    - q: Kāds vītņu blīvums tiek uzskatīts par augstākās kvalitātes?
+      a: Premium drop-stitch audumi izmanto 2 diegus uz kvadrātcollu (aptuveni 3 100 diegi uz m²), kas austi no 1 680 DTEX poliestera dzijas. Sākuma līmeņa audumi izmanto 1 diegu uz kvadrātcollu ar 1 100 DTEX dzijām.
+    - q: Vai to var Hypalon metināt šādiPVC?
+      a: Nē. Hypalon/CSM nevar tikt metināts ar RF. To jāmontē, izmantojot ar roku uzklātu kontaktlīmi, kas padara ražošanu darbietilpīgāku un padara šuves atkarīgas no operatora prasmēm.PVC Var būt RF metināts vai ar karsto gaisu, lai nodrošinātu vienmērīgu, automatizētu šuvju kvalitāti.
+    - q: Kāds ir maksimālais drošais spiediens piepūšamajām laivām?
+      a: Standarta piepūšamās laivu caurules darbojas pie 8–12 PSI.Drop-stitch grīdas darbojas pie 12–20 PSI. Augsta spiediena drop-stitch serdeņi (SUPs) var darboties pie 20–25PSI. Katrs produkts ietver spiediena atvieglošanas vārstus, kas kalibrēti, lai novērstu pārmērīgu uzpūšanos.
+    - q: Cik ilgs laiks nepieciešams, lai izgatavotu pielāgotu piepūšamo laivu?
+      a: Standarta OEM ražošana ilgst 30–45 dienas no pasūtījuma apstiprināšanas līdz FOB Čingdao. Pielāgotu veidņu izstrāde pievieno 15–20 dienas prototipa ražošanai un testēšanai.
+cta:
+  title: Inženiertehniskā konsultācija
+  subtitle: Vai jums ir konkrēts jautājums par materiālu vai dizainu? Mūsu inženieru komanda ir pieejama tehniskām diskusijām.
+  actions:
+    - variant: primary
+      text: Jautājiet mūsu inženieru komandai
+      href: /contact
+    - text: Izpētiet mūsu pētniecības un izstrādes centru
+      href: /randdcenter

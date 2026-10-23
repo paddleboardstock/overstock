@@ -1,0 +1,263 @@
+---
+import Icon from '~/components/ui/Icon.astro';
+import cfg from '~/config.yaml';
+const branding = (cfg as any)?.branding || {};
+import { getSeoSettings } from '~/utils/seo-settings';
+import { getLangFromUrl } from '~/i18n/utils';
+import { localizeHref, entityForHref } from '~/i18n/routing';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
+interface Link {
+  text?: string;
+  href?: string;
+  ariaLabel?: string;
+  icon?: string;
+}
+
+interface Links {
+  title?: string;
+  links: Array<Link>;
+}
+
+export interface Props {
+  links: Array<Links>;
+  secondaryLinks: Array<Link>;
+  socialLinks: Array<Link>;
+  footNote?: string;
+  theme?: string;
+}
+
+const { socialLinks = [], secondaryLinks = [], links = [], footNote, theme = 'light' } = Astro.props;
+
+const seo = await getSeoSettings();
+
+const ksSocialLinks: Array<Link> = (seo.socialLinks || [])
+  .filter((s) => s?.url && s.url !== '#')
+  .map((s) => ({
+    ariaLabel: s.ariaLabel || s.platform,
+    href: s.url || '#',
+    icon: s.icon || '',
+  }));
+
+const mergedSocialLinks = (
+  ksSocialLinks.length > 0
+    ? [
+        ...ksSocialLinks,
+        ...socialLinks.filter(
+          (s) => !ksSocialLinks.find((k) => k.ariaLabel?.toLowerCase() === s.ariaLabel?.toLowerCase())
+        ),
+      ]
+    : socialLinks
+).filter((s) => s?.href && s.href !== '#');
+
+const currentLocale = getLangFromUrl(Astro.url);
+
+const navTextMap: Record<string, string> = {
+  Products: 'nav.products',
+  'Technology & Innovation': 'nav.technologyInnovation',
+  'Technology Overview': 'nav.technologyOverview',
+  'Engineering Excellence': 'nav.engineeringExcellence',
+  'Materials Science': 'nav.materialsScience',
+  Solutions: 'nav.solutions',
+  'By Industry': 'nav.byIndustry',
+  'By Use Case': 'nav.byUseCase',
+  'OEM/ODM Manufacturing': 'nav.oemOdm',
+  'Custom Lab': 'nav.custom',
+  Lifestyle: 'nav.lifestyle',
+  Gallery: 'nav.gallery',
+  'Solutions by Industry': 'nav.solutionsIndustry',
+  'Solutions by Use Case': 'nav.solutionsUseCase',
+  Learn: 'nav.learn',
+  Company: 'nav.company',
+  Support: 'nav.support',
+  'All Products': 'nav.allProducts',
+  'RIB Boats': 'nav.ribBoats',
+  'Inflatable Boats': 'nav.inflatableBoats',
+  Accessories: 'nav.accessories',
+  Compare: 'nav.compare',
+  'SUP vs Kayak': 'nav.supVsKayak',
+  'Inflatable vs Hardboard': 'nav.inflatableVsHardboard',
+  Guides: 'nav.guides',
+  'SUP Basics': 'nav.supBasics',
+  'Inflatable Technology': 'nav.inflatableTech',
+  'Water Sports Safety': 'nav.safetyWaterSports',
+  Journal: 'nav.journal',
+  Technology: 'nav.technology',
+  Safety: 'nav.safety',
+  'Size Guide': 'nav.sizeGuide',
+  News: 'nav.news',
+  About: 'nav.about',
+  Brand: 'nav.brand',
+  Community: 'nav.community',
+  'SUP Knowledge': 'nav.supKnowledge',
+  'Boat Knowledge': 'nav.boatKnowledge',
+  'R&D Center': 'nav.randd',
+  Contact: 'nav.contact',
+  Login: 'nav.login',
+  'Sign In': 'nav.signIn',
+  'Get a quote': 'cta.quote',
+  Terms: 'nav.terms',
+  'Privacy Policy': 'nav.privacy',
+  'Medical Disclaimer': 'nav.disclaimer',
+  FAQ: 'nav.faq',
+  Bundles: 'nav.bundles',
+  'Product Catalog': 'nav.catalog',
+  'Quality & Testing': 'nav.quality',
+  'Factory Tour': 'nav.factoryTour',
+  'Buyers Guide': 'nav.buyersGuide',
+  'Search & Rescue': 'nav.searchRescue',
+  'Engineering Perfection': 'nav.engineeringPerfection',
+  'Disaster Relief': 'nav.disasterRelief',
+  'Commercial Workboats': 'nav.commercialWorkboats',
+  'SUP Boards': 'nav.supBoards',
+  'Knowledge Graph': 'nav.knowledgeGraph',
+  'Learn Hub': 'nav.learnHub',
+  'Water Safety': 'nav.waterSafety',
+  Academy: 'nav.academy',
+  'Knowledge Base': 'nav.knowledge',
+  Trust: 'nav.trust',
+  Factory: 'nav.factory',
+  'Production Capacity': 'nav.factoryCapacity',
+  'Quality Lab': 'nav.factoryQualityLab',
+  'OEM/ODM Capability': 'nav.factoryOemCapability',
+  Quality: 'nav.qualityFooter',
+  Warranty: 'nav.warranty',
+  'Media Center': 'nav.media',
+  'Design & Innovation': 'nav.designPowerhouse',
+  'Aquafarer Story': 'nav.aquafarerStory',
+  'Buyer Center': 'nav.buyerCenter',
+  'Marine Expertise': 'nav.brandMarineExpertise',
+  'Global Presence': 'nav.brandGlobalPresence',
+  'Why Aquafarer': 'nav.brandWhyAquafarer',
+  'Our Team': 'nav.brandTeam',
+  Certifications: 'nav.certifications',
+  Partners: 'nav.partners',
+  'Case Studies': 'nav.cases',
+  Resources: 'nav.resources',
+  'Request a Quotation': 'nav.requestQuotation',
+  'Diving Centers': 'nav.solutionsDivingCenter',
+  Fishing: 'nav.solutionsFishing',
+  'Marine Tourism': 'nav.solutionsMarineTourism',
+  'Rescue Watercraft': 'nav.solutionsRescue',
+  'Yacht Tenders': 'nav.solutionsYachtTender',
+  'Solutions Matrix': 'nav.solutionsMatrix',
+  'Engineering Whitepaper': 'nav.engineeringWhitepaper',
+  'OEM/ODM Blueprint': 'nav.oemOdmBlueprint',
+  'CE Compliance': 'nav.ceCompliance',
+  'RIB OEM/ODM': 'nav.ribOemOdm',
+  'Technical Drawings': 'nav.technicalDrawings',
+  'Factory Audit': 'nav.factoryAudit',
+  'Dealers & Distributors': 'nav.dealersDistributors',
+  'Dealership Program': 'nav.dealersDistributors',
+  'Business Packages': 'nav.solutionsBusinessPackages',
+  'For Clubs': 'nav.solutionsForClubs',
+  'For Distributors': 'nav.solutionsForDistributors',
+  'For Entrepreneurs': 'nav.solutionsForEntrepreneurs',
+  'For Resorts': 'nav.solutionsForResorts',
+  'For Schools': 'nav.solutionsForSchools',
+  'Rental Business': 'nav.solutionsRentalBusiness',
+  'Success Stories': 'nav.solutionsSuccessStories',
+  Testimonials: 'nav.solutionsTestimonials',
+  'Engineering & Development': 'nav.engineeringDevelopment',
+  Manufacturing: 'nav.manufacturing',
+  'Quality Control System': 'nav.qualityControlSystem',
+};
+
+function t(text: string | undefined, locale: string): string {
+  const key = text ? navTextMap[text] : undefined;
+  if (key) {
+    const uiData = getUiForLang(locale || 'en');
+    const translated = uiData?.[key];
+    if (translated) return translated;
+  }
+  return text ?? '';
+}
+
+const siteName = branding?.site_name?.trim() || 'Aquafarer';
+const year = new Date().getFullYear();
+const rawCopyright = footNote ?? branding?.copyright ?? `© ${year} ${siteName} · All rights reserved.`;
+const copyrightHtml = String(rawCopyright)
+  .replace(/\{year\}/gi, String(year))
+  .replace(/\{site_name\}/gi, siteName);
+---
+
+<footer
+  class:list={[
+    { dark: theme === 'dark' },
+    'relative border-t border-gray-200 dark:border-slate-800 not-prose bg-sky-600 text-white',
+  ]}
+>
+  <div class="dark:bg-dark absolute inset-0 pointer-events-none" aria-hidden="true"></div>
+  <div
+    class="relative max-w-7xl mx-auto px-4 sm:px-6 text-white/90 intersect-once intersect-quarter intersect-no-queue motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
+  >
+    <div class="grid grid-cols-12 gap-4 gap-y-8 sm:gap-8 py-8 md:py-12">
+      {
+        links.map(({ title, links }) => (
+          <div class="col-span-6 md:col-span-2">
+            <div class="text-white/90 font-medium mb-2">{t(title, currentLocale)}</div>
+            {links && Array.isArray(links) && links.length > 0 && (
+              <ul class="text-sm">
+                {links.map(({ text, href, ariaLabel }) => (
+                  <li class="mb-2">
+                    <a
+                      class="text-white/70 hover:text-white hover:underline transition duration-150 ease-in-out"
+                      href={localizeHref(href, currentLocale)}
+                      aria-label={ariaLabel}
+                      data-entity={entityForHref(href)}
+                    >
+                      <Fragment set:html={t(text, currentLocale)} />
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        ))
+      }
+    </div>
+    <div
+      class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 py-4 border-t border-white/20 text-sm text-white/70"
+    >
+      {
+        secondaryLinks.map(({ text, href }) => (
+          <a
+            class="text-white/70 hover:text-white hover:underline transition duration-150 ease-in-out"
+            href={localizeHref(href, currentLocale)}
+            set:html={t(text, currentLocale)}
+          />
+        ))
+      }
+    </div>
+    <div class="md:flex md:items-center md:justify-between py-6 md:py-8">
+      {
+        mergedSocialLinks?.length ? (
+          <ul class="flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0 rtl:ml-0 rtl:-mr-2 rtl:md:ml-0 rtl:md:mr-4">
+            {mergedSocialLinks.map(({ ariaLabel, href, text: _text, icon }) => (
+              <li>
+                <a
+                  class="text-white/70 hover:text-white hover:bg-white/10 focus:outline-none focus:ring-4 focus:ring-white/30 rounded-lg text-sm p-2.5 inline-flex items-center"
+                  aria-label={ariaLabel}
+                  href={href}
+                >
+                  {icon && <Icon name={icon} class="w-5 h-5" />}
+                </a>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          ''
+        )
+      }
+
+      <div class="text-sm mr-4 text-white/70">
+        <Fragment set:html={copyrightHtml} />
+        <div class="mt-1 text-xs text-white/50">Designed &amp; Managed by Aquafarer LLC (USA) · Made in China</div>
+        <div class="mt-1 text-xs text-white/50">
+          Aquafarer LLC focuses exclusively on global distribution and commercial B2B sales outside of mainland China
+          and the US domestic market.
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

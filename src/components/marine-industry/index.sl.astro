@@ -1,0 +1,274 @@
+---
+import JsonLd from '~/components/common/JsonLd.astro';
+import AiQuickAnswer from '~/components/common/AiQuickAnswer.astro';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
+const { lang = 'sl' } = Astro.props;
+const t = (key: string) => getUiForLang(lang)?.[key] || '';
+---
+
+<JsonLd
+  type="Article"
+  article={{
+    headline: 'Vodnik po napihljivih čolnih — popoln vir',
+    description:
+      'Celovit vodič po napihljivih čolnih, ki zajema vrste, metode gradnje, primerjavo materialov, merila izbire, varnostne standarde in vzdrževanje.',
+    datePublished: '2026-07-07',
+  }}
+  data={{ url: 'https://aquafarer.com/marine-industry/' }}
+/>
+
+<JsonLd
+  type="BreadcrumbList"
+  breadcrumbs={[
+    { name: t('nav.home') || 'Home', href: `/${lang}/` },
+    { name: 'Pomorska industrija', href: `/${lang}/marine-industry` },
+    { name: 'Vodnik za napihljive čolne', href: `/${lang}/marine-industry/` },
+  ]}
+/>
+
+<AiQuickAnswer
+  entityType="Vodnik"
+  quickAnswer="Napihljiva čoln je lahka plovila, izdelana iz prožnih tkaninskih cevi (sponsoni), napolnjenih z zrakom pod pritiskom, ki zagotavlja plovnost. Sodobni napihljivi čolni vključujejo gumenjake, RIBs (trde napihljive čolne), napihljive kajake in deske za stoječe veslanje. Izdelani so iz PVC ali Hypalon CSM tkanin z uporabo RF varjenja ali ročno lepljenih šivov, z drop-stitch konstrukcijo, ki omogoča visoko tlačne trde podlage."
+  facts={[
+    { label: 'Velikost globalnega trga', value: '$2.8B (2026)' },
+    { label: 'Primarni materiali', value: 'PVC / Hypalon CSM' },
+    { label: 'Razpon življenjske dobe', value: '8-20+ let' },
+    { label: 'CE Certificiranje', value: 'Obvezno (EU)' },
+  ]}
+/>
+
+<section class="max-w-4xl mx-auto py-16 px-6">
+  <h1 class="text-4xl font-semibold text-gray-900">Vodnik za napihljive čolne</h1>
+  <p class="mt-4 text-lg text-gray-500">
+    Ključni vir o napihljivih plovilih — od rekreativnih čolnov do RIBs profesionalnih in specializiranih reševalnih
+    plovil.
+  </p>
+
+  <nav class="mt-8 flex flex-wrap gap-2">
+    {
+      ['Types', 'Construction', 'Materials', 'Selection', 'Safety', 'Maintenance', 'Standards'].map((section) => (
+        <a
+          href={`#${section.toLowerCase()}`}
+          class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition"
+        >
+          {section}
+        </a>
+      ))
+    }
+  </nav>
+
+  <section id="types" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Vrste napihljivih čolnov</h2>
+    <div class="mt-8 grid gap-6">
+      {
+        [
+          {
+            title: 'Napihljivi čolni',
+            desc: 'Majhni, prenosni čolni za prevoz do večjega plovila, ribolov in kratke rekreativne vožnje. Običajno dolgi 2-4 m, poganjani z majhnimi zunanjimi motorji (2-15 HP) ali vesli. Najbolj cenovno ugoden začetni čoln.',
+            icon: '🚤',
+          },
+          {
+            title: 'Trdni napihljivi čolni (RIBs)',
+            desc: 'Visoko zmogljive ladje z rigidnim trupom iz steklenih vlaken, aluminija ali HDPE in napihljivimi balastnimi plovci. Dolžine 3-12 m, zunajkrmni motorji 15-300+ HP. Uporabljajo se za patrulje, reševanje, potapljanje in križarjenje na odprtem morju.',
+            icon: '⚡',
+          },
+          {
+            title: 'Napihljivi kajaki',
+            desc: 'Prenosni kajaki iz PVC ali TPU tkanin. Na voljo v enojni in dvojni izvedbi za rekreativno potovanje, rečno plovbo in raziskovalna potovanja.',
+            icon: '🛶',
+          },
+          {
+            title: 'Napihljivi deski za stoječe veslanje (SUPs)',
+            desc: 'Drop-stitch izdeluje sup deske, ki se napihnejo v trde visokotlačne palube. Na voljo so modeli za vsakodnevno uporabo, turo, jogo, ribolov in surfanje.',
+            icon: '🏄',
+          },
+          {
+            title: 'Reševalni čolni (SAR)',
+            desc: 'Specializiran RIBs za iskalno-reševalne operacije. Ima samoprazneče tla, sprednje konzole, vlečne čepke in barvne sheme z visoko vidnostjo. CE-certificiran za reševalno uporabo.',
+            icon: '🆘',
+          },
+          {
+            title: 'Komercialna delovna plovila',
+            desc: 'Težka RIBs za podporo potapljanju, patruljiranje, raziskovanje in komercialne pomorske operacije. Hypalon CSM konstrukcija, ojačani trupi in profesionalna oprema.',
+            icon: '⚙️',
+          },
+        ].map((item) => (
+          <div class="flex gap-4 p-5 bg-gray-50 rounded-xl border border-gray-200">
+            <span class="text-2xl flex-shrink-0">{item.icon}</span>
+            <div>
+              <h3 class="font-semibold text-gray-900">{item.title}</h3>
+              <p class="mt-1 text-sm text-gray-600">{item.desc}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section id="construction" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Metode gradnje</h2>
+    <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">RF varjenje (visokofrekvenčno)</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Uporablja elektromagnetno energijo za spajanje PVC plasti na molekularni ravni. Ustvarja najmočnejše
+          nepredušne spoje. PVC Pogosto pri kakovostnih čolnih in SUPs. Zahteva specializirano mehanizacijo in strokovno
+          upravljanje.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Ročno lepljenje / kemično lepljenje</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Dvodelno lepilo veže platnene panele. Primarna metoda za Hypalon CSM čolne (ni mogoče variti z RF). Zahteva
+          natančno pripravo površine, nadzorovano vlažnost in ustrezen čas strjevanja za optimalno trdnost šiva.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Drop-Stitch Jedro</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Tisoči poliestrskih niti povezujejo PVC zgornjo in spodnjo plast, kar omogoča napihovanje pri visokem tlaku
+          (15-25PSI) za zmogljivost trdih plošč. Gostota navoja (15-50 niti/cm²) določa togost in težo.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Toplotno varjenje</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Vroče zračno ali vroče klinasto varjenje, ki se uporablja za šive in ojačitve. Pogosto pri RIB večjih
+          konstrukcijah. Manj natančno kot RF varjenje, a učinkovito za Hypalon PVC težke tkanine.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="materials" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Primerjava materialov</h2>
+    <div class="mt-6 overflow-x-auto">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="bg-gray-50 border-b-2 border-gray-200">
+            <th class="px-4 py-3 text-left font-semibold text-gray-700">Lastnina</th>
+            <th class="px-4 py-3 text-center font-semibold text-sky-700">PVC</th>
+            <th class="px-4 py-3 text-center font-semibold text-emerald-700">Hypalon CSM</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            [
+              ['Relative Cost', '$ (budget)', '$$$ (premium)'],
+              ['UV Resistance', 'Good (with coating)', 'Excellent (inherent)'],
+              ['Abrasion Resistance', 'Moderate-Good', 'Excellent'],
+              ['Chemical Resistance', 'Good', 'Excellent'],
+              ['Cold Flexibility', 'Stiffens below 0°C', 'Flexible to -20°C'],
+              ['Lifespan', '8-12 years', '15-20+ years'],
+              ['Seam Method', 'RF welding', 'Hand gluing'],
+              ['Repair', 'PVC glue (easy)', '2-part adhesive (moderate)'],
+            ].map((row, i) => (
+              <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                {row.map((cell, j) => (
+                  <td
+                    class={`px-4 py-3 border-b border-gray-200 ${j === 0 ? 'font-medium text-gray-700' : 'text-center text-gray-600'}`}
+                  >
+                    {cell}
+                  </td>
+                ))}
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-4 text-sm text-gray-500">
+      Modern vojaški razred PVC (1100-1670 dtex) ponuja odlično vzdržljivost za večino rekreativnih uporabnikov po
+      polovici stroška Hypalon. Hypalon je priporočena za komercialne flote, tropska podnebja in ključne misije.
+    </p>
+    <a
+      href={`/${lang}/learn/pvc-vs-hypalon`}
+      class="mt-4 inline-block text-sky-600 hover:text-sky-700 text-sm font-medium"
+      >Podroben vodič PVC proti Hypalon →</a
+    >
+  </section>
+
+  <section id="selection" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Kako izbrati napihljiv čoln</h2>
+    <div class="mt-8 grid md:grid-cols-3 gap-6">
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">1. Določite svojo uporabo</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>Rekreativna: Čoln ali SUP</li>
+          <li>Zmogljivost: RIB (15-60 HP)</li>
+          <li>Komercialna: RIB (100+ HP)</li>
+          <li>Fitnes: Napihljivi SUP</li>
+          <li>Potovanje: Napihljiv kajak</li>
+        </ul>
+      </div>
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">2. Določite svoj proračun</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>$200-$800: Napihljiv SUP</li>
+          <li>$500-$2.000: Čoln + z motorjem</li>
+          <li>$3.000-$8.000: Vstopni RIB</li>
+          <li>$8.000-$20.000: Premium RIB</li>
+          <li>$20.000+: Komercialni RIB</li>
+        </ul>
+      </div>
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">3. Razmislite o materialu</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>PVC: Proračunska, lahka</li>
+          <li>Hypalon: Premium, dolgotrajna</li>
+          <li>Drop-Stitch: Trdna zmogljivost</li>
+          <li>Teža tkanine: 1100-1670 dtex</li>
+          <li>Premaz: UV + plasti proti predrtju</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="safety" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Varnost in standardi</h2>
+    <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">CE Certificiranje</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Vsi napihljivi čolni, prodajani v EU, zahtevajo CE označevanje v okviru Direktive o rekreativnih plovilih
+          (RCD) 2013/53/EU. Certifikat zajema kategorijo zasnove (A-D), plovnost, stabilnost in nosilnost. Aquafarer
+          čolni so CE-certificirani za rekreativno in reševalno uporabo.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Standard</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Mednarodni standard za napihljive čolne, ki navaja zahteve za materiale, šive, ventile in izvedbo preskusov
+          zmogljivosti. Tipi I-IV zajemajo vse od majhnih čolnov do velikih RIBs.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Osnovna varnostna oprema</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Rešilni jopiči/PFD (CE 12402), vrvi za metanje, zajemalnik/gasilnik, navigacijske luči (ponoči), VHF radio,
+          komplet prve pomoči, sidro in rezervno veslo ali gorivo.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Varno upravljanje</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          NIKOLI ne presežite maksimalne kapacitete na ploščici. Pred spuščanjem preverite varnost ventila. Razporedite
+          težo enakomerno. Spremljajte vremenske razmere. Oddajte načrt plovbe. Opravite tečaj varnosti na vodi.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="maintenance" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Vzdrževanje in skrb</h2>
+    <div class="mt-8 space-y-4 text-sm text-gray-600">
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <>
+          <span class="text-sky-600 font-bold flex-shrink-0">1.</span>
+          <span>Po vsaki uporabi v slani vodi splaknite s sladko vodo. Pred shranjevanjem popolnoma posušite.</span>
+        </>
+      </div>
+    </div>
+  </section>
+</section>

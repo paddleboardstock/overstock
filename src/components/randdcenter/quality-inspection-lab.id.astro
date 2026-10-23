@@ -1,0 +1,203 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'id' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">&larr; Kembali ke Pusat R&D</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Lab 06</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Laboratorium Kualitas & Inspeksi</h1>
+      <p class="mt-3 text-lg text-muted">Verifikasi independen — setiap tes disetujui sebelum pengiriman</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-uv-resistance-testing.webp"
+        alt="Aquafarer laboratorium inspeksi kualitas UV pengujian"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Percaya, tapi verifikasi</h2>
+  <p>
+    Setiap perahu yang meninggalkan bengkel kami membawa sertifikasi bahwa perahu tersebut telah lulus serangkaian
+    inspeksi kualitas dan uji material yang ditentukan. Laboratorium Kualitas & Inspeksi kami adalah fungsi independen
+    dalam organisasi — melapor langsung kepada direktur pelaksana, bukan kepada produksi — memastikan tidak ada tekanan
+    komersial yang dapat mengompromikan gerbang inspeksi. Jika suatu batch material atau perahu yang selesai tidak
+    memenuhi spesifikasi yang dipublikasikan, laboratorium memiliki wewenang untuk menghentikan pengiriman hingga
+    ketidaksesuaian tersebut diselesaikan.
+  </p>
+  <p>
+    Laboratorium beroperasi di bawah sistem manajemen kualitas yang selaras dengan prinsip-prinsip, dan metode pengujian
+    kami didasarkan pada ISO, ASTM, dan standar EN setiap kali berlaku. Kami menjaga catatan rinci dari setiap tes yang
+    dilakukan, menciptakan rantai ketertelusuran lengkap dari penerimaan bahan baku hingga pengiriman perahu akhir.
+  </p>
+
+  <h2>Peralatan dan kemampuan uji</h2>
+  <table>
+    <thead><tr><th>Peralatan</th><th>Tes yang Dilakukan</th><th>Standar / Metode</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Mesin uji universal (50 kN)</td><td>Kekuatan tarik (kain), ketahanan lepasan (jahitan), propagasi sobek</td
+        ><td>, ISO 4674</td></tr
+      >
+      <tr
+        ><td>Perangkat uji tahan udara (dapat diprogram)</td><td
+          >Daya tahan inflasi/deflasi 1000 siklus, uji tahan tekanan 24-48 jam</td
+        ><td>(internal)</td></tr
+      >
+      <tr
+        ><td>Jig lepasan jahitan (motorized 180° peel)</td><td
+          >Kekuatan lepasan jahitan las dan lem pada 100 mm/menit</td
+        ><td>/ ASTM D1876</td></tr
+      >
+      <tr><td>Penguji tekanan hidrostatik</td><td>Ketahanan penetrasi air kain (0 — 00 mbar)</td><td>ISO 811</td></tr>
+      <tr
+        ><td>Pengukur ketebalan digital & mikrometer</td><td
+          >Ketebalan kain, ketebalan dinding tabung, ketebalan film perekat</td
+        ><td>ISO 2286-3</td></tr
+      >
+      <tr
+        ><td>Ruang lingkungan</td><td>Kondisi suhu (-40 °C hingga +80 °C) untuk uji retak dingin dan penuaan panas</td
+        ><td>ISO 188, ISO 4675</td></tr
+      >
+      <tr
+        ><td>Spektrofotometer warna</td><td>Pengukuran warna Delta-E setelah paparan UV</td><td
+          >ISO 105-A05 / ASTM D2244</td
+        ></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>Gerbang inspeksi — dari bahan hingga pengiriman</h2>
+  <p>
+    Setiap kapal mengikuti rencana kualitas yang telah ditentukan dengan titik inspeksi yang wajib. Tidak ada kapal yang
+    dapat melewati pintu pemeriksaan; setiap pintu pemeriksaan harus ditandatangani oleh inspektur kualitas sebelum
+    tahap produksi berikutnya dimulai.
+  </p>
+
+  <div class="not-prose my-8">
+    <div class="relative">
+      <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-blue-200 dark:bg-blue-800"></div>
+      <div class="space-y-6 relative">
+        {
+          [
+            {
+              gate: 'Gate 1',
+              label: 'Inspeksi bahan masuk',
+              desc: 'Batch kain, batch perekat, perangkat keras — semuanya diperiksa terhadap spesifikasi masuk sebelum dilepaskan ke produksi.',
+            },
+            {
+              gate: 'Gate 2',
+              label: 'Inspeksi pengelasan dalam proses',
+              desc: 'Pertama-tama, kupon las diuji (peel + visual) pada awal setiap shift produksi.',
+            },
+            {
+              gate: 'Gate 3',
+              label: 'Uji udara ruang',
+              desc: 'Setiap ruangan diberi tekanan hingga 1,25 x tekanan kerja, ditahan selama 24-48 jam. Data dicatat per nomor seri.',
+            },
+            {
+              gate: 'Gate 4',
+              label: 'Inspeksi sebelum pengiriman',
+              desc: 'Perahu lengkap diperiksa: semua pengikat dikencangkan, sistem berfungsi, tidak ada cacat kosmetik. Daftar periksa 100 poin.',
+            },
+            {
+              gate: 'Gate 5',
+              label: 'Sertifikasi akhir',
+              desc: 'Laporan uji disusun, catatan inspeksi ditinjau, Sertifikat Kesesuaian diterbitkan.',
+            },
+          ].map((g) => (
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs font-bold z-10">
+                {g.gate}
+              </div>
+              <div class="flex-1 p-3 rounded-lg bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800">
+                <p class="text-sm font-semibold">{g.label}</p>
+                <p class="text-xs text-gray-500 mt-1">{g.desc}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+
+  <h2>Metrik kualitas utama (rata-rata bergulir 2025)</h2>
+  <div class="not-prose my-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">99.7 %</span>
+      <span class="text-xs text-gray-500">Hasil lulus pertama (batch kain)</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600"> 0,2 %</span>
+      <span class="text-xs text-gray-500">Tingkat penolakan las (meter linear)</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600">100 %</span>
+      <span class="text-xs text-gray-500">Ruang diuji udara sebelum perakitan</span>
+    </div>
+    <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+      <span class="block text-2xl font-bold text-blue-600"></span>
+      <span class="text-xs text-gray-500">Kepatuhan kategori desain</span>
+    </div>
+  </div>
+
+  <h2>Tim kualitas kami</h2>
+  <p>
+    Laboratorium ini dikelola oleh seorang manajer kualitas (10 tahun di QA kelautan, Insinyur Kualitas Bersertifikat
+    ASQ), dua inspeksi kualitas (masing-masing dengan sertifikasi NDT Level 2 dalam pengujian visual), dan seorang
+    teknisi material yang bertanggung jawab atas semua pengujian fisik. Tim ini menjalani pengujian kompetensi tahunan
+    melalui penyedia pihak ketiga independen untuk memastikan bahwa hasil pengujian kami tetap akurat dan dapat
+    direproduksi.
+  </p>
+
+  <h2>Pengujian independen untuk klien</h2>
+  <p>
+    Laboratorium Kualitas & Inspeksi kami tersedia untuk layanan pengujian independen. Jika Anda perlu memverifikasi
+    spesifikasi kain, memvalidasi sistem perekat baru, atau memperoleh laporan uji pihak ketiga untuk kualifikasi
+    pengadaan, kami dapat melakukan pengujian sesuai standar yang berlaku dan mengeluarkan laporan uji bersertifikat.
+  </p>
+  <p>Contoh pekerjaan pengujian pihak ketiga terbaru:</p>
+  <ul>
+    <li>Perbandingan kekuatan lepas dari lima produk film perekat kompetitif untuk program pengadaan militer Eropa.</li>
+    <li>
+      Studi penuaan dipercepat (UV + siklus termal) untuk formulasi PVC berpigmen oranye baru, dengan pengukuran
+      sementara rutin setiap interval 500 jam.
+    </li>
+    <li>Validasi penahanan air dari 50 katup baffle prototipe untuk desain tabung tekanan tinggi baru.</li>
+  </ul>
+
+  <h2>Komitmen kami kepada Anda</h2>
+  <p>
+    Ketika Anda menerima sebuah{SITE.name}perahu, Anda juga menerima dokumen kualitasnya — catatan yang disusun dari
+    hasil uji yang berlaku untuk perahu Anda. Sertifikat batch kain, uji kupas las, log uji udara ruang, dan daftar
+    periksa inspeksi pra-pengiriman. Setiap angka dapat dilacak. Setiap pemeriksa diidentifikasi. Ini bukan sekadar
+    dokumen — ini adalah janji kami bahwa apa yang kami kirimkan adalah apa yang kami spesifikasikan.
+  </p>
+  <p>
+    Jika Anda pernah memiliki kekhawatiran tentang kualitas, Anda dapat menghubungi laboratorium secara langsung —
+    detail kontak tercantum pada sertifikat kepatuhan Anda. Kami menanggapi setiap pertanyaan dengan serius dan
+    berkomitmen untuk melakukan investigasi resmi dalam waktu 48 jam.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Memerlukan pengujian independen atau verifikasi kualitas?</h2>
+    <p class="mt-2 text-sm text-muted">
+      Laboratorium kami menerima pekerjaan pengujian pihak ketiga — hubungi kami dengan kebutuhan Anda.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Hubungi laboratorium kualitas</a
+    >
+  </div>
+</section>

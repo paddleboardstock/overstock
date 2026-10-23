@@ -1,0 +1,184 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'he' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">← חזרה למרכז מו"פ</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">מעבדה 04</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">מיכל בדיקה הידרודינמי</h1>
+      <p class="mt-3 text-lg text-muted">אימות ביצועים לפני האב-טיפוס המלא הראשון</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-design-discussion-original.webp"
+        alt="Aquafarer בדיקות ביצועים במיכל בדיקה הידרודינמי"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>למה לבדוק סירה קטנה במנהרת מים?</h2>
+  <p>
+    ישנה תפיסה מוטעית נפוצה כי בדיקות הידרודינמיות מיועדות ספינות לים הפתוח בלבד. במציאות, הביצועים של גוף קטן מתכנן —
+    כמו 4–5 מ' RIB — תלויים לא פחות בצורתו התת-מימית מאשר מיכלית תלויה בקידוח הכיפתית שלה. זווית הטרים, שטח המשטח
+    המרטיב, היווצרות התזים והאוורור משפיעים במידה דרמטית על מהירות, צריכת דלק ונוחות הנסיעה.{SITE.name}, אנו מפעילים
+    מיכל בדיקה הידרודינמי ייעודי שמאפשר לנו לכמת את ההשפעות הללו בקנה מידה של מודל — לפני שאנחנו משקיעים מתכת ובד
+    בפרוטוטיפ בגודל מלא.
+  </p>
+  <p>
+    בדיקה בקנה מידה של דגם (בדרך כלל 1:3 עד 1:5) נותנת לנו את היכולת לחזור על עיצובים של גוף הספינה במהירות ובעלות
+    יעילה. שבוע במיכל יכול לייצר את אותם נתוני ביצועים שיכולים לדרוש חודשים של ניסוי וטעייה בקנה מידה מלא — ועל חלק קטן
+    מהעלות.
+  </p>
+
+  <h2>מפרט מתקנים</h2>
+  <table>
+    <thead><tr><th>פרמטר</th><th>מפרט</th></tr></thead>
+    <tbody>
+      <tr><td>ממדי הטנק</td><td>35 מ' (אורך) × 3.5 מ' (רוחב) × 1.8 מ' (עומק)</td></tr>
+      <tr><td>עגלה גרירה</td><td>מונע סרוו חשמלי, מהירות מקסימלית 12 מ׳/ש׳ (23 קשר), דיוק מהירות ± 0.5 %</td></tr>
+      <tr
+        ><td>גנרטור גלים</td><td
+          >סוג דלת, מצבי ים רגולריים ולא רגולריים הניתנים לתכנות, גובה גל Hs עד 0.3 מ' בקנה מידה של הדגם</td
+        ></tr
+      >
+      <tr
+        ><td>כלי נגינה</td><td
+          >דינמומטר בעל 6 רכיבים (התנגדות, כוח צדדי, מומנט סיבוב), מאיצים, אינקלינומטרים, גלאי גלים</td
+        ></tr
+      >
+      <tr><td>רכישת נתונים</td><td>דגימה ב-1000 הרץ לכל ערוץ, תצוגה בזמן אמת + חבילת עיבוד לאחר-עיבוד</td></tr>
+      <tr><td>ייצור דגם</td><td>טחינה והדפסת תלת-ממד פנימיות לחלקי דגם של גופים באורך עד 1.8 מ'</td></tr>
+    </tbody>
+  </table>
+
+  <h2>תכנית הבדיקות שלנו</h2>
+  <p>תוכנית פיתוח הגוף הסטנדרטית בטנק שלנו עוקבת אחרי הרצף הבא:</p>
+  <ol>
+    <li>
+      <strong>בניית מודל</strong>— דגם בקנה מידה 1:3.5 מחושל מקצף בצפיפות גבוהה ומכוסה בזכוכית לחוזק. המשקל ומרכז הכובד
+      מותאמים להתאים למצב טעינה מלא בקנה מידה לפי פרוד.
+    </li>
+    <li>
+      <strong>ההתנגדות רצה</strong>— המדגם נגרר במהירויות של 8-10 שמתפרסות על טווח הפעולה. ההתנגדות הכוללת נמדדת ומפורקת
+      לרכיבי חיכוך ושארית באמצעות שיטת ITTC-1957.
+    </li>
+    <li>
+      <strong>מדידת טרים ושקיעה</strong>— מידות הגרירה ושקיעה נרשמות בכל מהירות. זווית טרים אופטימלית של 4-6° לגופי
+      חרטום מתרומם היא המטרה.
+    </li>
+    <li>
+      <strong>סקר ערות</strong>— חתכים של גל רוחבי נמדדים בשני מהירויות כדי להעריך את ההתנגדות ליצירת גל ולזהות
+      אינטראקציות של גל רוחבי שיכולות לגרום להפרעת בזנב.
+    </li>
+    <li>
+      <strong>שמירה על יציבות במים (אופציונלי)</strong>— ריצות מול הגל ומאחוריו בגלים סדירים כדי למדוד התנגדות נוספת,
+      תאוצה אנכית, וסבירות להתרסקות.
+    </li>
+    <li>
+      <strong>ניתוח נתונים והמלצות</strong>— דו"ח מלא נמסר עם גרפים השוואתיים, עקומות מהירות/כוח, והמלצות עיצוב ספציפיות
+      למסגרת הספינה בגודל מלא.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      תוצאות בדיקת טנק טיפוסיות — התנגדות מול מהירות (RIB גוף 450, קנה מידה 1:3.5)
+    </p>
+    <div class="space-y-2">
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">5 קשרים (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:18%"></div>
+        </div><span class="w-16 text-right">42 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">10 קשרים (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:35%"></div>
+        </div><span class="w-16 text-right">81 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">15 ק״נ (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:52%"></div>
+        </div><span class="w-16 text-right">121 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">20 ק״נ (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:68%"></div>
+        </div><span class="w-16 text-right">158 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">25 ק״נ (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:85%"></div>
+        </div><span class="w-16 text-right">197 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">30 קנ (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:100%"></div>
+        </div><span class="w-16 text-right">232 N</span>
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      התנגדות בקנה מידה של דגם (N) במהירויות שקבועות לפי פרוד. חיזוי הכוח בקנה מידה מלא נעשה לפי שיטת חיזוי הביצועים של
+      ITTC-1978.
+    </p>
+  </div>
+
+  <h2>צוות מומחים</h2>
+  <p>
+    המיכל שלנו מופעל על ידי הידרודינמיקאי עם דוקטורט בארכיטקטורה ימית ו-8 שנות ניסיון במיכלי גרירה במוסד מחקר ימי אירופי
+    גדול. הוא נתמך על ידי טכנאי שמכין את כל הדגמים והציוד. הצוות פועל לפי נוהלי ITTC (וועידה בינלאומית למיכלי גרירה) כדי
+    להבטיח שכל בדיקה היא חוזרת, מוגנת ומוכחת בינלאומית.
+  </p>
+
+  <h2>בדיקות במיכל לפיתוח גוף ספינה מותאם אישית</h2>
+  <p>
+    המיכל שלנו אינו משמש רק לדגמים הביתיים — אנו עורכים באופן קבוע תוכניות בדיקה ללקוחות שרוצים לאשר צורת גוף מותאמת
+    אישית או לחקור בעיית ביצועים:
+  </p>
+  <ul>
+    <li>
+      <strong>השוואת צורת גוף הספינה</strong>— שניים או יותר צורות גוף של כלי שיט נבדקו בתנאים זהים, ומספקים השוואת
+      גרר/מהירות/יציבות אובייקטיבית כדי ליידע את בחירת העיצוב שלך.
+    </li>
+    <li>
+      <strong>אופטימיזציה של שלוחה</strong>— לוחות מתנגשים, מסילות ריסוס, טאבוני גימור ומסילות חיכוך יכולים להיבדק
+      בתצורות שונות כדי לכמת את תרומתם האישית להפחתת הגרר.
+    </li>
+    <li>
+      <strong>מחקר התאמת מנוע</strong>— נתוני ההתנגדות מומרת לעקומת תחזית כוח, המאפשרת לך לבחור את כוח המנוע האופטימלי
+      עבור מהירות המטרה והמטען שלך.
+    </li>
+  </ul>
+
+  <h2>למה לבדוק איתנו?</h2>
+  <p>
+    איננו נותנים לכם רק אוסף של מספרים גולמיים. הדוחות שלנו מתרגמים נתוני מכלים להמלצות הנדסיות ברות-ביצוע: "הגב את
+    מסילת ההתזה ב-8 מ"מ כדי להפחית את שטח המגע בנסיעה", "הגדל את זווית ההטיה בגב המנוע ב-3° כדי להפחית תאוצת חבטות", או
+    "הזז את מרכז הכובד האורכי 150 מ"מ אחורה לשיפור תנוחת התכנון". אתם עוזבים עם הבנה ברורה של מה לשנות ולמה.
+  </p>
+  <p>
+    המיכל שלנו זמין גם לבדיקות עצמאיות של צד שלישי בתשלום לפי שירות. אם אתם מפתחים גוּף ורוצים הערכה הידרודינמית
+    אובייקטיבית ומקצועית, נשמח לקבל את פנייתכם.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">הזמן פגישת בדיקת טנק</h2>
+    <p class="mt-2 text-sm text-muted">
+      בין אם אתם צריכים תכנית פיתוח מלאה או מבחן השוואתי יחיד, אנו יכולים להתאים את עצמנו ללוח הזמנים שלכם.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >צור קשר עם צוות ההידרודינמיקה שלנו</a
+    >
+  </div>
+</section>

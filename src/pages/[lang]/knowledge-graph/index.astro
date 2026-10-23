@@ -1,0 +1,43 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { languages, defaultLang } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+import InteractiveGraph from '~/components/knowledge-graph/InteractiveGraph.astro';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => getUiForLang(lang || defaultLang)?.[key] || '';
+
+const graphTitle = t('knowledgeGraph.title');
+const graphSubtitle = t('knowledgeGraph.subtitle');
+
+const metadata = {
+  title: `${graphTitle} | ${SITE.name}`,
+  description: t('knowledgeGraph.desc'),
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <JsonLd
+    data={{
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      headline: graphTitle,
+      description: metadata.description,
+      author: { '@type': 'Organization', name: SITE.name },
+    }}
+  />
+
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <h1 class="sr-only">{graphTitle}</h1>
+    <InteractiveGraph lang={lang} graphTitle={graphTitle} graphSubtitle={graphSubtitle} />
+  </div>
+</Layout>

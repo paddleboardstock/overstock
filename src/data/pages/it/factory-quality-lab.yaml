@@ -1,0 +1,60 @@
+hero:
+  tagline: Laboratorio di Controllo Qualità
+  title: Laboratorio di Test & Garanzia Qualità
+  subtitle: Laboratorio qualità indipendente con processi ISO 9001 — ogni unità testata prima della spedizione
+
+intro: Aquafarer gestisce un laboratorio di controllo qualità dedicato che opera indipendentemente dalla produzione. Ogni lotto di materia prima e ogni imbarcazione finita passa attraverso protocolli di ispezione documentati prima del rilascio. Il nostro team di controllo qualità riporta direttamente alla direzione, garantendo decisioni di qualità imparziali.
+
+highlights:
+  - value: 100%
+    label: Unità testate in pressione
+    detail: Ogni camera, ogni imbarcazione
+  - value: 48 h
+    label: Durata del test di ritenzione aria
+    detail: A 1.25× della pressione nominale
+  - value: '&lt;5%'
+    label: Calo di pressione massimo consentito
+    detail: Su un periodo di mantenimento di 24 ore
+  - value: AQL 2.5
+    label: Soglia difetti maggiori
+    detail: Secondo il campionamento ISO 2859
+
+test_procedures:
+  - title: Ispezione Materie Prime
+    description: Ogni lotto in ingresso di PVC, Hypalon, tessuto drop-stitch e componentistica viene testato prima dell'accettazione. Vengono verificate la resistenza alla trazione (ASTM D751), la resistenza allo strappo (ISO 4674) e la resistenza ai raggi UV. I materiali non conformi vengono messi in quarantena e restituiti.
+    standards:
+      - ASTM D751 (trazione)
+      - ISO 4674 (strappo)
+      - ISO 4892 (UV)
+  - title: Punti di Controllo Qualità Durante la Produzione
+    description: Gli operatori di produzione eseguono l'autoispezione in ogni fase. Gli auditor di controllo qualità effettuano campionamenti casuali durante tutto il turno. I test di pelatura delle saldature vengono eseguiti ogni 50 unità. I controlli dimensionali avvengono su ogni 20° pannello.
+    standards:
+      - ASTM D751 (pelatura)
+      - Checklist interna a 100 punti
+      - Campionamento ISO 2859
+  - title: Test di Ritenzione Aria di 48 Ore
+    description: Ogni camera del tubolare viene gonfiata al 125% della pressione nominale e mantenuta per 48 ore. I sensori di pressione registrano in continuo con compensazione della temperatura. Qualsiasi camera che superi un calo di pressione del 5% attiva una reispezione automatica del lotto.
+    standards:
+      - ISO 6185
+      - CE 2013/53/EU
+  - title: Test di Carico & Bilanciamento
+    description: Le imbarcazioni finite vengono testate alla massima capacità nominale per stabilità, bordo libero e manovrabilità. Ogni natante viene sottoposto a test in acqua prima dell'approvazione dell'ispezione finale.
+    standards:
+      - ISO 12217
+      - CE 2013/53/EU
+
+equipment:
+  - name: Macchina di Prova Universale (trazione)
+    spec: 5 kN, conforme ASTM D751
+  - name: Tester di Decadimento della Pressione
+    spec: Multicanale, 0–50 psi, registrazione dati
+  - name: Camera di Invecchiamento UV
+    spec: ISO 4892, cicli da 1,000 h
+  - name: Calibro di Spessore (digitale)
+    spec: Risoluzione 0.01 mm
+  - name: Tester di Pelatura (saldature)
+    spec: Motorizzato, capacità 50 N
+  - name: Camera Termica
+    spec: -40 °C a +100 °C
+  - name: Vasca di Rilevamento Perdite
+    spec: 6 m × 2 m, illuminata

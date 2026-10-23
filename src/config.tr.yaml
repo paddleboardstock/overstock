@@ -1,0 +1,118 @@
+site:
+  name: Aquafarer
+  site: 'https://aquafarer.com'
+  base: '/'
+  trailingSlash: false
+  googleSiteVerificationId: ''
+metadata:
+  title:
+    default: Aquafarer — Modern şişme bot ve teknik ürün çözümleri
+    template: '%s — Aquafarer'
+  description: "Aquafarer yüksek kaliteli şişme botlar, RIB'ler ve teknik ürünler tasarlar ve üretir. Kataloğu, teknik özellikleri ve kaynakları keşfedin."
+  keywords:
+    - Aquafarer
+    - şişme bot
+    - RIB
+    - PVC
+    - denizcilik
+    - mühendislik
+  author: Aquafarer
+  robots:
+    index: true
+    follow: true
+  openGraph:
+    site_name: Aquafarer
+    images:
+      - url: '~/assets/images/default.webp'
+        width: 1200
+        height: 628
+    type: website
+    locale: tr_TR
+  twitter:
+    handle: '@Aquafarer'
+    site: '@Aquafarer'
+    cardType: summary_large_image
+i18n:
+  textDirection: ltr
+apps:
+  blog:
+    isEnabled: true
+    postsPerPage: 6
+    post:
+      isEnabled: true
+      permalink: '/news/%slug%'
+      robots:
+        index: true
+        follow: true
+    list:
+      isEnabled: true
+      pathname: 'news'
+      robots:
+        index: true
+        follow: true
+    category:
+      isEnabled: true
+      pathname: 'category'
+      robots:
+        index: true
+        follow: true
+    tag:
+      isEnabled: true
+      pathname: 'tag'
+      robots:
+        index: false
+        follow: true
+    isRelatedPostsEnabled: true
+    relatedPostsCount: 4
+  products:
+    isEnabled: true
+    productsPerPage: 12
+    product:
+      isEnabled: true
+      permalink: '/products/%slug%'
+      robots:
+        index: true
+        follow: true
+    list:
+      isEnabled: true
+      pathname: 'products'
+      robots:
+        index: true
+        follow: true
+analytics:
+  vendors:
+    googleAnalytics:
+      id: null
+ui:
+  theme: 'system'
+
+siteSettings:
+  siteName: 'Aquafarer'
+  siteTagline: "Aquafarer — Premium şişme botlar, SUP'lar ve su sporları ekipmanları"
+  siteDescription: "Aquafarer premium şişme botlar, SUP'lar ve su sporları ekipmanları tasarlar ve üretir."
+  organization:
+    name: 'Aquafarer'
+    logo: ''
+    contactEmail: info@aquafarer.com
+    contactPhone: '+86 13305324192'
+    address: 'Economic Development Zone, Laixi, Qingdao, China, 266600'
+
+branding:
+  site_name: 'Aquafarer'
+  logo_image: ''
+  logo_alt: 'Aquafarer logosu'
+  copyright: '© {year} {site_name} · Tüm hakları saklıdır.'
+  phone: '+86 13305324192'
+  address: 'Economic Development Zone, Laixi, Qingdao, China, 266600'
+  email: info@aquafarer.com
+  whatsapp_number: '+86 13305324192'
+  whatsapp_default_message: 'Merhaba, bir ürün hakkında bilgi almak istiyorum.'
+  contact_email_to: info@aquafarer.com
+  contact_email_provider: resend
+  contact_from_email: info@aquafarer.com
+  contact_from_name: Aquafarer
+  contact_resend_api_key: Aa123456#
+  contact_submissions_pat: ''
+  gmap_api_key: ''
+  map_latitude: '36.8861'
+  map_longitude: '120.5261'

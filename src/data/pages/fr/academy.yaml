@@ -1,0 +1,174 @@
+hero:
+  tagline: Académie Aquafarer
+  title: Centre d'apprentissage
+  subtitle: Guides et tutoriels pour tous les niveaux — des bases du SUP aux techniques de sauvetage avancées
+
+categories:
+  - level: Débutant
+    color: from-green-500 to-emerald-600
+    badge: bg-green-100 text-green-700
+    guides:
+      - title: Bases du SUP
+        desc: Apprenez les fondamentaux du stand-up paddle — posture, technique de pagaie et équilibre.
+        slug: beginner-sup-guide
+      - title: Techniques de pagaie
+        desc: Coup avant, coup circulaire, coup de traction et appui bas — maîtrisez les mouvements essentiels de pagaie.
+        slug: sup-paddle-guide
+      - title: Sécurité d'abord
+        desc: Pratiques de sécurité essentielles incluant la vérification météo, l'utilisation du VFI, les règles de leash et l'auto-sauvetage.
+        slug: sup-safety-guide
+  - level: Intermédiaire
+    color: from-blue-500 to-indigo-600
+    badge: bg-blue-100 text-blue-700
+    guides:
+      - title: Essentiels du tourisme
+        desc: Planification de pagaies de plusieurs heures — navigation, hydratation, rythme et lecture des prévisions de vent.
+        slug: touring-sup-guide
+      - title: Lecture météo
+        desc: Interpréter les prévisions marines, identifier les motifs nuageux et comprendre les effets du vent sur l'eau.
+        slug: weather-planning-water-sports
+      - title: Bases de la navigation
+        desc: Lecture de cartes, utilisation de la boussole, points de cheminement GPS et planification d'itinéraires pour la pagaie côtière.
+        slug: sup-navigation-guide
+      - title: Connaissance des marées
+        desc: Comprendre les cycles des marées, les courants et leur impact sur le moment du départ et le routage.
+        slug: understanding-tides
+  - level: Avancé
+    color: from-purple-500 to-violet-600
+    badge: bg-purple-100 text-purple-700
+    guides:
+      - title: Planification de voyages multi-jours
+        desc: Logistique d'expédition — sélection d'équipement, planification des repas, protocoles de sécurité et contacts d'urgence.
+        slug: sup-travel-guide
+      - title: Techniques de sauvetage
+        desc: Auto-sauvetage, sauvetage en T, sauvetage esquimau pour kayaks et protocoles de remorquage en eau libre.
+        slug: sup-self-rescue
+      - title: Pagaie de nuit
+        desc: Navigation après la tombée de la nuit — exigences d'éclairage, mémoire d'itinéraire, communication de groupe et sensibilisation aux dangers.
+        slug: sup-navigation-guide
+  - level: Entretien
+    color: from-amber-500 to-orange-600
+    badge: bg-amber-100 text-amber-700
+    guides:
+      - title: Nettoyage & entretien
+        desc: Rinçage à l'eau douce, protection UV, prévention des moisissures et techniques de séchage appropriées après chaque session.
+        slug: inflatable-sup-maintenance
+      - title: Guide de stockage
+        desc: Meilleures pratiques pour le stockage des planches et bateaux gonflables — dégonflage, pliage, contrôle de la température et durée de conservation.
+        slug: inflatable-sup-storage
+      - title: Bases de la réparation
+        desc: Réparer les petites perforations, fuites de soudure et problèmes de valve avec des kits de réparation PVC et techniques de rapiéçage.
+        slug: inflatable-sup-repair
+      - title: Entretien des valves
+        desc: Identifier les types de valves (Halkey-Roberts, Boston, Leafield), nettoyer les débris et remplacer les tiges défectueuses.
+        slug: inflatable-sup-repair
+
+knowledge_center_tagline: Centre de connaissances
+
+knowledge_center_title: Guides sur les équipements maritimes et l'industrie
+
+knowledge_center_subtitle: Expertise et guides d'achat pour les professionnels du nautisme, les gestionnaires de flottes et les passionnés de sports nautiques.
+
+knowledge_sections:
+  - title: Connaissance des RIB
+    tagline: Guides sur les bateaux semi-rigides
+    desc: Tout sur les RIB — conception de coque, matériaux, choix du moteur, entretien et conseils d'achat pour un usage professionnel et de loisirs.
+    guides:
+      - title: Comment choisir le bon RIB
+        desc: Guide complet pour sélectionner un RIB — taille, puissance moteur, matériau des flotteurs, type de coque et usage prévu.
+        href: /v2/inflatable-boat-buying-guide
+      - title: RIB ou bateau pneumatique
+        desc: Semi-rigide contre bateau pneumatique traditionnel — comparaison de la conception de coque, des performances, de la durabilité et de la capacité.
+        href: /compare/rib-vs-dinghy
+      - title: RIB professionnel ou de loisirs
+        desc: RIB de qualité professionnelle contre RIB de loisirs — normes de construction, matériaux, durée de vie, coût et certifications.
+        href: /compare/commercial-vs-recreational-rib
+      - title: Coque alu ou fibre de verre
+        desc: Comparaison des coques en aluminium et en fibre de verre pour RIB — poids, coût, durabilité et résistance à la corrosion.
+        href: /compare/aluminum-vs-fiberglass
+  - title: Guide des bateaux pneumatiques
+    tagline: Connaissance des embarcations pneumatiques
+    desc: Guides complets sur les bateaux pneumatiques — PVC ou Hypalon, méthodes de construction, normes de sécurité et bonnes pratiques d'entretien.
+    guides:
+      - title: 'Guide matériaux : PVC ou Hypalon'
+        desc: Comparaison définitive entre PVC et Hypalon CSM pour la construction de bateaux pneumatiques.
+        href: /compare/pvc-vs-hypalon
+      - title: Comment sont fabriqués les bateaux pneumatiques
+        desc: Processus de fabrication — découpe des matériaux, soudage HF, construction des coutures, essais de pression et contrôle qualité.
+        href: /learn/inflatable-technology
+      - title: Guide de sécurité des bateaux pneumatiques
+        desc: Normes de sécurité, charge utile, gonflage correct, vérifications avant départ et procédures d'urgence.
+        href: /learn/water-safety
+      - title: Entretien des bateaux pneumatiques
+        desc: Nettoyage, stockage, protection UV, hivernage et réparation des bateaux pneumatiques et des RIB.
+        href: /v2/inflatable-boat-maintenance
+  - title: Connaissance nautique
+    tagline: Bateaux pneumatiques & RIB
+    desc: Guides techniques couvrant les types de bateaux pneumatiques, les matériaux, les méthodes de construction, l'entretien et la sécurité — des annexes aux RIB.
+    guides:
+      - title: Types de bateaux pneumatiques
+        desc: Annexes, RIB, kayaks et tenders — découvrez les différences et choisissez le bon modèle.
+        href: /v2/inflatable-boat-buying-guide
+      - title: Technologie drop-stitch
+        desc: Comment des milliers de fils internes créent des structures pneumatiques rigides à haute pression.
+        href: /learn/drop-stitch-core
+      - title: Référence matériaux
+        desc: Indices denier du PVC, grammages des tissus, résistance UV et matériaux de qualité marine expliqués.
+        href: /learn/materials
+      - title: RIB ou annexe
+        desc: Comparaison des semi-rigides et des annexes pneumatiques traditionnelles selon les usages.
+        href: /compare/rib-vs-dinghy
+  - title: Connaissance du SUP
+    tagline: Guides sur les paddleboards
+    desc: Tout sur les planches de SUP — gonflable ou rigide, dimensions, technologie des matériaux et conseils d'experts pour tous les niveaux.
+    guides:
+      - title: SUP gonflable ou rigide
+        desc: Comparaison des iSUP et des planches époxy rigides — portabilité, durabilité, performances et rapport qualité-prix.
+        href: /learn/sup
+      - title: Guide des dimensions SUP
+        desc: Comment la longueur, la largeur et l'épaisseur influencent la stabilité, la vitesse et la maniabilité.
+        href: /learn/sup
+      - title: Entretien du SUP
+        desc: Conseils de nettoyage, stockage, protection UV et réparation pour les planches de SUP gonflables.
+        href: /v2/inflatable-sup-maintenance
+      - title: Choisir son premier SUP
+        desc: Guide du débutant pour sélectionner la bonne planche de stand-up paddle selon votre poids, votre niveau et votre usage prévu.
+        href: /learn/sup
+  - title: Guide des équipements de plongée
+    tagline: Connaissance des bateaux de plongée professionnels
+    desc: Guides spécialisés sur les bateaux de plongée, les RIB de plongée et l'équipement pour les centres de plongée, les opérateurs et les équipes de plongée professionnelle.
+    guides:
+      - title: Le meilleur RIB pour les centres de plongée
+        desc: Comment choisir le bon RIB de plongée pour votre centre — capacité, configuration et budget.
+        href: /solutions-diving-center-boats
+      - title: Guide de configuration des RIB de plongée
+        desc: Équipements essentiels des RIB de plongée — supports de bouteilles, échelles, plateforme de plongée et rangement du matériel.
+        href: /solutions-diving-center-boats
+  - title: Guide des annexes de yacht
+    tagline: Solutions d'annexes pour superyachts et milieu marin
+    desc: Guides pour choisir l'annexe parfaite — annexes pneumatiques, annexes RIB, solutions de stockage et accessoires.
+    guides:
+      - title: Comment choisir une annexe de yacht
+        desc: Les critères à considérer pour votre yacht — taille, matériau, moteur et stockage.
+        href: /solutions-yacht-tender-solutions
+      - title: Annexes pneumatiques ou RIB
+        desc: Comparaison des annexes pneumatiques et des annexes semi-rigides — performances, durabilité et facilité de rangement.
+        href: /compare/rib-vs-dinghy
+  - title: Guide des équipements de sauvetage
+    tagline: Connaissance des embarcations de recherche et sauvetage
+    desc: Guides professionnels sur les bateaux de sauvetage, les embarcations SAR et l'équipement d'intervention d'urgence pour les garde-côtes, les sauveteurs et les équipes de secours en cas de catastrophe.
+    guides:
+      - title: Guide de choix d'un bateau SAR
+        desc: Comment choisir le bon bateau de recherche et sauvetage — vitesse, capacité, durabilité et équipements spécialisés requis.
+        href: /solutions-rescue-watercraft
+      - title: RIB professionnels pour opérations de sauvetage
+        desc: Pourquoi les RIB de qualité professionnelle sont le choix privilégié des équipes de recherche et sauvetage du monde entier.
+        href: /use-cases/search-and-rescue
+
+read_guide: Lire le guide →
+
+cta:
+  title: Vous ne savez pas par où commencer ?
+  desc: Faites notre quiz d'évaluation pour trouver les guides et l'équipement adaptés à votre niveau.
+  label: Contactez-nous →
+  link: /contact

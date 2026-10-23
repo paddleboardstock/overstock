@@ -1,0 +1,119 @@
+hero:
+  tagline: Mérnöki fehér könyv
+  title: Drop-Stitch Technológia és Anyagtudomány:<br />A modern felfújható vízi járművek mérnöki háttere
+  subtitle: Egy tekintélyes műszaki referencia, amely lefedi drop-stitch alapvető szerkezetépítést, PVC vs Hypalon anyagösszehasonlítást, nagynyomású edények merevségvizsgálatát és a vízi járművek gyártási szabványait.
+  image:
+    src: https://assets.aquafarer.com/images/aquafarer/randd/aquafarer-design-discussion-lab.webp
+    alt: Aquafarer K+F laboratórium — anyagvizsgálat és mérnöki munka
+direct_answer: Drop-stitch technológia több ezer belső poliészter szálat használ, amelyek összekötik a felfújható mag felső és alsó anyagrétegeit. 15–20 PSI nyomásra fújva ezek a szálak feszültségviselő elemként működnek, megakadályozzák a kidudorodást, és merev szerkezetet hoznak létre, amely a kemény héjszerkezethez hasonlítható. Az előrehaladott PVC vagy Hypalon anyagbevonatokkal és RF hegesztéssel kombinálva ez lehetővé teszi hordozható, nagy teljesítményű felfújható vízi járművek készítését, amelyek megfelelnek a professzionális, kereskedelmi és szabadidős használatnak.
+section_drop_stitch:
+  title: Drop-Stitch Szerkezeti mérnöki munka
+  subtitle: Hogyan alakítják át a több ezer szál a rugalmas anyagot merev szerkezetté
+  content: |
+    Drop-stitch (más néven "drop-stitch anyag" vagy "drop-stitch mag") áttörést jelent a felfújható szerkezetek mérnöki tervezésében. Az elv megtévesztően egyszerű: több ezer egyedi poliészter szálat egyszerre szőnek két különböző alapanyag rétegbe, összekötve a felső és alsó panelek 90 fokos szögben.
+
+    Amikor a lezárt kamrát nyomás alá helyezik, a belső légnyomás minden irányban egyenletes erőt fejt ki — próbálva széthúzni a felső és alsó paneleket hengeres formába. A több ezer drop-stitch szál ellenáll ennek a szétválásnak, a terhelést a szál tengelyének irányába feszültségként továbbítva. Az eredmény egy lapos, merev panel, amely 15–20 PSI belső nyomást képes elviselni.
+
+    20 PSI nyomáson egy 1 m² drop-stitch panel körülbelül 14 000 kg teljes belső erőt tapasztal — mégis a szálmátrix tökéletesen lapos marad. Ez drop-stitch szerkezeteknek olyan erő/súly arányt biztosít, amely felveszi a versenyt a hagyományos merev anyagokkal.
+section_materials:
+  title: PVC vs Hypalon — Műszaki anyagösszehasonlítás
+  subtitle: Objektív adatok a megalapozott anyagválasztáshoz a felfújható vízi járművek gyártásában
+  table:
+    columns:
+      - header: Tulajdonság
+      - header: PVC (Polivinil-klorid)
+      - header: Hypalon (CSM)
+    rows:
+      - property: UV-állóság
+        pvc: Jó (a UV stabilizátorokkal)
+        hypalon: Kiváló (jellemző)
+      - property: Kopásállóság
+        pvc: Jó
+        hypalon: Nagyon jó
+      - property: Szakítószilárdság
+        pvc: 3 000–5 000 N/5 cm
+        hypalon: 2 500–4 000 N/5 cm
+      - property: Tömeg m²-enként
+        pvc: 850–1,200 g
+        hypalon: 1,100–1,500 g
+      - property: Hideg hajlékonyság
+        pvc: -30°C
+        hypalon: -20°C
+      - property: Csatlakoztatási módszer
+        pvc: RF hegesztés / forrólevegős hegesztés
+        hypalon: Kézi ragasztás (kontakt ragasztó)
+      - property: Javíthatóság
+        pvc: Könnyű (hőhegesztés vagy ragasztó)
+        hypalon: Szükséges CSM ragasztó
+      - property: Anyagköltség
+        pvc: $8–15 / m²
+        hypalon: $20–40 / m²
+      - property: Élettartam (trópusi napfény)
+        pvc: 5–8 év
+        hypalon: 10–15 év
+      - property: Színskála
+        pvc: Széles (teljes színspektrum)
+        hypalon: Korlátozott (alapszínek)
+      - property: Vegyi ellenállás
+        pvc: Jó (üzemanyag/olaj ellenálló típusok)
+        hypalon: Kiváló (széles kémiai tartomány)
+section_testing:
+  title: Tesztelés és biztonsági protokollok
+  subtitle: Aquafarer minőségbiztosítási keretrendszere minden gyártási tételre
+  protocols:
+    - title: 1,25x névleges nyomás tartó teszt
+      description: Minden összeszerelt tartályt felfújnak 1,25-szörös névleges üzemnyomására, és 24–48 órán keresztül tartják. Bármely 2%-ot meghaladó nyomáscsökkenés elutasítást és újramunkálást vált ki.
+      standard: ISO 6185
+    - title: Varrási húzóerő teszt
+      description: Minden gyártási tételből származó hegesztett és ragasztott varratsz samples-et kalibrált húzóberendezéssel tesztelik a húzóerőre. Minimum 4 kN/m húzóerő szükséges.
+      standard: ISO 2411
+    - title: Szövet szakítógép teszt
+      description: A beérkező szövethengereket szakítóerő- és nyúlásvizsgálatnak vetik alá mind vetülati, mind bevetési irányban. Elutasítási küszöbérték PVC esetén 3 000 N/5 cm alatti.
+      standard: ISO 1421
+    - title: UV Gyorsított időjárásállóság
+      description: Az anyagmintákat 1 000+ óra gyorsított UV hatásnak teszik ki QUV tesztkamrákban. Maximális 15%-os szakítószilárdság-veszteség megengedett.
+      standard: ASTM G154
+    - title: Szelep és szerelvény integritás
+      description: Minden szelep összeszerelést az 1,25-szörös névleges nyomáson tesztelnek a tömítettség szempontjából. Visszacsapó szelepeknél az egyirányú zárás teljesítményét tesztelik.
+      standard: ISO 12402
+section_manufacturing:
+  title: Gyártási szabványok és minőségi tanúsítványok
+  subtitle: Iparági szabványnak megfelelés a globális piacra való hozzáféréshez
+  standards:
+    - name: ISO 9001:2015
+      body: SGS Minősített
+      scope: Minőségirányítási rendszer a tervezés, gyártás és szállítás területén
+    - name: CE 2013/53/EU
+      body: EU-s értesített szerv
+      scope: Rekreációs Hajók Irányelv — hajótest tervezése, stabilitása, lebegése, kibocsátások
+    - name: BSCI
+      body: Amfori
+      scope: Társadalmi megfelelőség — munkavállalói biztonság, tisztességes munka, környezetgazdálkodás
+    - name: ISO 6185
+      body: Nemzetközi Szabvány
+      scope: Fújható hajók — építés, stabilitás, lebegés, nyomásvizsgálat
+    - name: REACH
+      body: EU-szabályozás
+      scope: Kémiai biztonság — korlátozott anyagok anyagokban és bevonatokban
+section_faq:
+  title: Műszaki GYIK
+  questions:
+    - q: Hogyan drop-stitch viszonyul a hagyományos keményhéjú szerkezethez?
+      a: drop-stitch A modern 20 éves magok PSI 85–90%-át érik el az EPS hab/üvegszálas kemény burkolatok merevségét, miközben szállításhoz teljesen lefújhatók. A kompromisszum kissé nagyobb súly és alacsonyabb végső merevség – de a legtöbb szabadidős és kereskedelmi alkalmazásnál a különbség elhanyagolható.
+    - q: Milyen szálsűrűséget tekintenek prémium minőségnek?
+      a: A prémium drop-stitch anyagoknál 2 szálat használnak négyzethüvelykəsenként (kb. 3100 szál/m²), amelyet 1680 DTEX poliészter fonalból szőnek. A belépő szintű anyagoknál 1 fonalat használnak négyzethüvelykesenként, 1100 DTEX fonalral.
+    - q: Hypalon Hegeszthető, mint PVC?
+      a: Nem. Hypalon/CSM nem lehet RF-hegesztővel hegeszteni. Kézzel felvitt kontaktcementtel kell összeszerelni, ami a gyártást munkaigényesebbé teszi, és a varrások a kezelő szakértelmétől függnek. RFPVC hegesztés vagy forró levegő hegesztése is lehetséges a következetes, automatizált varrásminőség érdekében.
+    - q: Mi a maximális biztonságos nyomás felfújható csónakok esetében?
+      a: A standard felfújható hajócsövek 8–12 PSIfokon működnek.Drop-stitch A padlók 12–20 PSIfokon működnek. A nagynyomású drop-stitch magok (SUPs) 20–25 fokon PSIműködhetnek. Minden termék tartalmaz nyomáscsökkentő szelepeket, amelyeket a túlfújás megakadályozására kalibráltak.
+    - q: Mennyi időbe telik egy egyedi felfújható csónakgyártás?
+      a: A standard OEM gyártás 30–45 napig tart a rendelés megerősítésétől FOB Qingdaoig. Az egyedi forma fejlesztése 15–20 napot ad a prototípusgyártásra és tesztelésre.
+cta:
+  title: Mérnöki tanácsadás
+  subtitle: Van konkrét anyagi vagy tervezési kérdése? Mérnöki csapatunk elérhető a technikai megbeszélésekre.
+  actions:
+    - variant: primary
+      text: Kérdezze meg mérnöki csapatunkat
+      href: /contact
+    - text: Fedezze fel K+F központunkat
+      href: /randdcenter

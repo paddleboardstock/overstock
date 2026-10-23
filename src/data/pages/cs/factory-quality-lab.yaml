@@ -1,0 +1,57 @@
+hero:
+  tagline: Laboratoř kontroly kvality
+  title: Zkušební laboratoř a zajištění kvality
+  subtitle: Nezávislá laboratoř kvality s ISO 9001 procesy – každá jednotka testována před odesláním
+intro: Aquafarer provozuje specializovanou laboratoř pro kontrolu kvality, která funguje nezávisle na výrobě. Každá šarže suroviny a každý hotový člun prochází před propuštěním zdokumentovanými protokoly o kontrole. Náš tým kontroly kvality je podřízen přímo vedení a zajišťuje nestranná rozhodnutí o kvalitě.
+highlights:
+  - value: 100 %
+    label: Jednotky tlakově testované
+    detail: Každá komora, každá loď
+  - value: 48 hod
+    label: Doba trvání testu zadržení vzduchu
+    detail: Při 1,25× jmenovitém tlaku
+  - value: <5 %
+    label: Maximální povolený pokles tlaku
+    detail: Doba zadržení přes 24 hodin
+  - value: AQL 2.5
+    label: Prahová hodnota velké vady
+    detail: Na ISO 2859 vzorkování
+test_procedures:
+  - title: Kontrola surovin
+    description: Každá příchozí šarže PVC, Hypalon, tkanina drop-stitch a hardware je před přijetím testována. Je ověřena pevnost v tahu (ASTM D751), odolnost proti roztržení (ISO 4674) a odolnost vůči UV záření. Neshodné materiály jsou umístěny do karantény a vráceny.
+    standards:
+      - ASTM D751 (tahová)
+      - ISO 4674 (slza)
+      - ISO 4892 (UV)
+  - title: Kontrolní body kontroly kvality v procesu
+    description: Operátoři výroby provádějí v každé fázi vlastní kontrolu. Auditoři kontroly kvality provádějí během směny náhodný výběr vzorků. Zkoušky odlupování svaru se provádějí každých 50 jednotek. Kontrola rozměrů se provádí každý 20. panel.
+    standards:
+      - ASTM D751 (slupka)
+      - Interní 100bodový kontrolní seznam
+      - ISO 2859 vzorkování
+  - title: 48hodinový test retence vzduchu
+    description: Každá trubková komora je nafouknuta na 125 % jmenovitého tlaku a udržována po dobu 48 hodin. Tlaková čidla se průběžně zaznamenávají s teplotní kompenzací. Jakákoli komora překračující 5% pokles tlaku spustí automatickou opakovanou kontrolu šarže.
+    standards:
+      - ISO 6185
+      - CE 2013/53/EU
+  - title: Testování zátěže a vyvážení
+    description: Dokončené lodě jsou testovány na maximální jmenovitou kapacitu na stabilitu, volný bok a manipulaci. Každá nádoba prochází testem vody před schválením konečné kontroly.
+    standards:
+      - ISO 12217
+      - CE 2013/53/EU
+equipment:
+  - name: Univerzální zkušební stroj (tahový)
+    spec: 5 kN, v souladu s ASTM D751
+  - name: Tester poklesu tlaku
+    spec: Vícekanálový, 0–50 psi, záznam dat
+  - name: UV zvětrávací komora
+    spec: ISO 4892, 1000 h cyklů
+  - name: Tloušťkoměr (digitální)
+    spec: rozlišení 0,01 mm
+  - name: Tester odlupování (svar)
+    spec: Motorizované, kapacita 50 N
+  - name: Teplotní komora
+    spec: -40 °C až +100 °C
+  - name: Nádrž pro detekci úniku
+    spec: 6 m × 2 m, osvětleno
+

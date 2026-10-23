@@ -1,0 +1,176 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'ko' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">&larr; R&D 센터로 돌아가기</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">실험실 01</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">PVC 원단 실험실</h1>
+      <p class="mt-3 text-lg text-muted">과학적인 재료 테스트 — 섬유에서 완성 튜브까지</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/randd/aquafarer-pvc-material-lab.webp"
+        alt="Aquafarer PVC 직물 소재 시험 연구소"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>모든 고무보트의 기초</h2>
+  <p>
+    튜브 원단은 고무보트에서 가장 중요한 단일 재료입니다. 이는 지속적인 UV 노출, 반복적인 팽창 주기, 부두 및 잔해와의
+    마찰, 극한 온도 변화까지 견뎌야 하며 — 이 모든 것을 수년 동안 구조적 완전성을 유지하면서 수행해야 합니다.{
+      SITE.name
+    }, 저희 PVC 패브릭 연구소는 우리가 만드는 모든 보트에 사용하는 원단의 특성 파악, 검증 및 지속적인 개선에 전적으로
+    전념하고 있습니다.
+  </p>
+  <p>
+    우리는 공급업체 데이터 시트에만 의존하지 않습니다. 작업장에 들어오는 모든 PVC 및 Hypalon 원단 배치는 독립적으로
+    사내에서 테스트됩니다. 이는 우리가 공표하는 원단 사양이 실제로 제공되는 원단 성능과 일치함을 보장합니다 — 배치마다,
+    매년 반복적으로.
+  </p>
+
+  <h2>표준화된 테스트 장비</h2>
+  <p>우리 원단 실험실은 산업 등급 기기들을 갖추고 있으며, 이는 ISO, ASTM 및 EN 테스트 방법에 적합합니다.</p>
+  <table>
+    <thead><tr><th>장비</th><th>측정되는 파라미터</th><th>표준</th></tr></thead>
+    <tbody>
+      <tr><td>만능 인장 시험기 (50 kN)</td><td>파단력, 파열 시 신장, 찢김 전파</td><td>/ ASTM D751</td></tr>
+      <tr><td>제논 아크 내후성 챔버</td><td>UV 저항 (2000시간 후 색상 변화, 강도 유지)</td><td>/ ASTM G155</td></tr>
+      <tr><td>저온 굴곡 시험기</td><td>-30℃ ~ -50℃에서의 균열 발생점</td><td>ISO 4675 / ASTM D2136</td></tr>
+      <tr><td>타버 마모 시험기</td><td>1000 사이클 후 중량 손실 (CS-10 휠)</td><td>ASTM D3389 / ISO 5470-1</td></tr>
+      <tr><td>두께 게이지 (디지털, 0.001 mm 해상도)</td><td>롤 폭 전체의 균일성</td><td>ISO 2286-3</td></tr>
+      <tr><td>정수압 헤드 테스터</td><td>물 침투 저항</td><td>ISO 811</td></tr>
+    </tbody>
+  </table>
+  <p class="text-sm text-gray-500">* 모든 장비는 제3자 인증 기관에 의해 매년 교정됩니다.</p>
+
+  <h2>데이터에서 결정까지: 일반적인 테스트 워크플로우</h2>
+  <p>새로운 원단 후보가 도착하면, 표준화된 7단계 자격 심사 과정을 거칩니다:</p>
+  <ol>
+    <li>
+      <strong>영수증 검사</strong>— 표면 결함, 기공 및 치수 준수 여부 시각 검사.
+    </li>
+    <li>
+      <strong>두께 매핑</strong>— 롤 전체에서 20포인트 측정; CV 3%는 승인에 필요합니다.
+    </li>
+    <li>
+      <strong>인장 시험</strong>— 경사와 날실 방향 각각 5개의 시편. 1100 dtex에 대해 최소 3500 N/50 mm PVC.
+    </li>
+    <li>
+      <strong>UV 컨디셔닝</strong>— 제논 아크 챔버에서 1000시간 노출; 최소 80% 강도 유지 필요.
+    </li>
+    <li>
+      <strong>차가운 금</strong>— -35°C에서 4시간, 그런 다음 25 mm 맨드렐 위에서 180° 굽힘. 눈에 띄는 균열 없음.
+    </li>
+    <li><strong>마모 저항</strong>— 1000 사이클, 중량 손실 ≤ 0.05 g.</li>
+    <li>
+      <strong>승인 서명</strong>— 일곱 개의 문을 모두 통과한 후에만 원단이 생산을 위해 풀린다.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      전형적인 PVC 1100 dtex — UV 노출 후 인장 강도 유지
+    </p>
+    <div class="flex items-end gap-3 h-40">
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-600 rounded-t" style="height:100%"></div><span class="text-xs mt-1"
+          >0 h<br />100%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-500 rounded-t" style="height:95%"></div><span class="text-xs mt-1"
+          >500 h<br />95%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-400 rounded-t" style="height:88%"></div><span class="text-xs mt-1"
+          >1000 h<br />88%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-blue-300 rounded-t" style="height:82%"></div><span class="text-xs mt-1"
+          >2000 h<br />82%</span
+        >
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <div class="w-full bg-gray-300 rounded-t" style="height:65%"></div><span class="text-xs mt-1"
+          >경쟁자<br />~65%</span
+        >
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      우리의 PVC 1100 dtex 원단은 2000시간 제논 아크 노출 후에도 80%의 인장 강도를 유지하며, 이는 일반 산업 등급이 70%
+      이하로 떨어지는 것과 비교됩니다.
+    </p>
+  </div>
+
+  <h2>우리의 전문 팀</h2>
+  <p>
+    이 실험실에는 각각 폴리머 과학 또는 섬유 공학 학위를 가지고 최소 6년의 산업 경험을 가진 두 명의 상근 재료 엔지니어가
+    근무하고 있습니다. 이들은 일상적인 테스트와 데이터 기록을 수행하는 세 명의 기술자들의 지원을 받습니다. 팀은
+    정기적으로 국제표준화기구(ISO)가 주최하는 실험실 간 라운드로빈 시험에 참여하여 테스트 방법의 정확성을 검증합니다.
+  </p>
+
+  <h2>가장 어려운 소재 문제 해결</h2>
+  <p>
+    모든 해양 환경은 다릅니다. 페르시아만에서 작전하는 순찰정은 북해에서 구조정을 운용할 때와는 매우 다른 UV 및 온도
+    조건에 직면합니다. 저희 패브릭 연구소는 귀하의 운영 프로필에 최적화된 원단 사양을 선택하거나 개발하도록
+    도와드립니다.
+  </p>
+  <p>최근 맞춤 솔루션에는 다음이 포함됩니다:</p>
+  <ul>
+    <li>군용 고객을 위한 고마모 PVC 혼합물로, 이 고객의 보트는 정기적으로 산호초에 좌초됩니다 (+ 마모 수명 40%).</li>
+    <li>극지방 연구소용 저온 Hypalon 제형으로, 취성 없이 -50°C까지 시험됨.</li>
+    <li>
+      수색 및 구조 함대를 위한 색상 안정화 오렌지 패브릭으로, 열대 햇빛에 3년 동안 노출된 후에도 가시성을 유지합니다.
+    </li>
+  </ul>
+  <p>
+    저희는 '기성' 원단을 판매하고 그것이 적합하기를 바라지 않습니다. 저희는 테스트하고, 검증하며, 권장하거나 —
+    필요하다면 — 귀하의 특정 임무 프로필에 맞춘 맞춤형 솔루션을 만듭니다. 그것이 바로{SITE.name}차이.
+  </p>
+
+  <h2>우리가 어떻게 서비스를 제공하는지</h2>
+  <p>당신이 우리에게 소재 관련 문제를 가져오면, 기대할 수 있는 절차는 다음과 같습니다:</p>
+  <ol>
+    <li><strong>상담</strong>— 운영 환경, 성능 목표, 예산을 논의합니다.</li>
+    <li><strong>제안</strong>— 명확한 합격/불합격 기준과 일정이 포함된 테스트 계획을 작성합니다.</li>
+    <li>
+      <strong>실행</strong>— 당사의 실험실에서 테스트를 수행하고 원시 데이터와 비교 분석이 포함된 상세 보고서를
+      작성합니다.
+    </li>
+    <li>
+      <strong>권장 사항</strong>— 요구 사항을 충족하는 여러 소재가 있는 경우 대안 옵션을 포함하여 원단 사양을
+      제시합니다.
+    </li>
+    <li>
+      <strong>사후 관리</strong>— 납품 후에도, 서비스 중 소재 관련 질문을 지원할 수 있도록 대기합니다.
+    </li>
+  </ol>
+  <p>
+    저희의 목표는 단순히 보트를 판매하는 것이 아닙니다. 고객이 받는 보트가 실제 운영 환경에서 안정적으로 성능을
+    발휘하도록 하는 것이며, 그 시작은 원단에서부터 입니다.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">맞춤형 원단 사양이 필요하신가요?</h2>
+    <p class="mt-2 text-sm text-muted">고객님의 요구 사항을 논의하기 위해 소재 엔지니어링 팀에 연락하세요.</p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >실험실 팀에 문의</a
+    >
+  </div>
+</section>

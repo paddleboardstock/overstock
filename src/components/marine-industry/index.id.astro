@@ -1,0 +1,276 @@
+---
+import JsonLd from '~/components/common/JsonLd.astro';
+import AiQuickAnswer from '~/components/common/AiQuickAnswer.astro';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
+const { lang = 'id' } = Astro.props;
+const t = (key: string) => getUiForLang(lang)?.[key] || '';
+---
+
+<JsonLd
+  type="Article"
+  article={{
+    headline: 'Panduan Perahu Tiup — Sumber Lengkap',
+    description:
+      'Panduan komprehensif tentang perahu tiup yang mencakup jenis, metode konstruksi, perbandingan bahan, kriteria pemilihan, standar keselamatan, dan pemeliharaan.',
+    datePublished: '2026-07-07',
+  }}
+  data={{ url: 'https://aquafarer.com/marine-industry/' }}
+/>
+
+<JsonLd
+  type="BreadcrumbList"
+  breadcrumbs={[
+    { name: t('nav.home') || 'Home', href: `/${lang}/` },
+    { name: 'Industri Maritim', href: `/${lang}/marine-industry` },
+    { name: 'Panduan Perahu Tiup', href: `/${lang}/marine-industry/` },
+  ]}
+/>
+
+<AiQuickAnswer
+  entityType="Panduan"
+  quickAnswer="Perahu karet adalah perahu ringan yang dibuat dengan tabung kain fleksibel (sponson) yang diisi dengan udara bertekanan untuk memberikan daya apung. Perahu karet modern mencakup perahu kecil, RIBs (perahu karet kaku), kayak karet, dan papan dayung berdiri. Mereka dibuat dari kain PVC atau Hypalon CSM menggunakan pengelasan RF atau sambungan yang direkatkan dengan tangan, dengan konstruksi drop-stitch yang memungkinkan lantai kaku bertekanan tinggi."
+  facts={[
+    { label: 'Ukuran Pasar Global', value: '$2.8B (2026)' },
+    { label: 'Bahan Utama', value: 'PVC / Hypalon CSM' },
+    { label: 'Rentang Umur', value: '8-20+ tahun' },
+    { label: 'CE Sertifikasi', value: 'Diperlukan (UE)' },
+  ]}
+/>
+
+<section class="max-w-4xl mx-auto py-16 px-6">
+  <h1 class="text-4xl font-semibold text-gray-900">Panduan Perahu Tiup</h1>
+  <p class="mt-4 text-lg text-gray-500">
+    Sumber definitif tentang kapal air tiup — mulai dari perahu rekreasional hingga RIBs profesional dan kapal
+    penyelamatan khusus.
+  </p>
+
+  <nav class="mt-8 flex flex-wrap gap-2">
+    {
+      ['Types', 'Construction', 'Materials', 'Selection', 'Safety', 'Maintenance', 'Standards'].map((section) => (
+        <a
+          href={`#${section.toLowerCase()}`}
+          class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition"
+        >
+          {section}
+        </a>
+      ))
+    }
+  </nav>
+
+  <section id="types" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Jenis Perahu Tiup</h2>
+    <div class="mt-8 grid gap-6">
+      {
+        [
+          {
+            title: 'Perahu Karet Tiup',
+            desc: 'Perahu kecil yang portabel untuk tender, memancing, dan penggunaan rekreasi jarak pendek. Biasanya 2-4m, digerakkan oleh motor tempel kecil (2-15 HP) atau dayung. Titik masuk yang paling terjangkau.',
+            icon: '🚤',
+          },
+          {
+            title: 'Perahu Kaku Tiup (RIBs)',
+            desc: 'Perahu berperforma tinggi dengan lambung fiberglass keras, aluminium, atau HDPE dan sponson tiup. Panjang 3-12m, 15-300+ HP mesin tempel. Digunakan untuk patroli, penyelamatan, menyelam, dan pelayaran lepas pantai.',
+            icon: '⚡',
+          },
+          {
+            title: 'Perahu Kano Tiup',
+            desc: 'Kayak portabel yang terbuat dari PVC atau kain TPU. Tersedia dalam konfigurasi tunggal dan tandem untuk tur rekreasi, arung sungai, dan perjalanan ekspedisi.',
+            icon: '🛶',
+          },
+          {
+            title: 'Papan Dayung Berdiri Tiup (SUPs)',
+            desc: 'Drop-stitch membuat papan dayung yang dapat dipompa menjadi dek tekanan tinggi yang kaku. Tersedia model all-around, touring, yoga, memancing, dan selancar.',
+            icon: '🏄',
+          },
+          {
+            title: 'Perahu Penyelamat (SAR)',
+            desc: 'Spesialis RIBs untuk operasi pencarian dan penyelamatan. Dilengkapi dengan lantai yang dapat mengalir sendiri, konsol depan, titik penarik, dan skema warna dengan visibilitas tinggi. Bersertifikat CE untuk penggunaan penyelamatan.',
+            icon: '🆘',
+          },
+          {
+            title: 'Perahu Kerja Komersial',
+            desc: 'Peralatan berat RIBs untuk dukungan menyelam, patroli, survei, dan operasi kelautan komersial. Hypalon CSM konstruksi, lambung yang diperkuat, dan perlengkapan tingkat profesional.',
+            icon: '⚙️',
+          },
+        ].map((item) => (
+          <div class="flex gap-4 p-5 bg-gray-50 rounded-xl border border-gray-200">
+            <span class="text-2xl flex-shrink-0">{item.icon}</span>
+            <div>
+              <h3 class="font-semibold text-gray-900">{item.title}</h3>
+              <p class="mt-1 text-sm text-gray-600">{item.desc}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section id="construction" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Metode Konstruksi</h2>
+    <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Pengelasan RF (Frekuensi Tinggi)</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Menggunakan energi elektromagnetik untuk mencairkan lapisan PVC pada tingkat molekuler. Membuat sambungan
+          kedap udara terkuat. Umum pada perahu PVC berkualitas tinggi dan SUPs. Memerlukan mesin khusus dan operasi
+          terampil.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Perekat Tangan / Perekat Kimia</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Perekat dua komponen mengikat panel kain. Metode utama untuk perahu Hypalon CSM (tidak dapat dilas RF).
+          Memerlukan persiapan permukaan tepat, kelembaban terkontrol, dan waktu curing yang sesuai untuk kekuatan
+          sambungan optimal.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Inti Drop-Stitch</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Ribuan benang poliester menghubungkan lapisan PVC atas dan bawah, memungkinkan inflasi tekanan tinggi (15-25
+          PSI) untuk performa papan kaku. Kepadatan benang (15-50 benang/cm²) menentukan kekakuan dan berat.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Pengelasan Panas</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Pengelasan udara panas atau baji panas digunakan untuk sambungan dan penguatan. Umum pada konstruksi RIB yang
+          lebih besar. Kurang presisi dibanding pengelasan RF tetapi efektif untuk Hypalon dan kain PVC berat.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="materials" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Perbandingan Bahan</h2>
+    <div class="mt-6 overflow-x-auto">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="bg-gray-50 border-b-2 border-gray-200">
+            <th class="px-4 py-3 text-left font-semibold text-gray-700">Properti</th>
+            <th class="px-4 py-3 text-center font-semibold text-sky-700">PVC</th>
+            <th class="px-4 py-3 text-center font-semibold text-emerald-700">Hypalon CSM</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            [
+              ['Relative Cost', '$ (budget)', '$$$ (premium)'],
+              ['UV Resistance', 'Good (with coating)', 'Excellent (inherent)'],
+              ['Abrasion Resistance', 'Moderate-Good', 'Excellent'],
+              ['Chemical Resistance', 'Good', 'Excellent'],
+              ['Cold Flexibility', 'Stiffens below 0°C', 'Flexible to -20°C'],
+              ['Lifespan', '8-12 years', '15-20+ years'],
+              ['Seam Method', 'RF welding', 'Hand gluing'],
+              ['Repair', 'PVC glue (easy)', '2-part adhesive (moderate)'],
+            ].map((row, i) => (
+              <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                {row.map((cell, j) => (
+                  <td
+                    class={`px-4 py-3 border-b border-gray-200 ${j === 0 ? 'font-medium text-gray-700' : 'text-center text-gray-600'}`}
+                  >
+                    {cell}
+                  </td>
+                ))}
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-4 text-sm text-gray-500">
+      Perahu karet modern kelas militer PVC (1100-1670 dtex) menawarkan daya tahan yang sangat baik untuk sebagian besar
+      pengguna rekreasi dengan setengah biaya Hypalon. Hypalon lebih disukai untuk armada komersial, iklim tropis, dan
+      aplikasi yang kritis terhadap misi.
+    </p>
+    <a
+      href={`/${lang}/learn/pvc-vs-hypalon`}
+      class="mt-4 inline-block text-sky-600 hover:text-sky-700 text-sm font-medium">Panduan Mendalam PVC vs Hypalon →</a
+    >
+  </section>
+
+  <section id="selection" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Cara Memilih Perahu Karet</h2>
+    <div class="mt-8 grid md:grid-cols-3 gap-6">
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">1. Tentukan Tujuan Penggunaan</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>Rekreasi: Perahu kecil atau SUP</li>
+          <li>Performa: RIB (15-60 HP)</li>
+          <li>Komersial: RIB (100+ HP)</li>
+          <li>Kebugaran: Perahu karet SUP</li>
+          <li>Perjalanan: Kayak karet tiup</li>
+        </ul>
+      </div>
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">2. Tentukan Anggaran</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>$200-$800: Perahu karet SUP</li>
+          <li>$500-$2,000: Perahu kecil + motor</li>
+          <li>$3,000-$8,000: RIB Entry</li>
+          <li>$8,000-$20,000: RIB Premium</li>
+          <li>$20,000+: RIB Komersial</li>
+        </ul>
+      </div>
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">3. Pertimbangkan Bahan</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>PVC: Ramah anggaran, ringan</li>
+          <li>Hypalon: Premium, tahan lama</li>
+          <li>Drop-Stitch: Performa kaku</li>
+          <li>Berat kain: 1100-1670 dtex</li>
+          <li>Pelapis: UV + lapisan anti tusuk</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="safety" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Keselamatan & Standar</h2>
+    <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">CE Sertifikasi</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Semua perahu karet yang dijual di UE memerlukan tanda CE menurut Direktif Perahu Rekreasi (RCD) 2013/53/EU.
+          Sertifikasi mencakup kategori desain (A-D), daya apung, stabilitas, dan kapasitas muatan. Perahu Aquafarer
+          disertifikasi CE untuk penggunaan rekreasi dan penyelamatan.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Standar</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Standar internasional untuk perahu karet yang mengatur persyaratan bahan, jahitan, katup, dan pengujian
+          kinerja. Tipe I-IV mencakup semuanya mulai dari perahu kecil hingga RIBs besar.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Peralatan Keselamatan Penting</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Pelampung/alat keselamatan pribadi (CE 12402), tali lempar, talang/celah pemadam api, lampu navigasi (malam),
+          radio VHF, kotak P3K, jangkar, dan dayung atau bahan bakar cadangan.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Operasi Aman</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          JANGAN pernah melebihi kapasitas maksimum yang tertera pada pelat. Periksa keamanan katup sebelum diluncurkan.
+          Distribusikan berat secara merata. Pantau kondisi cuaca. Ajukan rencana pelayaran. Ikuti kursus keselamatan
+          berperahu.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="maintenance" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Perawatan & Pemeliharaan</h2>
+    <div class="mt-8 space-y-4 text-sm text-gray-600">
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <>
+          <span class="text-sky-600 font-bold flex-shrink-0">1.</span>
+          <span>Bilas dengan air tawar setelah setiap penggunaan air asin. Keringkan sepenuhnya sebelum disimpan.</span>
+        </>
+      </div>
+    </div>
+  </section>
+</section>

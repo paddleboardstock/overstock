@@ -1,0 +1,130 @@
+hero_text:
+  tagline: Contacto
+  title: PONTE EN CONTACTO
+contact_form:
+  id: form
+  title: Envíanos un mensaje
+  subtitle: Para presupuestos, preguntas técnicas o consultas de colaboración, escríbenos. Respondemos en un día hábil.
+  email_to: info@aquafarer.com
+  submit_button: Enviar consulta → Obtener presupuesto
+  success_message: '¡Gracias! Tu mensaje ha llegado a nuestra bandeja de entrada. Responderemos en un día hábil.'
+  error_message: Algo salió mal al enviar tu mensaje. Inténtalo de nuevo o escríbenos directamente por correo.
+  default_country_code: '+1'
+  captcha:
+    label: 'Anti-spam: por favor resuelve lo siguiente'
+  fields:
+    - name: firstName
+      label: Nombre
+      row: 1
+    - name: lastName
+      label: Apellido
+      row: 1
+    - name: companyName
+      label: Nombre de la empresa
+      row: 2
+    - name: address
+      label: Dirección
+      row: 3
+    - name: zip
+      label: Código postal
+      row: 4
+    - name: country
+      label: País
+      row: 4
+      type: select
+      optionsKey: countries
+    - name: email
+      label: Correo electrónico
+      row: 5
+      type: email
+    - name: tel
+      label: TEL
+      row: 5
+      type: tel
+      withCountryCode: true
+    - name: orderVolume
+      label: Volumen de pedido estimado
+      row: 6
+      type: select
+      options:
+        - value: ''
+          label: Selecciona tu volumen estimado...
+        - value: sample
+          label: Solo muestras / prototipos
+        - value: '5-10'
+          label: 50–100 unidades (MOQ estándar)
+        - value: '100-500'
+          label: 100–500 unidades
+        - value: '500-plus'
+          label: 500+ unidades (precio por volumen)
+    - name: customization
+      label: ¿Necesitas personalización?
+      row: 7
+      type: select
+      options:
+        - value: ''
+          label: Selecciona el tipo de personalización...
+        - value: none
+          label: Producto estándar (sin personalización)
+        - value: logo
+          label: Solo logotipo / marca personalizada
+        - value: full
+          label: OEM completo (tamaño, color, gráficos, embalaje)
+        - value: consultation
+          label: No estoy seguro — necesito asesoría
+    - name: productInterest
+      label: Categorías de producto de interés
+      row: 8
+      type: select
+      options:
+        - value: ''
+          label: Selecciona la categoría de producto...
+        - value: all
+          label: Todos los productos / catálogo completo
+        - value: sup
+          label: Tablas de SUP / paddleboards
+        - value: kayak
+          label: Kayaks inflables
+        - value: rib
+          label: Botes RIB
+        - value: dinghy
+          label: Botes / auxiliares
+        - value: safety
+          label: Equipos de seguridad / chalecos salvavidas
+        - value: accessory
+          label: Accesorios (bombas, remos, bolsas)
+    - name: subject
+      label: Asunto
+      row: 9
+    - name: message
+      label: Mensaje
+      row: 10
+      type: textarea
+      rows: 6
+features2_other_ways:
+  title: Otras formas de contactarnos
+  columns: 3
+  items:
+    - title: Consultas de ventas
+      description: Presupuestos, configuraciones, solicitudes de distribuidores y pedidos al por mayor.
+      icon: tabler:shopping-bag
+    - title: Soporte técnico
+      description: Garantía, reparaciones, repuestos y preguntas de funcionamiento.
+      icon: tabler:tool
+    - title: Prensa y colaboraciones
+      description: Kits de prensa, patrocinios y colaboración en el sector.
+      icon: tabler:news
+    - title: Teléfono
+      description: '+1 279 732 3333 (sede en EE. UU.) · +86 13305324192 (fábrica)'
+      icon: tabler:headset
+    - title: Correo electrónico
+      description: info@aquafarer.com
+      icon: tabler:mail
+    - title: Sede global y facturación
+      description: Aquafarer LLC, Nuevo México, Estados Unidos
+      icon: tabler:map-pin
+map:
+  title: Nuestra ubicación
+  subtitle: Visite nuestro centro de producción en Qingdao
+  address: Economic Development Zone, Laixi, Qingdao, China, 266600
+  zoom: 15

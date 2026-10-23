@@ -1,0 +1,331 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { languages } from '~/i18n/config';
+import { getPageContent, setPageContentData } from '~/i18n/page-content';
+import __pageData from '~/i18n/generated/pages/technology.ts';
+import { localizePageTitle } from '~/i18n/page-title';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => getUiForLang(lang)?.[key] || '';
+const lh = (h: string) => (h ? '/' + lang + h : h);
+setPageContentData(__pageData);
+const page = getPageContent(lang, 'technology') || {};
+const hero = page.hero || {};
+const trustBar = page.trust_bar || {};
+const sections = page.sections || [];
+const testimonial = page.testimonial || {};
+const related = page.related || {};
+
+const META: Record<string, { title: string; description: string; ignoreTitleTemplate?: boolean }> = {
+  en: {
+    title: localizePageTitle(page, `Technology & Materials — Drop-Stitch, PVC, Hypalon — ${SITE.name}`),
+    description:
+      'Aquafarer technology: drop-stitch core (12-15 PSI), marine-grade PVC (ASTM G154, D751 tested), Hypalon CSM tubes, air deck floors. In-house R&D in 12,000 m² facility.',
+    ignoreTitleTemplate: true,
+  },
+  de: {
+    title: `Technologie & Materialien — Drop-Stitch-Kern, PVC, Hypalon — ${SITE.name}`,
+    description:
+      'Aquafarer Technologie: Drop-Stitch-Kern (12-15 PSI), PVC in Marinequalität (ASTM G154, D751 getestet), Hypalon-CSM-Schläuche, Luftdeckböden. Eigene F&E in 12.000 m² Anlage.',
+    ignoreTitleTemplate: true,
+  },
+  es: {
+    title: `Tecnología y Materiales — Núcleo Drop-Stitch, PVC, Hypalon — ${SITE.name}`,
+    description:
+      'Tecnología Aquafarer: núcleo drop-stitch (12-15 PSI), PVC de grado marino (probado ASTM G154, D751), tubos CSM Hypalon, suelos de cubierta de aire. I+D interna en instalación de 12,000 m².',
+    ignoreTitleTemplate: true,
+  },
+  fr: {
+    title: `Technologie et matériaux — cœur drop-stitch, PVC, Hypalon — ${SITE.name}`,
+    description:
+      'Technologie Aquafarer : âme drop-stitch (12-15 PSI), PVC de qualité marine (testé ASTM G154, D751), tubes CSM Hypalon, ponts à air. R&D interne dans une installation de 12 000 m².',
+    ignoreTitleTemplate: true,
+  },
+  it: {
+    title: `Tecnologia e materiali — Nucleo drop-stitch, PVC, Hypalon — ${SITE.name}`,
+    description:
+      'Tecnologia Aquafarer: nucleo drop-stitch (12-15 PSI), PVC di grado marino (testato ASTM G154, D751), tubi CSM Hypalon, ponti ad aria. R&D interna in struttura di 12.000 m².',
+    ignoreTitleTemplate: true,
+  },
+  cs: {
+    title: `Technologie a materiály — drop-stitch jádro, PVC, Hypalon — ${SITE.name}`,
+    description:
+      'Technologie Aquafarer: drop-stitch jádro (12–15 PSI), námořní PVC (testováno ASTM G154, D751), Hypalon CSM trubky, nafukovací paluby. Vlastní výzkum a vývoj v areálu o rozloze 12 000 m².',
+    ignoreTitleTemplate: true,
+  },
+};
+const meta = META[lang] || META.en;
+
+const metadata = {
+  title: meta.title,
+  description: meta.description,
+  ignoreTitleTemplate: true,
+};
+const siteUrl = 'https://aquafarer.com';
+const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: hero.tagline || 'Technology' }];
+import TechDe from '~/components/technology/technology.de.astro';
+import TechEs from '~/components/technology/technology.es.astro';
+import TechFr from '~/components/technology/technology.fr.astro';
+import TechIt from '~/components/technology/technology.it.astro';
+import TechCs from '~/components/technology/technology.cs.astro';
+import TechSv from '~/components/technology/technology.sv.astro';
+import TechDa from '~/components/technology/technology.da.astro';
+import TechEl from '~/components/technology/technology.el.astro';
+import TechNo from '~/components/technology/technology.no.astro';
+import TechRu from '~/components/technology/technology.ru.astro';
+import TechNl from '~/components/technology/technology.nl.astro';
+import TechFi from '~/components/technology/technology.fi.astro';
+import TechPl from '~/components/technology/technology.pl.astro';
+import TechAr from '~/components/technology/technology.ar.astro';
+import TechPt from '~/components/technology/technology.pt.astro';
+import TechJa from '~/components/technology/technology.ja.astro';
+const Body: any =
+  (
+    {
+      de: TechDe,
+      es: TechEs,
+      fr: TechFr,
+      it: TechIt,
+      cs: TechCs,
+      sv: TechSv,
+      da: TechDa,
+      el: TechEl,
+      no: TechNo,
+      ru: TechRu,
+      nl: TechNl,
+      fi: TechFi,
+      pl: TechPl,
+      ar: TechAr,
+      pt: TechPt,
+      ja: TechJa,
+    } as Record<string, any>
+  )[lang] || null;
+
+const faqSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is Drop-Stitch technology?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Drop-Stitch uses thousands of internal polyester threads connecting the top and bottom PVC layers, allowing the board to maintain a flat, rigid shape under high pressure (15-20 PSI) while remaining lightweight and packable.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What pressure can Drop-Stitch boards handle?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Standard 4-inch (10cm) cores: 15 PSI. Premium 6-inch (15cm) cores: up to 20 PSI. All tested at 1.25x rated pressure for 24-48h.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What materials does Aquafarer use?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Marine-grade PVC (0.9-1.2mm, 1,100-1,680 DTEX), Hypalon/CSM for commercial applications, and premium Drop-Stitch core fabrics.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What welding technology is used?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'High-frequency RF welding for PVC seams and hand gluing for Hypalon/CSM tubes, with peel testing and backlight seam inspection.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How does UV resistance testing work?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Per ASTM G154 accelerated weathering standard — materials are exposed to concentrated UV cycles simulating years of sun exposure.',
+      },
+    },
+  ],
+});
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  {
+    Body ? (
+      <Body lang={lang} />
+    ) : (
+      <>
+        <meta
+          name="ai-intent"
+          content="inflatable-boat-technology,drop-stitch-construction,marine-pvc-materials,hypalon-tubes,inflatables-rd-center"
+        />
+        <JsonLd
+          type="Article"
+          article={{
+            headline: 'Technology & Materials — Drop-Stitch Core, PVC, Hypalon',
+            description:
+              'Aquafarer product technology: drop-stitch core construction at 12-15 PSI, marine-grade PVC fusion-welded fabric, Hypalon CSM rubber tubes, air deck floor systems. In-house materials R&D since 2012.',
+            datePublished: '2026-07-07',
+          }}
+          data={{ url: `${siteUrl}/technology` }}
+        />
+
+        <section class="bg-gradient-to-br from-[#001830] via-[#002d4a] to-[#003355] text-white py-24 px-6">
+          <div class="max-w-4xl mx-auto text-center">
+            <span class="text-xs font-medium uppercase tracking-[0.2em] text-sky-300">
+              {hero.tagline || 'Technology'}
+            </span>
+            <h1 class="mt-4 text-4xl md:text-5xl font-bold tracking-tight">{hero.title || 'Built for Performance'}</h1>
+            <p class="mt-4 text-lg text-sky-100/80 max-w-3xl mx-auto">{hero.subtitle}</p>
+          </div>
+        </section>
+
+        {trustBar.items && trustBar.items.length > 0 && (
+          <section class="px-6 py-12 mx-auto max-w-6xl -mt-8 relative z-10">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {trustBar.items.map((s: any) => (
+                <div class="text-center p-5 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 shadow-sm">
+                  <span class="block text-2xl font-bold text-[#06b6d4]">{s.value}</span>
+                  <span class="block text-sm font-semibold text-gray-900 mt-1">{s.label}</span>
+                  {s.sub && <span class="block text-xs text-gray-500 mt-0.5">{s.sub}</span>}
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        <section class="px-6 py-16 mx-auto max-w-5xl">
+          <div class="text-center mb-12">
+            <p class="text-sm font-semibold text-[#06b6d4] uppercase tracking-wider">Materials & Construction</p>
+            <h2 class="mt-2 text-3xl font-bold text-gray-900">Engineered for Marine Environments</h2>
+            <p class="mt-3 text-gray-500 max-w-2xl mx-auto">
+              Every material is selected, tested, and validated in-house at our 12,000 m² Qingdao R&D center.
+            </p>
+          </div>
+          <div class="space-y-12">
+            {sections.map((sec: any, i: any) => {
+              const isReversed = i % 2 === 1;
+              return (
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                  {isReversed ? (
+                    <>
+                      <div class="order-2 md:order-1 rounded-2xl h-48 overflow-hidden">
+                        {sec.image && (
+                          <img src={sec.image} alt={sec.title} class="w-full h-full object-cover" loading="lazy" />
+                        )}
+                      </div>
+                      <div class="order-1 md:order-2">
+                        <h2 class="text-2xl font-bold text-gray-900">{sec.title}</h2>
+                        {sec.standard && (
+                          <span class="inline-block mt-1 px-3 py-0.5 bg-sky-50 text-sky-700 rounded-full text-xs font-mono font-medium">
+                            {sec.standard}
+                          </span>
+                        )}
+                        <p class="mt-3 text-gray-600 leading-relaxed">{sec.description}</p>
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <div>
+                        <h2 class="text-2xl font-bold text-gray-900">{sec.title}</h2>
+                        {sec.standard && (
+                          <span class="inline-block mt-1 px-3 py-0.5 bg-sky-50 text-sky-700 rounded-full text-xs font-mono font-medium">
+                            {sec.standard}
+                          </span>
+                        )}
+                        <p class="mt-3 text-gray-600 leading-relaxed">{sec.description}</p>
+                      </div>
+                      <div class="rounded-2xl h-48 overflow-hidden">
+                        {sec.image && (
+                          <img src={sec.image} alt={sec.title} class="w-full h-full object-cover" loading="lazy" />
+                        )}
+                      </div>
+                    </>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </section>
+
+        {testimonial.quote && (
+          <section class="px-6 py-16 mx-auto max-w-5xl">
+            <div class="bg-gradient-to-br from-sky-50 to-white dark:from-gray-900 dark:to-gray-950 rounded-2xl border border-sky-100 dark:border-gray-800 p-8 md:p-12">
+              <div class="grid md:grid-cols-5 gap-8 items-center">
+                <div class="md:col-span-3">
+                  <span class="text-sm font-semibold text-[#06b6d4] uppercase tracking-wider">
+                    What Our Partners Say
+                  </span>
+                  <blockquote class="mt-4 text-lg text-gray-700 dark:text-gray-300 leading-relaxed italic">
+                    &ldquo;{testimonial.quote}&rdquo;
+                  </blockquote>
+                  <div class="mt-4 flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-sky-100 flex items-center justify-center text-sky-700 font-bold">
+                      {testimonial.author?.charAt(0) || 'C'}
+                    </div>
+                    <div>
+                      <p class="font-semibold text-gray-900 text-sm">{testimonial.author}</p>
+                      <p class="text-xs text-gray-500">
+                        {testimonial.title}, {testimonial.company} &middot; {testimonial.location}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="md:col-span-2">
+                  <div class="p-5 bg-white dark:bg-gray-900 rounded-xl border border-gray-200">
+                    <h3 class="font-bold text-gray-900 text-sm">In-House R&D</h3>
+                    <p class="mt-2 text-sm text-gray-600 leading-relaxed">
+                      Our materials science team develops and validates every compound, weld parameter, and structural
+                      layup in-house. No outsourcing of critical engineering.
+                    </p>
+                    <a
+                      href={lh('/randdcenter')}
+                      class="mt-3 inline-flex text-sm font-medium text-[#06b6d4] hover:text-sky-700"
+                    >
+                      See our R&amp;D Center &rarr;
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+
+        <section class="px-6 pb-20 mx-auto max-w-4xl">
+          <div class="flex flex-wrap justify-center gap-3 text-sm">
+            <span class="text-gray-400 font-medium">Explore more:</span>
+            {(related.links && related.links.length > 0 ? related.links : []).map((link: any) => (
+              <a
+                href={lh(link.url)}
+                class="px-3 py-1.5 bg-white rounded-lg border border-gray-200 text-gray-700 hover:border-sky-300 hover:text-sky-600 transition-colors"
+              >
+                {link.text} &rarr;
+              </a>
+            ))}
+          </div>
+        </section>
+
+        <section class="sr-only" data-ai-block="embedding-anchor" aria-hidden="true">
+          <p>
+            Aquafarer technology focuses on buoyancy control systems, inflatable structural stability, water impact
+            resistance, and drop-stitch core rigidity for water sports equipment. Drop-stitch core: 12-15 PSI operating
+            pressure, thousands of polyester threads connecting top and bottom layers. Marine-grade PVC: multi-layer
+            laminated, fusion-welded, tested per ASTM G154 (UV), ASTM D751 (abrasion), ISO 9227 (salt spray). Hypalon
+            CSM tubes: UV and chemical resistant, hand-laid seams. Air deck floor: high-pressure inflatable, 200+ kg
+            load capacity. In-house R&D center Qingdao, China. 12,000 m² facility. 15+ years materials engineering.
+          </p>
+        </section>
+      </>
+    )
+  }
+  <script is:inline type="application/ld+json" set:html={faqSchema} />
+</Layout>

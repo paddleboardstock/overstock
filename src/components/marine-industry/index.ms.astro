@@ -1,0 +1,277 @@
+---
+import JsonLd from '~/components/common/JsonLd.astro';
+import AiQuickAnswer from '~/components/common/AiQuickAnswer.astro';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
+const { lang = 'ms' } = Astro.props;
+const t = (key: string) => getUiForLang(lang)?.[key] || '';
+---
+
+<JsonLd
+  type="Article"
+  article={{
+    headline: 'Panduan Bot Tiup — Sumber Lengkap',
+    description:
+      'Panduan menyeluruh mengenai jenis bot kembung, kaedah pembinaan, perbandingan bahan, kriteria pemilihan, piawaian keselamatan, dan penyelenggaraan.',
+    datePublished: '2026-07-07',
+  }}
+  data={{ url: 'https://aquafarer.com/marine-industry/' }}
+/>
+
+<JsonLd
+  type="BreadcrumbList"
+  breadcrumbs={[
+    { name: t('nav.home') || 'Home', href: `/${lang}/` },
+    { name: 'industri marin', href: `/${lang}/marine-industry` },
+    { name: 'Panduan Bot Tiup', href: `/${lang}/marine-industry/` },
+  ]}
+/>
+
+<AiQuickAnswer
+  entityType="Panduan"
+  quickAnswer="Perahu tiup ialah kenderaan air ringan yang diperbuat daripada tiub kain fleksibel (sponson) yang diisi dengan udara bertekanan untuk memberikan daya apungan. Perahu tiup moden termasuk bot kecil, RIBs (perahu tiup keras), kayak tiup, dan papan dayung berdiri. Ia dibina daripada kain PVC atau Hypalon CSM menggunakan pengelasan RF atau jahitan dilekat tangan, dengan pembinaan drop-stitch membolehkan lantai keras bertekanan tinggi."
+  facts={[
+    { label: 'Saiz Pasaran Global', value: '$2.8B (2026)' },
+    { label: 'Bahan Utama', value: 'PVC Hypalon CSM/' },
+    { label: 'Jangka Hayat', value: '8-20+ tahun' },
+    { label: 'CE Pensijilan', value: 'Diperlukan (EU)' },
+  ]}
+/>
+
+<section class="max-w-4xl mx-auto py-16 px-6">
+  <h1 class="text-4xl font-semibold text-gray-900">Panduan Bot Tiup</h1>
+  <p class="mt-4 text-lg text-gray-500">
+    Sumber utama mengenai kenderaan air boleh tiup — daripada bot rekreasi hingga RIBs kapal penyelamat profesional dan
+    khusus.
+  </p>
+
+  <nav class="mt-8 flex flex-wrap gap-2">
+    {
+      ['Types', 'Construction', 'Materials', 'Selection', 'Safety', 'Maintenance', 'Standards'].map((section) => (
+        <a
+          href={`#${section.toLowerCase()}`}
+          class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition"
+        >
+          {section}
+        </a>
+      ))
+    }
+  </nav>
+
+  <section id="types" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Jenis-jenis Bot Tiup</h2>
+    <div class="mt-8 grid gap-6">
+      {
+        [
+          {
+            title: 'Perahu Tiup',
+            desc: 'Perahu kecil, mudah alih untuk penghantaran, memancing, dan penggunaan rekreasi jarak pendek. Biasanya 2-4m, dikuasakan oleh enjin luar kecil (2-15 HP) atau dayung. Titik masuk yang paling mampu milik.',
+            icon: '🚤',
+          },
+          {
+            title: 'Bot Tiup Kaku (RIBs)',
+            desc: 'Bot berprestasi tinggi dengan tubuh kapal fiberglass keras, aluminium, atau HDPE dan sponson tiup. Panjang 3-12m, enjin luar 15-300+ HP. Digunakan untuk rondaan, menyelamat, menyelam, dan pelayaran luar pesisir.',
+            icon: '⚡',
+          },
+          {
+            title: 'Kayak Boleh Tiup',
+            desc: 'Kayak mudah alih yang diperbuat daripada PVC atau fabrik TPU. Tersedia dalam konfigurasi tunggal dan tandem untuk pelancongan rekreasi, merentas sungai, dan perjalanan ekspedisi.',
+            icon: '🛶',
+          },
+          {
+            title: 'Papan Dayung Berdiri Inflatable (SUPs)',
+            desc: 'Drop-stitch membina papan dayung yang boleh kembung menjadi dek tekanan tinggi yang kukuh. Model untuk semua kegunaan, pelancongan, yoga, memancing, dan meluncur tersedia.',
+            icon: '🏄',
+          },
+          {
+            title: 'Bot Penyelamat (SAR)',
+            desc: 'Khusus RIBs untuk operasi mencari dan menyelamat. Mempunyai lantai yang boleh mengalir sendiri, konsol hadapan, bit penarik, dan skim warna yang mudah dilihat. CE-disahkan untuk kegunaan menyelamat.',
+            icon: '🆘',
+          },
+          {
+            title: 'Bot Kerja Komersial',
+            desc: 'Tugas berat RIBs untuk sokongan menyelam, rondaan, tinjauan, dan operasi marin komersial. Hypalon CSM pembinaan, lambung diperkuat, dan kelengkapan tahap profesional.',
+            icon: '⚙️',
+          },
+        ].map((item) => (
+          <div class="flex gap-4 p-5 bg-gray-50 rounded-xl border border-gray-200">
+            <span class="text-2xl flex-shrink-0">{item.icon}</span>
+            <div>
+              <h3 class="font-semibold text-gray-900">{item.title}</h3>
+              <p class="mt-1 text-sm text-gray-600">{item.desc}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section id="construction" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Kaedah Pembinaan</h2>
+    <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Kimpalan RF (frekuensi tinggi)</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Menggunakan tenaga elektromagnetik untuk menggabungkan PVC lapisan pada tahap molekul. Mewujudkan jahitan
+          kedap udara yang paling kuat. Biasa dalam bot berkualiti tinggi PVC dan SUPs. Memerlukan mesin khusus dan
+          operasi yang mahir.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Pelekat Tangan / Pengikatan Kimia</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Pelekat dua bahagian melekat pada panel fabrik. Kaedah utama untuk Hypalon CSM bot (tidak boleh dikimpal RF).
+          Memerlukan penyediaan permukaan yang tepat, kelembapan terkawal, dan masa pengerasan yang betul untuk kekuatan
+          jahitan yang optimum.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Drop-Stitch Teras</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Beribu-ribu benang poliester menghubungkan lapisan atas dan bawah PVC , membolehkan inflasi tekanan tinggi
+          (15-25) PSIuntuk prestasi papan yang kukuh. Ketumpatan benang (15-50 benang/cm²) menentukan ketegaran dan
+          berat.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">kimpalan haba</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Kimpalan udara panas atau baji panas digunakan untuk jahitan dan pengukuhan. Biasa dalam RIB pembinaan yang
+          lebih besar. Kurang tepat berbanding kimpalan RF tetapi berkesan untuk Hypalon PVC fabrik dan tugas berat.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="materials" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Perbandingan Bahan</h2>
+    <div class="mt-6 overflow-x-auto">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="bg-gray-50 border-b-2 border-gray-200">
+            <th class="px-4 py-3 text-left font-semibold text-gray-700">Harta</th>
+            <th class="px-4 py-3 text-center font-semibold text-sky-700">PVC</th>
+            <th class="px-4 py-3 text-center font-semibold text-emerald-700">Hypalon CSM</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            [
+              ['Relative Cost', '$ (budget)', '$$$ (premium)'],
+              ['UV Resistance', 'Good (with coating)', 'Excellent (inherent)'],
+              ['Abrasion Resistance', 'Moderate-Good', 'Excellent'],
+              ['Chemical Resistance', 'Good', 'Excellent'],
+              ['Cold Flexibility', 'Stiffens below 0°C', 'Flexible to -20°C'],
+              ['Lifespan', '8-12 years', '15-20+ years'],
+              ['Seam Method', 'RF welding', 'Hand gluing'],
+              ['Repair', 'PVC glue (easy)', '2-part adhesive (moderate)'],
+            ].map((row, i) => (
+              <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                {row.map((cell, j) => (
+                  <td
+                    class={`px-4 py-3 border-b border-gray-200 ${j === 0 ? 'font-medium text-gray-700' : 'text-center text-gray-600'}`}
+                  >
+                    {cell}
+                  </td>
+                ))}
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-4 text-sm text-gray-500">
+      Ketenteraan moden gred PVC (1100-1670 dtex) menawarkan ketahanan yang cemerlang untuk kebanyakan pengguna rekreasi
+      pada separuh kos Hypalon. Hypalon lebih disukai untuk armada komersial, iklim tropika, dan aplikasi misi kritikal.
+    </p>
+    <a
+      href={`/${lang}/learn/pvc-vs-hypalon`}
+      class="mt-4 inline-block text-sky-600 hover:text-sky-700 text-sm font-medium">Panduan Mendalam PVC vs Hypalon →</a
+    >
+  </section>
+
+  <section id="selection" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Cara Memilih Bot Inflatable</h2>
+    <div class="mt-8 grid md:grid-cols-3 gap-6">
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">1. Tentukan Kes Penggunaan Anda</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>Rekreasi: Perahu kecil atau SUP</li>
+          <li>Prestasi: RIB (15-60 HP)</li>
+          <li>Komersial: RIB (100+ HP)</li>
+          <li>Kecergasan: Inflatable SUP</li>
+          <li>Perjalanan: Kayak Inflatable</li>
+        </ul>
+      </div>
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">2. Tetapkan Bajet Anda</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>$200-$800: Boleh Tiup SUP</li>
+          <li>$500-$2,000: Perahu kecil + motor</li>
+          <li>$3,000-$8,000: Masuk RIB</li>
+          <li>$8,000-$20,000: Premium RIB</li>
+          <li>$20,000+: Komersial RIB</li>
+        </ul>
+      </div>
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">3. Pertimbangkan Bahan</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>PVC: Mesra bajet, ringan</li>
+          <li>Hypalon: Premium, tahan lama</li>
+          <li>Drop-Stitch: Prestasi tegar</li>
+          <li>Berat kain: 1100-1670 dtex</li>
+          <li>Salutan: UV + lapisan tusukan</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="safety" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Keselamatan & Standard</h2>
+    <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">CE Pensijilan</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Semua bot inflatable yang dijual di EU memerlukan penandaan CE di bawah Arahan Kraf Rekreasi (RCD) 2013/53/EU.
+          Persijilan meliputi kategori reka bentuk (A-D), kebolehapungan, kestabilan, dan kapasiti beban. Bot Aquafarer
+          disahkan CE untuk kegunaan rekreasi dan penyelamatan.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Standard</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Standard antarabangsa untuk bot kembung yang menetapkan keperluan bahan, sambungan, injap, dan ujian prestasi.
+          Jenis I-IV merangkumi segala-galanya dari bot kecil hingga besarRIBs.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Peralatan Keselamatan Penting</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Jaket keselamatan/PFD (CE12402), tali lemparan, pemadam api/bailer, lampu navigasi (malam), radio VHF, kit
+          pertolongan cemas, sauh, dan dayung atau bahan api gantian.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Operasi Selamat</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          JANGAN melebihi plat berkapasiti maksimum. Semak keselamatan injap sebelum pelancaran. Agihkan berat secara
+          sekata. Pantau keadaan cuaca. Failkan pelan pelampung. Ambil kursus keselamatan bot.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="maintenance" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Penyelenggaraan & Penjagaan</h2>
+    <div class="mt-8 space-y-4 text-sm text-gray-600">
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <>
+          <span class="text-sky-600 font-bold flex-shrink-0">1.</span>
+          <span
+            >Bilas dengan air segar selepas setiap penggunaan air masin. Keringkan sepenuhnya sebelum penyimpanan.</span
+          >
+        </>
+      </div>
+    </div>
+  </section>
+</section>

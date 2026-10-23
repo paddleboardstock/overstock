@@ -1,0 +1,205 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'tl' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">&larr; Bumalik sa R&D Center</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Lab 04</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Tangke ng Pagsubok sa Hidrodinamika</h1>
+      <p class="mt-3 text-lg text-muted">Pagpapatunay ng pagganap bago ang unang full-scale prototype</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-design-discussion-original.webp"
+        alt="Aquafarer pagsubok ng pagganap ng hydrodynamic test tank"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Bakit kailangang i-tank test ang isang maliit na bangka?</h2>
+  <p>
+    Isang karaniwang maling akala na ang pagsubok sa hidrodinamika ay nakalaan lamang para sa mga barkong naglalayag sa
+    karagatan. Sa katotohanan, ang pagganap ng isang maliit na planing hull — gaya ng 4–5 m RIB — ay kasing depende sa
+    hugis nito sa ilalim ng tubig tulad ng pagiging depende ng isang tanker sa kanyang bulbous bow. Ang trim angle,
+    wetted surface area, paglikha ng spray, at bentilasyon ay lahat ay may malaking epekto sa bilis, pagkonsumo ng
+    gasolina, at kaginhawaan sa paglalakbay. Sa{SITE.name}, nagpapatakbo kami ng isang dedikadong tangke ng pagsubok sa
+    hidrodinamika na nagpapahintulot sa amin na masukat ang mga epektong ito sa antas ng modelo — bago maglaan ng metal
+    at tela sa isang full-size na prototype.
+  </p>
+  <p>
+    Ang pagsubok sa model scale (karaniwang 1:3 hanggang 1:5) ay nagbibigay sa amin ng kakayahang mabilis at
+    cost-effective na i-iterate ang mga hugis ng hull. Isang linggo sa tank ay maaaring makabuo ng parehong performance
+    data na kakailanganin ng buwan ng full-scale trial-and-error — at sa mas mababang halaga.
+  </p>
+
+  <h2>Mga espesipikasyon ng pasilidad</h2>
+  <table>
+    <thead><tr><th>Parametro</th><th>Espesipikasyon</th></tr></thead>
+    <tbody>
+      <tr><td>Dimensyon ng tank</td><td>35 m (L) × 3.5 m (W) × 1.8 m (D)</td></tr>
+      <tr><td>Towing carriage</td><td>Electric servo-driven, max speed 12 m/s (23 kn), speed accuracy ± 0.5 %</td></tr>
+      <tr
+        ><td>Wave generator</td><td
+          >Flap-type, programmable regular & irregular sea states, Hs hanggang 0.3 m sa model scale</td
+        ></tr
+      >
+      <tr
+        ><td>Instrumentation</td><td
+          >6-component dynamometer (resistance, side force, yaw moment), accelerometers, inclinometers, wave probes</td
+        ></tr
+      >
+      <tr
+        ><td>Pagkuha ng datos</td><td
+          >Sampling sa 1000 Hz bawat channel, real-time na display + post-processing suite</td
+        ></tr
+      >
+      <tr
+        ><td>Paggawa ng modelo</td><td>In-house CNC milling at 3D printing para sa model hulls hanggang 1.8 m LOA</td
+        ></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>Aming test programme</h2>
+  <p>Ang standard na hull development programme sa aming tank ay sumusunod sa sunud-sunod na proseso:</p>
+  <ol>
+    <li>
+      <strong>Pagbuo ng model</strong>— Ang 1:3.5 scale na model ay CNC-machined mula sa high-density foam at ginlase
+      para sa pagiging matatag. Ang timbang at CG ay inaayos upang tumugma sa Froude-scaled full-load condition.
+    </li>
+    <li>
+      <strong>Resistance runs</strong>— Ang modelo ay hinahatak sa 8-10 bilis na sumasaklaw sa operating range. Ang
+      kabuuang resistance ay sinusukat at hinahati sa frictional at residuary components gamit ang ITTC-1957 method.
+    </li>
+    <li>
+      <strong>Pagsukat ng trim at sinkage</strong>— Ang running trim at sinkage ay nirerekord sa bawat bilis. Ang
+      optimal trim angle na 4-6° para sa planing hulls ay ang target.
+    </li>
+    <li>
+      <strong>Sarbey sa paggising</strong>— Ang mga hiwa ng pahalang na alon ay sinusukat sa dalawang bilis upang
+      tasahin ang paglaban sa paggawa ng alon at tukuyin ang mga interaksiyon ng pahalang na alon na maaaring magdulot
+      ng pagkaantala sa hulihan.
+    </li>
+    <li>
+      <strong>Pagpapanatili sa Dagat (opsyonal)</strong>— Ang paglalayag laban sa alon at pagsunod sa alon ay ginagawa
+      sa regular na mga alon upang sukatin ang karagdagang paglaban, patayong pagbilis, at posibilidad ng pagbagsak ng
+      alon sa barko.
+    </li>
+    <li>
+      <strong>Pagsusuri ng datos at mga rekomendasyon</strong>— Isang kumpletong ulat ang ihahatid kasama ng mga
+      comparative chart, speed/power curve, at mga tiyak na rekomendasyon sa disenyo para sa full-scale hull.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Karaniwang Resulta ng Pagsubok sa Tangke — Paglaban vs Bilis (RIB 450 hull, 1:3.5 na sukat)
+    </p>
+    <div class="space-y-2">
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">5 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:18%"></div>
+        </div><span class="w-16 text-right">42 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">10 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:35%"></div>
+        </div><span class="w-16 text-right">81 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">15 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:52%"></div>
+        </div><span class="w-16 text-right">121 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">20 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:68%"></div>
+        </div><span class="w-16 text-right">158 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">25 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:85%"></div>
+        </div><span class="w-16 text-right">197 N</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-20">30 kn (1:1)</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+          <div class="h-full bg-blue-600 rounded" style="width:100%"></div>
+        </div><span class="w-16 text-right">232 N</span>
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      Paglaban sa sukat ng modelo (N) sa mga bilis na naka-Froude scale. Ang hula sa kapangyarihan sa buong sukat ay
+      sumusunod sa pamamaraan ng ITTC-1978 para sa prediksyon ng pagganap.
+    </p>
+  </div>
+
+  <h2>Dalubhasang koponan</h2>
+  <p>
+    Ang aming tangke ay pinapatakbo ng isang hydrodynamicist na may PhD sa arkitekturang pandagat at may 8 taong
+    karanasan sa towing-tank sa isang pangunahing European maritime research institute. Siya ay sinusuportahan ng isang
+    tekniko na naghahanda ng lahat ng modelo at instrumentation. Ang koponan ay sumusunod sa ITTC (International Towing
+    Tank Conference) Recommended Procedures upang matiyak na bawat pagsubok ay maaaring ulitin, masubaybayan, at
+    mapagtanggol sa internasyonal na antas.
+  </p>
+
+  <h2>Pagsubok sa tanke para sa pag-develop ng pasadya na katawan ng barko</h2>
+  <p>
+    Ang aming tangke ay hindi lamang ginagamit para sa mga kabahayan na disenyo ng hull — regular naming isinasagawa ang
+    mga programa ng pagsubok para sa mga kliyenteng nais patunayan ang isang pasadyang hugis ng hull o imbestigahan ang
+    isang isyu sa pagganap:
+  </p>
+  <ul>
+    <li>
+      <strong>Paghahambing ng anyo ng katawan ng barko</strong>— Dalawa o higit pang kandidato na hugis ng katawan ng
+      barko na sinubok sa magkaparehong kondisyon, na nagbibigay ng isang obhetibong paghahambing ng
+      drag/bilisan/katatagan upang ipabatid ang iyong pagpipilian sa disenyo.
+    </li>
+    <li>
+      <strong>Pag-optimize ng appendage</strong>— Ang mga interceptor plate, spray rails, trim tabs, at strakes ay
+      maaaring subukan sa iba't ibang mga konfigurasyon upang masukat ang kanilang indibidwal na kontribusyon sa
+      pagpapababa ng drag.
+    </li>
+    <li>
+      <strong>Pag-aaral sa pagtutugma ng makina</strong>— Ang datos ng resistensya ay ikinokonvert sa isang kurba ng
+      prediksyon ng kapangyarihan, na nagpapahintulot sa iyo na piliin ang pinakamainam na lakas ng makina para sa iyong
+      target na bilis at karga.
+    </li>
+  </ul>
+
+  <h2>Bakit mag-test sa amin?</h2>
+  <p>
+    Hindi lamang namin ibinibigay sa iyo ang isang set ng hilaw na numero. Isinasalin ng aming mga ulat ang datos ng
+    tangke sa mga kapaki-pakinabang na rekomendasyon sa engineering: "Itaas ang spray-rail ng 8 mm upang mabawasan ang
+    basang ibabaw sa bilis ng paglayag", "Dagdagan ang deadrise sa transom ng 3° upang mabawasan ang slamming
+    acceleration", o "Ilipat ang longitudinal center of gravity ng 150 mm paatras para sa mas magandang plano ng
+    posisyon sa paglayag". Umalis ka na may malinaw na pag-unawa sa kung ano ang babaguhin at bakit.
+  </p>
+  <p>
+    Ang aming tangke ay magagamit din para sa independiyenteng pagsusuri ng ikatlong partido sa batayan ng bayad. Kung
+    ikaw ay nagde-develop ng isang hull at nais ng isang walang kinikilingang, propesyonal na isinagawang pagtatasa ng
+    hydrodynamics, malugod naming tinatanggap ang iyong pagtatanong.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Mag-book ng session para sa pagsusuri ng tangke</h2>
+    <p class="mt-2 text-sm text-muted">
+      Kung kailangan mo man ng isang buong programa sa pag-unlad o isang solong paghahambing na pagsusuri, maaari naming
+      ayusin ang iyong iskedyul.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Makipag-ugnayan sa aming koponan sa hydrodynamics</a
+    >
+  </div>
+</section>

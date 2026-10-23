@@ -1,0 +1,167 @@
+hero:
+  tagline: Aquafarer Akadeemia
+  title: Õppekeskus
+  subtitle: Juhendid ja õpetused igale oskustasemele — alates SUP algtõdedest kuni edasijõudnud päästetehnikateni
+categories:
+  - level: Algaja
+    color: from-green-500 to-emerald-600
+    badge: bg-green-100 text-green-700
+    guides:
+      - title: SUP Põhitõed
+        desc: Õpi SUP-pardal sõitmise põhialuseid — asend, sõudmise tehnika ja tasakaal.
+        slug: beginner-sup-guide
+      - title: Sõudmistehnikad
+        desc: Eespööre, sweep-pööre, tõmbepööre ja madal toetus — valda olulisi sõudmistehnikaid.
+        slug: sup-paddle-guide
+      - title: Ohutus Esimesena
+        desc: Olulised ohutuspraktikad, sealhulgas ilma kontroll, PFD kasutamine, rihmareeglid ja isepääste.
+        slug: sup-safety-guide
+  - level: Keskmine
+    color: from-blue-500 to-indigo-600
+    badge: bg-blue-100 text-blue-700
+    guides:
+      - title: Tuuri Olulised Asjad
+        desc: Mitmetunniste sõitude planeerimine — navigeerimine, hüdreerimine, tempo hoidmine ja tuuleennustuste lugemine.
+        slug: touring-sup-guide
+      - title: Ilma Lugemine
+        desc: Merennustuste tõlgendamine, pilvemustrite äratundmine ja tuule mõju vee peal mõistmine.
+        slug: weather-planning-water-sports
+      - title: Navigeerimise Alused
+        desc: Kaardi lugemine, kompassi kasutamine, GPS-i kohalepanekud ja marsruudi planeerimine rannikualadel sõudmiseks.
+        slug: sup-navigation-guide
+      - title: Tide Teadlikkus
+        desc: Vajadus mõista tõusu- ja mõõna tsüklit, hoovusi ja kuidas need mõjutavad stardi aega ja marsruuti.
+        slug: understanding-tides
+  - level: Täpsemalt
+    color: from-purple-500 to-violet-600
+    badge: bg-purple-100 text-purple-700
+    guides:
+      - title: Mitmepäevase Reisi Planeerimine
+        desc: Ekspeditsioonilogistika — varustuse valik, toidukava koostamine, ohutusprotokollid ja hädaolukorra kontaktid.
+        slug: sup-travel-guide
+      - title: Päästetehnikad
+        desc: Isepääste, T-pääste, eskimo pääste kajakite puhul ja avavee pukseerimisprotokollid.
+        slug: sup-self-rescue
+      - title: Öine Sõudmine
+        desc: Navigeerimine pärast pimedust — valgustusnõuded, marsruudi meeldejätmine, grupi suhtlus ja ohtude teadlikkus.
+        slug: sup-navigation-guide
+  - level: Hooldus
+    color: from-amber-500 to-orange-600
+    badge: bg-amber-100 text-amber-700
+    guides:
+      - title: Puhastamine ja Hooldus
+        desc: Värske vee loputus, UV kaitse, hallituse ennetamine ja õige kuivatus iga seansi järel.
+        slug: inflatable-sup-maintenance
+      - title: Hoiustamise Juhend
+        desc: Kõige paremad tavad täispuhutavate laudade ja paatide hoidmiseks — tühjendamine, kokkupanek, temperatuuri kontroll ja säilivusaeg.
+        slug: inflatable-sup-storage
+      - title: Remondi alused
+        desc: Paranda väikseid auke, õmbluste lekkesid ja ventiiliprobleeme PVC remondikomplektide ja plaastritehnikatega.
+        slug: inflatable-sup-repair
+      - title: Ventiili hooldus
+        desc: Tuvasta ventiilide tüübid (Halkey-Roberts, Boston, Leafield), puhasta praht ja asenda vigased varred.
+        slug: inflatable-sup-repair
+knowledge_center_tagline: Teadmiste keskus
+knowledge_center_title: Merevarustuse ja tööstuse juhendid
+knowledge_center_subtitle: Ekspertteadmised ja ostujuhendid mereprofessionaalidele, laevastiku operaatoritele ja veespordihuvilistele.
+knowledge_sections:
+  - title: RIB paadi teadlikkus
+    tagline: Kinnitsetega täispuhutavate paatide juhendid
+    desc: Kõik RIB paatide kohta — kere disain, materjalid, mootorivalik, hooldus ja ostunõuanded nii kommertsi kui vaba aja kasutuseks.
+    guides:
+      - title: Kuidas valida õige RIB paat
+        desc: Täielik juhend RIB valimiseks — suurus, mootori võimsus, torumaterjal, kere tüüp ja ettenähtud kasutus.
+        href: /v2/inflatable-boat-buying-guide
+      - title: RIB vs täispuhutav paat
+        desc: Kinnitusega täispuhutav paat vs traditsiooniline täispuhutav pinki paat — kere disain, jõudlus, vastupidavus ja mahutavus võrreldud.
+        href: /compare/rib-vs-dinghy
+      - title: Kommerts RIB vs meelelahutus RIB
+        desc: Kommertsklassi vs vaba aja RIB paadid — ehitusstandardid, materjalid, eluiga, hind ja sertifikaadid.
+        href: /compare/commercial-vs-recreational-rib
+      - title: Alumiinium vs klaaskiust kere
+        desc: Võrdelda alumiiniumist ja klaaskiust kerekonstruktsioone RIB paatide puhul, arvestades kaalu, hinda, vastupidavust ja korrosioonikindlust.
+        href: /compare/aluminum-vs-fiberglass
+  - title: Täispuhutavate paatide juhend
+    tagline: Täispuhutavate veesõidukite teadlikkus
+    desc: Ülevaatlikud juhendid täispuhutatavate paatide kohta — PVC vs Hypalon, ehitustehnikad, ohutusstandardid ja hooldusparimad tavad.
+    guides:
+      - title: PVC vs Hypalon materjalijuhend
+        desc: Lõplik võrdlus PVC ja Hypalon CSM kohta täispuhutatavate paatide ehitamiseks.
+        href: /compare/pvc-vs-hypalon
+      - title: Kuidas täispuhutavad paadid valmivad
+        desc: Tootmisprotsess — materjalide lõikamine, HF-keevitus, õmbluste ehitus, survekatsetus ja kvaliteedikontroll.
+        href: /learn/inflatable-technology
+      - title: Täispuhutavate paatide ohutusjuhend
+        desc: Ohutusstandardid, kandevõime, nõuetekohane täispuhumine, väljumiseelsed kontrollid ja hädaolukorra protseduurid.
+        href: /learn/water-safety
+      - title: Täispuhutavate paatide hooldus
+        desc: Täispuhutatavate paatide ja RIBs puhastamine, hoiustamine, UV kaitse, talvitamine ja remont.
+        href: /v2/inflatable-boat-maintenance
+  - title: Paadi Teadmised
+    tagline: Täispuhutav Paat & RIB Keskus
+    desc: Tehnilised juhendid, mis katavad täispuhutavate paatide tüüpe, materjale, ehitusmeetodeid, hooldust ja ohutust — alates kajutipaatidest kuni RIBs.
+    guides:
+      - title: Täispuhutavate Paatide Tüübid
+        desc: Kajutipaat, RIBs, kajakid ja abipaadid — õpi erinevusi ja vali õige.
+        href: /v2/inflatable-boat-buying-guide
+      - title: Drop-Stitch Tehnoloogia
+        desc: Kuidas tuhanded sisemised õmblused loovad jäikaid, kõrgsurves täispuhutavaid konstruktsioone.
+        href: /learn/drop-stitch-core
+      - title: Materjalide Viide
+        desc: PVC denier'i reitingud, kanga kaalud, UV vastupidavus ja meretasemel materjalid selgitatud.
+        href: /learn/materials
+      - title: RIB vs kummipaat
+        desc: Võrdle jäikaid täispuhutavaid paate traditsiooniliste täispuhutavate kajutipaatidega erinevate kasutusvõimaluste jaoks.
+        href: /compare/rib-vs-dinghy
+  - title: SUP Teadmised
+    tagline: Seistes Sõudmise Laua Juhendid
+    desc: Kõik SUP laudade kohta — täispuhutavad vs jäigad, laua mõõtmed, materjalitehnoloogia ja ekspertide nõuanded kõigile oskustasemetele.
+    guides:
+      - title: Täispuhutav vs Jäik SUP
+        desc: Võrdle iSUP-e ja jäikaid epoksiidlaudu portatiivsuse, vastupidavuse, jõudluse ja hinna osas.
+        href: /learn/sup
+      - title: SUP Laua Mõõtmete Juhend
+        desc: Kuidas pikkus, laius ja paksus mõjutavad stabiilsust, kiirust ja manööverdusvõimet.
+        href: /learn/sup
+      - title: SUP Hooldus & Kaitse
+        desc: Puhastamine, hoiustamine, UV kaitse ja remondinõuanded täispuhutavate SUP laudade jaoks.
+        href: /v2/inflatable-sup-maintenance
+      - title: Esimese SUP Valimine
+        desc: Algajate juhend õige seisulauda valimiseks vastavalt kehakaalule, oskustasemele ja planeeritud kasutusele.
+        href: /learn/sup
+  - title: Sukeldumisvarustuse Juhend
+    tagline: Kommertssukeldumise Paadi Teadmised
+    desc: Spetsialiseeritud juhendid sukeldumispaatide, sukeldumisRIBs ja varustuse kohta sukeldumiskeskustele, sukeldumisoperaatoritele ja kommerts-sukeldumismeeskondadele.
+    guides:
+      - title: Parim RIB Paat Sukeldumiskeskustele
+        desc: Kuidas valida oma sukeldumiskeskusele õige sukeldumisRIB — mahutavus, konfiguratsioon ja eelarve kaalutlused.
+        href: /solutions-diving-center-boats
+      - title: SukeldumisRIB Konfiguratsiooni Juhend
+        desc: Tähtsad funktsioonid sukeldumisRIBs — gaasiballoonide riiulid, redelisüsteemid, sukeldumislava ja varustuse hoiustamine.
+        href: /solutions-diving-center-boats
+  - title: Jahtabi Paadi Juhend
+    tagline: Superjahtide ja meresõidukite lahendused
+    desc: Juhised täiusliku jahtšooti valimiseks — hübriid-šood, RIB šood, hoiulahendused ja šoodi lisatarvikud.
+    guides:
+      - title: Kuidas valida jahti tender
+        desc: Tegurid, mida tuleks arvestada, valides oma jahti tenderiks — suurus, materjal, mootor ja hoiustamine.
+        href: /solutions-yacht-tender-solutions
+      - title: Täispuhutavad vs RIB paadid
+        desc: Võrrelge kokkupõrutatavaid paatide abipaate jäiga õhuga täispuhutavate paatide abipaadiga jõudluse, vastupidavuse ja hoiustatavuse osas.
+        href: /compare/rib-vs-dinghy
+  - title: Päästetehnika juhend
+    tagline: Otsingu- ja päästetöö veesõidukite teadmised
+    desc: Professionaalsed juhendid päästelaevade, SAR-veesõidukite ja hädaabivarustuse kohta rannavalve, päästjate ja katastroofiabimeeskondade jaoks.
+    guides:
+      - title: SAR paadi valiku juhend
+        desc: Kuidas valida õige otsingu- ja päästelaeva — kiirus, maht, vastupidavus ja spetsiaalsete seadmete nõuded.
+        href: /solutions-rescue-watercraft
+      - title: Kaubanduslik RIB päästeoperatsioonide jaoks
+        desc: Miks on kommertsliku kvaliteediga RIBs eelistatud valik professionaalsete otsingu- ja päästemeeskondade jaoks kogu maailmas.
+        href: /use-cases/search-and-rescue
+read_guide: Lugege juhendit →
+cta:
+  title: Ei ole kindel, kust alustada?
+  desc: Tee meie oskuste hindamise viktoriin, et leida oma tasemele sobivad juhendid ja varustus.
+  label: Võta meiega ühendust →
+  link: /contact

@@ -1,0 +1,381 @@
+---
+const { lang = 'pt' } = Astro.props;
+import JsonLd from '~/components/common/JsonLd.astro';
+import AiQuickAnswer from '~/components/common/AiQuickAnswer.astro';
+const t = (_key: string) => '';
+---
+
+<JsonLd
+  type="Article"
+  article={{
+    headline: 'Guia de barco inflável – o recurso completo',
+    description:
+      'Um guia completo para barcos infláveis que abrange tipos de barcos, métodos de construção, comparação de materiais, critérios de seleção, padrões de segurança e manutenção.',
+    datePublished: '2026-07-07',
+  }}
+  data={{ url: 'https://aquafarer.com/marine-industry/' }}
+/>
+
+<JsonLd
+  type="BreadcrumbList"
+  breadcrumbs={[
+    { name: t('nav.home') || 'Home', href: `/${lang}/` },
+    { name: 'Indústria marítima', href: `/${lang}/marine-industry` },
+    { name: 'Guia de barco inflável', href: `/${lang}/marine-industry/` },
+  ]}
+/>
+
+<AiQuickAnswer
+  entityType="Leitfaden"
+  quickAnswer="Um barco inflável é uma embarcação leve cujos tubos de tecido flexível (câmaras de flutuação) são preenchidos com ar comprimido para criar flutuabilidade. Os barcos infláveis modernos incluem botes, RIBs (barcos infláveis rígidos), caiaques infláveis e pranchas de stand-up paddle. São confeccionados com tecidos PVC ou Hypalon-CSM utilizando soldagem HF ou costuras coladas à mão; A construção Drop-Stitch permite pisos rígidos e de alta pressão."
+  facts={[
+    { label: 'Escopo do mercado global', value: '$2.8B (2026)' },
+    { label: 'Materiais primários', value: 'PVC / Hypalon CSM' },
+    { label: 'vida', value: '8-20+ Jahre' },
+    { label: 'Certificação CE', value: 'Erforderlich (EU)' },
+  ]}
+/>
+
+<section class="max-w-4xl mx-auto py-16 px-6">
+  <h1 class="text-4xl font-semibold text-gray-900">Guia de barco inflável</h1>
+  <p class="mt-4 text-lg text-gray-500">
+    O recurso definitivo em embarcações infláveis — desde botes recreativos até RIBs profissionais e barcos de resgate
+    especializados.
+  </p>
+
+  <nav class="mt-8 flex flex-wrap gap-2">
+    {
+      [
+        { label: 'Typen', id: 'types' },
+        { label: 'Konstruktion', id: 'construction' },
+        { label: 'Materialien', id: 'materials' },
+        { label: 'Auswahl', id: 'selection' },
+        { label: 'Sicherheit', id: 'safety' },
+        { label: 'Wartung', id: 'maintenance' },
+        { label: 'Standards', id: 'standards' },
+      ].map((s) => (
+        <a
+          href={`#${s.id}`}
+          class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition"
+        >
+          {s.label}
+        </a>
+      ))
+    }
+  </nav>
+
+  <section id="types" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Tipos de barcos infláveis</h2>
+    <div class="mt-8 grid gap-6">
+      {
+        [
+          {
+            title: 'Aufblasbare Dinghys',
+            desc: 'Kleine, tragbare Boote für Zubringerdienste, Angeln und kurze Freizeitfahrten. Typischerweise 2-4 m lang, mit kleinen Außenbordern (2-15 PS) oder Riemen angetrieben. Der günstigste Einstieg.',
+            icon: '🚤',
+          },
+          {
+            title: 'Festrumpf-Schlauchboote (RIBs)',
+            desc: 'Leistungsstarke Boote mit starrem Rumpf aus GFK, Aluminium oder HDPE und aufblasbaren Auftriebskammern. Längen von 3-12 m, Außenbordmotoren mit 15-300+ PS. Einsatz bei Patrouille, Rettung, Tauchen und Hochseefahrten.',
+            icon: '⚡',
+          },
+          {
+            title: 'Aufblasbare Kajaks',
+            desc: 'Tragbare Kajaks aus PVC- oder TPU-Gewebe. Erhältlich in Einzel- und Tandemausführung für Freizeittouren, Flussfahrten und Expeditionen.',
+            icon: '🛶',
+          },
+          {
+            title: 'Aufblasbare Stand-Up-Paddle-Boards (SUPs)',
+            desc: 'In Drop-Stitch-Konstruktion gefertigte Paddle-Boards, die sich zu starren Hochdruckdecks aufpumpen lassen. Erhältlich als Allround-, Touring-, Yoga-, Angel- und Surf-Modelle.',
+            icon: '🏄',
+          },
+          {
+            title: 'Rettungsboote (SAR)',
+            desc: 'Spezialisierte RIBs für Such- und Rettungseinsätze. Mit selbstlenzendem Boden, Mittelkonsole, Schleppösen und Signalfarben. Für den Rettungseinsatz CE-zertifiziert.',
+            icon: '🆘',
+          },
+          {
+            title: 'Kommerzielle Arbeitsboote',
+            desc: 'Robuste RIBs für Tauchunterstützung, Patrouille, Vermessung und kommerzielle maritime Einsätze. Hypalon-CSM-Konstruktion, verstärkte Rümpfe und professionelle Ausstattung.',
+            icon: '⚙️',
+          },
+        ].map((item) => (
+          <div class="flex gap-4 p-5 bg-gray-50 rounded-xl border border-gray-200">
+            <span class="text-2xl flex-shrink-0">{item.icon}</span>
+            <div>
+              <h3 class="font-semibold text-gray-900">{item.title}</h3>
+              <p class="mt-1 text-sm text-gray-600">{item.desc}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section id="construction" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Métodos de construção</h2>
+    <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Soldagem HF (alta frequência)</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Usa energia eletromagnética para fundir camadas PVC em nível molecular. Cria as costuras herméticas mais
+          fortes. Comum em barcos PVC e SUPs de alta qualidade. Requer máquinas especiais e operadores treinados.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Colagem manual/ligação química</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          O adesivo de dois componentes conecta os painéis de tecido. O método principal para barcos Hypalon-CSM (não
+          soldáveis por HF). Requer preparação precisa da superfície, umidade controlada e tempo de cura suficiente para
+          uma resistência ideal da costura.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Drop-Stitch núcleo</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Milhares de fios de poliéster conectam as camadas superior e inferior PVC, permitindo a inflação a alta
+          pressão (15-25 PSI) para um comportamento rígido da placa. A densidade do fio (15-50 fios/cm²) determina a
+          rigidez e o peso.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Soldagem a quente</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Soldagem por ar quente ou cunha quente para costuras e reforços. Comum ao produzir RIBs maiores. Menos precisa
+          que a soldagem HF, mas eficaz para tecidos Hypalon e PVC pesados.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="materials" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Comparação de materiais</h2>
+    <div class="mt-6 overflow-x-auto">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="bg-gray-50 border-b-2 border-gray-200">
+            <th class="px-4 py-3 text-left font-semibold text-gray-700">Característica</th>
+            <th class="px-4 py-3 text-center font-semibold text-sky-700">PVC</th>
+            <th class="px-4 py-3 text-center font-semibold text-emerald-700">Hypalon CSM</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            [
+              ['Relative Kosten', '$ (Budget)', '$$$ (Premium)'],
+              ['UV-Beständigkeit', 'Gut (mit Beschichtung)', 'Hervorragend (materialeigen)'],
+              ['Abriebfestigkeit', 'Mittel-Gut', 'Hervorragend'],
+              ['Chemikalienbeständigkeit', 'Gut', 'Hervorragend'],
+              ['Kälteflexibilität', 'Versteift unter 0°C', 'Flexibel bis -20°C'],
+              ['Lebensdauer', '8-12 Jahre', '15-20+ Jahre'],
+              ['Nahtmethode', 'HF-Schweißen', 'Handverklebung'],
+              ['Reparatur', 'PVC-Kleber (einfach)', '2K-Kleber (mittel)'],
+            ].map((row, i) => (
+              <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                {row.map((cell, j) => (
+                  <td
+                    class={`px-4 py-3 border-b border-gray-200 ${j === 0 ? 'font-medium text-gray-700' : 'text-center text-gray-600'}`}
+                  >
+                    {cell}
+                  </td>
+                ))}
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-4 text-sm text-gray-500">
+      O PVC (1100-1670 dtex) de nível militar moderno oferece excelente durabilidade para a maioria dos usuários
+      recreativos pela metade do custo do Hypalon. Hypalon é preferido para frotas comerciais, climas tropicais e
+      aplicações críticas de segurança.
+    </p>
+    <a
+      href={`/${lang}/learn/pvc-vs-hypalon`}
+      class="mt-4 inline-block text-sky-600 hover:text-sky-700 text-sm font-medium">Guia detalhado: PVC vs. Hypalon →</a
+    >
+  </section>
+
+  <section id="selection" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Como escolher um barco inflável</h2>
+    <div class="mt-8 grid md:grid-cols-3 gap-6">
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">1. Defina o uso pretendido</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>Tempo livre: Bote ou SUP</li>
+          <li>Potência: RIB (15-60 HP)</li>
+          <li>Comercial: RIB (100+ PS)</li>
+          <li>Fitness: inflável SUP</li>
+          <li>Viagem: caiaque inflável</li>
+        </ul>
+      </div>
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">2. Defina seu orçamento</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>$200-$800: Inflável SUP</li>
+          <li>$500-$2,000: Bote + motor</li>
+          <li>$3,000-$8,000: Nível básico RIB</li>
+          <li>$8,000-$20,000: Prêmio RIB</li>
+          <li>$20,000+: Comercial RIB</li>
+        </ul>
+      </div>
+      <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+        <h3 class="font-semibold text-gray-900">3. Considere o material</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+          <li>PVC: Barato, leve</li>
+          <li>Hypalon: Premium, duradouro</li>
+          <li>Drop-Stitch: Potência rígida</li>
+          <li>Espessura do tecido: 1100-1670 dtex</li>
+          <li>Revestimento: UV e camadas de proteção contra perfurações</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="safety" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Segurança e Padrões</h2>
+    <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Certificação CE</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Todos os barcos insufláveis vendidos na UE requerem a marcação CE de acordo com a Diretiva de Embarcações de
+          Recreio (RCD) 2013/53/EU. A certificação abrange categoria de design (AD), flutuabilidade, estabilidade e
+          capacidade de carga. Os barcos Aquafarer são certificados CE para uso recreativo e de resgate.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">padrão</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          A norma internacional para barcos infláveis especifica requisitos para materiais, costuras, válvulas e testes
+          de desempenho. Os tipos I-IV cobrem tudo, desde pequenos botes até grandes RIBs.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Equipamentos essenciais de segurança</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Coletes salva-vidas/coletes salva-vidas (CE 12402), cordas de arremesso, bomba de esgoto/extintor de incêndio,
+          luzes de navegação (noturna), rádio VHF, kit de primeiros socorros, âncora e remo sobressalente ou
+          combustível.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl border border-gray-200">
+        <h3 class="font-semibold text-gray-900">Operação segura</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          NUNCA exceda a carga máxima indicada na placa de identificação. Verifique as válvulas antes de lançar.
+          Distribua o peso uniformemente. Observe as condições climáticas. Salve um plano de viagem. Faça um curso de
+          segurança náutica.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="maintenance" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Manutenção e cuidados</h2>
+    <div class="mt-8 space-y-4 text-sm text-gray-600">
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <span class="text-sky-600 font-bold flex-shrink-0">1.</span><span
+          >Enxágue com água doce após cada uso em água salgada. Seque completamente antes de guardar.</span
+        >
+      </div>
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <span class="text-sky-600 font-bold flex-shrink-0">2.</span><span
+          >Armazenar parcialmente inflado em local fresco e seco, longe da luz solar direta e de temperaturas extremas.</span
+        >
+      </div>
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <span class="text-sky-600 font-bold flex-shrink-0">3.</span><span
+          >Verifique as válvulas e costuras antes de cada temporada. Trate os corpos das válvulas anualmente com spray
+          de silicone.</span
+        >
+      </div>
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <span class="text-sky-600 font-bold flex-shrink-0">4.</span><span
+          >Limpe com água e sabão neutro. Nunca use solventes, alvejantes ou produtos de limpeza de alta pressão no
+          tecido.</span
+        >
+      </div>
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <span class="text-sky-600 font-bold flex-shrink-0">5.</span><span
+          >Repare qualquer dano imediatamente usando kits de reparo recomendados pelo fabricante. Para Hypalon use
+          apenas adesivo de dois componentes.</span
+        >
+      </div>
+      <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+        <span class="text-sky-600 font-bold flex-shrink-0">6.</span><span
+          >Substitua as válvulas a cada 3-5 anos. Renovar o tecido no final da sua vida útil (desgaste visível,
+          porosidade, separação de costuras).</span
+        >
+      </div>
+    </div>
+  </section>
+
+  <section id="standards" class="mt-16">
+    <h2 class="text-2xl font-semibold text-gray-900">Aplicações industriais</h2>
+    <div class="mt-8 grid md:grid-cols-3 gap-4">
+      {
+        [
+          {
+            title: 'Freizeitbootfahren',
+            desc: 'Familienausflüge, Wassersport, Angeln, Camping und Freizeitfahrten auf Seen, Flüssen und Küstengewässern.',
+          },
+          {
+            title: 'Suche & Rettung',
+            desc: 'Küstenwache, Rettungsschwimmer und Notfallteams setzen spezialisierte RIBs für schnellen Einsatz und Rettung in rauer See ein.',
+          },
+          {
+            title: 'Kommerzielle Schifffahrt',
+            desc: 'Tauchunterstützung, Patrouille, Vermessung, Touristentransport und Offshore-Logistik, bei denen Haltbarkeit und Zuverlässigkeit entscheidend sind.',
+          },
+          {
+            title: 'Militär & Verteidigung',
+            desc: 'Taktische RIBs für Marineoperationen, Truppentransport, Entereinsätze und verdeckte Landungen.',
+          },
+          {
+            title: 'Humanitäre Hilfe',
+            desc: 'Katastrophenschutzorganisationen setzen aufblasbare Boote für Hochwasserrettung, Versorgungstransporte und medizinische Evakuierungen ein.',
+          },
+          {
+            title: 'OEM-Fertigung',
+            desc: 'Individuelle Private-Label-Produktion für Marken, Händler und spezialisierte Betreiber mit besonderen Anforderungen.',
+          },
+        ].map((app) => (
+          <div class="p-4 bg-gray-50 rounded-xl border border-gray-200">
+            <h3 class="font-semibold text-sm text-gray-900">{app.title}</h3>
+            <p class="mt-1 text-xs text-gray-500">{app.desc}</p>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="mt-16 bg-gradient-to-br from-sky-50 to-blue-50 rounded-2xl p-8 border border-sky-200">
+    <h2 class="text-xl font-semibold text-gray-900">Descubra os barcos infláveis de Aquafarer</h2>
+    <p class="mt-4 text-sm text-gray-600">
+      Aquafarer projeta e fabrica barcos infláveis, SUPs, caiaques e RIBs com certificação CE para os mercados
+      recreativos, profissionais e OEM. Todos os barcos são fabricados com tecidos PVC ou Hypalon-CSM de nível militar -
+      usando soldagem HF moderna ou colagem manual.
+    </p>
+    <div class="mt-6 flex gap-4 flex-wrap">
+      <a
+        href={`/${lang}/products`}
+        class="px-6 py-3 bg-gray-900 text-white rounded-full text-sm font-medium hover:bg-gray-800 transition"
+        >Ver produtos</a
+      >
+      <a
+        href={`/${lang}/academy`}
+        class="px-6 py-3 border border-gray-200 text-gray-700 rounded-full text-sm font-medium hover:border-gray-400 transition"
+        >Centro de aprendizagem</a
+      >
+    </div>
+  </section>
+</section>
+
+<section class="sr-only" data-ai-block="definition" aria-hidden="true">
+  <p>
+    Guia completo para barcos infláveis com tipos de barcos (botes, RIBs, caiaques, SUPs, botes salva-vidas, barcos de
+    trabalho comerciais), métodos de construção (soldagem HF, colagem manual, núcleo Drop-Stitch, soldagem a quente),
+    materiais (tecido PVC, Hypalon CSM), critérios de seleção (uso pretendido, orçamento, comparação de materiais),
+    padrões de segurança (certificação CE, equipamentos essenciais), manutenção (limpeza, armazenamento, reparos,
+    cuidados com válvulas) e aplicações industriais (recreativo, SAR, comercial, militar, humanitário, OEM).
+  </p>
+</section>

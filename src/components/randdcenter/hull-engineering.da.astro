@@ -1,0 +1,172 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'da' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">← Tilbage til R&amp;D Center</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Lab 02</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Hull Engineering Studio</h1>
+      <p class="mt-3 text-lg text-muted">Digital simulering, strukturel intelligens, tilpasset skrogdesign</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/factory/design discussaquafarer-inflatable-boat-aquafarer-factory-exterior.webp"
+        alt="Aquafarer skrogkonstruktion CAD-design arbejdsstation"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Hvor styrke møder hydrodynamik</h2>
+  <p>
+    Skroget er rygraden i enhver RIB eller gummibåd. Den skal være let nok til at høvle effektivt, stærk nok til at
+    absorbere stødbelastninger og dimensionsstabil over et bredt temperaturområde. På {SITE.name}, kombinerer vores Hull
+    Engineering Studio avanceret CAD-modellering, finite element-analyse (FEA) og årtiers praktisk
+    marinearkitekturerfaring for at levere skrog, der er optimeret til deres tilsigtede mission - ikke generiske former
+    tilpasset fra et katalog.
+  </p>
+  <p>
+    Vi arbejder med tre primære skrogmaterialer - rotationsstøbt HDPE, svejset aluminium af marinekvalitet og håndlagt
+    glasfiber - og har den tekniske kapacitet til at designe, simulere og validere hver enkelt internt.
+  </p>
+
+  <h2>Designværktøjer og standarder</h2>
+  <p>Vores digitale ingeniørmiljø omfatter:</p>
+  <table>
+    <thead><tr><th>Evne</th><th>Software / Værktøj</th><th>Anvendelse</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>3D parametrisk modellering</td><td>SolidWorks Professional</td><td
+          >Skrogoverflade, stringer-system, motorbeslag, dæklayout</td
+        ></tr
+      >
+      <tr
+        ><td>Finite element analyse</td><td>ANSYS Mekanisk &amp; LS-DYNA</td><td
+          >Stress kortlægning, modal analyse, crash/påvirkning simulering</td
+        ></tr
+      >
+      <tr
+        ><td>Computational fluid dynamics</td><td>Ansys Fluent / Star-CCM+</td><td
+          >Hydrodynamisk modstandsforudsigelse, trimoptimering</td
+        ></tr
+      >
+      <tr><td>Laminatteknik</td><td>ESAComp / CADEC</td><td>Glasfiberlagstabling, kernevalg, vægtestimering</td></tr>
+      <tr
+        ><td>Simulering af skimmelsvamp</td><td>Moldex3D</td><td>Forudsigelse af rotationsstøbning af vægtykkelse</td
+        ></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>Vores tekniske arbejdsgang</h2>
+  <p>
+    Hvert skrogdesign, uanset om det er en standardmodel eller et fuldt skræddersyet projekt, følger en streng fem-trins
+    proces:
+  </p>
+  <ol>
+    <li>
+      <strong>Indsamling af koncept og krav</strong> — Vi mødes med dig for at definere nyttelast, hastighedskonvolut, søtilstandskapacitet,
+      bugseringskrav og alt specielt missionsudstyr (dæksluger, konsolpositioner, brændstoftankintegration).
+    </li>
+    <li>
+      <strong>3D overfladebehandling og hydrostatisk beregning</strong> — Skrogformen er modelleret i SolidWorks og kontrolleret
+      for hydrostatisk stabilitet (GM, oprettende arm) ved hjælp af indbyggede analyseværktøjer.
+    </li>
+    <li>
+      <strong>Strukturel FEA</strong> — Belastningstilfælde er defineret: statisk (besætning + gear), dynamisk (planende stød
+      ved 5 g) og smække (fald fra en bølgetop ved 3 m/s). Stresskonturer gennemgås; sikkerhedsfaktor ≥ 2.5 er obligatorisk.
+    </li>
+    <li>
+      <strong>CFD træk optimering</strong> — Skroget simuleres ved tre lasteforhold og fem hastigheder. Befugtet overfladeareal,
+      trimningsvinkel og resterende modstand reduceres iterativt.
+    </li>
+    <li>
+      <strong>Designgennemgang og udgivelse</strong> — Den komplette ingeniørpakke (3D-model, FEA-rapport, CFD-rapport, vægtestimat,
+      lagbog) gennemgås af vores senior flådearkitekt før frigivelse til prototypeværkstedet.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      FEA Stress Distribution — RIB 450 Patruljeskrog (Aluminium 5083)
+    </p>
+    <div class="grid grid-cols-2 gap-4 text-sm">
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">2.8 : 1</span>
+        <span class="text-gray-500">Sikkerhedsfaktor ved max nyttelast</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">15.2 %</span>
+        <span class="text-gray-500">Træk reduktion i forhold til tidligere generation</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">87 kN/m&sup2;</span>
+        <span class="text-gray-500">Maksimalt smækketryk (designgrænse)</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950">
+        <span class="block text-2xl font-bold text-blue-600">18 000 h</span>
+        <span class="text-gray-500">Kumulativ FEA-kørselstid i 2025</span>
+      </div>
+    </div>
+  </div>
+
+  <h2>Tilpasning: dit skrog, dine regler</h2>
+  <p>
+    Ikke to operatører har identiske krav. En havnepatrulje RIB har brug for et lavvandet V-skrog for stabilitet ved lav
+    hastighed; et hurtigt aflytningsfartøj har brug for et dybt V med sprøjteskinner; en dykkestøttebåd har brug for en
+    bred stråle og en lav agterspejl. Vi tvinger ikke din ansøgning til en allerede eksisterende skrogform. Vi designer
+    fra din specifikation og opefter.
+  </p>
+  <p>Eksempler på nyere specialdesignede skrogkonstruktionsprojekter:</p>
+  <ul>
+    <li>
+      Et strakt 6.8 m HDPE-skrog til en caribisk rejsearrangør, med en forstærket stævn til strandlandinger (+15 %
+      bundtykkelse).
+    </li>
+    <li>
+      En letvægts aluminium 7.2 m RIB til en kystvagt, med integrerede brændstoftankplader og udstyrsskabsafstivninger.
+    </li>
+    <li>
+      En 5.5 m dykkerbåd af glasfiber med en nedskæret agterspejl og dobbelte batteribokse, designet til nem snorkeling
+      ombord.
+    </li>
+  </ul>
+
+  <h2>Vores ingeniører</h2>
+  <p>
+    Studiet ledes af en senior flådearkitekt med 14 års erfaring i højhastigheds håndværksdesign, støttet af to
+    mekaniske ingeniører specialiseret i FEA og CFD. Alle tre har avancerede grader i havteknik eller marinearkitektur
+    fra internationalt anerkendte universiteter. Holdet udgiver regelmæssigt i branchetidsskrifter og præsenterer på
+    konferencer såsom den internationale konference om højtydende marinekøretøjer.
+  </p>
+
+  <h2>Partner med os på dit næste skrog</h2>
+  <p>
+    Fra den første konceptskitse til den endelige stressrapport er vores Hull Engineering Studio din partner i at skabe
+    en båd, der ikke bare er bygget - men konstrueret. Vi investerer simuleringstimerne på forhånd, så hver svejsning,
+    hvert laminatlag og hver kurve i skroget er der af en grund.
+  </p>
+  <p>
+    Uanset om du har brug for en mindre ændring af en eksisterende model eller et helt rent ark design, er vi klar til
+    at drøfte dine krav.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Start din rådgivning om skrogdesign</h2>
+    <p class="mt-2 text-sm text-muted">Fortæl os om din missionsprofil, og vi vil foreslå en ingeniørvej.</p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Kontakt vores ingeniørteam</a
+    >
+  </div>
+</section>

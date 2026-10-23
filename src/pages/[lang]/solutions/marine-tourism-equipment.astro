@@ -1,0 +1,112 @@
+---
+export const prerender = true;
+
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+import { getPageContent, setPageContentData } from '~/i18n/page-content';
+import __pageData from '~/i18n/generated/pages/solutions-marine-tourism-equipment.ts';
+import { localizePageTitle } from '~/i18n/page-title';
+import { languages } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => getUiForLang(lang)?.[key] || '';
+setPageContentData(__pageData);
+const page = getPageContent(lang, 'solutions-marine-tourism-equipment');
+
+const hero = page.hero ?? {};
+const stats = page.stats ?? {};
+const challenge = page.content_challenge ?? {};
+const solution = page.content_solution ?? {};
+const segments = page.content_segments ?? {};
+const benefits = page.content_benefits ?? {};
+const cta = page.cta ?? {};
+const lh = (h: string) => (h ? `/${lang}${h}` : h);
+const ctaActions = cta.actions?.map((a: any) => ({ ...a, href: lh(a.href) }));
+
+const metadata = {
+  title: localizePageTitle(page, `Marine Tourism Equipment — ${SITE.name} | Resort & Rental Fleet Solutions`),
+  description:
+    'Fleet-ready inflatable boats, SUP boards, and kayaks for resorts, tour operators, and rental businesses. Durable, consistent, custom-branded.',
+};
+const crumbs = [
+  { name: t('nav.home') || 'Home', href: `/${lang}/` },
+  { name: 'Solutions', href: `/${lang}/solutions/` },
+  { name: 'Marine Tourism' },
+];
+
+const faqSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What equipment does marine tourism need?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'SUP boards for excursions, kayaks for guided tours, and RIB tenders for transport. Durable commercial-grade with consistent branding.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can branding be customized for tourism operators?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Full branding on tubes, deck pads, and packaging for resort and tourism operators.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the lead time?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: '30-45 days FOB Qingdao for standard branded orders. Plan 60-90 days ahead for peak season delivery.',
+      },
+    },
+  ],
+});
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <Hero tagline={hero.tagline} image={hero.image} title={hero.title} subtitle={hero.subtitle} />
+  <Stats title={stats.title} stats={stats.stats} />
+  <Content
+    tagline={challenge.tagline}
+    title={challenge.title}
+    subtitle={challenge.subtitle}
+    content={challenge.paragraphs?.join('\n\n')}
+  />
+  <Content
+    tagline={solution.tagline}
+    title={solution.title}
+    subtitle={solution.subtitle}
+    content={solution.list?.map((i: string) => `- ${i}`).join('\n')}
+  />
+  <Content
+    tagline={segments.tagline}
+    title={segments.title}
+    subtitle={segments.subtitle}
+    content={segments.items
+      ?.map(
+        (i: any) =>
+          `**${i.title}:** ${i.subtitle}\n\n${i.description}\n\nFeatures:\n${i.features?.map((f: string) => `- ${f}`).join('\n')}`
+      )
+      .join('\n\n')}
+  />
+  <Content
+    tagline={benefits.tagline}
+    title={benefits.title}
+    subtitle={benefits.subtitle}
+    content={benefits.list?.map((i: string) => `- ${i}`).join('\n')}
+  />
+  <CallToAction title={cta.title} subtitle={cta.subtitle} actions={ctaActions} />
+  <script is:inline type="application/ld+json" set:html={faqSchema} />
+</Layout>

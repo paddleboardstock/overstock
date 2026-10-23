@@ -1,0 +1,128 @@
+---
+export const prerender = true;
+
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+import { getPageContent, setPageContentData } from '~/i18n/page-content';
+import __pageData from '~/i18n/generated/pages/trust.ts';
+import { localizePageTitle, localizePageDescription } from '~/i18n/page-title';
+import { languages } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => getUiForLang(lang)?.[key] || '';
+setPageContentData(__pageData);
+const page = getPageContent(lang, 'trust');
+
+const hero = page.hero ?? {};
+const stats = page.stats ?? {};
+const certs = page.features3_certifications ?? {};
+const lab = page.features3_lab ?? {};
+const testimonials = page.testimonials ?? {};
+const steps = page.steps2_manufacturing ?? {};
+const faqs = page.faqs ?? {};
+const cta = page.cta ?? {};
+
+const metadata = {
+  title: localizePageTitle(page, `Trust ${SITE.name} — Certifications, Quality & Global Standards`),
+  description: localizePageDescription(
+    page,
+    `${SITE.name} products are CE certified. Learn about our quality testing, material compliance, and the standards behind every product.`
+  ),
+};
+const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: 'Trust' }];
+
+const faqSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What certifications does Aquafarer hold?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'ISO 9001:2015 (SGS), CE per 2013/53/EU, BSCI social audit, REACH compliance, UKCA marking. 64 CE-certified models across 5 product categories.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is Aquafarer ISO 9001 certified?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. ISO 9001:2015 quality management system certified by SGS.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is BSCI compliance?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'amfori Business Social Compliance Initiative audit — verifying ethical manufacturing, fair labor practices, and workplace safety.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the defect-free rate?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: '99.3% defect-free rate per AQL 2.5 / ISO 2859.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I request factory audit documentation?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. ISO certificates, BSCI audit reports, and CE Declarations of Conformity are available upon request.',
+      },
+    },
+  ],
+});
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <Hero tagline={hero.tagline} image={hero.image} title={hero.title} subtitle={hero.subtitle} />
+
+  <Stats title={stats.title} stats={stats.stats} />
+
+  <Features3
+    title={certs.title}
+    subtitle={certs.subtitle}
+    columns={certs.columns}
+    isBeforeContent={certs.isBeforeContent}
+    items={certs.items}
+  />
+
+  <Features3
+    title={lab.title}
+    subtitle={lab.subtitle}
+    columns={lab.columns}
+    isBeforeContent={lab.isBeforeContent}
+    items={lab.items}
+  />
+
+  <Testimonials
+    tagline={testimonials.tagline}
+    title={testimonials.title}
+    subtitle={testimonials.subtitle}
+    testimonials={testimonials.items}
+  />
+
+  <Steps2 title={steps.title} subtitle={steps.subtitle} items={steps.items} />
+
+  <FAQs title={faqs.title} subtitle={faqs.subtitle} columns={faqs.columns} items={faqs.items} />
+
+  <CallToAction title={cta.title} subtitle={cta.subtitle} actions={cta.actions} />
+  <script is:inline type="application/ld+json" set:html={faqSchema} />
+</Layout>

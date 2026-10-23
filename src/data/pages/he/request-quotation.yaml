@@ -1,0 +1,306 @@
+hero_text:
+  tagline: קבל הצעת מחיר
+  title: בקש הצעת מחיר<br />לפרויקט שלך
+  subtitle: ספר לנו על הדרישות שלך והצוות שלנו יגיב עם הצעת מחיר מפורטת תוך 2 ימי עסקים.
+steps2_process:
+  title: איך זה עובד
+  subtitle: ארבעה צעדים פשוטים מהפנייה להצעת מחיר.
+  items:
+    - title: 'שלב 1: שלח את הדרישות שלך'
+      description: מלא את הטופס למטה עם סוג המוצר, הכמות והמפרט. ככל שתספק יותר פרטים, כך הצעת המחיר תהיה מדויקת יותר.
+      icon: tabler:file-text
+    - title: 'שלב 2: אנו בודקים ומייעצים'
+      description: צוות ההנדסה שלנו בודק את הדרישות שלך ועלול ליצור איתך קשר להבהרות. אנו מספקים המלצות על תצורת המוצר ואפשרויות.
+      icon: tabler:users
+    - title: 'שלב 3: קבל את הצעת המחיר שלך'
+      description: תקבל הצעת מחיר מפורטת הכוללת תמחור ליחידה, MOQ, זמן אספקה, תנאי תשלום ואפשרויות משלוח. בדרך כלל בתוך 48 שעות.
+      icon: tabler:currency-dollar
+    - title: 'שלב 4: דוגמה וייצור'
+      description: לאחר קבלת הצעת המחיר, נתקדם לייצור דוגמה (אם יש) או ישירות לייצור המוני. עדכונים שוטפים לאורך כל התהליך.
+      icon: tabler:building-factory
+content_form:
+  tagline: טופס הצעת מחיר
+  title: ספר לנו על הפרויקט שלך
+  subtitle: כל השדות עם * הם חובה.
+  fields:
+    - name: קטגוריית מוצרים
+      type: select
+      options:
+        - RIB סירה
+        - סירה מתנפחת
+        - SUP לוח
+        - קיאק מתנפח
+        - אפוד הצלה
+        - אביזר ימי
+        - מותאם אישית OEM/ODM
+    - name: יישום
+      type: select
+      options:
+        - מרכז צלילה
+        - דַיִג
+        - תיירות ימית / נופש
+        - חיפוש והצלה
+        - יאכטה טנדר
+        - סירה מסחרית
+        - ממשלתי / צבאי
+        - OEM / מותג פרטי
+        - פרטי / לשימוש פנאי
+        - אחר
+    - name: כמות
+      type: text
+      placeholder: למשל 50 יחידות
+    - name: שוק יעד
+      type: text
+      placeholder: למשל אירופה, צפון אמריקה, המזרח התיכון
+    - name: מדינת מסירה
+      type: text
+      placeholder: למשל איטליה, איחוד אמירויות, ארצות הברית, אוסטרליה
+    - name: עדיפות חומר
+      type: select
+      options:
+        - ללא העדפה
+        - PVC בדרגת ימית (1100 dtex)
+        - Hypalon / CSM פרימיום
+        - גוף פיברגלס
+        - גוף אלומיניום
+    - name: דרישת מנוע
+      type: text
+      placeholder: למשל 60 HP חוץ-בכיר, ללא מנוע, זוג 115 HP
+    - name: נדרשת התאמה אישית
+      type: text
+      placeholder: למשל צבעים מותאמים אישית, מיתוג / לוגו, אריזה, אבזרים מיוחדים
+    - name: לוח זמנים
+      type: text
+      placeholder: למשל מסירה תוך 90 יום
+    - name: דרישות נוספות
+      type: textarea
+      placeholder: תאר את היישום שלך, מפרט טכני או כל דרישה מיוחדת — כולל שרטוטי הפנייה, מפרט או קישורים אם זמינים
+    - name: העלה מפרט
+      type: file
+      placeholder: העלה את גיליון המפרט, שרטוט או מסמך הפניה (PDF, DWG, DXF)
+    - name: העלה לוגו / גרפיקה
+      type: file
+      placeholder: העלה את הלוגו או הגרפיקה שלך למיתוג מותאם אישית (AI, EPS, PNG)
+content_rfq_types:
+  tagline: מערכת בקשות הצעת מחיר ב-3 רמות
+  title: בחר את<br />רמת הפנייה הנכונה
+  subtitle: פרויקטים שונים דורשים רמות פירוט שונות. בחר את הטופס שמתאים לשלב הרכישה שלך.
+  items:
+    - title: פנייה מהירה
+      description: 5-6 שדות, 30 שניות. למגע ראשוני, שאלות כלליות, או מעקב אחרי הורדת משאבים. אנו מגיבים תוך 24 שעות עם מידע בסיסי ושלבים הבאים.
+      icon: tabler:bolt
+    - title: בקשת הצעת מחיר סטנדרטית
+      description: 8-10 שדות, 2 דקות. לקבלת הצעת מחיר למוצר ספציפי עם בחירת דגם, כמות ודרישות משלוח. קבל הצעת מחיר מפורטת תוך 48 שעות.
+      icon: tabler:file-text
+    - title: בקשת הצעת מחיר לפרויקט
+      description: 10-14 שדות, 5 דקות. לפרויקטים של RIB, צי ריזורט, חילוץ או פרויקטים ממשלתיים הדורשים תצורה מותאמת אישית, תיעוד תאימות ותכנון אספקה רב-שנתי. ממונה מנהל פרויקט ייעודי.
+      icon: tabler:clipboard-list
+form_quick:
+  title: פנייה מהירה
+  subtitle: יצירת קשר מהירה לשאלות כלליות ובקשות מידע ראשוניות.
+  fields:
+    - name: fullName
+      label: שם מלא
+      type: text
+      required: true
+      placeholder: שמך המלא
+    - name: businessEmail
+      label: דוא"ל עסקי
+      type: email
+      required: true
+      placeholder: you@company.com
+    - name: companyName
+      label: שם חברה
+      type: text
+      required: true
+      placeholder: החברה שלך
+    - name: buyerType
+      label: אני...
+      type: select
+      required: true
+      options:
+        - מפיץ / מייבא
+        - בעל מותג / תווית פרטית
+        - ריזורט / מרכז מים
+        - מפעיל השכרה
+        - סוכנות ממשלתית / חילוץ
+        - מפעיל צלילה / דיג
+        - מהנדס ימי / משדרג
+        - אחר
+    - name: productInterest
+      label: עניין במוצר
+      type: multiselect
+      required: true
+      options:
+        - RIB סירות
+        - סירות מתנפחות
+        - SUP לוחות
+        - ציוד בטיחות
+        - אביזרים
+        - OEM/ODM מנהג
+    - name: message
+      label: מה אתה צריך?
+      type: textarea
+      required: false
+      placeholder: תיאור קצר של הדרישות שלך...
+form_standard:
+  title: בקשת הצעת מחיר סטנדרטית
+  subtitle: בקשת הצעת מחיר מפורטת עבור מוצרים וכמויות ספציפיות.
+  fields:
+    - name: fullName
+      label: שם מלא
+      type: text
+      required: true
+    - name: businessEmail
+      label: דוא"ל עסקי
+      type: email
+      required: true
+    - name: companyName
+      label: שם חברה
+      type: text
+      required: true
+    - name: buyerType
+      label: סוג קונה
+      type: select
+      required: true
+    - name: מוצרמודל
+      label: מודל / סוג מוצר
+      type: text
+      required: true
+      placeholder: לדוגמה, AF580RIB, AF380 מתנפח
+    - name: quantity
+      label: כמות מוערכת
+      type: text
+      required: true
+      placeholder: לדוגמה, 10-20 יחידות
+    - name: שוק היעדים
+      label: שוק יעד / אזור
+      type: text
+      required: true
+      placeholder: למשל, האיחוד האירופי, צפון אמריקה, המזרח התיכון
+    - name: ציר הזמן של משלוח
+      label: המשלוח הרצוי
+      type: select
+      required: true
+      options:
+        - בתוך 30 יום
+        - 30-60 ימים
+        - 60-90 ימים
+        - תכנון מראש (90+ יום)
+        - רק מחקר
+    - name: ציות נדרש
+      label: דרישות עמידה בדרישות
+      type: multiselect
+      required: false
+      options:
+        - CE / RCD 2013/53/האיחוד האירופי
+        - UKCA
+        - USCG
+        - ISO 9001
+        - BSCI
+        - REACH
+        - אין / לא בטוח
+    - name: message
+      label: פרטים נוספים
+      type: textarea
+      required: false
+form_project:
+  title: בקשת הצעת מחיר לפרויקט
+  subtitle: בירור פרויקט מקיף עבור צי, רכישה מותאמת אישית או רכש ממשלתי.
+  fields:
+    - name: fullName
+      label: שם מלא
+      type: text
+      required: true
+    - name: businessEmail
+      label: דוא"ל עסקי
+      type: email
+      required: true
+    - name: companyName
+      label: שם חברה
+      type: text
+      required: true
+    - name: buyerType
+      label: סוג קונה
+      type: select
+      required: true
+    - name: projectType
+      label: סוג פרויקט
+      type: select
+      required: true
+      options:
+        - צי נופש / מלון
+        - צי השכרה
+        - צי חילוץ / סיור
+        - צי מרכז צלילה
+        - רכש ממשלתי
+        - מותג פרטי / OEM
+        - הזמנת מלאי סוכן
+        - אחר
+    - name: boatTypes
+      label: סוגי סירות נדרשים
+      type: multiselect
+      required: true
+      options:
+        - RIB סירות
+        - סירות מתנפחות / סירות שטח
+        - SUP לוחות
+        - קיאקים
+        - ציוד בטיחות
+    - name: fleetSize
+      label: גודל הצי / טווח כמות
+      type: text
+      required: true
+      placeholder: למשל, 20-50 יחידות במשך 12 חודשים
+    - name: customRequirements
+      label: צרכים למבנה מותאם אישית
+      type: textarea
+      required: false
+      placeholder: גודל גוף הסירה, חומר הצינור, פריסת הסיפון, דרישות מיתוג...
+    - name: ציות נדרש
+      label: דרישות תאימות ותעודה
+      type: multiselect
+      required: true
+      options:
+        - CE / RCD 2013/53/האיחוד האירופי
+        - UKCA
+        - USCG סוג III/V
+        - ISO 9001
+        - BSCI
+        - REACH / RoHS
+        - תעודת שוק מקומית
+    - name: שוק היעדים
+      label: שוק יעד
+      type: text
+      required: true
+    - name: טווח תקציב
+      label: טווח תקציב
+      type: select
+      required: false
+      options:
+        - מתחת ל-10,000$
+        - $10,000 - $50,000
+        - $50,000 - $200,000
+        - $200,000+
+        - מעדיף לא לומר
+    - name: ציר הזמן של משלוח
+      label: לוח זמנים לפרויקט
+      type: select
+      required: true
+      options:
+        - דחוף (בתוך 30 יום)
+        - סטנדרטי (30-60 יום)
+        - מתוכנן (60-90 יום)
+        - תכנון עתידי (מעל 90 ימים)
+    - name: message
+      label: פרטי דרישות לפרויקט
+      type: textarea
+      required: false
+      placeholder: תאר את הפרויקט שלך, אפליקציה, וכל דרישות ספציפיות...
+cta:
+  title: מעדיף לדון במייל?
+  subtitle: שלח את בקשתך ישירות לצוות המכירות שלנו ונענה תוך 24 שעות.
+  actions:
+    - variant: primary
+      text: שלח לנו מייל ישירות
+      href: /contact

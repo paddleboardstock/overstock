@@ -1,0 +1,178 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+
+const metadata = {
+  title: 'Inflatable SUP vs Kayak — Which One Is Right for You?',
+  description:
+    'Compare inflatable stand-up paddle boards and kayaks across stability, speed, storage, learning curve, and use cases. Find the right watercraft for your needs.',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <JsonLd
+    type="Article"
+    article={{
+      headline: 'Inflatable SUP vs Kayak — Which One Is Right for You?',
+      description:
+        'Compare inflatable stand-up paddle boards and kayaks across stability, speed, storage, learning curve, and use cases. Find the right watercraft for your needs.',
+      datePublished: '2026-07-06',
+    }}
+    data={{ url: 'https://aquafarer.com/compare/sup-vs-kayak' }}
+  />
+  <JsonLd
+    type="BreadcrumbList"
+    breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Compare', href: '/compare' }, { name: 'SUP vs Kayak' }]}
+  />
+  <section class="max-w-4xl mx-auto py-24 px-6">
+    <a href="/products" class="text-sm text-sky-600 hover:text-sky-700">&larr; Products</a>
+    <h1 class="mt-4 text-4xl font-semibold text-gray-900">Inflatable SUP vs Kayak</h1>
+    <p class="mt-4 text-lg text-gray-500">
+      A practical comparison to help you choose the right inflatable watercraft for your lifestyle, skill level, and
+      budget.
+    </p>
+
+    <div class="mt-12 grid md:grid-cols-2 gap-8">
+      <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+        <h2 class="text-xl font-semibold text-gray-900">Inflatable SUP</h2>
+        <ul class="mt-4 space-y-3 text-sm text-gray-600">
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span
+              ><strong>Stability:</strong> Wide deck (32"+) provides excellent primary stability. Better for yoga, fishing,
+              photography.</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span
+              ><strong>Speed:</strong> Faster on flat water. Touring boards (12'6"+) can cover 3-5 mph cruising speed.</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span
+              ><strong>Storage:</strong> Deflates to backpack size. Fits in car trunk, closet, or checked luggage.</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span
+              ><strong>Learning:</strong> Easy to learn standing balance. Most beginners stand up within the first session.</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span
+              ><strong>Best for:</strong> Fitness paddling, touring, yoga, fishing, surf, whitewater, family recreation.</span
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+        <h2 class="text-xl font-semibold text-gray-900">Inflatable Kayak</h2>
+        <ul class="mt-4 space-y-3 text-sm text-gray-600">
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span
+              ><strong>Stability:</strong> Seated position gives lower center of gravity. Less likely to tip. Better for rough
+              water.</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span
+              ><strong>Speed:</strong> Slower than SUP on flat water. Longer touring kayaks can match SUP speed with less
+              effort.</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span
+              ><strong>Storage:</strong> Also deflates compactly. Tandem kayaks take slightly more packed volume than solo
+              boards.</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span
+              ><strong>Learning:</strong> Intuitive seated position. Minimal balance required. Quickest path to paddling on
+              open water.</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span
+              ><strong>Best for:</strong> River touring, lake camping, tandem paddling, expedition travel, fishing, families
+              with children.</span
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="mt-16">
+      <h2 class="text-2xl font-semibold text-gray-900">Quick Decision Guide</h2>
+      <div class="mt-6 overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="bg-gray-50 border-b-2 border-gray-200">
+              <th class="px-4 py-3 text-left font-semibold text-gray-700">Factor</th>
+              <th class="px-4 py-3 text-center font-semibold text-sky-700">SUP</th>
+              <th class="px-4 py-3 text-center font-semibold text-emerald-700">Kayak</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              [
+                ['Learning Curve', 'Moderate (standing balance)', 'Easy (seated)'],
+                ['Stability', 'Good on flat water', 'Excellent in all conditions'],
+                ['Speed', 'Fast (touring mode)', 'Moderate (recreational)'],
+                ['Portability', 'Excellent (backpack size)', 'Very good (duffel size)'],
+                ['Storage Capacity', 'Limited (deck only)', 'Good (cockpit + hatches)'],
+                ['Wind Resistance', 'Vulnerable (standing) (standing)', 'Low profile (seated)'],
+                ['Family Friendly', 'SUP + Yak board combo', 'Tandem kayaks for 2'],
+                ['Fitness Value', 'High (full body balance)', 'Moderate (upper body)'],
+                ['Price Range (entry)', '$200-$500', '$150-$400'],
+              ].map((row, i) => (
+                <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                  {row.map((cell, j) => (
+                    <td
+                      class={`px-4 py-3 border-b border-gray-200 ${j === 0 ? 'font-medium text-gray-700' : 'text-center text-gray-600'}`}
+                    >
+                      {cell}
+                    </td>
+                  ))}
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mt-16 bg-gradient-to-br from-sky-50 to-blue-50 rounded-2xl p-8 border border-sky-200">
+      <h2 class="text-xl font-semibold text-gray-900">Which Should You Choose?</h2>
+      <p class="mt-4 text-gray-600 text-sm leading-relaxed">
+        Choose a <strong>SUP</strong> if you want a full-body workout, enjoy standing paddling on calm waters, and value maximum
+        portability. Choose a <strong>kayak</strong> if you prefer seated paddling, plan to tackle rivers or open water, or
+        need a family-friendly tandem option. Many paddlers own both — SUP for fitness and flat days, kayak for touring and
+        rougher conditions.
+      </p>
+      <div class="mt-6 flex gap-4 flex-wrap">
+        <a
+          href="/products"
+          class="px-6 py-3 bg-gray-900 text-white rounded-full text-sm font-medium hover:bg-gray-800 transition"
+          >Browse Products</a
+        >
+        <a
+          href="/guides"
+          class="px-6 py-3 border border-gray-200 text-gray-700 rounded-full text-sm font-medium hover:border-gray-400 transition"
+          >Read Guides</a
+        >
+      </div>
+    </section>
+  </section>
+
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true">
+    <p>
+      Comprehensive comparison between inflatable stand-up paddle boards (iSUPs) and inflatable kayaks. Covers
+      stability, speed, storage, learning curve, portability, wind resistance, fitness value, family suitability, and
+      price range. Inflatable SUPs offer better speed and portability, standing position for fitness, and wide stability
+      for yoga/fishing. Inflatable kayaks offer easier seated paddling, better wind resistance, tandem options, and
+      greater storage capacity. Decision guide recommends SUP for fitness/touring/flat water, kayak for
+      rivers/tandem/rough conditions.
+    </p>
+  </section>
+</Layout>

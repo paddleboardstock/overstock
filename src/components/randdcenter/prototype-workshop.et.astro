@@ -1,0 +1,197 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'et' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">&larr; Tagasi AR-keskusesse</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Labor 05</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Prototüüpide töötuba</h1>
+      <p class="mt-3 text-lg text-muted">CAD-mudelist merevalmis paadini — ehitatud, paigaldatud ja testitud</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-ocean-voyager-1.webp"
+        alt="Aquafarer prototüüpi töökoja paadi valmistamine"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Kus disain muutub reaalsuseks</h2>
+  <p>
+    CAD-mudel, ükskõik kui detailselt see on tehtud, ei suuda näidata, kuidas paat tegelikult vee peal käitub, kuni see
+    veega kokku puutub. Sellepärast on meie prototüübivabrik loodud selleks, et muuta insenerandmed füüsiliseks,
+    meresõidukiks võimalikult kiiresti ja täpselt. Iga uus{SITE.name}mudel — ja iga oluline eritellimus — läbib enne
+    tootmistööriistade kinnitamist seda töökoja.
+  </p>
+  <p>
+    Töötuba on täielikult varustatud kere, torude ja sisseseade samaaegseks valmistamiseks. See paralleeltöövoo
+    lähenemine vähendab prototüübi valmimisaega inseneriväljast kuni 8-12 nädalani, võrreldes tööstuse normiga 16-20
+    nädalat. Kui teie rakendus nõuab spetsiaalset lahendust, suudame kontseptsioonist vees testimisele liikuda vähem kui
+    kolme kuuga.
+  </p>
+
+  <h2>Töötoa võimalused</h2>
+  <table>
+    <thead><tr><th>Tööjaam</th><th>Seadmed</th><th>Eesmärk</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Kere valmistamine</td><td
+          >Pöördvormimisahi (HDPE), TIG-keevituse bay (alumiinium), käsitsi vormimismallid (klaaskiud)</td
+        ><td>Kere täissuuruses tootmine kõigis kolmes materjalitüübis</td></tr
+      >
+      <tr
+        ><td>Toru kokkupanek</td><td>RF-keevituspress, kuumaõhu kinnitusjaam, tühjenduskatse jig</td><td
+          >Täissuuruses torude kokkupanek koos kõigi vaheseinte, koonuste ja klappidega</td
+        ></tr
+      >
+      <tr
+        ><td>Sisseseade & paigaldus</td><td
+          >Mootori tõstuk (500 kg), konsooli makettraam, hüdraulika voolikukrimper, elektrikaablite lauad</td
+        ><td>Täielik varustamine: mootor, roolimine, juhtseadmed, kütusesüsteem, elektroonika, istmed</td></tr
+      >
+      <tr
+        ><td>Instrumentide bay</td><td
+          >GPS kiirusandur, kütusevoogude mõõtur, kiirendusmõõtjad, termopaari komplekt, andmesalvesti</td
+        ><td>Meretestide instrumentide paigaldus ja kalibreerimine</td></tr
+      >
+    </tbody>
+  </table>
+
+  <h2>Prototüübi teekond — samm-sammult</h2>
+  <ol>
+    <li>
+      <strong>Inseneride üleandmine</strong>— Disainipaketti (3D mudel, FEA aruanne, materjalide nimekiri, kihistamise
+      ajakava) vaatab ametlikult läbi töötoa juht ja projektiinsener. Igasugused tootmisega seotud probleemid
+      tuvastatakse ja lahendatakse enne lõikamise algust.
+    </li>
+    <li>
+      <strong>Kere tootmine</strong>— Kere ehitatakse vastavalt insenerispetsifikatsioonile. HDPE puhul:
+      pöördvormimisprogramm laaditakse Moldex3D simulatsioonist. Alumiiniumi puhul: CNC-lõigatud plaadid keevitatakse
+      TIG-bays kinnitatud keevitusplaani järgi. Klaaskiudu kasutades järgib kihtkiri kiht-kihilt juhiseid.
+    </li>
+    <li>
+      <strong>Toru valmistamine</strong>— Kangast lõigatakse CNC-mustri mallide abil, seejärel RF-keevitatakse
+      täissuurusesse kambrisse. Iga kambrit täislaetakse test rõhuni ja jäetakse 24 tunniks esialgseks stabiilseks
+      saamiseks.
+    </li>
+    <li>
+      <strong>Kokkupanek ja riggingus</strong>— Kere ja torud on ühendatud. Mootor on üles ehitatud, roolimine ja
+      juhtimisseadmed on ühendatud, kütusesüsteem paigaldatud ning kõik elektriahelad on ühendatud ja kontrollitud.
+    </li>
+    <li>
+      <strong>Staatilised testid</strong>— Enne vee puudutamist läbib see: ujuvuse kontroll (täiskoormus + 30% varu),
+      kütusesüsteemi rõhutest, roolisüsteemi täisluku tsükli test, elektrilise maa-sideme järjepidevuse test.
+    </li>
+    <li><strong>Merekatsete programm</strong>— 20 tundi veesiseseid teste, üksikasjalikult allpool.</li>
+    <li>
+      <strong>Prototüübi ülevaade</strong>— Ametlik allkirjastamiskoosolek toimub inseneri-, tootmis- ja
+      kvaliteedimeeskondadega. Kõik vajalikud disainimuudatused dokumenteeritakse ja lisatakse tootmisväljaandesse.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      20-tunnine merekatse programm — testide ajakava
+    </p>
+    <div class="space-y-2 text-sm">
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">2 h</span><span class="flex-1"
+          >Sadamamanööverdamine — madala kiirusega juhitavus, tagurdamis, poritiibade kontroll</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">4 h</span><span class="flex-1"
+          >Kiiruse katse — GPS-iga kinnitatud tippkiirus, kruiisikiirus, kütusekulu 3 p/min juures</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Pööramistest — taktikaline läbimõõt, edasiliikumine ja ülekanne 20 sõlme juures, vasakul ja paremal</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Slamming test — korduvad jooksud 0,5–1,0 m lõikega; kiirendusmõõtur rooli istme alusel</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Stabiilsustest — staatiline kanna nurk 4 + meeskonnarattaga paremale, nihutatud koormus</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">3 h</span><span class="flex-1"
+          >Kestvussõit — 3 tundi järjest kruiisikiirusel; temperatuuri jälgimine (mootor, kütus, elektri)</span
+        >
+      </div>
+      <div class="flex items-center gap-3 p-2 rounded bg-white dark:bg-gray-950">
+        <span class="w-12 text-xs font-bold text-blue-600">2 h</span><span class="flex-1"
+          >Lõplik kontroll — kõigi süsteemide kohtujärgne kontroll, kõigi kinnituste pingutamine/kontrollimine, leiud
+          dokumenteeritakse</span
+        >
+      </div>
+    </div>
+  </div>
+
+  <h2>Kohandatud prototüüpimine unikaalsete rakenduste jaoks</h2>
+  <p>
+    Prototüübi töökoda on koht, kus lahendame probleeme, mida tavalised tootmislaevad ei suuda lahendada. Hiljutised
+    näited hõlmavad:
+  </p>
+  <ul>
+    <li>
+      7,8 m RIB otsingu- ja päästeorganisatsioonile, mis nõuab eritellimusel kajutit koos ümberpööramise kaitse,
+      integreeritud kanderaamide kinnituste ja vöörile paigaldatud sonaripodiga — kõik prototüübid, paigaldatud ja
+      testitud meie rajatises.
+    </li>
+    <li>
+      5,2 m täispuhutav hüdrograafilise uuringu ettevõtjale, millel on lühendatud ahtriosa, eemaldatav instrumendimast
+      ja läbi kere transduktoritaskud, mis on mõeldud voolu häirimise minimeerimiseks.
+    </li>
+    <li>
+      Elektrimootoriga 4,5 m pikkune tender superjahile, kus prototüüpi kasutati lennuulatuse, laadimisinfrastruktuuri
+      ja mürataseme kontrollimiseks, enne kui klient otsustas valida neljaliikmelise laevastiku.
+    </li>
+  </ul>
+
+  <h2>Meie prototüüpide meeskond</h2>
+  <p>
+    Töökojas töötab kaheksa mitmekülgset meretehnikut, kellest igaüks on ristkoolitatud vähemalt kahes kolmest
+    põhidistsipliinist (kere, toru, rigging). Meeskonna juht on meisterpaadiehitaja, kellel on 16 aastat kogemust
+    eritellimusel ühekordsetest ehitustest kuni tootmissarjadeni. Iga prototüübile määratakse pühendunud
+    projektiinsener, kes on kliendi ainus kontaktpunkt kogu ehitus- ja katsetusprotsessi vältel.
+  </p>
+
+  <h2>Kliendi kaasamine</h2>
+  <p>
+    Me julgustame aktiivselt oma kliente osalema prototüübi ehitamise olulistel verstapostidel — eriti esialgsel
+    varustuse ülevaatuses ja merekatsetusel. Teie operatiivne tagasiside nendel etappidel on hindamatu paadi
+    peenhäälestamisel enne tootmisse minekut. Me ei ehita vaakumis; me ehitame koostöös teiega.
+  </p>
+  <p>
+    20-tunnine merekatse annab ka võimaluse teie meeskonnale tutvuda paadi juhitavuse, süsteemide paigutuse ja
+    hooldusvajadustega, tagades sujuva ülemineku teenindusse, kui tootmispaadid kohale jõuavad.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Alusta oma prototüübi projekti</h2>
+    <p class="mt-2 text-sm text-muted">
+      Rääkige meile paadist, mida vajate, ja me pakume välja prototüübi arendusplaani.
+    </p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Võta ühendust meie prototüüpimise meeskonnaga</a
+    >
+  </div>
+</section>

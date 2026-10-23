@@ -1,0 +1,48 @@
+hero:
+  tagline: Processus
+  title: Processus de fabrication
+  subtitle: De la matière première au bateau prêt pour la mer — chaque étape sous notre contrôle
+  back_label: Retour à l'usine
+  back_link: /factory
+
+intro: Contrairement aux marques qui externalisent la production dans des usines tierces, Aquafarer possède et exploite l'ensemble de sa chaîne de fabrication. Cette intégration verticale nous permet de maintenir un contrôle qualité strict à chaque étape, de répondre rapidement aux exigences personnalisées et de fournir une qualité de produit constante lot après lot. Voici comment un bateau est construit dans notre installation.
+
+steps:
+  - step: '01'
+    title: Réception & inspection des matériaux
+    description: "Chaque lot entrant de tissu PVC, de mat de fibre de verre, de résine et de quincaillerie est inspecté conformément aux spécifications. Les échantillons de tissu sont testés pour la résistance à la traction, l'uniformité d'épaisseur et la résistance aux UV avant d'être libérés pour la production. Les matériaux non conformes sont mis en quarantaine et retournés."
+    duration: 1–2 jours
+  - step: '02'
+    title: Découpe PVC automatique
+    description: "Les tissus approuvés sont placés sur la machine de découpe CNC automatique et coupés avec une précision inférieure au millimètre. L'imbrication optimisée par ordinateur organise les panneaux pour minimiser les déchets — généralement moins de 5 %. Les panneaux coupés sont étiquetés par modèle de bateau et chambre, puis regroupés pour le transfert à l'atelier de soudage."
+    duration: 2–4 heures par kit bateau
+  - step: '03'
+    title: Thermoscellage & soudage des tubes
+    description: "Les panneaux sont pointés et liés à l'aide de machines de thermoscellage avec soudage à air chaud à des températures contrôlées de 200–600 °C. Les soudures principales sont renforcées par soudage diélectrique RF pour des joints étanches à haute résistance. Les chambres terminées sont gonflées à 1,25× la pression de service pendant 30 minutes pour validation de la rétention d'air."
+    duration: 1–2 jours par bateau
+  - step: '04'
+    title: Moulage de coque RIB en fibre de verre
+    description: Les coques de bateaux RIB sont produites par moulage manuel de fibre de verre. Des couches de mat et de tissu de verre sont roulées à la main avec de la résine polyester ou vinylester dans des moules de précision. Chaque couche est mise sous vide pour une qualité de stratifié constante. La coque est finie avec du gelcoat pour une surface marine haute brillance et résistante aux UV.
+    duration: 2–4 jours par coque
+  - step: '05'
+    title: Impression & décoration SUP
+    description: "Les graphismes de deck des planches SUP sont appliqués par impression numérique pour des designs en couleur de qualité photographique, et sérigraphie pour les logos durables et motifs répétitifs. Les impressions sont durcies et scellées pour la résistance aux UV et à l'abrasion."
+    duration: 1–2 jours
+  - step: '06'
+    title: Assemblage final & gréement
+    description: "Les coques en fibre de verre et les ensembles de tubes PVC sont accouplés sur la ligne d'assemblage. Le moteur est monté, la direction et les commandes d'accélération sont connectées, le système de carburant est installé et le faisceau électrique complet est câblé. Chaque bateau suit une checklist d'assemblage de 100 points avec validation obligatoire à chaque étape."
+    duration: 2–3 jours
+  - step: '07'
+    title: Tests qualité & inspection
+    description: "Chaque bateau terminé subit un contrôle qualité obligatoire : test de rétention d'air des chambres, vérification du fonctionnement des systèmes, vérification du couple des fixations et inspection esthétique. Les constructions personnalisées et prototypes reçoivent également des essais en eau couvrant la vitesse, la maniabilité, la stabilité et l'endurance."
+    duration: 1–2 jours
+  - step: '08'
+    title: Emballage & expédition
+    description: "Les bateaux sont dégonflés, pliés selon la procédure, emballés dans des sacs en tissu résistant ou des caisses en contreplaqué et chargés pour l'expédition. Chaque colis est étiqueté avec le modèle, le numéro de série et la destination. Nous coordonnons avec les transitaires pour les expéditions en conteneurs FCL et LCL dans le monde entier."
+    duration: 1 jour
+
+cta:
+  title: Voir nos équipements et machines
+  desc: Découvrez l'équipement industriel derrière chaque bateau Aquafarer.
+  label: Voir l'équipement →
+  link: /factory/equipment

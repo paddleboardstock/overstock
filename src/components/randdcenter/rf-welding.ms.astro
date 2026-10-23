@@ -1,0 +1,178 @@
+---
+import { SITE } from 'astrowind:config';
+
+const { lang = 'ms' } = Astro.props;
+const p = lang && lang !== 'en' ? '/' + lang : '';
+---
+
+<section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+  <a href={p + '/randdcenter'} class="text-sm text-gray-500 hover:underline">&larr; Kembali ke Pusat R&D</a>
+  <div class="mt-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Makmal 03</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Pusat Kimpalan RF</h1>
+      <p class="mt-3 text-lg text-muted">Teknologi pelekat dielektrik untuk kimpalan yang tahan tekanan</p>
+    </div>
+    <div class="md:col-span-2">
+      <img
+        src="https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-jungle-mandala-1.webp"
+        alt="Aquafarer Proses pengikatan dielektrik kimpalan RF"
+        class="w-full h-48 object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+  <h2>Sains di sebalik jahitan</h2>
+  <p>
+    Perahu tiup hanya seberapa boleh dipercayainya mengikut jahitannya. Satu kimpalan yang lemah boleh menjejaskan
+    keseluruhan ruang — dan di laut, kegagalan ruang bukanlah kesulitan; ia adalah bahaya keselamatan.{SITE.name}, kami
+    telah melabur dalam Pusat Kimpalan Frekuensi Radio (RF) khusus yang menggabungkan mesin kimpalan dielektrik gred
+    industri dengan kawalan proses yang ketat dan ujian selepas kimpalan. Setiap jahitan yang kami hasilkan
+    didokumenkan, boleh dijejaki, dan disahkan untuk memenuhi atau melebihi keperluan — piawaian antarabangsa untuk
+    kenderaan tiup.
+  </p>
+  <p>
+    Pengelasan RF menggunakan tenaga elektromagnet frekuensi tinggi (biasanya 27.12 MHz) untuk merangsang molekul polar
+    dalam kain yang dilapisi PVC atau Hypalon, menjana haba dengan tepat di antara muka bahan. Berbeza dengan pengelasan
+    udara panas atau baji panas, pengelasan RF mencipta ikatan molekul sebenar — dua lapisan kain bergabung menjadi satu
+    bahan homogen di zon kimpalan, menghasilkan sambungan yang sekuat bahan asal itu sendiri.
+  </p>
+
+  <h2>Peralatan kimpalan dan kawalan proses</h2>
+  <p>Pusat kimpalan kami dilengkapi dengan:</p>
+  <table>
+    <thead><tr><th>Mesin</th><th>Kuasa / Kapasiti</th><th>Aplikasi</th></tr></thead>
+    <tbody>
+      <tr
+        ><td>Tekan RF dielektrik 1</td><td>15 kW, plat 2000 × 600 mm</td><td
+          >Paip sambungan utama memanjang, sambungan transom-ke-paip</td
+        ></tr
+      >
+      <tr
+        ><td>Tekan RF Dielektrik 2</td><td>10 kW, plat 1500 × 500 mm</td><td
+          >Kimpalan penangas, lampiran kon, tampalan injap</td
+        ></tr
+      >
+      <tr
+        ><td>Pengimpal RF dikawal CNC</td><td>8 kW, meja XY 2500 × 1200 mm</td><td
+          >Jahitan melengkung, emboss logo/panel, pemasangan tampalan dengan ketepatan</td
+        ></tr
+      >
+      <tr
+        ><td>Pengimpal automatik Hotwedge</td><td>Suhu boleh berubah-ubah, 1.2 m/min maks</td><td
+          >Kaedah sandaran untuk bahan Hypalon/CSM</td
+        ></tr
+      >
+    </tbody>
+  </table>
+  <p>
+    Setiap pemampat RF dilengkapi dengan pemantauan suhu dan tekanan berkitar tertutup. Parameter kimpalan — kuasa, masa
+    tekan, masa penyejukan, tekanan elektrod — diprogramkan mengikut jenis bahan dan direkodkan dalam Sistem Pelaksanaan
+    Pembuatan (MES) kami untuk keterjejakannya sepenuhnya.
+  </p>
+
+  <h2>Ujian kualiti pengelasan — setiap jahitan, setiap bot</h2>
+  <p>Integriti kimpalan disahkan melalui protokol empat ujian yang wajib:</p>
+  <ol>
+    <li>
+      <strong>Pemeriksaan visual</strong>— 100% jahitan diperiksa secara visual untuk tembus, ketidaksejajaran,
+      pencemaran, atau peleburan yang tidak lengkap. Ambang kadar tolak: 0.5% daripada meter linear.
+    </li>
+    <li>
+      <strong>Ujian kupas ()</strong>— Jalur selebar 25 mm dipotong dari kupon ujian yang dikimpal dengan setiap batch
+      pengeluaran. Daya kupas minimum: 120 N/25 mm untuk PVC 1100 dtex.
+    </li>
+    <li>
+      <strong>Ujian penahanan udara</strong>— Setiap ruang yang siap dipam tekanan hingga 1.25 × tekanan kerja dan
+      ditahan selama 24-48 jam. Penurunan tekanan tidak boleh melebihi 2%.
+    </li>
+    <li>
+      <strong>Ujian kitaran haba</strong>— Kupon sampel dikitar dari -20 °C hingga + 60 °C sebanyak 50 kitaran, kemudian
+      diuji kupasan semula. Kehilangan kekuatan yang boleh diterima: 10%.
+    </li>
+  </ol>
+
+  <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+      Perbandingan Kekuatan Kupas — Kimpalan RF vs Hot-Air (PVC 1100 dtex)
+    </p>
+    <div class="space-y-3">
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">Kimpalan RF</span><div
+          class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded"
+        >
+          <div class="h-full bg-blue-600 rounded" style="width:92%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">184 N</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">Udara Panas</span><div
+          class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded"
+        >
+          <div class="h-full bg-gray-400 rounded" style="width:65%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">130 N</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="w-24 text-xs font-medium">min</span><div class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded">
+          <div class="h-full bg-green-500 rounded" style="width:48%"></div>
+        </div><span class="text-xs font-bold w-12 text-right">96 N</span>
+      </div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">
+      Kimpalan RF secara konsisten mencapai 90-95% daripada kekuatan bahan asal, jauh melebihi minimum.
+    </p>
+  </div>
+
+  <h2>Kepakaran profesional</h2>
+  <p>
+    Pasukan kimpalan kami diketuai oleh seorang jurutera proses kanan dengan 11 tahun pengalaman dalam kimpalan
+    dielektrik tekstil berlapis. Setiap operator menamatkan program pensijilan dalaman selama 6 bulan sebelum dibenarkan
+    bekerja pada kelim pengeluaran. Pensijilan semula diperlukan setiap tahun, termasuk ujian kimpalan praktikal yang
+    dinilai mengikut standard Dalaman Gred-A kami (kekuatan kupas ≥ 160 N/25 mm).
+  </p>
+
+  <h2>Penyelesaian kimpalan tersuai untuk keperluan unik</h2>
+  <p>
+    Kami memahami bahawa satu spesifikasi kimpalan tidak sesuai untuk setiap aplikasi. Pusat Kimpalan RF kami secara
+    rutin membangunkan konfigurasi kelim tersuai untuk pelanggan dengan keperluan khas:
+  </p>
+  <ul>
+    <li>
+      <strong>Tambalan pengukuhan berlapis</strong>— untuk kawasan yang banyak aus seperti strakes gosok dan kon laras,
+      kami membangunkan kimpalan RF berlapis yang mengintegrasikan lapisan luar tahan aus tanpa menjejaskan kelenturan.
+    </li>
+    <li>
+      <strong>Kelim konduktif atau RF-opaque</strong>— untuk kapal ketenteraan atau pengawasan yang memerlukan penapisan
+      elektromagnet, kami mengimpal lapisan mesh konduktif dalam susunan kelim.
+    </li>
+    <li>
+      <strong>Kimpalan panel berganti warna</strong>— panel fabrik dua warna (contoh: lambung oren + atas sidai kelabu)
+      dikimpal dengan pertindihan tersembunyi untuk mengekalkan estetika jenama tanpa garis sambungan yang kelihatan.
+    </li>
+  </ul>
+
+  <h2>Komitmen kami kepada anda</h2>
+  <p>
+    Setiap bot yang kami hantar membawa jaminan kualiti kimpalan kami: sekiranya mana-mana kelim gagal dalam
+    perkhidmatan normal dalam tempoh jaminan, kami membaiki atau menggantikan ruang terjejas tanpa kos, dan penyiasatan
+    punca utama dilakukan untuk mencegah pengulangan. Ini bukan sekadar jaminan — ia adalah komitmen kepada
+    penambahbaikan berterusan berdasarkan data operasi sebenar.
+  </p>
+  <p>
+    Apabila anda memilih{SITE.name}, anda sedang memilih sambungan yang direka, diuji, dan didokumentasikan — bukan
+    sekadar dikimpal. Itulah perbezaan antara bot yang terapung dan bot yang berprestasi.
+  </p>
+</section>
+
+<section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+    <h2 class="text-xl font-bold">Bincangkan keperluan kimpalan anda</h2>
+    <p class="mt-2 text-sm text-muted">Spesifikasi kelim tersuai, keserasian bahan, atau pengesahan proses.</p>
+    <a
+      href={p + '/contact'}
+      class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >Hubungi pasukan kimpalan kami</a
+    >
+  </div>
+</section>

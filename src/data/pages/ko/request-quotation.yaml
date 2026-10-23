@@ -1,0 +1,306 @@
+hero_text:
+  tagline: 견적 받기
+  title: 견적 요청<br />당신의 프로젝트를 위해
+  subtitle: 귀하의 요구 사항에 대해 알려주시면 저희 팀이 영업일 기준 2일 내에 상세한 견적서를 회신해 드리겠습니다.
+steps2_process:
+  title: 작동 원리
+  subtitle: 문의에서 견적까지 네 가지 간단한 단계.
+  items:
+    - title: '1단계: 요구 사항 제출'
+      description: 아래 양식에 제품 유형, 수량 및 사양을 작성하세요. 자세히 작성할수록 견적이 더 정확해집니다.
+      icon: tabler:file-text
+    - title: '2단계: 검토 및 조언'
+      description: 우리 엔지니어링 팀은 귀하의 요구 사항을 검토하고, 필요한 경우 명확한 설명을 위해 연락할 수 있습니다. 우리는 제품 구성 및 옵션에 대한 권장 사항을 제공합니다.
+      icon: tabler:users
+    - title: '3단계: 견적 받기'
+      description: 단가, MOQ, 리드 타임, 결제 조건 및 배송 옵션을 포함한 상세 견적서를 받게 됩니다. 일반적으로 48시간 이내에 제공합니다.
+      icon: tabler:currency-dollar
+    - title: '단계 4: 샘플 및 생산'
+      description: 견적 승낙 후, 샘플 생산(해당되는 경우) 또는 바로 대량 생산으로 진행합니다. 과정 전반에 걸쳐 정기적으로 업데이트를 제공합니다.
+      icon: tabler:building-factory
+content_form:
+  tagline: 견적서 양식
+  title: 당신의 프로젝트에 대해 알려주세요
+  subtitle: '*가 표시된 모든 항목은 필수입니다.'
+  fields:
+    - name: 제품 카테고리
+      type: select
+      options:
+        - RIB 보트
+        - 에어보트
+        - SUP 보드
+        - 풍선 카약
+        - 구명조끼
+        - 해양 액세서리
+        - 맞춤 OEM/ODM
+    - name: 응용 프로그램
+      type: select
+      options:
+        - 다이빙 센터
+        - 어업
+        - 해양 관광 / 리조트
+        - 수색 및 구조
+        - 요트 텐더
+        - 상업용 워크보트
+        - 정부 / 군사
+        - OEM / 자체 브랜드
+        - 개인용 / 레크리에이션
+        - 기타
+    - name: 수량
+      type: text
+      placeholder: '예: 50대'
+    - name: 목표 시장
+      type: text
+      placeholder: '예: 유럽, 북미, 중동'
+    - name: 배송 국가
+      type: text
+      placeholder: '예: 이탈리아, UAE, 미국, 호주'
+    - name: 재질 선호도
+      type: select
+      options:
+        - 선호 없음
+        - 해양 등급 PVC (1100 dtex)
+        - 프리미엄 Hypalon / CSM
+        - 유리섬유 선체
+        - 알루미늄 선체
+    - name: 엔진 요구 사항
+      type: text
+      placeholder: '예: 60 HP 외부 엔진, 엔진 없음, 트윈 115 HP'
+    - name: 맞춤 제작 필요 여부
+      type: text
+      placeholder: '예: 맞춤 색상, 브랜딩/로고, 포장, 특별 장치'
+    - name: 일정
+      type: text
+      placeholder: '예: 90일 내 배송'
+    - name: 추가 요구 사항
+      type: textarea
+      placeholder: 귀하의 용도, 기술 사양 또는 특별 요구 사항을 설명하세요 — 가능하면 참조 도면, 사양 또는 링크 포함
+    - name: 사양 업로드
+      type: file
+      placeholder: 사양서, 도면 또는 참조 문서 업로드 (PDF, DWG, DXF)
+    - name: 로고 / 아트워크 업로드
+      type: file
+      placeholder: 맞춤 브랜딩용 로고 또는 아트워크 업로드 (AI, EPS, PNG)
+content_rfq_types:
+  tagline: 3단계 RFQ 시스템
+  title: 적합한<br />문의 수준 선택
+  subtitle: 프로젝트마다 필요한 세부사항의 수준이 다릅니다. 구매 단계에 맞는 양식을 선택하세요.
+  items:
+    - title: 간단 문의
+      description: 5-6개 항목, 30초. 초기 연락, 일반 질문, 또는 자료 다운로드 후속 조치용. 기본 정보와 다음 단계 안내를 24시간 내에 응답합니다.
+      icon: tabler:bolt
+    - title: 표준 RFQ
+      description: 8-10개 항목, 2분. 모델 선택, 수량, 배송 요건이 포함된 구체적인 제품 견적 요청용. 48시간 내 상세 견적서를 받으세요.
+      icon: tabler:file-text
+    - title: 프로젝트 RFQ
+      description: 10-14개 항목, 5분. RIB, 리조트 선박, 구조 또는 정부 프로젝트처럼 맞춤 구성, 준수 문서, 다년간 공급 계획이 필요한 경우. 전담 프로젝트 매니저 배정.
+      icon: tabler:clipboard-list
+form_quick:
+  title: 간단 문의
+  subtitle: 일반 문의 및 초기 정보 요청을 위한 빠른 연락.
+  fields:
+    - name: fullName
+      label: 전체 이름
+      type: text
+      required: true
+      placeholder: 귀하의 전체 이름
+    - name: businessEmail
+      label: 업무 이메일
+      type: email
+      required: true
+      placeholder: you@company.com
+    - name: companyName
+      label: 회사 이름
+      type: text
+      required: true
+      placeholder: 귀사의 회사
+    - name: buyerType
+      label: 저는...
+      type: select
+      required: true
+      options:
+        - 유통업체 / 수입업자
+        - 브랜드 소유자 / 프라이빗 라벨
+        - 리조트 / 수상 센터
+        - 렌탈 운영자
+        - 정부 / 구조 기관
+        - 다이빙 / 낚시 운영자
+        - 해양 엔지니어 / 리피터
+        - 기타
+    - name: productInterest
+      label: 제품 관심
+      type: multiselect
+      required: true
+      options:
+        - RIB 보트
+        - 풍선 보트
+        - SUP 보드
+        - 안전장비
+        - 부속품
+        - OEM/ODM 맞춤
+    - name: message
+      label: 무엇이 필요하신가요?
+      type: textarea
+      required: false
+      placeholder: 요구사항에 대한 간단한 설명...
+form_standard:
+  title: 표준 RFQ
+  subtitle: 특정 제품 및 수량에 대한 상세 견적 요청.
+  fields:
+    - name: fullName
+      label: 전체 이름
+      type: text
+      required: true
+    - name: businessEmail
+      label: 업무 이메일
+      type: email
+      required: true
+    - name: companyName
+      label: 회사 이름
+      type: text
+      required: true
+    - name: buyerType
+      label: 구매자 유형
+      type: select
+      required: true
+    - name: 제품 모델
+      label: 제품 모델 / 타입
+      type: text
+      required: true
+      placeholder: e.g., AF580 RIB, AF380 인플레이션
+    - name: quantity
+      label: 예상 수량
+      type: text
+      required: true
+      placeholder: e.g., 10-20 단위
+    - name: 목표 시장
+      label: 목표 시장 / 지역
+      type: text
+      required: true
+      placeholder: e.g., EU, 북미, 중동
+    - name: 배송 일정
+      label: 원하는 배송
+      type: select
+      required: true
+      options:
+        - 30일 이내
+        - 30-60일
+        - 60-90일
+        - 미리 계획 중 (90+일 이상)
+        - 단순 조사
+    - name: 준수 요구사항
+      label: 준수 요구사항
+      type: multiselect
+      required: false
+      options:
+        - CE / RCD 2013/53/EU
+        - UKCA
+        - USCG
+        - ISO 9001
+        - BSCI
+        - REACH
+        - 없음 / 확실하지 않음
+    - name: message
+      label: 추가 세부 정보
+      type: textarea
+      required: false
+form_project:
+  title: 프로젝트 RFQ
+  subtitle: 함대, 맞춤형 또는 정부 조달을 위한 종합 프로젝트 문의.
+  fields:
+    - name: fullName
+      label: 전체 이름
+      type: text
+      required: true
+    - name: businessEmail
+      label: 업무 이메일
+      type: email
+      required: true
+    - name: companyName
+      label: 회사 이름
+      type: text
+      required: true
+    - name: buyerType
+      label: 구매자 유형
+      type: select
+      required: true
+    - name: projectType
+      label: 프로젝트 유형
+      type: select
+      required: true
+      options:
+        - 리조트 / 호텔 함대
+        - 렌탈 함대
+        - 구조 / 순찰 함대
+        - 다이빙 센터 함대
+        - 정부 조달
+        - 프라이빗 라벨 / OEM
+        - 딜러 재고 주문
+        - 기타
+    - name: boatTypes
+      label: 필요한 보트 유형
+      type: multiselect
+      required: true
+      options:
+        - RIB 보트
+        - 고무보트 / 딩기
+        - SUP 보드
+        - 카약
+        - 안전장비
+    - name: fleetSize
+      label: 함대 규모 / 수량 범위
+      type: text
+      required: true
+      placeholder: '예: 12개월 동안 20-50대'
+    - name: customRequirements
+      label: 맞춤 구성 요구사항
+      type: textarea
+      required: false
+      placeholder: 선체 크기, 튜브 재질, 데크 레이아웃, 브랜딩 요구사항...
+    - name: 준수 요구사항
+      label: 규정 준수 및 인증 요구사항
+      type: multiselect
+      required: true
+      options:
+        - CE / RCD 2013/53/EU
+        - UKCA
+        - USCG 타입 III/V
+        - ISO 9001
+        - BSCI
+        - REACH / RoHS
+        - 현지 시장 인증
+    - name: 목표 시장
+      label: 목표 시장
+      type: text
+      required: true
+    - name: 예산 범위
+      label: 예산 범위
+      type: select
+      required: false
+      options:
+        - $10,000 이하
+        - $10,000 - $50,000
+        - $50,000 - $200,000
+        - $200,000+
+        - 말하고 싶지 않음
+    - name: 배송 일정
+      label: 프로젝트 일정
+      type: select
+      required: true
+      options:
+        - 긴급 (30일 이내)
+        - 표준 (30-60일)
+        - 계획됨 (60-90일)
+        - 향후 계획 (90일 이상)
+    - name: message
+      label: 프로젝트 세부 사항 및 요구 사항
+      type: textarea
+      required: false
+      placeholder: 프로젝트, 애플리케이션 및 특정 요구 사항을 설명하세요...
+cta:
+  title: 이메일로 논의하시겠습니까?
+  subtitle: 문의 사항을 판매팀에 직접 보내주시면 24시간 이내에 답변해 드리겠습니다.
+  actions:
+    - variant: primary
+      text: 직접 이메일 보내기
+      href: /contact

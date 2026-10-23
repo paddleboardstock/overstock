@@ -1,0 +1,332 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { languages, defaultLang } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => getUiForLang(lang || defaultLang)?.[key] || '';
+
+const metadata = {
+  title: `${t('compare.inflatableVsHard.title') || 'Inflatable vs Hard SUP Board — Which Is Better for You?'}`,
+  description:
+    t('compare.inflatableVsHard.desc') ||
+    'Compare inflatable (iSUP) and hard/epoxy SUP boards across performance, durability, portability, cost, and use cases. Make an informed buying decision.',
+  ignoreTitleTemplate: true,
+};
+
+const faqSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Are inflatable SUP boards as rigid as hard boards?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Premium Drop-Stitch boards at 15-20 PSI approach the rigidity of hard boards, while offering portability and storage advantages.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What are the advantages of inflatable boards?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Portability (pack into a backpack), durability (no dings or cracks), storage convenience, safety (softer surface), and lower cost.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What are the advantages of hard boards?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Maximum performance, no inflation needed, lighter weight at racing level, and superior tracking in choppy conditions.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Which is better for rental businesses?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Inflatable boards are preferred for rentals due to durability, easy storage, transport efficiency, and lower replacement cost.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What pressure should I inflate to?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Standard Drop-Stitch: 15 PSI. Premium 6-inch core: up to 20 PSI. Always test at 1.25x rated pressure for safety.',
+      },
+    },
+  ],
+});
+---
+
+<Layout metadata={metadata}>
+  <JsonLd
+    type="Article"
+    article={{
+      headline: t('compare.inflatableVsHard.headline') || 'Inflatable vs Hard SUP Board — Which Is Better for You?',
+      description:
+        t('compare.inflatableVsHard.desc') ||
+        'Compare inflatable (iSUP) and hard/epoxy SUP boards across performance, durability, portability, cost, and use cases.',
+      datePublished: '2026-07-06',
+    }}
+    data={{ url: `https://aquafarer.com/${lang}/compare/inflatable-vs-hardboard` }}
+  />
+  <JsonLd
+    type="BreadcrumbList"
+    breadcrumbs={[
+      { name: t('home') || 'Home', href: `/${lang}/` },
+      { name: t('compare.label') || 'Compare', href: `/${lang}/compare` },
+      { name: t('compare.inflatableVsHard.short') || 'Inflatable vs Hardboard' },
+    ]}
+  />
+  <section class="max-w-4xl mx-auto py-24 px-6">
+    <a href={`/${lang}/products`} class="text-sm text-sky-600 hover:text-sky-700"
+      >&larr; {t('compare.backToProducts') || 'Products'}</a
+    >
+    <h1 class="mt-4 text-4xl font-semibold text-gray-900">
+      {t('compare.inflatableVsHard.heading') || 'Inflatable vs Hard SUP Board'}
+    </h1>
+    <p class="mt-4 text-lg text-gray-500">
+      {
+        t('compare.inflatableVsHard.subtitle') ||
+          'The definitive comparison between inflatable stand-up paddle boards (iSUPs) and rigid epoxy/fiberglass boards — covering everything a buyer needs to know.'
+      }
+    </p>
+
+    <div class="mt-12 grid md:grid-cols-2 gap-8">
+      <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+        <h2 class="text-xl font-semibold text-gray-900">
+          {t('compare.inflatableVsHard.col1Title') || 'Inflatable SUP (iSUP)'}
+        </h2>
+        <ul class="mt-4 space-y-3 text-sm text-gray-600">
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span
+              ><strong>{t('compare.inflatableVsHard.portability') || 'Portability:'}</strong>
+              {
+                t('compare.inflatableVsHard.portDesc') ||
+                  'Deflates to backpack size. Fits in any car. Ideal for travelers and apartment dwellers.'
+              }</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span
+              ><strong>{t('compare.inflatableVsHard.durability') || 'Durability:'}</strong>
+              {
+                t('compare.inflatableVsHard.durDesc') ||
+                  "Drop-stitch PVC construction resists dings, scratches, and impacts. Won't snap or crack."
+              }</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span
+              ><strong>{t('compare.inflatableVsHard.performance') || 'Performance:'}</strong>
+              {
+                t('compare.inflatableVsHard.perfDesc') ||
+                  'Modern iSUPs closely match hard boards. Stiff enough for touring and surfing at 15-20 PSI.'
+              }</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span
+              ><strong>{t('compare.inflatableVsHard.storage') || 'Storage:'}</strong>
+              {
+                t('compare.inflatableVsHard.storDesc') ||
+                  'Fits in closet, under bed, or checked luggage. No roof rack needed.'
+              }</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span
+              ><strong>{t('compare.inflatableVsHard.bestFor') || 'Best for:'}</strong>
+              {
+                t('compare.inflatableVsHard.bestDesc') ||
+                  'Beginners, travelers, apartment living, whitewater, SUP yoga, fishing, families.'
+              }</span
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+        <h2 class="text-xl font-semibold text-gray-900">
+          {t('compare.inflatableVsHard.col2Title') || 'Hard SUP (Epoxy/Fiberglass)'}
+        </h2>
+        <ul class="mt-4 space-y-3 text-sm text-gray-600">
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span
+              ><strong>{t('compare.inflatableVsHard.portability') || 'Portability:'}</strong>
+              {
+                t('compare.inflatableVsHard.hardPortDesc') ||
+                  'Rigid, bulky. Requires roof rack or large vehicle. Difficult to transport alone.'
+              }</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span
+              ><strong>{t('compare.inflatableVsHard.durability') || 'Durability:'}</strong>
+              {
+                t('compare.inflatableVsHard.hardDurDesc') ||
+                  'Prone to dings, cracks, and pressure dents. Requires careful handling and storage.'
+              }</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span
+              ><strong>{t('compare.inflatableVsHard.performance') || 'Performance:'}</strong>
+              {
+                t('compare.inflatableVsHard.hardPerfDesc') ||
+                  'Superior glide and speed. Stiffer rails for sharper turns. Preferred by racers and surfers.'
+              }</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span
+              ><strong>{t('compare.inflatableVsHard.storage') || 'Storage:'}</strong>
+              {
+                t('compare.inflatableVsHard.hardStorDesc') ||
+                  'Needs garage or wall space. Susceptible to heat damage in storage.'
+              }</span
+            >
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span
+              ><strong>{t('compare.inflatableVsHard.bestFor') || 'Best for:'}</strong>
+              {
+                t('compare.inflatableVsHard.hardBestDesc') ||
+                  'Racing, performance surfing, advanced paddlers, paddlers with storage space.'
+              }</span
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="mt-16">
+      <h2 class="text-2xl font-semibold text-gray-900">
+        {t('compare.inflatableVsHard.tableTitle') || 'Side-by-Side Comparison'}
+      </h2>
+      <div class="mt-6 overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="bg-gray-50 border-b-2 border-gray-200">
+              <th class="px-4 py-3 text-left font-semibold text-gray-700">{t('compare.factor') || 'Factor'}</th>
+              <th class="px-4 py-3 text-center font-semibold text-sky-700"
+                >{t('compare.inflatableVsHard.isupShort') || 'Inflatable SUP'}</th
+              >
+              <th class="px-4 py-3 text-center font-semibold text-emerald-700"
+                >{t('compare.inflatableVsHard.hardShort') || 'Hard SUP'}</th
+              >
+            </tr>
+          </thead>
+          <tbody>
+            {
+              [
+                [
+                  t('compare.inflatableVsHard.r1') || 'Weight',
+                  t('compare.inflatableVsHard.r1a') || '18-30 lbs',
+                  t('compare.inflatableVsHard.r1b') || '20-35 lbs',
+                ],
+                [
+                  t('compare.inflatableVsHard.r2') || 'Packed Size',
+                  t('compare.inflatableVsHard.r2a') || '33" x 15" x 10"',
+                  t('compare.inflatableVsHard.r2b') || '10-14 ft rigid',
+                ],
+                [
+                  t('compare.inflatableVsHard.r3') || 'Setup Time',
+                  t('compare.inflatableVsHard.r3a') || '5-10 min (inflate)',
+                  t('compare.inflatableVsHard.r3b') || '0 (carry to water)',
+                ],
+                [
+                  t('compare.inflatableVsHard.r4') || 'Durability',
+                  t('compare.inflatableVsHard.r4a') || 'Excellent (ding-proof)',
+                  t('compare.inflatableVsHard.r4b') || 'Moderate (crack-prone)',
+                ],
+                [
+                  t('compare.inflatableVsHard.r5') || 'Glide Performance',
+                  t('compare.inflatableVsHard.r5a') || 'Good (modern iSUPs)',
+                  t('compare.inflatableVsHard.r5b') || 'Excellent',
+                ],
+                [
+                  t('compare.inflatableVsHard.r6') || 'Surf Performance',
+                  t('compare.inflatableVsHard.r6a') || 'Good (stiff iSUPs)',
+                  t('compare.inflatableVsHard.r6b') || 'Excellent',
+                ],
+                [
+                  t('compare.inflatableVsHard.r7') || 'Stiffness',
+                  t('compare.inflatableVsHard.r7a') || 'Very good at 15-20 PSI',
+                  t('compare.inflatableVsHard.r7b') || 'Inherently rigid',
+                ],
+                [
+                  t('compare.inflatableVsHard.r8') || 'Price (entry)',
+                  t('compare.inflatableVsHard.r8a') || '$200-$500',
+                  t('compare.inflatableVsHard.r8b') || '$400-$800',
+                ],
+                [
+                  t('compare.inflatableVsHard.r9') || 'Maintenance',
+                  t('compare.inflatableVsHard.r9a') || 'Low (rinse and dry)',
+                  t('compare.inflatableVsHard.r9b') || 'High (repair dings)',
+                ],
+                [
+                  t('compare.inflatableVsHard.r10') || 'Resale Value',
+                  t('compare.inflatableVsHard.r10a') || 'Good',
+                  t('compare.inflatableVsHard.r10b') || 'Good (brand dependent)',
+                ],
+              ].map((row, i) => (
+                <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                  {row.map((cell, j) => (
+                    <td
+                      class={`px-4 py-3 border-b border-gray-200 ${j === 0 ? 'font-medium text-gray-700' : 'text-center text-gray-600'}`}
+                    >
+                      {cell}
+                    </td>
+                  ))}
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mt-16 bg-gradient-to-br from-sky-50 to-blue-50 rounded-2xl p-8 border border-sky-200">
+      <h2 class="text-xl font-semibold text-gray-900">{t('compare.inflatableVsHard.verdict') || 'The Verdict'}</h2>
+      <p class="mt-4 text-gray-600 text-sm leading-relaxed">
+        {
+          t('compare.inflatableVsHard.verdictDesc') ||
+            'For 90% of paddlers, an inflatable SUP is the better choice. Modern drop-stitch technology has narrowed the performance gap dramatically, while offering unmatched portability and durability. Choose a hard board only if you are a dedicated racer, performance surfer, or have guaranteed storage and transportation. Most paddlers start with an iSUP and never look back.'
+        }
+      </p>
+      <div class="mt-6 flex gap-4 flex-wrap">
+        <a
+          href={`/${lang}/products`}
+          class="px-6 py-3 bg-gray-900 text-white rounded-full text-sm font-medium hover:bg-gray-800 transition"
+          >{t('compare.inflatableVsHard.cta') || 'Shop Inflatable SUPs'}</a
+        >
+        <a
+          href={`/${lang}/guides`}
+          class="px-6 py-3 border border-gray-200 text-gray-700 rounded-full text-sm font-medium hover:border-gray-400 transition"
+          >{t('compare.buyingGuides') || 'Buying Guides'}</a
+        >
+      </div>
+    </section>
+  </section>
+
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true">
+    <p>
+      {
+        t('compare.inflatableVsHard.aiBlock') ||
+          'Definitive comparison between inflatable stand-up paddle boards (iSUPs) and hard epoxy/fiberglass SUP boards. Covers weight, packed size, setup time, durability, glide performance, surf performance, stiffness, price, maintenance, and resale value. Inflatable SUPs offer superior portability, durability, storage convenience, and value for money. Hard SUPs offer superior glide and surf performance for advanced paddlers. Recommendation: 90% of paddlers should choose an inflatable SUP unless they are dedicated racers or performance surfers.'
+      }
+    </p>
+  </section>
+  <script is:inline type="application/ld+json" set:html={faqSchema} />
+</Layout>
