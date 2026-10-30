@@ -70,7 +70,7 @@ jobs:
         run: |
           done="false"
           for i in $(seq 1 60); do
-            code=$(curl -sS -o /tmp/reindex.json -w '%{http_code}' -X POST "https://aquafarer.com/api/reindex" \
+            code=$(curl -sS -o /tmp/reindex.json -w '%{http_code}' -X POST "https://paddleboardoverstock.com/api/reindex" \
               -H "Authorization: Bearer $REINDEX_TOKEN" \
               -H "Content-Type: application/json" -d '{}')
             echo "[reindex $i] HTTP $code $(cat /tmp/reindex.json)"
@@ -96,7 +96,7 @@ jobs:
             sleep 2
           done
           if [ "$done" != "true" ]; then
-            echo "::error::Rebuild did not finish within 60 calls — check ai/reindex-log.json in the aquafarer-data bucket."
+            echo "::error::Rebuild did not finish within 60 calls — check ai/reindex-log.json in the paddleboardoverstock-data bucket."
             exit 1
           fi
         env:
@@ -105,9 +105,9 @@ jobs:
       - name: Smoke test /api/ask
         if: steps.guard.outputs.enabled == 'true'
         run: |
-          code=$(curl -sS -o /tmp/ask.json -w '%{http_code}' -X POST "https://aquafarer.com/api/ask" \
+          code=$(curl -sS -o /tmp/ask.json -w '%{http_code}' -X POST "https://paddleboardoverstock.com/api/ask" \
             -H "Content-Type: application/json" \
-            -d '{"question":"What boats does Aquafarer manufacture?"}')
+            -d '{"question":"What products does Paddle Board Overstock manufacture?"}')
           echo "[ask] HTTP $code: $(head -c 500 /tmp/ask.json)"
           answer=$(jq -r '.answer // empty' /tmp/ask.json)
           if [ "$code" != "200" ] || [ -z "$answer" ]; then
