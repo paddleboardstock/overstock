@@ -12,7 +12,7 @@ const PAGES_DIR = path.join(ROOT, 'src', 'data', 'pages');
 const WELL_KNOWN_DIR = path.join(PUBLIC, '.well-known');
 const ENTITY_JSON = path.join(WELL_KNOWN_DIR, 'entity.json');
 
-const SITE_URL = 'https://aquafarer.com';
+const SITE_URL = 'https://paddleboardoverstock.com';
 
 const LANGUAGES: Record<string, string> = {
   en: 'English',
@@ -183,7 +183,7 @@ function main(): void {
   if (!fs.existsSync(LLMS_TXT)) {
     fs.writeFileSync(
       LLMS_TXT,
-      `# Aquafarer\n\nAquafarer is a professional OEM/ODM manufacturer of inflatable water sports equipment.\n`
+      `# Paddle Board Overstock\n\nPaddle Board Overstock is a professional OEM/ODM manufacturer of inflatable water sports equipment.\n`
     );
     console.log('[geo] Created default llms.txt');
   }
@@ -205,7 +205,7 @@ function main(): void {
   } else {
     // Default base
     baseParts.push(
-      `# Aquafarer Knowledge Base\n\nAquafarer is a water sports equipment manufacturer specializing in inflatable watercraft.`
+      `# Paddle Board Overstock Knowledge Base\n\nPaddle Board Overstock is a water sports equipment manufacturer specializing in inflatable watercraft.`
     );
   }
 

@@ -1,0 +1,179 @@
+---
+import AdminLayout from '~/layouts/AdminLayout.astro';
+export const prerender = true;
+---
+
+<AdminLayout title="Inventory" active="inventory">
+  <div class="mb-6">
+    <h1 class="text-xl font-bold">Inventory</h1>
+    <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
+      Stock per catalog slug. <strong>Reserved</strong> is held by unpaid checkouts (released after 30 min);
+      <strong>available</strong> = on hand − reserved. Checkouts reserve conditionally, so stock can never oversell.
+    </p>
+  </div>
+
+  <div class="overflow-x-auto rounded-lg border border-gray-200 dark:border-gray-800 mb-8">
+    <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-800 text-sm">
+      <thead class="bg-gray-50 dark:bg-gray-900">
+        <tr>
+          <th class="px-4 py-3 text-left font-medium">Slug</th>
+          <th class="px-4 py-3 text-right font-medium">On Hand</th>
+          <th class="px-4 py-3 text-right font-medium">Reserved</th>
+          <th class="px-4 py-3 text-right font-medium">Available</th>
+          <th class="px-4 py-3 text-left font-medium">Updated</th>
+          <th class="px-4 py-3 text-left font-medium">Adjust</th>
+        </tr>
+      </thead>
+      <tbody id="inventory-rows" class="divide-y divide-gray-200 dark:divide-gray-800">
+        <tr>
+          <td colspan="6" class="px-4 py-8 text-center text-gray-400">Loading…</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 class="text-base font-semibold mb-3">Recent Stock Movements</h2>
+  <div class="overflow-x-auto rounded-lg border border-gray-200 dark:border-gray-800">
+    <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-800 text-sm">
+      <thead class="bg-gray-50 dark:bg-gray-900">
+        <tr>
+          <th class="px-4 py-3 text-left font-medium">Time</th>
+          <th class="px-4 py-3 text-left font-medium">Slug</th>
+          <th class="px-4 py-3 text-right font-medium">On-Hand Δ</th>
+          <th class="px-4 py-3 text-right font-medium">Reserved Δ</th>
+          <th class="px-4 py-3 text-left font-medium">Reason</th>
+          <th class="px-4 py-3 text-left font-medium">Order</th>
+        </tr>
+      </thead>
+      <tbody id="movement-rows" class="divide-y divide-gray-200 dark:divide-gray-800">
+        <tr>
+          <td colspan="6" class="px-4 py-8 text-center text-gray-400">Loading…</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script is:inline>
+    (function () {
+      function escapeHtml(s) {
+        return String(s || '').replace(/[&<>"']/g, function (c) {
+          return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+        });
+      }
+
+      async function load() {
+        try {
+          const res = await fetch('/api/admin/inventory', { credentials: 'same-origin' });
+          if (res.status === 401) {
+            window.location.replace('/login');
+            return;
+          }
+          if (!res.ok) throw new Error(await res.text());
+          const data = await res.json();
+
+          const tbody = document.getElementById('inventory-rows');
+          tbody.innerHTML = '';
+          for (const r of data.rows || []) {
+            const available = r.onHand - r.reserved;
+            const updated = r.updatedAt ? new Date(r.updatedAt).toLocaleString('en-US') : '—';
+            const tr = document.createElement('tr');
+            tr.innerHTML =
+              '<td class="px-4 py-3 font-mono text-xs">' +
+              escapeHtml(r.slug) +
+              '</td>' +
+              '<td class="px-4 py-3 text-right font-semibold">' +
+              r.onHand +
+              '</td>' +
+              '<td class="px-4 py-3 text-right ' +
+              (r.reserved > 0 ? 'text-amber-600 dark:text-amber-400' : 'text-gray-400') +
+              '">' +
+              r.reserved +
+              '</td>' +
+              '<td class="px-4 py-3 text-right ' +
+              (available > 0 ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400') +
+              ' font-semibold">' +
+              available +
+              '</td>' +
+              '<td class="px-4 py-3 text-xs text-gray-400 whitespace-nowrap">' +
+              escapeHtml(updated) +
+              '</td>' +
+              '<td class="px-4 py-3">' +
+              '<div class="flex items-center gap-1.5">' +
+              '<input class="adj-input w-20 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 px-2 py-1 text-sm" type="number" placeholder="new qty">' +
+              '<button class="adj-btn px-2.5 py-1 text-xs font-medium rounded-md bg-blue-600 hover:bg-blue-700 text-white">Set</button>' +
+              '</div>' +
+              '</td>';
+            tbody.appendChild(tr);
+            const input = tr.querySelector('.adj-input');
+            tr.querySelector('.adj-btn').addEventListener('click', async function () {
+              const raw = input.value;
+              if (raw === '' || !Number.isInteger(Number(raw)) || Number(raw) < 0) {
+                window.__adminToast('Enter a non-negative integer stock level', 'error');
+                return;
+              }
+              const res2 = await fetch('/api/admin/inventory/adjust', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                credentials: 'same-origin',
+                body: JSON.stringify({ slug: r.slug, onHand: Number(raw), reason: 'admin set' }),
+              });
+              const body = await res2.json();
+              if (!res2.ok) {
+                window.__adminToast(body.error || 'Failed to adjust stock', 'error');
+                return;
+              }
+              window.__adminToast(r.slug + ' → ' + body.onHand, 'success');
+              load();
+            });
+          }
+          if (!data.rows || data.rows.length === 0) {
+            tbody.innerHTML =
+              '<tr><td colspan="6" class="px-4 py-8 text-center text-gray-400">No inventory rows.</td></tr>';
+          }
+
+          const mbody = document.getElementById('movement-rows');
+          mbody.innerHTML = '';
+          for (const m of data.movements || []) {
+            const tr = document.createElement('tr');
+            const when = m.createdAt ? new Date(m.createdAt).toLocaleString('en-US') : '—';
+            tr.innerHTML =
+              '<td class="px-4 py-2 text-xs text-gray-400 whitespace-nowrap">' +
+              escapeHtml(when) +
+              '</td>' +
+              '<td class="px-4 py-2 font-mono text-xs">' +
+              escapeHtml(m.slug) +
+              '</td>' +
+              '<td class="px-4 py-2 text-right ' +
+              (m.onHandDelta > 0 ? 'text-green-600' : m.onHandDelta < 0 ? 'text-red-600' : 'text-gray-400') +
+              '">' +
+              (m.onHandDelta > 0 ? '+' : '') +
+              m.onHandDelta +
+              '</td>' +
+              '<td class="px-4 py-2 text-right ' +
+              (m.reservedDelta > 0 ? 'text-amber-600' : m.reservedDelta < 0 ? 'text-blue-600' : 'text-gray-400') +
+              '">' +
+              (m.reservedDelta > 0 ? '+' : '') +
+              m.reservedDelta +
+              '</td>' +
+              '<td class="px-4 py-2 text-xs">' +
+              escapeHtml(m.reason) +
+              '</td>' +
+              '<td class="px-4 py-2 font-mono text-xs text-gray-400">' +
+              (m.orderId ? escapeHtml(String(m.orderId).slice(0, 8)) : '') +
+              '</td>';
+            mbody.appendChild(tr);
+          }
+          if (!data.movements || data.movements.length === 0) {
+            mbody.innerHTML =
+              '<tr><td colspan="6" class="px-4 py-8 text-center text-gray-400">No movements yet.</td></tr>';
+          }
+        } catch (e) {
+          document.getElementById('inventory-rows').innerHTML =
+            '<tr><td colspan="6" class="px-4 py-8 text-center text-red-500">Failed to load inventory.</td></tr>';
+        }
+      }
+
+      load();
+    })();
+  </script>
+</AdminLayout>

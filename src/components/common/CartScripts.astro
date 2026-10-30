@@ -1,0 +1,62 @@
+---
+// Global shopping-cart behaviours: [data-add-to-cart], [data-buy-now],
+// and header cart badge updates. Loaded once per page from Layout.astro.
+import { languages } from '~/i18n/config';
+
+const langCodes: string[] = Object.keys(languages);
+---
+
+<script type="application/json" data-cart-lang-codes set:html={JSON.stringify(langCodes)} />
+
+<script>
+  import { addItem, cartCount, CART_EVENT } from '~/lib/cart';
+
+  function updateBadges(): void {
+    const count = cartCount();
+    document.querySelectorAll<HTMLElement>('[data-cart-count]').forEach((el) => {
+      el.textContent = String(count);
+      el.classList.toggle('hidden', count === 0);
+    });
+  }
+
+  function langPrefix(): string {
+    const el = document.querySelector('[data-cart-lang-codes]');
+    let codes: string[] = [];
+    if (el && el.textContent) {
+      try {
+        codes = JSON.parse(el.textContent) as string[];
+      } catch {
+        codes = [];
+      }
+    }
+    const seg = window.location.pathname.split('/')[1] || '';
+    return codes.includes(seg) && seg !== 'en' ? `/${seg}` : '';
+  }
+
+  document.addEventListener('click', (e) => {
+    const target = e.target as HTMLElement;
+    const btn = target.closest('[data-add-to-cart],[data-buy-now]') as HTMLElement | null;
+    if (!btn) return;
+    const slug = btn.getAttribute('data-cart-slug');
+    if (!slug) return;
+    const priceCents = Math.round(Number(btn.getAttribute('data-cart-price') || '0'));
+    const currency = btn.getAttribute('data-cart-currency') || 'USD';
+    addItem(
+      {
+        slug,
+        title: btn.getAttribute('data-cart-title') || slug,
+        priceCents,
+        currency,
+        image: btn.getAttribute('data-cart-image') || '',
+      },
+      1
+    );
+    if (btn.hasAttribute('data-buy-now')) {
+      window.location.href = `${langPrefix()}/checkout`;
+    }
+  });
+
+  document.addEventListener(CART_EVENT, updateBadges);
+  document.addEventListener('astro:after-swap', updateBadges);
+  updateBadges();
+</script>

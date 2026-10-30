@@ -18,10 +18,10 @@ import { join, relative, resolve } from 'path';
 import { readdirSync, statSync } from 'fs';
 
 const ROOT = resolve(import.meta.dirname, '..');
-const OLD_DOMAIN = 'https://aquafarer.com';
-const OLD_ASSETS = 'https://assets.aquafarer.com';
-const OLD_EMAIL = 'info@aquafarer.com';
-const OLD_WEB_EMAIL = 'web@aquafarer.com';
+const OLD_DOMAIN = 'https://paddleboardoverstock.com';
+const OLD_ASSETS = 'https://assets.paddleboardoverstock.com';
+const OLD_EMAIL = 'info@paddleboardoverstock.com';
+const OLD_WEB_EMAIL = 'web@paddleboardoverstock.com';
 
 const args = process.argv.slice(2);
 const dryRun = args.includes('--dry-run');

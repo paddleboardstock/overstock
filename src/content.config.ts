@@ -322,6 +322,10 @@ const productCollection = defineCollection({
     tags: z.array(z.string()).optional(),
     specs: z.array(productSpecSchema).optional(),
     price: productPriceSchema,
+    // Overstock stock grading — transparent condition classification:
+    // 'A' = brand-new surplus stock (perfect packaging, zero defects);
+    // 'B' = factory seconds (minor cosmetic marks, 100% airtight, tested).
+    grade: z.enum(['A', 'B']).optional(),
     inStock: z.boolean().optional(),
     featured: z.boolean().optional(),
     metadata: metadataDefinition(),

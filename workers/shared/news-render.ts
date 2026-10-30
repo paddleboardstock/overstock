@@ -8,88 +8,88 @@ export const LANGS = ['en', 'fr', 'de', 'es', 'pt', 'ar', 'it', 'ru', 'pl', 'nl'
 export const NEWS_UI: Record<string, { title: string; subtitle: string }> = {
   en: {
     title: 'News',
-    subtitle: 'The latest from Aquafarer — product launches, company updates, guides, and stories from the water',
+    subtitle: 'The latest from Paddle Board Overstock — product launches, company updates, guides, and stories from the water',
   },
   fr: {
     title: 'Actualités',
     subtitle:
-      'Les dernières nouvelles de Aquafarer — lancements de produits, actualités, guides et histoires du terrain',
+      'Les dernières nouvelles de Paddle Board Overstock — lancements de produits, actualités, guides et histoires du terrain',
   },
   de: {
     title: 'Neuigkeiten',
-    subtitle: 'Aktuelles von Aquafarer – Produkteinführungen, Unternehmensupdates, Ratgeber und Geschichten vom Wasser',
+    subtitle: 'Aktuelles von Paddle Board Overstock – Produkteinführungen, Unternehmensupdates, Ratgeber und Geschichten vom Wasser',
   },
   es: {
     title: 'Noticias',
-    subtitle: 'Las últimas novedades de Aquafarer — lanzamientos, actualizaciones, guías e historias del agua',
+    subtitle: 'Las últimas novedades de Paddle Board Overstock — lanzamientos, actualizaciones, guías e historias del agua',
   },
   pt: {
     title: 'Notícias',
     subtitle:
-      'O mais recente da Aquafarer — lançamentos de produtos, atualizações da empresa, guias e histórias do mar',
+      'O mais recente da Paddle Board Overstock — lançamentos de produtos, atualizações da empresa, guias e histórias do mar',
   },
   ar: {
     title: 'الأخبار',
-    subtitle: 'آخر المستجدات من Aquafarer — إطلاق المنتجات، تحديثات الشركة، الأدلة، وقصص من الماء',
+    subtitle: 'آخر المستجدات من Paddle Board Overstock — إطلاق المنتجات، تحديثات الشركة، الأدلة، وقصص من الماء',
   },
   it: {
     title: 'Novità',
-    subtitle: 'Ultime notizie da Aquafarer – lanci prodotti, aggiornamenti aziendali, guide e storie dal mare',
+    subtitle: 'Ultime notizie da Paddle Board Overstock – lanci prodotti, aggiornamenti aziendali, guide e storie dal mare',
   },
-  ja: { title: 'ニュース', subtitle: 'Aquafarerからの最新情報—製品発表、会社情報、ガイド、海のストーリー' },
-  ko: { title: '뉴스', subtitle: 'Aquafarer의 최신 소식—제품 출시, 회사 업데이트, 가이드 및 바다 이야기' },
+  ja: { title: 'ニュース', subtitle: 'Paddle Board Overstockからの最新情報—製品発表、会社情報、ガイド、海のストーリー' },
+  ko: { title: '뉴스', subtitle: 'Paddle Board Overstock의 최신 소식—제품 출시, 회사 업데이트, 가이드 및 바다 이야기' },
   ru: {
     title: 'Новости',
-    subtitle: 'Последние новости Aquafarer — запуски продуктов, обновления компании, руководства и истории с воды',
+    subtitle: 'Последние новости Paddle Board Overstock — запуски продуктов, обновления компании, руководства и истории с воды',
   },
   pl: {
     title: 'Aktualności',
-    subtitle: 'Najnowsze wiadomości od Aquafarer – premiery produktów, aktualizacje firmy, poradniki i historie z wody',
+    subtitle: 'Najnowsze wiadomości od Paddle Board Overstock – premiery produktów, aktualizacje firmy, poradniki i historie z wody',
   },
   nl: {
     title: 'Nieuws',
     subtitle:
-      'Het laatste nieuws van Aquafarer – productlanceringen, bedrijfsupdates, handleidingen en verhalen van het water',
+      'Het laatste nieuws van Paddle Board Overstock – productlanceringen, bedrijfsupdates, handleidingen en verhalen van het water',
   },
   sv: {
     title: 'Nyheter',
     subtitle:
-      'Senaste nyheterna från Aquafarer – produktlanseringar, företagsuppdateringar, guider och berättelser från vattnet',
+      'Senaste nyheterna från Paddle Board Overstock – produktlanseringar, företagsuppdateringar, guider och berättelser från vattnet',
   },
   no: {
     title: 'Nyheter',
     subtitle:
-      'Siste nytt fra Aquafarer – produktlanseringer, bedriftsoppdateringer, veiledninger og historier fra vannet',
+      'Siste nytt fra Paddle Board Overstock – produktlanseringer, bedriftsoppdateringer, veiledninger og historier fra vannet',
   },
   el: {
     title: 'Νέα',
     subtitle:
-      'Τα τελευταία νέα από την Aquafarer – κυκλοφορίες προϊόντων, εταιρικές ενημερώσεις, οδηγοί και ιστορίες από το νερό',
+      'Τα τελευταία νέα από την Paddle Board Overstock – κυκλοφορίες προϊόντων, εταιρικές ενημερώσεις, οδηγοί και ιστορίες από το νερό',
   },
   tr: {
     title: 'Haberler',
-    subtitle: "Aquafarer'dan en son haberler – ürün lansmanları, şirket güncellemeleri, rehberler ve sudan hikayeler",
+    subtitle: "Paddle Board Overstock'dan en son haberler – ürün lansmanları, şirket güncellemeleri, rehberler ve sudan hikayeler",
   },
   fi: {
     title: 'Uutiset',
-    subtitle: 'Uusimmat Aquafarerilta — tuotelanseeraukset, yrityspäivitykset, oppaat ja tarinoita vesiltä',
+    subtitle: 'Uusimmat Paddle Board Overstockilta — tuotelanseeraukset, yrityspäivitykset, oppaat ja tarinoita vesiltä',
   },
   cs: {
     title: 'Novinky',
-    subtitle: 'Nejnovější z Aquafarer — uvedení produktů, aktualizace společnosti, průvodci a příběhy z vody',
+    subtitle: 'Nejnovější z Paddle Board Overstock — uvedení produktů, aktualizace společnosti, průvodci a příběhy z vody',
   },
   da: {
     title: 'Nyheder',
-    subtitle: 'Det seneste fra Aquafarer — produktlanceringer, virksomhedsopdateringer, guides og historier fra vandet',
+    subtitle: 'Det seneste fra Paddle Board Overstock — produktlanceringer, virksomhedsopdateringer, guides og historier fra vandet',
   },
   ro: {
     title: 'Noutăți',
     subtitle:
-      'Cele mai recente de la Aquafarer — lansări de produse, actualizări ale companiei, ghiduri și povești de pe apă',
+      'Cele mai recente de la Paddle Board Overstock — lansări de produse, actualizări ale companiei, ghiduri și povești de pe apă',
   },
   th: {
     title: 'ข่าวสาร',
-    subtitle: 'ข่าวสารล่าสุดจาก Aquafarer — การเปิดตัวสินค้า อัปเดตบริษัท คำแนะนำ และเรื่องราวจากบนน้ำ',
+    subtitle: 'ข่าวสารล่าสุดจาก Paddle Board Overstock — การเปิดตัวสินค้า อัปเดตบริษัท คำแนะนำ และเรื่องราวจากบนน้ำ',
   },
 };
 

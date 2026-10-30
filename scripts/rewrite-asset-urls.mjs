@@ -2,10 +2,10 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
-const BASE = 'https://assets.aquafarer.com';
+const BASE = 'https://assets.paddleboardoverstock.com';
 
 // Skip already-absolute URLs and bundled asset aliases (~/assets/images).
-const RE = /(?<!https:\/\/assets\.aquafarer\.com)(?<!assets)\/(images|files)\//g;
+const RE = /(?<!https:\/\/assets\.paddleboardoverstock\.com)(?<!assets)\/(images|files)\//g;
 
 const SKIP_DIRS = new Set(['node_modules', 'dist', '.git']);
 const SKIP_FILES = new Set(['assets.ts']); // the helper itself

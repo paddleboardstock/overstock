@@ -16,9 +16,9 @@ export const businessArticles: ContentV2Record[] = [
     explanation:
       'Le attività di noleggio SUP hanno costi di ingresso relativamente bassi rispetto ad altre iniziative di sport acquatici. Le principali voci di costo sono: attrezzatura (board, pagaie, pompe, PFD, leash, kit di riparazione), assicurazione (responsabilità civile e danni), permessi e licenze (permessi per la spiaggia, licenze commerciali, registrazione per le imposte sulle vendite), deposito e trasporto (sistema di rastrelliere, rimorchio o furgone), personale (istruttori, cassieri, manodopera stagionale) e marketing (sito web, segnaletica, pubblicità locale). L\'attrezzatura è il maggior costo iniziale, ma con una manutenzione adeguata le board durano 3-5 stagioni.',
     solution:
-      'Inizia con l\'Aquafarer Club Starter Package, che raggruppa 10 board, pagaie, pompe, PFD e kit di riparazione a un prezzo di pacchetto scontato. Scegli una spiaggia ad alto traffico e ottieni i permessi necessari prima di acquistare l\'attrezzatura. Fissa il noleggio a $25-40/ora o $80-150/giorno. Punta a un tasso di utilizzo giornaliero del 40-60% per raggiungere il pareggio nella prima stagione.',
+      'Inizia con l\'Paddle Board Overstock Club Starter Package, che raggruppa 10 board, pagaie, pompe, PFD e kit di riparazione a un prezzo di pacchetto scontato. Scegli una spiaggia ad alto traffico e ottieni i permessi necessari prima di acquistare l\'attrezzatura. Fissa il noleggio a $25-40/ora o $80-150/giorno. Punta a un tasso di utilizzo giornaliero del 40-60% per raggiungere il pareggio nella prima stagione.',
     recommendation:
-      'Per i gestori alle prime armi, il Club Starter Package di Aquafarer include tutto il necessario per una flotta di 10 board. Aggiungi un semplice sistema di prenotazione online, liberatorie di responsabilità e un lettore di carte. Inizia in piccolo, dimostra la domanda ed espandi nel secondo anno.',
+      'Per i gestori alle prime armi, il Club Starter Package di Paddle Board Overstock include tutto il necessario per una flotta di 10 board. Aggiungi un semplice sistema di prenotazione online, liberatorie di responsabilità e un lettore di carte. Inizia in piccolo, dimostra la domanda ed espandi nel secondo anno.',
     faq: [
       {
         q: 'Devo avere una licenza per noleggiare paddle board?',
@@ -60,13 +60,13 @@ export const businessArticles: ContentV2Record[] = [
     explanation:
       'I programmi di sport acquatici dei resort generano ricavi tramite noleggi orari, escursioni di mezza giornata, tour guidati, lezioni e offerte a pacchetto. Le infrastrutture chiave includono: un\'area di deposito sicura per l\'attrezzatura, un punto di varo sulla spiaggia o dal pontile, una postazione di sicurezza con attrezzatura da bagnino e pronto soccorso, un banco di registrazione con sistema POS e segnaletica che spieghi regole e prezzi. Il fabbisogno di personale è minimo: un manager e 2-3 addetti possono gestire una flotta di 50 board.',
     solution:
-      'Inizia con l\'Aquafarer Resort Premium Package, che include 50-100 SUP/kayak, rastrelliere di deposito commerciali, infrastrutture di sicurezza, formazione del personale e un playbook di gestione dei ricavi. Il pacchetto è progettato per lanciare un programma completo in 4-6 settimane dall\'ordine al primo noleggio.',
+      'Inizia con l\'Paddle Board Overstock Resort Premium Package, che include 50-100 SUP/kayak, rastrelliere di deposito commerciali, infrastrutture di sicurezza, formazione del personale e un playbook di gestione dei ricavi. Il pacchetto è progettato per lanciare un programma completo in 4-6 settimane dall\'ordine al primo noleggio.',
     recommendation:
-      "Il Resort Premium Package di Aquafarer è la via più rapida per un programma professionale di sport acquatici. Includi l'attrezzatura nelle tariffe delle attività per gli ospiti o offri pacchetti premium. Forma 2-3 membri del personale con il programma di formazione in loco di Aquafarer per garantire sicurezza e qualità.",
+      "Il Resort Premium Package di Paddle Board Overstock è la via più rapida per un programma professionale di sport acquatici. Includi l'attrezzatura nelle tariffe delle attività per gli ospiti o offri pacchetti premium. Forma 2-3 membri del personale con il programma di formazione in loco di Paddle Board Overstock per garantire sicurezza e qualità.",
     faq: [
       {
         q: 'I resort hanno bisogno di un\'assicurazione speciale per gli sport acquatici?',
-        a: 'La maggior parte delle polizze di responsabilità dei resort copre le attività degli ospiti, ma può richiedere una copertura aggiuntiva per gli sport acquatici. Si consiglia una polizza ombrello con una copertura di $2-5 milioni. L\'attrezzatura Aquafarer soddisfa gli standard di sicurezza CE, il che facilita la conformità assicurativa.',
+        a: 'La maggior parte delle polizze di responsabilità dei resort copre le attività degli ospiti, ma può richiedere una copertura aggiuntiva per gli sport acquatici. Si consiglia una polizza ombrello con una copertura di $2-5 milioni. L\'attrezzatura Paddle Board Overstock soddisfa gli standard di sicurezza CE, il che facilita la conformità assicurativa.',
       },
       {
         q: 'Quanto personale mi serve?',
@@ -100,7 +100,7 @@ export const businessArticles: ContentV2Record[] = [
     explanation:
       'Il dimensionamento della flotta dipende da tre fattori: visitatori giornalieri medi in alta stagione, durata media del noleggio e tasso di utilizzo target. Una board usata 4 ore al giorno a $30/ora genera $120/giorno. Con un costo di $500 a board, il rientro si ottiene in 4-5 giorni di noleggio. La maggior parte dei club ha bisogno di board sufficienti a servire simultaneamente il 15-25% dei visitatori giornalieri nelle ore di punta.',
     solution:
-      'Usa la regola del 10: inizia con 10 board per una nuova attività, monitora l\'utilizzo durante la prima stagione e aggiungi 5-10 board all\'anno in base ai dati sulla domanda. L\'Aquafarer Club Starter Package fornisce 10 board con margine di espansione.',
+      'Usa la regola del 10: inizia con 10 board per una nuova attività, monitora l\'utilizzo durante la prima stagione e aggiungi 5-10 board all\'anno in base ai dati sulla domanda. L\'Paddle Board Overstock Club Starter Package fornisce 10 board con margine di espansione.',
     recommendation:
       'Inizia con il Club Starter Package e monitora l\'utilizzo giornaliero. Quando l\'utilizzo medio supera il 70% nelle ore di punta per due settimane consecutive, è il momento di aggiungere altre board.',
     faq: [
@@ -132,13 +132,13 @@ export const businessArticles: ContentV2Record[] = [
     explanation:
       'Per le operazioni di noleggio commerciale, il costo totale di proprietà su 3 anni favorisce nettamente i SUP gonfiabili: costano il 30-50% in meno in partenza, richiedono il 60% di spazio di deposito in meno, hanno costi di spedizione inferiori, resistono meglio ai danni da impatto causati da noleggiatori inesperti e sono più leggeri da trasportare per gli ospiti. Le board rigide vanno meglio nei tour e nella pagaiata avanzata, ma soffrono di ammaccature, delaminazione e danni ai bordi nell\'uso a noleggio.',
     solution:
-      'Scegli SUP gonfiabili per la maggior parte della tua flotta di noleggio (80%), con una piccola selezione di board rigide (20%) per gli ospiti esperti e i tour guidati. I SUP gonfiabili Aquafarer sono costruiti con PVC commerciale da 1.2mm e nucleo drop-stitch rinforzato, valutati per 3-5 stagioni di uso quotidiano a noleggio.',
+      'Scegli SUP gonfiabili per la maggior parte della tua flotta di noleggio (80%), con una piccola selezione di board rigide (20%) per gli ospiti esperti e i tour guidati. I SUP gonfiabili Paddle Board Overstock sono costruiti con PVC commerciale da 1.2mm e nucleo drop-stitch rinforzato, valutati per 3-5 stagioni di uso quotidiano a noleggio.',
     recommendation:
-      'Il SUP Aquafarer Explorer 11 (gonfiabile) è la miglior board da noleggio a tutto tondo — stabile, durevole e facile da depositare. Aggiungi alcuni modelli SUP Ocean Voyager per gli ospiti che fanno touring e vogliono un upgrade di prestazioni.',
+      'Il SUP Paddle Board Overstock Explorer 11 (gonfiabile) è la miglior board da noleggio a tutto tondo — stabile, durevole e facile da depositare. Aggiungi alcuni modelli SUP Ocean Voyager per gli ospiti che fanno touring e vogliono un upgrade di prestazioni.',
     faq: [
       {
         q: 'Quanto durano i SUP gonfiabili nell\'uso a noleggio?',
-        a: '3-5 stagioni con una corretta manutenzione. I gonfiabili commerciali di Aquafarer usano PVC più spesso (1.2mm contro 0.8mm del grado consumer) e cuciture rinforzate per una maggiore durata nel tempo.',
+        a: '3-5 stagioni con una corretta manutenzione. I gonfiabili commerciali di Paddle Board Overstock usano PVC più spesso (1.2mm contro 0.8mm del grado consumer) e cuciture rinforzate per una maggiore durata nel tempo.',
       },
       {
         q: 'I SUP gonfiabili sembrano meno stabili delle board rigide?',
@@ -168,9 +168,9 @@ export const businessArticles: ContentV2Record[] = [
     explanation:
       'I materiali dei kayak per uso commerciale rientrano in tre categorie: PVC gonfiabile (costo più basso, miglior deposito, buona durabilità), polietilene rotomoldato (costo medio, deposito ingombrante, durabilità eccellente) e fibra di vetro/composito (costo elevato, migliori prestazioni, fragile). Per le flotte di noleggio in cui gli ospiti hanno abilità diverse, il PVC gonfiabile è la scelta più pratica — sopporta urti e sfregamenti, si ripiega nel bagagliaio di un\'auto e costa una frazione degli scafi rigidi.',
     solution:
-      'Per le flotte di noleggio di beach club e resort, scegli kayak gonfiabili in PVC di Aquafarer con tessuto di grado commerciale e cuciture rinforzate. Per le operazioni di touring guidato in cui le prestazioni contano, investi in scafi in polietilene rotomoldato. Una flotta mista con il 70% di gonfiabili e il 30% di scafi rigidi copre tutti i casi d\'uso.',
+      'Per le flotte di noleggio di beach club e resort, scegli kayak gonfiabili in PVC di Paddle Board Overstock con tessuto di grado commerciale e cuciture rinforzate. Per le operazioni di touring guidato in cui le prestazioni contano, investi in scafi in polietilene rotomoldato. Una flotta mista con il 70% di gonfiabili e il 30% di scafi rigidi copre tutti i casi d\'uso.',
     recommendation:
-      'La serie di kayak gonfiabili Aquafarer è progettata appositamente per l\'uso commerciale a noleggio. Abbinala al Club Starter Package per una flotta completa pronta al noleggio.',
+      'La serie di kayak gonfiabili Paddle Board Overstock è progettata appositamente per l\'uso commerciale a noleggio. Abbinala al Club Starter Package per una flotta completa pronta al noleggio.',
     faq: [
       {
         q: 'Quanto durano i kayak gonfiabili nell\'uso commerciale?',
@@ -194,31 +194,31 @@ export const businessArticles: ContentV2Record[] = [
       'Guida passo-passo per lanciare il tuo marchio di SUP, kayak o imbarcazioni gonfiabili con produzione a private label. Selezione dei prodotti, MOQ, prezzi, packaging e configurazione e-commerce.',
     definition:
       'L\'OEM a private label (Original Equipment Manufacturing) si verifica quando una fabbrica produce prodotti venduti sotto il tuo marchio. Tu scegli design, colori, logo e packaging — la fabbrica gestisce produzione e controllo qualità.',
-    tldr: "Avviare un marchio di sport acquatici tramite produzione a private label costa $5,000–$15,000 per l'inventario iniziale (50-100 unità a $50-150/unità). Il processo richiede 60-90 giorni dal primo contatto alla ricezione della prima spedizione. Il Brand Launch Package di Aquafarer include selezione dei prodotti, design personalizzato del logo, packaging, certificazione CE e spedizione FOB. I proprietari di marchi alle prime armi ottengono in genere margini del 40-55% vendendo su Amazon, Shopify o tramite rivenditori locali.",
+    tldr: "Avviare un marchio di sport acquatici tramite produzione a private label costa $5,000–$15,000 per l'inventario iniziale (50-100 unità a $50-150/unità). Il processo richiede 60-90 giorni dal primo contatto alla ricezione della prima spedizione. Il Brand Launch Package di Paddle Board Overstock include selezione dei prodotti, design personalizzato del logo, packaging, certificazione CE e spedizione FOB. I proprietari di marchi alle prime armi ottengono in genere margini del 40-55% vendendo su Amazon, Shopify o tramite rivenditori locali.",
     problem:
       'Vuoi avviare il tuo marchio di sport acquatici, ma non hai esperienza di produzione, contatti con le fabbriche né capitali ingenti. Temi per le quantità minime di ordine, il controllo qualità e la possibilità di competere con marchi affermati.',
     explanation:
-      'La produzione a private label non è mai stata così accessibile per i piccoli marchi. Aquafarer offre MOQ a partire da 50 unità per SKU, il che significa che puoi testare il mercato con un investimento di $5,000-$15,000. Il processo: seleziona i prodotti base dal catalogo, personalizza colori e logo, scegli le opzioni di packaging, ricevi i campioni di produzione per l\'approvazione, quindi produzione completa e spedizione. Tu possiedi il marchio e tutte le relazioni con i clienti — Aquafarer resta invisibile ai tuoi clienti finali.',
+      'La produzione a private label non è mai stata così accessibile per i piccoli marchi. Paddle Board Overstock offre MOQ a partire da 50 unità per SKU, il che significa che puoi testare il mercato con un investimento di $5,000-$15,000. Il processo: seleziona i prodotti base dal catalogo, personalizza colori e logo, scegli le opzioni di packaging, ricevi i campioni di produzione per l\'approvazione, quindi produzione completa e spedizione. Tu possiedi il marchio e tutte le relazioni con i clienti — Paddle Board Overstock resta invisibile ai tuoi clienti finali.',
     solution:
-      'Inizia con l\'Aquafarer Brand Launch Package: seleziona 2-3 modelli di prodotto (ad es. un SUP per principianti, un SUP da touring e un kayak), personalizzali con il tuo logo e i tuoi colori aziendali, ordina 50-100 unità per SKU e lancia su Amazon o con un semplice negozio Shopify. Con la crescita delle vendite, aggiungi altri SKU e aumenta le quantità ordinate.',
+      'Inizia con l\'Paddle Board Overstock Brand Launch Package: seleziona 2-3 modelli di prodotto (ad es. un SUP per principianti, un SUP da touring e un kayak), personalizzali con il tuo logo e i tuoi colori aziendali, ordina 50-100 unità per SKU e lancia su Amazon o con un semplice negozio Shopify. Con la crescita delle vendite, aggiungi altri SKU e aumenta le quantità ordinate.',
     recommendation:
-      'Il Brand Launch Package di Aquafarer è progettato per i proprietari di marchi alle prime armi. Inizia con un prodotto di punta, dimostra la domanda ed espandi la linea. Concentrati sulla costruzione di una brand story e di un\'esperienza cliente, piuttosto che competere sul prezzo.',
+      'Il Brand Launch Package di Paddle Board Overstock è progettato per i proprietari di marchi alle prime armi. Inizia con un prodotto di punta, dimostra la domanda ed espandi la linea. Concentrati sulla costruzione di una brand story e di un\'esperienza cliente, piuttosto che competere sul prezzo.',
     faq: [
       {
         q: 'Qual è la quantità minima di ordine per il private label?',
-        a: "Il minimo di Aquafarer è di 50 unità per SKU per il branding personalizzato. I prodotti standard senza personalizzazione possono avere MOQ inferiori. Lo sviluppo di stampi personalizzati richiede una negoziazione separata.",
+        a: "Il minimo di Paddle Board Overstock è di 50 unità per SKU per il branding personalizzato. I prodotti standard senza personalizzazione possono avere MOQ inferiori. Lo sviluppo di stampi personalizzati richiede una negoziazione separata.",
       },
       {
         q: 'Devo gestire io dogana e logistica di importazione?',
-        a: 'Aquafarer offre FOB Qingdao (l\'organizzi tu la spedizione) o consegna CIF (spedizione inclusa fino al tuo porto). Possiamo anche consigliare spedizionieri che gestiscono lo sdoganamento e la consegna dell\'ultimo miglio.',
+        a: 'Paddle Board Overstock offre FOB Qingdao (l\'organizzi tu la spedizione) o consegna CIF (spedizione inclusa fino al tuo porto). Possiamo anche consigliare spedizionieri che gestiscono lo sdoganamento e la consegna dell\'ultimo miglio.',
       },
       {
         q: 'Come garantisco la qualità dei prodotti?',
-        a: 'I prodotti Aquafarer sono fabbricati sotto gestione della qualità ISO 9001, con 64 modelli certificati CE nel catalogo. Ricevi i campioni di produzione per l\'approvazione prima della produzione in serie. È disponibile un\'ispezione di terze parti.',
+        a: 'I prodotti Paddle Board Overstock sono fabbricati sotto gestione della qualità ISO 9001, con 64 modelli certificati CE nel catalogo. Ricevi i campioni di produzione per l\'approvazione prima della produzione in serie. È disponibile un\'ispezione di terze parti.',
       },
       {
         q: 'Posso vendere su Amazon con prodotti a private label?',
-        a: 'Sì. Molti clienti private label di Aquafarer vendono su Amazon, eBay e sui propri negozi Shopify. Forniamo fotografie di prodotto, modelli di descrizione e la documentazione CE necessaria per le inserzioni nei marketplace.',
+        a: 'Sì. Molti clienti private label di Paddle Board Overstock vendono su Amazon, eBay e sui propri negozi Shopify. Forniamo fotografie di prodotto, modelli di descrizione e la documentazione CE necessaria per le inserzioni nei marketplace.',
       },
     ],
     relatedGuides: ['private-label-vs-white-label', 'cost-to-start-sup-rental-business'],
@@ -234,13 +234,13 @@ export const businessArticles: ContentV2Record[] = [
       'Checklist completa dell\'inventario attrezzatura per avviare o potenziare un SUP club, un kayak club, una scuola di surf o un centro di formazione di sport acquatici. Include attrezzatura per studenti, istruttori, sicurezza e operazioni.',
     definition:
       'La checklist dell\'attrezzatura di un SUP club copre tutto il necessario per gestire un programma di sport a pagaiata: attrezzatura per gli studenti, dotazione dell\'istruttore, attrezzatura di sicurezza, soluzioni di deposito e accessori operativi.',
-    tldr: 'Per lanciare un SUP club servono: 10-30 board con pagaie, pompe e kit di riparazione ($3,000-$12,000); PFD e attrezzatura di sicurezza ($500-$2,000); dotazione per istruttori, incluse board specializzate e dispositivi di comunicazione ($1,000-$3,000); rastrelliere di deposito o rimorchio ($500-$3,000); e articoli operativi come liberatorie, segnaletica e un sistema di prenotazione ($200-$1,000). L\'Aquafarer Club Starter Package raggruppa gli elementi essenziali a un prezzo inferiore del 15-20% rispetto all\'acquisto singolo.',
+    tldr: 'Per lanciare un SUP club servono: 10-30 board con pagaie, pompe e kit di riparazione ($3,000-$12,000); PFD e attrezzatura di sicurezza ($500-$2,000); dotazione per istruttori, incluse board specializzate e dispositivi di comunicazione ($1,000-$3,000); rastrelliere di deposito o rimorchio ($500-$3,000); e articoli operativi come liberatorie, segnaletica e un sistema di prenotazione ($200-$1,000). L\'Paddle Board Overstock Club Starter Package raggruppa gli elementi essenziali a un prezzo inferiore del 15-20% rispetto all\'acquisto singolo.',
     problem:
       'Stai avviando un SUP club o una scuola di surf, ma sei sopraffatto dalle esigenze di attrezzatura. Non sai cosa acquistare, quanto spendere o come dare priorità al budget.',
     explanation:
       'Un SUP club ben attrezzato ha bisogno di cinque categorie di attrezzatura: (1) Board e pagaie per gli studenti — l\'investimento principale, scegli SUP gonfiabili durevoli in più misure; (2) Attrezzatura di sicurezza — PFD, leash, fischietti, kit di pronto soccorso, board di soccorso; (3) Dotazione dell\'istruttore — una board per l\'insegnamento stabile, comunicazione impermeabile, ausili dimostrativi; (4) Deposito e trasporto — rastrelliere, rimorchio o furgone, stazione di gonfiaggio; (5) Operazioni — sistema di liberatorie, software di prenotazione, segnaletica, materiali di marketing.',
     solution:
-      'L\'Aquafarer Club Starter Package copre le categorie 1-3 con attrezzatura di qualità da club a prezzo di pacchetto. Aggiungi il deposito locale e un semplice sistema di prenotazione online, e sei pronto per la tua prima stagione.',
+      'L\'Paddle Board Overstock Club Starter Package copre le categorie 1-3 con attrezzatura di qualità da club a prezzo di pacchetto. Aggiungi il deposito locale e un semplice sistema di prenotazione online, e sei pronto per la tua prima stagione.',
     recommendation:
       'Investi in attrezzatura di qualità fin dall\'inizio — le board economiche costano di più in riparazioni e sostituzioni. Il Club Starter Package fornisce attrezzatura di grado commerciale che dura 3-5 stagioni. Monitora l\'utilizzo e aggiungi board man mano che il numero di soci cresce.',
     faq: [
@@ -278,7 +278,7 @@ export const businessArticles: ContentV2Record[] = [
     solution:
       'Implementa un programma a livelli: (1) Gratuito — accesso di base a SUP e kayak per gli ospiti delle categorie di camere premium; (2) Noleggi a pagamento — $25-50/ora per gli ospiti delle camere standard; (3) Esperienze premium — tour guidati al tramonto, escursioni di snorkeling, lezioni private a $75-200/persona. Promuovi le attività con email pre-arrivo, materiali in camera e raccomandazioni del concierge.',
     recommendation:
-      'Inizia con il Resort Premium Package di Aquafarer e implementa il modello di prezzi a livelli. Forma la reception e il personale del concierge a promuovere attivamente le attività acquatiche. Monitora i tassi di partecipazione e adegua i prezzi su base stagionale.',
+      'Inizia con il Resort Premium Package di Paddle Board Overstock e implementa il modello di prezzi a livelli. Forma la reception e il personale del concierge a promuovere attivamente le attività acquatiche. Monitora i tassi di partecipazione e adegua i prezzi su base stagionale.',
     faq: [
       {
         q: 'Gli sport acquatici devono essere gratuiti o a pagamento?',
@@ -306,15 +306,15 @@ export const businessArticles: ContentV2Record[] = [
       'Best practice per gestire, mantenere e sostituire flotte di imbarcazioni gonfiabili in ambienti di ospitalità commerciale. Programmazione della manutenzione, deposito, riparazione e pianificazione del ciclo di vita.',
     definition:
       'La gestione della flotta per imbarcazioni gonfiabili copre l\'acquisizione, la programmazione della manutenzione, i protocolli di riparazione, l\'ottimizzazione del deposito e la pianificazione della sostituzione per le operazioni commerciali di noleggio e ospitalità.',
-    tldr: 'Una flotta di imbarcazioni gonfiabili ben gestita in ambiente resort dura 3-5 stagioni con la cura adeguata. Pratiche chiave: checklist di ispezione giornaliera, rotazione settimanale di risciacquo e asciugatura, test di pressione mensile, pulizia profonda e deposito stagionali. Prevedi in bilancio il 15-20% del valore dell\'attrezzatura ogni anno per manutenzione e sostituzione. Aquafarer offre un Fleet Management Program con inventario di pezzi di ricambio, diagnostica remota e prezzi di rinnovo annuale dell\'attrezzatura.',
+    tldr: 'Una flotta di imbarcazioni gonfiabili ben gestita in ambiente resort dura 3-5 stagioni con la cura adeguata. Pratiche chiave: checklist di ispezione giornaliera, rotazione settimanale di risciacquo e asciugatura, test di pressione mensile, pulizia profonda e deposito stagionali. Prevedi in bilancio il 15-20% del valore dell\'attrezzatura ogni anno per manutenzione e sostituzione. Paddle Board Overstock offre un Fleet Management Program con inventario di pezzi di ricambio, diagnostica remota e prezzi di rinnovo annuale dell\'attrezzatura.',
     problem:
       'Il tuo resort ha investito in imbarcazioni gonfiabili per le attività degli ospiti, ma dopo una stagione l\'attrezzatura mostra segni di usura, la manutenzione è reattiva anziché proattiva e non sai quando riparare piuttosto che sostituire.',
     explanation:
       'Le imbarcazioni gonfiabili in uso commerciale affrontano sfide specifiche: l\'esposizione ai raggi UV degrada il tessuto in PVC nel tempo, acqua salata e sabbia accelerano l\'usura di valvole e cuciture, gli utenti inesperti causano più danni da impatto e un deposito improprio accorcia la vita utile. Un programma di manutenzione sistematico affronta ciascuno di questi aspetti: risciacquo quotidiano dopo l\'uso in acqua salata, ispezione settimanale di valvole e cuciture, test di pressione mensile a 12-15 PSI e deposito fuori stagione corretto in uno spazio a clima controllato.',
     solution:
-      'Implementa il sistema di manutenzione a tre livelli: (1) Giornaliero — risciacqua le board, ispeziona per danni visibili, asciuga prima del deposito; (2) Settimanale — ispezione completa di tutte le cuciture, valvole e accessori; (3) Stagionale — pulizia profonda, test di pressione, riparazione di tutti i danni, applicazione di protettore UV. Usa l\'Aquafarer Fleet Management Program per pezzi di ricambio, supporto remoto e pianificazione annuale della sostituzione.',
+      'Implementa il sistema di manutenzione a tre livelli: (1) Giornaliero — risciacqua le board, ispeziona per danni visibili, asciuga prima del deposito; (2) Settimanale — ispezione completa di tutte le cuciture, valvole e accessori; (3) Stagionale — pulizia profonda, test di pressione, riparazione di tutti i danni, applicazione di protettore UV. Usa l\'Paddle Board Overstock Fleet Management Program per pezzi di ricambio, supporto remoto e pianificazione annuale della sostituzione.',
     recommendation:
-      'L\'Aquafarer Fleet Management Program include un kit di pezzi di ricambio, guide video di manutenzione e una revisione annuale dell\'attrezzatura. Combinato con il Resort Premium Package, garantisce che la tua flotta resti in condizioni ottimali con tempi di fermo minimi.',
+      'L\'Paddle Board Overstock Fleet Management Program include un kit di pezzi di ricambio, guide video di manutenzione e una revisione annuale dell\'attrezzatura. Combinato con il Resort Premium Package, garantisce che la tua flotta resti in condizioni ottimali con tempi di fermo minimi.',
     faq: [
       {
         q: 'Con quale frequenza vanno sostituite le board gonfiabili?',
@@ -326,7 +326,7 @@ export const businessArticles: ContentV2Record[] = [
       },
       {
         q: 'Le board gonfiabili possono essere riparate?',
-        a: 'Sì. Piccole forature e separazioni delle cuciture possono essere riparate con i kit di rattoppo in PVC. Aquafarer include kit di riparazione con ogni board e offre servizi di riparazione professionali per i danni più grandi.',
+        a: 'Sì. Piccole forature e separazioni delle cuciture possono essere riparate con i kit di rattoppo in PVC. Paddle Board Overstock include kit di riparazione con ogni board e offre servizi di riparazione professionali per i danni più grandi.',
       },
     ],
     relatedGuides: ['building-resort-water-sports-center', 'resort-water-sports-revenue'],
@@ -348,9 +348,9 @@ export const businessArticles: ContentV2Record[] = [
     explanation:
       'Il white label è un modo rapido per testare il mercato: scegli tra i prodotti esistenti, aggiungi il tuo logo con un adesivo o una stampa di base e inizia a vendere. Lo svantaggio: nessuna differenziazione di prodotto, i concorrenti possono vendere gli stessi prodotti e il tuo marchio appare generico. Il private label richiede 6-10 settimane per la produzione, ma crea un prodotto unico con colori personalizzati, integrazione del logo, packaging brandizzato e accessori. Il tuo prodotto appare e si percepisce come un marchio originale, non come una merce rivenduta.',
     solution:
-      'Inizia con l\'Aquafarer Brand Launch Package (private label) per il tuo prodotto di punta — l\'unico prodotto che definisce il tuo marchio. Integra con accessori white label (pagaie, borse, kit di riparazione) per completare il catalogo. Man mano che cresci, converti più prodotti al private label.',
+      'Inizia con l\'Paddle Board Overstock Brand Launch Package (private label) per il tuo prodotto di punta — l\'unico prodotto che definisce il tuo marchio. Integra con accessori white label (pagaie, borse, kit di riparazione) per completare il catalogo. Man mano che cresci, converti più prodotti al private label.',
     recommendation:
-      'Investi nel private label per la tua linea di prodotti principale. Il MOQ più alto vale l\'investimento nel brand equity. Accessori e consumabili in white label. Aquafarer offre entrambe le opzioni con un percorso di upgrade senza interruzioni dal white label al private label.',
+      'Investi nel private label per la tua linea di prodotti principale. Il MOQ più alto vale l\'investimento nel brand equity. Accessori e consumabili in white label. Paddle Board Overstock offre entrambe le opzioni con un percorso di upgrade senza interruzioni dal white label al private label.',
     faq: [
       {
         q: 'Qual è la differenza di costo tra private label e white label?',
@@ -358,7 +358,7 @@ export const businessArticles: ContentV2Record[] = [
       },
       {
         q: 'Posso passare dal white label al private label in seguito?',
-        a: 'Sì. Molti clienti Aquafarer iniziano con il white label per validare la domanda, poi passano al private label per i loro prodotti più venduti. Gli stampi della fabbrica possono spesso essere adattati dalle specifiche white label.',
+        a: 'Sì. Molti clienti Paddle Board Overstock iniziano con il white label per validare la domanda, poi passano al private label per i loro prodotti più venduti. Gli stampi della fabbrica possono spesso essere adattati dalle specifiche white label.',
       },
     ],
     relatedGuides: ['start-water-sports-brand-private-label', 'cost-to-start-sup-rental-business'],
@@ -380,9 +380,9 @@ export const businessArticles: ContentV2Record[] = [
     explanation:
       'L\'attrezzatura commerciale di sport acquatici si guasta prematuramente per quattro motivi: danni da UV (il PVC si degrada alla luce diretta del sole), corrosione da sale (valvole e ferramenta), danni da impatto (trascinamento, cadute, manipolazione impropria) e deposito improprio (ripiegata da bagnata, depositata sotto pesi). Un programma di manutenzione strutturato affronta tutti e quattro con un investimento di tempo minimo.',
     solution:
-      'Implementa l\'Aquafarer Commercial Maintenance Program: (1) Risciacquo quotidiano e ispezione visiva (5 min per board); (2) Controllo settimanale della pressione e pulizia delle valvole (10 min per board); (3) Ispezione mensile delle cuciture e piccole riparazioni (15 min per board); (4) Pulizia profonda stagionale, trattamento protettivo UV e ispezione completa. Forma un membro del personale come gestore dell\'attrezzatura.',
+      'Implementa l\'Paddle Board Overstock Commercial Maintenance Program: (1) Risciacquo quotidiano e ispezione visiva (5 min per board); (2) Controllo settimanale della pressione e pulizia delle valvole (10 min per board); (3) Ispezione mensile delle cuciture e piccole riparazioni (15 min per board); (4) Pulizia profonda stagionale, trattamento protettivo UV e ispezione completa. Forma un membro del personale come gestore dell\'attrezzatura.',
     recommendation:
-      'L\'Aquafarer Fleet Management Program include guide di manutenzione, kit di pezzi di ricambio e supporto remoto. Assegna a un membro del personale la responsabilità della manutenzione dell\'attrezzatura e segui il programma giornaliero-settimanale-stagionale. Monitora età e utilizzo dell\'attrezzatura per pianificare le sostituzioni in modo proattivo.',
+      'L\'Paddle Board Overstock Fleet Management Program include guide di manutenzione, kit di pezzi di ricambio e supporto remoto. Assegna a un membro del personale la responsabilità della manutenzione dell\'attrezzatura e segui il programma giornaliero-settimanale-stagionale. Monitora età e utilizzo dell\'attrezzatura per pianificare le sostituzioni in modo proattivo.',
     faq: [
       {
         q: 'Come conservo le board gonfiabili fuori stagione?',
@@ -394,7 +394,7 @@ export const businessArticles: ContentV2Record[] = [
       },
       {
         q: 'Come formo il personale sulla manutenzione?',
-        a: 'Crea una semplice checklist per ogni livello di manutenzione. Aquafarer fornisce guide video di formazione per tutti i clienti commerciali. Designa un membro del personale come gestore dell\'attrezzatura e ruota la responsabilità ogni settimana.',
+        a: 'Crea una semplice checklist per ogni livello di manutenzione. Paddle Board Overstock fornisce guide video di formazione per tutti i clienti commerciali. Designa un membro del personale come gestore dell\'attrezzatura e ruota la responsabilità ogni settimana.',
       },
     ],
     relatedGuides: ['inflatable-boat-fleet-management', 'building-resort-water-sports-center'],

@@ -1,10 +1,10 @@
-name = "aquafarer"
+name = "paddleboardoverstock"
 compatibility_date = "2026-07-08"
 compatibility_flags = ["nodejs_compat"]
 
-# Cloudflare Pages: npx wrangler pages deploy dist/ --project-name aquafarer
+# Cloudflare Pages: npx wrangler pages deploy dist/ --project-name paddleboardoverstock
 # Functions middleware: functions/_middleware.ts
 
 [[r2_buckets]]
 binding = "ASSETS_R2"
-bucket_name = "aquafarer-assets"
+bucket_name = "paddleboardoverstock-assets"

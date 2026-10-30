@@ -11,8 +11,8 @@ export const businessArticles: ContentV2Record[] = [
     "tldr": "At starte en SUP udlejningsvirksomhed koster $8,000–$25,000 for en flåde på 10 boards afhængigt af udstyrskvalitet, lokationstilladelser og forsikring. Break-even opnås typisk inden for 3-6 måneder af sæsondrift. De største omkostninger er board-lager ($3,000–$8,000), forsikring ($1,500–$4,000/år) og tilladelser ($500–$3,000). Driftsmarginer ligger mellem 40-60% efter den første sæson.",
     "problem": "Du ser en strand fuld af turister og indser, at der ikke er nogen SUP udlejning i nærheden. Muligheden er åbenlys, men du har ingen idé om, hvad det egentlig koster at starte — udstyr, forsikring, tilladelser, opbevaring, personale. Du bekymrer dig om at sætte penge i en virksomhed, der måske ikke giver gevinst.",
     "explanation": "SUP udlejningsvirksomheder har relativt lave etableringsomkostninger sammenlignet med andre vandsportsforetagender. Hovedomkostningsområderne er: udstyr (boards, pagajer, pumper, PFDs, liner, reparationssæt), forsikring (ansvar og ejendom), tilladelser og licenser (strandtilladelser, erhvervslicenser, registrering for salgsskat), opbevaring og transport (stativsystem, trailer eller varevogn), personale (instruktører, kasserere, sæsonarbejdere) og markedsføring (hjemmeside, skiltning, lokale annoncer). Udstyr er den største indledende omkostning, men boards holder 3-5 sæsoner med korrekt vedligeholdelse.",
-    "solution": "Start med Aquafarer Club Starter-pakken, som inkluderer 10 boards, pagajer, pumper, PFDs og reparationssæt til en rabatteret pakkepris. Vælg en strand med høj trafik og indhent de nødvendige tilladelser, før du køber udstyr. Pris udlejning til $25-40/time eller $80-150/dag. Sigte efter en daglig udnyttelsesgrad på 40-60% for at nå break-even inden for den første sæson.",
-    "recommendation": "For førstegangsoperatører inkluderer Club Starter-pakken fra Aquafarer alt, hvad du har brug for til en flåde på 10 boards. Tilføj et enkelt online bookingsystem, ansvarsfraskrivelser og en kortlæser. Start småt, bevis efterspørgslen, og udvid i år to.",
+    "solution": "Start med Paddle Board Overstock Club Starter-pakken, som inkluderer 10 boards, pagajer, pumper, PFDs og reparationssæt til en rabatteret pakkepris. Vælg en strand med høj trafik og indhent de nødvendige tilladelser, før du køber udstyr. Pris udlejning til $25-40/time eller $80-150/dag. Sigte efter en daglig udnyttelsesgrad på 40-60% for at nå break-even inden for den første sæson.",
+    "recommendation": "For førstegangsoperatører inkluderer Club Starter-pakken fra Paddle Board Overstock alt, hvad du har brug for til en flåde på 10 boards. Tilføj et enkelt online bookingsystem, ansvarsfraskrivelser og en kortlæser. Start småt, bevis efterspørgslen, og udvid i år to.",
     "faq": [
       {
         "q": "Har jeg brug for en licens for at leje paddleboards?",
@@ -55,12 +55,12 @@ export const businessArticles: ContentV2Record[] = [
     "tldr": "At bygge et vandeventyrscenter på et resort koster $25,000–$100,000+ afhængigt af flåtens størrelse og infrastrukturbehov. Investeringen dækker udstyr (SUPs, kajakker, PFDs), sikkerhedssystemer (livredderstation, bøjelinjer, AED), opbevaring (stativer, skabe) og branding. Resorts genererer typisk $50,000–$200,000 i årlig supplerende indtægt fra vandsportsprogrammer med 40-60% fortjenstmargen.",
     "problem": "Dit resort har en førsteklasses beliggenhed ved vandet, men ingen struktureret vandsportsprogram. Gæsterne spørger om aktiviteter, men du sender dem videre til tredjepartsudbydere. Du efterlader indtægter på bordet og går glip af en mulighed for at differentiere din ejendom.",
     "explanation": "Ferieresorts vandsportsprogrammer genererer indtægter gennem timelige leje, halvdagsudflugter, guidede ture, lektioner og pakkeløsninger. Den vigtigste infrastruktur omfatter: et sikkert udstyrsopbevaringsområde, strand- eller havneafgangssted, sikkerhedsstation med livredderudstyr og førstehjælp, check-in skranke med POS-system og skilte, der forklarer regler og priser. Personalekravene er minimale — en leder og 2-3 assistenter kan drive en flåde på 50 brædder.",
-    "solution": "Start med Aquafarer Resort Premium-pakken, som inkluderer 50-100 SUPs/kajakker, kommercielle opbevaringsstativer, sikkerhedsinfrastruktur, personaletræning og en indtægtsstyringsmanual. Pakken er designet til at lancere et komplet program på 4-6 uger fra bestilling til første udlejning.",
-    "recommendation": "Resort Premium-pakken fra Aquafarer er den hurtigste vej til et professionelt vandsportsprogram. Inkluder udstyret i gæsters aktivitetsgebyrer eller tilbyd premium-pakker. Træn 2-3 medarbejdere gennem Aquafarer's træningsprogram på stedet for at sikre sikkerhed og kvalitet.",
+    "solution": "Start med Paddle Board Overstock Resort Premium-pakken, som inkluderer 50-100 SUPs/kajakker, kommercielle opbevaringsstativer, sikkerhedsinfrastruktur, personaletræning og en indtægtsstyringsmanual. Pakken er designet til at lancere et komplet program på 4-6 uger fra bestilling til første udlejning.",
+    "recommendation": "Resort Premium-pakken fra Paddle Board Overstock er den hurtigste vej til et professionelt vandsportsprogram. Inkluder udstyret i gæsters aktivitetsgebyrer eller tilbyd premium-pakker. Træn 2-3 medarbejdere gennem Paddle Board Overstock's træningsprogram på stedet for at sikre sikkerhed og kvalitet.",
     "faq": [
       {
         "q": "Har resorts brug for særlig forsikring til vandsport?",
-        "a": "De fleste ansvarsforsikringer for feriesteder dækker gæsters aktiviteter, men kan kræve yderligere dækning for vandsport. En paraplyforsikring med $2-5 millioner i dækning anbefales. Aquafarer-udstyr opfylder CE-sikkerhedsstandarder, hvilket hjælper med forsikringsmæssig overholdelse."
+        "a": "De fleste ansvarsforsikringer for feriesteder dækker gæsters aktiviteter, men kan kræve yderligere dækning for vandsport. En paraplyforsikring med $2-5 millioner i dækning anbefales. Paddle Board Overstock-udstyr opfylder CE-sikkerhedsstandarder, hvilket hjælper med forsikringsmæssig overholdelse."
       },
       {
         "q": "Hvor mange ansatte har jeg brug for?",
@@ -95,7 +95,7 @@ export const businessArticles: ContentV2Record[] = [
     "tldr": "En strandklub har brug for cirka 1 board pr. 10 daglige besøgende for at opnå 60-70% udnyttelse i højsæsonen. For en klub med gennemsnitligt 100 daglige besøgende er en flåde på 10-15 boards typisk tilstrækkelig. Tilføj 20-30% buffer til vedligeholdelsesrotation og stigende efterspørgsel. Club Starter Package (10 boards) er ideel for de fleste nye operationer.",
     "problem": "Du åbner en beachclub og skal bestille udstyr, men du har ingen idé om, hvor mange boards du skal købe. For få, og du afviser kunder. For mange, og din investering står ubrugt.",
     "explanation": "Flådestørrelse afhænger af tre faktorer: gennemsnitligt dagligt antal besøgende i højsæsonen, gennemsnitlig lejeperiode og målsat udnyttelsesgrad. Et board, der bruges 4 timer om dagen til $30/time, genererer $120/dag. Med en $500 boardomkostning opnås tilbagebetaling på 4-5 lejedage. De fleste klubber har brug for nok boards til at betjene 15-25% af deres daglige besøgende samtidigt i spidsbelastningstimerne.",
-    "solution": "Brug reglen om 10: start med 10 brætter til en ny operation, overvåg udnyttelsen i den første sæson, og tilføj 5-10 brætter om året baseret på efterspørgselsdata. Aquafarer Club Starter-pakken giver 10 brætter med plads til at udvide.",
+    "solution": "Brug reglen om 10: start med 10 brætter til en ny operation, overvåg udnyttelsen i den første sæson, og tilføj 5-10 brætter om året baseret på efterspørgselsdata. Paddle Board Overstock Club Starter-pakken giver 10 brætter med plads til at udvide.",
     "recommendation": "Start med Club Starter-pakken og følg den daglige brug. Når gennemsnitlig brug overstiger 70% i spidsbelastningstimerne i to på hinanden følgende uger, er det tid til at tilføje flere boards.",
     "faq": [
       {
@@ -127,12 +127,12 @@ export const businessArticles: ContentV2Record[] = [
     "tldr": "For udlejningsvirksomheder er oppustelige SUPs det bedre valg i de fleste scenarier. De koster mindre at sende og opbevare, er mere modstandsdygtige over for stødskader, kræver mindre vedligeholdelse og er lettere for begyndere at bære og håndtere. Hårde SUPs tilbyder marginalt bedre ydeevne for avancerede padlere, men er dyrere at vedligeholde og udskifte i en udlejningsflåde.",
     "problem": "Du er ved at udstyre en udlejningsflåde og skal vælge mellem oppustelige og hårde paddleboards. Oppustelige virker praktiske, men du bekymrer dig om holdbarhed og ydeevne. Hårde boards ser professionelle ud, men opbevaring og skader er en bekymring.",
     "explanation": "For kommercielle udlejningsaktiviteter favoriserer de samlede ejeromkostninger over 3 år kraftigt oppustelige SUPs: oppustelige koster 30-50 % mindre på forhånd, kræver 60 % mindre opbevaringsplads, har lavere forsendelsesomkostninger, er mere modstandsdygtige over for skader fra uerfarne lejere og er lettere for gæster at bære. Hårde boards klarer sig bedre på ture og avanceret padling, men lider under buler, delaminering og skader på kanterne ved udlejningsbrug.",
-    "solution": "Vælg oppustelige SUPs til størstedelen af din lejepark (80%), med et lille udvalg af hardboards (20%) til erfarne gæster og guidede ture. Aquafarer oppustelige SUPs er bygget med kommerciel kvalitet 1,2 mm PVC og forstærket drop-stitch kerne, beregnet til 3-5 sæsoners daglig leje.",
-    "recommendation": "The Aquafarer SUP Explorer 11 (oppustelig) er det bedste allround leje-bræt — stabilt, holdbart og nemt at opbevare. Tilføj et par SUP Ocean Voyager-modeller for gæster, der vil på ture og ønsker en præstationsopgradering.",
+    "solution": "Vælg oppustelige SUPs til størstedelen af din lejepark (80%), med et lille udvalg af hardboards (20%) til erfarne gæster og guidede ture. Paddle Board Overstock oppustelige SUPs er bygget med kommerciel kvalitet 1,2 mm PVC og forstærket drop-stitch kerne, beregnet til 3-5 sæsoners daglig leje.",
+    "recommendation": "The Paddle Board Overstock SUP Explorer 11 (oppustelig) er det bedste allround leje-bræt — stabilt, holdbart og nemt at opbevare. Tilføj et par SUP Ocean Voyager-modeller for gæster, der vil på ture og ønsker en præstationsopgradering.",
     "faq": [
       {
         "q": "Hvor længe holder oppustelige SUPs ved udlejningsbrug?",
-        "a": "3-5 sæsoner med korrekt vedligeholdelse. Kommercielle oppustelige produkter fra Aquafarer bruger tykkere PVC (1,2 mm vs. 0,8 mm forbrugerklasse) og forstærkede sømme for forlænget levetid."
+        "a": "3-5 sæsoner med korrekt vedligeholdelse. Kommercielle oppustelige produkter fra Paddle Board Overstock bruger tykkere PVC (1,2 mm vs. 0,8 mm forbrugerklasse) og forstærkede sømme for forlænget levetid."
       },
       {
         "q": "Føles oppustelige SUPs mindre stabile end hårde boards?",
@@ -163,8 +163,8 @@ export const businessArticles: ContentV2Record[] = [
     "tldr": "For kommercielle kajakoperationer tilbyder oppustelige PVC kajakker (militærkvalitet 1,2 mm PVC) den bedste balance mellem holdbarhed, pris, opbevaring og gæsteoplevelse. De koster 40-60% mindre end rotomoldede kajakker, fylder 1/3 af pladsen og er mere tilgivende for begyndere. Rotomoldede polyethylenkajakker er et bedre valg for turejseoperationer, hvor hastighed og ydeevne prioriteres.",
     "problem": "Du skal købe kajakker til din udlejningsflåde eller ture, men variationen i materialer og prisniveauer gør det svært at vælge. Du bekymrer dig om holdbarheden ved oppustelige kajakker, men opbevaringskravene for hårde skaller er udfordrende.",
     "explanation": "Kajakmaterialer til kommerciel brug falder i tre kategorier: oppustelige PVC (laveste pris, bedst opbevaring, god holdbarhed), rotomalet polyethylen (medium pris, voluminøs opbevaring, fremragende holdbarhed) og glasfiber/komposit (høj pris, bedste ydeevne, skrøbelig). For udlejningsflåder, hvor gæsterne har varierende færdigheder, er oppustelige PVC det mest praktiske valg — de tåler stød og ridser, kan pakkes i en bilbagagerum og koster en brøkdel af hårde skaller.",
-    "solution": "For strandklub- og resortudlejningsflåder, vælg oppustelige PVC kajakker fra Aquafarer med kommerciel kvalitet stof og forstærkede sømme. For guidede ture, hvor ydeevne er vigtig, invester i rotomoldede polyethylen-skrog. En blandet flåde med 70% oppustelige og 30% hårde skrog dækker alle anvendelsestilfælde.",
-    "recommendation": "Aquafarer oppustelige kajakserie er specielt designet til kommerciel udlejning. Kombiner med Club Starter-pakken for en fuldt udlejningsklar flåde.",
+    "solution": "For strandklub- og resortudlejningsflåder, vælg oppustelige PVC kajakker fra Paddle Board Overstock med kommerciel kvalitet stof og forstærkede sømme. For guidede ture, hvor ydeevne er vigtig, invester i rotomoldede polyethylen-skrog. En blandet flåde med 70% oppustelige og 30% hårde skrog dækker alle anvendelsestilfælde.",
+    "recommendation": "Paddle Board Overstock oppustelige kajakserie er specielt designet til kommerciel udlejning. Kombiner med Club Starter-pakken for en fuldt udlejningsklar flåde.",
     "faq": [
       {
         "q": "Hvor længe holder oppustelige kajakker ved kommerciel brug?",
@@ -191,27 +191,27 @@ export const businessArticles: ContentV2Record[] = [
     "title": "Sådan starter du et vandsportsmærke med private label OEM",
     "description": "Trin-for-trin guide til at lancere dit eget SUP, kajak eller oppustelig bådmærke ved hjælp af private label-produktion. Produktvalg, MOQs, prisfastsættelse, emballage og opsætning af e-handel.",
     "definition": "Private label OEM (Original Equipment Manufacturing) er, når en fabrik producerer produkter, der sælges under dit brandnavn. Du vælger design, farver, logo og emballage — fabrikken håndterer produktion og kvalitetskontrol.",
-    "tldr": "At starte et vandsportsmærke gennem private label-produktion koster $5,000–$15,000 for startlager (50-100 enheder til $50-150/enhed). Processen tager 60-90 dage fra første kontakt til modtagelse af din første forsendelse. Aquafarer's Brand Launch-pakke inkluderer produktvalg, design af tilpasset logo, emballage, CE-certificering og FOB-forsendelse. Førstegangsbrandejere opnår typisk 40-55% marginer ved salg på Amazon, Shopify eller gennem lokale forhandlere.",
+    "tldr": "At starte et vandsportsmærke gennem private label-produktion koster $5,000–$15,000 for startlager (50-100 enheder til $50-150/enhed). Processen tager 60-90 dage fra første kontakt til modtagelse af din første forsendelse. Paddle Board Overstock's Brand Launch-pakke inkluderer produktvalg, design af tilpasset logo, emballage, CE-certificering og FOB-forsendelse. Førstegangsbrandejere opnår typisk 40-55% marginer ved salg på Amazon, Shopify eller gennem lokale forhandlere.",
     "problem": "Du vil starte dit eget vandsportsmærke, men har ingen erfaring med produktion, ingen fabrikforbindelser og begrænset kapital. Du bekymrer dig om minimumsordremængder, kvalitetskontrol og om du kan konkurrere med etablerede mærker.",
-    "explanation": "Private label-produktion har aldrig været mere tilgængelig for små mærker. Aquafarer tilbyder MOQs helt ned til 50 enheder pr. SKU, hvilket betyder, at du kan teste markedet med en $5,000-$15,000 investering. Processen: vælg basisprodukter fra kataloget, tilpas farver og logo, vælg emballagemuligheder, modtag produktionsprøver til godkendelse, derefter fuld produktion og levering. Du ejer mærket og alle kundeforhold — Aquafarer forbliver usynlig for dine slutkunder.",
-    "solution": "Start med Aquafarer Brand Launch Package: vælg 2-3 produktmodeller (f.eks. en begynder SUP, en touring SUP og en kajak), tilpas med dit logo og dine brandfarver, bestil 50-100 enheder per SKU, og lancer på Amazon eller en enkel Shopify-butik. Når salget vokser, tilføj flere SKU'er og øg bestillingsmængderne.",
-    "recommendation": "Brand Launch-pakken fra Aquafarer er designet til førstegangsbrand-ejere. Start med et hero-produkt, bevis efterspørgslen, og udvid din produktlinje. Fokuser på at opbygge en brandhistorie og kundeoplevelse i stedet for at konkurrere på pris.",
+    "explanation": "Private label-produktion har aldrig været mere tilgængelig for små mærker. Paddle Board Overstock tilbyder MOQs helt ned til 50 enheder pr. SKU, hvilket betyder, at du kan teste markedet med en $5,000-$15,000 investering. Processen: vælg basisprodukter fra kataloget, tilpas farver og logo, vælg emballagemuligheder, modtag produktionsprøver til godkendelse, derefter fuld produktion og levering. Du ejer mærket og alle kundeforhold — Paddle Board Overstock forbliver usynlig for dine slutkunder.",
+    "solution": "Start med Paddle Board Overstock Brand Launch Package: vælg 2-3 produktmodeller (f.eks. en begynder SUP, en touring SUP og en kajak), tilpas med dit logo og dine brandfarver, bestil 50-100 enheder per SKU, og lancer på Amazon eller en enkel Shopify-butik. Når salget vokser, tilføj flere SKU'er og øg bestillingsmængderne.",
+    "recommendation": "Brand Launch-pakken fra Paddle Board Overstock er designet til førstegangsbrand-ejere. Start med et hero-produkt, bevis efterspørgslen, og udvid din produktlinje. Fokuser på at opbygge en brandhistorie og kundeoplevelse i stedet for at konkurrere på pris.",
     "faq": [
       {
         "q": "Hvad er minimumsordremængden for private label?",
-        "a": "Aquafarer's minimum er 50 enheder pr. SKU for tilpasset branding. Standardprodukter uden tilpasning kan have lavere MOQs. Udvikling af specialforme kræver en separat forhandling."
+        "a": "Paddle Board Overstock's minimum er 50 enheder pr. SKU for tilpasset branding. Standardprodukter uden tilpasning kan have lavere MOQs. Udvikling af specialforme kræver en separat forhandling."
       },
       {
         "q": "Skal jeg håndtere importtold og logistik?",
-        "a": "Aquafarer tilbyder FOB Qingdao (du arrangerer forsendelsen) eller CIF levering (fragt inkluderet til din havn). Vi kan også anbefale speditører, som håndterer toldklarering og levering til sidste led."
+        "a": "Paddle Board Overstock tilbyder FOB Qingdao (du arrangerer forsendelsen) eller CIF levering (fragt inkluderet til din havn). Vi kan også anbefale speditører, som håndterer toldklarering og levering til sidste led."
       },
       {
         "q": "Hvordan sikrer jeg produktkvaliteten?",
-        "a": "Aquafarer produkter er fremstillet under ISO 9001 kvalitetsstyring, med 64 CE-certificerede modeller i kataloget. Du modtager produktionsprøver til godkendelse før masseproduktion. Tredjepartsinspektion er tilgængelig."
+        "a": "Paddle Board Overstock produkter er fremstillet under ISO 9001 kvalitetsstyring, med 64 CE-certificerede modeller i kataloget. Du modtager produktionsprøver til godkendelse før masseproduktion. Tredjepartsinspektion er tilgængelig."
       },
       {
         "q": "Kan jeg sælge på Amazon med private label-produkter?",
-        "a": "Ja. Mange Aquafarer private label-kunder sælger på Amazon, eBay og deres egne Shopify-butikker. Vi leverer produktfotografi, beskrivelses-skabeloner og CE dokumentation, der er nødvendig for markedspladsfortegnelser."
+        "a": "Ja. Mange Paddle Board Overstock private label-kunder sælger på Amazon, eBay og deres egne Shopify-butikker. Vi leverer produktfotografi, beskrivelses-skabeloner og CE dokumentation, der er nødvendig for markedspladsfortegnelser."
       }
     ],
     "relatedGuides": [
@@ -231,10 +231,10 @@ export const businessArticles: ContentV2Record[] = [
     "title": "SUP Tjekliste over klubudstyr: Hvad du har brug for at starte",
     "description": "Fuldstændig udstyrsinventarliste til opstart eller opgradering af en SUP klub, kajakklub, surfskole eller vandsports træningscenter. Inkluderer udstyr til elever, instruktører, sikkerhed og drift.",
     "definition": "En SUP klubudstyr tjekliste dækker alt udstyr, der er nødvendigt for at drive et padelsportsprogram: elevudstyr, instruktørudstyr, sikkerhedsudstyr, opbevaringsløsninger og driftsrelaterede tilbehør.",
-    "tldr": "At starte en SUP-klub kræver: 10-30 boards med pagajer, pumper og reparationssæt ($3,000-$12,000); PFDs og sikkerhedsudstyr ($500-$2,000); instruktørudstyr inklusive specialboards og kommunikationsenheder ($1,000-$3,000); opbevaringsstativer eller trailer ($500-$3,000); og driftsartikler som ansvarsfraskrivelser, skilte og et bookingsystem ($200-$1,000). Aquafarer-Klub Starterpakke samler de essentielle ting til 15-20% under individuel pris.",
+    "tldr": "At starte en SUP-klub kræver: 10-30 boards med pagajer, pumper og reparationssæt ($3,000-$12,000); PFDs og sikkerhedsudstyr ($500-$2,000); instruktørudstyr inklusive specialboards og kommunikationsenheder ($1,000-$3,000); opbevaringsstativer eller trailer ($500-$3,000); og driftsartikler som ansvarsfraskrivelser, skilte og et bookingsystem ($200-$1,000). Paddle Board Overstock-Klub Starterpakke samler de essentielle ting til 15-20% under individuel pris.",
     "problem": "Du er ved at starte en SUP klub eller surft skole, men er overvældet af udstyrsbehovene. Du ved ikke, hvad du skal købe, hvor meget du skal bruge, eller hvordan du skal prioritere dit budget.",
     "explanation": "En veludstyret SUP-klub har brug for fem kategorier udstyr: (1) Elevbrætter og pagajer — den centrale investering, vælg holdbare oppustelige SUPs i flere størrelser; (2) Sikkerhedsudstyr — PFDs, liner, fløjter, førstehjælpskasse, redningsbræt; (3) Instruktørudstyr — et stabilt instruktionsbræt, vandtæt kommunikationsudstyr, demonstrationshjælpemidler; (4) Opbevaring og transport — stativer, tilhører eller varevogn, pumpe-station; (5) Drift — ansvarsfraskrivelsessystem, bookingsoftware, skilte, markedsføringsmaterialer.",
-    "solution": "Aquafarer Klubstartpakke dækker kategorierne 1-3 med udstyr i klubkvalitet til pakkefor priser. Tilføj lokal opbevaring og et simpelt online bookingsystem, og du er klar til din første sæson.",
+    "solution": "Paddle Board Overstock Klubstartpakke dækker kategorierne 1-3 med udstyr i klubkvalitet til pakkefor priser. Tilføj lokal opbevaring og et simpelt online bookingsystem, og du er klar til din første sæson.",
     "recommendation": "Investér i kvalitetsudstyr fra starten — billige boards koster mere i reparationer og udskiftninger. Club Starter-pakken leverer udstyr i kommerciel kvalitet, som varer 3-5 sæsoner. Følg med i brugen og tilføj boards, efterhånden som dit medlemskab vokser.",
     "faq": [
       {
@@ -272,7 +272,7 @@ export const businessArticles: ContentV2Record[] = [
     "problem": "Dit resort har adgang til vandet, men vandsportsprogrammet klarer sig dårligt. Udstyret står ubrugt, gæster ved ikke, at aktiviteterne er tilgængelige, og programmet mister penge i stedet for at generere overskud.",
     "explanation": "De mest profitable vandsportsprogrammer på feriesteder betragter aktiviteter som et profitcenter, ikke en gratis service. Succesfulde programmer tilbyder differentieret prissætning: gratis grundudstyr til premium-gæster, betalte opgraderinger for premium-oplevelser og guidede udflugter til premium-priser. Centrale måleparametre: deltagelsesrate (procentdel af gæster, der benytter vandsport), gennemsnitlig indtjening per deltagende gæst og udstyrsanvendelsesrate. De fleste feriesteder klarer sig dårligt på deltagelse, fordi aktiviteterne ikke markedsføres til gæsterne før eller under deres ophold.",
     "solution": "Implementer et lagdelt program: (1) Gratis — grundlæggende SUP og kajakadgang for gæster i premium-rumkategorier; (2) Betalte udlejninger — $25-50/time for gæster i standardrum; (3) Premium-oplevelser — guidede solnedgangsture, snorkeudflugter, private lektioner til $75-200/person. Markedsfør aktiviteter gennem e-mails før ankomst, materialer på værelset og anbefalinger fra concierge.",
-    "recommendation": "Start med Resort Premium-pakken fra Aquafarer og implementer den trinvise prisstruktur. Træn reception- og conciergepersonale i aktivt at promovere vandaktiviteter. Følg deltagelsesraterne og juster priserne sæsonmæssigt.",
+    "recommendation": "Start med Resort Premium-pakken fra Paddle Board Overstock og implementer den trinvise prisstruktur. Træn reception- og conciergepersonale i aktivt at promovere vandaktiviteter. Følg deltagelsesraterne og juster priserne sæsonmæssigt.",
     "faq": [
       {
         "q": "Skal vandsport være gratis eller betalt?",
@@ -304,11 +304,11 @@ export const businessArticles: ContentV2Record[] = [
     "title": "Flådeadministration af oppustelige både for hoteller og resorts",
     "description": "Bedste praksis for at administrere, vedligeholde og udskifte oppustelige vandfartøjsflåder i kommercielle hospitality-miljøer. Vedligeholdelsesplaner, opbevaring, reparation og livscyklusplanlægning.",
     "definition": "Flådestyring for oppustelige fartøjer dækker anskaffelse, vedligeholdelsesplanlægning, reparationsprotokoller, lageroptimering og planlægning af udskiftning for kommercielle udlejnings- og hoteloperationer.",
-    "tldr": "En veladministreret flåde af oppustelige både i et resorts miljø varer 3-5 sæsoner med korrekt pleje. Nøglepraksis: daglig tjekliste, ugentlig skylning og tørringsrotation, månedlig trykprøvning, sæsonmæssig grundig rengøring og opbevaring. Budgetter 15-20% af udstyrets værdi årligt til vedligeholdelse og udskiftning. Aquafarer tilbyder et flådehåndteringsprogram med reservedelslager, fjernbetjeningsdiagnostik og årlige udstyrspriser.",
+    "tldr": "En veladministreret flåde af oppustelige både i et resorts miljø varer 3-5 sæsoner med korrekt pleje. Nøglepraksis: daglig tjekliste, ugentlig skylning og tørringsrotation, månedlig trykprøvning, sæsonmæssig grundig rengøring og opbevaring. Budgetter 15-20% af udstyrets værdi årligt til vedligeholdelse og udskiftning. Paddle Board Overstock tilbyder et flådehåndteringsprogram med reservedelslager, fjernbetjeningsdiagnostik og årlige udstyrspriser.",
     "problem": "Dit feriested har investeret i oppustelige vandsportsredskaber til gæsteaktiviteter, men efter en sæson viser udstyret slid, vedligeholdelsen er reaktiv snarere end proaktiv, og du er usikker på, hvornår du skal reparere vs. udskifte.",
     "explanation": "Oppustelige vandfartøjer i kommerciel brug står over for specifikke udfordringer: UV eksponering nedbryder PVC stof over tid, saltvand og sand fremskynder slid på ventiler og sømme, uerfarne brugere forårsager mere slagsskade, og forkert opbevaring forkorter levetiden. Et systematisk vedligeholdelsesprogram håndterer hver af disse: daglig skylning efter brug i saltvand, ugentlig inspektion af ventiler og sømme, månedlig trykprøvning ved 12-15 PSI, og korrekt opbevaring uden for sæsonen i et klimakontrolleret rum.",
-    "solution": "Implementer det tre-lags vedligeholdelsessystem: (1) Dagligt — skyl brætterne, inspicer for synlige skader, tør før opbevaring; (2) Ugentligt — fuld inspektion af alle samlinger, ventiler og tilbehør; (3) Sæsonbestemt — dybderens, trykprøvning, reparér al skade, påfør UV beskyttelsesmiddel. Brug Aquafarer Flådestyringsprogram til reservedele, fjernsupport og årlig udskiftningsplanlægning.",
-    "recommendation": "Aquafarer-flådestyringsprogrammet inkluderer et reservedele-kit, videovejledninger til vedligeholdelse og årlig gennemgang af udstyret. Kombineret med Resort Premium-pakken sikrer dette, at din flåde forbliver i topform med minimal nedetid.",
+    "solution": "Implementer det tre-lags vedligeholdelsessystem: (1) Dagligt — skyl brætterne, inspicer for synlige skader, tør før opbevaring; (2) Ugentligt — fuld inspektion af alle samlinger, ventiler og tilbehør; (3) Sæsonbestemt — dybderens, trykprøvning, reparér al skade, påfør UV beskyttelsesmiddel. Brug Paddle Board Overstock Flådestyringsprogram til reservedele, fjernsupport og årlig udskiftningsplanlægning.",
+    "recommendation": "Paddle Board Overstock-flådestyringsprogrammet inkluderer et reservedele-kit, videovejledninger til vedligeholdelse og årlig gennemgang af udstyret. Kombineret med Resort Premium-pakken sikrer dette, at din flåde forbliver i topform med minimal nedetid.",
     "faq": [
       {
         "q": "Hvor ofte bør oppustelige boards udskiftes?",
@@ -320,7 +320,7 @@ export const businessArticles: ContentV2Record[] = [
       },
       {
         "q": "Kan oppustelige brædder repareres?",
-        "a": "Ja. Små punkteringer og opløsninger ved syninger kan repareres med PVC reparationssæt. Aquafarer inkluderer reparationssæt med hvert board og tilbyder professionelle reparationsservices for større skader."
+        "a": "Ja. Små punkteringer og opløsninger ved syninger kan repareres med PVC reparationssæt. Paddle Board Overstock inkluderer reparationssæt med hvert board og tilbyder professionelle reparationsservices for større skader."
       }
     ],
     "relatedGuides": [
@@ -343,8 +343,8 @@ export const businessArticles: ContentV2Record[] = [
     "tldr": "Private label tilbyder fuldt ejerskab af brandet og differentiering, men kræver højere MOQs (50+ enheder) og længere leveringstid. White label er hurtigere (lagerprodukter, klar til afsendelse) og har lavere MOQs, men dit brand ligner alle andre white label-forhandlere. For seriøse vandsportsentreprenører er private label den bedre langsigtede vej. Start med white label for at teste markedet, og gå derefter over til private label, efterhånden som du vokser.",
     "problem": "Du er klar til at lancere et vandsportsmærke, men er usikker på, om du skal vælge private label (tilpassede designs, højere MOQ, længere leveringstid) eller white label (lagerprodukter, hurtigere, lavere risiko). Det forkerte valg kan spilde måneder og tusindvis af dollars.",
     "explanation": "White label er en hurtig måde at teste markedet på — vælg blandt eksisterende produkter, tilføj dit logo via sticker eller simpel tryk, og begynd at sælge. Ulempen: ingen produktdifferentiering, konkurrenter kan sælge de samme produkter, og dit brand fremstår generisk. Private label kræver 6-10 uger til produktion, men skaber et unikt produkt med brugerdefinerede farver, logo-integration, brandet emballage og tilbehør. Dit produkt ser ud og føles som en originalt brand, ikke en gensolgt vare.",
-    "solution": "Start med Aquafarer Brand Launch Package (private label) for dit hero-produkt — det ene produkt, der definerer dit brand. Suppler med white label-tilbehør (pagajer, tasker, reparationssæt) for at udfylde dit katalog. Når du vokser, kan du omdanne flere produkter til private label.",
-    "recommendation": "Investér i private label for din kerneproduktlinje. Jo højere MOQ, desto mere værd er investeringen i brandværdi. White label adgangsprodukter og forbrugsvarer. Aquafarer tilbyder begge muligheder med en problemfri opgraderingsvej fra white label til private label.",
+    "solution": "Start med Paddle Board Overstock Brand Launch Package (private label) for dit hero-produkt — det ene produkt, der definerer dit brand. Suppler med white label-tilbehør (pagajer, tasker, reparationssæt) for at udfylde dit katalog. Når du vokser, kan du omdanne flere produkter til private label.",
+    "recommendation": "Investér i private label for din kerneproduktlinje. Jo højere MOQ, desto mere værd er investeringen i brandværdi. White label adgangsprodukter og forbrugsvarer. Paddle Board Overstock tilbyder begge muligheder med en problemfri opgraderingsvej fra white label til private label.",
     "faq": [
       {
         "q": "Hvad er prisforskellen mellem private label og white label?",
@@ -352,7 +352,7 @@ export const businessArticles: ContentV2Record[] = [
       },
       {
         "q": "Kan jeg skifte fra white label til private label senere?",
-        "a": "Ja. Mange Aquafarer kunder starter med white label for at validere efterspørgslen, og derefter skifter de til private label for deres bedst sælgende produkter. Fabrikkens værktøj kan ofte tilpasses fra white label-specifikationer."
+        "a": "Ja. Mange Paddle Board Overstock kunder starter med white label for at validere efterspørgslen, og derefter skifter de til private label for deres bedst sælgende produkter. Fabrikkens værktøj kan ofte tilpasses fra white label-specifikationer."
       }
     ],
     "relatedGuides": [
@@ -375,8 +375,8 @@ export const businessArticles: ContentV2Record[] = [
     "tldr": "Korrekt vedligeholdelse forlænger levetiden for kommercielle oppustelige vandscootere fra 2 til 5 sæsoner. Vedligeholdelsesinvesteringsforholdet er 5:1 — hver $1 brugt på vedligeholdelse sparer $5 i udskiftningsomkostninger. Nøglepraksisser: skyl efter hver brug i saltvand, opbevar uden for direkte UV, oprethold korrekt oppustningstryk (12-15 PSI), reparer skader med det samme, og roter udstyret for at fordele sliddet jævnt.",
     "problem": "Din udlejningsflåde viser for tidligt slid efter den første sæson. Brædderne falmer, samlinger løsner sig, og ventilerne lækker. Du står over for tusindvis i erstatningsomkostninger tidligere end forventet.",
     "explanation": "Kommercielt vandsportudstyr svigter for tidligt af fire årsager: UV skader (PVC forringes i direkte sollys), saltkorrosion (ventiler og hardware), slagsskader (træk, tab, forkert håndtering) og forkert opbevaring (foldet mens det er vådt, opbevaret under vægt). Et struktureret vedligeholdelsesprogram håndterer alle fire med minimal tidsinvestering.",
-    "solution": "Implementer Aquafarer Kommercielt Vedligeholdelsesprogram: (1) Daglig skylning og visuel inspektion (5 min pr. tavle); (2) Ugentlig tryktest og rensning af ventiler (10 min pr. tavle); (3) Månedlig samlingsinspektion og mindre reparationer (15 min pr. tavle); (4) Sæsonbestemt grundig rengøring, UV beskyttelsesbehandling og fuld inspektion. Træn en medarbejder som udstyrsansvarlig.",
-    "recommendation": "Flådestyringsprogrammet Aquafarer inkluderer vedligeholdelsesguider, reservedelekit og fjernsupport. Tildel en medarbejder ansvaret for udstyrsvedligeholdelse og følg den daglige-ugentlige-sæsonmæssige tidsplan. Overvåg udstyrets alder og brug for at planlægge udskiftninger proaktivt.",
+    "solution": "Implementer Paddle Board Overstock Kommercielt Vedligeholdelsesprogram: (1) Daglig skylning og visuel inspektion (5 min pr. tavle); (2) Ugentlig tryktest og rensning af ventiler (10 min pr. tavle); (3) Månedlig samlingsinspektion og mindre reparationer (15 min pr. tavle); (4) Sæsonbestemt grundig rengøring, UV beskyttelsesbehandling og fuld inspektion. Træn en medarbejder som udstyrsansvarlig.",
+    "recommendation": "Flådestyringsprogrammet Paddle Board Overstock inkluderer vedligeholdelsesguider, reservedelekit og fjernsupport. Tildel en medarbejder ansvaret for udstyrsvedligeholdelse og følg den daglige-ugentlige-sæsonmæssige tidsplan. Overvåg udstyrets alder og brug for at planlægge udskiftninger proaktivt.",
     "faq": [
       {
         "q": "Hvordan opbevarer jeg oppustelige brætter i lavsæsonen?",
@@ -388,7 +388,7 @@ export const businessArticles: ContentV2Record[] = [
       },
       {
         "q": "Hvordan træner jeg personalet i vedligeholdelse?",
-        "a": "Opret en simpel tjekliste for hver vedligeholdelsesniveau. Aquafarer leverer videotræningsguider til alle erhvervskunder. Udpeg en ledende medarbejder som udstyrsmanager og roter ansvaret hver uge."
+        "a": "Opret en simpel tjekliste for hver vedligeholdelsesniveau. Paddle Board Overstock leverer videotræningsguider til alle erhvervskunder. Udpeg en ledende medarbejder som udstyrsmanager og roter ansvaret hver uge."
       }
     ],
     "relatedGuides": [

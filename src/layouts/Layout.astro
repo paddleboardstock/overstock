@@ -10,7 +10,9 @@ import ApplyColorMode from '~/components/common/ApplyColorMode.astro';
 import Metadata from '~/components/common/Metadata.astro';
 import Analytics from '~/components/common/Analytics.astro';
 import BasicScripts from '~/components/common/BasicScripts.astro';
+import CartScripts from '~/components/common/CartScripts.astro';
 import AIChat from '~/components/widgets/AIChat.astro';
+import ChatWidget from '~/components/ChatWidget.astro';
 import JsonLd from '~/components/common/JsonLd.astro';
 import AiSignal from '~/components/common/AiSignal.astro';
 import { getAboutSchema } from '~/lib/geo-seo/intent';
@@ -104,7 +106,7 @@ const isRootOnlyRoute = isRootOnlyRouteFn(pathWithoutLang);
     <Analytics id={seo.googleAnalyticsId} />
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin />
     <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
-    <link rel="preconnect" href="https://assets.aquafarer.com" crossorigin />
+    <link rel="preconnect" href="https://assets.paddleboardoverstock.com" crossorigin />
 
     {
       !isRootOnlyRoute &&
@@ -131,7 +133,7 @@ const isRootOnlyRoute = isRootOnlyRouteFn(pathWithoutLang);
             type="Organization"
             data={{
               name: facts.brand.name,
-              alternateName: 'Aquafarer RIB & Inflatable Watercraft',
+              alternateName: 'Paddle Board Overstock — Inflatable SUP Overstock & Clearance',
               url: seo.siteUrl,
               logo: facts.logo.url,
               image: facts.logo.url,
@@ -140,7 +142,7 @@ const isRootOnlyRoute = isRootOnlyRouteFn(pathWithoutLang);
               foundingDate: String(facts.brand.foundingYear),
               foundingLocation: {
                 '@type': 'Place',
-                name: 'Economic Development Zone, Laixi, Qingdao',
+                name: 'Weihai, Shandong',
                 address: {
                   '@type': 'PostalAddress',
                   streetAddress: facts.factory.streetAddress,
@@ -163,27 +165,19 @@ const isRootOnlyRoute = isRootOnlyRouteFn(pathWithoutLang);
                 '@type': 'Brand',
                 name: facts.brand.name,
               },
-              founder: {
-                '@type': 'Person',
-                name: facts.founder.name,
-                jobTitle: facts.founder.jobTitle,
-                url: 'https://aquafarer.com/aquafarer-story',
-              },
               knowsAbout: [
-                'Inflatable SUP board manufacturing',
-                'Drop-stitch core lamination technology',
-                'OEM/ODM water sports equipment production',
-                'PVC inflatable boat manufacturing',
-                'Hypalon RIB boat fabrication',
-                'Private label water sports branding',
-                'Custom mold design and 3D prototyping',
+                'Inflatable SUP board overstock and clearance',
+                'Drop-stitch paddle board construction',
+                'Complete SUP packages (board, pump, paddle, leash, backpack)',
+                'Paddle board accessories and safety gear',
+                'Factory-direct water sports equipment sales',
+                'Worldwide e-commerce fulfillment',
+                'Stripe and PayPal secure checkout',
                 'Marine quality testing and pressure validation',
-                'BSCI social compliance auditing',
-                'ISO 9001:2015 certified manufacturing',
-                'CE EN ISO 6185 inflatable boat compliance',
-                'FOB Qingdao bulk logistics',
+                'CE EN ISO 6185 inflatable watercraft compliance',
+                'FOB Weihai/Qingdao logistics',
               ],
-              industry: ['Marine Manufacturing', 'Inflatable Watercraft OEM/ODM'],
+              industry: ['Water Sports Retail', 'Inflatable SUP Overstock & Clearance'],
               areaServed: facts.reach.regions,
               email: facts.contact.email,
               telephone: facts.contact.primaryPhone,
@@ -197,32 +191,11 @@ const isRootOnlyRoute = isRootOnlyRouteFn(pathWithoutLang);
             }}
           />
           <JsonLd
-            type="Person"
-            data={{
-              name: facts.founder.name,
-              givenName: 'David',
-              familyName: 'Chen',
-              jobTitle: facts.founder.jobTitle,
-              description:
-                'Marine manufacturing expert who founded Aquafarer in 2012. Decades of experience in inflatable watercraft engineering, OEM/ODM production, and global marine industry standards.',
-              url: 'https://aquafarer.com/aquafarer-story',
-              knowsAbout: [
-                'Inflatable Boat Manufacturing',
-                'Marine Engineering',
-                'PVC/Hypalon Fabrication',
-                'Water Sports Equipment Design',
-                'OEM/ODM Production',
-              ],
-              affiliation: { '@type': 'Organization', name: facts.brand.name, url: 'https://aquafarer.com' },
-              worksFor: { '@type': 'Organization', name: facts.brand.name },
-            }}
-          />
-          <JsonLd
             type="WebSite"
             data={{
               name: SITE_SETTINGS.siteName || orgName,
               url: seo.siteUrl,
-              description: 'RIB boats, inflatable boats and SUP boards manufacturer with full OEM/ODM capability.',
+              description: 'Inflatable SUP board overstock and clearance deals — factory direct, up to 60% off retail.',
               about: getAboutSchema(pathname),
               potentialAction: {
                 '@type': 'SearchAction',
@@ -248,7 +221,9 @@ const isRootOnlyRoute = isRootOnlyRouteFn(pathWithoutLang);
     <slot />
 
     <BasicScripts />
+    <CartScripts />
     <AIChat />
+    <ChatWidget />
     <script>
       (function () {
         if (!window.IntersectionObserver) return;

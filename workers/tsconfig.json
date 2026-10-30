@@ -11,5 +11,13 @@
     "resolveJsonModule": true,
     "esModuleInterop": true
   },
-  "include": ["admin-worker/**/*", "ai-worker/**/*", "contact-worker/**/*", "news-worker/**/*", "shared/**/*"]
+  "include": [
+    "admin-worker/**/*",
+    "ai-worker/**/*",
+    "contact-worker/**/*",
+    "news-worker/**/*",
+    "shop-worker/**/*",
+    "automation-worker/**/*",
+    "shared/**/*"
+  ]
 }

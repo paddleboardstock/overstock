@@ -105,7 +105,7 @@ export default {
       });
     }
 
-    return new Response('Aquafarer v3.5 SEO Worker 路 Free Tier', { status: 200 });
+    return new Response('Paddle Board Overstock v3.5 SEO Worker 路 Free Tier', { status: 200 });
   },
 
   async scheduled(_event: ScheduledEvent, env: Env): Promise<void> {

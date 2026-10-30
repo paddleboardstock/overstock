@@ -10,7 +10,7 @@ const t = (key: string) => getUiForLang(defaultLang)?.[key] || '';
 const metadata = {
   title: `Content Library — ${SITE.name}`,
   description:
-    'Aquafarer content library — guides, comparisons, problem solvers, and brand stories for water sports enthusiasts.',
+    'Paddle Board Overstock content library — guides, comparisons, problem solvers, and brand stories for water sports enthusiasts.',
   robots: { index: false, follow: true },
 };
 
@@ -40,7 +40,7 @@ const grouped = groupBy(contentV2Records, (c) => c.category);
   <JsonLd
     type="WebSite"
     data={{
-      name: 'Aquafarer Content Library',
+      name: 'Paddle Board Overstock Content Library',
       description: 'Guides, comparisons, and brand stories',
     }}
   />

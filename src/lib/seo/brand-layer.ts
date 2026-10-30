@@ -84,13 +84,13 @@ const CTA_RULES: Array<{
       [
         'surf-etiquette-rules',
         'best-water-sports-gear-for-beginners',
-        'aquafarer-surfboard-pro',
-        'aquafarer-wetsuit-pro',
-        'why-aquafarer-exists',
+        'paddleboardoverstock-surfboard-pro',
+        'paddleboardoverstock-wetsuit-pro',
+        'why-paddleboardoverstock-exists',
       ].some((k) => s.includes(k)),
-    cta: { text: 'Explore Aquafarer', link: '/', reason: 'Brand content →brand homepage' },
+    cta: { text: 'Explore Paddle Board Overstock', link: '/', reason: 'Brand content →brand homepage' },
     products: ['sup-explorer-11', 'life-vest-pro', 'paddle-carbon', 'pump-dual'],
-    keywords: ['aquafarer', 'brand', 'about', 'community'],
+    keywords: ['paddleboardoverstock', 'brand', 'about', 'community'],
   },
 ];
 
@@ -147,7 +147,7 @@ export function getAllBrandPages(): BrandPageEntry[] {
 }
 
 export const BRAND_SUMMARY = {
-  name: 'Aquafarer',
+  name: 'Paddle Board Overstock',
   tagline: 'Ocean Performance Gear for Modern Surfers',
   description: 'Built for real ocean conditions, not laboratory assumptions.',
   foundingYear: 2012,

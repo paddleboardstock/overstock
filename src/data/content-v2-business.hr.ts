@@ -11,8 +11,8 @@ export const businessArticles: ContentV2Record[] = [
     "tldr": "Pokretanje SUP poslovanja s najmom košta 8.000–25.000 USD za flotu s 10 dasaka, ovisno o kvaliteti opreme, dozvolama za lokaciju i osiguranju. Prijelaz na troškove obično se događa unutar 3-6 mjeseci od sezonskog rada. Najveći troškovi su zalihe ploča (3.000–8.000 USD), osiguranje (1.500–4.000 USD/godišnje) i dozvole (500–3.000 USD). Operativne marže kreću se od 40-60% nakon prve sezone.",
     "problem": "Vidiš plažu punu turista i shvatiš da nema SUP najma u blizini. Prilika je očita, ali nemaš pojma koliko zapravo košta početak — oprema, osiguranje, dozvole, skladištenje, osoblje. Brineš se da ćeš ulagati novac u posao koji možda neće biti isplativ.",
     "explanation": "SUP Tvrtke za najam imaju relativno niske ulazne troškove u usporedbi s drugim vodenim sportovima. Glavni troškovni centri su: oprema (daske, vesla, pumpe, PFD-ovi, povodci, kompleti za popravak), osiguranje (odgovornost i imovina), dozvole i licence (dozvole za plažu, poslovne licence, registracija poreza na promet), skladištenje i transport (sustav nosača, prikolica ili kombi), osoblje (instruktori, blagajnici, sezonski radnici) i marketing (web stranica, signalizacija, lokalni oglasi). Oprema je najveći početni trošak, ali daske traju 3-5 sezona uz pravilno održavanje.",
-    "solution": "Počnite s Club Aquafarer Starter paketom koji uključuje 10 dasaka, lopatica, pumpi, PFD-ova i kompleta za popravak po sniženoj cijeni paketa. Odaberite lokaciju s velikim prometom na plaži i pribavite potrebne dozvole prije kupnje opreme. Najam je 25-40 USD na sat ili 80-150 USD dnevno. Ciljajte dnevnu iskorištenost od 40-60% kako biste pokrili troškove unutar prve sezone.",
-    "recommendation": "Za vlasnike koji prvi put putuju, Club Starter paket Aquafarer uključuje sve što vam treba za flotu od 10 paluba. Dodajte jednostavan online sustav rezervacija, odricanja od odgovornosti i čitač kartica. Počnite s malim, dokažite potražnju i proširite se u drugoj godini.",
+    "solution": "Počnite s Club Paddle Board Overstock Starter paketom koji uključuje 10 dasaka, lopatica, pumpi, PFD-ova i kompleta za popravak po sniženoj cijeni paketa. Odaberite lokaciju s velikim prometom na plaži i pribavite potrebne dozvole prije kupnje opreme. Najam je 25-40 USD na sat ili 80-150 USD dnevno. Ciljajte dnevnu iskorištenost od 40-60% kako biste pokrili troškove unutar prve sezone.",
+    "recommendation": "Za vlasnike koji prvi put putuju, Club Starter paket Paddle Board Overstock uključuje sve što vam treba za flotu od 10 paluba. Dodajte jednostavan online sustav rezervacija, odricanja od odgovornosti i čitač kartica. Počnite s malim, dokažite potražnju i proširite se u drugoj godini.",
     "faq": [
       {
         "q": "Trebam li licencu za najam dasaka za veslanje?",
@@ -55,12 +55,12 @@ export const businessArticles: ContentV2Record[] = [
     "tldr": "Izgradnja resort centra za vodene sportove košta od $25,000 do $100,000,+ ovisno o veličini flote i infrastrukturnim potrebama. Ulaganje pokriva opremu (SUPskajake, PFD-ove), sigurnosne sustave (spasilačku stanicu, linije plutača, AED), skladištenje (stalke, ormariće) i brendiranje. Odmarališta obično ostvaruju godišnji prihod od $50,000–$200,000 od programa vodenih sportova s profitnim maržama od 40-60%.",
     "problem": "Vaš resort ima vrhunsku obalu, ali nema strukturirani program vodenih sportova. Gosti pitaju o aktivnostima, ali ih šaljete trećim operaterima. Ostavljate prihod neizvjesnim i propuštate priliku da se istaknete svojom nekretninom.",
     "explanation": "Programi vodenih sportova u resortima donose prihod kroz satni najam, poludnevne izlete, vođene ture, lekcije i pakete. Ključna infrastruktura uključuje: sigurno skladište opreme, plažu ili mjesto za lansiranje na pristaništu, sigurnosnu stanicu s opremom za spasioca i prvu pomoć, šalterski pult s POS sustavom te oznake koje objašnjavaju pravila i cijene. Zahtjevi za osoblje su minimalni — jedan menadžer i 2-3 osoblja mogu upravljati flotom od 50 brodova.",
-    "solution": "Počnite s Aquafarer Resort Premium paketom koji uključuje 50-100 SUPs/kajaka, komercijalne police za skladištenje, sigurnosnu infrastrukturu, obuku osoblja i priručnik za upravljanje prihodima. Paket je osmišljen za pokretanje kompletnog programa u roku od 4-6 tjedana od narudžbe do prvog najma.",
-    "recommendation": "Resort Premium paket Aquafarer je najbrži put do profesionalnog programa vodenih sportova. Uključite opremu u naknade za gostujuće aktivnosti ili ponudite premium pakete. Obučite 2-3 člana osoblja kroz Aquafarerprogram obuke na licu mjesta kako biste osigurali sigurnost i kvalitetu.",
+    "solution": "Počnite s Paddle Board Overstock Resort Premium paketom koji uključuje 50-100 SUPs/kajaka, komercijalne police za skladištenje, sigurnosnu infrastrukturu, obuku osoblja i priručnik za upravljanje prihodima. Paket je osmišljen za pokretanje kompletnog programa u roku od 4-6 tjedana od narudžbe do prvog najma.",
+    "recommendation": "Resort Premium paket Paddle Board Overstock je najbrži put do profesionalnog programa vodenih sportova. Uključite opremu u naknade za gostujuće aktivnosti ili ponudite premium pakete. Obučite 2-3 člana osoblja kroz Paddle Board Overstockprogram obuke na licu mjesta kako biste osigurali sigurnost i kvalitetu.",
     "faq": [
       {
         "q": "Trebaju li skijališta posebno osiguranje za vodene sportove?",
-        "a": "Većina polica odgovornosti za odmarališta pokriva aktivnosti gostiju, ali može zahtijevati dodatno pokriće za vodene sportove. Preporučuje se umbrella polica s pokrićem od 2-5 milijuna dolara.Aquafarer Oprema zadovoljava CE sigurnosne standarde, što pomaže u usklađenosti s osiguranjem."
+        "a": "Većina polica odgovornosti za odmarališta pokriva aktivnosti gostiju, ali može zahtijevati dodatno pokriće za vodene sportove. Preporučuje se umbrella polica s pokrićem od 2-5 milijuna dolara.Paddle Board Overstock Oprema zadovoljava CE sigurnosne standarde, što pomaže u usklađenosti s osiguranjem."
       },
       {
         "q": "Koliko osoblja mi treba?",
@@ -95,7 +95,7 @@ export const businessArticles: ContentV2Record[] = [
     "tldr": "Plažni klub treba otprilike 1 pansion na svakih 10 dnevnih posjetitelja kako bi se postiglo 60-70% iskorištenosti tijekom vrhunca sezone. Za klub s prosječno 100 dnevnih posjetitelja, flota od 10-15 dasaka obično je dovoljna. Dodajte 20-30% rezerve za rotaciju održavanja i rastuću potražnju. Club Starter Package (10 dasaka) idealan je za većinu novih poslova.",
     "problem": "Otvarate beach club i trebate naručiti opremu, ali nemate pojma koliko dasaka kupiti. Premalo i odbijate kupce. Previše i vaša investicija ostaje neiskorištena.",
     "explanation": "Veličina voznog parka ovisi o tri faktora: prosječnom dnevnom prometu tijekom vrhunca sezone, prosječnom trajanju najma i ciljanoj stopi iskorištenosti. Ploča koja se koristi 4 sata dnevno po cijeni od 30 dolara po satu donosi 120 dolara dnevno. S troškom ploče od 500 dolara, povrat se ostvaruje u 4-5 dana najma. Većina klubova treba dovoljno dasaka da istovremeno opsluže 15-25% svojih dnevnih posjetitelja tijekom vršnih sati.",
-    "solution": "Koristite pravilo 10: počnite s 10 odbora za novu operaciju, pratite iskorištenost tijekom prve sezone i dodajte 5-10 odbora godišnje na temelju podataka o potražnji. Aquafarer Club Starter Package pruža 10 odbora s prostorom za širenje.",
+    "solution": "Koristite pravilo 10: počnite s 10 odbora za novu operaciju, pratite iskorištenost tijekom prve sezone i dodajte 5-10 odbora godišnje na temelju podataka o potražnji. Paddle Board Overstock Club Starter Package pruža 10 odbora s prostorom za širenje.",
     "recommendation": "Započnite s Club Starter paketom i pratite dnevnu iskorištenost. Kada prosječna iskorištenost tijekom vršnih sati tijekom dva uzastopna tjedna prijeđe 70%, vrijeme je za dodavanje novih dasaka.",
     "faq": [
       {
@@ -127,12 +127,12 @@ export const businessArticles: ContentV2Record[] = [
     "tldr": "Za tvrtke za najam, napuhavajuće su SUPs bolji izbor u većini situacija. Jeftinije su za transport i skladištenje, izdržljivije su protiv oštećenja udarcem, zahtijevaju manje održavanja i lakše su za početnike za nošenje i rukovanje. Tvrde gume SUPs nude nešto bolje performanse za napredne veslače, ali su skuplje za održavanje i zamjenu u floti za najam.",
     "problem": "Opremate flotu za najam i morate birati između napuhavajućih i tvrdih dasaka za veslanje. Napuhavajuće daske djeluju praktično, ali brinete o izdržljivosti i performansama. Tvrde daske izgledaju profesionalno, ali skladištenje i oštećenja su problem.",
     "explanation": "Za komercijalne najmove, ukupni trošak vlasništva tijekom 3 godine snažno favorizira napuhavajuće daskeSUPs: napuhivači su 30-50% jeftiniji na početku, zahtijevaju 60% manje prostora za skladištenje, imaju niže troškove dostave, otporniji su na oštećenja od neiskusnih najmoprimaca i lakši su za nošenje gostima. Tvrde daske bolje funkcioniraju na turama i naprednom veslanju, ali pate od udubljenja, delaminacije i oštećenja tračnica pri unajmljivanju.",
-    "solution": "Odaberite SUPs napuhavajuće daske za većinu vaše flote za najam (80%), s malim izborom tvrdih dasaka (20%) za iskusne goste i vođene ture.Aquafarer Napuhavajuće daske SUPs izrađene su od komercijalne kvalitete 1,2 mm PVC i drop-stitch ojačanog jezgra, ocijenjene za 3-5 sezona svakodnevnog najma.",
-    "recommendation": "Aquafarer SUP Explorer 11 (napuhavajuća) najbolja je daska za najam — stabilna, izdržljiva i jednostavna za pohranu. Dodajte nekoliko SUP modela Ocean Voyager za goste koji žele poboljšanje performansi.",
+    "solution": "Odaberite SUPs napuhavajuće daske za većinu vaše flote za najam (80%), s malim izborom tvrdih dasaka (20%) za iskusne goste i vođene ture.Paddle Board Overstock Napuhavajuće daske SUPs izrađene su od komercijalne kvalitete 1,2 mm PVC i drop-stitch ojačanog jezgra, ocijenjene za 3-5 sezona svakodnevnog najma.",
+    "recommendation": "Paddle Board Overstock SUP Explorer 11 (napuhavajuća) najbolja je daska za najam — stabilna, izdržljiva i jednostavna za pohranu. Dodajte nekoliko SUP modela Ocean Voyager za goste koji žele poboljšanje performansi.",
     "faq": [
       {
         "q": "Koliko dugo napuhivači SUPs traju u unajmljivanju?",
-        "a": "3-5 sezona uz pravilno održavanje. Komercijalni napuhivači od Aquafarer upotrebe su deblji PVC (1,2 mm naspram 0,8 mm potrošački) i ojačani šavovi za produženi vijek trajanja."
+        "a": "3-5 sezona uz pravilno održavanje. Komercijalni napuhivači od Paddle Board Overstock upotrebe su deblji PVC (1,2 mm naspram 0,8 mm potrošački) i ojačani šavovi za produženi vijek trajanja."
       },
       {
         "q": "Djeluju li napuhivačke SUPs daske manje stabilno od tvrdih dasaka?",
@@ -163,8 +163,8 @@ export const businessArticles: ContentV2Record[] = [
     "tldr": "Za komercijalne vožnje kajacima, PVC napuhujući kajaci (vojne kvalitete 1,2 mmPVC) nude najbolji omjer izdržljivosti, cijene, prostora za skladištenje i iskustva gostiju. Koštaju 40-60% manje od rotomoldiranih kajaka, smještaju se na trećinu prostora i tolerantniji su za početnike veslače. Rotomoldirani kajaci od polietilena bolji su izbor za turističke operacije gdje su brzina i performanse prioritet.",
     "problem": "Morate kupiti kajake za svoj najam flote ili turističke operacije, ali raznolikost materijala i cijena otežava odabir. Brinete se o izdržljivosti kod napuhavajućih, ali zahtjevi za skladištenje tvrdih školjki su izazovni.",
     "explanation": "Materijali za kajake za komercijalnu upotrebu dijele se u tri kategorije: napuhujući PVC (najniža cijena, najbolje skladištenje, dobra izdržljivost), rotomoldirani polietilen (srednja cijena, glomazno skladištenje, izvrsna izdržljivost) i stakloplastika/kompozit (visoka cijena, najbolje performanse, lomljiv). Za flote za najam gdje gosti variraju po vještini, napuhani PVC je najpraktičniji izbor — podnosi udarce i ogrebotine, može se spakirati u prtljažnik automobila i košta djelić tvrdih školjki.",
-    "solution": "Za flote za najam plažnih klubova i odmarališta, odaberite PVC napuhavajuće Aquafarer kajake s komercijalnom tkaninom i ojačanim šavovima. Za vođene ture gdje su performanse važne, uložite u rotomoldirane polietilenske trupove. Mješovita flota s 70% napuhavanja i 30% tvrde školjke pokriva sve primjene.",
-    "recommendation": "Aquafarer Serija napuhavajućih kajaka posebno je izrađena za komercijalni najam. Uparite se s Club Starter paketom za kompletnu flotu spremnu za najam.",
+    "solution": "Za flote za najam plažnih klubova i odmarališta, odaberite PVC napuhavajuće Paddle Board Overstock kajake s komercijalnom tkaninom i ojačanim šavovima. Za vođene ture gdje su performanse važne, uložite u rotomoldirane polietilenske trupove. Mješovita flota s 70% napuhavanja i 30% tvrde školjke pokriva sve primjene.",
+    "recommendation": "Paddle Board Overstock Serija napuhavajućih kajaka posebno je izrađena za komercijalni najam. Uparite se s Club Starter paketom za kompletnu flotu spremnu za najam.",
     "faq": [
       {
         "q": "Koliko dugo napuhujući kajaci traju u komercijalnoj upotrebi?",
@@ -191,27 +191,27 @@ export const businessArticles: ContentV2Record[] = [
     "title": "Kako pokrenuti brend vodenih sportova s privatnom markom OEM",
     "description": "Vodič korak po korak za lansiranje SUPvlastite, kajak-kajak-ili napuhavajuće marke koristeći proizvodnju privatne marke. Odabir proizvoda, MOQsodređivanje cijena, pakiranja i postavljanje e-trgovine.",
     "definition": "Privatna marka OEM (Original Equipment Manufacturing) je kada tvornica proizvodi proizvode koji se prodaju pod vašim brendom. Vi birate dizajn, boje, logotip i pakiranje — tvornica se bavi proizvodnjom i kontrolom kvalitete.",
-    "tldr": "Pokretanje brenda vodenih sportova kroz privatnu proizvodnju košta 5.000–15.000 dolara za početni inventar (50-100 jedinica po cijeni od 50 do 150 dolara po jedinici). Proces traje 60-90 dana od prvog kontakta do primitka prve pošiljke. AquafarerPaket za lansiranje brenda uključuje odabir proizvoda, dizajn logotipa po mjeri, pakiranje CE , certifikaciju i FOB dostavu. Vlasnici brendova koji prvi put prodaju obično postižu marže od 40-55% prodajom na Amazonu, Shopifyju ili putem lokalnih trgovaca.",
+    "tldr": "Pokretanje brenda vodenih sportova kroz privatnu proizvodnju košta 5.000–15.000 dolara za početni inventar (50-100 jedinica po cijeni od 50 do 150 dolara po jedinici). Proces traje 60-90 dana od prvog kontakta do primitka prve pošiljke. Paddle Board OverstockPaket za lansiranje brenda uključuje odabir proizvoda, dizajn logotipa po mjeri, pakiranje CE , certifikaciju i FOB dostavu. Vlasnici brendova koji prvi put prodaju obično postižu marže od 40-55% prodajom na Amazonu, Shopifyju ili putem lokalnih trgovaca.",
     "problem": "Želite pokrenuti vlastiti brend vodenih sportova, ali nemate iskustva u proizvodnji, nemate veze s tvornicom i imate ograničen kapital. Brinete se o minimalnim količinama narudžbi, kontroli kvalitete i o tome možete li konkurirati etabliranim brendovima.",
-    "explanation": "Proizvodnja pod privatnom robnom markom nikada nije bila dostupnija malim markama. Nudi se većAquafarer MOQs od 50 jedinica po SKU, što znači da možete testirati tržište s investicijom od 5.000 do 15.000 dolara. Proces: odaberite osnovne proizvode iz kataloga, prilagodite boje i logo, odaberite opcije pakiranja, primite proizvodne uzorke za odobrenje, zatim punu proizvodnju i dostavu. Vi ste vlasnik brenda i svi odnosi s kupcima — Aquafarer ostaju nevidljivi krajnjim kupcima.",
-    "solution": "Započnite s Aquafarer Brand Launch Packageom: odaberite 2-3 modela proizvoda (npr. SUPpočetnički, touring SUPi kajak), prilagodite svoj logo i boje brenda, naručite 50-100 jedinica po SKU, i lansirajte ih na Amazonu ili jednostavnoj Shopify trgovini. Kako prodaja raste, dodajte više SKU-ova i povećajte broj narudžbi.",
-    "recommendation": "Brand Launch Package Aquafarer dizajniran je za vlasnike brenda koji prvi put putuju do brenda. Počnite s jednim hero proizvodom, dokažite potražnju i proširite svoju liniju. Usredotočite se na izgradnju priče o brendu i korisničkog iskustva umjesto na natjecanje po cijeni.",
+    "explanation": "Proizvodnja pod privatnom robnom markom nikada nije bila dostupnija malim markama. Nudi se većPaddle Board Overstock MOQs od 50 jedinica po SKU, što znači da možete testirati tržište s investicijom od 5.000 do 15.000 dolara. Proces: odaberite osnovne proizvode iz kataloga, prilagodite boje i logo, odaberite opcije pakiranja, primite proizvodne uzorke za odobrenje, zatim punu proizvodnju i dostavu. Vi ste vlasnik brenda i svi odnosi s kupcima — Paddle Board Overstock ostaju nevidljivi krajnjim kupcima.",
+    "solution": "Započnite s Paddle Board Overstock Brand Launch Packageom: odaberite 2-3 modela proizvoda (npr. SUPpočetnički, touring SUPi kajak), prilagodite svoj logo i boje brenda, naručite 50-100 jedinica po SKU, i lansirajte ih na Amazonu ili jednostavnoj Shopify trgovini. Kako prodaja raste, dodajte više SKU-ova i povećajte broj narudžbi.",
+    "recommendation": "Brand Launch Package Paddle Board Overstock dizajniran je za vlasnike brenda koji prvi put putuju do brenda. Počnite s jednim hero proizvodom, dokažite potražnju i proširite svoju liniju. Usredotočite se na izgradnju priče o brendu i korisničkog iskustva umjesto na natjecanje po cijeni.",
     "faq": [
       {
         "q": "Koja je minimalna količina narudžbe za privatnu marku?",
-        "a": "minimalno je Aquafarer50 jedinica po komadu SKU za prilagođeno brendiranje. Standardni proizvodi bez prilagodbe mogu imati MOQsnižu cijenu. Razvoj prilagođenog kalupa zahtijeva zasebne pregovore."
+        "a": "minimalno je Paddle Board Overstock50 jedinica po komadu SKU za prilagođeno brendiranje. Standardni proizvodi bez prilagodbe mogu imati MOQsnižu cijenu. Razvoj prilagođenog kalupa zahtijeva zasebne pregovore."
       },
       {
         "q": "Trebam li se baviti uvozom, carinom i logistikom?",
-        "a": "Aquafarer nudi FOB Qingdao (vi organizirate dostavu) ili CIF dostavu (dostava uključena do vaše luke). Također možemo preporučiti špeditere koji se bave carinskom carinom i dostavom na posljednjoj milji."
+        "a": "Paddle Board Overstock nudi FOB Qingdao (vi organizirate dostavu) ili CIF dostavu (dostava uključena do vaše luke). Također možemo preporučiti špeditere koji se bave carinskom carinom i dostavom na posljednjoj milji."
       },
       {
         "q": "Kako mogu osigurati kvalitetu proizvoda?",
-        "a": "Aquafarer Proizvodi se proizvode prema ISO 9001 Quality Managementu, s 64 CEmodela certificirana u katalogu. Dobivate proizvodne uzorke na odobrenje prije masovne proizvodnje. Dostupna je inspekcija treće strane."
+        "a": "Paddle Board Overstock Proizvodi se proizvode prema ISO 9001 Quality Managementu, s 64 CEmodela certificirana u katalogu. Dobivate proizvodne uzorke na odobrenje prije masovne proizvodnje. Dostupna je inspekcija treće strane."
       },
       {
         "q": "Mogu li prodavati na Amazonu s proizvodima privatne marke?",
-        "a": "Da. Mnogi Aquafarer klijenti s privatnom robnom markom prodaju na Amazonu, eBayu i vlastitim Shopify trgovinama. Pružamo fotografije proizvoda, predloške opisa i CE dokumentaciju potrebnu za oglase na tržištu."
+        "a": "Da. Mnogi Paddle Board Overstock klijenti s privatnom robnom markom prodaju na Amazonu, eBayu i vlastitim Shopify trgovinama. Pružamo fotografije proizvoda, predloške opisa i CE dokumentaciju potrebnu za oglase na tržištu."
       }
     ],
     "relatedGuides": [
@@ -231,10 +231,10 @@ export const businessArticles: ContentV2Record[] = [
     "title": "SUP Popis opreme kluba: Što trebate lansirati",
     "description": "Potpuni popis inventara opreme za pokretanje ili nadogradnju SUP kluba, kajak kluba, škole surfanja ili centra za trening vodenih sportova. Uključuje opremu za učenike, instruktore, sigurnost i operacije.",
     "definition": "SUP Popis opreme kluba obuhvaća svu opremu potrebnu za vođenje programa veslačkih sportova: opremu za učenike, opremu za instruktore, zaštitnu opremu, rješenja za skladištenje i operativne dodatke.",
-    "tldr": "Pokretanje SUP kluba zahtijeva: 10-30 dasaka s lopaticama, pumpama i kompletima za popravak (3.000-12.000 USD); PFD-ove i zaštitnu opremu (500-2.000 $); opremu za instruktore uključujući specijalizirane ploče i komunikacijske uređaje (1.000-3.000 $); police za pohranu ili prikolice (500-3.000 $); i operativne predmete poput izuzeća, oznaka i sustava rezervacije (200-1.000 $). Aquafarer Club Starter Package uključuje osnovne stvari po cijeni 15-20% nižoj od pojedinačne cijene.",
+    "tldr": "Pokretanje SUP kluba zahtijeva: 10-30 dasaka s lopaticama, pumpama i kompletima za popravak (3.000-12.000 USD); PFD-ove i zaštitnu opremu (500-2.000 $); opremu za instruktore uključujući specijalizirane ploče i komunikacijske uređaje (1.000-3.000 $); police za pohranu ili prikolice (500-3.000 $); i operativne predmete poput izuzeća, oznaka i sustava rezervacije (200-1.000 $). Paddle Board Overstock Club Starter Package uključuje osnovne stvari po cijeni 15-20% nižoj od pojedinačne cijene.",
     "problem": "Pokrećete SUP klub ili školu surfanja, ali ste preplavljeni potrebama za opremom. Ne znate što kupiti, koliko potrošiti ili kako prioritizirati svoj budžet.",
     "explanation": "Dobro opremljen SUP klub treba pet kategorija opreme: (1) Studentske daske i vesla — osnovna investicija, odaberite izdržljive napuhavajuće SUPs uređaje u više veličina; (2) Sigurnosna oprema — PFD-ovi, povodci, zviždaljke, komplet prve pomoći, daska za spašavanje; (3) Oprema instruktora — stabilna ploča s uputama, vodootporna komunikacija, demonstracijska pomagala; (4) Skladištenje i transport — nosači, prikolica ili kombi, pumpna stanica; (5) Operacije — sustav izuzeća, softver za rezervacije, signalizacija, marketinški materijali.",
-    "solution": "Club Aquafarer Starter paket pokriva kategorije 1-3 s opremom klupske kvalitete po cijenama paketa. Dodajte lokalno skladište i jednostavan online sustav rezervacija i spremni ste za svoju prvu sezonu.",
+    "solution": "Club Paddle Board Overstock Starter paket pokriva kategorije 1-3 s opremom klupske kvalitete po cijenama paketa. Dodajte lokalno skladište i jednostavan online sustav rezervacija i spremni ste za svoju prvu sezonu.",
     "recommendation": "Ulažite u kvalitetnu opremu od samog početka — jeftine daske koštaju više u popravcima i zamjenama. Club Starter paket pruža komercijalnu opremu koja traje 3-5 sezona. Pratite iskorištenost i dodajte ploče kako vaše članstvo raste.",
     "faq": [
       {
@@ -272,7 +272,7 @@ export const businessArticles: ContentV2Record[] = [
     "problem": "Vaš odmaralište ima pristup uz vodu, ali program vodenih sportova ne ostvaruje očekivane rezultate. Oprema stoji neiskorištena, gosti ne znaju da su aktivnosti dostupne, a program gubi novac umjesto da donosi profit.",
     "explanation": "Najprofitabilniji programi vodenih sportova u odmaralištima tretiraju aktivnosti kao centar profita, a ne kao besplatnu pogodnost. Uspješni programi nude složene cijene: osnovnu opremu besplatno za premium goste, plaćena nadogradnja za premium iskustva i vođene izlete po premium cijenama. Ključni metri: stopa sudjelovanja (postotak gostiju koji koriste vodene sportove), prosječni prihod po sudjelujućem gostu i stopa iskorištenosti opreme. Većina odmarališta slabije posluje po pitanju sudjelovanja jer aktivnosti nisu marketinški promovirane gostima prije i tijekom njihovog boravka.",
     "solution": "Implementirajte program s više razina: (1) Besplatno — osnovni SUP i pristup kajacima za goste u kategorijama premium soba; (2) Plaćeni najam — 25-50 USD/sat za goste u standardnim sobama; (3) Premium iskustva — vođene ture po zalasku sunca, izleti za ronjenje s maskom i disalicom, privatne lekcije po 75-200 USD/osoba. Promovirajte aktivnosti putem e-mailova prije dolaska, materijala u sobi i preporuka conciergea.",
-    "recommendation": "Započnite s Premium paketom odmarališta iz Aquafarer i primijenite model višeslojnog određivanja cijena. Obučite osoblje na recepciji i koncijerže da aktivno promoviraju vodene aktivnosti. Pratite stope sudjelovanja i prilagodite cijene sezonski.",
+    "recommendation": "Započnite s Premium paketom odmarališta iz Paddle Board Overstock i primijenite model višeslojnog određivanja cijena. Obučite osoblje na recepciji i koncijerže da aktivno promoviraju vodene aktivnosti. Pratite stope sudjelovanja i prilagodite cijene sezonski.",
     "faq": [
       {
         "q": "Trebaju li vodeni sportovi biti besplatni ili plaćeni?",
@@ -304,11 +304,11 @@ export const businessArticles: ContentV2Record[] = [
     "title": "Upravljanje flotom napuhanih čamaca za hotele i odmarališta",
     "description": "Najbolje prakse za upravljanje, održavanje i zamjenu flota napuhavajućih plovila u komercijalnim ugostiteljskim okruženjima. Rasporedi održavanja, skladištenje, popravci i planiranje životnog ciklusa.",
     "definition": "Upravljanje flotom za napuhljive plovne objekte obuhvaća nabavu, planiranje održavanja, protokole popravaka, optimizaciju skladištenja i planiranje zamjene za komercijalni najam i ugostiteljske operacije.",
-    "tldr": "Dobro upravljana flota napuhavajućih čamaca u odmarališnom okruženju traje 3-5 sezona uz pravilnu njegu. Ključne prakse: dnevni popis inspekcija, tjedna rotacija ispiranja i sušenja, mjesečno testiranje tlaka, sezonsko dubinsko čišćenje i skladištenje. Godišnje planirajte 15-20% vrijednosti opreme za održavanje i zamjenu.Aquafarer nudi Program upravljanja flotom s rezervnim dijelovima, daljinskom dijagnostikom i godišnjim osvježavanjem opreme.",
+    "tldr": "Dobro upravljana flota napuhavajućih čamaca u odmarališnom okruženju traje 3-5 sezona uz pravilnu njegu. Ključne prakse: dnevni popis inspekcija, tjedna rotacija ispiranja i sušenja, mjesečno testiranje tlaka, sezonsko dubinsko čišćenje i skladištenje. Godišnje planirajte 15-20% vrijednosti opreme za održavanje i zamjenu.Paddle Board Overstock nudi Program upravljanja flotom s rezervnim dijelovima, daljinskom dijagnostikom i godišnjim osvježavanjem opreme.",
     "problem": "Vaš resort je uložio u napuhavajuće plovila za aktivnosti gostiju, ali nakon jedne sezone oprema pokazuje trošenje, održavanje je reaktivno, a ne proaktivno, i niste sigurni kada popraviti, a kada zamijeniti.",
     "explanation": "Napuhavajuća plovila u komercijalnoj upotrebi suočavaju se sa specifičnim izazovima: UV izloženost s vremenom degradira PVC tkaninu, slana voda i pijesak ubrzavaju trošenje ventila i spojeva, neiskusni korisnici uzrokuju veća oštećenja od udaraca, a nepravilno skladištenje skraćuje vijek trajanja. Sustavan program održavanja rješava svaki od ovih problema: svakodnevno ispiranje nakon korištenja slane vode, tjedni pregled ventila i spojeva, mjesečno testiranje tlaka u 12-15 minutaPSI, te pravilno skladištenje izvan sezone u klimatiziranom prostoru.",
-    "solution": "Provedite trostupanjski sustav održavanja: (1) Dnevno — ispiranje dasaka, pregled vidljivih oštećenja, sušenje prije skladištenja; (2) Tjedno — potpuni pregled svih spojeva, ventila i dodatne opreme; (3) Sezonsko — dubinsko čišćenje, testiranje pod tlakom, popravak svih oštećenja, primjena UV zaštitnog sredstva. Aquafarer Korištenje Programa upravljanja flotom za rezervne dijelove, daljinsku podršku i godišnje planiranje zamjene.",
-    "recommendation": "Aquafarer Program upravljanja flotom uključuje komplet rezervnih dijelova, video vodiče za održavanje i godišnji pregled opreme. U kombinaciji s Resort Premium paketom, to osigurava da vaša flota ostane u vrhunskom stanju uz minimalno vrijeme zastoja.",
+    "solution": "Provedite trostupanjski sustav održavanja: (1) Dnevno — ispiranje dasaka, pregled vidljivih oštećenja, sušenje prije skladištenja; (2) Tjedno — potpuni pregled svih spojeva, ventila i dodatne opreme; (3) Sezonsko — dubinsko čišćenje, testiranje pod tlakom, popravak svih oštećenja, primjena UV zaštitnog sredstva. Paddle Board Overstock Korištenje Programa upravljanja flotom za rezervne dijelove, daljinsku podršku i godišnje planiranje zamjene.",
+    "recommendation": "Paddle Board Overstock Program upravljanja flotom uključuje komplet rezervnih dijelova, video vodiče za održavanje i godišnji pregled opreme. U kombinaciji s Resort Premium paketom, to osigurava da vaša flota ostane u vrhunskom stanju uz minimalno vrijeme zastoja.",
     "faq": [
       {
         "q": "Koliko često treba mijenjati napuhavajuće daske?",
@@ -320,7 +320,7 @@ export const businessArticles: ContentV2Record[] = [
       },
       {
         "q": "Mogu li se napuhavajuće daske popraviti?",
-        "a": "Da. Male probušene rupe i razdvajanja spojeva mogu se popraviti PVC setovima za zakrpu.Aquafarer Uz svaku ploču dolazi komplet za popravak i nudi profesionalne usluge popravka za veća oštećenja."
+        "a": "Da. Male probušene rupe i razdvajanja spojeva mogu se popraviti PVC setovima za zakrpu.Paddle Board Overstock Uz svaku ploču dolazi komplet za popravak i nudi profesionalne usluge popravka za veća oštećenja."
       }
     ],
     "relatedGuides": [
@@ -343,8 +343,8 @@ export const businessArticles: ContentV2Record[] = [
     "tldr": "Privatna marka nudi potpuno vlasništvo nad brendom i diferencijaciju, ali zahtijeva veće (MOQs50+ jedinica) i duže rokove isporuke. White label je brži (proizvodi na zalihama, spremni za isporuku) i ima manje, MOQs ali vaš brend izgleda kao svaki drugi white label preprodavač. Za ozbiljne poduzetnike u vodenim sportovima, private label je bolji dugoročni put. Počnite s white label kako biste testirali tržište, a zatim prijeđite na private label kako rastete.",
     "problem": "Spremni ste lansirati brend vodenih sportova, ali niste sigurni hoćete li prijeći na privatnu marku (prilagođeni dizajni, višeMOQ, duže vrijeme isporuke) ili white label (proizvodi, brži, manji rizik). Pogrešan izbor mogao bi izgubiti mjesece i tisuće dolara.",
     "explanation": "Bijela etiketa je brz način za testiranje tržišta — odaberite između postojećih proizvoda, dodajte svoj logo putem naljepnice ili osnovnog tiska i počnite prodavati. Nedostatak: nema diferencijacije proizvoda, konkurenti mogu prodavati iste proizvode, a vaš brend izgleda generički. Privatna marka zahtijeva 6-10 tjedana za proizvodnju, ali stvara jedinstven proizvod s prilagođenim bojama, integracijom logotipa, brendiranim pakiranjem i dodacima. Vaš proizvod izgleda i osjeća se kao originalni brend, a ne kao preprodana roba.",
-    "solution": "Započnite s Aquafarer Brand Launch Package (privatna marka) za svoj herojski proizvod — jedini proizvod koji definira vaš brend. Dopunite ga bijelom etiketom dodacima (defibrilatori, torbe, kompleti za popravak) kako biste popunili svoj katalog. Kako rastete, pretvarajte više proizvoda u privatne marke.",
-    "recommendation": "Uložite u privatnu marku za svoju osnovnu liniju proizvoda. Što je više, to je MOQ vrijedno ulaganja u vrijednost brenda. White label dodaci i potrošni materijali.Aquafarer Nudi obje opcije s besprijekornim putem nadogradnje s white label na private label.",
+    "solution": "Započnite s Paddle Board Overstock Brand Launch Package (privatna marka) za svoj herojski proizvod — jedini proizvod koji definira vaš brend. Dopunite ga bijelom etiketom dodacima (defibrilatori, torbe, kompleti za popravak) kako biste popunili svoj katalog. Kako rastete, pretvarajte više proizvoda u privatne marke.",
+    "recommendation": "Uložite u privatnu marku za svoju osnovnu liniju proizvoda. Što je više, to je MOQ vrijedno ulaganja u vrijednost brenda. White label dodaci i potrošni materijali.Paddle Board Overstock Nudi obje opcije s besprijekornim putem nadogradnje s white label na private label.",
     "faq": [
       {
         "q": "Kolika je razlika u cijeni između privatne i bijele marke?",
@@ -352,7 +352,7 @@ export const businessArticles: ContentV2Record[] = [
       },
       {
         "q": "Mogu li kasnije prijeći s white label na private label?",
-        "a": "Da. Mnogi Aquafarer klijenti započinju s white label proizvodnjom kako bi potvrdili potražnju, a zatim prelaze na privatnu marku za svoje najprodavanije proizvode. Tvornički alati često se mogu prilagoditi prema white label specifikacijama."
+        "a": "Da. Mnogi Paddle Board Overstock klijenti započinju s white label proizvodnjom kako bi potvrdili potražnju, a zatim prelaze na privatnu marku za svoje najprodavanije proizvode. Tvornički alati često se mogu prilagoditi prema white label specifikacijama."
       }
     ],
     "relatedGuides": [
@@ -375,8 +375,8 @@ export const businessArticles: ContentV2Record[] = [
     "tldr": "Pravilno održavanje produžuje vijek trajanja komercijalnih napuhavajućih plovila s 2 na 5 sezona. Omjer ulaganja u održavanje je 5:1 — svaki $1 potrošen na održavanje štedi $5 na troškovima zamjene. Ključne prakse: ispiranje nakon svake upotrebe slane vode, skladištenje izvan izravnog UVspremnika, održavanje pravilnog tlaka napuhavanja (12-15PSI), odmah popravak oštećenja i rotacija opreme radi ravnomjerne raspodjele trošenja.",
     "problem": "Vaša flota za najam pokazuje prerano trošenje nakon prve sezone. Daske blijede, spojevi se razdvajaju, a ventili propuštaju. Suočavate se s tisućama u troškovima zamjene ranije nego što ste očekivali.",
     "explanation": "Komercijalna oprema za vodene sportove prerano otkazuje iz četiri razloga: UV oštećenje (PVCpropadanje na izravnom suncu), korozija soli (ventili i hardver), oštećenja udarcima (povlačenje, padanje, nepravilno rukovanje) i nepravilno skladištenje (preklopljeno dok je mokro, pohranjeno pod težinom). Strukturirani program održavanja rješava sva četiri s minimalnim vremenskim ulaganjem.",
-    "solution": "Provedite Aquafarer program komercijalnog održavanja: (1) Dnevno ispiranje i vizualni pregled (5 minuta po ploči); (2) Tjednu provjeru tlaka i čišćenje ventila (10 minuta po ploči); (3) Mjesečni pregled spojeva i manje popravke (15 minuta po dasci); (4) Sezonsko dubinsko čišćenje, UV tretman zaštitnim sredstvima i potpuni pregled. Obučite jednog člana osoblja kao upravitelja opreme.",
-    "recommendation": "Aquafarer Program upravljanja voznim parkom uključuje vodiče za održavanje, setove rezervnih dijelova i daljinsku podršku. Dodijelite jednog člana osoblja za održavanje opreme i slijedite dnevni, tjedni i sezonski raspored. Pratite starost i korištenje opreme kako biste proaktivno planirali zamjene.",
+    "solution": "Provedite Paddle Board Overstock program komercijalnog održavanja: (1) Dnevno ispiranje i vizualni pregled (5 minuta po ploči); (2) Tjednu provjeru tlaka i čišćenje ventila (10 minuta po ploči); (3) Mjesečni pregled spojeva i manje popravke (15 minuta po dasci); (4) Sezonsko dubinsko čišćenje, UV tretman zaštitnim sredstvima i potpuni pregled. Obučite jednog člana osoblja kao upravitelja opreme.",
+    "recommendation": "Paddle Board Overstock Program upravljanja voznim parkom uključuje vodiče za održavanje, setove rezervnih dijelova i daljinsku podršku. Dodijelite jednog člana osoblja za održavanje opreme i slijedite dnevni, tjedni i sezonski raspored. Pratite starost i korištenje opreme kako biste proaktivno planirali zamjene.",
     "faq": [
       {
         "q": "Kako spremiti napuhane daske izvan sezone?",
@@ -388,7 +388,7 @@ export const businessArticles: ContentV2Record[] = [
       },
       {
         "q": "Kako mogu obučiti osoblje za održavanje?",
-        "a": "Izradite jednostavan kontrolni popis za svaku razinu održavanja.Aquafarer Pruža video vodiče za obuku za sve komercijalne klijente. Odredite jednog glavnog člana osoblja kao upravitelja opreme i rotirajte odgovornosti tjedno."
+        "a": "Izradite jednostavan kontrolni popis za svaku razinu održavanja.Paddle Board Overstock Pruža video vodiče za obuku za sve komercijalne klijente. Odredite jednog glavnog člana osoblja kao upravitelja opreme i rotirajte odgovornosti tjedno."
       }
     ],
     "relatedGuides": [

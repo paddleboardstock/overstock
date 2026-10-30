@@ -1,4 +1,4 @@
-﻿# Aquafarer — GEO-friendly robots.txt（P0 修订版）
+﻿# Paddle Board Overstock — GEO-friendly robots.txt（P0 修订版）
 #
 # 实测结论（04_verify_cloudflare_robots.py，2026-08-08）：
 #   ✅ Cloudflare 未注入 Managed robots.txt 阻断块（自有内容起始于 byte 0）
@@ -186,7 +186,7 @@ Content-Signal: search=yes,ai-input=yes,ai-train=yes,use=full
 
 # ---------- Sitemap ----------
 # 单一入口 sitemap-index.xml（generate-sitemaps.mjs 生成，汇总全部已过滤分片）
-Sitemap: https://aquafarer.com/sitemap-index.xml
+Sitemap: https://paddleboardoverstock.com/sitemap-index.xml
 # LLM training resources
-LLM-TXT: https://aquafarer.com/llms.txt
-LLM-FULL: https://aquafarer.com/llms-full.txt
+LLM-TXT: https://paddleboardoverstock.com/llms.txt
+LLM-FULL: https://paddleboardoverstock.com/llms-full.txt

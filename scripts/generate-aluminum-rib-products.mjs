@@ -2,13 +2,15 @@ import XLSX from 'xlsx';
 import fs from 'fs';
 import path from 'path';
 
-const EXCEL_PATH = 'D:\\AQUAFARER Aluminum Hull RIB boat图片\\AQUAFARER Aluminum Hull RIB boat 规格表.xlsx';
-const IMG_ROOT = 'D:\\AQUAFARER Aluminum Hull RIB boat图片';
+const EXCEL_PATH =
+  'D:\\PADDLE BOARD OVERSTOCK Aluminum Hull RIB boat图片\\PADDLE BOARD OVERSTOCK Aluminum Hull RIB boat 规格表.xlsx';
+const IMG_ROOT = 'D:\\PADDLE BOARD OVERSTOCK Aluminum Hull RIB boat图片';
 const OUTPUT_DIR = 'src/content/products';
 const MANIFEST_PATH = 'scripts/product-image-manifest.json';
-const SW240_TEXT = 'D:\\AQUAFARER Aluminum Hull RIB boat图片\\Swiftlitee\\Swiftlitee 240 (SW240)\\UL240和UL240LT.txt';
+const SW240_TEXT =
+  'D:\\PADDLE BOARD OVERSTOCK Aluminum Hull RIB boat图片\\Swiftlitee\\Swiftlitee 240 (SW240)\\UL240和UL240LT.txt';
 
-const R2_BASE = 'https://assets.aquafarer.com/images/aquafarer/products/rib';
+const R2_BASE = 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib';
 
 function kebabCase(s) {
   return s
@@ -26,8 +28,8 @@ function slugifyFilename(name, slug) {
     if (rest) return slug + '-' + kebabCase(rest);
     return slug;
   }
-  if (base.match(/^AQUAFARER\s/i)) {
-    const rest = base.replace(/^AQUAFARER\s+/i, '');
+  if (base.match(/^PADDLE BOARD OVERSTOCK\s/i)) {
+    const rest = base.replace(/^PADDLE BOARD OVERSTOCK\s+/i, '');
     return slug + '-' + kebabCase(rest);
   }
   return slug + '-' + kebabCase(base);
@@ -385,7 +387,7 @@ function generateMDX(slug, productData, imageManifest) {
 
   const title =
     productData.productName ||
-    `Aquafarer ${info.series} ${slug
+    `Paddle Board Overstock ${info.series} ${slug
       .replace(/^[a-z]+/, '')
       .replace('-', ' ')
       .toUpperCase()}`;
@@ -406,7 +408,7 @@ function generateMDX(slug, productData, imageManifest) {
   const galleryYaml =
     img.gallery && img.gallery.length > 0
       ? img.gallery.map((g) => `  - url: ${g.url}\n    alt: "${g.alt.replace(/"/g, "'")}"`).join('\n')
-      : '  - url: https://assets.aquafarer.com/images/aquafarer/products/rib/aquafarer-rib-generic.webp\n    alt: "Aquafarer RIB"';
+      : '  - url: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/paddleboardoverstock-rib-generic.webp\n    alt: "Paddle Board Overstock RIB"';
 
   const tagsYaml = tags.map((t) => `  - ${t}`).join('\n');
 
@@ -414,7 +416,7 @@ function generateMDX(slug, productData, imageManifest) {
 
   const sku = slug.toUpperCase().replace('-', '');
 
-  const metadataTitle = `${title} | Aquafarer ${info.series}`;
+  const metadataTitle = `${title} | Paddle Board Overstock ${info.series}`;
   const metadataDesc = description.substring(0, 160);
 
   let body = '';
@@ -518,7 +520,7 @@ metadata:
 }
 
 function main() {
-  console.log('=== Aquafarer Aluminum Hull RIB Product Generator ===\n');
+  console.log('=== Paddle Board Overstock Aluminum Hull RIB Product Generator ===\n');
 
   console.log('Step 1: Scanning image folders...');
   const imageManifest = scanImages();
@@ -533,7 +535,7 @@ function main() {
 
   const sheetSlugMap = {};
   for (const name of wb.SheetNames) {
-    if (/Aquafarer$/i.test(name.trim())) continue;
+    if (/Paddle Board Overstock$/i.test(name.trim())) continue;
 
     let slug = '';
     let match;

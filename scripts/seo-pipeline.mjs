@@ -188,36 +188,36 @@ function generateSocialPosts(pageSlug) {
         ].includes(w)
     );
   const hook = SOCIAL_HOOKS[Math.floor(Math.random() * SOCIAL_HOOKS.length)];
-  const hashtags = ['#aquafarer', '#surfing', '#ocean', ...keywords.slice(0, 3).map((k) => `#${k}`)];
+  const hashtags = ['#paddleboardoverstock', '#surfing', '#ocean', ...keywords.slice(0, 3).map((k) => `#${k}`)];
 
   return [
     {
       platform: 'instagram',
-      content: `${hook}\n\nFull guide: aquafarer.com${url}\n\n${title}`,
+      content: `${hook}\n\nFull guide: paddleboardoverstock.com${url}\n\n${title}`,
       hashtags,
       cta: 'Link in bio',
     },
     {
       platform: 'tiktok',
-      content: `${hook} 馃憜 Full guide at aquafarer.com${url}`,
+      content: `${hook} 馃憜 Full guide at paddleboardoverstock.com${url}`,
       hashtags: hashtags.slice(0, 3),
       cta: 'Full guide in bio',
     },
     {
       platform: 'twitter',
-      content: `${hook}\n\n${title}\n\nRead 鈫?aquafarer.com${url}\n\n${hashtags.slice(0, 3).join(' ')}`,
+      content: `${hook}\n\n${title}\n\nRead 鈫?paddleboardoverstock.com${url}\n\n${hashtags.slice(0, 3).join(' ')}`,
       hashtags,
       cta: 'Read full guide',
     },
     {
       platform: 'pinterest',
-      content: `${title} u2014 Complete Guide\n\naquafarer.com${url}`,
+      content: `${title} u2014 Complete Guide\n\npaddleboardoverstock.com${url}`,
       hashtags,
       cta: 'Save for later',
     },
     {
       platform: 'reddit',
-      content: `**${title}**\n\nI've been testing different ${keywords.slice(0, 3).join(', ')} in real conditions.\n\n${hook.replace(':', '.')}\n\nFull breakdown: https://aquafarer.com${url}`,
+      content: `**${title}**\n\nI've been testing different ${keywords.slice(0, 3).join(', ')} in real conditions.\n\n${hook.replace(':', '.')}\n\nFull breakdown: https://paddleboardoverstock.com${url}`,
       hashtags: [],
       cta: 'Full breakdown',
     },
@@ -249,7 +249,7 @@ function toCsv(tasks) {
   return rows.map((r) => r.map((c) => `"${c.replace(/"/g, '""')}"`).join(',')).join('\n');
 }
 
-console.log('=== Aquafarer SEO Pipeline v3.6 ===\n');
+console.log('=== Paddle Board Overstock SEO Pipeline v3.6 ===\n');
 
 const tasks = runRules(SAMPLE_DATA);
 const geo = generateGeo(SAMPLE_DATA);

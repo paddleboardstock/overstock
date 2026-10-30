@@ -16,9 +16,9 @@ export const businessArticles: ContentV2Record[] = [
     explanation:
       'SUP rental businesses have relatively low entry costs compared to other water sports ventures. The main cost centers are: equipment (boards, paddles, pumps, PFDs, leashes, repair kits), insurance (liability and property), permits and licenses (beach permits, business licenses, sales tax registration), storage and transport (rack system, trailer or van), staffing (instructors, cashiers, seasonal labor), and marketing (website, signage, local ads). Equipment is the largest upfront cost but boards last 3-5 seasons with proper maintenance.',
     solution:
-      'Start with the Aquafarer Club Starter Package which bundles 10 boards, paddles, pumps, PFDs, and repair kits at a discounted package price. Choose a high-traffic beach location and obtain the required permits before purchasing equipment. Price rentals at $25-40/hour or $80-150/day. Target a daily utilization rate of 40-60% to break even within the first season.',
+      'Start with the Paddle Board Overstock Club Starter Package which bundles 10 boards, paddles, pumps, PFDs, and repair kits at a discounted package price. Choose a high-traffic beach location and obtain the required permits before purchasing equipment. Price rentals at $25-40/hour or $80-150/day. Target a daily utilization rate of 40-60% to break even within the first season.',
     recommendation:
-      'For first-time operators, the Club Starter Package from Aquafarer includes everything you need for a 10-board fleet. Add a simple online booking system, liability waivers, and a card reader. Start small, prove the demand, and expand in year two.',
+      'For first-time operators, the Club Starter Package from Paddle Board Overstock includes everything you need for a 10-board fleet. Add a simple online booking system, liability waivers, and a card reader. Start small, prove the demand, and expand in year two.',
     faq: [
       {
         q: 'Do I need a license to rent paddle boards?',
@@ -60,13 +60,13 @@ export const businessArticles: ContentV2Record[] = [
     explanation:
       'Resort water sports programs generate revenue through hourly rentals, half-day excursions, guided tours, lessons, and package deals. The key infrastructure includes: a secure equipment storage area, beach or dock launch point, safety station with lifeguard equipment and first aid, check-in counter with POS system, and signage explaining rules and pricing. Staff requirements are minimal — one manager and 2-3 attendants can run a 50-board fleet.',
     solution:
-      'Start with the Aquafarer Resort Premium Package which includes 50-100 SUPs/kayaks, commercial storage racks, safety infrastructure, staff training, and a revenue management playbook. The package is designed to launch a complete program in 4-6 weeks from order to first rental.',
+      'Start with the Paddle Board Overstock Resort Premium Package which includes 50-100 SUPs/kayaks, commercial storage racks, safety infrastructure, staff training, and a revenue management playbook. The package is designed to launch a complete program in 4-6 weeks from order to first rental.',
     recommendation:
-      "The Resort Premium Package from Aquafarer is the fastest path to a professional water sports program. Include the equipment in guest activity fees or offer premium packages. Train 2-3 staff members through Aquafarer's on-site training program to ensure safety and quality.",
+      "The Resort Premium Package from Paddle Board Overstock is the fastest path to a professional water sports program. Include the equipment in guest activity fees or offer premium packages. Train 2-3 staff members through Paddle Board Overstock's on-site training program to ensure safety and quality.",
     faq: [
       {
         q: 'Do resorts need special insurance for water sports?',
-        a: 'Most resort liability policies cover guest activities but may require additional coverage for water sports. An umbrella policy with $2-5 million in coverage is recommended. Aquafarer equipment meets CE safety standards, which helps with insurance compliance.',
+        a: 'Most resort liability policies cover guest activities but may require additional coverage for water sports. An umbrella policy with $2-5 million in coverage is recommended. Paddle Board Overstock equipment meets CE safety standards, which helps with insurance compliance.',
       },
       {
         q: 'How many staff do I need?',
@@ -100,7 +100,7 @@ export const businessArticles: ContentV2Record[] = [
     explanation:
       'Fleet sizing depends on three factors: average daily visitors during peak season, average rental duration, and target utilization rate. A board used 4 hours per day at $30/hour generates $120/day. With a $500 board cost, payback is achieved in 4-5 rental days. Most clubs need enough boards to serve 15-25% of their daily visitors simultaneously during peak hours.',
     solution:
-      'Use the rule of 10: start with 10 boards for a new operation, monitor utilization during the first season, and add 5-10 boards per year based on demand data. The Aquafarer Club Starter Package provides 10 boards with room to expand.',
+      'Use the rule of 10: start with 10 boards for a new operation, monitor utilization during the first season, and add 5-10 boards per year based on demand data. The Paddle Board Overstock Club Starter Package provides 10 boards with room to expand.',
     recommendation:
       'Start with the Club Starter Package and track daily utilization. When average utilization exceeds 70% during peak hours for two consecutive weeks, it is time to add more boards.',
     faq: [
@@ -132,13 +132,13 @@ export const businessArticles: ContentV2Record[] = [
     explanation:
       'For commercial rental operations, the total cost of ownership over 3 years strongly favors inflatable SUPs: inflatables cost 30-50% less upfront, require 60% less storage space, have lower shipping costs, are more resistant to impact damage from inexperienced renters, and are lighter for guests to carry. Hard boards perform better in tours and advanced paddling but suffer from dings, delamination, and rail damage in rental use.',
     solution:
-      'Choose inflatable SUPs for the majority of your rental fleet (80%), with a small selection of hard boards (20%) for experienced guests and guided tours. Aquafarer inflatable SUPs are built with commercial-grade 1.2mm PVC and reinforced drop-stitch core, rated for 3-5 seasons of daily rental use.',
+      'Choose inflatable SUPs for the majority of your rental fleet (80%), with a small selection of hard boards (20%) for experienced guests and guided tours. Paddle Board Overstock inflatable SUPs are built with commercial-grade 1.2mm PVC and reinforced drop-stitch core, rated for 3-5 seasons of daily rental use.',
     recommendation:
-      'The Aquafarer SUP Explorer 11 (inflatable) is the best all-around rental board — stable, durable, and easy to store. Add a few SUP Ocean Voyager models for touring guests who want a performance upgrade.',
+      'The Paddle Board Overstock SUP Explorer 11 (inflatable) is the best all-around rental board — stable, durable, and easy to store. Add a few SUP Ocean Voyager models for touring guests who want a performance upgrade.',
     faq: [
       {
         q: 'How long do inflatable SUPs last in rental use?',
-        a: '3-5 seasons with proper maintenance. Commercial-grade inflatables from Aquafarer use thicker PVC (1.2mm vs 0.8mm consumer grade) and reinforced seams for extended lifespan.',
+        a: '3-5 seasons with proper maintenance. Commercial-grade inflatables from Paddle Board Overstock use thicker PVC (1.2mm vs 0.8mm consumer grade) and reinforced seams for extended lifespan.',
       },
       {
         q: 'Do inflatable SUPs feel less stable than hard boards?',
@@ -168,9 +168,9 @@ export const businessArticles: ContentV2Record[] = [
     explanation:
       'Kayak materials for commercial use fall into three categories: inflatable PVC (lowest cost, best storage, good durability), rotomolded polyethylene (medium cost, bulky storage, excellent durability), and fiberglass/composite (high cost, best performance, fragile). For rental fleets where guests vary in skill, inflatable PVC is the most practical choice — it withstands bumps and scrapes, packs into a car trunk, and costs a fraction of hard shells.',
     solution:
-      'For beach club and resort rental fleets, choose inflatable PVC kayaks from Aquafarer with commercial-grade fabric and reinforced seams. For guided touring operations where performance matters, invest in rotomolded polyethylene hulls. A mixed fleet with 70% inflatable and 30% hard shell covers all use cases.',
+      'For beach club and resort rental fleets, choose inflatable PVC kayaks from Paddle Board Overstock with commercial-grade fabric and reinforced seams. For guided touring operations where performance matters, invest in rotomolded polyethylene hulls. A mixed fleet with 70% inflatable and 30% hard shell covers all use cases.',
     recommendation:
-      'The Aquafarer inflatable kayak series is purpose-built for commercial rental use. Pair with the Club Starter Package for a complete rental-ready fleet.',
+      'The Paddle Board Overstock inflatable kayak series is purpose-built for commercial rental use. Pair with the Club Starter Package for a complete rental-ready fleet.',
     faq: [
       {
         q: 'How long do inflatable kayaks last in commercial use?',
@@ -194,31 +194,31 @@ export const businessArticles: ContentV2Record[] = [
       'Step-by-step guide to launching your own SUP, kayak, or inflatable boat brand using private label manufacturing. Product selection, MOQs, pricing, packaging, and e-commerce setup.',
     definition:
       'Private label OEM (Original Equipment Manufacturing) is when a factory produces products that are sold under your brand name. You choose the design, colors, logo, and packaging — the factory handles manufacturing and quality control.',
-    tldr: "Starting a water sports brand through private label manufacturing costs $5,000–$15,000 for initial inventory (50-100 units at $50-150/unit). The process takes 60-90 days from first contact to receiving your first shipment. Aquafarer's Brand Launch Package includes product selection, custom logo design, packaging, CE certification, and FOB shipping. First-time brand owners typically achieve 40-55% margins selling on Amazon, Shopify, or through local retailers.",
+    tldr: "Starting a water sports brand through private label manufacturing costs $5,000–$15,000 for initial inventory (50-100 units at $50-150/unit). The process takes 60-90 days from first contact to receiving your first shipment. Paddle Board Overstock's Brand Launch Package includes product selection, custom logo design, packaging, CE certification, and FOB shipping. First-time brand owners typically achieve 40-55% margins selling on Amazon, Shopify, or through local retailers.",
     problem:
       'You want to start your own water sports brand but have no manufacturing experience, no factory connections, and limited capital. You worry about minimum order quantities, quality control, and whether you can compete with established brands.',
     explanation:
-      'Private label manufacturing has never been more accessible for small brands. Aquafarer offers MOQs as low as 50 units per SKU, which means you can test the market with a $5,000-$15,000 investment. The process: select base products from the catalog, customize colors and logo, choose packaging options, receive production samples for approval, then full production and shipping. You own the brand and all customer relationships — Aquafarer remains invisible to your end customers.',
+      'Private label manufacturing has never been more accessible for small brands. Paddle Board Overstock offers MOQs as low as 50 units per SKU, which means you can test the market with a $5,000-$15,000 investment. The process: select base products from the catalog, customize colors and logo, choose packaging options, receive production samples for approval, then full production and shipping. You own the brand and all customer relationships — Paddle Board Overstock remains invisible to your end customers.',
     solution:
-      'Start with the Aquafarer Brand Launch Package: select 2-3 product models (e.g., a beginner SUP, a touring SUP, and a kayak), customize with your logo and brand colors, order 50-100 units per SKU, and launch on Amazon or a simple Shopify store. As sales grow, add more SKUs and increase order quantities.',
+      'Start with the Paddle Board Overstock Brand Launch Package: select 2-3 product models (e.g., a beginner SUP, a touring SUP, and a kayak), customize with your logo and brand colors, order 50-100 units per SKU, and launch on Amazon or a simple Shopify store. As sales grow, add more SKUs and increase order quantities.',
     recommendation:
-      'The Brand Launch Package from Aquafarer is designed for first-time brand owners. Start with one hero product, prove demand, and expand your line. Focus on building a brand story and customer experience rather than competing on price.',
+      'The Brand Launch Package from Paddle Board Overstock is designed for first-time brand owners. Start with one hero product, prove demand, and expand your line. Focus on building a brand story and customer experience rather than competing on price.',
     faq: [
       {
         q: 'What is the minimum order quantity for private label?',
-        a: "Aquafarer's minimum is 50 units per SKU for custom branding. Standard products without customization may have lower MOQs. Custom mold development requires a separate negotiation.",
+        a: "Paddle Board Overstock's minimum is 50 units per SKU for custom branding. Standard products without customization may have lower MOQs. Custom mold development requires a separate negotiation.",
       },
       {
         q: 'Do I need to handle import customs and logistics?',
-        a: 'Aquafarer offers FOB Qingdao (you arrange shipping) or CIF delivery (shipping included to your port). We can also recommend freight forwarders who handle customs clearance and last-mile delivery.',
+        a: 'Paddle Board Overstock offers FOB Qingdao (you arrange shipping) or CIF delivery (shipping included to your port). We can also recommend freight forwarders who handle customs clearance and last-mile delivery.',
       },
       {
         q: 'How do I ensure product quality?',
-        a: 'Aquafarer products are manufactured under ISO 9001 quality management, with 64 CE-certified models across the catalog. You receive production samples for approval before bulk production. Third-party inspection is available.',
+        a: 'Paddle Board Overstock products are manufactured under ISO 9001 quality management, with 64 CE-certified models across the catalog. You receive production samples for approval before bulk production. Third-party inspection is available.',
       },
       {
         q: 'Can I sell on Amazon with private label products?',
-        a: 'Yes. Many Aquafarer private label clients sell on Amazon, eBay, and their own Shopify stores. We provide product photography, description templates, and CE documentation needed for marketplace listings.',
+        a: 'Yes. Many Paddle Board Overstock private label clients sell on Amazon, eBay, and their own Shopify stores. We provide product photography, description templates, and CE documentation needed for marketplace listings.',
       },
     ],
     relatedGuides: ['private-label-vs-white-label', 'cost-to-start-sup-rental-business'],
@@ -234,13 +234,13 @@ export const businessArticles: ContentV2Record[] = [
       'Complete equipment inventory checklist for starting or upgrading a SUP club, kayak club, surf school, or water sports training center. Includes gear for students, instructors, safety, and operations.',
     definition:
       'A SUP club equipment checklist covers all the gear needed to operate a paddle sports program: student equipment, instructor gear, safety equipment, storage solutions, and operational accessories.',
-    tldr: 'Launching a SUP club requires: 10-30 boards with paddles, pumps, and repair kits ($3,000-$12,000); PFDs and safety gear ($500-$2,000); instructor gear including specialized boards and communication devices ($1,000-$3,000); storage racks or trailer ($500-$3,000); and operational items like waivers, signage, and a booking system ($200-$1,000). The Aquafarer Club Starter Package bundles the essential items at 15-20% below individual pricing.',
+    tldr: 'Launching a SUP club requires: 10-30 boards with paddles, pumps, and repair kits ($3,000-$12,000); PFDs and safety gear ($500-$2,000); instructor gear including specialized boards and communication devices ($1,000-$3,000); storage racks or trailer ($500-$3,000); and operational items like waivers, signage, and a booking system ($200-$1,000). The Paddle Board Overstock Club Starter Package bundles the essential items at 15-20% below individual pricing.',
     problem:
       'You are starting a SUP club or surf school but are overwhelmed by the equipment needs. You do not know what to buy, how much to spend, or how to prioritize your budget.',
     explanation:
       'A well-equipped SUP club needs five categories of gear: (1) Student boards and paddles — the core investment, choose durable inflatable SUPs in multiple sizes; (2) Safety equipment — PFDs, leashes, whistles, first aid kit, rescue board; (3) Instructor gear — a stable instruction board, waterproof communication, demonstration aids; (4) Storage and transport — racks, trailer or van, pump station; (5) Operations — waiver system, booking software, signage, marketing materials.',
     solution:
-      'The Aquafarer Club Starter Package covers categories 1-3 with club-quality equipment at package pricing. Add local storage and a simple online booking system, and you are ready for your first season.',
+      'The Paddle Board Overstock Club Starter Package covers categories 1-3 with club-quality equipment at package pricing. Add local storage and a simple online booking system, and you are ready for your first season.',
     recommendation:
       'Invest in quality equipment from the start — cheap boards cost more in repairs and replacements. The Club Starter Package provides commercial-grade equipment that lasts 3-5 seasons. Track utilization and add boards as your membership grows.',
     faq: [
@@ -278,7 +278,7 @@ export const businessArticles: ContentV2Record[] = [
     solution:
       'Implement a tiered program: (1) Complimentary — basic SUP and kayak access for guests in premium room categories; (2) Paid rentals — $25-50/hour for guests in standard rooms; (3) Premium experiences — guided sunset tours, snorkel excursions, private lessons at $75-200/person. Market activities through pre-arrival emails, in-room materials, and concierge recommendations.',
     recommendation:
-      'Start with the Resort Premium Package from Aquafarer and implement the tiered pricing model. Train front desk and concierge staff to actively promote water activities. Track participation rates and adjust pricing seasonally.',
+      'Start with the Resort Premium Package from Paddle Board Overstock and implement the tiered pricing model. Train front desk and concierge staff to actively promote water activities. Track participation rates and adjust pricing seasonally.',
     faq: [
       {
         q: 'Should water sports be free or paid?',
@@ -306,15 +306,15 @@ export const businessArticles: ContentV2Record[] = [
       'Best practices for managing, maintaining, and replacing inflatable watercraft fleets in commercial hospitality environments. Maintenance schedules, storage, repair, and lifecycle planning.',
     definition:
       'Fleet management for inflatable watercraft covers acquisition, maintenance scheduling, repair protocols, storage optimization, and replacement planning for commercial rental and hospitality operations.',
-    tldr: 'A well-managed inflatable boat fleet in a resort environment lasts 3-5 seasons with proper care. Key practices: daily inspection checklist, weekly rinse and dry rotation, monthly pressure testing, seasonal deep clean and storage. Budget 15-20% of equipment value annually for maintenance and replacement. Aquafarer offers a Fleet Management Program with spare parts inventory, remote diagnostics, and annual equipment refresh pricing.',
+    tldr: 'A well-managed inflatable boat fleet in a resort environment lasts 3-5 seasons with proper care. Key practices: daily inspection checklist, weekly rinse and dry rotation, monthly pressure testing, seasonal deep clean and storage. Budget 15-20% of equipment value annually for maintenance and replacement. Paddle Board Overstock offers a Fleet Management Program with spare parts inventory, remote diagnostics, and annual equipment refresh pricing.',
     problem:
       'Your resort has invested in inflatable watercraft for guest activities, but after one season the equipment shows wear, maintenance is reactive rather than proactive, and you are unsure when to repair vs replace.',
     explanation:
       'Inflatable watercraft in commercial use face specific challenges: UV exposure degrades PVC fabric over time, saltwater and sand accelerate wear on valves and seams, inexperienced users cause more impact damage, and improper storage shortens lifespan. A systematic maintenance program addresses each of these: daily rinse after saltwater use, weekly inspection of valves and seams, monthly pressure testing at 12-15 PSI, and proper off-season storage in a climate-controlled space.',
     solution:
-      'Implement the three-tier maintenance system: (1) Daily — rinse boards, inspect for visible damage, dry before storage; (2) Weekly — full inspection of all seams, valves, and accessories; (3) Seasonal — deep clean, pressure test, repair all damage, apply UV protectant. Use the Aquafarer Fleet Management Program for spare parts, remote support, and annual replacement planning.',
+      'Implement the three-tier maintenance system: (1) Daily — rinse boards, inspect for visible damage, dry before storage; (2) Weekly — full inspection of all seams, valves, and accessories; (3) Seasonal — deep clean, pressure test, repair all damage, apply UV protectant. Use the Paddle Board Overstock Fleet Management Program for spare parts, remote support, and annual replacement planning.',
     recommendation:
-      'The Aquafarer Fleet Management Program includes a spare parts kit, video maintenance guides, and annual equipment review. Combined with the Resort Premium Package, this ensures your fleet stays in top condition with minimal downtime.',
+      'The Paddle Board Overstock Fleet Management Program includes a spare parts kit, video maintenance guides, and annual equipment review. Combined with the Resort Premium Package, this ensures your fleet stays in top condition with minimal downtime.',
     faq: [
       {
         q: 'How often should inflatable boards be replaced?',
@@ -326,7 +326,7 @@ export const businessArticles: ContentV2Record[] = [
       },
       {
         q: 'Can inflatable boards be repaired?',
-        a: 'Yes. Small punctures and seam separations can be repaired with PVC patch kits. Aquafarer includes repair kits with every board and offers professional repair services for larger damage.',
+        a: 'Yes. Small punctures and seam separations can be repaired with PVC patch kits. Paddle Board Overstock includes repair kits with every board and offers professional repair services for larger damage.',
       },
     ],
     relatedGuides: ['building-resort-water-sports-center', 'resort-water-sports-revenue'],
@@ -348,9 +348,9 @@ export const businessArticles: ContentV2Record[] = [
     explanation:
       'White label is a fast way to test the market — choose from existing products, add your logo via sticker or basic print, and start selling. The downside: no product differentiation, competitors can sell the same products, and your brand appears generic. Private label requires 6-10 weeks for production but creates a unique product with custom colors, logo integration, branded packaging, and accessories. Your product looks and feels like an original brand, not a resold commodity.',
     solution:
-      'Start with the Aquafarer Brand Launch Package (private label) for your hero product — the one product that defines your brand. Supplement with white label accessories (paddles, bags, repair kits) to fill out your catalog. As you grow, convert more products to private label.',
+      'Start with the Paddle Board Overstock Brand Launch Package (private label) for your hero product — the one product that defines your brand. Supplement with white label accessories (paddles, bags, repair kits) to fill out your catalog. As you grow, convert more products to private label.',
     recommendation:
-      'Invest in private label for your core product line. The higher MOQ is worth the investment in brand equity. White label accessories and consumables. Aquafarer offers both options with a seamless upgrade path from white label to private label.',
+      'Invest in private label for your core product line. The higher MOQ is worth the investment in brand equity. White label accessories and consumables. Paddle Board Overstock offers both options with a seamless upgrade path from white label to private label.',
     faq: [
       {
         q: 'What is the cost difference between private label and white label?',
@@ -358,7 +358,7 @@ export const businessArticles: ContentV2Record[] = [
       },
       {
         q: 'Can I switch from white label to private label later?',
-        a: 'Yes. Many Aquafarer clients start with white label to validate demand, then transition to private label for their best-selling products. The factory tooling can often be adapted from white label specifications.',
+        a: 'Yes. Many Paddle Board Overstock clients start with white label to validate demand, then transition to private label for their best-selling products. The factory tooling can often be adapted from white label specifications.',
       },
     ],
     relatedGuides: ['start-water-sports-brand-private-label', 'cost-to-start-sup-rental-business'],
@@ -380,9 +380,9 @@ export const businessArticles: ContentV2Record[] = [
     explanation:
       'Commercial water sports equipment fails prematurely for four reasons: UV damage (PVC degrades in direct sunlight), salt corrosion (valves and hardware), impact damage (dragging, dropping, improper handling), and improper storage (folded while wet, stored under weight). A structured maintenance program addresses all four with minimal time investment.',
     solution:
-      'Implement the Aquafarer Commercial Maintenance Program: (1) Daily rinse and visual inspection (5 min per board); (2) Weekly pressure check and valve cleaning (10 min per board); (3) Monthly seam inspection and minor repairs (15 min per board); (4) Seasonal deep clean, UV protectant treatment, and full inspection. Train one staff member as the equipment manager.',
+      'Implement the Paddle Board Overstock Commercial Maintenance Program: (1) Daily rinse and visual inspection (5 min per board); (2) Weekly pressure check and valve cleaning (10 min per board); (3) Monthly seam inspection and minor repairs (15 min per board); (4) Seasonal deep clean, UV protectant treatment, and full inspection. Train one staff member as the equipment manager.',
     recommendation:
-      'The Aquafarer Fleet Management Program includes maintenance guides, spare parts kits, and remote support. Assign one staff member to own equipment maintenance and follow the daily-weekly-seasonal schedule. Track equipment age and usage to plan replacements proactively.',
+      'The Paddle Board Overstock Fleet Management Program includes maintenance guides, spare parts kits, and remote support. Assign one staff member to own equipment maintenance and follow the daily-weekly-seasonal schedule. Track equipment age and usage to plan replacements proactively.',
     faq: [
       {
         q: 'How do I store inflatable boards in the off-season?',
@@ -394,7 +394,7 @@ export const businessArticles: ContentV2Record[] = [
       },
       {
         q: 'How do I train staff on maintenance?',
-        a: 'Create a simple checklist for each maintenance tier. Aquafarer provides video training guides for all commercial clients. Designate one lead staff member as equipment manager and rotate responsibility weekly.',
+        a: 'Create a simple checklist for each maintenance tier. Paddle Board Overstock provides video training guides for all commercial clients. Designate one lead staff member as equipment manager and rotate responsibility weekly.',
       },
     ],
     relatedGuides: ['inflatable-boat-fleet-management', 'building-resort-water-sports-center'],

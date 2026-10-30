@@ -12,7 +12,7 @@ export const standalonePages: StandalonePage[] = [
     slug: 'engineering-perfection',
     title: 'Engineering Perfection',
     description:
-      "Aquafarer's engineering philosophy: precision manufacturing, premium material selection, rigorous quality control, and segment-specific design for whitewater, fishing, dinghies, and recreational inflatable boats.",
+      "Paddle Board Overstock's engineering philosophy: precision manufacturing, premium material selection, rigorous quality control, and segment-specific design for whitewater, fishing, dinghies, and recreational inflatable boats.",
     pageType: 'about',
     sections: [
       {
@@ -25,7 +25,7 @@ export const standalonePages: StandalonePage[] = [
       },
       {
         heading: 'Craftsmanship & Manufacturing Excellence',
-        body: 'Aquafarer employs highly skilled technicians. Our production facility is equipped with state-of-the-art CNC cutting machines and thermo-welding equipment.',
+        body: 'Paddle Board Overstock employs highly skilled technicians. Our production facility is equipped with state-of-the-art CNC cutting machines and thermo-welding equipment.',
       },
       {
         heading: 'Rigorous Quality Control & Testing',
@@ -46,7 +46,7 @@ export const standalonePages: StandalonePage[] = [
     slug: 'oem-odm-manufacturer',
     title: 'Inflatable SUP & Kayak OEM/ODM Manufacturer',
     description:
-      'Aquafarer is a premier OEM/ODM manufacturer of inflatable SUP boards, kayaks, RIBs, and dinghies. CE-certified factory. Drop-stitch core lamination, custom mold design, private label. 12,000 m² facility in Qingdao, China.',
+      'Paddle Board Overstock is a premier OEM/ODM manufacturer of inflatable SUP boards, kayaks, RIBs, and dinghies. CE-certified factory. Drop-stitch core lamination, custom mold design, private label. 12,000 m² facility in Qingdao, China.',
     pageType: 'capability',
     sections: [
       {
@@ -87,7 +87,7 @@ export const standalonePages: StandalonePage[] = [
     slug: 'design-powerhouse',
     title: 'Design & Innovation',
     description:
-      'Aquafarer is more than a factory — we are a design-driven manufacturer. In-house R&D, hydrodynamic simulation, custom ODM solutions, and advanced material engineering for global B2B partners.',
+      'Paddle Board Overstock is more than a factory — we are a design-driven manufacturer. In-house R&D, hydrodynamic simulation, custom ODM solutions, and advanced material engineering for global B2B partners.',
     pageType: 'capability',
     sections: [
       {

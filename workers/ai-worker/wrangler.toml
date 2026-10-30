@@ -1,22 +1,22 @@
-name = "aquafarer-ai"
+name = "paddleboardoverstock-ai"
 main = "index.ts"
 compatibility_date = "2026-07-08"
 compatibility_flags = ["nodejs_compat"]
 
 routes = [
-  { pattern = "aquafarer.com/api/chat*", zone_name = "aquafarer.com" },
-  { pattern = "aquafarer.com/api/ask*", zone_name = "aquafarer.com" },
-  { pattern = "aquafarer.com/api/search*", zone_name = "aquafarer.com" },
-  { pattern = "aquafarer.com/api/embed*", zone_name = "aquafarer.com" },
-  { pattern = "aquafarer.com/api/reindex*", zone_name = "aquafarer.com" },
-  { pattern = "aquafarer.com/api/ai/*", zone_name = "aquafarer.com" },
+  { pattern = "paddleboardoverstock.com/api/chat*", zone_name = "paddleboardoverstock.com" },
+  { pattern = "paddleboardoverstock.com/api/ask*", zone_name = "paddleboardoverstock.com" },
+  { pattern = "paddleboardoverstock.com/api/search*", zone_name = "paddleboardoverstock.com" },
+  { pattern = "paddleboardoverstock.com/api/embed*", zone_name = "paddleboardoverstock.com" },
+  { pattern = "paddleboardoverstock.com/api/reindex*", zone_name = "paddleboardoverstock.com" },
+  { pattern = "paddleboardoverstock.com/api/ai/*", zone_name = "paddleboardoverstock.com" },
 ]
 
 [triggers]
 crons = ["0 3 * * *"]
 
 [vars]
-SITE_ORIGIN = "https://aquafarer.com"
+SITE_ORIGIN = "https://paddleboardoverstock.com"
 
 [ai]
 binding = "AI"
@@ -27,4 +27,4 @@ index_name = "ai-index-v2"
 
 [[r2_buckets]]
 binding = "DATA_BUCKET"
-bucket_name = "aquafarer-data"
+bucket_name = "paddleboardoverstock-data"

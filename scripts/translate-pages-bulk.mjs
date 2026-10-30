@@ -132,7 +132,7 @@ function shouldTranslate(key, value) {
 const PROTECT_PATTERNS = [
   /<\/?[a-zA-Z][^>]*>/g,
   /https?:\/\/[^\s<>"']+/g,
-  /\bAquafarer\b/g,
+  /\bPaddle Board Overstock\b/g,
   /\bRIBs?\b/g,
   /\bCE\b/g,
   /\bSOLAS\b/g,

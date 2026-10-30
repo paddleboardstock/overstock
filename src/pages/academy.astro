@@ -17,7 +17,7 @@ const kcSubtitle =
   'Expert knowledge and buying guides for marine professionals, fleet operators, and water sports enthusiasts.';
 
 const metadata = {
-  title: 'Aquafarer Marine Academy — Professional Knowledge Platform',
+  title: 'Paddle Board Overstock Marine Academy — Professional Knowledge Platform',
   description:
     'Knowledge platform for inflatable boats, RIBs, diving equipment, yacht tenders, rescue watercraft, and commercial marine solutions. Guides and buying advice from marine engineering experts.',
 };
@@ -132,9 +132,9 @@ const crumbs = [{ name: 'Home', href: '/' }, { name: 'Marine Academy' }];
     set:html={JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'CollectionPage',
-      name: 'Aquafarer Academy — Learning Center',
+      name: 'Paddle Board Overstock Academy — Learning Center',
       description: 'Guides and tutorials for every skill level from SUP basics to advanced rescue techniques.',
-      url: 'https://aquafarer.com/academy',
+      url: 'https://paddleboardoverstock.com/academy',
       mainEntity: {
         '@type': 'ItemList',
         itemListElement: categories.flatMap((cat: any) =>
@@ -145,7 +145,7 @@ const crumbs = [{ name: 'Home', href: '/' }, { name: 'Marine Academy' }];
               '@type': 'Article',
               headline: g.title,
               description: g.desc,
-              url: `https://aquafarer.com${g.href}`,
+              url: `https://paddleboardoverstock.com${g.href}`,
             },
           }))
         ),

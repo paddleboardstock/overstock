@@ -12,7 +12,7 @@ const SRC_RE = /\bsrc\s*=\s*"([^"]+)"/i;
 /**
  * Post-build pass that injects width/height into <img> tags whose src is a
  * known public/images/ asset (registry built by scripts/generate-image-dimensions.mjs).
- * Remote images (assets.aquafarer.com) and /images/... URLs that callers emit
+ * Remote images (assets.paddleboardoverstock.com) and /images/... URLs that callers emit
  * without explicit dimensions otherwise render without intrinsic size, causing
  * CLS. The registry gives us exact pixel dimensions with zero network cost.
  */

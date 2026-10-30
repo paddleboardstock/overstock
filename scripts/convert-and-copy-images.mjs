@@ -6,8 +6,8 @@ import sharp from 'sharp';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
-const DEST_BASE = path.join(ROOT, 'public', 'images', 'aquafarer', 'products', 'rib');
-const IMAGE_ROOT = 'D:\\AQUAFARER Aluminum Hull RIB boat图片';
+const DEST_BASE = path.join(ROOT, 'public', 'images', 'paddleboardoverstock', 'products', 'rib');
+const IMAGE_ROOT = 'D:\\PADDLE BOARD OVERSTOCK Aluminum Hull RIB boat图片';
 const WEBP_QUALITY = 80;
 const MAX_WIDTH = 2000;
 
@@ -51,7 +51,7 @@ const FOLDER_MAP = {
 
 function toWebpName(_slug, srcName) {
   let base = srcName.replace(/\.[^.]+$/, '');
-  base = base.replace(/^AQUAFARER\s+/i, '');
+  base = base.replace(/^PADDLE BOARD OVERSTOCK\s+/i, '');
   base = base.replace(/^AP(\d+)\s+/i, 'AP$1-');
   base = base.replace(/^DF(\d+)\s+/i, 'DF$1-');
   base = base.replace(/^VR(\d+)\s+/i, 'VR$1-');

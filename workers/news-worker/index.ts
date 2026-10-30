@@ -19,7 +19,7 @@ interface Env {
   SITE?: string;
 }
 
-const SITE = 'https://aquafarer.com';
+const SITE = 'https://paddleboardoverstock.com';
 const POSTS_PER_PAGE = 6;
 
 // ---------- helpers ----------
@@ -129,7 +129,7 @@ ${extraHead}
 <body>
 <div class="wrap">
 <header class="top">
-  <a class="logo" href="${langRoot(lang)}">Aquafarer <span class="dot">News</span></a>
+  <a class="logo" href="${langRoot(lang)}">Paddle Board Overstock <span class="dot">News</span></a>
   <nav>
     <a href="${langPrefix(lang)}/news/">${escapeHtml(NEWS_UI[lang]?.title || 'News')}</a>
     <a href="${langRoot(lang)}contact/">Contact</a>
@@ -138,7 +138,7 @@ ${extraHead}
 </header>
 ${body}
 <footer>
-  <p>© ${new Date().getFullYear()} Aquafarer — Inflatable boats, RIBs, SUP boards & kayaks. <a href="${langRoot(lang)}">${escapeHtml('Visit aquafarer.com')}</a></p>
+  <p>© ${new Date().getFullYear()} Paddle Board Overstock — Inflatable boats, RIBs, SUP boards & kayaks. <a href="${langRoot(lang)}">${escapeHtml('Visit paddleboardoverstock.com')}</a></p>
 </footer>
 </div>
 </body>
@@ -258,7 +258,7 @@ function listPage(lang: string, posts: News[], total: number, page: number, cano
 <ul class="list">${items || '<li class="card"><h3>No posts yet</h3></li>'}</ul>
 <div class="pagination">${prev}${next}</div>`;
 
-  return pageShell(lang, body, `${ui.title} | Aquafarer`, canonical, ui.subtitle || 'News from Aquafarer');
+  return pageShell(lang, body, `${ui.title} | Paddle Board Overstock`, canonical, ui.subtitle || 'News from Paddle Board Overstock');
 }
 
 function postPage(lang: string, post: News, related: News[], canonical: string) {
@@ -284,8 +284,8 @@ function postPage(lang: string, post: News, related: News[], canonical: string) 
     image: post.image,
     datePublished: isoDate(post.publishDate),
     dateModified: isoDate(post.updateDate || post.publishDate),
-    author: post.author ? { '@type': 'Person', name: post.author } : { '@type': 'Organization', name: 'Aquafarer' },
-    publisher: { '@type': 'Organization', name: 'Aquafarer', url: SITE },
+    author: post.author ? { '@type': 'Person', name: post.author } : { '@type': 'Organization', name: 'Paddle Board Overstock' },
+    publisher: { '@type': 'Organization', name: 'Paddle Board Overstock', url: SITE },
     mainEntityOfPage: canonical,
     articleSection: post.category || undefined,
     inLanguage: lang,
@@ -301,7 +301,7 @@ function postPage(lang: string, post: News, related: News[], canonical: string) 
 </article>
 ${relatedHtml}`;
 
-  return pageShell(lang, body, `${post.title} | Aquafarer`, canonical, post.excerpt || '', jsonLd);
+  return pageShell(lang, body, `${post.title} | Paddle Board Overstock`, canonical, post.excerpt || '', jsonLd);
 }
 
 function fmtDate(d: Date, lang: string): string {
@@ -326,9 +326,9 @@ function rssXml(lang: string, posts: News[]): string {
   return `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-  <title>${escapeHtml(NEWS_UI[lang]?.title || 'News')} | Aquafarer</title>
+  <title>${escapeHtml(NEWS_UI[lang]?.title || 'News')} | Paddle Board Overstock</title>
   <link>${site}</link>
-  <description>Latest news from Aquafarer</description>
+  <description>Latest news from Paddle Board Overstock</description>
   <atom:link href="${publicUrl(langPrefix(lang) + '/rss.xml')}" rel="self" type="application/rss+xml"/>
 ${items}
 </channel>

@@ -1,5 +1,5 @@
 import * as yaml from 'js-yaml';
-import { desc, asc, eq, count, and, or, sql, gt } from 'drizzle-orm';
+import { desc, asc, eq, count, and, or, sql, gt, inArray } from 'drizzle-orm';
 import { createDb, type DB } from '../shared/client';
 import { createAuth, type AuthEnv } from '../shared/auth';
 import { assertAdmin, type AdminUser } from '../shared/assert-admin';
@@ -8,10 +8,26 @@ import {
   session as sessionTable,
   inquiry,
   newPost,
+  order,
+  orderItem,
+  inventory,
+  inventoryMovement,
+  shipment,
+  discount,
+  adminAuditLog,
   INQUIRY_STATUSES,
+  ORDER_STATUSES,
+  SHIPMENT_STATUSES,
   type InquiryStatus,
+  type OrderStatus,
+  type ShipmentStatus,
 } from '../shared/schema';
 import type { News } from '../shared/schema';
+import {
+  releaseOrderReservations,
+  markOrderPaidByIdAndFulfill,
+  recordMovement,
+} from '../shared/inventory';
 import { applyRuleToText, scanFile, shouldScanPath, validateRule, type RefactorRule } from './link-refactor';
 
 interface Env extends AuthEnv {
@@ -25,7 +41,7 @@ interface Env extends AuthEnv {
 }
 
 const CORS = {
-  'Access-Control-Allow-Origin': 'https://aquafarer.com',
+  'Access-Control-Allow-Origin': 'https://paddleboardoverstock.com',
   'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
   'Access-Control-Allow-Headers': 'Content-Type, Authorization',
 };
@@ -90,7 +106,7 @@ function readCookie(request: Request, name: string): string | null {
 function isInternalRef(ref: string): boolean {
   if (!ref) return false;
   if (ref.startsWith('/') && !ref.startsWith('//')) return true;
-  return /^https?:\/\/(www\.)?aquafarer\.com\//i.test(ref);
+  return /^https?:\/\/(www\.)?paddleboardoverstock\.com\//i.test(ref);
 }
 
 async function handleAdmin(request: Request, env: Env, path: string, admin: AdminUser, db: DB): Promise<Response> {
@@ -144,6 +160,266 @@ async function handleAdmin(request: Request, env: Env, path: string, admin: Admi
     return await exportInquiriesCsv(db);
   }
 
+  // ---- Shop orders (Stripe + PayPal) ----
+  if (path === '/api/admin/orders' && request.method === 'GET') {
+    const status = urlParam(request, 'status') || undefined;
+    return json(await listOrders(db, status));
+  }
+
+  if (path === '/api/admin/orders.csv' && request.method === 'GET') {
+    return await exportOrdersCsv(db);
+  }
+
+  // ---- Shop admin: order status, shipments, inventory, discounts, audit ----
+
+  if (path === '/api/admin/orders/status' && request.method === 'POST') {
+    const { id, status } = (await request.json()) as { id?: string; status?: string };
+    if (!id || !ORDER_STATUSES.includes(status as OrderStatus)) {
+      return json({ error: 'Invalid status' }, 400);
+    }
+    const rows = await db.select({ id: order.id, status: order.status }).from(order).where(eq(order.id, id)).limit(1);
+    const existing = rows[0];
+    if (!existing) return json({ error: 'Order not found' }, 404);
+    const s = status as OrderStatus;
+    if (s === 'paid') {
+      const flipped = await markOrderPaidByIdAndFulfill(env.DB, id);
+      if (!flipped && existing.status === 'paid') {
+        return json({ error: 'Order is already paid' }, 409);
+      }
+    } else {
+      // Cancelling a pending order returns its reserved stock to the pool.
+      if (s === 'cancelled' && existing.status === 'pending') {
+        await releaseOrderReservations(env.DB, id, 'release');
+      }
+      await db.update(order).set({ status: s, updatedAt: new Date() }).where(eq(order.id, id));
+    }
+    await writeAudit(db, admin, 'order.status_update', 'order', id, { from: existing.status, to: s });
+    return json({ success: true });
+  }
+
+  if (path === '/api/admin/orders/shipment' && request.method === 'POST') {
+    const body = (await request.json()) as {
+      orderId?: string;
+      carrier?: string;
+      trackingNumber?: string;
+      trackingUrl?: string;
+      status?: string;
+    };
+    const orderId = String(body.orderId || '').trim();
+    if (!orderId) return json({ error: 'orderId is required' }, 400);
+    const rows = await db.select({ id: order.id }).from(order).where(eq(order.id, orderId)).limit(1);
+    if (!rows[0]) return json({ error: 'Order not found' }, 404);
+    const carrier = String(body.carrier || '').trim().slice(0, 100);
+    const trackingNumber = String(body.trackingNumber || '').trim().slice(0, 100);
+    const trackingUrl = String(body.trackingUrl || '').trim().slice(0, 500);
+    if (trackingUrl && !/^https?:\/\//i.test(trackingUrl)) {
+      return json({ error: 'trackingUrl must be an absolute http(s) URL' }, 400);
+    }
+    const status = String(body.status || 'pending');
+    if (!SHIPMENT_STATUSES.includes(status as ShipmentStatus)) {
+      return json({ error: 'Invalid shipment status' }, 400);
+    }
+    const existing = await db.select().from(shipment).where(eq(shipment.orderId, orderId)).limit(1);
+    const now = new Date();
+    const shippedAt = status === 'pending' ? (existing[0]?.shippedAt ?? null) : (existing[0]?.shippedAt ?? now);
+    if (existing[0]) {
+      await db
+        .update(shipment)
+        .set({ carrier, trackingNumber, trackingUrl, status, shippedAt, updatedAt: now })
+        .where(eq(shipment.orderId, orderId));
+    } else {
+      await db.insert(shipment).values({
+        id: crypto.randomUUID(),
+        orderId,
+        carrier,
+        trackingNumber,
+        trackingUrl,
+        status,
+        shippedAt,
+        createdAt: now,
+        updatedAt: now,
+      });
+    }
+    await writeAudit(db, admin, 'order.shipment_update', 'order', orderId, {
+      carrier,
+      trackingNumber,
+      status,
+    });
+    return json({ success: true });
+  }
+
+  if (path === '/api/admin/inventory' && request.method === 'GET') {
+    const rows = await db.select().from(inventory).orderBy(asc(inventory.slug));
+    const movements = await db
+      .select()
+      .from(inventoryMovement)
+      .orderBy(desc(inventoryMovement.createdAt))
+      .limit(100);
+    return json({ rows, movements });
+  }
+
+  if (path === '/api/admin/inventory/adjust' && request.method === 'POST') {
+    const body = (await request.json()) as { slug?: string; delta?: number; onHand?: number; reason?: string };
+    const slug = String(body.slug || '').trim();
+    if (!slug) return json({ error: 'slug is required' }, 400);
+    const rows = await db.select().from(inventory).where(eq(inventory.slug, slug)).limit(1);
+    const inv = rows[0];
+    if (!inv) return json({ error: 'Unknown inventory slug' }, 404);
+    const reason = String(body.reason || 'adjust').trim().slice(0, 200) || 'adjust';
+    let target: number;
+    if (Number.isInteger(body.onHand)) target = Math.max(0, Number(body.onHand));
+    else if (Number.isInteger(body.delta)) target = Math.max(0, inv.onHand + Number(body.delta));
+    else return json({ error: 'Provide either delta or onHand as an integer' }, 400);
+    if (target === inv.onHand) return json({ success: true, onHand: target, changed: 0 });
+    // Optimistic concurrency: only apply when on_hand did not move meanwhile.
+    const res = await env.DB
+      .prepare(`UPDATE inventory SET on_hand = ?2, updated_at = ?3 WHERE slug = ?1 AND on_hand = ?4`)
+      .bind(slug, target, Date.now(), inv.onHand)
+      .run();
+    if (res.meta.changes !== 1) {
+      return json({ error: 'Inventory changed concurrently — please retry' }, 409);
+    }
+    await recordMovement(env.DB, {
+      slug,
+      onHandDelta: target - inv.onHand,
+      reservedDelta: 0,
+      reason,
+      orderId: null,
+    });
+    await writeAudit(db, admin, 'inventory.adjust', 'inventory', slug, {
+      from: inv.onHand,
+      to: target,
+      reason,
+    });
+    return json({ success: true, onHand: target, changed: target - inv.onHand });
+  }
+
+  if (path === '/api/admin/discounts' && request.method === 'GET') {
+    const rows = await db.select().from(discount).orderBy(desc(discount.createdAt));
+    return json({ rows });
+  }
+
+  if (path === '/api/admin/discounts' && request.method === 'POST') {
+    const body = (await request.json()) as Record<string, unknown>;
+    const code = String(body.code || '').trim().toUpperCase().slice(0, 64);
+    if (!/^[A-Z0-9_-]{2,64}$/.test(code)) {
+      return json({ error: 'Code must be 2-64 characters (A-Z, 0-9, - or _)' }, 400);
+    }
+    const kind = body.kind === 'fixed' ? 'fixed' : 'percent';
+    const value = Number(body.value);
+    if (!Number.isInteger(value) || value <= 0) {
+      return json({ error: 'value must be a positive integer (percent or cents)' }, 400);
+    }
+    if (kind === 'percent' && value > 100) {
+      return json({ error: 'A percent discount cannot exceed 100' }, 400);
+    }
+    const active = body.active !== false;
+    const usageLimit =
+      Number.isInteger(body.usageLimit) && Number(body.usageLimit) > 0 ? Number(body.usageLimit) : null;
+    const startsAtMs = parseEpochMs(body.startsAt);
+    const expiresAtMs = parseEpochMs(body.expiresAt);
+    if (startsAtMs !== null && expiresAtMs !== null && expiresAtMs <= startsAtMs) {
+      return json({ error: 'expiresAt must be after startsAt' }, 400);
+    }
+    try {
+      const id = crypto.randomUUID();
+      await db.insert(discount).values({
+        id,
+        code,
+        kind,
+        value,
+        active,
+        usageLimit,
+        startsAt: startsAtMs === null ? null : new Date(startsAtMs),
+        expiresAt: expiresAtMs === null ? null : new Date(expiresAtMs),
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      });
+      await writeAudit(db, admin, 'discount.create', 'discount', id, { code, kind, value });
+      return json({ success: true, id }, 201);
+    } catch (e) {
+      if (String(e).includes('UNIQUE')) {
+        return json({ error: `Discount code "${code}" already exists` }, 409);
+      }
+      throw e;
+    }
+  }
+
+  if (path === '/api/admin/discounts/update' && request.method === 'POST') {
+    const body = (await request.json()) as Record<string, unknown>;
+    const id = String(body.id || '').trim();
+    if (!id) return json({ error: 'id is required' }, 400);
+    const rows = await db.select().from(discount).where(eq(discount.id, id)).limit(1);
+    const existing = rows[0];
+    if (!existing) return json({ error: 'Discount not found' }, 404);
+    const patch: Partial<typeof discount.$inferInsert> = { updatedAt: new Date() };
+    if (body.code !== undefined) {
+      const code = String(body.code).trim().toUpperCase().slice(0, 64);
+      if (!/^[A-Z0-9_-]{2,64}$/.test(code)) return json({ error: 'Invalid code' }, 400);
+      patch.code = code;
+    }
+    if (body.kind !== undefined) patch.kind = body.kind === 'fixed' ? 'fixed' : 'percent';
+    if (body.value !== undefined) {
+      const value = Number(body.value);
+      if (!Number.isInteger(value) || value <= 0) {
+        return json({ error: 'value must be a positive integer' }, 400);
+      }
+      const kind = (patch.kind as string | undefined) || existing.kind;
+      if (kind === 'percent' && value > 100) {
+        return json({ error: 'A percent discount cannot exceed 100' }, 400);
+      }
+      patch.value = value;
+    }
+    if (body.active !== undefined) patch.active = body.active !== false;
+    if (body.usageLimit !== undefined) {
+      patch.usageLimit =
+        Number.isInteger(body.usageLimit) && Number(body.usageLimit) > 0 ? Number(body.usageLimit) : null;
+    }
+    if (body.startsAt !== undefined) {
+      const t = parseEpochMs(body.startsAt);
+      patch.startsAt = t === null ? null : new Date(t);
+    }
+    if (body.expiresAt !== undefined) {
+      const t = parseEpochMs(body.expiresAt);
+      patch.expiresAt = t === null ? null : new Date(t);
+    }
+    try {
+      await db.update(discount).set(patch).where(eq(discount.id, id));
+    } catch (e) {
+      if (String(e).includes('UNIQUE')) {
+        return json({ error: 'Discount code already in use' }, 409);
+      }
+      throw e;
+    }
+    await writeAudit(db, admin, 'discount.update', 'discount', id, {
+      fields: Object.keys(patch).filter((k) => k !== 'updatedAt'),
+    });
+    return json({ success: true });
+  }
+
+  if (path === '/api/admin/discounts/delete' && request.method === 'POST') {
+    const { id } = (await request.json()) as { id?: string };
+    if (!id) return json({ error: 'id is required' }, 400);
+    await db.delete(discount).where(eq(discount.id, id));
+    await writeAudit(db, admin, 'discount.delete', 'discount', id, {});
+    return json({ success: true });
+  }
+
+  if (path === '/api/admin/audit-logs' && request.method === 'GET') {
+    const page = Math.max(0, Number(urlParam(request, 'page') || 0) || 0);
+    const pageSize = Math.min(200, Math.max(1, Number(urlParam(request, 'pageSize') || 50) || 50));
+    const [rows, [{ c: total }]] = await Promise.all([
+      db
+        .select()
+        .from(adminAuditLog)
+        .orderBy(desc(adminAuditLog.createdAt))
+        .limit(pageSize)
+        .offset(page * pageSize),
+      db.select({ c: count() }).from(adminAuditLog),
+    ]);
+    return json({ rows, total: Number(total), page, pageSize });
+  }
+
   // Stream a submitted inquiry attachment from R2. R2 objects are not public —
   // this is the read side for admins (the /api/admin/* prefix already gates it).
   if (path === '/api/admin/inquiries/file' && request.method === 'GET') {
@@ -193,7 +469,7 @@ async function handleAdmin(request: Request, env: Env, path: string, admin: Admi
   const token = cookieToken || env.GITHUB_TOKEN || '';
   if (!token) return json({ error: 'GitHub token not configured' }, 500);
 
-  const owner = env.GITHUB_OWNER || 'aquafarer';
+  const owner = env.GITHUB_OWNER || 'paddleboardoverstock';
   const repo = env.GITHUB_REPO || 'official';
   const api = `https://api.github.com/repos/${owner}/${repo}`;
 
@@ -210,7 +486,7 @@ async function handleAdmin(request: Request, env: Env, path: string, admin: Admi
     const ensured = await ensureBranch(token, owner, repo, branch);
     if (!ensured.ok) return json({ error: ensured.error || 'Branch error' }, 500);
 
-    const ghHeaders = { Authorization: `Bearer ${token}`, 'User-Agent': 'aquafarer-admin' };
+    const ghHeaders = { Authorization: `Bearer ${token}`, 'User-Agent': 'paddleboardoverstock-admin' };
 
     const pageFile = `src/data/pages/${s}.yaml`;
     const pageYaml = `# ${safeLabel}\n\nhero:\n  title: ${safeLabel}\n  subtitle: ''\n  image: ''\n`;
@@ -276,7 +552,7 @@ async function handleAdmin(request: Request, env: Env, path: string, admin: Admi
     const ensured = await ensureBranch(token, owner, repo, branch);
     if (!ensured.ok) return json({ error: ensured.error || 'Branch error' }, 500);
 
-    const ghHeaders = { Authorization: `Bearer ${token}`, 'User-Agent': 'aquafarer-admin' };
+    const ghHeaders = { Authorization: `Bearer ${token}`, 'User-Agent': 'paddleboardoverstock-admin' };
     const treeRes = await fetch(`${api}/git/trees/${branch}?recursive=1`, { headers: ghHeaders });
     if (!treeRes.ok) return json({ error: 'Failed to fetch repo tree' }, treeRes.status);
     const tree = (await treeRes.json()) as any;
@@ -321,7 +597,7 @@ async function handleAdmin(request: Request, env: Env, path: string, admin: Admi
     const ensured = await ensureBranch(token, owner, repo, branch);
     if (!ensured.ok) return json({ error: ensured.error || 'Branch error' }, 500);
 
-    const ghHeaders = { Authorization: `Bearer ${token}`, 'User-Agent': 'aquafarer-admin' };
+    const ghHeaders = { Authorization: `Bearer ${token}`, 'User-Agent': 'paddleboardoverstock-admin' };
     const results: { path: string; ok: boolean; error?: string }[] = [];
 
     for (const change of changes) {
@@ -377,7 +653,7 @@ async function handleAdmin(request: Request, env: Env, path: string, admin: Admi
     const ensured = await ensureBranch(token, owner, repo, branch);
     if (!ensured.ok) return json({ error: ensured.error || 'Branch error' }, 500);
 
-    const ghHeaders = { Authorization: `Bearer ${token}`, 'User-Agent': 'aquafarer-admin' };
+    const ghHeaders = { Authorization: `Bearer ${token}`, 'User-Agent': 'paddleboardoverstock-admin' };
     const treeRes = await fetch(`${api}/git/trees/${branch}?recursive=1`, { headers: ghHeaders });
     if (!treeRes.ok) return json({ error: 'Failed to fetch repo tree' }, treeRes.status);
     const tree = (await treeRes.json()) as any;
@@ -459,7 +735,7 @@ async function handleAdmin(request: Request, env: Env, path: string, admin: Admi
   if (path === '/api/admin/list' && request.method === 'GET') {
     const dir = urlParam(request, 'dir') || 'src/content/news';
     const res = await fetch(`${api}/contents/${dir}`, {
-      headers: { Authorization: `Bearer ${token}`, 'User-Agent': 'aquafarer-admin' },
+      headers: { Authorization: `Bearer ${token}`, 'User-Agent': 'paddleboardoverstock-admin' },
     });
     const data = await res.json();
     return json(data);
@@ -471,7 +747,7 @@ async function handleAdmin(request: Request, env: Env, path: string, admin: Admi
     const format = urlParam(request, 'format');
     const readUrl = `${api}/contents/${filePath}${branch !== 'main' ? `?ref=${branch}` : ''}`;
     const res = await fetch(readUrl, {
-      headers: { Authorization: `Bearer ${token}`, 'User-Agent': 'aquafarer-admin' },
+      headers: { Authorization: `Bearer ${token}`, 'User-Agent': 'paddleboardoverstock-admin' },
     });
     const data = (await res.json()) as any;
 
@@ -539,7 +815,7 @@ async function handleAdmin(request: Request, env: Env, path: string, admin: Admi
       method: 'PUT',
       headers: {
         Authorization: `Bearer ${token}`,
-        'User-Agent': 'aquafarer-admin',
+        'User-Agent': 'paddleboardoverstock-admin',
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
@@ -568,7 +844,7 @@ async function handleAdmin(request: Request, env: Env, path: string, admin: Admi
       method: 'PUT',
       headers: {
         Authorization: `Bearer ${token}`,
-        'User-Agent': 'aquafarer-admin',
+        'User-Agent': 'paddleboardoverstock-admin',
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
@@ -591,7 +867,7 @@ async function handleAdmin(request: Request, env: Env, path: string, admin: Admi
       method: 'DELETE',
       headers: {
         Authorization: `Bearer ${token}`,
-        'User-Agent': 'aquafarer-admin',
+        'User-Agent': 'paddleboardoverstock-admin',
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({ message: message || 'Delete via admin', sha, branch: targetBranch }),
@@ -604,7 +880,7 @@ async function handleAdmin(request: Request, env: Env, path: string, admin: Admi
       method: 'POST',
       headers: {
         Authorization: `Bearer ${token}`,
-        'User-Agent': 'aquafarer-admin',
+        'User-Agent': 'paddleboardoverstock-admin',
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({ base: 'main', head: 'draft', commit_message: 'Publish drafts to production' }),
@@ -766,6 +1042,155 @@ async function exportInquiriesCsv(db: DB) {
     'Cache-Control': 'private, no-store',
   });
   return new Response(csv, { status: 200, headers: headersRes });
+}
+
+// ---- Shop order helpers (Stripe + PayPal orders) ----
+
+const ORDER_ITEM_LIMIT = 200;
+
+/** Every admin mutation lands in admin_audit_logs (who/what/when). */
+async function writeAudit(
+  db: DB,
+  admin: AdminUser,
+  action: string,
+  targetType: string,
+  targetId: string,
+  metadata: Record<string, unknown> = {}
+): Promise<void> {
+  await db.insert(adminAuditLog).values({
+    id: crypto.randomUUID(),
+    adminId: admin.id,
+    adminEmail: admin.email,
+    action,
+    targetType,
+    targetId,
+    metadata: JSON.stringify(metadata),
+    createdAt: new Date(),
+  });
+}
+
+/** Accept an epoch-ms number or an ISO string; null/'' clears the value. */
+function parseEpochMs(v: unknown): number | null {
+  if (v === null || v === undefined || v === '') return null;
+  if (typeof v === 'number' && Number.isFinite(v)) return Math.round(v);
+  if (typeof v === 'string') {
+    const t = Date.parse(v);
+    if (!Number.isNaN(t)) return t;
+  }
+  return null;
+}
+
+async function listOrders(db: DB, status?: string) {
+  const where =
+    status && ORDER_STATUSES.includes(status as OrderStatus) ? eq(order.status, status as OrderStatus) : undefined;
+  const rows = await db
+    .select()
+    .from(order)
+    .where(where)
+    .orderBy(desc(order.createdAt))
+    .limit(ORDER_ITEM_LIMIT);
+  const orderIds = rows.map((r) => r.id);
+  const items = orderIds.length
+    ? await db
+        .select()
+        .from(orderItem)
+        .where(inArray(orderItem.orderId, orderIds))
+    : [];
+  const shipments = orderIds.length
+    ? await db.select().from(shipment).where(inArray(shipment.orderId, orderIds))
+    : [];
+  const itemsByOrder = new Map<string, typeof items>();
+  for (const item of items) {
+    const list = itemsByOrder.get(item.orderId) || [];
+    list.push(item);
+    itemsByOrder.set(item.orderId, list);
+  }
+  const shipmentByOrder = new Map(shipments.map((s) => [s.orderId, s]));
+  const total = rows.filter((r) => r.status === 'paid').reduce((sum, r) => sum + r.total, 0);
+  return {
+    rows: rows.map((r) => ({
+      ...r,
+      items: itemsByOrder.get(r.id) || [],
+      shipment: shipmentByOrder.get(r.id) || null,
+    })),
+    paidRevenueCents: total,
+    status: status || 'all',
+  };
+}
+
+async function exportOrdersCsv(db: DB) {
+  const rows = await db.select().from(order).orderBy(desc(order.createdAt)).limit(5000);
+  const orderIds = rows.map((r) => r.id);
+  const items = orderIds.length
+    ? await db
+        .select()
+        .from(orderItem)
+        .where(inArray(orderItem.orderId, orderIds))
+    : [];
+  const itemsByOrder = new Map<string, typeof items>();
+  for (const item of items) {
+    const list = itemsByOrder.get(item.orderId) || [];
+    list.push(item);
+    itemsByOrder.set(item.orderId, list);
+  }
+  const headers = [
+    'id',
+    'created_at',
+    'paid_at',
+    'provider',
+    'provider_ref',
+    'status',
+    'email',
+    'currency',
+    'subtotal_cents',
+    'shipping_cents',
+    'total_cents',
+    'shipping_name',
+    'shipping_address',
+    'shipping_city',
+    'shipping_postal',
+    'shipping_country',
+    'items',
+  ];
+  const esc = (v: unknown) => {
+    const s = String(v ?? '');
+    const guarded = /^[=+\-@\t\r]/.test(s) ? `'${s}` : s;
+    return /[",\n]/.test(guarded) ? `"${guarded.replace(/"/g, '""')}"` : guarded;
+  };
+  const lines = rows.map((r) =>
+    [
+      r.id,
+      r.createdAt,
+      r.paidAt,
+      r.provider,
+      r.providerRef,
+      r.status,
+      r.email,
+      r.currency,
+      r.subtotal,
+      r.shippingCost,
+      r.total,
+      r.shippingName,
+      r.shippingAddress,
+      r.shippingCity,
+      r.shippingPostal,
+      r.shippingCountry,
+      (itemsByOrder.get(r.id) || [])
+        .map((i) => `${i.title} (${i.slug}) x${i.qty} @ ${i.unitPrice}c`)
+        .join('; '),
+    ]
+      .map(esc)
+      .join(',')
+  );
+  const csv = '\ufeff' + headers.join(',') + '\n' + lines.join('\n');
+  return new Response(csv, {
+    status: 200,
+    headers: {
+      'Content-Type': 'text/csv; charset=utf-8',
+      'Content-Disposition': `attachment; filename="orders-${new Date().toISOString().slice(0, 10)}.csv"`,
+      'Cache-Control': 'private, no-store',
+    },
+  });
 }
 
 // ---- News DB helpers ----
@@ -957,7 +1382,7 @@ async function ensureBranch(
 ): Promise<{ ok: boolean; error?: string }> {
   if (branch === 'main') return { ok: true };
   const base = `https://api.github.com/repos/${owner}/${repo}`;
-  const headers = { Authorization: `Bearer ${token}`, 'User-Agent': 'aquafarer-admin' };
+  const headers = { Authorization: `Bearer ${token}`, 'User-Agent': 'paddleboardoverstock-admin' };
   const headRes = await fetch(`${base}/branches/${branch}`, { headers });
   if (headRes.ok) return { ok: true };
   if (headRes.status !== 404) {

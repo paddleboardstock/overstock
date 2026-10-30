@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-AstroWind is a free, open-source website template built with **Astro v7** and **Tailwind CSS v4**, running on **Vite 8 / Rolldown** (Rust compiler). It generates a fully static site optimized for performance, SEO, and accessibility. The site is **Aquafarer** — a 15-language water-sports equipment platform (~4,650 pages), deployed to **Cloudflare Pages + 5 Workers**.
+AstroWind is a free, open-source website template built with **Astro v7** and **Tailwind CSS v4**, running on **Vite 8 / Rolldown** (Rust compiler). It generates a fully static site optimized for performance, SEO, and accessibility. The site is **Paddle Board Overstock** — a 15-language water-sports equipment platform (~4,650 pages), deployed to **Cloudflare Pages + 5 Workers**.
 
 **Stack:** Astro 7.2 | Tailwind CSS 4.3 (`@tailwindcss/vite`) | TypeScript 5.9 | MDX | Sharp | Vite 8
 
@@ -206,12 +206,12 @@ The navigation editor (`src/pages/keystatic/navigation.astro`) shows a static wa
 2. Rejects honeypot submissions (`email_confirm` hidden field): returns HTTP 200 with a fake UUID but writes nothing.
 3. Verifies the **Cloudflare Turnstile** token (`workers/contact-worker/index.ts` `verifyTurnstile`) when `TURNSTILE_SECRET_KEY` is configured.
 4. Enforces **5 submissions per IP per hour** via the global D1 `rate_limit` table (`migrations/0002_rate_limit.sql`) — persistent across worker isolates, not per-isolate memory. Returns HTTP 429 + `Retry-After`.
-5. Inserts the record into D1 `inquiry` (`aquafarer-db`) — no GitHub writes, no deploy churn.
+5. Inserts the record into D1 `inquiry` (`paddleboardoverstock-db`) — no GitHub writes, no deploy churn.
 6. Sends the notification email via **Resend** with `Reply-To` set to the submitter.
 
 Admin reads submissions at `/keystatic/contact-submissions` — the page fetches `/api/admin/inquiries` (admin-worker, D1-backed, cookie-authenticated) and shows the latest 50; full data is exportable via `/api/admin/inquiries.csv`.
 
-**Daily D1 maintenance:** `aquafarer-automation` (cron `0 2 * * *`) runs `src/db-cleanup.ts` — purges expired `session`/`verification` rows (better-auth) and `rate_limit` rows older than 30 days. Manual trigger: `GET /api/automation/cleanup-db?token=<CLEANUP_TOKEN>` (token check only when `CLEANUP_TOKEN` var is set).
+**Daily D1 maintenance:** `paddleboardoverstock-automation` (cron `0 2 * * *`) runs `src/db-cleanup.ts` — purges expired `session`/`verification` rows (better-auth) and `rate_limit` rows older than 30 days. Manual trigger: `GET /api/automation/cleanup-db?token=<CLEANUP_TOKEN>` (token check only when `CLEANUP_TOKEN` var is set).
 
 **Turnstile wiring:** the widget renders when `PUBLIC_TURNSTILE_SITE_KEY` is set (injected by CI into both `deploy.yml` and `ci.yml` builds); the secret is synced to the contact + admin workers via `wrangler secret bulk` in `deploy.yml`.
 
@@ -240,7 +240,7 @@ Admin reads submissions at `/keystatic/contact-submissions` — the page fetches
 | `scripts/fill-missing-page-yamls.mjs` | Create missing page YAMLs from EN copy                                   | —                      |
 | `scripts/check-translations.mjs`      | Verify i18n key alignment across all 14 languages                        | —                      |
 
-**Do NOT translate:** Technical terms (Drop-Stitch/Hypalon/PVC/RIB/SUP/OEM/ISO/FAQ/WhatsApp/Aquafarer) stay as-is in all languages. Cognates matching EN are also preserved.
+**Do NOT translate:** Technical terms (Drop-Stitch/Hypalon/PVC/RIB/SUP/OEM/ISO/FAQ/WhatsApp/Paddle Board Overstock) stay as-is in all languages. Cognates matching EN are also preserved.
 
 ## Iron Rule — Encoding / Garbled Text
 

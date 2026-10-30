@@ -14,22 +14,26 @@ const file = siteFileForLocale('src/data/site/categories.yaml', locale);
 const defaultData: Record<string, { name: string; image: string; gradient: string }> = {
   RIB: {
     name: 'RIB Boats',
-    image: 'https://assets.aquafarer.com/images/aquafarer/categories/aquafarer-rib-boat-category.webp',
+    image:
+      'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/categories/paddleboardoverstock-rib-boat-category.webp',
     gradient: 'from-red-400 to-rose-500',
   },
   INFLATABLE: {
     name: 'Inflatable Boats',
-    image: 'https://assets.aquafarer.com/images/aquafarer/categories/aquafarer-dinghy-category.webp',
+    image:
+      'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/categories/paddleboardoverstock-dinghy-category.webp',
     gradient: 'from-teal-400 to-cyan-500',
   },
   SUP: {
     name: 'SUP Paddle Boards',
-    image: 'https://assets.aquafarer.com/images/aquafarer/products/sup-series/sup-ocean-voyager-1.webp',
+    image:
+      'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-ocean-voyager-1.webp',
     gradient: 'from-sky-400 to-blue-500',
   },
   ACCESSORY: {
     name: 'Accessories',
-    image: 'https://assets.aquafarer.com/images/aquafarer/categories/aquafarer-accessories-category.webp',
+    image:
+      'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/categories/paddleboardoverstock-accessories-category.webp',
     gradient: 'from-violet-400 to-purple-500',
   },
 };
@@ -154,7 +158,7 @@ const keys = Object.keys(defaultData);
                 type="text"
                 name="{key}.image"
                 value={entry.image}
-                placeholder="https://assets.aquafarer.com/images/aquafarer/categories/..."
+                placeholder="https://assets.paddleboardoverstock.com/images/paddleboardoverstock/categories/..."
                 class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
               />
             </div>

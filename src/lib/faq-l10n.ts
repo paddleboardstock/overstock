@@ -15,7 +15,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'ocean-use',
       question: 'Can I use it in the ocean?',
       answer:
-        'Yes. Aquafarer SUP boards are built for ocean, lake, and river use. Our Touring series handles coastal chop, and all boards use marine-grade PVC that resists saltwater corrosion. Rinse with fresh water after ocean use.',
+        'Yes. Paddle Board Overstock SUP boards are built for ocean, lake, and river use. Our Touring series handles coastal chop, and all boards use marine-grade PVC that resists saltwater corrosion. Rinse with fresh water after ocean use.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: ['weather-conditions'],
@@ -33,7 +33,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'travel-sup',
       question: 'Can I travel with an inflatable SUP?',
       answer:
-        'Absolutely. Every Aquafarer board packs into a backpack-sized carrying case designed for convenient travel — check your carrier size and weight policies. At just 18-22 lbs, it is easy to carry to the beach, lake, or through airport terminals.',
+        'Absolutely. Every Paddle Board Overstock board packs into a backpack-sized carrying case designed for convenient travel — check your carrier size and weight policies. At just 18-22 lbs, it is easy to carry to the beach, lake, or through airport terminals.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: [],
@@ -51,7 +51,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'box-contents',
       question: 'What comes in the box?',
       answer:
-        'Every Aquafarer SUP includes the board, a travel backpack, dual-action hand pump, removable fin, coil leash, and repair kit. Some models also include a carbon paddle upgrade option. Inflatable boats include the boat, pump, repair kit, and oars.',
+        'Every Paddle Board Overstock SUP includes the board, a travel backpack, dual-action hand pump, removable fin, coil leash, and repair kit. Some models also include a carbon paddle upgrade option. Inflatable boats include the boat, pump, repair kit, and oars.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -87,7 +87,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'puncture-repair',
       question: 'How do I repair a puncture?',
       answer:
-        'Clean the area, cut a patch with rounded corners, apply PVC adhesive, press firmly, and wait 24 hours before inflating. Aquafarer boards include a repair kit. For detailed instructions, see our inflatable repair guide.',
+        'Clean the area, cut a patch with rounded corners, apply PVC adhesive, press firmly, and wait 24 hours before inflating. Paddle Board Overstock boards include a repair kit. For detailed instructions, see our inflatable repair guide.',
       category: 'maintenance',
       relatedProducts: [],
       relatedGuides: ['inflatable-repair', 'sup-maintenance'],
@@ -121,9 +121,9 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
     },
     {
       id: 'warranty',
-      question: 'What is the Aquafarer warranty?',
+      question: 'What is the Paddle Board Overstock warranty?',
       answer:
-        'All Aquafarer products are backed by a comprehensive manufacturer warranty. Inflatable boat tube fabric, seams, and hull are covered by a 5-year limited warranty; SUP boards and accessories carry a 2-year limited warranty. The warranty covers defects in materials and workmanship under normal use.',
+        'All Paddle Board Overstock products are backed by a comprehensive manufacturer warranty. Inflatable boat tube fabric, seams, and hull are covered by a 5-year limited warranty; SUP boards and accessories carry a 2-year limited warranty. The warranty covers defects in materials and workmanship under normal use.',
       category: 'warranty',
       relatedProducts: [],
       relatedGuides: [],
@@ -186,7 +186,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'material-difference',
       question: 'What is the difference between PVC and Hypalon?',
       answer:
-        'PVC is lighter, more affordable, and easier to repair — ideal for recreational use. Hypalon (CSM) offers superior UV and chemical resistance with a longer lifespan, preferred for commercial and military applications. Aquafarer uses both depending on the product tier.',
+        'PVC is lighter, more affordable, and easier to repair — ideal for recreational use. Hypalon (CSM) offers superior UV and chemical resistance with a longer lifespan, preferred for commercial and military applications. Paddle Board Overstock uses both depending on the product tier.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -195,7 +195,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'sup-width-stability',
       question: 'What SUP width is best for stability?',
       answer:
-        'For beginners, a width of 33–34 inches provides the best balance of stability and paddling ease. Boards narrower than 32 inches feel tippy to new paddlers. The Aquafarer SUP Explorer 11 at 33 inches is ideal for learning.',
+        'For beginners, a width of 33–34 inches provides the best balance of stability and paddling ease. Boards narrower than 32 inches feel tippy to new paddlers. The Paddle Board Overstock SUP Explorer 11 at 33 inches is ideal for learning.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-size-guide', 'paddle-board-size-guide'],
@@ -228,24 +228,24 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       relatedGuides: ['inflatable-boat-buying-guide'],
     },
     {
-      id: 'aquafarer-vs-others',
-      question: 'How does Aquafarer compare to other brands?',
+      id: 'paddleboardoverstock-vs-others',
+      question: 'How does Paddle Board Overstock compare to other brands?',
       answer:
-        'Aquafarer offers the best value in inflatable water sports gear. Compared to Red Paddle Co, Aquafarer delivers 90% of the performance at 60% of the cost. Compared to iRocker, Aquafarer uses higher-grade triple-layer military-grade PVC and higher PSI ratings. Compared to Bluefin, Aquafarer offers superior material specs. For most recreational paddlers, Aquafarer provides the best balance of quality and price.',
+        'Paddle Board Overstock offers the best value in inflatable water sports gear. Compared to Red Paddle Co, Paddle Board Overstock delivers 90% of the performance at 60% of the cost. Compared to iRocker, Paddle Board Overstock uses higher-grade triple-layer military-grade PVC and higher PSI ratings. Compared to Bluefin, Paddle Board Overstock offers superior material specs. For most recreational paddlers, Paddle Board Overstock provides the best balance of quality and price.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: [
         'best-surf-gear-brands-compared',
-        'aquafarer-vs-red-paddle',
-        'aquafarer-vs-irocker',
-        'aquafarer-vs-bluefin',
+        'paddleboardoverstock-vs-red-paddle',
+        'paddleboardoverstock-vs-irocker',
+        'paddleboardoverstock-vs-bluefin',
       ],
     },
     {
       id: 'fishing-sup-setup',
       question: 'Can I fish from a SUP board?',
       answer:
-        'Yes. SUP fishing is increasingly popular because the standing position offers excellent visibility into the water. Choose a board at least 11 feet long and 33–34 inches wide for stability. Add a milk crate with rod holders secured to the deck bungees, a small anchor, and always wear a PFD. The Aquafarer SUP Explorer 11 works well for casual fishing.',
+        'Yes. SUP fishing is increasingly popular because the standing position offers excellent visibility into the water. Choose a board at least 11 feet long and 33–34 inches wide for stability. Add a milk crate with rod holders secured to the deck bungees, a small anchor, and always wear a PFD. The Paddle Board Overstock SUP Explorer 11 works well for casual fishing.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['fishing-sup-guide', 'sup-anchor-guide'],
@@ -263,7 +263,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'airline-travel-sup',
       question: 'What are the airline rules for traveling with an inflatable SUP?',
       answer:
-        "Most airlines accept SUP backpacks as checked baggage if under 23–32 kg. The Aquafarer backpack is approximately 90x40x30 cm and weighs about 15 kg packed. Some airlines may charge oversized baggage fees. Arrive early, wrap fins and pump separately in your carry-on, and label the bag as fragile. Always research your airline's sporting equipment policy before flying.",
+        "Most airlines accept SUP backpacks as checked baggage if under 23–32 kg. The Paddle Board Overstock backpack is approximately 90x40x30 cm and weighs about 15 kg packed. Some airlines may charge oversized baggage fees. Arrive early, wrap fins and pump separately in your carry-on, and label the bag as fragile. Always research your airline's sporting equipment policy before flying.",
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-travel-guide'],
@@ -288,7 +288,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
     },
     {
       id: 'oem-custom-branding',
-      question: 'Can I put my own logo on Aquafarer products?',
+      question: 'Can I put my own logo on Paddle Board Overstock products?',
       answer:
         'Yes. Our OEM service includes custom logo placement, custom color schemes, and custom packaging. We offer pad printing, heat transfer, and embroidery options depending on the product type. Send your artwork and specifications to our sales team for a quote and lead time estimate.',
       category: 'ordering',
@@ -299,7 +299,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'sup-inflate-pressure',
       question: 'What PSI should I inflate my SUP to?',
       answer:
-        "Inflate to the board's rated maximum PSI for best performance — typically 15–18 PSI for quality inflatable SUPs. The Aquafarer SUP Explorer 11 performs best at 15–18 PSI. Under-inflation causes the board to feel soft and track poorly. Over-inflation past the rated max risks damaging the drop-stitch threads. Check the sticker near the valve for your board's specific rating.",
+        "Inflate to the board's rated maximum PSI for best performance — typically 15–18 PSI for quality inflatable SUPs. The Paddle Board Overstock SUP Explorer 11 performs best at 15–18 PSI. Under-inflation causes the board to feel soft and track poorly. Over-inflation past the rated max risks damaging the drop-stitch threads. Check the sticker near the valve for your board's specific rating.",
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-inflatable-sup', 'sup-pump-guide'],
@@ -326,7 +326,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'sup-kayak-conversion',
       question: 'Can I use a SUP board as a kayak?',
       answer:
-        'Yes. Many SUP boards, including the Aquafarer Explorer 11, have D-rings that allow attachment of a kayak seat. Using a SUP with a kayak seat and a single-blade paddle offers a comfortable sitting position for longer trips or fishing. Some brands offer dedicated kayak conversion kits with seats and longer paddles.',
+        'Yes. Many SUP boards, including the Paddle Board Overstock Explorer 11, have D-rings that allow attachment of a kayak seat. Using a SUP with a kayak seat and a single-blade paddle offers a comfortable sitting position for longer trips or fishing. Some brands offer dedicated kayak conversion kits with seats and longer paddles.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['kayak-vs-sup'],
@@ -351,9 +351,9 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
     },
     {
       id: 'company-model',
-      question: 'Is Aquafarer a trading company or a manufacturer?',
+      question: 'Is Paddle Board Overstock a trading company or a manufacturer?',
       answer:
-        'Neither a pure factory nor a trading company — Aquafarer LLC is a brand company with its own manufacturing base. Aquafarer LLC (New Mexico, USA) handles global distribution, contracts, billing, and after-sales, while the Aquafarer Qingdao Manufacturing Hub runs R&D, production, and quality control in our own 12,000 m² facility. No middlemen: every order ships factory-direct.',
+        'Neither a pure factory nor a trading company — Weihai Dongjilian Co., Ltd. is a brand company with its own manufacturing base. Weihai Dongjilian Co., Ltd. (New Mexico, USA) handles global distribution, contracts, billing, and after-sales, while the Paddle Board Overstock Qingdao Manufacturing Hub runs R&D, production, and quality control in our own 12,000 m² facility. No middlemen: every order ships factory-direct.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -362,7 +362,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'us-contract-qingdao-shipping',
       question: 'Why is my contract with a US company when goods ship from Qingdao?',
       answer:
-        'Aquafarer LLC (New Mexico, USA) is the global commercial entity that signs contracts, issues invoices, and provides after-sales support, while the Qingdao Manufacturing Hub produces and dispatches every order FOB Qingdao. This dual-hub structure keeps US-standard contracting and settlement, while preserving factory-direct pricing and full production transparency.',
+        'Weihai Dongjilian Co., Ltd. (New Mexico, USA) is the global commercial entity that signs contracts, issues invoices, and provides after-sales support, while the Qingdao Manufacturing Hub produces and dispatches every order FOB Qingdao. This dual-hub structure keeps US-standard contracting and settlement, while preserving factory-direct pricing and full production transparency.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -382,7 +382,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'ocean-use',
       question: 'Kann ich das Board im Meer benutzen?',
       answer:
-        'Ja. Aquafarer SUP-Boards sind für den Einsatz im Meer, im See und im Fluss gebaut. Unsere Touring-Serie kommt mit Küstenwellen gut zurecht, und alle Boards verwenden PVC in Marinequalität, das gegen Salzwasserkorrosion beständig ist. Spülen Sie das Board nach dem Einsatz im Meer mit Süßwasser ab.',
+        'Ja. Paddle Board Overstock SUP-Boards sind für den Einsatz im Meer, im See und im Fluss gebaut. Unsere Touring-Serie kommt mit Küstenwellen gut zurecht, und alle Boards verwenden PVC in Marinequalität, das gegen Salzwasserkorrosion beständig ist. Spülen Sie das Board nach dem Einsatz im Meer mit Süßwasser ab.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: ['weather-conditions'],
@@ -400,7 +400,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'travel-sup',
       question: 'Kann ich mit einem aufblasbaren SUP verreisen?',
       answer:
-        'Absolut. Jedes Aquafarer-Board passt in eine Transporttasche in Rucksackgröße, die den Anforderungen der Fluggesellschaften für aufgegebenes Gepäck entspricht. Mit nur 18–22 lbs lässt es sich bequem zum Strand, zum See oder durch Flughafenterminals tragen.',
+        'Absolut. Jedes Paddle Board Overstock-Board passt in eine Transporttasche in Rucksackgröße, die den Anforderungen der Fluggesellschaften für aufgegebenes Gepäck entspricht. Mit nur 18–22 lbs lässt es sich bequem zum Strand, zum See oder durch Flughafenterminals tragen.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: [],
@@ -418,7 +418,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'box-contents',
       question: 'Was ist im Lieferumfang enthalten?',
       answer:
-        'Jedes Aquafarer SUP enthält das Board, einen Reiserucksack, eine Doppelhub-Handpumpe, eine abnehmbare Finne, eine Spiralleine und ein Reparaturset. Einige Modelle bieten zusätzlich die Option eines Paddels mit Kohlefaser-Upgrade. Schlauchboote enthalten das Boot, die Pumpe, ein Reparaturset und Paddel.',
+        'Jedes Paddle Board Overstock SUP enthält das Board, einen Reiserucksack, eine Doppelhub-Handpumpe, eine abnehmbare Finne, eine Spiralleine und ein Reparaturset. Einige Modelle bieten zusätzlich die Option eines Paddels mit Kohlefaser-Upgrade. Schlauchboote enthalten das Boot, die Pumpe, ein Reparaturset und Paddel.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -454,7 +454,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'puncture-repair',
       question: 'Wie repariere ich einen Riss?',
       answer:
-        'Reinigen Sie die Stelle, schneiden Sie einen Flicken mit abgerundeten Ecken zu, tragen Sie PVC-Kleber auf, drücken Sie fest und warten Sie 24 Stunden, bevor Sie aufpumpen. Aquafarer-Boards enthalten ein Reparaturset. Detaillierte Anweisungen finden Sie in unserem Leitfaden zur Reparatur aufblasbarer Boote.',
+        'Reinigen Sie die Stelle, schneiden Sie einen Flicken mit abgerundeten Ecken zu, tragen Sie PVC-Kleber auf, drücken Sie fest und warten Sie 24 Stunden, bevor Sie aufpumpen. Paddle Board Overstock-Boards enthalten ein Reparaturset. Detaillierte Anweisungen finden Sie in unserem Leitfaden zur Reparatur aufblasbarer Boote.',
       category: 'maintenance',
       relatedProducts: [],
       relatedGuides: ['inflatable-repair', 'sup-maintenance'],
@@ -488,9 +488,9 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
     },
     {
       id: 'warranty',
-      question: 'Wie lautet die Aquafarer-Garantie?',
+      question: 'Wie lautet die Paddle Board Overstock-Garantie?',
       answer:
-        'Alle Aquafarer-Produkte sind durch eine umfassende Herstellergarantie abgesichert. Schlauchboote sind lebenslang gegen Herstellungsfehler geschützt; SUP-Boards sind für über 2 Jahre abgedeckt. Die Garantie deckt Material- und Verarbeitungsfehler bei normalem Gebrauch ab.',
+        'Alle Paddle Board Overstock-Produkte sind durch eine umfassende Herstellergarantie abgesichert. Schlauchboote sind lebenslang gegen Herstellungsfehler geschützt; SUP-Boards sind für über 2 Jahre abgedeckt. Die Garantie deckt Material- und Verarbeitungsfehler bei normalem Gebrauch ab.',
       category: 'warranty',
       relatedProducts: [],
       relatedGuides: [],
@@ -553,7 +553,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'material-difference',
       question: 'Was ist der Unterschied zwischen PVC und Hypalon?',
       answer:
-        'PVC ist leichter, günstiger und einfacher zu reparieren — ideal für Freizeitnutzung. Hypalon (CSM) bietet überlegene UV- und Chemikalienbeständigkeit mit einer längeren Lebensdauer und wird für gewerbliche und militärische Anwendungen bevorzugt. Aquafarer verwendet je nach Produktstufe beide Materialien.',
+        'PVC ist leichter, günstiger und einfacher zu reparieren — ideal für Freizeitnutzung. Hypalon (CSM) bietet überlegene UV- und Chemikalienbeständigkeit mit einer längeren Lebensdauer und wird für gewerbliche und militärische Anwendungen bevorzugt. Paddle Board Overstock verwendet je nach Produktstufe beide Materialien.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -562,7 +562,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'sup-width-stability',
       question: 'Welche SUP-Breite ist am besten für die Stabilität?',
       answer:
-        'Für Anfänger bietet eine Breite von 33–34 Zoll die beste Balance zwischen Stabilität und Paddelkomfort. Boards, die schmaler als 32 Zoll sind, wirken auf neue Paddler wackelig. Das Aquafarer SUP Explorer 11 mit 33 Zoll ist ideal zum Lernen.',
+        'Für Anfänger bietet eine Breite von 33–34 Zoll die beste Balance zwischen Stabilität und Paddelkomfort. Boards, die schmaler als 32 Zoll sind, wirken auf neue Paddler wackelig. Das Paddle Board Overstock SUP Explorer 11 mit 33 Zoll ist ideal zum Lernen.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-size-guide', 'paddle-board-size-guide'],
@@ -595,24 +595,24 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       relatedGuides: ['inflatable-boat-buying-guide'],
     },
     {
-      id: 'aquafarer-vs-others',
-      question: 'Wie schneidet Aquafarer im Vergleich zu anderen Marken ab?',
+      id: 'paddleboardoverstock-vs-others',
+      question: 'Wie schneidet Paddle Board Overstock im Vergleich zu anderen Marken ab?',
       answer:
-        'Aquafarer bietet das beste Preis-Leistungs-Verhältnis bei aufblasbarer Wassersportausrüstung. Im Vergleich zu Red Paddle Co liefert Aquafarer 90 % der Leistung zu 60 % der Kosten. Im Vergleich zu iRocker verwendet Aquafarer höherwertiges dreilagiges PVC in Militärqualität und höhere PSI-Werte. Im Vergleich zu Bluefin bietet Aquafarer überlegene Materialspezifikationen. Für die meisten Freizeitpaddler bietet Aquafarer die beste Balance zwischen Qualität und Preis.',
+        'Paddle Board Overstock bietet das beste Preis-Leistungs-Verhältnis bei aufblasbarer Wassersportausrüstung. Im Vergleich zu Red Paddle Co liefert Paddle Board Overstock 90 % der Leistung zu 60 % der Kosten. Im Vergleich zu iRocker verwendet Paddle Board Overstock höherwertiges dreilagiges PVC in Militärqualität und höhere PSI-Werte. Im Vergleich zu Bluefin bietet Paddle Board Overstock überlegene Materialspezifikationen. Für die meisten Freizeitpaddler bietet Paddle Board Overstock die beste Balance zwischen Qualität und Preis.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: [
         'best-surf-gear-brands-compared',
-        'aquafarer-vs-red-paddle',
-        'aquafarer-vs-irocker',
-        'aquafarer-vs-bluefin',
+        'paddleboardoverstock-vs-red-paddle',
+        'paddleboardoverstock-vs-irocker',
+        'paddleboardoverstock-vs-bluefin',
       ],
     },
     {
       id: 'fishing-sup-setup',
       question: 'Kann ich von einem SUP-Board aus angeln?',
       answer:
-        'Ja. Das Angeln vom SUP wird immer beliebter, weil die stehende Position eine hervorragende Sicht ins Wasser bietet. Wählen Sie ein Board von mindestens 11 Fuß Länge und 33–34 Zoll Breite für Stabilität. Befestigen Sie eine Milchkiste mit Rutenhaltern an den Bungees des Decks und einen kleinen Anker, und tragen Sie immer eine Rettungsweste (PFD). Das Aquafarer SUP Explorer 11 eignet sich gut zum gelegentlichen Angeln.',
+        'Ja. Das Angeln vom SUP wird immer beliebter, weil die stehende Position eine hervorragende Sicht ins Wasser bietet. Wählen Sie ein Board von mindestens 11 Fuß Länge und 33–34 Zoll Breite für Stabilität. Befestigen Sie eine Milchkiste mit Rutenhaltern an den Bungees des Decks und einen kleinen Anker, und tragen Sie immer eine Rettungsweste (PFD). Das Paddle Board Overstock SUP Explorer 11 eignet sich gut zum gelegentlichen Angeln.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['fishing-sup-guide', 'sup-anchor-guide'],
@@ -630,7 +630,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'airline-travel-sup',
       question: 'Welche Fluglinienregeln gelten für das Reisen mit einem aufblasbaren SUP?',
       answer:
-        'Die meisten Fluggesellschaften akzeptieren SUP-Rucksäcke als aufgegebenes Gepäck, wenn sie unter 23–32 kg liegen. Der Aquafarer-Rucksack ist etwa 90x40x30 cm groß und wiegt gepackt etwa 15 kg. Einige Fluggesellschaften erheben möglicherweise Gebühren für Übergepäck. Kommen Sie früh, packen Sie Finnen und Pumpe separat ins Handgepäck und kennzeichnen Sie die Tasche als zerbrechlich. Informieren Sie sich immer vor dem Flug über die Sportausrüstungsrichtlinie Ihrer Fluggesellschaft.',
+        'Die meisten Fluggesellschaften akzeptieren SUP-Rucksäcke als aufgegebenes Gepäck, wenn sie unter 23–32 kg liegen. Der Paddle Board Overstock-Rucksack ist etwa 90x40x30 cm groß und wiegt gepackt etwa 15 kg. Einige Fluggesellschaften erheben möglicherweise Gebühren für Übergepäck. Kommen Sie früh, packen Sie Finnen und Pumpe separat ins Handgepäck und kennzeichnen Sie die Tasche als zerbrechlich. Informieren Sie sich immer vor dem Flug über die Sportausrüstungsrichtlinie Ihrer Fluggesellschaft.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-travel-guide'],
@@ -655,7 +655,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
     },
     {
       id: 'oem-custom-branding',
-      question: 'Kann ich mein eigenes Logo auf Aquafarer-Produkte setzen?',
+      question: 'Kann ich mein eigenes Logo auf Paddle Board Overstock-Produkte setzen?',
       answer:
         'Ja. Unser OEM-Service umfasst individuelle Logo-Platzierung, individuelle Farbschemata und individuelle Verpackung. Wir bieten Tampondruck, Transferdruck und Stickerei je nach Produkttyp an. Senden Sie Ihre Gestaltungsvorlagen und Spezifikationen an unser Vertriebsteam für ein Angebot und eine Lieferzeitschätzung.',
       category: 'ordering',
@@ -666,7 +666,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'sup-inflate-pressure',
       question: 'Auf welchen PSI-Wert sollte ich mein SUP aufpumpen?',
       answer:
-        'Pumpen Sie auf den angegebenen maximalen PSI-Wert des Boards auf, um die beste Leistung zu erzielen — bei hochwertigen aufblasbaren SUPs typischerweise 15–18 PSI. Das Aquafarer SUP Explorer 11 zeigt bei 15–18 PSI die beste Leistung. Zu geringer Luftdruck macht das Board weich und schlecht spurstabil. Zu hoher Luftdruck über dem angegebenen Maximum riskiert Schäden an den Drop-Stitch-Fäden. Prüfen Sie den Aufkleber am Ventil für den spezifischen Wert Ihres Boards.',
+        'Pumpen Sie auf den angegebenen maximalen PSI-Wert des Boards auf, um die beste Leistung zu erzielen — bei hochwertigen aufblasbaren SUPs typischerweise 15–18 PSI. Das Paddle Board Overstock SUP Explorer 11 zeigt bei 15–18 PSI die beste Leistung. Zu geringer Luftdruck macht das Board weich und schlecht spurstabil. Zu hoher Luftdruck über dem angegebenen Maximum riskiert Schäden an den Drop-Stitch-Fäden. Prüfen Sie den Aufkleber am Ventil für den spezifischen Wert Ihres Boards.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-inflatable-sup', 'sup-pump-guide'],
@@ -693,7 +693,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'sup-kayak-conversion',
       question: 'Kann ich ein SUP-Board als Kajak benutzen?',
       answer:
-        'Ja. Viele SUP-Boards, einschließlich des Aquafarer Explorer 11, haben D-Ringe, die die Befestigung eines Kajaksitzes ermöglichen. Ein SUP mit Kajaksitz und Einzelblattpaddel bietet eine bequeme Sitzposition für längere Touren oder zum Angeln. Einige Marken bieten spezielle Kajak-Umbausätze mit Sitzen und längeren Paddeln an.',
+        'Ja. Viele SUP-Boards, einschließlich des Paddle Board Overstock Explorer 11, haben D-Ringe, die die Befestigung eines Kajaksitzes ermöglichen. Ein SUP mit Kajaksitz und Einzelblattpaddel bietet eine bequeme Sitzposition für längere Touren oder zum Angeln. Einige Marken bieten spezielle Kajak-Umbausätze mit Sitzen und längeren Paddeln an.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['kayak-vs-sup'],
@@ -718,9 +718,9 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
     },
     {
       id: 'company-model',
-      question: 'Ist Aquafarer ein Handelsunternehmen oder ein Hersteller?',
+      question: 'Ist Paddle Board Overstock ein Handelsunternehmen oder ein Hersteller?',
       answer:
-        'Weder eine reine Fabrik noch ein Handelsunternehmen — Aquafarer LLC ist ein Markenunternehmen mit eigener Fertigungsbasis. Aquafarer LLC (New Mexico, USA) verantwortet globale Vertriebs-, Vertrags-, Abrechnungs- und After-Sales-Abläufe, während der Aquafarer Fertigungsstandort Qingdao F&E, Produktion und Qualitätskontrolle in unserer eigenen 12.000 m² Anlage übernimmt. Keine Zwischenhändler: jede Bestellung wird direkt ab Werk versandt.',
+        'Weder eine reine Fabrik noch ein Handelsunternehmen — Weihai Dongjilian Co., Ltd. ist ein Markenunternehmen mit eigener Fertigungsbasis. Weihai Dongjilian Co., Ltd. (New Mexico, USA) verantwortet globale Vertriebs-, Vertrags-, Abrechnungs- und After-Sales-Abläufe, während der Paddle Board Overstock Fertigungsstandort Qingdao F&E, Produktion und Qualitätskontrolle in unserer eigenen 12.000 m² Anlage übernimmt. Keine Zwischenhändler: jede Bestellung wird direkt ab Werk versandt.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -729,7 +729,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'us-contract-qingdao-shipping',
       question: 'Warum schließe ich den Vertrag mit einem US-Unternehmen, obwohl die Ware aus Qingdao verschifft wird?',
       answer:
-        'Aquafarer LLC (New Mexico, USA) ist die globale Handelsgesellschaft, die Verträge abschließt, Rechnungen stellt und After-Sales-Support leistet, während der Fertigungsstandort Qingdao jede Bestellung produziert und FOB Qingdao versendet. Diese Doppelstruktur sichert Vertragsabschluss und Abrechnung nach US-Standard und erhält gleichzeitig werksgerechte Preise und volle Produktionstransparenz.',
+        'Weihai Dongjilian Co., Ltd. (New Mexico, USA) ist die globale Handelsgesellschaft, die Verträge abschließt, Rechnungen stellt und After-Sales-Support leistet, während der Fertigungsstandort Qingdao jede Bestellung produziert und FOB Qingdao versendet. Diese Doppelstruktur sichert Vertragsabschluss und Abrechnung nach US-Standard und erhält gleichzeitig werksgerechte Preise und volle Produktionstransparenz.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -749,7 +749,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'ocean-use',
       question: '¿Puedo usarla en el océano?',
       answer:
-        'Sí. Las tablas de SUP hinchables Aquafarer están fabricadas para su uso en océano, lagos y ríos. Nuestra serie Touring soporta el oleaje costero, y todas las tablas utilizan PVC de grado marino que resiste la corrosión del agua salada. Acláralas con agua dulce después de usarlas en el océano.',
+        'Sí. Las tablas de SUP hinchables Paddle Board Overstock están fabricadas para su uso en océano, lagos y ríos. Nuestra serie Touring soporta el oleaje costero, y todas las tablas utilizan PVC de grado marino que resiste la corrosión del agua salada. Acláralas con agua dulce después de usarlas en el océano.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: ['weather-conditions'],
@@ -767,7 +767,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'travel-sup',
       question: '¿Puedo viajar con un SUP hinchable?',
       answer:
-        'Por supuesto. Todas las tablas Aquafarer se guardan en una bolsa tipo mochila que cumple los requisitos de equipaje de las aerolíneas. Con solo 18–22 lbs, es fácil de transportar hasta la playa, el lago o por las terminales del aeropuerto.',
+        'Por supuesto. Todas las tablas Paddle Board Overstock se guardan en una bolsa tipo mochila que cumple los requisitos de equipaje de las aerolíneas. Con solo 18–22 lbs, es fácil de transportar hasta la playa, el lago o por las terminales del aeropuerto.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: [],
@@ -785,7 +785,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'box-contents',
       question: '¿Qué incluye la caja?',
       answer:
-        'Cada SUP Aquafarer incluye la tabla, una mochila de viaje, una bomba manual de doble acción, una quilla desmontable, una correa de seguridad (leash) en espiral y un kit de reparación. Algunos modelos incluyen también la opción de mejora a un remo de carbono. Las barcas hinchables incluyen la barca, la bomba, el kit de reparación y los remos.',
+        'Cada SUP Paddle Board Overstock incluye la tabla, una mochila de viaje, una bomba manual de doble acción, una quilla desmontable, una correa de seguridad (leash) en espiral y un kit de reparación. Algunos modelos incluyen también la opción de mejora a un remo de carbono. Las barcas hinchables incluyen la barca, la bomba, el kit de reparación y los remos.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -821,7 +821,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'puncture-repair',
       question: '¿Cómo reparo un pinchazo?',
       answer:
-        'Limpia la zona, corta un parche con las esquinas redondeadas, aplica adhesivo para PVC, presiona firmemente y espera 24 horas antes de hincharla. Las tablas Aquafarer incluyen un kit de reparación. Para instrucciones detalladas, consulta nuestra guía de reparación de hinchables.',
+        'Limpia la zona, corta un parche con las esquinas redondeadas, aplica adhesivo para PVC, presiona firmemente y espera 24 horas antes de hincharla. Las tablas Paddle Board Overstock incluyen un kit de reparación. Para instrucciones detalladas, consulta nuestra guía de reparación de hinchables.',
       category: 'maintenance',
       relatedProducts: [],
       relatedGuides: ['inflatable-repair', 'sup-maintenance'],
@@ -855,9 +855,9 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
     },
     {
       id: 'warranty',
-      question: '¿Cuál es la garantía de Aquafarer?',
+      question: '¿Cuál es la garantía de Paddle Board Overstock?',
       answer:
-        'Todos los productos Aquafarer están respaldados por una garantía integral del fabricante. Las barcas hinchables están protegidas de por vida contra defectos de fabricación; las tablas de SUP están cubiertas durante 2+ años. La garantía cubre defectos de materiales y mano de obra en condiciones de uso normal.',
+        'Todos los productos Paddle Board Overstock están respaldados por una garantía integral del fabricante. Las barcas hinchables están protegidas de por vida contra defectos de fabricación; las tablas de SUP están cubiertas durante 2+ años. La garantía cubre defectos de materiales y mano de obra en condiciones de uso normal.',
       category: 'warranty',
       relatedProducts: [],
       relatedGuides: [],
@@ -920,7 +920,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'material-difference',
       question: '¿Cuál es la diferencia entre PVC y Hypalon?',
       answer:
-        'El PVC es más ligero, más asequible y más fácil de reparar: ideal para uso recreativo. El Hypalon (CSM) ofrece una resistencia superior a los rayos UV y a los productos químicos, con una vida útil más larga, y es el preferido para aplicaciones comerciales y militares. Aquafarer utiliza ambos según la gama del producto.',
+        'El PVC es más ligero, más asequible y más fácil de reparar: ideal para uso recreativo. El Hypalon (CSM) ofrece una resistencia superior a los rayos UV y a los productos químicos, con una vida útil más larga, y es el preferido para aplicaciones comerciales y militares. Paddle Board Overstock utiliza ambos según la gama del producto.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -929,7 +929,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'sup-width-stability',
       question: '¿Qué anchura de SUP es mejor para la estabilidad?',
       answer:
-        'Para principiantes, una anchura de 33–34 pulgadas ofrece el mejor equilibrio entre estabilidad y facilidad de remada. Las tablas de menos de 32 pulgadas de ancho resultan inestables para los que empiezan. La Aquafarer SUP Explorer 11, con 33 pulgadas, es ideal para aprender.',
+        'Para principiantes, una anchura de 33–34 pulgadas ofrece el mejor equilibrio entre estabilidad y facilidad de remada. Las tablas de menos de 32 pulgadas de ancho resultan inestables para los que empiezan. La Paddle Board Overstock SUP Explorer 11, con 33 pulgadas, es ideal para aprender.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-size-guide', 'paddle-board-size-guide'],
@@ -962,24 +962,24 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       relatedGuides: ['inflatable-boat-buying-guide'],
     },
     {
-      id: 'aquafarer-vs-others',
-      question: '¿Cómo se compara Aquafarer con otras marcas?',
+      id: 'paddleboardoverstock-vs-others',
+      question: '¿Cómo se compara Paddle Board Overstock con otras marcas?',
       answer:
-        'Aquafarer ofrece la mejor relación calidad-precio en equipos hinchables de deportes acuáticos. Comparada con Red Paddle Co, Aquafarer ofrece el 90 % del rendimiento por el 60 % del coste. Comparada con iRocker, Aquafarer utiliza PVC de triple capa de grado militar de mayor calidad y clasificaciones de PSI más altas. Comparada con Bluefin, Aquafarer ofrece unas especificaciones de material superiores. Para la mayoría de los palistas recreativos, Aquafarer ofrece el mejor equilibrio entre calidad y precio.',
+        'Paddle Board Overstock ofrece la mejor relación calidad-precio en equipos hinchables de deportes acuáticos. Comparada con Red Paddle Co, Paddle Board Overstock ofrece el 90 % del rendimiento por el 60 % del coste. Comparada con iRocker, Paddle Board Overstock utiliza PVC de triple capa de grado militar de mayor calidad y clasificaciones de PSI más altas. Comparada con Bluefin, Paddle Board Overstock ofrece unas especificaciones de material superiores. Para la mayoría de los palistas recreativos, Paddle Board Overstock ofrece el mejor equilibrio entre calidad y precio.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: [
         'best-surf-gear-brands-compared',
-        'aquafarer-vs-red-paddle',
-        'aquafarer-vs-irocker',
-        'aquafarer-vs-bluefin',
+        'paddleboardoverstock-vs-red-paddle',
+        'paddleboardoverstock-vs-irocker',
+        'paddleboardoverstock-vs-bluefin',
       ],
     },
     {
       id: 'fishing-sup-setup',
       question: '¿Puedo pescar desde una tabla de SUP?',
       answer:
-        'Sí. La pesca en SUP es cada vez más popular porque la posición de pie ofrece una visibilidad excelente del agua. Elige una tabla de al menos 11 pies de eslora y 33–34 pulgadas de ancho para mayor estabilidad. Añade una caja lechera con portacañas asegurada a las cuerdas elásticas de la cubierta, un ancla pequeña, y lleva siempre un chaleco salvavidas (PFD). La Aquafarer SUP Explorer 11 funciona bien para la pesca informal.',
+        'Sí. La pesca en SUP es cada vez más popular porque la posición de pie ofrece una visibilidad excelente del agua. Elige una tabla de al menos 11 pies de eslora y 33–34 pulgadas de ancho para mayor estabilidad. Añade una caja lechera con portacañas asegurada a las cuerdas elásticas de la cubierta, un ancla pequeña, y lleva siempre un chaleco salvavidas (PFD). La Paddle Board Overstock SUP Explorer 11 funciona bien para la pesca informal.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['fishing-sup-guide', 'sup-anchor-guide'],
@@ -997,7 +997,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'airline-travel-sup',
       question: '¿Cuáles son las normas de las aerolíneas para viajar con un SUP hinchable?',
       answer:
-        'La mayoría de las aerolíneas aceptan las mochilas de SUP como equipaje facturado si pesan menos de 23–32 kg. La mochila Aquafarer mide aproximadamente 90x40x30 cm y pesa unos 15 kg cargada. Algunas aerolíneas pueden cobrar tasas por equipaje sobredimensionado. Llega con tiempo, guarda las quillas y la bomba por separado en tu equipaje de mano y etiqueta la bolsa como frágil. Investiga siempre la política de equipos deportivos de tu aerolínea antes de volar.',
+        'La mayoría de las aerolíneas aceptan las mochilas de SUP como equipaje facturado si pesan menos de 23–32 kg. La mochila Paddle Board Overstock mide aproximadamente 90x40x30 cm y pesa unos 15 kg cargada. Algunas aerolíneas pueden cobrar tasas por equipaje sobredimensionado. Llega con tiempo, guarda las quillas y la bomba por separado en tu equipaje de mano y etiqueta la bolsa como frágil. Investiga siempre la política de equipos deportivos de tu aerolínea antes de volar.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-travel-guide'],
@@ -1022,7 +1022,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
     },
     {
       id: 'oem-custom-branding',
-      question: '¿Puedo poner mi propio logotipo en los productos Aquafarer?',
+      question: '¿Puedo poner mi propio logotipo en los productos Paddle Board Overstock?',
       answer:
         'Sí. Nuestro servicio OEM incluye colocación de logotipos personalizados, esquemas de color personalizados y embalaje personalizado. Ofrecemos opciones de tampografía, transferencia térmica y bordado según el tipo de producto. Envía tus diseños y especificaciones a nuestro equipo de ventas para obtener un presupuesto y un plazo de entrega estimado.',
       category: 'ordering',
@@ -1033,7 +1033,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'sup-inflate-pressure',
       question: '¿A qué PSI debo hinchar mi SUP?',
       answer:
-        'Hincha la tabla a su PSI máximo nominal para obtener el mejor rendimiento: normalmente 15–18 PSI para SUP hinchables de calidad. La Aquafarer SUP Explorer 11 rinde mejor a 15–18 PSI. Una presión insuficiente hace que la tabla se sienta blanda y no mantenga el rumbo. Una presión excesiva por encima del máximo nominal puede dañar los hilos drop-stitch. Comprueba la pegatina cerca de la válvula para conocer la clasificación específica de tu tabla.',
+        'Hincha la tabla a su PSI máximo nominal para obtener el mejor rendimiento: normalmente 15–18 PSI para SUP hinchables de calidad. La Paddle Board Overstock SUP Explorer 11 rinde mejor a 15–18 PSI. Una presión insuficiente hace que la tabla se sienta blanda y no mantenga el rumbo. Una presión excesiva por encima del máximo nominal puede dañar los hilos drop-stitch. Comprueba la pegatina cerca de la válvula para conocer la clasificación específica de tu tabla.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-inflatable-sup', 'sup-pump-guide'],
@@ -1060,7 +1060,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'sup-kayak-conversion',
       question: '¿Puedo usar una tabla de SUP como kayak?',
       answer:
-        'Sí. Muchas tablas de SUP, incluida la Aquafarer Explorer 11, tienen anillas en D que permiten fijar un asiento de kayak. Usar una SUP con asiento de kayak y un remo de pala simple ofrece una posición sentada cómoda para travesías más largas o para pescar. Algunas marcas ofrecen kits de conversión específicos con asientos y remos más largos.',
+        'Sí. Muchas tablas de SUP, incluida la Paddle Board Overstock Explorer 11, tienen anillas en D que permiten fijar un asiento de kayak. Usar una SUP con asiento de kayak y un remo de pala simple ofrece una posición sentada cómoda para travesías más largas o para pescar. Algunas marcas ofrecen kits de conversión específicos con asientos y remos más largos.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['kayak-vs-sup'],
@@ -1085,9 +1085,9 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
     },
     {
       id: 'company-model',
-      question: '¿Es Aquafarer una empresa comercial o un fabricante?',
+      question: '¿Es Paddle Board Overstock una empresa comercial o un fabricante?',
       answer:
-        'Ni una simple fábrica ni una empresa comercial: Aquafarer LLC es una empresa de marca con su propia base de producción. Aquafarer LLC (Nuevo México, EE. UU.) gestiona la distribución global, los contratos, la facturación y la posventa, mientras que el centro de producción de Aquafarer en Qingdao se encarga de la I+D, la producción y el control de calidad en nuestra propia planta de 12 000 m². Sin intermediarios: cada pedido se envía directamente de fábrica.',
+        'Ni una simple fábrica ni una empresa comercial: Weihai Dongjilian Co., Ltd. es una empresa de marca con su propia base de producción. Weihai Dongjilian Co., Ltd. (Nuevo México, EE. UU.) gestiona la distribución global, los contratos, la facturación y la posventa, mientras que el centro de producción de Paddle Board Overstock en Qingdao se encarga de la I+D, la producción y el control de calidad en nuestra propia planta de 12 000 m². Sin intermediarios: cada pedido se envía directamente de fábrica.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -1096,7 +1096,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'us-contract-qingdao-shipping',
       question: '¿Por qué firmo el contrato con una empresa de EE. UU. si la mercancía se envía desde Qingdao?',
       answer:
-        'Aquafarer LLC (Nuevo México, EE. UU.) es la entidad comercial global que firma los contratos, emite las facturas y proporciona el servicio posventa, mientras que el centro de producción de Qingdao fabrica y despacha cada pedido FOB Qingdao. Esta estructura de doble sede garantiza la contratación y el pago según estándares estadounidenses, manteniendo al mismo tiempo los precios directos de fábrica y una total transparencia productiva.',
+        'Weihai Dongjilian Co., Ltd. (Nuevo México, EE. UU.) es la entidad comercial global que firma los contratos, emite las facturas y proporciona el servicio posventa, mientras que el centro de producción de Qingdao fabrica y despacha cada pedido FOB Qingdao. Esta estructura de doble sede garantiza la contratación y el pago según estándares estadounidenses, manteniendo al mismo tiempo los precios directos de fábrica y una total transparencia productiva.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -1116,7 +1116,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'ocean-use',
       question: "Puis-je l'utiliser en mer ?",
       answer:
-        "Oui. Les planches SUP Aquafarer sont conçues pour la mer, le lac et la rivière. Notre gamme Touring gère le clapot côtier, et toutes les planches utilisent du PVC de qualité marine qui résiste à la corrosion de l'eau salée. Rincez à l'eau douce après une utilisation en mer.",
+        "Oui. Les planches SUP Paddle Board Overstock sont conçues pour la mer, le lac et la rivière. Notre gamme Touring gère le clapot côtier, et toutes les planches utilisent du PVC de qualité marine qui résiste à la corrosion de l'eau salée. Rincez à l'eau douce après une utilisation en mer.",
       category: 'general',
       relatedProducts: [],
       relatedGuides: ['weather-conditions'],
@@ -1134,7 +1134,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'travel-sup',
       question: 'Puis-je voyager avec un SUP gonflable ?',
       answer:
-        "Absolument. Chaque planche Aquafarer se range dans un sac de transport de la taille d'un sac à dos qui respecte les exigences des bagages des compagnies aériennes. Avec seulement 18–22 lbs, elle est facile à transporter jusqu'à la plage, au lac ou à travers les terminaux d'aéroport.",
+        "Absolument. Chaque planche Paddle Board Overstock se range dans un sac de transport de la taille d'un sac à dos qui respecte les exigences des bagages des compagnies aériennes. Avec seulement 18–22 lbs, elle est facile à transporter jusqu'à la plage, au lac ou à travers les terminaux d'aéroport.",
       category: 'general',
       relatedProducts: [],
       relatedGuides: [],
@@ -1152,7 +1152,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'box-contents',
       question: 'Que contient la boîte ?',
       answer:
-        'Chaque SUP Aquafarer comprend la planche, un sac de voyage, une pompe manuelle double action, un aileron amovible, un leash spiralé et un kit de réparation. Certains modèles offrent également une option de mise à niveau avec pagaie en carbone. Les bateaux gonflables comprennent le bateau, la pompe, le kit de réparation et les pagaies.',
+        'Chaque SUP Paddle Board Overstock comprend la planche, un sac de voyage, une pompe manuelle double action, un aileron amovible, un leash spiralé et un kit de réparation. Certains modèles offrent également une option de mise à niveau avec pagaie en carbone. Les bateaux gonflables comprennent le bateau, la pompe, le kit de réparation et les pagaies.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -1188,7 +1188,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'puncture-repair',
       question: 'Comment réparer une crevaison ?',
       answer:
-        'Nettoyez la zone, découpez une pièce aux coins arrondis, appliquez de la colle PVC, pressez fermement et attendez 24 heures avant de regonfler. Les planches Aquafarer incluent un kit de réparation. Pour des instructions détaillées, consultez notre guide de réparation des gonflables.',
+        'Nettoyez la zone, découpez une pièce aux coins arrondis, appliquez de la colle PVC, pressez fermement et attendez 24 heures avant de regonfler. Les planches Paddle Board Overstock incluent un kit de réparation. Pour des instructions détaillées, consultez notre guide de réparation des gonflables.',
       category: 'maintenance',
       relatedProducts: [],
       relatedGuides: ['inflatable-repair', 'sup-maintenance'],
@@ -1222,9 +1222,9 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
     },
     {
       id: 'warranty',
-      question: 'Quelle est la garantie Aquafarer ?',
+      question: 'Quelle est la garantie Paddle Board Overstock ?',
       answer:
-        "Tous les produits Aquafarer sont couverts par une garantie constructeur complète. Les bateaux gonflables sont protégés à vie contre les défauts de fabrication ; les planches de SUP sont couvertes pendant 2 ans et plus. La garantie couvre les défauts de matériaux et de main-d'œuvre dans des conditions d'utilisation normales.",
+        "Tous les produits Paddle Board Overstock sont couverts par une garantie constructeur complète. Les bateaux gonflables sont protégés à vie contre les défauts de fabrication ; les planches de SUP sont couvertes pendant 2 ans et plus. La garantie couvre les défauts de matériaux et de main-d'œuvre dans des conditions d'utilisation normales.",
       category: 'warranty',
       relatedProducts: [],
       relatedGuides: [],
@@ -1287,7 +1287,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'material-difference',
       question: "Quelle est la différence entre le PVC et l'Hypalon ?",
       answer:
-        "Le PVC est plus léger, plus abordable et plus facile à réparer — idéal pour un usage récréatif. L'Hypalon (CSM) offre une résistance supérieure aux UV et aux produits chimiques avec une durée de vie plus longue, privilégié pour les applications commerciales et militaires. Aquafarer utilise les deux selon le niveau du produit.",
+        "Le PVC est plus léger, plus abordable et plus facile à réparer — idéal pour un usage récréatif. L'Hypalon (CSM) offre une résistance supérieure aux UV et aux produits chimiques avec une durée de vie plus longue, privilégié pour les applications commerciales et militaires. Paddle Board Overstock utilise les deux selon le niveau du produit.",
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -1296,7 +1296,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'sup-width-stability',
       question: 'Quelle largeur de SUP est la meilleure pour la stabilité ?',
       answer:
-        "Pour les débutants, une largeur de 33–34 pouces offre le meilleur équilibre entre stabilité et facilité de pagaie. Les planches de moins de 32 pouces de large semblent instables aux nouveaux pagayeurs. L'Aquafarer SUP Explorer 11 à 33 pouces est idéale pour apprendre.",
+        "Pour les débutants, une largeur de 33–34 pouces offre le meilleur équilibre entre stabilité et facilité de pagaie. Les planches de moins de 32 pouces de large semblent instables aux nouveaux pagayeurs. L'Paddle Board Overstock SUP Explorer 11 à 33 pouces est idéale pour apprendre.",
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-size-guide', 'paddle-board-size-guide'],
@@ -1329,24 +1329,24 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       relatedGuides: ['inflatable-boat-buying-guide'],
     },
     {
-      id: 'aquafarer-vs-others',
-      question: 'Comment Aquafarer se compare-t-il aux autres marques ?',
+      id: 'paddleboardoverstock-vs-others',
+      question: 'Comment Paddle Board Overstock se compare-t-il aux autres marques ?',
       answer:
-        'Aquafarer offre le meilleur rapport qualité-prix dans le domaine du matériel de sports nautiques gonflable. Comparé à Red Paddle Co, Aquafarer offre 90 % des performances pour 60 % du coût. Comparé à iRocker, Aquafarer utilise du PVC de qualité militaire triple couche de grade supérieur et des pressions PSI plus élevées. Comparé à Bluefin, Aquafarer offre des spécifications de matériaux supérieures. Pour la plupart des pagayeurs récréatifs, Aquafarer offre le meilleur équilibre entre qualité et prix.',
+        'Paddle Board Overstock offre le meilleur rapport qualité-prix dans le domaine du matériel de sports nautiques gonflable. Comparé à Red Paddle Co, Paddle Board Overstock offre 90 % des performances pour 60 % du coût. Comparé à iRocker, Paddle Board Overstock utilise du PVC de qualité militaire triple couche de grade supérieur et des pressions PSI plus élevées. Comparé à Bluefin, Paddle Board Overstock offre des spécifications de matériaux supérieures. Pour la plupart des pagayeurs récréatifs, Paddle Board Overstock offre le meilleur équilibre entre qualité et prix.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: [
         'best-surf-gear-brands-compared',
-        'aquafarer-vs-red-paddle',
-        'aquafarer-vs-irocker',
-        'aquafarer-vs-bluefin',
+        'paddleboardoverstock-vs-red-paddle',
+        'paddleboardoverstock-vs-irocker',
+        'paddleboardoverstock-vs-bluefin',
       ],
     },
     {
       id: 'fishing-sup-setup',
       question: 'Puis-je pêcher depuis une planche de SUP ?',
       answer:
-        "Oui. La pêche en SUP est de plus en plus populaire car la position debout offre une excellente visibilité dans l'eau. Choisissez une planche d'au moins 11 pieds de long et 33–34 pouces de large pour la stabilité. Ajoutez une caisse à lait avec des porte-cannes fixés aux élastiques du pont, une petite ancre, et portez toujours un gilet de sauvetage (PFD). L'Aquafarer SUP Explorer 11 convient bien à la pêche occasionnelle.",
+        "Oui. La pêche en SUP est de plus en plus populaire car la position debout offre une excellente visibilité dans l'eau. Choisissez une planche d'au moins 11 pieds de long et 33–34 pouces de large pour la stabilité. Ajoutez une caisse à lait avec des porte-cannes fixés aux élastiques du pont, une petite ancre, et portez toujours un gilet de sauvetage (PFD). L'Paddle Board Overstock SUP Explorer 11 convient bien à la pêche occasionnelle.",
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['fishing-sup-guide', 'sup-anchor-guide'],
@@ -1364,7 +1364,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'airline-travel-sup',
       question: 'Quelles sont les règles des compagnies aériennes pour voyager avec un SUP gonflable ?',
       answer:
-        "La plupart des compagnies aériennes acceptent les sacs SUP comme bagages enregistrés s'ils font moins de 23–32 kg. Le sac Aquafarer mesure environ 90x40x30 cm et pèse environ 15 kg une fois rempli. Certaines compagnies peuvent facturer des frais de bagage surdimensionné. Arrivez tôt, emballez l'aileron et la pompe séparément dans votre bagage cabine, et marquez le sac comme fragile. Renseignez-vous toujours sur la politique d'équipement sportif de votre compagnie avant de voler.",
+        "La plupart des compagnies aériennes acceptent les sacs SUP comme bagages enregistrés s'ils font moins de 23–32 kg. Le sac Paddle Board Overstock mesure environ 90x40x30 cm et pèse environ 15 kg une fois rempli. Certaines compagnies peuvent facturer des frais de bagage surdimensionné. Arrivez tôt, emballez l'aileron et la pompe séparément dans votre bagage cabine, et marquez le sac comme fragile. Renseignez-vous toujours sur la politique d'équipement sportif de votre compagnie avant de voler.",
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-travel-guide'],
@@ -1389,7 +1389,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
     },
     {
       id: 'oem-custom-branding',
-      question: 'Puis-je apposer mon propre logo sur les produits Aquafarer ?',
+      question: 'Puis-je apposer mon propre logo sur les produits Paddle Board Overstock ?',
       answer:
         "Oui. Notre service OEM comprend le placement de logos personnalisés, des combinaisons de couleurs personnalisées et un emballage personnalisé. Nous proposons l'impression en tampographie, le transfert thermique et la broderie selon le type de produit. Envoyez vos visuels et spécifications à notre équipe commerciale pour un devis et une estimation du délai de livraison.",
       category: 'ordering',
@@ -1400,7 +1400,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'sup-inflate-pressure',
       question: 'À quel PSI dois-je gonfler mon SUP ?',
       answer:
-        "Gonflez à la pression maximale PSI nominale de la planche pour des performances optimales — généralement 15–18 PSI pour les SUP gonflables de qualité. L'Aquafarer SUP Explorer 11 donne le meilleur rendement à 15–18 PSI. Un gonflage insuffisant rend la planche molle et moins directionnelle. Un sur-gonflage au-delà du maximum nominal risque d'endommager les fils drop-stitch. Vérifiez l'autocollant près de la valve pour la valeur nominale spécifique de votre planche.",
+        "Gonflez à la pression maximale PSI nominale de la planche pour des performances optimales — généralement 15–18 PSI pour les SUP gonflables de qualité. L'Paddle Board Overstock SUP Explorer 11 donne le meilleur rendement à 15–18 PSI. Un gonflage insuffisant rend la planche molle et moins directionnelle. Un sur-gonflage au-delà du maximum nominal risque d'endommager les fils drop-stitch. Vérifiez l'autocollant près de la valve pour la valeur nominale spécifique de votre planche.",
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-inflatable-sup', 'sup-pump-guide'],
@@ -1427,7 +1427,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'sup-kayak-conversion',
       question: 'Puis-je utiliser une planche de SUP comme kayak ?',
       answer:
-        "Oui. De nombreuses planches de SUP, dont l'Aquafarer Explorer 11, disposent d'anneaux en D qui permettent la fixation d'un siège de kayak. Utiliser un SUP avec un siège de kayak et une pagaie à pale unique offre une position assise confortable pour les sorties plus longues ou la pêche. Certaines marques proposent des kits de conversion kayak dédiés avec sièges et pagaies plus longues.",
+        "Oui. De nombreuses planches de SUP, dont l'Paddle Board Overstock Explorer 11, disposent d'anneaux en D qui permettent la fixation d'un siège de kayak. Utiliser un SUP avec un siège de kayak et une pagaie à pale unique offre une position assise confortable pour les sorties plus longues ou la pêche. Certaines marques proposent des kits de conversion kayak dédiés avec sièges et pagaies plus longues.",
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['kayak-vs-sup'],
@@ -1452,9 +1452,9 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
     },
     {
       id: 'company-model',
-      question: 'Aquafarer est-il une société de négoce ou un fabricant ?',
+      question: 'Paddle Board Overstock est-il une société de négoce ou un fabricant ?',
       answer:
-        'Ni une simple usine, ni une société de négoce — Aquafarer LLC est une société de marque disposant de sa propre base de production. Aquafarer LLC (Nouveau-Mexique, États-Unis) gère la distribution mondiale, les contrats, la facturation et le service après-vente, tandis que le centre de production Aquafarer de Qingdao assure la R&D, la production et le contrôle qualité dans notre propre site de 12 000 m². Aucun intermédiaire : chaque commande est expédiée directement depuis l’usine.',
+        'Ni une simple usine, ni une société de négoce — Weihai Dongjilian Co., Ltd. est une société de marque disposant de sa propre base de production. Weihai Dongjilian Co., Ltd. (Nouveau-Mexique, États-Unis) gère la distribution mondiale, les contrats, la facturation et le service après-vente, tandis que le centre de production Paddle Board Overstock de Qingdao assure la R&D, la production et le contrôle qualité dans notre propre site de 12 000 m². Aucun intermédiaire : chaque commande est expédiée directement depuis l’usine.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -1464,7 +1464,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       question:
         'Pourquoi mon contrat est-il signé avec une société américaine alors que la marchandise part de Qingdao ?',
       answer:
-        'Aquafarer LLC (Nouveau-Mexique, États-Unis) est l’entité commerciale mondiale qui signe les contrats, émet les factures et assure le service après-vente, tandis que le centre de production de Qingdao fabrique et expédie chaque commande FOB Qingdao. Cette structure à double pôle garantit la contractualisation et le règlement aux normes américaines, tout en conservant les prix directs usine et une transparence totale sur la production.',
+        'Weihai Dongjilian Co., Ltd. (Nouveau-Mexique, États-Unis) est l’entité commerciale mondiale qui signe les contrats, émet les factures et assure le service après-vente, tandis que le centre de production de Qingdao fabrique et expédie chaque commande FOB Qingdao. Cette structure à double pôle garantit la contractualisation et le règlement aux normes américaines, tout en conservant les prix directs usine et une transparence totale sur la production.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -1484,7 +1484,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'ocean-use',
       question: 'Posso usarla in mare?',
       answer:
-        "Sì. Le tavole Aquafarer SUP sono costruite per l'uso in mare, lago e fiume. La nostra serie Touring gestisce bene il moto ondoso costiero e tutte le tavole utilizzano PVC di grado nautico che resiste alla corrosione dell'acqua salata. Dopo l'uso in mare, risciacqua con acqua dolce.",
+        "Sì. Le tavole Paddle Board Overstock SUP sono costruite per l'uso in mare, lago e fiume. La nostra serie Touring gestisce bene il moto ondoso costiero e tutte le tavole utilizzano PVC di grado nautico che resiste alla corrosione dell'acqua salata. Dopo l'uso in mare, risciacqua con acqua dolce.",
       category: 'general',
       relatedProducts: [],
       relatedGuides: ['weather-conditions'],
@@ -1502,7 +1502,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'travel-sup',
       question: 'Posso viaggiare con un SUP gonfiabile?',
       answer:
-        'Assolutamente sì. Ogni tavola Aquafarer si ripiega in una borsa da trasporto delle dimensioni di uno zaino, conforme ai requisiti bagaglio delle compagnie aeree. Con appena 18–22 lbs, è facile da portare in spiaggia, al lago o attraverso i terminal aeroportuali.',
+        'Assolutamente sì. Ogni tavola Paddle Board Overstock si ripiega in una borsa da trasporto delle dimensioni di uno zaino, conforme ai requisiti bagaglio delle compagnie aeree. Con appena 18–22 lbs, è facile da portare in spiaggia, al lago o attraverso i terminal aeroportuali.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: [],
@@ -1520,7 +1520,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'box-contents',
       question: "Cosa c'è nella confezione?",
       answer:
-        "Ogni SUP Aquafarer include la tavola, uno zaino da viaggio, una pompa a mano a doppia azione, pinna rimovibile, leash a spirale e kit di riparazione. Alcuni modelli offrono anche l'opzione di aggiornamento con pagaia in carbonio. I gommoni gonfiabili includono il gommone, la pompa, il kit di riparazione e i remi.",
+        "Ogni SUP Paddle Board Overstock include la tavola, uno zaino da viaggio, una pompa a mano a doppia azione, pinna rimovibile, leash a spirale e kit di riparazione. Alcuni modelli offrono anche l'opzione di aggiornamento con pagaia in carbonio. I gommoni gonfiabili includono il gommone, la pompa, il kit di riparazione e i remi.",
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -1556,7 +1556,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'puncture-repair',
       question: 'Come riparo una foratura?',
       answer:
-        "Pulisci l'area, ritaglia una toppa con angoli arrotondati, applica l'adesivo per PVC, premi con fermezza e attendi 24 ore prima di gonfiare. Le tavole Aquafarer includono un kit di riparazione. Per istruzioni dettagliate, consulta la nostra guida alla riparazione dei gonfiabili.",
+        "Pulisci l'area, ritaglia una toppa con angoli arrotondati, applica l'adesivo per PVC, premi con fermezza e attendi 24 ore prima di gonfiare. Le tavole Paddle Board Overstock includono un kit di riparazione. Per istruzioni dettagliate, consulta la nostra guida alla riparazione dei gonfiabili.",
       category: 'maintenance',
       relatedProducts: [],
       relatedGuides: ['inflatable-repair', 'sup-maintenance'],
@@ -1590,9 +1590,9 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
     },
     {
       id: 'warranty',
-      question: 'Qual è la garanzia Aquafarer?',
+      question: 'Qual è la garanzia Paddle Board Overstock?',
       answer:
-        'Tutti i prodotti Aquafarer sono coperti da una garanzia completa del produttore. I gommoni gonfiabili sono protetti a vita contro i difetti di fabbricazione; le tavole SUP sono coperte per 2+ anni. La garanzia copre i difetti di materiali e lavorazione in condizioni di uso normale.',
+        'Tutti i prodotti Paddle Board Overstock sono coperti da una garanzia completa del produttore. I gommoni gonfiabili sono protetti a vita contro i difetti di fabbricazione; le tavole SUP sono coperte per 2+ anni. La garanzia copre i difetti di materiali e lavorazione in condizioni di uso normale.',
       category: 'warranty',
       relatedProducts: [],
       relatedGuides: [],
@@ -1655,7 +1655,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'material-difference',
       question: 'Qual è la differenza tra PVC e Hypalon?',
       answer:
-        "Il PVC è più leggero, più economico e più facile da riparare: ideale per l'uso ricreativo. L'Hypalon (CSM) offre una resistenza superiore ai raggi UV e agli agenti chimici con una durata maggiore, preferito per applicazioni commerciali e militari. Aquafarer utilizza entrambi a seconda del livello del prodotto.",
+        "Il PVC è più leggero, più economico e più facile da riparare: ideale per l'uso ricreativo. L'Hypalon (CSM) offre una resistenza superiore ai raggi UV e agli agenti chimici con una durata maggiore, preferito per applicazioni commerciali e militari. Paddle Board Overstock utilizza entrambi a seconda del livello del prodotto.",
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -1664,7 +1664,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'sup-width-stability',
       question: 'Quale larghezza del SUP è migliore per la stabilità?',
       answer:
-        "Per i principianti, una larghezza di 33–34 pollici offre il miglior equilibrio tra stabilità e facilità di pagaiata. Le tavole più strette di 32 pollici risultano instabili per i nuovi pagaiatori. L'Aquafarer SUP Explorer 11, con i suoi 33 pollici, è ideale per imparare.",
+        "Per i principianti, una larghezza di 33–34 pollici offre il miglior equilibrio tra stabilità e facilità di pagaiata. Le tavole più strette di 32 pollici risultano instabili per i nuovi pagaiatori. L'Paddle Board Overstock SUP Explorer 11, con i suoi 33 pollici, è ideale per imparare.",
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-size-guide', 'paddle-board-size-guide'],
@@ -1697,24 +1697,24 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       relatedGuides: ['inflatable-boat-buying-guide'],
     },
     {
-      id: 'aquafarer-vs-others',
-      question: 'Come si confronta Aquafarer con altri marchi?',
+      id: 'paddleboardoverstock-vs-others',
+      question: 'Come si confronta Paddle Board Overstock con altri marchi?',
       answer:
-        "Aquafarer offre il miglior rapporto qualità-prezzo nel settore dell'attrezzatura gonfiabile per sport acquatici. Rispetto a Red Paddle Co, Aquafarer offre il 90% delle prestazioni al 60% del costo. Rispetto a iRocker, Aquafarer utilizza PVC triplo strato di grado militare superiore e valori di PSI più alti. Rispetto a Bluefin, Aquafarer offre specifiche dei materiali superiori. Per la maggior parte dei pagaiatori ricreativi, Aquafarer offre il miglior equilibrio tra qualità e prezzo.",
+        "Paddle Board Overstock offre il miglior rapporto qualità-prezzo nel settore dell'attrezzatura gonfiabile per sport acquatici. Rispetto a Red Paddle Co, Paddle Board Overstock offre il 90% delle prestazioni al 60% del costo. Rispetto a iRocker, Paddle Board Overstock utilizza PVC triplo strato di grado militare superiore e valori di PSI più alti. Rispetto a Bluefin, Paddle Board Overstock offre specifiche dei materiali superiori. Per la maggior parte dei pagaiatori ricreativi, Paddle Board Overstock offre il miglior equilibrio tra qualità e prezzo.",
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: [
         'best-surf-gear-brands-compared',
-        'aquafarer-vs-red-paddle',
-        'aquafarer-vs-irocker',
-        'aquafarer-vs-bluefin',
+        'paddleboardoverstock-vs-red-paddle',
+        'paddleboardoverstock-vs-irocker',
+        'paddleboardoverstock-vs-bluefin',
       ],
     },
     {
       id: 'fishing-sup-setup',
       question: 'Posso pescare da una tavola SUP?',
       answer:
-        "Sì. La pesca con il SUP è sempre più popolare perché la posizione in piedi offre un'ottima visuale sull'acqua. Scegli una tavola di almeno 11 piedi di lunghezza e 33–34 pollici di larghezza per la stabilità. Aggiungi una cassetta con portacanne fissata agli elastici del ponte, una piccola ancora e indossa sempre un giubbotto di salvataggio (PFD). L'Aquafarer SUP Explorer 11 funziona bene per la pesca occasionale.",
+        "Sì. La pesca con il SUP è sempre più popolare perché la posizione in piedi offre un'ottima visuale sull'acqua. Scegli una tavola di almeno 11 piedi di lunghezza e 33–34 pollici di larghezza per la stabilità. Aggiungi una cassetta con portacanne fissata agli elastici del ponte, una piccola ancora e indossa sempre un giubbotto di salvataggio (PFD). L'Paddle Board Overstock SUP Explorer 11 funziona bene per la pesca occasionale.",
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['fishing-sup-guide', 'sup-anchor-guide'],
@@ -1732,7 +1732,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'airline-travel-sup',
       question: 'Quali sono le regole delle compagnie aeree per viaggiare con un SUP gonfiabile?',
       answer:
-        "La maggior parte delle compagnie aeree accetta gli zaini per SUP come bagaglio da stiva se sotto i 23–32 kg. Lo zaino Aquafarer misura circa 90x40x30 cm e pesa circa 15 kg una volta imballato. Alcune compagnie possono addebitare una tariffa per bagagli oversize. Arriva in anticipo, avvolgi pinna e pompa separatamente nel bagaglio a mano ed etichetta la borsa come fragile. Informati sempre sulla politica dell'attrezzatura sportiva della tua compagnia prima di volare.",
+        "La maggior parte delle compagnie aeree accetta gli zaini per SUP come bagaglio da stiva se sotto i 23–32 kg. Lo zaino Paddle Board Overstock misura circa 90x40x30 cm e pesa circa 15 kg una volta imballato. Alcune compagnie possono addebitare una tariffa per bagagli oversize. Arriva in anticipo, avvolgi pinna e pompa separatamente nel bagaglio a mano ed etichetta la borsa come fragile. Informati sempre sulla politica dell'attrezzatura sportiva della tua compagnia prima di volare.",
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-travel-guide'],
@@ -1757,7 +1757,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
     },
     {
       id: 'oem-custom-branding',
-      question: 'Posso mettere il mio logo sui prodotti Aquafarer?',
+      question: 'Posso mettere il mio logo sui prodotti Paddle Board Overstock?',
       answer:
         'Sì. Il nostro servizio OEM include posizionamento del logo personalizzato, combinazioni di colori personalizzate e packaging personalizzato. Offriamo opzioni di stampa a tampone, transfer termico e ricamo a seconda del tipo di prodotto. Invia le tue grafiche e specifiche al nostro team vendite per un preventivo e una stima dei tempi di consegna.',
       category: 'ordering',
@@ -1768,7 +1768,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'sup-inflate-pressure',
       question: 'A quale PSI devo gonfiare il mio SUP?',
       answer:
-        "Gonfia al PSI massimo nominale della tavola per le migliori prestazioni: in genere 15–18 PSI per i SUP gonfiabili di qualità. L'Aquafarer SUP Explorer 11 funziona al meglio a 15–18 PSI. Una pressione insufficiente rende la tavola morbida e con scarsa tenuta di rotta. Una sovrappressione oltre il massimo nominale rischia di danneggiare i fili drop-stitch. Controlla l'etichetta vicino alla valvola per il valore specifico della tua tavola.",
+        "Gonfia al PSI massimo nominale della tavola per le migliori prestazioni: in genere 15–18 PSI per i SUP gonfiabili di qualità. L'Paddle Board Overstock SUP Explorer 11 funziona al meglio a 15–18 PSI. Una pressione insufficiente rende la tavola morbida e con scarsa tenuta di rotta. Una sovrappressione oltre il massimo nominale rischia di danneggiare i fili drop-stitch. Controlla l'etichetta vicino alla valvola per il valore specifico della tua tavola.",
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-inflatable-sup', 'sup-pump-guide'],
@@ -1795,7 +1795,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'sup-kayak-conversion',
       question: 'Posso usare una tavola SUP come kayak?',
       answer:
-        "Sì. Molte tavole SUP, inclusa l'Aquafarer Explorer 11, hanno anelli a D che consentono di agganciare un sedile da kayak. Usare un SUP con sedile da kayak e pagaia a pala singola offre una posizione seduta comoda per uscite lunghe o pesca. Alcuni marchi offrono kit di conversione dedicati con sedili e pagaie più lunghe.",
+        "Sì. Molte tavole SUP, inclusa l'Paddle Board Overstock Explorer 11, hanno anelli a D che consentono di agganciare un sedile da kayak. Usare un SUP con sedile da kayak e pagaia a pala singola offre una posizione seduta comoda per uscite lunghe o pesca. Alcuni marchi offrono kit di conversione dedicati con sedili e pagaie più lunghe.",
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['kayak-vs-sup'],
@@ -1820,9 +1820,9 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
     },
     {
       id: 'company-model',
-      question: 'Aquafarer è una società commerciale o un produttore?',
+      question: 'Paddle Board Overstock è una società commerciale o un produttore?',
       answer:
-        'Né una semplice fabbrica né una società commerciale: Aquafarer LLC è un’azienda di marca con una propria base produttiva. Aquafarer LLC (Nuovo Messico, USA) gestisce la distribuzione globale, i contratti, la fatturazione e l’assistenza post-vendita, mentre l’hub produttivo Aquafarer di Qingdao si occupa di R&S, produzione e controllo qualità nel nostro stabilimento di 12.000 m². Nessun intermediario: ogni ordine viene spedito direttamente dallo stabilimento.',
+        'Né una semplice fabbrica né una società commerciale: Weihai Dongjilian Co., Ltd. è un’azienda di marca con una propria base produttiva. Weihai Dongjilian Co., Ltd. (Nuovo Messico, USA) gestisce la distribuzione globale, i contratti, la fatturazione e l’assistenza post-vendita, mentre l’hub produttivo Paddle Board Overstock di Qingdao si occupa di R&S, produzione e controllo qualità nel nostro stabilimento di 12.000 m². Nessun intermediario: ogni ordine viene spedito direttamente dallo stabilimento.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -1831,7 +1831,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'us-contract-qingdao-shipping',
       question: 'Perché stipulo il contratto con un’azienda statunitense se la merce viene spedita da Qingdao?',
       answer:
-        'Aquafarer LLC (Nuovo Messico, USA) è l’entità commerciale globale che stipula i contratti, emette le fatture e fornisce l’assistenza post-vendita, mentre l’hub produttivo di Qingdao produce e spedisce ogni ordine FOB Qingdao. Questa struttura a doppio polo garantisce contrattazione e pagamenti secondo gli standard USA, conservando al tempo stesso i prezzi diretti di fabbrica e la piena trasparenza produttiva.',
+        'Weihai Dongjilian Co., Ltd. (Nuovo Messico, USA) è l’entità commerciale globale che stipula i contratti, emette le fatture e fornisce l’assistenza post-vendita, mentre l’hub produttivo di Qingdao produce e spedisce ogni ordine FOB Qingdao. Questa struttura a doppio polo garantisce contrattazione e pagamenti secondo gli standard USA, conservando al tempo stesso i prezzi diretti di fabbrica e la piena trasparenza produttiva.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],

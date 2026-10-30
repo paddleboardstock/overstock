@@ -1,0 +1,436 @@
+﻿---
+import Layout from '~/layouts/PageLayout.astro';
+import { BRAND } from '~/lib/seo/brand-os';
+import { getPageContent, setPageContentData } from '~/i18n/page-content';
+import __pageData from '~/i18n/generated/pages/paddleboardoverstock-story.ts';
+
+const lang = 'en';
+setPageContentData(__pageData);
+const page = getPageContent(lang, 'paddleboardoverstock-story') || {};
+const hero = page.hero || {};
+const stats = page.stats || {};
+const timeline = page.timeline || [];
+const contentFounding = page.content_founding || {};
+const contentGrowth = page.content_growth || {};
+const philosophy = page.philosophy || {};
+const engineeringDna = page.engineeringDna || {};
+const trustSignals = page.trustSignals || {};
+const comparison = page.comparison || {};
+const cta = page.cta || {};
+const founder = page.founder || {};
+const founderStory = founder.story || [];
+const philosophyPillars = philosophy.pillars || [];
+const engineeringAreas = engineeringDna.areas || [];
+
+const metadata = {
+  title: `Paddle Board Overstock Story — ${BRAND.name}`,
+  description: hero.subtitle || '',
+  ignoreTitleTemplate: true,
+};
+const lh = (h: string) => h || h;
+const ctaActions = cta.actions?.map((a: any) => ({ ...a, href: lh(a.href) }));
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Paddle Board Overstock Story' }];
+const statsData = stats.stats || [];
+const tSignals = trustSignals || {};
+const manufacturing = tSignals.manufacturing || {};
+const quality = tSignals.quality || {};
+const globalSection = tSignals.global || {};
+const marketPos = comparison || {};
+const strengths = marketPos.strengths || [];
+const bestFors = marketPos.bestFor || [];
+const foundingParagraphs = contentFounding.paragraphs || [];
+const growthParagraphs = contentGrowth.paragraphs || [];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <script
+    is:inline
+    type="application/ld+json"
+    set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: 'Paddle Board Overstock',
+      alternateName: 'Paddle Board Overstock RIB & Inflatable Watercraft',
+      description: hero.subtitle,
+      url: 'https://paddleboardoverstock.com',
+      slogan: 'RIB Boats, Inflatable Boats & SUP Boards Manufacturer — OEM/ODM Solution Team',
+      foundingDate: '2012',
+      foundingLocation: 'Weihai, China',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Qingdao',
+        addressRegion: 'Shandong',
+        addressCountry: 'CN',
+      },
+      industry: ['Marine Manufacturing', 'Inflatable Boat Manufacturing', 'Water Sports Equipment'],
+      hasCertification: ['CE Certified', 'ISO 9001:2015', 'UKCA Marked', 'BSCI Compliant'],
+      numberOfEmployees: 200,
+      areaServed: ['Europe', 'Asia-Pacific', 'Americas', 'Middle East', 'Africa'],
+    })}
+  />
+  <script
+    is:inline
+    type="application/ld+json"
+    set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      name: 'David Chen',
+      jobTitle: 'Founder & CEO',
+      description:
+        'Founder of Paddle Board Overstock, marine manufacturing expert with a decade of experience in OEM programs for European and North American brands before founding the company in 2012.',
+      url: 'https://paddleboardoverstock.com/paddleboardoverstock-story',
+      knowsAbout: [
+        'Inflatable Boat Manufacturing',
+        'Marine Engineering',
+        'PVC/Hypalon Fabrication',
+        'Water Sports Equipment Design',
+        'OEM/ODM Production',
+      ],
+      alumniOf: 'Qingdao Marine Manufacturing Institute',
+      birthPlace: {
+        '@type': 'Place',
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'Qingdao',
+          addressRegion: 'Shandong',
+          addressCountry: 'CN',
+        },
+      },
+      affiliation: { '@type': 'Organization', name: 'Paddle Board Overstock', url: 'https://paddleboardoverstock.com' },
+    })}
+  />
+
+  <section
+    class="relative min-h-[75vh] flex items-center justify-center text-center text-white overflow-hidden bg-gradient-to-br from-[#001830] via-[#002d4a] to-[#003355]"
+  >
+    <div class="relative z-10 max-w-5xl mx-auto px-6 py-24">
+      <p class="text-sm font-medium tracking-[0.2em] uppercase text-white/60">{hero.tagline}</p>
+      <h1 class="mt-6 text-4xl md:text-6xl font-bold tracking-tight leading-[1.1]">{hero.title}</h1>
+      <p class="mt-8 text-lg text-white/70 max-w-4xl mx-auto leading-relaxed">{hero.subtitle}</p>
+      <div class="mt-10 flex justify-center gap-4 flex-wrap">
+        <a
+          href="/products"
+          class="px-8 py-4 bg-white text-gray-900 rounded-full font-semibold hover:bg-gray-50 transition shadow-xl"
+          >Explore Products</a
+        >
+        <a
+          href="/factory"
+          class="px-8 py-4 border border-white/30 text-white rounded-full font-medium hover:bg-white/10 transition"
+          >Visit Our Factory</a
+        >
+      </div>
+    </div>
+  </section>
+
+  {
+    statsData.length > 0 && (
+      <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+          <p class="text-center text-sm font-medium text-sky-600 tracking-wide uppercase">{stats.title}</p>
+          <div class="mt-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+            {statsData.map((s: any) => (
+              <div class="text-center">
+                <div class="text-3xl md:text-4xl font-bold text-gray-900">{s.amount}</div>
+                <div class="mt-2 text-sm text-gray-500">{s.title}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  {
+    foundingParagraphs.length > 0 && (
+      <section class="py-24 px-6 bg-gray-50">
+        <div class="max-w-4xl mx-auto">
+          <p class="text-sm font-medium text-sky-600 tracking-wide uppercase">{contentFounding.tagline}</p>
+          <h2 class="mt-4 text-3xl font-semibold text-gray-900">{contentFounding.title}</h2>
+          <p class="mt-4 text-lg text-gray-500">{contentFounding.subtitle}</p>
+          <div class="mt-8 space-y-4 text-gray-600 leading-relaxed">
+            {foundingParagraphs.map((p: string) => (
+              <p>{p}</p>
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  {
+    timeline.length > 0 && (
+      <section class="py-24 px-6">
+        <div class="max-w-5xl mx-auto">
+          <div class="text-center mb-16">
+            <p class="text-sm font-medium text-sky-600 tracking-wide uppercase">Brand Journey</p>
+            <h2 class="mt-4 text-3xl font-semibold text-gray-900">Paddle Board Overstock Timeline</h2>
+          </div>
+          <div class="relative">
+            <div class="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-gray-300 md:-translate-x-px" />
+            <div class="space-y-12">
+              {timeline.map((entry: any) => {
+                const idx = timeline.indexOf(entry);
+                const isLeft = idx % 2 === 0;
+                return (
+                  <div
+                    class={`relative flex flex-col md:flex-row items-start gap-6 ${isLeft ? '' : 'md:flex-row-reverse'}`}
+                  >
+                    <div class="hidden md:flex md:w-1/2 justify-end">
+                      {isLeft && (
+                        <div class="bg-white rounded-2xl border border-gray-200 p-6 max-w-md">
+                          <span class="text-sm font-bold text-sky-600">{entry.year}</span>
+                          <h3 class="mt-2 text-lg font-semibold text-gray-900">{entry.title}</h3>
+                          <p class="mt-2 text-sm text-gray-500 leading-relaxed">{entry.body}</p>
+                        </div>
+                      )}
+                    </div>
+                    <div class="relative z-10 flex-shrink-0 w-16 h-16 rounded-full bg-sky-600 text-white flex items-center justify-center text-sm font-bold shadow-lg mx-auto md:mx-0">
+                      {entry.year.slice(2)}
+                    </div>
+                    <div class="md:w-1/2">
+                      {!isLeft && (
+                        <div class="bg-white rounded-2xl border border-gray-200 p-6 max-w-md">
+                          <span class="text-sm font-bold text-sky-600">{entry.year}</span>
+                          <h3 class="mt-2 text-lg font-semibold text-gray-900">{entry.title}</h3>
+                          <p class="mt-2 text-sm text-gray-500 leading-relaxed">{entry.body}</p>
+                        </div>
+                      )}
+                    </div>
+                    <div class="md:hidden bg-white rounded-2xl border border-gray-200 p-6 w-full">
+                      <span class="text-sm font-bold text-sky-600">{entry.year}</span>
+                      <h3 class="mt-2 text-lg font-semibold text-gray-900">{entry.title}</h3>
+                      <p class="mt-2 text-sm text-gray-500 leading-relaxed">{entry.body}</p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  {
+    growthParagraphs.length > 0 && (
+      <section class="py-24 px-6 bg-gray-50">
+        <div class="max-w-4xl mx-auto">
+          <p class="text-sm font-medium text-sky-600 tracking-wide uppercase">{contentGrowth.tagline}</p>
+          <h2 class="mt-4 text-3xl font-semibold text-gray-900">{contentGrowth.title}</h2>
+          <p class="mt-4 text-lg text-gray-500">{contentGrowth.subtitle}</p>
+          <div class="mt-8 space-y-4 text-gray-600 leading-relaxed">
+            {growthParagraphs.map((p: string) => (
+              <p>{p}</p>
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  {
+    founderStory.length > 0 && (
+      <section class="py-24 px-6 bg-white border-t border-gray-100">
+        <div class="max-w-4xl mx-auto">
+          <div class="grid md:grid-cols-5 gap-12 items-start">
+            <div class="md:col-span-2">
+              <div class="w-full aspect-[3/4] bg-gray-100 rounded-2xl flex items-center justify-center">
+                <div class="text-center p-8">
+                  <div class="w-20 h-20 mx-auto rounded-full bg-sky-100 flex items-center justify-center">
+                    <span class="text-3xl font-bold text-sky-600">DC</span>
+                  </div>
+                  <p class="mt-4 text-sm font-medium text-gray-900">David Chen</p>
+                  <p class="text-xs text-gray-500">Founder & CEO</p>
+                </div>
+              </div>
+            </div>
+            <div class="md:col-span-3">
+              <p class="text-sm font-medium text-sky-600 tracking-wide uppercase">{founder.tagline}</p>
+              <h2 class="mt-2 text-3xl font-semibold text-gray-900">{founder.title}</h2>
+              <p class="mt-2 text-base text-gray-500">{founder.subtitle}</p>
+              <div class="mt-6 space-y-4 text-gray-600 leading-relaxed">
+                {founderStory.map((p: string) => (
+                  <p>{p}</p>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  {
+    philosophyPillars.length > 0 && (
+      <section class="max-w-4xl mx-auto py-24 px-6">
+        <div class="text-center max-w-3xl mx-auto">
+          <p class="text-sm font-medium text-sky-600 tracking-wide uppercase">{philosophy.tagline}</p>
+          <h2 class="mt-4 text-3xl font-semibold text-gray-900">{philosophy.title}</h2>
+          <p class="mt-4 text-lg text-gray-500 leading-relaxed">{philosophy.body}</p>
+        </div>
+        <div class="mt-12 grid md:grid-cols-4 gap-6">
+          {philosophyPillars.map((p: any) => (
+            <div class="bg-white rounded-2xl border border-gray-200 p-8 text-center hover:shadow-lg transition-shadow">
+              <h3 class="text-lg font-bold text-gray-900">{p.title}</h3>
+              <p class="mt-3 text-sm text-gray-500 leading-relaxed">{p.body}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    )
+  }
+
+  {
+    engineeringAreas.length > 0 && (
+      <section class="bg-gray-50 py-24 px-6">
+        <div class="max-w-5xl mx-auto">
+          <div class="text-center mb-16">
+            <p class="text-sm font-medium text-sky-600 tracking-wide uppercase">{engineeringDna.tagline}</p>
+            <h2 class="mt-4 text-3xl font-semibold text-gray-900">{engineeringDna.title}</h2>
+          </div>
+          <div class="grid md:grid-cols-2 gap-8">
+            {engineeringAreas.map((area: any) => (
+              <div class="bg-white rounded-2xl border border-gray-200 p-8">
+                <h3 class="text-xl font-bold text-gray-900">{area.title}</h3>
+                <p class="mt-3 text-gray-500 leading-relaxed">{area.body}</p>
+                {area.items?.length > 0 && (
+                  <div class="mt-4 flex flex-wrap gap-2">
+                    {area.items.map((item: string) => (
+                      <span class="text-xs font-medium px-3 py-1.5 bg-sky-50 text-sky-700 rounded-full">{item}</span>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  {
+    manufacturing.title && (
+      <section class="py-24 px-6">
+        <div class="max-w-5xl mx-auto">
+          <div class="text-center mb-16">
+            <p class="text-sm font-medium text-sky-600 tracking-wide uppercase">{tSignals.tagline}</p>
+            <h2 class="mt-4 text-3xl font-semibold text-gray-900">{tSignals.title}</h2>
+          </div>
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-2xl border border-gray-200 p-8">
+              <h3 class="text-lg font-bold text-gray-900">{manufacturing.title}</h3>
+              <p class="mt-3 text-sm text-gray-500 leading-relaxed">{manufacturing.body}</p>
+              {manufacturing.stats?.length > 0 && (
+                <div class="mt-6 space-y-3">
+                  {manufacturing.stats.map((s: any) => (
+                    <div class="flex justify-between items-center">
+                      <span class="text-sm text-gray-500">{s.label}</span>
+                      <span class="text-lg font-bold text-sky-600">{s.value}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+            <div class="bg-white rounded-2xl border border-gray-200 p-8">
+              <h3 class="text-lg font-bold text-gray-900">{quality.title}</h3>
+              <p class="mt-3 text-sm text-gray-500 leading-relaxed">{quality.body}</p>
+              {quality.items?.length > 0 && (
+                <ul class="mt-6 space-y-2">
+                  {quality.items.map((item: string) => (
+                    <li class="text-sm text-gray-600 flex items-start gap-2">
+                      <span class="text-sky-600 mt-0.5 shrink-0">&#10003;</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+            <div class="bg-white rounded-2xl border border-gray-200 p-8">
+              <h3 class="text-lg font-bold text-gray-900">{globalSection.title}</h3>
+              <p class="mt-3 text-sm text-gray-500 leading-relaxed">{globalSection.body}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  {
+    strengths.length > 0 && (
+      <section class="bg-gray-50 py-24 px-6">
+        <div class="max-w-4xl mx-auto">
+          <p class="text-sm font-medium text-sky-600 tracking-wide uppercase text-center">{marketPos.tagline}</p>
+          <h2 class="mt-4 text-3xl font-semibold text-gray-900 text-center">{marketPos.title}</h2>
+          <p class="mt-4 text-lg text-gray-500 text-center max-w-3xl mx-auto">{marketPos.position}</p>
+          <div class="mt-12 grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-lg font-bold text-gray-900 mb-4">Strengths</h3>
+              <ul class="space-y-3">
+                {strengths.map((s: string) => (
+                  <li class="flex items-start gap-3 text-gray-600">
+                    <span class="text-sky-600 mt-1 shrink-0">&#9656;</span>
+                    <span>{s}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-gray-900 mb-4">Best For</h3>
+              <ul class="space-y-3">
+                {bestFors.map((b: string) => (
+                  <li class="flex items-start gap-3 text-gray-600">
+                    <span class="text-sky-600 mt-1 shrink-0">&#9656;</span>
+                    <span>{b}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  <section class="py-16 px-6 bg-gray-50 border-t border-gray-100">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="flex flex-wrap justify-center gap-6 text-sm">
+        <a href="/engineering-team" class="text-sky-600 hover:text-sky-800 font-medium underline underline-offset-4"
+          >&rarr; Meet Our R&D Engineering Team</a
+        >
+        <a href="/trust" class="text-sky-600 hover:text-sky-800 font-medium underline underline-offset-4"
+          >&rarr; View Certifications & Quality Assurance</a
+        >
+        <a href="/factory" class="text-sky-600 hover:text-sky-800 font-medium underline underline-offset-4"
+          >&rarr; Tour Our Manufacturing Facility</a
+        >
+      </div>
+    </div>
+  </section>
+
+  {
+    cta.title && (
+      <section class="py-24 px-6 bg-gradient-to-br from-[#001830] to-[#003355] text-white text-center">
+        <div class="max-w-3xl mx-auto">
+          <h2 class="text-3xl md:text-4xl font-bold leading-tight" set:html={cta.title} />
+          <p class="mt-4 text-lg text-white/70">{cta.subtitle}</p>
+          {ctaActions?.length > 0 && (
+            <div class="mt-10 flex justify-center gap-4 flex-wrap">
+              {ctaActions.map((action: any) => (
+                <a
+                  href={action.href}
+                  class={
+                    action.variant === 'primary'
+                      ? 'px-8 py-4 bg-white text-gray-900 rounded-full font-semibold hover:bg-gray-100 transition shadow-xl'
+                      : 'px-8 py-4 border border-white/30 text-white rounded-full font-medium hover:bg-white/10 transition'
+                  }
+                >
+                  {action.text}
+                </a>
+              ))}
+            </div>
+          )}
+        </div>
+      </section>
+    )
+  }
+</Layout>

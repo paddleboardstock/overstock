@@ -22,7 +22,7 @@ const ROOT = path.resolve(__dirname, '..');
 const PLAN = {
   'oem-odm': ['sv', 'da', 'el', 'no', 'ru', 'nl', 'fi', 'pl', 'ar', 'pt', 'ja'],
   'quality-control': ['sv', 'da', 'el', 'no', 'ru', 'nl', 'fi', 'pl', 'ar', 'pt', 'ja'],
-  'why-aquafarer': ['sv', 'da', 'el', 'no', 'ru', 'nl', 'fi', 'pl', 'ar', 'pt', 'ja'],
+  'why-paddleboardoverstock': ['sv', 'da', 'el', 'no', 'ru', 'nl', 'fi', 'pl', 'ar', 'pt', 'ja'],
   'oem-odm-blueprint': ['sv', 'da', 'el', 'no', 'ru', 'nl', 'fi', 'pl', 'ar', 'pt', 'ja', 'de', 'fr', 'es', 'it'],
 };
 
@@ -60,7 +60,7 @@ const SKIP_EXACT = new Set(['primary', 'Best Seller', 'Professional', 'Premium',
 const PROTECT_PATTERNS = [
   /<\/?[a-zA-Z][^>]*>/g, // inline HTML tags
   /https?:\/\/[^\s<>"']+/g, // URLs
-  /\bAquafarer\b/g,
+  /\bPaddle Board Overstock\b/g,
   /\bRIB\b/g,
   /\bRIBs\b/g,
   /\bCE\b/g,

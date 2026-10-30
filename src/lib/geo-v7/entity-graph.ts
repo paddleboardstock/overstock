@@ -13,13 +13,13 @@ export interface EntityRelationship {
 
 export const entityGraph: EntityNode[] = [
   {
-    id: 'aquafarer',
+    id: 'paddleboardoverstock',
     type: 'brand',
-    name: 'Aquafarer',
+    name: 'Paddle Board Overstock',
     description:
       'Chinese manufacturer of RIB boats, inflatable boats, and SUP boards with full OEM/ODM capability for B2B buyers and brands.',
     relationships: [
-      { type: 'parent', targetId: 'aquafarer-llc' },
+      { type: 'parent', targetId: 'paddleboardoverstock-llc' },
       { type: 'operatesIn', targetId: 'marine-recreation' },
       { type: 'operatesIn', targetId: 'outdoor-sports' },
       { type: 'operatesIn', targetId: 'marine-manufacturing' },
@@ -33,12 +33,12 @@ export const entityGraph: EntityNode[] = [
     ],
   },
   {
-    id: 'aquafarer-llc',
+    id: 'paddleboardoverstock-llc',
     type: 'brand',
-    name: 'Aquafarer LLC',
+    name: 'Weihai Dongjilian Co., Ltd.',
     description:
-      'Global operator of the Aquafarer brand, based in New Mexico, USA, with manufacturing in Qingdao, China.',
-    relationships: [{ type: 'child', targetId: 'aquafarer' }],
+      'Global operator of the Paddle Board Overstock brand, based in New Mexico, USA, with manufacturing in Qingdao, China.',
+    relationships: [{ type: 'child', targetId: 'paddleboardoverstock' }],
   },
   {
     id: 'marine-recreation',
@@ -68,7 +68,7 @@ export const entityGraph: EntityNode[] = [
     name: 'Inflatable Boats',
     description: 'Portable, inflatable watercraft including dinghies, RIBs, fishing boats, and tender boats.',
     relationships: [
-      { type: 'belongsTo', targetId: 'aquafarer' },
+      { type: 'belongsTo', targetId: 'paddleboardoverstock' },
       { type: 'uses', targetId: 'drop-stitch' },
       { type: 'uses', targetId: 'pvc-fabric' },
       { type: 'uses', targetId: 'reinforced-structure' },
@@ -80,7 +80,7 @@ export const entityGraph: EntityNode[] = [
     name: 'SUP Boards',
     description: 'Stand-up paddle boards including all-around, touring, yoga, fishing, and adventure SUP models.',
     relationships: [
-      { type: 'belongsTo', targetId: 'aquafarer' },
+      { type: 'belongsTo', targetId: 'paddleboardoverstock' },
       { type: 'uses', targetId: 'drop-stitch' },
       { type: 'uses', targetId: 'pvc-fabric' },
     ],
@@ -91,7 +91,7 @@ export const entityGraph: EntityNode[] = [
     name: 'Kayaks',
     description: 'Inflatable kayaks for recreational touring, river running, and expedition travel.',
     relationships: [
-      { type: 'belongsTo', targetId: 'aquafarer' },
+      { type: 'belongsTo', targetId: 'paddleboardoverstock' },
       { type: 'uses', targetId: 'drop-stitch' },
       { type: 'uses', targetId: 'pvc-fabric' },
     ],
@@ -103,7 +103,7 @@ export const entityGraph: EntityNode[] = [
     description:
       'OEM/ODM custom-designed inflatable watercraft for brand partners, commercial operators, and specialized applications.',
     relationships: [
-      { type: 'belongsTo', targetId: 'aquafarer' },
+      { type: 'belongsTo', targetId: 'paddleboardoverstock' },
       { type: 'uses', targetId: 'reinforced-structure' },
       { type: 'uses', targetId: 'manufacturing-process' },
     ],
@@ -216,7 +216,7 @@ export function getEntityGraphJsonLd(): object {
                     : 'Thing',
         name: node.name,
         description: node.description,
-        identifier: `aquafarer:entity:${node.id}`,
+        identifier: `paddleboardoverstock:entity:${node.id}`,
       };
       if (node.relationships.length > 0) {
         base.relatedEntity = node.relationships.map((r) => ({

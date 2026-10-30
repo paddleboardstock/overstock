@@ -18,6 +18,6 @@ tags:
 entityType: case-use
 ---
 
-Family water recreation is a core use case for Aquafarer's larger inflatables. The Kayak Tandem seats two and the AirDeck 360 carries up to five people, making them ideal for family outings.
+Family water recreation is a core use case for Paddle Board Overstock's larger inflatables. The Kayak Tandem seats two and the AirDeck 360 carries up to five people, making them ideal for family outings.
 
 All family recreation requires proper safety equipment including CE-certified life vests for all occupants, especially children.

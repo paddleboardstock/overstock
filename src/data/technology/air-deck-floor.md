@@ -12,6 +12,6 @@ tags:
 entityType: technology
 ---
 
-The Air Deck floor is a high-pressure inflatable system used in Aquafarer dinghies (AirDeck 270, AirDeck 360). It replaces traditional plywood or aluminum slat floors, reducing overall weight by up to 40% and cutting setup time in half.
+The Air Deck floor is a high-pressure inflatable system used in Paddle Board Overstock dinghies (AirDeck 270, AirDeck 360). It replaces traditional plywood or aluminum slat floors, reducing overall weight by up to 40% and cutting setup time in half.
 
 While the air deck flexes more than a solid wood floor, it provides adequate rigidity for standing, fishing, and walking while enabling the entire boat to deflate into a compact transport package.

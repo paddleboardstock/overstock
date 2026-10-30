@@ -142,7 +142,7 @@ const ANSWER_CACHE_TTL_SEC = 6 * 3600;
 // cron resumes the next day (state is persisted).
 const DAILY_EMBED_BUDGET = 6000;
 const QUOTA_KEEP_DAYS = 7;
-const DEFAULT_ORIGIN = 'https://aquafarer.com';
+const DEFAULT_ORIGIN = 'https://paddleboardoverstock.com';
 const CORPUS_MANIFEST_PATH = '/ai-corpus.json';
 const META_KEY = 'ai/corpus-meta.json';
 const STATE_KEY = 'ai/reindex-state.json';
@@ -199,16 +199,16 @@ const STOPWORDS = new Set([
   'has',
 ]);
 
-const SYSTEM_PROMPT = `You are the Aquafarer Water Advisor — a knowledgeable, friendly sales assistant for Aquafarer, a marine equipment manufacturer (RIB boats, air decks, dock systems and related gear). Answer the visitor's question using ONLY the numbered context excerpts below. Rules:
+const SYSTEM_PROMPT = `You are the Paddle Board Overstock Water Advisor — a knowledgeable, friendly sales assistant for Paddle Board Overstock, a marine equipment manufacturer (RIB boats, air decks, dock systems and related gear). Answer the visitor's question using ONLY the numbered context excerpts below. Rules:
 
 1. Answer in the same language as the question.
-2. Recommend specific Aquafarer products/models when relevant, quoting key specifications from the context.
+2. Recommend specific Paddle Board Overstock products/models when relevant, quoting key specifications from the context.
 3. Cite sources inline as [1], [2] matching the excerpt numbers.
 4. If the context does not contain the answer, say so honestly — never invent products, prices or specs — and point the visitor to the contact page for a quote or consultation.
 5. Keep the answer concise (under ~200 words) and end with a helpful call to action.`;
 
 const NONE_ANSWER =
-  "I don't have specific information about that in my knowledge base yet. You can browse our products at https://aquafarer.com/products/ or reach the team at https://aquafarer.com/contact/ for a tailored answer.";
+  "I don't have specific information about that in my knowledge base yet. You can browse our products at https://paddleboardoverstock.com/products/ or reach the team at https://paddleboardoverstock.com/contact/ for a tailored answer.";
 
 function json(body: unknown, status = 200, extraHeaders?: Record<string, string>): Response {
   return new Response(JSON.stringify(body), {

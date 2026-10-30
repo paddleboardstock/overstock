@@ -41,9 +41,12 @@ const localizedTrustItems = trust.items?.map((item: any) => ({
 }));
 
 const metadata = {
-  title: localizePageTitle(page, `Authority Center — ${SITE.name} | Why Industry Professionals Trust Aquafarer`),
+  title: localizePageTitle(
+    page,
+    `Authority Center — ${SITE.name} | Why Industry Professionals Trust Paddle Board Overstock`
+  ),
   description:
-    'Certifications, team expertise, manufacturing credentials, and proof of quality. Everything that makes Aquafarer a trusted commercial RIB manufacturer.',
+    'Certifications, team expertise, manufacturing credentials, and proof of quality. Everything that makes Paddle Board Overstock a trusted commercial RIB manufacturer.',
 };
 const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: 'Authority Center' }];
 
@@ -53,7 +56,7 @@ const faqSchema = JSON.stringify({
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'What authority does Aquafarer have in the marine industry?',
+      name: 'What authority does Paddle Board Overstock have in the marine industry?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: '12+ years manufacturing, 64 CE-certified models, ISO 9001:2015 (SGS), BSCI audit, 200-300 workers, 15,000 annual units shipped to 50+ countries.',
@@ -107,14 +110,14 @@ const faqSchema = JSON.stringify({
   <JsonLd
     type="Service"
     service={{
-      name: 'Aquafarer Authority Center — Trust & Credentials',
+      name: 'Paddle Board Overstock Authority Center — Trust & Credentials',
       description:
         'Certifications, team expertise, manufacturing credentials, and quality evidence for commercial RIB manufacturing.',
       serviceType: 'Brand Authority',
       areaServed: ['Global'],
       url: `/${lang}/authority`,
       items: [
-        { name: 'About Aquafarer', description: 'Company history and manufacturing story since 2012' },
+        { name: 'About Paddle Board Overstock', description: 'Company history and manufacturing story since 2012' },
         { name: 'Marine Expertise', description: 'Material science and engineering capabilities' },
         { name: 'Global Presence', description: '50+ countries served worldwide' },
         { name: 'Certifications', description: 'CE, ISO 9001, UKCA, BSCI, REACH compliance' },

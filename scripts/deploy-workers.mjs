@@ -1,8 +1,8 @@
 import { spawn } from 'node:child_process';
 
-// Deploy all 5 workers in parallel instead of sequentially (each deploy
-// independently uploads a different worker; ~5x faster wall-clock).
-const WORKERS = ['contact-worker', 'ai-worker', 'admin-worker', 'news-worker', 'automation-worker'];
+// Deploy all 6 workers in parallel instead of sequentially (each deploy
+// independently uploads a different worker; ~6x faster wall-clock).
+const WORKERS = ['contact-worker', 'ai-worker', 'admin-worker', 'news-worker', 'automation-worker', 'shop-worker'];
 const NPX = process.platform === 'win32' ? 'npx.cmd' : 'npx';
 
 async function deploy(name) {

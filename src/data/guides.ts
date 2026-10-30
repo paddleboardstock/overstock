@@ -47,7 +47,7 @@ export const guides: GuideRecord[] = [
       },
       {
         q: 'What PSI should I inflate to?',
-        a: 'Aquafarer boards recommend 12-15 PSI. At 15 PSI the board achieves maximum rigidity comparable to a hard board. Always stay within the rated pressure range printed on the board.',
+        a: 'Paddle Board Overstock boards recommend 12-15 PSI. At 15 PSI the board achieves maximum rigidity comparable to a hard board. Always stay within the rated pressure range printed on the board.',
       },
     ],
     relatedProducts: [],
@@ -280,7 +280,7 @@ export const guides: GuideRecord[] = [
       },
       {
         q: 'How do I repair a puncture?',
-        a: 'Clean the area, cut a patch with rounded corners, apply adhesive, press firmly, and wait 24 hours before inflating. Aquafarer boards include a repair kit.',
+        a: 'Clean the area, cut a patch with rounded corners, apply adhesive, press firmly, and wait 24 hours before inflating. Paddle Board Overstock boards include a repair kit.',
       },
       {
         q: 'How often should I check the valve?',

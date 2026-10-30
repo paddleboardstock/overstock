@@ -10,6 +10,9 @@ import ToBlogLink from '~/components/blog/ToBlogLink.astro';
 import JsonLd from '~/components/common/JsonLd.astro';
 import Tldr from '~/components/common/Tldr.astro';
 import TrustBadges from '~/components/common/TrustBadges.astro';
+import ProductGradeBadge from '~/components/widgets/ProductGradeBadge.astro';
+import ProductFullSet from '~/components/widgets/ProductFullSet.astro';
+import ProductWhatsAppBulk from '~/components/widgets/ProductWhatsAppBulk.astro';
 
 import { findRelatedProducts, getStaticPathsProduct, CATEGORY_SLUG_TO_URL } from '~/utils/products';
 import { findImage } from '~/utils/images';
@@ -41,13 +44,21 @@ const gallery = await Promise.all(
 const related = await findRelatedProducts(product, 3);
 const relatedGuides = rec ? guides.filter((g) => g.relatedProducts.includes(rec.id)).slice(0, 3) : [];
 
+const priceAmount = product.price?.amount ? Number(String(product.price.amount).replace(/[^0-9.]/g, '')) : NaN;
+const hasPrice = Number.isFinite(priceAmount) && priceAmount > 0;
+const priceDisplay = hasPrice
+  ? `$${priceAmount % 1 === 0 ? priceAmount.toFixed(0) : priceAmount.toFixed(2)}`
+  : 'Contact for price';
+const priceCents = hasPrice ? Math.round(priceAmount * 100) : 0;
+const currency = product.price?.currency || 'USD';
+
 const defaultTitle = product.categoryLabel
   ? `${product.title} — ${product.categoryLabel} | ${SITE.name}`
   : `${product.title} | ${SITE.name}`;
 const defaultDesc =
   (product.summary ?? product.description)
-    ? `${product.summary ?? product.description} — Contact ${SITE.name} for pricing, specs, and ordering.`
-    : `Explore the ${product.title} from ${SITE.name}. Contact us for pricing, technical specs, and ordering information.`;
+    ? `${product.summary ?? product.description} — ${hasPrice ? `${priceDisplay} ${currency},` : ''} in stock at ${SITE.name} with secure Stripe & PayPal checkout and worldwide shipping.`
+    : `Shop the ${product.title} at ${SITE.name}${hasPrice ? ` — ${priceDisplay} ${currency},` : ''} overstock and clearance deals with secure checkout and worldwide shipping.`;
 
 const metadata = merge(
   {
@@ -79,6 +90,14 @@ const productCrumbs = [
 
 const specRows = product.specs ?? [];
 
+// Full-set presentation (shichang.txt): surface the "Included" spec as a
+// what's-in-the-box checklist instead of selling a bare board.
+const includedSpec = product.specs?.find((s: { label?: string }) => s.label === 'Included');
+const inTheBoxItems = (includedSpec?.value || '')
+  .split(',')
+  .map((v: string) => v.trim())
+  .filter(Boolean);
+
 const productCompliance = getProductCompliance(product.category);
 const productMentions = rec ? getProductMentionsJsonLd(rec.id) : [];
 const businessAudience = productBusinessData[rec?.id || '']?.bestFor
@@ -87,6 +106,14 @@ const businessAudience = productBusinessData[rec?.id || '']?.bestFor
     )
   : [];
 const specEntries: Array<{ name: string; value: string }> = [
+  ...(product.grade
+    ? [
+        {
+          name: 'Grade',
+          value: product.grade === 'B' ? 'Factory seconds (Grade B)' : 'Brand-new overstock (Grade A)',
+        },
+      ]
+    : []),
   ...(rec?.ai_specs
     ? Object.entries(rec.ai_specs)
         .filter(([, v]) => v)
@@ -317,6 +344,30 @@ const productExtraData: Record<string, unknown> = {
                 <p class="mt-3 text-base text-gray-600 dark:text-slate-400 leading-relaxed">{product.summary}</p>
               )
             }
+            <div class="mt-5 flex items-baseline gap-3">
+              <span class="text-4xl font-bold text-gray-900 dark:text-slate-100 font-heading">{priceDisplay}</span>
+              <span class="text-sm font-medium text-gray-400 dark:text-slate-500 uppercase">{currency}</span>
+              {
+                product.grade && (
+                  <span class="ml-2">
+                    <ProductGradeBadge grade={product.grade} />
+                  </span>
+                )
+              }
+              {
+                product.inStock ? (
+                  <span class="ml-auto inline-flex items-center gap-1.5 px-3 py-1 bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-xs font-semibold rounded-full">
+                    <span class="w-1.5 h-1.5 rounded-full bg-green-500" />
+                    In Stock
+                  </span>
+                ) : (
+                  <span class="ml-auto inline-flex items-center gap-1.5 px-3 py-1 bg-gray-100 dark:bg-slate-800 text-gray-500 dark:text-slate-400 text-xs font-semibold rounded-full">
+                    Out of Stock
+                  </span>
+                )
+              }
+            </div>
+            {product.price?.note && <p class="mt-2 text-sm text-gray-500 dark:text-slate-400">{product.price.note}</p>}
           </div>
 
           {/* Environment & Water Condition Tags */}
@@ -367,6 +418,9 @@ const productExtraData: Record<string, unknown> = {
             )
           }
 
+          {/* What's in the box — full-set presentation */}
+          <ProductFullSet items={inTheBoxItems} grade={product.grade} />
+
           {/* Full Specs Toggle */}
           {
             specRows.length > 6 && (
@@ -389,19 +443,52 @@ const productExtraData: Record<string, unknown> = {
 
           {/* CTA Buttons */}
           <div class="flex flex-col sm:flex-row gap-3 pt-2">
-            <a
-              href={`/contact?product=${encodeURIComponent(product.title)}`}
-              class="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-gray-900 dark:bg-slate-700 text-white font-semibold rounded-full hover:bg-gray-800 dark:hover:bg-slate-600 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-sm"
+            <button
+              type="button"
+              class:list={[
+                'inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-primary text-white font-semibold rounded-full transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-sm hover:opacity-90',
+                { 'opacity-50 cursor-not-allowed': !product.inStock },
+              ]}
+              data-add-to-cart
+              data-cart-slug={product.slug}
+              data-cart-title={product.title}
+              data-cart-price={priceCents}
+              data-cart-currency={currency}
+              data-cart-image={product.image || ''}
+              disabled={!product.inStock}
             >
-              <Icon name="tabler:message-circle" class="w-5 h-5" />
-              Request an OEM Quote
-            </a>
-            <a
-              href={`/contact?product=${encodeURIComponent(product.title)}&sample=1`}
-              class="inline-flex items-center justify-center gap-2 px-8 py-3.5 border-2 border-gray-200 dark:border-slate-600 text-gray-700 dark:text-slate-300 font-medium rounded-full hover:border-gray-300 dark:hover:border-slate-500 hover:bg-gray-50 dark:hover:bg-slate-800 transition-all text-sm"
+              <Icon name="tabler:shopping-cart" class="w-5 h-5" />
+              Add to Cart
+            </button>
+            <button
+              type="button"
+              class:list={[
+                'inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-gray-900 dark:bg-slate-700 text-white font-semibold rounded-full transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-sm hover:bg-gray-800 dark:hover:bg-slate-600',
+                { 'opacity-50 cursor-not-allowed': !product.inStock },
+              ]}
+              data-buy-now
+              data-cart-slug={product.slug}
+              data-cart-title={product.title}
+              data-cart-price={priceCents}
+              data-cart-currency={currency}
+              data-cart-image={product.image || ''}
+              disabled={!product.inStock}
             >
-              Get a Custom Sample
-            </a>
+              <Icon name="tabler:credit-card" class="w-5 h-5" />
+              Buy Now
+            </button>
+          </div>
+          {/* WhatsApp bulk / wholesale CTA */}
+          <ProductWhatsAppBulk title={product.title} />
+          <div class="flex items-center gap-4 text-xs text-gray-400 dark:text-slate-500 pt-1">
+            <span class="inline-flex items-center gap-1.5">
+              <Icon name="tabler:shield-check" class="w-4 h-4" />
+              Secure Stripe &amp; PayPal checkout
+            </span>
+            <span class="inline-flex items-center gap-1.5">
+              <Icon name="tabler:truck" class="w-4 h-4" />
+              Worldwide shipping
+            </span>
           </div>
         </div>
       </div>
@@ -808,20 +895,27 @@ const productExtraData: Record<string, unknown> = {
     <div class="max-w-3xl mx-auto px-4 sm:px-6 py-14 md:py-18 text-center">
       <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white mb-4">Interested in {product.title}?</h2>
       <p class="text-lg text-white/70 mb-8 max-w-xl mx-auto">
-        Contact our team for detailed specifications, pricing, and ordering information.
+        Order today — secure Stripe &amp; PayPal checkout, worldwide shipping, and up to 60% off retail on overstock and
+        clearance stock.
       </p>
       <div class="flex flex-wrap items-center justify-center gap-4">
-        <a
-          href={`/contact?product=${encodeURIComponent(product.title)}`}
+        <button
+          type="button"
           class="inline-flex items-center gap-2 px-8 py-4 bg-white text-gray-900 font-semibold rounded-full hover:bg-gray-100 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-0.5"
+          data-add-to-cart
+          data-cart-slug={product.slug}
+          data-cart-title={product.title}
+          data-cart-price={priceCents}
+          data-cart-currency={currency}
+          data-cart-image={product.image || ''}
         >
-          Request an OEM Quote
-        </a>
+          Add to Cart
+        </button>
         <a
-          href={`/contact?product=${encodeURIComponent(product.title)}&sample=1`}
+          href="/contact"
           class="inline-flex items-center gap-2 px-8 py-4 border-2 border-white/30 text-white font-medium rounded-full hover:bg-white/10 transition-all"
         >
-          Get a Custom Sample
+          Contact Us
         </a>
       </div>
     </div>

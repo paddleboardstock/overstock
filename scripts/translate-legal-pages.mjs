@@ -48,7 +48,7 @@ const GRAD_LABELS = ['De', 'Es', 'Fr', 'It', 'Cs', 'Sv', 'Da', 'El', 'No', 'Ru',
 const SITE_NAME =
   (fs.readFileSync(path.join(ROOT, 'src/config.yaml'), 'utf8').match(/^ {2}name: (.+)$/m) || [])[1]
     ?.trim()
-    .replace(/^['"]|['"]$/g, '') || 'Aquafarer';
+    .replace(/^['"]|['"]$/g, '') || 'Paddle Board Overstock';
 
 const argOf = (n) => {
   const a = process.argv.find((s) => s.startsWith(`--${n}=`));

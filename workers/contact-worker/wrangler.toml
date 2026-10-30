@@ -1,9 +1,9 @@
-name = "aquafarer-contact"
+name = "paddleboardoverstock-contact"
 main = "index.ts"
 compatibility_date = "2026-07-08"
 compatibility_flags = ["nodejs_compat"]
 
-routes = [{ pattern = "aquafarer.com/api/contact*", zone_name = "aquafarer.com" }]
+routes = [{ pattern = "paddleboardoverstock.com/api/contact*", zone_name = "paddleboardoverstock.com" }]
 
 # Secrets (set via `wrangler secret put`, NOT here):
 #   CONTACT_RESEND_API_KEY  — Resend API key for the admin notification email
@@ -11,10 +11,10 @@ routes = [{ pattern = "aquafarer.com/api/contact*", zone_name = "aquafarer.com" 
 #   CONTACT_FROM_EMAIL      — sender email
 #   CONTACT_FROM_NAME       — sender display name
 
-# D1 (created via: wrangler d1 create aquafarer-db) — shared with admin-worker
+# D1 (created via: wrangler d1 create paddleboardoverstock-db) — shared with admin-worker
 [[d1_databases]]
 binding = "DB"
-database_name = "aquafarer-db"
+database_name = "paddleboardoverstock-db"
 database_id = "REPLACE_WITH_D1_DATABASE_ID"
 migrations_dir = "../../migrations"
 
@@ -23,4 +23,4 @@ migrations_dir = "../../migrations"
 # back through the admin-worker (R2 is not public).
 [[r2_buckets]]
 binding = "DATA_BUCKET"
-bucket_name = "aquafarer-data"
+bucket_name = "paddleboardoverstock-data"

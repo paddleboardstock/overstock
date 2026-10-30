@@ -38,7 +38,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         },
         {
           q: 'До какво PSI да надувам?',
-          a: 'Aquafarer Платките препоръчват 12-15PSI. При 15 PSI дъска постига максимална твърдост, сравнима с твърда дъска. Винаги се придържайте към номиналния диапазон на налягане, отпечатан на платката.',
+          a: 'Paddle Board Overstock Платките препоръчват 12-15PSI. При 15 PSI дъска постига максимална твърдост, сравнима с твърда дъска. Винаги се придържайте към номиналния диапазон на налягане, отпечатан на платката.',
         },
       ],
     },
@@ -237,7 +237,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         },
         {
           q: 'Как да поправя спукана гума?',
-          a: 'Почистете зоната, изрежете парче с заоблени ъгли, нанесете лепило, пресувайте здраво и изчакайте 24 часа преди да надуете.Aquafarer Дъските включват комплект за ремонт.',
+          a: 'Почистете зоната, изрежете парче с заоблени ъгли, нанесете лепило, пресувайте здраво и изчакайте 24 часа преди да надуете.Paddle Board Overstock Дъските включват комплект за ремонт.',
         },
         {
           q: 'Колко често трябва да проверявам клапана?',
@@ -574,7 +574,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         },
         {
           q: 'Millele PSI peaksin täitma?',
-          a: 'Aquafarer Lauad soovitavad 12–15 PSIkraadi. 15 kraadi juures PSI saavutab laud maksimaalse jäikuse, mis on võrreldav kõva lauaga. Alati jää plaadile trükitud nimirõhu vahemikku.',
+          a: 'Paddle Board Overstock Lauad soovitavad 12–15 PSIkraadi. 15 kraadi juures PSI saavutab laud maksimaalse jäikuse, mis on võrreldav kõva lauaga. Alati jää plaadile trükitud nimirõhu vahemikku.',
         },
       ],
     },
@@ -771,7 +771,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         },
         {
           q: 'Kuidas auk kinni parandada?',
-          a: 'Puhastage piirkond, lõigake plaastrile ümarad nurgad, kandke liim, suruge tugevalt ja oodake 24 tundi enne pumbamist. Aquafarer lauad sisaldavad parandustarvikut.',
+          a: 'Puhastage piirkond, lõigake plaastrile ümarad nurgad, kandke liim, suruge tugevalt ja oodake 24 tundi enne pumbamist. Paddle Board Overstock lauad sisaldavad parandustarvikut.',
         },
         {
           q: 'Kui sageli peaksin klappi kontrollima?',
@@ -1105,7 +1105,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         },
         {
           q: 'למה PSI כדאי לי לנפח?',
-          a: 'Aquafarer לוחות ממליצים על 12-15PSI. ב-15 PSI הלוח מגיע לקשיחות מקסימלית הדומה ללוח קשה. תמיד הישאר בטווח הלחץ המדורג שמודפס על הלוח.',
+          a: 'Paddle Board Overstock לוחות ממליצים על 12-15PSI. ב-15 PSI הלוח מגיע לקשיחות מקסימלית הדומה ללוח קשה. תמיד הישאר בטווח הלחץ המדורג שמודפס על הלוח.',
         },
       ],
     },
@@ -1297,7 +1297,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         },
         {
           q: "איך מתקנים פנצ'ר?",
-          a: 'נקה את האזור, חתוך טלאי עם פינות מעוגלות, מרח דבק, לחץ היטב והמתין 24 שעות לפני הניפוח.Aquafarer הלוחות כוללים ערכת תיקון.',
+          a: 'נקה את האזור, חתוך טלאי עם פינות מעוגלות, מרח דבק, לחץ היטב והמתין 24 שעות לפני הניפוח.Paddle Board Overstock הלוחות כוללים ערכת תיקון.',
         },
         {
           q: 'באיזו תדירות כדאי לבדוק את השסתום?',
@@ -1619,7 +1619,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         },
         {
           q: 'Na što PSI bih trebao napuhati?',
-          a: 'Aquafarer Preporučuju se 12-15 PSIdasaka. Na 15 PSI daska postiže maksimalnu krutost usporedivu s tvrdom pločom. Uvijek ostanite unutar naznačenog raspona tlaka ispisanog na ploči.',
+          a: 'Paddle Board Overstock Preporučuju se 12-15 PSIdasaka. Na 15 PSI daska postiže maksimalnu krutost usporedivu s tvrdom pločom. Uvijek ostanite unutar naznačenog raspona tlaka ispisanog na ploči.',
         },
       ],
     },
@@ -1818,7 +1818,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         },
         {
           q: 'Kako popraviti probušenje?',
-          a: 'Očistite područje, izrežite zakrpu s zaobljenim kutovima, nanesite ljepilo, čvrsto pritisnite i pričekajte 24 sata prije napuhavanja.Aquafarer Daske uključuju komplet za popravak.',
+          a: 'Očistite područje, izrežite zakrpu s zaobljenim kutovima, nanesite ljepilo, čvrsto pritisnite i pričekajte 24 sata prije napuhavanja.Paddle Board Overstock Daske uključuju komplet za popravak.',
         },
         {
           q: 'Koliko često bih trebao provjeravati ventil?',
@@ -2153,7 +2153,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         },
         {
           q: 'Mire PSI kellene felfújnom?',
-          a: 'Aquafarer A deszkák 12-15 pontot PSIajánlanak. 15 fokozaton PSI a deszka maximális merevséget ér el, amely egy kemény deszkával összehasonlítható. Mindig maradj a táblán leírt névnyomás tartományon belül.',
+          a: 'Paddle Board Overstock A deszkák 12-15 pontot PSIajánlanak. 15 fokozaton PSI a deszka maximális merevséget ér el, amely egy kemény deszkával összehasonlítható. Mindig maradj a táblán leírt névnyomás tartományon belül.',
         },
       ],
     },
@@ -2351,7 +2351,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         },
         {
           q: 'Hogyan javítsam meg a szúrást?',
-          a: 'Tisztítsd meg a területet, vágj egy lekerekített sarkos foltot, alkalmazz ragasztót, nyomd erősen, és várj 24 órát a felfújás előtt.Aquafarer A deszkák javítókészletet tartalmaznak.',
+          a: 'Tisztítsd meg a területet, vágj egy lekerekített sarkos foltot, alkalmazz ragasztót, nyomd erősen, és várj 24 órát a felfújás előtt.Paddle Board Overstock A deszkák javítókészletet tartalmaznak.',
         },
         {
           q: 'Milyen gyakran kell ellenőriznem a szelepet?',
@@ -2690,7 +2690,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         },
         {
           q: 'Ke mana PSI saya harus mengembang?',
-          a: 'Aquafarer Papan direkomendasikan 12-15. PSIPada 15 PSI papan mencapai kekakuan maksimum yang sebanding dengan papan keras. Selalu tetap berada dalam rentang tekanan yang terukur yang tercetak pada papan.',
+          a: 'Paddle Board Overstock Papan direkomendasikan 12-15. PSIPada 15 PSI papan mencapai kekakuan maksimum yang sebanding dengan papan keras. Selalu tetap berada dalam rentang tekanan yang terukur yang tercetak pada papan.',
         },
       ],
     },
@@ -2888,7 +2888,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         },
         {
           q: 'Bagaimana cara saya memperbaiki ban bocor?',
-          a: 'Bersihkan area, potong tambalan dengan sudut membulat, oleskan perekat, tekan dengan kuat, dan tunggu 24 jam sebelum mengembang. Aquafarer papan termasuk kit perbaikan.',
+          a: 'Bersihkan area, potong tambalan dengan sudut membulat, oleskan perekat, tekan dengan kuat, dan tunggu 24 jam sebelum mengembang. Paddle Board Overstock papan termasuk kit perbaikan.',
         },
         {
           q: 'Seberapa sering saya harus memeriksa katup?',
@@ -3225,7 +3225,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         },
         {
           q: '어느 정도 PSI 로 부풀려야 할까요?',
-          a: 'Aquafarer 보드는 12-15를 권장PSI합니다. 15 기준으로 보드 PSI 는 하드 보드와 견줄 만한 최대 강성을 달성합니다. 항상 보드에 인쇄된 정격 압력 범위 내에 머무르세요.',
+          a: 'Paddle Board Overstock 보드는 12-15를 권장PSI합니다. 15 기준으로 보드 PSI 는 하드 보드와 견줄 만한 최대 강성을 달성합니다. 항상 보드에 인쇄된 정격 압력 범위 내에 머무르세요.',
         },
       ],
     },
@@ -3418,7 +3418,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         },
         {
           q: '펑크 난 부분은 어떻게 수리하나요?',
-          a: '부위를 청소하고, 모서리가 둥근 패치를 잘라내고, 접착제를 바른 뒤 단단히 눌러서 24시간 기다렸다가 부풀려야 합니다.Aquafarer 판자에는 수리 키트가 포함되어 있습니다.',
+          a: '부위를 청소하고, 모서리가 둥근 패치를 잘라내고, 접착제를 바른 뒤 단단히 눌러서 24시간 기다렸다가 부풀려야 합니다.Paddle Board Overstock 판자에는 수리 키트가 포함되어 있습니다.',
         },
         {
           q: '밸브를 얼마나 자주 점검해야 하나요?',
@@ -3744,7 +3744,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         },
         {
           q: 'Iki ko PSI turėčiau pripūsti?',
-          a: 'Aquafarer Lentos rekomenduoja 12–15 PSI. Prie 15 PSI lenta pasiekia maksimalų standumą, panašų į kietą lentą. Visada laikykitės nurodyto slėgio diapazono, kuris nurodytas lentoje.',
+          a: 'Paddle Board Overstock Lentos rekomenduoja 12–15 PSI. Prie 15 PSI lenta pasiekia maksimalų standumą, panašų į kietą lentą. Visada laikykitės nurodyto slėgio diapazono, kuris nurodytas lentoje.',
         },
       ],
     },
@@ -3944,7 +3944,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         },
         {
           q: 'Kaip pataisyti pradūrimą?',
-          a: 'Išvalykite vietą, iškirpkite pleistrą su užapvalintais kampais, užtepkite klijų, tvirtai prispauskite ir palaukite 24 valandas prieš pripūsdami.Aquafarer Lentos turi remonto rinkinį.',
+          a: 'Išvalykite vietą, iškirpkite pleistrą su užapvalintais kampais, užtepkite klijų, tvirtai prispauskite ir palaukite 24 valandas prieš pripūsdami.Paddle Board Overstock Lentos turi remonto rinkinį.',
         },
         {
           q: 'Kaip dažnai turėčiau tikrinti vožtuvą?',
@@ -4281,7 +4281,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         },
         {
           q: 'Kādu PSI man vajadzētu piepumpēt?',
-          a: 'Aquafarer dēļi iesaka 12-15 PSI. Pie 15 PSI dēlis sasniedz maksimālo stingrību, salīdzināmu ar cieto dēli. Vienmēr ievērojiet dēlī norādīto maksimālā spiediena diapazonu.',
+          a: 'Paddle Board Overstock dēļi iesaka 12-15 PSI. Pie 15 PSI dēlis sasniedz maksimālo stingrību, salīdzināmu ar cieto dēli. Vienmēr ievērojiet dēlī norādīto maksimālā spiediena diapazonu.',
         },
       ],
     },
@@ -4478,7 +4478,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         },
         {
           q: 'Kā es varu salabot riepu caurumu?',
-          a: 'Notīriet vietu, izgrieziet plāksteri ar noapaļotiem stūriem, uzklājiet līmi, stingri piespiediet un gaidiet 24 stundas pirms piepūšanas.Aquafarer Dēļiem ir iekļauts remonta komplekts.',
+          a: 'Notīriet vietu, izgrieziet plāksteri ar noapaļotiem stūriem, uzklājiet līmi, stingri piespiediet un gaidiet 24 stundas pirms piepūšanas.Paddle Board Overstock Dēļiem ir iekļauts remonta komplekts.',
         },
         {
           q: 'Cik bieži man vajadzētu pārbaudīt vārstu?',
@@ -4813,7 +4813,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         },
         {
           q: 'Apa PSI yang patut saya tiup ke mana?',
-          a: 'Aquafarer Papan mengesyorkan 12-15. PSIPada 15, PSI papan mencapai ketegaran maksimum yang setanding dengan papan keras. Sentiasa kekal dalam julat tekanan yang dinilai yang dicetak pada papan.',
+          a: 'Paddle Board Overstock Papan mengesyorkan 12-15. PSIPada 15, PSI papan mencapai ketegaran maksimum yang setanding dengan papan keras. Sentiasa kekal dalam julat tekanan yang dinilai yang dicetak pada papan.',
         },
       ],
     },
@@ -5012,7 +5012,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         },
         {
           q: 'Bagaimana saya memperbaiki lubang tusukan?',
-          a: 'Bersihkan kawasan berkenaan, potong tampalan dengan sudut bulat, sapu gam, tekan dengan kuat, dan tunggu 24 jam sebelum dipam. Papan Aquafarer termasuk kit pembaikan.',
+          a: 'Bersihkan kawasan berkenaan, potong tampalan dengan sudut bulat, sapu gam, tekan dengan kuat, dan tunggu 24 jam sebelum dipam. Papan Paddle Board Overstock termasuk kit pembaikan.',
         },
         {
           q: 'Berapa kerap saya harus memeriksa injap?',
@@ -5350,7 +5350,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         },
         {
           q: 'La ce PSI ar trebui să umfl?',
-          a: 'Aquafarer Plăcile recomandă 12-15PSI. La 15 PSI , placa atinge rigiditatea maximă comparabilă cu o placă tare. Rămâi întotdeauna în intervalul de presiune nominal imprimat pe placă.',
+          a: 'Paddle Board Overstock Plăcile recomandă 12-15PSI. La 15 PSI , placa atinge rigiditatea maximă comparabilă cu o placă tare. Rămâi întotdeauna în intervalul de presiune nominal imprimat pe placă.',
         },
       ],
     },
@@ -5548,7 +5548,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         },
         {
           q: 'Cum repar o pană?',
-          a: 'Curăță zona, taie o bucată cu colțuri rotunjite, aplică adeziv, apasă ferm și așteaptă 24 de ore înainte de umflare.Aquafarer Plăcile includ un kit de reparații.',
+          a: 'Curăță zona, taie o bucată cu colțuri rotunjite, aplică adeziv, apasă ferm și așteaptă 24 de ore înainte de umflare.Paddle Board Overstock Plăcile includ un kit de reparații.',
         },
         {
           q: 'Cât de des ar trebui să verific supapa?',
@@ -5888,7 +5888,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         },
         {
           q: 'Na čo PSI by som mal nafúknuť?',
-          a: 'Aquafarer Dosky odporúčajú 12-15PSI. Pri 15 PSI dosahuje doska maximálnu tuhosť porovnateľnú s tvrdou doskou. Vždy zostaňte v rámci menovitého tlakového rozsahu vytlačeného na doske.',
+          a: 'Paddle Board Overstock Dosky odporúčajú 12-15PSI. Pri 15 PSI dosahuje doska maximálnu tuhosť porovnateľnú s tvrdou doskou. Vždy zostaňte v rámci menovitého tlakového rozsahu vytlačeného na doske.',
         },
       ],
     },
@@ -6086,7 +6086,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         },
         {
           q: 'Ako opravím defekt?',
-          a: 'Vyčistite miesto, vyrežte záplatu s zaoblenými rohmi, naneste lepidlo, pevne pritlačte a počkajte 24 hodín pred nafúkaním.Aquafarer Dosky obsahujú opravárenskú súpravu.',
+          a: 'Vyčistite miesto, vyrežte záplatu s zaoblenými rohmi, naneste lepidlo, pevne pritlačte a počkajte 24 hodín pred nafúkaním.Paddle Board Overstock Dosky obsahujú opravárenskú súpravu.',
         },
         {
           q: 'Ako často by som mal kontrolovať ventil?',
@@ -6422,7 +6422,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         },
         {
           q: 'Na kaj PSI naj napihnem?',
-          a: 'Aquafarer Deske priporočajo 12-15PSI. Pri 15 PSI deskah deska doseže največjo togost, primerljivo s trdo ploščo. Vedno ostanite znotraj nazivnega tlaka, natisnjenega na plošči.',
+          a: 'Paddle Board Overstock Deske priporočajo 12-15PSI. Pri 15 PSI deskah deska doseže največjo togost, primerljivo s trdo ploščo. Vedno ostanite znotraj nazivnega tlaka, natisnjenega na plošči.',
         },
       ],
     },
@@ -6620,7 +6620,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         },
         {
           q: 'Kako popravim predrto luknjo?',
-          a: 'Očistite območje, izrežite zaplato z zaobljenimi vogali, nanesite lepilo, močno pritisnite in počakajte 24 ur pred napihovanjem.Aquafarer Deske vključujejo komplet za popravila.',
+          a: 'Očistite območje, izrežite zaplato z zaobljenimi vogali, nanesite lepilo, močno pritisnite in počakajte 24 ur pred napihovanjem.Paddle Board Overstock Deske vključujejo komplet za popravila.',
         },
         {
           q: 'Kako pogosto naj preverjam ventil?',
@@ -6956,7 +6956,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         },
         {
           q: 'Na šta PSI treba da se naduvam?',
-          a: 'Aquafarer Ploče preporučuju 12-15 PSI. Na 15 PSI ploča postiže maksimalnu krutost uporedivu sa tvrdom pločom. Uvek ostanite u opsegu nominalnog pritiska odštampanog na ploči.',
+          a: 'Paddle Board Overstock Ploče preporučuju 12-15 PSI. Na 15 PSI ploča postiže maksimalnu krutost uporedivu sa tvrdom pločom. Uvek ostanite u opsegu nominalnog pritiska odštampanog na ploči.',
         },
       ],
     },
@@ -7154,7 +7154,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         },
         {
           q: 'Kako da popravim probušenu gumu?',
-          a: 'Očistite površinu, isecite zakrpu sa zaobljenim uglovima, nanesite lepak, čvrsto pritisnite i sačekajte 24 sata pre naduvavanja. Aquafarer daske uključuju komplet za popravku.',
+          a: 'Očistite površinu, isecite zakrpu sa zaobljenim uglovima, nanesite lepak, čvrsto pritisnite i sačekajte 24 sata pre naduvavanja. Paddle Board Overstock daske uključuju komplet za popravku.',
         },
         {
           q: 'Koliko često treba da proveravam ventil?',
@@ -7486,7 +7486,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         },
         {
           q: 'ควรPSIเป่าลมเป็นเท่าไหร่ดี?',
-          a: 'Aquafarer บอร์ดแนะนํา 12-15 PSIที่ 15 PSI บอร์ดจะได้ความแข็งแรงสูงสุดที่เทียบเท่ากับบอร์ดแข็งควรอยู่ในช่วงแรงดันที่กําหนดไว้บนบอร์ดเสมอ',
+          a: 'Paddle Board Overstock บอร์ดแนะนํา 12-15 PSIที่ 15 PSI บอร์ดจะได้ความแข็งแรงสูงสุดที่เทียบเท่ากับบอร์ดแข็งควรอยู่ในช่วงแรงดันที่กําหนดไว้บนบอร์ดเสมอ',
         },
       ],
     },
@@ -7681,7 +7681,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         },
         {
           q: 'ฉันจะซ่อมแซมรอยรั่วได้อย่างไร?',
-          a: 'ทําความสะอาดบริเวณนั้น ตัดแผ่นที่มีมุมโค้งมน ทากาว กดให้แน่น และรอ 24 ชั่วโมงก่อนเติมลมAquafarerแผ่นไม้มีชุดซ่อมมาให้',
+          a: 'ทําความสะอาดบริเวณนั้น ตัดแผ่นที่มีมุมโค้งมน ทากาว กดให้แน่น และรอ 24 ชั่วโมงก่อนเติมลมPaddle Board Overstockแผ่นไม้มีชุดซ่อมมาให้',
         },
         {
           q: 'ควรตรวจสอบวาล์วบ่อยแค่ไหน?',
@@ -8012,7 +8012,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         },
         {
           q: 'Ano PSI ang dapat kong i-inflate?',
-          a: 'Aquafarer inirerekomenda ng boards ang 12-15. PSISa 15, PSI nakakamit ng board ang pinakamataas na rigidity na maihahambing sa hard board. Laging manatili sa loob ng rated pressure range na naka-print sa board.',
+          a: 'Paddle Board Overstock inirerekomenda ng boards ang 12-15. PSISa 15, PSI nakakamit ng board ang pinakamataas na rigidity na maihahambing sa hard board. Laging manatili sa loob ng rated pressure range na naka-print sa board.',
         },
       ],
     },
@@ -8211,7 +8211,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         },
         {
           q: 'Paano ko aayusin ang butas?',
-          a: 'Linisin ang lugar, gupitin ang patch na may bilugan na gilid, magpahid ng pandikit, pindutin nang mahigpit, at maghintay ng 24 oras bago i-inflate. Ang Aquafarer boards ay may kasamang repair kit.',
+          a: 'Linisin ang lugar, gupitin ang patch na may bilugan na gilid, magpahid ng pandikit, pindutin nang mahigpit, at maghintay ng 24 oras bago i-inflate. Ang Paddle Board Overstock boards ay may kasamang repair kit.',
         },
         {
           q: 'Gaano kadalas ko dapat suriin ang balbula?',
@@ -8551,7 +8551,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         },
         {
           q: 'Neye PSI şişirmeliyim?',
-          a: 'Aquafarer Kartonlar 12-15 aralığı PSIönerir. 15 seviyesinde PSI kart, sert tahtaya benzer maksimum sertliğe ulaşır. Her zaman kartta yazılmış nominal basınç aralığında kalın.',
+          a: 'Paddle Board Overstock Kartonlar 12-15 aralığı PSIönerir. 15 seviyesinde PSI kart, sert tahtaya benzer maksimum sertliğe ulaşır. Her zaman kartta yazılmış nominal basınç aralığında kalın.',
         },
       ],
     },
@@ -8748,7 +8748,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         },
         {
           q: 'Bir delik nasıl tamir edilir?',
-          a: 'Alanı temizleyin, yuvarlatılmış köşelere sahip bir yama kesin, yapıştırıcı uygulayın, sıkıca bastırın ve şişirmeden önce 24 saat bekleyin. Aquafarer tahtaları bir onarım kiti içerir.',
+          a: 'Alanı temizleyin, yuvarlatılmış köşelere sahip bir yama kesin, yapıştırıcı uygulayın, sıkıca bastırın ve şişirmeden önce 24 saat bekleyin. Paddle Board Overstock tahtaları bir onarım kiti içerir.',
         },
         {
           q: 'Valfi ne sıklıkla kontrol etmeliyim?',

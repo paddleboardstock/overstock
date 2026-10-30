@@ -6,8 +6,8 @@ export const prerender = true;
 export const GET: APIRoute = async () => {
   const siteUrl = String(SITE.site).replace(/\/+$/, '');
   const manifest = {
-    name: 'Aquafarer',
-    short_name: 'Aquafarer',
+    name: 'Paddle Board Overstock',
+    short_name: 'Paddle Board Overstock',
     description:
       'Professional inflatable boats, SUPs, kayaks, and water sports equipment. Manufacturer-direct pricing with global shipping.',
     start_url: '/',
