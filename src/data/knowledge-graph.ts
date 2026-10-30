@@ -62,7 +62,7 @@ export const businessEntities: BusinessEntity[] = [
     type: 'Service',
     name: 'Success Stories',
     description:
-      'Case studies showing how water sports businesses built profitable operations with Aquafarer equipment and solutions.',
+      'Case studies showing how water sports businesses built profitable operations with Paddle Board Overstock equipment and solutions.',
     url: `${siteUrl}/success-stories`,
     audience: ['Potential Partners', 'Business Owners'],
     offers: ['Case Studies', 'Business Results', 'ROI Analysis'],

@@ -60,9 +60,11 @@ const categoryLabel = (cat: string) => t('v2.category.' + cat) || cat;
     article={{
       headline: entry.title,
       description: entry.description,
-      authorName: entry.type === 'business-guide' ? 'David Chen' : 'Aquafarer Team',
+      authorName: entry.type === 'business-guide' ? 'David Chen' : 'Paddle Board Overstock Team',
       authorUrl:
-        entry.type === 'business-guide' ? 'https://aquafarer.com/aquafarer-story' : 'https://aquafarer.com/about',
+        entry.type === 'business-guide'
+          ? 'https://paddleboardoverstock.com/paddleboardoverstock-story'
+          : 'https://paddleboardoverstock.com/about',
       datePublished: '2026-01-15',
       dateModified: '2026-07-07',
     }}

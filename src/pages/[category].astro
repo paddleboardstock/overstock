@@ -116,7 +116,7 @@ const categoryGraph = {
     <header class="mb-8 md:mb-12 text-center max-w-3xl mx-auto">
       <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">Catalog</p>
       <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">
-        {copy ? copy.h1 : `Aquafarer ${urlSlug}`}
+        {copy ? copy.h1 : `Paddle Board Overstock ${urlSlug}`}
       </h1>
       <p class="mt-3 md:mt-4 mx-auto text-xl text-gray-500 dark:text-slate-400 font-medium">
         {copy ? copy.subtitle : `Premium ${urlSlug} — built for life on the water.`}
@@ -165,7 +165,7 @@ const categoryGraph = {
           <div class="flex flex-wrap items-center justify-center gap-4">
             {activeCategory === 'sup' && (
               <a
-                href="/catalogs/aquafarer-sup-catalog.pdf"
+                href="/catalogs/paddleboardoverstock-sup-catalog.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="inline-flex items-center gap-2 px-4 py-2 bg-sky-50 dark:bg-sky-900/30 border border-sky-200 dark:border-sky-800 text-sky-700 dark:text-sky-300 text-sm font-medium rounded-full hover:bg-sky-100 dark:hover:bg-sky-900/50 transition-colors"
@@ -176,7 +176,7 @@ const categoryGraph = {
             )}
             {(activeCategory === 'rib' || activeCategory === 'inflatable') && (
               <a
-                href="/catalogs/aquafarer-inflatable-boat-catalog.pdf"
+                href="/catalogs/paddleboardoverstock-inflatable-boat-catalog.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-50 dark:bg-emerald-900/30 border border-emerald-200 dark:border-emerald-800 text-emerald-700 dark:text-emerald-300 text-sm font-medium rounded-full hover:bg-emerald-100 dark:hover:bg-emerald-900/50 transition-colors"
@@ -213,6 +213,6 @@ const categoryGraph = {
   </section>
 
   <section class="sr-only" data-ai-block="definition" aria-hidden="true">
-    <p>Aquafarer product catalog — {urlSlug} category.</p>
+    <p>Paddle Board Overstock product catalog — {urlSlug} category.</p>
   </section>
 </Layout>

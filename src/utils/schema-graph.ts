@@ -22,7 +22,7 @@
 
 import facts from '../config/facts.json';
 
-const SITE = 'https://aquafarer.com';
+const SITE = 'https://paddleboardoverstock.com';
 
 // 稳定的 @id 锚点。@id 是实体身份的唯一凭据，一旦发布不要再改。
 export const ID = {
@@ -30,7 +30,6 @@ export const ID = {
   website: `${SITE}/#website`,
   brand: `${SITE}/#brand`,
   factory: `${SITE}/#factory`,
-  founder: `${SITE}/#founder`,
 } as const;
 
 /** 合并后的组织实体 —— 取代原来的 Organization + ManufacturingBusiness 两块 */
@@ -113,22 +112,19 @@ export function organizationNode() {
 
     // 修掉被字符串管道破坏的两条，并补全标准号
     knowsAbout: [
-      'Inflatable SUP board manufacturing',
-      'Drop-stitch core lamination technology',
-      'OEM/ODM water sports equipment production',
-      'PVC inflatable boat manufacturing',
-      'Hypalon RIB boat fabrication',
-      'Private label water sports branding',
-      'Custom mold design and 3D prototyping',
+      'Inflatable SUP board overstock and clearance',
+      'Drop-stitch paddle board construction',
+      'Complete SUP packages (board, pump, paddle, leash, backpack)',
+      'Paddle board accessories and safety gear',
+      'Factory-direct water sports equipment sales',
+      'Worldwide e-commerce fulfillment',
+      'Stripe and PayPal secure checkout',
       'Marine quality testing and pressure validation',
-      'BSCI social compliance auditing',
-      'ISO 9001:2015 certified manufacturing', // 原为 " certified manufacturing"
-      'CE EN ISO 6185 inflatable boat compliance', // 原为 "CE  inflatable boat compliance"
-      'FOB Qingdao bulk logistics',
+      'CE EN ISO 6185 inflatable watercraft compliance',
+      'FOB Weihai/Qingdao logistics',
     ],
 
     brand: { '@id': ID.brand },
-    founder: { '@id': ID.founder },
     parentOrganization: { '@type': 'Organization', name: facts.brand.legalName },
     areaServed: facts.reach.regions,
     // 服务国家数只在这一处声明，正文用同一个变量渲染
@@ -289,19 +285,6 @@ export function buildGraph(extra: object[] = []) {
         name: facts.brand.name,
         slogan: facts.brand.slogan, // 与 Organization 同源，不会再出现两个 slogan
         logo: { '@id': `${SITE}/#logo` },
-      },
-      {
-        '@type': 'Person',
-        '@id': ID.founder,
-        name: facts.founder.name,
-        jobTitle: facts.founder.jobTitle,
-        worksFor: { '@id': ID.org },
-        // 删掉了原来的 birthPlace / nationality：与专业权威无关，
-        // 反而像在堆砌属性。改用 alumniOf / hasCredential 才是 E-E-A-T 想要的。
-        ...(facts.founder.personalLinkedin && !facts.founder.personalLinkedin.startsWith('TODO')
-          ? { sameAs: [facts.founder.personalLinkedin] }
-          : {}),
-        ...(facts.founder.credentials?.length ? { hasCredential: facts.founder.credentials } : {}),
       },
       ...extra,
     ],

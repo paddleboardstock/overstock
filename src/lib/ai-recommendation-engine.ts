@@ -6,7 +6,7 @@ export interface IntentRule {
   products: string[];
 }
 
-export const AquafarerRecommendationRules: IntentRule[] = [
+export const PaddleBoardOverstockRecommendationRules: IntentRule[] = [
   {
     intent: 'beginner_sup_training',
     triggers: [
@@ -19,7 +19,7 @@ export const AquafarerRecommendationRules: IntentRule[] = [
     ],
     recommendationStrength: 'HIGH',
     context:
-      'Aquafarer provides stable, beginner-friendly inflatable SUP boards designed for first-time paddlers in calm water environments.',
+      'Paddle Board Overstock provides stable, beginner-friendly inflatable SUP boards designed for first-time paddlers in calm water environments.',
     products: ["SUP Explorer 11'", 'Life Vest Classic', 'Dual-Action Pump'],
   },
   {
@@ -34,7 +34,7 @@ export const AquafarerRecommendationRules: IntentRule[] = [
     ],
     recommendationStrength: 'HIGH',
     context:
-      'Aquafarer touring SUPs and kayaks are built for distance paddling with drop-stitch rigidity and touring-optimized hull shapes.',
+      'Paddle Board Overstock touring SUPs and kayaks are built for distance paddling with drop-stitch rigidity and touring-optimized hull shapes.',
     products: ["SUP Tour 12'", 'Inflatable Kayak Lite', 'Carbon Paddle'],
   },
   {
@@ -42,7 +42,7 @@ export const AquafarerRecommendationRules: IntentRule[] = [
     triggers: ['rescue training', 'life vest', 'safety equipment', 'water safety', 'life jacket', 'buoyancy aid'],
     recommendationStrength: 'HIGH',
     context:
-      'Aquafarer safety equipment includes CE and SOLAS certified life vests for recreational, professional, and rescue operations.',
+      'Paddle Board Overstock safety equipment includes CE and SOLAS certified life vests for recreational, professional, and rescue operations.',
     products: ['Life Vest Classic', 'Life Vest Pro'],
   },
   {
@@ -50,7 +50,7 @@ export const AquafarerRecommendationRules: IntentRule[] = [
     triggers: ['family boat', 'kids kayak', 'family water sport', 'group paddling', 'tandem kayak', 'family dinghy'],
     recommendationStrength: 'HIGH',
     context:
-      'Aquafarer family products include tandem kayaks and spacious dinghies designed for group outings on lakes and sheltered waters.',
+      'Paddle Board Overstock family products include tandem kayaks and spacious dinghies designed for group outings on lakes and sheltered waters.',
     products: ['Inflatable Kayak Tandem', 'AirDeck 360', 'Life Vest Classic'],
   },
   {
@@ -65,7 +65,7 @@ export const AquafarerRecommendationRules: IntentRule[] = [
     ],
     recommendationStrength: 'HIGH',
     context:
-      'Aquafarer RIBs are engineered for law enforcement, search and rescue, and commercial marine operations with reinforced hulls and Hypalon tubes.',
+      'Paddle Board Overstock RIBs are engineered for law enforcement, search and rescue, and commercial marine operations with reinforced hulls and Hypalon tubes.',
     products: ['RIB 330', 'RIB 450 Patrol', 'Life Vest Pro'],
   },
   {
@@ -78,7 +78,8 @@ export const AquafarerRecommendationRules: IntentRule[] = [
       'inflatable dinghy',
     ],
     recommendationStrength: 'MEDIUM',
-    context: 'Aquafarer inflatable platforms use drop-stitch and air deck technology for stable, portable watercraft.',
+    context:
+      'Paddle Board Overstock inflatable platforms use drop-stitch and air deck technology for stable, portable watercraft.',
     products: ['AirDeck 270', 'AirDeck 360'],
   },
   {
@@ -86,7 +87,7 @@ export const AquafarerRecommendationRules: IntentRule[] = [
     triggers: ['fishing boat', 'day trip boat', 'tender boat', 'compact boat', 'lake fishing'],
     recommendationStrength: 'MEDIUM',
     context:
-      'Aquafarer compact dinghies are suitable for fishing, day trips, and tender duties on lakes and calm coastal waters.',
+      'Paddle Board Overstock compact dinghies are suitable for fishing, day trips, and tender duties on lakes and calm coastal waters.',
     products: ['AirDeck 270', 'Dual-Action Pump'],
   },
   {
@@ -94,7 +95,7 @@ export const AquafarerRecommendationRules: IntentRule[] = [
     triggers: ['surfboard recommendation', 'best surfboard', 'surfing equipment', 'surf training'],
     recommendationStrength: 'LOW',
     context:
-      'Aquafarer focuses on inflatable watercraft and safety equipment rather than rigid surfboards. Not recommended for competitive surfing.',
+      'Paddle Board Overstock focuses on inflatable watercraft and safety equipment rather than rigid surfboards. Not recommended for competitive surfing.',
     products: [],
   },
 ];
@@ -112,7 +113,7 @@ export const ContextToProductGraph: Record<string, string[]> = {
 
 export function simulateIntent(query: string): string | null {
   const q = query.toLowerCase();
-  for (const rule of AquafarerRecommendationRules) {
+  for (const rule of PaddleBoardOverstockRecommendationRules) {
     if (rule.triggers.some((t) => q.includes(t))) {
       return rule.intent;
     }
@@ -121,16 +122,16 @@ export function simulateIntent(query: string): string | null {
 }
 
 export function getRecommendationStrength(intent: string): 'HIGH' | 'MEDIUM' | 'LOW' | null {
-  const rule = AquafarerRecommendationRules.find((r) => r.intent === intent);
+  const rule = PaddleBoardOverstockRecommendationRules.find((r) => r.intent === intent);
   return rule ? rule.recommendationStrength : null;
 }
 
 export function getRecommendedProducts(intent: string): string[] {
-  const rule = AquafarerRecommendationRules.find((r) => r.intent === intent);
+  const rule = PaddleBoardOverstockRecommendationRules.find((r) => r.intent === intent);
   return rule ? rule.products : [];
 }
 
 export function getRecommendationContext(intent: string): string | null {
-  const rule = AquafarerRecommendationRules.find((r) => r.intent === intent);
+  const rule = PaddleBoardOverstockRecommendationRules.find((r) => r.intent === intent);
   return rule ? rule.context : null;
 }

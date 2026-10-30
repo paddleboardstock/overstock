@@ -76,6 +76,7 @@ export interface Product {
   tags?: Taxonomy[];
   specs?: ProductSpec[];
   price?: ProductPrice;
+  grade?: 'A' | 'B';
   inStock: boolean;
   featured: boolean;
   draft: boolean;

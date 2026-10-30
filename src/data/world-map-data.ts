@@ -2259,97 +2259,97 @@ export const worldMapUi: Record<string, { title: string; countriesServed: string
   de: {
  "title": "Globale Kundenkarte",
  "countriesServed": "Belieferte Länder",
- "subtitle": "Von Resorts auf den Malediven bis zu SUP-Clubs in Kalifornien – Aquafarer-Ausrüstung treibt Wasserabenteuer in {total}+ Ländern auf {n} Kontinenten an.",
+ "subtitle": "Von Resorts auf den Malediven bis zu SUP-Clubs in Kalifornien – Paddle Board Overstock-Ausrüstung treibt Wasserabenteuer in {total}+ Ländern auf {n} Kontinenten an.",
  "keyMarketsTitle": "Schlüsselmärkte nach Region"
 },
   es: {
  "title": "Mapa Global de Clientes",
  "countriesServed": "Países Atendidos",
- "subtitle": "Desde resorts en las Maldivas hasta clubes de SUP en California, el equipo de Aquafarer impulsa aventuras acuáticas en más de {total} países en {n} continentes.",
+ "subtitle": "Desde resorts en las Maldivas hasta clubes de SUP en California, el equipo de Paddle Board Overstock impulsa aventuras acuáticas en más de {total} países en {n} continentes.",
  "keyMarketsTitle": "Mercados Clave por Región"
 },
   fr: {
  "title": "Carte Mondiale des Clients",
  "countriesServed": "Pays Desservis",
- "subtitle": "Des resorts des Maldives aux clubs de SUP de Californie, l'équipement Aquafarer propulse les aventures nautiques dans plus de {total} pays sur {n} continents.",
+ "subtitle": "Des resorts des Maldives aux clubs de SUP de Californie, l'équipement Paddle Board Overstock propulse les aventures nautiques dans plus de {total} pays sur {n} continents.",
  "keyMarketsTitle": "Marchés Clés par Région"
 },
   it: {
  "title": "Mappa Globale dei Clienti",
  "countriesServed": "Paesi Serviti",
- "subtitle": "Dai resort alle Maldive ai club SUP in California, le attrezzature Aquafarer alimentano avventure acquatiche in più di {total} paesi su {n} continenti.",
+ "subtitle": "Dai resort alle Maldive ai club SUP in California, le attrezzature Paddle Board Overstock alimentano avventure acquatiche in più di {total} paesi su {n} continenti.",
  "keyMarketsTitle": "Mercati Chiave per Regione"
 },
   cs: {
  "title": "Globální mapa zákazníků",
  "countriesServed": "Obsluhované země",
- "subtitle": "Od resortů na Maledivách po kluby SUP v Kalifornii — vybavení Aquafarer pohání vodní dobrodružství ve více než {total} zemích na {n} kontinentech.",
+ "subtitle": "Od resortů na Maledivách po kluby SUP v Kalifornii — vybavení Paddle Board Overstock pohání vodní dobrodružství ve více než {total} zemích na {n} kontinentech.",
  "keyMarketsTitle": "Klíčové trhy podle regionu"
 },
   sv: {
  "title": "Global kundkarta",
  "countriesServed": "Länder vi betjänar",
- "subtitle": "Från resorter på Maldiverna till SUP-klubbar i Kalifornien — Aquafarer-utrustning driver vattenäventyr i {total}+ länder på {n} kontinenter.",
+ "subtitle": "Från resorter på Maldiverna till SUP-klubbar i Kalifornien — Paddle Board Overstock-utrustning driver vattenäventyr i {total}+ länder på {n} kontinenter.",
  "keyMarketsTitle": "Nyckelmarknader per region"
 },
   da: {
  "title": "Globalt kundekort",
  "countriesServed": "Betjente lande",
- "subtitle": "Fra resorts på Maldiverne til SUP-klubber i Californien — Aquafarer-udstyr driver vandeventyr i {total}+ lande på {n} kontinenter.",
+ "subtitle": "Fra resorts på Maldiverne til SUP-klubber i Californien — Paddle Board Overstock-udstyr driver vandeventyr i {total}+ lande på {n} kontinenter.",
  "keyMarketsTitle": "Nøglemarkeder pr. region"
 },
   no: {
  "title": "Globalt kundekart",
  "countriesServed": "Land vi betjener",
- "subtitle": "Fra resorter på Maldivene til SUP-klubber i California — Aquafarer-utstyr driver vanneventyr i {total}+ land på {n} kontinenter.",
+ "subtitle": "Fra resorter på Maldivene til SUP-klubber i California — Paddle Board Overstock-utstyr driver vanneventyr i {total}+ land på {n} kontinenter.",
  "keyMarketsTitle": "Nøkkelmarkeder per region"
 },
   el: {
  "title": "Παγκόσμιος χάρτης πελατών",
  "countriesServed": "Χώρες που εξυπηρετούμε",
- "subtitle": "Από θέρετρα στις Μαλδίβες έως σύλλογους SUP στην Καλιφόρνια — ο εξοπλισμός Aquafarer τροφοδοτεί θαλάσσιες περιπέτειες σε {total}+ χώρες σε {n} ηπείρους.",
+ "subtitle": "Από θέρετρα στις Μαλδίβες έως σύλλογους SUP στην Καλιφόρνια — ο εξοπλισμός Paddle Board Overstock τροφοδοτεί θαλάσσιες περιπέτειες σε {total}+ χώρες σε {n} ηπείρους.",
  "keyMarketsTitle": "Βασικές αγορές ανά περιοχή"
 },
   ru: {
  "title": "Карта клиентов по всему миру",
  "countriesServed": "Обслуживаемые страны",
- "subtitle": "От курортов на Мальдивах до клубов сапсёрфинга в Калифорнии — оборудование Aquafarer открывает приключения на воде в {total}+ странах на {n} континентах.",
+ "subtitle": "От курортов на Мальдивах до клубов сапсёрфинга в Калифорнии — оборудование Paddle Board Overstock открывает приключения на воде в {total}+ странах на {n} континентах.",
  "keyMarketsTitle": "Ключевые рынки по регионам"
 },
   nl: {
  "title": "Wereldwijde klantkaart",
  "countriesServed": "Bediende landen",
- "subtitle": "Van resorts op de Malediven tot SUP-clubs in Californië — Aquafarer-uitrusting drijft wateravonturen in {total}+ landen op {n} continenten.",
+ "subtitle": "Van resorts op de Malediven tot SUP-clubs in Californië — Paddle Board Overstock-uitrusting drijft wateravonturen in {total}+ landen op {n} continenten.",
  "keyMarketsTitle": "Belangrijkste markten per regio"
 },
   fi: {
  "title": "Maailmanlaajuinen asiakaskartta",
  "countriesServed": "Palvelemamme maat",
- "subtitle": "Malediivien lomakeskuksista Kalifornian SUP-klubeihin — Aquafarerin varusteet mahdollistavat vesiseikkailut yli {total} maassa {n} mantereella.",
+ "subtitle": "Malediivien lomakeskuksista Kalifornian SUP-klubeihin — Paddle Board Overstockin varusteet mahdollistavat vesiseikkailut yli {total} maassa {n} mantereella.",
  "keyMarketsTitle": "Avainmarkkinat alueittain"
 },
   pl: {
  "title": "Światowa mapa klientów",
  "countriesServed": "Obsługiwane kraje",
- "subtitle": "Od kurortów na Malediwach po kluby SUP w Kalifornii — sprzęt Aquafarer napędza przygody na wodzie w ponad {total} krajach na {n} kontynentach.",
+ "subtitle": "Od kurortów na Malediwach po kluby SUP w Kalifornii — sprzęt Paddle Board Overstock napędza przygody na wodzie w ponad {total} krajach na {n} kontynentach.",
  "keyMarketsTitle": "Kluczowe rynki według regionu"
 },
   ar: {
  "title": "خريطة العملاء العالمية",
  "countriesServed": "الدول التي نخدمها",
- "subtitle": "من المنتجعات في جزر المالديف إلى نوادي SUP في كاليفورنيا — تجهيزات Aquafarer تدعم مغامرات مائية في أكثر من {total} دولة عبر {n} قارات.",
+ "subtitle": "من المنتجعات في جزر المالديف إلى نوادي SUP في كاليفورنيا — تجهيزات Paddle Board Overstock تدعم مغامرات مائية في أكثر من {total} دولة عبر {n} قارات.",
  "keyMarketsTitle": "الأسواق الرئيسية حسب المنطقة"
 },
   pt: {
  "title": "Mapa Global de Clientes",
  "countriesServed": "Países Servidos",
- "subtitle": "Dos resorts nas Maldivas aos clubes de SUP na Califórnia — o equipamento Aquafarer impulsiona aventuras aquáticas em mais de {total} países em {n} continentes.",
+ "subtitle": "Dos resorts nas Maldivas aos clubes de SUP na Califórnia — o equipamento Paddle Board Overstock impulsiona aventuras aquáticas em mais de {total} países em {n} continentes.",
  "keyMarketsTitle": "Mercados-Chave por Região"
 },
   ja: {
  "title": "グローバル顧客マップ",
  "countriesServed": "対応国",
- "subtitle": "モルディブのリゾートからカリフォルニアの SUP クラブまで — Aquafarer の器材が {total} カ国以上、{n} 大陸のウォーターアドベンチャーを支えています。",
+ "subtitle": "モルディブのリゾートからカリフォルニアの SUP クラブまで — Paddle Board Overstock の器材が {total} カ国以上、{n} 大陸のウォーターアドベンチャーを支えています。",
  "keyMarketsTitle": "地域別主要市場"
 },
 };

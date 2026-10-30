@@ -40,13 +40,13 @@ function getEnv(key: string, fallback: string): string {
   }
 }
 
-const REPO_OWNER = getEnv('GITHUB_OWNER', 'aquafarer');
+const REPO_OWNER = getEnv('GITHUB_OWNER', 'paddleboardoverstock');
 const REPO_NAME = getEnv('GITHUB_REPO', 'official');
 const DEFAULT_BRANCH = 'main';
 const REQUEST_TIMEOUT_MS = 12000;
-const COMMIT_AUTHOR_NAME = 'Aquafarer Admin';
-const COMMIT_AUTHOR_EMAIL = 'admin@Aquafarer.local';
-const USER_AGENT = 'Aquafarer-admin';
+const COMMIT_AUTHOR_NAME = 'Paddle Board Overstock Admin';
+const COMMIT_AUTHOR_EMAIL = 'admin@paddleboardoverstock.local';
+const USER_AGENT = 'Paddle Board Overstock-admin';
 
 export function getRepoInfo(): { owner: string; repo: string } {
   return { owner: REPO_OWNER, repo: REPO_NAME };

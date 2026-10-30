@@ -74,11 +74,11 @@ function buildLocalizedRedirects(map: Record<string, string>): Record<string, st
 // 遗留 Astro.redirect 页面迁移表：静态输出模式不执行 JS redirect（生成 200 空壳），
 // 统一改为 config 301（meta refresh）。源页面文件删除后由 buildLocalizedRedirects 生成全语言条目。
 const LEGACY_REDIRECTS = {
-  '/about/aquafarer/': '/about/',
-  '/aquafarer/': '/about/',
-  '/brand-story/': '/aquafarer-story/',
-  '/brand/aquafarer/': '/aquafarer-story/',
-  '/brand/': '/aquafarer-story/',
+  '/about/paddleboardoverstock/': '/about/',
+  '/paddleboardoverstock/': '/about/',
+  '/brand-story/': '/paddleboardoverstock-story/',
+  '/brand/paddleboardoverstock/': '/paddleboardoverstock-story/',
+  '/brand/': '/paddleboardoverstock-story/',
   '/commercial-workboats/': '/use-cases/commercial-workboats/',
   '/disaster-relief-humanitarian-aid/': '/use-cases/disaster-relief/',
   '/oem-process/': '/oem-odm-manufacturer/',
@@ -109,7 +109,7 @@ export default defineConfig({
     ...buildLocalizedRedirects(LEGACY_REDIRECTS),
     // P0-7：原 JS 软跳转页改服务端 301（fr 特例目标与通用表不同，需在 LEGACY 之后重声明）
     '/fr/oem-process/': '/fr/oem-odm-blueprint/',
-    '/ru/brand-story/': '/ru/aquafarer-story/',
+    '/ru/brand-story/': '/ru/paddleboardoverstock-story/',
     '/nl/search-rescue-operations/': '/nl/use-cases/search-and-rescue/',
   },
   integrations: [

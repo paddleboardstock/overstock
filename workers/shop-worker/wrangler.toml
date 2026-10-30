@@ -1,0 +1,31 @@
+name = "paddleboardoverstock-shop"
+main = "index.ts"
+compatibility_date = "2026-07-08"
+compatibility_flags = ["nodejs_compat"]
+
+routes = [
+  { pattern = "paddleboardoverstock.com/api/shop/*", zone_name = "paddleboardoverstock.com" },
+  { pattern = "paddleboardoverstock.com/api/shop*", zone_name = "paddleboardoverstock.com" },
+]
+
+# Secrets (set via `wrangler secret put`, NOT here):
+#   STRIPE_SECRET_KEY        — Stripe API secret key (sk_live_...)
+#   STRIPE_WEBHOOK_SECRET    — Stripe webhook signing secret (whsec_...)
+#   PAYPAL_CLIENT_ID         — PayPal REST app client id
+#   PAYPAL_CLIENT_SECRET     — PayPal REST app secret
+#   PAYPAL_WEBHOOK_ID        — (optional) PayPal webhook id for signature verification
+#   SHOP_BASE_URL            — (optional) override site base URL; defaults to https://paddleboardoverstock.com
+#
+# Stripe webhook endpoint: https://paddleboardoverstock.com/api/shop/webhook/stripe
+#   events: checkout.session.completed, checkout.session.async_payment_succeeded,
+#           checkout.session.async_payment_failed, checkout.session.expired
+# PayPal webhook endpoint: https://paddleboardoverstock.com/api/shop/webhook/paypal
+#   events: PAYMENT.CAPTURE.COMPLETED, PAYMENT.CAPTURE.DENIED,
+#           CHECKOUT.ORDER.COMPLETED, CHECKOUT.ORDER.VOIDED
+
+# D1 (shared with the other workers) — orders + order_items + rate_limit
+[[d1_databases]]
+binding = "DB"
+database_name = "paddleboardoverstock-db"
+database_id = "REPLACE_WITH_D1_DATABASE_ID"
+migrations_dir = "../../migrations"

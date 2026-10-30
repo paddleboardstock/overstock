@@ -5,7 +5,7 @@
     "公司画像（客户确认）：",
     "  RIB Boats, Inflatable Boats, SUP Boards Manufacturer & OEM/ODM Solution",
     "",
-    "现状问题：站点上同时存在四套互相矛盾的身份表述（见 aquafarer-positioning.md）。",
+    "现状问题：站点上同时存在四套互相矛盾的身份表述（见 paddleboardoverstock-positioning.md）。",
     "本文件定义唯一版本，全站 title / H1 / description / schema / llms.txt 一律从这里渲染。",
     "",
     "命名铁律：三条产品线在任何位置都必须按同一顺序、同一措辞出现：",
@@ -14,13 +14,13 @@
   ],
 
   "entity": {
-    "name": "Aquafarer",
-    "alternateName": "Aquafarer RIB & Inflatable Watercraft",
-    "_alternateName_note": "站点现有三个互不相同的 alternateName：'Aquafarer Water Adventure Equipment'（Organization）、'Aquafarer Inflatable Watercraft'（ManufacturingBusiness 与 Brand）、以及缺失。必须统一为一个，且要含 RIB。",
-    "legalName": "Aquafarer LLC",
+    "name": "Paddle Board Overstock",
+    "alternateName": "Paddle Board Overstock RIB & Inflatable Watercraft",
+    "_alternateName_note": "站点现有三个互不相同的 alternateName：'Paddle Board Overstock Water Adventure Equipment'（Organization）、'Paddle Board Overstock Inflatable Watercraft'（ManufacturingBusiness 与 Brand）、以及缺失。必须统一为一个，且要含 RIB。",
+    "legalName": "Weihai Dongjilian Co., Ltd.",
     "entityType": "Manufacturer",
     "_entityType_note": "不是 brand、不是 retailer、不是 'water adventure equipment brand'。对外身份统一为制造商。",
-    "_legalName_note": "2026-09 起品牌运营主体为 Aquafarer LLC（New Mexico, USA）；研发与生产留在 Aquafarer Qingdao Manufacturing Hub。",
+    "_legalName_note": "2026-09 起品牌运营主体为 Weihai Dongjilian Co., Ltd.（New Mexico, USA）；研发与生产留在 Paddle Board Overstock Qingdao Manufacturing Hub。",
     "primaryAudience": "B2B",
     "_audience_note": "现有 Organization 描述写的是 'trusted by beginners, families, explorers'（B2C），ManufacturingBusiness 写的是 'B2B partners'。同一页面上两种客群定义直接冲突，是 AI 实体识别失败的主因。全站统一 B2B。"
   },
@@ -96,24 +96,24 @@
 
     "short": "RIB boats, inflatable boats and SUP boards manufacturer with full OEM/ODM capability.",
 
-    "medium": "Aquafarer is a Chinese factory manufacturing RIB boats, inflatable boats and SUP boards, with full OEM/ODM capability for B2B buyers. CE-certified, {{certifiedModels}} models, {{annualCapacityUnits}} units annual capacity from a {{areaSqm}} m² facility in Qingdao.",
+    "medium": "Paddle Board Overstock is a Chinese factory manufacturing RIB boats, inflatable boats and SUP boards, with full OEM/ODM capability for B2B buyers. CE-certified, {{certifiedModels}} models, {{annualCapacityUnits}} units annual capacity from a {{areaSqm}} m² facility in Qingdao.",
 
-    "long": "Aquafarer is a manufacturer of RIB boats, inflatable boats and SUP boards, providing OEM and ODM solutions to distributors, rental operators, resorts and rescue organisations in {{countriesServed}} countries. Operating {{productionLines}} production lines across {{areaSqm}} m² in Laixi, Qingdao, the factory produces {{certifiedModels}} CE-certified models with an annual capacity of {{annualCapacityUnits}} units. Certifications include CE (TÜV Rheinland), ISO 9001:2015 (SGS) and BSCI (Intertek). MOQ starts at {{moqRib}} for RIB models and {{moqSupKayak}} for SUP boards."
+    "long": "Paddle Board Overstock is a manufacturer of RIB boats, inflatable boats and SUP boards, providing OEM and ODM solutions to distributors, rental operators, resorts and rescue organisations in {{countriesServed}} countries. Operating {{productionLines}} production lines across {{areaSqm}} m² in Laixi, Qingdao, the factory produces {{certifiedModels}} CE-certified models with an annual capacity of {{annualCapacityUnits}} units. Certifications include CE (TÜV Rheinland), ISO 9001:2015 (SGS) and BSCI (Intertek). MOQ starts at {{moqRib}} for RIB models and {{moqSupKayak}} for SUP boards."
   },
 
   "titleTemplates": {
     "_comment": "全站标题必须含至少一条产品线名 + 'Manufacturer' 或 'OEM/ODM'。当前首页标题缺 RIB。",
-    "home": "RIB Boats, Inflatable Boats & SUP Board Manufacturer | OEM/ODM — Aquafarer",
-    "_home_current": "Inflatable Boat & SUP Manufacturer | OEM/ODM Factory Since 2012 — Aquafarer  ← 缺 RIB",
-    "productsHub": "RIB Boats, Inflatable Boats & SUP Boards — {{certifiedModels}} CE-Certified Models | Aquafarer",
-    "ribPillar": "RIB Boat Manufacturer — Aluminium & Fibreglass Hull, OEM/ODM | Aquafarer",
-    "inflatablePillar": "Inflatable Boat Manufacturer — PVC & Hypalon, OEM/ODM | Aquafarer",
-    "supPillar": "Inflatable SUP Board Manufacturer — Drop-Stitch, OEM/ODM | Aquafarer",
-    "oemHub": "OEM & ODM Inflatable Watercraft Manufacturing — MOQ From {{moqRib}} | Aquafarer"
+    "home": "RIB Boats, Inflatable Boats & SUP Board Manufacturer | OEM/ODM — Paddle Board Overstock",
+    "_home_current": "Inflatable Boat & SUP Manufacturer | OEM/ODM Factory Since 2012 — Paddle Board Overstock  ← 缺 RIB",
+    "productsHub": "RIB Boats, Inflatable Boats & SUP Boards — {{certifiedModels}} CE-Certified Models | Paddle Board Overstock",
+    "ribPillar": "RIB Boat Manufacturer — Aluminium & Fibreglass Hull, OEM/ODM | Paddle Board Overstock",
+    "inflatablePillar": "Inflatable Boat Manufacturer — PVC & Hypalon, OEM/ODM | Paddle Board Overstock",
+    "supPillar": "Inflatable SUP Board Manufacturer — Drop-Stitch, OEM/ODM | Paddle Board Overstock",
+    "oemHub": "OEM & ODM Inflatable Watercraft Manufacturing — MOQ From {{moqRib}} | Paddle Board Overstock"
   },
 
   "h1Templates": {
-    "_comment": "首页 H1 现在是 'Build Your Water Adventure Business With Aquafarer' —— 没有任何产品线名、没有 manufacturer、没有 RIB。H1 是最强的页面内信号，不该用来放口号。",
+    "_comment": "首页 H1 现在是 'Build Your Water Adventure Business With Paddle Board Overstock' —— 没有任何产品线名、没有 manufacturer、没有 RIB。H1 是最强的页面内信号，不该用来放口号。",
     "home": "RIB Boats, Inflatable Boats & SUP Boards — OEM/ODM Manufacturer Since 2012",
     "ribPillar": "RIB Boats — Aluminium & Fibreglass Hull, {{moqRib}} MOQ",
     "inflatablePillar": "Inflatable Boats — PVC & Hypalon, OEM/ODM From {{moqSupKayak}}",
@@ -128,7 +128,7 @@
       "beginners, families, explorers",
       "global marine recreation brand",
       "Build Your Water Adventure Business",
-      "Aquafarer Water Adventure Equipment"
+      "Paddle Board Overstock Water Adventure Equipment"
     ]
   },
 

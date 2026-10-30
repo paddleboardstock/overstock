@@ -11,8 +11,8 @@ export const businessArticles: ContentV2Record[] = [
     "tldr": "Kiralama işine başlamak, SUP ekipman kalitesi, konum izinleri ve sigortaya bağlı olarak 10 kartlık filo için 8.000–25.000$ tutar. Başa baş genellikle mevsimlik işletmeden sonra 3-6 ay içinde gerçekleşir. En büyük maliyetler ise pano envanteri ($3.000–$8.000), sigorta ($1.500–$4.000/yıl) ve izinler ($500–$3.000$)dir. İşletme kâr marjları ilk sezondan sonra %40-60 arasında değişir.",
     "problem": "Turistlerle dolu bir plaj görürsün ve SUP yakında kiralık bir araç olmadığını fark edersin. Fırsat açık, ama başlamanın ne kadar maliyeti olduğunu bilmiyorsun — ekipman, sigorta, izinler, depolama, personel. Bir işe para yatırmaktan endişe ediyorsunuz, bu işe fayda verebilecek bir şey.",
     "explanation": "SUP Kiralama işletmeleri, diğer su sporları girişimlerine kıyasla nispeten düşük giriş maliyetlerine sahiptir. Ana maliyet merkezleri şunlardır: ekipman (tahtalar, kürekler, pompalar, PFD'ler, tasmalar, tamir kitleri), sigorta (sorumluluk ve mülk), izinler ve ruhsatlar (plaj izinleri, işletme lisansları, satış vergisi kaydı), depolama ve taşıma (raf sistemi, römork veya minibüs), personel (eğitmenler, kasiyerler, mevsimlik işçi) ve pazarlama (web sitesi, tabelalar, yerel reklamlar). Ekipman en büyük ön maliyettir, ancak panolar uygun bakım ile 3-5 sezon dayanır.",
-    "solution": "Aquafarer 10 tahta, kürek, pompa, PFD ve tamir kitlerini indirimli paket fiyatıyla içeren Kulüp Başlangıç Paketi ile başlayın. Yoğun trafikli bir plaj konumu seçin ve ekipman satın almadan önce gerekli izinleri alın. Kiralama fiyatlarını saatte 25-40 dolar veya günde 80-150 dolar arasında fiyatlandırın. İlk sezon içinde başa baş olmak için günlük kullanım oranını %40-60 olarak hedefleyin.",
-    "recommendation": "İlk kez işletme yapanlar için, Club Starter Package'dan Aquafarer 10 kartlık filo için ihtiyacınız olan her şey yer alıyor. Basit bir çevrimiçi rezervasyon sistemi, sorumluluk muafiyetleri ve bir kart okuyucu ekleyin. Küçük başlayın, talebi kanıtlayın ve ikinci yılda genişleyin.",
+    "solution": "Paddle Board Overstock 10 tahta, kürek, pompa, PFD ve tamir kitlerini indirimli paket fiyatıyla içeren Kulüp Başlangıç Paketi ile başlayın. Yoğun trafikli bir plaj konumu seçin ve ekipman satın almadan önce gerekli izinleri alın. Kiralama fiyatlarını saatte 25-40 dolar veya günde 80-150 dolar arasında fiyatlandırın. İlk sezon içinde başa baş olmak için günlük kullanım oranını %40-60 olarak hedefleyin.",
+    "recommendation": "İlk kez işletme yapanlar için, Club Starter Package'dan Paddle Board Overstock 10 kartlık filo için ihtiyacınız olan her şey yer alıyor. Basit bir çevrimiçi rezervasyon sistemi, sorumluluk muafiyetleri ve bir kart okuyucu ekleyin. Küçük başlayın, talebi kanıtlayın ve ikinci yılda genişleyin.",
     "faq": [
       {
         "q": "Paddle board kiralamak için lisans almam gerekiyor mu?",
@@ -55,12 +55,12 @@ export const businessArticles: ContentV2Record[] = [
     "tldr": "Bir tatil köyü su sporları merkezi inşa etmek, filo büyüklüğü ve altyapı ihtiyaçlarına bağlı olarak 25.000–100.000 dolar arasında+ maliyetler arasındadır. Yatırım, ekipman (SUPskayaklar, PFD), güvenlik sistemleri (cankurtaran istasyonu, şamandıra hatları, AED), depolama (raflar, dolaplar) ve markalama kapsar. Tatil köyleri genellikle su sporları programlarından yıllık 50.000–200.000 dolar yan gelir elde eder ve %40-60 kâr marjı elde eder.",
     "problem": "Tatil köyünüzde mükemmel bir sahil var, ancak yapılandırılmış su sporları programı yok. Misafirler aktiviteler hakkında soruyor ama siz bunları üçüncü taraf işletmecilere gönderiyorsunuz. Geliri masada bırakıyorsunuz ve mülkünüzü farklılaştırma fırsatını kaçırıyorsunuz.",
     "explanation": "Tatil köyü su sporları programları, saatlik kiralamalar, yarım günlük geziler, rehberli turlar, dersler ve paket anlaşmaları yoluyla gelir sağlar. Ana altyapı şunları içerir: güvenli ekipman depolama alanı, plaj veya iskele fırlatma noktası, cankurtaran ekipmanları ve ilk yardımla birlikte güvenlik istasyonu, POS sistemli check-in tezgahı ve kuralları ile fiyatlandırmayı açıklayan tabelalar. Personel gereksinimleri minimumdur — bir yönetici ve 2-3 görevli 50 kişilik filo işletebilir.",
-    "solution": "Aquafarer 50-100 SUPskayak, ticari depolama rafları, güvenlik altyapısı, personel eğitimi ve gelir yönetimi planını içeren Resort Premium Paketi ile başlayın. Paket, siparişten ilk kiralamaya kadar 4-6 hafta içinde tam bir program başlatmak üzere tasarlanmıştır.",
-    "recommendation": "Resort Premium Paketi, Aquafarer profesyonel su sporları programına giden en hızlı yoldur. Ekipmanı misafir aktivite ücretlerine dahil edin veya premium paketler sunun. AquafarerGüvenlik ve kaliteyi sağlamak için 2-3 personeli yerinde eğitim programıyla eğitin.",
+    "solution": "Paddle Board Overstock 50-100 SUPskayak, ticari depolama rafları, güvenlik altyapısı, personel eğitimi ve gelir yönetimi planını içeren Resort Premium Paketi ile başlayın. Paket, siparişten ilk kiralamaya kadar 4-6 hafta içinde tam bir program başlatmak üzere tasarlanmıştır.",
+    "recommendation": "Resort Premium Paketi, Paddle Board Overstock profesyonel su sporları programına giden en hızlı yoldur. Ekipmanı misafir aktivite ücretlerine dahil edin veya premium paketler sunun. Paddle Board OverstockGüvenlik ve kaliteyi sağlamak için 2-3 personeli yerinde eğitim programıyla eğitin.",
     "faq": [
       {
         "q": "Tatil köylerinin su sporları için özel sigortaya ihtiyacı var mı?",
-        "a": "Çoğu tatil köyü sorumluluk poliçesi misafir aktivitelerini kapsar ancak su sporları için ek teminat gerektirebilir. 2-5 milyon dolarlık kapsama içeren bir şemsiye poliçesi önerilir.Aquafarer Ekipman CE güvenlik standartlarını karşılar, bu da sigorta uyumuna yardımcı olur."
+        "a": "Çoğu tatil köyü sorumluluk poliçesi misafir aktivitelerini kapsar ancak su sporları için ek teminat gerektirebilir. 2-5 milyon dolarlık kapsama içeren bir şemsiye poliçesi önerilir.Paddle Board Overstock Ekipman CE güvenlik standartlarını karşılar, bu da sigorta uyumuna yardımcı olur."
       },
       {
         "q": "Kaç personele ihtiyacım var?",
@@ -95,7 +95,7 @@ export const businessArticles: ContentV2Record[] = [
     "tldr": "Bir plaj kulübünün, yoğun sezonda %60-70 kullanım sağlamak için her 10 günlük ziyaretçi için yaklaşık 1 board'a ihtiyacı vardır. Günlük ortalama 100 ziyaretçi olan bir kulüp için genellikle 10-15 board'luk bir filo yeterlidir. Bakım rotasyonu ve artan talep için %20-30 tampon ekleyin. Kulüp Başlangıç Paketi (10 board) çoğu yeni operasyon için idealdir.",
     "problem": "Bir plaj kulübü açıyorsunuz ve ekipman sipariş etmeniz gerekiyor, ama kaç tane board alacağınızı bilmiyorsunuz. Çok az olursa müşterileri geri çevirirsiniz. Çok fazla müşteri olur ve yatırımınız boş kalır.",
     "explanation": "Filo boyutları üç faktöre bağlıdır: yoğun sezonda ortalama günlük ziyaretçi, ortalama kiralama süresi ve hedef kullanım oranı. Günde 4 saat 30 $/saat kullanılan bir tahta, günde 120$ kazandırır. $500 board maliyeti ile geri ödeme 4-5 kiralama gününde sağlanır. Çoğu kulüp, yoğun saatlerde günlük ziyaretçilerinin %15-25'ine aynı anda hizmet verecek kadar board ister.",
-    "solution": "10 kuralını kullanın: Yeni bir operasyon için 10 tahta ile başlayın, ilk sezonda kullanımı izleyin ve talep verilerine göre yılda 5-10 board ekleyin. Aquafarer Kulüp Başlangıç Paketi, genişleme alanı olan 10 board sağlar.",
+    "solution": "10 kuralını kullanın: Yeni bir operasyon için 10 tahta ile başlayın, ilk sezonda kullanımı izleyin ve talep verilerine göre yılda 5-10 board ekleyin. Paddle Board Overstock Kulüp Başlangıç Paketi, genişleme alanı olan 10 board sağlar.",
     "recommendation": "Kulüp Başlangıç Paketi ile başlayın ve günlük kullanımları takip edin. Ortalama kullanım üst üste iki hafta boyunca yoğun saatlerde %70'i aştığında, daha fazla tahta ekleme zamanı gelmiştir.",
     "faq": [
       {
@@ -127,12 +127,12 @@ export const businessArticles: ContentV2Record[] = [
     "tldr": "Kiralama işletmeleri için şişme SUPs motorlar çoğu durumda daha iyi seçimdir. Nakliye ve depolama maliyeti daha ucuz, darbe hasarına karşı daha dayanıklıdır, daha az bakım gerektirir ve yeni başlayanlar için taşımak ve kullanmak daha kolaydır. Hard, SUPs ileri düzey kürekçiler için biraz daha iyi performans sunar ancak kiralama filosunda bakım ve yenisi daha pahalıdır.",
     "problem": "Kiralık bir filo takıyorsunuz ve şişme ile sert paddle board arasında seçim yapmanız gerekiyor. Şişme tahtalar kullanışlı görünüyor ama dayanıklılık ve performans konusunda endişeleniyorsunuz. Sert tahtalar profesyonel görünür ama depolama ve hasar endişe doğurur.",
     "explanation": "Ticari kiralama operasyonları için, 3 yıl boyunca toplam sahiplik maliyeti şişme makineleri tercih ederSUPs: şişme levhalar baştan %30-50 daha ucuz, %60 daha az depolama alanı gerektirir, daha düşük nakliye maliyetleri vardır, deneyimsiz kiracılardan gelen darbe hasarlarına daha dayanıklıdır ve misafirler için taşıması daha hafiftir. Sert tahtalar turlarda ve ileri kürek sürmede daha iyi performans gösterir, ancak kira kullanımında çukur, delaminasyon ve ray hasarı yaşar.",
-    "solution": "SUPs Kira filolarınızın çoğunluğu için şişme (%80) tercih edin; deneyimli misafirler ve rehberli turlar için ise küçük bir sert tahta (%20) seçeneği vardır.Aquafarer SUPs Şişme makineler, ticari kalitede 1.2mm PVC ve güçlendirilmiş drop-stitch çekirdekle üretilmiştir ve günlük kiralama için 3-5 sezon için derecelendirilmiştir.",
-    "recommendation": "Aquafarer SUP Explorer 11 (şişme) en iyi genel kiralama tahtası — stabil, dayanıklı ve kolay saklanıyor. SUP Performans yükseltmesi isteyen gezici misafirler için birkaç Ocean Voyager modeli ekleyin.",
+    "solution": "SUPs Kira filolarınızın çoğunluğu için şişme (%80) tercih edin; deneyimli misafirler ve rehberli turlar için ise küçük bir sert tahta (%20) seçeneği vardır.Paddle Board Overstock SUPs Şişme makineler, ticari kalitede 1.2mm PVC ve güçlendirilmiş drop-stitch çekirdekle üretilmiştir ve günlük kiralama için 3-5 sezon için derecelendirilmiştir.",
+    "recommendation": "Paddle Board Overstock SUP Explorer 11 (şişme) en iyi genel kiralama tahtası — stabil, dayanıklı ve kolay saklanıyor. SUP Performans yükseltmesi isteyen gezici misafirler için birkaç Ocean Voyager modeli ekleyin.",
     "faq": [
       {
         "q": "Şişme makineler SUPs kira kullanımında ne kadar dayanır?",
-        "a": "Uygun bakımla 3-5 sezon. Ticari kalitede şişme malzemeler, Aquafarer daha kalın PVC (1.2mm vs 0.8mm tüketici sınıfı) ve güçlendirilmiş dikişlerle daha uzun ömür için kullanılır."
+        "a": "Uygun bakımla 3-5 sezon. Ticari kalitede şişme malzemeler, Paddle Board Overstock daha kalın PVC (1.2mm vs 0.8mm tüketici sınıfı) ve güçlendirilmiş dikişlerle daha uzun ömür için kullanılır."
       },
       {
         "q": "Şişme SUPs tahtalar sert tahtalara göre daha az stabil mi hissettiriyor?",
@@ -163,8 +163,8 @@ export const businessArticles: ContentV2Record[] = [
     "tldr": "Ticari kano operasyonları için, şişme PVC kayaklar (askeri sınıf 1.2mmPVC) dayanıklılık, maliyet, depolama ve misafir deneyimi arasında en iyi dengeyi sunar. Rotof kalıplı kayaklardan %40-60 daha ucuzdur, alanın üçte birini depolar ve yeni başlayan kürekçiler için daha anlayışlıdır. Hız ve performansın öncelikli olduğu tur operasyonları için rotomolded polietilen kayaklar daha iyi bir seçimdir.",
     "problem": "Kiralanma filounuz veya tur operasyonunuz için kano almanız gerekiyor, ancak malzeme çeşitliliği ve fiyat aralığı seçim yapmayı zorlaştırıyor. Şişme kabuklarda dayanıklılık konusunda endişeleniyorsunuz ama sert kabukların depolama gereksinimleri zordur.",
     "explanation": "Ticari kullanım için kano malzemeleri üç kategoriye ayrılır: PVC şişirilebilir (en düşük maliyet, en iyi saklama, iyi dayanıklılık), rotokalıplı polietilen (orta maliyetli, hacimli saklama, mükemmel dayanıklılık) ve fiberglas/kompozit (yüksek maliyetli, en iyi performanslı, kırılgan). Misafirlerin becerisi farklı olan kiralık filolar için şişme PVC en pratik seçenektir — çarpışmalara ve çiziklere dayanır, araba bagajına yerleştirilir ve sert kabukların çok küçük bir maliyeti vardır.",
-    "solution": "Plaj kulübü ve tatil köyü kiralama filoları için, PVC Aquafarer ticari kalitede kumaş ve güçlendirilmiş dikişlere sahip şişme kayaklar tercih edin. Performansın önemli olduğu rehberli tur operasyonları için rotolu polietilen gövdelere yatırım yapın. Yüzde 70 şişme ve %30 sert kabuklu karma filo tüm kullanım alanlarını kapsar.",
-    "recommendation": "Aquafarer Şişme kano serisi, ticari kiralama için özel olarak tasarlanmıştır. Kulüp Başlangıç Paketi ile eşleştirilen, tam bir kiralamaya hazır filo oluşturun.",
+    "solution": "Plaj kulübü ve tatil köyü kiralama filoları için, PVC Paddle Board Overstock ticari kalitede kumaş ve güçlendirilmiş dikişlere sahip şişme kayaklar tercih edin. Performansın önemli olduğu rehberli tur operasyonları için rotolu polietilen gövdelere yatırım yapın. Yüzde 70 şişme ve %30 sert kabuklu karma filo tüm kullanım alanlarını kapsar.",
+    "recommendation": "Paddle Board Overstock Şişme kano serisi, ticari kiralama için özel olarak tasarlanmıştır. Kulüp Başlangıç Paketi ile eşleştirilen, tam bir kiralamaya hazır filo oluşturun.",
     "faq": [
       {
         "q": "Şişme kayaklar ticari kullanımda ne kadar dayanır?",
@@ -191,27 +191,27 @@ export const businessArticles: ContentV2Record[] = [
     "title": "Özel Markayla OEMSu Sporları Markası Başlatılır",
     "description": "SUPKendi kayangınızı veya şişme tekne markanızı özel etiket üretimiyle başlatmak için adım adım rehber. Ürün MOQsseçimi, fiyatlandırma, paketleme ve e-ticaret kurulumu.",
     "definition": "Özel etiket OEM (Orijinal Ekipman Üretimi), bir fabrikanın markanız altında satılan ürünleri ürettiği anlardır. Tasarımı, renkleri, logoyu ve ambalajı siz seçersiniz — fabrika üretim ve kalite kontrolünü yürütür.",
-    "tldr": "Özel marka üretimiyle su sporları markası başlatmak ilk envanter için $5.000–$15.000 tutar (50-100 adet $50-150$/birim). Süreç, ilk temastan ilk gönderimenize kadar 60-90 gün sürer. AquafarerMarka Lansman Paketi ürün seçimi, özel logo tasarımı, paketleme, CE sertifikasyon ve FOB kargo içerir. İlk kez marka sahipleri genellikle Amazon, Shopify veya yerel perakendeciler aracılığıyla satışa çıkarak %40-55 kâr elde eder.",
+    "tldr": "Özel marka üretimiyle su sporları markası başlatmak ilk envanter için $5.000–$15.000 tutar (50-100 adet $50-150$/birim). Süreç, ilk temastan ilk gönderimenize kadar 60-90 gün sürer. Paddle Board OverstockMarka Lansman Paketi ürün seçimi, özel logo tasarımı, paketleme, CE sertifikasyon ve FOB kargo içerir. İlk kez marka sahipleri genellikle Amazon, Shopify veya yerel perakendeciler aracılığıyla satışa çıkarak %40-55 kâr elde eder.",
     "problem": "Kendi su sporları markanızı kurmak istiyorsunuz ama üretim deneyiminiz yok, fabrika bağlantılarınız yok ve sınırlı sermayeniz var. Minimum sipariş miktarları, kalite kontrolü ve yerleşik markalarla rekabet edip edemeyeceğiniz konusunda endişeleniyorsunuz.",
-    "explanation": "Özel etiket üretimi küçük markalar için hiç bu kadar erişilebilir olmamıştı.Aquafarer MOQs 50 adet kadar düşük fiyat teklif SKUediyor, bu da 5.000-15.000 dolarlık bir yatırımla piyasayı test edebileceğiniz anlamına geliyor. Süreç: katalogdan temel ürünleri seçin, renkleri ve logoyu özelleştirin, ambalaj seçeneklerini seçin, onay için üretim örneklerini alın, ardından tam üretim ve kargo. Marka ve tüm müşteri ilişkileri sizindir — son Aquafarer müşterileriniz için görünmez kalır.",
-    "solution": "Aquafarer Marka Lansman Paketi ile başlayın: 2-3 ürün modeli seçin (örneğin, yeni başlayanSUP, tur SUPve kayak), logonuzla ve marka renklerinizle özelleştirin, 50-100 adet sipariş SKUedin ve Amazon veya basit bir Shopify mağazasında piyasaya çıkarın. Satışlar arttıkça daha fazla SKU ekleyin ve sipariş miktarlarını artırın.",
-    "recommendation": "Marka Lansman Paketi, Aquafarer ilk kez marka sahipleri için tasarlanmıştır. Tek bir kahraman ürünle başlayın, talebi kanıtlayın ve ürün yelpazesinizi genişletin. Fiyat yarışması yerine marka hikayesi ve müşteri deneyimi oluşturmaya odaklanın.",
+    "explanation": "Özel etiket üretimi küçük markalar için hiç bu kadar erişilebilir olmamıştı.Paddle Board Overstock MOQs 50 adet kadar düşük fiyat teklif SKUediyor, bu da 5.000-15.000 dolarlık bir yatırımla piyasayı test edebileceğiniz anlamına geliyor. Süreç: katalogdan temel ürünleri seçin, renkleri ve logoyu özelleştirin, ambalaj seçeneklerini seçin, onay için üretim örneklerini alın, ardından tam üretim ve kargo. Marka ve tüm müşteri ilişkileri sizindir — son Paddle Board Overstock müşterileriniz için görünmez kalır.",
+    "solution": "Paddle Board Overstock Marka Lansman Paketi ile başlayın: 2-3 ürün modeli seçin (örneğin, yeni başlayanSUP, tur SUPve kayak), logonuzla ve marka renklerinizle özelleştirin, 50-100 adet sipariş SKUedin ve Amazon veya basit bir Shopify mağazasında piyasaya çıkarın. Satışlar arttıkça daha fazla SKU ekleyin ve sipariş miktarlarını artırın.",
+    "recommendation": "Marka Lansman Paketi, Paddle Board Overstock ilk kez marka sahipleri için tasarlanmıştır. Tek bir kahraman ürünle başlayın, talebi kanıtlayın ve ürün yelpazesinizi genişletin. Fiyat yarışması yerine marka hikayesi ve müşteri deneyimi oluşturmaya odaklanın.",
     "faq": [
       {
         "q": "Özel etiket için minimum sipariş miktarı nedir?",
-        "a": "özel markalama için Aquafarerminimum 50 SKU birimdir. Özelleştirme olmadan standart ürünlerde daha düşük MOQsolabilir. Özel kalıp geliştirme ayrı bir pazarlık gerektirir."
+        "a": "özel markalama için Paddle Board Overstockminimum 50 SKU birimdir. Özelleştirme olmadan standart ürünlerde daha düşük MOQsolabilir. Özel kalıp geliştirme ayrı bir pazarlık gerektirir."
       },
       {
         "q": "İthalat gümrük ve lojistiklerini halletmem gerekiyor mu?",
-        "a": "Aquafarer FOB Qingdao (kargo düzenler) veya CIF teslimat (limanınıza dahil gönderme) teklif eder. Ayrıca gümrük gümrükleme ve son mil teslimatı yapan nakliye şirketlerini de tavsiye edebiliriz."
+        "a": "Paddle Board Overstock FOB Qingdao (kargo düzenler) veya CIF teslimat (limanınıza dahil gönderme) teklif eder. Ayrıca gümrük gümrükleme ve son mil teslimatı yapan nakliye şirketlerini de tavsiye edebiliriz."
       },
       {
         "q": "Ürün kalitesini nasıl garanti edebilirim?",
-        "a": "Aquafarer Ürünler ISO 9001 kalite yönetimi kapsamında üretilir ve CEkatalogda 64 sertifikalı model bulunur. Toplu üretimden önce onay için üretim örnekleri alırsınız. Üçüncü taraf denetimi mevcuttur."
+        "a": "Paddle Board Overstock Ürünler ISO 9001 kalite yönetimi kapsamında üretilir ve CEkatalogda 64 sertifikalı model bulunur. Toplu üretimden önce onay için üretim örnekleri alırsınız. Üçüncü taraf denetimi mevcuttur."
       },
       {
         "q": "Amazon'da özel etiketli ürünlerle satış yapabilir miyim?",
-        "a": "Evet. Birçok Aquafarer özel etiket müşterisi Amazon, eBay ve kendi Shopify mağazalarında satış yapıyor. Ürün fotoğrafları, açıklama şablonları ve CE pazar yeri listeleri için gerekli belgeleri sağlıyoruz."
+        "a": "Evet. Birçok Paddle Board Overstock özel etiket müşterisi Amazon, eBay ve kendi Shopify mağazalarında satış yapıyor. Ürün fotoğrafları, açıklama şablonları ve CE pazar yeri listeleri için gerekli belgeleri sağlıyoruz."
       }
     ],
     "relatedGuides": [
@@ -231,10 +231,10 @@ export const businessArticles: ContentV2Record[] = [
     "title": "SUP Kulüp Ekipman Kontrol Listesi: Başlatmanız Gerekenler",
     "description": "Bir SUP kulüp, kano kulübü, sörf okulu veya su sporları eğitim merkezi başlatmak veya yükseltmek için tam ekipman envanteri kontrol listesi. Öğrenciler, eğitmenler, güvenlik ve operasyonlar için ekipman içerir.",
     "definition": "SUP Kulüp ekipman kontrol listesi, bir kürek sporu programını yürütmek için gereken tüm ekipmanları kapsar: öğrenci ekipmanları, eğitmen ekipmanları, güvenlik ekipmanları, depolama çözümleri ve operasyonel aksesuarlar.",
-    "tldr": "Bir SUP kulübün açılması için şunlar gerekir: 10-30 board ve paddlere, pompalara ve tamir kitlerine ($3.000-$12.000$); PFD'ler ve güvenlik ekipmanları ($500-$2,000$); özel tahtalar ve iletişim cihazları dahil eğitmen ekipmanları ($1.000-$3.000$); depolama rafları veya römork ($500-$3.000$); ve muafiyet, tabelalar ve rezervasyon sistemi gibi operasyonel ürünler ($200-$1,000$). Aquafarer Kulüp Başlangıç Paketi, temel ürünleri bireysel fiyatların %15-20 altında paketler.",
+    "tldr": "Bir SUP kulübün açılması için şunlar gerekir: 10-30 board ve paddlere, pompalara ve tamir kitlerine ($3.000-$12.000$); PFD'ler ve güvenlik ekipmanları ($500-$2,000$); özel tahtalar ve iletişim cihazları dahil eğitmen ekipmanları ($1.000-$3.000$); depolama rafları veya römork ($500-$3.000$); ve muafiyet, tabelalar ve rezervasyon sistemi gibi operasyonel ürünler ($200-$1,000$). Paddle Board Overstock Kulüp Başlangıç Paketi, temel ürünleri bireysel fiyatların %15-20 altında paketler.",
     "problem": "Bir SUP kulüp ya da sörf okulu açıyorsunuz ama ekipman ihtiyaçları sizi bunaltıyor. Ne alacağını, ne kadar harcayacağınızı ya da bütçenizi nasıl önceliklendireceğinizi bilmiyorsunuz.",
     "explanation": "İyi donanımlı SUP bir kulüp beş tür ekipmana ihtiyaç duyar: (1) Öğrenci panoları ve kürekleri — temel yatırım, SUPs birden fazla boyutta dayanıklı şişme seçeneği; (2) Güvenlik ekipmanları — PFD'ler, tasmalar, düdükler, ilk yardım çantası, kurtarma panosu; (3) Eğitmen ekipmanı — sabit bir eğitim panosu, su geçirmez iletişim, gösteri yardımcıları; (4) Depolama ve taşıma — raflar, römork veya minibüs, pompa istasyonu; (5) Operasyonlar — feragatname sistemi, rezervasyon yazılımı, tabelalar, pazarlama materyalleri.",
-    "solution": "Aquafarer Kulüp Başlangıç Paketi, 1-3 kategorilerini kapsar ve kulüp kalitesinde ekipmanları paket fiyatlarıyla kapsar. Yerel depolama ve basit bir çevrimiçi rezervasyon sistemi ekleyin, böylece ilk sezonunuza hazır olursunuz.",
+    "solution": "Paddle Board Overstock Kulüp Başlangıç Paketi, 1-3 kategorilerini kapsar ve kulüp kalitesinde ekipmanları paket fiyatlarıyla kapsar. Yerel depolama ve basit bir çevrimiçi rezervasyon sistemi ekleyin, böylece ilk sezonunuza hazır olursunuz.",
     "recommendation": "Baştan kaliteli ekipmana yatırım yapın — ucuz tahtalar onarım ve değişim için daha pahalıya mal olur. Kulüp Başlangıç Paketi, 3-5 sezon dayanan ticari kalitede ekipmanlar sağlar. Üyeliğiniz arttıkça kullanımı takip edin ve tahtalar ekleyin.",
     "faq": [
       {
@@ -272,7 +272,7 @@ export const businessArticles: ContentV2Record[] = [
     "problem": "Tatil köyünüzün sahil erişimi var ama su sporları programı düşük performans gösteriyor. Ekipmanlar kullanılmıyor, misafirler aktivitelerin mevcut olduğunu bilmiyor ve program kâr etmek yerine para kaybediyor.",
     "explanation": "En kârlı tatil köyü su sporları programları, etkinlikleri ücretsiz bir hizmet olarak değil, kâr merkezi olarak ele alır. Başarılı programlar kademeli fiyatlandırmalar sunar: premium misafirler için ücretsiz temel ekipman, premium deneyimler için ücretli yükseltmeler ve yüksek fiyatlarla rehberli geziler. Temel ölçütler: katılım oranı (su sporları kullanan misafirlerin yüzdesi), katılımcı misafir başına ortalama gelir ve ekipman kullanım oranı. Çoğu tatil köyü katılımda düşük performans gösterir çünkü etkinlikler misafirlere konaklama öncesinde ve sırasında pazarlanmaz.",
     "solution": "Kademeli bir program uygulayın: (1) SUP Ücretsiz — premium oda kategorilerinde misafirler için temel ve kayak erişimi; (2) Ücretli kiralamalar — standart odalardaki misafirler için saatte 25-50 dolar; (3) Premium deneyimler — rehberli gün batımı turları, şnorkel gezileri, özel dersler kişi başına 75-200 dolar. Varış öncesi e-postalar, odadaki malzemeler ve konsiyerj önerileri yoluyla pazar faaliyetleri.",
-    "recommendation": "Resort Premium Paketi ile Aquafarer başlayın ve kademeli fiyatlandırma modelini uygulayın. Tren resepsiyonu ve konsiyerj personeli su aktivitelerini aktif olarak teşvik etmelidir. Katılım oranlarını takip edin ve fiyatları mevsimsel olarak ayarlayın.",
+    "recommendation": "Resort Premium Paketi ile Paddle Board Overstock başlayın ve kademeli fiyatlandırma modelini uygulayın. Tren resepsiyonu ve konsiyerj personeli su aktivitelerini aktif olarak teşvik etmelidir. Katılım oranlarını takip edin ve fiyatları mevsimsel olarak ayarlayın.",
     "faq": [
       {
         "q": "Su sporları ücretsiz mi yoksa ücretli mi?",
@@ -304,11 +304,11 @@ export const businessArticles: ContentV2Record[] = [
     "title": "Oteller ve Tatil Merkezleri için Şişme Tekne Filo Yönetimi",
     "description": "Ticari konaklama ortamlarında şişme su aracı filolarının yönetimi, bakımı ve yenisi için en iyi uygulamalar. Bakım programları, depolama, onarım ve yaşam döngüsü planlaması.",
     "definition": "Şişirilebilir su araçları için filo yönetimi, ticari kiralama ve konaklama operasyonları için satın alma, bakım planlaması, onarım protokolleri, depolama optimizasyonu ve yenileme planlamasını kapsar.",
-    "tldr": "Tatil tesisi ortamında iyi yönetilen bir şişme bot filosu, uygun bakımla 3-5 sezon dayanır. Temel uygulamalar: günlük denetim kontrol listesi, haftalık yıkama ve kuru dönüşüm, aylık basınç testi, mevsimsel derin temizlik ve depolama. Bakım ve değişim için yıllık ekipman değerinin %15-20'si bütçe yapın.Aquafarer Yedek parça envanteri, uzaktan tanılama ve yıllık ekipman yenileme fiyatlandırması içeren Filo Yönetim Programı sunar.",
+    "tldr": "Tatil tesisi ortamında iyi yönetilen bir şişme bot filosu, uygun bakımla 3-5 sezon dayanır. Temel uygulamalar: günlük denetim kontrol listesi, haftalık yıkama ve kuru dönüşüm, aylık basınç testi, mevsimsel derin temizlik ve depolama. Bakım ve değişim için yıllık ekipman değerinin %15-20'si bütçe yapın.Paddle Board Overstock Yedek parça envanteri, uzaktan tanılama ve yıllık ekipman yenileme fiyatlandırması içeren Filo Yönetim Programı sunar.",
     "problem": "Tatil köyünüz misafir aktiviteleri için şişme su araçlarına yatırım yaptı, ancak bir sezondan sonra ekipman aşınmaya başladı, bakım proaktif değil tepkisel oluyor ve ne zaman tamir edileceğinden ne zaman değiştirileceğinden emin değilsiniz.",
     "explanation": "Ticari kullanımda şişme su araçları belirli zorluklarla karşı karşıyadır: UV maruz kalma PVC zamanla kumaşı aşındırır, tuzlu su ve kum vanaların ve dikişlerin aşınmasını hızlandırır, deneyimsiz kullanıcılar daha fazla darbe hasarına neden olur ve yanlış depolama ömrü kısaltır. Sistematik bir bakım programı bunların her birini ele alır: tuzlu su kullanımından sonra günlük durulama, vanaların ve dikişlerin haftalık denetimi, 12-15 aralığında aylık basınç testi PSIve klima kontrollü bir alanda mevsim dışı doğru saklama.",
-    "solution": "Üç kademeli bakım sistemini uygulamak: (1) Günlük — tahtaları durulama, görünür hasar olup olmadığını kontrol etmek, depolamadan önce kurutmak; (2) Haftalık — tüm dikişler, vanalar ve aksesuarların tam denetimi; (3) Mevsimsel — derin temizlik, basınç testi, tüm hasarları onarmak, UV koruyucu uygulamak. Aquafarer Filo Yönetim Programı'nı yedek parça, uzaktan destek ve yıllık değişim planlaması için kullanın.",
-    "recommendation": "Aquafarer Filo Yönetim Programı, yedek parça seti, video bakım rehberleri ve yıllık ekipman incelemesini içerir. Resort Premium Paketi ile birleştiğinde, bu durum filonuuzun en iyi durumda kalmasını ve minimum kesinti süresini garanti eder.",
+    "solution": "Üç kademeli bakım sistemini uygulamak: (1) Günlük — tahtaları durulama, görünür hasar olup olmadığını kontrol etmek, depolamadan önce kurutmak; (2) Haftalık — tüm dikişler, vanalar ve aksesuarların tam denetimi; (3) Mevsimsel — derin temizlik, basınç testi, tüm hasarları onarmak, UV koruyucu uygulamak. Paddle Board Overstock Filo Yönetim Programı'nı yedek parça, uzaktan destek ve yıllık değişim planlaması için kullanın.",
+    "recommendation": "Paddle Board Overstock Filo Yönetim Programı, yedek parça seti, video bakım rehberleri ve yıllık ekipman incelemesini içerir. Resort Premium Paketi ile birleştiğinde, bu durum filonuuzun en iyi durumda kalmasını ve minimum kesinti süresini garanti eder.",
     "faq": [
       {
         "q": "Şişme tahtalar ne sıklıkla değiştirilmelidir?",
@@ -320,7 +320,7 @@ export const businessArticles: ContentV2Record[] = [
       },
       {
         "q": "Şişme tahtalar tamir edilebilir mi?",
-        "a": "Evet. Küçük delikler ve dikiş ayrılmaları PVC yama kitleriyle onarılabilir.Aquafarer Her tahta ile birlikte tamir kitleri içerir ve daha büyük hasarlar için profesyonel onarım hizmetleri sunar."
+        "a": "Evet. Küçük delikler ve dikiş ayrılmaları PVC yama kitleriyle onarılabilir.Paddle Board Overstock Her tahta ile birlikte tamir kitleri içerir ve daha büyük hasarlar için profesyonel onarım hizmetleri sunar."
       }
     ],
     "relatedGuides": [
@@ -343,8 +343,8 @@ export const businessArticles: ContentV2Record[] = [
     "tldr": "Özel etiket tam marka sahipliği ve farklılık sunar ancak daha MOQs yüksek (50+ birim) ve daha uzun teslim süreleri gerektirir. Beyaz etiket daha hızlıdır (stok ürünler, göndermeye hazır) ve daha düşük MOQs ama markanız diğer tüm beyaz etiketli satıcılar gibi görünür. Ciddi su sporları girişimcileri için özel etiket uzun vadede daha iyi bir yoldur. Piyasayı test etmek için beyaz etiketle başlayın, sonra büyüdükçe özel etikete geçin.",
     "problem": "Bir su sporu markası başlatmaya hazırsınız ama özel markaya mı (özel tasarımlar, daha MOQyüksek, daha uzun teslim süresi) yoksa beyaz etikete (stok ürünler, daha hızlı, daha düşük risk) mi geçeceğinizden emin değilsiniz. Yanlış seçim aylarca ve binlerce dolar kaybedebilir.",
     "explanation": "Beyaz etiket, piyasayı test etmenin hızlı bir yoludur — mevcut ürünlerden seç, logonuzu çıkartma veya temel baskı ile ekleyin ve satışa başlayın. Dezavantajı: ürün farklılaştırma yok, rakipler aynı ürünleri satabilir ve markanız sıradan görünür. Özel etiket üretimi 6-10 hafta sürer ancak özel renkler, logo entegrasyonu, markalı ambalaj ve aksesuarlarla benzersiz bir ürün oluşturur. Ürününüz orijinal bir marka gibi görünür ve hissettirir, yeniden satılan bir ürün değil.",
-    "solution": "Kahraman ürününüz için özel etiketli Aquafarer Marka Başlatma Paketi ile başlayın — markanızı tanımlayan tek ürün. Kataloğunuzu doldurmak için beyaz etiketli aksesuarlarla (kürekler, çantalar, tamir kitleri) takviye edin. Büyüdükçe, daha fazla ürünü özel markaya dönüştürün.",
-    "recommendation": "Ana ürün seriniz için özel markaya yatırım yapın. Markaya yatırım yapmak daha yüksektir MOQ . Beyaz etiketli aksesuarlar ve tüketim malzemeleri.Aquafarer Her iki seçeneği de beyaz etiketten özel etikete sorunsuz bir yükseltme yolu sunuyor.",
+    "solution": "Kahraman ürününüz için özel etiketli Paddle Board Overstock Marka Başlatma Paketi ile başlayın — markanızı tanımlayan tek ürün. Kataloğunuzu doldurmak için beyaz etiketli aksesuarlarla (kürekler, çantalar, tamir kitleri) takviye edin. Büyüdükçe, daha fazla ürünü özel markaya dönüştürün.",
+    "recommendation": "Ana ürün seriniz için özel markaya yatırım yapın. Markaya yatırım yapmak daha yüksektir MOQ . Beyaz etiketli aksesuarlar ve tüketim malzemeleri.Paddle Board Overstock Her iki seçeneği de beyaz etiketten özel etikete sorunsuz bir yükseltme yolu sunuyor.",
     "faq": [
       {
         "q": "Özel etiket ile beyaz etiket arasındaki maliyet farkı nedir?",
@@ -352,7 +352,7 @@ export const businessArticles: ContentV2Record[] = [
       },
       {
         "q": "Beyaz etiketten özel etikete geçebilir miyim?",
-        "a": "Evet. Birçok müşteri, Aquafarer talebi doğrulamak için beyaz etiketle başlar, sonra en çok satan ürünleri için özel etikete geçer. Fabrika aletleri genellikle beyaz etiket spesifikasyonlarından uyarlanabilir."
+        "a": "Evet. Birçok müşteri, Paddle Board Overstock talebi doğrulamak için beyaz etiketle başlar, sonra en çok satan ürünleri için özel etikete geçer. Fabrika aletleri genellikle beyaz etiket spesifikasyonlarından uyarlanabilir."
       }
     ],
     "relatedGuides": [
@@ -375,8 +375,8 @@ export const businessArticles: ContentV2Record[] = [
     "tldr": "Doğru bakım, ticari şişme su araçlarının ömrünü 2 sezondan 5 sezona kadar uzatır. Bakım yatırım oranı 5:1'dir — bakıma harcanan her $1, değişim maliyetinden 5$ tasarruf eder. Temel uygulamalar: her tuzlu su kullanımından sonra durulama, doğrudan su dışında saklamaUV, doğru şişirme basıncını (12-15) PSIkorumak, hasarı hemen onarmak ve ekipmanı aşınmayı eşit şekilde dağıtmak için döndürmek.",
     "problem": "Kiralama filonuzda ilk sezondan sonra erken aşınma görülüyor. Tahtalar soluyor, dikişler ayrılıyor ve valfler sızdırıyor. Beklenenden daha erken binlerce yenileme masrafıyla karşı karşıya kalıyorsunuz.",
     "explanation": "Ticari su sporları ekipmanları dört nedenle erken arızalanır: UV hasar (PVCdoğrudan güneş ışığında bozulmak), tuz korozyonu (vanalar ve donanım), darbe hasarı (sürükleme, düşme, yanlış kullanım) ve yanlış depolama (ıslakken katlanma, ağırlık altında saklanmak). Yapılandırılmış bakım programı, bu dört durumu minimum zaman yatırımıyla ele alır.",
-    "solution": "Aquafarer Ticari Bakım Programını Uygulayın: (1) Günlük durulama ve görsel kontrol (her board için 5 dk); (2) Haftalık basınç kontrolü ve vana temizliği (her board için 10 dk); (3) Aylık dikiş kontrolü ve küçük onarımlar (her board için 15 dk); (4) Sezonluk derin temizlik, UV koruyucu tedavi ve tam inceleme. Bir personeli ekipman yöneticisi olarak eğitin.",
-    "recommendation": "Aquafarer Araç Yönetim Programı bakım kılavuzları, yedek parça kitleri ve uzaktan destek içerir. Bir personeli ekipman bakımından sorumlu atayın ve günlük-haftalık-sezonluk planı takip edin. Ekipman yaşını ve kullanımını takip ederek değişimleri proaktif olarak planlayın.",
+    "solution": "Paddle Board Overstock Ticari Bakım Programını Uygulayın: (1) Günlük durulama ve görsel kontrol (her board için 5 dk); (2) Haftalık basınç kontrolü ve vana temizliği (her board için 10 dk); (3) Aylık dikiş kontrolü ve küçük onarımlar (her board için 15 dk); (4) Sezonluk derin temizlik, UV koruyucu tedavi ve tam inceleme. Bir personeli ekipman yöneticisi olarak eğitin.",
+    "recommendation": "Paddle Board Overstock Araç Yönetim Programı bakım kılavuzları, yedek parça kitleri ve uzaktan destek içerir. Bir personeli ekipman bakımından sorumlu atayın ve günlük-haftalık-sezonluk planı takip edin. Ekipman yaşını ve kullanımını takip ederek değişimleri proaktif olarak planlayın.",
     "faq": [
       {
         "q": "Dış sezonlarda şişme boardlar nasıl saklanır?",
@@ -388,7 +388,7 @@ export const businessArticles: ContentV2Record[] = [
       },
       {
         "q": "Personeli bakım konusunda nasıl eğitirim?",
-        "a": "Her bakım aşaması için basit bir kontrol listesi oluşturun. Aquafarer tüm ticari müşteriler için video eğitim kılavuzları sağlar. Bir baş personeli ekipman yöneticisi olarak atayın ve sorumluluğu haftalık olarak döndürün."
+        "a": "Her bakım aşaması için basit bir kontrol listesi oluşturun. Paddle Board Overstock tüm ticari müşteriler için video eğitim kılavuzları sağlar. Bir baş personeli ekipman yöneticisi olarak atayın ve sorumluluğu haftalık olarak döndürün."
       }
     ],
     "relatedGuides": [

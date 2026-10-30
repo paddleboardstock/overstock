@@ -12,6 +12,9 @@ import ToBlogLink from '~/components/blog/ToBlogLink.astro';
 import JsonLd from '~/components/common/JsonLd.astro';
 import Tldr from '~/components/common/Tldr.astro';
 import TrustBadges from '~/components/common/TrustBadges.astro';
+import ProductGradeBadge from '~/components/widgets/ProductGradeBadge.astro';
+import ProductFullSet from '~/components/widgets/ProductFullSet.astro';
+import ProductWhatsAppBulk from '~/components/widgets/ProductWhatsAppBulk.astro';
 
 import { findRelatedProducts, getStaticPathsProduct, CATEGORY_SLUG_TO_URL } from '~/utils/products';
 import { productBusinessData } from '~/data/product-business-data';
@@ -121,6 +124,15 @@ const productCrumbs = [
 
 const specRows = product.specs ?? [];
 const productCompliance = getProductCompliance(product.category);
+
+// Full-set presentation (shichang.txt): derive the what's-in-the-box checklist
+// from the raw EN "Included" spec — localized specs carry translated labels,
+// so match before localization and keep the item values as-is.
+const includedSpecRaw = rawProduct.specs?.find((s: { label?: string }) => s.label === 'Included');
+const inTheBoxItems = (includedSpecRaw?.value || '')
+  .split(',')
+  .map((v: string) => v.trim())
+  .filter(Boolean);
 ---
 
 ---
@@ -162,6 +174,15 @@ const productCompliance = getProductCompliance(product.category);
           : {}),
       },
       additionalProperty: [
+        ...(product.grade
+          ? [
+              {
+                '@type': 'PropertyValue',
+                name: 'Grade',
+                value: product.grade === 'B' ? 'Factory seconds (Grade B)' : 'Brand-new overstock (Grade A)',
+              },
+            ]
+          : []),
         ...(product.ai_specs?.length || rec?.ai_specs?.length
           ? [{ '@type': 'PropertyValue', name: 'Length', value: product.ai_specs?.length || rec?.ai_specs?.length }]
           : []),
@@ -369,6 +390,13 @@ const productCompliance = getProductCompliance(product.category);
                   </>
                 )
               }
+              {
+                product.grade && (
+                  <span class="ml-auto">
+                    <ProductGradeBadge grade={product.grade} lang={lang} />
+                  </span>
+                )
+              }
             </div>
             <h1 class="text-3xl md:text-4xl font-bold tracking-tight text-gray-900 dark:text-slate-100 leading-[1.15]">
               {product.title}
@@ -395,6 +423,9 @@ const productCompliance = getProductCompliance(product.category);
               </div>
             )
           }
+
+          {/* What's in the box — full-set presentation */}
+          <ProductFullSet items={inTheBoxItems} grade={product.grade} lang={lang} />
 
           {/* Full Specs Toggle */}
           {
@@ -432,6 +463,8 @@ const productCompliance = getProductCompliance(product.category);
               {t('product.customSample')}
             </a>
           </div>
+          {/* WhatsApp bulk / wholesale CTA */}
+          <ProductWhatsAppBulk title={product.title} lang={lang} />
         </div>
       </div>
     </div>

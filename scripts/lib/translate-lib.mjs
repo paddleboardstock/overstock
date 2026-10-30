@@ -68,7 +68,7 @@ export function shouldTranslate(key, value) {
 export const PROTECT_PATTERNS = [
   /<\/?[a-zA-Z][^>]*>/g,
   /https?:\/\/[^\s<>"']+/g,
-  /\bAquafarer\b/g,
+  /\bPaddle Board Overstock\b/g,
   /\bRIBs?\b/g,
   /\bCE\b/g,
   /\bSOLAS\b/g,
@@ -131,7 +131,7 @@ const cleanWs = (t) => t.replace(IRREGULAR_WS, ' ').replace(ZERO_WIDTH, '');
 // and collapses the surrounding space; fixTokenSpacing re-inserts it at emit time.
 export const PROTECTED_TERMS = [
   'Drop-Stitch',
-  'Aquafarer',
+  'Paddle Board Overstock',
   'Hypalon',
   'Valmex',
   'AirDeck',

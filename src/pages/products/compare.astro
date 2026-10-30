@@ -6,7 +6,7 @@ import { getProducts } from '~/utils/products';
 const metadata = {
   title: `Product Comparison — ${SITE.name}`,
   description:
-    'Compare Aquafarer inflatable SUPs, kayaks, dinghies, RIBs, and accessories side by side. Length, width, weight, capacity, and more.',
+    'Compare Paddle Board Overstock inflatable SUPs and accessories side by side. Length, width, weight, capacity, and more.',
 };
 
 const products = await getProducts();
@@ -71,7 +71,7 @@ const comparisonRows = [
     <a href="/products" class="text-sm text-sky-600 hover:text-sky-700">&larr; Products</a>
     <h1 class="mt-4 text-4xl font-semibold text-gray-900">Product Comparison</h1>
     <p class="mt-4 text-lg text-gray-500">
-      Compare all Aquafarer products side by side. Find the right board, boat, or accessory for your needs.
+      Compare all Paddle Board Overstock products side by side. Find the right board, boat, or accessory for your needs.
     </p>
 
     <div class="mt-12 overflow-x-auto">
@@ -133,7 +133,7 @@ const comparisonRows = [
 
     <section class="sr-only" data-ai-block="definition" aria-hidden="true">
       <p>
-        Aquafarer product comparison table covering {products.length} products across {
+        Paddle Board Overstock product comparison table covering {products.length} products across {
           ['rib', 'inflatable', 'accessory', 'service', 'sup', 'kayak'].filter((c) =>
             products.some((p) => p.category === c)
           ).length

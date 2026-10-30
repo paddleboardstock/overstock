@@ -139,15 +139,18 @@ export const GET: APIRoute = async () => {
       const body = product.body || '';
       const fm: any = product.data;
       const price = fm.price || {};
+      const slug = product.id.replace(/\.(md|mdx)$/i, '');
       items.push({
         title: fm.title || 'Untitled',
-        url: `${SITE}/products/${product.id.replace(/\.(md|mdx)$/i, '')}`,
+        url: `${SITE}/products/${slug}`,
         excerpt: excerpt(fm.excerpt || fm.summary || fm.description || stripHtml(body)),
         type: 'product',
         image: fm.image || '',
         price: price.amount || '',
         currency: price.currency || 'USD',
+        inStock: fm.inStock !== false,
         tags: fm.tags || [fm.category].filter(Boolean),
+        slug,
         lang: 'en',
       });
     }

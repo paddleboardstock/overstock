@@ -1,0 +1,189 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+import { getLangFromUrl } from '~/i18n/utils';
+import { localizeHref } from '~/i18n/routing';
+import { SITE } from 'astrowind:config';
+
+export interface Props {
+  lang?: string;
+}
+
+const { lang: langProp } = Astro.props;
+const lang = langProp || getLangFromUrl(Astro.url);
+const ui = getUiForLang(lang) || {};
+const t = (key: string, fallback: string): string => ui[key] || fallback;
+
+const metadata = {
+  title: `${t('success.title', 'Order Confirmed')} — ${SITE.name}`,
+  description: t('success.thanks', 'Thank you for your order at Paddle Board Overstock.'),
+};
+
+const scriptStrings = {
+  paid: t(
+    'success.paid',
+    'Your payment was successful. We have emailed your order confirmation and will ship your order from Weihai as soon as possible.'
+  ),
+  pending: t('success.pending', 'Your payment is processing. You will receive a confirmation email once it completes.'),
+  unverified: t(
+    'success.unverified',
+    'We could not verify your payment. Please contact info@paddleboardoverstock.com with your order details.'
+  ),
+  paypalPending: t(
+    'success.paypalPending',
+    'Your PayPal payment is not yet completed. If you were charged, please contact info@paddleboardoverstock.com.'
+  ),
+  orderRef: t('success.orderRef', 'Order reference: {ref}'),
+  thanks: t('success.thanks', 'Thank you for shopping at Paddle Board Overstock.'),
+};
+---
+
+<Layout metadata={metadata}>
+  <script type="application/json" data-success-i18n set:html={JSON.stringify(scriptStrings)} />
+  <section class="px-4 py-24 sm:px-6 mx-auto max-w-2xl text-center">
+    <div
+      class="mx-auto w-16 h-16 rounded-full bg-green-100 dark:bg-green-900/40 flex items-center justify-center mb-6"
+      data-success-icon
+    >
+      <svg class="w-8 h-8 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+      </svg>
+    </div>
+
+    <h1 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 font-heading mb-3">
+      {t('success.title', 'Thank you for your order!')}
+    </h1>
+    <p class="text-gray-500 dark:text-slate-400 leading-relaxed" data-status-message>
+      {t('success.confirming', 'We are confirming your payment…')}
+    </p>
+    <p class="mt-4 text-sm text-gray-400 dark:text-slate-500" data-order-ref hidden></p>
+
+    <div class="mt-8 flex items-center justify-center gap-4">
+      <a
+        href={localizeHref('/products', lang)}
+        class="inline-flex items-center justify-center px-6 py-3 bg-primary text-white text-sm font-semibold rounded-lg hover:opacity-90 transition-opacity"
+        >{t('success.continue', 'Continue Shopping')}</a
+      >
+      <a
+        href={localizeHref('/', lang)}
+        class="inline-flex items-center justify-center px-6 py-3 border border-gray-200 dark:border-slate-700 text-gray-600 dark:text-slate-300 text-sm font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors"
+        >{t('success.home', 'Back to Home')}</a
+      >
+    </div>
+  </section>
+</Layout>
+
+<script>
+  import { clearCart } from '~/lib/cart';
+
+  interface SuccessStrings {
+    paid: string;
+    pending: string;
+    unverified: string;
+    paypalPending: string;
+    orderRef: string;
+    thanks: string;
+  }
+
+  function strings(): SuccessStrings {
+    const el = document.querySelector('[data-success-i18n]');
+    if (el && el.textContent) {
+      try {
+        const parsed = JSON.parse(el.textContent) as Partial<SuccessStrings>;
+        return {
+          paid: parsed.paid || 'Your payment was successful.',
+          pending: parsed.pending || 'Your payment is processing.',
+          unverified: parsed.unverified || 'We could not verify your payment.',
+          paypalPending: parsed.paypalPending || 'Your PayPal payment is not yet completed.',
+          orderRef: parsed.orderRef || 'Order reference: {ref}',
+          thanks: parsed.thanks || 'Thank you for shopping at Paddle Board Overstock.',
+        };
+      } catch {
+        /* fall through */
+      }
+    }
+    return {
+      paid: 'Your payment was successful.',
+      pending: 'Your payment is processing.',
+      unverified: 'We could not verify your payment.',
+      paypalPending: 'Your PayPal payment is not yet completed.',
+      orderRef: 'Order reference: {ref}',
+      thanks: 'Thank you for shopping at Paddle Board Overstock.',
+    };
+  }
+
+  const msgEl = document.querySelector('[data-status-message]');
+  const refEl = document.querySelector('[data-order-ref]');
+  const iconEl = document.querySelector('[data-success-icon]');
+
+  function setMessage(text: string, ok: boolean): void {
+    if (msgEl) msgEl.textContent = text;
+    if (iconEl) {
+      iconEl.className = `mx-auto w-16 h-16 rounded-full flex items-center justify-center mb-6 ${
+        ok ? 'bg-green-100 dark:bg-green-900/40' : 'bg-amber-100 dark:bg-amber-900/40'
+      }`;
+    }
+  }
+
+  function showRef(ref: string): void {
+    const s = strings();
+    if (refEl && ref) {
+      refEl.textContent = s.orderRef.includes('{ref}') ? s.orderRef.replace('{ref}', ref) : `${s.orderRef} ${ref}`;
+      refEl.removeAttribute('hidden');
+    }
+  }
+
+  async function verifyStripe(sessionId: string): Promise<void> {
+    const s = strings();
+    try {
+      const res = await fetch(`/api/shop/verify?session_id=${encodeURIComponent(sessionId)}`);
+      const body = (await res.json()) as { status?: string; ref?: string; error?: string };
+      if (res.ok && body.status === 'paid') {
+        setMessage(s.paid, true);
+        showRef(body.ref || '');
+        clearCart();
+      } else if (body.status === 'pending') {
+        setMessage(s.pending, false);
+        clearCart();
+      } else {
+        setMessage(s.unverified, false);
+      }
+    } catch {
+      setMessage(s.unverified, false);
+    }
+  }
+
+  async function capturePaypal(orderId: string): Promise<void> {
+    const s = strings();
+    try {
+      const res = await fetch('/api/shop/paypal/capture', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ orderId }),
+      });
+      const body = (await res.json()) as { status?: string; ref?: string; error?: string };
+      if (res.ok && body.status === 'paid') {
+        setMessage(s.paid, true);
+        showRef(body.ref || '');
+        clearCart();
+      } else {
+        setMessage(body.error || s.paypalPending, false);
+      }
+    } catch {
+      setMessage(s.paypalPending, false);
+    }
+  }
+
+  const params = new URLSearchParams(window.location.search);
+  const sessionId = params.get('session_id');
+  const paypalOrderId = params.get('order_id');
+
+  if (sessionId) {
+    verifyStripe(sessionId);
+  } else if (paypalOrderId) {
+    capturePaypal(paypalOrderId);
+  } else {
+    setMessage(strings().thanks, true);
+    clearCart();
+  }
+</script>

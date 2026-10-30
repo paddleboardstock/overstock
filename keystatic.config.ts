@@ -280,7 +280,7 @@ const map = {
 export default config({
   storage: {
     kind: 'github',
-    repo: 'aquafarer/official',
+    repo: 'paddleboardoverstock/official',
   },
   singletons: {
     homepage: singleton({

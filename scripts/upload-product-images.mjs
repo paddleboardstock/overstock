@@ -8,9 +8,9 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 const TMP_DIR = path.join(ROOT, '.cache', 'webp-tmp');
 
-const IMAGE_ROOT = 'D:\\AQUAFARER Aluminum Hull RIB boat图片';
-const R2_BUCKET = 'aquafarer-assets';
-const R2_BASE_PATH = 'images/aquafarer/products/rib';
+const IMAGE_ROOT = 'D:\\PADDLE BOARD OVERSTOCK Aluminum Hull RIB boat图片';
+const R2_BUCKET = 'paddleboardoverstock-assets';
+const R2_BASE_PATH = 'images/paddleboardoverstock/products/rib';
 const WEBP_QUALITY = 80;
 const MAX_WIDTH = 2000;
 

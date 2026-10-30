@@ -5,7 +5,7 @@ export interface SiteSection {
 }
 
 export const SITE_SECTIONS: SiteSection[] = [
-  { label: 'Home', path: '/', sitemap: { entity: 'aquafarer', type: 'brand', priority: '1.0' } },
+  { label: 'Home', path: '/', sitemap: { entity: 'paddleboardoverstock', type: 'brand', priority: '1.0' } },
   { label: 'Products', path: '/products', sitemap: { entity: 'products', type: 'product', priority: '0.9' } },
   {
     label: 'Search & Rescue',
@@ -41,9 +41,9 @@ export const SITE_SECTIONS: SiteSection[] = [
   { label: 'Academy', path: '/academy', sitemap: { entity: 'academy', type: 'education', priority: '0.7' } },
   { label: 'Size Guide', path: '/size-guide', sitemap: { entity: 'size-guide', type: 'product', priority: '0.5' } },
   {
-    label: 'Aquafarer Story',
-    path: '/aquafarer-story',
-    sitemap: { entity: 'aquafarer-story', type: 'brand', priority: '0.8' },
+    label: 'Paddle Board Overstock Story',
+    path: '/paddleboardoverstock-story',
+    sitemap: { entity: 'paddleboardoverstock-story', type: 'brand', priority: '0.8' },
   },
   { label: 'Gallery', path: '/gallery', sitemap: { entity: 'gallery', type: 'media', priority: '0.5' } },
   { label: 'Warranty', path: '/warranty', sitemap: { entity: 'warranty', type: 'support', priority: '0.5' } },
@@ -100,9 +100,9 @@ export const SITE_SECTIONS: SiteSection[] = [
     sitemap: { entity: 'commercial-vs-recreational-rib', type: 'compare', priority: '0.7' },
   },
   {
-    label: 'Aquafarer vs Traditional Manufacturers Comparison',
-    path: '/compare/aquafarer-vs-traditional-manufacturers',
-    sitemap: { entity: 'aquafarer-vs-traditional', type: 'compare', priority: '0.7' },
+    label: 'Paddle Board Overstock vs Traditional Manufacturers Comparison',
+    path: '/compare/paddleboardoverstock-vs-traditional-manufacturers',
+    sitemap: { entity: 'paddleboardoverstock-vs-traditional', type: 'compare', priority: '0.7' },
   },
   { label: 'SUP Basics', path: '/learn/sup-basics', sitemap: { entity: 'sup-basics', type: 'guide', priority: '0.8' } },
   {
@@ -116,8 +116,8 @@ export const SITE_SECTIONS: SiteSection[] = [
     sitemap: { entity: 'safety-water-sports', type: 'guide', priority: '0.7' },
   },
   {
-    label: 'Aquafarer AI Brand Profile',
-    path: '/llms/brand/aquafarer',
+    label: 'Paddle Board Overstock AI Brand Profile',
+    path: '/llms/brand/paddleboardoverstock',
     sitemap: { entity: 'llms-brand', type: 'reference', priority: '0.3' },
   },
   {

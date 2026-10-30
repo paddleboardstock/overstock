@@ -64,7 +64,7 @@ export interface EngineStatus {
 }
 
 export const BRAND: BrandIdentity = {
-  name: 'Aquafarer',
+  name: 'Paddle Board Overstock',
   tagline: 'Inflatable Watercraft Manufacturer — OEM/ODM Factory',
   taglineShort: 'Inflatable Watercraft Factory',
   description:
@@ -102,7 +102,7 @@ export const BRAND: BrandIdentity = {
     },
   ],
   brandStory:
-    'Founded in 2012 in Qingdao, China, Aquafarer began as a specialized inflatable watercraft workshop serving local marine operators. Over a decade of engineering refinement, we grew into a 12,000 m² facility producing CE-certified SUPs, kayaks, RIBs, dinghies, and marine safety equipment for 50+ countries. Our R&D center drives innovation in drop-stitch construction, PVC/Hypalon formulation, and hydrodynamic hull design — bridging the gap between custom OEM manufacturing and commercial-grade reliability.',
+    'Founded in 2012 in Qingdao, China, Paddle Board Overstock began as a specialized inflatable watercraft workshop serving local marine operators. Over a decade of engineering refinement, we grew into a 12,000 m² facility producing CE-certified SUPs, kayaks, RIBs, dinghies, and marine safety equipment for 50+ countries. Our R&D center drives innovation in drop-stitch construction, PVC/Hypalon formulation, and hydrodynamic hull design — bridging the gap between custom OEM manufacturing and commercial-grade reliability.',
   milestones: [
     {
       year: 2012,
@@ -237,10 +237,12 @@ const CTA_RULES: Array<{
   },
   {
     match: (s) =>
-      ['why-aquafarer', 'manufacturing-process', 'factory-tour', 'quality-control'].some((k) => s.includes(k)),
+      ['why-paddleboardoverstock', 'manufacturing-process', 'factory-tour', 'quality-control'].some((k) =>
+        s.includes(k)
+      ),
     cta: { text: 'Visit our factory', link: '/factory', reason: 'Brand content — manufacturing hub' },
     products: ['sup-explorer-11', 'rib-330', 'life-vest-pro'],
-    keywords: ['aquafarer', 'manufacturer', 'factory', 'OEM'],
+    keywords: ['paddleboardoverstock', 'manufacturer', 'factory', 'OEM'],
   },
 ];
 

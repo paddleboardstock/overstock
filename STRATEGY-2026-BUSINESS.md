@@ -1,14 +1,14 @@
-# Aquafarer 商业升级战略方案 (2026)
+# Paddle Board Overstock 商业升级战略方案 (2026)
 
 ## 一、总体战略定位调整
 
 ### 当前定位
 
-Aquafarer = 中国高品质充气船、SUP、Kayak OEM/ODM 制造商
+Paddle Board Overstock = 中国高品质充气船、SUP、Kayak OEM/ODM 制造商
 
 ### 新定位
 
-**Aquafarer — "Your Water Adventure Business Partner"**
+**Paddle Board Overstock — "Your Water Adventure Business Partner"**
 
 不只是制造水上装备，更帮助全球伙伴建立成功的水上运动业务。
 
@@ -24,7 +24,7 @@ Business Solution → Product → Factory
 
 ### 第一屏 Hero
 
-**主标题：** Build Your Water Adventure Business With Aquafarer
+**主标题：** Build Your Water Adventure Business With Paddle Board Overstock
 
 **副标题：** From professional water equipment manufacturing to complete solutions for clubs, resorts and emerging brands.
 

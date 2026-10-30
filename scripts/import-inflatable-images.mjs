@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
- * Import images from the "Aquafarer Inflatable boats" source folder into
- * public/images/aquafarer/products/<slug>/ as webp, using the site's
+ * Import images from the "Paddle Board Overstock Inflatable boats" source folder into
+ * public/images/paddleboardoverstock/products/<slug>/ as webp, using the site's
  * product sizing rules (800px, q80).
  *
  * Usage: node scripts/import-inflatable-images.mjs
@@ -10,8 +10,8 @@ import sharp from 'sharp';
 import fs from 'fs';
 import path from 'path';
 
-const SRC = 'D:\\OneDrive\\Website\\Aquafarer\\Aquafarer Inflatable boats';
-const OUT_ROOT = path.resolve('public/images/aquafarer/products');
+const SRC = 'D:\\OneDrive\\Website\\Paddle Board Overstock\\Paddle Board Overstock Inflatable boats';
+const OUT_ROOT = path.resolve('public/images/paddleboardoverstock/products');
 
 const GROUPS = [
   {
@@ -156,7 +156,7 @@ async function main() {
         continue;
       }
       n++;
-      const dest = path.join(outDir, `aquafarer-${group.slug}-${n}.webp`);
+      const dest = path.join(outDir, `paddleboardoverstock-${group.slug}-${n}.webp`);
       const img = sharp(src);
       const meta = await img.metadata();
       const opts = {};

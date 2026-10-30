@@ -1,4 +1,4 @@
-# Aquafarer 官网优化策略与执行方案 (2026)
+# Paddle Board Overstock 官网优化策略与执行方案 (2026)
 
 ## 一、官网现状诊断
 

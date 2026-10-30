@@ -2,7 +2,7 @@
 publishDate: 2025-01-01
 title: Coastal Touring & Exploration
 summary: Longer touring boards for covering distance on open water with efficiency and tracking.
-description: Coastal touring requires boards with good tracking, glide efficiency, and the ability to handle moderate chop. Aquafarer Tour 12 is designed for this use case.
+description: Coastal touring requires boards with good tracking, glide efficiency, and the ability to handle moderate chop. Paddle Board Overstock Tour 12 is designed for this use case.
 category: recreation
 environment: coastal
 skill: intermediate

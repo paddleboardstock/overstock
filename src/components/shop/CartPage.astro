@@ -1,0 +1,227 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+import { getLangFromUrl } from '~/i18n/utils';
+import { localizeHref } from '~/i18n/routing';
+import { SITE } from 'astrowind:config';
+
+export interface Props {
+  lang?: string;
+}
+
+const { lang: langProp } = Astro.props;
+const lang = langProp || getLangFromUrl(Astro.url);
+const ui = getUiForLang(lang) || {};
+const t = (key: string, fallback: string): string => ui[key] || fallback;
+
+const prefix = lang && lang !== 'en' ? `/${lang}` : '';
+
+const metadata = {
+  title: `${t('cart.title', 'Shopping Cart')} — ${SITE.name}`,
+  description: t(
+    'cart.metaDesc',
+    'Review your shopping cart at Paddle Board Overstock — inflatable SUP boards, packages, and accessories with secure Stripe & PayPal checkout and worldwide shipping.'
+  ),
+};
+
+const scriptStrings = {
+  each: t('cart.each', '{price} each'),
+  free: t('cart.free', 'FREE'),
+  remove: t('cart.remove', 'Remove'),
+  prefix,
+};
+---
+
+<Layout metadata={metadata}>
+  <script type="application/json" data-cart-i18n set:html={JSON.stringify(scriptStrings)} />
+  <section class="px-4 py-16 sm:px-6 mx-auto max-w-6xl lg:px-8">
+    <h1 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 font-heading mb-8">
+      {t('cart.title', 'Shopping Cart')}
+    </h1>
+
+    <div class="grid lg:grid-cols-3 gap-8 items-start">
+      {/* Items */}
+      <div class="lg:col-span-2 space-y-4" data-cart-items>
+        <div
+          class="p-10 text-center rounded-2xl border border-gray-100 dark:border-slate-800 bg-white dark:bg-slate-900"
+          data-cart-empty
+        >
+          <p class="text-gray-500 dark:text-slate-400">{t('cart.empty', 'Your cart is empty.')}</p>
+          <a
+            href={localizeHref('/products', lang)}
+            class="mt-4 inline-flex items-center justify-center px-6 py-3 bg-primary text-white text-sm font-semibold rounded-lg hover:opacity-90 transition-opacity"
+            >{t('cart.shopNow', 'Shop SUP Boards')}</a
+          >
+        </div>
+      </div>
+
+      {/* Summary */}
+      <aside
+        class="lg:sticky lg:top-24 rounded-2xl border border-gray-100 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 shadow-sm"
+      >
+        <h2 class="text-lg font-semibold text-gray-900 dark:text-slate-100 mb-4">
+          {t('cart.summary', 'Order Summary')}
+        </h2>
+        <div class="space-y-2 text-sm text-gray-600 dark:text-slate-400">
+          <div class="flex justify-between">
+            <span>{t('cart.subtotal', 'Subtotal')}</span>
+            <span class="font-medium text-gray-900 dark:text-slate-200" data-cart-subtotal>$0.00</span>
+          </div>
+          <div class="flex justify-between">
+            <span>{t('cart.shipping', 'Shipping')}</span>
+            <span class="font-medium text-gray-900 dark:text-slate-200" data-cart-shipping>—</span>
+          </div>
+          <div class="flex justify-between text-xs text-gray-400 dark:text-slate-500">
+            <span>{t('cart.freeShipNote', 'FREE shipping on orders over $300')}</span>
+          </div>
+          <div
+            class="border-t border-gray-100 dark:border-slate-800 pt-3 mt-3 flex justify-between text-base font-bold text-gray-900 dark:text-slate-100"
+          >
+            <span>{t('cart.total', 'Total')}</span>
+            <span data-cart-total>$0.00</span>
+          </div>
+        </div>
+        <a
+          href={localizeHref('/checkout', lang)}
+          class="mt-6 flex w-full items-center justify-center px-6 py-3.5 bg-primary text-white text-sm font-semibold rounded-lg hover:opacity-90 transition-opacity disabled:opacity-50"
+          data-cart-checkout>{t('cart.checkout', 'Proceed to Checkout')}</a
+        >
+        <p class="mt-3 text-center text-xs text-gray-400 dark:text-slate-500">
+          {t('cart.secureNote', 'Secure checkout via Stripe & PayPal')}
+        </p>
+      </aside>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  import { getCart, setQty, removeItem, cartTotalCents, formatPrice, CART_EVENT } from '~/lib/cart';
+
+  const FREE_SHIPPING_THRESHOLD_CENTS = 30000;
+  const SHIPPING_FLAT_CENTS = 3900;
+
+  function strings(): { each: string; free: string; remove: string; prefix: string } {
+    const el = document.querySelector('[data-cart-i18n]');
+    if (el && el.textContent) {
+      try {
+        return JSON.parse(el.textContent) as { each: string; free: string; remove: string; prefix: string };
+      } catch {
+        /* fall through */
+      }
+    }
+    return { each: '{price} each', free: 'FREE', remove: 'Remove', prefix: '' };
+  }
+
+  function render(): void {
+    const s = strings();
+    const items = getCart();
+    const container = document.querySelector('[data-cart-items]') as HTMLElement | null;
+    const emptyEl = document.querySelector('[data-cart-empty]') as HTMLElement | null;
+    const checkoutBtn = document.querySelector('[data-cart-checkout]') as HTMLElement | null;
+    if (!container || !emptyEl || !checkoutBtn) return;
+
+    container.querySelectorAll('[data-cart-row]').forEach((el) => el.remove());
+
+    if (items.length === 0) {
+      emptyEl.classList.remove('hidden');
+      checkoutBtn.classList.add('pointer-events-none', 'opacity-50');
+      setSummary(0);
+      return;
+    }
+
+    emptyEl.classList.add('hidden');
+    checkoutBtn.classList.remove('pointer-events-none', 'opacity-50');
+
+    for (const item of items) {
+      const row = document.createElement('div');
+      row.className =
+        'flex gap-4 items-center p-4 rounded-2xl border border-gray-100 dark:border-slate-800 bg-white dark:bg-slate-900';
+      row.setAttribute('data-cart-row', '');
+
+      const img = document.createElement('img');
+      img.src = item.image || '';
+      img.alt = item.title;
+      img.loading = 'lazy';
+      img.className = 'w-20 h-20 rounded-xl object-cover bg-gray-50 dark:bg-slate-800 shrink-0';
+      if (!item.image) img.style.visibility = 'hidden';
+      row.appendChild(img);
+
+      const info = document.createElement('div');
+      info.className = 'flex-1 min-w-0';
+
+      const title = document.createElement('a');
+      title.href = `${s.prefix}/products/${item.slug}`;
+      title.className =
+        'block text-sm font-semibold text-gray-900 dark:text-slate-100 truncate hover:text-primary transition-colors';
+      title.textContent = item.title;
+      info.appendChild(title);
+
+      const unit = document.createElement('div');
+      unit.className = 'text-xs text-gray-400 dark:text-slate-500 mt-0.5';
+      const unitPrice = formatPrice(item.priceCents, item.currency);
+      unit.textContent = s.each.includes('{price}') ? s.each.replace('{price}', unitPrice) : `${unitPrice} each`;
+      info.appendChild(unit);
+
+      const qtyRow = document.createElement('div');
+      qtyRow.className = 'mt-2 flex items-center gap-2';
+
+      const minus = document.createElement('button');
+      minus.type = 'button';
+      minus.className =
+        'w-7 h-7 rounded-lg border border-gray-200 dark:border-slate-700 text-gray-600 dark:text-slate-300 text-sm hover:bg-gray-50 dark:hover:bg-slate-800';
+      minus.textContent = '−';
+      minus.addEventListener('click', () => setQty(item.slug, item.qty - 1));
+      qtyRow.appendChild(minus);
+
+      const qty = document.createElement('span');
+      qty.className =
+        'w-9 text-center text-sm font-semibold text-gray-900 dark:text-slate-100 border border-gray-200 dark:border-slate-700 rounded-lg py-1';
+      qty.textContent = String(item.qty);
+      qtyRow.appendChild(qty);
+
+      const plus = document.createElement('button');
+      plus.type = 'button';
+      plus.className =
+        'w-7 h-7 rounded-lg border border-gray-200 dark:border-slate-700 text-gray-600 dark:text-slate-300 text-sm hover:bg-gray-50 dark:hover:bg-slate-800';
+      plus.textContent = '+';
+      plus.addEventListener('click', () => setQty(item.slug, item.qty + 1));
+      qtyRow.appendChild(plus);
+
+      const remove = document.createElement('button');
+      remove.type = 'button';
+      remove.className = 'ml-2 text-xs text-gray-400 dark:text-slate-500 hover:text-red-500 transition-colors';
+      remove.textContent = s.remove;
+      remove.addEventListener('click', () => removeItem(item.slug));
+      qtyRow.appendChild(remove);
+
+      info.appendChild(qtyRow);
+      row.appendChild(info);
+
+      const line = document.createElement('div');
+      line.className = 'text-sm font-bold text-gray-900 dark:text-slate-100 shrink-0';
+      line.textContent = formatPrice(item.priceCents * item.qty, item.currency);
+      row.appendChild(line);
+
+      container.appendChild(row);
+    }
+
+    setSummary(cartTotalCents(items));
+  }
+
+  function setSummary(subtotalCents: number): void {
+    const s = strings();
+    const shippingCents =
+      subtotalCents === 0 || subtotalCents >= FREE_SHIPPING_THRESHOLD_CENTS ? 0 : SHIPPING_FLAT_CENTS;
+    const subtotalEl = document.querySelector('[data-cart-subtotal]');
+    const shippingEl = document.querySelector('[data-cart-shipping]');
+    const totalEl = document.querySelector('[data-cart-total]');
+    if (subtotalEl) subtotalEl.textContent = formatPrice(subtotalCents);
+    if (shippingEl)
+      shippingEl.textContent = subtotalCents === 0 ? '—' : shippingCents === 0 ? s.free : formatPrice(shippingCents);
+    if (totalEl) totalEl.textContent = formatPrice(subtotalCents + shippingCents);
+  }
+
+  document.addEventListener(CART_EVENT, render);
+  document.addEventListener('astro:after-swap', render);
+  render();
+</script>

@@ -1,4 +1,4 @@
-name = "aquafarer-news"
+name = "paddleboardoverstock-news"
 main = "index.ts"
 compatibility_date = "2026-07-08"
 compatibility_flags = ["nodejs_compat"]
@@ -6,43 +6,43 @@ compatibility_flags = ["nodejs_compat"]
 routes = [
   # Paths may only end with a wildcard (Cloudflare zone route syntax); the
   # /{lang}/news prefixes must be listed explicitly.
-  { pattern = "aquafarer.com/news*", zone_name = "aquafarer.com" },
-  { pattern = "aquafarer.com/fr/news*", zone_name = "aquafarer.com" },
-  { pattern = "aquafarer.com/de/news*", zone_name = "aquafarer.com" },
-  { pattern = "aquafarer.com/es/news*", zone_name = "aquafarer.com" },
-  { pattern = "aquafarer.com/pt/news*", zone_name = "aquafarer.com" },
-  { pattern = "aquafarer.com/ar/news*", zone_name = "aquafarer.com" },
-  { pattern = "aquafarer.com/it/news*", zone_name = "aquafarer.com" },
-  { pattern = "aquafarer.com/ru/news*", zone_name = "aquafarer.com" },
-  { pattern = "aquafarer.com/pl/news*", zone_name = "aquafarer.com" },
-  { pattern = "aquafarer.com/nl/news*", zone_name = "aquafarer.com" },
-  { pattern = "aquafarer.com/sv/news*", zone_name = "aquafarer.com" },
-  { pattern = "aquafarer.com/no/news*", zone_name = "aquafarer.com" },
-  { pattern = "aquafarer.com/el/news*", zone_name = "aquafarer.com" },
-  { pattern = "aquafarer.com/fi/news*", zone_name = "aquafarer.com" },
-  { pattern = "aquafarer.com/da/news*", zone_name = "aquafarer.com" },
-  { pattern = "aquafarer.com/rss.xml", zone_name = "aquafarer.com" },
-  { pattern = "aquafarer.com/fr/rss.xml", zone_name = "aquafarer.com" },
-  { pattern = "aquafarer.com/de/rss.xml", zone_name = "aquafarer.com" },
-  { pattern = "aquafarer.com/es/rss.xml", zone_name = "aquafarer.com" },
-  { pattern = "aquafarer.com/pt/rss.xml", zone_name = "aquafarer.com" },
-  { pattern = "aquafarer.com/ar/rss.xml", zone_name = "aquafarer.com" },
-  { pattern = "aquafarer.com/it/rss.xml", zone_name = "aquafarer.com" },
-  { pattern = "aquafarer.com/ru/rss.xml", zone_name = "aquafarer.com" },
-  { pattern = "aquafarer.com/pl/rss.xml", zone_name = "aquafarer.com" },
-  { pattern = "aquafarer.com/nl/rss.xml", zone_name = "aquafarer.com" },
-  { pattern = "aquafarer.com/sv/rss.xml", zone_name = "aquafarer.com" },
-  { pattern = "aquafarer.com/no/rss.xml", zone_name = "aquafarer.com" },
-  { pattern = "aquafarer.com/el/rss.xml", zone_name = "aquafarer.com" },
-  { pattern = "aquafarer.com/fi/rss.xml", zone_name = "aquafarer.com" },
-  { pattern = "aquafarer.com/da/rss.xml", zone_name = "aquafarer.com" },
-  { pattern = "aquafarer.com/sitemap-news.xml", zone_name = "aquafarer.com" },
-  { pattern = "aquafarer.com/llms/news*", zone_name = "aquafarer.com" },
+  { pattern = "paddleboardoverstock.com/news*", zone_name = "paddleboardoverstock.com" },
+  { pattern = "paddleboardoverstock.com/fr/news*", zone_name = "paddleboardoverstock.com" },
+  { pattern = "paddleboardoverstock.com/de/news*", zone_name = "paddleboardoverstock.com" },
+  { pattern = "paddleboardoverstock.com/es/news*", zone_name = "paddleboardoverstock.com" },
+  { pattern = "paddleboardoverstock.com/pt/news*", zone_name = "paddleboardoverstock.com" },
+  { pattern = "paddleboardoverstock.com/ar/news*", zone_name = "paddleboardoverstock.com" },
+  { pattern = "paddleboardoverstock.com/it/news*", zone_name = "paddleboardoverstock.com" },
+  { pattern = "paddleboardoverstock.com/ru/news*", zone_name = "paddleboardoverstock.com" },
+  { pattern = "paddleboardoverstock.com/pl/news*", zone_name = "paddleboardoverstock.com" },
+  { pattern = "paddleboardoverstock.com/nl/news*", zone_name = "paddleboardoverstock.com" },
+  { pattern = "paddleboardoverstock.com/sv/news*", zone_name = "paddleboardoverstock.com" },
+  { pattern = "paddleboardoverstock.com/no/news*", zone_name = "paddleboardoverstock.com" },
+  { pattern = "paddleboardoverstock.com/el/news*", zone_name = "paddleboardoverstock.com" },
+  { pattern = "paddleboardoverstock.com/fi/news*", zone_name = "paddleboardoverstock.com" },
+  { pattern = "paddleboardoverstock.com/da/news*", zone_name = "paddleboardoverstock.com" },
+  { pattern = "paddleboardoverstock.com/rss.xml", zone_name = "paddleboardoverstock.com" },
+  { pattern = "paddleboardoverstock.com/fr/rss.xml", zone_name = "paddleboardoverstock.com" },
+  { pattern = "paddleboardoverstock.com/de/rss.xml", zone_name = "paddleboardoverstock.com" },
+  { pattern = "paddleboardoverstock.com/es/rss.xml", zone_name = "paddleboardoverstock.com" },
+  { pattern = "paddleboardoverstock.com/pt/rss.xml", zone_name = "paddleboardoverstock.com" },
+  { pattern = "paddleboardoverstock.com/ar/rss.xml", zone_name = "paddleboardoverstock.com" },
+  { pattern = "paddleboardoverstock.com/it/rss.xml", zone_name = "paddleboardoverstock.com" },
+  { pattern = "paddleboardoverstock.com/ru/rss.xml", zone_name = "paddleboardoverstock.com" },
+  { pattern = "paddleboardoverstock.com/pl/rss.xml", zone_name = "paddleboardoverstock.com" },
+  { pattern = "paddleboardoverstock.com/nl/rss.xml", zone_name = "paddleboardoverstock.com" },
+  { pattern = "paddleboardoverstock.com/sv/rss.xml", zone_name = "paddleboardoverstock.com" },
+  { pattern = "paddleboardoverstock.com/no/rss.xml", zone_name = "paddleboardoverstock.com" },
+  { pattern = "paddleboardoverstock.com/el/rss.xml", zone_name = "paddleboardoverstock.com" },
+  { pattern = "paddleboardoverstock.com/fi/rss.xml", zone_name = "paddleboardoverstock.com" },
+  { pattern = "paddleboardoverstock.com/da/rss.xml", zone_name = "paddleboardoverstock.com" },
+  { pattern = "paddleboardoverstock.com/sitemap-news.xml", zone_name = "paddleboardoverstock.com" },
+  { pattern = "paddleboardoverstock.com/llms/news*", zone_name = "paddleboardoverstock.com" },
 ]
 
-# D1 (created via: wrangler d1 create aquafarer-db) — shared with admin-worker/contact-worker
+# D1 (created via: wrangler d1 create paddleboardoverstock-db) — shared with admin-worker/contact-worker
 [[d1_databases]]
 binding = "DB"
-database_name = "aquafarer-db"
+database_name = "paddleboardoverstock-db"
 database_id = "REPLACE_WITH_D1_DATABASE_ID"
 migrations_dir = "../../migrations"

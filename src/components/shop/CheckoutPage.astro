@@ -1,0 +1,429 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+import { getLangFromUrl } from '~/i18n/utils';
+import { SITE } from 'astrowind:config';
+
+export interface Props {
+  lang?: string;
+}
+
+const { lang: langProp } = Astro.props;
+const lang = langProp || getLangFromUrl(Astro.url);
+const ui = getUiForLang(lang) || {};
+const t = (key: string, fallback: string): string => ui[key] || fallback;
+
+const metadata = {
+  title: `${t('checkout.title', 'Checkout')} — ${SITE.name}`,
+  description: t(
+    'checkout.metaDesc',
+    'Secure checkout at Paddle Board Overstock — pay with Stripe or PayPal. Inflatable SUP boards and accessories with worldwide shipping.'
+  ),
+};
+
+const scriptStrings = {
+  empty: t('cart.empty', 'Your cart is empty.'),
+  errEmail: t('checkout.errEmail', 'Please enter a valid email address.'),
+  errFields: t('checkout.errFields', 'Please fill in all shipping fields.'),
+  errFailed: t('checkout.errFailed', 'Checkout failed. Please try again.'),
+  errNetwork: t('checkout.errNetwork', 'Network error. Please try again.'),
+  free: t('cart.free', 'FREE'),
+  lang,
+};
+---
+
+<Layout metadata={metadata}>
+  <script type="application/json" data-checkout-i18n set:html={JSON.stringify(scriptStrings)} />
+  <section class="px-4 py-16 sm:px-6 mx-auto max-w-6xl lg:px-8">
+    <h1 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 font-heading mb-2">
+      {t('checkout.title', 'Checkout')}
+    </h1>
+    <p class="text-sm text-gray-500 dark:text-slate-400 mb-8">
+      {t('checkout.subtitle', 'Secure payment via Stripe or PayPal. We ship worldwide from Weihai, China.')}
+    </p>
+
+    <div class="grid lg:grid-cols-3 gap-8 items-start">
+      {/* Form */}
+      <form class="lg:col-span-2 space-y-8" data-checkout-form novalidate>
+        {/* Contact */}
+        <fieldset
+          class="rounded-2xl border border-gray-100 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 space-y-4"
+        >
+          <legend class="px-2 text-sm font-bold uppercase tracking-wider text-gray-500 dark:text-slate-400">
+            1 · {t('checkout.contact', 'Contact')}
+          </legend>
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-1"
+              >{t('checkout.email', 'Email address')} <span class="text-red-500">*</span></label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              autocomplete="email"
+              class="w-full rounded-lg border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-3.5 py-2.5 text-sm text-gray-900 dark:text-slate-100 focus:ring-2 focus:ring-primary focus:border-primary outline-none"
+              placeholder="you@example.com"
+            />
+          </div>
+        </fieldset>
+
+        {/* Shipping */}
+        <fieldset
+          class="rounded-2xl border border-gray-100 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 space-y-4"
+        >
+          <legend class="px-2 text-sm font-bold uppercase tracking-wider text-gray-500 dark:text-slate-400">
+            2 · {t('checkout.shippingAddress', 'Shipping Address')}
+          </legend>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div class="sm:col-span-2">
+              <label for="name" class="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-1"
+                >{t('checkout.name', 'Full name')} <span class="text-red-500">*</span></label
+              >
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                autocomplete="name"
+                class="w-full rounded-lg border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-3.5 py-2.5 text-sm text-gray-900 dark:text-slate-100 focus:ring-2 focus:ring-primary focus:border-primary outline-none"
+              />
+            </div>
+            <div class="sm:col-span-2">
+              <label for="address" class="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-1"
+                >{t('checkout.address', 'Street address')} <span class="text-red-500">*</span></label
+              >
+              <input
+                type="text"
+                id="address"
+                name="address"
+                required
+                autocomplete="street-address"
+                class="w-full rounded-lg border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-3.5 py-2.5 text-sm text-gray-900 dark:text-slate-100 focus:ring-2 focus:ring-primary focus:border-primary outline-none"
+              />
+            </div>
+            <div>
+              <label for="city" class="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-1"
+                >{t('checkout.city', 'City')} <span class="text-red-500">*</span></label
+              >
+              <input
+                type="text"
+                id="city"
+                name="city"
+                required
+                autocomplete="address-level2"
+                class="w-full rounded-lg border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-3.5 py-2.5 text-sm text-gray-900 dark:text-slate-100 focus:ring-2 focus:ring-primary focus:border-primary outline-none"
+              />
+            </div>
+            <div>
+              <label for="postal" class="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-1"
+                >{t('checkout.postal', 'Postal code')} <span class="text-red-500">*</span></label
+              >
+              <input
+                type="text"
+                id="postal"
+                name="postal"
+                required
+                autocomplete="postal-code"
+                class="w-full rounded-lg border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-3.5 py-2.5 text-sm text-gray-900 dark:text-slate-100 focus:ring-2 focus:ring-primary focus:border-primary outline-none"
+              />
+            </div>
+            <div class="sm:col-span-2">
+              <label for="country" class="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-1"
+                >{t('checkout.country', 'Country')} <span class="text-red-500">*</span></label
+              >
+              <select
+                id="country"
+                name="country"
+                required
+                autocomplete="country"
+                class="w-full rounded-lg border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-3.5 py-2.5 text-sm text-gray-900 dark:text-slate-100 focus:ring-2 focus:ring-primary focus:border-primary outline-none"
+              >
+                <option value="US">United States</option>
+                <option value="CA">Canada</option>
+                <option value="GB">United Kingdom</option>
+                <option value="DE">Germany</option>
+                <option value="FR">France</option>
+                <option value="ES">Spain</option>
+                <option value="IT">Italy</option>
+                <option value="NL">Netherlands</option>
+                <option value="AU">Australia</option>
+                <option value="NZ">New Zealand</option>
+                <option value="JP">Japan</option>
+                <option value="KR">South Korea</option>
+                <option value="SG">Singapore</option>
+                <option value="AE">United Arab Emirates</option>
+                <option value="SA">Saudi Arabia</option>
+                <option value="SE">Sweden</option>
+                <option value="NO">Norway</option>
+                <option value="DK">Denmark</option>
+                <option value="FI">Finland</option>
+                <option value="PL">Poland</option>
+                <option value="CZ">Czechia</option>
+                <option value="AT">Austria</option>
+                <option value="CH">Switzerland</option>
+                <option value="BE">Belgium</option>
+                <option value="PT">Portugal</option>
+                <option value="IE">Ireland</option>
+                <option value="IL">Israel</option>
+                <option value="ZA">South Africa</option>
+                <option value="BR">Brazil</option>
+                <option value="MX">Mexico</option>
+                <option value="OTHER">Other</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+
+        {/* Payment */}
+        <fieldset
+          class="rounded-2xl border border-gray-100 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 space-y-3"
+        >
+          <legend class="px-2 text-sm font-bold uppercase tracking-wider text-gray-500 dark:text-slate-400">
+            3 · {t('checkout.payment', 'Payment')}
+          </legend>
+          <label
+            class="flex items-center gap-3 p-4 rounded-xl border-2 border-primary cursor-pointer bg-primary/5 transition-colors"
+          >
+            <input type="radio" name="method" value="stripe" checked class="accent-primary w-4 h-4" />
+            <span class="text-sm font-semibold text-gray-900 dark:text-slate-100"
+              >{t('checkout.card', 'Credit / Debit Card')}</span
+            >
+            <span class="ml-auto text-xs text-gray-400 dark:text-slate-500"
+              >{t('checkout.cardNote', 'Powered by Stripe')}</span
+            >
+          </label>
+          <label
+            class="flex items-center gap-3 p-4 rounded-xl border-2 border-gray-200 dark:border-slate-700 cursor-pointer hover:border-gray-300 dark:hover:border-slate-600 transition-colors"
+          >
+            <input type="radio" name="method" value="paypal" class="accent-primary w-4 h-4" />
+            <span class="text-sm font-semibold text-gray-900 dark:text-slate-100">{t('checkout.paypal', 'PayPal')}</span
+            >
+            <span class="ml-auto text-xs text-gray-400 dark:text-slate-500"
+              >{t('checkout.paypalNote', 'Pay with PayPal balance')}</span
+            >
+          </label>
+        </fieldset>
+
+        <p class="text-xs text-gray-400 dark:text-slate-500" data-checkout-error hidden></p>
+        <button
+          type="submit"
+          class="w-full flex items-center justify-center gap-2 px-6 py-4 bg-primary text-white font-semibold rounded-xl hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
+          data-checkout-submit
+        >
+          {t('checkout.pay', 'Pay')}
+          <span data-summary-total-btn>$0.00</span>
+        </button>
+      </form>
+
+      {/* Summary */}
+      <aside
+        class="lg:sticky lg:top-24 rounded-2xl border border-gray-100 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 shadow-sm"
+      >
+        <h2 class="text-lg font-semibold text-gray-900 dark:text-slate-100 mb-4">
+          {t('checkout.yourOrder', 'Your Order')}
+        </h2>
+        <div class="space-y-3 text-sm" data-summary-items></div>
+        <div class="mt-4">
+          <label for="discount-code" class="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-1">
+            {t('checkout.discountCode', 'Discount code')}
+          </label>
+          <input
+            type="text"
+            id="discount-code"
+            name="discountCode"
+            autocomplete="off"
+            spellcheck="false"
+            class="w-full rounded-lg border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-3.5 py-2.5 text-sm font-mono uppercase text-gray-900 dark:text-slate-100 focus:ring-2 focus:ring-primary focus:border-primary outline-none"
+            placeholder="SUMMER10"
+          />
+        </div>
+        <div
+          class="border-t border-gray-100 dark:border-slate-800 pt-3 mt-3 space-y-2 text-sm text-gray-600 dark:text-slate-400"
+        >
+          <div class="flex justify-between">
+            <span>{t('cart.subtotal', 'Subtotal')}</span>
+            <span class="font-medium text-gray-900 dark:text-slate-200" data-summary-subtotal>$0.00</span>
+          </div>
+          <div class="flex justify-between">
+            <span>{t('cart.shipping', 'Shipping')}</span>
+            <span class="font-medium text-gray-900 dark:text-slate-200" data-summary-shipping>—</span>
+          </div>
+          <div
+            class="flex justify-between text-base font-bold text-gray-900 dark:text-slate-100 pt-2 border-t border-gray-100 dark:border-slate-800"
+          >
+            <span>{t('cart.total', 'Total')}</span>
+            <span data-summary-total>$0.00</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  import { getCart, clearCart, cartTotalCents, formatPrice, CART_EVENT } from '~/lib/cart';
+
+  const FREE_SHIPPING_THRESHOLD_CENTS = 30000;
+  const SHIPPING_FLAT_CENTS = 3900;
+
+  interface CheckoutStrings {
+    empty: string;
+    errEmail: string;
+    errFields: string;
+    errFailed: string;
+    errNetwork: string;
+    free: string;
+    lang: string;
+  }
+
+  function strings(): CheckoutStrings {
+    const el = document.querySelector('[data-checkout-i18n]');
+    if (el && el.textContent) {
+      try {
+        const parsed = JSON.parse(el.textContent) as Partial<CheckoutStrings>;
+        return {
+          empty: parsed.empty || 'Your cart is empty.',
+          errEmail: parsed.errEmail || 'Please enter a valid email address.',
+          errFields: parsed.errFields || 'Please fill in all shipping fields.',
+          errFailed: parsed.errFailed || 'Checkout failed. Please try again.',
+          errNetwork: parsed.errNetwork || 'Network error. Please try again.',
+          free: parsed.free || 'FREE',
+          lang: parsed.lang || 'en',
+        };
+      } catch {
+        /* fall through */
+      }
+    }
+    return {
+      empty: 'Your cart is empty.',
+      errEmail: 'Please enter a valid email address.',
+      errFields: 'Please fill in all shipping fields.',
+      errFailed: 'Checkout failed. Please try again.',
+      errNetwork: 'Network error. Please try again.',
+      free: 'FREE',
+      lang: 'en',
+    };
+  }
+
+  function render(): void {
+    const s = strings();
+    const items = getCart();
+    const list = document.querySelector('[data-summary-items]');
+    if (!list) return;
+    list.innerHTML = '';
+
+    for (const item of items) {
+      const row = document.createElement('div');
+      row.className = 'flex justify-between gap-3 text-gray-600 dark:text-slate-400';
+      const name = document.createElement('span');
+      name.textContent = `${item.title} × ${item.qty}`;
+      const price = document.createElement('span');
+      price.className = 'font-medium text-gray-900 dark:text-slate-200';
+      price.textContent = formatPrice(item.priceCents * item.qty, item.currency);
+      row.appendChild(name);
+      row.appendChild(price);
+      list.appendChild(row);
+    }
+
+    if (items.length === 0) {
+      const empty = document.createElement('p');
+      empty.className = 'text-gray-400 dark:text-slate-500';
+      empty.textContent = s.empty;
+      list.appendChild(empty);
+    }
+
+    const subtotal = cartTotalCents(items);
+    const shipping = subtotal === 0 || subtotal >= FREE_SHIPPING_THRESHOLD_CENTS ? 0 : SHIPPING_FLAT_CENTS;
+    const set = (sel: string, text: string): void => {
+      const el = document.querySelector(sel);
+      if (el) el.textContent = text;
+    };
+    set('[data-summary-subtotal]', formatPrice(subtotal));
+    set('[data-summary-shipping]', subtotal === 0 ? '—' : shipping === 0 ? s.free : formatPrice(shipping));
+    set('[data-summary-total]', formatPrice(subtotal + shipping));
+    set('[data-summary-total-btn]', formatPrice(subtotal + shipping));
+  }
+
+  const form = document.querySelector('[data-checkout-form]') as HTMLFormElement | null;
+  const submitBtn = document.querySelector('[data-checkout-submit]') as HTMLButtonElement | null;
+  const errorEl = document.querySelector('[data-checkout-error]') as HTMLElement | null;
+
+  let idemKey = '';
+
+  function showError(msg: string): void {
+    if (!errorEl) return;
+    errorEl.textContent = msg;
+    errorEl.removeAttribute('hidden');
+    if (submitBtn) submitBtn.disabled = false;
+  }
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (!submitBtn) return;
+    if (errorEl) errorEl.setAttribute('hidden', '');
+
+    const s = strings();
+    const items = getCart();
+    if (items.length === 0) {
+      showError(s.empty);
+      return;
+    }
+
+    const data = new FormData(form);
+    const email = String(data.get('email') || '').trim();
+    const name = String(data.get('name') || '').trim();
+    const address = String(data.get('address') || '').trim();
+    const city = String(data.get('city') || '').trim();
+    const postal = String(data.get('postal') || '').trim();
+    const country = String(data.get('country') || '').trim();
+    const methodInput = form.querySelector<HTMLInputElement>('input[name="method"]:checked');
+    const method = methodInput?.value === 'paypal' ? 'paypal' : 'stripe';
+
+    if (!email || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+      showError(s.errEmail);
+      return;
+    }
+    if (!name || !address || !city || !postal || !country) {
+      showError(s.errFields);
+      return;
+    }
+
+    submitBtn.disabled = true;
+
+    // Stable per-page-load idempotency key: a retried checkout returns the
+    // stored payment session instead of creating a second order.
+    if (!idemKey) {
+      idemKey =
+        'randomUUID' in crypto ? crypto.randomUUID() : `pbo-${Date.now()}-${Math.random().toString(36).slice(2)}`;
+    }
+
+    try {
+      const res = await fetch('/api/shop/checkout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Idempotency-Key': idemKey },
+        body: JSON.stringify({
+          items: items.map((i) => ({ slug: i.slug, qty: i.qty })),
+          email,
+          method,
+          lang: s.lang,
+          discountCode: String(data.get('discountCode') || '').trim(),
+          shipping: { name, address, city, postal, country },
+        }),
+      });
+      const body = (await res.json()) as { url?: string; error?: string };
+      if (!res.ok || !body.url) {
+        showError(body.error || s.errFailed);
+        return;
+      }
+      clearCart();
+      window.location.href = body.url;
+    } catch {
+      showError(s.errNetwork);
+    }
+  });
+
+  document.addEventListener(CART_EVENT, render);
+  document.addEventListener('astro:after-swap', render);
+  render();
+</script>

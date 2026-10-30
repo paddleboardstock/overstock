@@ -1,6 +1,6 @@
 // Language-specific inflatable boat catalog PDFs.
 // EN serves the original high-res file; each translated catalog lives at
-// /catalogs/aquafarer-inflatable-boat-catalog-<lang>.pdf. Langs without a
+// /catalogs/paddleboardoverstock-inflatable-boat-catalog-<lang>.pdf. Langs without a
 // translated PDF fall back to the EN edition.
 export const INFLATABLE_CATALOG_LANGS: ReadonlySet<string> = new Set([
   'fr',
@@ -40,7 +40,7 @@ export const INFLATABLE_CATALOG_LANGS: ReadonlySet<string> = new Set([
 
 export function inflatableBoatCatalogPath(lang: string | undefined): string {
   if (lang && INFLATABLE_CATALOG_LANGS.has(lang)) {
-    return `/catalogs/aquafarer-inflatable-boat-catalog-${lang}.pdf`;
+    return `/catalogs/paddleboardoverstock-inflatable-boat-catalog-${lang}.pdf`;
   }
-  return '/catalogs/aquafarer-inflatable-boat-catalog.pdf';
+  return '/catalogs/paddleboardoverstock-inflatable-boat-catalog.pdf';
 }

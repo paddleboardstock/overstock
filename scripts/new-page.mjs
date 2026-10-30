@@ -18,7 +18,7 @@
  * Examples:
  *   node scripts/new-page.mjs content about-us
  *   node scripts/new-page.mjs product sup-racer-14
- *   node scripts/new-page.mjs news aquafarer-new-factory
+ *   node scripts/new-page.mjs news paddleboardoverstock-new-factory
  *   node scripts/new-page.mjs tech carbon-fiber-kevlar
  *   node scripts/new-page.mjs usecase sailing-training
  *   node scripts/new-page.mjs node whitewater-kayak
@@ -142,9 +142,9 @@ title: ${title}
 sku: ${sku}
 summary: ${summary}
 description: ${summary}
-image: /images/aquafarer/products/${id}.${ext}
+image: /images/paddleboardoverstock/products/${id}.${ext}
 gallery:
-  - url: /images/aquafarer/products/${id}.${ext}
+  - url: /images/paddleboardoverstock/products/${id}.${ext}
     alt: ${title}
 category: ${slugify(category)}
 tags:
@@ -277,10 +277,10 @@ async function createNews(slug) {
 publishDate: ${new Date().toISOString()}
 title: "${title}"
 excerpt: '${excerpt}'
-image: /images/aquafarer/news/${slug}.jpg
+image: /images/paddleboardoverstock/news/${slug}.jpg
 tags: []
 category: ${category}
-author: Aquafarer Team
+author: Paddle Board Overstock Team
 metadata:
   title: '${title}'
   description: '${excerpt}'
@@ -291,7 +291,7 @@ ${title}
 TODO: write article content here.
 `;
   write(file, content);
-  console.log(`\nNext: add a news image to public/images/aquafarer/news/${slug}.jpg`);
+  console.log(`\nNext: add a news image to public/images/paddleboardoverstock/news/${slug}.jpg`);
 }
 
 // 鈹€鈹€ 4. Technology 鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€

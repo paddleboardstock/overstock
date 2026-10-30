@@ -126,7 +126,7 @@ function extractMeta(src) {
     if (v.startsWith('`') && v.endsWith('`')) v = v.slice(1, -1);
     else if ((v.startsWith("'") && v.endsWith("'")) || (v.startsWith('"') && v.endsWith('"'))) v = v.slice(1, -1);
     return v
-      .replace(/\$\{SITE\.name\}/g, 'Aquafarer')
+      .replace(/\$\{SITE\.name\}/g, 'Paddle Board Overstock')
       .replace(/\\'/g, "'")
       .replace(/\s+/g, ' ')
       .trim();

@@ -40,7 +40,7 @@ export const GUIDE_L10N: Record<string, Record<string, GuideL10n>> = {
         },
         {
           q: 'Mit welchem PSI sollte ich aufpumpen?',
-          a: 'Aquafarer-Boards empfehlen 12-15 PSI. Bei 15 PSI erreicht das Board eine maximale Steifigkeit, die mit einem Hartschalen-Board vergleichbar ist. Bleiben Sie stets innerhalb des auf dem Board angegebenen Nenndruckbereichs.',
+          a: 'Paddle Board Overstock-Boards empfehlen 12-15 PSI. Bei 15 PSI erreicht das Board eine maximale Steifigkeit, die mit einem Hartschalen-Board vergleichbar ist. Bleiben Sie stets innerhalb des auf dem Board angegebenen Nenndruckbereichs.',
         },
       ],
     },
@@ -240,7 +240,7 @@ export const GUIDE_L10N: Record<string, Record<string, GuideL10n>> = {
         },
         {
           q: 'Wie repariere ich einen Einstich?',
-          a: 'Reinigen Sie die Stelle, schneiden Sie einen Flicken mit abgerundeten Ecken zu, tragen Sie Kleber auf, drücken Sie fest an und warten Sie 24 Stunden, bevor Sie aufpumpen. Aquafarer-Boards enthalten ein Reparaturset.',
+          a: 'Reinigen Sie die Stelle, schneiden Sie einen Flicken mit abgerundeten Ecken zu, tragen Sie Kleber auf, drücken Sie fest an und warten Sie 24 Stunden, bevor Sie aufpumpen. Paddle Board Overstock-Boards enthalten ein Reparaturset.',
         },
         {
           q: 'Wie oft sollte ich das Ventil prüfen?',
@@ -579,7 +579,7 @@ export const GUIDE_L10N: Record<string, Record<string, GuideL10n>> = {
         },
         {
           q: '¿A cuántos PSI debo inflar?',
-          a: 'Las tablas Aquafarer recomiendan 12-15 PSI. A 15 PSI la tabla alcanza la máxima rigidez, comparable a una tabla rígida. Mantente siempre dentro del rango de presión indicado impreso en la tabla.',
+          a: 'Las tablas Paddle Board Overstock recomiendan 12-15 PSI. A 15 PSI la tabla alcanza la máxima rigidez, comparable a una tabla rígida. Mantente siempre dentro del rango de presión indicado impreso en la tabla.',
         },
       ],
     },
@@ -777,7 +777,7 @@ export const GUIDE_L10N: Record<string, Record<string, GuideL10n>> = {
         },
         {
           q: '¿Cómo reparo un pinchazo?',
-          a: 'Limpia la zona, corta un parche con esquinas redondeadas, aplica el adhesivo, presiona con firmeza y espera 24 horas antes de inflar. Las tablas Aquafarer incluyen un kit de reparación.',
+          a: 'Limpia la zona, corta un parche con esquinas redondeadas, aplica el adhesivo, presiona con firmeza y espera 24 horas antes de inflar. Las tablas Paddle Board Overstock incluyen un kit de reparación.',
         },
         {
           q: '¿Con qué frecuencia debo revisar la válvula?',
@@ -1118,7 +1118,7 @@ export const GUIDE_L10N: Record<string, Record<string, GuideL10n>> = {
         },
         {
           q: 'À quel PSI dois-je gonfler ?',
-          a: "Les planches Aquafarer recommandent 12-15 PSI. À 15 PSI, la planche atteint une rigidité maximale comparable à celle d'une planche rigide. Respectez toujours la plage de pression indiquée sur la planche.",
+          a: "Les planches Paddle Board Overstock recommandent 12-15 PSI. À 15 PSI, la planche atteint une rigidité maximale comparable à celle d'une planche rigide. Respectez toujours la plage de pression indiquée sur la planche.",
         },
       ],
     },
@@ -1318,7 +1318,7 @@ export const GUIDE_L10N: Record<string, Record<string, GuideL10n>> = {
         },
         {
           q: 'Comment réparer une perforation ?',
-          a: "Nettoyez la zone, découpez une rustine aux coins arrondis, appliquez l'adhésif, pressez fermement et attendez 24 heures avant de regonfler. Les planches Aquafarer incluent un kit de réparation.",
+          a: "Nettoyez la zone, découpez une rustine aux coins arrondis, appliquez l'adhésif, pressez fermement et attendez 24 heures avant de regonfler. Les planches Paddle Board Overstock incluent un kit de réparation.",
         },
         {
           q: 'À quelle fréquence dois-je vérifier la valve ?',
@@ -1657,7 +1657,7 @@ export const GUIDE_L10N: Record<string, Record<string, GuideL10n>> = {
         },
         {
           q: 'A quale PSI devo gonfiarla?',
-          a: "Le tavole Aquafarer consigliano 12-15 PSI. A 15 PSI la tavola raggiunge la massima rigidità, paragonabile a una tavola rigida. Resta sempre entro l'intervallo di pressione indicato stampato sulla tavola.",
+          a: "Le tavole Paddle Board Overstock consigliano 12-15 PSI. A 15 PSI la tavola raggiunge la massima rigidità, paragonabile a una tavola rigida. Resta sempre entro l'intervallo di pressione indicato stampato sulla tavola.",
         },
       ],
     },
@@ -1856,7 +1856,7 @@ export const GUIDE_L10N: Record<string, Record<string, GuideL10n>> = {
         },
         {
           q: 'Come riparo una foratura?',
-          a: 'Pulisci la zona, taglia una toppa con angoli arrotondati, applica la colla, premi con fermezza e attendi 24 ore prima di gonfiare. Le tavole Aquafarer includono un kit di riparazione.',
+          a: 'Pulisci la zona, taglia una toppa con angoli arrotondati, applica la colla, premi con fermezza e attendi 24 ore prima di gonfiare. Le tavole Paddle Board Overstock includono un kit di riparazione.',
         },
         {
           q: 'Ogni quanto devo controllare la valvola?',

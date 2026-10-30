@@ -13,13 +13,13 @@ const file = siteFileForLocale('src/config.yaml', locale);
 getRepoInfo();
 
 let data: Record<string, any> = {
-  site_name: 'Aquafarer',
+  site_name: 'Paddle Board Overstock',
   logo_image: '',
-  logo_alt: 'Aquafarer logo',
-  copyright: '© {year} Aquafarer · All rights reserved.',
+  logo_alt: 'Paddle Board Overstock logo',
+  copyright: '© {year} Paddle Board Overstock · All rights reserved.',
   phone: '+86 13305324192',
   address: 'Economic Development Zone, Laixi, Qingdao, China, 266600',
-  email: 'info@aquafarer.com',
+  email: 'info@paddleboardoverstock.com',
   whatsapp_number: '',
   whatsapp_default_message: 'Hello, I would like to inquire about your products.',
   contact_email_to: '',
@@ -130,7 +130,7 @@ const year = new Date().getFullYear();
           type="text"
           name="site_name"
           value={data.site_name ?? ''}
-          placeholder="Aquafarer"
+          placeholder="Paddle Board Overstock"
           class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
         />
         <p class="mt-1 text-xs text-gray-500">
@@ -158,7 +158,7 @@ const year = new Date().getFullYear();
           type="text"
           name="logo_alt"
           value={data.logo_alt ?? ''}
-          placeholder="Aquafarer logo"
+          placeholder="Paddle Board Overstock logo"
           class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
         />
       </div>
@@ -222,7 +222,7 @@ const year = new Date().getFullYear();
             type="email"
             name="email"
             value={data.email ?? ''}
-            placeholder="info@aquafarer.com"
+            placeholder="info@paddleboardoverstock.com"
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
           />
         </div>
@@ -311,7 +311,7 @@ const year = new Date().getFullYear();
             type="text"
             name="contact_from_name"
             value={data.contact_from_name ?? ''}
-            placeholder="Aquafarer Contact"
+            placeholder="Paddle Board Overstock Contact"
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
           />
         </div>
@@ -491,8 +491,8 @@ const year = new Date().getFullYear();
           if (copyrightEl instanceof HTMLTextAreaElement && previewEl) {
             const name =
               siteNameEl instanceof HTMLInputElement
-                ? (siteNameEl.value || 'Aquafarer').trim() || 'Aquafarer'
-                : 'Aquafarer';
+                ? (siteNameEl.value || 'Paddle Board Overstock').trim() || 'Paddle Board Overstock'
+                : 'Paddle Board Overstock';
             previewEl.textContent = (copyrightEl.value || '')
               .replace(/\\{year\\}/gi, String(year))
               .replace(/\\{site_name\\}/gi, name);

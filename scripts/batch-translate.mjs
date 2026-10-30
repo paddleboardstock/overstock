@@ -98,20 +98,20 @@ function generateSiteSettingsBlock(code) {
   const isRtl = code === 'ar';
   const siteName =
     code === 'ar'
-      ? 'Aquafarer \u2014 القوارب المطاطية'
+      ? 'Paddle Board Overstock \u2014 القوارب المطاطية'
       : code === 'ru'
-        ? 'Aquafarer \u2014 Надувные лодки'
+        ? 'Paddle Board Overstock \u2014 Надувные лодки'
         : code === 'pl'
-          ? 'Aquafarer'
+          ? 'Paddle Board Overstock'
           : code === 'it'
-            ? 'Aquafarer'
+            ? 'Paddle Board Overstock'
             : code === 'pt'
-              ? 'Aquafarer'
+              ? 'Paddle Board Overstock'
               : code === 'es'
-                ? 'Aquafarer'
+                ? 'Paddle Board Overstock'
                 : code === 'de'
-                  ? 'Aquafarer'
-                  : 'Aquafarer';
+                  ? 'Paddle Board Overstock'
+                  : 'Paddle Board Overstock';
 
   return `
 # --- Per-language site settings ---
@@ -122,20 +122,20 @@ siteSettings:
   organization:
     name: '${siteName}'
     logo: ''
-    contactEmail: info@aquafarer.com
+    contactEmail: info@paddleboardoverstock.com
     contactPhone: '+1 (213) 557-7888'
     address: '5067 Saddleback St, Montclair, CA 91763, USA'  # TODO: translate address to ${label} if localized address exists
   i18n:
     language: ${code}${isRtl ? '\n    textDirection: rtl' : ''}
   socialLinks:
     - platform: youtube
-      url: 'https://www.youtube.com/@Aquafarer'
+      url: 'https://www.youtube.com/@paddleboardoverstock'
     - platform: x
-      url: 'https://x.com/aquafarer'
+      url: 'https://x.com/paddleboardoverstock'
     - platform: instagram
-      url: 'https://www.instagram.com/aquafarer'
+      url: 'https://www.instagram.com/paddleboardoverstock'
     - platform: facebook
-      url: 'https://www.facebook.com/aquafarer'
+      url: 'https://www.facebook.com/paddleboardoverstock'
     - platform: rss
       url: /rss.xml
 `;

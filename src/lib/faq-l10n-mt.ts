@@ -23,7 +23,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'ocean-use',
       question: 'Мога ли да го използвам в океана?',
       answer:
-        'Да.Aquafarer SUP Дъските са предназначени за използване в океана, езерата и реките. Нашата серия Touring се справя с крайбрежно рязане, а всички дъски използват морски PVC клас, които устояват на корозия в солена вода. Изплакнете се с прясна вода след използване в морето.',
+        'Да.Paddle Board Overstock SUP Дъските са предназначени за използване в океана, езерата и реките. Нашата серия Touring се справя с крайбрежно рязане, а всички дъски използват морски PVC клас, които устояват на корозия в солена вода. Изплакнете се с прясна вода след използване в морето.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: ['weather-conditions'],
@@ -41,7 +41,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'travel-sup',
       question: 'Мога ли да пътувам с надуваема SUP машина?',
       answer:
-        'Абсолютно. Всяка Aquafarer дъска се опакова в калъф с размер на раница, предназначен за удобно пътуване — проверете правилата за размер и тегло на вашия транспортер. С тегло само 18-22 паунда е лесно да се носи до плажа, езерото или през летищните терминали.',
+        'Абсолютно. Всяка Paddle Board Overstock дъска се опакова в калъф с размер на раница, предназначен за удобно пътуване — проверете правилата за размер и тегло на вашия транспортер. С тегло само 18-22 паунда е лесно да се носи до плажа, езерото или през летищните терминали.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: [],
@@ -59,7 +59,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'box-contents',
       question: 'Какво идва в кутията?',
       answer:
-        'Всяка Aquafarer SUP включва дъска, раница за пътуване, ръчна помпа с двойно действие, сменяема перка, каишка с намотка и комплект за ремонт. Някои модели включват и опция за ъпгрейд с карбонови гребла. Надуваемите лодки включват лодка, помпа, комплект за ремонт и гребла.',
+        'Всяка Paddle Board Overstock SUP включва дъска, раница за пътуване, ръчна помпа с двойно действие, сменяема перка, каишка с намотка и комплект за ремонт. Някои модели включват и опция за ъпгрейд с карбонови гребла. Надуваемите лодки включват лодка, помпа, комплект за ремонт и гребла.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -95,7 +95,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'puncture-repair',
       question: 'Как да поправя спукана гума?',
       answer:
-        'Почистете зоната, изрежете парче с заоблени ъгли, нанесете PVC лепило, натиснете здраво и изчакайте 24 часа преди да надуете.Aquafarer Дъските включват комплект за ремонт. За подробни инструкции вижте нашето ръководство за ремонт на надуваеми системи.',
+        'Почистете зоната, изрежете парче с заоблени ъгли, нанесете PVC лепило, натиснете здраво и изчакайте 24 часа преди да надуете.Paddle Board Overstock Дъските включват комплект за ремонт. За подробни инструкции вижте нашето ръководство за ремонт на надуваеми системи.',
       category: 'maintenance',
       relatedProducts: [],
       relatedGuides: ['inflatable-repair', 'sup-maintenance'],
@@ -129,9 +129,9 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'warranty',
-      question: 'Каква е Aquafarer гаранцията?',
+      question: 'Каква е Paddle Board Overstock гаранцията?',
       answer:
-        'Всички Aquafarer продукти са подкрепени с цялостна гаранция от производителя. Платът за надуваеми тръби за лодка, шевовете и корпусът са покрити с 5-годишна ограничена гаранция;SUP дъските и аксесоарите имат 2-годишна ограничена гаранция. Гаранцията покрива дефекти в материалите и изработката при нормална употреба.',
+        'Всички Paddle Board Overstock продукти са подкрепени с цялостна гаранция от производителя. Платът за надуваеми тръби за лодка, шевовете и корпусът са покрити с 5-годишна ограничена гаранция;SUP дъските и аксесоарите имат 2-годишна ограничена гаранция. Гаранцията покрива дефекти в материалите и изработката при нормална употреба.',
       category: 'warranty',
       relatedProducts: [],
       relatedGuides: [],
@@ -194,7 +194,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'material-difference',
       question: 'Каква е разликата между PVC и Hypalon?',
       answer:
-        'PVC е по-лека, по-достъпна и по-лесна за ремонт — идеална за развлекателна употреба.Hypalon (CSM) предлага превъзходна UV и химическа устойчивост с по-дълъг живот, предпочитана за търговски и военни приложения. използва Aquafarer и двете в зависимост от продукта.',
+        'PVC е по-лека, по-достъпна и по-лесна за ремонт — идеална за развлекателна употреба.Hypalon (CSM) предлага превъзходна UV и химическа устойчивост с по-дълъг живот, предпочитана за търговски и военни приложения. използва Paddle Board Overstock и двете в зависимост от продукта.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -203,7 +203,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-width-stability',
       question: 'Коя SUP ширина е най-добра за стабилност?',
       answer:
-        'За начинаещи ширина от 33–34 инча осигурява най-добрия баланс между стабилност и лекота при гребане. Дъски по-тесни над 32 инча се усещат като на върха за нови гребци. Aquafarer SUP Explorer 11 с дължина 33 инча е идеален за учене.',
+        'За начинаещи ширина от 33–34 инча осигурява най-добрия баланс между стабилност и лекота при гребане. Дъски по-тесни над 32 инча се усещат като на върха за нови гребци. Paddle Board Overstock SUP Explorer 11 с дължина 33 инча е идеален за учене.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-size-guide', 'paddle-board-size-guide'],
@@ -236,24 +236,24 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       relatedGuides: ['inflatable-boat-buying-guide'],
     },
     {
-      id: 'aquafarer-vs-others',
-      question: 'Как Aquafarer се сравнява с други марки?',
+      id: 'paddleboardoverstock-vs-others',
+      question: 'Как Paddle Board Overstock се сравнява с други марки?',
       answer:
-        'Aquafarer предлага най-добра стойност за надуваемо водно спортно оборудване. В сравнение с Red Paddle Co, Aquafarer осигурява 90% от производителността при 60% от цената. В сравнение с iRocker, Aquafarer използва по-висок клас тройна военна PVC и с по-високи PSI оценки. В сравнение с Bluefin, Aquafarer предлага по-добри материални характеристики. За повечето любители на гребци Aquafarer осигурява най-добрия баланс между качество и цена.',
+        'Paddle Board Overstock предлага най-добра стойност за надуваемо водно спортно оборудване. В сравнение с Red Paddle Co, Paddle Board Overstock осигурява 90% от производителността при 60% от цената. В сравнение с iRocker, Paddle Board Overstock използва по-висок клас тройна военна PVC и с по-високи PSI оценки. В сравнение с Bluefin, Paddle Board Overstock предлага по-добри материални характеристики. За повечето любители на гребци Paddle Board Overstock осигурява най-добрия баланс между качество и цена.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: [
         'best-surf-gear-brands-compared',
-        'aquafarer-vs-red-paddle',
-        'aquafarer-vs-irocker',
-        'aquafarer-vs-bluefin',
+        'paddleboardoverstock-vs-red-paddle',
+        'paddleboardoverstock-vs-irocker',
+        'paddleboardoverstock-vs-bluefin',
       ],
     },
     {
       id: 'fishing-sup-setup',
       question: 'Мога ли да ловя риба от SUP дъска?',
       answer:
-        'Да.SUP Риболовът става все по-популярен, защото стоящото положение осигурява отлична видимост към водата. Изберете дъска с дължина поне 11 фута и ширина 33–34 инча за стабилност. Добавете млекарна клетка с държачи за въдици, закрепени на бунджитата на палубата, малка котва и винаги носете PFD. Aquafarer SUP Explorer 11 работи добре за неформален риболов.',
+        'Да.SUP Риболовът става все по-популярен, защото стоящото положение осигурява отлична видимост към водата. Изберете дъска с дължина поне 11 фута и ширина 33–34 инча за стабилност. Добавете млекарна клетка с държачи за въдици, закрепени на бунджитата на палубата, малка котва и винаги носете PFD. Paddle Board Overstock SUP Explorer 11 работи добре за неформален риболов.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['fishing-sup-guide', 'sup-anchor-guide'],
@@ -271,7 +271,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'airline-travel-sup',
       question: 'Какви са правилата на авиокомпанията за пътуване с надуваема SUP машина?',
       answer:
-        'Повечето авиокомпании SUP приемат раници като регистриран багаж, ако са под 23–32 кг. Aquafarer Раницата е приблизително 90x40x30 см и тежи около 15 кг в опаковано състояние. Някои авиокомпании може да начисляват такси за прекомерно голям багаж. Пристигайте рано, увие плавници и помпа отделно в ръчния багаж и етикетирайте чантата като крехка. Винаги проучвайте политиката на авиокомпанията за спортно оборудване преди полет.',
+        'Повечето авиокомпании SUP приемат раници като регистриран багаж, ако са под 23–32 кг. Paddle Board Overstock Раницата е приблизително 90x40x30 см и тежи около 15 кг в опаковано състояние. Някои авиокомпании може да начисляват такси за прекомерно голям багаж. Пристигайте рано, увие плавници и помпа отделно в ръчния багаж и етикетирайте чантата като крехка. Винаги проучвайте политиката на авиокомпанията за спортно оборудване преди полет.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-travel-guide'],
@@ -296,7 +296,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'oem-custom-branding',
-      question: 'Мога ли да сложа собственото си лого на Aquafarer продуктите?',
+      question: 'Мога ли да сложа собственото си лого на Paddle Board Overstock продуктите?',
       answer:
         'Да. OEM Нашата услуга включва персонализирано поставяне на лого, цветови схеми и персонализирана опаковка. Предлагаме опции за печат с тампон, топлотрансфер и бродерия в зависимост от вида продукт. Изпратете вашите произведения и спецификации на нашия търговски екип за оферта и оценка на срока за изпълнение.',
       category: 'ordering',
@@ -307,7 +307,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-inflate-pressure',
       question: 'На какво PSI да надуя SUP моята стойност?',
       answer:
-        'Надувайте до максималната стойност на PSI платката за най-добра производителност — обикновено 15–18 PSI за качествени SUPs надуваеми машини. Aquafarer SUP Explorer 11 се представя най-добре при 15–18 PSI. Недонадуването кара платката да се усеща мека и да се движи лошо. Прекомерното надуване над номиналния максимум рискува да повреди drop-stitch резбата. Проверете стикера близо до клапана за конкретната оценка на платката ви.',
+        'Надувайте до максималната стойност на PSI платката за най-добра производителност — обикновено 15–18 PSI за качествени SUPs надуваеми машини. Paddle Board Overstock SUP Explorer 11 се представя най-добре при 15–18 PSI. Недонадуването кара платката да се усеща мека и да се движи лошо. Прекомерното надуване над номиналния максимум рискува да повреди drop-stitch резбата. Проверете стикера близо до клапана за конкретната оценка на платката ви.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-inflatable-sup', 'sup-pump-guide'],
@@ -334,7 +334,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-kayak-conversion',
       question: 'Мога ли да използвам SUP дъска като каяк?',
       answer:
-        'Да. Много SUP дъски, включително Aquafarer Explorer 11, имат D-пръстени, които позволяват монтаж на седалка за каяк. Използването на SUP с каяк седалка и еднолопастен гребло предлага комфортна позиция за седене за по-дълги преходи или риболов. Някои марки предлагат специални комплекти за преобразуване в каяк с седалки и по-дълги гребла.',
+        'Да. Много SUP дъски, включително Paddle Board Overstock Explorer 11, имат D-пръстени, които позволяват монтаж на седалка за каяк. Използването на SUP с каяк седалка и еднолопастен гребло предлага комфортна позиция за седене за по-дълги преходи или риболов. Някои марки предлагат специални комплекти за преобразуване в каяк с седалки и по-дълги гребла.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['kayak-vs-sup'],
@@ -359,9 +359,9 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'company-model',
-      question: 'Дали Aquafarer е търговска компания или производител?',
+      question: 'Дали Paddle Board Overstock е търговска компания или производител?',
       answer:
-        'Нито чисто производство, нито търговска компания — Aquafarer LLC е бранд компания със собствен производствен център. Aquafarer LLC (Ню Мексико, САЩ) се занимава с глобално разпространение, договори, фактуриране и следпродажбено обслужване, докато Aquafarer Qingdao Manufacturing Hub управлява НИР, производство и контрол на качеството в собствено съоръжение от 12 000 м². Без посредници: всяка поръчка се изпраща директно от фабриката.',
+        'Нито чисто производство, нито търговска компания — Weihai Dongjilian Co., Ltd. е бранд компания със собствен производствен център. Weihai Dongjilian Co., Ltd. (Ню Мексико, САЩ) се занимава с глобално разпространение, договори, фактуриране и следпродажбено обслужване, докато Paddle Board Overstock Qingdao Manufacturing Hub управлява НИР, производство и контрол на качеството в собствено съоръжение от 12 000 м². Без посредници: всяка поръчка се изпраща директно от фабриката.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -370,7 +370,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'us-contract-qingdao-shipping',
       question: 'Защо моят договор е с американска компания, когато стоките се изпращат от Циндао?',
       answer:
-        'Aquafarer LLC (Ню Мексико, САЩ) е глобалният търговски субект, който подписва договори, издава фактури и предоставя следпродажбено обслужване, докато Qingdao Manufacturing Hub произвежда и изпраща всяка поръчка от FOB Циндао. Тази двойна структура на хъба поддържа стандарти за американско договаряне и разплащане, като същевременно запазва цени директно от фабриката и пълна прозрачност на производството.',
+        'Weihai Dongjilian Co., Ltd. (Ню Мексико, САЩ) е глобалният търговски субект, който подписва договори, издава фактури и предоставя следпродажбено обслужване, докато Qingdao Manufacturing Hub произвежда и изпраща всяка поръчка от FOB Циндао. Тази двойна структура на хъба поддържа стандарти за американско договаряне и разплащане, като същевременно запазва цени директно от фабриката и пълна прозрачност на производството.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -390,7 +390,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'ocean-use',
       question: 'Kas ma saan seda kasutada ookeanis?',
       answer:
-        'Jah.Aquafarer SUP Lauad on ehitatud ookeani, järve ja jõe kasutamiseks. Meie Touring seeria tegeleb rannikuäärsete lõhkudega ning kõik lauad kasutavad PVC merekvaliteediga lauda, mis vastupidavad soolase vee korrosioonile. Pärast ookeani kasutamist loputa värske veega.',
+        'Jah.Paddle Board Overstock SUP Lauad on ehitatud ookeani, järve ja jõe kasutamiseks. Meie Touring seeria tegeleb rannikuäärsete lõhkudega ning kõik lauad kasutavad PVC merekvaliteediga lauda, mis vastupidavad soolase vee korrosioonile. Pärast ookeani kasutamist loputa värske veega.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: ['weather-conditions'],
@@ -408,7 +408,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'travel-sup',
       question: 'Kas ma saan reisida täispuhutava SUPs eadmega?',
       answer:
-        'Absoluutselt. Iga Aquafarer laud mahutab seljakoti suurusesse kandekotti, mis on mõeldud mugavaks reisimiseks — kontrolli oma kandja suurust ja kaalupoliitikat. Vaid 18–22 naela kaaluga on seda lihtne kaasa võtta randa, järve või lennujaama terminali kaudu.',
+        'Absoluutselt. Iga Paddle Board Overstock laud mahutab seljakoti suurusesse kandekotti, mis on mõeldud mugavaks reisimiseks — kontrolli oma kandja suurust ja kaalupoliitikat. Vaid 18–22 naela kaaluga on seda lihtne kaasa võtta randa, järve või lennujaama terminali kaudu.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: [],
@@ -426,7 +426,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'box-contents',
       question: 'Mis on karbis?',
       answer:
-        'Kõik Aquafarer SUP sisaldavad lauda, reisiseljakotti, kahetoimelist käsipumpa, eemaldatavat uime, mähisrihma ja remondikomplekti. Mõned mudelid sisaldavad ka süsinikust aeru uuendusvõimalust. Täispuhutavate paadide hulka kuuluvad paat, pump, remondikomplekt ja aerud.',
+        'Kõik Paddle Board Overstock SUP sisaldavad lauda, reisiseljakotti, kahetoimelist käsipumpa, eemaldatavat uime, mähisrihma ja remondikomplekti. Mõned mudelid sisaldavad ka süsinikust aeru uuendusvõimalust. Täispuhutavate paadide hulka kuuluvad paat, pump, remondikomplekt ja aerud.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -462,7 +462,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'puncture-repair',
       question: 'Kuidas parandada torkehastust?',
       answer:
-        'Puhasta ala, lõika ümarate nurkadega plaaster, kanna PVC liimi, suru tugevalt ja oota 24 tundi enne täispuhumist.Aquafarer Lauad sisaldavad remondikomplekti. Üksikasjalike juhiste saamiseks vaata meie täispuhutava remondijuhendit.',
+        'Puhasta ala, lõika ümarate nurkadega plaaster, kanna PVC liimi, suru tugevalt ja oota 24 tundi enne täispuhumist.Paddle Board Overstock Lauad sisaldavad remondikomplekti. Üksikasjalike juhiste saamiseks vaata meie täispuhutava remondijuhendit.',
       category: 'maintenance',
       relatedProducts: [],
       relatedGuides: ['inflatable-repair', 'sup-maintenance'],
@@ -496,9 +496,9 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'warranty',
-      question: 'Mis on Aquafarer garantii?',
+      question: 'Mis on Paddle Board Overstock garantii?',
       answer:
-        'Kõik Aquafarer tooted on tagatud ulatusliku tootjagarantiiga. Täispuhutava paadi toru kangas, õmblused ja kere on kaetud 5-aastase piiratud garantiiga;SUP laudadel ja tarvikutel on 2-aastane piiratud garantii. Garantii katab materjalide ja töö defekte tavakasutuses.',
+        'Kõik Paddle Board Overstock tooted on tagatud ulatusliku tootjagarantiiga. Täispuhutava paadi toru kangas, õmblused ja kere on kaetud 5-aastase piiratud garantiiga;SUP laudadel ja tarvikutel on 2-aastane piiratud garantii. Garantii katab materjalide ja töö defekte tavakasutuses.',
       category: 'warranty',
       relatedProducts: [],
       relatedGuides: [],
@@ -561,7 +561,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'material-difference',
       question: 'Mis vahe PVC on ja Hypalon vahel?',
       answer:
-        'PVC on kergem, taskukohasem ja kergemini parandatav — ideaalne meelelahutuslikuks kasutamiseks.Hypalon (CSM) pakub UV paremat ja keemilist vastupidavust pikema eluiga, eelistatud nii kaubanduslikeks kui ka sõjalistes rakendustes.Aquafarer Kasutab mõlemat sõltuvalt tootetasemest.',
+        'PVC on kergem, taskukohasem ja kergemini parandatav — ideaalne meelelahutuslikuks kasutamiseks.Hypalon (CSM) pakub UV paremat ja keemilist vastupidavust pikema eluiga, eelistatud nii kaubanduslikeks kui ka sõjalistes rakendustes.Paddle Board Overstock Kasutab mõlemat sõltuvalt tootetasemest.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -570,7 +570,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-width-stability',
       question: 'Milline SUP laius on stabiilsuse jaoks parim?',
       answer:
-        'Algajatele pakub 33–34 tolli laius parima tasakaalu stabiilsuse ja aerutamise lihtsuse vahel. Kitsamad kui 32 tolli lauad tunduvad uutele aerutajatele otsas. Aquafarer SUP Explorer 11, 33 tolli pikk, on õppimiseks ideaalne.',
+        'Algajatele pakub 33–34 tolli laius parima tasakaalu stabiilsuse ja aerutamise lihtsuse vahel. Kitsamad kui 32 tolli lauad tunduvad uutele aerutajatele otsas. Paddle Board Overstock SUP Explorer 11, 33 tolli pikk, on õppimiseks ideaalne.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-size-guide', 'paddle-board-size-guide'],
@@ -603,24 +603,24 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       relatedGuides: ['inflatable-boat-buying-guide'],
     },
     {
-      id: 'aquafarer-vs-others',
-      question: 'Kuidas Aquafarer see teiste brändidega võrreldes on?',
+      id: 'paddleboardoverstock-vs-others',
+      question: 'Kuidas Paddle Board Overstock see teiste brändidega võrreldes on?',
       answer:
-        'Aquafarer pakub parimat hinna ja kvaliteedi suhet täispuhutavate veespordivarustuse osas. Võrreldes Red Paddle Co-ga Aquafarer pakub see 90% jõudlusest 60% hinnaga. Võrreldes Aquafarer iRockeriga kasutab see kõrgema kvaliteediga kolmekordset sõjaväelist PVC varustust ja PSI kõrgemaid hinnanguid. Võrreldes Bluefiniga Aquafarer pakub see paremaid materjalispetsifikatsioone. Enamiku harrastusaerutajate Aquafarer jaoks pakub see parimat tasakaalu kvaliteedi ja hinna vahel.',
+        'Paddle Board Overstock pakub parimat hinna ja kvaliteedi suhet täispuhutavate veespordivarustuse osas. Võrreldes Red Paddle Co-ga Paddle Board Overstock pakub see 90% jõudlusest 60% hinnaga. Võrreldes Paddle Board Overstock iRockeriga kasutab see kõrgema kvaliteediga kolmekordset sõjaväelist PVC varustust ja PSI kõrgemaid hinnanguid. Võrreldes Bluefiniga Paddle Board Overstock pakub see paremaid materjalispetsifikatsioone. Enamiku harrastusaerutajate Paddle Board Overstock jaoks pakub see parimat tasakaalu kvaliteedi ja hinna vahel.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: [
         'best-surf-gear-brands-compared',
-        'aquafarer-vs-red-paddle',
-        'aquafarer-vs-irocker',
-        'aquafarer-vs-bluefin',
+        'paddleboardoverstock-vs-red-paddle',
+        'paddleboardoverstock-vs-irocker',
+        'paddleboardoverstock-vs-bluefin',
       ],
     },
     {
       id: 'fishing-sup-setup',
       question: 'Kas ma võin kalastada SUP laualt?',
       answer:
-        "Jah.SUP Kalapüük muutub üha populaarsemaks, sest seisasend pakub suurepärast nähtavust vette. Vali laud, mis on vähemalt 11 jalga pikk ja 33–34 tolli lai stabiilsuse tagamiseks. Lisa piimakast, millel on õngahoidjad, mis on kinnitatud tekibungee'dele, väike ankur ja kanna alati PFD. Aquafarer SUP Explorer 11 sobib hästi juhuslikuks kalapüügiks.",
+        "Jah.SUP Kalapüük muutub üha populaarsemaks, sest seisasend pakub suurepärast nähtavust vette. Vali laud, mis on vähemalt 11 jalga pikk ja 33–34 tolli lai stabiilsuse tagamiseks. Lisa piimakast, millel on õngahoidjad, mis on kinnitatud tekibungee'dele, väike ankur ja kanna alati PFD. Paddle Board Overstock SUP Explorer 11 sobib hästi juhuslikuks kalapüügiks.",
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['fishing-sup-guide', 'sup-anchor-guide'],
@@ -638,7 +638,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'airline-travel-sup',
       question: 'Millised on lennufirma reeglid täispuhutava lennukiga SUP reisimiseks?',
       answer:
-        'Enamik lennufirmasid SUP aktsepteerib seljakotte registreeritud pagasina, kui see kaalub alla 23–32 kg. Aquafarer Seljakott on umbes 90x40x30 cm ja kaalub pakituna umbes 15 kg. Mõned lennufirmad võivad küsida ülegabariidilise pagasi tasu. Saabu varakult, mähkige pagasipagasid ja pumbage pagas eraldi ning märgistage pagas hapraks. Uurige alati enne lendu oma lennufirma spordivarustuse poliitikat.',
+        'Enamik lennufirmasid SUP aktsepteerib seljakotte registreeritud pagasina, kui see kaalub alla 23–32 kg. Paddle Board Overstock Seljakott on umbes 90x40x30 cm ja kaalub pakituna umbes 15 kg. Mõned lennufirmad võivad küsida ülegabariidilise pagasi tasu. Saabu varakult, mähkige pagasipagasid ja pumbage pagas eraldi ning märgistage pagas hapraks. Uurige alati enne lendu oma lennufirma spordivarustuse poliitikat.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-travel-guide'],
@@ -663,7 +663,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'oem-custom-branding',
-      question: 'Kas ma võin panna oma Aquafarer logo toodetele?',
+      question: 'Kas ma võin panna oma Paddle Board Overstock logo toodetele?',
       answer:
         'Jah. Meie OEM teenus hõlmab kohandatud logo paigutust, eritellimusel värviskeeme ja eritellimusel pakendamist. Pakume padtprintimist, soojusülekannet ja tikkimisvõimalusi sõltuvalt toote tüübist. Saada oma kunstiteosed ja spetsifikatsioonid meie müügitiimile, et saada hinnapakkumine ja tarneaja hinnapakkumine.',
       category: 'ordering',
@@ -674,7 +674,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-inflate-pressure',
       question: 'Milleks PSI peaksin oma üles SUP puhuma?',
       answer:
-        'Täispuhu laua PSI maksimaalsele maksimaalsele tasemele parima jõudluse saavutamiseks — tavaliselt 15–18 PSI kvaliteetse täispuhutava SUPs puhul. Aquafarer SUP Explorer 11 töötab kõige paremini 15–18 PSI kraadiga. Alatäitmine muudab plaadi pehmeks ja halvasti jälgimiseks. Ületäitmine üle lubatud maksimaalse võib kahjustada drop-stitch keermeid. Kontrolli kleebist ventiili lähedal, et näha oma plaadi spetsiifilist hinnangut.',
+        'Täispuhu laua PSI maksimaalsele maksimaalsele tasemele parima jõudluse saavutamiseks — tavaliselt 15–18 PSI kvaliteetse täispuhutava SUPs puhul. Paddle Board Overstock SUP Explorer 11 töötab kõige paremini 15–18 PSI kraadiga. Alatäitmine muudab plaadi pehmeks ja halvasti jälgimiseks. Ületäitmine üle lubatud maksimaalse võib kahjustada drop-stitch keermeid. Kontrolli kleebist ventiili lähedal, et näha oma plaadi spetsiifilist hinnangut.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-inflatable-sup', 'sup-pump-guide'],
@@ -701,7 +701,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-kayak-conversion',
       question: 'Kas ma saan SUP lauaga kanuuna sõita?',
       answer:
-        'Jah. Paljud SUP lauad, sealhulgas Aquafarer Explorer 11, on varustatud D-rõngastega, kuhu saab kinnitada kanuu iste. SUP kasutamine kanuuiste ja ühe lehega aeruga pakub mugavat istumisasendit pikemateks sõitudeks või kalastamiseks. Mõned kaubamärgid pakuvad spetsiaalseid kanuuks muutmise komplekte koos istmete ja pikemate aerudega.',
+        'Jah. Paljud SUP lauad, sealhulgas Paddle Board Overstock Explorer 11, on varustatud D-rõngastega, kuhu saab kinnitada kanuu iste. SUP kasutamine kanuuiste ja ühe lehega aeruga pakub mugavat istumisasendit pikemateks sõitudeks või kalastamiseks. Mõned kaubamärgid pakuvad spetsiaalseid kanuuks muutmise komplekte koos istmete ja pikemate aerudega.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['kayak-vs-sup'],
@@ -726,9 +726,9 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'company-model',
-      question: 'Kas Aquafarer on kaubandusettevõte või tootja?',
+      question: 'Kas Paddle Board Overstock on kaubandusettevõte või tootja?',
       answer:
-        'Ei ole kumbki, täpne tehas ega kaubandusettevõte — Aquafarer LLC on brändiettevõte oma tootmisbaasiga. Aquafarer LLC (New Mexico, USA) haldab ülemaailmset jaotust, lepinguid, arveldamist ja müügijärgset teenindust, samal ajal kui Aquafarer Qingdao tootmiskeskus tegeleb U&K, tootmise ja kvaliteedikontrolliga meie 12 000 m² rajatises. Vahepealset vahendajat ei ole: iga tellimus saadetakse otse tehasest.',
+        'Ei ole kumbki, täpne tehas ega kaubandusettevõte — Weihai Dongjilian Co., Ltd. on brändiettevõte oma tootmisbaasiga. Weihai Dongjilian Co., Ltd. (New Mexico, USA) haldab ülemaailmset jaotust, lepinguid, arveldamist ja müügijärgset teenindust, samal ajal kui Paddle Board Overstock Qingdao tootmiskeskus tegeleb U&K, tootmise ja kvaliteedikontrolliga meie 12 000 m² rajatises. Vahepealset vahendajat ei ole: iga tellimus saadetakse otse tehasest.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -737,7 +737,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'us-contract-qingdao-shipping',
       question: 'Miks on minu leping USA ettevõttega, kui kaubad saadetakse Qingdaost?',
       answer:
-        'Aquafarer LLC (New Mexico, USA) on ülemaailmne kaubandusüksus, kes sõlmib lepingud, väljastab arveteid ja pakub müügijärgset tuge, samal ajal kui Qingdao tootmiskeskus toodab ja saadab iga tellimuse FOB Qingdaost. See kahe-keskuse struktuur säilitab USA standarditele vastava lepinguvormingu ja arveldamise, samal ajal säilitades tehase otsese hinna ja täieliku tootmisinfo läbipaistvuse.',
+        'Weihai Dongjilian Co., Ltd. (New Mexico, USA) on ülemaailmne kaubandusüksus, kes sõlmib lepingud, väljastab arveteid ja pakub müügijärgset tuge, samal ajal kui Qingdao tootmiskeskus toodab ja saadab iga tellimuse FOB Qingdaost. See kahe-keskuse struktuur säilitab USA standarditele vastava lepinguvormingu ja arveldamise, samal ajal säilitades tehase otsese hinna ja täieliku tootmisinfo läbipaistvuse.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -757,7 +757,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'ocean-use',
       question: 'האם אפשר להשתמש בו בים?',
       answer:
-        "כן.Aquafarer SUP הלוחות בנויים לשימוש באוקיינוס, באגם ובנהרות. סדרת Touring שלנו מתמודדת עם ג'ויפ חופי, וכל הלוחות משתמשים במים ימיים PVC עמידים בפני קורוזיה במי מלח. שטפו במים מתוקים לאחר שימוש בים.",
+        "כן.Paddle Board Overstock SUP הלוחות בנויים לשימוש באוקיינוס, באגם ובנהרות. סדרת Touring שלנו מתמודדת עם ג'ויפ חופי, וכל הלוחות משתמשים במים ימיים PVC עמידים בפני קורוזיה במי מלח. שטפו במים מתוקים לאחר שימוש בים.",
       category: 'general',
       relatedProducts: [],
       relatedGuides: ['weather-conditions'],
@@ -775,7 +775,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'travel-sup',
       question: 'האם אפשר לנסוע עם מתנפח SUP?',
       answer:
-        'בהחלט. כל Aquafarer לוח נארז בתיק נשיאה בגודל תיק גב שמיועד לנסיעה נוחה — בדקו את מדיניות גודל ומשקל הנשא שלכם. במשקל של 18-22 פאונד בלבד, קל לשאת אותו לחוף, לאגם או דרך טרמינלים בשדה התעופה.',
+        'בהחלט. כל Paddle Board Overstock לוח נארז בתיק נשיאה בגודל תיק גב שמיועד לנסיעה נוחה — בדקו את מדיניות גודל ומשקל הנשא שלכם. במשקל של 18-22 פאונד בלבד, קל לשאת אותו לחוף, לאגם או דרך טרמינלים בשדה התעופה.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: [],
@@ -793,7 +793,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'box-contents',
       question: 'מה מגיע בקופסה?',
       answer:
-        'כל Aquafarer SUP הדגמים כוללים את הלוח, תיק גב נסיעות, משאבת יד דו-פעולה, סנפיר נשלף, רצועת סליל וערכת תיקון. חלק מהדגמים כוללים גם אפשרות לשדרוג משוט פחמן. סירות מתנפחות כוללות סירה, משאבה, ערכת תיקון ומשוטים.',
+        'כל Paddle Board Overstock SUP הדגמים כוללים את הלוח, תיק גב נסיעות, משאבת יד דו-פעולה, סנפיר נשלף, רצועת סליל וערכת תיקון. חלק מהדגמים כוללים גם אפשרות לשדרוג משוט פחמן. סירות מתנפחות כוללות סירה, משאבה, ערכת תיקון ומשוטים.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -829,7 +829,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'puncture-repair',
       question: "איך מתקנים פנצ'ר?",
       answer:
-        'נקה את האזור, חתך טלאי עם פינות מעוגלות, מרח PVC דבק, לחץ היטב והמתן 24 שעות לפני הניפוח.Aquafarer הלוחות כוללים ערכת תיקון. להוראות מפורטות, ראו את מדריך התיקון שלנו למתנפח.',
+        'נקה את האזור, חתך טלאי עם פינות מעוגלות, מרח PVC דבק, לחץ היטב והמתן 24 שעות לפני הניפוח.Paddle Board Overstock הלוחות כוללים ערכת תיקון. להוראות מפורטות, ראו את מדריך התיקון שלנו למתנפח.',
       category: 'maintenance',
       relatedProducts: [],
       relatedGuides: ['inflatable-repair', 'sup-maintenance'],
@@ -863,9 +863,9 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'warranty',
-      question: 'מהי Aquafarer האחריות?',
+      question: 'מהי Paddle Board Overstock האחריות?',
       answer:
-        'כל Aquafarer המוצרים מגובים באחריות יצרנית מקיפה. בד צינורות סירה מתנפח, התפרים והגוף מכוסים באחריות מוגבלת ל-5 שנים;SUP לוחות ואביזרים נושאים אחריות מוגבלת לשנתיים. האחריות מכסה ליקויים בחומרים ובאיכות העבודה בשימוש רגיל.',
+        'כל Paddle Board Overstock המוצרים מגובים באחריות יצרנית מקיפה. בד צינורות סירה מתנפח, התפרים והגוף מכוסים באחריות מוגבלת ל-5 שנים;SUP לוחות ואביזרים נושאים אחריות מוגבלת לשנתיים. האחריות מכסה ליקויים בחומרים ובאיכות העבודה בשימוש רגיל.',
       category: 'warranty',
       relatedProducts: [],
       relatedGuides: [],
@@ -928,7 +928,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'material-difference',
       question: 'מה ההבדל בין PVC ו Hypalon-?',
       answer:
-        'PVC קל יותר, זול יותר וקל יותר לתיקון — אידיאלי לשימוש פנאי.Hypalon CSM() מציע UV עמידות כימית מעולה עם אורך חיים ארוך יותר, מועדף ליישומים מסחריים וצבאיים.Aquafarer משתמש בשניהם בהתאם לרמת המוצר.',
+        'PVC קל יותר, זול יותר וקל יותר לתיקון — אידיאלי לשימוש פנאי.Hypalon CSM() מציע UV עמידות כימית מעולה עם אורך חיים ארוך יותר, מועדף ליישומים מסחריים וצבאיים.Paddle Board Overstock משתמש בשניהם בהתאם לרמת המוצר.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -937,7 +937,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-width-stability',
       question: 'איזה SUP רוחב הכי טוב ליציבות?',
       answer:
-        "למתחילים, רוחב של 33–34 אינץ' מספק את האיזון הטוב ביותר בין יציבות לקלות חתירה. לוחות צרים מ-32 אינץ' מרגישים גמישים לחותרים חדשים. Aquafarer SUP ה-Explorer 11 באורך 33 אינץ' אידיאלי ללמידה.",
+        "למתחילים, רוחב של 33–34 אינץ' מספק את האיזון הטוב ביותר בין יציבות לקלות חתירה. לוחות צרים מ-32 אינץ' מרגישים גמישים לחותרים חדשים. Paddle Board Overstock SUP ה-Explorer 11 באורך 33 אינץ' אידיאלי ללמידה.",
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-size-guide', 'paddle-board-size-guide'],
@@ -970,24 +970,24 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       relatedGuides: ['inflatable-boat-buying-guide'],
     },
     {
-      id: 'aquafarer-vs-others',
-      question: 'איך Aquafarer זה משתווה למותגים אחרים?',
+      id: 'paddleboardoverstock-vs-others',
+      question: 'איך Paddle Board Overstock זה משתווה למותגים אחרים?',
       answer:
-        'Aquafarer מציע את הערך הטוב ביותר בציוד ספורט מים מתנפח. בהשוואה ל-Red Paddle Co, Aquafarer הוא מספק 90% מהביצועים ב-60% מהעלות. בהשוואה ל-iRocker, Aquafarer הוא משתמש בדירוגים משולשי ברמה גבוהה יותר ברמת צבא PVC ודירוג גבוה PSI יותר. בהשוואה ל-Bluefin, Aquafarer מציע מפרט חומרים איכותי יותר. לרוב החותרים הפנאי, Aquafarer הוא מספק את האיזון הטוב ביותר בין איכות למחיר.',
+        'Paddle Board Overstock מציע את הערך הטוב ביותר בציוד ספורט מים מתנפח. בהשוואה ל-Red Paddle Co, Paddle Board Overstock הוא מספק 90% מהביצועים ב-60% מהעלות. בהשוואה ל-iRocker, Paddle Board Overstock הוא משתמש בדירוגים משולשי ברמה גבוהה יותר ברמת צבא PVC ודירוג גבוה PSI יותר. בהשוואה ל-Bluefin, Paddle Board Overstock מציע מפרט חומרים איכותי יותר. לרוב החותרים הפנאי, Paddle Board Overstock הוא מספק את האיזון הטוב ביותר בין איכות למחיר.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: [
         'best-surf-gear-brands-compared',
-        'aquafarer-vs-red-paddle',
-        'aquafarer-vs-irocker',
-        'aquafarer-vs-bluefin',
+        'paddleboardoverstock-vs-red-paddle',
+        'paddleboardoverstock-vs-irocker',
+        'paddleboardoverstock-vs-bluefin',
       ],
     },
     {
       id: 'fishing-sup-setup',
       question: 'האם אפשר לדוג SUP מקרש?',
       answer:
-        "כן.SUP הדיג הופך לפופולרי יותר ויותר כי המצב בעמידה מאפשר ראות מצוינת אל תוך המים. בחר לוח באורך של לפחות 11 רגל וברוחב 33–34 אינץ' ליציבות. הוסף ארגז חלב עם מחזיק חכות מחוברים לבנג'ים של הסיפון, עוגן קטן, ותמיד לבש PFD. Aquafarer SUP ה-Explorer 11 מתאים מאוד לדיג מזדמן.",
+        "כן.SUP הדיג הופך לפופולרי יותר ויותר כי המצב בעמידה מאפשר ראות מצוינת אל תוך המים. בחר לוח באורך של לפחות 11 רגל וברוחב 33–34 אינץ' ליציבות. הוסף ארגז חלב עם מחזיק חכות מחוברים לבנג'ים של הסיפון, עוגן קטן, ותמיד לבש PFD. Paddle Board Overstock SUP ה-Explorer 11 מתאים מאוד לדיג מזדמן.",
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['fishing-sup-guide', 'sup-anchor-guide'],
@@ -1005,7 +1005,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'airline-travel-sup',
       question: 'מהם כללי חברת התעופה לנסיעה עם רכב מתנפח SUP?',
       answer:
-        'רוב חברות התעופה מקבלות SUP תיקי גב כמזוודה שנשלחה אם משקלם פחות מ-23–32 ק"ג. Aquafarer התיק הוא בגודל כ-90x40x30 ס"מ ומשקלו כ-15 ק"ג ארוז. חלק מהחברות עשויות לגבות דמי מטען גדולים מדי. הגעה מוקדמת, עטוף את הסנפירים והשאבה בנפרד בתיק היד, וסמן את התיק כעדין. תמיד יש לבדוק את מדיניות ציוד הספורט של חברת התעופה לפני הטיסה.',
+        'רוב חברות התעופה מקבלות SUP תיקי גב כמזוודה שנשלחה אם משקלם פחות מ-23–32 ק"ג. Paddle Board Overstock התיק הוא בגודל כ-90x40x30 ס"מ ומשקלו כ-15 ק"ג ארוז. חלק מהחברות עשויות לגבות דמי מטען גדולים מדי. הגעה מוקדמת, עטוף את הסנפירים והשאבה בנפרד בתיק היד, וסמן את התיק כעדין. תמיד יש לבדוק את מדיניות ציוד הספורט של חברת התעופה לפני הטיסה.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-travel-guide'],
@@ -1030,7 +1030,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'oem-custom-branding',
-      question: 'האם אפשר לשים את הלוגו שלי על Aquafarer המוצרים?',
+      question: 'האם אפשר לשים את הלוגו שלי על Paddle Board Overstock המוצרים?',
       answer:
         'כן. OEM השירות שלנו כולל מיקום לוגואים מותאמים אישית, סכימות צבעים מותאמות אישית ואריזות מותאמות אישית. אנו מציעים הדפסת פד, העברת חום ואפשרויות רקמה בהתאם לסוג המוצר. שלחו את יצירות האמנות והמפרטים שלכם לצוות המכירות שלנו לקבלת הצעת מחיר והערכת זמן אספקה.',
       category: 'ordering',
@@ -1041,7 +1041,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-inflate-pressure',
       question: 'למה PSI כדאי לי לנפח את עצמי SUP ?',
       answer:
-        'נפחו למקסימום המדורג של הלוח PSI לביצועים מיטביים — בדרך כלל 15–18 PSI לאיכות מתנפחת SUPs. Aquafarer SUP ה-Explorer 11 מתפקד הכי טוב ב-15–18 PSI. התנפחות נמוכה גורמת ללוח להרגיש רך ולעקוב בצורה לקויה. ניפוח יתר מעבר למקסימום המדורג עלול לפגוע drop-stitch בהברגים. בדוק את המדבקה ליד השסתום לגבי הדירוג הספציפי של הלוח שלך.',
+        'נפחו למקסימום המדורג של הלוח PSI לביצועים מיטביים — בדרך כלל 15–18 PSI לאיכות מתנפחת SUPs. Paddle Board Overstock SUP ה-Explorer 11 מתפקד הכי טוב ב-15–18 PSI. התנפחות נמוכה גורמת ללוח להרגיש רך ולעקוב בצורה לקויה. ניפוח יתר מעבר למקסימום המדורג עלול לפגוע drop-stitch בהברגים. בדוק את המדבקה ליד השסתום לגבי הדירוג הספציפי של הלוח שלך.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-inflatable-sup', 'sup-pump-guide'],
@@ -1068,7 +1068,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-kayak-conversion',
       question: 'האם אפשר להשתמש SUP בלוח כקיאק?',
       answer:
-        'כן. SUP לוחות רבים, כולל Aquafarer Explorer 11, כוללים טבעות D שמאפשרות חיבור מושב קיאק. שימוש SUP במושב קיאק ומשוט חד-להבי מספק עמדת ישיבה נוחה לטיולים ארוכים או דיג. חלק מהמותגים מציעים ערכות הסבה ייעודיות לקיאק עם מושבים ומשוטים ארוכים יותר.',
+        'כן. SUP לוחות רבים, כולל Paddle Board Overstock Explorer 11, כוללים טבעות D שמאפשרות חיבור מושב קיאק. שימוש SUP במושב קיאק ומשוט חד-להבי מספק עמדת ישיבה נוחה לטיולים ארוכים או דיג. חלק מהמותגים מציעים ערכות הסבה ייעודיות לקיאק עם מושבים ומשוטים ארוכים יותר.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['kayak-vs-sup'],
@@ -1093,9 +1093,9 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'company-model',
-      question: 'האם Aquafarer זו חברת מסחר או יצרן?',
+      question: 'האם Paddle Board Overstock זו חברת מסחר או יצרן?',
       answer:
-        'לא מפעל טהור ולא חברת מסחר — Aquafarer LLC היא חברת מותג עם בסיס ייצור משלה.Aquafarer LLC (ניו מקסיקו, ארה"ב) מטפלת בהפצה גלובלית, חוזים, חיוב ומכירה לאחר מכן, בעוד Aquafarer שמרכז הייצור של צ\'ינגדאו מנהל מחקר ופיתוח, ייצור ובקרת איכות במתקן שלנו בשטח של 12,000 מ"ר. אין מתווכים: כל הזמנה נשלחת ישירות מהמפעל.',
+        'לא מפעל טהור ולא חברת מסחר — Weihai Dongjilian Co., Ltd. היא חברת מותג עם בסיס ייצור משלה.Weihai Dongjilian Co., Ltd. (ניו מקסיקו, ארה"ב) מטפלת בהפצה גלובלית, חוזים, חיוב ומכירה לאחר מכן, בעוד Paddle Board Overstock שמרכז הייצור של צ\'ינגדאו מנהל מחקר ופיתוח, ייצור ובקרת איכות במתקן שלנו בשטח של 12,000 מ"ר. אין מתווכים: כל הזמנה נשלחת ישירות מהמפעל.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -1104,7 +1104,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'us-contract-qingdao-shipping',
       question: "למה החוזה שלי עם חברה אמריקאית הוא כשסחורות נשלחות מצ'ינגדאו?",
       answer:
-        "Aquafarer LLC (ניו מקסיקו, ארה\"ב) היא הישות המסחרית העולמית שחותמת על חוזים, מנפיקה חשבוניות ומספקת תמיכה לאחר המכירה, בעוד שמרכז הייצור של צ'ינגדאו מייצר ושולח כל הזמנה FOB של צ'ינגדאו. מבנה המרכז הכפול הזה שומר על חוזים ופושרים ברמה אמריקאית, תוך שמירה על תמחור ישיר במפעל ושקיפות מלאה בייצור.",
+        "Weihai Dongjilian Co., Ltd. (ניו מקסיקו, ארה\"ב) היא הישות המסחרית העולמית שחותמת על חוזים, מנפיקה חשבוניות ומספקת תמיכה לאחר המכירה, בעוד שמרכז הייצור של צ'ינגדאו מייצר ושולח כל הזמנה FOB של צ'ינגדאו. מבנה המרכז הכפול הזה שומר על חוזים ופושרים ברמה אמריקאית, תוך שמירה על תמחור ישיר במפעל ושקיפות מלאה בייצור.",
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -1124,7 +1124,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'ocean-use',
       question: 'Mogu li ga koristiti u oceanu?',
       answer:
-        'Da.Aquafarer SUP Daske su napravljene za ocean, jezera i rijeke. Naša Touring serija se bavi obalnim valovima, a sve daske koriste morske daske PVC koje odolijevaju koroziji u slanoj vodi. Isperite svježom vodom nakon korištenja u oceanu.',
+        'Da.Paddle Board Overstock SUP Daske su napravljene za ocean, jezera i rijeke. Naša Touring serija se bavi obalnim valovima, a sve daske koriste morske daske PVC koje odolijevaju koroziji u slanoj vodi. Isperite svježom vodom nakon korištenja u oceanu.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: ['weather-conditions'],
@@ -1142,7 +1142,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'travel-sup',
       question: 'Mogu li putovati s napuhivačem SUP?',
       answer:
-        'Apsolutno. Svaka Aquafarer daska se pakira u torbu veličine ruksaka dizajniranu za praktična putovanja — provjerite pravila o veličini i težini vašeg transportera. Sa samo 18-22 lbs, lako ju je prenijeti do plaže, jezera ili kroz aerodromske terminale.',
+        'Apsolutno. Svaka Paddle Board Overstock daska se pakira u torbu veličine ruksaka dizajniranu za praktična putovanja — provjerite pravila o veličini i težini vašeg transportera. Sa samo 18-22 lbs, lako ju je prenijeti do plaže, jezera ili kroz aerodromske terminale.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: [],
@@ -1160,7 +1160,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'box-contents',
       question: 'Što dolazi u kutiji?',
       answer:
-        'Svaki Aquafarer SUP uključuje dasku, putni ruksak, ručnu pumpu s dvostrukim djelovanjem, uklonjivu peraju, povodac za zavojnicu i komplet za popravak. Neki modeli također uključuju opciju nadogradnje karbonskog vesla. Napuhavajući čamci uključuju čamac, pumpu, komplet za popravak i vesla.',
+        'Svaki Paddle Board Overstock SUP uključuje dasku, putni ruksak, ručnu pumpu s dvostrukim djelovanjem, uklonjivu peraju, povodac za zavojnicu i komplet za popravak. Neki modeli također uključuju opciju nadogradnje karbonskog vesla. Napuhavajući čamci uključuju čamac, pumpu, komplet za popravak i vesla.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -1196,7 +1196,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'puncture-repair',
       question: 'Kako popraviti probušenje?',
       answer:
-        'Očistite područje, izrežite zakrpu s zaobljenim kutovima, nanesite PVC ljepilo, čvrsto pritisnite i pričekajte 24 sata prije napuhavanja.Aquafarer Daske uključuju komplet za popravak. Za detaljne upute pogledajte naš vodič za popravak napuhavajućih dasaka.',
+        'Očistite područje, izrežite zakrpu s zaobljenim kutovima, nanesite PVC ljepilo, čvrsto pritisnite i pričekajte 24 sata prije napuhavanja.Paddle Board Overstock Daske uključuju komplet za popravak. Za detaljne upute pogledajte naš vodič za popravak napuhavajućih dasaka.',
       category: 'maintenance',
       relatedProducts: [],
       relatedGuides: ['inflatable-repair', 'sup-maintenance'],
@@ -1230,9 +1230,9 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'warranty',
-      question: 'Aquafarer Koja je garancija?',
+      question: 'Paddle Board Overstock Koja je garancija?',
       answer:
-        'Svi Aquafarer proizvodi imaju sveobuhvatno proizvođačko jamstvo. Tkanina, šavovi i trup za gumene čamce pokriveni su ograničenim jamstvom na 5 godina;SUP daske i dodaci imaju ograničeno jamstvo od 2 godine. Jamstvo pokriva nedostatke u materijalima i izradi pri normalnoj upotrebi.',
+        'Svi Paddle Board Overstock proizvodi imaju sveobuhvatno proizvođačko jamstvo. Tkanina, šavovi i trup za gumene čamce pokriveni su ograničenim jamstvom na 5 godina;SUP daske i dodaci imaju ograničeno jamstvo od 2 godine. Jamstvo pokriva nedostatke u materijalima i izradi pri normalnoj upotrebi.',
       category: 'warranty',
       relatedProducts: [],
       relatedGuides: [],
@@ -1295,7 +1295,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'material-difference',
       question: 'Koja je razlika između PVC i Hypalon?',
       answer:
-        'PVC lakši je, pristupačniji i lakši za popravak — idealan za rekreativnu upotrebu.Hypalon (CSM) nudi UV superiornu i kemijsku otpornost s duljim vijekom trajanja, preferirano za komercijalne i vojne primjene.Aquafarer koristi se ovisno o razini proizvoda.',
+        'PVC lakši je, pristupačniji i lakši za popravak — idealan za rekreativnu upotrebu.Hypalon (CSM) nudi UV superiornu i kemijsku otpornost s duljim vijekom trajanja, preferirano za komercijalne i vojne primjene.Paddle Board Overstock koristi se ovisno o razini proizvoda.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -1304,7 +1304,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-width-stability',
       question: 'SUP Koja je širina najbolja za stabilnost?',
       answer:
-        'Za početnike, širina od 33–34 inča pruža najbolju ravnotežu stabilnosti i lakoće veslanja. Daske uži od 32 inča novim veslačima djeluju lagano. Aquafarer SUP Explorer 11 na 33 inča idealan je za učenje.',
+        'Za početnike, širina od 33–34 inča pruža najbolju ravnotežu stabilnosti i lakoće veslanja. Daske uži od 32 inča novim veslačima djeluju lagano. Paddle Board Overstock SUP Explorer 11 na 33 inča idealan je za učenje.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-size-guide', 'paddle-board-size-guide'],
@@ -1337,24 +1337,24 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       relatedGuides: ['inflatable-boat-buying-guide'],
     },
     {
-      id: 'aquafarer-vs-others',
-      question: 'Kako se Aquafarer uspoređuje s drugim brendovima?',
+      id: 'paddleboardoverstock-vs-others',
+      question: 'Kako se Paddle Board Overstock uspoređuje s drugim brendovima?',
       answer:
-        'Aquafarer Nudi najbolju vrijednost u opremi za napuhavajuće vodene sportove. U usporedbi s Red Paddle Co, Aquafarer pruža 90% performansi uz 60% cijene. U usporedbi s iRockerom, Aquafarer koristi vojnu opremu višeg sloja s trostrukim PVC slojem i PSI višim ocjenama. U usporedbi s Bluefinom, Aquafarer nudi bolje materijalne specifikacije. Za većinu rekreativnih veslača, Aquafarer pruža najbolju ravnotežu kvalitete i cijene.',
+        'Paddle Board Overstock Nudi najbolju vrijednost u opremi za napuhavajuće vodene sportove. U usporedbi s Red Paddle Co, Paddle Board Overstock pruža 90% performansi uz 60% cijene. U usporedbi s iRockerom, Paddle Board Overstock koristi vojnu opremu višeg sloja s trostrukim PVC slojem i PSI višim ocjenama. U usporedbi s Bluefinom, Paddle Board Overstock nudi bolje materijalne specifikacije. Za većinu rekreativnih veslača, Paddle Board Overstock pruža najbolju ravnotežu kvalitete i cijene.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: [
         'best-surf-gear-brands-compared',
-        'aquafarer-vs-red-paddle',
-        'aquafarer-vs-irocker',
-        'aquafarer-vs-bluefin',
+        'paddleboardoverstock-vs-red-paddle',
+        'paddleboardoverstock-vs-irocker',
+        'paddleboardoverstock-vs-bluefin',
       ],
     },
     {
       id: 'fishing-sup-setup',
       question: 'Mogu li pecati s SUP daske?',
       answer:
-        'Da.SUP Ribolov je sve popularniji jer stojeći položaj pruža izvrsnu vidljivost u vodu. Odaberite dasku duljine najmanje 11 stopa i širine 33–34 inča radi stabilnosti. Dodajte kutiju za mlijeko s držačima za štapove pričvršćenim za gumene trake na palubi, mali sidro i uvijek nosite . PFD  Aquafarer SUP Explorer 11 dobro funkcionira za rekreativno pecanje.',
+        'Da.SUP Ribolov je sve popularniji jer stojeći položaj pruža izvrsnu vidljivost u vodu. Odaberite dasku duljine najmanje 11 stopa i širine 33–34 inča radi stabilnosti. Dodajte kutiju za mlijeko s držačima za štapove pričvršćenim za gumene trake na palubi, mali sidro i uvijek nosite . PFD  Paddle Board Overstock SUP Explorer 11 dobro funkcionira za rekreativno pecanje.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['fishing-sup-guide', 'sup-anchor-guide'],
@@ -1372,7 +1372,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'airline-travel-sup',
       question: 'Koja su pravila aviokompanije za putovanje s napuhavajućim avionom SUP?',
       answer:
-        'Većina aviokompanija prihvaća SUP ruksake kao predanu prtljagu ako su ispod 23–32 kg. Aquafarer Ruksak je otprilike 90x40x30 cm i težak oko 15 kg spakiran. Neke aviokompanije mogu naplaćivati naknade za preveliku prtljagu. Dođite ranije, zamotajte peraje i pumpu zasebno u ručnu prtljagu i označite torbu kao krhku. Uvijek prije leta istražite pravila vaše aviokompanije o sportskoj opremi.',
+        'Većina aviokompanija prihvaća SUP ruksake kao predanu prtljagu ako su ispod 23–32 kg. Paddle Board Overstock Ruksak je otprilike 90x40x30 cm i težak oko 15 kg spakiran. Neke aviokompanije mogu naplaćivati naknade za preveliku prtljagu. Dođite ranije, zamotajte peraje i pumpu zasebno u ručnu prtljagu i označite torbu kao krhku. Uvijek prije leta istražite pravila vaše aviokompanije o sportskoj opremi.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-travel-guide'],
@@ -1397,7 +1397,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'oem-custom-branding',
-      question: 'Mogu li staviti svoj vlastiti logo na Aquafarer proizvode?',
+      question: 'Mogu li staviti svoj vlastiti logo na Paddle Board Overstock proizvode?',
       answer:
         'Da. Naša OEM usluga uključuje postavljanje logotipa po mjeri, prilagođene sheme boja i prilagođeno pakiranje. Nudimo opcije tampon tiska, prijenosa toplinom i veza ovisno o vrsti proizvoda. Pošaljite svoje umjetničko djelo i specifikacije našem prodajnom timu za ponudu i procjenu vremena isporuke.',
       category: 'ordering',
@@ -1408,7 +1408,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-inflate-pressure',
       question: 'Na što PSI bih trebao napuhati svoj SUP dio?',
       answer:
-        'Napuhujte do maksimalne deklarirane vrijednosti daske PSI za najbolje performanse — obično 15–18 PSI za kvalitetnu napuhavajuću dasku SUPs. Aquafarer SUP Explorer 11 najbolje radi na 15–18 PSI. Premalo napuhavanje uzrokuje da daska djeluje mekano i loše se prati. Prenapuhavanje iznad deklariranog maksimuma može drop-stitch oštetiti navoje. Provjerite naljepnicu blizu ventila za specifičnu ocjenu vaše daske.',
+        'Napuhujte do maksimalne deklarirane vrijednosti daske PSI za najbolje performanse — obično 15–18 PSI za kvalitetnu napuhavajuću dasku SUPs. Paddle Board Overstock SUP Explorer 11 najbolje radi na 15–18 PSI. Premalo napuhavanje uzrokuje da daska djeluje mekano i loše se prati. Prenapuhavanje iznad deklariranog maksimuma može drop-stitch oštetiti navoje. Provjerite naljepnicu blizu ventila za specifičnu ocjenu vaše daske.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-inflatable-sup', 'sup-pump-guide'],
@@ -1435,7 +1435,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-kayak-conversion',
       question: 'Mogu li koristiti SUP ploču kao kajak?',
       answer:
-        'Da. Mnoge SUP daske, uključujući Aquafarer Explorer 11, imaju D-prstene koji omogućuju pričvršćivanje kajak sjedala. Korištenje SUP s kajak sjedalom i veslom s jednom lopaticom pruža udoban položaj sjedenja za duža putovanja ili ribolov. Neki brendovi nude posebne kompletne setove za konverziju kajaka s sjedalom i duljim veslima.',
+        'Da. Mnoge SUP daske, uključujući Paddle Board Overstock Explorer 11, imaju D-prstene koji omogućuju pričvršćivanje kajak sjedala. Korištenje SUP s kajak sjedalom i veslom s jednom lopaticom pruža udoban položaj sjedenja za duža putovanja ili ribolov. Neki brendovi nude posebne kompletne setove za konverziju kajaka s sjedalom i duljim veslima.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['kayak-vs-sup'],
@@ -1460,9 +1460,9 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'company-model',
-      question: 'Aquafarer je trgovačko poduzeće ili proizvođač?',
+      question: 'Paddle Board Overstock je trgovačko poduzeće ili proizvođač?',
       answer:
-        'Niti čista tvornica niti trgovačko poduzeće — Aquafarer d.o.o. je brend tvrtka s vlastitom proizvodnom bazom. Aquafarer d.o.o. (New Mexico, SAD) upravlja globalnom distribucijom, ugovorima, fakturiranjem i službom za korisnike nakon prodaje, dok Aquafarer Qingdao proizvodni centar obavlja istraživanje i razvoj, proizvodnju i kontrolu kvalitete u našem vlastitom objektu od 12.000 m². Bez posrednika: svaka narudžba se šalje izravno iz tvornice.',
+        'Niti čista tvornica niti trgovačko poduzeće — Paddle Board Overstock d.o.o. je brend tvrtka s vlastitom proizvodnom bazom. Paddle Board Overstock d.o.o. (New Mexico, SAD) upravlja globalnom distribucijom, ugovorima, fakturiranjem i službom za korisnike nakon prodaje, dok Paddle Board Overstock Qingdao proizvodni centar obavlja istraživanje i razvoj, proizvodnju i kontrolu kvalitete u našem vlastitom objektu od 12.000 m². Bez posrednika: svaka narudžba se šalje izravno iz tvornice.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -1471,7 +1471,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'us-contract-qingdao-shipping',
       question: 'Zašto je moj ugovor s američkom tvrtkom kada se roba šalje iz Qingdao-a?',
       answer:
-        'Aquafarer LLC (New Mexico, SAD) je globalno trgovačko poduzeće koje potpisuje ugovore, izdaje račune i pruža podršku nakon prodaje, dok Qingdao proizvodni centar proizvodi i šalje svaku narudžbu FOB Qingdao. Ova struktura s dva središta omogućuje ugovaranje i obračun prema američkim standardima, uz očuvanje direktnih cijena iz tvornice i potpune proizvodne transparentnosti.',
+        'Weihai Dongjilian Co., Ltd. (New Mexico, SAD) je globalno trgovačko poduzeće koje potpisuje ugovore, izdaje račune i pruža podršku nakon prodaje, dok Qingdao proizvodni centar proizvodi i šalje svaku narudžbu FOB Qingdao. Ova struktura s dva središta omogućuje ugovaranje i obračun prema američkim standardima, uz očuvanje direktnih cijena iz tvornice i potpune proizvodne transparentnosti.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -1491,7 +1491,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'ocean-use',
       question: 'Használhatom az óceánban?',
       answer:
-        'Igen.Aquafarer SUP A deszkák óceán, tó és folyók használatára készültek. A Touring sorozatunk part menti hasítást kezel, és minden deszka tengeri minőségű PVC vízi bevonatot használ, amely ellenáll a sós víz korrózióján. Öblítsd ki friss vízzel az óceáni használat után.',
+        'Igen.Paddle Board Overstock SUP A deszkák óceán, tó és folyók használatára készültek. A Touring sorozatunk part menti hasítást kezel, és minden deszka tengeri minőségű PVC vízi bevonatot használ, amely ellenáll a sós víz korrózióján. Öblítsd ki friss vízzel az óceáni használat után.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: ['weather-conditions'],
@@ -1509,7 +1509,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'travel-sup',
       question: 'Utazhatok felfújható SUP géppel?',
       answer:
-        'Teljesen. Minden Aquafarer deszka egy hátizsákméretű hordótáskába csomagolható, amely kényelmes utazáshoz van tervezve — nézd meg a hordozód méretét és súlypolitikáját. Csak 18-22 fonttal könnyű vinni a strandra, a tóra vagy a repülőtéri terminálokon keresztül.',
+        'Teljesen. Minden Paddle Board Overstock deszka egy hátizsákméretű hordótáskába csomagolható, amely kényelmes utazáshoz van tervezve — nézd meg a hordozód méretét és súlypolitikáját. Csak 18-22 fonttal könnyű vinni a strandra, a tóra vagy a repülőtéri terminálokon keresztül.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: [],
@@ -1527,7 +1527,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'box-contents',
       question: 'Mi van a dobozban?',
       answer:
-        'Mindegyik Aquafarer SUP tartalmazza a deszkát, egy utazóhátizsákot, kétfunkciós kézi pumpát, levehető uszonyát, tekercspórázt és javítókészletet. Néhány modell tartalmaz karbon lapátos frissítési opciót is. Felfújható csónakok közé tartozik a csónak, a szivattyú, a javító készlet és az evezők.',
+        'Mindegyik Paddle Board Overstock SUP tartalmazza a deszkát, egy utazóhátizsákot, kétfunkciós kézi pumpát, levehető uszonyát, tekercspórázt és javítókészletet. Néhány modell tartalmaz karbon lapátos frissítési opciót is. Felfújható csónakok közé tartozik a csónak, a szivattyú, a javító készlet és az evezők.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -1563,7 +1563,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'puncture-repair',
       question: 'Hogyan javítsam meg a szúrást?',
       answer:
-        'Tisztítsd meg a területet, vágj egy lekerekített sarkos foltot, vigyél PVC fel ragasztót, nyomd erősen, és várj 24 órát a felfújás előtt.Aquafarer A deszkák javítókészletet is tartalmaznak. Részletes utasításokat keres felfújható javítási útmutatónkban.',
+        'Tisztítsd meg a területet, vágj egy lekerekített sarkos foltot, vigyél PVC fel ragasztót, nyomd erősen, és várj 24 órát a felfújás előtt.Paddle Board Overstock A deszkák javítókészletet is tartalmaznak. Részletes utasításokat keres felfújható javítási útmutatónkban.',
       category: 'maintenance',
       relatedProducts: [],
       relatedGuides: ['inflatable-repair', 'sup-maintenance'],
@@ -1597,9 +1597,9 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'warranty',
-      question: 'Mi a Aquafarer garancia?',
+      question: 'Mi a Paddle Board Overstock garancia?',
       answer:
-        'Minden Aquafarer terméket átfogó gyártói garancia biztosít. A felfújható csónakcső szövete, varratai és törzse 5 éves korlátozott garanciával rendelkezik;SUP a deszkák és kiegészítők 2 éves korlátozott garanciával rendelkeznek. A garancia fedezi az anyag- és kivitelezési hibákat normál használat során.',
+        'Minden Paddle Board Overstock terméket átfogó gyártói garancia biztosít. A felfújható csónakcső szövete, varratai és törzse 5 éves korlátozott garanciával rendelkezik;SUP a deszkák és kiegészítők 2 éves korlátozott garanciával rendelkeznek. A garancia fedezi az anyag- és kivitelezési hibákat normál használat során.',
       category: 'warranty',
       relatedProducts: [],
       relatedGuides: [],
@@ -1662,7 +1662,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'material-difference',
       question: 'Mi a különbség PVC és Hypalon között?',
       answer:
-        'PVC könnyebb, megfizethetőbb és könnyebben javítható — ideális rekreációs célokra.Hypalon (CSM) kiváló UV és vegyi ellenállást kínál, hosszabb élettartammal, előnyben részesítve kereskedelmi és katonai alkalmazásokban.Aquafarer Mindkettőt használja a termékkategóriától függően.',
+        'PVC könnyebb, megfizethetőbb és könnyebben javítható — ideális rekreációs célokra.Hypalon (CSM) kiváló UV és vegyi ellenállást kínál, hosszabb élettartammal, előnyben részesítve kereskedelmi és katonai alkalmazásokban.Paddle Board Overstock Mindkettőt használja a termékkategóriától függően.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -1671,7 +1671,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-width-stability',
       question: 'Melyik SUP szélesség a legjobb a stabilitáshoz?',
       answer:
-        'Kezdőknek a 33–34 hüvelyk szélesség a legjobb egyensúlyt nyújtja a stabilitás és az evezés könnyedsége között. A 32 hüvelyknél keskenyebb deszkák az új evezősöknek érződnek érződnek. Az Aquafarer SUP Explorer 11 33 hüvelyk hosszával ideális tanuláshoz.',
+        'Kezdőknek a 33–34 hüvelyk szélesség a legjobb egyensúlyt nyújtja a stabilitás és az evezés könnyedsége között. A 32 hüvelyknél keskenyebb deszkák az új evezősöknek érződnek érződnek. Az Paddle Board Overstock SUP Explorer 11 33 hüvelyk hosszával ideális tanuláshoz.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-size-guide', 'paddle-board-size-guide'],
@@ -1704,24 +1704,24 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       relatedGuides: ['inflatable-boat-buying-guide'],
     },
     {
-      id: 'aquafarer-vs-others',
-      question: 'Hogyan Aquafarer viszonyul más márkákhoz?',
+      id: 'paddleboardoverstock-vs-others',
+      question: 'Hogyan Paddle Board Overstock viszonyul más márkákhoz?',
       answer:
-        'a legjobb Aquafarer ár-érték arányt kínálja felfújható vízi sportfelszerelésekben. A Red Paddle Co-hoz képest a teljesítmény Aquafarer 90%-át nyújtja az ár 60%-ával. Az iRockerhez képest Aquafarer magasabb minőségű háromrétegű katonai PVC kategóriát és magasabb PSI minősítést használ. A Bluefinhez képest Aquafarer kiváló anyagi specifikációkat kínál. A legtöbb szabadidős evező számára ez Aquafarer a legjobb egyensúlyt nyújtja a minőség és az ár között.',
+        'a legjobb Paddle Board Overstock ár-érték arányt kínálja felfújható vízi sportfelszerelésekben. A Red Paddle Co-hoz képest a teljesítmény Paddle Board Overstock 90%-át nyújtja az ár 60%-ával. Az iRockerhez képest Paddle Board Overstock magasabb minőségű háromrétegű katonai PVC kategóriát és magasabb PSI minősítést használ. A Bluefinhez képest Paddle Board Overstock kiváló anyagi specifikációkat kínál. A legtöbb szabadidős evező számára ez Paddle Board Overstock a legjobb egyensúlyt nyújtja a minőség és az ár között.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: [
         'best-surf-gear-brands-compared',
-        'aquafarer-vs-red-paddle',
-        'aquafarer-vs-irocker',
-        'aquafarer-vs-bluefin',
+        'paddleboardoverstock-vs-red-paddle',
+        'paddleboardoverstock-vs-irocker',
+        'paddleboardoverstock-vs-bluefin',
       ],
     },
     {
       id: 'fishing-sup-setup',
       question: 'Horgászhatok SUP deszkáról?',
       answer:
-        'Igen.SUP A horgászat egyre népszerűbb, mert az álló pozíció kiváló kilátást biztosít a vízbe. Válassz legalább 11 láb hosszú és 33–34 hüvelyk széles deszkát a stabilitás érdekében. Adj hozzá egy tejládát, amelyhez bottartókat rögzítünk a fedélzeti bungee-khez, egy kis horgonyt, és mindig viselj PFD egy . Az Aquafarer SUP Explorer 11 jól működik laza horgászathoz.',
+        'Igen.SUP A horgászat egyre népszerűbb, mert az álló pozíció kiváló kilátást biztosít a vízbe. Válassz legalább 11 láb hosszú és 33–34 hüvelyk széles deszkát a stabilitás érdekében. Adj hozzá egy tejládát, amelyhez bottartókat rögzítünk a fedélzeti bungee-khez, egy kis horgonyt, és mindig viselj PFD egy . Az Paddle Board Overstock SUP Explorer 11 jól működik laza horgászathoz.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['fishing-sup-guide', 'sup-anchor-guide'],
@@ -1739,7 +1739,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'airline-travel-sup',
       question: 'Mik a légitársasági szabályok a felfújható géppel való SUP utazáshoz?',
       answer:
-        'A legtöbb légitársaság SUP elfogadja a hátizsákot feladott poggyászként, ha 23–32 kg alatt van. A Aquafarer hátizsák körülbelül 90x40x30 cm-es, és körülbelül 15 kg súlyú csomagolt állapotban. Néhány légitársaság túlméretezett poggyászdíjat is felszámolhat. Érkezzen korán, csomagolja be a fúszókat és pumpálja külön a kézipoggyászba, és címkézze a csomagot törékenynek. Mindig tájogasd a légitársaság sportfelszerelés szabályzatát repülés előtt.',
+        'A legtöbb légitársaság SUP elfogadja a hátizsákot feladott poggyászként, ha 23–32 kg alatt van. A Paddle Board Overstock hátizsák körülbelül 90x40x30 cm-es, és körülbelül 15 kg súlyú csomagolt állapotban. Néhány légitársaság túlméretezett poggyászdíjat is felszámolhat. Érkezzen korán, csomagolja be a fúszókat és pumpálja külön a kézipoggyászba, és címkézze a csomagot törékenynek. Mindig tájogasd a légitársaság sportfelszerelés szabályzatát repülés előtt.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-travel-guide'],
@@ -1764,7 +1764,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'oem-custom-branding',
-      question: 'Feltehetem a saját logómat Aquafarer a termékekre?',
+      question: 'Feltehetem a saját logómat Paddle Board Overstock a termékekre?',
       answer:
         'Igen. OEM Szolgáltatásunk magában foglalja az egyedi logóelhelyezést, egyedi színsémákat és egyedi csomagolást. Pad nyomtatást, hőátadást és hímzési lehetőségeket kínálunk a terméktípustól függően. Küldd el a műalkotásait és műszaki adataidat értékesítési csapatunknak árajánlatért és becslés esetén az előzményi időért.',
       category: 'ordering',
@@ -1775,7 +1775,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-inflate-pressure',
       question: 'Mire PSI fújjam fel a SUP dolgokat?',
       answer:
-        'Fújd fel a lap beszedett PSI maximumához a legjobb teljesítményért — általában 15–18 PSI a minőségi felfújható SUPs készülékeknél. Aquafarer SUP Az Explorer 11 a legjobban 15–18 fúvós PSI teljesítményt nyújt. Az alulfújás miatt az alaplap puhának érződik, és rosszul fut. A túlfújás a mért maxumon túl veszélyezteti a drop-stitch menetek károsodását. Ellenőrizd a szelep közelében lévő matricát a kártya konkrét besorolásáért.',
+        'Fújd fel a lap beszedett PSI maximumához a legjobb teljesítményért — általában 15–18 PSI a minőségi felfújható SUPs készülékeknél. Paddle Board Overstock SUP Az Explorer 11 a legjobban 15–18 fúvós PSI teljesítményt nyújt. Az alulfújás miatt az alaplap puhának érződik, és rosszul fut. A túlfújás a mért maxumon túl veszélyezteti a drop-stitch menetek károsodását. Ellenőrizd a szelep közelében lévő matricát a kártya konkrét besorolásáért.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-inflatable-sup', 'sup-pump-guide'],
@@ -1802,7 +1802,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-kayak-conversion',
       question: 'Használhatok SUP deszkát kajakként?',
       answer:
-        'Igen. Sok SUP deszkánál, köztük az Aquafarer Explorer 11-nél is, D-gyűrűk vannak, amelyek lehetővé teszik a kajakülés rögzítését. A SUP kajakülés és egy lapátos evező használata kényelmes ülőpozíciót biztosít hosszabb utazásokhoz vagy horgászathoz. Néhány márka dedikált kajak-átalakító készleteket kínál ülésekkel és hosszabb evezőkkel.',
+        'Igen. Sok SUP deszkánál, köztük az Paddle Board Overstock Explorer 11-nél is, D-gyűrűk vannak, amelyek lehetővé teszik a kajakülés rögzítését. A SUP kajakülés és egy lapátos evező használata kényelmes ülőpozíciót biztosít hosszabb utazásokhoz vagy horgászathoz. Néhány márka dedikált kajak-átalakító készleteket kínál ülésekkel és hosszabb evezőkkel.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['kayak-vs-sup'],
@@ -1827,9 +1827,9 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'company-model',
-      question: 'Aquafarer Kereskedelmi cég vagy gyártó?',
+      question: 'Paddle Board Overstock Kereskedelmi cég vagy gyártó?',
       answer:
-        'Sem tiszta gyár, sem kereskedelmi vállalat nem – Aquafarer az LLC márkacég, saját gyártóbázissal.Aquafarer LLC (Új-Mexikó, USA) globális elosztást, szerződéseket, számlázást és utáni értékesítést intézi, míg a Aquafarer Qingdao Manufacturing Hub a kutatás-fejlesztést, gyártást és minőségellenőrzést végzi saját, 12 000 m²-es üzemünkben. Nincsenek közvetítők: minden rendelést közvetlenül a gyárból szállítják.',
+        'Sem tiszta gyár, sem kereskedelmi vállalat nem – Paddle Board Overstock az LLC márkacég, saját gyártóbázissal.Weihai Dongjilian Co., Ltd. (Új-Mexikó, USA) globális elosztást, szerződéseket, számlázást és utáni értékesítést intézi, míg a Paddle Board Overstock Qingdao Manufacturing Hub a kutatás-fejlesztést, gyártást és minőségellenőrzést végzi saját, 12 000 m²-es üzemünkben. Nincsenek közvetítők: minden rendelést közvetlenül a gyárból szállítják.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -1838,7 +1838,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'us-contract-qingdao-shipping',
       question: 'Miért van az amerikai céggel kötött szerződésem, amikor az árukat Qingdaóból szállítják?',
       answer:
-        'Aquafarer Az LLC (Új-Mexikó, USA) a globális kereskedelmi szervezet, amely szerződéseket ír alá, számlákat bocsát ki és értékesítés utáni támogatást nyújt, míg a Qingdao Gyártási Központ minden megrendelést gyárt és szállít. FOB Ez a kétközpontos struktúra megtartja az amerikai szabványos szerződéseket és elszámolásokat, miközben megőrzi a gyári közvetlen árazást és a teljes gyártási átláthatóságot.',
+        'Paddle Board Overstock Az LLC (Új-Mexikó, USA) a globális kereskedelmi szervezet, amely szerződéseket ír alá, számlákat bocsát ki és értékesítés utáni támogatást nyújt, míg a Qingdao Gyártási Központ minden megrendelést gyárt és szállít. FOB Ez a kétközpontos struktúra megtartja az amerikai szabványos szerződéseket és elszámolásokat, miközben megőrzi a gyári közvetlen árazást és a teljes gyártási átláthatóságot.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -1858,7 +1858,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'ocean-use',
       question: 'Bisakah saya menggunakannya di laut?',
       answer:
-        'Ya.Aquafarer SUP Papan dibuat untuk penggunaan di laut, danau, dan sungai. Seri Touring kami menangani pemotongan pesisir, dan semua papan menggunakan kelas laut PVC yang tahan terhadap korosi air asin. Bilas dengan air tawar setelah digunakan di laut.',
+        'Ya.Paddle Board Overstock SUP Papan dibuat untuk penggunaan di laut, danau, dan sungai. Seri Touring kami menangani pemotongan pesisir, dan semua papan menggunakan kelas laut PVC yang tahan terhadap korosi air asin. Bilas dengan air tawar setelah digunakan di laut.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: ['weather-conditions'],
@@ -1876,7 +1876,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'travel-sup',
       question: 'Bisakah saya bepergian dengan alat tiup SUP?',
       answer:
-        'Tentu saja. Setiap Aquafarer papan dikemas ke dalam tas kecil seukuran ransel yang dirancang untuk memudahkan perjalanan — periksa kebijakan ukuran dan berat kandang Anda. Dengan berat hanya 18-22 lbs, mudah dibawa ke pantai, danau, atau melewati terminal bandara.',
+        'Tentu saja. Setiap Paddle Board Overstock papan dikemas ke dalam tas kecil seukuran ransel yang dirancang untuk memudahkan perjalanan — periksa kebijakan ukuran dan berat kandang Anda. Dengan berat hanya 18-22 lbs, mudah dibawa ke pantai, danau, atau melewati terminal bandara.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: [],
@@ -1894,7 +1894,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'box-contents',
       question: 'Apa yang ada di dalam kotak?',
       answer:
-        'Setiap Aquafarer SUP model dilengkapi dengan papan, ransel perjalanan, pompa tangan dual-action, sirip yang dapat dilepas, tali koil, dan kit perbaikan. Beberapa model juga menyertakan opsi upgrade dayung karbon. Perahu tiup meliputi perahu, pompa, kit perbaikan, dan dayung.',
+        'Setiap Paddle Board Overstock SUP model dilengkapi dengan papan, ransel perjalanan, pompa tangan dual-action, sirip yang dapat dilepas, tali koil, dan kit perbaikan. Beberapa model juga menyertakan opsi upgrade dayung karbon. Perahu tiup meliputi perahu, pompa, kit perbaikan, dan dayung.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -1930,7 +1930,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'puncture-repair',
       question: 'Bagaimana cara memperbaiki tusukan?',
       answer:
-        'Bersihkan area, potong bagian dengan sudut bulat, tempelkan PVC perekat, tekan dengan kuat, dan tunggu 24 jam sebelum mengembang.Aquafarer Papan sudah termasuk kit perbaikan. Untuk petunjuk rinci, lihat panduan perbaikan tiup kami.',
+        'Bersihkan area, potong bagian dengan sudut bulat, tempelkan PVC perekat, tekan dengan kuat, dan tunggu 24 jam sebelum mengembang.Paddle Board Overstock Papan sudah termasuk kit perbaikan. Untuk petunjuk rinci, lihat panduan perbaikan tiup kami.',
       category: 'maintenance',
       relatedProducts: [],
       relatedGuides: ['inflatable-repair', 'sup-maintenance'],
@@ -1964,9 +1964,9 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'warranty',
-      question: 'Apa Aquafarer itu garansi?',
+      question: 'Apa Paddle Board Overstock itu garansi?',
       answer:
-        'Semua Aquafarer produk didukung oleh garansi pabrikan yang komprehensif. Kain tabung perahu tiup, sambungan, dan lambung dijamin oleh garansi terbatas selama 5 tahun;SUP papan dan aksesori memiliki garansi terbatas selama 2 tahun. Garansi mencakup cacat pada bahan dan pengerjaan selama penggunaan normal.',
+        'Semua Paddle Board Overstock produk didukung oleh garansi pabrikan yang komprehensif. Kain tabung perahu tiup, sambungan, dan lambung dijamin oleh garansi terbatas selama 5 tahun;SUP papan dan aksesori memiliki garansi terbatas selama 2 tahun. Garansi mencakup cacat pada bahan dan pengerjaan selama penggunaan normal.',
       category: 'warranty',
       relatedProducts: [],
       relatedGuides: [],
@@ -2029,7 +2029,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'material-difference',
       question: 'Apa perbedaan PVC antara dan Hypalon?',
       answer:
-        'PVC lebih ringan, lebih terjangkau, dan lebih mudah diperbaiki — ideal untuk penggunaan rekreasi.Hypalon (CSM) menawarkan UV ketahanan superior dan kimia dengan masa pakai yang lebih lama, lebih disukai untuk aplikasi komersial dan militer.Aquafarer keduanya digunakan tergantung pada tingkat produk.',
+        'PVC lebih ringan, lebih terjangkau, dan lebih mudah diperbaiki — ideal untuk penggunaan rekreasi.Hypalon (CSM) menawarkan UV ketahanan superior dan kimia dengan masa pakai yang lebih lama, lebih disukai untuk aplikasi komersial dan militer.Paddle Board Overstock keduanya digunakan tergantung pada tingkat produk.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -2038,7 +2038,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-width-stability',
       question: 'Lebar berapa SUP yang terbaik untuk stabilitas?',
       answer:
-        'Untuk pemula, lebar 33–34 inci memberikan keseimbangan terbaik antara stabilitas dan kemudahan mendayung dayung. Papan yang lebih sempit dari 32 inci terasa tippy bagi pendayung baru. Aquafarer SUP Explorer 11 dengan panjang 33 inci sangat ideal untuk belajar.',
+        'Untuk pemula, lebar 33–34 inci memberikan keseimbangan terbaik antara stabilitas dan kemudahan mendayung dayung. Papan yang lebih sempit dari 32 inci terasa tippy bagi pendayung baru. Paddle Board Overstock SUP Explorer 11 dengan panjang 33 inci sangat ideal untuk belajar.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-size-guide', 'paddle-board-size-guide'],
@@ -2071,24 +2071,24 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       relatedGuides: ['inflatable-boat-buying-guide'],
     },
     {
-      id: 'aquafarer-vs-others',
-      question: 'Bagaimana Aquafarer perbandingannya dengan merek lain?',
+      id: 'paddleboardoverstock-vs-others',
+      question: 'Bagaimana Paddle Board Overstock perbandingannya dengan merek lain?',
       answer:
-        'Aquafarer Menawarkan nilai terbaik dalam perlengkapan olahraga air tiup. Dibandingkan dengan Red Paddle Co, Aquafarer memberikan 90% performa dengan biaya 60%. Dibandingkan iRocker, Aquafarer menggunakan kualitas militer tiga lapis yang lebih tinggi PVC dan rating lebih tinggi PSI . Dibandingkan Bluefin, Aquafarer menawarkan spesifikasi material yang lebih unggul. Untuk sebagian besar pendayung rekreasi, Aquafarer memberikan keseimbangan terbaik antara kualitas dan harga.',
+        'Paddle Board Overstock Menawarkan nilai terbaik dalam perlengkapan olahraga air tiup. Dibandingkan dengan Red Paddle Co, Paddle Board Overstock memberikan 90% performa dengan biaya 60%. Dibandingkan iRocker, Paddle Board Overstock menggunakan kualitas militer tiga lapis yang lebih tinggi PVC dan rating lebih tinggi PSI . Dibandingkan Bluefin, Paddle Board Overstock menawarkan spesifikasi material yang lebih unggul. Untuk sebagian besar pendayung rekreasi, Paddle Board Overstock memberikan keseimbangan terbaik antara kualitas dan harga.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: [
         'best-surf-gear-brands-compared',
-        'aquafarer-vs-red-paddle',
-        'aquafarer-vs-irocker',
-        'aquafarer-vs-bluefin',
+        'paddleboardoverstock-vs-red-paddle',
+        'paddleboardoverstock-vs-irocker',
+        'paddleboardoverstock-vs-bluefin',
       ],
     },
     {
       id: 'fishing-sup-setup',
       question: 'Bisakah saya memancing dari SUP papan?',
       answer:
-        'Ya.SUP Memancing semakin populer karena posisi berdiri menawarkan visibilitas air yang sangat baik. Pilih papan yang setidaknya sepanjang 11 kaki dan lebar 33–34 inci untuk stabilitas. Tambahkan peti susu dengan tempat joran yang dipasang pada bungee dek, jangkar kecil, dan selalu kenakan PFD. Aquafarer SUP Explorer 11 sangat cocok untuk memancing santai.',
+        'Ya.SUP Memancing semakin populer karena posisi berdiri menawarkan visibilitas air yang sangat baik. Pilih papan yang setidaknya sepanjang 11 kaki dan lebar 33–34 inci untuk stabilitas. Tambahkan peti susu dengan tempat joran yang dipasang pada bungee dek, jangkar kecil, dan selalu kenakan PFD. Paddle Board Overstock SUP Explorer 11 sangat cocok untuk memancing santai.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['fishing-sup-guide', 'sup-anchor-guide'],
@@ -2106,7 +2106,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'airline-travel-sup',
       question: 'Apa aturan maskapai untuk bepergian dengan mobil tiup SUP?',
       answer:
-        'Sebagian besar maskapai menerima SUP ransel sebagai bagasi terdaftar jika beratnya kurang dari 23–32 kg. Aquafarer Ransel ini berukuran sekitar 90x40x30 cm dan beratnya sekitar 15 kg saat dikemas. Beberapa maskapai mungkin mengenakan biaya bagasi berukuran besar. Tiba lebih awal, bungkus sirip dan pompa secara terpisah di dalam tas kabin, dan labeli tas sebagai rapuh. Selalu teliti kebijakan perlengkapan olahraga maskapai Anda sebelum terbang.',
+        'Sebagian besar maskapai menerima SUP ransel sebagai bagasi terdaftar jika beratnya kurang dari 23–32 kg. Paddle Board Overstock Ransel ini berukuran sekitar 90x40x30 cm dan beratnya sekitar 15 kg saat dikemas. Beberapa maskapai mungkin mengenakan biaya bagasi berukuran besar. Tiba lebih awal, bungkus sirip dan pompa secara terpisah di dalam tas kabin, dan labeli tas sebagai rapuh. Selalu teliti kebijakan perlengkapan olahraga maskapai Anda sebelum terbang.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-travel-guide'],
@@ -2131,7 +2131,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'oem-custom-branding',
-      question: 'Bisakah saya menempelkan logo saya sendiri pada Aquafarer produk?',
+      question: 'Bisakah saya menempelkan logo saya sendiri pada Paddle Board Overstock produk?',
       answer:
         'Ya. OEM Layanan kami mencakup penempatan logo khusus, skema warna khusus, dan kemasan khusus. Kami menawarkan pilihan padprinting, heat transfer, dan bordir tergantung pada jenis produk. Kirimkan karya seni dan spesifikasi Anda ke tim penjualan kami untuk mendapatkan penawaran dan estimasi waktu pengerjaan.',
       category: 'ordering',
@@ -2142,7 +2142,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-inflate-pressure',
       question: 'Ke mana PSI saya harus mengembang SUP ?',
       answer:
-        'Tiup ke maksimum yang dinilai papan PSI untuk performa terbaik — biasanya 15–18 PSI untuk inflatable berkualitas SUPs. Aquafarer SUP Explorer 11 berkinerja terbaik pada 15–18 PSI. Inflasi kurang membuat papan terasa lunak dan tidak mudah bergerak. Inflasi berlebihan melewati batas maksimum yang dinilai berisiko merusak drop-stitch ulir. Periksa stiker di dekat katup untuk mendapatkan rating spesifik papan Anda.',
+        'Tiup ke maksimum yang dinilai papan PSI untuk performa terbaik — biasanya 15–18 PSI untuk inflatable berkualitas SUPs. Paddle Board Overstock SUP Explorer 11 berkinerja terbaik pada 15–18 PSI. Inflasi kurang membuat papan terasa lunak dan tidak mudah bergerak. Inflasi berlebihan melewati batas maksimum yang dinilai berisiko merusak drop-stitch ulir. Periksa stiker di dekat katup untuk mendapatkan rating spesifik papan Anda.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-inflatable-sup', 'sup-pump-guide'],
@@ -2169,7 +2169,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-kayak-conversion',
       question: 'Bisakah saya menggunakan papan SUP sebagai kayak?',
       answer:
-        'Ya. Banyak papan SUP, termasuk Aquafarer Explorer 11, memiliki cincin-D yang memungkinkan pemasangan kursi kayak. Menggunakan SUP dengan kursi kayak dan dayung satu bilah menawarkan posisi duduk yang nyaman untuk perjalanan yang lebih panjang atau memancing. Beberapa merek menawarkan kit konversi kayak khusus dengan kursi dan dayung yang lebih panjang.',
+        'Ya. Banyak papan SUP, termasuk Paddle Board Overstock Explorer 11, memiliki cincin-D yang memungkinkan pemasangan kursi kayak. Menggunakan SUP dengan kursi kayak dan dayung satu bilah menawarkan posisi duduk yang nyaman untuk perjalanan yang lebih panjang atau memancing. Beberapa merek menawarkan kit konversi kayak khusus dengan kursi dan dayung yang lebih panjang.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['kayak-vs-sup'],
@@ -2194,9 +2194,9 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'company-model',
-      question: 'Aquafarer apakah perusahaan perdagangan atau produsen?',
+      question: 'Paddle Board Overstock apakah perusahaan perdagangan atau produsen?',
       answer:
-        'Bukan murni pabrik maupun perusahaan dagang — Aquafarer LLC adalah perusahaan merek dengan basis manufaktur sendiri. Aquafarer LLC (New Mexico, AS) menangani distribusi global, kontrak, penagihan, dan layanan purna jual, sementara Aquafarer Qingdao Manufacturing Hub menjalankan R&D, produksi, dan kontrol kualitas di fasilitas kami sendiri seluas 12.000 m². Tanpa perantara: setiap pesanan dikirim langsung dari pabrik.',
+        'Bukan murni pabrik maupun perusahaan dagang — Weihai Dongjilian Co., Ltd. adalah perusahaan merek dengan basis manufaktur sendiri. Weihai Dongjilian Co., Ltd. (New Mexico, AS) menangani distribusi global, kontrak, penagihan, dan layanan purna jual, sementara Paddle Board Overstock Qingdao Manufacturing Hub menjalankan R&D, produksi, dan kontrol kualitas di fasilitas kami sendiri seluas 12.000 m². Tanpa perantara: setiap pesanan dikirim langsung dari pabrik.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -2205,7 +2205,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'us-contract-qingdao-shipping',
       question: 'Mengapa kontrak saya dengan perusahaan AS ketika barang dikirim dari Qingdao?',
       answer:
-        'Aquafarer LLC (New Mexico, AS) adalah entitas komersial global yang menandatangani kontrak, mengeluarkan faktur, dan memberikan dukungan purna jual, sementara Pusat Manufaktur Qingdao memproduksi dan mengirim setiap pesanan FOB Qingdao. Struktur dua pusat ini mempertahankan kontrak dan penyelesaian dengan standar AS, sambil menjaga harga langsung dari pabrik dan transparansi produksi penuh.',
+        'Weihai Dongjilian Co., Ltd. (New Mexico, AS) adalah entitas komersial global yang menandatangani kontrak, mengeluarkan faktur, dan memberikan dukungan purna jual, sementara Pusat Manufaktur Qingdao memproduksi dan mengirim setiap pesanan FOB Qingdao. Struktur dua pusat ini mempertahankan kontrak dan penyelesaian dengan standar AS, sambil menjaga harga langsung dari pabrik dan transparansi produksi penuh.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -2225,7 +2225,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'ocean-use',
       question: '바다에서 사용할 수 있나요?',
       answer:
-        '네.Aquafarer SUP 보드는 바다, 호수, 강 사용을 위해 만들어졌습니다. 저희 투어링 시리즈는 해안 파도 작업을 담당하며, 모든 보드는 PVC 해양 등급으로 해수 부식에 강합니다. 바다 사용 후에는 담수로 세척하세요.',
+        '네.Paddle Board Overstock SUP 보드는 바다, 호수, 강 사용을 위해 만들어졌습니다. 저희 투어링 시리즈는 해안 파도 작업을 담당하며, 모든 보드는 PVC 해양 등급으로 해수 부식에 강합니다. 바다 사용 후에는 담수로 세척하세요.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: ['weather-conditions'],
@@ -2243,7 +2243,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'travel-sup',
       question: '인플레이터블을 가지고 여행할 수 있나요 SUP?',
       answer:
-        '물론입니다. 모든 Aquafarer 보드는 편리하게 여행할 수 있도록 배낭 크기의 캐리어에 담겨 있습니다 — 캐리어 사이즈와 무게 정책을 꼭 확인하세요. 무게가 18-22파운드에 불과해 해변, 호수, 공항 터미널 등으로 쉽게 들고 다닐 수 있습니다.',
+        '물론입니다. 모든 Paddle Board Overstock 보드는 편리하게 여행할 수 있도록 배낭 크기의 캐리어에 담겨 있습니다 — 캐리어 사이즈와 무게 정책을 꼭 확인하세요. 무게가 18-22파운드에 불과해 해변, 호수, 공항 터미널 등으로 쉽게 들고 다닐 수 있습니다.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: [],
@@ -2261,7 +2261,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'box-contents',
       question: '상자 안에 뭐가 들어있어?',
       answer:
-        '모든 모델 Aquafarer SUP 에는 보드, 여행용 백팩, 듀얼 액션 핸드 펌프, 탈착식 핀, 코일 리쉬, 수리 키트가 포함되어 있습니다. 일부 모델은 카본 패들 업그레이드 옵션도 포함되어 있습니다. 팽창식 보트에는 보트, 펌프, 수리 키트, 노가 포함되어 있습니다.',
+        '모든 모델 Paddle Board Overstock SUP 에는 보드, 여행용 백팩, 듀얼 액션 핸드 펌프, 탈착식 핀, 코일 리쉬, 수리 키트가 포함되어 있습니다. 일부 모델은 카본 패들 업그레이드 옵션도 포함되어 있습니다. 팽창식 보트에는 보트, 펌프, 수리 키트, 노가 포함되어 있습니다.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -2297,7 +2297,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'puncture-repair',
       question: '펑크 난 부분은 어떻게 수리하나요?',
       answer:
-        '부위를 청소하고, 둥근 모서리가 있는 패치를 자르고, 접착제를 바른 PVC 뒤 단단히 눌러서 24시간 기다렸다가 부풀립니다.Aquafarer 보드에는 수리 키트가 포함되어 있습니다. 자세한 방법은 저희 팽창식 수리 가이드를 참고하세요.',
+        '부위를 청소하고, 둥근 모서리가 있는 패치를 자르고, 접착제를 바른 PVC 뒤 단단히 눌러서 24시간 기다렸다가 부풀립니다.Paddle Board Overstock 보드에는 수리 키트가 포함되어 있습니다. 자세한 방법은 저희 팽창식 수리 가이드를 참고하세요.',
       category: 'maintenance',
       relatedProducts: [],
       relatedGuides: ['inflatable-repair', 'sup-maintenance'],
@@ -2331,9 +2331,9 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'warranty',
-      question: '보증 기간이 어떻게 Aquafarer 되나요?',
+      question: '보증 기간이 어떻게 Paddle Board Overstock 되나요?',
       answer:
-        '모든 Aquafarer 제품은 포괄적인 제조사 보증이 제공됩니다. 인플레이터블 튜브 보트의 원단, 솔기, 선체는 5년 제한 보증이 적용되며;SUP 보드 및 액세서리는 2년 제한 보증이 적용됩니다. 보증은 일반 사용 시 재료 및 시공 결함도 보장합니다.',
+        '모든 Paddle Board Overstock 제품은 포괄적인 제조사 보증이 제공됩니다. 인플레이터블 튜브 보트의 원단, 솔기, 선체는 5년 제한 보증이 적용되며;SUP 보드 및 액세서리는 2년 제한 보증이 적용됩니다. 보증은 일반 사용 시 재료 및 시공 결함도 보장합니다.',
       category: 'warranty',
       relatedProducts: [],
       relatedGuides: [],
@@ -2396,7 +2396,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'material-difference',
       question: '와 의 차이가 무엇인가요 PVC Hypalon?',
       answer:
-        'PVC 더 가볍고, 저렴하며, 수리가 용이하여 레크리에이션 용도에 이상적입니다.Hypalon (CSM) 제품은 우수한 UV 화학적 저항성을 제공하며 수명이 길어 상업 및 군사 용도에 선호됩니다.Aquafarer 제품 등급에 따라 두 가지 모두 사용됩니다.',
+        'PVC 더 가볍고, 저렴하며, 수리가 용이하여 레크리에이션 용도에 이상적입니다.Hypalon (CSM) 제품은 우수한 UV 화학적 저항성을 제공하며 수명이 길어 상업 및 군사 용도에 선호됩니다.Paddle Board Overstock 제품 등급에 따라 두 가지 모두 사용됩니다.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -2405,7 +2405,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-width-stability',
       question: 'SUP 안정성을 위해 가장 좋은 폭은 무엇인가요?',
       answer:
-        '초보자에게는 33–34인치 폭이 안정성과 패들링의 용이함의 균형을 이룹니다. 32인치보다 좁은 보드는 초보자에게 약간 넘어지는 느낌을 줍니다. Aquafarer SUP 익스플로러 11은 33인치 길이로 학습하기에 이상적입니다.',
+        '초보자에게는 33–34인치 폭이 안정성과 패들링의 용이함의 균형을 이룹니다. 32인치보다 좁은 보드는 초보자에게 약간 넘어지는 느낌을 줍니다. Paddle Board Overstock SUP 익스플로러 11은 33인치 길이로 학습하기에 이상적입니다.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-size-guide', 'paddle-board-size-guide'],
@@ -2438,24 +2438,24 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       relatedGuides: ['inflatable-boat-buying-guide'],
     },
     {
-      id: 'aquafarer-vs-others',
-      question: 'Aquafarer 다른 브랜드와 비교하면 어떤가요?',
+      id: 'paddleboardoverstock-vs-others',
+      question: 'Paddle Board Overstock 다른 브랜드와 비교하면 어떤가요?',
       answer:
-        'Aquafarer 인플레이션 수상 스포츠 장비 중 최고의 가성비를 제공합니다. 레드 패들 컴퍼니와 비교했을 때, Aquafarer 90%의 성능을 60%의 비용으로 제공합니다. 아이로커와 비교했을 때, 더 Aquafarer 높은 등급의 삼중 군용 등급 및 등급을 사용합니다 PVC PSI . 블루핀과 비교했을 때 Aquafarer 우수한 소재 사양을 제공합니다. 대부분의 레크리에이션 패들러에게 품질 Aquafarer 과 가격 균형이 가장 좋습니다.',
+        'Paddle Board Overstock 인플레이션 수상 스포츠 장비 중 최고의 가성비를 제공합니다. 레드 패들 컴퍼니와 비교했을 때, Paddle Board Overstock 90%의 성능을 60%의 비용으로 제공합니다. 아이로커와 비교했을 때, 더 Paddle Board Overstock 높은 등급의 삼중 군용 등급 및 등급을 사용합니다 PVC PSI . 블루핀과 비교했을 때 Paddle Board Overstock 우수한 소재 사양을 제공합니다. 대부분의 레크리에이션 패들러에게 품질 Paddle Board Overstock 과 가격 균형이 가장 좋습니다.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: [
         'best-surf-gear-brands-compared',
-        'aquafarer-vs-red-paddle',
-        'aquafarer-vs-irocker',
-        'aquafarer-vs-bluefin',
+        'paddleboardoverstock-vs-red-paddle',
+        'paddleboardoverstock-vs-irocker',
+        'paddleboardoverstock-vs-bluefin',
       ],
     },
     {
       id: 'fishing-sup-setup',
       question: '보드에서 낚시할 수 SUP 있나요?',
       answer:
-        '네.SUP 낚시는 서서 있는 자세가 물속을 잘 볼 수 있어 점점 인기를 얻고 있습니다. 안정성을 위해 최소 11피트 길이와 33–34인치 너비의 보드를 선택하세요. 낚싯대 홀더가 달린 우유 상자와 작은 닻을 덱 번지에 고정하고, 항상 착용하세요 PFD. Aquafarer SUP 익스플로러 11은 캐주얼 낚시에 적합합니다.',
+        '네.SUP 낚시는 서서 있는 자세가 물속을 잘 볼 수 있어 점점 인기를 얻고 있습니다. 안정성을 위해 최소 11피트 길이와 33–34인치 너비의 보드를 선택하세요. 낚싯대 홀더가 달린 우유 상자와 작은 닻을 덱 번지에 고정하고, 항상 착용하세요 PFD. Paddle Board Overstock SUP 익스플로러 11은 캐주얼 낚시에 적합합니다.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['fishing-sup-guide', 'sup-anchor-guide'],
@@ -2473,7 +2473,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'airline-travel-sup',
       question: '에어버스 여행에 대한 항공사 규정은 무엇인가요 SUP?',
       answer:
-        "대부분의 항공사는 SUP 23–32kg 미만의 백팩을 위탁 수하물로 받습니다. Aquafarer 배낭 크기는 약 90x40x30cm이고, 포장 시 무게는 약 15kg입니다. 일부 항공사는 초과 수하물 요금을 부과할 수 있습니다. 일찍 도착하고, 핀과 펌프를 따로 기내 반입 가방에 넣고, 가방에 '깨지기 쉬움'으로 라벨을 붙이세요. 비행 전에 항공사의 스포츠 장비 정책을 반드시 조사하세요.",
+        "대부분의 항공사는 SUP 23–32kg 미만의 백팩을 위탁 수하물로 받습니다. Paddle Board Overstock 배낭 크기는 약 90x40x30cm이고, 포장 시 무게는 약 15kg입니다. 일부 항공사는 초과 수하물 요금을 부과할 수 있습니다. 일찍 도착하고, 핀과 펌프를 따로 기내 반입 가방에 넣고, 가방에 '깨지기 쉬움'으로 라벨을 붙이세요. 비행 전에 항공사의 스포츠 장비 정책을 반드시 조사하세요.",
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-travel-guide'],
@@ -2498,7 +2498,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'oem-custom-branding',
-      question: '제품에 제 로고를 달아도 되나요 Aquafarer ?',
+      question: '제품에 제 로고를 달아도 되나요 Paddle Board Overstock ?',
       answer:
         '네. 저희 OEM 서비스에는 맞춤형 로고 배치, 맞춤형 색상 구성, 맞춤형 포장 서비스가 포함되어 있습니다. 제품 유형에 따라 패드 프린팅, 열전사, 자수 옵션을 제공합니다. 작품과 사양을 영업팀에 보내 견적과 리드 타임 견적을 받으시면 됩니다.',
       category: 'ordering',
@@ -2509,7 +2509,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-inflate-pressure',
       question: '얼마나 PSI 부풀어야 할 SUP 까요?',
       answer:
-        '최상의 성능을 위해서는 보드의 정격 최대 부풀림 — 보통 15–18 정도로 부풀리세요 PSI PSI . 익 SUPs  Aquafarer SUP 스플로러 11은 15–18에서 가장 좋은 성능을 냅니다 PSI. 부풀림이 적으면 보드가 부드럽고 트래킹이 잘 안 됩니다. 정격 최대 부풀림을 초과하면 나사산이 손상될 위험 drop-stitch 이 있습니다. 밸브 근처 스티커에 보드의 구체적인 등급을 확인하세요.',
+        '최상의 성능을 위해서는 보드의 정격 최대 부풀림 — 보통 15–18 정도로 부풀리세요 PSI PSI . 익 SUPs  Paddle Board Overstock SUP 스플로러 11은 15–18에서 가장 좋은 성능을 냅니다 PSI. 부풀림이 적으면 보드가 부드럽고 트래킹이 잘 안 됩니다. 정격 최대 부풀림을 초과하면 나사산이 손상될 위험 drop-stitch 이 있습니다. 밸브 근처 스티커에 보드의 구체적인 등급을 확인하세요.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-inflatable-sup', 'sup-pump-guide'],
@@ -2536,7 +2536,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-kayak-conversion',
       question: '제가 SUP 보드를 카약처럼 사용할 수 있을까요?',
       answer:
-        '네. Aquafarer Explorer 11을 포함한 많은 SUP 보드에는 카약 시트를 부착할 수 있는 D-링이 있습니다. 카약 시트와 단일 날 노를 사용하는 SUP 를 이용하면 장거리 여행이나 낚시를 위해 편안한 좌식 자세를 제공할 수 있습니다. 일부 브랜드에서는 시트와 긴 노를 포함한 전용 카약 전환 키트를 제공합니다.',
+        '네. Paddle Board Overstock Explorer 11을 포함한 많은 SUP 보드에는 카약 시트를 부착할 수 있는 D-링이 있습니다. 카약 시트와 단일 날 노를 사용하는 SUP 를 이용하면 장거리 여행이나 낚시를 위해 편안한 좌식 자세를 제공할 수 있습니다. 일부 브랜드에서는 시트와 긴 노를 포함한 전용 카약 전환 키트를 제공합니다.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['kayak-vs-sup'],
@@ -2561,9 +2561,9 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'company-model',
-      question: 'Aquafarer 는 무역 회사입니까, 아니면 제조업체입니까?',
+      question: 'Paddle Board Overstock 는 무역 회사입니까, 아니면 제조업체입니까?',
       answer:
-        '순수한 공장도 아니고 무역 회사도 아닌 — Aquafarer LLC는 자체 제조 기반을 가진 브랜드 회사입니다. Aquafarer LLC(미국 뉴멕시코)는 글로벌 유통, 계약, 청구 및 애프터서비스를 담당하며, Aquafarer 칭다오 제조 허브는 자체 12,000 m² 시설에서 연구개발, 생산, 품질 관리를 수행합니다. 중개인 없이 모든 주문은 공장에서 직접 배송됩니다.',
+        '순수한 공장도 아니고 무역 회사도 아닌 — Weihai Dongjilian Co., Ltd.는 자체 제조 기반을 가진 브랜드 회사입니다. Weihai Dongjilian Co., Ltd.(미국 뉴멕시코)는 글로벌 유통, 계약, 청구 및 애프터서비스를 담당하며, Paddle Board Overstock 칭다오 제조 허브는 자체 12,000 m² 시설에서 연구개발, 생산, 품질 관리를 수행합니다. 중개인 없이 모든 주문은 공장에서 직접 배송됩니다.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -2572,7 +2572,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'us-contract-qingdao-shipping',
       question: '왜 물품이 칭다오에서 배송되는데 제 계약은 미국 회사와 한 건인가요?',
       answer:
-        'Aquafarer LLC(미국 뉴멕시코)는 계약을 체결하고, 송장을 발행하며, 판매 후 지원을 제공하는 글로벌 상업 법인이며, 청도 제조 허브는 모든 주문을 생산하고 FOB 청도에서 발송합니다. 이 이중 허브 구조는 미국 표준 계약 및 결제를 유지하면서 공장 직송 가격과 완전한 생산 투명성을 보장합니다.',
+        'Weihai Dongjilian Co., Ltd.(미국 뉴멕시코)는 계약을 체결하고, 송장을 발행하며, 판매 후 지원을 제공하는 글로벌 상업 법인이며, 청도 제조 허브는 모든 주문을 생산하고 FOB 청도에서 발송합니다. 이 이중 허브 구조는 미국 표준 계약 및 결제를 유지하면서 공장 직송 가격과 완전한 생산 투명성을 보장합니다.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -2592,7 +2592,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'ocean-use',
       question: 'Ar galiu jį naudoti vandenyne?',
       answer:
-        'Taip. Aquafarer SUP Lentos skirtos vandenynų, ežerų ir upių naudojimui. Mūsų Touring serija tvarko pakrantės bangavimą, o visos lentos pagamintos iš jūrinės kokybės PVC , atsparios sūraus vandens korozijai. Po naudojimo vandenyne skalaukite gėlu vandeniu.',
+        'Taip. Paddle Board Overstock SUP Lentos skirtos vandenynų, ežerų ir upių naudojimui. Mūsų Touring serija tvarko pakrantės bangavimą, o visos lentos pagamintos iš jūrinės kokybės PVC , atsparios sūraus vandens korozijai. Po naudojimo vandenyne skalaukite gėlu vandeniu.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: ['weather-conditions'],
@@ -2610,7 +2610,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'travel-sup',
       question: 'Ar galiu keliauti su pripučiamu daiktu SUP?',
       answer:
-        'Tikrai taip. Kiekviena Aquafarer lenta supakuojama į kuprinės dydžio dėklą, skirtą patogiam keliavimui – pasitikrinkite savo vežėjo dydį ir svorio taisykles. Vos 18–22 svarų svorį lengva nešti iki paplūdimio, ežero ar oro uostų terminalų.',
+        'Tikrai taip. Kiekviena Paddle Board Overstock lenta supakuojama į kuprinės dydžio dėklą, skirtą patogiam keliavimui – pasitikrinkite savo vežėjo dydį ir svorio taisykles. Vos 18–22 svarų svorį lengva nešti iki paplūdimio, ežero ar oro uostų terminalų.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: [],
@@ -2628,7 +2628,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'box-contents',
       question: 'Kas yra dėžutėje?',
       answer:
-        'Kiekviename Aquafarer SUP komplekte yra lenta, kelioninė kuprinė, dvigubo veikimo rankinis siurblys, nuimamas pelekas, ritės pavadėlis ir remonto rinkinys. Kai kurie modeliai taip pat turi anglies pluošto irklų atnaujinimo parinktį. Pripučiamos valtys apima valtį, siurblį, remonto rinkinį ir irklus.',
+        'Kiekviename Paddle Board Overstock SUP komplekte yra lenta, kelioninė kuprinė, dvigubo veikimo rankinis siurblys, nuimamas pelekas, ritės pavadėlis ir remonto rinkinys. Kai kurie modeliai taip pat turi anglies pluošto irklų atnaujinimo parinktį. Pripučiamos valtys apima valtį, siurblį, remonto rinkinį ir irklus.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -2664,7 +2664,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'puncture-repair',
       question: 'Kaip pataisyti pradūrimą?',
       answer:
-        'Išvalykite vietą, iškirpkite pleistrą suapvalintais kampais, užtepkite PVC klijų, tvirtai paspauskite ir palaukite 24 valandas prieš pripūsdami.Aquafarer Lentos turi remonto rinkinį. Išsamias instrukcijas rasite mūsų pripučiamų daiktų taisymo vadove.',
+        'Išvalykite vietą, iškirpkite pleistrą suapvalintais kampais, užtepkite PVC klijų, tvirtai paspauskite ir palaukite 24 valandas prieš pripūsdami.Paddle Board Overstock Lentos turi remonto rinkinį. Išsamias instrukcijas rasite mūsų pripučiamų daiktų taisymo vadove.',
       category: 'maintenance',
       relatedProducts: [],
       relatedGuides: ['inflatable-repair', 'sup-maintenance'],
@@ -2698,9 +2698,9 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'warranty',
-      question: 'Kokia yra Aquafarer garantija?',
+      question: 'Kokia yra Paddle Board Overstock garantija?',
       answer:
-        'Visi Aquafarer produktai turi išsamią gamintojo garantiją. Pripučiamų valčių vamzdžių audinys, siūlės ir korpusas yra apdrausti 5 metų ribota garantija;SUP plokštės ir priedai turi 2 metų ribotą garantiją. Garantija apima medžiagų ir gamybos defektus įprasto naudojimo metu.',
+        'Visi Paddle Board Overstock produktai turi išsamią gamintojo garantiją. Pripučiamų valčių vamzdžių audinys, siūlės ir korpusas yra apdrausti 5 metų ribota garantija;SUP plokštės ir priedai turi 2 metų ribotą garantiją. Garantija apima medžiagų ir gamybos defektus įprasto naudojimo metu.',
       category: 'warranty',
       relatedProducts: [],
       relatedGuides: [],
@@ -2763,7 +2763,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'material-difference',
       question: 'Kuo skiriasi PVC ir Hypalon?',
       answer:
-        'PVC yra lengvesnis, prieinamesnis ir lengviau remontuojamas – idealus rekreaciniam naudojimui.Hypalon (CSM) pasižymi išskirtiniu UV atsparumu cheminėms medžiagoms ir ilgesniu tarnavimo laiku, pageidautinas tiek komercinėms, tiek karinėms reikmėms.Aquafarer Abu panaudojimai priklauso nuo produkto lygio.',
+        'PVC yra lengvesnis, prieinamesnis ir lengviau remontuojamas – idealus rekreaciniam naudojimui.Hypalon (CSM) pasižymi išskirtiniu UV atsparumu cheminėms medžiagoms ir ilgesniu tarnavimo laiku, pageidautinas tiek komercinėms, tiek karinėms reikmėms.Paddle Board Overstock Abu panaudojimai priklauso nuo produkto lygio.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -2772,7 +2772,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-width-stability',
       question: 'Koks SUP plotis yra geriausias stabilumui?',
       answer:
-        'Pradedantiesiems 33–34 colių plotis užtikrina geriausią stabilumo ir lengvo irklavimo balansą. Lentos, siauresnės nei 32 coliai, naujiems irkluotojams atrodo lengvos. Aquafarer SUP Explorer 11, 33 colių ilgio, yra idealus mokymuisi.',
+        'Pradedantiesiems 33–34 colių plotis užtikrina geriausią stabilumo ir lengvo irklavimo balansą. Lentos, siauresnės nei 32 coliai, naujiems irkluotojams atrodo lengvos. Paddle Board Overstock SUP Explorer 11, 33 colių ilgio, yra idealus mokymuisi.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-size-guide', 'paddle-board-size-guide'],
@@ -2805,24 +2805,24 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       relatedGuides: ['inflatable-boat-buying-guide'],
     },
     {
-      id: 'aquafarer-vs-others',
-      question: 'Kaip jis Aquafarer lyginamas su kitais prekių ženklais?',
+      id: 'paddleboardoverstock-vs-others',
+      question: 'Kaip jis Paddle Board Overstock lyginamas su kitais prekių ženklais?',
       answer:
-        'Aquafarer siūlo geriausią vertę pripučiamoje vandens sporto aprangoje. Palyginti su Red Paddle Co, Aquafarer ji užtikrina 90% našumo už 60% kainos. Lyginant su iRocker, Aquafarer naudoja aukštesnės klasės trigubą karinį PVC sluoksnį ir aukštesnius PSI reitingus. Lyginant su Bluefin, Aquafarer siūlo geresnes medžiagų specifikacijas. Daugumai mėgėjų tai Aquafarer geriausias kokybės ir kainos balansas.',
+        'Paddle Board Overstock siūlo geriausią vertę pripučiamoje vandens sporto aprangoje. Palyginti su Red Paddle Co, Paddle Board Overstock ji užtikrina 90% našumo už 60% kainos. Lyginant su iRocker, Paddle Board Overstock naudoja aukštesnės klasės trigubą karinį PVC sluoksnį ir aukštesnius PSI reitingus. Lyginant su Bluefin, Paddle Board Overstock siūlo geresnes medžiagų specifikacijas. Daugumai mėgėjų tai Paddle Board Overstock geriausias kokybės ir kainos balansas.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: [
         'best-surf-gear-brands-compared',
-        'aquafarer-vs-red-paddle',
-        'aquafarer-vs-irocker',
-        'aquafarer-vs-bluefin',
+        'paddleboardoverstock-vs-red-paddle',
+        'paddleboardoverstock-vs-irocker',
+        'paddleboardoverstock-vs-bluefin',
       ],
     },
     {
       id: 'fishing-sup-setup',
       question: 'Ar galiu žvejoti nuo SUP lentos?',
       answer:
-        'Taip. SUP Žvejyba tampa vis populiaresnė, nes stovint suteikiama puiki matomumas į vandenį. Rinkitės lentą, kuri būtų bent 11 pėdų ilgio ir 33–34 colių pločio stabilumui. Pridėkite pieno dėžę su meškerių laikikliais, pritvirtintais prie denio gumų, mažą inkarą ir visada nešiokite PFD. Aquafarer SUP Explorer 11 puikiai tinka atsitiktinei žvejybai.',
+        'Taip. SUP Žvejyba tampa vis populiaresnė, nes stovint suteikiama puiki matomumas į vandenį. Rinkitės lentą, kuri būtų bent 11 pėdų ilgio ir 33–34 colių pločio stabilumui. Pridėkite pieno dėžę su meškerių laikikliais, pritvirtintais prie denio gumų, mažą inkarą ir visada nešiokite PFD. Paddle Board Overstock SUP Explorer 11 puikiai tinka atsitiktinei žvejybai.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['fishing-sup-guide', 'sup-anchor-guide'],
@@ -2840,7 +2840,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'airline-travel-sup',
       question: 'Kokios yra oro linijų taisyklės keliaujant su pripučiamu lėktuvu SUP?',
       answer:
-        'Dauguma oro linijų priima SUP kuprines kaip registruotą bagažą, jei svoris mažesnis nei 23–32 kg. Aquafarer Kuprinė yra maždaug 90x40x30 cm dydžio ir sveria apie 15 kg supakuota. Kai kurios oro linijos gali imti didelius bagažo mokesčius. Atvykite anksti, suvyniokite pelekus ir pumpuokite atskirai rankiniame bagaže ir pažymėkite lagaminą kaip trapų. Visada prieš skrydį pasidomėkite savo oro linijų sporto įrangos politika.',
+        'Dauguma oro linijų priima SUP kuprines kaip registruotą bagažą, jei svoris mažesnis nei 23–32 kg. Paddle Board Overstock Kuprinė yra maždaug 90x40x30 cm dydžio ir sveria apie 15 kg supakuota. Kai kurios oro linijos gali imti didelius bagažo mokesčius. Atvykite anksti, suvyniokite pelekus ir pumpuokite atskirai rankiniame bagaže ir pažymėkite lagaminą kaip trapų. Visada prieš skrydį pasidomėkite savo oro linijų sporto įrangos politika.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-travel-guide'],
@@ -2865,7 +2865,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'oem-custom-branding',
-      question: 'Ar galiu ant produktų uždėti savo logotipą Aquafarer ?',
+      question: 'Ar galiu ant produktų uždėti savo logotipą Paddle Board Overstock ?',
       answer:
         'Taip. Mūsų OEM paslauga apima individualų logotipų išdėstymą, individualias spalvų schemas ir individualias pakuotes. Siūlome pagalvėlių spausdinimo, šilumos perdavimo ir siuvinėjimo galimybes, priklausomai nuo produkto tipo. Siųskite savo meno kūrinius ir specifikacijas mūsų pardavimų komandai, kad gautumėte pasiūlymą ir numatomą terminą.',
       category: 'ordering',
@@ -2876,7 +2876,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-inflate-pressure',
       question: 'Iki ko PSI turėčiau pripūsti SUP ?',
       answer:
-        'Pripūskite iki rekomenduojamo maksimalaus lygio, PSI kad pasiektumėte geriausią našumą – paprastai 15–18 PSI kokybiškai pripučiamai SUPs. Aquafarer SUP Explorer 11 geriausiai veikia esant 15–18 PSI. Nepakankamas pripūtimas verčia lentą jaustis minkšta ir blogai slysti. Per didelis pripūtimas virš nominalios ribos rizikuoja drop-stitch pažeisti sriegius. Patikrinkite lipduką šalia vožtuvo, kad sužinotumėte savo plokštės specifinį reitingą.',
+        'Pripūskite iki rekomenduojamo maksimalaus lygio, PSI kad pasiektumėte geriausią našumą – paprastai 15–18 PSI kokybiškai pripučiamai SUPs. Paddle Board Overstock SUP Explorer 11 geriausiai veikia esant 15–18 PSI. Nepakankamas pripūtimas verčia lentą jaustis minkšta ir blogai slysti. Per didelis pripūtimas virš nominalios ribos rizikuoja drop-stitch pažeisti sriegius. Patikrinkite lipduką šalia vožtuvo, kad sužinotumėte savo plokštės specifinį reitingą.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-inflatable-sup', 'sup-pump-guide'],
@@ -2903,7 +2903,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-kayak-conversion',
       question: 'Ar galiu naudoti SUP lentą kaip baidarę?',
       answer:
-        'Taip. Daugelis SUP lentų, įskaitant Aquafarer Explorer 11, turi D formos žiedus, leidžiančius pritvirtinti baidarės sėdynę. Naudojant SUP kajako sėdynę ir vienos mentės irklą, galima patogiai sėdėti ilgesnėms kelionėms ar žvejybai. Kai kurie prekės ženklai siūlo specialius baidarių konversijos rinkinius su sėdynėmis ir ilgesniais irklais.',
+        'Taip. Daugelis SUP lentų, įskaitant Paddle Board Overstock Explorer 11, turi D formos žiedus, leidžiančius pritvirtinti baidarės sėdynę. Naudojant SUP kajako sėdynę ir vienos mentės irklą, galima patogiai sėdėti ilgesnėms kelionėms ar žvejybai. Kai kurie prekės ženklai siūlo specialius baidarių konversijos rinkinius su sėdynėmis ir ilgesniais irklais.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['kayak-vs-sup'],
@@ -2928,9 +2928,9 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'company-model',
-      question: 'Ar Aquafarer tai prekybos įmonė, ar gamintojas?',
+      question: 'Ar Paddle Board Overstock tai prekybos įmonė, ar gamintojas?',
       answer:
-        'Tai nėra nei gryna gamykla, nei prekybos įmonė – Aquafarer LLC yra prekės ženklo įmonė su savo gamybos baze.Aquafarer LLC (Naujoji Meksika, JAV) rūpinasi pasauline platinimu, sutartimis, sąskaitų išrašymu ir po pardavimo, o Aquafarer Qingdao gamybos centras vykdo mokslinius tyrimus ir plėtrą, gamybą bei kokybės kontrolę mūsų 12 000 m² plote. Nėra tarpininkų: kiekvienas užsakymas siunčiamas tiesiogiai į gamyklą.',
+        'Tai nėra nei gryna gamykla, nei prekybos įmonė – Weihai Dongjilian Co., Ltd. yra prekės ženklo įmonė su savo gamybos baze.Weihai Dongjilian Co., Ltd. (Naujoji Meksika, JAV) rūpinasi pasauline platinimu, sutartimis, sąskaitų išrašymu ir po pardavimo, o Paddle Board Overstock Qingdao gamybos centras vykdo mokslinius tyrimus ir plėtrą, gamybą bei kokybės kontrolę mūsų 12 000 m² plote. Nėra tarpininkų: kiekvienas užsakymas siunčiamas tiesiogiai į gamyklą.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -2939,7 +2939,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'us-contract-qingdao-shipping',
       question: 'Kodėl mano sutartis su JAV įmone, jei prekės siunčiamos iš Čingdao?',
       answer:
-        'Aquafarer LLC (Naujoji Meksika, JAV) yra pasaulinė komercinė įmonė, kuri pasirašo sutartis, išrašo sąskaitas ir teikia pagalbą po pardavimo, o Qingdao gamybos centras gamina ir išsiunčia kiekvieną užsakymą FOB Qingdao. Ši dvigubo centro struktūra išlaiko JAV standartų sutarčių ir atsiskaitymo principus, tuo pačiu išlaikydama gamyklos tiesioginį kainodaros principą ir visišką gamybos skaidrumą.',
+        'Weihai Dongjilian Co., Ltd. (Naujoji Meksika, JAV) yra pasaulinė komercinė įmonė, kuri pasirašo sutartis, išrašo sąskaitas ir teikia pagalbą po pardavimo, o Qingdao gamybos centras gamina ir išsiunčia kiekvieną užsakymą FOB Qingdao. Ši dvigubo centro struktūra išlaiko JAV standartų sutarčių ir atsiskaitymo principus, tuo pačiu išlaikydama gamyklos tiesioginį kainodaros principą ir visišką gamybos skaidrumą.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -2959,7 +2959,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'ocean-use',
       question: 'Vai es varu to izmantot okeānā?',
       answer:
-        'Jā.Aquafarer SUP Dēļi ir paredzēti okeāna, ezeru un upju lietošanai. Mūsu Touring sērija tiek galā ar piekrastes viļņiem, un visi dēļi ir no jūras kvalitātes PVC , kas iztur sālsūdens koroziju. Pēc okeāna lietošanas noskalo ar saldūdeni.',
+        'Jā.Paddle Board Overstock SUP Dēļi ir paredzēti okeāna, ezeru un upju lietošanai. Mūsu Touring sērija tiek galā ar piekrastes viļņiem, un visi dēļi ir no jūras kvalitātes PVC , kas iztur sālsūdens koroziju. Pēc okeāna lietošanas noskalo ar saldūdeni.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: ['weather-conditions'],
@@ -2977,7 +2977,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'travel-sup',
       question: 'Vai es varu ceļot ar piepūšamo ierīci SUP?',
       answer:
-        'Pilnīgi noteikti. Katrs Aquafarer dēlis tiek iepakots mugursomas izmēra somā, kas paredzēta ērtai pārvietošanai — pārbaudiet pārvadātāja izmēru un svara politiku. Ar tikai 18-22 mārciņām to ir viegli nest līdz pludmalei, ezeram vai caur lidostas termināliem.',
+        'Pilnīgi noteikti. Katrs Paddle Board Overstock dēlis tiek iepakots mugursomas izmēra somā, kas paredzēta ērtai pārvietošanai — pārbaudiet pārvadātāja izmēru un svara politiku. Ar tikai 18-22 mārciņām to ir viegli nest līdz pludmalei, ezeram vai caur lidostas termināliem.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: [],
@@ -2995,7 +2995,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'box-contents',
       question: 'Kas ir kastē?',
       answer:
-        'Katram Aquafarer SUP komplektā ir dēlis, ceļojuma mugursoma, divu darbību rokas sūknis, noņemama spura, spirāles pavada un remonta komplekts. Dažiem modeļiem ir arī oglekļa airu uzlabošanas opcija. Piepūšamās laivas ietver laivu, sūkni, remonta komplektu un airus.',
+        'Katram Paddle Board Overstock SUP komplektā ir dēlis, ceļojuma mugursoma, divu darbību rokas sūknis, noņemama spura, spirāles pavada un remonta komplekts. Dažiem modeļiem ir arī oglekļa airu uzlabošanas opcija. Piepūšamās laivas ietver laivu, sūkni, remonta komplektu un airus.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -3031,7 +3031,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'puncture-repair',
       question: 'Kā es varu salabot riepu caurumu?',
       answer:
-        'Notīriet vietu, izgrieziet plāksteri ar noapaļotiem stūriem, uzklājiet PVC līmi, stingri izspiediet un gaidiet 24 stundas pirms piepūšanas.Aquafarer Dēļi ietver remonta komplektu. Detalizētas instrukcijas skatiet mūsu piepūšamo remonta rokasgrāmatā.',
+        'Notīriet vietu, izgrieziet plāksteri ar noapaļotiem stūriem, uzklājiet PVC līmi, stingri izspiediet un gaidiet 24 stundas pirms piepūšanas.Paddle Board Overstock Dēļi ietver remonta komplektu. Detalizētas instrukcijas skatiet mūsu piepūšamo remonta rokasgrāmatā.',
       category: 'maintenance',
       relatedProducts: [],
       relatedGuides: ['inflatable-repair', 'sup-maintenance'],
@@ -3065,9 +3065,9 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'warranty',
-      question: 'Kāda ir Aquafarer garantija?',
+      question: 'Kāda ir Paddle Board Overstock garantija?',
       answer:
-        'Visiem Aquafarer produktiem ir visaptveroša ražotāja garantija. Piepūšamo laivu cauruļu audums, šuves un korpuss ir aizsargāti ar 5 gadu ierobežotu garantiju;SUP dēļiem un aksesuāriem ir 2 gadu ierobežota garantija. Garantija sedz materiālu un darba defektus normālas lietošanas laikā.',
+        'Visiem Paddle Board Overstock produktiem ir visaptveroša ražotāja garantija. Piepūšamo laivu cauruļu audums, šuves un korpuss ir aizsargāti ar 5 gadu ierobežotu garantiju;SUP dēļiem un aksesuāriem ir 2 gadu ierobežota garantija. Garantija sedz materiālu un darba defektus normālas lietošanas laikā.',
       category: 'warranty',
       relatedProducts: [],
       relatedGuides: [],
@@ -3130,7 +3130,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'material-difference',
       question: 'Kāda ir atšķirība starp PVC un Hypalon?',
       answer:
-        'PVC ir vieglāks, pieejamāks un vieglāk remontējams — ideāli piemērots izklaidei.Hypalon (CSM) nodrošina izcilu UV un ķīmisku izturību ar ilgāku kalpošanas laiku, kas tiek dots priekšroka komerciāliem un militāriem pielietojumiem.Aquafarer Abi atkarībā no produkta līmeņa.',
+        'PVC ir vieglāks, pieejamāks un vieglāk remontējams — ideāli piemērots izklaidei.Hypalon (CSM) nodrošina izcilu UV un ķīmisku izturību ar ilgāku kalpošanas laiku, kas tiek dots priekšroka komerciāliem un militāriem pielietojumiem.Paddle Board Overstock Abi atkarībā no produkta līmeņa.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -3139,7 +3139,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-width-stability',
       question: 'Kāds SUP platums ir labākais stabilitātei?',
       answer:
-        'Iesācējiem 33–34 collu platums nodrošina labāko līdzsvaru starp stabilitāti un airēšanas vieglumu. Dēļi, kas ir šaurāki par 32 collām, jauniem airētājiem šķiet viegli. Aquafarer SUP Explorer 11 ar 33 collām ir ideāls mācībām.',
+        'Iesācējiem 33–34 collu platums nodrošina labāko līdzsvaru starp stabilitāti un airēšanas vieglumu. Dēļi, kas ir šaurāki par 32 collām, jauniem airētājiem šķiet viegli. Paddle Board Overstock SUP Explorer 11 ar 33 collām ir ideāls mācībām.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-size-guide', 'paddle-board-size-guide'],
@@ -3172,24 +3172,24 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       relatedGuides: ['inflatable-boat-buying-guide'],
     },
     {
-      id: 'aquafarer-vs-others',
-      question: 'Kā tas Aquafarer salīdzinās ar citiem zīmoliem?',
+      id: 'paddleboardoverstock-vs-others',
+      question: 'Kā tas Paddle Board Overstock salīdzinās ar citiem zīmoliem?',
       answer:
-        'Aquafarer Piedāvā vislabāko vērtību piepūšamā ūdens sporta aprīkojumā. Salīdzinot ar Red Paddle Co, Aquafarer nodrošina 90% no veiktspējas par 60% no izmaksām. Salīdzinot ar iRocker, Aquafarer izmanto augstākas klases trīsslāņu militāro PVC klasi un augstāku PSI novērtējumu. Salīdzinot ar Bluefin, Aquafarer piedāvā augstākas kvalitātes materiālu specifikācijas. Lielākajai daļai atpūtas airētāju nodrošina Aquafarer labāko kvalitātes un cenas līdzsvaru.',
+        'Paddle Board Overstock Piedāvā vislabāko vērtību piepūšamā ūdens sporta aprīkojumā. Salīdzinot ar Red Paddle Co, Paddle Board Overstock nodrošina 90% no veiktspējas par 60% no izmaksām. Salīdzinot ar iRocker, Paddle Board Overstock izmanto augstākas klases trīsslāņu militāro PVC klasi un augstāku PSI novērtējumu. Salīdzinot ar Bluefin, Paddle Board Overstock piedāvā augstākas kvalitātes materiālu specifikācijas. Lielākajai daļai atpūtas airētāju nodrošina Paddle Board Overstock labāko kvalitātes un cenas līdzsvaru.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: [
         'best-surf-gear-brands-compared',
-        'aquafarer-vs-red-paddle',
-        'aquafarer-vs-irocker',
-        'aquafarer-vs-bluefin',
+        'paddleboardoverstock-vs-red-paddle',
+        'paddleboardoverstock-vs-irocker',
+        'paddleboardoverstock-vs-bluefin',
       ],
     },
     {
       id: 'fishing-sup-setup',
       question: 'Vai es varu makšķerēt no SUP dēļa?',
       answer:
-        'Jā.SUP Makšķerēšana kļūst arvien populārāka, jo stāvoša pozīcija nodrošina lielisku redzamību ūdenī. Izvēlieties dēli, kas ir vismaz 11 pēdas garš un 33–34 collas plats stabilitātei. Pievienojiet piena kasti ar makšķeres turētājiem, kas piestiprināti pie klāja gumijas, nelielu enkuru un vienmēr valkājiet PFD. Aquafarer SUP Explorer 11 labi der ikdienas makšķerēšanai.',
+        'Jā.SUP Makšķerēšana kļūst arvien populārāka, jo stāvoša pozīcija nodrošina lielisku redzamību ūdenī. Izvēlieties dēli, kas ir vismaz 11 pēdas garš un 33–34 collas plats stabilitātei. Pievienojiet piena kasti ar makšķeres turētājiem, kas piestiprināti pie klāja gumijas, nelielu enkuru un vienmēr valkājiet PFD. Paddle Board Overstock SUP Explorer 11 labi der ikdienas makšķerēšanai.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['fishing-sup-guide', 'sup-anchor-guide'],
@@ -3207,7 +3207,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'airline-travel-sup',
       question: 'Kādi ir aviokompāniju noteikumi ceļošanai ar piepūšamo lidmašīnu SUP?',
       answer:
-        'Lielākā daļa aviokompāniju pieņem SUP mugursomas kā reģistrēto bagāžu, ja svars ir mazāks par 23–32 kg. Aquafarer Mugursoma ir aptuveni 90x40x30 cm plata un sver apmēram 15 kg iepakota. Dažas aviokompānijas var iekasēt maksu par pārmērīgu bagāžu. Ierodieties agri, iepakojiet spārnus un pumpējiet atsevišķi rokas bagāžā, un atzīmējiet somu kā trauslu. Vienmēr izpētiet aviokompānijas sporta aprīkojuma politiku pirms lidojuma.',
+        'Lielākā daļa aviokompāniju pieņem SUP mugursomas kā reģistrēto bagāžu, ja svars ir mazāks par 23–32 kg. Paddle Board Overstock Mugursoma ir aptuveni 90x40x30 cm plata un sver apmēram 15 kg iepakota. Dažas aviokompānijas var iekasēt maksu par pārmērīgu bagāžu. Ierodieties agri, iepakojiet spārnus un pumpējiet atsevišķi rokas bagāžā, un atzīmējiet somu kā trauslu. Vienmēr izpētiet aviokompānijas sporta aprīkojuma politiku pirms lidojuma.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-travel-guide'],
@@ -3232,7 +3232,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'oem-custom-branding',
-      question: 'Vai es varu uzlikt savu Aquafarer logotipu uz produktiem?',
+      question: 'Vai es varu uzlikt savu Paddle Board Overstock logotipu uz produktiem?',
       answer:
         'Jā. Mūsu OEM pakalpojums ietver pielāgotu logotipu izvietojumu, pielāgotas krāsu shēmas un personalizētu iepakojumu. Mēs piedāvājam spilventiņu drukas, siltuma pārneses un izšūšanas iespējas atkarībā no produkta veida. Nosūtiet savus mākslas darbus un specifikācijas mūsu pārdošanas komandai, lai saņemtu piedāvājumu un izpildes laika novērtējumu.',
       category: 'ordering',
@@ -3243,7 +3243,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-inflate-pressure',
       question: 'Uz ko PSI man vajadzētu uzpūst?SUP',
       answer:
-        'Uzpūš līdz dēļa nominālajam maksimumam, PSI lai nodrošinātu labāko veiktspēju — parasti 15–18 PSI kvalitatīvam piepūšamajam SUPs. Aquafarer SUP Explorer 11 vislabāk darbojas pie 15–18 PSI. Nepietiekama uzpūšanās liek dēlim justies mīkstam un tas slikti slīd. Pārpūšanās virs nominālā maksimuma riskē bojāt drop-stitch vītnes. Pārbaudiet uzlīmi pie vārsta, lai redzētu jūsu dēļa konkrēto reitingu.',
+        'Uzpūš līdz dēļa nominālajam maksimumam, PSI lai nodrošinātu labāko veiktspēju — parasti 15–18 PSI kvalitatīvam piepūšamajam SUPs. Paddle Board Overstock SUP Explorer 11 vislabāk darbojas pie 15–18 PSI. Nepietiekama uzpūšanās liek dēlim justies mīkstam un tas slikti slīd. Pārpūšanās virs nominālā maksimuma riskē bojāt drop-stitch vītnes. Pārbaudiet uzlīmi pie vārsta, lai redzētu jūsu dēļa konkrēto reitingu.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-inflatable-sup', 'sup-pump-guide'],
@@ -3270,7 +3270,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-kayak-conversion',
       question: 'Vai es varu izmantot SUP dēli kā kajaku?',
       answer:
-        'Jā. Daudzi SUP dēļi, ieskaitot Aquafarer Explorer 11, ir aprīkoti ar D-veida riņķiem, kas ļauj piestiprināt kajaka sēdekli. Izmantojot SUP ar kajaka sēdekli un vienas lāpstas airi, tiek nodrošināta ērta sēdpozīcija garākiem braucieniem vai makšķerēšanai. Dažas markas piedāvā speciālas kajaka pārbūves komplektus ar sēdekļiem un garākiem airiem.',
+        'Jā. Daudzi SUP dēļi, ieskaitot Paddle Board Overstock Explorer 11, ir aprīkoti ar D-veida riņķiem, kas ļauj piestiprināt kajaka sēdekli. Izmantojot SUP ar kajaka sēdekli un vienas lāpstas airi, tiek nodrošināta ērta sēdpozīcija garākiem braucieniem vai makšķerēšanai. Dažas markas piedāvā speciālas kajaka pārbūves komplektus ar sēdekļiem un garākiem airiem.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['kayak-vs-sup'],
@@ -3295,9 +3295,9 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'company-model',
-      question: 'Vai Aquafarer ir tirdzniecības uzņēmums vai ražotājs?',
+      question: 'Vai Paddle Board Overstock ir tirdzniecības uzņēmums vai ražotājs?',
       answer:
-        'Neviens no tiem — Aquafarer SIA ir zīmola uzņēmums ar savu ražošanas bāzi. Aquafarer SIA (Ņūmeksika, ASV) nodarbojas ar globālo izplatīšanu, līgumiem, rēķiniem un pēcpārdošanas servisu, savukārt Aquafarer Qingdao ražošanas centrs vada pētniecību un attīstību, ražošanu un kvalitātes kontroli mūsu 12 000 m² platībā. Bez starpniekiem: katrs pasūtījums tiek nosūtīts tieši no rūpnīcas.',
+        'Neviens no tiem — Paddle Board Overstock SIA ir zīmola uzņēmums ar savu ražošanas bāzi. Paddle Board Overstock SIA (Ņūmeksika, ASV) nodarbojas ar globālo izplatīšanu, līgumiem, rēķiniem un pēcpārdošanas servisu, savukārt Paddle Board Overstock Qingdao ražošanas centrs vada pētniecību un attīstību, ražošanu un kvalitātes kontroli mūsu 12 000 m² platībā. Bez starpniekiem: katrs pasūtījums tiek nosūtīts tieši no rūpnīcas.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -3306,7 +3306,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'us-contract-qingdao-shipping',
       question: 'Kāpēc mans līgums ir ar ASV uzņēmumu, ja preces nosūtītas no Qingdao?',
       answer:
-        'Aquafarer SIA (Ņūmeksika, ASV) ir globālais komerciālais subjekts, kas paraksta līgumus, izsniedz rēķinus un nodrošina pēcpārdošanas atbalstu, savukārt Qingdao ražošanas centrs ražo un nosūta katru pasūtījumu FOB Qingdao. Šī divu centru struktūra uztur ASV standarta līgumu slēgšanu un norēķinus, saglabājot rūpnīcas tiešo cenu un pilnīgu ražošanas pārredzamību.',
+        'Paddle Board Overstock SIA (Ņūmeksika, ASV) ir globālais komerciālais subjekts, kas paraksta līgumus, izsniedz rēķinus un nodrošina pēcpārdošanas atbalstu, savukārt Qingdao ražošanas centrs ražo un nosūta katru pasūtījumu FOB Qingdao. Šī divu centru struktūra uztur ASV standarta līgumu slēgšanu un norēķinus, saglabājot rūpnīcas tiešo cenu un pilnīgu ražošanas pārredzamību.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -3326,7 +3326,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'ocean-use',
       question: 'Bolehkah saya menggunakannya di laut?',
       answer:
-        'Ya.Aquafarer SUP Papan dibina untuk kegunaan lautan, tasik, dan sungai. Siri Touring kami mengendalikan pemotongan pantai, dan semua papan menggunakan gred marin PVC yang tahan kakisan air masin. Bilas dengan air tawar selepas digunakan di laut.',
+        'Ya.Paddle Board Overstock SUP Papan dibina untuk kegunaan lautan, tasik, dan sungai. Siri Touring kami mengendalikan pemotongan pantai, dan semua papan menggunakan gred marin PVC yang tahan kakisan air masin. Bilas dengan air tawar selepas digunakan di laut.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: ['weather-conditions'],
@@ -3344,7 +3344,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'travel-sup',
       question: 'Bolehkah saya melancong dengan kereta kembung SUP?',
       answer:
-        'Sudah tentu. Setiap Aquafarer papan dimasukkan ke dalam beg galas bersaiz beg galas yang direka untuk memudahkan perjalanan — semak polisi saiz dan berat pembawa anda. Dengan berat hanya 18-22 lbs, ia mudah dibawa ke pantai, tasik, atau melalui terminal lapangan terbang.',
+        'Sudah tentu. Setiap Paddle Board Overstock papan dimasukkan ke dalam beg galas bersaiz beg galas yang direka untuk memudahkan perjalanan — semak polisi saiz dan berat pembawa anda. Dengan berat hanya 18-22 lbs, ia mudah dibawa ke pantai, tasik, atau melalui terminal lapangan terbang.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: [],
@@ -3362,7 +3362,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'box-contents',
       question: 'Apa yang ada dalam kotak?',
       answer:
-        'Setiap model Aquafarer SUP termasuk papan, beg galas perjalanan, pam tangan dua aksi, sirip boleh tanggal, tali gegelung, dan kit pembaikan. Beberapa model juga termasuk pilihan naik taraf dayung karbon. Bot kembung termasuk bot, pam, kit pembaikan, dan dayung.',
+        'Setiap model Paddle Board Overstock SUP termasuk papan, beg galas perjalanan, pam tangan dua aksi, sirip boleh tanggal, tali gegelung, dan kit pembaikan. Beberapa model juga termasuk pilihan naik taraf dayung karbon. Bot kembung termasuk bot, pam, kit pembaikan, dan dayung.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -3398,7 +3398,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'puncture-repair',
       question: 'Bagaimana saya membaiki lubang bocor?',
       answer:
-        'Bersihkan kawasan tersebut, potong tampalan dengan sudut bulat, sapukan PVC pelekat, tekan dengan kuat, dan tunggu 24 jam sebelum mengembang.Aquafarer Papan termasuk kit pembaikan. Untuk arahan terperinci, lihat panduan pembaikan tiup kami.',
+        'Bersihkan kawasan tersebut, potong tampalan dengan sudut bulat, sapukan PVC pelekat, tekan dengan kuat, dan tunggu 24 jam sebelum mengembang.Paddle Board Overstock Papan termasuk kit pembaikan. Untuk arahan terperinci, lihat panduan pembaikan tiup kami.',
       category: 'maintenance',
       relatedProducts: [],
       relatedGuides: ['inflatable-repair', 'sup-maintenance'],
@@ -3432,9 +3432,9 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'warranty',
-      question: 'Apakah Aquafarer jaminan?',
+      question: 'Apakah Paddle Board Overstock jaminan?',
       answer:
-        'Semua Aquafarer produk disokong oleh jaminan pengeluar yang menyeluruh. Fabrik tiub bot boleh tiup, jahitan, dan badan kapal dilindungi oleh jaminan terhad selama 5 tahun;SUP papan dan aksesori mempunyai jaminan terhad selama 2 tahun. Jaminan ini melindungi kecacatan bahan dan kerja semasa penggunaan biasa.',
+        'Semua Paddle Board Overstock produk disokong oleh jaminan pengeluar yang menyeluruh. Fabrik tiub bot boleh tiup, jahitan, dan badan kapal dilindungi oleh jaminan terhad selama 5 tahun;SUP papan dan aksesori mempunyai jaminan terhad selama 2 tahun. Jaminan ini melindungi kecacatan bahan dan kerja semasa penggunaan biasa.',
       category: 'warranty',
       relatedProducts: [],
       relatedGuides: [],
@@ -3497,7 +3497,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'material-difference',
       question: 'Apakah perbezaan antara PVC dan Hypalon?',
       answer:
-        'PVC lebih ringan, lebih mampu milik, dan lebih mudah dibaiki — sesuai untuk kegunaan rekreasi.Hypalon (CSM) menawarkan UV ketahanan yang unggul dan kimia dengan jangka hayat yang lebih panjang, digemari untuk aplikasi komersial dan ketenteraan.Aquafarer Kedua-duanya digunakan bergantung pada tahap produk.',
+        'PVC lebih ringan, lebih mampu milik, dan lebih mudah dibaiki — sesuai untuk kegunaan rekreasi.Hypalon (CSM) menawarkan UV ketahanan yang unggul dan kimia dengan jangka hayat yang lebih panjang, digemari untuk aplikasi komersial dan ketenteraan.Paddle Board Overstock Kedua-duanya digunakan bergantung pada tahap produk.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -3506,7 +3506,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-width-stability',
       question: 'Lebar mana SUP yang terbaik untuk kestabilan?',
       answer:
-        'Untuk pemula, lebar 33–34 inci memberikan keseimbangan terbaik antara kestabilan dan kemudahan mendayung. Papan yang lebih sempit daripada 32 inci terasa mudah untuk pendayung baru. Aquafarer SUP Explorer 11 pada 33 inci sangat sesuai untuk pembelajaran.',
+        'Untuk pemula, lebar 33–34 inci memberikan keseimbangan terbaik antara kestabilan dan kemudahan mendayung. Papan yang lebih sempit daripada 32 inci terasa mudah untuk pendayung baru. Paddle Board Overstock SUP Explorer 11 pada 33 inci sangat sesuai untuk pembelajaran.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-size-guide', 'paddle-board-size-guide'],
@@ -3539,24 +3539,24 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       relatedGuides: ['inflatable-boat-buying-guide'],
     },
     {
-      id: 'aquafarer-vs-others',
-      question: 'Bagaimana Aquafarer ia dibandingkan dengan jenama lain?',
+      id: 'paddleboardoverstock-vs-others',
+      question: 'Bagaimana Paddle Board Overstock ia dibandingkan dengan jenama lain?',
       answer:
-        'Aquafarer Menawarkan nilai terbaik dalam peralatan sukan air boleh tiup. Berbanding Red Paddle Co, Aquafarer memberikan 90% prestasi pada 60% kos. Berbanding iRocker, Aquafarer menggunakan gred ketenteraan tiga lapisan gred yang lebih tinggi PVC dan PSI penarafan yang lebih tinggi. Berbanding Bluefin, Aquafarer menawarkan spesifikasi bahan yang unggul. Bagi kebanyakan pendayung rekreasi, Aquafarer memberikan keseimbangan terbaik antara kualiti dan harga.',
+        'Paddle Board Overstock Menawarkan nilai terbaik dalam peralatan sukan air boleh tiup. Berbanding Red Paddle Co, Paddle Board Overstock memberikan 90% prestasi pada 60% kos. Berbanding iRocker, Paddle Board Overstock menggunakan gred ketenteraan tiga lapisan gred yang lebih tinggi PVC dan PSI penarafan yang lebih tinggi. Berbanding Bluefin, Paddle Board Overstock menawarkan spesifikasi bahan yang unggul. Bagi kebanyakan pendayung rekreasi, Paddle Board Overstock memberikan keseimbangan terbaik antara kualiti dan harga.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: [
         'best-surf-gear-brands-compared',
-        'aquafarer-vs-red-paddle',
-        'aquafarer-vs-irocker',
-        'aquafarer-vs-bluefin',
+        'paddleboardoverstock-vs-red-paddle',
+        'paddleboardoverstock-vs-irocker',
+        'paddleboardoverstock-vs-bluefin',
       ],
     },
     {
       id: 'fishing-sup-setup',
       question: 'Bolehkah saya memancing dari SUP papan?',
       answer:
-        'Ya.SUP Memancing semakin popular kerana posisi berdiri memberikan penglihatan yang sangat baik ke dalam air. Pilih papan sekurang-kurangnya sepanjang 11 kaki dan selebar 33–34 inci untuk kestabilan. Tambah peti susu dengan pemegang joran yang dipasang pada bungee dek, sauh kecil, dan sentiasa pakai PFD. Aquafarer SUP Explorer 11 sesuai untuk memancing santai.',
+        'Ya.SUP Memancing semakin popular kerana posisi berdiri memberikan penglihatan yang sangat baik ke dalam air. Pilih papan sekurang-kurangnya sepanjang 11 kaki dan selebar 33–34 inci untuk kestabilan. Tambah peti susu dengan pemegang joran yang dipasang pada bungee dek, sauh kecil, dan sentiasa pakai PFD. Paddle Board Overstock SUP Explorer 11 sesuai untuk memancing santai.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['fishing-sup-guide', 'sup-anchor-guide'],
@@ -3574,7 +3574,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'airline-travel-sup',
       question: 'Apakah peraturan syarikat penerbangan untuk melancong dengan kereta kembung SUP?',
       answer:
-        'Kebanyakan syarikat penerbangan menerima SUP beg galas sebagai bagasi daftar masuk jika berat kurang daripada 23–32 kg. Aquafarer Beg galas ini berukuran kira-kira 90x40x30 cm dan beratnya kira-kira 15 kg jika dibungkus. Sesetengah syarikat penerbangan mungkin mengenakan caj bagasi bersaiz besar. Tiba awal, balut sirip dan pam secara berasingan dalam beg kabin anda, dan labelkan beg sebagai rapuh. Sentiasa kaji polisi peralatan sukan syarikat penerbangan anda sebelum terbang.',
+        'Kebanyakan syarikat penerbangan menerima SUP beg galas sebagai bagasi daftar masuk jika berat kurang daripada 23–32 kg. Paddle Board Overstock Beg galas ini berukuran kira-kira 90x40x30 cm dan beratnya kira-kira 15 kg jika dibungkus. Sesetengah syarikat penerbangan mungkin mengenakan caj bagasi bersaiz besar. Tiba awal, balut sirip dan pam secara berasingan dalam beg kabin anda, dan labelkan beg sebagai rapuh. Sentiasa kaji polisi peralatan sukan syarikat penerbangan anda sebelum terbang.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-travel-guide'],
@@ -3599,7 +3599,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'oem-custom-branding',
-      question: 'Bolehkah saya letakkan logo saya sendiri pada Aquafarer produk?',
+      question: 'Bolehkah saya letakkan logo saya sendiri pada Paddle Board Overstock produk?',
       answer:
         'Ya. OEM Perkhidmatan kami merangkumi penempatan logo tersuai, skema warna tersuai, dan pembungkusan tersuai. Kami menawarkan pilihan cetakan pad, pemindahan haba, dan sulaman bergantung pada jenis produk. Hantar karya seni dan spesifikasi anda kepada pasukan jualan kami untuk sebut harga dan anggaran masa produk.',
       category: 'ordering',
@@ -3610,7 +3610,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-inflate-pressure',
       question: 'Apa PSI yang patut saya tiup SUP ke mana?',
       answer:
-        'Tiup ke maksimum yang dinilai papan PSI untuk prestasi terbaik — biasanya 15–18 PSI untuk inflasi berkualiti SUPs. Aquafarer SUP Explorer 11 berprestasi terbaik pada 15–18. PSI Inflasi yang kurang menyebabkan papan terasa lembut dan tidak rata dengan jejak. Inflasi berlebihan melebihi maksimum yang dinilai berisiko drop-stitch merosakkan ulir. Periksa pelekat berhampiran injap untuk penarafan khusus papan anda.',
+        'Tiup ke maksimum yang dinilai papan PSI untuk prestasi terbaik — biasanya 15–18 PSI untuk inflasi berkualiti SUPs. Paddle Board Overstock SUP Explorer 11 berprestasi terbaik pada 15–18. PSI Inflasi yang kurang menyebabkan papan terasa lembut dan tidak rata dengan jejak. Inflasi berlebihan melebihi maksimum yang dinilai berisiko drop-stitch merosakkan ulir. Periksa pelekat berhampiran injap untuk penarafan khusus papan anda.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-inflatable-sup', 'sup-pump-guide'],
@@ -3637,7 +3637,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-kayak-conversion',
       question: 'Bolehkah saya menggunakan papan SUP sebagai kayak?',
       answer:
-        'Ya. Banyak papan SUP, termasuk Aquafarer Explorer 11, mempunyai cincin-D yang membolehkan pemasangan kerusi kayak. Menggunakan SUP dengan kerusi kayak dan dayung berbilah tunggal menawarkan posisi duduk yang selesa untuk perjalanan yang lebih panjang atau memancing. Sesetengah jenama menawarkan kit penukaran kayak khas dengan kerusi dan dayung yang lebih panjang.',
+        'Ya. Banyak papan SUP, termasuk Paddle Board Overstock Explorer 11, mempunyai cincin-D yang membolehkan pemasangan kerusi kayak. Menggunakan SUP dengan kerusi kayak dan dayung berbilah tunggal menawarkan posisi duduk yang selesa untuk perjalanan yang lebih panjang atau memancing. Sesetengah jenama menawarkan kit penukaran kayak khas dengan kerusi dan dayung yang lebih panjang.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['kayak-vs-sup'],
@@ -3662,9 +3662,9 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'company-model',
-      question: 'Adakah Aquafarer sebuah syarikat perdagangan atau pengeluar?',
+      question: 'Adakah Paddle Board Overstock sebuah syarikat perdagangan atau pengeluar?',
       answer:
-        'Bukan semata-mata kilang atau syarikat perdagangan — Aquafarer LLC adalah syarikat jenama dengan pangkalan pembuatan sendiri. Aquafarer LLC (New Mexico, USA) mengendalikan pengedaran global, kontrak, pengebilan, dan khidmat selepas jualan, manakala Aquafarer Qingdao Manufacturing Hub mengurus R&D, pengeluaran, dan kawalan kualiti di fasiliti sendiri seluas 12,000 m². Tiada perantara: setiap pesanan dihantar terus dari kilang.',
+        'Bukan semata-mata kilang atau syarikat perdagangan — Weihai Dongjilian Co., Ltd. adalah syarikat jenama dengan pangkalan pembuatan sendiri. Weihai Dongjilian Co., Ltd. (New Mexico, USA) mengendalikan pengedaran global, kontrak, pengebilan, dan khidmat selepas jualan, manakala Paddle Board Overstock Qingdao Manufacturing Hub mengurus R&D, pengeluaran, dan kawalan kualiti di fasiliti sendiri seluas 12,000 m². Tiada perantara: setiap pesanan dihantar terus dari kilang.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -3673,7 +3673,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'us-contract-qingdao-shipping',
       question: 'Mengapa kontrak saya dengan sebuah syarikat AS apabila barangan dihantar dari Qingdao?',
       answer:
-        'Aquafarer LLC (New Mexico, AS) ialah entiti komersial global yang menandatangani kontrak, mengeluarkan invois, dan menyediakan sokongan selepas jualan, manakala Pusat Pembuatan Qingdao menghasilkan dan menghantar setiap pesanan FOB Qingdao. Struktur dwi-pusat ini mengekalkan kontrak dan penyelesaian mengikut standard AS, sambil mengekalkan harga terus dari kilang dan ketelusan penuh dalam pengeluaran.',
+        'Weihai Dongjilian Co., Ltd. (New Mexico, AS) ialah entiti komersial global yang menandatangani kontrak, mengeluarkan invois, dan menyediakan sokongan selepas jualan, manakala Pusat Pembuatan Qingdao menghasilkan dan menghantar setiap pesanan FOB Qingdao. Struktur dwi-pusat ini mengekalkan kontrak dan penyelesaian mengikut standard AS, sambil mengekalkan harga terus dari kilang dan ketelusan penuh dalam pengeluaran.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -3693,7 +3693,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'ocean-use',
       question: 'Pot să-l folosesc în ocean?',
       answer:
-        'Da.Aquafarer SUP Plăcile sunt construite pentru utilizare pe ocean, lacuri și râuri. Seria noastră Touring se descurcă cu valuri de coastă, iar toate plăcile folosesc produse marine PVC care rezistă la coroziune în apă sărată. Clătește cu apă dulce după utilizarea în ocean.',
+        'Da.Paddle Board Overstock SUP Plăcile sunt construite pentru utilizare pe ocean, lacuri și râuri. Seria noastră Touring se descurcă cu valuri de coastă, iar toate plăcile folosesc produse marine PVC care rezistă la coroziune în apă sărată. Clătește cu apă dulce după utilizarea în ocean.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: ['weather-conditions'],
@@ -3711,7 +3711,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'travel-sup',
       question: 'Pot călători cu un SUP gonflabil?',
       answer:
-        'Absolut. Fiecare Aquafarer placă se împachetează într-o husă de mărimea unui rucsac, concepută pentru călătorii convenabile — verifică politicile de mărime și greutate ale transportorului. La doar 18-22 lbs, este ușor de transportat la plajă, lac sau prin terminalele aeroporturilor.',
+        'Absolut. Fiecare Paddle Board Overstock placă se împachetează într-o husă de mărimea unui rucsac, concepută pentru călătorii convenabile — verifică politicile de mărime și greutate ale transportorului. La doar 18-22 lbs, este ușor de transportat la plajă, lac sau prin terminalele aeroporturilor.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: [],
@@ -3729,7 +3729,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'box-contents',
       question: 'Ce vine în cutie?',
       answer:
-        'Fiecare Aquafarer SUP include placa, un rucsac de călătorie, pompă manuală cu acțiune dublă, aripioară detașabilă, lesă cu spirală și kit de reparații. Unele modele includ și opțiunea de upgrade a vâslei din carbon. Bărcile gonflabile includ barca, pompa, kitul de reparații și vâslele.',
+        'Fiecare Paddle Board Overstock SUP include placa, un rucsac de călătorie, pompă manuală cu acțiune dublă, aripioară detașabilă, lesă cu spirală și kit de reparații. Unele modele includ și opțiunea de upgrade a vâslei din carbon. Bărcile gonflabile includ barca, pompa, kitul de reparații și vâslele.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -3765,7 +3765,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'puncture-repair',
       question: 'Cum repar o pană?',
       answer:
-        'Curăță zona, taie un petic cu colțuri rotunjite, aplică PVC adeziv, apasă ferm și așteaptă 24 de ore înainte de umflare.Aquafarer Plăcile includ un kit de reparații. Pentru instrucțiuni detaliate, consultați ghidul nostru de reparații pentru umflabile.',
+        'Curăță zona, taie un petic cu colțuri rotunjite, aplică PVC adeziv, apasă ferm și așteaptă 24 de ore înainte de umflare.Paddle Board Overstock Plăcile includ un kit de reparații. Pentru instrucțiuni detaliate, consultați ghidul nostru de reparații pentru umflabile.',
       category: 'maintenance',
       relatedProducts: [],
       relatedGuides: ['inflatable-repair', 'sup-maintenance'],
@@ -3799,9 +3799,9 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'warranty',
-      question: 'Care este Aquafarer garanția?',
+      question: 'Care este Paddle Board Overstock garanția?',
       answer:
-        'Toate Aquafarer produsele sunt susținute de o garanție completă a producătorului. Țesătura tuburilor pentru bărci gonflabile, cusăturile și carena sunt acoperite de o garanție limitată de 5 ani;SUP plăcile și accesoriile oferă o garanție limitată de 2 ani. Garanția acoperă defectele de materiale și măiestrie în condiții de utilizare normală.',
+        'Toate Paddle Board Overstock produsele sunt susținute de o garanție completă a producătorului. Țesătura tuburilor pentru bărci gonflabile, cusăturile și carena sunt acoperite de o garanție limitată de 5 ani;SUP plăcile și accesoriile oferă o garanție limitată de 2 ani. Garanția acoperă defectele de materiale și măiestrie în condiții de utilizare normală.',
       category: 'warranty',
       relatedProducts: [],
       relatedGuides: [],
@@ -3864,7 +3864,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'material-difference',
       question: 'Care este diferența dintre PVC și Hypalon?',
       answer:
-        'PVC este mai ușor, mai accesibil și mai ușor de reparat — ideal pentru uz recreativ.Hypalon (CSM) oferă UV rezistență superioară și chimică, cu o durată de viață mai lungă, preferată pentru aplicații comerciale și militare.Aquafarer utilizează ambele în funcție de nivelul produsului.',
+        'PVC este mai ușor, mai accesibil și mai ușor de reparat — ideal pentru uz recreativ.Hypalon (CSM) oferă UV rezistență superioară și chimică, cu o durată de viață mai lungă, preferată pentru aplicații comerciale și militare.Paddle Board Overstock utilizează ambele în funcție de nivelul produsului.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -3873,7 +3873,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-width-stability',
       question: 'Ce SUP lățime este cea mai bună pentru stabilitate?',
       answer:
-        'Pentru începători, o lățime de 33–34 inch oferă cel mai bun echilibru între stabilitate și ușurință la vâslit. Plăcile mai înguste de 32 inch par înclinate pentru vâslașii noi. Aquafarer SUP Explorer 11 la 33 inch este ideal pentru învățare.',
+        'Pentru începători, o lățime de 33–34 inch oferă cel mai bun echilibru între stabilitate și ușurință la vâslit. Plăcile mai înguste de 32 inch par înclinate pentru vâslașii noi. Paddle Board Overstock SUP Explorer 11 la 33 inch este ideal pentru învățare.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-size-guide', 'paddle-board-size-guide'],
@@ -3906,24 +3906,24 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       relatedGuides: ['inflatable-boat-buying-guide'],
     },
     {
-      id: 'aquafarer-vs-others',
-      question: 'Cum Aquafarer se compară cu alte mărci?',
+      id: 'paddleboardoverstock-vs-others',
+      question: 'Cum Paddle Board Overstock se compară cu alte mărci?',
       answer:
-        'Aquafarer oferă cel mai bun raport calitate-preț în echipamentul pentru sporturi nautice gonflabile. Comparativ cu Red Paddle Co, Aquafarer oferă 90% din performanță la 60% din cost. Comparativ cu iRocker, folosește echipamente Aquafarer militare triple straturi de calitate PVC superioară și PSI ratinguri mai mari. Comparativ cu Bluefin, Aquafarer oferă specificații superioare ale materialelor. Pentru majoritatea vâslaștilor recreaționali, Aquafarer oferă cel mai bun echilibru între calitate și preț.',
+        'Paddle Board Overstock oferă cel mai bun raport calitate-preț în echipamentul pentru sporturi nautice gonflabile. Comparativ cu Red Paddle Co, Paddle Board Overstock oferă 90% din performanță la 60% din cost. Comparativ cu iRocker, folosește echipamente Paddle Board Overstock militare triple straturi de calitate PVC superioară și PSI ratinguri mai mari. Comparativ cu Bluefin, Paddle Board Overstock oferă specificații superioare ale materialelor. Pentru majoritatea vâslaștilor recreaționali, Paddle Board Overstock oferă cel mai bun echilibru între calitate și preț.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: [
         'best-surf-gear-brands-compared',
-        'aquafarer-vs-red-paddle',
-        'aquafarer-vs-irocker',
-        'aquafarer-vs-bluefin',
+        'paddleboardoverstock-vs-red-paddle',
+        'paddleboardoverstock-vs-irocker',
+        'paddleboardoverstock-vs-bluefin',
       ],
     },
     {
       id: 'fishing-sup-setup',
       question: 'Pot să pescuiesc de pe SUP o placă?',
       answer:
-        'Da.SUP Pescuitul devine din ce în ce mai popular deoarece poziția în picioare oferă o vizibilitate excelentă în apă. Alege o placă de cel puțin 11 picioare lungime și 33–34 inci lățime pentru stabilitate. Adaugă o ladă de lapte cu suporturi pentru lansete fixate pe bungee-urile punții, o ancoră mică și poartă întotdeauna PFD un . Aquafarer SUP Explorer 11 funcționează bine pentru pescuitul casual.',
+        'Da.SUP Pescuitul devine din ce în ce mai popular deoarece poziția în picioare oferă o vizibilitate excelentă în apă. Alege o placă de cel puțin 11 picioare lungime și 33–34 inci lățime pentru stabilitate. Adaugă o ladă de lapte cu suporturi pentru lansete fixate pe bungee-urile punții, o ancoră mică și poartă întotdeauna PFD un . Paddle Board Overstock SUP Explorer 11 funcționează bine pentru pescuitul casual.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['fishing-sup-guide', 'sup-anchor-guide'],
@@ -3941,7 +3941,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'airline-travel-sup',
       question: 'Care sunt regulile companiilor aeriene pentru călătoria cu un gonflabil SUP?',
       answer:
-        'Majoritatea companiilor aeriene SUP acceptă rucsacurile ca bagaj de cală dacă au sub 23–32 kg. Aquafarer Rucsacul are aproximativ 90x40x30 cm și cântărește aproximativ 15 kg la pachet. Unele companii aeriene pot percepe taxe pentru bagaje supradimensionate. Sosește devreme, înfășoară aripioarele și pompează separat în bagajul de mână și etichetează geanta ca fiind fragilă. Cercetează întotdeauna politica companiei aeriene privind echipamentele sportive înainte de a zbura.',
+        'Majoritatea companiilor aeriene SUP acceptă rucsacurile ca bagaj de cală dacă au sub 23–32 kg. Paddle Board Overstock Rucsacul are aproximativ 90x40x30 cm și cântărește aproximativ 15 kg la pachet. Unele companii aeriene pot percepe taxe pentru bagaje supradimensionate. Sosește devreme, înfășoară aripioarele și pompează separat în bagajul de mână și etichetează geanta ca fiind fragilă. Cercetează întotdeauna politica companiei aeriene privind echipamentele sportive înainte de a zbura.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-travel-guide'],
@@ -3966,7 +3966,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'oem-custom-branding',
-      question: 'Pot să pun propriul meu logo pe Aquafarer produse?',
+      question: 'Pot să pun propriul meu logo pe Paddle Board Overstock produse?',
       answer:
         'Da. OEM Serviciul nostru include plasarea personalizată a logo-urilor, scheme de culori personalizate și ambalaje personalizate. Oferim opțiuni de imprimare pad, transfer termic și broderie, în funcție de tipul produsului. Trimiteți lucrările și specificațiile echipei noastre de vânzări pentru o ofertă și o estimare a timpului de livrare.',
       category: 'ordering',
@@ -3977,7 +3977,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-inflate-pressure',
       question: 'La ce PSI ar trebui să-mi umfl SUP ?',
       answer:
-        'Umflă până la maximul recomandat de PSI placă pentru cea mai bună performanță — de obicei 15–18 PSI pentru o placă gonflabilă SUPs de calitate. Aquafarer SUP Explorer 11 performează cel mai bine la 15–18 PSI. Subumflarea face ca placa să se simtă moale și să se descurce prost. Supraumflarea peste limita maximă riscă să deterioreze drop-stitch filetele. Verifică eticheta de lângă supapă pentru ratingul specific al plăcii tale.',
+        'Umflă până la maximul recomandat de PSI placă pentru cea mai bună performanță — de obicei 15–18 PSI pentru o placă gonflabilă SUPs de calitate. Paddle Board Overstock SUP Explorer 11 performează cel mai bine la 15–18 PSI. Subumflarea face ca placa să se simtă moale și să se descurce prost. Supraumflarea peste limita maximă riscă să deterioreze drop-stitch filetele. Verifică eticheta de lângă supapă pentru ratingul specific al plăcii tale.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-inflatable-sup', 'sup-pump-guide'],
@@ -4004,7 +4004,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-kayak-conversion',
       question: 'Pot folosi o SUP placă ca caiac?',
       answer:
-        'Da. Multe SUP plăci, inclusiv Aquafarer Explorer 11, au inele în D care permit atașarea unui scaun de caiac. Folosirea SUP unui șa cu scaun de caiac și o paletă cu o singură lamă oferă o poziție confortabilă pentru drumuri lungi sau pescuit. Unele branduri oferă kituri dedicate de conversie pentru caiac, cu scaune și vâsle mai lungi.',
+        'Da. Multe SUP plăci, inclusiv Paddle Board Overstock Explorer 11, au inele în D care permit atașarea unui scaun de caiac. Folosirea SUP unui șa cu scaun de caiac și o paletă cu o singură lamă oferă o poziție confortabilă pentru drumuri lungi sau pescuit. Unele branduri oferă kituri dedicate de conversie pentru caiac, cu scaune și vâsle mai lungi.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['kayak-vs-sup'],
@@ -4029,9 +4029,9 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'company-model',
-      question: 'Este Aquafarer o companie comercială sau un producător?',
+      question: 'Este Paddle Board Overstock o companie comercială sau un producător?',
       answer:
-        'Nici o fabrică pură, nici o companie comercială — Aquafarer LLC este o companie de brand cu propria bază de producție.Aquafarer LLC (New Mexico, SUA) se ocupă de distribuția globală, contracte, facturare și post-vânzare, în timp ce Aquafarer Qingdao Manufacturing Hub se ocupă de cercetare și dezvoltare, producție și controlul calității în propria noastră facilitate de 12.000 m². Fără intermediari: fiecare comandă este expediată direct din fabrică.',
+        'Nici o fabrică pură, nici o companie comercială — Weihai Dongjilian Co., Ltd. este o companie de brand cu propria bază de producție.Weihai Dongjilian Co., Ltd. (New Mexico, SUA) se ocupă de distribuția globală, contracte, facturare și post-vânzare, în timp ce Paddle Board Overstock Qingdao Manufacturing Hub se ocupă de cercetare și dezvoltare, producție și controlul calității în propria noastră facilitate de 12.000 m². Fără intermediari: fiecare comandă este expediată direct din fabrică.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -4040,7 +4040,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'us-contract-qingdao-shipping',
       question: 'De ce este contractul meu cu o companie americană când mărfurile sunt trimise din Qingdao?',
       answer:
-        'Aquafarer LLC (New Mexico, SUA) este entitatea comercială globală care semnează contracte, emite facturi și oferă suport post-vânzare, în timp ce Qingdao Manufacturing Hub produce și expediază fiecare comandă FOB Qingdao. Această structură dual-hub menține contractarea și decontarea standardului american, păstrând în același timp prețurile directe în fabrică și transparența totală a producției.',
+        'Weihai Dongjilian Co., Ltd. (New Mexico, SUA) este entitatea comercială globală care semnează contracte, emite facturi și oferă suport post-vânzare, în timp ce Qingdao Manufacturing Hub produce și expediază fiecare comandă FOB Qingdao. Această structură dual-hub menține contractarea și decontarea standardului american, păstrând în același timp prețurile directe în fabrică și transparența totală a producției.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -4060,7 +4060,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'ocean-use',
       question: 'Môžem ho použiť v oceáne?',
       answer:
-        'Áno.Aquafarer SUP Dosky sú určené na použitie v oceáne, jazerách a riekach. Naša séria Touring zvláda pobrežné rozbúrenie a všetky dosky sú z morskej kvality, PVC ktorá odolá korózii v slanej vode. Po použití v oceáne opláchnite čerstvou vodou.',
+        'Áno.Paddle Board Overstock SUP Dosky sú určené na použitie v oceáne, jazerách a riekach. Naša séria Touring zvláda pobrežné rozbúrenie a všetky dosky sú z morskej kvality, PVC ktorá odolá korózii v slanej vode. Po použití v oceáne opláchnite čerstvou vodou.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: ['weather-conditions'],
@@ -4078,7 +4078,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'travel-sup',
       question: 'Môžem cestovať s nafukovacou SUP?',
       answer:
-        'Určite. Každá Aquafarer doska sa balí do batohového puzdra určeného na pohodlné cestovanie — skontrolujte si veľkosť a váhové pravidlá prepravky. S hmotnosťou len 18-22 libier sa ľahko prenáša na pláž, k jazeru alebo cez letiskové terminály.',
+        'Určite. Každá Paddle Board Overstock doska sa balí do batohového puzdra určeného na pohodlné cestovanie — skontrolujte si veľkosť a váhové pravidlá prepravky. S hmotnosťou len 18-22 libier sa ľahko prenáša na pláž, k jazeru alebo cez letiskové terminály.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: [],
@@ -4096,7 +4096,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'box-contents',
       question: 'Čo je v krabici?',
       answer:
-        'Každá Aquafarer SUP obsahuje dosku, cestovný batoh, dvojčinnú ručnú pumpu, odnímateľnú plutvu, vodítko na špirálu a opravárenskú súpravu. Niektoré modely obsahujú aj možnosť vylepšenia karbónového pádla. Nafukovacie člny zahŕňajú loď, čerpadlo, opravárenskú súpravu a veslá.',
+        'Každá Paddle Board Overstock SUP obsahuje dosku, cestovný batoh, dvojčinnú ručnú pumpu, odnímateľnú plutvu, vodítko na špirálu a opravárenskú súpravu. Niektoré modely obsahujú aj možnosť vylepšenia karbónového pádla. Nafukovacie člny zahŕňajú loď, čerpadlo, opravárenskú súpravu a veslá.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -4132,7 +4132,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'puncture-repair',
       question: 'Ako opravím defekt?',
       answer:
-        'Vyčistite miesto, vyrežte záplatu s zaoblenými rohmi, naneste PVC lepidlo, pevne pritlačte a počkajte 24 hodín pred nafúknutím.Aquafarer Dosky obsahujú opravnú súpravu. Podrobné pokyny nájdete v našom sprievodcovi opravou nafukovacích dosk.',
+        'Vyčistite miesto, vyrežte záplatu s zaoblenými rohmi, naneste PVC lepidlo, pevne pritlačte a počkajte 24 hodín pred nafúknutím.Paddle Board Overstock Dosky obsahujú opravnú súpravu. Podrobné pokyny nájdete v našom sprievodcovi opravou nafukovacích dosk.',
       category: 'maintenance',
       relatedProducts: [],
       relatedGuides: ['inflatable-repair', 'sup-maintenance'],
@@ -4166,9 +4166,9 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'warranty',
-      question: 'Aká Aquafarer je záruka?',
+      question: 'Aká Paddle Board Overstock je záruka?',
       answer:
-        'Všetky Aquafarer produkty sú kryté komplexnou zárukou výrobcu. Látka, švy a trup nafukovacích člnových trubiek sú kryté 5-ročnou obmedzenou zárukou;SUP dosky a príslušenstvo majú 2-ročnú obmedzenú záruku. Záruka kryje chyby v materiáloch a spracovaní pri bežnom používaní.',
+        'Všetky Paddle Board Overstock produkty sú kryté komplexnou zárukou výrobcu. Látka, švy a trup nafukovacích člnových trubiek sú kryté 5-ročnou obmedzenou zárukou;SUP dosky a príslušenstvo majú 2-ročnú obmedzenú záruku. Záruka kryje chyby v materiáloch a spracovaní pri bežnom používaní.',
       category: 'warranty',
       relatedProducts: [],
       relatedGuides: [],
@@ -4231,7 +4231,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'material-difference',
       question: 'Aký je rozdiel medzi PVC a Hypalon?',
       answer:
-        'PVC je ľahší, cenovo dostupnejší a jednoduchšie opravovateľný — ideálny na rekreačné použitie.Hypalon (CSM) ponúka UV vynikajúcu a chemickú odolnosť s dlhšou životnosťou, preferované pre komerčné aj vojenské použitie.Aquafarer používa obe v závislosti od typu produktu.',
+        'PVC je ľahší, cenovo dostupnejší a jednoduchšie opravovateľný — ideálny na rekreačné použitie.Hypalon (CSM) ponúka UV vynikajúcu a chemickú odolnosť s dlhšou životnosťou, preferované pre komerčné aj vojenské použitie.Paddle Board Overstock používa obe v závislosti od typu produktu.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -4240,7 +4240,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-width-stability',
       question: 'SUP Aká šírka je najlepšia pre stabilitu?',
       answer:
-        'Pre začiatočníkov poskytuje šírka 33–34 palcov najlepšiu rovnováhu medzi stabilitou a ľahkosťou pádlovania. Dosky užšie ako 32 palcov pôsobia začiatočníkom naklonene. Aquafarer SUP Explorer 11 s dĺžkou 33 palcov je ideálny na učenie.',
+        'Pre začiatočníkov poskytuje šírka 33–34 palcov najlepšiu rovnováhu medzi stabilitou a ľahkosťou pádlovania. Dosky užšie ako 32 palcov pôsobia začiatočníkom naklonene. Paddle Board Overstock SUP Explorer 11 s dĺžkou 33 palcov je ideálny na učenie.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-size-guide', 'paddle-board-size-guide'],
@@ -4273,24 +4273,24 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       relatedGuides: ['inflatable-boat-buying-guide'],
     },
     {
-      id: 'aquafarer-vs-others',
-      question: 'Ako sa Aquafarer porovnáva s inými značkami?',
+      id: 'paddleboardoverstock-vs-others',
+      question: 'Ako sa Paddle Board Overstock porovnáva s inými značkami?',
       answer:
-        'Aquafarer Ponúka najlepšiu hodnotu v oblasti nafukovacieho vybavenia na vodné športy. V porovnaní s Red Paddle Co. Aquafarer poskytuje 90 % výkonu pri 60 % ceny. V porovnaní s iRockerom používa vyššiu Aquafarer kvalitu trojvrstvovej vojenskej PVC triedy a PSI vyššie hodnotenie. V porovnaní s Bluefinom Aquafarer ponúka lepšie materiálové špecifikácie. Pre väčšinu rekreačných pádlarov Aquafarer poskytuje najlepší pomer kvality a ceny.',
+        'Paddle Board Overstock Ponúka najlepšiu hodnotu v oblasti nafukovacieho vybavenia na vodné športy. V porovnaní s Red Paddle Co. Paddle Board Overstock poskytuje 90 % výkonu pri 60 % ceny. V porovnaní s iRockerom používa vyššiu Paddle Board Overstock kvalitu trojvrstvovej vojenskej PVC triedy a PSI vyššie hodnotenie. V porovnaní s Bluefinom Paddle Board Overstock ponúka lepšie materiálové špecifikácie. Pre väčšinu rekreačných pádlarov Paddle Board Overstock poskytuje najlepší pomer kvality a ceny.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: [
         'best-surf-gear-brands-compared',
-        'aquafarer-vs-red-paddle',
-        'aquafarer-vs-irocker',
-        'aquafarer-vs-bluefin',
+        'paddleboardoverstock-vs-red-paddle',
+        'paddleboardoverstock-vs-irocker',
+        'paddleboardoverstock-vs-bluefin',
       ],
     },
     {
       id: 'fishing-sup-setup',
       question: 'Môžem rybárčiť z SUP dosky?',
       answer:
-        'Áno.SUP Rybárčenie je čoraz populárnejšie, pretože stojaca poloha poskytuje výborný výhľad do vody. Pre stabilitu si vyberte dosku aspoň 11 stôp dlhú a širokú 33–34 palcov. Pridajte mliečnu debnu s držiakmi na prúty upevnenými na palubových bungees, malú kotvu a vždy noste . PFD  Aquafarer SUP Explorer 11 je vhodný na rekreačné rybárčenie.',
+        'Áno.SUP Rybárčenie je čoraz populárnejšie, pretože stojaca poloha poskytuje výborný výhľad do vody. Pre stabilitu si vyberte dosku aspoň 11 stôp dlhú a širokú 33–34 palcov. Pridajte mliečnu debnu s držiakmi na prúty upevnenými na palubových bungees, malú kotvu a vždy noste . PFD  Paddle Board Overstock SUP Explorer 11 je vhodný na rekreačné rybárčenie.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['fishing-sup-guide', 'sup-anchor-guide'],
@@ -4308,7 +4308,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'airline-travel-sup',
       question: 'Aké sú pravidlá leteckých spoločností pre cestovanie s nafukovacou SUP?',
       answer:
-        'Väčšina leteckých spoločností prijíma SUP batohy ako odbavenú batožinu, ak vážia menej ako 23–32 kg. Aquafarer Batohos má približne rozmery 90x40x30 cm a váži približne 15 kg zabaleného. Niektoré letecké spoločnosti môžu účtovať poplatky za nadrozmernú batožinu. Príďte skôr, zabaľte plutvy a pumpu samostatne do príručnej batožiny a označte batožinu ako krehkú. Pred letom si vždy preštudujte pravidlá vašej leteckej spoločnosti týkajúce sa športového vybavenia.',
+        'Väčšina leteckých spoločností prijíma SUP batohy ako odbavenú batožinu, ak vážia menej ako 23–32 kg. Paddle Board Overstock Batohos má približne rozmery 90x40x30 cm a váži približne 15 kg zabaleného. Niektoré letecké spoločnosti môžu účtovať poplatky za nadrozmernú batožinu. Príďte skôr, zabaľte plutvy a pumpu samostatne do príručnej batožiny a označte batožinu ako krehkú. Pred letom si vždy preštudujte pravidlá vašej leteckej spoločnosti týkajúce sa športového vybavenia.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-travel-guide'],
@@ -4333,7 +4333,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'oem-custom-branding',
-      question: 'Môžem si na produkty dať vlastné logo Aquafarer ?',
+      question: 'Môžem si na produkty dať vlastné logo Paddle Board Overstock ?',
       answer:
         'Áno. Naša OEM služba zahŕňa umiestnenie loga na mieru, farebné schémy na mieru a balenie na mieru. Ponúkame možnosti tampotlače, prenosu tepla a výšivky v závislosti od typu produktu. Pošlite svoje umelecké diela a špecifikácie nášmu predajnému tímu na cenovú ponuku a odhad dodacieho času.',
       category: 'ordering',
@@ -4344,7 +4344,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-inflate-pressure',
       question: 'Na čo PSI by som mal nafúknuť svoju SUP hodnotu?',
       answer:
-        'Nafukujte na maximálne hodnotenie dosky PSI pre najlepší výkon — typicky 15–18 PSI pre kvalitné nafukovacie dosky SUPs. Aquafarer SUP Explorer 11 dosahuje najlepšie výkony pri 15–18 PSI. Nedostatočné nafúknutie spôsobuje, že doska pôsobí mäkko a zle sa pohybuje. Preťaženie nad hodnotené maximum môže poškodiť drop-stitch závity. Skontrolujte nálepku pri ventile pre konkrétne hodnotenie vašej dosky.',
+        'Nafukujte na maximálne hodnotenie dosky PSI pre najlepší výkon — typicky 15–18 PSI pre kvalitné nafukovacie dosky SUPs. Paddle Board Overstock SUP Explorer 11 dosahuje najlepšie výkony pri 15–18 PSI. Nedostatočné nafúknutie spôsobuje, že doska pôsobí mäkko a zle sa pohybuje. Preťaženie nad hodnotené maximum môže poškodiť drop-stitch závity. Skontrolujte nálepku pri ventile pre konkrétne hodnotenie vašej dosky.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-inflatable-sup', 'sup-pump-guide'],
@@ -4371,7 +4371,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-kayak-conversion',
       question: 'Môžem SUP použiť dosku ako kajak?',
       answer:
-        'Áno. Mnohé SUP dosky, vrátane Aquafarer Explorer 11, majú D-krúžky, ktoré umožňujú pripevnenie sedadla na kajak. Použitie SUP s kajakovým sedlom a jednolistým pádlom poskytuje pohodlnú pozíciu na sedenie pri dlhších výpravách alebo rybolove. Niektoré značky ponúkajú špeciálne konverzné sady na kajak so sedadlami a dlhšími pádlami.',
+        'Áno. Mnohé SUP dosky, vrátane Paddle Board Overstock Explorer 11, majú D-krúžky, ktoré umožňujú pripevnenie sedadla na kajak. Použitie SUP s kajakovým sedlom a jednolistým pádlom poskytuje pohodlnú pozíciu na sedenie pri dlhších výpravách alebo rybolove. Niektoré značky ponúkajú špeciálne konverzné sady na kajak so sedadlami a dlhšími pádlami.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['kayak-vs-sup'],
@@ -4396,9 +4396,9 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'company-model',
-      question: 'Je Aquafarer to obchodná spoločnosť alebo výrobca?',
+      question: 'Je Paddle Board Overstock to obchodná spoločnosť alebo výrobca?',
       answer:
-        'Nie je to čistá továreň ani obchodná spoločnosť — Aquafarer LLC je značková spoločnosť s vlastnou výrobnou základňou.Aquafarer LLC (Nové Mexiko, USA) zabezpečuje globálnu distribúciu, zmluvy, fakturáciu a popredaj, zatiaľ čo Aquafarer Qingdao Manufacturing Hub vykonáva výskum a vývoj, výrobu a kontrolu kvality v našom vlastnom 12 000 m² zariadení. Žiadni sprostredkovači: každá objednávka sa odosiela priamo z továrne.',
+        'Nie je to čistá továreň ani obchodná spoločnosť — Weihai Dongjilian Co., Ltd. je značková spoločnosť s vlastnou výrobnou základňou.Weihai Dongjilian Co., Ltd. (Nové Mexiko, USA) zabezpečuje globálnu distribúciu, zmluvy, fakturáciu a popredaj, zatiaľ čo Paddle Board Overstock Qingdao Manufacturing Hub vykonáva výskum a vývoj, výrobu a kontrolu kvality v našom vlastnom 12 000 m² zariadení. Žiadni sprostredkovači: každá objednávka sa odosiela priamo z továrne.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -4407,7 +4407,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'us-contract-qingdao-shipping',
       question: 'Prečo je moja zmluva s americkou spoločnosťou, keď sa tovar posiela z Qingdao?',
       answer:
-        'Aquafarer LLC (Nové Mexiko, USA) je globálna obchodná entita, ktorá podpisuje zmluvy, vydáva faktúry a poskytuje popredajnú podporu, zatiaľ čo Qingdao Manufacturing Hub vyrába a odosiela každú objednávku FOB Qingdao. Táto dvojitá centrálna štruktúra zachováva americké štandardy zmlúv a vyrovnania, pričom zachováva ceny priamo z továrne a úplnú transparentnosť výroby.',
+        'Weihai Dongjilian Co., Ltd. (Nové Mexiko, USA) je globálna obchodná entita, ktorá podpisuje zmluvy, vydáva faktúry a poskytuje popredajnú podporu, zatiaľ čo Qingdao Manufacturing Hub vyrába a odosiela každú objednávku FOB Qingdao. Táto dvojitá centrálna štruktúra zachováva americké štandardy zmlúv a vyrovnania, pričom zachováva ceny priamo z továrne a úplnú transparentnosť výroby.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -4427,7 +4427,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'ocean-use',
       question: 'Ali ga lahko uporabljam v oceanu?',
       answer:
-        'Da.Aquafarer SUP Deske so narejene za uporabo v oceanu, jezeru in reki. Naša serija Touring se ukvarja z obalnim razburjanjem, vse deske pa uporabljajo morske PVC materiale, ki so odporni proti koroziji v slani vodi. Po uporabi v morju sperite s sladko vodo.',
+        'Da.Paddle Board Overstock SUP Deske so narejene za uporabo v oceanu, jezeru in reki. Naša serija Touring se ukvarja z obalnim razburjanjem, vse deske pa uporabljajo morske PVC materiale, ki so odporni proti koroziji v slani vodi. Po uporabi v morju sperite s sladko vodo.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: ['weather-conditions'],
@@ -4445,7 +4445,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'travel-sup',
       question: 'Ali lahko potujem z napihljivo napravo SUP?',
       answer:
-        'Absolutno. Vsaka Aquafarer deska je spakirana v nahrbtnik velikosti torbe, zasnovano za priročno potovanje — preverite pravila glede velikosti in teže vašega transporterja. S samo 18-22 lbs jo je enostavno prenesti na plažo, jezero ali skozi letališke terminale.',
+        'Absolutno. Vsaka Paddle Board Overstock deska je spakirana v nahrbtnik velikosti torbe, zasnovano za priročno potovanje — preverite pravila glede velikosti in teže vašega transporterja. S samo 18-22 lbs jo je enostavno prenesti na plažo, jezero ali skozi letališke terminale.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: [],
@@ -4463,7 +4463,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'box-contents',
       question: 'Kaj pride v škatli?',
       answer:
-        'Vsak Aquafarer SUP vključuje desko, potovalni nahrbtnik, ročno črpalko z dvojnim delovanjem, odstranljivo plavut, povodec za tuljavo in komplet za popravilo. Nekateri modeli vključujejo tudi možnost nadgradnje ogljikovega vesla. Napihljivi čolni vključujejo čoln, črpalko, komplet za popravilo in vesla.',
+        'Vsak Paddle Board Overstock SUP vključuje desko, potovalni nahrbtnik, ročno črpalko z dvojnim delovanjem, odstranljivo plavut, povodec za tuljavo in komplet za popravilo. Nekateri modeli vključujejo tudi možnost nadgradnje ogljikovega vesla. Napihljivi čolni vključujejo čoln, črpalko, komplet za popravilo in vesla.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -4499,7 +4499,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'puncture-repair',
       question: 'Kako popravim predrto luknjo?',
       answer:
-        'Očistite območje, izrežite zaplato z zaobljenimi vogali, nanesite PVC lepilo, močno pritisnite in počakajte 24 ur pred napihovanjem.Aquafarer Deske vključujejo komplet za popravila. Za podrobna navodila si oglejte naš vodič za popravilo napihljivih naprav.',
+        'Očistite območje, izrežite zaplato z zaobljenimi vogali, nanesite PVC lepilo, močno pritisnite in počakajte 24 ur pred napihovanjem.Paddle Board Overstock Deske vključujejo komplet za popravila. Za podrobna navodila si oglejte naš vodič za popravilo napihljivih naprav.',
       category: 'maintenance',
       relatedProducts: [],
       relatedGuides: ['inflatable-repair', 'sup-maintenance'],
@@ -4533,9 +4533,9 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'warranty',
-      question: 'Aquafarer Kakšna je garancija?',
+      question: 'Paddle Board Overstock Kakšna je garancija?',
       answer:
-        'Aquafarer Vsi izdelki so podprti s celovito garancijo proizvajalca. Tkanina, šivi in trup napihljivih čolnov so kriti s 5-letno omejeno garancijo;SUP deske in dodatki imajo omejeno garancijo na 2 leti. Garancija krije napake v materialih in izdelavi pri običajni uporabi.',
+        'Paddle Board Overstock Vsi izdelki so podprti s celovito garancijo proizvajalca. Tkanina, šivi in trup napihljivih čolnov so kriti s 5-letno omejeno garancijo;SUP deske in dodatki imajo omejeno garancijo na 2 leti. Garancija krije napake v materialih in izdelavi pri običajni uporabi.',
       category: 'warranty',
       relatedProducts: [],
       relatedGuides: [],
@@ -4598,7 +4598,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'material-difference',
       question: 'Kakšna je razlika med PVC in Hypalon?',
       answer:
-        'PVC je lažja, cenovno ugodnejša in lažja za popravilo — idealna za rekreativno uporabo.Hypalon (CSM) ponuja UV boljšo in kemično odpornost ter daljšo življenjsko dobo, kar je priporočljivo za komercialne in vojaške aplikacije.Aquafarer Uporablja se oboje, odvisno od razreda izdelka.',
+        'PVC je lažja, cenovno ugodnejša in lažja za popravilo — idealna za rekreativno uporabo.Hypalon (CSM) ponuja UV boljšo in kemično odpornost ter daljšo življenjsko dobo, kar je priporočljivo za komercialne in vojaške aplikacije.Paddle Board Overstock Uporablja se oboje, odvisno od razreda izdelka.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -4607,7 +4607,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-width-stability',
       question: 'SUP Katera širina je najboljša za stabilnost?',
       answer:
-        'Za začetnike širina 33–34 palcev zagotavlja najboljše ravnovesje med stabilnostjo in lahkotnostjo veslanja. Deske, ožje od 32 palcev, se začetnikom zdijo rahlo napete. Aquafarer SUP Explorer 11 z dolžino 33 palcev je idealen za učenje.',
+        'Za začetnike širina 33–34 palcev zagotavlja najboljše ravnovesje med stabilnostjo in lahkotnostjo veslanja. Deske, ožje od 32 palcev, se začetnikom zdijo rahlo napete. Paddle Board Overstock SUP Explorer 11 z dolžino 33 palcev je idealen za učenje.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-size-guide', 'paddle-board-size-guide'],
@@ -4640,24 +4640,24 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       relatedGuides: ['inflatable-boat-buying-guide'],
     },
     {
-      id: 'aquafarer-vs-others',
-      question: 'Kako se primerja Aquafarer z drugimi znamkami?',
+      id: 'paddleboardoverstock-vs-others',
+      question: 'Kako se primerja Paddle Board Overstock z drugimi znamkami?',
       answer:
-        'Aquafarer Ponuja najboljšo vrednost za napihljivo opremo za vodne športe. V primerjavi z Red Paddle Co Aquafarer zagotavlja 90 % zmogljivosti po 60 % cene. V primerjavi z iRockerjem Aquafarer uporablja višjo kakovost vojaške opreme s troplastno plastjo PVC in PSI višjimi ocenami. V primerjavi z Bluefinom Aquafarer ponuja boljše materialne specifikacije. Za večino rekreativnih veslačev Aquafarer nudi najboljše ravnovesje med kakovostjo in ceno.',
+        'Paddle Board Overstock Ponuja najboljšo vrednost za napihljivo opremo za vodne športe. V primerjavi z Red Paddle Co Paddle Board Overstock zagotavlja 90 % zmogljivosti po 60 % cene. V primerjavi z iRockerjem Paddle Board Overstock uporablja višjo kakovost vojaške opreme s troplastno plastjo PVC in PSI višjimi ocenami. V primerjavi z Bluefinom Paddle Board Overstock ponuja boljše materialne specifikacije. Za večino rekreativnih veslačev Paddle Board Overstock nudi najboljše ravnovesje med kakovostjo in ceno.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: [
         'best-surf-gear-brands-compared',
-        'aquafarer-vs-red-paddle',
-        'aquafarer-vs-irocker',
-        'aquafarer-vs-bluefin',
+        'paddleboardoverstock-vs-red-paddle',
+        'paddleboardoverstock-vs-irocker',
+        'paddleboardoverstock-vs-bluefin',
       ],
     },
     {
       id: 'fishing-sup-setup',
       question: 'Ali lahko ribarim z SUP desko?',
       answer:
-        'Da.SUP Ribolov je vse bolj priljubljen, ker stoječi položaj omogoča odlično vidljivost v vodo. Izberite desko, dolgo vsaj 11 čevljev in široko 33–34 palcev za stabilnost. Dodajte mlečno škatlo z držalami za palice, pritrjeno na gumice na palubi, majhno sidro in vedno nosite . PFD  Aquafarer SUP Explorer 11 je odličen za priložnostni ribolov.',
+        'Da.SUP Ribolov je vse bolj priljubljen, ker stoječi položaj omogoča odlično vidljivost v vodo. Izberite desko, dolgo vsaj 11 čevljev in široko 33–34 palcev za stabilnost. Dodajte mlečno škatlo z držalami za palice, pritrjeno na gumice na palubi, majhno sidro in vedno nosite . PFD  Paddle Board Overstock SUP Explorer 11 je odličen za priložnostni ribolov.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['fishing-sup-guide', 'sup-anchor-guide'],
@@ -4675,7 +4675,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'airline-travel-sup',
       question: 'Kakšna so pravila letalske družbe za potovanje z napihljivim vozilom SUP?',
       answer:
-        'Večina letalskih družb sprejema SUP nahrbtnike kot oddano prtljago, če so težki manj kot 23–32 kg. Aquafarer Nahrbtnik je približno 90x40x30 cm in tehta približno 15 kg spakiranega. Nekatere letalske družbe lahko zaračunavajo pristojbine za preveliko prtljago. Prispeli zgodaj, ločeno zavijte plavuti in črpalko v ročno prtljago ter označite torbo kot krhko. Pred letom vedno preverite pravila vaše letalske družbe glede športne opreme.',
+        'Večina letalskih družb sprejema SUP nahrbtnike kot oddano prtljago, če so težki manj kot 23–32 kg. Paddle Board Overstock Nahrbtnik je približno 90x40x30 cm in tehta približno 15 kg spakiranega. Nekatere letalske družbe lahko zaračunavajo pristojbine za preveliko prtljago. Prispeli zgodaj, ločeno zavijte plavuti in črpalko v ročno prtljago ter označite torbo kot krhko. Pred letom vedno preverite pravila vaše letalske družbe glede športne opreme.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-travel-guide'],
@@ -4700,7 +4700,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'oem-custom-branding',
-      question: 'Ali lahko na izdelke nalepim svoj logotip Aquafarer ?',
+      question: 'Ali lahko na izdelke nalepim svoj logotip Paddle Board Overstock ?',
       answer:
         'Da. OEM Naša storitev vključuje postavitev logotipov po meri, barvne sheme po meri in embalažo po meri. Ponujamo možnosti za tiskanje tampo, toplotni prenos in vezenje, odvisno od vrste izdelka. Pošljite svoje umetniško delo in specifikacije naši prodajni ekipi za ponudbo in oceno časa dobav.',
       category: 'ordering',
@@ -4711,7 +4711,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-inflate-pressure',
       question: 'Na kaj PSI naj napihnem svoj SUP sistem?',
       answer:
-        'Napihnite do največje ocenjene vrednosti deske PSI za najboljšo zmogljivost — običajno 15–18 PSI za kakovostno napihljivo desko SUPs. Aquafarer SUP Explorer 11 najbolje deluje pri 15–18 PSI. Premalo napihnjenost povzroči, da deska deluje mehko in slabo sledi. Prekomerno napihnjenost nad največjo oceno lahko drop-stitch poškoduje navoje. Preverite nalepko blizu ventila za natančno oceno vaše deske.',
+        'Napihnite do največje ocenjene vrednosti deske PSI za najboljšo zmogljivost — običajno 15–18 PSI za kakovostno napihljivo desko SUPs. Paddle Board Overstock SUP Explorer 11 najbolje deluje pri 15–18 PSI. Premalo napihnjenost povzroči, da deska deluje mehko in slabo sledi. Prekomerno napihnjenost nad največjo oceno lahko drop-stitch poškoduje navoje. Preverite nalepko blizu ventila za natančno oceno vaše deske.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-inflatable-sup', 'sup-pump-guide'],
@@ -4738,7 +4738,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-kayak-conversion',
       question: 'Ali lahko SUP desko uporabim kot kajak?',
       answer:
-        'Da. Veliko desk, SUP vključno z Aquafarer Explorer 11, ima D-obroče, ki omogočajo pritrditev sedeža za kajak. Uporaba SUP s sedežem za kajak in enoreznim veslom omogoča udoben položaj sedenja za daljše izlete ali ribolov. Nekatere znamke ponujajo namenske komplete za predelavo kajaka s sedeži in daljšimi vesli.',
+        'Da. Veliko desk, SUP vključno z Paddle Board Overstock Explorer 11, ima D-obroče, ki omogočajo pritrditev sedeža za kajak. Uporaba SUP s sedežem za kajak in enoreznim veslom omogoča udoben položaj sedenja za daljše izlete ali ribolov. Nekatere znamke ponujajo namenske komplete za predelavo kajaka s sedeži in daljšimi vesli.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['kayak-vs-sup'],
@@ -4763,9 +4763,9 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'company-model',
-      question: 'Je Aquafarer trgovsko podjetje ali proizvajalec?',
+      question: 'Je Paddle Board Overstock trgovsko podjetje ali proizvajalec?',
       answer:
-        'LLC ni čista tovarna niti trgovsko podjetje — LLC Aquafarer je blagovna znamka z lastno proizvodno bazo.Aquafarer LLC (New Mexico, ZDA) skrbi za globalno distribucijo, pogodbe, obračunavanje in poprodajo, medtem ko Aquafarer Qingdao Manufacturing Hub izvaja raziskave in razvoj, proizvodnjo ter nadzor kakovosti v našem lastnem 12.000 m² obratu. Brez posrednikov: vsako naročilo je poslano neposredno v tovarno.',
+        'LLC ni čista tovarna niti trgovsko podjetje — LLC Paddle Board Overstock je blagovna znamka z lastno proizvodno bazo.Weihai Dongjilian Co., Ltd. (New Mexico, ZDA) skrbi za globalno distribucijo, pogodbe, obračunavanje in poprodajo, medtem ko Paddle Board Overstock Qingdao Manufacturing Hub izvaja raziskave in razvoj, proizvodnjo ter nadzor kakovosti v našem lastnem 12.000 m² obratu. Brez posrednikov: vsako naročilo je poslano neposredno v tovarno.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -4774,7 +4774,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'us-contract-qingdao-shipping',
       question: 'Zakaj je moja pogodba z ameriškim podjetjem, ko se blago pošilja iz Qingdaoja?',
       answer:
-        'Aquafarer LLC (New Mexico, ZDA) je globalni komercialni subjekt, ki podpisuje pogodbe, izdaja račune in nudi poprodajno podporo, medtem ko Qingdao Manufacturing Hub proizvaja in pošilja vsako naročilo FOB Qingdao. Ta struktura z dvema vozliščema ohranja ameriške standarde pogodb in poravnave, hkrati pa ohranja neposredno tovarniško ceno in popolno transparentnost proizvodnje.',
+        'Weihai Dongjilian Co., Ltd. (New Mexico, ZDA) je globalni komercialni subjekt, ki podpisuje pogodbe, izdaja račune in nudi poprodajno podporo, medtem ko Qingdao Manufacturing Hub proizvaja in pošilja vsako naročilo FOB Qingdao. Ta struktura z dvema vozliščema ohranja ameriške standarde pogodb in poravnave, hkrati pa ohranja neposredno tovarniško ceno in popolno transparentnost proizvodnje.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -4794,7 +4794,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'ocean-use',
       question: 'Mogu li ga koristiti u okeanu?',
       answer:
-        'Da.Aquafarer SUP Ploče su izgrađene za upotrebu okeana, jezera i reke. Naša serija Touring obrađuje primorski chop, a sve ploče koriste morski razred PVC koji se odupire koroziji slane vode. Isperite svežom vodom nakon upotrebe okeana.',
+        'Da.Paddle Board Overstock SUP Ploče su izgrađene za upotrebu okeana, jezera i reke. Naša serija Touring obrađuje primorski chop, a sve ploče koriste morski razred PVC koji se odupire koroziji slane vode. Isperite svežom vodom nakon upotrebe okeana.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: ['weather-conditions'],
@@ -4812,7 +4812,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'travel-sup',
       question: 'Mogu li da putujem sa naduvavanje SUP?',
       answer:
-        'Apsolutno. Aquafarer Svaka tabla se pakuje u torbicu veličine ranca dizajniranu za praktično putovanje - proverite veličinu i težinu prevoznika. Na samo 18-22 kg, lako se nosi na plažu, jezero ili kroz aerodromske terminale.',
+        'Apsolutno. Paddle Board Overstock Svaka tabla se pakuje u torbicu veličine ranca dizajniranu za praktično putovanje - proverite veličinu i težinu prevoznika. Na samo 18-22 kg, lako se nosi na plažu, jezero ili kroz aerodromske terminale.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: [],
@@ -4830,7 +4830,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'box-contents',
       question: 'Šta dolazi u kutiji?',
       answer:
-        'Svaki Aquafarer SUP uključuje ploču, putni ranac, dvostruko dejstvo ručna pumpa, prenosivi peraja, kalem povodac, i komplet za popravku. Neki modeli takođe uključuju opciju nadogradnje ugljen veslo. Čamci na naduvavanje uključuju čamac, pumpa, komplet za popravku, i vesla.',
+        'Svaki Paddle Board Overstock SUP uključuje ploču, putni ranac, dvostruko dejstvo ručna pumpa, prenosivi peraja, kalem povodac, i komplet za popravku. Neki modeli takođe uključuju opciju nadogradnje ugljen veslo. Čamci na naduvavanje uključuju čamac, pumpa, komplet za popravku, i vesla.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -4866,7 +4866,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'puncture-repair',
       question: 'Kako da popravim punkciju?',
       answer:
-        'Očistite područje, izrežite zakrpu sa zaobljenim uglovima, nanesite PVC lepak, čvrsto pritisnite i sačekajte 24 sata pre naduvavanja.Aquafarer Ploče uključuju komplet za popravku. Za detaljna uputstva, pogledajte naš vodič za popravku na naduvavanje.',
+        'Očistite područje, izrežite zakrpu sa zaobljenim uglovima, nanesite PVC lepak, čvrsto pritisnite i sačekajte 24 sata pre naduvavanja.Paddle Board Overstock Ploče uključuju komplet za popravku. Za detaljna uputstva, pogledajte naš vodič za popravku na naduvavanje.',
       category: 'maintenance',
       relatedProducts: [],
       relatedGuides: ['inflatable-repair', 'sup-maintenance'],
@@ -4900,9 +4900,9 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'warranty',
-      question: 'Šta je Aquafarer garancija?',
+      question: 'Šta je Paddle Board Overstock garancija?',
       answer:
-        'Svi Aquafarer proizvodi su podržani sveobuhvatnom garancijom proizvođača. Gumeni čamac cevi tkanina, šavovi, i trup su pokriveni 5 godina ograničenom garancijom;SUP ploče i pribor nose 2 godine ograničenu garanciju. Garancija pokriva nedostatke u materijalu i izradi pod normalnom upotrebom.',
+        'Svi Paddle Board Overstock proizvodi su podržani sveobuhvatnom garancijom proizvođača. Gumeni čamac cevi tkanina, šavovi, i trup su pokriveni 5 godina ograničenom garancijom;SUP ploče i pribor nose 2 godine ograničenu garanciju. Garancija pokriva nedostatke u materijalu i izradi pod normalnom upotrebom.',
       category: 'warranty',
       relatedProducts: [],
       relatedGuides: [],
@@ -4965,7 +4965,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'material-difference',
       question: 'Koja je razlika između PVC i Hypalon?',
       answer:
-        'PVC je lakši, pristupačniji i lakši za popravku - idealan za rekreativnu upotrebu.Hypalon (CSM) nudi UV superiornu i hemijsku otpornost sa dužim životnim vekom, poželjno za komercijalne i vojne primene.Aquafarer koristi oba u zavisnosti od nivoa proizvoda.',
+        'PVC je lakši, pristupačniji i lakši za popravku - idealan za rekreativnu upotrebu.Hypalon (CSM) nudi UV superiornu i hemijsku otpornost sa dužim životnim vekom, poželjno za komercijalne i vojne primene.Paddle Board Overstock koristi oba u zavisnosti od nivoa proizvoda.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -4974,7 +4974,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-width-stability',
       question: 'SUP Koja širina je najbolja za stabilnost?',
       answer:
-        'Za početnike, širina od 33–34 inča obezbeđuje najbolji balans stabilnosti i lakoće veslanja. Ploče uže od 32 inča osećaju tippi za nove veslače. Aquafarer SUP Ekplorer 11 na 33 inča je idealan za učenje.',
+        'Za početnike, širina od 33–34 inča obezbeđuje najbolji balans stabilnosti i lakoće veslanja. Ploče uže od 32 inča osećaju tippi za nove veslače. Paddle Board Overstock SUP Ekplorer 11 na 33 inča je idealan za učenje.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-size-guide', 'paddle-board-size-guide'],
@@ -5007,24 +5007,24 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       relatedGuides: ['inflatable-boat-buying-guide'],
     },
     {
-      id: 'aquafarer-vs-others',
-      question: 'Kako se Aquafarer upoređuje sa drugim brendovima?',
+      id: 'paddleboardoverstock-vs-others',
+      question: 'Kako se Paddle Board Overstock upoređuje sa drugim brendovima?',
       answer:
-        'Aquafarer Nudi najbolju vrednost u naduvavanje opreme za sportove na vodi. U poređenju sa Red Paddle Co, Aquafarer isporučuje 90% performansi na 60% troškova. U poređenju sa iRocker, Aquafarer koristi viši stepen troslojni vojni razred PVC i PSI viši rejting. U poređenju sa Bluefin, Aquafarer nudi superiorne specifikacije materijala. Za većinu rekreativnih veslača, Aquafarer obezbeđuje najbolji balans kvaliteta i cene.',
+        'Paddle Board Overstock Nudi najbolju vrednost u naduvavanje opreme za sportove na vodi. U poređenju sa Red Paddle Co, Paddle Board Overstock isporučuje 90% performansi na 60% troškova. U poređenju sa iRocker, Paddle Board Overstock koristi viši stepen troslojni vojni razred PVC i PSI viši rejting. U poređenju sa Bluefin, Paddle Board Overstock nudi superiorne specifikacije materijala. Za većinu rekreativnih veslača, Paddle Board Overstock obezbeđuje najbolji balans kvaliteta i cene.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: [
         'best-surf-gear-brands-compared',
-        'aquafarer-vs-red-paddle',
-        'aquafarer-vs-irocker',
-        'aquafarer-vs-bluefin',
+        'paddleboardoverstock-vs-red-paddle',
+        'paddleboardoverstock-vs-irocker',
+        'paddleboardoverstock-vs-bluefin',
       ],
     },
     {
       id: 'fishing-sup-setup',
       question: 'Mogu li da pecam sa SUP daske?',
       answer:
-        'Da.SUP Ribolov je sve popularniji jer stojeći položaj nudi odličnu vidljivost u vodu. Izaberite dasku dužine najmanje 11 stopa i širine 33–34 inča za stabilnost. Dodajte sanduk za mleko sa držačima štapova pričvršćenim za bungees palube, malo sidro i uvek nosite PFD. Aquafarer SUP Ekplorer 11 dobro funkcioniše za povremeni ribolov.',
+        'Da.SUP Ribolov je sve popularniji jer stojeći položaj nudi odličnu vidljivost u vodu. Izaberite dasku dužine najmanje 11 stopa i širine 33–34 inča za stabilnost. Dodajte sanduk za mleko sa držačima štapova pričvršćenim za bungees palube, malo sidro i uvek nosite PFD. Paddle Board Overstock SUP Ekplorer 11 dobro funkcioniše za povremeni ribolov.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['fishing-sup-guide', 'sup-anchor-guide'],
@@ -5042,7 +5042,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'airline-travel-sup',
       question: 'Koja su pravila aviokompanije za putovanje sa naduvavanjem SUP?',
       answer:
-        'Većina avio-kompanija prihvata SUP rančeve kao predani prtljag ako je ispod 23–32 kg. Aquafarer Ranac je približno 90k40k30 cm i težak oko 15 kg spakovane. Neke aviokompanije mogu naplaćivati naknade za preveliki prtljag. Dođite ranije, umotajte peraje i pumpu odvojeno u ručnu prtljagu, i označite torbu kao krhku. Uvek istražite politiku sportske opreme vaše aviokompanije pre letenja.',
+        'Većina avio-kompanija prihvata SUP rančeve kao predani prtljag ako je ispod 23–32 kg. Paddle Board Overstock Ranac je približno 90k40k30 cm i težak oko 15 kg spakovane. Neke aviokompanije mogu naplaćivati naknade za preveliki prtljag. Dođite ranije, umotajte peraje i pumpu odvojeno u ručnu prtljagu, i označite torbu kao krhku. Uvek istražite politiku sportske opreme vaše aviokompanije pre letenja.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-travel-guide'],
@@ -5067,7 +5067,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'oem-custom-branding',
-      question: 'Mogu li da stavim svoj logo na Aquafarer proizvode?',
+      question: 'Mogu li da stavim svoj logo na Paddle Board Overstock proizvode?',
       answer:
         'Da. Naša OEM usluga uključuje postavljanje prilagođenog logotipa, prilagođene šeme boja i prilagođeno pakovanje. Nudimo opcije za tampon štampu, prenos toplote i vez u zavisnosti od vrste proizvoda. Pošaljite svoje umetničko delo i specifikacije našem prodajnom timu za ponudu i procenu vremena.',
       category: 'ordering',
@@ -5078,7 +5078,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-inflate-pressure',
       question: 'Na šta PSI treba da naduvam SUP ?',
       answer:
-        'Naduvavanje na ocijenjeni maksimum ploče PSI za najbolje performanse — obično 15–18 PSI za kvalitet na naduvavanje SUPs. Aquafarer SUP Ekplorer 11 najbolje obavlja na 15–18 PSI. Nedovoljno naduvavanje uzrokuje da se ploča oseća meko i slabo prati. Prekomerna inflacija pored ocenjenog maksimuma drop-stitch rizikuje oštećenje tema. Proverite nalepnicu u blizini ventila za specifičnu ocenu vašeg odbora.',
+        'Naduvavanje na ocijenjeni maksimum ploče PSI za najbolje performanse — obično 15–18 PSI za kvalitet na naduvavanje SUPs. Paddle Board Overstock SUP Ekplorer 11 najbolje obavlja na 15–18 PSI. Nedovoljno naduvavanje uzrokuje da se ploča oseća meko i slabo prati. Prekomerna inflacija pored ocenjenog maksimuma drop-stitch rizikuje oštećenje tema. Proverite nalepnicu u blizini ventila za specifičnu ocenu vašeg odbora.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-inflatable-sup', 'sup-pump-guide'],
@@ -5105,7 +5105,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-kayak-conversion',
       question: 'Mogu li da koristim SUP dasku kao kajak?',
       answer:
-        'Da. Mnogi SUP odbori, uključujući Aquafarer i Ekplorer 11, imaju D-prstenove koji omogućavaju pričvršćivanje sedišta kajaka. Korišćenje SUP sa sedištem kajaka i veslom sa jednom oštricom nudi udoban položaj sedenja za duža putovanja ili ribolov. Neki brendovi nude namenske komplete za konverziju kajaka sa sedištima i dužim veslima.',
+        'Da. Mnogi SUP odbori, uključujući Paddle Board Overstock i Ekplorer 11, imaju D-prstenove koji omogućavaju pričvršćivanje sedišta kajaka. Korišćenje SUP sa sedištem kajaka i veslom sa jednom oštricom nudi udoban položaj sedenja za duža putovanja ili ribolov. Neki brendovi nude namenske komplete za konverziju kajaka sa sedištima i dužim veslima.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['kayak-vs-sup'],
@@ -5130,9 +5130,9 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'company-model',
-      question: 'Da li je Aquafarer trgovačko preduzeće ili proizvođač?',
+      question: 'Da li je Paddle Board Overstock trgovačko preduzeće ili proizvođač?',
       answer:
-        'Ni čista fabrika ni trgovačko preduzeće — Aquafarer LLC je brend kompanija sa sopstvenom proizvodnom bazom.Aquafarer LLC (Novi Meksiko, SAD) bavi se globalnom distribucijom, ugovorima, naplatom i postprodajom, dok Aquafarer Kingdao Manufacturing Hub vodi istraživanje i razvoj, proizvodnju i kontrolu kvaliteta u našem objektu od 12.000 m². Nema posrednika: svaka narudžba se šalje direktno u fabrici.',
+        'Ni čista fabrika ni trgovačko preduzeće — Weihai Dongjilian Co., Ltd. je brend kompanija sa sopstvenom proizvodnom bazom.Weihai Dongjilian Co., Ltd. (Novi Meksiko, SAD) bavi se globalnom distribucijom, ugovorima, naplatom i postprodajom, dok Paddle Board Overstock Kingdao Manufacturing Hub vodi istraživanje i razvoj, proizvodnju i kontrolu kvaliteta u našem objektu od 12.000 m². Nema posrednika: svaka narudžba se šalje direktno u fabrici.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -5141,7 +5141,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'us-contract-qingdao-shipping',
       question: 'Zašto je moj ugovor sa američkom kompanijom kada se roba isporučuje iz Kingdaoa?',
       answer:
-        'Aquafarer LLC (Novi Meksiko, SAD) je globalni komercijalni subjekt koji potpisuje ugovore, izdaje fakture i pruža podršku nakon prodaje, dok Kingdao Manufacturing Hub proizvodi i otprema svaku narudžbu FOB Kingdao. Ova struktura sa dvostrukim čvorištem održava američko standardno ugovaranje i poravnanje, uz očuvanje fabričkih direktnih cena i potpune transparentnosti proizvodnje.',
+        'Weihai Dongjilian Co., Ltd. (Novi Meksiko, SAD) je globalni komercijalni subjekt koji potpisuje ugovore, izdaje fakture i pruža podršku nakon prodaje, dok Kingdao Manufacturing Hub proizvodi i otprema svaku narudžbu FOB Kingdao. Ova struktura sa dvostrukim čvorištem održava američko standardno ugovaranje i poravnanje, uz očuvanje fabričkih direktnih cena i potpune transparentnosti proizvodnje.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -5161,7 +5161,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'ocean-use',
       question: 'ฉันใช้มันในทะเลได้ไหม?',
       answer:
-        'ใช่Aquafarer SUP บอร์ดถูกออกแบบมาสําหรับการใช้งานในทะเล ทะเลสาบ และแม่น้ําซีรีส์ Touring ของเรารองรับคลื่นชายฝั่ง และบอร์ดทุกรุ่นใช้วัสดุเกรดทางทะเล PVC ที่ทนต่อการกัดกร่อนจากน้ําเค็มล้างด้วยน้ําสะอาดหลังใช้ในทะเล',
+        'ใช่Paddle Board Overstock SUP บอร์ดถูกออกแบบมาสําหรับการใช้งานในทะเล ทะเลสาบ และแม่น้ําซีรีส์ Touring ของเรารองรับคลื่นชายฝั่ง และบอร์ดทุกรุ่นใช้วัสดุเกรดทางทะเล PVC ที่ทนต่อการกัดกร่อนจากน้ําเค็มล้างด้วยน้ําสะอาดหลังใช้ในทะเล',
       category: 'general',
       relatedProducts: [],
       relatedGuides: ['weather-conditions'],
@@ -5179,7 +5179,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'travel-sup',
       question: 'ฉันสามารถเดินทางพร้อมเรือเป่าลม SUP ได้ไหม?',
       answer:
-        'แน่นอน Aquafarer ทุกแผ่นไม้บรรจุในกระเป๋าเป้ขนาดเป้ที่ออกแบบมาเพื่อความสะดวกในการเดินทาง — ตรวจสอบนโยบายขนาดและน้ําหนักของกระเป๋าของคุณน้ําหนักเพียง 18-22 ปอนด์ จึงพกพาไปชายหาด ทะเลสาบ หรือผ่านอาคารผู้โดยสารสนามบินได้ง่าย',
+        'แน่นอน Paddle Board Overstock ทุกแผ่นไม้บรรจุในกระเป๋าเป้ขนาดเป้ที่ออกแบบมาเพื่อความสะดวกในการเดินทาง — ตรวจสอบนโยบายขนาดและน้ําหนักของกระเป๋าของคุณน้ําหนักเพียง 18-22 ปอนด์ จึงพกพาไปชายหาด ทะเลสาบ หรือผ่านอาคารผู้โดยสารสนามบินได้ง่าย',
       category: 'general',
       relatedProducts: [],
       relatedGuides: [],
@@ -5197,7 +5197,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'box-contents',
       question: 'ในกล่องมีอะไรบ้าง?',
       answer:
-        'ทุก Aquafarer SUP รุ่นประกอบด้วยบอร์ด กระเป๋าเป้เดินทาง ปั๊มมือแบบสองแอคชั่น ครีบถอดได้ สายจูงแบบขด และชุดซ่อมบางรุ่นยังมีตัวเลือกอัปเกรดไม้พายคาร์บอนเรือเป่าลมประกอบด้วยเรือ ปั๊ม ชุดซ่อม และไม้พาย',
+        'ทุก Paddle Board Overstock SUP รุ่นประกอบด้วยบอร์ด กระเป๋าเป้เดินทาง ปั๊มมือแบบสองแอคชั่น ครีบถอดได้ สายจูงแบบขด และชุดซ่อมบางรุ่นยังมีตัวเลือกอัปเกรดไม้พายคาร์บอนเรือเป่าลมประกอบด้วยเรือ ปั๊ม ชุดซ่อม และไม้พาย',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -5233,7 +5233,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'puncture-repair',
       question: 'ฉันจะซ่อมแซมรอยรั่วได้อย่างไร?',
       answer:
-        'ทําความสะอาดบริเวณนั้น ตัดแผ่นที่มีมุมโค้งมน ทา PVC กาว กดให้แน่น และรอ 24 ชั่วโมงก่อนเติมลม Aquafarer แผ่นไม้มีชุดซ่อมมาให้สําหรับคําแนะนําโดยละเอียด โปรดดูคู่มือซ่อมเป่าลมของเรา',
+        'ทําความสะอาดบริเวณนั้น ตัดแผ่นที่มีมุมโค้งมน ทา PVC กาว กดให้แน่น และรอ 24 ชั่วโมงก่อนเติมลม Paddle Board Overstock แผ่นไม้มีชุดซ่อมมาให้สําหรับคําแนะนําโดยละเอียด โปรดดูคู่มือซ่อมเป่าลมของเรา',
       category: 'maintenance',
       relatedProducts: [],
       relatedGuides: ['inflatable-repair', 'sup-maintenance'],
@@ -5267,9 +5267,9 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'warranty',
-      question: 'Aquafarer การรับประกันคืออะไร?',
+      question: 'Paddle Board Overstock การรับประกันคืออะไร?',
       answer:
-        'สินค้าทุก Aquafarer ชิ้นได้รับการรับประกันจากผู้ผลิตอย่างครบถ้วนผ้าท่อเป่าลม รอยต่อ และตัวเรือได้รับการรับประกันจํากัด 5 ปีSUP บอร์ดและอุปกรณ์เสริมรับประกันจํากัด 2 ปีการรับประกันครอบคลุมข้อบกพร่องในวัสดุและการผลิตภายใต้การใช้งานปกติ',
+        'สินค้าทุก Paddle Board Overstock ชิ้นได้รับการรับประกันจากผู้ผลิตอย่างครบถ้วนผ้าท่อเป่าลม รอยต่อ และตัวเรือได้รับการรับประกันจํากัด 5 ปีSUP บอร์ดและอุปกรณ์เสริมรับประกันจํากัด 2 ปีการรับประกันครอบคลุมข้อบกพร่องในวัสดุและการผลิตภายใต้การใช้งานปกติ',
       category: 'warranty',
       relatedProducts: [],
       relatedGuides: [],
@@ -5332,7 +5332,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'material-difference',
       question: 'ความแตกต่างระหว่าง PVC กับ Hypalon คืออะไร?',
       answer:
-        'PVC มีน้ําหนักเบากว่า ราคาย่อมเยากว่า และซ่อมแซมง่ายกว่า — เหมาะสําหรับการใช้งานเพื่อสันทนาการ Hypalon(CSM) ให้ความ UV ทนทานต่อสารเคมีที่เหนือกว่า พร้อมอายุการใช้งานที่ยาวนาน เหมาะสําหรับการใช้งานเชิงพาณิชย์และทหาร Aquafarer ใช้ทั้งสองประเภทขึ้นอยู่กับระดับผลิตภัณฑ์',
+        'PVC มีน้ําหนักเบากว่า ราคาย่อมเยากว่า และซ่อมแซมง่ายกว่า — เหมาะสําหรับการใช้งานเพื่อสันทนาการ Hypalon(CSM) ให้ความ UV ทนทานต่อสารเคมีที่เหนือกว่า พร้อมอายุการใช้งานที่ยาวนาน เหมาะสําหรับการใช้งานเชิงพาณิชย์และทหาร Paddle Board Overstock ใช้ทั้งสองประเภทขึ้นอยู่กับระดับผลิตภัณฑ์',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -5341,7 +5341,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-width-stability',
       question: 'ความกว้างแบบไหน SUP ถึงจะมั่นคงที่สุด?',
       answer:
-        'สําหรับผู้เริ่มต้น ความกว้าง 33–34 นิ้วให้สมดุลที่ดีที่สุดระหว่างความมั่นคงและความง่ายในการพายบอร์ดที่แคบกว่า 32 นิ้วจะรู้สึกเอียงสําหรับผู้เริ่มต้น Aquafarer SUP Explorer 11 ที่ 33 นิ้วเหมาะสําหรับการเรียนรู้',
+        'สําหรับผู้เริ่มต้น ความกว้าง 33–34 นิ้วให้สมดุลที่ดีที่สุดระหว่างความมั่นคงและความง่ายในการพายบอร์ดที่แคบกว่า 32 นิ้วจะรู้สึกเอียงสําหรับผู้เริ่มต้น Paddle Board Overstock SUP Explorer 11 ที่ 33 นิ้วเหมาะสําหรับการเรียนรู้',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-size-guide', 'paddle-board-size-guide'],
@@ -5374,24 +5374,24 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       relatedGuides: ['inflatable-boat-buying-guide'],
     },
     {
-      id: 'aquafarer-vs-others',
-      question: 'เปรียบเทียบ Aquafarer กับแบรนด์อื่นอย่างไร?',
+      id: 'paddleboardoverstock-vs-others',
+      question: 'เปรียบเทียบ Paddle Board Overstock กับแบรนด์อื่นอย่างไร?',
       answer:
-        'Aquafarer มอบความคุ้มค่าสูงสุดในอุปกรณ์กีฬาทางน้ําเป่าลมเมื่อเทียบกับ Red Paddle Co ให้ประสิทธิภาพถึง Aquafarer 90% ในราคาเพียง 60% ของต้นทุนเมื่อเทียบกับ iRocker Aquafarer ใช้เกรดทหารสามชั้นคุณภาพสูง PVC กว่าและคะแนนที่สูงกว่า PSI เมื่อเทียบกับ Bluefin Aquafarer มีสเปกวัสดุที่เหนือกว่าสําหรับนักพายเพื่อสันทนาการส่วนใหญ่ Aquafarer ให้สมดุลที่ดีที่สุดระหว่างคุณภาพและราคา',
+        'Paddle Board Overstock มอบความคุ้มค่าสูงสุดในอุปกรณ์กีฬาทางน้ําเป่าลมเมื่อเทียบกับ Red Paddle Co ให้ประสิทธิภาพถึง Paddle Board Overstock 90% ในราคาเพียง 60% ของต้นทุนเมื่อเทียบกับ iRocker Paddle Board Overstock ใช้เกรดทหารสามชั้นคุณภาพสูง PVC กว่าและคะแนนที่สูงกว่า PSI เมื่อเทียบกับ Bluefin Paddle Board Overstock มีสเปกวัสดุที่เหนือกว่าสําหรับนักพายเพื่อสันทนาการส่วนใหญ่ Paddle Board Overstock ให้สมดุลที่ดีที่สุดระหว่างคุณภาพและราคา',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: [
         'best-surf-gear-brands-compared',
-        'aquafarer-vs-red-paddle',
-        'aquafarer-vs-irocker',
-        'aquafarer-vs-bluefin',
+        'paddleboardoverstock-vs-red-paddle',
+        'paddleboardoverstock-vs-irocker',
+        'paddleboardoverstock-vs-bluefin',
       ],
     },
     {
       id: 'fishing-sup-setup',
       question: 'ฉันสามารถตกปลาจากบอร์ดได้SUP ไหม?',
       answer:
-        'ใช่SUP การตกปลาได้รับความนิยมมากขึ้นเพราะท่ายืนช่วยให้มองเห็นน้ําได้ดีเลือกบอร์ดที่ยาวอย่างน้อย 11 ฟุต และกว้าง 33–34 นิ้วเพื่อความมั่นคงเพิ่มลังนมที่มีที่ยึดคันเบ็ดติดกับบังจี้บนดาดฟ้า สมอเล็ก ๆ และสวม PFD.Aquafarer SUP Explorer 11 เหมาะกับการตกปลาทั่วไป',
+        'ใช่SUP การตกปลาได้รับความนิยมมากขึ้นเพราะท่ายืนช่วยให้มองเห็นน้ําได้ดีเลือกบอร์ดที่ยาวอย่างน้อย 11 ฟุต และกว้าง 33–34 นิ้วเพื่อความมั่นคงเพิ่มลังนมที่มีที่ยึดคันเบ็ดติดกับบังจี้บนดาดฟ้า สมอเล็ก ๆ และสวม PFD.Paddle Board Overstock SUP Explorer 11 เหมาะกับการตกปลาทั่วไป',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['fishing-sup-guide', 'sup-anchor-guide'],
@@ -5409,7 +5409,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'airline-travel-sup',
       question: 'กฎของสายการบินสําหรับการเดินทางด้วยเรือเป่าลม SUP เป็นอย่างไร?',
       answer:
-        'สายการบินส่วนใหญ่รับ SUP กระเป๋าเป้เป็นสัมภาระโหลดใต้เครื่องถ้าน้ําหนักต่ํากว่า 23–32 กก.Aquafarer กระเป๋าเป้มีขนาดประมาณ 90x40x30 ซม. และน้ําหนักประมาณ 15 กก. เมื่อบรรจุบางสายการบินอาจคิดค่าธรรมเนียมสัมภาระขนาดใหญ่มาถึงก่อนเวลา พันครีบและปั๊มนมแยกในกระเป๋าถือขึ้นเครื่อง และติดป้ายว่ากระเป๋าเปราะบางควรศึกษานโยบายอุปกรณ์กีฬาของสายการบินก่อนขึ้นเครื่องเสมอ',
+        'สายการบินส่วนใหญ่รับ SUP กระเป๋าเป้เป็นสัมภาระโหลดใต้เครื่องถ้าน้ําหนักต่ํากว่า 23–32 กก.Paddle Board Overstock กระเป๋าเป้มีขนาดประมาณ 90x40x30 ซม. และน้ําหนักประมาณ 15 กก. เมื่อบรรจุบางสายการบินอาจคิดค่าธรรมเนียมสัมภาระขนาดใหญ่มาถึงก่อนเวลา พันครีบและปั๊มนมแยกในกระเป๋าถือขึ้นเครื่อง และติดป้ายว่ากระเป๋าเปราะบางควรศึกษานโยบายอุปกรณ์กีฬาของสายการบินก่อนขึ้นเครื่องเสมอ',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-travel-guide'],
@@ -5434,7 +5434,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'oem-custom-branding',
-      question: 'ฉันสามารถใส่โลโก้ของตัวเองบน Aquafarer สินค้าได้ไหม?',
+      question: 'ฉันสามารถใส่โลโก้ของตัวเองบน Paddle Board Overstock สินค้าได้ไหม?',
       answer:
         'ใช่OEM บริการของเรารวมถึงการวางโลโก้แบบกําหนดเอง โทนสีที่กําหนดเอง และบรรจุภัณฑ์แบบกําหนดเองเรามีบริการพิมพ์แผ่น การถ่ายเทความร้อน และงานปักขึ้นอยู่กับประเภทสินค้าส่งงานศิลปะและสเปกของคุณไปยังทีมขายของเราเพื่อขอใบเสนอราคาและประมาณระยะเวลาการผลิต',
       category: 'ordering',
@@ -5445,7 +5445,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-inflate-pressure',
       question: 'ควร PSI เติมลม SUP TO0 เท่าไหร่ดี?',
       answer:
-        'เป่าลมให้ถึงค่าสูงสุดที่กําหนดของบอร์ด PSI เพื่อประสิทธิภาพสูงสุด — โดยทั่วไป 15–18 PSI สําหรับยางเป่าลมคุณภาพ SUPs  Aquafarer SUP Explorer 11 ทํางานได้ดีที่สุดที่ 15–18 PSI ถ้าเติมลมต่ําเกินไปจะทําให้บอร์ดรู้สึกนุ่มและเดินช้าถ้าเติมลมเกินค่าที่กําหนดไว้เสี่ยงต่อdrop-stitchการทําลายเกลียวตรวจสอบสติกเกอร์ใกล้วาล์วเพื่อดูคะแนนเฉพาะของบอร์ด',
+        'เป่าลมให้ถึงค่าสูงสุดที่กําหนดของบอร์ด PSI เพื่อประสิทธิภาพสูงสุด — โดยทั่วไป 15–18 PSI สําหรับยางเป่าลมคุณภาพ SUPs  Paddle Board Overstock SUP Explorer 11 ทํางานได้ดีที่สุดที่ 15–18 PSI ถ้าเติมลมต่ําเกินไปจะทําให้บอร์ดรู้สึกนุ่มและเดินช้าถ้าเติมลมเกินค่าที่กําหนดไว้เสี่ยงต่อdrop-stitchการทําลายเกลียวตรวจสอบสติกเกอร์ใกล้วาล์วเพื่อดูคะแนนเฉพาะของบอร์ด',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-inflatable-sup', 'sup-pump-guide'],
@@ -5472,7 +5472,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-kayak-conversion',
       question: 'ฉันสามารถใช้บอร์ด SUP เป็นเรือคายัคได้ไหม?',
       answer:
-        'ใช่ หลายบอร์ด SUP รวมถึง Aquafarer Explorer 11 มี D-ring ที่อนุญาตให้ติดตั้งที่นั่งคายัค การใช้ SUP กับที่นั่งคายัคและไม้พายใบเดียวให้ท่านั่งที่สะดวกสบายสำหรับการเดินทางหรือการตกปลาที่ยาวนานขึ้น บางแบรนด์มีชุดแปลงคายัคเฉพาะที่มาพร้อมที่นั่งและไม้พายที่ยาวกว่า',
+        'ใช่ หลายบอร์ด SUP รวมถึง Paddle Board Overstock Explorer 11 มี D-ring ที่อนุญาตให้ติดตั้งที่นั่งคายัค การใช้ SUP กับที่นั่งคายัคและไม้พายใบเดียวให้ท่านั่งที่สะดวกสบายสำหรับการเดินทางหรือการตกปลาที่ยาวนานขึ้น บางแบรนด์มีชุดแปลงคายัคเฉพาะที่มาพร้อมที่นั่งและไม้พายที่ยาวกว่า',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['kayak-vs-sup'],
@@ -5497,9 +5497,9 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'company-model',
-      question: 'Aquafarer เป็นบริษัทการค้าหรือผู้ผลิต?',
+      question: 'Paddle Board Overstock เป็นบริษัทการค้าหรือผู้ผลิต?',
       answer:
-        'ไม่ใช่โรงงานล้วน ๆ และไม่ใช่บริษัทการค้า — Aquafarer LLC เป็นบริษัทแบรนด์ที่มีฐานการผลิตของตัวเอง Aquafarer LLC (นิวเม็กซิโก, สหรัฐอเมริกา) ดูแลการจัดจำหน่ายทั่วโลก สัญญา การเรียกเก็บเงิน และการบริการหลังการขาย ขณะที่ Aquafarer Qingdao Manufacturing Hub ดำเนินการวิจัยและพัฒนา การผลิต และการควบคุมคุณภาพในโรงงานของเราเองที่มีพื้นที่ 12,000 ตารางเมตร ไม่มีคนกลาง: ทุกคำสั่งซื้อจัดส่งตรงจากโรงงาน',
+        'ไม่ใช่โรงงานล้วน ๆ และไม่ใช่บริษัทการค้า — Weihai Dongjilian Co., Ltd. เป็นบริษัทแบรนด์ที่มีฐานการผลิตของตัวเอง Weihai Dongjilian Co., Ltd. (นิวเม็กซิโก, สหรัฐอเมริกา) ดูแลการจัดจำหน่ายทั่วโลก สัญญา การเรียกเก็บเงิน และการบริการหลังการขาย ขณะที่ Paddle Board Overstock Qingdao Manufacturing Hub ดำเนินการวิจัยและพัฒนา การผลิต และการควบคุมคุณภาพในโรงงานของเราเองที่มีพื้นที่ 12,000 ตารางเมตร ไม่มีคนกลาง: ทุกคำสั่งซื้อจัดส่งตรงจากโรงงาน',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -5508,7 +5508,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'us-contract-qingdao-shipping',
       question: 'ทำไมสัญญาของฉันกับบริษัทสหรัฐอเมริกาถึงเป็นเมื่อสินค้าจัดส่งมาจากชิงเต่า?',
       answer:
-        'บริษัท Aquafarer LLC (นิวเม็กซิโก, สหรัฐอเมริกา) เป็นหน่วยงานเชิงพาณิชย์ระดับโลกที่ลงนามในสัญญา ออกใบแจ้งหนี้ และให้การสนับสนุนหลังการขาย ในขณะที่ศูนย์การผลิตชิงเต่าผลิตและจัดส่งคำสั่งซื้อทุกรายการจาก FOB ชิงเต่า โครงสร้างสองศูนย์นี้ช่วยให้การทำสัญญาและการชำระเงินเป็นไปตามมาตรฐานสหรัฐอเมริกา ในขณะที่ยังคงราคาระดับโรงงานโดยตรงและมีความโปร่งใสเต็มรูปแบบในการผลิต',
+        'บริษัท Weihai Dongjilian Co., Ltd. (นิวเม็กซิโก, สหรัฐอเมริกา) เป็นหน่วยงานเชิงพาณิชย์ระดับโลกที่ลงนามในสัญญา ออกใบแจ้งหนี้ และให้การสนับสนุนหลังการขาย ในขณะที่ศูนย์การผลิตชิงเต่าผลิตและจัดส่งคำสั่งซื้อทุกรายการจาก FOB ชิงเต่า โครงสร้างสองศูนย์นี้ช่วยให้การทำสัญญาและการชำระเงินเป็นไปตามมาตรฐานสหรัฐอเมริกา ในขณะที่ยังคงราคาระดับโรงงานโดยตรงและมีความโปร่งใสเต็มรูปแบบในการผลิต',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -5528,7 +5528,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'ocean-use',
       question: 'Pwede ko ba itong gamitin sa dagat?',
       answer:
-        'Oo.Aquafarer SUP Ang mga tabla ay ginawa para sa paggamit sa dagat, lawa, at ilog. Ang aming Touring series ay humahawak ng coastal chop, at lahat ng board ay gumagamit ng marine-grade PVC na lumalaban sa kalawang sa alat ng tubig. Banlawan gamit ang sariwang tubig pagkatapos gamitin sa dagat.',
+        'Oo.Paddle Board Overstock SUP Ang mga tabla ay ginawa para sa paggamit sa dagat, lawa, at ilog. Ang aming Touring series ay humahawak ng coastal chop, at lahat ng board ay gumagamit ng marine-grade PVC na lumalaban sa kalawang sa alat ng tubig. Banlawan gamit ang sariwang tubig pagkatapos gamitin sa dagat.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: ['weather-conditions'],
@@ -5546,7 +5546,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'travel-sup',
       question: 'Pwede ba akong maglakbay gamit ang inflatable SUP?',
       answer:
-        'Oo naman. Bawat Aquafarer board ay inilalagay sa backpack-sized na carrying case na dinisenyo para sa maginhawang paglalakbay — tingnan ang laki at timbang ng iyong carrier. Sa timbang na 18-22 lbs lamang, madali itong dalhin papunta sa beach, lawa, o sa mga airport terminal.',
+        'Oo naman. Bawat Paddle Board Overstock board ay inilalagay sa backpack-sized na carrying case na dinisenyo para sa maginhawang paglalakbay — tingnan ang laki at timbang ng iyong carrier. Sa timbang na 18-22 lbs lamang, madali itong dalhin papunta sa beach, lawa, o sa mga airport terminal.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: [],
@@ -5564,7 +5564,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'box-contents',
       question: 'Ano ang laman ng kahon?',
       answer:
-        'Aquafarer SUP Kasama sa bawat isa ang board, travel backpack, dual-action hand pump, natatanggal na fin, coil leash, at repair kit. May ilang modelo rin na may carbon paddle upgrade option. Kasama sa inflatable boats ang boat, pump, repair kit, at mga sagwan.',
+        'Paddle Board Overstock SUP Kasama sa bawat isa ang board, travel backpack, dual-action hand pump, natatanggal na fin, coil leash, at repair kit. May ilang modelo rin na may carbon paddle upgrade option. Kasama sa inflatable boats ang boat, pump, repair kit, at mga sagwan.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -5600,7 +5600,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'puncture-repair',
       question: 'Paano ko aayusin ang butas?',
       answer:
-        'Linisin ang lugar, gupitin ang patch na may bilugang mga kanto, PVC lagyan ng pandikit, pindutin nang mahigpit, at maghintay ng 24 oras bago mag-inflate.Aquafarer May kasamang repair kit ang mga board. Para sa detalyadong mga tagubilin, tingnan ang aming gabay sa pag-aayos ng inflatable.',
+        'Linisin ang lugar, gupitin ang patch na may bilugang mga kanto, PVC lagyan ng pandikit, pindutin nang mahigpit, at maghintay ng 24 oras bago mag-inflate.Paddle Board Overstock May kasamang repair kit ang mga board. Para sa detalyadong mga tagubilin, tingnan ang aming gabay sa pag-aayos ng inflatable.',
       category: 'maintenance',
       relatedProducts: [],
       relatedGuides: ['inflatable-repair', 'sup-maintenance'],
@@ -5634,9 +5634,9 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'warranty',
-      question: 'Ano ang Aquafarer warranty?',
+      question: 'Ano ang Paddle Board Overstock warranty?',
       answer:
-        'Lahat Aquafarer ng produkto ay suportado ng komprehensibong warranty ng manufacturer. Ang inflatable boat tube fabric, seams, at hull ay sakop ng 5-taong limitadong warranty; ang SUP mga board at accessories ay may 2-taong limitadong warranty. Saklaw ng warranty ang mga depekto sa materyales at pagkakagawa sa normal na paggamit.',
+        'Lahat Paddle Board Overstock ng produkto ay suportado ng komprehensibong warranty ng manufacturer. Ang inflatable boat tube fabric, seams, at hull ay sakop ng 5-taong limitadong warranty; ang SUP mga board at accessories ay may 2-taong limitadong warranty. Saklaw ng warranty ang mga depekto sa materyales at pagkakagawa sa normal na paggamit.',
       category: 'warranty',
       relatedProducts: [],
       relatedGuides: [],
@@ -5699,7 +5699,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'material-difference',
       question: 'Ano ang pagkakaiba ng PVC at Hypalon?',
       answer:
-        'PVC ay mas magaan, mas abot-kaya, at mas madaling ayusin — perpekto para sa pang-rekreasyon.Hypalon (CSM) nag-aalok ng superior UV at chemical resistance na may mas mahabang buhay, mas gusto para sa komersyal at militar na aplikasyon.Aquafarer ginagamit ang pareho depende sa antas ng produkto.',
+        'PVC ay mas magaan, mas abot-kaya, at mas madaling ayusin — perpekto para sa pang-rekreasyon.Hypalon (CSM) nag-aalok ng superior UV at chemical resistance na may mas mahabang buhay, mas gusto para sa komersyal at militar na aplikasyon.Paddle Board Overstock ginagamit ang pareho depende sa antas ng produkto.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -5708,7 +5708,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-width-stability',
       question: 'Anong SUP lapad ang pinakamainam para sa katatagan?',
       answer:
-        'Para sa mga baguhan, ang lapad na 33–34 pulgada ay nagbibigay ng pinakamahusay na balanse ng katatagan at kadalian sa pagpaddle. Ang mga tabla na mas makitid sa 32 pulgada ay pakiramdam ay parang madali para sa mga bagong paddler. Aquafarer SUP Ang Explorer 11 na may 33 pulgada ay perpekto para sa pag-aaral.',
+        'Para sa mga baguhan, ang lapad na 33–34 pulgada ay nagbibigay ng pinakamahusay na balanse ng katatagan at kadalian sa pagpaddle. Ang mga tabla na mas makitid sa 32 pulgada ay pakiramdam ay parang madali para sa mga bagong paddler. Paddle Board Overstock SUP Ang Explorer 11 na may 33 pulgada ay perpekto para sa pag-aaral.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-size-guide', 'paddle-board-size-guide'],
@@ -5741,24 +5741,24 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       relatedGuides: ['inflatable-boat-buying-guide'],
     },
     {
-      id: 'aquafarer-vs-others',
-      question: 'Paano ito Aquafarer ikinukumpara sa ibang mga brand?',
+      id: 'paddleboardoverstock-vs-others',
+      question: 'Paano ito Paddle Board Overstock ikinukumpara sa ibang mga brand?',
       answer:
-        'Aquafarer Nag-aalok ng pinakamahusay na halaga sa inflatable water sports gear. Kung ikukumpara sa Red Paddle Co, Aquafarer nagbibigay ito ng 90% ng performance sa 60% ng gastos. Kung ikukumpara sa iRocker, gumagamit ito ng Aquafarer mas mataas na grade na triple-layer military-grade PVC at mas mataas na PSI rating. Kung ikukumpara sa Bluefin, Aquafarer nag-aalok ito ng mas mahusay na materyal na specs. Para sa karamihan ng mga recreational paddler, Aquafarer nagbibigay ito ng pinakamahusay na balanse ng kalidad at presyo.',
+        'Paddle Board Overstock Nag-aalok ng pinakamahusay na halaga sa inflatable water sports gear. Kung ikukumpara sa Red Paddle Co, Paddle Board Overstock nagbibigay ito ng 90% ng performance sa 60% ng gastos. Kung ikukumpara sa iRocker, gumagamit ito ng Paddle Board Overstock mas mataas na grade na triple-layer military-grade PVC at mas mataas na PSI rating. Kung ikukumpara sa Bluefin, Paddle Board Overstock nag-aalok ito ng mas mahusay na materyal na specs. Para sa karamihan ng mga recreational paddler, Paddle Board Overstock nagbibigay ito ng pinakamahusay na balanse ng kalidad at presyo.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: [
         'best-surf-gear-brands-compared',
-        'aquafarer-vs-red-paddle',
-        'aquafarer-vs-irocker',
-        'aquafarer-vs-bluefin',
+        'paddleboardoverstock-vs-red-paddle',
+        'paddleboardoverstock-vs-irocker',
+        'paddleboardoverstock-vs-bluefin',
       ],
     },
     {
       id: 'fishing-sup-setup',
       question: 'Pwede ba akong mangisda mula sa SUP board?',
       answer:
-        'Oo.SUP Lalong sumisikat ang pangingisda dahil ang nakatayo ay nagbibigay ng mahusay na visibility sa tubig. Pumili ng board na hindi bababa sa 11 talampakan ang haba at 33–34 pulgada ang lapad para sa katatagan. Magdagdag ng milk crate na may rod holders na nakakabit sa deck bungees, maliit na angkla, at laging magsuot ng PFD. Aquafarer SUP Maganda ang Explorer 11 para sa kaswal na pangingisda.',
+        'Oo.SUP Lalong sumisikat ang pangingisda dahil ang nakatayo ay nagbibigay ng mahusay na visibility sa tubig. Pumili ng board na hindi bababa sa 11 talampakan ang haba at 33–34 pulgada ang lapad para sa katatagan. Magdagdag ng milk crate na may rod holders na nakakabit sa deck bungees, maliit na angkla, at laging magsuot ng PFD. Paddle Board Overstock SUP Maganda ang Explorer 11 para sa kaswal na pangingisda.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['fishing-sup-guide', 'sup-anchor-guide'],
@@ -5776,7 +5776,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'airline-travel-sup',
       question: 'Ano ang mga patakaran ng airline para sa paglalakbay gamit ang inflatable SUP?',
       answer:
-        'Karamihan sa mga airline ay tumatanggap SUP ng backpack bilang checked baggage kung mas mababa sa 23–32 kg ang bigat. Ang Aquafarer backpack ay humigit-kumulang 90x40x30 cm at may bigat na mga 15 kg kapag nakapack. May ilang airline na maaaring maningil ng oversized baggage fees. Dumating nang maaga, balutin ang fins at pump nang hiwalay sa carry-on, at lagyan ng label ang bag bilang fragile. Laging saliksikin ang patakaran ng iyong airline tungkol sa sporting equipment bago lumipad.',
+        'Karamihan sa mga airline ay tumatanggap SUP ng backpack bilang checked baggage kung mas mababa sa 23–32 kg ang bigat. Ang Paddle Board Overstock backpack ay humigit-kumulang 90x40x30 cm at may bigat na mga 15 kg kapag nakapack. May ilang airline na maaaring maningil ng oversized baggage fees. Dumating nang maaga, balutin ang fins at pump nang hiwalay sa carry-on, at lagyan ng label ang bag bilang fragile. Laging saliksikin ang patakaran ng iyong airline tungkol sa sporting equipment bago lumipad.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-travel-guide'],
@@ -5801,7 +5801,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'oem-custom-branding',
-      question: 'Pwede ko bang ilagay ang sarili kong logo sa Aquafarer mga produkto?',
+      question: 'Pwede ko bang ilagay ang sarili kong logo sa Paddle Board Overstock mga produkto?',
       answer:
         'Oo. OEM Kasama sa aming serbisyo ang custom na paglalagay ng logo, custom na mga scheme ng kulay, at custom na packaging. Nag-aalok kami ng pad printing, heat transfer, at mga opsyon sa burda depende sa uri ng produkto. Ipadala ang iyong artwork at mga espesipikasyon sa aming sales team para sa quote at lead time estimate.',
       category: 'ordering',
@@ -5812,7 +5812,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-inflate-pressure',
       question: 'Ano PSI ang dapat kong i-inflate SUP ?',
       answer:
-        'I-inflate sa rated maximum PSI ng board para sa pinakamahusay na performance — karaniwang 15–18 PSI para sa quality inflatable SUPs. Ang Aquafarer SUP Explorer 11 ay pinakamahusay sa 15–18 PSI. Ang under-inflation ay nagdudulot ng pakiramdam na malambot ang board at hindi maganda ang track. Ang sobrang inflation lampas sa rated max ay maaaring masira ang drop-stitch mga thread. Suriin ang sticker malapit sa valve para sa specific rating ng iyong board.',
+        'I-inflate sa rated maximum PSI ng board para sa pinakamahusay na performance — karaniwang 15–18 PSI para sa quality inflatable SUPs. Ang Paddle Board Overstock SUP Explorer 11 ay pinakamahusay sa 15–18 PSI. Ang under-inflation ay nagdudulot ng pakiramdam na malambot ang board at hindi maganda ang track. Ang sobrang inflation lampas sa rated max ay maaaring masira ang drop-stitch mga thread. Suriin ang sticker malapit sa valve para sa specific rating ng iyong board.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-inflatable-sup', 'sup-pump-guide'],
@@ -5839,7 +5839,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-kayak-conversion',
       question: 'Maaari ko bang gamitin ang isang SUP board bilang kayak?',
       answer:
-        'Oo. Maraming SUP board, kabilang ang Aquafarer Explorer 11, ay may D-rings na nagpapahintulot sa paglagay ng upuan ng kayak. Ang paggamit ng SUP na may upuan ng kayak at isang single-blade na paddle ay nagbibigay ng komportableng posisyon sa pag-upo para sa mas mahabang biyahe o pangingisda. Ang ilang mga tatak ay nag-aalok ng dedikadong mga kit para sa pag-convert ng kayak na may mga upuan at mas mahabang paddle.',
+        'Oo. Maraming SUP board, kabilang ang Paddle Board Overstock Explorer 11, ay may D-rings na nagpapahintulot sa paglagay ng upuan ng kayak. Ang paggamit ng SUP na may upuan ng kayak at isang single-blade na paddle ay nagbibigay ng komportableng posisyon sa pag-upo para sa mas mahabang biyahe o pangingisda. Ang ilang mga tatak ay nag-aalok ng dedikadong mga kit para sa pag-convert ng kayak na may mga upuan at mas mahabang paddle.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['kayak-vs-sup'],
@@ -5864,9 +5864,9 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'company-model',
-      question: 'Ang Aquafarer ba ay isang kumpanya ng pangangalakal o isang tagagawa?',
+      question: 'Ang Paddle Board Overstock ba ay isang kumpanya ng pangangalakal o isang tagagawa?',
       answer:
-        'Hindi lamang isang dalisay na pabrika o isang kumpanya ng kalakalan — ang Aquafarer LLC ay isang kumpanya ng tatak na may sariling base ng paggawa. Ang Aquafarer LLC (New Mexico, USA) ang humahawak ng pandaigdigang pamamahagi, kontrata, pagsingil, at serbisyo pagkatapos ng benta, habang ang Aquafarer Qingdao Manufacturing Hub ang nagpapatakbo ng R&D, produksyon, at kontrol sa kalidad sa aming sariling 12,000 m² na pasilidad. Walang mga tagapamagitan: bawat order ay ipinapadala direkta mula sa pabrika.',
+        'Hindi lamang isang dalisay na pabrika o isang kumpanya ng kalakalan — ang Weihai Dongjilian Co., Ltd. ay isang kumpanya ng tatak na may sariling base ng paggawa. Ang Weihai Dongjilian Co., Ltd. (New Mexico, USA) ang humahawak ng pandaigdigang pamamahagi, kontrata, pagsingil, at serbisyo pagkatapos ng benta, habang ang Paddle Board Overstock Qingdao Manufacturing Hub ang nagpapatakbo ng R&D, produksyon, at kontrol sa kalidad sa aming sariling 12,000 m² na pasilidad. Walang mga tagapamagitan: bawat order ay ipinapadala direkta mula sa pabrika.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -5875,7 +5875,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'us-contract-qingdao-shipping',
       question: 'Bakit ang kontrata ko ay sa isang kumpanya sa US kung ang mga kalakal ay ipinapadala mula sa Qingdao?',
       answer:
-        'Aquafarer LLC (New Mexico, USA) ay ang pandaigdigang komersyal na entidad na pumipirma ng mga kontrata, nag-iisyu ng mga invoice, at nagbibigay ng suporta pagkatapos ng benta, habang ang Qingdao Manufacturing Hub ay gumagawa at nagpapadala ng bawat order FOB Qingdao. Ang estrukturang may dalawang hub na ito ay nagpapanatili ng pamantayang Amerikano sa pagkontrata at pag-aayos, habang pinapanatili ang presyo direkta mula sa pabrika at buong transparency sa produksyon.',
+        'Weihai Dongjilian Co., Ltd. (New Mexico, USA) ay ang pandaigdigang komersyal na entidad na pumipirma ng mga kontrata, nag-iisyu ng mga invoice, at nagbibigay ng suporta pagkatapos ng benta, habang ang Qingdao Manufacturing Hub ay gumagawa at nagpapadala ng bawat order FOB Qingdao. Ang estrukturang may dalawang hub na ito ay nagpapanatili ng pamantayang Amerikano sa pagkontrata at pag-aayos, habang pinapanatili ang presyo direkta mula sa pabrika at buong transparency sa produksyon.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -5895,7 +5895,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'ocean-use',
       question: 'Okyanusta kullanabilir miyim?',
       answer:
-        'Evet.Aquafarer SUP Tahtalar okyanus, göl ve nehir kullanımı için üretilir. Touring serimiz kıyı kesintisini sağlar ve tüm tahtalar PVC tuzlu su korozyona dayanıklı deniz kalitesinde kullanılır. Okyanus kullanımından sonra temiz suyla durulayın.',
+        'Evet.Paddle Board Overstock SUP Tahtalar okyanus, göl ve nehir kullanımı için üretilir. Touring serimiz kıyı kesintisini sağlar ve tüm tahtalar PVC tuzlu su korozyona dayanıklı deniz kalitesinde kullanılır. Okyanus kullanımından sonra temiz suyla durulayın.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: ['weather-conditions'],
@@ -5913,7 +5913,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'travel-sup',
       question: 'Şişme bir cihazla seyahat edebilir SUP miyim?',
       answer:
-        'Kesinlikle. Her Aquafarer tahta rahat seyahat için tasarlanmış sırt çantası boyutunda bir taşıma çantasına sığır — taşıyıcı boyutu ve ağırlık poliçelerinizi kontrol edin. Sadece 18-22 lbs ağırlığında, plaja, göle veya havaalanı terminallerine taşımak kolaydır.',
+        'Kesinlikle. Her Paddle Board Overstock tahta rahat seyahat için tasarlanmış sırt çantası boyutunda bir taşıma çantasına sığır — taşıyıcı boyutu ve ağırlık poliçelerinizi kontrol edin. Sadece 18-22 lbs ağırlığında, plaja, göle veya havaalanı terminallerine taşımak kolaydır.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: [],
@@ -5931,7 +5931,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'box-contents',
       question: 'Kutuda ne var?',
       answer:
-        'Her Aquafarer SUP modelde tahta, seyahat sırt çantası, çift hareketli el pompası, çıkarılabilir kanat, bobin tasması ve tamir kiti bulunur. Bazı modellerde karbon kürek yükseltme seçeneği de bulunur. Şişme tekneler arasında tekne, pompa, tamir kiti ve kürekler bulunur.',
+        'Her Paddle Board Overstock SUP modelde tahta, seyahat sırt çantası, çift hareketli el pompası, çıkarılabilir kanat, bobin tasması ve tamir kiti bulunur. Bazı modellerde karbon kürek yükseltme seçeneği de bulunur. Şişme tekneler arasında tekne, pompa, tamir kiti ve kürekler bulunur.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -5967,7 +5967,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'puncture-repair',
       question: 'Bir deliği nasıl onarım?',
       answer:
-        'Alanı temizleyin, köşeleri yuvarlak bir şekilde kesin, PVC yapıştırıcı uygulayın, sıkıca basın ve şişirmeden önce 24 saat bekleyin.Aquafarer Tahtalar bir tamir kiti içerir. Detaylı talimatlar için şişme tamir rehberimize bakabilirsiniz.',
+        'Alanı temizleyin, köşeleri yuvarlak bir şekilde kesin, PVC yapıştırıcı uygulayın, sıkıca basın ve şişirmeden önce 24 saat bekleyin.Paddle Board Overstock Tahtalar bir tamir kiti içerir. Detaylı talimatlar için şişme tamir rehberimize bakabilirsiniz.',
       category: 'maintenance',
       relatedProducts: [],
       relatedGuides: ['inflatable-repair', 'sup-maintenance'],
@@ -6001,9 +6001,9 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'warranty',
-      question: 'Aquafarer Garanti nedir?',
+      question: 'Paddle Board Overstock Garanti nedir?',
       answer:
-        'Tüm Aquafarer ürünler kapsamlı bir üretici garantisi ile desteklenmektedir. Şişme bot boru kumaşı, dikişleri ve gövdesi 5 yıllık sınırlı garanti kapsamındadır;SUP tahtalar ve aksesuarlar ise 2 yıl sınırlı garanti taşır. Garanti, normal kullanımda malzeme ve işçilikteki kusurları kapsar.',
+        'Tüm Paddle Board Overstock ürünler kapsamlı bir üretici garantisi ile desteklenmektedir. Şişme bot boru kumaşı, dikişleri ve gövdesi 5 yıllık sınırlı garanti kapsamındadır;SUP tahtalar ve aksesuarlar ise 2 yıl sınırlı garanti taşır. Garanti, normal kullanımda malzeme ve işçilikteki kusurları kapsar.',
       category: 'warranty',
       relatedProducts: [],
       relatedGuides: [],
@@ -6066,7 +6066,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'material-difference',
       question: 'Arasındaki fark nedir PVC Hypalon?',
       answer:
-        'PVC daha hafif, daha uygun fiyatlı ve tamiri daha kolaydır — eğlence amaçlı kullanım için idealdir.Hypalon () daha uzun CSM UV ömürlü üstün ve kimyasal direnç sunar, ticari ve askeri uygulamalar için tercih edilir.Aquafarer ürün katmanına göre her ikisini de kullanır.',
+        'PVC daha hafif, daha uygun fiyatlı ve tamiri daha kolaydır — eğlence amaçlı kullanım için idealdir.Hypalon () daha uzun CSM UV ömürlü üstün ve kimyasal direnç sunar, ticari ve askeri uygulamalar için tercih edilir.Paddle Board Overstock ürün katmanına göre her ikisini de kullanır.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -6075,7 +6075,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-width-stability',
       question: 'SUP Stabilite için en iyi genişlik hangisi?',
       answer:
-        'Yeni başlayanlar için 33–34 inç genişlik, stabilite ve kürek çekme kolaylığı arasında en iyi dengeyi sağlar. 32 inçten daha dar olan tahtalar, yeni kürekçiler için ucuz hissettirir. Aquafarer SUP Explorer 11 33 inç boyunda öğrenmek için idealdir.',
+        'Yeni başlayanlar için 33–34 inç genişlik, stabilite ve kürek çekme kolaylığı arasında en iyi dengeyi sağlar. 32 inçten daha dar olan tahtalar, yeni kürekçiler için ucuz hissettirir. Paddle Board Overstock SUP Explorer 11 33 inç boyunda öğrenmek için idealdir.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-size-guide', 'paddle-board-size-guide'],
@@ -6108,24 +6108,24 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       relatedGuides: ['inflatable-boat-buying-guide'],
     },
     {
-      id: 'aquafarer-vs-others',
-      question: 'Diğer markalarla karşılaştırıldığında nasıl Aquafarer ?',
+      id: 'paddleboardoverstock-vs-others',
+      question: 'Diğer markalarla karşılaştırıldığında nasıl Paddle Board Overstock ?',
       answer:
-        "Aquafarer şişirilebilir su sporları ekipmanlarında en iyi değeri sunar. Red Paddle Co ile karşılaştırıldığında, Aquafarer performansın %90'ını maliyetin %60'ıyla sağlar. iRocker ile karşılaştırıldığında, Aquafarer daha yüksek kalite üç katmanlı askeri PVC sınıf ve daha PSI yüksek dereceler kullanır. Bluefin ile karşılaştırıldığında, Aquafarer üstün malzeme özellikleri sunar. Çoğu eğlence amaçlı kürekçi için Aquafarer kalite ve fiyat arasında en iyi dengeyi sunar.",
+        "Paddle Board Overstock şişirilebilir su sporları ekipmanlarında en iyi değeri sunar. Red Paddle Co ile karşılaştırıldığında, Paddle Board Overstock performansın %90'ını maliyetin %60'ıyla sağlar. iRocker ile karşılaştırıldığında, Paddle Board Overstock daha yüksek kalite üç katmanlı askeri PVC sınıf ve daha PSI yüksek dereceler kullanır. Bluefin ile karşılaştırıldığında, Paddle Board Overstock üstün malzeme özellikleri sunar. Çoğu eğlence amaçlı kürekçi için Paddle Board Overstock kalite ve fiyat arasında en iyi dengeyi sunar.",
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: [
         'best-surf-gear-brands-compared',
-        'aquafarer-vs-red-paddle',
-        'aquafarer-vs-irocker',
-        'aquafarer-vs-bluefin',
+        'paddleboardoverstock-vs-red-paddle',
+        'paddleboardoverstock-vs-irocker',
+        'paddleboardoverstock-vs-bluefin',
       ],
     },
     {
       id: 'fishing-sup-setup',
       question: 'Tahtadan balık tutabilir SUP miyim?',
       answer:
-        'Evet.SUP Balıkçılık giderek daha popüler hale geliyor çünkü ayakta durma pozisyonu suya mükemmel görüş sağlıyor. Denge için en az 11 feet uzunluğunda ve 33–34 inç genişliğinde bir tahta seçin. Güverte bungeelerine sabit kamış bir sat tutucu, küçük bir çapa ekleyin ve her zaman PFD bir tayı takın. Aquafarer SUP Explorer 11, gündelik balıkçılık için iyi çalışır.',
+        'Evet.SUP Balıkçılık giderek daha popüler hale geliyor çünkü ayakta durma pozisyonu suya mükemmel görüş sağlıyor. Denge için en az 11 feet uzunluğunda ve 33–34 inç genişliğinde bir tahta seçin. Güverte bungeelerine sabit kamış bir sat tutucu, küçük bir çapa ekleyin ve her zaman PFD bir tayı takın. Paddle Board Overstock SUP Explorer 11, gündelik balıkçılık için iyi çalışır.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['fishing-sup-guide', 'sup-anchor-guide'],
@@ -6143,7 +6143,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'airline-travel-sup',
       question: 'Şişme bir uçak ile seyahat için havayolu kuralları nelerdir SUP?',
       answer:
-        "Çoğu havayolu sırt SUP çantalarını 23–32 kg'dan küçükse teslim edilen bagaj olarak kabul eder. Aquafarer Sırt çantası yaklaşık 90x40x30 cm boyutunda ve paketlendiğinde yaklaşık 15 kg ağırlığındadır. Bazı havayolları aşırı boy bagaj ücreti talep edebilir. Erken varın, el bagajınıza kanatları sarın ve pompayı ayrı olarak kullanın ve çantayı kırılgan olarak etiketleyin. Uçmadan önce her zaman havayolunun spor ekipman politikasını araştırın.",
+        "Çoğu havayolu sırt SUP çantalarını 23–32 kg'dan küçükse teslim edilen bagaj olarak kabul eder. Paddle Board Overstock Sırt çantası yaklaşık 90x40x30 cm boyutunda ve paketlendiğinde yaklaşık 15 kg ağırlığındadır. Bazı havayolları aşırı boy bagaj ücreti talep edebilir. Erken varın, el bagajınıza kanatları sarın ve pompayı ayrı olarak kullanın ve çantayı kırılgan olarak etiketleyin. Uçmadan önce her zaman havayolunun spor ekipman politikasını araştırın.",
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-travel-guide'],
@@ -6168,7 +6168,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'oem-custom-branding',
-      question: 'Ürünlere kendi logomu koyabilir Aquafarer miyim?',
+      question: 'Ürünlere kendi logomu koyabilir Paddle Board Overstock miyim?',
       answer:
         'Evet. OEM Hizmetimiz, özel logo yerleştirme, özel renk şemaları ve özel paketleme içermektedir. Ürün türüne bağlı olarak pad baskı, ısı transferi ve nakış seçenekleri sunuyoruz. Sanat eserlerinizi ve özelliklerinizi satış ekibimize göndererek teklif ve teslim süresi tahmini alın.',
       category: 'ordering',
@@ -6179,7 +6179,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-inflate-pressure',
       question: 'Neye PSI SUP şişirmeliyim?',
       answer:
-        'En iyi performans için kartın en iyi maksimumuna PSI şişirin — genellikle kaliteli şişme için 15–18 PSI SUPs derece. Aquafarer SUP Explorer 11 en iyi performans gösterir ve 15–18 PSI derecede performans gösterir. Düşük şişirme, kartın yumuşak hissettirmesine ve kötü izlenmesine neden olur. Aşırı şişirme limitli maksimumun üzerine çıkmak, drop-stitch dişlere zarar verme riski taşır. Valfin yanındaki etikette kartınızın özel derecesini kontrol edin.',
+        'En iyi performans için kartın en iyi maksimumuna PSI şişirin — genellikle kaliteli şişme için 15–18 PSI SUPs derece. Paddle Board Overstock SUP Explorer 11 en iyi performans gösterir ve 15–18 PSI derecede performans gösterir. Düşük şişirme, kartın yumuşak hissettirmesine ve kötü izlenmesine neden olur. Aşırı şişirme limitli maksimumun üzerine çıkmak, drop-stitch dişlere zarar verme riski taşır. Valfin yanındaki etikette kartınızın özel derecesini kontrol edin.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-inflatable-sup', 'sup-pump-guide'],
@@ -6206,7 +6206,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-kayak-conversion',
       question: 'Bir SUP boardunu kano olarak kullanabilir miyim?',
       answer:
-        'Evet. Aquafarer Explorer 11 de dahil olmak üzere birçok SUP tahtasında, bir kano koltuğunun takılmasına izin veren D halkaları bulunur. Bir SUP ile kano koltuğu ve tek bıçaklı kürek kullanmak, daha uzun geziler veya balık tutma için rahat bir oturma pozisyonu sağlar. Bazı markalar, koltuklar ve daha uzun küreklerle birlikte özel kano dönüştürme kitleri sunar.',
+        'Evet. Paddle Board Overstock Explorer 11 de dahil olmak üzere birçok SUP tahtasında, bir kano koltuğunun takılmasına izin veren D halkaları bulunur. Bir SUP ile kano koltuğu ve tek bıçaklı kürek kullanmak, daha uzun geziler veya balık tutma için rahat bir oturma pozisyonu sağlar. Bazı markalar, koltuklar ve daha uzun küreklerle birlikte özel kano dönüştürme kitleri sunar.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['kayak-vs-sup'],
@@ -6231,9 +6231,9 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'company-model',
-      question: 'Aquafarer bir ticaret şirketi mi yoksa üretici mi?',
+      question: 'Paddle Board Overstock bir ticaret şirketi mi yoksa üretici mi?',
       answer:
-        'Ne saf bir fabrika ne de bir ticaret şirketi — Aquafarer LLC, kendi üretim altyapısına sahip bir marka şirketidir. Aquafarer LLC (New Mexico, ABD) küresel dağıtımı, sözleşmeleri, faturalamayı ve satış sonrası hizmetleri yönetirken, Aquafarer Qingdao Üretim Merkezi 12.000 m²’lik kendi tesisimizde Ar-Ge, üretim ve kalite kontrolü yürütmektedir. Aracı yok: her sipariş doğrudan fabrikadan gönderilir.',
+        'Ne saf bir fabrika ne de bir ticaret şirketi — Weihai Dongjilian Co., Ltd., kendi üretim altyapısına sahip bir marka şirketidir. Weihai Dongjilian Co., Ltd. (New Mexico, ABD) küresel dağıtımı, sözleşmeleri, faturalamayı ve satış sonrası hizmetleri yönetirken, Paddle Board Overstock Qingdao Üretim Merkezi 12.000 m²’lik kendi tesisimizde Ar-Ge, üretim ve kalite kontrolü yürütmektedir. Aracı yok: her sipariş doğrudan fabrikadan gönderilir.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -6242,7 +6242,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'us-contract-qingdao-shipping',
       question: "Mallar Qingdao'dan sevk edilirken neden ABD şirketiyle sözleşmem var?",
       answer:
-        "Aquafarer LLC (New Mexico, ABD), sözleşme imzalayan, fatura düzenleyen ve satış sonrası destek sağlayan küresel ticari varlıkken, Qingdao Üretim Merkezi her siparişi FOB Qingdao'da üretip gönderir. Bu çift merkezli yapı, ABD standartlarında sözleşme ve hesaplaşmayı korurken, fabrika fiyatlarını ve tam üretim şeffaflığını sürdürür.",
+        "Weihai Dongjilian Co., Ltd. (New Mexico, ABD), sözleşme imzalayan, fatura düzenleyen ve satış sonrası destek sağlayan küresel ticari varlıkken, Qingdao Üretim Merkezi her siparişi FOB Qingdao'da üretip gönderir. Bu çift merkezli yapı, ABD standartlarında sözleşme ve hesaplaşmayı korurken, fabrika fiyatlarını ve tam üretim şeffaflığını sürdürür.",
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -6262,7 +6262,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'ocean-use',
       question: 'Kan jeg bruge den i havet?',
       answer:
-        'Ja. Aquafarer SUP Brætterne er bygget til brug i havet, søer og floder. Vores Touring-serie håndterer kystslynge, og alle brætter bruger marinekvalitet PVC , der modstår saltvandskorrosion. Skyl med ferskvand efter brug i havet.',
+        'Ja. Paddle Board Overstock SUP Brætterne er bygget til brug i havet, søer og floder. Vores Touring-serie håndterer kystslynge, og alle brætter bruger marinekvalitet PVC , der modstår saltvandskorrosion. Skyl med ferskvand efter brug i havet.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: ['weather-conditions'],
@@ -6280,7 +6280,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'travel-sup',
       question: 'Kan jeg rejse med en oppustelig bil SUP?',
       answer:
-        'Helt sikkert. Hvert Aquafarer board kan pakkes i en rygsækstørrelse bæretaske, der er designet til nem rejse – tjek dine bæretøjsstørrelser og vægtregler. Med kun 18-22 lbs er det nemt at bære til stranden, søen eller gennem lufthavnsterminaler.',
+        'Helt sikkert. Hvert Paddle Board Overstock board kan pakkes i en rygsækstørrelse bæretaske, der er designet til nem rejse – tjek dine bæretøjsstørrelser og vægtregler. Med kun 18-22 lbs er det nemt at bære til stranden, søen eller gennem lufthavnsterminaler.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: [],
@@ -6298,7 +6298,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'box-contents',
       question: 'Hvad følger der med i kassen?',
       answer:
-        'Alle Aquafarer SUP inkluderer board, rejserygsæk, dobbeltvirkende håndpumpe, aftagelig finne, spiralline og reparationssæt. Nogle modeller inkluderer også en opgradering af carbonpaddle. Oppustelige både inkluderer båd, pumpe, reparationssæt og årer.',
+        'Alle Paddle Board Overstock SUP inkluderer board, rejserygsæk, dobbeltvirkende håndpumpe, aftagelig finne, spiralline og reparationssæt. Nogle modeller inkluderer også en opgradering af carbonpaddle. Oppustelige både inkluderer båd, pumpe, reparationssæt og årer.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -6334,7 +6334,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'puncture-repair',
       question: 'Hvordan reparerer jeg et punkteringspunkt?',
       answer:
-        'Rengør området, klip et stykke med afrundede hjørner, påfør PVC lim, pres fast, og vent 24 timer før du puster op.Aquafarer Brædderne inkluderer et reparationssæt. For detaljerede instruktioner, se vores guide til reparation af oppustelige genstande.',
+        'Rengør området, klip et stykke med afrundede hjørner, påfør PVC lim, pres fast, og vent 24 timer før du puster op.Paddle Board Overstock Brædderne inkluderer et reparationssæt. For detaljerede instruktioner, se vores guide til reparation af oppustelige genstande.',
       category: 'maintenance',
       relatedProducts: [],
       relatedGuides: ['inflatable-repair', 'sup-maintenance'],
@@ -6368,9 +6368,9 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'warranty',
-      question: 'Hvad er Aquafarer garantien?',
+      question: 'Hvad er Paddle Board Overstock garantien?',
       answer:
-        'Alle Aquafarer produkter er dækket af en omfattende producentgaranti. Oppustelig bådtubstof, sømme og skrog er dækket af en 5-årig begrænset garanti;SUP boards og tilbehør har 2-årig begrænset garanti. Garantien dækker fejl i materialer og håndværk under normal brug.',
+        'Alle Paddle Board Overstock produkter er dækket af en omfattende producentgaranti. Oppustelig bådtubstof, sømme og skrog er dækket af en 5-årig begrænset garanti;SUP boards og tilbehør har 2-årig begrænset garanti. Garantien dækker fejl i materialer og håndværk under normal brug.',
       category: 'warranty',
       relatedProducts: [],
       relatedGuides: [],
@@ -6433,7 +6433,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'material-difference',
       question: 'Hvad er forskellen mellem PVC og Hypalon?',
       answer:
-        'PVC er lettere, mere overkommelig og lettere at reparere — ideel til rekreativ brug.Hypalon (CSM) tilbyder overlegen UV og kemisk resistens med længere levetid, foretrukken til kommercielle og militære formål.Aquafarer Bruger begge afhængigt af produktniveauet.',
+        'PVC er lettere, mere overkommelig og lettere at reparere — ideel til rekreativ brug.Hypalon (CSM) tilbyder overlegen UV og kemisk resistens med længere levetid, foretrukken til kommercielle og militære formål.Paddle Board Overstock Bruger begge afhængigt af produktniveauet.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -6442,7 +6442,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-width-stability',
       question: 'Hvilken SUP bredde er bedst for stabilitet?',
       answer:
-        'For begyndere giver en bredde på 33–34 tommer den bedste balance mellem stabilitet og rolethed. Brætter, der er smallere end 32 tommer, føles tynde for nye padlere. Aquafarer SUP Explorer 11 med 33 tommer er ideel til læring.',
+        'For begyndere giver en bredde på 33–34 tommer den bedste balance mellem stabilitet og rolethed. Brætter, der er smallere end 32 tommer, føles tynde for nye padlere. Paddle Board Overstock SUP Explorer 11 med 33 tommer er ideel til læring.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-size-guide', 'paddle-board-size-guide'],
@@ -6475,24 +6475,24 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       relatedGuides: ['inflatable-boat-buying-guide'],
     },
     {
-      id: 'aquafarer-vs-others',
-      question: 'Hvordan Aquafarer sammenlignes det med andre mærker?',
+      id: 'paddleboardoverstock-vs-others',
+      question: 'Hvordan Paddle Board Overstock sammenlignes det med andre mærker?',
       answer:
-        'Aquafarer tilbyder den bedste værdi for oppusteligt vandsportsudstyr. Sammenlignet med Red Aquafarer Paddle Co leverer 90% af ydelsen til 60% af prisen. Sammenlignet med iRocker Aquafarer bruger den højere kvalitet triple-layer militærkvalitet PVC og højere PSI ratings. Sammenlignet med Bluefin Aquafarer tilbyder den overlegne materialspecifikationer. For de fleste fritidspadlere Aquafarer giver den den bedste balance mellem kvalitet og pris.',
+        'Paddle Board Overstock tilbyder den bedste værdi for oppusteligt vandsportsudstyr. Sammenlignet med Red Paddle Board Overstock Paddle Co leverer 90% af ydelsen til 60% af prisen. Sammenlignet med iRocker Paddle Board Overstock bruger den højere kvalitet triple-layer militærkvalitet PVC og højere PSI ratings. Sammenlignet med Bluefin Paddle Board Overstock tilbyder den overlegne materialspecifikationer. For de fleste fritidspadlere Paddle Board Overstock giver den den bedste balance mellem kvalitet og pris.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: [
         'best-surf-gear-brands-compared',
-        'aquafarer-vs-red-paddle',
-        'aquafarer-vs-irocker',
-        'aquafarer-vs-bluefin',
+        'paddleboardoverstock-vs-red-paddle',
+        'paddleboardoverstock-vs-irocker',
+        'paddleboardoverstock-vs-bluefin',
       ],
     },
     {
       id: 'fishing-sup-setup',
       question: 'Kan jeg fiske fra et SUP bræt?',
       answer:
-        'Ja. SUP Fiskeri bliver mere og mere populært, fordi stående position giver fremragende udsyn til vandet. Vælg et board, der er mindst 11 fod langt og 33–34 tommer bredt for stabilitet. Tilføj en mælkekasse med stangholdere fastgjort til dækkets bungees, et lille anker, og bær altid en PFD. Aquafarer SUP Explorer 11 fungerer godt til afslappet fiskeri.',
+        'Ja. SUP Fiskeri bliver mere og mere populært, fordi stående position giver fremragende udsyn til vandet. Vælg et board, der er mindst 11 fod langt og 33–34 tommer bredt for stabilitet. Tilføj en mælkekasse med stangholdere fastgjort til dækkets bungees, et lille anker, og bær altid en PFD. Paddle Board Overstock SUP Explorer 11 fungerer godt til afslappet fiskeri.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['fishing-sup-guide', 'sup-anchor-guide'],
@@ -6510,7 +6510,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'airline-travel-sup',
       question: 'Hvad er flyselskabets regler for at rejse med en oppustelig skib?SUP',
       answer:
-        'De fleste flyselskaber SUP accepterer rygsække som indtjekket bagage, hvis de vejer under 23–32 kg. Aquafarer Rygsækken måler cirka 90x40x30 cm og vejer omkring 15 kg pakket. Nogle flyselskaber kan opkræve gebyrer for overdimensioneret bagage. Ankom tidligt, pak finner og pump separat i din håndbagage, og mærk tasken som skrøbelig. Undersøg altid dit flyselskabs sportsudstyrspolitik før flyvning.',
+        'De fleste flyselskaber SUP accepterer rygsække som indtjekket bagage, hvis de vejer under 23–32 kg. Paddle Board Overstock Rygsækken måler cirka 90x40x30 cm og vejer omkring 15 kg pakket. Nogle flyselskaber kan opkræve gebyrer for overdimensioneret bagage. Ankom tidligt, pak finner og pump separat i din håndbagage, og mærk tasken som skrøbelig. Undersøg altid dit flyselskabs sportsudstyrspolitik før flyvning.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-travel-guide'],
@@ -6535,7 +6535,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'oem-custom-branding',
-      question: 'Kan jeg sætte mit eget logo på Aquafarer produkterne?',
+      question: 'Kan jeg sætte mit eget logo på Paddle Board Overstock produkterne?',
       answer:
         'Ja. Vores OEM service inkluderer placering af specialdesignede logoer, tilpassede farveskemaer og specialindpakning. Vi tilbyder tampudtryk, varmeoverførsel og broderimuligheder afhængigt af produkttypen. Send dit artwork og dine specifikationer til vores salgsteam for et tilbud og et estimat på leveringstid.',
       category: 'ordering',
@@ -6546,7 +6546,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-inflate-pressure',
       question: 'Hvad PSI skal jeg puste op SUP til?',
       answer:
-        'Pust op til bundkortets maksimale opgradering PSI for bedst ydeevne — typisk 15–18 PSI for kvalitets oppustelige enheder SUPs. Aquafarer SUP Explorer 11 præsterer bedst ved 15–18 PSI. Underoppustning får kortet til at føles blødt og spore dårligt. Overoppustning over det tilladte maksimum risikerer at beskadige drop-stitch gevindene. Tjek klistermærket nær ventilen for dit prints specifikke klassificering.',
+        'Pust op til bundkortets maksimale opgradering PSI for bedst ydeevne — typisk 15–18 PSI for kvalitets oppustelige enheder SUPs. Paddle Board Overstock SUP Explorer 11 præsterer bedst ved 15–18 PSI. Underoppustning får kortet til at føles blødt og spore dårligt. Overoppustning over det tilladte maksimum risikerer at beskadige drop-stitch gevindene. Tjek klistermærket nær ventilen for dit prints specifikke klassificering.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-inflatable-sup', 'sup-pump-guide'],
@@ -6573,7 +6573,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-kayak-conversion',
       question: 'Kan jeg bruge et SUP-bræt som kajak?',
       answer:
-        'Ja. Mange SUP-brætter, inklusive Aquafarer Explorer 11, har D-ringe, som tillader fastgørelse af et kajaksæde. Brug af et SUP med kajaksæde og en enkeltbladet pagaj giver en behagelig siddestilling til længere ture eller fiskeri. Nogle mærker tilbyder dedikerede kajak-ombygningssæt med sæder og længere pagajer.',
+        'Ja. Mange SUP-brætter, inklusive Paddle Board Overstock Explorer 11, har D-ringe, som tillader fastgørelse af et kajaksæde. Brug af et SUP med kajaksæde og en enkeltbladet pagaj giver en behagelig siddestilling til længere ture eller fiskeri. Nogle mærker tilbyder dedikerede kajak-ombygningssæt med sæder og længere pagajer.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['kayak-vs-sup'],
@@ -6598,9 +6598,9 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'company-model',
-      question: 'Er Aquafarer et handelsfirma eller en producent?',
+      question: 'Er Paddle Board Overstock et handelsfirma eller en producent?',
       answer:
-        'Hverken et rent fabrikshus eller et handelsfirma — Aquafarer LLC er et mærkeselskab med egen produktionsbase. Aquafarer LLC (New Mexico, USA) håndterer global distribution, kontrakter, fakturering og eftersalg, mens Aquafarer Qingdao Manufacturing Hub står for F&U, produktion og kvalitetskontrol i vores egne 12.000 m² faciliteter. Ingen mellemled: hver ordre sendes direkte fra fabrik.',
+        'Hverken et rent fabrikshus eller et handelsfirma — Weihai Dongjilian Co., Ltd. er et mærkeselskab med egen produktionsbase. Weihai Dongjilian Co., Ltd. (New Mexico, USA) håndterer global distribution, kontrakter, fakturering og eftersalg, mens Paddle Board Overstock Qingdao Manufacturing Hub står for F&U, produktion og kvalitetskontrol i vores egne 12.000 m² faciliteter. Ingen mellemled: hver ordre sendes direkte fra fabrik.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -6609,7 +6609,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'us-contract-qingdao-shipping',
       question: 'Hvorfor er min kontrakt med et amerikansk firma, når varerne sendes fra Qingdao?',
       answer:
-        'Aquafarer LLC (New Mexico, USA) er den globale kommercielle enhed, som indgår kontrakter, udsteder fakturaer og yder eftersalgsservice, mens Qingdao Manufacturing Hub producerer og afsender hver ordre FOB Qingdao. Denne to-hubs struktur bevarer amerikanske standarder for kontrahering og afregning, samtidig med at fabriksdirekte priser og fuld produktionsgennemsigtighed opretholdes.',
+        'Weihai Dongjilian Co., Ltd. (New Mexico, USA) er den globale kommercielle enhed, som indgår kontrakter, udsteder fakturaer og yder eftersalgsservice, mens Qingdao Manufacturing Hub producerer og afsender hver ordre FOB Qingdao. Denne to-hubs struktur bevarer amerikanske standarder for kontrahering og afregning, samtidig med at fabriksdirekte priser og fuld produktionsgennemsigtighed opretholdes.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -6629,7 +6629,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'ocean-use',
       question: 'Kan jeg bruke den i havet?',
       answer:
-        'Ja.Aquafarer SUP Brettene er laget for bruk i hav, innsjøer og elver. Vår Touring-serie håndterer kystkutt, og alle brett bruker marinekvalitet PVC som tåler korrosjon i saltvann. Skyll med ferskvann etter bruk i havet.',
+        'Ja.Paddle Board Overstock SUP Brettene er laget for bruk i hav, innsjøer og elver. Vår Touring-serie håndterer kystkutt, og alle brett bruker marinekvalitet PVC som tåler korrosjon i saltvann. Skyll med ferskvann etter bruk i havet.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: ['weather-conditions'],
@@ -6647,7 +6647,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'travel-sup',
       question: 'Kan jeg reise med en oppblåsbar enhet SUP?',
       answer:
-        'Absolutt. Hvert Aquafarer brett pakkes i en ryggsekkstor som er designet for praktisk reise – sjekk reglene for transportørstørrelse og vekt. Med bare 8-22 pund er det lett å bære til stranden, innsjøen eller gjennom flyplassterminaler.',
+        'Absolutt. Hvert Paddle Board Overstock brett pakkes i en ryggsekkstor som er designet for praktisk reise – sjekk reglene for transportørstørrelse og vekt. Med bare 8-22 pund er det lett å bære til stranden, innsjøen eller gjennom flyplassterminaler.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: [],
@@ -6665,7 +6665,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'box-contents',
       question: 'Hva følger med esken?',
       answer:
-        'Alle Aquafarer SUP inkluderer brettet, reiseryggsekk, dobbeltvirkende håndpumpe, avtakbar finne, spiralbånd og reparasjonssett. Noen modeller inkluderer også en karbonåreoppgradering. Oppblåsbare båter inkluderer båt, pumpe, reparasjonssett og årer.',
+        'Alle Paddle Board Overstock SUP inkluderer brettet, reiseryggsekk, dobbeltvirkende håndpumpe, avtakbar finne, spiralbånd og reparasjonssett. Noen modeller inkluderer også en karbonåreoppgradering. Oppblåsbare båter inkluderer båt, pumpe, reparasjonssett og årer.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -6701,7 +6701,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'puncture-repair',
       question: 'Hvordan reparerer jeg et punktering?',
       answer:
-        'Rengjør området, klipp en med avrundede hjørner, påfør PVC lim, press hardt, og vent 24 timer før du blåser opp.Aquafarer Platene inkluderer et reparasjonssett. For detaljerte instruksjoner, se vår guide for oppblåsbar reparasjon.',
+        'Rengjør området, klipp en med avrundede hjørner, påfør PVC lim, press hardt, og vent 24 timer før du blåser opp.Paddle Board Overstock Platene inkluderer et reparasjonssett. For detaljerte instruksjoner, se vår guide for oppblåsbar reparasjon.',
       category: 'maintenance',
       relatedProducts: [],
       relatedGuides: ['inflatable-repair', 'sup-maintenance'],
@@ -6735,9 +6735,9 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'warranty',
-      question: 'Hva er Aquafarer garantien?',
+      question: 'Hva er Paddle Board Overstock garantien?',
       answer:
-        'Alle Aquafarer produkter er dekket av en omfattende produsentgaranti. Oppblåsbart stoff, sømmer og skrog dekkes av 5 års begrenset garanti;SUP brett og tilbehør har 2 års begrenset garanti. Garantien dekker feil i materialer og håndverk ved normal bruk.',
+        'Alle Paddle Board Overstock produkter er dekket av en omfattende produsentgaranti. Oppblåsbart stoff, sømmer og skrog dekkes av 5 års begrenset garanti;SUP brett og tilbehør har 2 års begrenset garanti. Garantien dekker feil i materialer og håndverk ved normal bruk.',
       category: 'warranty',
       relatedProducts: [],
       relatedGuides: [],
@@ -6800,7 +6800,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'material-difference',
       question: 'Hva er forskjellen mellom PVC og Hypalon?',
       answer:
-        'PVC er lettere, rimeligere og enklere å reparere — ideell for rekreasjonsbruk.Hypalon (CSM) tilbyr overlegen UV og kjemisk motstand med lengre levetid, foretrukket for kommersielle og militære formål.Aquafarer bruker begge deler avhengig av produktnivå.',
+        'PVC er lettere, rimeligere og enklere å reparere — ideell for rekreasjonsbruk.Hypalon (CSM) tilbyr overlegen UV og kjemisk motstand med lengre levetid, foretrukket for kommersielle og militære formål.Paddle Board Overstock bruker begge deler avhengig av produktnivå.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -6809,7 +6809,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-width-stability',
       question: 'Hvilken SUP bredde er best for stabilitet?',
       answer:
-        'For nybegynnere gir en bredde på 33–34 tommer den beste balansen mellom stabilitet og padlekomfort. Brett som er smalere enn 32 tommer føles tippy for nye padlere. Aquafarer SUP Explorer 11 på 33 tommer er ideell for læring.',
+        'For nybegynnere gir en bredde på 33–34 tommer den beste balansen mellom stabilitet og padlekomfort. Brett som er smalere enn 32 tommer føles tippy for nye padlere. Paddle Board Overstock SUP Explorer 11 på 33 tommer er ideell for læring.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-size-guide', 'paddle-board-size-guide'],
@@ -6842,24 +6842,24 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       relatedGuides: ['inflatable-boat-buying-guide'],
     },
     {
-      id: 'aquafarer-vs-others',
-      question: 'Hvordan Aquafarer sammenlignes det med andre merker?',
+      id: 'paddleboardoverstock-vs-others',
+      question: 'Hvordan Paddle Board Overstock sammenlignes det med andre merker?',
       answer:
-        'Aquafarer Gir best verdi for oppblåsbart vannsportutstyr. Sammenlignet med Red Aquafarer Paddle Co leverer 90 % av ytelsen til 60 % av kostnaden. Sammenlignet med iRocker Aquafarer bruker den høyere kvalitet trippellags militærkvalitet PVC og høyere PSI vurderinger. Sammenlignet med Bluefin Aquafarer tilbyr den overlegne materialspesifikasjoner. For de fleste fritidspadlere Aquafarer gir den den beste balansen mellom kvalitet og pris.',
+        'Paddle Board Overstock Gir best verdi for oppblåsbart vannsportutstyr. Sammenlignet med Red Paddle Board Overstock Paddle Co leverer 90 % av ytelsen til 60 % av kostnaden. Sammenlignet med iRocker Paddle Board Overstock bruker den høyere kvalitet trippellags militærkvalitet PVC og høyere PSI vurderinger. Sammenlignet med Bluefin Paddle Board Overstock tilbyr den overlegne materialspesifikasjoner. For de fleste fritidspadlere Paddle Board Overstock gir den den beste balansen mellom kvalitet og pris.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: [
         'best-surf-gear-brands-compared',
-        'aquafarer-vs-red-paddle',
-        'aquafarer-vs-irocker',
-        'aquafarer-vs-bluefin',
+        'paddleboardoverstock-vs-red-paddle',
+        'paddleboardoverstock-vs-irocker',
+        'paddleboardoverstock-vs-bluefin',
       ],
     },
     {
       id: 'fishing-sup-setup',
       question: 'Kan jeg fiske fra SUP et brett?',
       answer:
-        'Ja.SUP Fiske blir stadig mer populært fordi stående posisjon gir utmerket sikt ned i vannet. Velg et brett som er minst 11 fot langt og 33–34 tommer bredt for stabilitet. Legg til en melkekasse med stangholdere festet til dekkbungees, et lite anker, og bruk alltid en PFD. Aquafarer SUP Explorer 11 fungerer godt til uformelt fiske.',
+        'Ja.SUP Fiske blir stadig mer populært fordi stående posisjon gir utmerket sikt ned i vannet. Velg et brett som er minst 11 fot langt og 33–34 tommer bredt for stabilitet. Legg til en melkekasse med stangholdere festet til dekkbungees, et lite anker, og bruk alltid en PFD. Paddle Board Overstock SUP Explorer 11 fungerer godt til uformelt fiske.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['fishing-sup-guide', 'sup-anchor-guide'],
@@ -6877,7 +6877,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'airline-travel-sup',
       question: 'Hva er flyselskapets regler for å reise med en oppblåsbar båt SUP?',
       answer:
-        'De fleste flyselskaper aksepterer SUP ryggsekker som innsjekket bagasje hvis de veier under 23–32 kg. Aquafarer Ryggsekken måler omtrent 90x40x30 cm og veier omtrent 15 kg pakket. Noen flyselskaper kan kreve gebyrer for overdimensjonert bagasje. Kom tidlig, pakk inn finner og pump separat i håndbagasjen, og merk bagasjen som skjør. Undersøk alltid flyselskapets retningslinjer for sportsutstyr før du flyr.',
+        'De fleste flyselskaper aksepterer SUP ryggsekker som innsjekket bagasje hvis de veier under 23–32 kg. Paddle Board Overstock Ryggsekken måler omtrent 90x40x30 cm og veier omtrent 15 kg pakket. Noen flyselskaper kan kreve gebyrer for overdimensjonert bagasje. Kom tidlig, pakk inn finner og pump separat i håndbagasjen, og merk bagasjen som skjør. Undersøk alltid flyselskapets retningslinjer for sportsutstyr før du flyr.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-travel-guide'],
@@ -6902,7 +6902,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'oem-custom-branding',
-      question: 'Kan jeg sette min egen logo på Aquafarer produktene?',
+      question: 'Kan jeg sette min egen logo på Paddle Board Overstock produktene?',
       answer:
         'Ja. Vår OEM tjeneste inkluderer tilpasset logoplassering, tilpassede fargevalg og skreddersydd emballasje. Vi tilbyr padprinting, varmeoverføring og broderialternativer avhengig av produkttype. Send kunstverket og spesifikasjonene dine til vårt salgsteam for et pristilbud og estimat på leveringstid.',
       category: 'ordering',
@@ -6913,7 +6913,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-inflate-pressure',
       question: 'Hva PSI bør jeg blåse opp SUP til?',
       answer:
-        'Blås opp til kortets oppgi maksimum PSI for best ytelse — vanligvis 15–18 PSI for kvalitetsoppblåsbar SUPs. Aquafarer SUP Explorer 11 yter best ved 15–18 PSI. Underoppblåsing gjør at kortet føles mykt og sporer dårlig. Overoppblåsing over det nominelle maksområdet risikerer å skade drop-stitch gjengene. Sjekk klistremerket nær ventilen for kortets spesifikke verdi.',
+        'Blås opp til kortets oppgi maksimum PSI for best ytelse — vanligvis 15–18 PSI for kvalitetsoppblåsbar SUPs. Paddle Board Overstock SUP Explorer 11 yter best ved 15–18 PSI. Underoppblåsing gjør at kortet føles mykt og sporer dårlig. Overoppblåsing over det nominelle maksområdet risikerer å skade drop-stitch gjengene. Sjekk klistremerket nær ventilen for kortets spesifikke verdi.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-inflatable-sup', 'sup-pump-guide'],
@@ -6940,7 +6940,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-kayak-conversion',
       question: 'Kan jeg bruke et SUP-brett som en kajakk?',
       answer:
-        'Ja. Mange SUP-brett, inkludert Aquafarer Explorer 11, har D-ringer som gjør det mulig å feste et kajakksete. Bruk av en SUP med kajakksete og en enkeltbladåre gir en komfortabel sittestilling for lengre turer eller fiske. Noen merker tilbyr dedikerte kajakk-konverteringssett med seter og lengre årer.',
+        'Ja. Mange SUP-brett, inkludert Paddle Board Overstock Explorer 11, har D-ringer som gjør det mulig å feste et kajakksete. Bruk av en SUP med kajakksete og en enkeltbladåre gir en komfortabel sittestilling for lengre turer eller fiske. Noen merker tilbyr dedikerte kajakk-konverteringssett med seter og lengre årer.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['kayak-vs-sup'],
@@ -6965,9 +6965,9 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'company-model',
-      question: 'Er Aquafarer et handelsselskap eller en produsent?',
+      question: 'Er Paddle Board Overstock et handelsselskap eller en produsent?',
       answer:
-        'Hverken et rent fabrikkanlegg eller et handelsfirma — Aquafarer LLC er et merkevarefirma med sin egen produksjonsbase. Aquafarer LLC (New Mexico, USA) håndterer global distribusjon, kontrakter, fakturering og kundeservice, mens Aquafarer Qingdao Manufacturing Hub driver FoU, produksjon og kvalitetskontroll i vårt eget 12 000 m² store anlegg. Ingen mellomledd: hver bestilling sendes direkte fra fabrikken.',
+        'Hverken et rent fabrikkanlegg eller et handelsfirma — Weihai Dongjilian Co., Ltd. er et merkevarefirma med sin egen produksjonsbase. Weihai Dongjilian Co., Ltd. (New Mexico, USA) håndterer global distribusjon, kontrakter, fakturering og kundeservice, mens Paddle Board Overstock Qingdao Manufacturing Hub driver FoU, produksjon og kvalitetskontroll i vårt eget 12 000 m² store anlegg. Ingen mellomledd: hver bestilling sendes direkte fra fabrikken.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -6976,7 +6976,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'us-contract-qingdao-shipping',
       question: 'Hvorfor er kontrakten min med et amerikansk selskap når varene sendes fra Qingdao?',
       answer:
-        'Aquafarer LLC (New Mexico, USA) er den globale kommersielle enheten som signerer kontrakter, utsteder fakturaer og gir etter-salgs støtte, mens Qingdao Manufacturing Hub produserer og sender alle bestillinger FOB Qingdao. Denne to-hub-strukturen opprettholder kontrakter og oppgjør etter amerikansk standard, samtidig som den bevarer fabrikk-direkte priser og full produksjonstransparens.',
+        'Weihai Dongjilian Co., Ltd. (New Mexico, USA) er den globale kommersielle enheten som signerer kontrakter, utsteder fakturaer og gir etter-salgs støtte, mens Qingdao Manufacturing Hub produserer og sender alle bestillinger FOB Qingdao. Denne to-hub-strukturen opprettholder kontrakter og oppgjør etter amerikansk standard, samtidig som den bevarer fabrikk-direkte priser og full produksjonstransparens.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -6996,7 +6996,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'ocean-use',
       question: 'Kan ik het in de oceaan gebruiken?',
       answer:
-        'Ja.Aquafarer SUP Planken zijn gebouwd voor gebruik in zee, meren en rivieren. Onze Touring-serie behandelt kustchop, en alle planken zijn van maritieme kwaliteit PVC die bestand is tegen zoutwatercorrosie. Spoel na gebruik in zee met zoet water.',
+        'Ja.Paddle Board Overstock SUP Planken zijn gebouwd voor gebruik in zee, meren en rivieren. Onze Touring-serie behandelt kustchop, en alle planken zijn van maritieme kwaliteit PVC die bestand is tegen zoutwatercorrosie. Spoel na gebruik in zee met zoet water.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: ['weather-conditions'],
@@ -7014,7 +7014,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'travel-sup',
       question: 'Kan ik reizen met een opblaasbare auto SUP?',
       answer:
-        'Absoluut. Elk Aquafarer board wordt verpakt in een rugzakformaat draagtasje dat ontworpen is voor gemakkelijk reizen — controleer de afmetingen en het gewicht van je drager. Met slechts 8-22 pond is het makkelijk mee te nemen naar het strand, meer of door luchthaventerminals.',
+        'Absoluut. Elk Paddle Board Overstock board wordt verpakt in een rugzakformaat draagtasje dat ontworpen is voor gemakkelijk reizen — controleer de afmetingen en het gewicht van je drager. Met slechts 8-22 pond is het makkelijk mee te nemen naar het strand, meer of door luchthaventerminals.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: [],
@@ -7032,7 +7032,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'box-contents',
       question: 'Wat zit er in de doos?',
       answer:
-        'Elke Aquafarer SUP boot bevat het board, een reisrugzak, een handpomp met dubbele werking, een verwijderbare vin, een spiraalriem en een reparatieset. Sommige modellen bevatten ook een upgrade van een carbon peddel. Opblaasbare boten zijn onder andere de boot, pomp, reparatiekit en riemen.',
+        'Elke Paddle Board Overstock SUP boot bevat het board, een reisrugzak, een handpomp met dubbele werking, een verwijderbare vin, een spiraalriem en een reparatieset. Sommige modellen bevatten ook een upgrade van een carbon peddel. Opblaasbare boten zijn onder andere de boot, pomp, reparatiekit en riemen.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -7068,7 +7068,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'puncture-repair',
       question: 'Hoe repareer ik een lekke band?',
       answer:
-        'Maak het gebied schoon, knip een lap met afgeronde hoeken, breng PVC lijm aan, pers stevig en wacht 24 uur voordat je het opblaast.Aquafarer Planken bevatten een reparatieset. Voor gedetailleerde instructies, zie onze handleiding voor opblaasbare reparaties.',
+        'Maak het gebied schoon, knip een lap met afgeronde hoeken, breng PVC lijm aan, pers stevig en wacht 24 uur voordat je het opblaast.Paddle Board Overstock Planken bevatten een reparatieset. Voor gedetailleerde instructies, zie onze handleiding voor opblaasbare reparaties.',
       category: 'maintenance',
       relatedProducts: [],
       relatedGuides: ['inflatable-repair', 'sup-maintenance'],
@@ -7102,9 +7102,9 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'warranty',
-      question: 'Wat is de Aquafarer garantie?',
+      question: 'Wat is de Paddle Board Overstock garantie?',
       answer:
-        'Alle Aquafarer producten worden gedekt door een uitgebreide fabrikantgarantie. Opblaasbare bootbuisstof, naden en romp zijn gedekt door een beperkte garantie van 5 jaar;SUP boards en accessoires hebben een garantie van 2 jaar. De garantie dekt defecten in materialen en vakmanschap bij normaal gebruik.',
+        'Alle Paddle Board Overstock producten worden gedekt door een uitgebreide fabrikantgarantie. Opblaasbare bootbuisstof, naden en romp zijn gedekt door een beperkte garantie van 5 jaar;SUP boards en accessoires hebben een garantie van 2 jaar. De garantie dekt defecten in materialen en vakmanschap bij normaal gebruik.',
       category: 'warranty',
       relatedProducts: [],
       relatedGuides: [],
@@ -7167,7 +7167,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'material-difference',
       question: 'Wat is het verschil tussen PVC en Hypalon?',
       answer:
-        'PVC is lichter, betaalbaarder en gemakkelijker te repareren — ideaal voor recreatief gebruik.Hypalon (CSM) biedt superieure UV en chemische bestendigheid met een langere levensduur, en wordt gewenst voor commerciële en militaire toepassingen.Aquafarer Beide worden gebruikt afhankelijk van het productniveau.',
+        'PVC is lichter, betaalbaarder en gemakkelijker te repareren — ideaal voor recreatief gebruik.Hypalon (CSM) biedt superieure UV en chemische bestendigheid met een langere levensduur, en wordt gewenst voor commerciële en militaire toepassingen.Paddle Board Overstock Beide worden gebruikt afhankelijk van het productniveau.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -7176,7 +7176,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-width-stability',
       question: 'Welke SUP breedte is het beste voor stabiliteit?',
       answer:
-        'Voor beginners biedt een breedte van 80–70 cm de beste balans tussen stabiliteit en peddelgemak. Planken die smaller zijn dan 70 cm voelen voor beginnende peddelaars kantelend aan. De Aquafarer SUP Explorer 11 op 33 inch is ideaal om te leren.',
+        'Voor beginners biedt een breedte van 80–70 cm de beste balans tussen stabiliteit en peddelgemak. Planken die smaller zijn dan 70 cm voelen voor beginnende peddelaars kantelend aan. De Paddle Board Overstock SUP Explorer 11 op 33 inch is ideaal om te leren.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-size-guide', 'paddle-board-size-guide'],
@@ -7209,24 +7209,24 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       relatedGuides: ['inflatable-boat-buying-guide'],
     },
     {
-      id: 'aquafarer-vs-others',
-      question: 'Hoe Aquafarer verhoudt het zich tot andere merken?',
+      id: 'paddleboardoverstock-vs-others',
+      question: 'Hoe Paddle Board Overstock verhoudt het zich tot andere merken?',
       answer:
-        'Aquafarer Biedt de beste prijs-kwaliteitverhouding in opblaasbare watersportuitrusting. In vergelijking met Red Aquafarer Paddle Co levert het 90% van de prestaties tegen 60% van de kosten. In vergelijking met iRocker Aquafarer gebruikt het hogere kwaliteit drievoudige lagen militaire kwaliteit PVC en hogere PSI classificaties. In vergelijking met Bluefin Aquafarer biedt het superieure materiaalspecificaties. Voor de meeste recreatieve peddelaars Aquafarer biedt het de beste balans tussen kwaliteit en prijs.',
+        'Paddle Board Overstock Biedt de beste prijs-kwaliteitverhouding in opblaasbare watersportuitrusting. In vergelijking met Red Paddle Board Overstock Paddle Co levert het 90% van de prestaties tegen 60% van de kosten. In vergelijking met iRocker Paddle Board Overstock gebruikt het hogere kwaliteit drievoudige lagen militaire kwaliteit PVC en hogere PSI classificaties. In vergelijking met Bluefin Paddle Board Overstock biedt het superieure materiaalspecificaties. Voor de meeste recreatieve peddelaars Paddle Board Overstock biedt het de beste balans tussen kwaliteit en prijs.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: [
         'best-surf-gear-brands-compared',
-        'aquafarer-vs-red-paddle',
-        'aquafarer-vs-irocker',
-        'aquafarer-vs-bluefin',
+        'paddleboardoverstock-vs-red-paddle',
+        'paddleboardoverstock-vs-irocker',
+        'paddleboardoverstock-vs-bluefin',
       ],
     },
     {
       id: 'fishing-sup-setup',
       question: 'Kan ik vissen vanaf een SUP plank?',
       answer:
-        'Ja.SUP Vissen wordt steeds populairder omdat de staande houding uitstekend zicht op het water biedt. Kies een plank van minstens 31 voet lang en 33–34 inch breed voor stabiliteit. Voeg een melkkrat toe met hengelhouders die aan de bungees van het dek zijn bevestigd, een klein anker, en draag altijd een PFD. De Aquafarer SUP Explorer 11 werkt goed voor casual vissen.',
+        'Ja.SUP Vissen wordt steeds populairder omdat de staande houding uitstekend zicht op het water biedt. Kies een plank van minstens 31 voet lang en 33–34 inch breed voor stabiliteit. Voeg een melkkrat toe met hengelhouders die aan de bungees van het dek zijn bevestigd, een klein anker, en draag altijd een PFD. De Paddle Board Overstock SUP Explorer 11 werkt goed voor casual vissen.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['fishing-sup-guide', 'sup-anchor-guide'],
@@ -7244,7 +7244,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'airline-travel-sup',
       question: 'Wat zijn de regels van de luchtvaartmaatschappij voor reizen met een opblaasbare boot SUP?',
       answer:
-        'De meeste SUP luchtvaartmaatschappijen accepteren rugzakken als ingecheckte bagage als ze onder de 23–32 kg vallen. De Aquafarer rugzak is ongeveer 90x40x30 cm groot en weegt ongeveer 15 kg als hij is ingepakt. Sommige luchtvaartmaatschappijen rekenen kosten voor oversized bagage. Kom vroeg aan, wikkel vinnen en pomp apart in je handbagage en label de tas als breekbaar. Onderzoek altijd het sportuitrustingsbeleid van je luchtvaartmaatschappij voordat je vliegt.',
+        'De meeste SUP luchtvaartmaatschappijen accepteren rugzakken als ingecheckte bagage als ze onder de 23–32 kg vallen. De Paddle Board Overstock rugzak is ongeveer 90x40x30 cm groot en weegt ongeveer 15 kg als hij is ingepakt. Sommige luchtvaartmaatschappijen rekenen kosten voor oversized bagage. Kom vroeg aan, wikkel vinnen en pomp apart in je handbagage en label de tas als breekbaar. Onderzoek altijd het sportuitrustingsbeleid van je luchtvaartmaatschappij voordat je vliegt.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-travel-guide'],
@@ -7269,7 +7269,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'oem-custom-branding',
-      question: 'Kan ik mijn eigen logo op Aquafarer producten zetten?',
+      question: 'Kan ik mijn eigen logo op Paddle Board Overstock producten zetten?',
       answer:
         "Ja. Onze OEM service omvat het plaatsen van aangepaste logo's, aangepaste kleurenschema's en aangepaste verpakkingen. We bieden pad-print, warmteoverdracht en borduuropties aan, afhankelijk van het producttype. Stuur uw artwork en specificaties naar ons verkoopteam voor een offerte en een schatting van de doorlooptijd.",
       category: 'ordering',
@@ -7280,7 +7280,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-inflate-pressure',
       question: 'Waar PSI moet ik mijn SUP naartoe opblaasen?',
       answer:
-        'Blaas op tot het maximale aantal van het board PSI voor de beste prestaties — meestal 15–18 PSI voor kwalitatief opblaasbare elementen SUPs. De Aquafarer SUP Explorer 11 presteert het beste bij 15–18 PSI. Onderinflatie zorgt ervoor dat het board zacht aanvoelt en slecht volgt. Overmatige inflatie boven het maximale aantal kan de drop-stitch schroefdraad beschadigen. Controleer de sticker bij het ventiel voor de specifieke waarde van je board.',
+        'Blaas op tot het maximale aantal van het board PSI voor de beste prestaties — meestal 15–18 PSI voor kwalitatief opblaasbare elementen SUPs. De Paddle Board Overstock SUP Explorer 11 presteert het beste bij 15–18 PSI. Onderinflatie zorgt ervoor dat het board zacht aanvoelt en slecht volgt. Overmatige inflatie boven het maximale aantal kan de drop-stitch schroefdraad beschadigen. Controleer de sticker bij het ventiel voor de specifieke waarde van je board.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-inflatable-sup', 'sup-pump-guide'],
@@ -7307,7 +7307,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-kayak-conversion',
       question: 'Kan ik een SUP board als kajak gebruiken?',
       answer:
-        'Ja. Veel SUP-borden, inclusief de Aquafarer Explorer 11, hebben D-ringen waarmee een kajakstoel kan worden bevestigd. Het gebruik van een SUP met een kajakstoel en een enkele peddel biedt een comfortabele zithouding voor langere tochten of het vissen. Sommige merken bieden speciale kajakomzettingskits met stoelen en langere peddels.',
+        'Ja. Veel SUP-borden, inclusief de Paddle Board Overstock Explorer 11, hebben D-ringen waarmee een kajakstoel kan worden bevestigd. Het gebruik van een SUP met een kajakstoel en een enkele peddel biedt een comfortabele zithouding voor langere tochten of het vissen. Sommige merken bieden speciale kajakomzettingskits met stoelen en langere peddels.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['kayak-vs-sup'],
@@ -7332,9 +7332,9 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'company-model',
-      question: 'Is Aquafarer een handelsonderneming of een fabrikant?',
+      question: 'Is Paddle Board Overstock een handelsonderneming of een fabrikant?',
       answer:
-        'Noch een puur fabriek noch een handelsonderneming — Aquafarer LLC is een merkbedrijf met een eigen productieomgeving. Aquafarer LLC (New Mexico, VS) verzorgt wereldwijde distributie, contracten, facturering en after-sales, terwijl het Aquafarer Qingdao Manufacturing Hub R&D, productie en kwaliteitscontrole uitvoert in onze eigen faciliteit van 12.000 m². Geen tussenpersonen: elke bestelling wordt direct vanuit de fabriek verzonden.',
+        'Noch een puur fabriek noch een handelsonderneming — Weihai Dongjilian Co., Ltd. is een merkbedrijf met een eigen productieomgeving. Weihai Dongjilian Co., Ltd. (New Mexico, VS) verzorgt wereldwijde distributie, contracten, facturering en after-sales, terwijl het Paddle Board Overstock Qingdao Manufacturing Hub R&D, productie en kwaliteitscontrole uitvoert in onze eigen faciliteit van 12.000 m². Geen tussenpersonen: elke bestelling wordt direct vanuit de fabriek verzonden.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -7343,7 +7343,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'us-contract-qingdao-shipping',
       question: 'Waarom is mijn contract met een Amerikaans bedrijf als de goederen vanuit Qingdao worden verzonden?',
       answer:
-        'Aquafarer LLC (New Mexico, VS) is de wereldwijde commerciële entiteit die contracten tekent, facturen uitreikt en after-sales ondersteuning biedt, terwijl de Qingdao Manufacturing Hub elke bestelling produceert en verzendt FOB Qingdao. Deze dual-hubstructuur behoudt contractering en afwikkeling volgens Amerikaanse normen, terwijl directe fabrieksprijzen en volledige productietransparantie behouden blijven.',
+        'Weihai Dongjilian Co., Ltd. (New Mexico, VS) is de wereldwijde commerciële entiteit die contracten tekent, facturen uitreikt en after-sales ondersteuning biedt, terwijl de Qingdao Manufacturing Hub elke bestelling produceert en verzendt FOB Qingdao. Deze dual-hubstructuur behoudt contractering en afwikkeling volgens Amerikaanse normen, terwijl directe fabrieksprijzen en volledige productietransparantie behouden blijven.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -7363,7 +7363,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'ocean-use',
       question: 'Posso usá-lo no oceano?',
       answer:
-        'Sim.Aquafarer SUP As pranchas são feitas para uso no oceano, lago e rio. Nossa série Touring suporta ondas costeiras, e todas as pranchas usam produtos marinhos PVC que resistem à corrosão da água salgada. Enxágue com água doce após o uso no oceano.',
+        'Sim.Paddle Board Overstock SUP As pranchas são feitas para uso no oceano, lago e rio. Nossa série Touring suporta ondas costeiras, e todas as pranchas usam produtos marinhos PVC que resistem à corrosão da água salgada. Enxágue com água doce após o uso no oceano.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: ['weather-conditions'],
@@ -7381,7 +7381,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'travel-sup',
       question: 'Posso viajar com um inflável SUP?',
       answer:
-        'Com certeza. Cada Aquafarer prancha é carregada em uma bolsa do tamanho de uma mochila, projetada para viagens convenientes — confira o tamanho e o peso do seu porta-bagagens. Com apenas 18-22 lbs, é fácil de levar até a praia, lago ou terminais de aeroporto.',
+        'Com certeza. Cada Paddle Board Overstock prancha é carregada em uma bolsa do tamanho de uma mochila, projetada para viagens convenientes — confira o tamanho e o peso do seu porta-bagagens. Com apenas 18-22 lbs, é fácil de levar até a praia, lago ou terminais de aeroporto.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: [],
@@ -7399,7 +7399,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'box-contents',
       question: 'O que vem na caixa?',
       answer:
-        'Cada Aquafarer SUP um inclui a prancha, uma mochila de viagem, bomba manual de ação dupla, deriva removível, coleira de bobina e kit de reparo. Alguns modelos também incluem opção de upgrade para remo de carbono. Os barcos infláveis incluem o barco, bomba, kit de reparo e remos.',
+        'Cada Paddle Board Overstock SUP um inclui a prancha, uma mochila de viagem, bomba manual de ação dupla, deriva removível, coleira de bobina e kit de reparo. Alguns modelos também incluem opção de upgrade para remo de carbono. Os barcos infláveis incluem o barco, bomba, kit de reparo e remos.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -7435,7 +7435,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'puncture-repair',
       question: 'Como faço para consertar um furo?',
       answer:
-        'Limpe a área, corte um remendo com cantos arredondados, aplique PVC adesivo, pressione firmemente e espere 24 horas antes de inflar.Aquafarer As tábuas incluem um kit de reparo. Para instruções detalhadas, consulte nosso guia de reparo de infláveis.',
+        'Limpe a área, corte um remendo com cantos arredondados, aplique PVC adesivo, pressione firmemente e espere 24 horas antes de inflar.Paddle Board Overstock As tábuas incluem um kit de reparo. Para instruções detalhadas, consulte nosso guia de reparo de infláveis.',
       category: 'maintenance',
       relatedProducts: [],
       relatedGuides: ['inflatable-repair', 'sup-maintenance'],
@@ -7469,9 +7469,9 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'warranty',
-      question: 'Qual é a Aquafarer garantia?',
+      question: 'Qual é a Paddle Board Overstock garantia?',
       answer:
-        'Todos Aquafarer os produtos são garantidos por uma garantia abrangente do fabricante. O tecido, as costuras e o casco infláveis para barcos são cobertos por uma garantia limitada de 5 anos;SUP placas e acessórios possuem garantia limitada de 2 anos. A garantia cobre defeitos nos materiais e na mão de obra sob uso normal.',
+        'Todos Paddle Board Overstock os produtos são garantidos por uma garantia abrangente do fabricante. O tecido, as costuras e o casco infláveis para barcos são cobertos por uma garantia limitada de 5 anos;SUP placas e acessórios possuem garantia limitada de 2 anos. A garantia cobre defeitos nos materiais e na mão de obra sob uso normal.',
       category: 'warranty',
       relatedProducts: [],
       relatedGuides: [],
@@ -7534,7 +7534,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'material-difference',
       question: 'Qual é a diferença entre PVC e Hypalon?',
       answer:
-        'PVC é mais leve, mais acessível e mais fácil de reparar — ideal para uso recreativo.Hypalon (CSM) oferece resistência superior UV e química com uma vida útil mais longa, preferida para aplicações comerciais e militares.Aquafarer Utiliza ambos dependendo do nível do produto.',
+        'PVC é mais leve, mais acessível e mais fácil de reparar — ideal para uso recreativo.Hypalon (CSM) oferece resistência superior UV e química com uma vida útil mais longa, preferida para aplicações comerciais e militares.Paddle Board Overstock Utiliza ambos dependendo do nível do produto.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -7543,7 +7543,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-width-stability',
       question: 'Qual SUP largura é melhor para estabilidade?',
       answer:
-        'Para iniciantes, uma largura de 33–34 polegadas oferece o melhor equilíbrio entre estabilidade e facilidade de remada. Pranchas mais estreitas que 32 polegadas parecem inclinadas para novos remadores. Aquafarer SUP A Explorer 11 com 33 polegadas é ideal para aprender.',
+        'Para iniciantes, uma largura de 33–34 polegadas oferece o melhor equilíbrio entre estabilidade e facilidade de remada. Pranchas mais estreitas que 32 polegadas parecem inclinadas para novos remadores. Paddle Board Overstock SUP A Explorer 11 com 33 polegadas é ideal para aprender.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-size-guide', 'paddle-board-size-guide'],
@@ -7576,24 +7576,24 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       relatedGuides: ['inflatable-boat-buying-guide'],
     },
     {
-      id: 'aquafarer-vs-others',
-      question: 'Como Aquafarer se compara a outras marcas?',
+      id: 'paddleboardoverstock-vs-others',
+      question: 'Como Paddle Board Overstock se compara a outras marcas?',
       answer:
-        'Aquafarer oferece o melhor valor em equipamentos infláveis para esportes aquáticos. Comparado à Red Paddle Co, Aquafarer entrega 90% do desempenho a 60% do custo. Comparado ao iRocker, utiliza equipamento Aquafarer militar de três camadas de qualidade PVC superior e PSI classificações mais altas. Comparado ao Bluefin, Aquafarer oferece especificações de material superiores. Para a maioria dos remadores recreativos, Aquafarer oferece o melhor equilíbrio entre qualidade e preço.',
+        'Paddle Board Overstock oferece o melhor valor em equipamentos infláveis para esportes aquáticos. Comparado à Red Paddle Co, Paddle Board Overstock entrega 90% do desempenho a 60% do custo. Comparado ao iRocker, utiliza equipamento Paddle Board Overstock militar de três camadas de qualidade PVC superior e PSI classificações mais altas. Comparado ao Bluefin, Paddle Board Overstock oferece especificações de material superiores. Para a maioria dos remadores recreativos, Paddle Board Overstock oferece o melhor equilíbrio entre qualidade e preço.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: [
         'best-surf-gear-brands-compared',
-        'aquafarer-vs-red-paddle',
-        'aquafarer-vs-irocker',
-        'aquafarer-vs-bluefin',
+        'paddleboardoverstock-vs-red-paddle',
+        'paddleboardoverstock-vs-irocker',
+        'paddleboardoverstock-vs-bluefin',
       ],
     },
     {
       id: 'fishing-sup-setup',
       question: 'Posso pescar de uma SUP tábua?',
       answer:
-        'Sim.SUP A pesca está cada vez mais popular porque a posição em pé oferece excelente visibilidade para a água. Escolha uma prancha com pelo menos 11 pés de comprimento e 33–34 polegadas de largura para estabilidade. Adicione uma caixa de leite com suportes para varas fixadas aos bungees do convés, uma pequena âncora e sempre use PFD um . Aquafarer SUP O Explorer 11 funciona bem para pesca casual.',
+        'Sim.SUP A pesca está cada vez mais popular porque a posição em pé oferece excelente visibilidade para a água. Escolha uma prancha com pelo menos 11 pés de comprimento e 33–34 polegadas de largura para estabilidade. Adicione uma caixa de leite com suportes para varas fixadas aos bungees do convés, uma pequena âncora e sempre use PFD um . Paddle Board Overstock SUP O Explorer 11 funciona bem para pesca casual.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['fishing-sup-guide', 'sup-anchor-guide'],
@@ -7611,7 +7611,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'airline-travel-sup',
       question: 'Quais são as regras das companhias aéreas para viajar com um inflável SUP?',
       answer:
-        'A maioria das companhias aéreas aceita SUP mochilas como bagagem despachada se tiver menos de 23–32 kg. A Aquafarer mochila mede aproximadamente 90x40x30 cm e pesa cerca de 15 kg embalada. Algumas companhias podem cobrar taxas por bagagem de tamanho excessivo. Chegue cedo, enrole as aletas e bombee separadamente na bagagem de mão, e rotule a bolsa como frágil. Sempre pesquise a política de equipamentos esportivos da sua companhia aérea antes de voar.',
+        'A maioria das companhias aéreas aceita SUP mochilas como bagagem despachada se tiver menos de 23–32 kg. A Paddle Board Overstock mochila mede aproximadamente 90x40x30 cm e pesa cerca de 15 kg embalada. Algumas companhias podem cobrar taxas por bagagem de tamanho excessivo. Chegue cedo, enrole as aletas e bombee separadamente na bagagem de mão, e rotule a bolsa como frágil. Sempre pesquise a política de equipamentos esportivos da sua companhia aérea antes de voar.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-travel-guide'],
@@ -7636,7 +7636,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'oem-custom-branding',
-      question: 'Posso colocar meu próprio logo nos Aquafarer produtos?',
+      question: 'Posso colocar meu próprio logo nos Paddle Board Overstock produtos?',
       answer:
         'Sim. Nosso OEM serviço inclui colocação personalizada de logotipos, esquemas de cores personalizados e embalagens personalizadas. Oferecemos opções de impressão em pad, transferência de calor e bordado, dependendo do tipo de produto. Envie sua obra e especificações para nossa equipe de vendas para um orçamento e estimativa de prazo.',
       category: 'ordering',
@@ -7647,7 +7647,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-inflate-pressure',
       question: 'Até onde PSI devo inflar SUP ?',
       answer:
-        'Infle até o máximo avaliado pela placa PSI para melhor desempenho — normalmente entre 15 e 18 PSI para infláveis de qualidade SUPs. Aquafarer SUP A Explorer 11 tem melhor desempenho entre 15 e 18 PSI. A subinflação faz com que a placa fique macia e tenha mal de acompanhamento. Inflação excessiva além do máximo nominal pode danificar a drop-stitch rosca. Verifique o adesivo próximo à válvula para a classificação específica da sua placa.',
+        'Infle até o máximo avaliado pela placa PSI para melhor desempenho — normalmente entre 15 e 18 PSI para infláveis de qualidade SUPs. Paddle Board Overstock SUP A Explorer 11 tem melhor desempenho entre 15 e 18 PSI. A subinflação faz com que a placa fique macia e tenha mal de acompanhamento. Inflação excessiva além do máximo nominal pode danificar a drop-stitch rosca. Verifique o adesivo próximo à válvula para a classificação específica da sua placa.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-inflatable-sup', 'sup-pump-guide'],
@@ -7674,7 +7674,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'sup-kayak-conversion',
       question: 'Posso usar uma prancha SUP como caiaque?',
       answer:
-        'Sim. Muitas pranchas SUP, incluindo a Aquafarer Explorer 11, possuem argolas em D que permitem a fixação de um assento de caiaque. Usar uma SUP com um assento de caiaque e um remo de lâmina única oferece uma posição sentada confortável para viagens mais longas ou pesca. Algumas marcas oferecem kits de conversão dedicados para caiaque com assentos e remos mais longos.',
+        'Sim. Muitas pranchas SUP, incluindo a Paddle Board Overstock Explorer 11, possuem argolas em D que permitem a fixação de um assento de caiaque. Usar uma SUP com um assento de caiaque e um remo de lâmina única oferece uma posição sentada confortável para viagens mais longas ou pesca. Algumas marcas oferecem kits de conversão dedicados para caiaque com assentos e remos mais longos.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['kayak-vs-sup'],
@@ -7699,9 +7699,9 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'company-model',
-      question: 'O Aquafarer é uma empresa de comércio ou um fabricante?',
+      question: 'O Paddle Board Overstock é uma empresa de comércio ou um fabricante?',
       answer:
-        'Nem fábrica pura nem empresa de comércio — Aquafarer LLC é uma empresa de marca com sua própria base de fabricação. Aquafarer LLC (New Mexico, EUA) gerencia a distribuição global, contratos, faturamento e assistência pós-venda, enquanto o Centro de Fabricação Aquafarer em Qingdao executa P&D, produção e controle de qualidade em nossa própria instalação de 12.000 m². Sem intermediários: todos os pedidos são enviados direto da fábrica.',
+        'Nem fábrica pura nem empresa de comércio — Weihai Dongjilian Co., Ltd. é uma empresa de marca com sua própria base de fabricação. Weihai Dongjilian Co., Ltd. (New Mexico, EUA) gerencia a distribuição global, contratos, faturamento e assistência pós-venda, enquanto o Centro de Fabricação Paddle Board Overstock em Qingdao executa P&D, produção e controle de qualidade em nossa própria instalação de 12.000 m². Sem intermediários: todos os pedidos são enviados direto da fábrica.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -7710,7 +7710,7 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
       id: 'us-contract-qingdao-shipping',
       question: 'Por que meu contrato é com uma empresa dos EUA se os produtos são enviados de Qingdao?',
       answer:
-        'Aquafarer LLC (New Mexico, EUA) é a entidade comercial global que assina contratos, emite faturas e fornece suporte pós-venda, enquanto o Centro de Fabricação de Qingdao produz e despacha cada pedido FOB Qingdao. Esta estrutura de dois centros mantém contratos e liquidações no padrão dos EUA, preservando o preço direto de fábrica e total transparência de produção.',
+        'Weihai Dongjilian Co., Ltd. (New Mexico, EUA) é a entidade comercial global que assina contratos, emite faturas e fornece suporte pós-venda, enquanto o Centro de Fabricação de Qingdao produz e despacha cada pedido FOB Qingdao. Esta estrutura de dois centros mantém contratos e liquidações no padrão dos EUA, preservando o preço direto de fábrica e total transparência de produção.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],

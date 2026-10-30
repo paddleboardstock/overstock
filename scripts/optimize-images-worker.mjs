@@ -61,7 +61,7 @@ async function walk(dir) {
   return { results, errors };
 }
 
-const imagesDir = path.join(outDir, 'images', 'aquafarer');
+const imagesDir = path.join(outDir, 'images', 'paddleboardoverstock');
 if (!fs.existsSync(imagesDir)) {
   console.log('[image-optimizer] No images directory found');
   process.exit(0);

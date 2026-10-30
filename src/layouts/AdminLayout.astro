@@ -11,6 +11,9 @@ interface Props {
     | 'navigation'
     | 'branding'
     | 'submissions'
+    | 'orders'
+    | 'inventory'
+    | 'discounts'
     | 'links'
     | 'languages'
     | 'seo'
@@ -82,6 +85,14 @@ const groups: TabGroup[] = [
     ],
   },
   {
+    label: 'Shop',
+    children: [
+      { id: 'orders', href: '/keystatic/orders', label: 'Orders (D1)' },
+      { id: 'inventory', href: '/keystatic/inventory', label: 'Inventory (D1)' },
+      { id: 'discounts', href: '/keystatic/discounts', label: 'Discounts (D1)' },
+    ],
+  },
+  {
     label: 'Products',
     children: [{ id: 'products', href: '/keystatic/products', label: 'Products' }],
   },
@@ -133,7 +144,7 @@ const activeLabel = activeGroup?.label ?? '';
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="robots" content="noindex, nofollow" />
-    <title>{title} — Aquafarer Admin</title>
+    <title>{title} — Paddle Board Overstock Admin</title>
     <script is:inline>
       (function () {
         // better-auth session gate: redirect to /login when not authenticated.
@@ -165,7 +176,7 @@ const activeLabel = activeGroup?.label ?? '';
               ></path></svg
             >
           </button>
-          <a href="/keystatic" class="text-lg font-semibold tracking-tight">Aquafarer Admin</a>
+          <a href="/keystatic" class="text-lg font-semibold tracking-tight">Paddle Board Overstock Admin</a>
           <span class="hidden sm:inline text-xs text-gray-400">/ GitHub-backed CMS</span>
         </div>
         <div class="flex items-center gap-3 text-sm">

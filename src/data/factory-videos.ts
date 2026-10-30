@@ -17,7 +17,7 @@ export const factoryVideos: FactoryVideo[] = [
     duration: '2:30',
     stage: '1',
     youtubeId: 'placeholder-material-inspection',
-    thumbnail: 'https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-pvc-material-testing.webp',
+    thumbnail: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/factory/paddleboardoverstock-pvc-material-testing.webp',
   },
   {
     id: 'cnc-cutting',
@@ -27,7 +27,7 @@ export const factoryVideos: FactoryVideo[] = [
     duration: '3:15',
     stage: '2',
     youtubeId: 'placeholder-cnc-cutting',
-    thumbnail: 'https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-production-department.webp',
+    thumbnail: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/factory/paddleboardoverstock-production-department.webp',
   },
   {
     id: 'welding-bonding',
@@ -37,7 +37,7 @@ export const factoryVideos: FactoryVideo[] = [
     duration: '4:00',
     stage: '3',
     youtubeId: 'placeholder-welding',
-    thumbnail: 'https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-factory-building.webp',
+    thumbnail: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/factory/paddleboardoverstock-factory-building.webp',
   },
   {
     id: 'rib-hull',
@@ -47,7 +47,7 @@ export const factoryVideos: FactoryVideo[] = [
     duration: '3:45',
     stage: '4',
     youtubeId: 'placeholder-rib-hull',
-    thumbnail: 'https://assets.aquafarer.com/images/aquafarer/products/rib/aquafarer-rib-600.webp',
+    thumbnail: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/paddleboardoverstock-rib-600.webp',
   },
   {
     id: 'sup-printing',
@@ -57,7 +57,7 @@ export const factoryVideos: FactoryVideo[] = [
     duration: '3:30',
     stage: '5',
     youtubeId: 'placeholder-sup-printing',
-    thumbnail: 'https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-sup-manufacturing.webp',
+    thumbnail: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/factory/paddleboardoverstock-sup-manufacturing.webp',
   },
   {
     id: 'final-assembly',
@@ -67,7 +67,7 @@ export const factoryVideos: FactoryVideo[] = [
     duration: '2:45',
     stage: '6',
     youtubeId: 'placeholder-assembly',
-    thumbnail: 'https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-production-department-2.webp',
+    thumbnail: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/factory/paddleboardoverstock-production-department-2.webp',
   },
   {
     id: 'pressure-testing',
@@ -77,7 +77,7 @@ export const factoryVideos: FactoryVideo[] = [
     duration: '2:15',
     stage: '7',
     youtubeId: 'placeholder-pressure-test',
-    thumbnail: 'https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-pressure-testing.webp',
+    thumbnail: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/factory/paddleboardoverstock-pressure-testing.webp',
   },
   {
     id: 'packing-shipping',
@@ -87,6 +87,6 @@ export const factoryVideos: FactoryVideo[] = [
     duration: '2:00',
     stage: '8',
     youtubeId: 'placeholder-packing',
-    thumbnail: 'https://assets.aquafarer.com/images/aquafarer/factory/aquafarer-warehouse-storage.webp',
+    thumbnail: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/factory/paddleboardoverstock-warehouse-storage.webp',
   },
 ];

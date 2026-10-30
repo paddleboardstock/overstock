@@ -7,7 +7,7 @@ import path from 'node:path';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
 const DIST = path.join(ROOT, 'dist');
-const HOST = 'aquafarer.com';
+const HOST = 'paddleboardoverstock.com';
 const ENDPOINT = 'https://api.indexnow.org/indexnow/';
 const MAX_URLS = 10000;
 

@@ -1,10 +1,10 @@
-name = "aquafarer-automation"
+name = "paddleboardoverstock-automation"
 main = "src/index.ts"
 compatibility_date = "2026-07-08"
 compatibility_flags = ["nodejs_compat"]
 
 routes = [
-  { pattern = "aquafarer.com/api/automation/*", zone_name = "aquafarer.com" },
+  { pattern = "paddleboardoverstock.com/api/automation/*", zone_name = "paddleboardoverstock.com" },
 ]
 
 [triggers]
@@ -12,16 +12,16 @@ crons = ["0 2 * * *"]
 
 [[r2_buckets]]
 binding = "DATA_BUCKET"
-bucket_name = "aquafarer-data"
+bucket_name = "paddleboardoverstock-data"
 
-# D1 (created via: wrangler d1 create aquafarer-db) — shared with admin/news/contact workers
+# D1 (created via: wrangler d1 create paddleboardoverstock-db) — shared with admin/news/contact workers
 [[d1_databases]]
 binding = "DB"
-database_name = "aquafarer-db"
+database_name = "paddleboardoverstock-db"
 database_id = "REPLACE_WITH_D1_DATABASE_ID"
 
 [vars]
 INDEXNOW_KEY = ""
-INDEXNOW_HOST = "aquafarer.com"
-INDEXNOW_KEY_LOCATION = "https://aquafarer.com/579f6d8a1e2b4c7f9a3d5e8b0c2f4a6b.txt"
+INDEXNOW_HOST = "paddleboardoverstock.com"
+INDEXNOW_KEY_LOCATION = "https://paddleboardoverstock.com/579f6d8a1e2b4c7f9a3d5e8b0c2f4a6b.txt"
 CLEANUP_TOKEN = ""

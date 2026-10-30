@@ -1,0 +1,318 @@
+---
+import AdminLayout from '~/layouts/AdminLayout.astro';
+export const prerender = true;
+---
+
+<AdminLayout title="Discounts" active="discounts">
+  <div class="mb-6">
+    <h1 class="text-xl font-bold">Discount Codes</h1>
+    <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
+      Validated server-side at checkout — client prices are never trusted. Percent codes take a percentage of the
+      subtotal; fixed codes take an absolute amount in cents.
+    </p>
+  </div>
+
+  <div class="grid lg:grid-cols-3 gap-6 items-start">
+    <form
+      id="discount-form"
+      class="rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 p-4 space-y-3"
+    >
+      <div class="flex items-center justify-between">
+        <h2 class="text-sm font-semibold uppercase tracking-wider text-gray-500" id="form-title">New Discount</h2>
+        <button type="button" id="form-cancel" class="text-xs text-gray-400 hover:text-gray-600 hidden"
+          >Cancel edit</button
+        >
+      </div>
+      <input type="hidden" id="f-id" />
+      <div>
+        <label class="block text-xs font-medium text-gray-500 mb-1" for="f-code">Code</label>
+        <input
+          id="f-code"
+          class="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 px-2.5 py-1.5 text-sm font-mono uppercase"
+          placeholder="SUMMER10"
+          maxlength="64"
+          required
+        />
+      </div>
+      <div class="grid grid-cols-2 gap-3">
+        <div>
+          <label class="block text-xs font-medium text-gray-500 mb-1" for="f-kind">Kind</label>
+          <select
+            id="f-kind"
+            class="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 px-2.5 py-1.5 text-sm"
+          >
+            <option value="percent">percent</option>
+            <option value="fixed">fixed (cents)</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-xs font-medium text-gray-500 mb-1" for="f-value">Value</label>
+          <input
+            id="f-value"
+            type="number"
+            min="1"
+            step="1"
+            class="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 px-2.5 py-1.5 text-sm"
+            placeholder="10"
+            required
+          />
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-3">
+        <div>
+          <label class="block text-xs font-medium text-gray-500 mb-1" for="f-limit">Usage limit</label>
+          <input
+            id="f-limit"
+            type="number"
+            min="1"
+            step="1"
+            class="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 px-2.5 py-1.5 text-sm"
+            placeholder="∞"
+          />
+        </div>
+        <div>
+          <label class="block text-xs font-medium text-gray-500 mb-1" for="f-active">Active</label>
+          <select
+            id="f-active"
+            class="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 px-2.5 py-1.5 text-sm"
+          >
+            <option value="true">active</option>
+            <option value="false">inactive</option>
+          </select>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-3">
+        <div>
+          <label class="block text-xs font-medium text-gray-500 mb-1" for="f-starts">Starts (optional)</label>
+          <input
+            id="f-starts"
+            type="datetime-local"
+            class="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 px-2.5 py-1.5 text-sm"
+          />
+        </div>
+        <div>
+          <label class="block text-xs font-medium text-gray-500 mb-1" for="f-expires">Expires (optional)</label>
+          <input
+            id="f-expires"
+            type="datetime-local"
+            class="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 px-2.5 py-1.5 text-sm"
+          />
+        </div>
+      </div>
+      <button
+        type="submit"
+        class="w-full px-3 py-2 text-sm font-semibold rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+        id="f-submit"
+      >
+        Create Discount
+      </button>
+    </form>
+
+    <div class="lg:col-span-2 overflow-x-auto rounded-lg border border-gray-200 dark:border-gray-800">
+      <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-800 text-sm">
+        <thead class="bg-gray-50 dark:bg-gray-900">
+          <tr>
+            <th class="px-4 py-3 text-left font-medium">Code</th>
+            <th class="px-4 py-3 text-left font-medium">Kind</th>
+            <th class="px-4 py-3 text-right font-medium">Value</th>
+            <th class="px-4 py-3 text-right font-medium">Used</th>
+            <th class="px-4 py-3 text-left font-medium">Window</th>
+            <th class="px-4 py-3 text-left font-medium">Status</th>
+            <th class="px-4 py-3 text-left font-medium">Actions</th>
+          </tr>
+        </thead>
+        <tbody id="discount-rows" class="divide-y divide-gray-200 dark:divide-gray-800">
+          <tr>
+            <td colspan="7" class="px-4 py-8 text-center text-gray-400">Loading…</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script is:inline>
+    (function () {
+      var editingId = null;
+
+      function escapeHtml(s) {
+        return String(s || '').replace(/[&<>"']/g, function (c) {
+          return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+        });
+      }
+
+      function fmtDate(ms) {
+        if (!ms) return '—';
+        try {
+          return new Date(ms).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+        } catch (e) {
+          return '—';
+        }
+      }
+
+      function resetForm() {
+        editingId = null;
+        document.getElementById('f-id').value = '';
+        document.getElementById('f-code').value = '';
+        document.getElementById('f-kind').value = 'percent';
+        document.getElementById('f-value').value = '';
+        document.getElementById('f-limit').value = '';
+        document.getElementById('f-active').value = 'true';
+        document.getElementById('f-starts').value = '';
+        document.getElementById('f-expires').value = '';
+        document.getElementById('form-title').textContent = 'New Discount';
+        document.getElementById('f-submit').textContent = 'Create Discount';
+        document.getElementById('form-cancel').classList.add('hidden');
+      }
+
+      async function load() {
+        const tbody = document.getElementById('discount-rows');
+        try {
+          const res = await fetch('/api/admin/discounts', { credentials: 'same-origin' });
+          if (res.status === 401) {
+            window.location.replace('/login');
+            return;
+          }
+          if (!res.ok) throw new Error(await res.text());
+          const data = await res.json();
+          tbody.innerHTML = '';
+          const rows = data.rows || [];
+          if (rows.length === 0) {
+            tbody.innerHTML =
+              '<tr><td colspan="7" class="px-4 py-8 text-center text-gray-400">No discount codes yet.</td></tr>';
+            return;
+          }
+          for (const r of rows) {
+            const valueLabel = r.kind === 'percent' ? r.value + '%' : '$' + (r.value / 100).toFixed(2);
+            const usedLabel = r.usageCount + (r.usageLimit ? ' / ' + r.usageLimit : '');
+            const windowLabel = fmtDate(r.startsAt) + ' → ' + fmtDate(r.expiresAt);
+            const statusHtml = r.active
+              ? '<span class="inline-block px-2 py-0.5 rounded-full text-xs font-semibold bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300">active</span>'
+              : '<span class="inline-block px-2 py-0.5 rounded-full text-xs font-semibold bg-gray-100 text-gray-600 dark:bg-gray-800 dark:text-gray-400">inactive</span>';
+            const tr = document.createElement('tr');
+            tr.innerHTML =
+              '<td class="px-4 py-3 font-mono font-semibold">' +
+              escapeHtml(r.code) +
+              '</td>' +
+              '<td class="px-4 py-3 text-xs">' +
+              escapeHtml(r.kind) +
+              '</td>' +
+              '<td class="px-4 py-3 text-right font-semibold whitespace-nowrap">' +
+              escapeHtml(valueLabel) +
+              '</td>' +
+              '<td class="px-4 py-3 text-right">' +
+              escapeHtml(String(usedLabel)) +
+              '</td>' +
+              '<td class="px-4 py-3 text-xs text-gray-400 whitespace-nowrap">' +
+              escapeHtml(windowLabel) +
+              '</td>' +
+              '<td class="px-4 py-3">' +
+              statusHtml +
+              '</td>' +
+              '<td class="px-4 py-3">' +
+              '<div class="flex gap-1.5">' +
+              '<button class="edit-btn px-2 py-1 text-xs font-medium rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">Edit</button>' +
+              '<button class="toggle-btn px-2 py-1 text-xs font-medium rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">' +
+              (r.active ? 'Disable' : 'Enable') +
+              '</button>' +
+              '<button class="delete-btn px-2 py-1 text-xs font-medium rounded-md bg-red-600 hover:bg-red-700 text-white">Delete</button>' +
+              '</div>' +
+              '</td>';
+            tbody.appendChild(tr);
+
+            tr.querySelector('.edit-btn').addEventListener('click', function () {
+              editingId = r.id;
+              document.getElementById('f-id').value = r.id;
+              document.getElementById('f-code').value = r.code;
+              document.getElementById('f-kind').value = r.kind;
+              document.getElementById('f-value').value = r.value;
+              document.getElementById('f-limit').value = r.usageLimit || '';
+              document.getElementById('f-active').value = r.active ? 'true' : 'false';
+              document.getElementById('f-starts').value = r.startsAt
+                ? new Date(r.startsAt).toISOString().slice(0, 16)
+                : '';
+              document.getElementById('f-expires').value = r.expiresAt
+                ? new Date(r.expiresAt).toISOString().slice(0, 16)
+                : '';
+              document.getElementById('form-title').textContent = 'Edit ' + r.code;
+              document.getElementById('f-submit').textContent = 'Save Changes';
+              document.getElementById('form-cancel').classList.remove('hidden');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            tr.querySelector('.toggle-btn').addEventListener('click', async function () {
+              const res2 = await fetch('/api/admin/discounts/update', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                credentials: 'same-origin',
+                body: JSON.stringify({ id: r.id, active: !r.active }),
+              });
+              const body = await res2.json();
+              if (!res2.ok) {
+                window.__adminToast(body.error || 'Failed to toggle', 'error');
+                return;
+              }
+              window.__adminToast(r.code + (r.active ? ' disabled' : ' enabled'), 'success');
+              load();
+            });
+
+            tr.querySelector('.delete-btn').addEventListener('click', async function () {
+              if (!window.confirm('Delete discount "' + r.code + '"? Redemptions on past orders are removed too.'))
+                return;
+              const res2 = await fetch('/api/admin/discounts/delete', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                credentials: 'same-origin',
+                body: JSON.stringify({ id: r.id }),
+              });
+              const body = await res2.json();
+              if (!res2.ok) {
+                window.__adminToast(body.error || 'Failed to delete', 'error');
+                return;
+              }
+              window.__adminToast(r.code + ' deleted', 'success');
+              if (editingId === r.id) resetForm();
+              load();
+            });
+          }
+        } catch (e) {
+          tbody.innerHTML =
+            '<tr><td colspan="7" class="px-4 py-8 text-center text-red-500">Failed to load discounts.</td></tr>';
+        }
+      }
+
+      document.getElementById('form-cancel').addEventListener('click', resetForm);
+
+      document.getElementById('discount-form').addEventListener('submit', async function (e) {
+        e.preventDefault();
+        const payload = {
+          code: document.getElementById('f-code').value.trim().toUpperCase(),
+          kind: document.getElementById('f-kind').value,
+          value: Number(document.getElementById('f-value').value),
+          active: document.getElementById('f-active').value === 'true',
+          usageLimit: document.getElementById('f-limit').value
+            ? Number(document.getElementById('f-limit').value)
+            : null,
+          startsAt: document.getElementById('f-starts').value || null,
+          expiresAt: document.getElementById('f-expires').value || null,
+        };
+        const isEdit = !!editingId;
+        const res = await fetch(isEdit ? '/api/admin/discounts/update' : '/api/admin/discounts', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          credentials: 'same-origin',
+          body: JSON.stringify(isEdit ? Object.assign({ id: editingId }, payload) : payload),
+        });
+        const body = await res.json();
+        if (!res.ok) {
+          window.__adminToast(body.error || 'Failed to save discount', 'error');
+          return;
+        }
+        window.__adminToast(isEdit ? 'Discount updated' : 'Discount created', 'success');
+        resetForm();
+        load();
+      });
+
+      load();
+    })();
+  </script>
+</AdminLayout>

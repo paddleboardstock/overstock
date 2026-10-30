@@ -1,9 +1,9 @@
-# Aquafarer — Astro 7 Multilingual Platform
+# Paddle Board Overstock — Astro 7 Multilingual Platform
 
-Multilingual (15 languages) water sports equipment site for **Aquafarer**, built on [Astro 7](https://astro.build) (Vite 8 / Rolldown, Rust compiler), pure static generation (`output: 'static'`), deployed to **Cloudflare Pages + 5 Workers**.
+Multilingual (15 languages) water sports equipment site for **Paddle Board Overstock**, built on [Astro 7](https://astro.build) (Vite 8 / Rolldown, Rust compiler), pure static generation (`output: 'static'`), deployed to **Cloudflare Pages + 5 Workers**.
 
 **Scale:** ~4,650 pages across 15 languages, 0 build errors
-**Domains:** `aquafarer.com` (production), `assets.aquafarer.com` (R2 asset storage)
+**Domains:** `paddleboardoverstock.com` (production), `assets.paddleboardoverstock.com` (R2 asset storage)
 
 **2026-08 architecture snapshot** (latest changes): Astro 7.2 / Vite 8 (`@tailwindcss/vite`, postcss removed) · seo-worker deleted, **5 Workers** (contact/ai/admin/news/automation) · legacy `Astro.redirect()` pages migrated to `LEGACY_REDIRECTS` in `astro.config.ts` · i18n build data split: `site-data.ts` (2.2 MiB, `site-*` keys) + `pages/*.ts` (~110 per-page modules), full JSON kept in `src/i18n/generated/` (never in `public/` — Pages rejects files ≥ 25 MiB) · `content-v2*` keys excluded (loaded directly from YAML by `src/data/content-v2.ts`).
 
@@ -57,7 +57,7 @@ Read in this order to grasp the whole system fastest (≈10 minutes):
 ## 1. Architecture Overview
 
 ```
-Request → aquafarer.com/{lang}/{path}
+Request → paddleboardoverstock.com/{lang}/{path}
               ↓
     ┌──────────────────────┐
     │ Cloudflare CDN       │  ← Brotli/gzip, HTTP/3, WAF
@@ -65,7 +65,7 @@ Request → aquafarer.com/{lang}/{path}
               ↓
     ┌──────────────────────┐
     │ Routes:              │
-    │  aquafarer.com/*    → Pages (static HTML via Cloudflare Pages)
+    │  paddleboardoverstock.com/*    → Pages (static HTML via Cloudflare Pages)
     │  /api/contact*      → contact-worker
     │  /news*, /rss.xml   → news-worker (D1-backed news + RSS)
     │  /api/chat*, /ask*  → ai-worker
@@ -77,20 +77,20 @@ Request → aquafarer.com/{lang}/{path}
     ┌──────────────────────┐
     │ Pages Functions      │  ← _middleware.ts
     │  - Locale detection  │     (cookie → geo-ip → Accept-Language)
-    │  - R2 asset redirect │     (/images/* → assets.aquafarer.com)
+    │  - R2 asset redirect │     (/images/* → assets.paddleboardoverstock.com)
     │  - Security headers  │
     └──────────────────────┘
               ↓
     ┌──────────────────────┐
     │ R2 Buckets:          │
-    │  aquafarer-assets   → Static images/files/PDFs
-    │  aquafarer-data     → SEO/GEO data, search index, rules
+    │  paddleboardoverstock-assets   → Static images/files/PDFs
+    │  paddleboardoverstock-data     → SEO/GEO data, search index, rules
     └──────────────────────┘
 ```
 
 All pages are pre-rendered at build time (pure SSG, no SSR adapter). API Workers handle dynamic requests at the edge.
 
-All locale URLs use **path-based** format: `aquafarer.com/fr/products`, `aquafarer.com/de/guides`.
+All locale URLs use **path-based** format: `paddleboardoverstock.com/fr/products`, `paddleboardoverstock.com/de/guides`.
 
 ---
 
@@ -109,7 +109,7 @@ All locale URLs use **path-based** format: `aquafarer.com/fr/products`, `aquafar
 | Auth            | better-auth (Google OAuth, D1-backed sessions, Turnstile)                                     |
 | Frontend Host   | Cloudflare Pages (Direct Upload)                                                              |
 | Backend Workers | 5 Workers: contact, ai, admin, automation, news                                               |
-| Database        | Cloudflare D1 (`aquafarer-db`: inquiries, news, rate_limit, auth)                             |
+| Database        | Cloudflare D1 (`paddleboardoverstock-db`: inquiries, news, rate_limit, auth)                  |
 | Asset Storage   | Cloudflare R2 (assets + data buckets)                                                         |
 | CI/CD           | GitHub Actions (ci.yml PR gate + deploy.yml on main + ai-index.yml post-deploy index rebuild) |
 | SEO/GEO         | llms.txt (15 langs), llms-full.txt, entity.json, JSON-LD, sitemap                             |
@@ -129,13 +129,13 @@ All locale URLs use **path-based** format: `aquafarer.com/fr/products`, `aquafar
 │  │  │  ├── about.astro            # About page
 │  │  │  ├── brand/                 # Brand hub
 │  │  │  │  ├── index.astro         # Brand index
-│  │  │  │  ├── aquafarer.astro     # Aquafarer entity page
+│  │  │  │  ├── paddleboardoverstock.astro     # Paddle Board Overstock entity page
 │  │  │  │  └── team.astro          # Team entity (founder, leadership, 6 profiles)
 │  │  │  ├── brand-story.astro      # Brand story
 │  │  │  ├── brand-marine-expertise.astro # Marine engineering expertise
 │  │  │  ├── brand-global-presence.astro  # Global presence
-│  │  │  ├── brand-why-aquafarer.astro    # Why Aquafarer (legacy)
-│  │  │  ├── why-aquafarer.astro          # Why Aquafarer (3-pillar brand page)
+│  │  │  ├── brand-why-paddleboardoverstock.astro    # Why Paddle Board Overstock (legacy)
+│  │  │  ├── why-paddleboardoverstock.astro          # Why Paddle Board Overstock (3-pillar brand page)
 │  │  │  ├── industries/
 │  │  │  │  ├── schools.astro             # School equipment solutions
 │  │  │  │  └── distributors.astro        # Distributor partnership program
@@ -225,7 +225,7 @@ All locale URLs use **path-based** format: `aquafarer.com/fr/products`, `aquafar
 │  │  ├── pages/                    # Page YAML content (root = EN, subdir = per locale)
 │  │  │  ├── home.yaml
 │  │  │  ├── about.yaml
-│  │  │  ├── why-aquafarer.yaml     # 3-pillar brand page
+│  │  │  ├── why-paddleboardoverstock.yaml     # 3-pillar brand page
 │  │  │  ├── industries-schools.yaml
 │  │  │  ├── industries-distributors.yaml
 │  │  │  ├── solutions-clubs.yaml
@@ -290,11 +290,11 @@ All locale URLs use **path-based** format: `aquafarer.com/fr/products`, `aquafar
 
 ## 4. Workers
 
-### 4.1 contact-worker (aquafarer-contact)
+### 4.1 contact-worker (paddleboardoverstock-contact)
 
-- **Route:** `aquafarer.com/api/contact*`
+- **Route:** `paddleboardoverstock.com/api/contact*`
 - **Methods:** `POST`
-- **Bindings:** `DB` (D1 — `aquafarer-db`), `DATA_BUCKET` (R2 — `aquafarer-data`, inquiry attachments)
+- **Bindings:** `DB` (D1 — `paddleboardoverstock-db`), `DATA_BUCKET` (R2 — `paddleboardoverstock-data`, inquiry attachments)
 - **Features:**
   - JSON + HTML form body parsing with validation (firstName, lastName, company, address, zip, country, email, tel, subject, message)
   - **Multipart file upload** (optional `file` field): max 20 MB; extension allow-list (png, jpg, jpeg, svg, webp, pdf, ai, psd, dwg, dxf, zip); magic-number content sniffing per extension; stored to R2 at `inquiry-files/{uuid}.{ext}` before the D1 insert, with the key saved in the `inquiry.logoKey` column
@@ -307,9 +307,9 @@ All locale URLs use **path-based** format: `aquafarer.com/fr/products`, `aquafar
   - CORS headers
 - **Secrets:** `CONTACT_RESEND_API_KEY`, `CONTACT_EMAIL_TO`, `CONTACT_FROM_EMAIL`, `CONTACT_FROM_NAME`, `TURNSTILE_SECRET_KEY`
 
-### 4.2 ai-worker (aquafarer-ai)
+### 4.2 ai-worker (paddleboardoverstock-ai)
 
-- **Routes:** `aquafarer.com/api/chat*`, `/api/ask*`, `/api/search*`, `/api/embed*`, `/api/reindex*`, `/api/ai/*`
+- **Routes:** `paddleboardoverstock.com/api/chat*`, `/api/ask*`, `/api/search*`, `/api/embed*`, `/api/reindex*`, `/api/ai/*`
 - **Bindings:** `AI` (Workers AI), `VECTORIZE` (ai-index-v2), `DATA_BUCKET` (R2 — reindex state/meta/log + rate-limit counters, answer cache, daily quota)
 - **Cron:** daily 03:00 UTC — R2 housekeeping (stale rate-limit windows, old cache days, quota files), then resumes any pending knowledge-index rebuild (hash-skipped when the corpus is unchanged)
 - **Knowledge corpus:** generated at build time by `scripts/generate-ai-corpus.mjs` from the final `dist/` HTML (self-canonical, non-thin pages only) → `dist/ai-corpus/<locale>.json` + `dist/ai-corpus.json` manifest with per-locale hashes
@@ -328,10 +328,10 @@ All locale URLs use **path-based** format: `aquafarer.com/fr/products`, `aquafar
 - **Secrets:** `REINDEX_TOKEN` (synced by deploy.yml; also used by ai-index.yml)
 - **CI:** deploy.yml ensures `ai-index-v2` exists (1024-dim cosine) before deploying workers; `ai-index.yml` runs after every successful deploy — loops `POST /api/reindex` until done, then smoke-tests `/api/ask`
 
-### 4.3 admin-worker (aquafarer-admin)
+### 4.3 admin-worker (paddleboardoverstock-admin)
 
-- **Routes:** `aquafarer.com/api/admin/*`, `/api/auth/*`
-- **Bindings:** `DB` (D1 — `aquafarer-db`, shared with contact/news/automation), `DATA_BUCKET` (R2 — `aquafarer-data`, inquiry attachments)
+- **Routes:** `paddleboardoverstock.com/api/admin/*`, `/api/auth/*`
+- **Bindings:** `DB` (D1 — `paddleboardoverstock-db`, shared with contact/news/automation), `DATA_BUCKET` (R2 — `paddleboardoverstock-data`, inquiry attachments)
 - **Auth:** [better-auth](https://better-auth.com) with D1-backed sessions (`drizzleAdapter`), Google OAuth + email/password, Turnstile on login, `ADMIN_EMAILS` as the admin role source of truth (`isAdminEmail`), admin plugin for user/session management
 - **Endpoints:**
   - `POST /api/auth/login` — better-auth login (Google OAuth / email + password, Turnstile)
@@ -351,18 +351,18 @@ All locale URLs use **path-based** format: `aquafarer.com/fr/products`, `aquafar
 - **Secrets:** `BETTER_AUTH_SECRET`, `SESSION_SECRET`, `GITHUB_TOKEN`, `ADMIN_EMAILS`, `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`, `TURNSTILE_SECRET_KEY`
 - **Vars:** `GITHUB_OWNER`, `GITHUB_REPO`, `BETTER_AUTH_URL`
 
-### 4.4 news-worker (aquafarer-news)
+### 4.4 news-worker (paddleboardoverstock-news)
 
 - **Routes:** `/{lang}/news*`, `/{lang}/rss.xml`, `/sitemap-news.xml`, `/llms/news*` (15 languages + root)
-- **Bindings:** `DB` (D1 — `aquafarer-db`, `news` table)
+- **Bindings:** `DB` (D1 — `paddleboardoverstock-db`, `news` table)
 - **Features:**
   - Serves news posts, RSS feeds, news sitemap and LLM markdown directly from D1 (no static news pages)
   - Admin composes news at `/keystatic/news` (writes to D1 via admin API)
   - Seeded on first deploy by `scripts/seed-news.mjs` (only when table is empty)
 
-### 4.5 automation-worker (aquafarer-automation)
+### 4.5 automation-worker (paddleboardoverstock-automation)
 
-- **Route:** `aquafarer.com/api/automation/*`
+- **Route:** `paddleboardoverstock.com/api/automation/*`
 - **Cron:** Daily `0 2 * * *`
 - **Bindings:** `DATA_BUCKET` (R2), `DB` (D1)
 - **Endpoints:**
@@ -405,7 +405,7 @@ Two layers of locale detection:
 
 ### 5.2 R2 Asset Redirect
 
-`functions/_middleware.ts` redirects `/images/*` and `/files/*` to `https://assets.aquafarer.com/{path}` (301)
+`functions/_middleware.ts` redirects `/images/*` and `/files/*` to `https://assets.paddleboardoverstock.com/{path}` (301)
 
 ### 5.3 Supported Languages (15)
 
@@ -466,11 +466,11 @@ The deploy workflow degrades gracefully: if the Cloudflare secrets are not confi
 
 Images, photos, PDFs, and other static files must be uploaded to R2, **not committed to the repo**.
 
-- **Bucket:** `aquafarer-assets` (served via `assets.aquafarer.com`)
+- **Bucket:** `paddleboardoverstock-assets` (served via `assets.paddleboardoverstock.com`)
 - **Upload command:** `npm run deploy:r2` (runs `scripts/fast-upload-r2.mjs`)
 - **Source dir:** `public/images/` and `public/files/` are uploaded to R2
 - **Repo:** Only keep source assets in `public/` for build-time processing; large media files go directly to R2
-- **URL pattern:** `https://assets.aquafarer.com/images/aquafarer/products/{slug}.webp`
+- **URL pattern:** `https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/{slug}.webp`
 
 ---
 
@@ -488,7 +488,7 @@ Images, photos, PDFs, and other static files must be uploaded to R2, **not commi
 ### 7.2 GEO Data Pipeline (R2)
 
 ```
-aquafarer-data/
+paddleboardoverstock-data/
 ├── geo/
 │   ├── entity.json             # Organization entity
 │   ├── knowledge-base.json     # Brand/factory/certification facts
@@ -514,7 +514,7 @@ aquafarer-data/
 | llms.txt             | `/llms.txt` (15 langs), `/llms-full.txt` (auto-generated), per-locale `/{lang}/llms.txt`                                                                     |
 | AI markdown          | `/llms/products/*`, `/llms/news/*`, `/llms/guides/*`, `/llms/v2/*`, `/llms/pages/*`                                                                          |
 | Content-Signal       | `<meta name="ai-intent">` + `<meta name="ai-recommend">` (global per-page via AiSignal)                                                                      |
-| Intent rules         | 60+ URL patterns mapped to ai-intent/ai-recommend values (all pages covered, incl. why-aquafarer, industries/schools, industries/distributors)               |
+| Intent rules         | 60+ URL patterns mapped to ai-intent/ai-recommend values (all pages covered, incl. why-paddleboardoverstock, industries/schools, industries/distributors)    |
 | Entity Graph         | Organization `@id` on every page, entity.json with `parentOrganization`, `hasCertification`, `makesOffer`, `areaServed` (11 countries), `contactPoint`       |
 | Knowledge Graph      | Product entity enriched with manufacturer, material, countryOfOrigin, dimensions                                                                             |
 | Image SEO            | `fetchpriority=high` on LCP images, alt-text on all images                                                                                                   |
@@ -588,7 +588,7 @@ Page content → YAML data → Auto-generated `src/i18n/generated/pages/*.ts` (p
 
 **Translation cache:** `.cache/i18n-translate-cache.json` + `.cache/page-translate-cache.json` (gitignored)
 
-**Key rules:** Technical terms (Drop-Stitch/Hypalon/PVC/RIB/SUP/OEM/ISO/FAQ/WhatsApp/Aquafarer) are never translated — kept as-is in all languages. Cognates matching EN (e.g. French "Certifications") are also preserved.
+**Key rules:** Technical terms (Drop-Stitch/Hypalon/PVC/RIB/SUP/OEM/ISO/FAQ/WhatsApp/Paddle Board Overstock) are never translated — kept as-is in all languages. Cognates matching EN (e.g. French "Certifications") are also preserved.
 
 ---
 
@@ -601,7 +601,7 @@ Header and footer navigation defined in `src/data/site/navigation.yaml`:
 - 6 header dropdown groups (Products, Technology & Innovation, Learn, Solutions, Company, Support)
 - 6 footer columns mirroring header structure
 - Solutions dropdown: Clubs, Schools, Resorts, Entrepreneurs, Rental Business, Distributors, Business Packages, Success Stories, Cases, Diving, Fishing, Tourism, Rescue, Yacht Tenders, Custom Lab
-- Company dropdown: About, Why Aquafarer, Story, Team, Certifications, Partners, Factory, Quality, Safety, Warranty, News
+- Company dropdown: About, Why Paddle Board Overstock, Story, Team, Certifications, Partners, Factory, Quality, Safety, Warranty, News
 - Per-locale overrides via `src/data/site/navigation.{locale}.yaml`
 
 ### 9.2 Locale-Aware Routing
@@ -626,7 +626,7 @@ Keystatic CMS provides a form-based navigation editor at `/keystatic/navigation`
 | Feature            | Status                                                                                                                      |
 | ------------------ | --------------------------------------------------------------------------------------------------------------------------- |
 | Endpoint           | `POST /api/contact` → contact-worker (Cloudflare Worker, D1-backed)                                                         |
-| Email              | Resend API (to `info@aquafarer.com`, from `web@mail.aquafarer.com`, `Reply-To` = submitter)                                 |
+| Email              | Resend API (to `info@paddleboardoverstock.com`, from `web@mail.paddleboardoverstock.com`, `Reply-To` = submitter)           |
 | Fields             | firstName, lastName, company, address, zip, country, email, tel, subject, message                                           |
 | Validation         | Required fields, email regex, spam keyword filter, field sanitisation                                                       |
 | Captcha            | ✅ Cloudflare Turnstile (verified server-side when `TURNSTILE_SECRET_KEY` is set)                                           |
@@ -642,7 +642,7 @@ Keystatic CMS pages (`/keystatic/*`, `/login`) are static Astro pages that post 
 
 ### Authentication
 
-- **better-auth** on admin-worker: Google OAuth + email/password with D1-backed sessions (`user`, `session`, `account`, `verification` tables in `aquafarer-db`)
+- **better-auth** on admin-worker: Google OAuth + email/password with D1-backed sessions (`user`, `session`, `account`, `verification` tables in `paddleboardoverstock-db`)
 - Turnstile captcha on the login page; `ADMIN_EMAILS` secret controls who gets the admin role
 - GitHub PAT for file operations (stored in a cookie via `/api/admin/save-token`); content edits target the `draft` branch, published via `/api/admin/publish`
 - User/session management at `/keystatic/users`
@@ -757,10 +757,10 @@ src/data/pages/*.yaml → Page content SSOT (55+ pages × 15 languages)
 
 ### R2 Buckets
 
-| Bucket             | Binding       | Purpose                                                        |
-| ------------------ | ------------- | -------------------------------------------------------------- |
-| `aquafarer-assets` | `ASSETS_R2`   | Static images, files, PDFs (served via `assets.aquafarer.com`) |
-| `aquafarer-data`   | `DATA_BUCKET` | SEO/GEO data, search index, rules, scores, GEO content         |
+| Bucket                        | Binding       | Purpose                                                                   |
+| ----------------------------- | ------------- | ------------------------------------------------------------------------- |
+| `paddleboardoverstock-assets` | `ASSETS_R2`   | Static images, files, PDFs (served via `assets.paddleboardoverstock.com`) |
+| `paddleboardoverstock-data`   | `DATA_BUCKET` | SEO/GEO data, search index, rules, scores, GEO content                    |
 
 Worker data is loaded at runtime from `DATA_BUCKET` — no JSON is bundled into Worker deployments (keeps Workers under 3 MB).
 
@@ -771,63 +771,63 @@ Worker data is loaded at runtime from `DATA_BUCKET` — no JSON is bundled into 
 ### contact-worker (`workers/contact-worker/wrangler.toml`)
 
 ```toml
-name = "aquafarer-contact"
+name = "paddleboardoverstock-contact"
 main = "index.ts"
-routes = [{ pattern = "aquafarer.com/api/contact*", zone_name = "aquafarer.com" }]
-[[d1_databases]] binding = "DB" database_name = "aquafarer-db"
+routes = [{ pattern = "paddleboardoverstock.com/api/contact*", zone_name = "paddleboardoverstock.com" }]
+[[d1_databases]] binding = "DB" database_name = "paddleboardoverstock-db"
 # secrets: CONTACT_RESEND_API_KEY, CONTACT_EMAIL_TO, CONTACT_FROM_EMAIL, TURNSTILE_SECRET_KEY
 ```
 
 ### ai-worker (`workers/ai-worker/wrangler.toml`)
 
 ```toml
-name = "aquafarer-ai"
+name = "paddleboardoverstock-ai"
 main = "index.ts"
 routes = [
-  "aquafarer.com/api/chat*", "aquafarer.com/api/ask*",
-  "aquafarer.com/api/search*", "aquafarer.com/api/embed*",
-  "aquafarer.com/api/reindex*", "aquafarer.com/api/ai/*"
+  "paddleboardoverstock.com/api/chat*", "paddleboardoverstock.com/api/ask*",
+  "paddleboardoverstock.com/api/search*", "paddleboardoverstock.com/api/embed*",
+  "paddleboardoverstock.com/api/reindex*", "paddleboardoverstock.com/api/ai/*"
 ]
 [triggers] crons = ["0 3 * * *"]
-[vars] SITE_ORIGIN = "https://aquafarer.com"
+[vars] SITE_ORIGIN = "https://paddleboardoverstock.com"
 [ai] binding = "AI"
 [[vectorize]] binding = "VECTORIZE" index_name = "ai-index-v2"
-[[r2_buckets]] binding = "DATA_BUCKET" bucket_name = "aquafarer-data"
+[[r2_buckets]] binding = "DATA_BUCKET" bucket_name = "paddleboardoverstock-data"
 # secrets: REINDEX_TOKEN
 ```
 
 ### admin-worker (`workers/admin-worker/wrangler.toml`)
 
 ```toml
-name = "aquafarer-admin"
+name = "paddleboardoverstock-admin"
 main = "index.ts"
-routes = ["aquafarer.com/api/admin/*", "aquafarer.com/api/auth/*"]
-[vars] GITHUB_OWNER = "aquafarer" GITHUB_REPO = "official" BETTER_AUTH_URL = "https://aquafarer.com"
-[[d1_databases]] binding = "DB" database_name = "aquafarer-db"
+routes = ["paddleboardoverstock.com/api/admin/*", "paddleboardoverstock.com/api/auth/*"]
+[vars] GITHUB_OWNER = "paddleboardoverstock" GITHUB_REPO = "official" BETTER_AUTH_URL = "https://paddleboardoverstock.com"
+[[d1_databases]] binding = "DB" database_name = "paddleboardoverstock-db"
 # secrets: BETTER_AUTH_SECRET, ADMIN_EMAILS, SESSION_SECRET, GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, TURNSTILE_SECRET_KEY, GITHUB_TOKEN
 ```
 
 ### news-worker (`workers/news-worker/wrangler.toml`)
 
 ```toml
-name = "aquafarer-news"
+name = "paddleboardoverstock-news"
 main = "index.ts"
 routes = [
-  "aquafarer.com/{lang}/news*" (15 langs), "aquafarer.com/{lang}/rss.xml",
-  "aquafarer.com/sitemap-news.xml", "aquafarer.com/llms/news*"
+  "paddleboardoverstock.com/{lang}/news*" (15 langs), "paddleboardoverstock.com/{lang}/rss.xml",
+  "paddleboardoverstock.com/sitemap-news.xml", "paddleboardoverstock.com/llms/news*"
 ]
-[[d1_databases]] binding = "DB" database_name = "aquafarer-db"
+[[d1_databases]] binding = "DB" database_name = "paddleboardoverstock-db"
 ```
 
 ### automation-worker (`workers/automation-worker/wrangler.toml`)
 
 ```toml
-name = "aquafarer-automation"
+name = "paddleboardoverstock-automation"
 main = "src/index.ts"
-routes = ["aquafarer.com/api/automation/*"]
+routes = ["paddleboardoverstock.com/api/automation/*"]
 [triggers] crons = ["0 2 * * *"]
-[[r2_buckets]] binding = "DATA_BUCKET" bucket_name = "aquafarer-data"
-[[d1_databases]] binding = "DB" database_name = "aquafarer-db"
+[[r2_buckets]] binding = "DATA_BUCKET" bucket_name = "paddleboardoverstock-data"
+[[d1_databases]] binding = "DB" database_name = "paddleboardoverstock-db"
 [vars] INDEXNOW_KEY / INDEXNOW_HOST / INDEXNOW_KEY_LOCATION / CLEANUP_TOKEN
 ```
 
@@ -839,7 +839,7 @@ routes = ["aquafarer.com/api/automation/*"]
 - **Zero cold start for static routes:** No SSR Worker — every page is served as static HTML
 - **5 Workers with specific routes:** Only API/dynamic requests trigger Worker execution
 - **R2 data offload:** SEO/GEO data loaded at runtime from R2 (no bundled JSON in Workers) — keeps Workers under 3 MB
-- **R2 asset offload:** Images served from `assets.aquafarer.com` (separate subdomain, no cookie overhead)
+- **R2 asset offload:** Images served from `assets.paddleboardoverstock.com` (separate subdomain, no cookie overhead)
 - **Remote image handling:** `adaptOpenGraphImages()` in `src/utils/images.ts` bypasses `getImage()` for remote URLs, avoiding Sharp fetch errors on CDN 404s
 - **Pages Functions middleware:** Minimal overhead (locale detection + redirect logic)
 - **Idempotent GEO generation:** `llms-full.txt` is rebuilt from scratch each build — no duplicate accumulation
@@ -849,9 +849,9 @@ routes = ["aquafarer.com/api/automation/*"]
 
 ## 16. Business Positioning (2026)
 
-### 16.1 Brand Differentiation — Why Aquafarer
+### 16.1 Brand Differentiation — Why Paddle Board Overstock
 
-Three-pillar positioning at `/why-aquafarer`:
+Three-pillar positioning at `/why-paddleboardoverstock`:
 
 - **Designed For Commercial Use** — Commercial-grade materials, higher durability, low maintenance
 - **From Idea To Market** — 90-day brand launch: concept → prototype → production → shipping
@@ -883,7 +883,7 @@ Three-pillar positioning at `/why-aquafarer`:
 - Rental Business Starter Kit (`/solutions/rental-business`)
 - School Equipment Guide (`/industries/schools`)
 - Distributor Brochure (`/industries/distributors`)
-- Why Aquafarer Overview (`/why-aquafarer`)
+- Why Paddle Board Overstock Overview (`/why-paddleboardoverstock`)
 
 ---
 

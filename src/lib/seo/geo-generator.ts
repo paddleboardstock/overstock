@@ -29,8 +29,8 @@ const DEFINITIONS: Record<string, string> = {
     'Essential water sports gear starts with a quality inflatable board, a properly fitted life vest (PFD), a leash, and a pump. B2B buyers should look for CE-certified products with bulk packaging options.',
   'foam-board-vs-hard-surfboard':
     'Inflatable SUPs use drop-stitch PVC construction (15-20 PSI) that packs into a backpack. Hard boards use EPS foam with fiberglass/epoxy — stiffer but fragile. Inflatables dominate the rental and retail market for portability and durability.',
-  'why-aquafarer-exists':
-    'Aquafarer is a China-based OEM/ODM manufacturer of CE-certified inflatable boats, SUPs, kayaks, RIBs, and marine safety equipment, founded in 2012 with a 12,000 m² ISO 9001-certified factory.',
+  'why-paddleboardoverstock-exists':
+    'Paddle Board Overstock is a China-based OEM/ODM manufacturer of CE-certified inflatable boats, SUPs, kayaks, RIBs, and marine safety equipment, founded in 2012 with a 12,000 m² ISO 9001-certified factory.',
   'ocean-safety-and-responsibility':
     'Marine safety means proper life vest usage, understanding weather conditions, carrying communication devices, and using equipment designed to regulatory standards (CE, ISO).',
   'ocean-safety-basics':

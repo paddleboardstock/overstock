@@ -344,7 +344,7 @@ export default {
     }
 
     if (env.CONTACT_RESEND_API_KEY && env.CONTACT_FROM_EMAIL) {
-      const fromName = env.CONTACT_FROM_NAME || 'Aquafarer Contact';
+      const fromName = env.CONTACT_FROM_NAME || 'Paddle Board Overstock Contact';
       const from = `${fromName} <${env.CONTACT_FROM_EMAIL}>`;
       const replyTo = `${fields.firstName} ${fields.lastName} <${fields.email}>`;
 

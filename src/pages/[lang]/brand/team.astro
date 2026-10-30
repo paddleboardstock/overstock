@@ -40,7 +40,7 @@ const ctaActions = cta.actions?.map((a: any) => ({ ...a, href: lh(a.href) }));
 const metadata = {
   title: localizePageTitle(page, `Team — ${SITE.name} | Marine Engineering & Leadership`),
   description:
-    'Meet the Aquafarer team — marine engineers, material scientists, and manufacturing experts with decades of combined experience in inflatable boat design and production.',
+    'Meet the Paddle Board Overstock team — marine engineers, material scientists, and manufacturing experts with decades of combined experience in inflatable boat design and production.',
 };
 const crumbs = [
   { name: t('nav.home') || 'Home', href: `/${lang}/` },
@@ -54,7 +54,7 @@ const faqSchema = JSON.stringify({
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'How large is the Aquafarer team?',
+      name: 'How large is the Paddle Board Overstock team?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: '200-300 skilled workers, 25+ engineers averaging 7+ years experience, dedicated quality lab staff, and B2B sales support team.',
@@ -116,7 +116,7 @@ const faqSchema = JSON.stringify({
             jobTitle: m.title,
             description: m.description,
             url: m.name === 'Toby Liu' ? `/${lang}/brand/team` : undefined,
-            worksFor: { name: 'Aquafarer', '@type': 'Organization' },
+            worksFor: { name: 'Paddle Board Overstock', '@type': 'Organization' },
             knowsAbout: ['RIB boats', 'marine manufacturing', 'inflatable boats'],
           }}
         />

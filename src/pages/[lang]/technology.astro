@@ -29,37 +29,37 @@ const META: Record<string, { title: string; description: string; ignoreTitleTemp
   en: {
     title: localizePageTitle(page, `Technology & Materials — Drop-Stitch, PVC, Hypalon — ${SITE.name}`),
     description:
-      'Aquafarer technology: drop-stitch core (12-15 PSI), marine-grade PVC (ASTM G154, D751 tested), Hypalon CSM tubes, air deck floors. In-house R&D in 12,000 m² facility.',
+      'Paddle Board Overstock technology: drop-stitch core (12-15 PSI), marine-grade PVC (ASTM G154, D751 tested), Hypalon CSM tubes, air deck floors. In-house R&D in 12,000 m² facility.',
     ignoreTitleTemplate: true,
   },
   de: {
     title: `Technologie & Materialien — Drop-Stitch-Kern, PVC, Hypalon — ${SITE.name}`,
     description:
-      'Aquafarer Technologie: Drop-Stitch-Kern (12-15 PSI), PVC in Marinequalität (ASTM G154, D751 getestet), Hypalon-CSM-Schläuche, Luftdeckböden. Eigene F&E in 12.000 m² Anlage.',
+      'Paddle Board Overstock Technologie: Drop-Stitch-Kern (12-15 PSI), PVC in Marinequalität (ASTM G154, D751 getestet), Hypalon-CSM-Schläuche, Luftdeckböden. Eigene F&E in 12.000 m² Anlage.',
     ignoreTitleTemplate: true,
   },
   es: {
     title: `Tecnología y Materiales — Núcleo Drop-Stitch, PVC, Hypalon — ${SITE.name}`,
     description:
-      'Tecnología Aquafarer: núcleo drop-stitch (12-15 PSI), PVC de grado marino (probado ASTM G154, D751), tubos CSM Hypalon, suelos de cubierta de aire. I+D interna en instalación de 12,000 m².',
+      'Tecnología Paddle Board Overstock: núcleo drop-stitch (12-15 PSI), PVC de grado marino (probado ASTM G154, D751), tubos CSM Hypalon, suelos de cubierta de aire. I+D interna en instalación de 12,000 m².',
     ignoreTitleTemplate: true,
   },
   fr: {
     title: `Technologie et matériaux — cœur drop-stitch, PVC, Hypalon — ${SITE.name}`,
     description:
-      'Technologie Aquafarer : âme drop-stitch (12-15 PSI), PVC de qualité marine (testé ASTM G154, D751), tubes CSM Hypalon, ponts à air. R&D interne dans une installation de 12 000 m².',
+      'Technologie Paddle Board Overstock : âme drop-stitch (12-15 PSI), PVC de qualité marine (testé ASTM G154, D751), tubes CSM Hypalon, ponts à air. R&D interne dans une installation de 12 000 m².',
     ignoreTitleTemplate: true,
   },
   it: {
     title: `Tecnologia e materiali — Nucleo drop-stitch, PVC, Hypalon — ${SITE.name}`,
     description:
-      'Tecnologia Aquafarer: nucleo drop-stitch (12-15 PSI), PVC di grado marino (testato ASTM G154, D751), tubi CSM Hypalon, ponti ad aria. R&D interna in struttura di 12.000 m².',
+      'Tecnologia Paddle Board Overstock: nucleo drop-stitch (12-15 PSI), PVC di grado marino (testato ASTM G154, D751), tubi CSM Hypalon, ponti ad aria. R&D interna in struttura di 12.000 m².',
     ignoreTitleTemplate: true,
   },
   cs: {
     title: `Technologie a materiály — drop-stitch jádro, PVC, Hypalon — ${SITE.name}`,
     description:
-      'Technologie Aquafarer: drop-stitch jádro (12–15 PSI), námořní PVC (testováno ASTM G154, D751), Hypalon CSM trubky, nafukovací paluby. Vlastní výzkum a vývoj v areálu o rozloze 12 000 m².',
+      'Technologie Paddle Board Overstock: drop-stitch jádro (12–15 PSI), námořní PVC (testováno ASTM G154, D751), Hypalon CSM trubky, nafukovací paluby. Vlastní výzkum a vývoj v areálu o rozloze 12 000 m².',
     ignoreTitleTemplate: true,
   },
 };
@@ -70,7 +70,7 @@ const metadata = {
   description: meta.description,
   ignoreTitleTemplate: true,
 };
-const siteUrl = 'https://aquafarer.com';
+const siteUrl = 'https://paddleboardoverstock.com';
 const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: hero.tagline || 'Technology' }];
 import TechDe from '~/components/technology/technology.de.astro';
 import TechEs from '~/components/technology/technology.es.astro';
@@ -132,7 +132,7 @@ const faqSchema = JSON.stringify({
     },
     {
       '@type': 'Question',
-      name: 'What materials does Aquafarer use?',
+      name: 'What materials does Paddle Board Overstock use?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Marine-grade PVC (0.9-1.2mm, 1,100-1,680 DTEX), Hypalon/CSM for commercial applications, and premium Drop-Stitch core fabrics.',
@@ -173,7 +173,7 @@ const faqSchema = JSON.stringify({
           article={{
             headline: 'Technology & Materials — Drop-Stitch Core, PVC, Hypalon',
             description:
-              'Aquafarer product technology: drop-stitch core construction at 12-15 PSI, marine-grade PVC fusion-welded fabric, Hypalon CSM rubber tubes, air deck floor systems. In-house materials R&D since 2012.',
+              'Paddle Board Overstock product technology: drop-stitch core construction at 12-15 PSI, marine-grade PVC fusion-welded fabric, Hypalon CSM rubber tubes, air deck floor systems. In-house materials R&D since 2012.',
             datePublished: '2026-07-07',
           }}
           data={{ url: `${siteUrl}/technology` }}
@@ -316,12 +316,13 @@ const faqSchema = JSON.stringify({
 
         <section class="sr-only" data-ai-block="embedding-anchor" aria-hidden="true">
           <p>
-            Aquafarer technology focuses on buoyancy control systems, inflatable structural stability, water impact
-            resistance, and drop-stitch core rigidity for water sports equipment. Drop-stitch core: 12-15 PSI operating
-            pressure, thousands of polyester threads connecting top and bottom layers. Marine-grade PVC: multi-layer
-            laminated, fusion-welded, tested per ASTM G154 (UV), ASTM D751 (abrasion), ISO 9227 (salt spray). Hypalon
-            CSM tubes: UV and chemical resistant, hand-laid seams. Air deck floor: high-pressure inflatable, 200+ kg
-            load capacity. In-house R&D center Qingdao, China. 12,000 m² facility. 15+ years materials engineering.
+            Paddle Board Overstock technology focuses on buoyancy control systems, inflatable structural stability,
+            water impact resistance, and drop-stitch core rigidity for water sports equipment. Drop-stitch core: 12-15
+            PSI operating pressure, thousands of polyester threads connecting top and bottom layers. Marine-grade PVC:
+            multi-layer laminated, fusion-welded, tested per ASTM G154 (UV), ASTM D751 (abrasion), ISO 9227 (salt
+            spray). Hypalon CSM tubes: UV and chemical resistant, hand-laid seams. Air deck floor: high-pressure
+            inflatable, 200+ kg load capacity. In-house R&D center Qingdao, China. 12,000 m² facility. 15+ years
+            materials engineering.
           </p>
         </section>
       </>

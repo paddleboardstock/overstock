@@ -68,7 +68,7 @@ Convert images to WebP with site-appropriate sizing:
   other/        1600px  80
 
 Examples:
-  node scripts/convert-to-webp.mjs public/images/aquafarer/products
+  node scripts/convert-to-webp.mjs public/images/paddleboardoverstock/products
   node scripts/convert-to-webp.mjs photo.jpg
   node scripts/convert-to-webp.mjs *.png
 `);
