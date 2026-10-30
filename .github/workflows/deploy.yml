@@ -48,6 +48,24 @@ jobs:
           # Public site key (safe to embed) — rendered into contact form & login.
           PUBLIC_TURNSTILE_SITE_KEY: ${{ secrets.TURNSTILE_SITE_KEY }}
 
+      - name: Ensure R2 buckets exist
+        if: steps.guard.outputs.enabled == 'true'
+        run: |
+          set +e
+          for bucket in paddleboardoverstock-assets paddleboardoverstock-data; do
+            npx wrangler r2 bucket create "$bucket" > /tmp/bucket-create.log 2>&1
+            status=$?
+            if [ $status -ne 0 ] && ! grep -qiE "already exist|code: 10004|BucketAlreadyExists|unavailable" /tmp/bucket-create.log; then
+              cat /tmp/bucket-create.log
+              exit 1
+            fi
+            cat /tmp/bucket-create.log
+          done
+          set -e
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+
       - name: Upload assets to R2
         if: steps.guard.outputs.enabled == 'true'
         run: node scripts/fast-upload-r2.mjs
