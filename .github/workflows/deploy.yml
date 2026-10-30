@@ -81,6 +81,22 @@ jobs:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
 
+      - name: Ensure Pages project exists
+        if: steps.guard.outputs.enabled == 'true'
+        run: |
+          set +e
+          npx wrangler pages project create paddleboardoverstock --production-branch main > /tmp/pages-create.log 2>&1
+          status=$?
+          if [ $status -ne 0 ] && ! grep -qiE "already exist|code: 10004|ProjectAlreadyExists" /tmp/pages-create.log; then
+            cat /tmp/pages-create.log
+            exit 1
+          fi
+          cat /tmp/pages-create.log
+          set -e
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+
       - name: Deploy Pages
         if: steps.guard.outputs.enabled == 'true'
         run: npx wrangler pages deploy dist/ --project-name paddleboardoverstock
