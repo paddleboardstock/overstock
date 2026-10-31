@@ -1,0 +1,707 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { SITE, waLink } from '../../config';
+import { STOCKLOTS, STATUS_LABELS } from '../../data/stocklots';
+
+const vaultTabs = [
+  { id: 'overview', label: 'Board overview', caption: 'Deck overview (branded)' },
+  { id: 'seam', label: 'Seam & valve', caption: 'Rail, seam & logo close-up' },
+  { id: 'packing', label: 'Packing list', caption: 'Original packing list scan' },
+  { id: 'barcode', label: 'Barcode range', caption: 'Barcode / serial range' },
+];
+const vaultImages = ['/img/detail-valve.svg', '/img/detail-deck.svg', '/img/detail-seam.svg', '/img/detail-dring.svg'];
+---
+
+<Layout
+  title="Inventory Portal"
+  path="/portal/"
+  noindex={true}
+  description="Confidential branded inventory material for verified buyers."
+>
+  <!-- Dynamic watermark (filled by script from session.json) -->
+  <div id="watermark" aria-hidden="true" class="pointer-events-none fixed inset-0 z-40 overflow-hidden"></div>
+
+  <section class="mx-auto max-w-7xl px-4 py-12 sm:px-6">
+    <!-- Session header -->
+    <div class="rounded-2xl border border-red-400/30 bg-red-400/5 p-5">
+      <div class="flex flex-wrap items-center justify-between gap-4">
+        <div>
+          <p class="inline-flex items-center gap-2 rounded-full border border-red-400/40 bg-red-400/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-red-300">
+            Confidential — do not share
+          </p>
+          <h1 class="mt-3 text-2xl font-bold tracking-tight text-slate-50 sm:text-3xl">Inventory Portal</h1>
+          <p class="mt-1 text-sm text-slate-400">
+            Licensed to <span id="session-email" class="font-mono text-teal-300">…</span>
+            · Session expires in <span id="session-countdown" class="font-mono text-slate-200">…</span>
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <a id="manifest-download" href="/portal/manifest.csv" class="inline-flex items-center gap-2 rounded-xl bg-teal-400 px-4 py-2.5 text-sm font-semibold text-slate-950 transition hover:bg-teal-300">
+            Download full manifest (CSV)
+          </a>
+          <a href="/portal/legal/terms-of-sale/" class="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-900/60 px-4 py-2.5 text-sm font-semibold text-slate-200 transition hover:border-teal-400/50 hover:text-teal-300">
+            Terms of Sale (legal)
+          </a>
+          <a href={waLink('Hi, I am in the inventory portal and have a question about a lot.')} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-xl bg-[#25D366] px-4 py-2.5 text-sm font-semibold text-slate-950 transition hover:bg-[#1ebe5b]">
+            WhatsApp desk
+          </a>
+          <a href="/portal/logout" class="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-900/60 px-4 py-2.5 text-sm font-semibold text-slate-200 transition hover:border-red-400/50 hover:text-red-300">
+            Log out
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Module 1: manifest table -->
+    <div class="mt-12">
+      <div class="flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <h2 class="text-xl font-bold text-slate-100">1 · Full manifest</h2>
+          <p class="mt-1 text-sm text-slate-400">Tick lots to add them to the stowage simulator — quantities and prices update live.</p>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <input id="mf-search" type="search" placeholder="Search lots…" class="w-44 rounded-xl border border-slate-700 bg-slate-900/70 px-3.5 py-2 text-sm text-slate-100 placeholder-slate-500 focus:border-teal-400 focus:outline-none" />
+          <select id="mf-type" class="rounded-xl border border-slate-700 bg-slate-900/70 px-3.5 py-2 text-sm text-slate-100 focus:border-teal-400 focus:outline-none">
+            <option value="">All types</option>
+            <option value="all-around">All-around</option>
+            <option value="touring">Touring</option>
+            <option value="accessories">Accessories</option>
+          </select>
+          <select id="mf-status" class="rounded-xl border border-slate-700 bg-slate-900/70 px-3.5 py-2 text-sm text-slate-100 focus:border-teal-400 focus:outline-none">
+            <option value="">All statuses</option>
+            <option value="available">Available</option>
+            <option value="low">Low Stock</option>
+            <option value="reserved">Reserved</option>
+            <option value="inspection">Under Inspection</option>
+            <option value="compliance">Compliance Review</option>
+            <option value="sold">Sold Out</option>
+          </select>
+        </div>
+      </div>
+      <div class="mt-5 overflow-x-auto rounded-2xl border border-slate-800">
+        <table class="w-full min-w-[52rem] border-collapse text-sm">
+          <thead>
+            <tr class="border-b border-slate-800 bg-slate-900/60 text-left text-xs uppercase tracking-widest text-slate-400">
+              <th class="px-4 py-3 font-semibold">Add</th>
+              <th class="px-4 py-3 font-semibold">Lot</th>
+              <th class="px-4 py-3 font-semibold">Title</th>
+              <th class="px-4 py-3 font-semibold">Grade</th>
+              <th class="px-4 py-3 font-semibold">Status</th>
+              <th class="px-4 py-3 font-semibold text-right">Qty</th>
+              <th class="px-4 py-3 font-semibold text-right">MOQ</th>
+              <th class="px-4 py-3 font-semibold text-right">From (USD)</th>
+              <th class="px-4 py-3 font-semibold text-right">Carton CBM</th>
+            </tr>
+          </thead>
+          <tbody id="mf-tbody">
+            {
+              STOCKLOTS.map((lot) => (
+                <tr class="border-b border-slate-800/60 transition hover:bg-slate-900/40" data-type={lot.type} data-status={lot.status}>
+                  <td class="px-4 py-3">
+                    <input type="checkbox" class="mf-add h-4 w-4 accent-teal-400" data-lot={lot.id} aria-label={`Add ${lot.id} to stowage simulator`} />
+                  </td>
+                  <td class="px-4 py-3 font-mono font-semibold text-teal-300">{lot.id}</td>
+                  <td class="px-4 py-3 text-slate-200">{lot.title}</td>
+                  <td class="px-4 py-3 text-slate-300">{lot.grade}</td>
+                  <td class="px-4 py-3 text-slate-300">{STATUS_LABELS[lot.status]}</td>
+                  <td class="px-4 py-3 text-right font-mono text-slate-300">{lot.availableQty.toLocaleString('en-US')}</td>
+                  <td class="px-4 py-3 text-right font-mono text-slate-400">{lot.moq}</td>
+                  <td class="px-4 py-3 text-right font-mono text-slate-300">${lot.priceTiers[lot.priceTiers.length - 1].unitPriceUsd}</td>
+                  <td class="px-4 py-3 text-right font-mono text-slate-400">{((lot.carton.lengthCm * lot.carton.widthCm * lot.carton.heightCm) / 1_000_000).toFixed(3)}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+      <p id="mf-count" class="mt-3 text-xs text-slate-500"></p>
+    </div>
+
+    <!-- Module 2: QC vault -->
+    <div class="mt-14">
+      <h2 class="text-xl font-bold text-slate-100">2 · QC vault — branded material</h2>
+      <p class="mt-1 text-sm text-slate-400">
+        Branded photos, packing lists and barcode ranges — the material that never appears on the public site.
+        Click to enlarge. Every board passed QC protocol {SITE.qcProtocol.id}: {SITE.qcProtocol.pressure} for {SITE.qcProtocol.duration}, drop {SITE.qcProtocol.maxDrop}.
+      </p>
+      <div class="mt-5 flex flex-wrap gap-2" role="tablist" aria-label="QC vault">
+        {
+          vaultTabs.map((tab, i) => (
+            <button type="button" class="vault-tab rounded-xl border px-4 py-2 text-sm font-semibold transition" data-tab={tab.id} aria-selected={i === 0 ? 'true' : 'false'}>
+              {tab.label}
+            </button>
+          ))
+        }
+      </div>
+      {
+        vaultTabs.map((tab, tabIndex) => (
+          <div class="vault-panel mt-5 grid grid-cols-2 gap-4 sm:grid-cols-4" data-panel={tab.id} hidden={tabIndex !== 0}>
+            {STOCKLOTS.slice(0, 4).map((lot, i) => (
+              <button type="button" class="vault-item group overflow-hidden rounded-xl border border-slate-800 bg-slate-900/50 text-left transition hover:border-teal-400/50" data-caption={`${lot.id} — ${tab.caption}`}>
+                <img src={vaultImages[(tabIndex + i) % vaultImages.length]} alt={`${lot.id} — ${tab.caption}`} class="aspect-square w-full object-cover opacity-80 transition group-hover:opacity-100" loading="lazy" />
+                <span class="block px-3 py-2 text-xs text-slate-400"><span class="font-mono text-teal-300">{lot.id}</span> · {tab.caption}</span>
+              </button>
+            ))}
+          </div>
+        ))
+      }
+      <p class="mt-4 text-xs text-slate-500">Placeholder renders — real branded photos, packing-list scans and barcode range documents are uploaded to <code class="rounded bg-slate-900 px-1.5 py-0.5 font-mono">/portal/assets/</code> at allocation time.</p>
+    </div>
+
+    <!-- Module 3: stowage simulator -->
+    <div class="mt-14">
+      <h2 class="text-xl font-bold text-slate-100">3 · Stowage simulator</h2>
+      <p class="mt-1 text-sm text-slate-400">Multi-lot container planning. Palletized = pallet positions bind capacity; loose floor-load = practical volume binds capacity.</p>
+      <div class="mt-5 grid gap-6 lg:grid-cols-5">
+        <div class="lg:col-span-3 rounded-2xl border border-slate-800 bg-slate-900/50 p-5">
+          <div class="flex flex-wrap items-center gap-4">
+            <div class="flex gap-2">
+              <button type="button" id="mode-palletized" class="sim-mode rounded-xl border border-teal-400 bg-teal-400/10 px-4 py-2 text-sm font-semibold text-teal-300" data-mode="palletized">Palletized</button>
+              <button type="button" id="mode-loose" class="sim-mode rounded-xl border border-slate-700 px-4 py-2 text-sm font-semibold text-slate-400" data-mode="loose">Loose floor-load</button>
+            </div>
+            <div>
+              <label for="sim-container" class="mr-2 text-sm text-slate-400">Container</label>
+              <select id="sim-container" class="rounded-xl border border-slate-700 bg-slate-900/70 px-3.5 py-2 text-sm text-slate-100 focus:border-teal-400 focus:outline-none">
+                <option value="20GP">20GP — 20ft GP</option>
+                <option value="40HQ" selected>40HQ — 40ft High Cube</option>
+              </select>
+            </div>
+          </div>
+          <div id="sim-lots" class="mt-5 space-y-3"></div>
+          <p id="sim-empty" class="mt-5 text-sm text-slate-500">No lots selected — tick rows in the manifest table above.</p>
+        </div>
+        <div class="lg:col-span-2 rounded-2xl border border-slate-800 bg-slate-900/50 p-5">
+          <p class="font-semibold text-slate-100">Container utilization</p>
+          <div class="mt-4 space-y-4 text-sm">
+            <div>
+              <div class="flex justify-between text-slate-400"><span>Volume</span><span id="util-vol-text" class="font-mono text-slate-200">—</span></div>
+              <div class="mt-1.5 h-2.5 overflow-hidden rounded-full bg-slate-800"><div id="util-vol-bar" class="h-full w-0 rounded-full bg-teal-400 transition-all"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-slate-400"><span>Weight</span><span id="util-wt-text" class="font-mono text-slate-200">—</span></div>
+              <div class="mt-1.5 h-2.5 overflow-hidden rounded-full bg-slate-800"><div id="util-wt-bar" class="h-full w-0 rounded-full bg-teal-400 transition-all"></div></div>
+            </div>
+            <div id="util-pallets-row">
+              <div class="flex justify-between text-slate-400"><span>Pallet positions</span><span id="util-pl-text" class="font-mono text-slate-200">—</span></div>
+              <div class="mt-1.5 h-2.5 overflow-hidden rounded-full bg-slate-800"><div id="util-pl-bar" class="h-full w-0 rounded-full bg-teal-400 transition-all"></div></div>
+            </div>
+          </div>
+          <dl class="mt-6 space-y-2 border-t border-slate-800 pt-4 text-sm">
+            <div class="flex justify-between"><dt class="text-slate-400">Units</dt><dd id="sum-units" class="font-mono text-slate-200">—</dd></div>
+            <div class="flex justify-between"><dt class="text-slate-400">Cartons</dt><dd id="sum-cartons" class="font-mono text-slate-200">—</dd></div>
+            <div class="flex justify-between"><dt class="text-slate-400">Total CBM</dt><dd id="sum-cbm" class="font-mono text-slate-200">—</dd></div>
+            <div class="flex justify-between"><dt class="text-slate-400">Gross weight</dt><dd id="sum-gw" class="font-mono text-slate-200">—</dd></div>
+            <div class="flex justify-between"><dt class="text-slate-400">Est. FOB value</dt><dd id="sum-fob" class="font-mono text-teal-300">—</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+
+    <!-- Module 4: RFQ panel -->
+    <div class="mt-14">
+      <h2 class="text-xl font-bold text-slate-100">4 · RFQ panel</h2>
+      <p class="mt-1 text-sm text-slate-400">Submit your allocation for a formal quotation — the summary below is attached to the message.</p>
+      <div class="mt-5 grid gap-6 lg:grid-cols-2">
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/50 p-5">
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div>
+              <label for="rfq-incoterm" class="block text-sm font-medium text-slate-300">Incoterm *</label>
+              <select id="rfq-incoterm" class="mt-1.5 w-full rounded-xl border border-slate-700 bg-slate-900/70 px-3.5 py-2.5 text-sm text-slate-100 focus:border-teal-400 focus:outline-none">
+                <option value="FOB Qingdao (Incoterms 2020)">FOB Qingdao (Incoterms 2020)</option>
+                <option value="EXW Qingdao Warehouse">EXW Qingdao Warehouse</option>
+              </select>
+            </div>
+            <div>
+              <label for="rfq-dest" class="block text-sm font-medium text-slate-300">Destination port / market *</label>
+              <input id="rfq-dest" type="text" class="mt-1.5 w-full rounded-xl border border-slate-700 bg-slate-900/70 px-3.5 py-2.5 text-sm text-slate-100 placeholder-slate-500 focus:border-teal-400 focus:outline-none" placeholder="e.g. Long Beach, US" />
+            </div>
+          </div>
+          <div class="mt-4 space-y-3">
+            <label class="flex cursor-pointer items-start gap-3 rounded-xl border border-slate-800 bg-slate-900/60 px-4 py-3 text-sm text-slate-300">
+              <input id="rfq-takeall" type="checkbox" class="mt-0.5 h-4 w-4 accent-teal-400" />
+              <span><strong class="text-slate-100">Take-All</strong> — quote me for entire selected lot(s) at a negotiated take-all rate.</span>
+            </label>
+            <label class="flex cursor-pointer items-start gap-3 rounded-xl border border-slate-800 bg-slate-900/60 px-4 py-3 text-sm text-slate-300">
+              <input id="rfq-asis" type="checkbox" class="mt-0.5 h-4 w-4 accent-teal-400" />
+              <span><strong class="text-slate-100">AS-IS acknowledgement</strong> — I understand the goods are sold AS-IS / WHERE-IS with no brand warranty, and I have read the <a class="text-teal-300 hover:text-teal-200" href="/portal/legal/terms-of-sale/">Terms of Sale</a>.</span>
+            </label>
+          </div>
+          <div class="mt-4">
+            <label for="rfq-notes" class="block text-sm font-medium text-slate-300">Notes</label>
+            <textarea id="rfq-notes" rows="3" class="mt-1.5 w-full rounded-xl border border-slate-700 bg-slate-900/70 px-3.5 py-2.5 text-sm text-slate-100 placeholder-slate-500 focus:border-teal-400 focus:outline-none" placeholder="Inspection plans, timeline, special packing…"></textarea>
+          </div>
+          <p id="rfq-error" class="mt-3 hidden text-sm text-red-300"></p>
+          <button id="rfq-submit" type="button" class="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#25D366] px-6 py-3 font-semibold text-slate-950 transition hover:bg-[#1ebe5b]">
+            Send RFQ via WhatsApp
+          </button>
+        </div>
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/50 p-5">
+          <p class="font-semibold text-slate-100">Allocation summary (live)</p>
+          <pre id="rfq-summary" class="mt-3 overflow-x-auto whitespace-pre-wrap rounded-xl bg-slate-950/70 p-4 font-mono text-xs leading-relaxed text-slate-300">No lots selected.</pre>
+          <p class="mt-3 text-xs text-slate-500">
+            Sending opens WhatsApp ({SITE.whatsappDisplay}) with the summary pre-filled. Your session is watermarked
+            with your email — portal material must not be redistributed.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <p class="mt-12 border-t border-slate-800 pt-6 text-sm text-slate-500">
+      Session issues? WhatsApp {SITE.whatsappDisplay}. Password delivery and revocation are handled by the sales desk.
+    </p>
+  </section>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/90 p-6">
+    <figure class="max-h-full max-w-3xl">
+      <img id="lightbox-img" src="" alt="" class="max-h-[75vh] w-full rounded-xl border border-slate-800 object-contain" />
+      <figcaption id="lightbox-caption" class="mt-3 text-center text-sm text-slate-400"></figcaption>
+    </figure>
+    <button type="button" id="lightbox-close" class="absolute right-5 top-5 rounded-xl border border-slate-700 bg-slate-900/70 px-4 py-2 text-sm font-semibold text-slate-200 hover:text-red-300">Close</button>
+  </div>
+
+  <!-- One-time NDA signing gate before manifest download -->
+  <div id="nda-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/80 p-4" role="dialog" aria-modal="true" aria-labelledby="nda-title">
+    <div class="w-full max-w-lg rounded-2xl border border-slate-700 bg-slate-900 p-6 shadow-2xl">
+      <h3 id="nda-title" class="text-lg font-bold text-slate-100">Manifest download — one-time confirmation</h3>
+      <p class="mt-3 text-sm leading-relaxed text-slate-300">
+        The full packing list contains original brand names, batch references, and commercial terms restricted under our
+        non-disclosure agreements with brand clients. Please confirm before downloading:
+      </p>
+      <label class="mt-4 flex cursor-pointer items-start gap-3 rounded-xl border border-slate-700 bg-slate-900/60 p-4 text-sm leading-relaxed text-slate-200">
+        <input id="nda-check" type="checkbox" class="mt-0.5 h-4 w-4 shrink-0 accent-teal-400" />
+        <span>Buyer agrees not to advertise these goods under original brand trademarks in restricted retail channels, and not to redistribute or republish the manifest, branded photos, or any other portal material.</span>
+      </label>
+      <div class="mt-5 flex justify-end gap-3">
+        <button id="nda-cancel" type="button" class="rounded-xl border border-slate-700 bg-slate-900/60 px-4 py-2 text-sm font-semibold text-slate-300 transition hover:text-slate-100">Cancel</button>
+        <button id="nda-confirm" type="button" disabled class="rounded-xl bg-teal-400 px-4 py-2 text-sm font-semibold text-slate-950 transition enabled:hover:bg-teal-300 disabled:cursor-not-allowed disabled:opacity-40">Agree &amp; download</button>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<script>
+  import { STOCKLOTS, CONTAINERS, HS_CODE, calcLoading, tierPriceUsd } from '../../data/stocklots';
+  import { SITE } from '../../config';
+
+  const lotById = new Map(STOCKLOTS.map((l) => [l.id, l]));
+
+  // ---------------------------------------------------------------------------
+  // Session: watermark + countdown
+  // ---------------------------------------------------------------------------
+  const watermarkEl = document.getElementById('watermark');
+  const emailEl = document.getElementById('session-email');
+  const countdownEl = document.getElementById('session-countdown');
+
+  async function initSession(): Promise<void> {
+    let session: { email?: string; exp?: number } | null = null;
+    try {
+      const res = await fetch('/portal/session.json', { cache: 'no-store' });
+      if (res.status === 401) {
+        window.location.href = '/portal/';
+        return;
+      }
+      if (res.ok) session = (await res.json()) as { email?: string; exp?: number };
+    } catch {
+      /* leave placeholders */
+    }
+    const email = session?.email ?? 'unverified session';
+    const exp = typeof session?.exp === 'number' ? (session.exp as number) : 0;
+    if (emailEl) emailEl.textContent = email;
+
+    // Watermark: tiled, rotated, from the session email + today's date.
+    if (watermarkEl) {
+      const date = new Date().toISOString().slice(0, 10);
+      const line = `CONFIDENTIAL — LICENSED TO ${email.toUpperCase()} — ${date} — STRICTLY NO REDISTRIBUTION`;
+      let tiles = '';
+      for (let i = 0; i < 28; i++) {
+        tiles += `<div class="whitespace-nowrap font-mono text-[11px] font-semibold uppercase tracking-widest text-slate-100/20">${line}</div>`;
+      }
+      watermarkEl.innerHTML = `<div class="-rotate-[18deg] scale-125"><div class="grid grid-cols-2 gap-16 p-8">${tiles}</div></div>`;
+    }
+
+    // Countdown
+    if (countdownEl && exp > 0) {
+      const tick = (): void => {
+        const left = exp - Date.now();
+        if (left <= 0) {
+          countdownEl.textContent = 'expired';
+          countdownEl.classList.add('text-red-300');
+          return;
+        }
+        const h = Math.floor(left / 3_600_000);
+        const m = Math.floor((left % 3_600_000) / 60_000);
+        const s = Math.floor((left % 60_000) / 1000);
+        countdownEl.textContent = `${h}h ${String(m).padStart(2, '0')}m ${String(s).padStart(2, '0')}s`;
+        if (left < 5 * 60_000) countdownEl.classList.add('text-amber-300');
+      };
+      tick();
+      window.setInterval(tick, 1000);
+    }
+  }
+  void initSession();
+
+  // ---------------------------------------------------------------------------
+  // Module 1: manifest filters
+  // ---------------------------------------------------------------------------
+  const searchInput = document.getElementById('mf-search') as HTMLInputElement | null;
+  const typeSelect = document.getElementById('mf-type') as HTMLSelectElement | null;
+  const statusSelect = document.getElementById('mf-status') as HTMLSelectElement | null;
+  const countEl = document.getElementById('mf-count');
+  const rows = Array.from(document.querySelectorAll<HTMLTableRowElement>('#mf-tbody tr'));
+
+  function applyFilters(): void {
+    const q = (searchInput?.value ?? '').trim().toLowerCase();
+    const type = typeSelect?.value ?? '';
+    const status = statusSelect?.value ?? '';
+    let visible = 0;
+    for (const row of rows) {
+      const matchesQ = q.length === 0 || row.textContent.toLowerCase().includes(q);
+      const matchesType = type.length === 0 || row.dataset.type === type;
+      const matchesStatus = status.length === 0 || row.dataset.status === status;
+      const show = matchesQ && matchesType && matchesStatus;
+      row.hidden = !show;
+      if (show) visible++;
+    }
+    if (countEl) countEl.textContent = `${visible} of ${rows.length} lots shown`;
+  }
+  searchInput?.addEventListener('input', applyFilters);
+  typeSelect?.addEventListener('change', applyFilters);
+  statusSelect?.addEventListener('change', applyFilters);
+  applyFilters();
+
+  // ---------------------------------------------------------------------------
+  // Module 3: stowage simulator
+  // ---------------------------------------------------------------------------
+  const selection = new Map<string, number>(); // lotId -> qty
+  let mode: 'palletized' | 'loose' = 'palletized';
+
+  const simLotsEl = document.getElementById('sim-lots');
+  const simEmptyEl = document.getElementById('sim-empty');
+  const containerSelect = document.getElementById('sim-container') as HTMLSelectElement | null;
+
+  function containerSpec() {
+    const code = containerSelect?.value ?? '40HQ';
+    return CONTAINERS.find((c) => c.code === code) ?? CONTAINERS[CONTAINERS.length - 1];
+  }
+
+  function renderSim(): void {
+    if (!simLotsEl) return;
+    simLotsEl.innerHTML = '';
+    const ids = Array.from(selection.keys());
+    if (simEmptyEl) simEmptyEl.hidden = ids.length > 0;
+    for (const id of ids) {
+      const lot = lotById.get(id);
+      if (!lot) continue;
+      const qty = selection.get(id) ?? lot.moq;
+      const wrapper = document.createElement('div');
+      wrapper.className = 'flex flex-wrap items-center gap-3 rounded-xl border border-slate-800 bg-slate-900/60 px-4 py-3';
+      const label = document.createElement('span');
+      label.className = 'min-w-0 flex-1 text-sm text-slate-200';
+      label.innerHTML = `<span class="font-mono text-teal-300">${id}</span> · ${lot.title}`;
+      const input = document.createElement('input');
+      input.type = 'number';
+      input.min = String(lot.moq);
+      input.max = String(lot.availableQty);
+      input.step = '1';
+      input.value = String(qty);
+      input.className = 'w-24 rounded-lg border border-slate-700 bg-slate-950/70 px-3 py-1.5 text-right font-mono text-sm text-slate-100 focus:border-teal-400 focus:outline-none';
+      input.setAttribute('aria-label', `Quantity for ${id}`);
+      input.addEventListener('input', () => {
+        const v = Number.parseInt(input.value, 10);
+        if (Number.isFinite(v)) {
+          selection.set(id, Math.max(lot.moq, Math.min(lot.availableQty, v)));
+          updateResults();
+        }
+      });
+      const remove = document.createElement('button');
+      remove.type = 'button';
+      remove.textContent = 'Remove';
+      remove.className = 'rounded-lg border border-slate-700 px-3 py-1.5 text-xs font-semibold text-slate-400 hover:text-red-300';
+      remove.addEventListener('click', () => {
+        selection.delete(id);
+        const cb = document.querySelector<HTMLInputElement>(`input.mf-add[data-lot="${id}"]`);
+        if (cb) cb.checked = false;
+        renderSim();
+        updateResults();
+      });
+      wrapper.append(label, input, remove);
+      simLotsEl.append(wrapper);
+    }
+    updateResults();
+  }
+
+  function updateResults(): void {
+    const items = Array.from(selection.entries())
+      .map(([id, qty]) => ({ lot: lotById.get(id), qty }))
+      .filter((x): x is { lot: (typeof STOCKLOTS)[number]; qty: number } => Boolean(x.lot));
+    const c = containerSpec();
+
+    let cartons = 0;
+    let cbm = 0;
+    let gw = 0;
+    let pallets = 0;
+    let units = 0;
+    let fob = 0;
+    for (const item of items) {
+      const l = calcLoading(item.lot, item.qty, mode);
+      cartons += l.cartons;
+      cbm += l.totalCbm;
+      gw += l.totalGrossWeightKg;
+      pallets += l.pallets;
+      units += item.qty;
+      fob += item.qty * tierPriceUsd(item.lot, item.qty);
+    }
+
+    const capacityCbm = mode === 'loose' ? c.looseLoadCbm : c.usableCbm;
+    const volPct = Math.min(100, (cbm / capacityCbm) * 100);
+    const wtPct = Math.min(100, (gw / c.maxPayloadKg) * 100);
+    const plPct = mode === 'palletized' ? Math.min(100, (pallets / c.palletsStandard) * 100) : 0;
+
+    const set = (id: string, text: string, hidden: boolean): void => {
+      const el = document.getElementById(id);
+      if (el) {
+        el.textContent = text;
+        if (hidden) el.parentElement?.classList.add('hidden');
+        else el.parentElement?.classList.remove('hidden');
+      }
+    };
+    const setBar = (id: string, width: string): void => {
+      const el = document.getElementById(id);
+      if (el) el.style.width = width;
+    };
+
+    set('util-vol-text', `${cbm.toFixed(1)} / ${capacityCbm} CBM`, false);
+    setBar('util-vol-bar', `${volPct.toFixed(1)}%`);
+    set('util-wt-text', `${gw.toFixed(0)} / ${c.maxPayloadKg.toLocaleString('en-US')} kg`, false);
+    setBar('util-wt-bar', `${wtPct.toFixed(1)}%`);
+    const plRow = document.getElementById('util-pallets-row');
+    if (mode === 'palletized') {
+      set('util-pl-text', `${pallets} / ${c.palletsStandard} positions`, false);
+      setBar('util-pl-bar', `${plPct.toFixed(1)}%`);
+      if (plRow) plRow.hidden = false;
+    } else {
+      if (plRow) plRow.hidden = true;
+    }
+
+    const fmt = (id: string, v: string): void => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = v;
+    };
+    fmt('sum-units', units > 0 ? units.toLocaleString('en-US') : '—');
+    fmt('sum-cartons', units > 0 ? cartons.toLocaleString('en-US') : '—');
+    fmt('sum-cbm', units > 0 ? `${cbm.toFixed(2)} m³` : '—');
+    fmt('sum-gw', units > 0 ? `${gw.toFixed(0)} kg` : '—');
+    fmt('sum-fob', units > 0 ? `$${fob.toLocaleString('en-US')}` : '—');
+
+    updateSummary(units, cbm, gw, pallets, fob);
+  }
+
+  function updateSummary(units: number, cbm: number, gw: number, pallets: number, fob: number): void {
+    const pre = document.getElementById('rfq-summary');
+    if (!pre) return;
+    if (units === 0) {
+      pre.textContent = 'No lots selected.';
+      return;
+    }
+    const c = containerSpec();
+    const lines: string[] = [
+      `STOWAGE PLAN (${mode.toUpperCase()} · ${c.code})`,
+      ...Array.from(selection.entries()).map(([id, qty]) => {
+        const lot = lotById.get(id);
+        if (!lot) return '';
+        const price = tierPriceUsd(lot, qty);
+        return `- ${id} × ${qty} pcs @ $${price} = $${(qty * price).toLocaleString('en-US')}`;
+      }),
+      `TOTALS: ${units} pcs · ${cbm.toFixed(2)} CBM · ${gw.toFixed(0)} kg${mode === 'palletized' ? ` · ${pallets} pallets` : ''}`,
+      `EST. FOB VALUE: $${fob.toLocaleString('en-US')}`,
+      `HS CODE: ${HS_CODE}`,
+    ];
+    pre.textContent = lines.filter((l) => l.length > 0).join('\n');
+  }
+
+  for (const cb of Array.from(document.querySelectorAll<HTMLInputElement>('input.mf-add'))) {
+    cb.addEventListener('change', () => {
+      const id = cb.dataset.lot ?? '';
+      const lot = lotById.get(id);
+      if (!lot) return;
+      if (cb.checked) selection.set(id, Math.max(lot.moq, 1));
+      else selection.delete(id);
+      renderSim();
+    });
+  }
+
+  for (const btn of Array.from(document.querySelectorAll<HTMLButtonElement>('.sim-mode'))) {
+    btn.addEventListener('click', () => {
+      mode = (btn.dataset.mode === 'loose' ? 'loose' : 'palletized') as 'palletized' | 'loose';
+      for (const b of Array.from(document.querySelectorAll<HTMLButtonElement>('.sim-mode'))) {
+        const active = b.dataset.mode === mode;
+        b.className = `sim-mode rounded-xl border px-4 py-2 text-sm font-semibold transition ${
+          active ? 'border-teal-400 bg-teal-400/10 text-teal-300' : 'border-slate-700 text-slate-400'
+        }`;
+      }
+      updateResults();
+    });
+  }
+  containerSelect?.addEventListener('change', updateResults);
+
+  // ---------------------------------------------------------------------------
+  // Module 2: QC vault tabs + lightbox
+  // ---------------------------------------------------------------------------
+  const tabs = Array.from(document.querySelectorAll<HTMLButtonElement>('.vault-tab'));
+  const panels = Array.from(document.querySelectorAll<HTMLElement>('.vault-panel'));
+  for (const tab of tabs) {
+    tab.addEventListener('click', () => {
+      const id = tab.dataset.tab;
+      for (const t of tabs) {
+        const active = t.dataset.tab === id;
+        t.className = `vault-tab rounded-xl border px-4 py-2 text-sm font-semibold transition ${
+          active ? 'border-teal-400 bg-teal-400/10 text-teal-300' : 'border-slate-700 text-slate-400'
+        }`;
+        t.setAttribute('aria-selected', active ? 'true' : 'false');
+      }
+      for (const p of panels) p.hidden = p.dataset.panel !== id;
+    });
+  }
+
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img') as HTMLImageElement | null;
+  const lightboxCaption = document.getElementById('lightbox-caption');
+  for (const item of Array.from(document.querySelectorAll<HTMLButtonElement>('.vault-item'))) {
+    item.addEventListener('click', () => {
+      const img = item.querySelector('img');
+      if (!lightbox || !lightboxImg || !img) return;
+      lightboxImg.src = img.getAttribute('src') ?? '';
+      lightboxImg.alt = img.alt;
+      if (lightboxCaption) lightboxCaption.textContent = item.dataset.caption ?? '';
+      lightbox.classList.remove('hidden');
+      lightbox.classList.add('flex');
+    });
+  }
+  document.getElementById('lightbox-close')?.addEventListener('click', () => {
+    lightbox?.classList.add('hidden');
+    lightbox?.classList.remove('flex');
+  });
+  lightbox?.addEventListener('click', (event) => {
+    if (event.target === lightbox) {
+      lightbox.classList.add('hidden');
+      lightbox.classList.remove('flex');
+    }
+  });
+
+  // ---------------------------------------------------------------------------
+  // Module 4: RFQ panel
+  // ---------------------------------------------------------------------------
+  document.getElementById('rfq-submit')?.addEventListener('click', () => {
+    const errorEl = document.getElementById('rfq-error');
+    const showError = (msg: string): void => {
+      if (errorEl) {
+        errorEl.textContent = msg;
+        errorEl.classList.remove('hidden');
+      }
+    };
+    if (errorEl) errorEl.classList.add('hidden');
+
+    if (selection.size === 0) {
+      showError('Select at least one lot in the manifest table first.');
+      return;
+    }
+    const dest = (document.getElementById('rfq-dest') as HTMLInputElement | null)?.value.trim() ?? '';
+    if (dest.length === 0) {
+      showError('Enter your destination port / market.');
+      return;
+    }
+    const asis = (document.getElementById('rfq-asis') as HTMLInputElement | null)?.checked ?? false;
+    if (!asis) {
+      showError('Acknowledge the AS-IS terms before sending.');
+      return;
+    }
+    const incoterm = (document.getElementById('rfq-incoterm') as HTMLSelectElement | null)?.value ?? 'FOB Qingdao';
+    const takeAll = (document.getElementById('rfq-takeall') as HTMLInputElement | null)?.checked ?? false;
+    const notes = (document.getElementById('rfq-notes') as HTMLTextAreaElement | null)?.value.trim() ?? '';
+    const email = emailEl?.textContent ?? '';
+
+    const c = containerSpec();
+    const allocLines = Array.from(selection.entries()).map(([id, qty]) => {
+      const lot = lotById.get(id);
+      if (!lot) return '';
+      const price = tierPriceUsd(lot, qty);
+      return `- ${id} x ${qty} pcs @ $${price} = $${(qty * price).toLocaleString('en-US')}`;
+    });
+    const summaryText = document.getElementById('rfq-summary')?.textContent ?? '';
+
+    const message = [
+      'RFQ (Inventory Portal) — supstocklot.com',
+      `Buyer session: ${email}`,
+      `Incoterm: ${incoterm}`,
+      `Destination: ${dest}`,
+      `Take-All: ${takeAll ? 'YES — quote take-all rate for entire lot(s)' : 'no'}`,
+      'AS-IS acknowledgement: YES (Terms of Sale accepted)',
+      '',
+      'Allocation:',
+      ...allocLines.filter((l) => l.length > 0),
+      '',
+      summaryText,
+      `Container plan: ${mode} / ${c.code}`,
+      notes.length > 0 ? `Notes: ${notes}` : '',
+    ]
+      .filter((l) => l.length > 0)
+      .join('\n');
+
+    window.open(`https://wa.me/${SITE.whatsappNumber.replace(/\D/g, '')}?text=${encodeURIComponent(message)}`, '_blank', 'noopener');
+  });
+
+  // ---------------------------------------------------------------------------
+  // NDA gate before manifest download (one-time per session)
+  // ---------------------------------------------------------------------------
+  const NDA_KEY = 'portalNdaAck';
+  const ndaModal = document.getElementById('nda-modal');
+  const ndaCheck = document.getElementById('nda-check') as HTMLInputElement | null;
+  const ndaConfirm = document.getElementById('nda-confirm') as HTMLButtonElement | null;
+  const dlLink = document.getElementById('manifest-download') as HTMLAnchorElement | null;
+  const ndaAcked = (): boolean => {
+    try {
+      return window.sessionStorage.getItem(NDA_KEY) === 'yes';
+    } catch {
+      return false;
+    }
+  };
+  const closeNda = (): void => {
+    ndaModal?.classList.add('hidden');
+    ndaModal?.classList.remove('flex');
+  };
+  dlLink?.addEventListener('click', (event) => {
+    if (ndaAcked()) return;
+    event.preventDefault();
+    if (ndaCheck) ndaCheck.checked = false;
+    if (ndaConfirm) ndaConfirm.disabled = true;
+    ndaModal?.classList.remove('hidden');
+    ndaModal?.classList.add('flex');
+  });
+  ndaCheck?.addEventListener('change', () => {
+    if (ndaConfirm) ndaConfirm.disabled = !(ndaCheck?.checked ?? false);
+  });
+  document.getElementById('nda-cancel')?.addEventListener('click', closeNda);
+  ndaModal?.addEventListener('click', (event) => {
+    if (event.target === ndaModal) closeNda();
+  });
+  ndaConfirm?.addEventListener('click', () => {
+    try {
+      window.sessionStorage.setItem(NDA_KEY, 'yes');
+    } catch {
+      /* storage unavailable — continue without persistence */
+    }
+    closeNda();
+    window.location.href = '/portal/manifest.csv';
+  });
+
+  // Discourage right-click save / drag of restricted photos
+  document.addEventListener('contextmenu', (event) => {
+    const target = event.target as HTMLElement | null;
+    if (target?.tagName === 'IMG') event.preventDefault();
+  });
+  document.addEventListener('dragstart', (event) => {
+    const target = event.target as HTMLElement | null;
+    if (target?.tagName === 'IMG') event.preventDefault();
+  });
+</script>

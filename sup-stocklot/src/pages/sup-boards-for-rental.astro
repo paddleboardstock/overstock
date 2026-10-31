@@ -1,0 +1,99 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+import LotCard from '../components/LotCard.astro';
+import { waLink } from '../config';
+import { STOCKLOTS } from '../data/stocklots';
+
+const images = ['/img/detail-valve.svg', '/img/detail-deck.svg', '/img/detail-seam.svg', '/img/detail-dring.svg'];
+const rentalLots = STOCKLOTS.filter((l) => l.id === 'SL-02' || l.id === 'SL-05' || l.id === 'SL-06');
+---
+
+<Layout
+  title="Inflatable SUP Boards for Rental Businesses & Fleets"
+  path="/sup-boards-for-rental/"
+  description="Bulk inflatable SUP boards for rental businesses, watersports centers and resorts. Uniform-spec fleets, cosmetic-second value lots, repair kits and fast replenishment. FOB Qingdao, 72-hour pressure QC."
+>
+  <PageHero
+    eyebrow="Rental &amp; fleet channel"
+    title="Inflatable SUP Boards for Rental Businesses &amp; Fleets"
+    subtitle="High-turnover rental operations need boards that survive guests, not marketing brochures. Uniform-spec fleets, heavy-duty constructions, per-fleet pricing and the fastest replenishment in the stocklot business — direct from Qingdao."
+  >
+    <div class="flex flex-wrap gap-4">
+      <a href={waLink('Hi, we run a SUP rental business and are looking at fleet pricing. Can you advise on the best lots for rental use?')} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-xl bg-[#25D366] px-6 py-3.5 font-semibold text-slate-950 transition hover:bg-[#1ebe5b]">Discuss your fleet needs</a>
+      <a href="#rental-lots" class="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-900/60 px-6 py-3.5 font-semibold text-slate-100 transition hover:border-teal-400/50 hover:text-teal-300">See rental-suited lots</a>
+    </div>
+  </PageHero>
+
+  <section class="border-b border-slate-800/80">
+    <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6">
+      <h2 class="text-2xl font-bold tracking-tight text-slate-50 sm:text-3xl">What rental operators care about</h2>
+      <div class="mt-8 grid gap-6 md:grid-cols-3">
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
+          <p class="font-semibold text-slate-100">Durability first</p>
+          <p class="mt-2 text-sm leading-relaxed text-slate-400">
+            Dual-layer drop-stitch constructions with machine-welded rails hold up to daily guest use. Every board
+            passes the 72-hour inflated pressure test before dispatch — seams and valves verified, no structural bubbles.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
+          <p class="font-semibold text-slate-100">Uniform-spec fleets</p>
+          <p class="mt-2 text-sm leading-relaxed text-slate-400">
+            Guests and instructors expect identical handling across the fleet. Whole-lot purchases give you one
+            consistent model — same shape, same accessories, same replacement parts.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
+          <p class="font-semibold text-slate-100">Fleet economics</p>
+          <p class="mt-2 text-sm leading-relaxed text-slate-400">
+            A rental board pays for itself in a season. Grade A cancelled-order lots at liquidation prices shorten
+            that payback dramatically; Grade B cosmetic-second lots (100% airtight) are the fastest payback of all —
+            guests do not inspect rail finish.
+          </p>
+        </div>
+      </div>
+      <div class="mt-6 grid gap-6 md:grid-cols-2">
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
+          <p class="font-semibold text-slate-100">Repair &amp; maintenance kits</p>
+          <p class="mt-2 text-sm leading-relaxed text-slate-400">
+            Every board ships with a repair kit. Additional accessory sets (paddles, pumps, leashes, fins) are
+            available in bulk as spares for your workshop — see the accessory lot in the catalog.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
+          <p class="font-semibold text-slate-100">Fast replenishment</p>
+          <p class="mt-2 text-sm leading-relaxed text-slate-400">
+            Lost, stolen or damaged boards mid-season? Stocklot dispatch is 3–5 business days after payment
+            confirmation — faster than any OEM production queue. LCL and FCL both available from Qingdao.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="rental-lots" class="border-b border-slate-800/80 bg-slate-900/40">
+    <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6">
+      <h2 class="text-2xl font-bold tracking-tight text-slate-50 sm:text-3xl">Rental-suited stocklots</h2>
+      <p class="mt-2 max-w-2xl text-slate-400">
+        Our picks for rental use: the high-volume all-around workhorse, the cosmetic-second value lot and bulk
+        accessory/spare sets.
+      </p>
+      <div class="mt-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+        {rentalLots.map((lot, i) => <LotCard lot={lot} image={images[i % images.length]} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="border-b border-slate-800/80">
+    <div class="mx-auto max-w-3xl px-4 py-16 text-center sm:px-6">
+      <h2 class="text-2xl font-bold tracking-tight text-slate-50">Fleet sizing help</h2>
+      <p class="mt-3 text-slate-400">
+        Tell us your guest volume, season length and current fleet — we will propose a lot combination and container
+        plan that fits your budget, including a Grade A / Grade B split that maximizes payback.
+      </p>
+      <div class="mt-8">
+        <a href={waLink('Hi, we are a SUP rental operator. Here is our fleet size and season: ... Please recommend lots and a container plan.')} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-xl bg-[#25D366] px-6 py-3.5 font-semibold text-slate-950 transition hover:bg-[#1ebe5b]">Get a fleet recommendation</a>
+      </div>
+    </div>
+  </section>
+</Layout>

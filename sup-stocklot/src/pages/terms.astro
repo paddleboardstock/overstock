@@ -1,0 +1,161 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { SITE } from '../config';
+---
+
+<Layout
+  title="Terms & Conditions"
+  path="/terms"
+  description="Trade terms for SUP Stocklot Direct: AS-IS liquidation sale, no brand warranty, territory resale restrictions, 30–50% non-refundable deposit, inspection sign-off = delivery, FOB Qingdao / EXW, 3–5 business day dispatch, B2B only."
+>
+  <section class="mx-auto max-w-3xl px-4 py-16 sm:px-6">
+    <h1 class="text-3xl font-bold tracking-tight text-slate-50 sm:text-4xl">Terms &amp; Conditions</h1>
+    <p class="mt-3 text-sm text-slate-500">Applies to all stocklots sold by {SITE.name}. Last updated {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}.</p>
+
+    <div class="mt-10 space-y-10 text-slate-300">
+      <section>
+        <h2 class="text-xl font-bold text-slate-100">1. Scope — B2B only</h2>
+        <p class="mt-3 leading-relaxed">
+          We sell exclusively to businesses (importers, distributors, rental operators, retail chains). Every lot
+          carries a minimum order quantity ({SITE.moqPolicy}). We do not sell to consumers, and we do not split lots
+          below the stated MOQ.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-slate-100">2. Sold AS-IS — no brand warranty</h2>
+        <p class="mt-3 leading-relaxed">
+          All stock is liquidation inventory (cancelled orders, surplus production, cosmetic seconds) and is sold
+          <strong class="text-slate-100">AS-IS, WHERE-IS</strong>. There is <strong class="text-slate-100">no brand
+          warranty</strong>: no manufacturer warranty claims, guarantee cards or after-sales service from the original
+          factory are included or implied. Product titles on this site are de-branded engineering descriptions; original
+          branding is neither marketed nor warranted.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-slate-100">3. What we do guarantee</h2>
+        <ul class="mt-3 list-disc space-y-2 pl-6 leading-relaxed">
+          <li>Honest grading: Grade A = brand-new cancelled-order/surplus; Grade B = cosmetic seconds (100% airtight).</li>
+          <li>Every board passes a <strong class="text-slate-100">72-hour inflated pressure test</strong> ({SITE.qcProtocol.pressure}, pressure drop {SITE.qcProtocol.maxDrop}) before dispatch.</li>
+          <li>Accurate manifests: quantities, carton dimensions, gross/net weights and accessory lists per lot.</li>
+          <li>The goods conform to the description of the specific lot confirmed on your pro-forma invoice.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-slate-100">4. Prices, incoterms &amp; payment</h2>
+        <p class="mt-3 leading-relaxed">
+          Prices are quoted in USD, {SITE.incoterms}. Tiered pricing is per lot and based on the confirmed quantity
+          on the pro-forma invoice.
+        </p>
+        <p class="mt-3 leading-relaxed">
+          <strong class="text-slate-100">Payment: {SITE.paymentTerms}</strong> Stock is only allocated once the
+          deposit is received. Availability and prices can change without notice until an order is confirmed.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-slate-100">5. Deposit, allocation hold &amp; default</h2>
+        <p class="mt-3 leading-relaxed">
+          The 30–50% deposit locks your allocation and holds it for <strong class="text-slate-100">{SITE.allocationHoldDays}
+          days</strong> from the pro-forma invoice date. The deposit is <strong class="text-slate-100">non-refundable</strong>:
+          during the hold we decline other buyers on the reserved goods, and the costs of that are yours if you walk
+          away. If the hold expires without the balance payment or a mutually agreed extension, the allocation is
+          released back to the market and the deposit is forfeited. If we become unable to supply a confirmed and
+          deposited lot before dispatch, you may switch to an equivalent lot or receive a full refund of amounts paid.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-slate-100">6. Inspection — sign-off is delivery</h2>
+        <p class="mt-3 leading-relaxed">
+          Buyers are welcome to appoint a third-party inspection agency (SGS, BV, TÜV or equivalent) at our Qingdao
+          warehouse before dispatch, and/or container-loading supervision. Inspection fees and agency costs are borne
+          by the buyer. We provide carton access, sampling and loading supervision. Personal visits can be arranged
+          via WhatsApp.
+        </p>
+        <p class="mt-3 leading-relaxed">
+          <strong class="text-slate-100">Your inspection sign-off (or the sign-off of your appointed agency)
+          constitutes acceptance and delivery of the goods</strong> in the condition inspected. Issues visible,
+          observable or reasonably discoverable at inspection cannot be raised as claims afterwards. Risk in the goods
+          passes to the buyer at the delivery point defined by the agreed incoterm (FOB: on board at Qingdao; EXW:
+          made available at our warehouse).
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-slate-100">7. Dispatch &amp; allocation</h2>
+        <p class="mt-3 leading-relaxed">
+          Confirmed orders dispatch within <strong class="text-slate-100">{SITE.dispatchWindow}</strong>. Lots are
+          allocated strictly in order of payment confirmation. Until your deposit is received, the lot remains on the
+          market and may sell out — low-stock lots move in days.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-slate-100">8. Claims</h2>
+        <p class="mt-3 leading-relaxed">
+          Because goods are sold AS-IS, post-delivery claims are limited to quantity discrepancies against the
+          packing list and damage demonstrably caused before container sealing (documented at loading). Report such
+          issues within 7 days of container unsealing, with photo/video evidence. There are no returns of sold
+          stocklots.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-slate-100">9. Territory &amp; resale restrictions</h2>
+        <p class="mt-3 leading-relaxed">
+          Some lots carry territory restrictions agreed with the original brand or seller (for example: not for
+          resale in a specific country or market channel). Where a restriction applies, it is stated on the
+          pro-forma invoice and acknowledged by the buyer before the deposit. Buyers are responsible for complying
+          with any restriction attached to their purchase, for their own import-market regulations (see the
+          <a class="text-teal-300 hover:text-teal-200" href="/shipping/">compliance notes</a>), and for not
+          marketing or reselling the goods in a way that infringes third-party trademark or IP rights. We sell
+          de-branded physical goods; how you list and market them is your responsibility.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-slate-100">10. Neutral export packing</h2>
+        <p class="mt-3 leading-relaxed">
+          Goods ship in neutral export-grade cartons: no original brand marks, marketing inserts or barcodes on the
+          outer packaging. Ship-to marks are applied per buyer instructions. Inner manual/label replacement can be
+          discussed per lot before the deposit. Original branded packaging material, where it exists, is disposed of
+          and never shipped.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-slate-100">11. Gated portal material</h2>
+        <p class="mt-3 leading-relaxed">
+          Access to the branded inventory portal (packing lists, barcode ranges, branded photos) is granted to
+          verified business buyers and may be revoked at any time. Portal material is confidential, provided for
+          purchase evaluation only, and may not be republished or redistributed. Screenshotting and sharing portal
+          material with third parties is a breach of the access grant.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-slate-100">12. Governing terms &amp; contact</h2>
+        <p class="mt-3 leading-relaxed">
+          The full bilingual Terms of Sale, IP Indemnification &amp; Liability Waiver governing any transaction is
+          provided to verified buyers inside the inventory portal and applies alongside these terms. Questions on any
+          clause? Message the sales desk on WhatsApp ({SITE.whatsappDisplay}) or email
+          <a class="text-teal-300 hover:text-teal-200" href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>
+          before placing an order.
+        </p>
+      </section>
+    </div>
+
+    <div class="mt-14 rounded-2xl border border-amber-400/30 bg-amber-400/5 p-6 text-sm text-slate-300">
+      <p class="font-semibold text-amber-300">Plain-English summary</p>
+      <p class="mt-2 leading-relaxed">
+        You get honestly graded, pressure-tested liquidation stock at a fraction of regular wholesale. In exchange:
+        no brand warranty, no returns, no factory after-sales. Your deposit locks the lot and is non-refundable.
+        Inspect before dispatch — we encourage it — but your inspection sign-off is final acceptance. Respect any
+        territory restrictions on the lot you buy.
+      </p>
+    </div>
+  </section>
+</Layout>

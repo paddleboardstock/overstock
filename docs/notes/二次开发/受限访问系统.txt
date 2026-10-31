@@ -1,0 +1,20 @@
+构建面向全球大宗库存（Brand Overruns / Cancelled Orders）的受限访问系统（Gated Access），核心在于“前台物理脱敏脱敏防侵权、中台自动化门槛筛散客、后台分级放行促成交”。既不能让原品牌商抓到公开展示商标的把柄，也不能因繁琐的审核把真正手握现金的大买家挡在门外。1. 整体业务交互流程[公开前台] 规格参数、工艺细节特写、盲盒式库存表 (无任何品牌LOGO)
+    │
+    ▼ 点击 "Request Full Manifest & Brand Details" 或 "Unlock VIP Access"
+[第一步：极简资质弹窗] 提交核心买家凭证 (公司名、国家、业务类型、提货规模)
+    │
+    ├─► [自动初筛不通过] (免费个人邮箱/极小意向) ──► 邮件排队提醒 / 推荐常规白牌现货
+    │
+    ▼ [自动初筛通过] (企业邮箱 / 完整 WhatsApp / 明确 B2B 意向)
+[第二步：即时轻量验证] 
+    ├─► 方案 A (极速)：直接向工作邮箱发送 6 位动态一次性访问码 (OTP)
+    └─► 方案 B (高质)：直接弹出销售 WhatsApp 直连链接，同时系统生成临时专属 Access Token
+    │
+    ▼ 输入密码 / 点击专属链接
+[受限私密区域 (Gated Portal)] 
+    ├─► 完整 Packing List (品牌、板型、原始批次、装箱规格)
+    ├─► 密码水印实拍图/72h保压视频 (带买家邮箱半透明水印，防止买家二次外泄)
+    └─► 动态装柜模拟器 + 一键获取 FOB Qingdao / Take-All 打包报价
+2. 交互节点与文案细节设计节点 A：公开页面的进入引导（Trigger Point）在公开库存列表（仅展示 10'6" Dual Layer Dropstitch、Quantity: 420 pcs 等脱敏参数）旁设置悬浮引导栏：核心文案：Locked Content: Original Factory Overruns & Cancelled Retail Stocklots.Due to non-disclosure agreements with brand clients, high-resolution branding photos, retail packaging specs, and detailed packing lists are restricted to verified commercial buyers.CTA 按钮：[ Unlock Complete Manifest & Real Photos ]节点 B：留资弹窗字段设计（严格控制在 5 个以内）表单字段超过 5 个会直接导致流失率飙升。字段需兼顾真实性核验与购买力评估：字段名称控件类型必填作用与筛选机制Business Email文本输入是强制前端校验；阻断 @gmail.com, @yahoo.com, @hotmail.com 等免费邮箱（文案提示：Please use corporate/business email for instant verification）。WhatsApp / Phone带国旗前缀文本是跨境清仓最关键的即时通讯工具，也是销售人员第 1 时间跟进的第一渠道。Company & Website文本输入是评估买家真实身份（若无官网可填社交主页/网店链接）。Business Nature下拉单选是选项：• Outdoor/SUP Rental Fleet & Club• Wholesaler / Liquidator / Jobber• E-commerce Brand / Amazon Seller• Physical Retail ChainEstimated Take-off Volume下拉单选是选项：• Sample / Trial (10–30 pcs)• 1 Full Pallet (~50–80 pcs)• Multi-Pallets / 20GP Container (~250–300 pcs)• Take-All / 40HQ Container (~650+ pcs)3. 买家资质智能审核规则（分级放行机制）通过自动化逻辑将进来的线索分为三级，采取差异化的授权策略：Tier 1：即时秒过（Instant VIP Pass）准入特征：企业专属域名邮箱（如 john@miami-watersports.com）+ 勾选提货量 ≥ 1 Pallet + 填写有效官网。放行机制：系统自动生成一个有效期 24 小时的动态登录 Token，直接发到其企业邮箱，买家点击即可免密登录。页面直接弹出 WhatsApp 按钮：“Your VIP access is active. Contact our Qingdao logistics desk for direct live inspection.”Tier 2：半自动跟进（Assisted Verification）准入特征：使用了公共邮箱（如 gmail），但提供了真实的 WhatsApp、详细的公司名以及明确的集装箱级采购意向。放行机制：前端显示：“Thank you! Because of strict brand protection, our sales desk will verify your WhatsApp within 15 minutes to share the secure access pin.”Webhook 将线索实时推送到销售手机（通过 Telegram Bot、企业微信或邮件通知），业务员直接通过 WhatsApp 发一条简短语音或现场保压小视频，并附带访问 PIN 码，完成信任转化。Tier 3：自动隔离/降级（Filtered Out）准入特征：个人公共邮箱 + 采购量选 Sample (<10 pcs) + 公司名乱填。处理机制：不给予品牌库存密码，系统自动邮件回复：“Due to export contractual MOQs, brand overstocks require a minimum order of 50 units. Here is our generic unbranded catalog for lower quantities.” 引导其去常规库存，避免泄露品牌信息。4. 关键防侵权与防泄露技术细节为了确保即便原品牌商卧底申请也能最大程度防御，受限区需要做以下技术加固：动态屏幕水印（Dynamic DOM Watermark）：
+受限页面与所有高清带标图片上，必须用 CSS/Canvas 渲染半透明倾斜文字水印：Confidential - Licensed to [买家邮箱] - [当前日期] - Strictly No Re-distribution。一旦买家截图外泄，能瞬间定位泄密源头。禁止图片直接右键下载与爬虫屏蔽：对受限目录设置 robots.txt 规则：Disallow: /restricted-stocklots/，并在 HTML header 强加 <meta name="robots" content="noindex, nofollow, noarchive">，杜绝被 Google 图片搜索引擎爬取并公开索引。禁用右键另存为，PDF 清单下载前生成一次性临时签署页（包含 NDA 简易免责条款勾选：Buyer agrees not to advertise these goods under original brand trademarks in restricted retail channels）。分批次定时注销密码：
+不设置通用的“固定全站密码”（如 123456），避免买家在同行论坛/群聊中公开分享。每个受限会话绑定 IP 或基于 Cookie/Token 保持 24 小时，过期需重新验证。5. 落地页技术实现建议（低代码快速部署）不需要从头写复杂的用户系统，利用成熟的轻量工具可在 1-2 天内跑通：Webflow / WordPress / Shopify + 插件组合：使用 Locksmith（Shopify）或 Memberstack / Jetboost（Webflow），针对特定页面（如 /manifest-access）加锁。表单组件对接 Make.com / Zapier：表单一旦提交，自动过滤域名后缀，如果是企业邮箱，自动生成随机 4 位数 PIN 写入数据库并回发邮件；同时将数据同步推送到 Google Sheets 和销售人员 WhatsApp。

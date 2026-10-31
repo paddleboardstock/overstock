@@ -1,0 +1,412 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import GradeBadge from '../../components/GradeBadge.astro';
+import StatusChip from '../../components/StatusChip.astro';
+import LotCard from '../../components/LotCard.astro';
+import { SITE, waLink } from '../../config';
+import {
+  STOCKLOTS,
+  HS_CODE,
+  calcLoading,
+  containerFits,
+  tierPriceUsd,
+  unitsPerPallet,
+  type StockLot,
+} from '../../data/stocklots';
+
+export function getStaticPaths() {
+  return STOCKLOTS.map((lot) => ({ params: { slug: lot.slug }, props: { lot } }));
+}
+
+interface Props {
+  lot: StockLot;
+}
+
+const { lot } = Astro.props;
+
+const images = ['/img/detail-valve.svg', '/img/detail-deck.svg', '/img/detail-seam.svg', '/img/detail-dring.svg'];
+const initial = calcLoading(lot, lot.moq);
+const fits = containerFits(lot, lot.moq);
+const moqPrice = tierPriceUsd(lot, lot.moq);
+const related = STOCKLOTS.filter((l) => l.id !== lot.id && l.type === lot.type).slice(0, 3);
+
+const waQuote = `Hi, I'd like a quote for lot ${lot.id} (${lot.title}).`;
+const waPhotos = `Hi, please send me live inspection photos & video of lot ${lot.id} (${lot.title}).`;
+const waShipping = `Hi, I'm interested in lot ${lot.id} (${lot.title}). Can you estimate shipping to my destination?`;
+
+const availabilityMap: Record<string, string> = {
+  available: 'https://schema.org/InStock',
+  low: 'https://schema.org/LimitedAvailability',
+  reserved: 'https://schema.org/LimitedAvailability',
+  sold: 'https://schema.org/OutOfStock',
+  inspection: 'https://schema.org/OutOfStock',
+  compliance: 'https://schema.org/OutOfStock',
+  archived: 'https://schema.org/OutOfStock',
+};
+
+const productJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: lot.title,
+  sku: lot.id,
+  description: `${lot.condition}. ${lot.construction}. ${lot.sizeLabel}. Includes: ${lot.included.join(', ')}. FOB Qingdao, sold AS-IS.`,
+  image: images.map((img) => `https://${SITE.domain}${img}`),
+  category: 'Inflatable SUP',
+  offers: {
+    '@type': 'Offer',
+    url: `https://${SITE.domain}/stock/${lot.slug}/`,
+    priceCurrency: 'USD',
+    price: String(moqPrice),
+    availability: availabilityMap[lot.status] ?? 'https://schema.org/OutOfStock',
+    businessFunction: 'http://purl.org/goodrelations/v1#Sell',
+    eligibleQuantity: { '@type': 'QuantitativeValue', minValue: lot.moq, unitCode: 'C62' },
+  },
+};
+
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: `https://${SITE.domain}/` },
+    { '@type': 'ListItem', position: 2, name: 'Available Stock', item: `https://${SITE.domain}/available-sup-stock/` },
+    { '@type': 'ListItem', position: 3, name: `${lot.id} — ${lot.title}` },
+  ],
+};
+---
+
+<Layout
+  title={`${lot.title} — Stock Lot ${lot.id}`}
+  path={`/stock/${lot.slug}/`}
+  description={`${lot.condition}. ${lot.sizeLabel}. ${lot.availableQty} pcs available, MOQ ${lot.moq}. From $${tierPriceUsd(lot, lot.priceTiers[lot.priceTiers.length - 1].minQty)}/pc FOB Qingdao. 72h pressure QC, inspection welcome.`}
+>
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(productJsonLd)} />
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(breadcrumbJsonLd)} />
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="border-b border-slate-800/60 bg-slate-950">
+    <ol class="mx-auto flex max-w-7xl flex-wrap items-center gap-2 px-4 py-3 text-sm text-slate-400 sm:px-6">
+      <li><a href="/" class="hover:text-teal-300">Home</a></li>
+      <li aria-hidden="true">/</li>
+      <li><a href="/available-sup-stock/" class="hover:text-teal-300">Available Stock</a></li>
+      <li aria-hidden="true">/</li>
+      <li class="font-medium text-slate-200">{lot.id}</li>
+    </ol>
+  </nav>
+
+  <section class="border-b border-slate-800/80">
+    <div class="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 lg:grid-cols-2">
+      <!-- Gallery -->
+      <div>
+        <div class="relative overflow-hidden rounded-2xl border border-slate-800">
+          <img
+            src={images[0]}
+            alt={`De-branded construction detail photo placeholder for lot ${lot.id}`}
+            class="aspect-[16/10] w-full object-cover"
+            width="800"
+            height="500"
+          />
+          <div class="absolute left-4 top-4 flex items-center gap-2">
+            <GradeBadge grade={lot.grade} />
+            <span class="rounded-md bg-slate-950/80 px-2 py-0.5 text-xs font-semibold text-slate-200">{lot.id}</span>
+          </div>
+          <div class="absolute right-4 top-4"><StatusChip status={lot.status} /></div>
+        </div>
+        <div class="mt-3 grid grid-cols-4 gap-3">
+          {images.map((img, i) => (
+            <img
+              src={img}
+              alt={`Detail shot ${i + 1} of lot ${lot.id} (placeholder)`}
+              class="aspect-[16/10] w-full rounded-xl border border-slate-800 object-cover opacity-70 transition hover:opacity-100"
+              width="800"
+              height="500"
+              loading="lazy"
+            />
+          ))}
+        </div>
+        <p class="mt-3 text-xs text-slate-500">
+          De-branded detail shots only (logo positions obscured). Verified buyers receive original branded
+          inspection photos &amp; video inside the gated portal.
+        </p>
+      </div>
+
+      <!-- Summary -->
+      <div class="flex flex-col gap-6">
+        <div>
+          <h1 class="text-2xl font-bold leading-tight tracking-tight text-slate-50 sm:text-3xl">{lot.title}</h1>
+          <p class="mt-2 text-slate-400">{lot.sizeLabel} · {lot.condition}</p>
+        </div>
+
+        <dl class="grid grid-cols-2 gap-x-4 gap-y-3 text-sm sm:grid-cols-3">
+          <div>
+            <dt class="text-xs uppercase tracking-wider text-slate-500">Available</dt>
+            <dd class="mt-0.5 font-semibold text-slate-100">{lot.availableQty.toLocaleString('en-US')} pcs</dd>
+          </div>
+          <div>
+            <dt class="text-xs uppercase tracking-wider text-slate-500">MOQ</dt>
+            <dd class="mt-0.5 font-semibold text-slate-100">{lot.moq} pcs</dd>
+          </div>
+          <div>
+            <dt class="text-xs uppercase tracking-wider text-slate-500">HS code</dt>
+            <dd class="mt-0.5 font-mono text-slate-300">{HS_CODE}</dd>
+          </div>
+        </dl>
+
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-widest text-slate-500">In the box</p>
+          <ul class="mt-2 flex flex-wrap gap-1.5">
+            {lot.included.map((item) => (
+              <li class="rounded-md border border-slate-700 bg-slate-950/50 px-2 py-1 text-xs text-slate-300">{item}</li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="rounded-xl border border-slate-700/80 bg-slate-950/60 p-5">
+          <p class="text-xs font-semibold uppercase tracking-widest text-slate-500">Tiered pricing — FOB Qingdao, USD</p>
+          <ul class="mt-3 space-y-1.5 text-sm">
+            {lot.priceTiers.map((tier, ti) => {
+              const next = lot.priceTiers[ti + 1];
+              const range = next ? `${tier.minQty}–${next.minQty - 1} pcs` : `${tier.minQty}+ pcs`;
+              return (
+                <li class="flex items-center justify-between border-b border-slate-800/70 pb-1.5">
+                  <span class="text-slate-400">{range}</span>
+                  <span class="font-mono font-semibold text-slate-100">${tier.unitPriceUsd}/pc</span>
+                </li>
+              );
+            })}
+          </ul>
+          <p class="mt-3 text-xs text-slate-500">
+            Full-lot take-all pricing on request. {SITE.incoterms}.
+          </p>
+        </div>
+
+        <div class="grid gap-3 sm:grid-cols-3">
+          <a href={waLink(waQuote)} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 rounded-xl bg-[#25D366] px-4 py-3 text-sm font-semibold text-slate-950 transition hover:bg-[#1ebe5b]">Request a quote</a>
+          <a href={waLink(waPhotos)} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-700 bg-slate-900/60 px-4 py-3 text-sm font-semibold text-slate-100 transition hover:border-teal-400/50 hover:text-teal-300">Request photos &amp; video</a>
+          <a href={waLink(waShipping)} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-700 bg-slate-900/60 px-4 py-3 text-sm font-semibold text-slate-100 transition hover:border-teal-400/50 hover:text-teal-300">Ask about shipping</a>
+        </div>
+
+        <p class="text-sm text-slate-400">{lot.notes}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Specs + carton data -->
+  <section class="border-b border-slate-800/80 bg-slate-900/40">
+    <div class="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 lg:grid-cols-2">
+      <div>
+        <h2 class="text-lg font-bold text-slate-50">Specification</h2>
+        <dl class="mt-4 space-y-3 text-sm">
+          <div class="flex gap-4 border-b border-slate-800/70 pb-3">
+            <dt class="w-40 shrink-0 text-slate-500">Lot / SKU</dt>
+            <dd class="font-mono text-slate-200">{lot.id}</dd>
+          </div>
+          <div class="flex gap-4 border-b border-slate-800/70 pb-3">
+            <dt class="w-40 shrink-0 text-slate-500">Dimensions</dt>
+            <dd class="text-slate-200">{lot.sizeLabel}</dd>
+          </div>
+          <div class="flex gap-4 border-b border-slate-800/70 pb-3">
+            <dt class="w-40 shrink-0 text-slate-500">Construction</dt>
+            <dd class="text-slate-200">{lot.construction}</dd>
+          </div>
+          <div class="flex gap-4 border-b border-slate-800/70 pb-3">
+            <dt class="w-40 shrink-0 text-slate-500">Condition</dt>
+            <dd class="text-slate-200">{lot.condition}</dd>
+          </div>
+          <div class="flex gap-4 border-b border-slate-800/70 pb-3">
+            <dt class="w-40 shrink-0 text-slate-500">Grading</dt>
+            <dd class="text-slate-200">Grade {lot.grade} — {lot.grade === 'A' ? 'brand-new cancelled-order / surplus' : 'cosmetic seconds, 100% airtight'}</dd>
+          </div>
+          <div class="flex gap-4 border-b border-slate-800/70 pb-3">
+            <dt class="w-40 shrink-0 text-slate-500">QC protocol</dt>
+            <dd class="text-slate-200">{SITE.qcProtocol.id} — 72h pressure hold, {SITE.qcProtocol.pressure}, ΔP {SITE.qcProtocol.maxDrop}</dd>
+          </div>
+          <div class="flex gap-4">
+            <dt class="w-40 shrink-0 text-slate-500">Ship from</dt>
+            <dd class="text-slate-200">{SITE.warehouseLocation} — {SITE.portFull}</dd>
+          </div>
+        </dl>
+      </div>
+      <div>
+        <h2 class="text-lg font-bold text-slate-50">Packaging &amp; carton data</h2>
+        <dl class="mt-4 space-y-3 text-sm">
+          <div class="flex gap-4 border-b border-slate-800/70 pb-3">
+            <dt class="w-44 shrink-0 text-slate-500">Carton dimensions</dt>
+            <dd class="font-mono text-slate-200">{lot.carton.lengthCm} × {lot.carton.widthCm} × {lot.carton.heightCm} cm</dd>
+          </div>
+          <div class="flex gap-4 border-b border-slate-800/70 pb-3">
+            <dt class="w-44 shrink-0 text-slate-500">Gross / net weight</dt>
+            <dd class="font-mono text-slate-200">{lot.carton.grossWeightKg} kg / {lot.carton.netWeightKg} kg per carton</dd>
+          </div>
+          <div class="flex gap-4 border-b border-slate-800/70 pb-3">
+            <dt class="w-44 shrink-0 text-slate-500">Units per carton</dt>
+            <dd class="font-mono text-slate-200">{lot.carton.unitsPerCarton}</dd>
+          </div>
+          <div class="flex gap-4 border-b border-slate-800/70 pb-3">
+            <dt class="w-44 shrink-0 text-slate-500">Pallet configuration</dt>
+            <dd class="font-mono text-slate-200">{lot.carton.cartonsPerPallet} cartons/pallet · {unitsPerPallet(lot)} pcs/pallet</dd>
+          </div>
+          <div class="flex gap-4">
+            <dt class="w-44 shrink-0 text-slate-500">Export packing</dt>
+            <dd class="text-slate-200">Neutral export-grade cartons, no original brand marks or barcodes</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- Loading calculator -->
+  <section id="calculator" class="border-b border-slate-800/80">
+    <div class="mx-auto max-w-4xl px-4 py-12 sm:px-6">
+      <h2 class="text-lg font-bold text-slate-50">Container loading calculator</h2>
+      <p class="mt-2 text-sm text-slate-400">
+        Set your quantity and packaging method to see cartons, pallets, CBM, gross weight, estimated FOB value
+        and how the order fits 20GP / 40HQ containers.
+      </p>
+
+      <div class="mt-6 rounded-2xl border border-slate-700/80 bg-slate-950/60 p-6" data-calculator={lot.id}>
+        <div class="flex flex-wrap items-end justify-between gap-4">
+          <label class="text-sm font-medium text-slate-300" for={`qty-${lot.id}`}>Quantity (pcs)</label>
+          <div class="flex items-center gap-4">
+            <div class="flex items-center gap-2 text-sm">
+              <span class="text-slate-400">Packaging:</span>
+              <label class="inline-flex items-center gap-1.5">
+                <input type="radio" name="pack-mode" value="palletized" checked class="accent-teal-400" />
+                <span class="text-slate-200">Palletized</span>
+              </label>
+              <label class="inline-flex items-center gap-1.5">
+                <input type="radio" name="pack-mode" value="loose" class="accent-teal-400" />
+                <span class="text-slate-200">Loose floor load</span>
+              </label>
+            </div>
+            <input
+              type="number"
+              id={`qty-${lot.id}`}
+              min={lot.moq}
+              max={lot.availableQty}
+              step="1"
+              value={lot.moq}
+              class="w-28 rounded-lg border border-slate-600 bg-slate-900 px-3 py-2 text-right font-mono text-slate-100 focus:border-teal-400 focus:outline-none"
+            />
+          </div>
+        </div>
+
+        <dl class="mt-5 grid grid-cols-2 gap-x-4 gap-y-3 text-sm sm:grid-cols-3">
+          <div>
+            <dt class="text-xs text-slate-500">Cartons</dt>
+            <dd class="font-mono text-slate-100" data-out="cartons">{initial.cartons.toLocaleString('en-US')}</dd>
+          </div>
+          <div>
+            <dt class="text-xs text-slate-500">Pallets</dt>
+            <dd class="font-mono text-slate-100" data-out="pallets">{initial.pallets.toLocaleString('en-US')}</dd>
+          </div>
+          <div>
+            <dt class="text-xs text-slate-500">CBM</dt>
+            <dd class="font-mono text-slate-100" data-out="cbm">{initial.totalCbm.toLocaleString('en-US')}</dd>
+          </div>
+          <div>
+            <dt class="text-xs text-slate-500">Gross weight</dt>
+            <dd class="font-mono text-slate-100"><span data-out="gw">{initial.totalGrossWeightKg.toLocaleString('en-US')}</span> kg</dd>
+          </div>
+          <div>
+            <dt class="text-xs text-slate-500">Unit price</dt>
+            <dd class="font-mono text-slate-100" data-out="unit-price">${initial.unitPriceUsd}</dd>
+          </div>
+          <div>
+            <dt class="text-xs text-slate-500">Est. FOB value</dt>
+            <dd class="font-mono text-teal-300" data-out="est-fob">${initial.estFobUsd.toLocaleString('en-US')}</dd>
+          </div>
+        </dl>
+
+        <div class="mt-5 grid gap-2 text-sm sm:grid-cols-2">
+          {fits.map((f) => (
+            <div class="rounded-lg border border-slate-700/60 bg-slate-900/60 px-3 py-2">
+              <p class="text-xs text-slate-500">{f.code} — holds up to {f.maxUnits.toLocaleString('en-US')} pcs of this lot</p>
+              <p class="mt-0.5 font-medium text-slate-200" data-out={`fit-${f.code.toLowerCase()}`}>
+                {f.fullContainers > 0
+                  ? `${f.fullContainers} full ${f.code}${f.remainderUnits > 0 ? ` + ${f.remainderUnits.toLocaleString('en-US')} pcs` : ''}`
+                  : `Fits in one ${f.code}`}
+              </p>
+            </div>
+          ))}
+        </div>
+        <p class="mt-4 text-xs text-slate-500">
+          Loading figures are estimates — confirm final stow with your forwarder. Palletized capacity is bound by
+          pallet positions (10 × 20GP / 24 × 40HQ); loose floor load uses practical stowage volumes (28 CBM / 68 CBM).
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related -->
+  {
+    related.length > 0 && (
+      <section class="bg-slate-900/40">
+        <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6">
+          <h2 class="text-lg font-bold text-slate-50">Similar stocklots</h2>
+          <div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {related.map((l, i) => (
+              <LotCard lot={l} image={images[(i + 1) % images.length]} />
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  <script>
+    import { STOCKLOTS, calcLoading, containerFits, type StockLot } from '../../data/stocklots';
+
+    const lotEl = document.querySelector('[data-calculator]') as HTMLElement | null;
+    if (lotEl) {
+      const lotId = lotEl.dataset.calculator ?? '';
+      const lot = STOCKLOTS.find((l: StockLot) => l.id === lotId);
+      if (lot) {
+        const input = document.getElementById(`qty-${lot.id}`) as HTMLInputElement | null;
+        const modeInputs = Array.from(lotEl.querySelectorAll<HTMLInputElement>('input[name="pack-mode"]'));
+
+        const out = (key: string): HTMLElement | null => lotEl.querySelector(`[data-out="${key}"]`);
+        const fmt = (n: number): string => n.toLocaleString('en-US');
+
+        function currentMode(): 'palletized' | 'loose' {
+          return modeInputs.find((el) => el.checked)?.value === 'loose' ? 'loose' : 'palletized';
+        }
+
+        const recalc = (): void => {
+          if (!input) return;
+          const raw = parseInt(input.value, 10);
+          const qty = Math.min(
+            Math.max(Number.isFinite(raw) ? raw : lot.moq, lot.moq),
+            lot.availableQty,
+          );
+          if (String(qty) !== input.value) input.value = String(qty);
+
+          const mode = currentMode();
+          const loading = calcLoading(lot, qty, mode);
+          const fits = containerFits(lot, qty, mode);
+
+          const set = (key: string, text: string): void => {
+            const el = out(key);
+            if (el) el.textContent = text;
+          };
+          set('cartons', fmt(loading.cartons));
+          set('pallets', mode === 'loose' ? '—' : fmt(loading.pallets));
+          set('cbm', fmt(loading.totalCbm));
+          set('gw', fmt(loading.totalGrossWeightKg));
+          set('unit-price', '$' + loading.unitPriceUsd);
+          set('est-fob', '$' + fmt(loading.estFobUsd));
+          for (const f of fits) {
+            const text =
+              f.fullContainers > 0
+                ? `${f.fullContainers} full ${f.code}${f.remainderUnits > 0 ? ` + ${fmt(f.remainderUnits)} pcs` : ''}`
+                : `Fits in one ${f.code}`;
+            set(`fit-${f.code.toLowerCase()}`, text);
+          }
+        };
+
+        input?.addEventListener('input', recalc);
+        for (const modeInput of modeInputs) modeInput.addEventListener('change', recalc);
+        recalc();
+      }
+    }
+  </script>
+</Layout>

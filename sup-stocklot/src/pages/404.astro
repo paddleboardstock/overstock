@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { waLink } from '../config';
+---
+
+<Layout
+  title="404 — Page Not Found"
+  path="/404"
+  robots="noindex, follow"
+  description="Page not found — browse the current SUP stocklot inventory instead."
+>
+  <section class="mx-auto max-w-3xl px-4 py-24 text-center sm:px-6">
+    <p class="text-6xl font-black tracking-tight text-teal-400">404</p>
+    <h1 class="mt-4 text-2xl font-bold tracking-tight text-slate-50 sm:text-3xl">This lot or page has moved on</h1>
+    <p class="mt-3 text-slate-400">
+      Stocklots sell out — links to sold lots are removed from the catalog. The live inventory list is always current.
+    </p>
+    <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+      <a href="/available-sup-stock/" class="inline-flex items-center gap-2 rounded-xl bg-teal-400 px-6 py-3.5 font-semibold text-slate-950 transition hover:bg-teal-300">
+        Browse current stock
+      </a>
+      <a href={waLink('Hi, I followed a link that is now 404 — can you confirm whether that lot is still available?')} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-xl bg-[#25D366] px-6 py-3.5 font-semibold text-slate-950 transition hover:bg-[#1ebe5b]">
+        Ask about a lot on WhatsApp
+      </a>
+      <a href="/" class="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-900/60 px-6 py-3.5 font-semibold text-slate-100 transition hover:border-teal-400/50 hover:text-teal-300">
+        Back to home
+      </a>
+    </div>
+  </section>
+</Layout>

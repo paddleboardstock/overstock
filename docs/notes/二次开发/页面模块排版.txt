@@ -1,0 +1,55 @@
+受限保护区（Gated Area）的排版逻辑必须服务于 B2B 大宗尾单买家的核心决策诉求：“看真实库存规格 -> 验出厂品控保压实况 -> 算集装箱配载均摊海运费 -> 提报价意向”。页面应当摒弃冗余的营销插图，采用工业仪表盘风格（Dashboard/Manifest View），通过模块化排版提升决策效率。页面全局顶栏与水印防护层动态背景防护层（Canvas Watermark Overlay）：全屏半透明覆盖倾斜水印，内容为 CONFIDENTIAL - LICENSED TO [BUYER_EMAIL] - [DATE] - STRICTLY NO REDISTRIBUTION。状态提示顶栏（Session Header）：左侧：[LOCK ICON] Verified Commercial Session | Port of Loading: Qingdao, China (CNQDG)右侧：Session Expires in: 23:42:15 | [Download Full Manifest (XLSX)] | [WhatsApp Desk Online]核心模块一：现货装箱单明细（Stocklot Manifest Table）作为页面首屏的核心内容，采用高信息密度的交互表格呈现，支持按规格、工艺和库存量实时筛选与排序。模块布局与字段架构批次/料号 (Lot #)原单品名与规格 (Spec / Dimensions)结构与工艺 (Construction)标配配件清单 (Package Inclusions)现货余量 (Stock Qty)包装箱规 (Carton Size / GW)MOQ 提货门槛验货报告/实拍勾选加入配载LOT-2026-A110'6" × 32" × 6"(320 × 81 × 15 cm)15cm Drop-stitchDual-Layer Fusion PVCDiamond EVA Deck3-pc Alu PaddleDouble-Action PumpCoiled Leash, 100L BagFin + Repair Kit420 pcs90 × 40 × 28 cm13.2 kg / ctn50 pcs(1 Pallet)[View Test / QA][ ]LOT-2026-B211'0" × 33" × 6"(335 × 84 × 15 cm)High-Density CoreHeat-Sealed Rail SeamsFront & Rear BungeesCarbon-Shaft PaddleDual-Action Pump10' Leash, Roller BagUS Fin Box + Kit260 pcs92 × 42 × 30 cm14.5 kg / ctn50 pcs(1 Pallet)[View Test / QA][ ]LOT-2026-C412'6" × 30" × 6"(381 × 76 × 15 cm)Touring ShapeReinforced StringerCrocodile EVA DeckFiberglass PaddleTriple-Action PumpQuick-Release LeashHeavy-Duty Backpack180 pcs95 × 42 × 30 cm15.8 kg / ctn30 pcs(1 Pallet)[View Test / QA][ ]操作栏（Table Toolbar）：过滤器：按长度筛选（All-Around 10'6" / Touring 12'6"）、按配件档次筛选、按清仓阶段筛选（Available / Reserved）。导出按钮：[Export Filtered Data as Excel]，包含完整海关 HS 编码（9506.99.00）与毛净重数据。模块二：工厂 72 小时保压实拍与 QA 档案（Visual QC & Testing Vault）此模块解决买家对“未发货库存是否脱胶、漏气、有暗病”的疑虑，采用现场工位照片网格 + 结构化报告弹窗呈现。+---------------------------------------------------------------------------------------------------+
+|  FACTORY QUALITY EVIDENCE: 100% PRESSURE-HOLD VERIFICATION (QINGDAO FACILITY)                     |
++----------------------------------------------------+----------------------------------------------+
+| [TAB 1: 72H Airtightness Stand (15-18 PSI)]        | [TAB 2: Seam & Valve Macro Details]          |
+| [TAB 3: Accessories & Carton Master Pack]         | [TAB 4: Official Batch Inspection Dossier]   |
++----------------------------------------------------+----------------------------------------------+
+|  [PHOTO GRID: 4-COLUMN RESPONSIVE LAYOUT]                                                         |
+|  +--------------------+  +--------------------+  +--------------------+  +--------------------+   |
+|  | [Real Photo]       |  | [Real Photo]       |  | [Real Photo]       |  | [Real Photo]       |   |
+|  | Stand Array A1-A40 |  | Pressure Gauge 18  |  | Laser Seam Weld    |  | Drop-Stitch Deflect|   |
+|  | Timestamp: Live    |  | PSI Hold @ 72 Hrs  |  | Zero-Bubble Test   |  | Load Test (180kg)  |   |
+|  +--------------------+  +--------------------+  +--------------------+  +--------------------+   |
+|                                                                                                   |
+|  QA Certification Snippet:                                                                        |
+|  • Protocol: SOP-QC-AT-001 (72h Static Hold @ 1.2 Bar, Delta-P < 0.05 Bar)                       |
+|  • Raw Material: 1000D Polyester Core, Anti-UV Heavy-Duty Coating                                |
+|  • Verification: Third-Party Pre-Shipment Inspection (SGS/BV) fully welcomed prior to loading.    |
++---------------------------------------------------------------------------------------------------+
+图片交互细节：点击任意图片唤起高清 Lightbox，支持 200% 细节放大，底纹自动加载买家专属 Session 校验标识，防止截屏倒卖。模块三：即时装箱与 CBM 物流配载计算器（Interactive Container Loading Tool）大买家重点计算海运单板成本。该计算器与上方表格联动，买家调整数量即可实时计算体积与柜型匹配度。+---------------------------------------------------------------------------------------------------+
+|  CONTAINER STOWAGE & CBM SIMULATOR (PORT: QINGDAO / CNQDG)                                        |
++-------------------------------------------------------------------+-------------------------------+
+|  SELECTED INVENTORY ITEMS:                                        |  CONTAINER UTILIZATION GAUGE: |
+|                                                                   |                               |
+|  1. LOT-2026-A1 (10'6"):  [ - ] [ 300 ] [ + ] pcs  = 30.24 CBM    |  Selected Vol:  59.44 CBM     |
+|  2. LOT-2026-B2 (11'0"):  [ - ] [ 150 ] [ + ] pcs  = 17.39 CBM    |  Gross Weight:  6,135 KG      |
+|  3. LOT-2026-C4 (12'6"):  [ - ] [  80 ] [ + ] pcs  =  9.58 CBM    |  Pallet Count:  8 Pallets     |
+|  --------------------------------------------------------------   |  ---------------------------  |
+|  Packaging Method: [ (•) Palletized Cargo   ( ) Loose Floor Load ]|  [||||||||||||||||||....] 87% |
+|                                                                   |  Recommendation:              |
+|  Suggested Container Spec:                                        |  Fits perfectly into:         |
+|  • 20GP Capacity: ~28 CBM (~220-250 loose pcs)                    |  >> 1x 40'HQ Container <<    |
+|  • 40HQ Capacity: ~68 CBM (~600-680 loose pcs / 480 palletized)   |  Remaining Capacity: 8.56 CBM |
+|                                                                   |  (Can add ~70 more pcs A1)    |
++-------------------------------------------------------------------+-------------------------------+
+模块四：报价索取与快速出货协议入口（Checkout / RFQ Action Panel）买家确定配载方案后，在此直接提交意向，跳过零售购物车，直通工业 B2B 议价渠道。+---------------------------------------------------------------------------------------------------+
+|  CONFIRM YOUR ALLOCATION & REQUEST COMMERCIAL INVOICE                                             |
++---------------------------------------------------+-----------------------------------------------+
+|  STEP 1: SELECT TRADE TERMS                       |  STEP 2: BUYER CONTACT CONFIRMATION           |
+|                                                   |                                               |
+|  Price Term:                                      |  Company: [ Miami Beach Watersports LLC     ] |
+|  [ (•) FOB Qingdao     ( ) EXW Factory Warehouse ]|  Contact: [ Robert Miller                   ] |
+|                                                   |  WhatsApp: [ +1 (305) 555-0198              ] |
+|  Order Structure:                                 |  Discharge Port: [ Miami, FL, USA (USMIA)   ] |
+|  [ ] Take-All (All remaining 860 pcs / Best Rate) |                                               |
+|  [•] Custom Selected Volume (530 pcs as configured)                                              |
+|                                                   |  Special Instructions:                        |
+|  Terms of Sale Acknowledgment:                    |  [ Need pallet strapping & carton barcoding ] |
+|  [x] I understand these goods are original factory|                                               |
+|      overruns sold AS-IS with full 72h airtight   |  [ SUBMIT ALLOCATION & LOCK INVENTORY (24H) ] |
+|      QC release, FOB Qingdao dispatch in 3-5 days.|                                               |
++---------------------------------------------------+-----------------------------------------------+
+|  OR CONTACT LOGISTICS DESK DIRECTLY FOR INSTANT PROFORMA INVOICE:                                 |
+|  [ WhatsApp Direct: +86-xxx-xxxx-xxxx ]   |   [ WeChat: xxxxxxxx ]   |   [ VIP Desk Email ]      |
++---------------------------------------------------------------------------------------------------+
+落地实施与数据流转规则表单与数据库即时回传：买家在计算器点击 Submit Allocation 后，系统通过 Webhook 将装载组合（PCS、CBM、总重、目标港口）直接格式化成采购意向单，同步推送到销售主管的企业微信/Telegram/WhatsApp 终端。库存临时锁定（Soft Lock）：买家提交分配单后，前台对应的料号库存进入“Pending/Reserved”状态 24 小时，营造尾单抢购紧迫感。免责与合规留痕：买家在提交报价时勾选的 AS-IS 与尾单转让协议，系统自动记录其 IP 地址、Session ID 及时间戳并归档，作为后续开具 Proforma Invoice (PI) 时的法律补充附件。

@@ -1,0 +1,53 @@
+---
+import { SITE } from '../config';
+---
+
+<footer class="border-t border-slate-800/80 bg-slate-950">
+  <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6">
+    <div class="grid gap-8 md:grid-cols-4">
+      <div>
+        <p class="font-semibold text-slate-100">{SITE.name}</p>
+        <p class="mt-2 max-w-xs text-sm text-slate-400">
+          Independent stock-trading desk for cancelled-order and surplus inflatable SUP lots.
+          Ex-warehouse {SITE.warehouseLocation}.
+        </p>
+        <p class="mt-3 text-sm text-slate-400">{SITE.portFull}</p>
+      </div>
+      <div class="text-sm">
+        <p class="font-semibold text-slate-200">Stock</p>
+        <ul class="mt-2 space-y-1.5 text-slate-400">
+          <li><a class="hover:text-teal-300" href="/available-sup-stock/">All available stock</a></li>
+          <li><a class="hover:text-teal-300" href="/sup-overstock/">SUP overstock &amp; clearance</a></li>
+          <li><a class="hover:text-teal-300" href="/wholesale-inflatable-sup/">Wholesale SUP boards</a></li>
+          <li><a class="hover:text-teal-300" href="/small-batch-sup-orders/">Small-batch orders</a></li>
+        </ul>
+      </div>
+      <div class="text-sm">
+        <p class="font-semibold text-slate-200">Solutions</p>
+        <ul class="mt-2 space-y-1.5 text-slate-400">
+          <li><a class="hover:text-teal-300" href="/sup-boards-for-rental/">Rental businesses &amp; fleets</a></li>
+          <li><a class="hover:text-teal-300" href="/sup-boards-for-schools/">Schools &amp; clubs</a></li>
+          <li><a class="hover:text-teal-300" href="/how-to-buy/">How to buy</a></li>
+          <li><a class="hover:text-teal-300" href="/shipping/">International shipping</a></li>
+        </ul>
+      </div>
+      <div class="text-sm">
+        <p class="font-semibold text-slate-200">Company</p>
+        <ul class="mt-2 space-y-1.5 text-slate-400">
+          <li><a class="hover:text-teal-300" href="/about/">About us</a></li>
+          <li><a class="hover:text-teal-300" href="/contact/">Contact &amp; quote request</a></li>
+          <li><a class="hover:text-teal-300" href="/terms/">Terms &amp; conditions</a></li>
+          <li><a class="hover:text-teal-300" href="/portal/">Buyer portal login</a></li>
+        </ul>
+        <p class="mt-4 text-slate-400">
+          WhatsApp: <a class="hover:text-teal-300" href={`https://wa.me/${SITE.whatsappNumber.replace(/\D/g, '')}`} target="_blank" rel="noopener noreferrer">{SITE.whatsappDisplay}</a>
+        </p>
+        <p><a class="hover:text-teal-300" href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a></p>
+      </div>
+    </div>
+    <div class="mt-10 flex flex-col gap-2 border-t border-slate-800/80 pt-6 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+      <p>&copy; {new Date().getFullYear()} {SITE.name}. All stock sold AS-IS. B2B wholesale first, small-batch welcome.</p>
+      <p>All product titles are de-branded engineering descriptions. Sold with no brand warranty.</p>
+    </div>
+  </div>
+</footer>
