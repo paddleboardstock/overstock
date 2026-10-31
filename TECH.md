@@ -175,7 +175,6 @@ node scripts/geo-build.mjs              # 1. 构建地理数据 + llms.txt (15 �
 - npm 安装**无需** `--legacy-peer-deps` (astro-auto-import 0.5.2 起 peer 可干净解析)
 - **lockfile 纪律**: CI 的 `npm ci` 要求 lock 与 registry 上 range 内**最新版本**一致 — 依赖发布新版本 (eslint/@typescript-eslint 等) 时 CI 会报 `EUSAGE: lock file's X does not satisfy X`, 需运行 `npm update` 后提交 lock (普通 `npm install` 不会 bump range 内版本)
 - `package.json` overrides 锁定 `"vite": "^8"` + `"yaml": ">=2.8.3"`
-- `scripts/patch-worker.mjs` (server 模式子域路由注入) 是**历史遗留**, 在 `output: 'static'` 下不执行, 不属构建管线
 
 ---
 
@@ -1002,18 +1001,18 @@ Set-Content -Path file.astro -Value $newContent
 
 ### 11.8 编码铁律 (TROUBLESHOOTING.md §3.3)
 
-| #   | 规则               | 原因                                    |
-| --- | ------------------ | --------------------------------------- |
-| 1   | **UTF-8 无 BOM**   | BOM 导致 YAML 解析错误                  |
-| 2   | **只用目标语言**   | 不要在欧洲语言文件中包含中文/日文/韩文  |
-| 3   | **不要中转翻译**   | 英语→法语 直接翻译，不要 英语→中文→法语 |
-| 4   | **正确 Unicode**   | 使用正确的 Unicode 码点，不要双重编码   |
-| 5   | **CJK 文件**       | 确保包含有效的原生字符                  |
-| 6   | **不要 AI 重编码** | 验证 AI 输出是正确的 UTF-8              |
-| 7   | **修改后验证**     | 运行 `node i18n-tool.cjs check`         |
-| 8   | **YAML 有效性**    | 确保引号闭合、缩进一致                  |
-| 9   | **默认英语**       | 先写英语内容，再翻译                    |
-| 10  | **不要 .bak 文件** | 提交前清理备份文件                      |
+| #   | 规则               | 原因                                       |
+| --- | ------------------ | ------------------------------------------ |
+| 1   | **UTF-8 无 BOM**   | BOM 导致 YAML 解析错误                     |
+| 2   | **只用目标语言**   | 不要在欧洲语言文件中包含中文/日文/韩文     |
+| 3   | **不要中转翻译**   | 英语→法语 直接翻译，不要 英语→中文→法语    |
+| 4   | **正确 Unicode**   | 使用正确的 Unicode 码点，不要双重编码      |
+| 5   | **CJK 文件**       | 确保包含有效的原生字符                     |
+| 6   | **不要 AI 重编码** | 验证 AI 输出是正确的 UTF-8                 |
+| 7   | **修改后验证**     | 运行 `node scripts/check-translations.mjs` |
+| 8   | **YAML 有效性**    | 确保引号闭合、缩进一致                     |
+| 9   | **默认英语**       | 先写英语内容，再翻译                       |
+| 10  | **不要 .bak 文件** | 提交前清理备份文件                         |
 
 ### 11.9 导航项显示英文而非翻译文本
 
@@ -1333,7 +1332,7 @@ applier (`tools/i18n-apply.mjs`) 开发中实际踩过的坑:
 
 每次修改后，始终验证：
 
-1. `node i18n-tool.cjs check` 通过
+1. `node scripts/check-translations.mjs` 通过
 2. `npx esbuild src/i18n/config.ts --bundle --format=esm --outfile=NUL` 通过
 3. `node scripts/geo-build.mjs` 通过
 4. `npm run build` 构建成功
@@ -1396,39 +1395,39 @@ npm run check:i18n     # 仅 i18n 翻译检查
 
 ## 13. 附录: 关键文件引用
 
-| 文件                                     | 用途                                                                   |
-| ---------------------------------------- | ---------------------------------------------------------------------- |
-| `src/i18n/generated/ui-all.ts`           | `getUiForLang()` 函数 (翻译入口)                                       |
-| `src/i18n/config.ts`                     | `setLang()`, `defaultLang`, 语言列表                                   |
-| `src/i18n/utils.ts`                      | `getLangFromUrl()`, 路径处理                                           |
-| `src/i18n/page-content.ts`               | `getPageContent()` 页面内容                                            |
-| `src/i18n/generated/site-data.ts`        | `site-*` 键构建产物 (2.2 MiB, [lang]/ 页面直接 import)                 |
-| `src/i18n/generated/pages/*.ts`          | 每页一个 TS 模块 (~110 个, 构建期生成)                                 |
-| `scripts/generate-data-json.mjs`         | i18n 构建数据生成 (page-content.json + site-data.ts, content-v2* 排除) |
-| `scripts/patch-worker.mjs`               | ⚠️ 历史遗留 (server 模式子域路由), static 下不执行, 勿改勿用           |
-| `src/data/products.ts`                   | 产品结构化数据                                                         |
-| `src/data/product-texts.ts`              | 产品多语言文本                                                         |
-| `src/layouts/Layout.astro`               | 主布局 (调用 setLang)                                                  |
-| `src/components/widgets/Header.astro`    | 导航栏 (getUiForLang)                                                  |
-| `src/components/widgets/Footer.astro`    | 页脚 (getUiForLang)                                                    |
-| `src/pages/[lang]/products/[slug].astro` | 多语言产品详情                                                         |
-| `src/pages/products/[slug].astro`        | 英语产品详情                                                           |
-| `functions/_middleware.ts`               | Pages Functions 中间件                                                 |
-| `src/middleware.ts`                      | Astro 中间件                                                           |
-| `wrangler.toml`                          | R2 bucket 声明                                                         |
-| `src/i18n/routing.ts`                    | 共享路由模块 (`LOCALIZED_ROUTES`, `localizeHref()`, `entityForHref()`) |
-| `src/utils/images.ts`                    | 图片处理 (`adaptOpenGraphImages()` — 远程 URL 跳过 `getImage()`)       |
-| `scripts/_gen-uiall.cjs`                 | UI 翻译生成脚本                                                        |
-| `scripts/_gen-pages.cjs`                 | 页面内容 TS 模块生成脚本                                               |
-| `scripts/check-translations.mjs`         | 翻译检查脚本                                                           |
-| `src/lib/token-store.ts`                 | GitHub Token 的 cookie 加密/解密/读取                                  |
-| `src/lib/auth.ts`                        | legacy HMAC 会话校验 (better-auth 迁移后的兼容回退)                    |
-| `src/lib/github.ts`                      | `GitHubClient` 封装 GitHub REST API                                    |
-| `src/layouts/AdminLayout.astro`          | 后台布局：侧边栏导航 + client-side 登录检查                            |
-| `workers/admin-worker/index.ts`          | 后台 Worker：better-auth、GitHub 代理、Token 保存、D1 查询             |
-| `workers/shared/auth.ts`                 | better-auth 共享配置 (插件/角色/OAuth 提供商)                          |
-| `src/pages/keystatic/`                   | 44 个 CMS 编辑页面 (顶层 29 + 5 个集合子目录)                          |
-| `src/data/admin-auth.json`               | ⚠️ legacy 硬编码凭据回退（better-auth 已取代，不建议继续使用）         |
+| 文件                                     | 用途                                                                                                        |
+| ---------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `src/i18n/generated/ui-all.ts`           | `getUiForLang()` 函数 (翻译入口)                                                                            |
+| `src/i18n/config.ts`                     | `setLang()`, `defaultLang`, 语言列表                                                                        |
+| `src/i18n/utils.ts`                      | `getLangFromUrl()`, 路径处理                                                                                |
+| `src/i18n/page-content.ts`               | `getPageContent()` 页面内容                                                                                 |
+| `src/i18n/generated/site-data.ts`        | `site-*` 键构建产物 (2.2 MiB, [lang]/ 页面直接 import)                                                      |
+| `src/i18n/generated/pages/*.ts`          | 每页一个 TS 模块 (~110 个, 构建期生成)                                                                      |
+| `scripts/generate-data-json.mjs`         | i18n 构建数据生成 (page-content.json + site-data.ts, content-v2* 排除)                                      |
+| `scripts/translate-site-yamls.mjs`       | site YAML 四族 (proof-points/use-cases/trust-badges/tech-cards) ×33 语言重译 (Bing + 产品名 token 严格校验) |
+| `src/data/products.ts`                   | 产品结构化数据                                                                                              |
+| `src/data/product-texts.ts`              | 产品多语言文本                                                                                              |
+| `src/layouts/Layout.astro`               | 主布局 (调用 setLang)                                                                                       |
+| `src/components/widgets/Header.astro`    | 导航栏 (getUiForLang)                                                                                       |
+| `src/components/widgets/Footer.astro`    | 页脚 (getUiForLang)                                                                                         |
+| `src/pages/[lang]/products/[slug].astro` | 多语言产品详情                                                                                              |
+| `src/pages/products/[slug].astro`        | 英语产品详情                                                                                                |
+| `functions/_middleware.ts`               | Pages Functions 中间件                                                                                      |
+| `src/middleware.ts`                      | Astro 中间件                                                                                                |
+| `wrangler.toml`                          | R2 bucket 声明                                                                                              |
+| `src/i18n/routing.ts`                    | 共享路由模块 (`LOCALIZED_ROUTES`, `localizeHref()`, `entityForHref()`)                                      |
+| `src/utils/images.ts`                    | 图片处理 (`adaptOpenGraphImages()` — 远程 URL 跳过 `getImage()`)                                            |
+| `scripts/_gen-uiall.cjs`                 | UI 翻译生成脚本                                                                                             |
+| `scripts/_gen-pages.cjs`                 | 页面内容 TS 模块生成脚本                                                                                    |
+| `scripts/check-translations.mjs`         | 翻译检查脚本                                                                                                |
+| `src/lib/token-store.ts`                 | GitHub Token 的 cookie 加密/解密/读取                                                                       |
+| `src/lib/auth.ts`                        | legacy HMAC 会话校验 (better-auth 迁移后的兼容回退)                                                         |
+| `src/lib/github.ts`                      | `GitHubClient` 封装 GitHub REST API                                                                         |
+| `src/layouts/AdminLayout.astro`          | 后台布局：侧边栏导航 + client-side 登录检查                                                                 |
+| `workers/admin-worker/index.ts`          | 后台 Worker：better-auth、GitHub 代理、Token 保存、D1 查询                                                  |
+| `workers/shared/auth.ts`                 | better-auth 共享配置 (插件/角色/OAuth 提供商)                                                               |
+| `src/pages/keystatic/`                   | 44 个 CMS 编辑页面 (顶层 29 + 5 个集合子目录)                                                               |
+| `src/data/admin-auth.json`               | ⚠️ legacy 硬编码凭据回退（better-auth 已取代，不建议继续使用）                                              |
 
 ---
 

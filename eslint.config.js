@@ -6,6 +6,9 @@ import tseslint from 'typescript-eslint';
 import typescriptParser from '@typescript-eslint/parser';
 
 export default [
+  {
+    ignores: ['sup-stocklot/', 'shop-starter/', 'docs/notes/'],
+  },
   js.configs.recommended,
   ...eslintPluginAstro.configs['flat/recommended'],
   ...tseslint.configs.recommended,
