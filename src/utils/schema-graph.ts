@@ -119,9 +119,9 @@ export function organizationNode() {
       'Factory-direct water sports equipment sales',
       'Worldwide e-commerce fulfillment',
       'Stripe and PayPal secure checkout',
-      'Marine quality testing and pressure validation',
-      'CE EN ISO 6185 inflatable watercraft compliance',
-      'FOB Weihai/Qingdao logistics',
+      'SUP quality testing and 1.25x pressure validation',
+      'CE-compliant inflatable SUP boards',
+      'Worldwide shipping from Weihai, China',
     ],
 
     brand: { '@id': ID.brand },

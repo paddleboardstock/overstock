@@ -153,10 +153,7 @@ const productExtraData: Record<string, unknown> = {
       brandName: SITE.name,
       manufacturerName: SITE.name,
       countryOfOrigin: 'China',
-      material:
-        rec?.ai_specs?.material ||
-        rec?.ai_specs?.tubes ||
-        (product.category === 'rib' ? 'Hypalon' : 'Marine-grade PVC'),
+      material: rec?.ai_specs?.material || rec?.ai_specs?.tubes || 'Marine-grade PVC',
       offers: {
         '@type': 'Offer',
         availability: product.inStock === false ? 'https://schema.org/OutOfStock' : 'https://schema.org/InStock',

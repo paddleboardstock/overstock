@@ -101,7 +101,7 @@ export const guides: GuideRecord[] = [
     category: 'safety',
     title: 'Water Sports Safety Tips',
     description:
-      'Essential safety guidelines for paddle boarding, kayaking, and boating — from equipment checks to weather awareness.',
+      'Essential safety guidelines for paddle boarding and boating — from equipment checks to weather awareness.',
     tldr: "Always wear a CE-certified life vest, check weather and water conditions before launch, carry communication devices, never paddle alone in unfamiliar water, and understand your equipment's rated limits.",
     problem:
       'Most water sports accidents result from inadequate preparation — no life vest, ignoring weather warnings, or using equipment beyond its design limits.',

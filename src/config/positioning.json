@@ -2,140 +2,91 @@
   "_comment": [
     "positioning.json —— 品牌定位单一事实源",
     "",
-    "公司画像（客户确认）：",
-    "  RIB Boats, Inflatable Boats, SUP Boards Manufacturer & OEM/ODM Solution",
+    "公司画像（客户确认，2026-10）：",
+    "  Inflatable SUP Boards Overstock & Clearance — Factory Direct（B2C 清仓商城）",
     "",
-    "现状问题：站点上同时存在四套互相矛盾的身份表述（见 paddleboardoverstock-positioning.md）。",
-    "本文件定义唯一版本，全站 title / H1 / description / schema / llms.txt 一律从这里渲染。",
+    "2026-10-23 站点转型：paddleboardoverstock.com 从三线 B2B 制造商（RIB/Inflatable/SUP）",
+    "收敛为充气 SUP 尾货清仓商城（OnlineStore，B2C）。船类（RIB/Inflatable Boats/Kayak）",
+    "路线已删除并 301，全站 title / H1 / description / schema / llms.txt 一律从本文件口径渲染。",
     "",
-    "命名铁律：三条产品线在任何位置都必须按同一顺序、同一措辞出现：",
-    "  RIB Boats → Inflatable Boats → SUP Boards",
-    "顺序固定的目的是让 AI 引擎在多个页面看到一致的实体属性序列，强化归类。"
+    "命名铁律：全站只允许一条产品线，任何位置统一措辞：",
+    "  Inflatable SUP Boards（清仓语境下可写 inflatable SUP boards / SUP packages）",
+    "禁止把 RIB / Inflatable Boat / Kayak 写回任何身份表述（title / H1 / schema / 首页文案）。"
   ],
 
   "entity": {
     "name": "Paddle Board Overstock",
-    "alternateName": "Paddle Board Overstock RIB & Inflatable Watercraft",
-    "_alternateName_note": "站点现有三个互不相同的 alternateName：'Paddle Board Overstock Water Adventure Equipment'（Organization）、'Paddle Board Overstock Inflatable Watercraft'（ManufacturingBusiness 与 Brand）、以及缺失。必须统一为一个，且要含 RIB。",
+    "alternateName": "Paddle Board Overstock — Inflatable SUP Overstock & Clearance",
     "legalName": "Weihai Dongjilian Co., Ltd.",
-    "entityType": "Manufacturer",
-    "_entityType_note": "不是 brand、不是 retailer、不是 'water adventure equipment brand'。对外身份统一为制造商。",
-    "_legalName_note": "2026-09 起品牌运营主体为 Weihai Dongjilian Co., Ltd.（New Mexico, USA）；研发与生产留在 Paddle Board Overstock Qingdao Manufacturing Hub。",
-    "primaryAudience": "B2B",
-    "_audience_note": "现有 Organization 描述写的是 'trusted by beginners, families, explorers'（B2C），ManufacturingBusiness 写的是 'B2B partners'。同一页面上两种客群定义直接冲突，是 AI 实体识别失败的主因。全站统一 B2B。"
+    "entityType": "OnlineStore",
+    "_entityType_note": "不是 manufacturer、不是 brand 泛称。对外身份统一为线上清仓商城（工厂直发）。",
+    "_legalName_note": "品牌运营主体为 Weihai Dongjilian Co., Ltd.（Weihai, Shandong, CN），货源为自有工厂尾货/清仓批次。",
+    "primaryAudience": "B2C",
+    "_audience_note": "面向全球个人消费者（清仓零售），B2B/OEM 内容仅作次级页面保留，不进身份表述。"
   },
 
   "productLines": [
     {
-      "id": "rib-boats",
-      "name": "RIB Boats",
-      "fullName": "Rigid Inflatable Boats (RIB)",
-      "path": "/rib-boats/",
-      "status": "MISSING",
-      "_status_note": "实测 /rib/ /rib-boats/ 均 404。RIB 在首页 HTML 出现 265 次，却没有任何落地页，也不在首页 title 里。这是与画像差距最大的一项。",
-      "keywords": [
-        "rib boat manufacturer",
-        "rigid inflatable boat factory",
-        "aluminum hull rib",
-        "commercial rib boats oem"
-      ]
-    },
-    {
-      "id": "inflatable-boats",
-      "name": "Inflatable Boats",
-      "fullName": "Inflatable Boats & Dinghies",
-      "path": "/inflatable-boats/",
-      "status": "MISSING",
-      "_status_note": "实测 /inflatable-boats/ 404。只有 /products/ 混合列表页。",
-      "keywords": [
-        "inflatable boat manufacturer",
-        "pvc inflatable boat factory",
-        "hypalon dinghy oem",
-        "inflatable boat wholesale"
-      ]
-    },
-    {
       "id": "sup-boards",
-      "name": "SUP Boards",
+      "name": "Inflatable SUP Boards",
       "fullName": "Inflatable SUP Boards",
       "path": "/supboard/",
-      "status": "DEINDEXED",
-      "_status_note": "页面存在且 title/H1 都写得好（'Inflatable SUP Boards — Drop-Stitch, 12–15 PSI, OEM'），但 canonical 指向 /products/，等于主动放弃这个落地页。必须改回自指 canonical。",
+      "status": "ACTIVE",
+      "_status_note": "清仓商城唯一品类落地页。canonical 必须自指（此前指向 /products/ 导致去索引，已修复）。",
       "keywords": [
-        "inflatable sup board manufacturer",
-        "drop stitch sup factory",
-        "custom paddle board oem",
-        "sup board bulk supplier"
+        "inflatable sup board",
+        "paddle board overstock",
+        "sup clearance sale",
+        "discount inflatable paddle board",
+        "cheap sup package"
       ]
     }
   ],
 
-  "service": {
-    "id": "oem-odm",
-    "name": "OEM / ODM Solution",
-    "path": "/oem-odm/",
-    "currentPath": "/oem-odm-blueprint/",
-    "_status_note": "实测 /oem/ 与 /oem-odm/ 均 404，只有 /oem-odm-blueprint/ 存在。blueprint 这个 slug 没有搜索量，采购方搜的是 'oem odm'。建议新建 /oem-odm/ 为主路径，blueprint 301 过去。另：该页 H1 有断字 bug —— 'Custom & White-Label ManufacturingFor Inflatable Watercraft'（Manufacturing 与 For 之间缺空格），与 schema 里被吃掉 token 是同一个字符串管道问题。",
-    "keywords": [
-      "oem inflatable boat manufacturer",
-      "odm sup board supplier",
-      "private label inflatable boats",
-      "white label paddle board manufacturer"
-    ]
-  },
-
-  "secondaryLines": {
-    "_comment": "以下品类现在出现在 schema 描述和产品分类里，但不在客户确认的画像中。需要决定：降级为配套品类，还是完全移除。在决定前不要写进任何 title 或 schema 描述。",
-    "items": ["Inflatable Kayaks", "Marine Safety Equipment", "Accessories"],
-    "_kayak_note": "kayak 在首页出现 47 次，且同时写进了 Organization 和 ManufacturingBusiness 的 description，权重高于 RIB。与画像不符。",
-    "decision": "TODO"
+  "secondaryContent": {
+    "_comment": "保留但降级为次级内容，不参与任何身份表述检查：/oem-odm/ 系列（B2B OEM/ODM 服务页）、/factory/、/quality/ 等。这些页面只允许出现在非 storefront 检查范围。",
+    "items": ["/oem-odm/", "/oem-odm-manufacturer/", "/oem-odm-blueprint/", "/factory/", "/quality/"]
   },
 
   "boilerplate": {
     "_comment": "三种长度，按位置选用。所有数字用 {{占位符}} 从 facts.json 注入，禁止硬编码。",
 
-    "short": "RIB boats, inflatable boats and SUP boards manufacturer with full OEM/ODM capability.",
+    "short": "Inflatable SUP boards overstock and clearance — factory direct, up to 60% off retail.",
 
-    "medium": "Paddle Board Overstock is a Chinese factory manufacturing RIB boats, inflatable boats and SUP boards, with full OEM/ODM capability for B2B buyers. CE-certified, {{certifiedModels}} models, {{annualCapacityUnits}} units annual capacity from a {{areaSqm}} m² facility in Qingdao.",
+    "medium": "Paddle Board Overstock is an online store for inflatable SUP board overstock and factory clearance stock. Complete paddle board packages ship worldwide at up to 60% off retail — CE-certified, {{certifiedModels}} models, direct from Weihai, China.",
 
-    "long": "Paddle Board Overstock is a manufacturer of RIB boats, inflatable boats and SUP boards, providing OEM and ODM solutions to distributors, rental operators, resorts and rescue organisations in {{countriesServed}} countries. Operating {{productionLines}} production lines across {{areaSqm}} m² in Laixi, Qingdao, the factory produces {{certifiedModels}} CE-certified models with an annual capacity of {{annualCapacityUnits}} units. Certifications include CE (TÜV Rheinland), ISO 9001:2015 (SGS) and BSCI (Intertek). MOQ starts at {{moqRib}} for RIB models and {{moqSupKayak}} for SUP boards."
+    "long": "Paddle Board Overstock, operated by Weihai Dongjilian Co., Ltd., is an online store specializing in inflatable SUP board overstock and factory clearance stock. Complete paddle board packages (board, pump, paddle, leash, backpack) and accessories ship worldwide at up to 60% off retail, with {{certifiedModels}} CE-certified models, {{annualCapacityUnits}} units annual production capacity and transparent Stripe & PayPal checkout."
   },
 
   "titleTemplates": {
-    "_comment": "全站标题必须含至少一条产品线名 + 'Manufacturer' 或 'OEM/ODM'。当前首页标题缺 RIB。",
-    "home": "RIB Boats, Inflatable Boats & SUP Board Manufacturer | OEM/ODM — Paddle Board Overstock",
-    "_home_current": "Inflatable Boat & SUP Manufacturer | OEM/ODM Factory Since 2012 — Paddle Board Overstock  ← 缺 RIB",
-    "productsHub": "RIB Boats, Inflatable Boats & SUP Boards — {{certifiedModels}} CE-Certified Models | Paddle Board Overstock",
-    "ribPillar": "RIB Boat Manufacturer — Aluminium & Fibreglass Hull, OEM/ODM | Paddle Board Overstock",
-    "inflatablePillar": "Inflatable Boat Manufacturer — PVC & Hypalon, OEM/ODM | Paddle Board Overstock",
-    "supPillar": "Inflatable SUP Board Manufacturer — Drop-Stitch, OEM/ODM | Paddle Board Overstock",
-    "oemHub": "OEM & ODM Inflatable Watercraft Manufacturing — MOQ From {{moqRib}} | Paddle Board Overstock"
+    "_comment": "全站标题围绕清仓商城定位。storefront 页面禁止出现 Manufacturer / OEM / ODM。",
+    "home": "Inflatable SUP Boards Overstock & Clearance — Factory Direct | Paddle Board Overstock",
+    "productsHub": "Inflatable SUP Boards — Overstock & Clearance Deals | Paddle Board Overstock",
+    "supPillar": "Inflatable SUP Boards — Complete Packages, Up to 60% Off | Paddle Board Overstock"
   },
 
   "h1Templates": {
-    "_comment": "首页 H1 现在是 'Build Your Water Adventure Business With Paddle Board Overstock' —— 没有任何产品线名、没有 manufacturer、没有 RIB。H1 是最强的页面内信号，不该用来放口号。",
-    "home": "RIB Boats, Inflatable Boats & SUP Boards — OEM/ODM Manufacturer Since 2012",
-    "ribPillar": "RIB Boats — Aluminium & Fibreglass Hull, {{moqRib}} MOQ",
-    "inflatablePillar": "Inflatable Boats — PVC & Hypalon, OEM/ODM From {{moqSupKayak}}",
-    "supPillar": "Inflatable SUP Boards — Drop-Stitch, 12–15 PSI, OEM",
-    "oemHub": "OEM & ODM Manufacturing For RIB Boats, Inflatable Boats & SUP Boards"
+    "_comment": "首页 H1 是最强的页面内信号，必须同时含品类 + 清仓诉求 + 折扣力度。",
+    "home": "Inflatable SUP Boards — Overstock & Clearance, Up to 60% Off Retail",
+    "supPillar": "Inflatable SUP Boards — Overstock & Clearance"
   },
 
   "forbiddenPhrases": {
-    "_comment": "这些是现存的 B2C 或泛化表述，与制造商 B2B 画像冲突，必须从全站清除。07_positioning_check.py 会扫描。",
+    "_comment": "storefront 页面（/ /products/ /supboard/）的可见文本出现这些词即 P4 阻断；其余关键页（/oem-odm/ /about/ /factory/）降级为告警。07_positioning_check.py 扫描。",
     "items": [
-      "water adventure equipment brand",
-      "beginners, families, explorers",
-      "global marine recreation brand",
-      "Build Your Water Adventure Business",
-      "Paddle Board Overstock Water Adventure Equipment"
+      "RIB Boat",
+      "Rigid Inflatable Boat",
+      "Inflatable Boat Manufacturer",
+      "Inflatable Dinghy",
+      "Boat Manufacturer",
+      "Kayak"
     ]
   },
 
   "requiredTerms": {
-    "_comment": "首页与三个支柱页的 title + H1 + meta description 中必须出现的词。",
-    "home": ["RIB", "Inflatable Boat", "SUP", "Manufacturer", "OEM"],
-    "pillar": ["Manufacturer"],
-    "schemaDescription": ["RIB", "inflatable boat", "SUP", "OEM", "ODM", "manufacturer"]
+    "_comment": "首页与品类页的 title + H1 + meta description 中必须出现的词。",
+    "home": ["SUP", "Overstock", "Clearance"],
+    "pillar": ["SUP", "Clearance"],
+    "schemaDescription": ["SUP", "overstock", "clearance"]
   }
 }
