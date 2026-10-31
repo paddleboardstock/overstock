@@ -1,0 +1,20 @@
+{
+  "name": "pbo-shop-starter",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "db:migrate:local": "wrangler d1 migrations apply SHOP_DB --local --config workers/shop-api/wrangler.toml",
+    "db:seed:local": "wrangler d1 execute SHOP_DB --local --file seed.sql --config workers/shop-api/wrangler.toml",
+    "dev": "wrangler dev --config workers/shop-api/wrangler.toml",
+    "test:smoke": "node test/smoke.mjs"
+  },
+  "dependencies": {
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261031.1",
+    "typescript": "^5.9.3",
+    "wrangler": "^4.42.0"
+  }
+}

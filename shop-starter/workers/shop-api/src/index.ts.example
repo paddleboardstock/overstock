@@ -1,0 +1,30 @@
+/*
+Minimal routing sketch. Add a router and runtime validation library as appropriate.
+All routes must set safe security headers and consistent JSON error responses.
+*/
+import type { Env } from "./types";
+
+export default {
+  async fetch(request: Request, env: Env): Promise<Response> {
+    const url = new URL(request.url);
+    const requestId = crypto.randomUUID();
+
+    if (url.pathname === "/api/health" && request.method === "GET") {
+      return Response.json({ ok: true, requestId }, {
+        headers: { "Cache-Control": "no-store", "X-Request-Id": requestId }
+      });
+    }
+
+    if (url.pathname === "/api/stripe/webhook" && request.method === "POST") {
+      // Route to verified Stripe webhook handler; do not apply browser-session auth here.
+      return new Response("Webhook handler not wired", { status: 501 });
+    }
+
+    // Route public product reads separately from authenticated admin routes.
+    // Admin routes: authenticate session, verify shop-admin permission, validate CSRF/Origin,
+    // rate-limit, then invoke service functions.
+    return Response.json({
+      error: { code: "NOT_FOUND", message: "Not found", requestId }
+    }, { status: 404, headers: { "Cache-Control": "no-store", "X-Request-Id": requestId } });
+  }
+};

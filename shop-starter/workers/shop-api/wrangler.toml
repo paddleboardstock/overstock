@@ -1,0 +1,51 @@
+name = "paddleboardoverstock-shop-api"
+main = "src/index.ts"
+compatibility_date = "2026-10-23"
+# Review Cloudflare compatibility flags against the pinned Wrangler/runtime version.
+# Do not import the existing site's full Astro source into this Worker.
+
+[vars]
+APP_ORIGIN = "https://shop.paddleboardoverstock.com"
+API_ORIGIN = "https://shop.paddleboardoverstock.com"
+
+# TODO before first remote deploy: replace every PLACEHOLDER value below with the
+# real resource name/ID from the Cloudflare dashboard. Local dev (`--local`) works
+# with the placeholders because it uses the local simulator state.
+
+[[d1_databases]]
+binding = "SHOP_DB"
+database_name = "paddleboardoverstock-shop-db"
+database_id = "00000000-0000-0000-0000-000000000001" # PLACEHOLDER — replace with real D1 database ID
+migrations_dir = "../../migrations"
+
+[[r2_buckets]]
+binding = "SHOP_ASSETS"
+bucket_name = "pbo-shop-assets-placeholder" # PLACEHOLDER — replace with real R2 bucket name
+
+[env.staging]
+name = "paddleboardoverstock-shop-api-staging"
+vars = { APP_ORIGIN = "https://shop-staging.paddleboardoverstock.com", API_ORIGIN = "https://shop-staging.paddleboardoverstock.com" }
+
+[[env.staging.d1_databases]]
+binding = "SHOP_DB"
+database_name = "paddleboardoverstock-shop-db-staging"
+database_id = "00000000-0000-0000-0000-000000000002" # PLACEHOLDER — replace with real staging D1 database ID
+migrations_dir = "../../migrations"
+
+[[env.staging.r2_buckets]]
+binding = "SHOP_ASSETS"
+bucket_name = "pbo-shop-assets-staging-placeholder" # PLACEHOLDER — replace with real staging R2 bucket name
+
+[env.production]
+name = "paddleboardoverstock-shop-api"
+vars = { APP_ORIGIN = "https://shop.paddleboardoverstock.com", API_ORIGIN = "https://shop.paddleboardoverstock.com" }
+
+[[env.production.d1_databases]]
+binding = "SHOP_DB"
+database_name = "paddleboardoverstock-shop-db"
+database_id = "00000000-0000-0000-0000-000000000003" # PLACEHOLDER — replace with real production D1 database ID
+migrations_dir = "../../migrations"
+
+[[env.production.r2_buckets]]
+binding = "SHOP_ASSETS"
+bucket_name = "pbo-shop-assets-placeholder" # PLACEHOLDER — replace with real production R2 bucket name
