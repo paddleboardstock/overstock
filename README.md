@@ -48,7 +48,7 @@ Read in this order to grasp the whole system fastest (≈10 minutes):
 | D1 migrations                        | `migrations/` (0000 init, 0002 rate_limit), applied by CI / `wrangler d1 migrations apply`                                               |
 | CI/CD                                | `.github/workflows/{ci,deploy,seo-gate}.yml`                                                                                             |
 | Static quality gates                 | `scripts/validate-dist.mjs`, `scripts/fold-untranslated-canonical.mjs`, `scripts/05_ci_gate.py`                                          |
-| Legacy leftovers (do not touch)      | `scripts/patch-worker.mjs` (subdomain routing for `output: 'server'` — dead under `static`), `scripts/_patch-pages.cjs` (manual tool)    |
+| Legacy leftovers (do not touch)      | `scripts/_patch-pages.cjs` (manual tool)                                                                                                 |
 
 > **For AI agents:** always run `npm run check` + `npm run build` after changes and re-verify the gates listed in `AGENTS.md` (hreflang/canonical/link/translation-gap scans, zero U+FFFD).
 

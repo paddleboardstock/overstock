@@ -26,7 +26,7 @@ Fastest way to understand the whole system: `README.md` §0 (Quick Start + file 
 
 - `compressHTML: true` is set explicitly in `astro.config.ts` (Astro 7 defaults to `'jsx'`)
 - Rust compiler is strict: **no top-level `return` in `.astro` frontmatter** (e.g. `[category].astro` uses `Astro.redirect(...)` without `return`) and no top-level `return` in inline `<script>` (wrap in an IIFE, see `BasicScripts.astro`)
-- `output: 'static'` in `astro.config.ts` — the site is pure SSG; API/dynamic requests are handled by the 5 zone-route Workers. `scripts/patch-worker.mjs` (subdomain routing for `output: 'server'`) is a **legacy leftover** — it never executes under `static` and is not part of the pipeline.
+- `output: 'static'` in `astro.config.ts` — the site is pure SSG; API/dynamic requests are handled by the 5 zone-route Workers.
 - **Lockfile discipline (CI `npm ci` is strict):** the lockfile must resolve every `package.json` range to its **latest available version** on the registry. When a dependency publishes a new patch/minor (e.g. `eslint`, `@typescript-eslint/*`), CI fails with `EUSAGE: lock file's X does not satisfy X` — fix by running `npm update` (plain `npm install` does NOT bump within-range versions), verify `npm ci --dry-run`, then commit `package-lock.json`.
 - `npm install` no longer needs `--legacy-peer-deps` (peer deps resolved cleanly since astro-auto-import 0.5.2); `package.json` overrides pin `"vite": "^8"` + `"yaml": ">=2.8.3"`
 - `@astrojs/markdown-remark` `unified({...})` processor is configured in `astro.config.ts`
@@ -232,13 +232,14 @@ Admin reads submissions at `/keystatic/contact-submissions` — the page fetches
 
 **Status:** 14 languages × 1,721 keys fully aligned (0 missing/extra). 3,807 sameAsEn keys translated. 2,456 orphan keys cleaned. 252/252 page YAMLs translated. Remaining 808 sameAsEn = verified correct (540 technical terms + 109 cognates + 29 brand names + 124 short words).
 
-| Script                                | Purpose                                                                  | Flags                  |
-| ------------------------------------- | ------------------------------------------------------------------------ | ---------------------- |
-| `scripts/translate-i18n-keys.mjs`     | Translate sameAsEn i18n keys (Google Translate primary, MyMemory backup) | `--dry-run`, `--force` |
-| `scripts/translate-pages.mjs`         | Translate page YAML content (Google Translate primary, MyMemory backup)  | `--dry-run`, `--force` |
-| `scripts/fill-missing-i18n-keys.mjs`  | Fill missing i18n keys with EN copy (fallback before translation)        | —                      |
-| `scripts/fill-missing-page-yamls.mjs` | Create missing page YAMLs from EN copy                                   | —                      |
-| `scripts/check-translations.mjs`      | Verify i18n key alignment across all 14 languages                        | —                      |
+| Script                                | Purpose                                                                                                                                                                                | Flags                                             |
+| ------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
+| `scripts/translate-i18n-keys.mjs`     | Translate sameAsEn i18n keys (Google Translate primary, MyMemory backup)                                                                                                               | `--dry-run`, `--force`                            |
+| `scripts/translate-site-yamls.mjs`    | Translate/retranslate `src/data/site/{family}.{lang}.yaml` (proof-points, use-cases, trust-badges, tech-cards) with product-name token protection (Bing engine, shared `.cache` cache) | `--families=`, `--langs=`, `--force`, `--dry-run` |
+| `scripts/translate-pages.mjs`         | Translate page YAML content (Google Translate primary, MyMemory backup)                                                                                                                | `--dry-run`, `--force`                            |
+| `scripts/fill-missing-i18n-keys.mjs`  | Fill missing i18n keys with EN copy (fallback before translation)                                                                                                                      | —                                                 |
+| `scripts/fill-missing-page-yamls.mjs` | Create missing page YAMLs from EN copy                                                                                                                                                 | —                                                 |
+| `scripts/check-translations.mjs`      | Verify i18n key alignment across all 14 languages                                                                                                                                      | —                                                 |
 
 **Do NOT translate:** Technical terms (Drop-Stitch/Hypalon/PVC/RIB/SUP/OEM/ISO/FAQ/WhatsApp/Paddle Board Overstock) stay as-is in all languages. Cognates matching EN are also preserved.
 
