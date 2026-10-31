@@ -1,0 +1,10 @@
+# Copy to .dev.vars for local `wrangler dev` (never commit the real file).
+# Values below are LOCAL TEST VALUES ONLY.
+
+STRIPE_SECRET_KEY=sk_test_local_placeholder
+STRIPE_WEBHOOK_SECRET=whsec_local_test_secret
+SHOP_SESSION_SECRET=local_test_session_secret
+SHOP_ADMIN_TOKEN=local_test_admin_token
+
+# Optional: point the worker at a local mock Stripe server (see test/smoke.mjs).
+# STRIPE_API_BASE=http://127.0.0.1:9999
