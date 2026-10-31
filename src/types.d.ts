@@ -42,7 +42,7 @@ export interface Taxonomy {
   title: string;
 }
 
-export type ProductCategory = 'rib' | 'inflatable' | 'sup' | 'accessory' | 'kayak' | 'service';
+export type ProductCategory = 'sup' | 'accessory' | 'service';
 
 export interface ProductSpec {
   label: string;

@@ -8,7 +8,6 @@ import { SITE } from 'astrowind:config';
 import { languages, defaultLang } from '~/i18n/config';
 import { getUiForLang } from '~/i18n/generated/ui-all';
 import { getLocalizedProducts } from '~/utils/product-i18n';
-import { inflatableBoatCatalogPath } from '~/lib/catalogs';
 import { pageContentData } from '~/i18n/generated/site-data';
 import { urlSlugToCategory, CATEGORY_SLUG_TO_URL } from '~/utils/products';
 import { breadcrumbNode, collectionNode } from '~/utils/schema-graph';
@@ -131,34 +130,6 @@ const categories = [...new Set(localizedProducts.map((p) => p.category))].filter
   (cat) => CATEGORY_SLUG_TO_URL[cat.toLowerCase() as keyof typeof CATEGORY_SLUG_TO_URL]
 );
 
-const RIB_SERIES: Record<string, { tag: string; label: string }> = {
-  apex: { tag: 'apex', label: 'Apex Performance' },
-  defender: { tag: 'defender', label: 'Defender' },
-  explorer: { tag: 'explorer', label: 'Explorer' },
-  swiftlitee: { tag: 'swiftlitee', label: 'Swiftlitee' },
-  versa: { tag: 'versa', label: 'Versa' },
-};
-
-function getRibSeries(id: string): string | null {
-  if (id.startsWith('ap')) return 'apex';
-  if (id.startsWith('df')) return 'defender';
-  if (id.startsWith('ex')) return 'explorer';
-  if (id.startsWith('sw')) return 'swiftlitee';
-  if (id.startsWith('vr')) return 'versa';
-  return null;
-}
-
-const isRibCategory = activeCategory === 'rib';
-const ribSeriesList = isRibCategory
-  ? Object.entries(RIB_SERIES)
-      .map(([key, val]) => ({
-        ...val,
-        key,
-        count: filteredProducts.filter((p) => getRibSeries(p.id) === key).length,
-      }))
-      .filter((s) => s.count > 0)
-  : [];
-
 const pageLabel = t('home.category.' + categoryKey(activeCategory)) || urlSlug;
 
 const metadata: MetaData = {
@@ -233,57 +204,17 @@ const categoryGraph = {
     }
 
     {
-      ribSeriesList.length > 0 && (
-        <div class="flex flex-wrap items-center justify-center gap-2 mb-12" id="series-pills">
-          <button
-            data-series="all"
-            class:list={[
-              'series-pill inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold border transition-colors cursor-pointer',
-              'bg-gray-900 text-white border-gray-900',
-            ]}
-          >
-            All Series ({filteredProducts.length})
-          </button>
-          {ribSeriesList.map((s) => (
-            <button
-              data-series={s.key}
-              class:list={[
-                'series-pill inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold border transition-colors cursor-pointer',
-                'bg-white border-gray-200 text-gray-600 hover:bg-gray-50',
-              ]}
-            >
-              {s.label} ({s.count})
-            </button>
-          ))}
-        </div>
-      )
-    }
-
-    {
-      (activeCategory === 'sup' || activeCategory === 'rib' || activeCategory === 'inflatable') && (
+      activeCategory === 'sup' && (
         <div class="flex flex-wrap items-center justify-center gap-4 mb-12">
-          {activeCategory === 'sup' && (
-            <a
-              href="/catalogs/paddleboardoverstock-sup-catalog.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex items-center gap-2 px-4 py-2 bg-sky-50 border border-sky-200 text-sky-700 text-sm font-medium rounded-full hover:bg-sky-100 transition-colors"
-            >
-              <Icon name="tabler:download" class="w-4 h-4" />
-              {t('product.downloadSupCatalog')}
-            </a>
-          )}
-          {activeCategory !== 'sup' && (
-            <a
-              href={inflatableBoatCatalogPath(lang)}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-50 border border-emerald-200 text-emerald-700 text-sm font-medium rounded-full hover:bg-emerald-100 transition-colors"
-            >
-              <Icon name="tabler:download" class="w-4 h-4" />
-              {t('product.downloadBoatCatalog')}
-            </a>
-          )}
+          <a
+            href="/catalogs/paddleboardoverstock-sup-catalog.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 px-4 py-2 bg-sky-50 border border-sky-200 text-sky-700 text-sm font-medium rounded-full hover:bg-sky-100 transition-colors"
+          >
+            <Icon name="tabler:download" class="w-4 h-4" />
+            {t('product.downloadSupCatalog')}
+          </a>
         </div>
       )
     }
@@ -299,12 +230,8 @@ const categoryGraph = {
       ) : (
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="product-grid">
           {filteredProducts.map((p) => {
-            const series = getRibSeries(p.id);
             return (
-              <div
-                class="bg-white rounded-2xl overflow-hidden border border-gray-200 hover:shadow-md transition-shadow product-card"
-                data-series={series || 'other'}
-              >
+              <div class="bg-white rounded-2xl overflow-hidden border border-gray-200 hover:shadow-md transition-shadow product-card">
                 <a
                   href={`/${lang}/products/${p.id}`}
                   class="block aspect-[3/4] bg-gradient-to-br from-gray-100 to-gray-200 relative overflow-hidden group"
@@ -351,27 +278,4 @@ const categoryGraph = {
   <section class="sr-only" data-ai-block="definition" aria-hidden="true">
     <p>{SITE.name} {t('product.catalog')} — {pageLabel}.</p>
   </section>
-
-  <script>
-    document.querySelectorAll('.series-pill').forEach((pill) => {
-      pill.addEventListener('click', () => {
-        const series = pill.getAttribute('data-series');
-        document.querySelectorAll('.series-pill').forEach((p) => {
-          p.classList.remove('bg-gray-900', 'text-white', 'border-gray-900');
-          p.classList.add('bg-white', 'border-gray-200', 'text-gray-600');
-        });
-        pill.classList.remove('bg-white', 'border-gray-200', 'text-gray-600');
-        pill.classList.add('bg-gray-900', 'text-white', 'border-gray-900');
-        document.querySelectorAll('.product-card').forEach((el) => {
-          const card = el as HTMLElement;
-          const cardSeries = card.getAttribute('data-series');
-          if (series === 'all' || cardSeries === series) {
-            card.style.display = '';
-          } else {
-            card.style.display = 'none';
-          }
-        });
-      });
-    });
-  </script>
 </Layout>

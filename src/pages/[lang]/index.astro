@@ -10,7 +10,7 @@ import JsonLd from '~/components/common/JsonLd.astro';
 import TrustBadges from '~/components/common/TrustBadges.astro';
 import Tldr from '~/components/common/Tldr.astro';
 import Icon from '~/components/ui/Icon.astro';
-import { getContentV2Records } from '~/data/content-v2';
+import { guides } from '~/data/guides';
 import cfg from '~/config.yaml';
 const branding = (cfg as any)?.branding || {};
 import { pageContentData } from '~/i18n/generated/site-data';
@@ -62,21 +62,21 @@ const heroImagesData = pageContentData[`${lang}/site-hero-images`] || pageConten
 const heroSlides: HeroSlide[] = (heroImagesData as any)?.slides?.filter((s: any) => s?.image?.trim()) || [
   {
     image:
-      'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/categories/paddleboardoverstock-rib-boat-category.webp',
-    label: 'RIB Boats',
-    categories: ['RIB'],
-  },
-  {
-    image:
-      'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/categories/paddleboardoverstock-dinghy-category.webp',
-    label: 'Inflatable Boats',
-    categories: ['INFLATABLE'],
-  },
-  {
-    image:
       'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-cheetah-surge-1.webp',
-    label: 'SUP Boards',
+    label: 'Inflatable SUP Boards',
     categories: ['SUP'],
+  },
+  {
+    image:
+      'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-ocean-voyager-1.webp',
+    label: 'SUP Packages',
+    categories: ['SUP'],
+  },
+  {
+    image:
+      'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/categories/paddleboardoverstock-accessories-category.webp',
+    label: 'Accessories',
+    categories: ['ACCESSORY'],
   },
 ];
 
@@ -89,32 +89,19 @@ const proofPointsData = pageContentData[`${lang}/site-proof-points`] || pageCont
 const testimonialsData = pageContentData[`${lang}/site-testimonials`] || pageContentData['en/site-testimonials'] || {};
 const learnData = pageContentData[`${lang}/site-learning-center`] || pageContentData['en/site-learning-center'] || {};
 
-const guideRecords = getContentV2Records(lang || defaultLang);
-const topGuideSlugs = topGuidesData.guides || [
-  'cost-to-start-sup-rental-business',
-  'private-label-vs-white-label',
-  'building-resort-water-sports-center',
-];
-const homeGuides = guideRecords.filter((c) => topGuideSlugs.includes(c.slug));
+const topGuideSlugs = topGuidesData.guides || ['how-to-choose-your-sup', 'beginner-guide', 'safety-tips'];
+const homeGuides = guides.filter((g) => topGuideSlugs.includes(g.slug));
 const siteBase = String(SITE.site).replace(/\/+$/, '');
 
 const defaultVisuals: Record<string, string> = {
   'sup-explorer-11':
     'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/paddleboardoverstock-sup-allround-board.webp',
-  'airdeck-360':
-    'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/paddleboardoverstock-inflatable-boat.webp',
-  'rib-330':
-    'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/paddleboardoverstock-rib-330-boat.webp',
-  'rib-450-patrol':
-    'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/paddleboardoverstock-rib-450-patrol-boat.webp',
   'life-vest-classic':
     'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/paddleboardoverstock-life-vest-classic.webp',
   'life-vest-pro':
     'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/paddleboardoverstock-life-vest-pro-front.webp',
   'oars-pump-set':
     'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/paddleboardoverstock-electric-pump.webp',
-  'zb-mt350':
-    'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/paddleboardoverstock-zb-mt350-inflatable-dinghy.webp',
 };
 const rawVisuals = ((productVisualsData as any)?.visuals || []) as Array<{ id: string; image: string }>;
 const yamlVisuals = Object.fromEntries(rawVisuals.map((v) => [v.id, v.image]).filter(([, img]) => img));
@@ -122,44 +109,44 @@ const productVisuals: Record<string, string> = { ...defaultVisuals, ...yamlVisua
 
 const defaultUseCases = [
   {
-    title: 'Beginner Water Sports',
-    desc: 'Stable SUP boards and kayaks for first-time users.',
+    title: 'Beginner Paddling',
+    desc: 'Stable inflatable SUP boards for first-time paddlers.',
     scenario:
       'A family visiting a lake for the weekend wants to try paddle boarding. They need stable, easy-to-launch equipment with clear safety guidance.',
     solution:
-      'The SUP Explorer 11 provides wide-body stability for beginners. The Life Vest Classic ensures CE-certified flotation. The Dual-Action Pump inflates both boards in under 10 minutes.',
-    products: ['SUP Explorer 11', 'Life Vest Classic', 'Dual-Action Pump'],
+      'The SUP Explorer 11 provides wide-body stability for beginners. The Life Vest Classic ensures CE-certified flotation. The Oars & Pump Set inflates the board in under 10 minutes.',
+    products: ['SUP Explorer 11', 'Life Vest Classic', 'Oars & Pump Set'],
     img: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-cheetah-surge-1.webp',
   },
   {
-    title: 'Outdoor Exploration',
-    desc: 'Portable kayaks and dinghies for rivers, lakes, and coastal trips.',
+    title: 'Touring & Exploration',
+    desc: 'Long-distance inflatable SUP boards for lakes, rivers, and coastal trips.',
     scenario:
-      'An outdoor enthusiast plans a week-long river trip and needs a boat that packs small, inflates at camp, and handles varying currents.',
+      'An outdoor enthusiast plans a week-long paddling trip and needs a board that packs small, inflates at camp, and tracks straight on open water.',
     solution:
-      'The Kayak Lite packs into a backpack and inflates in under 4 minutes. Its drop-stitch construction handles lakes, slow rivers, and coastal paddling.',
-    products: ['Inflatable Kayak Lite', 'Carbon Paddle', 'Life Vest Classic'],
-    img: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/paddleboardoverstock-inflatable-boat.webp',
+      'The Ocean Voyager Series glides efficiently with a touring outline and holds course in wind and chop. Its drop-stitch construction inflates to 15 PSI for hard-board rigidity.',
+    products: ['Ocean Voyager Series', 'Oars & Pump Set', 'Life Vest Classic'],
+    img: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-ocean-voyager-1.webp',
   },
   {
-    title: 'Professional Operations',
-    desc: 'Commercial-grade RIBs for tour operators and emergency response.',
+    title: 'SUP Yoga & Fitness',
+    desc: 'Extra-wide, stable platforms for yoga, fitness, and relaxation.',
     scenario:
-      'A coastal tour operator needs a fleet of durable boats that run daily trips in varying sea conditions and meet commercial safety regulations.',
+      'A yoga practitioner wants a floating studio for morning sessions on calm water, with enough deck space to hold every pose.',
     solution:
-      'The RIB 330 and RIB 450 Patrol use fiberglass deep-V hulls with Hypalon tubes for all-weather durability. Multiple units can be deployed with consistent performance.',
-    products: ['RIB 330', 'RIB 450 Patrol', 'Life Vest Pro'],
-    img: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-leviathan-wake-1.webp',
+      'The Flowing Lotus Series features a full-length deck pad and a wide beam for wobble-free poses. It doubles as a stable platform for light fitness workouts.',
+    products: ['Flowing Lotus Series', 'Oars & Pump Set', 'Life Vest Classic'],
+    img: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-flowing-lotus-1.webp',
   },
   {
     title: 'Family Recreation',
-    desc: 'Spacious dinghies for day trips, fishing, and watersports.',
+    desc: 'Complete SUP packages for weekend lake days and holidays.',
     scenario:
-      'A family of four wants a stable boat for weekend lake outings, fishing trips, and towing a tube for the kids.',
+      'A family of four wants stable boards for weekend lake outings and beach holidays, gear that packs into the car and inflates in minutes.',
     solution:
-      'The AirDeck 360 seats up to five with a reinforced air deck floor. It inflates at the launch site, stores in the car, and handles both calm lakes and sheltered coastal waters.',
-    products: ['AirDeck 360', 'Life Vest Classic', 'Dual-Action Pump'],
-    img: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/paddleboardoverstock-rib-330-boat.webp',
+      'The Tropical Breeze Series is a stable all-around board the whole family can share, while the Medusa Glow Series is lighter and shorter for kids. Both pack into backpacks for easy travel.',
+    products: ['Tropical Breeze Series', 'Medusa Glow Series', 'Life Vest Classic'],
+    img: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-tropical-breeze-1.webp',
   },
 ];
 const rawCases = ((useCasesData as any)?.cases || []) as Array<{
@@ -190,16 +177,20 @@ const rawPoints = ((proofPointsData as any)?.points || []) as Array<{
 }>;
 const defaultProofPoints = [
   {
-    metric: '64',
-    label: 'CE-certified models across 5 categories',
-    detail: 'RIB, Inflatable Boat, SUP Board, Safety Equipment, Accessory',
+    metric: '13',
+    label: 'CE-certified models',
+    detail: 'SUP boards and accessories certified per applicable EU directives',
   },
-  { metric: '50+', label: 'countries served', detail: 'Global distribution network across EU, US, ASIA' },
-  { metric: '2012', label: 'founded', detail: 'Over a decade of water sports manufacturing' },
+  { metric: '50+', label: 'countries served', detail: 'Worldwide shipping across EU, North America, Asia-Pacific' },
   {
-    metric: 'ISO',
-    label: 'CE certified per applicable EU directives',
-    detail: '64 CE-certified models meet international safety standards',
+    metric: '60%',
+    label: 'off retail',
+    detail: 'Factory-direct overstock and clearance pricing on complete SUP packages',
+  },
+  {
+    metric: '2-Year',
+    label: 'SUP warranty',
+    detail: 'Covers boards, drop-stitch seams, inflation valves, and accessories',
   },
 ];
 const proofPoints = rawPoints.length
@@ -220,27 +211,19 @@ const testimonials = [0, 1, 2]
   .filter((x) => x.quote);
 
 const catalogCategories = [
-  { key: 'RIB', label: t('home.catalog.rib') || 'RIB Boats', desc: t('home.catalog.rib.desc') || '' },
   {
-    key: 'INFLATABLE',
-    label: t('home.catalog.inflatable') || 'Inflatable Boats',
-    desc: t('home.catalog.inflatable.desc') || '',
-    keys: ['INFLATABLE', 'SIB_ALUMINUM', 'SIB_DROPSTITCH', 'WHITEWATER_RAFT', 'TACTICAL_RAFT'],
+    key: 'SUP',
+    label: t('home.catalog.sup') || 'SUP Boards',
+    desc:
+      t('home.catalog.sup.desc') ||
+      'Inflatable stand-up paddle boards from 9 ft to 12 ft — all-round, touring, yoga, and more.',
   },
-  { key: 'SUP', label: t('home.catalog.sup') || 'SUP Boards', desc: t('home.catalog.sup.desc') || '' },
   {
     key: 'ACCESSORY',
     label: t('home.catalog.accessory') || 'Accessories',
-    desc: t('home.catalog.accessory.desc') || '',
+    desc: t('home.catalog.accessory.desc') || 'Pumps, paddles, life vests, repair kits, and essential gear.',
     keys: ['ACCESSORY', 'DROPSTITCH_SEAT'],
   },
-  {
-    key: 'KAYAK',
-    label: t('home.catalog.kayak') || 'Kayaks',
-    desc: '',
-    keys: ['KABOAT', 'KAYAK_FULL_DROPSTITCH', 'KAYAK_HYBRID'],
-  },
-  { key: 'CATAMARAN', label: t('home.catalog.catamaran') || 'Catamarans', desc: '', keys: ['HIGH_SPEED_CATAMARAN'] },
 ];
 const localizedProducts = getLocalizedProducts(lang || defaultLang);
 const groupedProducts: Record<string, typeof localizedProducts> = {};
@@ -250,19 +233,9 @@ for (const cat of catalogCategories) {
 }
 
 const catLabelKeys: Record<string, string> = {
-  RIB: 'home.catalog.rib',
-  INFLATABLE: 'home.catalog.inflatable',
-  SIB_ALUMINUM: 'home.catalog.inflatable',
-  SIB_DROPSTITCH: 'home.catalog.inflatable',
-  WHITEWATER_RAFT: 'home.catalog.inflatable',
-  TACTICAL_RAFT: 'home.catalog.inflatable',
   SUP: 'home.catalog.sup',
   ACCESSORY: 'home.catalog.accessory',
   DROPSTITCH_SEAT: 'home.catalog.accessory',
-  KABOAT: 'home.catalog.kayak',
-  KAYAK_FULL_DROPSTITCH: 'home.catalog.kayak',
-  KAYAK_HYBRID: 'home.catalog.kayak',
-  HIGH_SPEED_CATAMARAN: 'home.catalog.catamaran',
 };
 
 const RULE_L10N_KEYS: Record<string, string> = {
@@ -361,14 +334,6 @@ const researchCards = [
       'The engineering behind thousands of internal threads that transform flexible PVC into a rigid high-pressure core.',
   },
   {
-    href: L('/research/pvc-vs-hypalon'),
-    category: t('home.research.cat.materials') || 'Materials',
-    title: t('home.research.pvcHypalon') || 'PVC vs Hypalon',
-    desc:
-      t('home.research.pvcHypalon.desc') ||
-      'Technical comparison of durability, UV resistance, repairability, weight, and cost.',
-  },
-  {
     href: L('/research/ce-certification-guide'),
     category: t('home.research.cat.compliance') || 'Compliance',
     title: t('home.research.ceCertification') || 'How CE Certification Works',
@@ -385,66 +350,14 @@ const researchCards = [
       'How board thickness affects rigidity, weight, stability, tracking, and performance.',
   },
   {
-    href: L('/research/oem-buyer-guide'),
-    category: t('home.research.cat.sourcing') || 'Sourcing',
-    title: t('home.research.oemBuyer') || 'OEM Buyer Guide',
+    href: L('/research/engineering-whitepaper'),
+    category: t('home.research.cat.engineering') || 'Engineering',
+    title: t('home.research.engineeringWhitepaper') || 'Engineering Whitepaper',
     desc:
-      t('home.research.oemBuyer.desc') ||
-      'Comprehensive guide for sourcing inflatable watercraft from Asian manufacturers.',
+      t('home.research.engineeringWhitepaper.desc') ||
+      'Materials, construction methods, and test results behind a durable inflatable SUP.',
   },
 ];
-
-const customerTypes = page.content_customer_types ?? {};
-const defaultWhoItems = [
-  {
-    title: 'Water Sports Clubs',
-    description:
-      'Start or upgrade your SUP club, kayak club, surf school or training center with complete equipment packages and support.',
-    icon: '&#127754;',
-    cta: 'Build My Club Package &rarr;',
-    href: '/solutions/clubs',
-  },
-  {
-    title: 'Resorts & Hotels',
-    description:
-      'Create a premium waterfront guest experience with rental fleets, safety systems, custom branding, and staff training programs.',
-    icon: '&#127796;',
-    cta: 'Design My Resort Solution &rarr;',
-    href: '/solutions/resorts',
-  },
-  {
-    title: 'Rental Business',
-    description:
-      'Build a profitable water sports rental operation with commercial-grade fleets, fleet management support, and zero storage cost.',
-    icon: '&#128176;',
-    cta: 'Start Rental Fleet &rarr;',
-    href: '/solutions/rental-business',
-  },
-  {
-    title: 'Water Brand Entrepreneurs',
-    description:
-      'Launch your own water sports brand with private label manufacturing, custom design, packaging, and low MOQs for startups.',
-    icon: '&#127775;',
-    cta: 'Launch My Brand &rarr;',
-    href: '/solutions/entrepreneurs',
-  },
-];
-interface WhoItem {
-  title: string;
-  description: string;
-  icon: string;
-  cta: string;
-  href: string;
-}
-const whoItems: WhoItem[] = customerTypes?.items?.length
-  ? customerTypes.items.map((it: any) => ({
-      title: it.title,
-      description: it.description,
-      icon: it.icon || '&#127754;',
-      cta: it.cta || t('cta.requestQuote') || 'Learn more',
-      href: it.cta_href || '/contact',
-    }))
-  : defaultWhoItems;
 
 interface FaqItem {
   q: string;
@@ -453,53 +366,13 @@ interface FaqItem {
 }
 const defaultFaqItems: FaqItem[] = [
   {
-    q: 'What is the difference between a RIB and an inflatable boat?',
-    a: 'A RIB (Rigid Inflatable Boat) combines a solid fiberglass or aluminum hull with inflatable tubes, offering superior handling in rough water. An inflatable boat has a fully flexible hull made entirely of PVC or Hypalon tubes — lighter and more portable but less capable in challenging conditions.',
-    category: 'rib',
-  },
-  {
-    q: 'What size engine do I need for a RIB?',
-    a: "Engine size depends on your RIB length and intended use. A 3.3 m RIB typically handles 15–20 HP for recreation. A 4.5 m patrol RIB needs 40–60 HP for planing speeds. Always check the manufacturer's max engine rating — exceeding it voids warranty and safety certification.",
-    category: 'rib',
-  },
-  {
-    q: 'Are RIBs suitable for beginners?',
-    a: 'Smaller RIBs (2.5–3.3 m) with 10–20 HP engines are suitable for beginners in calm waters. Larger RIBs require boating experience due to higher speeds and handling characteristics. We recommend starting with an inflatable dinghy if you are new to boating.',
-    category: 'rib',
-  },
-  {
-    q: 'How do I maintain Hypalon tubes on my RIB?',
-    a: 'Hypalon tubes require minimal maintenance. Rinse with fresh water after saltwater use, avoid prolonged UV exposure when deflated, and clean with mild soap and water. Hypalon naturally resists UV and ozone degradation, lasting 15–20+ years with proper care.',
-    category: 'rib',
-  },
-  {
-    q: 'How long do inflatable boats last?',
-    a: 'PVC inflatable boats last 8–12 years with proper care. Hypalon boats can last 15–20+ years. Key factors: UV exposure, storage conditions (inflated vs deflated), frequency of use, and maintenance. Proper inflation, fresh water rinsing, and avoiding sharp objects extend lifespan significantly.',
-    category: 'inflatable',
-  },
-  {
-    q: 'Can I leave my inflatable boat inflated all season?',
-    a: 'Yes, but with precautions. Inflate to the rated pressure and check weekly as temperature changes affect pressure. UV exposure is the main enemy — use a cover if storing outdoors. Partially deflate and store indoors during extended idle periods for maximum tube life.',
-    category: 'inflatable',
-  },
-  {
-    q: 'What maintenance do inflatable boats need?',
-    a: 'Basic maintenance: rinse with fresh water after each use, dry thoroughly before storage, check for leaks at seams and valves, lubricate valves yearly with silicone grease, and store in a cool dry place. Avoid dragging on concrete — use a launching trolley when possible.',
-    category: 'inflatable',
-  },
-  {
-    q: 'Can inflatable boats be repaired?',
-    a: 'Yes. Small punctures and seam leaks can be repaired with a PVC repair kit — clean the area, apply adhesive, patch, and roll out air bubbles. Larger damage may require professional repair. Hypalon requires two-part adhesive and more careful preparation.',
-    category: 'inflatable',
-  },
-  {
     q: 'Is SUP hard to learn?',
     a: 'Not at all. Most beginners stand up and paddle within their first session. Our All-Around SUP series features extra-wide stable platforms designed specifically for first-time paddlers. Start on calm water and you will be cruising in minutes.',
     category: 'sup',
   },
   {
     q: 'What is the weight limit?',
-    a: 'Our All-Around SUPs support up to 220 lbs. The Touring and Yoga series support up to 250 lbs. For tandem use or heavier loads, our Kayak and Dinghy products offer higher capacity options.',
+    a: 'Our All-Around SUPs support up to 220 lbs. The Touring and Yoga series support up to 250 lbs. Every product page lists the exact rider weight capacity so you can match the board to your needs.',
     category: 'sup',
   },
   {
@@ -511,6 +384,26 @@ const defaultFaqItems: FaqItem[] = [
     q: 'What comes in the box?',
     a: 'Every Paddle Board Overstock SUP includes the board, a travel backpack, dual-action hand pump, removable fin, coil leash, and repair kit. Some models also include a carbon paddle upgrade option.',
     category: 'sup',
+  },
+  {
+    q: 'Why are your prices lower than retail?',
+    a: 'We sell factory overstock and clearance batches direct from our own production facility in Weihai, China — no middlemen, no retail markup. That means complete SUP packages at up to 60% off typical retail prices, with the same CE-certified quality.',
+    category: 'orders',
+  },
+  {
+    q: 'How do I place an order and pay?',
+    a: 'Add your SUP package to the cart and check out securely with Stripe or PayPal. We accept all major credit and debit cards. Every order is confirmed by email with a full invoice.',
+    category: 'orders',
+  },
+  {
+    q: 'Do you ship worldwide?',
+    a: 'Yes. We ship to 50+ countries across the EU, North America, Asia-Pacific, the Middle East, and Africa. In-stock orders typically ship within 2-3 business days with tracking provided for every parcel.',
+    category: 'orders',
+  },
+  {
+    q: 'What warranty do SUP boards include?',
+    a: 'Every SUP board and accessory is covered by a 2-year warranty — including the board itself, drop-stitch seams, and inflation valves. Claims are resolved in days, not weeks: file online and we repair or replace.',
+    category: 'orders',
   },
 ];
 const faqData = page.faqs ?? {};
@@ -532,9 +425,9 @@ const heroActions: HeroAction[] =
   page.hero?.actions?.length > 0
     ? page.hero.actions.map((a: any) => ({ text: a.text, href: L(a.href || '/contact'), icon: a.icon }))
     : [
-        { text: t('cta.requestQuote') || 'Start Your Water Business', href: L('/solutions'), icon: '' },
-        { text: t('cta.bundles') || 'View Business Packages', href: L('/business-packages'), icon: '' },
-        { text: t('cta.requestQuote') || 'Request OEM Quote', href: L('/contact'), icon: '' },
+        { text: t('cta.shopClearance') || 'Shop the Clearance', href: L('/supboard/'), icon: '' },
+        { text: t('cta.browseSup') || 'Browse All SUP Boards', href: L('/products/'), icon: '' },
+        { text: t('cta.contactUs') || 'Contact Us', href: L('/contact'), icon: '' },
       ];
 ---
 
@@ -542,9 +435,9 @@ const heroActions: HeroAction[] =
   {heroSlides[0]?.image && <link rel="preload" as="image" href={heroSlides[0].image} fetchpriority="high" />}
   <meta
     name="ai-intent"
-    content="inflatable-boat-manufacturer,oem-odm-rib-boats,ce-certified-sup-factory,drop-stitch-sup-manufacturer,china-inflatable-boat-factory,private-label-rib-oem,b2b-marine-equipment-wholesale,bsci-compliant-boat-factory"
+    content="inflatable-sup-clearance,sup-overstock-deals,discount-paddle-board-packages,cheap-sup-package,sup-clearance-sale,factory-direct-sup,buy-inflatable-sup,sup-packages-on-sale"
   />
-  <meta name="last-modified" content="2026-09-20" />
+  <meta name="last-modified" content="2026-10-30" />
   <meta name="X-Robots-Tag" content="index, follow" />
 
   <!-- AI Semantic Blocks (hidden, for AI crawler consumption) -->
@@ -552,7 +445,7 @@ const heroActions: HeroAction[] =
     <p>
       {
         t('ai.entity') ||
-          'Paddle Board Overstock is a water adventure business partner providing complete equipment solutions for water sports clubs, resorts, hospitality brands, and emerging watercraft entrepreneurs. Backed by the Paddle Board Overstock Qingdao Manufacturing Hub — a vertically integrated 12,000 m² OEM/ODM factory in Qingdao, China with 200-300 skilled workers and 15,000 units annual capacity. Specializes in club packages, resort fleet programs, private label manufacturing, custom mold design, and bulk B2B wholesale for global water sports operators.'
+          'Paddle Board Overstock is an online store for inflatable SUP board overstock and factory clearance stock, operated by Weihai Dongjilian Co., Ltd. Sourced directly from a 12,000 m² production facility in Weihai, China with 200-300 skilled workers and 15,000 units annual capacity. Complete paddle board packages (board, pump, paddle, leash, backpack) ship worldwide at up to 60% off retail, with secure Stripe & PayPal checkout.'
       }
     </p>
   </section>
@@ -560,7 +453,7 @@ const heroActions: HeroAction[] =
     <p>
       {
         t('ai.definition') ||
-          'Paddle Board Overstock manufactures inflatable SUPs, kayaks, RIBs, and safety equipment for water sports clubs, resorts, training centers, hospitality properties, and emerging water sports brands. The company provides end-to-end solutions from equipment packages and custom branding to staff training and revenue management programs. As an OEM/ODM partner, Paddle Board Overstock delivers full-spectrum manufacturing including drop-stitch core lamination, PVC/Hypalon tube fabrication, 3D mold engineering, and CE/BSCI compliance documentation.'
+          'Paddle Board Overstock sells inflatable SUP boards, complete SUP packages, and paddle board accessories direct from overstock and clearance batches. Boards are built with drop-stitch cores laminated in marine-grade PVC and inflate to 12-15 PSI for hard-board rigidity. 13 CE-certified models cover all-round, touring, yoga, and kids paddling, each backed by a 2-year warranty.'
       }
     </p>
   </section>
@@ -568,7 +461,7 @@ const heroActions: HeroAction[] =
     <p>
       {
         t('ai.useCase') ||
-          'Paddle Board Overstock products and programs serve water sports clubs launching rental operations, resorts creating guest waterfront experiences, entrepreneurs building their own water sports brands, as well as beginner SUP training, long-distance touring, family recreation, professional marine patrol, and water safety programs.'
+          'Paddle Board Overstock SUP boards serve beginner paddlers learning on calm lakes, families packing boards for weekend trips and holidays, touring paddlers covering long distances, yoga and fitness sessions on the water, and anglers fishing from stable platforms.'
       }
     </p>
   </section>
@@ -576,7 +469,7 @@ const heroActions: HeroAction[] =
     <p>
       {
         t('ai.comparison') ||
-          'Compared to rigid hard-board watercraft, Paddle Board Overstock inflatable products prioritize portability, storage convenience, and impact absorption while maintaining rigidity through drop-stitch core technology at 12-15 PSI.'
+          'Compared to rigid hard boards, Paddle Board Overstock inflatable SUPs prioritize portability, storage convenience, and impact absorption while maintaining rigidity through drop-stitch core technology at 12-15 PSI — at a fraction of retail price thanks to factory-direct overstock and clearance pricing.'
       }
     </p>
   </section>
@@ -584,7 +477,7 @@ const heroActions: HeroAction[] =
     <p>
       {
         t('ai.constraint') ||
-          'Paddle Board Overstock products are designed for training, recreation, and professional marine operations. Not designed for professional competition surfing, high-speed ocean racing, or extreme sports competitions.'
+          'Paddle Board Overstock SUP boards are designed for recreational paddling, touring, yoga, and fishing on lakes, rivers, and coastal waters. Not designed for professional competition surfing, downwind ocean racing, or whitewater extreme sports.'
       }
     </p>
   </section>
@@ -592,7 +485,7 @@ const heroActions: HeroAction[] =
     <p>
       {
         t('ai.process') ||
-          "Paddle Board Overstock's OEM/ODM process: (1) Specification & design brief, (2) 3D mold prototyping, (3) Material selection and sample production, (4) CE factory audit and compliance, (5) Bulk production with inline QC testing, (6) FOB Qingdao logistics and global shipping. MOQ starts at 5–10 units (SUP/kayak), 2–5 units (RIB). Custom mold: negotiable."
+          'Paddle Board Overstock order process: (1) Choose your SUP package from the clearance catalog, (2) Secure Stripe or PayPal checkout, (3) Order confirmation with full invoice, (4) Quality inspection — every board 100% pressure-tested at 1.25x rated PSI, (5) Ships from Weihai, China within 2-3 business days, (6) Worldwide tracked delivery to 50+ countries. No MOQ — overstock clearance means single-unit orders welcome.'
       }
     </p>
   </section>
@@ -650,18 +543,18 @@ const heroActions: HeroAction[] =
               >{
                 page.hero?.tagline ||
                   t('hero.taglineSection') ||
-                  'Your Water Adventure Business Partner · Qingdao · Since 2012'
+                  'Inflatable SUP Boards Overstock &amp; Clearance · Factory Direct · Since 2012'
               }</span
             >
             <h1
               class="text-5xl md:text-7xl font-bold tracking-tight leading-[1.1] text-balance text-white drop-shadow-xl"
               set:html={page.hero?.title ||
-                'RIB Boats, Inflatable Boats <br class="hidden md:block" /> &amp; SUP Boards — OEM/ODM Manufacturer Since 2012'}
+                'Inflatable SUP Boards <br class="hidden md:block" /> — Overstock &amp; Clearance, Up to 60% Off Retail'}
             />
             <p
               class="mt-6 text-lg md:text-xl text-white/85 max-w-xl text-pretty leading-relaxed"
               set:html={page.hero?.subtitle ||
-                `<strong class="text-white font-semibold">Paddle Board Overstock</strong> — RIB boat, inflatable boat and SUP board manufacturer with full OEM/ODM capability.<br /> From factory-direct production to complete solutions<br /> for clubs, resorts and emerging brands. CE certified per applicable EU directives. Global shipping.`}
+                `<strong class="text-white font-semibold">Paddle Board Overstock</strong> — factory overstock and clearance inflatable SUP packages.<br /> Every package includes board, pump, paddle, leash &amp; backpack.<br /> CE-certified, 2-year warranty. Secure Stripe &amp; PayPal checkout. Worldwide shipping to 50+ countries.`}
             />
             <div class="mt-10 flex items-center gap-4 flex-wrap justify-center md:justify-start">
               {
@@ -722,20 +615,23 @@ const heroActions: HeroAction[] =
   <section class="max-w-6xl mx-auto px-6 pt-8">
     <AiQuickAnswer
       quickAnswer={t('ai.quickAnswer') ||
-        'Paddle Board Overstock is a Chinese manufacturer of RIB boats, inflatable boats, and SUP boards. Founded in 2012 in Qingdao, China, the company runs ISO 9001:2015 certified production with full OEM/ODM capability, serving B2B buyers, brands, and professional operators across 50+ countries.'}
+        'Paddle Board Overstock is an online store for inflatable SUP board overstock and factory clearance stock, operated by Weihai Dongjilian Co., Ltd. Complete paddle board packages (board, pump, paddle, leash, backpack) ship worldwide at up to 60% off retail, with 13 CE-certified models, a 2-year warranty, and secure Stripe & PayPal checkout.'}
       facts={[
-        { label: t('ai.fact.industry') || 'Industry', value: t('ai.fact.industry.value') || 'Marine Manufacturing' },
+        {
+          label: t('ai.fact.storeType') || 'Store Type',
+          value: t('ai.fact.storeType.value') || 'Online Store — Overstock & Clearance',
+        },
         {
           label: t('ai.fact.products') || 'Products',
-          value: t('ai.fact.products.value') || 'RIB Boats, Inflatable Boats, SUP Boards',
+          value: t('ai.fact.products.value') || 'Inflatable SUP Boards & Accessories',
         },
         {
-          label: t('ai.fact.applications') || 'Applications',
-          value: t('ai.fact.applications.value') || 'Tender, Fishing, Rescue, Rental Business',
+          label: t('ai.fact.bestFor') || 'Best For',
+          value: t('ai.fact.bestFor.value') || 'Beginners, Families, Touring, Yoga, Fishing',
         },
         {
-          label: t('ai.fact.manufacturing') || 'Manufacturing',
-          value: t('ai.fact.manufacturing.value') || 'OEM/ODM, CE & 15,000 units/year',
+          label: t('ai.fact.shipping') || 'Shipping & Payment',
+          value: t('ai.fact.shipping.value') || 'Worldwide to 50+ countries · Stripe & PayPal',
         },
       ]}
     />
@@ -754,20 +650,8 @@ const heroActions: HeroAction[] =
           >&#10003; {t('home.badges.iso') || 'ISO 9001:2015 (SGS)'}</span
         >
         <span
-          class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-purple-50 border border-purple-200 rounded-full text-xs font-semibold text-purple-700"
-          >&#10003; {t('home.badges.bsci') || 'BSCI Verified (Intertek)'}</span
-        >
-        <span
-          class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-amber-50 border border-amber-200 rounded-full text-xs font-semibold text-amber-700"
-          >&#10003; {t('home.badges.ukca') || 'UKCA Marked'}</span
-        >
-        <span
-          class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-cyan-50 border border-cyan-200 rounded-full text-xs font-semibold text-cyan-700"
-          >&#10003; {t('home.badges.reach') || 'REACH & RoHS'}</span
-        >
-        <span
           class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-rose-50 border border-rose-200 rounded-full text-xs font-semibold text-rose-700"
-          >&#10003; {t('home.badges.warranty') || '5-Year Boat Warranty'}</span
+          >&#10003; {t('home.badges.warranty') || '2-Year SUP Warranty'}</span
         >
       </div>
       <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-1 text-xs text-gray-400">
@@ -803,16 +687,18 @@ const heroActions: HeroAction[] =
     </div>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       {
-        homeGuides.map((c) => (
+        homeGuides.map((g) => (
           <a
-            href={L(`/v2/${c.slug}`)}
+            href={L(`/guides/${g.slug}`)}
             class="group block bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-all hover:-translate-y-0.5"
           >
-            <span class="text-xs font-semibold uppercase tracking-wider text-sky-600">{c.type.replace('-', ' ')}</span>
+            <span class="text-xs font-semibold uppercase tracking-wider text-sky-600">
+              {g.category.replace('-', ' ')}
+            </span>
             <h3 class="mt-3 text-xl font-semibold text-gray-900 group-hover:text-sky-700 transition-colors">
-              {c.title}
+              {g.title}
             </h3>
-            <p class="mt-2 text-sm text-gray-500 line-clamp-2">{c.description}</p>
+            <p class="mt-2 text-sm text-gray-500 line-clamp-2">{g.description}</p>
             <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-sky-600 group-hover:text-sky-700">
               {t('home.guides.read') || 'Read guide →'}
             </span>
@@ -821,8 +707,8 @@ const heroActions: HeroAction[] =
       }
     </div>
     <div class="mt-8 text-center">
-      <a href={L(topGuidesData.browseHref || '/v2')} class="text-sm font-medium text-sky-600 hover:text-sky-700"
-        >{t('home.guides.browse') || topGuidesData.browseText || 'Browse all 20 guides and comparisons →'}</a
+      <a href={L(topGuidesData.browseHref || '/guides')} class="text-sm font-medium text-sky-600 hover:text-sky-700"
+        >{t('home.guides.browse') || topGuidesData.browseText || 'Browse all SUP guides →'}</a
       >
     </div>
   </section>
@@ -838,7 +724,7 @@ const heroActions: HeroAction[] =
         <p class="mt-4 text-lg text-gray-500">
           {
             t('home.research.subtitle') ||
-              'In-depth technical research on inflatable watercraft materials, construction, safety standards, and manufacturing — written for engineers, buyers, and informed enthusiasts.'
+              'In-depth technical research on inflatable SUP materials, construction, safety standards, and performance — written for buyers, engineers, and informed paddlers.'
           }
         </p>
       </div>
@@ -877,7 +763,7 @@ const heroActions: HeroAction[] =
         <p class="mt-4 text-lg text-gray-500">
           {
             t('home.evidence.subtitle') ||
-              'Real case studies, certifications, test data, and deployment photos that demonstrate our manufacturing capability and product quality.'
+              'Real case studies, certifications, test data, and customer photos that demonstrate our product quality and factory-direct value.'
           }
         </p>
       </div>
@@ -893,7 +779,7 @@ const heroActions: HeroAction[] =
           <p class="mt-1 text-xs text-gray-500 line-clamp-2 flex-1">
             {
               t('home.evidence.caseStudies.desc') ||
-                'Real OEM partnerships: retail private-label, startup drop-stitch kayak, Australian RIB distributor — with measurable outcomes.'
+                'Real customer stories: first-time buyers, family paddlers, and touring adventurers — with measurable outcomes.'
             }
           </p>
           <span class="mt-3 text-xs font-medium text-sky-600"
@@ -911,7 +797,7 @@ const heroActions: HeroAction[] =
           <p class="mt-1 text-xs text-gray-500 line-clamp-2 flex-1">
             {
               t('home.evidence.certifications.desc') ||
-                'CE, ISO 9001, BSCI, REACH, RoHS, AS 1799 — certifications covering our 64 CE-certified models, factory quality system, and material compliance for global markets.'
+                'CE, ISO 9001, UKCA, REACH, RoHS — 13 CE-certified models and compliance support across global markets.'
             }
           </p>
           <span class="mt-3 text-xs font-medium text-sky-600"
@@ -948,13 +834,14 @@ const heroActions: HeroAction[] =
   <section class="max-w-6xl mx-auto py-12 px-6" id="philosophy">
     <Tldr
       summary={t('home.tldr.summary') ||
-        'Paddle Board Overstock designs and manufactures inflatable watercraft and safety equipment for controlled water environments — lakes, sheltered bays, rivers, training facilities, and coastal waters. Founded in 2012, with 64 CE-certified models per applicable EU directives, built from marine-grade PVC or Hypalon with drop-stitch construction.'}
+        'Paddle Board Overstock is an online store for inflatable SUP board overstock and factory clearance stock, operated by Weihai Dongjilian Co., Ltd. Complete paddle board packages ship worldwide at up to 60% off retail — founded 2012, with 13 CE-certified models built from marine-grade PVC with drop-stitch construction.'}
       points={[
         t('home.tldr.point1') ||
-          '64 CE-certified models across 5 categories: RIB, Inflatable Boat, SUP Board, Safety Equipment, Accessory',
-        t('home.tldr.point2') || 'Serves recreational, commercial, and professional users in 50+ countries',
+          'Inflatable SUP boards and accessories — overstock and clearance, up to 60% off retail',
+        t('home.tldr.point2') ||
+          'Factory-direct from Weihai, China — ships to 50+ countries with secure Stripe & PayPal checkout',
         t('home.tldr.point3') ||
-          'All products rated for specific skill levels, water conditions, and safety requirements',
+          'Every board CE-certified where applicable, 100% pressure-tested, backed by a 2-year warranty',
       ]}
     />
     <div class="mt-16 grid md:grid-cols-3 gap-8">
@@ -1046,7 +933,7 @@ const heroActions: HeroAction[] =
             <p class="mt-3 text-gray-500 text-sm leading-relaxed">
               {
                 t('home.problem.wrongGear.desc') ||
-                  'A beginner\u2019s board taken into open chop. A touring kayak used for whitewater. Equipment pushed beyond its design envelope leads to unsafe situations and poor experiences.'
+                  'A beginner\u2019s board taken into open chop. A touring board used for whitewater. Equipment pushed beyond its design envelope leads to unsafe situations and poor experiences.'
               }
             </p>
           </div>
@@ -1072,7 +959,7 @@ const heroActions: HeroAction[] =
         <div class="bg-white rounded-2xl border border-gray-200 hover:shadow-md transition-shadow overflow-hidden">
           <div
             class="h-36 bg-cover bg-center"
-            style="background-image: url('https://assets.paddleboardoverstock.com/images/paddleboardoverstock/categories/paddleboardoverstock-rib-boat-category.webp')"
+            style="background-image: url('https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-leviathan-wake-1.webp')"
           >
           </div>
           <div class="p-6">
@@ -1082,114 +969,11 @@ const heroActions: HeroAction[] =
             <p class="mt-3 text-gray-500 text-sm leading-relaxed">
               {
                 t('home.problem.solution.desc') ||
-                  'Every product specifies skill level, water conditions, safety rules, and environment suitability. The right gear for the right user in the right water, every time.'
+                  'Every product specifies skill level, water conditions, safety rules, and environment suitability — 13 CE-certified models. The right gear for the right user in the right water, every time.'
               }
             </p>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Who We Help -->
-  <section class="max-w-7xl mx-auto py-16 px-6" id="who-we-help" data-ai-block="audience">
-    <div class="text-center max-w-3xl mx-auto mb-12">
-      <span class="text-sm font-medium text-sky-600 tracking-wide uppercase"
-        >{t('home.whoWeHelp.tagline') || 'Who We Help'}</span
-      >
-      <h2 class="mt-4 text-4xl font-semibold text-gray-900">
-        {t('home.whoWeHelp.title') || 'Build Your Water Business With Paddle Board Overstock'}
-      </h2>
-      <p class="mt-4 text-lg text-gray-500">
-        {
-          t('home.whoWeHelp.subtitle') ||
-            'Complete solutions for water sports clubs, resorts, rental operators, and emerging brands — from equipment to branding to operations.'
-        }
-      </p>
-    </div>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      {
-        whoItems.map((item) => (
-          <a
-            href={L(item.href)}
-            class="group block p-6 rounded-2xl border border-gray-200 bg-white hover:shadow-lg hover:border-sky-200 transition-all"
-          >
-            <div class="w-12 h-12 rounded-xl bg-sky-50 flex items-center justify-center text-2xl mb-4 text-sky-600">
-              {item.icon.includes(':') ? <Icon name={item.icon} class="w-7 h-7" /> : <Fragment set:html={item.icon} />}
-            </div>
-            <h3 class="text-lg font-bold text-gray-900 group-hover:text-sky-600 transition-colors">{item.title}</h3>
-            <p class="mt-2 text-sm text-gray-500 leading-relaxed">{item.description}</p>
-            <span class="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-sky-600 group-hover:gap-2 transition-all">
-              {item.cta}
-            </span>
-          </a>
-        ))
-      }
-    </div>
-    <div class="mt-12 text-center">
-      <a
-        href={L('/business-packages')}
-        class="inline-flex items-center gap-2 px-8 py-4 font-semibold rounded-full bg-[#fb923c] text-white hover:bg-orange-600 shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5"
-      >
-        {t('home.whoWeHelp.compare') || 'Compare Business Packages'} &rarr;
-      </a>
-      <a
-        href={L('/success-stories')}
-        class="ml-4 inline-flex items-center gap-2 px-8 py-4 font-semibold rounded-full border-2 border-gray-300 text-gray-700 hover:border-gray-400 hover:bg-gray-50 transition-all"
-      >
-        {t('home.whoWeHelp.stories') || 'Read Success Stories'} &rarr;
-      </a>
-    </div>
-  </section>
-
-  <!-- Business Guides -->
-  <section class="bg-gray-50 py-16 px-6">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center max-w-3xl mx-auto mb-12">
-        <span class="text-sm font-medium text-sky-600 tracking-wide uppercase"
-          >{t('home.businessGuides.tagline') || 'Business Guides'}</span
-        >
-        <h2 class="mt-4 text-4xl font-semibold text-gray-900">
-          {t('home.businessGuides.title') || 'Build and Scale Your Water Business'}
-        </h2>
-        <p class="mt-4 text-lg text-gray-500">
-          {
-            t('home.businessGuides.subtitle') ||
-              'Expert guides on starting and growing a profitable water sports business — from rental operations to private label branding.'
-          }
-        </p>
-      </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {
-          guideRecords
-            .filter((c) => c.type === 'business-guide')
-            .slice(0, 4)
-            .map((c) => (
-              <a
-                href={L(`/v2/${c.slug}`)}
-                class="group block bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-all hover:-translate-y-0.5"
-              >
-                <span class="text-xs font-semibold uppercase tracking-wider text-sky-600">
-                  {c.type.replace('-', ' ')}
-                </span>
-                <h3 class="mt-3 text-lg font-semibold text-gray-900 group-hover:text-sky-700 transition-colors">
-                  {c.title}
-                </h3>
-                <p class="mt-2 text-sm text-gray-500 line-clamp-3">{c.description}</p>
-                <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-sky-600 group-hover:text-sky-700">
-                  {t('home.guides.read') || 'Read guide →'}
-                </span>
-              </a>
-            ))
-        }
-      </div>
-      <div class="mt-10 text-center">
-        <a
-          href={L('/v2')}
-          class="inline-flex items-center gap-2 px-8 py-4 font-semibold rounded-full border-2 border-gray-300 text-gray-700 hover:border-gray-400 hover:bg-gray-50 transition-all"
-        >
-          {t('home.businessGuides.browse') || 'Browse All Business Guides'} →
-        </a>
       </div>
     </div>
   </section>
@@ -1238,7 +1022,7 @@ const heroActions: HeroAction[] =
           </p>
           <div class="mt-5 space-y-3">
             <a
-              href={L('/products')}
+              href={L('/supboard/')}
               class="flex items-center justify-between p-3 bg-sky-50 rounded-xl hover:bg-sky-100 transition-colors"
             >
               <div>
@@ -1274,8 +1058,8 @@ const heroActions: HeroAction[] =
       >
         <div class="h-52 bg-gradient-to-br from-sky-400 to-blue-500 overflow-hidden">
           <img
-            src="https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/paddleboardoverstock-inflatable-boat.webp"
-            alt={t('home.alt.family') || 'Family recreation'}
+            src="https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-leviathan-wake-1.webp"
+            alt={t('home.alt.family') || 'Family SUP day on the water'}
             class="w-full h-full object-cover opacity-80"
             loading="lazy"
           />
@@ -1290,20 +1074,20 @@ const heroActions: HeroAction[] =
           <p class="mt-2 text-sm text-gray-500">
             {
               t('home.preview.family.desc') ||
-                'Weekend lake trips with the family. You need a stable, spacious boat that inflates at the launch site and packs in the car.'
+                'Weekend lake trips with the family. You need stable, spacious boards that inflate at the launch site and pack in the car.'
             }
           </p>
           <div class="mt-5 space-y-3">
             <a
-              href={L('/products')}
+              href={L('/supboard/')}
               class="flex items-center justify-between p-3 bg-sky-50 rounded-xl hover:bg-sky-100 transition-colors"
             >
               <div>
                 <span class="text-sm font-semibold text-gray-900"
-                  >{t('home.preview.family.product1') || 'Inflatable Boats'}</span
+                  >{t('home.preview.family.product1') || 'Family SUP Boards'}</span
                 >
                 <p class="text-xs text-gray-500">
-                  {t('home.preview.family.product1.desc') || 'Family-friendly inflatable boats'}
+                  {t('home.preview.family.product1.desc') || 'Extra-stable platforms for all ages'}
                 </p>
               </div>
               <span class="text-sky-600 text-sm font-medium">→</span>
@@ -1327,38 +1111,40 @@ const heroActions: HeroAction[] =
       </div>
       <div
         class="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow"
-        data-ai-use-case="professional"
+        data-ai-use-case="touring"
       >
         <div class="h-52 bg-gradient-to-br from-sky-400 to-blue-500 overflow-hidden">
           <img
-            src="https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/paddleboardoverstock-rib-450-patrol-boat.webp"
-            alt={t('home.alt.professional') || 'Professional operations'}
+            src="https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-ocean-voyager-1.webp"
+            alt={t('home.alt.touring') || 'Touring and fishing SUP'}
             class="w-full h-full object-cover opacity-80"
             loading="lazy"
           />
         </div>
         <div class="p-6">
           <span class="text-xs font-semibold uppercase tracking-wider text-sky-600"
-            >{t('home.preview.pro.label') || 'Professional'}</span
+            >{t('home.preview.touring.label') || 'Touring & Fishing'}</span
           >
           <h3 class="mt-2 text-xl font-semibold text-gray-900">
-            {t('home.preview.pro.title') || 'Patrol and rescue operations'}
+            {t('home.preview.touring.title') || 'Go further, explore more'}
           </h3>
           <p class="mt-2 text-sm text-gray-500">
             {
-              t('home.preview.pro.desc') ||
-                'Law enforcement or SAR teams need all-weather durability, consistent performance across multiple units, and commercial-grade reliability.'
+              t('home.preview.touring.desc') ||
+                'Long-distance paddling and fishing trips demand boards that track straight, carry gear, and stay rigid in wind and chop.'
             }
           </p>
           <div class="mt-5 space-y-3">
             <a
-              href={L('/products')}
+              href={L('/supboard/')}
               class="flex items-center justify-between p-3 bg-sky-50 rounded-xl hover:bg-sky-100 transition-colors"
             >
               <div>
-                <span class="text-sm font-semibold text-gray-900">{t('home.preview.pro.product1') || 'RIB Boats'}</span>
+                <span class="text-sm font-semibold text-gray-900"
+                  >{t('home.preview.touring.product1') || 'Touring SUP Boards'}</span
+                >
                 <p class="text-xs text-gray-500">
-                  {t('home.preview.pro.product1.desc') || 'Deep-V hulls, Hypalon tubes'}
+                  {t('home.preview.touring.product1.desc') || 'Displacement hulls, gear mounts'}
                 </p>
               </div>
               <span class="text-sky-600 text-sm font-medium">→</span>
@@ -1369,10 +1155,10 @@ const heroActions: HeroAction[] =
             >
               <div>
                 <span class="text-sm font-semibold text-gray-900"
-                  >{t('home.preview.pro.product2') || 'Life Vests & Safety'}</span
+                  >{t('home.preview.touring.product2') || 'Paddles & Accessories'}</span
                 >
                 <p class="text-xs text-gray-500">
-                  {t('home.preview.pro.product2.desc') || 'Professional-grade safety gear'}
+                  {t('home.preview.touring.product2.desc') || 'Carbon paddles, leashes, dry bags'}
                 </p>
               </div>
               <span class="text-sky-600 text-sm font-medium">→</span>
@@ -1411,14 +1197,14 @@ const heroActions: HeroAction[] =
       <div class="text-center">
         <h2 class="text-3xl font-semibold">{t('home.trust.ctaTitle') || 'Start your water journey today'}</h2>
         <p class="mt-3 text-white/70">
-          {t('home.trust.ctaSubtitle') || 'CE-certified models, every purchase backed by warranty.'}
+          {t('home.trust.ctaSubtitle') || '13 CE-certified SUP models, every purchase backed by a 2-year warranty.'}
         </p>
         <div class="mt-8 flex items-center justify-center gap-4 flex-wrap">
           <a
-            href={L('/products')}
+            href={L('/supboard/')}
             class="inline-flex items-center gap-2 px-8 py-4 bg-[#fb923c] hover:bg-orange-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all"
           >
-            {t('home.trust.ctaProducts') || 'Browse all products'}
+            {t('home.trust.ctaShop') || 'Shop the SUP clearance'}
           </a>
           <a
             href={L('/products')}
@@ -1436,22 +1222,22 @@ const heroActions: HeroAction[] =
     <div class="max-w-6xl mx-auto px-6 py-10">
       <div class="text-center mb-8">
         <span class="text-sm font-semibold text-primary uppercase tracking-wider"
-          >{t('home.factory.tagline') || 'Paddle Board Overstock Qingdao Manufacturing Hub'}</span
+          >{t('home.factory.tagline') || 'Paddle Board Overstock Weihai Manufacturing Hub'}</span
         >
         <h2 class="mt-2 text-2xl font-bold text-gray-900 dark:text-white">
-          {t('home.factory.title') || 'Direct Factory Engineering & Reliable Global Supply'}
+          {t('home.factory.title') || 'Real Factory, Real Savings — No Middlemen'}
         </h2>
         <p class="mt-3 text-sm text-muted max-w-2xl mx-auto">
           {
             t('home.factory.subtitle') ||
-              'Backed by our dedicated Qingdao Manufacturing Hub, Paddle Board Overstock provides commercial-grade inflatable boats, rigid inflatable boats (RIBs), and stand-up paddleboards (SUPs) — responsive OEM/ODM solutions, stringent QC standards, and competitive factory-direct pricing for distributors and partners worldwide.'
+              'Every clearance SUP comes straight from our Weihai factory. The same production lines that supply international brands build these boards — so you get certified quality at up to 60% off retail.'
           }
         </p>
       </div>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
         <div class="text-center">
           <div class="text-3xl font-bold text-sky-600">12,000 m²</div>
-          <div class="mt-1 text-sm text-muted">{t('home.factory.floor') || 'Qingdao Manufacturing Hub floor'}</div>
+          <div class="mt-1 text-sm text-muted">{t('home.factory.floor') || 'Weihai factory floor'}</div>
         </div>
         <div class="text-center">
           <div class="text-3xl font-bold text-sky-600">200-300</div>
@@ -1459,7 +1245,7 @@ const heroActions: HeroAction[] =
         </div>
         <div class="text-center">
           <div class="text-3xl font-bold text-sky-600">15,000</div>
-          <div class="mt-1 text-sm text-muted">{t('home.factory.units') || 'Boats produced annually'}</div>
+          <div class="mt-1 text-sm text-muted">{t('home.factory.units') || 'Boards produced annually'}</div>
         </div>
         <div class="text-center">
           <div class="text-3xl font-bold text-sky-600">50+</div>
@@ -1474,10 +1260,10 @@ const heroActions: HeroAction[] =
           >{t('home.factory.ce') || 'CE'}
         </span>
         <span class="px-3 py-1.5 bg-white dark:bg-gray-800 rounded-full border border-gray-200 dark:border-gray-700"
-          >{t('home.factory.bsci') || 'BSCI Certified'}</span
+          >{t('home.factory.ukca') || 'UKCA'}</span
         >
         <span class="px-3 py-1.5 bg-white dark:bg-gray-800 rounded-full border border-gray-200 dark:border-gray-700"
-          >{t('home.factory.oem') || 'OEM/ODM'}</span
+          >{t('home.factory.reach') || 'REACH & RoHS'}</span
         >
       </div>
       <div class="text-center mt-6">
@@ -1485,121 +1271,6 @@ const heroActions: HeroAction[] =
           {t('home.factory.tour') || 'Tour our factory'} →
         </a>
       </div>
-    </div>
-  </section>
-
-  <!-- B2B Buyers Center / Resources -->
-  <section class="max-w-6xl mx-auto px-6 py-16" id="resources">
-    <div class="text-center max-w-3xl mx-auto mb-12">
-      <span class="text-sm font-semibold text-sky-600 tracking-[0.15em] uppercase"
-        >{t('home.resources.buyersCenter') || 'Buyers Center'}</span
-      >
-      <h2 class="mt-4 text-4xl font-bold text-gray-900">
-        {t('home.resources.b2bHeading') || 'Resources for B2B Partners'}
-      </h2>
-      <p class="mt-4 text-lg text-gray-500">
-        {
-          t('home.resources.b2bSubtitle') ||
-            'Download product catalogs, quality reports, and compliance documentation to evaluate Paddle Board Overstock as your OEM/ODM partner.'
-        }
-      </p>
-    </div>
-    <div class="grid md:grid-cols-3 gap-8">
-      <a
-        href={L('/media')}
-        class="group bg-white rounded-2xl border border-gray-200 p-8 hover:shadow-lg transition-all hover:-translate-y-0.5"
-      >
-        <div class="w-14 h-14 bg-sky-50 rounded-2xl flex items-center justify-center mb-5 text-sky-600">
-          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-            ><path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="1.5"
-              d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-            ></path></svg
-          >
-        </div>
-        <h3 class="text-lg font-semibold text-gray-900 group-hover:text-sky-700 transition-colors">
-          {t('home.resources.catalog') || '2026 OEM Product Catalog'}
-        </h3>
-        <p class="mt-2 text-sm text-gray-500">
-          {
-            t('home.resources.catalog.desc') ||
-              'Complete product lineup with specs, MOQ (5–10 SUP/kayak, 2–5 RIB), pricing tiers, and customization options. PDF format.'
-          }
-        </p>
-        <span
-          class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-sky-600 group-hover:gap-2 transition-all"
-          >{t('home.resources.download') || 'Download PDF'} →</span
-        >
-      </a>
-      <a
-        href={L('/quality')}
-        class="group bg-white rounded-2xl border border-gray-200 p-8 hover:shadow-lg transition-all hover:-translate-y-0.5"
-      >
-        <div class="w-14 h-14 bg-emerald-50 rounded-2xl flex items-center justify-center mb-5 text-emerald-600">
-          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-            ><path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="1.5"
-              d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-            ></path></svg
-          >
-        </div>
-        <h3 class="text-lg font-semibold text-gray-900 group-hover:text-emerald-700 transition-colors">
-          {t('home.resources.qcReport') || 'QC &amp; Testing Standards Report'}
-        </h3>
-        <p class="mt-2 text-sm text-gray-500">
-          {
-            t('home.resources.qcReport.desc') ||
-              '24-hour pressure hold tests, UV aging per ISO, tensile strength validation. Full methodology disclosed.'
-          }
-        </p>
-        <span
-          class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-emerald-600 group-hover:gap-2 transition-all"
-          >{t('home.resources.viewReport') || 'View Report'} →</span
-        >
-      </a>
-      <a
-        href={L('/factory')}
-        class="group bg-white rounded-2xl border border-gray-200 p-8 hover:shadow-lg transition-all hover:-translate-y-0.5"
-      >
-        <div class="w-14 h-14 bg-amber-50 rounded-2xl flex items-center justify-center mb-5 text-amber-600">
-          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-            ><path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="1.5"
-              d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
-            ></path></svg
-          >
-        </div>
-        <h3 class="text-lg font-semibold text-gray-900 group-hover:text-amber-700 transition-colors">
-          {t('home.resources.factoryTour') || 'Factory Audit &amp; Virtual Tour'}
-        </h3>
-        <p class="mt-2 text-sm text-gray-500">
-          {
-            t('home.resources.factoryTour.desc') ||
-              '12,000 m² workshop, BSCI social compliance on-site, certified lines. Schedule a live video walkthrough.'
-          }
-        </p>
-        <span
-          class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-amber-600 group-hover:gap-2 transition-all"
-          >{t('home.resources.factoryTour.cta') || 'Tour Factory'} →</span
-        >
-      </a>
-    </div>
-    <div class="mt-10 text-center">
-      <p class="text-sm text-gray-400">
-        {t('home.resources.b2bNote') || 'All resources available for registered B2B partners.'}
-      </p>
-      <a
-        href={L('/contact')}
-        class="mt-3 inline-flex items-center gap-1 text-sm font-medium text-sky-600 hover:text-sky-700"
-      >
-        {t('home.resources.requestAccess') || 'Request access to gated resources'} →
-      </a>
     </div>
   </section>
 
@@ -1617,13 +1288,13 @@ const heroActions: HeroAction[] =
           <strong>Paddle Board Overstock</strong>
           {
             t('ai.overview.p1') ||
-              ' designs and manufactures professional-grade inflatable water sports equipment — SUP boards, kayaks, dinghies, RIBs, safety gear, and accessories.'
+              ' is a factory-direct clearance store for inflatable stand-up paddle boards — plus the paddles, pumps, leashes, and accessories that go with them.'
           }
         </p>
         <p>
           {
             t('ai.overview.p2') ||
-              "Paddle Board Overstock's 64 CE-certified models are built from marine-grade PVC or Hypalon with drop-stitch construction for rigidity at 12-15 PSI. The product line covers five categories across all skill levels, from beginner SUP boards to professional patrol RIBs used by law enforcement and rescue teams."
+              '13 CE-certified SUP models are built with drop-stitch cores and marine-grade PVC that hold 12-15 PSI for a rigid, stable ride. Overstock and discontinued lines are sold at up to 60% off retail — no MOQ, order a single board — with secure checkout via Stripe or PayPal and a 2-year SUP warranty.'
           }
         </p>
       </div>
@@ -1645,7 +1316,7 @@ const heroActions: HeroAction[] =
             '@type': 'ListItem',
             position: i + 1,
             name: g.title,
-            url: `${siteBase}/${lang}/v2/${g.slug}`,
+            url: `${siteBase}/${lang}/guides/${g.slug}`,
           })),
         })}
       />
@@ -1797,7 +1468,7 @@ const heroActions: HeroAction[] =
               <img
                 src={
                   card.image ||
-                  'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/paddleboardoverstock-rib-330-boat.webp'
+                  'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-cheetah-surge-1.webp'
                 }
                 alt={card.title || 'Paddle Board Overstock technology'}
                 class="w-full h-full object-cover"
@@ -1967,21 +1638,21 @@ const heroActions: HeroAction[] =
                 <span class="text-[#06b6d4] mt-0.5">&#10003;</span>
                 {
                   t('home.why.warranty.point1') ||
-                    'Industry-Leading Warranty Coverage: 5-year limited warranty on boat tube fabric, seams, and hull; 2-year on SUP and accessories.'
+                    'Every board covered: 2-year warranty on all SUP boards and accessories.'
                 }
               </li>
               <li class="flex gap-2">
                 <span class="text-[#06b6d4] mt-0.5">&#10003;</span>
                 {
                   t('home.why.warranty.point2') ||
-                    'Certified Compliance: Products meet or exceed CE per applicable EU directives, ISO quality standards, and USCG Type III/V approval (life vests) where applicable.'
+                    'Certified compliance: 13 CE-certified SUP models meet applicable EU directives; USCG Type III/V approval (life vests) where applicable.'
                 }
               </li>
               <li class="flex gap-2">
                 <span class="text-[#06b6d4] mt-0.5">&#10003;</span>
                 {
                   t('home.why.warranty.point3') ||
-                    'Stress-Free Repairs: File a claim in minutes, get a fix or replacement in days.'
+                    'Stress-free repairs: File a claim in minutes, get a fix or replacement in days.'
                 }
               </li>
             </ul>
@@ -2151,16 +1822,16 @@ const heroActions: HeroAction[] =
     <div class="grid md:grid-cols-3 gap-6">
       <div class="rounded-2xl overflow-hidden aspect-[4/3]">
         <img
-          src="https://assets.paddleboardoverstock.com/images/paddleboardoverstock/categories/paddleboardoverstock-rib-boat-category.webp"
-          alt={t('home.category.ribs') || 'RIB Boat'}
+          src="https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-dolphin-wave-1.webp"
+          alt={t('home.category.sups') || 'SUP Dolphin Wave'}
           class="w-full h-full object-cover"
           loading="lazy"
         />
       </div>
       <div class="rounded-2xl overflow-hidden aspect-[4/3]">
         <img
-          src="https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/paddleboardoverstock-inflatable-boat.webp"
-          alt={t('home.category.inflatables') || 'Inflatable Boat'}
+          src="https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-flowing-lotus-1.webp"
+          alt={t('home.category.sups') || 'SUP Flowing Lotus'}
           class="w-full h-full object-cover"
           loading="lazy"
         />
@@ -2211,34 +1882,34 @@ const heroActions: HeroAction[] =
         <h3 class="mt-2 text-2xl font-bold text-gray-900">{t('home.gallery.title') || 'Customer Adventures'}</h3>
       </div>
       <div class="mb-12">
-        <h4 class="text-lg font-bold text-gray-900 mb-1">{t('home.gallery.rib') || 'RIB Boats'}</h4>
+        <h4 class="text-lg font-bold text-gray-900 mb-1">{t('home.gallery.yoga') || 'SUP Yoga & Fitness'}</h4>
         <p class="text-sm text-gray-500 mb-4">
           {
-            t('home.gallery.rib.desc') ||
-              'Customers using Paddle Board Overstock RIBs for patrol, rescue, fishing and family adventures.'
+            t('home.gallery.yoga.desc') ||
+              'Finding balance on the water with Paddle Board Overstock yoga and fitness SUPs.'
           }
         </p>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           <div class="rounded-xl overflow-hidden bg-gray-100 aspect-[4/3]">
             <img
-              src="https://assets.paddleboardoverstock.com/images/paddleboardoverstock/use-cases/paddleboardoverstock-professional-use-case.webp"
-              alt={t('home.gallery.rib') || 'RIB Boats in action'}
+              src="https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-flowing-lotus-1.webp"
+              alt={t('home.gallery.yoga') || 'SUP yoga session'}
               class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
               loading="lazy"
             />
           </div>
           <div class="rounded-xl overflow-hidden bg-gray-100 aspect-[4/3]">
             <img
-              src="https://assets.paddleboardoverstock.com/images/paddleboardoverstock/categories/paddleboardoverstock-rib-boat-category.webp"
-              alt={t('home.gallery.rib') || 'RIB Boats on water'}
+              src="https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-jungle-mandala-1.webp"
+              alt={t('home.gallery.yoga') || 'SUP fitness paddling'}
               class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
               loading="lazy"
             />
           </div>
           <div class="rounded-xl overflow-hidden bg-gray-100 aspect-[4/3]">
             <img
-              src="https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/paddleboardoverstock-rib-330-boat.webp"
-              alt={t('home.gallery.rib') || 'RIB 330 cruising'}
+              src="https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-tropical-breeze-1.webp"
+              alt={t('home.gallery.yoga') || 'SUP Tropical Breeze on calm water'}
               class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
               loading="lazy"
             />
@@ -2281,34 +1952,34 @@ const heroActions: HeroAction[] =
         </div>
       </div>
       <div class="mb-12">
-        <h4 class="text-lg font-bold text-gray-900 mb-1">{t('home.gallery.inflatable') || 'Inflatable Boats'}</h4>
+        <h4 class="text-lg font-bold text-gray-900 mb-1">{t('home.gallery.family') || 'Family & Kids SUPs'}</h4>
         <p class="text-sm text-gray-500 mb-4">
           {
-            t('home.gallery.inflatable.desc') ||
-              'Families and explorers enjoying Paddle Board Overstock inflatable boats on lakes and coastal waters.'
+            t('home.gallery.family.desc') ||
+              'Families making memories on Paddle Board Overstock stable, kid-friendly SUP boards.'
           }
         </p>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           <div class="rounded-xl overflow-hidden bg-gray-100 aspect-[4/3]">
             <img
-              src="https://assets.paddleboardoverstock.com/images/paddleboardoverstock/use-cases/paddleboardoverstock-family-use-case.webp"
-              alt={t('home.gallery.inflatable') || 'Family on inflatable boat'}
+              src="https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-leviathan-wake-1.webp"
+              alt={t('home.gallery.family') || 'Family SUP day'}
               class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
               loading="lazy"
             />
           </div>
           <div class="rounded-xl overflow-hidden bg-gray-100 aspect-[4/3]">
             <img
-              src="https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/paddleboardoverstock-inflatable-boat-1.webp"
-              alt={t('home.gallery.inflatable') || 'Inflatable boat on water'}
+              src="https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-medusa-glow-1.webp"
+              alt={t('home.gallery.family') || 'Kids SUP on the water'}
               class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
               loading="lazy"
             />
           </div>
           <div class="rounded-xl overflow-hidden bg-gray-100 aspect-[4/3]">
             <img
-              src="https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/paddleboardoverstock-inflatable-boat.webp"
-              alt={t('home.gallery.inflatable') || 'Inflatable boat adventure'}
+              src="https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-dolphin-wave-1.webp"
+              alt={t('home.gallery.family') || 'Family SUP adventure'}
               class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
               loading="lazy"
             />
@@ -2402,22 +2073,25 @@ const heroActions: HeroAction[] =
         >
         <h2 class="mt-4 text-3xl font-semibold text-gray-900">{t('home.resources.heading') || 'Explore More'}</h2>
         <p class="mt-2 text-gray-500">
-          {t('home.resources.subtitle') || 'Manufacturing insights, engineering expertise, and product comparisons.'}
+          {t('home.resources.subtitle') || 'Buying guides, engineering expertise, and in-depth SUP research.'}
         </p>
       </div>
       <div class="grid md:grid-cols-3 gap-6">
         <a
-          href={L('/oem-process')}
+          href={L('/guides/how-to-choose-your-sup')}
           class="group bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all"
         >
           <span class="text-xs font-semibold text-sky-600 uppercase tracking-wide"
-            >{t('home.resources.manufacturing') || 'Manufacturing'}</span
+            >{t('home.resources.guides') || 'Guides'}</span
           >
           <h3 class="mt-2 font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">
-            {t('home.resources.oemTitle') || 'OEM Manufacturing Process'}
+            {t('home.resources.chooseSup') || 'How to Choose Your SUP'}
           </h3>
           <p class="mt-1 text-sm text-gray-500">
-            {t('home.resources.oemDesc') || 'From inquiry to FOB shipping — the complete 8-step OEM journey.'}
+            {
+              t('home.resources.chooseSupDesc') ||
+                'Board size, volume, and shape — find the right fit for your paddling style.'
+            }
           </p>
         </a>
         <a
@@ -2438,17 +2112,20 @@ const heroActions: HeroAction[] =
           </p>
         </a>
         <a
-          href={L('/compare/rib-vs-dinghy')}
+          href={L('/research/sup-thickness-guide')}
           class="group bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all"
         >
           <span class="text-xs font-semibold text-sky-600 uppercase tracking-wide"
-            >{t('home.resources.compare') || 'Compare'}</span
+            >{t('home.resources.research') || 'Research'}</span
           >
           <h3 class="mt-2 font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">
-            {t('home.resources.ribVsDinghy') || 'RIB vs Inflatable Dinghy'}
+            {t('home.resources.supThickness') || 'SUP Thickness Guide'}
           </h3>
           <p class="mt-1 text-sm text-gray-500">
-            {t('home.resources.ribVsDinghyDesc') || 'Which boat is right for you? Side-by-side comparison.'}
+            {
+              t('home.resources.supThicknessDesc') ||
+                '4-inch vs 6-inch boards — how thickness changes stability and performance.'
+            }
           </p>
         </a>
       </div>
@@ -2468,7 +2145,7 @@ const heroActions: HeroAction[] =
             class="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center text-xl font-bold text-white shrink-0"
             >&#x2713;</span
           >
-          {t('home.resources.bsci') || 'BSCI Certified'}</span
+          {t('home.resources.iso9001') || 'ISO 9001'}</span
         >
         <span class="inline-flex items-center gap-3 text-lg text-gray-600"
           ><span
@@ -2482,7 +2159,7 @@ const heroActions: HeroAction[] =
             class="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center text-xl font-bold text-white shrink-0"
             >&#x2713;</span
           >
-          {t('home.resources.oemBadge') || 'OEM/ODM'}</span
+          {t('home.resources.ukca') || 'UKCA'}</span
         >
       </div>
       <div class="flex flex-wrap items-center justify-center gap-10 py-10 border-t border-gray-200">
@@ -2581,10 +2258,7 @@ const heroActions: HeroAction[] =
           </div>
           <div class="p-6">
             <h3 class="font-semibold text-gray-900">{t('home.contact.address') || 'Address'}</h3>
-            <p
-              class="mt-2 text-gray-500 text-sm"
-              set:html={branding.address || 'Economic Development Zone, Laixi, Qingdao, China, 266600'}
-            />
+            <p class="mt-2 text-gray-500 text-sm" set:html={branding.address || 'Weihai, Shandong, China'} />
           </div>
         </div>
         <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden text-center">
@@ -2595,7 +2269,7 @@ const heroActions: HeroAction[] =
           </div>
           <div class="p-6">
             <h3 class="font-semibold text-gray-900">{t('home.contact.phone') || 'Phone'}</h3>
-            <p class="mt-2 text-gray-500 text-sm">{branding.phone || '213-557-7888'}</p>
+            <p class="mt-2 text-gray-500 text-sm">{branding.phone || '+86 13305324192'}</p>
           </div>
         </div>
         <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden text-center">

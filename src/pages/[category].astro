@@ -35,35 +35,17 @@ if (!activeCategory) {
 }
 
 const CATEGORY_COPY: Record<string, { title: string; description: string; h1: string; subtitle: string }> = {
-  'rib-boats': {
-    title: `RIBs & Inflatable Patrol Boats 2.5\u20137.6 m | OEM/ODM | ${SITE.name}`,
-    description: `Commercial-grade RIBs with aluminium or fibreglass hulls \u2014 2.5\u20137.6 m, Hypalon/PVC tubes, CE certified. OEM/ODM patrol, rescue & tender boats from MOQ 2\u20135 units.`,
-    h1: 'Commercial & Patrol RIBs \u2014 2.5\u20137.6 m, OEM/ODM',
-    subtitle: 'Aluminium-hull rigid inflatable boats for patrol, rescue, diving and yacht tender fleets.',
-  },
-  'inflatable-boats': {
-    title: `Inflatable Boats & Dinghies | Marine-Grade PVC & Hypalon | ${SITE.name}`,
-    description: `Inflatable dinghies, boats and tenders in marine-grade PVC and Hypalon \u2014 drop-stitch floors, 1.5\u00d7 pressure-tested, CE certified. Factory-direct OEM/ODM.`,
-    h1: 'Inflatable Boats & Dinghies \u2014 PVC & Hypalon, Factory Direct',
-    subtitle: 'Marine-grade inflatable dinghies and boats for tenders, rentals and commercial fleets.',
-  },
   supboard: {
-    title: `Inflatable SUP Boards & Paddleboards | Drop-Stitch, OEM | ${SITE.name}`,
-    description: `Drop-stitch inflatable paddle boards at 12\u201315 PSI with EVA decks \u2014 all-round, touring, yoga, fishing and kids models. OEM/ODM from MOQ 5\u201310 units.`,
-    h1: 'Inflatable SUP Boards \u2014 Drop-Stitch, 12\u201315 PSI, OEM',
-    subtitle: 'Drop-stitch paddleboards built for rentals, resorts and retail brands.',
+    title: `Inflatable SUP Boards — Overstock & Clearance, Up to 60% Off | ${SITE.name}`,
+    description: `Inflatable SUP boards at overstock clearance prices \u2014 complete packages (board, pump, paddle, leash, backpack), drop-stitch construction, 12\u201315 PSI, CE certified. Up to 60% off retail, factory direct.`,
+    h1: 'Inflatable SUP Boards \u2014 Overstock & Clearance',
+    subtitle: 'Complete paddle board packages at factory-clearance prices \u2014 up to 60% off retail.',
   },
   accessory: {
-    title: `Inflatable Boat & SUP Accessories | Pumps, Paddles, Fins | ${SITE.name}`,
-    description: `Factory-direct inflatable boat and SUP accessories \u2014 electric pumps, paddles, fins, repair kits, life vests and covers. Wholesale OEM/ODM available.`,
-    h1: 'Pumps, Paddles, Fins & Repair Kits \u2014 Factory Direct',
-    subtitle: 'Everything your rental fleet or retail line needs \u2014 from electric pumps to repair kits.',
-  },
-  kayaks: {
-    title: `Inflatable Kayaks & Catamaran Kayaks | Drop-Stitch, OEM | ${SITE.name}`,
-    description: `Drop-stitch inflatable kayaks and catamaran kayaks \u2014 full drop-stitch performance touring, hybrid recreational, and stable twin-hull KaBoat models. Factory-direct OEM/ODM.`,
-    h1: 'Inflatable Kayaks & Catamarans \u2014 Drop-Stitch, Factory Direct',
-    subtitle: 'Rigid drop-stitch hulls and stable twin-hull platforms for touring, fishing and rental fleets.',
+    title: `SUP Accessories — Pumps, Paddles, Fins | ${SITE.name}`,
+    description: `Paddle board accessories at clearance prices \u2014 pumps, paddles, fins, repair kits, life vests and bags. Factory-direct from Weihai, worldwide shipping.`,
+    h1: 'Pumps, Paddles, Fins & Repair Kits',
+    subtitle: 'Everything your paddle board setup needs \u2014 at overstock clearance prices.',
   },
 };
 
@@ -77,10 +59,10 @@ const hidden = !isProductsEnabled() || !isProductsListEnabled();
 
 const metadata = merge(
   {
-    title: copy ? copy.title : `${activeCategory.toUpperCase()} \u2014 Inflatable Boat & SUP Products | ${SITE.name}`,
+    title: copy ? copy.title : `${activeCategory.toUpperCase()} \u2014 SUP Boards & Accessories | ${SITE.name}`,
     description: copy
       ? copy.description
-      : `Browse ${SITE.name} ${activeCategory} products \u2014 OEM/ODM available. Factory-direct pricing.`,
+      : `Browse ${SITE.name} ${activeCategory} products \u2014 overstock clearance, factory-direct pricing.`,
     canonical: getCanonical('/' + urlSlug + '/'),
     robots: { index: !hidden, follow: true },
     openGraph: { type: 'website' },
@@ -160,31 +142,18 @@ const categoryGraph = {
 
     <!-- Category Catalog Download -->
     {
-      (activeCategory === 'sup' || activeCategory === 'rib' || activeCategory === 'inflatable') && (
+      activeCategory === 'sup' && (
         <WidgetWrapper containerClass="mb-10">
           <div class="flex flex-wrap items-center justify-center gap-4">
-            {activeCategory === 'sup' && (
-              <a
-                href="/catalogs/paddleboardoverstock-sup-catalog.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="inline-flex items-center gap-2 px-4 py-2 bg-sky-50 dark:bg-sky-900/30 border border-sky-200 dark:border-sky-800 text-sky-700 dark:text-sky-300 text-sm font-medium rounded-full hover:bg-sky-100 dark:hover:bg-sky-900/50 transition-colors"
-              >
-                <Icon name="tabler:download" class="w-4 h-4" />
-                Download SUP Board Catalog
-              </a>
-            )}
-            {(activeCategory === 'rib' || activeCategory === 'inflatable') && (
-              <a
-                href="/catalogs/paddleboardoverstock-inflatable-boat-catalog.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-50 dark:bg-emerald-900/30 border border-emerald-200 dark:border-emerald-800 text-emerald-700 dark:text-emerald-300 text-sm font-medium rounded-full hover:bg-emerald-100 dark:hover:bg-emerald-900/50 transition-colors"
-              >
-                <Icon name="tabler:download" class="w-4 h-4" />
-                Download Inflatable Boat Catalog
-              </a>
-            )}
+            <a
+              href="/catalogs/paddleboardoverstock-sup-catalog.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 px-4 py-2 bg-sky-50 dark:bg-sky-900/30 border border-sky-200 dark:border-sky-800 text-sky-700 dark:text-sky-300 text-sm font-medium rounded-full hover:bg-sky-100 dark:hover:bg-sky-900/50 transition-colors"
+            >
+              <Icon name="tabler:download" class="w-4 h-4" />
+              Download SUP Board Catalog
+            </a>
           </div>
         </WidgetWrapper>
       )

@@ -4,11 +4,8 @@ import { APP_PRODUCTS } from 'astrowind:config';
 import { cleanSlug, PRODUCT_PERMALINK_PATTERN } from './permalinks';
 
 const PRODUCT_CATEGORY_LABELS: Record<ProductCategory, string> = {
-  rib: 'RIB Boats',
-  inflatable: 'Inflatable Boats',
   sup: 'SUP Paddle Boards',
   accessory: 'Accessories',
-  kayak: 'Kayaks & Catamarans',
   service: 'Services',
 };
 
@@ -189,11 +186,8 @@ export const getProductCategories = async (): Promise<
 };
 
 export const CATEGORY_SLUG_TO_URL: Record<ProductCategory, string> = {
-  rib: 'rib-boats',
-  inflatable: 'inflatable-boats',
   sup: 'supboard',
   accessory: 'accessory',
-  kayak: 'kayaks',
   service: 'services',
 };
 

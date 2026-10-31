@@ -1,234 +1,224 @@
 hero:
-  tagline: 'Výrobce OEM/ODM od roku 2012'
-  title: 'Výrobce nafukovacích člunů, RIB &<br />SUP boardů'
+  tagline: Přímý výprodej z továrny SUP · Weihai · Od roku 2012
+  title: Nafukovací SUP desky —<br />Přebytečné zásoby a výprodej
   subtitle: |
-    Výroba přímo od výrobce pro námořní značky, distributory, resorty<br />
-    a komerční provozovatele. Od produktového inženýrství a grafiky<br />
-    soukromých značek až po dokumentaci shody a globální dodání.
+    Kompletní balíčky paddle boardů až s 60% slevou z maloobchodní ceny.<br />
+    Přímo z naší továrny ve Weihai. Desky s certifikací CE,<br />
+    2letá záruka, bezpečné placení, celosvětová doprava.
   actions:
     - variant: primary
-      text: Vyžádat nabídku OEM/ODM
-      href: /request-quotation
-      icon: tabler:file-text
-    - text: Rezervovat video prohlídku továrny
+      text: Nakupujte výprodej
+      href: /supboard
+      icon: tabler:rocket
+    - text: Prohlédnout všechny SUP desky
+      href: /products
+      icon: tabler:route
+    - text: Kontaktujte nás
       href: /contact
-      icon: tabler:video
-    - text: Stáhnout B2B katalog produktů
-      href: /request-quotation
-      icon: tabler:download
+      icon: tabler:file-text
   image:
     src: ~/assets/images/hero-image.webp
-    alt: Výrobní závod OEM/ODM nafukovacích člunů a RIB Paddle Board Overstocku v Qingdao
-
+    alt: Paddle Board Overstock nafukovací SUP prkno převis a výprodej
 stats:
-  title: Paddle Board Overstock v kostce
+  title: Paddle Board Overstock na první pohled
   columns: 4
   stats:
-    - title: Výrobní centrum Čching-tao | založeno 2012
-      amount: 12 000 m²
-    - title: Modely s certifikací CE
-      amount: '64'
+    - title: Továrna Weihai | Založeno 2012
+      amount: 12,000 m²
+    - title: CE-Certifikované SUP modely
+      amount: '13'
     - title: Obsluhované země
       amount: 50+
     - title: Roční kapacita
-      amount: 15 000 kusů
+      amount: 15 000 jednotek
     - title: Systém kvality
       amount: ISO 9001:2015
     - title: Míra bezvadnosti
       amount: 99,3 % (AQL 2,5)
-    - title: Obchodní model
-      amount: OEM, ODM, Private Label
-    - title: Konformita
-      amount: CE, BSCI, REACH, UKCA
-
+    - title: Výprodejové úspory
+      amount: Až 60 % sleva
+    - title: Záruka
+      amount: 2letá záruka SUP
 content_customer_types:
   tagline: Koho obsluhujeme
-  title: 'Stavěno pro B2B kupující<br />— ne pro maloobchod'
-  subtitle: 'Paddle Board Overstock vyrábí pro čtyři typy zákazníků. Každý má jiné priority a my jim všem vyhovíme.'
+  title: Desky pro každého<br />Druh pádlera
+  subtitle: Ať už je to vaše první či padesátá lekce, existuje deska pro kanoi odpovídající tomu, jak pádlujete.
   items:
-    - title: 'Vlastníci značek / private label'
-      description: 'Návrh produktu na míru, grafika soukromých značek, dokumentace shody pod vaší značkou a vyhrazená inženýrská podpora od konceptu až po kontejner.'
-      icon: tabler:palette
-      cta: 'Požádat o nabídku OEM/ODM'
-      cta_href: /request-quotation
-    - title: 'Distributoři / velkoobchodníci'
-      description: 'Ochrana teritoria, konkurenceschopné velkoobchodní ceny, marketingové podpůrné sady, produktové školení a kompletní dokumentace shody pro váš trh.'
-      icon: tabler:world
-      cta: 'Žádat o dealerskou smlouvu'
-      cta_href: /dealers-distributors
-    - title: 'Resorty / půjčovny'
-      description: 'Komerční odolnost, poradenství při velikosti flotily, smíšené kontejnerové objednávky více modelů, strategie náhradních dílů a balíčky vybavení s brandem resortu.'
+    - title: Začátečníci
+      description: Extra široké, stabilní desky vhodné pro začátečníky, které usnadňují první lekci — většina začátečníků dokáže stát na desce během několika minut.
+      icon: tabler:swimming
+      cta: Nakupujte pro začátečníky SUPs
+      cta_href: /supboard
+    - title: Rodiny
+      description: Stabilní prkna, která může sdílet celá rodina, plus lehčí modely pro děti — vybavení, které se vejde do auta a nafoukne během několika minut.
       icon: tabler:beach
-      cta: 'Získat komerční balíček'
-      cta_href: /solutions/resorts
-    - title: 'Záchrana / vláda / profesionálové'
-      description: 'Konstrukce z Hypalonu/CSM, možnosti shody se SOLAS, certifikace pro konkrétní projekt, podpora dokumentace pro tendry a inženýrství chráněné NDA.'
-      icon: tabler:shield
-      cta: Probrat projekt
-      cta_href: /solutions/rescue-watercraft
-
+      cta: Nakupujte rodinné balíčky
+      cta_href: /products
+    - title: Turisté a fitness pádlery
+      description: Delší, rychlejší turistická prkna a jóga platformy s celou palubou pro pádlery, kteří zdolávají větší vzdálenosti.
+      icon: tabler:route
+      cta: Nakupujte turistická a jóga prkna
+      cta_href: /supboard
+    - title: Rybáři
+      description: Ultra-stabilní platformy s držáky na vybavení a prostorem pro chladič — házejte ze tiché, hladké paluby.
+      icon: tabler:lifebuoy
+      cta: Nakupujte rybářské SUPs
+      cta_href: /products
 features:
   id: features
-  tagline: Schopnosti OEM/ODM
-  title: 'Co získáte<br />s Paddle Board Overstockem'
-  subtitle: 'Přímý přístup k továrně s plnou inženýrskou, kvalitativní a compliance podporou — ne obchodní společnost.'
+  tagline: Proč nakupovat od Paddle Board Overstock
+  title: Skutečná továrna,<br />Skutečné úspory
+  subtitle: Přímý tovární přebytek a výprodejové SUP balíčky — certifikovaná kvalita bez maloobchodní marže.
   columns: 2
   items:
-    - title: Customizace OEM/ODM
-      description: 'Návrh trupu na míru, materiál trubek (PVC nebo Hypalon/CSM), rozložení konzoly, sezení, branding, barvy a balení. Od drobných úprav po kompletní custom inženýrství.'
-      icon: tabler:adjustments
-    - title: Nízké MOQ, rychlé vzorkování
-      description: 'RIB: 2-5 ks (existující forma). SUP: 5-10 ks na SKU. Vlastní formy: 200+ ks. Předprodukční vzorky s vaším brandingem do 7-14 dnů.'
+    - title: Až 60 % sleva z maloobchodní ceny
+      description: Prodáváme přímo tovární přebytek a výprodejové série — bez prostředníků, bez maloobchodní marže. Ta samá prkna, která se jinde prodávají za plnou cenu, tu jsou za výprodejové ceny.
       icon: tabler:rocket
-    - title: Kvalita připravená k výrobě
-      description: 'Každý kus tlakově testován na 1,25× jmenovitého PSI po dobu 24-48 hodin. Míra bezvadnosti 99,3 % dle AQL 2,5 / ISO 2859. 100bodová kontrolní lista na každý trup.'
+    - title: Kompletní balíčky
+      description: 'Každé SUP přichází jako kompletní balíček: prkno, cestovní batoh, ruční pumpa, nastavitelné pádlo, odnímatelná ploutev, spirálové vodítko a opravná sada.'
+      icon: tabler:clipboard-list
+    - title: Certifikovaná kvalita
+      description: 13 CE-certifikovaných SUP modelů dle příslušných směrnic EU. Každé prkno je 100% tlakově testováno při 1,25x nominálním PSI před odesláním. 99,3% bezvadná míra dle AQL 2.5.
       icon: tabler:certificate
-    - title: Kompletní dokumentace shody
-      description: 'CE dle 2013/53/EU (RCD), ISO 9001:2015 (SGS), sociální audit BSCI, shoda REACH, označení UKCA. DoC pro konkrétní model a data výrobního štítku zahrnuty.'
-      icon: tabler:file-certificate
-    - title: Dodací lhůta 30–45 dní
-      description: 'Standardní výroba 30-45 dní FOB Čching-tao. Prototypy 7-14 dní. Možná expresní výroba. Plány nakládky kontejnerů a ISPM-15 bednění zahrnuty.'
+    - title: Žádné MOQ — objednejte jedno prkno
+      description: Výprodej přebytků znamená, že jsou vítány objednávky jednotlivých kusů. Přidejte prkno do košíku, objednejte, hotovo. Žádné minimální množství, žádný proces nacenění.
+      icon: tabler:adjustments
+    - title: Rychlé celosvětové doručení
+      description: Objednávky skladem jsou odeslány z Weihai do 2-3 pracovních dnů. Sledované doručení do 50+ zemí v rámci EU, Severní Ameriky, Asie-Pacific a dalších.
       icon: tabler:truck-delivery
-    - title: Poprodejní servis a náhradní díly
-      description: '5letá záruka na čluny/kajaky/RIB, 2letá na SUP/příslušenství. Dodávky náhradních dílů s prioritní přepravou. Podpora při vyřizování záručních nároků.'
+    - title: 2letá záruka SUP
+      description: Každé SUP prkno a příslušenství má 2letou záruku — včetně drop-stitch švů, ventilů pro nafukování a příslušenství. Reklamace jsou řešeny během dní, ne týdnů.
       icon: tabler:lifebuoy
-
 content_categories:
-  tagline: Produktové kategorie
-  title: '5 kategorií,<br />64 modelů s certifikací CE'
-  subtitle: 'Od RIB tenderů 2,4 m po SUP boardy 15 ft — vše vyráběno v našem zařízení ISO 9001 v Čching-tau.'
+  tagline: Kategorie produktů
+  title: Jedna produktová řada,<br />Správně provedené
+  subtitle: Nafukovací SUP prkna a příslušenství — vše vyrobeno v našem Weihai ISO 9001 zařízení.
   items:
-    - title: RIB čluny
-      description: '2,4 m až 7,0 m s hliníkovými nebo GRP trupy. Trubky PVC nebo Hypalon/CSM. CE dle 2013/53/EU. Konfigurace pro hlídkování, potápění, záchranu a komerční použití.'
-      icon: tabler:sailboat
-      link: /oem-odm-rib-boats
-    - title: Nafukovací čluny
-      description: '2,0 m až 5,0 m s hliníkovým dnem, dnem z překližky nebo vzduchovým dnem. Modely pro rybolov, rekreaci a jako tender.'
-      icon: tabler:sailboat
-      link: /products
-    - title: 'SUP Boards'
-      description: '9 ft až 15 ft v 4palcové a 6palcové drop-stitch konstrukci. Modely all-round, touring, jógové a rybářské. Komerční provedení k dispozici.'
+    - title: SUP Desky
+      description: Všestranný nafukovací SUPs od 9 do 12 stop. Stabilní, odolný a vybavený pumpou, pádlem, vodítkem a batohem.
       icon: tabler:swimming
-      link: /products
-    - title: Kajaky
-      description: 'Nafukovací kajaky pro 1 až 3 osoby. Rekreační a touring modely s volitelným drop-stitch dnem.'
-      icon: tabler:kayak
-      link: /products
-    - title: Bezpečnostní příslušenství
-      description: 'Certifikované CE záchranné vesty, záchranná lana, opravné sady, pumpy a navigační světla. PFD schválené dle USCG Type III/V.'
+      link: /supboard
+    - title: Turné SUPs
+      description: Delší a rychlejší desky s obrysy pro jezera, řeky a pobřežní průzkum.
+      icon: tabler:route
+      link: /supboard
+    - title: Jóga a fitness SUPs
+      description: Extra široké, ultra-stabilní plošiny s celoplošnými podložkami na jógu a cvičení na vodě.
+      icon: tabler:users
+      link: /supboard
+    - title: Děti SUPs
+      description: Lehčí, kratší desky pro děti — drop-stitch stejná kvalita v balení vhodném pro děti.
       icon: tabler:lifebuoy
       link: /products
-
+    - title: Příslušenství
+      description: Pumpy, pádla, záchranné vesty, vodítka, opravárenské sady a náhradní díly pro každé prkno, které prodáváme.
+      icon: tabler:adjustments
+      link: /accessory
 content_workshop:
   isReversed: true
-  tagline: Silné stránky továrny
-  title: 'Výroba připravená k auditu<br />v Čching-tau'
+  tagline: Tovární pevnost
+  title: Proč naše výprodejové ceny<br />Jsou skuteční
   content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Závod ISO 9001 o rozloze 12 000 m² — skutečný výrobce, ne obchodní společnost</h3>
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Skutečná továrna, skutečné úspory — Každá deska je odesílána z našeho zařízení ve Weihai</h3>
   items:
-    - title: '6 vyhrazených výrobních linek'
-      description: 'Samostatné linky pro RIB, nafukovací čluny, SUP, kajaky, bezpečnostní vybavení a OEM/ODM. Každá s vlastními QC kontrolními body a plánováním výroby.'
-    - title: '100% tlakové testování'
-      description: 'Každá nafukovací komora natlakována na 1,25× jmenovitého PSI a držena 24-48 hodin. Výsledky testů navázány na sériové číslo trupu (HIN).'
-    - title: 'Sledovatelnost každého trupu'
-      description: 'Výrobní záznamy na úrovni HIN s 21+ datovými poli na trup: šarže materiálu, ID svářeče, výsledek tlakového testu, finální konfigurace a cíl dodání.'
+    - title: Stejné výrobní linky jako u hlavních značek
+      description: Naše továrna Weihai o rozloze 12 000 m² vyrábí desky pro mezinárodní značky a vlastní přebytkové dávky na stejných linkách se stejnými materiály.
+    - title: 100% tlaková zkouška
+      description: Každé prkno je natlakováno na hodnotu 1,25x PSI a drženo před odesláním. 99,3% bezvadná míra na AQL 2,5 / ISO 2859.
+    - title: Žádní prostředníci
+      description: Desky jsou dodávány přímo z továrny až k vašim dveřím. Žádná přirážka distributora, žádná maloobchodní přirážka — právě proto zůstává cena slevy až o 60 % nižší než maloobchodní.
   image:
     src: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/factory/paddleboardoverstock-production-department.webp
-    alt: Výrobní závod Paddle Board Overstock o rozloze 12 000 m² s certifikací ISO 9001 v Qingdao s výrobními linkami RIB
-
+    alt: Paddle Board Overstock Továrna Weihai o rozloze 12 000 m² s SUP výrobními linkami nafukovacích zařízení
 content_compliance:
-  tagline: Compliance a důkaz kvality
-  title: 'Zdokumentované důkazy,<br />ne jen tvrzení'
-  subtitle: 'Každé tvrzení o shodě je podloženo dokumentací pro konkrétní model, kterou si můžete ověřit.'
+  tagline: Shoda a důkazy kvality
+  title: Certifikovaná kvalita,<br />Dokumentováno
+  subtitle: Každý nárok na dodržování předpisů je podložen certifikáty a dokumentací specifickou pro model, která je k dispozici pro vaše ověření.
   items:
-    - title: 'ISO 9001:2015 (SGS)'
-      description: 'Systém managementu kvality certifikován TÜV Rheinland/SGS. Roční dohledové audity. Zdokumentované QC procesy od příchozího materiálu po uvolnění zásilky.'
+    - title: ISO 9001:2015
+      description: Systém řízení kvality certifikovaný TÜV společností Rheinland/SGS. Roční kontrolní audity. Dokumentované procesy kontroly kvality od příchozího materiálu až po uvolnění zásilky.
       icon: tabler:certificate
-    - title: 'CE dle 2013/53/EU (RCD)'
-      description: '64 modelů s prohlášeními o shodě pro konkrétní model. Posuzování shody dle příslušných modulů. Registrace HIN a data výrobního štítku pro každý trup.'
+    - title: CE Certifikováno
+      description: 13 CE-certifikovaných SUP modelů podle příslušných směrnic EU, každý s modelově specifickým prohlášením o shodě a údaji na výrobní značce.
       icon: tabler:file-certificate
-    - title: 'Sociální shoda BSCI'
-      description: 'Roční audit BSCI od SGS. Ověřené etické pracovní postupy, bezpečnost na pracovišti a environmentální management v celém našem závodě.'
-      icon: tabler:users
-    - title: 'REACH & UKCA'
-      description: 'Veškeré materiály PVC a lepidla splňují nařízení EU REACH. Označení UKCA k dispozici pro britský trh. Bezpečnostní listy materiálů na vyžádání.'
+    - title: REACH & UKCA
+      description: Všechny PVC a lepicí materiály splňují předpisy EU REACH .UKCA Označení dostupné pro britský trh. Bezpečnostní listy materiálů na vyžádání.
       icon: tabler:shield-check
-
+    - title: 2letá záruka SUP
+      description: SUP Každá deska a příslušenství byly kryty na 2 roky — drop-stitch včetně švů, nafukovacích ventilů a příslušenství. Nároky byly vyřešeny rychle.
+      icon: tabler:lifebuoy
 steps:
-  title: 'Proces OEM/ODM — od zadání po kontejner'
+  title: Od pokladny k vodě — jak je vaše objednávka odeslána
   items:
-    - title: 'Krok 1: <span class="font-medium">Požadavky</span>'
-      description: 'Sdílejte specifikace produktu, cílový trh, množství a požadavky na shodu. Náš inženýrský tým je posoudí do 48 hodin.'
-      icon: tabler:file-text
-    - title: 'Krok 2: <span class="font-medium">Nabídka</span>'
-      description: 'Obdržíte detailní nabídku se specifikacemi, materiálovými volbami, MOQ, cenami, dodací lhůtou a rozsahem shody pro váš trh.'
+    - title: Krok 1:<span class="font-medium">Vyberte si svou desku</span>
+      description: Vyberte si z modelů all-around, touring, yoga a pro děti. Naše nákupní průvodce vám pomohou sladit velikost a styl desky s vaším pádlováním.
       icon: tabler:clipboard-list
-    - title: 'Krok 3: <span class="font-medium">Prototyp</span>'
-      description: 'Předprodukční vzorek s vaším brandingem do 7-14 dnů. Kompletní testování kvality na 1,25× jmenovitého tlaku. Cena vzorku započítána do výroby.'
+    - title: Krok 2:<span class="font-medium">Bezpečný pokladna</span>
+      description: Plaťte bezpečně přes Stripe nebo PayPal. Přijímáme všechny hlavní kreditní a debetní karty. Není potřeba účet — potvrzení objednávky dorazí do vaší e-mailové schránky.
+      icon: tabler:file-text
+    - title: Krok 3:<span class="font-medium">Kontrola kvality</span>
+      description: Každá deska je 100 % testována tlakem při 1,25násobku jmenovité hodnoty PSI a kontrolována podle kompletního kontrolního seznamu kvality, než je zabalená.
       icon: tabler:settings
-    - title: 'Krok 4: <span class="font-medium">Výroba</span>'
-      description: 'Výroba 30-45 dní FOB Čching-tao po schválení vzorku. Průběžné QC kontroly, tlakové testy a 100bodová finální kontrola každého kusu.'
+    - title: Krok 4:<span class="font-medium">Rychlé odeslání</span>
+      description: Objednávky skladem jsou odesílány z naší továrny ve Weihai během 2-3 pracovních dnů. Pro naléhavé objednávky je k dispozici expresní vyřízení.
       icon: tabler:building-factory
-    - title: 'Krok 5: <span class="font-medium">Dodání</span>'
-      description: 'Plán nakládky kontejneru, ISPM-15 dřevěné bednění, balíček dokumentace shody a přeprava FOB Čching-tao s kompletními exportními dokumenty.'
+    - title: Krok 5:<span class="font-medium">Doručení s možností sledování</span>
+      description: Sledované celosvětové zasílání do 50+ zemí. Vaše dvouletá záruka a pohotová poprodejní podpora začínají od dne, kdy vaše deska dorazí.
       icon: tabler:truck-delivery
   image:
     src: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/hero/production-dept.webp
-    alt: Výrobní proces OEM/ODM nafukovacích člunů Paddle Board Overstocku od designu po expedici v kontejnerech
-
+    alt: Paddle Board Overstock SUP proces objednávky od zabezpečeného pokladního procesu po sledované doručení po celém světě
 blog_latest:
-  title: Oborové a technické poznatky
+  title: SUP Průvodce a technické poznatky
   information: |
-    Průvodci shodou RCD, články o procesu OEM/ODM, srovnání materiálů
-    a zdroje pro inspekce továrny od inženýrského týmu Paddle Board Overstock.
-
+    Průvodci nákupem, technika pádlování, nezbytnosti pro bezpečnost a konstrukce
+    výzkum od týmu Paddle Board Overstock.
 faqs:
-  title: B2B nákupy — časté otázky
-  subtitle: 'Časté otázky značek, distributorů a komerčních provozovatelů ohledně výroby OEM/ODM s Paddle Board Overstockem.'
+  title: SUP Objednávání a FAQ o produktech
+  subtitle: Běžné otázky ohledně našich výprodejových SUP desek, objednávání, platby, dopravy a záruky.
   columns: 2
   items:
-    - title: Jste výrobce, nebo obchodní společnost?
-      description: 'Jsme vertikálně integrovaná továrna s plnou kontrolou kvality, materiálů a dodacích lhůt. Živnostenský list a rozsah výroby ověřitelný při auditu továrny.'
-      icon: tabler:building-factory
-      category: all
-    - title: Jak vypadá váš proces OEM/ODM?
-      description: 'Posouzení požadavků (48 h), nabídka, prototyp (7-14 dní), výroba (30-45 dní FOB Čching-tao). Kompletní inženýrská podpora, dokumentace shody a sledovatelnost každého trupu.'
-      icon: tabler:route
-      category: all
-    - title: Jaké jsou vaše požadavky na MOQ?
-      description: 'RIB čluny: 2-5 ks na model (existující forma), 200+ pro vlastní formy. SUP boardy: 5-10 ks na SKU. Smíšené kontejnerové objednávky více modelů k dispozici. Vzorkovací objednávky 2-5 ks pro ověření.'
-      icon: tabler:sort-ascending
-      category: all
-    - title: Jaké možnosti customizace jsou k dispozici?
-      description: 'Návrh trupu, materiál trubek (PVC nebo Hypalon/CSM), průměr trubek, rozložení konzoly, sezení, řízení, palivový systém, rozložení paluby, barvy značky, grafiky loga, design EVA podložek, maloobchodní balení a branding manuálů.'
+    - title: Je těžké se naučit SUP?
+      description: Vůbec ne. Většina začátečníků vstane a pádluje během své první lekce. Naše všestranné desky SUP mají extra široké stabilní platformy navržené speciálně pro začínající pádlaře. Začněte na klidné vodě a během několika minut budete plachtit.
+      icon: tabler:swimming
+      category: sup
+    - title: Jaký je hmotnostní limit?
+      description: Naše všestranná SUPs podpírá až 220 lb a platformy pro turistiku a jógu podporují až 250 lb. Každá stránka produktu uvádí přesnou nosnost jezdce, abyste mohli desku přizpůsobit svým potřebám.
       icon: tabler:adjustments
-      category: all
-    - title: Jaké dokumenty shody můžete poskytnout pro můj trh?
-      description: 'CE DoC dle 2013/53/EU, označení UKCA, certifikát ISO 9001 (SGS), zpráva z auditu BSCI, shoda REACH, zprávy z testů materiálů, protokoly tlakových testů a data výrobních štítků pro konkrétní model. Dokumentace pro konkrétní trh na vyžádání.'
-      icon: tabler:file-certificate
-      category: all
-    - title: Jaká je dodací lhůta vzorkování a výroby?
-      description: 'Předprodukční vzorky: 7-14 pracovních dnů. Standardní výroba: 30-45 dní FOB Čching-tao. Expresní výroba za příplatek. V horní sezoně (březen-červen) se lhůty mohou prodloužit.'
-      icon: tabler:clock
-      category: all
-    - title: Mohu si domluvit audit továrny nebo živou video prohlídku?
-      description: 'Ano. Audity továrny na místě v našem závodě v Čching-tau vítáme s 3-5denním předstihem. Živé video prohlídky přes WhatsApp/Zoom okamžitě k dispozici. Inspekce třetích stran (SGS, BV, TÜV) umožňujeme.'
-      icon: tabler:video
-      category: all
-    - title: Jaké kontroly kvality proběhnou před odesláním?
-      description: 'Tlakový test na 1,25× jmenovitého tlaku (24-48 h), test pevnosti švů v ohybu, 100bodová finální kontrolní lista, kontrola rozměrů, kontrola vzhledu, ověření dokumentace shody a kontrola integrity balení. Vše dle procedur ISO 9001.'
-      icon: tabler:clipboard-check
-      category: all
-
+      category: sup
+    - title: Mohu cestovat s nafukovadlem SUP?
+      description: Rozhodně. Každá Paddle Board Overstock deska se vejde do batohu velikosti přenášecího pouzdra. Váží pouhých 18–22 lb, takže se snadno přenáší na pláž, k jezeru nebo přes letištní terminály. Před cestou si zkontrolujte zásady přepravy zavazadel vaší letecké společnosti.
+      icon: tabler:truck-delivery
+      category: sup
+    - title: Co je v krabici?
+      description: Každý Paddle Board Overstock SUP zahrnuje desku, cestovní batoh, ruční pumpu, nastavitelnou pádl, odnímatelnou ploutev, spirálové vodítko a opravný kit.
+      icon: tabler:clipboard-list
+      category: sup
+    - title: Proč jsou vaše ceny nižší než v maloobchodě?
+      description: Prodáváme přebytečné zásoby z výroby a vyřazené série přímo z našeho výrobního závodu v Weihai, Čína — bez zprostředkovatelů, bez maloobchodní přirážky. To znamená kompletní SUP balíčky až se 60% slevou z běžných maloobchodních cen, se stejnou kvalitou certifikovanou CE.
+      icon: tabler:certificate
+      category: orders
+    - title: Jak mohu objednat a zaplatit?
+      description: Přidejte svůj SUP balíček do košíku a bezpečně zaplaťte přes Stripe nebo PayPal. Přijímáme všechny hlavní kreditní a debetní karty. Každá objednávka je potvrzena e-mailem s úplnou fakturou.
+      icon: tabler:file-text
+      category: orders
+    - title: Doručujete do celého světa?
+      description: Ano. Doručujeme do 50+ zemí v EU, Severní Americe, Asii a Tichomoří, na Střední východ a do Afriky. Objednávky na skladě jsou obvykle odesílány během 2-3 pracovních dnů a sledovací číslo je poskytnuto pro každý balík.
+      icon: tabler:route
+      category: orders
+    - title: Jakou záruku mají SUP desky?
+      description: 'Každá SUP deska a příslušenství je kryto dvouletou zárukou — včetně samotné desky, drop-stitch švů a ventilů pro nafouknutí. Reklamace jsou vyřízeny během několika dní, nikoli týdnů: podání probíhá online a my opravíme nebo vyměníme.'
+      icon: tabler:lifebuoy
+      category: orders
 cta:
   title: |
-    Připraveni spustit svou<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">lodní produktovou řadu?</span>
-  subtitle: 'Získejte nabídku přímo od výrobce se specifikacemi, MOQ, dodací lhůtou a rozsahem shody pro váš trh.'
+    Připraveni chytit<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">vlnu výprodeje?</span>
+  subtitle: Nakupujte přímo z výroby SUP balíčky se slevou až 60 % z maloobchodní ceny — se dvouletou zárukou a celosvětovým doručením.
   actions:
     - variant: primary
-      text: Vyžádat nabídku OEM/ODM
-      href: /request-quotation
-      icon: tabler:file-text
-    - text: Rezervovat video prohlídku továrny
+      text: Nakupujte výprodej
+      href: /supboard
+      icon: tabler:rocket
+    - text: Kontaktujte nás
       href: /contact
-      icon: tabler:video
+      icon: tabler:file-text
