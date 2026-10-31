@@ -1,0 +1,140 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+import { SITE, waLink } from '../config';
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Can I mix lots in one container?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes — mixed-lot containers are standard practice. The portal stowage simulator lets you combine lots and check pallet positions, CBM and weight against real container specs before you ask for the quote.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you offer open account or credit terms?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'No. No open account (O/A) and no usance L/C. Liquidation stock is bought with cash discipline: deposit, then balance before dispatch or against B/L copy.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What if the lot sells out before my deposit?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'If a confirmed lot becomes unavailable before dispatch, you switch to an equivalent lot or take a full refund of amounts paid. Until your deposit lands, though, the lot stays on the market — that is why allocations move fast.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can you relabel or rebrand for me?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'We sell de-branded stock in neutral cartons. We can apply your ship-to marks, and manual/label replacement can be discussed per lot — but we do not manufacture or print new branding, and no original-brand warranty applies.',
+      },
+    },
+  ],
+};
+---
+
+<Layout
+  title="How to Buy SUP Stocklots — 5 Steps from RFQ to Container"
+  path="/how-to-buy/"
+  description="How buying SUP stocklots works: send an RFQ, get a formal quotation with tier pricing, verify with third-party inspection, pay the deposit to lock your allocation, and dispatch in 3–5 business days."
+>
+  <PageHero
+    eyebrow="Process"
+    title="How to Buy — From RFQ to Container in 5 Steps"
+    subtitle="No cart, no checkout, no automation theater. Stocklot buying is a conversation: you tell us what you need, we quote formally, you verify before you pay, and the goods move fast once locked."
+  >
+    <div class="flex flex-wrap gap-4">
+      <a href={waLink('Hi, I would like to start a purchase. Here is what I am looking for: ...')} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-xl bg-[#25D366] px-6 py-3.5 font-semibold text-slate-950 transition hover:bg-[#1ebe5b]">Start step 1 now</a>
+      <a href="/contact/" class="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-900/60 px-6 py-3.5 font-semibold text-slate-100 transition hover:border-teal-400/50 hover:text-teal-300">Use the RFQ form</a>
+    </div>
+  </PageHero>
+
+  <section class="border-b border-slate-800/80">
+    <div class="mx-auto max-w-4xl px-4 py-16 sm:px-6">
+      <ol class="space-y-10">
+        <li class="relative border-l-2 border-slate-800 pl-8 sm:pl-10">
+          <span class="absolute -left-[15px] flex h-7 w-7 items-center justify-center rounded-full bg-teal-400 text-sm font-bold text-slate-950">1</span>
+          <h2 class="text-xl font-bold text-slate-100">Send your RFQ</h2>
+          <p class="mt-2 leading-relaxed text-slate-400">
+            Tell us the lot ID(s) and target quantity, your destination market, and your business type (retail,
+            rental, school, distributor). WhatsApp or the RFQ form — both reach the same sales desk. Small-batch
+            buyers: 10 boards / 1 pallet is the floor.
+          </p>
+        </li>
+        <li class="relative border-l-2 border-slate-800 pl-8 sm:pl-10">
+          <span class="absolute -left-[15px] flex h-7 w-7 items-center justify-center rounded-full bg-teal-400 text-sm font-bold text-slate-950">2</span>
+          <h2 class="text-xl font-bold text-slate-100">Receive a formal quotation</h2>
+          <p class="mt-2 leading-relaxed text-slate-400">
+            Within one business day: pro-forma invoice with tier pricing for your quantity, carton data, a container
+            or LCL loading plan, and indicative freight. Verified buyers get access to the inventory portal —
+            branded photos, packing lists and barcode ranges for the lots under discussion.
+          </p>
+        </li>
+        <li class="relative border-l-2 border-slate-800 pl-8 sm:pl-10">
+          <span class="absolute -left-[15px] flex h-7 w-7 items-center justify-center rounded-full bg-teal-400 text-sm font-bold text-slate-950">3</span>
+          <h2 class="text-xl font-bold text-slate-100">Verify before you commit</h2>
+          <p class="mt-2 leading-relaxed text-slate-400">
+            Appoint SGS, BV, TÜV or any third-party inspector at our Qingdao warehouse (your cost), or visit
+            yourself. We provide carton access, sampling and container loading supervision. Every board already
+            passed the 72-hour pressure test — inspection is your independent confirmation.
+          </p>
+        </li>
+        <li class="relative border-l-2 border-slate-800 pl-8 sm:pl-10">
+          <span class="absolute -left-[15px] flex h-7 w-7 items-center justify-center rounded-full bg-teal-400 text-sm font-bold text-slate-950">4</span>
+          <h2 class="text-xl font-bold text-slate-100">Pay the deposit, lock your allocation</h2>
+          <p class="mt-2 leading-relaxed text-slate-400">
+            <strong class="text-slate-200">{SITE.paymentTerms}</strong> Allocations are held for
+            {' '}{SITE.allocationHoldDays} days from the pro-forma invoice. Lots are finite — stock moves in order of
+            deposit received, and a low-stock lot can be gone in days. The deposit is non-refundable because we pull
+            the lot off the market for you.
+          </p>
+        </li>
+        <li class="relative border-l-2 border-slate-800 pl-8 sm:pl-10">
+          <span class="absolute -left-[15px] flex h-7 w-7 items-center justify-center rounded-full bg-teal-400 text-sm font-bold text-slate-950">5</span>
+          <h2 class="text-xl font-bold text-slate-100">Dispatch &amp; documents</h2>
+          <p class="mt-2 leading-relaxed text-slate-400">
+            {SITE.dispatchWindow}. Balance payment before dispatch (or against B/L copy for established buyers). We
+            load under supervision if you appoint it, seal the container, and release the full document set. Neutral
+            export cartons throughout.
+          </p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="border-b border-slate-800/80 bg-slate-900/40">
+    <div class="mx-auto max-w-4xl px-4 py-16 sm:px-6">
+      <h2 class="text-2xl font-bold tracking-tight text-slate-50">Questions buyers always ask</h2>
+      <div class="mt-8 space-y-4">
+        <details class="rounded-2xl border border-slate-800 bg-slate-900/50 p-5" open>
+          <summary class="cursor-pointer font-semibold text-slate-100">Can I mix lots in one container?</summary>
+          <p class="mt-2 text-sm leading-relaxed text-slate-400">Yes — mixed-lot containers are standard practice. The portal stowage simulator lets you combine lots and check pallet positions, CBM and weight against real container specs before you ask for the quote.</p>
+        </details>
+        <details class="rounded-2xl border border-slate-800 bg-slate-900/50 p-5">
+          <summary class="cursor-pointer font-semibold text-slate-100">Do you offer open account or credit terms?</summary>
+          <p class="mt-2 text-sm leading-relaxed text-slate-400">No. No open account (O/A) and no usance L/C. Liquidation stock is bought with cash discipline: deposit, then balance before dispatch or against B/L copy.</p>
+        </details>
+        <details class="rounded-2xl border border-slate-800 bg-slate-900/50 p-5">
+          <summary class="cursor-pointer font-semibold text-slate-100">What if the lot sells out before my deposit?</summary>
+          <p class="mt-2 text-sm leading-relaxed text-slate-400">If a confirmed lot becomes unavailable before dispatch, you switch to an equivalent lot or take a full refund of amounts paid. Until your deposit lands, though, the lot stays on the market — that is why allocations move fast.</p>
+        </details>
+        <details class="rounded-2xl border border-slate-800 bg-slate-900/50 p-5">
+          <summary class="cursor-pointer font-semibold text-slate-100">Can you relabel or rebrand for me?</summary>
+          <p class="mt-2 text-sm leading-relaxed text-slate-400">We sell de-branded stock in neutral cartons. We can apply your ship-to marks, and manual/label replacement can be discussed per lot — but we do not manufacture or print new branding, and no original-brand warranty applies.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+</Layout>

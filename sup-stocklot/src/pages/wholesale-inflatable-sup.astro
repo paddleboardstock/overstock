@@ -1,0 +1,110 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+import LotCard from '../components/LotCard.astro';
+import { waLink } from '../config';
+import { STOCKLOTS } from '../data/stocklots';
+
+const images = ['/img/detail-valve.svg', '/img/detail-deck.svg', '/img/detail-seam.svg', '/img/detail-dring.svg'];
+const lots = STOCKLOTS.filter((l) => l.type !== 'accessories');
+---
+
+<Layout
+  title="Wholesale Inflatable SUP Boards — Bulk Pricing FOB Qingdao"
+  path="/wholesale-inflatable-sup/"
+  description="Wholesale inflatable SUP boards for retailers, importers and resellers. Bulk paddle board lots from 50 pcs, tiered FOB Qingdao pricing, mixed lots and full-lot take-all deals. Neutral export packing."
+>
+  <PageHero
+    eyebrow="Wholesale channel · dealer-tier pricing"
+    title="Wholesale Inflatable SUP Boards &amp; Bulk Stock"
+    subtitle="Dealer-tier FOB pricing on bulk inflatable paddle board lots — from single-pallet orders to full 40HQ take-alls. Mixed lots, uniform models for retail ranges, and neutral export packing ready for your own branding."
+  >
+    <div class="flex flex-wrap gap-4">
+      <a
+        href={waLink('Hi, I am a retailer/importer interested in wholesale inflatable SUP pricing. Please send your dealer price list.')}
+        target="_blank" rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 rounded-xl bg-[#25D366] px-6 py-3.5 font-semibold text-slate-950 transition hover:bg-[#1ebe5b]"
+      >
+        Get the wholesale price list
+      </a>
+      <a
+        href="/available-sup-stock/"
+        class="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-900/60 px-6 py-3.5 font-semibold text-slate-100 transition hover:border-teal-400/50 hover:text-teal-300"
+      >
+        Browse stock
+      </a>
+    </div>
+  </PageHero>
+
+  <section class="border-b border-slate-800/80">
+    <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6">
+      <h2 class="text-2xl font-bold tracking-tight text-slate-50 sm:text-3xl">Bulk lots ready for resale channels</h2>
+      <p class="mt-2 max-w-2xl text-slate-400">
+        Board lots only — accessory sets are listed separately in the catalog. All prices FOB Qingdao, USD per unit.
+      </p>
+      <div class="mt-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
+        {lots.map((lot, i) => <LotCard lot={lot} image={images[i % images.length]} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="border-b border-slate-800/80 bg-slate-900/40">
+    <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6">
+      <h2 class="text-2xl font-bold tracking-tight text-slate-50 sm:text-3xl">How wholesale buying works here</h2>
+      <div class="mt-8 grid gap-6 md:grid-cols-3">
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
+          <p class="font-semibold text-slate-100">Tiered dealer pricing</p>
+          <p class="mt-2 text-sm leading-relaxed text-slate-400">
+            Every lot lists quantity tiers (e.g. 50 / 100 / 200+ pcs). The bigger the allocation, the lower the unit
+            price. Full-lot take-all deals get an additional negotiated rate — ask for the take-all price on any lot.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
+          <p class="font-semibold text-slate-100">Mixed lots &amp; uniform models</p>
+          <p class="mt-2 text-sm leading-relaxed text-slate-400">
+            Building a retail range? Combine lots in one container — all-around and touring shapes in one shipment,
+            or a uniform model repeat order. Mixed-lot enquiries are welcome and quoted per combination.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
+          <p class="font-semibold text-slate-100">Neutral export packing</p>
+          <p class="mt-2 text-sm leading-relaxed text-slate-400">
+            Boards ship in neutral export-grade cartons without original brand marks or barcodes — ready for your
+            own labels, inserts and retail prep. De-branded stock, sold with no brand warranty.
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-10 grid gap-6 md:grid-cols-2">
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
+          <p class="font-semibold text-slate-100">Container economics</p>
+          <p class="mt-2 text-sm leading-relaxed text-slate-400">
+            Typical palletized loading: ~120 boards per 20GP, ~288 per 40HQ (lot-dependent). Every lot page has a
+            live calculator for cartons, pallets, CBM and estimated FOB value — plan your landed cost before you quote us.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
+          <p class="font-semibold text-slate-100">Resale margin honesty</p>
+          <p class="mt-2 text-sm leading-relaxed text-slate-400">
+            These are liquidation prices on cancelled-order and surplus stock — not a permanent supply line. When a
+            lot sells out, it is gone. We never promise restocks of a specific lot; we can tell you what is available today.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-b border-slate-800/80">
+    <div class="mx-auto max-w-3xl px-4 py-16 text-center sm:px-6">
+      <h2 class="text-2xl font-bold tracking-tight text-slate-50">Ready to price your allocation?</h2>
+      <p class="mt-3 text-slate-400">
+        Send us the lot ID(s) and target quantity — you will receive a formal quotation with tier pricing, carton
+        data and a container plan within one business day.
+      </p>
+      <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+        <a href={waLink('Hi, please send me the wholesale price list for your current SUP stocklots.')} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-xl bg-[#25D366] px-6 py-3.5 font-semibold text-slate-950 transition hover:bg-[#1ebe5b]">WhatsApp the sales desk</a>
+        <a href="/contact/" class="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-900/60 px-6 py-3.5 font-semibold text-slate-100 transition hover:border-teal-400/50 hover:text-teal-300">Submit a quote request</a>
+      </div>
+    </div>
+  </section>
+</Layout>

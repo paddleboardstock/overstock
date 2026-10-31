@@ -1,0 +1,107 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+import LotCard from '../components/LotCard.astro';
+import { STOCKLOTS } from '../data/stocklots';
+
+const detailShots = [
+  '/img/detail-valve.svg',
+  '/img/detail-deck.svg',
+  '/img/detail-seam.svg',
+  '/img/detail-dring.svg',
+];
+
+const totalAvailable = STOCKLOTS.reduce((sum, lot) => sum + lot.availableQty, 0);
+---
+
+<Layout
+  title="Available Inflatable SUP Stock — Live Stocklot Catalog"
+  path="/available-sup-stock/"
+  description={`All current inflatable SUP stocklots: ${totalAvailable}+ boards and accessory sets available FOB Qingdao. Filter by type, grade and status. Live quantities, tiered pricing, 72-hour pressure QC.`}
+>
+  <PageHero
+    eyebrow={`${STOCKLOTS.length} active lots · ${totalAvailable.toLocaleString('en-US')} pcs in stock`}
+    title="Available Inflatable SUP Stock"
+    subtitle="Every lot below is physically in our Qingdao warehouse. Quantities are verified at publication and re-confirmed before we issue a pro-forma invoice. Filter by board type, grade and stock status."
+  />
+
+  <section class="border-b border-slate-800/80">
+    <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6">
+      <!-- Filters -->
+      <div class="flex flex-wrap items-center gap-x-6 gap-y-3 rounded-2xl border border-slate-800 bg-slate-900/50 p-5 text-sm">
+        <div class="flex items-center gap-2">
+          <span class="font-medium text-slate-400">Type:</span>
+          <button data-filter-group="type" data-filter-value="all" class="filter-btn rounded-lg bg-teal-400 px-3 py-1.5 font-semibold text-slate-950">All</button>
+          <button data-filter-group="type" data-filter-value="all-around" class="filter-btn rounded-lg border border-slate-700 px-3 py-1.5 text-slate-300">All-Around</button>
+          <button data-filter-group="type" data-filter-value="touring" class="filter-btn rounded-lg border border-slate-700 px-3 py-1.5 text-slate-300">Touring</button>
+          <button data-filter-group="type" data-filter-value="accessories" class="filter-btn rounded-lg border border-slate-700 px-3 py-1.5 text-slate-300">Accessories</button>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="font-medium text-slate-400">Grade:</span>
+          <button data-filter-group="grade" data-filter-value="all" class="filter-btn rounded-lg bg-teal-400 px-3 py-1.5 font-semibold text-slate-950">All</button>
+          <button data-filter-group="grade" data-filter-value="A" class="filter-btn rounded-lg border border-slate-700 px-3 py-1.5 text-slate-300">A — new</button>
+          <button data-filter-group="grade" data-filter-value="B" class="filter-btn rounded-lg border border-slate-700 px-3 py-1.5 text-slate-300">B — cosmetic seconds</button>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="font-medium text-slate-400">Status:</span>
+          <button data-filter-group="status" data-filter-value="all" class="filter-btn rounded-lg bg-teal-400 px-3 py-1.5 font-semibold text-slate-950">All</button>
+          <button data-filter-group="status" data-filter-value="available" class="filter-btn rounded-lg border border-slate-700 px-3 py-1.5 text-slate-300">Available</button>
+          <button data-filter-group="status" data-filter-value="low" class="filter-btn rounded-lg border border-slate-700 px-3 py-1.5 text-slate-300">Low stock</button>
+          <button data-filter-group="status" data-filter-value="reserved" class="filter-btn rounded-lg border border-slate-700 px-3 py-1.5 text-slate-300">Reserved</button>
+        </div>
+      </div>
+
+      <p id="catalog-count" class="mt-6 text-sm text-slate-400" aria-live="polite">
+        Showing {STOCKLOTS.length} of {STOCKLOTS.length} lots
+      </p>
+
+      <div id="catalog-grid" class="mt-6 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+        {STOCKLOTS.map((lot, i) => <LotCard lot={lot} image={detailShots[i % detailShots.length]} />)}
+      </div>
+
+      <p class="mt-10 max-w-2xl text-sm text-slate-500">
+        Quantities change daily as allocations are confirmed. A lot is only locked for you once the deposit
+        stated on your pro-forma invoice is received. Sold-out lots keep their pages for reference — we do not
+        delete stock history.
+      </p>
+    </div>
+  </section>
+
+  <script>
+    const state: Record<string, string> = { type: 'all', grade: 'all', status: 'all' };
+    const cards = Array.from(document.querySelectorAll<HTMLElement>('[data-lot-card]'));
+    const countEl = document.getElementById('catalog-count');
+    const buttons = Array.from(document.querySelectorAll<HTMLButtonElement>('.filter-btn'));
+
+    function applyFilters(): void {
+      let visible = 0;
+      for (const card of cards) {
+        const type = card.dataset.lotType ?? 'all';
+        const grade = card.dataset.lotGrade ?? 'all';
+        const status = card.dataset.lotStatus ?? 'all';
+        const show =
+          (state.type === 'all' || state.type === type) &&
+          (state.grade === 'all' || state.grade === grade) &&
+          (state.status === 'all' || state.status === status);
+        card.classList.toggle('hidden', !show);
+        if (show) visible++;
+      }
+      if (countEl) countEl.textContent = `Showing ${visible} of ${cards.length} lots`;
+    }
+
+    for (const btn of buttons) {
+      btn.addEventListener('click', () => {
+        const group = btn.dataset.filterGroup ?? '';
+        const value = btn.dataset.filterValue ?? 'all';
+        state[group] = value;
+        for (const other of buttons) {
+          const active = other.dataset.filterGroup === group && other.dataset.filterValue === value;
+          other.className = active
+            ? 'filter-btn rounded-lg bg-teal-400 px-3 py-1.5 font-semibold text-slate-950'
+            : 'filter-btn rounded-lg border border-slate-700 px-3 py-1.5 text-slate-300';
+        }
+        applyFilters();
+      });
+    }
+  </script>
+</Layout>

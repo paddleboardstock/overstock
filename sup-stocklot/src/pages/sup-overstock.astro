@@ -1,0 +1,81 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+import LotCard from '../components/LotCard.astro';
+import { waLink } from '../config';
+import { STOCKLOTS } from '../data/stocklots';
+
+const images = ['/img/detail-valve.svg', '/img/detail-deck.svg', '/img/detail-seam.svg', '/img/detail-dring.svg'];
+const clearanceLots = STOCKLOTS.filter((l) => l.id !== 'SL-06');
+---
+
+<Layout
+  title="SUP Overstock & Clearance Stock — Cancelled-Order Lots"
+  path="/sup-overstock/"
+  description="Inflatable SUP overstock, surplus and clearance stocklots: cancelled brand orders and surplus production runs at liquidation FOB Qingdao prices. Honest grading, 72-hour pressure QC, sold AS-IS."
+>
+  <PageHero
+    eyebrow="Liquidation channel · while lots last"
+    title="SUP Overstock &amp; Clearance Stock"
+    subtitle="What you see here is real overstock: cancelled brand orders, surplus production runs and cosmetic-second lots — priced to move. Liquidation pricing means honest grading, verified quantities and AS-IS terms. When a lot is gone, it is gone."
+  >
+    <div class="flex flex-wrap gap-4">
+      <a href="#clearance" class="inline-flex items-center gap-2 rounded-xl bg-teal-400 px-6 py-3.5 font-semibold text-slate-950 transition hover:bg-teal-300">See clearance lots</a>
+      <a href={waLink('Hi, I am looking at your SUP overstock / clearance lots. Which lots are most urgent to move?')} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-xl bg-[#25D366] px-6 py-3.5 font-semibold text-slate-950 transition hover:bg-[#1ebe5b]">Ask what is most urgent</a>
+    </div>
+  </PageHero>
+
+  <section class="border-b border-slate-800/80 bg-slate-900/40">
+    <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6">
+      <div class="grid gap-6 md:grid-cols-3">
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
+          <p class="font-semibold text-slate-100">Overstock / surplus</p>
+          <p class="mt-2 text-sm leading-relaxed text-slate-400">
+            Brand-new boards left over after cancelled orders or surplus production — first quality, complete sets,
+            factory-sealed. Priced well below regular wholesale because we need the warehouse space and the cash flow.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
+          <p class="font-semibold text-slate-100">Clearance / cosmetic seconds</p>
+          <p class="mt-2 text-sm leading-relaxed text-slate-400">
+            Grade B lots with minor cosmetic marks — deck print irregularities or rail finish blemishes. 100% airtight:
+            every board passes the same 72-hour pressure test as Grade A. The deepest discounts on the site.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
+          <p class="font-semibold text-slate-100">AS-IS, honestly</p>
+          <p class="mt-2 text-sm leading-relaxed text-slate-400">
+            No brand warranty, no returns, no fake reference prices. What we guarantee: honest grading, accurate
+            manifests, the 72-hour pressure QC and the right to inspect everything before you pay the balance.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="clearance" class="border-b border-slate-800/80">
+    <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6">
+      <h2 class="text-2xl font-bold tracking-tight text-slate-50 sm:text-3xl">Current overstock &amp; clearance lots</h2>
+      <div class="mt-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+        {clearanceLots.map((lot, i) => <LotCard lot={lot} image={images[i % images.length]} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="border-b border-slate-800/80 bg-slate-900/40">
+    <div class="mx-auto max-w-3xl px-4 py-16 text-center sm:px-6">
+      <h2 class="text-2xl font-bold tracking-tight text-slate-50">Why the prices are this low</h2>
+      <p class="mt-3 text-slate-400">
+        Cancelled orders leave factories with finished goods nobody contracted to buy. We buy those lots at
+        distressed prices, pressure-test every board and move them fast. You are buying the same constructions
+        that retail for several times our FOB price — without the brand, the warranty or the marketing budget.
+      </p>
+      <p class="mt-3 text-sm text-slate-500">
+        Quantities are per-lot and finite. Low-stock lots are allocated in order of deposit received.
+      </p>
+      <div class="mt-8">
+        <a href="/available-sup-stock/" class="inline-flex items-center gap-2 rounded-xl bg-teal-400 px-6 py-3.5 font-semibold text-slate-950 transition hover:bg-teal-300">Check live availability</a>
+      </div>
+    </div>
+  </section>
+</Layout>

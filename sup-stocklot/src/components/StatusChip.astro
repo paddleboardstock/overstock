@@ -1,0 +1,23 @@
+---
+import { STATUS_LABELS, type LotStatus } from '../data/stocklots';
+
+interface Props {
+  status: LotStatus;
+}
+
+const { status } = Astro.props;
+
+const styles: Record<LotStatus, string> = {
+  available: 'bg-emerald-400 text-slate-950',
+  low: 'bg-amber-400 text-slate-950',
+  reserved: 'bg-sky-400 text-slate-950',
+  sold: 'bg-red-500 text-white',
+  inspection: 'bg-slate-400 text-slate-950',
+  compliance: 'bg-slate-400 text-slate-950',
+  archived: 'bg-slate-600 text-slate-100',
+};
+---
+
+<span class={`rounded-md px-2 py-0.5 text-xs font-bold uppercase ${styles[status]}`}>
+  {STATUS_LABELS[status]}
+</span>

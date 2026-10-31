@@ -1,0 +1,165 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+import { SITE } from '../config';
+import { HS_CODE } from '../data/stocklots';
+---
+
+<Layout
+  title="Shipping & Import: Express, LCL & FCL from Qingdao"
+  path="/shipping/"
+  description="SUP stocklot shipping: express air freight for trial orders, LCL and FCL sea freight FOB Qingdao (CNQDG). HS code 9506.99.00, neutral export packing, and market compliance notes for US, EU, UK, Canada and Australia imports."
+>
+  <PageHero
+    eyebrow="Logistics"
+    title="Shipping &amp; Import from Qingdao"
+    subtitle="Three shipping lanes, one warehouse. Express air for small trial orders, LCL sea for starter volumes, FCL for container buyers — all dispatched within 3–5 business days of payment confirmation."
+  />
+
+  <section class="border-b border-slate-800/80">
+    <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6">
+      <h2 class="text-2xl font-bold tracking-tight text-slate-50 sm:text-3xl">Choose your lane</h2>
+      <div class="mt-8 grid gap-6 lg:grid-cols-3">
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
+          <p class="text-xs font-semibold uppercase tracking-widest text-teal-300">Express (air)</p>
+          <p class="mt-2 text-lg font-bold text-slate-100">10–30 boards</p>
+          <ul class="mt-4 space-y-2 text-sm leading-relaxed text-slate-400">
+            <li>DHL / FedEx / UPS door-to-door</li>
+            <li>5–8 days to most destinations</li>
+            <li>Best for trial orders &amp; urgent replenishment</li>
+            <li>Quoted per destination &amp; weight</li>
+          </ul>
+        </div>
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
+          <p class="text-xs font-semibold uppercase tracking-widest text-teal-300">LCL (sea, shared)</p>
+          <p class="mt-2 text-lg font-bold text-slate-100">1–10 CBM</p>
+          <ul class="mt-4 space-y-2 text-sm leading-relaxed text-slate-400">
+            <li>Consolidated container, palletized</li>
+            <li>~25–40 days depending on destination</li>
+            <li>Best cost-per-board for starter volumes</li>
+            <li>Destination port charges paid by buyer</li>
+          </ul>
+        </div>
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
+          <p class="text-xs font-semibold uppercase tracking-widest text-teal-300">FCL (sea, full container)</p>
+          <p class="mt-2 text-lg font-bold text-slate-100">20GP / 40HQ</p>
+          <ul class="mt-4 space-y-2 text-sm leading-relaxed text-slate-400">
+            <li>Dedicated container, sealed at loading</li>
+            <li>Palletized or floor-loaded loose (more boards per box)</li>
+            <li>Lowest freight cost per board</li>
+            <li>Loading plan provided; supervision welcome</li>
+          </ul>
+        </div>
+      </div>
+      <p class="mt-6 text-sm text-slate-500">
+        Every lot page includes a live loading calculator (cartons, pallets, CBM, container fit) for both
+        palletized and loose-load modes — plan your freight before you commit.
+      </p>
+    </div>
+  </section>
+
+  <section class="border-b border-slate-800/80 bg-slate-900/40">
+    <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6">
+      <h2 class="text-2xl font-bold tracking-tight text-slate-50 sm:text-3xl">Incoterms &amp; documentation</h2>
+      <div class="mt-8 grid gap-6 md:grid-cols-2">
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
+          <p class="font-semibold text-slate-100">FOB Qingdao (CNQDG) — recommended</p>
+          <p class="mt-2 text-sm leading-relaxed text-slate-400">
+            We handle export clearance and deliver the goods on board your nominated vessel at Qingdao. You nominate
+            the freight forwarder and pay ocean freight, insurance and destination charges. The safest split of
+            responsibility for liquidation goods.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
+          <p class="font-semibold text-slate-100">EXW Qingdao warehouse</p>
+          <p class="mt-2 text-sm leading-relaxed text-slate-400">
+            You collect at our warehouse with your own trucker and forwarder. Maximum buyer control, minimum seller
+            obligation. Useful when your forwarder runs its own Qingdao consolidation.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
+          <p class="font-semibold text-slate-100">Documents provided</p>
+          <ul class="mt-2 space-y-1.5 text-sm leading-relaxed text-slate-400">
+            <li>Commercial invoice &amp; packing list</li>
+            <li>Bill of lading / air waybill (via your forwarder)</li>
+            <li>HS code classification: <span class="font-mono text-slate-300">{HS_CODE}</span> (watersports equipment — verify with your customs broker)</li>
+            <li>Third-party inspection reports where commissioned</li>
+          </ul>
+        </div>
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
+          <p class="font-semibold text-slate-100">Neutral export packing</p>
+          <p class="mt-2 text-sm leading-relaxed text-slate-400">
+            Export-grade neutral cartons: no original brand marks, barcodes or marketing inserts. Ship-to marks
+            applied per your instructions. Manual/label replacement available on request.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-b border-slate-800/80">
+    <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6">
+      <h2 class="text-2xl font-bold tracking-tight text-slate-50 sm:text-3xl">Import &amp; compliance notes by market</h2>
+      <p class="mt-2 max-w-3xl text-sm text-slate-400">
+        You are the importer of record. We ship compliant, honestly-declared goods with accurate manifests — but
+        market registration, labeling and consumer-safety duties sit with you as the importer. Notes below are
+        informational, not legal advice; confirm with your customs broker before ordering.
+      </p>
+      <div class="mt-8 space-y-4">
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
+          <p class="font-semibold text-slate-100">United States</p>
+          <p class="mt-2 text-sm leading-relaxed text-slate-400">
+            Standard customs entry with HTS classification of watersports equipment; duty rate per current HTS
+            schedule. Consumer Product Safety Commission general safety requirements apply at retail. Inflatable SUPs
+            with no powered/electronic components typically need no FCC equipment authorization. Verify CPSC
+            reporting duties for your retail channel.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
+          <p class="font-semibold text-slate-100">European Union — GPSR (Regulation (EU) 2023/988)</p>
+          <p class="mt-2 text-sm leading-relaxed text-slate-400">
+            Since 13 December 2024 the General Product Safety Regulation applies to consumer products sold in the EU.
+            As importer you must ensure traceability (manufacturer &amp; importer identification on the product or
+            packaging), a responsible economic operator established in the EU, instructions and safety information in
+            the required languages, and a technical documentation file. De-branded liquidation stock complicates this
+            — factor relabeling into your landed cost before ordering.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
+          <p class="font-semibold text-slate-100">United Kingdom</p>
+          <p class="mt-2 text-sm leading-relaxed text-slate-400">
+            The UK's own General Product Safety Regulations 2025 mirror much of EU GPSR: traceability, a UK
+           -established responsible person, and warnings/instructions in English. Confirm current requirements with
+            your broker at order time — regulations in this category have been changing fast.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
+          <p class="font-semibold text-slate-100">Canada</p>
+          <p class="mt-2 text-sm leading-relaxed text-slate-400">
+            Canada Consumer Product Safety Act general prohibitions apply (no hazards to health). Bilingual
+            (English/French) labeling required at retail. Standard CBSA entry via your broker.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
+          <p class="font-semibold text-slate-100">Australia &amp; New Zealand</p>
+          <p class="mt-2 text-sm leading-relaxed text-slate-400">
+            Australian Consumer Law guarantees apply at retail; check ACCC product safety pages for current
+            requirements on aquatic toys vs. sports equipment classification — classification affects mandatory
+            warnings.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-b border-slate-800/80 bg-slate-900/40">
+    <div class="mx-auto max-w-3xl px-4 py-16 text-center sm:px-6">
+      <h2 class="text-2xl font-bold tracking-tight text-slate-50">Freight quote in your RFQ</h2>
+      <p class="mt-3 text-slate-400">
+        Send your destination port or postcode with the lots and quantities you are considering — we will quote the
+        goods FOB Qingdao and give indicative express/LCL/FCL freight so you can compare lanes in one message.
+      </p>
+      <p class="mt-6 text-sm text-slate-500">{SITE.portFull} · Dispatch {SITE.dispatchWindow}.</p>
+    </div>
+  </section>
+</Layout>

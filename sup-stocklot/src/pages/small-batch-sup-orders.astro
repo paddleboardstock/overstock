@@ -1,0 +1,99 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+import LotCard from '../components/LotCard.astro';
+import { waLink } from '../config';
+import { STOCKLOTS } from '../data/stocklots';
+
+const images = ['/img/detail-valve.svg', '/img/detail-deck.svg', '/img/detail-seam.svg', '/img/detail-dring.svg'];
+const smallLots = STOCKLOTS.filter((l) => l.id === 'SL-03' || l.id === 'SL-05' || l.id === 'SL-06');
+---
+
+<Layout
+  title="Small-Batch SUP Orders — Trial & Single-Pallet Purchases"
+  path="/small-batch-sup-orders/"
+  description="Small-batch inflatable SUP orders from 10 boards or a single pallet: trial orders, market tests and starter inventory. Express and LCL shipping from Qingdao, no container required."
+>
+  <PageHero
+    eyebrow="Small-batch channel · no container needed"
+    title="Small-Batch SUP Orders — Trial &amp; Starter Inventory"
+    subtitle="Not ready for a full container? Start from 10 boards or a single pallet. Test your market, sample our quality, then scale up — express air freight and LCL sea freight both available from Qingdao."
+  >
+    <div class="flex flex-wrap gap-4">
+      <a href={waLink('Hi, I want to start with a small trial order (10–50 boards). What can you ship by express or LCL right now?')} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-xl bg-[#25D366] px-6 py-3.5 font-semibold text-slate-950 transition hover:bg-[#1ebe5b]">Plan a trial order</a>
+      <a href="#small-lots" class="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-900/60 px-6 py-3.5 font-semibold text-slate-100 transition hover:border-teal-400/50 hover:text-teal-300">See small-batch lots</a>
+    </div>
+  </PageHero>
+
+  <section class="border-b border-slate-800/80">
+    <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6">
+      <h2 class="text-2xl font-bold tracking-tight text-slate-50 sm:text-3xl">How small-batch buying works</h2>
+      <div class="mt-8 grid gap-6 md:grid-cols-3">
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
+          <p class="font-semibold text-slate-100">From 10 boards / 1 pallet</p>
+          <p class="mt-2 text-sm leading-relaxed text-slate-400">
+            The stocklot MOQ is 10 boards or one pallet — whichever your shipping method requires. Below that we
+            cannot split lots without breaking up pallets, so 10 is the honest floor.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
+          <p class="font-semibold text-slate-100">Ship by express or LCL</p>
+          <p class="mt-2 text-sm leading-relaxed text-slate-400">
+            10–30 boards can go by air express (DHL/FedEx, 5–8 days) or LCL sea freight (shared container, 25–40 days
+            depending on destination). We quote both; you choose speed vs. freight cost.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
+          <p class="font-semibold text-slate-100">Honest unit economics</p>
+          <p class="mt-2 text-sm leading-relaxed text-slate-400">
+            Small batches pay a higher unit price than container loads — that is simply how freight and handling
+            scale. We quote real tiers: the reward for testing small is market knowledge; the reward for scaling up
+            is a lower unit price on the next order.
+          </p>
+        </div>
+      </div>
+      <div class="mt-6 grid gap-6 md:grid-cols-2">
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
+          <p class="font-semibold text-slate-100">Test, then scale</p>
+          <p class="mt-2 text-sm leading-relaxed text-slate-400">
+            The smart play: order 10–20 boards, sell them, learn which sizes and colors your market wants, then come
+            back for a full-lot or container allocation. Your trial order data is worth more than the margin on it.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
+          <p class="font-semibold text-slate-100">Same QC, same terms</p>
+          <p class="mt-2 text-sm leading-relaxed text-slate-400">
+            Small orders get the same 72-hour pressure QC, the same honest manifest and the same AS-IS liquidation
+            terms as container buyers. No second-class service for small buyers.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="small-lots" class="border-b border-slate-800/80 bg-slate-900/40">
+    <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6">
+      <h2 class="text-2xl font-bold tracking-tight text-slate-50 sm:text-3xl">Popular small-batch picks</h2>
+      <p class="mt-2 max-w-2xl text-slate-400">
+        Mid-size all-around boards that move in every market, the Grade B value lot and accessory sets for
+        starter inventory.
+      </p>
+      <div class="mt-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+        {smallLots.map((lot, i) => <LotCard lot={lot} image={images[i % images.length]} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="border-b border-slate-800/80">
+    <div class="mx-auto max-w-3xl px-4 py-16 text-center sm:px-6">
+      <h2 class="text-2xl font-bold tracking-tight text-slate-50">Start small, decide with data</h2>
+      <p class="mt-3 text-slate-400">
+        Tell us your destination country and target quantity — you will get a small-batch quote with express and LCL
+        freight options, plus the container-load unit price for comparison so you can see exactly what scaling saves.
+      </p>
+      <div class="mt-8">
+        <a href={waLink('Hi, please quote a small-batch order: [quantity] boards to [country], express and LCL options, plus the container-load unit price for comparison.')} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-xl bg-[#25D366] px-6 py-3.5 font-semibold text-slate-950 transition hover:bg-[#1ebe5b]">Get a small-batch quote</a>
+      </div>
+    </div>
+  </section>
+</Layout>

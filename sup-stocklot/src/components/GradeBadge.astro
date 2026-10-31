@@ -1,0 +1,18 @@
+---
+import type { Grade } from '../data/stocklots';
+
+interface Props {
+  grade: Grade;
+  size?: 'sm' | 'md';
+}
+
+const { grade, size = 'sm' } = Astro.props;
+---
+
+<span
+  class={`rounded-md font-bold text-slate-950 ${grade === 'A' ? 'bg-sky-500' : 'bg-amber-500'} ${
+    size === 'sm' ? 'px-2 py-0.5 text-xs' : 'px-2.5 py-1 text-sm'
+  }`}
+>
+  GRADE {grade}
+</span>

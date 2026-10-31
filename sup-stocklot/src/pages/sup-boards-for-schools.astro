@@ -1,0 +1,89 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+import LotCard from '../components/LotCard.astro';
+import { waLink } from '../config';
+import { STOCKLOTS } from '../data/stocklots';
+
+const images = ['/img/detail-valve.svg', '/img/detail-deck.svg', '/img/detail-seam.svg', '/img/detail-dring.svg'];
+const schoolLots = STOCKLOTS.filter((l) => l.id === 'SL-01' || l.id === 'SL-05' || l.id === 'SL-06');
+---
+
+<Layout
+  title="SUP Boards & Equipment for Schools, Clubs & Training"
+  path="/sup-boards-for-schools/"
+  description="Bulk SUP boards for schools, clubs, coaches and watersports training programs. Class-set purchasing, forgiving all-around shapes, consistent handling and complete accessory kits. FOB Qingdao."
+>
+  <PageHero
+    eyebrow="Schools &amp; clubs channel"
+    title="SUP Boards &amp; Equipment for Schools, Clubs &amp; Training"
+    subtitle="Training programs need boards that are stable, forgiving and identical across the class — plus kits that survive beginner handling. Buy class sets at liquidation prices: complete board + paddle + pump + leash sets from one warehouse."
+  >
+    <div class="flex flex-wrap gap-4">
+      <a href={waLink('Hi, we are a SUP school/club looking to equip our training program. Can you suggest a class-set configuration?')} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-xl bg-[#25D366] px-6 py-3.5 font-semibold text-slate-950 transition hover:bg-[#1ebe5b]">Plan a class set</a>
+      <a href="#school-lots" class="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-900/60 px-6 py-3.5 font-semibold text-slate-100 transition hover:border-teal-400/50 hover:text-teal-300">See school-suited lots</a>
+    </div>
+  </PageHero>
+
+  <section class="border-b border-slate-800/80">
+    <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6">
+      <h2 class="text-2xl font-bold tracking-tight text-slate-50 sm:text-3xl">What training programs need</h2>
+      <div class="mt-8 grid gap-6 md:grid-cols-3">
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
+          <p class="font-semibold text-slate-100">Stable, forgiving shapes</p>
+          <p class="mt-2 text-sm leading-relaxed text-slate-400">
+            All-around shapes in the 9'6"–10'6" range are the industry standard for instruction: wide, stable and
+            easy for first-timers. Our cancelled-order lots are full of exactly these models.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
+          <p class="font-semibold text-slate-100">Identical handling across the class</p>
+          <p class="mt-2 text-sm leading-relaxed text-slate-400">
+            One lot = one specification. Students progress on identical boards, instructors can demonstrate on the
+            same equipment, and replacement boards match the rest of the fleet.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
+          <p class="font-semibold text-slate-100">Complete kits, zero assembly</p>
+          <p class="mt-2 text-sm leading-relaxed text-slate-400">
+            Every board arrives as a full set: paddle, double-action pump, leash, fin, repair kit and wheelie bag.
+            Unbox, inflate, teach. Accessory spares are available in bulk from the accessory lot.
+          </p>
+        </div>
+      </div>
+      <div class="mt-6 rounded-2xl border border-amber-400/30 bg-amber-400/5 p-6">
+        <p class="text-sm leading-relaxed text-slate-300">
+          <strong class="text-amber-300">Safety note:</strong> paddle boards are watersports equipment. Students should
+          wear appropriate flotation, use the included leash in suitable conditions, and receive instruction from
+          qualified staff. Verify any local training/equipment regulations for your market before purchasing.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="school-lots" class="border-b border-slate-800/80 bg-slate-900/40">
+    <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6">
+      <h2 class="text-2xl font-bold tracking-tight text-slate-50 sm:text-3xl">School-suited stocklots</h2>
+      <p class="mt-2 max-w-2xl text-slate-400">
+        Stable all-around boards for instruction, cosmetic-second value boards for club fleets, and bulk accessory
+        sets for spares.
+      </p>
+      <div class="mt-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+        {schoolLots.map((lot, i) => <LotCard lot={lot} image={images[i % images.length]} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="border-b border-slate-800/80">
+    <div class="mx-auto max-w-3xl px-4 py-16 text-center sm:px-6">
+      <h2 class="text-2xl font-bold tracking-tight text-slate-50">Budget-tight program?</h2>
+      <p class="mt-3 text-slate-400">
+        Many schools split their order: Grade A boards for the instructor fleet, Grade B cosmetic seconds (100%
+        airtight, minor marks) for student use. Ask us to price a split that fits your budget.
+      </p>
+      <div class="mt-8">
+        <a href={waLink('Hi, we are equipping a SUP school/club on a budget. Can you quote a Grade A + Grade B split for a class set?')} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-xl bg-[#25D366] px-6 py-3.5 font-semibold text-slate-950 transition hover:bg-[#1ebe5b]">Request a split quote</a>
+      </div>
+    </div>
+  </section>
+</Layout>

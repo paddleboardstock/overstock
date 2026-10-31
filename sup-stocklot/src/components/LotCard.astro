@@ -1,0 +1,90 @@
+---
+import { waLink } from '../config';
+import type { StockLot } from '../data/stocklots';
+import { tierPriceUsd } from '../data/stocklots';
+import GradeBadge from './GradeBadge.astro';
+import StatusChip from './StatusChip.astro';
+
+interface Props {
+  lot: StockLot;
+  image: string;
+}
+
+const { lot, image } = Astro.props;
+const fromPrice = tierPriceUsd(lot, lot.priceTiers[lot.priceTiers.length - 1].minQty);
+const waMsg = `Hi, I'm interested in lot ${lot.id} (${lot.title}). Please send live inspection photos & video.`;
+---
+
+<article
+  data-lot-card
+  data-lot-type={lot.type}
+  data-lot-grade={lot.grade}
+  data-lot-status={lot.status}
+  class="group flex flex-col overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/50 transition hover:border-teal-400/40"
+>
+  <a href={`/stock/${lot.slug}/`} class="relative block overflow-hidden">
+    <img
+      src={image}
+      alt={`De-branded construction detail photo placeholder for lot ${lot.id}`}
+      class="h-44 w-full object-cover opacity-90 transition group-hover:opacity-100"
+      width="800"
+      height="500"
+      loading="lazy"
+    />
+    <div class="absolute left-4 top-4 flex items-center gap-2">
+      <GradeBadge grade={lot.grade} />
+      <span class="rounded-md bg-slate-950/80 px-2 py-0.5 text-xs font-semibold text-slate-200">{lot.id}</span>
+    </div>
+    <div class="absolute right-4 top-4">
+      <StatusChip status={lot.status} />
+    </div>
+  </a>
+  <div class="flex flex-1 flex-col gap-4 p-6">
+    <div>
+      <h3 class="text-base font-bold leading-snug text-slate-50">
+        <a href={`/stock/${lot.slug}/`} class="hover:text-teal-300">{lot.title}</a>
+      </h3>
+      <p class="mt-1 text-sm text-slate-400">{lot.sizeLabel}</p>
+    </div>
+    <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+      <div>
+        <dt class="text-xs text-slate-500">Available</dt>
+        <dd class="font-semibold text-slate-100">{lot.availableQty.toLocaleString('en-US')} pcs</dd>
+      </div>
+      <div>
+        <dt class="text-xs text-slate-500">MOQ</dt>
+        <dd class="font-semibold text-slate-100">{lot.moq} pcs</dd>
+      </div>
+      <div class="col-span-2">
+        <dt class="text-xs text-slate-500">Condition</dt>
+        <dd class="text-slate-300">{lot.condition}</dd>
+      </div>
+    </dl>
+    <div class="mt-auto flex items-center justify-between gap-3 border-t border-slate-800 pt-4">
+      <p class="text-sm">
+        <span class="text-slate-400">From </span>
+        <span class="font-mono text-lg font-semibold text-teal-300">${fromPrice}</span>
+        <span class="text-slate-400">/pc FOB</span>
+      </p>
+      <div class="flex items-center gap-2">
+        <a
+          href={waLink(waMsg)}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`Request inspection photos for ${lot.id} on WhatsApp`}
+          class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-[#25D366] text-slate-950 transition hover:bg-[#1ebe5b]"
+        >
+          <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true">
+            <path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.4 14.1c-.2.7-1.3 1.3-1.9 1.4-.5.1-1.1.2-3.5-.7-3-1.2-4.9-4.2-5-4.4-.2-.2-1.2-1.6-1.2-3.1s.8-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.6c-.2.2-.3.4-.1.7.2.3.9 1.5 1.9 2.4 1.3 1.1 2.3 1.5 2.7 1.7.3.1.5.1.7-.1l1-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .7-.3 1.5Z"/>
+          </svg>
+        </a>
+        <a
+          href={`/stock/${lot.slug}/`}
+          class="rounded-lg border border-slate-700 bg-slate-900/60 px-4 py-2 text-sm font-semibold text-slate-100 transition hover:border-teal-400/50 hover:text-teal-300"
+        >
+          Details
+        </a>
+      </div>
+    </div>
+  </div>
+</article>

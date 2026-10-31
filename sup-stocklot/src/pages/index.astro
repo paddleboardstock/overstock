@@ -1,0 +1,471 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+import LotCard from '../components/LotCard.astro';
+import { SITE, waLink } from '../config';
+import { STOCKLOTS } from '../data/stocklots';
+
+const detailShots = [
+  '/img/detail-valve.svg',
+  '/img/detail-deck.svg',
+  '/img/detail-seam.svg',
+  '/img/detail-dring.svg',
+];
+
+const featured = STOCKLOTS.slice(0, 4);
+
+const orgJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: SITE.name,
+  url: `https://${SITE.domain}/`,
+  logo: `https://${SITE.domain}/favicon.svg`,
+  description: SITE.description,
+  address: { '@type': 'PostalAddress', addressLocality: 'Qingdao', addressCountry: 'CN' },
+  contactPoint: {
+    '@type': 'ContactPoint',
+    contactType: 'sales',
+    telephone: SITE.whatsappNumber,
+    email: SITE.contactEmail,
+    areaServed: 'Worldwide',
+    availableLanguage: ['English'],
+  },
+};
+
+const websiteJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: SITE.name,
+  url: `https://${SITE.domain}/`,
+  description: SITE.description,
+};
+---
+
+<Layout title="Inflatable SUP Overstock & Wholesale Supply — FOB Qingdao" path="/" description={SITE.description}>
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(orgJsonLd)} />
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(websiteJsonLd)} />
+
+  <PageHero
+    eyebrow="B2B stocklot sourcing · live quantities"
+    title="Inflatable SUP Overstock & Wholesale Supply"
+    subtitle="New inflatable stand-up paddle boards available from stock in Qingdao, China. We supply retailers, rental operators, SUP schools, clubs and bulk buyers with cancelled-order and surplus stocklots — check current quantities, request live inspection photos, and ship FOB Qingdao in 3–5 business days."
+  >
+    <div class="flex flex-wrap items-center gap-4">
+      <a
+        href="/available-sup-stock/"
+        class="inline-flex items-center gap-2 rounded-xl bg-teal-400 px-6 py-3.5 font-semibold text-slate-950 transition hover:bg-teal-300"
+      >
+        Browse Available Stock
+      </a>
+      <a
+        href={waLink('Hi, I would like a bulk quote for your inflatable SUP stocklots.')}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 rounded-xl bg-[#25D366] px-6 py-3.5 font-semibold text-slate-950 transition hover:bg-[#1ebe5b]"
+      >
+        Request a Bulk Quote
+      </a>
+    </div>
+  </PageHero>
+
+  <!-- ============================= TRUST STRIP ============================= -->
+  <section aria-label="Trade guarantees" class="border-b border-slate-800/80 bg-slate-900/40">
+    <div class="mx-auto grid max-w-7xl grid-cols-1 gap-6 px-4 py-8 text-sm sm:grid-cols-2 sm:px-6 lg:grid-cols-4">
+      <div class="flex items-start gap-3">
+        <span class="mt-0.5 text-teal-400" aria-hidden="true">●</span>
+        <p class="text-slate-300"><strong class="text-slate-100">72-hour pressure QC</strong> — 100% of boards inflated &amp; hold-tested (15–18 PSI) before dispatch</p>
+      </div>
+      <div class="flex items-start gap-3">
+        <span class="mt-0.5 text-teal-400" aria-hidden="true">●</span>
+        <p class="text-slate-300"><strong class="text-slate-100">Third-party inspection welcome</strong> — SGS / BV / TÜV at the Qingdao warehouse</p>
+      </div>
+      <div class="flex items-start gap-3">
+        <span class="mt-0.5 text-teal-400" aria-hidden="true">●</span>
+        <p class="text-slate-300"><strong class="text-slate-100">Dispatch in 3–5 business days</strong> after payment confirmation</p>
+      </div>
+      <div class="flex items-start gap-3">
+        <span class="mt-0.5 text-teal-400" aria-hidden="true">●</span>
+        <p class="text-slate-300"><strong class="text-slate-100">Real stocklot pricing</strong> — sold AS-IS, no brand warranty, {SITE.incoterms.split(' (')[0]}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= FEATURED STOCK ============================= -->
+  <section id="stock" class="border-b border-slate-800/80">
+    <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6">
+      <div class="flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <h2 class="text-2xl font-bold tracking-tight text-slate-50 sm:text-3xl">Current stocklots</h2>
+          <p class="mt-2 max-w-2xl text-slate-400">
+            Live quantities from cancelled OEM orders and surplus production runs. Every lot has its own
+            detail page with specs, carton data, tiered FOB pricing and a container loading calculator.
+          </p>
+        </div>
+        <a
+          href="/available-sup-stock/"
+          class="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-900/60 px-5 py-2.5 text-sm font-semibold text-slate-100 transition hover:border-teal-400/50 hover:text-teal-300"
+        >
+          View all available stock →
+        </a>
+      </div>
+      <div class="mt-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
+        {featured.map((lot, i) => <LotCard lot={lot} image={detailShots[i % detailShots.length]} />)}
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= BUYER SOLUTIONS ============================= -->
+  <section id="solutions" class="border-b border-slate-800/80 bg-slate-900/40">
+    <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6">
+      <h2 class="text-2xl font-bold tracking-tight text-slate-50 sm:text-3xl">Solutions by buyer type</h2>
+      <p class="mt-2 max-w-2xl text-slate-400">
+        One stock pool, four ways to buy — from full-lot take-alls to small-batch trial orders.
+      </p>
+      <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <a href="/wholesale-inflatable-sup/" class="group rounded-2xl border border-slate-800 bg-slate-900/50 p-6 transition hover:border-teal-400/40">
+          <p class="text-2xl" aria-hidden="true">📦</p>
+          <p class="mt-3 font-semibold text-slate-100 group-hover:text-teal-300">Wholesalers &amp; retailers</p>
+          <p class="mt-2 text-sm leading-relaxed text-slate-400">Bulk lots, mixed lots, full-lot take-all pricing and dealer-tier FOB rates for resale channels.</p>
+        </a>
+        <a href="/sup-boards-for-rental/" class="group rounded-2xl border border-slate-800 bg-slate-900/50 p-6 transition hover:border-teal-400/40">
+          <p class="text-2xl" aria-hidden="true">🏄</p>
+          <p class="mt-3 font-semibold text-slate-100 group-hover:text-teal-300">Rental businesses &amp; fleets</p>
+          <p class="mt-2 text-sm leading-relaxed text-slate-400">Uniform-spec fleets, cosmetic-second value lots, repair kits and fast replenishment for high-turnover operations.</p>
+        </a>
+        <a href="/sup-boards-for-schools/" class="group rounded-2xl border border-slate-800 bg-slate-900/50 p-6 transition hover:border-teal-400/40">
+          <p class="text-2xl" aria-hidden="true">🎓</p>
+          <p class="mt-3 font-semibold text-slate-100 group-hover:text-teal-300">Schools &amp; clubs</p>
+          <p class="mt-2 text-sm leading-relaxed text-slate-400">Class-set purchasing, forgiving all-around shapes and consistent accessory kits for training programs.</p>
+        </a>
+        <a href="/small-batch-sup-orders/" class="group rounded-2xl border border-slate-800 bg-slate-900/50 p-6 transition hover:border-teal-400/40">
+          <p class="text-2xl" aria-hidden="true">🧩</p>
+          <p class="mt-3 font-semibold text-slate-100 group-hover:text-teal-300">Small-batch buyers</p>
+          <p class="mt-2 text-sm leading-relaxed text-slate-400">Trial orders from 10 pcs and single-pallet purchases — test the stock before scaling up.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= HOW IT WORKS ============================= -->
+  <section class="border-b border-slate-800/80">
+    <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6">
+      <h2 class="text-2xl font-bold tracking-tight text-slate-50 sm:text-3xl">How buying works</h2>
+      <ol class="mt-8 grid gap-6 md:grid-cols-4">
+        <li class="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
+          <p class="text-xs font-semibold uppercase tracking-widest text-teal-400">Step 1</p>
+          <p class="mt-2 font-semibold text-slate-100">Message us on WhatsApp</p>
+          <p class="mt-2 text-sm text-slate-400">Get live inspection photos &amp; video of the exact lot within hours.</p>
+        </li>
+        <li class="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
+          <p class="text-xs font-semibold uppercase tracking-widest text-teal-400">Step 2</p>
+          <p class="mt-2 font-semibold text-slate-100">Confirm lot &amp; quantity</p>
+          <p class="mt-2 text-sm text-slate-400">Receive the stock manifest and a pro-forma invoice (FOB Qingdao / EXW).</p>
+        </li>
+        <li class="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
+          <p class="text-xs font-semibold uppercase tracking-widest text-teal-400">Step 3</p>
+          <p class="mt-2 font-semibold text-slate-100">Lock your allocation</p>
+          <p class="mt-2 text-sm text-slate-400">30–50% T/T deposit reserves your boards. Optional SGS / BV / TÜV pre-shipment inspection.</p>
+        </li>
+        <li class="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
+          <p class="text-xs font-semibold uppercase tracking-widest text-teal-400">Step 4</p>
+          <p class="mt-2 font-semibold text-slate-100">Dispatch in 3–5 business days</p>
+          <p class="mt-2 text-sm text-slate-400">Balance before loading or against B/L copy — containers sail from Qingdao (CNQDG).</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============================= GRADING ============================= -->
+  <section id="grading" class="border-b border-slate-800/80 bg-slate-900/40">
+    <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6">
+      <h2 class="text-2xl font-bold tracking-tight text-slate-50 sm:text-3xl">Stock grading</h2>
+      <div class="mt-8 grid gap-6 md:grid-cols-2">
+        <div class="rounded-2xl border border-sky-400/30 bg-sky-400/5 p-6">
+          <p class="inline-flex items-center gap-2">
+            <span class="rounded-md bg-sky-500 px-2 py-0.5 text-xs font-bold text-slate-950">GRADE A</span>
+            <span class="font-semibold text-slate-100">Brand-new cancelled-order / surplus</span>
+          </p>
+          <p class="mt-3 text-sm leading-relaxed text-slate-300">
+            First-quality boards from cancelled OEM production orders and surplus runs. Factory-sealed cartons,
+            complete accessory sets, never retailed. Original branding removed from listings — sold as neutral goods
+            in neutral export cartons.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-amber-400/30 bg-amber-400/5 p-6">
+          <p class="inline-flex items-center gap-2">
+            <span class="rounded-md bg-amber-500 px-2 py-0.5 text-xs font-bold text-slate-950">GRADE B</span>
+            <span class="font-semibold text-slate-100">Cosmetic seconds — 100% airtight</span>
+          </p>
+          <p class="mt-3 text-sm leading-relaxed text-slate-300">
+            Boards with minor cosmetic marks (deck print irregularities, rail finish blemishes). Structurally
+            sound: every board passes the same 72-hour inflated pressure test as Grade A. Ideal for rental fleets,
+            price-sensitive markets, or DIY branding.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= MANIFEST UNLOCK (TIERED) ============================= -->
+  <section id="manifest" class="border-b border-slate-800/80">
+    <div class="mx-auto max-w-3xl px-4 py-16 sm:px-6">
+      <h2 class="text-2xl font-bold tracking-tight text-slate-50 sm:text-3xl">Unlock the full stock manifest</h2>
+      <p class="mt-2 text-slate-400">
+        One-click CSV manifest — every lot, dimension, carton spec, gross/net weight and tiered FOB price.
+        Tell us who you are first:
+      </p>
+
+      <form id="lead-form" class="mt-8 grid gap-4 sm:grid-cols-2" novalidate>
+        <div>
+          <label for="lead-email" class="mb-1.5 block text-sm font-medium text-slate-300">Business email</label>
+          <input
+            id="lead-email"
+            name="email"
+            type="email"
+            required
+            autocomplete="email"
+            class="w-full rounded-lg border border-slate-600 bg-slate-950/60 px-3.5 py-2.5 text-slate-100 placeholder-slate-500 focus:border-teal-400 focus:outline-none"
+            placeholder="you@company.com"
+          />
+          <p id="lead-email-hint" class="mt-1 hidden text-xs text-amber-400">
+            Please use a corporate/business email for instant verification. Free mailboxes route through manual review.
+          </p>
+        </div>
+        <div>
+          <label for="lead-whatsapp" class="mb-1.5 block text-sm font-medium text-slate-300">WhatsApp / phone</label>
+          <input
+            id="lead-whatsapp"
+            name="whatsapp"
+            type="tel"
+            required
+            autocomplete="tel"
+            class="w-full rounded-lg border border-slate-600 bg-slate-950/60 px-3.5 py-2.5 text-slate-100 placeholder-slate-500 focus:border-teal-400 focus:outline-none"
+            placeholder="+1 555 000 0000"
+          />
+        </div>
+        <div class="sm:col-span-2">
+          <label for="lead-company" class="mb-1.5 block text-sm font-medium text-slate-300">Company &amp; website</label>
+          <input
+            id="lead-company"
+            name="company"
+            type="text"
+            required
+            autocomplete="organization"
+            class="w-full rounded-lg border border-slate-600 bg-slate-950/60 px-3.5 py-2.5 text-slate-100 placeholder-slate-500 focus:border-teal-400 focus:outline-none"
+            placeholder="Your company name + website / store link"
+          />
+        </div>
+        <div>
+          <label for="lead-nature" class="mb-1.5 block text-sm font-medium text-slate-300">Business nature</label>
+          <select
+            id="lead-nature"
+            name="nature"
+            required
+            class="w-full rounded-lg border border-slate-600 bg-slate-950/60 px-3.5 py-2.5 text-slate-100 focus:border-teal-400 focus:outline-none"
+          >
+            <option value="">Select…</option>
+            <option>Outdoor / SUP rental fleet &amp; club</option>
+            <option>Wholesaler / liquidator / jobber</option>
+            <option>E-commerce brand / marketplace seller</option>
+            <option>Physical retail chain</option>
+            <option>Other commercial buyer</option>
+          </select>
+        </div>
+        <div>
+          <label for="lead-volume" class="mb-1.5 block text-sm font-medium text-slate-300">Estimated take-off volume</label>
+          <select
+            id="lead-volume"
+            name="volume"
+            required
+            class="w-full rounded-lg border border-slate-600 bg-slate-950/60 px-3.5 py-2.5 text-slate-100 focus:border-teal-400 focus:outline-none"
+          >
+            <option value="">Select…</option>
+            <option value="0">Sample / trial (10–30 pcs)</option>
+            <option value="1">1 full pallet (~50–80 pcs)</option>
+            <option value="2">Multi-pallet / 20GP container (~250–300 pcs)</option>
+            <option value="3">Take-all / 40HQ container (~650+ pcs)</option>
+          </select>
+        </div>
+        <p id="lead-error" class="hidden text-sm text-red-400 sm:col-span-2">Please complete all five fields with a valid email.</p>
+        <button
+          type="submit"
+          class="mt-2 inline-flex items-center justify-center rounded-xl bg-teal-400 px-6 py-3 font-semibold text-slate-950 transition hover:bg-teal-300 sm:col-span-2"
+        >
+          Unlock manifest &amp; brand details
+        </button>
+        <p class="text-xs text-slate-500 sm:col-span-2">
+          Due to non-disclosure obligations, branded photos, packing lists and barcode data are restricted to
+          verified commercial buyers. Your details go straight to our sales desk and are never shared or resold.
+        </p>
+      </form>
+
+      <!-- Tier 1: instant VIP -->
+      <div id="lead-tier1" class="mt-8 hidden rounded-2xl border border-teal-400/40 bg-teal-400/10 p-8 text-center">
+        <p class="text-lg font-bold text-slate-50">Your VIP access is active</p>
+        <p class="mt-2 text-sm leading-relaxed text-slate-300">
+          Thank you! The de-branded manifest is unlocked below. The password to the branded inventory portal
+          (packing lists, barcode ranges, original inspection photos) has been queued to your business email —
+          contact our Qingdao logistics desk for direct live inspection.
+        </p>
+        <div class="mt-6 flex flex-wrap items-center justify-center gap-4">
+          <a
+            href="/manifest.csv"
+            download
+            class="inline-flex items-center gap-2 rounded-xl bg-teal-400 px-6 py-3 font-semibold text-slate-950 transition hover:bg-teal-300"
+          >
+            Download manifest.csv
+          </a>
+          <a
+            href={waLink()}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 rounded-xl bg-[#25D366] px-6 py-3 font-semibold text-slate-950 transition hover:bg-[#1ebe5b]"
+          >
+            Contact the Qingdao desk
+          </a>
+        </div>
+      </div>
+
+      <!-- Tier 2: assisted verification -->
+      <div id="lead-tier2" class="mt-8 hidden rounded-2xl border border-sky-400/40 bg-sky-400/10 p-8 text-center">
+        <p class="text-lg font-bold text-slate-50">Almost there — quick verification</p>
+        <p class="mt-2 text-sm leading-relaxed text-slate-300">
+          Because of strict brand protection, our sales desk will verify your WhatsApp within 15 minutes and
+          send the secure access PIN for the branded inventory portal. The de-branded manifest is unlocked below.
+        </p>
+        <div class="mt-6 flex flex-wrap items-center justify-center gap-4">
+          <a
+            href="/manifest.csv"
+            download
+            class="inline-flex items-center gap-2 rounded-xl bg-teal-400 px-6 py-3 font-semibold text-slate-950 transition hover:bg-teal-300"
+          >
+            Download manifest.csv
+          </a>
+          <a
+            href={waLink('Hi, I just submitted the manifest form on supstocklot.com — please verify my WhatsApp and send the portal access PIN.')}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 rounded-xl bg-[#25D366] px-6 py-3 font-semibold text-slate-950 transition hover:bg-[#1ebe5b]"
+          >
+            Speed it up on WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- Tier 3: filtered -->
+      <div id="lead-tier3" class="mt-8 hidden rounded-2xl border border-slate-600 bg-slate-900/60 p-8 text-center">
+        <p class="text-lg font-bold text-slate-50">Thanks for your interest!</p>
+        <p class="mt-2 text-sm leading-relaxed text-slate-300">
+          Due to export contractual MOQs, branded overstock lots require a minimum order of 50 units.
+          For lower quantities, browse our generic de-branded catalog — all specs, quantities and tiered
+          FOB prices are public there.
+        </p>
+        <div class="mt-6">
+          <a
+            href="/available-sup-stock/"
+            class="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-900/60 px-6 py-3 font-semibold text-slate-100 transition hover:border-teal-400/50 hover:text-teal-300"
+          >
+            Browse the de-branded catalog
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= PORTAL TEASER ============================= -->
+  <section id="portal" class="border-b border-slate-800/80 bg-slate-900/40">
+    <div class="mx-auto max-w-3xl px-4 py-16 text-center sm:px-6">
+      <h2 class="text-2xl font-bold tracking-tight text-slate-50 sm:text-3xl">Branded material — gated portal</h2>
+      <p class="mx-auto mt-4 max-w-xl text-slate-400">
+        Original packing lists, barcode ranges and branded inspection photos are available to verified buyers
+        only, inside our password-protected inventory portal — with live container stowage simulation and
+        one-click allocation requests.
+      </p>
+      <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+        <a
+          href="/portal/"
+          class="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-900/60 px-6 py-3 font-semibold text-slate-100 transition hover:border-teal-400/50 hover:text-teal-300"
+        >
+          <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <rect x="4" y="10" width="16" height="10" rx="2"/>
+            <path d="M8 10V7a4 4 0 1 1 8 0v3" stroke-linecap="round"/>
+          </svg>
+          Portal login
+        </a>
+        <a
+          href={waLink('Hi, I am a verified buyer and would like the portal password for branded packing lists and inspection photos.')}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 rounded-xl bg-[#25D366] px-6 py-3 font-semibold text-slate-950 transition hover:bg-[#1ebe5b]"
+        >
+          Request portal access
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const FREE_EMAIL_DOMAINS = new Set([
+      'gmail.com', 'yahoo.com', 'hotmail.com', 'hotmail.co.uk', 'outlook.com', 'live.com',
+      'icloud.com', 'aol.com', 'protonmail.com', 'proton.me', 'qq.com', '163.com', '126.com',
+      'foxmail.com', 'gmx.com', 'gmx.net', 'mail.com', 'yandex.com', 'yandex.ru', 'mail.ru',
+    ]);
+
+    const form = document.getElementById('lead-form') as HTMLFormElement | null;
+    const error = document.getElementById('lead-error');
+    const emailHint = document.getElementById('lead-email-hint');
+    const tiers = ['lead-tier1', 'lead-tier2', 'lead-tier3'].map((id) => document.getElementById(id));
+
+    if (form && error && emailHint && tiers.every(Boolean)) {
+      const emailInput = document.getElementById('lead-email') as HTMLInputElement;
+
+      emailInput.addEventListener('input', () => {
+        const domain = emailInput.value.split('@')[1]?.toLowerCase() ?? '';
+        if (FREE_EMAIL_DOMAINS.has(domain)) {
+          emailHint.classList.remove('hidden');
+        } else {
+          emailHint.classList.add('hidden');
+        }
+      });
+
+      form.addEventListener('submit', (e: SubmitEvent) => {
+        e.preventDefault();
+        const data = new FormData(form);
+        const email = String(data.get('email') ?? '').trim();
+        const whatsapp = String(data.get('whatsapp') ?? '').trim();
+        const company = String(data.get('company') ?? '').trim();
+        const nature = String(data.get('nature') ?? '').trim();
+        const volume = Number(data.get('volume') ?? -1);
+
+        const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        if (!emailOk || !whatsapp || company.length < 2 || !nature || volume < 0) {
+          error.classList.remove('hidden');
+          return;
+        }
+        error.classList.add('hidden');
+
+        const domain = email.split('@')[1]?.toLowerCase() ?? '';
+        const corporate = !FREE_EMAIL_DOMAINS.has(domain);
+        let tier: 1 | 2 | 3;
+        if (corporate && volume >= 1) {
+          tier = 1;
+        } else if (!corporate && volume === 0) {
+          tier = 3;
+        } else {
+          tier = 2;
+        }
+
+        form.classList.add('hidden');
+        for (let i = 0; i < tiers.length; i++) {
+          const el = tiers[i];
+          if (el && i + 1 === tier) {
+            el.classList.remove('hidden');
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          } else if (el) {
+            el.classList.add('hidden');
+          }
+        }
+      });
+    }
+  </script>
+</Layout>

@@ -1,0 +1,73 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+import { SITE, waLink } from '../config';
+---
+
+<Layout
+  title="About SUP Stocklot Direct — Honest Liquidation Supply"
+  path="/about/"
+  description="Who we are: a Qingdao-based stocklot specialist moving cancelled-order and surplus inflatable SUP inventory to verified B2B buyers. Honest grading, no fake scarcity, no brand warranty theater."
+>
+  <PageHero
+    eyebrow="About"
+    title="Honest Liquidation Supply, No Theater"
+    subtitle="We move real overstock — cancelled orders, surplus runs, cosmetic seconds — from Qingdao warehouses to verified business buyers. No fake countdowns, no inflated reference prices, no 'was $899' games. Real lots, real quantities, real terms."
+  />
+
+  <section class="border-b border-slate-800/80">
+    <div class="mx-auto max-w-4xl px-4 py-16 sm:px-6">
+      <div class="space-y-8 text-slate-300">
+        <div>
+          <h2 class="text-2xl font-bold tracking-tight text-slate-50">What we do</h2>
+          <p class="mt-3 leading-relaxed">
+            Factories and brands in the paddle-board industry regularly end up with finished goods nobody contracted
+            to take: cancelled OEM orders, surplus production, quality-control cosmetic seconds. That inventory ties
+            up warehouse space and cash. Our job is to move it — fast, honestly, and in wholesale quantities — to
+            importers, distributors, rental operators and schools who can use it profitably.
+          </p>
+          <p class="mt-3 leading-relaxed">
+            We buy distressed lots, pressure-test every board to a written protocol, publish accurate manifests, and
+            sell AS-IS at liquidation prices. We are a trading operation, not a charity and not a factory: our margin
+            is in the spread and the speed.
+          </p>
+        </div>
+        <div>
+          <h2 class="text-2xl font-bold tracking-tight text-slate-50">What we are deliberately not</h2>
+          <ul class="mt-3 list-disc space-y-2 pl-6 leading-relaxed">
+            <li><strong class="text-slate-100">Not a brand.</strong> The stock is de-branded. No original-brand warranty, guarantee cards or after-sales service comes with it — and we do not pretend otherwise.</li>
+            <li><strong class="text-slate-100">Not a consumer shop.</strong> B2B only, with a minimum order of {SITE.moqPolicy}. If you want one board for the weekend, we are the wrong site.</li>
+            <li><strong class="text-slate-100">Not a forever-supply line.</strong> A stocklot is by definition finite. When it sells out, it is gone. We will tell you what is available today, never promise a restock.</li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="text-2xl font-bold tracking-tight text-slate-50">Why buyers trust the process</h2>
+          <ul class="mt-3 list-disc space-y-2 pl-6 leading-relaxed">
+            <li>Every board passes a <strong class="text-slate-100">72-hour inflated pressure test</strong> ({SITE.qcProtocol.pressure}, pressure drop {SITE.qcProtocol.maxDrop}) before dispatch.</li>
+            <li>Third-party inspection (SGS, BV, TÜV) is welcome <em>before</em> you pay the balance — we do not ask you to trust us, we ask you to verify.</li>
+            <li>Manifests list exact quantities, carton dimensions, gross and net weights per lot.</li>
+            <li>Tiered pricing is published on every lot page — no "contact us for pricing" hiding.</li>
+            <li>Verified buyers get portal access to the branded material (original photos, packing lists, barcode ranges) we deliberately keep off the public site.</li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="text-2xl font-bold tracking-tight text-slate-50">Where we operate</h2>
+          <p class="mt-3 leading-relaxed">
+            Goods are warehoused in Qingdao, China. {SITE.portFull}. We ship worldwide — the US, EU, UK, Canada,
+            Australia and New Zealand are our regular lanes, and we quote freight per destination. Note that import
+            compliance (GPSR in the EU, CPSC duties in the US, and equivalents elsewhere) is the importer's
+            responsibility; our <a class="text-teal-300 hover:text-teal-200" href="/shipping/">shipping &amp; compliance notes</a> tell you what to check.
+          </p>
+        </div>
+        <div>
+          <h2 class="text-2xl font-bold tracking-tight text-slate-50">Talk to a human</h2>
+          <p class="mt-3 leading-relaxed">
+            The fastest channel is WhatsApp ({SITE.whatsappDisplay}) — messages reach the sales desk directly, and
+            quotes go out within one business day.
+          </p>
+          <a href={waLink()} target="_blank" rel="noopener noreferrer" class="mt-5 inline-flex items-center gap-2 rounded-xl bg-[#25D366] px-6 py-3.5 font-semibold text-slate-950 transition hover:bg-[#1ebe5b]">WhatsApp the sales desk</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
