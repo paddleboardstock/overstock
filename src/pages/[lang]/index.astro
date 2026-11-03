@@ -96,10 +96,6 @@ const siteBase = String(SITE.site).replace(/\/+$/, '');
 const defaultVisuals: Record<string, string> = {
   'sup-explorer-11':
     'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/paddleboardoverstock-sup-allround-board.webp',
-  'life-vest-classic':
-    'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/paddleboardoverstock-life-vest-classic.webp',
-  'life-vest-pro':
-    'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/paddleboardoverstock-life-vest-pro-front.webp',
   'oars-pump-set':
     'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/paddleboardoverstock-electric-pump.webp',
 };
@@ -114,8 +110,8 @@ const defaultUseCases = [
     scenario:
       'A family visiting a lake for the weekend wants to try paddle boarding. They need stable, easy-to-launch equipment with clear safety guidance.',
     solution:
-      'The SUP Explorer 11 provides wide-body stability for beginners. The Life Vest Classic ensures CE-certified flotation. The Oars & Pump Set inflates the board in under 10 minutes.',
-    products: ['SUP Explorer 11', 'Life Vest Classic', 'Oars & Pump Set'],
+      'The SUP Explorer 11 provides wide-body stability for beginners. The Oars & Pump Set inflates the board in under 10 minutes.',
+    products: ['SUP Explorer 11', 'Oars & Pump Set'],
     img: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-cheetah-surge-1.webp',
   },
   {
@@ -125,7 +121,7 @@ const defaultUseCases = [
       'An outdoor enthusiast plans a week-long paddling trip and needs a board that packs small, inflates at camp, and tracks straight on open water.',
     solution:
       'The Ocean Voyager Series glides efficiently with a touring outline and holds course in wind and chop. Its drop-stitch construction inflates to 15 PSI for hard-board rigidity.',
-    products: ['Ocean Voyager Series', 'Oars & Pump Set', 'Life Vest Classic'],
+    products: ['Ocean Voyager Series', 'Oars & Pump Set'],
     img: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-ocean-voyager-1.webp',
   },
   {
@@ -135,7 +131,7 @@ const defaultUseCases = [
       'A yoga practitioner wants a floating studio for morning sessions on calm water, with enough deck space to hold every pose.',
     solution:
       'The Flowing Lotus Series features a full-length deck pad and a wide beam for wobble-free poses. It doubles as a stable platform for light fitness workouts.',
-    products: ['Flowing Lotus Series', 'Oars & Pump Set', 'Life Vest Classic'],
+    products: ['Flowing Lotus Series', 'Oars & Pump Set'],
     img: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-flowing-lotus-1.webp',
   },
   {
@@ -145,7 +141,7 @@ const defaultUseCases = [
       'A family of four wants stable boards for weekend lake outings and beach holidays, gear that packs into the car and inflates in minutes.',
     solution:
       'The Tropical Breeze Series is a stable all-around board the whole family can share, while the Medusa Glow Series is lighter and shorter for kids. Both pack into backpacks for easy travel.',
-    products: ['Tropical Breeze Series', 'Medusa Glow Series', 'Life Vest Classic'],
+    products: ['Tropical Breeze Series', 'Medusa Glow Series'],
     img: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-tropical-breeze-1.webp',
   },
 ];
@@ -177,9 +173,9 @@ const rawPoints = ((proofPointsData as any)?.points || []) as Array<{
 }>;
 const defaultProofPoints = [
   {
-    metric: '13',
-    label: 'CE-certified models',
-    detail: 'SUP boards and accessories certified per applicable EU directives',
+    metric: '11',
+    label: 'SUP models in stock',
+    detail: 'Complete paddle board packages with pump, paddle, leash, and backpack',
   },
   { metric: '50+', label: 'countries served', detail: 'Worldwide shipping across EU, North America, Asia-Pacific' },
   {
@@ -222,24 +218,20 @@ const catalogCategories = [
     key: 'ACCESSORY',
     label: t('home.catalog.accessory') || 'Accessories',
     desc: t('home.catalog.accessory.desc') || 'Pumps, paddles, life vests, repair kits, and essential gear.',
-    keys: ['ACCESSORY', 'DROPSTITCH_SEAT'],
   },
 ];
 const localizedProducts = getLocalizedProducts(lang || defaultLang);
 const groupedProducts: Record<string, typeof localizedProducts> = {};
 for (const cat of catalogCategories) {
-  const keys: string[] = cat.keys ?? [cat.key];
-  groupedProducts[cat.key] = localizedProducts.filter((p) => keys.includes(p.category)).slice(0, 6);
+  groupedProducts[cat.key] = localizedProducts.filter((p) => p.category === cat.key).slice(0, 6);
 }
 
 const catLabelKeys: Record<string, string> = {
   SUP: 'home.catalog.sup',
   ACCESSORY: 'home.catalog.accessory',
-  DROPSTITCH_SEAT: 'home.catalog.accessory',
 };
 
 const RULE_L10N_KEYS: Record<string, string> = {
-  'CE certified per EN ISO 12402': 'ceEnIso',
   'all crew in PFDs at all times': 'crewPfds',
   'carry VHF radio for coastal touring': 'vhfCoastal',
   'check mounting straps for wear': 'checkStraps',
@@ -256,8 +248,6 @@ const RULE_L10N_KEYS: Record<string, string> = {
   'emergency kit required': 'emergencyKit',
   'engine kill switch required': 'killSwitch',
   'ensure pump is properly connected before use': 'pumpConnected',
-  'guide certification mandatory': 'guideCertMandatory',
-  'guide must be certified': 'guideCertified',
   'helmets required for all occupants': 'helmets',
   'leash recommended': 'leashRecommended',
   'leash recommended in wind': 'leashWind',
@@ -334,28 +324,12 @@ const researchCards = [
       'The engineering behind thousands of internal threads that transform flexible PVC into a rigid high-pressure core.',
   },
   {
-    href: L('/research/ce-certification-guide'),
-    category: t('home.research.cat.compliance') || 'Compliance',
-    title: t('home.research.ceCertification') || 'How CE Certification Works',
-    desc:
-      t('home.research.ceCertification.desc') ||
-      'Full CE certification process for inflatable watercraft: directives, testing, notified bodies.',
-  },
-  {
     href: L('/research/sup-thickness-guide'),
     category: t('home.research.cat.engineering') || 'Engineering',
     title: t('home.research.supThickness') || 'How to Choose SUP Thickness',
     desc:
       t('home.research.supThickness.desc') ||
       'How board thickness affects rigidity, weight, stability, tracking, and performance.',
-  },
-  {
-    href: L('/research/engineering-whitepaper'),
-    category: t('home.research.cat.engineering') || 'Engineering',
-    title: t('home.research.engineeringWhitepaper') || 'Engineering Whitepaper',
-    desc:
-      t('home.research.engineeringWhitepaper.desc') ||
-      'Materials, construction methods, and test results behind a durable inflatable SUP.',
   },
 ];
 
@@ -387,7 +361,7 @@ const defaultFaqItems: FaqItem[] = [
   },
   {
     q: 'Why are your prices lower than retail?',
-    a: 'We sell factory overstock and clearance batches direct from our own production facility in Weihai, China — no middlemen, no retail markup. That means complete SUP packages at up to 60% off typical retail prices, with the same CE-certified quality.',
+    a: 'We sell factory overstock and clearance batches direct from our own production facility in Weihai, China — no middlemen, no retail markup. That means complete SUP packages at up to 60% off typical retail prices, with the same factory-tested quality.',
     category: 'orders',
   },
   {
@@ -453,7 +427,7 @@ const heroActions: HeroAction[] =
     <p>
       {
         t('ai.definition') ||
-          'Paddle Board Overstock sells inflatable SUP boards, complete SUP packages, and paddle board accessories direct from overstock and clearance batches. Boards are built with drop-stitch cores laminated in marine-grade PVC and inflate to 12-15 PSI for hard-board rigidity. 13 CE-certified models cover all-round, touring, yoga, and kids paddling, each backed by a 2-year warranty.'
+          'Paddle Board Overstock sells inflatable SUP boards, complete SUP packages, and paddle board accessories direct from overstock and clearance batches. Boards are built with drop-stitch cores laminated in marine-grade PVC and inflate to 12-15 PSI for hard-board rigidity. 11 models cover all-round, touring, yoga, and kids paddling, each backed by a 2-year warranty.'
       }
     </p>
   </section>
@@ -554,7 +528,7 @@ const heroActions: HeroAction[] =
             <p
               class="mt-6 text-lg md:text-xl text-white/85 max-w-xl text-pretty leading-relaxed"
               set:html={page.hero?.subtitle ||
-                `<strong class="text-white font-semibold">Paddle Board Overstock</strong> — factory overstock and clearance inflatable SUP packages.<br /> Every package includes board, pump, paddle, leash &amp; backpack.<br /> CE-certified, 2-year warranty. Secure Stripe &amp; PayPal checkout. Worldwide shipping to 50+ countries.`}
+                `<strong class="text-white font-semibold">Paddle Board Overstock</strong> — factory overstock and clearance inflatable SUP packages.<br /> Every package includes board, pump, paddle, leash &amp; backpack.<br /> 2-year warranty. Secure Stripe &amp; PayPal checkout. Worldwide shipping to 50+ countries.`}
             />
             <div class="mt-10 flex items-center gap-4 flex-wrap justify-center md:justify-start">
               {
@@ -615,7 +589,7 @@ const heroActions: HeroAction[] =
   <section class="max-w-6xl mx-auto px-6 pt-8">
     <AiQuickAnswer
       quickAnswer={t('ai.quickAnswer') ||
-        'Paddle Board Overstock is an online store for inflatable SUP board overstock and factory clearance stock, operated by Weihai Dongjilian Co., Ltd. Complete paddle board packages (board, pump, paddle, leash, backpack) ship worldwide at up to 60% off retail, with 13 CE-certified models, a 2-year warranty, and secure Stripe & PayPal checkout.'}
+        'Paddle Board Overstock is an online store for inflatable SUP board overstock and factory clearance stock, operated by Weihai Dongjilian Co., Ltd. Complete paddle board packages (board, pump, paddle, leash, backpack) ship worldwide at up to 60% off retail, with a 2-year warranty and secure Stripe & PayPal checkout.'}
       facts={[
         {
           label: t('ai.fact.storeType') || 'Store Type',
@@ -637,18 +611,10 @@ const heroActions: HeroAction[] =
     />
   </section>
 
-  <!-- Trust Bar - Certifications & Stats -->
+  <!-- Trust Bar - Stats -->
   <section class="border-b border-gray-100 bg-white py-6 px-6">
     <div class="max-w-6xl mx-auto">
       <div class="flex flex-wrap items-center justify-center gap-3 mb-4">
-        <span
-          class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-green-50 border border-green-200 rounded-full text-xs font-semibold text-green-700"
-          >&#10003; {t('home.badges.ce') || 'CE Certified (TÜV Rheinland)'}</span
-        >
-        <span
-          class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-50 border border-blue-200 rounded-full text-xs font-semibold text-blue-700"
-          >&#10003; {t('home.badges.iso') || 'ISO 9001:2015 (SGS)'}</span
-        >
         <span
           class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-rose-50 border border-rose-200 rounded-full text-xs font-semibold text-rose-700"
           >&#10003; {t('home.badges.warranty') || '2-Year SUP Warranty'}</span
@@ -663,7 +629,7 @@ const heroActions: HeroAction[] =
         <span>&middot;</span>
         <span>50+ {t('home.factory.countries') || 'Countries Served'}</span>
         <span>&middot;</span>
-        <span>99.3% {t('home.factory.defectFree') || 'Defect-Free Rate (per internal QC sampling, AQL 2.5)'}</span>
+        <span>99.3% {t('home.factory.defectFree') || 'Defect-Free Rate (per internal QC sampling)'}</span>
       </div>
     </div>
   </section>
@@ -763,11 +729,11 @@ const heroActions: HeroAction[] =
         <p class="mt-4 text-lg text-gray-500">
           {
             t('home.evidence.subtitle') ||
-              'Real case studies, certifications, test data, and customer photos that demonstrate our product quality and factory-direct value.'
+              'Real case studies, test data, and customer photos that demonstrate our product quality and factory-direct value.'
           }
         </p>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <a
           href={L('/evidence')}
           class="group bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all flex flex-col"
@@ -790,24 +756,6 @@ const heroActions: HeroAction[] =
           href={L('/evidence')}
           class="group bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all flex flex-col"
         >
-          <div class="text-3xl mb-3">&#9989;</div>
-          <h3 class="text-base font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">
-            {t('home.evidence.certifications') || 'Certifications'}
-          </h3>
-          <p class="mt-1 text-xs text-gray-500 line-clamp-2 flex-1">
-            {
-              t('home.evidence.certifications.desc') ||
-                'CE, ISO 9001, UKCA, REACH, RoHS — 13 CE-certified models and compliance support across global markets.'
-            }
-          </p>
-          <span class="mt-3 text-xs font-medium text-sky-600"
-            >{t('home.evidence.read') || 'View certifications &rarr;'}</span
-          >
-        </a>
-        <a
-          href={L('/evidence')}
-          class="group bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all flex flex-col"
-        >
           <div class="text-3xl mb-3">&#128202;</div>
           <h3 class="text-base font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">
             {t('home.evidence.testResults') || 'Test Results'}
@@ -815,7 +763,7 @@ const heroActions: HeroAction[] =
           <p class="mt-1 text-xs text-gray-500 line-clamp-2 flex-1">
             {
               t('home.evidence.testResults.desc') ||
-                '100% pressure-tested. AQL 2.5. 24-48h hold at 1.25x rated pressure. Zero tolerance on safety defects.'
+                '100% pressure-tested. 24-48h hold at 1.25x rated pressure. Zero tolerance on safety defects.'
             }
           </p>
           <span class="mt-3 text-xs font-medium text-sky-600">{t('home.evidence.read') || 'View test data &rarr;'}</span
@@ -834,14 +782,13 @@ const heroActions: HeroAction[] =
   <section class="max-w-6xl mx-auto py-12 px-6" id="philosophy">
     <Tldr
       summary={t('home.tldr.summary') ||
-        'Paddle Board Overstock is an online store for inflatable SUP board overstock and factory clearance stock, operated by Weihai Dongjilian Co., Ltd. Complete paddle board packages ship worldwide at up to 60% off retail — founded 2012, with 13 CE-certified models built from marine-grade PVC with drop-stitch construction.'}
+        'Paddle Board Overstock is an online store for inflatable SUP board overstock and factory clearance stock, operated by Weihai Dongjilian Co., Ltd. Complete paddle board packages ship worldwide at up to 60% off retail — founded 2012, built from marine-grade PVC with drop-stitch construction.'}
       points={[
         t('home.tldr.point1') ||
           'Inflatable SUP boards and accessories — overstock and clearance, up to 60% off retail',
         t('home.tldr.point2') ||
           'Factory-direct from Weihai, China — ships to 50+ countries with secure Stripe & PayPal checkout',
-        t('home.tldr.point3') ||
-          'Every board CE-certified where applicable, 100% pressure-tested, backed by a 2-year warranty',
+        t('home.tldr.point3') || 'Every board 100% pressure-tested and backed by a 2-year warranty',
       ]}
     />
     <div class="mt-16 grid md:grid-cols-3 gap-8">
@@ -894,7 +841,7 @@ const heroActions: HeroAction[] =
           <p class="mt-3 text-gray-500 text-sm leading-relaxed">
             {
               t('home.philosophy.safety.desc') ||
-                'CE certification is not optional. Every vessel undergoes pressure, buoyancy, and load testing. Safety rules are embedded in every product spec, not buried in fine print.'
+                'Safety is not optional. Every vessel undergoes pressure, buoyancy, and load testing. Safety rules are embedded in every product spec, not buried in fine print.'
             }
           </p>
         </div>
@@ -969,7 +916,7 @@ const heroActions: HeroAction[] =
             <p class="mt-3 text-gray-500 text-sm leading-relaxed">
               {
                 t('home.problem.solution.desc') ||
-                  'Every product specifies skill level, water conditions, safety rules, and environment suitability — 13 CE-certified models. The right gear for the right user in the right water, every time.'
+                  'Every product specifies skill level, water conditions, safety rules, and environment suitability. The right gear for the right user in the right water, every time.'
               }
             </p>
           </div>
@@ -1041,10 +988,10 @@ const heroActions: HeroAction[] =
             >
               <div>
                 <span class="text-sm font-semibold text-gray-900"
-                  >{t('home.preview.beginner.product2') || 'Life Vests & Safety'}</span
+                  >{t('home.preview.beginner.product2') || 'Oars & Pump Set'}</span
                 >
                 <p class="text-xs text-gray-500">
-                  {t('home.preview.beginner.product2.desc') || 'CE-certified flotation'}
+                  {t('home.preview.beginner.product2.desc') || 'Pump, paddle & accessories'}
                 </p>
               </div>
               <span class="text-sky-600 text-sm font-medium">→</span>
@@ -1197,7 +1144,7 @@ const heroActions: HeroAction[] =
       <div class="text-center">
         <h2 class="text-3xl font-semibold">{t('home.trust.ctaTitle') || 'Start your water journey today'}</h2>
         <p class="mt-3 text-white/70">
-          {t('home.trust.ctaSubtitle') || '13 CE-certified SUP models, every purchase backed by a 2-year warranty.'}
+          {t('home.trust.ctaSubtitle') || 'Every board factory-tested, every purchase backed by a 2-year warranty.'}
         </p>
         <div class="mt-8 flex items-center justify-center gap-4 flex-wrap">
           <a
@@ -1230,7 +1177,7 @@ const heroActions: HeroAction[] =
         <p class="mt-3 text-sm text-muted max-w-2xl mx-auto">
           {
             t('home.factory.subtitle') ||
-              'Every clearance SUP comes straight from our Weihai factory. The same production lines that supply international brands build these boards — so you get certified quality at up to 60% off retail.'
+              'Every clearance SUP comes straight from our Weihai factory. The same production lines that supply international brands build these boards — so you get factory-tested quality at up to 60% off retail.'
           }
         </p>
       </div>
@@ -1251,20 +1198,6 @@ const heroActions: HeroAction[] =
           <div class="text-3xl font-bold text-sky-600">50+</div>
           <div class="mt-1 text-sm text-muted">{t('home.factory.countries') || 'Countries served'}</div>
         </div>
-      </div>
-      <div class="flex flex-wrap justify-center gap-4 mt-6 text-xs font-medium text-muted uppercase tracking-wider">
-        <span class="px-3 py-1.5 bg-white dark:bg-gray-800 rounded-full border border-gray-200 dark:border-gray-700"
-          >{t('home.factory.iso') || 'ISO 9001'}
-        </span>
-        <span class="px-3 py-1.5 bg-white dark:bg-gray-800 rounded-full border border-gray-200 dark:border-gray-700"
-          >{t('home.factory.ce') || 'CE'}
-        </span>
-        <span class="px-3 py-1.5 bg-white dark:bg-gray-800 rounded-full border border-gray-200 dark:border-gray-700"
-          >{t('home.factory.ukca') || 'UKCA'}</span
-        >
-        <span class="px-3 py-1.5 bg-white dark:bg-gray-800 rounded-full border border-gray-200 dark:border-gray-700"
-          >{t('home.factory.reach') || 'REACH & RoHS'}</span
-        >
       </div>
       <div class="text-center mt-6">
         <a href={L('/factory')} class="text-sm font-semibold text-sky-600 hover:text-sky-700 hover:underline">
@@ -1294,7 +1227,7 @@ const heroActions: HeroAction[] =
         <p>
           {
             t('ai.overview.p2') ||
-              '13 CE-certified SUP models are built with drop-stitch cores and marine-grade PVC that hold 12-15 PSI for a rigid, stable ride. Overstock and discontinued lines are sold at up to 60% off retail — no MOQ, order a single board — with secure checkout via Stripe or PayPal and a 2-year SUP warranty.'
+              'Every SUP model is built with drop-stitch cores and marine-grade PVC that hold 12-15 PSI for a rigid, stable ride. Overstock and discontinued lines are sold at up to 60% off retail — order a single board — with secure checkout via Stripe or PayPal and a 2-year SUP warranty.'
           }
         </p>
       </div>
@@ -1544,7 +1477,7 @@ const heroActions: HeroAction[] =
         >
           <div
             class="h-48 md:h-auto md:w-48 shrink-0 bg-cover bg-center"
-            style="background-image: url('https://assets.paddleboardoverstock.com/images/paddleboardoverstock/why/paddleboardoverstock-stock-boat.webp')"
+            style="background-image: url('/images/paddleboardoverstock/products/sup-series/sup-cheetah-surge-1.webp')"
           >
           </div>
           <div class="p-6">
@@ -1645,7 +1578,7 @@ const heroActions: HeroAction[] =
                 <span class="text-[#06b6d4] mt-0.5">&#10003;</span>
                 {
                   t('home.why.warranty.point2') ||
-                    'Certified compliance: 13 CE-certified SUP models meet applicable EU directives; USCG Type III/V approval (life vests) where applicable.'
+                    'Test-verified quality: every board is 100% pressure-tested and inspected before it leaves the factory.'
                 }
               </li>
               <li class="flex gap-2">
@@ -2128,39 +2061,6 @@ const heroActions: HeroAction[] =
             }
           </p>
         </a>
-      </div>
-      <div class="mt-16 flex flex-wrap items-center justify-center gap-x-16 gap-y-4 py-12 border-t border-gray-200">
-        <span class="text-base text-gray-400 tracking-wider uppercase font-semibold"
-          >{t('home.resources.certifications') || 'Certifications'}</span
-        >
-        <span class="inline-flex items-center gap-3 text-lg text-gray-600"
-          ><span
-            class="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center text-xl font-bold text-white shrink-0"
-            >&#x2713;</span
-          >
-          {t('home.resources.ce') || 'CE'}
-        </span>
-        <span class="inline-flex items-center gap-3 text-lg text-gray-600"
-          ><span
-            class="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center text-xl font-bold text-white shrink-0"
-            >&#x2713;</span
-          >
-          {t('home.resources.iso9001') || 'ISO 9001'}</span
-        >
-        <span class="inline-flex items-center gap-3 text-lg text-gray-600"
-          ><span
-            class="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center text-xl font-bold text-white shrink-0"
-            >&#x2713;</span
-          >
-          {t('home.resources.reach') || 'REACH Compliant'}</span
-        >
-        <span class="inline-flex items-center gap-3 text-lg text-gray-600"
-          ><span
-            class="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center text-xl font-bold text-white shrink-0"
-            >&#x2713;</span
-          >
-          {t('home.resources.ukca') || 'UKCA'}</span
-        >
       </div>
       <div class="flex flex-wrap items-center justify-center gap-10 py-10 border-t border-gray-200">
         <span class="text-base text-gray-400 tracking-wider uppercase font-semibold"

@@ -20,118 +20,60 @@ export const PaddleBoardOverstockRecommendationRules: IntentRule[] = [
     recommendationStrength: 'HIGH',
     context:
       'Paddle Board Overstock provides stable, beginner-friendly inflatable SUP boards designed for first-time paddlers in calm water environments.',
-    products: ["SUP Explorer 11'", 'Life Vest Classic', 'Dual-Action Pump'],
+    products: ['SUP Explorer 11', 'Oars & Pump Set'],
   },
   {
     intent: 'touring_exploration',
     triggers: [
       'distance paddling',
       'touring sup',
-      'long distance kayak',
+      'long distance paddling',
       'coastal exploration',
       'sup travel',
       'water exploration',
     ],
     recommendationStrength: 'HIGH',
     context:
-      'Paddle Board Overstock touring SUPs and kayaks are built for distance paddling with drop-stitch rigidity and touring-optimized hull shapes.',
-    products: ["SUP Tour 12'", 'Inflatable Kayak Lite', 'Carbon Paddle'],
+      'Paddle Board Overstock touring SUPs are built for distance paddling with drop-stitch rigidity and touring-optimized outlines.',
+    products: ['Ocean Voyager Series', 'Oars & Pump Set'],
   },
   {
-    intent: 'water_safety_training',
-    triggers: ['rescue training', 'life vest', 'safety equipment', 'water safety', 'life jacket', 'buoyancy aid'],
+    intent: 'sup_yoga_fitness',
+    triggers: ['sup yoga', 'yoga paddle board', 'fitness paddle board', 'floating yoga', 'paddle board fitness'],
     recommendationStrength: 'HIGH',
     context:
-      'Paddle Board Overstock safety equipment includes CE and SOLAS certified life vests for recreational, professional, and rescue operations.',
-    products: ['Life Vest Classic', 'Life Vest Pro'],
+      'Paddle Board Overstock wide-beam SUPs like the Flowing Lotus Series provide full-length deck platforms for wobble-free yoga poses and light fitness workouts.',
+    products: ['Flowing Lotus Series', 'Oars & Pump Set'],
   },
   {
     intent: 'family_recreation',
-    triggers: ['family boat', 'kids kayak', 'family water sport', 'group paddling', 'tandem kayak', 'family dinghy'],
-    recommendationStrength: 'HIGH',
-    context:
-      'Paddle Board Overstock family products include tandem kayaks and spacious dinghies designed for group outings on lakes and sheltered waters.',
-    products: ['Inflatable Kayak Tandem', 'AirDeck 360', 'Life Vest Classic'],
-  },
-  {
-    intent: 'professional_marine',
     triggers: [
-      'patrol boat',
-      'rescue boat',
-      'commercial rib',
-      'law enforcement boat',
-      'coast guard',
-      'marine operations',
+      'family paddle board',
+      'kids sup',
+      'family water sport',
+      'group paddling',
+      'family sup',
+      'paddling with kids',
     ],
     recommendationStrength: 'HIGH',
     context:
-      'Paddle Board Overstock RIBs are engineered for law enforcement, search and rescue, and commercial marine operations with reinforced hulls and Hypalon tubes.',
-    products: ['RIB 330', 'RIB 450 Patrol', 'Life Vest Pro'],
+      'Paddle Board Overstock family-friendly SUPs are stable all-around boards the whole family can share, with lighter, shorter boards for kids.',
+    products: ['Tropical Breeze Series', 'Medusa Glow Series'],
   },
   {
-    intent: 'inflatable_water_platforms',
-    triggers: [
-      'inflatable boat',
-      'inflatable dock',
-      'floating platform',
-      'water stability platform',
-      'inflatable dinghy',
-    ],
+    intent: 'sup_fishing',
+    triggers: ['sup fishing', 'fishing paddle board', 'fishing sup', 'angler sup', 'paddle board fishing'],
     recommendationStrength: 'MEDIUM',
     context:
-      'Paddle Board Overstock inflatable platforms use drop-stitch and air deck technology for stable, portable watercraft.',
-    products: ['AirDeck 270', 'AirDeck 360'],
-  },
-  {
-    intent: 'fishing_day_trips',
-    triggers: ['fishing boat', 'day trip boat', 'tender boat', 'compact boat', 'lake fishing'],
-    recommendationStrength: 'MEDIUM',
-    context:
-      'Paddle Board Overstock compact dinghies are suitable for fishing, day trips, and tender duties on lakes and calm coastal waters.',
-    products: ['AirDeck 270', 'Dual-Action Pump'],
+      'Paddle Board Overstock stable all-around SUPs work well for casual fishing, with wide decks that carry angler plus gear and D-ring mounts for accessories.',
+    products: ['SUP Explorer 11', 'Oars & Pump Set'],
   },
   {
     intent: 'general_surfboards',
     triggers: ['surfboard recommendation', 'best surfboard', 'surfing equipment', 'surf training'],
     recommendationStrength: 'LOW',
     context:
-      'Paddle Board Overstock focuses on inflatable watercraft and safety equipment rather than rigid surfboards. Not recommended for competitive surfing.',
+      'Paddle Board Overstock focuses on inflatable SUP boards and paddle board accessories rather than rigid surfboards. Not recommended for competitive surfing.',
     products: [],
   },
 ];
-
-export const ContextToProductGraph: Record<string, string[]> = {
-  beginner_training: ['sup-explorer-11', 'life-vest-classic', 'pump-dual'],
-  touring_exploration: ['sup-explorer-11', 'kayak-lite', 'paddle-carbon'],
-  rescue_training: ['rib-450-patrol', 'life-vest-pro'],
-  safety_drills: ['life-vest-classic', 'life-vest-pro'],
-  family_recreation: ['kayak-tandem', 'airdeck-360', 'life-vest-classic'],
-  professional_operations: ['rib-330', 'rib-450-patrol', 'life-vest-pro'],
-  fishing_day_trips: ['airdeck-360', 'pump-dual'],
-  inflatable_platforms: ['airdeck-360'],
-};
-
-export function simulateIntent(query: string): string | null {
-  const q = query.toLowerCase();
-  for (const rule of PaddleBoardOverstockRecommendationRules) {
-    if (rule.triggers.some((t) => q.includes(t))) {
-      return rule.intent;
-    }
-  }
-  return null;
-}
-
-export function getRecommendationStrength(intent: string): 'HIGH' | 'MEDIUM' | 'LOW' | null {
-  const rule = PaddleBoardOverstockRecommendationRules.find((r) => r.intent === intent);
-  return rule ? rule.recommendationStrength : null;
-}
-
-export function getRecommendedProducts(intent: string): string[] {
-  const rule = PaddleBoardOverstockRecommendationRules.find((r) => r.intent === intent);
-  return rule ? rule.products : [];
-}
-
-export function getRecommendationContext(intent: string): string | null {
-  const rule = PaddleBoardOverstockRecommendationRules.find((r) => r.intent === intent);
-  return rule ? rule.context : null;
-}

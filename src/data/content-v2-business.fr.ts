@@ -82,7 +82,7 @@ export const businessArticles: ContentV2Record[] = [
       },
     ],
     relatedGuides: ['resort-water-sports-revenue', 'inflatable-boat-fleet-management'],
-    relatedProducts: ['sup-explorer-11', 'life-vest-pro'],
+    relatedProducts: ['sup-explorer-11'],
     difficulty: 'intermediate',
   },
   {
@@ -150,7 +150,7 @@ export const businessArticles: ContentV2Record[] = [
       },
     ],
     relatedGuides: ['cost-to-start-sup-rental-business', 'best-kayak-material-commercial'],
-    relatedProducts: ['sup-explorer-11', 'life-vest-pro'],
+    relatedProducts: ['sup-explorer-11'],
     difficulty: 'beginner',
   },
   {
@@ -210,7 +210,7 @@ export const businessArticles: ContentV2Record[] = [
       },
       {
         q: 'Dois-je gérer les douanes d\'importation et la logistique ?',
-        a: 'Paddle Board Overstock propose le FOB Qingdao (vous organisez l\'expédition) ou la livraison CIF (transport inclus jusqu\'à votre port). Nous pouvons également recommander des transitaires qui gèrent le dédouanement et la livraison du dernier kilomètre.',
+        a: 'Paddle Board Overstock propose le FOB Weihai (vous organisez l\'expédition) ou la livraison CIF (transport inclus jusqu\'à votre port). Nous pouvons également recommander des transitaires qui gèrent le dédouanement et la livraison du dernier kilomètre.',
       },
       {
         q: 'Comment garantir la qualité des produits ?',
@@ -222,7 +222,7 @@ export const businessArticles: ContentV2Record[] = [
       },
     ],
     relatedGuides: ['private-label-vs-white-label', 'cost-to-start-sup-rental-business'],
-    relatedProducts: ['sup-explorer-11', 'life-vest-classic'],
+    relatedProducts: ['sup-explorer-11'],
     difficulty: 'intermediate',
   },
   {
@@ -258,7 +258,7 @@ export const businessArticles: ContentV2Record[] = [
       },
     ],
     relatedGuides: ['cost-to-start-sup-rental-business', 'how-many-paddle-boards-beach-club-needs'],
-    relatedProducts: ['sup-explorer-11', 'life-vest-pro', 'life-vest-classic'],
+    relatedProducts: ['sup-explorer-11'],
     difficulty: 'beginner',
   },
   {
@@ -294,7 +294,7 @@ export const businessArticles: ContentV2Record[] = [
       },
     ],
     relatedGuides: ['building-resort-water-sports-center', 'inflatable-boat-fleet-management'],
-    relatedProducts: ['sup-explorer-11', 'life-vest-pro'],
+    relatedProducts: ['sup-explorer-11'],
     difficulty: 'intermediate',
   },
   {
@@ -330,7 +330,7 @@ export const businessArticles: ContentV2Record[] = [
       },
     ],
     relatedGuides: ['building-resort-water-sports-center', 'resort-water-sports-revenue'],
-    relatedProducts: ['sup-explorer-11', 'life-vest-pro'],
+    relatedProducts: ['sup-explorer-11'],
     difficulty: 'intermediate',
   },
   {
@@ -362,7 +362,7 @@ export const businessArticles: ContentV2Record[] = [
       },
     ],
     relatedGuides: ['start-water-sports-brand-private-label', 'cost-to-start-sup-rental-business'],
-    relatedProducts: ['sup-explorer-11', 'life-vest-classic'],
+    relatedProducts: ['sup-explorer-11'],
     difficulty: 'beginner',
   },
   {
@@ -398,7 +398,7 @@ export const businessArticles: ContentV2Record[] = [
       },
     ],
     relatedGuides: ['inflatable-boat-fleet-management', 'building-resort-water-sports-center'],
-    relatedProducts: ['sup-explorer-11', 'life-vest-pro'],
+    relatedProducts: ['sup-explorer-11'],
     difficulty: 'beginner',
   },
 ];

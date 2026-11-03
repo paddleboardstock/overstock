@@ -19,7 +19,7 @@ export const businessEntities: BusinessEntity[] = [
     type: 'BusinessAudience',
     name: 'Water Sports Clubs',
     description:
-      'SUP clubs, kayak clubs, surf schools, and training centers needing equipment packages, instructor gear, branding, and maintenance support.',
+      'SUP clubs, surf schools, and training centers needing equipment packages, instructor gear, branding, and maintenance support.',
     url: `${siteUrl}/solutions/clubs`,
     sameAs: [],
     audience: ['Club Owners', 'Program Directors', 'Instructors'],
@@ -35,27 +35,6 @@ export const businessEntities: BusinessEntity[] = [
     sameAs: [],
     audience: ['Resort Managers', 'Hotel Owners', 'Activity Directors'],
     offers: ['Guest Activity Equipment', 'Rental Fleet Packages', 'Safety Systems', 'Custom Branding'],
-  },
-  {
-    id: `${siteUrl}/#business-entrepreneurs`,
-    type: 'BusinessAudience',
-    name: 'Water Brand Entrepreneurs',
-    description:
-      'Amazon sellers, outdoor influencers, and local distributors wanting private label, product design, packaging, and small MOQ manufacturing.',
-    url: `${siteUrl}/solutions/entrepreneurs`,
-    sameAs: [],
-    audience: ['E-commerce Sellers', 'Brand Founders', 'Distributors'],
-    offers: ['Private Label Manufacturing', 'Product Design', 'Custom Packaging', 'Small MOQ'],
-  },
-  {
-    id: `${siteUrl}/#business-packages`,
-    type: 'Service',
-    name: 'Business Packages',
-    description:
-      'Curated business equipment packages for clubs, resorts, and brand entrepreneurs. Pre-configured bundles with products, safety gear, and branding.',
-    url: `${siteUrl}/business-packages`,
-    audience: ['Club Owners', 'Resort Managers', 'Brand Entrepreneurs'],
-    offers: ['Club Starter Package', 'Resort Premium Package', 'Brand Launch Package'],
   },
   {
     id: `${siteUrl}/#success-stories`,
@@ -80,19 +59,7 @@ export const productToBusinessMap: Record<string, string[]> = {
   'sup-flowing-lotus': [`${siteUrl}/#business-resorts`, `${siteUrl}/#business-clubs`],
   'sup-jungle-mandala': [`${siteUrl}/#business-resorts`],
   'sup-tropical-breeze': [`${siteUrl}/#business-resorts`],
-  'airdeck-360': [`${siteUrl}/#business-resorts`, `${siteUrl}/#business-clubs`],
-  'zb-mt350': [`${siteUrl}/#business-resorts`, `${siteUrl}/#business-clubs`],
-  'life-vest-classic': [
-    `${siteUrl}/#business-clubs`,
-    `${siteUrl}/#business-resorts`,
-    `${siteUrl}/#business-entrepreneurs`,
-  ],
-  'life-vest-pro': [`${siteUrl}/#business-clubs`, `${siteUrl}/#business-resorts`, `${siteUrl}/#business-entrepreneurs`],
-  'oars-pump-set': [`${siteUrl}/#business-clubs`, `${siteUrl}/#business-resorts`, `${siteUrl}/#business-entrepreneurs`],
-  'rib-250': [`${siteUrl}/#business-resorts`, `${siteUrl}/#business-clubs`],
-  'rib-270': [`${siteUrl}/#business-resorts`, `${siteUrl}/#business-clubs`],
-  'rib-300': [`${siteUrl}/#business-resorts`, `${siteUrl}/#business-clubs`],
-  'rib-330': [`${siteUrl}/#business-resorts`, `${siteUrl}/#business-clubs`],
+  'oars-pump-set': [`${siteUrl}/#business-clubs`, `${siteUrl}/#business-resorts`],
 };
 
 export function getBusinessEntityJsonLd(entityId: string): Record<string, unknown> | null {

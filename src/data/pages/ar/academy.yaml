@@ -1,168 +1,126 @@
 hero:
-  tagline: Paddle Board Overstock الأكاديمية
-  title: مركز التعلم
-  subtitle: أدلة وبرامج تعليمية لكل مستوى من مستويات المهارة - بدءًا من الأساسيات SUP وحتى تقنيات الإنقاذ المتقدمة
+  tagline: Paddle Board Overstock Academy
+  title: Learning Center
+  subtitle: Guides and tutorials for every skill level — from SUP basics to advanced rescue techniques
+
 categories:
-  - level: مبتدئ
+  - level: Beginner
     color: from-green-500 to-emerald-600
     badge: bg-green-100 text-green-700
     guides:
-      - title: SUP الأساسيات
-        desc: تعلم أساسيات رياضة التجديف واقفًا - الوقوف، وتقنية الضربة، والتوازن.
+      - title: SUP Basics
+        desc: Learn the fundamentals of stand-up paddleboarding — stance, stroke technique, and balance.
         slug: beginner-sup-guide
-      - title: تقنيات التجديف
-        desc: الضربة الأمامية، والضربة الاجتياحية، وضربة السحب، والدعامة المنخفضة - أتقن حركات المجداف الأساسية.
+      - title: Paddle Techniques
+        desc: Forward stroke, sweep stroke, draw stroke, and low brace — master the essential paddle moves.
         slug: sup-paddle-guide
-      - title: السلامة أولا
-        desc: ممارسات السلامة الأساسية بما في ذلك فحص الطقس واستخدام PFD وقواعد المقود والإنقاذ الذاتي.
+      - title: Safety First
+        desc: Essential safety practices including weather checks, PFD use, leash rules, and self-rescue.
         slug: sup-safety-guide
-  - level: متوسط
+  - level: Intermediate
     color: from-blue-500 to-indigo-600
     badge: bg-blue-100 text-blue-700
     guides:
-      - title: أساسيات السياحة
-        desc: تخطيط المجاذيف لعدة ساعات - الملاحة، والترطيب، والسرعة، وقراءة توقعات الرياح.
+      - title: Touring Essentials
+        desc: Planning multi-hour paddles — navigation, hydration, pacing, and reading wind forecasts.
         slug: touring-sup-guide
-      - title: قراءة الطقس
-        desc: تفسير التنبؤات البحرية وتحديد أنماط السحب وفهم تأثيرات الرياح على الماء.
+      - title: Weather Reading
+        desc: Interpret marine forecasts, identify cloud patterns, and understand wind effects on water.
         slug: weather-planning-water-sports
-      - title: أساسيات الملاحة
-        desc: قراءة المخططات واستخدام البوصلة ونقاط الطريق لنظام تحديد المواقع العالمي (GPS) وتخطيط الطريق للتجديف الساحلي.
+      - title: Navigation Basics
+        desc: Chart reading, compass use, GPS waypoints, and route planning for coastal paddling.
         slug: sup-navigation-guide
-      - title: الوعي المد والجزر
-        desc: فهم دورات المد والجزر والتيارات وكيفية تأثيرها على توقيت الإطلاق والتوجيه.
+      - title: Tidal Awareness
+        desc: Understanding tide cycles, currents, and how they affect launch timing and routing.
         slug: understanding-tides
-  - level: متقدم
+  - level: Advanced
     color: from-purple-500 to-violet-600
     badge: bg-purple-100 text-purple-700
     guides:
-      - title: تخطيط الرحلات لعدة أيام
-        desc: الخدمات اللوجستية للبعثة - اختيار المعدات، وتخطيط الطعام، وبروتوكولات السلامة، والاتصالات في حالات الطوارئ.
+      - title: Multi-Day Trip Planning
+        desc: Expedition logistics — gear selection, food planning, safety protocols, and emergency contacts.
         slug: sup-travel-guide
-      - title: تقنيات الإنقاذ
-        desc: الإنقاذ الذاتي، والإنقاذ على شكل حرف T، وإنقاذ الإسكيمو لزوارق الكاياك، وبروتوكولات القطر للمياه المفتوحة.
+      - title: Rescue Techniques
+        desc: Self-rescue, T-rescue, and towing protocols for open water.
         slug: sup-self-rescue
-      - title: التجديف الليلي
-        desc: التنقل بعد حلول الظلام - متطلبات الإضاءة، وذاكرة المسار، والتواصل الجماعي، والتوعية بالمخاطر.
+      - title: Night Paddling
+        desc: Navigation after dark — lighting requirements, route memory, group communication, and hazard awareness.
         slug: sup-navigation-guide
-  - level: صيانة
+  - level: Maintenance
     color: from-amber-500 to-orange-600
     badge: bg-amber-100 text-amber-700
     guides:
-      - title: التنظيف والعناية
-        desc: الشطف بالمياه العذبة، والحماية من الأشعة فوق البنفسجية، والوقاية من العفن الفطري، وتقنيات التجفيف المناسبة بعد كل جلسة.
+      - title: Cleaning & Care
+        desc: Freshwater rinsing, UV protection, mildew prevention, and proper drying techniques after every session.
         slug: inflatable-sup-maintenance
-      - title: دليل التخزين
-        desc: أفضل الممارسات لتخزين الألواح والقوارب القابلة للنفخ - الانكماش، والطي، والتحكم في درجة الحرارة، ومدة الصلاحية.
+      - title: Storage Guide
+        desc: Best practices for storing inflatable boards — deflation, folding, temperature control, and shelf life.
         slug: inflatable-sup-storage
-      - title: أساسيات الإصلاح
-        desc: أصلح الثقوب الصغيرة وتسربات التماس ومشكلات الصمامات باستخدام مجموعات الإصلاح وتقنيات التصحيح PVC.
+      - title: Repair Basics
+        desc: Fix small punctures, seam leaks, and valve issues with PVC repair kits and patch techniques.
         slug: inflatable-sup-repair
-      - title: صيانة الصمام
-        desc: تحديد أنواع الصمامات (Halkey-Roberts، وBoston، وLeafield)، وتنظيف الحطام، واستبدال السيقان المعيبة.
+      - title: Valve Maintenance
+        desc: Identify valve types (Halkey-Roberts, Boston, Leafield), clean debris, and replace faulty stems.
         slug: inflatable-sup-repair
-knowledge_center_tagline: مركز المعرفة
-knowledge_center_title: المعدات البحرية وأدلة الصناعة
-knowledge_center_subtitle: معرفة الخبراء وأدلة الشراء للمحترفين البحريين ومشغلي الأساطيل وعشاق الرياضات المائية.
-knowledge_sections:
-  - title: RIB معرفة القارب
-    tagline: أدلة القوارب الصلبة القابلة للنفخ
-    desc: كل شيء عن RIB القوارب - تصميم الهيكل والمواد واختيار المحرك والصيانة ونصائح الشراء للاستخدام التجاري والترفيهي.
-    guides:
-      - title: كيفية اختيار القارب المناسب RIB
-        desc: دليل كامل لاختيار RIB — الحجم، وقوة المحرك، ومادة الأنبوب، ونوع الهيكل، والاستخدام المقصود.
-        href: /v2/inflatable-boat-buying-guide
-      - title: RIB مقابل القارب القابل للنفخ
-        desc: قارب صلب قابل للنفخ مقابل زورق قابل للنفخ تقليدي - مقارنة تصميم الهيكل والأداء والمتانة والقدرة.
-        href: /compare/rib-vs-dinghy
-      - title: تجاري RIB مقابل ترفيهي RIB
-        desc: قوارب تجارية مقابل قوارب ترفيهية RIB - معايير البناء والمواد والعمر والتكلفة والشهادات.
-        href: /compare/commercial-vs-recreational-rib
-      - title: الألومنيوم مقابل هال الألياف الزجاجية
-        desc: قارن بين هياكل الألومنيوم والألياف الزجاجية للقوارب RIB من حيث الوزن والتكلفة والمتانة ومقاومة التآكل.
-        href: /compare/aluminum-vs-fiberglass
-  - title: دليل القارب القابل للنفخ
-    tagline: نفخ المعرفة المائية
-    desc: أدلة شاملة عن القوارب القابلة للنفخ — PVC مقابل Hypalon، وطرق البناء، ومعايير السلامة، وأفضل ممارسات الصيانة.
-    guides:
-      - title: PVC مقابل Hypalon دليل المواد
-        desc: مقارنة نهائية بين PVC و Hypalon CSM لبناء قارب قابل للنفخ.
-        href: /compare/pvc-vs-hypalon
-      - title: كيف يتم صناعة القوارب القابلة للنفخ
-        desc: عملية التصنيع - قطع المواد، واللحام عالي التردد، وبناء التماس، واختبار الضغط، ومراقبة الجودة.
-        href: /learn/inflatable-technology
-      - title: دليل سلامة القوارب القابلة للنفخ
-        desc: معايير السلامة، سعة الحمولة، التضخم المناسب، فحوصات ما قبل المغادرة، وإجراءات الطوارئ.
-        href: /learn/water-safety
-      - title: صيانة القوارب القابلة للنفخ
-        desc: التنظيف والتخزين والحماية من الأشعة فوق البنفسجية والتجهيز لفصل الشتاء وإصلاح القوارب القابلة للنفخ والأضلاع.
-        href: /v2/inflatable-boat-maintenance
-  - title: معرفة القارب
-    tagline: قارب قابل للنفخ وRIB المحور
-    desc: أدلة فنية تغطي أنواع القوارب القابلة للنفخ، والمواد، وطرق البناء، والصيانة، والسلامة - من الزوارق المطاطية إلى الأضلاع المطاطية.
-    guides:
-      - title: أنواع القوارب القابلة للنفخ
-        desc: القوارب المطاطية، والأضلاع، وزوارق الكاياك، والمناقصات - تعرف على الاختلافات واختر النوع المناسب.
-        href: /v2/inflatable-boat-buying-guide
-      - title: تقنية الغرزة المتساقطة
-        desc: كيف تقوم الآلاف من الخيوط الداخلية بإنشاء هياكل صلبة قابلة للنفخ عالية الضغط.
-        href: /learn/drop-stitch-core
-      - title: مرجع المواد
-        desc: PVC شرح تقييمات الدنير وأوزان القماش ومقاومة الأشعة فوق البنفسجية والمواد البحرية.
-        href: /learn/materials
-      - title: RIB ضد زورق
-        desc: قارن بين القوارب الصلبة القابلة للنفخ والقوارب المطاطية التقليدية لحالات الاستخدام المختلفة.
-        href: /compare/rib-vs-dinghy
-  - title: SUP المعرفة
-    tagline: أدلة لوح التجديف واقفًا
-    desc: كل شيء عن اللوحات SUP — القابلة للنفخ مقابل الصلبة، وأبعاد اللوحة، وتكنولوجيا المواد، ومشورة الخبراء لجميع مستويات المهارة.
-    guides:
-      - title: نفخ مقابل الصلب SUP
-        desc: قارن بين iSUPs وألواح الإيبوكسي الصلبة من حيث قابلية النقل والمتانة والأداء والقيمة.
-        href: /learn/sup
-      - title: SUP دليل أبعاد اللوحة
-        desc: كيف يؤثر الطول والعرض والسمك على الاستقرار والسرعة والقدرة على المناورة.
-        href: /learn/sup
-      - title: SUP الصيانة والعناية
-        desc: نصائح التنظيف والتخزين والحماية من الأشعة فوق البنفسجية وإصلاح الألواح SUP القابلة للنفخ.
-        href: /v2/inflatable-sup-maintenance
-      - title: اختيارك الأول SUP
-        desc: دليل المبتدئين لاختيار لوح التجديف المناسب لوزنك ومستوى مهارتك والاستخدام المقصود.
-        href: /learn/sup
-  - title: دليل معدات الغوص
-    tagline: المعرفة بقوارب الغوص التجارية
-    desc: مرشدون متخصصون في قوارب الغوص وأضلاع الغوص ومعدات مراكز الغوص ومشغلي الغوص وفرق الغوص التجارية.
-    guides:
-      - title: أفضل RIB قارب لمراكز الغوص
-        desc: كيفية اختيار الغوص المناسب RIB لمركز الغوص الخاص بك - اعتبارات السعة والتكوين والميزانية.
-        href: /solutions-diving-center-boats
-      - title: الغوص RIB دليل التكوين
-        desc: الميزات الأساسية لأضلاع الغوص - رفوف الخزانات، وأنظمة السلم، ومنصة الغوص، وتخزين المعدات.
-        href: /solutions-diving-center-boats
-  - title: دليل عطاءات اليخوت
-    tagline: اليخوت الفاخرة وحلول العطاءات البحرية
-    desc: أدلة حول اختيار مناقصة اليخوت المثالية - المناقصات القابلة للنفخ، والمناقصات RIB، وحلول التخزين، وملحقات العطاء.
-    guides:
-      - title: كيفية اختيار مناقصة لليخوت
-        desc: العوامل التي يجب مراعاتها عند اختيار مناقصة لليخت الخاص بك – الحجم والمواد والمحرك والتخزين.
-        href: /solutions-yacht-tender-solutions
-      - title: نفخ مقابل RIB المناقصات
-        desc: قارن مناقصات القوارب القابلة للنفخ بمناقصات القوارب القابلة للنفخ الصلبة من حيث الأداء والمتانة والقدرة على التخزين.
-        href: /compare/rib-vs-dinghy
-  - title: دليل معدات الإنقاذ
-    tagline: البحث والإنقاذ المعرفة المائية
-    desc: مرشدون محترفون على قوارب الإنقاذ والمراكب المائية SAR ومعدات الاستجابة للطوارئ لخفر السواحل ورجال الإنقاذ وفرق الإغاثة في حالات الكوارث.
-    guides:
-      - title: SAR دليل اختيار القارب
-        desc: كيفية اختيار قارب البحث والإنقاذ المناسب - السرعة والقدرة والمتانة ومتطلبات المعدات المتخصصة.
-        href: /solutions-rescue-watercraft
-      - title: تجاري RIB لعمليات الإنقاذ
-        desc: لماذا تعد RIBs من الدرجة التجارية الخيار المفضل لفرق البحث والإنقاذ المحترفة في جميع أنحاء العالم.
-        href: /use-cases/search-and-rescue
-read_guide: اقرأ الدليل →
-cta:
-  title: لست متأكدا من أين تبدأ؟
-  desc: شارك في اختبار تقييم المهارات الخاص بنا للعثور على الأدلة والأدوات المناسبة لمستواك.
-  label: اتصل بنا →
-  link: /contact
 
+knowledge_center_tagline: 'Knowledge Center'
+knowledge_center_title: 'Paddle Board Guides & Knowledge'
+knowledge_center_subtitle: 'Expert guides and buying advice for paddle boarders of every level.'
+
+knowledge_sections:
+  - title: 'Board Technology & Construction'
+    tagline: 'Inside Your Paddle Board'
+    desc: 'How inflatable paddle boards are built — drop-stitch cores, laminate layers, EVA decks, and factory pressure testing.'
+    guides:
+      - title: 'How Paddle Boards Are Made'
+        desc: 'From material cutting and lamination to 100% pressure testing — see how every board leaves the factory.'
+        href: '/factory/process'
+      - title: 'Drop-Stitch Core Technology'
+        desc: 'How thousands of internal threads create a rigid, high-pressure inflatable structure.'
+        href: '/learn/drop-stitch-core'
+      - title: 'Materials Reference'
+        desc: 'PVC denier ratings, fabric weights, UV resistance, and deck materials explained.'
+        href: '/learn/materials'
+      - title: 'Inflatable Board Technology'
+        desc: 'Welded seams, rail construction, and valve systems that keep your board stiff and airtight.'
+        href: '/learn/inflatable-technology'
+  - title: 'Buying Guides'
+    tagline: 'Choose the Right Board'
+    desc: 'Everything you need to pick your first — or next — inflatable SUP, from sizing to construction.'
+    guides:
+      - title: 'How to Choose an Inflatable SUP'
+        desc: "The key factors — construction, thickness, fin setup, and included accessories."
+        href: '/guides/how-to-choose-your-sup/'
+      - title: 'What Is Stand-Up Paddleboarding?'
+        desc: 'A friendly introduction to the sport, the gear, and why inflatable boards make it easy to start.'
+        href: '/guides/what-is-sup'
+      - title: 'Inflatable vs Hard Board'
+        desc: 'Compare iSUPs and hard epoxy boards across portability, durability, performance, and value.'
+        href: '/compare/inflatable-vs-hardboard'
+      - title: 'SUP Size Guide'
+        desc: 'Find the right board length, width, and volume for your weight, skill, and paddling style.'
+        href: '/size-guide'
+  - title: 'Skills & Safety'
+    tagline: 'Paddle with Confidence'
+    desc: 'Practical knowledge for every session — beginner basics, water safety, care, and repair.'
+    guides:
+      - title: "SUP Basics — Beginner's Guide"
+        desc: 'Everything a beginner needs to know — board types, paddle sizing, stance, and first-day tips.'
+        href: '/v2/beginner-sup-guide'
+      - title: 'Water Safety Essentials'
+        desc: 'Weather checks, PFD selection, leash rules, self-rescue, and group paddling best practices.'
+        href: '/learn/water-safety'
+      - title: 'SUP Maintenance & Care'
+        desc: 'Cleaning, storage, UV protection, and care tips for inflatable SUP boards.'
+        href: '/v2/inflatable-sup-maintenance'
+      - title: 'Board Repair Basics'
+        desc: 'Fix small punctures, seam leaks, and valve issues with PVC repair kits and patch techniques.'
+        href: '/v2/inflatable-sup-repair'
+
+read_guide: Read guide →
+
+cta:
+  title: Not sure where to start?
+  desc: Reach out and we'll point you to the right guides and gear for your level.
+  label: Contact us →
+  link: /contact

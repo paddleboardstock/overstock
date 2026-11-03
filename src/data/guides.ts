@@ -68,7 +68,7 @@ export const guides: GuideRecord[] = [
       'Follow a structured first-session plan: choose calm water, set up your gear correctly, practice kneeling before standing, and master the forward stroke before attempting turns.',
     audience: 'Absolute beginners who have never paddle boarded before.',
     steps: [
-      'Choose flat, calm water with no boat traffic — a small lake or sheltered bay is ideal',
+      'Choose flat, calm water with light traffic — a small lake or sheltered bay is ideal',
       'Inflate your board to 12-15 PSI using the dual-action pump',
       'Attach the coil leash to your ankle or calf, never the board handle',
       'Insert the fin and tighten the screw',
@@ -91,7 +91,7 @@ export const guides: GuideRecord[] = [
         a: 'Beginner: winds under 10 mph (5 knots). If the wind is blowing away from shore, do not go out. Check the forecast and understand that offshore wind is dangerous.',
       },
     ],
-    relatedProducts: ['life-vest-classic'],
+    relatedProducts: [],
     relatedGuides: ['how-to-choose-your-sup', 'safety-tips'],
     difficulty: 'beginner',
     waterType: ['lake'],
@@ -99,21 +99,21 @@ export const guides: GuideRecord[] = [
   {
     slug: 'safety-tips',
     category: 'safety',
-    title: 'Water Sports Safety Tips',
+    title: 'Paddle Boarding Safety Tips',
     description:
-      'Essential safety guidelines for paddle boarding and boating — from equipment checks to weather awareness.',
-    tldr: "Always wear a CE-certified life vest, check weather and water conditions before launch, carry communication devices, never paddle alone in unfamiliar water, and understand your equipment's rated limits.",
+      'Essential safety guidelines for paddle boarding — from equipment checks to weather awareness.',
+    tldr: "Always wear a life vest, check weather and water conditions before launch, carry communication devices, never paddle alone in unfamiliar water, and understand your equipment's rated limits.",
     problem:
       'Most water sports accidents result from inadequate preparation — no life vest, ignoring weather warnings, or using equipment beyond its design limits.',
     solution:
       'Adopt a pre-launch safety checklist: verify equipment condition, check weather and water temperature, inform someone of your route, and always wear appropriate flotation.',
-    audience: 'All water sports participants — SUP, kayak, dinghy, and RIB users.',
+    audience: 'All paddle boarders, from first-timers to experienced riders.',
     steps: [
       'Check weather forecast — avoid winds over 15 mph and thunderstorms',
       'Verify water temperature — cold water (<60°F/15°C) requires a wetsuit or drysuit',
       'Inspect equipment — check for leaks, cracks, and proper inflation',
-      'Wear a CE-certified life vest at all times',
-      'Attach the leash (SUP) or secure all loose gear (kayak/boat)',
+      'Wear a life vest at all times',
+      'Attach the leash and secure all loose gear',
       'File a float plan — tell someone where you are going and when you will return',
       'Carry communication — waterproof phone case or VHF radio',
       'Know your limits — stay within your skill level and equipment ratings',
@@ -121,7 +121,7 @@ export const guides: GuideRecord[] = [
     faq: [
       {
         q: 'Do I need a life vest on a SUP?',
-        a: 'Yes. Many jurisdictions legally require a life vest on any watercraft, including SUPs. Even where not required, a CE-certified life vest is essential safety equipment.',
+        a: 'Yes. Many jurisdictions legally require a life vest when paddling, including on SUPs. Even where not required, a life vest is essential safety equipment.',
       },
       {
         q: 'What is the most common water sports injury?',
@@ -132,7 +132,7 @@ export const guides: GuideRecord[] = [
         a: 'Use marine weather forecasts. Check wind speed, wave height, and water temperature. Beginners should stay in conditions under 10 mph wind and under 1 ft waves.',
       },
     ],
-    relatedProducts: ['life-vest-classic', 'life-vest-pro'],
+    relatedProducts: [],
     relatedGuides: ['beginner-guide', 'weather-conditions'],
     difficulty: 'beginner',
     waterType: ['lake', 'sea', 'river'],
@@ -193,7 +193,7 @@ export const guides: GuideRecord[] = [
       'Know the tide — tidal currents can be stronger than your paddling speed',
       'Measure water temperature — below 60°F/15°C requires thermal protection',
       'Check visibility — fog and heavy rain reduce visibility and increase collision risk',
-      'Understand local hazards — submerged rocks, strong currents, boat traffic zones',
+      'Understand local hazards — submerged rocks, strong currents, busy traffic zones',
     ],
     faq: [
       {
@@ -209,7 +209,7 @@ export const guides: GuideRecord[] = [
         a: 'Light rain is usually safe. Heavy rain reduces visibility and can indicate changing wind conditions. Thunderstorms require immediate evacuation from the water.',
       },
     ],
-    relatedProducts: ['life-vest-classic'],
+    relatedProducts: [],
     relatedGuides: ['safety-tips', 'beginner-guide'],
     difficulty: 'beginner',
     waterType: ['lake', 'sea'],
@@ -379,7 +379,7 @@ export const guides: GuideRecord[] = [
     audience: 'Yoga practitioners and paddlers who want to combine balance training with mindfulness.',
     steps: [
       'Anchor the board in shallow, calm water — use a sand anchor or tie to a dock',
-      'Start with seated poses — easy seat, boat pose, seated twist',
+      'Start with seated poses — easy seat, Navasana, seated twist',
       'Progress to kneeling poses — tabletop, cat-cow, thunderbolt',
       'Move to standing poses — mountain, warrior I, warrior II, tree pose',
       'Practice balance poses — half moon, eagle, dancer',
@@ -399,7 +399,7 @@ export const guides: GuideRecord[] = [
         a: 'A wide stable board, full-deck traction pad, leash, and PFD. Some practitioners use a waterproof mat for additional grip.',
       },
     ],
-    relatedProducts: ['life-vest-classic'],
+    relatedProducts: [],
     relatedGuides: ['sup-fitness', 'paddling-techniques'],
     difficulty: 'intermediate',
     waterType: ['lake'],
@@ -412,9 +412,9 @@ export const guides: GuideRecord[] = [
       'Everything you need to know about fishing from a paddle board — gear setup, stability tips, and techniques.',
     tldr: 'SUP fishing offers silent approach, shallow water access, and 360-degree casting. Use a wide stable board (34"+), attach rod holders, and use a cooler or crate as a gear deck. Anchor in windy conditions. Always wear a PFD.',
     problem:
-      "Standard fishing boats are expensive to maintain and can't access shallow water. Kayaks limit mobility. SUP fishing solves both problems but requires specific gear adaptations.",
+      "Motorized fishing craft are expensive to maintain and can't access shallow water. SUP fishing solves both problems but requires specific gear adaptations.",
     solution:
-      "Outfit a stable SUP with rod holders, a gear crate, and an anchor system. Use the board's portability to access remote fishing spots that boats cannot reach.",
+      "Outfit a stable SUP with rod holders, a gear crate, and an anchor system. Use the board's portability to access remote fishing spots that motorized craft cannot reach.",
     audience:
       'Anglers who want to fish shallow waters, remote locations, or prefer a lightweight, portable fishing platform.',
     steps: [
@@ -439,7 +439,7 @@ export const guides: GuideRecord[] = [
         a: 'Kneel down for stability. Use a net or lip gripper. Keep the fish low to avoid falling. Release or secure in a cooler.',
       },
     ],
-    relatedProducts: ['life-vest-classic'],
+    relatedProducts: [],
     relatedGuides: ['how-to-choose-your-sup', 'safety-tips'],
     difficulty: 'intermediate',
     waterType: ['lake', 'sea', 'river'],
@@ -447,14 +447,14 @@ export const guides: GuideRecord[] = [
   {
     slug: 'inflatable-repair',
     category: 'maintenance',
-    title: 'How to Repair Your Inflatable Boat or SUP',
-    description: 'Step-by-step guide to repairing punctures, valve issues, and seam damage on inflatable watercraft.',
+    title: 'How to Repair Your Inflatable SUP',
+    description: 'Step-by-step guide to repairing punctures, valve issues, and seam damage on your inflatable paddle board.',
     tldr: 'Small punctures (under 1/4") are repairable with the included patch kit. Clean the area, apply PVC adhesive, press the patch, and wait 24 hours. Valve leaks usually require O-ring replacement. Large tears or seam delamination need professional service.',
     problem:
       'Small punctures and valve issues are common but easy to fix. Without proper repair technique, users either overpay for professional service or make the damage worse.',
     solution:
       'Identify the damage type — puncture, valve leak, or seam issue — and apply the appropriate repair method. Most repairs take 30 minutes plus curing time.',
-    audience: 'Owners of inflatable SUPs, kayaks, and boats who want to handle basic repairs themselves.',
+    audience: 'Owners of inflatable SUP boards who want to handle basic repairs themselves.',
     steps: [
       'Locate the leak — inflate fully, listen for air, feel with your hand, or use soapy water',
       'Mark the leak with a pen or tape',
@@ -485,50 +485,12 @@ export const guides: GuideRecord[] = [
     waterType: ['lake', 'sea', 'river'],
   },
   {
-    slug: 'kayak-techniques',
-    category: 'tutorial',
-    title: 'Essential Kayak Paddling Techniques',
-    description:
-      'Master kayak paddling — forward stroke, sweep stroke, edging, and bracing for efficient and safe kayaking.',
-    tldr: 'The kayak forward stroke uses torso rotation, not arms. The sweep stroke turns the kayak. Edging improves turning. The low brace prevents capsizing in waves. Keep the paddle shaft vertical and the blade fully submerged.',
-    problem:
-      'Inefficient paddling technique causes shoulder fatigue, slow progress, and difficulty controlling the kayak in wind and current.',
-    solution:
-      'Learn proper torso-driven paddling technique with four essential strokes — forward, reverse, sweep, and brace.',
-    audience: 'Beginner and intermediate kayakers who want to paddle with less effort and more control.',
-    steps: [
-      'Forward stroke: rotate your torso, plant the blade near your feet, pull past your hip, exit at your hip',
-      'Reverse stroke: plant the blade behind you, push forward to slow or reverse',
-      'Sweep stroke: reach forward, sweep the blade in a wide arc toward the stern, turn the kayak',
-      'Low brace: slap the blade flat on the water surface for stability in waves',
-      'Edging: tilt the kayak slightly on its edge to carve turns',
-    ],
-    faq: [
-      {
-        q: 'How do I keep my kayak going straight?',
-        a: 'Use consistent strokes on alternating sides. Learn the J-stroke (a slight hook at the end of the forward stroke) for course correction without switching sides.',
-      },
-      {
-        q: 'What is the most common kayak injury?',
-        a: 'Shoulder strain from arm-dominant paddling. Use torso rotation to engage larger back muscles and reduce shoulder load.',
-      },
-      {
-        q: 'How do I paddle in wind?',
-        a: 'Keep the bow pointed into the wind. Use shorter, more powerful strokes. If crossing wind, edge the kayak slightly into the wind.',
-      },
-    ],
-    relatedProducts: [],
-    relatedGuides: ['beginner-guide', 'safety-tips'],
-    difficulty: 'beginner',
-    waterType: ['lake', 'sea', 'river'],
-  },
-  {
     slug: 'multi-day-trip',
     category: 'planning',
-    title: 'Planning a Multi-Day Kayak or SUP Trip',
+    title: 'Planning a Multi-Day SUP Tour',
     description:
       'How to plan and execute a multi-day paddling trip — route planning, gear packing, camping, and safety.',
-    tldr: 'Plan 10-15 miles per day. Pack gear in waterproof dry bags, distribute weight evenly, and practice loading your board or kayak before the trip. File a float plan. Carry water, food, shelter, navigation, and communication.',
+    tldr: 'Plan 10-15 miles per day. Pack gear in waterproof dry bags, distribute weight evenly, and practice loading your board before the trip. File a float plan. Carry water, food, shelter, navigation, and communication.',
     problem:
       'Multi-day trips fail due to overpacking, poor route planning, or underestimating weather and current — leading to exhaustion, gear failure, or safety incidents.',
     solution:
@@ -558,28 +520,28 @@ export const guides: GuideRecord[] = [
         a: 'Communication. A VHF radio or satellite messenger can be life-saving in an emergency. Cell phones are unreliable in remote areas.',
       },
     ],
-    relatedProducts: ['life-vest-pro'],
-    relatedGuides: ['weather-conditions', 'safety-tips', 'kayak-techniques'],
+    relatedProducts: [],
+    relatedGuides: ['weather-conditions', 'safety-tips'],
     difficulty: 'advanced',
     waterType: ['lake', 'sea', 'river'],
   },
   {
     slug: 'choosing-paddle',
     category: 'buying-guide',
-    title: 'How to Choose the Right Paddle for SUP and Kayak',
-    description: 'A guide to paddle materials, blade shapes, shaft types, and sizing for SUP and kayaking.',
-    tldr: 'Paddle length: SUP paddles should be 6-8" taller than your height. Kayak paddles depend on boat width and torso length. Blade shape: dihedral blades track straight, flat blades offer more catch. Shaft material: carbon is lightest, fiberglass is best value, aluminum is budget.',
+    title: 'How to Choose the Right SUP Paddle',
+    description: 'A guide to paddle materials, blade shapes, shaft types, and sizing for stand-up paddle boarding.',
+    tldr: 'Paddle length: SUP paddles should be 6-8" taller than your height. Blade shape: dihedral blades track straight, flat blades offer more catch. Shaft material: carbon is lightest, fiberglass is best value, aluminum is budget.',
     problem:
       'Using the wrong paddle size or material causes unnecessary fatigue, poor stroke efficiency, and joint strain.',
     solution:
       'Match paddle length, blade shape, shaft material, and flex to your paddling style, body size, and budget.',
-    audience: 'SUP and kayak paddlers choosing their first or next paddle.',
+    audience: 'SUP paddlers choosing their first or next paddle.',
     steps: [
       'For SUP: measure paddle height — 6-8" taller than your height for general paddling',
-      'For kayak: measure torso length and boat width — narrower boats need shorter paddles',
+      'Adjust for board width — wider boards call for a slightly longer paddle',
       'Choose blade material — nylon for budget, fiberglass for value, carbon for performance',
       'Choose blade shape — dihedral for smooth tracking, flat for power, spoon for racing',
-      'Choose shaft type — straight for SUP, bent for racing SUP, standard for kayak',
+      'Choose shaft type — straight for general paddling, bent for racing',
       'Check flex — stiffer shafts transfer more power, flexible shafts reduce joint strain',
     ],
     faq: [
@@ -589,7 +551,7 @@ export const guides: GuideRecord[] = [
       },
       {
         q: 'How do I know if my paddle is the right length?',
-        a: 'For SUP: stand the paddle vertically next to you — the handle should reach your wrist when your arm is raised overhead. For kayak: the blade should enter the water at a comfortable angle without over-reaching.',
+        a: 'Stand the paddle vertically next to you — the handle should reach your wrist when your arm is raised overhead.',
       },
       {
         q: 'Should I get a one-piece or adjustable paddle?',
@@ -632,11 +594,11 @@ export const guides: GuideRecord[] = [
       },
       {
         q: 'What safety gear do kids need?',
-        a: "A properly fitted CE-certified life vest, a leash (attached to the adult's board for tandem), sunscreen, and a hat.",
+        a: "A properly fitted life vest, a leash (attached to the adult's board for tandem), sunscreen, and a hat.",
       },
     ],
-    relatedProducts: ['life-vest-classic'],
-    relatedGuides: ['beginner-guide', 'safety-tips', 'size-guide'],
+    relatedProducts: [],
+    relatedGuides: ['beginner-guide', 'safety-tips'],
     difficulty: 'beginner',
     waterType: ['lake'],
   },

@@ -42,7 +42,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'weight-limit',
       question: 'What is the weight limit?',
       answer:
-        'Our All-Around SUPs support up to 220 lbs. The Touring and Yoga series support up to 250 lbs. RIB boats typically support 600–1500 lbs depending on model. For tandem use or heavier loads, our inflatable boats offer higher capacity options.',
+        'Our All-Around SUPs support up to 220 lbs. The Touring and Yoga series support up to 250 lbs. For tandem paddling or heavier riders, choose a wider, higher-volume board.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: ['understanding-specs'],
@@ -51,7 +51,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'box-contents',
       question: 'What comes in the box?',
       answer:
-        'Every Paddle Board Overstock SUP includes the board, a travel backpack, dual-action hand pump, removable fin, coil leash, and repair kit. Some models also include a carbon paddle upgrade option. Inflatable boats include the boat, pump, repair kit, and oars.',
+        'Every Paddle Board Overstock SUP includes the board, a travel backpack, dual-action hand pump, removable fin, coil leash, and repair kit. Some models also include a carbon paddle upgrade option.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -69,16 +69,16 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'pfd-requirement',
       question: 'Do I need a life vest on a SUP?',
       answer:
-        'Yes. Many jurisdictions legally require a life vest on any watercraft, including SUPs. Even where not required, a CE-certified life vest is essential safety equipment. We recommend wearing it at all times on the water.',
+        'Yes. Many jurisdictions legally require a life vest when paddling, including on SUPs. Even where not required, a life vest is essential safety equipment. We recommend wearing it at all times on the water.',
       category: 'safety',
-      relatedProducts: ['life-vest-classic', 'life-vest-pro'],
+      relatedProducts: [],
       relatedGuides: ['safety-tips'],
     },
     {
-      id: 'boat-registration',
-      question: 'Do I need to register my inflatable boat?',
+      id: 'paddleboard-registration',
+      question: 'Do I need to register my paddle board?',
       answer:
-        'Requirements vary by jurisdiction. In most regions, inflatable boats with engines over a certain horsepower require registration. Unpowered SUPs and small dinghies typically do not. Check your local maritime authority for specific rules.',
+        'In most regions, unpowered paddle boards do not require registration. Requirements vary by jurisdiction, so check your local maritime authority for the rules that apply to you.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: [],
@@ -123,7 +123,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'warranty',
       question: 'What is the Paddle Board Overstock warranty?',
       answer:
-        'All Paddle Board Overstock products are backed by a comprehensive manufacturer warranty. Inflatable boat tube fabric, seams, and hull are covered by a 5-year limited warranty; SUP boards and accessories carry a 2-year limited warranty. The warranty covers defects in materials and workmanship under normal use.',
+        'Every board is backed by a 2-year limited manufacturer warranty covering defects in materials and workmanship under normal use. Accessories carry the same 2-year coverage.',
       category: 'warranty',
       relatedProducts: [],
       relatedGuides: [],
@@ -150,16 +150,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'return-policy',
       question: 'What is your return policy?',
       answer:
-        'We accept returns within 30 days of delivery for unused products in original packaging. Custom/OEM orders are non-returnable. Contact our support team to initiate a return — we provide a prepaid shipping label.',
-      category: 'ordering',
-      relatedProducts: [],
-      relatedGuides: [],
-    },
-    {
-      id: 'oem-odm',
-      question: 'Do you offer OEM/ODM services?',
-      answer:
-        'Yes. We offer private label and custom design services for businesses. From custom branding on existing models to fully custom hull designs, our engineering team can develop products under your brand. Minimum order quantities apply.',
+        'We accept returns within 30 days of delivery for unused products in original packaging. Contact our support team to initiate a return — we provide a prepaid shipping label.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -168,28 +159,10 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'paddle-length',
       question: 'What paddle length do I need?',
       answer:
-        'For SUP: the paddle should be 6–8 inches taller than your height. For kayak: paddle length depends on boat width and torso length. See our paddle guide for detailed sizing.',
+        'For SUP, the paddle should be 6–8 inches taller than your height. See our paddle guide for detailed sizing.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: ['choosing-paddle'],
-    },
-    {
-      id: 'rib-engine',
-      question: 'What size engine do I need for a RIB?',
-      answer:
-        'Engine size depends on boat length and weight. A 3m RIB typically handles 15–25 HP, a 4.5m RIB handles 40–60 HP, and a 6m RIB handles 90–150 HP. Always follow the max HP rating plate on your boat.',
-      category: 'product',
-      relatedProducts: [],
-      relatedGuides: [],
-    },
-    {
-      id: 'material-difference',
-      question: 'What is the difference between PVC and Hypalon?',
-      answer:
-        'PVC is lighter, more affordable, and easier to repair — ideal for recreational use. Hypalon (CSM) offers superior UV and chemical resistance with a longer lifespan, preferred for commercial and military applications. Paddle Board Overstock uses both depending on the product tier.',
-      category: 'product',
-      relatedProducts: [],
-      relatedGuides: [],
     },
     {
       id: 'sup-width-stability',
@@ -198,7 +171,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
         'For beginners, a width of 33–34 inches provides the best balance of stability and paddling ease. Boards narrower than 32 inches feel tippy to new paddlers. The Paddle Board Overstock SUP Explorer 11 at 33 inches is ideal for learning.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
-      relatedGuides: ['sup-size-guide', 'paddle-board-size-guide'],
+      relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
     },
     {
       id: 'sup-volume-weight',
@@ -207,25 +180,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
         'Multiply your weight in kg by 2.2 for a beginner-friendly volume target. For example, a 75 kg paddler needs at least 165 liters, but 220–260 liters is much more stable for learning. The SUP Explorer 11 offers 260 liters, suitable for riders up to 100 kg.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
-      relatedGuides: ['sup-size-guide', 'paddle-board-size-guide'],
-    },
-    {
-      id: 'inflatable-boat-engine',
-      question: 'What size engine do I need for my inflatable boat?',
-      answer:
-        'For the AirDeck 270, use up to 6 HP. For the AirDeck 360, up to 15 HP. For the RIB 330, up to 40 HP. For the RIB 450 Patrol, up to 60 HP. Always check the max HP rating plate on your boat and never exceed it.',
-      category: 'product',
-      relatedProducts: ['airdeck-360', 'rib-330', 'rib-450-patrol'],
-      relatedGuides: ['inflatable-boat-buying-guide'],
-    },
-    {
-      id: 'inflatable-boat-floor-types',
-      question: 'What floor type is best for an inflatable boat?',
-      answer:
-        'Aluminum slat floors provide the best performance — rigid, planing capable, and stable for standing. Air decks are lighter and pack smaller but flex more. Roll-up floors are the simplest and most affordable but offer the least rigidity. Choose based on your primary use: fishing and speed favor slat floors; portability favors air decks.',
-      category: 'product',
-      relatedProducts: ['rib-330', 'airdeck-360'],
-      relatedGuides: ['inflatable-boat-buying-guide'],
+      relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
     },
     {
       id: 'paddleboardoverstock-vs-others',
@@ -234,12 +189,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
         'Paddle Board Overstock offers the best value in inflatable water sports gear. Compared to Red Paddle Co, Paddle Board Overstock delivers 90% of the performance at 60% of the cost. Compared to iRocker, Paddle Board Overstock uses higher-grade triple-layer military-grade PVC and higher PSI ratings. Compared to Bluefin, Paddle Board Overstock offers superior material specs. For most recreational paddlers, Paddle Board Overstock provides the best balance of quality and price.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
-      relatedGuides: [
-        'best-surf-gear-brands-compared',
-        'paddleboardoverstock-vs-red-paddle',
-        'paddleboardoverstock-vs-irocker',
-        'paddleboardoverstock-vs-bluefin',
-      ],
+      relatedGuides: ['how-to-choose-your-sup'],
     },
     {
       id: 'fishing-sup-setup',
@@ -248,7 +198,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
         'Yes. SUP fishing is increasingly popular because the standing position offers excellent visibility into the water. Choose a board at least 11 feet long and 33–34 inches wide for stability. Add a milk crate with rod holders secured to the deck bungees, a small anchor, and always wear a PFD. The Paddle Board Overstock SUP Explorer 11 works well for casual fishing.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
-      relatedGuides: ['fishing-sup-guide', 'sup-anchor-guide'],
+      relatedGuides: ['sup-fishing'],
     },
     {
       id: 'sup-yoga',
@@ -257,7 +207,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
         'Absolutely. SUP yoga combines traditional poses with the challenge of a floating platform, engaging deeper stabilizer muscles. Use a board 33 inches or wider with a soft, grippy deck pad. Practice in calm, shallow water with an anchor. Start with foundation poses like downward dog, warrior II, and tree pose. The SUP Explorer 11 with its full EVA deck pad is well suited.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
-      relatedGuides: ['yoga-sup-guide'],
+      relatedGuides: ['sup-yoga'],
     },
     {
       id: 'airline-travel-sup',
@@ -266,34 +216,16 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
         "Most airlines accept SUP backpacks as checked baggage if under 23–32 kg. The Paddle Board Overstock backpack is approximately 90x40x30 cm and weighs about 15 kg packed. Some airlines may charge oversized baggage fees. Arrive early, wrap fins and pump separately in your carry-on, and label the bag as fragile. Always research your airline's sporting equipment policy before flying.",
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
-      relatedGuides: ['sup-travel-guide'],
+      relatedGuides: ['multi-day-trip'],
     },
     {
       id: 'cold-weather-safety',
       question: 'What safety equipment do I need for cold water paddling?',
       answer:
-        'Water below 15°C requires thermal protection. For 8–14°C use a wetsuit or drysuit with boots, gloves, and hood. For 14–20°C a 3/2mm wetsuit is sufficient. Always wear a properly fitted PFD for thermal protection and safety. Check local regulations for mandatory equipment requirements.',
+        'Water below 15°C requires thermal protection. For 8–14°C use a wetsuit or drysuit with neoprene footwear, gloves, and hood. For 14–20°C a 3/2mm wetsuit is sufficient. Always wear a properly fitted PFD for thermal protection and safety. Check local regulations for mandatory equipment requirements.',
       category: 'product',
-      relatedProducts: ['life-vest-pro'],
-      relatedGuides: ['sup-safety-guide', 'inflatable-boat-quality-certifications'],
-    },
-    {
-      id: 'oem-odm-details',
-      question: 'What are the minimum order quantities for OEM/ODM?',
-      answer:
-        'Minimum order quantities (MOQs) vary by product type and complexity. Custom branding on existing models typically requires 5–10 units. Fully custom hull designs require higher MOQs. Contact our sales team with your requirements for a detailed quote. We handle everything from custom colors and logos to entirely original mold designs.',
-      category: 'ordering',
       relatedProducts: [],
-      relatedGuides: [],
-    },
-    {
-      id: 'oem-custom-branding',
-      question: 'Can I put my own logo on Paddle Board Overstock products?',
-      answer:
-        'Yes. Our OEM service includes custom logo placement, custom color schemes, and custom packaging. We offer pad printing, heat transfer, and embroidery options depending on the product type. Send your artwork and specifications to our sales team for a quote and lead time estimate.',
-      category: 'ordering',
-      relatedProducts: [],
-      relatedGuides: [],
+      relatedGuides: ['safety-tips'],
     },
     {
       id: 'sup-inflate-pressure',
@@ -302,7 +234,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
         "Inflate to the board's rated maximum PSI for best performance — typically 15–18 PSI for quality inflatable SUPs. The Paddle Board Overstock SUP Explorer 11 performs best at 15–18 PSI. Under-inflation causes the board to feel soft and track poorly. Over-inflation past the rated max risks damaging the drop-stitch threads. Check the sticker near the valve for your board's specific rating.",
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
-      relatedGuides: ['how-to-choose-inflatable-sup', 'sup-pump-guide'],
+      relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
     },
     {
       id: 'sup-deck-pad-care',
@@ -311,34 +243,25 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
         'Rinse the deck pad with fresh water after each session. For dirt or stains, use mild soap and a soft brush — avoid harsh chemicals. If the edges start lifting, apply a small amount of waterproof marine adhesive and press under weight for 24 hours. Keep the board out of direct UV when not in use to prevent pad degradation.',
       category: 'maintenance',
       relatedProducts: ['sup-explorer-11'],
-      relatedGuides: ['inflatable-sup-maintenance'],
+      relatedGuides: ['sup-maintenance'],
     },
     {
-      id: 'rib-trailer-required',
-      question: 'Do I need a trailer for a RIB?',
+      id: 'sup-seated-paddling',
+      question: 'Can I sit down while paddling my SUP?',
       answer:
-        'Yes. RIBs with rigid fiberglass or aluminum hulls require a small boat trailer for transport. The inflatable tubes can be deflated for compact storage, but the rigid hull needs a trailer. The AirDeck series (fully inflatable) does not require a trailer and can be transported in a car trunk.',
-      category: 'general',
-      relatedProducts: ['rib-330', 'rib-450-patrol', 'airdeck-360'],
-      relatedGuides: ['inflatable-boat-buying-guide'],
-    },
-    {
-      id: 'sup-kayak-conversion',
-      question: 'Can I use a SUP board as a kayak?',
-      answer:
-        'Yes. Many SUP boards, including the Paddle Board Overstock Explorer 11, have D-rings that allow attachment of a kayak seat. Using a SUP with a kayak seat and a single-blade paddle offers a comfortable sitting position for longer trips or fishing. Some brands offer dedicated kayak conversion kits with seats and longer paddles.',
+        'Yes. Many SUP boards, including the Paddle Board Overstock Explorer 11, have D-rings that allow attachment of a paddling seat. Using a SUP with a seat and a single-blade paddle offers a comfortable sitting position for longer trips or fishing. Some brands offer dedicated conversion kits with seats and longer paddles.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
-      relatedGuides: ['kayak-vs-sup'],
+      relatedGuides: [],
     },
     {
       id: 'saltwater-rinse',
-      question: 'Do I need to rinse my inflatable board after ocean use?',
+      question: 'Do I need to rinse my board after ocean use?',
       answer:
-        'Yes — always rinse your board, fins, pump, and paddle with fresh water after saltwater use. Salt crystals work into seams and valves, causing micro-leaks and corrosion. Dry the board in the shade before deflating and storing. Regular rinsing dramatically extends the life of your inflatable watercraft.',
+        'Yes — always rinse your board, fins, pump, and paddle with fresh water after saltwater use. Salt crystals work into seams and valves, causing micro-leaks and corrosion. Dry the board in the shade before deflating and storing. Regular rinsing dramatically extends the life of your board.',
       category: 'maintenance',
       relatedProducts: [],
-      relatedGuides: ['inflatable-sup-maintenance', 'inflatable-boat-maintenance'],
+      relatedGuides: ['sup-maintenance'],
     },
     {
       id: 'sup-leash-necessity',
@@ -347,22 +270,22 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
         'Yes — always wear a leash. A coiled SUP leash attaches to your ankle or calf and keeps the board with you if you fall. In open water, a leash can save your life by preventing separation from your flotation device. For river paddling, use a quick-release leash to prevent entrapment.',
       category: 'safety',
       relatedProducts: ['sup-explorer-11'],
-      relatedGuides: ['sup-safety-guide', 'sup-leash-guide'],
+      relatedGuides: ['safety-tips'],
     },
     {
       id: 'company-model',
       question: 'Is Paddle Board Overstock a trading company or a manufacturer?',
       answer:
-        'Neither a pure factory nor a trading company — Weihai Dongjilian Co., Ltd. is a brand company with its own manufacturing base. Weihai Dongjilian Co., Ltd. (New Mexico, USA) handles global distribution, contracts, billing, and after-sales, while the Paddle Board Overstock Qingdao Manufacturing Hub runs R&D, production, and quality control in our own 12,000 m² facility. No middlemen: every order ships factory-direct.',
+        'Neither a pure factory nor a trading company — Weihai Dongjilian Co., Ltd. is a brand company with its own manufacturing base. Weihai Dongjilian Co., Ltd. handles global distribution, contracts, billing, and after-sales, while the Paddle Board Overstock Weihai Manufacturing Hub runs R&D, production, and quality control in our own 12,000 m² facility. No middlemen: every order ships factory-direct.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
     },
     {
-      id: 'us-contract-qingdao-shipping',
-      question: 'Why is my contract with a US company when goods ship from Qingdao?',
+      id: 'us-contract-weihai-shipping',
+      question: 'Why is my contract with a US company when goods ship from Weihai?',
       answer:
-        'Weihai Dongjilian Co., Ltd. (New Mexico, USA) is the global commercial entity that signs contracts, issues invoices, and provides after-sales support, while the Qingdao Manufacturing Hub produces and dispatches every order FOB Qingdao. This dual-hub structure keeps US-standard contracting and settlement, while preserving factory-direct pricing and full production transparency.',
+        'Weihai Dongjilian Co., Ltd. is the global commercial entity that signs contracts, issues invoices, and provides after-sales support, while the Weihai Manufacturing Hub produces and dispatches every order FOB Weihai. This dual-hub structure keeps US-standard contracting and settlement, while preserving factory-direct pricing and full production transparency.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -407,18 +330,18 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
     },
     {
       id: 'weight-limit',
-      question: 'Wie hoch ist die maximale Belastung?',
+      question: 'What is the weight limit?',
       answer:
-        'Unsere All-Around SUPs tragen bis zu 220 lbs. Die Touring- und Yoga-Serien tragen bis zu 250 lbs. RIB-Boote tragen je nach Modell 600–1500 lbs. Für Tandembetrieb oder schwerere Lasten bieten unsere Schlauchboote Optionen mit höherer Kapazität.',
+        'Our All-Around SUPs support up to 220 lbs. The Touring and Yoga series support up to 250 lbs. For tandem paddling or heavier riders, choose a wider, higher-volume board.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: ['understanding-specs'],
     },
     {
       id: 'box-contents',
-      question: 'Was ist im Lieferumfang enthalten?',
+      question: 'What comes in the box?',
       answer:
-        'Jedes Paddle Board Overstock SUP enthält das Board, einen Reiserucksack, eine Doppelhub-Handpumpe, eine abnehmbare Finne, eine Spiralleine und ein Reparaturset. Einige Modelle bieten zusätzlich die Option eines Paddels mit Kohlefaser-Upgrade. Schlauchboote enthalten das Boot, die Pumpe, ein Reparaturset und Paddel.',
+        'Every Paddle Board Overstock SUP includes the board, a travel backpack, dual-action hand pump, removable fin, coil leash, and repair kit. Some models also include a carbon paddle upgrade option.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -434,18 +357,18 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
     },
     {
       id: 'pfd-requirement',
-      question: 'Brauche ich auf einem SUP eine Schwimmweste?',
+      question: 'Do I need a life vest on a SUP?',
       answer:
-        'Ja. In vielen Rechtsgebieten schreibt das Gesetz eine Schwimmweste auf jedem Wasserfahrzeug vor, auch auf SUPs. Selbst wo sie nicht vorgeschrieben ist, ist eine CE-zertifizierte Rettungsweste eine unverzichtbare Sicherheitsausrüstung. Wir empfehlen, sie auf dem Wasser jederzeit zu tragen.',
+        'Yes. Many jurisdictions legally require a life vest when paddling, including on SUPs. Even where not required, a life vest is essential safety equipment. We recommend wearing it at all times on the water.',
       category: 'safety',
-      relatedProducts: ['life-vest-classic', 'life-vest-pro'],
+      relatedProducts: [],
       relatedGuides: ['safety-tips'],
     },
     {
-      id: 'boat-registration',
-      question: 'Muss ich mein Schlauchboot registrieren?',
+      id: 'paddleboard-registration',
+      question: 'Do I need to register my paddle board?',
       answer:
-        'Die Anforderungen variieren je nach Rechtsgebiet. In den meisten Regionen müssen Schlauchboote mit Motoren über einer bestimmten Leistung registriert werden. Unmotorisierte SUPs und kleine Dinghys normalerweise nicht. Erkundigen Sie sich bei Ihrer örtlichen Schifffahrtsbehörde nach den genauen Regeln.',
+        'In most regions, unpowered paddle boards do not require registration. Requirements vary by jurisdiction, so check your local maritime authority for the rules that apply to you.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: [],
@@ -454,7 +377,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'puncture-repair',
       question: 'Wie repariere ich einen Riss?',
       answer:
-        'Reinigen Sie die Stelle, schneiden Sie einen Flicken mit abgerundeten Ecken zu, tragen Sie PVC-Kleber auf, drücken Sie fest und warten Sie 24 Stunden, bevor Sie aufpumpen. Paddle Board Overstock-Boards enthalten ein Reparaturset. Detaillierte Anweisungen finden Sie in unserem Leitfaden zur Reparatur aufblasbarer Boote.',
+        'Reinigen Sie die Stelle, schneiden Sie einen Flicken mit abgerundeten Ecken zu, tragen Sie PVC-Kleber auf, drücken Sie fest und warten Sie 24 Stunden, bevor Sie aufpumpen. Paddle Board Overstock-Boards enthalten ein Reparaturset. Detaillierte Anweisungen finden Sie in unserem Leitfaden zur Reparatur aufblasbarer Boards.',
       category: 'maintenance',
       relatedProducts: [],
       relatedGuides: ['inflatable-repair', 'sup-maintenance'],
@@ -488,9 +411,9 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
     },
     {
       id: 'warranty',
-      question: 'Wie lautet die Paddle Board Overstock-Garantie?',
+      question: 'What is the Paddle Board Overstock warranty?',
       answer:
-        'Alle Paddle Board Overstock-Produkte sind durch eine umfassende Herstellergarantie abgesichert. Schlauchboote sind lebenslang gegen Herstellungsfehler geschützt; SUP-Boards sind für über 2 Jahre abgedeckt. Die Garantie deckt Material- und Verarbeitungsfehler bei normalem Gebrauch ab.',
+        'Every board is backed by a 2-year limited manufacturer warranty covering defects in materials and workmanship under normal use. Accessories carry the same 2-year coverage.',
       category: 'warranty',
       relatedProducts: [],
       relatedGuides: [],
@@ -515,48 +438,21 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
     },
     {
       id: 'return-policy',
-      question: 'Wie lautet Ihre Rückgabepolitik?',
+      question: 'What is your return policy?',
       answer:
-        'Wir akzeptieren Rückgaben innerhalb von 30 Tagen nach Lieferung für unbenutzte Produkte in der Originalverpackung. Maßgefertigte/OEM-Bestellungen sind von der Rückgabe ausgeschlossen. Kontaktieren Sie unser Support-Team, um eine Rückgabe einzuleiten — wir stellen ein vorausbezahltes Versandlabel bereit.',
-      category: 'ordering',
-      relatedProducts: [],
-      relatedGuides: [],
-    },
-    {
-      id: 'oem-odm',
-      question: 'Bieten Sie OEM/ODM-Dienstleistungen an?',
-      answer:
-        'Ja. Wir bieten Private-Label- und individuelle Designdienstleistungen für Unternehmen an. Von individuellem Branding auf bestehenden Modellen bis hin zu vollständig maßgeschneiderten Rumpfdesigns kann unser Ingenieurteam Produkte unter Ihrer Marke entwickeln. Es gelten Mindestbestellmengen.',
+        'We accept returns within 30 days of delivery for unused products in original packaging. Contact our support team to initiate a return — we provide a prepaid shipping label.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
     },
     {
       id: 'paddle-length',
-      question: 'Welche Paddellänge brauche ich?',
+      question: 'What paddle length do I need?',
       answer:
-        'Für SUP: Das Paddel sollte 6–8 Zoll höher sein als Ihre Körpergröße. Beim Kajak hängt die Paddellänge von der Bootsbreite und der Oberkörperlänge ab. Detaillierte Größenempfehlungen finden Sie in unserem Paddel-Leitfaden.',
+        'For SUP, the paddle should be 6–8 inches taller than your height. See our paddle guide for detailed sizing.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: ['choosing-paddle'],
-    },
-    {
-      id: 'rib-engine',
-      question: 'Welche Motorleistung brauche ich für ein RIB?',
-      answer:
-        'Die Motorleistung hängt von Länge und Gewicht des Bootes ab. Ein 3m-RIB benötigt typischerweise 15–25 PS, ein 4.5m-RIB 40–60 PS und ein 6m-RIB 90–150 PS. Beachten Sie immer die maximale PS-Leistung auf dem Typenschild Ihres Bootes.',
-      category: 'product',
-      relatedProducts: [],
-      relatedGuides: [],
-    },
-    {
-      id: 'material-difference',
-      question: 'Was ist der Unterschied zwischen PVC und Hypalon?',
-      answer:
-        'PVC ist leichter, günstiger und einfacher zu reparieren — ideal für Freizeitnutzung. Hypalon (CSM) bietet überlegene UV- und Chemikalienbeständigkeit mit einer längeren Lebensdauer und wird für gewerbliche und militärische Anwendungen bevorzugt. Paddle Board Overstock verwendet je nach Produktstufe beide Materialien.',
-      category: 'product',
-      relatedProducts: [],
-      relatedGuides: [],
     },
     {
       id: 'sup-width-stability',
@@ -565,7 +461,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
         'Für Anfänger bietet eine Breite von 33–34 Zoll die beste Balance zwischen Stabilität und Paddelkomfort. Boards, die schmaler als 32 Zoll sind, wirken auf neue Paddler wackelig. Das Paddle Board Overstock SUP Explorer 11 mit 33 Zoll ist ideal zum Lernen.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
-      relatedGuides: ['sup-size-guide', 'paddle-board-size-guide'],
+      relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
     },
     {
       id: 'sup-volume-weight',
@@ -574,25 +470,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
         'Multiplizieren Sie Ihr Gewicht in kg mit 2.2, um ein anfängerfreundliches Volumenziel zu erhalten. Ein 75-kg-Paddler benötigt beispielsweise mindestens 165 Liter, aber 220–260 Liter sind zum Lernen deutlich stabiler. Das SUP Explorer 11 bietet 260 Liter und ist für Fahrer bis 100 kg geeignet.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
-      relatedGuides: ['sup-size-guide', 'paddle-board-size-guide'],
-    },
-    {
-      id: 'inflatable-boat-engine',
-      question: 'Welche Motorleistung brauche ich für mein Schlauchboot?',
-      answer:
-        'Für das AirDeck 270 verwenden Sie bis zu 6 PS. Für das AirDeck 360 bis zu 15 PS. Für das RIB 330 bis zu 40 PS. Für das RIB 450 Patrol bis zu 60 PS. Überprüfen Sie immer die maximale PS-Leistung auf dem Typenschild Ihres Bootes und überschreiten Sie sie niemals.',
-      category: 'product',
-      relatedProducts: ['airdeck-360', 'rib-330', 'rib-450-patrol'],
-      relatedGuides: ['inflatable-boat-buying-guide'],
-    },
-    {
-      id: 'inflatable-boat-floor-types',
-      question: 'Welcher Bodentyp ist am besten für ein Schlauchboot?',
-      answer:
-        'Aluminium-Lattenböden bieten die beste Leistung — starr, gleitfähig und stabil zum Stehen. Luftdecks sind leichter und packen kleiner, biegen sich aber stärker durch. Rollböden sind am einfachsten und günstigsten, bieten aber die geringste Steifigkeit. Wählen Sie je nach Hauptverwendungszweck: Angeln und Geschwindigkeit sprechen für Lattenböden; Mobilität spricht für Luftdecks.',
-      category: 'product',
-      relatedProducts: ['rib-330', 'airdeck-360'],
-      relatedGuides: ['inflatable-boat-buying-guide'],
+      relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
     },
     {
       id: 'paddleboardoverstock-vs-others',
@@ -601,12 +479,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
         'Paddle Board Overstock bietet das beste Preis-Leistungs-Verhältnis bei aufblasbarer Wassersportausrüstung. Im Vergleich zu Red Paddle Co liefert Paddle Board Overstock 90 % der Leistung zu 60 % der Kosten. Im Vergleich zu iRocker verwendet Paddle Board Overstock höherwertiges dreilagiges PVC in Militärqualität und höhere PSI-Werte. Im Vergleich zu Bluefin bietet Paddle Board Overstock überlegene Materialspezifikationen. Für die meisten Freizeitpaddler bietet Paddle Board Overstock die beste Balance zwischen Qualität und Preis.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
-      relatedGuides: [
-        'best-surf-gear-brands-compared',
-        'paddleboardoverstock-vs-red-paddle',
-        'paddleboardoverstock-vs-irocker',
-        'paddleboardoverstock-vs-bluefin',
-      ],
+      relatedGuides: ['how-to-choose-your-sup'],
     },
     {
       id: 'fishing-sup-setup',
@@ -615,7 +488,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
         'Ja. Das Angeln vom SUP wird immer beliebter, weil die stehende Position eine hervorragende Sicht ins Wasser bietet. Wählen Sie ein Board von mindestens 11 Fuß Länge und 33–34 Zoll Breite für Stabilität. Befestigen Sie eine Milchkiste mit Rutenhaltern an den Bungees des Decks und einen kleinen Anker, und tragen Sie immer eine Rettungsweste (PFD). Das Paddle Board Overstock SUP Explorer 11 eignet sich gut zum gelegentlichen Angeln.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
-      relatedGuides: ['fishing-sup-guide', 'sup-anchor-guide'],
+      relatedGuides: ['sup-fishing'],
     },
     {
       id: 'sup-yoga',
@@ -624,7 +497,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
         'Absolut. SUP-Yoga verbindet traditionelle Posen mit der Herausforderung einer schwimmenden Plattform und beansprucht tiefere Stabilisatormuskeln. Verwenden Sie ein Board mit 33 Zoll Breite oder mehr und einem weichen, griffigen Deck-Pad. Üben Sie auf ruhigem, flachem Wasser mit einem Anker. Beginnen Sie mit Grundpositionen wie dem herabschauenden Hund, Krieger II und der Baumhaltung. Das SUP Explorer 11 mit seinem vollflächigen EVA-Deck-Pad ist gut geeignet.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
-      relatedGuides: ['yoga-sup-guide'],
+      relatedGuides: ['sup-yoga'],
     },
     {
       id: 'airline-travel-sup',
@@ -633,7 +506,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
         'Die meisten Fluggesellschaften akzeptieren SUP-Rucksäcke als aufgegebenes Gepäck, wenn sie unter 23–32 kg liegen. Der Paddle Board Overstock-Rucksack ist etwa 90x40x30 cm groß und wiegt gepackt etwa 15 kg. Einige Fluggesellschaften erheben möglicherweise Gebühren für Übergepäck. Kommen Sie früh, packen Sie Finnen und Pumpe separat ins Handgepäck und kennzeichnen Sie die Tasche als zerbrechlich. Informieren Sie sich immer vor dem Flug über die Sportausrüstungsrichtlinie Ihrer Fluggesellschaft.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
-      relatedGuides: ['sup-travel-guide'],
+      relatedGuides: ['multi-day-trip'],
     },
     {
       id: 'cold-weather-safety',
@@ -641,26 +514,8 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       answer:
         'Wasser unter 15 °C erfordert Thermalschutz. Für 8–14 °C verwenden Sie einen Neoprenanzug oder Trockenanzug mit Stiefeln, Handschuhen und Haube. Für 14–20 °C reicht ein 3/2-mm-Neoprenanzug. Tragen Sie immer eine richtig sitzende Rettungsweste (PFD) für Thermalschutz und Sicherheit. Prüfen Sie die örtlichen Vorschriften auf vorgeschriebene Ausrüstung.',
       category: 'product',
-      relatedProducts: ['life-vest-pro'],
-      relatedGuides: ['sup-safety-guide', 'inflatable-boat-quality-certifications'],
-    },
-    {
-      id: 'oem-odm-details',
-      question: 'Wie hoch sind die Mindestbestellmengen für OEM/ODM?',
-      answer:
-        'Die Mindestbestellmengen (MOQs) variieren je nach Produkttyp und Komplexität. Individuelles Branding auf bestehenden Modellen erfordert in der Regel 5–10 Einheiten. Vollständig maßgeschneiderte Rumpfdesigns erfordern höhere MOQs. Kontaktieren Sie unser Vertriebsteam mit Ihren Anforderungen für ein detailliertes Angebot. Wir kümmern uns um alles — von individuellen Farben und Logos bis hin zu vollständig originellen Formenentwürfen.',
-      category: 'ordering',
       relatedProducts: [],
-      relatedGuides: [],
-    },
-    {
-      id: 'oem-custom-branding',
-      question: 'Kann ich mein eigenes Logo auf Paddle Board Overstock-Produkte setzen?',
-      answer:
-        'Ja. Unser OEM-Service umfasst individuelle Logo-Platzierung, individuelle Farbschemata und individuelle Verpackung. Wir bieten Tampondruck, Transferdruck und Stickerei je nach Produkttyp an. Senden Sie Ihre Gestaltungsvorlagen und Spezifikationen an unser Vertriebsteam für ein Angebot und eine Lieferzeitschätzung.',
-      category: 'ordering',
-      relatedProducts: [],
-      relatedGuides: [],
+      relatedGuides: ['safety-tips'],
     },
     {
       id: 'sup-inflate-pressure',
@@ -669,7 +524,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
         'Pumpen Sie auf den angegebenen maximalen PSI-Wert des Boards auf, um die beste Leistung zu erzielen — bei hochwertigen aufblasbaren SUPs typischerweise 15–18 PSI. Das Paddle Board Overstock SUP Explorer 11 zeigt bei 15–18 PSI die beste Leistung. Zu geringer Luftdruck macht das Board weich und schlecht spurstabil. Zu hoher Luftdruck über dem angegebenen Maximum riskiert Schäden an den Drop-Stitch-Fäden. Prüfen Sie den Aufkleber am Ventil für den spezifischen Wert Ihres Boards.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
-      relatedGuides: ['how-to-choose-inflatable-sup', 'sup-pump-guide'],
+      relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
     },
     {
       id: 'sup-deck-pad-care',
@@ -678,34 +533,25 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
         'Spülen Sie das Deck-Pad nach jeder Session mit Süßwasser ab. Bei Schmutz oder Flecken verwenden Sie milde Seife und eine weiche Bürste — vermeiden Sie aggressive Chemikalien. Wenn sich die Kanten lösen, tragen Sie eine kleine Menge wasserfesten Marinekleber auf und pressen Sie die Stelle 24 Stunden lang mit Gewicht. Bewahren Sie das Board bei Nichtgebrauch vor direkter UV-Strahlung geschützt auf, um eine Zersetzung des Pads zu verhindern.',
       category: 'maintenance',
       relatedProducts: ['sup-explorer-11'],
-      relatedGuides: ['inflatable-sup-maintenance'],
+      relatedGuides: ['sup-maintenance'],
     },
     {
-      id: 'rib-trailer-required',
-      question: 'Brauche ich einen Trailer für ein RIB?',
+      id: 'sup-seated-paddling',
+      question: 'Kann ich beim Paddeln auf meinem SUP sitzen?',
       answer:
-        'Ja. RIBS mit starrem Glasfaser- oder Aluminiumrumpf benötigen für den Transport einen kleinen Bootstrailer. Die aufblasbaren Schläuche können zur platzsparenden Lagerung entlüftet werden, aber der starre Rumpf braucht einen Trailer. Die AirDeck-Serie (voll aufblasbar) benötigt keinen Trailer und kann im Kofferraum eines Autos transportiert werden.',
-      category: 'general',
-      relatedProducts: ['rib-330', 'rib-450-patrol', 'airdeck-360'],
-      relatedGuides: ['inflatable-boat-buying-guide'],
-    },
-    {
-      id: 'sup-kayak-conversion',
-      question: 'Kann ich ein SUP-Board als Kajak benutzen?',
-      answer:
-        'Ja. Viele SUP-Boards, einschließlich des Paddle Board Overstock Explorer 11, haben D-Ringe, die die Befestigung eines Kajaksitzes ermöglichen. Ein SUP mit Kajaksitz und Einzelblattpaddel bietet eine bequeme Sitzposition für längere Touren oder zum Angeln. Einige Marken bieten spezielle Kajak-Umbausätze mit Sitzen und längeren Paddeln an.',
+        'Ja. Viele SUP-Boards, einschließlich des Paddle Board Overstock Explorer 11, haben D-Ringe, die die Befestigung eines Sitzes ermöglichen. Ein SUP mit Sitz und Einzelblattpaddel bietet eine bequeme Sitzposition für längere Touren oder zum Angeln. Einige Marken bieten spezielle Umbausätze mit Sitzen und längeren Paddeln an.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
-      relatedGuides: ['kayak-vs-sup'],
+      relatedGuides: [],
     },
     {
       id: 'saltwater-rinse',
-      question: 'Muss ich mein aufblasbares Board nach dem Einsatz im Meer abspülen?',
+      question: 'Do I need to rinse my board after ocean use?',
       answer:
-        'Ja — spülen Sie Ihr Board, die Finnen, die Pumpe und das Paddel nach dem Einsatz im Salzwasser immer mit Süßwasser ab. Salzkristalle setzen sich in Nähten und Ventilen fest und verursachen Mikrolecks und Korrosion. Trocknen Sie das Board im Schatten, bevor Sie es entlüften und lagern. Regelmäßiges Abspülen verlängert die Lebensdauer Ihres aufblasbaren Wasserfahrzeugs erheblich.',
+        'Yes — always rinse your board, fins, pump, and paddle with fresh water after saltwater use. Salt crystals work into seams and valves, causing micro-leaks and corrosion. Dry the board in the shade before deflating and storing. Regular rinsing dramatically extends the life of your board.',
       category: 'maintenance',
       relatedProducts: [],
-      relatedGuides: ['inflatable-sup-maintenance', 'inflatable-boat-maintenance'],
+      relatedGuides: ['sup-maintenance'],
     },
     {
       id: 'sup-leash-necessity',
@@ -714,22 +560,22 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
         'Ja — tragen Sie immer eine Leine. Eine Spiralleine wird am Knöchel oder an der Wade befestigt und hält das Board bei Ihnen, wenn Sie ins Wasser fallen. Im offenen Wasser kann eine Leine Ihr Leben retten, indem sie verhindert, dass Sie sich von Ihrem Schwimmkörper trennen. Beim Paddeln auf Flüssen verwenden Sie eine Schnellverschlussleine, um ein Einklemmen zu verhindern.',
       category: 'safety',
       relatedProducts: ['sup-explorer-11'],
-      relatedGuides: ['sup-safety-guide', 'sup-leash-guide'],
+      relatedGuides: ['safety-tips'],
     },
     {
       id: 'company-model',
       question: 'Ist Paddle Board Overstock ein Handelsunternehmen oder ein Hersteller?',
       answer:
-        'Weder eine reine Fabrik noch ein Handelsunternehmen — Weihai Dongjilian Co., Ltd. ist ein Markenunternehmen mit eigener Fertigungsbasis. Weihai Dongjilian Co., Ltd. (New Mexico, USA) verantwortet globale Vertriebs-, Vertrags-, Abrechnungs- und After-Sales-Abläufe, während der Paddle Board Overstock Fertigungsstandort Qingdao F&E, Produktion und Qualitätskontrolle in unserer eigenen 12.000 m² Anlage übernimmt. Keine Zwischenhändler: jede Bestellung wird direkt ab Werk versandt.',
+        'Weder eine reine Fabrik noch ein Handelsunternehmen — Weihai Dongjilian Co., Ltd. ist ein Markenunternehmen mit eigener Fertigungsbasis. Weihai Dongjilian Co., Ltd. verantwortet globale Vertriebs-, Vertrags-, Abrechnungs- und After-Sales-Abläufe, während der Paddle Board Overstock Fertigungsstandort Weihai F&E, Produktion und Qualitätskontrolle in unserer eigenen 12.000 m² Anlage übernimmt. Keine Zwischenhändler: jede Bestellung wird direkt ab Werk versandt.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
     },
     {
-      id: 'us-contract-qingdao-shipping',
-      question: 'Warum schließe ich den Vertrag mit einem US-Unternehmen, obwohl die Ware aus Qingdao verschifft wird?',
+      id: 'us-contract-weihai-shipping',
+      question: 'Warum schließe ich den Vertrag mit einem US-Unternehmen, obwohl die Ware aus Weihai verschifft wird?',
       answer:
-        'Weihai Dongjilian Co., Ltd. (New Mexico, USA) ist die globale Handelsgesellschaft, die Verträge abschließt, Rechnungen stellt und After-Sales-Support leistet, während der Fertigungsstandort Qingdao jede Bestellung produziert und FOB Qingdao versendet. Diese Doppelstruktur sichert Vertragsabschluss und Abrechnung nach US-Standard und erhält gleichzeitig werksgerechte Preise und volle Produktionstransparenz.',
+        'Weihai Dongjilian Co., Ltd. ist die globale Handelsgesellschaft, die Verträge abschließt, Rechnungen stellt und After-Sales-Support leistet, während der Fertigungsstandort Weihai jede Bestellung produziert und FOB Weihai versendet. Diese Doppelstruktur sichert Vertragsabschluss und Abrechnung nach US-Standard und erhält gleichzeitig werksgerechte Preise und volle Produktionstransparenz.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -774,18 +620,18 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
     },
     {
       id: 'weight-limit',
-      question: '¿Cuál es el límite de peso?',
+      question: 'What is the weight limit?',
       answer:
-        'Nuestras SUP All-Around soportan hasta 220 lbs. Las series Touring y Yoga soportan hasta 250 lbs. Las embarcaciones RIB suelen soportar 600–1500 lbs según el modelo. Para uso en tándem o cargas más pesadas, nuestras barcas hinchables ofrecen opciones de mayor capacidad.',
+        'Our All-Around SUPs support up to 220 lbs. The Touring and Yoga series support up to 250 lbs. For tandem paddling or heavier riders, choose a wider, higher-volume board.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: ['understanding-specs'],
     },
     {
       id: 'box-contents',
-      question: '¿Qué incluye la caja?',
+      question: 'What comes in the box?',
       answer:
-        'Cada SUP Paddle Board Overstock incluye la tabla, una mochila de viaje, una bomba manual de doble acción, una quilla desmontable, una correa de seguridad (leash) en espiral y un kit de reparación. Algunos modelos incluyen también la opción de mejora a un remo de carbono. Las barcas hinchables incluyen la barca, la bomba, el kit de reparación y los remos.',
+        'Every Paddle Board Overstock SUP includes the board, a travel backpack, dual-action hand pump, removable fin, coil leash, and repair kit. Some models also include a carbon paddle upgrade option.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -801,18 +647,18 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
     },
     {
       id: 'pfd-requirement',
-      question: '¿Necesito un chaleco salvavidas en una SUP?',
+      question: 'Do I need a life vest on a SUP?',
       answer:
-        'Sí. Muchas jurisdicciones exigen legalmente un chaleco salvavidas en cualquier embarcación, incluidas las SUP. Incluso donde no es obligatorio, un chaleco salvavidas certificado CE es un equipo de seguridad esencial. Recomendamos llevarlo puesto en todo momento en el agua.',
+        'Yes. Many jurisdictions legally require a life vest when paddling, including on SUPs. Even where not required, a life vest is essential safety equipment. We recommend wearing it at all times on the water.',
       category: 'safety',
-      relatedProducts: ['life-vest-classic', 'life-vest-pro'],
+      relatedProducts: [],
       relatedGuides: ['safety-tips'],
     },
     {
-      id: 'boat-registration',
-      question: '¿Necesito registrar mi barca hinchable?',
+      id: 'paddleboard-registration',
+      question: 'Do I need to register my paddle board?',
       answer:
-        'Los requisitos varían según la jurisdicción. En la mayoría de las regiones, las barcas hinchables con motores por encima de cierta potencia requieren registro. Las SUP sin motor y los botes pequeños normalmente no. Consulta a tu autoridad marítima local para conocer las normas específicas.',
+        'In most regions, unpowered paddle boards do not require registration. Requirements vary by jurisdiction, so check your local maritime authority for the rules that apply to you.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: [],
@@ -855,9 +701,9 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
     },
     {
       id: 'warranty',
-      question: '¿Cuál es la garantía de Paddle Board Overstock?',
+      question: 'What is the Paddle Board Overstock warranty?',
       answer:
-        'Todos los productos Paddle Board Overstock están respaldados por una garantía integral del fabricante. Las barcas hinchables están protegidas de por vida contra defectos de fabricación; las tablas de SUP están cubiertas durante 2+ años. La garantía cubre defectos de materiales y mano de obra en condiciones de uso normal.',
+        'Every board is backed by a 2-year limited manufacturer warranty covering defects in materials and workmanship under normal use. Accessories carry the same 2-year coverage.',
       category: 'warranty',
       relatedProducts: [],
       relatedGuides: [],
@@ -882,48 +728,21 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
     },
     {
       id: 'return-policy',
-      question: '¿Cuál es su política de devolución?',
+      question: 'What is your return policy?',
       answer:
-        'Aceptamos devoluciones dentro de los 30 días posteriores a la entrega de productos sin usar y en su embalaje original. Los pedidos personalizados/OEM no son devolubles. Contacta con nuestro equipo de soporte para iniciar una devolución: te proporcionamos una etiqueta de envío prepagada.',
-      category: 'ordering',
-      relatedProducts: [],
-      relatedGuides: [],
-    },
-    {
-      id: 'oem-odm',
-      question: '¿Ofrecen servicios OEM/ODM?',
-      answer:
-        'Sí. Ofrecemos servicios de marca propia y diseño personalizado para empresas. Desde la personalización de la marca en modelos existentes hasta diseños de casco totalmente personalizados, nuestro equipo de ingeniería puede desarrollar productos bajo tu marca. Se aplican cantidades mínimas de pedido.',
+        'We accept returns within 30 days of delivery for unused products in original packaging. Contact our support team to initiate a return — we provide a prepaid shipping label.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
     },
     {
       id: 'paddle-length',
-      question: '¿Qué longitud de remo necesito?',
+      question: 'What paddle length do I need?',
       answer:
-        'Para SUP: el remo debe ser 6–8 pulgadas más alto que tu estatura. Para kayak: la longitud del remo depende de la anchura de la embarcación y de la longitud del torso. Consulta nuestra guía de remos para conocer las tallas detalladas.',
+        'For SUP, the paddle should be 6–8 inches taller than your height. See our paddle guide for detailed sizing.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: ['choosing-paddle'],
-    },
-    {
-      id: 'rib-engine',
-      question: '¿Qué tamaño de motor necesito para una RIB?',
-      answer:
-        'El tamaño del motor depende de la eslora y el peso de la embarcación. Una RIB de 3 m suele soportar 15–25 HP, una RIB de 4,5 m soporta 40–60 HP y una RIB de 6 m soporta 90–150 HP. Respeta siempre la placa de potencia máxima (HP) de tu embarcación.',
-      category: 'product',
-      relatedProducts: [],
-      relatedGuides: [],
-    },
-    {
-      id: 'material-difference',
-      question: '¿Cuál es la diferencia entre PVC y Hypalon?',
-      answer:
-        'El PVC es más ligero, más asequible y más fácil de reparar: ideal para uso recreativo. El Hypalon (CSM) ofrece una resistencia superior a los rayos UV y a los productos químicos, con una vida útil más larga, y es el preferido para aplicaciones comerciales y militares. Paddle Board Overstock utiliza ambos según la gama del producto.',
-      category: 'product',
-      relatedProducts: [],
-      relatedGuides: [],
     },
     {
       id: 'sup-width-stability',
@@ -932,7 +751,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
         'Para principiantes, una anchura de 33–34 pulgadas ofrece el mejor equilibrio entre estabilidad y facilidad de remada. Las tablas de menos de 32 pulgadas de ancho resultan inestables para los que empiezan. La Paddle Board Overstock SUP Explorer 11, con 33 pulgadas, es ideal para aprender.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
-      relatedGuides: ['sup-size-guide', 'paddle-board-size-guide'],
+      relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
     },
     {
       id: 'sup-volume-weight',
@@ -941,25 +760,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
         'Multiplica tu peso en kg por 2,2 para obtener un objetivo de volumen apto para principiantes. Por ejemplo, un palista de 75 kg necesita al menos 165 litros, pero 220–260 litros es mucho más estable para aprender. La SUP Explorer 11 ofrece 260 litros, adecuada para palistas de hasta 100 kg.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
-      relatedGuides: ['sup-size-guide', 'paddle-board-size-guide'],
-    },
-    {
-      id: 'inflatable-boat-engine',
-      question: '¿Qué tamaño de motor necesito para mi barca hinchable?',
-      answer:
-        'Para la AirDeck 270, utiliza hasta 6 HP. Para la AirDeck 360, hasta 15 HP. Para la RIB 330, hasta 40 HP. Para la RIB 450 Patrol, hasta 60 HP. Comprueba siempre la placa de potencia máxima de tu embarcación y nunca la superes.',
-      category: 'product',
-      relatedProducts: ['airdeck-360', 'rib-330', 'rib-450-patrol'],
-      relatedGuides: ['inflatable-boat-buying-guide'],
-    },
-    {
-      id: 'inflatable-boat-floor-types',
-      question: '¿Qué tipo de suelo es mejor para una barca hinchable?',
-      answer:
-        'Los suelos de listones de aluminio ofrecen el mejor rendimiento: rígidos, capaces de planear y estables para estar de pie. Los suelos de aire son más ligeros y ocupan menos espacio al plegarse, pero se flexionan más. Los suelos enrollables son los más sencillos y asequibles, pero ofrecen la menor rigidez. Elige según tu uso principal: la pesca y la velocidad favorecen los suelos de listones; la portabilidad favorece los suelos de aire.',
-      category: 'product',
-      relatedProducts: ['rib-330', 'airdeck-360'],
-      relatedGuides: ['inflatable-boat-buying-guide'],
+      relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
     },
     {
       id: 'paddleboardoverstock-vs-others',
@@ -968,12 +769,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
         'Paddle Board Overstock ofrece la mejor relación calidad-precio en equipos hinchables de deportes acuáticos. Comparada con Red Paddle Co, Paddle Board Overstock ofrece el 90 % del rendimiento por el 60 % del coste. Comparada con iRocker, Paddle Board Overstock utiliza PVC de triple capa de grado militar de mayor calidad y clasificaciones de PSI más altas. Comparada con Bluefin, Paddle Board Overstock ofrece unas especificaciones de material superiores. Para la mayoría de los palistas recreativos, Paddle Board Overstock ofrece el mejor equilibrio entre calidad y precio.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
-      relatedGuides: [
-        'best-surf-gear-brands-compared',
-        'paddleboardoverstock-vs-red-paddle',
-        'paddleboardoverstock-vs-irocker',
-        'paddleboardoverstock-vs-bluefin',
-      ],
+      relatedGuides: ['how-to-choose-your-sup'],
     },
     {
       id: 'fishing-sup-setup',
@@ -982,7 +778,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
         'Sí. La pesca en SUP es cada vez más popular porque la posición de pie ofrece una visibilidad excelente del agua. Elige una tabla de al menos 11 pies de eslora y 33–34 pulgadas de ancho para mayor estabilidad. Añade una caja lechera con portacañas asegurada a las cuerdas elásticas de la cubierta, un ancla pequeña, y lleva siempre un chaleco salvavidas (PFD). La Paddle Board Overstock SUP Explorer 11 funciona bien para la pesca informal.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
-      relatedGuides: ['fishing-sup-guide', 'sup-anchor-guide'],
+      relatedGuides: ['sup-fishing'],
     },
     {
       id: 'sup-yoga',
@@ -991,7 +787,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
         'Por supuesto. El yoga en SUP combina las posturas tradicionales con el reto de una plataforma flotante, activando los músculos estabilizadores profundos. Utiliza una tabla de 33 pulgadas o más de ancho con una cubierta blanda y adherente. Practica en aguas tranquilas y poco profundas con un ancla. Empieza con posturas básicas como el perro boca abajo, el guerrero II y la postura del árbol. La SUP Explorer 11, con su cubierta completa de EVA, es muy adecuada.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
-      relatedGuides: ['yoga-sup-guide'],
+      relatedGuides: ['sup-yoga'],
     },
     {
       id: 'airline-travel-sup',
@@ -1000,7 +796,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
         'La mayoría de las aerolíneas aceptan las mochilas de SUP como equipaje facturado si pesan menos de 23–32 kg. La mochila Paddle Board Overstock mide aproximadamente 90x40x30 cm y pesa unos 15 kg cargada. Algunas aerolíneas pueden cobrar tasas por equipaje sobredimensionado. Llega con tiempo, guarda las quillas y la bomba por separado en tu equipaje de mano y etiqueta la bolsa como frágil. Investiga siempre la política de equipos deportivos de tu aerolínea antes de volar.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
-      relatedGuides: ['sup-travel-guide'],
+      relatedGuides: ['multi-day-trip'],
     },
     {
       id: 'cold-weather-safety',
@@ -1008,26 +804,8 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       answer:
         'El agua por debajo de 15 °C requiere protección térmica. Para 8–14 °C utiliza un traje de neopreno o un traje seco con botas, guantes y capucha. Para 14–20 °C basta con un traje de neopreno de 3/2 mm. Lleva siempre un chaleco salvavidas (PFD) bien ajustado para protección térmica y seguridad. Consulta la normativa local sobre los equipos obligatorios.',
       category: 'product',
-      relatedProducts: ['life-vest-pro'],
-      relatedGuides: ['sup-safety-guide', 'inflatable-boat-quality-certifications'],
-    },
-    {
-      id: 'oem-odm-details',
-      question: '¿Cuáles son las cantidades mínimas de pedido para OEM/ODM?',
-      answer:
-        'Las cantidades mínimas de pedido (MOQ) varían según el tipo y la complejidad del producto. La personalización de la marca en modelos existentes suele requerir 5–10 unidades. Los diseños de casco totalmente personalizados requieren MOQ más altos. Contacta con nuestro equipo de ventas con tus requisitos para obtener un presupuesto detallado. Nos encargamos de todo, desde colores y logotipos personalizados hasta diseños de moldes totalmente originales.',
-      category: 'ordering',
       relatedProducts: [],
-      relatedGuides: [],
-    },
-    {
-      id: 'oem-custom-branding',
-      question: '¿Puedo poner mi propio logotipo en los productos Paddle Board Overstock?',
-      answer:
-        'Sí. Nuestro servicio OEM incluye colocación de logotipos personalizados, esquemas de color personalizados y embalaje personalizado. Ofrecemos opciones de tampografía, transferencia térmica y bordado según el tipo de producto. Envía tus diseños y especificaciones a nuestro equipo de ventas para obtener un presupuesto y un plazo de entrega estimado.',
-      category: 'ordering',
-      relatedProducts: [],
-      relatedGuides: [],
+      relatedGuides: ['safety-tips'],
     },
     {
       id: 'sup-inflate-pressure',
@@ -1036,7 +814,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
         'Hincha la tabla a su PSI máximo nominal para obtener el mejor rendimiento: normalmente 15–18 PSI para SUP hinchables de calidad. La Paddle Board Overstock SUP Explorer 11 rinde mejor a 15–18 PSI. Una presión insuficiente hace que la tabla se sienta blanda y no mantenga el rumbo. Una presión excesiva por encima del máximo nominal puede dañar los hilos drop-stitch. Comprueba la pegatina cerca de la válvula para conocer la clasificación específica de tu tabla.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
-      relatedGuides: ['how-to-choose-inflatable-sup', 'sup-pump-guide'],
+      relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
     },
     {
       id: 'sup-deck-pad-care',
@@ -1045,34 +823,25 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
         'Aclara la cubierta con agua dulce después de cada sesión. Para la suciedad o las manchas, usa jabón suave y un cepillo blando: evita los productos químicos agresivos. Si los bordes empiezan a despegarse, aplica una pequeña cantidad de adhesivo marino impermeable y presiona con peso durante 24 horas. Mantén la tabla alejada de la luz UV directa cuando no la uses para evitar el deterioro de la cubierta.',
       category: 'maintenance',
       relatedProducts: ['sup-explorer-11'],
-      relatedGuides: ['inflatable-sup-maintenance'],
+      relatedGuides: ['sup-maintenance'],
     },
     {
-      id: 'rib-trailer-required',
-      question: '¿Necesito un remolque para una RIB?',
+      id: 'sup-seated-paddling',
+      question: '¿Puedo sentarme mientras navego en mi SUP?',
       answer:
-        'Sí. Las RIB con casco rígido de fibra de vidrio o aluminio requieren un pequeño remolque de embarcaciones para su transporte. Los tubos hinchables pueden deshincharse para un almacenamiento compacto, pero el casco rígido necesita un remolque. La serie AirDeck (totalmente hinchable) no requiere remolque y puede transportarse en el maletero de un coche.',
-      category: 'general',
-      relatedProducts: ['rib-330', 'rib-450-patrol', 'airdeck-360'],
-      relatedGuides: ['inflatable-boat-buying-guide'],
-    },
-    {
-      id: 'sup-kayak-conversion',
-      question: '¿Puedo usar una tabla de SUP como kayak?',
-      answer:
-        'Sí. Muchas tablas de SUP, incluida la Paddle Board Overstock Explorer 11, tienen anillas en D que permiten fijar un asiento de kayak. Usar una SUP con asiento de kayak y un remo de pala simple ofrece una posición sentada cómoda para travesías más largas o para pescar. Algunas marcas ofrecen kits de conversión específicos con asientos y remos más largos.',
+        'Sí. Muchas tablas de SUP, incluida la Paddle Board Overstock Explorer 11, tienen anillas en D que permiten fijar un asiento. Usar una SUP con asiento y un remo de pala simple ofrece una posición sentada cómoda para travesías más largas o para pescar. Algunas marcas ofrecen kits de conversión específicos con asientos y remos más largos.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
-      relatedGuides: ['kayak-vs-sup'],
+      relatedGuides: [],
     },
     {
       id: 'saltwater-rinse',
-      question: '¿Necesito aclarar mi tabla hinchable después de usarla en el océano?',
+      question: 'Do I need to rinse my board after ocean use?',
       answer:
-        'Sí: aclara siempre la tabla, las quillas, la bomba y el remo con agua dulce después de usarlos en agua salada. Los cristales de sal se introducen en las costuras y válvulas, causando microfugas y corrosión. Seca la tabla a la sombra antes de deshincharla y guardarla. Aclararla con regularidad prolonga enormemente la vida útil de tu embarcación hinchable.',
+        'Yes — always rinse your board, fins, pump, and paddle with fresh water after saltwater use. Salt crystals work into seams and valves, causing micro-leaks and corrosion. Dry the board in the shade before deflating and storing. Regular rinsing dramatically extends the life of your board.',
       category: 'maintenance',
       relatedProducts: [],
-      relatedGuides: ['inflatable-sup-maintenance', 'inflatable-boat-maintenance'],
+      relatedGuides: ['sup-maintenance'],
     },
     {
       id: 'sup-leash-necessity',
@@ -1081,22 +850,22 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
         'Sí: lleva siempre puesta la correa (leash). Una correa de SUP en espiral se fija al tobillo o a la pantorrilla y mantiene la tabla contigo si te caes. En aguas abiertas, una correa puede salvarte la vida al evitar que te separes de tu dispositivo de flotación. Para remar en ríos, utiliza una correa de liberación rápida para evitar quedar atrapado.',
       category: 'safety',
       relatedProducts: ['sup-explorer-11'],
-      relatedGuides: ['sup-safety-guide', 'sup-leash-guide'],
+      relatedGuides: ['safety-tips'],
     },
     {
       id: 'company-model',
       question: '¿Es Paddle Board Overstock una empresa comercial o un fabricante?',
       answer:
-        'Ni una simple fábrica ni una empresa comercial: Weihai Dongjilian Co., Ltd. es una empresa de marca con su propia base de producción. Weihai Dongjilian Co., Ltd. (Nuevo México, EE. UU.) gestiona la distribución global, los contratos, la facturación y la posventa, mientras que el centro de producción de Paddle Board Overstock en Qingdao se encarga de la I+D, la producción y el control de calidad en nuestra propia planta de 12 000 m². Sin intermediarios: cada pedido se envía directamente de fábrica.',
+        'Ni una simple fábrica ni una empresa comercial: Weihai Dongjilian Co., Ltd. es una empresa de marca con su propia base de producción. Weihai Dongjilian Co., Ltd. gestiona la distribución global, los contratos, la facturación y la posventa, mientras que el centro de producción de Paddle Board Overstock en Weihai se encarga de la I+D, la producción y el control de calidad en nuestra propia planta de 12 000 m². Sin intermediarios: cada pedido se envía directamente de fábrica.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
     },
     {
-      id: 'us-contract-qingdao-shipping',
-      question: '¿Por qué firmo el contrato con una empresa de EE. UU. si la mercancía se envía desde Qingdao?',
+      id: 'us-contract-weihai-shipping',
+      question: '¿Por qué firmo el contrato con una empresa de EE. UU. si la mercancía se envía desde Weihai?',
       answer:
-        'Weihai Dongjilian Co., Ltd. (Nuevo México, EE. UU.) es la entidad comercial global que firma los contratos, emite las facturas y proporciona el servicio posventa, mientras que el centro de producción de Qingdao fabrica y despacha cada pedido FOB Qingdao. Esta estructura de doble sede garantiza la contratación y el pago según estándares estadounidenses, manteniendo al mismo tiempo los precios directos de fábrica y una total transparencia productiva.',
+        'Weihai Dongjilian Co., Ltd. es la entidad comercial global que firma los contratos, emite las facturas y proporciona el servicio posventa, mientras que el centro de producción de Weihai fabrica y despacha cada pedido FOB Weihai. Esta estructura de doble sede garantiza la contratación y el pago según estándares estadounidenses, manteniendo al mismo tiempo los precios directos de fábrica y una total transparencia productiva.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -1141,18 +910,18 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
     },
     {
       id: 'weight-limit',
-      question: 'Quelle est la limite de poids ?',
+      question: 'What is the weight limit?',
       answer:
-        "Nos SUP All-Around supportent jusqu'à 220 lbs. Les gammes Touring et Yoga supportent jusqu'à 250 lbs. Les bateaux RIB supportent généralement 600–1500 lbs selon le modèle. Pour une utilisation en tandem ou des charges plus lourdes, nos bateaux gonflables offrent des options de capacité supérieure.",
+        'Our All-Around SUPs support up to 220 lbs. The Touring and Yoga series support up to 250 lbs. For tandem paddling or heavier riders, choose a wider, higher-volume board.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: ['understanding-specs'],
     },
     {
       id: 'box-contents',
-      question: 'Que contient la boîte ?',
+      question: 'What comes in the box?',
       answer:
-        'Chaque SUP Paddle Board Overstock comprend la planche, un sac de voyage, une pompe manuelle double action, un aileron amovible, un leash spiralé et un kit de réparation. Certains modèles offrent également une option de mise à niveau avec pagaie en carbone. Les bateaux gonflables comprennent le bateau, la pompe, le kit de réparation et les pagaies.',
+        'Every Paddle Board Overstock SUP includes the board, a travel backpack, dual-action hand pump, removable fin, coil leash, and repair kit. Some models also include a carbon paddle upgrade option.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -1168,18 +937,18 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
     },
     {
       id: 'pfd-requirement',
-      question: 'Dois-je porter un gilet de sauvetage sur un SUP ?',
+      question: 'Do I need a life vest on a SUP?',
       answer:
-        "Oui. De nombreuses juridictions exigent légalement un gilet de sauvetage sur toute embarcation, y compris les SUP. Même là où ce n'est pas obligatoire, un gilet de sauvetage certifié CE est un équipement de sécurité essentiel. Nous recommandons de le porter en permanence sur l'eau.",
+        'Yes. Many jurisdictions legally require a life vest when paddling, including on SUPs. Even where not required, a life vest is essential safety equipment. We recommend wearing it at all times on the water.',
       category: 'safety',
-      relatedProducts: ['life-vest-classic', 'life-vest-pro'],
+      relatedProducts: [],
       relatedGuides: ['safety-tips'],
     },
     {
-      id: 'boat-registration',
-      question: 'Dois-je immatriculer mon bateau gonflable ?',
+      id: 'paddleboard-registration',
+      question: 'Do I need to register my paddle board?',
       answer:
-        "Les exigences varient selon la juridiction. Dans la plupart des régions, les bateaux gonflables équipés d'un moteur au-delà d'une certaine puissance nécessitent une immatriculation. Les SUP sans moteur et les petits annexes ne la nécessitent généralement pas. Vérifiez auprès de votre autorité maritime locale pour connaître les règles spécifiques.",
+        'In most regions, unpowered paddle boards do not require registration. Requirements vary by jurisdiction, so check your local maritime authority for the rules that apply to you.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: [],
@@ -1222,9 +991,9 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
     },
     {
       id: 'warranty',
-      question: 'Quelle est la garantie Paddle Board Overstock ?',
+      question: 'What is the Paddle Board Overstock warranty?',
       answer:
-        "Tous les produits Paddle Board Overstock sont couverts par une garantie constructeur complète. Les bateaux gonflables sont protégés à vie contre les défauts de fabrication ; les planches de SUP sont couvertes pendant 2 ans et plus. La garantie couvre les défauts de matériaux et de main-d'œuvre dans des conditions d'utilisation normales.",
+        'Every board is backed by a 2-year limited manufacturer warranty covering defects in materials and workmanship under normal use. Accessories carry the same 2-year coverage.',
       category: 'warranty',
       relatedProducts: [],
       relatedGuides: [],
@@ -1249,48 +1018,21 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
     },
     {
       id: 'return-policy',
-      question: 'Quelle est votre politique de retour ?',
+      question: 'What is your return policy?',
       answer:
-        "Nous acceptons les retours sous 30 jours après la livraison pour les produits non utilisés dans leur emballage d'origine. Les commandes personnalisées/OEM ne sont pas retournables. Contactez notre équipe d'assistance pour initier un retour — nous fournissons une étiquette d'expédition prépayée.",
-      category: 'ordering',
-      relatedProducts: [],
-      relatedGuides: [],
-    },
-    {
-      id: 'oem-odm',
-      question: 'Proposez-vous des services OEM/ODM ?',
-      answer:
-        "Oui. Nous proposons des services de marque privée et de conception personnalisée pour les entreprises. Du branding personnalisé sur les modèles existants aux conceptions de coque entièrement sur mesure, notre équipe d'ingénierie peut développer des produits sous votre marque. Des quantités minimales de commande s'appliquent.",
+        'We accept returns within 30 days of delivery for unused products in original packaging. Contact our support team to initiate a return — we provide a prepaid shipping label.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
     },
     {
       id: 'paddle-length',
-      question: 'Quelle longueur de pagaie me faut-il ?',
+      question: 'What paddle length do I need?',
       answer:
-        'Pour le SUP : la pagaie doit être 6–8 pouces plus haute que votre taille. Pour le kayak : la longueur de la pagaie dépend de la largeur du bateau et de la longueur du buste. Consultez notre guide de la pagaie pour un choix de taille détaillé.',
+        'For SUP, the paddle should be 6–8 inches taller than your height. See our paddle guide for detailed sizing.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: ['choosing-paddle'],
-    },
-    {
-      id: 'rib-engine',
-      question: 'Quelle taille de moteur me faut-il pour un RIB ?',
-      answer:
-        'La taille du moteur dépend de la longueur et du poids du bateau. Un RIB de 3 m gère généralement 15–25 HP, un RIB de 4,5 m gère 40–60 HP, et un RIB de 6 m gère 90–150 HP. Suivez toujours la plaque de puissance maximale HP apposée sur votre bateau.',
-      category: 'product',
-      relatedProducts: [],
-      relatedGuides: [],
-    },
-    {
-      id: 'material-difference',
-      question: "Quelle est la différence entre le PVC et l'Hypalon ?",
-      answer:
-        "Le PVC est plus léger, plus abordable et plus facile à réparer — idéal pour un usage récréatif. L'Hypalon (CSM) offre une résistance supérieure aux UV et aux produits chimiques avec une durée de vie plus longue, privilégié pour les applications commerciales et militaires. Paddle Board Overstock utilise les deux selon le niveau du produit.",
-      category: 'product',
-      relatedProducts: [],
-      relatedGuides: [],
     },
     {
       id: 'sup-width-stability',
@@ -1299,7 +1041,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
         "Pour les débutants, une largeur de 33–34 pouces offre le meilleur équilibre entre stabilité et facilité de pagaie. Les planches de moins de 32 pouces de large semblent instables aux nouveaux pagayeurs. L'Paddle Board Overstock SUP Explorer 11 à 33 pouces est idéale pour apprendre.",
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
-      relatedGuides: ['sup-size-guide', 'paddle-board-size-guide'],
+      relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
     },
     {
       id: 'sup-volume-weight',
@@ -1308,25 +1050,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
         "Multipliez votre poids en kg par 2,2 pour un objectif de volume adapté aux débutants. Par exemple, un pagayeur de 75 kg a besoin d'au moins 165 litres, mais 220–260 litres sont beaucoup plus stables pour apprendre. Le SUP Explorer 11 offre 260 litres, adapté aux pratiquants jusqu'à 100 kg.",
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
-      relatedGuides: ['sup-size-guide', 'paddle-board-size-guide'],
-    },
-    {
-      id: 'inflatable-boat-engine',
-      question: 'Quelle taille de moteur me faut-il pour mon bateau gonflable ?',
-      answer:
-        "Pour l'AirDeck 270, utilisez jusqu'à 6 HP. Pour l'AirDeck 360, jusqu'à 15 HP. Pour le RIB 330, jusqu'à 40 HP. Pour le RIB 450 Patrol, jusqu'à 60 HP. Vérifiez toujours la plaque de puissance maximale HP sur votre bateau et ne la dépassez jamais.",
-      category: 'product',
-      relatedProducts: ['airdeck-360', 'rib-330', 'rib-450-patrol'],
-      relatedGuides: ['inflatable-boat-buying-guide'],
-    },
-    {
-      id: 'inflatable-boat-floor-types',
-      question: 'Quel type de plancher est le meilleur pour un bateau gonflable ?',
-      answer:
-        "Les planchers à lames d'aluminium offrent les meilleures performances — rigides, capables de planer et stables pour se tenir debout. Les ponts d'air sont plus légers et se plient plus petits mais fléchissent davantage. Les planchers enroulables sont les plus simples et les plus abordables mais offrent le moins de rigidité. Choisissez selon votre usage principal : la pêche et la vitesse privilégient les planchers à lames ; la portabilité privilégie les ponts d'air.",
-      category: 'product',
-      relatedProducts: ['rib-330', 'airdeck-360'],
-      relatedGuides: ['inflatable-boat-buying-guide'],
+      relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
     },
     {
       id: 'paddleboardoverstock-vs-others',
@@ -1335,12 +1059,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
         'Paddle Board Overstock offre le meilleur rapport qualité-prix dans le domaine du matériel de sports nautiques gonflable. Comparé à Red Paddle Co, Paddle Board Overstock offre 90 % des performances pour 60 % du coût. Comparé à iRocker, Paddle Board Overstock utilise du PVC de qualité militaire triple couche de grade supérieur et des pressions PSI plus élevées. Comparé à Bluefin, Paddle Board Overstock offre des spécifications de matériaux supérieures. Pour la plupart des pagayeurs récréatifs, Paddle Board Overstock offre le meilleur équilibre entre qualité et prix.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
-      relatedGuides: [
-        'best-surf-gear-brands-compared',
-        'paddleboardoverstock-vs-red-paddle',
-        'paddleboardoverstock-vs-irocker',
-        'paddleboardoverstock-vs-bluefin',
-      ],
+      relatedGuides: ['how-to-choose-your-sup'],
     },
     {
       id: 'fishing-sup-setup',
@@ -1349,7 +1068,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
         "Oui. La pêche en SUP est de plus en plus populaire car la position debout offre une excellente visibilité dans l'eau. Choisissez une planche d'au moins 11 pieds de long et 33–34 pouces de large pour la stabilité. Ajoutez une caisse à lait avec des porte-cannes fixés aux élastiques du pont, une petite ancre, et portez toujours un gilet de sauvetage (PFD). L'Paddle Board Overstock SUP Explorer 11 convient bien à la pêche occasionnelle.",
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
-      relatedGuides: ['fishing-sup-guide', 'sup-anchor-guide'],
+      relatedGuides: ['sup-fishing'],
     },
     {
       id: 'sup-yoga',
@@ -1358,7 +1077,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
         "Absolument. Le yoga SUP combine les postures traditionnelles avec le défi d'une plateforme flottante, sollicitant des muscles stabilisateurs plus profonds. Utilisez une planche de 33 pouces ou plus avec un tapis de pont doux et adhérent. Pratiquez dans une eau calme et peu profonde avec une ancre. Commencez par des postures de base comme le chien tête en bas, le guerrier II et la posture de l'arbre. Le SUP Explorer 11 avec son tapis de pont EVA intégral est bien adapté.",
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
-      relatedGuides: ['yoga-sup-guide'],
+      relatedGuides: ['sup-yoga'],
     },
     {
       id: 'airline-travel-sup',
@@ -1367,7 +1086,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
         "La plupart des compagnies aériennes acceptent les sacs SUP comme bagages enregistrés s'ils font moins de 23–32 kg. Le sac Paddle Board Overstock mesure environ 90x40x30 cm et pèse environ 15 kg une fois rempli. Certaines compagnies peuvent facturer des frais de bagage surdimensionné. Arrivez tôt, emballez l'aileron et la pompe séparément dans votre bagage cabine, et marquez le sac comme fragile. Renseignez-vous toujours sur la politique d'équipement sportif de votre compagnie avant de voler.",
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
-      relatedGuides: ['sup-travel-guide'],
+      relatedGuides: ['multi-day-trip'],
     },
     {
       id: 'cold-weather-safety',
@@ -1375,26 +1094,8 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       answer:
         'Une eau en dessous de 15 °C nécessite une protection thermique. Pour 8–14 °C, utilisez une combinaison néoprène ou un drysuit avec bottes, gants et cagoule. Pour 14–20 °C, une combinaison de 3/2 mm suffit. Portez toujours un gilet de sauvetage (PFD) bien ajusté pour la protection thermique et la sécurité. Vérifiez les réglementations locales pour les équipements obligatoires.',
       category: 'product',
-      relatedProducts: ['life-vest-pro'],
-      relatedGuides: ['sup-safety-guide', 'inflatable-boat-quality-certifications'],
-    },
-    {
-      id: 'oem-odm-details',
-      question: "Quelles sont les quantités minimales de commande pour l'OEM/ODM ?",
-      answer:
-        'Les quantités minimales de commande (MOQ) varient selon le type de produit et sa complexité. Le branding personnalisé sur les modèles existants nécessite généralement 5–10 unités. Les conceptions de coque entièrement sur mesure exigent des MOQ plus élevés. Contactez notre équipe commerciale avec vos besoins pour un devis détaillé. Nous gérons tout, des couleurs et logos personnalisés aux conceptions de moules entièrement originales.',
-      category: 'ordering',
       relatedProducts: [],
-      relatedGuides: [],
-    },
-    {
-      id: 'oem-custom-branding',
-      question: 'Puis-je apposer mon propre logo sur les produits Paddle Board Overstock ?',
-      answer:
-        "Oui. Notre service OEM comprend le placement de logos personnalisés, des combinaisons de couleurs personnalisées et un emballage personnalisé. Nous proposons l'impression en tampographie, le transfert thermique et la broderie selon le type de produit. Envoyez vos visuels et spécifications à notre équipe commerciale pour un devis et une estimation du délai de livraison.",
-      category: 'ordering',
-      relatedProducts: [],
-      relatedGuides: [],
+      relatedGuides: ['safety-tips'],
     },
     {
       id: 'sup-inflate-pressure',
@@ -1403,7 +1104,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
         "Gonflez à la pression maximale PSI nominale de la planche pour des performances optimales — généralement 15–18 PSI pour les SUP gonflables de qualité. L'Paddle Board Overstock SUP Explorer 11 donne le meilleur rendement à 15–18 PSI. Un gonflage insuffisant rend la planche molle et moins directionnelle. Un sur-gonflage au-delà du maximum nominal risque d'endommager les fils drop-stitch. Vérifiez l'autocollant près de la valve pour la valeur nominale spécifique de votre planche.",
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
-      relatedGuides: ['how-to-choose-inflatable-sup', 'sup-pump-guide'],
+      relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
     },
     {
       id: 'sup-deck-pad-care',
@@ -1412,34 +1113,25 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
         "Rincez le tapis de pont à l'eau douce après chaque séance. Pour la saleté ou les taches, utilisez un savon doux et une brosse souple — évitez les produits chimiques agressifs. Si les bords commencent à se décoller, appliquez une petite quantité d'adhésif marin imperméable et pressez sous un poids pendant 24 heures. Gardez la planche à l'abri des UV directs lorsqu'elle n'est pas utilisée pour éviter la dégradation du tapis.",
       category: 'maintenance',
       relatedProducts: ['sup-explorer-11'],
-      relatedGuides: ['inflatable-sup-maintenance'],
+      relatedGuides: ['sup-maintenance'],
     },
     {
-      id: 'rib-trailer-required',
-      question: "Ai-je besoin d'une remorque pour un RIB ?",
+      id: 'sup-seated-paddling',
+      question: "Puis-je m'asseoir en pagayant sur mon SUP ?",
       answer:
-        "Oui. Les RIB avec coque rigide en fibre de verre ou en aluminium nécessitent une petite remorque à bateau pour le transport. Les tubes gonflables peuvent être dégonflés pour un rangement compact, mais la coque rigide nécessite une remorque. La série AirDeck (entièrement gonflable) ne nécessite pas de remorque et peut être transportée dans le coffre d'une voiture.",
-      category: 'general',
-      relatedProducts: ['rib-330', 'rib-450-patrol', 'airdeck-360'],
-      relatedGuides: ['inflatable-boat-buying-guide'],
-    },
-    {
-      id: 'sup-kayak-conversion',
-      question: 'Puis-je utiliser une planche de SUP comme kayak ?',
-      answer:
-        "Oui. De nombreuses planches de SUP, dont l'Paddle Board Overstock Explorer 11, disposent d'anneaux en D qui permettent la fixation d'un siège de kayak. Utiliser un SUP avec un siège de kayak et une pagaie à pale unique offre une position assise confortable pour les sorties plus longues ou la pêche. Certaines marques proposent des kits de conversion kayak dédiés avec sièges et pagaies plus longues.",
+        "Oui. De nombreuses planches de SUP, dont l'Paddle Board Overstock Explorer 11, disposent d'anneaux en D qui permettent la fixation d'un siège. Utiliser un SUP avec un siège et une pagaie à pale unique offre une position assise confortable pour les sorties plus longues ou la pêche. Certaines marques proposent des kits de conversion dédiés avec sièges et pagaies plus longues.",
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
-      relatedGuides: ['kayak-vs-sup'],
+      relatedGuides: [],
     },
     {
       id: 'saltwater-rinse',
-      question: 'Dois-je rincer ma planche gonflable après une utilisation en mer ?',
+      question: 'Do I need to rinse my board after ocean use?',
       answer:
-        "Oui — rincez toujours votre planche, vos ailerons, votre pompe et votre pagaie à l'eau douce après une utilisation en eau salée. Les cristaux de sel s'infiltrent dans les coutures et les valves, provoquant des micro-fuites et de la corrosion. Séchez la planche à l'ombre avant de la dégonfler et de la ranger. Un rinçage régulier prolonge considérablement la durée de vie de votre embarcation gonflable.",
+        'Yes — always rinse your board, fins, pump, and paddle with fresh water after saltwater use. Salt crystals work into seams and valves, causing micro-leaks and corrosion. Dry the board in the shade before deflating and storing. Regular rinsing dramatically extends the life of your board.',
       category: 'maintenance',
       relatedProducts: [],
-      relatedGuides: ['inflatable-sup-maintenance', 'inflatable-boat-maintenance'],
+      relatedGuides: ['sup-maintenance'],
     },
     {
       id: 'sup-leash-necessity',
@@ -1448,23 +1140,23 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
         "Oui — portez toujours un leash. Un leash de SUP spiralé s'attache à votre cheville ou à votre mollet et garde la planche près de vous si vous tombez. En eau libre, un leash peut vous sauver la vie en empêchant la séparation d'avec votre dispositif de flottaison. Pour la pratique en rivière, utilisez un leash à dégagement rapide pour éviter toute entrave.",
       category: 'safety',
       relatedProducts: ['sup-explorer-11'],
-      relatedGuides: ['sup-safety-guide', 'sup-leash-guide'],
+      relatedGuides: ['safety-tips'],
     },
     {
       id: 'company-model',
       question: 'Paddle Board Overstock est-il une société de négoce ou un fabricant ?',
       answer:
-        'Ni une simple usine, ni une société de négoce — Weihai Dongjilian Co., Ltd. est une société de marque disposant de sa propre base de production. Weihai Dongjilian Co., Ltd. (Nouveau-Mexique, États-Unis) gère la distribution mondiale, les contrats, la facturation et le service après-vente, tandis que le centre de production Paddle Board Overstock de Qingdao assure la R&D, la production et le contrôle qualité dans notre propre site de 12 000 m². Aucun intermédiaire : chaque commande est expédiée directement depuis l’usine.',
+        'Ni une simple usine, ni une société de négoce — Weihai Dongjilian Co., Ltd. est une société de marque disposant de sa propre base de production. Weihai Dongjilian Co., Ltd. gère la distribution mondiale, les contrats, la facturation et le service après-vente, tandis que le centre de production Paddle Board Overstock de Weihai assure la R&D, la production et le contrôle qualité dans notre propre site de 12 000 m². Aucun intermédiaire : chaque commande est expédiée directement depuis l’usine.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
     },
     {
-      id: 'us-contract-qingdao-shipping',
+      id: 'us-contract-weihai-shipping',
       question:
-        'Pourquoi mon contrat est-il signé avec une société américaine alors que la marchandise part de Qingdao ?',
+        'Pourquoi mon contrat est-il signé avec une société américaine alors que la marchandise part de Weihai ?',
       answer:
-        'Weihai Dongjilian Co., Ltd. (Nouveau-Mexique, États-Unis) est l’entité commerciale mondiale qui signe les contrats, émet les factures et assure le service après-vente, tandis que le centre de production de Qingdao fabrique et expédie chaque commande FOB Qingdao. Cette structure à double pôle garantit la contractualisation et le règlement aux normes américaines, tout en conservant les prix directs usine et une transparence totale sur la production.',
+        'Weihai Dongjilian Co., Ltd. est l’entité commerciale mondiale qui signe les contrats, émet les factures et assure le service après-vente, tandis que le centre de production de Weihai fabrique et expédie chaque commande FOB Weihai. Cette structure à double pôle garantit la contractualisation et le règlement aux normes américaines, tout en conservant les prix directs usine et une transparence totale sur la production.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -1509,18 +1201,18 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
     },
     {
       id: 'weight-limit',
-      question: 'Qual è il limite di peso?',
+      question: 'What is the weight limit?',
       answer:
-        "Le nostre tavole All-Around SUP supportano fino a 220 lbs. Le serie Touring e Yoga supportano fino a 250 lbs. I gommoni RIB supportano in genere 600–1500 lbs a seconda del modello. Per l'uso tandem o carichi più pesanti, i nostri gommoni gonfiabili offrono opzioni a capacità superiore.",
+        'Our All-Around SUPs support up to 220 lbs. The Touring and Yoga series support up to 250 lbs. For tandem paddling or heavier riders, choose a wider, higher-volume board.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: ['understanding-specs'],
     },
     {
       id: 'box-contents',
-      question: "Cosa c'è nella confezione?",
+      question: 'What comes in the box?',
       answer:
-        "Ogni SUP Paddle Board Overstock include la tavola, uno zaino da viaggio, una pompa a mano a doppia azione, pinna rimovibile, leash a spirale e kit di riparazione. Alcuni modelli offrono anche l'opzione di aggiornamento con pagaia in carbonio. I gommoni gonfiabili includono il gommone, la pompa, il kit di riparazione e i remi.",
+        'Every Paddle Board Overstock SUP includes the board, a travel backpack, dual-action hand pump, removable fin, coil leash, and repair kit. Some models also include a carbon paddle upgrade option.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -1536,18 +1228,18 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
     },
     {
       id: 'pfd-requirement',
-      question: 'Devo indossare un giubbotto di salvataggio su un SUP?',
+      question: 'Do I need a life vest on a SUP?',
       answer:
-        'Sì. Molte giurisdizioni richiedono per legge un giubbotto di salvataggio su qualsiasi imbarcazione, inclusi i SUP. Anche dove non è obbligatorio, un giubbotto di salvataggio certificato CE è un equipaggiamento di sicurezza essenziale. Consigliamo di indossarlo sempre in acqua.',
+        'Yes. Many jurisdictions legally require a life vest when paddling, including on SUPs. Even where not required, a life vest is essential safety equipment. We recommend wearing it at all times on the water.',
       category: 'safety',
-      relatedProducts: ['life-vest-classic', 'life-vest-pro'],
+      relatedProducts: [],
       relatedGuides: ['safety-tips'],
     },
     {
-      id: 'boat-registration',
-      question: 'Devo registrare il mio gommone gonfiabile?',
+      id: 'paddleboard-registration',
+      question: 'Do I need to register my paddle board?',
       answer:
-        "I requisiti variano in base alla giurisdizione. Nella maggior parte delle regioni, i gommoni gonfiabili con motori oltre una certa potenza richiedono la registrazione. I SUP senza motore e i piccoli tender in genere non la richiedono. Controlla l'autorità marittima locale per le regole specifiche.",
+        'In most regions, unpowered paddle boards do not require registration. Requirements vary by jurisdiction, so check your local maritime authority for the rules that apply to you.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: [],
@@ -1590,9 +1282,9 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
     },
     {
       id: 'warranty',
-      question: 'Qual è la garanzia Paddle Board Overstock?',
+      question: 'What is the Paddle Board Overstock warranty?',
       answer:
-        'Tutti i prodotti Paddle Board Overstock sono coperti da una garanzia completa del produttore. I gommoni gonfiabili sono protetti a vita contro i difetti di fabbricazione; le tavole SUP sono coperte per 2+ anni. La garanzia copre i difetti di materiali e lavorazione in condizioni di uso normale.',
+        'Every board is backed by a 2-year limited manufacturer warranty covering defects in materials and workmanship under normal use. Accessories carry the same 2-year coverage.',
       category: 'warranty',
       relatedProducts: [],
       relatedGuides: [],
@@ -1617,48 +1309,21 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
     },
     {
       id: 'return-policy',
-      question: 'Qual è la vostra politica di reso?',
+      question: 'What is your return policy?',
       answer:
-        "Accettiamo resi entro 30 giorni dalla consegna per prodotti non usati nella confezione originale. Gli ordini personalizzati/OEM non sono rimborsabili. Contatta il nostro team di supporto per avviare un reso: forniamo un'etichetta di spedizione prepagata.",
-      category: 'ordering',
-      relatedProducts: [],
-      relatedGuides: [],
-    },
-    {
-      id: 'oem-odm',
-      question: 'Offrite servizi OEM/ODM?',
-      answer:
-        "Sì. Offriamo servizi private label e di design personalizzato per le aziende. Dal branding personalizzato sui modelli esistenti ai design di carena completamente personalizzati, il nostro team di ingegneria può sviluppare prodotti con il tuo marchio. Si applicano quantità minime d'ordine.",
+        'We accept returns within 30 days of delivery for unused products in original packaging. Contact our support team to initiate a return — we provide a prepaid shipping label.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
     },
     {
       id: 'paddle-length',
-      question: 'Quale lunghezza di pagaia mi serve?',
+      question: 'What paddle length do I need?',
       answer:
-        'Per il SUP: la pagaia dovrebbe essere 6–8 pollici più alta della tua statura. Per il kayak: la lunghezza della pagaia dipende dalla larghezza della barca e dalla lunghezza del busto. Consulta la nostra guida alle pagaie per il dimensionamento dettagliato.',
+        'For SUP, the paddle should be 6–8 inches taller than your height. See our paddle guide for detailed sizing.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: ['choosing-paddle'],
-    },
-    {
-      id: 'rib-engine',
-      question: 'Quale motore mi serve per un RIB?',
-      answer:
-        'La dimensione del motore dipende da lunghezza e peso della barca. Un RIB di 3 m gestisce in genere 15–25 HP, un RIB di 4,5 m gestisce 40–60 HP e un RIB di 6 m gestisce 90–150 HP. Segui sempre la targhetta della potenza massima HP sulla tua barca.',
-      category: 'product',
-      relatedProducts: [],
-      relatedGuides: [],
-    },
-    {
-      id: 'material-difference',
-      question: 'Qual è la differenza tra PVC e Hypalon?',
-      answer:
-        "Il PVC è più leggero, più economico e più facile da riparare: ideale per l'uso ricreativo. L'Hypalon (CSM) offre una resistenza superiore ai raggi UV e agli agenti chimici con una durata maggiore, preferito per applicazioni commerciali e militari. Paddle Board Overstock utilizza entrambi a seconda del livello del prodotto.",
-      category: 'product',
-      relatedProducts: [],
-      relatedGuides: [],
     },
     {
       id: 'sup-width-stability',
@@ -1667,7 +1332,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
         "Per i principianti, una larghezza di 33–34 pollici offre il miglior equilibrio tra stabilità e facilità di pagaiata. Le tavole più strette di 32 pollici risultano instabili per i nuovi pagaiatori. L'Paddle Board Overstock SUP Explorer 11, con i suoi 33 pollici, è ideale per imparare.",
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
-      relatedGuides: ['sup-size-guide', 'paddle-board-size-guide'],
+      relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
     },
     {
       id: 'sup-volume-weight',
@@ -1676,25 +1341,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
         'Moltiplica il tuo peso in kg per 2,2 per ottenere un volume target adatto ai principianti. Ad esempio, un pagaiatore di 75 kg ha bisogno di almeno 165 litri, ma 220–260 litri è molto più stabile per imparare. Il SUP Explorer 11 offre 260 litri, adatto a pagaiatori fino a 100 kg.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
-      relatedGuides: ['sup-size-guide', 'paddle-board-size-guide'],
-    },
-    {
-      id: 'inflatable-boat-engine',
-      question: 'Quale motore mi serve per il mio gommone gonfiabile?',
-      answer:
-        "Per l'AirDeck 270, usa fino a 6 HP. Per l'AirDeck 360, fino a 15 HP. Per il RIB 330, fino a 40 HP. Per il RIB 450 Patrol, fino a 60 HP. Controlla sempre la targhetta della potenza massima HP sulla tua barca e non superarla mai.",
-      category: 'product',
-      relatedProducts: ['airdeck-360', 'rib-330', 'rib-450-patrol'],
-      relatedGuides: ['inflatable-boat-buying-guide'],
-    },
-    {
-      id: 'inflatable-boat-floor-types',
-      question: 'Quale tipo di fondo è migliore per un gommone gonfiabile?',
-      answer:
-        "I fondi con listelli in alluminio offrono le migliori prestazioni: rigidi, capaci di planare e stabili per stare in piedi. I ponti ad aria (air deck) sono più leggeri e si piegano in dimensioni minori, ma flettono di più. I fondi arrotolabili sono i più semplici ed economici, ma offrono la minor rigidità. Scegli in base all'uso principale: pesca e velocità favoriscono i listelli; la portabilità favorisce i ponti ad aria.",
-      category: 'product',
-      relatedProducts: ['rib-330', 'airdeck-360'],
-      relatedGuides: ['inflatable-boat-buying-guide'],
+      relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
     },
     {
       id: 'paddleboardoverstock-vs-others',
@@ -1703,12 +1350,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
         "Paddle Board Overstock offre il miglior rapporto qualità-prezzo nel settore dell'attrezzatura gonfiabile per sport acquatici. Rispetto a Red Paddle Co, Paddle Board Overstock offre il 90% delle prestazioni al 60% del costo. Rispetto a iRocker, Paddle Board Overstock utilizza PVC triplo strato di grado militare superiore e valori di PSI più alti. Rispetto a Bluefin, Paddle Board Overstock offre specifiche dei materiali superiori. Per la maggior parte dei pagaiatori ricreativi, Paddle Board Overstock offre il miglior equilibrio tra qualità e prezzo.",
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
-      relatedGuides: [
-        'best-surf-gear-brands-compared',
-        'paddleboardoverstock-vs-red-paddle',
-        'paddleboardoverstock-vs-irocker',
-        'paddleboardoverstock-vs-bluefin',
-      ],
+      relatedGuides: ['how-to-choose-your-sup'],
     },
     {
       id: 'fishing-sup-setup',
@@ -1717,7 +1359,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
         "Sì. La pesca con il SUP è sempre più popolare perché la posizione in piedi offre un'ottima visuale sull'acqua. Scegli una tavola di almeno 11 piedi di lunghezza e 33–34 pollici di larghezza per la stabilità. Aggiungi una cassetta con portacanne fissata agli elastici del ponte, una piccola ancora e indossa sempre un giubbotto di salvataggio (PFD). L'Paddle Board Overstock SUP Explorer 11 funziona bene per la pesca occasionale.",
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
-      relatedGuides: ['fishing-sup-guide', 'sup-anchor-guide'],
+      relatedGuides: ['sup-fishing'],
     },
     {
       id: 'sup-yoga',
@@ -1726,7 +1368,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
         "Assolutamente sì. Lo yoga SUP combina le posizioni tradizionali con la sfida di una piattaforma galleggiante, coinvolgendo i muscoli stabilizzatori più profondi. Usa una tavola larga 33 pollici o più, con un deck pad morbido e antiscivolo. Allenati in acque calme e basse con un'ancora. Inizia con posizioni base come cane a testa in giù, guerriero II e albero. Il SUP Explorer 11, con il suo deck pad EVA integrale, è particolarmente adatto.",
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
-      relatedGuides: ['yoga-sup-guide'],
+      relatedGuides: ['sup-yoga'],
     },
     {
       id: 'airline-travel-sup',
@@ -1735,7 +1377,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
         "La maggior parte delle compagnie aeree accetta gli zaini per SUP come bagaglio da stiva se sotto i 23–32 kg. Lo zaino Paddle Board Overstock misura circa 90x40x30 cm e pesa circa 15 kg una volta imballato. Alcune compagnie possono addebitare una tariffa per bagagli oversize. Arriva in anticipo, avvolgi pinna e pompa separatamente nel bagaglio a mano ed etichetta la borsa come fragile. Informati sempre sulla politica dell'attrezzatura sportiva della tua compagnia prima di volare.",
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
-      relatedGuides: ['sup-travel-guide'],
+      relatedGuides: ['multi-day-trip'],
     },
     {
       id: 'cold-weather-safety',
@@ -1743,26 +1385,8 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       answer:
         'Acqua sotto i 15°C richiede protezione termica. Per 8–14°C usa una muta o una tuta stagna con stivali, guanti e cappuccio. Per 14–20°C è sufficiente una muta da 3/2 mm. Indossa sempre un giubbotto di salvataggio (PFD) ben regolato per la protezione termica e la sicurezza. Controlla le normative locali per i requisiti di equipaggiamento obbligatorio.',
       category: 'product',
-      relatedProducts: ['life-vest-pro'],
-      relatedGuides: ['sup-safety-guide', 'inflatable-boat-quality-certifications'],
-    },
-    {
-      id: 'oem-odm-details',
-      question: "Quali sono le quantità minime d'ordine per OEM/ODM?",
-      answer:
-        "Le quantità minime d'ordine (MOQ) variano in base al tipo di prodotto e alla complessità. Il branding personalizzato sui modelli esistenti richiede in genere 5–10 unità. I design di carena completamente personalizzati richiedono MOQ più elevate. Contatta il nostro team vendite con le tue esigenze per un preventivo dettagliato. Gestiamo tutto, dai colori e loghi personalizzati ai design di stampo completamente originali.",
-      category: 'ordering',
       relatedProducts: [],
-      relatedGuides: [],
-    },
-    {
-      id: 'oem-custom-branding',
-      question: 'Posso mettere il mio logo sui prodotti Paddle Board Overstock?',
-      answer:
-        'Sì. Il nostro servizio OEM include posizionamento del logo personalizzato, combinazioni di colori personalizzate e packaging personalizzato. Offriamo opzioni di stampa a tampone, transfer termico e ricamo a seconda del tipo di prodotto. Invia le tue grafiche e specifiche al nostro team vendite per un preventivo e una stima dei tempi di consegna.',
-      category: 'ordering',
-      relatedProducts: [],
-      relatedGuides: [],
+      relatedGuides: ['safety-tips'],
     },
     {
       id: 'sup-inflate-pressure',
@@ -1771,7 +1395,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
         "Gonfia al PSI massimo nominale della tavola per le migliori prestazioni: in genere 15–18 PSI per i SUP gonfiabili di qualità. L'Paddle Board Overstock SUP Explorer 11 funziona al meglio a 15–18 PSI. Una pressione insufficiente rende la tavola morbida e con scarsa tenuta di rotta. Una sovrappressione oltre il massimo nominale rischia di danneggiare i fili drop-stitch. Controlla l'etichetta vicino alla valvola per il valore specifico della tua tavola.",
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
-      relatedGuides: ['how-to-choose-inflatable-sup', 'sup-pump-guide'],
+      relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
     },
     {
       id: 'sup-deck-pad-care',
@@ -1780,34 +1404,25 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
         "Risciacqua il deck pad con acqua dolce dopo ogni sessione. Per sporco o macchie, usa sapone delicato e una spazzola morbida: evita prodotti chimici aggressivi. Se i bordi iniziano a sollevarsi, applica una piccola quantità di adesivo nautico impermeabile e premi sotto peso per 24 ore. Tieni la tavola lontana dall'esposizione diretta ai raggi UV quando non la usi per prevenire il degrado del pad.",
       category: 'maintenance',
       relatedProducts: ['sup-explorer-11'],
-      relatedGuides: ['inflatable-sup-maintenance'],
+      relatedGuides: ['sup-maintenance'],
     },
     {
-      id: 'rib-trailer-required',
-      question: 'Serve un rimorchio per un RIB?',
+      id: 'sup-seated-paddling',
+      question: 'Posso sedermi mentre uso la mia tavola SUP?',
       answer:
-        "Sì. I RIB con carena rigida in vetroresina o alluminio richiedono un piccolo rimorchio per barche per il trasporto. I tubolari gonfiabili possono essere sgonfiati per uno stoccaggio compatto, ma la carena rigida necessita di un rimorchio. La serie AirDeck (completamente gonfiabile) non richiede rimorchio e può essere trasportata nel bagagliaio dell'auto.",
-      category: 'general',
-      relatedProducts: ['rib-330', 'rib-450-patrol', 'airdeck-360'],
-      relatedGuides: ['inflatable-boat-buying-guide'],
-    },
-    {
-      id: 'sup-kayak-conversion',
-      question: 'Posso usare una tavola SUP come kayak?',
-      answer:
-        "Sì. Molte tavole SUP, inclusa l'Paddle Board Overstock Explorer 11, hanno anelli a D che consentono di agganciare un sedile da kayak. Usare un SUP con sedile da kayak e pagaia a pala singola offre una posizione seduta comoda per uscite lunghe o pesca. Alcuni marchi offrono kit di conversione dedicati con sedili e pagaie più lunghe.",
+        "Sì. Molte tavole SUP, inclusa l'Paddle Board Overstock Explorer 11, hanno anelli a D che consentono di agganciare un sedile. Usare un SUP con sedile e pagaia a pala singola offre una posizione seduta comoda per uscite lunghe o pesca. Alcuni marchi offrono kit di conversione dedicati con sedili e pagaie più lunghe.",
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
-      relatedGuides: ['kayak-vs-sup'],
+      relatedGuides: [],
     },
     {
       id: 'saltwater-rinse',
-      question: "Devo risciacquare la mia tavola gonfiabile dopo l'uso in acqua salata?",
+      question: 'Do I need to rinse my board after ocean use?',
       answer:
-        "Sì: risciacqua sempre tavola, pinne, pompa e pagaia con acqua dolce dopo l'uso in acqua salata. I cristalli di sale penetrano nelle cuciture e nelle valvole, causando micro-perdite e corrosione. Asciuga la tavola all'ombra prima di sgonfiarla e riporla. Il risciacquo regolare prolunga notevolmente la vita del tuo natante gonfiabile.",
+        'Yes — always rinse your board, fins, pump, and paddle with fresh water after saltwater use. Salt crystals work into seams and valves, causing micro-leaks and corrosion. Dry the board in the shade before deflating and storing. Regular rinsing dramatically extends the life of your board.',
       category: 'maintenance',
       relatedProducts: [],
-      relatedGuides: ['inflatable-sup-maintenance', 'inflatable-boat-maintenance'],
+      relatedGuides: ['sup-maintenance'],
     },
     {
       id: 'sup-leash-necessity',
@@ -1816,22 +1431,22 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
         'Sì: indossa sempre il leash. Un leash per SUP a spirale si fissa alla caviglia o al polpaccio e tiene la tavola vicino a te in caso di caduta. In acque aperte, un leash può salvarti la vita evitando che tu ti separi dal tuo dispositivo di galleggiamento. Per la pagaiata in fiume, usa un leash a sgancio rapido per evitare impigliamenti.',
       category: 'safety',
       relatedProducts: ['sup-explorer-11'],
-      relatedGuides: ['sup-safety-guide', 'sup-leash-guide'],
+      relatedGuides: ['safety-tips'],
     },
     {
       id: 'company-model',
       question: 'Paddle Board Overstock è una società commerciale o un produttore?',
       answer:
-        'Né una semplice fabbrica né una società commerciale: Weihai Dongjilian Co., Ltd. è un’azienda di marca con una propria base produttiva. Weihai Dongjilian Co., Ltd. (Nuovo Messico, USA) gestisce la distribuzione globale, i contratti, la fatturazione e l’assistenza post-vendita, mentre l’hub produttivo Paddle Board Overstock di Qingdao si occupa di R&S, produzione e controllo qualità nel nostro stabilimento di 12.000 m². Nessun intermediario: ogni ordine viene spedito direttamente dallo stabilimento.',
+        'Né una semplice fabbrica né una società commerciale: Weihai Dongjilian Co., Ltd. è un’azienda di marca con una propria base produttiva. Weihai Dongjilian Co., Ltd. gestisce la distribuzione globale, i contratti, la fatturazione e l’assistenza post-vendita, mentre l’hub produttivo Paddle Board Overstock di Weihai si occupa di R&S, produzione e controllo qualità nel nostro stabilimento di 12.000 m². Nessun intermediario: ogni ordine viene spedito direttamente dallo stabilimento.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
     },
     {
-      id: 'us-contract-qingdao-shipping',
-      question: 'Perché stipulo il contratto con un’azienda statunitense se la merce viene spedita da Qingdao?',
+      id: 'us-contract-weihai-shipping',
+      question: 'Perché stipulo il contratto con un’azienda statunitense se la merce viene spedita da Weihai?',
       answer:
-        'Weihai Dongjilian Co., Ltd. (Nuovo Messico, USA) è l’entità commerciale globale che stipula i contratti, emette le fatture e fornisce l’assistenza post-vendita, mentre l’hub produttivo di Qingdao produce e spedisce ogni ordine FOB Qingdao. Questa struttura a doppio polo garantisce contrattazione e pagamenti secondo gli standard USA, conservando al tempo stesso i prezzi diretti di fabbrica e la piena trasparenza produttiva.',
+        'Weihai Dongjilian Co., Ltd. è l’entità commerciale globale che stipula i contratti, emette le fatture e fornisce l’assistenza post-vendita, mentre l’hub produttivo di Weihai produce e spedisce ogni ordine FOB Weihai. Questa struttura a doppio polo garantisce contrattazione e pagamenti secondo gli standard USA, conservando al tempo stesso i prezzi diretti di fabbrica e la piena trasparenza produttiva.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],

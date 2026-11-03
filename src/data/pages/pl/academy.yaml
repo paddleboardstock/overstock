@@ -1,168 +1,126 @@
 hero:
-  tagline: Paddle Board Overstock Akademia
-  title: Centrum Nauki
-  subtitle: Przewodniki i samouczki na każdym poziomie umiejętności — od podstaw SUP po zaawansowane techniki ratownicze
+  tagline: Paddle Board Overstock Academy
+  title: Learning Center
+  subtitle: Guides and tutorials for every skill level — from SUP basics to advanced rescue techniques
+
 categories:
-  - level: Początkujący
+  - level: Beginner
     color: from-green-500 to-emerald-600
     badge: bg-green-100 text-green-700
     guides:
-      - title: SUP Podstawy
-        desc: Naucz się podstaw paddleboardingu na stojąco — postawy, techniki uderzeń i równowagi.
+      - title: SUP Basics
+        desc: Learn the fundamentals of stand-up paddleboarding — stance, stroke technique, and balance.
         slug: beginner-sup-guide
-      - title: Techniki wiosłowania
-        desc: Ruch do przodu, ruch zamachowy, ruch rysujący i dolna klamra — opanuj podstawowe ruchy wiosłem.
+      - title: Paddle Techniques
+        desc: Forward stroke, sweep stroke, draw stroke, and low brace — master the essential paddle moves.
         slug: sup-paddle-guide
-      - title: Bezpieczeństwo przede wszystkim
-        desc: Podstawowe praktyki bezpieczeństwa, w tym kontrola pogody, używanie PFD, zasady smyczy i samoratowanie.
+      - title: Safety First
+        desc: Essential safety practices including weather checks, PFD use, leash rules, and self-rescue.
         slug: sup-safety-guide
-  - level: Mediator
+  - level: Intermediate
     color: from-blue-500 to-indigo-600
     badge: bg-blue-100 text-blue-700
     guides:
-      - title: Niezbędne informacje turystyczne
-        desc: Planowanie wielogodzinnych wioseł — nawigacja, nawodnienie, tempo i odczytywanie prognoz wiatru.
+      - title: Touring Essentials
+        desc: Planning multi-hour paddles — navigation, hydration, pacing, and reading wind forecasts.
         slug: touring-sup-guide
-      - title: Czytanie pogodowe
-        desc: Interpretuj prognozy morskie, identyfikuj układy chmur i poznaj wpływ wiatru na wodę.
+      - title: Weather Reading
+        desc: Interpret marine forecasts, identify cloud patterns, and understand wind effects on water.
         slug: weather-planning-water-sports
-      - title: Podstawy nawigacji
-        desc: Czytanie map, korzystanie z kompasu, punkty GPS i planowanie trasy dla wiosłowania przybrzeżnego.
+      - title: Navigation Basics
+        desc: Chart reading, compass use, GPS waypoints, and route planning for coastal paddling.
         slug: sup-navigation-guide
-      - title: Świadomość pływów
-        desc: Zrozumienie cykli pływów, prądów i ich wpływu na czas i trasę startu.
+      - title: Tidal Awareness
+        desc: Understanding tide cycles, currents, and how they affect launch timing and routing.
         slug: understanding-tides
-  - level: Zaawansowany
+  - level: Advanced
     color: from-purple-500 to-violet-600
     badge: bg-purple-100 text-purple-700
     guides:
-      - title: Planowanie wycieczki wielodniowej
-        desc: Logistyka wyprawy — wybór sprzętu, planowanie żywności, protokoły bezpieczeństwa i kontakty w sytuacjach awaryjnych.
+      - title: Multi-Day Trip Planning
+        desc: Expedition logistics — gear selection, food planning, safety protocols, and emergency contacts.
         slug: sup-travel-guide
-      - title: Techniki Ratownictwa
-        desc: Samoratownictwo, ratownictwo T, ratownictwo eskimoskie dla kajaków i protokoły holowania na wodach otwartych.
+      - title: Rescue Techniques
+        desc: Self-rescue, T-rescue, and towing protocols for open water.
         slug: sup-self-rescue
-      - title: Nocne wiosłowanie
-        desc: Nawigacja po zmroku — wymagania dotyczące oświetlenia, pamięć tras, komunikacja grupowa i świadomość zagrożeń.
+      - title: Night Paddling
+        desc: Navigation after dark — lighting requirements, route memory, group communication, and hazard awareness.
         slug: sup-navigation-guide
-  - level: Konserwacja
+  - level: Maintenance
     color: from-amber-500 to-orange-600
     badge: bg-amber-100 text-amber-700
     guides:
-      - title: Czyszczenie i pielęgnacja
-        desc: Płukanie słodką wodą, ochrona przed promieniowaniem UV, zapobieganie pleśni i odpowiednie techniki suszenia po każdej sesji.
+      - title: Cleaning & Care
+        desc: Freshwater rinsing, UV protection, mildew prevention, and proper drying techniques after every session.
         slug: inflatable-sup-maintenance
-      - title: Przewodnik przechowywania
-        desc: Najlepsze praktyki przechowywania nadmuchiwanych desek i łodzi — deflacja, składanie, kontrola temperatury i okres przydatności do spożycia.
+      - title: Storage Guide
+        desc: Best practices for storing inflatable boards — deflation, folding, temperature control, and shelf life.
         slug: inflatable-sup-storage
-      - title: Podstawy naprawy
-        desc: Napraw małe przebicia, nieszczelności szwów i problemy z zaworami za pomocą zestawów naprawczych PVC i technik łatania.
+      - title: Repair Basics
+        desc: Fix small punctures, seam leaks, and valve issues with PVC repair kits and patch techniques.
         slug: inflatable-sup-repair
-      - title: Konserwacja zaworu
-        desc: Zidentyfikuj typy zaworów (Halkey-Roberts, Boston, Leafield), usuń zanieczyszczenia i wymień uszkodzone trzpienie.
+      - title: Valve Maintenance
+        desc: Identify valve types (Halkey-Roberts, Boston, Leafield), clean debris, and replace faulty stems.
         slug: inflatable-sup-repair
-knowledge_center_tagline: Centrum wiedzy
-knowledge_center_title: Przewodniki branżowe i dotyczące sprzętu morskiego
-knowledge_center_subtitle: Wiedza ekspercka i przewodniki zakupowe dla profesjonalistów z branży morskiej, operatorów flot i entuzjastów sportów wodnych.
-knowledge_sections:
-  - title: RIB Wiedza o łodziach
-    tagline: Sztywne prowadnice pontonów
-    desc: Wszystko o łodziach RIB — konstrukcja kadłuba, materiały, dobór silnika, konserwacja i porady dotyczące zakupu do użytku komercyjnego i rekreacyjnego.
-    guides:
-      - title: Jak wybrać właściwą łódź RIB
-        desc: Kompletny przewodnik dotyczący wyboru rozmiaru RIB, mocy silnika, materiału rur, typu kadłuba i przeznaczenia.
-        href: /v2/inflatable-boat-buying-guide
-      - title: RIB kontra ponton
-        desc: Sztywny ponton kontra tradycyjny nadmuchiwany ponton — porównanie konstrukcji kadłuba, wydajności, trwałości i pojemności.
-        href: /compare/rib-vs-dinghy
-      - title: Komercyjne RIB vs Rekreacyjne RIB
-        desc: Łodzie klasy komercyjnej a łodzie rekreacyjne RIB – standardy konstrukcyjne, materiały, żywotność, koszt i certyfikaty.
-        href: /compare/commercial-vs-recreational-rib
-      - title: Kadłub aluminiowy kontra kadłub z włókna szklanego
-        desc: Porównaj kadłuby z aluminium i włókna szklanego dla łodzi RIB pod względem masy, kosztu, trwałości i odporności na korozję.
-        href: /compare/aluminum-vs-fiberglass
-  - title: Przewodnik po pontonach
-    tagline: Wiedza o nadmuchiwanych jednostkach pływających
-    desc: Obszerne przewodniki na temat pontonów — PVC vs Hypalon, metody budowy, standardy bezpieczeństwa i najlepsze praktyki konserwacji.
-    guides:
-      - title: Przewodnik po materiałach PVC vs Hypalon
-        desc: Ostateczne porównanie pomiędzy PVC i Hypalon CSM dla konstrukcji pontonów.
-        href: /compare/pvc-vs-hypalon
-      - title: Jak powstają pontony
-        desc: Proces produkcyjny — cięcie materiału, spawanie HF, konstrukcja szwów, próba ciśnieniowa i kontrola jakości.
-        href: /learn/inflatable-technology
-      - title: Przewodnik bezpieczeństwa pontonów
-        desc: Normy bezpieczeństwa, nośność, prawidłowe napompowanie, kontrole przed wyjazdem i procedury awaryjne.
-        href: /learn/water-safety
-      - title: Konserwacja pontonu
-        desc: Czyszczenie, przechowywanie, ochrona przed promieniowaniem UV, przygotowanie do zimy i naprawa pontonów i RIBów.
-        href: /v2/inflatable-boat-maintenance
-  - title: Wiedza o łodzi
-    tagline: Ponton i piasta RIB
-    desc: Przewodniki techniczne obejmujące typy pontonów, materiały, metody budowy, konserwację i bezpieczeństwo – od pontonów po RIBy.
-    guides:
-      - title: Typy pontonów
-        desc: Pontony, RIB-y, kajaki i pontony — poznaj różnice i wybierz ten właściwy.
-        href: /v2/inflatable-boat-buying-guide
-      - title: Technologia Drop-Stitch
-        desc: Jak tysiące wewnętrznych gwintów tworzy sztywne, nadmuchiwane pod wysokim ciśnieniem konstrukcje.
-        href: /learn/drop-stitch-core
-      - title: Materiały referencyjne
-        desc: Wyjaśniono współczynniki denierów PVC, gramaturę tkaniny, odporność na promieniowanie UV i materiały morskie.
-        href: /learn/materials
-      - title: RIB kontra Dinghy
-        desc: Porównaj sztywne pontony z tradycyjnymi nadmuchiwanymi pontonami dla różnych zastosowań.
-        href: /compare/rib-vs-dinghy
-  - title: SUP Wiedza
-    tagline: Prowadnice do paddleboardu na stojąco
-    desc: Wszystko o deskach SUP — nadmuchiwane i sztywne, wymiary desek, technologia materiałowa i porady ekspertów dla wszystkich poziomów umiejętności.
-    guides:
-      - title: Nadmuchiwane vs Twarde SUP
-        desc: Porównaj deski iSUP i twarde deski epoksydowe pod względem przenośności, trwałości, wydajności i wartości.
-        href: /learn/sup
-      - title: SUP Przewodnik po wymiarach płytek
-        desc: Jak długość, szerokość i grubość wpływają na stabilność, prędkość i zwrotność.
-        href: /learn/sup
-      - title: SUP Konserwacja i pielęgnacja
-        desc: Wskazówki dotyczące czyszczenia, przechowywania, ochrony przed promieniowaniem UV i naprawy nadmuchiwanych desek SUP.
-        href: /v2/inflatable-sup-maintenance
-      - title: Wybór pierwszego SUP
-        desc: Przewodnik dla początkujących dotyczący wyboru odpowiedniej deski do wiosłowania na stojąco, dostosowanej do Twojej wagi, poziomu umiejętności i przeznaczenia.
-        href: /learn/sup
-  - title: Przewodnik po sprzęcie do nurkowania
-    tagline: Znajomość komercyjnej łodzi nurkowej
-    desc: Specjalistyczne przewodniki po łodziach nurkowych, RIBach nurkowych i sprzęcie dla centrów nurkowych, operatorów nurkowych i komercyjnych zespołów nurkowych.
-    guides:
-      - title: Najlepsza łódź RIB dla centrów nurkowych
-        desc: Jak wybrać odpowiednie nurkowanie RIB dla swojego centrum nurkowego – pojemność, konfiguracja i względy budżetowe.
-        href: /solutions-diving-center-boats
-      - title: Przewodnik konfiguracji nurkowania RIB
-        desc: Podstawowe funkcje nurkowych RIBów — stojaki na zbiorniki, systemy drabin, platforma nurkowa i miejsce do przechowywania sprzętu.
-        href: /solutions-diving-center-boats
-  - title: Przewodnik po przetargu na jacht
-    tagline: Rozwiązania przetargowe dla superjachtów i statków morskich
-    desc: Poradniki dotyczące wyboru idealnego jachtu — pontony nadmuchiwane, pontony RIB, rozwiązania do przechowywania i akcesoria do przetargów.
-    guides:
-      - title: Jak wybrać ofertę jachtu
-        desc: Czynniki, które należy wziąć pod uwagę przy wyborze oferty na jacht — rozmiar, materiał, silnik i miejsce do przechowywania.
-        href: /solutions-yacht-tender-solutions
-      - title: Nadmuchiwane vs RIB Przetargi
-        desc: Porównaj pontony nadmuchiwane ze sztywnymi pontonami pod względem wydajności, trwałości i możliwości przechowywania.
-        href: /compare/rib-vs-dinghy
-  - title: Przewodnik po sprzęcie ratowniczym
-    tagline: Wiedza o jednostkach pływających poszukiwawczo-ratowniczych
-    desc: Profesjonalni przewodnicy na temat łodzi ratowniczych, jednostek pływających SAR i sprzętu ratowniczego dla straży przybrzeżnej, ratowników i zespołów ratowniczych.
-    guides:
-      - title: SAR Przewodnik po wyborze łodzi
-        desc: Jak wybrać odpowiednią łódź poszukiwawczo-ratowniczą – prędkość, pojemność, trwałość i wymagania dotyczące specjalistycznego sprzętu.
-        href: /solutions-rescue-watercraft
-      - title: Reklama RIB akcji ratowniczych
-        desc: Dlaczego komercyjne RIB-y są preferowanym wyborem przez profesjonalne zespoły poszukiwawczo-ratownicze na całym świecie.
-        href: /use-cases/search-and-rescue
-read_guide: Przeczytaj poradnik →
-cta:
-  title: Nie wiesz od czego zacząć?
-  desc: Weź udział w naszym quizie oceniającym umiejętności, aby znaleźć odpowiednie przewodniki i sprzęt dla swojego poziomu.
-  label: Skontaktuj się z nami →
-  link: /contact
 
+knowledge_center_tagline: 'Knowledge Center'
+knowledge_center_title: 'Paddle Board Guides & Knowledge'
+knowledge_center_subtitle: 'Expert guides and buying advice for paddle boarders of every level.'
+
+knowledge_sections:
+  - title: 'Board Technology & Construction'
+    tagline: 'Inside Your Paddle Board'
+    desc: 'How inflatable paddle boards are built — drop-stitch cores, laminate layers, EVA decks, and factory pressure testing.'
+    guides:
+      - title: 'How Paddle Boards Are Made'
+        desc: 'From material cutting and lamination to 100% pressure testing — see how every board leaves the factory.'
+        href: '/factory/process'
+      - title: 'Drop-Stitch Core Technology'
+        desc: 'How thousands of internal threads create a rigid, high-pressure inflatable structure.'
+        href: '/learn/drop-stitch-core'
+      - title: 'Materials Reference'
+        desc: 'PVC denier ratings, fabric weights, UV resistance, and deck materials explained.'
+        href: '/learn/materials'
+      - title: 'Inflatable Board Technology'
+        desc: 'Welded seams, rail construction, and valve systems that keep your board stiff and airtight.'
+        href: '/learn/inflatable-technology'
+  - title: 'Buying Guides'
+    tagline: 'Choose the Right Board'
+    desc: 'Everything you need to pick your first — or next — inflatable SUP, from sizing to construction.'
+    guides:
+      - title: 'How to Choose an Inflatable SUP'
+        desc: "The key factors — construction, thickness, fin setup, and included accessories."
+        href: '/guides/how-to-choose-your-sup/'
+      - title: 'What Is Stand-Up Paddleboarding?'
+        desc: 'A friendly introduction to the sport, the gear, and why inflatable boards make it easy to start.'
+        href: '/guides/what-is-sup'
+      - title: 'Inflatable vs Hard Board'
+        desc: 'Compare iSUPs and hard epoxy boards across portability, durability, performance, and value.'
+        href: '/compare/inflatable-vs-hardboard'
+      - title: 'SUP Size Guide'
+        desc: 'Find the right board length, width, and volume for your weight, skill, and paddling style.'
+        href: '/size-guide'
+  - title: 'Skills & Safety'
+    tagline: 'Paddle with Confidence'
+    desc: 'Practical knowledge for every session — beginner basics, water safety, care, and repair.'
+    guides:
+      - title: "SUP Basics — Beginner's Guide"
+        desc: 'Everything a beginner needs to know — board types, paddle sizing, stance, and first-day tips.'
+        href: '/v2/beginner-sup-guide'
+      - title: 'Water Safety Essentials'
+        desc: 'Weather checks, PFD selection, leash rules, self-rescue, and group paddling best practices.'
+        href: '/learn/water-safety'
+      - title: 'SUP Maintenance & Care'
+        desc: 'Cleaning, storage, UV protection, and care tips for inflatable SUP boards.'
+        href: '/v2/inflatable-sup-maintenance'
+      - title: 'Board Repair Basics'
+        desc: 'Fix small punctures, seam leaks, and valve issues with PVC repair kits and patch techniques.'
+        href: '/v2/inflatable-sup-repair'
+
+read_guide: Read guide →
+
+cta:
+  title: Not sure where to start?
+  desc: Reach out and we'll point you to the right guides and gear for your level.
+  label: Contact us →
+  link: /contact

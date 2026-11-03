@@ -23,56 +23,38 @@ const metadata = {
 
 const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: t('solutionsByUseCase.title') }];
 
+const scenarioLinks: Record<string, string> = {
+  s1: `/${lang}/products`,
+  s2: `/${lang}/use-cases/touring-exploration`,
+  s3: `/${lang}/use-cases/sup-yoga-fitness`,
+  s4: `/${lang}/guides/sup-fishing`,
+  s5: `/${lang}/use-cases/family-recreation`,
+};
+
 const scenarios = [
   {
-    scenario: t('solutionsByUseCase.scenario1'),
-    icon: 'M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z',
-    answer: t('solutionsByUseCase.answer1'),
-    cta: { text: t('solutionsByUseCase.cta1'), link: `/${lang}/search-rescue-operations` },
-  },
-  {
-    scenario: t('solutionsByUseCase.scenario2'),
+    n: 1,
     icon: 'M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9',
-    answer: t('solutionsByUseCase.answer2'),
-    cta: { text: t('solutionsByUseCase.cta2'), link: `/${lang}/products` },
   },
+  { n: 2, icon: 'M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4' },
   {
-    scenario: t('solutionsByUseCase.scenario3'),
-    icon: 'M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z',
-    answer: t('solutionsByUseCase.answer3'),
-    cta: { text: t('solutionsByUseCase.cta3'), link: `/${lang}/oem-odm-manufacturer` },
+    n: 3,
+    icon: 'M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z',
   },
+  { n: 4, icon: 'M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4' },
   {
-    scenario: t('solutionsByUseCase.scenario4'),
-    icon: 'M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4',
-    answer: t('solutionsByUseCase.answer4'),
-    cta: { text: t('solutionsByUseCase.cta4'), link: `/${lang}/oem-odm-manufacturer` },
-  },
-  {
-    scenario: t('solutionsByUseCase.scenario5'),
-    icon: 'M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 12.5V17a2 2 0 01-2 2H6a2 2 0 01-2-2V9a2 2 0 012-2h3.5a2 2 0 012 2v.5',
-    answer: t('solutionsByUseCase.answer5'),
-    cta: { text: t('solutionsByUseCase.cta5'), link: `/${lang}/disaster-relief-humanitarian-aid` },
-  },
-  {
-    scenario: t('solutionsByUseCase.scenario6'),
-    icon: 'M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z',
-    answer: t('solutionsByUseCase.answer6'),
-    cta: { text: t('solutionsByUseCase.cta6'), link: `/${lang}/commercial-workboats` },
-  },
-  {
-    scenario: t('solutionsByUseCase.scenario7'),
-    icon: 'M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4',
-    answer: t('solutionsByUseCase.answer7'),
-    cta: { text: t('solutionsByUseCase.cta7'), link: `/${lang}/design-powerhouse` },
-  },
-  {
-    scenario: t('solutionsByUseCase.scenario8'),
+    n: 5,
     icon: 'M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6',
-    answer: t('solutionsByUseCase.answer8'),
-    cta: { text: t('solutionsByUseCase.cta8'), link: `/${lang}/products` },
   },
-];
+].map((sc) => ({
+  scenario: t(`solutionsByUseCase.scenario${sc.n}`),
+  answer: t(`solutionsByUseCase.answer${sc.n}`),
+  cta: {
+    text: t(`solutionsByUseCase.cta${sc.n}`),
+    link: scenarioLinks[`s${sc.n}`],
+  },
+  icon: sc.icon,
+}));
 
 const faqSchema = JSON.stringify({
   '@context': 'https://schema.org',
@@ -83,7 +65,7 @@ const faqSchema = JSON.stringify({
       name: 'What use cases does Paddle Board Overstock support?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Rental fleets, resort recreation, professional patrol, fishing, diving, aquaculture, research, offshore, and disaster relief.',
+        text: 'Beginner paddling, touring and exploration, SUP yoga and fitness, SUP fishing, and family recreation.',
       },
     },
     {
@@ -91,15 +73,15 @@ const faqSchema = JSON.stringify({
       name: 'Can I get a use-case recommendation?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Share your application and requirements, and our engineering team recommends the best product configuration.',
+        text: 'Yes. Use the scenarios on this page to find the right board for how you paddle, or ask our AI Answer Center.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Are products available for testing?',
+      name: 'Is everything included with each board?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Pre-production samples with your branding in 15-20 days. Sample cost credited toward production orders.',
+        text: 'Yes. Every board ships as a complete package with pump, paddle, leash, and backpack.',
       },
     },
   ],
@@ -186,22 +168,11 @@ const faqSchema = JSON.stringify({
     subtitle={t('solutionsByUseCase.relatedSub')}
     links={[
       {
-        title: t('solutionsByUseCase.rel1'),
-        description: t('solutionsByUseCase.rel1desc'),
-        href: `/${lang}/solutions/by-industry`,
-        label: t('solutionsByUseCase.rel1label'),
-      },
-      {
-        title: t('solutionsByUseCase.rel2'),
-        description: t('solutionsByUseCase.rel2desc'),
-        href: `/${lang}/commercial-workboats`,
-        label: t('solutionsByUseCase.rel2label'),
-      },
-      {
-        title: t('solutionsByUseCase.rel3'),
-        description: t('solutionsByUseCase.rel3desc'),
-        href: `/${lang}/oem-odm-manufacturer`,
-        label: t('solutionsByUseCase.rel3label'),
+        title: t('solutionsByUseCase.rel3') || 'Product Catalog',
+        description:
+          t('solutionsByUseCase.rel3desc') || 'Browse the full range of inflatable SUP boards and accessories.',
+        href: `/${lang}/products`,
+        label: t('solutionsByUseCase.rel3label') || 'Shop',
       },
       {
         title: t('solutionsByUseCase.rel4'),
@@ -213,7 +184,12 @@ const faqSchema = JSON.stringify({
   />
 
   <section class="sr-only" data-ai-block="definition" aria-hidden="true">
-    <p>{t('solutionsByUseCase.aiBlock')}</p>
+    <p>
+      {
+        t('solutionsByUseCase.aiBlock') ||
+          'Use case guide for Paddle Board Overstock inflatable SUP boards. Five scenarios with recommended boards: beginner paddling (stable All-Around boards with complete packages), touring and exploration (streamlined Touring series), SUP yoga and fitness (wide Flowing Lotus platform), SUP fishing (stable Explorer 11 with gear mounts), and family recreation (high-capacity boards with size guide matching).'
+      }
+    </p>
   </section>
   <script is:inline type="application/ld+json" set:html={faqSchema} />
 </Layout>

@@ -23,7 +23,6 @@ setPageContentData(__pageData);
 const page = getPageContent(lang, 'quality') || {};
 const hero = page.hero || {};
 const trustBar = page.trust_bar || {};
-const badges = page.badges || [];
 const testimonial = page.testimonial || {};
 const tests = page.tests || [];
 const commitment = page.commitment || {};
@@ -32,10 +31,10 @@ const testingSection = page.testing_section || {};
 const interp = (s: any) => (typeof s === 'string' ? s.replace(/\{SITE\}/g, SITE.name) : s);
 
 const metadata = {
-  title: localizePageTitle(page, `Quality Testing & Assurance — ISO & ASTM Certified — ${SITE.name}`),
+  title: localizePageTitle(page, `Quality Testing & Assurance — ${SITE.name}`),
   description: localizePageDescription(
     page,
-    `${SITE.name}'s quality testing program: 8 protocols including pressure, UV (ASTM G154), abrasion (ASTM D751), buoyancy (ISO 6185), and watertightness testing. ISO 9001 certified. Every inflatable boat and SUP verified before shipping.`
+    `${SITE.name}'s quality testing program: 8 protocols including pressure, UV, abrasion, buoyancy, and watertightness testing. 99.3% defect-free rate. Every inflatable SUP board verified before shipping.`
   ),
   ignoreTitleTemplate: true,
 };
@@ -44,14 +43,13 @@ const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: he
 const siteUrl = 'https://paddleboardoverstock.com';
 
 const tldrSummary =
-  'Paddle Board Overstock operates an 8-protocol quality testing program covering pressure, impact, UV (ASTM G154), abrasion (ASTM D751), low-temperature, buoyancy (ISO 6185), maneuverability, and watertightness. ISO 9001:2015 certified. 99.3% defect-free rate per AQL 2.5 / ISO 2859.';
+  'Paddle Board Overstock operates an 8-protocol quality testing program covering pressure, impact, UV, abrasion, low-temperature, buoyancy, maneuverability, and watertightness. 99.3% defect-free rate across trailing 12-month shipments.';
 
 const tldrPoints = [
-  '8 testing protocols: pressure, impact, UV (ASTM G154), abrasion (ASTM D751), low-temperature, buoyancy (ISO 6185), maneuverability, and watertightness',
-  'ISO 9001:2015 quality management system certified by SGS',
-  '99.3% defect-free rate measured per AQL 2.5 / ISO 2859 sampling',
+  '8 testing protocols: pressure, impact, UV, abrasion, low-temperature, buoyancy, maneuverability, and watertightness',
+  '99.3% defect-free rate across trailing 12-month shipments',
   'Every unit undergoes 24-48h hold at 1.25x rated pressure with max 5% drop tolerance',
-  'ASTM G154 UV accelerated weathering and ASTM D751 coating abrasion resistance testing',
+  'UV accelerated weathering (1,000+ hours) and coating abrasion resistance testing',
 ];
 
 const directAnswerHtml =
@@ -68,15 +66,7 @@ const faqSchema = JSON.stringify({
       name: 'What quality testing does Paddle Board Overstock perform?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '8-protocol testing: pressure, impact, UV (ASTM G154), abrasion (ASTM D751), low-temperature, buoyancy (ISO 6185), maneuverability, and watertightness.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Is Paddle Board Overstock ISO 9001 certified?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. ISO 9001:2015 quality management system certified by SGS.',
+        text: '8-protocol testing: pressure, impact, UV, abrasion, low-temperature, buoyancy, maneuverability, and watertightness.',
       },
     },
     {
@@ -84,7 +74,7 @@ const faqSchema = JSON.stringify({
       name: 'What is the defect-free rate?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '99.3% defect-free rate measured per AQL 2.5 / ISO 2859 sampling.',
+        text: '99.3% defect-free rate across trailing 12-month shipments.',
       },
     },
     {
@@ -95,14 +85,6 @@ const faqSchema = JSON.stringify({
         text: 'Every unit undergoes 24-48h hold at 1.25x rated pressure with max 5% drop tolerance.',
       },
     },
-    {
-      '@type': 'Question',
-      name: 'What standards are followed for UV and abrasion testing?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'ASTM G154 for UV accelerated weathering, ASTM D751 for coating abrasion resistance.',
-      },
-    },
   ],
 });
 ---
@@ -111,9 +93,9 @@ const faqSchema = JSON.stringify({
   <JsonLd
     type="Article"
     article={{
-      headline: 'Quality Testing & Assurance — ISO & ASTM Certified Testing Program',
+      headline: 'Quality Testing & Assurance — 8-Protocol Factory Testing Program',
       description:
-        "Paddle Board Overstock's 8-protocol quality testing program: pressure, impact, UV (ASTM G154), abrasion (ASTM D751), low-temp, buoyancy (ISO 6185), maneuverability, and watertightness testing. ISO 9001 certified quality management.",
+        "Paddle Board Overstock's 8-protocol quality testing program: pressure, impact, UV, abrasion, low-temp, buoyancy, maneuverability, and watertightness testing. 99.3% defect-free rate across trailing 12-month shipments.",
       datePublished: '2026-07-07',
     }}
     data={{ url: `${siteUrl}/quality` }}
@@ -149,33 +131,13 @@ const faqSchema = JSON.stringify({
     )
   }
 
-  {
-    badges.length > 0 && (
-      <section class="px-6 py-8 mx-auto max-w-5xl">
-        <div class="flex flex-wrap justify-center gap-3">
-          {badges.map((b: any) => (
-            <a
-              href={lh(b.url)}
-              class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-medium text-gray-700 hover:border-sky-300 hover:text-sky-600 transition-colors shadow-sm"
-            >
-              <span class="w-2 h-2 rounded-full bg-[#06b6d4]" />
-              {b.name}
-              <span class="text-gray-400">&mdash;</span>
-              <span class="text-gray-500 font-normal">{b.body}</span>
-            </a>
-          ))}
-        </div>
-      </section>
-    )
-  }
-
   <section class="px-6 sm:px-6 py-16 mx-auto max-w-6xl">
     <div class="text-center mb-12">
       <p class="text-sm font-semibold text-[#06b6d4] uppercase tracking-wider">{testingSection.tagline}</p>
       <h2 class="mt-2 text-3xl font-bold text-gray-900">{testingSection.title}</h2>
       <p class="mt-3 text-gray-500 max-w-2xl mx-auto">
-        Each test follows documented internal protocols aligned with international standards. Test results are recorded,
-        traceable, and reviewed by our independent quality lab.
+        Each test follows documented internal protocols. Test results are recorded, traceable, and reviewed by our
+        independent quality lab.
       </p>
     </div>
     <div class="space-y-8">
@@ -233,7 +195,7 @@ const faqSchema = JSON.stringify({
                   shipped without signed quality release.
                 </p>
                 <a href={lh('/trust')} class="mt-3 inline-flex text-sm font-medium text-[#06b6d4] hover:text-sky-700">
-                  See our trust certifications &rarr;
+                  See trust &amp; proof &rarr;
                 </a>
               </div>
             </div>
@@ -270,17 +232,12 @@ const faqSchema = JSON.stringify({
       <a
         href={lh('/trust')}
         class="px-3 py-1.5 bg-white rounded-lg border border-gray-200 text-gray-700 hover:border-sky-300 hover:text-sky-600 transition-colors"
-        >Certifications &amp; Trust &rarr;</a
+        >Trust &amp; Proof &rarr;</a
       >
       <a
         href={lh('/engineering-team')}
         class="px-3 py-1.5 bg-white rounded-lg border border-gray-200 text-gray-700 hover:border-sky-300 hover:text-sky-600 transition-colors"
         >Engineering Team &rarr;</a
-      >
-      <a
-        href={lh('/randdcenter')}
-        class="px-3 py-1.5 bg-white rounded-lg border border-gray-200 text-gray-700 hover:border-sky-300 hover:text-sky-600 transition-colors"
-        >R&amp;D Center &rarr;</a
       >
       <a
         href={lh('/warranty')}

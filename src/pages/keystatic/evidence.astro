@@ -130,17 +130,6 @@ if (token) {
     </div>
 
     <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-5 space-y-4">
-      <h2 class="text-base font-semibold">Certifications (raw YAML)</h2>
-      <p class="text-xs text-gray-500">Array of objects with name, body, desc</p>
-      <textarea
-        name="certifications_raw"
-        rows="8"
-        class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
-        >{data.certifications ? JSON.stringify(data.certifications, null, 2) : '[]'}</textarea
-      >
-    </div>
-
-    <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-5 space-y-4">
       <h2 class="text-base font-semibold">Test Results (raw YAML)</h2>
       <p class="text-xs text-gray-500">Array of objects with metric, value, detail</p>
       <textarea
@@ -222,7 +211,6 @@ if (token) {
           heading: fd.get('heading')?.toString().trim() || '',
           description: fd.get('description')?.toString().trim() || '',
           case_studies: parseRaw('case_studies_raw'),
-          certifications: parseRaw('certifications_raw'),
           test_results: parseRaw('test_results_raw'),
           spec_sheets: parseRaw('spec_sheets_raw'),
           deployment_photos: parseRaw('deployment_photos_raw'),

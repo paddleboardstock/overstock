@@ -1,48 +1,45 @@
 hero:
-  tagline: Prozess
-  title: Fertigungsprozess
-  subtitle: Vom Rohmaterial zum seereifen Boot – jeder Schritt unter unserer Kontrolle
-  back_label: Zurück zur Fabrik
+  tagline: Process
+  title: Manufacturing Process
+  subtitle: From raw material to sea-ready board — every step under our control
+  back_label: Back to Factory
   back_link: /factory
-
-intro: Anders als Marken, die ihre Produktion an Drittfabriken auslagern, besitzt und betreibt Paddle Board Overstock seine gesamte Fertigungskette. Diese vertikale Integration ermöglicht es uns, strenge Qualitätskontrollen in jeder Phase aufrechtzuerhalten, schnell auf kundenspezifische Anforderungen zu reagieren und Charge für Charge gleichbleibende Produktqualität zu liefern. So wird ein Boot in unserer Anlage gebaut.
-
+intro: Unlike brands that outsource production to third-party factories, Paddle Board Overstock owns and operates its entire manufacturing chain. This vertical integration allows us to maintain strict quality control at every stage and deliver consistent product quality batch after batch. Here is how a board is built in our facility.
 steps:
-  - step: '01'
-    title: Materialeingang & Prüfung
-    description: Jede eingehende Charge von PVC-Gewebe, Glasfasermatte, Harz und Hardware wird spezifikationsgemäß geprüft. Gewebeproben werden vor der Freigabe zur Produktion auf Zugfestigkeit, Dickengleichmäßigkeit und UV-Beständigkeit getestet. Nicht konforme Materialien werden gesperrt und zurückgesandt.
-    duration: 1–2 Tage
-  - step: '02'
-    title: Automatisches PVC-Schneiden
-    description: Zugelassene Gewebe werden auf die automatische CNC-Schneidemaschine gelegt und mit submillimetergenauer Präzision geschnitten. Computergestützte optimierte Verschachtelung ordnet die Bahnen so an, dass der Abfall typischerweise unter 5 % bleibt. Die geschnittenen Bahnen werden nach Bootsmodell und Kammer beschriftet und gebündelt an die Schweißwerkstatt übergeben.
-    duration: 2–4 Stunden pro Boots-Bausatz
-  - step: '03'
-    title: Schlauch-Heißsiegeln & Schweißen
-    description: Die Bahnen werden mit Heißsiegelmaschinen durch Heißluftschweißen bei kontrollierten Temperaturen von 200–600 °C geheftet und verbunden. Hauptnähte werden mittels HF-Dielektrikumsschweißen für luftdichte, hochfeste Verbindungen verstärkt. Fertige Kammern werden für 30 Minuten auf 1,25-fachen Arbeitsdruck zur Luftdichtigkeitsvalidierung aufgeblasen.
-    duration: 1–2 Tage pro Boot
-  - step: '04'
-    title: GFK-RIB-Rumpfformung
-    description: RIB-Bootsrümpfe werden im Handlaminier-GFK-Verfahren hergestellt. Schichten von Glasfasermatte und -gewebe werden von Hand mit Polyester- oder Vinylesterharz in Präzisionsformen gewalzt. Jede Schicht wird für eine gleichbleibende Laminatqualität vakuumiert. Der Rumpf erhält eine Gelcoatschicht für eine hochglänzende, UV-beständige Marineoberfläche.
-    duration: 2–4 Tage pro Rumpf
-  - step: '05'
-    title: SUP-Druck & Dekoration
-    description: SUP-Brett-Deckgrafiken werden mittels Digitaldruck für vollfarbige fotorealistische Designs und Siebdruck für haltbare Logos und sich wiederholende Muster aufgebracht. Die Drucke werden für UV- und Abriebbeständigkeit ausgehärtet und versiegelt.
-    duration: 1–2 Tage
-  - step: '06'
-    title: Endmontage & Rigging
-    description: GFK-Rümpfe und PVC-Schlauchbaugruppen werden auf der Montagelinie zusammengeführt. Der Motor wird montiert, Lenk- und Gashebelsteuerungen werden angeschlossen, das Kraftstoffsystem wird installiert und der gesamte elektrische Kabelbaum wird verdrahtet. Jedes Boot durchläuft eine 100-Punkte-Montage-Checkliste mit obligatorischer Freigabe in jeder Phase.
-    duration: 2–3 Tage
-  - step: '07'
-    title: Qualitätsprüfung & Inspektion
-    description: 'Jedes fertige Boot durchläuft eine obligatorische Qualitätskontrolle: Kammer-Luftdichtheitstest, Systemfunktionsprüfung, Drehmomentprüfung der Befestigungselemente und kosmetische Inspektion. Kundenspezifische und Prototypenbauten durchlaufen zusätzlich Wassererprobungen zu Geschwindigkeit, Handhabung, Stabilität und Ausdauer.'
-    duration: 1–2 Tage
-  - step: '08'
-    title: Verpackung & Versand
-    description: Die Boote werden entlüftet, verfahrensgemäß gefaltet, in robuste Textiltaschen oder Sperrholzkisten verpackt und für den Versand verladen. Jede Verpackung ist mit Modell, Seriennummer und Zielort gekennzeichnet. Wir koordinieren mit Spediteuren für FCL- und LCL-Containerlieferungen weltweit.
-    duration: 1 Tag
-
+  - step: "01"
+    title: Material Receipt & Inspection
+    description: Every incoming batch of PVC fabric, drop-stitch core, EVA foam, and hardware is inspected against specification. Fabric samples are tested for tensile strength, thickness uniformity, and UV resistance before release to production. Non-conforming materials are quarantined and returned.
+    duration: 1–2 days
+  - step: "02"
+    title: Automatic PVC Cutting
+    description: Approved fabrics are laid on the automatic CNC cutting machine and cut with sub-millimetre accuracy. Computer-optimised nesting arranges panels to minimise waste — typically below 5%. Cut panels are labelled by board model and chamber, then bundled for transfer to the welding workshop.
+    duration: 2–4 hours per board kit
+  - step: "03"
+    title: Tube Heat Sealing & Welding
+    description: Panels are tacked and bonded using heat sealing machines with hot-air welding at controlled temperatures of 200–600 °C. Main seams are reinforced with RF dielectric welding for airtight, high-strength joints. Completed chambers are inflated to 1.25× working pressure for 30-minute air-retention validation.
+    duration: 1–2 days per board
+  - step: "04"
+    title: Deck Art & EVA Finishing
+    description: "Art-series decks take shape here: precision-cut EVA foam panels are laid into full-deck patterns, bonded, and trimmed by hand. Grippy, comfortable, and durable — the signature look of every art-series board."
+    duration: 1–2 days
+  - step: "05"
+    title: SUP Printing & Decoration
+    description: SUP board deck graphics are applied using digital printing for full-colour photo-quality designs, and screen printing for durable logos and repeating patterns. Prints are cured and sealed for UV and abrasion resistance.
+    duration: 1–2 days
+  - step: "06"
+    title: Final Assembly & Rigging
+    description: "Boards receive their final components: valves are torqued and function-tested, D-rings, handles, and fin boxes are fitted, and the leash attachment is secured. Each board follows a 100-point assembly checklist with mandatory sign-off at each stage."
+    duration: 2–3 days
+  - step: "07"
+    title: Quality Testing & Inspection
+    description: "Every completed board undergoes mandatory quality gate: chamber air-retention test, systems function check, fastener torque verification, and cosmetic inspection. Custom and prototype builds also receive in-water sea trials covering speed, handling, stability, and endurance."
+    duration: 1–2 days
+  - step: "08"
+    title: Packing & Shipping
+    description: Boards are deflated, rolled, and packed in travel backpacks with pump, paddle, fin, leash, and repair kit, then boxed for courier and freight shipping. Each package is labelled with model, serial number, and destination. We ship to 50+ countries worldwide.
+    duration: 1 day
 cta:
-  title: Sehen Sie unsere Ausrüstung und Maschinen
-  desc: Entdecken Sie die industriellen Maschinen hinter jedem Paddle Board Overstock-Boot.
-  label: Ausrüstung anzeigen →
+  title: See our equipment and machinery
+  desc: Explore the industrial-grade equipment behind every Paddle Board Overstock board.
+  label: View equipment →
   link: /factory/equipment

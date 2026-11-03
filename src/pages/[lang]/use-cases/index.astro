@@ -9,13 +9,6 @@ const PAGE_META: Record<string, { title: string }> = {
   ru: { title: 'Сценарии использования и области применения' },
   pl: { title: 'Przypadki użycia i zastosowania' },
   nl: { title: 'Use cases en toepassingen' },
-  sv: { title: 'Användningsfall och tillämpningar' },
-  no: { title: 'Bruksområder og anvendelser' },
-  el: { title: 'Περιπτώσεις χρήσης και εφαρμογές' },
-  fi: { title: 'Käyttötapaukset ja sovellukset' },
-  da: { title: 'Brugsscenarier og anvendelser' },
-  cs: { title: 'Případy použití a oblasti použití' },
-  ja: { title: 'ユースケースと応用分野' },
 };
 export const prerender = true;
 
@@ -36,14 +29,7 @@ const t = (key: string) => getUiForLang(lang || defaultLang)?.[key] || '';
 const d = pageContentData[`${lang}/site-use-cases`] || pageContentData['en/site-use-cases'] || {};
 const yamlCases: any[] = d.cases ?? [];
 
-const staticUseCases = [
-  { id: 'tourism-recreation', title: t('useCase.tourismRecreation'), desc: t('useCase.tourismRecreation.desc') },
-  { id: 'search-and-rescue', title: t('useCase.searchAndRescue'), desc: t('useCase.searchAndRescue.desc') },
-  { id: 'maritime-safety-defense', title: t('useCase.maritimeSafety'), desc: t('useCase.maritimeSafety.desc') },
-  { id: 'fishing', title: t('useCase.fishing'), desc: t('useCase.fishing.desc') },
-  { id: 'disaster-relief', title: t('useCase.disasterRelief'), desc: t('useCase.disasterRelief.desc') },
-  { id: 'commercial-workboats', title: t('useCase.commercialWorkboats'), desc: t('useCase.commercialWorkboats.desc') },
-];
+const staticUseCases = [{ id: 'fishing', title: t('useCase.fishing'), desc: t('useCase.fishing.desc') }];
 
 const allUseCases = [
   ...yamlCases.map((c: any) => ({
@@ -55,17 +41,7 @@ const allUseCases = [
   ...staticUseCases.map((s) => ({
     ...s,
     image:
-      s.id === 'tourism-recreation'
-        ? 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/use-cases/paddleboardoverstock-professional-use-case.webp'
-        : s.id === 'search-and-rescue'
-          ? 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/categories/paddleboardoverstock-rescue-operations.webp'
-          : s.id === 'maritime-safety-defense'
-            ? 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/paddleboardoverstock-rib-600.webp'
-            : s.id === 'fishing'
-              ? 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/paddleboardoverstock-inflatable-boat.webp'
-              : s.id === 'disaster-relief'
-                ? 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/paddleboardoverstock-rib-330-boat.webp'
-                : 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/factory/paddleboardoverstock-stock-boat-inventory.webp',
+      'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-dolphin-wave-1.webp',
   })),
 ];
 

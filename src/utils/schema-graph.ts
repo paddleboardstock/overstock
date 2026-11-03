@@ -6,9 +6,7 @@
  *     Organization 与 ManufacturingBusiness 描述同一实体却各写一套（后者 34KB），
  *     Brand 出现在 block5 和 block6 两处，slogan 两块给的值还不一样。
  *     实体被拆成互不相认的碎片，Google 与 AI 引擎都难以合并成一个知识实体。
- *  2. knowsAbout 里有两条被字符串管道破坏的值：
- *       " certified manufacturing"（ISO 9001 丢了）
- *       "CE  inflatable boat compliance"（中间标准号丢了）
+ *  2. knowsAbout 里有两条被字符串管道破坏的值（标准号 token 丢失），
  *     与 P0 的箭头污染是同一类根因：替换脚本吃掉了 token。
  *  3. /products/ /supboard/ /compare/ /testimonials/ 等列表页完全没有
  *     ItemList / CollectionPage / BreadcrumbList，只继承了全局 Organization。
@@ -101,15 +99,6 @@ export function organizationNode() {
       facts.social.facebook,
     ].filter(Boolean),
 
-    // 认证是工厂品牌最硬的信任信号，原来只在正文里写，没有机器可读版本
-    hasCredential: facts.certifications.map((c) => ({
-      '@type': 'EducationalOccupationalCredential',
-      credentialCategory: 'certification',
-      name: c.name,
-      ...(c.body ? { recognizedBy: { '@type': 'Organization', name: c.body } } : {}),
-      ...(c.since ? { validFrom: String(c.since) } : {}),
-    })),
-
     // 修掉被字符串管道破坏的两条，并补全标准号
     knowsAbout: [
       'Inflatable SUP board overstock and clearance',
@@ -120,7 +109,7 @@ export function organizationNode() {
       'Worldwide e-commerce fulfillment',
       'Stripe and PayPal secure checkout',
       'SUP quality testing and 1.25x pressure validation',
-      'CE-compliant inflatable SUP boards',
+      'Inflatable SUP boards',
       'Worldwide shipping from Weihai, China',
     ],
 

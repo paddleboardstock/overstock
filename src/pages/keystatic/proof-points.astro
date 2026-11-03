@@ -21,22 +21,27 @@ interface PointEntry {
 const defaultPoints: PointEntry[] = [
   {
     id: 'products',
-    metric: '64',
-    label: 'CE-certified models across 5 categories',
-    detail: 'RIB, Inflatable Boat, SUP Board, Safety Equipment, Accessory',
+    metric: '11',
+    label: 'SUP models in stock',
+    detail: 'Complete paddle board packages with pump, paddle, leash, and backpack',
   },
   {
     id: 'countries',
     metric: '50+',
     label: 'countries served',
-    detail: 'Global distribution network across EU, US, ASIA',
+    detail: 'EU, North America, Asia-Pacific, Middle East, Africa',
   },
-  { id: 'founded', metric: '2012', label: 'founded', detail: 'Over a decade of water sports manufacturing' },
   {
-    id: 'certified',
-    metric: 'ISO',
-    label: 'CE certified per applicable EU directives',
-    detail: 'Every product meets international safety standards',
+    id: 'discount',
+    metric: '60%',
+    label: 'off retail',
+    detail: 'Factory-direct overstock and clearance pricing on complete SUP packages',
+  },
+  {
+    id: 'warranty',
+    metric: '2-Year',
+    label: 'SUP warranty',
+    detail: 'Covers boards, drop-stitch seams, inflation valves, and accessories',
   },
 ];
 
@@ -146,7 +151,7 @@ if (token) {
                 type="text"
                 name={'p' + i + '.label'}
                 value={p.label}
-                placeholder="CE-certified models across 5 categories"
+                placeholder="SUP models in stock"
                 class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
               />
             </div>
@@ -156,7 +161,7 @@ if (token) {
                 type="text"
                 name={'p' + i + '.detail'}
                 value={p.detail}
-                placeholder="SUP, Kayak, Dinghy, RIB, Safety, Accessory"
+                placeholder="Touring, All-Around, Yoga, Fishing, Racing"
                 class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
               />
             </div>

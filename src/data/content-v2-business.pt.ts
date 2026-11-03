@@ -81,7 +81,6 @@ export const businessArticles: ContentV2Record[] = [
     ],
     "relatedProducts": [
       "sup-explorer-11",
-      "life-vest-pro"
     ],
     "difficulty": "intermediate"
   },
@@ -149,7 +148,6 @@ export const businessArticles: ContentV2Record[] = [
     ],
     "relatedProducts": [
       "sup-explorer-11",
-      "life-vest-pro"
     ],
     "difficulty": "beginner"
   },
@@ -203,7 +201,7 @@ export const businessArticles: ContentV2Record[] = [
       },
       {
         "q": "Eu preciso lidar com a alfândega de importação e a logística?",
-        "a": "Paddle Board Overstock oferece FOB Qingdao (você organiza o envio) ou CIF entrega (frete incluído até seu porto). Também podemos recomendar despachantes que cuidam da liberação alfandegária e da entrega final."
+        "a": "Paddle Board Overstock oferece FOB Weihai (você organiza o envio) ou CIF entrega (frete incluído até seu porto). Também podemos recomendar despachantes que cuidam da liberação alfandegária e da entrega final."
       },
       {
         "q": "Como faço para garantir a qualidade do produto?",
@@ -220,7 +218,6 @@ export const businessArticles: ContentV2Record[] = [
     ],
     "relatedProducts": [
       "sup-explorer-11",
-      "life-vest-classic"
     ],
     "difficulty": "intermediate"
   },
@@ -256,8 +253,6 @@ export const businessArticles: ContentV2Record[] = [
     ],
     "relatedProducts": [
       "sup-explorer-11",
-      "life-vest-pro",
-      "life-vest-classic"
     ],
     "difficulty": "beginner"
   },
@@ -293,7 +288,6 @@ export const businessArticles: ContentV2Record[] = [
     ],
     "relatedProducts": [
       "sup-explorer-11",
-      "life-vest-pro"
     ],
     "difficulty": "intermediate"
   },
@@ -329,7 +323,6 @@ export const businessArticles: ContentV2Record[] = [
     ],
     "relatedProducts": [
       "sup-explorer-11",
-      "life-vest-pro"
     ],
     "difficulty": "intermediate"
   },
@@ -361,7 +354,6 @@ export const businessArticles: ContentV2Record[] = [
     ],
     "relatedProducts": [
       "sup-explorer-11",
-      "life-vest-classic"
     ],
     "difficulty": "beginner"
   },
@@ -397,7 +389,6 @@ export const businessArticles: ContentV2Record[] = [
     ],
     "relatedProducts": [
       "sup-explorer-11",
-      "life-vest-pro"
     ],
     "difficulty": "beginner"
   }

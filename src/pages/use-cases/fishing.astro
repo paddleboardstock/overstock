@@ -15,10 +15,10 @@ const graphJsonLd = fishingNode
       '@context': 'https://schema.org',
       '@graph': [
         articleSchema({
-          headline: page.seo?.headline || 'Fishing from an Inflatable SUP or Kayak: Complete Guide',
+          headline: page.seo?.headline || 'Fishing from an Inflatable SUP: Complete Guide',
           description:
             page.seo?.description ||
-            'Learn why inflatable paddle boards and kayaks are excellent fishing platforms — stability, portability, gear compatibility, and recommended board types.',
+            'Learn why inflatable paddle boards are excellent fishing platforms — stability, portability, gear compatibility, and recommended board types.',
           datePublished: page.seo?.datePublished || '2024-03-01',
           dateModified: page.seo?.dateModified || '2026-06-01',
           author: 'Paddle Board Overstock',
@@ -36,10 +36,10 @@ const graphJsonLd = fishingNode
   : null;
 
 const metadata = {
-  title: page.seo?.headline || 'Fishing from an Inflatable SUP or Kayak: Complete Guide',
+  title: page.seo?.headline || 'Fishing from an Inflatable SUP: Complete Guide',
   description:
     page.seo?.description ||
-    'Learn why inflatable paddle boards and kayaks are excellent fishing platforms — stability, portability, gear compatibility, and recommended board types.',
+    'Learn why inflatable paddle boards are excellent fishing platforms — stability, portability, gear compatibility, and recommended board types.',
 };
 ---
 
@@ -54,12 +54,12 @@ const metadata = {
   <section class="mx-auto max-w-4xl px-6 py-16">
     <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">{page.label || 'Use Case'}</span>
     <h1 class="font-semibold text-gray-900 dark:text-gray-100 mt-4 text-4xl">
-      {page.headline || 'Fishing from an Inflatable SUP or Kayak'}
+      {page.headline || 'Fishing from an Inflatable SUP'}
     </h1>
     <p class="text-lg text-gray-500 dark:text-gray-400 mt-3">
       {
         page.subtitle ||
-          'Why inflatable watercraft are becoming the go-to choice for anglers who want quiet, shallow-water access to the best fishing spots.'
+          'Why inflatable paddle boards are becoming the go-to choice for anglers who want quiet, shallow-water access to the best fishing spots.'
       }
     </p>
 

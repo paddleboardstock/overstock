@@ -65,16 +65,16 @@ export interface EngineStatus {
 
 export const BRAND: BrandIdentity = {
   name: 'Paddle Board Overstock',
-  tagline: 'Inflatable Watercraft Manufacturer — OEM/ODM Factory',
-  taglineShort: 'Inflatable Watercraft Factory',
+  tagline: 'Factory-Direct Inflatable SUP Boards',
+  taglineShort: 'Inflatable SUP Factory',
   description:
-    'China-based manufacturer of CE-certified inflatable boats, SUPs, kayaks, RIBs, and marine safety equipment since 2012.',
+    'Factory-direct inflatable SUP boards — designed, pressure-tested, and shipped from our Weihai facility to paddlers in 50+ countries since 2012.',
   foundingYear: 2012,
-  categories: ['Inflatable Boats', 'SUPs', 'Kayaks', 'RIBs', 'Marine Safety'],
+  categories: ['Inflatable SUPs', 'Paddles & Accessories'],
   ethos: [
-    'Factory-direct — every product manufactured in our 12,000 m² facility',
-    'Quality-certified — ISO 9001 & CE compliant production lines',
-    'B2B-focused — OEM/ODM, private label, and bulk wholesale partner',
+    'Factory-direct — every board manufactured in our 12,000 m² facility',
+    'Quality-first — 100% of boards pressure-tested at 1.25x rated pressure for 24-48 hours',
+    '2-Year SUP Warranty — 99.3% of boards delivered defect-free',
   ],
   colors: { primary: '#003355', accent: '#0ea5e9' },
   cta: { text: 'Explore our factory', link: '/factory' },
@@ -83,36 +83,36 @@ export const BRAND: BrandIdentity = {
       locale: 'en',
       name: 'Global',
       flag: '🌐',
-      keywords: ['inflatable boat manufacturer', 'OEM ODM', 'marine factory'],
+      keywords: ['inflatable SUP', 'paddle board', 'SUP factory'],
       sitemapPriority: 1.0,
     },
     {
       locale: 'fr',
       name: 'France',
       flag: '🇫🇷',
-      keywords: ['fabricant bateaux gonflables', 'OEM', 'marine'],
+      keywords: ['paddle gonflable', 'SUP', 'paddle board'],
       sitemapPriority: 0.7,
     },
     {
       locale: 'es',
       name: 'Spain',
       flag: '🇪🇸',
-      keywords: ['fabricante barcos inflables', 'OEM', 'marino'],
+      keywords: ['sup hinchable', 'paddle surf', 'paddle board'],
       sitemapPriority: 0.7,
     },
   ],
   brandStory:
-    'Founded in 2012 in Qingdao, China, Paddle Board Overstock began as a specialized inflatable watercraft workshop serving local marine operators. Over a decade of engineering refinement, we grew into a 12,000 m² facility producing CE-certified SUPs, kayaks, RIBs, dinghies, and marine safety equipment for 50+ countries. Our R&D center drives innovation in drop-stitch construction, PVC/Hypalon formulation, and hydrodynamic hull design — bridging the gap between custom OEM manufacturing and commercial-grade reliability.',
+    'Founded in 2012 in Weihai, China, Paddle Board Overstock began as a small inflatable craft workshop serving local paddlers and rental operators. Over a decade of engineering refinement, we grew into a 12,000 m² facility producing drop-stitch inflatable SUP boards for paddlers in 50+ countries. Our in-house team drives innovation in drop-stitch construction, PVC formulation, and hydrodynamic hull design — so every board we ship is light, rigid, and built to last.',
   milestones: [
     {
       year: 2012,
       event: 'Founded',
-      description: 'Workshop established in Qingdao focusing on inflatable boat repair and custom fabrication.',
+      description: 'Workshop established in Weihai focusing on inflatable craft repair and custom fabrication.',
     },
     {
       year: 2015,
       event: 'First Export',
-      description: 'Initial export orders to Japan and Korea. CE certification achieved for core product lines.',
+      description: 'Initial export orders to Japan and Korea, expanding beyond the domestic market.',
     },
     {
       year: 2018,
@@ -127,43 +127,37 @@ export const BRAND: BrandIdentity = {
     },
     {
       year: 2022,
-      event: 'ISO 9001 & Global Growth',
-      description: 'ISO 9001:2015 certification (SGS). Expanded to 14 R&D engineers and 200+ workers.',
+      event: 'Quality Systems & Global Growth',
+      description:
+        'Formalized quality management across design, production, and after-sales. Expanded to 14 R&D engineers and 200+ workers.',
     },
     {
       year: 2024,
       event: 'Global Reach',
-      description:
-        'Supplying 50+ countries. OEM/ODM partnerships with brands across Europe, Americas, and Asia-Pacific.',
+      description: 'Shipping to paddlers in 50+ countries across Europe, the Americas, and Asia-Pacific.',
     },
     {
       year: 2025,
       event: 'Design Powerhouse',
       description:
-        'Launched full-service design and innovation studio for custom ODM projects, from concept to production.',
+        'Launched a full-service design studio, shaping new board graphics and shapes from concept to production.',
     },
   ],
   trustSignals: [
     {
       icon: 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z',
-      title: 'CE Certified',
-      description:
-        '64 CE-certified models comply with European safety standards, covering SUP boards, kayaks, RIBs, and PFDs.',
+      title: '100% Pressure-Tested',
+      description: 'Every board is pressure-tested at 1.25x rated pressure for 24-48 hours before leaving the factory.',
     },
     {
       icon: 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z',
-      title: 'ISO 9001 Certified',
-      description: 'Quality management system certified. Covers design, production, and after-sales service.',
+      title: '99.3% Defect-Free',
+      description: '99.3% of boards pass final inspection defect-free on first delivery.',
     },
     {
       icon: 'M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z',
-      title: 'UKCA Marked',
-      description: 'UKCA conformity for products exported to the United Kingdom market.',
-    },
-    {
-      icon: 'M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z',
-      title: 'BSCI Audited',
-      description: 'Social compliance audit (Intertek) covering labor standards and workplace safety.',
+      title: '2-Year SUP Warranty',
+      description: 'Every board is covered by a 2-Year SUP Warranty with responsive support.',
     },
     {
       icon: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z',
@@ -177,21 +171,6 @@ export const BRAND: BrandIdentity = {
       category: 'Stand-Up Paddle Boards',
       description: 'Drop-stitch inflatable SUPs for touring, all-around, yoga, and whitewater applications.',
       items: ['All-around SUPs', 'Touring SUPs', 'Inflatable SUPs', 'Kids SUPs', 'Fishing SUPs'],
-    },
-    {
-      category: 'Kayaks',
-      description: 'Inflatable kayaks for recreational touring, river running, and expedition use.',
-      items: ['Touring Kayaks', 'River Kayaks', 'Fishing Kayaks', 'Kids Kayaks', 'Tandem Kayaks'],
-    },
-    {
-      category: 'RIBs & Dinghies',
-      description: 'Hypalon and PVC rigid-hull inflatable boats for commercial, rescue, and leisure use.',
-      items: ['RIB Boats', 'Inflatable Dinghies', 'Tenders', 'Rescue Boats'],
-    },
-    {
-      category: 'Marine Safety',
-      description: 'CE-certified PFDs, life jackets, throw bags, and safety accessories.',
-      items: ['Life Jackets', 'Buoyancy Aids', 'Throw Bags', 'Safety Kits'],
     },
     {
       category: 'Accessories & Parts',
@@ -215,25 +194,25 @@ const CTA_RULES: Array<{
       link: '/products/sup-explorer-11',
       reason: 'Beginner content — entry-level product',
     },
-    products: ['sup-explorer-11', 'paddle-carbon', 'life-vest-classic'],
+    products: ['sup-explorer-11'],
     keywords: ['beginner', 'entry-level', 'starter', 'inflatable SUP'],
   },
   {
     match: (s) => ['inflatable-vs-hardboard', 'sup-size-guide', 'paddle-board-size-guide'].some((k) => s.includes(k)),
     cta: { text: 'Compare inflatable SUPs', link: '/products', reason: 'Comparison — product discovery' },
-    products: ['sup-explorer-11', 'kayak-lite'],
+    products: ['sup-explorer-11'],
     keywords: ['inflatable vs hard', 'SUP comparison', 'size guide'],
   },
   {
     match: (s) =>
       ['safety-tips', 'SUP-safety-guide', 'ocean-safety-basics', 'water-safety-guide'].some((k) => s.includes(k)),
     cta: {
-      text: 'View safety equipment',
-      link: '/products/life-vest-classic',
-      reason: 'Safety content — safety product',
+      text: 'Explore our products',
+      link: '/products',
+      reason: 'Safety content →product discovery',
     },
-    products: ['life-vest-classic', 'life-vest-pro'],
-    keywords: ['safety', 'protection', 'life vest', 'marine safety'],
+    products: ['sup-explorer-11'],
+    keywords: ['safety', 'protection', 'marine safety'],
   },
   {
     match: (s) =>
@@ -241,8 +220,8 @@ const CTA_RULES: Array<{
         s.includes(k)
       ),
     cta: { text: 'Visit our factory', link: '/factory', reason: 'Brand content — manufacturing hub' },
-    products: ['sup-explorer-11', 'rib-330', 'life-vest-pro'],
-    keywords: ['paddleboardoverstock', 'manufacturer', 'factory', 'OEM'],
+    products: ['sup-explorer-11'],
+    keywords: ['paddleboardoverstock', 'manufacturer', 'factory'],
   },
 ];
 

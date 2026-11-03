@@ -22,7 +22,7 @@
     "_entityType_note": "不是 manufacturer、不是 brand 泛称。对外身份统一为线上清仓商城（工厂直发）。",
     "_legalName_note": "品牌运营主体为 Weihai Dongjilian Co., Ltd.（Weihai, Shandong, CN），货源为自有工厂尾货/清仓批次。",
     "primaryAudience": "B2C",
-    "_audience_note": "面向全球个人消费者（清仓零售），B2B/OEM 内容仅作次级页面保留，不进身份表述。"
+    "_audience_note": "面向全球个人消费者（清仓零售）。B2B/OEM/ODM 与认证（CE/ISO/UKCA/REACH/RoHS/BSCI）内容已全站移除，不进任何表述。"
   },
 
   "productLines": [
@@ -44,8 +44,8 @@
   ],
 
   "secondaryContent": {
-    "_comment": "保留但降级为次级内容，不参与任何身份表述检查：/oem-odm/ 系列（B2B OEM/ODM 服务页）、/factory/、/quality/ 等。这些页面只允许出现在非 storefront 检查范围。",
-    "items": ["/oem-odm/", "/oem-odm-manufacturer/", "/oem-odm-blueprint/", "/factory/", "/quality/"]
+    "_comment": "保留但降级为次级内容，不参与任何身份表述检查：/factory/、/quality/ 等。这些页面只允许出现在非 storefront 检查范围。",
+    "items": ["/factory/", "/quality/"]
   },
 
   "boilerplate": {
@@ -53,9 +53,9 @@
 
     "short": "Inflatable SUP boards overstock and clearance — factory direct, up to 60% off retail.",
 
-    "medium": "Paddle Board Overstock is an online store for inflatable SUP board overstock and factory clearance stock. Complete paddle board packages ship worldwide at up to 60% off retail — CE-certified, {{certifiedModels}} models, direct from Weihai, China.",
+    "medium": "Paddle Board Overstock is an online store for inflatable SUP board overstock and factory clearance stock. Complete paddle board packages ship worldwide at up to 60% off retail — direct from Weihai, China.",
 
-    "long": "Paddle Board Overstock, operated by Weihai Dongjilian Co., Ltd., is an online store specializing in inflatable SUP board overstock and factory clearance stock. Complete paddle board packages (board, pump, paddle, leash, backpack) and accessories ship worldwide at up to 60% off retail, with {{certifiedModels}} CE-certified models, {{annualCapacityUnits}} units annual production capacity and transparent Stripe & PayPal checkout."
+    "long": "Paddle Board Overstock, operated by Weihai Dongjilian Co., Ltd., is an online store specializing in inflatable SUP board overstock and factory clearance stock. Complete paddle board packages (board, pump, paddle, leash, backpack) and accessories ship worldwide at up to 60% off retail, with {{annualCapacityUnits}} units annual production capacity and transparent Stripe & PayPal checkout."
   },
 
   "titleTemplates": {
@@ -72,7 +72,7 @@
   },
 
   "forbiddenPhrases": {
-    "_comment": "storefront 页面（/ /products/ /supboard/）的可见文本出现这些词即 P4 阻断；其余关键页（/oem-odm/ /about/ /factory/）降级为告警。07_positioning_check.py 扫描。",
+    "_comment": "storefront 页面（/ /products/ /supboard/）的可见文本出现这些词即 P4 阻断；其余关键页（/about/ /factory/）降级为告警。07_positioning_check.py 扫描。",
     "items": [
       "RIB Boat",
       "Rigid Inflatable Boat",

@@ -3,31 +3,25 @@ export const TEAM_MEMBERS: Record<string, any> = {
     {
       name: 'Peng Zhang',
       role: 'Director of Engineering',
-      experience: '18 years in inflatable watercraft engineering, formerly at ISO-accredited marine manufacturers.',
+      experience: '18 years in inflatable SUP engineering, formerly at leading marine manufacturers.',
       expertise: [
         'Drop-stitch core structural engineering',
         'PVC formulation & composite layup',
-        'CE 6185 compliance design',
+        'Pressure & buoyancy test protocols',
       ],
-      area: 'Product Architecture & Compliance',
+      area: 'Product Architecture',
     },
     {
       name: 'Lina Chen',
       role: 'Senior Materials Engineer',
-      experience:
-        '12 years specializing in PVC/Hypalon material science, seam technology, and accelerated UV aging testing.',
-      expertise: [
-        'Marine-grade PVC & Hypalon (CSM) characterization',
-        'RF weld & thermal bond optimization',
-        'ASTM D751 peel strength testing',
-      ],
+      experience: '12 years specializing in PVC material science, seam technology, and accelerated UV aging testing.',
+      expertise: ['Marine-grade PVC characterization', 'RF weld & thermal bond optimization', 'Peel strength testing'],
       area: 'Materials Science Lab',
     },
     {
       name: 'Wei Liu',
       role: 'Product Design Lead',
-      experience:
-        '15 years in industrial design for water sports equipment. 40+ SUP and kayak platform designs in production.',
+      experience: '15 years in industrial design for water sports equipment. 40+ SUP platform designs in production.',
       expertise: [
         '3D CAD/CAM mold design (SolidWorks, Rhino)',
         'Hydrodynamic hull shaping',
@@ -38,9 +32,9 @@ export const TEAM_MEMBERS: Record<string, any> = {
     {
       name: 'James Huang',
       role: 'Quality Systems Manager',
-      experience: '10 years managing ISO 9001 QMS for marine manufacturing. Lead auditor for CE and BSCI compliance.',
+      experience: '10 years managing quality systems for marine manufacturing.',
       expertise: [
-        'ISO 9001 internal auditing',
+        'In-house QC process auditing',
         '100-point QC workflow design',
         'Supplier quality traceability systems',
       ],
@@ -48,49 +42,48 @@ export const TEAM_MEMBERS: Record<string, any> = {
     },
     {
       name: 'Mei Wang',
-      role: 'RIB & Hypalon Specialist',
-      experience: '14 years in commercial RIB fabrication, including patrol, rescue, and dive boat production.',
+      role: 'Inflatable SUP Specialist',
+      experience: '14 years in inflatable SUP fabrication, including touring, fishing, and yoga board production.',
       expertise: [
-        'Hypalon hand-gluing & seam construction',
-        'Aluminum & fiberglass deep-V hull mating',
+        'Double-layer lamination & seam construction',
+        'Rail band reinforcement & rail taping',
         'Commercial-grade valve & fitting installation',
       ],
-      area: 'RIB Production Line',
+      area: 'SUP Production Line',
     },
     {
       name: 'Dong Li',
-      role: 'OEM/ODM Project Engineer',
+      role: 'Project Engineer',
       experience: '9 years managing custom manufacturing programs for European, North American, and Asian brands.',
       expertise: [
         'Technical proposal & BOM engineering',
         'Custom mold development through production ramp',
         'Multi-language specification management',
       ],
-      area: 'OEM Programs',
+      area: 'Custom Programs',
     },
   ],
   de: [
     {
       name: 'Peng Zhang',
       role: 'Technischer Direktor',
-      experience:
-        '18 Jahre Erfahrung in der Entwicklung aufblasbarer Wasserfahrzeuge, zuvor bei akkreditierten Marineherstellern.',
+      experience: '18 years in inflatable SUP engineering, formerly at leading marine manufacturers.',
       expertise: [
         'Strukturelles Engineering des Drop-Stitch-Kerns',
         'PVC-Formulierung & Verbundstoff-Laminierung',
-        'Konstruktion gemäß CE 6185-Konformität',
+        'Pressure & buoyancy test protocols',
       ],
-      area: 'Produktarchitektur & Konformität',
+      area: 'Product Architecture',
     },
     {
       name: 'Lina Chen',
       role: 'Senior-Materialingenieur',
       experience:
-        '12 Jahre Spezialisierung auf die Materialwissenschaft von PVC/Hypalon, Nahttechnologie und beschleunigte UV-Alterungstests.',
+        '12 Jahre Spezialisierung auf die Materialwissenschaft von PVC, Nahttechnologie und beschleunigte UV-Alterungstests.',
       expertise: [
-        'Charakterisierung von Marine-PVC & Hypalon (CSM)',
+        'Charakterisierung von Marine-PVC',
         'Optimierung von HF-Schweißnähten & Thermofügung',
-        'Schälfestigkeitsprüfung nach ASTM D751',
+        'Peel strength testing',
       ],
       area: 'Materialwissenschaftliches Labor',
     },
@@ -98,7 +91,7 @@ export const TEAM_MEMBERS: Record<string, any> = {
       name: 'Wei Liu',
       role: 'Leiter Produktdesign',
       experience:
-        '15 Jahre Industriedesign für Wassersportausrüstung. Über 40 SUP- und Kajak-Plattformdesigns in Serienproduktion.',
+        '15 Jahre Industriedesign für Wassersportausrüstung. Über 40 SUP-Plattformdesigns in Serienproduktion.',
       expertise: [
         '3D-CAD/CAM-Formenkonstruktion (SolidWorks, Rhino)',
         'Hydrodynamische Rumpfformgebung',
@@ -109,9 +102,9 @@ export const TEAM_MEMBERS: Record<string, any> = {
     {
       name: 'James Huang',
       role: 'Leiter Qualitätsmanagement',
-      experience: '10 Jahre Leitung des QMS für die Marinefertigung. Leitender Auditor für CE- und BSCI-Konformität.',
+      experience: '10 years managing quality systems for marine manufacturing.',
       expertise: [
-        'Interne Audits',
+        'In-house QC process auditing',
         'Gestaltung von QC-Workflows mit 100 Prüfpunkten',
         'Rückverfolgbarkeitssysteme für die Lieferantenqualität',
       ],
@@ -119,19 +112,18 @@ export const TEAM_MEMBERS: Record<string, any> = {
     },
     {
       name: 'Mei Wang',
-      role: 'Spezialist für RIB & Hypalon',
-      experience:
-        '14 Jahre in der kommerziellen RIB-Fertigung, einschließlich Produktion von Patrouillen-, Rettungs- und Tauchbooten.',
+      role: 'Spezialist für aufblasbare SUPs',
+      experience: '14 Jahre in der Fertigung aufblasbarer SUPs, einschließlich Touring-, Fishing- und Yoga-Boards.',
       expertise: [
-        'Hypalon-Handverklebung & Nahtkonstruktion',
-        'Fügen von Aluminium- & GFK-Rümpfen mit tiefem V-Spant',
+        'Doppellaminierung & Nahtkonstruktion',
+        'Verstärkung & Klebung der Rail-Bänder',
         'Installation von Ventilen & Beschlägen in Kommerzialqualität',
       ],
-      area: 'RIB-Produktionslinie',
+      area: 'SUP-Produktionslinie',
     },
     {
       name: 'Dong Li',
-      role: 'Projektingenieur OEM/ODM',
+      role: 'Projektingenieur',
       experience:
         '9 Jahre Leitung kundenspezifischer Fertigungsprogramme für Marken aus Europa, Nordamerika und Asien.',
       expertise: [
@@ -139,30 +131,30 @@ export const TEAM_MEMBERS: Record<string, any> = {
         'Entwicklung kundenspezifischer Formen bis zum Produktionshochlauf',
         'Verwaltung mehrsprachiger Spezifikationen',
       ],
-      area: 'OEM-Programme',
+      area: 'Custom Programs',
     },
   ],
   es: [
     {
       name: 'Peng Zhang',
       role: 'Director de Ingeniería',
-      experience: '18 años en ingeniería de embarcaciones inflables, anteriormente en fabricantes marinos acreditados.',
+      experience: '18 years in inflatable SUP engineering, formerly at leading marine manufacturers.',
       expertise: [
         'Ingeniería estructural de núcleo drop-stitch',
         'Formulación de PVC y laminado compuesto',
-        'Diseño de cumplimiento CE 6185',
+        'Pressure & buoyancy test protocols',
       ],
-      area: 'Arquitectura de Producto y Cumplimiento',
+      area: 'Product Architecture',
     },
     {
       name: 'Lina Chen',
       role: 'Ingeniera de Materiales Senior',
       experience:
-        '12 años especializada en ciencia de materiales PVC/Hypalon, tecnología de costuras y pruebas aceleradas de envejecimiento UV.',
+        '12 años especializada en ciencia de materiales PVC, tecnología de costuras y pruebas aceleradas de envejecimiento UV.',
       expertise: [
-        'Caracterización de PVC y Hypalon (CSM) de grado marino',
+        'Caracterización de PVC de grado marino',
         'Optimización de soldadura RF y unión térmica',
-        'Pruebas de resistencia al desgarro ASTM D751',
+        'Peel strength testing',
       ],
       area: 'Laboratorio de Ciencia de Materiales',
     },
@@ -170,7 +162,7 @@ export const TEAM_MEMBERS: Record<string, any> = {
       name: 'Wei Liu',
       role: 'Líder de Diseño de Producto',
       experience:
-        '15 años en diseño industrial para equipos de deportes acuáticos. Más de 40 diseños de tablas SUP y kayaks en producción.',
+        '15 años en diseño industrial para equipos de deportes acuáticos. Más de 40 diseños de tablas SUP en producción.',
       expertise: [
         'Diseño de moldes 3D CAD/CAM (SolidWorks, Rhino)',
         'Modelado hidrodinámico del casco',
@@ -181,10 +173,9 @@ export const TEAM_MEMBERS: Record<string, any> = {
     {
       name: 'James Huang',
       role: 'Gerente de Sistemas de Calidad',
-      experience:
-        '10 años gestionando el QMS para fabricación marina. Auditor líder para el cumplimiento de CE y BSCI.',
+      experience: '10 years managing quality systems for marine manufacturing.',
       expertise: [
-        'Auditoría interna del QMS',
+        'In-house QC process auditing',
         'Diseño de flujo de trabajo de control de calidad de 100 puntos',
         'Sistemas de trazabilidad de calidad de proveedores',
       ],
@@ -192,19 +183,18 @@ export const TEAM_MEMBERS: Record<string, any> = {
     },
     {
       name: 'Mei Wang',
-      role: 'Especialista en RIB y Hypalon',
-      experience:
-        '14 años en fabricación comercial de RIB, incluida la producción de embarcaciones de patrulla, rescate y buceo.',
+      role: 'Especialista en SUP inflables',
+      experience: '14 años en fabricación de SUP inflables, incluidas tablas de touring, pesca y yoga.',
       expertise: [
-        'Encaje manual de Hypalon y construcción de costuras',
-        'Acoplamiento de cascos en V profunda de aluminio y fibra de vidrio',
+        'Laminación de doble capa y construcción de costuras',
+        'Refuerzo y cinta de los rieles laterales',
         'Instalación de válvulas y accesorios de grado comercial',
       ],
-      area: 'Línea de Producción RIB',
+      area: 'Línea de Producción SUP',
     },
     {
       name: 'Dong Li',
-      role: 'Ingeniero de Proyectos OEM/ODM',
+      role: 'Ingeniero de Proyectos',
       experience:
         '9 años gestionando programas de fabricación personalizada para marcas europeas, norteamericanas y asiáticas.',
       expertise: [
@@ -212,31 +202,30 @@ export const TEAM_MEMBERS: Record<string, any> = {
         'Desarrollo de moldes personalizados hasta el arranque de producción',
         'Gestión de especificaciones multilingües',
       ],
-      area: 'Programas OEM',
+      area: 'Custom Programs',
     },
   ],
   fr: [
     {
       name: 'Peng Zhang',
       role: 'Directeur de l’ingénierie',
-      experience:
-        '18 ans d’expérience en ingénierie d’embarcations gonflables, précédemment au sein de fabricants maritimes accrédités.',
+      experience: '18 years in inflatable SUP engineering, formerly at leading marine manufacturers.',
       expertise: [
         'Ingénierie structurelle des noyaux drop-stitch',
         'Formulation PVC et stratification composite',
-        'Conception conforme CE 6185',
+        'Pressure & buoyancy test protocols',
       ],
-      area: 'Architecture produit et conformité',
+      area: 'Product Architecture',
     },
     {
       name: 'Lina Chen',
       role: 'Ingénieure matériaux senior',
       experience:
-        '12 ans de spécialisation en science des matériaux PVC/Hypalon, technologie des soudures et essais de vieillissement UV accéléré.',
+        '12 ans de spécialisation en science des matériaux PVC, technologie des soudures et essais de vieillissement UV accéléré.',
       expertise: [
-        'Caractérisation des PVC et Hypalon (CSM) de qualité marine',
+        'Caractérisation des PVC de qualité marine',
         'Optimisation des soudures RF et de la thermofusion',
-        'Essais de résistance au pelage ASTM D751',
+        'Peel strength testing',
       ],
       area: 'Laboratoire de science des matériaux',
     },
@@ -244,7 +233,7 @@ export const TEAM_MEMBERS: Record<string, any> = {
       name: 'Wei Liu',
       role: 'Responsable de la conception produit',
       experience:
-        '15 ans de design industriel pour les équipements de sports nautiques. Plus de 40 conceptions de plateformes SUP et kayak en production.',
+        '15 ans de design industriel pour les équipements de sports nautiques. Plus de 40 conceptions de plateformes SUP en production.',
       expertise: [
         'Conception de moules 3D CAD/CAM (SolidWorks, Rhino)',
         'Façonnage de coques hydrodynamiques',
@@ -255,10 +244,9 @@ export const TEAM_MEMBERS: Record<string, any> = {
     {
       name: 'James Huang',
       role: 'Responsable des systèmes qualité',
-      experience:
-        '10 ans de gestion de système de management de la qualité (QMS) pour la fabrication maritime. Auditeur principal pour la conformité CE et BSCI.',
+      experience: '10 years managing quality systems for marine manufacturing.',
       expertise: [
-        'Audit interne',
+        'In-house QC process auditing',
         'Conception de flux de contrôle qualité en 100 points',
         'Systèmes de traçabilité qualité fournisseurs',
       ],
@@ -266,19 +254,18 @@ export const TEAM_MEMBERS: Record<string, any> = {
     },
     {
       name: 'Mei Wang',
-      role: 'Spécialiste RIB et Hypalon',
-      experience:
-        '14 ans de fabrication de RIB commerciaux, notamment la production d’embarcations de patrouille, de sauvetage et de plongée.',
+      role: 'Spécialiste SUP gonflables',
+      experience: '14 ans de fabrication de SUP gonflables, notamment des planches de randonnée, de pêche et de yoga.',
       expertise: [
-        'Collage manuel de l’Hypalon et construction des soudures',
-        'Assemblage des coques en V profond en aluminium et fibre de verre',
+        'Lamination double couche et construction des soudures',
+        'Renfort et collage des listons latéraux',
         'Installation de vannes et raccords de qualité commerciale',
       ],
-      area: 'Ligne de production RIB',
+      area: 'Ligne de production SUP',
     },
     {
       name: 'Dong Li',
-      role: 'Ingénieur de projet OEM/ODM',
+      role: 'Ingénieur de projet',
       experience:
         '9 ans de gestion de programmes de fabrication sur mesure pour des marques européennes, nord-américaines et asiatiques.',
       expertise: [
@@ -286,31 +273,30 @@ export const TEAM_MEMBERS: Record<string, any> = {
         'Développement de moules sur mesure jusqu’à la montée en production',
         'Gestion de spécifications multilingues',
       ],
-      area: 'Programmes OEM',
+      area: 'Custom Programs',
     },
   ],
   it: [
     {
       name: 'Peng Zhang',
       role: "Direttore dell'Ingegneria",
-      experience:
-        "18 anni nell'ingegneria dei natanti gonfiabili, in precedenza presso rinomati produttori marini certificati.",
+      experience: '18 years in inflatable SUP engineering, formerly at leading marine manufacturers.',
       expertise: [
         'Ingegneria strutturale del nucleo drop-stitch',
         'Formulazione PVC e stratificazione composita',
-        'Progettazione conforme alla CE 6185',
+        'Pressure & buoyancy test protocols',
       ],
-      area: 'Architettura del prodotto e conformità',
+      area: 'Product Architecture',
     },
     {
       name: 'Lina Chen',
       role: 'Ingegnere senior dei materiali',
       experience:
-        '12 anni di specializzazione nella scienza dei materiali PVC/Hypalon, nelle tecnologie di giunzione e nei test accelerati di invecchiamento UV.',
+        '12 anni di specializzazione nella scienza dei materiali PVC, nelle tecnologie di giunzione e nei test accelerati di invecchiamento UV.',
       expertise: [
-        'Caratterizzazione di PVC e Hypalon (CSM) di grado marino',
+        'Caratterizzazione di PVC di grado marino',
         'Ottimizzazione della saldatura RF e dei giunti termici',
-        'Test di resistenza alla pelatura ASTM D751',
+        'Peel strength testing',
       ],
       area: 'Laboratorio di scienza dei materiali',
     },
@@ -318,7 +304,7 @@ export const TEAM_MEMBERS: Record<string, any> = {
       name: 'Wei Liu',
       role: 'Responsabile del design di prodotto',
       experience:
-        '15 anni nel design industriale per attrezzature sportive acquatiche. Oltre 40 design di piattaforme SUP e kayak in produzione.',
+        '15 anni nel design industriale per attrezzature sportive acquatiche. Oltre 40 design di piattaforme SUP in produzione.',
       expertise: [
         'Progettazione di stampi 3D CAD/CAM (SolidWorks, Rhino)',
         'Modellazione idrodinamica dello scafo',
@@ -329,9 +315,9 @@ export const TEAM_MEMBERS: Record<string, any> = {
     {
       name: 'James Huang',
       role: 'Responsabile del sistema qualità',
-      experience: '10 anni di gestione del QMS per la produzione marina. Lead auditor per la conformità CE e BSCI.',
+      experience: '10 years managing quality systems for marine manufacturing.',
       expertise: [
-        'Audit interni secondo ISO',
+        'In-house QC process auditing',
         'Progettazione del processo di controllo qualità a 100 punti',
         'Sistemi di tracciabilità della qualità dei fornitori',
       ],
@@ -339,19 +325,18 @@ export const TEAM_MEMBERS: Record<string, any> = {
     },
     {
       name: 'Mei Wang',
-      role: 'Specialista RIB e Hypalon',
-      experience:
-        '14 anni nella produzione commerciale di RIB, inclusa la produzione di imbarcazioni per pattugliamento, soccorso e immersione.',
+      role: 'Specialista SUP gonfiabili',
+      experience: '14 anni nella produzione di SUP gonfiabili, comprese tavole da touring, pesca e yoga.',
       expertise: [
-        'Incollaggio manuale Hypalon e costruzione delle cuciture',
-        'Accoppiamento di scafi deep-V in alluminio e vetroresina',
+        'Laminazione a doppio strato e costruzione delle cuciture',
+        'Rinforzo e nastrazione dei bordi laterali',
         'Installazione di valvole e raccordi di grado commerciale',
       ],
-      area: 'Linea di produzione RIB',
+      area: 'Linea di produzione SUP',
     },
     {
       name: 'Dong Li',
-      role: 'Ingegnere di progetto OEM/ODM',
+      role: 'Ingegnere di progetto',
       experience:
         '9 anni di gestione di programmi di produzione personalizzati per marchi europei, nordamericani e asiatici.',
       expertise: [
@@ -359,7 +344,7 @@ export const TEAM_MEMBERS: Record<string, any> = {
         "Sviluppo di stampi personalizzati fino all'avvio della produzione",
         'Gestione di specifiche multilingua',
       ],
-      area: 'Programmi OEM',
+      area: 'Custom Programs',
     },
   ],
 };
@@ -372,11 +357,11 @@ export const RESEARCH_AREAS: Record<string, any> = {
     },
     {
       title: 'Low-Volatile PVC Formulation',
-      desc: 'Developing reduced-emission PVC compounds that meet evolving EU REACH and California Proposition 65 requirements while maintaining weld strength.',
+      desc: 'Developing reduced-emission PVC compounds that lower environmental impact while maintaining weld strength.',
     },
     {
-      title: 'Hypalon-to-Aluminum Bond Reliability',
-      desc: 'Long-duration cyclic load testing for RIB tube-to-hull attachment systems across -20°C to +60°C temperature range.',
+      title: 'Rail Band & Valve Bond Reliability',
+      desc: 'Long-duration cyclic load testing for rail tape and valve attachment systems across -20°C to +60°C temperature range.',
     },
     {
       title: 'Automated QC Vision System',
@@ -390,11 +375,11 @@ export const RESEARCH_AREAS: Record<string, any> = {
     },
     {
       title: 'PVC-Formulierung mit niedriger Flüchtigkeit',
-      desc: 'Entwicklung emissionsarmer PVC-Mischungen, die die sich weiterentwickelnden Anforderungen der EU-REACH-Verordnung und des California Proposition 65 erfüllen, ohne die Schweißfestigkeit zu beeinträchtigen.',
+      desc: 'Developing reduced-emission PVC compounds that lower environmental impact while maintaining weld strength.',
     },
     {
-      title: 'Zuverlässigkeit der Hypalon-Aluminium-Verbindung',
-      desc: 'Langzeit-Zyklusbelastungstests für die Befestigungssysteme von RIB-Schlauch und -Rumpf im Temperaturbereich von -20 °C bis +60 °C.',
+      title: 'Zuverlässigkeit der Rail-Band- & Ventilverbindung',
+      desc: 'Langzeit-Zyklusbelastungstests für die Befestigungssysteme von Rail-Band und Ventil im Temperaturbereich von -20 °C bis +60 °C.',
     },
     {
       title: 'Automatisiertes QC-Bildverarbeitungssystem',
@@ -408,11 +393,11 @@ export const RESEARCH_AREAS: Record<string, any> = {
     },
     {
       title: 'Formulación de PVC de Bajas Emisiones Volátiles',
-      desc: 'Desarrollo de compuestos de PVC con emisiones reducidas que cumplen los requisitos de REACH de la UE y la Proposición 65 de California, manteniendo la resistencia de la soldadura.',
+      desc: 'Developing reduced-emission PVC compounds that lower environmental impact while maintaining weld strength.',
     },
     {
-      title: 'Fiabilidad de la Unión Hypalon-Aluminio',
-      desc: 'Pruebas de carga cíclica de larga duración para sistemas de fijación tubo-casco de RIB en un rango de temperatura de -20°C a +60°C.',
+      title: 'Fiabilidad de la Unión de Rieles y Válvulas',
+      desc: 'Pruebas de carga cíclica de larga duración para sistemas de fijación de rieles y válvulas en un rango de temperatura de -20°C a +60°C.',
     },
     {
       title: 'Sistema Automatizado de Visión para el Control de Calidad',
@@ -426,11 +411,11 @@ export const RESEARCH_AREAS: Record<string, any> = {
     },
     {
       title: 'Formulation de PVC à faible émission de composés volatils',
-      desc: 'Développement de composés PVC à émissions réduites conformes aux exigences évolutives REACH de l’UE et à la Proposition 65 de Californie, tout en préservant la résistance des soudures.',
+      desc: 'Developing reduced-emission PVC compounds that lower environmental impact while maintaining weld strength.',
     },
     {
-      title: 'Fiabilité de l’adhérence Hypalon-aluminium',
-      desc: 'Essais de charge cyclique de longue durée pour les systèmes de fixation des tubes RIB aux coques, sur une plage de température de -20 °C à +60 °C.',
+      title: 'Fiabilité de l’adhérence liston-vanne',
+      desc: 'Essais de charge cyclique de longue durée pour les systèmes de fixation des listons et vannes, sur une plage de température de -20 °C à +60 °C.',
     },
     {
       title: 'Système de vision automatisé pour le contrôle qualité',
@@ -444,11 +429,11 @@ export const RESEARCH_AREAS: Record<string, any> = {
     },
     {
       title: 'Formulazione PVC a basso contenuto di composti volatili',
-      desc: 'Sviluppo di compound PVC a ridotte emissioni che soddisfino i requisiti UE REACH e California Proposition 65 in evoluzione, mantenendo la resistenza delle saldature.',
+      desc: 'Developing reduced-emission PVC compounds that lower environmental impact while maintaining weld strength.',
     },
     {
-      title: 'Affidabilità del legame Hypalon-alluminio',
-      desc: 'Test a carico ciclico di lunga durata per i sistemi di fissaggio tubo-scafo dei RIB in un intervallo di temperatura da -20°C a +60°C.',
+      title: 'Affidabilità del legame bordo-valvola',
+      desc: 'Test a carico ciclico di lunga durata per i sistemi di fissaggio di bordi e valvole in un intervallo di temperatura da -20°C a +60°C.',
     },
     {
       title: 'Sistema di visione automatica per il controllo qualità',

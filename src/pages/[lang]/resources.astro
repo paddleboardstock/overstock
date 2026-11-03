@@ -2,67 +2,37 @@
 const PAGE_DESC: Record<string, { description: string }> = {
   de: {
     description:
-      'Laden Sie Produktkataloge, OEM-Herstellungsleitfäden, Einkäufer-Checklisten und technische Dokumentationen für die Beschaffung von Meeresausrüstung herunter.',
+      'Laden Sie Produktkataloge, Käuferleitfäden und technische Dokumentationen für aufblasbare SUP Boards herunter.',
   },
   es: {
     description:
-      'Descargue catálogos de productos, guías de fabricación OEM, listas de verificación para compradores y documentación técnica para la adquisición de equipos marinos.',
+      'Descargue catálogos de productos, guías para compradores y documentación técnica para tablas de paddle inflables.',
   },
   fr: {
     description:
-      "Téléchargez des catalogues produits, des guides de fabrication OEM, des listes de contrôle pour acheteurs et la documentation technique pour l'approvisionnement en équipement marin.",
+      'Téléchargez des catalogues produits, des guides pour acheteurs et la documentation technique pour planches de paddle gonflables.',
   },
   it: {
     description:
-      "Scarica cataloghi di prodotti, guide alla produzione OEM, checklist per gli acquirenti e documentazione tecnica per l'approvvigionamento di attrezzature nautiche.",
-  },
-  cs: {
-    description:
-      'Stáhněte si produktové katalogy, příručky OEM výroby, checklisty pro kupující a technickou dokumentaci pro nákup námořního vybavení.',
-  },
-  sv: {
-    description:
-      'Ladda ner produktkataloger, OEM tillverkningsguider, checklistor för köpare och teknisk dokumentation för inköp av marinutrustning.',
-  },
-  da: {
-    description:
-      'Download produktkataloger, OEM produktionsvejledninger, købertjeklister og teknisk dokumentation til indkøb af marineudstyr.',
-  },
-  el: {
-    description:
-      'Κατεβάστε καταλόγους προϊόντων, OEM οδηγούς κατασκευής, λίστες ελέγχου αγοραστών και τεχνική τεκμηρίωση για την προμήθεια θαλάσσιου εξοπλισμού.',
-  },
-  no: {
-    description:
-      'Last ned produktkataloger, OEM produksjonsveiledninger, kjøpersjekklister og teknisk dokumentasjon for anskaffelse av marint utstyr.',
+      'Scarica cataloghi di prodotti, guide per gli acquirenti e documentazione tecnica per tavole di paddle gonfiabili.',
   },
   ru: {
     description:
-      'Загрузите каталоги продукции, руководства по производству OEM, контрольные списки для покупателей и техническую документацию для закупки морского оборудования.',
+      'Загрузите каталоги продукции, руководства для покупателей и техническую документацию по надувным SUP доскам.',
   },
   nl: {
-    description:
-      'Download productcatalogi, OEM productiehandleidingen, checklists voor kopers en technische documentatie voor de aanschaf van maritieme uitrusting.',
-  },
-  fi: {
-    description:
-      'Lataa tuoteluetteloita, OEM valmistusoppaita, ostajien tarkistuslistoja ja teknistä dokumentaatiota laivavarusteiden hankintaa varten.',
+    description: 'Download productcatalogi, kopersgidsen en technische documentatie voor opblaasbare SUP boards.',
   },
   pl: {
     description:
-      'Pobierz katalogi produktów, OEM przewodniki produkcyjne, listy kontrolne dla kupujących i dokumentację techniczną dotyczącą zamówień wyposażenia morskiego.',
+      'Pobierz katalogi produktów, przewodniki dla kupujących i dokumentację techniczną dotyczącą desek SUP.',
   },
   ar: {
-    description:
-      'قم بتنزيل كتالوجات المنتجات وأدلة التصنيع OEM وقوائم مراجعة المشتري والوثائق الفنية لشراء المعدات البحرية.',
+    description: 'قم بتنزيل كتالوجات المنتجات وأدلة المشترين والوثائق الفنية لألواح التجديف القابلة للنفخ.',
   },
   pt: {
     description:
-      'Baixe catálogos de produtos, guias de fabricação OEM, listas de verificação de compradores e documentação técnica para aquisição de equipamentos marítimos.',
-  },
-  ja: {
-    description:
-      '製品カタログ、OEM 製造ガイド、購入者チェックリスト、海洋機器調達のための技術文書をダウンロードしてください。',
+      'Baixe catálogos de produtos, guias para compradores e documentação técnica para pranchas de paddle infláveis.',
   },
 };
 const PAGE_META: Record<string, { title: string }> = {
@@ -75,13 +45,6 @@ const PAGE_META: Record<string, { title: string }> = {
   ru: { title: 'Ресурсы' },
   pl: { title: 'Zasoby' },
   nl: { title: 'Bronnen' },
-  sv: { title: 'Resurser' },
-  no: { title: 'Ressurser' },
-  el: { title: 'Πόροι' },
-  fi: { title: 'Resurssit' },
-  da: { title: 'Ressourcer' },
-  cs: { title: 'Zdroje' },
-  ja: { title: 'リソース' },
 };
 export const prerender = true;
 
@@ -120,7 +83,7 @@ const metadata = {
   ),
   description:
     PAGE_DESC[lang]?.description ||
-    'Download product catalogs, OEM manufacturing guides, buyer checklists, and technical documentation for marine equipment procurement.',
+    'Download product catalogs, buyer guides, and technical documentation for inflatable SUP boards.',
 };
 const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: 'Resources' }];
 
@@ -133,7 +96,7 @@ const faqSchema = JSON.stringify({
       name: 'What resources are available?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Technical drawings, compliance documentation, product specifications, CAD files, and industry guides for OEM/ODM buyers.',
+        text: 'The 2026 SUP product catalog, inflatable SUP buyer guide, size and fit guide, board care and maintenance guide, materials guide, and getting-started paddling basics.',
       },
     },
     {
@@ -141,7 +104,7 @@ const faqSchema = JSON.stringify({
       name: 'Are resources free to access?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'PDF GA drawings and product specifications are free. DXF/DWG requires a light form. STEP/IGES requires project application.',
+        text: 'Yes. All catalogs and guides are free to download.',
       },
     },
     {
@@ -149,7 +112,7 @@ const faqSchema = JSON.stringify({
       name: 'Can I request additional documentation?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Material test reports, pressure test logs, and QC certificates available upon request for OEM/ODM partners.',
+        text: 'Yes. Material test reports and pressure test logs are available upon request.',
       },
     },
   ],

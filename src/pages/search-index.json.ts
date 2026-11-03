@@ -6,7 +6,7 @@ export const prerender = true;
 
 const SITE = '';
 
-const LANGUAGES = ['en', 'fr', 'de', 'es', 'pt', 'ar', 'it', 'ru', 'pl', 'nl', 'sv', 'no', 'el', 'fi', 'da'];
+const LANGUAGES = ['en', 'fr', 'de', 'es', 'pt', 'ar', 'it', 'ru', 'pl', 'nl'];
 
 function stripHtml(html: string): string {
   return String(html || '')
@@ -36,7 +36,7 @@ const enPageModules: Record<string, string> = import.meta.glob('/src/data/pages/
   eager: true,
 }) as Record<string, string>;
 
-// Per-language YAML pages — eagerly loaded at build time for all 14 non-English locales.
+// Per-language YAML pages — eagerly loaded at build time for all 9 non-English locales.
 // Each locale requires a separate static import.meta.glob() call (Vite limitation).
 const localePageModules: Record<string, Record<string, string>> = {};
 const lpm = (m: Record<string, string>) => m;
@@ -90,36 +90,6 @@ localePageModules.pl = lpm(
 );
 localePageModules.nl = lpm(
   import.meta.glob('/src/data/pages/nl/*.yaml', { query: '?raw', import: 'default', eager: true }) as Record<
-    string,
-    string
-  >
-);
-localePageModules.sv = lpm(
-  import.meta.glob('/src/data/pages/sv/*.yaml', { query: '?raw', import: 'default', eager: true }) as Record<
-    string,
-    string
-  >
-);
-localePageModules.no = lpm(
-  import.meta.glob('/src/data/pages/no/*.yaml', { query: '?raw', import: 'default', eager: true }) as Record<
-    string,
-    string
-  >
-);
-localePageModules.el = lpm(
-  import.meta.glob('/src/data/pages/el/*.yaml', { query: '?raw', import: 'default', eager: true }) as Record<
-    string,
-    string
-  >
-);
-localePageModules.fi = lpm(
-  import.meta.glob('/src/data/pages/fi/*.yaml', { query: '?raw', import: 'default', eager: true }) as Record<
-    string,
-    string
-  >
-);
-localePageModules.da = lpm(
-  import.meta.glob('/src/data/pages/da/*.yaml', { query: '?raw', import: 'default', eager: true }) as Record<
     string,
     string
   >
@@ -221,7 +191,7 @@ export const GET: APIRoute = async () => {
     {
       slug: 'choosing-paddle',
       title: 'Choosing the Right Paddle',
-      excerpt: 'Guide to selecting the right SUP or kayak paddle: materials, blade shapes, shaft types, and sizing.',
+      excerpt: 'Guide to selecting the right SUP paddle: materials, blade shapes, shaft types, and sizing.',
       tags: ['paddle', 'choosing', 'materials', 'sizing'],
     },
     {
@@ -232,9 +202,8 @@ export const GET: APIRoute = async () => {
     },
     {
       slug: 'inflatable-repair',
-      title: 'Inflatable Boat Care & Repair',
-      excerpt:
-        'Complete guide to repairing inflatable SUPs, kayaks, and boats. Puncture repair and preventive maintenance.',
+      title: 'Inflatable SUP Care & Repair',
+      excerpt: 'Complete guide to repairing inflatable SUPs. Puncture repair and preventive maintenance.',
       tags: ['repair', 'maintenance', 'puncture'],
     },
     {
@@ -244,15 +213,9 @@ export const GET: APIRoute = async () => {
       tags: ['inflatable', 'hard', 'comparison'],
     },
     {
-      slug: 'kayak-techniques',
-      title: 'Kayak Paddling Techniques',
-      excerpt: 'Learn proper kayak paddling technique: forward stroke, sweep, draw, and bracing.',
-      tags: ['kayak', 'techniques', 'paddling'],
-    },
-    {
       slug: 'multi-day-trip',
       title: 'Multi-Day Paddling Trip Planning',
-      excerpt: 'Plan and pack for multi-day SUP or kayak expeditions.',
+      excerpt: 'Plan and pack for multi-day SUP expeditions.',
       tags: ['multi-day', 'trip', 'planning'],
     },
     {
@@ -264,7 +227,7 @@ export const GET: APIRoute = async () => {
     {
       slug: 'safety-tips',
       title: 'Water Safety Tips',
-      excerpt: 'Essential safety practices for SUP and kayak paddling: weather checks, PFD selection, leash use.',
+      excerpt: 'Essential safety practices for SUP paddling: weather checks, PFD selection, leash use.',
       tags: ['safety', 'tips', 'PFD'],
     },
     {
@@ -287,7 +250,7 @@ export const GET: APIRoute = async () => {
     },
     {
       slug: 'sup-with-kids',
-      title: 'SUP & Kayaking with Kids',
+      title: 'SUP Paddling with Kids',
       excerpt: 'Family paddling guide: age recommendations, safety gear for children.',
       tags: ['kids', 'family', 'safety'],
     },

@@ -1,60 +1,56 @@
 hero:
-  tagline: Laboratorium voor kwaliteitscontrole
-  title: Testlaboratorium & kwaliteitsborging
-  subtitle: Onafhankelijk kwaliteitslaboratorium met ISO 9001-processen — elke eenheid getest vóór verzending
-
-intro: Paddle Board Overstock beschikt over een eigen kwaliteitscontrolelaboratorium dat onafhankelijk van de productie werkt. Elke partij grondstoffen en elke voltooide boot doorloopt gedocumenteerde inspectieprotocollen voordat deze wordt vrijgegeven. Ons QC-team rapporteert direct aan het management, wat onpartijdige kwaliteitsbeslissingen garandeert.
-
+  tagline: Quality Control Laboratory
+  title: Testing Laboratory & Quality Assurance
+  subtitle: Independent quality lab — every unit tested before shipment
+intro: Paddle Board Overstock operates a dedicated quality control laboratory that operates independently from production. Every batch of raw material and every finished board passes through documented inspection protocols before release. Our QC team reports directly to management, ensuring impartial quality decisions.
 highlights:
   - value: 100%
-    label: Eenheden drukgetest
-    detail: Elke kamer, elke boot
+    label: Units pressure-tested
+    detail: Every chamber, every board
   - value: 48 h
-    label: Duur van de luchtretentietest
-    detail: Bij 1,25× nominale druk
-  - value: '&lt;5%'
-    label: Maximaal toegestane drukval
-    detail: Over een periode van 24 uur
-  - value: AQL 2.5
-    label: Drempelwaarde voor grote defecten
-    detail: Volgens ISO 2859-steekproeven
-
+    label: Air retention test duration
+    detail: At 1.25× rated pressure
+  - value: "&lt;5%"
+    label: Max allowed pressure drop
+    detail: Over 24-hour hold period
+  - value: 99.3%
+    label: Defect-free rate
+    detail: Trailing 12-month shipments
 test_procedures:
-  - title: Inspectie van Grondstoffen
-    description: Elke inkomende partij PVC, Hypalon, drop-stitch doek en hardware wordt getest vóór acceptatie. Treksterkte (ASTM D751), scheurweerstand (ISO 4674) en UV-bestendigheid worden geverifieerd. Niet-conforme materialen worden in quarantaine geplaatst en teruggestuurd.
+  - title: Raw Material Inspection
+    description: Every incoming batch of PVC, drop-stitch fabric, EVA foam, and hardware is tested before acceptance. Tensile strength, tear resistance, and UV resistance are verified. Non-conforming materials are quarantined and returned.
     standards:
-      - ASTM D751 (trek)
-      - ISO 4674 (scheur)
-      - ISO 4892 (UV)
-  - title: QC-controlepunten in het proces
-    description: Productiemedewerkers voeren op elke fase zelfinspectie uit. QC-auditors nemen gedurende de shift steekproeven. Peltests op lasnaden worden elke 50 eenheden uitgevoerd. Dimensionele controles vinden bij elk 20e paneel plaats.
+      - Tensile strength (350 N/cm min)
+      - Tear resistance
+      - UV resistance (1,000 h)
+  - title: In-Process QC Checkpoints
+    description: Production operators perform self-inspection at each stage. QC auditors conduct random sampling throughout the shift. Weld peel tests are performed every 50 units. Dimensional checks happen every 20th panel.
     standards:
-      - ASTM D751 (pel)
-      - Interne 100-punten checklist
-      - ISO 2859-steekproeven
-  - title: 48-uurs luchtretentietest
-    description: Elke tubekamer wordt opgepompt tot 125% van de nominale druk en 48 uur vastgehouden. Druksensoren registreren continu met temperatuurcompensatie. Elke kamer met meer dan 5% drukval activeert automatische herinspectie van de partij.
+      - Peel test every 50 units
+      - Internal 100-point checklist
+      - Random sampling audits
+  - title: 48-Hour Air Retention Test
+    description: Every tube chamber is inflated to 125% of rated pressure and held for 48 hours. Pressure sensors log continuously with temperature compensation. Any chamber exceeding 5% pressure drop triggers automatic batch re-inspection.
     standards:
-      - ISO 6185
-      - CE 2013/53/EU
-  - title: Belastings- & balanstests
-    description: Voltooide boten worden getest op maximale nominale capaciteit voor stabiliteit, vrijboord en handelbaarheid. Elk vaartuig ondergaat watertests vóór goedkeuring bij de eindinspectie.
+      - 1.25x rated pressure hold
+      - <5% max pressure drop
+  - title: Load & Balance Testing
+    description: Completed boards are tested at maximum rated capacity for stability, freeboard, and handling. Each board undergoes water testing before final inspection approval.
     standards:
-      - ISO 12217
-      - CE 2013/53/EU
-
+      - 1.25x rated load verification
+      - Water testing
 equipment:
-  - name: Universele Testmachine (trek)
-    spec: 5 kN, conform ASTM D751
-  - name: Drukvaltester
-    spec: Multikanaals, 0–50 psi, datalogging
-  - name: UV-verouderingskamer
-    spec: ISO 4892, cycli van 1,000 uur
-  - name: Diktemeter (digitaal)
-    spec: Resolutie 0,01 mm
-  - name: Peltester (lasnaad)
-    spec: Gemotoriseerd, 50 N capaciteit
-  - name: Temperatuurkamer
-    spec: "-40 °C tot +100 °C"
-  - name: Lekkagedetectietank
-    spec: 6 m × 2 m, verlicht
+  - name: Universal Testing Machine (tensile)
+    spec: 5 kN capacity
+  - name: Pressure Decay Tester
+    spec: Multi-channel, 0–50 psi, datalogging
+  - name: UV Weathering Chamber
+    spec: UVA-340, 1,000 h cycles
+  - name: Thickness Gauge (digital)
+    spec: 0.01 mm resolution
+  - name: Peel Tester (weld)
+    spec: Motorized, 50 N capacity
+  - name: Temperature Chamber
+    spec: -40 °C to +100 °C
+  - name: Leak Detection Tank
+    spec: 6 m × 2 m, illuminated

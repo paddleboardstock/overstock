@@ -9,13 +9,6 @@ const PAGE_META: Record<string, { title: string }> = {
   ru: { title: 'Сравнения и руководства по покупке' },
   pl: { title: 'Porównania i przewodniki zakupowe' },
   nl: { title: 'Vergelijkingen en koopgidsen' },
-  sv: { title: 'Jämförelser och köpguider' },
-  no: { title: 'Sammenligninger og kjøpeguides' },
-  el: { title: 'Συγκρίσεις και οδηγοί αγοράς' },
-  fi: { title: 'Vertailut ja ostajan oppaat' },
-  da: { title: 'Sammenligninger og købeguider' },
-  cs: { title: 'Srovnání a nákupní průvodce' },
-  ja: { title: '比較と購入ガイド' },
 };
 export const prerender = true;
 
@@ -34,31 +27,11 @@ const t = (key: string) => getUiForLang(lang || defaultLang)?.[key] || '';
 
 const comparisons = [
   {
-    slug: 'pvc-vs-hypalon',
-    title: t('compare.pvcVsHypalon'),
-    desc: t('compare.pvcVsHypalon.desc'),
-    image:
-      'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/factory/paddleboardoverstock-pvc-material-testing.webp',
-  },
-  {
-    slug: 'sup-vs-rib',
-    title: t('compare.supVsRib'),
-    desc: t('compare.supVsRib.desc'),
-    image: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/hero/factory-gate.webp',
-  },
-  {
     slug: 'sup-vs-kayak',
     title: t('compare.supVsKayak'),
     desc: t('compare.supVsKayak.desc'),
     image:
-      'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/paddleboardoverstock-inflatable-boat.webp',
-  },
-  {
-    slug: 'rib-vs-dinghy',
-    title: t('compare.ribVsDinghy'),
-    desc: t('compare.ribVsDinghy.desc'),
-    image:
-      'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/paddleboardoverstock-rib-330-boat.webp',
+      'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-tropical-breeze-1.webp',
   },
   {
     slug: 'inflatable-vs-hardboard',
@@ -66,27 +39,6 @@ const comparisons = [
     desc: t('compare.inflatableVsHard.desc'),
     image:
       'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-ocean-voyager-1.webp',
-  },
-  {
-    slug: 'aluminum-vs-fiberglass',
-    title: t('compare.aluminumVsFiberglass.short'),
-    desc: t('compare.aluminumVsFiberglass.desc'),
-    image:
-      'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/paddleboardoverstock-rib-600.webp',
-  },
-  {
-    slug: 'commercial-vs-recreational-rib',
-    title: t('compare.commercialVsRecreational.short'),
-    desc: t('compare.commercialVsRecreational.desc'),
-    image:
-      'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/paddleboardoverstock-rib-330-boat.webp',
-  },
-  {
-    slug: 'paddleboardoverstock-vs-traditional-manufacturers',
-    title: t('compare.paddleboardoverstockVsTraditional.short'),
-    desc: t('compare.paddleboardoverstockVsTraditional.desc'),
-    image:
-      'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/team/paddleboardoverstock-meeting-overseas.webp',
   },
 ];
 

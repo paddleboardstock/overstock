@@ -16,26 +16,6 @@ const PAGE_DESC: Record<string, { description: string }> = {
     description:
       'Contatta Paddle Board Overstock: le richieste di vendita, assistenza e partnership ricevono risposta entro un giorno lavorativo.',
   },
-  cs: {
-    description:
-      'Kontaktujte společnost Paddle Board Overstock — obchodním, servisním a partnerským dotazům odpovídáme do jednoho pracovního dne.',
-  },
-  sv: {
-    description:
-      'Kontakta Paddle Board Overstock — Förfrågningar om försäljning, support och partnerskap kommer att besvaras inom en arbetsdag.',
-  },
-  da: {
-    description:
-      'Kontakt Paddle Board Overstock — Forespørgsler om salg, support og partnerskab vil blive besvaret inden for en hverdag.',
-  },
-  el: {
-    description:
-      'Επικοινωνήστε με Paddle Board Overstock — Τα ερωτήματα πωλήσεων, υποστήριξης και συνεργασίας θα απαντηθούν εντός μίας εργάσιμης ημέρας.',
-  },
-  no: {
-    description:
-      'Kontakt Paddle Board Overstock — Forespørsler om salg, støtte og partnerskap vil bli besvart innen én virkedag.',
-  },
   ru: {
     description:
       'Свяжитесь с Paddle Board Overstock — на запросы о продажах, поддержке и партнерстве мы ответим в течение одного рабочего дня.',
@@ -43,10 +23,6 @@ const PAGE_DESC: Record<string, { description: string }> = {
   nl: {
     description:
       'Neem contact op met Paddle Board Overstock — Vragen over verkoop, ondersteuning en samenwerking worden binnen één werkdag beantwoord.',
-  },
-  fi: {
-    description:
-      'Ota yhteyttä Paddle Board Overstock — Myynti-, tuki- ja kumppanuuskyselyihin vastataan yhden arkipäivän kuluessa.',
   },
   pl: {
     description:
@@ -60,10 +36,6 @@ const PAGE_DESC: Record<string, { description: string }> = {
     description:
       'Contato Paddle Board Overstock — Consultas sobre vendas, suporte e parceria serão respondidas em um dia útil.',
   },
-  ja: {
-    description:
-      'Paddle Board Overstock へのお問い合わせ — 販売、サポート、パートナーシップに関するお問い合わせには 1 営業日以内に回答させていただきます。',
-  },
 };
 const PAGE_META: Record<string, { title: string }> = {
   de: { title: 'Kontakt' },
@@ -75,13 +47,6 @@ const PAGE_META: Record<string, { title: string }> = {
   ru: { title: 'Контакты' },
   pl: { title: 'Kontakt' },
   nl: { title: 'Contact' },
-  sv: { title: 'Kontakt' },
-  no: { title: 'Kontakt' },
-  el: { title: 'Επικοινωνία' },
-  fi: { title: 'Yhteystiedot' },
-  da: { title: 'Kontakt' },
-  cs: { title: 'Kontakt' },
-  ja: { title: '接触' },
 };
 const HUB_TEXT: Record<
   string,
@@ -121,13 +86,6 @@ const HUB_TEXT: Record<
     hubTitle: 'Hub di produzione ed esportazione',
     emailTitle: 'Richieste generali',
     emailNote: 'MST e GMT+8 — risposta entro 24 ore',
-  },
-  cs: {
-    cardTitle: 'Kontaktní informace',
-    hqTitle: 'Globální centrála & fakturace — Weihai Dongjilian Co., Ltd.',
-    hubTitle: 'Výrobní a exportní centrum',
-    emailTitle: 'Obecné dotazy',
-    emailNote: 'MST a GMT+8 — odpověď do 24 hodin',
   },
 };
 import Layout from '~/layouts/PageLayout.astro';
@@ -229,7 +187,7 @@ const faqSchema = JSON.stringify({
       name: 'How can I contact Paddle Board Overstock?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Email, WhatsApp, or the contact form on this page. OEM/ODM inquiries typically receive a response within 24 hours.',
+        text: 'Email, WhatsApp, or the contact form on this page. Inquiries typically receive a response within 24 hours.',
       },
     },
     {
@@ -242,7 +200,7 @@ const faqSchema = JSON.stringify({
     },
     {
       '@type': 'Question',
-      name: 'What is the best way to start an OEM project?',
+      name: 'What is the best way to get a quote?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Use our Request Quotation form for the fastest response. Include your product requirements, target quantity, and timeline.',
@@ -317,7 +275,7 @@ const faqSchema = JSON.stringify({
               </div>
               <div>
                 <p class="font-medium text-gray-900">{hub.hqTitle}</p>
-                <p class="text-sm text-gray-500">New Mexico, United States</p>
+                <p class="text-sm text-gray-500">Weihai, Shandong, China</p>
                 <p class="text-sm text-gray-500">+1 279 732 3333 · contact@paddleboardoverstock.com</p>
               </div>
             </div>
@@ -337,10 +295,7 @@ const faqSchema = JSON.stringify({
               </div>
               <div>
                 <p class="font-medium text-gray-900">{hub.hubTitle}</p>
-                <p
-                  class="text-sm text-gray-500"
-                  set:html={branding.address || 'Economic Development Zone, Laixi, Qingdao, China, 266600'}
-                />
+                <p class="text-sm text-gray-500" set:html={branding.address || 'Weihai, Shandong, China'} />
                 <p class="text-sm text-gray-500">+86 13305324192 · factory@paddleboardoverstock.com</p>
               </div>
             </div>

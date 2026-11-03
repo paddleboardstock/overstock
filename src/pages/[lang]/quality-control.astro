@@ -37,20 +37,20 @@ const lh = (h: string) => (h ? `/${lang}${h}` : h);
 const ctaActions = cta.actions?.map((a: any) => ({ ...a, href: lh(a.href) }));
 
 const metadata = {
-  title: localizePageTitle(page, `Quality Control System — ${SITE.name} | OEM Marine Manufacturing QC Process`),
+  title: localizePageTitle(page, `Quality Control System — ${SITE.name} | SUP Manufacturing QC Process`),
   description:
-    'Six-stage quality control system for OEM marine manufacturing: material inspection, in-process QC, welding verification, pressure testing, final inspection. ISO 9001 certified. 100% of units tested.',
+    'Six-stage quality control system for SUP board manufacturing: material inspection, in-process QC, welding verification, pressure testing, final inspection. 100% of units tested.',
 };
 const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: 'Quality Control' }];
 
 const tldrSummary =
-  'Six-stage quality control system: material inspection, in-process QC, welding verification, assembly QC, pressure testing at 1.25x rated, and final inspection. ISO 9001:2015 certified. 100% unit pressure testing. 99.3% defect-free rate per AQL 2.5 / ISO 2859.';
+  'Six-stage quality control system: material inspection, in-process QC, welding verification, assembly QC, pressure testing at 1.25x rated, and final inspection. 100% unit pressure testing. 99.3% defect-free rate per AQL 2.5 sampling.';
 
 const tldrPoints = [
   'Six-stage QC: material inspection, in-process QC, welding verification, assembly QC, 1.25x pressure testing, and 100-point final inspection',
-  'ISO 9001:2015 quality management system certified by SGS',
+  '100-point final inspection on every board before packing',
   '100% of units undergo 24-48h hold at 1.25x rated pressure with max 5% drop tolerance',
-  'AQL 2.5 sampling per ISO 2859 ensuring 99.3% defect-free rate',
+  'AQL 2.5 sampling ensuring 99.3% defect-free rate',
   'Welding QC: peel testing, weld width verification, and backlight seam inspection on every welded joint',
 ];
 
@@ -76,7 +76,7 @@ const faqSchema = JSON.stringify({
       name: 'What is AQL 2.5 sampling?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Acceptable Quality Level per ISO 2859 \u2014 statistically valid sampling method ensuring 99.3% defect-free rate.',
+        text: 'Acceptable Quality Level \u2014 statistically valid sampling method ensuring 99.3% defect-free rate.',
       },
     },
     {
@@ -227,7 +227,7 @@ const faqSchema = JSON.stringify({
     service={{
       name: 'Paddle Board Overstock Quality Control System',
       description:
-        'Six-stage quality control system: material inspection, in-process QC, welding verification, assembly QC, pressure testing, final inspection. ISO 9001 certified. 100% unit pressure testing.',
+        'Six-stage quality control system: material inspection, in-process QC, welding verification, assembly QC, pressure testing, final inspection. 100% unit pressure testing.',
       serviceType: 'Quality Control',
       areaServed: ['Global'],
       url: `/${lang}/quality-control`,

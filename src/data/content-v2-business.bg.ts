@@ -81,7 +81,6 @@ export const businessArticles: ContentV2Record[] = [
     ],
     "relatedProducts": [
       "sup-explorer-11",
-      "life-vest-pro"
     ],
     "difficulty": "intermediate"
   },
@@ -149,7 +148,6 @@ export const businessArticles: ContentV2Record[] = [
     ],
     "relatedProducts": [
       "sup-explorer-11",
-      "life-vest-pro"
     ],
     "difficulty": "beginner"
   },
@@ -203,7 +201,7 @@ export const businessArticles: ContentV2Record[] = [
       },
       {
         "q": "Трябва ли да се занимавам с митнически и логистични задачи за внос?",
-        "a": "Paddle Board Overstock предлага FOB Qingdao (вие организирате доставката) или CIF доставка (доставката е включена до вашето пристанище). Можем също да препоръчаме спедитори, които се занимават с митническа проверка и доставка на последната миля."
+        "a": "Paddle Board Overstock предлага FOB Weihai (вие организирате доставката) или CIF доставка (доставката е включена до вашето пристанище). Можем също да препоръчаме спедитори, които се занимават с митническа проверка и доставка на последната миля."
       },
       {
         "q": "Как да гарантирам качеството на продукта?",
@@ -220,7 +218,6 @@ export const businessArticles: ContentV2Record[] = [
     ],
     "relatedProducts": [
       "sup-explorer-11",
-      "life-vest-classic"
     ],
     "difficulty": "intermediate"
   },
@@ -256,8 +253,6 @@ export const businessArticles: ContentV2Record[] = [
     ],
     "relatedProducts": [
       "sup-explorer-11",
-      "life-vest-pro",
-      "life-vest-classic"
     ],
     "difficulty": "beginner"
   },
@@ -293,7 +288,6 @@ export const businessArticles: ContentV2Record[] = [
     ],
     "relatedProducts": [
       "sup-explorer-11",
-      "life-vest-pro"
     ],
     "difficulty": "intermediate"
   },
@@ -329,7 +323,6 @@ export const businessArticles: ContentV2Record[] = [
     ],
     "relatedProducts": [
       "sup-explorer-11",
-      "life-vest-pro"
     ],
     "difficulty": "intermediate"
   },
@@ -361,7 +354,6 @@ export const businessArticles: ContentV2Record[] = [
     ],
     "relatedProducts": [
       "sup-explorer-11",
-      "life-vest-classic"
     ],
     "difficulty": "beginner"
   },
@@ -397,7 +389,6 @@ export const businessArticles: ContentV2Record[] = [
     ],
     "relatedProducts": [
       "sup-explorer-11",
-      "life-vest-pro"
     ],
     "difficulty": "beginner"
   }

@@ -8,7 +8,7 @@ environment: coastal
 skill: intermediate
 products:
   - sup-explorer-11
-  - kayak-lite
+  - sup-ocean-voyager
 tags:
   - touring
   - coastal

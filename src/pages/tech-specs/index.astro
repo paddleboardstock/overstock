@@ -15,8 +15,6 @@ const metadata = {
 };
 
 const categories: { key: ProductRecord['category']; label: string; desc: string }[] = [
-  { key: 'RIB', label: t('techspecs.rib'), desc: t('techspecs.ribDesc') },
-  { key: 'INFLATABLE', label: t('techspecs.inflatable'), desc: t('techspecs.inflatableDesc') },
   { key: 'SUP', label: t('techspecs.sup'), desc: t('techspecs.supDesc') },
   { key: 'ACCESSORY', label: t('techspecs.accessories'), desc: t('techspecs.accessoriesDesc') },
 ];
@@ -57,18 +55,10 @@ const catProducts = categories.map((cat) => ({
                   <tr>
                     <th class="px-4 py-3 font-semibold whitespace-nowrap">{t('techspecs.paramLength')}</th>
                     <th class="px-4 py-3 font-semibold whitespace-nowrap">{t('techspecs.paramBeam')}</th>
-                    {cat.key === 'RIB' && (
-                      <th class="px-4 py-3 font-semibold whitespace-nowrap">{t('techspecs.paramTubeDiam')}</th>
-                    )}
                     <th class="px-4 py-3 font-semibold whitespace-nowrap">{t('techspecs.paramWeight')}</th>
                     <th class="px-4 py-3 font-semibold whitespace-nowrap">{t('techspecs.paramMaxLoad')}</th>
                     <th class="px-4 py-3 font-semibold whitespace-nowrap">{t('techspecs.paramCapacity')}</th>
-                    {cat.key !== 'SUP' && (
-                      <th class="px-4 py-3 font-semibold whitespace-nowrap">{t('techspecs.paramMaxEngine')}</th>
-                    )}
-                    {(cat.key === 'RIB' || cat.key === 'INFLATABLE') && (
-                      <th class="px-4 py-3 font-semibold whitespace-nowrap">{t('techspecs.paramMaterial')}</th>
-                    )}
+                    <th class="px-4 py-3 font-semibold whitespace-nowrap">{t('techspecs.paramPressure')}</th>
                     <th class="px-4 py-3 font-semibold whitespace-nowrap">{t('techspecs.paramWarranty')}</th>
                   </tr>
                 </thead>
@@ -81,20 +71,10 @@ const catProducts = categories.map((cat) => ({
                       <td class="px-4 py-3 text-gray-500 dark:text-slate-400">
                         {p.ai_specs.beam || p.ai_specs.width || '—'}
                       </td>
-                      {cat.key === 'RIB' && (
-                        <td class="px-4 py-3 text-gray-500 dark:text-slate-400">{p.ai_specs.tube_diameter || '—'}</td>
-                      )}
                       <td class="px-4 py-3 text-gray-500 dark:text-slate-400">{p.ai_specs.weight || '—'}</td>
                       <td class="px-4 py-3 text-gray-500 dark:text-slate-400">{p.ai_specs.max_load || '—'}</td>
                       <td class="px-4 py-3 text-gray-500 dark:text-slate-400">{p.ai_specs.capacity || '—'}</td>
-                      {cat.key !== 'SUP' && (
-                        <td class="px-4 py-3 text-gray-500 dark:text-slate-400">{p.ai_specs.max_engine || '—'}</td>
-                      )}
-                      {(cat.key === 'RIB' || cat.key === 'INFLATABLE') && (
-                        <td class="px-4 py-3 text-gray-500 dark:text-slate-400">
-                          {p.ai_specs.hull || p.ai_specs.tubes || p.ai_specs.material || '—'}
-                        </td>
-                      )}
+                      <td class="px-4 py-3 text-gray-500 dark:text-slate-400">{p.ai_specs.pressure || '—'}</td>
                       <td class="px-4 py-3 text-gray-500 dark:text-slate-400">{p.ai_specs.warranty || '—'}</td>
                     </tr>
                   ))}
@@ -118,24 +98,9 @@ const catProducts = categories.map((cat) => ({
               specs: '0.9-1.2 mm thickness, UV stabilized, 2000+ h UV rating, -30°C to +70°C',
             },
             {
-              key: 'materialHypalon',
-              icon: '\u{1F9F5}',
-              specs: '1.2 mm thickness, CSM synthetic rubber, ozone resistant, 10+ year life',
-            },
-            {
               key: 'materialDropstitch',
               icon: '\u{1F6E1}\u{FE0F}',
               specs: '12-15 PSI, 10 cm core height, 500+ denier, 1500 N tensile strength',
-            },
-            {
-              key: 'materialAluminum',
-              icon: '\u{1F3CA}',
-              specs: '5083 alloy, 3 mm plate, welded joints, marine-grade anodized',
-            },
-            {
-              key: 'materialFiberglass',
-              icon: '\u{1F680}',
-              specs: 'Hand-laid fiberglass, gelcoat, deep-V, foam flotation',
             },
           ].map((mat) => (
             <div class="p-5 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800">

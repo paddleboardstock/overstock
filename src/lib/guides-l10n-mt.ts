@@ -53,7 +53,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         'Следвайте структуриран план за първата сесия: изберете спокойна вода, настройте екипировката си правилно, упражнявайте коленичене преди да станете и овладейте движението напред преди да опитате завои.',
       audience: 'Абсолютни начинаещи, които никога не са карали дъх.',
       steps: [
-        'Изберете спокойна, спокойна вода без лодки — малко езеро или защитен залив са идеални',
+        'Изберете тиха, спокойна вода — малко езеро или защитен залив са идеални',
         'Надуйте платката до 12-15 с помощта PSI на двудействащата помпа',
         'Прикрепете каишката за спирала към глезена или прасеца, никога на дръжката на дъската',
         'Вкарайте стабилната перка и затегнете винта',
@@ -78,37 +78,36 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
       ],
     },
     'safety-tips': {
-      title: 'Съвети за безопасност при водни спортове',
-      description:
-        'Основни насоки за безопасност при гребане с гребане, каяк и лодкарство — от проверки на оборудване до осведоменост за времето.',
-      tldr: 'Винаги носете CEсертифициран спасителен жилет, проверявайте метеорологичните и водните условия преди изстрелване, носете комуникационни устройства, никога не гребете сами в непозната вода и разбирайте допустимите граници на оборудването си.',
+      title: 'Paddle Boarding Safety Tips',
+      description: 'Essential safety guidelines for paddle boarding — from equipment checks to weather awareness.',
+      tldr: "Always wear a life vest, check weather and water conditions before launch, carry communication devices, never paddle alone in unfamiliar water, and understand your equipment's rated limits.",
       problem:
-        'Повечето инциденти с водни спортове се дължат на недостатъчна подготовка — липса на спасителна жилетка, игнориране на предупреждения за времето или използване на оборудване над проектните му граници.',
+        'Most water sports accidents result from inadequate preparation — no life vest, ignoring weather warnings, or using equipment beyond its design limits.',
       solution:
-        'Възложете контролен списък за безопасност преди изстрелване: проверете състоянието на оборудването, проверете времето и температурата на водата, информирайте някого за маршрута си и винаги носете подходяща плавателна система.',
-      audience: 'Всички участници във водни спортове — SUPкаяк, лодка и RIB потребители.',
+        'Adopt a pre-launch safety checklist: verify equipment condition, check weather and water temperature, inform someone of your route, and always wear appropriate flotation.',
+      audience: 'All paddle boarders, from first-timers to experienced riders.',
       steps: [
-        'Проверете прогнозата за времето — избягвайте ветрове над 15 mph и гръмотевични бури',
-        'Проверете температурата на водата — студената вода (60°F/15°C) изисква неопренов костюм или сух костюм',
-        'Инспектирайте оборудването — проверете за течове, пукнатини и правилна надуване',
-        'Носете CEсертифициран спасителен жилетка по всяко време',
-        'Закачете каишката SUP() или закрепете всички свободни екипировки (каяк/лодка)',
-        'Подайте план за плаване — кажете на някого къде отивате и кога ще се върнете',
-        'Преносна комуникация — водоустойчив калъф за телефон или VHF радио',
-        'Познайте границите си — останете в рамките на нивото си на умения и екипировката си',
+        'Check weather forecast — avoid winds over 15 mph and thunderstorms',
+        'Verify water temperature — cold water (<60°F/15°C) requires a wetsuit or drysuit',
+        'Inspect equipment — check for leaks, cracks, and proper inflation',
+        'Wear a life vest at all times',
+        'Attach the leash and secure all loose gear',
+        'File a float plan — tell someone where you are going and when you will return',
+        'Carry communication — waterproof phone case or VHF radio',
+        'Know your limits — stay within your skill level and equipment ratings',
       ],
       faq: [
         {
-          q: 'Трябва ли ми спасителна жилетка?SUP',
-          a: 'Да. Много юрисдикции законно изискват спасителна жилетка на всяко водно плавателно средство, включително SUPs. Дори когато не е задължително, сертифицираният CEспасителен жилетка е основно средство за безопасност.',
+          q: 'Do I need a life vest on a SUP?',
+          a: 'Yes. Many jurisdictions legally require a life vest when paddling, including on SUPs. Even where not required, a life vest is essential safety equipment.',
         },
         {
-          q: 'Коя е най-честата травма от водни спортове?',
-          a: 'Потапянето в студена вода и изтощението са най-честите сериозни рискове. Винаги се обличайте според температурата на водата, а не според температурата на въздуха.',
+          q: 'What is the most common water sports injury?',
+          a: 'Cold water immersion and exhaustion are the most common serious risks. Always dress for the water temperature, not the air temperature.',
         },
         {
-          q: 'Как да проверя дали условията са безопасни?',
-          a: 'Използвайте прогнози за морско време. Проверете скоростта на вятъра, височината на вълните и температурата на водата. Начинаещите трябва да останат при условия при вятър от 10 mph и вълни под 1 фут.',
+          q: 'How do I check if conditions are safe?',
+          a: 'Use marine weather forecasts. Check wind speed, wave height, and water temperature. Beginners should stay in conditions under 10 mph wind and under 1 ft waves.',
         },
       ],
     },
@@ -161,7 +160,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         'Познайте прилива — приливните течения могат да бъдат по-силни от скоростта на гребане',
         'Измерване на температурата на водата — под 60°F/15°C изисква термична защита',
         'Проверете видимостта — мъглата и силният дъжд намаляват видимостта и увеличават риска от сблъсъци',
-        'Разберете местните опасности — потопени скали, силни течения, зони с лодков трафик',
+        'Разберете местните опасности — потопени скали, силни течения, зони с интензивен трафик',
       ],
       faq: [
         {
@@ -319,7 +318,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
       audience: 'Йога практикуващи и гребци, които искат да съчетаят тренировките за баланс с осъзнатост.',
       steps: [
         'Закответе дъската в плитка, спокойна вода — използвайте пясъчен котва или вържете за кей',
-        'Започнете със седящи пози — лесна седалка, поза лодка, седнало завъртане',
+        'Започнете със седящи пози — лесна седалка, поза Навасана, седнало завъртане',
         'Напредък към коленичещи пози — настолна маса, котешка крава, гръм',
         'Преминаване в стоящи пози — планина, воин I, воин II, поза дърво',
         'Упражнявайте балансиращи пози — полумесец, орел, танцьор',
@@ -346,9 +345,9 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         'Всичко, което трябва да знаете за риболова от дъска за гребане — настройка на екипировката, съвети за стабилност и техники.',
       tldr: 'SUP Риболовът предлага безшумно приближаване, достъп до плитка вода и 360-градусово хвърляне. Използвайте широка стабилна дъска (34"+), закрепете държачи за въдици и използвайте охладител или сандък като палуба за оборудване. Закотвяйте при ветровити условия. Винаги носете PFD.',
       problem:
-        'Стандартните риболовни лодки са скъпи за поддръжка и не могат да имат достъп до плитки води. Каяците ограничават мобилността.SUP Риболовът решава и двата проблема, но изисква специфични адаптации на екипировката.',
+        'Риболовът с моторни плавателни съдове е скъп за поддръжка и няма достъп до плитки води. SUP риболовът решава и двата проблема, но изисква специфични адаптации на екипировката.',
       solution:
-        'Оборудвайте конюшня SUP с държачи за въдици, сандък за екипировка и котвена система. Използвайте преносимостта на дъската за достъп до отдалечени риболовни места, до които лодките не могат да достигнат.',
+        'Оборудвайте стабилно SUP с държачи за въдици, сандък за екипировка и котвена система. Използвайте преносимостта на дъската за достъп до отдалечени риболовни места, до които моторните плавателни съдове не могат да достигнат.',
       audience:
         'Риболовци, които искат да ловят в плитки води, отдалечени места или предпочитат лека, преносима платформа за риболов.',
       steps: [
@@ -375,1750 +374,137 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
       ],
     },
     'inflatable-repair': {
-      title: 'Как да ремонтирате вашата надуваема лодка или SUP',
+      title: 'How to Repair Your Inflatable SUP',
       description:
-        'Стъпка по стъпка ръководство за ремонт на спукани гуми, проблеми с клапани и повреди по шевовете на надуваеми водни съдове.',
-      tldr: 'Малки пробиви (под 1/4") могат да се ремонтират с включения комплект за пачове. Почистете зоната, нанесете PVC лепило, притиснете пластира и изчакайте 24 часа. Течовете на клапаните обикновено изискват смяна на О-пръстена. Големи разкъсвания или разклонение на шевовете изискват професионално обслужване.',
+        'Step-by-step guide to repairing punctures, valve issues, and seam damage on your inflatable paddle board.',
+      tldr: 'Small punctures (under 1/4") are repairable with the included patch kit. Clean the area, apply PVC adhesive, press the patch, and wait 24 hours. Valve leaks usually require O-ring replacement. Large tears or seam delamination need professional service.',
       problem:
-        'Малки спукани и проблеми с клапаните са чести, но лесни за отстраняване. Без правилна техника за ремонт, потребителите или плащат прекалено много за професионално обслужване, или влошават щетите.',
+        'Small punctures and valve issues are common but easy to fix. Without proper repair technique, users either overpay for professional service or make the damage worse.',
       solution:
-        'Идентифицирайте вида на повредата — пробив, теч на клапана или проблем с шева — и приложите подходящия метод за ремонт. Повечето ремонти отнемат 30 минути плюс време за втвърдяване.',
-      audience:
-        'Собственици на SUPsнадуваеми каякове, каяци и лодки, които искат сами да се справят с основните ремонти.',
+        'Identify the damage type — puncture, valve leak, or seam issue — and apply the appropriate repair method. Most repairs take 30 minutes plus curing time.',
+      audience: 'Owners of inflatable SUP boards who want to handle basic repairs themselves.',
       steps: [
-        'Открийте теча — надуйте напълно, слушайте за въздух, пипнете с ръка или използвайте сапунена вода',
-        'Отбележете теча с химикал или тиксо',
-        'Почистете зоната около теча с изопропилов спирт — поне 2 инча около мястото на щетите',
-        'Оформете повърхността с фина шкурка за по-добро лепило',
-        'Нанесете PVC лепило както върху папа, така и върху повърхността на дъската',
-        'Изчакайте 5 минути, докато лепилото стане лепкаво',
-        'Притиснете пластира здраво, изкарайте въздушни мехурчета с ролка или кредитна карта',
-        'Оставете да се втвърди 24 часа, преди да се надуе до пълно налягане',
+        'Locate the leak — inflate fully, listen for air, feel with your hand, or use soapy water',
+        'Mark the leak with a pen or tape',
+        'Clean the area around the leak with isopropyl alcohol — at least 2 inches around the damage',
+        'Rough the surface with fine sandpaper for better adhesive bonding',
+        'Apply PVC adhesive to both the patch and the board surface',
+        'Wait 5 minutes for the adhesive to become tacky',
+        'Press the patch firmly, roll out air bubbles with a roller or credit card',
+        'Let cure for 24 hours before inflating to full pressure',
       ],
       faq: [
         {
-          q: 'Мога ли да поправя спукана гума във водата?',
-          a: 'Спешните ремонти с пластир и тиксо могат да ви върнат обратно на брега. Пълните ремонти изискват сухи условия и 24-часово втвърдяване.',
+          q: 'Can I repair a puncture on the water?',
+          a: 'Emergency repairs using a patch and tape can get you back to shore. Full repairs require dry conditions and 24-hour curing.',
         },
         {
-          q: 'Как да оправя течащ клапан?',
-          a: 'Премахнете ядрото на клапана с включения инструмент, проверете О-пръстена за повреди, сменете го при нужда и поставете ядрото плътно.',
+          q: 'How do I fix a leaking valve?',
+          a: 'Remove the valve core with the included tool, check the O-ring for damage, replace if needed, and reinsert the core tightly.',
         },
         {
-          q: 'Какво лепило да използвам за PVC ремонти?',
-          a: 'Използвайте PVCспецифично лепило като HH-66 или Clifton. Стандартното супер лепило не се свързва добре с PVC надуваеми материали.',
-        },
-      ],
-    },
-    'kayak-techniques': {
-      title: 'Основни техники за гребане с каяк',
-      description:
-        'Майсторско гребане с каяк — напреднал гребане, свип греб, ръб и укрепване за ефективно и безопасно каяк.',
-      tldr: 'Движението напред на каяка използва въртене на торса, а не ръце. Движението на свипа завърта каяка. Ръбът подобрява завиването. Ниската опора предотвратява преобръщане на вълни. Дръжте вала на греблото вертикално, а лопатката напълно потопена.',
-      problem:
-        'Неефективната техника на гребане води до умора на раменете, бавен напредък и затруднения при контрола на каяка при вятър и течение.',
-      solution:
-        'Научете правилната техника на гребане, задвижвано от торса, с четири основни движения — напред, назад, замахване и укрепване.',
-      audience: 'Начинаещи и средно ниво каякари, които искат да гребат с по-малко усилие и повече контрол.',
-      steps: [
-        'Движение напред: завъртете торса, поставете острието близо до краката си, издърпайте покрай бедрото, излизайте при бедрото',
-        'Обратен ход: поставете острието зад себе си, натиснете напред за забавяне или обратно',
-        'Sweep stroke: протегнете се напред, замахнете острието в широка дъга към кърмата, завъртете каяка',
-        'Ниска подпорка: ударете острието плоско върху повърхността на водата за стабилност при вълни',
-        'Ръб: наклонете каяка леко по ръба, за да направите завои',
-      ],
-      faq: [
-        {
-          q: 'Как да държа каяка си да върви право?',
-          a: 'Използвай постоянни движения на редуващи се страни. Научи J-stroke (леко закачване в края на предния ход) за корекция на курса без смяна на страните.',
-        },
-        {
-          q: 'Коя е най-честата травма при каяк?',
-          a: 'Разтежение на раменете от гребане, доминирано в ръцете. Използвайте въртенето на торса, за да ангажирате по-големите мускули на гърба и да намалите натоварването на раменете.',
-        },
-        {
-          q: 'Как да греба на вятър?',
-          a: 'Дръжте носа насочен към вятъра. Използвайте по-къси, по-мощни замахания. Ако пресичете вятъра, наклонете каяка леко срещу вятъра.',
+          q: 'What glue should I use for PVC repairs?',
+          a: 'Use PVC-specific adhesive like HH-66 or Clifton. Standard super glue does not bond well with inflatable PVC materials.',
         },
       ],
     },
     'multi-day-trip': {
-      title: 'Планиране на многодневен каяк или SUP пътуване',
+      title: 'Planning a Multi-Day SUP Tour',
       description:
-        'Как да планирате и изпълните многодневно гребане — планиране на маршрута, опаковане на екипировка, къмпинг и безопасност.',
-      tldr: 'Планирайте 10-15 мили на ден. Опаковайте екипировката във водоустойчиви сухи чанти, разпределете теглото равномерно и упражнявайте натоварването на дъската или каяка преди пътуването. Подайте план за плаване. Носете вода, храна, подслон, навигация и комуникация.',
+        'How to plan and execute a multi-day paddling trip — route planning, gear packing, camping, and safety.',
+      tldr: 'Plan 10-15 miles per day. Pack gear in waterproof dry bags, distribute weight evenly, and practice loading your board before the trip. File a float plan. Carry water, food, shelter, navigation, and communication.',
       problem:
-        'Многодневните пътувания се провалят поради претоварване, лошо планиране на маршрута или подценяване на времето и течението — което води до изтощения, повреда на зъбното колело или инциденти с безопасността.',
+        'Multi-day trips fail due to overpacking, poor route planning, or underestimating weather and current — leading to exhaustion, gear failure, or safety incidents.',
       solution:
-        'Използвайте систематичен подход за планиране: избор на маршрут, контролен списък с екипировка, планиране на храната, брифинг за безопасност и планиране при извънредни ситуации.',
-      audience: 'Опитни гребци, планиращи първата си многодневна експедиция.',
+        'Use a systematic planning approach: route selection, gear checklist, food planning, safety briefing, and contingency planning.',
+      audience: 'Experienced paddlers planning their first multi-day expedition.',
       steps: [
-        'Изберете маршрут с установени къмпинг места и точки за спасяване',
-        'Планирайте 10-15 мили на ден, като се вземат предвид вятърът и течението',
-        'Проверете таблиците на приливите и прогнозите за времето за целия период на пътуване',
-        'Опаковайте екипировката във водоустойчиви сухи торби — общо тегло на екипировката 20-30 lbs',
-        'Разпределете тежестта равномерно — най-тежките предмети в центъра',
-        'Подайте подробен план за плаване при някого на сушата',
-        'Вземете навигация — хартиена карта, компас и GPS резервни копия',
-        'Опаковайте аварийно подслон, допълнителна храна и аптечка',
+        'Select a route with established campsites and bailout points',
+        'Plan 10-15 miles per day accounting for wind and current',
+        'Check tide tables and weather forecasts for the entire trip window',
+        'Pack gear in waterproof dry bags — 20-30 lbs total gear weight',
+        'Distribute weight evenly — heaviest items in the center',
+        'File a detailed float plan with someone on shore',
+        'Bring navigation — paper chart, compass, and GPS backup',
+        'Pack emergency shelter, extra food, and first aid kit',
       ],
       faq: [
         {
-          q: 'Каква е идеалната дневна дистанция?',
-          a: '10-15 мили на ден за опитни гребци. Начинаещите трябва да планират 5-8 мили. Винаги планирайте резервно време за времето.',
+          q: 'What is the ideal daily distance?',
+          a: '10-15 miles per day for experienced paddlers. Beginners should plan 5-8 miles. Always build in buffer time for weather.',
         },
         {
-          q: 'Колко вода трябва да нося?',
-          a: '1 галон на човек на ден. При горещи условия – 1.5 галона. Носете воден филтър или пречистващи таблетки за презареждане.',
+          q: 'How much water should I carry?',
+          a: '1 gallon per person per day. In hot conditions, 1.5 gallons. Carry a water filter or purification tablets for refills.',
         },
         {
-          q: 'Кой е най-важният продукт за безопасност?',
-          a: 'Комуникация. VHF радио или сателитен месинджър може да спаси живота при спешен случай. Мобилните телефони са ненадеждни в отдалечени райони.',
+          q: 'What is the most important safety item?',
+          a: 'Communication. A VHF radio or satellite messenger can be life-saving in an emergency. Cell phones are unreliable in remote areas.',
         },
       ],
     },
     'choosing-paddle': {
-      title: 'Как да изберете правилното гребло SUP за каяк',
-      description:
-        'Ръководство за материалите за гребла, форми на лопатата, типовете валове и оразмеряване и каяк SUP .',
-      tldr: 'Дължина на греблата: SUP греблата трябва да са с 6-8" по-високи от височината ви. Каяк греблата зависят от ширината на лодката и дължината на торса. Форма на лопатката: диедричните лопатки са прави, плоските лопатки осигуряват по-добро захващане. Материал на вала: карбонът е най-лек, фибростъклото е най-добра стойност, алуминият е бюджетен.',
+      title: 'How to Choose the Right SUP Paddle',
+      description: 'A guide to paddle materials, blade shapes, shaft types, and sizing for stand-up paddle boarding.',
+      tldr: 'Paddle length: SUP paddles should be 6-8" taller than your height. Blade shape: dihedral blades track straight, flat blades offer more catch. Shaft material: carbon is lightest, fiberglass is best value, aluminum is budget.',
       problem:
-        'Използването на неправилен размер или материал на греблото води до излишна умора, ниска ефективност на гребка и напрежение в ставите.',
+        'Using the wrong paddle size or material causes unnecessary fatigue, poor stroke efficiency, and joint strain.',
       solution:
-        'Съобразете дължината на греблото, формата на острието, материала на дръжката и гъвкавостта според стила на гребане, размера на тялото и бюджета си.',
-      audience: 'SUP и каяк гребци, които избират първото или следващото си гребане.',
+        'Match paddle length, blade shape, shaft material, and flex to your paddling style, body size, and budget.',
+      audience: 'SUP paddlers choosing their first or next paddle.',
       steps: [
-        'За SUP: измерете височината на греблото — с 6-8" по-висока от вашата височина при общо гребане',
-        'За каяк: измерете дължината на торса и ширината на лодката — по-тесните лодки се нуждаят от по-къси гребла',
-        'Изберете материал за острието — найлон за бюджет, фибростъкло за стойност, карбон за представяне',
-        'Изберете форма на острието — диедрично за плавно проследяване, плоско за мощност, лъжица за състезания',
-        'Изберете тип вал — прав SUPза , огънат за SUPсъстезания, стандартен за каяк',
-        'Check flex — по-твърди валове предават повече мощност, гъвкавите валове намаляват напрежението при ставата',
+        'For SUP: measure paddle height — 6-8" taller than your height for general paddling',
+        'Adjust for board width — wider boards call for a slightly longer paddle',
+        'Choose blade material — nylon for budget, fiberglass for value, carbon for performance',
+        'Choose blade shape — dihedral for smooth tracking, flat for power, spoon for racing',
+        'Choose shaft type — straight for general paddling, bent for racing',
+        'Check flex — stiffer shafts transfer more power, flexible shafts reduce joint strain',
       ],
       faq: [
         {
-          q: 'Кой е най-добрият материал за гребла?',
-          a: 'Фибростъклото предлага най-добрия баланс между тегло, издръжливост и цена. Въглеродът е по-лек, но по-скъп и чуплив. Найлонът е тежък, но практически неразрушим.',
+          q: 'What is the best paddle material?',
+          a: 'Fiberglass offers the best balance of weight, durability, and cost. Carbon is lighter but more expensive and brittle. Nylon is heavy but virtually indestructible.',
         },
         {
-          q: 'Как да разбера дали греблото ми е с правилната дължина?',
-          a: 'За SUP: поставете греблото вертикално до себе си — дръжката трябва да достига до китката ви, когато ръката ви е вдигната над главата. За каяк: острието трябва да влиза във водата под удобен ъгъл, без да се протяга прекалено.',
+          q: 'How do I know if my paddle is the right length?',
+          a: 'Stand the paddle vertically next to you — the handle should reach your wrist when your arm is raised overhead.',
         },
         {
-          q: 'Трябва ли да взема едноделна или регулируема гребло?',
-          a: 'Регулируемите гребла са подходящи за споделено ползване и движение. Едночастните гребла са по-леки, по-твърди и по-ефективни за специализирана употреба.',
+          q: 'Should I get a one-piece or adjustable paddle?',
+          a: 'Adjustable paddles are good for shared use and travel. One-piece paddles are lighter, stiffer, and more efficient for dedicated use.',
         },
       ],
     },
     'sup-with-kids': {
-      title: 'SUP с деца: Пълно семейно ръководство',
-      description: 'Как безопасно да водите децата на падълборд — препоръки за възраст, оборудване и дейности.',
-      tldr: 'Децата на 6+ години могат да карат SUP с възрастен. Децата на 10+ могат да гребат сами с наблюдение. Използвайте широка конюшня дъска, винаги носете PFD, стойте в плитка спокойна вода и поддържайте сесиите кратки (максимум 30-45 минути).',
+      title: 'SUP with Kids: A Complete Family Guide',
+      description: 'How to safely take children paddle boarding — age recommendations, equipment, and activities.',
+      tldr: 'Children 6+ can ride on a SUP with an adult. Children 10+ can paddle their own board with supervision. Use a wide stable board, always wear PFDs, stay in shallow calm water, and keep sessions short (30-45 minutes max).',
       problem:
-        'Родителите искат да споделят водни спортове с децата си, но се тревожат за безопасността, пасването на оборудването и ангажираността на децата.',
+        'Parents want to share water sports with their kids but worry about safety, equipment fit, and keeping children engaged.',
       solution:
-        'Използвайте правилния размер дъска за съвместно каране, уверете се, че всяко дете носи подходящо прилепналаPFD, започнете в плитка топла вода и направете го забавно с игри и кратки сесии.',
-      audience: 'Родители, които искат да запознаят децата си с падълбординг.',
+        'Use the right board size for tandem riding, ensure every child wears a properly fitted PFD, start in shallow warm water, and make it fun with games and short sessions.',
+      audience: 'Parents who want to introduce their children to paddle boarding.',
       steps: [
-        'Възраст 4-6 години: каране като пътник на дъска за възрастни — седнете отпред, хванете се за централната дръжка',
-        'Възраст 6-10 години: коленичи или седи на собствена дъска с възрастен надзор и каишка',
-        'На 10 +години: гребат собствена дъска с възрастен надзор наблизо',
-        'Винаги носете PFD — децата трябва да носят правилно прилепнал спасителен жилетка по всяко време',
-        'Останете в плитка вода (до кръста за възрастните)',
-        'Дръжте сесиите кратки — максимум 30-45 минути за деца под 10 години',
-        'Направете го забавно — играйте игри, търсете риби, упражнявайте се прав',
+        "Age 4-6: ride as a passenger on an adult's board — sit in front, hold onto the center handle",
+        'Age 6-10: kneel or sit on their own board with adult supervision and a leash',
+        'Age 10+: paddle their own board with adult supervision nearby',
+        'Always wear a PFD — children must wear a properly fitted life vest at all times',
+        'Stay in shallow water (waist-deep for the adult)',
+        'Keep sessions short — 30-45 minutes max for children under 10',
+        'Make it fun — play games, look for fish, practice standing up',
       ],
       faq: [
         {
-          q: 'На каква възраст може дете SUP да бъде само?',
-          a: 'Около 10-12 години с надзор, в зависимост от плуването и комфорта на детето във вода. Винаги в спокойни, плитки условия.',
+          q: 'At what age can a child SUP alone?',
+          a: "Around age 10-12 with supervision, depending on the child's swimming ability and comfort in water. Always in calm, shallow conditions.",
         },
         {
-          q: 'Коя дъска е най-подходяща SUP за деца?',
-          a: 'Широка дъска (34"+) с голям капацитет за каране в тандем. Ширината SUP 33" и капацитетът 220 lb на Explorer 11 са подходящи за родител плюс дете.',
+          q: 'What board is best for SUP with kids?',
+          a: 'A wide board (34"+) with high weight capacity for tandem riding. The SUP Explorer 11\'s 33" width and 220 lb capacity works well for parent-plus-child.',
         },
         {
-          q: 'От какво оборудване за безопасност се нуждаят децата?',
-          a: 'Добре монтиран CE– сертифициран спасителен жилет, каишка (прикрепена към дъската за възрастни за тандем), слънцезащитен крем и шапка.',
-        },
-      ],
-    },
-  },
-  et: {
-    'how-to-choose-your-sup': {
-      title: 'Kuidas valida oma SUP laud',
-      description:
-        'Täielik juhend, kuidas valida õige püsti aerulaua vastavalt sinu oskustasemele, vee tingimustele ja kasutusotstarbele.',
-      tldr: 'Vali SUP oma oskustaseme, vee tüübi ja peamise kasutuse alusel. Mitmekülgsed lauad sobivad algajatele ja rahulikule veele. Matkalauad sobivad kaugaerutamisele. Joogalauad pakuvad stabiilsuse tagamiseks lisalaiust. Jõudluslauad sobivad kogenud aerutajatele erinevates tingimustes.',
-      problem:
-        'Enamik esmakordseid ostjaid valib SUP laua hinna või välimuse põhjal, mitte selle põhjal, kuidas ja kus nad tegelikult aerutavad. See põhjustab halva stabiilsuse, ebapiisava jõudluse ja frustreeriva kogemuse.',
-      solution:
-        'Kohanda oma laua kuju, maht ja konstruktsioon vastavalt oma oskustasemele ja põhiveekeskkonnale. Laiemad lauad (32-34") pakuvad stabiilsust algajatele. Pikemad lauad (12-14") sobivad paremini matkamiseks.Drop-stitch Ehitus 12-15" PSI tasemel annab jäikust, mis on võrreldav kõvade laudadega.',
-      audience: 'SUP Esmakordsed ostjad, harrastuslikud aerutajad ja kõik, kes uuendavad tavalisest lauast.',
-      steps: [
-        'Määra oma peamine aerutamiskeskkond — järv, ookean, jõgi või segatud',
-        'Sobita laua laius vastavalt oma oskustasemele: 32-34" algajatele, 30-32" kesktasemele, 28-30" edasijõudnutele',
-        'Vali laua pikkus vastavalt kasutusele: lühem manööverdusvõime jaoks, pikem jälgimiseks ja kiiruseks',
-        'Valitud konstruktsioon: drop-stitch täispuhutav kaasaskantavuse tagamiseks, kõvaplaat maksimaalse jõudluse tagamiseks',
-        'Kontrolli kaalu kandevõimet — sinu kaal koos varustusega ei tohi ületada 80% laua limiidist',
-        'Kontrolli kaasasolevaid tarvikuid: pump, rihm, finaal, seljakott ja remondikomplekt',
-      ],
-      faq: [
-        {
-          q: 'Milline SUP laius on algajatele parim?',
-          a: '32 kuni 34 tolli laiune on kõige stabiilsem õppeplatvorm. SUP Explorer 11, 33" laiusega, sobib ideaalselt esmakordsetele aerutajatele rahulikus vees.',
-        },
-        {
-          q: 'Täispuhutav või kõva SUP laud?',
-          a: 'Täispuhutavad lauad pakuvad kaasaskantavust, hoiustamise mugavust ja löökide neeldumist. Kõvad lauad pakuvad maksimaalset jäikust ja kiirust. Enamiku vaba aja kasutajate jaoks on praktiline valik kvaliteetne täispuhutav drop-stitch südamikuga raam.',
-        },
-        {
-          q: 'Millele PSI peaksin täitma?',
-          a: 'Paddle Board Overstock Lauad soovitavad 12–15 PSIkraadi. 15 kraadi juures PSI saavutab laud maksimaalse jäikuse, mis on võrreldav kõva lauaga. Alati jää plaadile trükitud nimirõhu vahemikku.',
-        },
-      ],
-    },
-    'beginner-guide': {
-      title: 'Algajate juhend aerulauasõiduks',
-      description:
-        'Kõik, mida pead teadma enne esimest aerulauasõidu sessiooni — alates varustuse seadistamisest kuni põhiliste aerutamistehnikateni.',
-      tldr: 'Alusta rahuliku, tasase vee peal laia ja stabiilse lauaga. Täida 12-15 PSIkraadini, kinnita rihm ja kasuta õiget aeru pikkust (6-8" kõrgem kui sinu pikkus). Hoia asend õlgade laiuses, põlved kergelt kõverdatud ja vaata horisondi.',
-      problem:
-        'Uued aerutajad jätavad sageli põhilise ettevalmistuse vahele — vale aeru pikkus, halb rüht või karm vesi — mis viib kukkumiste, pettumuse ja pettumiseni.',
-      solution:
-        'Järgi struktureeritud esimese sessiooni plaani: vali rahulik vesi, seadista varustus õigesti, harjuta põlvitamist enne püsti tõusmist ja valda ettepoole liikumine enne pöördeid.',
-      audience: 'Täiesti algajad, kes pole kunagi aerulauaga sõitnud.',
-      steps: [
-        'Vali tasane, rahulik vesi ilma paadiliikluseta — väike järv või varjatud laht on ideaalne',
-        'Täida laud 12-15 PSI kraadini kahetoimelise pumba abil',
-        'Kinnita spiraalrihm pahkluule või säärele, mitte kunagi laua käepidemele',
-        'Pane uim sisse ja pinguta kruvi',
-        'Reguleeri aeru pikkust — see peaks olema 6–8 tolli kõrgem kui sinu pikkus',
-        'Alusta põlvitamist laual, aeruta paar tõmmet, et tunda tasakaalu',
-        'Seisa üks jalg korraga, jalad õlgade laiuses, põlved pehmed',
-        'Vaata horisondi, mitte jalgu — su laud läheb sinna, kuhu vaatad',
-      ],
-      faq: [
-        {
-          q: 'Mida peaksin aerulauasõidul selga panema?',
-          a: 'Kiirelt kuivav spordiriietus, päästevest, päikesekaitsekreem ja müts. Külmas vees kanna kalipsodi. Kanna alati rihma ja kanna telefoni veekindlas ümbrises.',
-        },
-        {
-          q: 'Kuidas ma saan tagasi lauale, kui kukun?',
-          a: 'Ole rahulik. Uju laua juurde, haara keskmisest käepidemest ja löö jalgu, tõmmates end ühe liigutusega lauale. Naase põlvitamisasendisse, siis seisa püsti.',
-        },
-        {
-          q: 'Millised tuuleolud on ohutud?',
-          a: 'Algajale: tuul alla 10 miili tunnis (5 sõlme). Kui tuul puhub kaldast eemale, ära mine välja. Vaata ilmaprognoosi ja mõista, et avamere tuul on ohtlik.',
-        },
-      ],
-    },
-    'safety-tips': {
-      title: 'Veespordi ohutusnõuanded',
-      description:
-        'Olulised ohutusjuhised aerulaudamiseks, kajakisõiduks ja paadisõiduks — alates varustuse kontrollist kuni ilmateadlikkuseni.',
-      tldr: 'Kanna alati CEsertifitseeritud päästevesti, kontrolli enne starti ilma- ja veeolusid, kanna sidevahendeid, ära kunagi sõuda üksi võõras vees ning mõista oma varustuse lubatud piiranguid.',
-      problem:
-        'Enamik veespordi õnnetusi tekib ebapiisava ettevalmistuse tõttu — päästevesti puudumine, ilmastikuhoiatuste eiramine või seadmete kasutamine üle oma disainipiirangute.',
-      solution:
-        'Võta kasutusele enne starti ohutuskontrollnimekiri: kontrolli varustuse seisukorda, kontrolli ilma ja vee temperatuuri, teavita kedagi oma marsruudist ning kanna alati sobivat ujuvust.',
-      audience: 'Kõik veespordialade osalejad — SUP, kajak, paat ja RIB kasutajad.',
-      steps: [
-        'Kontrolli ilmaprognoosi — väldi üle 15 miili tunnis tuult ja äikesetorme',
-        'Kontrolli vee temperatuuri — külm vesi (60°F/15°C) nõuab kalipso või kuivülikonda',
-        'Kontrollige seadmeid — kontrollige lekkeid, pragusid ja õiget täitmist',
-        'Kanna alati CEsertifitseeritud päästevesti',
-        'Kinnita rihm (SUP) või kinnita kogu lahtine varustus (kajak/paat)',
-        'Esita float-plaan — ütle kellelegi, kuhu lähed ja millal tagasi tuled',
-        'Side kaasas kandmine — veekindel telefoniümbrise või VHF-raadio',
-        'Tunne oma piire — jää oma oskustaseme ja varustuse taseme piiresse',
-      ],
-      faq: [
-        {
-          q: 'Kas mul on vaja päästevesti SUP?',
-          a: 'Jah. Paljud jurisdiktsioonid nõuavad seadusega päästevesti igas veesõidukis, sealhulgas SUPs. Isegi kui seda ei nõuta, CEon sertifitseeritud päästevest hädavajalik ohutusvarustus.',
-        },
-        {
-          q: 'Milline on kõige levinum veespordi vigastus?',
-          a: 'Külma vee sukeldumine ja kurnatus on kõige levinumad tõsised riskid. Riietu alati vee temperatuuri järgi, mitte õhu temperatuuri järgi.',
-        },
-        {
-          q: 'Kuidas ma saan kontrollida, kas tingimused on ohutud?',
-          a: 'Kasuta mereilmaprognoose. Kontrolli tuule kiirust, lainete kõrgust ja vee temperatuuri. Algajad peaksid püsima tingimustes, mis on alla 10 miili tunnis tuule ja alla 1 jala lainete.',
-        },
-      ],
-    },
-    'inflatable-vs-hard': {
-      title: 'Täispuhutavad vs SUP kõvad lauad: kumma peaksid valima?',
-      description:
-        'Objektiivne võrdlus täispuhutavate ja SUP jäikade laudade vahel, mis hõlmab jõudlust, kaasaskantavust, vastupidavust ja väärtust.',
-      tldr: 'Täispuhutavad lauad võidavad kaasaskantavuse, hoiustamise ja löögikindluse poolest. Kõvad lauad võidavad maksimaalse jäikuse ja kiiruse poolest. Kaasaegsed täispuhutavad drop-stitch lauad 15 juures PSI vähendavad 90% jõudluse vahest.',
-      problem:
-        'Ostjad on lõksus täispuhutavate laudade mugavuse ja kõvalaudade jõudluse maine vahel, ilma selgete andmeteta nende tegeliku võrdluse kohta.',
-      solution:
-        'Võrdle konkreetseid kriteeriume — jäikus, kaal, pakitud suurus, vastupidavus, remont ja hind — oma tegeliku kasutusmustriga. Enamiku harrastusaerutajate jaoks on kvaliteetne täispuhutav valik parem valik.',
-      audience: 'SUP Ostjad otsustavad täispuhutava ja jäiga konstruktsiooni vahel.',
-      steps: [
-        'Hinda kaasaskantavuse vajadusi — täispuhutavad kotid kuni seljakoti suuruseni, kõvalaud nõuab katuseraami',
-        'Võrdle jäikust — täispuhutav 15-aastane PSI painduvus on minimaalne, kõvalaud ei paindu üldse',
-        'Hinda hoiustamist — täispuhutavad kauplused kapis, kõvalaud vajavad garaaži või riiuliruumi',
-        'Mõtle vastupidavusele — täispuhutav seade neelab lööke, kõva laud võib mõlkida ja praguneda',
-        'Faktori parandamine — täispuhutavad plaastrid on lihtsad, kõvalaudade parandamine nõuab professionaalset tööd',
-        'Kontrolli jõudlust — kõvadel laudadel on väike kiiruseelis, täispuhutavad seadmed pakuvad paremat löögi neeldumist',
-      ],
-      faq: [
-        {
-          q: 'Kas täispuhutavad on SUPs sama jäigad kui kõvad lauad?',
-          a: 'PSI 15-aastase drop-stitch ehitusega on jäikuse erinevus vaba aja kasutuseks minimaalne. Ainult võistlejad ja surfajad märkavad erinevust.',
-        },
-        {
-          q: 'Kui kaua kestab täispuhutav SUP seade?',
-          a: 'Õige hoolduse korral 5–10 aastat. Mereväe PVC kvaliteediga UV vastupidavused ja hõõrdumine. Säilita eemal otsese päikesevalguse eest, kui neid ei kasutata, ja loputa pärast soolase vee kasutamist värske veega.',
-        },
-        {
-          q: 'Kas ma saan surfamiseks kasutada täispuhutavat SUP seadet?',
-          a: 'Jah, aga täispuhutavad lauad sobivad parimad väikeste kuni keskmise surfamise jaoks (alla 3 jalga). Spetsiaalseks surfamiseks pakub kõva laud paremat reageerimisvõimet ja rööbastega haaramist.',
-        },
-      ],
-    },
-    'weather-conditions': {
-      title: 'Ilmastikutingimuste mõistmine aerulauasõiduks',
-      description: 'Õpi lugema tuult, laineid, loodeid ja ilmastikumustreid, et teha ohutuid otsuseid vee peal.',
-      tldr: 'Kontrolli enne iga starti kolme asja: tuule kiirus (algajatele alla 10 miili tunnis), lainete kõrgust (algajatele alla 1 jala) ja vee temperatuuri (riietu vee jaoks, mitte õhu jaoks). Avamere tuul on ohtlik igal oskustasemel.',
-      problem:
-        'Enamik ilmastikuga seotud õnnetusi juhtub, sest aerutajad hindavad tingimusi valesti — nad kontrollivad õhutemperatuuri, kuid mitte vee temperatuuri, või ei mõista, et avamere tuul võib neid merre puhuda.',
-      solution:
-        'Kasuta struktureeritud eelstarti ilmastikuhinnangut: tuule suund ja kiirus, laineperiood ja kõrgus, loodeseisund ning vee temperatuur. Mõista, kuidas iga tegur mõjutab sinu ohutust.',
-      audience: 'Kõik aerutajad, kes lähevad avaveele — järved, lahed, jõed ja ookean.',
-      steps: [
-        'Kontrolli tuule kiirust ja suunda — avamere tuul (mis puhub maalt merre) on kõige ohtlikum',
-        'Hinda lainetingimusi — laineperiood on sama oluline kui lainekõrgus',
-        'Tunne tõusu — tõusuvoolud võivad olla tugevamad kui sinu aerutamiskiirus',
-        'Vee temperatuuri mõõtmine — alla 60°F/15°C nõuab soojuskaitset',
-        'Kontrolli nähtavust — udu ja tugev vihm vähendavad nähtavust ja suurendavad kokkupõrkeriski',
-        'Mõista kohalikke ohte — veealused kivid, tugevad hoovused, paadiliikluse tsoonid',
-      ],
-      faq: [
-        {
-          q: 'Millise tuulekiiruse jaoks on liiga SUPsuur?',
-          a: 'Algajad: üle 10 miili tunnis (8 sõlme). Kesktasemel: üle 15 miili tunnis (13 sõlme). Edasijõudnut: üle 20 miili tunnis (17 sõlme). Kui kahtled, ära mine välja.',
-        },
-        {
-          q: 'Mida tähendab laineperiood?',
-          a: 'Laineperiood on aeg järjestikuste lainete vahel. Lühikesed perioodid (alla 8 sekundi) tähendavad järske, tormilisi laineid. Pikad perioodid (üle 12 sekundi) tähendavad sujuvamaid ja ennustatavamaid laineid.',
-        },
-        {
-          q: 'Kas ma võin vihmas aerutada?',
-          a: 'Kerge vihm on tavaliselt ohutu. Tugev vihm vähendab nähtavust ja võib viidata tuuleolude muutumisele. Äikesetormid vajavad kohest veest evakueerimist.',
-        },
-      ],
-    },
-    'understanding-specs': {
-      title: 'Kuidas SUP lugeda laua spetsifikatsioone',
-      description:
-        'Tehniline juhend SUP plaadi spetsifikatsioonide mõistmiseks — maht, mõõtmed, konstruktsioon ja nende tähendus jõudlusele.',
-      tldr: 'Peamised näitajad: maht (liitrid) määrab ujuvuse ja kaaluvõime, laius stabiilsuse, pikkus jälgimise ja kiiruse, paksus jäikuse ning võimsus rõhu PSI optimaalse jõudluse tagamiseks.',
-      problem:
-        'Tootespetsifikatsioonide lehed loetlevad numbreid ilma kontekstita, jättes ostjad ebakindlaks, millised spetsifikatsioonid tegelikult nende kasutusjuhtumi jaoks olulised on.',
-      solution:
-        'Tõlgi iga spetsifikatsioon reaalseks jõudluseks: ruumala hõljumiseks, laius stabiilsuseks, pikkus libisemiseks, paksus jäikuse jaoks ja ehitus vastupidavuse jaoks.',
-      audience: 'Vahepealsed aerutajad ja tehnilised ostjad, kes soovivad teha andmepõhiseid otsuseid.',
-      steps: [
-        'Kontrolli mahtu (liitrid) — sinu kaal koos varustusega ei tohiks ületada 80% laua mahupiirangust',
-        'Kontrolli laiust — laiem (32-34") = suurem stabiilsus, kitsam (28-30") = suurem kiirus',
-        'Kontrollpikkus — pikem (12-14") = parem jälgimine, lühem (10-11") = parem manööverdusvõime',
-        'Kontrolli paksust — 6" on standard, 8" pakub rohkem jäikust ja kaaluvõimet',
-        'Kontrolli PSI hinnang — täispuhu PSI maksimaalsele optimaalse jäikuse jaoks',
-        'Kontrolli ehitusmaterjale — drop-stitch tihedust, PVC kihte, rööbaste tugevdamist',
-      ],
-      faq: [
-        {
-          q: 'Mida drop-stitch see tähendab?',
-          a: 'Drop-stitch on ehitusmeetod, kus tuhanded keermed ühendavad plaadi ülemise ja alumise kihi. See võimaldab kõrgsurve täitmist (12–15 PSI) äärmise jäikuse saavutamiseks.',
-        },
-        {
-          q: 'Mis on ideaalne kaalu ja mahu suhe?',
-          a: 'Hea sihtmärk on umbes 5–6 naela sõitja kaalu liitri laua mahu kohta. 220 naela kaaluv aerutaja peaks otsima laudu, mille mahutavus on 180+ liitrit.',
-        },
-        {
-          q: 'Kas laua kaal on oluline?',
-          a: 'Jah. Kergemad lauad (alla 20 naela) on lihtsamad kanda ja transportida. Raskemad lauad (25+ naela) viitavad sageli vastupidavamale PVC mitmekihilisele konstruktsioonile.',
-        },
-      ],
-    },
-    'sup-maintenance': {
-      title: 'Kuidas puhastada ja hoida täispuhutavat SUPseadet',
-      description: 'Samm-sammuline hooldusjuhend, et maksimeerida SUP täispuhutava laua eluiga.',
-      tldr: 'Loputa pärast iga kasutuskorda värske veega, kuivata enne hoiustamist täielikult, tühjenda ja rulli lahtiselt (mitte sõjaväekindlalt), hoia jahedas ja kuivas kohas, eemal otsesest päikesevalgusest, ning kontrolli õmblusi kord kuus.',
-      problem:
-        'Ebaõige hoiustamine ja puhastamine on täispuhutava seadme enneaegse rikke peamised SUPs põhjused — hallitus, UV kahjustused ja õmbluste delaminatsioon.',
-      solution:
-        'Järgi järjepidevat rutiini pärast seanssi: loputa, kuivata, kontrolli, tühjenda ja hoiusta. Kasuta kangekaelse mustuse vastu õrna seepi. Ära kunagi hoia lauda märjana ega otsese päikesevalguse käes.',
-      audience: 'Kõik täispuhutavad SUP omanikud, kes tahavad, et nende laud kestaks 5+ aastat.',
-      steps: [
-        'Loputa laud kohe pärast kasutamist värske veega, eriti pärast soolase veega',
-        'Puhasta õrna seebi ja pehme käsnaga — väldi tugevaid kemikaale või survepesureid',
-        'Kuivata lauaplaati täielikult — avage klapp, et kinni jäänud vesi välja pääseks',
-        'Kontrollige kahjustusi — vaadake üle õmblused, klapp ja pind, kas on auklikkusi',
-        'Tühjendage täielikult — eemaldage klapi südamik täielikuks tühjendamiseks',
-        'Rullige laud lahtiselt — alustage ninast, vältige tugevaid voldikuid',
-        'Hoiustage kandekotis jahedas, kuivas kohas, eemal otsesest päikesevalgusest',
-      ],
-      faq: [
-        {
-          q: 'Kas ma võin jätta oma SUP kogu hooajaks täis pumbatuks?',
-          a: 'Jah, kuid hoidke seda kasutamata jätmisel otsese päikesevalguse eest eemal. Pikema hoiustamise puhul soovitatakse osalist tühjendamist (8-10 PSI).',
-        },
-        {
-          q: 'Kuidas auk kinni parandada?',
-          a: 'Puhastage piirkond, lõigake plaastrile ümarad nurgad, kandke liim, suruge tugevalt ja oodake 24 tundi enne pumbamist. Paddle Board Overstock lauad sisaldavad parandustarvikut.',
-        },
-        {
-          q: 'Kui sageli peaksin klappi kontrollima?',
-          a: 'Kuu jooksul. Klapp on kõige tavalisem rikke koht. Kontrollige, kas klapi tihvt liigub vabalt ja O-rõngas on terve.',
-        },
-      ],
-    },
-    'paddling-techniques': {
-      title: 'Olulised SUP sõudmistaktikad',
-      description: 'Valdage edasist hooaega, tõmmisõitu ja ristiku pööramist, et sõuda tõhusalt igas olukorras.',
-      tldr: 'Edasine tõmmis kasutab teie kere, mitte käsi. Tõmmisõit pöörab lauda. Ristiku pööramine on kõige tõhusam pöördepööre. Hoidke aer vertikaalselt ja sukeldage labidas täielikult vee alla maksimaalse jõuülekande jaoks.',
-      problem:
-        'Enamik sõudjaid kasutab käte domineerivaid tõmbeid, mis raiskavad energiat ja põhjustavad õlavalu. Halb tehnikat muudab laua kontrolli tuules ja lainetes raskeks.',
-      solution:
-        'Õppige kolme tähtsat tõmmet — edasine, tõmmisõit ja ristiku pööramine — õige kehamehaanikaga. Harjutage igaüht rahulikul vees enne keerukamate tingimustega alustamist.',
-      audience: 'Sõudjate jaoks, kes soovivad sõuda kauem, kiiremini ja vähem väsida.',
-      steps: [
-        'Edasine tõmmis: sirutage ette, asetage labidas täielikult, tõmmake tagasi kere pööramise abil (mitte kätega), väljuge pahkluu juurest',
-        'Tõmmisõit: sirutage ette ääre juurest, liigutage labidas laias kaares saba suunas, pöörake lauad aerupoolsest küljest eemale',
-        'Ristiku pööramine: asetage aer vastasküljele ilma käsi vahetamata, tõmmake saba suunas',
-        'Tugimine: kasutage madalat tuge, et püsida stabiilsena lainetes — lükake labidas veepinna peale',
-        'Tõmbetõmme: sirutage külili, tõmmake laud külgsuunas aeru poole',
-      ],
-      faq: [
-        {
-          q: 'Kuidas sõuda sirgelt?',
-          a: 'Kasutage mõlemal küljel ühtlast tõmmete pikkust. Vahetage kätte iga 5-10 tõmmet. Vaadake viitepunkti horisondi ääres.',
-        },
-        {
-          q: 'Kas ma peaksin põlvi kõverdama?',
-          a: 'Jah. Hoidke põlvedes kerge kõverus kui šokiamorte. Lukustatud põlved kannavad iga lainet kerele ja vähendavad stabiilsust.',
-        },
-        {
-          q: 'Kuidas sõuda vastu tuult?',
-          a: 'Alandage asendit, kasutage lühemaid ja kiiremaid tõmbeid ning püsige kaldale lähemal, kus tuul on sageli nõrgem. Kui tuul on liiga tugev, ärge minge välja.',
-        },
-      ],
-    },
-    'sup-fitness': {
-      title: 'SUP Fitness: täiskeha treening vees',
-      description: 'Kuidas seistes sõudmine ehitab üles kerelihaseid, tasakaalu ja kardiovaskulaarset vormi.',
-      tldr: 'SUP Iga tõmbega kaasab kerelihased, jalad, selg ja õlad. Ühe tunni pikkune treening põletab 300–500 kalorit. Tuule või voolu vastu aerutamine kahekordistab intensiivsust.SUP Jooga lisab paindlikkust ja tasakaaluharjutust.',
-      problem:
-        'Paljud inimesed peavad aerulauasõitu pigem juhuslikuks tegevuseks kui tõeliseks treeningvahendiks, jättes selle võimaluse täiskeha treenimiseks ilma.',
-      solution:
-        'SUP Struktureeri treeninguid kindlate treeningueesmärkidega: vastupidavusaerutamine kardioks, intervallsprind jõu jaoks, SUP jooga painduvuseks ja kaugaerutamine lihasvastupidavuse jaoks.',
-      audience: 'Fitnessihuvilised, kes otsivad madala mõjuga, kõrge kaasatusega kogu keha treeningut.',
-      steps: [
-        'Soojendus maismaal — käeringid, kere keerutused ja jalalöögid 5 minutit',
-        'Alusta 10 minuti stabiilse aerutamisega mõõduka intensiivsusega',
-        'Edasiliikumine intervalltreeninguni — 2 minutit rasket aerutamist, 2 minutit kerget taastumist',
-        'Lisa SUP joogapoose — allapoole suunatud koer, sõdalane II ja puupoos laual',
-        'Jahuta end õrna aerutamise ja staatiliste venitustega laual',
-      ],
-      faq: [
-        {
-          q: 'Kas see on SUP parem kui jooksmine vormi pärast?',
-          a: 'SUP Pakub sarnaseid südame-veresoonkonna eeliseid madalama liigese löögiga. See mõjutab ka ülakeha ja kerelihast rohkem kui jooksmine.',
-        },
-        {
-          q: 'Kui palju SUP kaloreid põletatakse?',
-          a: 'Mõõduka intensiivsusega umbes 300–500 kalorit tunnis. Võidusõit või aerutamine tuule vastu võib põletada 600–800 kalorit tunnis.',
-        },
-        {
-          q: 'Kas ma saan lihast SUPkasvatada ?',
-          a: 'Jah. Aerutamine arendab õlgade, selja ja kerelihaseid. Tasakaalustamine kaasab jalgu ja stabiliseerivad lihaseid. See on kogu keha vastupanutreening.',
-        },
-      ],
-    },
-    'sup-yoga': {
-      title: 'SUP Jooga: Täielik juhend aerutamiseks ja joogaks',
-      description: 'Ühenda aerulauasõit joogaga, et parandada tasakaalu, jõudu ja teadlikkust vee peal.',
-      tldr: 'SUP Jooga lisab ebastabiilsuse elemendi, mis suurendab oluliselt kere aktiivsust võrreldes maajoogaga. Alusta lihtsatest poosedest laial, stabiilsel laual rahulikus vees. Kasuta libisemisvaba padja. Ära kunagi SUP harjuta joogat üksi.',
-      problem:
-        'Traditsioonilised joogamatid pakuvad täiesti stabiilset pinda, eemaldades tasakaalu väljakutse, mis teeb SUP jooga ainulaadselt tõhusaks keskkeha jõu ja keskendumise jaoks.',
-      solution:
-        'Kasuta eriti laia SUP lauda (34"+) koos täisterrassi veopadjaga. Harjuta rahulikus ja madalas vees. Alusta vundamendi poosedega enne inversioonide proovimist.',
-      audience: 'Jooga harrastajad ja aerutajad, kes soovivad ühendada tasakaalutreeningu teadvelolekuga.',
-      steps: [
-        'Ankurda laud madalasse, rahulikku vette — kasuta liivaankrut või seo kai külge',
-        'Alusta istuvate poosidega — lihtne iste, paadipoos, istuv pööre',
-        'Edasiliikumine põlvitamisasendite juurde — lauapealne, kass-lehm, välk',
-        'Liigu seisvasse asendisse — mägi, sõdalane I, sõdalane II, puu poos',
-        'Harjuta tasakaalupoose — poolkuu, kotkas, tantsija',
-        'Lõpeta savasanaga — lama laual, tunne vee liikumist',
-      ],
-      faq: [
-        {
-          q: 'Milline laud sobib SUP joogaks kõige paremini?',
-          a: 'Lai laud (34"+) koos täispikkuses haardumispadjaga tagab kõige stabiilsema platvormi. SUP Tour 12 pakub head tasakaalu stabiilsuse ja libisemise vahel.',
-        },
-        {
-          q: 'Kas jooga on SUP ohtlik?',
-          a: 'Ohutu harjutuse korral ei tee seda rohkem kui maajoogat. Kasuta rahulikku, madalat vett. Kanna rihma. Harjuta koos partneriga. Väldi esimestel sessioonidel sügavat vett.',
-        },
-        {
-          q: 'Kas mul on vaja erivarustust?',
-          a: 'Lai stabiilne laud, täisteki haardepadja, rihm ja PFD. Mõned harrastajad kasutavad veekindlat matti lisahaarde saamiseks.',
-        },
-      ],
-    },
-    'sup-fishing': {
-      title: 'SUP Kalapüügijuhend: Kuidas kalastada aerulauaga',
-      description:
-        'Kõik, mida pead teadma aerulaualt kalastamise kohta — varustuse seadistamine, stabiilsusnõuanded ja tehnikad.',
-      tldr: 'SUP Kalapüük pakub vaikset lähenemist, madalat ligipääsu ja 360-kraadist viskeid. Kasuta laia stabiilset lauda (34"+), kinnita õngahoidjad ja kasuta jahutuskastit või kasti varustuse alusena. Ankru tuulistes tingimustes. Kanna alati PFD.',
-      problem:
-        'Tavalised kalapaadid on kallid hooldada ega pääse madalasse vette. Kajakid piiravad liikumisvabadust.SUP Kalapüük lahendab mõlemad probleemid, kuid nõuab spetsiifilisi varustuse kohandamist.',
-      solution:
-        'Varusta tall SUP õngahoidjate, varustuskasti ja ankrusüsteemiga. Kasuta laua kaasaskantavust, et pääseda kaugetesse kalapüügikohtadesse, kuhu paadid ei pääse.',
-      audience:
-        'Kalamehed, kes soovivad kalastada madalates vetes, kaugetes kohtades või eelistavad kerget, kaasaskantavat kalastusplatvormi.',
-      steps: [
-        'Vali lai laud (34"+), millel on suur varustuse kandevõime',
-        'Paigaldage vardahoidjad tekile, kasutades rööbastele kinnitatud või strap-on süsteeme',
-        'Kasuta veekindlat kasti või jahutit, mis on kinnitatud esitekile varustuse jaoks',
-        'Võta kaasa väike ankur või valvepost tuuliste tingimuste jaoks',
-        'Kanna PFD taskuid tööriistade ja telefoni jaoks',
-        'Harjuta põlvitades loitsu enne püsti tõusmist',
-      ],
-      faq: [
-        {
-          q: 'Kas ma võin seista ja SUPkalastada ?',
-          a: 'Jah. 34"+ laiune laud tagab piisava stabiilsuse nii seismiseks kui ka viskamiseks. Harjuta esmalt rahulikus vees.',
-        },
-        {
-          q: 'Millist kala ma saan sihtida SUP?',
-          a: 'SUPs On suurepärased ahvenate jaoks järvedes, punakaladele tasandikel, forellidele jõgedes ning rannikuäärsetele liikidele lahtedes ja suudmealadel.',
-        },
-        {
-          q: 'Kuidas ma saan kala SUP?',
-          a: 'Põlvita stabiilsuse tagamiseks. Kasuta võrku või huulehaaratsit. Hoia kala madalal, et mitte kukkuda. Lase lahti või kinnita külmikusse.',
-        },
-      ],
-    },
-    'inflatable-repair': {
-      title: 'Kuidas parandada oma täispuhutavat paati või SUP',
-      description:
-        'Samm-sammuline juhend täispuhutavate veesõidukite torvendite, klapiprobleemide ja õmbluskahjustuste parandamiseks.',
-      tldr: 'Väikesed torked (alla 1/4") on parandatavad kaasasoleva plaastrikomplektiga. Puhasta piirkond, PVC kanna liim, vajuta plaastri ja oota 24 tundi. Klapilekked vajavad tavaliselt O-rõnga vahetust. Suured rebendid või õmbluse delaminatsioon vajavad professionaalset hooldust.',
-      problem:
-        'Väikesed torked ja klapiprobleemid on tavalised, kuid kergesti parandatavad. Ilma korraliku remonditehnikata maksavad kasutajad kas professionaalse teenuse eest üle või süvendavad kahjustusi.',
-      solution:
-        'Tuvasta kahjustuse tüüp — torvend, klapileke või õmblusprobleem — ja rakenda sobiv parandusmeetod. Enamik parandusi võtab 30 minutit pluss kuivamisaeg.',
-      audience: 'SUPsTäispuhutavate, kajakkide ja paatide omanikud, kes soovivad ise põhilisi parandustöid teha.',
-      steps: [
-        'Leia lekke asukoht — täida täis, kuula õhku, katsu käega või kasuta seebivett',
-        'Märgistage leke pliiatsi või teibiga',
-        'Puhasta lekke ümbrus isopropüülalkoholiga — vähemalt 2 tolli kahjustuse ümber',
-        'Karedaks tee pind peene liivapaberiga, et paremini liimida',
-        'Kanna liimi PVC nii plaastri kui ka plaadi pinnale',
-        'Oota 5 minutit, kuni liim muutub kleepuvaks',
-        'Vajuta plaastrit tugevalt, rulli õhumullid rulli või krediitkaardiga lahti',
-        'Lase 24 tundi kuivada enne täisrõhku täitmist',
-      ],
-      faq: [
-        {
-          q: 'Kas ma saan parandada vee torkeaugu?',
-          a: 'Hädaolukorra parandused plaastri ja teibiga võivad viia sind tagasi kaldale. Täielikud parandused nõuavad kuivi tingimusi ja 24-tunnist kuivamist.',
-        },
-        {
-          q: 'Kuidas parandada lekkivat ventiili?',
-          a: 'Eemalda klapisüdamik kaasasoleva tööriistaga, kontrolli O-rõngast kahjustuste suhtes, vaheta vajadusel välja ja pane südamik tihedalt tagasi.',
-        },
-        {
-          q: 'Millist liimi peaksin PVC remondiks kasutama?',
-          a: 'Kasuta PVCspetsiifilisi liimi nagu HH-66 või Clifton. Tavaline superliim ei kleepu hästi PVC täispuhutavate materjalidega.',
-        },
-      ],
-    },
-    'kayak-techniques': {
-      title: 'Olulised kajakisõidu tehnikad',
-      description:
-        'Master kajakiga aerutamine — ettepoole liikumine, pühkimine, servade tõstmine ja toestus, et tagada tõhus ja ohutu kajakisõit.',
-      tldr: 'Kajaki ettepoole liikumine kasutab kere pöörlemist, mitte käsi. Pühkimisliigutus pöörab kajakki. Servad parandavad pööramist. Madal tugi takistab lainete ümberpööramist. Hoia aeru vars vertikaalne ja laba täielikult vee all.',
-      problem:
-        'Ebaefektiivne aerutamistehnika põhjustab õlaväsimust, aeglast edenemist ja raskusi kajaki juhtimisel tuule ja voolu tingimustes.',
-      solution:
-        'Õpi õiget torso-juhitud aerutamistehnikat nelja olulise liigutusega — ette, tagurpidi, pühkimine ja toest.',
-      audience:
-        'Algajad ja kesktaseme kajakisõitjad, kes soovivad aerutada väiksema pingutusega ja suurema kontrolliga.',
-      steps: [
-        'Edasi liigutus: pööra torso, aseta tera jalgade lähedale, tõmba puusa vahelt ja välju puusalt',
-        'Tagurpidi löök: aseta tera enda taha, lükka ettepoole, et aeglustada või tagurpidi',
-        'Pühkimislöök: siruta käe ettepoole, liiguta laba laia kaarega ahtri suunas, pööra kajakki',
-        'Madal tugi: löö tera vee pinnale lamedalt, et tagada stabiilsus lainetes',
-        'Serva: kalluta kajakki veidi servale, et kurve teha',
-      ],
-      faq: [
-        {
-          q: 'Kuidas hoida oma kajaki sirgelt liikumas?',
-          a: 'Kasuta ühtlasi lööke vahelduvatel külgedel. Õpi J-lööki (kerge konks ettepoole tõmbe lõpus) kursi korrigeerimiseks ilma külge vahetamata.',
-        },
-        {
-          q: 'Mis on kõige levinum kajakivigastus?',
-          a: 'Õla pingutus käe domineerivast aerutamisest. Kasuta torso pöörlemist, et aktiveerida suuremaid seljalihaseid ja vähendada õlakoormust.',
-        },
-        {
-          q: 'Kuidas ma saan tuules aerutada?',
-          a: 'Hoia vöör tuule suunas. Kasuta lühemaid ja tugevamaid tõmbeid. Kui ületad tuult, kalluta kajakki veidi tuule poole.',
-        },
-      ],
-    },
-    'multi-day-trip': {
-      title: 'Mitmepäevase kajaki või reisi planeerimine SUP',
-      description:
-        'Kuidas planeerida ja läbi viia mitmepäevane aerutamisretk — marsruudi planeerimine, varustuse pakkimine, telkimine ja ohutus.',
-      tldr: 'Planeeri 10–15 miili päevas. Paki varustus veekindlatesse kuivadesse kottidesse, jaota kaal ühtlaselt ja harjuta laua või kajaki laadimist enne reisi. Koosta ujukiplaan. Kanna kaasa vett, toitu, varju, navigeerimist ja suhtlust.',
-      problem:
-        'Mitmepäevased reisid ebaõnnestuvad ülepakkimise, halva marsruudi planeerimise või ilma ja voolu alahindamise tõttu — mis viib kurnatuse, varustuse rikke või ohutusjuhtumiteni.',
-      solution:
-        'Kasuta süsteemset planeerimismeetodit: marsruudi valik, varustuse kontrollnimekiri, toiduplaneerimine, ohutusülevaade ja hädaolukordade planeerimine.',
-      audience: 'Kogenud aerutajad, kes plaanivad oma esimest mitmepäevast ekspeditsiooni.',
-      steps: [
-        'Vali marsruut, kus on olemas telkimiskohad ja päästepunktid',
-        'Planeeri 10–15 miili päevas, arvestades tuult ja voolu',
-        'Vaata loodetabeleid ja ilmaprognoose kogu reisiakna kohta',
-        'Paki varustus veekindlatesse kuivkottidesse — 20–30 naela kogu varustuse kaal',
-        'Jaota kaal ühtlaselt — kõige raskemad esemed keskel',
-        'Esita üksikasjalik float-plaan kellegi kaldal',
-        'Võta navigeerimine kaasa — paberkaart, kompass ja GPS-varukoopia',
-        'Paki kaasa hädaabivarjupaik, lisatoit ja esmaabikomplekt',
-      ],
-      faq: [
-        {
-          q: 'Mis on ideaalne päevane vahemaa?',
-          a: '10-15 miili päevas kogenud aerutajatele. Algajad peaksid planeerima 5-8 miili. Alati arvesta ilmastiku jaoks puhvriga.',
-        },
-        {
-          q: 'Kui palju vett peaksin kaasa võtma?',
-          a: '1 gallon inimese kohta päevas. Kuumades tingimustes 1,5 gallonit. Võta kaasas veefilter või puhastustabletid täitmiseks.',
-        },
-        {
-          q: 'Mis on kõige olulisem ohutusese?',
-          a: 'Side. VHF-raadio või satelliitsõnumitooja võib hädaolukorras olla elupäästev. Mobiiltelefonid on kaugetes piirkondades ebausaldusväärsed.',
-        },
-      ],
-    },
-    'choosing-paddle': {
-      title: 'Kuidas valida õige aerutamine SUP ja kajakk',
-      description: 'Juhend aerumaterjalide, labade kujude, varre tüüpide ning kajakisõidu suuruste SUP kohta.',
-      tldr: 'Labade pikkus: SUP aerud peaksid olema 6–8 tolli kõrgemad kui sinu pikkus. Kajakiaerud sõltuvad paadi laiusest ja kere pikkusest. Labade kuju: dihedrilised labad on sirged, lamedad labad pakuvad rohkem haaret. Varre materjal: süsinik on kõige kergem, klaaskiud parim hinna ja kvaliteedi suhtega, alumiinium on eelarvega.',
-      problem:
-        'Vale labade suuruse või materjali kasutamine põhjustab tarbetut väsimust, kehva löögiefektiivsust ja liigeste pinget.',
-      solution:
-        'Sobita aeru pikkus, tera kuju, varre materjal ja painduvus vastavalt oma aerutamisstiilile, keha suurusele ja eelarvele.',
-      audience: 'SUP ja kajakisõitjad valivad oma esimese või järgmise aerutamise.',
-      steps: [
-        'SUPMõõda aeru kõrgus — 6-8 tolli kõrgem kui sinu pikkus üldiseks aerutamiseks',
-        'Kajaki puhul: mõõda kere pikkust ja paadi laiust — kitsamad paadid vajavad lühemaid aerusid',
-        'Vali tera materjal — eelarve järgi nailon, hinna ja kvaliteedi hinna järgi klaaskiud, jõudluse jaoks süsinik',
-        'Vali labade kuju — dihedraalne sujuvaks jälgimiseks, lame jõu jaoks, lusikas võidusõiduks',
-        'Vali varre tüüp — otse SUPvõidusõiduks, kõver SUPvõidusõiduks, standard kajakiks',
-        'Kontrolli painduvust — jäigemad võllid kannavad rohkem jõudu, painduvad võllid vähendavad liigese pinget',
-      ],
-      faq: [
-        {
-          q: 'Mis on parim aerumaterjal?',
-          a: 'Klaaskiud pakub parimat tasakaalu kaalu, vastupidavuse ja hinna vahel. Süsinik on kergem, kuid kallim ja rabedam. Nailon on raske, kuid praktiliselt purunematu.',
-        },
-        {
-          q: 'Kuidas ma tean, kas mu abad on õige pikkusega?',
-          a: 'SUPSelleks: seisa aeru vertikaalselt enda kõrvale — käepide peaks ulatuma randmeni, kui käsi on pea kohal. Kajaki puhul: tera peaks vette sisenema mugava nurga all, ilma et see üle sirutaks.',
-        },
-        {
-          q: 'Kas peaksin ostma ühes tükis või reguleeritava laba?',
-          a: 'Reguleeritavad labad sobivad hästi ühiskasutuseks ja reisimiseks. Ühes tükis abad on kergemad, jäigemad ja tõhusamad spetsiaalseks kasutamiseks.',
-        },
-      ],
-    },
-    'sup-with-kids': {
-      title: 'SUP lastega: täielik pere juhend',
-      description: 'Kuidas viia lapsi ohutult aerulauasõidule — vanusesoovitused, varustus ja tegevused.',
-      tldr: '6-aastased+ lapsed võivad sõita SUP koos täiskasvanuga. 10-aastased+ lapsed saavad järelevalve all oma lauda aerutada. Kasuta laia stabiilset lauda, kanna alati PFD-sid, viibige madalas ja rahulikus vees ning hoidke sessioonid lühikesed (maksimaalselt 30–45 minutit).',
-      problem:
-        'Vanemad tahavad veespordialasid lastega jagada, kuid muretsevad ohutuse, varustuse sobivuse ja laste kaasatuse pärast.',
-      solution:
-        'Kasuta tandemsõiduks õiget lauda, veendu, et iga laps kannaks korralikult istuvaid PFDlaudasid, alusta madalas soojas vees ja tee see lõbusaks mängude ja lühikeste treeningutega.',
-      audience: 'Vanemad, kes soovivad tutvustada oma lastele aerulauasõitu.',
-      steps: [
-        '4–6-aastased: sõida reisijana täiskasvanu laual — istu ees, hoia kinni keskmisest käepidemest',
-        '6–10-aastased: põlvitada või istuda oma laual, täiskasvanu järelevalve ja rihma all',
-        '+10-aastaselt: sõudke oma lauda täiskasvanu järelevalve all',
-        'Kandke alati PFD — lapsed peavad alati kandma korralikult istuvat päästevesti',
-        'Püsi madalas vees (täiskasvanu puhul vöökohani)',
-        'Hoidke sessioonid lühikesed — alla 10-aastaste laste puhul maksimaalselt 30–45 minutit',
-        'Tee see lõbusaks — mängi mänge, otsi kalu, harjuta püsti seistes',
-      ],
-      faq: [
-        {
-          q: 'Mis vanuses võib SUP laps üksi olla?',
-          a: 'Umbes 10–12-aastaselt järelevalve all, sõltuvalt lapse ujumisoskusest ja mugavusest vees. Alati rahulikes ja madalates tingimustes.',
-        },
-        {
-          q: 'Milline laud sobib SUP kõige paremini lastele?',
-          a: 'Lai laud (34"+), millel on suur kandevõime tandemsõiduks. SUP Explorer 11 33" laius ja 220 naela kandevõime sobivad hästi vanemale ja lapsele.',
-        },
-        {
-          q: 'Millist turvavarustust lapsed vajavad?',
-          a: 'Korrektselt CEsobiv - sertifitseeritud päästevest, rihm (kinnitatud täiskasvanu lauale tandem-kinnituseks), päikesekaitsekreem ja müts.',
-        },
-      ],
-    },
-  },
-  he: {
-    'how-to-choose-your-sup': {
-      title: 'איך לבחור SUP את המנהל שלך',
-      description: 'מדריך מלא לבחירת לוח החתירה הנכון בעמידה בהתאם לרמת המיומנות שלך, תנאי המים והשימוש הרצוי שלך.',
-      tldr: 'בחר SUP לפי רמת המיומנות, סוג המים והשימוש העיקרי. לוחות הכל-מסביב מתאימים למתחילים ולמים רגועים. לוחות טורינג מתאימים לחתירה למרחקים. לוחות יוגה מציעים רוחב נוסף ליציבות. לוחות ביצועים מתאימים לחותרים מנוסים בתנאים מגוונים.',
-      problem:
-        'רוב הקונים בפעם הראשונה בוחרים SUP לוח לפי המחיר או המראה ולא לפי איך והיכן הם באמת יחתרו בפועל. זה מוביל ליציבות ירודה, ביצועים לא מספקים וחוויה מתסכלת.',
-      solution:
-        "התאימו את צורת הלוח, הנפח והבנייה שלכם לרמת המיומנות שלכם ולסביבת המים הראשית. לוחות רחבים יותר (32-34 אינץ') מציעים יציבות למתחילים. לוחות ארוכים יותר (12-14 אינץ') מתאימים יותר לטורינג.Drop-stitch הבנייה בגובה 12-15 PSI מספקת קשיחות דומה ללוחות קשיחים.",
-      audience: 'קונים בפעם הראשונה SUP , חותרים לפנאי, וכל מי שמבצע שדרוג מלוח בסיסי.',
-      steps: [
-        'זהה את סביבת החתירה העיקרית שלך — אגם, אוקיינוס, נהר או תערובת',
-        'התאם רוחב לוח לרמת המיומנות שלך: 32-34" למתחילים, 30-32" לבינוני, 28-30" למתקדם',
-        'בחר אורך לוח לפי השימוש: קצר יותר למניפולציה, ארוך יותר למעקב ולמהירות',
-        'בנייה נבחרת: מתנפח drop-stitch לניידות, לוח קשיח לביצועים מקסימליים',
-        'בדוק את הקיבולת — המשקל והציוד שלך לא צריכים לעלות על 80% מהמגבלה של הגלוש',
-        'בדוק אביזרים כלולים: משאבה, רצועה, סנפיר, תיק גב וערכת תיקון',
-      ],
-      faq: [
-        {
-          q: 'איזה SUP רוחב הכי מתאים למתחילים?',
-          a: "רוחב של 32 עד 34 אינץ' מספק את הפלטפורמה היציבה ביותר ללמידה. SUP ה-Explorer 11 ברוחב 33 אינץ' אידיאלי לחותרים בפעם הראשונה במים רגועים.",
-        },
-        {
-          q: 'לוח מתנפח או SUP קשה?',
-          a: 'לוחות מתנפחים מציעים ניידות, נוחות אחסון וספיגת פגיעה. לוחות קשיחים מציעים קשיחות ומהירות מרבית. עבור רוב המשתמשים לפנאי, לוחות מתנפחים איכותיים עם drop-stitch ליבה הוא הבחירה המעשית.',
-        },
-        {
-          q: 'למה PSI כדאי לי לנפח?',
-          a: 'Paddle Board Overstock לוחות ממליצים על 12-15PSI. ב-15 PSI הלוח מגיע לקשיחות מקסימלית הדומה ללוח קשה. תמיד הישאר בטווח הלחץ המדורג שמודפס על הלוח.',
-        },
-      ],
-    },
-    'beginner-guide': {
-      title: 'מדריך למתחילים לגלישת חתירה',
-      description: 'כל מה שצריך לדעת לפני סשן החתירה הראשון שלך — מהקמת ציוד ועד טכניקות חתירה בסיסיות.',
-      tldr: "תתחיל במים רגועים ושטוחים עם לוח רחב ויציב. תנפח ל-12-15PSI, תחבר את הרצועה, ותשתמש באורך המשוט הנכון (6-8 אינץ' גבוה מהגובה שלך). שמור על היציבה ברוחב כתפיים, ברכיים מעט כפופות, ותסתכל על האופק.",
-      problem:
-        'חותרים חדשים לעיתים מדלגים על הכנה בסיסית — אורך משוט לא נכון, עמידה לקויה, או בחירה במים סוערים — מה שמוביל לנפילות, תסכול ואכזבה.',
-      solution:
-        'עקבו אחרי תוכנית מפגש ראשונה מובנית: בחרו במים רגועים, הגדרו את הציוד נכון, תרגלו כריעה לפני עמידה, ושלטו בתנועה קדמית לפני שתנסו פניות.',
-      audience: 'מתחילים לגמרי שמעולם לא עשו פדל-בורד.',
-      steps: [
-        'בחרו במים שטוחים ורגועים ללא תנועת סירות — אגם קטן או מפרץ מוגן הם אידיאליים',
-        'נפח את הלוח ל-12-15 PSI באמצעות משאבת פעולה כפולה',
-        'חבר את רצועת הסליל לקרסול או לשוק, אף פעם לא לידית הלוח',
-        'הכנס את הסנפיר והדק את הבורג',
-        "כוון את אורך המחבט — הוא צריך להיות גבוה ב-6-8 אינץ' מהגובה שלך",
-        'תתחיל לכרוע על הלוח, תחתור כמה מכות כדי להרגיש את האיזון',
-        'קם על רגל אחת בכל פעם, רגליים ברוחב הכתפיים, ברכיים רכות',
-        'תסתכל על האופק, לא על הרגליים שלך — הלוח שלך הולך לאן שאתה מסתכל',
-      ],
-      faq: [
-        {
-          q: 'מה כדאי לי ללבוש לפדלפודינג?',
-          a: 'ביגוד ספורטיביה המהיר ליבוש, חליפת הצלה, קרם הגנה, וכובע. במים קרים, ללבוש חליפת צלילה. תמיד ללבוש רצועה ולשאת טלפון במארז עמיד למים.',
-        },
-        {
-          q: 'איך אני חוזר ללוח אם אני נופל?',
-          a: 'השאר רגוע. שח ביום אל הלוח, אחוז בידית המרכזית, ובעט ברגליים תוך כדי משיכת עצמך על הלוח בתנועה אחת. תחזור למצב ברכיים תחילה, ואז קום.',
-        },
-        {
-          q: 'אילו תנאי רוח בטוחים?',
-          a: 'מתחילים: רוחות מתחת ל-10 מייל לשעה (5 קשר). אם הרוח נושבת מהחוף החוצה, אל תצא. בדוק את תחזית מזג האוויר והבין שרוח מהחוף מסוכנת.',
-        },
-      ],
-    },
-    'safety-tips': {
-      title: 'טיפים לבטיחות בספורט ימי',
-      description: 'קווים מנחים חיוניים לבטיחות בפדלפודינג, קיאקים ושיט — מבדיקת ציוד ועד מודעות למזג האוויר.',
-      tldr: 'תמיד ללבוש חֲלִיפַת-הצלה מוסמכת CE, לבדוק מזג אוויר ותנאי מים לפני ההשקה, לשאת אמצעי תקשורת, לעולם לא לשוט לבד במים לא מוכרים, ולהבין את מגבלות הציוד שלך.',
-      problem:
-        'רוב תאונות הספורט הימי נגרמות מחוסר הכנה — ללא חליפת הצלה, התעלמות מאזהרות מזג האוויר, או שימוש בציוד מעבר למגבלות העיצוב שלו.',
-      solution:
-        'נתחיל עם רשימת בדיקה לפני ההשקה: בדוק מצב הציוד, בדוק מזג אוויר וטמפרטורת מים, הודע למישהו על המסלול שלך, ותמיד ללבוש ציוד ציפה מתאים.',
-      audience: 'כל המשתתפים בספורט ימי — SUP, קיאק, דינגי, ו-RIB.',
-      steps: [
-        'בדוק תחזית מזג אוויר — הימנע מרוחות מעל 15 מייל לשעה וסופות רעמים',
-        'וודא את טמפרטורת המים — מים קרים (60°F/15°C) דורשים חליפת צלילה או חליפה יבשה',
-        'בדוק את הציוד — בדוק נזילות, סדקים, ותפיסת אוויר נכונה',
-        'ללבוש חליפת הצלה מוסמכת CE בכל זמן',
-        'חבר את הרצועה (SUP) או הבטח את כל הציוד הרופף (קיאק/סירה)',
-        'מסור תוכנית ציפה — הודע למישהו לאן אתה הולך ומתי תחזור',
-        'נשא אמצעי תקשורת — מארז טלפון עמיד למים או רדיו VHF',
-        'דע את הגבולות שלך — הישאר בתוך רמת יכולתך ודירוגי הציוד',
-      ],
-      faq: [
-        {
-          q: 'האם אני צריך חליפת הצלה על SUP?',
-          a: 'כן. ברשויות רבות נדרש מבחינה משפטית ללבוש חליפת הצלה בכל כלי שיט, כולל SUPs. אפילו אם לא נדרש, חליפת הצלה מוסמכת CE היא ציוד בטיחות חיוני.',
-        },
-        {
-          q: 'מהו הפציעה הנפוצה ביותר בספורט ימי?',
-          a: 'הטביעה במים קרים והעייפות הם הסיכונים החמורים הנפוצים ביותר. תמיד להתלבש לפי טמפרטורת המים, לא לפי טמפרטורת האוויר.',
-        },
-        {
-          q: 'איך אני בודק אם התנאים בטוחים?',
-          a: 'השתמש בתחזיות מזג אוויר ימי. בדוק מהירות הרוח, גובה הגל, וטמפרטורת המים. מתחילים צריכים להישאר בתנאים של רוח מתחת ל-10 מייל לשעה וגלים מתחת לרגל.',
-        },
-      ],
-    },
-    'inflatable-vs-hard': {
-      title: 'לוחות מתנפחים מול לוחות קשים SUP: איזה כדאי לבחור?',
-      description: 'השוואה אובייקטיבית בין לוחות מתנפחים וקשים SUP הכוללת ביצועים, ניידות, עמידות, וערך.',
-      tldr: 'לוחות מתנפחים מנצחים בניידות, אחסון ועמידות לפגיעות. לוחות קשיחים מנצחים בקשיחות ומהירות מרבית. drop-stitch לוחות מתנפחים מודרניים בגובה 15 PSI סוגרים 90% מהפער בביצועים.',
-      problem:
-        'הקונים תקועים בין הנוחות של לוחות מתנפחים לבין המוניטין הביצועי של לוחות קשיחים, ללא נתונים ברורים על איך הם באמת משתווים.',
-      solution:
-        'השווה קריטריונים ספציפיים — קשיחות, משקל, גודל אריזה, עמידות, תיקון ועלות — מול דפוס השימוש בפועל. עבור רוב החותרים לפנאי, מתנפח איכותי הוא הבחירה הטובה יותר.',
-      audience: 'SUP קונים מתלבטים בין בנייה מתנפחת לבנייה קשיחה.',
-      steps: [
-        'הערכת צרכי ניידות — תיקים מתנפחים לגודל תיק גב, לוח קשה דורש מתקן גג',
-        'השוו קשיחות — מתנפח ב-15 PSI עם גמישות מינימלית, ללוח קשה אין גמישות בכלל',
-        'הערכת אחסון — אחסון מתנפח בארון, לוח קשיח דורש מקום במוסך או במדף',
-        'שקלו עמידות — מתנפח סופג פגיעות, לוח קשיח עלול לשקוע ולהסדק',
-        'תיקון גורמים — טלאים מתנפחים הם פשוטים, תיקוני לוחות קשים דורשים עבודה מקצועית',
-        'בדוק ביצועים — לוחות קשיחים נותנים יתרון קל במהירות, ללוחות מתנפחים יש ספיגת זעזועים טובה יותר',
-      ],
-      faq: [
-        {
-          q: 'האם SUPs מתנפחים קשיחים כמו לוחות קשים?',
-          a: 'בגיל 15 PSI עם drop-stitch הבנייה, ההבדל בקשיחות הוא מינימלי לשימוש פנאי. רק מתחרים וגולשים תחרותיים יבחינו בהבדל.',
-        },
-        {
-          q: 'כמה זמן מתנפח SUP מחזיק מעמד?',
-          a: 'עם טיפול נכון, 5-10 שנים. PVC עמידות UV ושחיקה ברמה ימית. אחסון מחוץ לאור שמש ישיר כשאינו בשימוש ושוטף במים טריים לאחר שימוש במי מלח.',
-        },
-        {
-          q: 'האם אפשר להשתמש במתנפח SUP לגלישה?',
-          a: 'כן, אבל גלשנים מתנפחים הם הטובים ביותר לגלים קטנים עד בינוניים (מתחת ל-3 רגל). לגלישה ייעודית, לוח קשיח מספק תגובתיות טובה יותר והפעלת מסילה.',
-        },
-      ],
-    },
-    'weather-conditions': {
-      title: 'הבנת תנאי מזג האוויר לחתירה',
-      description: 'למד לקרוא רוח, גלים, גאות ודפוסי מזג אוויר כדי לקבל החלטות בטוחות על המים.',
-      tldr: 'בדוק שלושה דברים לפני כל שיגור: מהירות רוח (מתחת ל-10 מייל לשעה למתחילים), גובה גל (פחות מ-1 רגל למתחילים), וטמפרטורת מים (להתלבש למים, לא לאוויר). רוח ימית מסוכנת בכל רמת מיומנות.',
-      problem:
-        'רוב התאונות הקשורות למזג אוויר קורות כי החותרים טועים בהערכת התנאים — הם בודקים את טמפרטורת האוויר אך לא את טמפרטורת המים, או לא מבינים שרוח ימית יכולה להוציא אותם לים.',
-      solution:
-        'השתמש בהערכת מזג אוויר מובנית לפני השיגור: כיוון ומהירות הרוח, תקופת הגל וגובה, מצב הגאות וטמפרטורת המים. הבן כיצד כל גורם משפיע על הבטיחות שלך.',
-      audience: 'כולם חותרים שיוצאים למים פתוחים — אגמים, מפרצים, נהרות ואוקיינוס.',
-      steps: [
-        'בדוק את מהירות וכיוון הרוח — רוח ימית (הנושבת מהיבשה לים) היא המסוכנת ביותר',
-        'הערכת תנאי גל — תקופת הגל חשובה לא פחות מגובה הגל',
-        'הכירו את הגאות — זרמי הגאות יכולים להיות חזקים יותר ממהירות החתירה שלכם',
-        'מדידת טמפרטורת מים — מתחת ל-60°F/15°C דורשת הגנה תרמית',
-        'בדוק את הראות — ערפל וגשם כבד מפחיתים את הראות ומגבירים את הסיכון להתנגשות',
-        'הבנו סכנות מקומיות — סלעים שקועים, זרמים חזקים, אזורי תנועת סירות',
-      ],
-      faq: [
-        {
-          q: 'איזו מהירות רוח גבוהה מדי SUPבשביל ?',
-          a: 'מתחילים: מעל 10 מייל לשעה (8 קשרים). בינוניים: מעל 15 מייל לשעה (13 קשר). מתקדם: מעל 20 מייל לשעה (17 קשר). אם יש ספק, אל תצא.',
-        },
-        {
-          q: 'מה המשמעות של תקופת גל?',
-          a: 'תקופת גל היא הזמן שבין גלים עוקבים. תקופות קצרות (פחות מ-8 שניות) משמעוות גלים תלולים וקופצים. תקופות ארוכות (מעל 12 שניות) משמעוות גלים חלקים וצפויים יותר.',
-        },
-        {
-          q: 'האם אפשר לחתור בגשם?',
-          a: 'גשם קל בדרך כלל בטוח. גשם כבד מפחית את הראות ויכול להעיד על שינוי תנאי הרוח. סופות רעמים דורשות פינוי מיידי מהמים.',
-        },
-      ],
-    },
-    'understanding-specs': {
-      title: 'איך לקרוא SUP מפרטי לוח',
-      description: 'מדריך טכני להבנת SUP מפרט הלוחות — נפח, מידות, בנייה, ומה המשמעות שלהם לביצועים.',
-      tldr: 'מפרטים מרכזיים: נפח (ליטר) קובע ציפה וקיבולת משקל, רוחב קובע יציבות, אורך קובע מעקב ומהירות, עובי קובע קשיחות, PSI ודירוג קובע את לחץ הנפיחה לביצועים מיטביים.',
-      problem:
-        'דפי מפרט המוצר מציגים מספרים ללא הקשר, מה שמשאיר את הקונים לא בטוחים אילו מפרט באמת חשוב למקרה השימוש שלהם.',
-      solution: 'תרגם כל מפרט לביצועים אמיתיים: נפח לציפה, רוחב ליציבות, אורך להחלקה, עובי לקשיחות, ובנייה לעמידות.',
-      audience: 'חותרים בינוניים וקונים טכניים שרוצים לקבל החלטות מבוססות נתונים.',
-      steps: [
-        'בדוק נפח (ליטרים) — המשקל והציוד שלך לא אמורים לעלות על 80% מדירוג הווליום של הלוח',
-        'רוחב בדיקה — רחב יותר (32-34") = יותר יציבות, צר יותר (28-30") = יותר מהירות',
-        'אורך בדיקה — ארוך יותר (12-14") = מעקב טוב יותר, קצר יותר (10-11") = תמרון טוב יותר',
-        "עובי בדיקה — 6 אינץ' הוא סטנדרטי, 8 אינץ' מציע יותר קשיחות וקיבולת משקל",
-        'בדוק PSI דירוג — לנפח למקסימום PSI המדורג לקשיחות אופטימלית',
-        'בדוק חומרי בנייה — drop-stitch צפיפות, PVC שכבות, חיזוק מסילות',
-      ],
-      faq: [
-        {
-          q: 'מה drop-stitch זה אומר?',
-          a: 'Drop-stitch זו שיטת בנייה שבה אלפי הברגות מחברים בין השכבות העליונות והתחתונות של הלוח. זה מאפשר התנפחות בלחץ גבוה (12-15PSI) לקשיחות קיצונית.',
-        },
-        {
-          q: 'מהו יחס המשקל לנפח האידיאלי?',
-          a: 'מטרה טובה היא בערך 5-6 פאונד משקל רוכב לכל ליטר נפח לוח. חותר במשקל 220 פאונד צריך לחפש לוחות עם נפח של 180+ ליטר.',
-        },
-        {
-          q: 'האם משקל הלוח משנה?',
-          a: 'כן. לוחות קלים יותר (מתחת ל-20 פאונד) קלים יותר לנשיאה ולהובלה. לוחות כבדים יותר (25+ פאונד) לעיתים קרובות מעידים על בנייה רב-שכבתית עמידה יותר PVC .',
-        },
-      ],
-    },
-    'sup-maintenance': {
-      title: 'איך לנקות ולאחסן את המתנפח SUPשלך',
-      description: 'מדריך תחזוקה שלב אחר שלב כדי למקסם את אורך החיים של הלוח המתנפח SUP שלך.',
-      tldr: 'שטוף במים טריים אחרי כל שימוש, ייבש לגמרי לפני האחסון, התרוקן וגלגל ברפיון (לא הדוק צבא), אחסן במקום קריר ויבש הרחק מאור שמש ישיר, ובודק את התפרים מדי חודש.',
-      problem:
-        'אחסון וניקוי לא נכונים הם הגורמים המרכזיים לכשל מוקדם במתנפחים SUPs — עובש, UV נזק ודלמינציה של התפרים.',
-      solution:
-        'עקוב אחרי שגרה עקבית לאחר המפגש: לשטוף, לייבש, לבדוק, לנקן ולשמור. להשתמש בסבון עדין ללכלוך עקשן. לעולם אל תאחסן את הקרש רטוב או באור שמש ישיר.',
-      audience: 'כל בעלי המים המתנפחים SUP שרוצים שהגלשן שלהם יחזיק 5+ שנים.',
-      steps: [
-        'שטוף את הלוח במים טריים מיד לאחר השימוש, במיוחד אחרי מי מלח',
-        'נקה עם סבון עדין וספוג רך — הימנע מכימיקלים חזקים או שטיפה בלחץ',
-        'ייבשו את הלוח לגמרי — פתחו את השסתום כדי לאפשר למים הכלואים לברוח',
-        'בדוק אם יש נזק — בדוק את התפרים, השסתום והמשטח לאיתור נקבים',
-        'לנקן לחלוטין — להסיר את ליבת השסתום לדפלציה מלאה',
-        'גלגל את הלוח ברפיון — התחל מהאף, הימנע מקמטים צמודים',
-        'אחסן בתיק הנשיאה במקום קריר ויבש, הרחק מאור שמש ישיר',
-      ],
-      faq: [
-        {
-          q: 'האם אפשר להשאיר את עצמי SUP מנופח כל העונה?',
-          a: 'כן, אבל שמור עליו מחוץ לאור שמש ישיר כשאינו בשימוש. דפלציה חלקית (8-10PSI) מומלצת לאחסון ממושך.',
-        },
-        {
-          q: "איך מתקנים פנצ'ר?",
-          a: 'נקה את האזור, חתוך טלאי עם פינות מעוגלות, מרח דבק, לחץ היטב והמתין 24 שעות לפני הניפוח.Paddle Board Overstock הלוחות כוללים ערכת תיקון.',
-        },
-        {
-          q: 'באיזו תדירות כדאי לבדוק את השסתום?',
-          a: 'חודשי. השסתום הוא נקודת הכשל הנפוצה ביותר. בדוק שהפין של השסתום זז בחופשיות ושה-O-ring שלם.',
-        },
-      ],
-    },
-    'paddling-techniques': {
-      title: 'SUP טכניקות חתירה חיוניות',
-      description: 'שלוט במכה קדימה, תנועת סוויפ וסיבוב קשת מוצלבת כדי לחתור ביעילות בכל תנאי.',
-      tldr: 'התנועה הקדמית משתמשת בליבה שלך, לא בידיים. תנועת הסוויפ מסובבת את הלוח. סיבוב הקשת הצולבת הוא הציר היעיל ביותר. שמור על המחבט אנכי וטבול את הלהב במלואו להעברת כוח מקסימלית.',
-      problem:
-        'רוב החותרים משתמשים במכות דומיננטיות בזרוע שמבזבזות אנרגיה וגורמות לעייפות בכתפיים. טכניקה לקויה גם מקשית לשליטה בלוח ברוח וחטיפה.',
-      solution:
-        'למד שלוש תנועות חיוניות — קדימה, סוויפ ופנייה בקשת — עם מכניקת גוף נכונה. תרגל כל אחת מהן על מים רגועים לפני שתעבור לתנאים מאתגרים.',
-      audience: 'חותרים שרוצים לחתור זמן רב יותר, מהר יותר ועם פחות עייפות.',
-      steps: [
-        'תנועה קדימה: מושיט יד קדימה, שתקע את הלהב במלואו, משוך אחורה באמצעות סיבוב גוף (לא ידיים), יציאה בקרסול',
-        'תנועת סוויפ: הושיטו יד קדימה במעקה, סובבו את הלהב בקשת רחבה לכיוון הזנב, סובבו את הלוח הרחק מצד המשוט',
-        'סיבוב קשת מוצלבת: מניחים את המחבט בצד הנגדי של הלוח מבלי להחליף ידיים, למשוך לכיוון הזנב',
-        'חיזוק: השתמש בתומך נמוך ליציבות בקצב — להניח את הלהב שטוח על פני המים',
-        'משיכת משיכה: מושיט יד הצידה, מושך את הלוח לרוחב לכיוון המחבט',
-      ],
-      faq: [
-        {
-          q: 'איך אני חותר בקו ישר?',
-          a: 'השתמש באורך מהלך אחיד בשני הצדדים. החלף צדדים כל 5-10 פעימות. תסתכל על נקודה קבועה באופק כהפניה.',
-        },
-        {
-          q: 'האם כדאי לי לכופף את הברכיים?',
-          a: 'כן. שמור על כיפוף קל בברכיים כבולמי זעזועים. ברכיים נעולות מעבירות כל גל לליבה ומפחיתות יציבות.',
-        },
-        {
-          q: 'איך אני חותר נגד הרוח?',
-          a: 'הורד את העמידה, השתמש במכות קצרות ומהירות, והישאר קרוב יותר לחוף, שם הרוח לעיתים קרובות מצטמצמת. אם הרוח חזקה מדי, אל תצא החוצה.',
-        },
-      ],
-    },
-    'sup-fitness': {
-      title: 'SUP כושר: אימון גוף מלא על המים',
-      description: 'כיצד פאדלבורד בעמידה בונה את כוח הליבה, שיווי המשקל וכושר הלב וכלי הדם.',
-      tldr: 'SUP מפעיל את הליבה, הרגליים, הגב והכתפיים בכל משיכה. אימון של שעה שורף 300-500 קלוריות. חתירה נגד הרוח או הזרם מכפילה את העוצמה.SUP יוגה מוסיפה גמישות ואימון שיווי משקל.',
-      problem: 'רבים רואים את הפדלבורד כפעילות מזדמנת ולא ככלי כושר אמיתי, ומפספסים את הפוטנציאל שלו לכושר גוף מלא.',
-      solution:
-        'בנו SUP אימונים עם מטרות כושר ספציפיות: חתירה בסיבולת לאירובי, ספרינטים לאינטרוולים לכוח, SUP יוגה לגמישות, וחתירה למרחקים לסיבולת שרירית.',
-      audience: 'חובבי כושר שמחפשים אימון גוף מלא בעל השפעה נמוכה ומעורבות גבוהה.',
-      steps: [
-        'חימום על הקרקע — מעגלי ידיים, סיבובי גוף ותנועות רגליים למשך 5 דקות',
-        'התחל עם 10 דקות של חתירה יציבה בעוצמה בינונית',
-        'התקדמות לאימוני אינטרוולים — 2 דקות חתירה קשה, 2 דקות התאוששות קלה',
-        'שלבו SUP תנוחות יוגה — כלב מטה, לוחם II ותנוחת עץ על הלוח',
-        'להתקרר עם חתירה עדינה ומתיחות סטטיות על המשטח',
-      ],
-      faq: [
-        {
-          q: 'האם SUP עדיף לרוץ בשביל כושר?',
-          a: 'SUP מספק יתרונות קרדיווסקולריים דומים עם השפעה נמוכה יותר על המפרקים. הוא גם מפעיל את פלג הגוף העליון והליבה יותר מאשר בריצה.',
-        },
-        {
-          q: 'כמה קלוריות SUP שורפים?',
-          a: 'כ-300-500 קלוריות לשעה בעוצמה בינונית. מרוץ או חתירה נגד הרוח יכולים לשרוף 600-800 קלוריות בשעה.',
-        },
-        {
-          q: 'האם אני יכול לבנות שריר מSUP?',
-          a: 'כן. חתירה בונה את שרירי הכתפיים, הגב והליבה. איזון מפעיל את הרגליים ושרירי המייצב. זהו אימון התנגדות לכל הגוף.',
-        },
-      ],
-    },
-    'sup-yoga': {
-      title: 'SUP יוגה: מדריך מלא לחתירה ויוגה',
-      description: 'שלבו פדלבורד עם יוגה לשיפור שיווי המשקל, הכוח והמודעות על המים.',
-      tldr: 'SUP יוגה מוסיפה אלמנט של חוסר יציבות שמגדיל משמעותית את פעילות הליבה לעומת יוגה יבשתית. התחל בתנוחות בסיסיות על לוח רחב ויציב במים רגועים. השתמש במשטח דק נגד החלקה. לעולם אל תתרגל SUP יוגה לבד.',
-      problem:
-        'מזרני יוגה מסורתיים מספקים משטח יציב לחלוטין, ומסיר את אתגר שיווי המשקל שהופך SUP את היוגה ליעילה במיוחד לחיזוק הליבה והריכוז.',
-      solution:
-        "השתמש SUP בלוח רחב במיוחד (34 אינץ+') עם כרית אחיזה מלאה. תרגל במים רגועים ורדודים. התחל בתנוחות יסוד לפני שתנסה הפיכות.",
-      audience: 'מתרגלי יוגה וחותרים שרוצים לשלב אימוני איזון עם מיינדפולנס.',
-      steps: [
-        'עגן את הלוח במים רדודים ורגועים — השתמש בעוגן חול או קשר לרציף',
-        'תתחיל בתנוחות ישיבה — ישיבה קלה, תנוחת סירה, סיבוב ישיבה',
-        'התקדמות לתנוחות ברך — שולחן, חתול-פרה, ברק',
-        'מעבר לתנוחות עמידה — הר, לוחם I, לוחם II, תנוחת עץ',
-        'תנוחות איזון — חצי ירח, נשר, רקדן',
-        'סיים עם סאוואסנה — שכב שטוח על הלוח, הרגיש את תנועת המים',
-      ],
-      faq: [
-        {
-          q: 'איזה לוח הכי טוב SUP ליוגה?',
-          a: "לוח רחב (34 אינץ+') עם משטח אחיזה באורך מלא מספק את הפלטפורמה היציבה ביותר. SUP ה-Tour 12 מציע איזון טוב בין יציבות להחלקה.",
-        },
-        {
-          q: 'SUP האם יוגה מסוכנת?',
-          a: 'לא יותר מיוגת קרקע כשמתרגלים בבטחה. השתמש במים רגועים ורדודים. חבל רצועה. תרגל עם בן זוג. הימנע ממים עמוקים במפגשים הראשונים שלך.',
-        },
-        {
-          q: 'האם אני צריך ציוד מיוחד?',
-          a: 'לוח יציב רחב, כרית אחיזה מלאה, רצועה, PFDו-. חלק מהמתאמנים משתמשים במזרן עמיד למים לאחיזה נוספת.',
-        },
-      ],
-    },
-    'sup-fishing': {
-      title: 'SUP מדריך דיג: איך לדוג על לוח חתירה',
-      description: 'כל מה שצריך לדעת על דיג מלוח משוטים — הגדרת ציוד, טיפים ליציבות וטכניקות.',
-      tldr: "SUP הדיג מציע גישה שקטה, גישה למים רדודים והטלה בזווית 360 מעלות. השתמש בלוח רחב ויציב (34 אינץ+'), חבר מחזיקי חכה, והשתמש במקרר או ארגז כדק הילוכים. עוגן בתנאי רוח. תמיד לבש PFD.",
-      problem:
-        'סירות דיג סטנדרטיות יקרות לתחזוקה ואינן יכולות להגיע למים רדודים. קיאקים מגבילים את הניידות.SUP הדיג פותר את שתי הבעיות אך דורש התאמות ציוד ספציפיות.',
-      solution:
-        'צייד את האורווה SUP במחזיקי חכה, ארגז הילוכים ומערכת עוגן. השתמש בניידות הלוח כדי לגשת לנקודות דיג מרוחקות שסירות אינן יכולות להגיע אליהן.',
-      audience: 'דייגים שרוצים לדוג במים רדודים, במקומות מרוחקים, או מעדיפים פלטפורמת דיג קלה וניידת.',
-      steps: [
-        "בחר לוח רחב (34 אינץ+') עם קיבולת משקל גבוהה לציוד",
-        'התקן מחזיקי מוטות על הדק באמצעות מערכות מותקנות על מסילה או סטרפ-און',
-        'השתמש בכלוב או מקרר עמיד למים שמוקשר לסיפון הקדמי לציוד',
-        'הביאו עוגן קטן או מוט מארב לתנאי רוח',
-        'לבש PFD כיסים לכלים ולטלפון',
-        'תרגל הטלה ממצב כריעה לפני עמידה',
-      ],
-      faq: [
-        {
-          q: 'האם אני יכול לעמוד ולדוג על SUP?',
-          a: "כן.+ לוח ברוחב 34 אינץ' מספק יציבות מספקת לעמידה ולהטלה. תתאמן קודם על מים רגועים.",
-        },
-        {
-          q: 'איזה דגים אפשר לכוון מSUP-?',
-          a: 'SUPs מצוינים לבס באגמים, דג אדום במישורים, טרוטה בנהרות, ומינים קרובים לחוף במפרצים ובשפכי נהרות.',
-        },
-        {
-          q: 'איך אני תופס דג מSUP-?',
-          a: 'כרעו ברך ליציבות. השתמשו ברשת או בחוט שפתיים. שמרו על הדג נמוך כדי למנוע נפילה. שחררו או אבטחו את הדג במקרר.',
-        },
-      ],
-    },
-    'inflatable-repair': {
-      title: 'איך לתקן את הסירה המתנפחת שלך או SUP',
-      description: 'מדריך שלב אחר שלב לתיקון נקרים, בעיות שסתומים ונזק לתפרים בכלי שיט מתנפחים.',
-      tldr: 'נקבים קטנים (פחות מ-1/4") ניתנים לתיקון עם ערכת התיקון המצורפת. נקה את האזור, מרח PVC דבק, לחץ על הטלאי והמתן 24 שעות. נזילות שסתום בדרך כלל דורשות החלפת טבעת O. קרעים גדולים או דלמינציה של התפרים דורשים טיפול מקצועי.',
-      problem:
-        'נקבים קטנים ובעיות שסתומים הם נפוצים אך קלים לתיקון. ללא טכניקת תיקון נכונה, המשתמשים או משלמים יותר מדי עבור שירות מקצועי או מחמירים את הנזק.',
-      solution:
-        'זהה את סוג הנזק — נקב, דליפת שסתום או בעיית תפר — והשתמש בשיטת התיקון המתאימה. רוב התיקונים לוקחים 30 דקות ועוד זמן ייבוש.',
-      audience: 'בעלי SUPsמתקני מתנפחים, קיאקים וסירות שרוצים לטפל בתיקונים בסיסיים בעצמם.',
-      steps: [
-        'אתר את הדליפה — נפח עד הסוף, הקשב לאוויר, הרגיש ביד או השתמש במים וסבון',
-        'סמן את הדליפה עם עט או סרט דבק',
-        "נקה את האזור סביב הדליפה עם אלכוהול איזופרופיל — לפחות 2 אינץ' סביב הנזק",
-        'שייף את המשטח עם נייר זכוכית עדין להדבקה טובה יותר',
-        'החל PVC דבק גם על הטלאי וגם על משטח הלוח',
-        'חכה 5 דקות עד שהדבק יהפוך לדביק',
-        'לחץ על הטלאי בחוזקה, גלגל את בועות האוויר עם רולר או כרטיס אשראי',
-        'תן לדבק להיצמד במשך 24 שעות לפני למלא בלחץ מלא',
-      ],
-      faq: [
-        {
-          q: 'האם אני יכול לתקן ניקוב על המים?',
-          a: 'תיקונים חירום באמצעות טלאי ודבק יכולים להחזיר אותך לחוף. תיקונים מלאים דורשים תנאים יבשים וזמן חיבור של 24 שעות.',
-        },
-        {
-          q: 'איך אני מתקין שסתום דולף?',
-          a: 'הסר את ליבת השסתום באמצעות הכלי המצורף, בדוק את אטם ה-Oring לנזקים, החלף אם נדרש והכנס מחדש את הליבה בצפיפות.',
-        },
-        {
-          q: 'איזה דבק אני צריך להשתמש עבור תיקוני PVC?',
-          a: 'השתמש בדבק ייעודי ל-PVC כמו HH-66 או Clifton. דבק סופר רגיל אינו נדבק היטב לחומרי PVC מתנפחים.',
-        },
-      ],
-    },
-    'kayak-techniques': {
-      title: 'טכניקות חיוניות למשוט קיאק',
-      description: 'שלוט במשוט הקיאק — משיכת קדימה, משיכת סיבוב, חיתוך והחזקת משוט ליעילות ובטיחות בקיאק.',
-      tldr: 'משיכת קדימה בקיאק משתמשת בסיבוב הגוף, לא בידיים. משיכת סיבוב מסובבת את הקיאק. חיתוך משפר את הפנייה. החזקת משוט נמוכה מונעת הפלת הקיאק בגלים. החזק את מוט המשוט אנכי והכנס את הלהב כולו במים.',
-      problem: 'טכניקת משוט לא יעילה גורמת לעייפות בכתפיים, התקדמות איטית וקושי לשלוט בקיאק ברוח ובזרם.',
-      solution: 'למד טכניקת משוט נכונה שמונעת מהגוף עם ארבע משיכות חיוניות — קדימה, אחורה, סיבוב והחזקה.',
-      audience: 'קיאקיסטים מתחילים ובינוניים שרוצים המשוט עם פחות מאמץ ויותר שליטה.',
-      steps: [
-        'משיכת קדימה: סובב את הגוף, הנח את הלהב ליד רגליך, משוך מעבר למותן, צא במותן',
-        'משיכת אחורה: הנח את הלהב מאחוריך, דחוף קדימה כדי להאט או לסגת',
-        'משיכת סיבוב: השג קדימה, סובב את הלהב בקשת רחבה לעבר הזנב, סובב את הקיאק',
-        'החזקה נמוכה: הכה את הלהב שטוח על משטח המים ליציבות בגלים',
-        'חיתוך: הטה מעט את הקיאק על הקצה שלו כדי לסובב בפניות',
-      ],
-      faq: [
-        {
-          q: 'איך אני שומר על קיאק נוסע ישר?',
-          a: 'השתמש במשיכות עקביות בצדדים חלופיים. למד את משיכת ה-J (עיקול קטן בסוף המשיכת קדימה) לתיקון מסלול ללא החלפת צדדים.',
-        },
-        {
-          q: 'מה הפציעה הנפוצה ביותר בקיאק?',
-          a: 'מתח בכתף עקב משוט ידני. השתמש בסיבוב הגוף כדי להשתמש בשרירי הגב הגדולים ולהפחית עומס על הכתפיים.',
-        },
-        {
-          q: 'איך אני משוט ברוח?',
-          a: 'שמור על החרטום פונה לרוח. השתמש במשיכות קצרות ועוצמתיות יותר. אם חוצים את הרוח, הטה את הקיאק מעט לעבר הרוח.',
-        },
-      ],
-    },
-    'multi-day-trip': {
-      title: 'תכנון מסע קיאק או SUP מרובת ימים',
-      description: 'איך לתכנן ולבצע מסע משוט מרובה ימים — תכנון מסלול, אריזת ציוד, מחנה ובטיחות.',
-      tldr: 'תכנן 10-15 מייל ביום. ארוז ציוד בשקיות יבשות עמידות למים, חלק משקל באופן שווה, ותרגל טעינת הגלשן או הקיאק לפני הנסיעה. הגיש תוכנית מצוף. נשא מים, אוכל, מחסה, ניווט ותקשורת.',
-      problem:
-        'נסיעות של מספר ימים נכשלות בשל העמסה יתר, תכנון מסלול לקוי או הערכת חסר של מזג האוויר והזרם — מה שמוביל לעייפות, כשל בציוד או תקריות בטיחות.',
-      solution: 'השתמש בגישה שיטתית של תכנון מערכת: בחירת מסלול, רשימת ציוד, תכנון מזון, תדרוך בטיחות, ותכנון חירום.',
-      audience: 'חותרים מנוסים שמתכננים את המשלחת הראשונה שלהם בת מספר ימים.',
-      steps: [
-        'בחר מסלול עם אתרי קמפינג ונקודות חילוץ מוכרים',
-        'תכנן 10-15 מייל ביום תוך התחשבות ברוח ובזרם',
-        'בדוק טבלאות גאות ותחזיות מזג אוויר לאורך כל חלון הטיול',
-        'ארזו ציוד בשקיות יבשות עמידות למים — משקל כולל של 20-30 פאונד',
-        'פזר משקל באופן שווה — הפריטים הכבדים ביותר במרכז',
-        'הגיש תוכנית מפורטת לצוף למישהו בחוף',
-        'הביאו ניווט — מפת נייר, מצפן וגיבוי GPS',
-        'ארזו מחסה חירום, אוכל נוסף וערכת עזרה ראשונה',
-      ],
-      faq: [
-        {
-          q: 'מהו המרחק היומי האידיאלי?',
-          a: '10-15 מייל ביום לחותרים מנוסים. מתחילים צריכים לתכנן 5-8 מייל. תמיד תבנה זמן חיץ למזג האוויר.',
-        },
-        {
-          q: 'כמה מים כדאי לי לשאת?',
-          a: '1 גלון לאדם ביום. בתנאים חמים, 1.5 גלון. יש לשאת מסנן מים או טבליות טיהור למילוי.',
-        },
-        {
-          q: 'מהו פריט הבטיחות החשוב ביותר?',
-          a: 'תקשורת. רדיו VHF או שליח לוויני יכולים להציל חיים במצבי חירום. טלפונים סלולריים אינם אמינים באזורים מרוחקים.',
-        },
-      ],
-    },
-    'choosing-paddle': {
-      title: 'איך לבחור את המשוט הנכון SUP לקיאק',
-      description: 'מדריך לחומרי חתירה, צורות להבים, סוגי צירים, ומידות SUP לקיאקים.',
-      tldr: "אורך המשוט: SUP משוטים צריכים להיות גבוהים ב-6-8 אינץ' מהגובה שלך. משוטי קיאק תלויים ברוחב הסירה ובאורך הגוף. צורת להב: להבים דיהדרליים ישרים, להבים שטוחים מציעים יותר תפיסה. חומר הפיר: פחמן הוא הקל ביותר, פיברגלס הוא הערך הטוב ביותר, אלומיניום הוא בתקציב נמוך.",
-      problem: 'שימוש בגודל או חומר לא נכון של משוט גורם לעייפות מיותרת, יעילות מהלך ירודה ומאמץ במפרקים.',
-      solution: 'התאימו את אורך המחבט, צורת הלהב, חומר הגוף והגמישות לסגנון החתירה שלכם, גודל הגוף והתקציב שלכם.',
-      audience: 'SUP וחותרי קיאקים שבוחרים את החתירה הראשונה או הבאה שלהם.',
-      steps: [
-        "לשם SUP: מדוד את גובה המחבט — 6-8 אינץ' גבוה מהגובה שלך לחתירה כללית",
-        'לקיאק: מדדו את אורך הגוף ורוחב הסירה — סירות צרות דורשות משוטים קצרים יותר',
-        'בחר חומר להב — ניילון לתקציב, פיברגלס לערך, פחמן לביצועים',
-        'בחר צורת להב — דיהדרל למעקב חלק, שטוח לעוצמה, כפית למרוצים',
-        'בחר סוג ציר — ישר SUPל, כפוף למרוציםSUP, סטנדרטי לקיאק',
-        'בדוק גמישות — צירים קשיחים יותר מעבירים יותר כוח, צירים גמישים מפחיתים מתח על המפרק',
-      ],
-      faq: [
-        {
-          q: 'מהו החומר הטוב ביותר למשוט?',
-          a: 'פיברגלס מציע את האיזון הטוב ביותר בין משקל, עמידות ועלות. פחמן קל יותר אך יקר ושביר. ניילון כבד אך כמעט בלתי ניתן להריסה.',
-        },
-        {
-          q: 'איך אני יודע אם המשוט שלי באורך הנכון?',
-          a: 'לSUP: עמדו עם המשוט למאונך לצידכם — הידית צריכה להגיע לפרק כף היד כאשר היד מונפת מעל הראש. לקיאק: הלהב צריך להיכנס למים בזווית נוחה ללא התארכות יתר.',
-        },
-        {
-          q: 'האם כדאי לי משוט חד-חלקי או מתכוונן?',
-          a: 'משוטים מתכווננים טובים לשימוש משותף ולנסיעות. משוטים חד-חלקיים קלים יותר, נוקשים ומועילים לשימוש ייעודי.',
-        },
-      ],
-    },
-    'sup-with-kids': {
-      title: 'SUP עם ילדים: מדריך משפחתי שלם',
-      description: 'איך לקחת ילדים בבטחה לפדלבורדינג — המלצות גיל, ציוד ופעילויות.',
-      tldr: 'ילדים בגיל 6+ יכולים לרכוב על SUP עם מבוגר. ילדים בגיל 10+ יכולים לפדל על הלוח שלהם בהשגחה. השתמשו בלוח רחב ויציב, תמיד חבשו חגורת הצלה, הישארו במים רדודים ושקטים, ושמרו על משך הפעילות קצר (30-45 דקות מקסימום).',
-      problem: 'הורים רוצים לחלוק ספורטי מים עם ילדיהם אך דואגים לבטיחות, התאמת הציוד ושמירה על עניין הילד.',
-      solution:
-        'השתמשו בגודל הלוח הנכון לרכיבה זוגית, ודאו שכל ילד חובש PFD מותאם כראוי, התחילו במים רדודים וחמים, ועשו זאת מהנה עם משחקים ופעילויות קצרות.',
-      audience: 'הורים שמעוניינים להכיר לילדיהם את פעילויות הפדלבורד.',
-      steps: [
-        'גיל 4-6: לרכוב כנוסע על לוח של מבוגר — לשבת קדימה, להחזיק בידית המרכזית',
-        'גיל 6-10: לברך או לשבת על הלוח שלהם עם השגחה מבוגרת ועל רצועה',
-        'גיל 10+: לפדל על הלוח שלהם עם השגחה מבוגרת בקרבת מקום',
-        'חבישת PFD תמידית — ילדים חייבים לחבוש חגורת הצלה מותאמת כראוי בכל עת',
-        'שחקו במים רדודים (גובה מותניים למבוגר)',
-        'שמירה על משך הפעילות קצר — 30-45 דקות מקסימום לילדים מתחת לגיל 10',
-        'עשו זאת מהנה — שחקו משחקים, חפשו דגים, תרגול עמידה',
-      ],
-      faq: [
-        {
-          q: 'באיזה גיל ילד יכול SUP לבד?',
-          a: 'בערך גיל 10-12 בהשגחה, בהתאם ליכולת השחייה של הילד ולנוחות במים. תמיד במים רדודים ושקטים.',
-        },
-        {
-          q: 'איזה לוח הכי טוב לSUP עם ילדים?',
-          a: 'לוח רחב (34"+) עם קיבולת משקל גבוהה לרכיבה זוגית. רוחב של 33" וקיבולת של 220 פאונד ב-SUP Explorer 11 מתאים להורה עם ילד.',
-        },
-        {
-          q: 'איזה ציוד בטיחות ילדים צריכים?',
-          a: 'חגורת הצלה מורשית CE ומתאימה כראוי, רצועה (מחוברת ללוח של המבוגר עבור רכיבה זוגית), קרם הגנה וכובע.',
-        },
-      ],
-    },
-  },
-  hr: {
-    'how-to-choose-your-sup': {
-      title: 'Kako odabrati SUP svoju ploču',
-      description:
-        'Potpuni vodič za odabir prave daske za veslanje u stajanju na temelju vaše razine vještine, uvjeta vode i namjene.',
-      tldr: 'Odaberite prema SUP razini vještine, vrsti vode i primarnoj upotrebi. Univerzalne daske odgovaraju početnicima i mirnoj vodi. Touring daske odgovaraju veslanju na daljinu. Joga daske nude dodatnu širinu radi stabilnosti. Performanse daske odgovaraju iskusnim veslačima u različitim uvjetima.',
-      problem:
-        'Većina kupaca prvi put bira SUP dasku prema cijeni ili izgledu, a ne prema tome kako i gdje će zapravo veslati. To dovodi do loše stabilnosti, neadekvatnih performansi i frustrirajućeg iskustva.',
-      solution:
-        'Prilagodite oblik, volumen i konstrukciju daske svojoj razini vještine i primarnom okruženju za vodu. Šire daske (32-34") nude stabilnost za početnike. Duže daske (12-14") bolje se poklapaju za turneje.Drop-stitch Konstrukcija na 12-15 PSI pruža krutost usporedivu s tvrdim daskama.',
-      audience: 'Kupci prvi put SUP , rekreativni veslači i svi koji prelaze s osnovne daske.',
-      steps: [
-        'Odredite svoje primarno okruženje za veslanje — jezero, ocean, rijeka ili mješovito okruženje',
-        'Prilagodi širinu daske svojoj razini vještine: 32-34" za početnike, 30-32" za srednju razinu, 28-30" za napredne',
-        'Odaberite duljinu daske prema upotrebi: kraća za okretnost, duža za praćenje i brzinu',
-        'Odabrana konstrukcija: napuhivanje drop-stitch radi prenosivosti, tvrda ploča za maksimalne performanse',
-        'Provjerite kapacitet težine — vaša težina plus oprema ne smije prelaziti 80% limita daske',
-        'Provjerite priložene dodatke: pumpu, povodac, peraju, ruksak i komplet za popravak',
-      ],
-      faq: [
-        {
-          q: 'Koja je širina SUP najbolja za početnike?',
-          a: 'Širina od 32 do 34 inča pruža najstabilniju platformu za učenje. SUP Explorer 11 širine 33" idealan je za početnike na mirnoj vodi.',
-        },
-        {
-          q: 'Napuhavanje ili SUP tvrda daska?',
-          a: 'Napuhavajuće daske nude prenosivost, praktičnost skladištenja i apsorpciju udaraca. Tvrde daske nude maksimalnu krutost i brzinu. Za većinu rekreativnih korisnika, kvalitetna napuhavajuća daska s drop-stitch jezgrom praktičan je izbor.',
-        },
-        {
-          q: 'Na što PSI bih trebao napuhati?',
-          a: 'Paddle Board Overstock Preporučuju se 12-15 PSIdasaka. Na 15 PSI daska postiže maksimalnu krutost usporedivu s tvrdom pločom. Uvijek ostanite unutar naznačenog raspona tlaka ispisanog na ploči.',
-        },
-      ],
-    },
-    'beginner-guide': {
-      title: 'Vodič za početnike u veslanju na dasci',
-      description:
-        'Sve što trebate znati prije prve sesije veslanja na dasci — od podešavanja opreme do osnovnih tehnika veslanja.',
-      tldr: 'Počnite na mirnoj, mirnoj vodi s širokom stabilnom daskom. Napuhajte na 12-15, PSIpričvrstite povodac i koristite odgovarajuću duljinu vesla (6-8" višu od vaše visine). Držite stav u širini ramena, koljena blago savijena i gledajte prema horizontu.',
-      problem:
-        'Novi veslači često preskaču osnovne pripreme — pogrešnu duljinu vesla, loš stav ili odabir nemirne vode — što dovodi do padova, frustracije i obeshrabrenja.',
-      solution:
-        'Slijedite strukturirani plan za prvu vježbu: odaberite mirnu vodu, pravilno postavite opremu, vježbajte klečanje prije ustajanja i usavršite zamahivanje naprijed prije pokušaja okreta.',
-      audience: 'Potpuni početnici koji nikada prije nisu veslali na dasci.',
-      steps: [
-        'Odaberite mirnu, mirnu vodu bez brodskog prometa — idealno je malo jezero ili zaštićena uvala',
-        'Napuhaj dasku na 12-15 PSI pomoću pumpe s dvostrukim djelovanjem',
-        'Pričvrsti spiralni povodac na gležanj ili list, nikad na ručku daske',
-        'Umetni peraju i zategni vijak',
-        'Prilagodite duljinu vesla — trebala bi biti 6-8 inča viša od vaše visine',
-        'Počni klečati na dasci, veslaj nekoliko zamaha da osjetiš ravnotežu',
-        'Ustanite po jednu nogu, stopala u širini ramena, koljena mekana',
-        'Gledaj u horizont, a ne u noge — tvoja daska ide tamo gdje gledaš',
-      ],
-      faq: [
-        {
-          q: 'Što bih trebao nositi za vožnju na dasci?',
-          a: 'Sportska odjeća koja se brzo suši, prsluk za spašavanje, krema za sunčanje i kapa. U hladnoj vodi nosite ronilačko odijelo. Uvijek nosite povodac i nosite telefon u vodootpornoj futroli.',
-        },
-        {
-          q: 'Kako se mogu vratiti na dasku ako padnem?',
-          a: 'Ostanite smireni. Doplivajte do daske, uhvatite središnju ručku i zamahnite nogama dok se u jednom pokretu povlačite na dasku. Prvo se vratite u položaj za koljena, zatim ustanite.',
-        },
-        {
-          q: 'Koji su uvjeti vjetra sigurni?',
-          a: 'Za početnike: vjetrovi ispod 10 mph (5 čvorova). Ako vjetar puše dalje od obale, nemojte izlaziti. Provjerite prognozu i shvatite da je vjetar s mora opasan.',
-        },
-      ],
-    },
-    'safety-tips': {
-      title: 'Savjeti za sigurnost u vodenim sportovima',
-      description:
-        'Osnovne sigurnosne smjernice za veslanje na dasci, kajakarenje i plovidbu — od provjere opreme do osvještavanja o vremenskim uvjetima.',
-      tldr: 'Uvijek nosite CE-certificirani prsluk za spašavanje, provjerite vremenske i vodene uvjete prije lansiranja, nosite komunikacijske uređaje, nikada ne veslajte sami u nepoznatoj vodi i razumite deklarirane limite svoje opreme.',
-      problem:
-        'Većina nesreća u vodenim sportovima rezultat je neadekvatne pripreme — bez prsluka za spašavanje, ignoriranja vremenskih upozorenja ili korištenja opreme izvan njezinih dizajnerskih ograničenja.',
-      solution:
-        'Usvojite sigurnosni popis prije lansiranja: provjerite stanje opreme, provjerite vremenske uvjete i temperaturu vode, obavijestite nekoga o svojoj ruti i uvijek nosite odgovarajuću plutajuću opremu.',
-      audience: 'Svi sudionici vodenih sportova — SUPkajak, čamac i RIB korisnici.',
-      steps: [
-        'Provjerite vremensku prognozu — izbjegavajte vjetrove iznad 15 mph i grmljavinske oluje',
-        'Provjerite temperaturu vode — hladna voda (60°F/15°C) zahtijeva neoprensko ili suho odijelo',
-        'Pregledajte opremu — provjerite ima li curenja, pukotina i pravilnog napuhavanja',
-        'Nosite -CEcertificirani prsluk za spašavanje u svakom trenutku',
-        'Pričvrstite povodac (SUP) ili osigurajte svu labavu opremu (kajak/čamac)',
-        'Podnesite plan plovka — recite nekome kamo idete i kada ćete se vratiti',
-        'Nosite komunikaciju — vodootporna futrola za telefon ili VHF radio',
-        'Poznajte svoje granice — ostanite unutar svoje razine vještine i ocjena opreme',
-      ],
-      faq: [
-        {
-          q: 'Trebam li prsluk za spašavanje naSUP?',
-          a: 'Da. Mnoge jurisdikcije zakonski zahtijevaju prsluk za spašavanje na svakom plovilu, uključujućiSUPs. Čak i tamo gdje nije obavezan, -CEcertificirani prsluk za spašavanje je ključna sigurnosna oprema.',
-        },
-        {
-          q: 'Koja je najčešća ozljeda uzrokovana vodenim sportovima?',
-          a: 'Uranjanje u hladnu vodu i iscrpljenost najčešći su ozbiljni rizici. Uvijek se odijevajte prema temperaturi vode, a ne prema temperaturi zraka.',
-        },
-        {
-          q: 'Kako mogu provjeriti jesu li uvjeti sigurni?',
-          a: 'Koristite pomorske vremenske prognoze. Provjerite brzinu vjetra, visinu valova i temperaturu vode. Početnici bi trebali ostati u uvjetima pod vjetrom od 10 mph i valovima ispod 1 stope.',
-        },
-      ],
-    },
-    'inflatable-vs-hard': {
-      title: 'Napuhavajuće SUP naspram tvrdih dasaka: Koju biste trebali odabrati?',
-      description:
-        'Objektivna usporedba napuhanih i krutih SUP dasaka koja pokriva performanse, prenosivost, izdržljivost i vrijednost.',
-      tldr: 'Napuhavajuće daske pobjeđuju po prenosivosti, pohrani i otpornosti na udarce. Tvrde daske pobjeđuju za maksimalnu krutost i brzinu. Moderne drop-stitch napuhavajuće daske s 15 bodova PSI smanjuju 90% razlike u performansama.',
-      problem:
-        'Kupci su zarobljeni između praktičnosti napuhavajućih dasaka i reputacije performansi tvrdih dasaka, bez jasnih podataka o tome kako se zapravo uspoređuju.',
-      solution:
-        'Usporedite specifične kriterije — krutost, težinu, veličinu pakiranja, izdržljivost, popravak i cijenu — s vašim stvarnim obrascem korištenja. Za većinu rekreativnih kajasača, kvalitetan napuhivač je bolji izbor.',
-      audience: 'SUP Kupci biraju između napuhavajuće i krute konstrukcije.',
-      steps: [
-        'Procijenite potrebe za prenosivošću — napuhujući ruksaci do veličine ruksaka, tvrda daska zahtijeva krovni nosač',
-        'Usporedi krutost — napuhivač na 15 PSI ima minimalnu fleksibilnost, tvrda daska nema nikakvu fleksibilnost',
-        'Procijenite skladište — napuhavajuće skladišta u ormaru, tvrda ploča zahtijeva prostor u garaži ili na policama',
-        'Uzmite u obzir izdržljivost — napuhivač upija udarce, tvrda ploča može se udubiti i napuknuti',
-        'Faktorski popravak — napuhavajući zakrpe su jednostavne, dok popravci tvrdih ploča zahtijevaju profesionalan rad',
-        'Provjeri performanse — tvrde daske imaju malu prednost u brzini, napuhivači nude bolju apsorpciju udaraca',
-      ],
-      faq: [
-        {
-          q: 'Jesu li napuhavajuće daske SUPs jednako krute kao tvrde daske?',
-          a: 'Sa 15 godina PSI i drop-stitch konstrukcijom, razlika u krutosti je minimalna za rekreativnu upotrebu. Samo natjecateljski natjecatelji i surferi će primijetiti razliku.',
-        },
-        {
-          q: 'Koliko dugo traje napuhivač?SUP',
-          a: 'Uz pravilnu njegu, 5-10 godina. Otpornosti i habanje morske kvalitete PVC UV . Čuvajte izvan izravnog sunca kad se ne koristite i isperite svježom vodom nakon slane vode.',
-        },
-        {
-          q: 'Mogu li koristiti napuhivač SUP za surfanje?',
-          a: 'Da, ali napuhavajuće daske su najbolje za male do umjerene valove (ispod 3 stope). Za posvećeno surfanje, tvrda daska pruža bolju odzivnost i povezivanje s tračnicama.',
-        },
-      ],
-    },
-    'weather-conditions': {
-      title: 'Razumijevanje vremenskih uvjeta za paddle boarding',
-      description:
-        'Naučite čitati vjetar, valove, plime i vremenske obrasce kako biste donosili sigurne odluke na vodi.',
-      tldr: 'Provjerite tri stvari prije svakog lansiranja: brzinu vjetra (ispod 10 mph za početnike), visinu valova (ispod 1 stopu za početnike) i temperaturu vode (obucite se za vodu, ne za zrak). Offshore vjetar je opasan na bilo kojoj razini vještine.',
-      problem:
-        'Većina nesreća uzrokovanih vremenskim uvjetima događa se zato što veslači pogrešno procjenjuju uvjete — provjeravaju temperaturu zraka, ali ne i vodu, ili ne razumiju da ih morski vjetar može odnijeti u more.',
-      solution:
-        'Koristite strukturiranu procjenu vremenskih uvjeta prije lansiranja: smjer i brzina vjetra, period i visina vala, stanje plime i temperatura vode. Razumite kako svaki čimbenik utječe na vašu sigurnost.',
-      audience: 'Svi veslači koji idu na otvorenu vodu — jezera, zaljeve, rijeke i ocean.',
-      steps: [
-        'Provjerite brzinu i smjer vjetra — vjetar s mora (puše s kopna na more) je najopasniji',
-        'Procijenite uvjete valova — razdoblje vala jednako je važno kao i visina vala',
-        'Poznajte plimu — plimne struje mogu biti jače od vaše brzine veslanja',
-        'Mjerenje temperature vode — ispod 60°F/15°C zahtijeva toplinsku zaštitu',
-        'Provjerite vidljivost — magla i jaka kiša smanjuju vidljivost i povećavaju rizik od sudara',
-        'Razumite lokalne opasnosti — potopljene stijene, jake struje, zone za promet brodova',
-      ],
-      faq: [
-        {
-          q: 'Koja brzina vjetra je prevelika za SUP?',
-          a: 'Početnici: preko 10 mph (8 čvorova). Srednji nivo: preko 15 mph (13 čvorova). Napredni: preko 20 mph (17 čvorova). Ako ste u nedoumici, nemojte izlaziti.',
-        },
-        {
-          q: 'Što znači valno razdoblje?',
-          a: 'Valni period je vrijeme između uzastopnih valova. Kratki periodi (ispod 8 sekundi) znače strme, isprekidane valove. Dugi periodi (preko 12 sekundi) znače glađe, predvidljivije valove.',
-        },
-        {
-          q: 'Mogu li veslati po kiši?',
-          a: 'Slaba kiša obično je sigurna. Jaka kiša smanjuje vidljivost i može ukazivati na promjenu uvjeta vjetra. Grmljavinske oluje zahtijevaju hitnu evakuaciju iz vode.',
-        },
-      ],
-    },
-    'understanding-specs': {
-      title: 'Kako čitati SUP specifikacije ploča',
-      description:
-        'Tehnički vodič za razumijevanje SUP specifikacija ploče — volumen, dimenzije, konstrukcija i što one znače za performanse.',
-      tldr: 'Ključne specifikacije: volumen (litre) određuje plovnost i nosivost, širina određuje stabilnost, duljina određuje praćenje i brzinu, debljina određuje krutost, a PSI ocjena određuje tlak napuhavanja za optimalne performanse.',
-      problem:
-        'Specifikacije proizvoda navode brojeve bez konteksta, ostavljajući kupce nesigurnima koje su specifikacije zapravo važne za njihov slučaj upotrebe.',
-      solution:
-        'Prevedite svaku specifikaciju u stvarne performanse: volumen za plutanje, širina za stabilnost, duljina za klizanje, debljina za krutost i konstrukcija za izdržljivost.',
-      audience: 'Srednji kajasari i tehnički kupci koji žele donositi odluke temeljene na podacima.',
-      steps: [
-        'Provjeri volumen (litre) — tvoja težina plus oprema ne bi smjela prelaziti 80% kapaciteta ploče',
-        'Check širina — šira (32-34") = više stabilnosti, uži (28-30") = veća brzina',
-        'Duljina čeka — duža (12-14") = bolje praćenje, kraće (10-11") = bolja upravljivost',
-        'Debljina čeka — 6" je standard, 8" daje veću krutost i nosivost',
-        'Provjerite PSI ocjenu — napuhajte do maksimalne ocijenjene PSI vrijednosti za optimalnu krutost',
-        'Provjerite građevinske drop-stitch materijale — gustoću, PVC slojeve, ojačanje tračnica',
-      ],
-      faq: [
-        {
-          q: 'Što drop-stitch to znači?',
-          a: 'Drop-stitch je građevinska metoda u kojoj tisuće navoja povezuju gornji i donji sloj ploče. To omogućuje napuhavanje pod visokim tlakom (12-15PSI) za ekstremnu krutost.',
-        },
-        {
-          q: 'Koji je idealni omjer težine i volumena?',
-          a: 'Dobar cilj je otprilike 5-6 funti težine vozača po litri volumena daske. Veslač od 220 lb trebao bi tražiti daske s volumenom od 180+ litara.',
-        },
-        {
-          q: 'Je li težina daske bitna?',
-          a: 'Da. Lakše daske (ispod 20 lbs) lakše se prenose i prenose. Teže daske (25+ lbs) često znače PVC izdržljiviju višeslojnu konstrukciju.',
-        },
-      ],
-    },
-    'sup-maintenance': {
-      title: 'Kako očistiti i spremiti svoj napuhivač SUP',
-      description:
-        'Vodič za održavanje korak po korak kako biste maksimalno produžili vijek trajanja vaše SUP napuhavajuće daske.',
-      tldr: 'Isperite svježom vodom nakon svake upotrebe, potpuno osušite prije skladištenja, ispuhnite i valjajte labavo (ne vojno nepropusno), čuvajte na hladnom i suhom mjestu daleko od izravne sunčeve svjetlosti i mjesečno pregledajte spojeve.',
-      problem:
-        'Nepravilno skladištenje i čišćenje glavni su uzroci prijevremenog kvara napuhavajućih uređaja SUPs — plijesan, UV oštećenja i delaminacija spojeva.',
-      solution:
-        'Slijedite dosljednu rutinu nakon treninga: isperite, osušite, pregledajte, ispuhnite i spremite. Koristite blagi sapun za tvrdokornu prljavštinu. Nikada ne čuvajte dasku mokru ili na izravnom suncu.',
-      audience: 'Svi vlasnici napuhavajućih SUP dasaka koji žele da njihova daska traje 5+ godina.',
-      steps: [
-        'Isperite ploču svježom vodom odmah nakon upotrebe, posebno nakon slane vode',
-        'Čistite blagim sapunom i mekanom spužvom — izbjegavajte jake kemikalije ili visokotlačne perače',
-        'Potpuno osušite ploču — otvorite ventil da zadržana voda izađe',
-        'Pregledajte ima li oštećenja — provjerite spojeve, ventile i površinu zbog probušenosti',
-        'Potpuno ispuhnite — uklonite jezgru ventila radi potpune deflacije',
-        'Valjajte dasku labavo — počnite od nosa, izbjegavajte uske nabore',
-        'Čuvajte je u torbi za nošenje na hladnom i suhom mjestu, daleko od izravne sunčeve svjetlosti',
-      ],
-      faq: [
-        {
-          q: 'Mogu li ostaviti svoj SUP napuhan cijelu sezonu?',
-          a: 'Da, ali držite ga izvan izravnog sunčevog svjetla kad se ne koristi. Djelomična deflacija (8-10PSI) preporučuje se za dulje skladištenje.',
-        },
-        {
-          q: 'Kako popraviti probušenje?',
-          a: 'Očistite područje, izrežite zakrpu s zaobljenim kutovima, nanesite ljepilo, čvrsto pritisnite i pričekajte 24 sata prije napuhavanja.Paddle Board Overstock Daske uključuju komplet za popravak.',
-        },
-        {
-          q: 'Koliko često bih trebao provjeravati ventil?',
-          a: 'Mjesečno. Ventil je najčešća točka kvara. Provjerite da se klin ventila slobodno pomiče i je li O-prsten netaknut.',
-        },
-      ],
-    },
-    'paddling-techniques': {
-      title: 'SUP Osnovne tehnike veslanja',
-      description:
-        'Ovladajte prednjim zamahom, zamahom i okretom u samostrelu kako biste vesli učinkovito u bilo kojim uvjetima.',
-      tldr: 'Prednji zamah koristi trup, a ne ruke. Zamah okreće dasku. Okret u samostrelu je najučinkovitiji okret. Drži veslo okomito i potpuno uroni oštricu za maksimalni prijenos snage.',
-      problem:
-        'Većina veslača koristi udarce dominantne rukom koji troše energiju i uzrokuju umor ramena. Loša tehnika također otežava kontrolu daske na vjetru i valovima.',
-      solution:
-        'Naučite tri osnovna zamaha — naprijed, sweep i cross-bow okret — uz pravilnu mehaniku tijela. Vježbajte svaki na mirnoj vodi prije nego prijeđete na zahtjevne uvjete.',
-      audience: 'Veslači koji žele veslati duže, brže i s manje umora.',
-      steps: [
-        'Prednji zamah: ispruži se naprijed, potpuno postavi oštricu, povuci unatrag rotacijom trupa (ne rukama), izađi kod gležnja',
-        'Zamah: posegnite prema šini, zamahnite oštricom u širokom luku prema repu, okrenite dasku od strane lopatice',
-        'Cross-bow okret: postavite veslo na suprotnu stranu daske bez promjene ruke, povucite prema repu',
-        'Ojačanje: koristite nisku potporu za stabilnost u udarcu — udarite oštricu ravno o površinu vode',
-        'Potez povlačenja: ispruži ruku u stranu, povuci dasku bočno prema reketu',
-      ],
-      faq: [
-        {
-          q: 'Kako veslati ravno?',
-          a: 'Koristi dosljednu duljinu hoda s obje strane. Mijenjaj strane svakih 5-10 udaraca. Pogledaj fiksnu točku na horizontu za referencu.',
-        },
-        {
-          q: 'Trebam li saviti koljena?',
-          a: 'Da. Drži blago savijena koljena kao amortizere. Zaključana koljena prenose svaki val na trup i smanjuju stabilnost.',
-        },
-        {
-          q: 'Kako veslati protiv vjetra?',
-          a: 'Spustite stav, koristite kraće i brže zaveslaje i držite se bliže obali gdje je vjetar često smanjen. Ako je vjetar prejak, nemojte izlaziti van.',
-        },
-      ],
-    },
-    'sup-fitness': {
-      title: 'SUP Kondicija: Trening cijelog tijela na vodi',
-      description: 'Kako stand-up paddleboarding gradi snagu trupa, ravnotežu i kardiovaskularnu kondiciju.',
-      tldr: 'SUP Uključuje trup, noge, leđa i ramena u svakom zamahu. Sat vremena sagorijeva 300-500 kalorija. Veslanje protiv vjetra ili struje udvostručuje intenzitet.SUP Joga dodaje fleksibilnost i rad na ravnoteži.',
-      problem:
-        'Mnogi ljudi gledaju na paddleboarding kao na ležernu aktivnost, a ne na pravi fitness alat, propuštajući njegov potencijal za kondiciju cijelog tijela.',
-      solution:
-        'Organizirajte SUP treninge s određenim fitness ciljevima: izdržljivo veslanje za kardio, intervalni sprintovi za snagu, SUP joga za fleksibilnost i veslanje na duge udaljenosti za mišićnu izdržljivost.',
-      audience: 'Ljubitelji fitnessa koji traže trening cijelog tijela s niskim intenzitetom i visokim angažmanom.',
-      steps: [
-        'Zagrijavanje na kopnu — kružni pokreti rukama, okreti trupa i zamah nogu 5 minuta',
-        'Počnite s 10 minuta mirnog veslanja umjerenog intenziteta',
-        'Napredak prema intervalnom treningu — 2 minute intenzivnog veslanja, 2 minute laganog oporavka',
-        'Uključite SUP joga položaje — pas prema dolje, warrior II i položaj stabla na ploči',
-        'Ohladite se laganim veslanjem i statičkim istezanjem na dasci',
-      ],
-      faq: [
-        {
-          q: 'Je li SUP bolje od trčanja radi kondicije?',
-          a: 'SUP Pruža usporedive kardiovaskularne koristi uz manji utjecaj zgloba. Također više angažira gornji dio tijela i trup nego trčanje.',
-        },
-        {
-          q: 'Koliko SUP kalorija troši?',
-          a: 'Otprilike 300-500 kalorija na sat pri umjerenoj intenzitetu. Utrke ili veslanje protiv vjetra mogu sagorjeti 600-800 kalorija na sat.',
-        },
-        {
-          q: 'Mogu li izgraditi mišiće od SUP?',
-          a: 'Da. Veslanje jača mišiće ramena, leđa i trupa. Balansiranje uključuje noge i stabilizacijske mišiće. To je trening za cijelo tijelo s otporom.',
-        },
-      ],
-    },
-    'sup-yoga': {
-      title: 'SUP Joga: Potpuni vodič za veslanje i jogu',
-      description: 'Kombinirajte veslanje na dasci s jogom za poboljšanu ravnotežu, snagu i svjesnost na vodi.',
-      tldr: 'SUP Joga dodaje element nestabilnosti koji dramatično povećava aktivaciju trupa u usporedbi s jogom na kopnu. Započnite s osnovnim položajima na širokoj, stabilnoj dasci u mirnoj vodi. Koristite podlogu za podlogu protiv klizanja. Nikada ne prakticirajte SUP jogu sami.',
-      problem:
-        'Tradicionalne prostirke za jogu pružaju savršeno stabilnu površinu, uklanjajući izazov ravnoteže koji SUP jogu čini jedinstveno učinkovitom za snagu trupa i fokus.',
-      solution:
-        'Koristite SUP ekstra široku dasku (34") +s podlogom za trakciju za cijelu palubu. Vježbajte u mirnoj, plitkoj vodi. Počnite s temeljnim položajima prije nego što pokušate inverzije.',
-      audience: 'Praktikanti joge i veslači koji žele spojiti trening ravnoteže s mindfulnessom.',
-      steps: [
-        'Učvrstite dasku u plitku, mirnu vodu — koristite pješčani sidro ili privežite za mol',
-        'Počnite s pozama u sjedećem položaju — lagano sjedenje, položaj čamca, okret u sjedećem položaju',
-        'Napredak prema pozama klečeći — stol, mačka-krava, grom',
-        'Prijeđite u stojeće poze — planina, ratnik I, ratnik II, poza drveta',
-        'Vježbaj ravnotežne poze — polumjesec, orao, plesač',
-        'Završi sa savasanom — lezi ravno na dasku, osjeti kretanje vode',
-      ],
-      faq: [
-        {
-          q: 'Koja je daska najbolja za SUP jogu?',
-          a: 'Široka daska (34") +s punom trakcijskom podlogom pruža najstabilniju platformu. SUP Tour 12 nudi dobar balans stabilnosti i klizanja.',
-        },
-        {
-          q: 'Je SUP li joga opasna?',
-          a: 'Ne više od kopnene joge kad se prakticira sigurno. Koristite mirnu, plitku vodu. Nosite povodac. Vježbajte s partnerom. Izbjegavajte duboku vodu na prvim treninzima.',
-        },
-        {
-          q: 'Trebam li posebnu opremu?',
-          a: 'Široka i stabilna daska, podloga za prianjanje s punom palubom, povodac i PFD. Neki praktičari koriste vodootpornu podlogu za dodatno prianjanje.',
-        },
-      ],
-    },
-    'sup-fishing': {
-      title: 'SUP Vodič za ribolov: Kako pecati na dasci za veslanje',
-      description:
-        'Sve što trebate znati o ribolovu s daske za veslanje — postavljanje opreme, savjeti za stabilnost i tehnike.',
-      tldr: 'SUP Ribolov nudi tihi prilaz, pristup plitkoj vodi i bacanje u 360 stupnjeva. Koristite široku stabilnu dasku (34"), +pričvrstite držače za štapove i koristite hladnjak ili sanduk kao platformu za opremu. Sidrite u vjetrovitim uvjetima. Uvijek nosite .PFD',
-      problem:
-        'Standardni ribarski brodovi su skupi za održavanje i ne mogu pristupiti plitkoj vodi. Kajaci ograničavaju pokretljivost.SUP Ribolov rješava oba problema, ali zahtijeva posebne prilagodbe opreme.',
-      solution:
-        'Opremite štalu SUP držačima za štapove, sandukom za opremu i sidrištem. Iskoristite prenosivost daske za pristup udaljenim ribolovnim mjestima do kojih brodovi ne mogu doći.',
-      audience:
-        'Ribolovci koji žele loviti u plitkim vodama, udaljenim lokacijama ili preferiraju laganu, prijenosnu platformu za ribolov.',
-      steps: [
-        'Odaberite široku dasku (34") +s velikom nosivošću opreme',
-        'Postavite držače štapova na palubu koristeći sustave montirane na tračnice ili na traku',
-        'Koristite vodootpornu kutiju ili hladnjak pričvršćen na prednju palubu za opremu',
-        'Ponesite mali sidro ili štap za zasjedu za vjetrovite uvjete',
-        'Nosite džepove PFD s džepovima za alat i telefon',
-        'Vježbajte bacanje iz klečećeg položaja prije nego što ustanete',
-      ],
-      faq: [
-        {
-          q: 'Mogu li stajati i pecati SUPna ?',
-          a: 'Da.+ Daska širine 34" pruža dovoljnu stabilnost za stajanje i bacanje. Prvo vježbajte na mirnoj vodi.',
-        },
-        {
-          q: 'Koje ribe mogu ciljati SUPs ?',
-          a: 'SUPs izvrsne su za basove u jezerima, crvene ribe na ravnicama, pastrve u rijekama i priobalne vrste u zaljevima i estuarijima.',
-        },
-        {
-          q: 'Kako uloviti ribu SUPiz ?',
-          a: 'Kleknite radi stabilnosti. Koristite mrežu ili hvatač za usne. Držite ribu nisko da ne padne. Pustite ili osigurajte u hladnjaku.',
-        },
-      ],
-    },
-    'inflatable-repair': {
-      title: 'Kako popraviti svoj napuhujući čamac ili SUP',
-      description:
-        'Vodič korak po korak za popravak probušenih guma, problema s ventilima i oštećenja spojeva na napuhavajućim plovilima.',
-      tldr: 'Male rupe (ispod 1/4") mogu se popraviti priloženim kompletom za zakrpu. Očistite područje, nanesite PVC ljepilo, pritisnite flaster i pričekajte 24 sata. Curenje ventila obično zahtijeva zamjenu O-prstena. Velike pukotine ili delaminacije spojeva zahtijevaju profesionalnu uslugu.',
-      problem:
-        'Male probušene gume i problemi s ventilima su česti, ali ih je lako popraviti. Bez pravilne tehnike popravka, korisnici ili preplaćuju profesionalnu uslugu ili pogoršavaju štetu.',
-      solution:
-        'Identificirajte vrstu oštećenja — probijanje, curenje ventila ili problem sa spojem — i primijenite odgovarajuću metodu popravka. Većina popravaka traje 30 minuta i više od vremena stvrdnjavanja.',
-      audience: 'Vlasnici napuhavajućihSUPs, kajaka i čamaca koji žele sami obaviti osnovne popravke.',
-      steps: [
-        'Pronađite curenje — potpuno napuhajte, slušajte zrak, opipajte rukom ili koristite sapunicu',
-        'Označite curenje olovkom ili trakom',
-        'Očistite područje oko curenja izopropilnim alkoholom — najmanje 2 inča oko oštećenja',
-        'Grubo obrusite površinu finim brusnim papirom za bolje lijepljenje',
-        'Nanesite PVC ljepilo i na flaster i na površinu ploče',
-        'Pričekajte 5 minuta da ljepilo postane ljepljivo',
-        'Čvrsto pritisnite flaster, razvaljajte mjehuriće zraka valjkom ili kreditnom karticom',
-        'Ostavite da se očvrsne 24 sata prije nego što se napuhne do punog tlaka',
-      ],
-      faq: [
-        {
-          q: 'Mogu li popraviti probušenu gumu na vodi?',
-          a: 'Hitni popravci pomoću zakrpe i trake mogu vas vratiti na obalu. Potpuni popravci zahtijevaju suhe uvjete i 24-satno sušenje.',
-        },
-        {
-          q: 'Kako da popravim curenje ventila?',
-          a: 'Uklonite jezgru ventila priloženim alatom, provjerite ima li oštećenja O-prstena, zamijenite ako je potrebno i čvrsto umetnite jezgru.',
-        },
-        {
-          q: 'Koje ljepilo bih trebao koristiti za PVC popravke?',
-          a: 'Koristite PVC-specifično ljepilo poput HH-66 ili Clifton. Standardno super ljepilo se ne veže dobro s PVC napuhavajućim materijalima.',
-        },
-      ],
-    },
-    'kayak-techniques': {
-      title: 'Osnovne tehnike veslanja kajakom',
-      description:
-        'Majstor veslanja kajakom — prednji i široki zaveslaj, rubni i ojačani za učinkovito i sigurno kajakarenje.',
-      tldr: 'Prednji zaveslaj kajaka koristi rotaciju trupa, a ne ruku. Zamah okreće kajak. Rubanje poboljšava okretanje. Niska potpora sprječava prevrtanje u valovima. Držite osovinu vesla okomitom, a lopaticu potpuno uronjenu.',
-      problem:
-        'Neučinkovita tehnika veslanja uzrokuje zamor ramena, spor napredak i poteškoće u upravljanju kajakom na vjetru i struji.',
-      solution:
-        'Naučite pravilnu tehniku veslanja pokretanom trupom s četiri osnovna zaveslaja — naprijed, unatrag, zamahom i potporom.',
-      audience: 'Početnici i srednji kajakaši koji žele veslati s manje napora i više kontrole.',
-      steps: [
-        'Naprijedni zamah: rotirajte trup, postavite oštricu blizu stopala, povucite pored kuka, izađite na kukovima',
-        'Obrnuti stil: stavi lopaticu iza sebe, gurni naprijed za usporavanje ili vožnju unatrag',
-        'Zamah: ispruži naprijed, zamahni lopaticom u širokom luku prema krmi, okreni kajak',
-        'Nisko ojačanje: udarite oštricu ravno o površinu vode radi stabilnosti u valovima',
-        'Rubiranje: lagano nagnite kajak na rub kako biste napravili zavoje',
-      ],
-      faq: [
-        {
-          q: 'Kako da održim kajak ravno?',
-          a: 'Koristi dosljedne udarce na izmjeničnim stranama. Nauči J-udarac (blagi hook na kraju naprijed zaveslaja) za korekciju kursa bez mijenjanja strana.',
-        },
-        {
-          q: 'Koja je najčešća ozljeda uzrokovana kajakom?',
-          a: 'Naprezanje ramena zbog veslanja dominantnim rukama. Koristite rotaciju trupa za uključivanje većih mišića leđa i smanjenje opterećenja ramena.',
-        },
-        {
-          q: 'Kako da veslam na vjetru?',
-          a: 'Držite pramac okrenut prema vjetru. Koristite kraće, snažnije zaveslaje. Ako prelazite vjetar, lagano nagnite kajak u vjetar.',
-        },
-      ],
-    },
-    'multi-day-trip': {
-      title: 'Planiranje višednevnog kajaka ili SUP izleta',
-      description:
-        'Kako planirati i izvesti višednevno veslačko putovanje — planiranje rute, pakiranje opreme, kampiranje i sigurnost.',
-      tldr: 'Planirajte 10-15 milja dnevno. Spakirajte opremu u vodootporne suhe vreće, ravnomjerno rasporedite težinu i vježbajte učitavanje svoje daske ili kajaka prije putovanja. Podnesite plan plovidbe. Nosite vodu, hranu, sklonište, navigaciju i komunikaciju.',
-      problem:
-        'Višednevna putovanja ne uspijevaju zbog pretjeranog pakiranja, lošeg planiranja ruta ili podcjenjivanja vremenskih uvjeta i struje — što dovodi do iscrpljenosti, kvarova opreme ili sigurnosnih incidenata.',
-      solution:
-        'Koristite sustavni pristup planiranju: odabir rute, popis opreme, planiranje hrane, sigurnosni brifing i planiranje nepredviđenih situacija.',
-      audience: 'Iskusni veslači koji planiraju svoj prvi višednevni izlet.',
-      steps: [
-        'Odaberite rutu s utvrđenim kampovima i točkama za izlaz',
-        'Planirajte 10-15 milja dnevno uzimajući u obzir vjetar i struju',
-        'Provjerite tablice plime i oseke i vremenske prognoze za cijelo trajanje putovanja',
-        'Spakirajte opremu u vodootporne suhe vreće — ukupna težina opreme 20-30 lb',
-        'Rasporedite težinu ravnomjerno — najteži predmeti u sredini',
-        'Podnesite detaljan plan plovljenja nekome na kopnu',
-        'Ponesite navigaciju — papirnatu kartu, kompas i GPS rezervu',
-        'Spakirajte hitni sklonište, dodatnu hranu i komplet prve pomoći',
-      ],
-      faq: [
-        {
-          q: 'Koja je idealna dnevna udaljenost?',
-          a: '10-15 milja dnevno za iskusne veslače. Početnici bi trebali planirati 5-8 milja. Uvijek uključite dodatno vrijeme za vremenske uvjete.',
-        },
-        {
-          q: 'Koliko vode trebam ponijeti?',
-          a: '1 galon po osobi dnevno. U vrućim uvjetima, 1,5 galona. Nosite filter za vodu ili tablete za pročišćavanje za nadopunjavanje.',
-        },
-        {
-          q: 'Koji je najvažniji sigurnosni predmet?',
-          a: 'Komunikacija. VHF radio ili satelitski uređaj za slanje poruka može spasiti život u hitnim slučajevima. Mobilni telefoni su nepouzdani u udaljenim područjima.',
-        },
-      ],
-    },
-    'choosing-paddle': {
-      title: 'Kako odabrati pravi veslo za SUP i kajak',
-      description: 'Vodič za materijale za vesla, oblike lopatica, vrste osovina i dimenzioniranje za SUP i kajak.',
-      tldr: 'Duljina vesla: SUP vesla trebala bi biti 6-8" viša od vaše visine. Vesla za kajak ovise o širini plovila i duljini torza. Oblik lopatica: dvostruke lopatice prate ravno, ravne lopatice pružaju bolje hvatanje. Materijal osovine: karbon je najlakši, stakloplastika je najbolja vrijednost, aluminij je opcija za proračun.',
-      problem:
-        'Korištenje pogrešne veličine ili materijala vesla uzrokuje nepotreban umor, lošu učinkovitost zaveslaja i naprezanje zglobova.',
-      solution:
-        'Prilagodite duljinu vesla, oblik lopatice, materijal osovine i fleksibilnost svom stilu veslanja, tjelesnoj veličini i proračunu.',
-      audience: 'SUP i kajakaši koji biraju svoj prvi ili sljedeći veslo.',
-      steps: [
-        'Za SUP: izmjerite visinu vesla — 6-8" više od vaše visine za opće veslanje',
-        'Za kajak: izmjerite duljinu tijela i širinu čamca — uži čamci zahtijevaju kraće vesla',
-        'Odaberite materijal oštrice — najlon za proračun, stakloplastiku za vrijednost, ugljik za performanse',
-        'Odaberite oblik oštrice — dijedralni za glatko praćenje, ravni za snagu, žlica za utrke',
-        'Odaberite tip osovine — ravna za SUP, savijena za trkaći SUP, standardna za kajak',
-        'Provjerite fleksibilnost — tvrđa vratila prenose više snage, fleksibilna vratila smanjuju naprezanje zglobova',
-      ],
-      faq: [
-        {
-          q: 'Koji je najbolji materijal za lopatice?',
-          a: 'Staklena vlakna nude najbolji omjer težine, izdržljivosti i cijene. Karbon je lakši, ali skuplji i lomljiviji. Najlon je težak, ali praktički neuništiv.',
-        },
-        {
-          q: 'Kako mogu znati je li moja lopatica odgovarajuće duljine?',
-          a: 'Za SUP: postavite veslo okomito pored sebe — drška bi trebala dosegnuti zapešće kad vam je ruka podignuta iznad glave. Za kajak: lopatica bi trebala ući u vodu pod udobnim kutom, bez prevelikog dosega.',
-        },
-        {
-          q: 'Trebam li uzeti jednodijelnu ili podesivu lopaticu?',
-          a: 'Podesiva vesla su dobra za zajedničku upotrebu i putovanja. Jednodijelna vesla su lakša, čvršća i učinkovitija za namjensku upotrebu.',
-        },
-      ],
-    },
-    'sup-with-kids': {
-      title: 's SUP djecom: Potpuni obiteljski vodič',
-      description: 'Kako sigurno voditi djecu na dasci na veslanje — preporuke za dob, oprema i aktivnosti.',
-      tldr: 'Djeca od 6 godina+ mogu jahati SUP s odraslom osobom. Djeca od 10 godina+ mogu veslati na svojoj dasci pod nadzorom. Koristite široku stabilnu dasku, uvijek nosite PFD naboje, ostanite u plitkoj mirnoj vodi i održavajte treninge kratkim (maksimalno 30-45 minuta).',
-      problem:
-        'Roditelji žele dijeliti vodene sportove sa svojom djecom, ali brinu o sigurnosti, prikladnosti opreme i angažiranosti djece.',
-      solution:
-        'Koristite odgovarajuću veličinu daske za tandem vožnju, osigurajte da svako dijete nosi pravilno krojenu daskuPFD, počnite u plitkoj toploj vodi i učinite to zabavnim igrama i kratkim sesijama.',
-      audience: 'Roditelji koji žele upoznati svoju djecu s paddleboardingom.',
-      steps: [
-        'Dob 4-6 godina: voziti se kao suvozač na dasci za odrasle — sjediti naprijed, držati se za središnju ručku',
-        'Dob 6-10: kleknuti ili sjediti na vlastitoj dasci uz nadzor odraslih i povodac',
-        'Dob 10+: veslaju na svojoj dasci uz nadzor odraslih u blizini',
-        'Uvijek nosite — PFD djeca moraju nositi pravilno prilagođen prsluk za spašavanje u svakom trenutku',
-        'Ostanite u plitkoj vodi (za odrasle do struka)',
-        'Držite sesije kratke — maksimalno 30-45 minuta za djecu mlađu od 10 godina',
-        'Učinite to zabavnim — igrajte se, tražite ribe, vježbajte stojeći',
-      ],
-      faq: [
-        {
-          q: 'U kojoj dobi dijete može SUP biti samo?',
-          a: 'Oko 10-12 godina pod nadzorom, ovisno o sposobnosti plivanja djeteta i udobnosti u vodi. Uvijek u mirnim, plitkim uvjetima.',
-        },
-        {
-          q: 'Koja je ploča najbolja za SUP djecu?',
-          a: 'Široka daska (34") +s velikom nosivošću za vožnju u tandemu. Explorer SUP 11 ima širinu od 33" i nosivost od 220 lb, što dobro odgovara roditeljima i djetetu.',
-        },
-        {
-          q: 'Koju zaštitnu opremu djeca trebaju?',
-          a: 'Pravilno pristajući CE- certificirani prsluk za spašavanje, povodac (pričvršćen na ploču za odrasle kao tandem), krema za sunčanje i kapa.',
+          q: 'What safety gear do kids need?',
+          a: "A properly fitted life vest, a leash (attached to the adult's board for tandem), sunscreen, and a hat.",
         },
       ],
     },
@@ -2168,7 +554,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         'Kövess egy strukturált első edzéstervet: válassz nyugodt vizet, állítsd be megfelelően a felszerelésed, gyakorold a térdelni állás előtt, és sajátítsd el az előrelépést a kanyarodás előtt.',
       audience: 'Teljesen kezdők, akik még sosem evezőztek.',
       steps: [
-        'Válassz sík, nyugodt vizet, ahol nincs hajóforgalom — egy kis tó vagy védett öböl ideális',
+        'Válassz sík, nyugodt vizet, ahol kevés a forgalom — egy kis tó vagy védett öböl ideális',
         'Fújd fel a deszkát 12-15 PSI fokra a kettős működésű pumpával',
         'A tekercspórázt a bokádra vagy vádlihoz rögzítsd, soha ne a deszka nyelét.',
         'Tedd be a fint-t, és húzd meg a csavart',
@@ -2193,37 +579,36 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
       ],
     },
     'safety-tips': {
-      title: 'Vízi sportok biztonsági tippjei',
-      description:
-        'Alapvető biztonsági irányelvek az eveződeszkázáshoz, kajakozáshoz és hajózáshoz — a felszerelésellenőrzésektől az időjárás-észlelésig.',
-      tldr: 'Mindig viselj CEtanúsított mentőmellényt, ellenőrizd az időjárási és vízi viszonyokat a víz fellépése előtt, hordj magaddal kommunikációs eszközöket, soha ne evezz egyedül ismeretlen vízben, és ismerd meg a felszerelésed beállított limiteket.',
+      title: 'Paddle Boarding Safety Tips',
+      description: 'Essential safety guidelines for paddle boarding — from equipment checks to weather awareness.',
+      tldr: "Always wear a life vest, check weather and water conditions before launch, carry communication devices, never paddle alone in unfamiliar water, and understand your equipment's rated limits.",
       problem:
-        'A legtöbb vízi sportbaleset nem megfelelő felkészültségből fakad — nincs mentőmellény, figyelmen kívül hagyják az időjárási figyelmeztetéseket, vagy használnak felszerelést a tervezési határokon túl.',
+        'Most water sports accidents result from inadequate preparation — no life vest, ignoring weather warnings, or using equipment beyond its design limits.',
       solution:
-        'Fogadj el egy indítás előtti biztonsági ellenőrzőlistát: ellenőrizd a felszerelés állapotát, ellenőrizd az időjárást és a víz hőmérsékletét, tájékoztasd valakit az útvonaladról, és mindig viseld megfelelő lebegőt.',
-      audience: 'Minden vízi sportoló — SUP, kajak, csónakó és RIB használók.',
+        'Adopt a pre-launch safety checklist: verify equipment condition, check weather and water temperature, inform someone of your route, and always wear appropriate flotation.',
+      audience: 'All paddle boarders, from first-timers to experienced riders.',
       steps: [
-        'Nézd meg az időjárás-előrejelzést — kerüld a 15 mph feletti szelet és a zivatarokat',
-        'Ellenőrizd a víz hőmérsékletét — hideg víz (60°F/15°C) miatt pembóruhát vagy szárazruhát igényel',
-        'Vizsgálja meg a berendezéseket — ellenőrizze a szivárgásokat, repedéseket és megfelelő felfújást',
-        'Mindig viselj CEtanúsított mentőmellényt',
-        'Csatold a pórázt SUP() vagy rögzítsd az összes laza felszerelést (kajak/csónak)',
-        'Nyújts be egy kocsitervet — mondd el valakinek, hová mész, és mikor térsz vissza',
-        'Kommunikáció — vízálló telefontok vagy VHF rádió',
-        'Ismerd meg a határaidat — maradj a tudásszintedben és a felszerelésedben',
+        'Check weather forecast — avoid winds over 15 mph and thunderstorms',
+        'Verify water temperature — cold water (<60°F/15°C) requires a wetsuit or drysuit',
+        'Inspect equipment — check for leaks, cracks, and proper inflation',
+        'Wear a life vest at all times',
+        'Attach the leash and secure all loose gear',
+        'File a float plan — tell someone where you are going and when you will return',
+        'Carry communication — waterproof phone case or VHF radio',
+        'Know your limits — stay within your skill level and equipment ratings',
       ],
       faq: [
         {
-          q: 'Szükségem van mentőmellényre egy SUP?',
-          a: 'Igen. Sok joghatóság jogilag megköveteli a mentőmellényt bármely vízi járműn, beleértve SUPsa . Még ha nem is kötelező, a CEtanúsított mentőmellény elengedhetetlen biztonsági felszerelés.',
+          q: 'Do I need a life vest on a SUP?',
+          a: 'Yes. Many jurisdictions legally require a life vest when paddling, including on SUPs. Even where not required, a life vest is essential safety equipment.',
         },
         {
-          q: 'Mi a leggyakoribb vízi sportsérülés?',
-          a: 'A hidegvízbe merülés és a kimerülés a leggyakoribb komoly kockázatok. Mindig a víz hőmérsékletéhez igazítsd, ne a levegő hőmérsékletéhez.',
+          q: 'What is the most common water sports injury?',
+          a: 'Cold water immersion and exhaustion are the most common serious risks. Always dress for the water temperature, not the air temperature.',
         },
         {
-          q: 'Hogyan ellenőrizhetem, hogy a körülmények biztonságosak-e?',
-          a: 'Használj tengeri időjárás-előrejelzéseket. Ellenőrizd a szélsebességet, a hullámmagasságot és a vízhőmérsékletet. A kezdőknek 10 mph szél alatti és 1 láb hullámok alatt kell maradniuk.',
+          q: 'How do I check if conditions are safe?',
+          a: 'Use marine weather forecasts. Check wind speed, wave height, and water temperature. Beginners should stay in conditions under 10 mph wind and under 1 ft waves.',
         },
       ],
     },
@@ -2276,7 +661,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         'Ismerd az árapályt — az árapály-áramlatok erősebbek lehetnek, mint a evezősebességed',
         'A víz hőmérsékletének mérése — 60°F/15°C alatt hővédelmet igényel',
         'Ellenőrizd a látótávolságot — a köd és az erős eső csökkenti a látótávolságot és növeli az ütközési kockázatot',
-        'Ismerd meg a helyi veszélyeket — víz alatti sziklákat, erős áramlatokat, hajóforgalmas zónákat',
+        'Ismerd meg a helyi veszélyeket — víz alatti sziklákat, erős áramlatokat, forgalmas zónákat',
       ],
       faq: [
         {
@@ -2435,7 +820,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
       audience: 'Jóga gyakorlók és evezők, akik az egyensúlyi edzést a tudatossággal szeretnék kombinálni.',
       steps: [
         'Rögzítsd a deszkát sekély, nyugodt vízben — használj homokhorgonyt vagy kösd meg egy dokkhoz',
-        'Kezdjük ülő pózokkal — könnyű ülés, csónakpóz, ülő csavar',
+        'Kezdjük ülő pózokkal — könnyű ülés, Navasana, ülő csavar',
         'Előrehaladás térdpózokhoz — asztalon, macskatehén, villám',
         'Állva álló pózba — hegy, harcos I, harcos II, fa póz',
         'Gyakorold az egyensúlyi pózokat — félhold, sas, táncos',
@@ -2462,9 +847,9 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         'Minden, amit tudnod kell a horgászatról a lapátdeszkáról — felszerelés beállítása, stabilitási tippek és technikák.',
       tldr: 'SUP A horgászat csendes megközelítést, sekély vízi hozzáférést és 360 fokos dobást kínál. Használj egy széles stabil deszkát (34"+), csatolj bottartókat, és használj hűtőt vagy ládát felszerelés fedélzetként. Horgonysz széles körülmények között. Mindig PFDviselj .',
       problem:
-        'A hagyományos halászhajók karbantartása drágák, és nem férnek sekély vízhez. A kajakok korlátozzák a mozgást.SUP A horgászat mindkét problémát megoldja, de speciális felszerelésre van szükség.',
+        'A motoros halászati járművek karbantartása drága, és nem érnek el a sekély vizeket. A SUP horgászat mindkét problémát megoldja, de speciális felszerelésre van szükség.',
       solution:
-        'Szerelj fel egy SUP istállót bottartókkal, felszerelés ládával és horgonyrendszerrel. Használd ki a deszka hordozhatóságát, hogy elérd azokat a távoli horgászhelyeket, ahová a hajók nem férnek el.',
+        'Szerelj fel egy stabil SUP-ot bottartókkal, felszereléses ládával és horgonyrendszerrel. Használd ki a deszka hordozhatóságát, hogy elérd azokat a távoli horgászhelyeket, ahová a motoros járművek nem érnek el.',
       audience:
         'Azok a horgászok, akik sekély vizekben, távoli helyeken akarnak horgászni, vagy inkább egy könnyű, hordozható horgászplatformot szeretnének használni.',
       steps: [
@@ -2491,171 +876,137 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
       ],
     },
     'inflatable-repair': {
-      title: 'Hogyan javítsa meg felfújható csónakját vagy SUP',
+      title: 'How to Repair Your Inflatable SUP',
       description:
-        'Lépésről lépésre útmutató a dyukaszkodások, szelepproblémák és varrássérülések javításához felfújható vízi járműveken.',
-      tldr: 'A kis szúrások (1/4"" alatti) javíthatók a mellékelt foltkészlettel. Tisztítsd meg a területet, PVC kenj ragasztót, nyomd le a tapaszt, és várj 24 órát. A szelepszivárgás általában O-gyűrű cserét igényel. Nagy szakadások vagy varrás lebontása professzionális szervizt igényel.',
+        'Step-by-step guide to repairing punctures, valve issues, and seam damage on your inflatable paddle board.',
+      tldr: 'Small punctures (under 1/4") are repairable with the included patch kit. Clean the area, apply PVC adhesive, press the patch, and wait 24 hours. Valve leaks usually require O-ring replacement. Large tears or seam delamination need professional service.',
       problem:
-        'A kisebb dyukások és szelepproblémák gyakoriak, de könnyen orvosolhatók. Megfelelő javítási technika nélkül a felhasználók vagy túlfizetnek a professzionális szervizért, vagy súlyosbítják a károkat.',
+        'Small punctures and valve issues are common but easy to fix. Without proper repair technique, users either overpay for professional service or make the damage worse.',
       solution:
-        'Azonosítsd a sérülés típusát — szúrás, szelepszivárgás vagy varrásprobléma — és alkalmazza a megfelelő javítási módszert. A legtöbb javítás 30 percet vesz igénybe, plusz a kötési idő.',
-      audience: 'FújhatóSUPs, kajakok és hajók tulajdonosai, akik maguk szeretnék elintézni az alapvető javításokat.',
+        'Identify the damage type — puncture, valve leak, or seam issue — and apply the appropriate repair method. Most repairs take 30 minutes plus curing time.',
+      audience: 'Owners of inflatable SUP boards who want to handle basic repairs themselves.',
       steps: [
-        'Találd meg a szivárgást — felfújd teljesen, figyeld a levegőt, tapogj kézzel, vagy használj szappanvizet',
-        'Jelöld meg a szivárgást tollal vagy szalaggal',
-        'Tisztítsd meg a szivárgás környékét izopropil-alkohollal — legalább 2 hüvelykkel a sérülés körül',
-        'Durván tisztítsd meg a felületet finom csiszolópapírral, hogy jobb ragasztós legyen',
-        'Ragasztót PVC vigyünk fel mind a foltra, mind a deszfalt felületére',
-        'Várj 5 percet, amíg a ragasztó ragacsos lesz',
-        'Nyomd meg erősen a foltot, görgővel vagy bankkártyával húzd ki a légbuborékokat',
-        'Hagyd 24 órán át száradni, mielőtt teljes nyomásra fújnánk',
+        'Locate the leak — inflate fully, listen for air, feel with your hand, or use soapy water',
+        'Mark the leak with a pen or tape',
+        'Clean the area around the leak with isopropyl alcohol — at least 2 inches around the damage',
+        'Rough the surface with fine sandpaper for better adhesive bonding',
+        'Apply PVC adhesive to both the patch and the board surface',
+        'Wait 5 minutes for the adhesive to become tacky',
+        'Press the patch firmly, roll out air bubbles with a roller or credit card',
+        'Let cure for 24 hours before inflating to full pressure',
       ],
       faq: [
         {
-          q: 'Javíthatom a víz szúrását?',
-          a: 'A vészhelyzeti javítások javítással egy folttal és szalaggal visszajuttathatnak a partra. A teljes javítás száraz körülményeket és 24 órás kötést igényel.',
+          q: 'Can I repair a puncture on the water?',
+          a: 'Emergency repairs using a patch and tape can get you back to shore. Full repairs require dry conditions and 24-hour curing.',
         },
         {
-          q: 'Hogyan javítsam meg egy szivárgó szelepet?',
-          a: 'Vedd ki a szelepmagot a mellékelt eszközzel, ellenőrizd az O-gyűrűt sérülésnek-e, szükség esetén cseréld ki, és szorosan helyezd vissza a magot.',
+          q: 'How do I fix a leaking valve?',
+          a: 'Remove the valve core with the included tool, check the O-ring for damage, replace if needed, and reinsert the core tightly.',
         },
         {
-          q: 'Milyen ragasztót használjak PVC javításokhoz?',
-          a: 'Használj PVC-specifikus ragasztót, mint például HH-66 vagy Clifton. A standard szuperragasztó nem tapad jól felfújható PVC anyagokkal.',
-        },
-      ],
-    },
-    'kayak-techniques': {
-      title: 'Alapvető kajak-evezési technikák',
-      description:
-        'Mester kajakos evezés — előrelépés, sweep stroke, peremezés és merevítés a hatékony és biztonságos kajakozáshoz.',
-      tldr: 'A kajak előre irányuló mozdulat a törzs forgását használja, nem karokat. A sweep stroke elfordítja a kajakat. A peremés javítja a kanyarodást. Az alacsony merevítő megakadályozza a hullámokban felborulást. Tartsd a lapátnyél függőlegesen, és a pengét teljesen víz alatt.',
-      problem:
-        'A nem hatékony evezési technika vállfáradtságot, lassú haladást és nehézséget okoz a kajak irányításában szélben és áramlatban.',
-      solution:
-        'Tanuld meg a helyes törzsvezérelt evezési technikát négy alapvető mozdulattal — előre, hátra, söpörés és merevítő.',
-      audience: 'Kezdő és középhaladó kajakosok szeretnének kevesebb erőfeszítéssel és nagyobb kontrollt vállalni.',
-      steps: [
-        'Előrelépés: forgasd meg a törzsed, helyezd a pengét a lábad közelébe, húzd át a csípőd, és a csípődnél hagyd ki',
-        'Fordított ütés: helyezd hátra, nyomd előre lassítsa vagy hátratorgatd',
-        'Sweep stroke: előrenyúlni, széles ívben söpörni a pengét a farok irányába, fordítsd el a kajakot',
-        'Alacsony merevítő: a lapátot laposan a víz felszínére csapd, hogy hullámokban stabil legyen',
-        'Szélzés: A kajakot enyhén a szélére döntsd, hogy kanyarokat vágj',
-      ],
-      faq: [
-        {
-          q: 'Hogyan tartsam egyenesen a kajakomat?',
-          a: 'Használj következetes ütéseket váltakozó oldalakon. Tanuld meg a J-stroke-t (egy enyhe horog az előrelépés végén) a pályakorrekcióhoz anélkül, hogy oldalt váltasz.',
-        },
-        {
-          q: 'Mi a leggyakoribb kajaksérülés?',
-          a: 'Vállfájás a kar-domináns evezés miatt. Használj törzs forgását, hogy nagyobb hátizmokat érintsd és csökkentsd a vállterhet.',
-        },
-        {
-          q: 'Hogyan evezzek szélben?',
-          a: 'Tartsd az orrot a szél felé tartva. Használj rövidebb, erősebb mozdulatokat. Ha áthaladsz a szélen, húzd a kajakot enyhén a szél felé.',
+          q: 'What glue should I use for PVC repairs?',
+          a: 'Use PVC-specific adhesive like HH-66 or Clifton. Standard super glue does not bond well with inflatable PVC materials.',
         },
       ],
     },
     'multi-day-trip': {
-      title: 'Többnapos kajakozás vagy SUP kirándulás tervezése',
+      title: 'Planning a Multi-Day SUP Tour',
       description:
-        'Hogyan tervezzük meg és valósítsd meg egy többnapos evezős túrát — útvonaltervezés, felszereléscsomagolás, kempingezés és biztonság.',
-      tldr: 'Tervezz napi 10-15 mérföldet. Csomagold be a felszerelést vízálló száraz zsákokba, egyenletesen oszd el a súlyt, és gyakorold a deszka vagy kajak betöltését az utazás előtt. Készíts egy úszótervet. Vigyél magaddal vizet, ételt, menedéket, navigációt és kommunikációt.',
+        'How to plan and execute a multi-day paddling trip — route planning, gear packing, camping, and safety.',
+      tldr: 'Plan 10-15 miles per day. Pack gear in waterproof dry bags, distribute weight evenly, and practice loading your board before the trip. File a float plan. Carry water, food, shelter, navigation, and communication.',
       problem:
-        'A többnapos utazások túlpakolás, rossz útvonaltervezés vagy az időjárás és áramlat alábecsülése miatt kudarcot vallanak — ami kimerüléshez, felszereléshibahoz vagy biztonsági incidensekhez vezethet.',
+        'Multi-day trips fail due to overpacking, poor route planning, or underestimating weather and current — leading to exhaustion, gear failure, or safety incidents.',
       solution:
-        'Használj rendszerszintű tervezési megközelítést: útvonalválasztás, felszerelési ellenőrzőlista, élelmiszertervezés, biztonsági tájékoztató és vészhelyzeti tervezés.',
-      audience: 'Tapasztalt evezősök, akik első többnapos expedíciójukat tervezik.',
+        'Use a systematic planning approach: route selection, gear checklist, food planning, safety briefing, and contingency planning.',
+      audience: 'Experienced paddlers planning their first multi-day expedition.',
       steps: [
-        'Válassz olyan útvonalat, ahol már kijelölt kempinghelyek és mentőpontok vannak',
-        'Tervezz napi 10-15 mérföldet, figyelembe véve a szelet és az áramlatot',
-        'Nézd meg az árapálytáblázatokat és az időjárás-előrejelzéseket az egész utazási ablakra vonatkozóan',
-        'Csomagolj felszerelést vízálló száraz zsákokba — 20-30 font összesen 20-30 font felszerelés súlya',
-        'Oszd el egyenletesen a súlyt — a legnehezebb tárgyak a közepén',
-        'Készíts részletes úszótervet valakivel a parton',
-        'Vigyél a navigációt — papírtérkép, iránytű és GPS mentés',
-        'Csomagold be a sürgősségi menedéket, extra ételt és elsősegélycsomagot',
+        'Select a route with established campsites and bailout points',
+        'Plan 10-15 miles per day accounting for wind and current',
+        'Check tide tables and weather forecasts for the entire trip window',
+        'Pack gear in waterproof dry bags — 20-30 lbs total gear weight',
+        'Distribute weight evenly — heaviest items in the center',
+        'File a detailed float plan with someone on shore',
+        'Bring navigation — paper chart, compass, and GPS backup',
+        'Pack emergency shelter, extra food, and first aid kit',
       ],
       faq: [
         {
-          q: 'Mi az ideális napi távolság?',
-          a: 'Tapasztalt evezőseknek napi 10-15 mérföld. A kezdőknek 5-8 mérföldet kell megtervezniük. Mindig építsenek időt az időjárás miatt.',
+          q: 'What is the ideal daily distance?',
+          a: '10-15 miles per day for experienced paddlers. Beginners should plan 5-8 miles. Always build in buffer time for weather.',
         },
         {
-          q: 'Mennyi vizet vigyek magammal?',
-          a: '1 gallon személyenként naponta. Forró körülmények között 1,5 gallon. Vízszűrőt vagy tisztító tablettákat vigyél magaddal újratöltéshez.',
+          q: 'How much water should I carry?',
+          a: '1 gallon per person per day. In hot conditions, 1.5 gallons. Carry a water filter or purification tablets for refills.',
         },
         {
-          q: 'Mi a legfontosabb biztonsági eszköz?',
-          a: 'Kommunikáció. Egy VHF rádió vagy műholdas üzenetküldő életmentő lehet vészhelyzetben. A mobiltelefonok megbízhatatlanok távoli területeken.',
+          q: 'What is the most important safety item?',
+          a: 'Communication. A VHF radio or satellite messenger can be life-saving in an emergency. Cell phones are unreliable in remote areas.',
         },
       ],
     },
     'choosing-paddle': {
-      title: 'Hogyan válasszuk a megfelelő SUP evezőt és a kajakot',
-      description:
-        'Útmutató az evező anyagokhoz, pengék alakjaihoz, szártípusokhoz, SUP méretezéséhez és a kajakozáshoz.',
-      tldr: 'Lapáthossz: az evezőknek SUP 6-8 hüvelykkel magasabbnak kell lenniük, mint a magasságod. A kajakevezők a hajó szélességétől és törzshosszától függenek. Lapátalak: a dihedrális lapátok egyenesen nyomoznak, a lapos lapátok nagyobb fogást biztosítanak. Nyélanyag: a szén a legkönnyebb, az üvegszál a legjobb ár-érték arány, az alumínium pedig költségköltség.',
+      title: 'How to Choose the Right SUP Paddle',
+      description: 'A guide to paddle materials, blade shapes, shaft types, and sizing for stand-up paddle boarding.',
+      tldr: 'Paddle length: SUP paddles should be 6-8" taller than your height. Blade shape: dihedral blades track straight, flat blades offer more catch. Shaft material: carbon is lightest, fiberglass is best value, aluminum is budget.',
       problem:
-        'A rossz lapátméret vagy anyag használata felesleges fáradtságot, rossz ütés hatékonyságot és ízületi feszülést okoz.',
+        'Using the wrong paddle size or material causes unnecessary fatigue, poor stroke efficiency, and joint strain.',
       solution:
-        'Egyeztesd az evező hosszát, penge alakját, nyélanyagát, és rugalmasan illeszkedjen az evezőstílusodhoz, testméretedhez és költségvetésedhez.',
-      audience: 'SUP és a kajakosok kiválasztása az első vagy a következő evezőjük.',
+        'Match paddle length, blade shape, shaft material, and flex to your paddling style, body size, and budget.',
+      audience: 'SUP paddlers choosing their first or next paddle.',
       steps: [
-        'SUPMérd meg az evező magasságát — 6-8" magasabb, mint a te magasságod általános evezéshez',
-        'Kajaknál: mérd meg a törzs hosszát és a hajószélességet — a keskenyebb hajók rövidebb evezőt igényelnek',
-        'Válassz pengé-anyagot — nejlon költségvetéshez, üvegszál értékhez, szén a teljesítményhez',
-        'Válassz penge alakot — dihedral a sima követéshez, lapos az erőhöz, spoon a versenyhez',
-        'Válassz nyéltípust — egyenes a SUPversenyhez, hajlított a SUPversenyhez, standard a kajakhoz',
-        'Ellenőrizd a hajlékony képességeket — a mereveb tengelyek nagyobb erőt adnak át, a rugalmas tengelyek csökkentik az ízületi feszültséget',
+        'For SUP: measure paddle height — 6-8" taller than your height for general paddling',
+        'Adjust for board width — wider boards call for a slightly longer paddle',
+        'Choose blade material — nylon for budget, fiberglass for value, carbon for performance',
+        'Choose blade shape — dihedral for smooth tracking, flat for power, spoon for racing',
+        'Choose shaft type — straight for general paddling, bent for racing',
+        'Check flex — stiffer shafts transfer more power, flexible shafts reduce joint strain',
       ],
       faq: [
         {
-          q: 'Mi a legjobb lapátanyag?',
-          a: 'Az üvegszál a legjobb egyensúlyt nyújtja a súly, tartósság és költség között. A szén könnyebb, de drágább és törékenyebb. A nejlon nehéz, de gyakorlatilag elpusztíthatatlan.',
+          q: 'What is the best paddle material?',
+          a: 'Fiberglass offers the best balance of weight, durability, and cost. Carbon is lighter but more expensive and brittle. Nylon is heavy but virtually indestructible.',
         },
         {
-          q: 'Honnan tudhatom, hogy az evezőm megfelelő hosszúságú-e?',
-          a: 'SUPPéldául: állj függőlegesen a lapátot magad mellé — a nyél eléri a csuklód, amikor a karod felemeled a fej fölé. Kajakhoz: a pengét kényelmes szögben kell belépnie a vízbe, anélkül, hogy túlnyúlnál.',
+          q: 'How do I know if my paddle is the right length?',
+          a: 'Stand the paddle vertically next to you — the handle should reach your wrist when your arm is raised overhead.',
         },
         {
-          q: 'Vegyek egyrészes vagy állítható lapátot?',
-          a: 'A állítható lapátok jók közös használatra és utazásra. Az egyrészes lapátok könnyebbek, merevebbek és hatékonyabbak dedikált használatra.',
+          q: 'Should I get a one-piece or adjustable paddle?',
+          a: 'Adjustable paddles are good for shared use and travel. One-piece paddles are lighter, stiffer, and more efficient for dedicated use.',
         },
       ],
     },
     'sup-with-kids': {
-      title: 'SUP gyerekekkel: Teljes családi útmutató',
-      description:
-        'Hogyan vigyük biztonságosan a gyerekeket eveződeszkázásra — életkorbeli ajánlások, felszerelések és tevékenységek.',
-      tldr: 'A 6 éves gyerekek+ felnőtttel együtt utazhatnak SUP . A 10 éves gyerekek felügyelet+ mellett saját deszkával evezhetnek. Használj egy széles stabil deszkát, mindig viselj PFD-t, maradj sekély, nyugodt vízben, és tartsd röviden az edzéseket (maximum 30-45 perc).',
+      title: 'SUP with Kids: A Complete Family Guide',
+      description: 'How to safely take children paddle boarding — age recommendations, equipment, and activities.',
+      tldr: 'Children 6+ can ride on a SUP with an adult. Children 10+ can paddle their own board with supervision. Use a wide stable board, always wear PFDs, stay in shallow calm water, and keep sessions short (30-45 minutes max).',
       problem:
-        'A szülők szeretnének vízi sportokat megosztani gyermekeikkel, de aggódnak a biztonság, a felszerelés illeszkedése és a gyermekek elköteleződése miatt.',
+        'Parents want to share water sports with their kids but worry about safety, equipment fit, and keeping children engaged.',
       solution:
-        'Használd a megfelelő deszka méretét tandem lovagláshoz, biztosítsd minden gyermek megfelelően szabott ruhátPFD, kezdj sekély, meleg vízben, és tedd szórakoztató játékokkal és rövid alkalmakkal.',
-      audience: 'Szülők, akik szeretnék bevezetni gyermekeiknek a lapátozást.',
+        'Use the right board size for tandem riding, ensure every child wears a properly fitted PFD, start in shallow warm water, and make it fun with games and short sessions.',
+      audience: 'Parents who want to introduce their children to paddle boarding.',
       steps: [
-        '4-6 évszázad: utasként ülj fel felnőtt deszkán — ülj előre, kapasd meg a középső fogantyút',
-        '6-10 éves koruk: térdelni vagy leülni a saját táblájukon, felnőtt felügyelet és póráz mellett',
-        '10 +évesen: evezni a saját deszkát felnőtt felügyelet mellett',
-        'Mindig viselj PFD — a gyerekeknek mindig megfelelően illeszkedő mentőmellényt kell viselniük',
-        'Maradj sekély vízben (a felnőtt derékig érő)',
-        'Tartsd a rövid üléseket — maximum 30-45 perc 10 év alatti gyerekeknek',
-        'Tedd szórakoztató – játsszon játékokat, keress halat, gyakorolj állva',
+        "Age 4-6: ride as a passenger on an adult's board — sit in front, hold onto the center handle",
+        'Age 6-10: kneel or sit on their own board with adult supervision and a leash',
+        'Age 10+: paddle their own board with adult supervision nearby',
+        'Always wear a PFD — children must wear a properly fitted life vest at all times',
+        'Stay in shallow water (waist-deep for the adult)',
+        'Keep sessions short — 30-45 minutes max for children under 10',
+        'Make it fun — play games, look for fish, practice standing up',
       ],
       faq: [
         {
-          q: 'Hány évesen lehet egy SUP gyermek egyedül?',
-          a: 'Körülbelül 10-12 éves korban, felügyelet mellett, attól függően, mennyire úsz, és mennyire kényelmes a vízben. Mindig nyugodt, sekély körülmények között.',
+          q: 'At what age can a child SUP alone?',
+          a: "Around age 10-12 with supervision, depending on the child's swimming ability and comfort in water. Always in calm, shallow conditions.",
         },
         {
-          q: 'Melyik tábla a SUP legjobb gyerekeknek?',
-          a: 'Széles deszka (34"+), nagy teherbírással tandem lovagláshoz. SUP Az Explorer 11 33" szélessége és 220 fontos kapacitása jól működik szülő és gyermek számára.',
+          q: 'What board is best for SUP with kids?',
+          a: 'A wide board (34"+) with high weight capacity for tandem riding. The SUP Explorer 11\'s 33" width and 220 lb capacity works well for parent-plus-child.',
         },
         {
-          q: 'Milyen biztonsági felszerelésre van szükségük a gyerekeknek?',
-          a: 'Megfelelően CEilleszkedő, hitelesített mentőmellény, póráz (tandem módon a felnőtt deszkához rögzítve), naptej és kalapak.',
+          q: 'What safety gear do kids need?',
+          a: "A properly fitted life vest, a leash (attached to the adult's board for tandem), sunscreen, and a hat.",
         },
       ],
     },
@@ -2705,7 +1056,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         'Ikuti rencana sesi pertama yang terstruktur: pilih air tenang, siapkan perlengkapan dengan benar, latih berlutut sebelum berdiri, dan kuasai gerakan maju sebelum mencoba berbelok.',
       audience: 'Pemula sejati yang belum pernah paddle board sebelumnya.',
       steps: [
-        'Pilih air yang datar dan tenang tanpa lalu lintas kapal — danau kecil atau teluk terlindung sangat ideal',
+        'Pilih air yang datar dan tenang dengan lalu lintas yang sepi — danau kecil atau teluk terlindung sangat ideal',
         'Inflasi papan Anda hingga 12-15 PSI menggunakan pompa dual-action',
         'Pasang tali koil ke pergelangan kaki atau betis, jangan pernah ke pegangan papan',
         'Masukkan sirip dan kencangkan sekrup',
@@ -2730,37 +1081,36 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
       ],
     },
     'safety-tips': {
-      title: 'Tips Keselamatan Olahraga Air',
-      description:
-        'Pedoman keselamatan penting untuk paddle boarding, kayaking, dan berperahu — mulai dari pemeriksaan peralatan hingga kesadaran cuaca.',
-      tldr: 'Selalu kenakan pelampung yang bersertifikat CE, periksa kondisi cuaca dan air sebelum meluncur, bawa perangkat komunikasi, jangan pernah mendayung sendirian di perairan yang tidak dikenal, dan pahami batasan yang tertera pada peralatan Anda.',
+      title: 'Paddle Boarding Safety Tips',
+      description: 'Essential safety guidelines for paddle boarding — from equipment checks to weather awareness.',
+      tldr: "Always wear a life vest, check weather and water conditions before launch, carry communication devices, never paddle alone in unfamiliar water, and understand your equipment's rated limits.",
       problem:
-        'Sebagian besar kecelakaan olahraga air disebabkan oleh persiapan yang tidak memadai — tidak memakai pelampung, mengabaikan peringatan cuaca, atau menggunakan peralatan di luar batas desainnya.',
+        'Most water sports accidents result from inadequate preparation — no life vest, ignoring weather warnings, or using equipment beyond its design limits.',
       solution:
-        'Gunakan daftar periksa keselamatan pra-peluncuran: periksa kondisi peralatan, cek cuaca dan suhu air, beri tahu seseorang tentang rute Anda, dan selalu kenakan pelampung yang sesuai.',
-      audience: 'Semua peserta olahraga air — SUP, kayak, perahu karet, dan pengguna RIB.',
+        'Adopt a pre-launch safety checklist: verify equipment condition, check weather and water temperature, inform someone of your route, and always wear appropriate flotation.',
+      audience: 'All paddle boarders, from first-timers to experienced riders.',
       steps: [
-        'Periksa prakiraan cuaca — hindari angin di atas 15 mph dan badai petir',
-        'Periksa suhu air — air dingin (60°F/15°C) memerlukan wetsuit atau drysuit',
-        'Periksa peralatan — cek adanya kebocoran, retakan, dan tekanan yang sesuai',
-        'Kenakan rompi pelampung bersertifikasi CE setiap saat',
-        'Pasang tali pengikat (SUP) atau amankan semua perlengkapan yang longgar (kayak/perahu)',
-        'Buat rencana pelayaran — beri tahu seseorang ke mana Anda akan pergi dan kapan Anda akan kembali',
-        'Bawa komunikasi — kotak telepon tahan air atau radio VHF',
-        'Kenali batasan Anda — tetap dalam tingkat keterampilan dan peringkat peralatan Anda',
+        'Check weather forecast — avoid winds over 15 mph and thunderstorms',
+        'Verify water temperature — cold water (<60°F/15°C) requires a wetsuit or drysuit',
+        'Inspect equipment — check for leaks, cracks, and proper inflation',
+        'Wear a life vest at all times',
+        'Attach the leash and secure all loose gear',
+        'File a float plan — tell someone where you are going and when you will return',
+        'Carry communication — waterproof phone case or VHF radio',
+        'Know your limits — stay within your skill level and equipment ratings',
       ],
       faq: [
         {
-          q: 'Apakah saya perlu pelampung di SUP?',
-          a: 'Ya. Banyak yurisdiksi secara hukum mewajibkan jaket pelampung di semua perahu, termasuk SUPs. Bahkan di tempat yang tidak diwajibkan, jaket pelampung bersertifikat CE adalah peralatan keselamatan yang penting.',
+          q: 'Do I need a life vest on a SUP?',
+          a: 'Yes. Many jurisdictions legally require a life vest when paddling, including on SUPs. Even where not required, a life vest is essential safety equipment.',
         },
         {
-          q: 'Apa cedera olahraga air yang paling umum?',
-          a: 'Perendaman air dingin dan kelelahan adalah risiko serius yang paling umum. Selalu berpakaian sesuai dengan suhu air, bukan suhu udara.',
+          q: 'What is the most common water sports injury?',
+          a: 'Cold water immersion and exhaustion are the most common serious risks. Always dress for the water temperature, not the air temperature.',
         },
         {
-          q: 'Bagaimana saya memeriksa apakah kondisi aman?',
-          a: 'Gunakan ramalan cuaca laut. Periksa kecepatan angin, tinggi gelombang, dan suhu air. Pemula sebaiknya tetap berada dalam kondisi angin di bawah 10 mph dan gelombang di bawah 1 kaki.',
+          q: 'How do I check if conditions are safe?',
+          a: 'Use marine weather forecasts. Check wind speed, wave height, and water temperature. Beginners should stay in conditions under 10 mph wind and under 1 ft waves.',
         },
       ],
     },
@@ -2813,7 +1163,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         'Kenali pasang surut — arus pasang surut bisa lebih kuat daripada kecepatan mendayung Anda',
         'Mengukur suhu air — di bawah 60°F/15°C memerlukan perlindungan termal',
         'Periksa visibilitas — kabut dan hujan lebat mengurangi visibilitas dan meningkatkan risiko tabrakan',
-        'Pahami bahaya lokal — batu yang terendam air, arus kencang, zona lalu lintas kapal',
+        'Pahami bahaya lokal — batu yang terendam air, arus kencang, zona lalu lintas padat',
       ],
       faq: [
         {
@@ -2973,7 +1323,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
       audience: 'Praktisi yoga dan pendayung yang ingin menggabungkan latihan keseimbangan dengan kesadaran.',
       steps: [
         'Tambatkan papan di air dangkal dan tenang — gunakan jangkar pasir atau ikat ke dermaga',
-        'Mulai dengan pose duduk — easy seat, boat pose, seated twist',
+        'Mulai dengan pose duduk — pose duduk mudah, Navasana, puntiran duduk',
         'Lanjutkan ke pose berlutut — tabletop, cat-cow, thunderbolt',
         'Bergerak ke pose berdiri — mountain, warrior I, warrior II, tree pose',
         'Latih pose keseimbangan — half moon, eagle, dancer',
@@ -3000,9 +1350,9 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         'Segala yang perlu Anda ketahui tentang memancing dari papan dayung — pengaturan perlengkapan, tips stabilitas, dan teknik.',
       tldr: 'SUP Memancing menawarkan pendekatan senyap, akses ke air dangkal, dan lemparan 360 derajat. Gunakan papan stabil lebar (34"+), pasang tempat joran, dan gunakan pendingin atau peti sebagai dek roda gigi. Jangkar saat berangin. Selalu kenakan PFD.',
       problem:
-        'Perahu memancing standar mahal untuk dirawat dan tidak dapat mengakses perairan dangkal. Kayak membatasi mobilitas.SUP Memancing menyelesaikan kedua masalah tersebut tetapi membutuhkan adaptasi peralatan khusus.',
+        'Perahu motor untuk memancing mahal perawatannya dan tidak dapat mengakses perairan dangkal. Memancing dengan SUP menyelesaikan kedua masalah tersebut tetapi membutuhkan adaptasi peralatan khusus.',
       solution:
-        'Perlengkapi kandang dengan SUP tempat joran, kotak perlengkapan, dan sistem jangkar. Gunakan portabilitas papan untuk mengakses tempat memancing terpencil yang tidak dapat dijangkau perahu.',
+        'Lengkapi SUP yang stabil dengan tempat joran, kotak perlengkapan, dan sistem jangkar. Gunakan portabilitas papan untuk mengakses tempat memancing terpencil yang tidak dapat dijangkau perahu motor.',
       audience:
         'Pemancing yang ingin memancing di perairan dangkal, lokasi terpencil, atau lebih memilih platform memancing yang ringan dan portabel.',
       steps: [
@@ -3029,1756 +1379,137 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
       ],
     },
     'inflatable-repair': {
-      title: 'Cara Memperbaiki Perahu Tiup Anda atau SUP',
+      title: 'How to Repair Your Inflatable SUP',
       description:
-        'Panduan langkah demi langkah untuk memperbaiki lubang tusukan, masalah katup, dan kerusakan sambungan pada kapal karet tiup.',
-      tldr: 'Tusukan kecil (di bawah 1/4") dapat diperbaiki dengan kit tambalan yang disertakan. Bersihkan area, aplikasikan PVC perekat, tekan tambalan, dan tunggu 24 jam. Kebocoran katup biasanya memerlukan penggantian O-ring. Robekan besar atau delaminasi sambungan memerlukan layanan profesional.',
+        'Step-by-step guide to repairing punctures, valve issues, and seam damage on your inflatable paddle board.',
+      tldr: 'Small punctures (under 1/4") are repairable with the included patch kit. Clean the area, apply PVC adhesive, press the patch, and wait 24 hours. Valve leaks usually require O-ring replacement. Large tears or seam delamination need professional service.',
       problem:
-        'Lubang kecil dan masalah katup memang umum namun mudah diperbaiki. Tanpa teknik perbaikan yang tepat, pengguna bisa membayar lebih untuk layanan profesional atau memperburuk kerusakan.',
+        'Small punctures and valve issues are common but easy to fix. Without proper repair technique, users either overpay for professional service or make the damage worse.',
       solution:
-        'Identifikasi jenis kerusakan — bocor, kebocoran katup, atau masalah sambungan — dan terapkan metode perbaikan yang sesuai. Sebagian besar perbaikan memakan waktu 30 menit plus waktu pengeringan.',
-      audience: 'Pemilik karet karetSUPs, kayak, dan perahu yang ingin menangani perbaikan dasar sendiri.',
+        'Identify the damage type — puncture, valve leak, or seam issue — and apply the appropriate repair method. Most repairs take 30 minutes plus curing time.',
+      audience: 'Owners of inflatable SUP boards who want to handle basic repairs themselves.',
       steps: [
-        'Temukan kebocoran — tiup penuh, dengarkan udara, rasakan dengan tangan, atau gunakan air sabun',
-        'Tandai kebocoran dengan pena atau selotip',
-        'Bersihkan area sekitar kebocoran dengan alkohol isopropil — setidaknya 2 inci di sekitar area kerusakan',
-        'Kasari permukaan dengan kertas amplas halus untuk ikatan perekat yang lebih baik',
-        'Oleskan perekat PVC pada kedua permukaan tambalan dan papan',
-        'Tunggu 5 menit agar perekat menjadi lengket',
-        'Tekan tambalan dengan kuat, keluarkan gelembung udara dengan penggulung atau kartu kredit',
-        'Biarkan sembuh selama 24 jam sebelum dipompa ke tekanan penuh',
+        'Locate the leak — inflate fully, listen for air, feel with your hand, or use soapy water',
+        'Mark the leak with a pen or tape',
+        'Clean the area around the leak with isopropyl alcohol — at least 2 inches around the damage',
+        'Rough the surface with fine sandpaper for better adhesive bonding',
+        'Apply PVC adhesive to both the patch and the board surface',
+        'Wait 5 minutes for the adhesive to become tacky',
+        'Press the patch firmly, roll out air bubbles with a roller or credit card',
+        'Let cure for 24 hours before inflating to full pressure',
       ],
       faq: [
         {
-          q: 'Bisakah saya memperbaiki bocor di air?',
-          a: 'Perbaikan darurat menggunakan tambalan dan perekat dapat membawa Anda kembali ke pantai. Perbaikan penuh memerlukan kondisi kering dan pengeringan selama 24 jam.',
+          q: 'Can I repair a puncture on the water?',
+          a: 'Emergency repairs using a patch and tape can get you back to shore. Full repairs require dry conditions and 24-hour curing.',
         },
         {
-          q: 'Bagaimana cara memperbaiki katup yang bocor?',
-          a: 'Lepaskan inti katup dengan alat yang disertakan, periksa O-ring untuk kerusakan, ganti jika diperlukan, dan masukkan kembali inti dengan kencang.',
+          q: 'How do I fix a leaking valve?',
+          a: 'Remove the valve core with the included tool, check the O-ring for damage, replace if needed, and reinsert the core tightly.',
         },
         {
-          q: 'Lem apa yang harus saya gunakan untuk perbaikan PVC?',
-          a: 'Gunakan perekat khusus PVC seperti HH-66 atau Clifton. Lem super standar tidak menempel dengan baik pada bahan PVC yang bisa dikembungkan.',
-        },
-      ],
-    },
-    'kayak-techniques': {
-      title: 'Teknik Mendayung Kayak yang Esensial',
-      description:
-        'Kuasai mendayung kayak — gerakan maju, gerakan sapuan, memiringkan sisi, dan menopang untuk mendayung kayak yang efisien dan aman.',
-      tldr: 'Gerakan maju kayak menggunakan rotasi tubuh, bukan lengan. Gerakan sapuan memutar kayak. Memiringkan perahu meningkatkan kemampuan berbelok. Penyangga rendah mencegah terbaliknya perahu di ombak. Jaga poros dayung tetap tegak dan bilahnya sepenuhnya terendam.',
-      problem:
-        'Teknik mendayung yang tidak efisien menyebabkan kelelahan pada bahu, kemajuan lambat, dan kesulitan mengendalikan kayak di angin dan arus.',
-      solution:
-        'Pelajari teknik mendayung yang tepat dengan menggerakkan tubuh bagian atas menggunakan empat pukulan penting — maju, mundur, sapuan, dan penyangga.',
-      audience: 'Pendayung pemula dan menengah yang ingin mendayung dengan usaha lebih sedikit dan kontrol lebih.',
-      steps: [
-        'Ayunan ke depan: putar tubuh Anda, tanamkan bilah di dekat kaki Anda, tarik melewati pinggul Anda, keluar di pinggul Anda',
-        'Gerakan mundur: tanam bilah di belakang Anda, dorong ke depan untuk memperlambat atau mundur',
-        'Gerakan sapuan: raih ke depan, sapu bilah dengan busur luas ke arah haluan belakang, putar kayak',
-        'Dayung rendah: tepuk bilah dayung secara datar di permukaan air untuk menjaga stabilitas saat ombak',
-        'Edging: miringkan kayak sedikit pada sisinya untuk membentuk tikungan',
-      ],
-      faq: [
-        {
-          q: 'Bagaimana saya menjaga kayak saya tetap berjalan lurus?',
-          a: 'Gunakan goresan yang konsisten pada sisi yang bergantian. Pelajari goresan J (sedikit kait di ujung goresan ke depan) untuk koreksi arah tanpa mengganti sisi.',
-        },
-        {
-          q: 'Apa cedera kayak yang paling umum?',
-          a: 'Ketegangan bahu akibat mengayuh dengan dominasi lengan. Gunakan rotasi tubuh untuk melibatkan otot punggung yang lebih besar dan mengurangi beban pada bahu.',
-        },
-        {
-          q: 'Bagaimana cara mendayung saat ada angin?',
-          a: 'Tetapkan haluan ke arah angin. Gunakan sapuan yang lebih pendek dan lebih kuat. Jika menyeberang angin, miringkan kayak sedikit ke arah angin.',
+          q: 'What glue should I use for PVC repairs?',
+          a: 'Use PVC-specific adhesive like HH-66 or Clifton. Standard super glue does not bond well with inflatable PVC materials.',
         },
       ],
     },
     'multi-day-trip': {
-      title: 'Merencanakan Perjalanan Kayak atau SUP Beberapa Hari',
+      title: 'Planning a Multi-Day SUP Tour',
       description:
-        'Cara merencanakan dan melaksanakan perjalanan mendayung multi-hari — perencanaan rute, pengepakan peralatan, berkemah, dan keselamatan.',
-      tldr: 'Rencanakan 10-15 mil per hari. Kemasi perlengkapan dalam tas kedap air, sebarkan berat secara merata, dan latih memuat papan atau kayak Anda sebelum perjalanan. Buat rencana pelayaran. Bawa air, makanan, tempat berteduh, alat navigasi, dan alat komunikasi.',
+        'How to plan and execute a multi-day paddling trip — route planning, gear packing, camping, and safety.',
+      tldr: 'Plan 10-15 miles per day. Pack gear in waterproof dry bags, distribute weight evenly, and practice loading your board before the trip. File a float plan. Carry water, food, shelter, navigation, and communication.',
       problem:
-        'Perjalanan multi-hari gagal karena membawa barang terlalu banyak, perencanaan rute yang buruk, atau meremehkan cuaca dan arus — yang menyebabkan kelelahan, kegagalan peralatan, atau insiden keselamatan.',
+        'Multi-day trips fail due to overpacking, poor route planning, or underestimating weather and current — leading to exhaustion, gear failure, or safety incidents.',
       solution:
-        'Gunakan pendekatan perencanaan sistematis: pemilihan rute, daftar periksa peralatan, perencanaan makanan, pengarahan keselamatan, dan perencanaan darurat.',
-      audience: 'Pendayung berpengalaman yang merencanakan ekspedisi multi-hari pertama mereka.',
+        'Use a systematic planning approach: route selection, gear checklist, food planning, safety briefing, and contingency planning.',
+      audience: 'Experienced paddlers planning their first multi-day expedition.',
       steps: [
-        'Pilih rute dengan perkemahan dan titik evakuasi yang sudah ada',
-        'Rencanakan 10-15 mil per hari dengan memperhitungkan angin dan arus',
-        'Periksa tabel pasang surut dan prakiraan cuaca untuk seluruh jendela perjalanan',
-        'Kemas perlengkapan dalam tas kedap air — total berat perlengkapan 20-30 lbs',
-        'Distribusikan berat secara merata — letakkan barang terberat di tengah',
-        'Ajukan rencana pelayaran rinci kepada seseorang di darat',
-        'Bawa navigasi — peta kertas, kompas, dan cadangan GPS',
-        'Kemas tempat perlindungan darurat, makanan tambahan, dan kotak P3K',
+        'Select a route with established campsites and bailout points',
+        'Plan 10-15 miles per day accounting for wind and current',
+        'Check tide tables and weather forecasts for the entire trip window',
+        'Pack gear in waterproof dry bags — 20-30 lbs total gear weight',
+        'Distribute weight evenly — heaviest items in the center',
+        'File a detailed float plan with someone on shore',
+        'Bring navigation — paper chart, compass, and GPS backup',
+        'Pack emergency shelter, extra food, and first aid kit',
       ],
       faq: [
         {
-          q: 'Berapa jarak harian yang ideal?',
-          a: '10-15 mil per hari untuk pengayuh berpengalaman. Pemula sebaiknya merencanakan 5-8 mil. Selalu sisihkan waktu tambahan untuk cuaca.',
+          q: 'What is the ideal daily distance?',
+          a: '10-15 miles per day for experienced paddlers. Beginners should plan 5-8 miles. Always build in buffer time for weather.',
         },
         {
-          q: 'Berapa banyak air yang sebaiknya saya bawa?',
-          a: '1 galon per orang per hari. Dalam kondisi panas, 1,5 galon. Bawa filter air atau tablet pemurni untuk isi ulang.',
+          q: 'How much water should I carry?',
+          a: '1 gallon per person per day. In hot conditions, 1.5 gallons. Carry a water filter or purification tablets for refills.',
         },
         {
-          q: 'Apa barang keselamatan yang paling penting?',
-          a: 'Komunikasi. Radio VHF atau pesan satelit dapat menyelamatkan nyawa dalam keadaan darurat. Ponsel tidak dapat diandalkan di daerah terpencil.',
+          q: 'What is the most important safety item?',
+          a: 'Communication. A VHF radio or satellite messenger can be life-saving in an emergency. Cell phones are unreliable in remote areas.',
         },
       ],
     },
     'choosing-paddle': {
-      title: 'Cara Memilih Dayung yang Tepat untuk SUP dan Kayak',
-      description: 'Panduan tentang bahan dayung, bentuk bilah, jenis poros, dan ukuran untuk SUP dan berkayak.',
-      tldr: 'Panjang dayung: SUP dayung sebaiknya 6-8" lebih tinggi dari tinggi badan Anda. Dayung kayak tergantung pada lebar perahu dan panjang tubuh bagian atas. Bentuk bilah: bilah dihedral melaju lurus, bilah datar memberikan tarikan lebih. Bahan poros: karbon paling ringan, fiberglass nilai terbaik, aluminium untuk anggaran.',
+      title: 'How to Choose the Right SUP Paddle',
+      description: 'A guide to paddle materials, blade shapes, shaft types, and sizing for stand-up paddle boarding.',
+      tldr: 'Paddle length: SUP paddles should be 6-8" taller than your height. Blade shape: dihedral blades track straight, flat blades offer more catch. Shaft material: carbon is lightest, fiberglass is best value, aluminum is budget.',
       problem:
-        'Menggunakan ukuran atau bahan dayung yang salah menyebabkan kelelahan yang tidak perlu, efisiensi pukulan yang buruk, dan ketegangan pada sendi.',
+        'Using the wrong paddle size or material causes unnecessary fatigue, poor stroke efficiency, and joint strain.',
       solution:
-        'Cocokkan panjang dayung, bentuk bilah, bahan poros, dan kelenturan dengan gaya mendayung, ukuran tubuh, dan anggaran Anda.',
-      audience: 'SUP dan para pendayung kayak yang memilih dayung pertama atau berikutnya mereka.',
+        'Match paddle length, blade shape, shaft material, and flex to your paddling style, body size, and budget.',
+      audience: 'SUP paddlers choosing their first or next paddle.',
       steps: [
-        'Untuk SUP: ukur tinggi dayung — 6-8" lebih tinggi dari tinggi badan Anda untuk mendayung umum',
-        'Untuk kayak: ukur panjang batang tubuh dan lebar perahu — perahu yang lebih sempit membutuhkan dayung yang lebih pendek',
-        'Pilih bahan bilah — nilon untuk anggaran, fiberglass untuk nilai, karbon untuk kinerja',
-        'Pilih bentuk bilah — dihedral untuk pelacakan yang mulus, datar untuk kekuatan, sendok untuk balap',
-        'Pilih jenis poros — lurus untuk SUP, melengkung untuk balap SUP, standar untuk kano',
-        'Periksa fleksibilitas — batang yang lebih kaku mentransfer lebih banyak tenaga, batang yang fleksibel mengurangi ketegangan pada sendi',
+        'For SUP: measure paddle height — 6-8" taller than your height for general paddling',
+        'Adjust for board width — wider boards call for a slightly longer paddle',
+        'Choose blade material — nylon for budget, fiberglass for value, carbon for performance',
+        'Choose blade shape — dihedral for smooth tracking, flat for power, spoon for racing',
+        'Choose shaft type — straight for general paddling, bent for racing',
+        'Check flex — stiffer shafts transfer more power, flexible shafts reduce joint strain',
       ],
       faq: [
         {
-          q: 'Apa bahan dayung terbaik?',
-          a: 'Fiberglass menawarkan keseimbangan terbaik antara berat, daya tahan, dan biaya. Karbon lebih ringan tetapi lebih mahal dan rapuh. Nilon berat tetapi hampir tidak bisa hancur.',
+          q: 'What is the best paddle material?',
+          a: 'Fiberglass offers the best balance of weight, durability, and cost. Carbon is lighter but more expensive and brittle. Nylon is heavy but virtually indestructible.',
         },
         {
-          q: 'Bagaimana saya tahu apakah dayung saya panjangnya tepat?',
-          a: 'Untuk SUP: berdirilah dayung secara vertikal di samping Anda — pegangan harus mencapai pergelangan tangan saat lengan diangkat di atas kepala. Untuk kayak: bilah harus masuk ke air pada sudut yang nyaman tanpa meregang terlalu jauh.',
+          q: 'How do I know if my paddle is the right length?',
+          a: 'Stand the paddle vertically next to you — the handle should reach your wrist when your arm is raised overhead.',
         },
         {
-          q: 'Haruskah saya membeli dayung satu potong atau yang bisa disesuaikan?',
-          a: 'Dayung yang bisa disesuaikan bagus untuk penggunaan bersama dan perjalanan. Dayung satu potong lebih ringan, lebih kaku, dan lebih efisien untuk penggunaan khusus.',
+          q: 'Should I get a one-piece or adjustable paddle?',
+          a: 'Adjustable paddles are good for shared use and travel. One-piece paddles are lighter, stiffer, and more efficient for dedicated use.',
         },
       ],
     },
     'sup-with-kids': {
-      title: 'SUP dengan Anak-anak: Panduan Keluarga Lengkap',
-      description: 'Cara membawa anak-anak paddle boarding dengan aman — rekomendasi usia, peralatan, dan aktivitas.',
-      tldr: 'Anak-anak 6+ dapat naik di SUP dengan seorang dewasa. Anak-anak 10+ dapat mendayung papan mereka sendiri dengan pengawasan. Gunakan papan lebar dan stabil, selalu kenakan PFD, tetap di air dangkal yang tenang, dan sesi singkat (maksimal 30-45 menit).',
+      title: 'SUP with Kids: A Complete Family Guide',
+      description: 'How to safely take children paddle boarding — age recommendations, equipment, and activities.',
+      tldr: 'Children 6+ can ride on a SUP with an adult. Children 10+ can paddle their own board with supervision. Use a wide stable board, always wear PFDs, stay in shallow calm water, and keep sessions short (30-45 minutes max).',
       problem:
-        'Orang tua ingin berbagi olahraga air dengan anak-anak mereka tetapi khawatir tentang keselamatan, pas peralatan, dan menjaga anak-anak tetap terlibat.',
+        'Parents want to share water sports with their kids but worry about safety, equipment fit, and keeping children engaged.',
       solution:
-        'Gunakan ukuran papan yang tepat untuk tandem riding, pastikan setiap anak mengenakan PFD yang pas, mulai di air dangkal dan hangat, dan buat menyenangkan dengan permainan dan sesi singkat.',
-      audience: 'Orang tua yang ingin mengenalkan paddle boarding kepada anak-anak mereka.',
+        'Use the right board size for tandem riding, ensure every child wears a properly fitted PFD, start in shallow warm water, and make it fun with games and short sessions.',
+      audience: 'Parents who want to introduce their children to paddle boarding.',
       steps: [
-        'Usia 4-6: naik sebagai penumpang di papan dewasa — duduk di depan, pegang pegangan tengah',
-        'Usia 6-10: berlutut atau duduk di papan mereka sendiri dengan pengawasan dewasa dan leash',
-        'Usia 10+: mendayung papan mereka sendiri dengan pengawasan dewasa di dekat',
-        'Selalu kenakan PFD — anak-anak harus mengenakan pelampung yang pas setiap saat',
-        'Tetap di air dangkal (sedalam pinggang untuk orang dewasa)',
-        'Pertahankan sesi singkat — maksimal 30-45 menit untuk anak di bawah 10 tahun',
-        'Buat menyenangkan — mainkan permainan, cari ikan, latihan berdiri',
+        "Age 4-6: ride as a passenger on an adult's board — sit in front, hold onto the center handle",
+        'Age 6-10: kneel or sit on their own board with adult supervision and a leash',
+        'Age 10+: paddle their own board with adult supervision nearby',
+        'Always wear a PFD — children must wear a properly fitted life vest at all times',
+        'Stay in shallow water (waist-deep for the adult)',
+        'Keep sessions short — 30-45 minutes max for children under 10',
+        'Make it fun — play games, look for fish, practice standing up',
       ],
       faq: [
         {
-          q: 'Pada usia berapa anak bisa SUP sendiri?',
-          a: 'Sekitar usia 10-12 dengan pengawasan, tergantung kemampuan berenang anak dan kenyamanan di air. Selalu di kondisi tenang dan dangkal.',
+          q: 'At what age can a child SUP alone?',
+          a: "Around age 10-12 with supervision, depending on the child's swimming ability and comfort in water. Always in calm, shallow conditions.",
         },
         {
-          q: 'Papan apa yang terbaik untuk SUP dengan anak-anak?',
-          a: 'Papan lebar (34"+) dengan kapasitas berat tinggi untuk tandem riding. SUP Explorer 11 dengan lebar 33" dan kapasitas 220 lb cocok untuk orang tua plus anak.',
+          q: 'What board is best for SUP with kids?',
+          a: 'A wide board (34"+) with high weight capacity for tandem riding. The SUP Explorer 11\'s 33" width and 220 lb capacity works well for parent-plus-child.',
         },
         {
-          q: 'Peralatan keselamatan apa yang dibutuhkan anak-anak?',
-          a: 'Pelampung bersertifikat CE yang pas, leash (dihubungkan ke papan dewasa untuk tandem), tabir surya, dan topi.',
-        },
-      ],
-    },
-  },
-  ko: {
-    'how-to-choose-your-sup': {
-      title: '보드 선택 방법 SUP',
-      description: '자신의 실력, 수질 상태, 사용 목적에 맞는 스탠드업 패들보드를 선택하는 완벽한 가이드입니다.',
-      tldr: 'SUP 기술 수준, 수질 종류, 주요 용도에 따라 선택하세요. 올어라운드 보드는 초보자와 잔잔한 물에 적합합니다. 투어링 보드는 장거리 패들링에 적합합니다. 요가 보드는 안정성을 위해 폭을 넓힙니다. 퍼포먼스 보드는 다양한 조건에서 경험 많은 패들러에게 적합합니다.',
-      problem:
-        '대부분의 첫 구매자는 SUP 실제로 어디서 어떻게 패들질지보다는 가격이나 외관을 기준으로 보드를 선택합니다. 이로 인해 안정성 저하, 성능 부족, 그리고 답답한 경험을 초래합니다.',
-      solution:
-        '보드 모양, 부피, 구조를 자신의 실력과 주요 수상 환경에 맞추세요. 넓은 보드(32-34")는 초보자에게 안정성을 제공합니다. 긴 보드(12-14")는 투어링에 더 적합합니다.Drop-stitch 12-15인치 정도의 구조는 PSI 하드보드와 견줄 만한 강성을 제공합니다.',
-      audience: '처음 SUP 구매하는 분들, 레크리에이션 패들러, 그리고 기본 보드에서 업그레이드하는 모든 분들께.',
-      steps: [
-        '주요 패들링 환경을 파악하세요 — 호수, 바다, 강, 또는 혼합',
-        '자신의 실력에 맞게 보드 폭을 맞추세요: 초보자는 32-34인치, 중급은 30-32인치, 고급 선수는 28-30인치입니다',
-        '사용 용도에 따라 보드 길이를 선택하세요: 기동성을 위해 짧게, 추적과 속도를 위해 길게요',
-        '선택된 구조: drop-stitch 휴대성을 위한 팽창식, 최대 성능을 위한 하드보드',
-        '무게 용량 확인 — 장비 포함 무게는 보드 제한의 80%를 넘지 않아야 합니다',
-        '포함된 액세서리: 펌프, 목줄, 지느러미, 배낭, 수리 키트',
-      ],
-      faq: [
-        {
-          q: 'SUP 초보자에게 가장 좋은 폭은 무엇인가요?',
-          a: '폭 32에서 34인치는 학습에 가장 안정적인 플랫폼을 제공합니다. SUP 폭 33인치의 익스플로러 11은 잔잔한 물에서 처음 패들러를 타는 사람에게 이상적입니다.',
-        },
-        {
-          q: '팽창식 보드 아니면 단단 SUP 한 보드 중 어느 쪽이 좋을까요?',
-          a: '인플레이션 보드는 휴대성, 수납 편리함, 충격 흡수 능력을 제공합니다. 하드 보드는 최대한의 강성과 속도를 제공합니다. 대부분의 레크리에이션 사용자에게 핵심이 포함된 고품질 인플레이터블 drop-stitch 이 실용적인 선택입니다.',
-        },
-        {
-          q: '어느 정도 PSI 로 부풀려야 할까요?',
-          a: 'Paddle Board Overstock 보드는 12-15를 권장PSI합니다. 15 기준으로 보드 PSI 는 하드 보드와 견줄 만한 최대 강성을 달성합니다. 항상 보드에 인쇄된 정격 압력 범위 내에 머무르세요.',
-        },
-      ],
-    },
-    'beginner-guide': {
-      title: '패들보딩 초보자 가이드',
-      description: '첫 패들보딩 세션 전에 알아야 할 모든 것 — 장비 세팅부터 기본 패들링 기술까지.',
-      tldr: '잔잔하고 잔잔한 물과 넓은 안정된 보드에서 시작하세요. 12-15까지 부풀리고 PSI목줄을 착용한 뒤, 키보다 6-8인치 더 높은 적절한 패들 길이를 사용하세요. 자세는 어깨 너비로 벌리고, 무릎은 약간 굽히고, 수평선을 바라보세요.',
-      problem:
-        '초보 패들러들은 종종 잘못된 패들 길이, 잘못된 자세, 거친 물 선택 같은 기본적인 준비를 건너뛰어 넘어지고, 좌절하며, 낙담하게 만듭니다.',
-      solution:
-        '구조화된 첫 세션 계획을 따르세요: 잔잔한 물을 선택하고, 장비를 올바르게 세팅하며, 무릎 꿇기 연습 후 서 있고, 회전 전에 전진 스트로크를 마스터하세요.',
-      audience: '패들보드를 한 번도 타본 적 없는 완전 초보자들입니다.',
-      steps: [
-        '보트 통행이 없는 평탄하고 잔잔한 물을 선택하세요 — 작은 호수나 보호된 만이 이상적입니다',
-        'PSI 듀얼 액션 펌프를 사용해 보드를 12-15까지 부풀려 보세요',
-        '코일 리쉬는 보드 손잡이에는 절대 묶지 말고 발목이나 종아리에 연결하세요',
-        '핀을 끼우고 나사를 조여 주세요',
-        '패들 길이를 조절하세요 — 키보다 6-8인치 더 높게 설정해야 합니다',
-        '보드 위에 무릎을 꿇고 몇 번 젓으며 균형을 느껴보세요',
-        '한 번에 한 발씩 일어서고, 발은 어깨 너비로 벌리고, 무릎은 부드럽게 유지하세요.',
-        '시선은 발이 아닌 지평선을 바라보세요 — 보드는 시선이 향하는 곳으로 갑니다.',
-      ],
-      faq: [
-        {
-          q: '패들 보드를 탈 때 무엇을 입어야 하나요?',
-          a: '빠르게 건조되는 운동복, 구명조끼, 자외선 차단제, 모자를 착용하세요. 차가운 물에서는 웻슈트를 착용하세요. 항상 리쉬를 착용하고 방수 케이스에 휴대폰을 담아 휴대하세요.',
-        },
-        {
-          q: '넘어졌을 때 보드로 돌아가는 방법은?',
-          a: '침착하세요. 보드로 수영한 후 중앙 손잡이를 잡고, 다리를 차면서 한 번에 보드 위로 올라오세요. 먼저 무릎 꿇는 자세로 돌아간 후 서세요.',
-        },
-        {
-          q: '안전한 바람 조건은 무엇인가요?',
-          a: '초보자: 10mph(5노트) 이하의 바람. 바람이 해안에서 멀리 불어간다면 나가지 마세요. 일기 예보를 확인하고 역항 바람은 위험하다는 점을 이해하세요.',
-        },
-      ],
-    },
-    'safety-tips': {
-      title: '수상 스포츠 안전 팁',
-      description: '패들보드, 카약, 보트 안전을 위한 필수 지침 — 장비 점검에서 날씨 확인까지.',
-      tldr: '항상 CE-인증 구명조끼를 착용하고, 출항 전에 날씨와 수면 상태를 확인하며, 통신 장치를 휴대하고, 낯선 수역에서 혼자 패들링하지 말며, 장비의 권장 한계를 이해하세요.',
-      problem:
-        '대부분의 수상 스포츠 사고는 준비 부족 — 구명조끼 미착용, 기상 경고 무시, 장비 사용 한계 초과에서 발생합니다.',
-      solution:
-        '출항 전 안전 체크리스트를 따르세요: 장비 상태 확인, 날씨와 수온 확인, 경로를 알릴 사람에게 알리기, 항상 적절한 부력 장비 착용.',
-      audience: '모든 수상 스포츠 참가자 — SUP, 카약, 딩기, RIB 사용자.',
-      steps: [
-        '일기 예보 확인 — 15mph 이상의 바람과 천둥/번개를 피하세요.',
-        '수온 확인 — 차가운 물(60°F/15°C)은 웻슈트 또는 드라이수트를 착용하세요.',
-        '장비 점검 — 누수, 균열, 적절한 공기압 확인.',
-        '항상 CE-인증 구명조끼 착용.',
-        '리쉬(SUP) 부착 또는 모든 느슨한 장비(카약/보트) 고정.',
-        '플로트 플랜 작성 — 방문할 장소와 복귀 시간 알리기.',
-        '통신 장치 휴대 — 방수 휴대폰 케이스 또는 VHF 무전기.',
-        '자신의 한계 파악 — 기술 수준과 장비 권장 범위 내에서 활동.',
-      ],
-      faq: [
-        {
-          q: 'SUP에서 구명조끼가 필요합니까?',
-          a: '네. 많은 지역에서 SUPs를 포함한 모든 수상 장치에서 구명조끼를 법적으로 요구합니다. 요구되지 않는 곳에서도 CE-인증 구명조끼는 필수 안전 장비입니다.',
-        },
-        {
-          q: '가장 흔한 수상 스포츠 부상은 무엇인가요?',
-          a: '차가운 물에의 노출과 탈진이 가장 흔한 심각한 위험입니다. 항상 공기 온도가 아닌 수온에 맞춰 옷을 입으세요.',
-        },
-        {
-          q: '조건이 안전한지 어떻게 확인하나요?',
-          a: '해양 일기예보를 사용하세요. 바람 속도, 파고, 수온을 확인합니다. 초보자는 10mph 미만 바람과 1피트 미만 파도 조건에서 활동하세요.',
-        },
-      ],
-    },
-    'inflatable-vs-hard': {
-      title: '인플레이션 보드 vs 하드 SUP 보드: 무엇을 선택해야 하나요?',
-      description: '성능, 휴대성, 내구성, 가치 측면에서 인플레이션 보드와 경질 SUP 보드를 객관적으로 비교한 내용.',
-      tldr: '인플레이션 보드는 휴대성, 보관 용이성, 충격 저항성에서 우위를 점합니다. 하드 보드는 최대 강성과 속도에서 우위를 점합니다. 현대의 drop-stitch 인플레이션 보드는 15 PSI에서 성능 차이의 90%를 좁힙니다.',
-      problem:
-        '구매자들은 실제로 어떻게 비교되는지 명확한 데이터 없이, 팽창식 보드의 편리함과 하드 보드의 성능 평판 사이에서 갈등을 겪고 있습니다.',
-      solution:
-        '특정 기준—강도, 무게, 포장 크기, 내구성, 수리 가능성, 비용—을 실제 사용 패턴과 비교해 보세요. 대부분의 레크리에이션 패들러에게는 고급 인플레이블이 더 나은 선택입니다.',
-      audience: 'SUP 구매자들이 팽창식과 강체 구조 사이에서 결정하는 것.',
-      steps: [
-        '휴대성 필요성 평가 — 팽창식 가방부터 배낭 크기까지, 단단한 보드는 루프 랙 필요',
-        '강성 비교 — 15 PSI에서 팽창식은 최소한의 휨이 있으며, 하드 보드는 휨이 전혀 없음',
-        '저장 공간 평가 — 옷장에 넣는 팽창식 저장소, 단단한 판자는 차고나 선반 공간 필요',
-        '내구성을 고려하세요 — 인플레이션 보드는 충격을 흡수하고, 단단한 보드는 움푹 들어가거나 갈라질 수 있습니다',
-        '요인 수리 — 인플레이션 패치는 간단하며, 단단한 보드 수리는 전문적인 작업이 필요합니다',
-        '성능 확인 — 단단한 보드는 약간의 속도 우위를 가지며, 인플레이션 보드는 더 나은 충격 흡수를 제공합니다',
-      ],
-      faq: [
-        {
-          q: '공기 주입식 SUPs은 단단한 보드만큼 단단한가요?',
-          a: '15 PSI drop-stitch 구조에서는 레크리에이션 용도로는 강성 차이가 거의 없습니다. 오직 경쟁 선수와 서퍼만이 그 차이를 느낄 수 있습니다.',
-        },
-        {
-          q: '충전식 SUP는 얼마나 오래 지속되나요?',
-          a: '적절한 관리 하에 5-10년. 해양 등급 PVC는 UV과 마모에 강합니다. 사용하지 않을 때는 직사광선을 피해 보관하고, 해수 사용 후에는 담수를 이용해 헹구십시오.',
-        },
-        {
-          q: '서핑할 때 공기 주입식 SUP를 사용할 수 있나요?',
-          a: '네, 하지만 인플레이션 보드는 작은 파도에서 중간 정도 파도(3피트 이하)에 가장 좋습니다. 서핑에 전념한다면 딱딱한 보드가 더 나은 반응성과 레일 조작성을 제공합니다.',
-        },
-      ],
-    },
-    'weather-conditions': {
-      title: '패들 보딩을 위한 기상 상태 이해',
-      description: '바다에서 안전한 결정을 내리기 위해 바람, 파도, 조수, 날씨 패턴을 읽는 법을 배우세요.',
-      tldr: '매번 출발하기 전에 세 가지를 확인하세요: 바람 속도(초보자는 시속 10마일 이하), 파도 높이(초보자는 1피트 이하), 물 온도(공기가 아니라 물에 맞게 복장). 원풍은 어떤 수준의 실력에서도 위험합니다.',
-      problem:
-        '대부분의 기상 관련 사고는 패들러들이 조건을 잘못 판단하기 때문에 발생합니다 — 그들은 기온만 확인하고 수온은 확인하지 않거나, 바람이 해안 밖으로 그들을 날려보낼 수 있다는 것을 이해하지 못합니다.',
-      solution:
-        '체계적인 사전 출항 기상 평가를 사용하세요: 풍향과 풍속, 파도 주기와 높이, 조수 상태, 수온을 확인하세요. 각 요인이 안전에 어떤 영향을 미치는지 이해하세요.',
-      audience: '호수, 만, 강, 바다 등 개방 수역으로 나가는 모든 패들러.',
-      steps: [
-        '풍속과 방향을 확인하세요 — 육지에서 바다로 부는 해안 바람은 가장 위험합니다',
-        '파도 상태 평가 — 파도 주기는 파고만큼 중요하다',
-        '조류를 알아라 — 조류는 당신의 노 젓는 속도보다 강할 수 있다',
-        '수온을 측정하세요 — 60°F/15°C 이하일 경우 열 보호 장치가 필요합니다',
-        '가시거리 확인 — 안개와 폭우는 가시거리를 줄이고 충돌 위험을 증가시킵니다',
-        '지역 위험 요소를 이해하세요 — 잠수된 바위, 강한 조류, 보트 통행 지역',
-      ],
-      faq: [
-        {
-          q: 'SUP에 대해 너무 높은 바람 속도는 얼마입니까?',
-          a: '초보자: 시속 10마일(8노트) 이상. 중급자: 시속 15마일(13노트) 이상. 고급자: 시속 20마일(17노트) 이상. 의심스러울 경우, 나가지 마십시오.',
-        },
-        {
-          q: '파동 주기란 무엇을 의미하나요?',
-          a: '파도 주기는 연속된 파도 사이의 시간입니다. 짧은 주기(8초 미만)는 가파르고 파도가 울퉁 파도임을 의미합니다. 긴 주기(12초 이상)는 더 부드럽고 예측 가능한 파도가 발생함을 의미합니다.',
-        },
-        {
-          q: '비 오는 날 노 젓어도 돼?',
-          a: '가벼운 비는 보통 안전합니다. 폭우는 시야를 감소시키고 바람 상태 변화를 나타낼 수 있습니다. 뇌우는 즉시 물에서 대피해야 합니다.',
-        },
-      ],
-    },
-    'understanding-specs': {
-      title: '보드 사양 읽는 방법 SUP',
-      description: '보드 사양을 이해하는 기술 가이드 SUP — 부피, 치수, 구조, 그리고 그것이 성능에 미치는 의미.',
-      tldr: '주요 사양: 부피(리터)는 부력과 중량 용량을 결정하고, 너비는 안정성을, 길이는 추적과 속도를 결정하며, 두께는 강성을 결정하고, PSI 등급은 최적의 성능을 위한 팽창압을 결정합니다.',
-      problem:
-        '제품 사양서에는 맥락 없이 숫자만 나열되어 있어 구매자들이 자신의 사용 사례에 어떤 사양이 실제로 중요한지 확신하지 못하게 만듭니다.',
-      solution:
-        '각 사양을 실제 성능으로 변환하세요: 부유력은 부피, 안정성은 너비, 활공은 길이, 강성은 두께, 내구성은 구조입니다.',
-      audience: '데이터 기반 결정을 내리고자 하는 중급 패들러와 기술 구매자들입니다.',
-      steps: [
-        '부피(리터) 확인 — 무게와 장비가 보드 부피 등급의 80%를 넘지 않아야 합니다',
-        '폭 체크 — 넓게(32-34") = 안정성 향상, 좁음(28-30")= 더 빠른 속도',
-        '체크 길이 — 길음(12-14")=추적 성능 향상, 짧음(10-11") = 기동성 향상',
-        '체크 두께 — 6인치가 표준이며, 8인치는 더 강하고 무게 적재량이 더 큽니다',
-        '등급 확인 PSI — PSI 최적의 강성을 위해 최대 등급으로 팽창하세요',
-        '건축 자재를 확인하세요 — drop-stitch 밀도, PVC 층, 철도 보강',
-      ],
-      faq: [
-        {
-          q: '무슨 drop-stitch 뜻이야?',
-          a: 'Drop-stitch 수천 개의 나사산이 보드의 상하층을 연결하는 구조 방법입니다. 이로 인해 PSI극도의 강성을 위해 고압 팽창(12-15)이 가능합니다.',
-        },
-        {
-          q: '이상적인 무게 대 부피 비율은 무엇인가요?',
-          a: '좋은 목표는 보드 부피당 대략 5-6파운드 정도의 라이더 체중입니다. 220파운드 패들러는+ 180리터 부피의 보드를 찾아야 합니다.',
-        },
-        {
-          q: '보드 무게가 중요한가요?',
-          a: '네. 가벼운 보드(20파운드 미만)는 휴대와 운반이 더 쉽습니다. 무거운 보드(25파운드)는+ 보통 내구성이 뛰어난 다층 구조를 의미합니다 PVC .',
-        },
-      ],
-    },
-    'sup-maintenance': {
-      title: '에어 튜브SUP를 청소하고 보관하는 방법',
-      description: '인플레이터블 보드의 수명을 극대화하기 위한 단계별 유지보수 가이드 SUP 입니다.',
-      tldr: '사용 후에는 신선한 물로 씻고, 보관 전에 완전히 말리고, 공기를 빼고 느슨하게 말아야 합니다(군대처럼 꽉 끼지 않고), 직사광선이 닿지 않는 서늘하고 건조한 곳에 보관하고, 매달 솔기를 점검하세요.',
-      problem:
-        '부적절한 보관과 청소가 팽창식 조기 고장의 주요 원인으로 SUPs , 곰팡이, UV 손상, 이음새 박리가 있습니다.',
-      solution:
-        '일관된 작업 후 루틴을 따르세요: 세척, 건조, 점검, 공기 빼기, 보관. 끈적한 먼지에는 순한 비누를 사용하세요. 보드는 젖은 상태로 또는 직사광선에 보관하지 마세요.',
-      audience: '보드를 SUP 5년 오래 쓰고 싶은 모든 인플레이터블 소유자+들입니다.',
-      steps: [
-        '사용 직후, 특히 소금물 사용 후에는 보드를 깨끗한 물로 바로 씻어내세요',
-        '순한 비누와 부드러운 스펀지로 청소하세요 — 강한 화학약품이나 고압 세척기는 피하세요',
-        '보드를 완전히 말리세요 — 밸브를 열어 갇힌 물이 빠져나가게 하세요',
-        '손상 여부를 점검하세요 — 이음새, 밸브, 표면에 구멍이 뚫렸는지 확인하세요',
-        '완전히 공기를 빼세요 — 밸브 코어를 제거해 완전히 공기를 빼세요',
-        '보드를 느슨하게 굴려 주세요 — 코부터 시작해서 꽉 끼는 접힘은 피하세요',
-        '직사광선이 닿지 않는 서늘하고 건조한 곳에 휴대 가방에 보관하세요',
-      ],
-      faq: [
-        {
-          q: '시즌 SUP 내내 부풀린 상태로 둘 수 있나요?',
-          a: '네, 하지만 사용하지 않을 때는 직사광선에 노출되지 않도록 하세요. 장기간 보관을 위해서는 부분 수축(8-10PSI)을 권장합니다.',
-        },
-        {
-          q: '펑크 난 부분은 어떻게 수리하나요?',
-          a: '부위를 청소하고, 모서리가 둥근 패치를 잘라내고, 접착제를 바른 뒤 단단히 눌러서 24시간 기다렸다가 부풀려야 합니다.Paddle Board Overstock 판자에는 수리 키트가 포함되어 있습니다.',
-        },
-        {
-          q: '밸브를 얼마나 자주 점검해야 하나요?',
-          a: '월간. 밸브가 가장 흔한 고장 부위입니다. 밸브 핀이 자유롭게 움직이는지, O-링이 온전한지 확인하세요.',
-        },
-      ],
-    },
-    'paddling-techniques': {
-      title: '필수 SUP 패들링 기술',
-      description:
-        '전진 스트로크, 스윕 스트로크, 크로스보우 턴을 마스터해 어떤 상황에서도 효율적으로 노를 저어야 합니다.',
-      tldr: '전진 스트로크는 팔이 아니라 코어를 사용합니다. 스윕 스트로크는 보드를 돌립니다. 크로스보우 턴은 가장 효율적인 피벗입니다. 패들을 수직으로 유지하고 블레이드를 완전히 잠기게 하여 최대 출력 전달을 하세요.',
-      problem:
-        '대부분의 패들러는 팔을 중심으로 하는 스트로크를 사용해 에너지를 낭비하고 어깨 피로를 유발합니다. 부실한 기술은 바람과 파도에서 보드 제어를 어렵게 만듭니다.',
-      solution:
-        '올바른 신체 역학으로 세 가지 필수 스트로크인 전진, 스윕, 크로스보우 턴을 배워라. 도전적인 조건으로 나아가기 전에 잔잔한 물에서 각각 연습한다.',
-      audience: '더 오래, 더 빠르게, 피로가 적은 상태로 노를 젓고 싶은 패들러들.',
-      steps: [
-        '전진 스트로크: 앞으로 손을 뻗어 칼날을 완전히 박고, 팔이 아닌 몸통 회전을 이용해 뒤로 당기고, 발목에서 나갑니다',
-        '스윕 스트로크: 레일 쪽으로 손을 뻗고, 블레이드를 테일 쪽으로 넓게 휘두르며, 보드를 패들 쪽에서 멀리 돌립니다',
-        '크로스보우 턴: 패들을 보드의 반대편에 놓고 손을 바꾸지 않고 테일 쪽으로 당깁니다',
-        '브레이싱: 파도에서 안정성을 위해 낮은 브레이스를 사용하세요 — 칼날을 물 표면에 평평하게 내리쳐 주세요',
-        '드로우 스트로크: 옆으로 손을 뻗어 보드를 패들 쪽으로 가로로 당기세요',
-      ],
-      faq: [
-        {
-          q: '어떻게 직선으로 노를 저나요?',
-          a: '양쪽 스트로크 길이를 일정하게 하세요. 5-10스트로크마다 방향을 바꿔 보세요. 지평선에 고정된 지점을 참고하세요.',
-        },
-        {
-          q: '무릎을 굽혀야 할까요?',
-          a: '네. 무릎을 약간 굽히고 충격 흡수 역할을 하세요. 무릎이 잠기면 모든 파동이 코어로 전달되어 안정성이 떨어집니다.',
-        },
-        {
-          q: '바람을 거슬러 노를 젓는 방법은 무엇인가요?',
-          a: '자세를 낮추고, 짧고 빠른 스트로크를 사용하며, 바람이 약한 해안가에 더 가까이 머무르세요. 바람이 너무 강하면 밖으로 나가지 마세요.',
-        },
-      ],
-    },
-    'sup-fitness': {
-      title: 'SUP 체력: 수상에서의 전신 운동',
-      description: '스탠드업 패들보딩이 코어 근력, 균형, 심혈관 건강을 어떻게 키우는지.',
-      tldr: 'SUP 모든 스트로크에서 코어, 다리, 등, 어깨를 모두 사용하세요. 한 시간 세션은 300-500칼로리를 소모합니다. 바람이나 물살을 거슬러 노를 젓면 강도가 두 배로 증가합니다.SUP 요가는 유연성과 균형 운동을 더해줍니다.',
-      problem:
-        '많은 사람들이 패들보드를 정식 피트니스 도구라기보다는 단순한 활동으로 여기며, 전신 체력 단련의 잠재력을 놓치고 있습니다.',
-      solution:
-        'SUP 구체적인 피트니스 목표가 있는 구조화된 세션: 유산소 운동을 위한 지구력 패들링, 파워를 위한 인터벌 스프린트, SUP 유연성을 위한 요가, 근지구력을 위한 장거리 패들링.',
-      audience: '저충격, 높은 참여도를 가진 전신 운동을 찾는 피트니스 애호가들.',
-      steps: [
-        '육지에서 워밍업 — 팔 원, 몸통 비틀기, 다리 스윙 5분',
-        '처음에는 중간 강도로 10분간 꾸준히 노를 젓는 것으로 시작하세요',
-        '인터벌 트레이닝으로 진행 — 2분간 강한 패들링, 2분 쉬운 회복',
-        'SUP 보드에 요가 자세를 포함하세요 — 다운워드 도그, 워리어 II, 트리 포즈',
-        '보드 위에서 부드러운 패들링과 정적인 스트레칭으로 몸을 식히세요',
-      ],
-      faq: [
-        {
-          q: 'SUP 운동을 위해 달리기보다 더 나은가요?',
-          a: 'SUP 하부 관절에 영향을 주면서도 심혈관 효과가 비슷합니다. 또한 달리기보다 상체와 코어를 더 많이 사용합니다.',
-        },
-        {
-          q: '얼마나 많은 칼로리를 SUP 소모하나요?',
-          a: '중간 강도에서 시간당 약 300-500칼로리를 섭취합니다. 바람을 맞고 경주하거나 노를 젓는 것은 시간당 600-800칼로리를 소모할 수 있습니다.',
-        },
-        {
-          q: '근육을 키울 수 SUP있나요?',
-          a: '네. 패들링은 어깨, 등, 코어 근육을 단련합니다. 균형 잡기는 다리와 안정근을 활성화합니다. 전신 저항 운동입니다.',
-        },
-      ],
-    },
-    'sup-yoga': {
-      title: 'SUP 요가: 패들링과 요가에 대한 완전한 가이드',
-      description: '패들보드와 요가를 병행해 균형, 근력, 그리고 물 위에서의 마음챙김을 향상시키세요.',
-      tldr: 'SUP 요가는 육상 요가에 비해 코어 활성화를 크게 증가시키는 불안정성 요소를 추가합니다. 잔잔한 물속에서 넓고 안정적인 보드 위에서 기본 자세부터 시작하세요. 미끄러지지 않는 데크 패드를 사용하세요. 혼자 요가를 하지 마세요 SUP .',
-      problem:
-        '전통적인 요가 매트는 완벽하게 안정적인 표면을 제공하여 SUP 요가가 코어 근력과 집중력에 독특하게 효과적인 밸런스 문제를 제거합니다.',
-      solution:
-        '34인치 초폭 SUP 보드와 +풀덱 트랙션 패드를 사용하세요. 잔잔하고 얕은 물에서 연습하세요. 인버트를 시도하기 전에 기초 자세부터 시작하세요.',
-      audience: '균형 운동과 마음챙김을 결합하고자 하는 요가 수련자와 패들러들.',
-      steps: [
-        '보드를 얕고 잔잔한 물에 고정하세요 — 모래 앵커나 부두에 묶어 두세요',
-        '앉은 자세부터 시작하세요 — 이지 시트, 보트 자세, 앉은 자세 트위스트',
-        '무릎 꿇기 자세로의 진전 — 테이블 위, 고양이 소, 천둥 번개',
-        '서 있는 자세로 이동하세요 — 산, 전사 I, 전사 II, 나무 자세',
-        '균형 포즈 연습 — 반문, 독수리, 댄서 자세',
-        '사바사나로 마무리하세요 — 보드에 평평하게 누워 물의 움직임을 느껴보세요',
-      ],
-      faq: [
-        {
-          q: '요가에 가장 적합한 보드 SUP 는 무엇인가요?',
-          a: '전체 +길이의 트랙션 패드가 장착된 34인치 넓은 보드가 가장 안정적인 플랫폼을 제공합니다. SUP Tour 12는 안정성과 미끄러짐의 균형이 잘 맞습니다.',
-        },
-        {
-          q: 'SUP 요가는 위험한가요?',
-          a: '안전하게 연습할 때는 육지 요가와 다르지 않습니다. 차분하고 얕은 물을 사용하세요. 목줄을 착용하세요. 파트너와 함께 연습하세요. 첫 세션에서는 깊은 물은 피하세요.',
-        },
-        {
-          q: '특수 장비가 필요한가요?',
-          a: '넓은 스테이블 보드, 풀데크 트랙션 패드, 목줄 등이 있습니다PFD. 일부 수련자들은 추가 그립을 위해 방수 매트를 사용합니다.',
-        },
-      ],
-    },
-    'sup-fishing': {
-      title: 'SUP 낚시 가이드: 패들보드 낚시 방법',
-      description: '패들보드로 낚시할 때 알아야 할 모든 것 — 장비 세팅, 안정성 팁, 그리고 기술.',
-      tldr: 'SUP 낚시는 조용한 접근, 얕은 수심 접근, 360도 캐스팅을 제공합니다. 넓은 스테이블 보드(34인치)를 사용+하고, 낚싯대 홀더를 부착하며, 쿨러나 크레이트를 기어 데크로 사용하세요. 바람이 부는 조건에서는 닻을 내리세요. 항상 PFD.',
-      problem:
-        '일반 낚시선은 유지비가 많이 들고 얕은 물에 접근할 수 없습니다. 카약은 이동성을 제한합니다.SUP 낚시는 두 가지 문제를 모두 해결하지만 특정 장비 적응이 필요합니다.',
-      solution:
-        '마구간에는 SUP 낚싯대 홀더, 장비 상자, 닻 시스템을 설치하세요. 보드의 휴대성을 활용해 배가 닿지 않는 외딴 낚시 장소에 접근하세요.',
-      audience: '얕은 물, 외진 지역, 또는 가볍고 휴대가 가능한 낚시 플랫폼을 선호하는 낚시꾼들.',
-      steps: [
-        '장비를 위한 무게가 큰 넓은 보드(34인치)를 선택하세요+',
-        '레일 장착 또는 스트랩온 시스템을 사용하여 갑판에 로드 홀더를 설치하세요',
-        '방수 케이지나 쿨러를 앞 데크에 묶어 달아 달아 대접하세요',
-        '바람이 부는 조건에서는 작은 앵커나 스테이킹 폴을 가져가세요',
-        'PFD 공구와 휴대폰을 넣을 수 있는 주머니가 있는 옷을 입으세요',
-        '무릎을 꿇은 자세에서 캐스팅을 연습한 후 일어서세요',
-      ],
-      faq: [
-        {
-          q: '서서 낚시할 수 SUP있을까요?',
-          a: '네.+ 34인치 폭의 보드는 서서 있을 때 충분한 안정성을 제공합니다. 먼저 잔잔한 물에서 연습하세요.',
-        },
-        {
-          q: '어떤 물고기를 노릴 수 SUP있나요?',
-          a: 'SUPs 호수에서는 배스, 평야에서는 레드피시, 강에서는 송어, 만과 하구에서는 연안 어종에 매우 적합합니다.',
-        },
-        {
-          q: '어떻게 하면 물고기를 잡나요SUP?',
-          a: '안정을 위해 무릎을 꿇으세요. 그물이나 립 그리퍼를 사용하세요. 물고기를 낮게 유지해 넘어지지 않도록 하세요. 풀어주거나 쿨러에 고정하세요.',
-        },
-      ],
-    },
-    'inflatable-repair': {
-      title: '고무보트 수리 방법 SUP',
-      description: '팽창식 수상 기구의 펑크, 밸브 문제, 이음새 손상 수리에 대한 단계별 가이드입니다.',
-      tldr: '작은 천공(1/4인치 미만)은 포함된 패치 키트로 수리할 수 있습니다. 해당 부위를 청소하고, 접착제를 바른 PVC 뒤 패치를 눌러 24시간을 기다리세요. 밸브 누수는 보통 O-링 교체가 필요합니다. 큰 찢어짐이나 이음새 박리(이음새) 박리는 전문가의 서비스가 필요합니다.',
-      problem:
-        '작은 구멍이나 밸브 문제는 흔하지만 쉽게 고칠 수 있습니다. 적절한 수리 기술이 없으면 사용자는 전문 서비스에 과도한 비용을 지불하거나 손상을 악화시킵니다.',
-      solution:
-        '손상 유형(펑크, 밸브 누수, 이음새 문제)을 파악하고 적절한 수리 방법을 적용하세요. 대부분의 수리는 30분과 경화 시간이 걸립니다.',
-      audience: 'SUPs기본 수리를 직접 하고 싶은 인플레이터블, 카약, 보트 소유자들.',
-      steps: [
-        '누수를 찾아보세요 — 완전히 부풀리거나, 공기를 듣거나, 손으로 만지거나, 비눗물을 사용하세요',
-        '펜이나 테이프로 누수를 표시하세요',
-        '누수 부위 주변을 최소 2인치 이상 이소프로필 알코올로 청소하세요',
-        '접착 마감이 더 잘 되도록 고운 사포로 표면을 거칠게 다듬으세요',
-        'PVC 패치와 보드 표면 모두에 접착제를 발라주세요',
-        '접착제가 끈적거리면 5분을 기다려야 합니다',
-        '패치를 단단히 누르고, 롤러나 신용카드로 공기 방울을 밀어 내세요',
-        '24시간 동안 경화시킨 후 최대 압력으로 부풀려 주세요',
-      ],
-      faq: [
-        {
-          q: '물에 난 구멍을 수리할 수 있나요?',
-          a: '패치와 테이프를 이용한 긴급 수리는 해안으로 돌아갈 수 있습니다. 완전한 수리는 건조한 상태와 24시간 경화가 필요합니다.',
-        },
-        {
-          q: '누수가 있는 밸브를 어떻게 고치나요?',
-          a: '포함된 도구로 밸브 코어를 제거하고, O-링의 손상 여부를 확인한 후 필요 시 교체한 후 코어를 단단히 다시 삽입하세요.',
-        },
-        {
-          q: '수리할 때 어떤 접착제를 사용해야 PVC 하나요?',
-          a: 'PVCHH-66이나 클리프턴 같은 특수 접착제를 사용하세요. 일반 순간접착제는 팽창식 재료와 잘 붙지 않습니다 PVC .',
-        },
-      ],
-    },
-    'kayak-techniques': {
-      title: '필수 카약 패들링 기술',
-      description: '마스터 카약 패들링 — 전진 스트로크, 스윕 스트로크, 에징, 그리고 안전하고 효율적이기 위한 브레이싱.',
-      tldr: '카약의 전진 스트로크는 팔이 아닌 몸통 회전을 사용합니다. 스윕 스트로크는 카약을 회전시킵니다. 에징은 회전을 향상시킵니다. 낮은 브레이스는 파도 시 전복을 방지합니다. 패들 샤프트는 수직으로 유지하고 블레이드는 완전히 잠기게 하세요.',
-      problem:
-        '비효율적인 노 젓기 기술은 어깨 피로, 진행 속도 느리기, 바람과 조류에 따른 카약 제어의 어려움을 초래합니다.',
-      solution: '네 가지 필수 스트로크인 전진, 후진, 스윕, 브레이스로 올바른 토르소 주력 패들링 기술을 배워보세요.',
-      audience: '초보자 및 중급 카약커들이 더 적은 노력과 더 많은 컨트롤로 패들링을 원하는 분들입니다.',
-      steps: [
-        '포워드 스트로크: 몸통을 회전시키고, 칼날을 발 근처에 박고, 엉덩이를 지나 당기고, 엉덩이에서 나갑니다',
-        '리버스 스트로크: 칼날을 뒤에 박고, 앞으로 밀면 느려지거나 후진할 수 있습니다',
-        '스윕 스트로크: 앞으로 손을 뻗어 블레이드를 선미 쪽으로 넓게 휘두르고, 카약을 돌립니다',
-        '로우 브레이스: 파도 시 안정성을 위해 블레이드를 수면에 평평하게 대어',
-        '에징: 카약을 가장자리에서 약간 기울여 회전을 만듭니다',
-      ],
-      faq: [
-        {
-          q: '카약을 어떻게 직선으로 유지할 수 있을까요?',
-          a: '번갈아 가며 일정한 스트로크를 사용하세요. J-스트로크(앞으로 스트로크 끝에 있는 약간의 훅)를 배우면 방향을 바꾸지 않고 방향을 수정할 수 있습니다.',
-        },
-        {
-          q: '가장 흔한 카약 부상은 무엇인가요?',
-          a: '팔 주력 패들링으로 인한 어깨 긴장. 몸통 회전을 사용해 큰 등 근육을 활성화하고 어깨 하중을 줄이세요.',
-        },
-        {
-          q: '바람 속에서 어떻게 노를 젓나요?',
-          a: '선수를 바람을 향해 향하게 하세요. 짧고 강한 스트로크를 사용하세요. 바람을 건너면 카약을 약간 바람 쪽으로 향하게 하세요.',
-        },
-      ],
-    },
-    'multi-day-trip': {
-      title: '다일간 카약이나 SUP 여행 계획',
-      description: '다일간의 패들링 여행 계획과 실행 방법 — 경로 계획, 장비 포장, 캠핑, 그리고 안전.',
-      tldr: '하루에 10-15마일을 계획하세요. 장비를 방수 드라이백에 넣고, 무게를 고르게 분산시키며, 여행 전에 보드나 카약에 짐을 실어 다니는 연습을 하세요. 플로트 플랜을 작성하세요. 물, 음식, 쉼터, 항해, 통신 수단을 휴대하세요.',
-      problem:
-        '다일간 여행은 과도한 짐 싸움, 잘못된 경로 계획, 날씨와 조류를 과소평가하여 탈진, 장비 고장, 안전 사고로 이어집니다.',
-      solution:
-        '체계적인 계획 접근법을 사용하세요: 경로 선택, 장비 체크리스트, 음식 계획, 안전 브리핑, 비상 계획 등이 포함됩니다.',
-      audience: '경험 많은 패들러들이 첫 다일간 원정을 계획하고 있습니다.',
-      steps: [
-        '정해진 캠프장과 탈출 지점이 있는 경로를 선택하세요',
-        '바람과 해류를 고려해 하루 10-15마일을 계획하세요',
-        '여행 기간 내내 조수 표와 일기예보를 확인하세요',
-        '장비를 방수 건조 백에 넣어 총 장비 무게 20-30파운드에 넣으세요',
-        '무게를 고르게 분배하세요 — 가장 무거운 물건은 중앙에 두세요',
-        '육지에 있는 사람에게 상세한 플로트 플랜을 제출하세요',
-        '종이 해도, 나침반, GPS 백업 등 내비게이션을 꼭 챙기세요',
-        '비상 대피소, 여분의 음식, 구급상자를 챙기세요',
-      ],
-      faq: [
-        {
-          q: '이상적인 일일 거리는 얼마인가요?',
-          a: '경험 많은 패들러는 하루에 10-15마일을 달립니다. 초보자는 5-8마일을 계획해야 합니다. 날씨에 대비한 완충 시간을 항상 마련하세요.',
-        },
-        {
-          q: '얼마나 많은 물을 들고 다녀야 하나요?',
-          a: '1인당 하루 1갤런. 더운 날씨에는 1.5갤런. 리필용으로 정수기 필터나 정수제를 휴대하세요.',
-        },
-        {
-          q: '가장 중요한 안전 항목은 무엇인가요?',
-          a: '통신. VHF 라디오나 위성 메신저가 비상 상황에서 생명을 구할 수 있습니다. 휴대전화는 외진 지역에서 신뢰할 수 없습니다.',
-        },
-      ],
-    },
-    'choosing-paddle': {
-      title: '카약과 카약에 적합한 노 선택 SUP',
-      description: '패들 재료, 블레이드 모양, 샤프트 종류, 카약 및 카약 크기 가이드 SUP 입니다.',
-      tldr: '패들 길이: SUP 패들은 키보다 6-8인치 더 높아야 합니다. 카약 패들은 보트 너비와 몸통 길이에 따라 다릅니다. 블레이드 형태: 다이헤드럴 블레이드는 직선으로 움직이며, 평평한 블레이드는 더 많은 캐치를 제공합니다. 샤프트 재질: 카본이 가장 가볍고, 유리섬유가 가장 가성비가 좋으며, 알루미늄은 예산이 좋습니다.',
-      problem: '잘못된 패들 크기나 재료를 사용하면 불필요한 피로, 스트로크 효율 저하, 관절 긴장이 발생합니다.',
-      solution: '패들 길이, 블레이드 모양, 샤프트 재질, 유연성을 자신의 패들링 스타일, 체격, 예산에 맞춰 맞추세요.',
-      audience: 'SUP 그리고 카약 패들러들이 첫 패들이나 다음 패들 선택을 합니다.',
-      steps: [
-        '예를 들어 SUP: 패들 높이를 측정하세요 — 일반 패들링 시 당신의 키보다 6-8인치 더 높게',
-        '카약의 경우: 몸통 길이와 보트 너비를 측정하세요 — 좁은 보트는 더 짧은 패들이 필요합니다',
-        '블레이드 재질을 선택하세요 — 예산은 나일론, 가성비는 유리섬유, 성능은 탄소',
-        '블레이드 모양을 선택하세요 — 부드러운 트래킹을 위한 다이헤드럴, 파워를 위한 플랫, 레이싱을 위한 스푼 형태',
-        '샤프트 타입 선택 — SUP경주용 직선 , 경주용 굽음SUP, 카약용 표준',
-        '플렉스 체크 — 샤프트가 더 단단하게 힘을 전달하고, 유연한 샤프트가 관절 부담을 줄여줍니다',
-      ],
-      faq: [
-        {
-          q: '가장 좋은 패들 재료는 무엇인가요?',
-          a: '유리섬유는 무게, 내구성, 비용 면에서 가장 균형을 이룹니다. 탄소는 가볍지만 더 비싸고 부서지기 쉽습니다. 나일론은 무겁지만 사실상 파괴되지 않습니다.',
-        },
-        {
-          q: '내 패들 길이가 맞는지 어떻게 알 수 있나요?',
-          a: '예를 들어SUP: 패들을 옆에 세워 세우세요 — 팔이 머리 위로 올라가면 손잡이가 손목에 닿아야 합니다. 카약의 경우: 블레이드는 과하게 뻗지 않고 편안한 각도로 물속에 들어가야 합니다.',
-        },
-        {
-          q: '원피스 패들을 사야 할까요, 아니면 조절 가능한 패들을 사야 할까요?',
-          a: '조절 가능한 패들은 공동 사용과 이동에 적합합니다. 일체형 패들은 더 가볍고 단단하며 전용 사용에 더 효율적입니다.',
-        },
-      ],
-    },
-    'sup-with-kids': {
-      title: 'SUP 아이들과 함께: 완전한 가족 가이드',
-      description: '아이들을 안전하게 패들보드에 데려가는 방법 — 연령 권장, 장비 및 활동.',
-      tldr: '6세 어린이는+ SUP 성인과 함께 탈 수 있습니다. 10세 어린이는+ 감독 하에 직접 보드를 탈 수 있습니다. 넓은 마구간 보드를 사용하고, 항상 PFD를 착용하며, 얕고 잔잔한 물에 머물며, 세션을 짧게 유지하세요(최대 30-45분).',
-      problem: '부모들은 아이들과 수상 스포츠를 함께 즐기고 싶어 하지만 안전, 장비 적합성, 아이들의 참여를 걱정합니다.',
-      solution:
-        '탠덤 라이딩에 적합한 보드 크기를 사용하고, 모든 아이가 적절히 맞는 보드를 착용하도록 하며PFD, 얕고 따뜻한 물에서 시작하고, 게임과 짧은 세션으로 재미있게 즐기세요.',
-      audience: '아이들에게 패들보드를 소개하고 싶은 부모님들.',
-      steps: [
-        '4-6세: 성인 보드에서 승객으로 탑승하기 — 앞에 앉아 중앙 손잡이를 잡으세요',
-        '6-10세: 성인 감독과 목줄 하에 무릎을 꿇거나 자신의 보드에 앉아 있습니다',
-        '10세+: 성인 감독 하에 직접 보드를 타기',
-        '항상 착용하세요 PFD — 아이들은 항상 적절하게 맞는 구명조끼를 착용해야 합니다',
-        '얕은 물에 머무르세요(성체는 허리 깊이까지)',
-        '세션은 짧게 유지하세요 — 10세 미만 어린이는 최대 30-45분 정도',
-        '재미있게 하세요 — 게임도 하고, 물고기도 찾고, 서서 연습하세요',
-      ],
-      faq: [
-        {
-          q: '아이가 혼자 있을 수 있는 나이는 언제 SUP 인가요?',
-          a: '10세에서 12세 사이에 아이의 수영 능력과 물에서의 편안함에 따라 감독 하에 진행됩니다. 항상 잔잔하고 얕은 물에서 훈련합니다.',
-        },
-        {
-          q: '아이들과 함께하는 데 가장 좋은 보드는 무엇인가요 SUP ?',
-          a: '+탠덤 라이딩에 적합한 34인치 넓은 보드와 높은 중량 용량을 갖추고 있습니다. SUP 익스플로러 11의 33인치 폭과 220파운드 무게는 부모와 자녀 간의 합격에 적합합니다.',
-        },
-        {
-          q: '아이들이 필요한 안전 장비는 무엇인가요?',
-          a: '적절하게 맞춘 CE인증된 구명조끼, 목줄(성인용 보드에 부착되어 탠덤용), 자외선 차단제, 그리고 모자를 착용하세요.',
-        },
-      ],
-    },
-  },
-  lt: {
-    'how-to-choose-your-sup': {
-      title: 'Kaip pasirinkti SUP savo lentą',
-      description:
-        'Išsamus vadovas, kaip pasirinkti tinkamą stovimą irklentę, atsižvelgiant į jūsų įgūdžių lygį, vandens sąlygas ir numatomą naudojimą.',
-      tldr: 'Rinkitės SUP pagal įgūdžių lygį, vandens tipą ir pagrindinį paskirtį. Universalios lentos tinka pradedantiesiems ir ramiam vandeniui. Turizmo lentos tinka ilgo nuotolio irklavimui. Jogos lentos suteikia papildomą plotį stabilumui. Pasirodymo lentos tinka patyrusiems irkluotojams įvairiomis sąlygomis.',
-      problem:
-        'Dauguma pirmą kartą perkančių SUP lentą renkasi pagal kainą ar išvaizdą, o ne pagal tai, kaip ir kur jie iš tikrųjų irkluos. Tai lemia prastą stabilumą, nepakankamą našumą ir varginančią patirtį.',
-      solution:
-        'Priderinkite lentos formą, tūrį ir konstrukciją prie savo įgūdžių lygio ir pagrindinės vandens aplinkos. Platesnės lentos (32–34 colių) suteikia stabilumą pradedantiesiems. Ilgesnės lentos (12–14 colių) geriau tinka žygiams.Drop-stitch Konstrukcija 12–15 colių lygyje PSI suteikia standumą, prilygstantį kietosioms lentoms.',
-      audience: 'SUP Pirmą kartą perkanti, mėgėjai irkluotojai ir visi, kurie atnaujina nuo paprastos lentos.',
-      steps: [
-        'Nustatykite pagrindinę irklavimo aplinką – ežerą, vandenyną, upę ar mišrią',
-        'Priderinkite lentos plotį prie savo įgūdžių lygio: 32-34" pradedantiesiems, 30-32" vidutiniams, 28-30" pažengusiems',
-        'Rinkitės lentos ilgį pagal naudojimą: trumpesnį manevringumui, ilgesnį sekimui ir greičiui',
-        'Pasirinkite konstrukciją: pripučiama drop-stitch nešiojamumui, kieta lenta maksimaliam našumui',
-        'Patikrinkite svorio talpą — jūsų svoris ir įranga neturėtų viršyti 80% lentos ribos',
-        'Patikrinkite pridėtus priedus: siurblį, pavadėlį, peleką, kuprinę ir remonto rinkinį',
-      ],
-      faq: [
-        {
-          q: 'Koks plotis SUP geriausias pradedantiesiems?',
-          a: '32–34 colių plotis suteikia stabiliausią mokymosi platformą. SUP Explorer 11, 33 colių pločio, yra idealus pirmą kartą irkluojantiems ramiame vandenyje.',
-        },
-        {
-          q: 'Pripučiama ar kieta SUP lenta?',
-          a: 'Pripučiamos lentos suteikia nešiojamumą, patogų laikymą ir smūgių sugėrimą. Kietos lentos pasižymi maksimaliu standumu ir greičiu. Daugumai mėgėjų praktiškas pasirinkimas yra kokybiškas pripučiamas su drop-stitch šerdimi.',
-        },
-        {
-          q: 'Iki ko PSI turėčiau pripūsti?',
-          a: 'Paddle Board Overstock Lentos rekomenduoja 12–15 PSI. Prie 15 PSI lenta pasiekia maksimalų standumą, panašų į kietą lentą. Visada laikykitės nurodyto slėgio diapazono, kuris nurodytas lentoje.',
-        },
-      ],
-    },
-    'beginner-guide': {
-      title: 'Pradedančiojo gidas irklentėje',
-      description:
-        'Viskas, ką reikia žinoti prieš pirmąją irklentės treniruotę – nuo įrangos paruošimo iki pagrindinių irklavimo technikų.',
-      tldr: 'Pradėkite ramioje, lygioje vandenyje su plačia stabilia lenta. Pripūskite iki 12–15, PSIpritvirtinkite pavadėlį ir naudokite tinkamą irklų ilgį (6–8" aukštesnį už jūsų ūgį). Laikykite stovėseną pečių plotyje, kelius šiek tiek sulenktus ir žiūrėkite į horizontą.',
-      problem:
-        'Nauji irkluotojai dažnai praleidžia pagrindinį pasiruošimą – netinkamą irklavimo ilgį, prastą stovėseną ar pasirinkimą nelygiame vandenyje – dėl ko kyla kritimai, nusivylimas ir nusivylimas.',
-      solution:
-        'Laikykitės struktūruoto pirmos treniruotės plano: pasirinkite ramų vandenį, tinkamai pasiruoškite įrangą, praktikuokite klūpėjimą prieš stojimą ir įvaldykite priekinį plaukimą prieš bandydami suktis.',
-      audience: 'Absoliutūs pradedantieji, kurie niekada anksčiau neplaukė irklente.',
-      steps: [
-        'Rinkitės ramų, ramų vandenį be laivų eismo – idealu būtų mažas ežeras arba apsaugota įlanka',
-        'Pripūskite lentą iki 12–15 PSI laipsnių naudodami dvigubo veikimo siurblį',
-        'Pririškite pavadėlį prie kulkšnies ar blauzdos, niekada prie lentos rankenos',
-        'Įstatykite peleką ir priveržkite varžtą',
-        'Reguliuokite irklų ilgį – jis turėtų būti 6–8 coliais aukštesnis už jūsų ūgį',
-        'Pradėkite klūpėti ant lentos, irkluokite kelis mostus, kad pajustumėte pusiausvyrą',
-        'Stovėk po vieną koją, pėdos pečių plotyje, keliai minkšti',
-        'Žiūrėk į horizontą, ne į kojas – tavo lenta eina ten, kur žiūri',
-      ],
-      faq: [
-        {
-          q: 'Ką turėčiau dėvėti irklentėms?',
-          a: 'Greitai džiūstantys sportiniai drabužiai, gelbėjimosi liemenė, apsauginis kremas nuo saulės ir kepurė. Šaltame vandenyje dėvėkite nardymo kostiumą. Visada dėvėkite pavadėlį ir nešiokitės telefoną vandeniui atspariame dėkle.',
-        },
-        {
-          q: 'Kaip vėl patekti į lentą, jei nukrisiu?',
-          a: 'Išlikite ramūs. Plaukite prie lentos, sugriebkite centrinę rankeną ir spirkite kojomis, vienu judesiu užsitraukdami save ant lentos. Pirmiausia grįžkite į klūpėjimo poziciją, tada atsistokite.',
-        },
-        {
-          q: 'Kokios vėjo sąlygos yra saugios?',
-          a: 'Pradedančiajam: vėjai mažesni nei 10 mylių per valandą (5 mazgai). Jei vėjas pučia nuo kranto, neišeikite į lauką. Patikrinkite orų prognozę ir supraskite, kad vėjas nuo kranto yra pavojingas.',
-        },
-      ],
-    },
-    'safety-tips': {
-      title: 'Vandens sporto saugumo patarimai',
-      description:
-        'Esminės saugumo gairės irklentėms, baidarėms ir plaukimui valtimi – nuo įrangos patikros iki oro sąlygų stebėjimo.',
-      tldr: 'Visada dėvėkite CEsertifikuotą gelbėjimosi liemenę, prieš paleidimą patikrinkite orą ir vandens sąlygas, nešiokitės ryšio įrenginius, niekada neirkluokite vienas nepažįstamame vandenyje ir supraskite savo įrangos leistinas ribas.',
-      problem:
-        'Dauguma vandens sporto avarijų įvyksta dėl nepakankamo pasiruošimo – be gelbėjimosi liemenės, ignoruojant oro sąlygų įspėjimus arba naudojant įrangą, viršijančią projektines ribas.',
-      solution:
-        'Laikykitės išankstinio paleidimo saugumo kontrolinio sąrašo: patikrinkite įrangos būklę, patikrinkite orą ir vandens temperatūrą, informuokite ką nors apie savo maršrutą ir visada dėvėkite tinkamą plūduriavimą.',
-      audience: 'Visi vandens sporto dalyviai —, SUPbaidarė, valtis ir RIB naudotojai.',
-      steps: [
-        'Patikrinkite orų prognozę — venkite vėjo virš 15 mylių per valandą ir perkūnijos',
-        'Patikrinkite vandens temperatūrą — šaltam vandeniui (60°F/15°C) reikalingas hidrokostiumas arba sausas kostiumas',
-        'Patikrinkite įrangą – patikrinkite, ar nėra nuotėkių, įtrūkimų ir tinkamo pripūtimo',
-        'Visada dėvėkite CEsertifikuotą gelbėjimosi liemenę',
-        'Prisegkite pavadėlį (SUP) arba pritvirtinkite visą laisvą įrangą (baidarę/valtį)',
-        'Pateikite plūduriavimo planą — pasakykite, kur vykstate ir kada grįšite',
-        'Nešiokitės ryšį — vandeniui atsparus telefono dėklas arba VHF radijas',
-        'Žinokite savo ribas – laikykitės savo įgūdžių lygio ir įrangos įvertinimų',
-      ],
-      faq: [
-        {
-          q: 'Ar man reikia gelbėjimosi liemenės ant SUP?',
-          a: 'Taip. Daugelis jurisdikcijų teisiškai reikalauja gelbėjimosi liemenės bet kurioje vandens transporto priemonėje, įskaitant SUPs. Net jei to nereikalaujama, CEsertifikuota gelbėjimosi liemenė yra būtina saugos įranga.',
-        },
-        {
-          q: 'Kokia yra dažniausia vandens sporto trauma?',
-          a: 'Šalčio panardinimas ir išsekimas yra dažniausios rimtos rizikos. Visada renkitės pagal vandens temperatūrą, o ne oro temperatūrą.',
-        },
-        {
-          q: 'Kaip patikrinti, ar sąlygos yra saugios?',
-          a: 'Naudokite jūrinių orų prognozes. Patikrinkite vėjo greitį, bangų aukštį ir vandens temperatūrą. Pradedantieji turėtų laikytis sąlygų esant 10 mylių per valandą vėjui ir 1 pėdos bangoms.',
-        },
-      ],
-    },
-    'inflatable-vs-hard': {
-      title: 'Pripučiamos ir kietos SUP lentos: kurią turėtumėte pasirinkti?',
-      description:
-        'Objektyvus pripučiamų ir standžių SUP lentų palyginimas, apimantis našumą, nešiojamumą, patvarumą ir vertę.',
-      tldr: 'Pripučiamos lentos laimi dėl mobilumo, laikymo ir smūgio atsparumo. Kietos lentos laimi dėl maksimalaus standumo ir greičio. Šiuolaikinės drop-stitch pripučiamos lentos prie 15 colių sumažina PSI našumo skirtumą.',
-      problem:
-        'Pirkėjai yra įstrigę tarp pripučiamų lentų patogumo ir kietųjų lentų našumo reputacijos, neturėdami aiškių duomenų, kaip jos iš tikrųjų palyginamos.',
-      solution:
-        'Palyginkite konkrečius kriterijus — standumą, svorį, pakavimo dydį, patvarumą, remontą ir kainą — su savo realiu naudojimo įpročiu. Daugumai mėgėjų kokybiškas pripučiamas yra geresnis pasirinkimas.',
-      audience: 'SUP Pirkėjai renkasi tarp pripučiamos ir standžios konstrukcijos.',
-      steps: [
-        'Įvertinkite nešiojamumo poreikius — pripučiamos kuprinės iki kuprinės dydžio, kieta lenta reikalauja stogo bagažinės',
-        'Palyginkite standumą — pripučiama 15 colių turi PSI minimalų lankstumą, o kieta lenta neturi jokio lankstumo',
-        'Įvertinkite sandėliavimą – pripučiamos dėžės laikomos spintoje, kieta lenta reikalauja garažo ar lentynos vietos',
-        'Apsvarstykite patvarumą – pripučiamas įrenginys sugeria smūgius, kieta plokštė gali įlenkti ir įtrūkti',
-        'Faktoriaus remontas — pripučiami lopai yra paprasti, o kietų plokščių remontas reikalauja profesionalaus darbo',
-        'Patikrinkite našumą — kietos lentos turi nedidelį greičio pranašumą, pripučiamos plokštės geriau sugeria smūgius',
-      ],
-      faq: [
-        {
-          q: 'Ar pripučiamos SUPs lentos yra tokios pat kietos kaip kietos lentos?',
-          a: 'Turint 15 metų PSI su drop-stitch konstrukcija, standumo skirtumas rekreaciniam naudojimui yra minimalus. Tik varžybų lenktynininkai ir banglentininkai pastebės skirtumą.',
-        },
-        {
-          q: 'Kiek laiko tarnauja pripučiamas daiktas SUP ?',
-          a: 'Tinkamai prižiūrint – 5–10 metų. Jūrų lygio PVC atsparūs ir UV trintukai. Laikykite atokiau nuo tiesioginių saulės spindulių, kai nenaudojate, o po naudojimo sūriame vandenyje skalaukite šviežiu vandeniu.',
-        },
-        {
-          q: 'Ar galiu naudoti pripučiamą įrangą SUP banglenčių sportui?',
-          a: 'Taip, bet pripučiamos lentos geriausiai tinka mažoms ir vidutinėms bangoms (mažiau nei 3 pėdos). Specializuotam banglenčių sportui kietoji lenta užtikrina geresnį reagavimą ir prisitaikymą prie bėgių.',
-        },
-      ],
-    },
-    'weather-conditions': {
-      title: 'Oro sąlygų supratimas irklentės sportui',
-      description:
-        'Išmokite skaityti vėją, bangas, potvynius ir oro sąlygas, kad galėtumėte saugiai priimti sprendimus vandenyje.',
-      tldr: 'Prieš kiekvieną paleidimą patikrinkite tris dalykus: vėjo greitį (pradedantiesiems – mažiau nei 10 mph), bangos aukštį (pradedantiesiems – mažiau nei 1 pėda) ir vandens temperatūrą (rinkitės drabužius vandeniui, o ne orui). Vėjas nuo kranto yra pavojingas bet kokiame įgūdžių lygyje.',
-      problem:
-        'Dauguma su oru susijusių avarijų įvyksta todėl, kad irkluotojai neteisingai įvertina sąlygas – jie tikrina oro temperatūrą, bet ne vandens temperatūrą, arba nesupranta, kad vėjas nuo kranto gali juos nupūsti į jūrą.',
-      solution:
-        'Naudokite struktūruotą priešpaleidimo oro sąlygų vertinimą: vėjo kryptis ir greitis, bangų periodas ir aukštis, potvynio būsena ir vandens temperatūra. Supraskite, kaip kiekvienas veiksnys veikia jūsų saugumą.',
-      audience: 'Visi irkluotojai, plaukiantys atvirame vandenyje – ežeruose, įlankose, upėse ir vandenyne.',
-      steps: [
-        'Patikrinkite vėjo greitį ir kryptį — pavojingiausias yra jūrinis vėjas (pučiantis iš sausumos į jūrą)',
-        'Įvertinkite bangų sąlygas — bangos periodas svarbus tiek pat, kiek ir bangos aukštis',
-        'Pažinkite potvynį – potvynio srovės gali būti stipresnės už jūsų irklavimo greitį',
-        'Vandens temperatūros matavimas — žemiau 60°F/15°C reikalinga šiluminė apsauga',
-        'Patikrinkite matomumą — rūkas ir stiprus lietus mažina matomumą ir didina susidūrimo riziką',
-        'Supraskite vietinius pavojus – panardintus akmenis, stiprias sroves, laivų eismo zonas',
-      ],
-      faq: [
-        {
-          q: 'Koks vėjo greitis yra per didelisSUP?',
-          a: 'Pradedantieji: virš 10 mylių per valandą (8 mazgai). Vidutiniai: virš 15 mylių per valandą (13 mazgų). Pažengę: virš 20 mylių per valandą (17 mazgų). Jei kyla abejonių, neišeikite.',
-        },
-        {
-          q: 'Ką reiškia bangos periodas?',
-          a: 'Bangos periodas – tai laikas tarp nuoseklių bangų. Trumpi periodai (mažiau nei 8 sekundės) reiškia stačias, banguotas bangas. Ilgi periodai (virš 12 sekundžių) reiškia tolygesnes, labiau nuspėjamas bangas.',
-        },
-        {
-          q: 'Ar galiu irkluoti lietuje?',
-          a: 'Lengvas lietus paprastai yra saugus. Stiprus lietus sumažina matomumą ir gali rodyti besikeičiančias vėjo sąlygas. Perkūnijos reikalauja nedelsiant evakuotis iš vandens.',
-        },
-      ],
-    },
-    'understanding-specs': {
-      title: 'Kaip skaityti SUP plokštės specifikacijas',
-      description:
-        'Techninis vadovas, padedantis suprasti SUP plokštės specifikacijas – tūrį, matmenis, konstrukciją ir ką jos reiškia našumui.',
-      tldr: 'Pagrindinės specifikacijos: tūris (litrai) lemia plūdrumą ir svorio talpą, plotis – stabilumą, ilgis – judėjimą ir greitį, storis – standumą, o PSI įvertinimas – pripūtimo slėgį optimaliam veikimui.',
-      problem:
-        'Produkto specifikacijų lapuose pateikiami numeriai be konteksto, todėl pirkėjai nežino, kurios specifikacijos iš tiesų svarbios jų naudojimo atvejui.',
-      solution:
-        'Kiekvieną specifikaciją paverskite realiu našumu: tūris plūduriavimui, plotis stabilumui, ilgis slydimui, storis standumui ir konstrukcija patvarumui.',
-      audience:
-        'Vidutinio lygio irkluotojai ir techniniai pirkėjai, norintys priimti sprendimus remdamiesi duomenimis.',
-      steps: [
-        'Patikrinkite tūrį (litrais) — jūsų svoris ir įranga neturėtų viršyti 80% lentos tūrio reitingo',
-        'Patikrinimo plotis — platesnis (32-34") = didesnis stabilumas, siauresnis (28-30") = didesnis greitis',
-        'Patikrinimo ilgis — ilgesnis (12-14") = geresnis sekimas, trumpesnis (10-11") = geresnis manevringumas',
-        'Patikrinkite storį — 6" yra standartas, 8" suteikia daugiau standumo ir svorio talpos',
-        'Patikrinkite PSI reitingą — išpūskite iki maksimalaus, PSI įvertinto optimaliam standumui',
-        'Patikrinkite statybines medžiagas – drop-stitch tankį, PVC sluoksnius, bėgių armavimą',
-      ],
-      faq: [
-        {
-          q: 'Ką drop-stitch tai reiškia?',
-          a: 'Drop-stitch tai konstrukcijos metodas, kai tūkstančiai sriegių jungia viršutinį ir apatinį plokštės sluoksnius. Tai leidžia esant dideliam slėgiui (12–15) PSIpasiekti itin standų standumą.',
-        },
-        {
-          q: 'Koks yra idealus svorio ir tūrio santykis?',
-          a: 'Geras tikslas – maždaug 5–6 svarai raitelio svorio vienam litrui lentos tūrio. 220 svarų irkluotojas turėtų ieškoti lentų su 180+ litrų tūrio.',
-        },
-        {
-          q: 'Ar lentos svoris svarbus?',
-          a: 'Taip. Lengvesnės lentos (mažesnės nei 20 svarų) yra lengviau nešamos ir transportuojamos. Sunkesnės lentos (25+ svarai) dažnai rodo patvaresnę daugiasluoksnę PVC konstrukciją.',
-        },
-      ],
-    },
-    'sup-maintenance': {
-      title: 'Kaip išvalyti ir laikyti pripučiamą daiktą SUP',
-      description:
-        'Žingsnis po žingsnio priežiūros vadovas, kaip maksimaliai prailginti pripučiamos SUP lentos tarnavimo laiką.',
-      tldr: 'Po kiekvieno naudojimo nuskalaukite šviežiu vandeniu, visiškai išdžiovinkite prieš laikymą, išleiskite ir suvyniokite laisvai (ne kariniam sandarumui), laikykite vėsioje, sausoje vietoje, toli nuo tiesioginių saulės spindulių, ir kas mėnesį tikrinkite siūles.',
-      problem:
-        'Netinkamas laikymas ir valymas yra pagrindinės ankstyvo pripučiamų daiktų gedimo priežastys SUPs – pelėsis UV , pažeidimai ir siūlių delaminacija.',
-      solution:
-        'Laikykitės nuoseklios po sesijos rutinos: skalaukite, džiovinkite, tikrinkite, išleiskite ir saugokite. Naudokite švelnų muilą užsispyrusiam purvui. Niekada nelaikykite lentos šlapios ar tiesioginėje saulės šviesoje.',
-      audience: 'Visi pripučiami SUP savininkai, norintys, kad jų lenta tarnautų 5+ metus.',
-      steps: [
-        'Iškart po naudojimo išskalaukite lentą šviežiu vandeniu, ypač po sūraus vandens',
-        'Valykite švelniu muilu ir minkšta kempine – venkite stiprių cheminių medžiagų ar aukšto slėgio plovimo',
-        'Visiškai išdžiovinkite plokštę – atidarykite vožtuvą, kad praleistumėte įstrigusį vandenį',
-        'Patikrinkite, ar nėra pažeidimų – patikrinkite siūles, vožtuvą ir paviršių dėl pradūrimų',
-        'Visiškai išleiskite – išimkite vožtuvo šerdį visiškam defliacijai',
-        'Riedėkite lentą laisvai — pradėkite nuo nosies, venkite siaurų raukšlių',
-        'Laikykite nešiojimo krepšyje vėsioje, sausoje vietoje, toliau nuo tiesioginių saulės spindulių',
-      ],
-      faq: [
-        {
-          q: 'Ar galiu palikti savo SUP pripūstas visam sezonui?',
-          a: 'Taip, bet laikykite jį atokiau nuo tiesioginių saulės spindulių, kai nenaudojate. Ilgesniam laikymui rekomenduojama dalinis išpūtimas (8-10PSI).',
-        },
-        {
-          q: 'Kaip pataisyti pradūrimą?',
-          a: 'Išvalykite vietą, iškirpkite pleistrą su užapvalintais kampais, užtepkite klijų, tvirtai prispauskite ir palaukite 24 valandas prieš pripūsdami.Paddle Board Overstock Lentos turi remonto rinkinį.',
-        },
-        {
-          q: 'Kaip dažnai turėčiau tikrinti vožtuvą?',
-          a: 'Kas mėnesį. Vožtuvas yra dažniausia gedimo vieta. Patikrinkite, ar vožtuvo kaištis laisvai juda ir O žiedas nepažeistas.',
-        },
-      ],
-    },
-    'paddling-techniques': {
-      title: 'Pagrindinės SUP irklavimo technikos',
-      description:
-        'Įvaldykite priekinį mostą, šlavimo judesį ir kryžminį lanko posūkį, kad galėtumėte efektyviai irkluoti bet kokiomis sąlygomis.',
-      tldr: 'Priekinis mostas naudoja jūsų liemenį, o ne rankas. Šlavimo mostas suka lentą. Arbaleto posūkis yra efektyviausias sukimasis. Laikykite irklą vertikaliai ir visiškai panardinkite ašmenis, kad maksimaliai perduotumėte jėgą.',
-      problem:
-        'Dauguma irkluotojų naudoja rankos dominuojančius smūgius, kurie švaisto energiją ir sukelia pečių nuovargį. Prasta technika taip pat apsunkina lentos valdymą vėjyje ir bangose.',
-      solution:
-        'Išmokite tris esminius judesius – į priekį, šlavimą ir arbaleto posūkį – su tinkama kūno mechanika. Praktikuokite kiekvieną ramioje vandenyje prieš pereidami prie sudėtingų sąlygų.',
-      audience: 'Irkluotojus, kurie nori irkluoti ilgiau, greičiau ir su mažesniu nuovargiu.',
-      steps: [
-        'Smūgis į priekį: ištieskite ranką į priekį, visiškai įstatykite ašmenis, traukite atgal naudodami liemens sukimą (ne rankas), išeikite ties čiurna',
-        'Sweep mostas: ištieskite ranką į priekį prie borto, plačiu lanku nušluokite mentę link uodegos, pasukite lentą nuo irklo pusės',
-        'Arbaleto posūkis: padėkite irklą priešingoje lentos pusėje, nekeisdami rankų, traukite link uodegos',
-        'Atramos: naudokite žemą atramą stabilumui kapojant — plokite peilį plokščiai ant vandens paviršiaus',
-        'Traukimo judesys: ištiesk ranką į šoną, trauk lentą šonu link mentelės',
-      ],
-      faq: [
-        {
-          q: 'Kaip irkluoti tiesia linija?',
-          a: 'Naudok vienodą brūkšnių ilgį abiejose pusėse. Keisk puses kas 5–10 judesių. Pažiūrėk į fiksuotą tašką horizonte kaip pavyzdį.',
-        },
-        {
-          q: 'Ar turėčiau sulenkti kelius?',
-          a: 'Taip. Laikykite šiek tiek sulenktus kelius kaip amortizatorius. Užrakinti keliai perduoda kiekvieną bangavimą į jūsų kūno centrą ir sumažina stabilumą.',
-        },
-        {
-          q: 'Kaip irkluoti prieš vėją?',
-          a: 'Nuleiskite stovėseną, naudokite trumpesnius, greitesnius mostus ir laikykitės arčiau kranto, kur vėjas dažnai sumažėja. Jei vėjas per stiprus, neikite į lauką.',
-        },
-      ],
-    },
-    'sup-fitness': {
-      title: 'SUP Fizinis pasirengimas: viso kūno treniruotė ant vandens',
-      description:
-        'Kaip stovimas irklentės sportas ugdo pagrindinių raumenų jėgą, pusiausvyrą ir širdies bei kraujagyslių būklę.',
-      tldr: 'SUP Kiekviename moste įtraukiami pilvo raumenys, kojos, nugara ir pečiai. Vienos valandos treniruotė sudegina 300–500 kalorijų. Irklavimas prieš vėją ar srovę padvigubina intensyvumą.SUP Joga prideda lankstumo ir pusiausvyros pratimų.',
-      problem:
-        'Daugelis žmonių irklentę laiko neformalia veikla, o ne tikra fitneso priemone, prarasdami jos potencialą viso kūno treniruotėms.',
-      solution:
-        'Struktūruokite SUP treniruotes su konkrečiais fitneso tikslais: ištvermės irklavimas kardio treniruotėms, intervaliniai sprintai jėgai, SUP joga lankstumui ir ilgo nuotolio irklavimas raumenų ištvermei.',
-      audience: 'Fitneso entuziastai, ieškantys mažo poveikio, didelio įsitraukimo viso kūno treniruotės.',
-      steps: [
-        'Apšilimas sausumoje – rankų sukimai, liemens sukimai ir kojų svyravimai 5 minutes',
-        'Pradėkite nuo 10 minučių nuoseklaus irklavimo vidutinio intensyvumo',
-        'Progresas į intervalines treniruotes – 2 minutės intensyvaus irklavimo, 2 minutės lengvo atsigavimo',
-        'Įtraukite SUP jogos pozas – žemyn nukreiptą šunį, kario II ir medžio pozą lentoje',
-        'Atvėsinkite švelniai irkluodami ir darydami statinius tempimus ant lentos',
-      ],
-      faq: [
-        {
-          q: 'Ar geriau SUP bėgti dėl fizinio pasirengimo?',
-          a: 'SUP Suteikia panašią širdies ir kraujagyslių naudą apatiniams sąnariams. Taip pat labiau įtraukia viršutinę kūno dalį ir pagrindinius raumenis nei bėgimas.',
-        },
-        {
-          q: 'Kiek kalorijų SUP sudegina?',
-          a: 'Maždaug 300–500 kalorijų per valandą esant vidutiniam intensyvumui. Lenktynės ar irklavimas prieš vėją gali sudeginti 600–800 kalorijų per valandą.',
-        },
-        {
-          q: 'Ar galiu auginti raumenis iš SUPjų?',
-          a: 'Taip. Irklavimas stiprina pečių, nugaros ir pagrindinių raumenų raumenis. Pusiausvyra įtraukia kojas ir stabilizuojančius raumenis. Tai viso kūno pasipriešinimo treniruotė.',
-        },
-      ],
-    },
-    'sup-yoga': {
-      title: 'SUP Joga: išsamus gidas apie irklavimą ir jogą',
-      description: 'Derinkite irklentę su joga, kad pagerintumėte pusiausvyrą, jėgą ir sąmoningumą vandenyje.',
-      tldr: 'SUP Joga prideda nestabilumo elementą, kuris žymiai padidina pilvo raumenų aktyvumą, palyginti su sausumos joga. Pradėkite nuo paprastų pozų ant plačios, stabilios lentos ramioje vandenyje. Naudokite neslystančią terasos pagalvėlę. Niekada nepraktikuokite SUP jogos vienas.',
-      problem:
-        'Tradiciniai jogos kilimėliai suteikia visiškai stabilų paviršių, pašalindami pusiausvyros iššūkį, kuris daro SUP jogą išskirtinai efektyvią pilvo raumenų stiprinimui ir susikaupimui.',
-      solution:
-        'Naudokite ypač plačią SUP lentą (34 colių+) su viso denio traukos kilimėliu. Praktikuokite ramioje, seklioje vandenyje. Pradėkite nuo pagrindinių pozų prieš bandydami inversijas.',
-      audience: 'Jogos praktikuotojai ir irkluotojai nori derinti pusiausvyros treniruotes su sąmoningumu.',
-      steps: [
-        'Pririškite lentą seklioje, ramioje vandenyje – naudokite smėlio inkarą arba pririškite prie prieplaukos',
-        'Pradėkite nuo sėdimų pozų – lengva sėdėjimo poza, valties poza, sėdėjimo sukimas',
-        'Progresas iki klūpėjimo pozų — stalas, katė-karvė, žaibas',
-        'Pereiti prie stovimų pozų — kalnas, karys I, karys II, medžio poza',
-        'Praktikuokite pusiausvyros pozas – pusmėnulis, erelis, šokėjas',
-        'Pabaikite savasana – atsigulkite plokščiai ant lentos, pajuskite vandens judėjimą',
-      ],
-      faq: [
-        {
-          q: 'Kokia lenta geriausia SUP jogai?',
-          a: 'Plati lenta (34") +su pilno ilgio traukos kilimėliu suteikia stabiliausią platformą. SUP Tour 12 siūlo gerą stabilumo ir slydimo balansą.',
-        },
-        {
-          q: 'Ar SUP joga yra pavojinga?',
-          a: 'Ne daugiau nei sausumos joga, jei praktikuojama saugiai. Naudokite ramų, seklų vandenį. Dėvėkite pavadėlį. Praktikuokite su partneriu. Venkite gilių vandenų pirmose treniruotėse.',
-        },
-        {
-          q: 'Ar man reikia specialios įrangos?',
-          a: 'Platus arklidžių lenta, pilnas denio traukos kilimėlis, pavadėlis ir PFD. Kai kurie specialistai naudoja vandeniui atsparų kilimėlį papildomam sukibimui.',
-        },
-      ],
-    },
-    'sup-fishing': {
-      title: 'SUP Žvejybos vadovas: Kaip žvejoti su irklente',
-      description:
-        'Viskas, ką reikia žinoti apie žvejybą nuo irklentės – įrangos komplektas, stabilumo patarimai ir technikos.',
-      tldr: 'SUP Žvejyba suteikia tylų priėjimą, prieigą prie seklaus vandens ir 360 laipsnių metimą. Naudokite platų stabilų lentą (34"), +pritvirtinkite meškerių laikiklius ir naudokite šaldytuvą arba dėžę kaip įrangos denį. Inkaruokite vėjuotomis sąlygomis. Visada dėvėkite PFD.',
-      problem:
-        'Standartiniai žvejybos laivai yra brangūs prižiūrėti ir negali pasiekti seklumos. Baidarės riboja judėjimą.SUP Žvejyba išsprendžia abi problemas, bet reikalauja specifinių įrangos pritaikymų.',
-      solution:
-        'Įrengkite arklidę SUP meškerių laikikliais, įrangos dėže ir inkarų sistema. Naudokite lentos nešiojamumą, kad pasiektumėte atokias žvejybos vietas, kurių laivai negali pasiekti.',
-      audience:
-        'Žvejai, norintys žvejoti sekliose vietose, atokiose vietovėse arba rinktis lengvą, nešiojamą žvejybos platformą.',
-      steps: [
-        'Rinkitės plačią lentą (34 colių+) su dideliu svorio talpa įrangai',
-        'Įrenkite strypų laikiklius ant denio naudodami bėgių arba diržo sistemas',
-        'Naudokite vandeniui atsparią dėžę arba šaldytuvą, pritvirtintą prie priekinės terasos įrangai',
-        'Pasiimkite mažą inkarą arba stebėjimo stulpą vėjuotoms sąlygoms',
-        'Dėvėkite PFD su kišenėmis įrankiams ir telefonui',
-        'Prieš atsistojant praktikuokite burtų metimą klūpėjant',
-      ],
-      faq: [
-        {
-          q: 'Ar galiu stovėti ir žvejoti ant SUP?',
-          a: 'Taip. 34 colių+ pločio lenta suteikia pakankamą stabilumą stovint ir metant. Pirmiausia praktikuokis ramioje vandenyje.',
-        },
-        {
-          q: 'Kokią žuvį galiu taikytis iš SUP?',
-          a: 'SUPs puikiai tinka lydekoms ežeruose, raudonžuvėms lygumose, upėtakiams upėse ir pakrantės rūšims įlankose bei estuarijose.',
-        },
-        {
-          q: 'Kaip pagauti žuvį iš SUP?',
-          a: 'Atsiklaupkite dėl stabilumo. Naudokite tinklą arba lūpų laikiklį. Laikykite žuvį žemai, kad nenukristumėte. Paleiskite arba pritvirtinkite į šaldytuvą.',
-        },
-      ],
-    },
-    'inflatable-repair': {
-      title: 'Kaip suremontuoti pripučiamą valtį arba SUP',
-      description:
-        'Žingsnis po žingsnio vadovas, kaip taisyti pradurimus, vožtuvų problemas ir siūlių pažeidimus pripučiamose vandens transporto priemonėse.',
-      tldr: 'Mažus įdubimus (mažesnius nei 1/4") galima sutaisyti naudojant komplekte esantį lopymo rinkinį. Išvalykite vietą, užtepkite PVC klijų, paspauskite lopą ir palaukite 24 valandas. Vožtuvų nuotėkiai dažniausiai reikalauja O formos žiedo keitimo. Dideli plyšimai ar siūlės delaminacija reikalauja profesionalios priežiūros.',
-      problem:
-        'Nedideli pradurimai ir vožtuvų problemos yra dažni, bet lengvai ištaisomi. Be tinkamos remonto technikos vartotojai arba permoka už profesionalią priežiūrą, arba dar labiau pablogina žalą.',
-      solution:
-        'Nustatykite pažeidimo tipą – pradurimą, vožtuvo nuotėkį ar siūlės problemą – ir taikykite tinkamą taisymo būdą. Dauguma remonto darbų trunka daugiau nei 30 minučių ir ilgiau nei sukietėjimas.',
-      audience: 'PripučiamųSUPs, baidarių ir valčių savininkai, norintys patys atlikti pagrindinius remonto darbus.',
-      steps: [
-        'Suraskite nuotėkį – pilnai pripūskite, klausykitės oro, apčiupinėkite ranka arba naudokite muiluotą vandenį',
-        'Pažymėkite nutekėjimą rašikliu arba lipnia juosta',
-        'Išvalykite vietą aplink pratekėjimą izopropilo alkoholiu – bent 2 coliais aplink pažeistą vietą',
-        'Paviršių šiurkštinkite smulkiu švitriniu popieriumi geresniam klijavimui',
-        'Užtepkite PVC klijų tiek lopui, tiek plokštės paviršiui',
-        'Palaukite 5 minutes, kol klijai taps lipnūs',
-        'Tvirtai paspauskite lopą, voleliu arba kreditine kortele išvyniokite oro burbulus',
-        'Leiskite džiūti 24 valandas prieš pripūsdami iki pilno slėgio',
-      ],
-      faq: [
-        {
-          q: 'Ar galiu pataisyti pradurimą vandenyje?',
-          a: 'Skubus remontas naudojant pleistrą ir lipnią juostą gali padėti jums grįžti į krantą. Pilnas remontas reikalauja sausų sąlygų ir 24 valandų džiovinimo.',
-        },
-        {
-          q: 'Kaip pataisyti pratekėjusį vožtuvą?',
-          a: 'Išimkite vožtuvo šerdį su komplekte esančiu įrankiu, patikrinkite O žiedą dėl pažeidimų, prireikus pakeiskite ir tvirtai įstatykite šerdį.',
-        },
-        {
-          q: 'Kokius klijus turėčiau naudoti PVC remontui?',
-          a: 'Naudokite PVCspecifinius klijus, tokius kaip HH-66 arba Clifton. Standartiniai superklijai blogai limpa su pripučiamomis PVC medžiagomis.',
-        },
-      ],
-    },
-    'kayak-techniques': {
-      title: 'Pagrindinės baidarės irklavimo technikos',
-      description:
-        'Meistriškas baidarių irklavimas — į priekį plaukimas, šlavimo judesys, kraštas ir pasitvirtinimas efektyviam ir saugiam baidarių plaukimui.',
-      tldr: 'Baidarės į priekį judesys naudoja liemens sukimąsi, o ne rankas. Šlavimo mostas suka baidarę. Kraštas pagerina sukimąsi. Žema atrama neleidžia bangoms apvirsti. Laikykite irklų veleną vertikaliai, o mentę visiškai panardintą.',
-      problem:
-        'Neefektyvi irklavimo technika sukelia pečių nuovargį, lėtą progresą ir sunkumus valdyti baidarę vėjyje ir srovėje.',
-      solution:
-        'Išmokite tinkamą liemens varomą irklavimo techniką su keturiais pagrindiniais judesiais — į priekį, atgal, šlavimu ir įtvaru.',
-      audience:
-        'Pradedantieji ir vidutinio lygio baidarininkai, norintys irkluoti su mažesnėmis pastangomis ir daugiau kontrolės.',
-      steps: [
-        'Smūgis į priekį: pasukite liemenį, padėkite ašmenis prie kojų, traukite pro klubą, išeikite ties klubu',
-        'Atvirkštinis judesys: padėkite ašmenis už savęs, stumkite į priekį, kad sulėtintumėte arba atbuline eiga',
-        'Šlavimo judesys: ištieskite ranką į priekį, plačiu lanku nušluokite mentę link uodegos, pasukite baidarę',
-        'Žema atrama: peilį plokščiai priglauskite prie vandens paviršiaus dėl stabilumo bangose',
-        'Kraštas: šiek tiek pakreipkite baidarę ant krašto, kad išpjautumėte posūkius',
-      ],
-      faq: [
-        {
-          q: 'Kaip išlaikyti baidarę tiesiai?',
-          a: 'Naudokite nuoseklius judesius pakaitomis pusėse. Išmokite J formos judesį (švelnus kabliukas priekinio smūgio pabaigoje) kurso korekcijai nekeičiant pusių.',
-        },
-        {
-          q: 'Kokia yra dažniausia baidarių trauma?',
-          a: 'Pečių įtampa dėl rankos dominuojančio irklavimo. Naudokite liemens sukimą, kad įtrauktumėte didesnius nugaros raumenis ir sumažintumėte pečių apkrovą.',
-        },
-        {
-          q: 'Kaip irkluoti vėjyje?',
-          a: 'Laikyk laivo priekį nukreiptą į vėją. Naudok trumpesnius, galingesnius mostus. Jei vėjas kerta, šiek tiek pasuk baidarę į vėją.',
-        },
-      ],
-    },
-    'multi-day-trip': {
-      title: 'Planuojant kelių dienų baidarę ar SUP kelionę',
-      description:
-        'Kaip suplanuoti ir įgyvendinti kelių dienų irklavimo kelionę – maršruto planavimas, įrangos pakavimas, stovyklavimas ir saugumas.',
-      tldr: 'Planuokite 10–15 mylių per dieną. Supakuokite įrangą į vandeniui atsparius sausus maišus, tolygiai paskirstykite svorį ir prieš kelionę praktikuokite lentos ar baidarės pakrovimą. Paruoškite plūduriavimo planą. Vežkitės vandenį, maistą, pastogę, navigaciją ir ryšį.',
-      problem:
-        'Daugiadienės kelionės žlunga dėl per didelio apsikrovimo, prasto maršruto planavimo ar neįvertinto oro sąlygų ir srovės – tai sukelia išsekimą, įrangos gedimus ar saugumo incidentus.',
-      solution:
-        'Naudokite sistemingą planavimo metodą: maršruto pasirinkimas, įrangos kontrolinis sąrašas, maisto planavimas, saugos instruktažai ir atsarginis planavimas.',
-      audience: 'Patyrę irkluotojai planuoja savo pirmąją kelių dienų ekspediciją.',
-      steps: [
-        'Pasirinkite maršrutą su įrengtomis stovyklavietėmis ir gelbėjimo taškais',
-        'Planuokite 10–15 mylių per dieną, atsižvelgiant į vėją ir srovę',
-        'Patikrinkite potvynių lenteles ir orų prognozes visam kelionės laikotarpiui',
-        'Įrangą pakuokite į vandeniui atsparius sausus maišus — 20–30 svarų bendras įrangos svoris',
-        'Svorį paskirstykite tolygiai — sunkiausi daiktai centre',
-        'Pateikite išsamų plūduriavimo planą kažkam krante',
-        'Pasiimkite navigaciją – popierinę schemą, kompasą ir GPS atsarginę kopiją',
-        'Susikraukite avarinę pastogę, papildomą maistą ir pirmosios pagalbos rinkinį',
-      ],
-      faq: [
-        {
-          q: 'Koks yra idealus dienos atstumas?',
-          a: '10–15 mylių per dieną patyrusiems irkluotojams. Pradedantieji turėtų planuoti 5–8 mylias. Visada numatykite rezervinį laiką dėl oro sąlygų.',
-        },
-        {
-          q: 'Kiek vandens turėčiau nešiotis?',
-          a: '1 galonas vienam žmogui per dieną. Karštomis sąlygomis – 1,5 galono. Turėkite vandens filtrą arba valymo tabletes papildymui.',
-        },
-        {
-          q: 'Koks yra svarbiausias saugumo elementas?',
-          a: 'Komunikacija. VHF radijas arba palydovinis pasiuntinys gali išgelbėti gyvybę avarijos atveju. Mobilieji telefonai atokiose vietovėse yra nepatikimi.',
-        },
-      ],
-    },
-    'choosing-paddle': {
-      title: 'Kaip išsirinkti tinkamą irklą SUP baidarei',
-      description: 'Gidas apie irklų medžiagas, ašmenų formas, kotų tipus, dydžius SUP ir baidarių sportą.',
-      tldr: 'Irklų ilgis: SUP irklų ilgis turėtų būti 6–8 coliais aukštesnis už jūsų ūgį. Baidarių irklų ilgis priklauso nuo valties pločio ir liemens ilgio. Mentės forma: dihedriniai mentės tiesios, plokšti mentės suteikia daugiau sukibimo. Veleno medžiaga: anglis lengviausia, stiklo pluoštas – geriausia vertė, aliuminis – biudžetinis.',
-      problem:
-        'Netinkamo dydžio ar medžiagos naudojimas sukelia nereikalingą nuovargį, prastą judesių efektyvumą ir sąnarių įtempimą.',
-      solution:
-        'Derinkite irklų ilgį, mentės formą, koto medžiagą ir lankstumą pagal savo irklavimo stilių, kūno dydį ir biudžetą.',
-      audience: 'SUP o baidarių irkluotojai renkasi pirmą arba kitą irklavimą.',
-      steps: [
-        'KamSUP: matuokite irklų aukštį — 6–8 coliais aukštesnis nei jūsų ūgis bendram irklavimui',
-        'Kajakui: matuokite liemens ilgį ir valties plotį — siauresnėms valtims reikia trumpesnių irklų',
-        'Rinkitės ašmenų medžiagą – nailoną biudžetui, stiklo pluoštą vertei, anglį našumui',
-        'Rinkitės ašmenų formą – dihedral lygiam sekimui, plokščią galiai, spoon lenktynėms',
-        'Pasirinkite veleno tipą — tiesus, SUPlenktas lenktynėmsSUP, standartinis baidarėms',
-        'Patikrinkite lankstumą – standesni velenai perduoda daugiau galios, lankstūs velenai sumažina sąnarių įtempimą',
-      ],
-      faq: [
-        {
-          q: 'Kokia yra geriausia irklo medžiaga?',
-          a: 'Stiklo pluoštas suteikia geriausią svorio, patvarumo ir kainos balansą. Anglies pluoštas yra lengvesnis, bet brangesnis ir trapesnis. Nailonas yra sunkus, bet praktiškai nesunaikinamas.',
-        },
-        {
-          q: 'Kaip žinoti, ar mano irklas yra tinkamo ilgio?',
-          a: 'Dėl SUP: pastatykite irklą vertikaliai šalia savęs — rankena turėtų siekti riešą, kai ranka pakelta virš galvos. Dėl baidarės: mentė turėtų įeiti į vandenį patogiu kampu, neperstengiant.',
-        },
-        {
-          q: 'Ar turėčiau pasirinkti vientisą ar reguliuojamą irklą?',
-          a: 'Reguliuojami irklai tinka bendram naudojimui ir kelionėms. Vientisi irklai yra lengvesni, tvirtesni ir efektyvesni nuolatiniam naudojimui.',
-        },
-      ],
-    },
-    'sup-with-kids': {
-      title: 'SUP su vaikais: Pilnas šeimos gidas',
-      description: 'Kaip saugiai vesti vaikus irkluotojų treniruotėms — amžiaus rekomendacijos, įranga ir veiklos.',
-      tldr: '6+ vaikai gali važiuoti SUP su suaugusiuoju. 10+ vaikai gali irkluoti savo lenta, prižiūrimi suaugusiojo. Naudokite plačią stabilų lentą, visada dėvėkite asmens plaukiavimo liemenes (PFD), laikykitės seklio ir ramio vandens, ir sesijos turi būti trumpi (maksimaliai 30-45 min.).',
-      problem:
-        'Tėvai nori dalintis vandens sportu su savo vaikais, bet nerimauja dėl saugumo, įrangos tinkamumo ir vaikų įsitraukimo.',
-      solution:
-        'Naudokite tinkamą lentos dydį bendram važiavimui, užtikrinkite, kad kiekvienas vaikas dėvėtų tinkamai pritaikytą PFD, pradėkite seklio šilto vandens sąlygomis, ir padarykite veiklą smagią žaidimais ir trumpomis sesijomis.',
-      audience: 'Tėvai, norintys supažindinti savo vaikus su irklavimu.',
-      steps: [
-        'Amžius 4-6: važiuokite kaip keleivis ant suaugusiojo lentos — sėdėkite priekyje, laikykitės už centrinės rankenos',
-        'Amžius 6-10: klūpėkite arba sėdėkite ant savo lentos prižiūrimi suaugusiojo ir dėvėkite lyną',
-        'Amžius 10+: irkluokite savo lenta prižiūrimi suaugusiojo netoli',
-        'Visada dėvėkite PFD — vaikai turi nuolat dėvėti tinkamai pritaikytą gelbėjimosi liemenę',
-        'Laikykitės sekliame vandenyje (suaugusiojo liemens gylis)',
-        'Sesijas laikykite trumpas — maksimaliai 30-45 min. vaikams iki 10 metų',
-        'Padarykite tai smagią — žaiskite žaidimus, ieškokite žuvų, praktikuokite atsistojimą',
-      ],
-      faq: [
-        {
-          q: 'Kokio amžiaus vaikas gali SUP vienas?',
-          a: 'Apie 10-12 metų, prižiūrint, priklausomai nuo vaiko plaukimo įgūdžių ir vandens komforto. Visada ramiose ir sekliose sąlygose.',
-        },
-        {
-          q: 'Kokia lenta geriausia SUP su vaikais?',
-          a: 'Plati lenta (34"+) su dideliu svorio pajėgumu bendram važiavimui. SUP Explorer 11, 33 colių pločio ir 220 svarų pajėgumas tinka tėvams su vaiku.',
-        },
-        {
-          q: 'Kokia saugos įranga būtina vaikams?',
-          a: 'Tinkamai pritaikyta CE-sertifikuota gelbėjimosi liemenė, lynas (prisegtas prie suaugusiojo lentos bendram važiavimui), saulės kremas ir kepurė.',
-        },
-      ],
-    },
-  },
-  lv: {
-    'how-to-choose-your-sup': {
-      title: 'Kā izvēlēties savu SUP dēli',
-      description:
-        'Pilnīgs ceļvedis par pareiza stāvvienības airēšanas dēļa izvēli, ņemot vērā jūsu prasmes līmeni, ūdens apstākļus un paredzēto lietojumu.',
-      tldr: 'Izvēlieties savu SUP atbilstoši prasmju līmenim, ūdens tipam un galvenajam lietojumam. Visaptverošās dēļi der iesācējiem un mierīgam ūdenim. Tūrisma dēļi piemēroti attāluma airēšanai. Joga dēļi piedāvā papildu platumu stabilitātei. Sacensību dēļi der pieredzējušiem airētājiem dažādos apstākļos.',
-      problem:
-        'Lielākā daļa pirmo reizi pērkāju izvēlas SUP dēli, vadoties pēc cenas vai izskata, nevis pēc tā, kā un kur viņi faktiski airēsies. Tas noved pie vāja stabilitātes, nepietiekama snieguma un nomācošas pieredzes.',
-      solution:
-        'Saskaņojiet savas dēļa formu, tilpumu un konstrukciju ar savu prasmju līmeni un galveno ūdens vidi. Platāki dēļi (32-34 collas) nodrošina stabilitāti iesācējiem. Garāki dēļi (12-14 collas) labāk seko ceļam tūrisma braukšanai. Drop-stitch konstrukcija ar 12-15 PSI nodrošina stingrību, kas salīdzināma ar cietajiem dēļiem.',
-      audience: 'Pircēji, kas pērk pirmo SUP, atpūtas airētāji un ikviens, kurš jauninās no vienkāršas dēļa.',
-      steps: [
-        'Nosakiet savu galveno airēšanas vidi — ezeru, okeānu, upi vai jauktu',
-        'Pielāgojiet galda platumu savam prasmju līmenim: 32-34 collu iesācējiem, 30-32 collu vidējā līmenī, 28-30 collu augstākā līmenī',
-        'Izvēlieties dēļa garumu atkarībā no lietošanas: īsāku labāk manevrēšanai, garāku – stabilitātei un ātrumam',
-        'Izvēlieties konstrukciju: piepūšamais drop-stitch pārnēsāšanai, ciets dēlis maksimālai veiktspējai',
-        'Pārbaudiet svara kapacitāti — jūsu svars kopā ar aprīkojumu nedrīkst pārsniegt dēļa ierobežojuma 80%',
-        'Pārbaudiet iekļautos piederumus: sūknis, pavada, spura, mugursoma un remonta komplekts',
-      ],
-      faq: [
-        {
-          q: 'Kāda platuma SUP ir vispiemērotākā iesācējiem?',
-          a: '32 līdz 34 collas platumā nodrošina visstabilāko platformu mācībām. SUP Explorer 11 ar 33 collu platumu ir ideāls pirmreizējiem airētājiem mierīgos ūdeņos.',
-        },
-        {
-          q: 'Piepūšamā vai cietā SUP dēlis?',
-          a: 'Piepūšamās dēļi piedāvā pārnēsājamību, ērtu uzglabāšanu un triecienu absorbēšanu. Cietie dēļi nodrošina maksimālu stingrību un ātrumu. Lielākajai daļai atpūtas lietotāju kvalitatīvs piepūšamais dēlis ar drop-stitch kodolu ir praktiska izvēle.',
-        },
-        {
-          q: 'Kādu PSI man vajadzētu piepumpēt?',
-          a: 'Paddle Board Overstock dēļi iesaka 12-15 PSI. Pie 15 PSI dēlis sasniedz maksimālo stingrību, salīdzināmu ar cieto dēli. Vienmēr ievērojiet dēlī norādīto maksimālā spiediena diapazonu.',
-        },
-      ],
-    },
-    'beginner-guide': {
-      title: 'Sākuma ceļvedis airu dēļa sportam',
-      description:
-        'Viss, kas jums jāzina pirms jūsu pirmās stāvvienas airēšanas sesijas — no aprīkojuma uzstādīšanas līdz pamata airēšanas tehnikām.',
-      tldr: 'Sāciet mierīgos, līdzenos ūdeņos ar plašu, stabilu dēli. Piepūšiet līdz 12-15 PSI, pievienojiet pavadziņu un izmantojiet pareizo airēšanas garumu (6–8” augstāku par jūsu augumu). Turiet stāju plecu platumā, ceļi viegli saliekti un skatieties uz horizontu.',
-      problem:
-        'Jauni airētāji bieži izlaiž pamatīgu sagatavošanos — nepareiza airēšanas stienis, slikta stāja vai izvēle braukt pa raupjām ūdenstilpēm — kas noved pie krišanām, vilšanās un demotivācijas.',
-      solution:
-        'Ievērojiet strukturētu pirmās sesijas plānu: izvēlieties klusu ūdeni, pareizi sagatavojiet savu aprīkojumu, vispirms vingrinieties ceļos, pirms stāvat, un apgūstiet virzienā uz priekšu vilkšanu, pirms mēģināt pagriezties.',
-      audience: 'Pilnīgi iesācēji, kuri nekad nav braukuši ar airu dēli.',
-      steps: [
-        'Izvēlieties gludu, mierīgu ūdeni bez kuģu satiksmes — ideāls ir neliels ezers vai aizsargāta līcī.',
-        'Uzpūt savu dēli līdz 12-15 PSI ar divu darbību sūkni',
-        'Piestipriniet spoli siksnu pie potītes vai teļa, nekad pie dēļa roktura',
-        'Ievietojiet spuru un pievelciet skrūvi',
-        'Pielāgojiet airēšanas šķēru garumu — tam jābūt 6-8 collas garākam par jūsu augumu',
-        'Sāc noliecies ceļos uz dēļa, airē dažus vilcienus, lai sajustu līdzsvaru',
-        'Stāvi pa vienai kājai, kājas plecu platumā, ceļi mīksti',
-        'Skaties uz horizontu, nevis uz kājām — dēlis iet tur, kur tu skaties',
-      ],
-      faq: [
-        {
-          q: 'Ko man vajadzētu vilkt airēšanas dēļa dēļiem?',
-          a: 'Ātri žūstošs sporta apģērbs, glābšanas veste, saules aizsargkrēms un cepure. Aukstā ūdenī valkā neoprēna tērpu. Vienmēr valkā pavadu un nēsā telefonu ūdensizturīgā futrālī.',
-        },
-        {
-          q: 'Kā es varu atgriezties uz dēļa, ja nokrītu?',
-          a: 'Paliec mierīgs. Peldi līdz dēlim, satver centra rokturi un spārdi kājas, vienlaikus vienā kustībā uzvelkot sevi uz dēļa. Vispirms atgriezies ceļos pozīcijā, tad piecelies.',
-        },
-        {
-          q: 'Kādi vēja apstākļi ir droši?',
-          a: 'Iesācējs: vējš zem 10 mph (5 mezgli). Ja vējš pūš prom no krasta, neiziet ārā. Pārbaudiet laika prognozi un saprotiet, ka jūras vējš ir bīstams.',
-        },
-      ],
-    },
-    'safety-tips': {
-      title: 'Ūdens sporta drošības padomi',
-      description:
-        'Būtiskas drošības vadlīnijas airēšanai, kajakošanai un laivošanai — sākot no aprīkojuma pārbaudes līdz laikapstākļu izpratnei.',
-      tldr: 'Vienmēr valkājiet CEsertificētu glābšanas vesti, pārbaudiet laika apstākļus un ūdens apstākļus pirms starta, nēsājiet līdzi sakaru ierīces, nekad neairējiet vienatnē svešā ūdenī un saprotiet sava aprīkojuma nominālās robežas.',
-      problem:
-        'Lielākā daļa ūdens sporta negadījumu rodas nepietiekamas sagatavošanās dēļ — bez glābšanas vestes, ignorējot laika brīdinājumus vai izmantojot aprīkojumu, kas pārsniedz tā konstrukcijas robežas.',
-      solution:
-        'Ieviesiet drošības kontrolsarakstu pirms palaišanas: pārbaudiet iekārtu stāvokli, pārbaudiet laikapstākļus un ūdens temperatūru, informējiet kādu par maršrutu un vienmēr valkājiet atbilstošu peldošo līdzekli.',
-      audience: 'Visi ūdens sporta dalībnieki —, SUPkajaks, laiva un RIB lietotāji.',
-      steps: [
-        'Pārbaudiet laika prognozi — izvairieties no vēja virs 15 mph un pērkona negaisiem',
-        'Pārbaudiet ūdens temperatūru — aukstam ūdenim (60°F/15°C) nepieciešams hidrotērps vai sausais tērps',
-        'Pārbaudiet iekārtas — pārbaudiet, vai nav noplūdes, plaisas un pareiza piepūšana',
-        'Vienmēr valkājiet CEsertificētu glābšanas vesti',
-        'Piespraud pavadu (SUP) vai nostiprini visu vaļīgo aprīkojumu (kajaku/laivu)',
-        'Iesniedziet plosta plānu — pastāstiet kādam, kur dodaties un kad atgriezīsieties',
-        'Sakaru pārnēsāšana — ūdensizturīgs telefona vāciņš vai VHF radio',
-        'Zini savas robežas — paliec savā prasmju līmenī un aprīkojuma reitingos',
-      ],
-      faq: [
-        {
-          q: 'Vai man vajag glābšanas vesti uz SUP?',
-          a: 'Jā. Daudzās jurisdikcijās likums prasa glābšanas vesti jebkuram ūdens transportlīdzeklim, tostarp SUPs. Pat ja tas nav obligāti, CEsertificēta glābšanas veste ir būtisks drošības aprīkojums.',
-        },
-        {
-          q: 'Kāda ir visbiežāk sastopamā ūdens sporta trauma?',
-          a: 'Auksta ūdens iegremdēšana un izsīkums ir visbiežāk sastopamie nopietnie riski. Vienmēr ģērbieties atbilstoši ūdens temperatūrai, nevis gaisa temperatūrai.',
-        },
-        {
-          q: 'Kā pārbaudīt, vai apstākļi ir droši?',
-          a: 'Izmantojiet jūras laika prognozes. Pārbaudiet vēja ātrumu, viļņu augstumu un ūdens temperatūru. Iesācējiem jāuzturas apstākļos zem 10 mph vēja un zem 1 pēdas viļņiem.',
-        },
-      ],
-    },
-    'inflatable-vs-hard': {
-      title: 'Piepūšamie un cietie SUP dēļi: kuru izvēlēties?',
-      description:
-        'Objektīvs piepūšamo un stingro SUP dēļu salīdzinājums, aptverot veiktspēju, pārnēsājamību, izturību un vērtību.',
-      tldr: 'Piepūšamie dēļi uzvar pārnēsājamībā, uzglabāšanā un triecienu noturībā. Cietie dēļi uzvar maksimālas stingrības un ātruma ziņā. Mūsdienu drop-stitch piepūšamie dēļi pie 15 samazina PSI veiktspējas atšķirību līdz 90%.',
-      problem:
-        'Pircēji ir iesprostoti starp piepūšamo dēļu ērtībām un cieto dēļu veiktspējas reputāciju, bez skaidriem datiem par to, kā tie patiesībā salīdzinās.',
-      solution:
-        'Salīdziniet konkrētus kritērijus — stingrību, svaru, iepakojuma izmēru, izturību, remontu un izmaksas — ar savu faktisko lietošanas paradumu. Lielākajai daļai atpūtas airētāju kvalitatīvs piepūšamais ir labāka izvēle.',
-      audience: 'SUP Pircēji izvēlas starp piepūšamo un stingro konstrukciju.',
-      steps: [
-        'Novērtējiet pārnēsājamības vajadzības — piepūšamās somas līdz mugursomas izmēram, cietais dēlis prasa jumta bagāžnieku',
-        'Salīdzini stingrību — piepūšamajam plāksnītei 15 ir PSI minimāla elastība, cietajai dēlim nav nekādas elastības',
-        'Novērtējiet uzglabāšanu — piepūšamās preces glabājas skapī, cietais dēlis prasa garāžu vai plauktu',
-        'Ņemiet vērā izturību — piepūšamās ierīces absorbē triecienus, cietā plāksne var ieplaisāt un ieplaisāt',
-        'Faktoru remonts — piepūšamie plāksteri ir vienkārši, cieto plākšņu remonts prasa profesionālu darbu',
-        'Pārbaudiet veiktspēju — cietajiem dēļiem ir neliela ātruma priekšrocība, piepūšamajiem ir labāka triecienu absorbcija',
-      ],
-      faq: [
-        {
-          q: 'Vai piepūšamie ir SUPs tikpat stingri kā cietie dēļi?',
-          a: '15 gadu PSI vecumā ar drop-stitch konstrukciju stingrības atšķirība ir minimāla atpūtas vajadzībām. Tikai sacensību sacensību dalībnieki un sērfotāji pamanīs atšķirību.',
-        },
-        {
-          q: 'Cik ilgi piepūšamais aparāts SUP kalpo?',
-          a: 'Ar pienācīgu kopšanu – 5–10 gadi. Jūras līmeņa PVC pretestības UV un nodilumi. Uzglabājiet ārpus tiešiem saules stariem, kad netiek lietoti, un skalojiet ar svaigu ūdeni pēc sālsūdens lietošanas.',
-        },
-        {
-          q: 'Vai es varu izmantot piepūšamo ierīci SUP sērfošanai?',
-          a: 'Jā, bet piepūšamie dēļi ir vislabākie nelielai līdz vidējai sērfošanai (zem 3 pēdām). Speciālai sērfošanai cietais dēlis nodrošina labāku atsaucību un pieķeršanos pie sliedēm.',
-        },
-      ],
-    },
-    'weather-conditions': {
-      title: 'Laika apstākļu izpratne airēšanas dēļiem',
-      description: 'Iemācies lasīt vēju, viļņus, paisumus un laikapstākļus, lai pieņemtu drošus lēmumus uz ūdens.',
-      tldr: 'Pirms katras palaišanas pārbaudi trīs lietas: vēja ātrumu (iesācējiem zem 10 mph), viļņu augstumu (zem 1 pēdas iesācējiem) un ūdens temperatūru (apģērbies atbilstoši ūdenim, nevis gaisam). Jūras vējš ir bīstams jebkurā prasmju līmenī.',
-      problem:
-        'Lielākā daļa laika apstākļu izraisītu negadījumu notiek tāpēc, ka airētāji nepareizi novērtē apstākļus — viņi pārbauda gaisa temperatūru, bet ne ūdens temperatūru, vai nesaprot, ka jūras vējš var viņus aizpūst jūrā.',
-      solution:
-        'Izmantojiet strukturētu pirmsstarta laika apstākļu novērtējumu: vēja virziens un ātrums, viļņu periods un augstums, paisuma stāvoklis un ūdens temperatūra. Saprotiet, kā katrs faktors ietekmē jūsu drošību.',
-      audience: 'Visi airētāji, kas dodas atklātā ūdenī — ezeros, līčos, upēs un okeānā.',
-      steps: [
-        'Pārbaudiet vēja ātrumu un virzienu — visbīstamākais ir vējš no krasta (pūšot no sauszemes uz jūru)',
-        'Novērtējiet viļņu apstākļus — viļņu periods ir tikpat svarīgs kā viļņu augstums',
-        'Pazīsti paisumu — paisuma straumes var būt stiprākas par tavu airēšanas ātrumu',
-        'Mēriet ūdens temperatūru — zem 60°F/15°C nepieciešama termiskā aizsardzība',
-        'Pārbaudiet redzamību — migla un stiprs lietus samazina redzamību un palielina sadursmju risku',
-        'Izprotiet vietējos draudus — zemūdens akmeņus, spēcīgas straumes, laivu satiksmes zonas',
-      ],
-      faq: [
-        {
-          q: 'Kāds vēja ātrums ir par lieluSUP?',
-          a: 'Iesācēji: virs 10 mph (8 mezgli). Vidējais: virs 15 mph (13 mezgli). Advanced: virs 20 mph (17 mezgli). Ja šaubies, neiet ārā.',
-        },
-        {
-          q: 'Ko nozīmē viļņu periods?',
-          a: 'Viļņu periods ir laiks starp secīgiem viļņiem. Īsi periodi (zem 8 sekundēm) nozīmē stāvus, saraustītus viļņus. Gari periodi (virs 12 sekundēm) nozīmē vienmērīgākus, prognozējamākus viļņus.',
-        },
-        {
-          q: 'Vai es varu airēt lietū?',
-          a: 'Viegls lietus parasti ir drošs. Stiprs lietus samazina redzamību un var liecināt par mainīgiem vēja apstākļiem. Negaisi prasa tūlītēju evakuāciju no ūdens.',
-        },
-      ],
-    },
-    'understanding-specs': {
-      title: 'Kā lasīt SUP plates specifikācijas',
-      description:
-        'Tehnisks ceļvedis, lai saprastu SUP plates specifikācijas — tilpumu, izmērus, konstrukciju un to nozīmi veiktspējai.',
-      tldr: 'Galvenās specifikācijas: tilpums (litri) nosaka peldošumu un svara kapacitāti, platums nosaka stabilitāti, garums nosaka kustību un ātrumu, biezums nosaka stingrību, un PSI tilpums nosaka piepūšanas spiedienu optimālai veiktspējai.',
-      problem:
-        'Produkta specifikāciju lapās ir norādīti numuri bez konteksta, atstājot pircējus neskaidrībā, kuras specifikācijas patiesībā ir svarīgas viņu lietošanas gadījumā.',
-      solution:
-        'Pārtulkojiet katru specifikāciju reālās pasaules veiktspējā: tilpums peldošumam, platums stabilitātei, garums slīdēšanai, biezums stingrībai un konstrukcija izturībai.',
-      audience: 'Vidēja līmeņa airētāji un tehniskie pircēji, kuri vēlas pieņemt lēmumus, balstoties uz datiem.',
-      steps: [
-        'Pārbaudiet tilpumu (litri) — jūsu svars un aprīkojums nedrīkst pārsniegt 80% no dēļa tilpuma rādītāja',
-        'Pārbaudes platums — platāks (32-34") = lielāka stabilitāte, šaurāks (28-30") = lielāks ātrums',
-        'Pārbaudes garums — garāks (12-14") = labāka izsekošana, īsāks (10-11") = labāka manevrētspēja',
-        'Pārbaudiet biezumu — 6" ir standarts, 8" nodrošina lielāku stingrību un svara kapacitāti',
-        'Pārbaudiet PSI vērtējumu — uzpūš līdz maksimālajai normai, PSI lai nodrošinātu optimālu stingrību',
-        'Pārbaudiet būvmateriālus — drop-stitch blīvumu, PVC slāņus, sliežu pastiprinājumu',
-      ],
-      faq: [
-        {
-          q: 'Ko tas drop-stitch nozīmē?',
-          a: 'Drop-stitch ir konstrukcijas metode, kurā tūkstošiem vītņu savieno plates augšējo un apakšējo slāni. Tas ļauj augstspiediena uzpūšanos (12-15) PSIar ārkārtīgu stingrību.',
-        },
-        {
-          q: 'Kāda ir ideālā svara un tilpuma attiecība?',
-          a: 'Labs mērķis ir aptuveni 5-6 mārciņas braucēja svara uz litru dēļa tilpuma. 220 mārciņu airētājam vajadzētu meklēt dēļus ar 180+ litru tilpumu.',
-        },
-        {
-          q: 'Vai dēļa svars ir svarīgs?',
-          a: 'Jā. Vieglāki dēļi (zem 20 mārciņām) ir vieglāk pārnēsājami un transportējami. Smagāki dēļi (25+ mārciņas) bieži liecina par izturīgāku daudzslāņu PVC konstrukciju.',
-        },
-      ],
-    },
-    'sup-maintenance': {
-      title: 'Kā tīrīt un uzglabāt savu piepūšamo ierīci SUP',
-      description: 'Soli pa solim apkopes ceļvedis, lai maksimāli pagarinātu piepūšamās SUP dēļa kalpošanas laiku.',
-      tldr: 'Pēc katras lietošanas reizes noskalo ar svaigu ūdeni, pilnībā izžāvē pirms uzglabāšanas, izpūš un sarullē vaļīgi (ne militāri hermētiski), glabā vēsā, sausā vietā, prom no tiešiem saules stariem, un katru mēnesi pārbaudi šuves.',
-      problem:
-        'Nepareiza uzglabāšana un tīrīšana ir galvenie priekšlaicīgas piepūšamo ierīču bojājumu cēloņi SUPs — pelējums UV , bojājumi un šuvju atdalīšanās.',
-      solution:
-        'Pēc sesijas ievērojiet konsekventu rutīnu: noskalojiet, žāvējiet, pārbaudiet, iztukšojiet un uzglabājiet. Izmantojiet maigas ziepes noturīgai netīrībai. Nekad neuzglabājiet dēli mitru vai tiešā saules gaismā.',
-      audience: 'Visi piepūšamo ierīču SUP īpašnieki, kuri vēlas, lai viņu dēlis kalpotu 5+ gadus.',
-      steps: [
-        'Tūlīt pēc lietošanas noskalo dēli ar svaigu ūdeni, īpaši pēc sālsūdens',
-        'Tīriet ar maigu ziepju un mīkstu sūkli — izvairieties no agresīvām ķīmiskām vielām vai augstspiediena mazgātājiem',
-        'Pilnībā izžāvē dēli — atver vārstu, lai iesprostotais ūdens varētu izplūst',
-        'Pārbaudiet bojājumus — pārbaudiet šuves, vārstu un virsmu, vai nav caurdurumu',
-        'Pilnībā iztukšojiet — noņemiet vārsta kodolu, lai pilnībā deflētu',
-        'Rullē dēli vaļīgi — sāc no deguna, izvairies no ciešām krokām',
-        'Glabājiet somā vēsā, sausā vietā, prom no tiešiem saules stariem',
-      ],
-      faq: [
-        {
-          q: 'Vai varu atstāt savus SUP piepūstos visu sezonu?',
-          a: 'Jā, bet turiet to prom no tiešiem saules stariem, kad netiek lietots. Daļēja deflācija (8-10) PSIieteicama ilgstošai uzglabāšanai.',
-        },
-        {
-          q: 'Kā es varu salabot riepu caurumu?',
-          a: 'Notīriet vietu, izgrieziet plāksteri ar noapaļotiem stūriem, uzklājiet līmi, stingri piespiediet un gaidiet 24 stundas pirms piepūšanas.Paddle Board Overstock Dēļiem ir iekļauts remonta komplekts.',
-        },
-        {
-          q: 'Cik bieži man vajadzētu pārbaudīt vārstu?',
-          a: 'Reizi mēnesī. Vārsts ir visbiežākais bojājuma punkts. Pārbaudi, vai vārsta tapa brīvi kustas un O-gredzens ir neskarts.',
-        },
-      ],
-    },
-    'paddling-techniques': {
-      title: 'Būtiskās SUP airēšanas tehnikas',
-      description:
-        'Apgūstiet priekšējo vilcienu, slaucīšanas sitienu un krustlocekļa pagriezienu, lai airētu efektīvi jebkuros apstākļos.',
-      tldr: 'Uz priekšu sitiens izmanto tavu kodolu, nevis rokas. Slaucīšanas sitiens pagriež dēli. Arbaleta pagrieziens ir visefektīvākais pagrieziens. Turiet lāpstiņu vertikāli un pilnībā iegremdējiet asmeni, lai nodrošinātu maksimālu jaudas pārnesi.',
-      problem:
-        'Lielākā daļa airētāju izmanto rokas dominējošus sitienus, kas tērē enerģiju un izraisa plecu nogurumu. Slikta tehnika arī padara dēli grūti kontrolējamu vēja un viļņu laikā.',
-      solution:
-        'Iemācies trīs būtiskus sitienus — uz priekšu, sweep un arbaleta pagriezienu — ar pareizu ķermeņa mehāniku. Trenē katru mierīgā ūdenī pirms pārejas uz izaicinošiem apstākļiem.',
-      audience: 'Airētāji, kuri vēlas airēt ilgāk, ātrāk un ar mazāku nogurumu.',
-      steps: [
-        'Virziens uz priekšu: izstiep roku uz priekšu, pilnībā iestiprini asmeni, velc atpakaļ, izmantojot torsu rotāciju (nevis rokas), izej pie potītes',
-        'Slaucīšanas vilciens: sniedzies uz priekšu pie margas, slauc lāpstiņu plašā lokā uz asti, pagriez dēli prom no airu puses',
-        'Krustveida pagrieziens: novieto lāpstiņu pretējā dēļa pusē, nemainot rokas, velc uz asti',
-        'Stiprinājums: izmantojiet zemu balstu stabilitātei viļņošanās laikā — sitiet asmeni plakani pret ūdens virsmu',
-        'Vilkšanas sitiens: izstiep roku sāniski, pavelc dēli sāniski pret lāpstiņu',
-      ],
-      faq: [
-        {
-          q: 'Kā airēt taisnā līnijā?',
-          a: 'Izmanto vienmērīgu vilciena garumu abās pusēs. Maini puses ik pēc 5-10 vilcieniem. Skaties uz fiksētu punktu pie horizonta kā atsauci.',
-        },
-        {
-          q: 'Vai man vajadzētu saliekt ceļus?',
-          a: 'Jā. Turiet nelielu ceļgalu saliekumu kā amortizatorus. Bloķēti ceļgali pārnes katru viļņojumu uz jūsu kodolu un samazina stabilitāti.',
-        },
-        {
-          q: 'Kā airēt pret vēju?',
-          a: 'Nolaidiet stāju, izmantojiet īsākus, ātrākus sitienus un palieciet tuvāk krastam, kur vējš bieži ir mazāks. Ja vējš ir pārāk stiprs, neiziet ārā.',
-        },
-      ],
-    },
-    'sup-fitness': {
-      title: 'SUP Fiziskā sagatavotība: pilna ķermeņa treniņš uz ūdens',
-      description: 'Kā stāvēšana ar airēšanas dēli attīsta kodola spēku, līdzsvaru un kardiovaskulāro sagatavotību.',
-      tldr: 'SUP Iesaista korseti, kājas, muguru un plecus katrā vilcienā. Vienas stundas nodarbība sadedzina 300–500 kalorijas. Airēšana pret vēju vai straumi dubulto intensitāti.SUP Joga pievieno lokanības un līdzsvara vingrinājumus.',
-      problem:
-        'Daudzi cilvēki airēšanu uzskata par ikdienišķu aktivitāti, nevis par īstu fitnesa rīku, jo viņiem trūkst tā potenciāla pilna ķermeņa sagatavošanai.',
-      solution:
-        'Strukturējiet SUP treniņus ar konkrētiem fitnesa mērķiem: izturības airēšana kardio treniņiem, intervālu sprinti spēkam, SUP joga lokanībai un distanču airēšana muskuļu izturībai.',
-      audience: 'Fitnesa entuziasti, kas meklē zemas slodzes, augstas iesaistes pilna ķermeņa treniņu.',
-      steps: [
-        'Iesildīšanās uz sauszemes — roku apļi, torsa pagriezieni un kāju šūpoles 5 minūtes',
-        'Sāc ar 10 minūtēm vienmērīgas airēšanas mērenā intensitātē',
-        'Pāreja uz intervālu treniņiem — 2 minūtes intensīva airēšana, 2 minūtes viegla atjaunošanās',
-        'Iekļaujiet SUP jogas pozas — lejupvērsto suni, karotāju II un koka pozu uz tāfeles',
-        'Atvēsinieties ar maigu airēšanu un statiskām stiepšanās vingrinājumiem uz dēļa',
-      ],
-      faq: [
-        {
-          q: 'Vai tas ir SUP labāk nekā skriešana fiziskās sagatavotības dēļ?',
-          a: 'SUP Sniedz līdzvērtīgus kardiovaskulāros ieguvumus ar apakšējo locītavu slodzi. Tas arī vairāk iesaista augšējo ķermeņa daļu un kodolu nekā skriešana.',
-        },
-        {
-          q: 'Cik daudz kaloriju SUP sadedzina?',
-          a: 'Aptuveni 300–500 kalorijas stundā pie mērenas intensitātes. Sacensības vai airēšana pret vēju var sadedzināt 600–800 kalorijas stundā.',
-        },
-        {
-          q: 'Vai no tā var uzbūvēt muskuļusSUP?',
-          a: 'Jā. Airēšana stiprina plecu, muguras un kodola muskuļus. Līdzsvars iesaista kājas un stabilizējošus muskuļus. Tas ir pilna ķermeņa pretestības treniņš.',
-        },
-      ],
-    },
-    'sup-yoga': {
-      title: 'SUP Joga: Pilnīgs ceļvedis airēšanā un jogā',
-      description: 'Apvienojiet airēšanas dēli ar jogu, lai uzlabotu līdzsvaru, spēku un apzinātību uz ūdens.',
-      tldr: 'SUP Joga pievieno nestabilitātes elementu, kas ievērojami palielina kodola aktivizāciju salīdzinājumā ar sauszemes jogu. Sāciet ar pamata pozām uz plata, stabila dēļa mierīgā ūdenī. Izmantojiet neslīdošu klāja paliktni. Nekad nepraktizējiet SUP jogu vienatnē.',
-      problem:
-        'Tradicionālie jogas paklājiņi nodrošina pilnīgi stabilu virsmu, novēršot līdzsvara izaicinājumu, kas padara SUP jogu īpaši efektīvu kodola stiprināšanai un koncentrēšanās uzlabošanai.',
-      solution:
-        'Izmanto īpaši platu SUP dēli (34") +ar pilna klāja vilkmes paliktni. Trenējies mierīgā, seklā ūdenī. Sāc ar pamatu pozām, pirms mēģini apgriezt kājas.',
-      audience: 'Jogas praktizētāji un airētāji, kuri vēlas apvienot līdzsvara treniņus ar apzinātību.',
-      steps: [
-        'Enkurojiet dēli seklā, mierīgā ūdenī — izmantojiet smilšu enkuru vai piesieniet pie piestātnes',
-        'Sāc ar sēdus pozām — viegla sēdēšana, laivas poza, sēdoša pagrieziena poza',
-        'Pāreja uz ceļos nometies pozām — galda virsma, kaķa-govs, zibens',
-        'Pārejiet uz stāvošām pozām — kalns, karotājs I, karavīrs II, koka poza',
-        'Praktizē līdzsvara pozas — pusmēness, ērglis, dejotājs',
-        'Beidz ar savasana — apgulies uz dēļa, sajūti ūdens kustību',
-      ],
-      faq: [
-        {
-          q: 'Kura dēlis ir vispiemērotākais SUP jogai?',
-          a: 'Plats dēlis (34") +ar pilna garuma vilces paliktni nodrošina visstabilāko platformu. SUP Tour 12 piedāvā labu stabilitātes un slīdēšanas līdzsvaru.',
-        },
-        {
-          q: 'Vai SUP joga ir bīstama?',
-          a: 'Ne vairāk kā sauszemes joga, ja to praktizē droši. Izmantojiet mierīgu, seklu ūdeni. Nēsājiet pavadu. Praktizējiet kopā ar partneri. Pirmajās nodarbībās izvairieties no dziļa ūdens.',
-        },
-        {
-          q: 'Vai man vajag īpašu aprīkojumu?',
-          a: 'Plats stallis, pilna klāja vilkmes paliktnis, pavada un PFD. Daži praktiķi izmanto ūdensnecaurlaidīgu paklāju papildu saķerei.',
-        },
-      ],
-    },
-    'sup-fishing': {
-      title: 'SUP Makšķerēšanas ceļvedis: Kā zvejot ar airēšanas dēli',
-      description:
-        'Viss, kas jāzina par makšķerēšanu no airēšanas dēļa — aprīkojuma komplekts, stabilitātes padomi un tehnikas.',
-      tldr: 'SUP Makšķerēšana piedāvā klusu pieeju, piekļuvi seklā ūdenī un 360 grādu metienus. Izmantojiet platu stabilu dēli (34"), +piestiprināt makšķeres turētājus un izmantot dzesētāju vai kasti kā aprīkojuma klāju. Enkuru vējainos apstākļos. Vienmēr valkājiet PFD.',
-      problem:
-        'Standarta zvejas laivas ir dārgas uzturēšanai un nevar piekļūt seklam ūdenim. Kajaki ierobežo mobilitāti.SUP Makšķerēšana atrisina abas problēmas, bet prasa specifisku aprīkojuma pielāgošanu.',
-      solution:
-        'Aprīkojiet stalli SUP ar makšķeru turētājiem, aprīkojuma kasti un enkura sistēmu. Izmantojiet dēļa pārnēsājamību, lai piekļūtu attālām makšķerēšanas vietām, kuras laivas nevar sasniegt.',
-      audience:
-        'Makšķernieki, kuri vēlas makšķerēt seklos ūdeņos, attālās vietās vai dod priekšroku vieglai, pārnēsājamai makšķerēšanas platformai.',
-      steps: [
-        'Izvēlies platu dēli (34") +ar lielu svara kapacitāti ekipējumam',
-        'Uzstādiet stieņu turētājus uz klāja, izmantojot sliežu vai siksnas sistēmas',
-        'Izmanto ūdensizturīgu kasti vai dzesētāju, kas piestiprināts pie priekšējā klāja kā aprīkojumu',
-        'Ņemiet līdzi nelielu enkuru vai novērošanas stabu vēja apstākļiem',
-        'Nēsā PFD ar kabatām instrumentiem un telefonam',
-        'Praktizējiet burvestību no ceļos pozīcijas pirms piecelšanās',
-      ],
-      faq: [
-        {
-          q: 'Vai es varu stāvēt un makšķerēt uz SUP?',
-          a: 'Jā. 34"+ plats dēlis nodrošina pietiekamu stabilitāti stāvēšanai un mešanai. Vispirms trenējies mierīgā ūdenī.',
-        },
-        {
-          q: 'Kādu zivi es varu mērķēt no SUP?',
-          a: 'SUPs ir lieliski piemērotas asariem ezeros, sarkanajām zivīm līdzenumos, forelēm upēs un piekrastes sugām līčos un estuāros.',
-        },
-        {
-          q: 'Kā noķert zivi no SUP?',
-          a: 'Nometieties ceļos stabilitātei. Izmantojiet tīklu vai lūpu satvērēju. Turiet zivi zemu, lai nenokristu. Atlaidiet vai nostipriniet dzesētājā.',
-        },
-      ],
-    },
-    'inflatable-repair': {
-      title: 'Kā salabot savu piepūšamo laivu vai SUP',
-      description:
-        'Soli pa solim ceļvedis, kā labot caurumus, vārstu problēmas un šuvju bojājumus piepūšamajos ūdens transportlīdzekļos.',
-      tldr: 'Nelielus caurumus (zem 1/4") var salabot ar komplektā iekļauto ielāpu komplektu. Notīriet vietu, uzklājiet PVC līmi, nospiediet plāksteri un gaidiet 24 stundas. Vārstu noplūdēm parasti nepieciešama O-gredzena nomaiņa. Lieliem plīsumiem vai šuvju delaminācijai nepieciešama profesionāla apkope.',
-      problem:
-        'Nelieli caurumi un vārstu problēmas ir biežas, bet viegli labojamas. Bez pareizas remonta metodes lietotāji vai nu pārmaksā par profesionālu servisu, vai arī bojājumus pasliktina.',
-      solution:
-        'Identificējiet bojājuma veidu — caurums, vārsta noplūde vai šuves problēma — un pielietojiet atbilstošu remonta metodi. Lielākā daļa remontdarbu aizņem vairāk nekā 30 minūtes un sacietēšanas laiku.',
-      audience: 'Piepūšamo laivuSUPs, kajaku un laivu īpašnieki, kuri vēlas paši veikt pamata remontu.',
-      steps: [
-        'Atrodi noplūdi — pilnībā piepūties, klausies gaisu, tausti ar roku vai izmanto ziepjūdeni',
-        'Atzīmē noplūdi ar pildspalvu vai līmlenti',
-        'Notīriet apkārtni ap noplūdi ar izopropilspirtu — vismaz 2 collas ap bojājuma vietu',
-        'Virsmu rupji apstrādā ar smalku smilšpapīru, lai labāk salīmētu līmi',
-        'Uzklājiet PVC līmi gan uz plākstera, gan uz dēļa virsmas',
-        'Pagaidi 5 minūtes, līdz līme kļūst lipīga',
-        'Nospied plāksteri stingri, izrullē gaisa burbuļus ar rullīti vai kredītkarti',
-        'Ļauj sacietēt 24 stundas, pirms uzpūš līdz pilnam spiedienam',
-      ],
-      faq: [
-        {
-          q: 'Vai es varu salabot caurumu ūdenī?',
-          a: 'Avārijas remonts, izmantojot plāksteri un līmlenti, var palīdzēt jums atgriezties krastā. Pilns remonts prasa sausus apstākļus un 24 stundu sacietēšanu.',
-        },
-        {
-          q: 'Kā es varu salabot noplūdušu vārstu?',
-          a: 'Izņem vārsta kodolu ar komplektā iekļauto instrumentu, pārbaudi O-gredzenu bojājumu dēļ, ja nepieciešams, nomaini un cieši ievieto kodolu atpakaļ.',
-        },
-        {
-          q: 'Kādu līmi man vajadzētu izmantot PVC remontam?',
-          a: 'Izmanto PVCspecifisku līmi, piemēram, HH-66 vai Clifton. Standarta superlīme slikti saistās ar piepūšamiem PVC materiāliem.',
-        },
-      ],
-    },
-    'kayak-techniques': {
-      title: 'Būtiskās kajaku airēšanas tehnikas',
-      description:
-        'Meistara kajaku airēšana — uz priekšu airēšana, slaucīšanas airēšana, malas un balstīšana efektīvai un drošai laivošanai.',
-      tldr: 'Kajaka virziens uz priekšu izmanto torsu rotāciju, nevis rokas. Sweep stroke pagriež kajaku. Apmales kustība uzlabo pagriezienu. Zemais balsts novērš apgāšanos viļņos. Turiet lāpstiņas kātu vertikāli un lāpstiņu pilnībā iegremdētu.',
-      problem:
-        'Neefektīva airēšanas tehnika izraisa plecu nogurumu, lēnu progresu un grūtības kontrolēt kajaku vēja un straumes apstākļos.',
-      solution:
-        'Iemācies pareizu torsu vadītu airēšanas tehniku ar četriem būtiskiem sitieniem — uz priekšu, atpakaļ, slaucīšanas un stiprināšanās.',
-      audience: 'Iesācēji un vidēja līmeņa kajakotāji, kuri vēlas airēt ar mazāku piepūli un lielāku kontroli.',
-      steps: [
-        'Virziens uz priekšu: pagriez torsu, novieto asmeni pie kājām, velc gar gurnu, izej pie gurna',
-        'Atpakaļgaitas vilciens: novieto asmeni aiz sevis, spied uz priekšu, lai palēninātu vai apgrieztu',
-        'Slaucīšanas gājiens: izstiep roku uz priekšu, izslauki asmeni plašā lokā uz pakaļgalu, pagriez kajaku',
-        'Zema balsta stiprinājums: piespied lāpstiņu plakani pie ūdens virsmas, lai nodrošinātu stabilitāti viļņos',
-        'Apmale: nedaudz nolieciet kajaku uz malas, lai veiktu pagriezienus',
-      ],
-      faq: [
-        {
-          q: 'Kā lai es noturu savu kajaku taisni?',
-          a: 'Izmanto vienmērīgus sitienus pa maiņām. Iemācies J-sitienu (vieglu āķi uz priekšu virziena beigās), lai koriģētu virzienu, nemainot puses.',
-        },
-        {
-          q: 'Kāda ir visbiežākā kajaka trauma?',
-          a: 'Plecu sasprindzinājums no dominējošas rokas airēšanas. Izmantojiet torsu rotāciju, lai iesaistītu lielākus muguras muskuļus un samazinātu plecu slodzi.',
-        },
-        {
-          q: 'Kā airēt vējā?',
-          a: 'Turiet priekšgalu vērstu pret vēju. Izmantojiet īsākus, spēcīgākus vilcienus. Ja ir šķērsvējš, nedaudz pagrieziet kajaku pret vēju.',
-        },
-      ],
-    },
-    'multi-day-trip': {
-      title: 'Plānojot vairāku dienu kajaku vai SUP ceļojumu',
-      description:
-        'Kā plānot un īstenot vairāku dienu airēšanas braucienu — maršruta plānošana, ekipējuma iepakošana, kempings un drošība.',
-      tldr: 'Plānojiet 10–15 jūdzes dienā. Iepakojiet ekipējumu ūdensizturīgos sausos maisos, vienmērīgi sadaliet svaru un trenējiet dēļa vai kajaka iekraušanu pirms ceļojuma. Iesniedziet pludiņa plānu. Nēsājiet līdzi ūdeni, pārtiku, pajumti, navigāciju un sakarus.',
-      problem:
-        'Vairāku dienu braucieni neizdodas pārmērīgas iepakošanas, sliktas maršruta plānošanas vai laikapstākļu un straumes nenovērtēšanas dēļ — kas noved pie izsīkuma, ekipējuma bojājumiem vai drošības incidentiem.',
-      solution:
-        'Izmantojiet sistemātisku plānošanas pieeju: maršruta izvēle, ekipējuma kontrolsaraksts, pārtikas plānošana, drošības instruktāža un rezerves plānu plānošana.',
-      audience: 'Pieredzējuši airētāji plāno savu pirmo vairāku dienu ekspedīciju.',
-      steps: [
-        'Izvēlieties maršrutu ar izveidotām nometnēm un glābšanas punktiem',
-        'Plānojiet 10–15 jūdzes dienā, ņemot vērā vēju un straumi',
-        'Pārbaudiet paisuma tabulas un laika prognozes visam ceļojuma logam',
-        'Iepakojiet ekipējumu ūdensizturīgos sausos maisos — kopējais ekipējuma svars 20-30 mārciņas',
-        'Svars tiek vienmērīgi sadalīts — smagākie priekšmeti centrā',
-        'Iesniedziet detalizētu pludināšanas plānu kādam krastā',
-        'Paņemiet līdzi navigāciju — papīra karti, kompasu un GPS rezerves kopiju',
-        'Iepakojiet ārkārtas patvērumu, papildu pārtiku un pirmās palīdzības komplektu',
-      ],
-      faq: [
-        {
-          q: 'Kāda ir ideālā dienas distance?',
-          a: '10-15 jūdzes dienā pieredzējušiem airētājiem. Iesācējiem vajadzētu plānot 5-8 jūdzes. Vienmēr iekļaujiet rezervi laika ierobežojumos.',
-        },
-        {
-          q: 'Cik daudz ūdens man jāņem līdzi?',
-          a: '1 galons uz cilvēku dienā. Karstos apstākļos – 1,5 galoni. Ņemiet līdzi ūdens filtru vai attīrīšanas tabletes papildinājumiem.',
-        },
-        {
-          q: 'Kāds ir vissvarīgākais drošības elements?',
-          a: 'Saziņa. VHF radio vai satelīta ziņnesis var glābt dzīvību ārkārtas situācijā. Mobilie telefoni attālos reģionos ir neuzticami.',
-        },
-      ],
-    },
-    'choosing-paddle': {
-      title: 'Kā izvēlēties pareizo airi SUP kajakam',
-      description: 'Ceļvedis par airu materiāliem, lāpstiņu formām, kātu veidiem un izmēriem un SUP kajakošanai.',
-      tldr: 'Airu garums: SUP airiem jābūt par 6-8" augstākiem par tavu augumu. Kajaku airi ir atkarīgi no laivas platuma un ķermeņa garuma. Lāpstiņas forma: dihedrālie lāpstiņas ir taisnas, plakanas lāpstiņas nodrošina labāku saķeri. Kāta materiāls: ogleklis ir vieglākais, stiklašķiedra ir labākā vērtība, alumīnijs ir budžeta vērtība.',
-      problem:
-        'Nepareiza lāpstiņas izmēra vai materiāla izmantošana rada nevajadzīgu nogurumu, zemu vilciena efektivitāti un locītavu sasprindzinājumu.',
-      solution:
-        'Saskaņojiet airu garumu, lāpstiņas formu, kāta materiālu un elastību atbilstoši savam airēšanas stilam, ķermeņa izmēram un budžetam.',
-      audience: 'SUP un kajaku airētāji izvēlas savu pirmo vai nākamo airēšanu.',
-      steps: [
-        'Priekš: SUPmēriet airu augstumu — par 6-8" augstāks nekā jūsu augums vispārējai airēšanai',
-        'Kajakam: izmēriet torsu garumu un laivas platumu — šaurākām laivām vajag īsākus airus',
-        'Izvēlieties asmeņu materiālu — neilonu budžetam, stiklašķiedru vērtībai, oglekli veiktspējai',
-        'Izvēlieties asmens formu — dihedrālu gludai izsekošanai, plakanu jaudai, karoti sacīkstēm',
-        'Izvēlies kāta tipu — taisns SUP, saliekts sacensībāmSUP, standarta kajakam',
-        'Pārbaudiet elastību — stingrākas vārpstas pārnes vairāk jaudas, elastīgas vārpstas samazina locītavu slodzi',
-      ],
-      faq: [
-        {
-          q: 'Kāds ir labākais airu materiāls?',
-          a: 'Stiklašķiedra nodrošina labāko svara, izturības un izmaksu līdzsvaru. Ogleklis ir vieglāks, bet dārgāks un trauslāks. Neilons ir smags, bet praktiski neiznīcināms.',
-        },
-        {
-          q: 'Kā es varu zināt, vai mans airis ir pareizā garumā?',
-          a: 'Priekš: SUPnovietojiet airi vertikāli blakus sev — rokturim jāsniedzas līdz plaukstas locītavai, kad roka ir pacelta virs galvas. Kajakam: asmenim jāieiet ūdenī ērtā leņķī, nepārlieku stiepjoties.',
-        },
-        {
-          q: 'Vai man vajadzētu iegādāties viengabala vai regulējamu lāpstiņu?',
-          a: 'Regulējamās lāpstiņas ir labas kopīgai lietošanai un pārvietošanai. Viengabala lāpstiņas ir vieglākas, stingrākas un efektīvākas ilgstošai lietošanai.',
-        },
-      ],
-    },
-    'sup-with-kids': {
-      title: 'SUP with Kids: Pilnīgs ģimenes ceļvedis',
-      description: 'Kā droši vest bērnus uz airēšanas dēļa — vecuma ieteikumi, aprīkojums un aktivitātes.',
-      tldr: '6 gadus veci bērni+ var braukt SUP ar pieaugušo uz dēļa. 10 gadus veci bērni+ var airēt savu dēli ar uzraudzību. Izmantojiet platu stabilu dēli, vienmēr valkājiet PFD, uzturieties seklā mierīgā ūdenī un nodarbības īsas (maksimums 30-45 minūtes).',
-      problem:
-        'Vecāki vēlas dalīties ar saviem bērniem ūdens sporta veidos, bet uztraucas par drošību, aprīkojuma piemērotību un bērnu iesaisti.',
-      solution:
-        'Izmantojiet pareizo dēļa izmēru tandēma braukšanai, pārliecinieties, ka katrs bērns valkā pareizi pielāgotu dēliPFD, sāciet seklā siltā ūdenī un padariet to jautru ar spēlēm un īsām nodarbībām.',
-      audience: 'Vecāki, kuri vēlas iepazīstināt savus bērnus ar airēšanas dēli.',
-      steps: [
-        '4-6 gadu vecumā: brauc kā pasažieris uz pieaugušā dēļa — sēdi priekšā, turi vidējo rokturi',
-        '6–10 gadu vecumā: ceļos vai sēž uz sava dēļa ar pieaugušo uzraudzību un pavadu',
-        '10 gadu vecumā+: airē savu dēli ar pieaugušo uzraudzību tuvumā',
-        'Vienmēr valkājiet PFD — bērniem vienmēr jāvalkā pareizi pieguļoša glābšanas veste',
-        'Palieciet seklā ūdenī (pieaugušajiem līdz viduklim)',
-        'Turiet sesijas īsas — bērniem līdz 10 gadu vecumam maksimāli 30–45 minūtes',
-        'Padari to jautru — spēlē spēles, meklē zivis, trenējies stāvēt kājās',
-      ],
-      faq: [
-        {
-          q: 'Kādā vecumā bērns var SUP būt viens?',
-          a: 'Apmēram 10–12 gadu vecumā ar uzraudzību, atkarībā no bērna peldēšanas prasmēm un komforta ūdenī. Vienmēr mierīgos, seklos apstākļos.',
-        },
-        {
-          q: 'Kura dēlis ir vispiemērotākais SUP bērniem?',
-          a: 'Plats dēlis (34") +ar lielu svara kapacitāti tandēma braukšanai. SUP Explorer 11 33" platums un 220 lb kravnesība labi der vecākiem un bērnam.',
-        },
-        {
-          q: 'Kādu drošības aprīkojumu bērniem vajag?',
-          a: 'Pareizi pieguļoša CEsertificēta glābšanas veste, pavada (piesieta pie pieaugušā dēļa tandemam), saules aizsargkrēms un cepure.',
+          q: 'What safety gear do kids need?',
+          a: "A properly fitted life vest, a leash (attached to the adult's board for tandem), sunscreen, and a hat.",
         },
       ],
     },
@@ -4828,7 +1559,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         'Ikuti pelan sesi pertama yang tersusun: pilih air tenang, susun peralatan dengan betul, berlatih berlutut sebelum berdiri, dan kuasai gerakan ke hadapan sebelum mencuba pusingan.',
       audience: 'Pemula mutlak yang tidak pernah bermain paddle board sebelum ini.',
       steps: [
-        'Pilih air yang rata dan tenang tanpa trafik bot — tasik kecil atau teluk terlindung adalah ideal',
+        'Pilih air yang rata dan tenang dengan trafik yang rendah — tasik kecil atau teluk terlindung adalah ideal',
         'Kembangkan papan anda ke 12-15 PSI menggunakan pam tindakan berganda',
         'Pasang tali gegelung pada buku lali atau betis anda, bukan pada pemegang papan',
         'Masukkan sirip dan ketatkan skru',
@@ -4853,37 +1584,36 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
       ],
     },
     'safety-tips': {
-      title: 'Tips Keselamatan Sukan Air',
-      description:
-        'Garis panduan keselamatan penting untuk paddle boarding, berkayak, dan berperahu — dari pemeriksaan peralatan hingga kesedaran cuaca.',
-      tldr: 'Sentiasa pakai jaket keselamatan bertauliah CE, periksa cuaca dan kondisi air sebelum meluncur, bawa peranti komunikasi, jangan bersukan sendirian di air yang tidak dikenali, dan fahami had peralatan anda.',
+      title: 'Paddle Boarding Safety Tips',
+      description: 'Essential safety guidelines for paddle boarding — from equipment checks to weather awareness.',
+      tldr: "Always wear a life vest, check weather and water conditions before launch, carry communication devices, never paddle alone in unfamiliar water, and understand your equipment's rated limits.",
       problem:
-        'Kebanyakan kemalangan sukan air berlaku akibat persiapan yang tidak mencukupi — tiada jaket keselamatan, mengabaikan amaran cuaca, atau menggunakan peralatan melebihi had reka bentuknya.',
+        'Most water sports accidents result from inadequate preparation — no life vest, ignoring weather warnings, or using equipment beyond its design limits.',
       solution:
-        'Amalkan senarai semak keselamatan sebelum meluncur: sahkan kondisi peralatan, semak cuaca dan suhu air, maklumkan kepada seseorang tentang laluan anda, dan sentiasa pakai alat pelampung yang sesuai.',
-      audience: 'Semua peserta sukan air — pengguna SUP, kayak, sampan, dan RIB.',
+        'Adopt a pre-launch safety checklist: verify equipment condition, check weather and water temperature, inform someone of your route, and always wear appropriate flotation.',
+      audience: 'All paddle boarders, from first-timers to experienced riders.',
       steps: [
-        'Semak ramalan cuaca — elak angin lebih 15 mph dan ribut petir',
-        'Sahkan suhu air — air sejuk (60°F/15°C) memerlukan wetsuit atau drysuit',
-        'Periksa peralatan — periksa kebocoran, retakan, dan inflasi yang betul',
-        'Pakai jaket keselamatan bertauliah CE setiap masa',
-        'Pasang tali pengaman (SUP) atau ikat semua peralatan yang longgar (kayak/perahu)',
-        'Sediakan pelan pelayaran — beritahu seseorang ke mana anda pergi dan bila akan kembali',
-        'Bawa alat komunikasi — kotak telefon kalis air atau radio VHF',
-        'Tahu had anda — kekal dalam tahap kemahiran dan penarafan peralatan anda',
+        'Check weather forecast — avoid winds over 15 mph and thunderstorms',
+        'Verify water temperature — cold water (<60°F/15°C) requires a wetsuit or drysuit',
+        'Inspect equipment — check for leaks, cracks, and proper inflation',
+        'Wear a life vest at all times',
+        'Attach the leash and secure all loose gear',
+        'File a float plan — tell someone where you are going and when you will return',
+        'Carry communication — waterproof phone case or VHF radio',
+        'Know your limits — stay within your skill level and equipment ratings',
       ],
       faq: [
         {
-          q: 'Adakah saya perlu jaket keselamatan pada SUP?',
-          a: 'Ya. Banyak kawasan perundangan mengkehendaki jaket keselamatan pada mana-mana kenderaan air, termasuk SUPs. Walaupun tidak diwajibkan, jaket keselamatan bertauliah CE adalah peralatan keselamatan penting.',
+          q: 'Do I need a life vest on a SUP?',
+          a: 'Yes. Many jurisdictions legally require a life vest when paddling, including on SUPs. Even where not required, a life vest is essential safety equipment.',
         },
         {
-          q: 'Apakah kecederaan sukan air yang paling biasa?',
-          a: 'Penyelaman dalam air sejuk dan keletihan adalah risiko serius yang paling biasa. Sentiasa berpakaian mengikut suhu air, bukan suhu udara.',
+          q: 'What is the most common water sports injury?',
+          a: 'Cold water immersion and exhaustion are the most common serious risks. Always dress for the water temperature, not the air temperature.',
         },
         {
-          q: 'Bagaimana saya periksa jika kondisi selamat?',
-          a: 'Guna ramalan cuaca marin. Semak kelajuan angin, ketinggian ombak, dan suhu air. Pemula harus kekal dalam kondisi angin di bawah 10 mph dan ombak di bawah 1 kaki.',
+          q: 'How do I check if conditions are safe?',
+          a: 'Use marine weather forecasts. Check wind speed, wave height, and water temperature. Beginners should stay in conditions under 10 mph wind and under 1 ft waves.',
         },
       ],
     },
@@ -4936,7 +1666,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         'Kenali arus pasang — arus pasang surut boleh lebih kuat daripada kelajuan kayuhan anda',
         'Ukur suhu air — di bawah 60°F/15°C memerlukan perlindungan haba',
         'Periksa penglihatan — kabus dan hujan lebat mengurangkan penglihatan dan meningkatkan risiko perlanggaran',
-        'Fahami bahaya tempatan — batu tenggelam, arus kuat, zon trafik bot',
+        'Fahami bahaya tempatan — batu tenggelam, arus kuat, zon trafik sibuk',
       ],
       faq: [
         {
@@ -5096,7 +1826,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
       audience: 'Pengamal yoga dan pendayung yang ingin menggabungkan latihan keseimbangan dengan kesedaran.',
       steps: [
         'Ikat papan di air cetek dan tenang — gunakan sauh pasir atau ikat pada dok',
-        'Mulakan dengan posisi duduk — posisi duduk mudah, posisi bot, putaran duduk',
+        'Mulakan dengan posisi duduk — posisi duduk mudah, Navasana, putaran duduk',
         'Maju ke posisi berlutut — meja meja, kucing-lembu, kilat',
         'Beralih ke posisi berdiri — gunung, pahlawan I, pahlawan II, posisi pokok',
         'Berlatih pose keseimbangan — bulan separuh, helang, penari',
@@ -5123,9 +1853,9 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         'Segala yang anda perlu tahu tentang memancing dari papan dayung — tetapan peralatan, tip kestabilan, dan teknik.',
       tldr: 'SUP Memancing menawarkan pendekatan senyap, akses air cetek, dan lontaran 360 darjah. Gunakan papan stabil yang lebar (34"+), pasang pemegang joran, dan gunakan penyejuk atau peti sebagai dek gear. Sauh dalam keadaan berangin. Sentiasa pakai PFD.',
       problem:
-        'Bot memancing standard mahal untuk diselenggara dan tidak boleh mengakses air cetek. Kayak mengehadkan mobiliti.SUP Memancing menyelesaikan kedua-dua masalah tetapi memerlukan penyesuaian peralatan khusus.',
+        'Bot memancing berenjin mahal untuk diselenggara dan tidak boleh mengakses air cetek. Memancing dengan SUP menyelesaikan kedua-dua masalah tetapi memerlukan penyesuaian peralatan khusus.',
       solution:
-        'Lengkapkan kandang SUP dengan pemegang joran, kotak gear, dan sistem sauh. Gunakan kebolehpindahan papan untuk mengakses tempat memancing terpencil yang bot tidak dapat capai.',
+        'Lengkapkan SUP yang stabil dengan pemegang joran, kotak gear, dan sistem sauh. Gunakan kebolehpindahan papan untuk mengakses tempat memancing terpencil yang bot berenjin tidak dapat capai.',
       audience:
         'Pemancing yang ingin memancing di perairan cetek, lokasi terpencil, atau lebih suka platform memancing ringan dan mudah alih.',
       steps: [
@@ -5152,169 +1882,137 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
       ],
     },
     'inflatable-repair': {
-      title: 'Cara Membaiki Bot Tiup Anda atau SUP',
+      title: 'How to Repair Your Inflatable SUP',
       description:
-        'Panduan langkah demi langkah untuk membaiki lubang bocor, masalah injap, dan kerosakan jahitan pada kenderaan air boleh tiup.',
-      tldr: 'Tusukan kecil (di bawah 1/4") boleh dibaiki dengan kit tampalan yang disertakan. Bersihkan kawasan tersebut, sapukan PVC pelekat, tekan tampalan, dan tunggu 24 jam. Kebocoran injap biasanya memerlukan penggantian cincin O. Koyakan besar atau delaminasi jahitan memerlukan servis profesional.',
+        'Step-by-step guide to repairing punctures, valve issues, and seam damage on your inflatable paddle board.',
+      tldr: 'Small punctures (under 1/4") are repairable with the included patch kit. Clean the area, apply PVC adhesive, press the patch, and wait 24 hours. Valve leaks usually require O-ring replacement. Large tears or seam delamination need professional service.',
       problem:
-        'Tusukan kecil dan masalah injap adalah biasa tetapi mudah diperbaiki. Tanpa teknik pembaikan yang betul, pengguna sama ada membayar lebih untuk perkhidmatan profesional atau memburukkan kerosakan.',
+        'Small punctures and valve issues are common but easy to fix. Without proper repair technique, users either overpay for professional service or make the damage worse.',
       solution:
-        'Kenal pasti jenis kerosakan — tusukan, kebocoran injap, atau masalah jahitan — dan gunakan kaedah pembaikan yang sesuai. Kebanyakan pembaikan mengambil masa 30 minit ditambah masa pengeringan.',
-      audience: 'Pemilik kereta kembungSUPs, kayak, dan bot yang ingin mengendalikan pembaikan asas sendiri.',
+        'Identify the damage type — puncture, valve leak, or seam issue — and apply the appropriate repair method. Most repairs take 30 minutes plus curing time.',
+      audience: 'Owners of inflatable SUP boards who want to handle basic repairs themselves.',
       steps: [
-        'Cari kebocoran — tiup sepenuhnya, dengar udara, rasa dengan tangan, atau gunakan air sabun',
-        'Tandakan kebocoran dengan pen atau pita',
-        'Bersihkan kawasan sekitar kebocoran dengan alkohol isopropil — sekurang-kurangnya 2 inci di sekitar kerosakan',
-        'Kasar permukaan dengan kertas pasir halus untuk ikatan pelekat yang lebih baik',
-        'Sapukan pelekat PVC pada tampalan dan permukaan papan',
-        'Tunggu 5 minit supaya pelekat menjadi melekit',
-        'Tekan tampalan dengan kuat, keluarkan buih udara dengan penggelek atau kad kredit',
-        'Biarkan sembuh selama 24 jam sebelum ditiup hingga tekanan penuh',
+        'Locate the leak — inflate fully, listen for air, feel with your hand, or use soapy water',
+        'Mark the leak with a pen or tape',
+        'Clean the area around the leak with isopropyl alcohol — at least 2 inches around the damage',
+        'Rough the surface with fine sandpaper for better adhesive bonding',
+        'Apply PVC adhesive to both the patch and the board surface',
+        'Wait 5 minutes for the adhesive to become tacky',
+        'Press the patch firmly, roll out air bubbles with a roller or credit card',
+        'Let cure for 24 hours before inflating to full pressure',
       ],
       faq: [
         {
-          q: 'Bolehkah saya membaiki kebocoran di atas air?',
-          a: 'Pembetulan kecemasan menggunakan tampalan dan pelekat boleh membawa anda kembali ke pantai. Pembetulan sepenuhnya memerlukan keadaan kering dan masa penyembuhan 24 jam.',
+          q: 'Can I repair a puncture on the water?',
+          a: 'Emergency repairs using a patch and tape can get you back to shore. Full repairs require dry conditions and 24-hour curing.',
         },
         {
-          q: 'Bagaimana saya membaiki injap yang bocor?',
-          a: 'Keluarkan teras injap dengan alat yang disertakan, periksa O-ring sama ada rosak, gantikan jika perlu, dan masukkan semula teras dengan ketat.',
+          q: 'How do I fix a leaking valve?',
+          a: 'Remove the valve core with the included tool, check the O-ring for damage, replace if needed, and reinsert the core tightly.',
         },
         {
-          q: 'Pelekat apa yang patut saya guna untuk pembaikan PVC?',
-          a: 'Gunakan pelekat khusus PVC seperti HH-66 atau Clifton. Gam super standard tidak melekat dengan baik pada bahan PVC yang boleh ditiup.',
-        },
-      ],
-    },
-    'kayak-techniques': {
-      title: 'Teknik Dayung Kayak Asas',
-      description:
-        'Kuasi cara mendayung kayak — dayungan ke hadapan, dayungan sapu, menyeimbangkan, dan menyokong untuk kayakan yang cekap dan selamat.',
-      tldr: 'Dayungan ke hadapan menggunakan putaran badan, bukan lengan. Dayungan sapu memusingkan kayak. Menyeimbangkan meningkatkan keupayaan memusing. Sokongan rendah mengelakkan kayak terbalik dalam gelombang. Pastikan batang dayung tegak dan bilah sepenuhnya terendam.',
-      problem:
-        'Teknik dayung yang tidak cekap menyebabkan keletihan bahu, perlahan progres, dan kesukaran mengawal kayak dalam angin dan arus.',
-      solution:
-        'Belajar teknik dayungan yang betul dari badan dengan empat dayungan asas — ke hadapan, terbalik, sapu, dan menyokong.',
-      audience: 'Kayaker pemula dan sederhana yang mahu mendayung dengan usaha yang kurang dan kawalan lebih.',
-      steps: [
-        'Dayungan ke hadapan: putar badan, tanam bilah di dekat kaki, tarik hingga melepasi pinggul, keluar di pinggul',
-        'Dayungan terbalik: tanam bilah di belakang, tolak ke hadapan untuk melambatkan atau mundur',
-        'Dayungan sapu: capai ke depan, sapu bilah dalam lengkungan luas ke arah buritan, putar kayak',
-        'Sokongan rendah: tampar bilah rata di permukaan air untuk kestabilan dalam gelombang',
-        'Menyeimbangkan: condongkan kayak sedikit ke tepi untuk memotong selekoh',
-      ],
-      faq: [
-        {
-          q: 'Bagaimana saya memastikan kayak bergerak lurus?',
-          a: 'Gunakan dayungan konsisten pada sisi berganti-ganti. Belajar J-stroke (cangkuk kecil pada akhir dayungan ke hadapan) untuk membetulkan arah tanpa menukar sisi.',
-        },
-        {
-          q: 'Apakah kecederaan kayak yang paling biasa?',
-          a: 'Kekejangan bahu dari dayungan yang dominan lengan. Gunakan putaran badan untuk melibatkan otot belakang yang lebih besar dan mengurangkan beban bahu.',
-        },
-        {
-          q: 'Bagaimana saya mendayung dalam angin?',
-          a: 'Pastikan hujung kayak menghadap angin. Gunakan dayungan lebih pendek dan kuat. Jika menyeberangi angin, condongkan kayak sedikit ke arah angin.',
+          q: 'What glue should I use for PVC repairs?',
+          a: 'Use PVC-specific adhesive like HH-66 or Clifton. Standard super glue does not bond well with inflatable PVC materials.',
         },
       ],
     },
     'multi-day-trip': {
-      title: 'Merancang Perjalanan Kayak atau SUP Berhari-Hari',
+      title: 'Planning a Multi-Day SUP Tour',
       description:
-        'Bagaimana merancang dan menjalankan perjalanan mendayung berhari-hari — perancangan laluan, pengepakan peralatan, perkhemahan, dan keselamatan.',
-      tldr: 'Rancang 10-15 batu sehari. Bawa peralatan dalam beg kering kalis air, agihkan berat secara sekata, dan latih memuatkan papan atau kayak anda sebelum perjalanan. Failkan pelan pelampung. Bawa air, makanan, tempat tinggal, navigasi, dan komunikasi.',
+        'How to plan and execute a multi-day paddling trip — route planning, gear packing, camping, and safety.',
+      tldr: 'Plan 10-15 miles per day. Pack gear in waterproof dry bags, distribute weight evenly, and practice loading your board before the trip. File a float plan. Carry water, food, shelter, navigation, and communication.',
       problem:
-        'Perjalanan berbilang hari gagal akibat pembungkusan berlebihan, perancangan laluan yang lemah, atau anggaran cuaca dan arus yang meremehkan — menyebabkan keletihan, kegagalan gear, atau insiden keselamatan.',
+        'Multi-day trips fail due to overpacking, poor route planning, or underestimating weather and current — leading to exhaustion, gear failure, or safety incidents.',
       solution:
-        'Gunakan pendekatan perancangan sistematik: pemilihan laluan, senarai semak peralatan, perancangan makanan, taklimat keselamatan, dan perancangan kontingensi.',
-      audience: 'Pengayuh berpengalaman merancang ekspedisi berbilang hari pertama mereka.',
+        'Use a systematic planning approach: route selection, gear checklist, food planning, safety briefing, and contingency planning.',
+      audience: 'Experienced paddlers planning their first multi-day expedition.',
       steps: [
-        'Pilih laluan dengan tapak perkhemahan yang telah ditetapkan dan titik penyelamatan',
-        'Rancang 10-15 batu sehari dengan mengambil kira angin dan arus',
-        'Semak jadual pasang surut dan ramalan cuaca untuk keseluruhan tingkap perjalanan',
-        'Bungkus peralatan dalam beg kering kalis air — 20-30 lbs berat gear keseluruhan',
-        'Agihkan berat secara sekata — item paling berat di tengah',
-        'Failkan pelan terapung terperinci dengan seseorang di darat',
-        'Bawa navigasi — carta kertas, kompas, dan sandaran GPS',
-        'Bawa tempat perlindungan kecemasan, makanan tambahan, dan kit pertolongan cemas',
+        'Select a route with established campsites and bailout points',
+        'Plan 10-15 miles per day accounting for wind and current',
+        'Check tide tables and weather forecasts for the entire trip window',
+        'Pack gear in waterproof dry bags — 20-30 lbs total gear weight',
+        'Distribute weight evenly — heaviest items in the center',
+        'File a detailed float plan with someone on shore',
+        'Bring navigation — paper chart, compass, and GPS backup',
+        'Pack emergency shelter, extra food, and first aid kit',
       ],
       faq: [
         {
-          q: 'Apakah jarak harian yang ideal?',
-          a: '10-15 batu sehari untuk pendayung berpengalaman. Pemula harus merancang 5-8 batu. Sentiasa sediakan masa penampan untuk cuaca.',
+          q: 'What is the ideal daily distance?',
+          a: '10-15 miles per day for experienced paddlers. Beginners should plan 5-8 miles. Always build in buffer time for weather.',
         },
         {
-          q: 'Berapa banyak air yang patut saya bawa?',
-          a: '1 gelen setiap orang setiap hari. Dalam keadaan panas, 1.5 gelen. Bawa penapis air atau tablet penulenan untuk isi semula.',
+          q: 'How much water should I carry?',
+          a: '1 gallon per person per day. In hot conditions, 1.5 gallons. Carry a water filter or purification tablets for refills.',
         },
         {
-          q: 'Apakah item keselamatan yang paling penting?',
-          a: 'Komunikasi. Radio VHF atau pemesejan satelit boleh menyelamatkan nyawa dalam kecemasan. Telefon bimbit tidak boleh dipercayai di kawasan terpencil.',
+          q: 'What is the most important safety item?',
+          a: 'Communication. A VHF radio or satellite messenger can be life-saving in an emergency. Cell phones are unreliable in remote areas.',
         },
       ],
     },
     'choosing-paddle': {
-      title: 'Cara memilih dayung yang sesuai SUP untuk dan kayak',
-      description: 'Panduan untuk bahan dayung, bentuk bilah, jenis batang, dan saiz untuk SUP serta berkayak.',
-      tldr: 'Panjang dayung: SUP dayung harus 6-8" lebih tinggi daripada ketinggian anda. Dayung kayak bergantung pada lebar bot dan panjang badan. Bentuk bilah: bilah dihedral bergerak lurus, bilah rata memberikan lebih banyak tangkapan. Bahan batang: karbon paling ringan, gentian kaca adalah nilai terbaik, aluminium adalah bajet.',
+      title: 'How to Choose the Right SUP Paddle',
+      description: 'A guide to paddle materials, blade shapes, shaft types, and sizing for stand-up paddle boarding.',
+      tldr: 'Paddle length: SUP paddles should be 6-8" taller than your height. Blade shape: dihedral blades track straight, flat blades offer more catch. Shaft material: carbon is lightest, fiberglass is best value, aluminum is budget.',
       problem:
-        'Menggunakan saiz atau bahan dayung yang salah menyebabkan keletihan yang tidak perlu, kecekapan kayuhan yang lemah, dan ketegangan sendi.',
+        'Using the wrong paddle size or material causes unnecessary fatigue, poor stroke efficiency, and joint strain.',
       solution:
-        'Padankan panjang dayung, bentuk bilah, bahan batang, dan kelenturan dengan gaya mendayung anda, saiz badan, dan bajet.',
-      audience: 'SUP dan pendayung kayak memilih dayung pertama atau seterusnya.',
+        'Match paddle length, blade shape, shaft material, and flex to your paddling style, body size, and budget.',
+      audience: 'SUP paddlers choosing their first or next paddle.',
       steps: [
-        'Untuk SUP: ukur ketinggian dayung — 6-8" lebih tinggi daripada ketinggian anda untuk mendayung secara umum',
-        'Untuk kayak: ukur panjang badan dan lebar bot — bot yang lebih sempit memerlukan dayung yang lebih pendek',
-        'Pilih bahan bilah — nilon untuk bajet, gentian kaca untuk nilai, karbon untuk prestasi',
-        'Pilih bentuk bilah — dihedral untuk penjejakan lancar, rata untuk kuasa, sudu untuk perlumbaan',
-        'Pilih jenis batang — terus untukSUP, bengkok untuk SUPperlumbaan, standard untuk kayak',
-        'Semak kelenturan — aci yang lebih keras memindahkan lebih banyak kuasa, aci fleksibel mengurangkan ketegangan sendi',
+        'For SUP: measure paddle height — 6-8" taller than your height for general paddling',
+        'Adjust for board width — wider boards call for a slightly longer paddle',
+        'Choose blade material — nylon for budget, fiberglass for value, carbon for performance',
+        'Choose blade shape — dihedral for smooth tracking, flat for power, spoon for racing',
+        'Choose shaft type — straight for general paddling, bent for racing',
+        'Check flex — stiffer shafts transfer more power, flexible shafts reduce joint strain',
       ],
       faq: [
         {
-          q: 'Apakah bahan dayung terbaik?',
-          a: 'Gentian kaca menawarkan keseimbangan terbaik antara berat, ketahanan, dan kos. Karbon lebih ringan tetapi lebih mahal dan rapuh. Nilon berat tetapi hampir tidak boleh musnah.',
+          q: 'What is the best paddle material?',
+          a: 'Fiberglass offers the best balance of weight, durability, and cost. Carbon is lighter but more expensive and brittle. Nylon is heavy but virtually indestructible.',
         },
         {
-          q: 'Bagaimana saya tahu jika dayung saya mempunyai panjang yang betul?',
-          a: 'UntukSUP: berdiri dayung secara menegak di sebelah anda — pemegang harus mencapai pergelangan tangan apabila lengan anda diangkat di atas kepala. Untuk kayak: bilah harus masuk ke dalam air pada sudut yang selesa tanpa terlalu meluas.',
+          q: 'How do I know if my paddle is the right length?',
+          a: 'Stand the paddle vertically next to you — the handle should reach your wrist when your arm is raised overhead.',
         },
         {
-          q: 'Patutkah saya dapatkan paddle satu bahagian atau boleh laras?',
-          a: 'Dayung boleh laras sesuai untuk kegunaan dan perjalanan bersama. Dayung satu bahagian lebih ringan, lebih keras, dan lebih cekap untuk kegunaan khusus.',
+          q: 'Should I get a one-piece or adjustable paddle?',
+          a: 'Adjustable paddles are good for shared use and travel. One-piece paddles are lighter, stiffer, and more efficient for dedicated use.',
         },
       ],
     },
     'sup-with-kids': {
-      title: 'SUP dengan Kanak-kanak: Panduan Keluarga Lengkap',
-      description: 'Cara membawa kanak-kanak paddle boarding dengan selamat — cadangan umur, peralatan, dan aktiviti.',
-      tldr: 'Kanak-kanak 6+ boleh menunggang SUP bersama orang dewasa. Kanak-kanak 10+ boleh mendayung papan mereka sendiri dengan pengawasan. Gunakan papan stabil yang lebar, sentiasa pakai PFD, kekal di air cetek yang tenang, dan pastikan sesi pendek (maksimum 30-45 minit).',
+      title: 'SUP with Kids: A Complete Family Guide',
+      description: 'How to safely take children paddle boarding — age recommendations, equipment, and activities.',
+      tldr: 'Children 6+ can ride on a SUP with an adult. Children 10+ can paddle their own board with supervision. Use a wide stable board, always wear PFDs, stay in shallow calm water, and keep sessions short (30-45 minutes max).',
       problem:
-        'Ibu bapa ingin berkongsi sukan air dengan anak-anak mereka tetapi risau tentang keselamatan, kesesuaian peralatan, dan memastikan anak-anak terus terlibat.',
+        'Parents want to share water sports with their kids but worry about safety, equipment fit, and keeping children engaged.',
       solution:
-        'Gunakan saiz papan yang sesuai untuk menunggang tandem, pastikan setiap kanak-kanak memakai pakaian yang sesuaiPFD, mulakan di air cetek dan suam, dan jadikan ia menyeronokkan dengan permainan dan sesi pendek.',
-      audience: 'Ibu bapa yang ingin memperkenalkan anak-anak mereka kepada paddle boarding.',
+        'Use the right board size for tandem riding, ensure every child wears a properly fitted PFD, start in shallow warm water, and make it fun with games and short sessions.',
+      audience: 'Parents who want to introduce their children to paddle boarding.',
       steps: [
-        'Umur 4-6 tahun: duduk sebagai penumpang di papan dewasa — duduk di hadapan, pegang pemegang tengah',
-        'Umur 6-10 tahun: berlutut atau duduk di atas papan sendiri dengan pengawasan dewasa dan tali leher',
-        'Umur 10 tahun+: mendayung papan sendiri dengan pengawasan dewasa berdekatan',
-        'Sentiasa pakai PFD — kanak-kanak mesti memakai jaket keselamatan yang sesuai setiap masa',
-        'Tinggal di air cetek (setinggi pinggang untuk orang dewasa)',
-        'Pastikan sesi pendek — maksimum 30-45 minit untuk kanak-kanak bawah 10 tahun',
-        'Jadikan ia menyeronokkan — bermain permainan, mencari ikan, berlatih berdiri',
+        "Age 4-6: ride as a passenger on an adult's board — sit in front, hold onto the center handle",
+        'Age 6-10: kneel or sit on their own board with adult supervision and a leash',
+        'Age 10+: paddle their own board with adult supervision nearby',
+        'Always wear a PFD — children must wear a properly fitted life vest at all times',
+        'Stay in shallow water (waist-deep for the adult)',
+        'Keep sessions short — 30-45 minutes max for children under 10',
+        'Make it fun — play games, look for fish, practice standing up',
       ],
       faq: [
         {
-          q: 'Pada umur berapa seorang kanak-kanak boleh SUP bersendirian?',
-          a: 'Sekitar umur 10-12 tahun dengan pengawasan, bergantung pada kebolehan berenang dan keselesaan kanak-kanak di air. Sentiasa dalam keadaan tenang dan cetek.',
+          q: 'At what age can a child SUP alone?',
+          a: "Around age 10-12 with supervision, depending on the child's swimming ability and comfort in water. Always in calm, shallow conditions.",
         },
         {
-          q: 'Papan mana yang paling sesuai SUP untuk kanak-kanak?',
-          a: 'Papan lebar (34") +dengan kapasiti berat tinggi untuk tunggangan tandem. SUP Lebar Explorer 11 yang 33" dan kapasiti 220 lb sesuai untuk ibu bapa dan anak.',
+          q: 'What board is best for SUP with kids?',
+          a: 'A wide board (34"+) with high weight capacity for tandem riding. The SUP Explorer 11\'s 33" width and 220 lb capacity works well for parent-plus-child.',
         },
         {
-          q: 'Peralatan keselamatan apa yang diperlukan oleh kanak-kanak?',
-          a: 'CEJaket keselamatan yang disahkan dengan betul, tali leher (dipasang pada papan dewasa sebagai tandem), pelindung matahari, dan topi.',
+          q: 'What safety gear do kids need?',
+          a: "A properly fitted life vest, a leash (attached to the adult's board for tandem), sunscreen, and a hat.",
         },
       ],
     },
@@ -5365,7 +2063,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         'Urmează un plan structurat pentru prima sesiune: alege apa calmă, ajustează-ți echipamentul corect, exersează îngenunchearea înainte de a te ridica și stăpânește mișcarea înainte înainte de a încerca virajele.',
       audience: 'Începători absoluti care nu au mai făcut niciodată paddle board.',
       steps: [
-        'Alege o apă plată, liniștită, fără trafic de bărci — un lac mic sau un golf adăpostit este ideal',
+        'Alege o apă plată, liniștită, cu trafic redus — un lac mic sau un golf adăpostit este ideal',
         'Umflă placa la 12-15 PSI cu pompa cu acțiune dublă',
         'Atașează lesa spirală de gleznă sau gambă, niciodată de mânerul plăcii',
         'Introdu aripioara și strânge șurubul',
@@ -5390,37 +2088,36 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
       ],
     },
     'safety-tips': {
-      title: 'Sfaturi de siguranță pentru sporturile nautice',
-      description:
-        'Ghiduri esențiale de siguranță pentru paddle boarding, caiac și navigație — de la verificarea echipamentelor până la conștientizarea vremii.',
-      tldr: 'Poartă întotdeauna o CEvestă de salvare certificată, verifică condițiile meteo și ale apei înainte de lansare, poartă dispozitive de comunicare, nu vâslești niciodată singur în ape necunoscute și înțelege limitele nominale ale echipamentului.',
+      title: 'Paddle Boarding Safety Tips',
+      description: 'Essential safety guidelines for paddle boarding — from equipment checks to weather awareness.',
+      tldr: "Always wear a life vest, check weather and water conditions before launch, carry communication devices, never paddle alone in unfamiliar water, and understand your equipment's rated limits.",
       problem:
-        'Majoritatea accidentelor cu sporturi nautice rezultă din pregătire inadecvată — lipsa unei veste de salvare, ignorarea avertizărilor meteo sau utilizarea echipamentelor dincolo de limitele proiectate.',
+        'Most water sports accidents result from inadequate preparation — no life vest, ignoring weather warnings, or using equipment beyond its design limits.',
       solution:
-        'Adoptă o listă de verificare a siguranței înainte de lansare: verifică starea echipamentului, verifică vremea și temperatura apei, informează pe cineva despre traseul tău și poartă întotdeauna plutirea corespunzătoare.',
-      audience: 'Toți participanții la sporturi acvatice SUP— caiace, dinghy și RIB utilizatori.',
+        'Adopt a pre-launch safety checklist: verify equipment condition, check weather and water temperature, inform someone of your route, and always wear appropriate flotation.',
+      audience: 'All paddle boarders, from first-timers to experienced riders.',
       steps: [
-        'Verifică prognoza meteo — evită vânturile de peste 15 mph și furtunile',
-        'Verifică temperatura apei — apa rece (60°F/15°C) necesită costum de neopren sau costum uscat',
-        'Inspectează echipamentele — verifică dacă există scurgeri, crăpături și umflare corespunzătoare',
-        'Purtați o CEvestă de salvare certificată în orice moment',
-        'Atașează lesa (SUP) sau fixează tot echipamentul liber (caiac/barcă)',
-        'Depune un plan de rezervă — spune cuiva unde mergi și când te vei întoarce',
-        'Comunicare prin port — husă impermeabilă pentru telefon sau radio VHF',
-        'Cunoaște-ți limitele — rămâi în limitele tale de abilitate și a ratingurilor tale de echipament',
+        'Check weather forecast — avoid winds over 15 mph and thunderstorms',
+        'Verify water temperature — cold water (<60°F/15°C) requires a wetsuit or drysuit',
+        'Inspect equipment — check for leaks, cracks, and proper inflation',
+        'Wear a life vest at all times',
+        'Attach the leash and secure all loose gear',
+        'File a float plan — tell someone where you are going and when you will return',
+        'Carry communication — waterproof phone case or VHF radio',
+        'Know your limits — stay within your skill level and equipment ratings',
       ],
       faq: [
         {
-          q: 'Am nevoie de o vestă de salvare pe SUPun ?',
-          a: 'Da. Multe jurisdicții cer legal vesta de salvare pe orice ambarcațiune, inclusiv SUPs. Chiar și atunci când nu este necesar, o CEvestă de salvare certificată este un echipament esențial de siguranță.',
+          q: 'Do I need a life vest on a SUP?',
+          a: 'Yes. Many jurisdictions legally require a life vest when paddling, including on SUPs. Even where not required, a life vest is essential safety equipment.',
         },
         {
-          q: 'Care este cea mai frecventă accidentare la sporturile nautice?',
-          a: 'Imersiunea în apă rece și epuizarea sunt cele mai frecvente riscuri serioase. Îmbrăcă-te întotdeauna în funcție de temperatura apei, nu de cea a aerului.',
+          q: 'What is the most common water sports injury?',
+          a: 'Cold water immersion and exhaustion are the most common serious risks. Always dress for the water temperature, not the air temperature.',
         },
         {
-          q: 'Cum pot verifica dacă condițiile sunt sigure?',
-          a: 'Folosește prognozele meteo marine. Verifică viteza vântului, înălțimea valurilor și temperatura apei. Începătorii ar trebui să rămână în condiții sub vânt de 10 mph și sub valuri de 1 ft.',
+          q: 'How do I check if conditions are safe?',
+          a: 'Use marine weather forecasts. Check wind speed, wave height, and water temperature. Beginners should stay in conditions under 10 mph wind and under 1 ft waves.',
         },
       ],
     },
@@ -5473,7 +2170,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         'Cunoaște fluxul — curenții de maree pot fi mai puternici decât viteza ta de vâslit',
         'Măsurarea temperaturii apei — sub 60°F/15°C necesită protecție termică',
         'Verifică vizibilitatea — ceața și ploaia abundentă reduc vizibilitatea și cresc riscul de coliziune',
-        'Înțelege pericolele locale — stânci scufundate, curenți puternici, zone de trafic cu bărci',
+        'Înțelege pericolele locale — stânci scufundate, curenți puternici, zone cu trafic intens',
       ],
       faq: [
         {
@@ -5633,7 +2330,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
       audience: 'Practicanții de yoga și vâslașii care doresc să combine antrenamentul de echilibru cu mindfulness-ul.',
       steps: [
         'Ancorează placa în apă puțin adâncă și calmă — folosește o ancoră de nisip sau o ancoră de un doc',
-        'Începe cu poziții așezate — poziția ușoară pe scaun, postura barcii, răsucirea pe scaun',
+        'Începe cu poziții așezate — poziția ușoară pe scaun, Navasana, răsucirea pe scaun',
         'Trecerea la pozițiile în genunchi — joc de masă, pisică-vacă, fulger',
         'Treci la pozițiile în picioare — munte, războinic I, războinic II, poziția copacului',
         'Exersează pozițiile de echilibru — semilună, vultur, dansator',
@@ -5660,9 +2357,9 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         'Tot ce trebuie să știi despre pescuitul de pe o placă de vâslit — configurația echipamentului, sfaturi de stabilitate și tehnici.',
       tldr: 'SUP Pescuitul oferă abordare silențioasă, acces la apă puțin adâncă și aruncări la 360 de grade. Folosește o placă largă de grajd (34"), +prinde suporturi pentru lansete și folosește un cooler sau o ladă ca punte pentru echipament. Ancorează în condiții de vânt. Poartă întotdeauna PFDun .',
       problem:
-        'Bărcile standard de pescuit sunt scumpe de întreținut și nu pot accesa ape puțin adânci. Caiacele limitează mobilitatea.SUP Pescuitul rezolvă ambele probleme, dar necesită adaptări specifice ale echipamentului.',
+        'Ambarcațiunile cu motor pentru pescuit sunt scumpe de întreținut și nu pot accesa ape puțin adânci. Pescuitul cu SUP rezolvă ambele probleme, dar necesită adaptări specifice ale echipamentului.',
       solution:
-        'Echipează un grajd SUP cu suporturi pentru lansete, o ladă pentru echipamente și un sistem de ancore. Folosește portabilitatea plăcii pentru a accesa locuri de pescuit izolate pe care bărcile nu le pot atinge.',
+        'Echipează un SUP stabil cu suporturi pentru lansete, o ladă pentru echipamente și un sistem de ancore. Folosește portabilitatea plăcii pentru a accesa locuri de pescuit izolate pe care ambarcațiunile cu motor nu le pot atinge.',
       audience:
         'Pescarii care doresc să pescuiască în ape puțin adânci, locuri izolate sau preferă o platformă de pescuit ușoară și portabilă.',
       steps: [
@@ -5689,1770 +2386,137 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
       ],
     },
     'inflatable-repair': {
-      title: 'Cum să repari barca ta gonflabilă sau SUP',
+      title: 'How to Repair Your Inflatable SUP',
       description:
-        'Ghid pas cu pas pentru repararea înțepăturilor, problemelor cu supapele și deteriorării cusăturilor la ambarcațiunile gonflabile.',
-      tldr: 'Înțepăturile mici (sub 1/4") pot fi reparate cu kitul de patch inclus. Curăță zona, aplică PVC adeziv, apasă plasturele și așteaptă 24 de ore. Scurgerile supapelor necesită de obicei înlocuirea inelului O. Rupturile mari sau delaminarea cusăturilor necesită servicii profesionale.',
+        'Step-by-step guide to repairing punctures, valve issues, and seam damage on your inflatable paddle board.',
+      tldr: 'Small punctures (under 1/4") are repairable with the included patch kit. Clean the area, apply PVC adhesive, press the patch, and wait 24 hours. Valve leaks usually require O-ring replacement. Large tears or seam delamination need professional service.',
       problem:
-        'Înțepăturile mici și problemele cu supapele sunt frecvente, dar ușor de reparat. Fără o tehnică adecvată de reparație, utilizatorii fie plătesc prea mult pentru servicii profesionale, fie agravează daunele.',
+        'Small punctures and valve issues are common but easy to fix. Without proper repair technique, users either overpay for professional service or make the damage worse.',
       solution:
-        'Identificați tipul de deteriorare — perforație, scurgere de supapă sau problemă la îmbinare — și aplicați metoda adecvată de reparație. Majoritatea reparațiilor durează 30 de minute peste timpul de întărire.',
-      audience:
-        'Proprietari de aparate gonflabileSUPs, caiace și bărci care doresc să se ocupe singuri de reparațiile de bază.',
+        'Identify the damage type — puncture, valve leak, or seam issue — and apply the appropriate repair method. Most repairs take 30 minutes plus curing time.',
+      audience: 'Owners of inflatable SUP boards who want to handle basic repairs themselves.',
       steps: [
-        'Localizează scurgerea — umflă complet, ascultă aerul, simte cu mâna sau folosește apă cu săpun',
-        'Marcați scurgerea cu un pix sau bandă adezivă',
-        'Curăță zona din jurul scurgerii cu alcool izopropilic — cel puțin 2 inch în jurul daunelor',
-        'Aspruți suprafața cu șmirghel fin pentru o lipire adezivă mai bună',
-        'Aplică PVC adeziv atât pe plasture, cât și pe suprafața plăcii',
-        'Așteaptă 5 minute până când adezivul devine lipicios',
-        'Apasă ferm plasturele, întinde bulele de aer cu un roller sau card de credit',
-        'Lasă să se întărească timp de 24 de ore înainte de a umfla la presiune maximă',
+        'Locate the leak — inflate fully, listen for air, feel with your hand, or use soapy water',
+        'Mark the leak with a pen or tape',
+        'Clean the area around the leak with isopropyl alcohol — at least 2 inches around the damage',
+        'Rough the surface with fine sandpaper for better adhesive bonding',
+        'Apply PVC adhesive to both the patch and the board surface',
+        'Wait 5 minutes for the adhesive to become tacky',
+        'Press the patch firmly, roll out air bubbles with a roller or credit card',
+        'Let cure for 24 hours before inflating to full pressure',
       ],
       faq: [
         {
-          q: 'Pot să repar o înțepătură pe apă?',
-          a: 'Reparațiile de urgență folosind un plasture și bandă adezivă te pot aduce înapoi la țărm. Reparațiile complete necesită condiții uscate și întărire 24 de ore.',
+          q: 'Can I repair a puncture on the water?',
+          a: 'Emergency repairs using a patch and tape can get you back to shore. Full repairs require dry conditions and 24-hour curing.',
         },
         {
-          q: 'Cum repar o supapă care scurge?',
-          a: 'Scoate miezul supapei cu unealta inclusă, verifică inelul O dacă este deteriorat, înlocuiește-l dacă este nevoie și reintroduce miezul strâns.',
+          q: 'How do I fix a leaking valve?',
+          a: 'Remove the valve core with the included tool, check the O-ring for damage, replace if needed, and reinsert the core tightly.',
         },
         {
-          q: 'Ce lipici ar trebui să folosesc pentru PVC reparații?',
-          a: 'Folosește PVCadeziv specific ca HH-66 sau Clifton. Superglue-ul standard nu aderă bine cu materialele gonflabile PVC .',
-        },
-      ],
-    },
-    'kayak-techniques': {
-      title: 'Tehnici esențiale de vâslit cu caiacul',
-      description:
-        'Vâslirea maestru a caiacului — mișcare înainte, mișcare de tip sweep, margine și blocaj pentru un caiac eficient și sigur.',
-      tldr: 'Lovitura înainte a caiacului folosește rotația trunchiului, nu brațele. Mișcarea de tip sweep rotește caiacul. Marginea îmbunătățește virajul. Sprijinul jos previne răsturnarea valurilor. Menține tija vâslei verticală și lama complet scufundată.',
-      problem:
-        'Tehnica ineficientă de vâslit cauzează oboseală a umărilor, progres lent și dificultăți în controlul caiacului în vânt și curent.',
-      solution:
-        'Învață tehnica corectă de vâslit condusă de trunchi, cu patru lovituri esențiale — înainte, înapoi, sweep și brace.',
-      audience: 'Caiaci începători și intermediari care vor să vâslească cu mai puțin efort și mai mult control.',
-      steps: [
-        'Lovitură înainte: rotește trunchiul, plasează lama lângă picioare, trage de șold, ieși pe lângă șold',
-        'Mișcare inversă: plasează lama în spatele tău, împinge înainte pentru a încetini sau a merge înapoi',
-        'Lovitura de mătură: întinde mâna înainte, întinde lama într-un arc larg spre pupa, întoarce caiacul',
-        'Suport jos: lovește paleta plat pe suprafața apei pentru stabilitate în valuri',
-        'Margine: înclină ușor caiacul pe margine pentru a crea viraje',
-      ],
-      faq: [
-        {
-          q: 'Cum pot să-mi mențin caiacul drept?',
-          a: 'Folosește lovituri constante pe părți alternative. Învață J-stroke-ul (un cârlig ușor la finalul loviturii înainte) pentru corectarea traiectoriei fără a schimba lateralul.',
-        },
-        {
-          q: 'Care este cea mai frecventă accidentare cauzată de caiac?',
-          a: 'Întindere a umerilor cauzată de vâslirea cu braț dominant. Folosește rotația trunchiului pentru a activa mușchii mai mari ai spatelui și a reduce încărcătura pe umeri.',
-        },
-        {
-          q: 'Cum vâslesc în vânt?',
-          a: 'Ține prova orientată spre vânt. Folosește lovituri mai scurte și mai puternice. Dacă vânt transversal, înclină ușor caiacul spre vânt.',
+          q: 'What glue should I use for PVC repairs?',
+          a: 'Use PVC-specific adhesive like HH-66 or Clifton. Standard super glue does not bond well with inflatable PVC materials.',
         },
       ],
     },
     'multi-day-trip': {
-      title: 'Planificarea unui caiac sau excursie de mai multe zile SUP',
+      title: 'Planning a Multi-Day SUP Tour',
       description:
-        'Cum să planifici și să execuți o excursie de vâslit de mai multe zile — planificarea traseului, împachetarea echipamentului, campingul și siguranța.',
-      tldr: 'Planifică 10-15 mile pe zi. Împachetează echipamentul în saci impermeabili, distribuie greutatea uniform și exersează încărcarea plăcii sau caiaculului înainte de excursie. Înregistrează un plan de plutire. Ia cu tine apă, mâncare, adăpost, navigație și comunicare.',
+        'How to plan and execute a multi-day paddling trip — route planning, gear packing, camping, and safety.',
+      tldr: 'Plan 10-15 miles per day. Pack gear in waterproof dry bags, distribute weight evenly, and practice loading your board before the trip. File a float plan. Carry water, food, shelter, navigation, and communication.',
       problem:
-        'Călătoriile de mai multe zile eșuează din cauza împachetării excesive, planificării slabe a traseului sau subestimării vremii și curentului — ceea ce duce la epuizare, defecțiuni ale echipamentului sau incidente de siguranță.',
+        'Multi-day trips fail due to overpacking, poor route planning, or underestimating weather and current — leading to exhaustion, gear failure, or safety incidents.',
       solution:
-        'Folosește o abordare sistematică de planificare: selecția traseului, lista de verificare a echipamentului, planificarea alimentelor, informarea privind siguranța și planificarea de urgență.',
-      audience: 'Vâslași experimentați care își planifică prima expediție de mai multe zile.',
+        'Use a systematic planning approach: route selection, gear checklist, food planning, safety briefing, and contingency planning.',
+      audience: 'Experienced paddlers planning their first multi-day expedition.',
       steps: [
-        'Alege o rută cu locuri de campare și puncte de evacuare bine stabilite',
-        'Planifică 10-15 mile pe zi, ținând cont de vânt și curent',
-        'Verifică tabelele mareelor și prognozele meteo pentru întreaga fereastră de călătorie',
-        'Împachetarea echipamentului în saci impermeabili — greutatea totală a echipamentului de 20-30 lbs',
-        'Distribuiți greutatea uniform — cele mai grele obiecte sunt în centru',
-        'Depune un plan detaliat de plutire la cineva de pe uscat',
-        'Adu navigația — hartă pe hârtie, busolă și backup GPS',
-        'Împachetează adăpost de urgență, mâncare suplimentară și trusă de prim ajutor',
+        'Select a route with established campsites and bailout points',
+        'Plan 10-15 miles per day accounting for wind and current',
+        'Check tide tables and weather forecasts for the entire trip window',
+        'Pack gear in waterproof dry bags — 20-30 lbs total gear weight',
+        'Distribute weight evenly — heaviest items in the center',
+        'File a detailed float plan with someone on shore',
+        'Bring navigation — paper chart, compass, and GPS backup',
+        'Pack emergency shelter, extra food, and first aid kit',
       ],
       faq: [
         {
-          q: 'Care este distanța ideală zilnică?',
-          a: '10-15 mile pe zi pentru vâslașii experimentați. Începătorii ar trebui să planifice 5-8 mile. Întotdeauna să pregătească timp tampon pentru vreme.',
+          q: 'What is the ideal daily distance?',
+          a: '10-15 miles per day for experienced paddlers. Beginners should plan 5-8 miles. Always build in buffer time for weather.',
         },
         {
-          q: 'Câtă apă ar trebui să iau cu mine?',
-          a: '1 galon pe persoană pe zi. În condiții de căldură, 1,5 galoane. Aveți un filtru de apă sau tablete de purificare pentru reumplere.',
+          q: 'How much water should I carry?',
+          a: '1 gallon per person per day. In hot conditions, 1.5 gallons. Carry a water filter or purification tablets for refills.',
         },
         {
-          q: 'Care este cel mai important element de siguranță?',
-          a: 'Comunicații. Un radio VHF sau un mesager prin satelit poate salva vieți într-o urgență. Telefoanele mobile sunt nesigure în zonele izolate.',
+          q: 'What is the most important safety item?',
+          a: 'Communication. A VHF radio or satellite messenger can be life-saving in an emergency. Cell phones are unreliable in remote areas.',
         },
       ],
     },
     'choosing-paddle': {
-      title: 'Cum să alegi vâsla SUP potrivită pentru un caiac',
-      description: 'Un ghid despre materialele vâslei, formele lamelor, tipurile de tije și mărimile pentru SUP caiac.',
-      tldr: 'Lungimea paletei: SUP paletele ar trebui să fie cu 6-8" mai înalte decât înălțimea ta. Vâssele pentru caiac depind de lățimea bărcii și lungimea trunchiului. Forma paletei: palele diedrale merg drept, paletele plate oferă mai multă prindere. Materialul tijei: carbonul este cel mai ușor, fibra de sticlă este cea mai bună valoare, aluminiul este accesibil.',
+      title: 'How to Choose the Right SUP Paddle',
+      description: 'A guide to paddle materials, blade shapes, shaft types, and sizing for stand-up paddle boarding.',
+      tldr: 'Paddle length: SUP paddles should be 6-8" taller than your height. Blade shape: dihedral blades track straight, flat blades offer more catch. Shaft material: carbon is lightest, fiberglass is best value, aluminum is budget.',
       problem:
-        'Folosirea unei palete sau a materialului nepotrivit cauzează oboseală inutilă, eficiență slabă a cursei și întindere articulară.',
+        'Using the wrong paddle size or material causes unnecessary fatigue, poor stroke efficiency, and joint strain.',
       solution:
-        'Potrivește lungimea paletei, forma lamei, materialul tijei și flexibilitatea cu stilul tău de vâslit, dimensiunea corpului și bugetul tău.',
-      audience: 'SUP și vâslașii de caiac, alegând prima sau următoarea vâslă.',
+        'Match paddle length, blade shape, shaft material, and flex to your paddling style, body size, and budget.',
+      audience: 'SUP paddlers choosing their first or next paddle.',
       steps: [
-        'PentruSUP: măsoară înălțimea vâslei — cu 6-8" mai mare decât înălțimea ta pentru vâslit general',
-        'Pentru caiac: măsoară lungimea trunchiului și lățimea bărcii — bărcile mai înguste au nevoie de vâsle mai scurte',
-        'Alege materialul lamei — nylon pentru buget, fibră de sticlă pentru raport calitate-preț, carbon pentru performanță',
-        'Alege forma lamei — diedru pentru traseu neted, plat pentru putere, linguriță pentru curse',
-        'Alege tipul de ax — drept pentru SUP, îndoit pentru SUPcurse, standard pentru caiac',
-        'Verifică flexiunea — arborii mai rigizi transferă mai multă putere, arborii flexibili reduc tensiunea articulației',
+        'For SUP: measure paddle height — 6-8" taller than your height for general paddling',
+        'Adjust for board width — wider boards call for a slightly longer paddle',
+        'Choose blade material — nylon for budget, fiberglass for value, carbon for performance',
+        'Choose blade shape — dihedral for smooth tracking, flat for power, spoon for racing',
+        'Choose shaft type — straight for general paddling, bent for racing',
+        'Check flex — stiffer shafts transfer more power, flexible shafts reduce joint strain',
       ],
       faq: [
         {
-          q: 'Care este cel mai bun material pentru vâsle?',
-          a: 'Fibra de sticlă oferă cel mai bun echilibru între greutate, durabilitate și cost. Carbonul este mai ușor, dar mai scump și fragil. Nylonul este greu, dar practic indestructibil.',
+          q: 'What is the best paddle material?',
+          a: 'Fiberglass offers the best balance of weight, durability, and cost. Carbon is lighter but more expensive and brittle. Nylon is heavy but virtually indestructible.',
         },
         {
-          q: 'Cum știu dacă vâsla mea are lungimea potrivită?',
-          a: 'Pentru SUP: ridicați vâsla vertical lângă dumneavoastră — mânerul ar trebui să ajungă la încheietura mâinii atunci când brațul este ridicat deasupra capului. Pentru caiac: lama ar trebui să intre în apă la un unghi confortabil, fără a ajunge prea departe.',
+          q: 'How do I know if my paddle is the right length?',
+          a: 'Stand the paddle vertically next to you — the handle should reach your wrist when your arm is raised overhead.',
         },
         {
-          q: 'Ar trebui să iau o vâslă dintr-o singură bucată sau reglabilă?',
-          a: 'Vâslele reglabile sunt bune pentru utilizare comună și călătorii. Vâslele dintr-o singură bucată sunt mai ușoare, mai rigide și mai eficiente pentru utilizare dedicată.',
+          q: 'Should I get a one-piece or adjustable paddle?',
+          a: 'Adjustable paddles are good for shared use and travel. One-piece paddles are lighter, stiffer, and more efficient for dedicated use.',
         },
       ],
     },
     'sup-with-kids': {
-      title: 'SUP cu copii: Un ghid complet pentru familie',
-      description:
-        'Cum să luați copiii la paddle boarding în siguranță — recomandări pe vârste, echipament și activități.',
-      tldr: 'Copiii 6+ pot călători pe un SUP alături de un adult. Copiii 10+ pot vâsli pe propria placă sub supraveghere. Folosiți o placă lată și stabilă, purtați întotdeauna veste de salvare, rămâneți în apă puțin adâncă și calmă și mențineți sesiunile scurte (maxim 30-45 de minute).',
+      title: 'SUP with Kids: A Complete Family Guide',
+      description: 'How to safely take children paddle boarding — age recommendations, equipment, and activities.',
+      tldr: 'Children 6+ can ride on a SUP with an adult. Children 10+ can paddle their own board with supervision. Use a wide stable board, always wear PFDs, stay in shallow calm water, and keep sessions short (30-45 minutes max).',
       problem:
-        'Părinții doresc să împărtășească sporturi acvatice cu copiii, dar se îngrijorează de siguranță, potrivirea echipamentului și menținerea interesului copiilor.',
+        'Parents want to share water sports with their kids but worry about safety, equipment fit, and keeping children engaged.',
       solution:
-        'Folosiți mărimea corectă a plăcii pentru mersul în tandem, asigurați-vă că fiecare copil poartă un PFD bine ajustat, începeți în apă puțin adâncă și caldă și faceți-l distractiv cu jocuri și sesuni scurte.',
-      audience: 'Părinți care doresc să-i inițieze pe copii în paddle boarding.',
+        'Use the right board size for tandem riding, ensure every child wears a properly fitted PFD, start in shallow warm water, and make it fun with games and short sessions.',
+      audience: 'Parents who want to introduce their children to paddle boarding.',
       steps: [
-        'Vârsta 4-6: călătoriți ca pasager pe placa unui adult — stați în față, țineți de mânerul central',
-        'Vârsta 6-10: îngenuncheați sau stați pe propria placă sub supraveghere adultă și cu lesă',
-        'Vârsta 10+: vâsliți pe propria placă sub supraveghere adultă în apropiere',
-        'Purtați întotdeauna un PFD — copiii trebuie să poarte o vestă de salvare bine ajustată în permanență',
-        'Rămâneți în apă puțin adâncă (la talie pentru adult)',
-        'Mențineți sesiunile scurte — maxim 30-45 de minute pentru copiii sub 10 ani',
-        'Faceți-l distractiv — jucați jocuri, căutați pești, exersați să vă ridicați în picioare',
+        "Age 4-6: ride as a passenger on an adult's board — sit in front, hold onto the center handle",
+        'Age 6-10: kneel or sit on their own board with adult supervision and a leash',
+        'Age 10+: paddle their own board with adult supervision nearby',
+        'Always wear a PFD — children must wear a properly fitted life vest at all times',
+        'Stay in shallow water (waist-deep for the adult)',
+        'Keep sessions short — 30-45 minutes max for children under 10',
+        'Make it fun — play games, look for fish, practice standing up',
       ],
       faq: [
         {
-          q: 'La ce vârstă poate un copil să SUP singur?',
-          a: 'În jurul vârstei de 10-12 ani sub supraveghere, în funcție de abilitățile de înot și confortul copilului în apă. Întotdeauna în condiții de apă calmă și puțin adâncă.',
+          q: 'At what age can a child SUP alone?',
+          a: "Around age 10-12 with supervision, depending on the child's swimming ability and comfort in water. Always in calm, shallow conditions.",
         },
         {
-          q: 'Ce placă este cea mai bună pentru SUP cu copii?',
-          a: 'O placă lată (34"+) cu capacitate mare de greutate pentru mersul în tandem. Lățimea de 33" și capacitatea de 220 lb a SUP Explorer 11 funcționează bine pentru părinți plus copil.',
+          q: 'What board is best for SUP with kids?',
+          a: 'A wide board (34"+) with high weight capacity for tandem riding. The SUP Explorer 11\'s 33" width and 220 lb capacity works well for parent-plus-child.',
         },
         {
-          q: 'Ce echipament de siguranță au nevoie copiii?',
-          a: 'O vestă de salvare certificată CE bine ajustată, o lesă (atașată la placa adultului pentru tandem), cremă de protecție solară și o pălărie.',
-        },
-      ],
-    },
-  },
-  sk: {
-    'how-to-choose-your-sup': {
-      title: 'Ako si vybrať SUP svoju dosku',
-      description:
-        'Kompletný sprievodca výberom správneho paddleboardu na stoje podľa vašej úrovne zručností, podmienok vody a zamýšľaného využitia.',
-      tldr: 'Vyberte si SUP podľa úrovne zručností, typu vody a hlavného využitia. Univerzálne dosky sú vhodné pre začiatočníkov a pokojnú vodu. Turistické dosky sú vhodné na dlhé pádlovanie. Jogové dosky ponúkajú väčšiu šírku pre stabilitu. Výkonnostné dosky sú vhodné pre skúsených pádlujúcich v rôznych podmienkach.',
-      problem:
-        'Väčšina prvých kupujúcich SUP si vyberá dosku podľa ceny alebo vzhľadu, nie podľa toho, ako a kde budú pádlovať. To vedie k nízkej stabilite, nedostatočnému výkonu a frustrujúcej skúsenosti.',
-      solution:
-        'Prispôsobte tvar, objem a konštrukciu svojej dosky svojej úrovni zručností a hlavnému vodnému prostrediu. Širšie dosky (32-34") ponúkajú stabilitu pre začiatočníkov. Dlhšie dosky (12-14") sú vhodnejšie na túrovanie.Drop-stitch Konštrukcia vo veku 12-15 PSI poskytuje tuhosť porovnateľnú s tvrdými doskami.',
-      audience: 'SUP Prví kupujúci, rekreační pádlari a každý, kto prechádza z obyčajnej dosky.',
-      steps: [
-        'Vyberte si svoje hlavné prostredie na pádlovanie — jazero, oceán, rieku alebo zmiešané prostredie',
-        'Prispôsobte šírku dosky svojej úrovni: 32-34" pre začiatočníkov, 30-32" pre stredne pokročilých, 28-30" pre pokročilých',
-        'Dĺžku dosky vyberte podľa použitia: kratšia pre manévrovateľnosť, dlhšia pre sledovanie a rýchlosť',
-        'Vybraná konštrukcia: nafukovacie drop-stitch pre prenosnosť, tvrdá doska pre maximálny výkon',
-        'Overte si nosnosť — vaša hmotnosť plus výbava by nemali presiahnuť 80 % limitu dosky',
-        'Skontrolujte priložené príslušenstvo: pumpa, vodítko, plutva, batoh a opravná súprava',
-      ],
-      faq: [
-        {
-          q: 'Aká SUP šírka je najlepšia pre začiatočníkov?',
-          a: 'Šírka 32 až 34 palcov poskytuje najstabilnejšiu platformu na učenie. SUP Explorer 11 so šírkou 33" je ideálny pre začiatočníkov na pokojnej vode.',
-        },
-        {
-          q: 'Nafukovacie alebo SUP tvrdé dosky?',
-          a: 'Nafukovacie dosky ponúkajú prenosnosť, pohodlie skladovania a tlmenie nárazov. Tvrdé dosky ponúkajú maximálnu tuhosť a rýchlosť. Pre väčšinu rekreačných používateľov je praktickou voľbou kvalitná nafukovacia doska s drop-stitch jadrom.',
-        },
-        {
-          q: 'Na čo PSI by som mal nafúknuť?',
-          a: 'Paddle Board Overstock Dosky odporúčajú 12-15PSI. Pri 15 PSI dosahuje doska maximálnu tuhosť porovnateľnú s tvrdou doskou. Vždy zostaňte v rámci menovitého tlakového rozsahu vytlačeného na doske.',
-        },
-      ],
-    },
-    'beginner-guide': {
-      title: 'Začiatočnícky sprievodca paddleboardingom',
-      description:
-        'Všetko, čo potrebujete vedieť pred prvou jazdou na paddleboarde — od nastavenia výbavy až po základné techniky pádlovania.',
-      tldr: 'Začnite na pokojnej, pokojnej vode so širokou stabilnou doskou. Nafúknite na 12-15, PSIpripevnite vodítko a použite správnu dĺžku pádla (o 6-8" vyššie ako vaša výška). Držte postoj na šírku ramien, kolená mierne pokrčené a pozerajte sa na horizont.',
-      problem:
-        'Noví pádlari často vynechávajú základnú prípravu — nesprávnu dĺžku pádla, zlý postoj alebo voľbu rozbúrenej vody — čo vedie k pádom, frustrácii a sklamaniu.',
-      solution:
-        'Dodržiavajte štruktúrovaný plán na prvú lekciu: vyberte si pokojnú vodu, správne si nastavte výstroj, trénujte kľačanie pred postavením a osvojte si pohyb vpred pred zákrutami.',
-      audience: 'Absolútni začiatočníci, ktorí nikdy predtým nepaddleboardovali.',
-      steps: [
-        'Vyberte si pokojnú, pokojnú vodu bez lodnej dopravy — ideálne je malé jazero alebo chránená zátoka',
-        'Nafúkni dosku na 12-15 PSI pomocou dvojčinného čerpadla',
-        'Pripevnite vodítko na členok alebo lýtko, nikdy na rukoväť dosky',
-        'Vlož plutvu a dotiahni skrutku',
-        'Upravte dĺžku pádla — mala by byť o 6-8 palcov vyššia ako vaša výška',
-        'Začni kľačať na doske, pádluj niekoľko ťahov, aby si cítil rovnováhu',
-        'Postavte sa po jednej nohe, nohy na šírku ramien, kolená mäkké',
-        'Pozeraj sa na horizont, nie na nohy — tvoja doska ide tam, kam sa pozeráš',
-      ],
-      faq: [
-        {
-          q: 'Čo by som si mal obliecť na paddleboarding?',
-          a: 'Rýchloschnúce športové oblečenie, záchranná vesta, opaľovací krém a klobúk. V studenej vode noste neoprén. Vždy noste vodítko a majte telefón v nepremokavom puzdre.',
-        },
-        {
-          q: 'Ako sa dostanem späť na dosku, ak spadnem?',
-          a: 'Zostaňte pokojní. Plávajte k doske, chyťte stredovú rukoväť a kopnite nohami, pričom sa v jednom pohybe vytiahnete na dosku. Najprv sa vráťte do kľačacej polohy, potom sa postavte.',
-        },
-        {
-          q: 'Aké veterné podmienky sú bezpečné?',
-          a: 'Začiatočník: vietor pod 10 mph (5 uzlov). Ak vietor fúka od brehu, nechoďte von. Skontrolujte predpoveď a uvedomte si, že veterný prúd z pobrežia je nebezpečný.',
-        },
-      ],
-    },
-    'safety-tips': {
-      title: 'Tipy na bezpečnosť pri vodných športoch',
-      description:
-        'Základné bezpečnostné pokyny pre paddleboarding, kajakovanie a člnkovanie — od kontroly vybavenia až po povedomie o počasí.',
-      tldr: 'Vždy noste -CEcertifikovanú záchrannú vestu, pred štartom skontrolujte počasie a vodné podmienky, noste komunikačné zariadenia, nikdy nepádlujte sami v neznámej vode a poznajte hodnotené limity svojho vybavenia.',
-      problem:
-        'Väčšina nehôd pri vodných športoch vzniká v dôsledku nedostatočnej prípravy — bez záchrannej vesty, ignorovania výstrah pred počasím alebo používania vybavenia nad rámec jeho konštrukčných limitov.',
-      solution:
-        'Dodržiavajte bezpečnostný kontrolný zoznam pred štartom: overte stav vybavenia, skontrolujte počasie a teplotu vody, informujte niekoho o svojej trase a vždy noste vhodné plávacie výstroje.',
-      audience: 'Všetci účastníci vodných športov — SUPkajak, čln a RIB používatelia.',
-      steps: [
-        'Skontrolujte predpoveď počasia — vyhnite sa vetrom nad 15 mph a búrkam',
-        'Skontrolujte teplotu vody — studená voda (60°F/15°C) vyžaduje neoprén alebo suchý oblek',
-        'Skontrolujte vybavenie — skontrolujte úniky, praskliny a správne nafukovanie',
-        'Noste vždy -CEcertifikovanú záchrannú vestu',
-        'Pripevnite vodítko (SUP) alebo upevnite všetku voľnú výbavu (kajak/loď)',
-        'Podajte plán na plávanie — povedzte niekomu, kam idete a kedy sa vrátite',
-        'Prenášajte komunikáciu — vodotesné obal na telefón alebo VHF rádio',
-        'Poznajte svoje limity — zostaňte v rámci svojich zručností a hodnotení vybavenia',
-      ],
-      faq: [
-        {
-          q: 'Potrebujem na to záchrannú vestuSUP?',
-          a: 'Áno. Mnohé jurisdikcie zákonne vyžadujú záchrannú vestu na každom vodnom skútre, vrátane SUPs. Aj tam, kde nie je povinná, je -CEcertifikovaná záchranná vesta nevyhnutným bezpečnostným vybavením.',
-        },
-        {
-          q: 'Aké je najčastejšie zranenie spôsobené vodnými športmi?',
-          a: 'Ponorenie do studenej vody a vyčerpanie sú najčastejšími vážnymi rizikami. Vždy sa obliekajte podľa teploty vody, nie podľa teploty vzduchu.',
-        },
-        {
-          q: 'Ako si overím, či sú podmienky bezpečné?',
-          a: 'Používajte námorné predpovede počasia. Skontrolujte rýchlosť vetra, výšku vĺn a teplotu vody. Začiatočníci by mali zostať v podmienkach pri vetre 10 mph a vlnách pod 1 stopu.',
-        },
-      ],
-    },
-    'inflatable-vs-hard': {
-      title: 'Nafukovacie SUP vs tvrdé dosky: Ktoré by ste si mali vybrať?',
-      description:
-        'Objektívne porovnanie nafukovacích a tuhých SUP dosiek pokrývajúce výkon, prenosnosť, odolnosť a hodnotu.',
-      tldr: 'Nafukovacie dosky vyhrávajú v prenosnosti, úložnom priestore a odolnosti voči nárazom. Tvrdé dosky vyhrávajú v maximálnej tuhosti a rýchlosti. Moderné drop-stitch nafukovacie dosky s hodnotou 15 dosahujú PSI 90 % výkonnostného rozdielu.',
-      problem:
-        'Kupujúci sú rozpoltení medzi pohodlím nafukovacích dosiek a výkonnostnou povesťou tvrdých dosiek, bez jasných údajov o ich skutočnom porovnaní.',
-      solution:
-        'Porovnajte konkrétne kritériá — tuhosť, hmotnosť, veľkosť balenia, odolnosť, opravu a cenu — s vaším skutočným spôsobom používania. Pre väčšinu rekreačných pádlovačov je kvalitná nafukovacia plošina lepšou voľbou.',
-      audience: 'SUP Kupujúci sa rozhodujú medzi nafukovacou a tuhou konštrukciou.',
-      steps: [
-        'Zhodnoťte potreby prenosnosti — nafukovacie batohy na veľkosť batoho, tvrdá doska vyžaduje strešný nosič',
-        'Porovnajte tuhosť — nafukovací pri 15 rokoch PSI má minimálnu pružnosť, tvrdá doska nemá žiadnu pružnosť',
-        'Zhodnoťte skladovanie — nafukovacie sklady v skrini, tvrdá doska vyžadujú garážový alebo regálový priestor',
-        'Zvážte odolnosť — nafukovací panel absorbuje nárazy, tvrdá doska môže byť preliačená a praskajúca',
-        'Oprava faktorov — nafukovacie záplaty sú jednoduché, opravy tvrdých dosiek vyžadujú profesionálnu prácu',
-        'Skontrolujte výkon — tvrdé dosky majú miernu výhodu v rýchlosti, nafukovacie dosky lepšie tlmia nárazy',
-      ],
-      faq: [
-        {
-          q: 'Sú nafukovacie dosky SUPs také pevné ako tvrdé dosky?',
-          a: 'Vo veku 15 rokov PSI a drop-stitch pri konštrukcii je rozdiel v tuhosti minimálny pre rekreačné použitie. Len súťažní pretekári a surfisti si tento rozdiel všimnú.',
-        },
-        {
-          q: 'Ako dlho vydrží nafukovací prístroj SUP ?',
-          a: 'Pri správnej starostlivosti 5-10 rokov. Odolné voči PVC UV opotrebovaniu a oderu pre námornú kvalitu. Skladujte mimo priameho slnečného svetla, keď sa nepoužívate, a po použití v slanej vode preplachujte čerstvou vodou.',
-        },
-        {
-          q: 'Môžem použiť nafukovaciu plošinu SUP na surfovanie?',
-          a: 'Áno, ale nafukovacie dosky sú najlepšie na malé až stredné vlny (pod 3 stopy). Na špecializované surfovanie poskytuje tvrdá doska lepšiu odozvu a lepšiu odozvu na koľajnici.',
-        },
-      ],
-    },
-    'weather-conditions': {
-      title: 'Pochopenie poveternostných podmienok pre paddleboarding',
-      description:
-        'Naučte sa čítať vietor, vlny, prílivy a poveternostné vzory, aby ste mohli robiť bezpečné rozhodnutia na vode.',
-      tldr: 'Pred každým štartom skontrolujte tri veci: rýchlosť vetra (pod 10 mph pre začiatočníkov), výšku vĺn (pod 1 stopu pre začiatočníkov) a teplotu vody (obliekajte sa na vodu, nie na vzduch). Offshore vietor je nebezpečný na akejkoľvek úrovni zručnosti.',
-      problem:
-        'Väčšina nehôd spôsobených počasím vzniká, pretože pádlari nesprávne odhadujú podmienky — kontrolujú teplotu vzduchu, ale nie teplotu vody, alebo nechápu, že vietor z pobrežia ich môže odfúknuť do mora.',
-      solution:
-        'Použite štruktúrované hodnotenie počasia pred štartom: smer a rýchlosť vetra, doba a výška vlny, prílivový stav a teplota vody. Pochopte, ako každý faktor ovplyvňuje vašu bezpečnosť.',
-      audience: 'Všetci pádlovači, ktorí chodia na otvorenú vodu — jazerá, zátoky, rieky a oceán.',
-      steps: [
-        'Skontrolujte rýchlosť a smer vetra — vietor z pobrežia (fúkajúci zo zeme na more) je najnebezpečnejší',
-        'Zhodnoťte podmienky vĺn — obdobie vlny je rovnako dôležité ako výška vlny',
-        'Poznajte príliv — prílivové prúdy môžu byť silnejšie než rýchlosť pádlovania',
-        'Meranie teploty vody — pod 60°F/15°C vyžaduje tepelnú ochranu',
-        'Skontrolujte viditeľnosť — hmla a silný dážď znižujú viditeľnosť a zvyšujú riziko kolízie',
-        'Pochopte miestne nebezpečenstvá — ponorené skaly, silné prúdy, zóny lodnej dopravy',
-      ],
-      faq: [
-        {
-          q: 'Aká rýchlosť vetra je pre ňu príliš vysokáSUP?',
-          a: 'Začiatočníci: nad 10 mph (8 uzlov). Stredne pokročilí: nad 15 mph (13 uzlov). Pokročilí: nad 20 mph (17 uzlov). Ak si nie ste istí, nechoďte von.',
-        },
-        {
-          q: 'Čo znamená vlnové obdobie?',
-          a: 'Vlnová perióda je čas medzi po sebe nasledujúcimi vlnami. Krátke obdobia (pod 8 sekúnd) znamenajú strmé, trhané vlny. Dlhé obdobia (nad 12 sekúnd) znamenajú hladšie a predvídateľnejšie vlny.',
-        },
-        {
-          q: 'Môžem pádlovať v daždi?',
-          a: 'Slabý dážď je zvyčajne bezpečný. Silný dážď znižuje viditeľnosť a môže naznačovať meniace sa veterné podmienky. Búrky vyžadujú okamžité evakuovanie z vody.',
-        },
-      ],
-    },
-    'understanding-specs': {
-      title: 'Ako čítať SUP špecifikácie dosiek',
-      description:
-        'Technický sprievodca pochopením SUP špecifikácií dosiek — objem, rozmery, konštrukcia a ich význam pre výkon.',
-      tldr: 'Kľúčové špecifikácie: objem (litre) určuje vztlak a nosnosť, šírka stabilitu, dĺžka určuje sledovanie a rýchlosť, hrúbka určuje tuhosť a PSI hodnotenie určuje tlak nafukovania pre optimálny výkon.',
-      problem:
-        'Špecifikácie produktu uvádzajú čísla bez kontextu, čo necháva kupujúcich neistých, ktoré špecifikácie sú pre ich použitie skutočne dôležité.',
-      solution:
-        'Preložte každú špecifikáciu do reálneho výkonu: objem pre plávanie, šírka pre stabilitu, dĺžka pre kĺzanie, hrúbka pre tuhosť a konštrukcia pre odolnosť.',
-      audience: 'Stredne pokročilí pádlovníci a technickí nákupcovia, ktorí chcú robiť rozhodnutia založené na dátach.',
-      steps: [
-        'Skontrolujte objem (litre) — vaša hmotnosť plus vybavenie by nemali presiahnuť 80 % objemového hodnotenia dosky',
-        'Šírka kontrolky — širšia (32-34") = viac stability, užšie (28-30") = vyššia rýchlosť',
-        'Dĺžka šaku — dlhšia (12-14") = lepšie sledovanie, kratšie (10-11") = lepšia manévrovateľnosť',
-        'Kontrola hrúbky — 6" je štandard, 8" ponúka väčšiu tuhosť a nosnosť',
-        'Skontrolujte PSI hodnotenie — nafúknite na maximálny výkon PSI pre optimálnu tuhosť',
-        'Skontrolujte stavebné materiály — drop-stitch hustotu, PVC vrstvy, výstuž koľajníc',
-      ],
-      faq: [
-        {
-          q: 'Čo to drop-stitch znamená?',
-          a: 'Drop-stitch je stavebná metóda, pri ktorej tisíce závitov spájajú hornú a spodnú vrstvu dosky. To umožňuje vysokotlakové nafukovanie (12-15PSI) pre extrémnu tuhosť.',
-        },
-        {
-          q: 'Aký je ideálny pomer hmotnosti k objemu?',
-          a: 'Dobrým cieľom je približne 5-6 libier hmotnosti jazdca na liter objemu dosky. Pádlujúci vážiaci 220 libier by mal hľadať dosky s objemom 180+ litrov.',
-        },
-        {
-          q: 'Záleží na hmotnosti dosky?',
-          a: 'Áno. Ľahšie dosky (pod 20 libier) sa ľahšie prenášajú a prepravujú. Ťažšie dosky (25+ libier) často znamenajú PVC odolnejšiu viacvrstvovú konštrukciu.',
-        },
-      ],
-    },
-    'sup-maintenance': {
-      title: 'Ako vyčistiť a skladovať svoju nafukovaciu plošinu SUP',
-      description: 'Krok za krokom návod na údržbu na maximalizáciu životnosti vašej SUP nafukovacej dosky.',
-      tldr: 'Po každom použití opláchnite čerstvou vodou, pred skladovaním úplne vysušte, voľne vyfúknite a rolujte (nie vojensky tesné), skladujte na chladnom a suchom mieste mimo priameho slnečného žiarenia a mesačne kontrolujte spoje.',
-      problem:
-        'Nesprávne skladovanie a čistenie sú hlavnými príčinami predčasného zlyhania nafukovacích zariadení SUPs — plesne, UV poškodenie a delaminácia švu.',
-      solution:
-        'Dodržiavajte pravidelnú rutinu po tréningu: opláchnite, osušte, skontrolujte, vyfúknite a uskladnite. Používajte jemné mydlo na tvrdohlavú špinu. Nikdy neskladujte dosku mokrú alebo na priamom slnku.',
-      audience: 'Všetci majitelia nafukovacích zariadení SUP , ktorí chcú, aby ich doska vydržala 5+ rokov.',
-      steps: [
-        'Ihneď po použití opláchnite dosku čerstvou vodou, najmä po slanej vode',
-        'Čistite jemným mydlom a mäkkou špongiou — vyhnite sa drsným chemikáliám alebo vysokotlakovým čističom',
-        'Dosku úplne vysušte — otvorte ventil, aby mohla uniknúť zachytená voda',
-        'Skontrolujte poškodenie — skontrolujte spoje, ventil a povrch na prepichnutie',
-        'Úplné vyfúkanie — odstránenie jadra ventilu pre úplnú deflaciu',
-        'Rolujte dosku voľne — začnite od nosa, vyhnite sa tesným záhybom',
-        'Skladujte ich v taške na chladnom a suchom mieste, mimo priameho slnečného svetla',
-      ],
-      faq: [
-        {
-          q: 'Môžem nechať svoje SUP nafúknuté počas celej sezóny?',
-          a: 'Áno, ale držte ho mimo priameho slnečného svetla, keď sa nepoužíva. Pri dlhšom skladovaní sa odporúča čiastočná deflácia (8-10PSI).',
-        },
-        {
-          q: 'Ako opravím defekt?',
-          a: 'Vyčistite miesto, vyrežte záplatu s zaoblenými rohmi, naneste lepidlo, pevne pritlačte a počkajte 24 hodín pred nafúkaním.Paddle Board Overstock Dosky obsahujú opravárenskú súpravu.',
-        },
-        {
-          q: 'Ako často by som mal kontrolovať ventil?',
-          a: 'Mesačne. Ventil je najčastejším miestom zlyhania. Skontrolujte, či sa kolík ventilu voľne pohybuje a O-krúžok je neporušený.',
-        },
-      ],
-    },
-    'paddling-techniques': {
-      title: 'Základné SUP techniky pádlovania',
-      description:
-        'Ovládnite predný záber, zametový záber a otočku s kušou, aby ste mohli efektívne pádlovať za akýchkoľvek podmienok.',
-      tldr: 'Predný ťah využíva stred tela, nie ruky. Záhadný pohyb otáča dosku. Otočka kušou je najefektívnejší pivot. Držte pádlo vertikálne a úplne ponorte čepeľ pre maximálny prenos sily.',
-      problem:
-        'Väčšina pádlovačov používa zábery dominantné rukou, ktoré plytvajú energiou a spôsobujú únavu ramien. Zlá technika tiež sťažuje ovládanie dosky vo vetre a rozkolísanosti.',
-      solution:
-        'Naučte sa tri základné zábery — vpred, zametanie a otoč s kušou — s správnou mechanikou tela. Každý si precvičujte na pokojnej vode predtým, než prejdete do náročnejších podmienok.',
-      audience: 'Pádlovači, ktorí chcú pádlovať dlhšie, rýchlejšie a s menšou únavou.',
-      steps: [
-        'Pohyb vpred: natiahnuť sa dopredu, čepeľ úplne zapreť, stiahnuť dozadu pomocou rotácie trupu (nie rúk), vystúpiť pri členku',
-        'Sweep záber: natiahni sa dopredu pri koľajnici, roztoč čepeľ v širokom oblúku smerom k chvostu, otoč dosku od strany pádla',
-        'Otočka v kuši: položte pádlo na opačnú stranu dosky bez výmeny rúk, ťahajte smerom k chvostu',
-        'Výstuha: použite nízku výstuhu pre stabilitu pri sekaní — čepeľ pritlačte na hladinu vody',
-        'Ťah: natiahni sa do strany, potiahni dosku bočne smerom k pádlu',
-      ],
-      faq: [
-        {
-          q: 'Ako pádlovať v priamke?',
-          a: 'Používajte konzistentnú dĺžku ťahu na oboch stranách. Striedajte strany každých 5-10 ťahov. Pozrite sa na pevný bod na horizonte ako referenciu.',
-        },
-        {
-          q: 'Mám si pokrčiť kolená?',
-          a: 'Áno. Maj mierne ohnuté kolená ako tlmiče nárazov. Zamknuté kolená prenášajú každú vlnku do stredu tela a znižujú stabilitu.',
-        },
-        {
-          q: 'Ako pádlovať proti vetru?',
-          a: 'Znížte postoj, používajte kratšie a rýchlejšie zábery a držte sa bližšie k brehu, kde je vietor často slabší. Ak je vietor príliš silný, nechoďte von.',
-        },
-      ],
-    },
-    'sup-fitness': {
-      title: 'SUP Kondícia: Celotelový tréning na vode',
-      description: 'Ako stand-up paddleboarding buduje silu jadra, rovnováhu a kardiovaskulárnu kondíciu.',
-      tldr: 'SUP Pri každom zábere zapája stred tela, nohy, chrbát a ramená. Hodinové cvičenie spáli 300-500 kalórií. Pádlovanie proti vetru alebo prúdu zdvojnásobuje intenzitu.SUP Joga pridáva flexibilitu a tréning rovnováhy.',
-      problem:
-        'Mnohí ľudia vnímajú paddleboarding skôr ako neformálnu aktivitu než ako legitímny fitness nástroj, pričom im chýba jeho potenciál pre celotelovú kondíciu.',
-      solution:
-        'SUP Štruktúrujte tréningy s konkrétnymi fitness cieľmi: vytrvalostné pádlovanie pre kardio, intervalové šprinty pre silu, SUP joga pre flexibilitu a vytrvalostné pádlovanie pre svalovú vytrvalosť.',
-      audience: 'Fitness nadšenci, ktorí hľadajú nenáročný a intenzívny celotelový tréning.',
-      steps: [
-        'Rozcvička na súši — kruhy rukami, otočky trupu a hojdanie nôh po dobu 5 minút',
-        'Začnite s 10 minútami rovnomerného pádlovania s miernou intenzitou',
-        'Postup k intervalovému tréningu — 2 minúty tvrdého pádlovania, 2 minúty ľahkej regenerácie',
-        'Zahrňte SUP na tabuľu jogové pozície — psa dole, bojovníka II a stromovú pozíciu',
-        'Ochladiť sa jemným pádlovaním a statickými natiahnutiami na doske',
-      ],
-      faq: [
-        {
-          q: 'Je SUP lepšie ako behať kvôli kondícii?',
-          a: 'SUP Poskytuje porovnateľné kardiovaskulárne výhody s nižším zaťažením kĺbov. Tiež viac zapája hornú časť tela a jadro ako beh.',
-        },
-        {
-          q: 'Koľko kalórií spáli SUP ?',
-          a: 'Približne 300-500 kalórií za hodinu pri strednej intenzite. Pretekanie alebo pádlovanie proti vetru môže spáliť 600-800 kalórií za hodinu.',
-        },
-        {
-          q: 'Môžem si vybudovať svaly z SUP?',
-          a: 'Áno. Pádlovanie buduje svaly ramien, chrbta a stredu tela. Vyvažovanie zapája nohy a stabilizačné svaly. Je to odporový tréning celého tela.',
-        },
-      ],
-    },
-    'sup-yoga': {
-      title: 'SUP Joga: Kompletný sprievodca pádlovaním a jogou',
-      description: 'Spojte paddleboarding s jogou pre lepšiu rovnováhu, silu a všímavosť na vode.',
-      tldr: 'SUP Joga pridáva prvok nestability, ktorý dramaticky zvyšuje aktiváciu stredu tela v porovnaní s jogou na zemi. Začnite so základnými pozíciami na širokej, stabilnej doske v pokojnej vode. Používajte protišmykovú podložku na palubu. Nikdy necvičte SUP jogu sami.',
-      problem:
-        'Tradičné jogové podložky poskytujú dokonale stabilný povrch, čím odstraňujú rovnováhu, ktorá robí SUP jogu jedinečne účinnou pre silu stredu tela a sústredenie.',
-      solution:
-        'Používajte SUP extra širokú dosku (34") +s trakčnou podložkou na celú palubu. Trénujte v pokojnej, plytkej vode. Začnite s pozíciami základu predtým, než sa pokúsite o inverzie.',
-      audience: 'Praktikujúci jogy a pádlujúci, ktorí chcú spojiť tréning rovnováhy s všímavosťou.',
-      steps: [
-        'Dosku ukotvte v plytkej, pokojnej vode — použite pieskovú kotvu alebo priviažte k mólu',
-        'Začnite s pozíciami v sede — pohodlné sedenie, pozícia lode, otočka v sede',
-        'Postup k kľačiacim pozíciám — stôl, mačka-krava, blesk',
-        'Prejdite do stojacích póz — hora, bojovník I, bojovník II, stromová pozícia',
-        'Precvičujte si vyvážené pozície — polmesiac, orol, tanečník',
-        'Zakončite savasanou — ľahnite si na dosku, cíťte pohyb vody',
-      ],
-      faq: [
-        {
-          q: 'Ktorá doska je najlepšia na SUP jogu?',
-          a: 'Široká doska (34") +s trakčnou podložkou po celej dĺžke poskytuje najstabilnejšiu platformu. SUP Tour 12 ponúka dobrú rovnováhu medzi stabilitou a kĺzavosťou.',
-        },
-        {
-          q: 'Je SUP joga nebezpečná?',
-          a: 'Nie viac ako jogu na pevnine, ak sa praktizuje bezpečne. Používajte pokojnú, plytkú vodu. Noste vodítko. Cvičte s partnerom. Vyhýbajte sa hlbokej vode počas prvých tréningov.',
-        },
-        {
-          q: 'Potrebujem špeciálne vybavenie?',
-          a: 'Široká stabilná doska, trakčná podložka na celú palubu, vodítko a PFD. Niektorí cvičenci používajú nepremokavú podložku pre lepšiu priľnavosť.',
-        },
-      ],
-    },
-    'sup-fishing': {
-      title: 'SUP Rybársky sprievodca: Ako rybárčiť na paddleboarde',
-      description:
-        'Všetko, čo potrebujete vedieť o rybolove na paddleboarde — nastavenie výstroja, tipy na stabilitu a techniky.',
-      tldr: 'SUP Rybolov ponúka tichý prístup, prístup do plytkej vody a 360-stupňové nahadzovanie. Použite širokú stabilnú dosku (34"), +pripevnite držiaky na prúty a použite chladiaci box alebo debnu ako palubu na vybavenie. Kotviace v veterných podmienkach. Vždy noste .PFD',
-      problem:
-        'Štandardné rybárske lode sú drahé na údržbu a nemajú prístup do plytkej vody. Kajaky obmedzujú pohyblivosť.SUP Rybolov rieši oba problémy, ale vyžaduje špecifické úpravy výstroja.',
-      solution:
-        'Vybavte stajňu SUP držiakmi na prúty, bednou na vybavenie a kotviacim systémom. Využite prenosnosť dosky na prístup k odľahlým rybárskym miestam, kam sa lode nedostanú.',
-      audience:
-        'Rybári, ktorí chcú loviť v plytkých vodách, odľahlých lokalitách alebo preferujú ľahkú, prenosnú rybársku platformu.',
-      steps: [
-        'Vyberte širokú dosku (34") +s vysokou nosnosťou pre výstroj',
-        'Namontujte držiaky prútov na palubu pomocou systémov upevnených na koľajnici alebo prídavných systémov',
-        'Použite nepremokavú prepravku alebo chladiaci box pripevnený na prednej palube na vybavenie',
-        'Pre veterné podmienky si vezmite malú kotvu alebo vystreľovaciu tyč',
-        'Noste PFD vrecká na náradie a telefón',
-        'Precvičujte hádzanie z kľačiacej pozície pred postavením sa',
-      ],
-      faq: [
-        {
-          q: 'Môžem stáť a rybárčiť SUPna ?',
-          a: 'Áno.+ Doska široká 34" poskytuje dostatočnú stabilitu na státie aj hádzanie. Najskôr trénujte na pokojnej vode.',
-        },
-        {
-          q: 'Aké ryby môžem loviť SUPz ?',
-          a: 'SUPs sú vynikajúce pre ostrieže v jazerách, červené ryby v plytčinách, pstruhy v riekach a pobrežné druhy v zálivoch a estuároch.',
-        },
-        {
-          q: 'Ako ulovím rybu SUPz ?',
-          a: 'Kľaknite si pre stabilitu. Použite sieť alebo úchop na okraj. Držte rybu nízko, aby nespadla. Pustite alebo zabezpečte v chladiacej nádobe.',
-        },
-      ],
-    },
-    'inflatable-repair': {
-      title: 'Ako opraviť svoju nafukovaciu loď alebo SUP',
-      description:
-        'Krok za krokom návod na opravu defektov, problémov s ventilmi a poškodenia švu na nafukovacích plavidlách.',
-      tldr: 'Malé prepichnutia (pod 1/4") sa dajú opraviť priloženou sadou na záplaty. Vyčistite miesto, naneste PVC lepidlo, pritlačte záplatu a počkajte 24 hodín. Úniky ventilov zvyčajne vyžadujú výmenu O-krúžku. Veľké trhliny alebo delaminácie švu vyžadujú profesionálnu starostlivosť.',
-      problem:
-        'Malé prepichnutia a problémy s ventilmi sú bežné, ale ľahko sa opravujú. Bez správnej techniky opravy používatelia buď preplatia za profesionálny servis, alebo škody zhoršia.',
-      solution:
-        'Identifikujte typ poškodenia — prepichnutie, únik ventilu alebo problém so spojom — a použite vhodnú metódu opravy. Väčšina opráv trvá viac ako 30 minút na vytvrdnutie.',
-      audience: 'Majitelia nafukovacích SUPszariadení, kajakov a lodí, ktorí chcú základné opravy riešiť sami.',
-      steps: [
-        'Nájdite únik — nafúknite ho úplne, počúvajte vzduch, hmatajte rukou alebo použite mydlovú vodu',
-        'Označte únik perom alebo páskou',
-        'Oblasť okolo úniku vyčistite izopropylalkoholom — aspoň 2 palce okolo miesta poškodenia',
-        'Povrch zdrsnite jemným brúsnym papierom pre lepšiu lepivosť',
-        'Naneste PVC lepidlo na záplatu aj povrch dosky',
-        'Počkajte 5 minút, kým sa lepidlo začne lepiť',
-        'Pevne pritlačte náplasť, vyfúkajte vzduchové bubliny valčekom alebo kreditnou kartou',
-        'Nechajte vytvrdnúť 24 hodín pred nafúknutím na plný tlak',
-      ],
-      faq: [
-        {
-          q: 'Môžem opraviť defekt na vode?',
-          a: 'Núdzové opravy pomocou záplaty a pásky vás môžu dostať späť na breh. Úplné opravy vyžadujú suché podmienky a 24-hodinové vytvrdzovanie.',
-        },
-        {
-          q: 'Ako opravím netesný ventil?',
-          a: 'Odstráňte jadro ventilu pomocou priloženého nástroja, skontrolujte O-krúžok na poškodenie, v prípade potreby ho vymeňte a znovu pevne vložte jadro.',
-        },
-        {
-          q: 'Aké lepidlo by som mal použiť na PVC opravy?',
-          a: 'Použite PVC-špecifické lepidlo ako HH-66 alebo Clifton. Štandardné sekundové lepidlo sa s PVC nafukovacími materiálmi dobre neviaže.',
-        },
-      ],
-    },
-    'kayak-techniques': {
-      title: 'Základné techniky kajakového pádlovania',
-      description:
-        'Majstrovské kajakové pádlovanie — predný záber, záťah, hrany a výstuhy pre efektívne a bezpečné kajakovanie.',
-      tldr: 'Predný záber kajaku využíva rotáciu trupu, nie rúk. Záhyb otáča kajak. Hraniče zlepšuje otáčanie. Nízka výstuha zabraňuje prevráteniu vo vlnách. Držte hriadeľ pádla vertikálne a lopatku úplne ponorenú.',
-      problem:
-        'Neefektívna technika pádlovania spôsobuje únavu ramien, pomalý postup a ťažkosti s ovládaním kajaku vo vetre a prúde.',
-      solution:
-        'Naučte sa správnu techniku pádlovania poháňaným trupom so štyrmi základnými zábermi — vpred, vzad, sweep a stret.',
-      audience: 'Začiatočníci a stredne pokročilí kajakári, ktorí chcú pádlovať s menším úsilím a väčšou kontrolou.',
-      steps: [
-        'Predný ťah: otočte trup, položte čepeľ pri nohách, potiahnite okolo bedra, vystúpte pri boku',
-        'Cúvanie: zasuňte čepeľ za seba, tlačte dopredu na spomalenie alebo cúvanie',
-        'Záber: natiahni sa dopredu, roztoč čepeľ v širokom oblúku smerom k zadnej časti, otoč kajak',
-        'Nízka výstuha: pritlačte čepeľ na hladinu vody pre stabilitu vo vlnách',
-        'Okrajovanie: mierne nakloňte kajak na okraj, aby ste vytvorili zákruty',
-      ],
-      faq: [
-        {
-          q: 'Ako udržať kajak rovný?',
-          a: 'Používajte konzistentné ťahy na striedajúcich sa stranách. Naučte sa J-ťah (jemný hák na konci predného ťahu) na korekciu kurzu bez zmeny strán.',
-        },
-        {
-          q: 'Aké je najčastejšie zranenie spôsobené kajakom?',
-          a: 'Namáhanie ramien pri pádlovaní dominantnou rukou. Používajte rotáciu trupu na zapojenie väčších chrbtových svalov a zníženie záťaže ramien.',
-        },
-        {
-          q: 'Ako pádlovať vo vetre?',
-          a: 'Držte príď smerovanú proti vetru. Používajte kratšie, silnejšie zábery. Ak prechádzate cez vietor, mierne naklonte kajak proti vetru.',
-        },
-      ],
-    },
-    'multi-day-trip': {
-      title: 'Plánovanie viacdňového kajaku alebo SUP výletu',
-      description:
-        'Ako naplánovať a zrealizovať viacdňový pádlovací výlet — plánovanie trasy, balenie výbavy, kempovanie a bezpečnosť.',
-      tldr: 'Naplánujte si 10-15 míľ denne. Zbaľte výbavu do nepremokavých suchých vakov, rovnomerne rozložte váhu a pred výpravou si precvičujte nakladanie dosky alebo kajaku. Vypracujte plán plavby. Noste so sebou vodu, jedlo, prístrešok, navigáciu a komunikáciu.',
-      problem:
-        'Viacdňové výlety zlyhávajú kvôli nadmernému baleniu, zlému plánovaniu trás alebo podceňovaniu počasia a prúdu — čo vedie k vyčerpaniu, poruche výstroja alebo bezpečnostným incidentom.',
-      solution:
-        'Použite systematický plánovací prístup: výber trasy, kontrolný zoznam výbavy, plánovanie potravín, bezpečnostné informácie a núdzové plánovanie.',
-      audience: 'Skúsení pádlovia, ktorí plánujú svoju prvú viacdňovú expedíciu.',
-      steps: [
-        'Vyberte trasu s už existujúcimi kempingovými miestami a záchrannými bodmi',
-        'Plánujte 10-15 míľ denne s prihliadaním na vietor a prúdy',
-        'Skontrolujte tabuľky prílivov a predpovede počasia pre celé okno výletu',
-        'Balenie výstroja do nepremokavých suchých vakov — celková hmotnosť výbavy 20-30 libier',
-        'Rovnomerne rozdeľte váhu — najťažšie predmety sú v strede',
-        'Podajte podrobný plán plavby s niekým na brehu',
-        'Prineste si navigáciu — papierovú mapu, kompas a GPS zálohu',
-        'Zbaľte si núdzový prístrešok, extra jedlo a lekárničku',
-      ],
-      faq: [
-        {
-          q: 'Aká je ideálna denná vzdialenosť?',
-          a: '10-15 míľ denne pre skúsených pádlovačov. Začiatočníci by si mali naplánovať 5-8 míľ. Vždy si vyhraďte čas na počasie.',
-        },
-        {
-          q: 'Koľko vody by som mal so sebou nosiť?',
-          a: '1 galón na osobu denne. V horúcich podmienkach 1,5 galóna. Noste so sebou vodný filter alebo čistiace tablety na doplnenie.',
-        },
-        {
-          q: 'Aký je najdôležitejší bezpečnostný prvok?',
-          a: 'Komunikácia. VHF rádio alebo satelitný messenger môže v núdzovej situácii zachrániť život. Mobilné telefóny sú v odľahlých oblastiach nespoľahlivé.',
-        },
-      ],
-    },
-    'choosing-paddle': {
-      title: 'Ako si vybrať správne pádlo SUP a kajak',
-      description:
-        'Sprievodca materiálmi pádla, tvarmi lopatiek, typmi hriadeľ a veľkosťami pre SUP kajakovanie a kajakovanie.',
-      tldr: 'Dĺžka veslá: SUP veslá by mali byť o 6-8" vyššie ako vaša výška. Kajakové pádla závisia od šírky lode a dĺžky trupu. Tvar lopatky: dihedrálne lopatky vedú rovno, ploché majú lepší záchyt. Materiál hřídele: karbón je najľahší, sklené vlákno je najlepšia hodnota za cenu, hliník je cenovo dostupný.',
-      problem:
-        'Použitie nesprávnej veľkosti pádla alebo materiálu spôsobuje zbytočnú únavu, slabú efektivitu zdvihu a napätie kĺbu.',
-      solution:
-        'Prispôsobte dĺžku pádla, tvar lopatky, materiál a ohyb podľa vášho štýlu pádlovania, veľkosti tela a rozpočtu.',
-      audience: 'SUP a kajakári si vyberajú svoje prvé alebo ďalšie pádlovanie.',
-      steps: [
-        'Pre SUP: zmerajte výšku pádla — o 6-8" vyššiu ako vaša výška pri bežnom pádlovaní',
-        'Pri kajaku: merajte dĺžku trupu a šírku lode — užšie lode potrebujú kratšie pádla',
-        'Vyberte materiál čepele — nylon pre cenový rozpočet, sklený vlákna pre hodnotu, uhlík pre výkon',
-        'Vyberte tvar čepele — dihedrál pre plynulé sledovanie, plochý pre silu, lyžica pre preteky',
-        'Vyberte typ hriadeľa — rovný pre SUP, ohnutý pre pretekySUP, štandardný pre kajak',
-        'Skontrolujte flex — tuhšie hriadele prenášajú viac výkonu, pružné hriadele znižujú napätie spoja',
-      ],
-      faq: [
-        {
-          q: 'Aký je najlepší materiál pádla?',
-          a: 'Sklo vlákno ponúka najlepšiu rovnováhu medzi hmotnosťou, odolnosťou a cenou. Uhlík je ľahší, ale drahší a krehký. Nylon je ťažký, ale prakticky nezničiteľný.',
-        },
-        {
-          q: 'Ako zistím, či má moja pádlo správnu dĺžku?',
-          a: 'Pre SUP: postavte pádlo vertikálne vedľa seba — rukoväť by mala dosiahnuť k zápästiu, keď zdvihnete ruku nad hlavu. Pre kajak: lopatka by mala vstúpiť do vody pod pohodlným uhlom bez nadmerného natiahnutia.',
-        },
-        {
-          q: 'Mám si kúpiť jednocestnú alebo nastaviteľnú pádlo?',
-          a: 'Nastaviteľné veslá sú vhodné na spoločné používanie a cestovanie. Jednodielne veslá sú ľahšie, tuhšie a efektívnejšie na osobné používanie.',
-        },
-      ],
-    },
-    'sup-with-kids': {
-      title: 'SUP s deťmi: Kompletný rodinný sprievodca',
-      description: 'Ako bezpečne viesť deti na paddleboarde — odporúčaný vek, vybavenie a aktivity.',
-      tldr: 'Deti 6+ môžu jazdiť na SUP s dospelým. Deti 10+ môžu pádlovať na vlastnej doske pod dohľadom. Používajte širokú stabilnú dosku, vždy noste PFD, zostaňte v plytkej pokojnej vode a udržiavajte sedenia krátke (maximálne 30-45 minút).',
-      problem:
-        'Rodičia chcú so svojimi deťmi zdieľať vodné športy, ale obávajú sa o bezpečnosť, vhodnosť vybavenia a udržanie záujmu detí.',
-      solution:
-        'Použite správnu veľkosť dosky na tandemovú jazdu, zabezpečte, aby každé dieťa nosilo správne prispôsobený PFD, začnite v plytkej teplej vode a urobte to zábavné pomocou hier a krátkych sedení.',
-      audience: 'Rodičia, ktorí chcú oboznámiť svoje deti s paddleboardingom.',
-      steps: [
-        'Vek 4-6: jazda ako pasažier na doske dospelého — sediť vpredu, držať sa za strednú rukoväť',
-        'Vek 6-10: kľaknúť alebo sedieť na svojej doske pod dohľadom dospelého a s bezpečnostným vodítkom',
-        'Vek 10+: veslovať na vlastnej doske za dohľadu dospelého v blízkosti',
-        'Vždy noste PFD — deti musia mať vždy správne nasadenú záchrannú vestu',
-        'Zostaňte v plytkej vode (pre dospelého po pás)',
-        'Udržiavajte sedenia krátke – maximálne 30-45 minút pre deti do 10 rokov',
-        'Urobte to zábavné — hrajte hry, hľadajte ryby, cvičte státie',
-      ],
-      faq: [
-        {
-          q: 'V akom veku môže dieťa SUP samo?',
-          a: 'Okolo 10-12 rokov pod dohľadom, v závislosti od plaveckých schopností dieťaťa a pohodlia vo vode. Vždy v pokojnom, plytkom prostredí.',
-        },
-        {
-          q: 'Aká doska je najlepšia pre SUP s deťmi?',
-          a: 'Široká doska (34"+) s vysokou nosnosťou pre tandemovú jazdu. Šírka 33" a nosnosť 220 libier modelu SUP Explorer 11 je vhodná pre rodiča a dieťa.',
-        },
-        {
-          q: 'Aké bezpečnostné vybavenie potrebujú deti?',
-          a: 'Správne prispôsobená plávacia vesta s certifikáciou CE, vodítko (pripevnené k doske dospelého pre tandem), opaľovací krém a klobúk.',
-        },
-      ],
-    },
-  },
-  sl: {
-    'how-to-choose-your-sup': {
-      title: 'Kako izbrati SUP svojo ploščo',
-      description:
-        'Popoln vodič za izbiro prave deske za veslanje v stoječem položaju glede na vašo raven spretnosti, razmere vode in namen uporabe.',
-      tldr: 'Izberite glede na SUP raven spretnosti, vrsto vode in osnovno uporabo. Vsestranske deske so primerne za začetnike in mirno vodo. Touring deske so primerne za veslanje na daljše razdalje. Joga deske ponujajo dodatno širino za stabilnost. Športne deske so primerne za izkušene veslače v različnih pogojih.',
-      problem:
-        'Večina prvih kupcev SUP izbere desko glede na ceno ali videz, ne pa na to, kako in kje bodo dejansko veslali. To vodi do slabe stabilnosti, nezadostnih zmogljivosti in frustrirajoče izkušnje.',
-      solution:
-        'Obliko, volumen in konstrukcijo deske prilagodite svoji ravni znanja in primarnemu vodnemu okolju. Širše deske (32-34") nudijo stabilnost za začetnike. Daljše deske (12-14") so bolj primerljive za turneje.Drop-stitch Izdelava pri 12-15 PSI letih zagotavlja togost, primerljivo s trdimi deskami.',
-      audience: 'SUP Kupci prvič, rekreativni veslači in vsi, ki nadgrajujejo osnovno desko.',
-      steps: [
-        'Določite svoje primarno veslaško okolje — jezero, ocean, reka ali mešano',
-        'Prilagodi širino deske svoji spretnosti: 32-34" za začetnike, 30-32" za srednje zahtevne, 28-30" za napredne',
-        'Dolžino deske izberite glede na uporabo: krajša za manevriranje, daljša za sledenje in hitrost',
-        'Izbrana konstrukcija: napihljiva drop-stitch za prenosljivost, trda deska za maksimalno zmogljivost',
-        'Preverite nosilnost — vaša teža in oprema ne sme presegati 80 % omejitve deske',
-        'Preverite priložene dodatke: črpalko, povodec, plavut, nahrbtnik in komplet za popravilo',
-      ],
-      faq: [
-        {
-          q: 'Katera širina SUP je najboljša za začetnike?',
-          a: 'Širina od 32 do 34 palcev zagotavlja najbolj stabilno podlago za učenje. SUP Explorer 11 s širino 33" je idealen za začetnike veslače na mirni vodi.',
-        },
-        {
-          q: 'Napihljiva ali SUP trda deska?',
-          a: 'Napihljive deske nudijo prenosljivost, udobje shranjevanja in absorpcijo udarcev. Trde deske nudijo največjo togost in hitrost. Za večino rekreativnih uporabnikov je kakovostna napihljiva deska z drop-stitch jedrom praktična izbira.',
-        },
-        {
-          q: 'Na kaj PSI naj napihnem?',
-          a: 'Paddle Board Overstock Deske priporočajo 12-15PSI. Pri 15 PSI deskah deska doseže največjo togost, primerljivo s trdo ploščo. Vedno ostanite znotraj nazivnega tlaka, natisnjenega na plošči.',
-        },
-      ],
-    },
-    'beginner-guide': {
-      title: 'Vodnik za začetnike po veslanju na deski',
-      description:
-        'Vse, kar morate vedeti pred prvo sejo veslanja na deski — od nastavitve opreme do osnovnih tehnik veslanja.',
-      tldr: 'Začni na mirni, mirni vodi s široko stabilno desko. Napihni na 12-15PSI, pripni povodec in uporabi pravilno dolžino vesla (6-8" višje od tvoje višine). Drži držo v širini ramen, kolena rahlo upognjene in glej proti obzorju.',
-      problem:
-        'Novi veslači pogosto preskočijo osnovne priprave — napačno dolžino vesla, slab položaj ali izbiro razburkane vode — kar vodi v padce, frustracije in razočaranje.',
-      solution:
-        'Sledite strukturiranemu načrtu za prvo vadbo: izberite mirno vodo, pravilno pripravite opremo, vadite klečanje pred vstajanjem in obvladajte zaveslaj naprej pred poskusom obratov.',
-      audience: 'Popolni začetniki, ki še nikoli niso veslali na deski.',
-      steps: [
-        'Izberite mirno, mirno vodo brez čolnarskega prometa — idealno je majhno jezero ali zaščiten zaliv',
-        'Napihnite desko na 12-15 PSI z dvojno akcijsko črpalko',
-        'Povodec za spiralo pripnite na gleženj ali meča, nikoli na ročaj deske',
-        'Vstavi plavut in zategni vijak',
-        'Prilagodite dolžino lopatice — naj bo 6-8 palcev višja od vaše višine',
-        'Začnite klečati na deski, veslajte nekaj zamahov, da začutite ravnotežje',
-        'Stojte eno nogo naenkrat, stopala v širini ramen, kolena rahlo upognjena',
-        'Poglejte proti horizontu, ne proti svojim nogam — vaša deska gre tja, kamor gledate',
-      ],
-      faq: [
-        {
-          q: 'Kaj naj oblečem za supanje?',
-          a: 'Hitrosušeča športna oblačila, rešilni jopič, sončna krema in kapo. V hladni vodi oblecite neoprensko obleko. Vedno nosite povod in imejte pri sebi telefon v vodotesnem ohišju.',
-        },
-        {
-          q: 'Kako se vrnem na desko, če padem?',
-          a: 'Ostanite mirni. Zaplavajte do deske, se primite srednjega ročaja in brcajte z nogami, medtem ko se naenkrat dvignete na desko. Najprej se vrnite v klečeč položaj, nato vstanite.',
-        },
-        {
-          q: 'Kateri pogoji vetra so varni?',
-          a: 'Začetnik: veter pod 10 mph (5 vozlov). Če veter piha stran od obale, ne odhajajte. Preverite napoved vremena in se zavedajte, da je veter od obale nevaren.',
-        },
-      ],
-    },
-    'safety-tips': {
-      title: 'Varnostni nasveti za vodne športe',
-      description:
-        'Ključna varnostna priporočila za supanje, kajakaštvo in veslanje — od preverjanja opreme do ozaveščenosti o vremenu.',
-      tldr: 'Vedno nosite rešilni jopič z CE certifikatom, preverite vreme in vodne razmere pred izplutjem, imejte komunikacijsko napravo, nikoli ne supajte sami v neznanih vodah in poznajte omejitve vaše opreme.',
-      problem:
-        'Večina nesreč pri vodnih športih je posledica neustrezne priprave — brez rešilnega jopiča, ignoriranje vremenskih opozoril ali uporaba opreme čez njene tehnične omejitve.',
-      solution:
-        'Uporabite predizplutno varnostno listo: preverite stanje opreme, vreme in temperaturo vode, sporočite nekomu svojo pot in vedno nosite primerno plavalno opremo.',
-      audience: 'Vsi udeleženci vodnih športov — uporabniki SUP, kajakov, čolnov in RIB.',
-      steps: [
-        'Preverite vremensko napoved — izogibajte se vetrov nad 15 mph in neviht',
-        'Preverite temperaturo vode — hladna voda (60°F/15°C) zahteva neoprensko ali suho obleko',
-        'Preverite opremo — preverite puščice, razpoke in pravilno napihnjenost',
-        'Vedno nosite rešilni jopič z CE certifikatom',
-        'Pripnite povod (SUP) ali zagotovite, da je vse ohlapno blago (kajak/čoln) varno',
-        'Oddajte načrt plovbe — sporočite nekomu, kam greste in kdaj se boste vrnili',
-        'Imejte komunikacijo — vodotesno ohišje za telefon ali VHF radio',
-        'Poznajte svoje omejitve — ostanite znotraj svojih sposobnosti in ocenjene opreme',
-      ],
-      faq: [
-        {
-          q: 'Ali potrebujem rešilni jopič na SUP?',
-          a: 'Da. V mnogih jurisdikcijah je zakonito obvezno nositi rešilni jopič na katerikoli vodni plovbi, vključno z SUPs. Tudi tam, kjer ni obvezno, je rešilni jopič z CE certifikatom ključna varnostna oprema.',
-        },
-        {
-          q: 'Katera je najbolj pogosta poškodba pri vodnih športih?',
-          a: 'Hladna vodna izpostavljenost in utrujenost sta najpogostejši resni nevarnosti. Vedno se oblecite glede na temperaturo vode, ne zraka.',
-        },
-        {
-          q: 'Kako preverim, ali so pogoji varni?',
-          a: 'Uporabite napovedi morskega vremena. Preverite hitrost vetra, višino valov in temperaturo vode. Začetniki naj ostanejo v pogojih pod 10 mph vetra in manj kot 1 ft valov.',
-        },
-      ],
-    },
-    'inflatable-vs-hard': {
-      title: 'Napihljive proti trdim SUP deskam: katero bi izbrali?',
-      description:
-        'Objektiven primerjalni pregled napihljivih in trdnih SUP desk, ki pokriva zmogljivost, prenosljivost, vzdržljivost in vrednost.',
-      tldr: 'Napihljive deske zmagajo glede prenosljivosti, shranjevanja in odpornosti na udarce. Trde deske zmagajo za največjo togost in hitrost. Sodobne drop-stitch napihljive deske pri 15 letih PSI zmanjšajo 90 % razlike v zmogljivosti.',
-      problem:
-        'Kupci so ujeti med udobjem napihljivih desk in ugledom trdih desk, brez jasnih podatkov o tem, kako se dejansko primerjajo.',
-      solution:
-        'Primerjajte specifična merila — togost, težo, velikost pakiranja, vzdržljivost, popravila in stroške — z vašim dejanskim vzorcem uporabe. Za večino rekreativnih veslačev je kakovostna napihljiva naprava boljša izbira.',
-      audience: 'SUP Kupci se odločajo med napihljivo in togo konstrukcijo.',
-      steps: [
-        'Ocenite potrebe po prenosljivosti — napihljivi nahrbtniki do velikosti nahrbtnika, trda deska zahteva strešni nosilec',
-        'Primerjaj togost — napihljiva pri 15 letih PSI ima minimalno upogibljivost, trda deska pa nima nobene upogibnosti',
-        'Ocenite shranjevanje — napihljive shrambe v omari, trda plošča zahteva prostor v garaži ali regali',
-        'Upoštevajte vzdržljivost — napihljiva plošča absorbira udarce, trda plošča se lahko vdolbi in razpoka',
-        'Popravilo s faktorjem — napihljivi popravki so preprosti, popravila trde plošče pa zahtevajo strokovno delo',
-        'Preveri zmogljivost — trde deske imajo rahlo hitrostno prednost, napihljive plošče nudijo boljšo absorpcijo udarcev',
-      ],
-      faq: [
-        {
-          q: 'Ali so napihljive deske SUPs tako toge kot trde deske?',
-          a: 'Pri 15 letih PSI je drop-stitch razlika v togosti za rekreativno uporabo minimalna. Le tekmovalni tekmovalci in surferji bodo opazili razliko.',
-        },
-        {
-          q: 'Kako dolgo zdrži napihljiva SUP naprava?',
-          a: 'Ob pravilni negi 5-10 let. PVC Morske odpornosti UV in obranje. Shranjujte izven neposredne sončne svetlobe, ko niste v uporabi, in po uporabi s slano vodo splaknite s svežo vodo.',
-        },
-        {
-          q: 'Ali lahko za surfanje uporabljam napihljivo napravo SUP ?',
-          a: 'Da, vendar so napihljive deske najboljše za majhne do srednje visoke valove (pod 3 čevlje). Za namensko surfanje trda deska omogoča boljšo odzivnost in prijetje na tirnice.',
-        },
-      ],
-    },
-    'weather-conditions': {
-      title: 'Razumevanje vremenskih razmer za veslanje na deski',
-      description:
-        'Naučite se brati veter, valove, plimo in vremenske vzorce, da boste lahko sprejemali varne odločitve na vodi.',
-      tldr: 'Pred vsakim izstrelitvijo preverite tri stvari: hitrost vetra (pod 10 mph za začetnike), višino valov (pod 1 ft za začetnike) in temperaturo vode (oblecite se za vodo, ne za zrak). Veter z odprtine je nevaren na vsaki ravni spretnosti.',
-      problem:
-        'Večina nesreč, povezanih z vremenom, nastane, ker veslači napačno ocenijo razmere — preverjajo temperaturo zraka, ne pa temperature vode, ali pa ne razumejo, da jih lahko veter z morja odpihne v morje.',
-      solution:
-        'Uporabite strukturirano oceno vremena pred izstrelitvijo: smer in hitrost vetra, obdobje in višino valov, stanje plime in temperaturo vode. Razumite, kako vsak dejavnik vpliva na vašo varnost.',
-      audience: 'Vsi veslači, ki se odpravljajo na odprto vodo — jezera, zalive, reke in ocean.',
-      steps: [
-        'Preverite hitrost in smer vetra — veter z morja (ki piha z kopnega na morje) je najbolj nevaren',
-        'Ocenite valovne razmere — valovna doba je pomembna prav toliko kot višina valov',
-        'Poznajte plimo — plimski tokovi so lahko močnejši od vaše hitrosti veslanja',
-        'Merjenje temperature vode — pod 60°F/15°C zahteva toplotno zaščito',
-        'Preverite vidljivost — megla in močan dež zmanjšujeta vidljivost in povečujeta tveganje trkov',
-        'Razumite lokalne nevarnosti — potopljene skale, močne tokove, območja za promet čolnov',
-      ],
-      faq: [
-        {
-          q: 'Katera hitrost vetra je previsoka zaSUP?',
-          a: 'Začetniki: nad 10 mph (8 vozlov). Srednje težji: nad 15 mph (13 vozlov). Napredni: nad 20 mph (17 vozlov). Če ste v dvomih, ne pojdite ven.',
-        },
-        {
-          q: 'Kaj pomeni valovna doba?',
-          a: 'Valovno obdobje je čas med zaporednimi valovi. Kratka obdobja (pod 8 sekund) pomenijo strme, nestabilne valove. Dolga obdobja (nad 12 sekund) pomenijo bolj gladke, bolj predvidljive valove.',
-        },
-        {
-          q: 'Ali lahko veslam v dežju?',
-          a: 'Rahlo padavine so običajno varne. Močan dež zmanjša vidljivost in lahko nakazuje spreminjajoče se vetrovne razmere. Nevihte zahtevajo takojšnjo evakuacijo iz vode.',
-        },
-      ],
-    },
-    'understanding-specs': {
-      title: 'Kako brati SUP specifikacije plošč',
-      description:
-        'Tehnični vodič za razumevanje SUP specifikacij plošče — prostornina, dimenzije, konstrukcija in kaj pomenijo za zmogljivost.',
-      tldr: 'Ključne specifikacije: prostornina (litri) določa vzgon in nosilnost, širina določa stabilnost, dolžina določa sledenje in hitrost, debelina določa togost, PSI ocena pa določa tlak napihnjevanja za optimalno zmogljivost.',
-      problem:
-        'Specifikacije izdelkov navajajo številke brez konteksta, zato kupci niso prepričani, katere specifikacije so dejansko pomembne za njihov primer.',
-      solution:
-        'Vsako specifikacijo prevedite v realne zmogljivosti: prostornino za plavanje, širino za stabilnost, dolžino za drsenje, debelino za togost in konstrukcijo za vzdržljivost.',
-      audience: 'Vmesni veslači in tehnični kupci, ki želijo sprejemati odločitve na podlagi podatkov.',
-      steps: [
-        'Preverite prostornino (litri) — vaša teža skupaj z opremo ne sme presegati 80 % volumna plošče',
-        'Širina kontrol — širša (32-34") = večja stabilnost, ožja (28-30") = večja hitrost',
-        'Dolžina čekov — daljša (12-14") = boljša sledilnost, krajša (10-11") = boljša manevrirnost',
-        'Debelina — 6" je standard, 8" ponuja večjo togost in nosilnost',
-        'Preverite PSI oceno — napihnite do največje vrednosti PSI za optimalno togost',
-        'Preverite gradbene drop-stitch PVC materiale — gostoto, plasti, ojačitev tirov',
-      ],
-      faq: [
-        {
-          q: 'Kaj drop-stitch to pomeni?',
-          a: 'Drop-stitch je gradbena metoda, kjer tisoči navoja povezujejo zgornjo in spodnjo plast deske. To omogoča napihovanje pri visokem tlaku (12-15PSI) za izjemno togost.',
-        },
-        {
-          q: 'Kakšno je idealno razmerje med težo in prostornino?',
-          a: 'Dober cilj je približno 5-6 funtov teže voznika na liter volumna deske. Veslač, ki teži 220 funtov, naj išče deske s+ 180 litri volumna.',
-        },
-        {
-          q: 'Ali je teža deske pomembna?',
-          a: 'Da. Lažje deske (pod 20 lbs) so lažje za prenašanje in prenašanje. Težje deske (25+ lbs) pogosto pomenijo PVC bolj vzdržljivo večplastno konstrukcijo.',
-        },
-      ],
-    },
-    'sup-maintenance': {
-      title: 'Kako očistiti in shraniti svojo napihljivo napravo SUP',
-      description: 'Vodnik za vzdrževanje korak za korakom za čim daljšo življenjsko dobo vaše SUP napihljive deske.',
-      tldr: 'Po vsaki uporabi sperite s svežo vodo, pred shranjevanjem popolnoma posušite, izpraznite in zvijte ohlapno (ne vojaško tesno), shranjujte na hladnem in suhem mestu, stran od neposredne sončne svetlobe, in mesečno pregledujte spoje.',
-      problem:
-        'Nepravilno shranjevanje in čiščenje sta glavni vzroki za prezgodnjo okvaro napihljivih naprav SUPs — plesen, UV poškodbe in delaminacija šivov.',
-      solution:
-        'Sledite dosledni rutini po treningu: sperite, posušite, pregledajte, izpraznite in shranite. Uporabite blago milo za trdovratno umazanijo. Nikoli ne shranjujte deske mokre ali na neposredno sončno svetlobo.',
-      audience: 'Vsi lastniki napihljivih naprav SUP , ki želijo, da njihova deska zdrži 5+ let.',
-      steps: [
-        'Desko takoj po uporabi sperite s svežo vodo, še posebej po slani vodi',
-        'Čistite z blagim milom in mehko gobico — izogibajte se močnim kemikalijam ali visokotlačnim čistilcem',
-        'Ploščo popolnoma posušite — odprite ventil, da ujela voda odteče',
-        'Preverite poškodbe — preverite spoje, ventile in površino zaradi preluknjanja',
-        'Popolnoma izpraznite — odstranite jedro ventila za popolno deflacijo',
-        'Desko valjajte ohlapno — začnite pri nosu, izogibajte se tesnim gubam',
-        'Shranjujte v torbi za prenašanje na hladnem in suhem mestu, stran od neposredne sončne svetlobe',
-      ],
-      faq: [
-        {
-          q: 'Ali lahko pustim svojega SUP napihnjenega celo sezono?',
-          a: 'Da, vendar ga hranite stran od neposredne sončne svetlobe, ko ni v uporabi. Delna deflacija (8-10PSI) je priporočljiva za daljše shranjevanje.',
-        },
-        {
-          q: 'Kako popravim predrto luknjo?',
-          a: 'Očistite območje, izrežite zaplato z zaobljenimi vogali, nanesite lepilo, močno pritisnite in počakajte 24 ur pred napihovanjem.Paddle Board Overstock Deske vključujejo komplet za popravila.',
-        },
-        {
-          q: 'Kako pogosto naj preverjam ventil?',
-          a: 'Mesečno. Ventil je najpogostejša točka odpovedi. Preverite, ali se zatič ventila prosto premika in da je O-obroč nepoškodovan.',
-        },
-      ],
-    },
-    'paddling-techniques': {
-      title: 'SUP Osnovne tehnike veslanja',
-      description:
-        'Obvladaj udarec naprej, zamah in zavoj s samostrelom, da lahko učinkovito veslaš v kateremkoli stanju.',
-      tldr: 'Udarec naprej uporablja jedro, ne roke. Zamah obrne desko. Zasuk s samostrelom je najučinkovitejši zasuk. Ohranite lopar navpično in popolnoma potopite rezilo za največji prenos moči.',
-      problem:
-        'Večina veslačev uporablja zamahe, ki prevladujejo z roko, kar porablja energijo in povzroča utrujenost ramen. Slaba tehnika prav tako otežuje nadzor deske v vetru in valovitih položajih.',
-      solution:
-        'Naučite se treh ključnih zamahov — naprej, zamah in obračanje s samostrelom — s pravilno mehaniko telesa. Vsak vadite na mirni vodi, preden napredujete v zahtevne pogoje.',
-      audience: 'Veslači, ki želijo veslati dlje, hitreje in z manj utrujenosti.',
-      steps: [
-        'Napredni gib: iztegni roko naprej, popolnoma postavi rezilo, potegni nazaj z rotacijo trupa (ne z rokami), izstopi pri gležnju',
-        'Zamah: segnite naprej na ograjo, zamahnite z rezilo v širokem loku proti repu, obrnite desko stran od strani lopatice',
-        'Zavoj s križnim samostrelom: postavi lopar na nasprotno stran deske brez menjave roke, potegni proti repu',
-        'Opora: uporabite nizko oporo za stabilnost pri sekanju — udarite rezilo ravno ob površino vode',
-        'Poteza za vlečenje: iztegni roko vstran, potegni desko bočno proti loparju',
-      ],
-      faq: [
-        {
-          q: 'Kako veslam naravnost?',
-          a: 'Uporabi enakomerno dolžino hoda na obeh straneh. Menjaj strani vsakih 5-10 udarcev. Poglej fiksno točko na obzorju za referenco.',
-        },
-        {
-          q: 'Ali naj pokrčim kolena?',
-          a: 'Da. Ohranite rahlo upogib kolen kot blažilec udarcev. Zaklenjena kolena prenesejo vsak val na jedro in zmanjšajo stabilnost.',
-        },
-        {
-          q: 'Kako veslam proti vetru?',
-          a: 'Znižajte držo, uporabljajte krajše in hitrejše zaveslaje ter ostanite bližje obali, kjer je veter pogosto zmanjšan. Če je veter premočan, ne pojdite ven.',
-        },
-      ],
-    },
-    'sup-fitness': {
-      title: 'SUP Fitnes: Trening celotnega telesa na vodi',
-      description: 'Kako stand-up paddleboarding gradi moč jedra, ravnotežje in kardiovaskularno kondicijo.',
-      tldr: 'SUP Pri vsakem zamahu aktivira jedro, noge, hrbet in ramena. Enourna vadba porabi 300-500 kalorij. Veslanje proti vetru ali toku podvoji intenzivnost.SUP Joga doda gibljivost in vaje za ravnotežje.',
-      problem:
-        'Veliko ljudi vidi paddleboarding kot sproščeno dejavnost in ne kot legitimno fitnes orodje, pri čemer spregledajo njegov potencial za celotno telesno kondicijo.',
-      solution:
-        'SUP Strukturirajte treninge z določenimi fitnes cilji: vzdržljivostno veslanje za kardio, intervalni šprinti za moč, SUP joga za gibljivost in razdalje veslanje za mišično vzdržljivost.',
-      audience: 'Fitnes navdušenci, ki iščejo nizkointenzivno in angažirano celotno telesno vadbo.',
-      steps: [
-        'Ogrevanje na kopnem — krogi z rokami, zasuki trupa in nihanja z nogami za 5 minut',
-        'Začnite z 10 minutami mirnega veslanja z zmerno intenzivnostjo',
-        'Napredek k intervalnemu treningu — 2 minuti intenzivnega veslanja, 2 minuti lahkotnega okrevanja',
-        'Na ploščo vključite SUP joga položaje — downward dog, warrior II in tree pose',
-        'Ohladite se z nežnim veslanjem in statičnim raztezanjem na deski',
-      ],
-      faq: [
-        {
-          q: 'Je SUP bolje kot tek zaradi kondicije?',
-          a: 'SUP Nudi primerljive kardiovaskularne koristi z manjšim vplivom na sklepe. Prav tako bolj aktivira zgornji del telesa in jedro kot tek.',
-        },
-        {
-          q: 'Koliko kalorij SUP porabi?',
-          a: 'Približno 300-500 kalorij na uro pri zmerni intenzivnosti. Tekmovanje ali veslanje proti vetru lahko porabi 600-800 kalorij na uro.',
-        },
-        {
-          q: 'Ali lahko zgradim mišice zSUP?',
-          a: 'Da. Veslanje krepi mišice ramen, hrbta in jedra. Uravnoteženje aktivira noge in stabilizacijske mišice. Gre za vadbo za celotno telo.',
-        },
-      ],
-    },
-    'sup-yoga': {
-      title: 'SUP Joga: Popoln vodnik po veslanju in jogi',
-      description: 'Združite veslanje na deski z jogo za izboljšanje ravnotežja, moči in zavedanja na vodi.',
-      tldr: 'SUP Joga doda element nestabilnosti, ki bistveno poveča aktivacijo jedra v primerjavi z kopensko jogo. Začnite z osnovnimi položaji na široki, stabilni deski v mirni vodi. Uporabljajte protidrsečo podlogo za podlago. Nikoli ne vadite SUP joge sami.',
-      problem:
-        'Tradicionalne joga blazine nudijo popolnoma stabilno podlago, s čimer odpravijo izziv ravnotežja, zaradi katerega SUP je joga edinstveno učinkovita za moč jedra in osredotočenost.',
-      solution:
-        'Uporabite SUP ekstra široko desko (34"+) z oprijemno blazinico za celotno palubo. Vadite v mirni, plitvi vodi. Začnite z osnovnimi položaji, preden poskusite z inverzijami.',
-      audience: 'Joga praktiki in veslači, ki želijo združiti trening ravnotežja z čuječnostjo.',
-      steps: [
-        'Desko pritrdite v plitvi, mirni vodi — uporabite peščeno sidro ali privežite na pomol',
-        'Začnite s sedečimi položaji — lahkotno sedenje, ladijski položaj, sedeči obrat',
-        'Napredek k klečečim položajem — miza, mačji krava, strela',
-        'Premakni se v stoječe položaje — gora, bojevnik I, bojevnik II, položaj drevesa',
-        'Vadite ravnotežne položaje — polmesec, orel, plesalec',
-        'Zaključite s savasano — lezite ravno na desko, začutite gibanje vode',
-      ],
-      faq: [
-        {
-          q: 'Katera deska je najboljša za SUP jogo?',
-          a: 'Široka deska (34") +z vlečno ploščico po celotni dolžini zagotavlja najbolj stabilno platformo. SUP Tour 12 ponuja dobro ravnovesje med stabilnostjo in drsenjem.',
-        },
-        {
-          q: 'Ali SUP je joga nevarna?',
-          a: 'Ne več kot kopenska joga, če jo vadite varno. Uporabljajte mirno, plitvo vodo. Nosite povodec. Vadite s partnerjem. Izogibajte se globoki vodi pri prvih vadbah.',
-        },
-        {
-          q: 'Ali potrebujem posebno opremo?',
-          a: 'Široka stabilna deska, podloga za oprijem po celotni palubi, povodec in PFD. Nekateri vadbeniki uporabljajo vodoodporno blazino za dodatni oprijem.',
-        },
-      ],
-    },
-    'sup-fishing': {
-      title: 'SUP Ribiški vodnik: Kako ribariti na deski za veslanje',
-      description:
-        'Vse, kar morate vedeti o ribolovu z desko za veslanje — nastavitev opreme, nasveti za stabilnost in tehnike.',
-      tldr: 'SUP Ribolov omogoča tihi pristop, dostop do plitvih voda in metanje v 360 stopinjah. Uporabite široko stabilno desko (34"), +pritrdite držala za palice in uporabite hladilnik ali zaboj kot opremo. Sidrite v vetrovnih razmerah. Vedno nosite .PFD',
-      problem:
-        'Standardni ribiški čolni so dragi za vzdrževanje in ne morejo dostopati do plitvih voda. Kajaki omejujejo gibljivost.SUP Ribolov reši oba problema, vendar zahteva posebne prilagoditve opreme.',
-      solution:
-        'Opremite hlev SUP z držalci za palice, zabojem za opremo in sidrnim sistemom. Uporabite prenosljivost deske za dostop do oddaljenih ribolovnih mest, do katerih čolni ne morejo priti.',
-      audience:
-        'Ribiči, ki želijo loviti v plitvih vodah, oddaljenih lokacijah ali imajo raje lahko, prenosno ribiško platformo.',
-      steps: [
-        'Izberite široko desko (34") +z visoko nosilnostjo opreme',
-        'Namestite držala za palice na palubo z uporabo sistemov, pritrjenih na tirnice ali na pasu',
-        'Za opremo uporabite vodoodporno zaboj ali hladilnik, pritrjen na sprednjo teraso.',
-        'Za vetrovne razmere prinesite majhno sidro ali palico za opazovanje',
-        'Nosite torbo PFD z žepi za orodje in telefon',
-        'Vadite metanje iz klečečega položaja pred vstajanjem',
-      ],
-      faq: [
-        {
-          q: 'Ali lahko stojim in ribarim SUPna ?',
-          a: 'Da. 34"+ široka deska zagotavlja dovolj stabilnosti za stoječe in metanje. Najprej vadite na mirni vodi.',
-        },
-        {
-          q: 'Katere ribe lahko ciljam SUPiz ?',
-          a: 'SUPs so odlični za brancine v jezerih, rdeče ribe na ravnicah, postrvi v rekah ter obalne vrste v zalivih in estuarijih.',
-        },
-        {
-          q: 'Kako ulovim ribo iz SUP?',
-          a: 'Pokleknite za stabilnost. Uporabite mrežo ali prijem za ustnice. Ribo držite nizko, da ne pade. Spustite ali zavarajte v hladilniku.',
-        },
-      ],
-    },
-    'inflatable-repair': {
-      title: 'Kako popraviti svoj napihljivi čoln ali SUP',
-      description:
-        'Vodnik korak za korakom za popravilo predrtih udarcev, težav z ventili in poškodb šivov na napihljivih plovilih.',
-      tldr: 'Majhne luknje (manj kot 1/4") je mogoče popraviti s priloženim kompletom za popravilo. Očistite območje, nanesite PVC lepilo, pritisnite obliž in počakajte 24 ur. Puščanja ventilov običajno zahtevajo zamenjavo O-obroča. Večje raztrganine ali delaminacija šiva zahtevajo strokovno storitev.',
-      problem:
-        'Majhne luknje in težave z ventili so pogoste, a jih je enostavno popraviti. Brez ustrezne tehnike popravila uporabniki bodisi preplačajo za profesionalno storitev ali pa poslabšajo škodo.',
-      solution:
-        'Določite vrsto poškodbe — predrtina, puščanje ventila ali težava s spojem — in uporabite ustrezno metodo popravila. Večina popravil traja 30 minut in več kot čas strjevanja.',
-      audience: 'Lastniki SUPsnapihljivih letal, kajakov in čolnov, ki želijo osnovna popravila opraviti sami.',
-      steps: [
-        'Poiščite puščanje — popolnoma napihnite, poslušajte zrak, otipajte z roko ali uporabite milnico',
-        'Označite puščanje s pisalom ali trakom',
-        'Območje okoli puščanja očistite z izopropilnim alkoholom — vsaj 2 palca okoli škode',
-        'Površino grobo obdelajte s finim brusnim papirjem za boljše lepljenje',
-        'PVC Lepilo nanesite tako na krpico kot na površino plošče',
-        'Počakajte 5 minut, da lepilo postane lepljivo',
-        'Močno pritisnite obliž, z valjčkom ali kreditno kartico razvaljajte zračne mehurčke',
-        'Pustite strjevati 24 ur, preden se napihnete do polnega tlaka',
-      ],
-      faq: [
-        {
-          q: 'Ali lahko popravim luknjo na vodi?',
-          a: 'Nujna popravila z uporabo popravka in traku vas lahko pripeljejo nazaj na obalo. Popolna popravila zahtevajo suhe pogoje in 24-urno strjevanje.',
-        },
-        {
-          q: 'Kako popravim puščajoč ventil?',
-          a: 'Odstranite ventilsko jedro z priloženim orodjem, preverite O-obroč za poškodbe, po potrebi zamenjajte in ponovno tesno vstavite jedro.',
-        },
-        {
-          q: 'Katero lepilo naj uporabim za PVC popravila?',
-          a: 'Uporabite PVC-specifično lepilo, kot sta HH-66 ali Clifton. Standardno super lepilo se ne prime dobro na PVC napihljive materiale.',
-        },
-      ],
-    },
-    'kayak-techniques': {
-      title: 'Osnovne tehnike veslanja s kajakom',
-      description:
-        'Mojstrsko veslanje s kajakom — sprednji zamah, zamah, rob in okrepitev za učinkovito in varno kajakaštvo.',
-      tldr: 'Kajak naprej uporablja rotacijo trupa, ne rok. Zamahni zaveslaj obrne kajak. Rob izboljšuje zavijanje. Nizka opora preprečuje prevrnitev v valovih. Ohranite gred vesla navpično in lopatico popolnoma potopljeno.',
-      problem:
-        'Neučinkovita tehnika veslanja povzroča utrujenost ramen, počasen napredek in težave pri nadzoru kajaka v vetru in toku.',
-      solution:
-        'Naučite se pravilne tehnike veslanja, ki ga poganja trup, s štirimi ključnimi zamahi — naprej, nazaj, zamahom in oporo.',
-      audience: 'Začetniki in srednje izkušeni kajakaši, ki želijo veslati z manj napora in več nadzora.',
-      steps: [
-        'Udarec naprej: zavrti trup, postavi rezilo blizu stopal, potegni mimo bokov, izstopi pri boku',
-        'Vzvratni zaveslaj: postavi rezilo za sabo, potisni naprej za upočasnitev ali vzvratno',
-        'Zamah: iztegni roko naprej, zamahni z lopatico v širokem loku proti krmi, obrni kajak',
-        'Nizka ojačitev: rezilo položite ravno na površino vode za stabilnost v valovih',
-        'Rob: rahlo nagnite kajak na rob, da naredite zavoje',
-      ],
-      faq: [
-        {
-          q: 'Kako naj ohranim kajak naravnost?',
-          a: 'Uporabljaj dosledne udarce na izmeničnih straneh. Nauči se J-zavest (rahlo zamahovanje na koncu sprednjega zamaha) za korekcijo smeri brez menjave strani.',
-        },
-        {
-          q: 'Katera je najpogostejša poškodba zaradi kajaka?',
-          a: 'Obremenitev ramen zaradi veslanja, kjer prevladujejo roke. Uporabite rotacijo trupa za aktivacijo večjih hrbtnih mišic in zmanjšanje obremenitve ramen.',
-        },
-        {
-          q: 'Kako veslam v vetru?',
-          a: 'Premec naj bo obrnjen proti vetru. Uporabi krajše, močnejše zaveslaje. Če prečkaš veter, rahlo nagni kajak proti vetru.',
-        },
-      ],
-    },
-    'multi-day-trip': {
-      title: 'Načrtovanje večdnevnega kajakaštva ali SUP izleta',
-      description:
-        'Kako načrtovati in izvesti večdnevni veslaški izlet — načrtovanje poti, pakiranje opreme, kampiranje in varnost.',
-      tldr: 'Načrtujte 10-15 milj na dan. Spakirajte opremo v vodoodporne suhe vreče, enakomerno razporedite težo in vadite nalaganje deske ali kajaka pred izletom. Pripravite načrt za plovbo. Imejte s seboj vodo, hrano, zavetje, navigacijo in komunikacijo.',
-      problem:
-        'Večdnevni izleti propadejo zaradi prevelikega pakiranja, slabega načrtovanja poti ali podcenjevanja vremena in toka — kar vodi do izčrpanosti, okvare opreme ali varnostnih incidentov.',
-      solution:
-        'Uporabite sistematičen pristop načrtovanja: izbiro poti, seznam opreme, načrtovanje hrane, varnostno sevanje in načrtovanje za izredne razmere.',
-      audience: 'Izkušeni veslači načrtujejo svojo prvo večdnevno odpravo.',
-      steps: [
-        'Izberite pot z uveljavljenimi kampi in reševalnimi točkami',
-        'Načrtujte 10-15 milj na dan z upoštevanjem vetra in toka',
-        'Preverite plimne tabele in vremenske napovedi za celotno potovanje',
-        'Pakiranje opreme v vodoodpornih suhih vrečah — skupna teža opreme 20-30 lbs',
-        'Težo enakomerno razporedite — najtežji predmeti so na sredini',
-        'Predložite podroben načrt plovca z nekom na kopnem',
-        'Prinesite navigacijo — papirnato karto, kompas in GPS varnostno kopijo',
-        'Spakirajte nujno zavetje, dodatno hrano in komplet prve pomoči',
-      ],
-      faq: [
-        {
-          q: 'Kakšna je idealna dnevna razdalja?',
-          a: '10-15 milj na dan za izkušene veslače. Začetniki naj načrtujejo 5-8 milj. Vedno vključite čas za vremenske razmere.',
-        },
-        {
-          q: 'Koliko vode naj nosim s seboj?',
-          a: '1 galona na osebo na dan. V vročih razmerah 1,5 galone. Za ponovno polnjenje imejte s seboj vodni filter ali tablete za čiščenje.',
-        },
-        {
-          q: 'Kateri je najpomembnejši varnostni element?',
-          a: 'Komunikacija. VHF radio ali satelitski kurir lahko v nujnih primerih reši življenje. Mobilni telefoni so v oddaljenih območjih nezanesljivi.',
-        },
-      ],
-    },
-    'choosing-paddle': {
-      title: 'Kako izbrati pravo veslo SUP za kajak in kajak',
-      description:
-        'Vodnik po materialih vesla, oblikah lopatic, vrstah osi in velikostih za SUP kajakaštvo ter veslanje.',
-      tldr: 'Dolžina vesla: SUP vesla naj bodo 6-8" višja od vaše višine. Vesla za kajak so odvisna od širine čolna in dolžine trupa. Oblika lopatic: dihedralne lopatice sledijo ravno, ravne lopatice nudijo več oprijema. Material gredi: ogljik je najlažji, steklena vlakna je najboljša vrednost, aluminij je cenovno ugoden.',
-      problem:
-        'Uporaba napačne velikosti lopatice ali materiala povzroča nepotrebno utrujenost, slabo učinkovitost hoda in deformacijo sklepa.',
-      solution:
-        'Prilagodite dolžino lopatice, obliko lopatice, material gredi in prožnost svojemu slogu veslanja, velikosti telesa in proračunu.',
-      audience: 'SUP in veslači s kajakom, ki izberejo svoje prvo ali naslednje veslanje.',
-      steps: [
-        'SUPZa : izmerite višino vesla — 6-8" višjo od vaše višine za splošno veslanje',
-        'Za kajak: izmerite dolžino trupa in širino čolna — ožji čolni potrebujejo krajša vesla',
-        'Izberite material rezila — najlon za proračun, steklena vlakna za vrednost, karbon za zmogljivost',
-        'Izberite obliko rezila — dihedral za gladko sledenje, raven za moč, žlica za dirkanje',
-        'Izberite vrsto gredi — naravnost za SUP, upognjeno za tekmovanjeSUP, standardno za kajak',
-        'Preverite prožnost — trše gredi prenesejo več moči, prožne gredi zmanjšajo obremenitev sklepa',
-      ],
-      faq: [
-        {
-          q: 'Kateri je najboljši material za veslo?',
-          a: 'Fiberglass nudi najboljše ravnovesje med težo, vzdržljivostjo in ceno. Ogljik je lažji, vendar dražji in krhek. Najlon je težak, a skoraj neuničljiv.',
-        },
-        {
-          q: 'Kako vem, ali je moje veslo primerne dolžine?',
-          a: 'Za SUP: postavite veslo pokončno ob sebi — ročaj naj doseže zapestje, ko imate dvignjeno roko nad glavo. Za kajak: lopatica naj vstopi v vodo pod udobnim kotom, brez prenaprezanja.',
-        },
-        {
-          q: 'Ali naj izberem enodelno ali nastavljivo veslo?',
-          a: 'Nastavljiva vesla so primerna za skupno uporabo in potovanje. Enodelna vesla so lažja, trša in učinkovitejša za namensko uporabo.',
-        },
-      ],
-    },
-    'sup-with-kids': {
-      title: 'SUP z otroki: Popoln družinski vodič',
-      description: 'Kako varno peljati otroke na SUP — priporočila glede starosti, oprema in dejavnosti.',
-      tldr: 'Otroci, stari 6+, lahko vozijo SUP z odraslim. Otroci, stari 10+, lahko veslajo na svoji deski pod nadzorom. Uporabite široko stabilno desko, vedno nosite reševalne jopiče (PFD), ostanite v plitki mirni vodi in ohranite kratke seanse (maks. 30-45 minut).',
-      problem:
-        'Starši želijo deliti vodne športe s svojimi otroki, vendar se bojijo za varnost, primernost opreme in ohranjanje zanimanja otrok.',
-      solution:
-        'Uporabite pravo velikost deske za tandem vožnjo, poskrbite, da vsak otrok nosi pravilno nameščen PFD, začnite v plitki topli vodi in naredite zabavno z igrami in kratkimi seansami.',
-      audience: 'Starši, ki želijo otroke seznaniti z SUP.',
-      steps: [
-        'Starost 4-6: ride kot potnik na deski odraslega — sedi spredaj in se drži sredinskega ročaja',
-        'Starost 6-10: kleči ali sedi na svoji deski pod nadzorom odraslega in z varovalno vrvjo',
-        'Starost 10+: vesla na svoji deski pod nadzorom odraslega v bližini',
-        'Vedno nosite PFD — otroci morajo vedno nositi pravilno nameščen reševalni jopič',
-        'Ostanite v plitki vodi (do pasu za odrasle)',
-        'Kratke seanse — maks. 30-45 minut za otroke do 10 let',
-        'Naj bo zabavno — igrajte igre, opazujte ribe, vadite vstajanje na desko',
-      ],
-      faq: [
-        {
-          q: 'Pri kateri starosti lahko otrok SUP sam?',
-          a: 'Okoli 10-12 let, pod nadzorom, odvisno od otrokovih plavalnih sposobnosti in udobja v vodi. Vedno v mirnih, plitvih pogojih.',
-        },
-        {
-          q: 'Katera deska je najboljša za SUP z otroki?',
-          a: 'Široka deska (34"+) z visoko nosilnostjo za tandem vožnjo. SUP Explorer 11 z 33" širine in nosilnostjo 220 lb dobro deluje za starše in otroka.',
-        },
-        {
-          q: 'Katero varnostno opremo potrebujejo otroci?',
-          a: 'Pravilno nameščen CE-certificiran reševalni jopič, varovalna vrv (pripeta na desko odraslega za tandem), krema za sončenje in klobuk.',
-        },
-      ],
-    },
-  },
-  sr: {
-    'how-to-choose-your-sup': {
-      title: 'Kako odabrati SUP svoj odbor',
-      description:
-        'Kompletan vodič za odabir pravog stand-up paddleboard na osnovu vašeg nivoa veštine, uslovima vode, i nameravane upotrebe.',
-      tldr: 'Izaberite svoj SUP na osnovu nivoa veštine, tip vode, i primarna upotreba. All-Around ploče odgovaraju početnicima i mirnoj vodi. Touring ploče odgovaraju udaljenost veslanje. Joga ploče nude dodatnu širinu za stabilnost. Performanse ploče rade za iskusne veslače u različitim uslovima.',
-      problem:
-        'Većina prvi put kupci biraju SUP ploču na osnovu cene ili izgleda, a ne kako i gde će zapravo veslati. To dovodi do loše stabilnosti, neadekvatne performanse, i frustrirajuće iskustvo.',
-      solution:
-        'Uskladite oblik ploče, zapreminu i konstrukciju sa vašim nivoom veštine i primarnim vodenim okruženjem. Šire ploče (32-34") nude stabilnost za početnike. Duže ploče (12-14") staza bolje za turneju.Drop-stitch Konstrukcija na 12-15 PSI obezbeđuje krutost uporedivu sa tvrdim pločama.',
-      audience: 'SUP Prvi put kupci, rekreativni veslači, i svako nadogradnja sa osnovne ploče.',
-      steps: [
-        'Identifikujte svoje primarno okruženje za veslanje - jezero, okean, reka ili mešoviti',
-        'Utakmica širina table na nivou veštine: 32-34 "za početnike, 30-32" za srednji, 28-30" za napredne',
-        'Izaberite dužinu ploče na osnovu upotrebe: kraći za manevrisanje, duži za praćenje i brzinu',
-        'Izaberite konstrukciju: naduvavanje drop-stitch za prenosivost, tvrda ploča za maksimalne performanse',
-        'Proverite kapacitet težine - vaša težina plus oprema ne bi trebalo da prelazi 80% ograničenja odbora',
-        'Proverite uključeni pribor: pumpa, povodac, peraja, ranac, i komplet za popravku',
-      ],
-      faq: [
-        {
-          q: 'Koja SUP širina je najbolja za početnike?',
-          a: '32 do 34 inča širok obezbeđuje najstabilniju platformu za učenje. SUP Ekplorer 11 na 33 "širine je idealan za prvi put veslači na mirnoj vodi.',
-        },
-        {
-          q: 'Naduvavanje ili SUP tvrda ploča?',
-          a: 'Naduvavanje ploče nude prenosivost, skladištenje pogodnost, i apsorpcija uticaja. Hard ploče nude maksimalnu krutost i brzinu. Za većinu rekreativnih korisnika, kvalitetan naduvavanje sa drop-stitch jezgrom je praktičan izbor.',
-        },
-        {
-          q: 'Na šta PSI treba da se naduvam?',
-          a: 'Paddle Board Overstock Ploče preporučuju 12-15 PSI. Na 15 PSI ploča postiže maksimalnu krutost uporedivu sa tvrdom pločom. Uvek ostanite u opsegu nominalnog pritiska odštampanog na ploči.',
-        },
-      ],
-    },
-    'beginner-guide': {
-      title: 'Vodič za početnike za veslanje na dasci',
-      description:
-        'Sve što treba da znate pre vašeg prvog veslanja na dasci - od podešavanja opreme do osnovnih tehnika veslanja.',
-      tldr: 'Počnite na mirnoj, ravnoj vodi sa širokom stabilnom pločom. Naduvajte na 12-15 PSI, pričvrstite povodac i koristite odgovarajuću dužinu vesla (6-8 "viši od vaše visine). Držite svoj stav u širini ramena, kolena blago savijena i pogledajte horizont.',
-      problem:
-        'Novi veslači često preskaču osnovnu pripremu - pogrešnu dužinu vesla, loš stav ili odabir grube vode - što dovodi do padova, frustracije i obeshrabrenja.',
-      solution:
-        'Pratite strukturirani plan prve sesije: izaberite mirnu vodu, podesite opremu ispravno, vežbajte klečanje pre nego što stojite, i savladajte napred potez pre pokušaja skretanja.',
-      audience: 'Apsolutni početnici koji nikada ranije nisu veslali na dasci.',
-      steps: [
-        'Izaberite ravnu, mirnu vodu bez brodskog saobraćaja - malo jezero ili zaštićeni zaliv je idealan',
-        'Naduvajte ploču na 12-15 PSI pomoću pumpe dvostrukog dejstva',
-        'Pričvrstite povodac za zavojnicu na gležanj ili tele, nikada na ručku ploče',
-        'Umetnite peraje i zategnite vijak',
-        'Podesite dužinu vesla — trebalo bi da bude 6-8 inča viši od vaše visine',
-        'Počnite klečati na tabli, veslajte nekoliko poteza da osetite ravnotežu',
-        'Ustanite jednu nogu u isto vreme, stopala u širini ramena, kolena meka',
-        'Gledajte u horizont, a ne u noge - vaša daska ide tamo gde gledate',
-      ],
-      faq: [
-        {
-          q: 'Šta treba da nosim za veslanje na dasci?',
-          a: 'Brzo suva sportska odeća, prsluk za spašavanje, krema za sunčanje i šešir. U hladnoj vodi nosite ronilačko odelo. Uvek nosite povodac i nosite telefon u vodootpornom kućištu.',
-        },
-        {
-          q: 'Kako da se vratim na tablu ako padnem?',
-          a: 'Ostanite mirni. Plivajte do ploče, zgrabite središnju ručku i šutnite noge dok se povlačite na ploču u jednom pokretu. Prvo se vratite u klečeći položaj, a zatim stanite.',
-        },
-        {
-          q: 'Koji uslovi vetra su bezbedni?',
-          a: 'Početnik: vetrovi ispod 10 mph (5 čvorova). Ako vetar duva daleko od obale, ne izlazi. Proverite prognozu i shvatite da je offshore vetar opasan.',
-        },
-      ],
-    },
-    'safety-tips': {
-      title: 'Saveti za bezbednost vodenih sportova',
-      description:
-        'Osnovne bezbednosne smernice za veslanje na dasci, kajak i vožnju čamcem - od provere opreme do svesti o vremenskim prilikama.',
-      tldr: 'Uvek nosite CEsertifikovani prsluk za spašavanje, proverite vremenske i vodene uslove pre lansiranja, nosite komunikacione uređaje, nikada ne veslajte sami u nepoznatoj vodi i razumejte ocijenjene granice vaše opreme.',
-      problem:
-        'Većina nesreća u vodenim sportovima rezultat je neadekvatne pripreme - bez prsluka za spašavanje, ignorisanja vremenskih upozorenja ili korišćenja opreme izvan granica dizajna.',
-      solution:
-        'Usvojite bezbednosnu kontrolnu listu pre lansiranja: proverite stanje opreme, proverite vreme i temperaturu vode, obavestite nekoga o svojoj ruti i uvek nosite odgovarajuću flotaciju.',
-      audience: 'Svi učesnici vodenih sportova — SUP, kajak, gumenjak i RIB korisnici.',
-      steps: [
-        'Proverite vremensku prognozu — izbegavajte vetrove preko 15 mph i grmljavinu',
-        'Proverite temperaturu vode - hladna voda (60 ° F / 15 ° C) zahteva ronilačko odelo ili suvo odelo',
-        'Pregledajte opremu — proverite da li ima curenja, pukotina i pravilnog naduvavanja',
-        'Nosite CEsertifikovani prsluk za spašavanje u svakom trenutku',
-        'Pričvrstite povodac (SUP) ili osigurajte svu labavu opremu (kajak / čamac)',
-        'Podnesite plutajući plan - recite nekome gde idete i kada ćete se vratiti',
-        'Nosite komunikaciju — vodootporna futrola za telefon ili VHF radio',
-        'Znajte svoje granice - ostanite u okviru svog nivoa veštine i ocene opreme',
-      ],
-      faq: [
-        {
-          q: 'Da li mi treba prsluk za spašavanje naSUP?',
-          a: 'Da. Mnoge jurisdikcije zakonski zahtevaju prsluk za spašavanje na bilo kojem plovilu, uključujućiSUPs. Čak i tamo gde nije potrebno, CEsertifikovani prsluk za spašavanje je neophodna sigurnosna oprema.',
-        },
-        {
-          q: 'Koja je najčešća povreda vodenih sportova?',
-          a: 'Uranjanje u hladnu vodu i iscrpljenost su najčešći ozbiljni rizici. Uvek se oblačite za temperaturu vode, a ne za temperaturu vazduha.',
-        },
-        {
-          q: 'Kako da proverim da li su uslovi bezbedni?',
-          a: 'Koristite morske vremenske prognoze. Proverite brzinu vetra, visinu talasa i temperaturu vode. Početnici treba da ostanu u uslovima pod 10 mph vetra i pod 1 ft talasa.',
-        },
-      ],
-    },
-    'inflatable-vs-hard': {
-      title: 'Naduvavanje vs SUP tvrde ploče: Koji treba da izaberete?',
-      description:
-        'Objektivno poređenje naduvavanje i krutih SUP ploča koje pokrivaju performanse, prenosivost, trajnost i vrednost.',
-      tldr: 'Naduvavanje ploče pobedu za prenosivost, skladištenje i otpornost na udarce. Hard ploče pobediti za maksimalnu krutost i brzinu. Moderni drop-stitch naduvavanje ploče na 15 PSI zatvoriti 90% od jaza performansi.',
-      problem:
-        'Kupci su uhvaćeni između pogodnosti naduvavanja odbora i reputacije performansi tvrdih ploča, bez jasnih podataka o tome kako oni zapravo upoređuju.',
-      solution:
-        'Uporedite specifične kriterijume - krutost, težina, upakovana veličina, izdržljivost, popravka i troškovi - u odnosu na vaš stvarni obrazac upotrebe. Za većinu rekreativnih veslača, kvalitetan naduvavanje je bolji izbor.',
-      audience: 'SUP kupci odlučuju između naduvavanja i krute konstrukcije.',
-      steps: [
-        'Procenite potrebe za prenosivošću — naduvavanje pakovanja na veličinu ranca, tvrda ploča zahteva krovni nosač',
-        'Uporedite krutost — naduvavanje na 15 PSI ima minimalan flex, tvrda ploča ima nula flex',
-        'Procenite skladištenje — prodavnice na naduvavanje u ormaru, tvrda ploča zahteva garažu ili prostor za stalak',
-        'Razmislite o izdržljivosti - naduvavanje apsorbuje udarce, tvrda ploča može da se udubi i pukne',
-        'Popravka faktora — zakrpe na naduvavanje su jednostavne, popravke na tvrdoj dasci zahtevaju profesionalan rad',
-        'Proverite performanse — tvrde ploče imaju malu prednost u brzini, gumenjaci nude bolju apsorpciju udara',
-      ],
-      faq: [
-        {
-          q: 'Da li su naduvavanje SUPs kruti kao tvrde ploče?',
-          a: 'Na 15 PSI sa drop-stitch izgradnjom, razlika u krutosti je minimalna za rekreativnu upotrebu. Samo konkurentni trkači i surferi će primetiti razliku.',
-        },
-        {
-          q: 'Koliko dugo traje naduvavanje SUP ?',
-          a: 'Uz pravilnu negu, 5-10 godina. Morski razred PVC se odupire UV i abraziji. Čuvati van direktne sunčeve svetlosti kada se ne koristi i isperite svežom vodom nakon upotrebe slane vode.',
-        },
-        {
-          q: 'Mogu li da koristim naduvavanje SUP za surfovanje?',
-          a: 'Da, ali naduvavanje daske su najbolje za male do umerene surf (ispod 3 ft). Za posvećen surfovanje, tvrda ploča obezbeđuje bolji odziv i železnički angažman.',
-        },
-      ],
-    },
-    'weather-conditions': {
-      title: 'Razumevanje vremenskih uslova za veslanje na dasci',
-      description:
-        'Naučite da čitate vetar, talase, plimu i vremenske obrasce kako biste donosili sigurne odluke na vodi.',
-      tldr: 'Proverite tri stvari pre svakog lansiranja: brzina vetra (ispod 10 mph za početnike), visina talasa (ispod 1 ft za početnike) i temperatura vode (haljina za vodu, a ne vazduh). Offshore vetar je opasan na bilo kom nivou veštine.',
-      problem:
-        'Većina vremenskih nesreća se dešava zato što veslači pogrešno procenjuju uslove - proveravaju temperaturu vazduha, ali ne i temperaturu vode, ili ne razumeju da ih vetar na moru može oduvati u more.',
-      solution:
-        'Koristite strukturiranu procenu vremena pre lansiranja: smer i brzinu vetra, period talasa i visinu, stanje plime i temperature vode. Shvatite kako svaki faktor utiče na vašu bezbednost.',
-      audience: 'Svi veslači koji idu na otvorene vode - jezera, zalivi, reke i okean.',
-      steps: [
-        'Proverite brzinu i smer vetra - vetar na moru (koji duva sa kopna na more) je najopasniji',
-        'Procenite talasne uslove — talasni period je važan koliko i visina talasa',
-        'Upoznajte plimu - plimne struje mogu biti jače od vaše brzine veslanja',
-        'Izmerite temperaturu vode — ispod 60 ° F / 15 ° C zahteva termičku zaštitu',
-        'Proverite vidljivost — magla i jaka kiša smanjuju vidljivost i povećavaju rizik od sudara',
-        'Razumeti lokalne opasnosti - potopljene stene, jake struje, zone saobraćaja brodova',
-      ],
-      faq: [
-        {
-          q: 'Šta brzina vetra je previsoka zaSUP?',
-          a: 'Početnici: preko 10 mph (8 čvorova). Srednji: preko 15 mph (13 čvorova). Napredni: preko 20 mph (17 čvorova). Ako ste u nedoumici, ne izlazite.',
-        },
-        {
-          q: 'Šta znači talasni period?',
-          a: 'Talasni period je vreme između uzastopnih talasa. Kratki periodi (ispod 8 sekundi) znače strme, uzburkane talase. Dugi periodi (preko 12 sekundi) znače glatkije, predvidljivije talase.',
-        },
-        {
-          q: 'Mogu li veslati na kiši?',
-          a: 'Slaba kiša je obično sigurna. Jaka kiša smanjuje vidljivost i može ukazivati na promenu uslova vetra. Grmljavina zahteva hitnu evakuaciju iz vode.',
-        },
-      ],
-    },
-    'understanding-specs': {
-      title: 'Kako čitati SUP specifikacije odbora',
-      description:
-        'Tehnički vodič za razumevanje SUP specifikacija ploče - zapremina, dimenzije, konstrukcija i šta oni znače za performanse.',
-      tldr: 'Ključne specifikacije: zapremina (litara) određuje plovnost i kapacitet težine, širina određuje stabilnost, dužina određuje praćenje i brzinu, debljina određuje krutost, a PSI rejting određuje pritisak inflacije za optimalne performanse.',
-      problem:
-        'Listovi specifikacija proizvoda navode brojeve bez konteksta, ostavljajući kupce nesigurnim koje specifikacije su zapravo bitne za njihov slučaj upotrebe.',
-      solution:
-        'Prevedite svaku specifikaciju u performanse u stvarnom svetu: zapremina za plutanje, širina za stabilnost, dužina za klizanje, debljina za krutost i konstrukcija za izdržljivost.',
-      audience: 'Srednji veslači i tehnički kupci koji žele da donose odluke na osnovu podataka.',
-      steps: [
-        'Proverite zapreminu (litara) — vaša težina plus brzina ne bi trebalo da prelazi 80% od ocene zapremine ploče',
-        'Proverite širinu — širu (32-34") = veću stabilnost, užu (28-30") = veću brzinu',
-        'Dužina provere — duža (12-14") = bolje praćenje, kraće (10-11") = bolja upravljivost',
-        'Proverite debljinu - 6 "je standardna, 8" nudi veću krutost i nosivost',
-        'Proverite PSI rejting — naduvavanje do maksimalne ocene PSI za optimalnu krutost',
-        'Proverite građevinske drop-stitch materijale — gustinu, PVC slojeve, armaturu šina',
-      ],
-      faq: [
-        {
-          q: 'Šta drop-stitch to znači?',
-          a: 'Drop-stitch je metoda konstrukcije u kojoj hiljade niti povezuju gornji i donji sloj ploče. Ovo omogućava inflaciju pod visokim pritiskom (12-15) PSIza ekstremnu krutost.',
-        },
-        {
-          q: 'Koji je idealan odnos težine i zapremine?',
-          a: 'Dobra meta je otprilike 5-6 kilograma težine vozača po litru zapremine odbora. A 220 lb veslač treba tražiti daske sa 180+ litara zapremine.',
-        },
-        {
-          q: 'Da li je težina odbora bitno?',
-          a: 'Da. Lakši ploče (ispod 20 kg) su lakši za nošenje i transport. Teže ploče (25+ kg) često ukazuju na PVC trajniju višeslojnu konstrukciju.',
-        },
-      ],
-    },
-    'sup-maintenance': {
-      title: 'Kako očistiti i čuvati svoj naduvavanje SUP',
-      description: 'Korak-po-korak vodič za održavanje kako bi se povećala životni vek vašeg naduvavanje SUP odbora.',
-      tldr: 'Isperite svežom vodom nakon svake upotrebe, potpuno osušite pre skladištenja, ispuhnite i lagano kotrljajte (ne vojno-čvrsto), čuvajte na hladnom i suvom mestu daleko od direktne sunčeve svetlosti i pregledajte šavove mesečno.',
-      problem:
-        'Nepravilno skladištenje i čišćenje su vodeći uzroci preranog neuspeha u naduvavanju SUPs - kalup, UV oštećenje i raslojavanje šavova.',
-      solution:
-        'Pratite doslednu rutinu nakon sesije: isperite, osušite, pregledajte, ispuhnite i čuvajte. Koristite blagi sapun za tvrdoglavu prljavštinu. Nikada ne čuvajte ploču mokro ili na direktnoj sunčevoj svetlosti.',
-      audience: 'Svi vlasnici na naduvavanje SUP koji žele da njihov odbor traje 5+ godina.',
-      steps: [
-        'Isperite ploču svežom vodom odmah nakon upotrebe, posebno nakon slane vode',
-        'Očistite blagim sapunom i mekom sunđerom - izbegavajte jake hemikalije ili mašine za pranje pod pritiskom',
-        'Osušite tablu potpuno — otvorite ventil da izađe zarobljena voda',
-        'Proverite oštećenja — pregledajte šavove, ventil i površinu na probijanja',
-        'Potpuno ispustite — uklonite jezgro ventila za potpuno ispustanje',
-        'Rolaš ploču labavo — počni od nosa, izbegavaj čvrste nabore',
-        'Čuvajte u torbi za nošenje na hladnom, suvom mestu, dalje od direktne sunčeve svetlosti',
-      ],
-      faq: [
-        {
-          q: 'Mogu li ostaviti svoj SUP napušen tokom cele sezone?',
-          a: 'Da, ali držite ga van direktne sunčeve svetlosti kada se ne koristi. Delimično ispumpavanje (8-10 PSI) se preporučuje za dugotrajno skladištenje.',
-        },
-        {
-          q: 'Kako da popravim probušenu gumu?',
-          a: 'Očistite površinu, isecite zakrpu sa zaobljenim uglovima, nanesite lepak, čvrsto pritisnite i sačekajte 24 sata pre naduvavanja. Paddle Board Overstock daske uključuju komplet za popravku.',
-        },
-        {
-          q: 'Koliko često treba da proveravam ventil?',
-          a: 'Mesečno. Ventil je najčešće mesto kvara. Proverite da li se igla ventila slobodno pomera i da li je O-prsten neoštećen.',
-        },
-      ],
-    },
-    'paddling-techniques': {
-      title: 'Osnovne SUP tehnike veslanja',
-      description:
-        'Savladajte napredni zamah, zamah metlom i okret lukom da biste veslali efikasno u bilo kojim uslovima.',
-      tldr: 'Napredni zamah koristi tvoj trup, a ne ruke. Zamah bočnim potezom okreće dasku. Okretanje kao kod prečke je najefikasnije okretanje. Drži veslo uspravno i potpuno potopi oštricu za maksimalan prenos snage.',
-      problem:
-        'Većina veslača koristi udarce koji pretežno angažuju ruke, što troši energiju i izaziva zamor ramena. Loša tehnika takođe otežava kontrolu daske na vetru i u talasima.',
-      solution:
-        'Naučite tri osnovna zaveslaja — napredni, zamah i okret lukom — sa pravilnom mehanikom tela. Vežbajte svaki na mirnoj vodi pre nego što pređete na izazovne uslove.',
-      audience: 'Veslači koji žele da veslaju duže, brže i sa manje umora.',
-      steps: [
-        'Napredni udarac: ispruži se napred, potpuno postavi oštricu, povuci unazad koristeći rotaciju trupa (ne ruke), izađi kod članka',
-        'Potez mete: ispruži se napred prema ogradi, zamahni lopaticom u širokom luku prema repu, okreni dasku od strane vesla',
-        'Okret sa samostrelom: postavite veslo na suprotnu stranu daske bez promene ruku, povucite ka repu',
-        'Ojačavanje: koristite nizak oslonac za stabilnost u sečenju — spustite sečivo ravno na površinu vode',
-        'Nacrtaj potez: ispruži bočno, povuci dasku bočno prema veslu',
-      ],
-      faq: [
-        {
-          q: 'Kako da veslam pravo?',
-          a: 'Koristite doslednu dužinu udaraca sa obe strane. Menjajte strane na svakih 5-10 udaraca. Pogledajte u fiksnu tačku na horizontu za referencu.',
-        },
-        {
-          q: 'Da li da savijem kolena?',
-          a: 'Da. Održavajte blago savijena kolena kao amortizere. Zaključana kolena prenose svaki talas na vašu jezgru i smanjuju stabilnost.',
-        },
-        {
-          q: 'Kako da veslam protiv vetra?',
-          a: 'Spusti stav, koristi kraće i brže poteze, i drži se bliže obali gde je često manje vetra. Ako je vetar prejak, nemoj izlaziti napolje.',
-        },
-      ],
-    },
-    'sup-fitness': {
-      title: 'SUP Fitnes: Vežba za celo telo na vodi',
-      description: 'Kako vožnja na dasci sa veslom jača snagu jezgra, ravnotežu i kardiovaskularnu kondiciju.',
-      tldr: 'SUP angažuje jezgro, noge, leđa i ramena u svakom potezu. Jednosatna sesija sagoreva 300-500 kalorija. Veslanje protiv vetra ili struje udvostručuje intenzitet.SUP Joga dodaje fleksibilnost i ravnotežu rada.',
-      problem:
-        'Mnogi ljudi vide veslanje kao povremenu aktivnost, a ne legitiman fitnes alat, nedostaje svoj potencijal za kondicioniranje celog tela.',
-      solution:
-        'Struktura SUP sesije sa specifičnim fitnes ciljevima: izdržljivost veslanje za kardio, intervalni sprintovi za snagu, SUP joga za fleksibilnost, i veslanje na daljinu za mišićnu izdržljivost.',
-      audience: 'Fitnes entuzijasti koji traže trening celog tela sa malim uticajem i visokim angažovanjem.',
-      steps: [
-        'Zagrejte se na kopnu - krugovi rukama, uvijanja torza i zamahi nogama 5 minuta',
-        'Počnite sa 10 minuta stalnog veslanja umerenim intenzitetom',
-        'Napredak u intervalnom treningu — 2 minuta teškog veslanja, 2 minuta lakog oporavka',
-        'Uključite SUP joga poze - pas prema dole, ratnik II i poza drveta na tabli',
-        'Ohladite se blagim veslanjem i statičkim protežima na tabli',
-      ],
-      faq: [
-        {
-          q: 'Da li je SUP bolje nego trčanje za fitnes?',
-          a: 'SUP Obezbeđuje uporedive kardiovaskularne koristi sa manjim uticajem zglobova. Takođe angažuje gornji deo tela i jezgro više od trčanja.',
-        },
-        {
-          q: 'Koliko kalorija SUP sagori?',
-          a: 'Približno 300-500 kalorija na sat pri umerenom intenzitetu. Trke ili veslanje protiv vetra može sagoreti 600-800 kalorija na sat.',
-        },
-        {
-          q: 'Mogu li izgraditi mišiće odSUP?',
-          a: 'Da. Veslanje gradi ramena, leđa i mišiće jezgra. Balansiranje angažuje noge i mišiće stabilizatora. To je trening otpora celog tela.',
-        },
-      ],
-    },
-    'sup-yoga': {
-      title: 'SUP Joga: Kompletan vodič za veslanje i jogu',
-      description: 'Kombinujte veslanje sa jogom za poboljšanu ravnotežu, snagu, i svesnost na vodi.',
-      tldr: 'SUP Joga dodaje element nestabilnosti koji dramatično povećava aktivaciju jezgra u poređenju sa kopnenom jogom. Počnite sa osnovnim pozama na širokoj, stabilnoj ploči u mirnoj vodi. Koristite neklizajuću podlogu. Nikada ne vežbajte SUP jogu sami.',
-      problem:
-        'Tradicionalne joga prostirke pružaju savršeno stabilnu površinu, uklanjajući izazov ravnoteže koji čini SUP jogu jedinstveno efikasnom za jezgro snage i fokusa.',
-      solution:
-        'Koristite SUP ekstra široku ploču (34 "+) sa podlogom za vuču na punoj palubi. Vežbajte u mirnoj, plitkoj vodi. Počnite sa temeljnim pozama pre nego što pokušate inverzije.',
-      audience: 'Joga praktičari i veslači koji žele da kombinuju trening ravnoteže sa svesnošću.',
-      steps: [
-        'Usidrite dasku u plitkoj, mirnoj vodi - koristite sidro od peska ili vezati za pristanište',
-        'Počnite sa sedećim pozama - lagano sedenje, poza čamca, sedeći okret',
-        'Napredak u klečećim pozama — stol, mačka-krava, munja',
-        'Prelazak na stojeće poze — planina, ratnik I, ratnik II, poza drveta',
-        'Vežbajte poze ravnoteže — polumesec, orao, plesačica',
-        'Završite sa savasanom — lezite ravno na dasku, osetite kretanje vode',
-      ],
-      faq: [
-        {
-          q: 'Koja ploča je najbolja za SUP jogu?',
-          a: 'Široka ploča (34 "+) sa vučnom podlogom u punoj dužini pruža najstabilniju platformu. SUP Turneja 12 nudi dobar balans stabilnosti i klizanja.',
-        },
-        {
-          q: 'Da li je SUP joga opasna?',
-          a: 'Ne više od kopnene joge kada se praktikuje bezbedno. Koristite mirnu, plitku vodu. Nosite povodac. Vežbajte sa partnerom. Izbegavajte duboku vodu za svoje prve sesije.',
-        },
-        {
-          q: 'Da li mi je potrebna posebna oprema?',
-          a: 'Široka stabilna ploča, podloga za vuču sa punom palubom, povodac iPFD. Neki praktičari koriste vodootpornu prostirku za dodatno prianjanje.',
-        },
-      ],
-    },
-    'sup-fishing': {
-      title: 'SUP Ribolov Vodič: Kako Paddle Board Fish',
-      description:
-        'Sve što treba da znate o ribolovu sa daske za veslanje - podešavanje zupčanika, saveti za stabilnost i tehnike.',
-      tldr: 'SUP Ribolov nudi tihi pristup, plitki pristup vodi i livenje od 360 stepeni. Koristite široku stabilnu ploču (34 "), +pričvrstite držače štapova i koristite hladnjak ili sanduk kao opremu. Sidro u vetrovitim uslovima. Uvek nosite .PFD',
-      problem:
-        'Standardni ribarski brodovi su skupi za održavanje i ne mogu pristupiti plitkoj vodi. Kajaci ograničavaju mobilnost.SUP Ribolov rešava oba problema, ali zahteva specifične adaptacije opreme.',
-      solution:
-        'Opremite štalu SUP sa držačima štapova, sandukom za zupčanike i sidrenim sistemom. Koristite prenosivost odbora za pristup udaljenim mestima za ribolov koje brodovi ne mogu da dostignu.',
-      audience:
-        'Ribolovci koji žele da pecaju plitke vode, udaljene lokacije ili vole laganu, prenosivu platformu za ribolov.',
-      steps: [
-        'Izaberite široku ploču (34 "+) sa velikom nosivošću za opremu',
-        'Instalirajte držače štapova na palubi pomoću šina montiran ili strap-on sistema',
-        'Koristite vodootporni sanduk ili hladnjak vezan za prednju palubu za rešavanje',
-        'Ponesite malo sidro ili stub za vetrovite uslove',
-        'Nosite PFD džepove za alate i telefon',
-        'Vežbajte livenje iz klečećeg položaja pre nego što stojite',
-      ],
-      faq: [
-        {
-          q: 'Mogu li da stojim i pecam naSUP?',
-          a: 'Da. 34 "+široka ploča obezbeđuje dovoljnu stabilnost za stajanje i livenje. Prvo vežbajte na mirnoj vodi.',
-        },
-        {
-          q: 'Koju ribu mogu da ciljam odSUP?',
-          a: 'SUPs su odlični za bas u jezerima, crvene ribe u stanovima, pastrmke u rekama, i priobalne vrste u zalivima i ušćima.',
-        },
-        {
-          q: 'Kako da sletim ribu iz SUP?',
-          a: 'Kleknite za stabilnost. Koristite mrežu ili hvataljku za usne. Držite ribu nisko kako biste izbegli pad. Otpustite ili osigurajte u hladnjaku.',
-        },
-      ],
-    },
-    'inflatable-repair': {
-      title: 'Kako popraviti čamac na naduvavanje ili SUP',
-      description: 'Korak po korak vodič za popravku uboda, pitanja ventila i oštećenja šava na gumenim plovilima.',
-      tldr: 'Mali ubodi (pod 1/4 ") se mogu popraviti sa priloženim patch kompletom. Očistite područje, nanesite PVC lepak, pritisnite flaster, i sačekajte 24 sata. Ventil curenja obično zahtevaju zamenu O-prstena. Velike suze ili šav raslojavanje treba profesionalnu uslugu.',
-      problem:
-        'Mali ubodi i problemi sa ventilima su uobičajeni, ali se lako popraviti. Bez odgovarajuće tehnike popravke, korisnici ili preplaćuju za profesionalnu uslugu ili pogoršavaju štetu.',
-      solution:
-        'Identifikujte vrstu oštećenja - probijanje, curenje ventila ili problem sa šavom - i primenite odgovarajući metod popravke. Većina popravki traje 30 minuta plus vreme stvrdnjavanja.',
-      audience: 'Vlasnici naduvavanjaSUPs, kajaka i čamaca koji žele sami da se bave osnovnim popravkama.',
-      steps: [
-        'Locirajte curenje - naduvajte se u potpunosti, slušajte vazduh, opipajte rukom ili koristite sapunicu',
-        'Označite curenje olovkom ili trakom',
-        'Očistite područje oko curenja izopropilnim alkoholom - najmanje 2 inča oko oštećenja',
-        'Hrapavite površinu finim brzim papirom za bolje prianjanje lepka',
-        'Nanesite PVC lepak na zakrpu i na površinu daske',
-        'Sačekajte 5 minuta da lepak postane lepljiv',
-        'Čvrsto pritisnite zakrpu, istisnite mehuriće vazduha valjkom ili kreditnom karticom',
-        'Ostavite da se očvrsne 24 sata pre nego što napunite do punog pritiska',
-      ],
-      faq: [
-        {
-          q: 'Mogu li popraviti probušeno na vodi?',
-          a: 'Hitne popravke pomoću zakrpe i trake mogu vas vratiti do obale. Potpune popravke zahtevaju suve uslove i 24-časovno očvršćavanje.',
-        },
-        {
-          q: 'Kako da popravim curenje ventila?',
-          a: 'Uklonite jezgro ventila pomoću priloženog alata, proverite O-prsten za oštećenja, zamenite po potrebi i čvrsto vratite jezgro.',
-        },
-        {
-          q: 'Koji lepak treba da koristim za PVC popravke?',
-          a: 'Koristite lepak specifičan za PVC poput HH-66 ili Clifton. Standardni super lepak ne drži dobro za napuhavajuće PVC materijale.',
-        },
-      ],
-    },
-    'kayak-techniques': {
-      title: 'Osnovne tehnike veslanja kajakom',
-      description:
-        'Savladajte veslanje kajakom — napredni zaveslaj, sweep zaveslaj, nagnutost i podupiranje za efikasno i sigurno veslanje.',
-      tldr: 'Napredni zaveslaj kajakom koristi rotaciju torza, ne ruku. Sweep zaveslaj okreće kajak. Nagnutost poboljšava okretanje. Nisko podupiranje sprečava prevrtanje na talasima. Držite osovinu vesla vertikalno i lopaticu potpuno potopljenu.',
-      problem:
-        'Neefikasna tehnika veslanja izaziva zamor ramena, spor napredak i teškoće u kontroli kajaka na vetru i struji.',
-      solution:
-        'Naučite pravilnu tehniku veslanja koja pokreće torzo sa četiri osnovna zaveslaja — napred, unazad, sweep i podupiranje.',
-      audience: 'Početnici i srednji veslači koji žele da veslaju sa manje truda i više kontrole.',
-      steps: [
-        'Napredni zaveslaj: rotirajte torzo, postavite lopaticu blizu nogu, povucite pored kuka, izvučete kod kuka',
-        'Unazadni zaveslaj: postavite lopaticu iza sebe, gurajte napred da usporite ili se vratite',
-        'Sweep zaveslaj: dosegnite napred, zamahnite lopaticom u širokom luku prema krmi, okrenite kajak',
-        'Nisko podupiranje: pljesnite lopaticom po površini vode za stabilnost na talasima',
-        'Nagnutost: nagnite kajak blago na ivicu da napravite okrete',
-      ],
-      faq: [
-        {
-          q: 'Kako da održim kajak u pravoj liniji?',
-          a: 'Koristite konzistentne zaveslaje naizmenično sa obe strane. Naučite J-zaveslaj (blagi kuk na kraju naprednog zaveslaja) za korekciju kursa bez menjanja strane.',
-        },
-        {
-          q: 'Koja je najčešća povreda kajaka?',
-          a: 'Istezanje ramena zbog dominantnog veslanja rukom. Koristite rotaciju torza da uključite veće mišiće leđa i smanjite opterećenje ramena.',
-        },
-        {
-          q: 'Kako da veslam na vetru?',
-          a: 'Držite pramac okrenut protiv vetra. Koristite kraće, snažnije zaveslaje. Ako prelazite preko vetra, nagnite kajak blago prema vetru.',
-        },
-      ],
-    },
-    'multi-day-trip': {
-      title: 'Planiranje višednevnog kajak ili SUP puta',
-      description:
-        'Kako planirati i izvesti višednevni veslački put — planiranje rute, pakovanje opreme, kampovanje i bezbednost.',
-      tldr: 'Plan 10-15 milja dnevno. Spakujte opremu u vodootporne suve vreće, ravnomerno rasporedite težinu i vežbajte utovar daske ili kajaka pre putovanja. Podnesite plan plovka. Nosite vodu, hranu, sklonište, navigaciju i komunikaciju.',
-      problem:
-        'Višednevna putovanja ne uspevaju zbog prepakovanja, lošeg planiranja rute ili potcenjivanja vremena i struje - što dovodi do iscrpljenosti, kvara opreme ili bezbednosnih incidenata.',
-      solution:
-        'Koristite sistematski pristup planiranju: izbor rute, kontrolna lista zupčanika, planiranje hrane, brifing o bezbednosti i planiranje za nepredviđene situacije.',
-      audience: 'Iskusni veslači planiraju svoju prvu višednevnu ekspediciju.',
-      steps: [
-        'Izaberite rutu sa utvrđenim kampovima i tačkama za spašavanje',
-        'Plan 10-15 milja dnevno računovodstvo za vetar i struje',
-        'Proverite tabele plime i vremenske prognoze za ceo prozor putovanja',
-        'Spakujte opremu u vodootporne suve vreće - 20-30 lbs ukupna težina zupčanika',
-        'Ravnomerno rasporedite težinu - najteže predmete u centru',
-        'Podnesite detaljan plan plovka sa nekim na obali',
-        'Ponesite navigaciju — papirnu kartu, kompas i GPS rezervnu kopiju',
-        'Pack sklonište za hitne slučajeve, dodatnu hranu i komplet za prvu pomoć',
-      ],
-      faq: [
-        {
-          q: 'Koja je idealna dnevna udaljenost?',
-          a: '10-15 milja dnevno za iskusne veslače. Početnici bi trebalo da planiraju 5-8 milja. Uvek graditi u tampon vremenu za vremenske prilike.',
-        },
-        {
-          q: 'Koliko vode treba da nosim?',
-          a: '1 galon po osobi dnevno. U toplim uslovima, 1,5 litara. Nosite filter za vodu ili tablete za prečišćavanje za dopune.',
-        },
-        {
-          q: 'Koja je najvažnija sigurnosna stavka?',
-          a: 'Komunikacija. VHF radio ili satelitski glasnik može spasiti život u hitnim slučajevima. Mobilni telefoni su nepouzdani u udaljenim područjima.',
-        },
-      ],
-    },
-    'choosing-paddle': {
-      title: 'Kako odabrati pravo veslo za SUP i kajak',
-      description: 'Vodič za veslo materijala, oblika noževa, tipova vratila, i dimenzionisanje za SUP i kajak.',
-      tldr: 'Dužina vesla: SUP vesla treba da bude 6-8 "viši od vaše visine. Kajak vesla zavise od širine broda i dužine torza. Nož oblik: dihedral lopatice staza ravno, ravne lopatice nude više ulov. Vratilo materijal: ugljenik je najlakši, fiberglas je najbolja vrednost, aluminijum je budžet.',
-      problem:
-        'Korišćenje pogrešne veličine vesla ili materijala izaziva nepotreban zamor, lošu efikasnost moždanog udara, i zajednički napor.',
-      solution: 'Hod dužina veslo, nož oblik, vratilo materijal, i flek na vaš stil veslanje, veličina tela, i budžet.',
-      audience: 'SUP i kajak veslači biraju svoje prvo ili sledeće veslo.',
-      steps: [
-        'Za SUP: merenje visine vesla — 6-8" viši od vaše visine za opšte veslanje',
-        'Za kajak: izmerite dužinu torza i širinu čamca - uži čamci trebaju kraća vesla',
-        'Izaberite materijal sečiva — najlon za budžet, fiberglas za vrednost, ugljenik za performanse',
-        'Izaberite oblik sečiva — dihedral za glatko praćenje, ravan za snagu, kašika za trke',
-        'Izaberite tip osovine — ravno za SUP, savijena za trke SUP, standard za kajak',
-        'Proverite fleksiju — tvrđe osovine prenose više snage, fleksibilne osovine smanjuju naprezanje zglobova',
-      ],
-      faq: [
-        {
-          q: 'Koji je najbolji materijal za veslo?',
-          a: 'Fiberglas nudi najbolji balans težine, trajnosti i troškova. Ugljenik je lakši, ali skuplji i krt. Najlon je težak, ali praktično neuništiv.',
-        },
-        {
-          q: 'Kako da znam da li je moje veslo je prava dužina?',
-          a: 'Za SUP: stojite veslo vertikalno pored vas — ručka treba da dostigne zglob kada vam je ruka podignuta iznad glave. Za kajak: sečivo treba da uđe u vodu pod udobnim uglom bez preteranog posezanja.',
-        },
-        {
-          q: 'Da li treba da dobijem jednodelnu ili podesivu veslo?',
-          a: 'Podesive vesla su dobri za zajedničku upotrebu i putovanja. Jednodelni vesla su lakši, tvrđi, i efikasniji za namensku upotrebu.',
-        },
-      ],
-    },
-    'sup-with-kids': {
-      title: 'SUP sa decom: Kompletan porodični vodič',
-      description: 'Kako bezbedno odvesti decu na veslanje na dasci — preporuke za uzrast, oprema i aktivnosti.',
-      tldr: 'Deca 6+ mogu da se voze SUP sa odraslom osobom. Deca 10+ mogu veslati svoju ploču uz nadzor. Koristite široku stabilnu ploču, uvek nosite PFD, ostanite u plitkoj mirnoj vodi i držite sesije kratke (30-45 minuta maks).',
-      problem:
-        'Roditelji žele da dele vodene sportove sa svojom decom, ali brinu o bezbednosti, opremi i održavanju dece.',
-      solution:
-        'Koristite pravu veličinu odbora za tandem jahanje, uverite se da svako dete nosi pravilno opremljenPFD, početi u plitkoj toploj vodi, i da bude zabavno sa igrama i kratkim sesijama.',
-      audience: 'Roditelji koji žele da upoznaju svoju decu sa veslanjem na dasci.',
-      steps: [
-        'Uzrast 4-6: vozite se kao putnik na dasci za odrasle - sedite ispred, držite se za središnju ručku',
-        'Godine 6-10: kleknite ili sedite na sopstvenoj tabli uz nadzor odraslih i povodac',
-        'Starost 10+: veslati svoju ploču sa nadzorom odraslih u blizini',
-        'Uvek nosite - PFD deca moraju da nose pravilno postavljen prsluk za spašavanje u svakom trenutku',
-        'Ostanite u plitkoj vodi (do struka za odraslu osobu)',
-        'Neka sesije budu kratke - maksimalno 30-45 minuta za decu mlađu od 10 godina',
-        'Neka bude zabavno — igrajte igrice, tražite ribu, vežbajte stojeći',
-      ],
-      faq: [
-        {
-          q: 'U kojoj dobi dete SUP može sama?',
-          a: 'Oko 10-12 godina uz nadzor, u zavisnosti od sposobnosti plivanja deteta i udobnosti u vodi. Uvek u mirnim, plitkim uslovima.',
-        },
-        {
-          q: 'Koji odbor je najbolji za SUP sa decom?',
-          a: 'Širok odbor (34 "+) sa velikim kapacitetom težine za tandem jahanje. SUP Ekplorer 11 je 33 "širina i 220 lb kapacitet radi dobro za roditelja-plus-dete.',
-        },
-        {
-          q: 'Koja sigurnosna oprema je potrebna deci?',
-          a: 'Pravilno postavljen CEsertifikovani prsluk za spašavanje, povodac (pričvršćen za tablu za odrasle za tandem), krema za sunčanje i šešir.',
+          q: 'What safety gear do kids need?',
+          a: "A properly fitted life vest, a leash (attached to the adult's board for tandem), sunscreen, and a hat.",
         },
       ],
     },
@@ -7500,7 +2564,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         'ปฏิบัติตามแผนการฝึกครั้งแรกที่มีโครงสร้าง: เลือกน้ําสงบ จัดอุปกรณ์ให้ถูกต้อง ฝึกคุกเข่าก่อนยืน และฝึกว่ายน้ําไปข้างหน้าก่อนจะพยายามเลี้ยว',
       audience: 'มือใหม่ที่ไม่เคยพายบอร์ดมาก่อนเลย',
       steps: [
-        'เลือกน้ําที่ราบเรียบ สงบ ไม่มีเรือผ่าน — ทะเลสาบเล็ก ๆ หรืออ่าวที่มีที่กําบังจะเหมาะที่สุด',
+        'เลือกน้ําที่ราบเรียบ สงบ ไม่พลุกพล่าน — ทะเลสาบเล็ก ๆ หรืออ่าวที่มีที่กําบังจะเหมาะที่สุด',
         'เติมลมบอร์ดของคุณให้ถึง 12-15 ด้วยPSIปั๊มแบบสองขั้นตอน',
         'ติดสายจูงคอยล์กับข้อเท้าหรือน่อง อย่าติดที่ด้ามจับบอร์ด',
         'ใส่ครีบและขันสกรูให้แน่น',
@@ -7525,37 +2589,36 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
       ],
     },
     'safety-tips': {
-      title: 'เคล็ดลับความปลอดภัยในกีฬาทางน้ํา',
-      description:
-        'แนวทางความปลอดภัยที่จําเป็นสําหรับการพายบอร์ด พายเรือคายัค และการพายเรือ — ตั้งแต่การตรวจสอบอุปกรณ์ไปจนถึงการรับรู้สภาพอากาศ',
-      tldr: 'CEสวมเสื้อชูชีพที่ได้รับการรับรองเสมอ ตรวจสอบสภาพอากาศและสภาพน้ําก่อนปล่อย พกอุปกรณ์สื่อสาร ไม่พายเรือคนเดียวในน้ําที่ไม่คุ้นเคย และเข้าใจขีดจํากัดที่กําหนดของอุปกรณ์ของคุณ',
+      title: 'Paddle Boarding Safety Tips',
+      description: 'Essential safety guidelines for paddle boarding — from equipment checks to weather awareness.',
+      tldr: "Always wear a life vest, check weather and water conditions before launch, carry communication devices, never paddle alone in unfamiliar water, and understand your equipment's rated limits.",
       problem:
-        'อุบัติเหตุกีฬาทางน้ําส่วนใหญ่เกิดจากการเตรียมตัวที่ไม่เพียงพอ — ไม่มีเสื้อชูชีพ ไม่สนใจคําเตือนสภาพอากาศ หรือใช้อุปกรณ์เกินขีดจํากัดการออกแบบ',
+        'Most water sports accidents result from inadequate preparation — no life vest, ignoring weather warnings, or using equipment beyond its design limits.',
       solution:
-        'ใช้รายการตรวจสอบความปลอดภัยก่อนปล่อย: ตรวจสอบสภาพอุปกรณ์ ตรวจสอบสภาพอากาศและอุณหภูมิน้ํา แจ้งเส้นทางให้ผู้อื่นทราบ และสวมใส่อุปกรณ์ลอยตัวที่เหมาะสมเสมอ',
-      audience: 'ผู้เข้าร่วมกีฬาทางน้ําทุกคน — SUP, คายัค, เรือเล็ก และRIBผู้ใช้',
+        'Adopt a pre-launch safety checklist: verify equipment condition, check weather and water temperature, inform someone of your route, and always wear appropriate flotation.',
+      audience: 'All paddle boarders, from first-timers to experienced riders.',
       steps: [
-        'ตรวจสอบพยากรณ์อากาศ — หลีกเลี่ยงลมที่แรงเกิน 15 ไมล์ต่อชั่วโมงและพายุฝนฟ้าคะนอง',
-        'ตรวจสอบอุณหภูมิน้ํา — น้ําเย็น (60°F/15°C) ต้องใช้ชุดดําน้ําหรือชุดดรายสูท',
-        'ตรวจสอบอุปกรณ์ — ตรวจสอบการรั่วไหล รอยแตกร้าว และการเติมลมอย่างถูกต้อง',
-        'สวมCEเสื้อชูชีพที่ได้รับการรับรองตลอดเวลา',
-        'ผูกสายจูง (SUP) หรือยึดอุปกรณ์ที่หลวมทั้งหมด (เรือคายัค/เรือ)',
-        'ยื่นแผนลอยตัว — บอกใครสักคนว่าคุณจะไปที่ไหนและจะกลับมาเมื่อไหร่',
-        'พกพาการสื่อสาร — เคสโทรศัพท์กันน้ําหรือวิทยุ VHF',
-        'รู้ขีดจํากัดของตัวเอง — รักษาระดับทักษะและระดับอุปกรณ์ของคุณ',
+        'Check weather forecast — avoid winds over 15 mph and thunderstorms',
+        'Verify water temperature — cold water (<60°F/15°C) requires a wetsuit or drysuit',
+        'Inspect equipment — check for leaks, cracks, and proper inflation',
+        'Wear a life vest at all times',
+        'Attach the leash and secure all loose gear',
+        'File a float plan — tell someone where you are going and when you will return',
+        'Carry communication — waterproof phone case or VHF radio',
+        'Know your limits — stay within your skill level and equipment ratings',
       ],
       faq: [
         {
-          q: 'ฉันจําเป็นต้องใส่เสื้อชูชีพไหมSUP?',
-          a: 'ใช่หลายเขตอํานาจศาลกําหนดให้มีเสื้อชูชีพสําหรับเรือทุกลํา รวมถึงSUPsแม้ในกรณีที่ไม่จําเป็น เสื้อCEชูชีพที่ได้รับการรับรองก็เป็นอุปกรณ์ความปลอดภัยที่จําเป็น',
+          q: 'Do I need a life vest on a SUP?',
+          a: 'Yes. Many jurisdictions legally require a life vest when paddling, including on SUPs. Even where not required, a life vest is essential safety equipment.',
         },
         {
-          q: 'อาการบาดเจ็บจากกีฬาทางน้ําที่พบบ่อยที่สุดคืออะไร?',
-          a: 'การจุ่มน้ําเย็นและความเหนื่อยล้าเป็นความเสี่ยงร้ายแรงที่พบบ่อยที่สุดควรแต่งกายตามอุณหภูมิน้ํา ไม่ใช่อุณหภูมิอากาศ',
+          q: 'What is the most common water sports injury?',
+          a: 'Cold water immersion and exhaustion are the most common serious risks. Always dress for the water temperature, not the air temperature.',
         },
         {
-          q: 'ฉันจะตรวจสอบได้อย่างไรว่าสภาพแวดล้อมปลอดภัย?',
-          a: 'ใช้พยากรณ์อากาศทางทะเลตรวจสอบความเร็วลม ระดับคลื่น และอุณหภูมิน้ําผู้เริ่มต้นควรอยู่ในสภาพลมต่ํากว่า 10 ไมล์ต่อชั่วโมง และคลื่นสูง 1 ฟุต',
+          q: 'How do I check if conditions are safe?',
+          a: 'Use marine weather forecasts. Check wind speed, wave height, and water temperature. Beginners should stay in conditions under 10 mph wind and under 1 ft waves.',
         },
       ],
     },
@@ -7607,7 +2670,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         'รู้เรื่องน้ําขึ้น — กระแสน้ําขึ้นน้ําลงอาจแรงกว่าความเร็วพายของคุณ',
         'วัดอุณหภูมิน้ํา — ต่ํากว่า 60°F/15°C ต้องป้องกันความร้อน',
         'ตรวจสอบทัศนวิสัย — หมอกและฝนตกหนักช่วยลดทัศนวิสัยและเพิ่มความเสี่ยงจากการชน',
-        'เข้าใจอันตรายในพื้นที่ — หินใต้น้ํา กระแสน้ําแรง เขตเรือ',
+        'เข้าใจอันตรายในพื้นที่ — หินใต้น้ํา กระแสน้ําแรง เขตจราจรทางน้ํา',
       ],
       faq: [
         {
@@ -7763,7 +2826,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
       audience: 'ผู้ฝึกโยคะและนักพายเรือที่ต้องการผสมผสานการฝึกทรงตัวกับการมีสติ',
       steps: [
         'ยึดบอร์ดในน้ําตื้นและสงบ — ใช้สมอทรายหรือผูกกับท่าเรือ',
-        'เริ่มต้นด้วยท่านั่ง — ท่านั่งสบาย ท่าเรือ ท่าบิดนั่ง',
+        'เริ่มต้นด้วยท่านั่ง — ท่านั่งสบาย ท่านาวาสนะ ท่าบิดนั่ง',
         'ความก้าวหน้าสู่ท่าคุกเข่า — ท่าโต๊ะ, แมว-วัว, สายฟ้า',
         'เปลี่ยนไปท่ายืน — ภูเขา, นักรบ I, นักรบ II, ท่าต้นไม้',
         'ฝึกท่าทรงตัว — พระจันทร์เสี้ยว, นกอินทรี, นักเต้น',
@@ -7790,9 +2853,9 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         'ทุกสิ่งที่คุณควรรู้เกี่ยวกับการตกปลาจากกระดานพาย — การตั้งค่าอุปกรณ์ เคล็ดลับความมั่นคง และเทคนิคต่าง ๆ',
       tldr: 'การSUPตกปลาให้การเข้าหาแบบเงียบ การเข้าถึงน้ําตื้น และการขว้างเหวี่ยงแบบ 360 องศาใช้กระดานที่มั่นคงกว้าง (34") +ติดที่ยึดคันเบ็ด และใช้คูลเลอร์หรือลังเป็นพื้นจับเครื่องมือสมอเรือในสภาพลมแรงสวมใส่ PFD.',
       problem:
-        'เรือประมงมาตรฐานมีค่าใช้จ่ายในการบํารุงรักษาสูงและไม่สามารถเข้าถึงน้ําตื้นได้เรือคายัคจํากัดความคล่องตัวSUPการตกปลาแก้ปัญหาทั้งสองอย่างได้ แต่ต้องปรับอุปกรณ์เฉพาะ',
+        'เรือประมงเครื่องยนต์มีค่าใช้จ่ายในการบํารุงรักษาสูงและไม่สามารถเข้าถึงน้ําตื้นได้ การตกปลาด้วย SUP แก้ปัญหาทั้งสองอย่างได้ แต่ต้องปรับอุปกรณ์เฉพาะ',
       solution:
-        'จัดเตรียมคอกม้าSUPด้วยที่วางคันเบ็ด ลังอุปกรณ์ และระบบสมอเรือใช้ความสะดวกในการพกพาของบอร์ดเพื่อเข้าถึงจุดตกปลาที่เรือไม่สามารถไปถึงได้',
+        'จัดเตรียม SUP ที่มั่นคงด้วยที่วางคันเบ็ด ลังอุปกรณ์ และระบบสมอ ใช้ความสะดวกในการพกพาของบอร์ดเพื่อเข้าถึงจุดตกปลาที่เรือเครื่องยนต์ไม่สามารถไปถึงได้',
       audience: 'นักตกปลาที่ต้องการตกปลาในน้ําตื้น พื้นที่ห่างไกล หรือชอบแพลตฟอร์มตกปลาน้ําหนักเบาและพกพาสะดวก',
       steps: [
         'เลือกแผ่นบอร์ดกว้าง (34") +ที่มีน้ําหนักรองรับเฟืองสูง',
@@ -7818,166 +2881,137 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
       ],
     },
     'inflatable-repair': {
-      title: 'วิธีซ่อมเรือยางของคุณ SUPหรือ',
-      description: 'คู่มือทีละขั้นตอนในการซ่อมแซมรอยรั่ว ปัญหาวาล์ว และรอยต่อบนเรือเป่าลม',
-      tldr: 'รอยรั่วเล็ก ๆ (ต่ํากว่า 1/4 นิ้ว) สามารถซ่อมแซมได้ด้วยชุดปะที่แถมมาทําความสะอาดบริเวณนั้น ทาPVCกาว กดแผ่นปะ และรอ 24 ชั่วโมงวาล์วรั่วมักต้องเปลี่ยนโอริงรอยฉีกขาดขนาดใหญ่หรือรอยต่อลอกออกต้องได้รับการดูแลจากมืออาชีพ',
-      problem:
-        'รอยรั่วเล็ก ๆ และปัญหาวาล์วเป็นเรื่องปกติแต่แก้ไขได้ง่ายหากไม่มีเทคนิคการซ่อมแซมที่ถูกต้อง ผู้ใช้อาจจ่ายแพงเกินไปสําหรับบริการมืออาชีพหรือทําให้ความเสียหายแย่ลง',
-      solution:
-        'ระบุประเภทของความเสียหาย — การเจาะ วาล์วรั่ว หรือปัญหารอยต่อ — และใช้วิธีซ่อมแซมที่เหมาะสมการซ่อมแซมส่วนใหญ่ใช้เวลาประมาณ 30 นาทีบวกเวลาการแห้ง',
-      audience: 'เจ้าของเรือเป่าลม เรือSUPsคายัค และเรือที่ต้องการซ่อมแซมพื้นฐานด้วยตัวเอง',
-      steps: [
-        'หาจุดรั่ว — เป่าลมเต็มที่ ฟังเสียงลม จับด้วยมือ หรือใช้สบู่',
-        'ทําเครื่องหมายจุดรั่วด้วยปากกาหรือเทป',
-        'ทําความสะอาดบริเวณรอบๆ รอยรั่วด้วยแอลกอฮอล์ไอโซโพรพิล — อย่างน้อย 2 นิ้วรอบๆ จุดเสียหาย',
-        'ขัดผิวด้วยกระดาษทรายละเอียดเพื่อการยึดติดที่ดียิ่งขึ้น',
-        'ติดPVCกาวทั้งบนแผ่นปะและพื้นผิวแผ่น',
-        'รอ 5 นาทีให้กาวเหนียว',
-        'กดแผ่นแปะให้แน่น แล้วใช้ลูกกลิ้งหรือบัตรเครดิตกลิ้งฟองอากาศออก',
-        'ปล่อยให้แห้ง 24 ชั่วโมงก่อนเติมลมจนแรงดันเต็มที่',
-      ],
-      faq: [
-        {
-          q: 'สามารถซ่อมรอยรั่วบนน้ําได้ไหม?',
-          a: 'การซ่อมแซมฉุกเฉินโดยใช้แผ่นปะและเทปสามารถพาคุณกลับขึ้นฝั่งได้การซ่อมแซมเต็มรูปแบบต้องใช้สภาพแห้งและการอบแห้งตลอด 24 ชั่วโมง',
-        },
-        {
-          q: 'ฉันจะซ่อมวาล์วรั่วได้อย่างไร?',
-          a: 'ถอดแกนวาล์วด้วยเครื่องมือที่แถมมา ตรวจสอบโอริงว่าเสียหายหรือไม่ เปลี่ยนใหม่หากจําเป็น และใส่แกนกลับเข้าไปให้แน่น',
-        },
-        {
-          q: 'ควรใช้กาวชนิดใดในการPVCซ่อมแซม?',
-          a: 'ใช้PVCกาวเฉพาะ เช่น HH-66 หรือ Clifton กาวซูเปอร์กลูมาตรฐานไม่ยึดติดกับวัสดุเป่าลมPVCได้ดี',
-        },
-      ],
-    },
-    'kayak-techniques': {
-      title: 'เทคนิคการพายเรือคายัคที่จําเป็น',
+      title: 'How to Repair Your Inflatable SUP',
       description:
-        'การพายเรือคายัคระดับมาสเตอร์ — พายไปข้างหน้า พายสวิป เอดจ์ และเสริมความแข็งแรงเพื่อการพายเรือคายัคที่มีประสิทธิภาพและปลอดภัย',
-      tldr: 'ท่าพายเรือคายัคแบบไปข้างหน้าใช้การหมุนลําตัว ไม่ใช่แขนท่ากวาดจะหมุนเรือคายัคการวางขอบช่วยให้เลี้ยวได้ดีขึ้นขาค้ําต่ําช่วยป้องกันการพลิกคว่ําในคลื่นรักษาก้านพายให้ตั้งตรงและใบพายจมน้ําจนสุด',
-      problem: 'เทคนิคการพายที่ไม่มีประสิทธิภาพทําให้ไหล่ล้า ความก้าวหน้าช้า และควบคุมเรือคายัคได้ยากในลมและกระแสน้ํา',
+        'Step-by-step guide to repairing punctures, valve issues, and seam damage on your inflatable paddle board.',
+      tldr: 'Small punctures (under 1/4") are repairable with the included patch kit. Clean the area, apply PVC adhesive, press the patch, and wait 24 hours. Valve leaks usually require O-ring replacement. Large tears or seam delamination need professional service.',
+      problem:
+        'Small punctures and valve issues are common but easy to fix. Without proper repair technique, users either overpay for professional service or make the damage worse.',
       solution:
-        'เรียนรู้เทคนิคการพายที่ขับเคลื่อนด้วยลําตัวอย่างถูกต้องด้วยสี่จังหวะสําคัญ — ไปข้างหน้า ถอยหลัง กวาด และตั้งตัว',
-      audience: 'นักพายเรือคายัคมือใหม่และระดับกลางที่ต้องการพายด้วยความพยายามน้อยลงและควบคุมได้ดีขึ้น',
+        'Identify the damage type — puncture, valve leak, or seam issue — and apply the appropriate repair method. Most repairs take 30 minutes plus curing time.',
+      audience: 'Owners of inflatable SUP boards who want to handle basic repairs themselves.',
       steps: [
-        'ท่าฟันไปข้างหน้า: หมุนลําตัว วางใบมีดไว้ใกล้เท้า ดึงผ่านสะโพก ออกที่สะโพก',
-        'ท่าย้อนกลับ: วางใบมีดไว้ด้านหลัง ดันไปข้างหน้าเพื่อช้าหรือถอยหลัง',
-        'ท่ากวาด: ยื่นมือไปข้างหน้า กวาดใบเรือเป็นวงกว้างไปยังท้ายเรือ หมุนเรือคายัค',
-        'โครงเหล็กต่ํา: ตบใบมีดราบกับผิวน้ําเพื่อความมั่นคงเมื่อคลื่นซัด',
-        'การเอียงขอบ: เอียงเรือคายัคเล็กน้อยที่ขอบเพื่อเลี้ยว',
+        'Locate the leak — inflate fully, listen for air, feel with your hand, or use soapy water',
+        'Mark the leak with a pen or tape',
+        'Clean the area around the leak with isopropyl alcohol — at least 2 inches around the damage',
+        'Rough the surface with fine sandpaper for better adhesive bonding',
+        'Apply PVC adhesive to both the patch and the board surface',
+        'Wait 5 minutes for the adhesive to become tacky',
+        'Press the patch firmly, roll out air bubbles with a roller or credit card',
+        'Let cure for 24 hours before inflating to full pressure',
       ],
       faq: [
         {
-          q: 'ฉันจะรักษาทิศทางเรือคายัคให้ตรงได้อย่างไร?',
-          a: 'ใช้จังหวะที่สม่ําเสมอในฝั่งสลับกันเรียนรู้จังหวะ J-stroke (การเกี่ยวเล็กน้อยที่ปลายจังหวะไปข้างหน้า) เพื่อปรับทิศทางโดยไม่ต้องเปลี่ยนด้าน',
+          q: 'Can I repair a puncture on the water?',
+          a: 'Emergency repairs using a patch and tape can get you back to shore. Full repairs require dry conditions and 24-hour curing.',
         },
         {
-          q: 'อาการบาดเจ็บจากเรือคายัคที่พบบ่อยที่สุดคืออะไร?',
-          a: 'แรงกดไหล่จากการพายที่เน้นแขนถนัดใช้การหมุนลําตัวเพื่อใช้กล้ามเนื้อหลังที่ใหญ่ขึ้นและลดน้ําหนักไหล่',
+          q: 'How do I fix a leaking valve?',
+          a: 'Remove the valve core with the included tool, check the O-ring for damage, replace if needed, and reinsert the core tightly.',
         },
         {
-          q: 'ฉันจะพายเรือในลมได้อย่างไร?',
-          a: 'ให้หัวเรือหันเข้าหาลมใช้จังหวะที่สั้นและทรงพลังมากขึ้นถ้าพายข้ามลม ให้เอียงเรือคายัคเข้าหาลมเล็กน้อย',
+          q: 'What glue should I use for PVC repairs?',
+          a: 'Use PVC-specific adhesive like HH-66 or Clifton. Standard super glue does not bond well with inflatable PVC materials.',
         },
       ],
     },
     'multi-day-trip': {
-      title: 'วางแผนพายเรือคายัคหรือทริปหลายวันSUP',
-      description: 'วิธีวางแผนและดําเนินการทริปพายเรือหลายวัน — วางแผนเส้นทาง จัดอุปกรณ์ ตั้งแคมป์ และความปลอดภัย',
-      tldr: 'วางแผนเดินทางวันละ 10-15 ไมล์จัดอุปกรณ์ในถุงกันน้ํา กระจายน้ําหนักอย่างสม่ําเสมอ และฝึกการโหลดบอร์ดหรือคายัคก่อนออกเดินทางจัดทําแผนการลอยน้ําพกน้ํา อาหาร ที่พัก การนําทาง และการสื่อสาร',
+      title: 'Planning a Multi-Day SUP Tour',
+      description:
+        'How to plan and execute a multi-day paddling trip — route planning, gear packing, camping, and safety.',
+      tldr: 'Plan 10-15 miles per day. Pack gear in waterproof dry bags, distribute weight evenly, and practice loading your board before the trip. File a float plan. Carry water, food, shelter, navigation, and communication.',
       problem:
-        'การเดินทางหลายวันล้มเหลวเนื่องจากการบรรจุของเกิน การวางแผนเส้นทางที่ผิดพลาด หรือการประเมินสภาพอากาศและกระแสต่ําเกินไป — นําไปสู่ความเหนื่อยล้า ความล้มเหลวของอุปกรณ์ หรือเหตุการณ์ด้านความปลอดภัย',
+        'Multi-day trips fail due to overpacking, poor route planning, or underestimating weather and current — leading to exhaustion, gear failure, or safety incidents.',
       solution:
-        'ใช้วิธีการวางแผนอย่างเป็นระบบ เช่น การเลือกเส้นทาง รายการตรวจสอบอุปกรณ์ การวางแผนอาหาร การบรรยายความปลอดภัย และการวางแผนฉุกเฉิน',
-      audience: 'นักพายเรือที่มีประสบการณ์กําลังวางแผนการผจญภัยหลายวันครั้งแรก',
+        'Use a systematic planning approach: route selection, gear checklist, food planning, safety briefing, and contingency planning.',
+      audience: 'Experienced paddlers planning their first multi-day expedition.',
       steps: [
-        'เลือกเส้นทางที่มีจุดตั้งแคมป์และจุดหลบภัยที่ตั้งไว้แล้ว',
-        'วางแผนเดิน 10-15 ไมล์ต่อวัน โดยคํานึงถึงลมและกระแสน้ํา',
-        'ตรวจสอบตารางน้ําขึ้นน้ําลงและพยากรณ์อากาศตลอดช่วงเวลาการเดินทาง',
-        'บรรจุอุปกรณ์ในถุงกันน้ํา — น้ําหนักรวมของเกียร์ 20-30 ปอนด์',
-        'กระจายน้ําหนักอย่างสม่ําเสมอ — ของหนักที่สุดอยู่ตรงกลาง',
-        'ยื่นแผนการลอยน้ําอย่างละเอียดกับคนที่ฝั่ง',
-        'นําระบบนําทางมาด้วย — แผนที่กระดาษ, เข็มทิศ และสํารองข้อมูล GPS',
-        'เตรียมที่พักฉุกเฉิน อาหารเสริม และชุดปฐมพยาบาล',
+        'Select a route with established campsites and bailout points',
+        'Plan 10-15 miles per day accounting for wind and current',
+        'Check tide tables and weather forecasts for the entire trip window',
+        'Pack gear in waterproof dry bags — 20-30 lbs total gear weight',
+        'Distribute weight evenly — heaviest items in the center',
+        'File a detailed float plan with someone on shore',
+        'Bring navigation — paper chart, compass, and GPS backup',
+        'Pack emergency shelter, extra food, and first aid kit',
       ],
       faq: [
         {
-          q: 'ระยะทางที่เหมาะสมต่อวันควรเป็นเท่าไหร่?',
-          a: '10-15 ไมล์ต่อวันสําหรับผู้มีประสบการณ์ผู้เริ่มต้นควรวางแผน 5-8 ไมล์ควรเตรียมเวลาสํารองสําหรับสภาพอากาศเสมอ',
+          q: 'What is the ideal daily distance?',
+          a: '10-15 miles per day for experienced paddlers. Beginners should plan 5-8 miles. Always build in buffer time for weather.',
         },
         {
-          q: 'ควรพกน้ําไปเท่าไหร่?',
-          a: '1 แกลลอนต่อคนต่อวันในสภาพอากาศร้อน 1.5 แกลลอนพกเครื่องกรองน้ําหรือเม็ดกรองน้ําสําหรับเติมน้ํา',
+          q: 'How much water should I carry?',
+          a: '1 gallon per person per day. In hot conditions, 1.5 gallons. Carry a water filter or purification tablets for refills.',
         },
         {
-          q: 'อะไรคือสิ่งสําคัญที่สุดของความปลอดภัย?',
-          a: 'การสื่อสารวิทยุ VHF หรือเครื่องส่งข้อความผ่านดาวเทียมสามารถช่วยชีวิตได้ในยามฉุกเฉินโทรศัพท์มือถือไม่น่าเชื่อถือในพื้นที่ห่างไกล',
+          q: 'What is the most important safety item?',
+          a: 'Communication. A VHF radio or satellite messenger can be life-saving in an emergency. Cell phones are unreliable in remote areas.',
         },
       ],
     },
     'choosing-paddle': {
-      title: 'วิธีเลือกไม้พายที่เหมาะสมสําหรับเรือSUPคายัค',
-      description: 'คู่มือเกี่ยวกับวัสดุไม้พาย รูปทรงใบพัด ประเภทของก้าน และขนาดสําหรับการSUPพายเรือคายัค',
-      tldr: 'ความยาวไม้พาย: ไม้พาย SUP ควรสูงกว่าความสูงของคุณ 6-8 นิ้วไม้พายเรือคายัคขึ้นอยู่กับความกว้างของเรือและความยาวลําตัวรูปทรงใบพาย: ใบพายแบบไดเอดรัลจะเดินตรง ใบพายแบนให้แรงจับมากกว่าวัสดุก้านพาย: คาร์บอนเบาที่สุด ไฟเบอร์กลาสคุ้มค่าที่สุด อะลูมิเนียมราคาประหยัด',
+      title: 'How to Choose the Right SUP Paddle',
+      description: 'A guide to paddle materials, blade shapes, shaft types, and sizing for stand-up paddle boarding.',
+      tldr: 'Paddle length: SUP paddles should be 6-8" taller than your height. Blade shape: dihedral blades track straight, flat blades offer more catch. Shaft material: carbon is lightest, fiberglass is best value, aluminum is budget.',
       problem:
-        'การใช้ไม้พายขนาดหรือวัสดุผิดทําให้เกิดความเหนื่อยล้าโดยไม่จําเป็น ประสิทธิภาพการตีที่ต่ํา และข้อต่อตึงเครียด',
+        'Using the wrong paddle size or material causes unnecessary fatigue, poor stroke efficiency, and joint strain.',
       solution:
-        'จับคู่ความยาวไม้พาย รูปทรงใบพัด วัสดุก้าน และความยืดหยุ่นให้เข้ากับสไตล์การพาย ขนาดตัวเรือ และงบประมาณของคุณ',
-      audience: 'SUP และนักพายเรือคายัคจะเลือกพายครั้งแรกหรือครั้งถัดไป',
+        'Match paddle length, blade shape, shaft material, and flex to your paddling style, body size, and budget.',
+      audience: 'SUP paddlers choosing their first or next paddle.',
       steps: [
-        'สําหรับSUP: วัดความสูงของไม้พาย — สูงกว่าความสูงของคุณสําหรับการพายทั่วไป 6-8"',
-        'สําหรับเรือคายัค: วัดความยาวลําตัวและความกว้างของเรือ — เรือที่แคบกว่าต้องใช้ไม้พายที่สั้นกว่า',
-        'เลือกวัสดุใบมีด — ไนลอนเพื่อประหยัด, ไฟเบอร์กลาสเพื่อความคุ้มค่า, คาร์บอนเพื่อประสิทธิภาพ',
-        'เลือกรูปทรงใบมีด — ไดเฮดรัลเพื่อการเคลื่อนที่ที่นุ่มนวล, แบบแบนเพื่อพลัง, ช้อนสําหรับการแข่งขัน',
-        'เลือกประเภทเพลา — ตรงสําหรับSUPแข่ง, แบบดัดสําหรับแข่งSUP, มาตรฐานสําหรับคายัค',
-        'ตรวจสอบความยืดหยุ่น — ก้านแข็งจะถ่ายเทกําลังได้มากขึ้น ก้านที่ยืดหยุ่นช่วยลดแรงดึงของข้อต่อ',
+        'For SUP: measure paddle height — 6-8" taller than your height for general paddling',
+        'Adjust for board width — wider boards call for a slightly longer paddle',
+        'Choose blade material — nylon for budget, fiberglass for value, carbon for performance',
+        'Choose blade shape — dihedral for smooth tracking, flat for power, spoon for racing',
+        'Choose shaft type — straight for general paddling, bent for racing',
+        'Check flex — stiffer shafts transfer more power, flexible shafts reduce joint strain',
       ],
       faq: [
         {
-          q: 'วัสดุที่ดีที่สุดของไม้พายคืออะไร?',
-          a: 'ไฟเบอร์กลาสให้ความสมดุลที่ดีที่สุดระหว่างน้ำหนัก ทนทาน และราคา คาร์บอนเบากว่าแต่แพงและเปราะ ไนลอนหนักแต่แทบจะทำลายไม่ได้',
+          q: 'What is the best paddle material?',
+          a: 'Fiberglass offers the best balance of weight, durability, and cost. Carbon is lighter but more expensive and brittle. Nylon is heavy but virtually indestructible.',
         },
         {
-          q: 'ฉันจะรู้ได้อย่างไรว่าความยาวไม้พายของฉันเหมาะสมหรือไม่?',
-          a: 'สำหรับ SUP: ยืนไม้พายตั้งตรงข้างตัว — ด้ามควรถึงข้อมือเมื่อยกแขนขึ้นเหนือศีรษะ สำหรับคายัค: ใบพายควรจมลงน้ำในมุมที่สบายโดยไม่ต้องยื่นเกินไป',
+          q: 'How do I know if my paddle is the right length?',
+          a: 'Stand the paddle vertically next to you — the handle should reach your wrist when your arm is raised overhead.',
         },
         {
-          q: 'ฉันควรเลือกไม้พายแบบชิ้นเดียวหรือปรับความยาวได้?',
-          a: 'ไม้พายปรับความยาวได้เหมาะสำหรับการใช้งานร่วมกันและการเดินทาง ไม้พายชิ้นเดียวเบา แข็ง และมีประสิทธิภาพมากขึ้นสำหรับการใช้งานเฉพาะ',
+          q: 'Should I get a one-piece or adjustable paddle?',
+          a: 'Adjustable paddles are good for shared use and travel. One-piece paddles are lighter, stiffer, and more efficient for dedicated use.',
         },
       ],
     },
     'sup-with-kids': {
-      title: 'SUP กับเด็ก: คู่มือครอบครัวครบวงจร',
-      description: 'วิธีการพาเด็กเล่นพายอย่างปลอดภัย — คำแนะนำเรื่องอายุ อุปกรณ์ และกิจกรรม',
-      tldr: 'เด็กอายุ 6+ สามารถนั่งบน SUP กับผู้ใหญ่ได้ เด็กอายุ 10+ สามารถพายกระดานของตัวเองได้ภายใต้การดูแล ใช้กระดานที่กว้างและมั่นคง สวมเสื้อชูชีพตลอดเวลา อยู่ในน้ำตื้นสงบ และทำกิจกรรมสั้น ๆ (30-45 นาที สูงสุด)',
+      title: 'SUP with Kids: A Complete Family Guide',
+      description: 'How to safely take children paddle boarding — age recommendations, equipment, and activities.',
+      tldr: 'Children 6+ can ride on a SUP with an adult. Children 10+ can paddle their own board with supervision. Use a wide stable board, always wear PFDs, stay in shallow calm water, and keep sessions short (30-45 minutes max).',
       problem:
-        'ผู้ปกครองต้องการแบ่งปันกีฬาทางน้ำกับเด็กแต่กังวลเรื่องความปลอดภัย การพอดีของอุปกรณ์ และการทำให้เด็กสนใจ',
+        'Parents want to share water sports with their kids but worry about safety, equipment fit, and keeping children engaged.',
       solution:
-        'ใช้ขนาดกระดานที่เหมาะสมสำหรับการนั่งคู่ ให้เด็กทุกคนสวม PFD ที่พอดี เริ่มจากน้ำตื้นอบอุ่น และทำให้สนุกด้วยเกมและเซสชั่นสั้น',
-      audience: 'ผู้ปกครองที่ต้องการแนะนำเด็กให้รู้จักการพาย',
+        'Use the right board size for tandem riding, ensure every child wears a properly fitted PFD, start in shallow warm water, and make it fun with games and short sessions.',
+      audience: 'Parents who want to introduce their children to paddle boarding.',
       steps: [
-        'อายุ 4-6: นั่งเป็นผู้โดยสารบนกระดานของผู้ใหญ่ — นั่งด้านหน้า ยึดมือกับด้ามกลาง',
-        'อายุ 6-10: คุกเข่าหรือ นั่งบนกระดานของตนเอง ภายใต้การดูแลของผู้ใหญ่และใช้สายรัด',
-        'อายุ 10+: พายกระดานของตนเองโดยมีผู้ใหญ่คอยดูอยู่ใกล้',
-        'สวม PFD ตลอดเวลา — เด็กต้องใส่เสื้อชูชีพที่พอดีตลอดเวลา',
-        'อยู่ในน้ำตื้น (ลึกเอวสำหรับผู้ใหญ่)',
-        'เซสชั่นสั้น — 30-45 นาที สำหรับเด็กต่ำกว่า 10 ปี',
-        'ทำให้สนุก — เล่นเกม มองหาปลา ฝึกยืนบนกระดาน',
+        "Age 4-6: ride as a passenger on an adult's board — sit in front, hold onto the center handle",
+        'Age 6-10: kneel or sit on their own board with adult supervision and a leash',
+        'Age 10+: paddle their own board with adult supervision nearby',
+        'Always wear a PFD — children must wear a properly fitted life vest at all times',
+        'Stay in shallow water (waist-deep for the adult)',
+        'Keep sessions short — 30-45 minutes max for children under 10',
+        'Make it fun — play games, look for fish, practice standing up',
       ],
       faq: [
         {
-          q: 'เด็กสามารถ SUP คนเดียวได้เมื่ออายุเท่าไหร่?',
-          a: 'ประมาณอายุ 10-12 ปี โดยมีการดูแลขึ้นอยู่กับความสามารถในการว่ายน้ำและความมั่นใจในน้ำของเด็ก เสมอในสภาวะน้ำสงบตื้น ๆ',
+          q: 'At what age can a child SUP alone?',
+          a: "Around age 10-12 with supervision, depending on the child's swimming ability and comfort in water. Always in calm, shallow conditions.",
         },
         {
-          q: 'กระดานแบบไหนดีสำหรับ SUP กับเด็ก?',
-          a: 'กระดานกว้าง (34"+) รับน้ำหนักสูงสำหรับนั่งคู่ กระดาน SUP Explorer 11 กว้าง 33" และรับน้ำหนัก 220 ปอนด์ เหมาะสำหรับผู้ปกครองและเด็ก',
+          q: 'What board is best for SUP with kids?',
+          a: 'A wide board (34"+) with high weight capacity for tandem riding. The SUP Explorer 11\'s 33" width and 220 lb capacity works well for parent-plus-child.',
         },
         {
-          q: 'อุปกรณ์ความปลอดภัยที่เด็กต้องใช้มีอะไรบ้าง?',
-          a: 'เสื้อชูชีพที่พอดีตามมาตรฐาน CE สายรัด (ยึดกับกระดานของผู้ใหญ่ในกรณีนั่งคู่) ครีมกันแดด และหมวก',
+          q: 'What safety gear do kids need?',
+          a: "A properly fitted life vest, a leash (attached to the adult's board for tandem), sunscreen, and a hat.",
         },
       ],
     },
@@ -8027,7 +3061,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         'Sundin ang istrukturadong plano sa unang sesyon: pumili ng kalmadong tubig, ayusin nang tama ang iyong gamit, magpraktis ng pagluhod bago tumayo, at masterin ang pasulong na galaw bago subukang lumiko.',
       audience: 'Mga ganap na baguhan na hindi pa nakapag-paddle board dati.',
       steps: [
-        'Pumili ng patag at kalmadong tubig na walang trapiko ng bangka — isang maliit na lawa o may protektadong look ang perpekto',
+        'Pumili ng patag at kalmadong tubig na may kaunting trapiko — isang maliit na lawa o may protektadong look ang perpekto',
         'Palakihin ang iyong board sa 12-15 PSI gamit ang dual-action pump',
         'Ikabit ang coil leash sa iyong bukung-bukong o binti, huwag kailanman sa hawakan ng board',
         'Ipasok ang fin at higpitan ang turnilyo',
@@ -8052,37 +3086,36 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
       ],
     },
     'safety-tips': {
-      title: 'Mga Tip sa Kaligtasan ng Water Sports',
-      description:
-        'Mahahalagang gabay sa kaligtasan para sa paddle boarding, kayaking, at boating — mula sa pagsusuri ng kagamitan hanggang sa kamalayan sa panahon.',
-      tldr: 'Laging magsuot ng CE-certified life vest, suriin ang panahon at kondisyon ng tubig bago ilunsad, magdala ng mga communication device, huwag mag-paddle mag-isa sa hindi pamilyar na tubig, at unawain ang mga limitasyon ng iyong kagamitan.',
+      title: 'Paddle Boarding Safety Tips',
+      description: 'Essential safety guidelines for paddle boarding — from equipment checks to weather awareness.',
+      tldr: "Always wear a life vest, check weather and water conditions before launch, carry communication devices, never paddle alone in unfamiliar water, and understand your equipment's rated limits.",
       problem:
-        'Karamihan sa mga aksidente sa water sports ay resulta ng kakulangan sa paghahanda — walang life vest, hindi pinapansin ang mga babala ng panahon, o paggamit ng kagamitan na lampas sa disenyo nito.',
+        'Most water sports accidents result from inadequate preparation — no life vest, ignoring weather warnings, or using equipment beyond its design limits.',
       solution:
-        'Magpatupad ng pre-launch safety checklist: beripikahin ang kondisyon ng kagamitan, tingnan ang panahon at temperatura ng tubig, ipaalam sa iba ang iyong ruta, at laging magsuot ng angkop na flotation.',
-      audience: 'Lahat ng kalahok sa water sports — SUP, kayak, dinghy, at RIB mga gumagamit.',
+        'Adopt a pre-launch safety checklist: verify equipment condition, check weather and water temperature, inform someone of your route, and always wear appropriate flotation.',
+      audience: 'All paddle boarders, from first-timers to experienced riders.',
       steps: [
-        'Suriin ang weather forecast — iwasan ang hangin na higit sa 15 mph at mga thunderstorm',
-        'Suriin ang temperatura ng tubig — ang malamig na tubig (60°F/15°C) ay nangangailangan ng wetsuit o drysuit',
-        'Suriin ang kagamitan — suriin kung may tagas, bitak, at tamang pag-inflate',
-        'Magsuot ng CE-certified life vest sa lahat ng oras',
-        'Ikabit ang tali SUP() o siguraduhin ang lahat ng maluwag na gamit (kayak/bangka)',
-        'Mag-file ng float plan — sabihin sa isang tao kung saan ka pupunta at kailan ka babalik',
-        'Carry communication — waterproof phone case o VHF radio',
-        'Alamin ang iyong mga limitasyon — manatili sa loob ng iyong antas ng kasanayan at rating ng kagamitan',
+        'Check weather forecast — avoid winds over 15 mph and thunderstorms',
+        'Verify water temperature — cold water (<60°F/15°C) requires a wetsuit or drysuit',
+        'Inspect equipment — check for leaks, cracks, and proper inflation',
+        'Wear a life vest at all times',
+        'Attach the leash and secure all loose gear',
+        'File a float plan — tell someone where you are going and when you will return',
+        'Carry communication — waterproof phone case or VHF radio',
+        'Know your limits — stay within your skill level and equipment ratings',
       ],
       faq: [
         {
-          q: 'Kailangan ko ba ng life vest sa SUPisang ?',
-          a: 'Oo. Maraming hurisdiksyon ang legal na nag-aatas ng life vest sa anumang sasakyang pangtubig, kabilang ang SUPs. Kahit hindi kinakailangan, ang CE-certified life vest ay mahalagang kagamitan sa kaligtasan.',
+          q: 'Do I need a life vest on a SUP?',
+          a: 'Yes. Many jurisdictions legally require a life vest when paddling, including on SUPs. Even where not required, a life vest is essential safety equipment.',
         },
         {
-          q: 'Ano ang pinaka-karaniwang pinsala sa water sports?',
-          a: 'Ang paglubog at pagkapagod sa malamig na tubig ang mga pinakakaraniwang seryosong panganib. Laging magbihis ayon sa temperatura ng tubig, hindi sa temperatura ng hangin.',
+          q: 'What is the most common water sports injury?',
+          a: 'Cold water immersion and exhaustion are the most common serious risks. Always dress for the water temperature, not the air temperature.',
         },
         {
-          q: 'Paano ko susuriin kung ligtas ang mga kondisyon?',
-          a: 'Gamitin ang mga pagtataya ng panahon sa dagat. Suriin ang bilis ng hangin, taas ng alon, at temperatura ng tubig. Dapat manatili ang mga baguhan sa mga kondisyon na may hangin na may 10 mph at mas mababa sa 1 ft na alon.',
+          q: 'How do I check if conditions are safe?',
+          a: 'Use marine weather forecasts. Check wind speed, wave height, and water temperature. Beginners should stay in conditions under 10 mph wind and under 1 ft waves.',
         },
       ],
     },
@@ -8135,7 +3168,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         'Alamin ang tide — mas malakas ang tidal currents kaysa sa bilis ng pagpaddle mo',
         'Sukatin ang temperatura ng tubig — mas mababa sa 60°F/15°C ay nangangailangan ng thermal protection',
         'Suriin ang visibility — ang hamog at malakas na ulan ay nagpapababa ng visibility at nagpapataas ng panganib ng banggaan',
-        'Unawain ang mga lokal na panganib — mga nakalubog na bato, malalakas na agos, mga lugar ng trapiko ng bangka',
+        'Unawain ang mga lokal na panganib — mga nakalubog na bato, malalakas na agos, mga lugar na mabigat ang trapiko',
       ],
       faq: [
         {
@@ -8294,7 +3327,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
       audience: 'Mga yoga practitioner at paddler na nais pagsamahin ang balance training at mindfulness.',
       steps: [
         'I-angkla ang board sa mababaw at kalmadong tubig — gumamit ng sand anchor o itali sa pantalan',
-        'Magsimula sa mga posisyon na nakaupo — madaling upuan, posisyon ng bangka, seated twist',
+        'Magsimula sa mga posisyon na nakaupo — madaling upuan, Navasana, seated twist',
         'Pag-usad sa mga pose ng pagluhod — tabletop, cat-cow, thunderbolt',
         'Lumipat sa mga nakatayo na posisyon — bundok, mandirigmang I, mandirigmang II, posisyon ng puno',
         'Magpraktis ng balance poses — half moon, agila, dancer',
@@ -8321,9 +3354,9 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         'Lahat ng kailangan mong malaman tungkol sa pangingisda mula sa paddle board — setup ng gamit, mga tip sa katatagan, at mga teknik.',
       tldr: 'SUP Nagbibigay ang pangingisda ng silent approach, mababaw na access sa tubig, at 360-degree casting. Gumamit ng malapad na stable board (34"+), ikabit ang mga rod holder, at gumamit ng cooler o crate bilang gear deck. Mag-angkla sa mahangin na kondisyon. Laging magsuot PFDng .',
       problem:
-        'Ang mga karaniwang bangka sa pangingisda ay mahal panatilihin at hindi makakapasok sa mababaw na tubig. Nililimitahan ng mga kayak ang paggalaw.SUP Nilulutas ng pangingisda ang parehong problema ngunit nangangailangan ng partikular na adaptasyon sa kagamitan.',
+        'Ang mga motorized na bangka sa pangingisda ay mahal panatilihin at hindi makakapasok sa mababaw na tubig. Ang pangingisda gamit ang SUP ay nilulutas ang parehong problema ngunit nangangailangan ng partikular na adaptasyon sa kagamitan.',
       solution:
-        'Lagyan SUP ng rod holders, gear crate, at anchor system ang isang stable. Gamitin ang portability ng board para ma-access ang mga liblib na lugar ng pangingisda na hindi maaabot ng mga bangka.',
+        'Lagyan ng rod holders, gear crate, at anchor system ang isang matatag na SUP. Gamitin ang portability ng board para ma-access ang mga liblib na lugar ng pangingisda na hindi maaabot ng mga motorized na bangka.',
       audience:
         'Mga mangingisda na nais mangisda sa mababaw na tubig, liblib na lugar, o mas gusto ang magaan at portable na fishing platform.',
       steps: [
@@ -8350,173 +3383,137 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
       ],
     },
     'inflatable-repair': {
-      title: 'Paano Ayusin ang Iyong Inflatable Boat o SUP',
+      title: 'How to Repair Your Inflatable SUP',
       description:
-        'Hakbang-hakbang na gabay sa pag-aayos ng mga butas, problema sa balbula, at pinsala sa tahi ng inflatable watercraft.',
-      tldr: 'Ang maliliit na butas (mas mababa sa 1/4") ay maaaring ayusin gamit ang kasamang patch kit. Linisin ang lugar, PVC lagyan ng pandikit, pindutin ang patch, at maghintay ng 24 na oras. Ang mga tagas ng balbula ay karaniwang nangangailangan ng pagpapalit ng O-ring. Ang malalaking punit o seam delamination ay nangangailangan ng propesyonal na serbisyo.',
+        'Step-by-step guide to repairing punctures, valve issues, and seam damage on your inflatable paddle board.',
+      tldr: 'Small punctures (under 1/4") are repairable with the included patch kit. Clean the area, apply PVC adhesive, press the patch, and wait 24 hours. Valve leaks usually require O-ring replacement. Large tears or seam delamination need professional service.',
       problem:
-        'Karaniwan ang maliliit na butas at problema sa balbula ngunit madaling ayusin. Kung walang tamang teknik sa pagkukumpuni, maaaring sobra ang bayad ng mga gumagamit para sa propesyonal na serbisyo o lalo pang nagpapalala ng pinsala.',
+        'Small punctures and valve issues are common but easy to fix. Without proper repair technique, users either overpay for professional service or make the damage worse.',
       solution:
-        'Tukuyin ang uri ng pinsala — butas, tagas ng balbula, o isyu sa tahi — at gamitin ang angkop na paraan ng pagkukumpuni. Karamihan sa mga pagkukumpuni ay tumatagal ng 30 minuto kasama ang oras ng pag-aayos.',
-      audience:
-        'Mga may-ari ng inflatableSUPs, kayak, at bangka na nais mag-asikaso ng mga pangunahing pagkukumpuni nang mag-isa.',
+        'Identify the damage type — puncture, valve leak, or seam issue — and apply the appropriate repair method. Most repairs take 30 minutes plus curing time.',
+      audience: 'Owners of inflatable SUP boards who want to handle basic repairs themselves.',
       steps: [
-        'Hanapin ang tagas — magpalobo nang buo, pakinggan ang hangin, hawakan gamit ang kamay, o gumamit ng sabon na tubig',
-        'Markahan ang tagas gamit ang panulat o tape',
-        'Linisin ang paligid ng tagas gamit ang isopropyl alcohol — hindi bababa sa 2 pulgada sa paligid ng pinsala',
-        'Guardian ang ibabaw gamit ang pinong papel-de-liha para sa mas mahusay na pagdikit',
-        'Maglagay ng PVC pandikit sa parehong patch at sa ibabaw ng board',
-        'Maghintay ng 5 minuto para maging malagkit ang pandikit',
-        'Pindutin nang mahigpit ang patch, i-roll out ang mga bula ng hangin gamit ang roller o credit card',
-        'Hayaan munang maghilom sa loob ng 24 na oras bago punuin sa buong presyon',
+        'Locate the leak — inflate fully, listen for air, feel with your hand, or use soapy water',
+        'Mark the leak with a pen or tape',
+        'Clean the area around the leak with isopropyl alcohol — at least 2 inches around the damage',
+        'Rough the surface with fine sandpaper for better adhesive bonding',
+        'Apply PVC adhesive to both the patch and the board surface',
+        'Wait 5 minutes for the adhesive to become tacky',
+        'Press the patch firmly, roll out air bubbles with a roller or credit card',
+        'Let cure for 24 hours before inflating to full pressure',
       ],
       faq: [
         {
-          q: 'Maaari ko bang ayusin ang butas sa tubig?',
-          a: 'Ang mga pang-emerhensiyang pagkukumpuni gamit ang patch at tape ay makakatulong sa iyo na makabalik sa pampang. Ang ganap na pagkukumpuni ay nangangailangan ng tuyong kondisyon at 24 na oras ng pagpapatuyo.',
+          q: 'Can I repair a puncture on the water?',
+          a: 'Emergency repairs using a patch and tape can get you back to shore. Full repairs require dry conditions and 24-hour curing.',
         },
         {
-          q: 'Paano ko ayusin ang tumutulong na balbula?',
-          a: 'Alisin ang batayang balbula gamit ang kalakip na kasangkapan, suriin ang O-ring para sa pinsala, palitan kung kinakailangan, at muling isaksak nang mahigpit ang batayan.',
+          q: 'How do I fix a leaking valve?',
+          a: 'Remove the valve core with the included tool, check the O-ring for damage, replace if needed, and reinsert the core tightly.',
         },
         {
-          q: 'Anong klase ng pandikit ang dapat kong gamitin para sa PVC na mga pagkukumpuni?',
-          a: 'Gumamit ng PVC-na espesyal na pandikit tulad ng HH-66 o Clifton. Ang karaniwang super glue ay hindi mabisa sa pagdikit ng mga inflatable na PVC na materyales.',
-        },
-      ],
-    },
-    'kayak-techniques': {
-      title: 'Mahahalagang Teknik sa Pag-paddle ng Kayak',
-      description:
-        'Maging bihasa sa pagpadyak ng kayak — pasulong na hagod, sweeping na hagod, pag-ikot, at pagbibigay suporta para sa mas episyente at ligtas na pag-kayak.',
-      tldr: 'Ang pasulong na hagod sa kayak ay gumagamit ng pag-ikot ng katawan, hindi ng mga braso. Ang sweep stroke ay nagpapaikot sa kayak. Pinapabuti ng edging ang pagliko. Ang mababang brace ay pumipigil sa pagbaling sa alon. Panatilihing patayo ang shaft ng paddle at tuluyang nakalubog ang talim.',
-      problem:
-        'Ang hindi mahusay na paraan ng pagtatalon ay nagdudulot ng pagod sa balikat, mabagal na pag-unlad, at kahirapan sa pagkontrol ng kayak sa hangin at agos.',
-      solution:
-        'Matutunan ang tamang teknik ng paglalayag gamit ang katawan sa apat na mahalagang stroke — pasulong, paurong, paliko, at suporta.',
-      audience:
-        'Mga baguhan at katamtamang antas na mga kayaker na nais magpamlay nang mas kaunting pagsisikap at mas maraming kontrol.',
-      steps: [
-        'Paunang suntok: iikot ang iyong katawan, ilagay ang talim malapit sa iyong mga paa, hilahin lampas sa iyong balakang, lumabas sa iyong balakang',
-        'Baliktarin na stroke: itanim ang talim sa likod mo, itulak pasulong upang pabagalin o baliktarin',
-        'Hagupit na suntok: abutin pasulong, i-sweep ang talim sa malawak na arko patungo sa likod ng bangka, iikot ang kayak',
-        'Mababang suporta: tapikin ang talim nang patag sa ibabaw ng tubig para sa katatagan sa mga alon',
-        'Edging: bahagyang igiling ang kayak sa gilid nito upang gumawa ng liko',
-      ],
-      faq: [
-        {
-          q: 'Paano ko mapapanatiling diretso ang paglalayag ng aking kayak?',
-          a: 'Gumamit ng magkakaparehong hagod sa magkabilang panig na palitan. Matutunan ang J-hagod (isang bahagyang kurbada sa dulo ng pasulong na hagod) para sa pagwawasto ng kurso nang hindi nagbabago ng panig.',
-        },
-        {
-          q: 'Ano ang pinakakaraniwang pinsala sa kayaking?',
-          a: 'Pagkapagod ng balikat mula sa paminsang paggamit ng braso sa pagpala. Gamitin ang pag-ikot ng katawan upang gamitin ang mas malalaking kalamnan sa likod at mabawasan ang pasanin sa balikat.',
-        },
-        {
-          q: 'Paano ako magtatampisaw sa hangin?',
-          a: 'Panatilihing nakaturo ang pana sa hangin. Gumamit ng mas maiikling, mas makapangyarihang hagod. Kung tatawid sa hangin, bahagyang itulak ang kayak patungo sa hangin.',
+          q: 'What glue should I use for PVC repairs?',
+          a: 'Use PVC-specific adhesive like HH-66 or Clifton. Standard super glue does not bond well with inflatable PVC materials.',
         },
       ],
     },
     'multi-day-trip': {
-      title: 'Pagpaplano ng Maramihang Araw na Paglalakbay sa Kayak o SUP',
+      title: 'Planning a Multi-Day SUP Tour',
       description:
-        'Paano magplano at magsagawa ng isang multi-araw na paddling trip — pagpaplano ng ruta, pagbabalot ng kagamitan, kamping, at kaligtasan.',
-      tldr: 'Magplano ng 10-15 milya bawat araw. I-pack ang kagamitan sa mga waterproof na dry bag, pantay na ipamahagi ang bigat, at magsanay sa pag-load ng iyong board o kayak bago ang biyahe. Mag-file ng float plan. Magdala ng tubig, pagkain, kanlungan, navigasyon, at komunikasyon.',
+        'How to plan and execute a multi-day paddling trip — route planning, gear packing, camping, and safety.',
+      tldr: 'Plan 10-15 miles per day. Pack gear in waterproof dry bags, distribute weight evenly, and practice loading your board before the trip. File a float plan. Carry water, food, shelter, navigation, and communication.',
       problem:
-        'Ang mga multi-day na biyahe ay nabibigo dahil sa sobrang pag-iimpake, mahinang pagpaplano ng ruta, o maling pagtataya sa panahon at agos — na nagreresulta sa pagkapagod, pagkasira ng kagamitan, o mga insidente sa kaligtasan.',
+        'Multi-day trips fail due to overpacking, poor route planning, or underestimating weather and current — leading to exhaustion, gear failure, or safety incidents.',
       solution:
-        'Gumamit ng sistematikong pamamaraan sa pagpaplano: pagpili ng ruta, tseklist ng kagamitan, pagpaplano ng pagkain, pagpapaalam sa kaligtasan, at pagpaplano ng kapabayaan.',
-      audience: 'Mga bihasang nagbabadya na nagpaplano ng kanilang unang multi-araw na ekspedisyon.',
+        'Use a systematic planning approach: route selection, gear checklist, food planning, safety briefing, and contingency planning.',
+      audience: 'Experienced paddlers planning their first multi-day expedition.',
       steps: [
-        'Pumili ng ruta na may mga itinatag na kampo at mga puntong pwedeng lumikas',
-        'Magplano ng 10-15 milya bawat araw isinasaalang-alang ang hangin at agos',
-        'Suriin ang mga talaan ng pagtaas at pagbaba ng tubig at mga ulat ng panahon para sa buong panahon ng biyahe',
-        'Ilagay ang kagamitan sa mga waterproof na dry bag — kabuuang timbang ng kagamitan ay 20-30 lbs',
-        'Pantayin ang pagbabahagi ng timbang — ilagay ang pinakamabibigat na bagay sa gitna',
-        'Maghain ng detalyadong plano ng paglalayag sa isang tao sa pampang',
-        'Dalhin ang nabigasyon — papel na mapa, compass, at backup na GPS',
-        'Ilagay ang pansamantalang silungan, ekstrang pagkain, at first aid kit',
+        'Select a route with established campsites and bailout points',
+        'Plan 10-15 miles per day accounting for wind and current',
+        'Check tide tables and weather forecasts for the entire trip window',
+        'Pack gear in waterproof dry bags — 20-30 lbs total gear weight',
+        'Distribute weight evenly — heaviest items in the center',
+        'File a detailed float plan with someone on shore',
+        'Bring navigation — paper chart, compass, and GPS backup',
+        'Pack emergency shelter, extra food, and first aid kit',
       ],
       faq: [
         {
-          q: 'Ano ang ideal na distansya araw-araw?',
-          a: '10-15 milya bawat araw para sa mga karanasang nagpe-paddle. Dapat magplano ang mga baguhan ng 5-8 milya. Laging maglaan ng ekstrang oras para sa panahon.',
+          q: 'What is the ideal daily distance?',
+          a: '10-15 miles per day for experienced paddlers. Beginners should plan 5-8 miles. Always build in buffer time for weather.',
         },
         {
-          q: 'Gaano karaming tubig ang dapat kong dalhin?',
-          a: '1 galon bawat tao bawat araw. Sa mainit na kondisyon, 1.5 galon. Magdala ng filter ng tubig o mga tableta para sa paglilinis ng tubig para sa mga refill.',
+          q: 'How much water should I carry?',
+          a: '1 gallon per person per day. In hot conditions, 1.5 gallons. Carry a water filter or purification tablets for refills.',
         },
         {
-          q: 'Ano ang pinakamahalagang kagamitan sa kaligtasan?',
-          a: 'Komunikasyon. Ang VHF radio o satellite messenger ay maaaring magligtas ng buhay sa oras ng emerhensiya. Hindi maaasahan ang mga cell phone sa malalayong lugar.',
+          q: 'What is the most important safety item?',
+          a: 'Communication. A VHF radio or satellite messenger can be life-saving in an emergency. Cell phones are unreliable in remote areas.',
         },
       ],
     },
     'choosing-paddle': {
-      title: 'Paano Pumili ng Tamang Paddle para sa SUP at Kayak',
-      description:
-        'Isang gabay sa mga materyales ng paddle, hugis ng talim, uri ng shaft, at sukat para sa SUP at kayaking.',
-      tldr: 'Haba ng paddle: SUP Ang mga paddle ay dapat 6-8" mas mataas kaysa sa iyong taas. Ang mga kayak paddle ay nakadepende sa lapad ng bangka at haba ng torso. Hugis ng talim: ang mga dihedral na talim ay dumadirekta nang diretso, ang mga patag na talim ay nag-aalok ng mas maraming catch. Materyal ng shaft: ang carbon ay pinakamagaan, fiberglass ang pinakamahusay na halaga, aluminum ang pang-budget.',
+      title: 'How to Choose the Right SUP Paddle',
+      description: 'A guide to paddle materials, blade shapes, shaft types, and sizing for stand-up paddle boarding.',
+      tldr: 'Paddle length: SUP paddles should be 6-8" taller than your height. Blade shape: dihedral blades track straight, flat blades offer more catch. Shaft material: carbon is lightest, fiberglass is best value, aluminum is budget.',
       problem:
-        'Ang paggamit ng maling laki o materyal ng paddle ay nagdudulot ng hindi kinakailangang pagkapagod, mababang kahusayan sa stroke, at tensyon sa mga kasu-kasuan.',
+        'Using the wrong paddle size or material causes unnecessary fatigue, poor stroke efficiency, and joint strain.',
       solution:
-        'Itugma ang haba ng batya, hugis ng talim, materyal ng tangkay, at kakayahang yumuko sa iyong istilo ng pagpapa-paddle, sukat ng katawan, at badyet.',
-      audience: 'SUP at mga nagpa-paddle ng kayak na pumipili ng kanilang unang o susunod na paddle.',
+        'Match paddle length, blade shape, shaft material, and flex to your paddling style, body size, and budget.',
+      audience: 'SUP paddlers choosing their first or next paddle.',
       steps: [
-        'Para sa SUP: sukatin ang taas ng paddle — 6-8 pulgada na mas mataas kaysa sa iyong taas para sa pangkalahatang pagsagwan',
-        'Para sa kayak: sukatin ang haba ng torso at lapad ng bangka — ang mas makitid na bangka ay nangangailangan ng mas maiikling paddle',
-        'Pumili ng materyal ng talim — nylon para sa budget, fiberglass para sa halaga, carbon para sa pagganap',
-        'Piliin ang hugis ng talim — dihedral para sa maayos na pagsubaybay, patag para sa lakas, kutsara para sa karera',
-        'Pumili ng uri ng shaft — tuwid para sa SUP, baluktot para sa karera na SUP, karaniwan para sa kayak',
-        'Suriin ang flex — ang mas matitigas na shaft ay naglilipat ng mas maraming lakas, ang mga flexible na shaft ay nagpapabawas ng strain sa kasu-kasuan',
+        'For SUP: measure paddle height — 6-8" taller than your height for general paddling',
+        'Adjust for board width — wider boards call for a slightly longer paddle',
+        'Choose blade material — nylon for budget, fiberglass for value, carbon for performance',
+        'Choose blade shape — dihedral for smooth tracking, flat for power, spoon for racing',
+        'Choose shaft type — straight for general paddling, bent for racing',
+        'Check flex — stiffer shafts transfer more power, flexible shafts reduce joint strain',
       ],
       faq: [
         {
-          q: 'Ano ang pinakamahusay na materyal para sa paddle?',
-          a: 'Nagbibigay ang fiberglass ng pinakamahusay na balanse ng timbang, tibay, at gastos. Mas magaan ang carbon ngunit mas mahal at mas marupok. Mabigat ang nylon ngunit halos hindi masisira.',
+          q: 'What is the best paddle material?',
+          a: 'Fiberglass offers the best balance of weight, durability, and cost. Carbon is lighter but more expensive and brittle. Nylon is heavy but virtually indestructible.',
         },
         {
-          q: 'Paano ko malalaman kung tama ang haba ng paddle ko?',
-          a: 'Para saSUP: itayo ang paddle nang patayo sa tabi mo — ang hawakan ay dapat umabot sa iyong pulso kapag nakataas ang iyong braso sa itaas. Para sa kayak: dapat pumasok ang talim sa tubig sa komportableng anggulo nang hindi umaabot nang sobra.',
+          q: 'How do I know if my paddle is the right length?',
+          a: 'Stand the paddle vertically next to you — the handle should reach your wrist when your arm is raised overhead.',
         },
         {
-          q: 'Dapat ba akong kumuha ng one-piece o adjustable paddle?',
-          a: 'Ang adjustable paddles ay maganda para sa sama-samang paggamit at paglalakbay. Ang one-piece paddles ay mas magaan, mas matibay, at mas episyente para sa dedikadong paggamit.',
+          q: 'Should I get a one-piece or adjustable paddle?',
+          a: 'Adjustable paddles are good for shared use and travel. One-piece paddles are lighter, stiffer, and more efficient for dedicated use.',
         },
       ],
     },
     'sup-with-kids': {
-      title: 'SUP kasama ang mga Bata: Isang Kumpletong Gabay para sa Pamilya',
-      description:
-        'Paano ligtas na dalhin ang paddle boarding para sa mga bata — mga rekomendasyon sa edad, kagamitan, at mga aktibidad.',
-      tldr: 'Ang mga batang 6+ ay maaaring sumakay kasama SUP ang isang adulto. Ang mga batang 10 ay+ maaaring mag-paddle ng sarili nilang board sa ilalim ng pangangasiwa. Gumamit ng malapad at matatag na board, laging magsuot ng PFDs, manatili sa mababaw at kalmadong tubig, at panatilihing maikli ang mga sesyon (30-45 minuto maximum).',
+      title: 'SUP with Kids: A Complete Family Guide',
+      description: 'How to safely take children paddle boarding — age recommendations, equipment, and activities.',
+      tldr: 'Children 6+ can ride on a SUP with an adult. Children 10+ can paddle their own board with supervision. Use a wide stable board, always wear PFDs, stay in shallow calm water, and keep sessions short (30-45 minutes max).',
       problem:
-        'Gusto ng mga magulang na magbahagi ng water sports sa kanilang mga anak pero nag-aalala sila sa kaligtasan, fit ng kagamitan, at pagpapanatili ng interes ng mga bata.',
+        'Parents want to share water sports with their kids but worry about safety, equipment fit, and keeping children engaged.',
       solution:
-        'Gamitin ang tamang sukat ng board para sa tandem riding, siguraduhing bawat bata ay nakasuot ng tamang sukat na damitPFD, magsimula sa mababaw at mainit na tubig, at gawing masaya ito sa pamamagitan ng mga laro at maiikling sesyon.',
-      audience: 'Mga magulang na nais ipakilala sa kanilang mga anak ang paddle boarding.',
+        'Use the right board size for tandem riding, ensure every child wears a properly fitted PFD, start in shallow warm water, and make it fun with games and short sessions.',
+      audience: 'Parents who want to introduce their children to paddle boarding.',
       steps: [
-        'Edad 4-6: sumakay bilang pasahero sa tabla ng matatanda — umupo sa harap, hawakan ang gitnang hawakan',
-        'Edad 6-10: lumuhod o umupo sa sariling board na may pangangasiwa ng matatanda at tali',
-        'Edad 10+: mag-paddle ng sariling board na may pangangasiwa ng matatanda malapit',
-        'Laging magsuot ng — PFD kailangang magsuot ang mga bata ng maayos na life vest sa lahat ng oras',
-        'Manatili sa mababaw na tubig (hanggang baywang para sa adulto)',
-        'Panatilihing maikli ang mga sesyon — 30-45 minuto lang ang maximum para sa mga batang wala pang 10 taong gulang',
-        'Gawing masaya — maglaro ng mga laro, maghanap ng isda, magpraktis ng pagtayo',
+        "Age 4-6: ride as a passenger on an adult's board — sit in front, hold onto the center handle",
+        'Age 6-10: kneel or sit on their own board with adult supervision and a leash',
+        'Age 10+: paddle their own board with adult supervision nearby',
+        'Always wear a PFD — children must wear a properly fitted life vest at all times',
+        'Stay in shallow water (waist-deep for the adult)',
+        'Keep sessions short — 30-45 minutes max for children under 10',
+        'Make it fun — play games, look for fish, practice standing up',
       ],
       faq: [
         {
-          q: 'Anong edad kaya ng isang bata na SUP mag-isa?',
-          a: 'Mga edad 10-12 na may pangangasiwa, depende sa kakayahan ng bata sa paglangoy at ginhawa sa tubig. Laging nasa kalmado at mababaw na kondisyon.',
+          q: 'At what age can a child SUP alone?',
+          a: "Around age 10-12 with supervision, depending on the child's swimming ability and comfort in water. Always in calm, shallow conditions.",
         },
         {
-          q: 'Anong board ang pinakamainam SUP para sa mga bata?',
-          a: 'Isang malapad na board (34"+) na may mataas na kapasidad para sa tandem na pagbibisikleta. SUP Ang 33" na lapad at 220 lb na kapasidad ng Explorer 11 ay angkop para sa magulang kasama ang anak.',
+          q: 'What board is best for SUP with kids?',
+          a: 'A wide board (34"+) with high weight capacity for tandem riding. The SUP Explorer 11\'s 33" width and 220 lb capacity works well for parent-plus-child.',
         },
         {
-          q: 'Anong safety gear ang kailangan ng mga bata?',
-          a: 'Isang maayos na pagkakabit CE- sertipikadong life vest, tali (nakakabit sa tabla ng matatanda bilang tandem), sunscreen, at sumbrero.',
+          q: 'What safety gear do kids need?',
+          a: "A properly fitted life vest, a leash (attached to the adult's board for tandem), sunscreen, and a hat.",
         },
       ],
     },
@@ -8566,7 +3563,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         'Yapılandırılmış bir ilk seans planını takip edin: sakin su seçin, ekipmanınızı doğru ayarlayın, ayağa kalkmadan önce diz çökerek pratik yapın ve dönüş denemeden önce ileri atışı ustalaşın.',
       audience: 'Daha önce hiç kürek sörfüyle oynamamış tam bir acemi.',
       steps: [
-        'Tekne trafiği olmayan düz, sakin su seçin — küçük bir göl veya korunaklı bir körfez ideal',
+        'Az trafikli düz, sakin su seçin — küçük bir göl veya korunaklı bir körfez ideal',
         "Çift etkili pompa kullanarak tahtanızı 12-15'e kadar şişirin PSI",
         'Bobin tasmasını ayak bileğinize veya baldırınıza takın, asla tahta sapına takmayın',
         'Kanadı takın ve vidayı sıkın',
@@ -8591,37 +3588,36 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
       ],
     },
     'safety-tips': {
-      title: 'Su Sporları Güvenlik İpuçları',
-      description:
-        'Paddle board, kano ve botla ilgili temel güvenlik rehberi — ekipman kontrollerinden hava koşullarına kadar.',
-      tldr: 'Her zaman CE-sertifikalı can yeleği giyin, kalkış öncesi hava ve su koşullarını kontrol edin, iletişim cihazları taşıyın, bilinmeyen sularda yalnız kürek çekmeyin ve ekipmanınızın sınırlamalarını anlayın.',
+      title: 'Paddle Boarding Safety Tips',
+      description: 'Essential safety guidelines for paddle boarding — from equipment checks to weather awareness.',
+      tldr: "Always wear a life vest, check weather and water conditions before launch, carry communication devices, never paddle alone in unfamiliar water, and understand your equipment's rated limits.",
       problem:
-        'Çoğu su sporları kazası yetersiz hazırlıktan kaynaklanır — can yeleği giymemek, hava uyarılarını dikkate almamak veya ekipmanı tasarım limitlerinin ötesinde kullanmak.',
+        'Most water sports accidents result from inadequate preparation — no life vest, ignoring weather warnings, or using equipment beyond its design limits.',
       solution:
-        'Kalkış öncesi bir güvenlik kontrol listesi benimseyin: ekipman durumunu kontrol edin, hava ve su sıcaklığını kontrol edin, birine rotanızı bildirin ve her zaman uygun yüzdürmeyi kullanın.',
-      audience: 'Tüm su sporları katılımcıları — SUP, kano, sandal ve RIB kullanıcıları.',
+        'Adopt a pre-launch safety checklist: verify equipment condition, check weather and water temperature, inform someone of your route, and always wear appropriate flotation.',
+      audience: 'All paddle boarders, from first-timers to experienced riders.',
       steps: [
-        'Hava tahminini kontrol edin — 15 mph üzeri rüzgar ve fırtınalardan kaçının',
-        'Su sıcaklığını doğrulayın — soğuk su (60°F/15°C) için wetsuit veya kuru giysi gerekir',
-        'Ekipmanı inceleyin — sızıntı, çatlak ve doğru şişirme kontrolü yapın',
-        'Her zaman CE-sertifikalı can yeleği giyin',
-        'Leash (SUP) takın veya tüm gevşek ekipmanı sabitleyin (kano/bot)',
-        'Yüzme planı oluşturun — nereye gittiğinizi ve ne zaman döneceğinizi birine söyleyin',
-        'İletişim cihazı taşıyın — su geçirmez telefon kılıfı veya VHF radyo',
-        'Sınırlarınızı bilin — beceri seviyeniz ve ekipman değerlendirmenizi aşmayın',
+        'Check weather forecast — avoid winds over 15 mph and thunderstorms',
+        'Verify water temperature — cold water (<60°F/15°C) requires a wetsuit or drysuit',
+        'Inspect equipment — check for leaks, cracks, and proper inflation',
+        'Wear a life vest at all times',
+        'Attach the leash and secure all loose gear',
+        'File a float plan — tell someone where you are going and when you will return',
+        'Carry communication — waterproof phone case or VHF radio',
+        'Know your limits — stay within your skill level and equipment ratings',
       ],
       faq: [
         {
-          q: 'SUP üzerinde can yeleği takmam gerekir mi?',
-          a: 'Evet. Birçok yargı alanı, SUPs dahil tüm su araçlarında can yeleği takmayı yasal olarak zorunlu kılar. Gerekmese bile, CE-sertifikalı bir can yeleği temel güvenlik ekipmanıdır.',
+          q: 'Do I need a life vest on a SUP?',
+          a: 'Yes. Many jurisdictions legally require a life vest when paddling, including on SUPs. Even where not required, a life vest is essential safety equipment.',
         },
         {
-          q: 'En yaygın su sporları yaralanması nedir?',
-          a: 'Soğuk suya dalış ve tükenme en yaygın ciddi risklerdir. Her zaman giysilerinizi hava sıcaklığına değil, su sıcaklığına göre giyin.',
+          q: 'What is the most common water sports injury?',
+          a: 'Cold water immersion and exhaustion are the most common serious risks. Always dress for the water temperature, not the air temperature.',
         },
         {
-          q: 'Koşulların güvenli olup olmadığını nasıl kontrol ederim?',
-          a: 'Deniz hava tahminlerini kullanın. Rüzgar hızını, dalga yüksekliğini ve su sıcaklığını kontrol edin. Yeni başlayanlar, 10 mph altı rüzgar ve 1 ft altı dalga koşullarında kalmalıdır.',
+          q: 'How do I check if conditions are safe?',
+          a: 'Use marine weather forecasts. Check wind speed, wave height, and water temperature. Beginners should stay in conditions under 10 mph wind and under 1 ft waves.',
         },
       ],
     },
@@ -8673,7 +3669,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         'Gelgiti bilin — gelgit akıntıları kürek çekme hızınızdan daha güçlü olabilir',
         "Su sıcaklığını ölçmek — 60°F/15°C'nin altında termal koruma gerektirir",
         'Görüşü kontrol edin — sis ve şiddetli yağmur görüşü azaltır ve çarpışma riskini artırır',
-        'Yerel tehlikeleri anlayın — su altında kalmış kayalar, güçlü akıntılar, tekne trafik bölgeleri',
+        'Yerel tehlikeleri anlayın — su altında kalmış kayalar, güçlü akıntılar, yoğun trafik bölgeleri',
       ],
       faq: [
         {
@@ -8831,7 +3827,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
       audience: 'Denge antrenmanını farkındalık ile birleştirmek isteyen yoga uygulayıcıları ve kürek çekiciler.',
       steps: [
         'Tahtayı sığ ve sakin suya sabitleyin — kum çapası kullanın veya iskeleye bağlayın',
-        'Oturma pozlarıyla başlayın — kolay koltuk, tekne pozu, oturma pozisyonu',
+        'Oturma pozlarıyla başlayın — kolay koltuk, Navasana, oturma pozisyonu',
         'Diz çökme pozlarına ilerleme — masaüstü, kedi-inek, yıldırım',
         'Ayakta durma pozisyonlarına geç — dağ, savaşçı I, savaşçı II, ağaç pozu',
         'Denge pozisyonları pratik yapın — yarım ay, kartal, dansçı',
@@ -8858,9 +3854,9 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
         "Paddle board'dan balık tutma hakkında bilmeniz gereken her şey — ekipman kurulumu, stabilite ipuçları ve teknikler.",
       tldr: 'SUP Balıkçılık sessiz yaklaşma, sığ suya erişim ve 360 derece atış sunar. Geniş bir sabit tahta (34") +kullanın, kamış tutucuları takın ve bir soğutucu veya sandık ekipman güvertesi olarak kullanın. Rüzgarlı koşullarda demirle. Her zaman PFD.',
       problem:
-        'Standart balıkçı teknelerinin bakımı pahalıdır ve sığ sulara erişemez. Kayaklar hareket kabiliyetini sınırlar.SUP Balık tutmak her iki sorunu da çözer ancak özel ekipman uyarlamaları gerektirir.',
+        'Motorlu balıkçı teknelerinin bakımı pahalıdır ve sığ sulara erişemez. SUP ile balık tutmak her iki sorunu da çözer ancak özel ekipman uyarlamaları gerektirir.',
       solution:
-        'Bir ahırı oltap SUP tutucuları, ekipman kutusu ve çapa sistemi ile donat. Tahtanın taşınabilirliğini kullanarak teknelerin ulaşamadığı uzak balık tutma noktalarına erişin.',
+        "Stabil bir SUP'ı oltalık tutucuları, ekipman kutusu ve çapa sistemiyle donat. Tahtanın taşınabilirliğini kullanarak motorlu teknelerin ulaşamadığı uzak balık tutma noktalarına erişin.",
       audience:
         'Sığ sularda, uzak yerlerde balık tutmak isteyen veya hafif, taşınabilir bir balıkçılık platformunu tercih eden balıkçılar.',
       steps: [
@@ -8887,166 +3883,137 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
       ],
     },
     'inflatable-repair': {
-      title: 'Şişme Teknenizi Nasıl Tamir Edersiniz veya SUP',
-      description: 'Şişme su aracında delikler, valf sorunları ve dikiş hasarını onarmak için adım adım rehber.',
-      tldr: 'Küçük delikler (1/4"\'ten alt) dahildeki yama setiyle tamir edilebilir. Alanı temizleyin, PVC yapıştırıcı uygulayın, yamaya bastınız ve 24 saat bekleyin. Valf sızıntıları genellikle O-ring değişimi gerektirir. Büyük yırtıklar veya dikiş delaminasyonu profesyonel servis gerektirir.',
+      title: 'How to Repair Your Inflatable SUP',
+      description:
+        'Step-by-step guide to repairing punctures, valve issues, and seam damage on your inflatable paddle board.',
+      tldr: 'Small punctures (under 1/4") are repairable with the included patch kit. Clean the area, apply PVC adhesive, press the patch, and wait 24 hours. Valve leaks usually require O-ring replacement. Large tears or seam delamination need professional service.',
       problem:
-        'Küçük delikler ve kapak sorunları yaygındır ama kolayca düzeltilir. Doğru onarım tekniği olmadan, kullanıcılar ya profesyonel servis için fazla ödeme yapar ya da hasarı daha da kötüleştirir.',
+        'Small punctures and valve issues are common but easy to fix. Without proper repair technique, users either overpay for professional service or make the damage worse.',
       solution:
-        'Hasar türünü — delinme, kapak sızıntısı veya dikiş sorunu — belirleyin ve uygun onarım yöntemini uygulayın. Çoğu onarım 30 dakika artı kürleme süresi sürer.',
-      audience: 'Şişme SUPskano ve tekne sahipleri, temel onarımları kendileri yapmak istiyorlar.',
+        'Identify the damage type — puncture, valve leak, or seam issue — and apply the appropriate repair method. Most repairs take 30 minutes plus curing time.',
+      audience: 'Owners of inflatable SUP boards who want to handle basic repairs themselves.',
       steps: [
-        'Sızıntıyı bulun — tamamen şişirin, havayı dinleyin, elinizle dokunun veya sabunlu su kullanın',
-        'Sızıntıyı kalem veya bantla işaretleyin',
-        'Sızıntının etrafını izopropil alkolle temizleyin — hasarın etrafından en az 2 inç',
-        'Daha iyi yapıştırıcı için yüzeyi ince zımpara kağıdıyla pürüzle düzeltin',
-        'PVC Hem yama hem de tahta yüzeyine yapıştırıcı uygulayın',
-        'Yapıştırıcının yapışkan hale gelmesini 5 dakika bekleyin',
-        "Patch'e sıkıca bastırın, bir rulo veya kredi kartıyla hava kabarcıklarını açın",
-        '24 saat boyunca kürlenmesine izin verin ve ardından tam basınca şişirin',
+        'Locate the leak — inflate fully, listen for air, feel with your hand, or use soapy water',
+        'Mark the leak with a pen or tape',
+        'Clean the area around the leak with isopropyl alcohol — at least 2 inches around the damage',
+        'Rough the surface with fine sandpaper for better adhesive bonding',
+        'Apply PVC adhesive to both the patch and the board surface',
+        'Wait 5 minutes for the adhesive to become tacky',
+        'Press the patch firmly, roll out air bubbles with a roller or credit card',
+        'Let cure for 24 hours before inflating to full pressure',
       ],
       faq: [
         {
-          q: 'Sudaki bir deliği onarabilir miyim?',
-          a: 'Acil onarımlarda yama ve bant kullanılarak tekrar kıyıya ulaşabilirsiniz. Tam tamirler için kuru koşullar ve 24 saat kürleme gereklidir.',
+          q: 'Can I repair a puncture on the water?',
+          a: 'Emergency repairs using a patch and tape can get you back to shore. Full repairs require dry conditions and 24-hour curing.',
         },
         {
-          q: 'Sızdıran bir valfi nasıl tamir edebilirim?',
-          a: "Vana çekirdeğini daşardaki aletle çıkarın, O-ring'de hasar olup olmadığını kontrol edin, gerekirse değiştirin ve çekirdeği sıkıca tekrar takın.",
+          q: 'How do I fix a leaking valve?',
+          a: 'Remove the valve core with the included tool, check the O-ring for damage, replace if needed, and reinsert the core tightly.',
         },
         {
-          q: 'Onarımlar için hangi yapıştırıcı PVC kullanmalıyım?',
-          a: 'PVCHH-66 veya Clifton gibi özel yapıştırıcı kullanın. Standart süper yapıştırıcı PVC şişirilebilir malzemelerle iyi yapışmaz.',
-        },
-      ],
-    },
-    'kayak-techniques': {
-      title: 'Temel Kano Kürek Teknikleri',
-      description: 'Usta kano kürek — ileri vuruş, süpürme vuruşu, kenar ve destek ile verimli ve güvenli kano yapma.',
-      tldr: 'Kano ileri hareketi gövde dönüşünü kullanır, kolları değil. Süpürme vuruşu kayakı döndürür. Kenar duruşu dönüşü iyileştirir. Alçak destek dalgalarda devrilmeyi önler. Kürek şaftını dikey tutun ve bıçağı tamamen suya batmış tutun.',
-      problem:
-        'Verimsiz kürek çekme tekniği omuz yorgunluğuna, yavaş ilerlemeye ve rüzgar ile akıntıda kanoyu kontrol etmekte zorluğa yol açar.',
-      solution: 'Dört temel hareketle — ileri, geri, süpürme ve destek — doğru gövde güzergiyle kürek çekmeyi öğrenin.',
-      audience: 'Daha az çaba ve daha fazla kontrolle kürek çekmek isteyen yeni başlayan ve orta seviye kayakçılar.',
-      steps: [
-        'İleri hareket: gövdenizi döndürün, bıçağı ayaklarınızın yanına yerleştirin, kalçanızın yanından geçin, kalçanızdan çıkın',
-        'Ters vuruş: bıçağı arkanıza yerleştirin, yavaşlamak veya geri almak için öne doğru itin',
-        'Süpürme vuruşu: öne uzanın, kanadı kıçta geniş bir yayla süpürün, kanoyu çevirin',
-        'Düşük destek: Dalgalarda stabilite için bıçağı su yüzeyine düz bir şekilde vurmak',
-        'Kenar yapma: Kanoyu kenarından hafifçe eğip dönüşler yapın',
-      ],
-      faq: [
-        {
-          q: 'Kanomu nasıl düz tutarım?',
-          a: "Alternatif taraflarda tutarlı vuruşlar kullanın. Taraf değiştirmeden rota düzeltmesi için J-stroke'u (ileri vuruşun sonunda hafif bir kanca) öğrenin.",
-        },
-        {
-          q: 'En yaygın kano yaralanması nedir?',
-          a: 'Kol baskın kürek çekmeden kaynaklanan omuz gerilmesi. Daha büyük sırt kaslarını harekete geçirmek ve omuz yükünü azaltmak için gövde döndürme kullanın.',
-        },
-        {
-          q: 'Rüzgarda nasıl kürek çekerim?',
-          a: 'Yayı rüzgara doğru tutun. Daha kısa ve güçlü darbeler kullanın. Rüzgarı geçiyorsanız, kanoyu hafifçe rüzgara doğru kenara çevirin.',
+          q: 'What glue should I use for PVC repairs?',
+          a: 'Use PVC-specific adhesive like HH-66 or Clifton. Standard super glue does not bond well with inflatable PVC materials.',
         },
       ],
     },
     'multi-day-trip': {
-      title: 'Çok Günlük Kano veya SUP Gezi Planı',
+      title: 'Planning a Multi-Day SUP Tour',
       description:
-        'Çok günlük bir kürek çekme gezisi nasıl planlanır ve yürütülür — rota planlaması, ekipman paketleme, kamp kurma ve güvenlik.',
-      tldr: 'Günde 10-15 mil planlayın. Ekipmanınızı su geçirmez kuru çantalara koyun, ağırlığı eşit dağıtın ve gezi öncesi boardunuzu veya kayığınızı yüklemeyi pratik yapın. Bir yüzer plan dosyalayın. Su, yiyecek, barınak, navigasyon ve iletişim taşıyın.',
+        'How to plan and execute a multi-day paddling trip — route planning, gear packing, camping, and safety.',
+      tldr: 'Plan 10-15 miles per day. Pack gear in waterproof dry bags, distribute weight evenly, and practice loading your board before the trip. File a float plan. Carry water, food, shelter, navigation, and communication.',
       problem:
-        'Birden fazla günlük geziler, fazla bagaj taşıma, kötü rota planlaması veya hava ve akıntıyı küçümseme nedeniyle başarısız olur — bu da yorgunluğa, ekipman arızasına veya güvenlik olaylarına yol açar.',
+        'Multi-day trips fail due to overpacking, poor route planning, or underestimating weather and current — leading to exhaustion, gear failure, or safety incidents.',
       solution:
-        'Sistematik bir planlama yaklaşımı kullanın: rota seçimi, ekipman kontrol listesi, yemek planlaması, güvenlik brifingi ve acil durum planlaması.',
-      audience: 'İlk çok günlük keşif gezilerini planlayan deneyimli kürekçiler.',
+        'Use a systematic planning approach: route selection, gear checklist, food planning, safety briefing, and contingency planning.',
+      audience: 'Experienced paddlers planning their first multi-day expedition.',
       steps: [
-        'Yerleşik kamp alanları ve kaçış noktaları olan bir rota seçin',
-        'Rüzgar ve akıntıyı dikkate alarak günde 10-15 mil planlayın',
-        'Tüm gezi süresi için gelgit tablolarını ve hava durumu tahminlerini kontrol edin',
-        'Ekipmanları su geçirmez kuru torbalara yerleştirin — Toplam ekipman ağırlığı 20-30 lbs',
-        'Ağırlığı eşit şekilde dağıtın — en ağır eşyalar ortada olsun',
-        'Kıyıda birine ayrıntılı bir yüzme planı sunun',
-        'Navigasyon getirin — kağıt harita, pusula ve GPS yedeği',
-        'Acil durum barınağı, ekstra yiyecek ve ilkyardım seti paketleyin',
+        'Select a route with established campsites and bailout points',
+        'Plan 10-15 miles per day accounting for wind and current',
+        'Check tide tables and weather forecasts for the entire trip window',
+        'Pack gear in waterproof dry bags — 20-30 lbs total gear weight',
+        'Distribute weight evenly — heaviest items in the center',
+        'File a detailed float plan with someone on shore',
+        'Bring navigation — paper chart, compass, and GPS backup',
+        'Pack emergency shelter, extra food, and first aid kit',
       ],
       faq: [
         {
-          q: 'İdeal günlük mesafe nedir?',
-          a: 'Deneyimli kürekçiler için günde 10-15 mil. Yeni başlayanlar 5-8 mil planlamalı. Hava durumu için her zaman fazladan zaman ayırın.',
+          q: 'What is the ideal daily distance?',
+          a: '10-15 miles per day for experienced paddlers. Beginners should plan 5-8 miles. Always build in buffer time for weather.',
         },
         {
-          q: 'Ne kadar su taşımalıyım?',
-          a: 'Kişi başına günde 1 galon. Sıcak koşullarda, 1,5 galon. Yeniden doldurma için bir su filtresi veya arıtma tabletleri taşıyın.',
+          q: 'How much water should I carry?',
+          a: '1 gallon per person per day. In hot conditions, 1.5 gallons. Carry a water filter or purification tablets for refills.',
         },
         {
-          q: 'En önemli güvenlik öğesi nedir?',
-          a: 'İletişim. Acil bir durumda VHF radyo veya uydu haberleşme cihazı hayat kurtarıcı olabilir. Cep telefonları uzak bölgelerde güvenilir değildir.',
+          q: 'What is the most important safety item?',
+          a: 'Communication. A VHF radio or satellite messenger can be life-saving in an emergency. Cell phones are unreliable in remote areas.',
         },
       ],
     },
     'choosing-paddle': {
-      title: 'SUP ve Kano için Doğru Kürek Nasıl Seçilir',
-      description: 'SUP ve kano için kürek malzemeleri, bıçak şekilleri, sap türleri ve boyutlandırma rehberi.',
-      tldr: 'Kürek uzunluğu: SUP Kürekler boyunuzdan 6-8" daha yüksek olmalıdır. Kayaklar kürekleri tekne genişliğine ve gövde uzunluğuna bağlıdır. Kanat şekli: dihedral kanatlar düz izlenir, düz kanatlar daha fazla tutma sağlar. Şaft malzemesi: karbon en hafif, fiberglas en iyi değer, alüminyum bütçe.',
+      title: 'How to Choose the Right SUP Paddle',
+      description: 'A guide to paddle materials, blade shapes, shaft types, and sizing for stand-up paddle boarding.',
+      tldr: 'Paddle length: SUP paddles should be 6-8" taller than your height. Blade shape: dihedral blades track straight, flat blades offer more catch. Shaft material: carbon is lightest, fiberglass is best value, aluminum is budget.',
       problem:
-        'Yanlış kürek boyutu veya malzeme kullanmak gereksiz yorgunluğa, düşük vuruş verimliliğine ve eklem zorlanmasına neden olur.',
+        'Using the wrong paddle size or material causes unnecessary fatigue, poor stroke efficiency, and joint strain.',
       solution:
-        'Kürek uzunluğunu, bıçak şekli, sap malzemesini ve esnekliğini kürek çekme stilinize, vücut ölçünüze ve bütçenize uygun şekilde eşleştirin.',
-      audience: 'SUP ve kano/canoe kürekçileri ilk veya bir sonraki küreklerini seçiyor.',
+        'Match paddle length, blade shape, shaft material, and flex to your paddling style, body size, and budget.',
+      audience: 'SUP paddlers choosing their first or next paddle.',
       steps: [
-        'SUP için: kürek yüksekliğini ölçün — genel kürek çekme için boyunuzdan 6-8” daha uzun',
-        'Kano için: gövde uzunluğunu ve tekne genişliğini ölçün — daha dar tekneler daha kısa kürekler gerektirir',
-        'Bıçak malzemesini seçin — bütçe için naylon, değer için fiberglas, performans için karbon',
-        'Bıçak şeklini seçin — düzgün izleme için diyhedral, güç için düz, yarış için kaşık',
-        'Şaft tipini seçin — SUP için düz, yarış SUP için eğik, kano için standart',
-        'Esnekliği kontrol et — daha sert miller daha fazla güç aktarır, esnek miller eklem yükünü azaltır',
+        'For SUP: measure paddle height — 6-8" taller than your height for general paddling',
+        'Adjust for board width — wider boards call for a slightly longer paddle',
+        'Choose blade material — nylon for budget, fiberglass for value, carbon for performance',
+        'Choose blade shape — dihedral for smooth tracking, flat for power, spoon for racing',
+        'Choose shaft type — straight for general paddling, bent for racing',
+        'Check flex — stiffer shafts transfer more power, flexible shafts reduce joint strain',
       ],
       faq: [
         {
-          q: 'En iyi kürek malzemesi nedir?',
-          a: 'Fiberglas, ağırlık, dayanıklılık ve maliyet açısından en iyi dengeyi sunar. Karbon daha hafiftir ama daha pahalı ve kırılgandır. Naylon ağırdır ama neredeyse yok edilemezdir.',
+          q: 'What is the best paddle material?',
+          a: 'Fiberglass offers the best balance of weight, durability, and cost. Carbon is lighter but more expensive and brittle. Nylon is heavy but virtually indestructible.',
         },
         {
-          q: 'Küreğimin doğru uzunlukta olup olmadığını nasıl anlarım?',
-          a: 'SUP için: Küreği dik bir şekilde yanınıza koyun — sapınız kolunuz yukarı kaldırıldığında bileğinize ulaşmalıdır. Kano/kajak için: Bıçak, suya rahat bir açıyla girmeli ve fazla uzanmamalıdır.',
+          q: 'How do I know if my paddle is the right length?',
+          a: 'Stand the paddle vertically next to you — the handle should reach your wrist when your arm is raised overhead.',
         },
         {
-          q: 'Tek parça mı yoksa ayarlanabilir kürek mi almalıyım?',
-          a: 'Ayarlanabilir kürekler paylaşımlı kullanım ve seyahat için uygundur. Tek parça kürekler daha hafif, daha sert ve özel kullanım için daha verimlidir.',
+          q: 'Should I get a one-piece or adjustable paddle?',
+          a: 'Adjustable paddles are good for shared use and travel. One-piece paddles are lighter, stiffer, and more efficient for dedicated use.',
         },
       ],
     },
     'sup-with-kids': {
-      title: 'Çocuklarla SUP: Tam Bir Aile Rehberi',
-      description: 'Çocukları güvenli bir şekilde kürek sörfüne getirmek — yaş önerileri, ekipman ve etkinlikler.',
-      tldr: '6+ yaşındaki çocuklar bir yetişkinle birlikte SUP üzerinde binebilir. 10+ yaşındaki çocuklar gözetim altında kendi tahtalarını kürekle sürebilir. Geniş, stabil bir tahta kullanın, her zaman can yeleği giydirin, sığ ve sakin sularda kalın ve seansları kısa tutun (maksimum 30-45 dakika).',
+      title: 'SUP with Kids: A Complete Family Guide',
+      description: 'How to safely take children paddle boarding — age recommendations, equipment, and activities.',
+      tldr: 'Children 6+ can ride on a SUP with an adult. Children 10+ can paddle their own board with supervision. Use a wide stable board, always wear PFDs, stay in shallow calm water, and keep sessions short (30-45 minutes max).',
       problem:
-        'Ebeveynler su sporlarını çocuklarıyla paylaşmak ister ama güvenlik, ekipman uyumu ve çocukların ilgisini sürdürme konusunda endişelenir.',
+        'Parents want to share water sports with their kids but worry about safety, equipment fit, and keeping children engaged.',
       solution:
-        'Eşli binme için doğru tahta boyutunu kullanın, her çocuğun düzgün oturan PFD giymesini sağlayın, sığ sıcak sularda başlayın ve oyunlar ve kısa seanslarla eğlenceli hale getirin.',
-      audience: 'Çocuklarına kürek sörfü tanıtmak isteyen ebeveynler.',
+        'Use the right board size for tandem riding, ensure every child wears a properly fitted PFD, start in shallow warm water, and make it fun with games and short sessions.',
+      audience: 'Parents who want to introduce their children to paddle boarding.',
       steps: [
-        'Yaş 4-6: Bir yetişkinin tahtasında yolcu olarak bin — önde otur, ortadaki sapı tut',
-        'Yaş 6-10: Kendi tahtalarında dizüstü veya oturarak, yetişkin gözetiminde ve kayış kullanarak',
-        'Yaş 10+: Kendi tahtalarını yetişkin gözetiminde kürekleyebilir',
-        'Her zaman PFD giyin — çocuklar her zaman düzgün oturan bir can yeleği giymelidir',
-        'Sığ sularda kalın (yetişkin için bel derinliğinde)',
-        'Seansları kısa tutun — 10 yaşın altındaki çocuklar için maksimum 30-45 dakika',
-        'Eğlenceli hale getirin — oyun oynayın, balık arayın, ayakta durma pratiği yapın',
+        "Age 4-6: ride as a passenger on an adult's board — sit in front, hold onto the center handle",
+        'Age 6-10: kneel or sit on their own board with adult supervision and a leash',
+        'Age 10+: paddle their own board with adult supervision nearby',
+        'Always wear a PFD — children must wear a properly fitted life vest at all times',
+        'Stay in shallow water (waist-deep for the adult)',
+        'Keep sessions short — 30-45 minutes max for children under 10',
+        'Make it fun — play games, look for fish, practice standing up',
       ],
       faq: [
         {
-          q: 'Bir çocuk SUP yalnız yapılabilir mi?',
-          a: 'Çocuğun yüzme becerisine ve suda rahatlığına bağlı olarak gözetim altında yaklaşık 10-12 yaş civarında. Her zaman sakin, sığ sularda.',
+          q: 'At what age can a child SUP alone?',
+          a: "Around age 10-12 with supervision, depending on the child's swimming ability and comfort in water. Always in calm, shallow conditions.",
         },
         {
-          q: 'Çocuklarla SUP için en iyi tahta nedir?',
-          a: 'Eşli binme için geniş bir tahta (34"+) ve yüksek ağırlık kapasitesi. SUP Explorer 11\'in 33" genişliği ve 220 lb kapasitesi, ebeveyn ve çocuk için uygundur.',
+          q: 'What board is best for SUP with kids?',
+          a: 'A wide board (34"+) with high weight capacity for tandem riding. The SUP Explorer 11\'s 33" width and 220 lb capacity works well for parent-plus-child.',
         },
         {
-          q: 'Çocukların ihtiyacı olan güvenlik ekipmanı nelerdir?',
-          a: 'Düzgün oturan CE-sertifikalı can yeleği, kayış (eşli kullanım için yetişkinin tahtasına bağlı), güneş kremi ve şapka.',
+          q: 'What safety gear do kids need?',
+          a: "A properly fitted life vest, a leash (attached to the adult's board for tandem), sunscreen, and a hat.",
         },
       ],
     },
@@ -9066,45 +4033,6 @@ export const GUIDE_META_L10N_MT: Record<string, Record<string, Record<string, st
     },
     difficulty: { beginner: 'Начинаещ', intermediate: 'Среден', advanced: 'Напреднал' },
     waterType: { lake: 'Езеро', sea: 'Море', river: 'Река' },
-  },
-  et: {
-    category: {
-      'buying-guide': 'Ostujuhendid',
-      tutorial: 'Õpetused',
-      safety: 'Ohutus',
-      technical: 'Tehniline',
-      maintenance: 'Hooldus',
-      lifestyle: 'Elustiil & Fitness',
-      planning: 'Reisi planeerimine',
-    },
-    difficulty: { beginner: 'Algaja', intermediate: 'Kesktase', advanced: 'Edasijõudnud' },
-    waterType: { lake: 'Järv', sea: 'Meri', river: 'Jõgi' },
-  },
-  he: {
-    category: {
-      'buying-guide': 'מדריכי קנייה',
-      tutorial: 'מדריכים',
-      safety: 'בטיחות',
-      technical: 'טכני',
-      maintenance: 'תחזוקה',
-      lifestyle: 'אורח חיים וכושר',
-      planning: 'תכנון טיולים',
-    },
-    difficulty: { beginner: 'מתחילים', intermediate: 'ביניים', advanced: 'מתקדמים' },
-    waterType: { lake: 'אגם', sea: 'ים', river: 'נהר' },
-  },
-  hr: {
-    category: {
-      'buying-guide': 'Vodiči za kupnju',
-      tutorial: 'Tutorijali',
-      safety: 'Sigurnost',
-      technical: 'Tehnički podaci',
-      maintenance: 'Održavanje',
-      lifestyle: 'Životni stil i fitness',
-      planning: 'Planiranje putovanja',
-    },
-    difficulty: { beginner: 'Početnik', intermediate: 'Srednja razina', advanced: 'Napredno' },
-    waterType: { lake: 'Jezero', sea: 'More', river: 'Rijeka' },
   },
   hu: {
     category: {
@@ -9132,45 +4060,6 @@ export const GUIDE_META_L10N_MT: Record<string, Record<string, Record<string, st
     difficulty: { beginner: 'Pemula', intermediate: 'Menengah', advanced: 'Mahir' },
     waterType: { lake: 'Danau', sea: 'Laut', river: 'Sungai' },
   },
-  ko: {
-    category: {
-      'buying-guide': '구매 가이드',
-      tutorial: '튜토리얼',
-      safety: '안전',
-      technical: '기술',
-      maintenance: '유지보수',
-      lifestyle: '라이프스타일 & 피트니스',
-      planning: '여행 계획',
-    },
-    difficulty: { beginner: '초보자', intermediate: '중급자', advanced: '고급자' },
-    waterType: { lake: '호수', sea: '바다', river: '강' },
-  },
-  lt: {
-    category: {
-      'buying-guide': 'Pirkimo gidai',
-      tutorial: 'Mokymai',
-      safety: 'Sauga',
-      technical: 'Technika',
-      maintenance: 'Priežiūra',
-      lifestyle: 'Gyvenimo būdas ir fizinis aktyvumas',
-      planning: 'Kelionių planavimas',
-    },
-    difficulty: { beginner: 'Pradedantysis', intermediate: 'Vidutinio lygio', advanced: 'Pažengęs' },
-    waterType: { lake: 'Ežeras', sea: 'Jūra', river: 'Upė' },
-  },
-  lv: {
-    category: {
-      'buying-guide': 'Pirkšanas ceļveži',
-      tutorial: 'Apmācības',
-      safety: 'Drošība',
-      technical: 'Tehniskā informācija',
-      maintenance: 'Uzturēšana',
-      lifestyle: 'Dzīvesstils un Fitnesa',
-      planning: 'Ceļojumu Plānošana',
-    },
-    difficulty: { beginner: 'Sākuma līmenis', intermediate: 'Vidējs līmenis', advanced: 'Augsts līmenis' },
-    waterType: { lake: 'Ezers', sea: 'Jūra', river: 'Upes' },
-  },
   ms: {
     category: {
       'buying-guide': 'Panduan Pembelian',
@@ -9196,45 +4085,6 @@ export const GUIDE_META_L10N_MT: Record<string, Record<string, Record<string, st
     },
     difficulty: { beginner: 'Începător', intermediate: 'Intermediar', advanced: 'Avansat' },
     waterType: { lake: 'Lac', sea: 'Mare', river: 'Râu' },
-  },
-  sk: {
-    category: {
-      'buying-guide': 'Nákupné sprievodce',
-      tutorial: 'Tutoriály',
-      safety: 'Bezpečnosť',
-      technical: 'Technický',
-      maintenance: 'Údržba',
-      lifestyle: 'Životný štýl a fitnes',
-      planning: 'Plánovanie výletu',
-    },
-    difficulty: { beginner: 'Začiatočník', intermediate: 'Stredne pokročilý', advanced: 'Pokročilý' },
-    waterType: { lake: 'Jazero', sea: 'More', river: 'Rieka' },
-  },
-  sl: {
-    category: {
-      'buying-guide': 'Nakupni vodiči',
-      tutorial: 'Tutoriali',
-      safety: 'Varnost',
-      technical: 'Tehnični podatki',
-      maintenance: 'Vzdrževanje',
-      lifestyle: 'Življenjski slog in fitnes',
-      planning: 'Načrtovanje potovanja',
-    },
-    difficulty: { beginner: 'Začetnik', intermediate: 'Srednje', advanced: 'Napredno' },
-    waterType: { lake: 'Jezero', sea: 'Morje', river: 'Reka' },
-  },
-  sr: {
-    category: {
-      'buying-guide': 'Vodiči za kupovinu',
-      tutorial: 'Saveti',
-      safety: 'Bezbednost',
-      technical: 'Tehničke',
-      maintenance: 'Održavanje',
-      lifestyle: 'Životni stil i fitnes',
-      planning: 'Planiranje putovanja',
-    },
-    difficulty: { beginner: 'Početnik', intermediate: 'Srednji', advanced: 'Napredno' },
-    waterType: { lake: 'Jezero', sea: 'More', river: 'Reka' },
   },
   th: {
     category: {
@@ -9287,33 +4137,6 @@ export const GUIDE_HEADINGS_MT: Record<string, Record<string, string>> = {
     audience: 'Аудитория',
     related: 'Свързано',
   },
-  et: {
-    nav: 'Juhendid',
-    problem: 'Väljakutse',
-    solution: 'Lahendus',
-    steps: 'Sammud',
-    faq: 'Korduma kippuvad küsimused',
-    audience: 'Sihtgrupp',
-    related: 'Seotud',
-  },
-  he: {
-    nav: 'מדריכים',
-    problem: 'האתגר',
-    solution: 'הפתרון',
-    steps: 'שלבים',
-    faq: 'שאלות נפוצות',
-    audience: 'קהל יעד',
-    related: 'קשור',
-  },
-  hr: {
-    nav: 'Vodiči',
-    problem: 'Izazov',
-    solution: 'Rješenje',
-    steps: 'Koraci',
-    faq: 'Često postavljana pitanja',
-    audience: 'Publika',
-    related: 'Povezano',
-  },
   hu: {
     nav: 'Útmutatók',
     problem: 'A kihívás',
@@ -9332,33 +4155,6 @@ export const GUIDE_HEADINGS_MT: Record<string, Record<string, string>> = {
     audience: 'Audiens',
     related: 'Terkait',
   },
-  ko: {
-    nav: '가이드',
-    problem: '도전',
-    solution: '해결책',
-    steps: '단계',
-    faq: '자주 묻는 질문',
-    audience: '대상',
-    related: '관련',
-  },
-  lt: {
-    nav: 'Gidai',
-    problem: 'Iššūkis',
-    solution: 'Sprendimas',
-    steps: 'Žingsniai',
-    faq: 'DUK',
-    audience: 'Tikslinė auditorija',
-    related: 'Susiję',
-  },
-  lv: {
-    nav: 'Ceļveži',
-    problem: 'Izaicinājums',
-    solution: 'Risinājums',
-    steps: 'Soļi',
-    faq: 'Biežāk Uzdotie Jautājumi',
-    audience: 'Auditorija',
-    related: 'Saistītais',
-  },
   ms: {
     nav: 'Panduan',
     problem: 'Cabaran',
@@ -9376,33 +4172,6 @@ export const GUIDE_HEADINGS_MT: Record<string, Record<string, string>> = {
     faq: 'Întrebări frecvente',
     audience: 'Public',
     related: 'Related',
-  },
-  sk: {
-    nav: 'Sprievodcovia',
-    problem: 'Výzva',
-    solution: 'Riešenie',
-    steps: 'Kroky',
-    faq: 'Často kladené otázky',
-    audience: 'Publikum',
-    related: 'Súvisiace',
-  },
-  sl: {
-    nav: 'Vodniki',
-    problem: 'Izziv',
-    solution: 'Rešitev',
-    steps: 'Koraki',
-    faq: 'Pogosta vprašanja',
-    audience: 'Publika',
-    related: 'Povezano',
-  },
-  sr: {
-    nav: 'Vodiči',
-    problem: 'Izazov',
-    solution: 'Rešenje',
-    steps: 'Koraci',
-    faq: 'Česta pitanja',
-    audience: 'Publika',
-    related: 'Povezano',
   },
   th: {
     nav: 'ไกด์',

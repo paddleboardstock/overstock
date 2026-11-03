@@ -16,6 +16,6 @@ tags:
 entityType: case-use
 ---
 
-Beginner SUP training is Paddle Board Overstock's primary use case. The stable, wide-body design of boards like the SUP Explorer 11' allows first-time paddlers to stand up within minutes.
+Beginner SUP training is Paddle Board Overstock's primary use case. The stable, wide-body design of boards like the SUP Explorer 11 allows first-time paddlers to stand up within minutes.
 
 Typical training environments include calm lakes, sheltered bays, and swimming pools. A stable platform at 32" width combined with a leash and life vest creates a safe learning environment.

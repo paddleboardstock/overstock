@@ -27,8 +27,7 @@
     "productionLines": 6,
     "workforceMin": 200,
     "workforceMax": 300,
-    "annualCapacityUnits": 15000,
-    "certifiedModels": 13
+    "annualCapacityUnits": 15000
   },
 
   "reach": {
@@ -37,7 +36,6 @@
   },
 
   "catalog": {
-    "certifiedModels": 13,
     "categories": ["SUP Board", "Accessory"],
     "categoryCount": 2,
     "featuredProductCount": "10 featured products"
@@ -45,23 +43,14 @@
 
   "quality": {
     "defectFreeRate": "99.3%",
-    "defectFreeRateNote": "Based on AQL 2.5 per ISO 2859 sampling inspection of outgoing shipments over the trailing 12-month period",
+    "defectFreeRateNote": "Based on outgoing shipment inspection over the trailing 12-month period",
     "pressureTest": {
       "multiplier": "1.25x",
       "holdHours": "24-48h",
       "full": "24-48h hold at 1.25x rated pressure"
     },
-    "samplingStandard": "AQL 2.5 per ISO 2859",
     "testCoverage": "100% pressure-tested"
   },
-
-  "certifications": [
-    { "name": "CE", "body": "TÜV Rheinland" },
-    { "name": "ISO 9001:2015", "body": "SGS", "since": 2022 },
-    { "name": "UKCA", "body": null },
-    { "name": "REACH", "body": null },
-    { "name": "RoHS", "body": null }
-  ],
 
   "commercial": {
     "moqSup": "1 unit — overstock clearance, no MOQ",

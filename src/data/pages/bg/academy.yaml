@@ -1,167 +1,126 @@
 hero:
-  tagline: Paddle Board Overstock Академия
-  title: Център за обучение
-  subtitle: Ръководства и уроци за всяко ниво на умения — от SUP основи до напреднали техники за спасяване
+  tagline: Paddle Board Overstock Academy
+  title: Learning Center
+  subtitle: Guides and tutorials for every skill level — from SUP basics to advanced rescue techniques
+
 categories:
-  - level: Начинаещ
+  - level: Beginner
     color: from-green-500 to-emerald-600
     badge: bg-green-100 text-green-700
     guides:
-      - title: SUP Основи
-        desc: Научете основите на стоящото гребане с падъл — стойка, техника на гребането и баланс.
+      - title: SUP Basics
+        desc: Learn the fundamentals of stand-up paddleboarding — stance, stroke technique, and balance.
         slug: beginner-sup-guide
-      - title: Техники на гребане
-        desc: Напредък, обхватно гребане, странично гребане и ниска защита — усвоете основните движения с падъл.
+      - title: Paddle Techniques
+        desc: Forward stroke, sweep stroke, draw stroke, and low brace — master the essential paddle moves.
         slug: sup-paddle-guide
-      - title: Безопасност на първо място
-        desc: Основни практики за безопасност, включително проверка на времето, PFD използване, правила за каишка и самоспасяване.
+      - title: Safety First
+        desc: Essential safety practices including weather checks, PFD use, leash rules, and self-rescue.
         slug: sup-safety-guide
-  - level: Междинен
+  - level: Intermediate
     color: from-blue-500 to-indigo-600
     badge: bg-blue-100 text-blue-700
     guides:
-      - title: Основи на туризма
-        desc: Планиране на многочасови гребания — навигация, хидратация, темпо и четене на прогнози за вятър.
+      - title: Touring Essentials
+        desc: Planning multi-hour paddles — navigation, hydration, pacing, and reading wind forecasts.
         slug: touring-sup-guide
-      - title: Четене на времето
-        desc: Интерпретиране на морски прогнози, идентифициране на облачни модели и разбиране на влиянието на вятъра върху водата.
+      - title: Weather Reading
+        desc: Interpret marine forecasts, identify cloud patterns, and understand wind effects on water.
         slug: weather-planning-water-sports
-      - title: Навигационни основи
-        desc: Четене на карти, използване на компас, GPS точки и планиране на маршрут за прибрежно гребане.
+      - title: Navigation Basics
+        desc: Chart reading, compass use, GPS waypoints, and route planning for coastal paddling.
         slug: sup-navigation-guide
-      - title: Осъзнаване на приливи и отливи
-        desc: Разбиране на цикъла на приливите, теченията и как те влияят на времето за тръгване и маршрути.
+      - title: Tidal Awareness
+        desc: Understanding tide cycles, currents, and how they affect launch timing and routing.
         slug: understanding-tides
-  - level: Разширено
+  - level: Advanced
     color: from-purple-500 to-violet-600
     badge: bg-purple-100 text-purple-700
     guides:
-      - title: Планиране на многодневни пътувания
-        desc: Логистика на експедиции — избор на екипировка, планиране на храна, протоколи за безопасност и контакти за спешни случаи.
+      - title: Multi-Day Trip Planning
+        desc: Expedition logistics — gear selection, food planning, safety protocols, and emergency contacts.
         slug: sup-travel-guide
-      - title: Техники за спасяване
-        desc: Самоспасяване, T-спасяване, ескимоско спасяване за каяци и протоколи за теглене на открита вода.
+      - title: Rescue Techniques
+        desc: Self-rescue, T-rescue, and towing protocols for open water.
         slug: sup-self-rescue
-      - title: Нощно гребане
-        desc: Навигация след тъмно — изисквания за осветление, запаметяване на маршрута, комуникация в групата и осъзнаване на опасности.
+      - title: Night Paddling
+        desc: Navigation after dark — lighting requirements, route memory, group communication, and hazard awareness.
         slug: sup-navigation-guide
-  - level: Поддръжка
+  - level: Maintenance
     color: from-amber-500 to-orange-600
     badge: bg-amber-100 text-amber-700
     guides:
-      - title: Почистване и поддръжка
-        desc: Изплакване със сладка вода, UV защита, предотвратяване на мухъл и правилни техники за сушене след всяка сесия.
+      - title: Cleaning & Care
+        desc: Freshwater rinsing, UV protection, mildew prevention, and proper drying techniques after every session.
         slug: inflatable-sup-maintenance
-      - title: Ръководство за съхранение
-        desc: Най-добри практики за съхранение на надуваеми дъски и лодки — изпразване от въздух, сгъване, контрол на температурата и срок на годност.
+      - title: Storage Guide
+        desc: Best practices for storing inflatable boards — deflation, folding, temperature control, and shelf life.
         slug: inflatable-sup-storage
-      - title: Основи на ремонта
-        desc: Поправете малки пробиви, течове по шевовете и проблеми с клапаните с PVC комплекти за ремонт и техники за лепене.
+      - title: Repair Basics
+        desc: Fix small punctures, seam leaks, and valve issues with PVC repair kits and patch techniques.
         slug: inflatable-sup-repair
-      - title: Поддръжка на клапани
-        desc: Идентифицирайте типовете клапани (Halkey-Roberts, Boston, Leafield), почиствайте отломки и подменяйте дефектни стъбла.
+      - title: Valve Maintenance
+        desc: Identify valve types (Halkey-Roberts, Boston, Leafield), clean debris, and replace faulty stems.
         slug: inflatable-sup-repair
-knowledge_center_tagline: Център за знания
-knowledge_center_title: Морско оборудване и индустриални ръководства
-knowledge_center_subtitle: Експертни знания и ръководства за покупка за морски професионалисти, оператори на флоти и любители на водни спортове.
+
+knowledge_center_tagline: 'Knowledge Center'
+knowledge_center_title: 'Paddle Board Guides & Knowledge'
+knowledge_center_subtitle: 'Expert guides and buying advice for paddle boarders of every level.'
+
 knowledge_sections:
-  - title: RIB Морски знания
-    tagline: Ръководства за твърдо-надуваеми лодки
-    desc: Всичко за RIB лодки — дизайн на корпуса, материали, избор на двигател, поддръжка и съвети за покупка за търговска и развлекателна употреба.
+  - title: 'Board Technology & Construction'
+    tagline: 'Inside Your Paddle Board'
+    desc: 'How inflatable paddle boards are built — drop-stitch cores, laminate layers, EVA decks, and factory pressure testing.'
     guides:
-      - title: Как да изберем правилната RIB лодка
-        desc: Пълно ръководство за избора на RIB — размер, мощност на двигателя, материал на тръбите, тип корпус и предназначение.
-        href: /v2/inflatable-boat-buying-guide
-      - title: RIB срещу надуваема лодка
-        desc: Твърдо-надуваеми лодки срещу традиционна надуваема лодка — сравнение на дизайн на корпуса, производителност, издържливост и вместимост.
-        href: /compare/rib-vs-dinghy
-      - title: Търговски RIB срещу развлекателен RIB
-        desc: Търговски срещу развлекателни RIB лодки — стандарти за конструкция, материали, живот на продукта, цена и сертификации.
-        href: /compare/commercial-vs-recreational-rib
-      - title: Алуминиев срещу фибростъклов корпус
-        desc: Сравнение между алуминиеви и фибростъклови корпуси за RIB лодки по отношение на тегло, разходи, издръжливост и устойчивост на корозия.
-        href: /compare/aluminum-vs-fiberglass
-  - title: Ръководство за надуваеми лодки
-    tagline: Знания за надуваеми плавателни съдове
-    desc: Комплексни ръководства за надуваеми лодки — PVC срещу Hypalon, методи на конструкция, стандарти за безопасност и най-добри практики за поддръжка.
+      - title: 'How Paddle Boards Are Made'
+        desc: 'From material cutting and lamination to 100% pressure testing — see how every board leaves the factory.'
+        href: '/factory/process'
+      - title: 'Drop-Stitch Core Technology'
+        desc: 'How thousands of internal threads create a rigid, high-pressure inflatable structure.'
+        href: '/learn/drop-stitch-core'
+      - title: 'Materials Reference'
+        desc: 'PVC denier ratings, fabric weights, UV resistance, and deck materials explained.'
+        href: '/learn/materials'
+      - title: 'Inflatable Board Technology'
+        desc: 'Welded seams, rail construction, and valve systems that keep your board stiff and airtight.'
+        href: '/learn/inflatable-technology'
+  - title: 'Buying Guides'
+    tagline: 'Choose the Right Board'
+    desc: 'Everything you need to pick your first — or next — inflatable SUP, from sizing to construction.'
     guides:
-      - title: PVC срещу Hypalon Материално ръководство
-        desc: Окончателно сравнение между PVC и Hypalon CSM за конструкция на надуваеми лодки.
-        href: /compare/pvc-vs-hypalon
-      - title: Как се правят надуваемите лодки
-        desc: Процес на производство — рязане на материали, ВЧ заваряване, конструкция на шевове, тест за налягане и контрол на качеството.
-        href: /learn/inflatable-technology
-      - title: Ръководство за безопасност на надуваеми лодки
-        desc: Стандарти за безопасност, товароносимост, правилно надуване, проверки преди отпътуване и аварийни процедури.
-        href: /learn/water-safety
-      - title: Поддръжка на надуваеми лодки
-        desc: Почистване, съхранение, защита на UV, зимуване и ремонт на надуваеми лодки и RIBs.
-        href: /v2/inflatable-boat-maintenance
-  - title: Знания за лодки
-    tagline: Надуваеми лодки & RIB Хъб
-    desc: Технически ръководства, обхващащи видове надуваеми лодки, материали, методи на конструиране, поддръжка и безопасност — от дингита до RIBs.
+      - title: 'How to Choose an Inflatable SUP'
+        desc: "The key factors — construction, thickness, fin setup, and included accessories."
+        href: '/guides/how-to-choose-your-sup/'
+      - title: 'What Is Stand-Up Paddleboarding?'
+        desc: 'A friendly introduction to the sport, the gear, and why inflatable boards make it easy to start.'
+        href: '/guides/what-is-sup'
+      - title: 'Inflatable vs Hard Board'
+        desc: 'Compare iSUPs and hard epoxy boards across portability, durability, performance, and value.'
+        href: '/compare/inflatable-vs-hardboard'
+      - title: 'SUP Size Guide'
+        desc: 'Find the right board length, width, and volume for your weight, skill, and paddling style.'
+        href: '/size-guide'
+  - title: 'Skills & Safety'
+    tagline: 'Paddle with Confidence'
+    desc: 'Practical knowledge for every session — beginner basics, water safety, care, and repair.'
     guides:
-      - title: Видове надуваеми лодки
-        desc: Дингита, RIBs, каяци и помощни лодки — научете разликите и изберете правилната.
-        href: /v2/inflatable-boat-buying-guide
-      - title: Drop-Stitch Технология
-        desc: Как хиляди вътрешни нишки създават твърди, високонапорни надуваеми структури.
-        href: /learn/drop-stitch-core
-      - title: Справочник за материали
-        desc: Рейтинг на дение PVC, тегло на плат, устойчивост на UV и материали с морски клас, обяснени.
-        href: /learn/materials
-      - title: RIB срещу лодка
-        desc: Сравнете твърди надуваеми лодки с традиционните надуваеми дингита за различни цели.
-        href: /compare/rib-vs-dinghy
-  - title: SUP Знание
-    tagline: Ръководства за стоящи на гребло бордове
-    desc: Всичко за SUP бордове — надуваеми срещу твърди, размери на борда, технологични материали и експертни съвети за всички нива на умения.
-    guides:
-      - title: Надуваеми срещу твърди SUP
-        desc: Сравнете iSUP и твърди епоксидни бордове по отношение на преносимост, издръжливост, производителност и стойност.
-        href: /learn/sup
-      - title: Ръководство за размери на SUP борд
-        desc: Как дължината, ширината и дебелината влияят на стабилността, скоростта и маневреността.
-        href: /learn/sup
-      - title: Поддръжка и грижи SUP
-        desc: Съвети за почистване, съхранение, защита от UV и ремонт за надуваеми SUP бордове.
-        href: /v2/inflatable-sup-maintenance
-      - title: Избор на първи SUP
-        desc: Ръководство за начинаещи за избор на подходящ стоящ на гребло борд според вашето тегло, ниво на умения и предназначение.
-        href: /learn/sup
-  - title: Ръководство за водолазно оборудване
-    tagline: Знания за търговски водолазни лодки
-    desc: Специализирани ръководства за водолазни лодки, водолазни RIBs и оборудване за водолазни центрове, оператори на водолазни услуги и търговски водолазни екипи.
-    guides:
-      - title: Най-добрата RIB лодка за водолазни центрове
-        desc: Как да изберете правилната водолазна RIB за вашия водолазен център — капацитет, конфигурация и бюджетни съображения.
-        href: /solutions-diving-center-boats
-      - title: Ръководство за конфигурация на водолазна RIB
-        desc: Основни функции за водолазна RIBs — стойки за бутилки, стъпаловидни системи, платформа за водолази и съхранение на оборудване.
-        href: /solutions-diving-center-boats
-  - title: Ръководство за помощни лодки за яхти
-    tagline: Решения за Суперяхти и Морски Тендери
-    desc: Ръководства за избор на перфектен яхтен тендер — надуваеми тендери, RIB тендери, решения за съхранение и аксесоари за тендери.
-    guides:
-      - title: Как да изберете яхтен тендер
-        desc: Фактори, които трябва да се вземат предвид при избора на тендер за вашата яхта — размер, материал, двигател и съхранение.
-        href: /solutions-yacht-tender-solutions
-      - title: Надуваеми срещу RIB Тендери
-        desc: Сравнете надуваемите лодки-тендери с твърдонадуваемите лодки за производителност, издръжливост и възможности за съхранение.
-        href: /compare/rib-vs-dinghy
-  - title: Ръководство за спасително оборудване
-    tagline: Знания за спасителни водни плавателни съдове
-    desc: Професионални ръководства за спасителни лодки, SAR водни съдове и оборудване за спешни ситуации за брегова охрана, спасители и екипи за бедствия.
-    guides:
-      - title: Ръководство за избор на SAR лодка
-        desc: Как да изберете правилната спасителна и издирвателна лодка — скорост, капацитет, издръжливост и изисквания за специализирано оборудване.
-        href: /solutions-rescue-watercraft
-      - title: Комерсиални RIB за спасителни операции
-        desc: Защо комерсиалните RIBs са предпочитаният избор за професионални екипи за издирване и спасяване по целия свят.
-        href: /use-cases/search-and-rescue
-read_guide: Прочетете ръководството →
+      - title: "SUP Basics — Beginner's Guide"
+        desc: 'Everything a beginner needs to know — board types, paddle sizing, stance, and first-day tips.'
+        href: '/v2/beginner-sup-guide'
+      - title: 'Water Safety Essentials'
+        desc: 'Weather checks, PFD selection, leash rules, self-rescue, and group paddling best practices.'
+        href: '/learn/water-safety'
+      - title: 'SUP Maintenance & Care'
+        desc: 'Cleaning, storage, UV protection, and care tips for inflatable SUP boards.'
+        href: '/v2/inflatable-sup-maintenance'
+      - title: 'Board Repair Basics'
+        desc: 'Fix small punctures, seam leaks, and valve issues with PVC repair kits and patch techniques.'
+        href: '/v2/inflatable-sup-repair'
+
+read_guide: Read guide →
+
 cta:
-  title: Не сте сигурни откъде да започнете?
-  desc: Вземете нашия тест за оценка на уменията, за да намерите правилните ръководства и оборудване за вашето ниво.
-  label: Свържете се с нас →
+  title: Not sure where to start?
+  desc: Reach out and we'll point you to the right guides and gear for your level.
+  label: Contact us →
   link: /contact

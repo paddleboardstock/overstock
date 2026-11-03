@@ -35,7 +35,7 @@ const CTA_RULES: Array<{
       link: '/products/sup-explorer-11',
       reason: 'Beginner content →entry-level product',
     },
-    products: ['sup-explorer-11', 'paddle-carbon', 'life-vest-classic'],
+    products: ['sup-explorer-11', 'paddle-carbon'],
     keywords: ['beginner', 'entry-level', 'starter', 'first board'],
   },
   {
@@ -47,7 +47,7 @@ const CTA_RULES: Array<{
         '3mm-vs-5mm-wetsuit',
       ].some((k) => s.includes(k)),
     cta: { text: 'Shop wetsuits', link: '/products', reason: 'Gear guide →product category' },
-    products: ['life-vest-pro', 'life-vest-classic'],
+    products: [],
     keywords: ['wetsuit', 'gear', 'protection', 'cold water'],
   },
   {
@@ -60,7 +60,7 @@ const CTA_RULES: Array<{
         'best-surf-gear-brands-compared',
       ].some((k) => s.includes(k)),
     cta: { text: 'Compare surfboards', link: '/products', reason: 'Comparison →product discovery' },
-    products: ['sup-explorer-11', 'kayak-lite'],
+    products: ['sup-explorer-11'],
     keywords: ['surfboard', 'comparison', 'size guide', 'board type'],
   },
   {
@@ -72,12 +72,12 @@ const CTA_RULES: Array<{
         'ocean-safety-and-responsibility',
       ].some((k) => s.includes(k)),
     cta: {
-      text: 'View safety equipment',
-      link: '/products/life-vest-classic',
-      reason: 'Safety content →safety product',
+      text: 'Explore our products',
+      link: '/products',
+      reason: 'Safety content →product discovery',
     },
-    products: ['life-vest-classic', 'life-vest-pro'],
-    keywords: ['safety', 'protection', 'life vest', 'ocean safety'],
+    products: ['sup-explorer-11'],
+    keywords: ['safety', 'protection', 'ocean safety'],
   },
   {
     match: (s) =>
@@ -89,7 +89,7 @@ const CTA_RULES: Array<{
         'why-paddleboardoverstock-exists',
       ].some((k) => s.includes(k)),
     cta: { text: 'Explore Paddle Board Overstock', link: '/', reason: 'Brand content →brand homepage' },
-    products: ['sup-explorer-11', 'life-vest-pro', 'paddle-carbon', 'pump-dual'],
+    products: ['sup-explorer-11', 'paddle-carbon', 'pump-dual'],
     keywords: ['paddleboardoverstock', 'brand', 'about', 'community'],
   },
 ];

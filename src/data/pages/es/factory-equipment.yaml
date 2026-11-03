@@ -1,80 +1,69 @@
 hero:
-  tagline: 'Equipo'
-  title: 'Equipo y Maquinaria de Fabricación'
-  subtitle: 'Equipo de grado industrial para corte, soldadura, impresión y ensamblaje'
-  back_label: 'Volver a la Fábrica'
+  tagline: Equipment
+  title: Manufacturing Equipment & Machinery
+  subtitle: Industrial-grade equipment across cutting, welding, printing, and assembly
+  back_label: Back to Factory
   back_link: /factory
-
 categories:
-  - title: 'Corte y Preparación de Materiales'
+  - title: Cutting & Material Preparation
     items:
-      - name: 'Máquina Cortadora Automática de PVC'
-        spec: 'Controlada por CNC, 6.5 m × 2.5 m, precisión 0.1 mm'
-        desc: 'Máquina cortadora automática controlada por computadora para tejidos PVC, Hypalon y drop-stitch. El software de anidado optimiza la utilización del material por debajo del 5 % de desperdicio.'
-      - name: 'Extendedora de Tejido'
-        spec: 'Ancho máx. 3 m, alimentación de tensión controlada'
-        desc: 'Coloca el tejido en capas simples o múltiples con tensión controlada para evitar la distorsión antes del corte.'
-  - title: 'Soldadura y Unión de Tubos'
+      - name: Automatic PVC Cutting Machine
+        spec: CNC-controlled, 6.5 m × 2.5 m, 0.1 mm accuracy
+        desc: Computer-controlled automatic cutting machine for PVC and drop-stitch fabrics. Nesting software optimises material utilisation to below 5% waste.
+      - name: Fabric Spreader
+        spec: 3 m max width, tension-controlled feed
+        desc: Lays fabric in single or multiple plies with controlled tension to prevent distortion before cutting.
+  - title: Welding & Bonding
     items:
-      - name: 'Máquina de Sellado por Calor'
-        spec: 'Soldadura de aire caliente, variable 200–600 °C, 0.5–5 m/min'
-        desc: 'Máquina de sellado térmico por aire caliente para unir y soldar costuras de tubos PVC y Hypalon. Se usa para fijar, sellar y fundir cámaras de tubo y uniones de flotación.'
-      - name: 'Prensa Dieléctrica RF'
-        spec: '15 kW, placa 2000 × 600 mm'
-        desc: 'Prensa de soldadura de alta frecuencia para costuras longitudinales principales, uniones de bañera a tubo y fabricación de cámaras grandes.'
-      - name: 'Soldadora RF Controlada por CNC'
-        spec: '8 kW, mesa XY 2500 × 1200 mm'
-        desc: 'Soldadura programable de costuras curvas para geometrías complejas, grabado de logotipos y parches de precisión.'
-  - title: 'Fabricación de Cascos RIB'
+      - name: Heat Sealing Machine
+        spec: Hot-air welding, variable 200–600 °C, 0.5–5 m/min
+        desc: Hot-air heat sealing machine for bonding and welding PVC laminates, rail bands, and chamber seams. Used for tacking, sealing, and fusing drop-stitch core joints.
+      - name: Dielectric RF Press
+        spec: 15 kW, platen 2000 × 600 mm
+        desc: Radio-frequency welding press for main longitudinal seams, transom-to-tube joints, and large-chamber fabrication.
+      - name: CNC-Controlled RF Welder
+        spec: 8 kW, XY table 2500 × 1200 mm
+        desc: Programmable curved-seam welding for complex geometries, logo embossing, and precision patchwork.
+  - title: Deck Art & Finishing
     items:
-      - name: 'Moldes de Fibra de Vidrio por Colocación Manual'
-        spec: 'Varios moldes para cascos RIB hasta 6 m LOA'
-        desc: 'Moldeo tradicional de fibra de vidrio por colocación manual con sistemas de resina de poliéster y viniléster. Cada capa se enrolla a mano y se vacuum-bag para una calidad y resistencia de laminado consistentes.'
-      - name: 'Cabina de Pulverización de Gelcoat'
-        spec: 'Control de temperatura, ventilación de aire filtrado'
-        desc: 'Aplicación de gelcoat en cascos RIB. Proporciona un acabado de alto brillo, resistente a los UV, con control preciso del espesor.'
-      - name: 'Router CNC (5 ejes)'
-        spec: 'Volumen 3 m × 2 m × 1 m, husillo refrigerado por agua'
-        desc: 'Mecanizado de insertos de casco, moldes de consola, bases de asiento y soportes a medida.'
-  - title: 'Impresión y Decoración SUP'
+      - name: EVA Deck Cutting Machine
+        spec: CNC knife cutting, 2 m width
+        desc: Precision cutting of EVA deck foam panels for art-series deck patterns. Each panel is cut to shape for a seamless full-deck fit.
+      - name: Deck Lamination Press
+        spec: Temperature & pressure controlled
+        desc: Bonds EVA deck panels to the board surface with consistent adhesion across the full deck area.
+  - title: SUP Printing & Decoration
     items:
-      - name: 'Impresora Digital'
-        spec: 'Inyección de tinta de alta resolución, ancho de impresión hasta 2 m'
-        desc: 'Impresión digital directa al tejido para gráficos de cubierta SUP a todo color. Imprime patrones personalizados, degradados e imágenes de calidad fotográfica con tintas base agua resistentes a los UV.'
-      - name: 'Máquina de Serigrafía'
-        spec: 'Manual y semiautomática, registro multicolor'
-        desc: 'Serigrafía para logotipos de tablas SUP, marcas comerciales y patrones repetitivos. Proporciona impresiones duraderas y opacas con saturación de color vibrante.'
-  - title: 'Ensamblaje y Equipamiento'
+      - name: Digital Printer
+        spec: High-resolution inkjet, up to 2 m print width
+        desc: Direct-to-fabric digital printing for full-colour SUP deck graphics. Prints custom patterns, gradients, and photo-quality images with UV-resistant water-based inks.
+      - name: Screen Printing Machine
+        spec: Manual and semi-automatic, multi-colour registration
+        desc: Screen printing for SUP board logos, brand marks, and repeating patterns. Provides durable, opaque prints with vibrant colour saturation.
+  - title: Final Assembly
     items:
-      - name: 'Polipasto de Motor'
-        spec: 'Capacidad 500 kg, barra separadora ajustable'
-        desc: 'Montaje seguro de motores fuera de borda de 2.5 a 60 hp.'
-      - name: 'Marco de Maqueta de Consola'
-        spec: 'Altura y ángulo ajustables'
-        desc: 'Preinstalación de dirección, acelerador y paneles de instrumentos antes de la instalación.'
-      - name: 'Crimpadora de Manguera Hidráulica'
-        spec: 'Hasta 1" ID, manómetro digital'
-        desc: 'Conjuntos de manguera de dirección hidráulica de longitud a medida con accesorios engastados.'
-      - name: 'Tablero de Arneses Eléctricos'
-        spec: '3 m × 1.5 m, diagramas de cableado preimpresos'
-        desc: 'Ensamblaje y prueba de arneses eléctricos completos fuera del bote.'
-  - title: 'Pruebas y Control de Calidad'
+      - name: Valve Torque Station
+        spec: Calibrated, 10-cycle function test
+        desc: Installs and torques inflation valves, then function-tests every valve through 10 open/close cycles.
+      - name: Fin Box & D-Ring Setter
+        spec: Jig-aligned, adhesive cured
+        desc: Positions and bonds fin boxes, D-rings, and handles at exact deck locations per model specification.
+  - title: Testing & Quality Control
     items:
-      - name: 'Probador Universal de Tracción'
-        spec: '50 kN, ASTM D751'
-        desc: 'Prueba de fuerza de rotura, elongación en la rotura y propagación del desgarro para lotes de tejido.'
-      - name: 'Banco de Prueba de Retención de Aire'
-        spec: 'Programable, retención de presión 30 min'
-        desc: 'Prueba automatizada de retención de presión para cada cámara de tubo antes del ensamblaje.'
-      - name: 'Probador de Desprendimiento de Costuras'
-        spec: 'Desprendimiento motorizado 180° a 100 mm/min'
-        desc: 'Prueba de resistencia al desprendimiento de costuras soldadas y pegadas según ISO 6185.'
-      - name: 'Cámara de Envejecimiento por Arco de Xenón'
-        spec: '2000 h exposición'
-        desc: 'Prueba de resistencia a los UV para cambio de color y retención de resistencia.'
-
+      - name: Universal Tensile Tester
+        spec: 50 kN capacity
+        desc: Breaking force, elongation at break, and tear propagation testing for fabric batches.
+      - name: Air Retention Test Rig
+        spec: Programmable, 30-min pressure-hold
+        desc: Automated pressure-hold test for every tube chamber before assembly.
+      - name: Seam Peel Tester
+        spec: Motorised 180° peel at 100 mm/min
+        desc: Weld and bonded-seam peel strength testing per internal protocol.
+      - name: Xenon-Arc Weathering Chamber
+        spec: 2000 h exposure
+        desc: UV resistance testing for colour change and strength retention.
 cta:
-  title: '¿Interesado en una visita a la fábrica?'
-  desc: 'Damos la bienvenida a los visitantes en nuestras instalaciones de Qingdao. Vea nuestro equipo y procesos en persona.'
-  label: 'Agendar una visita →'
+  title: Interested in a factory tour?
+  desc: We welcome visitors to our Weihai facility. See our equipment and processes in person.
+  label: Schedule a visit →
   link: /contact

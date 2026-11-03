@@ -12,18 +12,6 @@ const isDefault = locale === 'en';
 const file = siteFileForLocale('src/data/site/categories.yaml', locale);
 
 const defaultData: Record<string, { name: string; image: string; gradient: string }> = {
-  RIB: {
-    name: 'RIB Boats',
-    image:
-      'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/categories/paddleboardoverstock-rib-boat-category.webp',
-    gradient: 'from-red-400 to-rose-500',
-  },
-  INFLATABLE: {
-    name: 'Inflatable Boats',
-    image:
-      'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/categories/paddleboardoverstock-dinghy-category.webp',
-    gradient: 'from-teal-400 to-cyan-500',
-  },
   SUP: {
     name: 'SUP Paddle Boards',
     image:
@@ -100,7 +88,7 @@ const keys = Object.keys(defaultData);
       </div>
     </div>
     <p class="mt-1 text-sm text-gray-500">
-      Images and gradients for the 6 product category cards on the homepage. File: <code class="font-mono">{file}</code>
+      Images and gradients for the product category cards on the homepage. File: <code class="font-mono">{file}</code>
       {!isDefault && <span class="text-amber-600 dark:text-amber-400"> — locale override</span>}
     </p>
   </div>
@@ -225,7 +213,7 @@ const keys = Object.keys(defaultData);
         saveBtn.textContent = 'Saving...';
         publishBtn.disabled = true;
         const fd = new FormData(form);
-        const keys = ['RIB', 'INFLATABLE', 'SUP', 'ACCESSORY'];
+        const keys = ['SUP', 'ACCESSORY'];
         const data = {};
         for (const key of keys) {
           data[key] = {

@@ -65,7 +65,7 @@ export const productBusinessData: Record<string, BusinessProductInfo> = {
     useCase: 'Wake surfing, advanced paddle sports, club competition training',
     operatingCost: 'Low — inflatable construction, simple maintenance routine',
     whyBusinessesChooseIt:
-      'Enables clubs to offer wake surfing without a boat. Differentiates club programming from competitors. Attracts younger, action-sports oriented members.',
+      'Enables clubs to offer wake surfing with no motor vessel needed. Differentiates club programming from competitors. Attracts younger, action-sports oriented members.',
     lifespan: '3-4 years with regular use',
   },
   'sup-medusa-glow': {
@@ -107,26 +107,6 @@ export const productBusinessData: Record<string, BusinessProductInfo> = {
     whyBusinessesChooseIt:
       'Guests consistently choose visually distinctive boards. Print acts as floating advertising for your brand. Retail version creates merchandise revenue opportunity.',
     lifespan: '3-5 years with regular use',
-  },
-  'life-vest-classic': {
-    bestFor: ['clubs', 'resorts', 'entrepreneurs'],
-    recommendation:
-      'Essential safety equipment for any rental fleet or club program. Universal fit suits most guests. Affordable bulk pricing enables commercial use. CE certified per applicable EU directives.',
-    useCase: 'Mandatory safety gear for all rental and club operations',
-    operatingCost: 'Very low — rinse with fresh water, inspect straps, replace every 3-5 years',
-    whyBusinessesChooseIt:
-      'Regulatory compliance for commercial operations. Universal adult fit simplifies inventory management. Bulk pricing significantly reduces per-unit cost. Trusted brand for guest safety.',
-    lifespan: '3-5 years in commercial use',
-  },
-  'life-vest-pro': {
-    bestFor: ['clubs', 'resorts', 'entrepreneurs'],
-    recommendation:
-      'Premium PFD for guided tours and professional operations. Enhanced features suit higher-end resort programs and commercial guiding operations.',
-    useCase: 'Guided tours, premium experiences, professional instruction',
-    operatingCost: 'Very low — minimal maintenance, replace every 3-5 years',
-    whyBusinessesChooseIt:
-      'Enhanced features justify premium rental pricing. Higher guest comfort leads to better reviews. Professional appearance reinforces brand quality.',
-    lifespan: '3-5 years in commercial use',
   },
   'oars-pump-set': {
     bestFor: ['clubs', 'resorts', 'entrepreneurs'],

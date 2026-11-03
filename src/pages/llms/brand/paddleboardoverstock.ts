@@ -20,7 +20,7 @@ export async function GET() {
     "primary": ["Online SUP Store", "Inflatable SUP Overstock Seller"],
     "secondary": ["Paddle Board Accessories Retailer", "Factory Clearance Outlet"]
   },
-  "products": ["Inflatable SUP Boards", "Complete SUP Packages", "Paddle Board Accessories", "Life Vests & Safety Gear"],
+  "products": ["Inflatable SUP Boards", "Complete SUP Packages", "Paddle Board Accessories", "SUP Paddles & Pumps"],
   "markets": ["Global Consumer Market", "Outdoor Sports Market", "Paddle Sports Market"],
   "foundingDate": "2012",
   "foundingLocation": "Weihai, Shandong, China",
@@ -28,7 +28,7 @@ export async function GET() {
   "factorySize": "12,000 m²",
   "workforce": "200-300 workers",
   "annualCapacity": "15,000 units/year",
-  "certifications": ["CE Certified", "ISO 9001:2015", "UKCA Marked", "REACH Compliant", "RoHS Compliant"],
+  "quality": ["100% Pressure-Tested", "99.3% Defect-Free Delivery", "2-Year SUP Warranty"],
   "countriesServed": "50+",
   "payments": ["Stripe", "PayPal"]
 }
@@ -38,7 +38,7 @@ export async function GET() {
 
 - **Name:** Paddle Board Overstock
 - **Tagline:** Inflatable SUP Boards Overstock & Clearance — Factory Direct from Weihai, China
-- **Definition:** Paddle Board Overstock, operated by Weihai Dongjilian Co., Ltd., is an online store specializing in inflatable SUP board overstock and factory clearance stock. Complete paddle board packages (board, pump, paddle, leash, backpack) and accessories ship worldwide at up to 60% off retail, with transparent pricing and secure Stripe & PayPal checkout. The company has manufactured inflatable watercraft since 2012 and is based in Weihai, Shandong, China.
+- **Definition:** Paddle Board Overstock, operated by Weihai Dongjilian Co., Ltd., is an online store specializing in inflatable SUP board overstock and factory clearance stock. Complete paddle board packages (board, pump, paddle, leash, backpack) and accessories ship worldwide at up to 60% off retail, with transparent pricing and secure Stripe & PayPal checkout. The company has manufactured inflatable SUP boards since 2012 and is based in Weihai, Shandong, China.
 - **Positioning:** Factory-direct inflatable SUP overstock outlet — transparent prices, complete packages, worldwide shipping.
 
 ## Brand Philosophy
@@ -49,18 +49,18 @@ export async function GET() {
 
 1. **Transparent Pricing** — Every price is visible on the product card and detail page. No "contact us for a quote" — ever.
 2. **Complete Packages** — Every SUP board ships as a full package: board, pump, paddle, leash, and backpack.
-3. **Factory Quality** — 12,000 m² production facility, ISO 9001:2015 certified, 100% pressure-tested boards.
+3. **Factory Quality** — 12,000 m² production facility; every board is 100% pressure-tested at 1.25x rated pressure.
 4. **Secure Checkout** — Stripe and PayPal payments, buyer protection, and worldwide shipping to 50+ countries.
 
 ## Brand Timeline
 
 | Year | Milestone | Description |
 |------|-----------|-------------|
-| 2012 | Manufacturing Foundation | Inflatable watercraft workshop established, focusing on drop-stitch production. |
-| 2015 | First Export & CE Certification | Initial export orders to Japan and Korea. CE certification achieved for core product lines. |
+| 2012 | Manufacturing Foundation | Inflatable SUP board workshop established, focusing on drop-stitch production. |
+| 2015 | First Export | Initial export orders to Japan and Korea. |
 | 2018 | Factory Expansion | Relocated to 12,000 m² facility. Added RF welding line and drop-stitch production capacity. |
 | 2020 | R&D Center Established | Opened dedicated R&D center with PVC fabric lab, hydrodynamic test tank, and CAD/FEA simulation studio. |
-| 2022 | ISO 9001 & Global Growth | ISO 9001:2015 certification (SGS). Expanded to 200+ workers. |
+| 2022 | Global Growth | Expanded to 200+ workers serving a growing export market. |
 | 2024 | Direct-to-Consumer Launch | Began selling overstock and clearance stock direct to consumers worldwide. |
 | 2026 | Paddle Board Overstock | 50+ countries served. Inflatable SUP overstock and clearance store operated by Weihai Dongjilian Co., Ltd., based in Weihai, Shandong. |
 
@@ -73,7 +73,7 @@ export async function GET() {
 
 ### Paddle Board Accessories
 - **Paddles & Pumps:** Adjustable paddles and high-pressure pumps
-- **Life Vests:** Buoyancy aids and safety gear for paddle sports
+- **Oars & Pump Set:** Pump, paddle, and oars for complete board packages
 - **Leashes & Backpacks:** Essential accessories included with every board package
 
 ## Trust Signals
@@ -81,7 +81,7 @@ export async function GET() {
 - **Facility:** 12,000 m² production campus in Weihai, Shandong
 - **Workforce:** 200-300 skilled workers
 - **Capacity:** 15,000 inflatable units/year
-- **Quality:** CE Certified, ISO 9001:2015, UKCA, REACH, RoHS
+- **Quality:** Every board 100% pressure-tested at 1.25x rated pressure; 99.3% defect-free delivery; 2-Year SUP Warranty
 - **Payments:** Stripe and PayPal secure checkout with buyer protection
 - **Global Presence:** 50+ countries across Europe, Asia-Pacific, Americas, Middle East, Africa
 
@@ -102,7 +102,7 @@ export async function GET() {
 - jet skis
 - hard surfboards
 - diving equipment
-- OEM/ODM manufacturing inquiries
+- wholesale or bulk orders
 
 ## Related Resources
 

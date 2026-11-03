@@ -41,13 +41,13 @@ export const marketPresence: MarketPresence = {
     {
       name: 'North America',
       count: 4,
-      description: 'Major market with US distribution center and Canadian dealer network',
+      description: 'Major market with US distribution center and Canadian service network',
       countries: ['United States', 'Canada', 'Mexico', 'Costa Rica'],
     },
     {
       name: 'Asia',
       count: 14,
-      description: 'Regional headquarters in Qingdao with partners across East and Southeast Asia',
+      description: 'Regional headquarters in Weihai with partners across East and Southeast Asia',
       countries: [
         'China',
         'Japan',
@@ -68,7 +68,7 @@ export const marketPresence: MarketPresence = {
     {
       name: 'Oceania',
       count: 3,
-      description: 'Growing dealer network serving Australia and Pacific island markets',
+      description: 'Growing service network serving Australia and Pacific island markets',
       countries: ['Australia', 'New Zealand', 'Fiji'],
     },
     {
@@ -147,7 +147,7 @@ export const marketPresenceByLang: Record<string, any> = {
     {
     "name": "Asien",
     "count": 14,
-    "description": "Regionaler Hauptsitz in Qingdao mit Partnern in Ost- und Südostasien",
+    "description": "Regionaler Hauptsitz in Weihai mit Partnern in Ost- und Südostasien",
     "countries": [
     "China",
     "Japan",
@@ -281,7 +281,7 @@ export const marketPresenceByLang: Record<string, any> = {
     {
     "name": "Asia",
     "count": 14,
-    "description": "Sede regional en Qingdao con socios en Asia Oriental y el Sudeste Asiático",
+    "description": "Sede regional en Weihai con socios en Asia Oriental y el Sudeste Asiático",
     "countries": [
     "China",
     "Japan",
@@ -415,7 +415,7 @@ export const marketPresenceByLang: Record<string, any> = {
     {
     "name": "Asie",
     "count": 14,
-    "description": "Siège régional à Qingdao avec des partenaires en Asie de l'Est et du Sud-Est",
+    "description": "Siège régional à Weihai avec des partenaires en Asie de l'Est et du Sud-Est",
     "countries": [
     "China",
     "Japan",
@@ -549,7 +549,7 @@ export const marketPresenceByLang: Record<string, any> = {
     {
     "name": "Asia",
     "count": 14,
-    "description": "Sede regionale a Qingdao con partner in Asia orientale e sudorientale",
+    "description": "Sede regionale a Weihai con partner in Asia orientale e sudorientale",
     "countries": [
     "China",
     "Japan",
@@ -645,677 +645,7 @@ export const marketPresenceByLang: Record<string, any> = {
     }
   ]
 },
-  cs: {
- "regions": [
-    {
-    "name": "Evropa",
-    "count": 15,
-    "description": "Silné zastoupení na evropských trzích vodních sportů se sklady v Německu a Nizozemsku",
-    "countries": [
-    "United Kingdom",
-    "Germany",
-    "France",
-    "Netherlands",
-    "Italy",
-    "Spain",
-    "Poland",
-    "Sweden",
-    "Norway",
-    "Denmark",
-    "Finland",
-    "Belgium",
-    "Austria",
-    "Switzerland",
-    "Ireland"
-    ]
-    },
-    {
-    "name": "Severní Amerika",
-    "count": 4,
-    "description": "Hlavní trh s distribučním centrem v USA a sítí dealerů v Kanadě",
-    "countries": [
-    "United States",
-    "Canada",
-    "Mexico",
-    "Costa Rica"
-    ]
-    },
-    {
-    "name": "Asie",
-    "count": 14,
-    "description": "Regionální sídlo v Qingdau s partnery ve východní a jihovýchodní Asii",
-    "countries": [
-    "China",
-    "Japan",
-    "South Korea",
-    "Taiwan",
-    "Thailand",
-    "Vietnam",
-    "Indonesia",
-    "Malaysia",
-    "Philippines",
-    "Singapore",
-    "India",
-    "Sri Lanka",
-    "Bangladesh",
-    "Pakistan"
-    ]
-    },
-    {
-    "name": "Oceánie",
-    "count": 3,
-    "description": "Rostoucí dealerská síť obsluhující Austrálii a trhy tichomořských ostrovů",
-    "countries": [
-    "Australia",
-    "New Zealand",
-    "Fiji"
-    ]
-    },
-    {
-    "name": "Blízký východ",
-    "count": 7,
-    "description": "Dodávky pro luxusní resorty a námořní provozovatele v celém regionu Perského zálivu",
-    "countries": [
-    "UAE",
-    "Saudi Arabia",
-    "Qatar",
-    "Oman",
-    "Bahrain",
-    "Kuwait",
-    "Turkey"
-    ]
-    },
-    {
-    "name": "Afrika",
-    "count": 5,
-    "description": "Rozvíjející se trh obsluhující pobřežní turistiku a rybaření",
-    "countries": [
-    "South Africa",
-    "Egypt",
-    "Morocco",
-    "Kenya",
-    "Mauritius"
-    ]
-    },
-    {
-    "name": "Jižní Amerika",
-    "count": 4,
-    "description": "Rozšiřující se distribuční síť ve Střední a Jižní Americe",
-    "countries": [
-    "Brazil",
-    "Chile",
-    "Argentina",
-    "Panama"
-    ]
-    }
- ],
- "keyMarkets": [
-    {
-    "region": "Severní Amerika",
-    "countries": [
-    "US West Coast (CA, OR, WA)",
-    "US East Coast (FL, NY)",
-    "Great Lakes Region",
-    "Canadian Coastal Provinces"
-    ]
-    },
-    {
-    "region": "Evropa",
-    "countries": [
-    "Mediterranean Coast",
-    "North Sea/Baltic",
-    "UK & Ireland",
-    "Alpine Lakes Region"
-    ]
-    },
-    {
-    "region": "Asie a Tichomoří",
-    "countries": [
-    "Coastal China",
-    "Southeast Asia Islands",
-    "Japan/Korea Peninsula",
-    "Australia East Coast"
-    ]
-    }
- ]
-},
-  sv: {
- "regions": [
-    {
-    "name": "Europa",
-    "count": 15,
-    "description": "Stark närvaro på europeiska vattensportmarknader med lager i Tyskland och Nederländerna",
-    "countries": [
-    "United Kingdom",
-    "Germany",
-    "France",
-    "Netherlands",
-    "Italy",
-    "Spain",
-    "Poland",
-    "Sweden",
-    "Norway",
-    "Denmark",
-    "Finland",
-    "Belgium",
-    "Austria",
-    "Switzerland",
-    "Ireland"
-    ]
-    },
-    {
-    "name": "Nordamerika",
-    "count": 4,
-    "description": "Stor marknad med distributionscenter i USA och återförsäljarnätverk i Kanada",
-    "countries": [
-    "United States",
-    "Canada",
-    "Mexico",
-    "Costa Rica"
-    ]
-    },
-    {
-    "name": "Asien",
-    "count": 14,
-    "description": "Regionalt huvudkontor i Qingdao med partners i hela östra och sydöstra Asien",
-    "countries": [
-    "China",
-    "Japan",
-    "South Korea",
-    "Taiwan",
-    "Thailand",
-    "Vietnam",
-    "Indonesia",
-    "Malaysia",
-    "Philippines",
-    "Singapore",
-    "India",
-    "Sri Lanka",
-    "Bangladesh",
-    "Pakistan"
-    ]
-    },
-    {
-    "name": "Oceanien",
-    "count": 3,
-    "description": "Växande återförsäljarnätverk som betjänar Australien och marknader på Stillahavsöarna",
-    "countries": [
-    "Australia",
-    "New Zealand",
-    "Fiji"
-    ]
-    },
-    {
-    "name": "Mellanöstern",
-    "count": 7,
-    "description": "Leveranser till lyxresorter och marina operatörer i hela Gulfregionen",
-    "countries": [
-    "UAE",
-    "Saudi Arabia",
-    "Qatar",
-    "Oman",
-    "Bahrain",
-    "Kuwait",
-    "Turkey"
-    ]
-    },
-    {
-    "name": "Afrika",
-    "count": 5,
-    "description": "Växande marknad som betjänar kustturism och fiskeverksamhet",
-    "countries": [
-    "South Africa",
-    "Egypt",
-    "Morocco",
-    "Kenya",
-    "Mauritius"
-    ]
-    },
-    {
-    "name": "Sydamerika",
-    "count": 4,
-    "description": "Expanderande distributionsnätverk i Central- och Sydamerika",
-    "countries": [
-    "Brazil",
-    "Chile",
-    "Argentina",
-    "Panama"
-    ]
-    }
- ],
- "keyMarkets": [
-    {
-    "region": "Nordamerika",
-    "countries": [
-    "US West Coast (CA, OR, WA)",
-    "US East Coast (FL, NY)",
-    "Great Lakes Region",
-    "Canadian Coastal Provinces"
-    ]
-    },
-    {
-    "region": "Europa",
-    "countries": [
-    "Mediterranean Coast",
-    "North Sea/Baltic",
-    "UK & Ireland",
-    "Alpine Lakes Region"
-    ]
-    },
-    {
-    "region": "Asien och Stillahavsregionen",
-    "countries": [
-    "Coastal China",
-    "Southeast Asia Islands",
-    "Japan/Korea Peninsula",
-    "Australia East Coast"
-    ]
-    }
- ]
-},
-  da: {
- "regions": [
-    {
-    "name": "Europa",
-    "count": 15,
-    "description": "Stærk tilstedeværelse på europæiske vandsportsmarkeder med lagre i Tyskland og Holland",
-    "countries": [
-    "United Kingdom",
-    "Germany",
-    "France",
-    "Netherlands",
-    "Italy",
-    "Spain",
-    "Poland",
-    "Sweden",
-    "Norway",
-    "Denmark",
-    "Finland",
-    "Belgium",
-    "Austria",
-    "Switzerland",
-    "Ireland"
-    ]
-    },
-    {
-    "name": "Nordamerika",
-    "count": 4,
-    "description": "Stort marked med distributionscenter i USA og forhandlernetværk i Canada",
-    "countries": [
-    "United States",
-    "Canada",
-    "Mexico",
-    "Costa Rica"
-    ]
-    },
-    {
-    "name": "Asien",
-    "count": 14,
-    "description": "Regionalt hovedkontor i Qingdao med partnere i hele Øst- og Sydøstasien",
-    "countries": [
-    "China",
-    "Japan",
-    "South Korea",
-    "Taiwan",
-    "Thailand",
-    "Vietnam",
-    "Indonesia",
-    "Malaysia",
-    "Philippines",
-    "Singapore",
-    "India",
-    "Sri Lanka",
-    "Bangladesh",
-    "Pakistan"
-    ]
-    },
-    {
-    "name": "Oceanien",
-    "count": 3,
-    "description": "Voksende forhandlernetværk, der betjener Australien og markeder på Stillehavsøerne",
-    "countries": [
-    "Australia",
-    "New Zealand",
-    "Fiji"
-    ]
-    },
-    {
-    "name": "Mellemøsten",
-    "count": 7,
-    "description": "Leverancer til luksusresorts og maritime operatører i hele Golfregionen",
-    "countries": [
-    "UAE",
-    "Saudi Arabia",
-    "Qatar",
-    "Oman",
-    "Bahrain",
-    "Kuwait",
-    "Turkey"
-    ]
-    },
-    {
-    "name": "Afrika",
-    "count": 5,
-    "description": "Emergerende marked, der betjener kystturisme og fiskeri",
-    "countries": [
-    "South Africa",
-    "Egypt",
-    "Morocco",
-    "Kenya",
-    "Mauritius"
-    ]
-    },
-    {
-    "name": "Sydamerika",
-    "count": 4,
-    "description": "Ekspanderende distributionsnetværk i Central- og Sydamerika",
-    "countries": [
-    "Brazil",
-    "Chile",
-    "Argentina",
-    "Panama"
-    ]
-    }
- ],
- "keyMarkets": [
-    {
-    "region": "Nordamerika",
-    "countries": [
-    "US West Coast (CA, OR, WA)",
-    "US East Coast (FL, NY)",
-    "Great Lakes Region",
-    "Canadian Coastal Provinces"
-    ]
-    },
-    {
-    "region": "Europa",
-    "countries": [
-    "Mediterranean Coast",
-    "North Sea/Baltic",
-    "UK & Ireland",
-    "Alpine Lakes Region"
-    ]
-    },
-    {
-    "region": "Asien og Stillehavsregionen",
-    "countries": [
-    "Coastal China",
-    "Southeast Asia Islands",
-    "Japan/Korea Peninsula",
-    "Australia East Coast"
-    ]
-    }
- ]
-},
-  no: {
- "regions": [
-    {
-    "name": "Europa",
-    "count": 15,
-    "description": "Sterk tilstedeværelse i europeiske vannsportsmarkeder med lagre i Tyskland og Nederland",
-    "countries": [
-    "United Kingdom",
-    "Germany",
-    "France",
-    "Netherlands",
-    "Italy",
-    "Spain",
-    "Poland",
-    "Sweden",
-    "Norway",
-    "Denmark",
-    "Finland",
-    "Belgium",
-    "Austria",
-    "Switzerland",
-    "Ireland"
-    ]
-    },
-    {
-    "name": "Nordamerika",
-    "count": 4,
-    "description": "Stort marked med distribusjonssenter i USA og forhandlernettverk i Canada",
-    "countries": [
-    "United States",
-    "Canada",
-    "Mexico",
-    "Costa Rica"
-    ]
-    },
-    {
-    "name": "Asia",
-    "count": 14,
-    "description": "Regionalt hovedkontor i Qingdao med partnere i hele Øst- og Sørøst-Asia",
-    "countries": [
-    "China",
-    "Japan",
-    "South Korea",
-    "Taiwan",
-    "Thailand",
-    "Vietnam",
-    "Indonesia",
-    "Malaysia",
-    "Philippines",
-    "Singapore",
-    "India",
-    "Sri Lanka",
-    "Bangladesh",
-    "Pakistan"
-    ]
-    },
-    {
-    "name": "Oseania",
-    "count": 3,
-    "description": "Voksende forhandlernettverk som betjener Australia og markeder på Stillehavsøyene",
-    "countries": [
-    "Australia",
-    "New Zealand",
-    "Fiji"
-    ]
-    },
-    {
-    "name": "Midtøsten",
-    "count": 7,
-    "description": "Leveranser til luksusresorter og marine operatører i hele Gulf-regionen",
-    "countries": [
-    "UAE",
-    "Saudi Arabia",
-    "Qatar",
-    "Oman",
-    "Bahrain",
-    "Kuwait",
-    "Turkey"
-    ]
-    },
-    {
-    "name": "Afrika",
-    "count": 5,
-    "description": "Emergerende marked som betjener kystturisme og fiskevirksomhet",
-    "countries": [
-    "South Africa",
-    "Egypt",
-    "Morocco",
-    "Kenya",
-    "Mauritius"
-    ]
-    },
-    {
-    "name": "Sør-Amerika",
-    "count": 4,
-    "description": "Ekspanderende distribusjonsnettverk i Mellom- og Sør-Amerika",
-    "countries": [
-    "Brazil",
-    "Chile",
-    "Argentina",
-    "Panama"
-    ]
-    }
- ],
- "keyMarkets": [
-    {
-    "region": "Nordamerika",
-    "countries": [
-    "US West Coast (CA, OR, WA)",
-    "US East Coast (FL, NY)",
-    "Great Lakes Region",
-    "Canadian Coastal Provinces"
-    ]
-    },
-    {
-    "region": "Europa",
-    "countries": [
-    "Mediterranean Coast",
-    "North Sea/Baltic",
-    "UK & Ireland",
-    "Alpine Lakes Region"
-    ]
-    },
-    {
-    "region": "Asia og Stillehavsregionen",
-    "countries": [
-    "Coastal China",
-    "Southeast Asia Islands",
-    "Japan/Korea Peninsula",
-    "Australia East Coast"
-    ]
-    }
- ]
-},
-  el: {
- "regions": [
-    {
-    "name": "Ευρώπη",
-    "count": 15,
-    "description": "Ισχυρή παρουσία στις ευρωπαϊκές αγορές θαλάσσιων σπορ με αποθήκες στη Γερμανία και την Ολλανδία",
-    "countries": [
-    "United Kingdom",
-    "Germany",
-    "France",
-    "Netherlands",
-    "Italy",
-    "Spain",
-    "Poland",
-    "Sweden",
-    "Norway",
-    "Denmark",
-    "Finland",
-    "Belgium",
-    "Austria",
-    "Switzerland",
-    "Ireland"
-    ]
-    },
-    {
-    "name": "Βόρεια Αμερική",
-    "count": 4,
-    "description": "Μεγάλη αγορά με κέντρο διανομής στις ΗΠΑ και δίκτυο αντιπροσώπων στον Καναδά",
-    "countries": [
-    "United States",
-    "Canada",
-    "Mexico",
-    "Costa Rica"
-    ]
-    },
-    {
-    "name": "Ασία",
-    "count": 14,
-    "description": "Περιφερειακή έδρα στο Qingdao με συνεργάτες σε όλη την Ανατολική και Νοτιοανατολική Ασία",
-    "countries": [
-    "China",
-    "Japan",
-    "South Korea",
-    "Taiwan",
-    "Thailand",
-    "Vietnam",
-    "Indonesia",
-    "Malaysia",
-    "Philippines",
-    "Singapore",
-    "India",
-    "Sri Lanka",
-    "Bangladesh",
-    "Pakistan"
-    ]
-    },
-    {
-    "name": "Ωκεανία",
-    "count": 3,
-    "description": "Αναπτυσσόμενο δίκτυο αντιπροσώπων που εξυπηρετεί την Αυστραλία και τις αγορές των νησιών του Ειρηνικού",
-    "countries": [
-    "Australia",
-    "New Zealand",
-    "Fiji"
-    ]
-    },
-    {
-    "name": "Μέση Ανατολή",
-    "count": 7,
-    "description": "Προμήθειες σε πολυτελή θέρετρα και θαλάσσιους παρόχους σε όλη την περιοχή του Κόλπου",
-    "countries": [
-    "UAE",
-    "Saudi Arabia",
-    "Qatar",
-    "Oman",
-    "Bahrain",
-    "Kuwait",
-    "Turkey"
-    ]
-    },
-    {
-    "name": "Αφρική",
-    "count": 5,
-    "description": "Αναδυόμενη αγορά που εξυπηρετεί τον παράκτιο τουρισμό και την αλιεία",
-    "countries": [
-    "South Africa",
-    "Egypt",
-    "Morocco",
-    "Kenya",
-    "Mauritius"
-    ]
-    },
-    {
-    "name": "Νότια Αμερική",
-    "count": 4,
-    "description": "Επεκτεινόμενο δίκτυο διανομής στην Κεντρική και Νότια Αμερική",
-    "countries": [
-    "Brazil",
-    "Chile",
-    "Argentina",
-    "Panama"
-    ]
-    }
- ],
- "keyMarkets": [
-    {
-    "region": "Βόρεια Αμερική",
-    "countries": [
-    "US West Coast (CA, OR, WA)",
-    "US East Coast (FL, NY)",
-    "Great Lakes Region",
-    "Canadian Coastal Provinces"
-    ]
-    },
-    {
-    "region": "Ευρώπη",
-    "countries": [
-    "Mediterranean Coast",
-    "North Sea/Baltic",
-    "UK & Ireland",
-    "Alpine Lakes Region"
-    ]
-    },
-    {
-    "region": "Ασία και Ειρηνικός",
-    "countries": [
-    "Coastal China",
-    "Southeast Asia Islands",
-    "Japan/Korea Peninsula",
-    "Australia East Coast"
-    ]
-    }
- ]
-},
-  ru: {
+            ru: {
  "regions": [
     {
     "name": "Европа",
@@ -1353,7 +683,7 @@ export const marketPresenceByLang: Record<string, any> = {
     {
     "name": "Азия",
     "count": 14,
-    "description": "Региональная штаб-квартира в Циндао с партнёрами по всей Восточной и Юго-Восточной Азии",
+    "description": "Региональная штаб-квартира в Вэйхай с партнёрами по всей Восточной и Юго-Восточной Азии",
     "countries": [
     "China",
     "Japan",
@@ -1476,7 +806,7 @@ export const marketPresenceByLang: Record<string, any> = {
     {
     "name": "Noord-Amerika",
     "count": 4,
-    "description": "Belangrijke markt met distributiecentrum in de VS en dealernetwerk in Canada",
+    "description": "Belangrijke markt met distributiecentrum in de VS en servicenetwerk in Canada",
     "countries": [
     "United States",
     "Canada",
@@ -1487,7 +817,7 @@ export const marketPresenceByLang: Record<string, any> = {
     {
     "name": "Azië",
     "count": 14,
-    "description": "Regionaal hoofdkantoor in Qingdao met partners in heel Oost- en Zuidoost-Azië",
+    "description": "Regionaal hoofdkantoor in Weihai met partners in heel Oost- en Zuidoost-Azië",
     "countries": [
     "China",
     "Japan",
@@ -1508,7 +838,7 @@ export const marketPresenceByLang: Record<string, any> = {
     {
     "name": "Oceanië",
     "count": 3,
-    "description": "Groeiend dealernetwerk voor Australië en de markten op de eilanden in de Stille Oceaan",
+    "description": "Groeiend servicenetwerk voor Australië en de markten op de eilanden in de Stille Oceaan",
     "countries": [
     "Australia",
     "New Zealand",
@@ -1583,141 +913,7 @@ export const marketPresenceByLang: Record<string, any> = {
     }
   ]
 },
-  fi: {
- "regions": [
-    {
-    "name": "Eurooppa",
-    "count": 15,
-    "description": "Vahva läsnäolo Euroopan vesiurheilumarkkinoilla varastojen ollessa Saksassa ja Alankomaissa",
-    "countries": [
-    "United Kingdom",
-    "Germany",
-    "France",
-    "Netherlands",
-    "Italy",
-    "Spain",
-    "Poland",
-    "Sweden",
-    "Norway",
-    "Denmark",
-    "Finland",
-    "Belgium",
-    "Austria",
-    "Switzerland",
-    "Ireland"
-    ]
-    },
-    {
-    "name": "Pohjois-Amerikka",
-    "count": 4,
-    "description": "Suuri markkina-alue, jossa on jakelukeskus Yhdysvalloissa ja jälleenmyyjäverkosto Kanadassa",
-    "countries": [
-    "United States",
-    "Canada",
-    "Mexico",
-    "Costa Rica"
-    ]
-    },
-    {
-    "name": "Aasia",
-    "count": 14,
-    "description": "Alueellinen pääkonttori Qingdaossa kumppaneineen Itä- ja Kaakkois-Aasiassa",
-    "countries": [
-    "China",
-    "Japan",
-    "South Korea",
-    "Taiwan",
-    "Thailand",
-    "Vietnam",
-    "Indonesia",
-    "Malaysia",
-    "Philippines",
-    "Singapore",
-    "India",
-    "Sri Lanka",
-    "Bangladesh",
-    "Pakistan"
-    ]
-    },
-    {
-    "name": "Oseania",
-    "count": 3,
-    "description": "Kasvava jälleenmyyjäverkosto, joka palvelee Australiaa ja Tyynenmeren saarten markkinoita",
-    "countries": [
-    "Australia",
-    "New Zealand",
-    "Fiji"
-    ]
-    },
-    {
-    "name": "Lähi-itä",
-    "count": 7,
-    "description": "Toimitukset luksuslomakeskuksille ja merenkulun toimijoille koko Persianlahden alueella",
-    "countries": [
-    "UAE",
-    "Saudi Arabia",
-    "Qatar",
-    "Oman",
-    "Bahrain",
-    "Kuwait",
-    "Turkey"
-    ]
-    },
-    {
-    "name": "Afrikka",
-    "count": 5,
-    "description": "Nouseva markkina, joka palvelee rannikkoturismia ja kalastusta",
-    "countries": [
-    "South Africa",
-    "Egypt",
-    "Morocco",
-    "Kenya",
-    "Mauritius"
-    ]
-    },
-    {
-    "name": "Etelä-Amerikka",
-    "count": 4,
-    "description": "Laajeneva jakeluverkosto Keski- ja Etelä-Amerikassa",
-    "countries": [
-    "Brazil",
-    "Chile",
-    "Argentina",
-    "Panama"
-    ]
-    }
-  ],
-  "keyMarkets": [
-    {
-    "region": "Pohjois-Amerikka",
-    "countries": [
-    "US West Coast (CA, OR, WA)",
-    "US East Coast (FL, NY)",
-    "Great Lakes Region",
-    "Canadian Coastal Provinces"
-    ]
-    },
-    {
-    "region": "Eurooppa",
-    "countries": [
-    "Mediterranean Coast",
-    "North Sea/Baltic",
-    "UK & Ireland",
-    "Alpine Lakes Region"
-    ]
-    },
-    {
-    "region": "Aasia ja Tyynenmeren alue",
-    "countries": [
-    "Coastal China",
-    "Southeast Asia Islands",
-    "Japan/Korea Peninsula",
-    "Australia East Coast"
-    ]
-    }
-  ]
-},
-  pl: {
+    pl: {
  "regions": [
     {
     "name": "Europa",
@@ -1744,7 +940,7 @@ export const marketPresenceByLang: Record<string, any> = {
     {
     "name": "Ameryka Północna",
     "count": 4,
-    "description": "Główny rynek z centrum dystrybucji w USA i siecią dealerów w Kanadzie",
+    "description": "Główny rynek z centrum dystrybucji w USA i siecią serwisów w Kanadzie",
     "countries": [
     "United States",
     "Canada",
@@ -1755,7 +951,7 @@ export const marketPresenceByLang: Record<string, any> = {
     {
     "name": "Azja",
     "count": 14,
-    "description": "Regionalna siedziba w Qingdao z partnerami w całej Azji Wschodniej i Południowo-Wschodniej",
+    "description": "Regionalna siedziba w Weihai z partnerami w całej Azji Wschodniej i Południowo-Wschodniej",
     "countries": [
     "China",
     "Japan",
@@ -1776,7 +972,7 @@ export const marketPresenceByLang: Record<string, any> = {
     {
     "name": "Oceania",
     "count": 3,
-    "description": "Rosnąca sieć dealerów obsługująca Australię i rynki wysp Pacyfiku",
+    "description": "Rosnąca sieć serwisów obsługująca Australię i rynki wysp Pacyfiku",
     "countries": [
     "Australia",
     "New Zealand",
@@ -1889,7 +1085,7 @@ export const marketPresenceByLang: Record<string, any> = {
     {
     "name": "آسيا",
     "count": 14,
-    "description": "المقر الإقليمي في تشينغداو مع شركاء في جميع أنحاء شرق آسيا وجنوب شرقها",
+    "description": "المقر الإقليمي في ويهاي مع شركاء في جميع أنحاء شرق آسيا وجنوب شرقها",
     "countries": [
     "China",
     "Japan",
@@ -2023,7 +1219,7 @@ export const marketPresenceByLang: Record<string, any> = {
     {
     "name": "Ásia",
     "count": 14,
-    "description": "Sede regional em Qingdao com parceiros em toda a Ásia Oriental e Sudeste Asiático",
+    "description": "Sede regional em Weihai com parceiros em toda a Ásia Oriental e Sudeste Asiático",
     "countries": [
     "China",
     "Japan",
@@ -2119,141 +1315,7 @@ export const marketPresenceByLang: Record<string, any> = {
     }
   ]
 },
-  ja: {
- "regions": [
-    {
-    "name": "ヨーロッパ",
-    "count": 15,
-    "description": "ドイツとオランダに倉庫を構え、ヨーロッパのウォータースポーツ市場で強い存在感",
-    "countries": [
-    "United Kingdom",
-    "Germany",
-    "France",
-    "Netherlands",
-    "Italy",
-    "Spain",
-    "Poland",
-    "Sweden",
-    "Norway",
-    "Denmark",
-    "Finland",
-    "Belgium",
-    "Austria",
-    "Switzerland",
-    "Ireland"
-    ]
-    },
-    {
-    "name": "北アメリカ",
-    "count": 4,
-    "description": "米国に流通センターを構え、カナダにディーラーネットワークを持つ主要市場",
-    "countries": [
-    "United States",
-    "Canada",
-    "Mexico",
-    "Costa Rica"
-    ]
-    },
-    {
-    "name": "アジア",
-    "count": 14,
-    "description": "青島に地域本部を置き、東アジア・東南アジア全域にパートナー",
-    "countries": [
-    "China",
-    "Japan",
-    "South Korea",
-    "Taiwan",
-    "Thailand",
-    "Vietnam",
-    "Indonesia",
-    "Malaysia",
-    "Philippines",
-    "Singapore",
-    "India",
-    "Sri Lanka",
-    "Bangladesh",
-    "Pakistan"
-    ]
-    },
-    {
-    "name": "オセアニア",
-    "count": 3,
-    "description": "オーストラリアと太平洋の島々の市場に対応する成長中のディーラーネットワーク",
-    "countries": [
-    "Australia",
-    "New Zealand",
-    "Fiji"
-    ]
-    },
-    {
-    "name": "中東",
-    "count": 7,
-    "description": "湾岸地域全体の高級リゾートや海洋事業者への供給",
-    "countries": [
-    "UAE",
-    "Saudi Arabia",
-    "Qatar",
-    "Oman",
-    "Bahrain",
-    "Kuwait",
-    "Turkey"
-    ]
-    },
-    {
-    "name": "アフリカ",
-    "count": 5,
-    "description": "沿岸観光と漁業に対応する新興市場",
-    "countries": [
-    "South Africa",
-    "Egypt",
-    "Morocco",
-    "Kenya",
-    "Mauritius"
-    ]
-    },
-    {
-    "name": "南アメリカ",
-    "count": 4,
-    "description": "中南米で拡大する流通ネットワーク",
-    "countries": [
-    "Brazil",
-    "Chile",
-    "Argentina",
-    "Panama"
-    ]
-    }
-  ],
-  "keyMarkets": [
-    {
-    "region": "北アメリカ",
-    "countries": [
-    "US West Coast (CA, OR, WA)",
-    "US East Coast (FL, NY)",
-    "Great Lakes Region",
-    "Canadian Coastal Provinces"
-    ]
-    },
-    {
-    "region": "ヨーロッパ",
-    "countries": [
-    "Mediterranean Coast",
-    "North Sea/Baltic",
-    "UK & Ireland",
-    "Alpine Lakes Region"
-    ]
-    },
-    {
-    "region": "アジア太平洋",
-    "countries": [
-    "Coastal China",
-    "Southeast Asia Islands",
-    "Japan/Korea Peninsula",
-    "Australia East Coast"
-    ]
-    }
-  ]
-},
-};
+  };
 
 export const worldMapUi: Record<string, { title: string; countriesServed: string; subtitle: string; keyMarketsTitle: string }> = {
   de: {
@@ -2280,37 +1342,7 @@ export const worldMapUi: Record<string, { title: string; countriesServed: string
  "subtitle": "Dai resort alle Maldive ai club SUP in California, le attrezzature Paddle Board Overstock alimentano avventure acquatiche in più di {total} paesi su {n} continenti.",
  "keyMarketsTitle": "Mercati Chiave per Regione"
 },
-  cs: {
- "title": "Globální mapa zákazníků",
- "countriesServed": "Obsluhované země",
- "subtitle": "Od resortů na Maledivách po kluby SUP v Kalifornii — vybavení Paddle Board Overstock pohání vodní dobrodružství ve více než {total} zemích na {n} kontinentech.",
- "keyMarketsTitle": "Klíčové trhy podle regionu"
-},
-  sv: {
- "title": "Global kundkarta",
- "countriesServed": "Länder vi betjänar",
- "subtitle": "Från resorter på Maldiverna till SUP-klubbar i Kalifornien — Paddle Board Overstock-utrustning driver vattenäventyr i {total}+ länder på {n} kontinenter.",
- "keyMarketsTitle": "Nyckelmarknader per region"
-},
-  da: {
- "title": "Globalt kundekort",
- "countriesServed": "Betjente lande",
- "subtitle": "Fra resorts på Maldiverne til SUP-klubber i Californien — Paddle Board Overstock-udstyr driver vandeventyr i {total}+ lande på {n} kontinenter.",
- "keyMarketsTitle": "Nøglemarkeder pr. region"
-},
-  no: {
- "title": "Globalt kundekart",
- "countriesServed": "Land vi betjener",
- "subtitle": "Fra resorter på Maldivene til SUP-klubber i California — Paddle Board Overstock-utstyr driver vanneventyr i {total}+ land på {n} kontinenter.",
- "keyMarketsTitle": "Nøkkelmarkeder per region"
-},
-  el: {
- "title": "Παγκόσμιος χάρτης πελατών",
- "countriesServed": "Χώρες που εξυπηρετούμε",
- "subtitle": "Από θέρετρα στις Μαλδίβες έως σύλλογους SUP στην Καλιφόρνια — ο εξοπλισμός Paddle Board Overstock τροφοδοτεί θαλάσσιες περιπέτειες σε {total}+ χώρες σε {n} ηπείρους.",
- "keyMarketsTitle": "Βασικές αγορές ανά περιοχή"
-},
-  ru: {
+            ru: {
  "title": "Карта клиентов по всему миру",
  "countriesServed": "Обслуживаемые страны",
  "subtitle": "От курортов на Мальдивах до клубов сапсёрфинга в Калифорнии — оборудование Paddle Board Overstock открывает приключения на воде в {total}+ странах на {n} континентах.",
@@ -2322,13 +1354,7 @@ export const worldMapUi: Record<string, { title: string; countriesServed: string
  "subtitle": "Van resorts op de Malediven tot SUP-clubs in Californië — Paddle Board Overstock-uitrusting drijft wateravonturen in {total}+ landen op {n} continenten.",
  "keyMarketsTitle": "Belangrijkste markten per regio"
 },
-  fi: {
- "title": "Maailmanlaajuinen asiakaskartta",
- "countriesServed": "Palvelemamme maat",
- "subtitle": "Malediivien lomakeskuksista Kalifornian SUP-klubeihin — Paddle Board Overstockin varusteet mahdollistavat vesiseikkailut yli {total} maassa {n} mantereella.",
- "keyMarketsTitle": "Avainmarkkinat alueittain"
-},
-  pl: {
+    pl: {
  "title": "Światowa mapa klientów",
  "countriesServed": "Obsługiwane kraje",
  "subtitle": "Od kurortów na Malediwach po kluby SUP w Kalifornii — sprzęt Paddle Board Overstock napędza przygody na wodzie w ponad {total} krajach na {n} kontynentach.",
@@ -2346,10 +1372,4 @@ export const worldMapUi: Record<string, { title: string; countriesServed: string
  "subtitle": "Dos resorts nas Maldivas aos clubes de SUP na Califórnia — o equipamento Paddle Board Overstock impulsiona aventuras aquáticas em mais de {total} países em {n} continentes.",
  "keyMarketsTitle": "Mercados-Chave por Região"
 },
-  ja: {
- "title": "グローバル顧客マップ",
- "countriesServed": "対応国",
- "subtitle": "モルディブのリゾートからカリフォルニアの SUP クラブまで — Paddle Board Overstock の器材が {total} カ国以上、{n} 大陸のウォーターアドベンチャーを支えています。",
- "keyMarketsTitle": "地域別主要市場"
-},
-};
+  };

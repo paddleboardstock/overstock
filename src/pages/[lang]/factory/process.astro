@@ -39,23 +39,23 @@ const crumbs = [
 ];
 
 const metadata = {
-  title: localizePageTitle(page, 'Manufacturing Process \u2014 From Raw Material to Finished Boat | ' + SITE.name),
+  title: localizePageTitle(page, 'Manufacturing Process \u2014 From Raw Material to Finished Board | ' + SITE.name),
   description: localizePageDescription(
     page,
     SITE.name +
-      ' manufacturing process: material inspection, PVC automatic cutting, fiberglass lay-up, heat sealing, SUP digital printing, assembly, quality testing, and shipping.'
+      ' manufacturing process: material inspection, drop-stitch core lamination, PVC automatic cutting, heat welding, deck art and EVA finishing, assembly, quality testing, and shipping.'
   ),
 };
 
 const tldrSummary =
-  'Paddle Board Overstock follows a rigorous multi-stage manufacturing process from raw material inspection through cutting, welding, printing, assembly, 1.25x rated pressure testing, and final QC. ISO 9001:2015 certified. 99.3% defect-free rate per AQL 2.5 / ISO 2859.';
+  'Paddle Board Overstock follows a rigorous multi-stage manufacturing process from raw material inspection through cutting, welding, deck art and EVA finishing, assembly, 1.25x rated pressure testing, and final QC. 100% of boards pressure-tested, 99.3% defect-free.';
 
 const tldrPoints: string[] = [
   'Raw material inspection: tensile, tear, UV testing',
   'Automatic CNC cutting and high-frequency RF welding',
-  'Digital UV printing and custom branding',
+  'Hand-assembled EVA deck art with zero-fade blocks',
   '1.25x rated pressure hold for 24-48h on every unit',
-  '100-point final inspection with AQL 2.5 sampling',
+  '100-point final inspection on every board',
 ];
 
 const faqSchema = JSON.stringify({
@@ -67,7 +67,7 @@ const faqSchema = JSON.stringify({
       name: 'What is the Paddle Board Overstock manufacturing process?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Multi-stage process: material inspection, CNC cutting, RF welding, printing/branding, assembly, 1.25x pressure testing, and 100-point final inspection per AQL 2.5 / ISO 2859.',
+        text: 'Multi-stage process: material inspection, CNC cutting, welding and lamination, deck art and EVA finishing, final assembly, 1.25x pressure testing, and 100-point final inspection.',
       },
     },
     {
@@ -75,7 +75,7 @@ const faqSchema = JSON.stringify({
       name: 'How long does production take?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Standard orders: 30-45 days. Rush orders: 15-20 days with priority surcharge. Sample production: 7-14 days after design approval.',
+        text: 'A complete board moves through all 8 production stages in about 2-3 weeks. In-stock orders leave our Weihai factory within 2-3 business days.',
       },
     },
     {
@@ -91,15 +91,15 @@ const faqSchema = JSON.stringify({
       name: 'What is the defect-free rate?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '99.3% defect-free rate measured per AQL 2.5 / ISO 2859 statistical sampling methodology.',
+        text: '99.3% of boards pass all quality checks on the first pass — measured across a trailing 12-month window.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Can I visit the factory during production?',
+      name: 'Can I see how my board is made?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. We welcome on-site and third-party factory audits. Virtual video tours also available. See our Factory Audit page for preparation checklist.',
+        text: 'Yes — our Factory Video Tour walks you through all 8 production stages, from raw material inspection to packing and shipping.',
       },
     },
   ],
@@ -109,7 +109,7 @@ const howtoSchema = JSON.stringify({
   '@context': 'https://schema.org',
   '@type': 'HowTo',
   name: 'Paddle Board Overstock Manufacturing Process',
-  description: 'Multi-stage manufacturing process from raw material to finished boat.',
+  description: 'Multi-stage manufacturing process from raw material to finished paddle board.',
   step: steps.map((s: ProcessStep, i: number) => ({
     '@type': 'HowToStep',
     position: i + 1,

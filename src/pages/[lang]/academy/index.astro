@@ -16,26 +16,6 @@ const PAGE_DESC: Record<string, { description: string }> = {
     description:
       'Guide e tutorial per ogni livello di abilità: dalle basi del SUP alle tecniche di soccorso avanzate. Impara al tuo ritmo con Paddle Board Overstock Academy.',
   },
-  cs: {
-    description:
-      'Příručky a výukové programy pro každou úroveň dovedností – od základů SUP po pokročilé záchranné techniky. Učte se svým vlastním tempem s Paddle Board Overstock Academy.',
-  },
-  sv: {
-    description:
-      'Guider och handledningar för alla färdighetsnivåer — från SUP grunderna till avancerade räddningstekniker. Lär dig i din egen takt med Paddle Board Overstock Academy.',
-  },
-  da: {
-    description:
-      'Guider og tutorials for alle færdighedsniveauer - fra SUP grundlæggende til avancerede redningsteknikker. Lær i dit eget tempo med Paddle Board Overstock Academy.',
-  },
-  el: {
-    description:
-      'Οδηγοί και σεμινάρια για κάθε επίπεδο δεξιοτήτων — από SUP βασικά έως προηγμένες τεχνικές διάσωσης. Μάθετε με τον δικό σας ρυθμό με το Paddle Board Overstock Academy.',
-  },
-  no: {
-    description:
-      'Veiledninger og opplæringsprogrammer for alle ferdighetsnivåer – fra SUP grunnleggende til avanserte redningsteknikker. Lær i ditt eget tempo med Paddle Board Overstock Academy.',
-  },
   ru: {
     description:
       'Руководства и учебные пособия для любого уровня навыков — от основ SUP до продвинутых методов спасения. Учитесь в удобном для вас темпе с Paddle Board Overstock Academy.',
@@ -43,10 +23,6 @@ const PAGE_DESC: Record<string, { description: string }> = {
   nl: {
     description:
       'Gidsen en tutorials voor elk vaardigheidsniveau — van SUP basis tot geavanceerde reddingstechnieken. Leer in je eigen tempo met de Paddle Board Overstock Academy.',
-  },
-  fi: {
-    description:
-      'Oppaita ja opetusohjelmia jokaiselle taitotasolle – SUP-perusasioista edistyneisiin pelastustekniikoihin. Opi omaan tahtiisi Paddle Board Overstock Academyn avulla.',
   },
   pl: {
     description:
@@ -60,10 +36,6 @@ const PAGE_DESC: Record<string, { description: string }> = {
     description:
       'Guias e tutoriais para todos os níveis de habilidade — desde o básico do SUP até técnicas avançadas de resgate. Aprenda no seu próprio ritmo com a Paddle Board Overstock Academy.',
   },
-  ja: {
-    description:
-      'SUP の基本から高度な救助技術まで、あらゆるスキル レベルに対応したガイドとチュートリアル。 Paddle Board Overstock アカデミーで自分のペースで学びましょう。',
-  },
 };
 const PAGE_META: Record<string, { title: string }> = {
   de: { title: 'Akademie' },
@@ -75,13 +47,6 @@ const PAGE_META: Record<string, { title: string }> = {
   ru: { title: 'Академия' },
   pl: { title: 'Akademia' },
   nl: { title: 'Academie' },
-  sv: { title: 'Akademin' },
-  no: { title: 'Akademiet' },
-  el: { title: 'Ακαδημία' },
-  fi: { title: 'Akatemia' },
-  da: { title: 'Akademiet' },
-  cs: { title: 'akademie' },
-  ja: { title: 'アカデミー' },
 };
 export const prerender = true;
 
@@ -108,10 +73,9 @@ const categories = (page.categories || []).map((cat: any) => ({
 const cta = page.cta || {};
 const knowledgeSections = page.knowledge_sections || [];
 const kcTagline = page.knowledge_center_tagline || 'Knowledge Center';
-const kcTitle = page.knowledge_center_title || 'Marine Equipment & Industry Guides';
+const kcTitle = page.knowledge_center_title || 'Paddle Board Guides & Knowledge';
 const kcSubtitle =
-  page.knowledge_center_subtitle ||
-  'Expert knowledge and buying guides for marine professionals, fleet operators, and water sports enthusiasts.';
+  page.knowledge_center_subtitle || 'Expert guides and buying advice for paddle boarders of every level.';
 
 const metadata = {
   title: t('academy.metaTitle') || PAGE_META[lang]?.title || 'Learning Center — Paddle Board Overstock Academy',

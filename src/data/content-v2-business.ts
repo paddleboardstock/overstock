@@ -82,7 +82,7 @@ export const businessArticles: ContentV2Record[] = [
       },
     ],
     relatedGuides: ['resort-water-sports-revenue', 'inflatable-boat-fleet-management'],
-    relatedProducts: ['sup-explorer-11', 'life-vest-pro'],
+    relatedProducts: ['sup-explorer-11'],
     difficulty: 'intermediate',
   },
   {
@@ -149,39 +149,7 @@ export const businessArticles: ContentV2Record[] = [
         a: 'Puncture risk is low with commercial-grade inflatables. Most damage comes from dragging on rough surfaces, not from normal use. Train staff to inspect boards daily and repair small punctures with the included patch kit.',
       },
     ],
-    relatedGuides: ['cost-to-start-sup-rental-business', 'best-kayak-material-commercial'],
-    relatedProducts: ['sup-explorer-11', 'life-vest-pro'],
-    difficulty: 'beginner',
-  },
-  {
-    slug: 'best-kayak-material-commercial',
-    category: 'guide',
-    type: 'business-guide',
-    title: 'Best Kayak Material For Commercial Use: Inflatable vs Hard Shell',
-    description:
-      'Compare inflatable PVC kayaks, rotomolded polyethylene, and fiberglass kayaks for rental fleets, tour operations, and resort programs. Durability, cost, and guest experience analysis.',
-    definition:
-      'Commercial kayaks are used in rental fleets, guided tours, and resort programs — they must withstand frequent use, varying user skill levels, and exposure to sun, sand, and saltwater.',
-    tldr: 'For commercial kayak operations, inflatable PVC kayaks (military-grade 1.2mm PVC) offer the best balance of durability, cost, storage, and guest experience. They cost 40-60% less than rotomolded kayaks, store in 1/3 the space, and are more forgiving for beginner paddlers. Rotomolded polyethylene kayaks are a better choice for touring operations where speed and performance are prioritized.',
-    problem:
-      'You need to buy kayaks for your rental fleet or tour operation, but the variety of materials and price points makes it hard to choose. You worry about durability with inflatables but the storage requirements for hard shells are challenging.',
-    explanation:
-      'Kayak materials for commercial use fall into three categories: inflatable PVC (lowest cost, best storage, good durability), rotomolded polyethylene (medium cost, bulky storage, excellent durability), and fiberglass/composite (high cost, best performance, fragile). For rental fleets where guests vary in skill, inflatable PVC is the most practical choice — it withstands bumps and scrapes, packs into a car trunk, and costs a fraction of hard shells.',
-    solution:
-      'For beach club and resort rental fleets, choose inflatable PVC kayaks from Paddle Board Overstock with commercial-grade fabric and reinforced seams. For guided touring operations where performance matters, invest in rotomolded polyethylene hulls. A mixed fleet with 70% inflatable and 30% hard shell covers all use cases.',
-    recommendation:
-      'The Paddle Board Overstock inflatable kayak series is purpose-built for commercial rental use. Pair with the Club Starter Package for a complete rental-ready fleet.',
-    faq: [
-      {
-        q: 'How long do inflatable kayaks last in commercial use?',
-        a: '2-4 seasons with proper care. Commercial-grade inflatables are more durable than consumer versions. Rinse after saltwater use, store out of direct sun, and repair minor damage promptly.',
-      },
-      {
-        q: 'Are inflatable kayaks stable enough for beginners?',
-        a: 'Yes. Inflatable kayaks are typically wider and more stable than hard shells, making them ideal for first-time paddlers. The extra width provides confidence and reduces the chance of capsizing.',
-      },
-    ],
-    relatedGuides: ['cost-to-start-sup-rental-business', 'inflatable-sup-vs-hard-sup-rental'],
+    relatedGuides: ['cost-to-start-sup-rental-business'],
     relatedProducts: ['sup-explorer-11'],
     difficulty: 'beginner',
   },
@@ -210,11 +178,11 @@ export const businessArticles: ContentV2Record[] = [
       },
       {
         q: 'Do I need to handle import customs and logistics?',
-        a: 'Paddle Board Overstock offers FOB Qingdao (you arrange shipping) or CIF delivery (shipping included to your port). We can also recommend freight forwarders who handle customs clearance and last-mile delivery.',
+        a: 'Paddle Board Overstock offers FOB Weihai (you arrange shipping) or CIF delivery (shipping included to your port). We can also recommend freight forwarders who handle customs clearance and last-mile delivery.',
       },
       {
         q: 'How do I ensure product quality?',
-        a: 'Paddle Board Overstock products are manufactured under ISO 9001 quality management, with 64 CE-certified models across the catalog. You receive production samples for approval before bulk production. Third-party inspection is available.',
+        a: 'Paddle Board Overstock products are manufactured under ISO 9001 quality management, with 13 CE-certified models across the catalog. You receive production samples for approval before bulk production. Third-party inspection is available.',
       },
       {
         q: 'Can I sell on Amazon with private label products?',
@@ -222,7 +190,7 @@ export const businessArticles: ContentV2Record[] = [
       },
     ],
     relatedGuides: ['private-label-vs-white-label', 'cost-to-start-sup-rental-business'],
-    relatedProducts: ['sup-explorer-11', 'life-vest-classic'],
+    relatedProducts: ['sup-explorer-11'],
     difficulty: 'intermediate',
   },
   {
@@ -258,7 +226,7 @@ export const businessArticles: ContentV2Record[] = [
       },
     ],
     relatedGuides: ['cost-to-start-sup-rental-business', 'how-many-paddle-boards-beach-club-needs'],
-    relatedProducts: ['sup-explorer-11', 'life-vest-pro', 'life-vest-classic'],
+    relatedProducts: ['sup-explorer-11'],
     difficulty: 'beginner',
   },
   {
@@ -294,7 +262,7 @@ export const businessArticles: ContentV2Record[] = [
       },
     ],
     relatedGuides: ['building-resort-water-sports-center', 'inflatable-boat-fleet-management'],
-    relatedProducts: ['sup-explorer-11', 'life-vest-pro'],
+    relatedProducts: ['sup-explorer-11'],
     difficulty: 'intermediate',
   },
   {
@@ -330,7 +298,7 @@ export const businessArticles: ContentV2Record[] = [
       },
     ],
     relatedGuides: ['building-resort-water-sports-center', 'resort-water-sports-revenue'],
-    relatedProducts: ['sup-explorer-11', 'life-vest-pro'],
+    relatedProducts: ['sup-explorer-11'],
     difficulty: 'intermediate',
   },
   {
@@ -362,7 +330,7 @@ export const businessArticles: ContentV2Record[] = [
       },
     ],
     relatedGuides: ['start-water-sports-brand-private-label', 'cost-to-start-sup-rental-business'],
-    relatedProducts: ['sup-explorer-11', 'life-vest-classic'],
+    relatedProducts: ['sup-explorer-11'],
     difficulty: 'beginner',
   },
   {
@@ -398,7 +366,7 @@ export const businessArticles: ContentV2Record[] = [
       },
     ],
     relatedGuides: ['inflatable-boat-fleet-management', 'building-resort-water-sports-center'],
-    relatedProducts: ['sup-explorer-11', 'life-vest-pro'],
+    relatedProducts: ['sup-explorer-11'],
     difficulty: 'beginner',
   },
 ];

@@ -179,8 +179,6 @@ const categoryLabel = (cat: string) => t('v2.category.' + cat) || cat;
               sols.push({ label: 'Rental Business Solutions', href: '/solutions/rental-business' });
             if (/resort|hotel/.test(slug)) sols.push({ label: 'Resort & Hotel Solutions', href: '/solutions/resorts' });
             if (/club/.test(slug)) sols.push({ label: 'Water Sports Club Solutions', href: '/solutions/clubs' });
-            if (/brand|private-label|start|launch/.test(slug))
-              sols.push({ label: 'Entrepreneur Brand Launch', href: '/solutions/entrepreneurs' });
             if (sols.length === 0) return null;
             return (
               <section

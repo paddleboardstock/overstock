@@ -54,111 +54,62 @@ const currentLocale = getLangFromUrl(Astro.url);
 
 const navTextMap: Record<string, string> = {
   Products: 'nav.products',
-  'Technology & Innovation': 'nav.technologyInnovation',
-  'Technology Overview': 'nav.technologyOverview',
-  'Engineering Excellence': 'nav.engineeringExcellence',
+
   'Materials Science': 'nav.materialsScience',
   Solutions: 'nav.solutions',
-  'By Industry': 'nav.byIndustry',
+
   'By Use Case': 'nav.byUseCase',
-  'OEM/ODM Manufacturing': 'nav.oemOdm',
-  'Custom Lab': 'nav.custom',
-  Lifestyle: 'nav.lifestyle',
-  Gallery: 'nav.gallery',
-  'Solutions by Industry': 'nav.solutionsIndustry',
-  'Solutions by Use Case': 'nav.solutionsUseCase',
+
   Learn: 'nav.learn',
   Company: 'nav.company',
   Support: 'nav.support',
   'All Products': 'nav.allProducts',
-  'RIB Boats': 'nav.ribBoats',
-  'Inflatable Boats': 'nav.inflatableBoats',
   Accessories: 'nav.accessories',
   Compare: 'nav.compare',
-  'SUP vs Kayak': 'nav.supVsKayak',
-  'Inflatable vs Hardboard': 'nav.inflatableVsHardboard',
+
   Guides: 'nav.guides',
-  'SUP Basics': 'nav.supBasics',
-  'Inflatable Technology': 'nav.inflatableTech',
-  'Water Sports Safety': 'nav.safetyWaterSports',
-  Journal: 'nav.journal',
-  Technology: 'nav.technology',
+
   Safety: 'nav.safety',
-  'Size Guide': 'nav.sizeGuide',
+
   News: 'nav.news',
   About: 'nav.about',
-  Brand: 'nav.brand',
-  Community: 'nav.community',
-  'SUP Knowledge': 'nav.supKnowledge',
-  'Boat Knowledge': 'nav.boatKnowledge',
-  'R&D Center': 'nav.randd',
+
   Contact: 'nav.contact',
   Login: 'nav.login',
-  'Sign In': 'nav.signIn',
+
   'Get a quote': 'cta.quote',
   Terms: 'nav.terms',
   'Privacy Policy': 'nav.privacy',
   'Medical Disclaimer': 'nav.disclaimer',
   FAQ: 'nav.faq',
-  Bundles: 'nav.bundles',
-  'Product Catalog': 'nav.catalog',
+
   'Quality & Testing': 'nav.quality',
-  'Factory Tour': 'nav.factoryTour',
-  'Buyers Guide': 'nav.buyersGuide',
-  'Search & Rescue': 'nav.searchRescue',
-  'Engineering Perfection': 'nav.engineeringPerfection',
-  'Disaster Relief': 'nav.disasterRelief',
-  'Commercial Workboats': 'nav.commercialWorkboats',
+
   'SUP Boards': 'nav.supBoards',
   'Knowledge Graph': 'nav.knowledgeGraph',
-  'Learn Hub': 'nav.learnHub',
+
   'Water Safety': 'nav.waterSafety',
   Academy: 'nav.academy',
-  'Knowledge Base': 'nav.knowledge',
-  Trust: 'nav.trust',
-  Factory: 'nav.factory',
-  'Production Capacity': 'nav.factoryCapacity',
-  'Quality Lab': 'nav.factoryQualityLab',
-  'OEM/ODM Capability': 'nav.factoryOemCapability',
-  Quality: 'nav.qualityFooter',
+
   Warranty: 'nav.warranty',
   'Media Center': 'nav.media',
-  'Design & Innovation': 'nav.designPowerhouse',
+
   'Paddle Board Overstock Story': 'nav.paddleboardoverstockStory',
-  'Buyer Center': 'nav.buyerCenter',
-  'Marine Expertise': 'nav.brandMarineExpertise',
-  'Global Presence': 'nav.brandGlobalPresence',
+
   'Why Paddle Board Overstock': 'nav.brandWhyPaddle Board Overstock',
   'Our Team': 'nav.brandTeam',
-  Certifications: 'nav.certifications',
-  Partners: 'nav.partners',
+
   'Case Studies': 'nav.cases',
   Resources: 'nav.resources',
-  'Request a Quotation': 'nav.requestQuotation',
-  'Diving Centers': 'nav.solutionsDivingCenter',
-  Fishing: 'nav.solutionsFishing',
-  'Marine Tourism': 'nav.solutionsMarineTourism',
-  'Rescue Watercraft': 'nav.solutionsRescue',
-  'Yacht Tenders': 'nav.solutionsYachtTender',
-  'Solutions Matrix': 'nav.solutionsMatrix',
-  'Engineering Whitepaper': 'nav.engineeringWhitepaper',
-  'OEM/ODM Blueprint': 'nav.oemOdmBlueprint',
-  'CE Compliance': 'nav.ceCompliance',
-  'RIB OEM/ODM': 'nav.ribOemOdm',
-  'Technical Drawings': 'nav.technicalDrawings',
-  'Factory Audit': 'nav.factoryAudit',
-  'Dealers & Distributors': 'nav.dealersDistributors',
-  'Dealership Program': 'nav.dealersDistributors',
-  'Business Packages': 'nav.solutionsBusinessPackages',
+
   'For Clubs': 'nav.solutionsForClubs',
-  'For Distributors': 'nav.solutionsForDistributors',
-  'For Entrepreneurs': 'nav.solutionsForEntrepreneurs',
+
   'For Resorts': 'nav.solutionsForResorts',
-  'For Schools': 'nav.solutionsForSchools',
+
   'Rental Business': 'nav.solutionsRentalBusiness',
   'Success Stories': 'nav.solutionsSuccessStories',
   Testimonials: 'nav.solutionsTestimonials',
-  'Engineering & Development': 'nav.engineeringDevelopment',
+
   Manufacturing: 'nav.manufacturing',
   'Quality Control System': 'nav.qualityControlSystem',
 };
@@ -254,10 +205,6 @@ const copyrightHtml = String(rawCopyright)
         <Fragment set:html={copyrightHtml} />
         <div class="mt-1 text-xs text-white/50">
           Designed &amp; Managed by Weihai Dongjilian Co., Ltd. · Made in China
-        </div>
-        <div class="mt-1 text-xs text-white/50">
-          Weihai Dongjilian Co., Ltd. focuses exclusively on global distribution and commercial B2B sales outside of
-          mainland China and the US domestic market.
         </div>
       </div>
     </div>

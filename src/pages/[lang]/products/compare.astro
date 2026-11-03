@@ -73,8 +73,7 @@ const COLS_LANG = COLS[lang || defaultLang] || COLS.en;
 const metadata = {
   title: t('compare.productCompare') || `Product Comparison — ${SITE.name}`,
   description:
-    t('compare.productCompare.desc') ||
-    'Compare Paddle Board Overstock inflatable SUPs, kayaks, dinghies, RIBs, and accessories side by side.',
+    t('compare.productCompare.desc') || 'Compare Paddle Board Overstock inflatable SUPs and accessories side by side.',
 };
 
 const rawProducts = await getProducts();
@@ -147,7 +146,7 @@ const comparisonRows = [
     <p class="mt-4 text-lg text-gray-500">
       {
         t('compare.productCompare.desc') ||
-          'Compare all Paddle Board Overstock products side by side. Find the right board, boat, or accessory for your needs.'
+          'Compare all Paddle Board Overstock products side by side. Find the right board or accessory for your needs.'
       }
     </p>
 
@@ -211,9 +210,7 @@ const comparisonRows = [
     <section class="sr-only" data-ai-block="definition" aria-hidden="true">
       <p>
         Paddle Board Overstock product comparison table covering {products.length} products across {
-          ['rib', 'inflatable', 'accessory', 'service', 'sup', 'kayak'].filter((c) =>
-            products.some((p) => p.category === c)
-          ).length
+          ['sup', 'accessory'].filter((c) => products.some((p) => p.category === c)).length
         } categories. Compare length, width, weight, max load, and material.
       </p>
     </section>

@@ -1,51 +1,52 @@
 hero:
-  tagline: Kaynaklar
-  title: Medya Merkezi
-  subtitle: Marka varlıklarını, ürün görsellerini, katalogları ve videoları indirin
+  tagline: Resources
+  title: Media Center
+  subtitle: Download brand assets, product imagery, catalogs, and videos
+
 sections:
   - id: product-images
-    title: Ürün Görselleri
-    desc: Web, baskı ve perakende kullanımı için yüksek çözünürlüklü ürün fotoğrafları.
+    title: Product Images
+    desc: High-resolution product photos for web, print, and retail use.
     items:
-      - SUP Board Galerisi
-      - RIB Bot Galerisi
-      - Şişme Kano Galerisi
-      - Aksesuarlar ve Güvenlik Ekipmanları
+      - SUP Boards Gallery
+      - Accessories & Safety Gear
   - id: logo-brand-kit
-    title: Logo ve Marka Kiti
-    desc: Resmî Paddle Board Overstock logo dosyaları, renk paleti, tipografi ve marka yönergeleri.
+    title: Logo & Brand Kit
+    desc: Official Paddle Board Overstock logo files, colour palette, typography, and brand guidelines.
     items:
-      - Ana Logo (PNG/SVG/EPS)
-      - Simge İşareti
-      - Renk Paleti
-      - Tipografi Özellikleri
-      - Marka Yönergeleri PDF
+      - Primary Logo (PNG/SVG/EPS)
+      - Icon Mark
+      - Colour Palette
+      - Typography Specs
+      - Brand Guidelines PDF
   - id: catalogs
-    title: PDF Kataloglar
-    desc: Ürün katalogları, teknik belgeler ve teknik veri sayfaları indirebilirsiniz.
+    title: PDF Catalogs
+    desc: Product catalogs, spec sheets, and technical documentation for download.
     items:
-      - name: SUP Board Kataloğu 2027
-        url: /catalogs/paddleboardoverstock-sup-catalog.pdf
+        - name: SUP Board Catalog 2027
+          url: /catalogs/paddleboardoverstock-sup-catalog.pdf
   - id: videos
-    title: Videolar
-    desc: Ürün tanıtımları, fabrika turları, marka filmleri ve müşteri referansları.
+    title: Videos
+    desc: Product demos, factory tours, brand films, and customer testimonials.
     items:
-      - Ürün Tanıtımları
-      - Fabrika Turu
-      - Marka Filmi
-      - Müşteri Hikayeleri
-      - Nasıl Yapılır Rehberleri
-request_access: Erişim talep et →
+      - Product Demos
+      - Factory Tour
+      - Brand Film
+      - Customer Stories
+      - How-To Guides
+
+request_access: Request access →
+
 cta:
-  title: Varlıkları bulmakta yardıma mı ihtiyacınız var?
-  desc: Özel varlık talepleri, medya ortaklıkları veya basın soruları için marka ekibimizle iletişime geçin.
+  title: Need help finding assets?
+  desc: Contact our brand team for custom asset requests, media partnerships, or press inquiries.
   links:
-    - label: Fabrikamızı ziyaret edin
+    - label: Visit our factory
       href: /factory
-      desc: 12.000 m² üretim tesisimizi görün
-    - label: Marka kılavuzları
+      desc: See our 12,000 sqm manufacturing facility
+    - label: Brand guidelines
       href: /brand
-      desc: Paddle Board Overstock markası hakkında bilgi edinin
-    - label: Bizimle ortak olun
+      desc: Learn about the Paddle Board Overstock brand
+    - label: Get in touch
       href: /contact
-      desc: OEM, ODM ve dağıtım talepleri
+      desc: Questions about orders, boards, or shipping

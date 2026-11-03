@@ -1,186 +1,98 @@
-badge: Proof & Results
+badge: Proof & Quality
 heading: Доказателства
-description: Реални казуси, сертификати, тестови данни и снимки на внедряване, които демонстрират нашите производствени възможности и качество на продуктите.
+description: Real quality stories, test data, and factory photos that show how every clearance board ships at retail-grade quality.
 case_studies:
-  - id: retail-private-label
-    client: Европейски търговец на открито
-    product: Линия със собствена марка SUP
-    industry: Търговия на дребно
-    challenge: Европейският търговец на открито се нуждаеше от линия със собствена марка SUP с уникални графики на палубата, екологично чисти PVC и готова за търговия на дребно опаковка — всичко доставено за 60 дни.
-    solution: Разработихме персонализирани цифрови печатни файлове, осигурихме REACH-съвместими PVC материали и намалихме броя на пробите от 3 на 1 чрез съвместно позициониране на дизайнерския екип в нашата фабрика в Циндао.
-    result: 55 дни от подписване на поръчка до FOB. 2 400 единици разпределени в 4 SKU. Повторна поръчка направена преди пристигането на първия контейнер.
+  - id: clearance-quality-check
+    client: Разпродажба на стоки, Контрол на качеството за търговския обект
+    product: Всеки свръхналичен борд, повторно инспектиран
+    industry: Контрол на качеството
+    challenge: Бордове за излишъци и разпродажби идват от излишък на производствени серии, затова купувачите справедливо се питат дали борд с намалена цена преминава същите проверки като такъв на пълна цена.
+    solution: Every clearance board re-enters the QC line. Each chamber is pressure-tested with a 24-48h hold at 1.25x rated pressure, every outgoing shipment is inspected for defects, and accessories are checked for completeness before packing.
+    result: Процент на дефектни продукти от 0,7% върху изходящите пратки през последните 12 месеца — същият стандарт се прилага за стоките за освобождаване и за търговските наличности.
     image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-medusa-glow-1.webp
     tags:
-      - OEM
-      - Търговия на дребно
-      - SUP
+      - Pressure Testing
+      - Defect-Free
+      - Clearance QC
     outcome_metrics:
-      - label: Срок на изпълнение
-        value: 55 дни
-      - label: Брой единици
-        value: 2,400
-      - label: SKU
-        value: '4'
-  - id: startup-drop-stitch-kayak
-    client: Американски стартъп за водни спортове
-    product: Drop-Stitch Каяк
-    industry: Стартъп / Търговия на дребно
-    challenge: Американският стартъп за водни спортове се нуждаеше от високоефективен drop-stitch каяк с персонализирана форма на корпуса, съвместно брандирана опаковка и BSCI сертификация за търговия на дребно.
-    solution: Адаптирахме съществуващ калъп за drop-stitch каяк с модифициран профил на задна част, разработихме артистичен дизайн за съвместно брандирана опаковка и предоставихме пълна документиция за одит BSCI.
-    result: Успешно включен в 3 големи американски вериги за туризъм на открито. 5 000 + единици през първата година с 98% реализация.
-    image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/paddleboardoverstock-inflatable-boat.webp
+      - label: Процент без дефекти
+        value: 99.3%
+      - label: Покритие на теста за налягане
+        value: 100%
+      - label: Продължителност на задържане
+        value: 24-48h
+  - id: pressure-test-regime
+    client: Притискане с държане за 24-48 часа
+    product: Всяка камера, 1,25x номинално налягане
+    industry: Тестване на продукт
+    challenge: Дъска SUP живее или загива заради своя drop-stitch ядро и шевове, а бързата проверка на надуването в края на линията не е достатъчна, за да се открият бавни течове или слаби заварки.
+    solution: Всеки борд се надува до 1,25 пъти номиналното му налягане и се задържа за 24-48 часа, като спадът на налягането трябва да остане под 5%. Вентили, D-пръстени, шевове и плавучест се проверяват с нулева толерантност към дефекти, свързани с безопасността.
+    result: 100% от продукцията преминава през този режим преди опаковане — няма пробни извадки, няма изключения.
+    image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/factory/paddleboardoverstock-sup-manufacturing.webp
     tags:
-      - OEM
-      - Каяк
-      - BSCI
+      - Drop-Stitch
+      - 1,25x Налягане
+      - Нула дефекти по безопасността
     outcome_metrics:
-      - label: Верига магазини на дребно
-        value: '3'
-      - label: Единици през първата година
-        value: 5,000+
-      - label: Продажби
-        value: 98%
-  - id: australian-rib-distributor
-    client: Австралийски дистрибутор
-    product: CE-Сертифицирано RIB Обхват
-    industry: Морски / Правителствен сектор
-    challenge: Австралийският дистрибутор се нуждаеше от CE-сертифициран RIB обхват с персонализирани цветове на тръбите, опция за надстройка Hypalon и съответствие с австралийски стандарт AS 1799.
-    solution: Произведохме предсерийни проби с 4 варианта на цветовете на тръбите, осигурихме CSM Hypalon от японски доставчик и координирахме тестове за съответствие с AS 1799 от трета страна.
-    result: 3-моделен RIB диапазон бе пуснат на пазара в AU/NZ. Последва спечелен държавен търг за 12 патрулни RIBs.
-    image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/paddleboardoverstock-rib-330-boat.webp
-    tags:
-      - OEM
-      - RIB
-      - Hypalon
-      - Правителство
-    outcome_metrics:
-      - label: Лансирани модели
-        value: '3'
-      - label: Договор за патрулен катер
-        value: 12 единици
-      - label: Съответствие
-        value: AS 1799
-  - id: caribbean-resort-fleet
-    client: Карибска луксозна курортна група
-    product: Флот на курорта — RIBs, SUP, каяци
-    industry: Хотелиерство / Туризъм
-    challenge: Група от 5 курорта се нуждаеше от унифициран флот под наем за водни спортове — RIB търгове, SUPs и каяци — с консистентна идентичност, материали, устойчиви на UV за тропическото слънце, и 5-годишен план за подмяна.
-    solution: Проектиран специален пакет от 3 модела за флота с UV-стабилизирани PVC, графики по палубата с бранда на курорта и фазово разпределяне на доставките. Осигурено обучение на персонала и комплект за резервни части за всеки курорт.
-    result: Доставени 180 единици в 5 курорта. Повторна поръчка за 2 нови имота. Намаление от 40% на разходите на единица спрямо предишни доставчици.
+      - label: Тестово налягане
+        value: 1.25x
+      - label: Максимален спад на налягането
+        value: <5%
+      - label: Тествани единици
+        value: 100%
+  - id: warranty-claims-support
+    client: Гаранция, която отговаря
+    product: 2-годишно покритие на SUP дъски и аксесоари
+    industry: Следпродажбено обслужване
+    challenge: Покупката на стоки с намаление директно от фабриката повдига справедлив въпрос — ако нещо се обърка месеци по-късно, кой ще се занимава с това?
+    solution: Всяка дъска се доставя с 2-годишна гаранция, която покрива SUP дъски, drop-stitch шевове, клапани за надуване и аксесоари. Жалбите се изпращат директно на нашия екип — изпратете снимки или кратко видео и ние ще се погрижим за всичко останало.
+    result: Жалбите по гаранцията се разглеждат и разрешават от същия екип, който инспектира производството — без разкарване от дистрибутор на дистрибутор.
     image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/hero/factory-gate.webp
     tags:
-      - OEM
-      - SUP
-      - Каяк
-      - RIB
-      - Хотелиерство
+      - 2 години гаранция
+      - Пряка поддръжка
+      - Покрити аксесоари
     outcome_metrics:
-      - label: Доставени единици
-        value: 180
-      - label: Курорти
-        value: '5'
-      - label: Намаление на разходите
-        value: 40%
-  - id: southeast-asia-search-rescue
-    client: Югоизточноазиатска морска агенция
-    product: Флот за патрул и спасителни RIB
-    industry: Правителство / Морска сигурност
-    challenge: Правителствена морска агенция се нуждаеше от 20 патрулни и спасителни RIBs с огнеустойчива Hypalon материя, самопочистващи се подове, интегрирани стойки за VHF/радиоконсоли и съответствие със стандартите за спасителни катери на SOLAS Глава III.
-    solution: Произведени 20 RIBs с CSM Hypalon тръби, корпуси от морско качество алуминий, здрави очи за теглене и предварително инсталирани комплекти навигационни светлини. Заводският инспекционен екип наблюдаваше морските изпитания. Осигурен е пълен комплект документация SOLAS.
-    result: Договорът бе изпълнен за 4 месеца. Флотът е разположен за граничен патрул, търсене и спасяване и реагиране при бедствия в 3 регионални бази.
-    image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/paddleboardoverstock-rib-600.webp
-    tags:
-      - OEM
-      - RIB
-      - Hypalon
-      - Правителство
-      - SOLAS
-    outcome_metrics:
-      - label: Патрулен RIBs
-        value: '20'
-      - label: Доставка
-        value: 4 месеца
-      - label: Бази
-        value: '3'
-  - id: european-dtc-ecommerce
-    client: Европейска марка DTC за водни спортове
-    product: SUP + Брандирана линия аксесоари
-    industry: Електронна търговия / Търговия на дребно
-    challenge: Бързо развиваща се марка DTC за водни спортове се нуждаеше от пълен SUP пакет (дъска, помпа, гребло, повод, чанта) с премиум опаковки, предназначени за изпълнение на електронна търговия — директно за потребителя чрез DHL/FedEx без щети.
-    solution: Разработи съвместна продуктова линия с персонализирано EPS ядро, патентована drop-stitch технология за по-високо налягане и готови за търговия двустенни гофрирани кутии с вградени подплънки. Интегрирана автентичност и гаранция, базирана на QR-код.
-    result: Серията 3 модела SUP беше пусната за 75 дни. 15 000+ единици за първите 12 месеца. Среден рейтинг 4.8★ при 2 000+ ревюта. 0.3% степен на повреди при транспортиране.
-    image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-medusa-glow-1.webp
-    tags:
-      - OEM
-      - SUP
-      - DTC
-      - Електронна търговия
-    outcome_metrics:
-      - label: Модели
-        value: '3'
-      - label: Брой единици
-        value: 15,000+
-      - label: Среден рейтинг
-        value: 4.8★
-      - label: Степен на щети
-        value: 0.3%
-certifications:
-  - name: CE
-    body: Европейски съюз
-    desc: Продуктите CE имат сертификация съгласно приложимите директиви на ЕС — развлекателни съдове по ISO EN 6185, лични плавателни устройства по EN ISO 12402, където е приложимо.
-  - name: ISO 9001
-    body: SGS / BSI
-    desc: Система за управление на качеството, сертифицирана за проектиране, производство и разпространение на надуваеми водни съдове.
-  - name: BSCI
-    body: amfori
-    desc: Сертификация за социално съответствие, демонстрираща етично производство, справедлив труд и безопасност на работното място.
-  - name: REACH
-    body: Европейска агенция за химикали
-    desc: Всички материали отговарят REACH на регулациите за химическа безопасност. Документация се предоставя при всяка пратка.
-  - name: RoHS
-    body: Европейски съюз
-    desc: Ограничаване на спазването на опасните вещества във всички електронни и електрически компоненти.
-  - name: AS 1799
-    body: Стандарти Австралия
-    desc: Австралийски стандарт за надуваеми лодки — тестван и сертифициран за търговска употреба във водите на Австралия/Нова Зеландия.
+      - label: Гаранция
+        value: 2 години
+      - label: Покритие
+        value: Аксесоари за дъска +
+      - label: поддръжка
+        value: Пряк екип
 test_results:
-  - metric: Тествани под налягане единици
+  - metric: Units Pressure Tested
     value: 100%
-    detail: Всяка лодка, всяка камера, всяка партида
-  - metric: Максимален спад на налягането
+    detail: Всеки борд, всяка камара, всяка партида
+  - metric: Max Pressure Drop
     value: <5%
     detail: В продължение на 24 часа при номинално налягане 1.25x
-  - metric: Праг на основни дефекти
-    value: AQL 2.5
-    detail: Според ISO стандарт за вземане на проби 2859
-  - metric: Продължителност на задържане на налягане
+  - metric: Outgoing Defect-Free Rate
+    value: 99.3%
+    detail: Trailing 12-month shipments
+  - metric: Pressure Hold Duration
     value: 24-48h
     detail: В зависимост от категорията на продукта
-  - metric: Марж на тестово налягане
+  - metric: Test Pressure Margin
     value: 1.25x
     detail: Марж на безопасност за всяка камера
-  - metric: Толеранс към дефекти за безопасност
+  - metric: Safety Defect Tolerance
     value: 0%
     detail: Вентили, D-пръстени, шевове, плавучест
 spec_sheets:
-  - name: SUP Серия
-    href: /products#sup
-  - name: RIB Серия
-    href: /products#rib
-  - name: Каяк и малка лодка
-    href: /products#inflatable
-  - name: Спасителни жилетки и аксесоари
-    href: /products#accessories
+  - name: SUP Дъски
+    href: /products
+  - name: Аксесоари
+    href: /products
 deployment_photos:
-  - image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/paddleboardoverstock-rib-600.webp
-    caption: RIB патрулна лодка, използвана за морски търсещи и спасителни операции
-    context: Търсене и спасяване
+  - image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-medusa-glow-1.webp
+    caption: SUP дъска, плъзгаща се по спокойна вода при залез
+    context: По Водата
   - image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/hero/factory-gate.webp
     caption: SUP туризъм по живописно крайбрежие
     context: Отдих
-  - image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/paddleboardoverstock-inflatable-boat-factory.webp
-    caption: Производство на надуваеми лодки в нашето съоръжение в Циндао
+  - image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/factory/paddleboardoverstock-sup-manufacturing.webp
+    caption: Производство на надуваеми SUP в нашето производствено съоръжение във Вехай
     context: Фабрика
-  - image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/factory/paddleboardoverstock-stock-boat-inventory.webp
-    caption: Инвентар, готов за изпращане, очакващ товарене в контейнер
+  - image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/factory/paddleboardoverstock-warehouse-storage.webp
+    caption: Инвентар готов за изпращане от нашия склад във Вехай
     context: Логистика

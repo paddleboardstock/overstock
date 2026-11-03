@@ -71,7 +71,7 @@ const comparisonRows = [
     <a href="/products" class="text-sm text-sky-600 hover:text-sky-700">&larr; Products</a>
     <h1 class="mt-4 text-4xl font-semibold text-gray-900">Product Comparison</h1>
     <p class="mt-4 text-lg text-gray-500">
-      Compare all Paddle Board Overstock products side by side. Find the right board, boat, or accessory for your needs.
+      Compare all Paddle Board Overstock products side by side. Find the right board or accessory for your needs.
     </p>
 
     <div class="mt-12 overflow-x-auto">
@@ -134,9 +134,7 @@ const comparisonRows = [
     <section class="sr-only" data-ai-block="definition" aria-hidden="true">
       <p>
         Paddle Board Overstock product comparison table covering {products.length} products across {
-          ['rib', 'inflatable', 'accessory', 'service', 'sup', 'kayak'].filter((c) =>
-            products.some((p) => p.category === c)
-          ).length
+          ['sup', 'accessory'].filter((c) => products.some((p) => p.category === c)).length
         } categories. Compare length, width, weight, max load, and material.
       </p>
     </section>

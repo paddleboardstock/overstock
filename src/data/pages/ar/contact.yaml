@@ -1,131 +1,122 @@
 hero_text:
-  tagline: اتصل بنا
-  title: تواصل معنا
+  tagline: Contact
+  title: GET IN TOUCH
 contact_form:
   id: form
-  title: أرسل لنا رسالة
-  subtitle: للاستفسار عن الأسعار أو الأسئلة الفنية أو استفسارات الشراكة، أرسل لنا رسالة. نرد خلال يوم عمل واحد.
+  title: Send us a message
+  subtitle: For order questions, sizing advice or product support, drop us a line. We reply within one business day.
   email_to: info@paddleboardoverstock.com
-  submit_button: إرسال الرسالة
-  success_message: شكراً! رسالتك قد وصلت إلى صندوق الوارد لدينا. سنرد خلال يوم عمل واحد.
-  error_message: حدث خطأ أثناء إرسال رسالتك. يرجى المحاولة مرة أخرى أو مراسلتنا مباشرة عبر البريد الإلكتروني.
-  default_country_code: '+1'
+  submit_button: Send Inquiry → Get a Quote
+  success_message: Thanks! Your message has landed in our inbox. We will reply within one business day.
+  error_message: Something went wrong sending your message. Please try again or email us directly.
+  default_country_code: "+1"
   captcha:
-    label: 'مكافحة البريد المزعج: يرجى حل ما يلي'
+    label: "Anti-spam: please solve the following"
   fields:
     - name: firstName
-      label: الاسم الأول
+      label: First Name
       row: 1
     - name: lastName
-      label: اسم العائلة
+      label: Last Name
       row: 1
     - name: companyName
-      label: اسم الشركة
+      label: Company Name
       row: 2
     - name: address
-      label: العنوان
+      label: Address
       row: 3
     - name: zip
-      label: الرمز البريدي
+      label: Zip / Postal Code
       row: 4
     - name: country
-      label: الدولة
+      label: Country
       row: 4
       type: select
       optionsKey: countries
     - name: email
-      label: البريد الإلكتروني
+      label: E-mail
       row: 5
       type: email
     - name: tel
-      label: الهاتف
+      label: TEL
       row: 5
       type: tel
       withCountryCode: true
     - name: orderVolume
-      label: حجم الطلب التقديري
+      label: Estimated Order Volume
       row: 6
       type: select
       options:
-        - value: ''
-          label: اختر الحجم التقديري...
-        - value: sample
-          label: عينات / نماذج أولية فقط
-        - value: '5-10'
-          label: 50–100 وحدة (الحد الأدنى القياسي للطلب)
-        - value: '100-500'
-          label: 100–500 وحدة
-        - value: '500-plus'
-          label: 500+ وحدة (تسعير الكميات)
+        - value: ""
+          label: How many boards are you shopping for?...
+        - value: one
+          label: Just one board
+        - value: 2-4
+          label: 2–4 boards
+        - value: 5-plus
+          label: 5+ boards (family, club, or rental)
     - name: customization
-      label: هل تحتاج إلى تخصيص؟
+      label: What can we help with?
       row: 7
       type: select
       options:
-        - value: ''
-          label: اختر نوع التخصيص...
+        - value: ""
+          label: Select a topic...
         - value: none
-          label: منتج قياسي (بدون تخصيص)
-        - value: logo
-          label: شعار / علامة تجارية مخصصة فقط
-        - value: full
-          label: OEM كامل (الحجم, اللون, الرسومات, التغليف)
-        - value: consultation
-          label: لست متأكداً — أحتاج استشارة
+          label: General product question
+        - value: sizing
+          label: Help choosing the right board
+        - value: order
+          label: Order, payment or shipping
+        - value: warranty
+          label: Warranty or repair support
     - name: productInterest
-      label: فئات المنتجات المهمة
+      label: Product Categories of Interest
       row: 8
       type: select
       options:
-        - value: ''
-          label: اختر فئة المنتج...
+        - value: ""
+          label: Select product category...
         - value: all
-          label: جميع المنتجات / الكتالوج الكامل
+          label: All products / Full catalog
         - value: sup
-          label: ألواح SUP / ألواح التجديف
-        - value: kayak
-          label: قوارب كاياك قابلة للنفخ
-        - value: rib
-          label: قوارب RIB
-        - value: dinghy
-          label: قوارب دنجي / الزوارق
-        - value: safety
-          label: معدات السلامة / سترات النجاة
+          label: SUP Boards / Paddleboards
+        - value: packages
+          label: Complete SUP packages
         - value: accessory
-          label: الملحقات (مضخات, مجاديف, حقائب)
-
+          label: Accessories (pumps, oars, bags)
     - name: subject
-      label: الموضوع
+      label: Subject
       row: 9
     - name: message
-      label: الرسالة
+      label: Message
       row: 10
       type: textarea
       rows: 6
 features2_other_ways:
-  title: طرق أخرى للتواصل معنا
+  title: Other ways to reach us
   columns: 3
   items:
-    - title: استفسارات المبيعات
-      description: عروض الأسعار، التهيئة، طلبات الوكالة والطلبات بالجملة.
+    - title: Order help
+      description: Product questions, sizing advice, and order support.
       icon: tabler:shopping-bag
-    - title: الدعم الفني
-      description: الضمان، الإصلاحات، قطع الغيار وأسئلة التشغيل.
+    - title: Technical support
+      description: Warranty, repairs, spare parts and operating questions.
       icon: tabler:tool
-    - title: الإعلام والشراكات
-      description: الحزم الإعلامية، الرعاية والتعاون الصناعي.
+    - title: Press & partnerships
+      description: Media kits, sponsorship and industry collaboration.
       icon: tabler:news
-    - title: الهاتف
-      description: '+86 13305324192'
+    - title: Phone
+      description: +1 279 732 3333 (US HQ) · +86 13305324192 (factory)
       icon: tabler:headset
-    - title: البريد الإلكتروني
+    - title: Email
       description: info@paddleboardoverstock.com
       icon: tabler:mail
-    - title: المقر الرئيسي
-      description: Economic Development Zone, Laixi, Qingdao, China, 266600
+    - title: Global HQ & Billing
+      description: Weihai Dongjilian Co., Ltd.
       icon: tabler:map-pin
 map:
-  title: موقعنا
-  subtitle: زرنا في مقرنا الرئيسي
-  address: Economic Development Zone, Laixi, Qingdao, China, 266600
+  title: Our Location
+  subtitle: Visit our Weihai manufacturing hub
+  address: Weihai, Shandong, China
   zoom: 15

@@ -13,7 +13,7 @@ export const factoryVideos: FactoryVideo[] = [
     id: 'material-inspection',
     title: 'Raw Material Inspection',
     description:
-      'Every batch of PVC, Hypalon, and drop-stitch fabric undergoes visual inspection, thickness measurement, and tensile strength testing before entering production.',
+      'Every batch of PVC and drop-stitch fabric undergoes visual inspection, thickness measurement, and tensile strength testing before entering production.',
     duration: '2:30',
     stage: '1',
     youtubeId: 'placeholder-material-inspection',
@@ -40,14 +40,14 @@ export const factoryVideos: FactoryVideo[] = [
     thumbnail: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/factory/paddleboardoverstock-factory-building.webp',
   },
   {
-    id: 'rib-hull',
-    title: 'RIB Hull Moulding & Assembly',
+    id: 'drop-stitch-lamination',
+    title: 'Drop-Stitch Core Lamination',
     description:
-      'Fiberglass deep-V hulls are laid up in precision moulds. Hypalon tubes are bonded to the hull using marine-grade adhesives, then reinforced with stainless steel fasteners.',
+      'Thousands of polyester threads connect the top and bottom deck layers of the drop-stitch core. PVC layers are laminated under heat and pressure to create a rigid, airtight panel.',
     duration: '3:45',
     stage: '4',
-    youtubeId: 'placeholder-rib-hull',
-    thumbnail: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/paddleboardoverstock-rib-600.webp',
+    youtubeId: 'placeholder-drop-stitch-lamination',
+    thumbnail: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/factory/paddleboardoverstock-sup-manufacturing-3.webp',
   },
   {
     id: 'sup-printing',
@@ -63,7 +63,7 @@ export const factoryVideos: FactoryVideo[] = [
     id: 'final-assembly',
     title: 'Final Assembly & Rigging',
     description:
-      'Valves, fins, handles, and D-rings are installed. Every component is torque-checked and visually inspected. Boards and boats are fully assembled and tested before packing.',
+      'Valves, fins, handles, and D-rings are installed. Every component is torque-checked and visually inspected. Boards are fully assembled and tested before packing.',
     duration: '2:45',
     stage: '6',
     youtubeId: 'placeholder-assembly',
@@ -83,7 +83,7 @@ export const factoryVideos: FactoryVideo[] = [
     id: 'packing-shipping',
     title: 'Packing & Global Shipping',
     description:
-      'Finished products are folded, rolled, and packed with accessories into branded boxes. Pallets are stretch-wrapped and loaded into containers for FOB Qingdao shipment worldwide.',
+      'Finished boards are folded, rolled, and packed with the pump, paddle, and accessories into a backpack and branded box, then shipped worldwide with tracking.',
     duration: '2:00',
     stage: '8',
     youtubeId: 'placeholder-packing',

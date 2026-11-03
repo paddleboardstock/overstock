@@ -4,8 +4,8 @@ import JsonLd from '~/components/common/JsonLd.astro';
 import { SITE } from 'astrowind:config';
 
 const metadata = {
-  title: `Engineering & R&D Team — Inflatable Boat Design & Manufacturing | ${SITE.name}`,
-  description: `${SITE.name}'s 25+ R&D engineers and production specialists. Expertise in drop-stitch core technology, PVC/Hypalon fabrication, RIB hull design, and CE compliance. Based in Qingdao, China.`,
+  title: `Engineering & R&D Team — Inflatable SUP Design & Manufacturing | ${SITE.name}`,
+  description: `${SITE.name}'s 25+ R&D engineers and production specialists. Expertise in drop-stitch core technology, PVC fabrication, SUP hull design, and production engineering. Based in Weihai, China.`,
   ignoreTitleTemplate: true,
 };
 
@@ -13,31 +13,25 @@ const teamMembers = [
   {
     name: 'Peng Zhang',
     role: 'Director of Engineering',
-    experience: '18 years in inflatable watercraft engineering, formerly at ISO-accredited marine manufacturers.',
+    experience: '18 years in inflatable SUP engineering, formerly at leading marine manufacturers.',
     expertise: [
       'Drop-stitch core structural engineering',
       'PVC formulation & composite layup',
-      'CE 6185 compliance design',
+      'Pressure & buoyancy test protocols',
     ],
-    area: 'Product Architecture & Compliance',
+    area: 'Product Architecture',
   },
   {
     name: 'Lina Chen',
     role: 'Senior Materials Engineer',
-    experience:
-      '12 years specializing in PVC/Hypalon material science, seam technology, and accelerated UV aging testing.',
-    expertise: [
-      'Marine-grade PVC & Hypalon (CSM) characterization',
-      'RF weld & thermal bond optimization',
-      'ASTM D751 peel strength testing',
-    ],
+    experience: '12 years specializing in PVC material science, seam technology, and accelerated UV aging testing.',
+    expertise: ['Marine-grade PVC characterization', 'RF weld & thermal bond optimization', 'Peel strength testing'],
     area: 'Materials Science Lab',
   },
   {
     name: 'Wei Liu',
     role: 'Product Design Lead',
-    experience:
-      '15 years in industrial design for water sports equipment. 40+ SUP and kayak platform designs in production.',
+    experience: '15 years in industrial design for water sports equipment. 40+ SUP platform designs in production.',
     expertise: [
       '3D CAD/CAM mold design (SolidWorks, Rhino)',
       'Hydrodynamic hull shaping',
@@ -48,31 +42,35 @@ const teamMembers = [
   {
     name: 'James Huang',
     role: 'Quality Systems Manager',
-    experience: '10 years managing ISO 9001 QMS for marine manufacturing. Lead auditor for CE and BSCI compliance.',
-    expertise: ['ISO 9001 internal auditing', '100-point QC workflow design', 'Supplier quality traceability systems'],
+    experience: '10 years managing quality systems for marine manufacturing.',
+    expertise: [
+      'In-house QC process auditing',
+      '100-point QC workflow design',
+      'Supplier quality traceability systems',
+    ],
     area: 'Quality Assurance',
   },
   {
     name: 'Mei Wang',
-    role: 'RIB & Hypalon Specialist',
-    experience: '14 years in commercial RIB fabrication, including patrol, rescue, and dive boat production.',
+    role: 'Inflatable SUP Specialist',
+    experience: '14 years in inflatable SUP fabrication, including touring, fishing, and yoga board production.',
     expertise: [
-      'Hypalon hand-gluing & seam construction',
-      'Aluminum & fiberglass deep-V hull mating',
+      'Double-layer lamination & seam construction',
+      'Rail band reinforcement & rail taping',
       'Commercial-grade valve & fitting installation',
     ],
-    area: 'RIB Production Line',
+    area: 'SUP Production Line',
   },
   {
     name: 'Dong Li',
-    role: 'OEM/ODM Project Engineer',
+    role: 'Project Engineer',
     experience: '9 years managing custom manufacturing programs for European, North American, and Asian brands.',
     expertise: [
       'Technical proposal & BOM engineering',
       'Custom mold development through production ramp',
       'Multi-language specification management',
     ],
-    area: 'OEM Programs',
+    area: 'Custom Programs',
   },
 ];
 
@@ -83,11 +81,11 @@ const researchAreas = [
   },
   {
     title: 'Low-Volatile PVC Formulation',
-    desc: 'Developing reduced-emission PVC compounds that meet evolving EU REACH and California Proposition 65 requirements while maintaining weld strength.',
+    desc: 'Developing reduced-emission PVC compounds that lower environmental impact while maintaining weld strength.',
   },
   {
-    title: 'Hypalon-to-Aluminum Bond Reliability',
-    desc: 'Long-duration cyclic load testing for RIB tube-to-hull attachment systems across -20°C to +60°C temperature range.',
+    title: 'Rail Band & Valve Bond Reliability',
+    desc: 'Long-duration cyclic load testing for rail tape and valve attachment systems across -20°C to +60°C temperature range.',
   },
   {
     title: 'Automated QC Vision System',
@@ -100,9 +98,9 @@ const researchAreas = [
   <JsonLd
     type="Article"
     article={{
-      headline: 'Engineering & R&D Team — Inflatable Boat Design & Manufacturing',
+      headline: 'Engineering & R&D Team — Inflatable SUP Design & Manufacturing',
       description:
-        "Meet the 25+ R&D engineers and production specialists behind Paddle Board Overstock's inflatable watercraft manufacturing.",
+        "Meet the 25+ R&D engineers and production specialists behind Paddle Board Overstock's inflatable SUP manufacturing.",
       datePublished: '2026-07-07',
     }}
     data={{ url: 'https://paddleboardoverstock.com/engineering-team' }}
@@ -122,7 +120,7 @@ const researchAreas = [
       </p>
       <div class="mt-8 flex flex-wrap justify-center gap-3">
         {
-          ['Materials Science', 'Product Design', 'Quality Engineering', 'OEM Programs', 'RIB Fabrication'].map(
+          ['Materials Science', 'Product Design', 'Quality Engineering', 'Custom Programs', 'SUP Fabrication'].map(
             (tag) => <span class="px-4 py-2 border border-white/20 text-white/80 text-sm rounded-full">{tag}</span>
           )
         }
@@ -132,7 +130,7 @@ const researchAreas = [
 
   <!-- Trust Stats Strip -->
   <section class="bg-white dark:bg-gray-950 border-b border-gray-100 dark:border-gray-800 py-12 px-6">
-    <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
       <div>
         <div class="text-3xl font-bold text-sky-600">78+</div>
         <div class="text-sm text-gray-500 mt-1">Combined R&D Experience (Years)</div>
@@ -142,32 +140,9 @@ const researchAreas = [
         <div class="text-sm text-gray-500 mt-1">Product Platforms Developed</div>
       </div>
       <div>
-        <div class="text-3xl font-bold text-sky-600">12</div>
-        <div class="text-sm text-gray-500 mt-1">International Certifications</div>
-      </div>
-      <div>
         <div class="text-3xl font-bold text-sky-600">1,200+</div>
-        <div class="text-sm text-gray-500 mt-1">OEM/ODM Projects Delivered</div>
+        <div class="text-sm text-gray-500 mt-1">Custom Projects Delivered</div>
       </div>
-    </div>
-  </section>
-
-  <!-- Certification Badges -->
-  <section class="bg-gray-50 dark:bg-gray-950 py-12 px-6">
-    <div class="max-w-5xl mx-auto text-center">
-      <p class="text-sm font-medium text-gray-500 uppercase tracking-wider mb-6">Certified & Compliant</p>
-      <div class="flex flex-wrap justify-center gap-4">
-        {
-          ['CE 6185', 'ISO 9001', 'BSCI', 'REACH', 'UKCA', 'USCG (life vests)'].map((cert) => (
-            <span class="px-5 py-2.5 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-full text-sm font-semibold text-gray-700 dark:text-gray-300 shadow-sm">
-              {cert}
-            </span>
-          ))
-        }
-      </div>
-      <p class="mt-4 text-xs text-gray-400">
-        Products independently tested and certified for international markets including EU, US, UK, and Middle East.
-      </p>
     </div>
   </section>
 
@@ -177,14 +152,14 @@ const researchAreas = [
       <p class="text-sm font-medium text-gray-500 uppercase tracking-wider mb-6">Global Engineering Footprint</p>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div class="p-4">
-          <div class="text-lg font-bold text-gray-900 dark:text-gray-100">Qingdao, China</div>
+          <div class="text-lg font-bold text-gray-900 dark:text-gray-100">Weihai, China</div>
           <div class="text-sm text-gray-500">Headquarters & Manufacturing</div>
           <div class="text-xs text-gray-400 mt-1">12,000 m² factory · 6 production lines · R&D lab</div>
         </div>
         <div class="p-4">
           <div class="text-lg font-bold text-gray-900 dark:text-gray-100">California, USA</div>
           <div class="text-sm text-gray-500">North American Warehouse</div>
-          <div class="text-xs text-gray-400 mt-1">Local stock · Faster delivery · USCG compliance (life vests)</div>
+          <div class="text-xs text-gray-400 mt-1">Local stock · Faster delivery to US customers</div>
         </div>
         <div class="p-4">
           <div class="text-lg font-bold text-gray-900 dark:text-gray-100">Global Support</div>
@@ -275,11 +250,10 @@ const researchAreas = [
     <p>
       Paddle Board Overstock R&D and engineering team: 25+ engineers across materials science, product design, quality
       assurance, and production engineering. Key personnel include Peng Zhang (Director of Engineering, 18 years), Lina
-      Chen (Senior Materials Engineer, PVC/Hypalon specialist), Wei Liu (Product Design Lead, 40+ platforms), James
-      Huang (Quality Systems Manager, lead auditor), Mei Wang (RIB/Hypalon fabrication specialist, 14 years), and Dong
-      Li (OEM/ODM Project Engineer, 9 years). Active research areas: drop-stitch core density optimization, low-volatile
-      PVC formulation, Hypalon-to-aluminum bond reliability, and automated QC vision systems. Based in Qingdao, China.
-      CE and certified facility.
+      Chen (Senior Materials Engineer, PVC specialist), Wei Liu (Product Design Lead, 40+ platforms), James Huang
+      (Quality Systems Manager), Mei Wang (inflatable SUP fabrication specialist, 14 years), and Dong Li (Project
+      Engineer, 9 years). Active research areas: drop-stitch core density optimization, low-volatile PVC formulation,
+      rail band and valve bond reliability, and automated QC vision systems. Based in Weihai, China.
     </p>
   </section>
 </Layout>

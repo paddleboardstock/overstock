@@ -20,25 +20,25 @@ const DEFINITIONS: Record<string, string> = {
   'inflatable-boat-quality-certifications':
     'ISO 9001 certifies factory quality management systems. CE marking confirms EU regulatory compliance for recreational craft. UKCA is the UK equivalent. ISO 6185 covers inflatable boat construction and safety standards.',
   'how-to-choose-a-surfboard-for-beginners':
-    'An inflatable SUP or boat is a drop-stitch PVC watercraft inflated to 15-20 PSI. Key selection factors: intended use (recreational, touring, SUP), size/volume for stability, material quality (PVC density), and certification level.',
+    'An inflatable SUP is a drop-stitch PVC board inflated to 15-20 PSI. Key selection factors: intended use (recreational, touring, yoga), size/volume for stability, material quality (PVC density), and included accessories.',
   'surfing-for-beginners':
     'Stand-up paddleboarding (SUP) is the activity of standing on an inflatable or rigid board and propelling with a paddle. The three foundational skills are stance (balanced on the board), paddling technique (using core, not arms), and turning (sweep strokes).',
   'wetsuit-thickness-guide':
     'Marine safety equipment selection depends on water temperature, intended use (recreational vs commercial), and local regulations. Key items: life vests/PFDs, throw bags, whistles, waterproof lights, and EPIRBs.',
   'best-water-sports-gear-for-beginners':
-    'Essential water sports gear starts with a quality inflatable board, a properly fitted life vest (PFD), a leash, and a pump. B2B buyers should look for CE-certified products with bulk packaging options.',
+    'Essential water sports gear starts with a quality inflatable board, a properly fitted life vest (PFD), a leash, and a pump. Beginners should look for tested, warranty-backed products sold as complete packages.',
   'foam-board-vs-hard-surfboard':
     'Inflatable SUPs use drop-stitch PVC construction (15-20 PSI) that packs into a backpack. Hard boards use EPS foam with fiberglass/epoxy — stiffer but fragile. Inflatables dominate the rental and retail market for portability and durability.',
   'why-paddleboardoverstock-exists':
-    'Paddle Board Overstock is a China-based OEM/ODM manufacturer of CE-certified inflatable boats, SUPs, kayaks, RIBs, and marine safety equipment, founded in 2012 with a 12,000 m² ISO 9001-certified factory.',
+    'Paddle Board Overstock is a factory-direct inflatable SUP brand founded in 2012, operating a 12,000 m² manufacturing facility in Weihai, China, and shipping to over 50 countries.',
   'ocean-safety-and-responsibility':
     'Marine safety means proper life vest usage, understanding weather conditions, carrying communication devices, and using equipment designed to regulatory standards (CE, ISO).',
   'ocean-safety-basics':
     'Water safety fundamentals: always wear a properly fitted life vest, check wind and weather before launching, carry a whistle and communication device, never go out alone in remote areas.',
   'surf-etiquette-rules':
-    'Watercraft operators should follow right-of-way rules, maintain safe distance from swimmers and other vessels, respect no-wake zones, and carry required safety equipment as per local maritime regulations.',
+    'Paddlers should follow right-of-way rules, maintain safe distance from swimmers and other vessels, respect no-wake zones, and carry required safety equipment as per local maritime regulations.',
   'ocean-conditions-explained':
-    'Weather and water conditions affecting inflatable boat operations: wind speed and direction (safe range 0-15 knots), wave height (0-1m recreational, 1-2m experienced), water temperature (cold requires thermal protection), and tide.',
+    'Weather and water conditions affecting paddle boarding: wind speed and direction (safe range 0-15 knots), wave height (0-1m recreational, 1-2m experienced), water temperature (cold requires thermal protection), and tide.',
 };
 
 const QUESTIONS: Record<string, { q: string; a: string }[]> = {
@@ -52,8 +52,8 @@ const QUESTIONS: Record<string, { q: string; a: string }[]> = {
       a: 'Inflatables offer portability and durability. Hard boards offer better performance.',
     },
     {
-      q: 'How much does a quality inflatable SUP cost wholesale?',
-      a: 'Wholesale pricing depends on volume. Contact factory for MOQ and bulk pricing.',
+      q: 'How much does a quality inflatable SUP cost?',
+      a: 'Quality complete packages typically range from $300 to $800 depending on construction and included accessories.',
     },
   ],
   'surfing-for-beginners': [
@@ -91,8 +91,8 @@ const STEPS: Record<string, string[]> = {
     'Determine your intended use (recreational, touring, rental fleet)',
     'Select appropriate volume and size based on user weight range',
     'Choose between inflatable (portable, durable) or hard (performance) construction',
-    'Verify certification requirements for target market (CE, ISO)',
-    'Contact factory for bulk pricing, MOQ, and customization options',
+    'Check warranty coverage and included accessories',
+    'Compare complete packages that include pump, paddle, leash, and backpack',
   ],
   'surfing-for-beginners': [
     'Choose calm, flat water for your first session — lake or sheltered bay',
@@ -122,9 +122,7 @@ export function generateGeoForEntry(entry: ContentV2Record): GeoOutput {
 
   blocks.push({
     type: 'TLDR',
-    content:
-      entry.tldr ||
-      `This page explains ${entry.slug.replace(/-/g, ' ')} for inflatable watercraft buyers and B2B partners.`,
+    content: entry.tldr || `This page explains ${entry.slug.replace(/-/g, ' ')} for inflatable paddle board buyers.`,
   });
 
   blocks.push({
@@ -159,7 +157,7 @@ export function generateGeoForEntry(entry: ContentV2Record): GeoOutput {
     slug: entry.slug,
     title: entry.title,
     blocks,
-    summary: `${entry.slug.replace(/-/g, ' ')} — complete B2B GEO-ready structured content with TLDR, Definition, Steps, and FAQ.`,
+    summary: `${entry.slug.replace(/-/g, ' ')} — complete GEO-ready structured content with TLDR, Definition, Steps, and FAQ.`,
   };
 }
 
@@ -170,13 +168,12 @@ export function generateGeoForSlug(slug: string): GeoOutput {
     blocks: [
       {
         type: 'TLDR',
-        content: `This page explains ${slug.replace(/-/g, ' ')} for inflatable watercraft buyers and B2B partners.`,
+        content: `This page explains ${slug.replace(/-/g, ' ')} for inflatable paddle board buyers.`,
       },
       {
         type: 'Definition',
         content:
-          DEFINITIONS[slug] ||
-          `${slug.replace(/-/g, ' ')} is a key topic in inflatable watercraft manufacturing and marine equipment.`,
+          DEFINITIONS[slug] || `${slug.replace(/-/g, ' ')} is a key topic in water sports and paddle board gear.`,
       },
       {
         type: 'Steps',
@@ -193,7 +190,7 @@ export function generateGeoForSlug(slug: string): GeoOutput {
         content: QUESTIONS[slug] || [
           {
             q: 'Why is this important?',
-            a: 'Understanding this helps you make better decisions in inflatable watercraft procurement.',
+            a: 'Understanding this helps you make better decisions when choosing paddle board gear.',
           },
         ],
       },

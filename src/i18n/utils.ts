@@ -30,7 +30,7 @@ export function localizePath(path: string, lang: string): string {
 
 /**
  * Slug-aware variant of localizePath. Use-case node slugs differ per locale
- * (e.g. en `/use-cases/rescue` vs de/fr `/use-cases/search-rescue`), so a
+ * (e.g. en `/use-cases/fishing` vs de `/use-cases/fishing-from-inflatable-craft`), so a
  * naive lang prefix produces dead hreflang/language-switcher URLs. This helper
  * resolves the node by the source slug then rewrites to the target locale's
  * slug (falling back to the node id, same as `[lang]/use-cases/[slug].astro`).

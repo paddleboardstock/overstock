@@ -37,37 +37,6 @@ const metadata = {
   description:
     'Built different. Built for business. Discover why global clubs, resorts, rental operators, and water brands choose Paddle Board Overstock as their manufacturing and business partner.',
 };
-
-const faqSchema = JSON.stringify({
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'Why choose Paddle Board Overstock over other manufacturers?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Direct factory with 12,000 m2 ISO 9001 facility, 64 CE-certified models, 99.3% defect-free rate, low MOQs from 2-10 units, and full compliance documentation included.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Is Paddle Board Overstock a trading company?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'No. We are a vertically integrated factory with full control over quality, materials, and lead times.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What compliance is included?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'CE per 2013/53/EU, ISO 9001:2015 (SGS), BSCI social audit, REACH compliance, and UKCA marking. 64 certified models across 5 categories.',
-      },
-    },
-  ],
-});
 ---
 
 <Layout metadata={metadata}>
@@ -81,16 +50,11 @@ const faqSchema = JSON.stringify({
     data={{
       name: 'Paddle Board Overstock',
       description:
-        'Commercial water sports equipment manufacturer and business partner for clubs, resorts, rental operators, and emerging water brands worldwide.',
+        'Inflatable paddle board manufacturer delivering complete SUP packages to paddlers, clubs, resorts, and rental operators worldwide.',
       url: 'https://paddleboardoverstock.com/why-paddleboardoverstock',
       areaServed: ['Worldwide'],
       foundingYear: '2012',
-      knowsAbout: [
-        'Commercial-grade inflatable watercraft',
-        'Water sports business solutions',
-        'OEM/ODM manufacturing',
-        'Rental fleet equipment',
-      ],
+      knowsAbout: ['Inflatable SUP boards', 'Paddle board packages', 'Drop stitch construction', 'SUP accessories'],
     }}
   />
 
@@ -173,5 +137,4 @@ const faqSchema = JSON.stringify({
     subtitle={cta.subtitle}
     actions={cta.actions?.map((a: any) => ({ ...a, href: lh(a.href) }))}
   />
-  <script is:inline type="application/ld+json" set:html={faqSchema} />
 </Layout>

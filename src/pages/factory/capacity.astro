@@ -3,18 +3,18 @@ import Layout from '~/layouts/PageLayout.astro';
 import { SITE } from 'astrowind:config';
 
 const metadata = {
-  title: `Production Capacity — Inflatable Boat Factory Output & Lead Times | ${SITE.name}`,
-  description: `${SITE.name} factory capacity: 12,000 m² facility, 15,000 boats/year, 200-300 workers, 6 specialized workshops for SUP, RIB, dinghy, kayak, and safety equipment production. OEM order lead time 30–45 days.`,
+  title: `Production Capacity — Inflatable SUP Board Factory Output | ${SITE.name}`,
+  description: `${SITE.name} factory capacity: 12,000 m² facility, 15,000 boards/year, 200-300 workers, 6 specialized workshops for all-around, touring, and art-series SUP production.`,
 };
 
 const crumbs = [{ name: 'Home', href: '/' }, { name: 'Factory', href: '/factory' }, { name: 'Production Capacity' }];
 
 const highlights = [
   { value: '12,000 m²', label: 'Total manufacturing floor', detail: 'Across 6 specialized workshops' },
-  { value: '15,000', label: 'Boats produced annually', detail: 'SUPs, kayaks, RIBs, dinghies, safety gear' },
+  { value: '15,000', label: 'Boards produced annually', detail: 'All-around, touring & art-series SUPs' },
   { value: '200-300', label: 'Skilled workforce', detail: '25+ engineers, 2 shifts/day' },
-  { value: '50+', label: 'Export countries', detail: 'EU, US, AU, Middle East, Asia' },
-  { value: '30–45', label: 'Standard lead time (days)', detail: 'From PO confirmation to FOB' },
+  { value: '50+', label: 'Shipping countries', detail: 'EU, US, AU, Middle East, Asia' },
+  { value: '2-3', label: 'Business days to dispatch', detail: 'In-stock orders leave Weihai fast' },
   { value: '10+', label: 'Years of export experience', detail: 'Since 2012' },
 ];
 
@@ -26,40 +26,40 @@ const workshops = [
     output: '8,000+ SUPs/year',
   },
   {
-    title: 'RIB Boat Production',
+    title: 'Deck Art & EVA Finishing',
     description:
-      'Dedicated fiberglass hull workshop with 6 mould stations for RIB hulls up to 7.6 m. Tube welding and assembly area handles 3–5 RIBs simultaneously. Annual RIB capacity: 2,000+ boats.',
-    output: '2,000+ RIBs/year',
+      'Dedicated finishing workshop for art-series decks. Precision EVA cutting, hand-laid deck patterns, and final trim. Annual capacity covers the full art-series range.',
+    output: 'Full art-series range',
   },
   {
-    title: 'Inflatable Boat & Dinghy',
+    title: 'Drop-Stitch Lamination',
     description:
-      'Multi-purpose production lines for inflatable boats, kayaks, and dinghies. Hot-air welding stations, RF dielectric presses, and assembly workstations are reconfigured based on order mix. Annual capacity: 5,000+ units.',
-    output: '5,000+ units/year',
+      'Heat-lamination lines bond drop-stitch cores to outer PVC laminates. Rail bands are triple-layer fusion bonded for airtight strength. Annual capacity: 15,000+ cores.',
+    output: '15,000+ cores/year',
   },
   {
-    title: 'Safety Equipment',
+    title: 'Accessories & Packaging',
     description:
-      'Separate clean-room production area for life vests and safety equipment. Dedicated sewing, foam insertion, and testing stations. Annual life vest capacity: 50,000+ units.',
-    output: '50,000+ life vests/year',
+      'Accessory assembly and packing lines for pumps, paddles, leashes, and repair kits. Boards are vacuum-packed, boxed, and palletized for worldwide shipping.',
+    output: 'Complete packages, ready to ship',
   },
 ];
 ---
 
 <Layout metadata={metadata} breadcrumbs={crumbs}>
-  <meta name="ai-intent" content="inflatable-boat-factory-capacity,rib-boat-manufacturer-china,oem-boat-production" />
+  <meta name="ai-intent" content="inflatable-sup-factory-capacity,sup-board-production,sup-manufacturing" />
   <section class="px-6 sm:px-6 py-16 sm:py-20 lg:py-24 mx-auto max-w-5xl text-center">
     <a href="/factory" class="text-sm text-gray-500 hover:underline">&larr; Back to Factory</a>
     <p class="mt-4 text-sm font-semibold text-primary uppercase tracking-wider">{SITE.name}</p>
     <h1 class="mt-3 text-4xl md:text-5xl font-bold">Production Capacity</h1>
-    <p class="mt-3 text-lg text-muted">12,000 m² facility producing 15,000 boats per year with room to scale</p>
+    <p class="mt-3 text-lg text-muted">12,000 m² facility producing 15,000 boards per year with room to scale</p>
   </section>
 
   <section class="px-6 sm:px-6 pb-16 mx-auto max-w-4xl">
     <p class="text-muted leading-relaxed">
-      {SITE.name} operates one of the largest dedicated inflatable boat manufacturing facilities in Qingdao, China. Our 12,000
-      m² factory is organized into six specialized workshops operating in parallel, giving us the capacity to produce over
-      15,000 boats annually across SUP, kayak, dinghy, RIB, and safety equipment lines.
+      {SITE.name} operates one of the largest dedicated inflatable SUP board manufacturing facilities in Weihai, China. Our
+      12,000 m² factory is organized into six specialized workshops operating in parallel, giving us the capacity to produce
+      15,000 boards annually across all-around, touring, and art-series SUP lines.
     </p>
   </section>
 
@@ -100,69 +100,62 @@ const workshops = [
     </div>
   </section>
 
-  <!-- OEM Capacity Table -->
+  <!-- How to Order -->
   <section class="px-6 sm:px-6 py-16 mx-auto max-w-5xl bg-gray-50 dark:bg-gray-900 rounded-2xl">
     <div class="text-center mb-12">
-      <p class="text-sm font-semibold text-primary uppercase tracking-wider">OEM Terms</p>
-      <h2 class="mt-2 text-3xl font-bold">OEM Production Terms</h2>
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Factory-Direct</p>
+      <h2 class="mt-2 text-3xl font-bold">Direct From the Factory to Your Door</h2>
       <p class="mt-3 text-muted max-w-2xl mx-auto">
-        Flexible terms designed for brands of all sizes — from startups to Fortune 500 retailers.
+        No middlemen, no retail markup — clearance pricing on the same pressure-tested boards.
       </p>
     </div>
     <div class="max-w-3xl mx-auto space-y-3">
       <div
         class="flex items-center justify-between p-4 rounded-lg bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800"
       >
-        <span class="font-medium">Minimum Order Quantity</span>
-        <span class="text-sm text-muted text-right">SUP: 5–10 units | RIB: 2–5 units | Custom mould: 200+ units</span>
+        <span class="font-medium">Order Dispatch</span>
+        <span class="text-sm text-muted text-right">In-stock orders ship in 2-3 business days</span>
       </div>
       <div
         class="flex items-center justify-between p-4 rounded-lg bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800"
       >
-        <span class="font-medium">Standard Lead Time</span>
-        <span class="text-sm text-muted">30–45 days from PO confirmation</span>
+        <span class="font-medium">Tracked Shipping</span>
+        <span class="text-sm text-muted">Delivery to 50+ countries worldwide</span>
       </div>
       <div
         class="flex items-center justify-between p-4 rounded-lg bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800"
       >
-        <span class="font-medium">Sample Lead Time</span>
-        <span class="text-sm text-muted">15–20 days</span>
+        <span class="font-medium">No Minimum Order</span>
+        <span class="text-sm text-muted">Buy exactly what you need — one board or a family fleet</span>
       </div>
       <div
         class="flex items-center justify-between p-4 rounded-lg bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800"
       >
-        <span class="font-medium">Payment Terms</span>
-        <span class="text-sm text-muted">T/T 30% deposit + 70% before shipment</span>
-      </div>
-      <div
-        class="flex items-center justify-between p-4 rounded-lg bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800"
-      >
-        <span class="font-medium">Shipping Terms</span>
-        <span class="text-sm text-muted">FOB Qingdao, CIF, DDP available</span>
+        <span class="font-medium">Warranty</span>
+        <span class="text-sm text-muted">Every board covered by a 2-year SUP warranty</span>
       </div>
     </div>
   </section>
 
   <section class="sr-only" data-ai-block="definition" aria-hidden="true">
     <p>
-      {SITE.name} inflatable boat factory production capacity. 12,000 m² facility in Qingdao, China producing 15,000 boats
-      annually. Six workshops: SUP boards (8,000+/year), RIB boats (2,000+/year), inflatable boats and dinghies (5,000+/year),
-      safety equipment (50,000+ life vests/year). 200-300 skilled workers, 25+ engineers, 2 shifts per day. Standard OEM lead
-      time 30–45 days. Export to 50+ countries since 2012. RIB boat manufacturer China, inflatable boat factory, OEM boat
-      production capacity.
+      {SITE.name} inflatable SUP board factory production capacity. 12,000 m² facility in Weihai, China producing 15,000 boards
+      annually. Workshops: SUP board production (8,000+/year), deck art and EVA finishing, drop-stitch lamination (15,000+
+      cores/year), and accessories and packaging. 200-300 skilled workers, 25+ engineers, 2 shifts per day. Shipping to 50+
+      countries since 2012. In-stock orders dispatch in 2-3 business days.
     </p>
   </section>
 
   <section class="px-6 sm:px-6 py-16 mx-auto max-w-4xl text-center">
     <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
-      <h2 class="text-xl font-bold">Interested in our production capacity?</h2>
+      <h2 class="text-xl font-bold">See what's in stock</h2>
       <p class="mt-2 text-sm text-muted">
-        Contact our sales team for current lead times and available production slots.
+        Browse current factory overstock and clearance boards — complete packages at up to 60% off retail.
       </p>
       <a
-        href="/contact"
+        href="/products"
         class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
-        >Contact sales →</a
+        >Shop boards →</a
       >
     </div>
   </section>

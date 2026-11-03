@@ -17,11 +17,6 @@ interface CaseStudy {
   outcome_metrics: { label: string; value: string }[];
 }
 
-interface Certification {
-  name: string;
-  body: string;
-  desc: string;
-}
 interface TestResult {
   metric: string;
   value: string;
@@ -39,14 +34,13 @@ interface DeploymentPhoto {
 
 const d = evidenceData as any;
 const caseStudies: CaseStudy[] = d.case_studies ?? [];
-const certifications: Certification[] = d.certifications ?? [];
 const testResults: TestResult[] = d.test_results ?? [];
 const specSheets: SpecSheet[] = d.spec_sheets ?? [];
 const deploymentPhotos: DeploymentPhoto[] = d.deployment_photos ?? [];
 
 const metadata = {
   title: `Evidence & Proof | ${SITE.name}`,
-  description: `Real case studies, certifications, test data, and deployment photos from Paddle Board Overstock's inflatable watercraft manufacturing.`,
+  description: `Real case studies, test data, and deployment photos from Paddle Board Overstock's inflatable SUP board manufacturing.`,
   ignoreTitleTemplate: true,
 };
 ---
@@ -67,9 +61,9 @@ const metadata = {
       '@type': 'Dataset',
       name: 'Paddle Board Overstock Product Test Results',
       description:
-        'Quality control test results for inflatable watercraft including pressure testing, defect thresholds, and safety margins.',
+        'Quality control test results for inflatable SUP boards including pressure testing, defect thresholds, and safety margins.',
       about: 'Marine Equipment Quality Testing',
-      measurementTechnique: 'ISO 2859 sampling, 24h pressure hold at 1.25x rated pressure',
+      measurementTechnique: '24-48h pressure hold at 1.25x rated pressure',
       variableMeasured: testResults.map((t) => t.metric),
       author: { '@type': 'Organization', name: SITE.name },
     }}
@@ -86,8 +80,8 @@ const metadata = {
       <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">Proof & Results</span>
       <h1 class="mt-4 text-4xl font-bold text-gray-900">Evidence</h1>
       <p class="mt-4 text-lg text-gray-500">
-        Real case studies, certifications, test data, and deployment photos that demonstrate our manufacturing
-        capability and product quality.
+        Real case studies, test data, and deployment photos that demonstrate our manufacturing capability and product
+        quality.
       </p>
     </div>
 
@@ -133,24 +127,6 @@ const metadata = {
                 </span>
               </div>
             </a>
-          ))
-        }
-      </div>
-    </section>
-
-    <!-- Certifications -->
-    <section class="mb-20">
-      <div class="flex items-center justify-between mb-8">
-        <h2 class="text-2xl font-bold text-gray-900">Certifications & Compliance</h2>
-      </div>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {
-          certifications.map((cert) => (
-            <div class="bg-white border border-gray-200 rounded-2xl p-6">
-              <h3 class="text-lg font-semibold text-gray-900 mb-1">{cert.name}</h3>
-              <p class="text-xs text-gray-400 mb-3">Certified by: {cert.body}</p>
-              <p class="text-sm text-gray-500 leading-relaxed">{cert.desc}</p>
-            </div>
           ))
         }
       </div>
@@ -219,7 +195,7 @@ const metadata = {
     <section class="bg-gradient-to-r from-sky-600 to-blue-700 rounded-2xl p-10 text-center text-white">
       <h2 class="text-2xl font-bold mb-3">Want to see more?</h2>
       <p class="text-sky-100 max-w-xl mx-auto mb-6">
-        Contact our team for detailed test reports, certification documents, and case study references.
+        Contact our team for detailed test reports and case study references.
       </p>
       <a
         href="/contact"

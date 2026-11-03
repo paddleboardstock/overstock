@@ -48,14 +48,14 @@ const metadata = {
 };
 
 const tldrSummary =
-  'Paddle Board Overstock operates a 12,000 m\u00B2 ISO 9001:2015 certified facility with 15,000 units annual output across SUP, RIB, kayak, and inflatable boat product lines. 200-300 skilled workers across 2 shifts.';
+  'Paddle Board Overstock builds 15,000 paddle boards a year in its own 12,000 m² factory in Weihai, China. 200-300 skilled workers across 2 shifts, selling direct to paddlers in 50+ countries.';
 
 const tldrPoints: string[] = [
-  '12,000 m\u00B2 production campus in Qingdao',
-  '15,000 units annual capacity',
+  '12,000 m² production campus in Weihai',
+  '15,000 boards built annually',
   '200-300 skilled workers, 2 shifts/day',
-  'SUP: 8,000+ units/year, RIB: 2,000+ units/year',
-  'ISO 9001:2015 certified quality management system',
+  'In-stock orders dispatch in 2-3 business days',
+  '2-year warranty on every board',
 ];
 
 const faqSchema = JSON.stringify({
@@ -67,7 +67,7 @@ const faqSchema = JSON.stringify({
       name: 'What is the annual production capacity?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '15,000 units per year across all product lines: 8,000+ SUP boards, 2,000+ RIB boats, 3,000+ inflatable boats and kayaks, and 2,000+ accessories.',
+        text: '15,000 paddle boards per year across all-around and art-series SUP lines, plus 2,000+ accessory sets (paddles, pumps, leashes, bags).',
       },
     },
     {
@@ -75,7 +75,7 @@ const faqSchema = JSON.stringify({
       name: 'How large is the factory?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '12,000 m\u00B2 of ISO 9001:2015 certified production space at the Paddle Board Overstock Qingdao Manufacturing Hub in Qingdao, China.',
+        text: '12,000 m² of production space at our Weihai facility in China, run by 200-300 skilled workers across 2 shifts.',
       },
     },
     {
@@ -83,15 +83,15 @@ const faqSchema = JSON.stringify({
       name: 'Can you handle large volume orders?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. With 2-shift operation and optional night shift, we can scale to 20,000+ units annually for surge orders.',
+        text: 'Yes. With 2-shift operation we can scale to 20,000+ boards annually, so even peak-season demand ships on time.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What is the typical lead time?',
+      name: 'How fast do orders ship?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '30-45 days FOB Qingdao for standard orders. Rush orders available at 15-20 days with priority surcharge.',
+        text: 'In-stock orders leave our Weihai factory within 2-3 business days with tracked delivery to 50+ countries.',
       },
     },
     {
@@ -99,7 +99,7 @@ const faqSchema = JSON.stringify({
       name: 'Do you have separate production lines?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Dedicated workshops for SUP boards, RIB boats, inflatable boats/kayaks, and accessories, each with specialized equipment and QC checkpoints.',
+        text: 'Yes. Dedicated workshops for welding and lamination, deck art and EVA finishing, final assembly, and accessories, each with specialized equipment and QC checkpoints.',
       },
     },
   ],
@@ -107,7 +107,7 @@ const faqSchema = JSON.stringify({
 ---
 
 <Layout metadata={metadata} breadcrumbs={crumbs}>
-  <meta name="ai-intent" content="inflatable-boat-factory-capacity,rib-boat-manufacturer-china,oem-boat-production" />
+  <meta name="ai-intent" content="inflatable-sup-factory-capacity,sup-board-production,paddle-board-manufacturing" />
   <script is:inline type="application/ld+json" set:html={faqSchema} />
   <section class="px-6 sm:px-6 py-16 sm:py-20 lg:py-24 mx-auto max-w-5xl text-center">
     <a href={'/' + lang + '/factory'} class="text-sm text-gray-500 hover:underline">&larr; {hero.tagline}</a>
@@ -183,17 +183,14 @@ const faqSchema = JSON.stringify({
 
   <section class="px-6 sm:px-6 py-16 mx-auto max-w-4xl text-center">
     <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
-      <h2 class="text-xl font-bold">{t('factory.interestedCapacity') || 'Interested in our production capacity?'}</h2>
+      <h2 class="text-xl font-bold">See what's in stock</h2>
       <p class="mt-2 text-sm text-muted">
-        {
-          t('factory.interestedCapacityDesc') ||
-            'Contact our sales team for current lead times and available production slots.'
-        }
+        Browse current factory overstock and clearance boards — complete packages at up to 60% off retail.
       </p>
       <a
-        href={'/' + lang + '/contact'}
+        href={'/' + lang + '/products'}
         class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
-        >{t('factory.contactSales') || 'Contact sales'} &rarr;</a
+        >Shop boards &rarr;</a
       >
     </div>
   </section>

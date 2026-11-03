@@ -318,7 +318,7 @@ const productCollection = defineCollection({
     description: z.string().optional(),
     image: z.string().optional(),
     gallery: z.array(productImageSchema).optional(),
-    category: z.enum(['rib', 'inflatable', 'accessory', 'service', 'sup', 'kayak']).optional(),
+    category: z.enum(['accessory', 'sup']).optional(),
     tags: z.array(z.string()).optional(),
     specs: z.array(productSpecSchema).optional(),
     price: productPriceSchema,
@@ -428,23 +428,6 @@ const globalCollection = defineCollection({
   }),
 });
 
-const technologySchema = z.object({
-  publishDate: z.date().optional(),
-  draft: z.boolean().optional(),
-  title: z.string(),
-  summary: z.string().optional(),
-  description: z.string().optional(),
-  category: z.string().optional(),
-  tags: z.array(z.string()).optional(),
-  entityType: z.literal('technology').optional(),
-  entityRelations: z.array(entityRelationSchema).optional(),
-});
-
-const technologyCollection = defineCollection({
-  loader: glob({ pattern: ['*.md', '*.mdx'], base: 'src/data/technology' }),
-  schema: technologySchema,
-});
-
 const caseUseSchema = z.object({
   publishDate: z.date().optional(),
   draft: z.boolean().optional(),
@@ -474,6 +457,5 @@ export const collections = {
   news: newsCollection,
   navigation: navigationCollection,
   global: globalCollection,
-  technology: technologyCollection,
   'case-use': caseUseCollection,
 };

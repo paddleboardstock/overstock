@@ -14,8 +14,6 @@ const headerData = {
       text: 'Products',
       links: [
         { text: 'All Products', href: getPermalink(PRODUCT_LIST) },
-        { text: 'RIB Boats', href: getPermalink('/rib-boats') },
-        { text: 'Inflatable Boats', href: getPermalink('/inflatable-boats') },
         { text: 'Accessories', href: getPermalink('/accessory') },
       ],
     },
@@ -33,8 +31,6 @@ export const footerData = {
       title: 'Products',
       links: [
         { text: 'All Products', href: getPermalink(PRODUCT_LIST) },
-        { text: 'RIB Boats', href: getPermalink('/rib-boats') },
-        { text: 'Inflatable Boats', href: getPermalink('/inflatable-boats') },
         { text: 'Accessories', href: getPermalink('/accessory') },
       ],
     },

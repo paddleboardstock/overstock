@@ -18,7 +18,6 @@ export function getStaticPaths() {
     'inflatable-technology',
     'intermediate-techniques',
     'materials',
-    'pvc-vs-hypalon',
     'safety-in-water-sports',
     'sup-size-guide',
   ];
@@ -78,46 +77,46 @@ const LEARN_PAGES: Record<
     ],
   },
   'inflatable-boat': {
-    title: 'Inflatable Boat Knowledge — Technology & Materials | Paddle Board Overstock',
+    title: 'Inflatable Board Technology — Construction, Materials & Care | Paddle Board Overstock',
     description:
-      'Deep dive into inflatable boat and SUP technology. Learn about drop-stitch construction, PVC vs Hypalon materials, marine-grade engineering, and quality standards.',
+      'Technical guides on inflatable SUP boards — drop-stitch construction, materials, manufacturing, care, and repair.',
     articles: [
       {
         title: 'Materials Reference',
-        desc: 'PVC, Hypalon, drop-stitch, denier ratings — understand what your inflatable gear is made of.',
+        desc: 'Drop-stitch cores, PVC laminates, EVA deck foam, and denier ratings — understand what your board is made of.',
         href: '/learn/materials',
       },
       {
-        title: 'PVC vs Hypalon',
-        desc: 'The definitive comparison of PVC and Hypalon fabrics for inflatable boats — durability, UV resistance, and cost.',
-        href: '/learn/materials',
+        title: 'EVA Deck Art Explained',
+        desc: 'How multi-color EVA blocks are die-cut and hand-assembled into pieced deck art that never fades or peels.',
+        href: '/products',
       },
       {
         title: 'Drop-Stitch Core Explained',
-        desc: 'How thousands of internal threads create a rigid platform at 12-15 PSI for high-performance inflatable SUPs.',
-        href: '/learn/materials',
+        desc: 'How thousands of internal threads create a rigid platform at 15 PSI for high-performance inflatable SUPs.',
+        href: '/learn/drop-stitch-core',
       },
       {
         title: 'Inflatable Technology Overview',
-        desc: 'How inflatable boats and SUPs are constructed — from material layup to valve systems and seam welding.',
-        href: '/learn/materials',
+        desc: 'How inflatable paddle boards are constructed — from material layup to valve systems and seam welding.',
+        href: '/learn/inflatable-technology',
       },
       {
-        title: 'Rigid Inflatable Boat (RIB) Guide',
-        desc: 'Everything about RIB construction, hull types, tube materials, and choosing the right RIB for your needs.',
-        href: '/v2/inflatable-boat-buying-guide',
+        title: 'Rail & Seam Construction',
+        desc: 'How triple-layer rail bands and RF-welded seams keep your board airtight at full pressure.',
+        href: '/factory/process',
       },
       {
-        title: 'Inflatable Boat vs RIB',
-        desc: 'Key differences between traditional inflatable dinghies and rigid-hull inflatable boats for various use cases.',
-        href: '/compare/rib-vs-dinghy',
+        title: 'Why 15 PSI Matters',
+        desc: 'How air pressure unlocks rigid, hard-board performance from a packable inflatable.',
+        href: '/v2/sup-pump-guide',
       },
     ],
   },
   'water-safety': {
     title: 'Water Safety Knowledge — Safe Paddling Guides | Paddle Board Overstock',
     description:
-      'Comprehensive water safety resources for SUP, kayaking, and boating. Learn about PFD selection, weather reading, self-rescue, cold water safety, and CE certification.',
+      'Comprehensive water safety resources for SUP. Learn about PFD selection, weather reading, self-rescue, and cold water safety.',
     articles: [
       {
         title: 'Water Safety Guide',
@@ -126,7 +125,7 @@ const LEARN_PAGES: Record<
       },
       {
         title: 'Life Jacket & PFD Guide',
-        desc: 'How to choose the right personal flotation device for SUP, kayaking, boating, and professional use.',
+        desc: 'How to choose the right personal flotation device for stand-up paddle boarding — buoyancy ratings, fit, and comfort.',
         href: '/v2/life-jacket-buying-guide',
       },
       {
@@ -145,9 +144,9 @@ const LEARN_PAGES: Record<
         href: '/guides/beginner-guide/',
       },
       {
-        title: 'CE Certification Explained',
-        desc: 'What CE certification means for inflatable watercraft — the standards, testing, and why it matters for safety.',
-        href: '/trust',
+        title: 'Leash & PFD Safety Rules',
+        desc: 'When a leash is essential, which PFD types work for SUP, and the safety gear every paddler should carry.',
+        href: '/v2/sup-leash-guide',
       },
     ],
   },
@@ -164,27 +163,21 @@ const LEARN_PAGES: Record<
     articles: [],
   },
   'inflatable-technology': {
-    title: 'Inflatable Watercraft Technology — Materials, Construction & Engineering',
+    title: 'Inflatable Board Technology — Materials, Construction & Engineering',
     description:
-      'How inflatable boats and SUPs are built — material layup, drop-stitch cores, valve systems, RF welding, and quality testing. Understand what makes a durable, high-performance inflatable.',
+      'How inflatable SUP boards are built — material layup, drop-stitch cores, valve systems, RF welding, and quality testing. Understand what makes a durable, high-performance board.',
     articles: [],
   },
   'intermediate-techniques': {
-    title: 'Intermediate SUP & Kayak Techniques — Beyond the Basics',
+    title: 'Intermediate SUP Techniques — Beyond the Basics',
     description:
       'Level up your paddling skills with advanced paddle strokes, rough water handling, wind management, self-rescue techniques, and group paddling etiquette. For paddlers ready to move beyond beginner skills.',
     articles: [],
   },
   materials: {
-    title: 'Inflatable Watercraft Materials — PVC, Hypalon, EVA & Drop-Stitch Fabric',
+    title: 'Inflatable Board Materials — Multi-Layer PVC, Drop-Stitch & EVA',
     description:
-      'Comprehensive guide to materials used in inflatable watercraft manufacturing: military-grade PVC, Hypalon (CSM), EVA foam decking, drop-stitch fabric, carbon fiber, and aluminum alloys. Specifications, applications, and selection criteria.',
-    articles: [],
-  },
-  'pvc-vs-hypalon': {
-    title: 'PVC vs Hypalon Inflatable Boat Material — Complete Comparison',
-    description:
-      "Detailed comparison of PVC vs Hypalon (CSM) for inflatable boats, RIBs, and dinghies. Durability, cost, repairability, UV resistance, temperature range, and application recommendations with data from Paddle Board Overstock's PVC Fabric Lab.",
+      'Comprehensive guide to the materials used in inflatable SUP boards: multi-layer laminated PVC, drop-stitch core construction, and EVA foam decking. Specifications, applications, and selection criteria.',
     articles: [],
   },
   'safety-in-water-sports': {
@@ -209,14 +202,14 @@ const LEARN_META: Record<string, Record<string, { title: string; description: st
         'Komplettes SUP-Wissenszentrum mit Einsteigerratgebern, Boardgrößen, Technik-Tutorials, Sicherheitstipps und aufblasbarer SUP-Technologie.',
     },
     'inflatable-boat': {
-      title: 'Schlauchboot-Wissen — Technologie & Materialien',
+      title: 'Wissen über aufblasbare Boards — Technologie & Materialien',
       description:
-        'Tiefgang in Schlauchboot- und SUP-Technologie. Lernen Sie Drop-Stitch-Konstruktion, PVC- vs. Hypalon-Materialien, Meerestechnik in Marinequalität und Qualitätsstandards kennen.',
+        'Technische Guides zu aufblasbaren SUP-Boards — Drop-Stitch-Konstruktion, Materialien, Fertigung, Pflege und Reparatur.',
     },
     'water-safety': {
       title: 'Wassersicherheit — Ratgeber für sicheres Paddeln',
       description:
-        'Umfassende Wassersicherheits-Ressourcen für SUP, Kajak und Boot. Lernen Sie Schwimmwestenauswahl, Wetterkunde, Selbstrettung, Kaltwassersicherheit und CE-Zertifizierung kennen.',
+        'Umfassende Ressourcen zur Wassersicherheit beim SUP. Lernen Sie Schwimmwestenauswahl, Wetterkunde, Selbstrettung und Kaltwassersicherheit kennen.',
     },
     'sup-basics': {
       title: 'SUP-Grundlagen — Einsteigerratgeber für Stand-Up-Paddling',
@@ -229,24 +222,19 @@ const LEARN_META: Record<string, Record<string, { title: string; description: st
         'Tiefgehende Einblicke in die Drop-Stitch-Konstruktion: Wie Tausende Polyesterfäden bei 15-25 PSI steife aufblasbare Plattformen schaffen. Fadendichte, Stoffintegration, Herstellungsprozess und Leistungsvergleiche.',
     },
     'inflatable-technology': {
-      title: 'Technologie aufblasbarer Wasserfahrzeuge — Materialien, Konstruktion & Technik',
+      title: 'Technologie aufblasbarer Boards — Materialien, Konstruktion & Technik',
       description:
-        'Wie aufblasbare Boote und SUPs gebaut werden — Materialaufbau, Drop-Stitch-Kerne, Ventilsysteme, HF-Schweißen und Qualitätstests. Verstehen Sie, was ein langlebiges, leistungsstarkes aufblasbares Produkt ausmacht.',
+        'Wie aufblasbare SUP-Boards gebaut werden — Materialaufbau, Drop-Stitch-Kerne, Ventilsysteme, HF-Schweißen und Qualitätstests. Verstehen Sie, was ein langlebiges, leistungsstarkes Board ausmacht.',
     },
     'intermediate-techniques': {
-      title: 'Fortgeschrittene SUP- & Kajaktechniken — Über die Grundlagen hinaus',
+      title: 'Fortgeschrittene SUP-Techniken — Über die Grundlagen hinaus',
       description:
         'Verbessern Sie Ihre Paddelfähigkeiten mit fortgeschrittenen Paddelschlägen, Handling bei rauem Wasser, Windmanagement, Selbstrettungstechniken und Gruppenpaddel-Etikette. Für Paddler, die bereit sind, über die Anfängerstufe hinauszugehen.',
     },
     materials: {
-      title: 'Materialien aufblasbarer Wasserfahrzeuge — PVC, Hypalon, EVA & Drop-Stitch-Gewebe',
+      title: 'Materialien für aufblasbare Boards — Mehrschicht-PVC, Drop-Stitch & EVA',
       description:
-        'Umfassender Leitfaden zu Materialien für die Fertigung aufblasbarer Wasserfahrzeuge: PVC in Militärqualität, Hypalon (CSM), EVA-Deckbeläge, Drop-Stitch-Gewebe, Carbonfaser und Aluminiumlegierungen. Spezifikationen, Anwendungen und Auswahlkriterien.',
-    },
-    'pvc-vs-hypalon': {
-      title: 'PVC vs. Hypalon für Schlauchboote — Vollständiger Vergleich',
-      description:
-        'Detaillierter Vergleich von PVC vs. Hypalon (CSM) für Schlauchboote, RIBs und Dingis. Haltbarkeit, Kosten, Reparierbarkeit, UV-Beständigkeit, Temperaturbereich und Anwendungsempfehlungen mit Daten aus dem PVC-Fabriklabor von Paddle Board Overstock.',
+        'Umfassender Leitfaden zu den Materialien aufblasbarer SUP-Boards: mehrschichtig laminiertes PVC, Drop-Stitch-Kernkonstruktion und EVA-Deckauflagen. Spezifikationen, Anwendungen und Auswahlkriterien.',
     },
     'safety-in-water-sports': {
       title: 'Sicherheit im Wassersport — Wichtiges Wissen für Paddler',
@@ -266,14 +254,14 @@ const LEARN_META: Record<string, Record<string, { title: string; description: st
         'Centro de conocimiento SUP completo con guías para principiantes, tamaños de tablas, tutoriales de técnica, consejos de seguridad y tecnología de SUP hinchable.',
     },
     'inflatable-boat': {
-      title: 'Conocimiento de botes inflables — Tecnología y materiales',
+      title: 'Conocimiento de tablas inflables — Tecnología y materiales',
       description:
-        'Conozca en profundidad la tecnología de botes inflables y SUP. Aprenda sobre la construcción drop-stitch, los materiales PVC vs Hypalon, la ingeniería de grado marino y los estándares de calidad.',
+        'Guías técnicas sobre tablas de paddle surf inflables — construcción drop-stitch, materiales, fabricación, cuidado y reparación.',
     },
     'water-safety': {
       title: 'Seguridad acuática — Guías para remar con seguridad',
       description:
-        'Recursos completos de seguridad acuática para SUP, kayak y navegación. Aprenda sobre la selección de chalecos salvavidas (PFD), lectura del clima, autorrescate, seguridad en aguas frías y certificación CE.',
+        'Recursos completos de seguridad acuática para SUP. Aprenda sobre la selección de chalecos salvavidas (PFD), lectura del clima, autorrescate y seguridad en aguas frías.',
     },
     'sup-basics': {
       title: 'Fundamentos de SUP — Guía para principiantes del paddle surf',
@@ -286,24 +274,19 @@ const LEARN_META: Record<string, Record<string, { title: string; description: st
         'Profundice en la construcción drop-stitch: cómo miles de hilos de poliéster crean plataformas inflables rígidas a 15-25 PSI. Densidad de hilos, integración de tejido, proceso de fabricación y comparaciones de rendimiento.',
     },
     'inflatable-technology': {
-      title: 'Tecnología de embarcaciones inflables — Materiales, construcción e ingeniería',
+      title: 'Tecnología de tablas inflables — Materiales, construcción e ingeniería',
       description:
-        'Cómo se construyen los botes y SUP inflables: capas de material, núcleos drop-stitch, sistemas de válvulas, soldadura por RF y pruebas de calidad. Entienda qué hace duradera y de alto rendimiento una embarcación inflable.',
+        'Cómo se construyen las tablas de SUP inflables: capas de material, núcleos drop-stitch, sistemas de válvulas, soldadura por RF y pruebas de calidad. Entienda qué hace duradera y de alto rendimiento una tabla inflable.',
     },
     'intermediate-techniques': {
-      title: 'Técnicas intermedias de SUP y kayak — Más allá de lo básico',
+      title: 'Técnicas intermedias de SUP — Más allá de lo básico',
       description:
         'Mejore sus habilidades de remo con paladas avanzadas, manejo en aguas agitadas, gestión del viento, técnicas de autorrescate y etiqueta de remada en grupo. Para remadores listos para ir más allá del nivel principiante.',
     },
     materials: {
-      title: 'Materiales para embarcaciones inflables — PVC, Hypalon, EVA y tejido drop-stitch',
+      title: 'Materiales de tablas inflables — PVC multicapa, drop-stitch y EVA',
       description:
-        'Guía completa de los materiales usados en la fabricación de embarcaciones inflables: PVC de grado militar, Hypalon (CSM), cubiertas de espuma EVA, tejido drop-stitch, fibra de carbono y aleaciones de aluminio. Especificaciones, aplicaciones y criterios de selección.',
-    },
-    'pvc-vs-hypalon': {
-      title: 'PVC vs Hypalon para botes inflables — Comparación completa',
-      description:
-        'Comparación detallada de PVC vs Hypalon (CSM) para botes inflables, RIBs y lanchas. Durabilidad, coste, reparabilidad, resistencia a los rayos UV, rango de temperatura y recomendaciones de aplicación con datos del Laboratorio de Tejido PVC de Paddle Board Overstock.',
+        'Guía completa de los materiales usados en tablas de SUP inflables: PVC laminado multicapa, construcción de núcleo drop-stitch y cubiertas de espuma EVA. Especificaciones, aplicaciones y criterios de selección.',
     },
     'safety-in-water-sports': {
       title: 'Seguridad en los deportes acuáticos — Conocimiento esencial para remadores',
@@ -323,14 +306,14 @@ const LEARN_META: Record<string, Record<string, { title: string; description: st
         'Centre de connaissances SUP complet couvrant les guides débutants, les tailles de planches, les tutoriels de technique, les conseils de sécurité et la technologie du SUP gonflable.',
     },
     'inflatable-boat': {
-      title: 'Connaissance des bateaux gonflables — Technologie et matériaux',
+      title: 'Connaissance des planches gonflables — Technologie et matériaux',
       description:
-        "Plongez dans la technologie des bateaux gonflables et des SUP. Découvrez la construction drop-stitch, les matériaux PVC vs Hypalon, l'ingénierie de qualité marine et les normes de qualité.",
+        'Guides techniques sur les planches de SUP gonflables — construction drop-stitch, matériaux, fabrication, entretien et réparation.',
     },
     'water-safety': {
       title: 'Sécurité nautique — Guides pour pagayer en toute sécurité',
       description:
-        "Ressources complètes de sécurité nautique pour le SUP, le kayak et la navigation. Apprenez le choix des gilets de sauvetage (PFD), la lecture de la météo, l'auto-sauvetage, la sécurité en eau froide et la certification CE.",
+        "Ressources complètes de sécurité nautique pour le SUP. Apprenez le choix des gilets de sauvetage (PFD), la lecture de la météo, l'auto-sauvetage et la sécurité en eau froide.",
     },
     'sup-basics': {
       title: 'Bases du SUP — Guide du débutant en paddle boarding',
@@ -343,24 +326,19 @@ const LEARN_META: Record<string, Record<string, { title: string; description: st
         'Plongez dans la construction drop-stitch : comment des milliers de fils de polyester créent des plateformes gonflables rigides à 15-25 PSI. Densité des fils, intégration du tissu, processus de fabrication et comparaisons de performances.',
     },
     'inflatable-technology': {
-      title: 'Technologie des embarcations gonflables — Matériaux, construction et ingénierie',
+      title: 'Technologie des planches gonflables — Matériaux, construction et ingénierie',
       description:
-        'Comment sont fabriqués les bateaux et SUP gonflables — stratification des matériaux, noyaux drop-stitch, systèmes de valves, soudure RF et tests de qualité. Comprenez ce qui rend une embarcation gonflable durable et performante.',
+        'Comment sont fabriquées les planches de SUP gonflables — stratification des matériaux, noyaux drop-stitch, systèmes de valves, soudure RF et tests de qualité. Comprenez ce qui rend une planche gonflable durable et performante.',
     },
     'intermediate-techniques': {
-      title: 'Techniques intermédiaires de SUP et de kayak — Au-delà des bases',
+      title: 'Techniques intermédiaires de SUP — Au-delà des bases',
       description:
         "Améliorez vos compétences de pagaie avec des coups de pagaie avancés, la gestion des eaux agitées, le management du vent, les techniques d'auto-sauvetage et l'étiquette de pagayage en groupe. Pour les pagayeurs prêts à dépasser le niveau débutant.",
     },
     materials: {
-      title: 'Matériaux des embarcations gonflables — PVC, Hypalon, EVA et tissu drop-stitch',
+      title: 'Matériaux des planches gonflables — PVC multicouche, drop-stitch et EVA',
       description:
-        "Guide complet des matériaux utilisés dans la fabrication des embarcations gonflables : PVC de qualité militaire, Hypalon (CSM), ponts en mousse EVA, tissu drop-stitch, fibre de carbone et alliages d'aluminium. Spécifications, applications et critères de sélection.",
-    },
-    'pvc-vs-hypalon': {
-      title: 'PVC vs Hypalon pour bateaux gonflables — Comparaison complète',
-      description:
-        "Comparaison détaillée du PVC vs Hypalon (CSM) pour bateaux gonflables, RIB et annexes. Durabilité, coût, réparabilité, résistance aux UV, plage de température et recommandations d'application avec les données du Laboratoire de Tissu PVC d'Paddle Board Overstock.",
+        'Guide complet des matériaux utilisés dans les planches de SUP gonflables : PVC laminé multicouche, construction à noyau drop-stitch et ponts en mousse EVA. Spécifications, applications et critères de sélection.',
     },
     'safety-in-water-sports': {
       title: 'Sécurité dans les sports nautiques — Connaissances essentielles pour les pagayeurs',
@@ -380,14 +358,14 @@ const LEARN_META: Record<string, Record<string, { title: string; description: st
         'Centro di conoscenza SUP completo con guide per principianti, misure delle tavole, tutorial di tecnica, consigli di sicurezza e tecnologia dei SUP gonfiabili.',
     },
     'inflatable-boat': {
-      title: 'Conoscenza dei gommoni — Tecnologia e materiali',
+      title: 'Conoscenza delle tavole gonfiabili — Tecnologia e materiali',
       description:
-        "Approfondimento sulla tecnologia di gommoni e SUP. Scoprite la costruzione drop-stitch, i materiali PVC vs Hypalon, l'ingegneria di grado marino e gli standard di qualità.",
+        'Guide tecniche sulle tavole SUP gonfiabili — costruzione drop-stitch, materiali, produzione, cura e riparazione.',
     },
     'water-safety': {
       title: 'Sicurezza in acqua — Guide per pagaiare in sicurezza',
       description:
-        "Risorse complete sulla sicurezza in acqua per SUP, kayak e imbarcazioni. Scoprite la scelta dei giubbotti salvagente (PFD), la lettura del meteo, l'autorescat, la sicurezza in acque fredde e la certificazione CE.",
+        "Risorse complete sulla sicurezza in acqua per il SUP. Scoprite la scelta dei giubbotti salvagente (PFD), la lettura del meteo, l'autorescat e la sicurezza in acque fredde.",
     },
     'sup-basics': {
       title: 'Basi del SUP — Guida per principianti al paddle boarding',
@@ -400,24 +378,19 @@ const LEARN_META: Record<string, Record<string, { title: string; description: st
         'Approfondimento sulla costruzione drop-stitch: come migliaia di fili di poliestere creano piattaforme gonfiabili rigide a 15-25 PSI. Densità dei fili, integrazione del tessuto, processo di produzione e confronti di prestazioni.',
     },
     'inflatable-technology': {
-      title: 'Tecnologia delle imbarcazioni gonfiabili — Materiali, costruzione e ingegneria',
+      title: 'Tecnologia delle tavole gonfiabili — Materiali, costruzione e ingegneria',
       description:
-        "Come vengono costruite imbarcazioni e SUP gonfiabili — stratificazione dei materiali, nuclei drop-stitch, sistemi di valvole, saldatura RF e test di qualità. Capite cosa rende un'imbarcazione gonfiabile durevole e ad alte prestazioni.",
+        'Come vengono costruite le tavole SUP gonfiabili — stratificazione dei materiali, nuclei drop-stitch, sistemi di valvole, saldatura RF e test di qualità. Capite cosa rende una tavola gonfiabile durevole e ad alte prestazioni.',
     },
     'intermediate-techniques': {
-      title: 'Tecniche intermedie di SUP e kayak — Oltre le basi',
+      title: 'Tecniche intermedie di SUP — Oltre le basi',
       description:
         'Migliorate le vostre abilità di pagaiata con colpi avanzati, gestione di acque mosse, gestione del vento, tecniche di autorescat ed etichetta della pagaiata di gruppo. Per pagaiatori pronti ad andare oltre il livello principiante.',
     },
     materials: {
-      title: 'Materiali delle imbarcazioni gonfiabili — PVC, Hypalon, EVA e tessuto drop-stitch',
+      title: 'Materiali delle tavole gonfiabili — PVC multistrato, drop-stitch ed EVA',
       description:
-        'Guida completa ai materiali usati nella produzione di imbarcazioni gonfiabili: PVC di grado militare, Hypalon (CSM), deck in schiuma EVA, tessuto drop-stitch, fibra di carbonio e leghe di alluminio. Specifiche, applicazioni e criteri di selezione.',
-    },
-    'pvc-vs-hypalon': {
-      title: 'PVC vs Hypalon per gommoni — Confronto completo',
-      description:
-        "Confronto dettagliato tra PVC e Hypalon (CSM) per gommoni, RIB e tender. Durabilità, costi, riparabilità, resistenza ai raggi UV, intervallo di temperature e raccomandazioni d'uso con i dati del Laboratorio Tessuti PVC di Paddle Board Overstock.",
+        'Guida completa ai materiali usati nelle tavole SUP gonfiabili: PVC laminato multistrato, costruzione con nucleo drop-stitch e deck in schiuma EVA. Specifiche, applicazioni e criteri di selezione.',
     },
     'safety-in-water-sports': {
       title: 'Sicurezza negli sport acquatici — Conoscenze essenziali per i pagaiatori',
@@ -450,19 +423,18 @@ const lArticles = (page.articles || []).map((a, idx) => ({
         : a.href,
 }));
 const readGuide = content.ui?.read_guide || 'Read guide →';
-const cardTech = content.ui?.card_tech || 'Marine safety engineering and material testing';
+const cardTech = content.ui?.card_tech || 'Safety engineering and material testing';
 const cardProducts = content.ui?.card_products || 'Explore the full Paddle Board Overstock product catalog';
-const cardTrust = content.ui?.card_trust || 'CE, ISO and BSCI compliance';
+const cardTrust = content.ui?.card_trust || 'Factory-tested quality with a 2-year warranty';
 const mat = slug === 'materials' ? content.materials : undefined;
 const MATERIAL_IMAGES = [
   'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/tech/tech-pvc-material.webp',
-  'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/tech/tech-hypalon-tubes.webp',
   'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/tech/tech-drop-stitch.webp',
-  'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/tech/tech-air-deck.webp',
+  'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-medusa-glow-1.webp',
 ];
 const TOPIC_HREFS = [
-  '/v2/pvc-vs-hypalon-boats',
-  '/learn/pvc-vs-hypalon',
+  '/v2/how-to-choose-inflatable-sup',
+  '/factory/process',
   '/learn/drop-stitch-core',
   '/learn/inflatable-technology',
   '/v2/sup-pump-guide',

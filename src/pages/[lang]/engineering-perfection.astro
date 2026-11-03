@@ -16,10 +16,10 @@ const { lang } = Astro.params;
 const t = (key: string) => getUiForLang(lang || defaultLang)?.[key] || '';
 
 const metadata = {
-  title: `${t('engineeringPerfection.title') || 'Engineering Perfection — Inflatable Boat Manufacturing Excellence'} | ${SITE.name}`,
+  title: `${t('engineeringPerfection.title') || 'Engineering Perfection — Inflatable SUP Manufacturing Excellence'} | ${SITE.name}`,
   description:
     t('engineeringPerfection.desc') ||
-    `${SITE.name}'s engineering philosophy: precision manufacturing, premium material selection, rigorous quality control, and segment-specific design for whitewater, fishing, dinghies, and recreational inflatable boats.`,
+    `${SITE.name}'s engineering philosophy: precision manufacturing, premium material selection, rigorous quality control, and segment-specific design for all-around, touring, fishing, and yoga inflatable paddle boards.`,
 };
 
 const crumbs = [
@@ -29,10 +29,10 @@ const crumbs = [
 
 const pillars = [
   {
-    title: t('engineeringPerfection.p1') || 'Superior Material Sourcing',
+    title: t('engineeringPerfection.p1') || 'Superior Material Selection',
     content:
       t('engineeringPerfection.p1desc') ||
-      'We invest considerable resources in identifying, testing, and procuring the finest fabrics, adhesives, and components available globally. We do not compromise on material specifications for cost savings. Our sourcing protocol includes batch testing for tensile strength, tear resistance, coating adhesion, and UV stability.',
+      'We invest considerable resources in identifying, testing, and selecting the finest fabrics, adhesives, and components available globally. We do not compromise on material specifications for cost savings. Our material protocol includes batch testing for tensile strength, tear resistance, coating adhesion, and UV stability.',
   },
   {
     title: t('engineeringPerfection.p2') || 'Precision Engineering & Design',
@@ -56,28 +56,28 @@ const pillars = [
 
 const segments = [
   {
-    name: t('engineeringPerfection.s1') || 'Whitewater Inflatables',
+    name: t('engineeringPerfection.s1') || 'All-Around SUPs',
     desc:
       t('engineeringPerfection.s1desc') ||
-      'High-denier PVC or premium Hypalon with heavy reinforcements, high rocker, self-bailing floors, large tube diameters for maximum buoyancy, and continuous grab lines.',
+      'High-denier PVC with reinforced rails, a wide stable platform, and a balanced outline — the versatile choice for beginners and everyday paddling.',
   },
   {
-    name: t('engineeringPerfection.s2') || 'Fishing Inflatables',
+    name: t('engineeringPerfection.s2') || 'Fishing SUPs',
     desc:
       t('engineeringPerfection.s2desc') ||
       'Exceptional stability and shallow draft. Features include rod holders, gear mounts, elevated seating, and quieter muted colors for stealth approach.',
   },
   {
-    name: t('engineeringPerfection.s3') || 'Dinghies & Tenders',
+    name: t('engineeringPerfection.s3') || 'Touring SUPs',
     desc:
       t('engineeringPerfection.s3desc') ||
-      'Lightweight and compact for easy storage and lifting. Efficient rowing and motoring performance with reinforced towing points and substantial rub strakes.',
+      'Efficient displacement shapes with extra length and volume for glide, speed, and long-distance tracking.',
   },
   {
-    name: t('engineeringPerfection.s4') || 'General Recreational Craft',
+    name: t('engineeringPerfection.s4') || 'Yoga & Family SUPs',
     desc:
       t('engineeringPerfection.s4desc') ||
-      'Versatile design for family boating with high priority on stability, safety, comfort, and ease of inflation, deflation, and transport.',
+      'Versatile design for family paddling with high priority on stability, safety, comfort, and ease of inflation, deflation, and transport.',
   },
 ];
 
@@ -90,7 +90,7 @@ const faqSchema = JSON.stringify({
       name: 'What does engineering perfection mean at Paddle Board Overstock?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '1.25x rated pressure hold testing, 99.3% defect-free rate, ISO 9001 quality management, and 100-point quality checklist on every unit.',
+        text: '1.25x rated pressure hold testing, 99.3% defect-free rate, and a 100-point quality checklist on every unit.',
       },
     },
     {
@@ -98,7 +98,7 @@ const faqSchema = JSON.stringify({
       name: 'How are quality standards maintained?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'ISO 9001:2015 quality system, AQL 2.5 / ISO 2859 sampling, independent quality lab, and final inspection before shipment.',
+        text: 'AQL 2.5 statistical sampling, an independent quality lab, and final inspection before shipment.',
       },
     },
     {
@@ -106,7 +106,7 @@ const faqSchema = JSON.stringify({
       name: 'Can I specify additional quality requirements?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Custom inspection protocols, third-party inspection, and specific test requirements can be added to OEM/ODM orders.',
+        text: 'Yes. Custom inspection protocols, third-party inspection, and specific test requirements can be arranged for your order.',
       },
     },
   ],
@@ -174,7 +174,7 @@ const faqSchema = JSON.stringify({
       <p class="mt-4 text-muted leading-relaxed text-center max-w-3xl mx-auto">
         {
           t('engineeringPerfection.artDesc') ||
-            'From CNC-precision fabric cutting and advanced thermal welding to controlled-environment adhesive bonding and exhaustive multi-stage testing, every Paddle Board Overstock boat represents the pinnacle of inflatable craft manufacturing. Our production process is designed to prevent common defects — seam leaks, delamination, valve failures, dimensional inconsistencies — before they can occur.'
+            'From CNC-precision fabric cutting and advanced thermal welding to controlled-environment adhesive bonding and exhaustive multi-stage testing, every Paddle Board Overstock board represents the pinnacle of inflatable SUP manufacturing. Our production process is designed to prevent common defects — seam leaks, delamination, valve failures, dimensional inconsistencies — before they can occur.'
         }
       </p>
       <div class="text-center mt-8">
@@ -223,14 +223,6 @@ const faqSchema = JSON.stringify({
         label: 'Quality',
       },
       {
-        title: t('engineeringPerfection.rel2') || 'R&D Center',
-        description:
-          t('engineeringPerfection.rel2desc') ||
-          'Our research facilities including PVC Fabric Lab, Hydrodynamic Test Tank, and Prototype Workshop.',
-        href: `/${lang}/randdcenter`,
-        label: 'R&D',
-      },
-      {
         title: t('engineeringPerfection.rel3') || 'Factory Overview',
         description:
           t('engineeringPerfection.rel3desc') ||
@@ -240,9 +232,7 @@ const faqSchema = JSON.stringify({
       },
       {
         title: t('engineeringPerfection.rel4') || 'Design & Innovation',
-        description:
-          t('engineeringPerfection.rel4desc') ||
-          'Full-service design studio for custom ODM projects, from concept to production.',
+        description: t('engineeringPerfection.rel4desc') || 'Full-service design studio, from concept to production.',
         href: `/${lang}/design-powerhouse`,
         label: 'Design',
       },
