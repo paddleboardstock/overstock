@@ -1,51 +1,52 @@
 hero:
-  tagline: ทรัพยากร
-  title: ศูนย์สื่อ
-  subtitle: ดาวน์โหลดสื่อแบรนด์ ภาพผลิตภัณฑ์ แคตตาล็อก และวิดีโอ
+  tagline: Resources
+  title: Media Center
+  subtitle: Download brand assets, product imagery, catalogs, and videos
+
 sections:
   - id: product-images
-    title: ภาพผลิตภัณฑ์
-    desc: ภาพผลิตภัณฑ์ความละเอียดสูงสำหรับเว็บ สิ่งพิมพ์ และการใช้งานในร้านค้า
+    title: Product Images
+    desc: High-resolution product photos for web, print, and retail use.
     items:
-      - SUP แกลเลอรีบอร์ด
-      - RIB แกลเลอรีเรือ
-      - แกลเลอรีคายัคเป่าลม
-      - อุปกรณ์เสริมและอุปกรณ์ความปลอดภัย
+      - SUP Boards Gallery
+      - Accessories & Safety Gear
   - id: logo-brand-kit
-    title: โลโก้และชุดแบรนด์
-    desc: ไฟล์โลโก้อย่างเป็นทางการ Paddle Board Overstock , สีแบบพาเลต, ตัวอักษร, และแนวทางแบรนด์
+    title: Logo & Brand Kit
+    desc: Official Paddle Board Overstock logo files, colour palette, typography, and brand guidelines.
     items:
-      - โลโก้หลัก (PNG/SVG/EPS)
-      - เครื่องหมายไอคอน
-      - พาเลตสี
-      - สเปกตัวอักษร
-      - แนวทางแบรนด์ PDF
+      - Primary Logo (PNG/SVG/EPS)
+      - Icon Mark
+      - Colour Palette
+      - Typography Specs
+      - Brand Guidelines PDF
   - id: catalogs
-    title: แคตตาล็อก PDF
-    desc: แคตตาล็อกผลิตภัณฑ์, แผ่นข้อมูลสเปก, และเอกสารทางเทคนิคสำหรับดาวน์โหลด
+    title: PDF Catalogs
+    desc: Product catalogs, spec sheets, and technical documentation for download.
     items:
-      - name: SUP แคตตาล็อกบอร์ด 2027
-        url: /catalogs/paddleboardoverstock-sup-catalog.pdf
+        - name: SUP Board Catalog 2027
+          url: /catalogs/paddleboardoverstock-sup-catalog.pdf
   - id: videos
-    title: วิดีโอ
-    desc: สาธิตผลิตภัณฑ์, ทัวร์โรงงาน, ภาพยนตร์แบรนด์, และเรื่องเล่าของลูกค้า
+    title: Videos
+    desc: Product demos, factory tours, brand films, and customer testimonials.
     items:
-      - สาธิตผลิตภัณฑ์
-      - ทัวร์โรงงาน
-      - ภาพยนตร์แบรนด์
-      - เรื่องเล่าของลูกค้า
-      - คู่มือวิธีใช้
-request_access: ขอเข้าถึง →
+      - Product Demos
+      - Factory Tour
+      - Brand Film
+      - Customer Stories
+      - How-To Guides
+
+request_access: Request access →
+
 cta:
-  title: ต้องการความช่วยเหลือในการหาสื่อหรือไม่?
-  desc: ติดต่อทีมแบรนด์ของเราเพื่อขอสื่อแบบกำหนดเอง, พันธมิตรสื่อ, หรือสอบถามสื่อ
+  title: Need help finding assets?
+  desc: Contact our brand team for custom asset requests, media partnerships, or press inquiries.
   links:
-    - label: เยี่ยมชมโรงงานของเรา
+    - label: Visit our factory
       href: /factory
-      desc: ดูสถานที่ผลิตขนาด 12,000 ตร.ม. ของเรา
-    - label: แนวทางแบรนด์
+      desc: See our 12,000 sqm manufacturing facility
+    - label: Brand guidelines
       href: /brand
-      desc: เรียนรู้เกี่ยวกับแบรนด์ Paddle Board Overstock
-    - label: ร่วมมือกับเรา
+      desc: Learn about the Paddle Board Overstock brand
+    - label: Get in touch
       href: /contact
-      desc: OEM, ODM, และสอบถามการจัดจำหน่าย
+      desc: Questions about orders, boards, or shipping

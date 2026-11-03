@@ -11,7 +11,7 @@ export interface Props {
 const {
   lang = 'en',
   heroTitle = 'AI Answer Center',
-  heroSubtitle = 'Ask anything about inflatable boats, SUP boards, kayaks, materials, safety, and more.',
+  heroSubtitle = 'Ask anything about inflatable SUP boards, materials, accessories, safety, and more.',
   placeholder = 'Ask a question...',
   askButton = 'Ask',
   categories = [],
@@ -64,7 +64,7 @@ const {
             <>
               <div class="ac-category-card">
                 <div class="ac-category-header">
-                  <span class="ac-category-icon">🛶</span>
+                  <span class="ac-category-icon">🏄</span>
                   <h3 class="ac-category-label">Products</h3>
                 </div>
                 <ul class="ac-question-list">
@@ -81,25 +81,25 @@ const {
                     <button
                       type="button"
                       class="ac-question-btn"
-                      data-question="Compare RIB 330 vs RIB 430 for coastal patrol use."
+                      data-question="Compare inflatable vs hard paddle boards for coastal touring."
                     >
-                      RIB 330 vs RIB 430 for patrol?
+                      Inflatable vs hard board?
                     </button>
                   </li>
                   <li>
                     <button
                       type="button"
                       class="ac-question-btn"
-                      data-question="What inflatable kayak is best for river touring?"
+                      data-question="What inflatable paddle board is best for river touring?"
                     >
-                      Best kayak for river touring?
+                      Best board for river touring?
                     </button>
                   </li>
                   <li>
                     <button
                       type="button"
                       class="ac-question-btn"
-                      data-question="What safety equipment do I need for my inflatable boat?"
+                      data-question="What safety equipment do I need for my inflatable paddle board?"
                     >
                       What safety gear do I need?
                     </button>
@@ -125,9 +125,9 @@ const {
                     <button
                       type="button"
                       class="ac-question-btn"
-                      data-question="Compare PVC vs Hypalon for inflatable boat durability."
+                      data-question="Compare single-layer vs double-layer PVC for inflatable SUP durability."
                     >
-                      PVC vs Hypalon durability?
+                      Single vs double-layer PVC?
                     </button>
                   </li>
                   <li>
@@ -143,9 +143,9 @@ const {
                     <button
                       type="button"
                       class="ac-question-btn"
-                      data-question="How is an inflatable boat manufactured?"
+                      data-question="How is an inflatable paddle board manufactured?"
                     >
-                      How are inflatable boats made?
+                      How are inflatable boards made?
                     </button>
                   </li>
                 </ul>
@@ -160,36 +160,36 @@ const {
                     <button
                       type="button"
                       class="ac-question-btn"
-                      data-question="What type of boat is best for search and rescue operations?"
+                      data-question="What type of paddle board is best for ocean touring?"
                     >
-                      Best boat for search & rescue?
+                      Best board for ocean touring?
                     </button>
                   </li>
                   <li>
                     <button
                       type="button"
                       class="ac-question-btn"
-                      data-question="I need a family boat for lake trips with my wife and two kids. What do you recommend?"
+                      data-question="I need a family paddle board for lake trips with my wife and two kids. What do you recommend?"
                     >
-                      Family lake boat recommendation?
+                      Family lake paddle board?
                     </button>
                   </li>
                   <li>
                     <button
                       type="button"
                       class="ac-question-btn"
-                      data-question="Can I use an inflatable boat for fishing in coastal waters?"
+                      data-question="Can I use an inflatable paddle board for fishing in coastal waters?"
                     >
-                      Inflatable boat for fishing?
+                      SUP for coastal fishing?
                     </button>
                   </li>
                   <li>
                     <button
                       type="button"
                       class="ac-question-btn"
-                      data-question="What are the OEM/ODM manufacturing options for private label inflatable boats?"
+                      data-question="What accessories come included with an inflatable paddle board package?"
                     >
-                      OEM/ODM private label options?
+                      What is included in a package?
                     </button>
                   </li>
                 </ul>
@@ -245,7 +245,7 @@ const {
         <a href={lang === 'en' ? '/evidence' : `/${lang}/evidence`} class="ac-resource-card">
           <div class="ac-resource-icon">📊</div>
           <h3>Evidence & Case Studies</h3>
-          <p>Real deployments, certifications, and test results</p>
+          <p>Real deployments, testing data, and verified results</p>
         </a>
       </div>
     </div>

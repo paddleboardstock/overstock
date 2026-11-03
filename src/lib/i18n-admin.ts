@@ -9,11 +9,6 @@ export const ADMIN_LOCALES: Record<string, string> = {
   ru: 'Русский',
   pl: 'Polski',
   nl: 'Nederlands',
-  sv: 'Svenska',
-  no: 'Norsk',
-  el: 'Ελληνικά',
-  fi: 'Suomi',
-  da: 'Dansk',
 };
 export const ADMIN_LOCALE_CODES = Object.keys(ADMIN_LOCALES);
 

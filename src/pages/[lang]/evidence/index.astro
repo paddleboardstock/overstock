@@ -9,13 +9,6 @@ const PAGE_META: Record<string, { title: string }> = {
   ru: { title: 'Доказательства и подтверждения' },
   pl: { title: 'Dowody i potwierdzenia' },
   nl: { title: 'Bewijzen en onderbouwing' },
-  sv: { title: 'Bevis och verifiering' },
-  no: { title: 'Bevis og verifisering' },
-  el: { title: 'Αποδείξεις και τεκμηρίωση' },
-  fi: { title: 'Todisteet ja varmistukset' },
-  da: { title: 'Beviser og verificering' },
-  cs: { title: 'Důkazy a důkazy' },
-  ja: { title: '証拠と証拠' },
 };
 export const prerender = true;
 
@@ -39,11 +32,6 @@ interface CaseStudy {
   outcome_metrics: { label: string; value: string }[];
 }
 
-interface Certification {
-  name: string;
-  body: string;
-  desc: string;
-}
 interface TestResult {
   metric: string;
   value: string;
@@ -68,14 +56,15 @@ const t = (key: string) => getUiForLang(lang || defaultLang)?.[key] || '';
 
 const d = pageContentData[`${lang}/site-evidence`] || pageContentData['en/site-evidence'] || {};
 const caseStudies: CaseStudy[] = d.case_studies ?? [];
-const certifications: Certification[] = d.certifications ?? [];
 const testResults: TestResult[] = d.test_results ?? [];
 const specSheets: SpecSheet[] = d.spec_sheets ?? [];
 const deploymentPhotos: DeploymentPhoto[] = d.deployment_photos ?? [];
 
 const metadata = {
   title: PAGE_META[lang]?.title || `Evidence & Proof | ${SITE.name}`,
-  description: t('home.evidence.subtitle'),
+  description:
+    t('home.evidence.subtitle') ||
+    'Real quality stories, test data, and factory photos that show how every clearance board ships at retail-grade quality.',
   ignoreTitleTemplate: true,
 };
 
@@ -88,7 +77,7 @@ const faqSchema = JSON.stringify({
       name: 'What evidence supports Paddle Board Overstock quality claims?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'ISO 9001:2015 certificate (SGS), CE Declarations of Conformity, BSCI audit reports, 99.3% defect-free rate per AQL 2.5 / ISO 2859, and 1.25x pressure test logs.',
+        text: '99.3% defect-free rate on outgoing shipments, 100% pressure testing with a 24-48h hold at 1.25x rated pressure, and 2-year warranty coverage.',
       },
     },
     {
@@ -96,7 +85,7 @@ const faqSchema = JSON.stringify({
       name: 'Can I review test reports?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Material test reports, pressure test logs, and QC certificates available for OEM/ODM partners upon request.',
+        text: 'Yes. Material test reports, pressure test logs, and QC reports are available on request.',
       },
     },
     {
@@ -104,7 +93,7 @@ const faqSchema = JSON.stringify({
       name: 'Are third-party inspections accepted?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. SGS, BV, TUV, and other third-party inspection agencies are welcome at our Qingdao facility.',
+        text: 'Yes. Independent third-party inspectors are welcome at our Weihai facility.',
       },
     },
   ],
@@ -127,9 +116,9 @@ const faqSchema = JSON.stringify({
       '@type': 'Dataset',
       name: 'Paddle Board Overstock Product Test Results',
       description:
-        'Quality control test results for inflatable watercraft including pressure testing, defect thresholds, and safety margins.',
+        'Quality control test results for inflatable SUP boards including pressure testing, defect thresholds, and safety margins.',
       about: 'Marine Equipment Quality Testing',
-      measurementTechnique: 'ISO 2859 sampling, 24h pressure hold at 1.25x rated pressure',
+      measurementTechnique: '24-48h pressure hold at 1.25x rated pressure',
       variableMeasured: testResults.map((t) => t.metric),
       author: { '@type': 'Organization', name: SITE.name },
     }}
@@ -145,7 +134,12 @@ const faqSchema = JSON.stringify({
     <div class="text-center max-w-3xl mx-auto mb-16">
       <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">{t('home.evidence.tagline')}</span>
       <h1 class="mt-4 text-4xl font-bold text-gray-900">{t('home.evidence.title')}</h1>
-      <p class="mt-4 text-lg text-gray-500">{t('home.evidence.subtitle')}</p>
+      <p class="mt-4 text-lg text-gray-500">
+        {
+          t('home.evidence.subtitle') ||
+            'Real quality stories, test data, and factory photos that show how every clearance board ships at retail-grade quality.'
+        }
+      </p>
     </div>
 
     <!-- Case Studies -->
@@ -190,22 +184,6 @@ const faqSchema = JSON.stringify({
                 </span>
               </div>
             </a>
-          ))
-        }
-      </div>
-    </section>
-
-    <!-- Certifications -->
-    <section class="mb-20">
-      <h2 class="text-2xl font-bold text-gray-900 mb-8">{t('home.evidence.certifications')}</h2>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {
-          certifications.map((cert) => (
-            <div class="bg-white border border-gray-200 rounded-2xl p-6">
-              <h3 class="text-lg font-semibold text-gray-900 mb-1">{cert.name}</h3>
-              <p class="text-xs text-gray-400 mb-3">{cert.body}</p>
-              <p class="text-sm text-gray-500 leading-relaxed">{cert.desc}</p>
-            </div>
           ))
         }
       </div>
@@ -275,7 +253,9 @@ const faqSchema = JSON.stringify({
     <!-- CTA -->
     <section class="bg-gradient-to-r from-sky-600 to-blue-700 rounded-2xl p-10 text-center text-white">
       <h2 class="text-2xl font-bold mb-3">{t('home.evidence.ctaTitle')}</h2>
-      <p class="text-sky-100 max-w-xl mx-auto mb-6">{t('home.evidence.ctaDesc')}</p>
+      <p class="text-sky-100 max-w-xl mx-auto mb-6">
+        {t('home.evidence.ctaDesc') || 'Contact our team for detailed test reports and case study references.'}
+      </p>
       <a
         href={`/${lang}/contact`}
         class="inline-block bg-white text-sky-700 font-semibold px-8 py-3 rounded-xl hover:bg-sky-50 transition-colors"

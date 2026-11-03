@@ -9,7 +9,7 @@ export const GET: APIRoute = async () => {
     name: 'Paddle Board Overstock',
     short_name: 'Paddle Board Overstock',
     description:
-      'Professional inflatable boats, SUPs, kayaks, and water sports equipment. Manufacturer-direct pricing with global shipping.',
+      'Inflatable SUP boards, paddles, and water sports accessories. Manufacturer-direct pricing with global shipping.',
     start_url: '/',
     display: 'standalone',
     background_color: '#ffffff',

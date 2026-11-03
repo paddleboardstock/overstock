@@ -27,39 +27,23 @@ import { defaultLang, setLang } from '~/i18n/config';
 import { getLangFromUrl, removeLang, localizeUseCasePath } from '~/i18n/utils';
 import { isRootOnlyRoute as isRootOnlyRouteFn } from '~/i18n/root-only';
 import facts from '~/config/facts.json';
-// P1-D：只为完整本地化并毕业的语言背书（cs 2026-09-27、sv/da/el/no/ru 2026-09-28、nl/fi/pl/ar/pt 2026-09-28、ja 2026-09-29、bg/et/he/hr/hu/id/ko/lt/lv/ms/ro/sk/sl/sr/th/tl/tr 2026-10-19 毕业，清单见 TECH.md §16.4），其余语言整体 noindex（见 seo-suppress.json）
+// P1-D：只为完整本地化并毕业的语言背书（清单见 TECH.md §16.4），其余语言整体 noindex（见 seo-suppress.json）
 const FULLY_LOCALIZED = [
   'en',
   'de',
   'fr',
   'es',
   'it',
-  'cs',
-  'sv',
-  'da',
-  'el',
-  'no',
   'ru',
   'nl',
-  'fi',
   'pl',
   'ar',
   'pt',
-  'ja',
   'bg',
-  'et',
-  'he',
-  'hr',
   'hu',
   'id',
-  'ko',
-  'lt',
-  'lv',
   'ms',
   'ro',
-  'sk',
-  'sl',
-  'sr',
   'th',
   'tl',
   'tr',
@@ -87,7 +71,7 @@ const language = currentLang;
 // Populate the generated per-language UI strings (small per-language modules,
 // statically imported in src/i18n/generated/ui-all.ts) for all components.
 setLang(currentLang);
-const RTL_LANGS = new Set(['ar', 'he']);
+const RTL_LANGS = new Set(['ar']);
 const textDirection = RTL_LANGS.has(language) ? 'rtl' : defaultTextDir || 'ltr';
 
 // Root-only routes have no localized versions. Emitting per-locale
@@ -174,8 +158,8 @@ const isRootOnlyRoute = isRootOnlyRouteFn(pathWithoutLang);
                 'Worldwide e-commerce fulfillment',
                 'Stripe and PayPal secure checkout',
                 'Marine quality testing and pressure validation',
-                'CE EN ISO 6185 inflatable watercraft compliance',
-                'FOB Weihai/Qingdao logistics',
+                '100% factory pressure testing on every board',
+                'FOB Weihai logistics',
               ],
               industry: ['Water Sports Retail', 'Inflatable SUP Overstock & Clearance'],
               areaServed: facts.reach.regions,

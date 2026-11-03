@@ -25,7 +25,7 @@ const howToChoose = page.how_to_choose || {};
 const metadata = {
   title: localizePageTitle(page, `Size Guide — ${SITE.name}`),
   description:
-    'Find the right size inflatable SUP, kayak, or boat for your needs. Compare dimensions, weight capacities, and recommended uses.',
+    'Find the right inflatable SUP size for your weight and skill. Compare board lengths, widths, thickness, weight, and max load.',
 };
 
 const rawProducts = await getProducts();
@@ -47,7 +47,7 @@ const faqSchema = JSON.stringify({
       name: 'What SUP board sizes are available?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '9ft to 15ft in 4-inch and 6-inch Drop-Stitch configurations. Custom sizes available for OEM orders.',
+        text: 'Our boards are ~11 ft (330 cm) all-around shapes, 32 inches wide, with 6-inch drop-stitch cores rated to 15 PSI.',
       },
     },
     {
@@ -55,15 +55,15 @@ const faqSchema = JSON.stringify({
       name: 'What size is best for beginners?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '10ft6in to 11ft6in in 6-inch Drop-Stitch at 15 PSI offers the best stability and versatility for beginners.',
+        text: 'A ~11 ft all-around board at 32 inches wide and 6-inch thickness at 15 PSI offers the best stability and versatility for beginners.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Are custom sizes available?',
+      name: 'What is included with a board?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Custom lengths, widths, thickness, and rocker profiles available for OEM/ODM with minimum 200+ unit orders.',
+        text: 'Every SUP ships as a complete package: board, travel backpack, hand pump, adjustable paddle, removable fin, coil leash, and repair kit.',
       },
     },
   ],
@@ -79,14 +79,14 @@ const faqSchema = JSON.stringify({
 
     <div class="mt-12 space-y-16">
       {
-        (['inflatable', 'rib', 'accessory'] as const).map((cat) => {
+        (['sup', 'accessory'] as const).map((cat) => {
           const catProducts = products.filter((p) => p.category === cat);
           if (catProducts.length === 0) return null;
           const catLabel = catProducts[0]?.categoryLabel || cat;
           return (
             <section>
               <h2 class="text-2xl font-semibold text-gray-900 mb-2">{catLabel}</h2>
-              <p class="text-gray-500 mb-6">{categoriesText[cat] || ''}</p>
+              <p class="text-gray-500 mb-6">{categoriesText[cat.toUpperCase()] || ''}</p>
               <div class="overflow-x-auto">
                 <table class="w-full text-sm border-collapse">
                   <thead>
@@ -153,8 +153,8 @@ const faqSchema = JSON.stringify({
 
     <section class="sr-only" data-ai-block="definition" aria-hidden="true">
       <p>
-        Paddle Board Overstock size guide comparing product dimensions, weight capacities, and recommended uses across
-        inflatable, RIB, and accessory categories.
+        Paddle Board Overstock size guide comparing board dimensions, weight capacities, and recommended uses across SUP
+        board and accessory categories.
       </p>
     </section>
   </section>

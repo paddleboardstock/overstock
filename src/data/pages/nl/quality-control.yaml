@@ -1,137 +1,136 @@
 hero:
-  tagline: Kwaliteitscontrole
-  title: Kwaliteitscontrolesysteem voor OEM maritieme productie
-  subtitle: Meertraps inspectieproces dat inkomende materialen, productie in uitvoering, druktesten, eindassemblage en pre-shipment verificatie omvat. Elke batch is traceerbaar, elke test wordt geregistreerd.
+  tagline: Quality Control
+  title: Quality Control<br />System
+  subtitle: Multi-stage inspection process covering incoming materials, in-process production, pressure testing, final assembly, and pre-shipment verification. Every batch is traceable, every test is recorded.
   image:
     src: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/factory/paddleboardoverstock-pressure-testing.webp
-    alt: Paddle Board Overstock kwaliteitscontrole- en druktestproces
+    alt: Paddle Board Overstock quality control and pressure testing process
 stats:
-  title: QC in cijfers
+  title: QC by the Numbers
   stats:
-    - title: Eenheden Drukgecontroleerd
+    - title: Units Pressure-Tested
       amount: 100%
-    - title: Maximale drukval
+    - title: Max Pressure Drop
       amount: <5%
-    - title: QC-inspecteurs
-      amount: '12'
-    - title: Gearchiveerde records
-      amount: 10 jaar
+    - title: QC Inspectors
+      amount: "12"
+    - title: Records Retained
+      amount: 10 years
 content_system:
-  tagline: Overzicht QC-systeem
-  title: Geïntegreerd Kwaliteits<br />controlekader
-  subtitle: Ons QC-systeem opereert onafhankelijk van de productie en rapporteert rechtstreeks aan het management. Geen enkele batch wordt verzonden zonder een ondertekende kwaliteitsvrijgave van het kwaliteitslab.
+  tagline: QC System Overview
+  title: Integrated Quality<br />Control Framework
+  subtitle: Our QC system operates independently from production and reports directly to management. No batch is shipped without signed quality release from the quality lab.
   items:
-    - title: Onafhankelijk Kwaliteitslaboratorium
-      description: Ons kwaliteitslaboratorium functioneert als een aparte afdeling van de productie. QC-inspecteurs rapporteren aan de Kwaliteitsmanager, niet aan de Productiedirecteur. Deze organisatorische onafhankelijkheid zorgt ervoor dat kwaliteitsbeslissingen objectief worden genomen — productietermijnen gaan nooit boven de kwaliteitsvereisten.
+    - title: Independent Quality Lab
+      description: Our quality lab operates as a separate function from production. QC inspectors report to the Quality Manager, not the Production Director. This organizational independence ensures that quality decisions are made objectively — production deadlines never override quality requirements.
       features:
-        - Rapporteert rechtstreeks aan het management, onafhankelijk van de productie
-        - Gemachtigd om de productie stil te leggen bij kwaliteitsproblemen
-        - 12 toegewijde QC-inspecteurs over alle fasen
-        - Alle testapparatuur jaarlijks gekalibreerd
-    - title: Partij Traceerbaarheid
-      description: Elke partij grondstof krijgt een uniek batchnummer in ons ERP-systeem. Van materiaalontvangst via productie tot het eindproduct, verwijst iedere samenstellingslijst van een boot terug naar de oorspronkelijke leveranciersbatches. Dit maakt volledige terugwaartse traceerbaarheid mogelijk voor elk kwaliteits- of nalevingsonderzoek.
+        - Reports directly to management, independent of production
+        - Authorized to halt production for quality issues
+        - 12 dedicated QC inspectors across all stages
+        - All test equipment calibrated annually
+    - title: Batch Traceability
+      description: Every batch of raw material is assigned a unique lot number in our ERP system. From material arrival through production to finished product, each board's bill of materials links back to original supplier batches. This enables full upstream traceability for any quality or compliance inquiry.
       features:
-        - ERP-gebaseerde partijtracking van materiaal tot eindproduct
-        - Fysieke batchlabels op elke werkorder
-        - 100% materiaaldekking — PVC, Hypalon, hardware, lijmen
-        - Records worden 10 jaar bewaard (CE 2013/53/EU vereiste)
-    - title: Normen & Naleving
-      description: Onze QC-procedures zijn afgestemd op internationale normen. Producten zijn CE gecertificeerd volgens de EU Richtlijn voor Vrijetijdsvaartuigen 2013/53/EU. Ons kwaliteitsmanagementsysteem is ISO 9001 gecertificeerd. Sociale naleving wordt gehandhaafd via BSCI certificering.
+        - ERP-based lot tracking from material to finished product
+        - Physical batch tags on each work order
+        - 100% material coverage — PVC, drop-stitch, EVA foam, hardware, adhesives
+        - Records retained for 10 years
+    - title: Quality Management
+      description: Our QC procedures follow documented internal protocols. Test results are recorded, traceable, and reviewed by our independent quality lab. 99.3% defect-free rate across trailing 12-month shipments.
       features:
-        - CE certificering (EU 2013/53/EU)
-        - ISO 9001:2015 kwaliteitsbeheer
-        - BSCI sociale nalevingscertificering
-        - REACH en RoHS-materiaalconformiteit
-        - UKCA-certificering na de Brexit
+        - Documented internal QC protocols, reviewed annually
+        - 99.3% defect-free rate across trailing 12-month shipments
+        - Zero tolerance on safety-critical defects
+        - Records retained for 10 years
 content_inspection:
-  tagline: Inspectiestadia
-  title: Zes-fasen<br />inspectieproces
-  subtitle: Elk product doorloopt 6 inspectiefasen met gedocumenteerde kwaliteitscontrolepunten. Defecten worden vroegtijdig opgemerkt, corrigerende maatregelen worden onmiddellijk genomen en elke partij is volledig traceerbaar.
+  tagline: Inspection Stages
+  title: Six-Stage<br />Inspection Process
+  subtitle: Every product passes through 6 inspection stages with documented QC checkpoints. Defects are caught early, corrective actions are immediate, and every batch is fully traceable.
   stages:
-    - stage: '1'
-      title: Binnenkomende materiaalinspectie
-      description: Alle binnenkomende materialen worden geregistreerd op batch-/lotnummer en in quarantaine geplaatst tot goedkeuring door de kwaliteitscontrole. PVC/Hypalon stofrollen worden getest op treksterkte (ASTM D751), scheurweerstand (ISO 4674) en dikte. Drop-stitch kernen, kleppen, lijmen en hardware worden visueel geïnspecteerd en gemeten aan de hand van specificaties.
-      checks: Treksterkte ASTM D751, scheurweerstand ISO 4674, diktemeter, lijmviscositeit, visuele defectscan
-      threshold: 100% van de batches getest. Weigeren indien treksterkte < 90% van specificaties, scheur < spec min, of enig visueel defect
-    - stage: '2'
-      title: In-proces QC — Snijden & Voorbereiding
-      description: CNC-gesneden panelen worden om de 20e panel dimensionaal gecontroleerd aan de hand van CAD-bronbestanden. De randkwaliteit wordt geïnspecteerd op rafelen, ongelijke sneden of dimensionale afwijking. Het aantal panelen wordt gecontroleerd aan de hand van de BOM voor elke productiebatch voordat de materialen naar het lassen gaan.
-      checks: Dimensionale controle aan de hand van CAD DXF-bestanden, inspectie van de randkwaliteit, verificatie van het aantal panelen
-      threshold: Tolerantie ±0,5 mm. Afkeuren van partij als >2% buiten tolerantie
-    - stage: '3'
-      title: QC tijdens het proces — Lassen & Lijmen
-      description: Tijdens de productie wordt de las kwaliteit continu gecontroleerd. Scheurtests (ASTM D751) worden uitgevoerd op monsters elke 50 eenheden. De lasbreedte wordt gemeten volgens de specificatie. Logs van de hete-lucht temperatuur worden gecontroleerd op consistentie. Elk naad wordt visueel geïnspecteerd onder achtergrondverlichting op kanaalvorming of leegtes.
-      checks: Peel-test ASTM D751 elke 50 eenheden, lasbreedtemeting, controle van het logboek van de hete-lucht temperatuur, inspectie van de naad met achterlicht
-      threshold: Peessterkte min 8 N/cm. Laskant tolerantie ±1 mm. Elke zichtbare kanaalvorming = afkeuren
-    - stage: '4'
-      title: Assemblage QC
-      description: Elke eenheid volgt een assemblagechecklist van 100 punten die wordt ondertekend door de teamleider. De klepfunctie wordt getest door 10 open-/sluitcycli. Het aanhaalmoment van de hardware wordt gecontroleerd. Visuele inspectie omvat oppervlakteafwerking, kleurconsistentie, labelplaatsing en volledigheid van accessoires.
-      checks: 100-punten checklist per eenheid, klepfunctietest, verificatie van hardware-koppel, visuele inspectie
-      threshold: 'Zero-defect-beleid op veiligheidskritische items (kleppen, D-ringen, handgrepen). Klein cosmetisch: AQL 2,5 (ISO 2859)'
-    - stage: '5'
-      title: Druk testen
-      description: Elke kamer wordt opgeblazen tot 1,25× de nominale druk en 24-48 uur vastgehouden. Druksensoren registreren continu gedurende de houdperiode. Temperatuurgecompenseerde metingen zorgen voor nauwkeurigheid. Elke kamer die een drukval van meer dan 5% vertoont, wordt afgekeurd en ter herinspectie van de naden gestuurd met een 100% her-test van de volledige productiebatch.
-      checks: 24-48u drukhoudingslog, sensorcalibratie dagelijks geverifieerd, temperatuurgecompenseerde meting, na reparatie naadher-test
-      threshold: Maximaal 5% drukval over 24 uur bij stabiele temperatuur. Overschrijding = 100% her-test van de hele batch
-    - stage: '6'
-      title: Eindinspectie & Verzending vrijgeven
-      description: Laatste visuele en functionele inspectie vóór verpakking. Oppervlaktefouten, kleurconsistentie, verificatie van etiketten/BIN, integriteit van de verpakking en volledigheid van accessoires worden gecontroleerd volgens de klantorder. De eenheden worden vacuüm verpakt, ingepakt in dozen en op pallets geplaatst. Definitief kwaliteitscontrolegoedkeuring is vereist voordat enig product de fabriek verlaat.
-      checks: Volledige visuele inspectie, accessoire-checklist per SKU, verpakkingsvaltest (1m willekeurige monster), label/barcode-scan verificatie
-      threshold: AQL 2,5 ernstige gebreken, AQL 4,0 kleine gebreken. Nul tolerantie voor veiligheidsgebreken. 100% van de eenheden visueel geïnspecteerd
+    - stage: "1"
+      title: Incoming Material Inspection
+      description: All incoming materials are logged by batch/lot number and quarantined until QC sign-off. PVC fabric rolls are tested for tensile strength, tear resistance, and thickness. Drop-stitch cores, valves, adhesives, and hardware are visually inspected and measured against specifications.
+      checks: Tensile strength, tear resistance, thickness gauge, adhesive viscosity, visual defect scan
+      threshold: 100% of batches tested. Reject if tensile < 90% of spec, tear < spec min, or any visual defect
+    - stage: "2"
+      title: In-Process QC — Cutting & Prep
+      description: CNC-cut panels are dimensionally checked against CAD source files every 20th panel. Edge quality is inspected for fraying, uneven cuts, or dimensional drift. Panel count is verified against the BOM for each production batch before materials move to welding.
+      checks: Dimensional check against CAD DXF files, edge quality inspection, panel count verification
+      threshold: Tolerance ±0.5mm. Reject batch if >2% out of tolerance
+    - stage: "3"
+      title: In-Process QC — Welding & Bonding
+      description: During production, weld quality is continuously monitored. Peel tests are conducted on samples every 50 units. Weld width is measured against specification. Hot-air temperature logs are reviewed for consistency. Every seam is visually inspected under backlight for channeling or voids.
+      checks: Peel test every 50 units, weld width measurement, hot-air temperature log review, backlight seam inspection
+      threshold: Peel strength min 8 N/cm. Weld width tolerance ±1mm. Any visible channeling = reject
+    - stage: "4"
+      title: Assembly QC
+      description: Each unit follows a 100-point assembly checklist signed off by the team lead. Valve function is tested through 10 open/close cycles. Hardware torque is verified. Visual inspection covers surface finish, color consistency, label placement, and accessory completeness.
+      checks: 100-point checklist per unit, valve function test, hardware torque verification, visual inspection
+      threshold: "Zero-defect policy on safety-critical items (valves, D-rings, handles). Minor cosmetic: 99.3% defect-free target"
+    - stage: "5"
+      title: Pressure Testing
+      description: Every chamber is inflated to 1.25× rated pressure and held for 24-48 hours. Pressure sensors log continuously throughout the hold period. Temperature-compensated readings ensure accuracy. Any chamber exceeding 5% pressure drop is rejected and sent for seam re-inspection with 100% re-test of the entire production batch.
+      checks: 24-48h pressure hold log, sensor calibration verified daily, temperature-compensated reading, seam re-test after repair
+      threshold: Max 5% pressure drop over 24h at stable temp. Exceeding = 100% re-test of entire batch
+    - stage: "6"
+      title: Final Inspection & Shipment Release
+      description: Final visual and functional inspection before packing. Surface defects, color consistency, label/BIN verification, packaging integrity, and accessory completeness are checked against the customer order. Units are vacuum-packed, boxed, and palletized. Final QC sign-off is required before any product leaves the factory.
+      checks: Full visual inspection, accessory checklist per SKU, packaging drop test (1m random sample), label/bar code scan verification
+      threshold: Zero tolerance safety defects. 99.3% defect-free target. 100% of units visually inspected
 content_equipment:
-  tagline: Testapparatuur
-  title: QC Lab<br />Apparatuur
-  subtitle: Ons kwaliteitslab is uitgerust met gespecialiseerd testapparatuur voor materiaalkontrole, lasintegriteit en prestatievalidatie van producten.
+  tagline: Testing Equipment
+  title: QC Lab<br />Equipment
+  subtitle: Our quality lab is equipped with specialized testing equipment for material verification, weld integrity, and product performance validation.
   columns: 3
   items:
-    - title: Trekproefmachine
-      description: Meet de treksterkte en rek van stoffen volgens ASTM D751. Wordt gebruikt voor inkomende kwaliteitscontrole van alle PVC, Hypalon en drop-stitch stofpartijen.
+    - title: Tensile Testing Machine
+      description: Measures fabric tensile strength and elongation per internal test protocol. Used for incoming QC of all PVC and drop-stitch fabric batches.
       icon: tabler:scale
-    - title: Temperatuurkamer
-      description: Milieukamer voor UV weerstandstests (ASTM G154) en tests voor flexibiliteit bij lage temperaturen. Simuleert extreme bedrijfsomstandigheden.
+    - title: Temperature Chamber
+      description: Environmental chamber for UV resistance testing and low-temperature flexibility testing. Simulates extreme operating conditions.
       icon: tabler:temperature
-    - title: Druksensoren & Loggers
-      description: Digitale druksensoren met continue gegevensregistratie voor 24-48 uur luchtbehoudtesten. Temperatuurgecompenseerd voor nauwkeurigheid.
+    - title: Pressure Sensors & Loggers
+      description: Digital pressure sensors with continuous data logging for 24-48 hour air retention tests. Temperature-compensated for accuracy.
       icon: tabler:wind
-    - title: Peel-testopstelling
-      description: Gecalibreerde peeltestapparatuur voor controle van de lasnaadsterkte. Willekeurige monsters van elke productiebatch.
+    - title: Peel Test Rig
+      description: Calibrated peel testing equipment for weld seam strength verification. Random samples from every production batch.
       icon: tabler:files
-    - title: Lekdetectietank
-      description: Watertank voor ondergedompeld lekkagetesten van opgeblazen kamers. Visuele beldetectie voor verificatie van de naad- en klepintegriteit.
+    - title: Leak Detection Tank
+      description: Water tank for submerged leak testing of inflated chambers. Visual bubble detection for seam and valve integrity verification.
       icon: tabler:ripple
-    - title: Inspectiegereedschappen
-      description: Geijkte meetinstrumenten — diktemeters, momentsleutels, dimensionale schuifmaten, hardheidstesters voor productiekwaliteitscontrolevlakken.
+    - title: Inspection Tools
+      description: Calibrated measurement tools — thickness gauges, torque wrenches, dimensional calipers, hardness testers for production QC stations.
       icon: tabler:tools
 content_metrics:
-  tagline: QC-prestaties
-  title: Kwaliteitscontrole<br />Metrics
-  subtitle: Werkelijke slaag-/faalgegevens van onze productielijn. Deze statistieken worden dagelijks gecontroleerd en maandelijks door het management beoordeeld.
+  tagline: QC Performance
+  title: Quality Control<br />Metrics
+  subtitle: Real pass/fail data from our production line. These metrics are monitored daily and reviewed monthly by management.
   columns: 3
   items:
-    - title: 100% Eenheden Getest
-      description: Elke kamer van iedere boot wordt drukgetest voordat deze wordt verzonden. Geen steekproeven — 100% inspectie op drukintegriteit.
+    - title: 100% Units Tested
+      description: Every chamber of every board is pressure-tested before shipping. No sampling — 100% inspection on pressure integrity.
       icon: tabler:check
-    - title: <5% Drukval
-      description: Maximaal toelaatbaar drukverlies over 24-48 uur bij 1,25× de nominale druk. Elke kamer die deze drempel overschrijdt, activeert een herhaalde test van het batch.
+    - title: <5% Pressure Drop
+      description: Maximum allowable pressure loss over 24-48 hours at 1.25× rated pressure. Any chamber exceeding this threshold triggers batch re-test.
       icon: tabler:gauge
-    - title: AQL 2,5
-      description: Acceptabel kwaliteitsniveau voor grote defecten per ISO 2859 steekproefnorm. Nultolerantie voor veiligheidkritische defecten.
+    - title: 99.3% Defect-Free
+      description: Defect-free rate across trailing 12-month shipments. Zero tolerance on safety-critical defects.
       icon: tabler:clipboard-check
-    - title: 24-48 Uur Vasthouden
-      description: 'De duur van de druk vasthouden varieert per productcategorie. RIB kamers: 48 uur. SUP en opblaasbare boten: 24-48 uur.'
+    - title: 24-48 Hour Hold
+      description: Boards are held 24-48 hours depending on model and batch. Pressure sensors log continuously throughout the hold period.
       icon: tabler:clock
-    - title: 1,25× testdruk
-      description: Veiligheidsmarge op elke kamer — getest bij 25% boven de nominale druk om te zorgen voor marge boven de maximale bedrijfsomstandigheden.
+    - title: 1.25× Test Pressure
+      description: Safety margin on every chamber — tested at 25% above rated pressure to ensure margin above maximum operating conditions.
       icon: tabler:arrow-up
-    - title: 0% Veiligheidsgebreken
-      description: Zero-tolerantiebeleid voor veiligheidkritische gebreken — kleppen, D-ringen, naden en drijfkamer. Elk defect = 100% herinspectie.
+    - title: 0% Safety Defects
+      description: Zero tolerance policy on safety-critical defects — valves, D-rings, seams, and buoyancy chambers. Any defect = 100% re-inspection.
       icon: tabler:shield
 cta:
-  title: Vraag om kwaliteitsdocumentatie
-  subtitle: Wij leveren volledige kwaliteitsdocumentatiepakketten, inclusief testrapporten, materiaalcertificaten en conformiteitsverklaringen bij elke verzending. Neem contact met ons op voor monsters.
+  title: Request quality documentation
+  subtitle: We provide full quality documentation packages including test reports and inspection records with every shipment. Contact us for samples.
   actions:
     - variant: primary
-      text: Vraag QC-documentatie aan
+      text: Request QC documentation
       href: /contact
-    - text: Bekijk testprotocollen
+    - text: View testing protocols
       href: /quality

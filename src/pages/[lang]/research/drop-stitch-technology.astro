@@ -10,35 +10,19 @@ import LDe from '~/components/research/drop-stitch-technology.de.astro';
 import LEs from '~/components/research/drop-stitch-technology.es.astro';
 import LFr from '~/components/research/drop-stitch-technology.fr.astro';
 import LIt from '~/components/research/drop-stitch-technology.it.astro';
-import LCs from '~/components/research/drop-stitch-technology.cs.astro';
-import LSv from '~/components/research/drop-stitch-technology.sv.astro';
-import LDa from '~/components/research/drop-stitch-technology.da.astro';
-import LEl from '~/components/research/drop-stitch-technology.el.astro';
-import LNo from '~/components/research/drop-stitch-technology.no.astro';
 import LRu from '~/components/research/drop-stitch-technology.ru.astro';
 import LNl from '~/components/research/drop-stitch-technology.nl.astro';
-import LFi from '~/components/research/drop-stitch-technology.fi.astro';
 import LPl from '~/components/research/drop-stitch-technology.pl.astro';
 import LAr from '~/components/research/drop-stitch-technology.ar.astro';
 import LPt from '~/components/research/drop-stitch-technology.pt.astro';
-import LJa from '~/components/research/drop-stitch-technology.ja.astro';
 import LMs from '~/components/research/drop-stitch-technology.ms.astro';
 import LRo from '~/components/research/drop-stitch-technology.ro.astro';
-import LSk from '~/components/research/drop-stitch-technology.sk.astro';
-import LSl from '~/components/research/drop-stitch-technology.sl.astro';
-import LSr from '~/components/research/drop-stitch-technology.sr.astro';
 import LTh from '~/components/research/drop-stitch-technology.th.astro';
 import LTl from '~/components/research/drop-stitch-technology.tl.astro';
 import LTr from '~/components/research/drop-stitch-technology.tr.astro';
 import LBg from '~/components/research/drop-stitch-technology.bg.astro';
-import LEt from '~/components/research/drop-stitch-technology.et.astro';
-import LHe from '~/components/research/drop-stitch-technology.he.astro';
-import LHr from '~/components/research/drop-stitch-technology.hr.astro';
 import LHu from '~/components/research/drop-stitch-technology.hu.astro';
 import LId from '~/components/research/drop-stitch-technology.id.astro';
-import LKo from '~/components/research/drop-stitch-technology.ko.astro';
-import LLt from '~/components/research/drop-stitch-technology.lt.astro';
-import LLv from '~/components/research/drop-stitch-technology.lv.astro';
 
 export async function getStaticPaths() {
   return Object.keys(languages).map((lang) => ({ params: { lang } }));
@@ -51,172 +35,92 @@ const META: Record<string, { title: string; description: string }> = {
   en: {
     title: 'How Drop Stitch Works — The Engineering Behind Inflatable Rigid Cores',
     description:
-      'Deep dive into drop stitch technology: how thousands of internal threads turn flexible PVC into a rigid, high-pressure core capable of 15-20 PSI. Construction methods, materials, quality indicators, and applications across SUPs, kayaks, and inflatable boats.',
+      'Deep dive into drop stitch technology: how thousands of internal threads turn flexible PVC into a rigid, high-pressure core capable of 15-20 PSI. Construction methods, materials, quality indicators, and how it applies to modern SUP boards.',
   },
   de: {
     title: 'So funktioniert Drop-Stitch — die Technik hinter aufblasbaren starren Kernen',
     description:
-      'Tiefer Einblick in die Drop-Stitch-Technologie: wie Tausende innere Fäden flexibles PVC in einen starren Hochdruckkern mit 15-20 PSI verwandeln. Bauweisen, Materialien, Qualitätsmerkmale und Anwendungen bei SUPs, Kajaks und aufblasbaren Booten.',
+      'Tiefer Einblick in die Drop-Stitch-Technologie: wie Tausende innere Fäden flexibles PVC in einen starren Hochdruckkern mit 15-20 PSI verwandeln. Bauweisen, Materialien, Qualitätsmerkmale und ihre Anwendung bei modernen SUP-Boards.',
   },
   es: {
     title: 'Cómo funciona el drop stitch — la ingeniería detrás de los núcleos rígidos hinchables',
     description:
-      'Análisis en profundidad de la tecnología drop stitch: cómo miles de hilos internos convierten el PVC flexible en un núcleo rígido de alta presión capaz de 15-20 PSI. Métodos de construcción, materiales, indicadores de calidad y aplicaciones en SUP, kayaks y barcas hinchables.',
+      'Análisis en profundidad de la tecnología drop stitch: cómo miles de hilos internos convierten el PVC flexible en un núcleo rígido de alta presión capaz de 15-20 PSI. Métodos de construcción, materiales, indicadores de calidad y su aplicación en las tablas de pádel modernas.',
   },
   fr: {
     title: "Comment fonctionne le drop stitch — l'ingénierie derrière les noyaux rigides gonflables",
     description:
-      'Analyse approfondie de la technologie drop stitch : comment des milliers de fils internes transforment le PVC souple en un noyau rigide haute pression capable de 15-20 PSI. Méthodes de construction, matériaux, indicateurs de qualité et applications sur les SUPs, kayaks et bateaux gonflables.',
+      'Analyse approfondie de la technologie drop stitch : comment des milliers de fils internes transforment le PVC souple en un noyau rigide haute pression capable de 15-20 PSI. Méthodes de construction, matériaux, indicateurs de qualité et son application aux planches de paddle modernes.',
   },
   it: {
     title: "Come funziona il drop stitch — l'ingegneria dietro i nuclei rigidi gonfiabili",
     description:
-      'Approfondimento sulla tecnologia drop stitch: come migliaia di fili interni trasformano il PVC flessibile in un nucleo rigido ad alta pressione fino a 15-20 PSI. Metodi di costruzione, materiali, indicatori di qualità e applicazioni su SUP, kayak e natanti gonfiabili.',
-  },
-  cs: {
-    title: 'Jak funguje Drop Stitch — inženýrství za nafukovacími pevnými jádry',
-    description:
-      'Hluboký ponor do technologie drop stitch: jak se tisíce vnitřních nití promění v pružné PVC v tuhé, vysokotlaké jádro schopné 15-20 PSI. Konstrukční metody, materiály, indikátory kvality a aplikace napříč SUP, kajaky a nafukovacími čluny.',
-  },
-  sv: {
-    title: 'Hur Drop Stitch fungerar – tekniken bakom uppblåsbara styva kärnor',
-    description:
-      'Djupdykning i droppstygnsteknik: hur tusentals invändiga trådar förvandlar den flexibla PVC till en styv högtryckskärna som klarar 15-20 PSI. Konstruktionsmetoder, material, kvalitetsindikatorer och tillämpningar för SUP:er, kajaker och uppblåsbara båtar.',
-  },
-  da: {
-    title: 'Sådan fungerer Drop Stitch - Tekniken bag oppustelige stive kerner',
-    description:
-      "Dyb dyk ned i drop stitch-teknologi: hvordan tusindvis af indvendige tråde forvandler fleksibel PVC til en stiv højtrykskerne, der er i stand til 15-20 PSI. Konstruktionsmetoder, materialer, kvalitetsindikatorer og applikationer på tværs af SUP'er, kajakker og oppustelige både.",
-  },
-  el: {
-    title: 'Πώς λειτουργεί το Drop Stitch — Η μηχανική πίσω από φουσκωτούς άκαμπτους πυρήνες',
-    description:
-      'Βαθιά βουτιά στην τεχνολογία drop stitch: πώς χιλιάδες εσωτερικές κλωστές μετατρέπουν το εύκαμπτο PVC σε έναν άκαμπτο πυρήνα υψηλής πίεσης ικανό για 15-20 PSI. Μέθοδοι κατασκευής, υλικά, δείκτες ποιότητας και εφαρμογές σε SUP, καγιάκ και φουσκωτά σκάφη.',
-  },
-  no: {
-    title: 'Slik fungerer Drop Stitch – Teknikken bak oppblåsbare stive kjerner',
-    description:
-      'Dypdykk inn i drop stitch-teknologi: hvordan tusenvis av innvendige tråder gjør fleksible PVC til en stiv høytrykkskjerne som er i stand til 15-20 PSI. Konstruksjonsmetoder, materialer, kvalitetsindikatorer og applikasjoner på tvers av SUP-er, kajakker og oppblåsbare båter.',
+      'Approfondimento sulla tecnologia drop stitch: come migliaia di fili interni trasformano il PVC flessibile in un nucleo rigido ad alta pressione fino a 15-20 PSI. Metodi di costruzione, materiali, indicatori di qualità e la loro applicazione sulle tavole paddle moderne.',
   },
   ru: {
     title: 'Как работает Drop Stitch — инженерия, лежащая в основе надувных жестких сердечников',
     description:
-      'Глубокое погружение в технологию капельного стежка: как тысячи внутренних нитей превращают гибкий PVC в жесткий сердечник, способный выдерживать высокое давление 15–20 PSI. Методы строительства, материалы, показатели качества и применение для SUP-серфинга, каяков и надувных лодок.',
+      'Глубокое погружение в технологию капельного стежка: как тысячи внутренних нитей превращают гибкий PVC в жесткий сердечник, способный выдерживать высокое давление 15–20 PSI. Методы строительства, материалы, показатели качества и применение в современных сапбордах.',
   },
   nl: {
     title: 'Hoe Drop Stitch werkt: de techniek achter opblaasbare stijve kernen',
     description:
-      "Diepe duik in de drop-stitch-technologie: hoe duizenden interne draden flexibele PVC veranderen in een stijve, hogedrukkern die in staat is tot 15-20 PSI. Constructiemethoden, materialen, kwaliteitsindicatoren en toepassingen voor SUP's, kajaks en opblaasbare boten.",
-  },
-  fi: {
-    title: 'Kuinka pudotusommel toimii – puhallettavien jäykkien ytimien takana oleva suunnittelu',
-    description:
-      'Sukella syvään pudotusommeltekniikkaan: kuinka tuhannet sisälangat muuttuvat joustavaksi PVC jäykiksi, korkeapaineiseksi ytimeksi, joka pystyy 15-20 PSI. Rakennusmenetelmät, materiaalit, laatuindikaattorit ja sovellukset SUPissa, kajakeissa ja kumiveneissä.',
+      'Diepe duik in de drop-stitch-technologie: hoe duizenden interne draden flexibele PVC veranderen in een stijve, hogedrukkern die in staat is tot 15-20 PSI. Constructiemethoden, materialen, kwaliteitsindicatoren en de toepassing in moderne supboards.',
   },
   pl: {
     title: 'Jak działa ścieg kroplowy — inżynieria stojąca za nadmuchiwanymi sztywnymi rdzeniami',
     description:
-      'Zagłęb się w technologię ściegu kroplowego: jak tysiące wewnętrznych nici zamienia elastyczny PVC w sztywny rdzeń pod wysokim ciśnieniem zdolny do 15-20 PSI. Metody konstrukcyjne, materiały, wskaźniki jakości i zastosowania w SUP, kajakach i pontonach.',
+      'Zagłęb się w technologię ściegu kroplowego: jak tysiące wewnętrznych nici zamienia elastyczny PVC w sztywny rdzeń pod wysokim ciśnieniem zdolny do 15-20 PSI. Metody konstrukcyjne, materiały, wskaźniki jakości i zastosowanie w nowoczesnych deskach SUP.',
   },
   ar: {
     title: 'كيف تعمل الغرزة المسقطة – الهندسة وراء النوى الصلبة القابلة للنفخ',
     description:
-      'الغوص العميق في تكنولوجيا الغرز المتساقطة: كيف تقوم آلاف الخيوط الداخلية بتحويل PVC المرنة إلى قلب صلب عالي الضغط قادر على 15-20 PSI. طرق البناء والمواد ومؤشرات الجودة والتطبيقات عبر SUPs وقوارب الكاياك والقوارب القابلة للنفخ.',
+      'الغوص العميق في تكنولوجيا الغرز المتساقطة: كيف تقوم آلاف الخيوط الداخلية بتحويل PVC المرنة إلى قلب صلب عالي الضغط قادر على 15-20 PSI. طرق البناء والمواد ومؤشرات الجودة وتطبيقها في ألواح البادل الحديثة.',
   },
   pt: {
     title: 'Como funciona o Drop Stitch – A engenharia por trás dos núcleos rígidos infláveis',
     description:
-      'Mergulhe profundamente na tecnologia de ponto gota: como milhares de fios internos transformam o PVC flexível em um núcleo rígido e de alta pressão capaz de 15-20 PSI. Métodos de construção, materiais, indicadores de qualidade e aplicações em SUPs, caiaques e barcos infláveis.',
-  },
-  ja: {
-    title: 'ドロップステッチの仕組み — インフレータブル リジッド コアの背後にあるエンジニアリング',
-    description:
-      'ドロップ ステッチ テクノロジーを深く掘り下げます。数千の雌糸がどのようにして柔軟な PVC を 15 ～ 20 個の PSI に対応できる剛性の高圧コアに変えるのかを説明します。 SUP、カヤック、インフレータブル ボートにわたる建設方法、材料、品質指標、および用途。',
+      'Mergulhe profundamente na tecnologia de ponto gota: como milhares de fios internos transformam o PVC flexível em um núcleo rígido e de alta pressão capaz de 15-20 PSI. Métodos de construção, materiais, indicadores de qualidade e a sua aplicação nas pranchas de paddle modernas.',
   },
   ms: {
     title: 'Bagaimana Drop Stitch Berfungsi — Kejuruteraan di Sebalik Teras Kaku Tiup',
     description:
-      'Selami teknologi drop stitch: bagaimana ribuan benang dalaman menukar PVC fleksibel menjadi teras kaku bertekanan tinggi yang mampu 15-20 PSI. Kaedah pembinaan, bahan, petunjuk kualiti, dan aplikasi merangkumi SUPs, kayak, dan bot tiup.',
+      'Selami teknologi drop stitch: bagaimana ribuan benang dalaman menukar PVC fleksibel menjadi teras kaku bertekanan tinggi yang mampu 15-20 PSI. Kaedah pembinaan, bahan, petunjuk kualiti, dan aplikasinya pada papan paddle moden.',
   },
   ro: {
     title: 'Cum funcționează Drop Stitch — Ingineria din spatele miezurilor rigide gonflabile',
     description:
-      'Aprofundează tehnologia de tip drop stitch: cum mii de fire interne devin PVC flexibile într-un miez rigid, cu presiune înaltă, capabil de 15-20PSI. Metode de construcție, materiale, indicatori de calitate și aplicații în SUPscaiace și bărci gonflabile.',
-  },
-  sk: {
-    title: 'Ako Drop Stitch funguje — inžinierska stránka nafukovacích pevných jadier',
-    description:
-      'Hlboký pohľad do drop stitch technológie: ako tisíce vnútorných vlákien premieňajú flexibilné PVC na tuhé, vysoko-tlakové jadro schopné 15-20 PSI. Spôsoby výstavby, materiály, ukazovatele kvality a aplikácie v SUPs, kajakoch a nafukovacích lodiach.',
-  },
-  sl: {
-    title: 'Kako deluje Drop Stitch — inženirski vidik napihljivih trdih jeder',
-    description:
-      'Podroben vpogled v drop stitch tehnologijo: kako tisoče notranjih niti spremeni prožen PVC v trdo, visokotlačno jedro sposobno 15–20 PSI. Metode konstrukcije, materiali, kazalniki kakovosti in uporaba na SUPs, kajakih in napihljivih čolnih.',
-  },
-  sr: {
-    title: 'Kako Drop Stitch radi — inženjering iza naduvavajućih rigidnih jezgara',
-    description:
-      'Detaljna analiza drop stitch tehnologije: kako hiljade unutrašnjih niti pretvara fleksibilne PVC u rigidno, visokopritisno jezgro sposobno za 15-20 PSI. Metode konstrukcije, materijali, indikatori kvaliteta i primene kod SUPs, kajaka i naduvavajućih čamaca.',
+      'Aprofundează tehnologia de tip drop stitch: cum mii de fire interne devin PVC flexibile într-un miez rigid, cu presiune înaltă, capabil de 15-20PSI. Metode de construcție, materiale, indicatori de calitate și aplicarea lor pe plute paddle moderne.',
   },
   th: {
     title: 'วิธีทำงานของ Drop Stitch — วิศวกรรมเบื้องหลังแกนแข็งแบบพองลม',
     description:
-      'เจาะลึกเทคโนโลยี Drop Stitch: วิธีที่เส้นด้ายภายในหลายพันเส้นเปลี่ยน PVC ที่ยืดหยุ่นให้เป็นแกนแข็งทนแรงดันสูง สามารถทนแรงดัน 15-20 PSI วัสดุ, วิธีการสร้าง, ตัวชี้วัดคุณภาพ และการใช้งานใน SUPs, คายัค และเรือพอง',
+      'เจาะลึกเทคโนโลยี Drop Stitch: วิธีที่เส้นด้ายภายในหลายพันเส้นเปลี่ยน PVC ที่ยืดหยุ่นให้เป็นแกนแข็งทนแรงดันสูง สามารถทนแรงดัน 15-20 PSI วัสดุ, วิธีการสร้าง, ตัวชี้วัดคุณภาพ และการใช้งานในตาราง SUP ยุคใหม่',
   },
   tl: {
     title: 'Paano Gumagana ang Drop Stitch — Ang Inhinyeriyang Likod ng Inflatable na Matitibay na Core',
     description:
-      'Malalim na pagsusuri sa teknolohiya ng drop stitch: paano ginagawang matigas ng libu-libong panloob na sinulid ang flexible PVC para maging rigid, high-pressure core na kayang umabot sa 15-20 PSI. Mga pamamaraan ng konstruksyon, materyales, mga indicator ng kalidad, at mga aplikasyon sa SUPs, kayaks, at inflatable na bangka.',
+      'Malalim na pagsusuri sa teknolohiya ng drop stitch: paano ginagawang matigas ng libu-libong panloob na sinulid ang flexible PVC para maging rigid, high-pressure core na kayang umabot sa 15-20 PSI. Mga pamamaraan ng konstruksyon, materyales, mga indicator ng kalidad, at ang aplikasyon nito sa mga modernong paddle board.',
   },
   tr: {
     title: 'Drop Stitch Nasıl Çalışır — Şişme Sert Çekirdeklerin Arkasındaki Mühendislik',
     description:
-      "Drop stitch teknolojisine derinlemesine bakış: binlerce iç ipliğin esnek PVC'yı 15-20 PSI değerinde sert, yüksek basınçlı bir çekirdeğe nasıl dönüştürdüğü. Yapım yöntemleri, malzemeler, kalite göstergeleri ve SUPs, kajaklar ve şişme tekneler üzerindeki uygulamalar.",
+      "Drop stitch teknolojisine derinlemesine bakış: binlerce iç ipliğin esnek PVC'yı 15-20 PSI değerinde sert, yüksek basınçlı bir çekirdeğe nasıl dönüştürdüğü. Yapım yöntemleri, malzemeler, kalite göstergeleri ve modern SUP tahtalarındaki uygulamaları.",
   },
   bg: {
     title: 'Как работи Drop Stitch — инженерната част зад надуваемите твърди ядра',
     description:
-      'Подробно разглеждане на технологията drop stitch: как хиляди вътрешни нишки превръщат гъвкави PVC в твърдо ядро с високо налягане, способно на 15-20 PSI. Методи на конструкция, материали, показатели за качество и приложения при SUPs, каяци и надуваеми лодки.',
-  },
-  et: {
-    title: 'Kuidas Drop Stitch töötab — Täispuhutavate jäikade südamike insenertehnika',
-    description:
-      'Sügavuti drop stitch tehnoloogiasse: kuidas tuhanded sisemised niidid muudavad paindlikud PVC jäikaks, kõrge rõhuga südamikuks, mis talub 15-20 PSI. Konstruktsioonimeetodid, materjalid, kvaliteedi näitajad ja rakendused SUPs, kajakite ja täispuhutavate paatide puhul.',
-  },
-  he: {
-    title: 'כיצד עובדת רקמת ירידה — ההנדסה מאחורי ליבות נוקשות מתנפחות',
-    description:
-      'סקירה מעמיקה של טכנולוגיית רקמת ירידה: איך אלפי חוטים פנימיים הופכים PVC גמישים לליבה נוקשה ובלחץ גבוה המסוגלת 15-20 PSI. שיטות בנייה, חומרים, אינדיקטורים לאיכות, ויישומים בכל SUPs, קיאקים וסירות מתנפחות.',
-  },
-  hr: {
-    title: 'Kako Drop Stitch radi — inženjering iza napuhavajućih čvrstih jezgri',
-    description:
-      'Detaljni pregled drop stitch tehnologije: kako tisuće unutarnjih niti pretvaraju fleksibilne PVC u krutu, visoko-tlačnu jezgru sposobnu za 15-20 PSI. Metode konstrukcije, materijali, indikatori kvalitete i primjene na SUPs, kajacima i napuhavajućim čamcima.',
+      'Подробно разглеждане на технологията drop stitch: как хиляди вътрешни нишки превръщат гъвкави PVC в твърдо ядро с високо налягане, способно на 15-20 PSI. Методи на конструкция, материали, показатели за качество и приложението им в съвременните сърфове.',
   },
   hu: {
     title: 'Hogyan működik a Drop Stitch — A felfújható merev magok mögötti mérnöki megoldás',
     description:
-      'Mélyreható betekintés a drop stitch technológiába: hogyan alakít több ezer belső szál rugalmas PVC-t merev, nagy nyomású maggá, amely képes 15–20 PSI-ra. Kivitelezési módszerek, anyagok, minőségi jellemzők és alkalmazások SUPs, kajakok és felfújható csónakok esetében.',
+      'Mélyreható betekintés a drop stitch technológiába: hogyan alakít több ezer belső szál rugalmas PVC-t merev, nagy nyomású maggá, amely képes 15–20 PSI-ra. Kivitelezési módszerek, anyagok, minőségi jellemzők és alkalmazásuk a modern SUP tábláknál.',
   },
   id: {
     title: 'Bagaimana Drop Stitch Bekerja — Rekayasa di Balik Inti Rigid Tiup',
     description:
-      'Pembahasan mendalam teknologi drop stitch: bagaimana ribuan benang internal mengubah PVC fleksibel menjadi inti kaku bertekanan tinggi yang mampu 15-20 PSI. Metode konstruksi, material, indikator kualitas, dan aplikasi di SUPs, kayak, dan perahu tiup.',
-  },
-  ko: {
-    title: '드롭 스티치 작동 원리 — 팽창식 단단 코어의 엔지니어링',
-    description:
-      '드롭 스티치 기술 심층 분석: 수천 개 내부 실이 유연한 PVC를 어떻게 단단하고 고압을 견딜 수 있는 코어로 바꾸는지, 15-20 PSI까지 가능한지. 구성 방법, 재료, 품질 지표, SUPs, 카약, 팽창식 보트 전반에서의 적용.',
-  },
-  lt: {
-    title: 'Kaip veikia Drop Stitch – inžinerija už pripučiamų tvirtų šerdžių',
-    description:
-      'Išsamus drop stitch technologijos aptarimas: kaip tūkstančiai vidinių siūlių paverčia lanksčius PVC į standžią, aukšto slėgio šerdį, galinčią atlaikyti 15–20 PSI. Konstrukcijos metodai, medžiagos, kokybės rodikliai ir panaudojimas SUPs, baidarėse ir pripučiamose valtims.',
-  },
-  lv: {
-    title: 'Kā darbojas Drop Stitch — tehnoloģija aiz piepūšamajiem stingrajiem kodoliem',
-    description:
-      'Dziļa ieskatīšanās drop stitch tehnoloģijā: kā tūkstošiem iekšējo diegu pārvērš elastīgus PVC stingrā, augsta spiediena kodolā, spējīgā 15–20 PSI. Konstrukcijas metodes, materiāli, kvalitātes rādītāji un pielietojumi SUPs, kajakiem un piepūšamām laivām.',
+      'Pembahasan mendalam teknologi drop stitch: bagaimana ribuan benang internal mengubah PVC fleksibel menjadi inti kaku bertekanan tinggi yang mampu 15-20 PSI. Metode konstruksi, material, indikator kualitas, dan penerapannya pada papan paddle modern.',
   },
 };
 const meta = META[lang] || META.en;
@@ -227,35 +131,19 @@ const ResearchBody: any =
       es: LEs,
       fr: LFr,
       it: LIt,
-      cs: LCs,
-      sv: LSv,
-      da: LDa,
-      el: LEl,
-      no: LNo,
       ru: LRu,
       nl: LNl,
-      fi: LFi,
       pl: LPl,
       ar: LAr,
       pt: LPt,
-      ja: LJa,
       ms: LMs,
       ro: LRo,
-      sk: LSk,
-      sl: LSl,
-      sr: LSr,
       th: LTh,
       tl: LTl,
       tr: LTr,
       bg: LBg,
-      et: LEt,
-      he: LHe,
-      hr: LHr,
       hu: LHu,
       id: LId,
-      ko: LKo,
-      lt: LLt,
-      lv: LLv,
     } as Record<string, any>
   )[lang] || null;
 
@@ -300,7 +188,7 @@ const faqSchema = JSON.stringify({
       name: 'How is Drop-Stitch quality tested?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '1.25x rated pressure hold for 24-48h, tensile strength testing, UV aging per ASTM G154, and cold crack resistance per ISO 4646.',
+        text: 'Every core holds 1.25x rated pressure for 24-48 hours before shipment, plus tensile strength and UV aging checks on the laminate.',
       },
     },
     {
@@ -316,7 +204,7 @@ const faqSchema = JSON.stringify({
       name: 'Who invented Drop-Stitch?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Originally developed for military inflatable boats in the 1950s, modern Drop-Stitch was refined for SUP boards and has become the industry standard for high-performance inflatables.',
+        text: 'Originally developed for military inflatables in the 1950s, modern Drop-Stitch was refined for SUP boards and has become the industry standard for high-performance inflatables.',
       },
     },
   ],
@@ -453,16 +341,15 @@ const faqSchema = JSON.stringify({
             <h2>Applications</h2>
             <ul>
               <li>
-                <strong>SUP Boards:</strong> 4" – 6" thickness, 15 – 20 PSI, 1 – 2 threads/sq in
+                <strong>All-Around &amp; Touring SUPs:</strong> 4" – 6" thickness, 15 – 20 PSI, 1 – 2 threads/sq in
               </li>
               <li>
-                <strong>Kayaks:</strong> Drop-stitch floor + inflatable side chambers, 10 – 15 PSI floor
+                <strong>Racing &amp; surfing shapes:</strong> Tighter thread layouts let narrow, performance-oriented
+                boards run higher pressure without flex.
               </li>
               <li>
-                <strong>RIB floors:</strong> Drop-stitch floors for lightweight, packable RIB tenders, 12 – 18 PSI
-              </li>
-              <li>
-                <strong>Boat fenders:</strong> Low-pressure drop stitch for shaped fenders with flat faces
+                <strong>Yoga &amp; fishing platforms:</strong> Wider, thicker drop-stitch panels create stable,
+                high-buoyancy decks for flat-water activities.
               </li>
             </ul>
 

@@ -16,9 +16,9 @@ const testimonial = page.testimonial || {};
 const related = page.related || {};
 
 const metadata = {
-  title: `Technology & Materials — Drop-Stitch, PVC, Hypalon — ${SITE.name}`,
+  title: `Technology & Materials — Drop-Stitch, Marine-Grade PVC — ${SITE.name}`,
   description:
-    'Paddle Board Overstock technology: drop-stitch core (12-15 PSI), marine-grade PVC (ASTM G154, D751 tested), Hypalon CSM tubes, air deck floors. In-house R&D in 12,000 m² facility.',
+    'Paddle Board Overstock technology: drop-stitch core (12-15 PSI), marine-grade fusion-welded PVC, full-deck EVA traction, triple-layer rails. In-house R&D in 12,000 m² facility.',
   ignoreTitleTemplate: true,
 };
 const siteUrl = 'https://paddleboardoverstock.com';
@@ -28,14 +28,14 @@ const crumbs = [{ name: 'Home', href: '/' }, { name: 'Technology' }];
 <Layout metadata={metadata} breadcrumbs={crumbs}>
   <meta
     name="ai-intent"
-    content="inflatable-boat-technology,drop-stitch-construction,marine-pvc-materials,hypalon-tubes,inflatables-rd-center"
+    content="inflatable-sup-technology,drop-stitch-construction,marine-pvc-materials,sup-rail-system,inflatables-rd-center"
   />
   <JsonLd
     type="Article"
     article={{
-      headline: 'Technology & Materials — Drop-Stitch Core, PVC, Hypalon',
+      headline: 'Technology & Materials — Drop-Stitch Core, Marine-Grade PVC, EVA Deck',
       description:
-        'Paddle Board Overstock product technology: drop-stitch core construction at 12-15 PSI, marine-grade PVC fusion-welded fabric, Hypalon CSM rubber tubes, air deck floor systems. In-house materials R&D since 2012.',
+        'Paddle Board Overstock product technology: drop-stitch core construction at 12-15 PSI, marine-grade fusion-welded PVC fabric, full-deck EVA traction, triple-layer fusion-bonded rails. In-house materials R&D since 2012.',
       datePublished: '2026-07-07',
     }}
     data={{ url: `${siteUrl}/technology` }}
@@ -70,7 +70,7 @@ const crumbs = [{ name: 'Home', href: '/' }, { name: 'Technology' }];
       <p class="text-sm font-semibold text-[#06b6d4] uppercase tracking-wider">Materials & Construction</p>
       <h2 class="mt-2 text-3xl font-bold text-gray-900">Engineered for Marine Environments</h2>
       <p class="mt-3 text-gray-500 max-w-2xl mx-auto">
-        Every material is selected, tested, and validated in-house at our 12,000 m² Qingdao R&D center.
+        Every material is selected, tested, and validated in-house at our 12,000 m² Weihai R&D center.
       </p>
     </div>
     <div class="space-y-12">
@@ -127,7 +127,7 @@ const crumbs = [{ name: 'Home', href: '/' }, { name: 'Technology' }];
         <div class="bg-gradient-to-br from-sky-50 to-white dark:from-gray-900 dark:to-gray-950 rounded-2xl border border-sky-100 dark:border-gray-800 p-8 md:p-12">
           <div class="grid md:grid-cols-5 gap-8 items-center">
             <div class="md:col-span-3">
-              <span class="text-sm font-semibold text-[#06b6d4] uppercase tracking-wider">What Our Partners Say</span>
+              <span class="text-sm font-semibold text-[#06b6d4] uppercase tracking-wider">What Paddlers Say</span>
               <blockquote class="mt-4 text-lg text-gray-700 dark:text-gray-300 leading-relaxed italic">
                 &ldquo;{testimonial.quote}&rdquo;
               </blockquote>
@@ -150,9 +150,6 @@ const crumbs = [{ name: 'Home', href: '/' }, { name: 'Technology' }];
                   Our materials science team develops and validates every compound, weld parameter, and structural layup
                   in-house. No outsourcing of critical engineering.
                 </p>
-                <a href="/randdcenter" class="mt-3 inline-flex text-sm font-medium text-[#06b6d4] hover:text-sky-700">
-                  See our R&amp;D Center &rarr;
-                </a>
               </div>
             </div>
           </div>
@@ -179,12 +176,12 @@ const crumbs = [{ name: 'Home', href: '/' }, { name: 'Technology' }];
 
   <section class="sr-only" data-ai-block="embedding-anchor" aria-hidden="true">
     <p>
-      Paddle Board Overstock technology focuses on buoyancy control systems, inflatable structural stability, water
-      impact resistance, and drop-stitch core rigidity for water sports equipment. Drop-stitch core: 12-15 PSI operating
-      pressure, thousands of polyester threads connecting top and bottom layers. Marine-grade PVC: multi-layer
-      laminated, fusion-welded, tested per ASTM G154 (UV), ASTM D751 (abrasion), ISO 9227 (salt spray). Hypalon CSM
-      tubes: UV and chemical resistant, hand-laid seams. Air deck floor: high-pressure inflatable, 200+ kg load
-      capacity. In-house R&D center Qingdao, China. 12,000 m² facility. 15+ years materials engineering.
+      Paddle Board Overstock technology focuses on drop-stitch core rigidity, fusion-welded seam strength, and full-deck
+      EVA traction for inflatable paddle boards. Drop-stitch core: 12-15 PSI operating pressure, thousands of polyester
+      threads connecting top and bottom layers. Marine-grade PVC: multi-layer laminated, fusion-welded, tested for UV
+      resistance (1,000+ hours), saltwater corrosion, and abrasion. Triple-layer rail system: fusion bonded at the
+      board's highest-stress zone. In-house R&D center Weihai, China. 12,000 m² facility. 15+ years materials
+      engineering.
     </p>
   </section>
 </Layout>

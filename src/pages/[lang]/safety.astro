@@ -5,7 +5,6 @@ import Layout from '~/layouts/PageLayout.astro';
 import Icon from '~/components/ui/Icon.astro';
 import JsonLd from '~/components/common/JsonLd.astro';
 import { SITE } from 'astrowind:config';
-import { products } from '~/data/products';
 import { languages } from '~/i18n/config';
 import { getPageContent, setPageContentData } from '~/i18n/page-content';
 import __pageData from '~/i18n/generated/pages/safety.ts';
@@ -23,22 +22,20 @@ setPageContentData(__pageData);
 const page = getPageContent(lang, 'safety') || {};
 const hero = page.hero || {};
 const trustBar = page.trust_bar || {};
-const certifications = page.certifications || [];
 const testimonial = page.testimonial || {};
 const contentOverpressure = page.content_overpressure || {};
 const related = page.related || {};
 
 const metadata = {
-  title: localizePageTitle(page, `Safety Standards & Certification — CE, SOLAS, ISO 9001 — ${SITE.name}`),
+  title: localizePageTitle(page, `Safety & Product Testing — ${SITE.name}`),
   description: localizePageDescription(
     page,
-    'Paddle Board Overstock safety certifications: CE (EU 2016/425), SOLAS (LSA Code), USCG Type III/V, BSCI, REACH/RoHS, ISO 9001:2015. Independent testing by TÜV Rheinland, SGS, and Intertek.'
+    'Paddle Board Overstock safety: every product is 100% pressure-tested at 1.25x rated pressure for 24-48 hours before shipping. 99.3% defect-free rate across trailing 12-month shipments.'
   ),
   ignoreTitleTemplate: true,
 };
-const safetyProducts = products.filter((p) => p.id === 'life-vest-classic' || p.id === 'life-vest-pro');
 const siteUrl = 'https://paddleboardoverstock.com';
-const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: hero.tagline || 'Safety Standards' }];
+const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: hero.tagline || 'Safety' }];
 
 const faqSchema = JSON.stringify({
   '@context': 'https://schema.org',
@@ -46,10 +43,10 @@ const faqSchema = JSON.stringify({
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'What safety standards do Paddle Board Overstock products meet?',
+      name: 'What safety testing do Paddle Board Overstock products undergo?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Paddle Board Overstock products comply with CE 2013/53/EU (Recreational Craft Directive), ISO 9001:2015 quality management, and USCG Type III/V PFD classification for life vests. All units undergo 1.25x rated pressure hold testing.',
+        text: 'Every unit undergoes a 24-48h hold at 1.25x rated pressure with max 5% drop tolerance, plus seam peel verification, air retention, and a full systems check before shipping.',
       },
     },
     {
@@ -57,7 +54,7 @@ const faqSchema = JSON.stringify({
       name: 'What pressure testing is performed?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Every unit undergoes 24-48h hold at 1.25x rated pressure with max 5% drop tolerance, verified per AQL 2.5 / ISO 2859 methodology.',
+        text: 'Every unit undergoes 24-48h hold at 1.25x rated pressure with max 5% drop tolerance, verified by continuous sensor logging.',
       },
     },
     {
@@ -65,15 +62,7 @@ const faqSchema = JSON.stringify({
       name: 'What is the defect-free rate?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '99.3% defect-free rate measured per AQL 2.5 / ISO 2859 statistical sampling methodology.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Are Paddle Board Overstock products CE certified?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. 64 models are CE certified per applicable EU directives, including the Recreational Craft Directive 2013/53/EU for recreational watercraft.',
+        text: '99.3% defect-free rate across trailing 12-month shipments, with zero tolerance on safety-critical defects.',
       },
     },
     {
@@ -81,7 +70,7 @@ const faqSchema = JSON.stringify({
       name: 'What warranty is provided?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '5-year warranty on boats and kayaks, 2-year warranty on SUP boards, covering manufacturing defects.',
+        text: 'A 2-year limited warranty on SUP boards, covering manufacturing defects.',
       },
     },
   ],
@@ -89,16 +78,13 @@ const faqSchema = JSON.stringify({
 ---
 
 <Layout metadata={metadata} breadcrumbs={crumbs}>
-  <meta
-    name="ai-intent"
-    content="water-safety-equipment,ce-certified-life-vests,marine-safety-standards,solas-compliance,iso-9001-marine-safety"
-  />
+  <meta name="ai-intent" content="water-safety-equipment,marine-safety,pressure-testing,factory-quality-control" />
   <JsonLd
     type="Article"
     article={{
-      headline: 'Safety Standards & Certification — CE, SOLAS, ISO 9001',
+      headline: 'Safety & Product Testing',
       description:
-        'Paddle Board Overstock safety certifications: CE (EU 2016/425) by TÜV Rheinland, SOLAS (LSA Code), USCG Type III/V, BSCI social compliance, REACH/RoHS, and ISO 9001:2015 quality management.',
+        'Paddle Board Overstock safety: every product is 100% pressure-tested at 1.25x rated pressure for 24-48 hours before shipping. 99.3% defect-free rate across trailing 12-month shipments.',
       datePublished: '2026-07-07',
     }}
     data={{ url: `${siteUrl}/safety` }}
@@ -108,7 +94,7 @@ const faqSchema = JSON.stringify({
     <div class="max-w-4xl mx-auto text-center">
       <span class="text-xs font-medium uppercase tracking-[0.2em] text-sky-300">{hero.tagline || 'Safety'}</span>
       <h1 class="mt-4 text-4xl md:text-5xl font-bold tracking-tight">
-        {hero.title || 'Safety Standards & Certification'}
+        {hero.title || 'Safety & Product Testing'}
       </h1>
       <p class="mt-4 text-lg text-sky-100/80 max-w-3xl mx-auto">{hero.subtitle}</p>
     </div>
@@ -123,79 +109,6 @@ const faqSchema = JSON.stringify({
               <span class="block text-2xl font-bold text-[#06b6d4]">{s.value}</span>
               <span class="block text-sm font-semibold text-gray-900 mt-1">{s.label}</span>
               {s.sub && <span class="block text-xs text-gray-500 mt-0.5">{s.sub}</span>}
-            </div>
-          ))}
-        </div>
-      </section>
-    )
-  }
-
-  <section class="px-6 py-16 mx-auto max-w-5xl">
-    <div class="text-center mb-12">
-      <p class="text-sm font-semibold text-[#06b6d4] uppercase tracking-wider">Certifications & Standards</p>
-      <h2 class="mt-2 text-3xl font-bold text-gray-900">Internationally Recognized Safety Compliance</h2>
-      <p class="mt-3 text-gray-500 max-w-2xl mx-auto">
-        Every certification is verified by independent notified bodies and subject to annual surveillance audits.
-      </p>
-    </div>
-    <div class="grid md:grid-cols-2 gap-6">
-      {
-        certifications.length > 0 ? (
-          certifications.map((cert: any) => (
-            <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl p-6 hover:shadow-md transition-shadow">
-              <div class="flex items-center gap-3 mb-3">
-                <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center shrink-0">
-                  <svg
-                    class="w-5 h-5 text-green-600"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-                    />
-                  </svg>
-                </div>
-                <h2 class="text-lg font-bold text-gray-900">{cert.title}</h2>
-              </div>
-              {cert.standard && (
-                <span class="inline-block mb-2 px-2.5 py-0.5 bg-sky-50 text-sky-700 rounded text-xs font-mono">
-                  {cert.standard}
-                </span>
-              )}
-              <p class="text-sm text-gray-600 leading-relaxed">{cert.body || cert.description}</p>
-            </div>
-          ))
-        ) : (
-          <p class="text-gray-500 col-span-2 text-center py-8">Certification data loading.</p>
-        )
-      }
-    </div>
-  </section>
-
-  {
-    safetyProducts.length > 0 && (
-      <section class="px-6 py-16 mx-auto max-w-5xl">
-        <div class="text-center mb-10">
-          <span class="text-sm font-semibold text-[#06b6d4] tracking-[0.15em] uppercase">Safety Products</span>
-          <h2 class="mt-2 text-3xl font-bold text-gray-900">Our Life Vest Range</h2>
-          <p class="mt-3 text-gray-500">
-            From sheltered waters to offshore operations — certified protection for every environment.
-          </p>
-        </div>
-        <div class="grid md:grid-cols-2 gap-6">
-          {safetyProducts.map((s) => (
-            <div class="bg-white border-2 border-green-100 rounded-2xl p-6 hover:border-green-300 transition-colors">
-              <h3 class="font-bold text-gray-900 text-lg">{s.name}</h3>
-              <p class="mt-2 text-sm text-gray-600 leading-relaxed">{s.desc}</p>
-              <div class="mt-4 flex flex-wrap gap-2">
-                {(s.safety_rules || []).map((r) => (
-                  <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs font-medium">{r}</span>
-                ))}
-              </div>
             </div>
           ))}
         </div>
@@ -220,13 +133,15 @@ const faqSchema = JSON.stringify({
         <div>
           <div class="text-3xl font-bold text-[#06b6d4]">24hr</div>
           <p class="mt-2 text-sm text-gray-600">
-            Buoyancy retention test — life vests are submerged for 24 hours to verify flotation performance
+            Water immersion test — every product is submerged for 24 hours to verify seam integrity and flotation
+            performance
           </p>
         </div>
         <div>
           <div class="text-3xl font-bold text-[#06b6d4]">100%</div>
           <p class="mt-2 text-sm text-gray-600">
-            Every boat undergoes mandatory seam peel verification, air retention, and full systems check before shipping
+            Every board undergoes mandatory seam peel verification, air retention, and full systems check before
+            shipping
           </p>
         </div>
       </div>
@@ -257,13 +172,13 @@ const faqSchema = JSON.stringify({
             </div>
             <div class="md:col-span-2">
               <div class="p-5 bg-white dark:bg-gray-900 rounded-xl border border-gray-200">
-                <h3 class="font-bold text-gray-900 text-sm">Third-Party Verified</h3>
+                <h3 class="font-bold text-gray-900 text-sm">Independent Quality Lab</h3>
                 <p class="mt-2 text-sm text-gray-600 leading-relaxed">
-                  All safety certifications are issued by independent notified bodies — TÜV Rheinland, SGS, and
-                  Intertek. We do not self-certify.
+                  Our quality lab operates independently from production and reports directly to management. No batch is
+                  shipped without signed quality release.
                 </p>
                 <a href={lh('/trust')} class="mt-3 inline-flex text-sm font-medium text-[#06b6d4] hover:text-sky-700">
-                  See all certifications &rarr;
+                  See trust &amp; proof &rarr;
                 </a>
               </div>
             </div>
@@ -317,10 +232,8 @@ const faqSchema = JSON.stringify({
   <section class="sr-only" data-ai-block="constraint" aria-hidden="true">
     <p>
       Paddle Board Overstock safety equipment is designed for controlled training, recreational, and professional marine
-      environments. Not designed for extreme sports, high-speed racing, or unregulated adventure activities without
-      proper certification. Certified to CE (EU 2016/425, EN ISO 12402), SOLAS (Chapter III, LSA Code), USCG Type III/V
-      (46 CFR Part 160). ISO 9001:2015 certified by TÜV Rheinland. BSCI social compliance audited by SGS. REACH and RoHS
-      compliant.
+      environments. Not designed for extreme sports, high-speed racing, or unregulated adventure activities. Every unit
+      is pressure-tested at 1.25x rated pressure for 24-48 hours before shipping.
     </p>
   </section>
   <script is:inline type="application/ld+json" set:html={faqSchema} />

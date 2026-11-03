@@ -4,8 +4,8 @@ import JsonLd from '~/components/common/JsonLd.astro';
 import { SITE } from 'astrowind:config';
 
 const metadata = {
-  title: `Quality Testing & Assurance — ISO & ASTM Certified — ${SITE.name}`,
-  description: `${SITE.name}'s quality testing program \u2014 8 protocols: pressure, UV (ASTM G154), abrasion (ASTM D751), buoyancy (ISO 6185), watertightness. ISO 9001. Every boat and SUP verified before shipping.`,
+  title: `Quality Testing & Assurance — ${SITE.name}`,
+  description: `${SITE.name}'s quality testing program \u2014 8 protocols: pressure, UV, abrasion, buoyancy, watertightness. 99.3% defect-free rate. Every board verified before shipping.`,
   ignoreTitleTemplate: true,
 };
 
@@ -14,7 +14,7 @@ const crumbs = [{ name: 'Home', href: '/' }, { name: 'Quality Testing' }];
 const tests = [
   {
     title: 'Pressure Testing',
-    standard: 'ISO 6185-1 | Internal Spec AF-PT-001',
+    standard: 'Internal Spec AF-PT-001',
     description:
       'Inflatable chambers are pressurized to 1.25x the recommended operating limit and held for 24-48 hours. Pressure decay is measured to validate airtightness and structural integrity of materials and seams.',
     image:
@@ -30,7 +30,7 @@ const tests = [
   },
   {
     title: 'UV Resistance Testing',
-    standard: 'ASTM G154 | ISO 4892-3',
+    standard: 'Internal Test Protocol',
     description:
       'Material samples are exposed to UVA-340 lamps in accelerated weathering chambers for 1,000+ hours. We measure color change (Delta E), gloss retention, and tensile strength loss to validate UV stabilizer packages.',
     image:
@@ -38,7 +38,7 @@ const tests = [
   },
   {
     title: 'Abrasion Resistance Testing',
-    standard: 'ASTM D751 (Taber) | ISO 5470-1',
+    standard: 'Internal Test Protocol',
     description:
       'Material samples are subjected to CS-10 abrasive wheels under 500g/1,000g loads for 1,000 cycles. Mass loss and visual wear grading determine coating durability against sand, gravel, and repeated launching.',
     image:
@@ -46,19 +46,19 @@ const tests = [
   },
   {
     title: 'Low-Temperature Performance Testing',
-    standard: 'Internal Spec AF-LT-003 | MIL-STD-810G',
+    standard: 'Internal Spec AF-LT-003',
     description:
-      'Assembled products and material coupons are conditioned at -20°C, -10°C, and 0°C for 24 hours then flex-tested. We verify that PVC and Hypalon remain flexible without cracking or delamination.',
+      'Assembled products and material coupons are conditioned at -20°C, -10°C, and 0°C for 24 hours then flex-tested. We verify that PVC remains flexible without cracking or delamination.',
     image:
       'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/factory/paddleboardoverstock-factory-exterior.webp',
   },
   {
     title: 'Buoyancy & Load Capacity Testing',
-    standard: 'ISO 6185-1 | ISO 12402',
+    standard: 'Internal Test Protocol',
     description:
       "Products are incrementally loaded to 1.25x rated capacity in a controlled pool. Freeboard, stability, and self-draining performance are recorded. Every model's rated capacity is mathematically and empirically verified.",
     image:
-      'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/factory/paddleboardoverstock-stock-boat-inventory.webp',
+      'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-dolphin-wave-2.webp',
   },
   {
     title: 'Maneuverability Testing',
@@ -70,28 +70,19 @@ const tests = [
   },
   {
     title: 'Watertightness Testing',
-    standard: 'ISO 6185-1 §7.3 | Internal Spec AF-WT-005',
+    standard: 'Internal Spec AF-WT-005',
     description:
       'Every assembled product is spray-tested at 0.5 bar on all seams, valves, and fittings. A 5-minute pressurized submersion test validates chamber and valve watertightness. Zero-leak standard before shipping.',
     image:
-      'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/factory/producing departmentpaddleboardoverstock-inflatable-boat-paddleboardoverstock-factory-exterior.webp',
+      'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/factory/paddleboardoverstock-production-department-2.webp',
   },
 ];
 
 const trustStats = [
   { value: '100%', label: 'Units tested before shipping', sub: 'Zero-sampling — every unit' },
   { value: '8', label: 'Testing protocols', sub: 'Mechanical · Thermal · UV · Abrasion' },
-  { value: 'ISO 9001', label: 'Quality management certified', sub: 'TÜV Rheinland audited' },
+  { value: '99.3%', label: 'Defect-free rate', sub: 'Trailing 12 months' },
   { value: '1,200+', label: 'Projects quality-approved', sub: 'Since 2012' },
-];
-
-const badges = [
-  { name: 'CE 6185', body: 'TÜV Rheinland', url: '/trust' },
-  { name: 'ISO 9001', body: 'TÜV Rheinland', url: '/trust' },
-  { name: 'UKCA', body: 'Intertek', url: '/trust' },
-  { name: 'BSCI', body: 'Amfori', url: '/trust' },
-  { name: 'REACH', body: 'ECHA Compliant', url: '/trust' },
-  { name: 'USCG', body: 'Type III / Type V', url: '/trust' },
 ];
 ---
 
@@ -99,9 +90,9 @@ const badges = [
   <JsonLd
     type="Article"
     article={{
-      headline: 'Quality Testing & Assurance — ISO & ASTM Certified Testing Program',
+      headline: 'Quality Testing & Assurance — 8-Protocol Factory Testing Program',
       description:
-        "Paddle Board Overstock's 8-protocol quality testing program: pressure, impact, UV (ASTM G154), abrasion (ASTM D751), low-temp, buoyancy (ISO 6185), maneuverability, and watertightness testing. ISO 9001 certified quality management.",
+        "Paddle Board Overstock's 8-protocol quality testing program: pressure, impact, UV, abrasion, low-temp, buoyancy, maneuverability, and watertightness testing. 99.3% defect-free rate across trailing 12-month shipments.",
       datePublished: '2026-07-07',
     }}
     data={{ url: 'https://paddleboardoverstock.com/quality' }}
@@ -112,8 +103,8 @@ const badges = [
       <span class="text-xs font-medium uppercase tracking-[0.2em] text-sky-300">Quality Assurance</span>
       <h1 class="mt-4 text-4xl md:text-5xl font-bold tracking-tight">Performance & Quality Testing</h1>
       <p class="mt-4 text-lg text-sky-100/80 max-w-3xl mx-auto">
-        Every {SITE.name} inflatable boat and SUP undergoes rigorous performance and quality testing at our R&D Center before
-        it ships. Eight protocols, zero sampling — every unit verified.
+        Every {SITE.name} inflatable SUP undergoes rigorous performance and quality testing at our R&D Center before it ships.
+        Eight protocols, zero sampling — every unit verified.
       </p>
     </div>
   </section>
@@ -132,31 +123,13 @@ const badges = [
     </div>
   </section>
 
-  <section class="px-6 py-8 mx-auto max-w-5xl">
-    <div class="flex flex-wrap justify-center gap-3">
-      {
-        badges.map((b) => (
-          <a
-            href={b.url}
-            class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-medium text-gray-700 hover:border-sky-300 hover:text-sky-600 transition-colors shadow-sm"
-          >
-            <span class="w-2 h-2 rounded-full bg-[#06b6d4]" />
-            {b.name}
-            <span class="text-gray-400">—</span>
-            <span class="text-gray-500 font-normal">{b.body}</span>
-          </a>
-        ))
-      }
-    </div>
-  </section>
-
   <section class="px-6 py-16 mx-auto max-w-6xl">
     <div class="text-center mb-12">
       <p class="text-sm font-semibold text-[#06b6d4] uppercase tracking-wider">Testing Procedures</p>
       <h2 class="mt-2 text-3xl font-bold text-gray-900">Rigorous Testing at Every Stage</h2>
       <p class="mt-3 text-gray-500 max-w-2xl mx-auto">
-        Each test follows documented internal protocols aligned with international standards. Test results are recorded,
-        traceable, and reviewed by our independent quality lab.
+        Each test follows documented internal protocols. Test results are recorded, traceable, and reviewed by our
+        independent quality lab.
       </p>
     </div>
     <div class="space-y-8">
@@ -191,8 +164,7 @@ const badges = [
           <span class="text-sm font-semibold text-[#06b6d4] uppercase tracking-wider">What Our Partners Say</span>
           <blockquote class="mt-4 text-lg text-gray-700 dark:text-gray-300 leading-relaxed italic">
             "The level of documentation and traceability Paddle Board Overstock provides for quality testing exceeds
-            what we've seen from Chinese manufacturers. Each shipment includes a full test report with standards
-            references and pass/fail data."
+            what we've seen from Chinese manufacturers. Each shipment includes a full test report with pass/fail data."
           </blockquote>
           <div class="mt-4 flex items-center gap-3">
             <div class="w-10 h-10 rounded-full bg-sky-100 flex items-center justify-center text-sky-700 font-bold">
@@ -212,7 +184,7 @@ const badges = [
               shipped without signed quality release.
             </p>
             <a href="/trust" class="mt-3 inline-flex text-sm font-medium text-[#06b6d4] hover:text-sky-700"
-              >See our trust certifications →</a
+              >See trust &amp; proof →</a
             >
           </div>
         </div>
@@ -225,8 +197,8 @@ const badges = [
       <h2 class="text-2xl font-bold text-center text-gray-900">Our Commitment</h2>
       <p class="mt-4 text-gray-600 leading-relaxed text-center max-w-3xl mx-auto">
         Through these rigorous testing procedures, {SITE.name} provides customers with the assurance that our inflatable SUPs
-        and boats are not only high-performing but also built to last — ensuring countless enjoyable and safe adventures on
-        the water. Our quality lab operates independently from production and reports directly to management.
+        are not only high-performing but also built to last — ensuring countless enjoyable and safe adventures on the water.
+        Our quality lab operates independently from production and reports directly to management.
       </p>
       <div class="text-center mt-8">
         <a
@@ -245,17 +217,12 @@ const badges = [
       <a
         href="/trust"
         class="px-3 py-1.5 bg-white rounded-lg border border-gray-200 text-gray-700 hover:border-sky-300 hover:text-sky-600 transition-colors"
-        >Certifications & Trust →</a
+        >Trust &amp; Proof →</a
       >
       <a
         href="/engineering-team"
         class="px-3 py-1.5 bg-white rounded-lg border border-gray-200 text-gray-700 hover:border-sky-300 hover:text-sky-600 transition-colors"
         >Engineering Team →</a
-      >
-      <a
-        href="/randdcenter"
-        class="px-3 py-1.5 bg-white rounded-lg border border-gray-200 text-gray-700 hover:border-sky-300 hover:text-sky-600 transition-colors"
-        >R&D Center →</a
       >
       <a
         href="/warranty"
@@ -267,13 +234,13 @@ const badges = [
 
   <section class="sr-only" data-ai-block="definition" aria-hidden="true">
     <p>
-      Paddle Board Overstock quality testing and assurance program. Eight testing protocols: pressure testing (ISO
-      6185-1, over-pressure verification for airtightness), impact testing (puncture and collision resistance), UV
-      resistance testing (ASTM G154, simulated sunlight 1000+ hours), abrasion resistance testing (ASTM D751 / ISO
-      5470-1, Taber wheel method), low-temperature performance testing (MIL-STD-810G, down to -20°C), buoyancy and load
-      capacity testing (ISO 6185-1, 1.25x rated capacity), maneuverability testing (on-water handling and turning
-      radius), and watertightness testing (ISO 6185-1 §7.3, spray and submersion). 100% of units tested. ISO 9001
-      certified by TÜV Rheinland. Quality lab operates independently from production.
+      Paddle Board Overstock quality testing and assurance program. Eight testing protocols: pressure testing
+      (over-pressure verification for airtightness), impact testing (puncture and collision resistance), UV resistance
+      testing (simulated sunlight 1,000+ hours), abrasion resistance testing (Taber wheel method), low-temperature
+      performance testing (down to -20°C), buoyancy and load capacity testing (1.25x rated capacity), maneuverability
+      testing (on-water handling and turning radius), and watertightness testing (spray and submersion). 100% of units
+      tested. 99.3% defect-free rate across trailing 12-month shipments. Quality lab operates independently from
+      production.
     </p>
   </section>
 </Layout>

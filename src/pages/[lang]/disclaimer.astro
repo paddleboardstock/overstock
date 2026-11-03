@@ -16,32 +16,16 @@ import DisclaimerDe from '~/components/legal/disclaimer.de.astro';
 import DisclaimerEs from '~/components/legal/disclaimer.es.astro';
 import DisclaimerFr from '~/components/legal/disclaimer.fr.astro';
 import DisclaimerIt from '~/components/legal/disclaimer.it.astro';
-import DisclaimerCs from '~/components/legal/disclaimer.cs.astro';
-import DisclaimerSv from '~/components/legal/disclaimer.sv.astro';
-import DisclaimerDa from '~/components/legal/disclaimer.da.astro';
-import DisclaimerEl from '~/components/legal/disclaimer.el.astro';
-import DisclaimerNo from '~/components/legal/disclaimer.no.astro';
 import DisclaimerRu from '~/components/legal/disclaimer.ru.astro';
 import DisclaimerNl from '~/components/legal/disclaimer.nl.astro';
-import DisclaimerFi from '~/components/legal/disclaimer.fi.astro';
 import DisclaimerPl from '~/components/legal/disclaimer.pl.astro';
 import DisclaimerAr from '~/components/legal/disclaimer.ar.astro';
 import DisclaimerPt from '~/components/legal/disclaimer.pt.astro';
-import DisclaimerJa from '~/components/legal/disclaimer.ja.astro';
 import DisclaimerBg from '~/components/legal/disclaimer.bg.astro';
-import DisclaimerEt from '~/components/legal/disclaimer.et.astro';
-import DisclaimerHe from '~/components/legal/disclaimer.he.astro';
-import DisclaimerHr from '~/components/legal/disclaimer.hr.astro';
 import DisclaimerHu from '~/components/legal/disclaimer.hu.astro';
 import DisclaimerId from '~/components/legal/disclaimer.id.astro';
-import DisclaimerKo from '~/components/legal/disclaimer.ko.astro';
-import DisclaimerLt from '~/components/legal/disclaimer.lt.astro';
-import DisclaimerLv from '~/components/legal/disclaimer.lv.astro';
 import DisclaimerMs from '~/components/legal/disclaimer.ms.astro';
 import DisclaimerRo from '~/components/legal/disclaimer.ro.astro';
-import DisclaimerSk from '~/components/legal/disclaimer.sk.astro';
-import DisclaimerSl from '~/components/legal/disclaimer.sl.astro';
-import DisclaimerSr from '~/components/legal/disclaimer.sr.astro';
 import DisclaimerTh from '~/components/legal/disclaimer.th.astro';
 import DisclaimerTl from '~/components/legal/disclaimer.tl.astro';
 import DisclaimerTr from '~/components/legal/disclaimer.tr.astro';
@@ -52,32 +36,16 @@ const Body: any =
       es: DisclaimerEs,
       fr: DisclaimerFr,
       it: DisclaimerIt,
-      cs: DisclaimerCs,
-      sv: DisclaimerSv,
-      da: DisclaimerDa,
-      el: DisclaimerEl,
-      no: DisclaimerNo,
       ru: DisclaimerRu,
       nl: DisclaimerNl,
-      fi: DisclaimerFi,
       pl: DisclaimerPl,
       ar: DisclaimerAr,
       pt: DisclaimerPt,
-      ja: DisclaimerJa,
       bg: DisclaimerBg,
-      et: DisclaimerEt,
-      he: DisclaimerHe,
-      hr: DisclaimerHr,
       hu: DisclaimerHu,
       id: DisclaimerId,
-      ko: DisclaimerKo,
-      lt: DisclaimerLt,
-      lv: DisclaimerLv,
       ms: DisclaimerMs,
       ro: DisclaimerRo,
-      sk: DisclaimerSk,
-      sl: DisclaimerSl,
-      sr: DisclaimerSr,
       th: DisclaimerTh,
       tl: DisclaimerTl,
       tr: DisclaimerTr,
@@ -108,31 +76,6 @@ const META: Record<string, { title: string; description: string }> = {
     title: 'Dichiarazione di Non Responsabilità Medica — Paddle Board Overstock',
     description: 'I contenuti di questo sito web, inclusi testi, grafiche, immagini e altro materiale, hanno',
   },
-  cs: {
-    title: 'Lékařské upozornění — Paddle Board Overstock',
-    description:
-      'Lékařské upozornění k produktům a službám Paddle Board Overstock. Informace mají výhradně informativní a vzdělávací charakter.',
-  },
-  sv: {
-    title: `Medicinsk ansvarsfriskrivning — ${SITE.name}`,
-    description:
-      'Medicinsk ansvarsfriskrivning för Paddle Board Overstock produkter och tjänster. Information endast för informations- och utbildningsändamål.',
-  },
-  da: {
-    title: `Medicinsk ansvarsfraskrivelse — ${SITE.name}`,
-    description:
-      'Medicinsk ansvarsfraskrivelse for Paddle Board Overstock produkter og tjenester. Oplysninger kun til informations- og uddannelsesformål.',
-  },
-  el: {
-    title: `Ιατρική αποποίηση ευθύνης — ${SITE.name}`,
-    description:
-      'Ιατρική δήλωση αποποίησης ευθύνης για Paddle Board Overstock προϊόντα και υπηρεσίες. Πληροφορίες μόνο για ενημερωτικούς και εκπαιδευτικούς σκοπούς.',
-  },
-  no: {
-    title: `Medisinsk ansvarsfraskrivelse – ${SITE.name}`,
-    description:
-      'Medisinsk ansvarsfraskrivelse for Paddle Board Overstock produkter og tjenester. Informasjon kun for informasjons- og pedagogiske formål.',
-  },
   ru: {
     title: `Отказ от медицинской ответственности — ${SITE.name}`,
     description:
@@ -142,11 +85,6 @@ const META: Record<string, { title: string; description: string }> = {
     title: `Medische disclaimer — ${SITE.name}`,
     description:
       'Medische disclaimer voor Paddle Board Overstock producten en diensten. Informatie uitsluitend voor informatieve en educatieve doeleinden.',
-  },
-  fi: {
-    title: `Lääketieteellinen vastuuvapauslauseke – ${SITE.name}`,
-    description:
-      'Lääketieteellinen vastuuvapauslauseke Paddle Board Overstock -tuotteista ja -palveluista. Tiedot vain tiedotus- ja koulutustarkoituksiin.',
   },
   pl: {
     title: `Zastrzeżenie medyczne — ${SITE.name}`,
@@ -163,29 +101,10 @@ const META: Record<string, { title: string; description: string }> = {
     description:
       'Isenção de responsabilidade médica para produtos e serviços Paddle Board Overstock. Informações apenas para fins informativos e educacionais.',
   },
-  ja: {
-    title: `医療上の免責事項 — ${SITE.name}`,
-    description:
-      'Paddle Board Overstock 製品およびサービスに関する医療上の免責事項。情報提供および教育のみを目的とした情報。',
-  },
   bg: {
     title: 'Медицински отказ — Paddle Board Overstock',
     description:
       'Медицински отказ от отговорност за продуктите и услугите на Paddle Board Overstock. Информацията е само за информационни и образователни цели.',
-  },
-  et: {
-    title: 'Meditsiiniline vastutusest loobumine — Paddle Board Overstock',
-    description:
-      'Meditsiiniline lahtiütlemine Paddle Board Overstock toodete ja teenuste kohta. Teave on mõeldud ainult informatiivsetel ja hariduslikel eesmärkidel.',
-  },
-  he: {
-    title: 'הזדהות רפואית — Paddle Board Overstock',
-    description: 'כתב ויתור רפואי עבור מוצרי ושירותי Paddle Board Overstock. מידע למטרות מידע ולימוד בלבד.',
-  },
-  hr: {
-    title: 'Medicinski odricanje — Paddle Board Overstock',
-    description:
-      'Medicinsko odricanje odgovornosti za Paddle Board Overstock proizvode i usluge. Informacije su namijenjene samo u informativne i obrazovne svrhe.',
   },
   hu: {
     title: 'Orvosi nyilatkozat — Paddle Board Overstock',
@@ -197,21 +116,6 @@ const META: Record<string, { title: string; description: string }> = {
     description:
       'Penafian medis untuk produk dan layanan Paddle Board Overstock. Informasi hanya untuk tujuan informasi dan edukasi.',
   },
-  ko: {
-    title: '의학적 면책 조항 — Paddle Board Overstock',
-    description:
-      'Paddle Board Overstock 제품 및 서비스에 대한 의료 면책 고지. 정보는 정보 제공 및 교육 목적으로만 사용됩니다.',
-  },
-  lt: {
-    title: 'Medicinos atsakomybės apribojimas — Paddle Board Overstock',
-    description:
-      'Medicininis atsakomybės atsisakymas dėl Paddle Board Overstock produktų ir paslaugų. Informacija skirta tik informaciniams ir edukaciniams tikslams.',
-  },
-  lv: {
-    title: 'Medicīnas atruna — Paddle Board Overstock',
-    description:
-      'Medicīniskās atrunas par Paddle Board Overstock produktiem un pakalpojumiem. Informācija tikai informatīviem un izglītojošiem nolūkiem.',
-  },
   ms: {
     title: 'Penafian Perubatan — Paddle Board Overstock',
     description:
@@ -221,21 +125,6 @@ const META: Record<string, { title: string; description: string }> = {
     title: 'Avertisment medical — Paddle Board Overstock',
     description:
       'Declinare de responsabilitate medicală pentru produsele și serviciile Paddle Board Overstock. Informațiile sunt destinate numai scopurilor informaționale și educaționale.',
-  },
-  sk: {
-    title: 'Lekárske zrieknutie sa zodpovednosti — Paddle Board Overstock',
-    description:
-      'Lekárske zrieknutie sa zodpovednosti za produkty a služby Paddle Board Overstock. Informácie slúžia iba na informačné a vzdelávacie účely.',
-  },
-  sl: {
-    title: 'Zdravstveno obvestilo — Paddle Board Overstock',
-    description:
-      'Medicinski pravni opomin za izdelke in storitve Paddle Board Overstock. Informacije so namenjene samo za informativne in izobraževalne namene.',
-  },
-  sr: {
-    title: 'Medicinski odricanje — Paddle Board Overstock',
-    description:
-      'Medicinski odricanje odgovornosti za Paddle Board Overstock proizvode i usluge. Informacije su samo u informativne i obrazovne svrhe.',
   },
   th: {
     title: 'ข้อจำกัดความรับผิดทางการแพทย์ — Paddle Board Overstock',
@@ -331,7 +220,7 @@ const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: 'M
               <strong>Email</strong>: info@paddleboardoverstock.com
             </li>
             <li>
-              <strong>Address</strong>: Economic Development Zone, Laixi, Qingdao, China, 266600
+              <strong>Address</strong>: Economic Development Zone, Weihai, Shandong, China, 264200
             </li>
           </ul>
           <hr />

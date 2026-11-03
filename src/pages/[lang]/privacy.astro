@@ -16,32 +16,16 @@ import PrivacyDe from '~/components/legal/privacy.de.astro';
 import PrivacyEs from '~/components/legal/privacy.es.astro';
 import PrivacyFr from '~/components/legal/privacy.fr.astro';
 import PrivacyIt from '~/components/legal/privacy.it.astro';
-import PrivacyCs from '~/components/legal/privacy.cs.astro';
-import PrivacySv from '~/components/legal/privacy.sv.astro';
-import PrivacyDa from '~/components/legal/privacy.da.astro';
-import PrivacyEl from '~/components/legal/privacy.el.astro';
-import PrivacyNo from '~/components/legal/privacy.no.astro';
 import PrivacyRu from '~/components/legal/privacy.ru.astro';
 import PrivacyNl from '~/components/legal/privacy.nl.astro';
-import PrivacyFi from '~/components/legal/privacy.fi.astro';
 import PrivacyPl from '~/components/legal/privacy.pl.astro';
 import PrivacyAr from '~/components/legal/privacy.ar.astro';
 import PrivacyPt from '~/components/legal/privacy.pt.astro';
-import PrivacyJa from '~/components/legal/privacy.ja.astro';
 import PrivacyBg from '~/components/legal/privacy.bg.astro';
-import PrivacyEt from '~/components/legal/privacy.et.astro';
-import PrivacyHe from '~/components/legal/privacy.he.astro';
-import PrivacyHr from '~/components/legal/privacy.hr.astro';
 import PrivacyHu from '~/components/legal/privacy.hu.astro';
 import PrivacyId from '~/components/legal/privacy.id.astro';
-import PrivacyKo from '~/components/legal/privacy.ko.astro';
-import PrivacyLt from '~/components/legal/privacy.lt.astro';
-import PrivacyLv from '~/components/legal/privacy.lv.astro';
 import PrivacyMs from '~/components/legal/privacy.ms.astro';
 import PrivacyRo from '~/components/legal/privacy.ro.astro';
-import PrivacySk from '~/components/legal/privacy.sk.astro';
-import PrivacySl from '~/components/legal/privacy.sl.astro';
-import PrivacySr from '~/components/legal/privacy.sr.astro';
 import PrivacyTh from '~/components/legal/privacy.th.astro';
 import PrivacyTl from '~/components/legal/privacy.tl.astro';
 import PrivacyTr from '~/components/legal/privacy.tr.astro';
@@ -52,32 +36,16 @@ const Body: any =
       es: PrivacyEs,
       fr: PrivacyFr,
       it: PrivacyIt,
-      cs: PrivacyCs,
-      sv: PrivacySv,
-      da: PrivacyDa,
-      el: PrivacyEl,
-      no: PrivacyNo,
       ru: PrivacyRu,
       nl: PrivacyNl,
-      fi: PrivacyFi,
       pl: PrivacyPl,
       ar: PrivacyAr,
       pt: PrivacyPt,
-      ja: PrivacyJa,
       bg: PrivacyBg,
-      et: PrivacyEt,
-      he: PrivacyHe,
-      hr: PrivacyHr,
       hu: PrivacyHu,
       id: PrivacyId,
-      ko: PrivacyKo,
-      lt: PrivacyLt,
-      lv: PrivacyLv,
       ms: PrivacyMs,
       ro: PrivacyRo,
-      sk: PrivacySk,
-      sl: PrivacySl,
-      sr: PrivacySr,
       th: PrivacyTh,
       tl: PrivacyTl,
       tr: PrivacyTr,
@@ -109,31 +77,6 @@ const META: Record<string, { title: string; description: string }> = {
     description:
       "La presente Informativa sulla Privacy descrive le nostre politiche e procedure relative alla raccolta, all'uso e alla divulgazione delle Tue informazioni quando",
   },
-  cs: {
-    title: 'Zásady ochrany osobních údajů — Paddle Board Overstock',
-    description:
-      'Zásady ochrany osobních údajů společnosti Paddle Board Overstock. Zjistěte, jak shromažďujeme, používáme a chráníme vaše osobní údaje.',
-  },
-  sv: {
-    title: `Sekretesspolicy — ${SITE.name}`,
-    description:
-      'Paddle Board Overstock sekretesspolicy. Lär dig hur vi samlar in, använder och skyddar dina personuppgifter.',
-  },
-  da: {
-    title: `Privatlivspolitik — ${SITE.name}`,
-    description:
-      'Paddle Board Overstock privatlivspolitik. Lær, hvordan vi indsamler, bruger og beskytter dine personlige data.',
-  },
-  el: {
-    title: `Πολιτική απορρήτου — ${SITE.name}`,
-    description:
-      'Paddle Board Overstock πολιτική απορρήτου. Μάθετε πώς συλλέγουμε, χρησιμοποιούμε και προστατεύουμε τα προσωπικά σας δεδομένα.',
-  },
-  no: {
-    title: `Retningslinjer for personvern — ${SITE.name}`,
-    description:
-      'Paddle Board Overstock personvernerklæring. Finn ut hvordan vi samler inn, bruker og beskytter dine personopplysninger.',
-  },
   ru: {
     title: `Политика конфиденциальности — ${SITE.name}`,
     description:
@@ -143,11 +86,6 @@ const META: Record<string, { title: string; description: string }> = {
     title: `Privacybeleid — ${SITE.name}`,
     description:
       'Paddle Board Overstock privacybeleid. Ontdek hoe wij uw persoonlijke gegevens verzamelen, gebruiken en beschermen.',
-  },
-  fi: {
-    title: `Tietosuojakäytäntö — ${SITE.name}`,
-    description:
-      'Paddle Board Overstock tietosuojakäytäntö. Opi kuinka keräämme, käytämme ja suojaamme henkilötietojasi.',
   },
   pl: {
     title: `Polityka prywatności — ${SITE.name}`,
@@ -163,29 +101,10 @@ const META: Record<string, { title: string; description: string }> = {
     description:
       'Paddle Board Overstock política de privacidade. Saiba como coletamos, usamos e protegemos seus dados pessoais.',
   },
-  ja: {
-    title: `プライバシーポリシー — ${SITE.name}`,
-    description:
-      'Paddle Board Overstock プライバシー ポリシー。当社がお客様の個人データをどのように収集、使用、保護するかをご覧ください。',
-  },
   bg: {
     title: 'Политика за поверителност — Paddle Board Overstock',
     description:
       'Paddle Board Overstock политика за поверителност. Разберете как събираме, използваме и защитаваме вашите лични данни.',
-  },
-  et: {
-    title: 'Privaatsuspoliitika — Paddle Board Overstock',
-    description:
-      'Paddle Board Overstock privaatsuspoliitika. Uuri, kuidas me kogume, kasutame ja kaitseme teie isikuandmeid.',
-  },
-  he: {
-    title: 'מדיניות פרטיות — Paddle Board Overstock',
-    description: 'Paddle Board Overstock מדיניות פרטיות. למדו כיצד אנו אוספים, משתמשים ומגנים על הנתונים האישיים שלכם.',
-  },
-  hr: {
-    title: 'Pravila privatnosti — Paddle Board Overstock',
-    description:
-      'Paddle Board Overstock pravila privatnosti. Saznajte kako prikupljamo, koristimo i štitimo vaše osobne podatke.',
   },
   hu: {
     title: 'Adatvédelmi irányelvek — Paddle Board Overstock',
@@ -197,21 +116,6 @@ const META: Record<string, { title: string; description: string }> = {
     description:
       'Kebijakan privasi Paddle Board Overstock. Pelajari bagaimana kami mengumpulkan, menggunakan, dan melindungi data pribadi Anda.',
   },
-  ko: {
-    title: '개인정보 처리방침 — Paddle Board Overstock',
-    description:
-      'Paddle Board Overstock 개인정보 처리방침. 당사가 귀하의 개인 데이터를 수집, 사용 및 보호하는 방법을 알아보세요.',
-  },
-  lt: {
-    title: 'Privatumo politika — Paddle Board Overstock',
-    description:
-      'Paddle Board Overstock privatumo politika. Sužinokite, kaip mes renkame, naudojame ir saugome jūsų asmens duomenis.',
-  },
-  lv: {
-    title: 'Privātuma politika — Paddle Board Overstock',
-    description:
-      'Paddle Board Overstock privātuma politika. Uzziniet, kā mēs vācam, izmantojam un aizsargājam jūsu personas datus.',
-  },
   ms: {
     title: 'Dasar Privasi — Paddle Board Overstock',
     description:
@@ -221,21 +125,6 @@ const META: Record<string, { title: string; description: string }> = {
     title: 'Politica de confidențialitate — Paddle Board Overstock',
     description:
       'Paddle Board Overstock politică de confidențialitate. Aflați cum colectăm, folosim și protejăm datele dumneavoastră personale.',
-  },
-  sk: {
-    title: 'Zásady ochrany osobných údajov — Paddle Board Overstock',
-    description:
-      'Paddle Board Overstock zásady ochrany osobných údajov. Zistite, ako zhromažďujeme, používame a chránime vaše osobné údaje.',
-  },
-  sl: {
-    title: 'Politika zasebnosti — Paddle Board Overstock',
-    description:
-      'Paddle Board Overstock politika zasebnosti. Naučite se, kako zbiramo, uporabljamo in ščitimo vaše osebne podatke.',
-  },
-  sr: {
-    title: 'Politika privatnosti — Paddle Board Overstock',
-    description:
-      'Paddle Board Overstock politika privatnosti. Saznajte kako prikupljamo, koristimo i štitimo vaše lične podatke.',
   },
   th: {
     title: 'นโยบายความเป็นส่วนตัว — Paddle Board Overstock',
@@ -299,15 +188,15 @@ const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: 'P
             </li>
             <li>
               <strong>Company</strong> (referred to as either "the Company", "We", "Us" or "Our" in this Agreement)
-              refers to Paddle Board Overstock, a China-based inflatable watercraft manufacturer with headquarters in
-              Qingdao, China.
+              refers to Paddle Board Overstock, a China-based inflatable SUP board manufacturer with headquarters in
+              Weihai, China.
             </li>
             <li>
               <strong>Cookies</strong> are small files that are placed on Your computer, mobile device or any other
               device by a website.
             </li>
             <li>
-              <strong>Country</strong> refers to: New Mexico, United States
+              <strong>Country</strong> refers to: China
             </li>
             <li>
               <strong>Device</strong> means any device that can access the Service.
@@ -414,7 +303,7 @@ const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: 'P
           <ul>
             <li>By email: info@paddleboardoverstock.com</li>
             <li>By phone: +86 13305324192</li>
-            <li>By mail: Economic Development Zone, Laixi, Qingdao, China, 266600</li>
+            <li>By mail: Economic Development Zone, Weihai, Shandong, China, 264200</li>
           </ul>
         </div>
       </section>

@@ -10,35 +10,19 @@ import LDe from '~/components/research/sup-thickness-guide.de.astro';
 import LEs from '~/components/research/sup-thickness-guide.es.astro';
 import LFr from '~/components/research/sup-thickness-guide.fr.astro';
 import LIt from '~/components/research/sup-thickness-guide.it.astro';
-import LCs from '~/components/research/sup-thickness-guide.cs.astro';
-import LSv from '~/components/research/sup-thickness-guide.sv.astro';
-import LDa from '~/components/research/sup-thickness-guide.da.astro';
-import LEl from '~/components/research/sup-thickness-guide.el.astro';
-import LNo from '~/components/research/sup-thickness-guide.no.astro';
 import LRu from '~/components/research/sup-thickness-guide.ru.astro';
 import LNl from '~/components/research/sup-thickness-guide.nl.astro';
-import LFi from '~/components/research/sup-thickness-guide.fi.astro';
 import LPl from '~/components/research/sup-thickness-guide.pl.astro';
 import LAr from '~/components/research/sup-thickness-guide.ar.astro';
 import LPt from '~/components/research/sup-thickness-guide.pt.astro';
-import LJa from '~/components/research/sup-thickness-guide.ja.astro';
 import LMs from '~/components/research/sup-thickness-guide.ms.astro';
 import LRo from '~/components/research/sup-thickness-guide.ro.astro';
-import LSk from '~/components/research/sup-thickness-guide.sk.astro';
-import LSl from '~/components/research/sup-thickness-guide.sl.astro';
-import LSr from '~/components/research/sup-thickness-guide.sr.astro';
 import LTh from '~/components/research/sup-thickness-guide.th.astro';
 import LTl from '~/components/research/sup-thickness-guide.tl.astro';
 import LTr from '~/components/research/sup-thickness-guide.tr.astro';
 import LBg from '~/components/research/sup-thickness-guide.bg.astro';
-import LEt from '~/components/research/sup-thickness-guide.et.astro';
-import LHe from '~/components/research/sup-thickness-guide.he.astro';
-import LHr from '~/components/research/sup-thickness-guide.hr.astro';
 import LHu from '~/components/research/sup-thickness-guide.hu.astro';
 import LId from '~/components/research/sup-thickness-guide.id.astro';
-import LKo from '~/components/research/sup-thickness-guide.ko.astro';
-import LLt from '~/components/research/sup-thickness-guide.lt.astro';
-import LLv from '~/components/research/sup-thickness-guide.lv.astro';
 
 export async function getStaticPaths() {
   return Object.keys(languages).map((lang) => ({ params: { lang } }));
@@ -73,31 +57,6 @@ const META: Record<string, { title: string; description: string }> = {
     description:
       'Guida tecnica allo spessore delle tavole SUP gonfiabili: come le tavole da 4", 5" e 6" differiscono per rigidità, peso, stabilità, deriva e prestazioni. Consigli sullo spessore per touring, yoga, surf, gara e pagaiata polivalente.',
   },
-  cs: {
-    title: 'Jak zvolit tloušťku SUP — Technická analýza',
-    description:
-      'Technický průvodce tloušťkou nafukovacího prkna SUP: jak se liší prkna 4", 5" a 6" v tuhosti, hmotnosti, stabilitě, sledování a výkonu. Doporučená tloušťka pro turistiku, jógu, surfování, závody a všestranné pádlování.',
-  },
-  sv: {
-    title: 'Hur man väljer SUP tjocklek — Teknisk analys',
-    description:
-      'Teknisk guide till uppblåsbara SUP brädor tjocklek: hur 4", 5" och 6" brädor skiljer sig i styvhet, vikt, stabilitet, spårning och prestanda. Tjockleksrekommendationer för touring, yoga, surfing, racing och all-around paddling.',
-  },
-  da: {
-    title: 'Sådan vælger du SUP tykkelse — Teknisk analyse',
-    description:
-      'Teknisk guide til oppustelige SUP boardtykkelser: hvordan 4", 5" og 6" boards adskiller sig i stivhed, vægt, stabilitet, sporing og ydeevne. Tykkelseanbefalinger til touring, yoga, surfing, racing og all-around paddling.',
-  },
-  el: {
-    title: 'Πώς να επιλέξετε SUP Πάχος — Μηχανική Ανάλυση',
-    description:
-      'Τεχνικός οδηγός για φουσκωτό πάχος σανίδας SUP: πώς διαφέρουν οι σανίδες 4", 5" και 6" ως προς την ακαμψία, το βάρος, τη σταθερότητα, την παρακολούθηση και την απόδοση. Προτάσεις πάχους για περιηγήσεις, γιόγκα, σερφ, αγώνες και κωπηλασία παντού.',
-  },
-  no: {
-    title: 'Hvordan velge SUP tykkelse — ingeniøranalyse',
-    description:
-      'Teknisk veiledning til oppblåsbare SUP-bretttykkelser: hvordan 4", 5" og 6"-brett er forskjellige i stivhet, vekt, stabilitet, sporing og ytelse. Tykkelsesanbefalinger for turer, yoga, surfing, racing og allsidig padling.',
-  },
   ru: {
     title: 'Как выбрать толщину SUP — инженерный анализ',
     description:
@@ -107,11 +66,6 @@ const META: Record<string, { title: string; description: string }> = {
     title: 'Hoe u een dikte van SUP kiest: technische analyse',
     description:
       'Technische gids voor opblaasbare SUP boarddikte: hoe boards van 4", 5" en 6" verschillen in stijfheid, gewicht, stabiliteit, tracking en prestaties. Aanbevelingen voor dikte voor toeren, yoga, surfen, racen en allround peddelen.',
-  },
-  fi: {
-    title: 'Kuinka valita SUP paksuus — tekninen analyysi',
-    description:
-      'Tekninen opas puhallettavien SUP-laudan paksuuteen: kuinka 4", 5" ja 6" laudat eroavat jäykkyydestä, painosta, vakaudesta, seurannasta ja suorituskyvystä. Paksuussuositukset retkeilyyn, joogaan, surffaukseen, kilpa-ajoon ja kaikkeen melontaan.',
   },
   pl: {
     title: 'Jak wybrać grubość SUP — analiza inżynierska',
@@ -128,11 +82,6 @@ const META: Record<string, { title: string; description: string }> = {
     description:
       'Guia técnico para espessura de prancha inflável SUP: como as pranchas de 4", 5" e 6" diferem em rigidez, peso, estabilidade, rastreamento e desempenho. Recomendações de espessura para passeios, ioga, surf, corrida e remo versátil.',
   },
-  ja: {
-    title: 'SUP の厚さを選択する方法 — エンジニアリング分析',
-    description:
-      'インフレータブル SUP ボードの厚さに関するテクニカル ガイド: 4 インチ、5 インチ、および 6 インチのボードの剛性、重量、安定性、トラッキング、パフォーマンスの違い。ツーリング、ヨガ、サーフィン、レース、およびオールラウンド パドリングに推奨される厚さ。',
-  },
   ms: {
     title: 'Bagaimana Memilih Ketebalan SUP — Analisis Kejuruteraan',
     description:
@@ -142,21 +91,6 @@ const META: Record<string, { title: string; description: string }> = {
     title: 'Cum să Alegi Grosimea SUP — Analiză Tehnică',
     description:
       'Ghid tehnic pentru grosimea plăcilor gonflabile SUP: cum diferă plăcile de 4", 5" și 6" în ceea ce privește rigiditatea, greutatea, stabilitatea, urmărirea traseului și performanța. Recomandări de grosime pentru touring, yoga, surfing, curse și paddling general.',
-  },
-  sk: {
-    title: 'Ako vybrať hrúbku SUP – technická analýza',
-    description:
-      'Technický sprievodca hrúbkou nafukovacích SUP dosiek: ako sa 4", 5" a 6" dosky líšia v tuhosti, hmotnosti, stabilite, sledovaní a výkone. Odporúčania hrúbky pre touring, jogu, surfovanie, preteky a univerzálne pádlovanie.',
-  },
-  sl: {
-    title: 'Kako izbrati debelino SUP — inženirska analiza',
-    description:
-      'Tehnični vodnik za debelino napihljivih SUP desk: kako se 4", 5" in 6" deske razlikujejo po togosti, teži, stabilnosti, sledenju in zmogljivosti. Priporočila za debelino za tour, jogo, surfanje, dirke in splošno veslanje.',
-  },
-  sr: {
-    title: 'Kako izabrati SUP debljinu — inženjerska analiza',
-    description:
-      'Tehnički vodič za debljinu naduvavanja SUP daske: kako se daske od 4", 5" i 6" razlikuju po rigidnosti, težini, stabilnosti, vođenju i performansama. Preporuke debljine za touring, jogu, surfovanje, trke i svestrano veslanje.',
   },
   th: {
     title: 'วิธีการเลือกความหนา SUP — การวิเคราะห์วิศวกรรม',
@@ -178,21 +112,6 @@ const META: Record<string, { title: string; description: string }> = {
     description:
       'Техническо ръководство за дебелината на надуваемата SUP дъска: как дъските с 4", 5" и 6" се различават по твърдост, тегло, стабилност, тракция и производителност. Препоръки за дебелина за туризъм, йога, сърф, състезания и универсално гребане.',
   },
-  et: {
-    title: 'Kuidas valida SUP paksust — Tehniline analüüs',
-    description:
-      'Tehniline juhend täispuhutavate SUP laudade paksuse kohta: kuidas 4", 5" ja 6" lauad erinevad jäikuses, kaalus, stabiilsuses, jälgimises ja jõudluses. Paksussoovitused touringuks, joogaks, surfamiseks, võidusõiduks ja üldiseks sõudmiseks.',
-  },
-  he: {
-    title: 'כיצד לבחור עובי SUP — ניתוח הנדסי',
-    description:
-      'מדריך טכני לעובי הלוח המתנפח SUP: איך לוחות בעובי 4", 5" ו-6" שונים בנוקשות, במשקל, בייצוב, בעקיבה ובביצועים. המלצות לעובי ללוחות טיולים, יוגה, גלישה, מירוצים ושליחות כללית.',
-  },
-  hr: {
-    title: 'Kako odabrati debljinu SUP — inženjerska analiza',
-    description:
-      'Tehnički vodič za debljinu napuhavajuće SUP daske: kako se daske od 4, 5 i 6 inča razlikuju po krutosti, težini, stabilnosti, praćenju i performansama. Preporuke debljine za turizam, jogu, surfing, utrke i sve vrste veslanja.',
-  },
   hu: {
     title: 'Hogyan válasszuk ki a SUP vastagságot – Műszaki elemzés',
     description:
@@ -203,21 +122,6 @@ const META: Record<string, { title: string; description: string }> = {
     description:
       'Panduan teknis untuk ketebalan papan SUP yang dapat dipompa: bagaimana papan 4", 5", dan 6" berbeda dalam kekakuan, berat, stabilitas, pelacakan, dan performa. Rekomendasi ketebalan untuk touring, yoga, selancar, balap, dan dayung serba guna.',
   },
-  ko: {
-    title: 'SUP 두께 선택 방법 — 공학 분석',
-    description:
-      '팽창식 SUP 보드 두께 기술 가이드: 4인치, 5인치, 6인치 보드가 강성, 무게, 안정성, 트래킹, 성능 면에서 어떻게 다른가. 투어링, 요가, 서핑, 레이싱, 그리고 전반적인 패들링을 위한 두께 권장사항.',
-  },
-  lt: {
-    title: 'Kaip pasirinkti SUP storį — inžinerinė analizė',
-    description:
-      'Techninis vadovas apie pripučiamų SUP lentų storį: kaip 4", 5" ir 6" lentos skiriasi standumu, svoriu, stabilumu, trajektorija ir našumu. Storio rekomendacijos turizmui, jogai, banglenčių sportui, varžyboms ir universaliniam irklavimui.',
-  },
-  lv: {
-    title: 'Kā izvēlēties SUP biezumu — inženierijas analīze',
-    description:
-      'Tehniskais ceļvedis uz piepūšamo SUP dēļu biezumu: kā 4", 5" un 6" dēļi atšķiras stingrībā, svarā, stabilitātē, ievirzē un sniegumā. Biezuma ieteikumi tūrisma, jogas, sērfošanas, sacensību un universālā airēšanas nolūkiem.',
-  },
 };
 const meta = META[lang] || META.en;
 const ResearchBody: any =
@@ -227,35 +131,19 @@ const ResearchBody: any =
       es: LEs,
       fr: LFr,
       it: LIt,
-      cs: LCs,
-      sv: LSv,
-      da: LDa,
-      el: LEl,
-      no: LNo,
       ru: LRu,
       nl: LNl,
-      fi: LFi,
       pl: LPl,
       ar: LAr,
       pt: LPt,
-      ja: LJa,
       ms: LMs,
       ro: LRo,
-      sk: LSk,
-      sl: LSl,
-      sr: LSr,
       th: LTh,
       tl: LTl,
       tr: LTr,
       bg: LBg,
-      et: LEt,
-      he: LHe,
-      hr: LHr,
       hu: LHu,
       id: LId,
-      ko: LKo,
-      lt: LLt,
-      lv: LLv,
     } as Record<string, any>
   )[lang] || null;
 

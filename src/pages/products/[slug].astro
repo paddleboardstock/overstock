@@ -12,7 +12,6 @@ import Tldr from '~/components/common/Tldr.astro';
 import TrustBadges from '~/components/common/TrustBadges.astro';
 import ProductGradeBadge from '~/components/widgets/ProductGradeBadge.astro';
 import ProductFullSet from '~/components/widgets/ProductFullSet.astro';
-import ProductWhatsAppBulk from '~/components/widgets/ProductWhatsAppBulk.astro';
 
 import { findRelatedProducts, getStaticPathsProduct, CATEGORY_SLUG_TO_URL } from '~/utils/products';
 import { findImage } from '~/utils/images';
@@ -128,12 +127,10 @@ const specEntries: Array<{ name: string; value: string }> = [
 const productExtraData: Record<string, unknown> = {
   ...(productMentions.length > 0 ? { mentions: productMentions } : {}),
   ...(businessAudience.length > 0 ? { audience: businessAudience } : {}),
-  award: productCompliance.certs.map((c) => c.label),
-  material: productCompliance.materialCompliance.join(', '),
   additionalProperty: specEntries.map((s) => ({ '@type': 'PropertyValue', name: s.name, value: s.value })),
   potentialAction: {
     '@type': 'QuoteAction',
-    target: `${String(url).replace(/\/+$/, '')}/request-quotation`,
+    target: `${SITE.site}/contact`,
     name: 'Request a Quote',
   },
 };
@@ -158,7 +155,7 @@ const productExtraData: Record<string, unknown> = {
         '@type': 'Offer',
         availability: product.inStock === false ? 'https://schema.org/OutOfStock' : 'https://schema.org/InStock',
         businessFunction: 'https://schema.org/Sell',
-        url: `${SITE.site}/request-quotation/`,
+        url: `${SITE.site}/contact/`,
         ...(product.price?.amount
           ? {
               price: product.price.amount,
@@ -475,8 +472,6 @@ const productExtraData: Record<string, unknown> = {
               Buy Now
             </button>
           </div>
-          {/* WhatsApp bulk / wholesale CTA */}
-          <ProductWhatsAppBulk title={product.title} />
           <div class="flex items-center gap-4 text-xs text-gray-400 dark:text-slate-500 pt-1">
             <span class="inline-flex items-center gap-1.5">
               <Icon name="tabler:shield-check" class="w-4 h-4" />
@@ -761,33 +756,27 @@ const productExtraData: Record<string, unknown> = {
     )
   }
 
-  {/* Certifications & Compliance */}
+  {/* Quality & Warranty */}
   <section class="bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 py-10 md:py-14">
       <span class="text-xs font-semibold uppercase tracking-wider text-sky-600 dark:text-sky-400 mb-2 block"
-        >Compliance</span
+        >Quality</span
       >
       <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-6">
-        Certifications & Compliance
+        Quality &amp; Warranty
       </h2>
-      <div class="grid md:grid-cols-3 gap-6">
+      <div class="grid md:grid-cols-2 gap-6">
         <div class="bg-gray-50 dark:bg-slate-800/50 rounded-xl p-6">
           <div class="flex items-center gap-2 mb-3">
             <span class="text-green-600 text-lg">&#10003;</span>
-            <h3 class="font-semibold text-gray-900 dark:text-slate-100">Certifications</h3>
+            <h3 class="font-semibold text-gray-900 dark:text-slate-100">Quality Testing</h3>
           </div>
           <div class="space-y-2">
             {
-              productCompliance.certs.map((c: any) => (
+              productCompliance.testing.map((item: string) => (
                 <div class="flex items-start gap-2">
                   <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 shrink-0" />
-                  <div>
-                    <span class="text-sm font-medium text-gray-900 dark:text-slate-200">{c.label}</span>
-                    {c.standard && <span class="text-xs text-gray-500 dark:text-slate-400"> ({c.standard})</span>}
-                    {c.body && (
-                      <span class="text-xs text-gray-400 dark:text-slate-500 block">Certified by {c.body}</span>
-                    )}
-                  </div>
+                  <span class="text-sm text-gray-600 dark:text-slate-400">{item}</span>
                 </div>
               ))
             }
@@ -796,40 +785,9 @@ const productExtraData: Record<string, unknown> = {
         <div class="bg-gray-50 dark:bg-slate-800/50 rounded-xl p-6">
           <div class="flex items-center gap-2 mb-3">
             <span class="text-green-600 text-lg">&#10003;</span>
-            <h3 class="font-semibold text-gray-900 dark:text-slate-100">Material Compliance</h3>
+            <h3 class="font-semibold text-gray-900 dark:text-slate-100">Warranty</h3>
           </div>
-          <div class="space-y-2">
-            {
-              productCompliance.materialCompliance.map((m: string) => (
-                <div class="flex items-start gap-2">
-                  <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 shrink-0" />
-                  <span class="text-sm text-gray-600 dark:text-slate-400">{m}</span>
-                </div>
-              ))
-            }
-          </div>
-        </div>
-        <div class="bg-gray-50 dark:bg-slate-800/50 rounded-xl p-6">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="text-green-600 text-lg">&#10003;</span>
-            <h3 class="font-semibold text-gray-900 dark:text-slate-100">Testing & Warranty</h3>
-          </div>
-          <div class="space-y-2 mb-4">
-            {
-              productCompliance.testStandards.map((t: string) => (
-                <div class="flex items-start gap-2">
-                  <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 shrink-0" />
-                  <span class="text-sm text-gray-600 dark:text-slate-400">{t}</span>
-                </div>
-              ))
-            }
-          </div>
-          <div class="pt-3 border-t border-gray-200 dark:border-slate-700">
-            <span class="text-xs font-semibold text-gray-500 dark:text-slate-400 uppercase tracking-wider"
-              >Warranty</span
-            >
-            <p class="text-sm text-gray-700 dark:text-slate-300 mt-1">{productCompliance.warranty}</p>
-          </div>
+          <p class="text-sm text-gray-600 dark:text-slate-400">{productCompliance.warranty}</p>
         </div>
       </div>
     </div>

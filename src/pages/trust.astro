@@ -16,9 +16,9 @@ import trustData from '~/data/pages/trust.yaml';
 const page = merge({}, trustData);
 
 const metadata = {
-  title: `Trust — Certifications & Quality Assurance — ${SITE.name}`,
+  title: `Trust — Quality Assurance & Global Standards — ${SITE.name}`,
   description:
-    'CE certified per applicable EU directives, ISO 9001, BSCI, REACH compliant. Every Paddle Board Overstock product tested for safety and durability.',
+    'Every Paddle Board Overstock SUP board is pressure-tested for safety and durability. Six-stage quality control, 100% unit testing, and a 99.3% defect-free rate.',
 };
 ---
 
@@ -30,8 +30,6 @@ const metadata = {
   <Features3 {...page.features3_lab} />
   <Testimonials {...page.testimonials} />
   <Steps2 {...page.steps2_manufacturing} />
-  <Faq {...page.faqs_rib} />
-  <Faq {...page.faqs_inflatable} />
   <Faq {...page.faqs_sup} />
   <CallToAction {...page.cta} />
 </Layout>

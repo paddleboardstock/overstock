@@ -23,7 +23,7 @@ import topGuidesData from '~/data/site/top-guides.yaml';
 const metadata = {
   title: 'Inflatable SUP Boards Overstock & Clearance — Factory Direct | Paddle Board Overstock',
   description:
-    'Inflatable SUP board overstock and clearance sale — factory direct from Weihai, China. Complete paddle board packages up to 60% off retail. CE-certified, 2-year warranty, secure Stripe & PayPal checkout, worldwide shipping.',
+    'Inflatable SUP board overstock and clearance sale — factory direct from Weihai, China. Complete paddle board packages up to 60% off retail. 2-year warranty, secure Stripe & PayPal checkout, worldwide shipping.',
 };
 
 interface HeroSlide {
@@ -55,10 +55,6 @@ const heroSlides: HeroSlide[] = (heroImagesData as any)?.slides?.filter((s: any)
 const defaultVisuals: Record<string, string> = {
   'sup-explorer-11':
     'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/paddleboardoverstock-sup-allround-board.webp',
-  'life-vest-classic':
-    'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/paddleboardoverstock-life-vest-classic.webp',
-  'life-vest-pro':
-    'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/paddleboardoverstock-life-vest-pro-front.webp',
   'oars-pump-set':
     'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/paddleboardoverstock-electric-pump.webp',
 };
@@ -73,8 +69,8 @@ const defaultUseCases = [
     scenario:
       'A family visiting a lake for the weekend wants to try paddle boarding. They need stable, easy-to-launch equipment with clear safety guidance.',
     solution:
-      'The SUP Explorer 11 provides wide-body stability for beginners. The Life Vest Classic ensures CE-certified flotation. The Oars & Pump Set inflates the board in under 10 minutes.',
-    products: ['SUP Explorer 11', 'Life Vest Classic', 'Oars & Pump Set'],
+      'The SUP Explorer 11 provides wide-body stability for beginners. The Oars & Pump Set inflates the board in under 10 minutes.',
+    products: ['SUP Explorer 11', 'Oars & Pump Set'],
     img: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-cheetah-surge-1.webp',
   },
   {
@@ -84,7 +80,7 @@ const defaultUseCases = [
       'An outdoor enthusiast plans a week-long paddling trip and needs a board that packs small, inflates at camp, and tracks straight on open water.',
     solution:
       'The Ocean Voyager Series glides efficiently with a touring outline and holds course in wind and chop. Its drop-stitch construction inflates to 15 PSI for hard-board rigidity.',
-    products: ['Ocean Voyager Series', 'Oars & Pump Set', 'Life Vest Classic'],
+    products: ['Ocean Voyager Series', 'Oars & Pump Set'],
     img: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-ocean-voyager-1.webp',
   },
   {
@@ -94,7 +90,7 @@ const defaultUseCases = [
       'A yoga practitioner wants a floating studio for morning sessions on calm water, with enough deck space to hold every pose.',
     solution:
       'The Flowing Lotus Series features a full-length deck pad and a wide beam for wobble-free poses. It doubles as a stable platform for light fitness workouts.',
-    products: ['Flowing Lotus Series', 'Oars & Pump Set', 'Life Vest Classic'],
+    products: ['Flowing Lotus Series', 'Oars & Pump Set'],
     img: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-flowing-lotus-1.webp',
   },
   {
@@ -104,7 +100,7 @@ const defaultUseCases = [
       'A family of four wants stable boards for weekend lake outings and beach holidays, gear that packs into the car and inflates in minutes.',
     solution:
       'The Tropical Breeze Series is a stable all-around board the whole family can share, while the Medusa Glow Series is lighter and shorter for kids. Both pack into backpacks for easy travel.',
-    products: ['Tropical Breeze Series', 'Medusa Glow Series', 'Life Vest Classic'],
+    products: ['Tropical Breeze Series', 'Medusa Glow Series'],
     img: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-tropical-breeze-1.webp',
   },
 ];
@@ -136,9 +132,9 @@ const rawPoints = ((proofPointsData as any)?.points || []) as Array<{
 }>;
 const defaultProofPoints = [
   {
-    metric: '13',
-    label: 'CE-certified models',
-    detail: 'SUP boards and accessories certified per applicable EU directives',
+    metric: '99.3%',
+    label: 'defect-free rate',
+    detail: 'Per internal QC sampling across the SUP range',
   },
   { metric: '50+', label: 'countries served', detail: 'Worldwide shipping across EU, North America, Asia-Pacific' },
   {
@@ -166,13 +162,11 @@ const catalogCategories = [
     key: 'ACCESSORY',
     label: 'Accessories',
     desc: 'Pumps, paddles, life vests, repair kits, and essential gear.',
-    keys: ['ACCESSORY', 'DROPSTITCH_SEAT'],
   },
 ];
 const groupedProducts: Record<string, typeof products> = {};
 for (const cat of catalogCategories) {
-  const keys: string[] = cat.keys ?? [cat.key];
-  groupedProducts[cat.key] = products.filter((p) => keys.includes(p.category)).slice(0, 6);
+  groupedProducts[cat.key] = products.filter((p) => p.category === cat.key).slice(0, 6);
 }
 
 interface FaqItem {
@@ -203,7 +197,7 @@ const defaultFaqItems: FaqItem[] = [
   },
   {
     q: 'Why are your prices lower than retail?',
-    a: 'We sell factory overstock and clearance batches direct from our own production facility in Weihai, China — no middlemen, no retail markup. That means complete SUP packages at up to 60% off typical retail prices, with the same CE-certified quality.',
+    a: 'We sell factory overstock and clearance batches direct from our own production facility in Weihai, China — no middlemen, no retail markup. That means complete SUP packages at up to 60% off typical retail prices, with the same factory-direct quality.',
     category: 'orders',
   },
   {
@@ -258,8 +252,8 @@ const faqCategories = [
     <p>
       Paddle Board Overstock sells inflatable SUP boards, complete SUP packages, and paddle board accessories direct
       from overstock and clearance batches. Boards are built with drop-stitch cores laminated in marine-grade PVC and
-      inflate to 12-15 PSI for hard-board rigidity. 13 CE-certified models cover all-round, touring, yoga, and kids
-      paddling, each backed by a 2-year warranty.
+      inflate to 12-15 PSI for hard-board rigidity. Models cover all-round, touring, yoga, and kids paddling, each
+      backed by a 2-year warranty.
     </p>
   </section>
   <section class="sr-only" data-ai-block="use-case" aria-hidden="true">
@@ -353,7 +347,7 @@ const faqCategories = [
               <strong class="text-white font-semibold">Paddle Board Overstock</strong> — factory overstock and clearance inflatable
               SUP packages.<br />
               Every package includes board, pump, paddle, leash &amp; backpack.<br />
-              CE-certified, 2-year warranty. Secure Stripe &amp; PayPal checkout. Worldwide shipping to 50+ countries.
+              2-year warranty. Secure Stripe &amp; PayPal checkout. Worldwide shipping to 50+ countries.
             </p>
             <div class="mt-10 flex items-center gap-4 flex-wrap justify-center md:justify-start">
               <a
@@ -406,7 +400,7 @@ const faqCategories = [
   <!-- Quick Answer -->
   <section class="max-w-6xl mx-auto px-6 pt-8">
     <AiQuickAnswer
-      quickAnswer="Paddle Board Overstock is an online store for inflatable SUP board overstock and factory clearance stock, operated by Weihai Dongjilian Co., Ltd. Complete paddle board packages (board, pump, paddle, leash, backpack) ship worldwide at up to 60% off retail, with 13 CE-certified models, a 2-year warranty, and secure Stripe & PayPal checkout."
+      quickAnswer="Paddle Board Overstock is an online store for inflatable SUP board overstock and factory clearance stock, operated by Weihai Dongjilian Co., Ltd. Complete paddle board packages (board, pump, paddle, leash, backpack) ship worldwide at up to 60% off retail, with a 2-year warranty and secure Stripe & PayPal checkout."
       facts={[
         { label: 'Store Type', value: 'Online Store — Overstock & Clearance' },
         { label: 'Products', value: 'Inflatable SUP Boards & Accessories' },
@@ -416,18 +410,10 @@ const faqCategories = [
     />
   </section>
 
-  <!-- Trust Bar - Certifications & Stats -->
+  <!-- Trust Bar - Stats -->
   <section class="border-b border-gray-100 bg-white py-6 px-6">
     <div class="max-w-6xl mx-auto">
       <div class="flex flex-wrap items-center justify-center gap-3 mb-4">
-        <span
-          class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-green-50 border border-green-200 rounded-full text-xs font-semibold text-green-700"
-          >&#10003; CE Certified (TÜV Rheinland)</span
-        >
-        <span
-          class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-50 border border-blue-200 rounded-full text-xs font-semibold text-blue-700"
-          >&#10003; ISO 9001:2015 (SGS)</span
-        >
         <span
           class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-rose-50 border border-rose-200 rounded-full text-xs font-semibold text-rose-700"
           >&#10003; 2-Year SUP Warranty</span
@@ -442,7 +428,7 @@ const faqCategories = [
         <span>&middot;</span>
         <span>50+ Countries Served</span>
         <span>&middot;</span>
-        <span>99.3% Defect-Free Rate (per internal QC sampling, AQL 2.5)</span>
+        <span>99.3% Defect-Free Rate (per internal QC sampling)</span>
       </div>
     </div>
   </section>
@@ -495,8 +481,8 @@ const faqCategories = [
         <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">Latest Research</span>
         <h2 class="mt-4 text-4xl font-semibold text-gray-900">Knowledge Center</h2>
         <p class="mt-4 text-lg text-gray-500">
-          In-depth technical research on inflatable SUP materials, construction, safety standards, and performance
-          &mdash; written for buyers, engineers, and informed paddlers.
+          In-depth technical research on inflatable SUP materials, construction, safety, and performance &mdash; written
+          for buyers, engineers, and informed paddlers.
         </p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
@@ -514,18 +500,6 @@ const faqCategories = [
           </p>
         </a>
         <a
-          href="/research/ce-certification-guide"
-          class="group bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all"
-        >
-          <span class="text-xs font-semibold text-sky-600 uppercase tracking-wide">Compliance</span>
-          <h3 class="mt-3 text-base font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">
-            How CE Certification Works
-          </h3>
-          <p class="mt-1 text-xs text-gray-500 line-clamp-2">
-            Full CE certification process for inflatable watercraft: directives, testing, notified bodies.
-          </p>
-        </a>
-        <a
           href="/research/sup-thickness-guide"
           class="group bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all"
         >
@@ -535,18 +509,6 @@ const faqCategories = [
           </h3>
           <p class="mt-1 text-xs text-gray-500 line-clamp-2">
             How board thickness affects rigidity, weight, stability, tracking, and performance.
-          </p>
-        </a>
-        <a
-          href="/research/engineering-whitepaper"
-          class="group bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all"
-        >
-          <span class="text-xs font-semibold text-sky-600 uppercase tracking-wide">Engineering</span>
-          <h3 class="mt-3 text-base font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">
-            Engineering Whitepaper
-          </h3>
-          <p class="mt-1 text-xs text-gray-500 line-clamp-2">
-            Materials, construction methods, and test results behind a durable inflatable SUP.
           </p>
         </a>
       </div>
@@ -563,11 +525,11 @@ const faqCategories = [
         <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">Proof & Results</span>
         <h2 class="mt-4 text-4xl font-semibold text-gray-900">Evidence</h2>
         <p class="mt-4 text-lg text-gray-500">
-          Real case studies, certifications, test data, and customer photos that demonstrate our product quality and
-          factory-direct value.
+          Real case studies, test data, and customer photos that demonstrate our product quality and factory-direct
+          value.
         </p>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <a
           href="/evidence"
           class="group bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all flex flex-col"
@@ -584,23 +546,10 @@ const faqCategories = [
           href="/evidence"
           class="group bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all flex flex-col"
         >
-          <div class="text-3xl mb-3">&#9989;</div>
-          <h3 class="text-base font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">
-            Certifications
-          </h3>
-          <p class="mt-1 text-xs text-gray-500 line-clamp-2 flex-1">
-            CE, ISO 9001, UKCA, REACH, RoHS &mdash; 13 CE-certified models and compliance support across global markets.
-          </p>
-          <span class="mt-3 text-xs font-medium text-sky-600">View certifications &rarr;</span>
-        </a>
-        <a
-          href="/evidence"
-          class="group bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all flex flex-col"
-        >
           <div class="text-3xl mb-3">&#128202;</div>
           <h3 class="text-base font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">Test Results</h3>
           <p class="mt-1 text-xs text-gray-500 line-clamp-2 flex-1">
-            100% pressure-tested. AQL 2.5. 24-48h hold at 1.25x rated pressure. Zero tolerance on safety defects.
+            100% pressure-tested. 24-48h hold at 1.25x rated pressure. Zero tolerance on safety defects.
           </p>
           <span class="mt-3 text-xs font-medium text-sky-600">View test data &rarr;</span>
         </a>
@@ -614,11 +563,11 @@ const faqCategories = [
   <!-- Brand Philosophy -->
   <section class="max-w-6xl mx-auto py-12 px-6" id="philosophy">
     <Tldr
-      summary="Paddle Board Overstock is an online store for inflatable SUP board overstock and factory clearance stock, operated by Weihai Dongjilian Co., Ltd. Complete paddle board packages ship worldwide at up to 60% off retail — founded 2012, with 13 CE-certified models built from marine-grade PVC with drop-stitch construction."
+      summary="Paddle Board Overstock is an online store for inflatable SUP board overstock and factory clearance stock, operated by Weihai Dongjilian Co., Ltd. Complete paddle board packages ship worldwide at up to 60% off retail — founded 2012, with models built from marine-grade PVC with drop-stitch construction."
       points={[
         'Inflatable SUP boards and accessories — overstock and clearance, up to 60% off retail',
         'Factory-direct from Weihai, China — ships to 50+ countries with secure Stripe & PayPal checkout',
-        'Every board CE-certified where applicable, 100% pressure-tested, backed by a 2-year warranty',
+        'Every board 100% pressure-tested, backed by a 2-year warranty',
       ]}
     />
     <div class="mt-16 grid md:grid-cols-3 gap-8">
@@ -659,8 +608,8 @@ const faqCategories = [
         <div class="p-6">
           <h3 class="text-lg font-semibold text-gray-900">Safety-as-Standard</h3>
           <p class="mt-3 text-gray-500 text-sm leading-relaxed">
-            CE certification is not optional. Every vessel undergoes pressure, buoyancy, and load testing. Safety rules
-            are embedded in every product spec, not buried in fine print.
+            Safety is not optional. Every vessel undergoes pressure, buoyancy, and load testing. Safety rules are
+            embedded in every product spec, not buried in fine print.
           </p>
         </div>
       </div>
@@ -717,8 +666,8 @@ const faqCategories = [
           <div class="p-6">
             <h3 class="text-lg font-semibold text-gray-900">How Paddle Board Overstock solves this</h3>
             <p class="mt-3 text-gray-500 text-sm leading-relaxed">
-              Every product specifies skill level, water conditions, safety rules, and environment suitability — 13
-              CE-certified models. The right gear for the right user in the right water, every time.
+              Every product specifies skill level, water conditions, safety rules, and environment suitability — the
+              right gear for the right user in the right water, every time.
             </p>
           </div>
         </div>
@@ -771,8 +720,8 @@ const faqCategories = [
               class="flex items-center justify-between p-3 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors"
             >
               <div>
-                <span class="text-sm font-semibold text-gray-900">Life Vests & Safety</span>
-                <p class="text-xs text-gray-500">CE-certified flotation</p>
+                <span class="text-sm font-semibold text-gray-900">Oars & Pump Set</span>
+                <p class="text-xs text-gray-500">Pump, paddle & accessories</p>
               </div>
               <span class="text-sky-600 text-sm font-medium">→</span>
             </a>
@@ -896,7 +845,7 @@ const faqCategories = [
       </div>
       <div class="text-center">
         <h2 class="text-3xl font-semibold">Start your water journey today</h2>
-        <p class="mt-3 text-white/70">13 CE-certified SUP models, every purchase backed by a 2-year warranty.</p>
+        <p class="mt-3 text-white/70">Every purchase is backed by a 2-year warranty.</p>
         <div class="mt-8 flex items-center justify-center gap-4 flex-wrap">
           <a
             href="/supboard/"
@@ -925,7 +874,7 @@ const faqCategories = [
         <h2 class="mt-2 text-2xl font-bold text-gray-900 dark:text-white">Real Factory, Real Savings — No Middlemen</h2>
         <p class="mt-3 text-sm text-muted max-w-2xl mx-auto">
           Every clearance SUP comes straight from our Weihai factory. The same production lines that supply
-          international brands build these boards — so you get certified quality at up to 60% off retail.
+          international brands build these boards — so you get the same quality at up to 60% off retail.
         </p>
       </div>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -945,20 +894,6 @@ const faqCategories = [
           <div class="text-3xl font-bold text-sky-600">50+</div>
           <div class="mt-1 text-sm text-muted">Countries served</div>
         </div>
-      </div>
-      <div class="flex flex-wrap justify-center gap-4 mt-6 text-xs font-medium text-muted uppercase tracking-wider">
-        <span class="px-3 py-1.5 bg-white dark:bg-gray-800 rounded-full border border-gray-200 dark:border-gray-700"
-          >ISO 9001
-        </span>
-        <span class="px-3 py-1.5 bg-white dark:bg-gray-800 rounded-full border border-gray-200 dark:border-gray-700"
-          >CE
-        </span>
-        <span class="px-3 py-1.5 bg-white dark:bg-gray-800 rounded-full border border-gray-200 dark:border-gray-700"
-          >UKCA</span
-        >
-        <span class="px-3 py-1.5 bg-white dark:bg-gray-800 rounded-full border border-gray-200 dark:border-gray-700"
-          >REACH & RoHS</span
-        >
       </div>
       <div class="text-center mt-6">
         <a href="/factory" class="text-sm font-semibold text-sky-600 hover:text-sky-700 hover:underline">
@@ -983,9 +918,9 @@ const faqCategories = [
           — plus the paddles, pumps, leashes, and accessories that go with them.
         </p>
         <p>
-          13 CE-certified SUP models are built with drop-stitch cores and marine-grade PVC that hold 12-15 PSI for a
-          rigid, stable ride. Overstock and discontinued lines are sold at up to 60% off retail — no MOQ, order a single
-          board — with secure checkout via Stripe or PayPal and a 2-year SUP warranty.
+          Our boards are built with drop-stitch cores and marine-grade PVC that hold 12-15 PSI for a rigid, stable ride.
+          Overstock and discontinued lines are sold at up to 60% off retail — no MOQ, order a single board — with secure
+          checkout via Stripe or PayPal and a 2-year SUP warranty.
         </p>
       </div>
     </div>
@@ -1253,7 +1188,7 @@ const faqCategories = [
         >
           <div
             class="h-48 md:h-auto md:w-48 shrink-0 bg-cover bg-center"
-            style="background-image: url('https://assets.paddleboardoverstock.com/images/paddleboardoverstock/why/paddleboardoverstock-stock-boat.webp')"
+            style="background-image: url('/images/paddleboardoverstock/products/sup-series/sup-cheetah-surge-1.webp')"
           >
           </div>
           <div class="p-6">
@@ -1326,8 +1261,8 @@ const faqCategories = [
                 and accessories.
               </li>
               <li class="flex gap-2">
-                <span class="text-[#06b6d4] mt-0.5">&#10003;</span> Certified compliance: 13 CE-certified SUP models meet
-                applicable EU directives; USCG Type III/V approval (life vests) where applicable.
+                <span class="text-[#06b6d4] mt-0.5">&#10003;</span> Test-verified quality: every board is 100% pressure-tested
+                before it leaves the factory.
               </li>
               <li class="flex gap-2">
                 <span class="text-[#06b6d4] mt-0.5">&#10003;</span> Stress-free repairs: File a claim in minutes, get a fix
@@ -1734,33 +1669,6 @@ const faqCategories = [
             4-inch vs 6-inch boards — how thickness changes stability and performance.
           </p>
         </a>
-      </div>
-      <div class="mt-16 flex flex-wrap items-center justify-center gap-x-16 gap-y-4 py-12 border-t border-gray-200">
-        <span class="text-base text-gray-400 tracking-wider uppercase font-semibold">Certifications</span>
-        <span class="inline-flex items-center gap-3 text-lg text-gray-600"
-          ><span
-            class="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center text-xl font-bold text-white shrink-0"
-            >&#x2713;</span
-          > CE
-        </span>
-        <span class="inline-flex items-center gap-3 text-lg text-gray-600"
-          ><span
-            class="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center text-xl font-bold text-white shrink-0"
-            >&#x2713;</span
-          > ISO 9001</span
-        >
-        <span class="inline-flex items-center gap-3 text-lg text-gray-600"
-          ><span
-            class="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center text-xl font-bold text-white shrink-0"
-            >&#x2713;</span
-          > REACH Compliant</span
-        >
-        <span class="inline-flex items-center gap-3 text-lg text-gray-600"
-          ><span
-            class="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center text-xl font-bold text-white shrink-0"
-            >&#x2713;</span
-          > UKCA</span
-        >
       </div>
       <div class="flex flex-wrap items-center justify-center gap-10 py-10 border-t border-gray-200">
         <span class="text-base text-gray-400 tracking-wider uppercase font-semibold">Brand Partners</span>

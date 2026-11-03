@@ -1,78 +1,69 @@
 hero:
-  tagline: Ekipman
-  title: Üretim Ekipmanları ve Makineleri
-  subtitle: Kesme, kaynak, baskı ve montajda endüstriyel düzeyde ekipman
-  back_label: Fabrikaya Geri Dön
+  tagline: Equipment
+  title: Manufacturing Equipment & Machinery
+  subtitle: Industrial-grade equipment across cutting, welding, printing, and assembly
+  back_label: Back to Factory
   back_link: /factory
 categories:
-  - title: Kesim ve Malzeme Hazırlığı
+  - title: Cutting & Material Preparation
     items:
-      - name: Otomatik PVC Kesme Makinesi
-        spec: CNC-kontrollü, 6,5 m × 2,5 m, 0,1 mm hassasiyet
-        desc: PVC, Hypalon ve drop-stitch kumaşlar için bilgisayar kontrollü otomatik kesim makinesi. Yerleşim yazılımı malzeme kullanımını %5'in altına atık ile optimize eder.
-      - name: Kumaş Serici
-        spec: Maksimum 3 m genişlik, gerilim kontrollü besleme
-        desc: Kesim öncesinde kumaşın tek veya çok kat halinde gerilimi kontrollü şekilde serilmesini sağlar ve deformasyonu önler.
-  - title: Tüp Kaynak ve Yapıştırma
+      - name: Automatic PVC Cutting Machine
+        spec: CNC-controlled, 6.5 m × 2.5 m, 0.1 mm accuracy
+        desc: Computer-controlled automatic cutting machine for PVC and drop-stitch fabrics. Nesting software optimises material utilisation to below 5% waste.
+      - name: Fabric Spreader
+        spec: 3 m max width, tension-controlled feed
+        desc: Lays fabric in single or multiple plies with controlled tension to prevent distortion before cutting.
+  - title: Welding & Bonding
     items:
-      - name: Isı Yapıştırma Makinesi
-        spec: Sıcak hava kaynağı, değişken 200–600 °C, 0,5–5 m/dk
-        desc: PVC ve Hypalon tüp dikişlerini birleştirmek ve kaynak yapmak için sıcak hava ısıtma makinesi. Tutuşturma, mühürleme ve tüp odaları ile şamandıra birleşimlerini eritmek için kullanılır.
-      - name: Dielektrik RF Pres
-        spec: 15 kW, plaka 2000 × 600 mm
-        desc: Ana boyuna dikişler, borda-tüp birleşimleri ve büyük odacık imalatı için radyo frekanslı kaynak presi.
-      - name: CNC-Kontrollü RF Kaynak Makinesi
-        spec: 8 kW, XY tablo 2500 × 1200 mm
-        desc: Karmaşık geometriler, logo kabartma ve hassas yama işleri için programlanabilir eğimli dikiş kaynağı.
-  - title: RIB Gövde Üretimi
+      - name: Heat Sealing Machine
+        spec: Hot-air welding, variable 200–600 °C, 0.5–5 m/min
+        desc: Hot-air heat sealing machine for bonding and welding PVC laminates, rail bands, and chamber seams. Used for tacking, sealing, and fusing drop-stitch core joints.
+      - name: Dielectric RF Press
+        spec: 15 kW, platen 2000 × 600 mm
+        desc: Radio-frequency welding press for main longitudinal seams, transom-to-tube joints, and large-chamber fabrication.
+      - name: CNC-Controlled RF Welder
+        spec: 8 kW, XY table 2500 × 1200 mm
+        desc: Programmable curved-seam welding for complex geometries, logo embossing, and precision patchwork.
+  - title: Deck Art & Finishing
     items:
-      - name: Fiberglas El Yatırmalı Kalıplar
-        spec: 6 m LOA kadar RIB gövdeler için çoklu kalıplar
-        desc: Polyester ve vinilester reçine sistemleriyle geleneksel el ile katman serme fiber üretim. Her kat elle silindirlenir ve vakum torbasına alınır, böylece laminat kalitesi ve dayanıklılığı tutarlı olur.
-      - name: Jelcoat Püskürtme Kabini
-        spec: Sıcaklık kontrollü, filtrelenmiş hava havalandırması
-        desc: RIB gövdeler için jelcoat uygulaması. Yüksek parlaklıkta, UV-dirençli yüzey sağlar ve hassas kalınlık kontrolü sunar.
-      - name: CNC Freze Tezgahı (5 eksenli)
-        spec: 3 m × 2 m × 1 m çalışma hacmi, su soğutmalı mil
-        desc: Gövde eklerinin, konsol kalıplarının, oturma yedeklerinin ve özel braketlerin işlenmesi.
-  - title: SUP Baskı ve Dekorasyon
+      - name: EVA Deck Cutting Machine
+        spec: CNC knife cutting, 2 m width
+        desc: Precision cutting of EVA deck foam panels for art-series deck patterns. Each panel is cut to shape for a seamless full-deck fit.
+      - name: Deck Lamination Press
+        spec: Temperature & pressure controlled
+        desc: Bonds EVA deck panels to the board surface with consistent adhesion across the full deck area.
+  - title: SUP Printing & Decoration
     items:
-      - name: Dijital Yazıcı
-        spec: Yüksek çözünürlüklü mürekkep püskürtmeli, 2 m'ye kadar baskı genişliği
-        desc: Tam renkli SUP güverte grafikleri için kumaşa direkt dijital baskı. UV-dayanıklı su bazlı mürekkeplerle özel desenler, gradyanlar ve fotoğraf kalitesinde görüntüler basar.
-      - name: Serigrafi Makinesi
-        spec: Manuel ve yarı otomatik, çok renkli hizalama
-        desc: SUP board logoları, marka işaretleri ve tekrarlayan desenler için serigrafi. Canlı renk doygunluğu ile dayanıklı, opak baskılar sağlar.
-  - title: Montaj ve Kurulum
+      - name: Digital Printer
+        spec: High-resolution inkjet, up to 2 m print width
+        desc: Direct-to-fabric digital printing for full-colour SUP deck graphics. Prints custom patterns, gradients, and photo-quality images with UV-resistant water-based inks.
+      - name: Screen Printing Machine
+        spec: Manual and semi-automatic, multi-colour registration
+        desc: Screen printing for SUP board logos, brand marks, and repeating patterns. Provides durable, opaque prints with vibrant colour saturation.
+  - title: Final Assembly
     items:
-      - name: Motor Kaldırıcı
-        spec: 500 kg kapasite, ayarlanabilir dağıtıcı çubuk
-        desc: 2,5 ile 60 hp arasındaki dıştan takma motorların güvenli montajı.
-      - name: Konsol Maketi Çerçevesi
-        spec: Ayarlanabilir yükseklik ve açı
-        desc: Kurulumdan önce direksiyon, gaz ve enstrüman panellerinin ön montajı.
-      - name: Hidrolik Hortum Sıkma Makinesi
-        spec: 1" çapa kadar, dijital basınç göstergeli
-        desc: Özel uzunlukta hidrolik direksiyon hortumu montajları, sıkıştırmalı bağlantı elemanları ile.
-      - name: Elektrik Tesisatı Panosu
-        spec: 3 m × 1,5 m, önceden basılmış devre şemaları
-        desc: Tam elektrik tesisatlarının tekneden bağımsız montajı ve test edilmesi.
-  - title: Test ve Kalite Kontrol
+      - name: Valve Torque Station
+        spec: Calibrated, 10-cycle function test
+        desc: Installs and torques inflation valves, then function-tests every valve through 10 open/close cycles.
+      - name: Fin Box & D-Ring Setter
+        spec: Jig-aligned, adhesive cured
+        desc: Positions and bonds fin boxes, D-rings, and handles at exact deck locations per model specification.
+  - title: Testing & Quality Control
     items:
-      - name: Evrensel Çekme Test Cihazı
-        spec: 50 kN, / ASTM D751
-        desc: Kumaş partileri için kopma kuvveti, kopmada uzama ve yırtılma yayılımı testleri.
-      - name: Hava Tutma Test Cihazı
-        spec: Programlanabilir, 30 dakikalık basınç tutma
-        desc: Her tüp bölmesi montaj öncesinde otomatik basınç tutma testi.
-      - name: Dikiş Soyma Test Cihazı
-        spec: 100 mm/dk hızla motorlu 180° soyma
-        desc: Kaynak ve yapıştırılmış dikiş soyulma mukavemeti testi ISO 6185'e göre.
-      - name: Ksenon-Arc Hava Koşulları Odası
-        spec: 2000 saat maruz kalma
-        desc: Renk değişimi ve mukavemet korunumu için UV direnç testi.
+      - name: Universal Tensile Tester
+        spec: 50 kN capacity
+        desc: Breaking force, elongation at break, and tear propagation testing for fabric batches.
+      - name: Air Retention Test Rig
+        spec: Programmable, 30-min pressure-hold
+        desc: Automated pressure-hold test for every tube chamber before assembly.
+      - name: Seam Peel Tester
+        spec: Motorised 180° peel at 100 mm/min
+        desc: Weld and bonded-seam peel strength testing per internal protocol.
+      - name: Xenon-Arc Weathering Chamber
+        spec: 2000 h exposure
+        desc: UV resistance testing for colour change and strength retention.
 cta:
-  title: Fabrika turuna ilgi duyuyor musunuz?
-  desc: Qingdao tesisimizi ziyaret edenleri ağırlıyoruz. Ekipman ve süreçlerimizi yerinde görün.
-  label: Bir ziyaret planlayın →
+  title: Interested in a factory tour?
+  desc: We welcome visitors to our Weihai facility. See our equipment and processes in person.
+  label: Schedule a visit →
   link: /contact

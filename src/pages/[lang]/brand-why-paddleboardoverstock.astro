@@ -32,9 +32,9 @@ const lh = (h: string) => (h ? `/${lang}${h}` : h);
 const ctaActions = cta.actions?.map((a: any) => ({ ...a, href: lh(a.href) }));
 
 const metadata = {
-  title: localizePageTitle(page, `Why Choose ${SITE.name} — OEM/ODM Marine Manufacturer`),
+  title: localizePageTitle(page, `Why Choose ${SITE.name}`),
   description:
-    'Seven reasons why global brands choose Paddle Board Overstock: real manufacturing, engineering-led design, certified quality, flexible OEM/ODM, global logistics, lifetime support.',
+    'Seven reasons why customers choose Paddle Board Overstock: real manufacturing, engineering-led design, factory-tested quality, global logistics, lifetime support.',
 };
 const crumbs = [
   { name: t('nav.home') || 'Home', href: `/${lang}/` },
@@ -51,7 +51,7 @@ const faqSchema = JSON.stringify({
       name: 'Why choose Paddle Board Overstock over competitors?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Direct factory (no trading company), 64 CE-certified models, ISO 9001 (SGS), 99.3% defect-free rate, and flexible MOQs from 2-10 units.',
+        text: 'Direct factory (no trading company), 13 product models, 99.3% defect-free rate, and every unit pressure-tested before shipping.',
       },
     },
     {
@@ -59,7 +59,7 @@ const faqSchema = JSON.stringify({
       name: 'What makes Paddle Board Overstock different?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Vertically integrated manufacturing with in-house engineering, quality lab, and compliance documentation — not a trading company.',
+        text: 'Vertically integrated manufacturing with in-house engineering, quality lab, and full batch traceability — not a trading company.',
       },
     },
     {
@@ -67,7 +67,7 @@ const faqSchema = JSON.stringify({
       name: 'How do I verify Paddle Board Overstock claims?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Factory audits welcome. ISO 9001, BSCI, and CE certificates available for review. Third-party inspection accommodated.',
+        text: 'Factory visits welcome. Test reports and inspection records available for review on request.',
       },
     },
   ],

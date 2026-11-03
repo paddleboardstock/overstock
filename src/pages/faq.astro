@@ -14,8 +14,7 @@ const t = (key: string) => getUiForLang(lang || defaultLang)?.[key] || '';
 
 const metadata = {
   title: `FAQ — ${SITE.name}`,
-  description:
-    'Frequently asked questions about inflatable SUP boards, kayaks, dinghies, RIBs, safety equipment, and water sports.',
+  description: 'Frequently asked questions about inflatable SUP boards, paddles, pumps, and accessories.',
 };
 
 const categories = [...new Set(faqs.map((f) => f.category))];

@@ -1,35 +1,35 @@
 hero_text:
-  tagline: Kontak
-  title: HUBUNGI KAMI
+  tagline: Contact
+  title: GET IN TOUCH
 contact_form:
   id: form
-  title: Kirimkan pesan kepada kami
-  subtitle: Untuk penawaran, pertanyaan teknis, atau permintaan kemitraan, kirimkan pesan kepada kami. Kami akan membalas dalam satu hari kerja.
+  title: Send us a message
+  subtitle: For order questions, sizing advice or product support, drop us a line. We reply within one business day.
   email_to: info@paddleboardoverstock.com
-  submit_button: Kirim Permintaan → Dapatkan Penawaran
-  success_message: Terima kasih! Pesan Anda telah masuk ke kotak masuk kami. Kami akan membalas dalam satu hari kerja.
-  error_message: Ada kesalahan saat mengirim pesan Anda. Silakan coba lagi atau kirim email langsung kepada kami.
-  default_country_code: '+1'
+  submit_button: Send Inquiry → Get a Quote
+  success_message: Thanks! Your message has landed in our inbox. We will reply within one business day.
+  error_message: Something went wrong sending your message. Please try again or email us directly.
+  default_country_code: "+1"
   captcha:
-    label: 'Anti-spam: silakan selesaikan berikut ini'
+    label: "Anti-spam: please solve the following"
   fields:
     - name: firstName
-      label: Nama Depan
+      label: First Name
       row: 1
     - name: lastName
-      label: Nama Belakang
+      label: Last Name
       row: 1
     - name: companyName
-      label: Nama Perusahaan
+      label: Company Name
       row: 2
     - name: address
-      label: Alamat
+      label: Address
       row: 3
     - name: zip
-      label: Kode Pos
+      label: Zip / Postal Code
       row: 4
     - name: country
-      label: Negara
+      label: Country
       row: 4
       type: select
       optionsKey: countries
@@ -43,88 +43,80 @@ contact_form:
       type: tel
       withCountryCode: true
     - name: orderVolume
-      label: Perkiraan Volume Pesanan
+      label: Estimated Order Volume
       row: 6
       type: select
       options:
-        - value: ''
-          label: Pilih perkiraan volume Anda...
-        - value: sample
-          label: Hanya Sampel / Prototipe
-        - value: 5-10
-          label: 5–10 unit (Standar MOQ)
-        - value: 100-500
-          label: 100–500 unit
-        - value: 500-plus
-          label: 500+ unit (Harga khusus volume)
+        - value: ""
+          label: How many boards are you shopping for?...
+        - value: one
+          label: Just one board
+        - value: 2-4
+          label: 2–4 boards
+        - value: 5-plus
+          label: 5+ boards (family, club, or rental)
     - name: customization
-      label: Perlu Kustomisasi?
+      label: What can we help with?
       row: 7
       type: select
       options:
-        - value: ''
-          label: Pilih jenis kustomisasi...
+        - value: ""
+          label: Select a topic...
         - value: none
-          label: Produk standar (tanpa kustomisasi)
-        - value: logo
-          label: Logo / Merek Kustom saja
-        - value: full
-          label: Lengkap OEM (ukuran, warna, grafis, kemasan)
-        - value: consultation
-          label: Tidak yakin — perlu konsultasi
-    - name: minatProduk
-      label: Kategori Produk yang Menarik
+          label: General product question
+        - value: sizing
+          label: Help choosing the right board
+        - value: order
+          label: Order, payment or shipping
+        - value: warranty
+          label: Warranty or repair support
+    - name: productInterest
+      label: Product Categories of Interest
       row: 8
       type: select
       options:
-        - value: ''
-          label: Pilih kategori produk...
+        - value: ""
+          label: Select product category...
         - value: all
-          label: Semua produk / Katalog lengkap
+          label: All products / Full catalog
         - value: sup
-          label: SUP Papan / Papan Dayung
-        - value: kayak
-          label: Perahu Kano Tiup
-        - value: rib
-          label: RIB Perahu
-        - value: dinghy
-          label: Perahu Kecil / Perahu Tunda
-        - value: safety
-          label: Peralatan Keselamatan / Pelampung
+          label: SUP Boards / Paddleboards
+        - value: packages
+          label: Complete SUP packages
         - value: accessory
-          label: Aksesori (pompa, dayung, tas)
+          label: Accessories (pumps, oars, bags)
     - name: subject
-      label: Subjek
+      label: Subject
       row: 9
     - name: message
-      label: Pesan
+      label: Message
       row: 10
       type: textarea
       rows: 6
 features2_other_ways:
-  title: Cara lain untuk menghubungi kami
+  title: Other ways to reach us
   columns: 3
   items:
-    - title: Pertanyaan penjualan
-      description: Kutipan, konfigurasi, aplikasi dealer, dan pesanan dalam jumlah besar.
+    - title: Order help
+      description: Product questions, sizing advice, and order support.
       icon: tabler:shopping-bag
-    - title: Dukungan teknis
-      description: Garansi, perbaikan, suku cadang, dan pertanyaan operasional.
+    - title: Technical support
+      description: Warranty, repairs, spare parts and operating questions.
       icon: tabler:tool
-    - title: Pers dan kemitraan
-      description: Kit media, sponsor, dan kolaborasi industri.
+    - title: Press & partnerships
+      description: Media kits, sponsorship and industry collaboration.
       icon: tabler:news
-    - title: Telepon
-      description: +1 279 732 3333 (Kantor Pusat AS) · +86 13305324192 (pabrik)
+    - title: Phone
+      description: +1 279 732 3333 (US HQ) · +86 13305324192 (factory)
       icon: tabler:headset
-    - title: Surel
+    - title: Email
       description: info@paddleboardoverstock.com
       icon: tabler:mail
-    - title: Kantor Pusat & Penagihan
-      description: Weihai Dongjilian Co., Ltd., New Mexico, Amerika Serikat
+    - title: Global HQ & Billing
+      description: Weihai Dongjilian Co., Ltd.
       icon: tabler:map-pin
 map:
-  title: Lokasi Kami
-  subtitle: Kunjungi pusat manufaktur kami di Qingdao
-  address: Zona Pengembangan Ekonomi, Laixi, Qingdao, Cina, 266600
+  title: Our Location
+  subtitle: Visit our Weihai manufacturing hub
+  address: Weihai, Shandong, China
   zoom: 15

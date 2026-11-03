@@ -2,67 +2,39 @@
 const PAGE_DESC: Record<string, { description: string }> = {
   de: {
     description:
-      'Paddle Board Overstock 5-jährige eingeschränkte Garantie für Schlauchboote, SUPs und Meeresprodukte. Garantiebedingungen für Schlauchgewebe, Nähte, Rumpfstruktur und Ventile.',
+      'Paddle Board Overstock 2-jährige eingeschränkte Garantie für aufblasbare SUP-Boards. Garantiebedingungen für Drop-Stitch-Nähte, Rails, Ventile und Zubehör.',
   },
   es: {
     description:
-      'Cobertura de garantía limitada de 5 años de Paddle Board Overstock para barcos inflables, tablas de SUP y productos marinos. Condiciones de garantía para tejido de cámaras, costuras, estructura del casco y válvulas.',
+      'Garantía limitada de 2 años de Paddle Board Overstock para tablas de paddle board inflables. Condiciones de garantía para costuras drop-stitch, rieles, válvulas y accesorios.',
   },
   fr: {
     description:
-      'Garantie limitée de 5 ans Paddle Board Overstock pour les bateaux gonflables, planches de SUP et produits marins. Conditions de garantie pour tissu des flotteurs, coutures, structure de coque et valves.',
+      'Garantie limitée de 2 ans Paddle Board Overstock pour les planches de paddle gonflables. Conditions de garantie pour coutures drop-stitch, rails, valves et accessoires.',
   },
   it: {
     description:
-      'Garanzia limitata di 5 anni Paddle Board Overstock per gommoni, SUP e prodotti nautici. Termini di garanzia per tessuto dei tubolari, cuciture, struttura dello scafo e valvole.',
-  },
-  cs: {
-    description:
-      'Paddle Board Overstock 5letá omezená záruka na nafukovací čluny, SUP a námořní produkty. Záruční podmínky pro tkaninu trubek, švy, konstrukci trupu a ventily.',
-  },
-  sv: {
-    description:
-      'Paddle Board Overstock 5-års begränsad garanti på uppblåsbara båtar, SUP:er och marina produkter. Garantivillkor för rörformigt tyg, sömmar, skrovstruktur och ventiler.',
-  },
-  da: {
-    description:
-      "Paddle Board Overstock 5-års begrænset garanti på oppustelige både, SUP'er og marineprodukter. Garantibetingelser for rørformet stof, sømme, skrogstruktur og ventiler.",
-  },
-  el: {
-    description:
-      'Paddle Board Overstock 5 χρόνια περιορισμένη εγγύηση σε φουσκωτά σκάφη, SUP και ναυτιλιακά προϊόντα. Προϋποθέσεις εγγύησης για σωληνωτό ύφασμα, ραφές, δομή γάστρας και βαλβίδες.',
-  },
-  no: {
-    description:
-      'Paddle Board Overstock 5-års begrenset garanti på oppblåsbare båter, SUP-er og marine produkter. Garantibetingelser for rørformet stoff, sømmer, skrogstruktur og ventiler.',
+      'Garanzia limitata di 2 anni Paddle Board Overstock per tavole SUP gonfiabili. Termini di garanzia per cuciture drop-stitch, bordi, valvole e accessori.',
   },
   ru: {
     description:
-      'Paddle Board Overstock 5-летняя ограниченная гарантия на надувные лодки, сапы и морскую продукцию. Гарантийные условия на трубчатую ткань, швы, конструкцию корпуса и клапаны.',
+      'Paddle Board Overstock ограниченная гарантия 2 года на надувные сапы. Гарантийные условия на швы drop-stitch, рейлы, клапаны и аксессуары.',
   },
   nl: {
     description:
-      "Paddle Board Overstock 5 jaar beperkte garantie op opblaasbare boten, SUP's en maritieme producten. Garantievoorwaarden voor buisweefsel, naden, rompconstructie en kleppen.",
-  },
-  fi: {
-    description:
-      'Paddle Board Overstock 5 vuoden rajoitettu takuu kumiveneille, SUP:ille ja merituotteille. Takuuehdot putkimaiselle kankaalle, saumoille, runkorakenteelle ja venttiileille.',
+      'Paddle Board Overstock 2 jaar beperkte garantie op opblaasbare SUP boards. Garantievoorwaarden voor drop-stitch naden, rails, ventielen en accessoires.',
   },
   pl: {
     description:
-      'Paddle Board Overstock 5-letnia ograniczona gwarancja na pontony, deski SUP i produkty morskie. Warunki gwarancji na tkaninę rurową, szwy, konstrukcję kadłuba i zawory.',
+      'Paddle Board Overstock 2-letnia ograniczona gwarancja na deski SUP. Warunki gwarancji na szwy drop-stitch, raily, zawory i akcesoria.',
   },
   ar: {
     description:
-      'Paddle Board Overstock ضمان محدود لمدة 5 سنوات على القوارب القابلة للنفخ وSUPs والمنتجات البحرية. شروط الضمان للنسيج الأنبوبي، والدرزات، وهيكل الهيكل والصمامات.',
+      'Paddle Board Overstock ضمان محدود لمدة عامين على ألواح التجديف القابلة للنفخ. شروط الضمان على درزات drop-stitch والحواف والصمامات والملحقات.',
   },
   pt: {
     description:
-      'Paddle Board Overstock Garantia limitada de 5 anos para barcos infláveis, SUPs e produtos náuticos. Condições de garantia para tecido tubular, costuras, estrutura do casco e válvulas.',
-  },
-  ja: {
-    description:
-      'Paddle Board Overstock インフレータブル ボート、SUP、マリン製品に対する 5 年間の限定保証。管状生地、縫い目、船体構造、バルブの保証条件。',
+      'Paddle Board Overstock Garantia limitada de 2 anos para pranchas de paddle infláveis. Condições de garantia para costuras drop-stitch, bordas, válvulas e acessórios.',
   },
 };
 const PAGE_META: Record<string, { title: string }> = {
@@ -75,13 +47,6 @@ const PAGE_META: Record<string, { title: string }> = {
   ru: { title: 'Гарантия' },
   pl: { title: 'Gwarancja' },
   nl: { title: 'Garantie' },
-  sv: { title: 'Garanti' },
-  no: { title: 'Garanti' },
-  el: { title: 'Εγγύηση' },
-  fi: { title: 'Takuu' },
-  da: { title: 'Garanti' },
-  cs: { title: 'Záruka' },
-  ja: { title: '保証' },
 };
 export const prerender = true;
 
@@ -107,14 +72,14 @@ const metadata = {
   title: localizePageTitle(page, PAGE_META[lang]?.title || `Warranty — ${SITE.name}`),
   description:
     PAGE_DESC[lang]?.description ||
-    'Paddle Board Overstock 5-year limited warranty coverage for inflatable boats, SUPs, and marine products. Tube fabric, seams, hull structure, and valve warranty terms.',
+    'Paddle Board Overstock offers a 2-year limited warranty covering drop-stitch seams, rail construction, inflation valves, and included accessories on every SUP board. Full terms and conditions.',
 };
 
 const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: 'Warranty' }];
 
 const graphJsonLd = articleSchema({
   headline: page.headline || 'Paddle Board Overstock Manufacturer Limited Warranty',
-  description: page.seo?.description || 'Paddle Board Overstock 5-year limited warranty on inflatable marine products.',
+  description: page.seo?.description || 'Paddle Board Overstock 2-year limited warranty on inflatable SUP boards.',
   datePublished: page.seo?.datePublished || '2024-01-01',
   dateModified: page.seo?.dateModified || '2026-06-01',
   author: SITE.name,
@@ -130,7 +95,7 @@ const faqSchema = JSON.stringify({
       name: 'What warranty does Paddle Board Overstock offer?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '5-year warranty on boats and kayaks, 2-year warranty on SUP boards, covering manufacturing defects in materials and workmanship.',
+        text: 'A 2-year limited warranty on SUP boards, covering manufacturing defects in materials and workmanship.',
       },
     },
     {
@@ -154,7 +119,7 @@ const faqSchema = JSON.stringify({
       name: 'How do I make a warranty claim?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Contact your authorized dealer or submit a claim via the contact page with your proof of purchase, product serial number, and photos of the defect.',
+        text: 'Contact Paddle Board Overstock via the contact page with your proof of purchase, product serial number, and photos of the defect.',
       },
     },
     {

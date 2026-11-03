@@ -1,35 +1,35 @@
 hero_text:
-  tagline: Contacto
-  title: ENTRE EM CONTACTO
+  tagline: Contact
+  title: GET IN TOUCH
 contact_form:
   id: form
-  title: Envie-nos uma mensagem
-  subtitle: Para orçamentos, questões técnicas ou propostas de parceria, escreva-nos. Respondemos num dia útil.
+  title: Send us a message
+  subtitle: For order questions, sizing advice or product support, drop us a line. We reply within one business day.
   email_to: info@paddleboardoverstock.com
-  submit_button: Enviar mensagem
-  success_message: Obrigado! A sua mensagem chegou à nossa caixa de entrada. Responderemos num dia útil.
-  error_message: Ocorreu um erro ao enviar a sua mensagem. Tente novamente ou envie-nos um e-mail diretamente.
-  default_country_code: '+1'
+  submit_button: Send Inquiry → Get a Quote
+  success_message: Thanks! Your message has landed in our inbox. We will reply within one business day.
+  error_message: Something went wrong sending your message. Please try again or email us directly.
+  default_country_code: "+1"
   captcha:
-    label: 'Anti-spam: por favor, resolva o seguinte'
+    label: "Anti-spam: please solve the following"
   fields:
     - name: firstName
-      label: Primeiro Nome
+      label: First Name
       row: 1
     - name: lastName
-      label: Último Nome
+      label: Last Name
       row: 1
     - name: companyName
-      label: Nome da Empresa
+      label: Company Name
       row: 2
     - name: address
-      label: Morada
+      label: Address
       row: 3
     - name: zip
-      label: Código Postal
+      label: Zip / Postal Code
       row: 4
     - name: country
-      label: País
+      label: Country
       row: 4
       type: select
       optionsKey: countries
@@ -43,89 +43,80 @@ contact_form:
       type: tel
       withCountryCode: true
     - name: orderVolume
-      label: Volume estimado do pedido
+      label: Estimated Order Volume
       row: 6
       type: select
       options:
-        - value: ''
-          label: Selecione o volume estimado...
-        - value: sample
-          label: Apenas amostras / protótipos
-        - value: '5-10'
-          label: 50–100 unidades (MOQ padrão)
-        - value: '100-500'
-          label: 100–500 unidades
-        - value: '500-plus'
-          label: 500+ unidades (preço por volume)
+        - value: ""
+          label: How many boards are you shopping for?...
+        - value: one
+          label: Just one board
+        - value: 2-4
+          label: 2–4 boards
+        - value: 5-plus
+          label: 5+ boards (family, club, or rental)
     - name: customization
-      label: Precisa de personalização?
+      label: What can we help with?
       row: 7
       type: select
       options:
-        - value: ''
-          label: Selecione o tipo de personalização...
+        - value: ""
+          label: Select a topic...
         - value: none
-          label: Produto padrão (sem personalização)
-        - value: logo
-          label: Apenas logotipo / marca personalizada
-        - value: full
-          label: OEM completo (tamanho, cor, gráficos, embalagem)
-        - value: consultation
-          label: Não tenho certeza — preciso de consultoria
+          label: General product question
+        - value: sizing
+          label: Help choosing the right board
+        - value: order
+          label: Order, payment or shipping
+        - value: warranty
+          label: Warranty or repair support
     - name: productInterest
-      label: Categorias de produtos de interesse
+      label: Product Categories of Interest
       row: 8
       type: select
       options:
-        - value: ''
-          label: Selecione a categoria do produto...
+        - value: ""
+          label: Select product category...
         - value: all
-          label: Todos os produtos / catálogo completo
+          label: All products / Full catalog
         - value: sup
-          label: Pranchas SUP / paddleboards
-        - value: kayak
-          label: Caiaques infláveis
-        - value: rib
-          label: Barcos RIB
-        - value: dinghy
-          label: Botes / tender
-        - value: safety
-          label: Equipamentos de segurança / coletes salva-vidas
+          label: SUP Boards / Paddleboards
+        - value: packages
+          label: Complete SUP packages
         - value: accessory
-          label: Acessórios (bombas, remos, bolsas)
-
+          label: Accessories (pumps, oars, bags)
     - name: subject
-      label: Assunto
+      label: Subject
       row: 9
     - name: message
-      label: Mensagem
+      label: Message
       row: 10
       type: textarea
       rows: 6
 features2_other_ways:
-  title: Outras formas de nos contactar
+  title: Other ways to reach us
   columns: 3
   items:
-    - title: Vendas
-      description: Orçamentos, configurações, candidaturas a distribuidor e encomendas em volume.
+    - title: Order help
+      description: Product questions, sizing advice, and order support.
       icon: tabler:shopping-bag
-    - title: Apoio técnico
-      description: Garantia, reparações, peças sobresselentes e questões de operação.
+    - title: Technical support
+      description: Warranty, repairs, spare parts and operating questions.
       icon: tabler:tool
-    - title: Imprensa e parcerias
-      description: Kits de imprensa, patrocínios e colaboração no setor.
+    - title: Press & partnerships
+      description: Media kits, sponsorship and industry collaboration.
       icon: tabler:news
-    - title: Telefone
-      description: '+86 13305324192'
+    - title: Phone
+      description: +1 279 732 3333 (US HQ) · +86 13305324192 (factory)
       icon: tabler:headset
-    - title: E-mail
+    - title: Email
       description: info@paddleboardoverstock.com
       icon: tabler:mail
-    - title: Sede
-      description: Economic Development Zone, Laixi, Qingdao, China, 266600
+    - title: Global HQ & Billing
+      description: Weihai Dongjilian Co., Ltd.
       icon: tabler:map-pin
 map:
-  title: A nossa localização
-  subtitle: Visite-nos na nossa sede
-  address: Economic Development Zone, Laixi, Qingdao, China, 266600
+  title: Our Location
+  subtitle: Visit our Weihai manufacturing hub
+  address: Weihai, Shandong, China
   zoom: 15

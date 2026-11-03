@@ -1,94 +1,74 @@
 hero:
-  tagline: Garantía de calidad
-  title: Pruebas de rendimiento y calidad
-  subtitle: Cada bote inflable y SUP de Paddle Board Overstock se somete a rigurosas pruebas de rendimiento y calidad en nuestro Centro de I+D antes de enviarse. Nuestras pruebas exhaustivas proporcionan una prueba tangible de la excelencia del producto.
+  tagline: Quality Assurance
+  title: Performance & Quality Testing
+  subtitle: Every Paddle Board Overstock inflatable SUP board undergoes rigorous performance and quality testing at our R&D Center before it ships. Eight protocols, zero sampling — every unit verified.
 trust_bar:
   items:
     - value: 100%
-      label: Unidades ensayadas antes del envío
-      sub: Sin muestreo — cada unidad
-    - value: '8'
-      label: Protocolos de ensayo
-      sub: Mecánico · Térmico · UV · Abrasión
-    - value: ISO 9001
-      label: Gestión de calidad certificada
-      sub: Auditada por TÜV Rheinland
-    - value: 1.200+
-      label: Proyectos aprobados en calidad
-      sub: Desde 2012
-badges:
-  - name: CE 6185
-    body: TÜV Rheinland
-    url: /trust
-  - name: ISO 9001
-    body: TÜV Rheinland
-    url: /trust
-  - name: UKCA
-    body: Intertek
-    url: /trust
-  - name: BSCI
-    body: Amfori
-    url: /trust
-  - name: REACH
-    body: Conforme ECHA
-    url: /trust
-  - name: USCG
-    body: Type III / Type V
-    url: /trust
+      label: Units tested before shipping
+      sub: Zero-sampling — every unit
+    - value: "8"
+      label: Testing protocols
+      sub: Mechanical · Thermal · UV · Abrasion
+    - value: 99.3%
+      label: Defect-free rate
+      sub: Trailing 12 months
+    - value: 1,200+
+      label: Projects quality-approved
+      sub: Since 2012
 testimonial:
-  quote: El nivel de documentación y trazabilidad que Paddle Board Overstock proporciona para los ensayos de calidad supera lo que hemos visto de fabricantes chinos. Cada envío incluye un informe de ensayos completo con referencias de normas y datos de aprobación o rechazo.
-  author: Marcus Hansen
-  title: Director de compras
-  company: Nordic Marine Supply
-  location: Suecia
+  quote: The board arrived with test records I could actually read — batch number, pressure test log, the works. Three seasons of heavy use later and it still holds air like day one.
+  author: Tom Reilly
+  title: Verified buyer
+  company: Weekend paddler
+  location: Ireland
 stats:
   - value: 100%
-    label: Unidades sometidas a prueba de presión
-  - value: '8'
-    label: Protocolos de prueba
-  - value: ISO 9001
-    label: Calidad certificada
-  - value: 3 años
-    label: Garantía limitada
+    label: Units pressure-tested
+  - value: "8"
+    label: Testing protocols
+  - value: 99.3%
+    label: Defect-free rate
+  - value: 2-Year
+    label: Limited warranty
 tests:
-  - title: Prueba de presión
-    description: Las cámaras inflables se someten a presiones que superan sus límites de funcionamiento recomendados durante períodos prolongados. Esto verifica la hermeticidad y la integridad estructural del material y las costuras, garantizando que el producto pueda soportar el uso previsto y una posible sobrepresión sin fallos ni fugas.
+  - title: Pressure Testing
+    standard: Internal Spec AF-PT-001
+    description: Inflatable chambers are pressurized to 1.25x the recommended operating limit and held for 30 minutes. Pressure decay is measured to validate airtightness and structural integrity of materials and seams.
     image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/factory/paddleboardoverstock-pressure-testing.webp
-    standard: ISO 6185-1 | Especificaciones internas AF-PT-001
-  - title: Prueba de impacto
-    description: Los productos se someten a impactos controlados desde diversos pesos y ángulos. Esto evalúa la resistencia del material a pinchazos, desgarros y daños por colisiones con obstáculos en el agua, demostrando durabilidad y longevidad.
+  - title: Impact Testing
+    standard: Internal Spec AF-IT-002
+    description: Products are subjected to controlled impacts from standardized drop weights and pendulum apparatus. This assesses puncture resistance, tear propagation, and structural resilience against collisions with obstacles, docks, and debris.
     image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/factory/paddleboardoverstock-production-department.webp
-    standard: Especificaciones internas AF-IT-002
-  - title: Prueba de resistencia a los rayos UV
-    description: Los productos finales se exponen a luz solar simulada durante períodos prolongados para evaluar la resistencia del material a la degradación, la decoloración y el debilitamiento causados por la exposición prolongada a los rayos UV, algo crítico para los botes usados en entornos tropicales y de alta radiación solar.
+  - title: UV Resistance Testing
+    standard: Internal Test Protocol
+    description: Material samples are exposed to UVA-340 lamps in accelerated weathering chambers for 1,000+ hours. We measure color change (Delta E), gloss retention, and tensile strength loss to validate UV stabilizer packages.
     image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/factory/paddleboardoverstock-uv-resistance-testing.webp
-    standard: ASTM G154 | ISO 4892-3
-  - title: Prueba de resistencia a la abrasión
-    description: Las muestras de material se frotan contra superficies abrasivas durante un número específico de ciclos bajo presión controlada. Esto mide la capacidad del material para soportar el desgaste por el uso repetido, el contacto con arena, rocas u otras superficies, garantizando una durabilidad a largo plazo.
+  - title: Abrasion Resistance Testing
+    standard: Internal Test Protocol
+    description: Material samples are subjected to CS-10 abrasive wheels under 500g/1,000g loads for 1,000 cycles. Mass loss and visual wear grading determine coating durability against sand, gravel, and repeated launching.
     image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/factory/paddleboardoverstock-pvc-material-testing.webp
-    standard: ASTM D751 (Taber) | ISO 5470-1
-  - title: Prueba de rendimiento a bajas temperaturas
-    description: Los productos se prueban en entornos fríos para evaluar la funcionalidad y durabilidad en diversas condiciones de temperatura, evitando la rigidez o el agrietamiento en aguas más frías. Esencial para los botes destinados al uso invernal o en altas latitudes.
+  - title: Low-Temperature Performance Testing
+    standard: Internal Spec AF-LT-003
+    description: Assembled products and material coupons are conditioned at -20°C, -10°C, and 0°C for 24 hours then flex-tested. We verify that PVC remains flexible without cracking or delamination.
     image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/factory/paddleboardoverstock-factory-exterior.webp
-    standard: Especificaciones internas AF-LT-003 | MIL-STD-810G
-  - title: Prueba de flotabilidad y capacidad de carga
-    description: Los productos se prueban con diversos pesos para determinar su capacidad máxima de carga y garantizar que soporten de forma segura a los usuarios y el equipo. La capacidad nominal de cada modelo se verifica antes de su lanzamiento.
-    image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/factory/paddleboardoverstock-stock-boat-inventory.webp
-    standard: ISO 6185-1 | ISO 12402
-  - title: Prueba de maniobrabilidad
-    description: Los productos se prueban por su capacidad de respuesta a la remada o a las entradas del motor, evaluando el radio de giro y la facilidad de manejo. Las pruebas en el agua validan que el manejo en el mundo real coincida con las especificaciones de diseño.
-    image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/factory/paddleboardoverstock-sup-manufacturing.webp
-    standard: Especificaciones internas AF-MT-004
-  - title: Prueba de estanqueidad
-    description: Los productos totalmente ensamblados se sumergen o se someten a rociado de agua para comprobar si hay fugas a través de costuras, válvulas o materiales. Cada bote pasa una comprobación de estanqueidad obligatoria antes del envío.
+  - title: Buoyancy & Load Capacity Testing
+    standard: Internal Test Protocol
+    description: Products are incrementally loaded to 1.25x rated capacity in a controlled pool. Freeboard, stability, and self-draining performance are recorded. Every model's rated capacity is mathematically and empirically verified.
+    image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-dolphin-wave-2.webp
+  - title: Maneuverability Testing
+    standard: Internal Spec AF-MT-004
+    description: On-water trials measure turning radius, acceleration, planing time, and paddle/motor response across a range of load conditions. Real-world handling characteristics are validated against design targets.
+    image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-dolphin-wave-1.webp
+  - title: Watertightness Testing
+    standard: Internal Spec AF-WT-005
+    description: Every assembled product is spray-tested at 0.5 bar on all seams, valves, and fittings. A 5-minute pressurized submersion test validates chamber and valve watertightness. Zero-leak standard before shipping.
     image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/factory/paddleboardoverstock-production-department-2.webp
-    standard: ISO 6185-1 §7.3 | Especificaciones internas AF-WT-005
 testing_section:
-  tagline: Procedimientos de prueba
-  title: Pruebas rigurosas en cada etapa
+  tagline: Testing Procedures
+  title: Rigorous Testing at Every Stage
 commitment:
-  title: Nuestro compromiso
-  body: A través de estos rigurosos procedimientos de prueba, {SITE} ofrece a los clientes la garantía de que nuestros SUP y botes inflables no solo son de alto rendimiento, sino que también están construidos para durar, asegurando incontables aventuras placenteras y seguras en el agua. Nuestro laboratorio de calidad opera de forma independiente de la producción y reporta directamente a la dirección.
-  cta: Solicitar documentación de pruebas
+  title: Our Commitment
+  body: Through these rigorous testing procedures, {SITE} provides customers with the assurance that our inflatable SUP boards are not only high-performing but also built to last — ensuring countless enjoyable and safe adventures on the water. Our quality lab operates independently from production and reports directly to management.
+  cta: Request testing documentation
   cta_link: /contact
-

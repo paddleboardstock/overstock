@@ -67,11 +67,6 @@ const skill = (fm.skill as string) ?? '';
         <option value="ru">Русский</option>
         <option value="pl">Polski</option>
         <option value="nl">Nederlands</option>
-        <option value="sv">Svenska</option>
-        <option value="no">Norsk</option>
-        <option value="el">Ελληνικά</option>
-        <option value="fi">Suomi</option>
-        <option value="da">Dansk</option>
       </select>
     </div>
     <p id="lang-hint" class="text-xs text-amber-600 dark:text-amber-400 hidden">
@@ -146,10 +141,8 @@ const skill = (fm.skill as string) ?? '';
           name="category"
           class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
         >
-          <option value="rib" selected={category === 'rib'}>RIB Powerboat</option>
-          <option value="inflatable" selected={category === 'inflatable'}>Inflatable</option>
+          <option value="sup" selected={category === 'sup'}>SUP Board</option>
           <option value="accessory" selected={category === 'accessory'}>Accessory</option>
-          <option value="service" selected={category === 'service'}>Service</option>
         </select>
       </div>
       <div>

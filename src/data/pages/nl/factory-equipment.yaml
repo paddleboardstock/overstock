@@ -1,80 +1,69 @@
 hero:
-  tagline: 'Apparatuur'
-  title: 'Productieapparatuur & Machines'
-  subtitle: 'Industriële apparatuur voor snijden, lassen, printen en assemblage'
-  back_label: 'Terug naar Fabriek'
+  tagline: Equipment
+  title: Manufacturing Equipment & Machinery
+  subtitle: Industrial-grade equipment across cutting, welding, printing, and assembly
+  back_label: Back to Factory
   back_link: /factory
-
 categories:
-  - title: 'Snijden & Materiaalvoorbereiding'
+  - title: Cutting & Material Preparation
     items:
-      - name: 'Automatische PVC-snijmachine'
-        spec: 'CNC-gestuurd, 6.5 m × 2.5 m, 0.1 mm nauwkeurigheid'
-        desc: 'Computer gestuurde automatische snijmachine voor PVC-, Hypalon- en drop-stitch-stoffen. Nesting-software optimaliseert het materiaalgebruik tot minder dan 5% afval.'
-      - name: 'Stofspreider'
-        spec: 'Max. breedte 3 m, spanningsgestuurde aanvoer'
-        desc: 'Legt stof in enkele of meerdere lagen met gecontroleerde spanning om vervorming voor het snijden te voorkomen.'
-  - title: 'Buislassen & Verbinding'
+      - name: Automatic PVC Cutting Machine
+        spec: CNC-controlled, 6.5 m × 2.5 m, 0.1 mm accuracy
+        desc: Computer-controlled automatic cutting machine for PVC and drop-stitch fabrics. Nesting software optimises material utilisation to below 5% waste.
+      - name: Fabric Spreader
+        spec: 3 m max width, tension-controlled feed
+        desc: Lays fabric in single or multiple plies with controlled tension to prevent distortion before cutting.
+  - title: Welding & Bonding
     items:
-      - name: 'Warmteafdichtingsmachine'
-        spec: 'Heetluchtlassen, variabel 200–600 °C, 0.5–5 m/min'
-        desc: 'Heetlucht warmteafdichtingsmachine voor het verbinden en lassen van PVC- en Hypalon-buisnaden. Gebruikt voor het vastzetten, afdichten en versmelten van buiskamers en drijfverbindingen.'
-      - name: 'Diëlektrische RF-pers'
-        spec: '15 kW, plaat 2000 × 600 mm'
-        desc: 'Hoogfrequent laspers voor hoofdlangsnaden, spiegel-tot-buis-verbindingen en fabricage van grote kamers.'
-      - name: 'CNC-gestuurde RF-lasser'
-        spec: '8 kW, XY-tafel 2500 × 1200 mm'
-        desc: 'Programmeerbaar lassen van gebogen naden voor complexe geometrieën, logo-embossing en precisieherstel.'
-  - title: 'RIB-bootschaalproductie'
+      - name: Heat Sealing Machine
+        spec: Hot-air welding, variable 200–600 °C, 0.5–5 m/min
+        desc: Hot-air heat sealing machine for bonding and welding PVC laminates, rail bands, and chamber seams. Used for tacking, sealing, and fusing drop-stitch core joints.
+      - name: Dielectric RF Press
+        spec: 15 kW, platen 2000 × 600 mm
+        desc: Radio-frequency welding press for main longitudinal seams, transom-to-tube joints, and large-chamber fabrication.
+      - name: CNC-Controlled RF Welder
+        spec: 8 kW, XY table 2500 × 1200 mm
+        desc: Programmable curved-seam welding for complex geometries, logo embossing, and precision patchwork.
+  - title: Deck Art & Finishing
     items:
-      - name: 'Handmatig glasvezel laminaatvormen'
-        spec: 'Meerdere vormen voor RIB-schalen tot 6 m LOA'
-        desc: 'Traditioneel handmatig glasvezel laminaat met polyester- en vinylesterharssystemen. Elke laag wordt met de hand gerold en vacuum verpakt voor consistente laminaatkwaliteit en sterkte.'
-      - name: 'Gelcoat-spuitcabine'
-        spec: 'Temperatuurgeregeld, gefilterde luchtventilatie'
-        desc: 'Gelcoat-aanbrenging op RIB-schalen. Biedt een hoogglans, UV-bestendige afwerking met nauwkeurige diktecontrole.'
-      - name: 'CNC-freesmachine (5-assig)'
-        spec: '3 m × 2 m × 1 m bereik, watergekoelde spil'
-        desc: 'Bewerking van schaalinserts, consolevormen, zitbodems en op maat gemaakte beugels.'
-  - title: 'SUP-bedrukking & Decoratie'
+      - name: EVA Deck Cutting Machine
+        spec: CNC knife cutting, 2 m width
+        desc: Precision cutting of EVA deck foam panels for art-series deck patterns. Each panel is cut to shape for a seamless full-deck fit.
+      - name: Deck Lamination Press
+        spec: Temperature & pressure controlled
+        desc: Bonds EVA deck panels to the board surface with consistent adhesion across the full deck area.
+  - title: SUP Printing & Decoration
     items:
-      - name: 'Digitale printer'
-        spec: 'Hoogwaardige inkjet, printbreedte tot 2 m'
-        desc: 'Direct-op-stof digitale print voor volledig gekleurde SUP-dekgraphics. Print aangepaste patronen, gradients en fotokwaliteit afbeeldingen met UV-bestendige waterbasisinkten.'
-      - name: 'Zeefdrukmachine'
-        spec: 'Handmatig en halfautomatisch, meerkleurige registratie'
-        desc: "Zeefdruk voor SUP-boardlogo's, merktekens en herhalende patronen. Biedt duurzame, dekkende prints met levendige kleurverzadiging."
-  - title: 'Montage & Tuigage'
+      - name: Digital Printer
+        spec: High-resolution inkjet, up to 2 m print width
+        desc: Direct-to-fabric digital printing for full-colour SUP deck graphics. Prints custom patterns, gradients, and photo-quality images with UV-resistant water-based inks.
+      - name: Screen Printing Machine
+        spec: Manual and semi-automatic, multi-colour registration
+        desc: Screen printing for SUP board logos, brand marks, and repeating patterns. Provides durable, opaque prints with vibrant colour saturation.
+  - title: Final Assembly
     items:
-      - name: 'Motortakel'
-        spec: '500 kg capaciteit, verstelbare spreidstang'
-        desc: 'Veilige montage van buitenboordmotoren van 2.5 tot 60 pk.'
-      - name: 'Console-mock-up-frame'
-        spec: 'Verstelbare hoogte en hoek'
-        desc: 'Vooraf tuigen van besturing, gashandel en instrumentpanelen voor installatie.'
-      - name: 'Hydraulische slangkrimper'
-        spec: 'Tot 1" ID, digitale drukmeter'
-        desc: 'Hydraulische besturingsslangassemblages op maat met geperste fittingen.'
-      - name: 'Elektrisch bedradingsbord'
-        spec: "3 m × 1.5 m, vooraf gedrukte bedradingsschema's"
-        desc: 'Montage en test van complete elektrische bedrading buiten de boot.'
-  - title: 'Testen & Kwaliteitscontrole'
+      - name: Valve Torque Station
+        spec: Calibrated, 10-cycle function test
+        desc: Installs and torques inflation valves, then function-tests every valve through 10 open/close cycles.
+      - name: Fin Box & D-Ring Setter
+        spec: Jig-aligned, adhesive cured
+        desc: Positions and bonds fin boxes, D-rings, and handles at exact deck locations per model specification.
+  - title: Testing & Quality Control
     items:
-      - name: 'Universele trekbank'
-        spec: '50 kN, ASTM D751'
-        desc: 'Breekkracht-, rek-op-breek- en scheurvoortplantingstesten voor stofpartijen.'
-      - name: 'Luchtdichtheidstestbank'
-        spec: 'Programmeerbaar, 30 min. drukbehoud'
-        desc: 'Geautomatiseerde drukbehoudtest voor elke buiskamer voor montage.'
-      - name: 'Naadpeltester'
-        spec: 'Gemotoriseerd 180° pelen bij 100 mm/min'
-        desc: 'Pelsterktetest van gelaste en gelijmde naden volgens ISO 6185.'
-      - name: 'Xenon-boog-verouderingskamer'
-        spec: '2000 h blootstelling'
-        desc: 'UV-bestendigheidstest voor kleurverandering en sterktebehoud.'
-
+      - name: Universal Tensile Tester
+        spec: 50 kN capacity
+        desc: Breaking force, elongation at break, and tear propagation testing for fabric batches.
+      - name: Air Retention Test Rig
+        spec: Programmable, 30-min pressure-hold
+        desc: Automated pressure-hold test for every tube chamber before assembly.
+      - name: Seam Peel Tester
+        spec: Motorised 180° peel at 100 mm/min
+        desc: Weld and bonded-seam peel strength testing per internal protocol.
+      - name: Xenon-Arc Weathering Chamber
+        spec: 2000 h exposure
+        desc: UV resistance testing for colour change and strength retention.
 cta:
-  title: 'Geïnteresseerd in een fabrieksrondleiding?'
-  desc: 'Wij verwelkomen bezoekers in onze faciliteit in Qingdao. Bekijk onze apparatuur en processen in persoon.'
-  label: 'Bezoek inplannen →'
+  title: Interested in a factory tour?
+  desc: We welcome visitors to our Weihai facility. See our equipment and processes in person.
+  label: Schedule a visit →
   link: /contact

@@ -4,67 +4,23 @@ import JsonLd from '~/components/common/JsonLd.astro';
 import { SITE } from 'astrowind:config';
 
 const metadata = {
-  title: `Media Center & Press Coverage — News, Events & Media Resources | ${SITE.name}`,
-  description: `Paddle Board Overstock media center. Press releases, company news, product launches, trade show appearances, and downloadable media resources for journalists and partners.`,
+  title: `Media Center & Press Coverage — News & Media Resources | ${SITE.name}`,
+  description: `Paddle Board Overstock media center. Press releases, company news, product launches, and downloadable media resources for journalists and content creators.`,
   ignoreTitleTemplate: true,
 };
 
 const pressReleases = [
   {
-    date: '2026-06-15',
-    title: 'Paddle Board Overstock Launches SUP Tour 12 — Premium Touring Board with Drop-Stitch 2.0',
-    summary:
-      'New 12-foot touring board features next-generation drop-stitch core technology for enhanced rigidity and reduced weight.',
-    href: '/news/sup-tour-12-launch',
-  },
-  {
-    date: '2026-05-20',
-    title: 'Paddle Board Overstock Receives ISO 14001 Environmental Management Certification',
-    summary:
-      'Qingdao facility earns ISO 14001 certification for environmental management systems and sustainable manufacturing practices.',
-    href: '/news/iso-14001-certification',
-  },
-  {
-    date: '2026-04-10',
-    title: 'Paddle Board Overstock Partners with US Water Rescue for Specialized RIB Fleet',
-    summary: 'Strategic partnership to supply custom RIBs for search and rescue operations across the United States.',
-    href: '/news/us-water-rescue-partnership',
-  },
-  {
     date: '2026-03-05',
-    title: 'Paddle Board Overstock Opens R&D Innovation Center in Qingdao',
+    title: 'Paddle Board Overstock Opens R&D Innovation Center in Weihai',
     summary: 'New 2,000 m² research and development facility houses PVC fabric lab, test tank, and prototype workshop.',
     href: '/news/paddleboardoverstock-rd-center-innovation',
   },
   {
-    date: '2026-02-18',
-    title: 'Life Vest Pro Receives SOLAS Approval for Commercial Marine Use',
-    summary:
-      'Paddle Board Overstock Life Vest Pro certified to SOLAS standards for commercial shipping, offshore, and maritime safety applications.',
-    href: '/news/life-vest-pro-solas',
-  },
-  {
     date: '2026-01-22',
     title: 'Paddle Board Overstock Debuts Recycled PVC Initiative Across Product Lines',
-    summary: 'Company-wide sustainability program introduces recycled-content PVC in SUP boards, kayaks, and dinghies.',
+    summary: 'Company-wide sustainability program introduces recycled-content PVC in SUP boards.',
     href: '/news/recycled-pvc-initiative',
-  },
-];
-
-const events = [
-  {
-    date: '2026-09-15',
-    title: 'Miami International Boat Show 2026',
-    location: 'Miami, FL, USA',
-    booth: 'Booth 1425',
-    desc: 'Showcasing 2027 RIB lineup and new Hypalon boat series.',
-  },
-  {
-    date: '2026-11-08',
-    title: 'METSTRADE 2026',
-    location: 'Amsterdam, Netherlands',
-    booth: 'Hall 10, Stand 312',
-    desc: 'International marine equipment trade show. OEM/ODM partnership meetings.',
   },
 ];
 
@@ -108,18 +64,13 @@ const mediaKit = [
     <span class="text-xs font-medium uppercase tracking-[0.2em] text-sky-600">Media Center</span>
     <h1 class="mt-4 text-4xl md:text-5xl font-bold text-gray-900">Press & Media Resources</h1>
     <p class="mt-4 text-lg text-gray-500 max-w-2xl mx-auto">
-      Press releases, product announcements, trade show appearances, and downloadable media assets.
+      Press releases, product announcements, and downloadable media assets.
     </p>
     <div class="mt-8 flex flex-wrap justify-center gap-3">
       <a
         href="#press"
         class="px-6 py-3 bg-gray-900 text-white rounded-full text-sm font-medium hover:bg-gray-800 transition"
         >Press Releases</a
-      >
-      <a
-        href="#events"
-        class="px-6 py-3 border border-gray-300 text-gray-700 rounded-full text-sm font-medium hover:border-gray-400 transition"
-        >Upcoming Events</a
       >
       <a
         href="/contact"
@@ -163,35 +114,6 @@ const mediaKit = [
     </div>
   </section>
 
-  <section class="bg-gray-50 py-24 px-6" id="events">
-    <div class="max-w-5xl mx-auto">
-      <div class="flex items-center gap-4 mb-10">
-        <div class="w-10 h-10 rounded-lg bg-amber-100 flex items-center justify-center">
-          <svg class="w-5 h-5 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"
-            ><path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg
-          >
-        </div>
-        <h2 class="text-2xl font-bold text-gray-900">Upcoming Events</h2>
-      </div>
-      <div class="grid md:grid-cols-2 gap-6">
-        {
-          events.map((e) => (
-            <div class="bg-white border border-gray-200 rounded-2xl p-6">
-              <span class="text-sm font-semibold text-amber-600">{e.date}</span>
-              <h3 class="mt-1 text-lg font-semibold text-gray-900">{e.title}</h3>
-              <p class="text-sm text-gray-500">{e.location}</p>
-              <p class="text-sm text-gray-500">Booth: {e.booth}</p>
-              <p class="mt-2 text-sm text-gray-600">{e.desc}</p>
-            </div>
-          ))
-        }
-      </div>
-    </div>
-  </section>
-
   <section class="max-w-5xl mx-auto pb-24 px-6">
     <div class="flex items-center gap-4 mb-4">
       <div class="w-10 h-10 rounded-lg bg-emerald-100 flex items-center justify-center">
@@ -206,32 +128,9 @@ const mediaKit = [
       <h2 class="text-2xl font-bold text-gray-900">Product Catalogs</h2>
     </div>
     <p class="text-gray-500 mb-10">
-      Download our latest PDF catalogs with full product lines, specifications, and packaging options.
+      Download our latest PDF catalog with the full SUP lineup, specifications, and color options.
     </p>
     <div class="grid md:grid-cols-2 gap-6">
-      <a
-        href="/catalogs/paddleboardoverstock-inflatable-boat-catalog.pdf"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="group bg-white border border-gray-200 rounded-2xl p-6 hover:border-emerald-300 hover:shadow-md transition-all"
-      >
-        <h3 class="font-semibold text-gray-900 group-hover:text-emerald-600 transition-colors">
-          Inflatable Boat Catalog
-        </h3>
-        <p class="mt-1 text-sm text-gray-500">
-          RIB boats, inflatable boats, and dinghies — 64 models, full specs and options.
-        </p>
-        <span class="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-emerald-600">
-          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"
-            ><path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-            ></path></svg
-          >
-          Download PDF (3.9 MB)
-        </span>
-      </a>
       <a
         href="/catalogs/paddleboardoverstock-sup-catalog.pdf"
         target="_blank"

@@ -1,172 +1,98 @@
-badge: Beweise & Ergebnisse
-heading: Belege
-description: Reale Fallstudien, Zertifizierungen, Testergebnisse und Einsatzfotos, die unsere Fertigungskompetenz und Produktqualität belegen.
-
+badge: Proof & Quality
+heading: Beweise
+description: Real quality stories, test data, and factory photos that show how every clearance board ships at retail-grade quality.
 case_studies:
-  - id: retail-private-label
-    client: Europäischer Outdoor-Einzelhändler
-    product: SUP-Serie als Eigenmarke
-    industry: Einzelhandel
-    challenge: Ein europäischer Outdoor-Einzelhändler benötigte eine SUP-Serie als Eigenmarke mit einzigartigen Deck-Grafiken, umweltfreundlichem PVC und handelsfertiger Verpackung – alles in 60 Tagen geliefert.
-    solution: Wir entwickelten die Digitaldruck-Dateien, beschafften REACH-konformes PVC und reduzierten die Musterphase von 3 auf 1 Runde, indem wir das Designteam direkt in unserem Werk in Qingdao ansiedelten.
-    result: 55 Tage von der unterschriebenen Bestellung bis zum FOB. 2,400 Einheiten in 4 SKUs. Folgeauftrag erfolgte vor Eintreffen des ersten Containers.
+  - id: clearance-quality-check
+    client: Auslaufbestand, Einzelhandels-QC
+    product: Jedes Überbestandsbrett, erneut überprüft
+    industry: Qualitätskontrolle
+    challenge: Überbestand- und Auslaufbretter stammen aus Überproduktion, daher fragen Käufer zu Recht, ob ein rabattiertes Brett die gleichen Kontrollen wie ein vollpreisiges besteht.
+    solution: Every clearance board re-enters the QC line. Each chamber is pressure-tested with a 24-48h hold at 1.25x rated pressure, every outgoing shipment is inspected for defects, and accessories are checked for completeness before packing.
+    result: 99,3 % fehlerfreie Rate bei ausgehenden Lieferungen über die letzten 12 Monate – derselbe Standard gilt für Auslauf- und Einzelhandelsbestände.
     image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-medusa-glow-1.webp
-    tags: [OEM, Einzelhandel, SUP]
+    tags:
+      - Pressure Testing
+      - Defect-Free
+      - Clearance QC
     outcome_metrics:
-      - label: Lieferzeit
-        value: 55 Tage
-      - label: Einheiten
-        value: 2,400
-      - label: SKUs
-        value: '4'
-
-  - id: startup-drop-stitch-kayak
-    client: US-Wassersport-Startup
-    product: Drop-Stitch-Kajak
-    industry: Startup / Einzelhandel
-    challenge: Ein US-amerikanisches Wassersport-Startup benötigte ein leistungsstarkes Drop-Stitch-Kajak mit individueller Rumpfform, Co-Branding-Verpackung und BSCI-Zertifizierung für den Einzelhandel.
-    solution: Wir passten eine bestehende Drop-Stitch-Kajakform mit modifiziertem Rockerprofil an, entwickelten die Co-Branding-Verpackungsgestaltung und stellten die vollständige BSCI-Auditdokumentation bereit.
-    result: Erfolgreich in 3 großen US-Outdoorketten gelistet. 5,000+ Einheiten im ersten Jahr mit einer Verkaufsquote von 98%.
-    image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/paddleboardoverstock-inflatable-boat.webp
-    tags: [OEM, Kajak, BSCI]
+      - label: Fehlerfreie Rate
+        value: 99.3%
+      - label: Drucktestabdeckung
+        value: 100%
+      - label: Haltungsdauer
+        value: 24-48h
+  - id: pressure-test-regime
+    client: Der 24-48-Stunden-Druckhalt
+    product: Jede Kammer, 1,25-facher Nenndruck
+    industry: Produkttests
+    challenge: Ein SUP-Brett steht oder fällt mit seinem drop-stitch-Kern und den Nähten, und eine schnelle Aufblasprüfung am Ende der Linie reicht nicht aus, um langsame Lecks oder schwache Verschweißungen zu erkennen.
+    solution: Jedes Brett wird auf 1,25-fachen Nenndruck aufgeblasen und 24-48 Stunden gehalten, wobei der Druckabfall unter 5 % bleiben muss. Ventile, D-Ringe, Nähte und Auftrieb werden mit null Toleranz für Sicherheitsmängel überprüft.
+    result: 100 % der Produktion besteht dieses Prüfschema vor dem Verpacken – keine Stichproben, keine Ausnahmen.
+    image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/factory/paddleboardoverstock-sup-manufacturing.webp
+    tags:
+      - Drop-Stitch
+      - 1,25-facher Druck
+      - Keine Sicherheitsmängel
     outcome_metrics:
-      - label: Einzelhandelsketten
-        value: '3'
-      - label: Einheiten im ersten Jahr
-        value: 5,000+
-      - label: Verkaufsquote
-        value: 98%
-
-  - id: australian-rib-distributor
-    client: Australischer Distributor
-    product: CE-zertifizierte RIB-Serie
-    industry: Marine / Behörden
-    challenge: Ein australischer Distributor benötigte eine CE-zertifizierte RIB-Serie mit individuellen Schlauchfarben, Hypalon-Upgrade-Option und Konformität mit der australischen Norm AS 1799.
-    solution: Wir fertigten Vorserienmuster in 4 Schlauchfarben-Varianten, bezogen CSM-Hypalon von einem japanischen Lieferanten und koordinierten die Konformitätsprüfung nach AS 1799 durch einen unabhängigen Prüfdienst.
-    result: 3-Modell-RIB-Serie auf dem AU/NZ-Markt eingeführt. Anschließend Zuschlag bei einer Regierungsausschreibung für 12 Patrouillen-RIBs.
-    image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/paddleboardoverstock-rib-330-boat.webp
-    tags: [OEM, RIB, Hypalon, Behörden]
-    outcome_metrics:
-      - label: Eingeführte Modelle
-        value: '3'
-      - label: Patrouillenboot-Auftrag
-        value: 12 Einheiten
-      - label: Konformität
-        value: AS 1799
-
-  - id: caribbean-resort-fleet
-    client: Karibische Luxusresort-Gruppe
-    product: Resort-Flotte – RIBs, SUP, Kajaks
-    industry: Gastgewerbe / Tourismus
-    challenge: Eine Gruppe mit 5 Resorts benötigte eine einheitliche Flotte an Verleih-Wassersportausrüstung – RIB-Tender, SUPs und Kajaks – mit konsistentem Branding, UV-beständigen Materialien für die tropische Sonne und einem 5-Jahres-Erneuerungsplan.
-    solution: Wir entwickelten ein individuelles 3-Modell-Flottenpaket mit UV-stabilisiertem PVC, Resort-Branding auf den Decks und einem gestaffelten Lieferplan. Inklusive Personalschulung und eines eigenen Ersatzteil-Kits für jedes Resort.
-    result: 180 Einheiten an 5 Resorts geliefert. Folgeauftrag für 2 neue Objekte. Die Stückkosten lagen 40% unter denen bisheriger Lieferanten.
+      - label: Testdruck
+        value: 1.25x
+      - label: Maximaler Druckabfall
+        value: <5 %
+      - label: Getestete Einheiten
+        value: 100%
+  - id: warranty-claims-support
+    client: Eine Garantie, die beantwortet
+    product: 2-jährige Abdeckung für SUP-Bretter & Zubehör
+    industry: After-Sales
+    challenge: Der Kauf von Auslaufware direkt ab Werk wirft eine berechtigte Frage auf — wenn Monate später etwas schiefgeht, wer kümmert sich dann darum?
+    solution: Jedes Board wird mit einer 2-Jahres-Garantie geliefert, die SUP Boards, drop-stitch Nähte, Inflationsventile und Zubehör abdeckt. Reklamationen gehen direkt an unser Team — senden Sie Fotos oder ein kurzes Video, und wir kümmern uns darum.
+    result: Garantiereklamationen werden von demselben Team geprüft und bearbeitet, das auch die Produktion inspiziert — direkt, ohne Umwege über Zwischenhändler.
     image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/hero/factory-gate.webp
-    tags: [OEM, SUP, Kajak, RIB, Gastgewerbe]
+    tags:
+      - 2-Jahres-Garantie
+      - Direkter Support
+      - Zubehör abgedeckt
     outcome_metrics:
-      - label: Gelieferte Einheiten
-        value: 180
-      - label: Resorts
-        value: '5'
-      - label: Kostenreduzierung
-        value: 40%
-
-  - id: southeast-asia-search-rescue
-    client: Südostasiatische Seefahrtsbehörde
-    product: Patrouillen- und Rettungs-RIB-Flotte
-    industry: Behörde / Maritime Sicherheit
-    challenge: Eine staatliche Seefahrtsbehörde benötigte 20 Patrouillen- und Rettungs-RIBs mit feuerbeständigem Hypalon-Gewebe, selbstlenzenden Decks, integrierten VHF-/Funkkonsolen-Halterungen und Konformität mit den Rettungsboot-Normen des SOLAS-Kapitels III.
-    solution: Wir fertigten 20 RIBs mit CSM-Hypalon-Schläuchen, Aluminiumrümpfen in Marinequalität, schweren Schleppösen und vorinstallierter Navigationsbeleuchtung. Das Inspektionsteam des Werks war bei den Seeerprobungen anwesend. Vollständige SOLAS-Dokumentation bereitgestellt.
-    result: Auftrag in 4 Monaten abgeschlossen. Flotte im Einsatz für Grenzpatrouillen, Such- und Rettungseinsätze sowie Katastrophenhilfe an 3 regionalen Standorten.
-    image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/paddleboardoverstock-rib-600.webp
-    tags: [OEM, RIB, Hypalon, Behörde, SOLAS]
-    outcome_metrics:
-      - label: Patrouillen-RIBs
-        value: '20'
-      - label: Lieferung
-        value: 4 Monate
-      - label: Standorte
-        value: '3'
-
-  - id: european-dtc-ecommerce
-    client: Europäische DTC-Wassersportmarke
-    product: Marken-SUP-Linie + Zubehör
-    industry: E-Commerce / Einzelhandel
-    challenge: Eine schnell wachsende DTC-Wassersportmarke benötigte ein komplettes SUP-Paket (Brett, Pumpe, Paddel, Leash, Tasche) mit Premium-Verpackung für den E-Commerce-Versand – direkt zum Verbraucher per DHL/FedEx ohne Transportschäden.
-    solution: Wir entwickelten eine Co-Branding-Produktlinie mit kundenspezifischer EPS-Kernformung, proprietärer Drop-Stitch-Technologie für höheren Druck und handelsfertigen doppelwandigen Wellpappkartons mit Einlagepolsterung. QR-Code-basierte Authentizitäts- und Garantieregistrierung integriert.
-    result: 3-Modell-SUP-Linie in 75 Tagen eingeführt. 15,000+ Einheiten in den ersten 12 Monaten. Durchschnittsbewertung 4.8★ bei 2,000+ Bewertungen. 0.3% Schadensquote im Transport.
-    image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-medusa-glow-1.webp
-    tags: [OEM, SUP, DTC, E-Commerce]
-    outcome_metrics:
-      - label: Modelle
-        value: '3'
-      - label: Einheiten
-        value: 15,000+
-      - label: Durchschnittsbewertung
-        value: 4.8★
-      - label: Schadensquote
-        value: 0.3%
-
-certifications:
-  - name: CE
-    body: Europäische Union
-    desc: 64 CE-gekennzeichnete Modelle gemäß den anwendbaren EU-Richtlinien für Sportboote und persönliche Auftriebsmittel.
-  - name: ISO 9001
-    body: SGS / BSI
-    desc: Zertifiziertes Qualitätsmanagementsystem für Entwicklung, Fertigung und Vertrieb aufblasbarer Wasserfahrzeuge.
-  - name: BSCI
-    body: amfori
-    desc: Sozialkonformitätszertifizierung, die ethische Fertigung, faire Arbeitsbedingungen und Arbeitssicherheit belegt.
-  - name: REACH
-    body: Europäische Chemikalienagentur
-    desc: Alle Materialien entsprechen der REACH-Verordnung zur chemischen Sicherheit. Dokumentation liegt jeder Lieferung bei.
-  - name: RoHS
-    body: Europäische Union
-    desc: Einhaltung der Beschränkung gefährlicher Stoffe in allen elektronischen und elektrischen Bauteilen.
-  - name: AS 1799
-    body: Standards Australia
-    desc: Australische Norm für aufblasbare Boote – geprüft und zertifiziert für den gewerblichen Einsatz in AU/NZ-Gewässern.
-
+      - label: Garantie
+        value: 2 Jahre
+      - label: Abdeckung
+        value: Board + Zubehör
+      - label: Support
+        value: Direktes Team
 test_results:
-  - metric: Druckgeprüfte Einheiten
+  - metric: Units Pressure Tested
     value: 100%
-    detail: Jedes Boot, jede Kammer, jede Charge
-  - metric: Max. Druckabfall
-    value: '<5%'
-    detail: Über 24h bei 1.25x Nenndruck
-  - metric: Schwelle für schwerwiegende Fehler
-    value: AQL 2.5
-    detail: Gemäß ISO-2859-Stichprobenverfahren
-  - metric: Druckhaltezeit
+    detail: Jedes Board, jede Kammer, jede Charge
+  - metric: Max Pressure Drop
+    value: <5 %
+    detail: Über 24 Stunden bei 1,25-fachem Nenndruck
+  - metric: Outgoing Defect-Free Rate
+    value: 99.3%
+    detail: Trailing 12-month shipments
+  - metric: Pressure Hold Duration
     value: 24-48h
     detail: Je nach Produktkategorie
-  - metric: Prüfdruckreserve
+  - metric: Test Pressure Margin
     value: 1.25x
-    detail: Sicherheitsreserve für jede Kammer
-  - metric: Toleranz für sicherheitsrelevante Fehler
+    detail: Sicherheitsmarge in jeder Kammer
+  - metric: Safety Defect Tolerance
     value: 0%
     detail: Ventile, D-Ringe, Nähte, Auftrieb
-
 spec_sheets:
-  - name: SUP-Serie
-    href: /products#sup
-  - name: RIB-Serie
-    href: /products#rib
-  - name: Kajak & Dinghi
-    href: /products#inflatable
-  - name: Schwimmwesten & Zubehör
-    href: /products#accessories
-
+  - name: SUP-Boards
+    href: /products
+  - name: Zubehör
+    href: /products
 deployment_photos:
-  - image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/paddleboardoverstock-rib-600.webp
-    caption: RIB-Patrouillenboot im Einsatz für Such- und Rettungseinsätze auf See
-    context: Suche & Rettung
+  - image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-medusa-glow-1.webp
+    caption: SUP Board gleitet über ruhiges Wasser bei Sonnenuntergang
+    context: Auf dem Wasser
   - image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/hero/factory-gate.webp
-    caption: SUP-Tour entlang einer malerischen Küstenlinie
+    caption: SUP Tour entlang einer landschaftlich reizvollen Küstenlinie
     context: Freizeit
-  - image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/paddleboardoverstock-inflatable-boat-factory.webp
-    caption: Produktion aufblasbarer Boote in unserer Fertigungsanlage in Qingdao
-    context: Werk
-  - image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/factory/paddleboardoverstock-stock-boat-inventory.webp
-    caption: Versandbereiter Lagerbestand vor der Containerbeladung
+  - image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/factory/paddleboardoverstock-sup-manufacturing.webp
+    caption: Aufblasbare SUP Produktion in unserer Produktionsstätte in Weihai
+    context: Fabrik
+  - image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/factory/paddleboardoverstock-warehouse-storage.webp
+    caption: Versandfertiger Überbestand in unserem Lager in Weihai
     context: Logistik

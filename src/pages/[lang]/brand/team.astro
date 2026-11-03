@@ -40,7 +40,7 @@ const ctaActions = cta.actions?.map((a: any) => ({ ...a, href: lh(a.href) }));
 const metadata = {
   title: localizePageTitle(page, `Team — ${SITE.name} | Marine Engineering & Leadership`),
   description:
-    'Meet the Paddle Board Overstock team — marine engineers, material scientists, and manufacturing experts with decades of combined experience in inflatable boat design and production.',
+    'Meet the Paddle Board Overstock team — marine engineers, material scientists, and manufacturing experts with decades of combined experience in inflatable SUP board design and production.',
 };
 const crumbs = [
   { name: t('nav.home') || 'Home', href: `/${lang}/` },
@@ -57,7 +57,7 @@ const faqSchema = JSON.stringify({
       name: 'How large is the Paddle Board Overstock team?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '200-300 skilled workers, 25+ engineers averaging 7+ years experience, dedicated quality lab staff, and B2B sales support team.',
+        text: '200-300 skilled workers, 25+ engineers averaging 7+ years experience, dedicated quality lab staff, and customer support team.',
       },
     },
     {
@@ -73,7 +73,7 @@ const faqSchema = JSON.stringify({
       name: 'Can I work with specific team members?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Dedicated account managers are assigned to OEM/ODM partners. Engineering contact available throughout project development.',
+        text: 'Our support team is available throughout your ownership experience, and engineering staff answer technical questions via the contact page.',
       },
     },
   ],
@@ -117,7 +117,7 @@ const faqSchema = JSON.stringify({
             description: m.description,
             url: m.name === 'Toby Liu' ? `/${lang}/brand/team` : undefined,
             worksFor: { name: 'Paddle Board Overstock', '@type': 'Organization' },
-            knowsAbout: ['RIB boats', 'marine manufacturing', 'inflatable boats'],
+            knowsAbout: ['SUP boards', 'drop stitch technology', 'inflatable paddle boards'],
           }}
         />
       ))

@@ -44,7 +44,7 @@ Inflatable SUPs (iSUPs) are categorized by their intended use case, shape, and d
 - **Skill level:** All levels
 
 ### Fishing SUP
-- **Best for:** Inshore fishing, kayak fishing alternative, gear hauling
+- **Best for:** Inshore fishing, gear hauling
 - **Length:** 10'6" — 12'0"
 - **Width:** 32" — 36"
 - **Thickness:** 6" — 6"
@@ -96,7 +96,7 @@ Inflatable SUPs (iSUPs) are categorized by their intended use case, shape, and d
 ### Choose a Fishing SUP when:
 - You carry significant gear (cooler, tackle box, rods)
 - You stand and cast from your board
-- You want to access shallow waters a kayak cannot reach
+- You want to access shallow, hard-to-reach waters
 - You need a stable platform for long sessions
 
 ### Choose a Kids SUP when:

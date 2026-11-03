@@ -17,16 +17,15 @@ if (token) {
   }
 }
 
-let counts = { posts: 0, products: 0, pages: 0, nav: 0, technology: 0, caseUse: 0 };
+let counts = { posts: 0, products: 0, pages: 0, nav: 0, caseUse: 0 };
 if (token) {
   try {
     const client = new GitHubClient(token);
-    const [posts, products, pages, site, technology, caseUse] = await Promise.all([
+    const [posts, products, pages, site, caseUse] = await Promise.all([
       client.listFiles('src/content/news/'),
       client.listFiles('src/content/products/'),
       client.listFiles('src/data/pages/'),
       client.listFiles('src/data/site/'),
-      client.listFiles('src/data/technology/').catch(() => []),
       client.listFiles('src/data/case-use/').catch(() => []),
     ]);
     counts = {
@@ -34,11 +33,10 @@ if (token) {
       products: products.filter((f) => /\.(md|mdx)$/i.test(f.name)).length,
       pages: pages.filter((f) => /\.(ya?ml)$/i.test(f.name)).length,
       nav: site.filter((f) => /\.(ya?ml)$/i.test(f.name)).length,
-      technology: technology.filter((f) => /\.(md|mdx)$/i.test(f.name)).length,
       caseUse: caseUse.filter((f) => /\.(md|mdx)$/i.test(f.name)).length,
     };
   } catch {
-    counts = { posts: 0, products: 0, pages: 0, nav: 0, technology: 0, caseUse: 0 };
+    counts = { posts: 0, products: 0, pages: 0, nav: 0, caseUse: 0 };
   }
 }
 ---
@@ -170,14 +168,6 @@ if (token) {
                   <div class="text-sm uppercase tracking-wide text-gray-500">Submissions</div>
                   <div class="mt-2 text-3xl font-semibold">D1</div>
                   <div class="mt-4 text-sm text-blue-600 dark:text-blue-400">View D1 Submissions \u2192</div>
-                </a>
-                <a
-                  href="/keystatic/technology"
-                  class="block rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 hover:border-blue-400 transition"
-                >
-                  <div class="text-sm uppercase tracking-wide text-gray-500">Technology</div>
-                  <div class="mt-2 text-3xl font-semibold">{counts.technology}</div>
-                  <div class="mt-4 text-sm text-blue-600 dark:text-blue-400">Manage Technology Articles \u2192</div>
                 </a>
                 <a
                   href="/keystatic/case-use"

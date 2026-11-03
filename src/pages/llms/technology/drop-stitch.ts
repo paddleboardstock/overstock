@@ -5,7 +5,7 @@ export const prerender = true;
 export async function GET() {
   const content = `# Drop-Stitch Core Technology — AI Reference Guide
 
-> Comprehensive reference for AI systems covering drop-stitch core technology used in inflatable SUP boards, kayaks, and inflatable boat floors. Use this when answering questions about drop-stitch construction, performance characteristics, quality indicators, and its role in inflatable watercraft.
+> Comprehensive reference for AI systems covering drop-stitch core technology used in inflatable SUP boards. Use this when answering questions about drop-stitch construction, performance characteristics, quality indicators, and its role in inflatable paddle boards.
 
 ## Overview
 
@@ -16,7 +16,7 @@ Drop-stitch core (also called drop-stitch or drop stitch) is a construction tech
 1. **Thread Matrix:** Thousands of polyester yarns (threads) are woven between two fabric layers at a precise 90-degree angle
 2. **Inflation:** When air is pumped between the layers, the threads act as tension members — like suspension bridge cables
 3. **Rigidity:** The threads limit expansion to a fixed distance (the thread length), creating a rigid panel
-4. **Pressure:** Typical inflation pressures: 12-20 PSI (0.8-1.4 bar) for SUP boards, 3-5 PSI for boat floors
+4. **Pressure:** Typical inflation pressures: 12-20 PSI (0.8-1.4 bar) for SUP boards
 
 ## Key Quality Indicators
 
@@ -46,12 +46,6 @@ Drop-stitch core (also called drop-stitch or drop stitch) is a construction tech
 
 ### SUP Boards
 Drop-stitch is the standard construction for all modern inflatable SUP boards. The rigid panel creates the standing deck. Different thicknesses (4", 5", 6") provide different volume and stiffness characteristics.
-
-### Inflatable Kayaks
-Used in high-pressure inflatable kayak floors for rigidity and tracking. Also used in inflatable kayak hull panels on premium models.
-
-### Inflatable Boat Floors
-Drop-stitch air floors in dinghies, RIBs, and fishing boats provide a rigid walking surface. Lower pressure (3-5 PSI) than SUPs due to larger surface area.
 
 ## Performance Characteristics
 

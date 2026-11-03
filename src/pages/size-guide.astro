@@ -18,7 +18,7 @@ const howToChoose = page.how_to_choose || {};
 const metadata = {
   title: `Size Guide — ${SITE.name}`,
   description:
-    'Find the right size inflatable SUP, kayak, or boat for your needs. Compare dimensions, weight capacities, and recommended uses.',
+    'Find the right inflatable SUP size for your weight and skill. Compare board lengths, widths, thickness, weight, and max load.',
 };
 
 const products = await getProducts();
@@ -47,7 +47,7 @@ const getSpec = (p: (typeof products)[number], label: string) => {
 
     <div class="mt-12 space-y-16">
       {
-        (['inflatable', 'rib', 'accessory'] as const).map((cat) => {
+        (['sup', 'accessory'] as const).map((cat) => {
           const catProducts = products.filter((p) => p.category === cat);
           if (catProducts.length === 0) return null;
           const catLabel = catProducts[0]?.categoryLabel || cat;
@@ -55,12 +55,10 @@ const getSpec = (p: (typeof products)[number], label: string) => {
             <section>
               <h2 class="text-2xl font-semibold text-gray-900 mb-2">{catLabel}</h2>
               <p class="text-gray-500 mb-6">
-                {categoriesText[cat] ||
-                  (cat === 'inflatable'
-                    ? 'Inflatable SUPs and kayaks designed for portability without sacrificing performance. Match the right size to your weight and paddling style.'
-                    : cat === 'rib'
-                      ? 'Rigid-hull inflatable boats for coastal navigation, patrol, and professional marine operations. Choose by length and engine capacity.'
-                      : 'Accessories and safety equipment to complement your watercraft. Universal sizing with multiple options.')}
+                {categoriesText[cat.toUpperCase()] ||
+                  (cat === 'sup'
+                    ? 'Inflatable SUP boards designed for portability without sacrificing performance. Match the right size to your weight and paddling style.'
+                    : 'Accessories and packages that complement your board. Universal sizing with multiple options.')}
               </p>
               <div class="overflow-x-auto">
                 <table class="w-full text-sm border-collapse">
@@ -120,19 +118,19 @@ const getSpec = (p: (typeof products)[number], label: string) => {
             ? howToChoose.cards
             : [
                 {
-                  title: 'SUP Boards',
+                  title: 'All-Around SUP Boards',
                   description:
-                    'Choose length based on your weight and intended use. Wider boards (32"+) offer more stability. Longer boards (11-12 ft) track better for touring. Heavier paddlers need higher volume boards.',
+                    'Our ~11 ft all-around boards (32" wide, 6-inch drop-stitch) balance stability, speed, and capacity. Match the board volume to your weight — heavier paddlers need more volume.',
                 },
                 {
-                  title: 'Kayaks',
+                  title: 'Width & Thickness',
                   description:
-                    'Single kayaks (9 ft) are best for solo travel and rivers. Tandem kayaks (12 ft) accommodate two paddlers or one adult with gear. Check weight capacity for total load including gear.',
+                    'Wider boards (32"+) offer more stability for beginners, yoga, and fishing. 6-inch thickness at 15 PSI keeps the deck rigid under rider and gear.',
                 },
                 {
-                  title: 'Dinghies & RIBs',
+                  title: 'Packages & Accessories',
                   description:
-                    'Choose dinghy length by passenger count and intended use. Larger RIBs (4.5 m+) are suited for offshore and rescue. Smaller dinghies (2.7 m) work as tenders and fishing platforms.',
+                    'Every board ships as a complete package — board, travel backpack, hand pump, adjustable paddle, removable fin, coil leash, and repair kit. Check max load for rider plus gear.',
                 },
               ]
           ).map((card: any) => (
@@ -147,8 +145,8 @@ const getSpec = (p: (typeof products)[number], label: string) => {
 
     <section class="sr-only" data-ai-block="definition" aria-hidden="true">
       <p>
-        Paddle Board Overstock size guide comparing product dimensions, weight capacities, and recommended uses across
-        inflatable, RIB, and accessory categories.
+        Paddle Board Overstock size guide comparing board dimensions, weight capacities, and recommended uses across SUP
+        board and accessory categories.
       </p>
     </section>
   </section>

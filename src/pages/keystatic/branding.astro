@@ -18,7 +18,7 @@ let data: Record<string, any> = {
   logo_alt: 'Paddle Board Overstock logo',
   copyright: '© {year} Paddle Board Overstock · All rights reserved.',
   phone: '+86 13305324192',
-  address: 'Economic Development Zone, Laixi, Qingdao, China, 266600',
+  address: 'Economic Development Zone, Weihai, Shandong, China, 264200',
   email: 'info@paddleboardoverstock.com',
   whatsapp_number: '',
   whatsapp_default_message: 'Hello, I would like to inquire about your products.',
@@ -28,8 +28,8 @@ let data: Record<string, any> = {
   contact_from_name: '',
   contact_resend_api_key: '',
   gmap_api_key: '',
-  map_latitude: '36.8861',
-  map_longitude: '120.5261',
+  map_latitude: '37.5128',
+  map_longitude: '122.1201',
 };
 let fullConfigStr = '';
 let sha = '';
@@ -210,7 +210,7 @@ const year = new Date().getFullYear();
             type="text"
             name="address"
             value={data.address ?? ''}
-            placeholder="Economic Development Zone, Laixi, Qingdao, China, 266600"
+            placeholder="Economic Development Zone, Weihai, Shandong, China, 264200"
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
           />
         </div>
@@ -388,8 +388,8 @@ const year = new Date().getFullYear();
             <input
               type="text"
               name="map_latitude"
-              value={data.map_latitude ?? '36.8861'}
-              placeholder="36.8861"
+              value={data.map_latitude ?? '37.5128'}
+              placeholder="37.5128"
               class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
             />
           </div>
@@ -398,8 +398,8 @@ const year = new Date().getFullYear();
             <input
               type="text"
               name="map_longitude"
-              value={data.map_longitude ?? '120.5261'}
-              placeholder="120.5261"
+              value={data.map_longitude ?? '122.1201'}
+              placeholder="122.1201"
               class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
             />
           </div>
@@ -562,8 +562,8 @@ const year = new Date().getFullYear();
             contact_from_name: String(fd.get('contact_from_name') || '').trim(),
             contact_resend_api_key: String(fd.get('contact_resend_api_key') || '').trim(),
             gmap_api_key: String(fd.get('gmap_api_key') || '').trim(),
-            map_latitude: String(fd.get('map_latitude') || '36.8861').trim(),
-            map_longitude: String(fd.get('map_longitude') || '120.5261').trim(),
+            map_latitude: String(fd.get('map_latitude') || '37.5128').trim(),
+            map_longitude: String(fd.get('map_longitude') || '122.1201').trim(),
           };
 
           try {

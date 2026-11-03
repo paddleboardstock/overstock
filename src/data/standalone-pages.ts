@@ -12,7 +12,7 @@ export const standalonePages: StandalonePage[] = [
     slug: 'engineering-perfection',
     title: 'Engineering Perfection',
     description:
-      "Paddle Board Overstock's engineering philosophy: precision manufacturing, premium material selection, rigorous quality control, and segment-specific design for whitewater, fishing, dinghies, and recreational inflatable boats.",
+      "Paddle Board Overstock's engineering philosophy: precision manufacturing, premium material selection, rigorous quality control, and segment-specific design for touring, yoga, fishing, and recreational paddle boarding.",
     pageType: 'about',
     sections: [
       {
@@ -34,80 +34,39 @@ export const standalonePages: StandalonePage[] = [
     ],
     features: [
       {
-        label: 'Whitewater Inflatables',
-        desc: 'High-denier PVC or Hypalon with heavy reinforcements, self-bailing floors',
+        label: 'Touring Boards',
+        desc: 'High-denier PVC with reinforced rails and tapered displacement hulls',
       },
-      { label: 'Fishing Inflatables', desc: 'Exceptional stability, rod holders, gear mounts, elevated seating' },
-      { label: 'Dinghies & Tenders', desc: 'Lightweight, compact, efficient rowing and motoring performance' },
-      { label: 'Recreational Craft', desc: 'Versatile design for family boating with stability and safety priority' },
-    ],
-  },
-  {
-    slug: 'oem-odm-manufacturer',
-    title: 'Inflatable SUP & Kayak OEM/ODM Manufacturer',
-    description:
-      'Paddle Board Overstock is a premier OEM/ODM manufacturer of inflatable SUP boards, kayaks, RIBs, and dinghies. CE-certified factory. Drop-stitch core lamination, custom mold design, private label. 12,000 m² facility in Qingdao, China.',
-    pageType: 'capability',
-    sections: [
-      {
-        heading: 'Specification & Design Brief',
-        body: 'Share your target specs, CAD drawings, or reference product. Our engineering team reviews materials, dimensions, and compliance requirements (CE and BSCI) before quoting.',
-      },
-      {
-        heading: '3D Mold Prototyping',
-        body: 'We design and CNC-machine custom molds for SUP boards, kayak hulls, and RIB components. Prototype samples produced within 15–20 working days.',
-      },
-      {
-        heading: 'Material Selection & Sample Production',
-        body: 'Choose from military-grade PVC (0.9mm–1.2mm), Hypalon CSM, or drop-stitch core fabrics. Pre-production samples with your brand colours, logo, and packaging.',
-      },
-      {
-        heading: 'CE Compliance',
-        body: 'Every OEM order includes CE declaration of conformity, product traceability records, BSCI social compliance report, and REACH material declarations.',
-      },
-      {
-        heading: 'Bulk Production & Inline QC',
-        body: '100-point quality checklist. Each unit undergoes a 24-48h pressure hold test at 1.25x rated pressure, seam peel testing, and visual inspection before packing.',
-      },
-      {
-        heading: 'FOB Qingdao Logistics',
-        body: 'Finished goods palletized, shrink-wrapped, and container-loaded at Qingdao port. Export documentation, customs clearance, and real-time shipment tracking.',
-      },
-    ],
-    features: [
-      { label: '12,000 m² Facility', desc: 'ISO 9001 certified workshop in Qingdao' },
-      { label: '200-300 Skilled Workers', desc: 'Experienced manufacturing workforce' },
-      { label: '15,000 Units/Year', desc: 'Annual production capacity' },
-      { label: '50+ Countries', desc: 'Global export reach' },
-      { label: 'Custom Mold Design', desc: 'CNC-machined molds for any shape' },
-      { label: 'Private Label', desc: 'Full branding and packaging service' },
+      { label: 'Fishing Boards', desc: 'Exceptional stability, gear mounts, elevated casting platform' },
+      { label: 'All-Around Boards', desc: 'Lightweight, compact, stable platforms for all skill levels' },
+      { label: 'Family Fun Boards', desc: 'Versatile design for family paddling with stability and safety priority' },
     ],
   },
   {
     slug: 'design-powerhouse',
     title: 'Design & Innovation',
     description:
-      'Paddle Board Overstock is more than a factory — we are a design-driven manufacturer. In-house R&D, hydrodynamic simulation, custom ODM solutions, and advanced material engineering for global B2B partners.',
+      'Paddle Board Overstock is more than a factory — we are a design-driven brand. In-house R&D, hydrodynamic simulation, and advanced material engineering for paddlers worldwide.',
     pageType: 'capability',
     sections: [
       {
         heading: 'Proprietary R&D & Engineering',
-        body: 'Our in-house R&D team consists of veteran marine engineers, industrial designers, and water sports enthusiasts. We leverage advanced hydrodynamic simulation and CAD v4.2 to optimize hull panel curvature, ensuring every kayak and SUP delivers trackability, speed, and stability matching rigid crafts.',
+        body: 'Our in-house R&D team consists of veteran marine engineers, industrial designers, and water sports enthusiasts. We leverage advanced hydrodynamic simulation and CAD v4.2 to optimize hull panel curvature, ensuring every SUP delivers trackability, speed, and stability matching rigid boards.',
       },
       {
         heading: 'Ergonomics & Advanced Material Integration',
         body: 'Our design philosophy centers around rider ergonomics — from precise ergonomic seat placement to engineered drop-stitch internal chamber architecture. We continuously innovate with military-grade PVC, reinforced drop-stitch hull panels, and UV-resistant coatings.',
       },
       {
-        heading: 'Turnkey ODM & White-Label Solutions',
-        body: 'We offer comprehensive ODM services including customized hull geometry, localized trend-driven graphic designs, branding placement, and bespoke accessory ecosystems. From sketch to shelf, we bring your brand vision to life.',
+        heading: 'Graphic Design & Deck Art',
+        body: 'We offer trend-driven graphic designs, curated deck art collections, and coordinated accessory packages. From concept to finished board, we bring every design vision to life.',
       },
     ],
     features: [
       { label: 'Hydrodynamic Simulation', desc: 'CFD and CAD-optimized hull curvature' },
       { label: 'Ergonomic Engineering', desc: 'Precision rider-centric design' },
       { label: 'Custom Mold & Tooling', desc: 'CNC-machined molds, 15-20 day prototypes' },
-      { label: 'Bespoke Accessory Ecosystems', desc: 'Complete OEM accessory packages' },
+      { label: 'Complete Accessory Kits', desc: 'Pump, paddle, leash, and backpack included' },
       { label: '14+ In-House Engineers', desc: 'Marine, industrial, and materials expertise' },
       { label: '8+ Registered Patents', desc: 'Proprietary design and manufacturing IP' },
     ],

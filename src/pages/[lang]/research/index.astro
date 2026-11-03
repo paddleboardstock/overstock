@@ -2,67 +2,37 @@
 const PAGE_DESC: Record<string, { description: string }> = {
   de: {
     description:
-      'Tiefgehende technische Forschung zu Schlauchbooten: Drop-Stitch-Technik, PVC vs. Hypalon, CE-Zertifizierung, SUP-Dickenratgeber und OEM-Beschaffung.',
+      'Tiefgehende technische Forschung zu aufblasbaren SUP-Boards: Drop-Stitch-Technik, Laminatmaterialien und SUP-Dicke.',
   },
   es: {
     description:
-      'Investigación técnica en profundidad sobre embarcaciones inflables: ingeniería drop stitch, materiales PVC vs. Hypalon, certificación CE, guía de grosor de SUP y abastecimiento OEM.',
+      'Investigación técnica en profundidad sobre tablas de pádel inflables: ingeniería drop stitch, materiales laminados y grosor de SUP.',
   },
   fr: {
     description:
-      "Recherche technique approfondie sur les embarcations gonflables : ingénierie drop stitch, matériaux PVC vs Hypalon, certification CE, guide d'épaisseur de SUP et approvisionnement OEM.",
+      'Recherche technique approfondie sur les planches de paddle gonflables : ingénierie drop stitch, matériaux laminés et épaisseur des SUP.',
   },
   it: {
     description:
-      'Ricerca tecnica approfondita sulle imbarcazioni gonfiabili: ingegneria drop stitch, materiali PVC vs Hypalon, certificazione CE, guida allo spessore dei SUP e approvvigionamento OEM.',
-  },
-  cs: {
-    description:
-      'Hloubkový technický výzkum nafukovacích člunů: Drop-Stitch inženýrství, PVC vs. Hypalon, CE certifikace, SUP průvodce tloušťkou a OEM nákup.',
-  },
-  sv: {
-    description:
-      'Djupgående teknisk forskning om uppblåsbara båtar: Drop-Stitch teknik, PVC vs. Hypalon, CE certifiering, SUP tjockleksguide och OEM upphandling.',
-  },
-  da: {
-    description:
-      'Dybdegående teknisk forskning i gummibåde: Drop-Stitch teknik, PVC vs. Hypalon, CE certificering, SUP tykkelse guide og OEM indkøb.',
-  },
-  el: {
-    description:
-      'Σε βάθος τεχνική έρευνα για φουσκωτά σκάφη: Drop-Stitch μηχανική, PVC έναντι Hypalon, CE πιστοποίηση, SUP οδηγός πάχους και OEM προμήθεια.',
-  },
-  no: {
-    description:
-      'Inngående teknisk forskning på gummibåter: Drop-Stitch engineering, PVC vs. Hypalon, CE sertifisering, SUP tykkelsesguide og OEM anskaffelse.',
+      'Ricerca tecnica approfondita sulle tavole paddle gonfiabili: ingegneria drop stitch, materiali laminati e spessore dei SUP.',
   },
   ru: {
     description:
-      'Углубленные технические исследования надувных лодок: проектирование Drop-Stitch, сравнение PVC и Hypalon, сертификация CE, руководство по толщине SUP и закупки OEM.',
+      'Углубленные технические исследования надувных сапбордов: технология дроп-стич, ламинатные материалы и толщина SUP.',
   },
   nl: {
     description:
-      'Diepgaand technisch onderzoek naar opblaasbare boten: Drop-Stitch engineering, PVC vs. Hypalon, CE certificering, SUP diktegids en OEM inkoop.',
-  },
-  fi: {
-    description:
-      'Kumiveneiden syvällinen tekninen tutkimus: Drop-Stitch suunnittelu, PVC vs. Hypalon, CE sertifiointi, SUP paksuusopas ja OEM hankinta.',
+      'Diepgaand technisch onderzoek naar opblaasbare supboards: drop-stitch engineering, laminaatmaterialen en SUP dikte.',
   },
   pl: {
-    description:
-      'Dogłębne badania techniczne pontonów: inżynieria Drop-Stitch, PVC vs. Hypalon, certyfikacja CE, przewodnik grubości SUP i zaopatrzenie OEM.',
+    description: 'Dogłębne badania techniczne desek SUP: inżynieria Drop-Stitch, materiały laminowane i grubość SUP.',
   },
   ar: {
-    description:
-      'بحث تقني متعمق حول القوارب القابلة للنفخ: Drop-Stitch الهندسة، PVC مقابل Hypalon، شهادة CE، دليل السمك SUP والمشتريات OEM.',
+    description: 'بحث تقني متعمق حول ألواح البادل القابلة للنفخ: هندسة الخياطة القطرة، المواد المصفحة وسماكة SUP.',
   },
   pt: {
     description:
-      'Pesquisa técnica aprofundada sobre barcos infláveis: engenharia Drop-Stitch, PVC vs. Hypalon, certificação CE, guia de espessura SUP e aquisição de OEM.',
-  },
-  ja: {
-    description:
-      'インフレータブルボートに関する詳細な技術調査: Drop-Stitch エンジニアリング、PVC と Hypalon の比較、CE 認証、SUP の厚さガイド、および OEM の調達。',
+      'Pesquisa técnica aprofundada sobre pranchas de paddle infláveis: engenharia drop stitch, materiais laminados e espessura SUP.',
   },
 };
 const PAGE_META: Record<string, { title: string }> = {
@@ -75,13 +45,6 @@ const PAGE_META: Record<string, { title: string }> = {
   ru: { title: 'Центр исследований и знаний' },
   pl: { title: 'Centrum badań i wiedzy' },
   nl: { title: 'Onderzoeks- en kenniscentrum' },
-  sv: { title: 'Forsknings- och kunskapscentrum' },
-  no: { title: 'Forsknings- og kunnskapssenter' },
-  el: { title: 'Κέντρο έρευνας και γνώσης' },
-  fi: { title: 'Tutkimus- ja tietokeskus' },
-  da: { title: 'Forsknings- og videnscenter' },
-  cs: { title: 'Výzkumné a znalostní centrum' },
-  ja: { title: '研究および知識センター' },
 };
 export const prerender = true;
 
@@ -103,7 +66,7 @@ const metadata = {
   title: PAGE_META[lang]?.title || `Research & Knowledge Center | ${SITE.name}`,
   description:
     PAGE_DESC[lang]?.description ||
-    'In-depth technical research on inflatable watercraft: drop stitch engineering, PVC vs Hypalon materials, CE certification, SUP thickness guide, and OEM sourcing.',
+    'In-depth technical research on inflatable paddle boards: drop-stitch engineering, laminate materials, and SUP thickness.',
   ignoreTitleTemplate: true,
 };
 
@@ -118,16 +81,7 @@ const topics: ResearchTopic[] =
 
 const topicMeta: Record<string, { titleKey: string; descKey: string }> = {
   'drop-stitch-technology': { titleKey: 'home.research.dropStitch', descKey: 'home.research.dropStitch.desc' },
-  'pvc-vs-hypalon': { titleKey: 'home.research.pvcHypalon', descKey: 'home.research.pvcHypalon.desc' },
-  'ce-certification-guide': {
-    titleKey: 'home.research.ceCertification',
-    descKey: 'home.research.ceCertification.desc',
-  },
   'sup-thickness-guide': { titleKey: 'home.research.supThickness', descKey: 'home.research.supThickness.desc' },
-  'oem-buyer-guide': { titleKey: 'home.research.oemBuyer', descKey: 'home.research.oemBuyer.desc' },
-  'rcd-technical-file-guide': { titleKey: 'home.research.rcdTechFile', descKey: 'home.research.rcdTechFile.desc' },
-  'hin-win-hull-identification': { titleKey: 'home.research.hinWin', descKey: 'home.research.hinWin.desc' },
-  'rcd-design-categories': { titleKey: 'home.research.rcdCategories', descKey: 'home.research.rcdCategories.desc' },
 };
 ---
 

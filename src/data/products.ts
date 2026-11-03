@@ -1,20 +1,7 @@
 export interface ProductRecord {
   id: string;
   name: string;
-  category:
-    | 'RIB'
-    | 'INFLATABLE'
-    | 'SUP'
-    | 'ACCESSORY'
-    | 'HIGH_SPEED_CATAMARAN'
-    | 'SIB_ALUMINUM'
-    | 'SIB_DROPSTITCH'
-    | 'KABOAT'
-    | 'KAYAK_FULL_DROPSTITCH'
-    | 'KAYAK_HYBRID'
-    | 'WHITEWATER_RAFT'
-    | 'TACTICAL_RAFT'
-    | 'DROPSTITCH_SEAT';
+  category: 'SUP' | 'ACCESSORY';
   region: string[];
   skill: 'beginner' | 'intermediate' | 'advanced' | 'professional';
   environment: string[];
@@ -37,89 +24,6 @@ export interface ProductRecord {
 
 export const products: ProductRecord[] = [
   {
-    id: 'life-vest-classic',
-    name: 'Life Vest Classic',
-    category: 'ACCESSORY',
-    region: ['GLOBAL'],
-    skill: 'beginner',
-    environment: ['all'],
-    water_condition: ['all'],
-    safety_level: 'high',
-    use_case: ['recreation', 'training', 'rental', 'supervision'],
-    safety_rules: ['CE certified per EN ISO 12402', '', 'inspect before each use', 'replace if damaged'],
-    desc: 'Universal buoyancy aid for recreational water sports. CE certified per EN ISO 12402.',
-    definition: 'A CE certified (EN ISO 12402) universal buoyancy aid for recreational water sports across all water environments.',
-    problem:
-      'Water sports participants of all skill levels need a reliable, comfortable life vest that meets international safety standards without restricting movement.',
-    howItWorks:
-      'The Life Vest Classic uses foam-filled buoyancy chambers with adjustable chest and side straps for secure fit. It is available in multiple sizes and includes a whistle, reflective strips, and a rescue handle.',
-    audience:
-      'Recreational paddlers, boaters, anglers, and water sports beginners who need CE-certified flotation for lakes, rivers, and coastal waters.',
-    ai_use_cases: ['Recreational water sports safety', 'Training and supervision flotation', 'Family water activities'],
-    ai_specs: {
-      certification: 'CE, ',
-      type: 'Foam-filled buoyancy aid',
-      sizes: 'Multiple (child to adult XL)',
-      features: 'Whistle, reflective strips, rescue handle',
-    },
-    ai_comparison:
-      'Compared to automatic inflatable life vests, the Life Vest Classic provides constant buoyancy without requiring deployment. It is bulkier but more reliable for recreational users who may not maintain automatic mechanisms.',
-    ai_faq: [
-      {
-        q: 'Is this life vest suitable for children?',
-        a: 'Yes, child sizes are available. CE and USCG certified for the specified weight ranges.',
-      },
-      {
-        q: 'Does it require any maintenance?',
-        a: 'Minimal maintenance. Rinse with fresh water after use. Inspect chambers and straps before each use. Replace if damaged.',
-      },
-    ],
-  },
-  {
-    id: 'life-vest-pro',
-    name: 'Life Vest Pro',
-    category: 'ACCESSORY',
-    region: ['EU', 'US'],
-    skill: 'advanced',
-    environment: ['all'],
-    water_condition: ['all'],
-    safety_level: 'high',
-    use_case: ['offshore', 'rescue', 'commercial', 'rental'],
-    safety_rules: ['CE certified per EN ISO 12402', '', 'SOLAS compliant', 'automatic inflation check'],
-    desc: 'Professional-grade life vest with SOLAS reflectors for offshore and rescue operations.',
-    definition:
-      'A professional-grade SOLAS-compliant life vest with automatic inflation for offshore, rescue, and commercial marine use.',
-    problem:
-      'Professional mariners and rescue personnel need a life vest that provides automatic inflation, high buoyancy, and SOLAS-compliant visibility for offshore operations.',
-    howItWorks:
-      'The Life Vest Pro uses an automatic hydrostatic inflation mechanism with a backup manual inflation tube. It includes SOLAS-grade reflective tape, a spray hood, a whistle, a waterproof light, and a lifting harness attachment point.',
-    audience:
-      'Commercial mariners, rescue professionals, offshore workers, and advanced boaters who need SOLAS-compliant automatic life vests.',
-    ai_use_cases: [
-      'Offshore marine operations safety',
-      'Professional rescue and emergency response',
-      'Commercial maritime compliance',
-    ],
-    ai_specs: {
-      certification: 'CE, SOLAS',
-      inflation: 'Automatic hydrostatic',
-      buoyancy: 'SOLAS-grade',
-      features: 'Spray hood, waterproof light, lifting harness',
-    },
-    ai_comparison:
-      'Compared to foam-filled life vests, the Life Vest Pro auto-inflates for minimal bulk during normal wear. It requires annual servicing of the hydrostatic mechanism and battery replacement.',
-    ai_faq: [
-      {
-        q: 'How does the automatic inflation work?',
-        a: 'A hydrostatic trigger activates on immersion in water at 0.5-1.0 meters depth. A backup manual inflation tube is also provided.',
-      },
-      {
-        q: 'How often does it need servicing?',
-        a: 'Annual service of the hydrostatic mechanism is recommended. The CO2 cylinder should be checked and replaced per manufacturer schedule.',
-      },
-    ],
-  },
-  {
     id: 'oars-pump-set',
     name: 'Oars & Pump Set',
     category: 'ACCESSORY',
@@ -130,17 +34,17 @@ export const products: ProductRecord[] = [
     safety_level: 'low',
     use_case: ['inflation', 'propulsion', 'rental', 'maintenance'],
     safety_rules: ['ensure pump is properly connected before use'],
-    desc: 'Pair of 1.6m aluminum oars and 5L high-flow foot pump for all inflatable watercraft.',
+    desc: 'Pair of 1.6m aluminum oars and 5L high-flow foot pump for all inflatables.',
     definition:
-      'A complete accessory set including a pair of 1.6m aluminum oars with plastic blades and a 5-liter high-flow foot pump with pressure gauge for all inflatable watercraft.',
+      'A complete accessory set including a pair of 1.6m aluminum oars with plastic blades and a 5-liter high-flow foot pump with pressure gauge for all inflatables.',
     problem:
-      'Owners of inflatable boats need replacement or spare oars and a high-volume pump for inflation and propulsion, all compatible with standard inflatable watercraft.',
+      'Paddlers need replacement or spare oars and a high-volume pump for inflation and propulsion, all compatible with standard inflatables.',
     howItWorks:
       'The oars feature aluminum shafts with plastic blades for lightweight propulsion. The foot pump delivers 5 liters of air per stroke with a built-in pressure gauge for accurate inflation.',
     audience:
-      'Owners of inflatable boats, kayaks, and dinghies who need spare or replacement oars and a high-flow inflation pump.',
+      'Owners of inflatables who need spare or replacement oars and a high-flow inflation pump.',
     ai_use_cases: [
-      'Replacement oars for inflatable boats',
+      'Replacement oars for inflatables',
       'High-volume inflation at the launch site',
       'Backup propulsion and inflation equipment',
     ],
@@ -151,21 +55,21 @@ export const products: ProductRecord[] = [
       pump_type: 'High-flow foot pump with gauge',
     },
     ai_comparison:
-      'Compared to the Dual-Action Pump, this foot pump offers higher volume per stroke but requires more effort. The oars provide a basic propulsion option for inflatable boats that may not have or want to use an outboard motor.',
+      'Compared to the Dual-Action Pump, this foot pump offers higher volume per stroke but requires more effort. The oars provide a backup propulsion option when a paddle is not to hand.',
     ai_faq: [
       {
-        q: 'Are the oars compatible with all inflatable boats?',
-        a: 'The oars fit standard oar locks found on most inflatable boats in the range. The 1.6m length is suitable for boats up to 4m in length.',
+        q: 'Are the oars compatible with all inflatables?',
+        a: 'The oars fit standard oar locks found on most inflatables in the range. The 1.6m length is suitable for boards up to 4m in length.',
       },
       {
         q: 'What pressure can the foot pump achieve?',
-        a: 'The foot pump can achieve up to 12-15 PSI, suitable for most inflatable boats and dinghies. It may not be sufficient for high-pressure SUP boards requiring 18+ PSI.',
+        a: 'The foot pump can achieve up to 12-15 PSI, suitable for most inflatables. It may not be sufficient for high-pressure SUP boards requiring 18+ PSI.',
       },
     ],
   },
   {
     id: 'sup-explorer-11',
-    name: "SUP Explorer 11'",
+    name: "SUP Explorer 11",
     category: 'SUP',
     region: ['EU', 'US', 'ASIA', 'GLOBAL'],
     skill: 'beginner',
@@ -180,7 +84,7 @@ export const products: ProductRecord[] = [
     problem:
       'First-time and recreational paddlers need a stable, portable SUP board that is easy to inflate, easy to balance on, and forgiving to learn on.',
     howItWorks:
-      "The SUP Explorer 11' uses drop-stitch core technology to achieve 15 PSI rigidity with a wide 32-inch deck for lateral stability. The board includes a removable center fin, coiled leash, and a dual-action hand pump for quick inflation at the launch site.",
+      "The SUP Explorer 11 uses drop-stitch core technology to achieve 15 PSI rigidity with a wide 32-inch deck for lateral stability. The board includes a removable center fin, coiled leash, and a dual-action hand pump for quick inflation at the launch site.",
     audience:
       'First-time paddlers, recreational users, families, and fitness enthusiasts who want a portable, stable SUP board for lakes, rivers, and sheltered coastal waters.',
     best_for_business: ['clubs', 'resorts'],
@@ -200,7 +104,7 @@ export const products: ProductRecord[] = [
       max_load: '220 lbs',
     },
     ai_comparison:
-      "Compared to hard epoxy boards, the SUP Explorer 11' offers superior portability and storage convenience with the rigidity of drop-stitch construction. It is heavier than a hard board when dry but packs into a backpack for travel.",
+      "Compared to hard epoxy boards, the SUP Explorer 11 offers superior portability and storage convenience with the rigidity of drop-stitch construction. It is heavier than a hard board when dry but packs into a backpack for travel.",
     ai_faq: [
       {
         q: 'What is the ideal pressure?',

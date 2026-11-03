@@ -1,78 +1,69 @@
 hero:
-  tagline: Peralatan
-  title: Peralatan & Mesin Manufaktur
-  subtitle: Peralatan kelas industri untuk pemotongan, pengelasan, pencetakan, dan perakitan
-  back_label: Kembali ke Pabrik
+  tagline: Equipment
+  title: Manufacturing Equipment & Machinery
+  subtitle: Industrial-grade equipment across cutting, welding, printing, and assembly
+  back_label: Back to Factory
   back_link: /factory
 categories:
-  - title: Pemotongan & Persiapan Bahan
+  - title: Cutting & Material Preparation
     items:
-      - name: Mesin Pemotong PVC Otomatis
-        spec: Mesin dikontrol CNC, 6,5 m × 2,5 m, akurasi 0,1 mm
-        desc: Mesin pemotong otomatis yang dikendalikan komputer untuk kain PVC, Hypalon, dan drop-stitch. Perangkat lunak penataan (nesting) mengoptimalkan pemanfaatan bahan hingga limbah di bawah 5%.
-      - name: Penyebar Kain
-        spec: Lebar maks 3 m, umpan dikendalikan ketegangan
-        desc: Menyebarkan kain dalam satu atau beberapa lapis dengan ketegangan terkendali untuk mencegah distorsi sebelum pemotongan.
-  - title: Pengelasan & Penyambungan Tabung
+      - name: Automatic PVC Cutting Machine
+        spec: CNC-controlled, 6.5 m × 2.5 m, 0.1 mm accuracy
+        desc: Computer-controlled automatic cutting machine for PVC and drop-stitch fabrics. Nesting software optimises material utilisation to below 5% waste.
+      - name: Fabric Spreader
+        spec: 3 m max width, tension-controlled feed
+        desc: Lays fabric in single or multiple plies with controlled tension to prevent distortion before cutting.
+  - title: Welding & Bonding
     items:
-      - name: Mesin Penyegel Panas
-        spec: Pengelasan udara panas, variabel 200–600 °C, 0,5–5 m/menit
-        desc: Mesin penyegelan panas untuk penyambungan dan pengelasan jahitan tabung PVC dan Hypalon. Digunakan untuk penempelan, penyegelan, dan penyatuan ruang tabung serta sambungan pelampung.
-      - name: Press RF Dielektrik
+      - name: Heat Sealing Machine
+        spec: Hot-air welding, variable 200–600 °C, 0.5–5 m/min
+        desc: Hot-air heat sealing machine for bonding and welding PVC laminates, rail bands, and chamber seams. Used for tacking, sealing, and fusing drop-stitch core joints.
+      - name: Dielectric RF Press
         spec: 15 kW, platen 2000 × 600 mm
-        desc: Press pengelasan frekuensi radio untuk sambungan longitudinal utama, sambungan transom-ke-tabung, dan fabrikasi ruang besar.
-      - name: Pengelasan RF Dikontrol CNC
-        spec: 8 kW, meja XY 2500 × 1200 mm
-        desc: Pengelasan jahitan melengkung yang dapat diprogram untuk geometris kompleks, emboss logo, dan patchwork presisi.
-  - title: Manufaktur Lambung RIB
+        desc: Radio-frequency welding press for main longitudinal seams, transom-to-tube joints, and large-chamber fabrication.
+      - name: CNC-Controlled RF Welder
+        spec: 8 kW, XY table 2500 × 1200 mm
+        desc: Programmable curved-seam welding for complex geometries, logo embossing, and precision patchwork.
+  - title: Deck Art & Finishing
     items:
-      - name: Cetakan Fiberglass Hand-Lay-Up
-        spec: Beberapa cetakan untuk lambung RIB hingga 6 m LOA
-        desc: Pencetakan fiberglass dengan teknik hand-lay-up tradisional menggunakan sistem resin poliester dan vinilester. Setiap lapisan digulung tangan dan dikemas vakum untuk kualitas laminate dan kekuatan yang konsisten.
-      - name: Booth Semprot Gelcoat
-        spec: Suhu dikontrol, ventilasi udara tersaring
-        desc: Aplikasi gelcoat untuk lambung RIB. Memberikan hasil akhir mengkilap, tahan UV dengan kontrol ketebalan yang presisi.
-      - name: Router CNC (5-sumbu)
-        spec: Lingkup 3 m × 2 m × 1 m, spindle didinginkan air
-        desc: Pengerjaan mesin untuk sisipan lambung, cetakan konsol, basis kursi, dan braket kustom.
-  - title: Cetak & Dekorasi SUP
+      - name: EVA Deck Cutting Machine
+        spec: CNC knife cutting, 2 m width
+        desc: Precision cutting of EVA deck foam panels for art-series deck patterns. Each panel is cut to shape for a seamless full-deck fit.
+      - name: Deck Lamination Press
+        spec: Temperature & pressure controlled
+        desc: Bonds EVA deck panels to the board surface with consistent adhesion across the full deck area.
+  - title: SUP Printing & Decoration
     items:
-      - name: Printer Digital
-        spec: Inkjet resolusi tinggi, lebar cetak hingga 2 m
-        desc: Pencetakan digital langsung ke kain untuk grafis dek SUP berwarna penuh. Mencetak pola kustom, gradasi, dan gambar berkualitas foto dengan tinta berbasis air tahan UV.
-      - name: Mesin Sablon
-        spec: Manual dan semi-otomatis, registrasi multi-warna
-        desc: Sablon untuk logo papan SUP, tanda merek, dan pola berulang. Memberikan cetakan yang tahan lama, buram, dengan saturasi warna yang hidup.
-  - title: Perakitan & Pemasangan
+      - name: Digital Printer
+        spec: High-resolution inkjet, up to 2 m print width
+        desc: Direct-to-fabric digital printing for full-colour SUP deck graphics. Prints custom patterns, gradients, and photo-quality images with UV-resistant water-based inks.
+      - name: Screen Printing Machine
+        spec: Manual and semi-automatic, multi-colour registration
+        desc: Screen printing for SUP board logos, brand marks, and repeating patterns. Provides durable, opaque prints with vibrant colour saturation.
+  - title: Final Assembly
     items:
-      - name: Dongkrak Mesin
-        spec: Kapasitas 500 kg, bar penyebar yang dapat disesuaikan
-        desc: Pemasangan aman mesin tempel dari 2,5 hingga 60 hp.
-      - name: Bingkai Tiruan Konsol
-        spec: Tinggi dan sudut yang dapat disesuaikan
-        desc: Pra-pemasangan kemudi, throttle, dan panel instrumen sebelum instalasi.
-      - name: Alat Penekan Selang Hidrolik
-        spec: Hingga 1" ID, pengukur tekanan digital
-        desc: Perakitan selang kemudi hidrolik dengan panjang khusus dan fitting yang diswadg.
-      - name: Papan Kabel Listrik
-        spec: 3 m × 1,5 m, diagram pengkabelan yang dicetak sebelumnya
-        desc: Perakitan dan pengujian kabel kelistrikan lengkap di luar kapal.
-  - title: Pengujian & Pengendalian Kualitas
+      - name: Valve Torque Station
+        spec: Calibrated, 10-cycle function test
+        desc: Installs and torques inflation valves, then function-tests every valve through 10 open/close cycles.
+      - name: Fin Box & D-Ring Setter
+        spec: Jig-aligned, adhesive cured
+        desc: Positions and bonds fin boxes, D-rings, and handles at exact deck locations per model specification.
+  - title: Testing & Quality Control
     items:
-      - name: Penguji Tarik Universal
-        spec: 50 kN, / ASTM D751
-        desc: Pengujian gaya patah, pertambahan panjang saat putus, dan penyebaran sobekan untuk batch kain.
-      - name: Rig Uji Penahanan Udara
-        spec: Dapat diprogram, tahan tekanan selama 30 menit
-        desc: Uji tahan tekanan otomatis untuk setiap ruang tabung sebelum perakitan.
-      - name: Penguji Pengelupasan Jahitan
-        spec: Pengupasan bermotor 180° pada 100 mm/menit
-        desc: Pengujian kekuatan lepas sambungan las dan lem sesuai ISO 6185.
-      - name: Kamar Perubahan Cuaca Xenon-Arc
-        spec: Paparan 2000 jam
-        desc: Pengujian ketahanan UV untuk perubahan warna dan retensi kekuatan.
+      - name: Universal Tensile Tester
+        spec: 50 kN capacity
+        desc: Breaking force, elongation at break, and tear propagation testing for fabric batches.
+      - name: Air Retention Test Rig
+        spec: Programmable, 30-min pressure-hold
+        desc: Automated pressure-hold test for every tube chamber before assembly.
+      - name: Seam Peel Tester
+        spec: Motorised 180° peel at 100 mm/min
+        desc: Weld and bonded-seam peel strength testing per internal protocol.
+      - name: Xenon-Arc Weathering Chamber
+        spec: 2000 h exposure
+        desc: UV resistance testing for colour change and strength retention.
 cta:
-  title: Tertarik dengan tur pabrik?
-  desc: Kami menyambut pengunjung ke fasilitas kami di Qingdao. Lihat peralatan dan proses kami secara langsung.
-  label: Jadwalkan kunjungan →
+  title: Interested in a factory tour?
+  desc: We welcome visitors to our Weihai facility. See our equipment and processes in person.
+  label: Schedule a visit →
   link: /contact

@@ -50,37 +50,6 @@ const strengths = marketPos.strengths || [];
 const bestFors = marketPos.bestFor || [];
 const foundingParagraphs = contentFounding.paragraphs || [];
 const growthParagraphs = contentGrowth.paragraphs || [];
-
-const faqSchema = JSON.stringify({
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'When was Paddle Board Overstock founded?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: '2012 in Qingdao, China, specializing in inflatable watercraft for global B2B markets.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is the Paddle Board Overstock mission?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'To make premium inflatable watercraft accessible to brands worldwide through direct factory OEM/ODM manufacturing with full compliance.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How has Paddle Board Overstock grown?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'From a small workshop to 12,000 m², 200-300 workers, 64 CE-certified models, and 15,000 annual units shipped to 50+ countries.',
-      },
-    },
-  ],
-});
 ---
 
 <Layout metadata={metadata} breadcrumbs={crumbs}>
@@ -91,20 +60,19 @@ const faqSchema = JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'Organization',
       name: 'Paddle Board Overstock',
-      alternateName: 'Paddle Board Overstock RIB & Inflatable Watercraft',
+      alternateName: 'Paddle Board Overstock Inflatable SUP Boards',
       description: hero.subtitle,
       url: 'https://paddleboardoverstock.com',
-      slogan: 'RIB Boats, Inflatable Boats & SUP Boards Manufacturer — OEM/ODM Solution Team',
+      slogan: 'Inflatable SUP Boards, Paddles & Accessories — Factory-Direct Brand',
       foundingDate: '2012',
       foundingLocation: 'Weihai, China',
       address: {
         '@type': 'PostalAddress',
-        addressLocality: 'Qingdao',
+        addressLocality: 'Weihai',
         addressRegion: 'Shandong',
         addressCountry: 'CN',
       },
-      industry: ['Marine Manufacturing', 'Inflatable Boat Manufacturing', 'Water Sports Equipment'],
-      hasCertification: ['CE Certified', 'ISO 9001:2015', 'UKCA Marked', 'BSCI Compliant'],
+      industry: ['Marine Manufacturing', 'Water Sports Equipment'],
       numberOfEmployees: 200,
       areaServed: ['Europe', 'Asia-Pacific', 'Americas', 'Middle East', 'Africa'],
     })}
@@ -118,21 +86,21 @@ const faqSchema = JSON.stringify({
       name: 'David Chen',
       jobTitle: 'Founder & CEO',
       description:
-        'Founder of Paddle Board Overstock, marine manufacturing expert with a decade of experience in OEM programs for European and North American brands before founding the company in 2012.',
+        'Founder of Paddle Board Overstock, marine manufacturing expert with a decade of experience in inflatable product development for European and North American markets before founding the company in 2012.',
       url: 'https://paddleboardoverstock.com/paddleboardoverstock-story',
       knowsAbout: [
-        'Inflatable Boat Manufacturing',
+        'Inflatable SUP Board Manufacturing',
         'Marine Engineering',
-        'PVC/Hypalon Fabrication',
+        'PVC Fabrication',
         'Water Sports Equipment Design',
-        'OEM/ODM Production',
+        'Drop-Stitch Construction',
       ],
-      alumniOf: 'Qingdao Marine Manufacturing Institute',
+      alumniOf: 'Weihai Marine Manufacturing Institute',
       birthPlace: {
         '@type': 'Place',
         address: {
           '@type': 'PostalAddress',
-          addressLocality: 'Qingdao',
+          addressLocality: 'Weihai',
           addressRegion: 'Shandong',
           addressCountry: 'CN',
         },
@@ -476,5 +444,4 @@ const faqSchema = JSON.stringify({
       </section>
     )
   }
-  <script is:inline type="application/ld+json" set:html={faqSchema} />
 </Layout>

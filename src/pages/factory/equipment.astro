@@ -6,7 +6,7 @@ const crumbs = [{ name: 'Home', href: '/' }, { name: 'Factory', href: '/factory'
 
 const metadata = {
   title: `Manufacturing Equipment — Cutting, Welding, Printing & Assembly | ${SITE.name}`,
-  description: `${SITE.name} factory equipment: automatic PVC cutting machines, fiberglass lay-up moulds, heat sealing presses, digital and screen printers for SUP boards, RF welders, and test rigs.`,
+  description: `${SITE.name} factory equipment: automatic PVC cutting machines, heat sealing presses, digital and screen printers for SUP boards, RF welders, and test rigs.`,
 };
 
 const categories = [
@@ -16,7 +16,7 @@ const categories = [
       {
         name: 'Automatic PVC Cutting Machine',
         spec: 'CNC-controlled, 6.5 m × 2.5 m, 0.1 mm accuracy',
-        desc: 'Computer-controlled automatic cutting machine for PVC, Hypalon, and drop-stitch fabrics. Nesting software optimises material utilisation to below 5% waste.',
+        desc: 'Computer-controlled automatic cutting machine for PVC and drop-stitch fabrics. Nesting software optimises material utilisation to below 5% waste.',
       },
       {
         name: 'Fabric Spreader',
@@ -26,17 +26,17 @@ const categories = [
     ],
   },
   {
-    title: 'Tube Welding & Bonding',
+    title: 'Welding & Bonding',
     items: [
       {
         name: 'Heat Sealing Machine',
         spec: 'Hot-air welding, variable 200–600 °C, 0.5–5 m/min',
-        desc: 'Hot-air heat sealing machine for bonding and welding PVC and Hypalon tube seams. Used for tacking, sealing, and fusing tube chambers and float joints.',
+        desc: 'Hot-air heat sealing machine for bonding and welding PVC laminates, rail bands, and chamber seams. Used for tacking, sealing, and fusing drop-stitch core joints.',
       },
       {
         name: 'Dielectric RF Press',
         spec: '15 kW, platen 2000 × 600 mm',
-        desc: 'Radio-frequency welding press for main longitudinal seams, transom-to-tube joints, and large-chamber fabrication.',
+        desc: 'Radio-frequency welding press for main longitudinal seams, rail bands, and large-chamber fabrication.',
       },
       {
         name: 'CNC-Controlled RF Welder',
@@ -46,22 +46,17 @@ const categories = [
     ],
   },
   {
-    title: 'RIB Hull Manufacturing',
+    title: 'Deck Art & Finishing',
     items: [
       {
-        name: 'Fiberglass Hand-Lay-Up Moulds',
-        spec: 'Multiple moulds for RIB hulls up to 6 m LOA',
-        desc: 'Traditional hand-lay-up fiberglass moulding with polyester and vinylester resin systems. Each layer is hand-rolled and vacuum-bagged for consistent laminate quality and strength.',
+        name: 'EVA Deck Cutting Machine',
+        spec: 'CNC knife cutting, 2 m width',
+        desc: 'Precision cutting of EVA deck foam panels for art-series deck patterns. Each panel is cut to shape for a seamless full-deck fit.',
       },
       {
-        name: 'Gelcoat Spray Booth',
-        spec: 'Temperature-controlled, filtered air ventilation',
-        desc: 'Gelcoat application for RIB hulls. Provides a high-gloss, UV-resistant finish with precise thickness control.',
-      },
-      {
-        name: 'CNC Router (5-axis)',
-        spec: '3 m × 2 m × 1 m envelope, water-cooled spindle',
-        desc: 'Machining of hull inserts, console moulds, seat bases, and custom brackets.',
+        name: 'Deck Lamination Press',
+        spec: 'Temperature & pressure controlled',
+        desc: 'Bonds EVA deck panels to the board surface with consistent adhesion across the full deck area.',
       },
     ],
   },
@@ -81,27 +76,17 @@ const categories = [
     ],
   },
   {
-    title: 'Assembly & Rigging',
+    title: 'Final Assembly',
     items: [
       {
-        name: 'Engine Hoist',
-        spec: '500 kg capacity, adjustable spreader bar',
-        desc: 'Safe mounting of outboard engines from 2.5 to 60 hp.',
+        name: 'Valve Torque Station',
+        spec: 'Calibrated, 10-cycle function test',
+        desc: 'Installs and torques inflation valves, then function-tests every valve through 10 open/close cycles.',
       },
       {
-        name: 'Console Mock-Up Frame',
-        spec: 'Adjustable height and angle',
-        desc: 'Pre-rigging of steering, throttle, and instrument panels before installation.',
-      },
-      {
-        name: 'Hydraulic Hose Crimper',
-        spec: 'Up to 1" ID, digital pressure gauge',
-        desc: 'Custom-length hydraulic steering hose assemblies with swaged fittings.',
-      },
-      {
-        name: 'Electrical Harness Board',
-        spec: '3 m × 1.5 m, pre-printed wiring diagrams',
-        desc: 'Off-boat assembly and testing of complete electrical harnesses.',
+        name: 'Fin Box & D-Ring Setter',
+        spec: 'Jig-aligned, adhesive cured',
+        desc: 'Positions and bonds fin boxes, D-rings, and handles at exact deck locations per model specification.',
       },
     ],
   },
@@ -110,22 +95,22 @@ const categories = [
     items: [
       {
         name: 'Universal Tensile Tester',
-        spec: '50 kN, ISO 6185 / ASTM D751',
+        spec: '50 kN capacity',
         desc: 'Breaking force, elongation at break, and tear propagation testing for fabric batches.',
       },
       {
         name: 'Air Retention Test Rig',
         spec: 'Programmable, 24-48 h pressure-hold',
-        desc: 'Automated pressure-hold test for every tube chamber before assembly.',
+        desc: 'Automated pressure-hold test for every board chamber before assembly.',
       },
       {
         name: 'Seam Peel Tester',
         spec: 'Motorised 180° peel at 100 mm/min',
-        desc: 'Weld and glued-seam peel strength testing per .',
+        desc: 'Weld and bonded-seam peel strength testing per internal protocol.',
       },
       {
         name: 'Xenon-Arc Weathering Chamber',
-        spec: ', 2000 h exposure',
+        spec: '2000 h exposure',
         desc: 'UV resistance testing for colour change and strength retention.',
       },
     ],
@@ -170,7 +155,7 @@ const categories = [
     <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
       <h2 class="text-xl font-bold">Interested in a factory tour?</h2>
       <p class="mt-2 text-sm text-muted">
-        We welcome visitors to our Qingdao facility. See our equipment and processes in person.
+        We welcome visitors to our Weihai facility. See our equipment and processes in person.
       </p>
       <a
         href="/contact"

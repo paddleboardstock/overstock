@@ -30,7 +30,7 @@ const metadata = {
   title: localizePageTitle(page, `Water Exploration Knowledge — ${SITE.name}`),
   description: localizePageDescription(
     page,
-    `Structured knowledge base on inflatable SUP technology, water safety, boat engineering, and adventure planning. Guides, comparisons, and deep dives.`
+    `Structured knowledge base on inflatable SUP technology, water safety, gear guides, and adventure planning. Guides, comparisons, and deep dives.`
   ),
 };
 const crumbs = [
@@ -108,17 +108,17 @@ const crumbs = [
       "@context": "https://schema.org",
       "@type": "CollectionPage",
       "name": "Paddle Board Overstock Water Exploration Knowledge",
-      "description": "Structured knowledge base on inflatable SUP, boat, and safety topics.",
+      "description": "Structured knowledge base on inflatable SUP, gear, and safety topics.",
       "about": {
         "@type": "Thing",
-        "name": "Marine Manufacturing & Watercraft",
-        "description": "Knowledge about inflatable SUP boards, RIB boats, dinghies, and marine equipment manufacturing."
+        "name": "Stand-Up Paddle Boarding",
+        "description": "Knowledge about inflatable SUP boards, paddles, and water-sports accessories."
       },
       "hasPart": [
         { "@type": "Article", "name": "SUP Knowledge", "about": "Stand-up paddle boarding guides and tutorials" },
-        { "@type": "Article", "name": "Boat Knowledge", "about": "Inflatable boat and RIB technical guides" },
+        { "@type": "Article", "name": "Gear Knowledge", "about": "Paddle, pump, and accessory buying guides" },
         { "@type": "Article", "name": "Safety Knowledge", "about": "Water safety and PFD guides" },
-        { "@type": "Article", "name": "Technology", "about": "Inflatable watercraft engineering and materials" }
+        { "@type": "Article", "name": "Technology", "about": "Inflatable SUP engineering and materials" }
       ],
       "mainEntity": {
         "@type": "ItemList",
@@ -139,10 +139,10 @@ const crumbs = [
             "position": 2,
             "item": {
               "@type": "Product",
-              "name": "Inflatable Kayak",
-              "category": "Kayak",
-              "audience": { "@type": "Audience", "audienceType": "Beginner to Intermediate" },
-              "application": { "@type": "Thing", "name": "River touring, lake exploration, family recreation" }
+              "name": "SUP Paddle",
+              "category": "Paddle",
+              "audience": { "@type": "Audience", "audienceType": "All levels" },
+              "application": { "@type": "Thing", "name": "Touring, fishing, family paddling" }
             }
           },
           {
@@ -150,10 +150,10 @@ const crumbs = [
             "position": 3,
             "item": {
               "@type": "Product",
-              "name": "Inflatable Dinghy",
-              "category": "Boat",
+              "name": "SUP Accessories",
+              "category": "Accessories",
               "audience": { "@type": "Audience", "audienceType": "All levels" },
-              "application": { "@type": "Thing", "name": "Tender duty, fishing, family outings" }
+              "application": { "@type": "Thing", "name": "Pumps, leashes, repair kits" }
             }
           },
           {
@@ -161,10 +161,10 @@ const crumbs = [
             "position": 4,
             "item": {
               "@type": "Product",
-              "name": "RIB Boat",
-              "category": "Rigid Inflatable Boat",
-              "audience": { "@type": "Audience", "audienceType": "Professional" },
-              "application": { "@type": "Thing", "name": "Search and rescue, patrol, commercial operations" }
+              "name": "Safety Equipment",
+              "category": "Water Safety Gear",
+              "audience": { "@type": "Audience", "audienceType": "All levels" },
+              "application": { "@type": "Thing", "name": "PFDs, leashes, whistle and light" }
             }
           }
         ]
@@ -186,52 +186,57 @@ const crumbs = [
           "@id": "aqua:paddleboardoverstock",
           "@type": "schema:Brand",
           "schema:name": "Paddle Board Overstock",
-          "schema:description": "RIB Boats, Inflatable Boats & SUP Boards Manufacturer — OEM/ODM",
+          "schema:description": "Inflatable stand-up paddle boards, paddles, and accessories — factory-direct overstock store",
           "schema:manufactures": [
             { "@id": "aqua:product-sup" },
-            { "@id": "aqua:product-kayak" },
-            { "@id": "aqua:product-dinghy" },
-            { "@id": "aqua:product-rib" }
+            { "@id": "aqua:product-paddle" },
+            { "@id": "aqua:product-accessory" }
           ]
+        },
+        {
+          "@id": "aqua:product-paddle",
+          "@type": "schema:Product",
+          "schema:name": "SUP Paddle"
+        },
+        {
+          "@id": "aqua:product-accessory",
+          "@type": "schema:Product",
+          "schema:name": "SUP Accessories"
         },
         {
           "@id": "aqua:technology-dropstitch",
           "@type": "schema:Thing",
           "schema:name": "Drop-Stitch Core Technology",
           "schema:description": "Construction method creating rigid inflatable platforms at 12-15 PSI",
-          "aqua:usedIn": [{ "@id": "aqua:product-sup" }, { "@id": "aqua:product-kayak" }]
+          "aqua:usedIn": [{ "@id": "aqua:product-sup" }]
         },
         {
           "@id": "aqua:technology-pvc",
           "@type": "schema:Thing",
           "schema:name": "Marine-Grade PVC",
           "schema:description": "High-density PVC fabric with UV-resistant coating",
-          "aqua:usedIn": [
-            { "@id": "aqua:product-sup" },
-            { "@id": "aqua:product-kayak" },
-            { "@id": "aqua:product-dinghy" }
-          ]
+          "aqua:usedIn": [{ "@id": "aqua:product-sup" }]
         },
         {
           "@id": "aqua:use-beginner",
           "@type": "schema:Audience",
           "schema:name": "Beginners",
           "schema:description": "First-time paddlers learning water sports",
-          "aqua:recommendedProduct": [{ "@id": "aqua:product-sup" }, { "@id": "aqua:product-kayak" }]
+          "aqua:recommendedProduct": [{ "@id": "aqua:product-sup" }]
         },
         {
           "@id": "aqua:use-family",
           "@type": "schema:Audience",
           "schema:name": "Families",
           "schema:description": "Family groups seeking recreational water activities",
-          "aqua:recommendedProduct": [{ "@id": "aqua:product-dinghy" }, { "@id": "aqua:product-kayak" }]
+          "aqua:recommendedProduct": [{ "@id": "aqua:product-sup" }]
         },
         {
-          "@id": "aqua:use-professional",
+          "@id": "aqua:use-fishing",
           "@type": "schema:Audience",
-          "schema:name": "Professionals",
-          "schema:description": "Search and rescue, patrol, commercial operators",
-          "aqua:recommendedProduct": [{ "@id": "aqua:product-rib" }]
+          "schema:name": "Anglers",
+          "schema:description": "Anglers who want a stable casting platform",
+          "aqua:recommendedProduct": [{ "@id": "aqua:product-sup" }]
         }
       ]
     }

@@ -34,89 +34,20 @@ if (!activeCategory) {
 const t = (key: string) => getUiForLang(lang || defaultLang)?.[key] || '';
 const categoryKey = (cat: string) =>
   ({
-    RIB: 'ribs',
-    INFLATABLE: 'inflatables',
     SUP: 'sups',
     ACCESSORY: 'accessories',
-    KAYAK: 'kayaks',
-    KABOAT: 'kayaks',
-    KAYAK_FULL_DROPSTITCH: 'kayaks',
-    KAYAK_HYBRID: 'kayaks',
-    INFLATABLE_CATAMARAN: 'kayaks',
-    HIGH_SPEED_CATAMARAN: 'catamaran',
-    SIB_ALUMINUM: 'inflatables',
-    SIB_DROPSTITCH: 'inflatables',
-    WHITEWATER_RAFT: 'inflatables',
-    TACTICAL_RAFT: 'inflatables',
-    DROPSTITCH_SEAT: 'accessories',
-    rib: 'ribs',
-    inflatable: 'inflatables',
     sup: 'sups',
     accessory: 'accessories',
-    kayak: 'kayaks',
   })[cat] || cat.toLowerCase();
 
 const localizedProducts = getLocalizedProducts(lang!);
 const filteredProducts = localizedProducts.filter((p) => p.category.toLowerCase() === activeCategory);
 
-const RIB_GENERIC =
-  'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/paddleboardoverstock-rib-generic.webp';
 const defaultVisuals: Record<string, string> = {
   'sup-explorer-11':
     'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/paddleboardoverstock-sup-allround-board.webp',
-  'airdeck-360':
-    'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/paddleboardoverstock-inflatable-boat.webp',
-  'rib-330':
-    'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/paddleboardoverstock-rib-330-boat.webp',
-  'rib-450-patrol':
-    'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/paddleboardoverstock-rib-450-patrol-boat.webp',
-  'life-vest-classic':
-    'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/paddleboardoverstock-life-vest-classic.webp',
-  'life-vest-pro':
-    'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/paddleboardoverstock-life-vest-pro-front.webp',
   'oars-pump-set':
     'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/paddleboardoverstock-electric-pump.webp',
-  'zb-mt350':
-    'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/paddleboardoverstock-zb-mt350-inflatable-dinghy.webp',
-  ap330: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/ap330/ap330-grey.webp',
-  ap360: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/ap360/ap360-grey.webp',
-  ap390: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/ap390/ap390-grey.webp',
-  ap420: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/ap420/ap420-grey.webp',
-  ap460: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/ap460/ap460-grey.webp',
-  ap520: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/ap520/ap520-grey-1.webp',
-  ap560: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/ap560/ap560-grey.webp',
-  ap660: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/ap660/ap660-grey.webp',
-  ap700: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/ap700/ap700-grey.webp',
-  ap760:
-    'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/ap760/paddleboardoverstock-ap760-grey.webp',
-  ap800: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/ap800/ap800-gery.webp',
-  ap900: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/ap900/ap900-grey.webp',
-  df420: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/df420/df420-gery-jpg.webp',
-  df460: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/df460/df460-grey.webp',
-  df500: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/df500/df500-grey.webp',
-  df540: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/df540/df540-grey.webp',
-  'df540-coaster':
-    'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/df540-coaster/df540-grey.webp',
-  df600: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/df600/df600-grey.webp',
-  df700: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/df700/df700-gery.webp',
-  df760: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/df760/df760-grey.webp',
-  df860: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/df860/df860-grey.webp',
-  ex7: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/ex7/ex7-black.webp',
-  ex9: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/ex9/ex9-black.webp',
-  sw240: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/sw240/gery.webp',
-  sw260: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/sw260/sw260-grey.webp',
-  sw290: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/sw290/sw290-grey.webp',
-  sw310: RIB_GENERIC,
-  sw340: RIB_GENERIC,
-  vr260: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/vr260/vr260-grey.webp',
-  vr290: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/vr290/vr290-grey.webp',
-  vr310: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/vr310/vr310-grey.webp',
-  vr340: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/vr340/vr340-grey.webp',
-  vr360: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/vr360/vr360-grey.webp',
-  vr380: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/vr380/vr380-grey.webp',
-  vr400: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/vr400/vr400-grey.webp',
-  vr420: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/vr420/vr420-grey.webp',
-  vr460: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/vr460/vr460-grey.webp',
 };
 const rawVisuals = ((
   pageContentData[`${lang}/site-product-visuals`] ||
@@ -263,7 +194,7 @@ const categoryGraph = {
                       href={`/${lang}/contact?product=${encodeURIComponent(p.name)}&custom=1`}
                       class="block text-center px-4 py-2 border border-primary text-primary text-sm font-medium rounded-lg hover:bg-primary/5 transition-colors"
                     >
-                      {t('product.oemDetails') || 'Get OEM/ODM Details'}
+                      {t('product.oemDetails') || 'Get Product Details'}
                     </a>
                   </div>
                 </div>

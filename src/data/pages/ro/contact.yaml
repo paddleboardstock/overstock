@@ -1,35 +1,35 @@
 hero_text:
   tagline: Contact
-  title: IA LEGĂTURA
+  title: GET IN TOUCH
 contact_form:
   id: form
-  title: Trimite-ne un mesaj
-  subtitle: Pentru cotații, întrebări tehnice sau solicitări de parteneriat, scrieți-ne un mesaj. Răspundem în termen de o zi lucrătoare.
+  title: Send us a message
+  subtitle: For order questions, sizing advice or product support, drop us a line. We reply within one business day.
   email_to: info@paddleboardoverstock.com
-  submit_button: Trimite Cerere de Informații → Obțineți o Cotație
-  success_message: Mulțumim! Mesajul dumneavoastră a ajuns în inboxul nostru. Vom răspunde în termen de o zi lucrătoare.
-  error_message: Ceva a mers prost la trimiterea mesajului dumneavoastră. Vă rugăm să încercați din nou sau să ne trimiteți un e-mail direct.
-  default_country_code: '+1'
+  submit_button: Send Inquiry → Get a Quote
+  success_message: Thanks! Your message has landed in our inbox. We will reply within one business day.
+  error_message: Something went wrong sending your message. Please try again or email us directly.
+  default_country_code: "+1"
   captcha:
-    label: 'Anti-spam: vă rugăm să rezolvați următorul'
+    label: "Anti-spam: please solve the following"
   fields:
-    - name: prenume
-      label: Prenume
+    - name: firstName
+      label: First Name
       row: 1
-    - name: nume de familie
-      label: Nume de familie
+    - name: lastName
+      label: Last Name
       row: 1
-    - name: numeCompanie
-      label: Numele Companiei
+    - name: companyName
+      label: Company Name
       row: 2
     - name: address
-      label: Adresă
+      label: Address
       row: 3
     - name: zip
-      label: Cod poștal
+      label: Zip / Postal Code
       row: 4
     - name: country
-      label: Țară
+      label: Country
       row: 4
       type: select
       optionsKey: countries
@@ -42,89 +42,81 @@ contact_form:
       row: 5
       type: tel
       withCountryCode: true
-    - name: volumComandă
-      label: Volum estimat al comenzii
+    - name: orderVolume
+      label: Estimated Order Volume
       row: 6
       type: select
       options:
-        - value: ''
-          label: Selectați volumul estimat...
-        - value: sample
-          label: Doar mostre / prototipuri
-        - value: 5-10
-          label: 5–10 unități (Standard MOQ)
-        - value: 100-500
-          label: 100–500 unități
-        - value: 500-plus
-          label: 500+ unități (Preț pe volum)
+        - value: ""
+          label: How many boards are you shopping for?...
+        - value: one
+          label: Just one board
+        - value: 2-4
+          label: 2–4 boards
+        - value: 5-plus
+          label: 5+ boards (family, club, or rental)
     - name: customization
-      label: Este necesară personalizarea?
+      label: What can we help with?
       row: 7
       type: select
       options:
-        - value: ''
-          label: Selectați tipul de personalizare...
+        - value: ""
+          label: Select a topic...
         - value: none
-          label: Produs standard (fără personalizare)
-        - value: logo
-          label: Logo / Branding personalizat doar
-        - value: full
-          label: Complet OEM (dimensiune, culoare, grafică, ambalaj)
-        - value: consultation
-          label: Nu sunt sigur — am nevoie de consultanță
-    - name: interesProdus
-      label: Categorii de produse de interes
+          label: General product question
+        - value: sizing
+          label: Help choosing the right board
+        - value: order
+          label: Order, payment or shipping
+        - value: warranty
+          label: Warranty or repair support
+    - name: productInterest
+      label: Product Categories of Interest
       row: 8
       type: select
       options:
-        - value: ''
-          label: Selectați categoria de produs...
+        - value: ""
+          label: Select product category...
         - value: all
-          label: Toate produsele / Catalog complet
+          label: All products / Full catalog
         - value: sup
-          label: SUP Plăci / Paddleboards
-        - value: kayak
-          label: Caiace gonflabile
-        - value: rib
-          label: RIB Bărci
-        - value: dinghy
-          label: Bărcuțe / Tenderuri
-        - value: safety
-          label: Echipamente de siguranță / Veste de salvare
+          label: SUP Boards / Paddleboards
+        - value: packages
+          label: Complete SUP packages
         - value: accessory
-          label: Accesorii (pompe, vâsle, genți)
+          label: Accessories (pumps, oars, bags)
     - name: subject
-      label: Subiect
+      label: Subject
       row: 9
     - name: message
-      label: Mesaj
+      label: Message
       row: 10
       type: textarea
       rows: 6
 features2_other_ways:
-  title: Alte modalități de a ne contacta
+  title: Other ways to reach us
   columns: 3
   items:
-    - title: Întrebări de vânzări
-      description: Oferte, configurații, cereri de dealer și comenzi en-gros.
+    - title: Order help
+      description: Product questions, sizing advice, and order support.
       icon: tabler:shopping-bag
-    - title: Suport tehnic
-      description: Garanție, reparații, piese de schimb și întrebări de operare.
+    - title: Technical support
+      description: Warranty, repairs, spare parts and operating questions.
       icon: tabler:tool
-    - title: Presă & parteneriate
-      description: Kit-uri media, sponsorizări și colaborări în industrie.
+    - title: Press & partnerships
+      description: Media kits, sponsorship and industry collaboration.
       icon: tabler:news
-    - title: Telefon
-      description: +1 279 732 3333 (HQ SUA) · +86 13305324192 (fabrică)
+    - title: Phone
+      description: +1 279 732 3333 (US HQ) · +86 13305324192 (factory)
       icon: tabler:headset
     - title: Email
       description: info@paddleboardoverstock.com
       icon: tabler:mail
-    - title: Sediu global & Facturare
-      description: Weihai Dongjilian Co., Ltd., New Mexico, Statele Unite
+    - title: Global HQ & Billing
+      description: Weihai Dongjilian Co., Ltd.
       icon: tabler:map-pin
 map:
-  title: Locația noastră
-  subtitle: Vizitați hub-ul nostru de fabricație din Qingdao
-  address: Zona de Dezvoltare Economică, Laixi, Qingdao, China, 266600
+  title: Our Location
+  subtitle: Visit our Weihai manufacturing hub
+  address: Weihai, Shandong, China
   zoom: 15

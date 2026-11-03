@@ -1,35 +1,35 @@
 hero_text:
   tagline: Contact
-  title: NEEM CONTACT MET ONS OP
+  title: GET IN TOUCH
 contact_form:
   id: form
-  title: Stuur een bericht
-  subtitle: Voor offertes, technische vragen of samenwerking — stuur ons een bericht. We reageren binnen één werkdag.
+  title: Send us a message
+  subtitle: For order questions, sizing advice or product support, drop us a line. We reply within one business day.
   email_to: info@paddleboardoverstock.com
-  submit_button: Verzenden
-  success_message: Bedankt! Je bericht is ontvangen. We reageren binnen één werkdag.
-  error_message: Er is een fout opgetreden bij het verzenden. Probeer het opnieuw of stuur een e-mail rechtstreeks.
-  default_country_code: '+1'
+  submit_button: Send Inquiry → Get a Quote
+  success_message: Thanks! Your message has landed in our inbox. We will reply within one business day.
+  error_message: Something went wrong sending your message. Please try again or email us directly.
+  default_country_code: "+1"
   captcha:
-    label: 'Antispam: los de volgende som op'
+    label: "Anti-spam: please solve the following"
   fields:
     - name: firstName
-      label: Voornaam
+      label: First Name
       row: 1
     - name: lastName
-      label: Achternaam
+      label: Last Name
       row: 1
     - name: companyName
-      label: Bedrijf
+      label: Company Name
       row: 2
     - name: address
-      label: Adres
+      label: Address
       row: 3
     - name: zip
-      label: Postcode
+      label: Zip / Postal Code
       row: 4
     - name: country
-      label: Land
+      label: Country
       row: 4
       type: select
       optionsKey: countries
@@ -38,94 +38,85 @@ contact_form:
       row: 5
       type: email
     - name: tel
-      label: Telefoon
+      label: TEL
       row: 5
       type: tel
       withCountryCode: true
     - name: orderVolume
-      label: Geschat bestelvolume
+      label: Estimated Order Volume
       row: 6
       type: select
       options:
-        - value: ''
-          label: Selecteer geschat volume...
-        - value: sample
-          label: Alleen monsters / prototypes
-        - value: '5-10'
-          label: 50–100 eenheden (standaard MOQ)
-        - value: '100-500'
-          label: 100–500 eenheden
-        - value: '500-plus'
-          label: 500+ eenheden (volumeprijzen)
+        - value: ""
+          label: How many boards are you shopping for?...
+        - value: one
+          label: Just one board
+        - value: 2-4
+          label: 2–4 boards
+        - value: 5-plus
+          label: 5+ boards (family, club, or rental)
     - name: customization
-      label: Maatwerk nodig?
+      label: What can we help with?
       row: 7
       type: select
       options:
-        - value: ''
-          label: Selecteer maatwerktype...
+        - value: ""
+          label: Select a topic...
         - value: none
-          label: Standaardproduct (geen maatwerk)
-        - value: logo
-          label: Alleen aangepast logo / branding
-        - value: full
-          label: Volledige OEM (formaat, kleur, graphics, verpakking)
-        - value: consultation
-          label: Niet zeker — advies nodig
+          label: General product question
+        - value: sizing
+          label: Help choosing the right board
+        - value: order
+          label: Order, payment or shipping
+        - value: warranty
+          label: Warranty or repair support
     - name: productInterest
-      label: Interessante productcategorieën
+      label: Product Categories of Interest
       row: 8
       type: select
       options:
-        - value: ''
-          label: Selecteer een productcategorie...
+        - value: ""
+          label: Select product category...
         - value: all
-          label: Alle producten / volledige catalogus
+          label: All products / Full catalog
         - value: sup
-          label: SUP-planken / paddleboards
-        - value: kayak
-          label: Opblaasbare kajaks
-        - value: rib
-          label: RIB-boten
-        - value: dinghy
-          label: Bijboten / tenders
-        - value: safety
-          label: Veiligheidsuitrusting / reddingsvesten
+          label: SUP Boards / Paddleboards
+        - value: packages
+          label: Complete SUP packages
         - value: accessory
-          label: Accessoires (pompen, riemen, tassen)
-
+          label: Accessories (pumps, oars, bags)
     - name: subject
-      label: Onderwerp
+      label: Subject
       row: 9
     - name: message
-      label: Bericht
+      label: Message
       row: 10
       type: textarea
       rows: 6
 features2_other_ways:
-  title: Andere contactmogelijkheden
+  title: Other ways to reach us
   columns: 3
   items:
-    - title: Verkoopvragen
-      description: Offertes, configuraties, dealeraanvragen en groothandelsbestellingen.
+    - title: Order help
+      description: Product questions, sizing advice, and order support.
       icon: tabler:shopping-bag
-    - title: Technische ondersteuning
-      description: Garantie, reparaties, onderdelen en operationele vragen.
+    - title: Technical support
+      description: Warranty, repairs, spare parts and operating questions.
       icon: tabler:tool
-    - title: Pers en partnerschappen
-      description: Mediapakketten, sponsoring en branche-samenwerking.
+    - title: Press & partnerships
+      description: Media kits, sponsorship and industry collaboration.
       icon: tabler:news
-    - title: Telefoon
-      description: '+86 13305324192'
+    - title: Phone
+      description: +1 279 732 3333 (US HQ) · +86 13305324192 (factory)
       icon: tabler:headset
-    - title: E-mail
+    - title: Email
       description: info@paddleboardoverstock.com
       icon: tabler:mail
-    - title: Hoofdkantoor
-      description: Economische Ontwikkelingszone, Laixi, Qingdao, China, 266600
+    - title: Global HQ & Billing
+      description: Weihai Dongjilian Co., Ltd.
       icon: tabler:map-pin
 map:
-  title: Onze locatie
-  subtitle: Bezoek ons
-  address: Economische Ontwikkelingszone, Laixi, Qingdao, China, 266600
+  title: Our Location
+  subtitle: Visit our Weihai manufacturing hub
+  address: Weihai, Shandong, China
   zoom: 15

@@ -1,130 +1,122 @@
 hero_text:
-  tagline: Контакт
-  title: СВЪРЖЕТЕ СЕ С НАС
+  tagline: Contact
+  title: GET IN TOUCH
 contact_form:
   id: form
-  title: Изпратете ни съобщение
-  subtitle: За цитати, технически въпроси или запитвания за партньорство, пишете ни. Отговаряме в рамките на един работен ден.
+  title: Send us a message
+  subtitle: For order questions, sizing advice or product support, drop us a line. We reply within one business day.
   email_to: info@paddleboardoverstock.com
-  submit_button: Изпратете запитване → Получете оферта
-  success_message: Благодарим! Вашето съобщение е получено във входящата ни поща. Ще отговорим в рамките на един работен ден.
-  error_message: Нещо се обърка при изпращането на вашето съобщение. Моля, опитайте отново или ни изпратете имейл директно.
-  default_country_code: '+1'
+  submit_button: Send Inquiry → Get a Quote
+  success_message: Thanks! Your message has landed in our inbox. We will reply within one business day.
+  error_message: Something went wrong sending your message. Please try again or email us directly.
+  default_country_code: "+1"
   captcha:
-    label: 'Антиспам: моля, решете следното'
+    label: "Anti-spam: please solve the following"
   fields:
-    - name: първоИме
-      label: Собствено име
+    - name: firstName
+      label: First Name
       row: 1
-    - name: фамилия
-      label: Фамилия
+    - name: lastName
+      label: Last Name
       row: 1
-    - name: имеНаФирмата
-      label: Име на компанията
+    - name: companyName
+      label: Company Name
       row: 2
     - name: address
-      label: Адрес
+      label: Address
       row: 3
     - name: zip
-      label: Пощенски код
+      label: Zip / Postal Code
       row: 4
     - name: country
-      label: Държава
+      label: Country
       row: 4
       type: select
       optionsKey: countries
     - name: email
-      label: Имейл
+      label: E-mail
       row: 5
       type: email
     - name: tel
-      label: Тел
+      label: TEL
       row: 5
       type: tel
       withCountryCode: true
-    - name: обем на поръчката
-      label: Прогнозен обем на поръчката
+    - name: orderVolume
+      label: Estimated Order Volume
       row: 6
       type: select
       options:
-        - value: ''
-          label: Изберете вашия приблизителен обем...
-        - value: sample
-          label: Само проби / прототипи
-        - value: 5-10
-          label: 5–10 единици (Стандарт MOQ)
-        - value: 100-500
-          label: 100–500 единици
-        - value: 500-plus
-          label: 500+ единици (Обемно ценообразуване)
+        - value: ""
+          label: How many boards are you shopping for?...
+        - value: one
+          label: Just one board
+        - value: 2-4
+          label: 2–4 boards
+        - value: 5-plus
+          label: 5+ boards (family, club, or rental)
     - name: customization
-      label: Необходима ли е персонализация?
+      label: What can we help with?
       row: 7
       type: select
       options:
-        - value: ''
-          label: Изберете тип персонализация...
+        - value: ""
+          label: Select a topic...
         - value: none
-          label: Стандартен продукт (без персонализация)
-        - value: logo
-          label: Само персонализирано лого / брандиране
-        - value: full
-          label: Пълно OEM (размер, цвят, графики, опаковка)
-        - value: consultation
-          label: Не съм сигурен — нуждая се от консултация
-    - name: интерес към продукта
-      label: Категории продукти, които представляват интерес
+          label: General product question
+        - value: sizing
+          label: Help choosing the right board
+        - value: order
+          label: Order, payment or shipping
+        - value: warranty
+          label: Warranty or repair support
+    - name: productInterest
+      label: Product Categories of Interest
       row: 8
       type: select
       options:
-        - value: ''
-          label: Изберете категория продукт...
+        - value: ""
+          label: Select product category...
         - value: all
-          label: Всички продукти / Пълен каталог
+          label: All products / Full catalog
         - value: sup
-          label: SUP Дъски / Падълбордове
-        - value: kayak
-          label: Надуваеми каяци
-        - value: rib
-          label: RIB Лодки
-        - value: dinghy
-          label: Дингита / Тендери
-        - value: safety
-          label: Съоръжения за безопасност / Спасителни жилетки
+          label: SUP Boards / Paddleboards
+        - value: packages
+          label: Complete SUP packages
         - value: accessory
-          label: Аксесоари (помпи, гребла, чанти)
+          label: Accessories (pumps, oars, bags)
     - name: subject
-      label: Тема
+      label: Subject
       row: 9
     - name: message
-      label: Съобщение
+      label: Message
       row: 10
       type: textarea
       rows: 6
 features2_other_ways:
-  title: Други начини да ни достигнете
+  title: Other ways to reach us
   columns: 3
   items:
-    - title: Запитвания за продажби
-      description: Оферти, конфигурации, заявления за дилъри и поръчки на едро.
+    - title: Order help
+      description: Product questions, sizing advice, and order support.
       icon: tabler:shopping-bag
-    - title: Техническа поддръжка
-      description: Гаранция, ремонти, резервни части и въпроси относно експлоатацията.
+    - title: Technical support
+      description: Warranty, repairs, spare parts and operating questions.
       icon: tabler:tool
-    - title: Преса и партньорства
-      description: Медийни пакети, спонсорство и индустриално сътрудничество.
+    - title: Press & partnerships
+      description: Media kits, sponsorship and industry collaboration.
       icon: tabler:news
-    - title: Телефон
-      description: +1 279 732 3333 (САЩ главен офис) · +86 13305324192 (фабрика)
+    - title: Phone
+      description: +1 279 732 3333 (US HQ) · +86 13305324192 (factory)
       icon: tabler:headset
-    - title: Имейл
+    - title: Email
       description: info@paddleboardoverstock.com
       icon: tabler:mail
-    - title: Глобален главен офис и фактуриране
-      description: Weihai Dongjilian Co., Ltd., Ню Мексико, Съединени щати
+    - title: Global HQ & Billing
+      description: Weihai Dongjilian Co., Ltd.
       icon: tabler:map-pin
 map:
-  title: Нашето местоположение
-  subtitle: Посетете нашия производствен център в Цингдао
-  address: Икономическа зона за развитие, Лайси, Цингдао, Китай, 266600
+  title: Our Location
+  subtitle: Visit our Weihai manufacturing hub
+  address: Weihai, Shandong, China
   zoom: 15

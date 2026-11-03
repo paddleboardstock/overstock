@@ -1,172 +1,98 @@
-badge: Preuves et résultats
+badge: Proof & Quality
 heading: Preuves
-description: Études de cas réelles, certifications, données de test et photos de déploiement qui démontrent notre capacité de fabrication et la qualité de nos produits.
-
+description: Real quality stories, test data, and factory photos that show how every clearance board ships at retail-grade quality.
 case_studies:
-  - id: retail-private-label
-    client: Détaillant européen de sports outdoor
-    product: Gamme de SUP en marque de distributeur
-    industry: Commerce de détail
-    challenge: Un détaillant européen de sports outdoor avait besoin d'une gamme de SUP en marque de distributeur avec des graphismes de pont exclusifs, du PVC écologique et un emballage prêt pour le commerce de détail, le tout livré en 60 jours.
-    solution: Nous avons développé les fichiers d'impression numérique personnalisés, sourcé du PVC conforme à la norme REACH et réduit les essais de 3 à 1 série en installant l'équipe de conception dans notre usine de Qingdao.
-    result: 55 jours entre la commande signée et le FOB. 2,400 unités réparties sur 4 références. Commande renouvelée avant l'arrivée du premier conteneur.
+  - id: clearance-quality-check
+    client: Stock en liquidation, Contrôle qualité de niveau détail
+    product: Chaque planche en surstock, réinspektée
+    industry: Contrôle de qualité
+    challenge: Les planches en surstock et en liquidation proviennent de séries de production excédentaires, donc les acheteurs se demandent à juste titre si une planche en promotion passe les mêmes contrôles qu'une planche à plein tarif.
+    solution: Every clearance board re-enters the QC line. Each chamber is pressure-tested with a 24-48h hold at 1.25x rated pressure, every outgoing shipment is inspected for defects, and accessories are checked for completeness before packing.
+    result: Taux de défaut de 99,3 % sur les expéditions sortantes au cours des 12 derniers mois — la même norme s'applique au stock en liquidation et au stock de détail.
     image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-medusa-glow-1.webp
-    tags: [OEM, Commerce de détail, SUP]
+    tags:
+      - Pressure Testing
+      - Defect-Free
+      - Clearance QC
     outcome_metrics:
-      - label: Délai de livraison
-        value: 55 jours
-      - label: Unités
-        value: 2,400
-      - label: Références
-        value: '4'
-
-  - id: startup-drop-stitch-kayak
-    client: Start-up américaine de sports nautiques
-    product: Kayak drop-stitch
-    industry: Start-up / Commerce de détail
-    challenge: Une start-up américaine de sports nautiques avait besoin d'un kayak drop-stitch haute performance avec une forme de coque personnalisée, un emballage en co-branding et la certification BSCI pour une commercialisation en magasin.
-    solution: Nous avons adapté un moule de kayak drop-stitch existant avec un profil de rocker modifié, développé les visuels de l'emballage en co-branding et fourni l'intégralité de la documentation d'audit BSCI.
-    result: Référencé avec succès dans 3 grandes chaînes américaines d'outdoor. Plus de 5,000 unités la première année avec un taux d'écoulement de 98%.
-    image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/paddleboardoverstock-inflatable-boat.webp
-    tags: [OEM, Kayak, BSCI]
+      - label: Taux sans défaut
+        value: 99.3%
+      - label: Couverture du test de pression
+        value: 100%
+      - label: Durée du maintien
+        value: 24-48h
+  - id: pressure-test-regime
+    client: Maintien de pression de 24-48 heures
+    product: Chaque chambre, 1,25 fois la pression nominale
+    industry: Test produit
+    challenge: Une planche SUP vit ou meurt selon son noyau drop-stitch et ses coutures, et un simple contrôle d'inflation à la fin de la ligne n'est pas suffisant pour détecter les fuites lentes ou les soudures faibles.
+    solution: Chaque planche est gonflée à 1,25 fois sa pression nominale et maintenue pendant 24 à 48 heures, avec une chute de pression devant rester en dessous de 5 %. Les valves, les anneaux en D, les coutures et la flottabilité sont vérifiés sans tolérance pour les défauts de sécurité.
+    result: 100 % de la production passe par ce régime avant emballage — pas de raccourci sur échantillonnage, aucune exception.
+    image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/factory/paddleboardoverstock-sup-manufacturing.webp
+    tags:
+      - Drop-Stitch
+      - Pression de 1,25x
+      - Aucun défaut de sécurité
     outcome_metrics:
-      - label: Chaînes de distribution
-        value: '3'
-      - label: Unités la première année
-        value: 5,000+
-      - label: Taux d'écoulement
-        value: 98%
-
-  - id: australian-rib-distributor
-    client: Distributeur australien
-    product: Gamme de RIB certifiés CE
-    industry: Nautisme / Secteur public
-    challenge: Un distributeur australien avait besoin d'une gamme de RIB certifiés CE avec des couleurs de boudins personnalisées, une option Hypalon et la conformité à la norme australienne AS 1799.
-    solution: Nous avons produit des échantillons de préproduction en 4 variantes de couleur de boudins, sourcé l'Hypalon CSM auprès d'un fournisseur japonais et coordonné les tests de conformité AS 1799 effectués par un organisme tiers.
-    result: Gamme de 3 modèles de RIB lancée sur le marché AU/NZ. Suivie d'une victoire à un appel d'offres gouvernemental pour 12 RIB de patrouille.
-    image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/paddleboardoverstock-rib-330-boat.webp
-    tags: [OEM, RIB, Hypalon, Secteur public]
-    outcome_metrics:
-      - label: Modèles lancés
-        value: '3'
-      - label: Contrat de bateaux de patrouille
-        value: 12 unités
-      - label: Conformité
-        value: AS 1799
-
-  - id: caribbean-resort-fleet
-    client: Groupe de complexes hôteliers de luxe des Caraïbes
-    product: Flotte pour complexe hôtelier — RIB, SUP et kayaks
-    industry: Hôtellerie / Tourisme
-    challenge: Un groupe de 5 complexes hôteliers avait besoin d'une flotte unifiée d'équipements nautiques de location — annexes RIB, SUP et kayaks — avec une image de marque cohérente, des matériaux résistants aux UV pour le soleil tropical et un plan de renouvellement sur 5 ans.
-    solution: Nous avons conçu un pack de flotte personnalisé de 3 modèles avec du PVC stabilisé aux UV, des graphismes de pont aux couleurs du complexe et un calendrier de livraison par phases. Formation du personnel et kit de pièces détachées dédié fournis pour chaque complexe.
-    result: 180 unités livrées dans 5 complexes hôteliers. Commande renouvelée pour 2 nouveaux établissements. Réduction de 40% du coût unitaire par rapport aux fournisseurs précédents.
+      - label: Pression d'essai
+        value: 1.25x
+      - label: Chute de pression maximale
+        value: <5 %
+      - label: Unités testées
+        value: 100%
+  - id: warranty-claims-support
+    client: Une garantie qui répond
+    product: Couverture de 2 ans sur les planches et accessoires SUP
+    industry: Service après-vente
+    challenge: Acheter des articles en liquidation directement à l'usine soulève une question légitime — si quelque chose tourne mal plusieurs mois plus tard, qui s'en occupe ?
+    solution: Chaque planche est livrée avec une garantie de 2 ans couvrant les planches SUP, les coutures drop-stitch, les valves d'inflation et les accessoires. Les réclamations sont envoyées directement à notre équipe — envoyez des photos ou une courte vidéo et nous nous en occupons.
+    result: Les demandes de garantie sont examinées et traitées par la même équipe qui inspecte la production — pas de détour par un distributeur.
     image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/hero/factory-gate.webp
-    tags: [OEM, SUP, Kayak, RIB, Hôtellerie]
+    tags:
+      - Garantie de 2 ans
+      - Support direct
+      - Accessoires couverts
     outcome_metrics:
-      - label: Unités livrées
-        value: 180
-      - label: Complexes hôteliers
-        value: '5'
-      - label: Réduction des coûts
-        value: 40%
-
-  - id: southeast-asia-search-rescue
-    client: Agence maritime d'Asie du Sud-Est
-    product: Flotte de RIB de patrouille et de sauvetage
-    industry: Secteur public / Sécurité maritime
-    challenge: Une agence maritime gouvernementale avait besoin de 20 RIB de patrouille et de sauvetage avec des boudins en Hypalon ignifuge, des planchers autovideurs, des supports intégrés de console VHF/radio et la conformité aux normes d'embarcation de sauvetage du chapitre III de la convention SOLAS.
-    solution: Fabrication de 20 RIB avec boudins en Hypalon CSM, coques en aluminium de qualité marine, anneaux de remorquage renforcés et feux de navigation préinstallés. L'équipe d'inspection de l'usine a assisté aux essais en mer. Dossier documentaire SOLAS complet fourni.
-    result: Contrat livré en 4 mois. Flotte déployée pour la patrouille frontalière, la recherche et le sauvetage et l'intervention en cas de catastrophe sur 3 bases régionales.
-    image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/paddleboardoverstock-rib-600.webp
-    tags: [OEM, RIB, Hypalon, Secteur public, SOLAS]
-    outcome_metrics:
-      - label: RIB de patrouille
-        value: '20'
-      - label: Livraison
-        value: 4 mois
-      - label: Bases
-        value: '3'
-
-  - id: european-dtc-ecommerce
-    client: Marque européenne de sports nautiques DTC
-    product: Gamme de SUP de marque + accessoires
-    industry: E-commerce / Commerce de détail
-    challenge: Une marque DTC de sports nautiques en forte croissance avait besoin d'un pack SUP complet (planche, pompe, pagaie, leash, sac) avec un emballage premium conçu pour l'exécution des commandes e-commerce, en livraison directe au consommateur via DHL/FedEx sans dommage.
-    solution: Nous avons développé une gamme en co-branding avec un façonnage personnalisé du noyau en EPS, une technologie drop-stitch propriétaire pour une pression plus élevée et des cartons ondulés à double cannelure prêts pour la vente avec inserts de protection. Enregistrement de l'authenticité et de la garantie par code QR intégré.
-    result: Gamme de 3 modèles de SUP lancée en 75 jours. Plus de 15,000 unités en 12 mois. Note moyenne de 4.8★ sur plus de 2,000 avis. Taux de dommages en transit de 0.3%.
-    image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-medusa-glow-1.webp
-    tags: [OEM, SUP, DTC, E-commerce]
-    outcome_metrics:
-      - label: Modèles
-        value: '3'
-      - label: Unités
-        value: 15,000+
-      - label: Note moyenne
-        value: 4.8★
-      - label: Taux de dommages
-        value: 0.3%
-
-certifications:
-  - name: CE
-    body: Union européenne
-    desc: 64 modèles certifiés CE conformément aux directives applicables de l'UE pour les embarcations de plaisance et les dispositifs de flottabilité individuels.
-  - name: ISO 9001
-    body: SGS / BSI
-    desc: Système de management de la qualité certifié pour la conception, la fabrication et la distribution d'embarcations gonflables.
-  - name: BSCI
-    body: amfori
-    desc: Certification de conformité sociale attestant d'une fabrication éthique, de conditions de travail équitables et d'une sécurité sur le lieu de travail.
-  - name: REACH
-    body: Agence européenne des produits chimiques
-    desc: Tous les matériaux sont conformes au règlement REACH sur la sécurité chimique. Documentation fournie avec chaque expédition.
-  - name: RoHS
-    body: Union européenne
-    desc: Conformité à la restriction des substances dangereuses sur l'ensemble des composants électroniques et électriques.
-  - name: AS 1799
-    body: Standards Australia
-    desc: Norme australienne pour les bateaux gonflables, testée et certifiée pour un usage commercial dans les eaux AU/NZ.
-
+      - label: Garantie
+        value: 2 ans
+      - label: Couverture
+        value: Planche + Accessoires
+      - label: Support
+        value: Équipe directe
 test_results:
-  - metric: Unités testées sous pression
+  - metric: Units Pressure Tested
     value: 100%
-    detail: Chaque bateau, chaque chambre, chaque lot
-  - metric: Chute de pression maximale
-    value: '<5%'
-    detail: Sur 24 h à 1.25x la pression nominale
-  - metric: Seuil de défaut majeur
-    value: AQL 2.5
-    detail: Selon la norme d'échantillonnage ISO 2859
-  - metric: Durée de maintien de la pression
+    detail: Chaque planche, chaque chambre, chaque lot
+  - metric: Max Pressure Drop
+    value: <5 %
+    detail: Plus de 24h à 1,25x la pression nominale
+  - metric: Outgoing Defect-Free Rate
+    value: 99.3%
+    detail: Trailing 12-month shipments
+  - metric: Pressure Hold Duration
     value: 24-48h
     detail: Selon la catégorie de produit
-  - metric: Marge de pression d'essai
+  - metric: Test Pressure Margin
     value: 1.25x
     detail: Marge de sécurité sur chaque chambre
-  - metric: Tolérance aux défauts de sécurité
+  - metric: Safety Defect Tolerance
     value: 0%
     detail: Vannes, anneaux en D, coutures, flottabilité
-
 spec_sheets:
-  - name: Série SUP
-    href: /products#sup
-  - name: Série RIB
-    href: /products#rib
-  - name: Kayak et annexe
-    href: /products#inflatable
-  - name: Gilets de sauvetage et accessoires
-    href: /products#accessories
-
+  - name: Planches SUP
+    href: /products
+  - name: Accessoires
+    href: /products
 deployment_photos:
-  - image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/rib/paddleboardoverstock-rib-600.webp
-    caption: RIB de patrouille déployé pour des opérations de recherche et de sauvetage en mer
-    context: Recherche et sauvetage
+  - image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-medusa-glow-1.webp
+    caption: SUP planche glissant sur l'eau calme au coucher du soleil
+    context: Sur l'eau
   - image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/hero/factory-gate.webp
-    caption: Balade en SUP le long d'un littoral pittoresque
+    caption: SUP excursion le long d'un littoral pittoresque
     context: Loisirs
-  - image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/paddleboardoverstock-inflatable-boat-factory.webp
-    caption: Production d'embarcations gonflables dans notre usine de Qingdao
+  - image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/factory/paddleboardoverstock-sup-manufacturing.webp
+    caption: Production de SUP gonflables dans notre usine de fabrication de Weihai
     context: Usine
-  - image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/factory/paddleboardoverstock-stock-boat-inventory.webp
-    caption: Stock prêt à expédier en attente de chargement en conteneur
+  - image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/factory/paddleboardoverstock-warehouse-storage.webp
+    caption: Stock excédentaire prêt à être expédié dans notre entrepôt de Weihai
     context: Logistique

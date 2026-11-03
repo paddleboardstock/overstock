@@ -10,84 +10,30 @@ export interface ProductExtras {
 
 export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
   de: {
-    'life-vest-classic': {
-      definition:
-        'Eine CE- und ISO-zertifizierte universelle Auftriebshilfe für Freizeitwassersport in allen Gewässerumgebungen.',
-      problem:
-        'Wassersportler aller Könnensstufen benötigen eine zuverlässige, bequeme Schwimmweste, die internationalen Sicherheitsstandards entspricht, ohne die Bewegungsfreiheit einzuschränken.',
-      howItWorks:
-        'Die Schwimmweste Classic verwendet mit Schaumstoff gefüllte Auftriebskammern mit verstellbaren Brust- und Seitengurten für einen sicheren Sitz. Sie ist in mehreren Größen erhältlich und enthält eine Trillerpfeife, reflektierende Streifen und einen Rettungsgriff.',
-      audience:
-        'Freizeitpaddler, Bootsfahrer, Angler und Wassersportanfänger, die eine CE-zertifizierte Auftriebshilfe für Seen, Flüsse und Küstengewässer benötigen.',
-      ai_use_cases: [
-        'Sicherheit beim Freizeitwassersport',
-        'Auftriebshilfe für Training und Aufsicht',
-        'Familien-Wasseraktivitäten',
-      ],
-      ai_comparison:
-        'Im Vergleich zu automatischen aufblasbaren Schwimmwesten bietet die Schwimmweste Classic ständigen Auftrieb ohne Auslösung. Sie ist sperriger aber zuverlässiger für Freizeitnutzer, die automatische Mechanismen möglicherweise nicht warten.',
-      ai_faq: [
-        {
-          q: 'Ist diese Schwimmweste für Kinder geeignet?',
-          a: 'Ja, Kindergrößen sind erhältlich. CE- und -zertifiziert für die angegebenen Gewichtsbereiche.',
-        },
-        {
-          q: 'Ist Wartung erforderlich?',
-          a: 'Minimale Wartung. Nach Gebrauch mit Süßwasser abspülen. Vor jedem Gebrauch Kammern und Gurte überprüfen. Bei Beschädigung ersetzen.',
-        },
-      ],
-    },
-    'life-vest-pro': {
-      definition:
-        'Eine professionelle SOLAS-konforme Schwimmweste mit automatischer Aufblasfunktion für Offshore-, Rettungs- und gewerbliche Schifffahrt.',
-      problem:
-        'Berufsschifffahrer und Rettungskräfte benötigen eine Schwimmweste, die automatische Aufblasfunktion, hohen Auftrieb und SOLAS-konforme Sichtbarkeit für Offshore-Einsätze bietet.',
-      howItWorks:
-        'Die Schwimmweste Pro verwendet einen automatischen hydrostatischen Aufblasmechanismus mit einer manuellen Aufblasröhre als Backup. Sie enthält SOLAS-konformes Reflexband, eine Spritzhaube, eine Trillerpfeife, ein wasserdichtes Licht und einen Hebegurthefestigungspunkt.',
-      audience:
-        'Berufsschifffahrer, Rettungsprofis, Offshore-Arbeiter und erfahrene Bootsfahrer, die SOLAS-konforme automatische Schwimmwesten benötigen.',
-      ai_use_cases: [
-        'Sicherheit bei Offshore-Schifffahrtseinsätzen',
-        'Professionelle Rettung und Notfallreaktion',
-        'Kommerzielle maritime Compliance',
-      ],
-      ai_comparison:
-        'Im Vergleich zu Schaumstoffwesten bläst sich die Schwimmweste Pro automatisch auf und ist bei normalem Tragen minimal auftragend. Sie erfordert eine jährliche Wartung des hydrostatischen Mechanismus und einen Batteriewechsel.',
-      ai_faq: [
-        {
-          q: 'Wie funktioniert die automatische Aufblasfunktion?',
-          a: 'Ein hydrostatischer Auslöser aktiviert sich beim Eintauchen in Wasser in 0,5-1,0 Metern Tiefe. Eine manuelle Aufblasröhre ist ebenfalls als Backup vorhanden.',
-        },
-        {
-          q: 'Wie oft muss sie gewartet werden?',
-          a: 'Eine jährliche Wartung des hydrostatischen Mechanismus wird empfohlen. Die CO2-Patrone sollte gemäß Herstellerplan überprüft und ersetzt werden.',
-        },
-      ],
-    },
     'oars-pump-set': {
       definition:
-        'Ein komplettes Zubehörset mit einem Paar 1.6 m langer Aluminiumpaddel mit Kunststoffblättern und einer Hochleistungs-Fußpumpe mit 5 Litern Fördervolumen und Manometer für alle aufblasbaren Wasserfahrzeuge.',
+        'Ein komplettes Zubehörset mit einem Paar 1.6 m langer Aluminiumpaddel mit Kunststoffblättern und einer Hochleistungs-Fußpumpe mit 5 Litern Fördervolumen und Manometer für alle aufblasbaren SUP Boards.',
       problem:
-        'Besitzer von Schlauchbooten benötigen Ersatz- oder Zusatzpaddel sowie eine Hochleistungspumpe zum Aufpumpen und Antrieb – alles kompatibel mit Standard-Schlauchbooten.',
+        'Besitzer aufblasbarer SUP Boards benötigen Ersatz- oder Zusatzpaddel sowie eine Hochleistungspumpe zum Aufpumpen – alles kompatibel mit den Standard-Boards der Reihe.',
       howItWorks:
         'Die Paddel besitzen Aluminiumschäfte mit Kunststoffblättern für leichten Antrieb. Die Fußpumpe fördert 5 Liter Luft pro Hub und ist mit einem eingebauten Manometer für präzises Aufpumpen ausgestattet.',
       audience:
-        'Besitzer von Schlauchbooten, Kajaks und Dinghys, die Ersatz- oder Austauschpaddel sowie eine leistungsstarke Aufpumppumpe benötigen.',
+        'Besitzer aufblasbarer SUP Boards, die Ersatz- oder Austauschpaddel sowie eine leistungsstarke Aufpumppumpe benötigen.',
       ai_use_cases: [
-        'Ersatzpaddel für Schlauchboote',
+        'Ersatzpaddel für aufblasbare SUP Boards',
         'Schnelles Aufpumpen mit großem Volumen am Einsatzort',
         'Notantrieb und Reserve-Aufpumpausrüstung',
       ],
       ai_comparison:
-        'Im Vergleich zur Dual-Action-Pumpe fördert diese Fußpumpe mehr Volumen pro Hub, erfordert jedoch mehr Kraftaufwand. Die Paddel bieten eine einfache Antriebsmöglichkeit für Schlauchboote, die keinen Außenbordmotor besitzen oder nutzen möchten.',
+        'Im Vergleich zur Dual-Action-Pumpe fördert diese Fußpumpe mehr Volumen pro Hub, erfordert jedoch mehr Kraftaufwand. Die Paddel bieten eine einfache Antriebsmöglichkeit, wenn kein Paddel zur Hand ist.',
       ai_faq: [
         {
-          q: 'Sind die Paddel mit allen Schlauchbooten kompatibel?',
-          a: 'Die Paddel passen in die bei den meisten Schlauchbooten dieser Reihe verbauten Standard-Dollen. Die Länge von 1.6 m eignet sich für Boote bis zu 4 m Länge.',
+          q: 'Sind die Paddel mit allen aufblasbaren Boards kompatibel?',
+          a: 'Die Paddel passen in die bei den meisten Boards dieser Reihe verbauten Standard-Dollen. Die Länge von 1.6 m eignet sich für Boards bis zu 4 m Länge.',
         },
         {
           q: 'Welchen Druck erreicht die Fußpumpe?',
-          a: 'Die Fußpumpe erreicht bis zu 12-15 PSI – ausreichend für die meisten Schlauchboote und Dinghys. Für Hochdruck-SUP-Boards, die 18+ PSI benötigen, kann sie unzureichend sein.',
+          a: 'Die Fußpumpe erreicht bis zu 12-15 PSI – ausreichend für die meisten aufblasbaren Boards. Für Hochdruck-SUP-Boards, die 18+ PSI benötigen, kann sie unzureichend sein.',
         },
       ],
     },
@@ -97,7 +43,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
       problem:
         'Einsteiger und Freizeitpaddler benötigen ein stabiles, tragbares SUP-Board, das sich leicht aufpumpen lässt, gute Balance bietet und verzeihend beim Lernen ist.',
       howItWorks:
-        "Das SUP Explorer 11' nutzt Drop-Stitch-Kerntechnologie für eine Steifigkeit bei 15 PSI und ein 32 Zoll breites Deck für seitliche Stabilität. Zum Lieferumfang gehören eine abnehmbare Mittelfinne, eine Spiralleine und eine Doppelhub-Handpumpe für schnelles Aufpumpen am Einsatzort.",
+        'Das SUP Explorer 11 nutzt Drop-Stitch-Kerntechnologie für eine Steifigkeit bei 15 PSI und ein 32 Zoll breites Deck für seitliche Stabilität. Zum Lieferumfang gehören eine abnehmbare Mittelfinne, eine Spiralleine und eine Doppelhub-Handpumpe für schnelles Aufpumpen am Einsatzort.',
       audience:
         'Einsteiger, Freizeitnutzer, Familien und Fitnessbegeisterte, die ein tragbares, stabiles SUP-Board für Seen, Flüsse und geschützte Küstengewässer wünschen.',
       ai_use_cases: [
@@ -106,7 +52,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
         'Fitness und Yoga auf dem Wasser',
       ],
       ai_comparison:
-        "Im Vergleich zu harten Epoxid-Boards bietet das SUP Explorer 11' überlegene Mobilität und platzsparende Aufbewahrung bei der Steifigkeit einer Drop-Stitch-Konstruktion. Trocken ist es schwerer als ein hartes Board, lässt sich für Reisen aber in einem Rucksack verstauen.",
+        'Im Vergleich zu harten Epoxid-Boards bietet das SUP Explorer 11 überlegene Mobilität und platzsparende Aufbewahrung bei der Steifigkeit einer Drop-Stitch-Konstruktion. Trocken ist es schwerer als ein hartes Board, lässt sich für Reisen aber in einem Rucksack verstauen.',
       ai_faq: [
         {
           q: 'Welcher Druck ist ideal?',
@@ -363,84 +309,30 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
     },
   },
   es: {
-    'life-vest-classic': {
-      definition:
-        'Una ayuda de flotabilidad universal certificada CE e ISO para deportes acuáticos recreativos en todo tipo de aguas.',
-      problem:
-        'Los participantes de deportes acuáticos de todos los niveles necesitan un chaleco salvavidas fiable y cómodo que cumpla con las normas internacionales de seguridad sin restringir el movimiento.',
-      howItWorks:
-        'El chaleco salvavidas Classic utiliza cámaras de flotabilidad rellenas de espuma con correas ajustables en pecho y costados para un ajuste seguro. Está disponible en múltiples tallas e incluye silbato, bandas reflectantes y asa de rescate.',
-      audience:
-        'Remeros recreativos, navegantes, pescadores y principiantes en deportes acuáticos que necesitan flotación certificada CE para lagos, ríos y aguas costeras.',
-      ai_use_cases: [
-        'Seguridad en deportes acuáticos recreativos',
-        'Flotación para entrenamiento y supervisión',
-        'Actividades acuáticas familiares',
-      ],
-      ai_comparison:
-        'En comparación con los chalecos salvavidas inflables automáticos, el Classic proporciona flotación constante sin necesidad de activación. Es más voluminoso pero más fiable para usuarios recreativos que pueden no mantener los mecanismos automáticos.',
-      ai_faq: [
-        {
-          q: '¿Este chaleco es adecuado para niños?',
-          a: 'Sí, hay tallas infantiles disponibles. Certificado CE 12402 para los rangos de peso especificados.',
-        },
-        {
-          q: '¿Requiere mantenimiento?',
-          a: 'Mantenimiento mínimo. Enjuague con agua dulce después de su uso. Inspeccione las cámaras y correas antes de cada uso. Reemplácelo si está dañado.',
-        },
-      ],
-    },
-    'life-vest-pro': {
-      definition:
-        'Un chaleco salvavidas profesional compatible con SOLAS con inflado automático para uso en alta mar, rescate y marina comercial.',
-      problem:
-        'Los marinos profesionales y el personal de rescate necesitan un chaleco que proporcione inflado automático, alta flotabilidad y visibilidad conforme a SOLAS para operaciones en alta mar.',
-      howItWorks:
-        'El Life Vest Pro utiliza un mecanismo de inflado hidrostático automático con un tubo de inflado manual de respaldo. Incluye cinta reflectante de grado SOLAS, capucha antirrociones, silbato, luz estanca y punto de anclaje para arnés de elevación.',
-      audience:
-        'Marinos comerciales, profesionales de rescate, trabajadores en alta mar y navegantes avanzados que necesitan chalecos automáticos compatibles con SOLAS.',
-      ai_use_cases: [
-        'Seguridad en operaciones marítimas en alta mar',
-        'Respuesta profesional a emergencias y rescate',
-        'Cumplimiento normativo marítimo comercial',
-      ],
-      ai_comparison:
-        'En comparación con los chalecos rellenos de espuma, el Life Vest Pro se infla automáticamente para un volumen mínimo durante el uso normal. Requiere un servicio anual del mecanismo hidrostático y reemplazo de la batería.',
-      ai_faq: [
-        {
-          q: '¿Cómo funciona el inflado automático?',
-          a: 'Un disparador hidrostático se activa al sumergirse en agua a 0.5-1.0 metros de profundidad. También se incluye un tubo de inflado manual de respaldo.',
-        },
-        {
-          q: '¿Cada cuánto necesita mantenimiento?',
-          a: 'Se recomienda un servicio anual del mecanismo hidrostático. El cilindro de CO2 debe revisarse y reemplazarse según el programa del fabricante.',
-        },
-      ],
-    },
     'oars-pump-set': {
       definition:
-        'Un set completo de accesorios que incluye un par de remos de aluminio de 1.6 m con palas de plástico y una bomba de pie de alto caudal de 5 litros con manómetro para todas las embarcaciones inflables.',
+        'Un set completo de accesorios que incluye un par de remos de aluminio de 1.6 m con palas de plástico y una bomba de pie de alto caudal de 5 litros con manómetro para todos los hinchables.',
       problem:
-        'Los propietarios de embarcaciones inflables necesitan remos de repuesto o de recambio y una bomba de alto volumen para el inflado y la propulsión, todo ello compatible con las embarcaciones inflables estándar.',
+        'Los propietarios de hinchables necesitan remos de repuesto o de recambio y una bomba de alto volumen para el inflado, todo ello compatible con los hinchables estándar.',
       howItWorks:
         'Los remos cuentan con ejes de aluminio y palas de plástico para una propulsión ligera. La bomba de pie suministra 5 litros de aire por embolada e incluye un manómetro integrado para un inflado preciso.',
       audience:
-        'Propietarios de embarcaciones inflables, kayaks y botes neumáticos que necesitan remos de repuesto o de recambio y una bomba de inflado de alto caudal.',
+        'Propietarios de hinchables que necesitan remos de repuesto o de recambio y una bomba de inflado de alto caudal.',
       ai_use_cases: [
-        'Remos de repuesto para embarcaciones inflables',
+        'Remos de repuesto para hinchables',
         'Inflado de alto volumen en el lugar de botadura',
         'Equipo de respaldo para propulsión e inflado',
       ],
       ai_comparison:
-        'En comparación con la bomba de doble acción, esta bomba de pie ofrece un mayor volumen por embolada, pero requiere más esfuerzo. Los remos ofrecen una opción básica de propulsión para embarcaciones inflables que no disponen de motor fueraborda o prefieren no usarlo.',
+        'En comparación con la bomba de doble acción, esta bomba de pie ofrece un mayor volumen por embolada, pero requiere más esfuerzo. Los remos ofrecen una opción de propulsión de respaldo cuando no se tiene un remo a mano.',
       ai_faq: [
         {
-          q: '¿Los remos son compatibles con todas las embarcaciones inflables?',
-          a: 'Los remos encajan en los toletes estándar de la mayoría de las embarcaciones inflables de la gama. La longitud de 1.6 m es adecuada para embarcaciones de hasta 4 m de eslora.',
+          q: '¿Los remos son compatibles con todos los hinchables?',
+          a: 'Los remos encajan en los toletes estándar de la mayoría de los hinchables de la gama. La longitud de 1.6 m es adecuada para tablas de hasta 4 m de eslora.',
         },
         {
           q: '¿Qué presión puede alcanzar la bomba de pie?',
-          a: 'La bomba de pie puede alcanzar hasta 12-15 PSI, adecuada para la mayoría de las embarcaciones inflables y botes neumáticos. Puede no ser suficiente para tablas de SUP de alta presión que requieren 18+ PSI.',
+          a: 'La bomba de pie puede alcanzar hasta 12-15 PSI, adecuada para la mayoría de los hinchables. Puede no ser suficiente para tablas de SUP de alta presión que requieren 18+ PSI.',
         },
       ],
     },
@@ -450,7 +342,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
       problem:
         'Los remeros principiantes y recreativos necesitan una tabla de SUP estable y portátil que sea fácil de inflar, fácil de equilibrar e indulgente para aprender.',
       howItWorks:
-        "La SUP Explorer 11' utiliza tecnología de núcleo drop-stitch para lograr una rigidez de 15 PSI con una cubierta ancha de 32 pulgadas para una estabilidad lateral. La tabla incluye una aleta central extraíble, un leash enrollado y una bomba manual de doble acción para un inflado rápido en el lugar de botadura.",
+        'La SUP Explorer 11 utiliza tecnología de núcleo drop-stitch para lograr una rigidez de 15 PSI con una cubierta ancha de 32 pulgadas para una estabilidad lateral. La tabla incluye una aleta central extraíble, un leash enrollado y una bomba manual de doble acción para un inflado rápido en el lugar de botadura.',
       audience:
         'Remeros principiantes, usuarios recreativos, familias y entusiastas del fitness que quieren una tabla de SUP portátil y estable para lagos, ríos y aguas costeras protegidas.',
       ai_use_cases: [
@@ -459,7 +351,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
         'Fitness y yoga en el agua',
       ],
       ai_comparison:
-        "En comparación con las tablas rígidas de epoxi, la SUP Explorer 11' ofrece una portabilidad superior y comodidad de almacenamiento gracias a la rigidez de la construcción drop-stitch. Es más pesada que una tabla rígida en seco, pero se guarda en una mochila para viajar.",
+        'En comparación con las tablas rígidas de epoxi, la SUP Explorer 11 ofrece una portabilidad superior y comodidad de almacenamiento gracias a la rigidez de la construcción drop-stitch. Es más pesada que una tabla rígida en seco, pero se guarda en una mochila para viajar.',
       ai_faq: [
         {
           q: '¿Cuál es la presión ideal?',
@@ -713,84 +605,30 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
     },
   },
   fr: {
-    'life-vest-classic': {
-      definition:
-        'Une aide à la flottabilité universelle certifiée CE et ISO pour les sports nautiques récréatifs dans tous les environnements aquatiques.',
-      problem:
-        "Les pratiquants de sports nautiques de tous niveaux ont besoin d'un gilet de sauvetage fiable et confortable qui répond aux normes de sécurité internationales sans restreindre les mouvements.",
-      howItWorks:
-        'Le Gilet de Sauvetage Classic utilise des chambres de flottabilité en mousse avec des sangles de poitrine et latérales ajustables pour un maintien sûr. Il est disponible en plusieurs tailles et comprend un sifflet, des bandes réfléchissantes et une poignée de sauvetage.',
-      audience:
-        "Pagayeurs récréatifs, plaisanciers, pêcheurs et débutants en sports nautiques qui ont besoin d'une flottabilité certifiée CE pour les lacs, rivières et eaux côtières.",
-      ai_use_cases: [
-        'Sécurité des sports nautiques récréatifs',
-        'Flottabilité pour formation et surveillance',
-        'Activités nautiques familiales',
-      ],
-      ai_comparison:
-        'Comparé aux gilets de sauvetage automatiques gonflables, le Gilet de Sauvetage Classic offre une flottabilité constante sans nécessiter de déploiement. Il est plus volumineux mais plus fiable pour les utilisateurs récréatifs qui pourraient ne pas entretenir les mécanismes automatiques.',
-      ai_faq: [
-        {
-          q: 'Ce gilet de sauvetage est-il adapté aux enfants ?',
-          a: 'Oui, des tailles enfants sont disponibles. Certifié CE et USCG pour les fourchettes de poids spécifiées.',
-        },
-        {
-          q: 'Nécessite-t-il un entretien ?',
-          a: "Entretien minimal. Rincez à l'eau douce après utilisation. Inspectez les chambres et les sangles avant chaque utilisation. Remplacez en cas de dommage.",
-        },
-      ],
-    },
-    'life-vest-pro': {
-      definition:
-        'Un gilet de sauvetage professionnel conforme SOLAS avec gonflage automatique pour une utilisation offshore, de sauvetage et maritime commerciale.',
-      problem:
-        "Les marins professionnels et le personnel de sauvetage ont besoin d'un gilet de sauvetage offrant un gonflage automatique, une flottabilité élevée et une visibilité conforme SOLAS pour les opérations offshore.",
-      howItWorks:
-        "Le Gilet de Sauvetage Pro utilise un mécanisme de gonflage hydrostatique automatique avec un tube de gonflage manuel de secours. Il comprend du ruban réfléchissant de qualité SOLAS, une capuche anti-projections, un sifflet, un voyant étanche et un point d'attache de harnais de levage.",
-      audience:
-        'Marins commerciaux, professionnels du sauvetage, travailleurs offshore et plaisanciers expérimentés qui ont besoin de gilets de sauvetage automatiques conformes SOLAS.',
-      ai_use_cases: [
-        'Sécurité des opérations maritimes offshore',
-        "Sauvetage professionnel et intervention d'urgence",
-        'Conformité maritime commerciale',
-      ],
-      ai_comparison:
-        'Comparé aux gilets de sauvetage en mousse, le Gilet de Sauvetage Pro se gonfle automatiquement pour un encombrement minimal en usage normal. Il nécessite un entretien annuel du mécanisme hydrostatique et le remplacement de la batterie.',
-      ai_faq: [
-        {
-          q: 'Comment fonctionne le gonflage automatique ?',
-          a: "Un déclencheur hydrostatique s'active lors de l'immersion dans l'eau à une profondeur de 0,5 à 1,0 mètre. Un tube de gonflage manuel de secours est également fourni.",
-        },
-        {
-          q: 'À quelle fréquence doit-il être entretenu ?',
-          a: 'Un entretien annuel du mécanisme hydrostatique est recommandé. La cartouche de CO2 doit être vérifiée et remplacée selon le calendrier du fabricant.',
-        },
-      ],
-    },
     'oars-pump-set': {
       definition:
-        "Un ensemble d'accessoires complet comprenant une paire de rames en aluminium de 1.6m à pales en plastique et une pompe à pied à grand débit de 5 litres avec manomètre, pour tous les engins nautiques gonflables.",
+        "Un ensemble d'accessoires complet comprenant une paire de rames en aluminium de 1.6m à pales en plastique et une pompe à pied à grand débit de 5 litres avec manomètre, pour tous les gonflables.",
       problem:
-        "Les propriétaires de bateaux gonflables ont besoin de rames de rechange ou de secours et d'une pompe à grand débit pour le gonflage et la propulsion, le tout compatible avec les engins nautiques gonflables standard.",
+        "Les propriétaires de gonflables ont besoin de rames de rechange ou de secours et d'une pompe à grand débit pour le gonflage, le tout compatible avec les gonflables standard.",
       howItWorks:
         "Les rames sont dotées de tubes en aluminium et de pales en plastique pour une propulsion légère. La pompe à pied délivre 5 litres d'air par coup avec un manomètre intégré pour un gonflage précis.",
       audience:
-        "Propriétaires de bateaux gonflables, kayaks et annexes qui ont besoin de rames de secours ou de rechange et d'une pompe de gonflage à grand débit.",
+        "Propriétaires de gonflables qui ont besoin de rames de secours ou de rechange et d'une pompe de gonflage à grand débit.",
       ai_use_cases: [
-        'Rames de rechange pour bateaux gonflables',
+        'Rames de rechange pour gonflables',
         "Gonflage à grand débit sur le site de mise à l'eau",
         'Équipement de secours pour la propulsion et le gonflage',
       ],
       ai_comparison:
-        "Par rapport à la pompe double action, cette pompe à pied offre un volume d'air supérieur par coup mais demande davantage d'effort. Les rames constituent une option de propulsion de base pour les bateaux gonflables qui ne peuvent pas ou ne souhaitent pas utiliser de moteur hors-bord.",
+        "Par rapport à la pompe double action, cette pompe à pied offre un volume d'air supérieur par coup mais demande davantage d'effort. Les rames constituent une option de propulsion de secours lorsqu'aucune pagaie n'est à portée de main.",
       ai_faq: [
         {
-          q: 'Les rames sont-elles compatibles avec tous les bateaux gonflables ?',
-          a: "Les rames s'adaptent aux tolets standard présents sur la plupart des bateaux gonflables de la gamme. La longueur de 1.6m convient aux bateaux jusqu'à 4m de long.",
+          q: 'Les rames sont-elles compatibles avec tous les gonflables ?',
+          a: "Les rames s'adaptent aux tolets standard présents sur la plupart des gonflables de la gamme. La longueur de 1.6m convient aux planches jusqu'à 4m de long.",
         },
         {
           q: 'Quelle pression la pompe à pied peut-elle atteindre ?',
-          a: "La pompe à pied peut atteindre jusqu'à 12-15 PSI, ce qui convient à la plupart des bateaux gonflables et annexes. Elle peut ne pas suffire pour les planches SUP haute pression nécessitant 18+ PSI.",
+          a: "La pompe à pied peut atteindre jusqu'à 12-15 PSI, ce qui convient à la plupart des gonflables. Elle peut ne pas suffire pour les planches SUP haute pression nécessitant 18+ PSI.",
         },
       ],
     },
@@ -800,7 +638,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
       problem:
         'Les pagayeurs débutants et récréatifs ont besoin d’une planche SUP stable, portable, facile à gonfler et pardonnante pour apprendre.',
       howItWorks:
-        "Le SUP Explorer 11' utilise la technologie de noyau drop-stitch pour atteindre une rigidité de 15 PSI avec un pont large de 32 pouces pour la stabilité latérale. La planche comprend un aileron central amovible, un leash et une pompe manuelle double action.",
+        'Le SUP Explorer 11 utilise la technologie de noyau drop-stitch pour atteindre une rigidité de 15 PSI avec un pont large de 32 pouces pour la stabilité latérale. La planche comprend un aileron central amovible, un leash et une pompe manuelle double action.',
       audience:
         'Pagayeurs débutants, utilisateurs récréatifs, familles et passionnés de fitness qui veulent une planche SUP portable et stable pour lacs, rivières et eaux côtières abritées.',
       ai_use_cases: [
@@ -809,7 +647,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
         "Fitness et yoga sur l'eau",
       ],
       ai_comparison:
-        "Par rapport aux planches rigides en époxy, le SUP Explorer 11' offre une portabilité supérieure et un rangement pratique grâce à la rigidité de la construction drop-stitch. Il est plus lourd qu'une planche rigide à sec, mais se range dans un sac à dos pour le voyage.",
+        "Par rapport aux planches rigides en époxy, le SUP Explorer 11 offre une portabilité supérieure et un rangement pratique grâce à la rigidité de la construction drop-stitch. Il est plus lourd qu'une planche rigide à sec, mais se range dans un sac à dos pour le voyage.",
       ai_faq: [
         {
           q: 'Quelle est la pression idéale ?',
@@ -1063,84 +901,30 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
     },
   },
   it: {
-    'life-vest-classic': {
-      definition:
-        'Un aiuto al galleggiamento universale certificato CE e ISO per sport acquatici ricreativi in tutti gli ambienti acquatici.',
-      problem:
-        'I partecipanti agli sport acquatici di tutti i livelli hanno bisogno di un giubbotto di salvataggio affidabile e comodo che soddisfi gli standard di sicurezza internazionali senza limitare i movimenti.',
-      howItWorks:
-        'Il Gilet di Salvataggio Classic utilizza camere di galleggiamento riempite di schiuma con cinghie regolabili al petto e ai fianchi per una vestibilità sicura. È disponibile in più taglie e include fischietto, strisce riflettenti e maniglia di salvataggio.',
-      audience:
-        'Canottieri ricreativi, diportisti, pescatori e principianti degli sport acquatici che necessitano di galleggiamento certificato CE per laghi, fiumi e acque costiere.',
-      ai_use_cases: [
-        'Sicurezza negli sport acquatici ricreativi',
-        'Galleggiamento per allenamento e supervisione',
-        'Attività acquatiche familiari',
-      ],
-      ai_comparison:
-        'Rispetto ai giubbotti di salvataggio gonfiabili automatici, il Classic fornisce galleggiamento costante senza necessità di attivazione. È più ingombrante ma più affidabile per gli utenti ricreativi che potrebbero non mantenere i meccanismi automatici.',
-      ai_faq: [
-        {
-          q: 'Questo giubbotto è adatto ai bambini?',
-          a: 'Sì, sono disponibili taglie per bambini. Certificato CE e USCG per le fasce di peso specificate.',
-        },
-        {
-          q: 'Richiede manutenzione?',
-          a: "Manutenzione minima. Risciacquare con acqua dolce dopo l'uso. Ispezionare camere e cinghie prima di ogni utilizzo. Sostituire se danneggiato.",
-        },
-      ],
-    },
-    'life-vest-pro': {
-      definition:
-        'Un giubbotto di salvataggio professionale conforme SOLAS con gonfiaggio automatico per uso offshore, soccorso e marittimo commerciale.',
-      problem:
-        'I marittimi professionisti e il personale di soccorso hanno bisogno di un giubbotto che fornisca gonfiaggio automatico, alta galleggiabilità e visibilità conforme SOLAS per operazioni offshore.',
-      howItWorks:
-        'Il Gilet di Salvataggio Pro utilizza un meccanismo di gonfiaggio idrostatico automatico con un tubo di gonfiaggio manuale di riserva. Include nastro riflettente di grado SOLAS, cappuccio paraschizzi, fischietto, luce stagna e punto di attacco per imbracatura di sollevamento.',
-      audience:
-        'Marittimi commerciali, professionisti del soccorso, lavoratori offshore e diportisti avanzati che necessitano di giubbotti automatici conformi SOLAS.',
-      ai_use_cases: [
-        'Sicurezza nelle operazioni marittime offshore',
-        'Risposta professionale a emergenze e soccorso',
-        'Conformità normativa marittima commerciale',
-      ],
-      ai_comparison:
-        "Rispetto ai giubbotti riempiti di schiuma, il Gilet di Salvataggio Pro si auto-gonfia per un ingombro minimo durante l'uso normale. Richiede una manutenzione annuale del meccanismo idrostatico e la sostituzione della batteria.",
-      ai_faq: [
-        {
-          q: 'Come funziona il gonfiaggio automatico?',
-          a: 'Un attivatore idrostatico si attiva quando immerso in acqua a 0.5-1.0 metri di profondità. È inoltre fornito un tubo di gonfiaggio manuale di riserva.',
-        },
-        {
-          q: 'Ogni quanto necessita di manutenzione?',
-          a: 'Si raccomanda una manutenzione annuale del meccanismo idrostatico. La bombola di CO2 deve essere controllata e sostituita secondo il programma del produttore.',
-        },
-      ],
-    },
     'oars-pump-set': {
       definition:
-        'Un set completo di accessori che include un paio di remi in alluminio da 1.6m con pale in plastica e una pompa a pedale ad alto flusso da 5 litri con manometro, adatta a tutte le imbarcazioni gonfiabili.',
+        'Un set completo di accessori che include un paio di remi in alluminio da 1.6m con pale in plastica e una pompa a pedale ad alto flusso da 5 litri con manometro, adatta a tutti i gonfiabili.',
       problem:
-        'I proprietari di gommoni hanno bisogno di remi di ricambio o di riserva e di una pompa ad alto volume per il gonfiaggio e la propulsione, tutti compatibili con le imbarcazioni gonfiabili standard.',
+        'I proprietari di gonfiabili hanno bisogno di remi di ricambio o di riserva e di una pompa ad alto volume per il gonfiaggio, tutti compatibili con i gonfiabili standard.',
       howItWorks:
         "I remi presentano aste in alluminio con pale in plastica per una propulsione leggera. La pompa a pedale eroga 5 litri d'aria a ogni pedalata, con manometro integrato per un gonfiaggio preciso.",
       audience:
-        'Proprietari di gommoni, kayak e dinghy che necessitano di remi di ricambio o sostitutivi e di una pompa di gonfiaggio ad alto flusso.',
+        'Proprietari di gonfiabili che necessitano di remi di ricambio o sostitutivi e di una pompa di gonfiaggio ad alto flusso.',
       ai_use_cases: [
-        'Remi di ricambio per imbarcazioni gonfiabili',
+        'Remi di ricambio per gonfiabili',
         'Gonfiaggio ad alto volume presso il punto di lancio',
         'Attrezzatura di propulsione e gonfiaggio di riserva',
       ],
       ai_comparison:
-        "Rispetto alla pompa a doppia azione, questa pompa a pedale offre un volume maggiore per pedalata ma richiede più sforzo. I remi rappresentano un'opzione di propulsione di base per i gommoni che non hanno o non vogliono usare un motore fuoribordo.",
+        "Rispetto alla pompa a doppia azione, questa pompa a pedale offre un volume maggiore per pedalata ma richiede più sforzo. I remi rappresentano un'opzione di propulsione di riserva quando non si ha a portata di mano una pagaia.",
       ai_faq: [
         {
-          q: 'I remi sono compatibili con tutti i gommoni?',
-          a: 'I remi si adattano agli scalmi standard presenti sulla maggior parte dei gommoni della gamma. La lunghezza di 1.6m è adatta a imbarcazioni fino a 4m di lunghezza.',
+          q: 'I remi sono compatibili con tutti i gonfiabili?',
+          a: 'I remi si adattano agli scalmi standard presenti sulla maggior parte dei gonfiabili della gamma. La lunghezza di 1.6m è adatta a tavole fino a 4m di lunghezza.',
         },
         {
           q: 'Quale pressione può raggiungere la pompa a pedale?',
-          a: 'La pompa a pedale può raggiungere fino a 12-15 PSI, adatti alla maggior parte dei gommoni e dei dinghy. Potrebbe non essere sufficiente per le tavole SUP ad alta pressione che richiedono 18+ PSI.',
+          a: 'La pompa a pedale può raggiungere fino a 12-15 PSI, adatti alla maggior parte dei gonfiabili. Potrebbe non essere sufficiente per le tavole SUP ad alta pressione che richiedono 18+ PSI.',
         },
       ],
     },
@@ -1150,7 +934,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
       problem:
         "I principianti e i praticanti ricreativi hanno bisogno di una tavola SUP stabile e trasportabile, facile da gonfiare, facile da bilanciare e indulgente durante l'apprendimento.",
       howItWorks:
-        "La SUP Explorer 11' utilizza la tecnologia a nucleo drop-stitch per raggiungere una rigidità di 15 PSI con un ponte largo 32 pollici per la stabilità laterale. La tavola include una pinna centrale rimovibile, un leash a spirale e una pompa a mano a doppia azione per un gonfiaggio rapido al punto di lancio.",
+        'La SUP Explorer 11 utilizza la tecnologia a nucleo drop-stitch per raggiungere una rigidità di 15 PSI con un ponte largo 32 pollici per la stabilità laterale. La tavola include una pinna centrale rimovibile, un leash a spirale e una pompa a mano a doppia azione per un gonfiaggio rapido al punto di lancio.',
       audience:
         'Principianti, utenti ricreativi, famiglie e appassionati di fitness che desiderano una tavola SUP portatile e stabile per laghi, fiumi e acque costiere riparate.',
       ai_use_cases: [
@@ -1159,7 +943,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
         'Fitness e yoga in acqua',
       ],
       ai_comparison:
-        "Rispetto alle tavole rigide in resina epossidica, la SUP Explorer 11' offre una trasportabilità superiore e una maggiore praticità di stoccaggio grazie alla rigidità della costruzione drop-stitch. A secco è più pesante di una tavola rigida, ma si ripiega in uno zaino per il viaggio.",
+        'Rispetto alle tavole rigide in resina epossidica, la SUP Explorer 11 offre una trasportabilità superiore e una maggiore praticità di stoccaggio grazie alla rigidità della costruzione drop-stitch. A secco è più pesante di una tavola rigida, ma si ripiega in uno zaino per il viaggio.',
       ai_faq: [
         {
           q: 'Qual è la pressione ideale?',
@@ -1412,1838 +1196,31 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
       ],
     },
   },
-  cs: {
-    'life-vest-classic': {
-      definition: 'Univerzální plovací vesta s certifikací CE pro rekreační vodní sporty ve všech typech vod.',
-      problem:
-        'Účastníci vodních sportů všech úrovní potřebují spolehlivou a pohodlnou záchrannou vestu, která splňuje mezinárodní bezpečnostní normy a neomezuje pohyb.',
-      howItWorks:
-        'Záchranná vesta Classic má pěnové vztlakové komory a nastavitelné hrudní a boční popruhy pro bezpečné přiléhání. Je dostupná ve více velikostech a zahrnuje píšťalku, reflexní pruhy a záchrannou rukojeť.',
-      audience:
-        'Rekreační vodáci, lodníci, rybáři a začátečníci ve vodních sportech, kteří potřebují plovací vestu s certifikací CE pro jezera, řeky a pobřežní vody.',
-      ai_use_cases: [
-        'Bezpečnost při rekreačních vodních sportech',
-        'Plovací výbava pro výcvik a dohled',
-        'Rodinné aktivity na vodě',
-      ],
-      ai_comparison:
-        'Ve srovnání s automatickými nafukovacími vestami poskytuje záchranná vesta Classic stálý vztlak bez nutnosti aktivace. Je objemnější, ale spolehlivější pro rekreační uživatele, kteří nemusí pravidelně udržovat automatické mechanismy.',
-      ai_faq: [
-        {
-          q: 'Hodí se tato vesta pro děti?',
-          a: 'Ano, dětské velikosti jsou k dispozici. Certifikace CE a USCG platí pro uvedené hmotnostní rozsahy.',
-        },
-        {
-          q: 'Vyžaduje nějakou údržbu?',
-          a: 'Minimální údržba. Po použití opláchněte sladkou vodou. Před každým použitím zkontrolujte komory a popruhy. Při poškození vyměňte.',
-        },
-      ],
-    },
-    'life-vest-pro': {
-      definition:
-        'Profesionální záchranná vesta splňující normu SOLAS s automatickým nafukováním pro offshore, záchranné a komerční námořní použití.',
-      problem:
-        'Profesionální námořníci a záchranné složky potřebují vestu s automatickým nafukováním, vysokým vztlakem a viditelností podle SOLAS pro offshore operace.',
-      howItWorks:
-        'Záchranná vesta Pro používá automatický hydrostatický nafukovací mechanismus se záložní ruční nafukovací hadičkou. Zahrnuje reflexní pásky v kvalitě SOLAS, kryt proti postříkání, píšťalku, vodotěsné světlo a upevňovací bod pro zvedací postroj.',
-      audience:
-        'Komerční námořníci, profesionální záchranáři, offshore pracovníci a pokročilí lodníci, kteří potřebují záchranné vesty s automatickým nafukováním podle SOLAS.',
-      ai_use_cases: [
-        'Bezpečnost při offshore námořních operacích',
-        'Profesionální záchranné a pohotovostní zásahy',
-        'Soulad s komerčními námořními předpisy',
-      ],
-      ai_comparison:
-        'Ve srovnání s pěnovými vestami se záchranná vesta Pro automaticky nafoukne a při běžném nošení je minimálně objemná. Vyžaduje roční servis hydrostatického mechanismu a výměnu baterie.',
-      ai_faq: [
-        {
-          q: 'Jak funguje automatické nafukování?',
-          a: 'Hydrostatický spínač se aktivuje při ponoru do vody v hloubce 0,5-1,0 m. Součástí je také záložní ruční nafukovací hadička.',
-        },
-        {
-          q: 'Jak často je nutný servis?',
-          a: 'Doporučuje se roční servis hydrostatického mechanismu. CO2 kartuš by měla být kontrolována a vyměňována podle harmonogramu výrobce.',
-        },
-      ],
-    },
-    'oars-pump-set': {
-      definition:
-        'Kompletní sada příslušenství: pár 1,6m hliníkových vesel s plastovými listy a 5l nožní pumpa s vysokým průtokem a manometrem pro všechny nafukovací čluny.',
-      problem:
-        'Majitelé nafukovacích člunů potřebují náhradní nebo rezervní vesla a objemnou pumpu pro nafouknutí a pohon, a to vše kompatibilní s běžnými nafukovacími čluny.',
-      howItWorks:
-        'Vesla mají hliníková ramena s plastovými listy pro lehký pohyb. Nožní pumpa dodává 5l vzduchu na jeden zdvih s vestavěným manometrem pro přesné nafouknutí.',
-      audience:
-        'Majitelé nafukovacích člunů, kajaků a menších člunů, kteří potřebují rezervní nebo náhradní vesla a pumpu s vysokým průtokem.',
-      ai_use_cases: [
-        'Náhradní vesla pro nafukovací čluny',
-        'Objemné huštění na místě spuštění',
-        'Záložní pohon a výbava pro huštění',
-      ],
-      ai_comparison:
-        'Ve srovnání s pumpou Dual-Action nabízí tato nožní pumpa vyšší objem na zdvih, ale vyžaduje více síly. Vesla představují základní možnost pohonu pro nafukovací čluny, které nemají závěsný motor nebo o něj nemají zájem.',
-      ai_faq: [
-        {
-          q: 'Jsou vesla kompatibilní se všemi nafukovacími čluny?',
-          a: 'Vesla pasují do standardních veslových objímek většiny člunů z naší nabídky. Délka 1,6m je vhodná pro čluny do délky 4m.',
-        },
-        {
-          q: 'Jakého tlaku pumpa dosáhne?',
-          a: 'Nožní pumpa dosáhne 12-15 PSI, což vyhovuje většině nafukovacích člunů. Nemusí však stačit pro vysokotlaké SUP boardy vyžadující 18+ PSI.',
-        },
-      ],
-    },
-    'sup-explorer-11': {
-      definition:
-        'Univerzální nafukovací paddleboard (SUP) o délce 11 stop, navržený pro stabilitu, přenosnost a rekreační použití na jezerech, řekách a chráněných pobřežních vodách.',
-      problem:
-        'Začátečníci a rekreační paddleboardisté potřebují stabilní a přenosný SUP board, který se snadno nafoukne, na kterém se snadno udrží rovnováha a který odpouští chyby při učení.',
-      howItWorks:
-        "SUP Explorer 11' využívá drop-stitch jádro pro tuhost při 15 PSI a širokou 32palcovou palubu pro boční stabilitu. Board zahrnuje odnímatelnou středovou ploutev, stočený leash a dvoučinnou ruční pumpu pro rychlé nafouknutí na místě spuštění.",
-      audience:
-        'Začátečníci, rekreační uživatelé, rodiny a příznivci fitness, kteří hledají přenosný a stabilní SUP board pro jezera, řeky a chráněné pobřežní vody.',
-      ai_use_cases: [
-        'Výcvik a výuka SUP pro začátečníky',
-        'Rekreační jízda na jezerech a řekách',
-        'Fitness a jóga na vodě',
-      ],
-      ai_comparison:
-        "Ve srovnání s epoxyovými pevnými boardy nabízí SUP Explorer 11' vynikající přenosnost a snadné uložení při tuhosti díky drop-stitch konstrukci. V suchém stavu je těžší než pevný board, ale pro cestování se sbalí do batohu.",
-      ai_faq: [
-        {
-          q: 'Jaký je ideální tlak?',
-          a: 'Doporučuje se 12-15 PSI. Board dosahuje nejlepšího výkonu při 15 PSI pro maximální tuhost.',
-        },
-        {
-          q: 'Je součástí pádlo?',
-          a: 'Kompletní balení zahrnuje nastavitelné hliníkové pádlo.',
-        },
-      ],
-    },
-    'sup-cheetah-surge': {
-      definition:
-        'Univerzální nafukovací SUP board o délce 11 stop s divokým motivem geparda vytvořeným vícebarevnou mozaikou EVA bloků a UV digitálním tiskem, určený pro rekreační pádlování po jezerech, řekách a chráněných pobřežních vodách.',
-      problem:
-        'Paddleboardisté, kteří chtějí vizuálně výrazný board, potřebují prémiovou grafiku, která nevybledne, neoloupe se a nepoškrábe se při kontaktu se slanou vodou a UV zářením. Tradiční tiskové metody v těchto podmínkách selhávají.',
-      howItWorks:
-        'Edice Cheetah Surge používá drop-stitch PVC jádro s tuhostí při 15 PSI a 32palcovou palubu. Grafika protiskluzové podložky vzniká vícebarevnou mozaikou EVA bloků — barevné EVA listy jsou výsekově vystříhané a bezešvě složené jako puzzle, místo aby se tiskly, což zaručuje, že barvy nikdy nevyblednou ani se neoloupou.',
-      audience:
-        'Módně smýšlející paddleboardisté, příznivci outdoorového životního stylu, boutique cestovatelé a tvůrci obsahu pro sociální sítě, kteří chtějí vizuálně působivý a odolný SUP board.',
-      ai_use_cases: [
-        'Tvorba obsahu na sociální sítě na vodě',
-        'Rekreační jízda po jezerech a řekách',
-        'Boutique cestování a dobrodružná turistika',
-      ],
-      ai_comparison:
-        'Ve srovnání s běžně tištěnými SUP boardy používá edice Cheetah Surge výsekovou mozaiku EVA bloků, která nikdy nevybledne ani se neoloupe. Grafika je konstrukční součástí EVA materiálu, nikoli povrchovou vrstvou barvy.',
-      ai_faq: [
-        {
-          q: 'Jak je grafika vytvořena?',
-          a: 'Grafika využívá vícebarevnou mozaiku EVA bloků — barevné EVA pěnové listy jsou přesně výsekově vystříhané a bezešvě složené jako puzzle. Na stoupací ploše není žádný tištěný inkoust.',
-        },
-        {
-          q: 'Vybledne grafika ve slané vodě?',
-          a: 'Ne. Protože barvy jsou vlastní EVA materiálu, a ne povrchové vrstvě barvy, grafika nikdy nevybledne, neoloupe se ani nepoškrábe při kontaktu se slanou vodou, UV zářením nebo chůzí.',
-        },
-      ],
-    },
-    'sup-leviathan-wake': {
-      definition:
-        'Univerzální nafukovací SUP board o délce 11 stop s dechberoucím motivem modré velryby vytvořeným UV digitálním tiskem a mechanicky reliéfovanou protiskluzovou podložkou.',
-      problem:
-        'Paddleboardisté hledající umělecké SUP boardy potřebují grafiku, která zůstane výrazná i po vysokotlakém nafouknutí a opakovaném skládání k uložení. Běžné barvy praskají a olupují se.',
-      howItWorks:
-        'Leviathan Wake používá drop-stitch PVC jádro při 15 PSI s 32palcovou palubou. Grafika na přídi vzniká vysoce přesným UV digitálním tiskem, logo na spodní straně používá síťotisk s vysokou elasticitou a speciálními pružnými PVC barvami. Protiskluzová podložka má mechanicky tepelně ražený vlnový reliéf pro dlouhou životnost vzorů.',
-      audience:
-        'Milovníci oceánu a mořského života, umělecky založení paddleboardisté a všichni, kdo chtějí vizuálně výjimečný SUP board s kvalitní a odolnou grafikou.',
-      ai_use_cases: [
-        'Dobrodružství na vodě s motivem mořského života',
-        'Rekreační jízda po jezerech a pobřeží',
-        'Umělecký a lifestyle paddleboarding',
-      ],
-      ai_comparison:
-        'Ve srovnání s běžnými SUP boardy se Leviathan Wake pyšní totemovou velrybí grafikou se dvěma tiskovými technologiemi optimalizovanými pro odolnost. Mechanicky reliéfovaná protiskluzová podložka má delší životnost než tištěné podložky.',
-      ai_faq: [
-        {
-          q: 'Je logo na spodní straně odolné?',
-          a: 'Ano. Logo na spodní straně používá síťotisk s vysokou elasticitou a speciálními pružnými PVC barvami, které zvládají nafouknutí na 15 PSI a opakované skládání.',
-        },
-        {
-          q: 'Čím je protiskluzová podložka výjimečná?',
-          a: 'Vlnové vzory vznikají mechanickým tepelným ražením dvouvrstvého kompozitního EVA, což zajišťuje rovnoměrnou hloubku, výborné odvodnění vody a dlouhotrvající protiskluzové vlastnosti.',
-        },
-      ],
-    },
-    'sup-medusa-glow': {
-      definition:
-        'Univerzální nafukovací SUP board o délce 11 stop s motivem medúz a korálového útesu vytvořeným vícebarevnou mozaikou EVA bloků a konstrukcí proti delaminaci.',
-      problem:
-        'Paddleboardisté, kteří milují mořsky inspirované umění, potřebují board s prémiovou grafikou, která odolá drsnému mořskému prostředí bez vyblednutí, oloupání nebo delaminace v místech upevnění.',
-      howItWorks:
-        'Medusa Glow používá drop-stitch PVC jádro při 15 PSI s 32palcovou palubou. Grafika na přídi je vytištěná UV digitálním tiskem a EVA podložka využívá vícebarevnou mozaiku bloků s nevyblednutelnými mořskými hvězdicemi a lasturami. Oblasti D-kroužků jsou maskovány pro přímé spojení PVC s PVC, které brání delaminaci.',
-      audience:
-        'Paddleboardistky, příznivkyně životního stylu, boutique cestovatelky a všichni, kdo hledají na vodě oceánem inspirovanou harmonickou estetiku.',
-      ai_use_cases: [
-        'Jóga a fitness na paddleboardu',
-        'Tvorba obsahu na sociální sítě',
-        'Tropické a pobřežní vyjížďky na paddleboardu',
-      ],
-      ai_comparison:
-        'Ve srovnání s běžně tištěnými SUP boardy používá Medusa Glow pro grafiku stoupací plochy mozaiku EVA bloků — barvy jsou konstrukční součástí EVA materiálu, nikoli tištěná barva, takže nikdy nevyblednou.',
-      ai_faq: [
-        {
-          q: 'Jaká je barevná paleta?',
-          a: 'Osvěžující mátově zelený základ, hluboce tyrkysová EVA podložka s bílými výsekovými bloky mořských hvězdic a lastur a výrazné korálově oranžové akcenty.',
-        },
-        {
-          q: 'Jak je upevněno madlo?',
-          a: 'Přední neoprenový popruh prostředního madla je ukotven přímo skrz EVA podložku do jádra PVC trupu, takže zvedací zátěž nese pevný trup.',
-        },
-      ],
-    },
-    'sup-ocean-pulse': {
-      definition:
-        'Univerzální nafukovací SUP board o délce 11 stop s topografickým vlnovým vzorem vytvořeným UV digitálním tiskem a mechanicky reliéfovanou protiskluzovou podložkou, s barevně sladěným příslušenstvím.',
-      problem:
-        'Esteticky smýšlející paddleboardisté chtějí kompletní vizuální zážitek — ne jen krásný board, ale i sladěné příslušenství, které udržuje estetiku od uložení až po vodu.',
-      howItWorks:
-        'Ocean Pulse používá drop-stitch PVC jádro při 15 PSI. Vlnové obrysy jsou aplikovány vysoce přesným UV tiskem. EVA podložka má mechanicky tepelně ražené vlnové textury. Veškeré příslušenství — batoh, pumpa, leash — prochází jednotnou barevnou úpravou ladící s designem boardu.',
-      audience:
-        'Paddleboardistky, příznivci trendy životního stylu, boutique kempaři a pádlující, kterým záleží na sladěné estetice celé výbavy.',
-      ai_use_cases: [
-        'Paddleboarding pro Instagram a sociální sítě',
-        'Boutique cestování a kempování',
-        'Rekreační jízda po jezerech a pobřeží',
-      ],
-      ai_comparison:
-        'Ve srovnání s běžnými SUP boardy nabízí Ocean Pulse kompletní sladěnou vizuální identitu boardu i celého příslušenství a mechanicky reliéfované EVA s vyšší odolností než tištěné protiskluzové podložky.',
-      ai_faq: [
-        {
-          q: 'Které příslušenství je barevně sladěné?',
-          a: 'Cestovní batoh s kolečky, dvoučinná vysokotlaká pumpa, bezpečnostní leash a vodotěsná pouzdra na telefon procházejí jednotným sladěním barev a brandingu.',
-        },
-        {
-          q: 'Jak vzniká vzor protiskluzové podložky?',
-          a: 'Vlnové vzory vznikají vysoce přesným mechanickým tepelným ražením dvouvrstvého kompozitního EVA, což zajišťuje rovnoměrnou hloubku a výborné odvodnění vody.',
-        },
-      ],
-    },
-    'sup-ocean-voyager': {
-      definition:
-        'Univerzální nafukovací SUP board o délce 11 stop s geometrickým motivem mořské želvy vytvořeným vícebarevnou mozaikou EVA bloků a UV digitálním tiskem, s jednotnou vizuální identitou napříč příslušenstvím.',
-      problem:
-        'Paddleboardisté zaměření na ochranu oceánu chtějí board, který oslavuje mořský život prémiovou grafikou, jež zůstává výrazná po celá léta používání, aniž by vybledla nebo se oloupala kvůli slané vodě.',
-      howItWorks:
-        'Ocean Voyager používá drop-stitch PVC jádro při 15 PSI s 32palcovou palubou. Geometrická ilustrace mořské želvy na přídi vzniká UV digitálním tiskem a EVA podložka využívá vícebarevnou mozaiku bloků pro siluetu želvy a korálové tvary. Veškeré příslušenství je barevně sladěné.',
-      audience:
-        'Milovníci oceánu, příznivci mořských želv, módně smýšlející paddleboardisté a boutique cestovatelé, kteří chtějí prémiový sladěný lifestyle SUP balíček.',
-      ai_use_cases: [
-        'Paddleboarding s motivem ochrany moří',
-        'Tvorba obsahu na sociální sítě',
-        'Dálkové túry a objevování',
-      ],
-      ai_comparison:
-        'Ve srovnání s běžně tištěnými SUP boardy používá Ocean Voyager vícebarevnou mozaiku EVA bloků, která se nikdy nepoškrábe, neoloupe ani nevybledne. Přesnost výsekového řezu zajišťuje dokonale rovné plochy pod nohama.',
-      ai_faq: [
-        {
-          q: 'Co inspirovalo název?',
-          a: 'Mořská želva je nejdokonalejší oceánská tulačka přírody, která s lehkou grácií zdolává tisíce kilometrů. Ocean Voyager ztělesňuje ducha dálkového objevování a souladu s mořským životem.',
-        },
-        {
-          q: 'Vybledne grafika?',
-          a: 'Ne. Grafika EVA podložky využívá vícebarevnou mozaiku bloků — barvy jsou přirozenou součástí EVA materiálu, nikoli tištěná barva. Grafika se nikdy nepoškrábe, neoloupe ani nevybledne, a to ani při intenzivním používání.',
-        },
-      ],
-    },
-    'sup-dolphin-wave': {
-      definition:
-        'Univerzální nafukovací SUP board o délce 11 stop s motivem delfíní mořské krajiny vytvořeným CNC řezanou mozaikou barevných EVA bloků a síťotiskovým souvislým vlnovým motivem na bočnicích.',
-      problem:
-        'Umělecky smýšlející paddleboardisté potřebují grafiku, která přežije vysokotlaké nafouknutí (15 PSI) a těsné srolování k uložení bez praskání, lámání nebo pouštění barev.',
-      howItWorks:
-        'Dolphin Wave používá drop-stitch PVC jádro při 15 PSI. Zóna stání využívá CNC puzzle řezanou mozaiku barevných EVA bloků, kde barvy jsou vlastní materiálu. Pás bočnic nese souvislý síťotisk, který roztahuje vlnové motivy kolem stran. UV barvy mají 150% prodloužení pro odolnost proti praskání.',
-      audience:
-        'Příznivci mořské fauny, paddleboardisté, kterým se líbí detailní grafika, a všichni, kdo chtějí board s 360stupňovou vizuální souvislostí.',
-      ai_use_cases: [
-        'Paddleboarding s motivem mořské fauny',
-        'Rekreační jízda po jezerech a pobřeží',
-        'Obsah pro sociální sítě a lifestyle',
-      ],
-      ai_comparison:
-        'Ve srovnání s běžně tištěnými SUP boardy používá Dolphin Wave fyzickou mozaiku barevných EVA bloků ve zóně stání a síťotiskové vlny na bočnicích pro 360stupňovou vizuální souvislost. Pružné UV barvy s 150% prodloužením brání praskání.',
-      ai_faq: [
-        {
-          q: 'Jaké barvy se používají?',
-          a: 'Medieval Blue pro hluboké vlny, Serenity pro klidné tóny, s bílými detaily pěny. Barevná paleta odpovídá standardům PANTONE TPG pro přesnou výrobu.',
-        },
-        {
-          q: 'Jak jsou vlny na bočnicích aplikované?',
-          a: 'Pás bočnic využívá souvislý síťotisk na plné mátově zelené dvouvrstvé PVC, který nákladově efektivně roztahuje vlnový motiv kolem bočnic boardu.',
-        },
-      ],
-    },
-    'sup-flowing-lotus': {
-      definition:
-        'Univerzální nafukovací SUP board o délce 11 stop s estetikou tradičního východního štětcového malířství, využívající dvouvrstvou laserově rytou EVA podložku a UV digitálně tištěný gradient.',
-      problem:
-        'Paddleboardisté hledající umělecké a kulturní vyjádření na vodě potřebují prémiovou grafiku, která odolá častému sešlapávání a slané vodě bez opotřebení nebo vyblednutí.',
-      howItWorks:
-        'Flowing Lotus používá drop-stitch PVC jádro při 15 PSI. EVA podložka je dvouvrstvá kompozitní s laserovým rytím — laser odstraní horní barevnou vrstvu a odhalí spodní barvu, čímž vznikají trvalé vzory. Gradient na přídi využívá pružné UV barvy s vysokou tažností pro odolnost proti praskání.',
-      audience:
-        'Cvičící jógy, příznivci meditace, milovníci východního umění a paddleboardisté, kteří si cení kulturní estetiky a prémiového řemeslného zpracování.',
-      ai_use_cases: [
-        'Jóga a meditace na paddleboardu',
-        'Kulturní a umělecké zážitky na vodě',
-        'Rekreační jízda po jezerech a řekách',
-      ],
-      ai_comparison:
-        'Ve srovnání s běžně tištěnými SUP boardy používá Flowing Lotus laserové rytí, které vtiskuje vzory trvale do EVA materiálu — grafika se nemůže opotřebovat ani vyblednout, protože je konstrukční součástí podložky.',
-      ai_faq: [
-        {
-          q: 'Jak funguje laserové rytí?',
-          a: 'Dvouvrstvá kompozitní EVA podložka (tyrkysový základ s mátově zeleným povrchem) je laserově rytá — laser odstraňuje horní vrstvu a odhaluje spodní barvu, čímž vytváří trvalé 3D texturované vzory.',
-        },
-        {
-          q: 'Proč se board hodí na jógu?',
-          a: 'Laserem vyryté vzory poskytují vynikající protiskluzové vlastnosti bez drsnosti a gradientní design vytváří uklidňující estetiku ideální pro meditaci a jógu na vodě.',
-        },
-      ],
-    },
-    'sup-jungle-mandala': {
-      definition:
-        'Univerzální nafukovací SUP board o délce 11 stop s tropickým mandalovým motivem, dvouvrstvou laserově rytou EVA, geometrií proti deformaci a síťotiskovými souvislými bočnicemi.',
-      problem:
-        'Paddleboardisté chtějí geometricky složitou grafiku, která zůstane dokonale symetrická a nedeformovaná i po nafouknutí boardu na vysoký tlak, bez posunu vzoru během výroby.',
-      howItWorks:
-        'Jungle Mandala používá drop-stitch PVC jádro při 15 PSI. Geometrie mandaly prošla strukturálním zesílením linií, které kompenzuje drobné důlky na PVC povrchu. EVA podložka využívá dvouvrstvé laserové rytí. Motivy na bočnicích používají rozptýlený pružný vzor, který počítá s tolerancemi natažení při ruční montáži.',
-      audience:
-        'Duchovně a umělecky založení paddleboardisté, tropičtí dobrodruzi, cvičící jógy a všichni, které přitahují geometrické a mandalové estetiky.',
-      ai_use_cases: [
-        'Duchovní a meditativní paddleboarding',
-        'Tropická pobřežní dobrodružství',
-        'Tvorba obsahu na sociální sítě',
-      ],
-      ai_comparison:
-        'Ve srovnání s běžnými SUP boardy má Jungle Mandala geometrii mandaly chráněnou proti deformaci, která zůstává dokonale symetrická při nafouknutí na 15 PSI, a nákladově efektivní síťotiskové motivy na bočnicích.',
-      ai_faq: [
-        {
-          q: 'Nedeformuje se vzor mandaly po nafouknutí?',
-          a: 'Ne. Geometrické linie prošly strukturálním zesílením právě proto, aby kompenzovaly důlky na PVC povrchu a zůstaly dokonale symetrické při plném nafouknutí.',
-        },
-        {
-          q: 'Jak je aplikována grafika na bočnicích?',
-          a: 'Motivy kolibříka a motýla na bočnicích využívají souvislý síťotisk s rozptýleným pružným vzorem, který počítá s tolerancemi ručního natažení během montáže.',
-        },
-      ],
-    },
-    'sup-tropical-breeze': {
-      definition:
-        'Univerzální nafukovací SUP board o délce 11 stop s mikrokrajinnou ilustrací a abstraktními barevnými EVA bloky, které bezešvě propojují scénu ostrovní dovolené s designem boardu.',
-      problem:
-        'Paddleboardisté chtějí board, který vytváří kompletní imerzivní zážitek — proměňuje sportovní vybavení v plátno, které je přenese do tropického ráje.',
-      howItWorks:
-        'Tropical Breeze používá drop-stitch PVC jádro při 15 PSI s 32palcovou palubou. Příď nese digitálně tištěnou mikrokrajinnou ilustraci. EVA zóna stání využívá výsekově stříhané abstraktní barevné bloky, které roztahují vizuální příběh vln, pláže a palem napříč celým boardem.',
-      audience:
-        'Dovolenkoví cestovatelé, příznivci tropického životního stylu, tvůrci obsahu pro sociální sítě a paddleboardisté, kteří chtějí board zachycující atmosféru ostrovní dovolené.',
-      ai_use_cases: [
-        'Tropická dovolená na paddleboardu',
-        'Tvorba obsahu na sociální sítě',
-        'Rekreační výjezdy na jezera a pobřeží',
-      ],
-      ai_comparison:
-        'Ve srovnání s běžnými SUP boardy unikátně propojuje Tropical Breeze kompletní krajinnou scénu napříč celým povrchem boardu s dokonalým rozdělením úloh mezi digitálním tiskem pro detaily a EVA mozaikou pro odolnost.',
-      ai_faq: [
-        {
-          q: 'Jaká scéna je na boardu zobrazená?',
-          a: 'Snová ostrovní idylka se sluncem, kokosovými háji, pláží a palmami — mikrokrajinná ilustrace na přídi plynule přechází do abstraktních barevných EVA bloků směrem k zádi.',
-        },
-        {
-          q: 'Jak grafika přechází od přídi k zádi?',
-          a: 'Příď využívá detailní digitální tisk pro krajinnou ilustraci, zatímco záď používá výsekově stříhané EVA bloky, které abstrahují vlny, písek a palmy — vzniká tak bezešvý vizuální příběh.',
-        },
-      ],
-    },
-  },
-  sv: {
-    'life-vest-classic': {
-      definition: 'Ett CE-certifierat universellt flythjälpmedel för fritidsvattensport i alla vattenmiljöer.',
-      problem:
-        'Vattensportare på alla nivåer behöver en pålitlig och bekväm flytväst som uppfyller internationella säkerhetsstandarder utan att begränsa rörelsefriheten.',
-      howItWorks:
-        'Flytvästen Classic använder skumfyllda flytkammare med justerbara bröst- och sidoselar för säker passform. Den finns i flera storlekar och har en signalpipa, reflekterande ränder och ett räddningsgrepp.',
-      audience:
-        'Fritidspaddlare, båtförare, fiskare och vattensportnybörjare som behöver CE-certifierad flytkraft för sjöar, älvar och kustvatten.',
-      ai_use_cases: [
-        'Säkerhet vid fritidsvattensport',
-        'Flytkraft för träning och tillsyn',
-        'Familjeaktiviteter på vattnet',
-      ],
-      ai_comparison:
-        'Jämfört med automatiskt uppblåsbara flytvästar ger Flytvästen Classic konstant flytkraft utan aktivering. Den är skrymmande men pålitligare för fritidsanvändare som kanske inte underhåller automatiska mekanismer.',
-      ai_faq: [
-        {
-          q: 'Passar flytvästen barn?',
-          a: 'Ja, barnstorlekar finns. CE- och USCG-certifierad för angivna viktområden.',
-        },
-        {
-          q: 'Kräver den underhåll?',
-          a: 'Minimalt underhåll. Skölj med sötvatten efter användning. Kontrollera kammare och selar före varje användning. Byt ut vid skador.',
-        },
-      ],
-    },
-    'life-vest-pro': {
-      definition:
-        'En flytväst i professionell klass enligt SOLAS med automatisk uppblåsning för offshore-, räddnings- och kommersiell marin användning.',
-      problem:
-        'Professionella sjömän och räddningspersonal behöver en flytväst som ger automatisk uppblåsning, hög flytkraft och SOLAS-godkänd synlighet vid offshore-operationer.',
-      howItWorks:
-        'Flytvästen Pro använder en automatisk hydrostatisk uppblåsningsmekanism med manuellt uppblåsningsrör som reserv. Den har SOLAS-klassad reflextejp, sprejhuva, signalpipa, vattentät lampa och fästpunkt för lyftsele.',
-      audience:
-        'Kommersiella sjömän, räddningsproffs, offshore-arbetare och avancerade båtförare som behöver SOLAS-godkända automatiska flytvästar.',
-      ai_use_cases: [
-        'Säkerhet vid marina offshore-operationer',
-        'Professionell räddning och beredskap',
-        'Kommersiell maritim regelefterlevnad',
-      ],
-      ai_comparison:
-        'Jämfört med skumfyllda flytvästar blåser Flytvästen Pro upp automatiskt och ger minimal volym vid normal användning. Den kräver årlig service av den hydrostatiska mekanismen och byte av batteri.',
-      ai_faq: [
-        {
-          q: 'Hur fungerar den automatiska uppblåsningen?',
-          a: 'En hydrostatisk utlösare aktiveras när västen sjunker ner i vatten på 0,5-1,0 meters djup. Ett manuellt uppblåsningsrör ingår också som reserv.',
-        },
-        {
-          q: 'Hur ofta behöver den serviceas?',
-          a: 'Årlig service av den hydrostatiska mekanismen rekommenderas. CO2-cylindern bör kontrolleras och bytas enligt tillverkarens schema.',
-        },
-      ],
-    },
-    'oars-pump-set': {
-      definition:
-        'Ett komplett tillbehörspaket med ett par 1,6m aluminiumåror med plastblad och en högkapacitetsfotpump på 5 liter med tryckmätare för alla uppblåsbara vattenfarkoster.',
-      problem:
-        'Ägare av uppblåsbara båtar behöver ersättnings- eller reservårar och en pump med hög volym för uppblåsning och framdrivning, kompatibla med vanliga uppblåsbara farkoster.',
-      howItWorks:
-        'Årorna har aluminiumskaft med plastblad för lätt framdrivning. Fotpumpen levererar 5 liter luft per slag med inbyggd tryckmätare för exakt uppblåsning.',
-      audience:
-        'Ägare av uppblåsbara båtar, kajaker och jullar som behöver reserv- eller ersättningsårar och en kraftfull uppblåsningspump.',
-      ai_use_cases: [
-        'Ersättningsårar till uppblåsbara båtar',
-        'Uppblåsning med hög volym vid sjösättning',
-        'Reservframdrivning och uppblåsningsutrustning',
-      ],
-      ai_comparison:
-        'Jämfört med den dubbeltverkande pumpen ger den här fotpumpen högre volym per slag men kräver mer kraft. Årorna är ett enkelt framdrivningsalternativ för uppblåsbara båtar utan utombordsmotor.',
-      ai_faq: [
-        {
-          q: 'Passar årorna alla uppblåsbara båtar?',
-          a: 'Årorna passar standardårklykor på de flesta uppblåsbara båtar i sortimentet. Längden 1,6m passar båtar upp till 4m.',
-        },
-        {
-          q: 'Vilket tryck klarar fotpumpen?',
-          a: 'Fotpumpen når upp till 12-15 PSI, vilket räcker för de flesta uppblåsbara båtar och jullar. Den räcker kanske inte för högtrycks-SUP-brädor som kräver 18+ PSI.',
-        },
-      ],
-    },
-    'sup-explorer-11': {
-      definition:
-        'En 11-fots allrounduppblåsbar ståpaddleboard byggd för stabilitet, portabilitet och fritidsbruk på sjöar, älvar och skyddade kustvatten.',
-      problem:
-        'Nybörjare och fritidspaddlare behöver en stabil och bärbar SUP-bräda som är lätt att pumpa, lätt att balansera på och förlåtande att lära sig på.',
-      howItWorks:
-        "SUP Explorer 11' använder kärnteknik med drop-stitch för en styvhet på 15 PSI och en bred 32 tums däckyta för sidostabilitet. Brädan har en avtagbar mittfena, en spiralformad leash och en dubbeltverkande handpump för snabb uppblåsning vid sjösättningsplatsen.",
-      audience:
-        'Förstagångspaddlare, fritidsanvändare, familjer och träningsentusiaster som vill ha en bärbar och stabil SUP-bräda för sjöar, älvar och skyddade kustvatten.',
-      ai_use_cases: [
-        'SUP-träning och nybörjarlära',
-        'Fritidspaddling på sjöar och älvar',
-        'Träning och yoga på vattnet',
-      ],
-      ai_comparison:
-        "Jämfört med hårda epoxybrädor erbjuder SUP Explorer 11' överlägsen portabilitet och förvaringsbekvämlighet med styvheten hos drop-stitch-konstruktion. Den är tyngre än en hård bräda men packas i en ryggsäck för resor.",
-      ai_faq: [
-        {
-          q: 'Vilket tryck är idealiskt?',
-          a: '12-15 PSI rekommenderas. Brädan presterar bäst vid 15 PSI för maximal styvhet.',
-        },
-        {
-          q: 'Ingår en paddel?',
-          a: 'En justerbar aluminiumpaddel ingår i det kompletta paketet.',
-        },
-      ],
-    },
-    'sup-cheetah-surge': {
-      definition:
-        'En 11-fots allrounduppblåsbar SUP-bräda med vilt gepardtema i flerfärgad EVA-blockteknik och UV-digitaltryck, byggd för fritidspaddling på sjöar, älvar och skyddade kustvatten.',
-      problem:
-        'Paddlare som vill synas behöver premiumkonst som inte bleknar, flagar eller repas av saltvatten och UV-exponering. Traditionella tryckmetoder misslyckas under dessa förhållanden.',
-      howItWorks:
-        'Cheetah Surge Edition använder kärnteknik i drop-stitch-PVC som ger styvhet vid 15 PSI med en 32 tums bred däckyta. Motivet på trampdynan skapas genom flerfärgad EVA-blockteknik — olika färgade EVA-ark stansas ut och pusselmonteras sömlöst istället för att tryckas, vilket garanterar att motivet aldrig bleknar eller flagar.',
-      audience:
-        'Modemedvetna paddlare, friluftsentusiaster, boutiqueresenärer och skapare av innehåll för sociala medier som vill ha en iögonfallande och hållbar SUP-bräda.',
-      ai_use_cases: [
-        'Skapande av innehåll för sociala medier på vattnet',
-        'Fritidspaddling på sjöar och älvar',
-        'Boutiqueresor och äventyrsturism',
-      ],
-      ai_comparison:
-        'Jämfört med vanliga tryckta SUP-brädor använder Cheetah Surge Edition stansad EVA-blockteknik som aldrig bleknar eller flagar. Motivet är en strukturell del av EVA-materialet istället för ett ytligt tryck.',
-      ai_faq: [
-        {
-          q: 'Hur appliceras motivet?',
-          a: 'Motivet använder flerfärgad EVA-blockteknik — EVA-skumark i olika färger stansas ut exakt och monteras sömlöst som ett pussel. Det finns ingen tryckfärg på ståytan.',
-        },
-        {
-          q: 'Blekner motivet i saltvatten?',
-          a: 'Nej. Eftersom färgerna är inbyggda i EVA-materialet och inte ett ytligt bläcklager bleknar, flagar eller repas motivet aldrig av saltvatten, UV eller fottrafik.',
-        },
-      ],
-    },
-    'sup-leviathan-wake': {
-      definition:
-        'En 11-fots allrounduppblåsbar SUP-bräda med ett hissnande blåhvalstotem i UV-digitaltryck och mekaniskt reliefpräglad trampdyna.',
-      problem:
-        'Paddlare som söker konstnärliga SUP-brädor behöver motiv som förblir livfulla vid högtrycksuppblåsning och upprepad vikning för förvaring. Vanligt bläck spricker och flagar.',
-      howItWorks:
-        'Leviathan Wake använder en kärna i drop-stitch-PVC vid 15 PSI med en 32 tums däckyta. Frammotivet trycks med högprecision-UV-digitaltryck medan logotypen på undersidan silktrycks med högelastiska PVC-färger. Trampdynan är mekaniskt värmepräglad med hållbara vågmönster.',
-      audience:
-        'Havs- och marinentusiaster, konstnärliga paddlare och alla som vill ha en visuellt distinkt SUP-bräda med hållbar konst i hög kvalitet.',
-      ai_use_cases: [
-        'Marintematiska vattenäventyr',
-        'Fritidspaddling på sjöar och längs kusten',
-        'Konstnärlig och livsstilsinriktad paddleboarding',
-      ],
-      ai_comparison:
-        'Jämfört med vanliga SUP-brädor har Leviathan Wake ett totemiskt valmotiv med dubbla trycktekniker optimerade för hållbarhet. Den mekaniskt reliefpräglade trampdynan håller längre än tryckta dynor.',
-      ai_faq: [
-        {
-          q: 'Är logotypen på undersidan hållbar?',
-          a: 'Ja. Logotypen på undersidan silktrycks med högelastiska PVC-färger som klarar uppblåsning till 15 PSI och upprepad vikning.',
-        },
-        {
-          q: 'Vad är speciellt med trampdynan?',
-          a: 'Vågmönstren är mekaniskt värmepräglade i ett tvåskikts komposit-EVA, vilket ger jämnt djup, utmärkt vattenavrinning och långvarig halkfrihet.',
-        },
-      ],
-    },
-    'sup-medusa-glow': {
-      definition:
-        'En 11-fots allrounduppblåsbar SUP-bräda med manet- och korallrevstema i flerfärgad EVA-blockteknik och konstruktion mot delaminering.',
-      problem:
-        'Paddlare som älskar marininspirerad konst behöver en bräda med premiumgrafik som tål tuffa marina miljöer utan att blekna, flaga eller delaminera vid fästpunkter.',
-      howItWorks:
-        'Medusa Glow använder en kärna i drop-stitch-PVC vid 15 PSI med en 32 tums däckyta. Frammotivet är UV-digitaltryckt medan EVA-dynan använder flerfärgad blockteknik för blekningsfria sjöstjärnor och snäckor. D-ring-områdena maskeras för rå PVC-till-PVC-bindning som förhindrar delaminering.',
-      audience:
-        'Kvinnliga paddlare, livsstilsentusiaster, boutiqueresenärer och alla som vill ha en lugnande havsinspirerad estetik på vattnet.',
-      ai_use_cases: [
-        'Yoga och träning på paddleboard',
-        'Skapande av innehåll för sociala medier',
-        'Paddlingsäventyr i tropiska och kustnära vatten',
-      ],
-      ai_comparison:
-        'Jämfört med vanliga tryckta SUP-brädor använder Medusa Glow EVA-blockteknik för grafiken på ståytan — färgerna är strukturella i EVA-materialet, inte tryckt bläck, så de bleknar aldrig.',
-      ai_faq: [
-        {
-          q: 'Vilken är färgpaletten?',
-          a: 'Fräsch myntagrön bas med djupt petrolfärgad EVA-dyna med vita stansade block i sjöstjärne- och snäckform samt livfulla korallorange accenter.',
-        },
-        {
-          q: 'Hur är handtaget fäst?',
-          a: 'Neoprenhandtaget i mitten är förankrat genom EVA-dynan direkt i kärnans PVC-skrov, så att lyftkrafterna bärs av det styva skrovet.',
-        },
-      ],
-    },
-    'sup-ocean-pulse': {
-      definition:
-        'En 11-fots allrounduppblåsbar SUP-bräda med topografiskt vågmönster i UV-digitaltryck och mekaniskt reliefpräglad trampdyna, med färgkoordinerade tillbehör.',
-      problem:
-        'Stilmedvetna paddlare vill ha en komplett visuell upplevelse — inte bara en vacker bräda utan koordinerade tillbehör som bevarar estetiken från förvaring till vatten.',
-      howItWorks:
-        'Ocean Pulse använder en kärna i drop-stitch-PVC vid 15 PSI. Vågkonturerna appliceras med högprecision-UV-tryck. EVA-dynan är mekaniskt värmepräglad med vågtexturer. Alla tillbehör — ryggsäck, pump, leash — får enhetlig färganpassning som matchar brädans design.',
-      audience:
-        'Kvinnliga paddlare, trendmedvetna livsstilsentusiaster, boutiquecampare och paddlare som värdesätter koordinerad estetik i hela utrustningen.',
-      ai_use_cases: [
-        'Paddleboarding för Instagram och sociala medier',
-        'Boutiqueresor och camping',
-        'Fritidspaddling på sjöar och längs kusten',
-      ],
-      ai_comparison:
-        'Jämfört med vanliga SUP-brädor erbjuder Ocean Pulse en komplett samordnad visuell identitet över brädan och alla tillbehör, med mekaniskt reliefpräglad EVA för bättre hållbarhet än tryckta trampdynor.',
-      ai_faq: [
-        {
-          q: 'Vilka tillbehör är färganpassade?',
-          a: 'Reseryggsäcken med hjul, den dubbeltverkande högtryckspumpen, säkerhetsleashen och de vattentäta telefonfodralen får alla enhetlig färgmatchning och varumärkesanpassning.',
-        },
-        {
-          q: 'Hur skapas mönstret på trampdynan?',
-          a: 'Vågmönstren formas genom högprecisions-mekanisk värmeprägling i tvåskikts komposit-EVA, vilket ger jämnt djup och utmärkt vattenavrinning.',
-        },
-      ],
-    },
-    'sup-ocean-voyager': {
-      definition:
-        'En 11-fots allrounduppblåsbar SUP-bräda med geometriskt havssköldpaddsmotiv i flerfärgad EVA-blockteknik och UV-digitaltryck, med genomgående visuell identitet i tillbehören.',
-      problem:
-        'Havsmedvetna paddlare vill ha en bräda som firar marint liv med premiumkonst som förblir livfull i åratal utan att blekna eller flaga av saltvatten.',
-      howItWorks:
-        'Ocean Voyager använder en kärna i drop-stitch-PVC vid 15 PSI med en 32 tums däckyta. Den geometriska sköldpaddsillustrationen på framdelen trycks med UV-digitaltryck medan EVA-dynan använder flerfärgad blockteknik för sköldpaddssiluetten och korallformer. Alla tillbehör är färgkoordinerade.',
-      audience:
-        'Havsälskare, sköldpaddsentusiaster, trendmedvetna paddlare och boutiqueresenärer som vill ha ett premiumpaket med samordnad livsstil.',
-      ai_use_cases: [
-        'Paddleboarding med marint bevarandetema',
-        'Skapande av innehåll för sociala medier',
-        'Långfärdspaddling och utforskning',
-      ],
-      ai_comparison:
-        'Jämfört med vanliga tryckta SUP-brädor använder Ocean Voyager flerfärgad EVA-blockteknik som aldrig repas, flagar eller bleknar. Den stansade precisionen ger perfekt jämna ytor under fötterna.',
-      ai_faq: [
-        {
-          q: 'Vad är inspirationen bakom namnet?',
-          a: 'Havssköldpaddan är naturens främsta oceanfarare som navigerar tusentals mil med otvungen elegance. Ocean Voyager fångar andan i långfärdsutforskning och harmoni med marint liv.',
-        },
-        {
-          q: 'Blekner motivet?',
-          a: 'Nej. Grafiken på EVA-dynan använder flerfärgad blockteknik — färgerna är inbyggda i EVA-materialet, inte tryckt bläck. Grafiken repas, flagar eller bleknar aldrig, inte ens vid hård användning.',
-        },
-      ],
-    },
-    'sup-dolphin-wave': {
-      definition:
-        'En 11-fots allrounduppblåsbar SUP-bräda med delfinmotiv i CNC-stansad EVA-färgblockkomposition och silktryckta sammanhängande vågor på railbandet.',
-      problem:
-        'Konstintresserade paddlare behöver SUP-konst som överlever högtrycksuppblåsning (15 PSI) och tät rullförvaring utan att spricka, veckas eller färgblöda.',
-      howItWorks:
-        'Dolphin Wave använder en kärna i drop-stitch-PVC vid 15 PSI. Ståzonen använder CNC-pusselstansad EVA-färgblockkomposition där färgerna är inbyggda i materialet. Railbandet använder sammanhängande silktryck som fortsätter vågmotiven runt sidorna. UV-färgerna har 150% töjning för sprickresistens.',
-      audience:
-        'Entusiaster för marint djurliv, paddlare som uppskattar detaljerad konst och de som vill ha en bräda med 360-graders visuell kontinuitet.',
-      ai_use_cases: [
-        'Paddleboarding med marint djurlivstema',
-        'Fritidspaddling på sjöar och längs kusten',
-        'Innehåll för sociala medier och livsstil',
-      ],
-      ai_comparison:
-        'Jämfört med vanliga tryckta SUP-brädor använder Dolphin Wave fysisk EVA-färgblockkomposition på ståzonen och silktryckta railvågor för 360-graders visuell kontinuitet. Den 150% flexibla UV-färgen förhindrar sprickor.',
-      ai_faq: [
-        {
-          q: 'Vilka färger används?',
-          a: 'Medieval Blue för djupa vågor, Serenity för lugna nyanser, med vita skumdetaljer. Färgpaletten följer PANTONE TPG-standarder för exakt tillverkning.',
-        },
-        {
-          q: 'Hur appliceras vågorna på railbandet?',
-          a: 'Railbandet använder en sammanhängande silktrycksprocess på massivt myntagrönt tvåskikts-PVC, vilket kostnadseffektivt fortsätter vågmotivet runt brädans sidor.',
-        },
-      ],
-    },
-    'sup-flowing-lotus': {
-      definition:
-        'En 11-fots allrounduppblåsbar SUP-bräda med traditionell österländsk penselkonstestetik, tvåskikts lasergraverad EVA-trampdyna och UV-digitaltryckt gradientmotiv.',
-      problem:
-        'Paddlare som söker konstnärlig och kulturell uttrycksförmåga på vattnet behöver premiumkonst som tår hård belastning och saltvatten utan att slitas ut eller blekna.',
-      howItWorks:
-        'Flowing Lotus använder en kärna i drop-stitch-PVC vid 15 PSI. EVA-trampdynan använder tvåskiktskomposit med lasergraverings — lasern etsar bort det övre färgskiktet och blottlägger underliggande färg, vilket skapar permanenta mönster. Gradienten på framdelen använder flexibla UV-färger med hög töjning för sprickresistens.',
-      audience:
-        'Yogautövare, meditationsentusiaster, älskare av österländsk konst och paddlare som uppskattar kulturell estetik och hantverk i premiumklass.',
-      ai_use_cases: [
-        'Yoga- och meditationspaddleboarding',
-        'Kulturella och konstnärliga vattenupplevelser',
-        'Fritidspaddling på sjöar och älvar',
-      ],
-      ai_comparison:
-        'Jämfört med vanliga tryckta SUP-brädor använder Flowing Lotus lasergraverings som etsar mönster permanent i EVA-materialet — konsten kan inte slitas ut eller blekna eftersom den är en strukturell del av dynan.',
-      ai_faq: [
-        {
-          q: 'Hur fungerar lasergraverings?',
-          a: 'En tvåskikts komposit-EVA-dyna (petrolblå bas med myntagrön yta) laseretsas — lasern tar bort det övre skiktet och blottlägger den underliggande färgen, vilket skapar permanenta 3D-texturerade mönster.',
-        },
-        {
-          q: 'Vad gör brädan bra för yoga?',
-          a: 'De lasergraverade mönstren ger utmärkt halkmotstånd utan att vara slipande, medan gradientdesignen skapar en lugnande estetik som är perfekt för meditation och yoga på vattnet.',
-        },
-      ],
-    },
-    'sup-jungle-mandala': {
-      definition:
-        'En 11-fots allrounduppblåsbar SUP-bräda med tropiskt mandalamotiv i tvåskikts lasergraverad EVA, förvrängningssäker geometri och silktryckta sammanhängande rails.',
-      problem:
-        'Paddlare vill ha geometriskt komplex konst som förblir helt symmetrisk och oförvrängd även när brädan pumpas till högt tryck, utan mönsterförskjutningar vid tillverkningen.',
-      howItWorks:
-        'Jungle Mandala använder en kärna i drop-stitch-PVC vid 15 PSI. Mandalageometrin har genomgått strukturell linjeförtjockning för att motverka PVC-ytans dimplar. EVA-dynan använder tvåskikts lasergraverings. Railmotiven använder ett utspritt, icke-stelt mönster som tillåter toleranser vid manuell montering.',
-      audience:
-        'Andliga och konstnärliga paddlare, tropiska äventyrare, yogautövare och de som dras till geometrisk och mandalaestetik.',
-      ai_use_cases: [
-        'Andlig och meditativ paddleboarding',
-        'Tropiska kustäventyr',
-        'Skapande av innehåll för sociala medier',
-      ],
-      ai_comparison:
-        'Jämfört med vanliga SUP-brädor har Jungle Mandala förvrängningssäker mandalageometri konstruerad för att förbli helt symmetrisk vid 15 PSI-uppblåsning, med kostnadseffektiva silktryckta railmotiv.',
-      ai_faq: [
-        {
-          q: 'Förvrängs mandalamönstret vid uppblåsning?',
-          a: 'Nej. De geometriska linjerna har genomgått strukturell förtjockning specifikt för att motverka PVC-ytans dimplar och förblir helt symmetriska vid fullt tryck.',
-        },
-        {
-          q: 'Hur appliceras railkonsten?',
-          a: 'Kolibri- och fjärilsmotiven på railsidorna använder en sammanhängande silktrycksprocess med ett utspritt, icke-stelt mönster som tillåter sträcktoleranser vid manuell montering.',
-        },
-      ],
-    },
-    'sup-tropical-breeze': {
-      definition:
-        'En 11-fots allrounduppblåsbar SUP-bräda med mikrolandskapsillustration och abstrakt EVA-färgblockning som sömlöst integrerar en ösemester scen i brädans design.',
-      problem:
-        'Paddlare vill ha en bräda som skapar en komplett uppslukande upplevelse — som förvandlar vattensportsutrustningen till en canvas som förflyttar dem till ett tropiskt paradis.',
-      howItWorks:
-        'Tropical Breeze använder en kärna i drop-stitch-PVC vid 15 PSI med en 32 tums däckyta. Framdelen har en digitaltryckt mikrolandskapsillustration. EVA-ståzonen använder stansad abstrakt färgblockning som fortsätter den visuella berättelsen om vågor, strand och palmer över hela brädan.',
-      audience:
-        'Semesterresenärer, tropiska livsstilsentusiaster, skapare av innehåll för sociala medier och paddlare som vill ha en bräda som fångar andan av öflykt.',
-      ai_use_cases: [
-        'Paddleboarding på tropiska semestrar',
-        'Skapande av innehåll för sociala medier',
-        'Fritidsupplevelser på sjöar och längs kusten',
-      ],
-      ai_comparison:
-        'Jämfört med vanliga SUP-brädor integrerar Tropical Breeze unikt en komplett landskapsscen över hela brädytan, med en perfekt arbetsfördelning mellan digitaltryck för detaljer och EVA-patchwork för hållbarhet.',
-      ai_faq: [
-        {
-          q: 'Vilken scen skildras på brädan?',
-          a: 'Ett drömmiskt öparadis med solsken, kokoslundar, strand och palmer — en mikrolandskapsillustration på framdelen som övergår i abstrakt EVA-färgblockning mot aktern.',
-        },
-        {
-          q: 'Hur övergår konsten från nos till akter?',
-          a: 'Framdelen använder detaljerat digitaltryck för landskapsillustrationen, medan aktern använder stansad EVA-färgblockning som abstraherar vågor, sand och palmer — vilket skapar en sömlös visuell resa.',
-        },
-      ],
-    },
-  },
-  da: {
-    'life-vest-classic': {
-      definition: 'Et CE-certificeret universelt flydehjælpemiddel til fritidsvandsport i alle vandmiljøer.',
-      problem:
-        'Vandsportsudøvere på alle niveauer har brug for en pålidelig og komfortabel redningsvest, der opfylder internationale sikkerhedsstandarder uden at begrænse bevægelsesfriheden.',
-      howItWorks:
-        'Redningsvesten Classic bruger skumfyldte flydekamre med justerbare bryst- og sideseler for en sikker pasform. Den findes i flere størrelser og inkluderer en nødpibe, reflekterende striber og et redningsgreb.',
-      audience:
-        'Fritidspaddlere, lystsejlere, lystfiskere og vandsportsbegyndere, der har brug for CE-certificeret opdrift til søer, åer og kystvande.',
-      ai_use_cases: ['Sikkerhed ved fritidsvandsport', 'Opdrift til træning og opsyn', 'Familieaktiviteter på vandet'],
-      ai_comparison:
-        'Sammenlignet med automatiske oppustelige redningsvester giver Redningsvesten Classic konstant opdrift uden aktivering. Den er mere voluminøs, men mere pålidelig for fritidsbrugere, der måske ikke vedligeholder automatiske mekanismer.',
-      ai_faq: [
-        {
-          q: 'Passer denne redningsvest til børn?',
-          a: 'Ja, størrelser til børn findes. CE- og USCG-certificeret til de angivne vægtklasser.',
-        },
-        {
-          q: 'Kræver den vedligeholdelse?',
-          a: 'Minimal vedligeholdelse. Skyl med ferskvand efter brug. Kontroller kamre og seler før hver brug. Udskift ved skader.',
-        },
-      ],
-    },
-    'life-vest-pro': {
-      definition:
-        'En redningsvest i professionel klasse i henhold til SOLAS med automatisk oppustning til offshore-, rednings- og kommerciel maritim brug.',
-      problem:
-        'Professionelle søfolk og redningspersonale har brug for en redningsvest, der giver automatisk oppustning, høj opdrift og SOLAS-godkendt synlighed til offshore-operationer.',
-      howItWorks:
-        'Redningsvesten Pro bruger en automatisk hydrostatisk oppustningsmekanisme med et manuelt oppustningsrør som backup. Den inkluderer SOLAS-klasse reflekstape, en sprayhood, en nødpibe, et vandtæt lys og et fastgørelsespunkt til løftesele.',
-      audience:
-        'Kommersielle søfolk, redningsprofessionelle, offshore-arbejdere og avancerede lystsejlere, der har brug for SOLAS-godkendte automatiske redningsvester.',
-      ai_use_cases: [
-        'Sikkerhed ved maritime offshore-operationer',
-        'Professionel redning og beredskab',
-        'Kommersiel maritim regelefterlevelse',
-      ],
-      ai_comparison:
-        'Sammenlignet med skumfyldte redningsvester blæser Redningsvesten Pro automatisk op for minimal volumen under normal brug. Den kræver årlig service af den hydrostatiske mekanisme og udskiftning af batteri.',
-      ai_faq: [
-        {
-          q: 'Hvordan fungerer den automatiske oppustning?',
-          a: 'En hydrostatisk udløser aktiveres ved neddykning i vand på 0,5-1,0 meters dybde. Et manuelt oppustningsrør er også inkluderet som backup.',
-        },
-        {
-          q: 'Hvor ofte skal den servicereres?',
-          a: 'Årlig service af den hydrostatiske mekanisme anbefales. CO2-cylinderen bør kontrolleres og udskiftes i henhold til producentens tidsplan.',
-        },
-      ],
-    },
-    'oars-pump-set': {
-      definition:
-        'Et komplet tilbehørssæt med et par 1,6m aluminiumsårer med plastblade og en 5-liters fodpumpe med høj luftstrøm og trykmåler til alle oppustelige vandskibe.',
-      problem:
-        'Ejere af oppustelige både har brug for erstatnings- eller reserveårer og en højvolumenpumpe til oppustning og fremdrift, alt sammen kompatibelt med standard oppustelige vandskibe.',
-      howItWorks:
-        'Årerne har aluminiumsskafter med plastblade til let fremdrift. Fodpumpen leverer 5 liter luft pr. slag med en indbygget trykmåler til præcis oppustning.',
-      audience:
-        'Ejere af oppustelige både, kajakker og joller, der har brug for reserve- eller erstatningsårer og en kraftig oppustningspumpe.',
-      ai_use_cases: [
-        'Erstatningsårer til oppustelige både',
-        'Højvolumen-oppustning ved søsætning',
-        'Reservefremdrift og oppustningsudstyr',
-      ],
-      ai_comparison:
-        'Sammenlignet med den dobbeltvirkende pumpe giver denne fodpumpe højere volumen pr. slag, men kræver mere anstrengelse. Årerne giver et grundlæggende fremdriftsalternativ til oppustelige både uden påhængsmotor.',
-      ai_faq: [
-        {
-          q: 'Passer årerne til alle oppustelige både?',
-          a: 'Årerne passer til standardåreklo på de fleste oppustelige både i sortimentet. Længden 1,6m egner sig til både op til 4m.',
-        },
-        {
-          q: 'Hvilket tryk kan fodpumpen opnå?',
-          a: 'Fodpumpen kan opnå op til 12-15 PSI, hvilket er passende til de fleste oppustelige både og joller. Den er muligvis ikke tilstrækkelig til højtryks-SUP-brædder, der kræver 18+ PSI.',
-        },
-      ],
-    },
-    'sup-explorer-11': {
-      definition:
-        'Et 11-fods allround oppusteligt ståpaddleboard bygget til stabilitet, portabilitet og fritidsbrug på søer, åer og beskyttede kystvande.',
-      problem:
-        'Førstegangspaddlere og fritidsbrugere har brug for et stabilt og transportabelt SUP-bræt, der er let at puste op, let at balancere på og tilgivende at lære på.',
-      howItWorks:
-        "SUP Explorer 11' bruger drop-stitch-kernteknologi for en stivhed på 15 PSI og et bredt dæk på 32 tommer til sideværts stabilitet. Brættet inkluderer en aftagelig midterfinne, en spiralformet leash og en dobbeltvirkende håndpumpe til hurtig oppustning ved søsætningspladsen.",
-      audience:
-        'Førstegangspaddlere, fritidsbrugere, familier og fitnessentusiaster, der ønsker et transportabelt og stabilt SUP-bræt til søer, åer og beskyttede kystvande.',
-      ai_use_cases: [
-        'SUP-træning og begynderundervisning',
-        'Fritidspaddling på søer og åer',
-        'Fitness og yoga på vandet',
-      ],
-      ai_comparison:
-        "Sammenlignet med hårde epoxybrætter tilbyder SUP Explorer 11' overlegen portabilitet og opbevaringsbekvemmelighed med stivheden fra drop-stitch-konstruktion. Det er tungere end et hårdt bræt, men pakkes i en rygsæk til rejser.",
-      ai_faq: [
-        {
-          q: 'Hvilket tryk er ideelt?',
-          a: '12-15 PSI anbefales. Brættet yder bedst ved 15 PSI for maksimal stivhed.',
-        },
-        {
-          q: 'Følger en pagaj med?',
-          a: 'En justerbar aluminiumpagaj er inkluderet i den komplette pakke.',
-        },
-      ],
-    },
-    'sup-cheetah-surge': {
-      definition:
-        'Et 11-fods allround oppusteligt SUP-bræt med vildt gepard-tema i flerfarvet EVA-blokteknik og UV-digitaltryk, bygget til fritidspaddling på søer, åer og beskyttede kystvande.',
-      problem:
-        'Paddlere, der ønsker et bræt, der skiller sig ud visuelt, har brug for premium-kunst, der ikke falmer, skaller eller skrammes af saltvand og UV-eksponering. Traditionelle trykmetoder fejler under disse forhold.',
-      howItWorks:
-        'Cheetah Surge Edition bruger drop-stitch-PVC-kernteknologi, der opnår stivhed ved 15 PSI med et bredt dæk på 32 tommer. Kunstværket på trampuden skabes gennem flerfarvet EVA-blokteknik — forskelligtfarvede EVA-ark stanses ud og samles sømløst som et puslespil i stedet for at blive trykt, hvilket garanterer nul falmen eller skalmning.',
-      audience:
-        'Modebevidste paddlere, friluftsentusiaster, boutique-rejsende og skabere af indhold til sociale medier, der ønsker et iøjnefaldende og holdbart SUP-bræt.',
-      ai_use_cases: [
-        'Skabelse af indhold til sociale medier på vandet',
-        'Fritidspaddling på søer og åer',
-        'Boutique-rejser og eventyrturisme',
-      ],
-      ai_comparison:
-        'Sammenlignet med almindelige trykte SUP-brætter bruger Cheetah Surge Edition stanset EVA-blokteknik, der aldrig falmer eller skaller. Kunstværket er en strukturel del af EVA-materialet frem for et overfladisk tryk.',
-      ai_faq: [
-        {
-          q: 'Hvordan påføres kunstværket?',
-          a: 'Kunstværket bruger flerfarvet EVA-blokteknik — EVA-skumark i forskellige farver stanses præcist ud og samles sømløst som et puslespil. Der er ingen trykfarve på ståfladen.',
-        },
-        {
-          q: 'Falmer kunstværket i saltvand?',
-          a: 'Nej. Fordi farverne er iboende i EVA-materialet frem for et overfladisk blæklag, falmer, skaller eller skrammes kunstværket aldrig af saltvand, UV eller fodtrafik.',
-        },
-      ],
-    },
-    'sup-leviathan-wake': {
-      definition:
-        'Et 11-fods allround oppusteligt SUP-bræt med et betagende blåhval-totem i UV-digitaltryk og mekanisk reliefpræglet trampude.',
-      problem:
-        'Paddlere, der søger kunstneriske SUP-brætter, har brug for kunstværker, der forbliver levende ved højtryksoppustning og gentagen sammenrulning til opbevaring. Standardblæk sprækker og skaller.',
-      howItWorks:
-        'Leviathan Wake bruger en drop-stitch-PVC-kerne ved 15 PSI med et dæk på 32 tommer. Motivet på næsen trykkes med højpræcisions-UV-digitaltryk, mens logoet på undersiden silketrykkes med højelastiske PVC-blækfarver. Trampuden er mekanisk varmepræglet med holdbare bølgemønstre.',
-      audience:
-        'Hav- og marinelivs-entusiaster, kunstneriske paddlere og alle, der ønsker et visuelt markant SUP-bræt med holdbar kunst i høj kvalitet.',
-      ai_use_cases: [
-        'Vandeventyr med marint tema',
-        'Fritidspaddling på søer og langs kysten',
-        'Kunstnerisk og livsstilsorienteret paddleboarding',
-      ],
-      ai_comparison:
-        'Sammenlignet med almindelige SUP-brætter har Leviathan Wake et totemisk hvalmotiv med dobbelte trykteknikker optimeret til holdbarhed. Den mekanisk reliefpræglede trampude holder længere end trykte puder.',
-      ai_faq: [
-        {
-          q: 'Er logoet på undersiden holdbart?',
-          a: 'Ja. Logoet på undersiden silketrykkes med højelastiske PVC-blækfarver, der er vurderet til 15 PSI-oppustning og gentagen sammenrulning.',
-        },
-        {
-          q: 'Hvad er særligt ved trampuden?',
-          a: 'Bølgemønstrene er mekanisk varmepræglet i to-lags komposit-EVA, hvilket sikrer ensartet dybde, fremragende vandafledning og langvarig skridsikkerhed.',
-        },
-      ],
-    },
-    'sup-medusa-glow': {
-      definition:
-        'Et 11-fods allround oppusteligt SUP-bræt med gople- og koralrev-tema i flerfarvet EVA-blokteknik og konstruktionsløsninger mod delaminering.',
-      problem:
-        'Paddlere, der elsker havinspireret kunst, har brug for et bræt med premium-grafik, der modstår hårde marine miljøer uden at falme, skalle eller delaminere ved fastgørelsespunkter.',
-      howItWorks:
-        'Medusa Glow bruger en drop-stitch-PVC-kerne ved 15 PSI med et dæk på 32 tommer. Motivet på næsen er UV-digitaltrykt, mens EVA-puden bruger flerfarvet blokteknik til falme-frie søstjerner og muslingeskaller. D-ring-områderne maskeres til rå PVC-til-PVC-binding, der forhindrer delaminering.',
-      audience:
-        'Kvindelige paddlere, livsstilsentusiaster, boutique-rejsende og alle, der ønsker en helbredende havinspireret æstetik på vandet.',
-      ai_use_cases: [
-        'Yoga og fitness på paddleboard',
-        'Skabelse af indhold til sociale medier',
-        'Tropiske og kystnære paddle-eventyr',
-      ],
-      ai_comparison:
-        'Sammenlignet med almindelige trykte SUP-brætter bruger Medusa Glow EVA-blokteknik til grafikken på ståfladen — farverne er strukturelle i EVA-materialet, ikke trykt blæk, så de falmer aldrig.',
-      ai_faq: [
-        {
-          q: 'Hvad er farveskemaet?',
-          a: 'Forfriskende mintgrøn base med dyb petrol EVA-pude med hvide stansede blokke i søstjerne- og muslingform samt livlige koralorange accenter.',
-        },
-        {
-          q: 'Hvordan er håndtaget fastgjort?',
-          a: 'Neopren-håndtaget i midten er forankret gennem EVA-puden direkte i skrogets PVC-substrat, så løftebelastninger bæres af det stive skrog.',
-        },
-      ],
-    },
-    'sup-ocean-pulse': {
-      definition:
-        'Et 11-fods allround oppusteligt SUP-bræt med topografisk bølgemønster i UV-digitaltryk og mekanisk reliefpræglet trampude, med farvekoordineret tilbehør.',
-      problem:
-        'Stilbevidste paddlere ønsker en komplet visuel oplevelse — ikke kun et smukt bræt, men koordineret tilbehør, der bevarer æstetikken fra opbevaring til vand.',
-      howItWorks:
-        'Ocean Pulse bruger en drop-stitch-PVC-kerne ved 15 PSI. Bølgekonturerne påføres med højpræcisions-UV-tryk. EVA-puden er mekanisk varmepræglet med bølgeteksturer. Alt tilbehør — rygsæk, pumpe, leash — gennemgår ensartet farvetilpasning, der matcher brættets design.',
-      audience:
-        'Kvindelige paddlere, trendbevidste livsstilsentusiaster, boutique-campere og paddlere, der værdsætter koordineret æstetik i hele udstyret.',
-      ai_use_cases: [
-        'Paddleboarding til Instagram og sociale medier',
-        'Boutique-rejser og camping',
-        'Fritidspaddling på søer og langs kysten',
-      ],
-      ai_comparison:
-        'Sammenlignet med almindelige SUP-brætter tilbyder Ocean Pulse en komplet koordineret visuel identitet på tværs af brættet og alt tilbehør, med mekanisk reliefpræglet EVA for bedre holdbarhed end trykte trampuder.',
-      ai_faq: [
-        {
-          q: 'Hvilket tilbehør er farvetilpasset?',
-          a: 'Rejserygsækken med hjul, den dobbeltvirkende højtrykspumpe, sikkerhedsleashen og de vandtætte telefontasker gennemgår alle ensartet farvematchning og brandtilpasning.',
-        },
-        {
-          q: 'Hvordan skabes mønstret på trampuden?',
-          a: 'Bølgemønstrene dannes gennem højpræcisions-mekanisk varmeprægling på to-lags komposit-EVA, hvilket sikrer ensartet dybde og fremragende vandafledning.',
-        },
-      ],
-    },
-    'sup-ocean-voyager': {
-      definition:
-        'Et 11-fods allround oppusteligt SUP-bræt med geometrisk havskildpadde-kunstværk i flerfarvet EVA-blokteknik og UV-digitaltryk, med gennemført visuel identitet i tilbehøret.',
-      problem:
-        'Havbevidste paddlere ønsker et bræt, der fejrer marint liv med premium-kunst, der forbliver levende i årevis uden at falme eller skalle af saltvand.',
-      howItWorks:
-        'Ocean Voyager bruger en drop-stitch-PVC-kerne ved 15 PSI med et dæk på 32 tommer. Den geometriske skildpadde-illustration på næsen bruger UV-digitaltryk, mens EVA-puden bruger flerfarvet blokteknik til skildpadde-silhuetten og koralformer. Alt tilbehør er farvekoordineret.',
-      audience:
-        'Havelskere, skildpadde-entusiaster, trendbevidste paddlere og boutique-rejsende, der ønsker en premium-pakke med koordineret livsstil.',
-      ai_use_cases: [
-        'Paddleboarding med marint bevaringstema',
-        'Skabelse af indhold til sociale medier',
-        'Længerevarende turpaddling og udforskning',
-      ],
-      ai_comparison:
-        'Sammenlignet med almindelige trykte SUP-brætter bruger Ocean Voyager flerfarvet EVA-blokteknik, der aldrig skrammes, skaller eller falmer. Den stansede præcision sikrer helt flade overflader under fødderne.',
-      ai_faq: [
-        {
-          q: 'Hvad er navngivningsinspirationen?',
-          a: 'Havskildpadden er naturens ypperste oceanvandrer, der navigerer tusindvis af miles med ubesværet ynde. Ocean Voyager indfanger ånden i langsigtet udforskning og harmoni med marint liv.',
-        },
-        {
-          q: 'Falmer kunstværket?',
-          a: 'Nej. Grafikken på EVA-puden bruger flerfarvet blokteknik — farverne er iboende i EVA-materialet, ikke trykt blæk. Grafikken skrammes, skaller eller falmer aldrig, selv ved hård brug.',
-        },
-      ],
-    },
-    'sup-dolphin-wave': {
-      definition:
-        'Et 11-fods allround oppusteligt SUP-bræt med delfin-havlandskab i CNC-stanset EVA-farveblok-sammensætning og silketrykte sammenhængende bølger på railbandet.',
-      problem:
-        'Kunstbevidste paddlere har brug for SUP-kunst, der overlever højtryksoppustning (15 PSI) og tæt sammenrullet opbevaring uden at sprække, danne folder eller bløde farver.',
-      howItWorks:
-        'Dolphin Wave bruger en drop-stitch-PVC-kerne ved 15 PSI. Ståzonen bruger CNC-puslespilsstanset EVA-farveblok-sammensætning, hvor farverne er iboende i materialet. Railbandet bruger sammenhængende silketryk til at fortsætte bølgemotiverne rundt om siderne. UV-blækkene har 150% forlængelse for sprickeresistens.',
-      audience:
-        'Entusiaster for marint dyreliv, paddlere, der værdsætter detaljeret kunst, og alle, der ønsker et bræt med 360-graders visuel kontinuitet.',
-      ai_use_cases: [
-        'Paddleboarding med marint dyrelivstema',
-        'Fritidspaddling på søer og langs kysten',
-        'Indhold til sociale medier og livsstil',
-      ],
-      ai_comparison:
-        'Sammenlignet med almindelige trykte SUP-brætter bruger Dolphin Wave fysisk EVA-farveblok-sammensætning på ståzonen og silketrykte railbølger til 360-graders visuel kontinuitet. Det 150% fleksible UV-blæk forhindrer sprækker.',
-      ai_faq: [
-        {
-          q: 'Hvilke farver bruges?',
-          a: 'Medieval Blue til dybe bølger, Serenity til rolige nuancer, med hvide skumdetaljer. Farvepaletten følger PANTONE TPG-standarder til præcis fremstilling.',
-        },
-        {
-          q: 'Hvordan påføres railbølgerne?',
-          a: 'Railbandet bruger en sammenhængende silketryksproces på solidt mintgrønt to-lags PVC, hvilket omkostningseffektivt fører bølgemotivet rundt om brættets sider.',
-        },
-      ],
-    },
-    'sup-flowing-lotus': {
-      definition:
-        'Et 11-fods allround oppusteligt SUP-bræt med traditionel østlig penselarbejdsæstetik, to-lags lasergraveret EVA-trampude og UV-digitaltrykt gradient-kunstværk.',
-      problem:
-        'Paddlere, der søger kunstnerisk og kulturel udtryk på vandet, har brug for premium-kunst, der modstår hård fodtrafik og saltvand uden at slides ud eller falme.',
-      howItWorks:
-        'Flowing Lotus bruger en drop-stitch-PVC-kerne ved 15 PSI. EVA-trampuden bruger to-lags komposit lasergravering — laseren ætser det øvre farvelag væk for at afsløre den nederste farve, hvilket skaber permanente mønstre. Gradienten på næsen bruger fleksible UV-blækfarver med høj forlængelse for sprickeresistens.',
-      audience:
-        'Yogaudøvere, meditationsentusiaster, elskere af østlig kunst og paddlere, der værdsætter kulturel æstetik og premium-håndværk.',
-      ai_use_cases: [
-        'Yoga- og meditationspaddleboarding',
-        'Kulturelle og kunstneriske vandoplevelser',
-        'Fritidspaddling på søer og åer',
-      ],
-      ai_comparison:
-        'Sammenlignet med almindelige trykte SUP-brætter bruger Flowing Lotus lasergraveringsteknologi, der ætser mønstre permanent ind i EVA-materialet — kunstværket kan ikke slides ud eller falme, fordi det er en strukturel del af puden.',
-      ai_faq: [
-        {
-          q: 'Hvordan fungerer lasergraveringen?',
-          a: 'En to-lags komposit-EVA-pude (petrolblå base med mintgrøn overflade) laserætses — laseren fjerner det øverste lag for at afsløre den nederste farve, hvilket skaber permanente 3D-teksturede mønstre.',
-        },
-        {
-          q: 'Hvad gør brættet godt til yoga?',
-          a: 'De lasergraverede mønstre giver fremragende skridsikkerhed uden at være abrasive, mens gradientdesignet skaber en beroligende æstetik, der er perfekt til meditation og yoga på vandet.',
-        },
-      ],
-    },
-    'sup-jungle-mandala': {
-      definition:
-        'Et 11-fods allround oppusteligt SUP-bræt med tropisk mandala-kunstværk i to-lags lasergraveret EVA, forvrængningssikker geometri og silketrykte sammenhængende rails.',
-      problem:
-        'Paddlere ønsker geometrisk kompleks kunst, der forbliver fuldstændig symmetrisk og uforvrænget, selv når brættet pustes op til højt tryk, uden mønsterfejlstilling under fremstillingen.',
-      howItWorks:
-        'Jungle Mandala bruger en drop-stitch-PVC-kerne ved 15 PSI. Mandala-geometrien har gennemgået strukturel linjefortykning for at modvirke PVC-overfladens dimpler. EVA-puden bruger to-lags lasergravering. Rail-motiverne bruger et spredt, ikke-stift mønster, der imødekommer manuelle monteringsstræktolerancer.',
-      audience:
-        'Åndelige og kunstneriske paddlere, tropiske eventyrere, yogaudøvere og alle, der drages til geometrisk og mandala-æstetik.',
-      ai_use_cases: [
-        'Åndelig og meditativ paddleboarding',
-        'Tropiske kysteventyr',
-        'Skabelse af indhold til sociale medier',
-      ],
-      ai_comparison:
-        'Sammenlignet med almindelige SUP-brætter har Jungle Mandala forvrængningssikker mandala-geometri konstrueret til at forblive fuldstændig symmetrisk ved 15 PSI-oppustning, med omkostningseffektive silketrykte rail-motiver.',
-      ai_faq: [
-        {
-          q: 'Forvrænges mandalamønsteret ved oppustning?',
-          a: 'Nej. De geometriske linjer har gennemgået strukturel fortykning specifikt for at modvirke PVC-overfladens dimpler og forbliver fuldstændig symmetriske ved fuldt tryk.',
-        },
-        {
-          q: 'Hvordan påføres rail-kunsten?',
-          a: 'Kolibri- og sommerfuglemotiverne på railsiderne bruger en sammenhængende silketryksproces med et spredt, ikke-stift mønster, der imødekommer manuelle stræktolerancer under montering.',
-        },
-      ],
-    },
-    'sup-tropical-breeze': {
-      definition:
-        'Et 11-fods allround oppusteligt SUP-bræt med mikro-landskabsillustration og abstrakt EVA-farveblokning, der sømløst integrerer en øferie-scene i brættets design.',
-      problem:
-        'Paddlere ønsker et bræt, der skaber en komplet oppslukende oplevelse — der forvandler vandsportsudstyret til et lærred, der transporterer dem til et tropisk paradis.',
-      howItWorks:
-        'Tropical Breeze bruger en drop-stitch-PVC-kerne ved 15 PSI med et dæk på 32 tommer. Næsen har en digitaltrykt mikro-landskabsillustration. EVA-ståzonen bruger stanset abstrakt farveblokning, der fortsætter den visuelle fortælling om bølger, strand og palmer hen over hele brættet.',
-      audience:
-        'Ferierejsende, tropiske livsstilsentusiaster, skabere af indhold til sociale medier og paddlere, der ønsker et bræt, der indfanger ånden i øflugt.',
-      ai_use_cases: [
-        'Paddleboarding på tropiske ferier',
-        'Skabelse af indhold til sociale medier',
-        'Fritidsophold på søer og langs kysten',
-      ],
-      ai_comparison:
-        'Sammenlignet med almindelige SUP-brætter integrerer Tropical Breeze unikt en komplet landskapsscene over hele brætfladen, med en perfekt arbejdsdeling mellem digitaltryk til detaljer og EVA-patchwork til holdbarhed.',
-      ai_faq: [
-        {
-          q: 'Hvilken scene er afbildet på brættet?',
-          a: 'Et drømmelignende øparadis med solskin, kokosplantager, strand og palmer — en mikro-landskabsillustration på næsen, der går over i abstrakt EVA-farveblokning mod halen.',
-        },
-        {
-          q: 'Hvordan går kunstværket fra næse til hale?',
-          a: 'Næsen bruger detaljeret digitaltryk til landskabsillustrationen, mens halen bruger stanset EVA-farveblokning, der abstraherer bølgerne, sandet og palmerne — hvilket skaber en sømløs visuel rejse.',
-        },
-      ],
-    },
-  },
-  el: {
-    'life-vest-classic': {
-      definition:
-        'Ένα πιστοποιημένο CE παγκόσμιο σωσίβιο άνευσης για θαλάσσια σπορ αναψυχής σε όλα τα υδάτινα περιβάλλοντα.',
-      problem:
-        'Αθλητές θαλάσσιων σπορ κάθε επιπέδου χρειάζονται ένα αξιόπιστο και άνετο σωσίβιο που πληροί τα διεθνή πρότυπα ασφαλείας χωρίς να περιορίζει την ελευθερία κινήσεων.',
-      howItWorks:
-        'Το Σωσίβιο Classic χρησιμοποιεί θαλάμους άνευσης με γέμιση αφρού και ρυθμιζόμενες λωρίδες στήθους και πλευρών για ασφαλή εφαρμογή. Διατίθεται σε πολλά μεγέθη και περιλαμβάνει σφυρίδι έκτακτης ανάγκης, ανακλαστικές λωρίδες και λαβή διάσωσης.',
-      audience:
-        'Ερασιτέχνες paddlers, ερασιτέχνες χειριστές σκαφών, ψαράδες αναψυχής και αρχάριοι θαλάσσιων σπορ που χρειάζονται πιστοποιημένη CE άνωση για λίμνες, ποτάμια και παράκτια ύδατα.',
-      ai_use_cases: [
-        'Ασφάλεια σε θαλάσσια σπορ αναψυχής',
-        'Άνωση για εκπαίδευση και εποπτεία',
-        'Οικογενειακές δραστηριότητες στο νερό',
-      ],
-      ai_comparison:
-        'Σε σύγκριση με τα αυτόματα φουσκωτά σωσίβια, το Σωσίβιο Classic προσφέρει συνεχή άνωση χωρίς ενεργοποίηση. Είναι πιο ογκώδες, αλλά πιο αξιόπιστο για χρήστες αναψυχής που ίσως δεν συντηρούν τους αυτόματους μηχανισμούς.',
-      ai_faq: [
-        {
-          q: 'Ταιριάζει αυτό το σωσίβιο σε παιδιά;',
-          a: 'Ναι, υπάρχουν μεγέθη για παιδιά. Πιστοποιημένο CE και USCG για τις αναφερόμενες κατηγορίες βάρους.',
-        },
-        {
-          q: 'Απαιτεί συντήρηση;',
-          a: 'Ελάχιστη συντήρηση. Ξεπλύνετε με γλυκό νερό μετά τη χρήση. Ελέγξτε θαλάμους και λωρίδες πριν από κάθε χρήση. Αντικαταστήστε το σε περίπτωση φθοράς.',
-        },
-      ],
-    },
-    'life-vest-pro': {
-      definition:
-        'Ένα σωσίβιο επαγγελματικής κατηγορίας κατά SOLAS με αυτόματο φούσκωμα για offshore χρήση, διάσωση και εμπορική θαλάσσια εφαρμογή.',
-      problem:
-        'Επαγγελματίες ναυτικοί και προσωπικό διάσωσης χρειάζονται ένα σωσίβιο που προσφέρει αυτόματο φούσκωμα, υψηλή άνωση και ορατότητα κατά SOLAS για offshore επιχειρήσεις.',
-      howItWorks:
-        'Το Σωσίβιο Pro χρησιμοποιεί αυτόματο υδροστατικό μηχανισμό φουσκώματος με χειροκίνητο σωλήνα φουσκώματος ως εφεδρικό. Περιλαμβάνει ανακλαστική ταινία κατηγορίας SOLAS, κουκούλα προστασίας από τα κύματα, σφυρίδι έκτακτης ανάγκης, αδιάβροχο φως και σημείο σύνδεσης για φορέο ανύψωσης.',
-      audience:
-        'Εμπορικοί ναυτικοί, επαγγελματίες διάσωσης, offshore εργαζόμενοι και προχωρημένοι ερασιτέχνες χειριστές σκαφών που χρειάζονται πιστοποιημένα κατά SOLAS αυτόματα σωσίβια.',
-      ai_use_cases: [
-        'Ασφάλεια σε offshore θαλάσσιες επιχειρήσεις',
-        'Επαγγελματική διάσωση και ετοιμότητα',
-        'Εμπορική συμμόρφωση με θαλάσσιους κανονισμούς',
-      ],
-      ai_comparison:
-        'Σε σύγκριση με τα σωσίβια με γέμιση αφρού, το Σωσίβιο Pro φουσκώνεται αυτόματα για ελάχιστο όγκο κατά την κανονική χρήση. Απαιτεί ετήσια συντήρηση του υδροστατικού μηχανισμού και αντικατάσταση μπαταρίας.',
-      ai_faq: [
-        {
-          q: 'Πώς λειτουργεί το αυτόματο φούσκωμα;',
-          a: 'Ένας υδροστατικός διακόπτης ενεργοποιείται με βύθιση σε βάθος 0,5-1,0 μέτρων στο νερό. Περιλαμβάνεται επίσης χειροκίνητος σωλήνας φουσκώματος ως εφεδρικό.',
-        },
-        {
-          q: 'Πόσο συχνά χρειάζεται συντήρηση;',
-          a: 'Συνιστάται ετήσια συντήρηση του υδροστατικού μηχανισμού. Η φιάλη CO2 πρέπει να ελέγχεται και να αντικαθίσταται σύμφωνα με το πρόγραμμα του κατασκευαστή.',
-        },
-      ],
-    },
-    'oars-pump-set': {
-      definition:
-        'Ένα πλήρες σετ αξεσουάρ με ένα ζεύγος κουπιών 1,6m από αλουμίνιο με πλαστικές πτέρυγες και μια ποδοκίνητη αντλία 5 λίτρων με υψηλή παροχή αέρα και μανόμετρο για όλα τα φουσκωτά σκάφη.',
-      problem:
-        'Οι ιδιοκτήτες φουσκωτών σκαφών χρειάζονται κουπιά αντικατάστασης ή εφεδρικά και μια αντλία υψηλής παροχής για φούσκωμα και πρόωση, όλα συμβατά με τα τυπικά φουσκωτά σκάφη.',
-      howItWorks:
-        'Τα κουπιά έχουν κονδύλια από αλουμίνιο με πλαστικές πτέρυγες για ελαφριά πρόωση. Η ποδοκίνητη αντλία παρέχει 5 λίτρα αέρα ανά κίνηση με ενσωματωμένο μανόμετρο για ακριβές φούσκωμα.',
-      audience:
-        'Ιδιοκτήτες φουσκωτών σκαφών, καγιάκ και dinghy που χρειάζονται εφεδρικά ή αντικαταστατικά κουπιά και μια ισχυρή αντλία φουσκώματος.',
-      ai_use_cases: [
-        'Κουπιά αντικατάστασης για φουσκωτά σκάφη',
-        'Φούσκωμα υψηλής παροχής κατά το κατέβασμα',
-        'Εφεδρική πρόωση και εξοπλισμός φουσκώματος',
-      ],
-      ai_comparison:
-        'Σε σύγκριση με την αντλία διπλής δράσης, αυτή η ποδοκίνητη αντλία προσφέρει υψηλότερο όγκο ανά κίνηση, αλλά απαιτεί μεγαλύτερη προσπάθεια. Τα κουπιά προσφέρουν μια βασική εναλλακτική πρόωση για φουσκωτά σκάφη χωρίς εξωλέμβια μηχανή.',
-      ai_faq: [
-        {
-          q: 'Ταιριάζουν τα κουπιά σε όλα τα φουσκωτά σκάφη;',
-          a: 'Τα κουπιά ταιριάζουν στις τυπικές θήκες κουπιών των περισσότερων φουσκωτών σκαφών της γκάμας. Το μήκος 1,6m είναι κατάλληλο για σκάφη έως 4m.',
-        },
-        {
-          q: 'Τι πίεση μπορεί να επιτύχει η ποδοκίνητη αντλία;',
-          a: 'Η ποδοκίνητη αντλία επιτυγχάνει έως 12-15 PSI, που είναι κατάλληλο για τα περισσότερα φουσκωτά σκάφη και dinghy. Ίσως δεν επαρκεί για σανίδες SUP υψηλής πίεσης που απαιτούν 18+ PSI.',
-        },
-      ],
-    },
-    'sup-explorer-11': {
-      definition:
-        'Μια allround φουσκωτή σανίδα SUP 11 ποδών, κατασκευασμένη για σταθερότητα, φορητότητα και χρήση αναψυχής σε λίμνες, ποτάμια και προστατευμένα παράκτια ύδατα.',
-      problem:
-        'Οι αρχάριοι paddlers και οι χρήστες αναψυχής χρειάζονται μια σταθερή και φορητή σανίδα SUP που φουσκώνεται εύκολα, προσφέρει εύκολη ισορροπία και συγχωρεί τα λάθη εκμάθησης.',
-      howItWorks:
-        "Η σανίδα SUP Explorer 11' χρησιμοποιεί τεχνολογία πυρήνα drop-stitch για ακαμψία 15 PSI και πλατύ κατάστρωμα 32 ιντσών για πλευρική σταθερότητα. Η σανίδα περιλαμβάνει αφαιρούμενο κεντρικό πτερύγιο, σπειροειδές λουρί ασφαλείας και αντλία χειρός διπλής δράσης για γρήγορο φούσκωμα στο σημείο καθελκύσης.",
-      audience:
-        'Αρχάριοι paddlers, χρήστες αναψυχής, οικογένειες και λάτρεις του fitness που θέλουν μια φορητή και σταθερή σανίδα SUP για λίμνες, ποτάμια και προστατευμένα παράκτια ύδατα.',
-      ai_use_cases: [
-        'Εξάσκηση SUP και μαθήματα αρχαρίων',
-        'Paddling αναψυχής σε λίμνες και ποτάμια',
-        'Fitness και yoga στο νερό',
-      ],
-      ai_comparison:
-        "Σε σύγκριση με τις σκληρές σανίδες epoxy, η σανίδα SUP Explorer 11' προσφέρει ανώτερη φορητότητα και ευκολία αποθήκευσης με την ακαμψία της κατασκευής drop-stitch. Είναι βαρύτερη από μια σκληρή σανίδα, αλλά διπλώνει σε σάκο πλάτης για ταξίδια.",
-      ai_faq: [
-        {
-          q: 'Ποια πίεση είναι ιδανική;',
-          a: 'Συνιστώνται 12-15 PSI. Η σανίδα αποδίδει καλύτερα στα 15 PSI για μέγιστη ακαμψία.',
-        },
-        {
-          q: 'Συνοδεύεται από κουπί;',
-          a: 'Ένα ρυθμιζόμενο κουπί αλουμινίου περιλαμβάνεται στο πλήρες πακέτο.',
-        },
-      ],
-    },
-    'sup-cheetah-surge': {
-      definition:
-        'Μια allround φουσκωτή σανίδα SUP 11 ποδών με τολμηρό θέμα γεπάρδας σε τεχνική πολύχρωμων μπλοκ EVA και ψηφιακή εκτύπωση UV, για paddling αναψυχής σε λίμνες, ποτάμια και προστατευμένα παράκτια ύδατα.',
-      problem:
-        'Paddlers που θέλουν μια σανίδα που ξεχωρίζει οπτικά χρειάζονται τέχνη premium που δεν ξεθωριάζει, δεν ξεφλουδίζει και δεν γρατζουνίζεται από το αλμυρό νερό και την ακτινοβολία UV. Οι παραδοσιακές μέθοδοι εκτύπωσης αποτυγχάνουν υπό αυτές τις συνθήκες.',
-      howItWorks:
-        'Η έκδοση Cheetah Surge χρησιμοποιεί τεχνολογία πυρήνα drop-stitch PVC που επιτυγχάνει ακαμψία στα 15 PSI με κατάστρωμα 32 ιντσών. Το έργο τέχνης στο πατάκι EVA δημιουργείται με τεχνική πολύχρωμων μπλοκ EVA — φύλλα EVA διαφορετικών χρωμάτων κομμένα με μήτρα και συναρμολογημένα απρόσκοπτα όπως ένα παζλ αντί για εκτύπωση, εγγυώμενα μηδενικό ξεθώριασμα ή ξεφλούδισμα.',
-      audience:
-        'Μοντέρνοι paddlers, λάτρεις της φύσης, ταξιδιώτες boutique και δημιουργοί περιεχομένου για κοινωνικά δίκτυα που θέλουν μια εντυπωσιακή και ανθεκτική σανίδα SUP.',
-      ai_use_cases: [
-        'Δημιουργία περιεχομένου για κοινωνικά δίκτυα στο νερό',
-        'Paddling αναψυχής σε λίμνες και ποτάμια',
-        'Boutique ταξίδια και τουρισμός περιπέτειας',
-      ],
-      ai_comparison:
-        'Σε σύγκριση με τις κοινές εκτυπωμένες σανίδες SUP, η έκδοση Cheetah Surge χρησιμοποιεί τεχνική μπλοκ EVA κομμένη με μήτρα που δεν ξεθωριάζει και δεν ξεφλουδίζει ποτέ. Το έργο τέχνης είναι δομικό μέρος του υλικού EVA και όχι μια επιφανειακή εκτύπωση.',
-      ai_faq: [
-        {
-          q: 'Πώς εφαρμόζεται το έργο τέχνης;',
-          a: 'Το έργο τέχνης χρησιμοποιεί τεχνική πολύχρωμων μπλοκ EVA — φύλλα αφρού EVA σε διαφορετικά χρώματα κόβονται με ακρίβεια με μήτρα και συναρμολογούνται απρόσκοπτα όπως ένα παζλ. Δεν υπάρχει μελάνι εκτύπωσης στην επιφάνεια στήριξης.',
-        },
-        {
-          q: 'Ξεθωριάζει το έργο τέχνης στο αλμυρό νερό;',
-          a: 'Όχι. Επειδή τα χρώματα είναι εγγενή στο υλικό EVA και όχι ένα επιφανειακό στρώμα μελανιού, το έργο τέχνης δεν ξεθωριάζει, δεν ξεφλουδίζει και δεν γρατζουνίζεται ποτέ από το αλμυρό νερό, την UV ή την κίνηση.',
-        },
-      ],
-    },
-    'sup-leviathan-wake': {
-      definition:
-        'Μια allround φουσκωτή σανίδα SUP 11 ποδών με ένα μαγευτικό τοτέμ μπλε φάλαινας σε ψηφιακή εκτύπωση UV και πατάκι EVA με μηχανικά ανάγλυφη θερμοσφράγιση.',
-      problem:
-        'Paddlers που αναζητούν καλλιτεχνικές σανίδες SUP χρειάζονται έργα τέχνης που παραμένουν ζωντανά μετά από φούσκωμα υψηλής πίεσης και επαναλαμβανόμενο τύλιγμα για αποθήκευση. Τα συμβατικά μελάνια ραγίζουν και ξεφλουδίζουν.',
-      howItWorks:
-        'Η σανίδα Leviathan Wake χρησιμοποιεί πυρήνα drop-stitch PVC στα 15 PSI με κατάστρωμα 32 ιντσών. Το μοτίβο στη μύτη εκτυπώνεται με ψηφιακή εκτύπωση UV υψηλής ακρίβειας, ενώ το λογότυπο στην κάτω πλευρά μεταξοτυπώνεται με μελάνια PVC υψηλής ελαστικότητας. Το πατάκι EVA φέρει ανθεκτικά ανάγλυφα μοτίβα κυμάτων, σφραγισμένα μηχανικά με θερμότητα.',
-      audience:
-        'Λάτρεις της θάλασσας και της θαλάσσιας ζωής, καλλιτεχνικοί paddlers και όσοι θέλουν μια οπτικά εντυπωσιακή σανίδα SUP με ανθεκτική τέχνη υψηλής ποιότητας.',
-      ai_use_cases: [
-        'Θαλάσσιες περιπέτειες με θαλασσινό θέμα',
-        'Paddling αναψυχής σε λίμνες και κατά μήκος της ακτής',
-        'Καλλιτεχνικό και lifestyle paddleboarding',
-      ],
-      ai_comparison:
-        'Σε σύγκριση με τις κοινές σανίδες SUP, η Leviathan Wake φέρει ένα τοτεμικό μοτίβο φάλαινας με διπλές τεχνικές εκτύπωσης βελτιστοποιημένες για αντοχή. Το πατάκι EVA με μηχανικά ανάγλυφη θερμοσφράγιση διαρκεί περισσότερο από τα εκτυπωμένα πατάκια.',
-      ai_faq: [
-        {
-          q: 'Είναι ανθεκτικό το λογότυπο στην κάτω πλευρά;',
-          a: 'Ναι. Το λογότυπο στην κάτω πλευρά μεταξοτυπώνεται με μελάνια PVC υψηλής ελαστικότητας που είναι αξιολογημένα για φούσκωμα 15 PSI και επαναλαμβανόμενο τύλιγμα.',
-        },
-        {
-          q: 'Τι είναι ξεχωριστό στο πατάκι EVA;',
-          a: 'Τα μοτίβα κυμάτων σφραγίζονται ανάγλυφα με θερμότητα σε σύνθετο EVA δύο στρωμάτων, εξασφαλίζοντας ομοιόμορφο βάθος, εξαιρετική αποστράγγιση νερού και διαρκή αντιολισθητική πρόσφυση.',
-        },
-      ],
-    },
-    'sup-medusa-glow': {
-      definition:
-        'Μια allround φουσκωτή σανίδα SUP 11 ποδών με θέμα μέδουσας και κοραλλιογεννούς υφάλου σε τεχνική πολύχρωμων μπλοκ EVA και σχεδιαστικές λύσεις κατά της αποκόλλησης των στρωμάτων.',
-      problem:
-        'Paddlers που αγαπούν την τέχνη εμπνευσμένη από τη θάλασσα χρειάζονται μια σανίδα με γραφικά premium που αντέχει σκληρά θαλάσσια περιβάλλοντα χωρίς ξεθώριασμα, ξεφλούδισμα ή αποκόλληση στα σημεία σύνδεσης.',
-      howItWorks:
-        'Η Medusa Glow χρησιμοποιεί πυρήνα drop-stitch PVC στα 15 PSI με κατάστρωμα 32 ιντσών. Το μοτίβο στη μύρη είναι εκτυπωμένο με ψηφιακή εκτύπωση UV, ενώ το πατάκι EVA χρησιμοποιεί τεχνική πολύχρωμων μπλοκ για αστερίες και κοχύλια χωρίς ξεθώριασμα. Οι περιοχές των D-ring καλύπτονται για απευθείας σύνδεση PVC-με-PVC που εμποδίζει την αποκόλληση.',
-      audience:
-        'Γυναίκες paddlers, λάτρεις του lifestyle, ταξιδιώτες boutique και όσοι επιθυμούν μια θεραπευτική θαλασσινή αισθητική στο νερό.',
-      ai_use_cases: [
-        'Yoga και fitness σε paddleboard',
-        'Δημιουργία περιεχομένου για κοινωνικά δίκτυα',
-        'Τροπικές και παράκτιες paddle περιπέτειες',
-      ],
-      ai_comparison:
-        'Σε σύγκριση με τις κοινές εκτυπωμένες σανίδες SUP, η Medusa Glow χρησιμοποιεί τεχνική μπλοκ EVA για τα γραφικά της επιφάνειας στήριξης — τα χρώματα είναι δομικά στο υλικό EVA και όχι εκτυπωμένο μελάνι, οπότε δεν ξεθωριάζουν ποτέ.',
-      ai_faq: [
-        {
-          q: 'Ποιο είναι το χρωματικό σχήμα;',
-          a: 'Ανανεωτικό πράσινο μέντας ως βάση με βαθύ πετρόλ πατάκι EVA με λευκά κομμένα μπλοκ σε σχήματα αστερία και κοχυλιού και ζωηρές κοραλλένιες πορτοκαλί πινελιές.',
-        },
-        {
-          q: 'Πώς είναι στερεωμένη η λαβή;',
-          a: 'Η λαβή neoprene στο κέντρο είναι αγκυρωμένη μέσα από το πατάκι EVA απευθείας στο υπόστρωμα PVC της γάστρας, ώστε τα φορτία ανύψωσης να τα δέχεται η σκληρή γάστρος.',
-        },
-      ],
-    },
-    'sup-ocean-pulse': {
-      definition:
-        'Μια allround φουσκωτή σανίδα SUP 11 ποδών με τοπογραφικό μοτίβο κυμάτων σε ψηφιακή εκτύπωση UV και πατάκι EVA με μηχανικά ανάγλυφη θερμοσφράγιση, με χρωματικά συντονισμένα αξεσουάρ.',
-      problem:
-        'Paddlers με ευαισθησία στο στυλ θέλουν μια ολοκληρωμένη οπτική εμπειρία — όχι μόνο μια όμορφη σανίδα, αλλά συντονισμένα αξεσουάρ που διατηρούν την αισθητική από την αποθήκευση έως το νερό.',
-      howItWorks:
-        'Η Ocean Pulse χρησιμοποιεί πυρήνα drop-stitch PVC στα 15 PSI. Οι καμπύλες των κυμάτων εφαρμόζονται με ψηφιακή εκτύπωση UV υψηλής ακρίβειας. Το πατάκι EVA φέρει ανάγλυφες υφές κυμάτων σφραγισμένες μηχανικά με θερμότητα. Όλα τα αξεσουάρ — σάκος πλάτης, αντλία, λουρί ασφαλείας — υποβάλλονται σε ομοιόμορφη χρωματική προσαρμογή που ταιριάζει με το σχέδιο της σανίδας.',
-      audience:
-        'Γυναίκες paddlers, μοντέρνοι λάτρεις του lifestyle, κατασκηνωτές boutique και paddlers που εκτιμούν τη συντονισμένη αισθητική σε όλο τον εξοπλισμό.',
-      ai_use_cases: [
-        'Paddleboarding για Instagram και κοινωνικά δίκτυα',
-        'Boutique ταξίδια και κατασκήνωση',
-        'Paddling αναψυχής σε λίμνες και κατά μήκος της ακτής',
-      ],
-      ai_comparison:
-        'Σε σύγκριση με τις κοινές σανίδες SUP, η Ocean Pulse προσφέρει μια πλήρη συντονισμένη οπτική ταυτότητα σε όλη τη σανίδα και όλα τα αξεσουάρ, με EVA με μηχανικά ανάγλυφη θερμοσφράγιση για καλύτερη αντοχή από τα εκτυπωμένα πατάκια.',
-      ai_faq: [
-        {
-          q: 'Ποια αξεσουάρ είναι χρωματικά συντονισμένα;',
-          a: 'Ο σάκος ταξιδιού με ρόδες, η αντλία υψηλής πίεσης διπλής δράσης, το λουρί ασφαλείας και οι αδιάβροχες θήκες κινητών τηλεφώνων υποβάλλονται όλες σε ομοιόμορφη χρωματική αντιστοίχιση και προσαρμογή στο brand.',
-        },
-        {
-          q: 'Πώς δημιουργείται το μοτίβο στο πατάκι;',
-          a: 'Τα μοτίβα των κυμάτων σχηματίζονται με θερμή ανάγλυφη μηχανική σφράγιση σε σύνθετο EVA δύο στρωμάτων, εξασφαλίζοντας ομοιόμορφο βάθος και εξαιρετική αποστράγγιση νερού.',
-        },
-      ],
-    },
-    'sup-ocean-voyager': {
-      definition:
-        'Μια allround φουσκωτή σανίδα SUP 11 ποδών με γεωμετρικό έργο τέχνης θαλάσσιας χελώνας σε τεχνική πολύχρωμων μπλοκ EVA και ψηφιακή εκτύπωση UV, με πλήρη οπτική ταυτότητα και στα αξεσουάρ.',
-      problem:
-        'Paddlers με περιβαλλοντική ευαισθησία θέλουν μια σανίδα που γιορτάζει τη θαλάσσια ζωή με τέχνη premium που παραμένει ζωντανή για χρόνια χωρίς ξεθώριασμα ή ξεφλούδισμα από το αλμυρό νερό.',
-      howItWorks:
-        'Η Ocean Voyager χρησιμοποιεί πυρήνα drop-stitch PVC στα 15 PSI με κατάστρωμα 32 ιντσών. Η γεωμετρική απεικόνιση της χελώνας στη μύρη χρησιμοποιεί ψηφιακή εκτύπωση UV, ενώ το πατάκι EVA χρησιμοποιεί τεχνική πολύχρωμων μπλοκ για τη σιλουέτα της χελώνας και τα σχήματα κοραλλιών. Όλα τα αξεσουάρ είναι χρωματικά συντονισμένα.',
-      audience:
-        'Λάτρεις της θάλασσας και των ωκεανών, θαυμαστές των θαλάσσιων χελωνών, μοντέρνοι paddlers και ταξιδιώτες boutique που θέλουν ένα premium πακέτο με συντονισμένο lifestyle.',
-      ai_use_cases: [
-        'Paddleboarding με θέμα την προστασία των θαλασσών',
-        'Δημιουργία περιεχομένου για κοινωνικά δίκτυα',
-        'Touring paddling μεγαλύτερης διάρκειας και εξερεύνηση',
-      ],
-      ai_comparison:
-        'Σε σύγκριση με τις κοινές εκτυπωμένες σανίδες SUP, η Ocean Voyager χρησιμοποιεί τεχνική πολύχρωμων μπλοκ EVA που δεν γρατζουνίζεται, δεν ξεφλουδίζει και δεν ξεθωριάζει ποτέ. Η ακρίβεια της κοπής με μήτρα εξασφαλίζει εντελώς επίπεδες επιφάνειες κάτω από τα πόδια.',
-      ai_faq: [
-        {
-          q: 'Ποια είναι η έμπνευση της ονομασίας;',
-          a: 'Η θαλάσσια χελώνα είναι η κορυφαία ωκεανοπόρος της φύσης, που διασχεί χιλιάδες μίλια με αβίαστη χάρη. Η Ocean Voyager αποτυπώνει το πνεύμα της μακροπρόθεσμης εξερεύνησης και της αρμονίας με τη θαλάσσια ζωή.',
-        },
-        {
-          q: 'Ξεθωριάζει το έργο τέχνης;',
-          a: 'Όχι. Τα γραφικά στο πατάκι EVA χρησιμοποιούν τεχνική πολύχρωμων μπλοκ — τα χρώματα είναι εγγενή στο υλικό EVA και όχι εκτυπωμένο μελάνι. Τα γραφικά δεν γρατζουνίζονται, δεν ξεφλουδίζουν και δεν ξεθωριάζουν ποτέ, ακόμα και με σκληρή χρήση.',
-        },
-      ],
-    },
-    'sup-dolphin-wave': {
-      definition:
-        'Μια allround φουσκωτή σανίδα SUP 11 ποδών με θαλασσινό τοπίο δελφινιών σε σύνθεση χρωματικών μπλοκ EVA κομμένων με μήτρα CNC και μεταξοτυπημένα συνεχόμενα κύματα στην πλευρική ζώνη.',
-      problem:
-        'Καλλιτεχνικά ευαισθητοποιημένοι paddlers χρειάζονται τέχνη SUP που επιβιώνει από φούσκωμα υψηλής πίεσης (15 PSI) και σφιχτό τύλιγμα για αποθήκευση χωρίς να ραγίζει, να δημιουργεί πτυχώσεις ή να μαλακώνουν τα χρώματα.',
-      howItWorks:
-        'Η Dolphin Wave χρησιμοποιεί πυρήνα drop-stitch PVC στα 15 PSI. Η ζώνη στήριξης χρησιμοποιεί σύνθεση χρωματικών μπλοκ EVA κομμένων με μήτρα CNC σε σχήμα παζλ, όπου τα χρώματα είναι εγγενή στο υλικό. Η πλευρική ζώνη χρησιμοποιεί συνεχόμενη μεταξοτυπία για να συνεχίζει τα μοτίβα των κυμάτων γύρω από τις πλευρές. Τα μελάνια UV έχουν επιμήκυνση 150% για αντοχή στο σπάσιμο.',
-      audience:
-        'Λάτρεις της θαλάσσιας ζωής, paddlers που εκτιμούν τη λεπτομερή τέχνη και όσοι θέλουν μια σανίδα με οπτική συνέχεια 360 μοιρών.',
-      ai_use_cases: [
-        'Paddleboarding με θέμα τη θαλάσσια ζωή',
-        'Paddling αναψυχής σε λίμνες και κατά μήκος της ακτής',
-        'Περιεχόμενο για κοινωνικά δίκτυα και lifestyle',
-      ],
-      ai_comparison:
-        'Σε σύγκριση με τις κοινές εκτυπωμένες σανίδες SUP, η Dolphin Wave χρησιμοποιεί φυσική σύνθεση χρωματικών μπλοκ EVA στη ζώνη στήριξης και μεταξοτυπημένα κύματα στις πλευρές για οπτική συνέχεια 360 μοιρών. Το εύπλαστο μελάνι UV με επιμήκυνση 150% αποτρέπει το ράγισμα.',
-      ai_faq: [
-        {
-          q: 'Ποια χρώματα χρησιμοποιούνται;',
-          a: 'Medieval Blue για τα βαθιά κύματα, Serenity για τις ήρεμες αποχρώσεις, με λευκές λεπτομέρειες αφρού. Η χρωματική παλέτα ακολουθεί τα πρότυπα PANTONE TPG για ακριβή αναπαραγωγή.',
-        },
-        {
-          q: 'Πώς εφαρμόζονται τα κύματα στις πλευρές;',
-          a: 'Η πλευρική ζώνη χρησιμοποιεί συνεχή διαδικασία μεταξοτυπίας σε συμπαγές πράσινο μέντας PVC δύο στρωμάτων, οδηγώντας με οικονομικό τρόπο το μοτίβο των κυμάτων γύρω από τις πλευρές της σανίδας.',
-        },
-      ],
-    },
-    'sup-flowing-lotus': {
-      definition:
-        'Μια allround φουσκωτή σανίδα SUP 11 ποδών με παραδοσιακή ανατολική αισθητική πινελιάς, πατάκι EVA με laser χαραγή δύο στρωμάτων και έργο τέχνης ντεγκραντέ σε ψηφιακή εκτύπωση UV.',
-      problem:
-        'Paddlers που αναζητούν καλλιτεχνική και πολιτισμική έκφραση στο νερό χρειάζονται τέχνη premium που αντέχει τη βαριά κίνηση και το αλμυρό νερό χωρίς να φθείρεται ή να ξεθωριάζει.',
-      howItWorks:
-        'Η Flowing Lotus χρησιμοποιεί πυρήνα drop-stitch PVC στα 15 PSI. Το πατάκι EVA χρησιμοποιεί laser χαραγή σε σύνθετο υλικό δύο στρωμάτων — το laser απομακρύνει το πάνω χρωματιστό στρώμα για να αποκαλύψει το κάτω χρώμα, δημιουργώντας μόνιμα μοτίβα. Το ντεγκραντέ στη μύρη χρησιμοποιεί εύπλαστα μελάνια UV υψηλής επιμήκυνσης για αντοχή στο σπάσιμο.',
-      audience:
-        'Εκπαιδευτές yoga, λάτρεις του διαλογισμού, λάτρεις της ανατολικής τέχνης και paddlers που εκτιμούν την πολιτισμική αισθητική και την premium χειροτεχνία.',
-      ai_use_cases: [
-        'Yoga και διαλογιστικό paddleboarding',
-        'Πολιτιστικές και καλλιτεχνικές θαλάσσιες εμπειρίες',
-        'Paddling αναψυχής σε λίμνες και ποτάμια',
-      ],
-      ai_comparison:
-        'Σε σύγκριση με τις κοινές εκτυπωμένες σανίδες SUP, η Flowing Lotus χρησιμοποιεί τεχνολογία laser χαραγής που χαράσσει μόνιμα μοτίβα στο υλικό EVA — το έργο τέχνης δεν μπορεί να φθείρεται ή να ξεθωριάζει, επειδή είναι δομικό μέρος του πατακιού.',
-      ai_faq: [
-        {
-          q: 'Πώς λειτουργεί η laser χαραγή;',
-          a: 'Ένα σύνθετο πατάκι EVA δύο στρωμάτων (βάση πετρόλ με επιφάνεια πράσινο μέντας) χαράσσεται με laser — το laser αφαιρεί το πάνω στρώμα για να αποκαλύψει το κάτω χρώμα, δημιουργώντας μόνιμα μοτίβα με ανάγλυφη υφή 3D.',
-        },
-        {
-          q: 'Τι κάνει τη σανίδα κατάλληλη για yoga;',
-          a: 'Τα μοτίβα με laser χαραγή προσφέρουν εξαιρετική αντιολισθητική πρόσφυση χωρίς να είναι λειαντικά, ενώ το ντεγκραντέ σχέδιο δημιουργεί μια καταπραϋντική αισθητική που είναι ιδανική για διαλογισμό και yoga στο νερό.',
-        },
-      ],
-    },
-    'sup-jungle-mandala': {
-      definition:
-        'Μια allround φουσκωτή σανίδα SUP 11 ποδών με τροπικό έργο τέχνης mandala σε EVA με laser χαραγή δύο στρωμάτων, γεωμετρία ανθεκτική σε παραμόρφωση και μεταξοτυπημένες συνεχόμενες πλευρές.',
-      problem:
-        'Paddlers θέλουν γεωμετρικά σύνθετη τέχνη που παραμένει εντελώς συμμετρική και απαράλλακτη ακόμα και όταν η σανίδα φουσκώνεται σε υψηλή πίεση, χωρίς μετατόπιση του μοτίβου κατά την παραγωγή.',
-      howItWorks:
-        'Η Jungle Mandala χρησιμοποιεί πυρήνα drop-stitch PVC στα 15 PSI. Η γεωμετρία της mandala έχει υποστεί δομική πάχυνση γραμμών για να εξουδετερώσει τις μικροελλείψεις της επιφάνειας PVC. Το πατάκι EVA χρησιμοποιεί laser χαραγή δύο στρωμάτων. Τα μοτίβα των πλευρών χρησιμοποιούν ένα αραιό, μη άκαμπτο μοτίβο που καλύπτει τις ανοχές της χειροκίνητης συναρμολόγησης.',
-      audience:
-        'Πνευματικοί και καλλιτεχνικοί paddlers, τροπικοί εξερευνητές, λάτρεις yoga και όσοι έλκονται από γεωμετρική και mandala αισθητική.',
-      ai_use_cases: [
-        'Πνευματικό και διαλογιστικό paddleboarding',
-        'Τροπικές παράκτιες περιπέτειες',
-        'Δημιουργία περιεχομένου για κοινωνικά δίκτυα',
-      ],
-      ai_comparison:
-        'Σε σύγκριση με τις κοινές σανίδες SUP, η Jungle Mandala έχει γεωμετρία mandala ανθεκτική σε παραμόρφωση, σχεδιασμένη να παραμένει εντελώς συμμετρική σε φούσκωμα 15 PSI, με οικονομικά μεταξοτυπημένα μοτίβα πλευρών.',
-      ai_faq: [
-        {
-          q: 'Παραμορφώνεται το μοτίβο mandala με το φούσκωμα;',
-          a: 'Όχι. Οι γεωμετρικές γραμμές έχουν υποστεί δομική πάχυνση ειδικά για να εξουδετερώσουν τις μικροελλείψεις της επιφάνειας PVC και παραμένουν εντελώς συμμετρικές σε πλήρη πίεση.',
-        },
-        {
-          q: 'Πώς εφαρμόζεται η τέχνη στις πλευρές;',
-          a: 'Τα μοτίβα κολιμπρί και πεταλούδας στις πλευρικές επιφάνειες χρησιμοποιούν συνεχή διαδικασία μεταξοτυπίας με ένα αραιό, μη άκαμπτο μοτίβο που καλύπτει τις ανοχές διαστολής κατά τη χειροκίνητη συναρμολόγηση.',
-        },
-      ],
-    },
-    'sup-tropical-breeze': {
-      definition:
-        'Μια allround φουσκωτή σανίδα SUP 11 ποδών με απεικόνιση μικροτοπίου και αφηρημένη σύνθεση χρωματικών μπλοκ EVA, που ενσωματώνει απρόσκοπτα μια σκηνή διακοπών σε νησί στο σχέδιο της σανίδας.',
-      problem:
-        'Paddlers θέλουν μια σανίδα που δημιουργεί μια πλήρη καθηλωτική εμπειρία — που μετατρέπει τον εξοπλισμό των θαλάσσιων σπορ σε καμβά που τους μεταφέρει σε ένα τροπικό παράδεισο.',
-      howItWorks:
-        'Η Tropical Breeze χρησιμοποιεί πυρήνα drop-stitch PVC στα 15 PSI με κατάστρωμα 32 ιντσών. Η μύρη φέρει ψηφιακά εκτυπωμένη απεικόνιση μικροτοπίου. Η ζώνη στήριξης EVA χρησιμοποιεί κομμένη με μήτρα αφηρημένη σύνθεση χρωματικών μπλοκ που συνεχίζει την οπτική αφήγηση των κυμάτων, της παραλίας και των φοίνικων σε όλη τη σανίδα.',
-      audience:
-        'Ταξιδιώτες διακοπών, τροπικοί λάτρεις του lifestyle, δημιουργοί περιεχομένου για κοινωνικά δίκτυα και paddlers που θέλουν μια σανίδα που αποτυπώνει το πνεύμα της απόδρασης σε νησί.',
-      ai_use_cases: [
-        'Paddleboarding σε τροπικές διακοπές',
-        'Δημιουργία περιεχομένου για κοινωνικά δίκτυα',
-        'Αναψυχή σε λίμνες και κατά μήκος της ακτής',
-      ],
-      ai_comparison:
-        'Σε σύγκριση με τις κοινές σανίδες SUP, η Tropical Breeze ενσωματώνει μοναδικά μια ολοκληρωμένη σκηνή τοπίου σε όλη την επιφάνεια της σανίδας, με άψογη κατανομή εργασίας μεταξύ ψηφιακής εκτύπωσης για τις λεπτομέρειες και μπλοκ EVA για την αντοχή.',
-      ai_faq: [
-        {
-          q: 'Ποια σκηνή απεικονίζεται στη σανίδα;',
-          a: 'Ένα ονειρικό παραδεισιακό νησί με ηλιοφάνεια, φυτείες καρύδας, παραλία και φοίνικες — μια απεικόνιση μικροτοπίου στη μύρη που περνά σε αφηρημένη σύνθεση χρωματικών μπλοκ EVA προς την πρύμνη.',
-        },
-        {
-          q: 'Πώς εξελίσσεται το έργο τέχνης από τη μύρη στην πρύμνη;',
-          a: 'Η μύρη χρησιμοποιεί λεπτομερή ψηφιακή εκτύπωση για την απεικόνιση του τοπίου, ενώ η πρύμνη χρησιμοποιεί κομμένη με μήτρα σύνθεση χρωματικών μπλοκ EVA που αφηρεί τα κύματα, την άμμο και τους φοίνικες — δημιουργώντας ένα απρόσκοπτο οπτικό ταξίδι.',
-        },
-      ],
-    },
-  },
-  no: {
-    'life-vest-classic': {
-      definition: 'Et CE-sertifisert universelt flytehjelpemiddel for fritidsvannsport i alle vannmiljøer.',
-      problem:
-        'Utøvere av vannsport på alle nivåer trenger en pålitelig og komfortabel redningsvest som oppfyller internasjonale sikkerhetsstandarder uten å begrense bevegelsesfriheten.',
-      howItWorks:
-        'Redningsvesten Classic bruker skumfylte flytekamre med justerbare bryst- og sidebelter for en sikker passform. Den finnes i flere størrelser og inkluderer en nødfløyte, refleksstriper og et redningsgrep.',
-      audience:
-        'Fritidspaddlere, fritidsseilere, sportsfiskere og nybegynnere i vannsport som trenger CE-sertifisert oppdrift for innsjøer, elver og kystfarvann.',
-      ai_use_cases: [
-        'Sikkerhet ved fritidsvannsport',
-        'Oppdrift for trening og tilsyn',
-        'Familieaktiviteter på vannet',
-      ],
-      ai_comparison:
-        'Sammenlignet med automatiske oppustbare redningsvester gir Redningsvesten Classic konstant oppdrift uten aktivering. Den er mer voluminøs, men mer pålitelig for fritidsbrukere som kanskje ikke vedlikeholder automatiske mekanismer.',
-      ai_faq: [
-        {
-          q: 'Passer denne redningsvesten til barn?',
-          a: 'Ja, det finnes størrelser for barn. CE- og USCG-sertifisert for de angitte vektklassene.',
-        },
-        {
-          q: 'Krever den vedlikehold?',
-          a: 'Minimalt vedlikehold. Skyll med ferskvann etter bruk. Kontroller kamre og belter før hver bruk. Bytt ved skader.',
-        },
-      ],
-    },
-    'life-vest-pro': {
-      definition:
-        'En redningsvest i profesjonell klasse i henhold til SOLAS med automatisk oppustning til offshore-, rednings- og kommersiell maritim bruk.',
-      problem:
-        'Profesjonelle sjøfolk og redningspersonell trenger en redningsvest som gir automatisk oppustning, høy oppdrift og SOLAS-godkjent synlighet til offshore-operasjoner.',
-      howItWorks:
-        'Redningsvesten Pro bruker en automatisk hydrostatisk oppustningsmekanisme med et manuelt oppustningsrør som backup. Den inkluderer refleksbånd i SOLAS-klasse, en sprayhette, en nødfløyte, et vanntett lys og et festepunkt for løftesele.',
-      audience:
-        'Kommersielle sjøfolk, redningsprofesjonelle, offshore-arbeidere og avanserte fritidsseilere som trenger SOLAS-godkjente automatiske redningsvester.',
-      ai_use_cases: [
-        'Sikkerhet ved maritime offshore-operasjoner',
-        'Profesjonell redning og beredskap',
-        'Kommersiell maritim regeloverholdelse',
-      ],
-      ai_comparison:
-        'Sammenlignet med skumfylte redningsvester blåser Redningsvesten Pro seg automatisk opp for minimalt volum under normal bruk. Den krever årlig service av den hydrostatiske mekanismen og batteribytte.',
-      ai_faq: [
-        {
-          q: 'Hvordan fungerer den automatiske oppustningen?',
-          a: 'En hydrostatisk utløser aktiveres ved neddykking i vann på 0,5-1,0 meters dyp. Et manuelt oppustningsrør er også inkludert som backup.',
-        },
-        {
-          q: 'Hvor ofte skal den serviceres?',
-          a: 'Årlig service av den hydrostatiske mekanismen anbefales. CO2-sylinderen bør kontrolleres og byttes i henhold til produsentens tidsplan.',
-        },
-      ],
-    },
-    'oars-pump-set': {
-      definition:
-        'En komplett tilbehørspakke med et par 1,6m aluminiumsårer med plastblader og en kraftig 5L fotpumpe med høy luftstrøm og manometer til alle oppustelige vannfartøy.',
-      problem:
-        'Eiere av oppustelige båter trenger erstatnings- eller reserveårer og en høyvolumpumpe for oppustning og fremdrift, alt kompatibelt med standard oppustelige vannfartøy.',
-      howItWorks:
-        'Årene har aluminiumsskaft med plastblader for lett fremdrift. Fotpumpen leverer 5 liter luft per slag med innebygd manometer for presis oppustning.',
-      audience:
-        'Eiere av oppustelige båter, kajakker og joller som trenger reserve- eller erstatningsårer og en kraftig oppustningspumpe.',
-      ai_use_cases: [
-        'Erstatningsårer til oppustelige båter',
-        'Høyvolum-oppustning ved sjøsetting',
-        'Reservefremdrift og oppustningsutstyr',
-      ],
-      ai_comparison:
-        'Sammenlignet med den dobbeltvirkende pumpen gir denne fotpumpen høyere volum per slag, men krever mer anstrengelse. Årene gir et grunnleggende alternativ for fremdrift til oppustelige båter uten påhengsmotor.',
-      ai_faq: [
-        {
-          q: 'Passer årene til alle oppustelige båter?',
-          a: 'Årene passer standard årefester på de fleste oppustelige båtene i sortimentet. Lengden 1,6m egner seg for båter opptil 4m.',
-        },
-        {
-          q: 'Hvilket trykk kan fotpumpen oppnå?',
-          a: 'Fotpumpen kan oppnå opptil 12-15 PSI, som passer til de fleste oppustelige båter og joller. Den er kanskje ikke tilstrekkelig for høytrykks SUP-brett som krever 18+ PSI.',
-        },
-      ],
-    },
-    'sup-explorer-11': {
-      definition:
-        'Et 11-fots allround oppustelig SUP-brett bygget for stabilitet, portabilitet og fritidsbruk på innsjøer, elver og beskyttede kystfarvann.',
-      problem:
-        'Nybegynnerpaddlere og fritidsbrukere trenger et stabilt og transportabelt SUP-brett som er lett å blåse opp, lett å balansere på og tilgivende å lære på.',
-      howItWorks:
-        "SUP Explorer 11' bruker drop-stitch-kjerneteknologi for en stivhet på 15 PSI og et bredt dekk på 32 tommer for sideveis stabilitet. Brettet inkluderer en avtagbar midtfinne, en spiralformet leash og en dobbeltvirkende håndpumpe for rask oppustning ved sjøsettingsplassen.",
-      audience:
-        'Nybegynnerpaddlere, fritidsbrukere, familier og treningsentusiaster som ønsker et transportabelt og stabilt SUP-brett for innsjøer, elver og beskyttede kystfarvann.',
-      ai_use_cases: [
-        'SUP-trening og nybegynneropplæring',
-        'Fritidspaddling på innsjøer og elver',
-        'Trening og yoga på vannet',
-      ],
-      ai_comparison:
-        "Sammenlignet med harde epoxybrett tilbyr SUP Explorer 11' overlegen portabilitet og enklere oppbevaring med stivheten fra drop-stitch-konstruksjonen. Det er tyngre enn et hardt brett, men pakkes i en ryggsekk for reiser.",
-      ai_faq: [
-        {
-          q: 'Hvilket trykk er ideelt?',
-          a: '12-15 PSI anbefales. Brettet yter best ved 15 PSI for maksimal stivhet.',
-        },
-        {
-          q: 'Følger en padleåre med?',
-          a: 'En justerbar aluminiumspadleåre er inkludert i den komplette pakken.',
-        },
-      ],
-    },
-    'sup-cheetah-surge': {
-      definition:
-        'Et 11-fots allround oppustelig SUP-brett med dristig gepard-tema i flerfarget EVA-blokkeknikk og UV-digitaltrykk, bygget for fritidspaddling på innsjøer, elver og beskyttede kystfarvann.',
-      problem:
-        'Paddlere som ønsker et brett som skiller seg ut visuelt, trenger premium-kunst som ikke falmer, flasser eller ripes av saltvann og UV-eksponering. Tradisjonelle trykkmetoder svikter under disse forholdene.',
-      howItWorks:
-        'Cheetah Surge Edition bruker drop-stitch PVC-kjerneteknologi som oppnår stivhet ved 15 PSI med et bredt dekk på 32 tommer. Kunsthåndverket på dekkputen skapes gjennom flerfarget EVA-blokkeknikk — EVA-ark i ulike farger stanses ut og settes sammen sømløst som et puslespill i stedet for å trykkes, noe som garanterer null falming eller flassing.',
-      audience:
-        'Motebevisste paddlere, friluftsentusiaster, boutique-reisende og skapere av innhold for sosiale medier som ønsker et iøynefallende og holdbart SUP-brett.',
-      ai_use_cases: [
-        'Skaping av innhold for sosiale medier på vannet',
-        'Fritidspaddling på innsjøer og elver',
-        'Boutique-reiser og eventyrturisme',
-      ],
-      ai_comparison:
-        'Sammenlignet med vanlige trykte SUP-brett bruker Cheetah Surge Edition stanset EVA-blokkeknikk som aldri falmer eller flasser. Kunsthåndverket er en strukturell del av EVA-materialet fremfor et overfladisk trykk.',
-      ai_faq: [
-        {
-          q: 'Hvordan påføres kunsten?',
-          a: 'Kunsten bruker flerfarget EVA-blokkeknikk — EVA-skumark i ulike farger stanses presist ut og settes sammen sømløst som et puslespill. Det finnes ingen trykkfarge på ståflaten.',
-        },
-        {
-          q: 'Falmer kunsten i saltvann?',
-          a: 'Nei. Fordi fargene er innebygd i EVA-materialet fremfor et overfladisk blekklag, falmer, flasser eller ripes kunsten aldri av saltvann, UV eller fottrafikk.',
-        },
-      ],
-    },
-    'sup-leviathan-wake': {
-      definition:
-        'Et 11-fots allround oppustelig SUP-brett med et betagende blåhval-totem i UV-digitaltrykk og mekanisk reliekkpreget dekkpute.',
-      problem:
-        'Paddlere som søker kunstneriske SUP-brett, trenger kunstverk som forblir levende ved høytrykksoppustning og gjentatt rulling for oppbevaring. Standardblekk sprekker og flasser.',
-      howItWorks:
-        'Leviathan Wake bruker en drop-stitch PVC-kjerne ved 15 PSI med et dekk på 32 tommer. Motivet på baugen trykkes med høy presisjons-UV-digitaltrykk, mens logoen på undersiden silketrykkes med høyelastiske PVC-blekkfarger. Dekkputen er mekanisk reliekkpreget med holdbare bølgemønstre.',
-      audience:
-        'Entusiaster for hav og marint liv, kunstneriske paddlere og alle som ønsker et visuelt markant SUP-brett med holdbar kunst i høy kvalitet.',
-      ai_use_cases: [
-        'Vanneventyr med marint tema',
-        'Fritidspaddling på innsjøer og langs kysten',
-        'Kunstnerisk og livsstilsorientert padling',
-      ],
-      ai_comparison:
-        'Sammenlignet med vanlige SUP-brett har Leviathan Wake et totemisk hvalmotiv med doble trykketeknikker optimalisert for holdbarhet. Den mekanisk reliekkpregete dekkputen varer lenger enn trykte puter.',
-      ai_faq: [
-        {
-          q: 'Er logoen på undersiden holdbar?',
-          a: 'Ja. Logoen på undersiden silketrykkes med høyelastiske PVC-blekkfarger som er vurdert for 15 PSI-oppustning og gjentatt rulling.',
-        },
-        {
-          q: 'Hva er spesielt med dekkputen?',
-          a: 'Bølgemønstrene er mekanisk reliekkpreget i to-lags kompositt-EVA, noe som sikrer jevn dybde, utmerket vannavledning og langvarig sklisikkerhet.',
-        },
-      ],
-    },
-    'sup-medusa-glow': {
-      definition:
-        'Et 11-fots allround oppustelig SUP-brett med manet- og korallrev-tema i flerfarget EVA-blokkeknikk og konstruksjonsløsninger mot delaminering.',
-      problem:
-        'Paddlere som elsker havinspirert kunst, trenger et brett med premium-grafikk som motstår tøffe marine miljøer uten å falme, flasse eller delaminere ved festepunkter.',
-      howItWorks:
-        'Medusa Glow bruker en drop-stitch PVC-kjerne ved 15 PSI med et dekk på 32 tommer. Motivet på baugen er UV-digitaltrykket, mens EVA-puten bruker flerfarget blokkeknikk for falming-frie sjøstjerner og muslingskall. D-ring-områdene maskeres for rå PVC-til-PVC-binding som forhindrer delaminering.',
-      audience:
-        'Kvinnelige paddlere, livsstilsentusiaster, boutique-reisende og alle som ønsker en helbredende havinspirert estetikk på vannet.',
-      ai_use_cases: [
-        'Yoga og trening på padlebrett',
-        'Skaping av innhold for sosiale medier',
-        'Tropiske og kystnære padleeventyr',
-      ],
-      ai_comparison:
-        'Sammenlignet med vanlige trykte SUP-brett bruker Medusa Glow EVA-blokkeknikk for grafikken på ståflaten — fargene er strukturelle i EVA-materialet, ikke trykt blekk, så de falmer aldri.',
-      ai_faq: [
-        {
-          q: 'Hva er fargepaletten?',
-          a: 'Forfriskende myntegrønn base med dyp petrol EVA-pute med hvite stansede blokker i sjøstjerne- og muslingform samt livlige koralloransje accenter.',
-        },
-        {
-          q: 'Hvordan er håndtaket festet?',
-          a: 'Neopren-håndtaket i midten er forankret gjennom EVA-puten direkte i skrogets PVC-substrat, slik at løftebelastninger bæres av det stive skroget.',
-        },
-      ],
-    },
-    'sup-ocean-pulse': {
-      definition:
-        'Et 11-fots allround oppustelig SUP-brett med topografisk bølgemønster i UV-digitaltrykk og mekanisk reliekkpreget dekkpute, med fargekoordinert tilbehør.',
-      problem:
-        'Stilbevisste paddlere ønsker en komplett visuell opplevelse — ikke bare et vakkert brett, men koordinert tilbehør som bevarer estetikken fra oppbevaring til vann.',
-      howItWorks:
-        'Ocean Pulse bruker en drop-stitch PVC-kjerne ved 15 PSI. Bølgekonturene påføres med høy presisjons-UV-trykk. EVA-puten er mekanisk reliekkpreget med bølgeteksturer. Alt tilbehør — ryggsekk, pumpe, leash — gjennomgår ensartet fargetilpasning som matcher brettets design.',
-      audience:
-        'Kvinnelige paddlere, trendbevisste livsstilsentusiaster, boutique-campere og paddlere som verdsetter koordinert estetikk i hele utstyret.',
-      ai_use_cases: [
-        'Padling for Instagram og sosiale medier',
-        'Boutique-reiser og camping',
-        'Fritidspaddling på innsjøer og langs kysten',
-      ],
-      ai_comparison:
-        'Sammenlignet med vanlige SUP-brett tilbyr Ocean Pulse en komplett koordinert visuell identitet på tvers av brettet og alt tilbehør, med mekanisk reliekkpreget EVA for bedre holdbarhet enn trykte dekkputer.',
-      ai_faq: [
-        {
-          q: 'Hvilket tilbehør er fargetilpasset?',
-          a: 'Reiseryggsekken med hjul, den dobbeltvirkende høytrykkspumpen, sikkerhetsleashen og de vanntette telefonposene gjennomgår alle ensartet fargematching og merkevaretilpasning.',
-        },
-        {
-          q: 'Hvordan skapes mønstret på dekkputen?',
-          a: 'Bølgemønstrene dannes gjennom høy presisjons mekanisk reliekkpresning på to-lags kompositt-EVA, noe som sikrer jevn dybde og utmerket vannavledning.',
-        },
-      ],
-    },
-    'sup-ocean-voyager': {
-      definition:
-        'Et 11-fots allround oppustelig SUP-brett med geometrisk havskilpadde-kunstverk i flerfarget EVA-blokkeknikk og UV-digitaltrykk, med gjennomført visuell identitet i tilbehøret.',
-      problem:
-        'Havbevisste paddlere ønsker et brett som feirer marint liv med premium-kunst som forblir levende i årevis uten å falme eller flasse av saltvann.',
-      howItWorks:
-        'Ocean Voyager bruker en drop-stitch PVC-kjerne ved 15 PSI med et dekk på 32 tommer. Den geometriske skilpaddeillustrasjonen på baugen bruker UV-digitaltrykk, mens EVA-puten bruker flerfarget blokkeknikk for skilpaddesilhuetten og korallformene. Alt tilbehør er fargekoordinert.',
-      audience:
-        'Havelskere, skilpadde-entusiaster, trendbevisste paddlere og boutique-reisende som ønsker en premium-pakke med koordinert livsstil.',
-      ai_use_cases: [
-        'Padling med marint bevaringstema',
-        'Skaping av innhold for sosiale medier',
-        'Lengre turpadling og utforskning',
-      ],
-      ai_comparison:
-        'Sammenlignet med vanlige trykte SUP-brett bruker Ocean Voyager flerfarget EVA-blokkeknikk som aldri ripes, flasser eller falmer. Den stansede presisjonen sikrer helt flate overflater under føttene.',
-      ai_faq: [
-        {
-          q: 'Hva er navneinspirasjonen?',
-          a: 'Havskilpadden er naturens ypperste havvandrer, som navigerer tusenvis av miles med uanstrengt ynde. Ocean Voyager fanger ånden i langsiktig utforskning og harmoni med marint liv.',
-        },
-        {
-          q: 'Falmer kunstverket?',
-          a: 'Nei. Grafikken på EVA-puten bruker flerfarget blokkeknikk — fargene er innebygd i EVA-materialet, ikke trykt blekk. Grafikken ripes, flasser eller falmer aldri, selv ved hard bruk.',
-        },
-      ],
-    },
-    'sup-dolphin-wave': {
-      definition:
-        'Et 11-fots allround oppustelig SUP-brett med delfin-havlandskapskunstverk, laget med CNC-stanset EVA-fargeblokksammensetting og silketrykte kontinuerlige bølger på sidebåndet.',
-      problem:
-        'Kunstinteresserte paddlere trenger SUP-kunstverk som overlever høytrykksoppustning (15 PSI) og stram rullelagring uten å sprekke, krølle eller gi avfarging.',
-      howItWorks:
-        'Dolphin Wave bruker en drop-stitch PVC-kjerne ved 15 PSI. Ståsonen bruker CNC-stanset EVA-blokkeknikk der fargene er innebygd i materialet. Sidebåndet bruker kontinuerlig silketrykk for å forlenge bølgemotivene rundt sidene. UV-blekkfargene har 150% elongasjon for sprekkmotstand.',
-      audience:
-        'Entusiaster for marint dyreliv, paddlere som setter pris på detaljerte kunstverk, og alle som ønsker et brett med 360-graders visuell kontinuitet.',
-      ai_use_cases: [
-        'Padling med marint dyreliv-tema',
-        'Fritidspaddling på innsjøer og langs kysten',
-        'Innhold for sosiale medier og livsstil',
-      ],
-      ai_comparison:
-        'Sammenlignet med vanlige trykte SUP-brett bruker Dolphin Wave fysisk EVA-blokkeknikk på ståsonen og silketrykte bølger på sidene for 360-graders visuell kontinuitet. UV-blekkfargene med 150% elongasjon forhindrer sprekker.',
-      ai_faq: [
-        {
-          q: 'Hvilke farger brukes?',
-          a: 'Middelalderblå for dype bølger, Serenity for rolige toner, med hvite skumdetaljer. Fargepaletten følger PANTONE TPG-standarder for presis produksjon.',
-        },
-        {
-          q: 'Hvordan påføres bølgene på sidene?',
-          a: 'Sidebåndet bruker en kontinuerlig silketrykkprosess på solid myntegrønn dobbeltlags PVC, som kostnadseffektivt forlenger bølgemotivet rundt brettets sider.',
-        },
-      ],
-    },
-    'sup-flowing-lotus': {
-      definition:
-        'Et 11-fots allround oppustelig SUP-brett med tradisjonell østlig penselkunst-estetikk, laget med dobbeltlags lasergravert EVA-dekkpute og UV-digitaltrykt gradientkunstverk.',
-      problem:
-        'Paddlere som søker kunstnerisk og kulturelt uttrykk på vannet, trenger premium-kunstverk som tåler tung fottrafikk og saltvann uten å slites ut eller falme.',
-      howItWorks:
-        'Flowing Lotus bruker en drop-stitch PVC-kjerne ved 15 PSI. EVA-dekkputen bruker dobbeltlags kompositt-lasergravering — laseren gravérer bort det øverste fargelaget og avdekker den nederste fargen, noe som skaper permanente mønstre. Gradienten på baugen bruker fleksible UV-blekkfarger med høy elongasjon for sprekkmotstand.',
-      audience:
-        'Yogautøvere, meditasjonsentusiaster, elskere av østlig kunst og paddlere som setter pris på kulturell estetikk og premium-håndverk.',
-      ai_use_cases: [
-        'Yoga- og meditasjonspadling',
-        'Kulturelle og kunstneriske opplevelser på vannet',
-        'Fritidspaddling på innsjøer og elver',
-      ],
-      ai_comparison:
-        'Sammenlignet med vanlige trykte SUP-brett bruker Flowing Lotus lasergraveringsteknologi som graverer mønstrene permanent inn i EVA-materialet — kunstverket kan ikke slites ut eller falme fordi det er en strukturell del av puten.',
-      ai_faq: [
-        {
-          q: 'Hvordan fungerer lasergraveringen?',
-          a: 'En dobbeltlags kompositt-EVA-pute (petrolgrønn base med myntegrønn overflate) lasergraveres — laseren fjerner det øverste laget og avdekker den nederste fargen, noe som skaper permanente 3D-teksturerte mønstre.',
-        },
-        {
-          q: 'Hvorfor egner dette brettet seg for yoga?',
-          a: 'De lasergraverte mønstrene gir utmerket sklisikkerhet uten å være slipende, mens gradientdesignet skaper en beroligende estetikk som er perfekt for meditasjon og yoga på vannet.',
-        },
-      ],
-    },
-    'sup-jungle-mandala': {
-      definition:
-        'Et 11-fots allround oppustelig SUP-brett med tropisk mandala-kunstverk, laget med dobbeltlags lasergravert EVA, forvrengningssikker geometri og silketrykte kontinuerlige sidebånd.',
-      problem:
-        'Paddlere ønsker geometrisk komplekse kunstverk som forblir perfekt symmetriske og uforvrengte selv når brettet blåses opp til høyt trykk, uten mønsterfeil under produksjonen.',
-      howItWorks:
-        'Jungle Mandala bruker en drop-stitch PVC-kjerne ved 15 PSI. Mandala-geometrien har gjennomgått strukturell linjetykkelse for å motvirke dimpler i PVC-overflaten. EVA-puten bruker dobbeltlags lasergravering. Sidemotivene bruker et spredt, ikke-rigidt mønster som rommer strekketoleranser ved manuell montering.',
-      audience:
-        'Åndelige og kunstneriske paddlere, tropiske eventyrere, yogautøvere og alle som trekkes mot geometrisk og mandala-estetikk.',
-      ai_use_cases: ['Åndelig og meditativ padling', 'Tropiske kysteventyr', 'Skaping av innhold for sosiale medier'],
-      ai_comparison:
-        'Sammenlignet med vanlige SUP-brett har Jungle Mandala forvrengningssikker mandala-geometri konstruert for å forbli perfekt symmetrisk ved 15 PSI-oppustning, med kostnadseffektive silketrykte sidemotiver.',
-      ai_faq: [
-        {
-          q: 'Forvrenges mandalamønsteret ved oppustning?',
-          a: 'Nei. De geometriske linjene har gjennomgått strukturell tykkelse spesielt for å motvirke dimpler i PVC-overflaten og forblir perfekt symmetriske ved fullt oppblåsningstrykk.',
-        },
-        {
-          q: 'Hvordan påføres kunsten på sidene?',
-          a: 'Kolibri- og sommerfuglmotivene på sidene bruker en kontinuerlig silketrykkprosess med et spredt, ikke-rigidt mønster som rommer strekketoleransene ved manuell montering.',
-        },
-      ],
-    },
-    'sup-tropical-breeze': {
-      definition:
-        'Et 11-fots allround oppustelig SUP-brett med mikro-landskapsillustrasjon og abstrakt EVA-blokkeknikk som sømløst integrerer en øyferie-scene i brettets design.',
-      problem:
-        'Paddlere ønsker et brett som skaper en komplett oppslukende opplevelse — som forvandler vannsportsutstyr til et lerret som fører dem til et tropisk paradis.',
-      howItWorks:
-        'Tropical Breeze bruker en drop-stitch PVC-kjerne ved 15 PSI med et dekk på 32 tommer. Baugen har en digitaltrykt mikro-landskapsillustrasjon. EVA-ståsonen bruker stanset abstrakt fargeblokkering som forlenger den visuelle fortellingen av bølger, strand og palmer over hele brettet.',
-      audience:
-        'Feriereisende, entusiaster for tropisk livsstil, skapere av innhold for sosiale medier og paddlere som ønsker et brett som fanger ånden i flukten til øylivet.',
-      ai_use_cases: [
-        'Padling på tropisk ferie',
-        'Skaping av innhold for sosiale medier',
-        'Fritidsopphold ved innsjøer og langs kysten',
-      ],
-      ai_comparison:
-        'Sammenlignet med vanlige SUP-brett integrerer Tropical Breeze unikt en komplett landskapsscene over hele brettoverflaten, med en perfekt arbeidsdeling mellom digitaltrykk for detaljer og EVA-lappeteknikk for holdbarhet.',
-      ai_faq: [
-        {
-          q: 'Hvilken scene er avbildet på brettet?',
-          a: 'Et drømmeaktig øyparadis med solskinn, kokoslund, strand og palmer — en mikro-landskapsillustrasjon på baugen som går over i abstrakt EVA-blokkeknikk mot akteren.',
-        },
-        {
-          q: 'Hvordan overgår kunstverket fra baug til akter?',
-          a: 'Baugen bruker detaljert digitaltrykk for landskapsillustrasjonen, mens akteren bruker stanset EVA-blokkeknikk som abstraherer bølgene, sanden og palmene — noe som skaper en sømløs visuell reise.',
-        },
-      ],
-    },
-  },
   ru: {
-    'life-vest-classic': {
-      definition:
-        'Сертифицированное CE универсальное спасательное снаряжение для любительского водного спорта в любых акваториях.',
-      problem:
-        'Любителям водного спорта любого уровня нужно надёжное и удобное спасательное снаряжение, соответствующее международным стандартам безопасности и не ограничивающее свободу движений.',
-      howItWorks:
-        'Спасательный жилет Classic использует пенопластовые камеры плавучести с регулируемыми грудными и боковыми ремнями для надёжной посадки. Он выпускается в нескольких размерах и включает аварийный свисток, светоотражающие полосы и ручку для извлечения из воды.',
-      audience:
-        'Любители гребли, яхтсмены-любители, рыбаки и новички в водном спорте, которым нужна сертифицированная CE плавучесть для озёр, рек и прибрежных вод.',
-      ai_use_cases: [
-        'Безопасность при любительском водном спорте',
-        'Плавучесть для тренировок и присмотра',
-        'Семейный отдых на воде',
-      ],
-      ai_comparison:
-        'По сравнению с автоматическими надувными спасательными жилетами жилет Classic обеспечивает постоянную плавучесть без активации. Он более объёмный, но более надёжный для любителей, которые могут не обслуживать автоматические механизмы.',
-      ai_faq: [
-        {
-          q: 'Подходит ли этот жилет для детей?',
-          a: 'Да, доступны детские размеры. Сертификация CE и USCG для указанных весовых категорий.',
-        },
-        {
-          q: 'Требуется ли обслуживание?',
-          a: 'Минимальное обслуживание. Прополощите пресной водой после использования. Проверяйте камеры и ремни перед каждым применением. Замените при повреждениях.',
-        },
-      ],
-    },
-    'life-vest-pro': {
-      definition:
-        'Спасательный жилет профессионального класса по стандарту SOLAS с автоматическим надуванием для офшорных, спасательных и коммерческих морских операций.',
-      problem:
-        'Профессиональным морякам и спасателям нужен жилет с автоматическим надуванием, высокой плавучестью и видимостью по стандарту SOLAS для офшорных операций.',
-      howItWorks:
-        'Жилет Pro использует автоматический гидростатический механизм надувания с ручной трубкой для подкачки в качестве резерва. Он включает светоотражающие полосы класса SOLAS, брызгозащитный капюшон, аварийный свисток, водонепроницаемый фонарь и точку крепления подъёмной стропы.',
-      audience:
-        'Коммерческие моряки, спасатели-профессионалы, офшорные работники и опытные яхтсмены, которым нужны автоматические спасательные жилеты по стандарту SOLAS.',
-      ai_use_cases: [
-        'Безопасность при морских офшорных операциях',
-        'Профессиональные спасение и готовность',
-        'Соблюдение коммерческих морских норм',
-      ],
-      ai_comparison:
-        'По сравнению с пенопластовыми жилетами жилет Pro надувается автоматически, обеспечивая минимальный объём при повседневном использовании. Он требует ежегодного обслуживания гидростатического механизма и замены батареи.',
-      ai_faq: [
-        {
-          q: 'Как работает автоматическое надувание?',
-          a: 'Гидростатический активатор срабатывает при погружении в воду на глубину 0,5-1,0 м. Ручная трубка для подкачки включена в качестве резерва.',
-        },
-        {
-          q: 'Как часто нужно проходить обслуживание?',
-          a: 'Рекомендуется ежегодное обслуживание гидростатического механизма. Баллон CO2 следует проверять и заменять по графику производителя.',
-        },
-      ],
-    },
     'oars-pump-set': {
       definition:
-        'Полный комплект аксессуаров: пара 1,6-метровых алюминиевых вёсел с пластиковыми лопастями и мощный 5-литровый ножной насос с высокой производительностью и манометром для всех надувных судов.',
+        'Полный комплект аксессуаров: пара 1,6-метровых алюминиевых вёсел с пластиковыми лопастями и мощный 5-литровый ножной насос с высокой производительностью и манометром для всех надувных досок SUP.',
       problem:
-        'Владельцам надувных лодок нужны запасные или дополнительные вёсла и производительный насос для накачивания и движения — всё совместимое со стандартными надувными судами.',
+        'Владельцам надувных досок SUP нужны запасные или дополнительные вёсла и производительный насос для накачивания — всё совместимое со стандартными досками серии.',
       howItWorks:
         'Вёсла имеют алюминиевые древки с пластиковыми лопастями для лёгкого хода. Ножной насос подаёт 5 литров воздуха за такт со встроенным манометром для точного накачивания.',
       audience:
-        'Владельцы надувных лодок, каяков и джол, которым нужны запасные или заменяющие вёсла и мощный насос для накачивания.',
+        'Владельцы надувных досок SUP, которым нужны запасные или заменяющие вёсла и мощный насос для накачивания.',
       ai_use_cases: [
-        'Запасные вёсла для надувных лодок',
+        'Запасные вёсла для надувных досок SUP',
         'Высокопроизводительное накачивание при спуске на воду',
         'Резервное движение и накачивающее снаряжение',
       ],
       ai_comparison:
-        'По сравнению с двухтактным насосом этот ножной насос даёт больший объём за такт, но требует больше усилий. Вёсла служат базовым запасным средством движения для надувных лодок без мотора.',
+        'По сравнению с двухтактным насосом этот ножной насос даёт больший объём за такт, но требует больше усилий. Вёсла служат запасным средством движения, когда лопасть весла не под рукой.',
       ai_faq: [
         {
-          q: 'Подходят ли вёсла ко всем надувным лодкам?',
-          a: 'Вёсла подходят к стандартным уключинам большинства надувных лодок ассортимента. Длина 1,6 м подходит для лодок длиной до 4 м.',
+          q: 'Подходят ли вёсла ко всем надувным доскам SUP?',
+          a: 'Вёсла подходят к стандартным уключинам большинства досок ассортимента. Длина 1,6 м подходит для досок длиной до 4 м.',
         },
         {
           q: 'Какое давление создаёт ножной насос?',
-          a: 'Ножной насос создаёт до 12-15 PSI, что подходит для большинства надувных лодок и джол. Его может не хватить для SUP-бордов высокого давления, требующих 18+ PSI.',
+          a: 'Ножной насос создаёт до 12-15 PSI, что подходит для большинства надувных досок. Его может не хватить для SUP-бордов высокого давления, требующих 18+ PSI.',
         },
       ],
     },
@@ -3253,7 +1230,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
       problem:
         'Новичкам и любителям нужен стабильный и портативный SUP-борд, который легко накачать, на котором легко держать баланс и который прощает ошибки при обучении.',
       howItWorks:
-        "SUP Explorer 11' использует технологию drop-stitch для жёсткости 15 PSI и широкую палубу 32 дюйма для поперечной стабильности. Борд включает съёмный центральный плавник, спиральный лиш и двухтактный ручной насос для быстрого накачивания на месте спуска.",
+        'SUP Explorer 11 использует технологию drop-stitch для жёсткости 15 PSI и широкую палубу 32 дюйма для поперечной стабильности. Борд включает съёмный центральный плавник, спиральный лиш и двухтактный ручной насос для быстрого накачивания на месте спуска.',
       audience:
         'Новички, любители, семьи и энтузиасты фитнеса, которым нужен портативный и стабильный SUP-борд для озёр, рек и защищённых прибрежных вод.',
       ai_use_cases: [
@@ -3262,7 +1239,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
         'Тренировки и йога на воде',
       ],
       ai_comparison:
-        "По сравнению с жёсткими эпоксидными бордами SUP Explorer 11' превосходит их по портативности и удобству хранения, сохраняя жёсткость благодаря конструкции drop-stitch. Он тяжелее жёсткого борда, но упаковывается в рюкзак для путешествий.",
+        'По сравнению с жёсткими эпоксидными бордами SUP Explorer 11 превосходит их по портативности и удобству хранения, сохраняя жёсткость благодаря конструкции drop-stitch. Он тяжелее жёсткого борда, но упаковывается в рюкзак для путешествий.',
       ai_faq: [
         {
           q: 'Какое давление оптимально?',
@@ -3519,84 +1496,30 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
     },
   },
   nl: {
-    'life-vest-classic': {
-      definition:
-        'Een CE-gecertificeerd universeel drijfvermogenshulpmiddel voor recreatieve watersport in alle wateromgevingen.',
-      problem:
-        'Watersporters van alle niveaus hebben een betrouwbaar en comfortabel reddingsvest nodig dat voldoet aan internationale veiligheidsnormen zonder de bewegingsvrijheid te beperken.',
-      howItWorks:
-        'Het Reddingsvest Classic gebruikt schuimgevulde drijfvermogenkamers met verstelbare borst- en zijriemen voor een veilige pasvorm. Het is verkrijgbaar in meerdere maten en omvat een noodfluit, reflecterende strepen en een bergingsgreep.',
-      audience:
-        'Recreatieve paddleboarders, leisure-zeilers, sportvissers en beginners in de watersport die CE-gecertificeerd drijfvermogen nodig hebben voor meren, rivieren en kustwateren.',
-      ai_use_cases: [
-        'Veiligheid bij recreatieve watersport',
-        'Drijfvermogen voor training en toezicht',
-        'Familieactiviteiten op het water',
-      ],
-      ai_comparison:
-        'Vergeleken met automatische opblaasbare reddingsvesten geeft het Reddingsvest Classic constant drijfvermogen zonder activering. Het is volumineuzer, maar betrouwbaarder voor recreanten die automatische mechanismen mogelijk niet onderhouden.',
-      ai_faq: [
-        {
-          q: 'Is dit vest geschikt voor kinderen?',
-          a: 'Ja, er zijn kindermaten beschikbaar. CE- en USCG-gecertificeerd voor de vermelde gewichtsklassen.',
-        },
-        {
-          q: 'Vereist het onderhoud?',
-          a: 'Minimaal onderhoud. Spoel na gebruik af met zoet water. Controleer kamers en riemen voor elk gebruik. Vervang bij beschadiging.',
-        },
-      ],
-    },
-    'life-vest-pro': {
-      definition:
-        'Een reddingsvest van professionele klasse volgens SOLAS met automatische oppomping voor offshore-, reddings- en commerciële maritieme toepassingen.',
-      problem:
-        'Professionele zeelieden en reddingspersoneel hebben een vest nodig dat automatisch opblaast, hoog drijfvermogen biedt en SOLAS-goedgekeurde zichtbaarheid voor offshore-operaties.',
-      howItWorks:
-        'Het Reddingsvest Pro gebruikt een automatisch hydrostatisch opblaasmechanisme met een handpompbuis als back-up. Het omvat SOLAS-klasse reflecterende banden, een sprayhood, een noodfluit, een waterdichte lamp en een bevestigingspunt voor een hijsling.',
-      audience:
-        'Commerciële zeelieden, professionele reddingswerkers, offshore-werknemers en gevorderde zeilers die automatische SOLAS-goedgekeurde reddingsvesten nodig hebben.',
-      ai_use_cases: [
-        'Veiligheid bij maritieme offshore-operaties',
-        'Professionele redding en paraatheid',
-        'Naleving van commerciële maritieme regelgeving',
-      ],
-      ai_comparison:
-        'Vergeleken met schuimvesten blaast het Reddingsvest Pro zich automatisch op voor minimaal volume bij normaal gebruik. Het vereist jaarlijks onderhoud van het hydrostatische mechanisme en batterijvervanging.',
-      ai_faq: [
-        {
-          q: 'Hoe werkt de automatische oppomping?',
-          a: 'Een hydrostatische activator wordt geactiveerd bij onderdompeling op 0,5-1,0 meter diepte. Een handpompbuis is ook inbegrepen als back-up.',
-        },
-        {
-          q: 'Hoe vaak moet het worden onderhouden?',
-          a: 'Jaarlijks onderhoud van het hydrostatische mechanisme wordt aanbevolen. De CO2-cilinder moet worden gecontroleerd en vervangen volgens het schema van de fabrikant.',
-        },
-      ],
-    },
     'oars-pump-set': {
       definition:
-        'Een compleet accessoirepakket met een paar 1,6m aluminium roeiriemen met kunststof bladen en een krachtige 5L voetpomp met hoge luchtstroom en manometer voor alle opblaasbare vaartuigen.',
+        'Een compleet accessoirepakket met een paar 1,6m aluminium roeiriemen met kunststof bladen en een krachtige 5L voetpomp met hoge luchtstroom en manometer voor alle opblaasbare SUP boards.',
       problem:
-        'Eigenaren van opblaasbare boten hebben vervangings- of extra roeiriemen en een hoogvolume-pomp nodig voor het opblazen en voortbewegen, allemaal compatibel met standaard opblaasbare vaartuigen.',
+        'Eigenaren van opblaasbare SUP boards hebben vervangings- of extra roeiriemen en een hoogvolume-pomp nodig voor het opblazen, allemaal compatibel met de standaard boards uit de reeks.',
       howItWorks:
         'De riemen hebben aluminium schachten met kunststof bladen voor lichte voortstuwing. De voetpomp levert 5 liter lucht per slag met een ingebouwde manometer voor nauwkeurig oppompen.',
       audience:
-        'Eigenaren van opblaasbare boten en kajaks die vervangings- of extra roeiriemen en een krachtige oppompset nodig hebben.',
+        'Eigenaren van opblaasbare SUP boards die vervangings- of extra roeiriemen en een krachtige oppompset nodig hebben.',
       ai_use_cases: [
-        'Vervangingsriemen voor opblaasbare boten',
+        'Vervangingsriemen voor opblaasbare SUP boards',
         'Hoogvolume-oppompen bij het te water laten',
         'Reservevoortstuwing en pomputrusting',
       ],
       ai_comparison:
-        'Vergeleken met de dubbelwerkende pomp geeft deze voetpomp een hoger volume per slag, maar vraagt meer inspanning. De riemen bieden een basaal alternatief voor voortstuwing van opblaasbare boten zonder motor.',
+        'Vergeleken met de dubbelwerkende pomp geeft deze voetpomp een hoger volume per slag, maar vraagt meer inspanning. De riemen bieden een back-up voor voortstuwing wanneer er geen paddle voorhanden is.',
       ai_faq: [
         {
-          q: 'Passen de riemen op alle opblaasbare boten?',
-          a: 'De riemen passen in de standaard dolpen van de meeste opblaasbare boten uit het assortiment. De lengte van 1,6m is geschikt voor boten tot 4m.',
+          q: 'Passen de riemen op alle opblaasbare SUP boards?',
+          a: 'De riemen passen in de standaard dolpen van de meeste opblaasbare boards uit het assortiment. De lengte van 1,6m is geschikt voor boards tot 4m.',
         },
         {
           q: 'Welke druk bereikt de voetpomp?',
-          a: 'De voetpomp bereikt tot 12-15 PSI, geschikt voor de meeste opblaasbare boten en jolletjes. Hij is mogelijk niet voldoende voor hoogdruk-SUP-boards die 18+ PSI vereisen.',
+          a: 'De voetpomp bereikt tot 12-15 PSI, geschikt voor de meeste opblaasbare boards. Hij is mogelijk niet voldoende voor hoogdruk-SUP-boards die 18+ PSI vereisen.',
         },
       ],
     },
@@ -3606,7 +1529,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
       problem:
         'Beginnende paddleboarders en recreanten hebben een stabiel en draagbaar SUP-board nodig dat gemakkelijk op te blazen is, waarop goed te balanceren valt en dat vergevingsgezind is om mee te leren.',
       howItWorks:
-        "SUP Explorer 11' gebruikt drop-stitch kerntechnologie voor een stijfheid van 15 PSI en een breed dek van 32 inch voor laterale stabiliteit. Het board omvat een verwijderbare middenvin, een spiraalleash en een dubbelwerkende handpomp voor snelle oppomping bij de waterkant.",
+        'SUP Explorer 11 gebruikt drop-stitch kerntechnologie voor een stijfheid van 15 PSI en een breed dek van 32 inch voor laterale stabiliteit. Het board omvat een verwijderbare middenvin, een spiraalleash en een dubbelwerkende handpomp voor snelle oppomping bij de waterkant.',
       audience:
         'Beginnende paddleboarders, recreanten, families en fitnessliefhebbers die een draagbaar en stabiel SUP-board zoeken voor meren, rivieren en beschermde kustwateren.',
       ai_use_cases: [
@@ -3615,7 +1538,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
         'Training en yoga op het water',
       ],
       ai_comparison:
-        "Vergeleken met harde epoxy boards biedt SUP Explorer 11' superieure draagbaarheid en gemakkelijkere opslag met de stijfheid van de drop-stitch constructie. Het is zwaarder dan een hard board, maar past in een rugzak voor reizen.",
+        'Vergeleken met harde epoxy boards biedt SUP Explorer 11 superieure draagbaarheid en gemakkelijkere opslag met de stijfheid van de drop-stitch constructie. Het is zwaarder dan een hard board, maar past in een rugzak voor reizen.',
       ai_faq: [
         {
           q: 'Welke druk is ideaal?',
@@ -3863,437 +1786,31 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
       ],
     },
   },
-  fi: {
-    'life-vest-classic': {
-      definition: 'CE-sertifioitu yleiskellunta-apuväline vapaa-ajan vesilajeihin kaikissa vesiympäristöissä.',
-      problem:
-        'Kaikkien tasojen vesilajien harrastajat tarvitsevat luotettavan ja mukavan pelastusliivin, joka täyttää kansainväliset turvallisuusstandardit rajoittamatta liikkumisvapautta.',
-      howItWorks:
-        'Pelastusliivi Classic käyttää vaahtotäytteisiä kelluntakammioita säädettävillä rinta- ja kylkiliinoilla turvallisen istuvuuden takaamiseksi. Saatavilla on useita kokoja, ja mukana tulevat hätäpilli, heijastavat raidat ja nostokahva.',
-      audience:
-        'Vapaa-ajan melojat, purjeveneilijät, urheilukalastajat ja vesilajien aloittelijat, jotka tarvitsevat CE-sertifioitua kelluntatehoa järvillä, joilla ja rannikkovesissä.',
-      ai_use_cases: [
-        'Turvallisuus vapaa-ajan vesilajeissa',
-        'Kellunta harjoitteluun ja valvontaan',
-        'Perheaktiviteetit vedessä',
-      ],
-      ai_comparison:
-        'Automaattisiin täytettäviin pelastusliiveihin verrattuna Pelastusliivi Classic antaa jatkuvaa kelluntatehoa ilman aktivointia. Se on tilavampi mutta luotettavampi harrastajille, jotka eivät välttämättä huolla automaattisia mekanismeja.',
-      ai_faq: [
-        {
-          q: 'Sopiiko tämä liivi lapsille?',
-          a: 'Kyllä, lasten kokoja on saatavilla. CE- ja USCG-sertifioitu ilmoitetuille painoluokille.',
-        },
-        {
-          q: 'Vaatiko se huoltoa?',
-          a: 'Minimaalinen huolto. Huuhtele makealla vedellä käytön jälkeen. Tarkista kammiot ja liinat ennen jokaista käyttöä. Vaihda vaurion sattuessa.',
-        },
-      ],
-    },
-    'life-vest-pro': {
-      definition:
-        'SOLAS-vaatimusten mukainen ammattiluokan pelastusliivi automaattisella täytöllä offshore-, pelastus- ja kaupallisiin merisovelluksiin.',
-      problem:
-        'Ammattimerimiehet ja pelastushenkilöstö tarvitsevat liivin, joka täyttyy automaattisesti, antaa korkean kelluntatehon ja SOLAS-hyväksytyn näkyvyyden offshore-operaatioihin.',
-      howItWorks:
-        'Pelastusliivi Pro käyttää automaattista hydrostaattista täytymekanismia suulla puhallettavaan letkuun varmistuksena. Mukana ovat SOLAS-luokan heijastavat nauhat, suihkuhame, hätäpilli, vedeneristävä lamppu ja kiinnityspiste nostoliinaa varten.',
-      audience:
-        'Kaupalliset merimiehet, ammattimaiset pelastajat, offshore-työntekijät ja edistyneet purjehtijat, jotka tarvitsevat automaattisia SOLAS-hyväksyttyjä pelastusliivejä.',
-      ai_use_cases: [
-        'Turvallisuus offshore-merioperaatioissa',
-        'Ammattimainen pelastus ja valmius',
-        'Kaupallisten merimääräysten noudattaminen',
-      ],
-      ai_comparison:
-        'Vaahtoliiveihin verrattuna Pelastusliivi Pro täyttyy automaattisesti ja pysyy minimitilavuutena normaalissa käytössä. Se vaatii vuosittaisen huollon hydrostaattisesta mekaniikasta ja pariston vaihdon.',
-      ai_faq: [
-        {
-          q: 'Miten automaattinen täyttö toimii?',
-          a: 'Hydrostaattinen aktivaattori laukeaa upotuksessa 0,5-1,0 metrin syvyydessä. Suulla puhallettava letku on myös mukana varmistuksena.',
-        },
-        {
-          q: 'Miten usein se on huollettava?',
-          a: 'Hydrostaattisen mekaniikan vuosittainen huolto on suositeltavaa. CO2-pullo on tarkistettava ja vaihdettava valmistajan aikataulun mukaisesti.',
-        },
-      ],
-    },
-    'oars-pump-set': {
-      definition:
-        'Täydellinen lisävarustepaketti: pari 1,6 m alumiiniairoja muovilapoin ja tehokas 5 litran suurivirtainen jalkapumppu painemittarilla kaikkiin ilmalla täytettäviin aluksiin.',
-      problem:
-        'Täytettävien veneiden omistajat tarvitsevat vara- tai lisäairoja ja suurivirtaisen pumppun täyttöön ja soutamiseen, kaikki yhteensopivina tavallisten täytettävien alusten kanssa.',
-      howItWorks:
-        'Airoissa on alumiinivarret ja muovilapat kevyttä työntöä varten. Jalkapumppu tuottaa 5 litraa ilmaa iskua kohti sisäänrakennetulla painemittarilla tarkan täytön takaamiseksi.',
-      audience:
-        'Täytettävien veneiden ja kajakkien omistajat, jotka tarvitsevat vara- tai lisäairoja ja tehokkaan täyttösarjan.',
-      ai_use_cases: [
-        'Vara-airot täytettäviin veneisiin',
-        'Suurivirtainen täyttö vesillelaskussa',
-        'Varasoutu ja pumppuvarusteet',
-      ],
-      ai_comparison:
-        'Kaksoisvaikutteiseen pumppuun verrattuna tämä jalkapumppu antaa suuremman tilavuuden iskua kohti mutta vaatii enemmän vaivaa. Airot tarjoavat perustason vaihtoehdon työntöön moottorittomissa täytettävissä veneissä.',
-      ai_faq: [
-        {
-          q: 'Sopiiko airot kaikkiin täytettäviin veneisiin?',
-          a: 'Airot sopivat useimpien malliston täytettävien veneiden tavanomaisiin airokkeisiin. 1,6 m pituus sopii veneisiin enintään 4 m.',
-        },
-        {
-          q: 'Minkä paineen jalkapumppu saavuttaa?',
-          a: 'Jalkapumppu saavuttaa 12-15 PSI, mikä sopii useimpiin täytettäviin veneisiin ja jollisiin. Se ei välttämättä riitä korkeapaineisiin SUP-lautoihin, jotka vaativat 18+ PSI.',
-        },
-      ],
-    },
-    'sup-explorer-11': {
-      definition:
-        '11-jalkainen ilmalla täytettävä allround-SUP-lauta, joka on rakennettu vakaudesta, kannettavuudesta ja vapaa-ajan käytöstä järvillä, joilla ja suojatuilla rannikkovesillä.',
-      problem:
-        'Aloittelijamelojat ja vapaa-ajan käyttäjät tarvitsevat vakaan ja kannettavan SUP-laudan, joka on helppo täyttää, jolla on helppo tasapainoilla ja joka antaa anteeksi oppimisessa.',
-      howItWorks:
-        "SUP Explorer 11' käyttää drop-stitch-ydintekniikkaa 15 PSI:n jäykkyydellä ja 32 tuuman levyisellä kannalla sivuttaisvakauden takaamiseksi. Lautaan sisältyy irrotettava keskimmäinen evä, kiertoleash ja kaksoisvaikutteinen käsipumppu nopeaan täyttöön rannalla.",
-      audience:
-        'Aloittelijamelojat, vapaa-ajan käyttäjät, perheet ja kuntoilijat, jotka etsivät kannettavaa ja vakaata SUP-lautaa järvillä, joilla ja suojatuilla rannikkovesillä.',
-      ai_use_cases: [
-        'SUP-kuntoilu ja aloittelijoiden opetus',
-        'Vapaa-ajan melonta järvillä ja joilla',
-        'Harjoittelu ja jooga vedessä',
-      ],
-      ai_comparison:
-        "Koviin epoxy-lautoihin verrattuna SUP Explorer 11' tarjoaa paremman kannettavuuden ja helpomman säilytyksen drop-stitch-rakenteen jäykkyydellä. Se on raskaampi kuin kova lauta, mutta mahtuu reppuun matkustamista varten.",
-      ai_faq: [
-        {
-          q: 'Mikä paine on ihanteellinen?',
-          a: '12-15 PSI on suositeltavaa. Lauta suoriutuu parhaiten 15 PSI:n paineessa maksimijäykkyyden saavuttamiseksi.',
-        },
-        {
-          q: 'Sisältyykö mela?',
-          a: 'Säädettävä alumiininen SUP-mela sisältyy täydelliseen pakettiin.',
-        },
-      ],
-    },
-    'sup-cheetah-surge': {
-      definition:
-        '11-jalkainen ilmalla täytettävä allround-SUP-lauta rohkealla leopardikuviolla, toteutettuna monivärisellä EVA-palatekniikalla ja UV-digitaalipainolla, rakennettu vapaa-ajan melontaan järvillä, joilla ja suojatuilla rannikkovesillä.',
-      problem:
-        'Melojat, jotka haluavat visuaalisesti erottuvan laudan, tarvitsevat premium-taidetta, joka ei haalistu, kuoriudu tai naarmuunnu suolavedessä ja UV-altistuksessa. Perinteiset painomenetelmät eivät kestä tätä.',
-      howItWorks:
-        'Cheetah Surge Edition käyttää drop-stitch-PVC-ydintekniikkaa, joka saavuttaa 15 PSI:n jäykkyyden 32 tuuman levyisellä kannalla. Seisonta-alueen kuva-aihe on toteutettu monivärisellä EVA-palatekniikalla – eriväriset EVA-arkit leikataan tarkasti ja yhdistetään saumattomasti palapelin tavoin painamisen sijaan, mikä takaa, ettei haalistumista tai kuoriutumista tapahdu.',
-      audience:
-        'Muodista kiinnostuneet melojat, ulkoilun harrastajat, boutique-matkailijat ja sosiaalisen median sisällöntekijät, jotka haluavat silmiinpistävän ja kestävän SUP-laudan.',
-      ai_use_cases: [
-        'Sosiaalisen median sisältö vedessä',
-        'Vapaa-ajan melonta järvillä ja joilla',
-        'Boutique-matkailu ja seikkailumatkailu',
-      ],
-      ai_comparison:
-        'Tavallisiin painettuihin SUP-lautoihin verrattuna Cheetah Surge Edition käyttää leikattua EVA-palatekniikkaa, joka ei koskaan haalistu tai kuoriudu. Kuva-aihe on EVA-materiaalin rakenteellinen osa pinnallisen painon sijaan.',
-      ai_faq: [
-        {
-          q: 'Miten kuva-aihe on toteutettu?',
-          a: 'Kuva-aihe käyttää moniväristä EVA-palatekniikkaa – eriväriset EVA-vaahtoarkit leikataan tarkkuustyönä ja yhdistetään saumattomasti palapelin tavoin. Seisontapinnalla ei ole painomusteita.',
-        },
-        {
-          q: 'Haalistuuko kuva-aihe suolavedessä?',
-          a: 'Ei. Koska värit on rakennettu EVA-materiaaliin pinnallisen mustekerroksen sijaan, kuva-aihe ei koskaan haalistu, kuoriudu tai naarmuunnu suolavedessä, UV:ssä eikä jalkaliikenteessä.',
-        },
-      ],
-    },
-    'sup-leviathan-wake': {
-      definition:
-        '11-jalkainen ilmalla täytettävä allround-SUP-lauta immersiivisellä sinivalastoteemilla UV-digitaalipainossa ja mekaanisesti kaiverretulla kohokuvioisella EVA-matolla.',
-      problem:
-        'Taidetta etsivät melojat tarvitsevat kuva-aiheita, jotka pysyvät elinvoimaisina korkeapainetäytössä ja toistuvassa rullaussäilytyksessä. Tavalliset musteet halkeilevat ja kuoriutuvat.',
-      howItWorks:
-        'Leviathan Wake käyttää drop-stitch-PVC-ydintä 15 PSI:n paineessa 32 tuuman levyisellä kannalla. Keulan motiivi on painettu korkealaatuisella UV-digitaalipainolla, kun taas pohjan logo on silkkipainettu korkeaelastisilla PVC-musteväreillä. EVA-mattoon on mekaanisesti kaiverrettu kestävät aaltokuviot.',
-      audience:
-        'Valtamerien ystävät ja merielämän ihailijat, taiteelliset melojat ja kaikki, jotka haluavat visuaalisesti erottuvan SUP-laudan laadukkaalla ja kestävällä taiteella.',
-      ai_use_cases: [
-        'Meritieteemaiset vesiseikkailut',
-        'Vapaa-ajan melonta järvillä ja rannikoilla',
-        'Taiteellinen ja elämäntapamelonta',
-      ],
-      ai_comparison:
-        'Tavallisiin SUP-lautoihin verrattuna Leviathan Wakessa on toteemimainen valasmotiivi kahdella kestävyyteen optimoidulla painotekniikalla. Mekaanisesti kaiverrettu EVA-matto kestää painettuja mattoja pidempään.',
-      ai_faq: [
-        {
-          q: 'Onko pohjan logo kestävä?',
-          a: 'Kyllä. Pohjan logo on silkkipainettu korkeaelastisilla PVC-musteväreillä, jotka on arvioitu 15 PSI:n täytölle ja toistuvalle rullaukselle.',
-        },
-        {
-          q: 'Mikä EVA-matossa on erityistä?',
-          a: 'Aaltokuviot on mekaanisesti kaiverrettu kaksikerroksiseen komposiitti-EVA:an, mikä takaa tasaisen syvyyden, erinomaisen vedenerityksen ja kestävän liukumattomuuden.',
-        },
-      ],
-    },
-    'sup-medusa-glow': {
-      definition:
-        '11-jalkainen ilmalla täytettävä allround-SUP-lauta meduusa- ja koralliriuttateemalla monivärisellä EVA-palatekniikalla ja delaminaatiota ehkäisevillä rakenneratkaisuilla.',
-      problem:
-        'Valtamerteemasta pitävät melojat tarvitsevat laudan premium-grafiikoilla, jotka kestävät karkeita meriympäristöjä haalistumatta, kuoriutumatta tai delaminoitumatta kiinnityskohdissa.',
-      howItWorks:
-        'Medusa Glow käyttää drop-stitch-PVC-ydintä 15 PSI:n paineessa 32 tuuman levyisellä kannalla. Keulan motiivi on painettu UV-digitaalisesti, kun taas EVA-matto käyttää moniväristä palatekniikkaa haalistumattomille meritähdille ja simpukoille. D-rengas-alueet on maskattu paljasta PVC-PVC-sidosta varten, joka ehkäisee delaminaatiota.',
-      audience:
-        'Naismelojat, elämäntapaharrastajat, boutique-matkailijat ja kaikki, jotka haluavat parantavan valtameriin pohjautuvan estetiikan vedessä.',
-      ai_use_cases: [
-        'Jooga ja kuntoilu SUP-laudalla',
-        'Sosiaalisen median sisältö',
-        'Trooppiset ja rannikkoläheiset melontaseikkailut',
-      ],
-      ai_comparison:
-        'Tavallisiin painettuihin SUP-lautoihin verrattuna Medusa Glow käyttää EVA-palatekniikkaa seisontapinnan grafiikoihin – värit on rakennettu EVA-materiaaliin painamisen sijaan, joten ne eivät koskaan haalistu.',
-      ai_faq: [
-        {
-          q: 'Mikä väripaletti on käytössä?',
-          a: 'Virkistävä mintunvihreä pohja syvällä teal-värisellä EVA-matolla, valkoisilla leikatuilla paloilla meritähti- ja simpukkamuoissa sekä elävin korallioranssein korostuksin.',
-        },
-        {
-          q: 'Miten kahva on kiinnitetty?',
-          a: 'Keskellä oleva neopreenikahva on ankkuroitu EVA-maton läpi suoraan rungon PVC-substraattiin, jolloin nostokuormat siirtyvät jäykkään runkoon.',
-        },
-      ],
-    },
-    'sup-ocean-pulse': {
-      definition:
-        '11-jalkainen ilmalla täytettävä allround-SUP-lauta topografisella aaltokuviolla UV-digitaalipainossa, mekaanisesti kaiverretulla EVA-matolla ja värikoordinoiduilla lisävarusteilla.',
-      problem:
-        'Tyylistä kiinnostuneet melojat haluavat täydellisen visuaalisen kokemuksen – ei vain kauniin laudan vaan myös koordinoidut lisävarusteet, jotka säilyttävät estetiikan säilytyksestä veteen.',
-      howItWorks:
-        'Ocean Pulse käyttää 15 PSI:n drop-stitch-PVC-ydintä. Aaltokontuurit on toteutettu korkealaatuisella UV-painolla. EVA-mattoon on mekaanisesti kaiverrettu aaltorakenteita. Kaikki lisävarusteet – reppu, pumppu, leash – käyvät läpi yhtenäisen värisovituksen, joka vastaa laudan suunnittelua.',
-      audience:
-        'Naismelojat, trenditietoiset elämäntapaharrastajat, boutique-retkeilijät ja melojat, jotka arvostavat koordinoitua estetiikkaa koko varustuksessa.',
-      ai_use_cases: [
-        'Melonta Instagramiin ja sosiaaliseen mediaan',
-        'Boutique-matkailu ja retkeily',
-        'Vapaa-ajan melonta järvillä ja rannikoilla',
-      ],
-      ai_comparison:
-        'Tavallisiin SUP-lautoihin verrattuna Ocean Pulse tarjoaa täydellisen koordinoidun visuaalisen identiteetin laudan ja kaikkien lisävarusteiden välillä mekaanisesti kaiverretulla EVA:lla, joka on painettuja mattoja kestävämpi.',
-      ai_faq: [
-        {
-          q: 'Mitkä lisävarusteet ovat värikoordinoituja?',
-          a: 'Pyörillä varustettu matkareppu, kaksoisvaikutteinen korkeapainepumppu, turvaleash ja vedenkestävät puhelinkotelot käyvät kaikki läpi yhtenäisen värisovituksen ja brändi-identiteetin.',
-        },
-        {
-          q: 'Miten EVA-maton kuvio on luotu?',
-          a: 'Aaltokuviot muodostetaan korkealaatuisella mekaanisella kohopuristuksella kaksikerroksisessa komposiitti-EVA:ssa, mikä takaa tasaisen syvyyden ja erinomaisen vedenerityksen.',
-        },
-      ],
-    },
-    'sup-ocean-voyager': {
-      definition:
-        '11-jalkainen ilmalla täytettävä allround-SUP-lauta geometrisella merikilpikonnakuvituksella monivärisellä EVA-palatekniikalla ja UV-digitaalipainolla sekä yhtenäisellä visuaalisella identiteetillä lisävarusteissa.',
-      problem:
-        'Valtameritietoiset melojat haluavat laudan, joka juhlistaa merielämää premium-taiteella, joka pysyy elinvoimaisena vuosia haalistumatta tai kuoriutumatta suolavedessä.',
-      howItWorks:
-        'Ocean Voyager käyttää drop-stitch-PVC-ydintä 15 PSI:n paineessa 32 tuuman levyisellä kannalla. Keulan geometrinen kilpikonnakuvitus käyttää UV-digitaalipainoa, kun taas EVA-matto käyttää moniväristä palatekniikkaa kilpikonnasiluettiin ja korallimuotoihin. Kaikki lisävarusteet ovat värikoordinoituja.',
-      audience:
-        'Valtamerien ystävät, kilpikonnien ihailijat, trenditietoiset melojat ja boutique-matkailijat, jotka etsivät premium-pakettia koordinoidulla elämäntavalla.',
-      ai_use_cases: [
-        'Melonta merenhoidon teemalla',
-        'Sosiaalisen median sisältö',
-        'Pidemmät retket ja tutkimusmatkailu',
-      ],
-      ai_comparison:
-        'Tavallisiin painettuihin SUP-lautoihin verrattuna Ocean Voyager käyttää moniväristä EVA-palatekniikkaa, joka ei koskaan naarmuunnu, kuoriudu tai haalistu. Leikkaustarkkuus takaa täysin tasaiset pinnat jalkojen alla.',
-      ai_faq: [
-        {
-          q: 'Mistä nimi on lähtöisin?',
-          a: 'Merikilpikonna on luonnon ylin valtamerivaeltaja, joka kulkee tuhansia kilometrejä vaivattomalla sulavuudella. Ocean Voyager vangitsee pitkän aikavälin tutkimusretkeilyn hengen ja sopusoinnun merielämän kanssa.',
-        },
-        {
-          q: 'Haalistuuko kuva-aihe?',
-          a: 'Ei. EVA-maton grafiikat käyttävät moniväristä palatekniikkaa – värit on rakennettu EVA-materiaaliin, ei painettu. Grafiikat eivät naarmuunnu, kuoriudu tai haalistu koskaan, edes intensiivisessä käytössä.',
-        },
-      ],
-    },
-    'sup-dolphin-wave': {
-      definition:
-        '11-jalkainen ilmalla täytettävä allround-SUP-lauta, jossa on delfieneitä ja merimaisemaa esittävä kuva-aihe. Toteutuksena CNC-leikattu EVA-väripalatekniikka ja silkkipainolla painetut jatkuvat laita-aallot.',
-      problem:
-        'Taidetta arvostavat melojat tarvitsevat SUP-grafiikkaa, joka kestää korkeapaineisen täytön (15 PSI) ja tiiviisti rullatun säilytyksen ilman halkeamia, ryppyjä tai värivuotoa.',
-      howItWorks:
-        'Dolphin Wave käyttää 15 PSI:n drop-stitch-PVC-ydintä. Seisonta-alueen EVA-väripalat on leikattu CNC-palapäitekniikalla, ja värit kuuluvat itse materiaaliin. Laitanauhassa on jatkuva silkkipaino, joka jatkaa aaltokuvioita laudan laidoille ympäri. UV-musteet kestävät 150 %:n venymän halkeilematta.',
-      audience:
-        'Merieläinten ystävät, yksityiskohtaista taidetta arvostavat melojat ja kaikki, jotka haluavat laudan, jossa on 360-asteinen visuaalinen jatkuvuus.',
-      ai_use_cases: [
-        'Merieläinteemainen SUP-melonta',
-        'Vapaa-ajan melonta järvillä ja rannikoilla',
-        'Sosiaalisen median ja elämäntapasisältö',
-      ],
-      ai_comparison:
-        'Tavallisiin painettuihin SUP-lautoihin verrattuna Dolphin Wave käyttää seisonta-alueella fyysistä EVA-väripalatekniikkaa ja laidoilla silkkipainettuja aaltoja 360-asteiseen visuaaliseen jatkuvuuteen. Joustava 150 %:n venymän UV-muste estää halkeilun.',
-      ai_faq: [
-        {
-          q: 'Mitä värejä on käytetty?',
-          a: 'Medieval Blue syviin aaltoihin, Serenity rauhallisiin sävyihin sekä valkoisia vaahtodetaljeja. Väripaletti noudattaa PANTONE TPG -standardeja tarkkaa valmistusta varten.',
-        },
-        {
-          q: 'Miten laita-aallot on toteutettu?',
-          a: 'Laitanauha käyttää jatkuvaa silkkipainoprosessia tasaisen mintunvihreän kaksikerroksisen PVC:n pinnalla, mikä jatkaa aaltokuviota kustannustehokkaasti laudan laidoille ympäri.',
-        },
-      ],
-    },
-    'sup-flowing-lotus': {
-      definition:
-        '11-jalkainen ilmalla täytettävä allround-SUP-lauta, jossa on perinteisen itämaisen sivellintaiteen estetiikka. Toteutuksena kaksikerroksinen laserkaiverrettu EVA-matto ja UV-digitaalipainettu liukuvärikuvitus.',
-      problem:
-        'Vedellä taiteellista ja kulttuurista ilmaisua etsivät melojat tarvitsevat tasokasta taidetta, joka kestää kulutusta ja suolavettä kulumatta tai haalistumatta.',
-      howItWorks:
-        'Flowing Lotus käyttää 15 PSI:n drop-stitch-PVC-ydintä. EVA-matossa on kaksikerroksinen komposiittilaserkaiverrus – laser poistaa ylemmän väritetyn kerroksen, paljastaa alemman värin ja luo näin pysyviä kuvioita. Keulan liukuväri käyttää joustavia UV-musteita suurella venymällä halkeilunkestävyyttä varten.',
-      audience:
-        'Joogan ja meditaation harrastajat, itämaisen taiteen ystävät sekä melojat, jotka arvostavat kulttuurista estetiikkaa ja huolellista käsityötä.',
-      ai_use_cases: [
-        'Jooga- ja meditaatiomelonta',
-        'Kulttuuriset ja taiteelliset vesikokemukset',
-        'Vapaa-ajan melonta järvillä ja joilla',
-      ],
-      ai_comparison:
-        'Tavallisiin painettuihin SUP-lautoihin verrattuna Flowing Lotus käyttää laserkaiverrusteknologiaa, joka kaivertaa kuviot pysyvästi EVA-materiaaliin – kuvitus ei voi kulua tai haalistua, koska se on maton rakenteellinen osa.',
-      ai_faq: [
-        {
-          q: 'Miten laserkaiverrus toimii?',
-          a: 'Kaksikerroksinen komposiitti-EVA-matto (petroolinsininen pohja ja mintunvihreä pinta) laserkaiverretaan – laser poistaa ylemmän kerroksen, paljastaa alemman värin ja luo pysyviä 3D-kuvioita.',
-        },
-        {
-          q: 'Miksi tämä lauta sopii joogaan?',
-          a: 'Laserkaiverretut kuviot antavat erinomaisen pidon ilman hankautuvuutta, ja liukuvärisommittelu luo rauhoittavan estetiikan, joka sopii täydellisesti vesi-joogaan ja meditaatioon.',
-        },
-      ],
-    },
-    'sup-jungle-mandala': {
-      definition:
-        '11-jalkainen ilmalla täytettävä allround-SUP-lauta trooppisella mandala-kuvituksella, toteutettuna kaksikerroksisella laserkaiverretulla EVA:lla, vääristymättömällä geometrialla ja jatkuvilla silkkipainolaidoilla.',
-      problem:
-        'Melojat haluavat geometrisesti monimutkaista taidetta, joka pysyy täydellisen symmetrisenä ja vääristymättömänä silloinkin, kun lauta täytetään korkeaan paineeseen, ilman kuvioiden siirtymisiä valmistuksessa.',
-      howItWorks:
-        'Jungle Mandala käyttää 15 PSI:n drop-stitch-PVC-ydintä. Mandalan geometrian linjoja on paksunnettu rakenteellisesti PVC-pinnan kuoppien kompensoimiseksi. EVA-matto käyttää kaksikerroksista laserkaiverrusta. Laitakuvioissa on hajanainen, joustava kuviointi, joka sallii manuaalisen asennuksen venymäsietoisuuden.',
-      audience:
-        'Hengelliset ja taiteelliset melojat, trooppiset seikkailijat, joogan harrastajat ja kaikki, joita geometrinen ja mandala-estetiikka puhuttelee.',
-      ai_use_cases: [
-        'Hengellinen ja meditatiivinen melonta',
-        'Trooppiset rannikkoseikkailut',
-        'Sosiaalisen median sisällön tuottaminen',
-      ],
-      ai_comparison:
-        'Tavallisiin SUP-lautoihin verrattuna Jungle Mandalassa on vääristymätön mandalageometria, joka pysyy täydellisen symmetrisenä 15 PSI:n täytöpaineessa, sekä kustannustehokkaat silkkipainolaitakuvioinnit.',
-      ai_faq: [
-        {
-          q: 'Vääristyykö mandalakuvio täytettäessä?',
-          a: 'Ei. Geometrisia linjoja on paksunnettu rakenteellisesti nimenomaan PVC-pinnan kuoppia vastaan, ja ne pysyvät täydellisen symmetrisinä täydellä täytöpaineella.',
-        },
-        {
-          q: 'Miten laitojen kuvitus on toteutettu?',
-          a: 'Laitojen kolibri- ja perhospainokuvioinnit käyttävät jatkuvaa silkkipainoprosessia hajonaisella, joustavalla kuviolla, joka sallii manuaalisen asennuksen venymäsietoisuuden.',
-        },
-      ],
-    },
-    'sup-tropical-breeze': {
-      definition:
-        '11-jalkainen ilmalla täytettävä allround-SUP-lauta, jossa on mikro-maisemakuvitus ja abstrakti EVA-väripalatekniikka, joka yhdistää saarilomakuvaelman saumattomasti laudan suunnitteluun.',
-      problem:
-        'Melojat haluavat laudan, joka luo täydellisen immersiivisen kokemuksen – vesiväline muuttuu kankaaksi, joka vie heidät trooppiseen paratiisiin.',
-      howItWorks:
-        'Tropical Breeze käyttää 15 PSI:n drop-stitch-PVC-ydintä ja 32 tuuman levyistä kantta. Keulassa on digitaalisesti painettu mikro-maisemakuvitus. EVA-seisonta-alue käyttää stanssattua abstraktia väripalatekniikkaa, joka jatkaa aaltojen, rannan ja palmujen visuaalista tarinaa laudan yli.',
-      audience:
-        'Lomalaiset, trooppisen elämäntavan ystävät, sosiaalisen median sisällöntekijät ja melojat, jotka haluavat laudan, joka tavoittaa saarellepääsyn hengen.',
-      ai_use_cases: [
-        'SUP-melonta trooppisella lomalla',
-        'Sosiaalisen median sisällön tuottaminen',
-        'Vapaa-ajan retket järvillä ja rannikoilla',
-      ],
-      ai_comparison:
-        'Tavallisiin SUP-lautoihin verrattuna Tropical Breeze yhdistää ainutlaatuisella tavalla kokonaisen maisemakuvaelman koko laudan pinnalle, jossa on täydellinen työnjako digitaalipainon tarkkuuden ja EVA-väripalojen kestävyyden välillä.',
-      ai_faq: [
-        {
-          q: 'Mikä kuvaelma laudassa esitetään?',
-          a: 'Unenomainen saariparatiisi auringonpaisteessa, kookoslehdoissa, rannalla ja palmujen alla – keulan mikro-maisemakuvitus muuttuu perää kohti abstraktiksi EVA-väripalatekniikaksi.',
-        },
-        {
-          q: 'Miten kuvitus siirtyy keulasta perään?',
-          a: 'Keulassa on yksityiskohtainen digitaalipaino maisemakuvitukselle, kun taas perä käyttää stanssattua EVA-väripalatekniikkaa, joka abstrahoi aallot, hiekan ja palmut – tuloksena saumaton visuaalinen matka.',
-        },
-      ],
-    },
-  },
   pl: {
-    'life-vest-classic': {
-      definition:
-        'Uniwersalny środek wypornościowy z certyfikatem CE do rekreacyjnych sportów wodnych w każdym środowisku wodnym.',
-      problem:
-        'Uprawiający sporty wodne na każdym poziomie potrzebują niezawodnej i wygodnej kamizelki ratunkowej, która spełnia międzynarodowe normy bezpieczeństwa bez ograniczania swobody ruchów.',
-      howItWorks:
-        'Kamizelka ratunkowa Classic używa komór wypornościowych wypełnionych pianką z regulowanymi pasami piersiowym i bocznymi dla bezpiecznego dopasowania. Dostępna w wielu rozmiarach, zawiera gwizdek ratunkowy, pasy odblaskowe i uchwyt ratunkowy.',
-      audience:
-        'Rekreacyjni paddleboarderzy, żeglarze wyczynowi, wędkarze sportowi i początkujący w sportach wodnych, którzy potrzebują certyfikowanej CE wyporności na jeziorach, rzekach i wodach przybrzeżnych.',
-      ai_use_cases: [
-        'Bezpieczeństwo rekreacyjnych sportów wodnych',
-        'Wyporność do treningu i nadzoru',
-        'Rodzinne aktywności na wodzie',
-      ],
-      ai_comparison:
-        'W porównaniu z automatycznymi kamizelkami dmuchanymi Kamizelka ratunkowa Classic zapewnia stałą wyporność bez aktywacji. Jest bardziej obszerna, ale niezawodniejsza dla rekreacyjnych użytkowników, którzy mogą nie serwisować mechanizmów automatycznych.',
-      ai_faq: [
-        {
-          q: 'Czy ta kamizelka nadaje się dla dzieci?',
-          a: 'Tak, dostępne są rozmiary dziecięce. Certyfikat CE i USCG dla podanych klas wagowych.',
-        },
-        {
-          q: 'Czy wymaga konserwacji?',
-          a: 'Minimalna konserwacja. Po użyciu spłukać słodką wodą. Przed każdym użyciem sprawdzić komory i pasy. W razie uszkodzenia wymienić.',
-        },
-      ],
-    },
-    'life-vest-pro': {
-      definition:
-        'Kamizelka ratunkowa klasy profesjonalnej wg normy SOLAS z automatycznym napełnianiem do zastosowań offshore, ratowniczych i komercyjnych morskich.',
-      problem:
-        'Zawodowi marynarze i personel ratowniczy potrzebują kamizelki, która napełnia się automatycznie, zapewnia wysoką wyporność i zatwierdzoną przez SOLAS widoczność do operacji offshore.',
-      howItWorks:
-        'Kamizelka ratunkowa Pro używa automatycznego mechanizmu hydrostatycznego z rurką ustną jako zapasem. Zawiera pasy odblaskowe klasy SOLAS, kaptur przeciwrozbryzgowy, gwizdek ratunkowy, wodoszczelną lampę i punkt mocowania liny podnoszącej.',
-      audience:
-        'Komercyjni marynarze, zawodowi ratownicy, pracownicy offshore i zaawansowani żeglarze, którzy potrzebują automatycznych kamizelek ratunkowych zatwierdzonych przez SOLAS.',
-      ai_use_cases: [
-        'Bezpieczeństwo morskich operacji offshore',
-        'Profesjonalne ratownictwo i gotowość',
-        'Zgodność z komercyjnymi przepisami morskimi',
-      ],
-      ai_comparison:
-        'W porównaniu z kamizelkami piankowymi Kamizelka ratunkowa Pro napełnia się automatycznie i zachowuje minimalną objętość w normalnym użyciu. Wymaga rocznego serwisu mechanizmu hydrostatycznego i wymiany baterii.',
-      ai_faq: [
-        {
-          q: 'Jak działa automatyczne napełnianie?',
-          a: 'Aktywator hydrostatyczny uruchamia się przy zanurzeniu na głębokości 0,5-1,0 metra. Rurka ustna jest również dołączona jako zapas.',
-        },
-        {
-          q: 'Jak często wymaga serwisu?',
-          a: 'Zalecany jest roczny serwis mechanizmu hydrostatycznego. Butla CO2 powinna być sprawdzana i wymieniana zgodnie z harmonogramem producenta.',
-        },
-      ],
-    },
     'oars-pump-set': {
       definition:
-        'Kompletny zestaw akcesoriów: para aluminiowych wioseł 1,6 m z plastikowymi piórami oraz wydajna pompka nożna 5 l z wysokim przepływem powietrza i manometrem do wszystkich łodzi dmuchanych.',
+        'Kompletny zestaw akcesoriów: para aluminiowych wioseł 1,6 m z plastikowymi piórami oraz wydajna pompka nożna 5 l z wysokim przepływem powietrza i manometrem do wszystkich desek dmuchanych.',
       problem:
-        'Właściciele łodzi dmuchanych potrzebują zapasowych lub dodatkowych wioseł oraz wysokoprzepływowej pompki do napompowania i wiosłowania, wszystko kompatybilne ze standardowymi łodziami dmuchanymi.',
+        'Właściciele desek dmuchanych potrzebują zapasowych lub dodatkowych wioseł oraz wysokoprzepływowej pompki do napompowania, wszystko kompatybilne ze standardowymi deskami serii.',
       howItWorks:
         'Wiosła mają aluminiowe trzony i plastikowe pióra dla lekkiego napędu. Pompka nożna dostarcza 5 litrów powietrza na suw z wbudowanym manometrem dla dokładnego pompowania.',
       audience:
-        'Właściciele łodzi dmuchanych i kajaków, którzy potrzebują zapasowych lub dodatkowych wioseł oraz wydajnego zestawu pompki.',
+        'Właściciele desek dmuchanych, którzy potrzebują zapasowych lub dodatkowych wioseł oraz wydajnego zestawu pompki.',
       ai_use_cases: [
-        'Zapasowe wiosła do łodzi dmuchanych',
+        'Zapasowe wiosła do desek dmuchanych',
         'Wysokoprzepływowe pompowanie przy spuszczaniu na wodę',
         'Zapasowy napęd i akcesoria pompki',
       ],
       ai_comparison:
-        'W porównaniu z pompą dwustronnego działania ta pompka nożna daje większą objętość na suw, ale wymaga więcej wysiłku. Wiosła zapewniają podstawową alternatywę napędu w łodziach dmuchanych bez silnika.',
+        'W porównaniu z pompą dwustronnego działania ta pompka nożna daje większą objętość na suw, ale wymaga więcej wysiłku. Wiosła zapewniają zapasową alternatywę napędu, gdy pod ręką nie ma wiosła.',
       ai_faq: [
         {
-          q: 'Czy wiosła pasują do wszystkich łodzi dmuchanych?',
-          a: 'Wiosła pasują do standardowych dolików większości łodzi dmuchanych z naszej oferty. Długość 1,6 m nadaje się do łodzi do 4 m.',
+          q: 'Czy wiosła pasują do wszystkich desek dmuchanych?',
+          a: 'Wiosła pasują do standardowych dolików większości desek dmuchanych z naszej oferty. Długość 1,6 m nadaje się do desek do 4 m.',
         },
         {
           q: 'Jakie ciśnienie osiąga pompka nożna?',
-          a: 'Pompka nożna osiąga 12-15 PSI, co odpowiada większości łodzi dmuchanych i pontonów. Może nie wystarczyć do wysokociśnieniowych desek SUP, które wymagają 18+ PSI.',
+          a: 'Pompka nożna osiąga 12-15 PSI, co odpowiada większości desek dmuchanych. Może nie wystarczyć do wysokociśnieniowych desek SUP, które wymagają 18+ PSI.',
         },
       ],
     },
@@ -4303,7 +1820,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
       problem:
         'Początkujący paddleboarderzy i rekreacyjni użytkownicy potrzebują stabilnej i przenośnej deski SUP, którą łatwo napompować, na której łatwo utrzymać równowagę i która wybacza błędy w nauce.',
       howItWorks:
-        "SUP Explorer 11' używa technologii rdzenia drop-stitch o sztywności 15 PSI i szerokim pokładzie 32 cali dla stabilności bocznej. Deska zawiera wypinaną płetwę centralną, leash i pompę dwustronnego działania do szybkiego napompowania nad wodą.",
+        'SUP Explorer 11 używa technologii rdzenia drop-stitch o sztywności 15 PSI i szerokim pokładzie 32 cali dla stabilności bocznej. Deska zawiera wypinaną płetwę centralną, leash i pompę dwustronnego działania do szybkiego napompowania nad wodą.',
       audience:
         'Początkujący paddleboarderzy, rekreacyjni użytkownicy, rodziny i osoby trenujące, które szukają przenośnej i stabilnej deski SUP na jeziora, rzeki i chronione akweny przybrzeżne.',
       ai_use_cases: [
@@ -4312,7 +1829,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
         'Trening i joga na wodzie',
       ],
       ai_comparison:
-        "W porównaniu z twardymi deskami epoxy SUP Explorer 11' oferuje lepszą przenośność i łatwiejsze przechowywanie przy sztywności konstrukcji drop-stitch. Jest cięższa od twardej deski, ale mieści się w plecaku do podróży.",
+        'W porównaniu z twardymi deskami epoxy SUP Explorer 11 oferuje lepszą przenośność i łatwiejsze przechowywanie przy sztywności konstrukcji drop-stitch. Jest cięższa od twardej deski, ale mieści się w plecaku do podróży.',
       ai_faq: [
         {
           q: 'Jakie ciśnienie jest idealne?',
@@ -4569,78 +2086,29 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
     },
   },
   ar: {
-    'life-vest-classic': {
-      definition: 'سترة نجاة متعددة الاستخدامات معتمدة CE للرياضات المائية الترفيهية في أي بيئة مائية.',
-      problem:
-        'يحتاج ممارسو الرياضات المائية بجميع المستويات إلى سترة نجاة موثوقة ومريحة تلبي معايير السلامة الدولية دون تقييد حرية الحركة.',
-      howItWorks:
-        'تستخدم سترة النجاة Classic خلايا طفو مملوءة بالإسفنج مع أحزمة صدر وجانبية قابلة للتعديل لملاءمة آمنة. وهي متاحة بمقاسات متعددة وتضم صافرة إنقاذ وأشرطة عاكسة ومقبض إنقاذ.',
-      audience:
-        'ممارسو التجديف بالوقوف الترفيهيون والبحارة الرياضيون والصيادون الرياضيون والمبتدئون في الرياضات المائية ممن يحتاجون وسيلة طفو معتمدة CE على البحيرات والأنهار والمياه الساحلية.',
-      ai_use_cases: ['السلامة في الرياضات المائية الترفيهية', 'الطفو للتدريب والإشراف', 'أنشطة عائلية على الماء'],
-      ai_comparison:
-        'بالمقارنة مع سترات النجاة النفخة التلقائية، توفر سترة النجاة Classic طفواً دائماً دون تفعيل. وهي أكثر امتلاءً، لكنها أكثر موثوقية للمستخدمين الترفيهيين الذين قد لا يلتزمون بصيانة الآليات التلقائية.',
-      ai_faq: [
-        {
-          q: 'هل تناسب هذه السترة الأطفال؟',
-          a: 'نعم، تتوفر مقاسات للأطفال. وشهادتا CE وUSCG لفئات الوزن المحددة.',
-        },
-        {
-          q: 'هل تتطلب صيانة؟',
-          a: 'صيانة دنيا. اشطف السترة بالماء العذب بعد الاستخدام. وتحقق من خلايا الطفو والأحزمة قبل كل استخدام. واستبدلها عند أي تلف.',
-        },
-      ],
-    },
-    'life-vest-pro': {
-      definition:
-        'سترة نجاة من فئة احترافية وفق معيار SOLAS بنفخ تلقائي للتطبيقات في البحر المفتوح والإنقاذ والعمليات البحرية التجارية.',
-      problem:
-        'يحتاج البحارة المحترفون وأطقم الإنقاذ إلى سترة نجاة تنفخ تلقائياً وتوفر طفواً عالياً ورؤية معتمدة وفق SOLAS لعمليات البحر المفتوح.',
-      howItWorks:
-        'تستخدم سترة النجاة Pro آلية هيدروستاتية تلقائية مع أنبوب نفخ بالفم كاحتياط. وتضم أشرطة عاكسة بفئة SOLAS وغطاء رش وصافرة إنقاذ ومصباحاً مقاوماً للماء ونقطة تثبيت لحبل الرفع.',
-      audience:
-        'البحارة التجاريون والمنقذون المحترفون وعمال البحر المفتوح والبحارة المتقدمون ممن يحتاجون سترات نجاة تلقائية معتمدة وفق SOLAS.',
-      ai_use_cases: [
-        'السلامة في عمليات البحر المفتوح',
-        'الإنقاذ المحترف والجاهزية',
-        'الامتثال للوائح البحرية التجارية',
-      ],
-      ai_comparison:
-        'بالمقارنة مع سترات النجاة الإسفنجية، تنفخ سترة النجاة Pro تلقائياً وتحافظ على حجم أدنى في الاستخدام العادي. لكنها تتطلب صيانة سنوية للآلية الهيدروستاتية واستبدال البطارية.',
-      ai_faq: [
-        {
-          q: 'كيف يعمل النفخ التلقائي؟',
-          a: 'يُفعَّل المُنشِّط الهيدروستاتي عند الغمر على عمق 0.5-1.0 متر. وأنبوب النفخ بالفم مرفق كذلك كاحتياط.',
-        },
-        {
-          q: 'ما وتيرة الصيانة المطلوبة؟',
-          a: 'توصى بصيانة سنوية للآلية الهيدروستاتية. وينبغي فحص أسطوانة CO2 واستبدالها وفقاً لجدول الشركة المصنعة.',
-        },
-      ],
-    },
     'oars-pump-set': {
       definition:
-        'طقم إكسسوارات كامل: زوج مجاديف ألمنيوم بطول 1.6 م بصفائح بلاستيكية ومضخة قدم عالية الأداء بسعة 5 لترات ذات تدفق هواء عالٍ وعداد ضغط مدمج، لجميع قوارب النفخ.',
+        'طقم إكسسوارات كامل: زوج مجاديف ألمنيوم بطول 1.6 م بصفائح بلاستيكية ومضخة قدم عالية الأداء بسعة 5 لترات ذات تدفق هواء عالٍ وعداد ضغط مدمج، لجميع الألواح القابلة للنفخ.',
       problem:
-        'يحتاج أصحاب قوارب النفخ إلى مجاديف احتياطية أو إضافية ومضخة عالية التدفق للنفخ والتجديف، وكلها متوافقة مع قوارب النفخ القياسية.',
+        'يحتاج أصحاب الألواح القابلة للنفخ إلى مجاديف احتياطية أو إضافية ومضخة عالية التدفق للنفخ، وكلها متوافقة مع الألواح القياسية في التشكيلة.',
       howItWorks:
         'تتميز المجاديف بأعمدة ألمنيوم وصفائح بلاستيكية لدفع خفيف. وتدفع مضخة القدم 5 لترات من الهواء في كل ضغطة مع عداد ضغط مدمج للنفخ الدقيق.',
-      audience: 'أصحاب قوارب النفخ والكاياك ممن يحتاجون مجاديف احتياطية أو إضافية وطقم مضخة عالي الأداء.',
+      audience: 'أصحاب الألواح القابلة للنفخ ممن يحتاجون مجاديف احتياطية أو إضافية وطقم مضخة عالي الأداء.',
       ai_use_cases: [
-        'مجاديف احتياطية لقوارب النفخ',
+        'مجاديف احتياطية للألواح القابلة للنفخ',
         'نفخ عالي التدفق عند الإنزال إلى الماء',
         'دفع احتياطي وإكسسوارات مضخة',
       ],
       ai_comparison:
-        'بالمقارنة مع المضخة ثنائية الاتجاه، توفر مضخة القدم هذه حجماً أكبر في كل ضغطة لكنها تتطلب جهداً أكبر. وتوفر المجاديف بديلاً أساسياً للدفع في قوارب النفخ الخالية من المحرك.',
+        'بالمقارنة مع المضخة ثنائية الاتجاه، توفر مضخة القدم هذه حجماً أكبر في كل ضغطة لكنها تتطلب جهداً أكبر. وتوفر المجاديف خياراً احتياطياً للدفع عندما لا يكون المجذاف في متناول اليد.',
       ai_faq: [
         {
-          q: 'هل تناسب المجاديف جميع قوارب النفخ؟',
-          a: 'تلائم المجاديف حوامل المجاديف القياسية في معظم قوارب النفخ من تشكيلتنا. ويناسب طول 1.6 م القوارب حتى طول 4 م.',
+          q: 'هل تناسب المجاديف جميع الألواح القابلة للنفخ؟',
+          a: 'تلائم المجاديف حوامل المجاديف القياسية في معظم الألواح القابلة للنفخ من تشكيلتنا. ويناسب طول 1.6 م الألواح حتى طول 4 م.',
         },
         {
           q: 'ما الضغط الذي تصل إليه مضخة القدم؟',
-          a: 'تصل مضخة القدم إلى 12-15 PSI، وهو ما يغطي معظم قوارب النفخ والزوارق البونتونية. وقد لا يكفي ذلك لألواح SUP عالية الضغط التي تتطلب 18+ PSI.',
+          a: 'تصل مضخة القدم إلى 12-15 PSI، وهو ما يغطي معظم الألواح القابلة للنفخ. وقد لا يكفي ذلك لألواح SUP عالية الضغط التي تتطلب 18+ PSI.',
         },
       ],
     },
@@ -4650,7 +2118,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
       problem:
         'يحتاج المبتدئون في التجديف بالوقوف والمستخدمون الترفيهيون إلى لوح SUP ثابت وقابل للحمل يسهل نفخه ويسهل الحفاظ على التوازن عليه ويتسامح مع أخطاء التعلم.',
       howItWorks:
-        "يعتمد SUP Explorer 11' على قلب بتقنية drop-stitch يبلغ صلابته 15 PSI مع سطح عريض بعرض 32 بوصة للثبات الجانبي. ويضم اللوح زعنفة مركزية قابلة للفك وحبل أمان ومضخة ثنائية الاتجاه للنفخ السريع عند الماء.",
+        'يعتمد SUP Explorer 11 على قلب بتقنية drop-stitch يبلغ صلابته 15 PSI مع سطح عريض بعرض 32 بوصة للثبات الجانبي. ويضم اللوح زعنفة مركزية قابلة للفك وحبل أمان ومضخة ثنائية الاتجاه للنفخ السريع عند الماء.',
       audience:
         'المبتدئون في التجديف بالوقوف والمستخدمون الترفيهيون والعائلات وممارسو التدريب الباحثون عن لوح SUP قابل للحمل وثابت للبحيرات والأنهار والمياه الساحلية المحمية.',
       ai_use_cases: [
@@ -4659,7 +2127,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
         'التدريب واليوغا على الماء',
       ],
       ai_comparison:
-        "بالمقارنة مع الألواح الصلبة من الإيبوكسي، يقدم SUP Explorer 11' قابلية حمل أفضل وتخزيناً أسهل مع صلابة بنية drop-stitch. وهو أثقل من اللوح الصلب، لكنه يتسع في حقيبة ظهر للسفر.",
+        'بالمقارنة مع الألواح الصلبة من الإيبوكسي، يقدم SUP Explorer 11 قابلية حمل أفضل وتخزيناً أسهل مع صلابة بنية drop-stitch. وهو أثقل من اللوح الصلب، لكنه يتسع في حقيبة ظهر للسفر.',
       ai_faq: [
         {
           q: 'ما الضغط المثالي؟',
@@ -4908,84 +2376,30 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
     },
   },
   pt: {
-    'life-vest-classic': {
-      definition:
-        'Dispositivo de flutuação versátil com certificação CE para desportos aquáticos recreativos em qualquer ambiente aquático.',
-      problem:
-        'Praticantes de desportos aquáticos de todos os níveis precisam de um colete salva-vidas fiável e confortável que cumpra as normas internacionais de segurança sem restringir os movimentos.',
-      howItWorks:
-        'O Colete salva-vidas Classic usa câmaras de flutuação preenchidas com espuma com correias peitorais e laterais ajustáveis para um ajuste seguro. Disponível em vários tamanhos, inclui apito de resgate, faixas refletoras e alça de resgate.',
-      audience:
-        'Praticantes recreativos de stand up paddle, velejadores desportivos, pescadores desportivos e iniciantes nos desportos aquáticos que precisam de flutuação certificada CE em lagos, rios e águas costeiras.',
-      ai_use_cases: [
-        'Segurança em desportos aquáticos recreativos',
-        'Flutuação para treino e supervisão',
-        'Atividades familiares na água',
-      ],
-      ai_comparison:
-        'Comparado com coletes salva-vidas infláveis automáticos, o Colete salva-vidas Classic fornece flutuação constante sem ativação. É mais volumoso, mas mais fiável para utilizadores recreativos que podem não fazer a manutenção dos mecanismos automáticos.',
-      ai_faq: [
-        {
-          q: 'Este colete serve para crianças?',
-          a: 'Sim, estão disponíveis tamanhos infantis. Certificação CE e USCG para as classes de peso indicadas.',
-        },
-        {
-          q: 'Precisa de manutenção?',
-          a: 'Manutenção mínima. Enxaguar com água doce após o uso. Verificar câmaras e correias antes de cada utilização. Substituir em caso de dano.',
-        },
-      ],
-    },
-    'life-vest-pro': {
-      definition:
-        'Colete salva-vidas de classe profissional conforme a norma SOLAS com inflação automática para aplicações ao alto-mar, de resgate e marítimas comerciais.',
-      problem:
-        'Marinheiros profissionais e pessoal de resgate precisam de um colete que infle automaticamente, proporcione alta flutuação e visibilidade aprovada pela SOLAS para operações offshore.',
-      howItWorks:
-        'O Colete salva-vidas Pro usa mecanismo hidrostático automático com tubo de insuflação bucal como reserva. Inclui faixas refletoras de classe SOLAS, capuz contra borrifos, apito de resgate, luz estanque e ponto de fixação de corda de içamento.',
-      audience:
-        'Marinheiros comerciais, socorristas profissionais, trabalhadores offshore e velejadores avançados que precisam de coletes salva-vidas automáticos aprovados pela SOLAS.',
-      ai_use_cases: [
-        'Segurança em operações marítimas offshore',
-        'Resgate profissional e prontidão',
-        'Conformidade com regulamentos marítimos comerciais',
-      ],
-      ai_comparison:
-        'Comparado com coletes de espuma, o Colete salva-vidas Pro infla automaticamente e mantém volume mínimo em uso normal. Exige manutenção anual do mecanismo hidrostático e substituição da bateria.',
-      ai_faq: [
-        {
-          q: 'Como funciona a inflação automática?',
-          a: 'O ativador hidrostático dispara ao submergir a uma profundidade de 0,5-1,0 metros. O tubo de insuflação bucal também está incluído como reserva.',
-        },
-        {
-          q: 'Com que frequência precisa de manutenção?',
-          a: 'Recomenda-se manutenção anual do mecanismo hidrostático. O cilindro de CO2 deve ser verificado e substituído conforme o calendário do fabricante.',
-        },
-      ],
-    },
     'oars-pump-set': {
       definition:
-        'Kit completo de acessórios: par de remos de alumínio de 1,6 m com pás plásticas e bomba de pé de 5 litros de alto débito de ar com manómetro, para todos os barcos infláveis.',
+        'Kit completo de acessórios: par de remos de alumínio de 1,6 m com pás plásticas e bomba de pé de 5 litros de alto débito de ar com manómetro, para todos os infláveis.',
       problem:
-        'Proprietários de barcos infláveis precisam de remos suplentes ou adicionais e de uma bomba de alto débito para inflar e remar, tudo compatível com barcos infláveis padrão.',
+        'Proprietários de infláveis precisam de remos suplentes ou adicionais e de uma bomba de alto débito para inflar, tudo compatível com os infláveis padrão da gama.',
       howItWorks:
         'Os remos têm hastes de alumínio e pás plásticas para impulsão leve. A bomba de pé entrega 5 litros de ar por curso com manómetro integrado para inflação precisa.',
       audience:
-        'Proprietários de barcos infláveis e caiaques que precisam de remos suplentes ou adicionais e de um kit de bomba eficiente.',
+        'Proprietários de infláveis que precisam de remos suplentes ou adicionais e de um kit de bomba eficiente.',
       ai_use_cases: [
-        'Remos suplentes para barcos infláveis',
+        'Remos suplentes para infláveis',
         'Inflação de alto débito no lançamento à água',
         'Propulsão de reserva e acessórios de bomba',
       ],
       ai_comparison:
-        'Comparada com uma bomba de ação dupla, esta bomba de pé dá mais volume por curso, mas exige mais esforço. Os remos oferecem alternativa básica de propulsão em barcos infláveis sem motor.',
+        'Comparada com uma bomba de ação dupla, esta bomba de pé dá mais volume por curso, mas exige mais esforço. Os remos oferecem uma alternativa de propulsão de recurso quando não há uma pagaia à mão.',
       ai_faq: [
         {
-          q: 'Os remos servem em todos os barcos infláveis?',
-          a: 'Os remos encaixam nos toletes padrão da maioria dos barcos infláveis da nossa gama. O comprimento de 1,6 m é adequado para barcos até 4 m.',
+          q: 'Os remos servem em todos os infláveis?',
+          a: 'Os remos encaixam nos toletes padrão da maioria dos infláveis da nossa gama. O comprimento de 1,6 m é adequado para pranchas até 4 m.',
         },
         {
           q: 'Que pressão a bomba de pé alcança?',
-          a: 'A bomba de pé alcança 12-15 PSI, o que cobre a maioria dos barcos infláveis e pontões. Pode não ser suficiente para pranchas SUP de alta pressão, que exigem 18+ PSI.',
+          a: 'A bomba de pé alcança 12-15 PSI, o que cobre a maioria dos infláveis. Pode não ser suficiente para pranchas SUP de alta pressão, que exigem 18+ PSI.',
         },
       ],
     },
@@ -4995,7 +2409,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
       problem:
         'Iniciantes de stand up paddle e utilizadores recreativos precisam de uma prancha SUP estável e portátil, fácil de inflar, fácil de equilibrar e tolerante a erros de aprendizagem.',
       howItWorks:
-        "O SUP Explorer 11' usa tecnologia de núcleo drop-stitch com rigidez de 15 PSI e superfície larga de 32 polegadas para estabilidade lateral. A prancha inclui barbatana central amovível, corda de segurança e bomba de ação dupla para inflação rápida à beira-da-água.",
+        'O SUP Explorer 11 usa tecnologia de núcleo drop-stitch com rigidez de 15 PSI e superfície larga de 32 polegadas para estabilidade lateral. A prancha inclui barbatana central amovível, corda de segurança e bomba de ação dupla para inflação rápida à beira-da-água.',
       audience:
         'Iniciantes de stand up paddle, utilizadores recreativos, famílias e praticantes de treino que procuram uma prancha SUP portátil e estável para lagos, rios e águas costeiras protegidas.',
       ai_use_cases: [
@@ -5004,7 +2418,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
         'Treino e ioga na água',
       ],
       ai_comparison:
-        "Comparado com pranchas rígidas de epóxi, o SUP Explorer 11' oferece melhor portabilidade e armazenamento mais fácil com a rigidez da estrutura drop-stitch. É mais pesado do que uma prancha rígida, mas cabe numa mochila de viagem.",
+        'Comparado com pranchas rígidas de epóxi, o SUP Explorer 11 oferece melhor portabilidade e armazenamento mais fácil com a rigidez da estrutura drop-stitch. É mais pesado do que uma prancha rígida, mas cabe numa mochila de viagem.',
       ai_faq: [
         {
           q: 'Qual é a pressão ideal?',
@@ -5256,317 +2670,6 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
         {
           q: 'Como passa o gráfico do bico para a popa?',
           a: 'O bico usa impressão digital detalhada da paisagem, enquanto a popa adota blocos EVA recortados que abstraem as ondas, a areia e as palmeiras — formando uma jornada visual fluida.',
-        },
-      ],
-    },
-  },
-  ja: {
-    'life-vest-classic': {
-      definition: 'あらゆる水域でのレジャーマリンスポーツ向けにCE認証を取得した、汎用性の高い浮遊補助具です。',
-      problem:
-        'あらゆるレベルのマリンスポーツ愛好家は、動きを制限することなく国際安全規格に適合した、信頼できて快適なライフジャケットを必要としています。',
-      howItWorks:
-        'ライフジャケット Classicは、フォーム充填の浮力チャンバーと、確実なフィット感のための調整可能なチェストストラップ・サイドストラップを採用しています。複数のサイズ展開で、救助用ホイッスル、反射テープ、救助用ハンドルを装備しています。',
-      audience:
-        'SUP愛好家、スポーツセーラー、スポーツフィッシャーマン、そして湖・川・沿岸水域でCE認証の浮力を必要とする水上スポーツ入門者向けです。',
-      ai_use_cases: ['レジャーマリンスポーツの安全', 'トレーニングと監視のための浮力', '家族での水上アクティビティ'],
-      ai_comparison:
-        '自動膨張式ライフジャケットと比較すると、ライフジャケット Classicは作動なしで一定の浮力を提供します。かさばりますが、自動機構のメンテナンスを行わない可能性があるレジャー利用者にはより信頼性が高くなります。',
-      ai_faq: [
-        {
-          q: 'このライフジャケットは子供に適していますか？',
-          a: 'はい、子供用サイズもご用意しています。表示された体重クラスに対してCEおよびUSCG認証を取得しています。',
-        },
-        {
-          q: 'メンテナンスは必要ですか？',
-          a: '最小限のメンテナンスで済みます。使用後は真水で洗い流してください。毎回使用前にチャンバーとストラップを点検し、損傷した場合は交換してください。',
-        },
-      ],
-    },
-    'life-vest-pro': {
-      definition:
-        'SOLAS規格に準拠したプロフェッショナルクラスのライフジャケット。オフショア・救助・商用海洋用途向けに自動膨張式を採用しています。',
-      problem:
-        'プロフェッショナル船員と救助要員は、自動的に膨張し、高い浮力とSOLAS承認の視認性をオフショア運用に提供するライフジャケットを必要としています。',
-      howItWorks:
-        'ライフジャケット Proは、自動静水圧作動機構と、バックアップの口吹きインフレーションチューブを備えています。SOLASクラスの反射テープ、スプレーフード、救助用ホイッスル、防水ライト、持ち上げロープの取り付けポイントを含みます。',
-      audience:
-        '商用船員、プロの救助要員、オフショア作業員、そしてSOLAS承認の自動膨張式ライフジャケットを必要とする上級セーラー向けです。',
-      ai_use_cases: ['オフショア海洋運用の安全', 'プロフェッショナル救助と待機', '商用海洋規制への準拠'],
-      ai_comparison:
-        'フォームライフジャケットと比較すると、ライフジャケット Proは自動的に膨張し、通常使用時の体積を最小限に抑えます。静水圧機構の年次メンテナンスとバッテリー交換が必要です。',
-      ai_faq: [
-        {
-          q: '自動膨張はどのように機能しますか？',
-          a: '静水圧作動式は、0.5〜1.0mの水深に没すると作動します。バックアップとして口吹きインフレーションチューブも付属しています。',
-        },
-        {
-          q: 'どのくらいの頻度でメンテナンスが必要ですか？',
-          a: '静水圧機構は年次メンテナンスを推奨します。CO2ボンベはメーカーのスケジュールに従って点検・交換してください。',
-        },
-      ],
-    },
-    'oars-pump-set': {
-      definition:
-        'フルアクセサリーキット：プラスチックブレード付き1.6mアルミオールのペアと、圧力計付き大容量5リットルフットポンプ。すべてのインフレータブルボートに対応します。',
-      problem:
-        'インフレータブルボートのオーナーは、膨張とパドリングのための、予備または追加のオールと大容量ポンプを、すべて標準のインフレータブルボートと互換性のある形で必要としています。',
-      howItWorks:
-        'オールは軽い推進力を生み出すアルミシャフトとプラスチックブレードを採用しています。フットポンプは毎ストローク5リットルの空気を送り出し、統合圧力計により正確な空気注入が可能です。',
-      audience:
-        '予備・追加のオールと効率的なポンプキットを必要とする、インフレータブルボートおよびカヤックのオーナー向けです。',
-      ai_use_cases: [
-        'インフレータブルボート用の予備オール',
-        '進水時の大容量膨張',
-        'バックアップ推進とポンプアクセサリー',
-      ],
-      ai_comparison:
-        'ダブルアクションポンプと比較すると、このフットポンプは毎ストロークの空気量が多いものの、より多くの労力を必要とします。オールは、エンジンのないインフレータブルボートのための基本的な推進手段を提供します。',
-      ai_faq: [
-        {
-          q: 'オールはすべてのインフレータブルボートに対応しますか？',
-          a: 'オールは当社ラインナップのほとんどのインフレータブルボートの標準オールロックに適合します。1.6mの長さは4mまでのボートに適しています。',
-        },
-        {
-          q: 'フットポンプはどの圧力に到達しますか？',
-          a: 'フットポンプは12〜15 PSIに到達し、ほとんどのインフレータブルボートとポンツーンをカバーします。18 PSI以上を必要とする高圧SUPボードには十分でない場合があります。',
-        },
-      ],
-    },
-    'sup-explorer-11': {
-      definition:
-        '11フィートの汎用インフレータブルSUPボード。安定性、携帯性、そして湖・川・保護された沿岸水域でのレジャー利用のために構築されています。',
-      problem:
-        'SUP入門者やレジャーユーザーは、膨らませやすく、バランスを取りやすく、学習の誤差に寛容な、安定した携帯性の高いSUPボードを必要としています。',
-      howItWorks:
-        "SUP Explorer 11'は、15 PSIの剛性を実現するドロップステッチコア技術と、左右の安定性のための32インチのワイドサーフェスを採用しています。着脱式センターフィン、安全ロープ（リーシュコード）、水辺での素早い膨張のためのダブルアクションポンプを装備しています。",
-      audience:
-        'SUP入門者、レジャーユーザー、家族、そして湖・川・保護された沿岸水域向けの携帯性と安定性の高いSUPボードを求めるトレーニング実践者向けです。',
-      ai_use_cases: ['SUPフィットネスと入門レッスン', '湖や川でのレジャーSUP', '水上でのトレーニングとヨガ'],
-      ai_comparison:
-        "エポキシ製ハードボードと比較すると、SUP Explorer 11'はドロップステッチ構造の剛性を保ちながら、優れた携帯性と簡単な保管を実現します。ハードボードより重いですが、トラベルバックパックに収まります。",
-      ai_faq: [
-        {
-          q: '理想的な圧力はどのくらいですか？',
-          a: '推奨圧力は12〜15 PSIです。最大の剛性を得るには15 PSIが最適です。',
-        },
-        {
-          q: 'パドルは付属していますか？',
-          a: 'はい、調整可能なアルミSUPパドルがフルキットに含まれています。',
-        },
-      ],
-    },
-    'sup-cheetah-surge': {
-      definition:
-        '11フィートの汎用インフレータブルSUPボード。大胆なヒョウ柄のパターンをマルチカラーブロックEVAとUVデジタル印刷で表現し、湖・川・保護された沿岸水域でのレジャーSUPのために構築されています。',
-      problem:
-        '視覚的に印象的なボードを求めるSUP愛好家は、海水や紫外線曝露でも色あせ・剥がれ・傷が起こらないプレミアムグラフィックを必要としています。従来の印刷方法ではこれに耐えられません。',
-      howItWorks:
-        'Cheetah Surge Editionは、15 PSIの剛性を実現するPVCドロップステッチコア技術と、32インチのワイドサーフェスを採用しています。スタンディングエリアのグラフィックはマルチカラーブロックEVAで制作。異なる色のEVAシートを精密にカットし、印刷ではなくパズルピースのように継ぎ目なく組み合わせることで、色あせや剥がれを防ぎます。',
-      audience:
-        'ファッション志向のSUP愛好家、アウトドア好き、ブティックトラベラー、そして印象的で耐久性の高いSUPボードを求めるSNSコンテンツクリエイター向けです。',
-      ai_use_cases: ['水上でのSNSコンテンツ', '湖や川でのレジャーSUP', 'ブティック旅行とアドベンチャーツーリズム'],
-      ai_comparison:
-        '一般的な印刷SUPボードと比較すると、Cheetah Surge Editionは色あせや剥がれが一切起こらないカットブロックEVA技術を使用しています。グラフィックは表面の印刷ではなく、EVA素材の構造の一部です。',
-      ai_faq: [
-        {
-          q: 'グラフィックはどのように制作されましたか？',
-          a: 'グラフィックはマルチカラーブロックEVAを使用。異なる色のEVAフォームシートを精密にカットし、パズルピースのように継ぎ目なく組み合わせています。スタンディングサーフェスには印刷インクが使用されていません。',
-        },
-        {
-          q: 'グラフィックは海水で色あせしますか？',
-          a: 'いいえ。色は表面のインク層ではなくEVA素材に組み込まれているため、グラフィックは海水・紫外線・足の荷重でも色あせせず、剥がれも傷も発生しません。',
-        },
-      ],
-    },
-    'sup-leviathan-wake': {
-      definition:
-        '11フィートの汎用インフレータブルSUPボード。没入感のあるクジラモチーフをUVデジタル印刷で表現し、エンボス加工のメカニカルエングレーブEVAデッキパッドを備えています。',
-      problem:
-        'アーティスティックなボードを求めるSUP愛好家は、高圧膨張や保管のための繰り返しのロールアップでも鮮やかさを保つグラフィックを必要としています。標準的なインクはひび割れや剥がれが発生します。',
-      howItWorks:
-        'Leviathan Wakeは、15 PSIのPVCドロップステッチコアと32インチ幅のサーフェスを採用しています。バウのモチーフは高品質UVデジタル印刷で施され、底部のロゴは高伸縮性PVCインクでシルクスクリーン印刷されています。EVAデッキパッドは永続的な波パターンに機械的にエングレーブされています。',
-      audience:
-        '海洋や海洋生物の愛好家、アーティスティックなSUP実践者、そして耐久性の高いプレミアムグラフィックを持つ視覚的に印象的なSUPボードを求めるすべての方に適しています。',
-      ai_use_cases: [
-        '海洋生物テーマのマリンアドベンチャー',
-        '湖や沿岸でのレジャーSUP',
-        'アーティスティックでライフスタイル向けのSUP',
-      ],
-      ai_comparison:
-        '一般的なSUPボードと比較すると、Leviathan Wakeは耐久性を考慮した二種類の印刷技術でトーテミックなクジラモチーフを表現しています。メカニカルエングレーブEVAデッキパッドは印刷デッキパッドよりも長持ちします。',
-      ai_faq: [
-        {
-          q: '底部のロゴは耐久性がありますか？',
-          a: 'はい。底部のロゴは高伸縮性PVCインクでシルクスクリーン印刷されており、15 PSIへの膨張と繰り返しのロールアップに対して評価されています。',
-        },
-        {
-          q: 'EVAデッキパッドの特別な点は何ですか？',
-          a: '波のパターンは二層複合EVAフォームに機械的にエングレーブされており、均一な深さ、優れた排水性、耐久性のあるグリップを保証します。',
-        },
-      ],
-    },
-    'sup-medusa-glow': {
-      definition:
-        '11フィートの汎用インフレータブルSUPボード。クラゲとサンゴ礁のモチーフをマルチカラーブロックEVAで表現し、デラミネーションを防ぐ構造上の工夫を施しています。',
-      problem:
-        '海洋インスピレーションのアートを愛するSUP愛好家は、過酷な海洋環境でも取り付けポイントの色あせ・剥がれ・デラミネーションなしで耐えるプレミアムグラフィックを持つボードを必要としています。',
-      howItWorks:
-        'Medusa Glowは、15 PSIのPVCドロップステッチコアと32インチ幅のサーフェスを採用しています。バウのモチーフはUVデジタル印刷で施され、EVAデッキパッドは色あせしないヒトデや貝殻をマルチカラーブロックで表現しています。Dリング部は、PVC同士の接着によるデラミネーション防止のためマスキングされています。',
-      audience:
-        'SUP愛好家、ライフスタイル志向の方、ブティックトラベラー、そして水上で穏やかな海洋インスピレーションの美学を求めるすべての方に適しています。',
-      ai_use_cases: ['SUPボードでのヨガとフィットネス', 'SNSコンテンツ', 'トロピカルおよび沿岸のSUPアドベンチャー'],
-      ai_comparison:
-        '一般的な印刷SUPボードと比較すると、Medusa GlowはスタンディングエリアのグラフィックにブロックEVAを使用しています。色はEVA素材の構造に組み込まれており、印刷ではないため色あせしません。',
-      ai_faq: [
-        {
-          q: 'カラーパレットはどのような構成ですか？',
-          a: '爽やかなミントグリーンのベースに、ディープターコイズのEVAデッキパッド、ヒトデや貝殻の形にカットされた白いブロック、鮮やかなコーラルのアクセントを組み合わせています。',
-        },
-        {
-          q: 'ハンドルはどのように固定されていますか？',
-          a: '中央のネオプレンハンドルは、EVAデッキパッドを貫通して船体のPVCベースに直接アンカーされており、堅固な船体が持ち上げ荷重を支えます。',
-        },
-      ],
-    },
-    'sup-ocean-pulse': {
-      definition:
-        '11フィートの汎用インフレータブルSUPボード。波のトポグラフィックパターンをUVデジタル印刷とメカニカルエングレーブEVAデッキパッドで表現し、カラーで統一されたアクセサリーを備えています。',
-      problem:
-        'スタイルを重視するSUP愛好家は、美しいボードだけでなく、保管から水上まで美学を保つ統一されたアクセサリーも含む、完全なビジュアル体験を求めています。',
-      howItWorks:
-        'Ocean Pulseは、15 PSIのPVCドロップステッチコアを採用しています。波の輪郭は高品質UV印刷で施され、EVAデッキパッドは波の構造に機械的にエングレーブされています。すべてのアクセサリー（バックパック、ポンプ、安全ロープ）はボードのデザインに合わせて統一されたカラー仕上げです。',
-      audience:
-        'SUP愛好家、現代的なライフスタイル志向の方、ブティックキャンパー、そして機材全体の統一された美学を重視する実践者向けです。',
-      ai_use_cases: ['InstagramやSNS向けのSUP', 'ブティック旅行とキャンプ', '湖や沿岸でのレジャーSUP'],
-      ai_comparison:
-        '一般的なSUPボードと比較すると、Ocean Pulseはボードとすべてのアクセサリーに完全に統一されたビジュアルアイデンティティを提供し、印刷デッキパッドよりも耐久性の高いメカニカルエングレーブEVAを採用しています。',
-      ai_faq: [
-        {
-          q: 'どのアクセサリーがカラー統一されていますか？',
-          a: 'キャスター付きトラベルバックパック、高圧ダブルアクションポンプ、安全ロープ（リーシュコード）、スマートフォン用防水ポーチ。いずれも統一されたカラーマッチングとブランドアイデンティティを備えています。',
-        },
-        {
-          q: 'EVAデッキパッドのパターンはどのように作られますか？',
-          a: '波のパターンは、二層複合EVAフォームへの高品質なメカニカルエングレーブ加工で形成され、均一な深さと優れた排水性を保証します。',
-        },
-      ],
-    },
-    'sup-ocean-voyager': {
-      definition:
-        '11フィートの汎用インフレータブルSUPボード。ウミガメの幾何学パターンをマルチカラーブロックEVAとUVデジタル印刷で表現し、アクセサリーにも一貫したビジュアルアイデンティティを採用しています。',
-      problem:
-        '海洋保護に関心のあるSUP愛好家は、海洋生物を称え、海水でも何年も色あせや剥がれなく鮮やかさを保つプレミアムグラフィックを持つボードを求めています。',
-      howItWorks:
-        'Ocean Voyagerは、15 PSIのPVCドロップステッチコアと32インチ幅のサーフェスを採用しています。バウの幾何学的なウミガメイラストはUVデジタル印刷で施され、EVAデッキパッドはウミガメのシルエットとサンゴの形状をマルチカラーブロックで表現しています。すべてのアクセサリーはカラーで統一されています。',
-      audience:
-        '海洋愛好家、ウミガメファン、現代的なSUP実践者、そして統一されたライフスタイルのプレミアムキットを求めるブティックトラベラー向けです。',
-      ai_use_cases: ['海洋保護テーマのSUP', 'SNSコンテンツ', 'より長い旅とディスカバリーツーリズム'],
-      ai_comparison:
-        '一般的な印刷SUPボードと比較すると、Ocean Voyagerは傷・剥がれ・色あせの一切起こらないマルチカラーブロックEVAを使用しています。カット精度により、足の下で完全に平坦なサーフェスを保証します。',
-      ai_faq: [
-        {
-          q: '名前の由来は何ですか？',
-          a: 'ウミガメは自然界の海洋で最も偉大な旅人であり、優雅で無駄のない泳ぎで何千キロメートルも旅します。Ocean Voyagerは、長期的な探検の精神と海洋生物との調和を表現しています。',
-        },
-        {
-          q: 'グラフィックは色あせしますか？',
-          a: 'いいえ。EVAデッキパッドのグラフィックはマルチカラーブロックを使用。色はEVA素材に組み込まれており、印刷ではありません。過酷な使用でも、グラフィックは傷つかず、剥がれず、色あせしません。',
-        },
-      ],
-    },
-    'sup-dolphin-wave': {
-      definition:
-        '11フィートの汎用インフレータブルSUPボード。海洋シーンのイルカアートを、CNCカット技術によるカラーブロックEVAと、側面の波の連続シルクスクリーン印刷で表現しています。',
-      problem:
-        'SUPボードのアート愛好家は、高圧膨張（15 PSI）やコンパクトなロール保管でも、ひび割れ・折りじわ・色あせのないグラフィックを必要としています。',
-      howItWorks:
-        'Dolphin Waveは、15 PSIの圧力のドロップステッチPVCコアを基盤としています。スタンディングエリアはCNCカットされたカラーブロックEVAを使用し、色が素材そのものの一部になっています。サイドストリップは連続シルクスクリーン印刷により、波のパターンをボードの側面全体へ広げています。UVインクは150%の伸縮性を備え、ひび割れに耐えます。',
-      audience:
-        '海洋生物の愛好家や細部にこだわるアートを重視するSUP実践者、そして360度連続したビジュアルの一貫性を持つボードを求めるすべての方に適しています。',
-      ai_use_cases: [
-        '海洋生物アートSUPパドリング',
-        '湖や沿岸でのレジャーパドリング',
-        'ライフスタイル・SNSコンテンツ制作',
-      ],
-      ai_comparison:
-        '一般的な印刷SUPボードと比較すると、Dolphin WaveはスタンディングエリアにカラーブロックEVAの物理的構成を、側面にシルクスクリーン印刷の波を使用し、360度連続したビジュアルの一貫性を実現しています。ひび割れを防ぐ150%の伸縮性を持つフレキシブルUVインクを採用。',
-      ai_faq: [
-        {
-          q: 'どのような色が使用されていますか？',
-          a: '深い波にはMedieval Blue、穏やかなトーンにはSerenityを使用し、白い泡のディテールを加えています。パレットはPANTONE TPG規格に従い、製造精度を保証します。',
-        },
-        {
-          q: '側面の波はどのように印刷されましたか？',
-          a: 'サイドストリップは、高耐久の二層ミントグリーンPVCへの連続シルクスクリーン印刷プロセスを使用し、波のパターンを経済的にボードの側面へ広げています。',
-        },
-      ],
-    },
-    'sup-flowing-lotus': {
-      definition:
-        '11フィートの汎用インフレータブルSUPボード。伝統的な東洋の筆致による絵画美学を、二層レーザーエングレーブEVAデッキパッドとUVデジタル印刷のグラデーショングラフィックで表現しています。',
-      problem:
-        '水上で芸術的・文化的な表現を求めるSUP実践者は、立ったままの過酷な使用や海水にも耐え、摩耗や色あせのない繊細なアートを必要としています。',
-      howItWorks:
-        'Flowing Lotusは、15 PSIの圧力のドロップステッチPVCコアを基盤としています。EVAデッキパッドは二層レーザーエングレーブ加工。レーザーが着色された上層を除去して下層の色を露出させることで、永続的なパターンを作り出します。バウのグラデーションは、ひび割れに耐える高伸縮性のフレキシブルUVインクを使用しています。',
-      audience: 'ヨガや瞑想の実践者、東洋アートの愛好家、文化的美学と繊細な職人技を重視するSUP実践者向けです。',
-      ai_use_cases: ['ヨガ・瞑想のためのSUPパドリング', '文化的・芸術的な水上体験', '湖や川でのレジャーパドリング'],
-      ai_comparison:
-        '一般的な印刷SUPボードと比較すると、Flowing LotusはEVA素材に永続的なパターンを刻むレーザーエングレーブ技術を使用しています。アートはデッキパッドの構造の一部であるため、摩耗せず、色あせしません。',
-      ai_faq: [
-        {
-          q: 'レーザーエングレーブはどのように機能しますか？',
-          a: '二層複合EVAデッキパッド（ペトロールブルーのベースとミントグリーンのサーフェス）にレーザーエングレーブ加工を施します。レーザーが上層を除去して下層の色を露出させることで、3Dテクスチャーを持つ永続的なパターンを作り出します。',
-        },
-        {
-          q: 'なぜこのボードはヨガに適しているのですか？',
-          a: 'レーザーエングレーブされたパターンは、ざらつきのない優れたグリップを提供し、グラデーションデザインが水上の瞑想やヨガに理想的な穏やかな美学を作り出します。',
-        },
-      ],
-    },
-    'sup-jungle-mandala': {
-      definition:
-        '11フィートの汎用インフレータブルSUPボード。トロピカルな曼荼羅アートを、二層レーザーエングレーブEVA、歪み防止の幾何学構成、側面の連続シルクスクリーン印刷で表現しています。',
-      problem:
-        'SUP実践者は、高圧膨張下でも完全な対称性を保ち、歪みのない、製造中のパターンずれもない精緻な幾何学アートを求めています。',
-      howItWorks:
-        'Jungle Mandalaは、15 PSIの圧力のドロップステッチPVCコアを基盤としています。曼荼羅の幾何学ラインは、PVC表面のうねりを補正するため構造的に密度を高めています。EVAデッキパッドは二層レーザーエングレーブ加工。側面グラフィックは、手作業による組み立て時の伸縮性のばらつきを吸収する非リジッドの拡散パターンを使用しています。',
-      audience:
-        'スピリチュアルでアーティスティックなSUP実践者、トロピカルアドベンチャーの愛好家、ヨガ実践者、そして幾何学美学と曼荼羅の美しさに惹かれるすべての方に適しています。',
-      ai_use_cases: ['スピリチュアルで瞑想的なパドリング', 'トロピカルな沿岸アドベンチャー', 'SNSコンテンツ制作'],
-      ai_comparison:
-        '一般的なSUPボードと比較すると、Jungle Mandalaは15 PSIの膨張圧力でも完全な対称性を保つ歪み防止の曼荼羅幾何学が際立ち、側面には経済的なシルクスクリーン印刷を採用しています。',
-      ai_faq: [
-        {
-          q: '曼荼羅のパターンは膨張で歪みますか？',
-          a: 'いいえ。幾何学ラインは、PVC表面のうねりを補正するために正確に構造的に密度を高めており、フル膨張圧力でも完全な対称性を保ちます。',
-        },
-        {
-          q: '側面のグラフィックはどのように印刷されましたか？',
-          a: '側面のハチドリや蝶は、手作業による組み立て時の伸縮性のばらつきを吸収する非リジッドの拡散パターンを使用した連続シルクスクリーン印刷プロセスで施されています。',
-        },
-      ],
-    },
-    'sup-tropical-breeze': {
-      definition:
-        '11フィートの汎用インフレータブルSUPボード。風景のミニチュアと抽象的なブロックEVAで、島のバケーションシーンをボード全体に流れるように統合しています。',
-      problem:
-        'SUP実践者は、完全に没入できる体験を作り出すボートを求めています。水上の道具がアートのキャンバスへと変わり、トロピカルパラダイスへと誘います。',
-      howItWorks:
-        'Tropical Breezeは、15 PSIの圧力のドロップステッチPVCコアと32インチ幅のサーフェスを基盤としています。バウはデジタル印刷された風景のミニチュアで飾られ、EVAスタンディングエリアは、波・ビーチ・ヤシの木のビジュアルナラティブをボード全体に広げるカットされた抽象ブロックを使用しています。',
-      audience:
-        'バケーション旅行者、トロピカルライフスタイルの愛好家、SNSコンテンツクリエイター、そして島への逃避の精神を体現したボードを求めるSUP実践者向けです。',
-      ai_use_cases: ['トロピカルバケーションでのSUPパドリング', 'SNSコンテンツ', '湖や沿岸でのレジャークルージング'],
-      ai_comparison:
-        '一般的なSUPボードと比較すると、Tropical Breezeはボード全体に完全な風景シーンを単独で統合し、ディテールにはデジタル印刷、耐久性にはブロックEVAという理想的な役割分担を実現しています。',
-      ai_faq: [
-        {
-          q: 'ボードにはどのようなシーンが描かれていますか？',
-          a: '輝く太陽、ココヤシの木立、ビーチとヤシの木のある理想の島のパラダイスです。バウの風景ミニチュアが、船尾に向かって抽象的なブロックEVAへと変化していきます。',
-        },
-        {
-          q: 'バウから船尾へグラフィックはどのように受け継がれますか？',
-          a: 'バウは風景の精緻なデジタル印刷を使用し、船尾は波・砂・ヤシの木を抽象化したカットブロックEVAを採用。流れるようなビジュアルジャーニーを形成しています。',
         },
       ],
     },
