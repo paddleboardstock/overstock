@@ -22,7 +22,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-export const BING_LANG = { no: 'nb', tl: 'fil', sr: 'sr-Latn' };
+export const BING_LANG = { no: 'nb', tl: 'fil' };
 export const bingCode = (lang) => BING_LANG[lang] || lang;
 
 // Keys whose values are machine values (paths, css, ids) and must never be sent.

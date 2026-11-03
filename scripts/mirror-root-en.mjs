@@ -17,7 +17,7 @@ const EN = path.join(DIST, 'en');
 // This script materialises the canonical root copy dist/<path>; that copy IS the
 // canonical page, so it must stay indexable whenever the ROOT path itself is not
 // suppressed. Without this, substantive EN pages that only exist as [lang] routes
-// (ce-compliance, factory-audit, technical-drawings, solutions/*, research/*, …)
+// (ce-compliance, factory-audit, solutions/*, research/*, …)
 // were served `noindex` and kept out of every sitemap.
 const SEO_CFG = JSON.parse(readFileSync(path.join(ROOT, 'src/config/seo-suppress.json'), 'utf8'));
 const SM_CFG = JSON.parse(readFileSync(path.join(ROOT, 'src/config/sitemap-exclude.json'), 'utf8'));

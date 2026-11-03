@@ -8,7 +8,6 @@ import { unified } from '@astrojs/markdown-remark';
 import mdx from '@astrojs/mdx';
 
 import astrowind from './vendor/integration';
-import imageOptimizer from './vendor/integration/image-optimizer';
 import imgDimensions from './vendor/integration/img-dimensions';
 import yaml from '@rollup/plugin-yaml';
 import tailwindcss from '@tailwindcss/vite';
@@ -38,30 +37,14 @@ function buildLocalizedRedirects(map: Record<string, string>): Record<string, st
     'ru',
     'pl',
     'nl',
-    'sv',
-    'no',
-    'el',
-    'fi',
-    'da',
-    'cs',
     'th',
-    'hr',
     'tl',
     'hu',
     'ro',
-    'sk',
     'bg',
-    'sl',
-    'sr',
-    'ja',
-    'ko',
     'tr',
     'id',
-    'he',
     'ms',
-    'lt',
-    'lv',
-    'et',
   ];
   const out: Record<string, string> = {};
   for (const [from, to] of Object.entries(map)) {
@@ -79,16 +62,7 @@ const LEGACY_REDIRECTS = {
   '/brand-story/': '/paddleboardoverstock-story/',
   '/brand/paddleboardoverstock/': '/paddleboardoverstock-story/',
   '/brand/': '/paddleboardoverstock-story/',
-  '/commercial-workboats/': '/use-cases/commercial-workboats/',
-  '/disaster-relief-humanitarian-aid/': '/use-cases/disaster-relief/',
-  '/oem-process/': '/oem-odm-manufacturer/',
   '/quality-testing/': '/quality/',
-  '/search-rescue-operations/': '/use-cases/search-and-rescue/',
-  '/solutions-diving-center-boats/': '/solutions/diving-center-boats/',
-  '/solutions-fishing-boat-solutions/': '/solutions/fishing-boat-solutions/',
-  '/solutions-marine-tourism-equipment/': '/solutions/marine-tourism-equipment/',
-  '/solutions-rescue-watercraft/': '/solutions/rescue-watercraft/',
-  '/solutions-yacht-tender-solutions/': '/solutions/yacht-tender-solutions/',
 };
 
 export default defineConfig({
@@ -107,15 +81,11 @@ export default defineConfig({
     ...buildLocalizedRedirects({ '/manufacturer/': '/factory/' }),
     // 遗留 JS redirect 页迁移（静态模式空壳修复），×14 语言
     ...buildLocalizedRedirects(LEGACY_REDIRECTS),
-    // P0-7：原 JS 软跳转页改服务端 301（fr 特例目标与通用表不同，需在 LEGACY 之后重声明）
-    '/fr/oem-process/': '/fr/oem-odm-blueprint/',
+    // P0-7：原 JS 软跳转页改服务端 301
     '/ru/brand-story/': '/ru/paddleboardoverstock-story/',
-    '/nl/search-rescue-operations/': '/nl/use-cases/search-and-rescue/',
   },
   integrations: [
     mdx(),
-
-    imageOptimizer(),
 
     imgDimensions(),
 

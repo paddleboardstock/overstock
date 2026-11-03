@@ -7,9 +7,9 @@ import YAML from 'yaml';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 
-const PAGES = ['ce-compliance', 'technical-drawings', 'oem-odm-rib-boats', 'factory-audit'];
+const PAGES = [];
 
-const LANGS = ['de', 'es', 'fr', 'it', 'pt', 'ru', 'pl', 'ar', 'nl', 'sv', 'no', 'el', 'fi', 'da', 'ja', 'zh'];
+const LANGS = ['de', 'es', 'fr', 'it', 'pt', 'ru', 'pl', 'ar', 'nl', 'zh'];
 
 const CACHE_FILE = path.join(ROOT, '.cache', 'page-translate-cache.json');
 const GOOGLE_URL = 'https://translate.googleapis.com/translate_a/single';

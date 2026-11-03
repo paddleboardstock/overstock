@@ -25,35 +25,17 @@ const LANGUAGES: Record<string, string> = {
   ru: 'Русский',
   pl: 'Polski',
   nl: 'Nederlands',
-  sv: 'Svenska',
-  no: 'Norsk',
-  el: 'Ελληνικά',
-  fi: 'Suomi',
-  da: 'Dansk',
-  cs: 'Čeština',
   th: 'ไทย',
-  hr: 'Hrvatski',
   tl: 'Filipino',
   hu: 'Magyar',
   ro: 'Română',
-  sk: 'Slovenčina',
   bg: 'Български',
-  sl: 'Slovenščina',
-  sr: 'Srpski',
-  ja: '日本語',
-  ko: '한국어',
   tr: 'Türkçe',
   id: 'Bahasa Indonesia',
-  he: 'עברית',
   ms: 'Bahasa Melayu',
-  lt: 'Lietuvių',
-  lv: 'Latviešu',
-  et: 'Eesti',
 };
 
 const CATEGORY_LABELS: Record<string, string> = {
-  RIB: 'RIB Boats',
-  INFLATABLE: 'Inflatable Boats',
   SUP: 'SUP Paddle Boards',
   ACCESSORY: 'Accessories',
 };
@@ -130,7 +112,7 @@ function getProductLines(): string[] {
     const heading = lang === 'en' ? 'English' : `${langName}${prefix}`;
     lines.push(`\n### ${heading}\n`);
 
-    const categories = ['RIB', 'INFLATABLE', 'SUP', 'ACCESSORY'];
+    const categories = ['SUP', 'ACCESSORY'];
     for (const cat of categories) {
       const catProducts = products.filter((p) => p.category === cat);
       if (catProducts.length === 0) continue;
@@ -183,7 +165,7 @@ function main(): void {
   if (!fs.existsSync(LLMS_TXT)) {
     fs.writeFileSync(
       LLMS_TXT,
-      `# Paddle Board Overstock\n\nPaddle Board Overstock is a professional OEM/ODM manufacturer of inflatable water sports equipment.\n`
+      `# Paddle Board Overstock\n\nPaddle Board Overstock sells factory-direct inflatable SUP boards, complete paddle board packages, and accessories.\n`
     );
     console.log('[geo] Created default llms.txt');
   }
@@ -205,7 +187,7 @@ function main(): void {
   } else {
     // Default base
     baseParts.push(
-      `# Paddle Board Overstock Knowledge Base\n\nPaddle Board Overstock is a water sports equipment manufacturer specializing in inflatable watercraft.`
+      `# Paddle Board Overstock Knowledge Base\n\nPaddle Board Overstock designs and manufactures inflatable SUP boards and sells them factory-direct to paddlers worldwide.`
     );
   }
 

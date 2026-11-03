@@ -35,30 +35,14 @@ const allLangs = [
   'ru',
   'pl',
   'nl',
-  'sv',
-  'no',
-  'el',
-  'fi',
-  'da',
-  'cs',
   'th',
-  'hr',
   'tl',
   'hu',
   'ro',
-  'sk',
   'bg',
-  'sl',
-  'sr',
-  'ja',
-  'ko',
   'tr',
   'id',
-  'he',
   'ms',
-  'lt',
-  'lv',
-  'et',
 ];
 
 // --- v5 AI Semantic Analysis (run once in English for diagnostics) ---
@@ -105,46 +89,39 @@ interface SiteFacts {
     annualCapacityUnits: number;
   };
   reach: { countriesServed: string };
-  catalog: { certifiedModels: number };
+  catalog: Record<string, never>;
   quality: {
     defectFreeRate: string;
     pressureTest: { multiplier: string; holdHours: string; full: string };
-    samplingStandard: string;
   };
-  certifications: Array<{ name: string; body: string | null }>;
   commercial: {
-    moqSupKayak: string;
-    moqRib: string;
-    samplingLeadTimeDays: string;
-    productionLeadTimeDays: string;
+    moqSup: string;
   };
 }
 
 const facts = JSON.parse(fs.readFileSync(path.join(root, 'src', 'config', 'facts.json'), 'utf8')) as SiteFacts;
 
-const isoCert = facts.certifications.find((c) => c.name.startsWith('ISO'));
-const productCertNames = facts.certifications.map((c) => c.name).filter((n) => n !== isoCert?.name && n !== 'BSCI');
 const operator = facts.brand.legalName;
 const fmt = (n: number) => n.toLocaleString('en-US');
 
 const tagline: Record<string, string> = {
-  en: `Paddle Board Overstock designs and manufactures professional-grade inflatable watercraft — SUP boards, kayaks, dinghies, RIBs, safety equipment, and accessories — in its own ${fmt(facts.factory.areaSqm)} m2 factory in ${facts.factory.prefecture}, China.`,
-  fr: 'Paddle Board Overstock con\u00e7oit des embarcations gonflables de qualit\u00e9 professionnelle — planches SUP, kayaks, annexes, RIB, \u00e9quipements de s\u00e9curit\u00e9 et accessoires.',
-  de: 'Paddle Board Overstock entwickelt professionelle aufblasbare Wasserfahrzeuge — SUP-Boards, Kajaks, Dingis, RIBs, Sicherheitsausr\u00fcstung und Zubeh\u00f6r.',
-  es: 'Paddle Board Overstock dise\u00f1a embarcaciones inflables de grado profesional — tablas SUP, kayaks, botes, RIB, equipos de seguridad y accesorios.',
-  pt: 'Paddle Board Overstock concebe embarca\u00e7\u00f5es insufl\u00e1veis de qualidade profissional — pranchas SUP, caiaques, botes, RIB, equipamentos de seguran\u00e7a e acess\u00f3rios.',
-  ar: 'Paddle Board Overstock تصمم قوارب قابلة للنفخ بمعايير احترافية — ألواح SUP، قوارب الكاياك، الزوارق الصغيرة، قوارب RIB، معدات السلامة والملحقات.',
-  it: 'Paddle Board Overstock progetta imbarcazioni gonfiabili di qualit\u00e0 professionale — tavole SUP, kayak, dinghy, RIB, attrezzature di sicurezza e accessori.',
-  ru: 'Paddle Board Overstock проектирует профессиональные надувные водные суда — SUP-доски, каяки, надувные лодки, RIB, средства безопасности и аксессуары.',
-  pl: 'Paddle Board Overstock projektuje profesjonalne nadmuchiwane jednostki p\u0142ywaj\u0105ce — deski SUP, kajaki, dinghy, RIB, sprz\u0119t bezpiecze\u0144stwa i akcesoria.',
-  nl: "Paddle Board Overstock ontwerpt professionele opblaasbare watersportvaartuigen — SUP-boards, kajaks, bijboten, RIB's, veiligheidsuitrusting en accessoires.",
+  en: `Paddle Board Overstock designs and manufactures professional-grade inflatable SUP boards and paddling accessories in its own ${fmt(facts.factory.areaSqm)} m2 factory in ${facts.factory.prefecture}, China.`,
+  fr: 'Paddle Board Overstock conçoit des planches SUP gonflables de qualité professionnelle et des accessoires de pagaïe.',
+  de: 'Paddle Board Overstock entwickelt professionelle aufblasbare SUP-Boards und Paddel-Zubehör.',
+  es: 'Paddle Board Overstock diseña tablas SUP inflables de grado profesional y accesorios de remo.',
+  pt: 'Paddle Board Overstock concebe pranchas SUP insufláveis de qualidade profissional e acessórios de remo.',
+  ar: 'Paddle Board Overstock تصمم ألواح SUP قابلة للنفخ بمعايير احترافية وملحقات التجديف.',
+  it: 'Paddle Board Overstock progetta tavole SUP gonfiabili di qualità professionale e accessori per il SUP.',
+  ru: 'Paddle Board Overstock проектирует профессиональные надувные SUP-доски и аксессуары для гребли.',
+  pl: 'Paddle Board Overstock projektuje profesjonalne nadmuchiwane deski SUP i akcesoria do wiosłowania.',
+  nl: 'Paddle Board Overstock ontwerpt professionele opblaasbare SUP-boards en paddle-accessoires.',
 };
 
 const INTRO_EN =
   `Founded in ${facts.brand.foundingYear} in ${facts.factory.prefecture}, China, Paddle Board Overstock operates ${facts.factory.productionLines} production lines with ${facts.factory.workforceMin}-${facts.factory.workforceMax} staff and an annual capacity of ${fmt(facts.factory.annualCapacityUnits)} units. ` +
-  `Every unit passes a ${facts.quality.pressureTest.full} under an ${isoCert?.name} (${isoCert?.body}) quality system; products carry ${productCertNames.join(', ')} certification, the factory is BSCI compliant, and outgoing shipments achieve a ${facts.quality.defectFreeRate} defect-free rate (${facts.quality.samplingStandard} sampling). ` +
-  `Paddle Board Overstock exports to ${facts.reach.countriesServed} countries. MOQ: ${facts.commercial.moqSupKayak} for SUP/kayak, ${facts.commercial.moqRib} for RIB; sampling lead time ${facts.commercial.samplingLeadTimeDays} days, production ${facts.commercial.productionLeadTimeDays} days. ` +
-  `Since September 2026 the brand has been operated by ${operator} (New Mexico, USA), with R&D and production at the Paddle Board Overstock Qingdao Manufacturing Hub.`;
+  `Every unit passes a ${facts.quality.pressureTest.full}, and outgoing shipments achieve a ${facts.quality.defectFreeRate} defect-free rate. ` +
+  `Paddle Board Overstock ships to ${facts.reach.countriesServed} countries. ${facts.commercial.moqSup}. ` +
+  `Since September 2026 the brand has been operated by ${operator}, with R&D and production at the Paddle Board Overstock Weihai Manufacturing Hub.`;
 
 interface LlmsLink {
   label: string;
@@ -159,12 +136,7 @@ const LINK_GROUPS: Array<{ title: string; links: LlmsLink[] }> = [
       {
         label: 'Products',
         path: '/products/',
-        desc: `Catalog of ${facts.catalog.certifiedModels} certified inflatable watercraft — SUP boards, kayaks, dinghies, and RIBs`,
-      },
-      {
-        label: 'OEM/ODM Manufacturing',
-        path: '/oem-odm-manufacturer/',
-        desc: 'OEM/ODM manufacturing process, MOQ terms, sampling and production lead times',
+        desc: 'Catalog of inflatable SUP boards and paddling accessories',
       },
       {
         label: 'Factory',
@@ -174,7 +146,7 @@ const LINK_GROUPS: Array<{ title: string; links: LlmsLink[] }> = [
       {
         label: 'Quality Control',
         path: '/quality/',
-        desc: `${isoCert?.name} quality system, ${facts.quality.pressureTest.full}, ${facts.quality.samplingStandard} sampling`,
+        desc: `${facts.quality.pressureTest.full}, ${facts.quality.defectFreeRate} defect-free rate`,
       },
       {
         label: 'Technology',
@@ -184,7 +156,7 @@ const LINK_GROUPS: Array<{ title: string; links: LlmsLink[] }> = [
       {
         label: 'Safety',
         path: '/safety/',
-        desc: 'Safety equipment standards and certified safety gear',
+        desc: 'Safety equipment and safety gear',
       },
       {
         label: 'Engineering Team',
@@ -199,78 +171,73 @@ const LINK_GROUPS: Array<{ title: string; links: LlmsLink[] }> = [
       {
         label: 'FAQ',
         path: '/faq/',
-        desc: 'Answers to common buyer, dealer, and OEM questions',
+        desc: 'Answers to common paddler questions',
       },
       {
         label: 'Contact',
         path: '/contact/',
-        desc: 'Request a quotation or contact the sales team',
+        desc: 'Contact the customer support team',
       },
     ],
   },
   {
-    title: 'Solutions',
+    title: 'Use Cases',
     links: [
       {
-        label: 'Solutions by Industry',
-        path: '/solutions/by-industry/',
-        desc: 'Industry-specific watercraft solutions',
+        label: 'Use Cases',
+        path: '/use-cases/',
+        desc: 'Paddle boarding use cases and product recommendations',
       },
       {
-        label: 'Solutions by Use Case',
-        path: '/solutions/by-use-case/',
-        desc: 'Use-case based product recommendations',
+        label: 'Touring',
+        path: '/use-cases/touring/',
+        desc: 'Long-distance touring paddle boards',
       },
       {
-        label: 'Search & Rescue',
-        path: '/use-cases/search-and-rescue/',
-        desc: 'Rescue-grade RIBs and safety watercraft',
+        label: 'Beginner',
+        path: '/use-cases/beginner/',
+        desc: 'Boards for beginner paddlers',
       },
       {
-        label: 'Commercial Workboats',
-        path: '/use-cases/commercial-workboats/',
-        desc: 'Workboats for commercial marine operations',
+        label: 'SUP Fishing',
+        path: '/use-cases/fishing/',
+        desc: 'Stable platforms for paddle board fishing',
       },
       {
-        label: 'Disaster Relief',
-        path: '/use-cases/disaster-relief/',
-        desc: 'Humanitarian and disaster relief watercraft',
+        label: 'Family Recreation',
+        path: '/use-cases/family-recreation/',
+        desc: 'Family-friendly boards for casual paddling',
+      },
+      {
+        label: 'River Touring',
+        path: '/use-cases/river-touring/',
+        desc: 'Maneuverable boards for river paddling',
       },
     ],
   },
   {
     title: 'Guides',
     links: [
-      { label: 'Guides', path: '/guides/', desc: 'Water sports guides and tutorials' },
+      { label: 'Guides', path: '/guides/', desc: 'Paddle boarding guides and tutorials' },
       {
-        label: 'PVC vs Hypalon',
-        path: '/learn/pvc-vs-hypalon/',
-        desc: 'Material comparison for commercial inflatable fleets',
-      },
-      {
-        label: 'SUP Basics',
-        path: '/learn/sup-basics/',
+        label: 'Learn SUP',
+        path: '/learn/sup/',
         desc: 'Beginner stand-up paddleboarding fundamentals',
       },
       {
         label: 'SUP Size Guide',
-        path: '/learn/sup-size-guide/',
+        path: '/size-guide/',
         desc: 'Board length, width, and volume by rider weight and skill',
       },
       {
         label: 'Materials Reference',
         path: '/learn/materials/',
-        desc: 'Inflatable boat materials explained',
+        desc: 'Inflatable SUP materials explained',
       },
       {
-        label: 'Drop-Stitch Core',
-        path: '/learn/drop-stitch-core/',
-        desc: 'How drop-stitch construction works',
-      },
-      {
-        label: 'Inflatable Technology',
-        path: '/learn/inflatable-technology/',
-        desc: 'Air chamber design and pressure systems',
+        label: 'Water Safety',
+        path: '/learn/water-safety/',
+        desc: 'Water safety guidance for paddlers',
       },
     ],
   },
@@ -278,29 +245,14 @@ const LINK_GROUPS: Array<{ title: string; links: LlmsLink[] }> = [
     title: 'Comparisons',
     links: [
       {
-        label: 'PVC vs Hypalon',
-        path: '/compare/pvc-vs-hypalon/',
-        desc: 'Side-by-side material comparison for commercial fleets',
-      },
-      {
-        label: 'RIB vs Dinghy',
-        path: '/compare/rib-vs-dinghy/',
-        desc: 'Hull rigidity, performance, and use-case trade-offs',
+        label: 'Inflatable vs Hardboard',
+        path: '/compare/inflatable-vs-hardboard/',
+        desc: 'Inflatable and hardboard SUP compared',
       },
       {
         label: 'SUP vs Kayak',
         path: '/compare/sup-vs-kayak/',
         desc: 'Stability, speed, and storage compared',
-      },
-      {
-        label: 'Aluminum vs Fiberglass',
-        path: '/compare/aluminum-vs-fiberglass/',
-        desc: 'Hull material comparison for RIBs',
-      },
-      {
-        label: 'Commercial vs Recreational RIB',
-        path: '/compare/commercial-vs-recreational-rib/',
-        desc: 'Construction and durability differences',
       },
     ],
   },
@@ -308,15 +260,12 @@ const LINK_GROUPS: Array<{ title: string; links: LlmsLink[] }> = [
 
 const OPTIONAL_LINKS: LlmsLink[] = [
   { label: 'Paddle Board Overstock Story', path: '/paddleboardoverstock-story/', desc: 'Brand history and milestones' },
-  { label: 'Marine Industry', path: '/marine-industry/', desc: 'Marine industry overview and standards' },
-  { label: 'Size Guide', path: '/size-guide/', desc: 'Sizing help for SUP boards and boats' },
+  { label: 'Size Guide', path: '/size-guide/', desc: 'Sizing help for SUP boards and paddles' },
   { label: 'Warranty', path: '/warranty/', desc: 'Warranty coverage and claims' },
   { label: 'Gallery', path: '/gallery/', desc: 'Product and factory photography' },
   { label: 'Academy', path: '/academy/', desc: 'Training and education resources' },
   { label: 'Media Center', path: '/media/', desc: 'Press materials and brand assets' },
   { label: 'Journal', path: '/journal/', desc: 'Articles and company updates' },
-  { label: 'R&D Center', path: '/randdcenter/', desc: 'Research and development center' },
-  { label: 'Custom Lab', path: '/custom/', desc: 'Custom development service' },
   { label: 'Design & Innovation', path: '/design-powerhouse/', desc: 'Design capabilities and innovation process' },
   { label: 'Engineering Perfection', path: '/engineering-perfection/', desc: 'Engineering standards and methods' },
 ];
@@ -329,34 +278,14 @@ const AI_REFERENCE_LINKS: LlmsLink[] = [
   },
   { label: 'SUP Types Reference', path: '/llms/compare/sup-types', desc: 'Machine-readable SUP type comparison' },
   {
-    label: 'PVC vs Hypalon Reference',
-    path: '/llms/compare/pvc-vs-hypalon',
-    desc: 'Machine-readable PVC vs Hypalon data',
-  },
-  {
-    label: 'Inflatable Boat Industry Reference',
-    path: '/llms/industry/inflatable-boats',
-    desc: 'Machine-readable industry overview',
-  },
-  {
     label: 'Drop-Stitch Technology Reference',
     path: '/llms/technology/drop-stitch',
     desc: 'Machine-readable drop-stitch technology data',
   },
   {
-    label: 'Boat Selection Reference',
-    path: '/llms/comparison/boat-selection',
-    desc: 'Machine-readable boat selection criteria',
-  },
-  {
     label: 'Inflatable Water Sports Reference',
     path: '/llms/industry/inflatable-water-sports',
     desc: 'Machine-readable water sports overview',
-  },
-  {
-    label: 'Inflatable Boat Guide Reference',
-    path: '/llms/marine-industry/inflatable-boat-guide',
-    desc: 'Machine-readable inflatable boat guide',
   },
 ];
 

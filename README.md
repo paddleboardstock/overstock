@@ -133,7 +133,6 @@ All locale URLs use **path-based** format: `paddleboardoverstock.com/fr/products
 │  │  │  │  └── team.astro          # Team entity (founder, leadership, 6 profiles)
 │  │  │  ├── brand-story.astro      # Brand story
 │  │  │  ├── brand-marine-expertise.astro # Marine engineering expertise
-│  │  │  ├── brand-global-presence.astro  # Global presence
 │  │  │  ├── brand-why-paddleboardoverstock.astro    # Why Paddle Board Overstock (legacy)
 │  │  │  ├── why-paddleboardoverstock.astro          # Why Paddle Board Overstock (3-pillar brand page)
 │  │  │  ├── industries/

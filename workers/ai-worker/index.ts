@@ -148,7 +148,7 @@ const META_KEY = 'ai/corpus-meta.json';
 const STATE_KEY = 'ai/reindex-state.json';
 const LOG_KEY = 'ai/reindex-log.json';
 const LOG_KEEP = 90;
-const LOCALES = ['en', 'fr', 'de', 'es', 'pt', 'it', 'ar', 'ru', 'pl', 'nl', 'sv', 'no', 'el', 'fi', 'da'];
+const LOCALES = ['en', 'fr', 'de', 'es', 'pt', 'it', 'ar', 'ru', 'pl', 'nl'];
 const STOPWORDS = new Set([
   'the',
   'and',

@@ -2,7 +2,7 @@
 // (headings, paragraphs, bold/italic, links, images, lists, blockquote, hr,
 // code) — enough to render the existing 21 posts without a heavy MDX pipeline.
 
-export const LANGS = ['en', 'fr', 'de', 'es', 'pt', 'ar', 'it', 'ru', 'pl', 'nl', 'sv', 'no', 'el', 'fi', 'da'];
+export const LANGS = ['en', 'fr', 'de', 'es', 'pt', 'ar', 'it', 'ru', 'pl', 'nl'];
 
 // Hero heading + subtitle per locale (mirrors src/i18n/generated/pages/news.ts).
 export const NEWS_UI: Record<string, { title: string; subtitle: string }> = {
@@ -36,8 +36,6 @@ export const NEWS_UI: Record<string, { title: string; subtitle: string }> = {
     title: 'Novità',
     subtitle: 'Ultime notizie da Paddle Board Overstock – lanci prodotti, aggiornamenti aziendali, guide e storie dal mare',
   },
-  ja: { title: 'ニュース', subtitle: 'Paddle Board Overstockからの最新情報—製品発表、会社情報、ガイド、海のストーリー' },
-  ko: { title: '뉴스', subtitle: 'Paddle Board Overstock의 최신 소식—제품 출시, 회사 업데이트, 가이드 및 바다 이야기' },
   ru: {
     title: 'Новости',
     subtitle: 'Последние новости Paddle Board Overstock — запуски продуктов, обновления компании, руководства и истории с воды',
@@ -51,36 +49,9 @@ export const NEWS_UI: Record<string, { title: string; subtitle: string }> = {
     subtitle:
       'Het laatste nieuws van Paddle Board Overstock – productlanceringen, bedrijfsupdates, handleidingen en verhalen van het water',
   },
-  sv: {
-    title: 'Nyheter',
-    subtitle:
-      'Senaste nyheterna från Paddle Board Overstock – produktlanseringar, företagsuppdateringar, guider och berättelser från vattnet',
-  },
-  no: {
-    title: 'Nyheter',
-    subtitle:
-      'Siste nytt fra Paddle Board Overstock – produktlanseringer, bedriftsoppdateringer, veiledninger og historier fra vannet',
-  },
-  el: {
-    title: 'Νέα',
-    subtitle:
-      'Τα τελευταία νέα από την Paddle Board Overstock – κυκλοφορίες προϊόντων, εταιρικές ενημερώσεις, οδηγοί και ιστορίες από το νερό',
-  },
   tr: {
     title: 'Haberler',
     subtitle: "Paddle Board Overstock'dan en son haberler – ürün lansmanları, şirket güncellemeleri, rehberler ve sudan hikayeler",
-  },
-  fi: {
-    title: 'Uutiset',
-    subtitle: 'Uusimmat Paddle Board Overstockilta — tuotelanseeraukset, yrityspäivitykset, oppaat ja tarinoita vesiltä',
-  },
-  cs: {
-    title: 'Novinky',
-    subtitle: 'Nejnovější z Paddle Board Overstock — uvedení produktů, aktualizace společnosti, průvodci a příběhy z vody',
-  },
-  da: {
-    title: 'Nyheder',
-    subtitle: 'Det seneste fra Paddle Board Overstock — produktlanceringer, virksomhedsopdateringer, guides og historier fra vandet',
   },
   ro: {
     title: 'Noutăți',

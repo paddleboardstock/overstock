@@ -41,25 +41,7 @@ const TEXTS_PATH = path.join(ROOT, 'src/data/product-texts.ts');
 const OUT_L10N = path.join(ROOT, 'src/lib/product-l10n-mt.ts');
 const OUT_CONTENT = path.join(ROOT, 'src/lib/product-content-l10n-mt.ts');
 
-const DEFAULT_LANGS = [
-  'bg',
-  'et',
-  'he',
-  'hr',
-  'hu',
-  'id',
-  'ko',
-  'lt',
-  'lv',
-  'ms',
-  'ro',
-  'sk',
-  'sl',
-  'sr',
-  'th',
-  'tl',
-  'tr',
-];
+const DEFAULT_LANGS = ['bg', 'hu', 'id', 'ms', 'ro', 'th', 'tl', 'tr'];
 
 const CATEGORY_LABELS = {
   rib: 'RIB Boats',

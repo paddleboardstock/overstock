@@ -13,22 +13,6 @@ export interface CatalogEntry {
 
 export const SHOP_CATALOG: CatalogEntry[] = [
   {
-    slug: 'life-vest-classic',
-    title: 'Life Vest Classic',
-    priceCents: 7900,
-    currency: 'USD',
-    image: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/paddleboardoverstock-life-vest-classic.webp',
-    inStock: true,
-  },
-  {
-    slug: 'life-vest-pro',
-    title: 'Life Vest Pro',
-    priceCents: 29900,
-    currency: 'USD',
-    image: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/paddleboardoverstock-life-vest-pro-front.webp',
-    inStock: true,
-  },
-  {
     slug: 'oars-pump-set',
     title: 'Oars & Pump Set',
     priceCents: 18000,

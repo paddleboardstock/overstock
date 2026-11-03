@@ -33,25 +33,7 @@ const CACHE_FILE = (() => {
   return a ? path.resolve(ROOT, a.slice('--cache='.length)) : path.join(ROOT, '.cache', 'page-translate-cache.json');
 })();
 
-const DEFAULT_LANGS = [
-  'bg',
-  'et',
-  'he',
-  'hr',
-  'hu',
-  'id',
-  'ko',
-  'lt',
-  'lv',
-  'ms',
-  'ro',
-  'sk',
-  'sl',
-  'sr',
-  'th',
-  'tl',
-  'tr',
-];
+const DEFAULT_LANGS = ['bg', 'hu', 'id', 'ms', 'ro', 'th', 'tl', 'tr'];
 // Pages already present as EN-copy seeds / gate files — never regenerated here.
 const SEED_PAGES = new Set(['about', 'contact', 'news', 'home']);
 
@@ -84,7 +66,7 @@ const SESSION_REFRESH_EVERY = 150;
 const UA =
   'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36';
 
-const BING_LANG = { no: 'nb', tl: 'fil', sr: 'sr-Latn' };
+const BING_LANG = { no: 'nb', tl: 'fil' };
 const bingCode = (lang) => BING_LANG[lang] || lang;
 
 // --- translatable detection (mirrors translate-pages.mjs / -bing.mjs) --------
