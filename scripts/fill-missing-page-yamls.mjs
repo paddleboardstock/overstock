@@ -8,31 +8,15 @@ const ROOT = path.resolve(__dirname, '..');
 
 const PAGES = [
   'authority',
-  'business-packages',
-  'ce-compliance',
-  'dealers-distributors',
-  'engineering-capability',
-  'engineering-whitepaper',
-  'factory-audit',
   'guides',
-  'industries-distributors',
-  'industries-schools',
-  'oem-odm-rib-boats',
-  'solutions-aquaculture',
   'solutions-clubs',
-  'solutions-entrepreneurs',
-  'solutions-marine-research',
-  'solutions-matrix',
-  'solutions-offshore-energy',
   'solutions-rental-business',
   'solutions-resorts',
-  'solutions-watersports',
   'success-stories',
-  'technical-drawings',
   'testimonials',
 ];
 
-const LANGS = ['ar', 'da', 'de', 'el', 'es', 'fi', 'fr', 'it', 'ja', 'nl', 'no', 'pl', 'pt', 'ru', 'sv', 'zh'];
+const LANGS = ['ar', 'de', 'es', 'fr', 'it', 'nl', 'pl', 'pt', 'ru', 'zh'];
 
 function main() {
   let created = 0;

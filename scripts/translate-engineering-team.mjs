@@ -25,7 +25,7 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 import { createEngine, fixTokenSpacing } from './lib/translate-lib.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const LANGS_ALL = 'bg et he hr hu id ko lt lv ms ro sk sl sr th tl tr'.split(' ');
+const LANGS_ALL = 'bg hu id ms nl pt ro th tl tr'.split(' ');
 const CACHE_FILE = path.resolve(ROOT, '.cache', 'engineering-team-cache.json');
 const OUT_JSON = path.resolve(ROOT, '.cache', 'engineering-team-out.json');
 const OUT_TS = path.resolve(ROOT, 'src/lib/engineering-team-l10n-mt.ts');

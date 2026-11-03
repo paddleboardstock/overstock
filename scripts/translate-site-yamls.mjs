@@ -36,34 +36,18 @@ const CACHE_FILE = path.join(ROOT, '.cache', 'page-translate-cache.json');
 const ALL_LANGS = [
   'ar',
   'bg',
-  'cs',
-  'da',
   'de',
-  'el',
   'es',
-  'et',
-  'fi',
   'fr',
-  'he',
-  'hr',
   'hu',
   'id',
   'it',
-  'ja',
-  'ko',
-  'lt',
-  'lv',
   'ms',
   'nl',
-  'no',
   'pl',
   'pt',
   'ro',
   'ru',
-  'sk',
-  'sl',
-  'sr',
-  'sv',
   'th',
   'tl',
   'tr',
@@ -91,7 +75,7 @@ const SESSION_REFRESH_EVERY = 150;
 const UA =
   'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36';
 
-const BING_LANG = { no: 'nb', tl: 'fil', sr: 'sr-Latn' };
+const BING_LANG = { no: 'nb', tl: 'fil' };
 const bingCode = (lang) => BING_LANG[lang] || lang;
 
 // --- translatable detection ---------------------------------------------------

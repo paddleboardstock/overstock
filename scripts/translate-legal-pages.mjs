@@ -24,27 +24,18 @@ import { fileURLToPath } from 'node:url';
 import { createEngine, isTranslatableLine } from './lib/translate-lib.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const LANGS_ALL = 'bg et he hr hu id ko lt lv ms ro sk sl sr th tl tr'.split(' ');
+const LANGS_ALL = 'bg hu id ms ro th tl tr'.split(' ');
 const LANG_LABEL = {
   bg: 'Bg',
-  et: 'Et',
-  he: 'He',
-  hr: 'Hr',
   hu: 'Hu',
   id: 'Id',
-  ko: 'Ko',
-  lt: 'Lt',
-  lv: 'Lv',
   ms: 'Ms',
   ro: 'Ro',
-  sk: 'Sk',
-  sl: 'Sl',
-  sr: 'Sr',
   th: 'Th',
   tl: 'Tl',
   tr: 'Tr',
 };
-const GRAD_LABELS = ['De', 'Es', 'Fr', 'It', 'Cs', 'Sv', 'Da', 'El', 'No', 'Ru', 'Nl', 'Fi', 'Pl', 'Ar', 'Pt', 'Ja'];
+const GRAD_LABELS = ['De', 'Es', 'Fr', 'It', 'Ru', 'Nl', 'Pl', 'Ar', 'Pt'];
 const SITE_NAME =
   (fs.readFileSync(path.join(ROOT, 'src/config.yaml'), 'utf8').match(/^ {2}name: (.+)$/m) || [])[1]
     ?.trim()

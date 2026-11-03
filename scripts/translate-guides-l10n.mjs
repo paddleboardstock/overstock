@@ -26,7 +26,7 @@ import { createEngine, isTranslatableLine } from './lib/translate-lib.mjs';
 import { guides } from '../src/data/guides.ts';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const LANGS_ALL = 'bg et he hr hu id ko lt lv ms ro sk sl sr th tl tr'.split(' ');
+const LANGS_ALL = 'bg hu id ms ro th tl tr'.split(' ');
 const CACHE_FILE = path.resolve(ROOT, path.join('.cache', 'guides-cache.json'));
 const OUT_FILE = path.join(ROOT, 'src/lib/guides-l10n-mt.ts');
 const OUT_JSON = path.join(ROOT, '.cache', 'guides-out.json');

@@ -38,9 +38,8 @@ const IDEMPOTENCY_CLAIM_STALE_MS = 120 * 1000;
 
 /** Locales with localized cart/checkout pages (see src/pages/[lang]/cart.astro). */
 const SUPPORTED_LANGS = new Set([
-  'en', 'fr', 'de', 'es', 'pt', 'ar', 'it', 'ru', 'pl', 'nl', 'sv', 'no', 'el', 'fi', 'da',
-  'cs', 'th', 'hr', 'tl', 'hu', 'ro', 'sk', 'bg', 'sl', 'sr', 'ja', 'ko', 'tr', 'id', 'he',
-  'ms', 'lt', 'lv', 'et',
+  'en', 'fr', 'de', 'es', 'pt', 'ar', 'it', 'ru', 'pl', 'nl',
+  'th', 'tl', 'hu', 'ro', 'bg', 'tr', 'id', 'ms',
 ]);
 
 const SITE_BASE = (env: Env): string => (env.SHOP_BASE_URL || 'https://paddleboardoverstock.com').replace(/\/+$/, '');
