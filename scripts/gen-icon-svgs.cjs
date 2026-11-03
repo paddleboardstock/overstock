@@ -33,9 +33,16 @@ function resolvesIcon(collection, iconName) {
 }
 
 const used = new Set();
+// Skip this script's own committed outputs — they contain every historical
+// `tabler:*` key, so scanning them would make the registries append-only.
+const SELF_OUTPUTS = new Set([
+  path.join(ROOT, 'src/components/ui/icon-valid-names.ts'),
+  path.join(ROOT, 'src/components/ui/icon-svgs.ts'),
+]);
 function walk(dir) {
   for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
     const fp = path.join(dir, e.name);
+    if (SELF_OUTPUTS.has(fp)) continue;
     if (e.isDirectory()) {
       walk(fp);
       continue;
