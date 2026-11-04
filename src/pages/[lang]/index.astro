@@ -3,16 +3,12 @@ export const prerender = true;
 
 import Layout from '~/layouts/PageLayout.astro';
 import { SITE } from 'astrowind:config';
-import { getLocalizedProducts } from '~/utils/product-i18n';
-
-import AiQuickAnswer from '~/components/common/AiQuickAnswer.astro';
 import JsonLd from '~/components/common/JsonLd.astro';
 import TrustBadges from '~/components/common/TrustBadges.astro';
-import Tldr from '~/components/common/Tldr.astro';
 import Icon from '~/components/ui/Icon.astro';
-import { guides } from '~/data/guides';
-import cfg from '~/config.yaml';
-const branding = (cfg as any)?.branding || {};
+import { buildGraph } from '~/utils/schema-graph';
+import { getProducts } from '~/utils/products';
+import { getLocalizedProducts } from '~/utils/product-i18n';
 import { pageContentData } from '~/i18n/generated/site-data';
 import { languages as langMap, defaultLang } from '~/i18n/config';
 import { getUiForLang } from '~/i18n/generated/ui-all';
@@ -72,25 +68,13 @@ const heroSlides: HeroSlide[] = (heroImagesData as any)?.slides?.filter((s: any)
     label: 'SUP Packages',
     categories: ['SUP'],
   },
-  {
-    image:
-      'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/categories/paddleboardoverstock-accessories-category.webp',
-    label: 'Accessories',
-    categories: ['ACCESSORY'],
-  },
 ];
 
-const topGuidesData = pageContentData[`${lang}/site-top-guides`] || pageContentData['en/site-top-guides'] || {};
 const techCardsData = pageContentData[`${lang}/site-tech-cards`] || pageContentData['en/site-tech-cards'] || {};
 const productVisualsData =
   pageContentData[`${lang}/site-product-visuals`] || pageContentData['en/site-product-visuals'] || {};
-const useCasesData = pageContentData[`${lang}/site-use-cases`] || pageContentData['en/site-use-cases'] || {};
-const proofPointsData = pageContentData[`${lang}/site-proof-points`] || pageContentData['en/site-proof-points'] || {};
 const testimonialsData = pageContentData[`${lang}/site-testimonials`] || pageContentData['en/site-testimonials'] || {};
-const learnData = pageContentData[`${lang}/site-learning-center`] || pageContentData['en/site-learning-center'] || {};
 
-const topGuideSlugs = topGuidesData.guides || ['how-to-choose-your-sup', 'beginner-guide', 'safety-tips'];
-const homeGuides = guides.filter((g) => topGuideSlugs.includes(g.slug));
 const siteBase = String(SITE.site).replace(/\/+$/, '');
 
 const defaultVisuals: Record<string, string> = {
@@ -102,96 +86,6 @@ const defaultVisuals: Record<string, string> = {
 const rawVisuals = ((productVisualsData as any)?.visuals || []) as Array<{ id: string; image: string }>;
 const yamlVisuals = Object.fromEntries(rawVisuals.map((v) => [v.id, v.image]).filter(([, img]) => img));
 const productVisuals: Record<string, string> = { ...defaultVisuals, ...yamlVisuals };
-
-const defaultUseCases = [
-  {
-    title: 'Beginner Paddling',
-    desc: 'Stable inflatable SUP boards for first-time paddlers.',
-    scenario:
-      'A family visiting a lake for the weekend wants to try paddle boarding. They need stable, easy-to-launch equipment with clear safety guidance.',
-    solution:
-      'The SUP Explorer 11 provides wide-body stability for beginners. The Oars & Pump Set inflates the board in under 10 minutes.',
-    products: ['SUP Explorer 11', 'Oars & Pump Set'],
-    img: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-cheetah-surge-1.webp',
-  },
-  {
-    title: 'Touring & Exploration',
-    desc: 'Long-distance inflatable SUP boards for lakes, rivers, and coastal trips.',
-    scenario:
-      'An outdoor enthusiast plans a week-long paddling trip and needs a board that packs small, inflates at camp, and tracks straight on open water.',
-    solution:
-      'The Ocean Voyager Series glides efficiently with a touring outline and holds course in wind and chop. Its drop-stitch construction inflates to 15 PSI for hard-board rigidity.',
-    products: ['Ocean Voyager Series', 'Oars & Pump Set'],
-    img: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-ocean-voyager-1.webp',
-  },
-  {
-    title: 'SUP Yoga & Fitness',
-    desc: 'Extra-wide, stable platforms for yoga, fitness, and relaxation.',
-    scenario:
-      'A yoga practitioner wants a floating studio for morning sessions on calm water, with enough deck space to hold every pose.',
-    solution:
-      'The Flowing Lotus Series features a full-length deck pad and a wide beam for wobble-free poses. It doubles as a stable platform for light fitness workouts.',
-    products: ['Flowing Lotus Series', 'Oars & Pump Set'],
-    img: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-flowing-lotus-1.webp',
-  },
-  {
-    title: 'Family Recreation',
-    desc: 'Complete SUP packages for weekend lake days and holidays.',
-    scenario:
-      'A family of four wants stable boards for weekend lake outings and beach holidays, gear that packs into the car and inflates in minutes.',
-    solution:
-      'The Tropical Breeze Series is a stable all-around board the whole family can share, while the Medusa Glow Series is lighter and shorter for kids. Both pack into backpacks for easy travel.',
-    products: ['Tropical Breeze Series', 'Medusa Glow Series'],
-    img: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-tropical-breeze-1.webp',
-  },
-];
-const rawCases = ((useCasesData as any)?.cases || []) as Array<{
-  id: string;
-  title: string;
-  desc: string;
-  scenario: string;
-  solution: string;
-  products: string[];
-  image: string;
-}>;
-const useCases = rawCases.length
-  ? rawCases.map((u) => ({
-      title: u.title,
-      desc: u.desc,
-      scenario: u.scenario,
-      solution: u.solution,
-      products: u.products,
-      img: u.image,
-    }))
-  : defaultUseCases;
-
-const rawPoints = ((proofPointsData as any)?.points || []) as Array<{
-  id: string;
-  metric: string;
-  label: string;
-  detail: string;
-}>;
-const defaultProofPoints = [
-  {
-    metric: '11',
-    label: 'SUP models in stock',
-    detail: 'Complete paddle board packages with pump, paddle, leash, and backpack',
-  },
-  { metric: '50+', label: 'countries served', detail: 'Worldwide shipping across EU, North America, Asia-Pacific' },
-  {
-    metric: '60%',
-    label: 'off retail',
-    detail: 'Factory-direct overstock and clearance pricing on complete SUP packages',
-  },
-  {
-    metric: '2-Year',
-    label: 'SUP warranty',
-    detail: 'Covers boards, drop-stitch seams, inflation valves, and accessories',
-  },
-];
-const proofPoints = rawPoints.length
-  ? rawPoints.map((p) => ({ metric: p.metric, label: p.label, detail: p.detail }))
-  : defaultProofPoints;
 
 const rawTestimonials = ((testimonialsData as any)?.testimonials || []) as Array<{
   name: string;
@@ -206,132 +100,19 @@ const testimonials = [0, 1, 2]
   }))
   .filter((x) => x.quote);
 
-const catalogCategories = [
-  {
-    key: 'SUP',
-    label: t('home.catalog.sup') || 'SUP Boards',
-    desc:
-      t('home.catalog.sup.desc') ||
-      'Inflatable stand-up paddle boards from 9 ft to 12 ft — all-round, touring, yoga, and more.',
-  },
-  {
-    key: 'ACCESSORY',
-    label: t('home.catalog.accessory') || 'Accessories',
-    desc: t('home.catalog.accessory.desc') || 'Pumps, paddles, life vests, repair kits, and essential gear.',
-  },
-];
+const techCards = (
+  ((techCardsData as any)?.cards || []) as Array<{
+    badge: string;
+    title: string;
+    description: string;
+    image?: string;
+  }>
+).slice(0, 3);
+
+const allProducts = await getProducts();
+const inventoryProducts = allProducts.filter((p) => !p.draft);
 const localizedProducts = getLocalizedProducts(lang || defaultLang);
-const groupedProducts: Record<string, typeof localizedProducts> = {};
-for (const cat of catalogCategories) {
-  groupedProducts[cat.key] = localizedProducts.filter((p) => p.category === cat.key).slice(0, 6);
-}
-
-const catLabelKeys: Record<string, string> = {
-  SUP: 'home.catalog.sup',
-  ACCESSORY: 'home.catalog.accessory',
-};
-
-const RULE_L10N_KEYS: Record<string, string> = {
-  'all crew in PFDs at all times': 'crewPfds',
-  'carry VHF radio for coastal touring': 'vhfCoastal',
-  'check mounting straps for wear': 'checkStraps',
-  'check weather before departure': 'weatherDeparture',
-  'check weather before paddling': 'weatherPaddling',
-  'communications check before departure': 'commsCheck',
-  'crew must be trained': 'crewTrained',
-  'daily safety inspection required': 'dailyInspection',
-  'distribute load evenly': 'distributeLoad',
-  'do not exceed max load': 'maxLoad',
-  'do not exceed max pressure rating': 'maxPressure',
-  'do not exceed weight rating': 'weightRating',
-  'emergency beacon required for sea operations': 'beaconSea',
-  'emergency kit required': 'emergencyKit',
-  'engine kill switch required': 'killSwitch',
-  'ensure pump is properly connected before use': 'pumpConnected',
-  'helmets required for all occupants': 'helmets',
-  'leash recommended': 'leashRecommended',
-  'leash recommended in wind': 'leashWind',
-  'leash required': 'leashRequired',
-  'life vest recommended': 'vestRecommended',
-  'life vest required': 'vestRequired',
-  'life vest required for all occupants': 'vestOccupants',
-  'life vest required for all passengers': 'vestPassengers',
-  'professional crew recommended': 'proCrew',
-  'secure all gear for capsize recovery': 'secureGear',
-  'secure seat before use': 'secureSeat',
-  'spray skirt recommended for cold water': 'spraySkirt',
-  'throw rope accessible at all times': 'throwRope',
-  'VHF radio recommended': 'vhfRecommended',
-  'VHF radio required': 'vhfRequired',
-};
-const localizeRule = (rule: string): string => t(`home.rules.${RULE_L10N_KEYS[rule] || ''}`) || rule;
-
-const boards = [
-  {
-    label: t('home.boards.allAround') || 'All-Around',
-    desc: t('home.boards.allAround.desc') || 'Versatile SUP boards for paddlers of all skill levels.',
-    img: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-cheetah-surge-1.webp',
-  },
-  {
-    label: t('home.boards.touringSup') || 'Touring SUP',
-    desc: t('home.boards.touringSup.desc') || 'Long-distance boards for exploration and adventure.',
-    img: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-ocean-voyager-1.webp',
-  },
-  {
-    label: t('home.boards.ultraCompact') || 'Ultra-Compact',
-    desc: t('home.boards.ultraCompact.desc') || 'Short, portable boards for easy travel and storage.',
-    img: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-tropical-breeze-1.webp',
-  },
-  {
-    label: t('home.boards.ultraStable') || 'Ultra-Stable',
-    desc: t('home.boards.ultraStable.desc') || 'Extra-wide platforms for maximum balance and confidence.',
-    img: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-leviathan-wake-1.webp',
-  },
-  {
-    label: t('home.boards.whitewater') || 'Whitewater',
-    desc: t('home.boards.whitewater.desc') || 'Rugged boards engineered for river rapids.',
-    img: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-dolphin-wave-1.webp',
-  },
-  {
-    label: t('home.boards.sports') || 'Sports',
-    desc: t('home.boards.sports.desc') || 'Performance boards for racing and athletic paddling.',
-    img: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-ocean-pulse-1.webp',
-  },
-  {
-    label: t('home.boards.yoga') || 'Yoga',
-    desc: t('home.boards.yoga.desc') || 'Spacious decks designed for yoga and fitness.',
-    img: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-flowing-lotus-1.webp',
-  },
-  {
-    label: t('home.boards.surf') || 'Surf',
-    desc: t('home.boards.surf.desc') || 'Agile boards for catching waves and surf riding.',
-    img: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-jungle-mandala-1.webp',
-  },
-  {
-    label: t('home.boards.kidsSups') || 'Kids SUPs',
-    desc: t('home.boards.kidsSups.desc') || 'Smaller, lighter boards designed for children.',
-    img: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-medusa-glow-1.webp',
-  },
-];
-
-const researchCards = [
-  {
-    href: L('/research/drop-stitch-technology'),
-    category: t('home.research.cat.technology') || 'Technology',
-    title: t('home.research.dropStitch') || 'How Drop Stitch Works',
-    desc:
-      t('home.research.dropStitch.desc') ||
-      'The engineering behind thousands of internal threads that transform flexible PVC into a rigid high-pressure core.',
-  },
-  {
-    href: L('/research/sup-thickness-guide'),
-    category: t('home.research.cat.engineering') || 'Engineering',
-    title: t('home.research.supThickness') || 'How to Choose SUP Thickness',
-    desc:
-      t('home.research.supThickness.desc') ||
-      'How board thickness affects rigidity, weight, stability, tracking, and performance.',
-  },
-];
+const localizedById = new Map(localizedProducts.map((lp) => [lp.id, lp]));
 
 interface FaqItem {
   q: string;
@@ -361,7 +142,7 @@ const defaultFaqItems: FaqItem[] = [
   },
   {
     q: 'Why are your prices lower than retail?',
-    a: 'We sell factory overstock and clearance batches direct from our own production facility in Weihai, China — no middlemen, no retail markup. That means complete SUP packages at up to 60% off typical retail prices, with the same factory-tested quality.',
+    a: 'We sell factory overstock — brand-new boards left over from completed production orders — sourced from our own Weihai manufacturing base and selected production partners. No retail markups and no middlemen means complete SUP packages at up to 60% off typical retail prices.',
     category: 'orders',
   },
   {
@@ -399,9 +180,9 @@ const heroActions: HeroAction[] =
   page.hero?.actions?.length > 0
     ? page.hero.actions.map((a: any) => ({ text: a.text, href: L(a.href || '/contact'), icon: a.icon }))
     : [
-        { text: t('cta.shopClearance') || 'Shop the Clearance', href: L('/supboard/'), icon: '' },
-        { text: t('cta.browseSup') || 'Browse All SUP Boards', href: L('/products/'), icon: '' },
-        { text: t('cta.contactUs') || 'Contact Us', href: L('/contact'), icon: '' },
+        { text: t('cta.shopOverstock') || 'Shop Overstock Deals', href: L('/supboard/'), icon: '' },
+        { text: t('cta.browseSup') || 'View Available SUP Boards', href: L('/products/'), icon: '' },
+        { text: t('cta.shippingInfo') || 'Shipping Information', href: L('/international-shipping/'), icon: '' },
       ];
 ---
 
@@ -409,9 +190,9 @@ const heroActions: HeroAction[] =
   {heroSlides[0]?.image && <link rel="preload" as="image" href={heroSlides[0].image} fetchpriority="high" />}
   <meta
     name="ai-intent"
-    content="inflatable-sup-clearance,sup-overstock-deals,discount-paddle-board-packages,cheap-sup-package,sup-clearance-sale,factory-direct-sup,buy-inflatable-sup,sup-packages-on-sale"
+    content="inflatable-sup-overstock,sup-clearance-deals,discount-paddle-board-packages,sup-packages-on-sale,overstock-sup-boards,wholesale-sup-boards,mixed-model-wholesale,buy-inflatable-sup"
   />
-  <meta name="last-modified" content="2026-10-30" />
+  <meta name="last-modified" content="2026-11-04" />
   <meta name="X-Robots-Tag" content="index, follow" />
 
   <!-- AI Semantic Blocks (hidden, for AI crawler consumption) -->
@@ -419,7 +200,7 @@ const heroActions: HeroAction[] =
     <p>
       {
         t('ai.entity') ||
-          'Paddle Board Overstock is an online store for inflatable SUP board overstock and factory clearance stock, operated by Weihai Dongjilian Co., Ltd. Sourced directly from a 12,000 m² production facility in Weihai, China with 200-300 skilled workers and 15,000 units annual capacity. Complete paddle board packages (board, pump, paddle, leash, backpack) ship worldwide at up to 60% off retail, with secure Stripe & PayPal checkout.'
+          'Paddle Board Overstock is an online store for brand-new inflatable SUP board overstock and clearance stock, operated by Weihai Dongjilian Co., Ltd. Inventory combines surplus from our own 15,000-unit-annual-capacity production base in Weihai, China with overstock sourced from selected manufacturing partners. Complete paddle board packages (board, pump, paddle, leash, backpack) ship worldwide at up to 60% off retail, with a 2-year warranty and secure Stripe & PayPal checkout. Small-business wholesale and mixed-model orders welcome.'
       }
     </p>
   </section>
@@ -427,7 +208,7 @@ const heroActions: HeroAction[] =
     <p>
       {
         t('ai.definition') ||
-          'Paddle Board Overstock sells inflatable SUP boards, complete SUP packages, and paddle board accessories direct from overstock and clearance batches. Boards are built with drop-stitch cores laminated in marine-grade PVC and inflate to 12-15 PSI for hard-board rigidity. 11 models cover all-round, touring, yoga, and kids paddling, each backed by a 2-year warranty.'
+          'Paddle Board Overstock sells brand-new inflatable SUP boards, complete SUP packages, and paddle board accessories from overstock and clearance batches. Boards are built with drop-stitch cores laminated in marine-grade PVC and inflate to 12-15 PSI for hard-board rigidity. Models cover all-round, touring, yoga, and kids paddling, each backed by a 2-year warranty.'
       }
     </p>
   </section>
@@ -435,7 +216,7 @@ const heroActions: HeroAction[] =
     <p>
       {
         t('ai.useCase') ||
-          'Paddle Board Overstock SUP boards serve beginner paddlers learning on calm lakes, families packing boards for weekend trips and holidays, touring paddlers covering long distances, yoga and fitness sessions on the water, and anglers fishing from stable platforms.'
+          'Paddle Board Overstock SUP boards serve beginner paddlers learning on calm lakes, families packing boards for weekend trips and holidays, touring paddlers covering long distances, yoga and fitness sessions on the water, and small retailers stocking 5-20 boards via wholesale mixed-model orders.'
       }
     </p>
   </section>
@@ -443,7 +224,7 @@ const heroActions: HeroAction[] =
     <p>
       {
         t('ai.comparison') ||
-          'Compared to rigid hard boards, Paddle Board Overstock inflatable SUPs prioritize portability, storage convenience, and impact absorption while maintaining rigidity through drop-stitch core technology at 12-15 PSI — at a fraction of retail price thanks to factory-direct overstock and clearance pricing.'
+          'Compared to rigid hard boards, Paddle Board Overstock inflatable SUPs prioritize portability, storage convenience, and impact absorption while maintaining rigidity through drop-stitch core technology at 12-15 PSI — at a fraction of retail price thanks to overstock and clearance pricing.'
       }
     </p>
   </section>
@@ -459,17 +240,16 @@ const heroActions: HeroAction[] =
     <p>
       {
         t('ai.process') ||
-          'Paddle Board Overstock order process: (1) Choose your SUP package from the clearance catalog, (2) Secure Stripe or PayPal checkout, (3) Order confirmation with full invoice, (4) Quality inspection — every board 100% pressure-tested at 1.25x rated PSI, (5) Ships from Weihai, China within 2-3 business days, (6) Worldwide tracked delivery to 50+ countries. No MOQ — overstock clearance means single-unit orders welcome.'
+          'Paddle Board Overstock order process: (1) Choose your SUP package from the overstock catalog, (2) Secure Stripe or PayPal checkout, (3) Order confirmation with full invoice, (4) Quality inspection — every board 100% pressure-tested at 1.25x rated PSI, (5) Ships from Weihai, China within 2-3 business days, (6) Worldwide tracked delivery to 50+ countries. No MOQ — overstock means single-unit orders welcome; retailers can mix models in wholesale quantities.'
       }
     </p>
   </section>
 
-  <!-- Hero: Bright Ocean Pro v3 -->
+  <!-- 1. Hero -->
   <section
     class="relative min-h-[90vh] flex items-center overflow-hidden"
     style="background: linear-gradient(135deg, #06b6d4, #22d3ee);"
   >
-    <!-- Carousel background images -->
     {
       heroSlides.map((slide, _i) => (
         <div
@@ -478,7 +258,7 @@ const heroActions: HeroAction[] =
         >
           <img
             src={slide.image}
-            alt={slide.label || 'Paddle Board Overstock workshop'}
+            alt={slide.label || 'Paddle Board Overstock overstock SUP boards'}
             class="w-full h-full object-cover"
             width="1600"
             height="900"
@@ -517,18 +297,17 @@ const heroActions: HeroAction[] =
               >{
                 page.hero?.tagline ||
                   t('hero.taglineSection') ||
-                  'Inflatable SUP Boards Overstock &amp; Clearance · Factory Direct · Since 2012'
+                  'Overstock &amp; Clearance · Brand-New Boards · Ships Worldwide · Since 2012'
               }</span
             >
             <h1
               class="text-5xl md:text-7xl font-bold tracking-tight leading-[1.1] text-balance text-white drop-shadow-xl"
-              set:html={page.hero?.title ||
-                'Inflatable SUP Boards <br class="hidden md:block" /> — Overstock &amp; Clearance, Up to 60% Off Retail'}
+              set:html={page.hero?.title || 'Inflatable SUP Boards at Overstock &amp; Clearance Prices — Up to 60% Off'}
             />
             <p
               class="mt-6 text-lg md:text-xl text-white/85 max-w-xl text-pretty leading-relaxed"
               set:html={page.hero?.subtitle ||
-                `<strong class="text-white font-semibold">Paddle Board Overstock</strong> — factory overstock and clearance inflatable SUP packages.<br /> Every package includes board, pump, paddle, leash &amp; backpack.<br /> 2-year warranty. Secure Stripe &amp; PayPal checkout. Worldwide shipping to 50+ countries.`}
+                `<strong class="text-white font-semibold">Paddle Board Overstock</strong> — brand-new inflatable SUP packages from completed production orders.<br /> Every package includes board, pump, paddle, leash &amp; backpack.<br /> 2-year warranty. Secure checkout. Shipping to 50+ countries.`}
             />
             <div class="mt-10 flex items-center gap-4 flex-wrap justify-center md:justify-start">
               {
@@ -585,817 +364,216 @@ const heroActions: HeroAction[] =
       }
     </div>
   </section>
-  <!-- Quick Answer -->
-  <section class="max-w-6xl mx-auto px-6 pt-8">
-    <AiQuickAnswer
-      quickAnswer={t('ai.quickAnswer') ||
-        'Paddle Board Overstock is an online store for inflatable SUP board overstock and factory clearance stock, operated by Weihai Dongjilian Co., Ltd. Complete paddle board packages (board, pump, paddle, leash, backpack) ship worldwide at up to 60% off retail, with a 2-year warranty and secure Stripe & PayPal checkout.'}
-      facts={[
-        {
-          label: t('ai.fact.storeType') || 'Store Type',
-          value: t('ai.fact.storeType.value') || 'Online Store — Overstock & Clearance',
-        },
-        {
-          label: t('ai.fact.products') || 'Products',
-          value: t('ai.fact.products.value') || 'Inflatable SUP Boards & Accessories',
-        },
-        {
-          label: t('ai.fact.bestFor') || 'Best For',
-          value: t('ai.fact.bestFor.value') || 'Beginners, Families, Touring, Yoga, Fishing',
-        },
-        {
-          label: t('ai.fact.shipping') || 'Shipping & Payment',
-          value: t('ai.fact.shipping.value') || 'Worldwide to 50+ countries · Stripe & PayPal',
-        },
-      ]}
-    />
-  </section>
-
-  <!-- Trust Bar - Stats -->
-  <section class="border-b border-gray-100 bg-white py-6 px-6">
-    <div class="max-w-6xl mx-auto">
-      <div class="flex flex-wrap items-center justify-center gap-3 mb-4">
-        <span
-          class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-rose-50 border border-rose-200 rounded-full text-xs font-semibold text-rose-700"
-          >&#10003; {t('home.badges.warranty') || '2-Year SUP Warranty'}</span
-        >
-      </div>
-      <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-1 text-xs text-gray-400">
-        <span>12,000 m² {t('home.factory.floor') || 'Factory'}</span>
-        <span>&middot;</span>
-        <span>200-300 {t('home.factory.workers') || 'Workforce'}</span>
-        <span>&middot;</span>
-        <span>15,000 {t('home.factory.units') || 'Annual Capacity'}</span>
-        <span>&middot;</span>
-        <span>50+ {t('home.factory.countries') || 'Countries Served'}</span>
-        <span>&middot;</span>
-        <span>99.3% {t('home.factory.defectFree') || 'Defect-Free Rate (per internal QC sampling)'}</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- Top Guides (SEO Entry) -->
-  <section class="max-w-6xl mx-auto py-12 px-6">
-    <div class="text-center max-w-3xl mx-auto mb-12">
-      <span class="text-sm font-medium text-sky-600 tracking-wide uppercase"
-        >{t('home.guides.badge') || topGuidesData.badge || 'Top Guides'}</span
-      >
-      <h2 class="mt-4 text-4xl font-semibold text-gray-900">
-        {t('home.guides.title') || topGuidesData.heading || 'Start here before you buy'}
-      </h2>
-      <p class="mt-4 text-lg text-gray-500">
-        {
-          t('home.guides.subtitle') ||
-            topGuidesData.description ||
-            'Three beginner guides that cover the essentials — surfboard selection, wetsuit fit, and your first session.'
-        }
-      </p>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      {
-        homeGuides.map((g) => (
-          <a
-            href={L(`/guides/${g.slug}`)}
-            class="group block bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-all hover:-translate-y-0.5"
-          >
-            <span class="text-xs font-semibold uppercase tracking-wider text-sky-600">
-              {g.category.replace('-', ' ')}
-            </span>
-            <h3 class="mt-3 text-xl font-semibold text-gray-900 group-hover:text-sky-700 transition-colors">
-              {g.title}
-            </h3>
-            <p class="mt-2 text-sm text-gray-500 line-clamp-2">{g.description}</p>
-            <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-sky-600 group-hover:text-sky-700">
-              {t('home.guides.read') || 'Read guide →'}
-            </span>
-          </a>
-        ))
-      }
-    </div>
-    <div class="mt-8 text-center">
-      <a href={L(topGuidesData.browseHref || '/guides')} class="text-sm font-medium text-sky-600 hover:text-sky-700"
-        >{t('home.guides.browse') || topGuidesData.browseText || 'Browse all SUP guides →'}</a
-      >
-    </div>
-  </section>
-
-  <!-- Latest Research -->
-  <section class="bg-white py-12 px-6">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center max-w-3xl mx-auto mb-12">
-        <span class="text-sm font-medium text-sky-600 tracking-wide uppercase"
-          >{t('home.research.tagline') || 'Latest Research'}</span
-        >
-        <h2 class="mt-4 text-4xl font-semibold text-gray-900">{t('home.research.title') || 'Knowledge Center'}</h2>
-        <p class="mt-4 text-lg text-gray-500">
-          {
-            t('home.research.subtitle') ||
-              'In-depth technical research on inflatable SUP materials, construction, safety standards, and performance — written for buyers, engineers, and informed paddlers.'
-          }
-        </p>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
-        {
-          researchCards.map((card) => (
-            <a
-              href={card.href}
-              class="group bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all"
-            >
-              <span class="text-xs font-semibold text-sky-600 uppercase tracking-wide">{card.category}</span>
-              <h3 class="mt-3 text-base font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">
-                {card.title}
-              </h3>
-              <p class="mt-1 text-xs text-gray-500 line-clamp-2">{card.desc}</p>
-            </a>
-          ))
-        }
-      </div>
-      <div class="mt-8 text-center">
-        <a href={L('/research')} class="text-sm font-medium text-sky-600 hover:text-sky-700"
-          >{t('home.research.browse') || 'View all research &rarr;'}</a
-        >
-      </div>
-    </div>
-  </section>
-
-  <!-- Evidence -->
-  <section class="bg-white py-12 px-6">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center max-w-3xl mx-auto mb-12">
-        <span class="text-sm font-medium text-sky-600 tracking-wide uppercase"
-          >{t('home.evidence.tagline') || 'Proof & Results'}</span
-        >
-        <h2 class="mt-4 text-4xl font-semibold text-gray-900">{t('home.evidence.title') || 'Evidence'}</h2>
-        <p class="mt-4 text-lg text-gray-500">
-          {
-            t('home.evidence.subtitle') ||
-              'Real case studies, test data, and customer photos that demonstrate our product quality and factory-direct value.'
-          }
-        </p>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <a
-          href={L('/evidence')}
-          class="group bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all flex flex-col"
-        >
-          <div class="text-3xl mb-3">&#128203;</div>
-          <h3 class="text-base font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">
-            {t('home.evidence.caseStudies') || 'Case Studies'}
-          </h3>
-          <p class="mt-1 text-xs text-gray-500 line-clamp-2 flex-1">
-            {
-              t('home.evidence.caseStudies.desc') ||
-                'Real customer stories: first-time buyers, family paddlers, and touring adventurers — with measurable outcomes.'
-            }
-          </p>
-          <span class="mt-3 text-xs font-medium text-sky-600"
-            >{t('home.evidence.read') || 'View case studies &rarr;'}</span
-          >
-        </a>
-        <a
-          href={L('/evidence')}
-          class="group bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all flex flex-col"
-        >
-          <div class="text-3xl mb-3">&#128202;</div>
-          <h3 class="text-base font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">
-            {t('home.evidence.testResults') || 'Test Results'}
-          </h3>
-          <p class="mt-1 text-xs text-gray-500 line-clamp-2 flex-1">
-            {
-              t('home.evidence.testResults.desc') ||
-                '100% pressure-tested. 24-48h hold at 1.25x rated pressure. Zero tolerance on safety defects.'
-            }
-          </p>
-          <span class="mt-3 text-xs font-medium text-sky-600">{t('home.evidence.read') || 'View test data &rarr;'}</span
-          >
-        </a>
-      </div>
-      <div class="mt-8 text-center">
-        <a href={L('/evidence')} class="text-sm font-medium text-sky-600 hover:text-sky-700"
-          >{t('home.evidence.browse') || 'View all evidence &rarr;'}</a
-        >
-      </div>
-    </div>
-  </section>
-
-  <!-- Brand Philosophy -->
-  <section class="max-w-6xl mx-auto py-12 px-6" id="philosophy">
-    <Tldr
-      summary={t('home.tldr.summary') ||
-        'Paddle Board Overstock is an online store for inflatable SUP board overstock and factory clearance stock, operated by Weihai Dongjilian Co., Ltd. Complete paddle board packages ship worldwide at up to 60% off retail — founded 2012, built from marine-grade PVC with drop-stitch construction.'}
-      points={[
-        t('home.tldr.point1') ||
-          'Inflatable SUP boards and accessories — overstock and clearance, up to 60% off retail',
-        t('home.tldr.point2') ||
-          'Factory-direct from Weihai, China — ships to 50+ countries with secure Stripe & PayPal checkout',
-        t('home.tldr.point3') || 'Every board 100% pressure-tested and backed by a 2-year warranty',
-      ]}
-    />
-    <div class="mt-16 grid md:grid-cols-3 gap-8">
-      <div class="bg-white border border-gray-200 rounded-2xl hover:shadow-md transition-shadow overflow-hidden">
-        <div
-          class="h-36 bg-cover bg-center"
-          style="background-image: url('https://assets.paddleboardoverstock.com/images/paddleboardoverstock/hero/paddleboardoverstock-hero-design-concept.webp')"
-        >
-        </div>
-        <div class="p-6">
-          <h3 class="text-lg font-semibold text-gray-900">
-            {t('home.philosophy.env.title') || 'Environment-First Design'}
-          </h3>
-          <p class="mt-3 text-gray-500 text-sm leading-relaxed">
-            {
-              t('home.philosophy.env.desc') ||
-                'Every product is rated for specific water conditions — calm, moderate, or challenging — with clear safety guidelines. No universal claims. Just honest, test-verified capability.'
-            }
-          </p>
-        </div>
-      </div>
-      <div class="bg-white border border-gray-200 rounded-2xl hover:shadow-md transition-shadow overflow-hidden">
-        <div
-          class="h-36 bg-cover bg-center"
-          style="background-image: url('https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-medusa-glow-1.webp')"
-        >
-        </div>
-        <div class="p-6">
-          <h3 class="text-lg font-semibold text-gray-900">
-            {t('home.philosophy.skill.title') || 'Controlled-Skill Progression'}
-          </h3>
-          <p class="mt-3 text-gray-500 text-sm leading-relaxed">
-            {
-              t('home.philosophy.skill.desc') ||
-                'Products organized by skill — beginner, intermediate, advanced — so every user finds the right platform for their ability. Training wheels to professional tools, all within one system.'
-            }
-          </p>
-        </div>
-      </div>
-      <div class="bg-white border border-gray-200 rounded-2xl hover:shadow-md transition-shadow overflow-hidden">
-        <div
-          class="h-36 bg-cover bg-center"
-          style="background-image: url('https://assets.paddleboardoverstock.com/images/paddleboardoverstock/categories/paddleboardoverstock-rescue-operations.webp')"
-        >
-        </div>
-        <div class="p-6">
-          <h3 class="text-lg font-semibold text-gray-900">
-            {t('home.philosophy.safety.title') || 'Safety-as-Standard'}
-          </h3>
-          <p class="mt-3 text-gray-500 text-sm leading-relaxed">
-            {
-              t('home.philosophy.safety.desc') ||
-                'Safety is not optional. Every vessel undergoes pressure, buoyancy, and load testing. Safety rules are embedded in every product spec, not buried in fine print.'
-            }
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Problem →Solution -->
-  <section class="bg-gray-50 py-12 px-6" id="problem">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="text-sm font-medium text-sky-600 tracking-wide uppercase"
-          >{t('home.problem.tagline') || 'The challenge'}</span
-        >
-        <h2 class="mt-4 text-4xl font-semibold text-gray-900">
-          {t('home.problem.title') || 'Water sports equipment is rarely matched to the user'}
-        </h2>
-        <p class="mt-4 text-lg text-gray-500">
-          {
-            t('home.problem.subtitle') ||
-              'Most gear is built for either extreme performance or budget recreation. Little exists for the middle ground — controlled, safe, skill-building water experiences where the equipment matches both the environment and the user\u2019s ability.'
-          }
-        </p>
-      </div>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white rounded-2xl border border-gray-200 hover:shadow-md transition-shadow overflow-hidden">
-          <div
-            class="h-36 bg-cover bg-center"
-            style="background-image: url('https://assets.paddleboardoverstock.com/images/paddleboardoverstock/hero/factory-gate.webp')"
-          >
-          </div>
-          <div class="p-6">
-            <h3 class="text-lg font-semibold text-gray-900">
-              {t('home.problem.wrongGear') || 'Wrong gear for the water'}
-            </h3>
-            <p class="mt-3 text-gray-500 text-sm leading-relaxed">
-              {
-                t('home.problem.wrongGear.desc') ||
-                  'A beginner\u2019s board taken into open chop. A touring board used for whitewater. Equipment pushed beyond its design envelope leads to unsafe situations and poor experiences.'
-              }
-            </p>
-          </div>
-        </div>
-        <div class="bg-white rounded-2xl border border-gray-200 hover:shadow-md transition-shadow overflow-hidden">
-          <div
-            class="h-36 bg-cover bg-center"
-            style="background-image: url('https://assets.paddleboardoverstock.com/images/paddleboardoverstock/categories/paddleboardoverstock-accessories-category.webp')"
-          >
-          </div>
-          <div class="p-6">
-            <h3 class="text-lg font-semibold text-gray-900">
-              {t('home.problem.oneSize') || 'One-size-fits-none ratings'}
-            </h3>
-            <p class="mt-3 text-gray-500 text-sm leading-relaxed">
-              {
-                t('home.problem.oneSize.desc') ||
-                  'Most brands label everything "for all skill levels." Without clear water condition ratings and safety guidance, users cannot make informed decisions about what is safe for their environment.'
-              }
-            </p>
-          </div>
-        </div>
-        <div class="bg-white rounded-2xl border border-gray-200 hover:shadow-md transition-shadow overflow-hidden">
-          <div
-            class="h-36 bg-cover bg-center"
-            style="background-image: url('https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-leviathan-wake-1.webp')"
-          >
-          </div>
-          <div class="p-6">
-            <h3 class="text-lg font-semibold text-gray-900">
-              {t('home.problem.solution.title') || 'How Paddle Board Overstock solves this'}
-            </h3>
-            <p class="mt-3 text-gray-500 text-sm leading-relaxed">
-              {
-                t('home.problem.solution.desc') ||
-                  'Every product specifies skill level, water conditions, safety rules, and environment suitability. The right gear for the right user in the right water, every time.'
-              }
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Scenario-Based Product Preview -->
-  <section class="max-w-6xl mx-auto py-12 px-6" id="products-preview" data-ai-block="use-case">
-    <div class="text-center max-w-3xl mx-auto mb-16">
-      <span class="text-sm font-medium text-sky-600 tracking-wide uppercase"
-        >{t('home.preview.tagline') || 'Find your match'}</span
-      >
-      <h2 class="mt-4 text-4xl font-semibold text-gray-900">
-        {t('home.preview.title') || 'Three scenarios, three solutions'}
-      </h2>
-      <p class="mt-4 text-lg text-gray-500">
-        {
-          t('home.preview.subtitle') ||
-            'Real product pairings for real situations — each matched to skill level, water type, and safety needs.'
-        }
-      </p>
-    </div>
-    <div class="grid md:grid-cols-3 gap-8">
-      <div
-        class="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow"
-        data-ai-use-case="beginner"
-      >
-        <div class="h-52 bg-gradient-to-br from-sky-400 to-blue-500 overflow-hidden">
-          <img
-            src="https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-tropical-breeze-1.webp"
-            alt={t('home.alt.beginner') || 'SUP Tropical Breeze'}
-            class="w-full h-full object-cover opacity-80"
-            loading="lazy"
-          />
-        </div>
-        <div class="p-6">
-          <span class="text-xs font-semibold uppercase tracking-wider text-sky-600"
-            >{t('home.preview.beginner.label') || 'Beginner'}</span
-          >
-          <h3 class="mt-2 text-xl font-semibold text-gray-900">
-            {t('home.preview.beginner.title') || 'Taking your first strokes'}
-          </h3>
-          <p class="mt-2 text-sm text-gray-500">
-            {
-              t('home.preview.beginner.desc') ||
-                'You want to try paddle boarding on calm lakes. You need stability, clear safety guidance, and gear that won\u2019t sink your confidence.'
-            }
-          </p>
-          <div class="mt-5 space-y-3">
-            <a
-              href={L('/supboard/')}
-              class="flex items-center justify-between p-3 bg-sky-50 rounded-xl hover:bg-sky-100 transition-colors"
-            >
-              <div>
-                <span class="text-sm font-semibold text-gray-900"
-                  >{t('home.preview.beginner.product1') || 'SUP Boards'}</span
-                >
-                <p class="text-xs text-gray-500">
-                  {t('home.preview.beginner.product1.desc') || 'Beginner-friendly inflatable SUPs'}
-                </p>
-              </div>
-              <span class="text-sky-600 text-sm font-medium">→</span>
-            </a>
-            <a
-              href={L('/products')}
-              class="flex items-center justify-between p-3 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors"
-            >
-              <div>
-                <span class="text-sm font-semibold text-gray-900"
-                  >{t('home.preview.beginner.product2') || 'Oars & Pump Set'}</span
-                >
-                <p class="text-xs text-gray-500">
-                  {t('home.preview.beginner.product2.desc') || 'Pump, paddle & accessories'}
-                </p>
-              </div>
-              <span class="text-sky-600 text-sm font-medium">→</span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div
-        class="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow"
-        data-ai-use-case="family"
-      >
-        <div class="h-52 bg-gradient-to-br from-sky-400 to-blue-500 overflow-hidden">
-          <img
-            src="https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-leviathan-wake-1.webp"
-            alt={t('home.alt.family') || 'Family SUP day on the water'}
-            class="w-full h-full object-cover opacity-80"
-            loading="lazy"
-          />
-        </div>
-        <div class="p-6">
-          <span class="text-xs font-semibold uppercase tracking-wider text-sky-600"
-            >{t('home.preview.family.label') || 'Family'}</span
-          >
-          <h3 class="mt-2 text-xl font-semibold text-gray-900">
-            {t('home.preview.family.title') || 'A family day on the water'}
-          </h3>
-          <p class="mt-2 text-sm text-gray-500">
-            {
-              t('home.preview.family.desc') ||
-                'Weekend lake trips with the family. You need stable, spacious boards that inflate at the launch site and pack in the car.'
-            }
-          </p>
-          <div class="mt-5 space-y-3">
-            <a
-              href={L('/supboard/')}
-              class="flex items-center justify-between p-3 bg-sky-50 rounded-xl hover:bg-sky-100 transition-colors"
-            >
-              <div>
-                <span class="text-sm font-semibold text-gray-900"
-                  >{t('home.preview.family.product1') || 'Family SUP Boards'}</span
-                >
-                <p class="text-xs text-gray-500">
-                  {t('home.preview.family.product1.desc') || 'Extra-stable platforms for all ages'}
-                </p>
-              </div>
-              <span class="text-sky-600 text-sm font-medium">→</span>
-            </a>
-            <a
-              href={L('/products')}
-              class="flex items-center justify-between p-3 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors"
-            >
-              <div>
-                <span class="text-sm font-semibold text-gray-900"
-                  >{t('home.preview.family.product2') || 'Pumps & Accessories'}</span
-                >
-                <p class="text-xs text-gray-500">
-                  {t('home.preview.family.product2.desc') || 'Rapid inflation at launch site'}
-                </p>
-              </div>
-              <span class="text-sky-600 text-sm font-medium">→</span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div
-        class="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow"
-        data-ai-use-case="touring"
-      >
-        <div class="h-52 bg-gradient-to-br from-sky-400 to-blue-500 overflow-hidden">
-          <img
-            src="https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-ocean-voyager-1.webp"
-            alt={t('home.alt.touring') || 'Touring and fishing SUP'}
-            class="w-full h-full object-cover opacity-80"
-            loading="lazy"
-          />
-        </div>
-        <div class="p-6">
-          <span class="text-xs font-semibold uppercase tracking-wider text-sky-600"
-            >{t('home.preview.touring.label') || 'Touring & Fishing'}</span
-          >
-          <h3 class="mt-2 text-xl font-semibold text-gray-900">
-            {t('home.preview.touring.title') || 'Go further, explore more'}
-          </h3>
-          <p class="mt-2 text-sm text-gray-500">
-            {
-              t('home.preview.touring.desc') ||
-                'Long-distance paddling and fishing trips demand boards that track straight, carry gear, and stay rigid in wind and chop.'
-            }
-          </p>
-          <div class="mt-5 space-y-3">
-            <a
-              href={L('/supboard/')}
-              class="flex items-center justify-between p-3 bg-sky-50 rounded-xl hover:bg-sky-100 transition-colors"
-            >
-              <div>
-                <span class="text-sm font-semibold text-gray-900"
-                  >{t('home.preview.touring.product1') || 'Touring SUP Boards'}</span
-                >
-                <p class="text-xs text-gray-500">
-                  {t('home.preview.touring.product1.desc') || 'Displacement hulls, gear mounts'}
-                </p>
-              </div>
-              <span class="text-sky-600 text-sm font-medium">→</span>
-            </a>
-            <a
-              href={L('/products')}
-              class="flex items-center justify-between p-3 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors"
-            >
-              <div>
-                <span class="text-sm font-semibold text-gray-900"
-                  >{t('home.preview.touring.product2') || 'Paddles & Accessories'}</span
-                >
-                <p class="text-xs text-gray-500">
-                  {t('home.preview.touring.product2.desc') || 'Carbon paddles, leashes, dry bags'}
-                </p>
-              </div>
-              <span class="text-sky-600 text-sm font-medium">→</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Trust Layer + CTA -->
-  <section class="relative py-12 px-6 text-white overflow-hidden">
-    <div class="absolute inset-0">
-      <img
-        src="https://assets.paddleboardoverstock.com/images/paddleboardoverstock/news/paddleboardoverstock-quality-news.webp"
-        alt={t('home.trust.alt') || 'Paddle Board Overstock quality testing process'}
-        class="w-full h-full object-cover"
-        loading="lazy"
-      />
-      <div class="absolute inset-0 bg-gradient-to-br from-gray-900/85 via-gray-900/70 to-gray-800/85"></div>
-    </div>
-    <div class="relative max-w-6xl mx-auto">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
-        {
-          proofPoints.map((pt) => (
-            <div class="text-center">
-              <div class="text-4xl font-bold text-sky-400">{pt.metric}</div>
-              <div class="mt-2 text-lg font-semibold">{pt.label}</div>
-              <div class="mt-1 text-sm text-white/60">{pt.detail}</div>
-            </div>
-          ))
-        }
-      </div>
-      <div class="mb-12">
-        <TrustBadges />
-      </div>
-      <div class="text-center">
-        <h2 class="text-3xl font-semibold">{t('home.trust.ctaTitle') || 'Start your water journey today'}</h2>
-        <p class="mt-3 text-white/70">
-          {t('home.trust.ctaSubtitle') || 'Every board factory-tested, every purchase backed by a 2-year warranty.'}
-        </p>
-        <div class="mt-8 flex items-center justify-center gap-4 flex-wrap">
-          <a
-            href={L('/supboard/')}
-            class="inline-flex items-center gap-2 px-8 py-4 bg-[#fb923c] hover:bg-orange-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all"
-          >
-            {t('home.trust.ctaShop') || 'Shop the SUP clearance'}
-          </a>
-          <a
-            href={L('/products')}
-            class="inline-flex items-center gap-2 px-8 py-4 border-2 border-white/30 text-white rounded-full font-medium hover:bg-white/10 transition-all"
-          >
-            {t('home.trust.ctaViewAll') || 'View all products'}
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Factory Strength Bar -->
-  <section class="bg-gray-50 dark:bg-gray-900 border-y border-gray-200 dark:border-gray-800">
-    <div class="max-w-6xl mx-auto px-6 py-10">
-      <div class="text-center mb-8">
-        <span class="text-sm font-semibold text-primary uppercase tracking-wider"
-          >{t('home.factory.tagline') || 'Paddle Board Overstock Weihai Manufacturing Hub'}</span
-        >
-        <h2 class="mt-2 text-2xl font-bold text-gray-900 dark:text-white">
-          {t('home.factory.title') || 'Real Factory, Real Savings — No Middlemen'}
-        </h2>
-        <p class="mt-3 text-sm text-muted max-w-2xl mx-auto">
-          {
-            t('home.factory.subtitle') ||
-              'Every clearance SUP comes straight from our Weihai factory. The same production lines that supply international brands build these boards — so you get factory-tested quality at up to 60% off retail.'
-          }
-        </p>
-      </div>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-        <div class="text-center">
-          <div class="text-3xl font-bold text-sky-600">12,000 m²</div>
-          <div class="mt-1 text-sm text-muted">{t('home.factory.floor') || 'Weihai factory floor'}</div>
-        </div>
-        <div class="text-center">
-          <div class="text-3xl font-bold text-sky-600">200-300</div>
-          <div class="mt-1 text-sm text-muted">{t('home.factory.workers') || 'Skilled workers'}</div>
-        </div>
-        <div class="text-center">
-          <div class="text-3xl font-bold text-sky-600">15,000</div>
-          <div class="mt-1 text-sm text-muted">{t('home.factory.units') || 'Boards produced annually'}</div>
-        </div>
-        <div class="text-center">
-          <div class="text-3xl font-bold text-sky-600">50+</div>
-          <div class="mt-1 text-sm text-muted">{t('home.factory.countries') || 'Countries served'}</div>
-        </div>
-      </div>
-      <div class="text-center mt-6">
-        <a href={L('/factory')} class="text-sm font-semibold text-sky-600 hover:text-sky-700 hover:underline">
-          {t('home.factory.tour') || 'Tour our factory'} →
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- AI Overview (visible + AI-crawlable) -->
-  <section
-    class="ai-summary bg-blue-50/80 dark:bg-slate-800/50 border-l-4 border-blue-500 rounded-r-xl px-6 py-5 max-w-6xl mx-auto mt-8 mb-8"
-    aria-label="AI overview"
-  >
-    <div class="flex items-start gap-3">
-      <span class="text-blue-600 dark:text-blue-400 text-xs font-semibold uppercase tracking-wider flex-shrink-0 mt-0.5"
-        >{t('home.ai.label') || 'AI Overview'}</span
-      >
-      <div class="space-y-1.5 text-sm text-gray-700 dark:text-slate-300 leading-relaxed">
-        <p>
-          <strong>Paddle Board Overstock</strong>
-          {
-            t('ai.overview.p1') ||
-              ' is a factory-direct clearance store for inflatable stand-up paddle boards — plus the paddles, pumps, leashes, and accessories that go with them.'
-          }
-        </p>
-        <p>
-          {
-            t('ai.overview.p2') ||
-              'Every SUP model is built with drop-stitch cores and marine-grade PVC that hold 12-15 PSI for a rigid, stable ride. Overstock and discontinued lines are sold at up to 60% off retail — order a single board — with secure checkout via Stripe or PayPal and a 2-year SUP warranty.'
-          }
-        </p>
-      </div>
-    </div>
-  </section>
 
   <JsonLd type="FAQPage" faqs={faqLd} />
   <JsonLd type="BreadcrumbList" breadcrumbs={[{ name: 'Home', item: L('/') }]} />
-  {
-    homeGuides.length > 0 && (
-      <script
-        is:inline
-        type="application/ld+json"
-        set:html={JSON.stringify({
-          '@context': 'https://schema.org',
-          '@type': 'ItemList',
-          name: 'Top Guides',
-          itemListElement: homeGuides.map((g, i) => ({
-            '@type': 'ListItem',
-            position: i + 1,
-            name: g.title,
-            url: `${siteBase}/${lang}/guides/${g.slug}`,
-          })),
-        })}
-      />
-    )
-  }
+  <script
+    is:inline
+    type="application/ld+json"
+    set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'Available Overstock Inventory',
+      itemListElement: inventoryProducts.map((p, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: localizedById.get(p.id)?.name || p.title,
+        url: `${siteBase}${L(p.permalink)}`,
+      })),
+    })}
+  />
 
-  <!-- Our Boards -->
+  <!-- 2. Available Overstock Inventory -->
   <section id="products" class="max-w-6xl mx-auto py-12 px-6">
     <div class="text-center max-w-3xl mx-auto mb-16">
       <span class="text-sm font-semibold text-[#06b6d4] tracking-[0.15em] uppercase"
-        >{t('home.products.tagline') || 'Our Boards'}</span
+        >{t('home.overstock.inventory.badge') || 'Overstock Inventory'}</span
       >
-      <h2 class="mt-4 text-4xl font-bold text-gray-900">{t('home.products.title') || 'Performance Meets Freedom'}</h2>
+      <h2 class="mt-4 text-4xl font-bold text-gray-900">
+        {t('home.overstock.inventory.title') || 'Available Overstock Inventory'}
+      </h2>
       <p class="mt-4 text-lg text-gray-500">
         {
-          t('home.products.subtitle') ||
-            'Every Paddle Board Overstock board is engineered for ocean, lake, and river — built to perform, designed to inspire.'
+          t('home.overstock.inventory.subtitle') ||
+            'Brand-new boards from completed production orders — limited stock, ready to ship.'
         }
       </p>
     </div>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
       {
-        boards.map((board) => (
-          <a
-            href={L('/supboard/')}
-            class="group relative rounded-2xl overflow-hidden bg-white border border-gray-200 hover:shadow-xl transition-all duration-300"
-          >
-            <div class="aspect-[4/3] overflow-hidden">
-              <img
-                src={board.img}
-                alt={board.label}
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                loading="lazy"
-              />
-            </div>
-            <div class="p-5">
-              <h3 class="text-lg font-bold text-gray-900">{board.label}</h3>
-              <p class="text-sm text-gray-400 mt-0.5">{board.desc}</p>
-              <span class="mt-3 inline-flex items-center gap-1 text-sm font-medium text-[#06b6d4] group-hover:gap-2 transition-all">
-                {t('home.viewCategory') || 'View'} <span>→</span>
-              </span>
-            </div>
-          </a>
-        ))
-      }
-    </div>
-  </section>
-
-  <!-- Product Catalog -->
-  <section class="bg-gray-50 py-12 px-6">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="text-sm font-medium text-sky-600 tracking-wide uppercase"
-          >{t('home.catalog.tagline') || 'Product Catalog'}</span
-        >
-        <h2 class="mt-4 text-4xl font-semibold text-gray-900">
-          {t('home.catalog.title') || 'Complete product lineup'}
-        </h2>
-        <p class="mt-4 text-lg text-gray-500">
-          {
-            t('home.catalog.subtitle') ||
-              'Every product with structured specs — skill level, water type, region, and safety requirements.'
-          }
-        </p>
-      </div>
-
-      {
-        catalogCategories.map((cat) => {
-          const items = groupedProducts[cat.key];
-          if (!items || items.length === 0) return null;
+        inventoryProducts.map((p) => {
+          const loc = localizedById.get(p.id);
+          const img = productVisuals[p.id] || p.image || '';
           return (
-            <div class="mb-16 last:mb-0">
-              <div class="mb-8">
-                <h3 class="text-2xl font-bold text-gray-900">{cat.label}</h3>
-                {cat.desc && <p class="mt-1 text-gray-500">{cat.desc}</p>}
+            <a
+              href={L(p.permalink)}
+              class="group bg-white rounded-2xl overflow-hidden border border-gray-200 hover:shadow-xl transition-all duration-300 flex flex-col"
+            >
+              <div class="h-56 bg-gradient-to-br from-gray-100 to-gray-200 relative overflow-hidden">
+                {img ? (
+                  <>
+                    <img
+                      src={img}
+                      alt={loc?.name || p.title}
+                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                  </>
+                ) : (
+                  <div class="flex items-center justify-center h-full text-gray-400 text-sm">{p.category}</div>
+                )}
+                <div class="absolute top-3 left-3 flex flex-col gap-2">
+                  {p.inStock && (
+                    <span class="px-2.5 py-1 bg-emerald-500/90 text-white text-xs font-semibold rounded-full shadow">
+                      {t('home.overstock.inventory.inStock') || 'In-Stock'}
+                    </span>
+                  )}
+                  {p.grade && (
+                    <span class="px-2.5 py-1 bg-sky-600/90 text-white text-xs font-semibold rounded-full shadow">
+                      {t('home.overstock.inventory.grade') || 'Grade'} {p.grade}
+                    </span>
+                  )}
+                </div>
               </div>
-              <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {items.map((p) => {
-                  const img = productVisuals[p.id] || '';
-                  return (
-                    <div class="bg-white rounded-2xl overflow-hidden border border-gray-200 hover:shadow-md transition-shadow">
-                      <div class="h-48 bg-gradient-to-br from-gray-100 to-gray-200 relative overflow-hidden">
-                        {img ? (
-                          <>
-                            <img src={img} alt={p.name} class="w-full h-full object-cover" loading="lazy" />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-                          </>
-                        ) : (
-                          <div class="flex items-center justify-center h-full text-gray-400 text-sm">
-                            {t(catLabelKeys[p.category] || '') || p.category}
-                          </div>
-                        )}
-                      </div>
-                      <div class="p-6">
-                        <h3 class="font-semibold text-gray-900 text-lg">{p.name}</h3>
-                        <p class="text-gray-500 mt-2 text-sm">{p.desc}</p>
-                        <div class="mt-4 flex flex-wrap gap-2 text-xs">
-                          <span class="px-2 py-1 bg-sky-50 text-sky-700 rounded-full font-medium">
-                            {t(catLabelKeys[p.category] || '') || p.category}
-                          </span>
-                          <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded-full">
-                            {t(`home.skill.${p.skill}`) || p.skill}
-                          </span>
-                          <span class="px-2 py-1 bg-gray-100 text-gray-500 rounded-full">
-                            {t(`home.safety.${p.safety_level}`) || p.safety_level}
-                          </span>
-                          {p.environment.slice(0, 2).map((e) => (
-                            <span class="px-2 py-1 bg-gray-100 text-gray-500 rounded-full">
-                              {t(`home.env.${e}`) || e}
-                            </span>
-                          ))}
-                        </div>
-                        {p.safety_rules.length > 0 && (
-                          <p class="mt-3 text-xs text-amber-600 flex items-center gap-1">
-                            <span>⚠</span> {p.safety_rules.map((r) => localizeRule(r)).join(', ')}
-                          </p>
-                        )}
-                      </div>
-                    </div>
-                  );
-                })}
+              <div class="p-6 flex flex-col flex-1">
+                <div class="flex items-start justify-between gap-3">
+                  <h3 class="font-semibold text-gray-900 text-lg group-hover:text-[#06b6d4] transition-colors">
+                    {loc?.name || p.title}
+                  </h3>
+                  {p.price && <span class="text-xl font-bold text-gray-900 shrink-0">${p.price.amount}</span>}
+                </div>
+                <p class="text-gray-500 mt-2 text-sm line-clamp-2">{loc?.desc || p.summary}</p>
+                {p.price?.note && <p class="mt-2 text-xs text-gray-400">{p.price.note}</p>}
+                <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[#06b6d4] group-hover:gap-2 transition-all">
+                  {t('home.overstock.inventory.viewDeal') || 'View Deal'} <span>→</span>
+                </span>
               </div>
-            </div>
+            </a>
           );
         })
       }
     </div>
+    <p class="mt-8 text-center text-sm text-gray-400">
+      {
+        t('home.overstock.inventory.retailerNote') ||
+          'Overstock quantities change as batches sell out — availability is shown per board. Retailers buying 5-20 boards: see our wholesale program.'
+      }
+    </p>
   </section>
 
-  <!-- Technology -->
+  <!-- 3. Why Buy Overstock SUP Boards? -->
+  <section class="bg-gray-50 py-12 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-sm font-semibold text-[#06b6d4] tracking-[0.15em] uppercase"
+          >{t('home.overstock.why.badge') || 'Why Overstock'}</span
+        >
+        <h2 class="mt-4 text-4xl font-bold text-gray-900">
+          {t('home.overstock.why.title') || 'Why Buy Overstock SUP Boards?'}
+        </h2>
+        <p class="mt-4 text-lg text-gray-500">
+          {t('home.overstock.why.subtitle') || 'The same brand-new boards retailers sell — without the retail markup.'}
+        </p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-2xl border border-gray-200 p-8 hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-sky-50 rounded-xl flex items-center justify-center">
+            <Icon name="tabler:package" class="w-7 h-7 text-[#06b6d4]" />
+          </div>
+          <h3 class="mt-5 text-lg font-semibold text-gray-900">
+            {t('home.overstock.why.source.title') || 'Where Our Inventory Comes From'}
+          </h3>
+          <p class="mt-3 text-sm text-gray-500 leading-relaxed">
+            {
+              t('home.overstock.why.source.desc') ||
+                'Our stock is mixed-sourced: surplus boards from our own Weihai production base, plus carefully selected overstock from manufacturing partners we have worked with for years. Every board is inspected before it joins the inventory.'
+            }
+          </p>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-8 hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-sky-50 rounded-xl flex items-center justify-center">
+            <Icon name="tabler:credit-card" class="w-7 h-7 text-[#06b6d4]" />
+          </div>
+          <h3 class="mt-5 text-lg font-semibold text-gray-900">
+            {t('home.overstock.why.cost.title') || 'Why It Costs Less'}
+          </h3>
+          <p class="mt-3 text-sm text-gray-500 leading-relaxed">
+            {
+              t('home.overstock.why.cost.desc') ||
+                'Overstock means boards already produced for completed orders. There is no retail markup, no distributor margin, and no cost of carrying idle inventory — so complete packages sell at up to 60% off typical retail.'
+            }
+          </p>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-8 hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-sky-50 rounded-xl flex items-center justify-center">
+            <Icon name="tabler:check" class="w-7 h-7 text-[#06b6d4]" />
+          </div>
+          <h3 class="mt-5 text-lg font-semibold text-gray-900">
+            {t('home.overstock.why.new.title') || 'Brand-New, Never Used'}
+          </h3>
+          <p class="mt-3 text-sm text-gray-500 leading-relaxed">
+            {
+              t('home.overstock.why.new.desc') ||
+                'Overstock is not second-hand. Every board is brand-new and unused — factory-fresh overstock inventory in limited stock, complete with full package accessories and warranty.'
+            }
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Complete SUP Packages -->
   <section class="max-w-6xl mx-auto py-12 px-6">
     <div class="text-center max-w-3xl mx-auto mb-16">
       <span class="text-sm font-semibold text-[#06b6d4] tracking-[0.15em] uppercase"
-        >{t('home.technology.tagline') || 'Technology'}</span
+        >{t('home.overstock.packages.badge') || 'Complete Packages'}</span
       >
-      <h2 class="mt-4 text-4xl font-bold text-gray-900">{t('home.technology.title') || 'Built to Perform'}</h2>
+      <h2 class="mt-4 text-4xl font-bold text-gray-900">
+        {t('home.overstock.packages.title') || 'Every Board Ships as a Complete SUP Package'}
+      </h2>
       <p class="mt-4 text-lg text-gray-500">
         {
-          t('home.technology.subtitle') ||
-            'Precision materials and construction methods that set Paddle Board Overstock apart.'
+          t('home.overstock.packages.subtitle') ||
+            'No hidden extras — the listed price includes everything you need to get on the water.'
         }
       </p>
     </div>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-16">
+      {
+        [
+          { badge: 'SUP', key: 'board' },
+          { badge: 'PMP', key: 'pump' },
+          { badge: 'PDL', key: 'paddle' },
+          { badge: 'FIN', key: 'fin' },
+          { badge: 'BPK', key: 'backpack' },
+          { badge: 'REP', key: 'repairKit' },
+        ].map((item) => (
+          <div class="bg-white border border-gray-200 rounded-2xl p-6 text-center hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 bg-sky-50 border border-sky-100 rounded-xl flex items-center justify-center mx-auto text-sm font-bold text-[#06b6d4]">
+              {item.badge}
+            </div>
+            <p class="mt-3 text-sm font-semibold text-gray-900">
+              {t(`home.overstock.packages.${item.key}`) ||
+                (item.key === 'board'
+                  ? 'Paddle Board'
+                  : item.key === 'pump'
+                    ? 'Hand Pump'
+                    : item.key === 'paddle'
+                      ? 'Paddle'
+                      : item.key === 'fin'
+                        ? 'Removable Fin'
+                        : item.key === 'backpack'
+                          ? 'Backpack'
+                          : 'Repair Kit')}
+            </p>
+          </div>
+        ))
+      }
+    </div>
     <div class="grid md:grid-cols-3 gap-8">
       {
-        ((techCardsData as any)?.cards || []).map((card: any) => (
+        techCards.map((card) => (
           <div class="relative bg-white border border-gray-200 rounded-2xl p-8 text-center hover:shadow-md transition-shadow overflow-hidden">
             <div class="absolute inset-0">
               <img
@@ -1422,698 +600,313 @@ const heroActions: HeroAction[] =
     </div>
   </section>
 
-  <!-- Why Paddle Board Overstock -->
+  <!-- 5. Product Quality & Warranty -->
   <section class="bg-gray-50 py-12 px-6">
     <div class="max-w-6xl mx-auto">
       <div class="text-center max-w-3xl mx-auto mb-16">
         <span class="text-sm font-semibold text-[#06b6d4] tracking-[0.15em] uppercase"
-          >{t('home.why.tagline') || 'Why Paddle Board Overstock'}</span
+          >{t('home.overstock.quality.badge') || 'Quality &amp; Warranty'}</span
         >
-        <h2 class="mt-4 text-4xl font-bold text-gray-900">{t('home.why.title') || 'Quality You Can Trust'}</h2>
-        <p class="mt-4 text-lg text-gray-500">
-          {t('home.why.subtitle') || 'Built with precision. Tested relentlessly. Backed by warranty.'}
-        </p>
-      </div>
-      <div class="grid md:grid-cols-2 gap-8">
-        <div
-          class="bg-white rounded-2xl border border-gray-200 hover:shadow-md transition-shadow overflow-hidden flex flex-col md:flex-row"
-        >
-          <div
-            class="h-48 md:h-auto md:w-48 shrink-0 bg-cover bg-center"
-            style="background-image: url('https://assets.paddleboardoverstock.com/images/paddleboardoverstock/why/paddleboardoverstock-quality-test.webp')"
-          >
-          </div>
-          <div class="p-6">
-            <h3 class="text-lg font-semibold text-gray-900">{t('home.why.quality') || 'Quality You Can Trust'}</h3>
-            <ul class="mt-3 text-sm text-gray-500 space-y-2">
-              <li class="flex gap-2">
-                <span class="text-[#06b6d4] mt-0.5">&#10003;</span>
-                {
-                  t('home.why.quality.point1') ||
-                    'Unbreakable — built with High-Density PVC to endure the toughest conditions.'
-                }
-              </li>
-              <li class="flex gap-2">
-                <span class="text-[#06b6d4] mt-0.5">&#10003;</span>
-                {
-                  t('home.why.quality.point2') ||
-                    'Precision-engineered — flawless seams and airtight integrity for worry-free adventures.'
-                }
-              </li>
-              <li class="flex gap-2">
-                <span class="text-[#06b6d4] mt-0.5">&#10003;</span>
-                {t('home.why.quality.point3') || 'Relentlessly tested — proven to outperform, outlast, and outshine.'}
-              </li>
-            </ul>
-            <a
-              href={L('/about')}
-              class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[#06b6d4] hover:underline"
-              >{t('home.why.viewMore') || 'View More'} →</a
-            >
-          </div>
-        </div>
-        <div
-          class="bg-white rounded-2xl border border-gray-200 hover:shadow-md transition-shadow overflow-hidden flex flex-col md:flex-row"
-        >
-          <div
-            class="h-48 md:h-auto md:w-48 shrink-0 bg-cover bg-center"
-            style="background-image: url('/images/paddleboardoverstock/products/sup-series/sup-cheetah-surge-1.webp')"
-          >
-          </div>
-          <div class="p-6">
-            <h3 class="text-lg font-semibold text-gray-900">
-              {t('home.why.availability') || 'Availability and Lead Times'}
-            </h3>
-            <ul class="mt-3 text-sm text-gray-500 space-y-2">
-              <li class="flex gap-2">
-                <span class="text-[#06b6d4] mt-0.5">&#10003;</span>
-                {
-                  t('home.why.availability.point1') ||
-                    'Ready when you are — No Wait. Stock You Can See: Real-time updates so you know what\u2019s ready to ship.'
-                }
-              </li>
-              <li class="flex gap-2">
-                <span class="text-[#06b6d4] mt-0.5">&#10003;</span>
-                {
-                  t('home.why.availability.point2') ||
-                    'Fast-Tracked Gear: In-stock orders ship in 2-3 days; urgent needs get VIP treatment.'
-                }
-              </li>
-              <li class="flex gap-2">
-                <span class="text-[#06b6d4] mt-0.5">&#10003;</span>
-                {
-                  t('home.why.availability.point3') ||
-                    'No Surprises: Clear timelines, delay alerts, and instant solutions if plans change.'
-                }
-              </li>
-            </ul>
-            <a
-              href={L('/about')}
-              class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[#06b6d4] hover:underline"
-              >{t('home.why.viewMore') || 'View More'} →</a
-            >
-          </div>
-        </div>
-        <div
-          class="bg-white rounded-2xl border border-gray-200 hover:shadow-md transition-shadow overflow-hidden flex flex-col md:flex-row"
-        >
-          <div
-            class="h-48 md:h-auto md:w-48 shrink-0 bg-cover bg-center"
-            style="background-image: url('https://assets.paddleboardoverstock.com/images/paddleboardoverstock/why/paddleboardoverstock-fair-price.webp')"
-          >
-          </div>
-          <div class="p-6">
-            <h3 class="text-lg font-semibold text-gray-900">{t('home.why.price') || 'Premium Quality, Fair Price'}</h3>
-            <ul class="mt-3 text-sm text-gray-500 space-y-2">
-              <li class="flex gap-2">
-                <span class="text-[#06b6d4] mt-0.5">&#10003;</span>
-                {
-                  t('home.why.price.point1') ||
-                    'Transparent Cost Breakdown: See exactly what you\u2019re paying for highest durability and performance standards.'
-                }
-              </li>
-              <li class="flex gap-2">
-                <span class="text-[#06b6d4] mt-0.5">&#10003;</span>
-                {
-                  t('home.why.price.point2') ||
-                    'Price Match Guarantee: We\u2019ll match the price and add a free 1-year warranty extension.'
-                }
-              </li>
-              <li class="flex gap-2">
-                <span class="text-[#06b6d4] mt-0.5">&#10003;</span>
-                {
-                  t('home.why.price.point3') ||
-                    'Built to Last, Designed to Save: No planned obsolescence — products endure years of use.'
-                }
-              </li>
-            </ul>
-            <a
-              href={L('/about')}
-              class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[#06b6d4] hover:underline"
-              >{t('home.why.viewMore') || 'View More'} →</a
-            >
-          </div>
-        </div>
-        <div
-          class="bg-white rounded-2xl border border-gray-200 hover:shadow-md transition-shadow overflow-hidden flex flex-col md:flex-row"
-        >
-          <div
-            class="h-48 md:h-auto md:w-48 shrink-0 bg-cover bg-center"
-            style="background-image: url('https://assets.paddleboardoverstock.com/images/paddleboardoverstock/why/paddleboardoverstock-warranties.webp')"
-          >
-          </div>
-          <div class="p-6">
-            <h3 class="text-lg font-semibold text-gray-900">
-              {t('home.why.warranty') || 'Product Liability and Warranties'}
-            </h3>
-            <ul class="mt-3 text-sm text-gray-500 space-y-2">
-              <li class="flex gap-2">
-                <span class="text-[#06b6d4] mt-0.5">&#10003;</span>
-                {
-                  t('home.why.warranty.point1') ||
-                    'Every board covered: 2-year warranty on all SUP boards and accessories.'
-                }
-              </li>
-              <li class="flex gap-2">
-                <span class="text-[#06b6d4] mt-0.5">&#10003;</span>
-                {
-                  t('home.why.warranty.point2') ||
-                    'Test-verified quality: every board is 100% pressure-tested and inspected before it leaves the factory.'
-                }
-              </li>
-              <li class="flex gap-2">
-                <span class="text-[#06b6d4] mt-0.5">&#10003;</span>
-                {
-                  t('home.why.warranty.point3') ||
-                    'Stress-free repairs: File a claim in minutes, get a fix or replacement in days.'
-                }
-              </li>
-            </ul>
-            <a
-              href={L('/about')}
-              class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[#06b6d4] hover:underline"
-              >{t('home.why.viewMore') || 'View More'} →</a
-            >
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Use Cases -->
-  <section class="max-w-6xl mx-auto py-12 px-6" data-ai-block="use-case">
-    <div class="text-center max-w-3xl mx-auto mb-16">
-      <span class="text-sm font-medium text-sky-600 tracking-wide uppercase"
-        >{t('home.useCases.tagline') || 'Use Cases'}</span
-      >
-      <h2 class="mt-4 text-4xl font-semibold text-gray-900">
-        {t('home.useCases.title') || 'Built for real water experiences'}
-      </h2>
-      <p class="mt-4 text-lg text-gray-500">
-        {
-          t('home.useCases.subtitle') ||
-            'From first-time paddlers to professional operators — Paddle Board Overstock equips every water adventure.'
-        }
-      </p>
-    </div>
-    <div class="grid md:grid-cols-2 gap-8">
-      {
-        useCases.map((u) => (
-          <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-md transition-shadow">
-            <div class="h-48 overflow-hidden">
-              <img src={u.img} alt={u.title} class="w-full h-full object-cover" loading="lazy" />
-            </div>
-            <div class="p-6">
-              <h3 class="text-xl font-semibold text-gray-900">{u.title}</h3>
-              <p class="text-gray-500 mt-2">{u.desc}</p>
-              <div class="mt-4 p-4 bg-gray-50 rounded-xl">
-                <p class="text-sm font-medium text-gray-700">{t('home.useCases.scenario') || 'Scenario'}</p>
-                <p class="mt-1 text-sm text-gray-600">{u.scenario}</p>
-              </div>
-              <div class="mt-3 p-4 bg-sky-50 rounded-xl">
-                <p class="text-sm font-medium text-sky-700">{t('home.useCases.solution') || 'Solution'}</p>
-                <p class="mt-1 text-sm text-gray-600">{u.solution}</p>
-              </div>
-              <div class="mt-3 flex flex-wrap gap-2">
-                {u.products.map((pr) => (
-                  <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full font-medium">{pr}</span>
-                ))}
-              </div>
-            </div>
-          </div>
-        ))
-      }
-    </div>
-    <div class="mt-8 text-center">
-      <a href={L('/use-cases')} class="text-sm font-medium text-sky-600 hover:text-sky-700"
-        >{t('home.useCases.browse') || 'View all use cases &rarr;'}</a
-      >
-    </div>
-  </section>
-
-  <!-- AI Ask -->
-  <section id="ask" class="max-w-6xl mx-auto py-12 px-6 text-center">
-    <div class="max-w-3xl mx-auto mb-12">
-      <span class="text-sm font-medium text-sky-600 tracking-wide uppercase"
-        >{t('home.ask.tagline') || 'AI Product Guide'}</span
-      >
-      <h2 class="mt-4 text-4xl font-semibold text-gray-900">{t('home.ask.title') || 'Find the right product'}</h2>
-      <p class="mt-4 text-lg text-gray-500">
-        {
-          t('home.ask.subtitle') ||
-            'Ask our AI to compare products, recommend based on your skill level and water type, or check safety requirements.'
-        }
-      </p>
-    </div>
-    <div class="max-w-2xl mx-auto">
-      <div class="flex gap-3">
-        <input
-          id="q"
-          class="flex-1 px-5 py-4 border border-gray-300 rounded-xl text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-400 text-lg"
-          placeholder={t('home.ask.placeholder') || 'Which SUP is good for a beginner on a lake?'}
-        />
-        <button
-          id="ask-btn"
-          class="px-8 py-4 bg-gray-900 text-white rounded-xl font-semibold hover:bg-gray-800 transition-colors shrink-0"
-          >{t('home.ask.button') || 'Ask'}</button
-        >
-      </div>
-      <pre
-        id="out"
-        class="mt-8 text-left text-sm text-gray-700 bg-white border border-gray-200 rounded-2xl p-8 hidden whitespace-pre-wrap leading-relaxed">
-      </pre>
-    </div>
-  </section>
-  <!-- Lifestyle -->
-  <section class="relative py-16 px-6 overflow-hidden">
-    <div class="absolute inset-0">
-      <img
-        src="https://assets.paddleboardoverstock.com/images/paddleboardoverstock/hero/paddleboardoverstock-hero-design-concept.webp"
-        alt={t('home.lifestyle.alt') || 'Ocean'}
-        class="w-full h-full object-cover"
-        loading="lazy"
-      />
-      <div
-        class="absolute inset-0"
-        style="background: linear-gradient(135deg, rgba(6,182,212,0.7), rgba(34,211,238,0.5));"
-      >
-      </div>
-    </div>
-    <div class="relative text-center max-w-3xl mx-auto">
-      <span class="text-sm font-semibold text-white/80 tracking-[0.15em] uppercase"
-        >{t('home.lifestyle.tagline') || 'Lifestyle'}</span
-      >
-      <h2
-        class="mt-6 text-4xl md:text-5xl font-bold text-white leading-tight"
-        set:html={t('home.lifestyle.title') || 'We don\u2019t sell boards.<br />We unlock freedom on water.'}
-      />
-      <p class="mt-6 text-lg text-white/80 max-w-2xl mx-auto">
-        {
-          t('home.lifestyle.subtitle') ||
-            'Every Paddle Board Overstock board is your ticket to explore new horizons — from misty morning lakes to endless ocean swells.'
-        }
-      </p>
-      <div class="mt-10 grid grid-cols-2 sm:grid-cols-3 gap-4 max-w-lg mx-auto">
-        <img
-          src="https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-jungle-mandala-1.webp"
-          alt="SUP Jungle Mandala"
-          class="rounded-xl aspect-square object-cover"
-          loading="lazy"
-        />
-        <img
-          src="https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-dolphin-wave-1.webp"
-          alt="SUP Dolphin Wave"
-          class="rounded-xl aspect-square object-cover"
-          loading="lazy"
-        />
-        <img
-          src="https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-ocean-pulse-1.webp"
-          alt="SUP Ocean Pulse"
-          class="rounded-xl aspect-square object-cover"
-          loading="lazy"
-        />
-      </div>
-    </div>
-  </section>
-
-  <!-- Community -->
-  <section class="max-w-6xl mx-auto py-12 px-6">
-    <div class="text-center max-w-3xl mx-auto mb-16">
-      <span class="text-sm font-semibold text-[#06b6d4] tracking-[0.15em] uppercase"
-        >{t('home.community.tagline') || 'Community'}</span
-      >
-      <h2 class="mt-4 text-4xl font-bold text-gray-900">
-        {t('home.community.title') || 'Real Riders. Real Adventures.'}
-      </h2>
-      <p class="mt-4 text-lg text-gray-500">
-        {
-          t('home.community.subtitle') ||
-            'Join thousands of paddlers exploring lakes, rivers, and coastlines with Paddle Board Overstock.'
-        }
-      </p>
-    </div>
-    <div class="grid md:grid-cols-3 gap-6">
-      <div class="rounded-2xl overflow-hidden aspect-[4/3]">
-        <img
-          src="https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-dolphin-wave-1.webp"
-          alt={t('home.category.sups') || 'SUP Dolphin Wave'}
-          class="w-full h-full object-cover"
-          loading="lazy"
-        />
-      </div>
-      <div class="rounded-2xl overflow-hidden aspect-[4/3]">
-        <img
-          src="https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-flowing-lotus-1.webp"
-          alt={t('home.category.sups') || 'SUP Flowing Lotus'}
-          class="w-full h-full object-cover"
-          loading="lazy"
-        />
-      </div>
-      <div class="rounded-2xl overflow-hidden aspect-[4/3]">
-        <img
-          src="https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-ocean-voyager-1.webp"
-          alt={t('home.category.sups') || 'SUP Ocean Voyager'}
-          class="w-full h-full object-cover"
-          loading="lazy"
-        />
-      </div>
-    </div>
-    <div class="mt-12 grid md:grid-cols-3 gap-8">
-      {
-        testimonials.map((tm) => (
-          <div class="bg-white border border-gray-200 rounded-2xl p-6">
-            <div class="flex text-amber-400 text-lg">{'⭐'.repeat(tm.rating || 5)}</div>
-            <p class="mt-4 text-gray-600 text-sm italic">"{tm.quote}"</p>
-            <p class="mt-3 text-sm font-semibold text-gray-900">—{tm.name}</p>
-          </div>
-        ))
-      }
-    </div>
-    <div class="text-center mt-10">
-      <p
-        class="text-gray-500"
-        set:html={t('home.community.cta') ||
-          'Tag <span class="font-semibold text-gray-700">@paddleboardoverstock</span> on Instagram to share your adventure.'}
-      />
-      <div class="mt-4 flex justify-center gap-4">
-        <a
-          href="https://www.instagram.com/paddleboardoverstock"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-xl font-semibold hover:bg-gray-800 transition-colors text-sm"
-        >
-          {t('home.community.follow') || 'Follow on Instagram'} →
-        </a>
-      </div>
-    </div>
-    <!-- Gallery Albums -->
-    <div class="mt-16">
-      <div class="text-center mb-10">
-        <span class="text-sm font-semibold text-[#06b6d4] tracking-[0.15em] uppercase"
-          >{t('home.gallery.tagline') || 'Gallery'}</span
-        >
-        <h3 class="mt-2 text-2xl font-bold text-gray-900">{t('home.gallery.title') || 'Customer Adventures'}</h3>
-      </div>
-      <div class="mb-12">
-        <h4 class="text-lg font-bold text-gray-900 mb-1">{t('home.gallery.yoga') || 'SUP Yoga & Fitness'}</h4>
-        <p class="text-sm text-gray-500 mb-4">
-          {
-            t('home.gallery.yoga.desc') ||
-              'Finding balance on the water with Paddle Board Overstock yoga and fitness SUPs.'
-          }
-        </p>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          <div class="rounded-xl overflow-hidden bg-gray-100 aspect-[4/3]">
-            <img
-              src="https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-flowing-lotus-1.webp"
-              alt={t('home.gallery.yoga') || 'SUP yoga session'}
-              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-              loading="lazy"
-            />
-          </div>
-          <div class="rounded-xl overflow-hidden bg-gray-100 aspect-[4/3]">
-            <img
-              src="https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-jungle-mandala-1.webp"
-              alt={t('home.gallery.yoga') || 'SUP fitness paddling'}
-              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-              loading="lazy"
-            />
-          </div>
-          <div class="rounded-xl overflow-hidden bg-gray-100 aspect-[4/3]">
-            <img
-              src="https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-tropical-breeze-1.webp"
-              alt={t('home.gallery.yoga') || 'SUP Tropical Breeze on calm water'}
-              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-              loading="lazy"
-            />
-          </div>
-        </div>
-      </div>
-      <div class="mb-12">
-        <h4 class="text-lg font-bold text-gray-900 mb-1">{t('home.gallery.sup') || 'SUP Boards'}</h4>
-        <p class="text-sm text-gray-500 mb-4">
-          {
-            t('home.gallery.sup.desc') ||
-              'Paddlers exploring lakes, rivers and coastlines on Paddle Board Overstock inflatable SUPs.'
-          }
-        </p>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          <div class="rounded-xl overflow-hidden bg-gray-100 aspect-[4/3]">
-            <img
-              src="https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-ocean-voyager-1.webp"
-              alt={t('home.gallery.sup') || 'SUP Ocean Voyager'}
-              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-              loading="lazy"
-            />
-          </div>
-          <div class="rounded-xl overflow-hidden bg-gray-100 aspect-[4/3]">
-            <img
-              src="https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-cheetah-surge-1.webp"
-              alt={t('home.gallery.sup') || 'SUP Cheetah Surge'}
-              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-              loading="lazy"
-            />
-          </div>
-          <div class="rounded-xl overflow-hidden bg-gray-100 aspect-[4/3]">
-            <img
-              src="https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-tropical-breeze-1.webp"
-              alt={t('home.gallery.sup') || 'SUP Tropical Breeze'}
-              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-              loading="lazy"
-            />
-          </div>
-        </div>
-      </div>
-      <div class="mb-12">
-        <h4 class="text-lg font-bold text-gray-900 mb-1">{t('home.gallery.family') || 'Family & Kids SUPs'}</h4>
-        <p class="text-sm text-gray-500 mb-4">
-          {
-            t('home.gallery.family.desc') ||
-              'Families making memories on Paddle Board Overstock stable, kid-friendly SUP boards.'
-          }
-        </p>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          <div class="rounded-xl overflow-hidden bg-gray-100 aspect-[4/3]">
-            <img
-              src="https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-leviathan-wake-1.webp"
-              alt={t('home.gallery.family') || 'Family SUP day'}
-              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-              loading="lazy"
-            />
-          </div>
-          <div class="rounded-xl overflow-hidden bg-gray-100 aspect-[4/3]">
-            <img
-              src="https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-medusa-glow-1.webp"
-              alt={t('home.gallery.family') || 'Kids SUP on the water'}
-              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-              loading="lazy"
-            />
-          </div>
-          <div class="rounded-xl overflow-hidden bg-gray-100 aspect-[4/3]">
-            <img
-              src="https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-dolphin-wave-1.webp"
-              alt={t('home.gallery.family') || 'Family SUP adventure'}
-              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-              loading="lazy"
-            />
-          </div>
-        </div>
-      </div>
-      <div class="text-center">
-        <a
-          href={L('/gallery')}
-          class="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-xl font-semibold hover:bg-gray-800 transition-colors text-sm"
-          >{t('home.gallery.cta') || 'View Full Gallery'} →</a
-        >
-      </div>
-    </div>
-  </section>
-
-  <!-- Social Proof -->
-  <section class="py-12 px-6 bg-gradient-to-br from-sky-50 to-blue-50">
-    <div class="max-w-6xl mx-auto text-center">
-      <span class="text-sm font-medium text-sky-600 tracking-wide uppercase"
-        >{t('home.social.tagline') || 'Social × SEO × Brand'}</span
-      >
-      <h2 class="mt-4 text-3xl md:text-4xl font-semibold text-gray-900">
-        {t('home.social.title') || 'Every guide, everywhere'}
-      </h2>
-      <p class="mt-4 text-lg text-gray-500 max-w-3xl mx-auto">
-        {
-          t('home.social.subtitle') ||
-            'Each article automatically generates posts for TikTok, Instagram, X, Pinterest, and Reddit — so your content works across every platform.'
-        }
-      </p>
-      <div class="mt-10 flex items-center justify-center gap-4 flex-wrap">
-        <a
-          href={L('/journal')}
-          class="px-8 py-4 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition"
-          >{t('home.social.cta') || 'Browse Journal'} →</a
-        >
-        <a
-          href="/internal/seo/social"
-          class="px-8 py-4 border-2 border-gray-300 text-gray-700 rounded-full font-semibold hover:border-gray-400 transition"
-          >{t('home.social.pipeline') || 'Social Pipeline'}</a
-        >
-      </div>
-    </div>
-  </section>
-
-  <!-- Learning Center -->
-  <section class="bg-gray-50 py-12 px-6">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="text-sm font-medium text-sky-600 tracking-wide uppercase"
-          >{t('home.learn.tagline') || (learnData as any)?.tagline || 'Learn'}</span
-        >
-        <h2 class="mt-4 text-4xl font-semibold text-gray-900">
-          {t('home.learn.title') || (learnData as any)?.title || 'New to SUP?'}
+        <h2 class="mt-4 text-4xl font-bold text-gray-900">
+          {t('home.overstock.quality.title') || 'Overstock Prices. Full Factory Quality.'}
         </h2>
         <p class="mt-4 text-lg text-gray-500">
           {
-            t('home.learn.subtitle') ||
-              (learnData as any)?.subtitle ||
-              'Everything you need to know before you hit the water.'
+            t('home.overstock.quality.subtitle') ||
+              'Discounted inventory, uncompromised standards — every board passes the same inspection gates.'
           }
         </p>
       </div>
-      <div class="grid md:grid-cols-4 gap-6">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-8 text-center hover:shadow-md transition-shadow">
+          <p class="text-4xl font-bold text-[#06b6d4]">100%</p>
+          <p class="mt-2 font-semibold text-gray-900">
+            {t('home.overstock.quality.pressureTested') || 'Pressure-Tested'}
+          </p>
+          <p class="mt-2 text-sm text-gray-500">
+            {
+              t('home.overstock.quality.pressureTested.desc') ||
+                'Every board is pressure-tested at 1.25x rated PSI for 24-48 hours before it ships.'
+            }
+          </p>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-8 text-center hover:shadow-md transition-shadow">
+          <p class="text-4xl font-bold text-[#06b6d4]">99.3%</p>
+          <p class="mt-2 font-semibold text-gray-900">
+            {t('home.overstock.quality.finalInspection') || 'Final-Inspection Pass Rate'}
+          </p>
+          <p class="mt-2 text-sm text-gray-500">
+            {
+              t('home.overstock.quality.finalInspection.desc') ||
+                'Final QC inspection pass rate, AQL 2.5 sampling, measured across the SUP range.'
+            }
+          </p>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-8 text-center hover:shadow-md transition-shadow">
+          <p class="text-4xl font-bold text-[#06b6d4]">2-Year</p>
+          <p class="mt-2 font-semibold text-gray-900">{t('home.overstock.quality.warranty') || 'SUP Warranty'}</p>
+          <p class="mt-2 text-sm text-gray-500">
+            {
+              t('home.overstock.quality.warranty.desc') ||
+                'Covers boards, drop-stitch seams, inflation valves, and included accessories.'
+            }
+          </p>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-8 text-center hover:shadow-md transition-shadow">
+          <p class="text-4xl font-bold text-[#06b6d4]">50+</p>
+          <p class="mt-2 font-semibold text-gray-900">{t('home.overstock.quality.countries') || 'Countries Served'}</p>
+          <p class="mt-2 text-sm text-gray-500">
+            {
+              t('home.overstock.quality.countries.desc') ||
+                'Worldwide tracked shipping across the EU, North America, Asia-Pacific, the Middle East, and Africa.'
+            }
+          </p>
+        </div>
+      </div>
+      <div class="mt-12">
+        <TrustBadges layout="compact" bg="justify-center" />
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Wholesale: Mix & Match -->
+  <section class="bg-white py-12 px-6 border-y border-gray-100">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-sm font-semibold text-[#06b6d4] tracking-[0.15em] uppercase"
+          >{t('home.overstock.wholesale.badge') || 'Wholesale'}</span
+        >
+        <h2 class="mt-4 text-4xl font-bold text-gray-900">
+          {t('home.overstock.wholesale.title') || 'Mix &amp; Match. Buy More Variety. Spend Less.'}
+        </h2>
+        <p class="mt-4 text-lg text-gray-500">
+          {
+            t('home.overstock.wholesale.subtitle') ||
+              'Small retailers and rental businesses can combine any models in one order — no full-carton-per-model requirements.'
+          }
+        </p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-gray-50 rounded-2xl border border-gray-200 p-6 hover:shadow-md transition-shadow">
+          <div class="w-10 h-10 bg-white border border-gray-200 rounded-xl flex items-center justify-center">
+            <Icon name="tabler:layout-grid" class="w-6 h-6 text-[#06b6d4]" />
+          </div>
+          <h3 class="mt-4 font-semibold text-gray-900">
+            {t('home.overstock.wholesale.mixed.title') || 'Mixed Model Orders'}
+          </h3>
+          <p class="mt-2 text-sm text-gray-500">
+            {
+              t('home.overstock.wholesale.mixed.desc') ||
+                'Combine any SUP models and accessories in a single shipment — ideal for varied retail shelves.'
+            }
+          </p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl border border-gray-200 p-6 hover:shadow-md transition-shadow">
+          <div class="w-10 h-10 bg-white border border-gray-200 rounded-xl flex items-center justify-center">
+            <Icon name="tabler:shopping-cart" class="w-6 h-6 text-[#06b6d4]" />
+          </div>
+          <h3 class="mt-4 font-semibold text-gray-900">
+            {t('home.overstock.wholesale.smallBiz.title') || 'Small-Business-Friendly Quantities'}
+          </h3>
+          <p class="mt-2 text-sm text-gray-500">
+            {
+              t('home.overstock.wholesale.smallBiz.desc') ||
+                'Start stocking from just 5-20 boards — quantities sized for independent retail shops.'
+            }
+          </p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl border border-gray-200 p-6 hover:shadow-md transition-shadow">
+          <div class="w-10 h-10 bg-white border border-gray-200 rounded-xl flex items-center justify-center">
+            <Icon name="tabler:credit-card" class="w-6 h-6 text-[#06b6d4]" />
+          </div>
+          <h3 class="mt-4 font-semibold text-gray-900">
+            {t('home.overstock.wholesale.volume.title') || 'Volume Pricing'}
+          </h3>
+          <p class="mt-2 text-sm text-gray-500">
+            {
+              t('home.overstock.wholesale.volume.desc') ||
+                'Overstock pricing scales down further with quantity — request a quote for your mix.'
+            }
+          </p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl border border-gray-200 p-6 hover:shadow-md transition-shadow">
+          <div class="w-10 h-10 bg-white border border-gray-200 rounded-xl flex items-center justify-center">
+            <Icon name="tabler:truck" class="w-6 h-6 text-[#06b6d4]" />
+          </div>
+          <h3 class="mt-4 font-semibold text-gray-900">
+            {t('home.overstock.wholesale.freight.title') || 'Express &amp; Sea Freight'}
+          </h3>
+          <p class="mt-2 text-sm text-gray-500">
+            {
+              t('home.overstock.wholesale.freight.desc') ||
+                'Express courier for samples and small orders, consolidated sea freight for full retail restocks.'
+            }
+          </p>
+        </div>
+      </div>
+      <div class="mt-10 flex items-center gap-4 flex-wrap justify-center">
+        <a
+          href={L('/wholesale-paddle-boards/')}
+          class="inline-flex items-center gap-2 px-8 py-4 bg-gray-900 hover:bg-gray-800 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5"
+        >
+          {t('home.overstock.wholesale.cta1') || 'Wholesale SUP Boards'}
+          <span>→</span>
+        </a>
+        <a
+          href={L('/mixed-model-wholesale/')}
+          class="inline-flex items-center gap-2 px-8 py-4 border-2 border-gray-300 text-gray-700 font-medium rounded-full hover:border-gray-400 hover:bg-gray-50 transition-all"
+        >
+          {t('home.overstock.wholesale.cta2') || 'Build a Mixed-Model Order'}
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Worldwide Shipping -->
+  <section class="max-w-6xl mx-auto py-12 px-6">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="text-sm font-semibold text-[#06b6d4] tracking-[0.15em] uppercase"
+        >{t('home.overstock.shipping.badge') || 'Shipping'}</span
+      >
+      <h2 class="mt-4 text-4xl font-bold text-gray-900">
+        {t('home.overstock.shipping.title') || 'Worldwide Shipping, Two Ways'}
+      </h2>
+      <p class="mt-4 text-lg text-gray-500">
         {
-          ((learnData as any)?.cards || []).map((card: { href: string; image: string; title: string }, i: number) => (
-            <a
-              href={L(card.href)}
-              class="group bg-white rounded-2xl border border-gray-200 hover:shadow-md transition-shadow overflow-hidden block"
-            >
-              <div class="aspect-[4/3] bg-cover bg-center" style={"background-image: url('" + card.image + "')"} />
-              <div class="p-5 text-center">
-                <h3 class="font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">
-                  {t(`home.learn.guide${i + 1}`) || card.title}
-                </h3>
-              </div>
-            </a>
+          t('home.overstock.shipping.subtitle') ||
+            'Every order ships from Weihai, China — choose the speed and cost profile that fits.'
+        }
+      </p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-8 mb-12">
+      <div class="bg-white rounded-2xl border border-gray-200 p-8 hover:shadow-md transition-shadow">
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 bg-sky-50 rounded-xl flex items-center justify-center">
+            <Icon name="tabler:package" class="w-7 h-7 text-[#06b6d4]" />
+          </div>
+          <h3 class="text-xl font-bold text-gray-900">
+            {t('home.overstock.shipping.express.title') || 'Express Courier'}
+          </h3>
+        </div>
+        <p class="mt-4 text-sm text-gray-500 leading-relaxed">
+          {
+            t('home.overstock.shipping.express.desc') ||
+              'Best for single boards, samples, and small orders of 1-3 boards. Door-to-door tracked delivery — transit times are quoted per destination at checkout.'
+          }
+        </p>
+      </div>
+      <div class="bg-white rounded-2xl border border-gray-200 p-8 hover:shadow-md transition-shadow">
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 bg-sky-50 rounded-xl flex items-center justify-center">
+            <Icon name="tabler:world" class="w-7 h-7 text-[#06b6d4]" />
+          </div>
+          <h3 class="text-xl font-bold text-gray-900">{t('home.overstock.shipping.sea.title') || 'Sea Freight'}</h3>
+        </div>
+        <p class="mt-4 text-sm text-gray-500 leading-relaxed">
+          {
+            t('home.overstock.shipping.sea.desc') ||
+              'Best for retail orders of 5-20 boards and mixed-model wholesale shipments. Consolidated pallets, lower per-board cost — sailing schedules quoted per destination.'
+          }
+        </p>
+      </div>
+    </div>
+    <div class="bg-gray-50 rounded-2xl border border-gray-200 p-8 text-center">
+      <p class="font-semibold text-gray-900">{t('home.overstock.shipping.markets') || 'Shipping to key markets'}</p>
+      <div class="mt-4 flex flex-wrap items-center justify-center gap-3">
+        <a
+          href={L('/markets/latin-america/')}
+          class="px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-medium text-gray-700 hover:border-[#06b6d4] hover:text-[#06b6d4] transition-colors"
+          >{t('nav.marketLatinAmerica') || 'Latin America'}</a
+        >
+        <a
+          href={L('/markets/southeast-asia/')}
+          class="px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-medium text-gray-700 hover:border-[#06b6d4] hover:text-[#06b6d4] transition-colors"
+          >{t('nav.marketSoutheastAsia') || 'Southeast Asia'}</a
+        >
+        <a
+          href={L('/markets/africa/')}
+          class="px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-medium text-gray-700 hover:border-[#06b6d4] hover:text-[#06b6d4] transition-colors"
+          >{t('nav.marketAfrica') || 'Africa'}</a
+        >
+        <a
+          href={L('/markets/middle-east/')}
+          class="px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-medium text-gray-700 hover:border-[#06b6d4] hover:text-[#06b6d4] transition-colors"
+          >{t('nav.marketMiddleEast') || 'Middle East'}</a
+        >
+      </div>
+      <div class="mt-6">
+        <a
+          href={L('/international-shipping/')}
+          class="inline-flex items-center gap-2 px-8 py-3 bg-[#fb923c] hover:bg-orange-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all"
+        >
+          {t('home.overstock.shipping.cta') || 'International Shipping Details'}
+          <span>→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Real Customer Reviews -->
+  <section class="bg-gray-50 py-12 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-sm font-semibold text-[#06b6d4] tracking-[0.15em] uppercase"
+          >{t('home.overstock.reviews.badge') || 'Reviews'}</span
+        >
+        <h2 class="mt-4 text-4xl font-bold text-gray-900">
+          {t('home.overstock.reviews.title') || 'What Our Customers Say'}
+        </h2>
+        <p class="mt-4 text-lg text-gray-500">
+          {
+            t('home.overstock.reviews.subtitle') ||
+              'Feedback from paddlers and retailers who bought overstock SUP packages.'
+          }
+        </p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        {
+          testimonials.map((tst) => (
+            <div class="bg-white border border-gray-200 rounded-2xl p-6">
+              <div class="flex text-amber-400 text-lg">{'⭐'.repeat(tst.rating || 5)}</div>
+              <p class="mt-4 text-gray-600 text-sm italic">"{tst.quote}"</p>
+              <p class="mt-3 text-sm font-semibold text-gray-900">—{tst.name}</p>
+            </div>
           ))
         }
       </div>
     </div>
   </section>
 
-  <!-- Resources -->
-  <section class="bg-white py-12 px-6">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center max-w-3xl mx-auto mb-12">
-        <span class="text-sm font-medium text-sky-600 tracking-wide uppercase"
-          >{t('home.resources.title') || 'Resources'}</span
-        >
-        <h2 class="mt-4 text-3xl font-semibold text-gray-900">{t('home.resources.heading') || 'Explore More'}</h2>
-        <p class="mt-2 text-gray-500">
-          {t('home.resources.subtitle') || 'Buying guides, engineering expertise, and in-depth SUP research.'}
-        </p>
-      </div>
-      <div class="grid md:grid-cols-3 gap-6">
-        <a
-          href={L('/guides/how-to-choose-your-sup')}
-          class="group bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all"
-        >
-          <span class="text-xs font-semibold text-sky-600 uppercase tracking-wide"
-            >{t('home.resources.guides') || 'Guides'}</span
-          >
-          <h3 class="mt-2 font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">
-            {t('home.resources.chooseSup') || 'How to Choose Your SUP'}
-          </h3>
-          <p class="mt-1 text-sm text-gray-500">
-            {
-              t('home.resources.chooseSupDesc') ||
-                'Board size, volume, and shape — find the right fit for your paddling style.'
-            }
-          </p>
-        </a>
-        <a
-          href={L('/engineering-team')}
-          class="group bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all"
-        >
-          <span class="text-xs font-semibold text-sky-600 uppercase tracking-wide"
-            >{t('home.resources.team') || 'Team'}</span
-          >
-          <h3 class="mt-2 font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">
-            {t('home.resources.engineeringTitle') || 'Engineering &amp; R&amp;D Team'}
-          </h3>
-          <p class="mt-1 text-sm text-gray-500">
-            {
-              t('home.resources.engineeringDesc') ||
-                'Meet the 25+ engineers behind every Paddle Board Overstock product.'
-            }
-          </p>
-        </a>
-        <a
-          href={L('/research/sup-thickness-guide')}
-          class="group bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all"
-        >
-          <span class="text-xs font-semibold text-sky-600 uppercase tracking-wide"
-            >{t('home.resources.research') || 'Research'}</span
-          >
-          <h3 class="mt-2 font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">
-            {t('home.resources.supThickness') || 'SUP Thickness Guide'}
-          </h3>
-          <p class="mt-1 text-sm text-gray-500">
-            {
-              t('home.resources.supThicknessDesc') ||
-                '4-inch vs 6-inch boards — how thickness changes stability and performance.'
-            }
-          </p>
-        </a>
-      </div>
-      <div class="flex flex-wrap items-center justify-center gap-10 py-10 border-t border-gray-200">
-        <span class="text-base text-gray-400 tracking-wider uppercase font-semibold"
-          >{t('home.resources.brandPartners') || 'Brand Partners'}</span
-        >
-        <img
-          src="https://assets.paddleboardoverstock.com/images/paddleboardoverstock/brands/paddleboardoverstock-wavefella-logo.webp"
-          alt="Wavefella"
-          class="h-16 opacity-50 grayscale hover:opacity-80 hover:grayscale-0 transition"
-          loading="lazy"
-        />
-        <img
-          src="https://assets.paddleboardoverstock.com/images/paddleboardoverstock/brands/paddleboardoverstock-foida-logo.webp"
-          alt="Foida"
-          class="h-16 opacity-50 grayscale hover:opacity-80 hover:grayscale-0 transition"
-          loading="lazy"
-        />
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="bg-gray-50 py-12 px-6" id="faq" data-ai-block="faq">
+  <!-- 9. FAQ -->
+  <section class="max-w-6xl mx-auto py-12 px-6" id="faq" data-ai-block="faq">
     <div class="max-w-3xl mx-auto">
       <div class="text-center mb-16">
-        <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">{t('faq.pageLabel') || 'FAQ'}</span>
-        <h2 class="mt-4 text-4xl font-semibold text-gray-900">{t('faq.title') || 'Frequently asked questions'}</h2>
+        <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">FAQ</span>
+        <h2 class="mt-4 text-4xl font-semibold text-gray-900">{t('home.faq.title') || 'Frequently asked questions'}</h2>
       </div>
-      {
-        faqCategories.length > 0 && (
-          <div class="flex flex-wrap justify-center gap-2 mb-10" data-faq-tabs>
-            {faqCategories.map((cat) => (
-              <button
-                data-faq-tab={cat.id}
-                class:list={[
-                  'px-4 py-2 text-sm font-medium rounded-full border transition',
-                  cat.id === faqCategories[0].id
-                    ? 'bg-gray-900 text-white border-gray-900'
-                    : 'bg-white text-gray-600 border-gray-300 hover:border-gray-400',
-                ]}
-              >
-                {cat.label}
-              </button>
-            ))}
-          </div>
-        )
-      }
+      <div class="flex flex-wrap justify-center gap-2 mb-10" data-faq-tabs>
+        {
+          faqCategories.map((cat) => (
+            <button
+              data-faq-tab={cat.id}
+              class:list={[
+                'px-4 py-2 text-sm font-medium rounded-full border transition',
+                cat.id === faqCategories[0]?.id
+                  ? 'bg-gray-900 text-white border-gray-900'
+                  : 'bg-white text-gray-600 border-gray-300 hover:border-gray-400',
+              ]}
+            >
+              {cat.label}
+            </button>
+          ))
+        }
+      </div>
       <div class="space-y-4" data-faq-list>
         {
           faqItems.map((item) => (
             <details
               data-faq-item
-              data-category={item.category || 'all'}
+              data-category={item.category || faqCategories[0]?.id || 'sup'}
               class="bg-white border border-gray-200 rounded-xl overflow-hidden group"
             >
               <summary class="px-6 py-4 font-semibold text-gray-900 cursor-pointer hover:bg-gray-50 transition-colors list-none flex items-center justify-between">
@@ -2130,70 +923,7 @@ const heroActions: HeroAction[] =
     </div>
   </section>
 
-  <!-- Contact -->
-  <section class="bg-gray-50 py-12 px-6" id="contact">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-16">
-        <span class="text-sm font-semibold text-[#06b6d4] tracking-[0.15em] uppercase"
-          >{t('home.contact.label') || 'Get in touch'}</span
-        >
-        <h2 class="mt-4 text-4xl font-bold text-gray-900">
-          {t('home.contact.title') || 'Contact Paddle Board Overstock'}
-        </h2>
-      </div>
-      <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-        <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden text-center">
-          <div class="h-32 relative overflow-hidden bg-gray-200 flex items-center justify-center">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8153.834118981908!2d120.5261!3d36.8861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDUzJzEwLjAiTiAxMjDCsDMxJzM0LjAiRQ!5e0!3m2!1sen!2sus!4v1"
-              class="w-full h-full object-cover"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              title={t('home.contact.map') || 'Map of Paddle Board Overstock location'}></iframe>
-            <svg class="absolute w-8 h-8 text-red-500 drop-shadow-lg" viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
-              ></path>
-            </svg>
-          </div>
-          <div class="p-6">
-            <h3 class="font-semibold text-gray-900">{t('home.contact.address') || 'Address'}</h3>
-            <p class="mt-2 text-gray-500 text-sm" set:html={branding.address || 'Weihai, Shandong, China'} />
-          </div>
-        </div>
-        <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden text-center">
-          <div
-            class="h-32 bg-cover bg-center"
-            style="background-image: url('https://assets.paddleboardoverstock.com/images/Helen-contact-480x463.webp')"
-          >
-          </div>
-          <div class="p-6">
-            <h3 class="font-semibold text-gray-900">{t('home.contact.phone') || 'Phone'}</h3>
-            <p class="mt-2 text-gray-500 text-sm">{branding.phone || '+86 13305324192'}</p>
-          </div>
-        </div>
-        <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden text-center">
-          <div
-            class="h-32 bg-cover bg-center"
-            style="background-image: url('https://assets.paddleboardoverstock.com/images/paddleboardoverstock/use-cases/paddleboardoverstock-professional-use-case.webp')"
-          >
-          </div>
-          <div class="p-6">
-            <h3 class="font-semibold text-gray-900">{t('home.contact.email') || 'Email'}</h3>
-            <p class="mt-2 text-gray-500 text-sm">{branding.email || 'info@paddleboardoverstock.com'}</p>
-          </div>
-        </div>
-      </div>
-      <div class="text-center mt-12">
-        <a
-          href={L('/contact')}
-          class="inline-flex items-center gap-2 px-8 py-4 bg-[#fb923c] hover:bg-orange-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all"
-        >
-          {t('home.contact.cta') || 'Send us a message'} →
-        </a>
-      </div>
-    </div>
-  </section>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(buildGraph())} />
 </Layout>
 
 <script is:inline>
@@ -2228,14 +958,15 @@ const heroActions: HeroAction[] =
       });
     }
 
-    // FAQ filter (only when category tabs exist)
+    // FAQ filter
     const faqTabs = document.querySelector('[data-faq-tabs]');
     const faqList = document.querySelector('[data-faq-list]');
     if (faqTabs && faqList) {
+      const firstTab = faqTabs.querySelector('[data-faq-tab]');
+      const firstCat = firstTab ? firstTab.getAttribute('data-faq-tab') : 'sup';
       const faqAllItems = faqList.querySelectorAll('[data-faq-item]');
-      const tabBtns = faqTabs.querySelectorAll('[data-faq-tab]');
       function filterFaq(cat) {
-        tabBtns.forEach(function (btn) {
+        faqTabs.querySelectorAll('[data-faq-tab]').forEach(function (btn) {
           const isActive = btn.getAttribute('data-faq-tab') === cat;
           if (isActive) {
             btn.classList.add('bg-gray-900', 'text-white', 'border-gray-900');
@@ -2253,35 +984,7 @@ const heroActions: HeroAction[] =
         const btn = e.target.closest('[data-faq-tab]');
         if (btn) filterFaq(btn.getAttribute('data-faq-tab'));
       });
-      if (tabBtns.length > 0) {
-        filterFaq(tabBtns[0].getAttribute('data-faq-tab'));
-      }
+      filterFaq(firstCat);
     }
-
-    // AI Ask
-    const btn = document.getElementById('ask-btn');
-    const input = document.getElementById('q');
-    const out = document.getElementById('out');
-    if (!btn || !input || !out) return;
-
-    btn.addEventListener('click', async function () {
-      const q = input.value.trim();
-      if (!q) return;
-      out.classList.add('hidden');
-      out.textContent = 'Thinking...';
-      out.classList.remove('hidden');
-
-      try {
-        const res = await fetch('/api/ask', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ question: q }),
-        });
-        const data = await res.json();
-        out.textContent = res.ok && data.answer ? data.answer : 'Error: ' + (data.error || 'Request failed');
-      } catch (err) {
-        out.textContent = 'Error: ' + err.message;
-      }
-    });
   })();
 </script>
