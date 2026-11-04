@@ -21,13 +21,16 @@ export async function GET() {
     "secondary": ["Paddle Board Accessories Retailer", "Factory Clearance Outlet"]
   },
   "products": ["Inflatable SUP Boards", "Complete SUP Packages", "Paddle Board Accessories", "SUP Paddles & Pumps"],
-  "markets": ["Global Consumer Market", "Outdoor Sports Market", "Paddle Sports Market"],
+  "markets": ["Global Consumer Market", "Outdoor Sports Market", "Paddle Sports Market", "Small-Business Wholesale"],
   "foundingDate": "2012",
   "foundingLocation": "Weihai, Shandong, China",
   "parentCompany": "Weihai Dongjilian Co., Ltd.",
   "factorySize": "12,000 m²",
   "workforce": "200-300 workers",
   "annualCapacity": "15,000 units/year",
+  "inventorySource": "mixed — surplus production batches from own Weihai manufacturing operations + selected excess inventory from other production partners",
+  "condition": "Brand-new, unused",
+  "wholesale": { "mixedModelOrders": true, "typicalOrderSize": "5-20 boards", "shipping": ["express courier", "sea freight"] },
   "quality": ["100% Pressure-Tested", "99.3% Defect-Free Delivery", "2-Year SUP Warranty"],
   "countriesServed": "50+",
   "payments": ["Stripe", "PayPal"]
@@ -37,20 +40,20 @@ export async function GET() {
 ## Brand Identity
 
 - **Name:** Paddle Board Overstock
-- **Tagline:** Inflatable SUP Boards Overstock & Clearance — Factory Direct from Weihai, China
-- **Definition:** Paddle Board Overstock, operated by Weihai Dongjilian Co., Ltd., is an online store specializing in inflatable SUP board overstock and factory clearance stock. Complete paddle board packages (board, pump, paddle, leash, backpack) and accessories ship worldwide at up to 60% off retail, with transparent pricing and secure Stripe & PayPal checkout. The company has manufactured inflatable SUP boards since 2012 and is based in Weihai, Shandong, China.
-- **Positioning:** Factory-direct inflatable SUP overstock outlet — transparent prices, complete packages, worldwide shipping.
+- **Tagline:** Discount Inflatable SUP Boards — Overstock, Clearance & Small-Business Wholesale
+- **Definition:** Paddle Board Overstock, operated by Weihai Dongjilian Co., Ltd., is an international supplier of discounted inflatable stand-up paddle boards (SUPs), specializing in surplus production inventory and factory clearance batches. Our overstock inventory comes from surplus production batches of our own Weihai manufacturing operations and selected excess inventory sourced from other production partners. Complete paddle board packages (board, pump, paddle, leash, backpack) and accessories ship worldwide at up to 60% off retail, with mixed-model wholesale available for small retailers ordering 5-20 boards. The company has manufactured inflatable SUP boards since 2012 and is based in Weihai, Shandong, China.
+- **Positioning:** Affordable overstock paddle board inventory + mixed-model wholesale for small businesses + flexible international shipping (express and sea freight).
 
 ## Brand Philosophy
 
-**Factory-Direct Value On Water** — Everyone deserves a premium paddle board without the retail markup. By selling overstock and clearance stock direct from the factory, Paddle Board Overstock passes the savings to paddlers worldwide.
+**Overstock Value On Water** — Everyone deserves a premium paddle board without the retail markup. By sourcing surplus production inventory and factory clearance batches, Paddle Board Overstock passes the savings to paddlers and small retailers worldwide.
 
 ### Pillars
 
-1. **Transparent Pricing** — Every price is visible on the product card and detail page. No "contact us for a quote" — ever.
+1. **Transparent Retail Pricing** — Every retail price is visible on the product card and detail page; wholesale quotes are answered with clear volume-based tiers.
 2. **Complete Packages** — Every SUP board ships as a full package: board, pump, paddle, leash, and backpack.
-3. **Factory Quality** — 12,000 m² production facility; every board is 100% pressure-tested at 1.25x rated pressure.
-4. **Secure Checkout** — Stripe and PayPal payments, buyer protection, and worldwide shipping to 50+ countries.
+3. **Multi-Source Overstock Quality** — Brand-new boards from surplus production batches (own Weihai manufacturing + selected partner factories); every board is 100% pressure-tested at 1.25x rated pressure.
+4. **Secure Checkout & Worldwide Shipping** — Stripe and PayPal payments, buyer protection, express or sea freight shipping to 50+ countries.
 
 ## Brand Timeline
 
@@ -93,7 +96,9 @@ export async function GET() {
 - SUP board clearance
 - paddle board overstock deals
 - complete paddle board package
-- factory direct paddle boards
+- wholesale inflatable paddle boards
+- mixed model wholesale paddle boards
+- low MOQ SUP boards wholesale
 - discount SUP board
 - inflatable SUP with pump and paddle
 
@@ -102,11 +107,16 @@ export async function GET() {
 - jet skis
 - hard surfboards
 - diving equipment
-- wholesale or bulk orders
+- OEM/ODM custom paddle board manufacturing
+- large-scale factory production orders (hundreds of identical units)
 
 ## Related Resources
 
 - [Brand Entity Page](${SITE_URL}/brand/paddleboardoverstock)
+- [About Paddle Board Overstock](${SITE_URL}/about-paddle-board-overstock)
+- [Wholesale Paddle Boards](${SITE_URL}/wholesale-paddle-boards)
+- [Mixed Model Wholesale](${SITE_URL}/mixed-model-wholesale)
+- [International Shipping](${SITE_URL}/international-shipping)
 - [Products](${SITE_URL}/products)
 - [Our Story](${SITE_URL}/paddleboardoverstock-story)
 - [Quality Control](${SITE_URL}/quality)

@@ -2,16 +2,17 @@
   "_comment": [
     "positioning.json —— 品牌定位单一事实源",
     "",
-    "公司画像（客户确认，2026-10）：",
-    "  Inflatable SUP Boards Overstock & Clearance — Factory Direct（B2C 清仓商城）",
-    "",
-    "2026-10-23 站点转型：paddleboardoverstock.com 从三线 B2B 制造商（RIB/Inflatable/SUP）",
-    "收敛为充气 SUP 尾货清仓商城（OnlineStore，B2C）。船类（RIB/Inflatable Boats/Kayak）",
-    "路线已删除并 301，全站 title / H1 / description / schema / llms.txt 一律从本文件口径渲染。",
+    "公司画像（客户确认，2026-11，《3优化.txt》定位转型）：",
+    "  Affordable Overstock SUP Inventory + Mixed Model Wholesale + Flexible International Shipping",
+    "  受众 = 海外小型零售商（5-20 块混批，主）+ 个人消费者（1-2 块，保留入口）。",
+    "  库存来源 mixed：自有 Weihai 生产剩余 + 其他生产合作方剩余库存；发货 express + sea freight 皆有。",
+    "  保留 Weihai 制造背景（2012、12,000 m²、15,000 units 年产能）做可信度，但工厂叙事不得盖过库存销售定位。",
     "",
     "命名铁律：全站只允许一条产品线，任何位置统一措辞：",
     "  Inflatable SUP Boards（清仓语境下可写 inflatable SUP boards / SUP packages）",
-    "禁止把 RIB / Inflatable Boat / Kayak 写回任何身份表述（title / H1 / schema / 首页文案）。"
+    "禁止把 RIB / Inflatable Boat / Kayak 写回任何身份表述（title / H1 / schema / 首页文案）。",
+    "禁止 Factory Direct / OEM / ODM / Custom Manufacturing 身份表述进入 storefront；",
+    "wholesale 词汇限用于小批量混批采购语境（small-business wholesale / mixed-model wholesale）。"
   ],
 
   "entity": {
@@ -19,10 +20,10 @@
     "alternateName": "Paddle Board Overstock — Inflatable SUP Overstock & Clearance",
     "legalName": "Weihai Dongjilian Co., Ltd.",
     "entityType": "OnlineStore",
-    "_entityType_note": "不是 manufacturer、不是 brand 泛称。对外身份统一为线上清仓商城（工厂直发）。",
-    "_legalName_note": "品牌运营主体为 Weihai Dongjilian Co., Ltd.（Weihai, Shandong, CN），货源为自有工厂尾货/清仓批次。",
-    "primaryAudience": "B2C",
-    "_audience_note": "面向全球个人消费者（清仓零售）。B2B/OEM/ODM 与认证（CE/ISO/UKCA/REACH/RoHS/BSCI）内容已全站移除，不进任何表述。"
+    "_entityType_note": "不是 manufacturer、不是 brand 泛称。对外身份统一为国际库存清仓商城（自有工厂背景 + 多源剩余库存）。",
+    "_legalName_note": "品牌运营主体为 Weihai Dongjilian Co., Ltd.（Weihai, Shandong, CN）。库存为自有生产剩余 + 合作工厂剩余库存（mixed sourcing）。",
+    "primaryAudience": "B2C + small-business wholesale",
+    "_audience_note": "主受众为海外小型零售商（5-20 块混批采购），保留个人消费者零售入口。OEM/ODM 与认证（CE/ISO/UKCA/REACH/RoHS/BSCI）内容不进任何表述。"
   },
 
   "productLines": [
@@ -51,24 +52,33 @@
   "boilerplate": {
     "_comment": "三种长度，按位置选用。所有数字用 {{占位符}} 从 facts.json 注入，禁止硬编码。",
 
-    "short": "Inflatable SUP boards overstock and clearance — factory direct, up to 60% off retail.",
+    "short": "Discount inflatable SUP boards — overstock and clearance prices, up to 60% off retail.",
 
-    "medium": "Paddle Board Overstock is an online store for inflatable SUP board overstock and factory clearance stock. Complete paddle board packages ship worldwide at up to 60% off retail — direct from Weihai, China.",
+    "medium": "Paddle Board Overstock is an international supplier of discounted inflatable paddle boards, specializing in surplus production inventory and factory clearance batches. Brand-new complete SUP packages ship worldwide at up to 60% off retail — with mixed-model wholesale for small retailers.",
 
-    "long": "Paddle Board Overstock, operated by Weihai Dongjilian Co., Ltd., is an online store specializing in inflatable SUP board overstock and factory clearance stock. Complete paddle board packages (board, pump, paddle, leash, backpack) and accessories ship worldwide at up to 60% off retail, with {{annualCapacityUnits}} units annual production capacity and transparent Stripe & PayPal checkout."
+    "long": "Paddle Board Overstock, operated by Weihai Dongjilian Co., Ltd., is an international supplier of discounted inflatable stand-up paddle boards (SUPs), specializing in surplus production inventory and factory clearance batches. Our overstock inventory comes from surplus production batches of our own Weihai manufacturing operations and selected excess inventory sourced from other production partners. Complete paddle board packages (board, pump, paddle, leash, backpack) and accessories ship worldwide at up to 60% off retail, with {{annualCapacityUnits}} units annual production capacity behind every batch, mixed-model small-business wholesale, and secure Stripe & PayPal checkout."
   },
 
   "titleTemplates": {
-    "_comment": "全站标题围绕清仓商城定位。storefront 页面禁止出现 Manufacturer / OEM / ODM。",
-    "home": "Inflatable SUP Boards Overstock & Clearance — Factory Direct | Paddle Board Overstock",
+    "_comment": "全站标题围绕 overstock 清仓商城定位。storefront 页面禁止出现 Manufacturer / OEM / ODM / Factory Direct。",
+    "home": "Paddle Board Overstock | Discount Inflatable SUP Boards & Clearance Deals",
     "productsHub": "Inflatable SUP Boards — Overstock & Clearance Deals | Paddle Board Overstock",
-    "supPillar": "Inflatable SUP Boards — Complete Packages, Up to 60% Off | Paddle Board Overstock"
+    "supPillar": "Inflatable SUP Boards — Complete Packages, Up to 60% Off | Paddle Board Overstock",
+    "wholesale": "Wholesale Inflatable Paddle Boards – Low MOQ & Overstock Deals | Paddle Board Overstock",
+    "mixedModel": "Mixed Model Wholesale Paddle Boards | Flexible SUP Orders | Paddle Board Overstock",
+    "shipping": "International SUP Board Shipping — Express & Sea Freight | Paddle Board Overstock",
+    "brandHub": "About Paddle Board Overstock — Overstock SUP Business Model",
+    "markets": "Wholesale & Overstock SUP Boards — {region} | Paddle Board Overstock"
   },
 
   "h1Templates": {
-    "_comment": "首页 H1 是最强的页面内信号，必须同时含品类 + 清仓诉求 + 折扣力度。",
-    "home": "Inflatable SUP Boards — Overstock & Clearance, Up to 60% Off Retail",
-    "supPillar": "Inflatable SUP Boards — Overstock & Clearance"
+    "_comment": "首页 H1 是最强的页面内信号，必须同时含品类（SUP）+ 清仓诉求 + 折扣力度（P2 门禁：SUP/Overstock/Clearance 三词必备）。",
+    "home": "Inflatable SUP Boards at Overstock & Clearance Prices — Up to 60% Off",
+    "supPillar": "Inflatable SUP Boards — Overstock & Clearance",
+    "wholesale": "Wholesale Inflatable Paddle Boards for Small Businesses",
+    "mixedModel": "Mixed Model Wholesale Paddle Boards – Mix Different SUP Models in One Order",
+    "shipping": "International SUP Board Shipping — Express & Sea Freight",
+    "brandHub": "What Is Paddle Board Overstock?"
   },
 
   "forbiddenPhrases": {

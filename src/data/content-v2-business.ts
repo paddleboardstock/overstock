@@ -182,7 +182,7 @@ export const businessArticles: ContentV2Record[] = [
       },
       {
         q: 'How do I ensure product quality?',
-        a: 'Paddle Board Overstock products are manufactured under ISO 9001 quality management, with 13 CE-certified models across the catalog. You receive production samples for approval before bulk production. Third-party inspection is available.',
+        a: 'Paddle Board Overstock products are manufactured under ISO 9001 quality management, with 11 CE-certified models across the catalog. You receive production samples for approval before bulk production. Third-party inspection is available.',
       },
       {
         q: 'Can I sell on Amazon with private label products?',
