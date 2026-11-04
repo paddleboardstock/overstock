@@ -2,37 +2,19 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { createEngine } from './lib/translate-lib.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 
 const CONFIG_PATH = path.join(ROOT, 'src/data/site/i18n-config.json');
 const CACHE_FILE = path.join(ROOT, '.cache', 'i18n-translate-cache.json');
-const GOOGLE_URL = 'https://translate.googleapis.com/translate_a/single';
-const MYMEMORY_URL = 'https://api.mymemory.translated.net/get';
-const RATE_MS = 300;
 const DRY_RUN = process.argv.includes('--dry-run');
 
 const SKIP_PATTERNS = [
   /^(ISO|CE|OEM|ODM|SUP|RIB|PVC|Hypalon|Drop-Stitch|CSM|UV|RFID|SLA|MOQ|FOB|CIF|BSCI|REACH|UKCA|EVA|PFD|TLDR|FAQ)[\s/]|^(ISO|CE|OEM|ODM|SUP|RIB|PVC|Hypalon|Drop-Stitch|CSM|UV|RFID|SLA|MOQ|FOB|CIF|BSCI|REACH|UKCA|EVA|PFD|TLDR|FAQ)$/,
+  /^Paddle Board Overstock$/,
 ];
-
-let cache = {};
-let apiCalls = 0;
-let cacheHits = 0;
-
-function loadCache() {
-  try {
-    if (fs.existsSync(CACHE_FILE)) cache = JSON.parse(fs.readFileSync(CACHE_FILE, 'utf8'));
-  } catch {
-    /* ignore */
-  }
-  fs.mkdirSync(path.dirname(CACHE_FILE), { recursive: true });
-}
-
-function saveCache() {
-  fs.writeFileSync(CACHE_FILE, JSON.stringify(cache, null, 2), 'utf8');
-}
 
 function shouldTranslate(value) {
   if (typeof value !== 'string') return false;
@@ -46,54 +28,21 @@ function shouldTranslate(value) {
   return true;
 }
 
-async function translateText(text, lang) {
-  const ck = `${lang}::${text}`;
-  if (cache[ck]) {
-    cacheHits++;
-    return cache[ck];
-  }
-  if (DRY_RUN) return text;
-
-  try {
-    const gUrl = `${GOOGLE_URL}?client=gtx&sl=en&tl=${lang}&dt=t&q=${encodeURIComponent(text)}`;
-    const gRes = await fetch(gUrl, { signal: AbortSignal.timeout(10000) });
-    const gData = await gRes.json();
-    if (Array.isArray(gData) && gData[0]) {
-      let t = gData[0].map((seg) => seg[0]).join('');
-      t = t.trim();
-      if (t && t !== text) {
-        cache[ck] = t;
-        apiCalls++;
-        return t;
-      }
-    }
-  } catch {
-    /* fall through to MyMemory */
-  }
-
-  try {
-    const mUrl = `${MYMEMORY_URL}?q=${encodeURIComponent(text)}&langpair=en|${lang}&de=translate@paddleboardoverstock.com`;
-    const mRes = await fetch(mUrl, { signal: AbortSignal.timeout(10000) });
-    const mData = await mRes.json();
-    if (mData.responseStatus === 200 && mData.responseData?.translatedText) {
-      let t = mData.responseData.translatedText;
-      if (t.toUpperCase() === t && text.length > 5 && /[a-z]/.test(text)) t = text;
-      cache[ck] = t;
-      apiCalls++;
-      return t;
-    }
-  } catch {
-    /* ignore */
-  }
-  return text;
-}
-
-async function sleep(ms) {
-  return new Promise((r) => setTimeout(r, ms));
-}
+// Bing engine (shared lib): batched requests, brand/technical-term masking,
+// resumable cache keyed `${lang}::${text}` — same key format as the previous
+// Google-path cache, so existing entries hit.
+const engine = createEngine({
+  cacheFile: CACHE_FILE,
+  rateMs: 120,
+  dryRun: DRY_RUN,
+  log: (m) => console.log(m),
+});
 
 async function main() {
-  loadCache();
+  engine.load();
+  await engine.refreshSession(); // fail fast if Bing is unreachable
+  console.log(`Cache: ${engine.cacheSize} entries`);
+
   const config = JSON.parse(fs.readFileSync(CONFIG_PATH, 'utf8'));
   const enKeys = Object.keys(config.en);
   const langs = Object.keys(config).filter((l) => l !== 'en');
@@ -103,43 +52,66 @@ async function main() {
 
   for (const lang of langs) {
     console.log(`\n--- ${lang} ---`);
-    let langTranslated = 0;
-
+    const todo = [];
     for (const key of enKeys) {
       const enVal = config.en[key];
       const langVal = config[lang][key];
-
-      // Skip if already translated (different from EN)
       if (langVal && langVal !== enVal) continue;
-
-      // Skip if value shouldn't be translated
       if (!shouldTranslate(enVal)) {
         skipped++;
         continue;
       }
+      todo.push(key);
+    }
+    if (!todo.length) {
+      console.log(`  ${lang}: up to date`);
+      continue;
+    }
 
-      // Translate
-      const translated_val = await translateText(enVal, lang);
-      await sleep(RATE_MS);
+    let langTranslated = 0;
+    // Multi-line values would break translateBatch's line-count assertion;
+    // send those through translate1 one at a time.
+    const singles = todo.filter((k) => config.en[k].includes('\n'));
+    const batchKeys = todo.filter((k) => !singles.includes(k));
 
-      if (translated_val !== enVal) {
-        config[lang][key] = translated_val;
+    if (batchKeys.length) {
+      const values = batchKeys.map((k) => config.en[k]);
+      const out = await engine.translateBatch(values, lang);
+      for (let i = 0; i < batchKeys.length; i++) {
+        if (out[i] && out[i] !== values[i]) {
+          config[lang][batchKeys[i]] = out[i];
+          langTranslated++;
+          translated++;
+        } else {
+          skipped++;
+        }
+      }
+    }
+    for (const key of singles) {
+      const enVal = config.en[key];
+      const out = await engine.translate1(enVal, lang);
+      if (out && out !== enVal) {
+        config[lang][key] = out;
         langTranslated++;
         translated++;
       } else {
         skipped++;
       }
     }
+
     if (langTranslated > 0) {
       fs.writeFileSync(CONFIG_PATH, JSON.stringify(config, null, 2), 'utf8');
-      saveCache();
+      engine.save();
     }
-    console.log(`  ${lang}: ${langTranslated} keys translated`);
+    console.log(`  ${lang}: ${langTranslated} keys translated (${todo.length} candidates)`);
   }
 
+  engine.save();
+  const s = engine.stats;
   console.log(`\n=== Done ===`);
   console.log(`Translated: ${translated}, Skipped: ${skipped}`);
-  console.log(`API calls: ${apiCalls}, Cache hits: ${cacheHits}`);
+  console.log(`API calls: ${s.apiCalls}, Cache hits: ${s.cacheHits}, Failures: ${s.failures}`);
+  if (s.failures > 0) console.log(`!!! WARNING: ${s.failures} strings fell back to EN untranslated — re-run required`);
 }
 
 main().catch(console.error);
