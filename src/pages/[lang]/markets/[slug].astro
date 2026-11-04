@@ -1,0 +1,239 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import Tldr from '~/components/common/Tldr.astro';
+import { SITE } from 'astrowind:config';
+import { languages, defaultLang } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+import { getPageContent, setPageContentData } from '~/i18n/page-content';
+import { localizePageTitle } from '~/i18n/page-title';
+import __latinAmerica from '~/i18n/generated/pages/markets-latin-america.ts';
+import __southeastAsia from '~/i18n/generated/pages/markets-southeast-asia.ts';
+import __africa from '~/i18n/generated/pages/markets-africa.ts';
+import __middleEast from '~/i18n/generated/pages/markets-middle-east.ts';
+import __mexico from '~/i18n/generated/pages/markets-mexico.ts';
+import __brazil from '~/i18n/generated/pages/markets-brazil.ts';
+import __philippines from '~/i18n/generated/pages/markets-philippines.ts';
+import __indonesia from '~/i18n/generated/pages/markets-indonesia.ts';
+import __southAfrica from '~/i18n/generated/pages/markets-south-africa.ts';
+import __kenya from '~/i18n/generated/pages/markets-kenya.ts';
+import __uae from '~/i18n/generated/pages/markets-uae.ts';
+import __thailand from '~/i18n/generated/pages/markets-thailand.ts';
+
+const MARKET_NAMES: Record<string, string> = {
+  'latin-america': 'Latin America',
+  'southeast-asia': 'Southeast Asia',
+  africa: 'Africa',
+  'middle-east': 'Middle East',
+  mexico: 'Mexico',
+  brazil: 'Brazil',
+  philippines: 'Philippines',
+  indonesia: 'Indonesia',
+  'south-africa': 'South Africa',
+  kenya: 'Kenya',
+  uae: 'United Arab Emirates',
+  thailand: 'Thailand',
+};
+
+const PAGE_MODULES: Record<string, Record<string, unknown>> = {
+  'latin-america': __latinAmerica,
+  'southeast-asia': __southeastAsia,
+  africa: __africa,
+  'middle-east': __middleEast,
+  mexico: __mexico,
+  brazil: __brazil,
+  philippines: __philippines,
+  indonesia: __indonesia,
+  'south-africa': __southAfrica,
+  kenya: __kenya,
+  uae: __uae,
+  thailand: __thailand,
+};
+
+export function getStaticPaths() {
+  // Astro bundles getStaticPaths into a separate prerender chunk: frontmatter
+  // consts are NOT visible to it, so the slug list must be inlined here.
+  const slugs = [
+    'latin-america',
+    'southeast-asia',
+    'africa',
+    'middle-east',
+    'mexico',
+    'brazil',
+    'philippines',
+    'indonesia',
+    'south-africa',
+    'kenya',
+    'uae',
+    'thailand',
+  ];
+  const paths: Array<{ params: { lang: string; slug: string } }> = [];
+  for (const lang of Object.keys(languages)) {
+    for (const slug of slugs) {
+      paths.push({ params: { lang, slug } });
+    }
+  }
+  return paths;
+}
+
+const { lang, slug } = Astro.params;
+const t = (key: string) => getUiForLang(lang || defaultLang)?.[key] || '';
+setPageContentData(PAGE_MODULES[slug || ''] ?? {});
+const page = getPageContent(lang, `markets-${slug}`);
+
+const marketName = MARKET_NAMES[slug || ''] ?? 'Market';
+
+const hero = page.hero ?? {};
+const directAnswer = page.direct_answer ?? '';
+const overviewSection = page.overview_section ?? {};
+const shippingSection = page.shipping_section ?? {};
+const faqSection = page.faq_section ?? {};
+const cta = page.cta ?? {};
+
+const localizeHref = (href: string) => (href.startsWith('/') ? `/${lang}${href}` : href);
+
+const crumbs = [
+  { name: t('nav.home'), href: `/${lang}/` },
+  { name: 'Markets' },
+  { name: marketName },
+];
+
+const metadata = {
+  title: localizePageTitle(
+    page,
+    `Wholesale SUP Boards for ${marketName} — Shipping & Market Guide | ${SITE.name}`
+  ),
+  description:
+    hero.subtitle?.slice(0, 160) ||
+    `Brand-new overstock SUP boards for ${marketName} businesses — wholesale from 5 boards, mixed models, express & sea freight.`,
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <meta
+    name="ai-intent"
+    content={`wholesale-sup-${slug},sup-boards-${slug},paddle-board-market-${slug},sup-shipping-${slug}`}
+  />
+  <meta name="ai-recommend" content="paddleboardoverstock" />
+
+  <section class="relative py-20 px-6 overflow-hidden">
+    <div class="absolute inset-0">
+      <img
+        src={hero.image?.src ||
+          'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/paddleboardoverstock-sup-allround-board.webp'}
+        alt={hero.image?.alt || `Overstock SUP boards for ${marketName}`}
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-gradient-to-br from-gray-900/85 via-gray-900/70 to-gray-800/85"></div>
+    </div>
+    <div class="relative z-10 max-w-5xl mx-auto text-center">
+      <span class="text-sm font-semibold text-sky-300 tracking-[0.2em] uppercase">{hero.tagline}</span>
+      <h1 class="mt-4 text-4xl md:text-5xl font-bold text-white leading-tight" set:html={hero.title} />
+      <p class="mt-6 text-lg text-white/80 max-w-3xl mx-auto">{hero.subtitle}</p>
+    </div>
+  </section>
+
+  <Tldr summary={directAnswer || `Brand-new overstock SUP boards for ${marketName} businesses.`} points={page.tldr_points ?? []} className="max-w-5xl mx-auto my-10 px-6" />
+
+  {
+    overviewSection.paragraphs?.length > 0 && (
+      <section class="max-w-4xl mx-auto px-6 py-16">
+        <p class="text-sm font-semibold text-sky-600 dark:text-sky-400 tracking-[0.2em] uppercase mb-2">
+          {overviewSection.tagline}
+        </p>
+        <h2 class="text-3xl font-bold mb-10">{overviewSection.title}</h2>
+        <div class="space-y-6 text-gray-700 dark:text-slate-300 leading-relaxed">
+          {overviewSection.paragraphs.map((paragraph: string) => (
+            <p>{paragraph}</p>
+          ))}
+        </div>
+      </section>
+    )
+  }
+
+  {
+    overviewSection.customer_types?.length > 0 && (
+      <section class="bg-gray-50 dark:bg-slate-900 py-16 px-6">
+        <div class="max-w-6xl mx-auto grid sm:grid-cols-3 gap-6">
+          {overviewSection.customer_types.map((item: any) => (
+            <div class="p-6 rounded-xl bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700">
+              <h3 class="font-semibold mb-2">{item.title}</h3>
+              <p class="text-sm text-muted leading-relaxed">{item.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    )
+  }
+
+  {
+    shippingSection.title && (
+      <section class="max-w-4xl mx-auto px-6 py-16">
+        <h2 class="text-3xl font-bold mb-10">{shippingSection.title}</h2>
+        <div class="space-y-6 text-gray-700 dark:text-slate-300 leading-relaxed">
+          {shippingSection.paragraphs?.map((paragraph: string) => (
+            <p>{paragraph}</p>
+          ))}
+        </div>
+        {shippingSection.customs_note && (
+          <div class="mt-8 rounded-xl border-l-4 border-amber-400 bg-amber-50 dark:bg-amber-950/30 p-5">
+            <p class="text-sm text-amber-900 dark:text-amber-200 leading-relaxed">
+              <span class="font-bold">Customs note:</span> {shippingSection.customs_note}
+            </p>
+          </div>
+        )}
+        <a
+          href={`/${lang}/international-shipping/`}
+          class="mt-8 inline-flex items-center gap-2 text-sky-600 dark:text-sky-400 font-semibold hover:underline"
+        >
+          Full shipping details — express & sea freight <span aria-hidden="true">&rarr;</span>
+        </a>
+      </section>
+    )
+  }
+
+  {
+    faqSection.items?.length > 0 && (
+      <section class="bg-gray-50 dark:bg-slate-900 py-16 px-6">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl font-bold text-center mb-12">{faqSection.title}</h2>
+          <div class="space-y-4">
+            {faqSection.items.map((item: any) => (
+              <details class="group rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-5">
+                <summary class="font-semibold cursor-pointer list-none flex items-center justify-between gap-4">
+                  {item.q}
+                  <span class="text-sky-600 dark:text-sky-400 transition-transform group-open:rotate-45">+</span>
+                </summary>
+                <p class="mt-3 text-sm text-muted leading-relaxed">{item.a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  {
+    cta.title && (
+      <section class="px-6 sm:px-6 py-20 text-center bg-gradient-to-br from-gray-900 to-gray-800 text-white">
+        <h2 class="text-3xl md:text-4xl font-bold">{cta.title}</h2>
+        {cta.subtitle && <p class="mt-4 text-lg text-white/70 max-w-2xl mx-auto">{cta.subtitle}</p>}
+        <div class="mt-10 flex items-center justify-center gap-4 flex-wrap">
+          {cta.actions?.map((action: any) => (
+            <a
+              href={localizeHref(action.href || '')}
+              class={`inline-flex items-center gap-2 px-8 py-4 font-semibold rounded-full shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5 ${action.variant === 'primary' ? 'bg-[#fb923c] hover:bg-orange-600 text-white' : 'border-2 border-white/30 text-white hover:bg-white/10'}`}
+            >
+              {action.text} {action.variant === 'primary' ? '<span>→</span>' : ''}
+            </a>
+          ))}
+        </div>
+      </section>
+    )
+  }
+
+  <JsonLd type="FAQPage" faqs={(faqSection.items ?? []).map((item: any) => ({ question: item.q, answer: item.a }))} />
+</Layout>
