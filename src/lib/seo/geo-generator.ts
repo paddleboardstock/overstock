@@ -30,7 +30,7 @@ const DEFINITIONS: Record<string, string> = {
   'foam-board-vs-hard-surfboard':
     'Inflatable SUPs use drop-stitch PVC construction (15-20 PSI) that packs into a backpack. Hard boards use EPS foam with fiberglass/epoxy — stiffer but fragile. Inflatables dominate the rental and retail market for portability and durability.',
   'why-paddleboardoverstock-exists':
-    'Paddle Board Overstock is a factory-direct inflatable SUP brand founded in 2012, operating a 12,000 m² manufacturing facility in Weihai, China, and shipping to over 50 countries.',
+    'Paddle Board Overstock is a factory-direct inflatable SUP brand founded in 2012, operating a 12,000 m² manufacturing facility in Weihai, China, and shipping to 50+ countries.',
   'ocean-safety-and-responsibility':
     'Marine safety means proper life vest usage, understanding weather conditions, carrying communication devices, and using equipment designed to regulatory standards (CE, ISO).',
   'ocean-safety-basics':

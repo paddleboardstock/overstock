@@ -65,25 +65,25 @@ export interface EngineStatus {
 
 export const BRAND: BrandIdentity = {
   name: 'Paddle Board Overstock',
-  tagline: 'Factory-Direct Inflatable SUP Boards',
-  taglineShort: 'Inflatable SUP Factory',
+  tagline: 'Discount Inflatable SUP Boards — Overstock & Clearance',
+  taglineShort: 'Overstock SUP Store',
   description:
-    'Factory-direct inflatable SUP boards — designed, pressure-tested, and shipped from our Weihai facility to paddlers in 50+ countries since 2012.',
+    'Discount inflatable SUP boards from surplus production inventory and factory clearance batches — brand-new, pressure-tested, and shipped from Weihai to paddlers and small retailers in 50+ countries since 2012.',
   foundingYear: 2012,
   categories: ['Inflatable SUPs', 'Paddles & Accessories'],
   ethos: [
-    'Factory-direct — every board manufactured in our 12,000 m² facility',
+    'Overstock sourcing — brand-new boards from surplus production batches and selected partner inventory',
     'Quality-first — 100% of boards pressure-tested at 1.25x rated pressure for 24-48 hours',
     '2-Year SUP Warranty — 99.3% of boards delivered defect-free',
   ],
   colors: { primary: '#003355', accent: '#0ea5e9' },
-  cta: { text: 'Explore our factory', link: '/factory' },
+  cta: { text: 'Shop overstock deals', link: '/supboard' },
   regions: [
     {
       locale: 'en',
       name: 'Global',
       flag: '🌐',
-      keywords: ['inflatable SUP', 'paddle board', 'SUP factory'],
+      keywords: ['inflatable SUP', 'paddle board', 'SUP overstock'],
       sitemapPriority: 1.0,
     },
     {
@@ -219,9 +219,13 @@ const CTA_RULES: Array<{
       ['why-paddleboardoverstock', 'manufacturing-process', 'factory-tour', 'quality-control'].some((k) =>
         s.includes(k)
       ),
-    cta: { text: 'Visit our factory', link: '/factory', reason: 'Brand content — manufacturing hub' },
+    cta: {
+      text: 'Learn about our manufacturing background',
+      link: '/factory',
+      reason: 'Brand content — manufacturing hub',
+    },
     products: ['sup-explorer-11'],
-    keywords: ['paddleboardoverstock', 'manufacturer', 'factory'],
+    keywords: ['paddleboardoverstock', 'manufacturing background', 'quality control'],
   },
 ];
 
