@@ -1,0 +1,550 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import Tldr from '~/components/common/Tldr.astro';
+import { SITE } from 'astrowind:config';
+import { languages, defaultLang } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+import { getPageContent, setPageContentData } from '~/i18n/page-content';
+import __pageData from '~/i18n/generated/pages/wholesale-paddle-boards.ts';
+import { localizePageTitle } from '~/i18n/page-title';
+import { getProducts } from '~/utils/products';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => getUiForLang(lang || defaultLang)?.[key] || '';
+setPageContentData(__pageData);
+const page = getPageContent(lang, 'wholesale-paddle-boards');
+
+const hero = page.hero ?? {};
+const directAnswer = page.direct_answer ?? '';
+const whyRetailers = page.why_retailers ?? {};
+const pricingSection = page.pricing_section ?? {};
+const inventorySection = page.inventory_section ?? {};
+const whoSection = page.who_section ?? {};
+const howToOrder = page.how_to_order ?? {};
+const formSection = page.form_section ?? {};
+const faqSection = page.faq_section ?? {};
+const cta = page.cta ?? {};
+
+const tableLabels = inventorySection.table_labels ?? {};
+const fields = formSection.fields ?? {};
+
+const supProducts = (await getProducts()).filter((p) => p.category === 'sup');
+
+const localizeHref = (href: string) => (href.startsWith('/') ? `/${lang}${href}` : href);
+
+const turnstileSiteKey = (import.meta.env.PUBLIC_TURNSTILE_SITE_KEY as string | undefined) || '';
+
+const crumbs = [
+  { name: t('nav.home'), href: `/${lang}/` },
+  { name: hero.tagline || 'Wholesale SUP Boards' },
+];
+
+const metadata = {
+  title: localizePageTitle(
+    page,
+    `Wholesale Inflatable Paddle Boards – Low MOQ & Overstock Deals | ${SITE.name}`
+  ),
+  description:
+    hero.subtitle?.slice(0, 160) ||
+    'Wholesale inflatable paddle boards for small businesses. Orders from 5 boards, mixed models, express & sea freight to 50+ countries.',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <meta
+    name="ai-intent"
+    content="wholesale-paddle-boards,small-business-sup-wholesale,low-moq-supplier,mixed-model-wholesale"
+  />
+  <meta name="ai-recommend" content="paddleboardoverstock" />
+
+  <section class="relative py-20 px-6 overflow-hidden">
+    <div class="absolute inset-0">
+      <img
+        src={hero.image?.src ||
+          'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/paddleboardoverstock-sup-allround-board.webp'}
+        alt={hero.image?.alt || 'Wholesale inflatable SUP boards from Paddle Board Overstock'}
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-gradient-to-br from-gray-900/85 via-gray-900/70 to-gray-800/85"></div>
+    </div>
+    <div class="relative z-10 max-w-5xl mx-auto text-center">
+      <span class="text-sm font-semibold text-sky-300 tracking-[0.2em] uppercase">{hero.tagline}</span>
+      <h1 class="mt-4 text-4xl md:text-5xl font-bold text-white leading-tight" set:html={hero.title} />
+      <p class="mt-6 text-lg text-white/80 max-w-3xl mx-auto">{hero.subtitle}</p>
+    </div>
+  </section>
+
+  <Tldr
+    summary={directAnswer ||
+      'Brand-new overstock SUP boards for small retailers — orders from 5 boards, mixed models, express & sea freight.'}
+    points={page.tldr_points ?? []}
+    className="max-w-5xl mx-auto my-10 px-6"
+  />
+
+  {
+    whyRetailers.items?.length > 0 && (
+      <section class="max-w-6xl mx-auto px-6 py-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">{whyRetailers.title}</h2>
+        <p class="text-center text-muted mb-12 max-w-3xl mx-auto">{whyRetailers.subtitle}</p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {whyRetailers.items.map((item: any) => (
+            <div class="p-6 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800">
+              <h3 class="font-semibold text-lg mb-2">{item.title}</h3>
+              <p class="text-sm text-muted leading-relaxed">{item.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    )
+  }
+
+  {
+    pricingSection.points?.length > 0 && (
+      <section class="bg-gray-50 dark:bg-slate-900 py-16 px-6">
+        <div class="max-w-6xl mx-auto">
+          <p class="text-sm font-semibold text-sky-600 dark:text-sky-400 tracking-[0.2em] uppercase text-center mb-2">
+            {pricingSection.tagline}
+          </p>
+          <h2 class="text-3xl font-bold text-center mb-4">{pricingSection.title}</h2>
+          <p class="text-center text-muted mb-12 max-w-3xl mx-auto">{pricingSection.subtitle}</p>
+          <div class="grid sm:grid-cols-2 gap-6">
+            {pricingSection.points.map((point: any) => (
+              <div class="p-6 rounded-xl bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700">
+                <h3 class="font-semibold mb-2">{point.title}</h3>
+                <p class="text-sm text-muted leading-relaxed">{point.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  {
+    inventorySection.title && (
+      <section class="max-w-6xl mx-auto px-6 py-16">
+        <p class="text-sm font-semibold text-sky-600 dark:text-sky-400 tracking-[0.2em] uppercase mb-2">
+          {inventorySection.tagline}
+        </p>
+        <h2 class="text-3xl font-bold mb-4">{inventorySection.title}</h2>
+        <p class="text-muted mb-8 max-w-3xl">{inventorySection.subtitle}</p>
+        <div class="overflow-x-auto rounded-xl border border-gray-200 dark:border-slate-700">
+          <table class="w-full text-sm">
+            <thead class="bg-gray-50 dark:bg-slate-800 text-left">
+              <tr>
+                <th class="px-4 py-3 font-semibold">{tableLabels.product ?? 'Model'}</th>
+                <th class="px-4 py-3 font-semibold">{tableLabels.condition ?? 'Condition'}</th>
+                <th class="px-4 py-3 font-semibold">{tableLabels.price ?? 'Retail Price'}</th>
+                <th class="px-4 py-3 font-semibold text-right">{tableLabels.action ?? 'Contact Us'}</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200 dark:divide-slate-700 bg-white dark:bg-slate-900">
+              {supProducts.map((product) => (
+                <tr>
+                  <td class="px-4 py-3 font-medium">
+                    <a
+                      href={`/${lang}/products/${product.id}`}
+                      class="hover:text-sky-600 dark:hover:text-sky-400"
+                    >
+                      {product.title}
+                    </a>
+                  </td>
+                  <td class="px-4 py-3">{tableLabels.condition_value ?? 'New'}</td>
+                  <td class="px-4 py-3">${product.price?.amount ?? '—'}</td>
+                  <td class="px-4 py-3 text-right">
+                    <a
+                      href="#inquiry"
+                      class="text-sky-600 dark:text-sky-400 font-semibold hover:underline whitespace-nowrap"
+                    >
+                      {tableLabels.action ?? 'Contact Us'} &rarr;
+                    </a>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        {tableLabels.note && <p class="text-xs text-muted mt-3">{tableLabels.note}</p>}
+      </section>
+    )
+  }
+
+  {
+    whoSection.items?.length > 0 && (
+      <section class="bg-gray-50 dark:bg-slate-900 py-16 px-6">
+        <div class="max-w-6xl mx-auto">
+          <p class="text-sm font-semibold text-sky-600 dark:text-sky-400 tracking-[0.2em] uppercase text-center mb-2">
+            {whoSection.tagline}
+          </p>
+          <h2 class="text-3xl font-bold text-center mb-12">{whoSection.title}</h2>
+          <div class="grid sm:grid-cols-2 gap-6">
+            {whoSection.items.map((item: any) => (
+              <div class="p-6 rounded-xl bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700">
+                <h3 class="font-semibold mb-2">{item.title}</h3>
+                <p class="text-sm text-muted leading-relaxed">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  {
+    howToOrder.steps?.length > 0 && (
+      <section class="max-w-6xl mx-auto px-6 py-16">
+        <p class="text-sm font-semibold text-sky-600 dark:text-sky-400 tracking-[0.2em] uppercase mb-2">
+          {howToOrder.tagline}
+        </p>
+        <h2 class="text-3xl font-bold mb-12">{howToOrder.title}</h2>
+        <ol class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {howToOrder.steps.map((step: any, index: number) => (
+            <li class="p-6 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800">
+              <div class="w-10 h-10 rounded-full bg-sky-100 dark:bg-sky-900/50 text-sky-600 dark:text-sky-400 font-bold flex items-center justify-center mb-4">
+                {index + 1}
+              </div>
+              <h3 class="font-semibold mb-2">{step.title}</h3>
+              <p class="text-sm text-muted leading-relaxed">{step.description}</p>
+            </li>
+          ))}
+        </ol>
+      </section>
+    )
+  }
+
+  <section id="inquiry" class="scroll-mt-20 bg-gray-50 dark:bg-slate-900 py-16 px-6">
+    <div class="max-w-3xl mx-auto">
+      <p class="text-sm font-semibold text-sky-600 dark:text-sky-400 tracking-[0.2em] uppercase mb-2">
+        {formSection.tagline}
+      </p>
+      <h2 class="text-3xl font-bold mb-4">{formSection.title}</h2>
+      <p class="text-muted mb-10">{formSection.subtitle}</p>
+
+      <form
+        id="wholesale-inquiry-form"
+        class="space-y-5 rounded-2xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-6 sm:p-8 shadow-sm"
+        novalidate
+      >
+        <input type="hidden" name="subject" value="Wholesale Quote Request" />
+        <div class="hidden" aria-hidden="true">
+          <label for="wh-email-confirm">Email confirm</label>
+          <input id="wh-email-confirm" type="text" name="email_confirm" tabindex="-1" autocomplete="off" />
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div>
+            <label for="wh-first-name" class="block text-sm font-medium mb-1">{fields.first_name ?? 'First Name'} *</label>
+            <input
+              id="wh-first-name"
+              name="firstName"
+              type="text"
+              required
+              class="w-full rounded-lg border border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-900 px-3 py-2 text-sm"
+            />
+          </div>
+          <div>
+            <label for="wh-last-name" class="block text-sm font-medium mb-1">{fields.last_name ?? 'Last Name'} *</label>
+            <input
+              id="wh-last-name"
+              name="lastName"
+              type="text"
+              required
+              class="w-full rounded-lg border border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-900 px-3 py-2 text-sm"
+            />
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div>
+            <label for="wh-company" class="block text-sm font-medium mb-1">{fields.business_name ?? 'Business Name'}</label>
+            <input
+              id="wh-company"
+              name="companyName"
+              type="text"
+              class="w-full rounded-lg border border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-900 px-3 py-2 text-sm"
+            />
+          </div>
+          <div>
+            <label for="wh-country" class="block text-sm font-medium mb-1">{fields.country ?? 'Country'} *</label>
+            <input
+              id="wh-country"
+              name="country"
+              type="text"
+              required
+              class="w-full rounded-lg border border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-900 px-3 py-2 text-sm"
+            />
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div>
+            <label for="wh-email" class="block text-sm font-medium mb-1">{fields.email ?? 'Email'} *</label>
+            <input
+              id="wh-email"
+              name="email"
+              type="email"
+              required
+              class="w-full rounded-lg border border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-900 px-3 py-2 text-sm"
+            />
+          </div>
+          <div>
+            <label for="wh-tel" class="block text-sm font-medium mb-1">{fields.whatsapp ?? 'WhatsApp / Phone'}</label>
+            <input
+              id="wh-tel"
+              name="tel"
+              type="tel"
+              class="w-full rounded-lg border border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-900 px-3 py-2 text-sm"
+            />
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div>
+            <label for="wh-models" class="block text-sm font-medium mb-1">{fields.models ?? 'Interested Models'}</label>
+            <input
+              id="wh-models"
+              name="models"
+              type="text"
+              placeholder={fields.models_note ?? ''}
+              class="w-full rounded-lg border border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-900 px-3 py-2 text-sm"
+            />
+          </div>
+          <div>
+            <label for="wh-quantity" class="block text-sm font-medium mb-1">{fields.quantity ?? 'Estimated Quantity'}</label>
+            <input
+              id="wh-quantity"
+              name="quantity"
+              type="number"
+              min="1"
+              class="w-full rounded-lg border border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-900 px-3 py-2 text-sm"
+            />
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium mb-2">{fields.shipping ?? 'Shipping Preference'}</label>
+          <div class="grid sm:grid-cols-3 gap-3">
+            <label class="flex items-center gap-2 text-sm border border-gray-200 dark:border-slate-600 rounded-lg px-3 py-2 cursor-pointer">
+              <input type="radio" name="shipping" value="express" class="accent-sky-600" />
+              {fields.shipping_express ?? 'Express'}
+            </label>
+            <label class="flex items-center gap-2 text-sm border border-gray-200 dark:border-slate-600 rounded-lg px-3 py-2 cursor-pointer">
+              <input type="radio" name="shipping" value="sea" class="accent-sky-600" />
+              {fields.shipping_sea ?? 'Sea Freight'}
+            </label>
+            <label class="flex items-center gap-2 text-sm border border-gray-200 dark:border-slate-600 rounded-lg px-3 py-2 cursor-pointer">
+              <input type="radio" name="shipping" value="unsure" class="accent-sky-600" checked />
+              {fields.shipping_not_sure ?? 'Not sure yet'}
+            </label>
+          </div>
+        </div>
+
+        <div>
+          <label for="wh-message" class="block text-sm font-medium mb-1">{fields.message ?? 'Message'} *</label>
+          <textarea
+            id="wh-message"
+            name="message"
+            rows="5"
+            required
+            class="w-full rounded-lg border border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-900 px-3 py-2 text-sm"
+          ></textarea>
+        </div>
+
+        <div>
+          <label class="flex items-start gap-2 text-xs text-muted">
+            <input type="checkbox" name="consent" required class="mt-0.5 accent-sky-600" />
+            {fields.consent ?? 'I agree to the processing of my data as described in the Privacy Policy.'}
+          </label>
+        </div>
+
+        {turnstileSiteKey && <div class="cf-turnstile" data-sitekey={turnstileSiteKey} data-theme="light" />}
+
+        <div class="flex items-center justify-between flex-wrap gap-4">
+          <p data-form-status class="hidden text-sm font-medium"></p>
+          <button
+            type="submit"
+            data-submit-button
+            class="inline-flex items-center gap-2 px-8 py-3 font-semibold rounded-full bg-primary text-white hover:bg-primary/90 transition-all"
+          >
+            {fields.submit ?? 'Send Wholesale Inquiry'}
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  {
+    faqSection.items?.length > 0 && (
+      <section class="max-w-4xl mx-auto px-6 py-16">
+        <h2 class="text-3xl font-bold text-center mb-12">{faqSection.title}</h2>
+        <div class="space-y-4">
+          {faqSection.items.map((item: any) => (
+            <details class="group rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-5">
+              <summary class="font-semibold cursor-pointer list-none flex items-center justify-between gap-4">
+                {item.q}
+                <span class="text-sky-600 dark:text-sky-400 transition-transform group-open:rotate-45">+</span>
+              </summary>
+              <p class="mt-3 text-sm text-muted leading-relaxed">{item.a}</p>
+            </details>
+          ))}
+        </div>
+      </section>
+    )
+  }
+
+  {
+    cta.title && (
+      <section class="px-6 sm:px-6 py-20 text-center bg-gradient-to-br from-gray-900 to-gray-800 text-white">
+        <h2 class="text-3xl md:text-4xl font-bold">{cta.title}</h2>
+        {cta.subtitle && <p class="mt-4 text-lg text-white/70 max-w-2xl mx-auto">{cta.subtitle}</p>}
+        <div class="mt-10 flex items-center justify-center gap-4 flex-wrap">
+          {cta.actions?.map((action: any) => (
+            <a
+              href={localizeHref(action.href || '')}
+              class={`inline-flex items-center gap-2 px-8 py-4 font-semibold rounded-full shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5 ${action.variant === 'primary' ? 'bg-[#fb923c] hover:bg-orange-600 text-white' : 'border-2 border-white/30 text-white hover:bg-white/10'}`}
+            >
+              {action.text} {action.variant === 'primary' ? '<span>→</span>' : ''}
+            </a>
+          ))}
+        </div>
+      </section>
+    )
+  }
+
+  <JsonLd
+    type="FAQPage"
+    faqs={(faqSection.items ?? []).map((item: any) => ({ question: item.q, answer: item.a }))}
+  />
+</Layout>
+
+{turnstileSiteKey && <script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer />}
+
+<script is:inline>
+  (function () {
+    const formEl = document.getElementById('wholesale-inquiry-form');
+    if (!formEl) return;
+    const statusEl = formEl.querySelector('[data-form-status]');
+
+    // Prefill from the mixed-model selector (sessionStorage hand-off).
+    try {
+      const saved = sessionStorage.getItem('pbo_mixed_selection');
+      if (saved) {
+        const sel = JSON.parse(saved);
+        if (sel && typeof sel === 'object' && Array.isArray(sel.models) && sel.models.length > 0) {
+          const messageEl = formEl.querySelector('[name="message"]');
+          if (messageEl instanceof HTMLTextAreaElement && !messageEl.value.trim()) {
+            const lines = sel.models.map(function (m) {
+              return m.qty + 'x ' + m.name + ' ($' + m.price + ' each)';
+            });
+            messageEl.value =
+              'Mixed model order draft (' + sel.boards + ' boards total, retail value $' + sel.total + '):\n' +
+              lines.join('\n') +
+              '\n\nPlease quote wholesale pricing and shipping options.';
+          }
+          const modelsEl = formEl.querySelector('[name="models"]');
+          if (modelsEl instanceof HTMLInputElement && !modelsEl.value.trim()) {
+            modelsEl.value = sel.models.map(function (m) {
+              return m.qty + 'x ' + m.name;
+            }).join(', ');
+          }
+          const qtyEl = formEl.querySelector('[name="quantity"]');
+          if (qtyEl instanceof HTMLInputElement && !qtyEl.value) qtyEl.value = String(sel.boards);
+        }
+      }
+    } catch (e) {
+      /* sessionStorage unavailable or malformed — ignore */
+    }
+
+    formEl.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      statusEl.classList.add('hidden');
+      statusEl.classList.remove('text-green-600', 'text-red-600', 'dark:text-green-400', 'dark:text-red-400');
+
+      const fd = new FormData(formEl);
+      const data = {};
+      for (const [k, v] of fd.entries()) {
+        if (typeof v === 'string') data[k] = v.trim();
+      }
+      if (!data.firstName || !data.lastName || !data.email || !data.message || data.message.length < 5) {
+        statusEl.textContent = 'Please fill in the required fields.';
+        statusEl.classList.add('text-red-600', 'dark:text-red-400', 'block');
+        return;
+      }
+
+      const shippingPref = data.shipping || 'unsure';
+      delete data.shipping;
+      delete data.models;
+      delete data.quantity;
+      delete data.consent;
+
+      data.subject = 'Wholesale Quote Request';
+      data.message =
+        '[Models: ' + (fd.get('models') || 'not specified') + '] ' +
+        '[Quantity: ' + (fd.get('quantity') || 'not specified') + '] ' +
+        '[Shipping: ' + shippingPref + ']\n\n' +
+        data.message;
+
+      const turnstileWidget = formEl.querySelector('.cf-turnstile');
+      if (typeof window !== 'undefined' && typeof window.turnstile !== 'undefined' && window.turnstile.getResponse) {
+        const tw = window.turnstile.getResponse(turnstileWidget instanceof HTMLElement ? turnstileWidget : undefined);
+        if (tw) data.turnstileToken = tw;
+      }
+      const langMeta = document.querySelector('meta[name="x-locale"]');
+      if (langMeta) data.locale = langMeta.getAttribute('content') || 'en';
+
+      const submitBtn = formEl.querySelector('[data-submit-button]');
+      const submitLabel = submitBtn ? submitBtn.textContent || 'Send' : 'Send';
+      if (submitBtn instanceof HTMLButtonElement) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending…';
+      }
+
+      try {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(function () {
+          controller.abort();
+        }, 20000);
+        const res = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+          signal: controller.signal,
+        });
+        clearTimeout(timeoutId);
+        const result = await res.json().catch(function () {
+          return {};
+        });
+        if (!res.ok || !result.success) {
+          statusEl.textContent = result.error || 'Something went wrong — please try again.';
+          statusEl.classList.add('text-red-600', 'dark:text-red-400', 'block');
+          return;
+        }
+        statusEl.textContent =
+          'Thanks! We have received your inquiry and will reply with your quote shortly.';
+        statusEl.classList.add('text-green-600', 'dark:text-green-400', 'block');
+        formEl.reset();
+        try {
+          sessionStorage.removeItem('pbo_mixed_selection');
+        } catch (err) {
+          /* ignore */
+        }
+      } catch (fetchErr) {
+        statusEl.textContent = 'Network error — please check your connection and try again.';
+        statusEl.classList.add('text-red-600', 'dark:text-red-400', 'block');
+      } finally {
+        if (submitBtn instanceof HTMLButtonElement) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = submitLabel;
+        }
+      }
+    });
+  })();
+</script>

@@ -1,0 +1,391 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import Tldr from '~/components/common/Tldr.astro';
+import { SITE } from 'astrowind:config';
+import { getPageContent, setPageContentData } from '~/i18n/page-content';
+import __pageData from '~/i18n/generated/pages/mixed-model-wholesale.ts';
+import { getProducts } from '~/utils/products';
+
+setPageContentData(__pageData);
+const page = getPageContent('en', 'mixed-model-wholesale');
+
+const hero = page.hero ?? {};
+const directAnswer = page.direct_answer ?? '';
+const whyMixed = page.why_mixed ?? {};
+const howItWorks = page.how_it_works ?? {};
+const exampleSection = page.example_section ?? {};
+const selectorSection = page.selector_section ?? {};
+const whoBenefits = page.who_benefits ?? {};
+const faqSection = page.faq_section ?? {};
+const cta = page.cta ?? {};
+
+const exampleLabels = exampleSection.table_labels ?? {};
+const selectorLabels = selectorSection.labels ?? {};
+
+const supProducts = (await getProducts()).filter((p) => p.category === 'sup');
+
+const metadata = {
+  title: `Mixed Model Wholesale Paddle Boards – Mix Different SUP Models | ${SITE.name}`,
+  description:
+    hero.subtitle?.slice(0, 160) ||
+    'Mix different SUP models in one wholesale order. Any in-stock combination, from 5 boards total, shipped express or by sea.',
+};
+---
+
+<Layout metadata={metadata}>
+  <meta
+    name="ai-intent"
+    content="mixed-model-wholesale,mix-and-match-sup-order,varied-sup-inventory,small-retailer-sourcing"
+  />
+  <meta name="ai-recommend" content="paddleboardoverstock" />
+
+  <section class="relative py-20 px-6 overflow-hidden">
+    <div class="absolute inset-0">
+      <img
+        src={hero.image?.src ||
+          'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/paddleboardoverstock-sup-allround-board.webp'}
+        alt={hero.image?.alt || 'Mixed order of different SUP board models'}
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-gradient-to-br from-gray-900/85 via-gray-900/70 to-gray-800/85"></div>
+    </div>
+    <div class="relative z-10 max-w-5xl mx-auto text-center">
+      <span class="text-sm font-semibold text-sky-300 tracking-[0.2em] uppercase">{hero.tagline}</span>
+      <h1 class="mt-4 text-4xl md:text-5xl font-bold text-white leading-tight" set:html={hero.title} />
+      <p class="mt-6 text-lg text-white/80 max-w-3xl mx-auto">{hero.subtitle}</p>
+    </div>
+  </section>
+
+  <Tldr
+    summary={directAnswer ||
+      'Combine any in-stock SUP models in one wholesale order — from 5 boards total, priced by total quantity.'}
+    points={page.tldr_points ?? []}
+    className="max-w-5xl mx-auto my-10 px-6"
+  />
+
+  {
+    whyMixed.items?.length > 0 && (
+      <section class="max-w-6xl mx-auto px-6 py-16">
+        <p class="text-sm font-semibold text-sky-600 dark:text-sky-400 tracking-[0.2em] uppercase mb-2">
+          {whyMixed.tagline}
+        </p>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">{whyMixed.title}</h2>
+        <p class="text-muted mb-12 max-w-3xl">{whyMixed.subtitle}</p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {whyMixed.items.map((item: any) => (
+            <div class="p-6 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800">
+              <h3 class="font-semibold text-lg mb-2">{item.title}</h3>
+              <p class="text-sm text-muted leading-relaxed">{item.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    )
+  }
+
+  {
+    howItWorks.steps?.length > 0 && (
+      <section class="bg-gray-50 dark:bg-slate-900 py-16 px-6">
+        <div class="max-w-6xl mx-auto">
+          <p class="text-sm font-semibold text-sky-600 dark:text-sky-400 tracking-[0.2em] uppercase mb-2">
+            {howItWorks.tagline}
+          </p>
+          <h2 class="text-3xl font-bold mb-12">{howItWorks.title}</h2>
+          <ol class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {howItWorks.steps.map((step: any, index: number) => (
+              <li class="p-6 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800">
+                <div class="w-10 h-10 rounded-full bg-sky-100 dark:bg-sky-900/50 text-sky-600 dark:text-sky-400 font-bold flex items-center justify-center mb-4">
+                  {index + 1}
+                </div>
+                <h3 class="font-semibold mb-2">{step.title}</h3>
+                <p class="text-sm text-muted leading-relaxed">{step.description}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+    )
+  }
+
+  {
+    exampleSection.rows?.length > 0 && (
+      <section class="max-w-5xl mx-auto px-6 py-16">
+        <p class="text-sm font-semibold text-sky-600 dark:text-sky-400 tracking-[0.2em] uppercase mb-2">
+          {exampleSection.tagline}
+        </p>
+        <h2 class="text-3xl font-bold mb-4">{exampleSection.title}</h2>
+        <p class="text-muted mb-8 max-w-3xl">{exampleSection.subtitle}</p>
+        <div class="overflow-x-auto rounded-xl border border-gray-200 dark:border-slate-700">
+          <table class="w-full text-sm">
+            <thead class="bg-gray-50 dark:bg-slate-800 text-left">
+              <tr>
+                <th class="px-4 py-3 font-semibold">{exampleLabels.model ?? 'Model'}</th>
+                <th class="px-4 py-3 font-semibold">{exampleLabels.type ?? 'Type'}</th>
+                <th class="px-4 py-3 font-semibold text-right">{exampleLabels.qty ?? 'Qty'}</th>
+                <th class="px-4 py-3 font-semibold text-right">{exampleLabels.unit_retail ?? 'Unit Retail (USD)'}</th>
+                <th class="px-4 py-3 font-semibold text-right">{exampleLabels.subtotal ?? 'Subtotal (USD)'}</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200 dark:divide-slate-700 bg-white dark:bg-slate-900">
+              {exampleSection.rows.map((row: any) => (
+                <tr>
+                  <td class="px-4 py-3 font-medium">{row.model}</td>
+                  <td class="px-4 py-3">{row.type}</td>
+                  <td class="px-4 py-3 text-right">{row.qty}</td>
+                  <td class="px-4 py-3 text-right">${row.unit_retail}</td>
+                  <td class="px-4 py-3 text-right">${row.subtotal}</td>
+                </tr>
+              ))}
+              <tr class="bg-gray-50 dark:bg-slate-800 font-semibold">
+                <td class="px-4 py-3" colspan="2">{exampleLabels.total_row ?? 'Order Total'}</td>
+                <td class="px-4 py-3 text-right">10</td>
+                <td class="px-4 py-3" />
+                <td class="px-4 py-3 text-right">$4,340</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        {exampleLabels.note && <p class="text-xs text-muted mt-3">{exampleLabels.note}</p>}
+      </section>
+    )
+  }
+
+  <section id="selector" class="scroll-mt-20 bg-gray-50 dark:bg-slate-900 py-16 px-6">
+    <div class="max-w-6xl mx-auto">
+      <p class="text-sm font-semibold text-sky-600 dark:text-sky-400 tracking-[0.2em] uppercase mb-2">
+        {selectorSection.tagline}
+      </p>
+      <h2 class="text-3xl font-bold mb-4">{selectorSection.title}</h2>
+      <p class="text-muted mb-10 max-w-3xl">{selectorSection.subtitle}</p>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8" data-selector-grid>
+        {
+          supProducts.map((product) => (
+            <div
+              class="p-5 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800"
+              data-selector-item
+              data-name={product.title}
+              data-price={product.price?.amount ?? '0'}
+            >
+              <div class="flex items-start justify-between gap-3">
+                <div>
+                  <h3 class="font-semibold text-sm leading-tight">{product.title}</h3>
+                  <p class="text-xs text-muted mt-1">
+                    {selectorLabels.model ?? 'Model'} · ${product.price?.amount ?? '—'}{' '}
+                    {selectorLabels.retail ?? 'retail'}
+                  </p>
+                </div>
+                <div class="flex items-center gap-1 shrink-0">
+                  <button
+                    type="button"
+                    data-qty-minus
+                    aria-label={'Decrease ' + product.title}
+                    class="w-8 h-8 rounded-lg border border-gray-300 dark:border-slate-600 text-lg leading-none hover:bg-gray-100 dark:hover:bg-slate-700"
+                  >
+                    −
+                  </button>
+                  <input
+                    type="number"
+                    min="0"
+                    max="50"
+                    value="0"
+                    data-qty-input
+                    class="w-12 h-8 text-center rounded-lg border border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-900 text-sm"
+                    aria-label={'Quantity for ' + product.title}
+                  />
+                  <button
+                    type="button"
+                    data-qty-plus
+                    aria-label={'Increase ' + product.title}
+                    class="w-8 h-8 rounded-lg border border-gray-300 dark:border-slate-600 text-lg leading-none hover:bg-gray-100 dark:hover:bg-slate-700"
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+
+      <div
+        class="flex flex-wrap items-center justify-between gap-4 rounded-xl border border-sky-200 dark:border-sky-900 bg-sky-50 dark:bg-sky-950/40 px-6 py-4"
+      >
+        <div class="text-sm">
+          <span class="font-bold text-lg text-sky-700 dark:text-sky-300" data-selector-boards>0</span>
+          <span class="text-muted ml-1">{selectorLabels.boards ?? 'boards selected'}</span>
+          <span class="text-muted mx-2">·</span>
+          <span class="text-muted">{selectorLabels.total_retail ?? 'Total retail value:'}</span>
+          <span class="font-bold text-lg text-sky-700 dark:text-sky-300 ml-1" data-selector-total>$0</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <button
+            type="button"
+            data-selector-reset
+            class="px-4 py-2 text-sm font-medium rounded-full border border-gray-300 dark:border-slate-600 hover:bg-white dark:hover:bg-slate-800"
+          >
+            {selectorLabels.reset ?? 'Reset'}
+          </button>
+          <button
+            type="button"
+            data-selector-send
+            class="px-6 py-2 text-sm font-semibold rounded-full bg-primary text-white hover:bg-primary/90 disabled:opacity-40 disabled:cursor-not-allowed"
+            disabled
+          >
+            {selectorLabels.send ?? 'Request This Mix'} &rarr;
+          </button>
+        </div>
+      </div>
+      <p class="text-xs text-muted mt-3">{selectorLabels.min_note ?? ''}</p>
+    </div>
+  </section>
+
+  {
+    whoBenefits.items?.length > 0 && (
+      <section class="max-w-6xl mx-auto px-6 py-16">
+        <p class="text-sm font-semibold text-sky-600 dark:text-sky-400 tracking-[0.2em] uppercase mb-2">
+          {whoBenefits.tagline}
+        </p>
+        <h2 class="text-3xl font-bold mb-12">{whoBenefits.title}</h2>
+        <div class="grid sm:grid-cols-2 gap-6">
+          {whoBenefits.items.map((item: any) => (
+            <div class="p-6 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800">
+              <h3 class="font-semibold mb-2">{item.title}</h3>
+              <p class="text-sm text-muted leading-relaxed">{item.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    )
+  }
+
+  {
+    faqSection.items?.length > 0 && (
+      <section class="bg-gray-50 dark:bg-slate-900 py-16 px-6">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl font-bold text-center mb-12">{faqSection.title}</h2>
+          <div class="space-y-4">
+            {faqSection.items.map((item: any) => (
+              <details class="group rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-5">
+                <summary class="font-semibold cursor-pointer list-none flex items-center justify-between gap-4">
+                  {item.q}
+                  <span class="text-sky-600 dark:text-sky-400 transition-transform group-open:rotate-45">+</span>
+                </summary>
+                <p class="mt-3 text-sm text-muted leading-relaxed">{item.a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  {
+    cta.title && (
+      <section class="px-6 sm:px-6 py-20 text-center bg-gradient-to-br from-gray-900 to-gray-800 text-white">
+        <h2 class="text-3xl md:text-4xl font-bold">{cta.title}</h2>
+        {cta.subtitle && <p class="mt-4 text-lg text-white/70 max-w-2xl mx-auto">{cta.subtitle}</p>}
+        <div class="mt-10 flex items-center justify-center gap-4 flex-wrap">
+          {cta.actions?.map((action: any) => (
+            <a
+              href={action.href}
+              class={`inline-flex items-center gap-2 px-8 py-4 font-semibold rounded-full shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5 ${action.variant === 'primary' ? 'bg-[#fb923c] hover:bg-orange-600 text-white' : 'border-2 border-white/30 text-white hover:bg-white/10'}`}
+            >
+              {action.text} {action.variant === 'primary' ? '<span>→</span>' : ''}
+            </a>
+          ))}
+        </div>
+      </section>
+    )
+  }
+
+  <JsonLd
+    type="FAQPage"
+    faqs={(faqSection.items ?? []).map((item: any) => ({ question: item.q, answer: item.a }))}
+  />
+</Layout>
+
+<script is:inline>
+  (function () {
+    const grid = document.querySelector('[data-selector-grid]');
+    if (!grid) return;
+    const boardsEl = document.querySelector('[data-selector-boards]');
+    const totalEl = document.querySelector('[data-selector-total]');
+    const sendBtn = document.querySelector('[data-selector-send]');
+    const resetBtn = document.querySelector('[data-selector-reset]');
+    const INQUIRY_HREF = '/wholesale-paddle-boards#inquiry';
+
+    function getSelection() {
+      const items = [];
+      let boards = 0;
+      let total = 0;
+      grid.querySelectorAll('[data-selector-item]').forEach(function (item) {
+        const input = item.querySelector('[data-qty-input]');
+        if (!(input instanceof HTMLInputElement)) return;
+        const qty = Math.max(0, Math.min(50, parseInt(input.value, 10) || 0));
+        if (qty > 0) {
+          const price = parseInt(item.getAttribute('data-price') || '0', 10) || 0;
+          items.push({ name: item.getAttribute('data-name') || '', qty: qty, price: price });
+          boards += qty;
+          total += qty * price;
+        }
+      });
+      return { models: items, boards: boards, total: total };
+    }
+
+    function render() {
+      const sel = getSelection();
+      if (boardsEl) boardsEl.textContent = String(sel.boards);
+      if (totalEl) totalEl.textContent = '$' + sel.total.toLocaleString('en-US');
+      if (sendBtn instanceof HTMLButtonElement) {
+        sendBtn.disabled = sel.boards < 1;
+        sendBtn.setAttribute('aria-disabled', sel.boards < 1 ? 'true' : 'false');
+      }
+    }
+
+    grid.addEventListener('input', function (e) {
+      if (e.target instanceof HTMLInputElement && e.target.hasAttribute('data-qty-input')) render();
+    });
+    grid.addEventListener('click', function (e) {
+      if (!(e.target instanceof HTMLElement)) return;
+      const item = e.target.closest('[data-selector-item]');
+      if (!item) return;
+      const input = item.querySelector('[data-qty-input]');
+      if (!(input instanceof HTMLInputElement)) return;
+      if (e.target.hasAttribute('data-qty-plus')) {
+        input.value = String(Math.min(50, (parseInt(input.value, 10) || 0) + 1));
+        render();
+      } else if (e.target.hasAttribute('data-qty-minus')) {
+        input.value = String(Math.max(0, (parseInt(input.value, 10) || 0) - 1));
+        render();
+      }
+    });
+
+    if (resetBtn instanceof HTMLElement) {
+      resetBtn.addEventListener('click', function () {
+        grid.querySelectorAll('[data-qty-input]').forEach(function (input) {
+          if (input instanceof HTMLInputElement) input.value = '0';
+        });
+        render();
+      });
+    }
+
+    if (sendBtn instanceof HTMLElement) {
+      sendBtn.addEventListener('click', function () {
+        const sel = getSelection();
+        if (sel.boards < 1) return;
+        try {
+          sessionStorage.setItem('pbo_mixed_selection', JSON.stringify(sel));
+        } catch (e) {
+          /* sessionStorage unavailable — continue, the form can be filled manually */
+        }
+        window.location.href = INQUIRY_HREF;
+      });
+    }
+
+    render();
+  })();
+</script>
