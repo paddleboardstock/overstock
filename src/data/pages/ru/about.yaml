@@ -1,141 +1,103 @@
 hero:
-  tagline: About us
+  tagline: О нас
   image:
     src: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/factory/paddleboardoverstock-factory-building.webp
-    alt: Paddle Board Overstock factory and workshop
-  title: |
-    Marine engineering, <br />
-    built the <span class="text-accent dark:text-white">Paddle Board Overstock</span> way
-  subtitle: "We started in a coastal workshop with one board and a stubborn belief: boards should be engineered like they matter, because they do. Today we ship to over 50 countries, but every board still passes through the same hands that started the company."
+    alt: Фабрика и мастерская Overstock для весла
+  title: О <span class="text-accent dark:text-white">Overstock лопастной доски</span>
+  subtitle: Совершенно новые надувные доски SUP по ценам распродажи и распродажи — при поддержке нашего собственного производства в Weihai с 2012 года, оптовой продажи смешанных моделей для небольших розничных продавцов и гибкой доставки по всему миру.
 stats:
-  title: By the numbers
+  title: По цифрам
   columns: 4
   stats:
-    - title: Boards built
-      amount: 15,000+
-    - title: Countries shipped
+    - title: Годовая производственная мощность
+      amount: 15,000 units
+    - title: Страны отгрузки
       amount: 50+
-    - title: Years of combined experience
-      amount: "60"
-    - title: Average warranty response (hours)
-      amount: "24"
+    - title: Щиты, испытанные под давлением
+      amount: 100%
+    - title: Инженеры НИОКР
+      amount: 14+
 features3_what_we_build:
   title: What we build
-  subtitle: A focused product line that we know inside out — no half-finished experiments, no badge-engineering.
+  subtitle: Целенаправленная линейка продуктов, которую мы знаем наизнанку — никаких полузаконченных экспериментов, никакого бейдж-инжиниринга.
   columns: 3
   isBeforeContent: true
   items:
-    - title: Inflatable SUP boards
-      description: All-around and touring SUPs from 10' to 12 ft. Stable, rigid, and complete with pump, paddle, and leash.
+    - title: Надувные доски SUP
+      description: Универсальные и туристические SUP от 10 до 12 футов. Стабильный, жесткий и в комплекте с насосом, лопастью и поводком.
       icon: tabler:swimming
-    - title: Art series decks
-      description: Signature EVA deck artwork — Cheetah Surge, Tropical Breeze, Medusa Glow, and more.
+    - title: Колоды для арт-сериалов
+      description: Фирменные шедевры EVA — Cheetah Surge, Tropical Breeze, Medusa Glow и многое другое.
       icon: tabler:hexagons
-    - title: Complete packages
-      description: "Every board ships as a full kit: board, backpack, pump, paddle, fin, leash, and repair kit."
+    - title: Полные пакеты
+      description: 'Каждый борт поставляется в виде полного комплекта: борт, рюкзак, насос, весло, плавник, поводок и комплект для ремонта.'
       icon: tabler:package
 features3_more:
   columns: 3
   isAfterContent: true
   items:
-    - title: Accessories
-      description: Pumps, paddles, leashes, repair kits, and dry-bags. All matched to our boards.
+    - title: Аксессуары
+      description: Насосы, лопасти, поводки, ремонтные комплекты и сухие мешки. Все совпало с нашими досками.
       icon: tabler:tool
-    - title: Care & repair
-      description: In-house repair support, spare parts, and maintenance guidance to keep your board on the water for years.
+    - title: Уход И ремонт
+      description: Внутренняя поддержка ремонта, запасные части и руководство по техническому обслуживанию, чтобы держать вашу доску на воде в течение многих лет.
       icon: tabler:settings
-    - title: Club & rental fleets
-      description: Bulk outfitting for clubs, schools, and rental fleets with direct factory support.
+    - title: Клубные и арендные автопарки
+      description: Оптовая экипировка для клубов, школ и арендных парков с прямой поддержкой завода.
       icon: tabler:users
   image:
     src: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/factory/paddleboardoverstock-design-discussion-2.webp
-    alt: Board design and engineering discussion
+    alt: Обсуждение дизайна и проектирования доски
 steps2_values:
-  title: Our values
-  subtitle: Three principles that have shaped every product since day one.
+  title: 'Наши ценности '
+  subtitle: Три принципа, которые формировали каждый продукт с первого дня.
   items:
-    - title: Build like it carries your family
-      description: Every board, seam, and valve is treated as if our own families will use it.
+    - title: Стройте так, как будто он несет вашу семью
+      description: Каждая доска, шов и клапан обрабатываются так, как если бы их использовали наши собственные семьи.
       icon: tabler:heart
-    - title: Engineer before we sell
-      description: If a spec is wrong, we change the spec — never the customer.
+    - title: Инженер перед продажей
+      description: Если спецификация неверна, мы меняем спецификацию, а не клиента.
       icon: tabler:settings
-    - title: Support that outlasts the warranty
-      description: Boards we built years ago still call us for spare parts, and we still pick up.
+    - title: Поддержка, которая продлевает гарантию
+      description: Доски, которые мы построили много лет назад, все еще вызывают нас за запасными частями, и мы все еще их забираем.
       icon: tabler:headset
 steps2_milestones:
-  title: Milestones
-  subtitle: A short version of the Paddle Board Overstock story.
+  title: Контрольные этапы
+  subtitle: Краткая версия истории Paddle Board Overstock.
   isReversed: true
   items:
-    - title: Founded in a coastal workshop
-      description: Started by two naval architects with a CNC mill and a stubborn idea.
+    - title: Основана в Вэйхае
+      description: Прибрежная мастерская, посвященная надувным доскам SUP с вышивкой.
       icon: tabler:building-factory
-    - title: First 10,000 boards built
-      description: Reached through word of mouth and repeat customers.
+    - title: Производственный кампус площадью 12 000 м²
+      description: Расширение до специализированного объекта с производственными мощностями по сварке и прошивке в радиочастотном диапазоне.
       icon: tabler:circle-check
-    - title: International export programme
-      description: Now shipping to 50+ countries with localised support partners on five continents.
+    - title: Международная экспортная программа
+      description: Теперь доставка в более чем50 стран с возможностью экспресс-доставки и морских перевозок.
       icon: tabler:world
-    - title: A new global operating structure
-      description: In September 2026, brand operations moved from Qingdao Vatrad Group to Weihai Dongjilian Co., Ltd.; the Weihai manufacturing hub continues R&D, production, and factory-direct shipping.
+    - title: Overstock & оптовая торговля
+      description: В сентябре 2026 года операции бренда перешли из Qingdao Vatrad Group в Weihai Dongjilian Co., Ltd.; производственный центр Weihai продолжает исследования и разработки, производство и прямую доставку на завод.
       icon: tabler:building-skyscraper
 features2_locations:
-  title: Our locations
-  tagline: Find us
+  title: Наши офисы
+  tagline: Обращайтесь к нам
   columns: 3
   items:
-    - title: Headquarters & workshop
-      description: Coastal industrial park, building 4 — open Mon–Fri for visits by appointment.
-    - title: EU service centre
-      description: Mediterranean port — refit, repair and warranty support for European customers.
+    - title: Штаб-квартира и мастерская
+      description: Прибрежный индустриальный парк, корпус 4 — открыт пн-пт для посещения по предварительной записи.
+    - title: Сервисный центр
+      description: Средиземноморский порт — переоборудование, ремонт и гарантийная поддержка для европейских клиентов.
     - title: APAC partner network
-      description: Authorised service partners in Australia, Japan, Singapore and Hong Kong.
-brand_hub_tagline: Brand
-brand_hub_title: Explore Our Brand
-brand_hub_subtitle: Dive deeper into our marine engineering expertise, global presence, and the principles that drive us.
+      description: Авторизованные сервисные партнеры в Австралии, Японии, Сингапуре и Гонконге.
+brand_hub_tagline: Марка
+brand_hub_title: Познакомьтесь с нашим брендом
+brand_hub_subtitle: Погрузитесь глубже в наш опыт в области морской инженерии, глобальное присутствие и принципы, которыми мы руководствуемся.
 brand_hub_cards:
-  - title: Marine Expertise
-    desc: Decades of material science, precision manufacturing, and real-world testing — from drop-stitch cores to welded seams and art-series decks.
+  - title: Морская экспертиза
+    desc: Десятилетия материаловедения, точного производства и реальных испытаний — от стержней с вышивкой до сварных швов и палуб художественных серий.
     link: /brand-marine-expertise
-    link_label: Learn more →
-  - title: Why Paddle Board Overstock
-    desc: Factory-direct pricing, 100% pressure-tested boards, and a 2-year warranty — built for paddlers, families, and water sports lovers.
+    link_label: Подробнее
+  - title: Почему Сапсерфинг Overstock
+    desc: Прямое ценообразование на заводе-изготовителе, 100% доски, испытанные под давлением, и 2-летняя гарантия — созданы для гребцов, семей и любителей водных видов спорта.
     link: /brand-why-paddleboardoverstock
-    link_label: Learn more →
-production_section:
-  tagline: Production Excellence
-  title: Ensuring Exquisite Craftsmanship
-  description: The Paddle Board Overstock production line is dedicated to producing high-quality, durable, and high-performance inflatable SUP boards.
-  cards:
-    - title: Experienced Technician Team
-      items:
-        - Professional knowledge of PVC, drop-stitch, and marine-grade materials
-        - Precise craftsmanship in cutting, bonding, and accessory installation
-        - Continuous training to master latest production technologies
-    - title: Advanced Production Equipment
-      items:
-        - CNC cutting equipment for precise fabric cutting with minimal error
-        - High-precision heat/cold bonding for airtight, durable seams
-        - Professional airtightness and tensile testing equipment
-    - title: Mature Management System
-      items:
-        - Standardized production processes with clear quality standards
-        - Lean production philosophy reducing waste and improving efficiency
-        - Efficient supply chain management with reliable supplier partnerships
-    - title: Strict Quality Control
-      items:
-        - Documented quality management across every production stage
-        - "Multi-stage inspection: raw material, in-process, final outgoing"
-        - Strict airtightness and durability testing before shipping
-global_ops_section:
-  tagline: Global Operation Architecture
-  title_html: One brand, <span class="text-white/90">two hubs</span>
-  description_html: Since September 2026, Paddle Board Overstock has been operated by <strong class="text-white">Weihai Dongjilian Co., Ltd.</strong> — the global entity for distribution, sales, contracts, billing, and after-sales. R&D, production, and quality control remain at the <strong class="text-white">Paddle Board Overstock Weihai Manufacturing Hub</strong>, which ships every order factory-direct from Weihai. The transition changed who signs your contract — not who builds your board.
-  stats:
-    - value: 15,000+
-      label: Boards delivered globally
-    - value: 50+
-      label: Countries exported
-    - value: 10+
-      label: Years of manufacturing
+    link_label: Подробнее

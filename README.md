@@ -579,8 +579,8 @@ Page content → YAML data → Auto-generated `src/i18n/generated/pages/*.ts` (p
 
 | Script                                | Purpose                                                                         | Flags                  |
 | ------------------------------------- | ------------------------------------------------------------------------------- | ---------------------- |
-| `scripts/translate-i18n-keys.mjs`     | Translate sameAsEn i18n keys via Google Translate (primary) + MyMemory (backup) | `--dry-run`, `--force` |
-| `scripts/translate-pages.mjs`         | Translate page YAML content via Google Translate (primary) + MyMemory (backup)  | `--dry-run`, `--force` |
+| `scripts/translate-i18n-keys.mjs`     | Translate sameAsEn i18n keys (Bing engine via shared `lib/translate-lib.mjs`, batched + masked, resumable cache) | `--dry-run`            |
+| `scripts/translate-pages.mjs`         | Translate page YAML content (Bing engine via shared `lib/translate-lib.mjs`, batched + masked, resumable cache)  | `--dry-run`, `--force` |
 | `scripts/fill-missing-i18n-keys.mjs`  | Fill missing i18n keys with EN copy (fallback before translation)               | —                      |
 | `scripts/fill-missing-page-yamls.mjs` | Create missing page YAMLs from EN copy                                          | —                      |
 | `scripts/check-translations.mjs`      | Verify i18n key alignment across all 14 languages                               | —                      |

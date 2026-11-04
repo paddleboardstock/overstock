@@ -335,8 +335,8 @@ product.pageDesc   → (所有语言文件中缺失, 从未被提取脚本生成
 
 | 脚本                                  | 用途                                                    | 标志                   |
 | ------------------------------------- | ------------------------------------------------------- | ---------------------- |
-| `scripts/translate-i18n-keys.mjs`     | 翻译 sameAsEn i18n 键 (Google Translate主 + MyMemory备) | `--dry-run`, `--force` |
-| `scripts/translate-pages.mjs`         | 翻译 page YAML 内容 (Google Translate主 + MyMemory备)   | `--dry-run`, `--force` |
+| `scripts/translate-i18n-keys.mjs`     | 翻译 sameAsEn i18n 键 (Bing 引擎，共享 `lib/translate-lib.mjs`，批量+掩码+可续跑缓存) | `--dry-run`            |
+| `scripts/translate-pages.mjs`         | 翻译 page YAML 内容 (Bing 引擎，共享 `lib/translate-lib.mjs`，批量+掩码+可续跑缓存)   | `--dry-run`, `--force` |
 | `scripts/fill-missing-i18n-keys.mjs`  | 用 EN 副本填充缺失 i18n 键 (翻译前 fallback)            | —                      |
 | `scripts/fill-missing-page-yamls.mjs` | 用 EN 副本创建缺失 page YAML                            | —                      |
 | `scripts/check-translations.mjs`      | 校验 14 语言 i18n 键对齐                                | —                      |

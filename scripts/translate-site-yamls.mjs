@@ -196,7 +196,10 @@ function restore(text, tokens) {
 }
 
 // --- stale B2B terms (must never survive) ---------------------------------------
-const FORBIDDEN = /Qingdao|BSCI|64 CE|AirDeck|\bRIB\b|\bRIBs\b|Hypalon|[Kk]ayak|[Kk]ajak|[Dd]inghy|Bootsgarantie/;
+// Word-bounded + plurals: "kajakarzom" (PL for "paddlers") is legitimate, but a
+// stray "kayak"/"kajak" product mention must still be caught.
+const FORBIDDEN =
+  /Qingdao|BSCI|64 CE|AirDeck|\bRIB\b|\bRIBs\b|Hypalon|\b[Kk]ayaks?\b|\b[Kk]ajaks?\b|\b[Dd]inghys?\b|Bootsgarantie/;
 
 // --- Bing session ---------------------------------------------------------------
 let ig = null,
