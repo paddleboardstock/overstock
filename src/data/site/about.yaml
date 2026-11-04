@@ -1,42 +1,64 @@
-origin:
-  tagline: 'Our Origin'
-  heading: "Built on the water,<br />\n<span class=\"text-sky-600\">driven by purpose</span>"
+business_model:
+  tagline: 'Our Business Model'
+  heading: 'Overstock inventory, sold factory-direct'
   paragraphs:
-    - 'Paddle Board Overstock started in a coastal workshop with one board and a stubborn belief: marine products should be engineered like they matter — because they do.'
-    - 'Our founders, two naval architects, saw an industry where corners were cut, materials were downgraded, and safety was treated as a checkbox. They built the first Paddle Board Overstock hull not for profit, but to prove that affordable marine gear could also be genuinely reliable.'
-    - 'That first hull is still in service today. That principle never changed.'
-    - 'We are not the biggest manufacturer. We do not make the cheapest products. But every hull that leaves our workshop passes through the same hands that started the company — and meets the same standard that first hull set.'
-  image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/hero/tech-meeting-small.webp
-  image_alt: 'Paddle Board Overstock coastal workshop'
+    - 'Paddle Board Overstock sells brand-new inflatable SUP boards at overstock and clearance prices — up to 60% off typical retail. We source surplus and excess inventory in volume, then pass the savings on to paddlers and small retailers.'
+    - 'Alongside retail sales we serve small retailers with mixed-model wholesale: order 5–20 boards, mix any models in one shipment, and pay the wholesale tier for the total quantity. Every order ships direct from Weihai, China.'
 
-philosophy:
-  tagline: 'Our Philosophy'
-  heading: 'Rooted in the ocean'
-  description: 'The ocean is not our workplace. It is our teacher. Every design decision starts with understanding how water behaves, how conditions change, and how gear must respond.'
-  cards:
-    - emoji: "\U0001F30A"
-      title: 'Respect the Water'
-      description: 'Water is unpredictable. Our products are engineered for the worst conditions, not the best. If a hull can handle a riptide, it will handle a lake. If a life vest works offshore, it is over-engineered for a river — and that is intentional.'
-    - emoji: "\U0001F527"
-      title: 'Built to Last, Not to Replace'
-      description: 'The most sustainable product is the one that does not need replacing. Marine-grade PVC and drop-stitch construction are chosen for longevity. We still ship spare parts for hulls we built a decade ago.'
-    - emoji: "\U0001F3C6"
-      title: 'Accessible by Design'
-      description: 'Water sports should not be a luxury. We engineer products that deliver professional-grade performance at a price that makes sense for families, guides, and small operators — not just commercial fleets.'
-
-design:
-  tagline: 'Design Philosophy'
-  heading: "Engineered for the edge<br />\n<span class=\"text-sky-600\">of conditions</span>"
+sourcing:
+  tagline: 'Where Our Overstock Inventory Comes From'
+  heading: 'Mixed sourcing, one quality standard'
   paragraphs:
-    - 'Every Paddle Board Overstock product starts with one question: <em>what is the worst condition this will face?</em> We design from the edge inward, not from the center outward.'
-    - 'Our drop-stitch cores are rated for 15 PSI — not because 12 PSI is insufficient for a lake, but because a 15 PSI board handles a sudden chop without flexing. Our rail materials are specified for commercial-grade UV resistance — not because every customer paddles in the tropics, but because UV degradation is the #1 cause of premature failure.'
-    - 'We do not design to a price point. We design to a failure point — then build well above it.'
-  image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/hero/paddleboardoverstock-hero-design-concept.webp
-  image_alt: 'Paddle Board Overstock design and engineering'
+    - 'Our inventory comes from two sources: surplus production batches from our own Weihai manufacturing operations, and selected excess inventory sourced from other production partners we audit and work with directly.'
+    - 'Every board we sell is brand-new and unused. Overstock refers to the price — never the condition.'
+
+manufacturing:
+  tagline: 'Our Manufacturing Background'
+  heading: 'Built in Weihai since 2012'
+  paragraphs:
+    - 'We have manufactured inflatable SUP boards in Weihai, Shandong since 2012. Our 12,000 m² production facility turns out 15,000 inflatable units per year with a team of 200–300 workers and 14+ R&D engineers.'
+    - 'One design principle has not changed since the first board: we design to a failure point, then build well above it.'
+  image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/factory/paddleboardoverstock-factory-building.webp
+  image_alt: 'Paddle Board Overstock factory building in Weihai'
   stats:
-    - value: '15'
-      label: 'PSI core<br />rating'
-    - value: '1,500+'
-      label: 'UV hours<br />tested'
-    - value: '10yr'
-      label: 'hull<br />lifespan'
+    - value: '2012'
+      label: 'Manufacturing since'
+    - value: '12,000 m²'
+      label: 'Production facility'
+    - value: '15,000'
+      label: 'Units per year'
+    - value: '14+'
+      label: 'R&D engineers'
+
+inspection:
+  tagline: 'How We Inspect Every SUP Board'
+  heading: 'Every board tested, not sampled'
+  paragraphs:
+    - 'Every SUP board is 100% pressure-tested at 1.25x its rated pressure for 24–48 hours before it is approved for sale. Boards that fail never ship.'
+    - '99.3% of boards pass final inspection the first time. The remaining fraction is repaired or set aside — never discounted into an order.'
+
+why_prices_lower:
+  tagline: 'Why Our Prices Are Lower'
+  heading: 'Overstock economics, not cut corners'
+  paragraphs:
+    - 'Our prices are lower for structural reasons: we sell overstock and surplus inventory direct from Weihai, with no retail markups, no distributor layers, and no showroom costs.'
+    - 'The boards themselves are full-production quality — same drop-stitch cores, same marine-grade PVC, same testing as full-price retail.'
+
+shipping_network:
+  tagline: 'Our International Shipping Network'
+  heading: 'Express air or consolidated sea freight'
+  paragraphs:
+    - 'Orders ship from Weihai, China. Express air freight carries samples and 1–3 board orders; consolidated sea freight serves 5–20 board wholesale orders to 50+ countries.'
+    - 'Every quote includes a transit estimate for your destination, plus the commercial invoice and packing list required for customs clearance.'
+  cards:
+    - title: 'Express Air Freight'
+      description: 'For samples and 1–3 board orders — fast delivery to your door, quoted per destination.'
+    - title: 'Consolidated Sea Freight'
+      description: 'For 5–20 board wholesale orders — cost-effective shipping to major ports, quoted per destination.'
+
+warranty_support:
+  tagline: 'Warranty & Customer Support'
+  heading: 'A 2-Year SUP Warranty on every board'
+  paragraphs:
+    - 'Every board ships with the 2-Year SUP Warranty. If a covered defect appears within the warranty period, contact our support team and we will make it right.'
+    - 'Support is handled by the same team that manages your order. Reach us any time through the contact form or by replying to your order confirmation.'
