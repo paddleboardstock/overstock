@@ -282,7 +282,7 @@ export const faqs: FaqRecord[] = [
       id: 'company-model',
       question: 'Is Paddle Board Overstock a trading company or a manufacturer?',
       answer:
-        'Neither a pure factory nor a trading company — Weihai Dongjilian Co., Ltd. is a brand company with its own manufacturing base. Weihai Dongjilian Co., Ltd. handles global distribution, contracts, billing, and after-sales, while the Paddle Board Overstock Weihai Manufacturing Hub runs R&D, production, and quality control in our own 12,000 m² facility. No middlemen: every order ships factory-direct.',
+        'Neither a pure factory nor a trading company — Weihai Dongjilian Co., Ltd. is a brand company with its own Weihai manufacturing base. Our overstock inventory comes from surplus production batches of our own manufacturing plus selected excess inventory sourced from other production partners we audit. Alongside retail sales we run mixed-model wholesale for small retailers: 5–20 boards, any models mixed in one shipment, priced by total quantity. Every order ships factory-direct from Weihai — no middlemen.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],

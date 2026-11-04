@@ -276,7 +276,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'company-model',
       question: 'Is Paddle Board Overstock a trading company or a manufacturer?',
       answer:
-        'Neither a pure factory nor a trading company — Weihai Dongjilian Co., Ltd. is a brand company with its own manufacturing base. Weihai Dongjilian Co., Ltd. handles global distribution, contracts, billing, and after-sales, while the Paddle Board Overstock Weihai Manufacturing Hub runs R&D, production, and quality control in our own 12,000 m² facility. No middlemen: every order ships factory-direct.',
+        'Neither a pure factory nor a trading company — Weihai Dongjilian Co., Ltd. is a brand company with its own Weihai manufacturing base. Our overstock inventory comes from surplus production batches of our own manufacturing plus selected excess inventory sourced from other production partners we audit. Alongside retail sales we run mixed-model wholesale for small retailers: 5–20 boards, any models mixed in one shipment, priced by total quantity. Every order ships factory-direct from Weihai — no middlemen.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -566,7 +566,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'company-model',
       question: 'Ist Paddle Board Overstock ein Handelsunternehmen oder ein Hersteller?',
       answer:
-        'Weder eine reine Fabrik noch ein Handelsunternehmen — Weihai Dongjilian Co., Ltd. ist ein Markenunternehmen mit eigener Fertigungsbasis. Weihai Dongjilian Co., Ltd. verantwortet globale Vertriebs-, Vertrags-, Abrechnungs- und After-Sales-Abläufe, während der Paddle Board Overstock Fertigungsstandort Weihai F&E, Produktion und Qualitätskontrolle in unserer eigenen 12.000 m² Anlage übernimmt. Keine Zwischenhändler: jede Bestellung wird direkt ab Werk versandt.',
+        'Weder eine reine Fabrik noch ein Handelsunternehmen — Weihai Dongjilian Co., Ltd. ist ein Markenunternehmen mit eigener Fertigungsbasis in Weihai. Unser Overstock-Lagerbestand stammt aus Überschussproduktionschargen unserer eigenen Fertigung sowie aus ausgewähltem Überschussbestand anderer geprüfter Produktionspartner. Neben dem Einzelvertrieb betreiben wir Mixed-Model-Großhandel für kleine Händler: 5–20 Boards, beliebige Modelle in einer Sendung gemischt, Preis nach Gesamtmenge. Jede Bestellung wird direkt ab Werk aus Weihai versandt — ohne Zwischenhändler.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -856,7 +856,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'company-model',
       question: '¿Es Paddle Board Overstock una empresa comercial o un fabricante?',
       answer:
-        'Ni una simple fábrica ni una empresa comercial: Weihai Dongjilian Co., Ltd. es una empresa de marca con su propia base de producción. Weihai Dongjilian Co., Ltd. gestiona la distribución global, los contratos, la facturación y la posventa, mientras que el centro de producción de Paddle Board Overstock en Weihai se encarga de la I+D, la producción y el control de calidad en nuestra propia planta de 12 000 m². Sin intermediarios: cada pedido se envía directamente de fábrica.',
+        'Ni una simple fábrica ni una empresa comercial: Weihai Dongjilian Co., Ltd. es una empresa de marca con su propia base de producción en Weihai. Nuestro inventario overstock procede de lotes de producción excedentarios de nuestra propia fabricación y de excedentes seleccionados de otros socios de producción auditados. Junto a las ventas al por menor ofrecemos venta al por mayor de modelos mixtos para pequeños minoristas: 5-20 tablas, cualquier modelo mezclado en un solo envío, precio según la cantidad total. Cada pedido se envía directamente de fábrica desde Weihai — sin intermediarios.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -1146,7 +1146,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'company-model',
       question: 'Paddle Board Overstock est-il une société de négoce ou un fabricant ?',
       answer:
-        'Ni une simple usine, ni une société de négoce — Weihai Dongjilian Co., Ltd. est une société de marque disposant de sa propre base de production. Weihai Dongjilian Co., Ltd. gère la distribution mondiale, les contrats, la facturation et le service après-vente, tandis que le centre de production Paddle Board Overstock de Weihai assure la R&D, la production et le contrôle qualité dans notre propre site de 12 000 m². Aucun intermédiaire : chaque commande est expédiée directement depuis l’usine.',
+        'Ni une simple usine, ni une société de négoce — Weihai Dongjilian Co., Ltd. est une société de marque disposant de sa propre base de production à Weihai. Notre stock overstock provient de lots de production excédentaires de notre propre fabrication et d’excédents sélectionnés auprès d’autres partenaires de production audités. À côté de la vente au détail, nous proposons de la vente en gros à modèles mixtes pour les petits détaillants : 5-20 planches, tous modèles mélangés en une seule expédition, tarification selon la quantité totale. Chaque commande est expédiée directement depuis l’usine de Weihai — sans intermédiaires.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -1437,7 +1437,7 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
       id: 'company-model',
       question: 'Paddle Board Overstock è una società commerciale o un produttore?',
       answer:
-        'Né una semplice fabbrica né una società commerciale: Weihai Dongjilian Co., Ltd. è un’azienda di marca con una propria base produttiva. Weihai Dongjilian Co., Ltd. gestisce la distribuzione globale, i contratti, la fatturazione e l’assistenza post-vendita, mentre l’hub produttivo Paddle Board Overstock di Weihai si occupa di R&S, produzione e controllo qualità nel nostro stabilimento di 12.000 m². Nessun intermediario: ogni ordine viene spedito direttamente dallo stabilimento.',
+        'Né una semplice fabbrica né una società commerciale: Weihai Dongjilian Co., Ltd. è un’azienda di marca con una propria base produttiva a Weihai. Il nostro inventario overstock proviene da lotti di produzione in eccesso della nostra stessa fabbricazione e da eccedenze selezionate di altri partner di produzione da noi verificati. Accanto alla vendita al dettaglio offriamo la vendita all’ingrosso a modelli misti per i piccoli rivenditori: 5-20 tavole, qualsiasi modello misto in un’unica spedizione, prezzo in base alla quantità totale. Ogni ordine viene spedito direttamente dallo stabilimento di Weihai — senza intermediari.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
