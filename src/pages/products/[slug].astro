@@ -727,6 +727,73 @@ const productExtraData: Record<string, unknown> = {
     )
   }
 
+  {/* Why Buy This Overstock — overstock deal card */}
+  <section class="bg-gray-50/50 dark:bg-slate-900/50 border-b border-gray-100 dark:border-slate-800">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 py-10 md:py-14">
+      <div class="rounded-2xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 overflow-hidden">
+        <div class="px-6 py-5 border-b border-gray-100 dark:border-slate-700">
+          <h2 class="text-xl md:text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100">
+            {product.category === 'sup' ? 'Why Buy This Overstock SUP Board?' : 'Why Buy This Overstock SUP Accessory?'}
+          </h2>
+        </div>
+        <dl class="text-sm divide-y divide-gray-100 dark:divide-slate-700">
+          <div class="flex flex-wrap gap-x-4 gap-y-1 px-6 py-3.5">
+            <dt class="w-40 shrink-0 font-semibold text-gray-700 dark:text-slate-300">Condition</dt>
+            <dd class="text-gray-600 dark:text-slate-400">Brand-new</dd>
+          </div>
+          <div class="flex flex-wrap gap-x-4 gap-y-1 px-6 py-3.5">
+            <dt class="w-40 shrink-0 font-semibold text-gray-700 dark:text-slate-300">Inventory</dt>
+            <dd class="text-gray-600 dark:text-slate-400">Limited available stock</dd>
+          </div>
+          {
+            product.category === 'sup' && (
+              <div class="flex flex-wrap gap-x-4 gap-y-1 px-6 py-3.5">
+                <dt class="w-40 shrink-0 font-semibold text-gray-700 dark:text-slate-300">Package</dt>
+                <dd class="text-gray-600 dark:text-slate-400">Complete SUP package</dd>
+              </div>
+            )
+          }
+          <div class="flex flex-wrap gap-x-4 gap-y-1 px-6 py-3.5">
+            <dt class="w-40 shrink-0 font-semibold text-gray-700 dark:text-slate-300">Warranty</dt>
+            <dd class="text-gray-600 dark:text-slate-400">2 years</dd>
+          </div>
+          <div class="flex flex-wrap gap-x-4 gap-y-1 px-6 py-3.5">
+            <dt class="w-40 shrink-0 font-semibold text-gray-700 dark:text-slate-300">Shipping</dt>
+            <dd class="text-gray-600 dark:text-slate-400">
+              International delivery available ·{' '}
+              <a href="/international-shipping/" class="font-medium text-sky-600 dark:text-sky-400 hover:underline">
+                International Shipping
+              </a>
+            </dd>
+          </div>
+        </dl>
+        {
+          product.grade === 'A' && (
+            <div class="flex items-start gap-2 px-6 py-4 border-t border-gray-100 dark:border-slate-700 bg-green-50/60 dark:bg-slate-900/40">
+              <span class="text-green-600 text-lg leading-none">&#10003;</span>
+              <p class="text-sm text-gray-600 dark:text-slate-400">
+                Grade A: brand-new overstock — factory-sealed packaging, zero defects, first-quality goods.
+              </p>
+            </div>
+          )
+        }
+        {
+          product.category === 'sup' && (
+            <div class="flex flex-wrap items-center justify-between gap-3 px-6 py-4 border-t border-gray-100 dark:border-slate-700 bg-sky-50/60 dark:bg-slate-900/40">
+              <p class="text-sm font-medium text-gray-700 dark:text-slate-300">Need 5+ boards?</p>
+              <a
+                href="/wholesale-paddle-boards/"
+                class="inline-flex items-center gap-1 text-sm font-semibold text-sky-600 dark:text-sky-400 hover:underline"
+              >
+                Request wholesale pricing <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+          )
+        }
+      </div>
+    </div>
+  </section>
+
   {/* Materials & Construction */}
   {
     rec && rec.ai_specs && (
