@@ -113,7 +113,11 @@ const metadata = {
     </div>
   </section>
 
-  <Tldr summary={directAnswer || `Brand-new overstock SUP boards for ${marketName} businesses.`} points={page.tldr_points ?? []} className="max-w-5xl mx-auto my-10 px-6" />
+  <Tldr
+    summary={directAnswer || `Brand-new overstock SUP boards for ${marketName} businesses.`}
+    points={page.tldr_points ?? []}
+    className="max-w-5xl mx-auto my-10 px-6"
+  />
 
   {
     overviewSection.paragraphs?.length > 0 && (
