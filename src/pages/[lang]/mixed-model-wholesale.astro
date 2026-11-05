@@ -38,16 +38,10 @@ const supProducts = (await getProducts()).filter((p) => p.category === 'sup');
 
 const localizeHref = (href: string) => (href.startsWith('/') ? `/${lang}${href}` : href);
 
-const crumbs = [
-  { name: t('nav.home'), href: `/${lang}/` },
-  { name: hero.tagline || 'Mixed Model Wholesale' },
-];
+const crumbs = [{ name: t('nav.home'), href: `/${lang}/` }, { name: hero.tagline || 'Mixed Model Wholesale' }];
 
 const metadata = {
-  title: localizePageTitle(
-    page,
-    `Mixed Model Wholesale Paddle Boards – Mix Different SUP Models | ${SITE.name}`
-  ),
+  title: localizePageTitle(page, `Mixed Model Wholesale Paddle Boards – Mix Different SUP Models | ${SITE.name}`),
   description:
     hero.subtitle?.slice(0, 160) ||
     'Mix different SUP models in one wholesale order. Any in-stock combination, from 5 boards total, shipped express or by sea.',
@@ -160,7 +154,9 @@ const metadata = {
                 </tr>
               ))}
               <tr class="bg-gray-50 dark:bg-slate-800 font-semibold">
-                <td class="px-4 py-3" colspan="2">{exampleLabels.total_row ?? 'Order Total'}</td>
+                <td class="px-4 py-3" colspan="2">
+                  {exampleLabels.total_row ?? 'Order Total'}
+                </td>
                 <td class="px-4 py-3 text-right">10</td>
                 <td class="px-4 py-3" />
                 <td class="px-4 py-3 text-right">$4,340</td>
@@ -326,10 +322,7 @@ const metadata = {
     )
   }
 
-  <JsonLd
-    type="FAQPage"
-    faqs={(faqSection.items ?? []).map((item: any) => ({ question: item.q, answer: item.a }))}
-  />
+  <JsonLd type="FAQPage" faqs={(faqSection.items ?? []).map((item: any) => ({ question: item.q, answer: item.a }))} />
 </Layout>
 
 <script is:inline>
@@ -340,8 +333,7 @@ const metadata = {
     const totalEl = document.querySelector('[data-selector-total]');
     const sendBtn = document.querySelector('[data-selector-send]');
     const resetBtn = document.querySelector('[data-selector-reset]');
-    const INQUIRY_HREF = document
-      .querySelector('[data-inquiry-href]')
+    const INQUIRY_HREF = document.querySelector('[data-inquiry-href]')
       ? document.querySelector('[data-inquiry-href]').getAttribute('data-inquiry-href')
       : '/wholesale-paddle-boards#inquiry';
 
@@ -406,7 +398,7 @@ const metadata = {
         if (sel.boards < 1) return;
         try {
           sessionStorage.setItem('pbo_mixed_selection', JSON.stringify(sel));
-        } catch (e) {
+        } catch {
           /* sessionStorage unavailable — continue, the form can be filled manually */
         }
         window.location.href = INQUIRY_HREF;

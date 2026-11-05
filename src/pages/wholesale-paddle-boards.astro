@@ -218,7 +218,9 @@ const metadata = {
 
         <div class="grid sm:grid-cols-2 gap-5">
           <div>
-            <label for="wh-first-name" class="block text-sm font-medium mb-1">{fields.first_name ?? 'First Name'} *</label>
+            <label for="wh-first-name" class="block text-sm font-medium mb-1"
+              >{fields.first_name ?? 'First Name'} *</label
+            >
             <input
               id="wh-first-name"
               name="firstName"
@@ -241,7 +243,9 @@ const metadata = {
 
         <div class="grid sm:grid-cols-2 gap-5">
           <div>
-            <label for="wh-company" class="block text-sm font-medium mb-1">{fields.business_name ?? 'Business Name'}</label>
+            <label for="wh-company" class="block text-sm font-medium mb-1"
+              >{fields.business_name ?? 'Business Name'}</label
+            >
             <input
               id="wh-company"
               name="companyName"
@@ -295,7 +299,9 @@ const metadata = {
             />
           </div>
           <div>
-            <label for="wh-quantity" class="block text-sm font-medium mb-1">{fields.quantity ?? 'Estimated Quantity'}</label>
+            <label for="wh-quantity" class="block text-sm font-medium mb-1"
+              >{fields.quantity ?? 'Estimated Quantity'}</label
+            >
             <input
               id="wh-quantity"
               name="quantity"
@@ -309,15 +315,21 @@ const metadata = {
         <div>
           <label class="block text-sm font-medium mb-2">{fields.shipping ?? 'Shipping Preference'}</label>
           <div class="grid sm:grid-cols-3 gap-3">
-            <label class="flex items-center gap-2 text-sm border border-gray-200 dark:border-slate-600 rounded-lg px-3 py-2 cursor-pointer">
+            <label
+              class="flex items-center gap-2 text-sm border border-gray-200 dark:border-slate-600 rounded-lg px-3 py-2 cursor-pointer"
+            >
               <input type="radio" name="shipping" value="express" class="accent-sky-600" />
               {fields.shipping_express ?? 'Express'}
             </label>
-            <label class="flex items-center gap-2 text-sm border border-gray-200 dark:border-slate-600 rounded-lg px-3 py-2 cursor-pointer">
+            <label
+              class="flex items-center gap-2 text-sm border border-gray-200 dark:border-slate-600 rounded-lg px-3 py-2 cursor-pointer"
+            >
               <input type="radio" name="shipping" value="sea" class="accent-sky-600" />
               {fields.shipping_sea ?? 'Sea Freight'}
             </label>
-            <label class="flex items-center gap-2 text-sm border border-gray-200 dark:border-slate-600 rounded-lg px-3 py-2 cursor-pointer">
+            <label
+              class="flex items-center gap-2 text-sm border border-gray-200 dark:border-slate-600 rounded-lg px-3 py-2 cursor-pointer"
+            >
               <input type="radio" name="shipping" value="unsure" class="accent-sky-600" checked />
               {fields.shipping_not_sure ?? 'Not sure yet'}
             </label>
@@ -396,10 +408,7 @@ const metadata = {
     )
   }
 
-  <JsonLd
-    type="FAQPage"
-    faqs={(faqSection.items ?? []).map((item: any) => ({ question: item.q, answer: item.a }))}
-  />
+  <JsonLd type="FAQPage" faqs={(faqSection.items ?? []).map((item: any) => ({ question: item.q, answer: item.a }))} />
 </Layout>
 
 {turnstileSiteKey && <script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer />}
@@ -422,21 +431,27 @@ const metadata = {
               return m.qty + 'x ' + m.name + ' ($' + m.price + ' each)';
             });
             messageEl.value =
-              'Mixed model order draft (' + sel.boards + ' boards total, retail value $' + sel.total + '):\n' +
+              'Mixed model order draft (' +
+              sel.boards +
+              ' boards total, retail value $' +
+              sel.total +
+              '):\n' +
               lines.join('\n') +
               '\n\nPlease quote wholesale pricing and shipping options.';
           }
           const modelsEl = formEl.querySelector('[name="models"]');
           if (modelsEl instanceof HTMLInputElement && !modelsEl.value.trim()) {
-            modelsEl.value = sel.models.map(function (m) {
-              return m.qty + 'x ' + m.name;
-            }).join(', ');
+            modelsEl.value = sel.models
+              .map(function (m) {
+                return m.qty + 'x ' + m.name;
+              })
+              .join(', ');
           }
           const qtyEl = formEl.querySelector('[name="quantity"]');
           if (qtyEl instanceof HTMLInputElement && !qtyEl.value) qtyEl.value = String(sel.boards);
         }
       }
-    } catch (e) {
+    } catch {
       /* sessionStorage unavailable or malformed — ignore */
     }
 
@@ -464,9 +479,15 @@ const metadata = {
 
       data.subject = 'Wholesale Quote Request';
       data.message =
-        '[Models: ' + (fd.get('models') || 'not specified') + '] ' +
-        '[Quantity: ' + (fd.get('quantity') || 'not specified') + '] ' +
-        '[Shipping: ' + shippingPref + ']\n\n' +
+        '[Models: ' +
+        (fd.get('models') || 'not specified') +
+        '] ' +
+        '[Quantity: ' +
+        (fd.get('quantity') || 'not specified') +
+        '] ' +
+        '[Shipping: ' +
+        shippingPref +
+        ']\n\n' +
         data.message;
 
       const turnstileWidget = formEl.querySelector('.cf-turnstile');
@@ -504,16 +525,15 @@ const metadata = {
           statusEl.classList.add('text-red-600', 'dark:text-red-400', 'block');
           return;
         }
-        statusEl.textContent =
-          'Thanks! We have received your inquiry and will reply with your quote shortly.';
+        statusEl.textContent = 'Thanks! We have received your inquiry and will reply with your quote shortly.';
         statusEl.classList.add('text-green-600', 'dark:text-green-400', 'block');
         formEl.reset();
         try {
           sessionStorage.removeItem('pbo_mixed_selection');
-        } catch (err) {
+        } catch {
           /* ignore */
         }
-      } catch (fetchErr) {
+      } catch {
         statusEl.textContent = 'Network error — please check your connection and try again.';
         statusEl.classList.add('text-red-600', 'dark:text-red-400', 'block');
       } finally {

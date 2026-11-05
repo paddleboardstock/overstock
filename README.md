@@ -577,13 +577,13 @@ Page content → YAML data → Auto-generated `src/i18n/generated/pages/*.ts` (p
 
 ### 8.4 Translation Scripts
 
-| Script                                | Purpose                                                                         | Flags                  |
-| ------------------------------------- | ------------------------------------------------------------------------------- | ---------------------- |
+| Script                                | Purpose                                                                                                          | Flags                  |
+| ------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------- |
 | `scripts/translate-i18n-keys.mjs`     | Translate sameAsEn i18n keys (Bing engine via shared `lib/translate-lib.mjs`, batched + masked, resumable cache) | `--dry-run`            |
 | `scripts/translate-pages.mjs`         | Translate page YAML content (Bing engine via shared `lib/translate-lib.mjs`, batched + masked, resumable cache)  | `--dry-run`, `--force` |
-| `scripts/fill-missing-i18n-keys.mjs`  | Fill missing i18n keys with EN copy (fallback before translation)               | —                      |
-| `scripts/fill-missing-page-yamls.mjs` | Create missing page YAMLs from EN copy                                          | —                      |
-| `scripts/check-translations.mjs`      | Verify i18n key alignment across all 14 languages                               | —                      |
+| `scripts/fill-missing-i18n-keys.mjs`  | Fill missing i18n keys with EN copy (fallback before translation)                                                | —                      |
+| `scripts/fill-missing-page-yamls.mjs` | Create missing page YAMLs from EN copy                                                                           | —                      |
+| `scripts/check-translations.mjs`      | Verify i18n key alignment across all 14 languages                                                                | —                      |
 
 **Translation cache:** `.cache/i18n-translate-cache.json` + `.cache/page-translate-cache.json` (gitignored)
 

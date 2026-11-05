@@ -140,7 +140,9 @@ const metadata = {
                 </tr>
               ))}
               <tr class="bg-gray-50 dark:bg-slate-800 font-semibold">
-                <td class="px-4 py-3" colspan="2">{exampleLabels.total_row ?? 'Order Total'}</td>
+                <td class="px-4 py-3" colspan="2">
+                  {exampleLabels.total_row ?? 'Order Total'}
+                </td>
                 <td class="px-4 py-3 text-right">10</td>
                 <td class="px-4 py-3" />
                 <td class="px-4 py-3 text-right">$4,340</td>
@@ -302,10 +304,7 @@ const metadata = {
     )
   }
 
-  <JsonLd
-    type="FAQPage"
-    faqs={(faqSection.items ?? []).map((item: any) => ({ question: item.q, answer: item.a }))}
-  />
+  <JsonLd type="FAQPage" faqs={(faqSection.items ?? []).map((item: any) => ({ question: item.q, answer: item.a }))} />
 </Layout>
 
 <script is:inline>
@@ -379,7 +378,7 @@ const metadata = {
         if (sel.boards < 1) return;
         try {
           sessionStorage.setItem('pbo_mixed_selection', JSON.stringify(sel));
-        } catch (e) {
+        } catch {
           /* sessionStorage unavailable — continue, the form can be filled manually */
         }
         window.location.href = INQUIRY_HREF;
