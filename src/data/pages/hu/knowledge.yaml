@@ -1,91 +1,88 @@
 hero:
-  tagline: 'Knowledge Graph'
-  title: 'Water Exploration Knowledge'
+  tagline: Tudásgráf
+  title: Vízkutatási Tudás
   subtitle: |
-    A structured knowledge base covering inflatable SUP technology,<br />
-    water safety, board engineering, and adventure planning.
-  taglineSection: 'Explore. Learn. Go with confidence.'
-
+    Egy strukturált tudásbázis a felfújható SUP technológiáról,<br />
+    vízbiztonság, deszkamérnökség és kalandtervezés.
+  taglineSection: Fedezd fel. Tanulj. Menj magabiztosan.
 clusters:
-  tagline: 'Knowledge Clusters'
-  title: 'Explore by topic'
-  subtitle: 'Deep dives into the technology, safety, and skills behind every Paddle Board Overstock product.'
+  tagline: Tudás klaszterek
+  title: Böngésszen téma szerint
+  subtitle: Mélyreható elemzések a technológiáról, a biztonságról és a készségekről minden Paddle Board Overstock termék mögött.
   items:
-    - title: 'SUP Knowledge'
-      description: 'From choosing your first board to advanced touring techniques — everything about stand-up paddle boarding.'
-      icon: 'tabler:lifebuoy'
+    - title: SUP Tudás
+      description: Az első deszkád kiválasztásától a haladó túrázási technikákig — minden, ami a szabadon álló eveződeszkázásról szól.
+      icon: tabler:lifebuoy
       topics:
-        - 'How to choose your first inflatable SUP'
-        - 'Best SUP size for beginners'
-        - 'How difficult is paddle boarding?'
-        - 'Inflatable vs hard board comparison'
-        - 'SUP safety checklist'
-    - title: 'Board Technology'
-      description: 'Technical deep dives on drop-stitch cores, PVC laminates, rails, and valves — how inflatable SUPs are engineered.'
-      icon: 'tabler:anchor'
+        - Hogyan válassza ki az első felfújható SUP-ját
+        - A SUP legjobb mérete kezdőknek
+        - Mennyire nehéz a vízi evezés állva?
+        - Felfújható vs kemény deszka összehasonlítás
+        - SUP biztonsági ellenőrzőlista
+    - title: Deszkatechnológia
+      description: Technikai mélyrehatások a drop-stitch magok, PVC laminátok, élek és szelepek — hogyan tervezik a felfújható SUPs-t.
+      icon: tabler:anchor
       topics:
-        - 'How inflatable SUPs are made'
-        - 'PVC laminate layers explained'
-        - 'Rail and seam construction'
-        - 'Drop-stitch technology deep dive'
-        - 'EVA deck art explained'
-    - title: 'Safety Knowledge'
-      description: 'Essential safety knowledge for every paddler — from PFD selection to weather reading to self-rescue techniques.'
-      icon: 'tabler:shield'
+        - Hogyan készülnek a felfújható SUPs-k
+        - PVC laminát rétegek magyarázata
+        - Él- és varratszerkezet
+        - Drop-stitch technológiai mélyreható elemzés
+        - EVA fedélzetművészet magyarázata
+    - title: Biztonsági ismeretek
+      description: Alapvető biztonsági ismeretek minden evezős számára — a PFD kiválasztásától az időjárás olvasásán át az önmentő technikákig.
+      icon: tabler:shield
       topics:
-        - 'SUP safety checklist'
-        - 'Do you need a life jacket?'
-        - 'Ocean paddling safety guide'
-        - 'River and current safety for paddlers'
-        - 'Weather and water condition awareness'
-    - title: 'Technology'
-      description: 'The engineering behind Paddle Board Overstock products — materials, construction methods, and quality testing.'
-      icon: 'tabler:microscope'
+        - SUP biztonsági ellenőrzőlista
+        - Szükséged van mentőmellényre?
+        - Óceáni evezés biztonsági útmutató
+        - Folyó- és áramlatbiztonság evezősöknek
+        - Időjárási és vízállapot-tudatosság
+    - title: Technológia
+      description: A Paddle Board Overstock termékek mérnöki háttere — anyagok, gyártási módszerek és minőségellenőrzés.
+      icon: tabler:microscope
       topics:
-        - 'Marine-grade PVC technology'
-        - 'Drop-stitch core explained'
-        - 'Why PSI matters for inflatable SUPs'
-        - 'RF welding vs adhesive bonding'
-        - 'Quality testing on every board'
-    - title: 'Club & Rental Knowledge'
-      description: 'Practical guides for running a SUP program — from rental operations to resort and club fleets.'
-      icon: 'tabler:briefcase'
+        - Tengerészgyalogos PVC technológia
+        - Drop-stitch A Core magyarázatát
+        - Miért PSI fontos a felfújható SUPsgép
+        - RF hegesztés vs ragasztókötés
+        - Minőségellenőrzés minden deszkán
+    - title: Klub- és kölcsönzési ismeretek
+      description: Gyakorlati útmutatók egy SUP program működtetéséhez — a kölcsönzői műveletektől a sí- és klubflottákig.
+      icon: tabler:briefcase
       topics:
-        - 'How to start a SUP rental business'
-        - 'Building a resort water sports center'
-        - 'Paddle board fleet sizing for clubs'
-        - 'Inflatable vs hard SUP for commercial use'
-        - 'Best SUP boards for rental fleets'
-        - 'Resort water sports revenue strategies'
-        - 'Commercial equipment maintenance guide'
-
+        - Hogyan indítsunk SUP bérleti vállalkozást
+        - Üdülőhelyi vízi sportközpont építése
+        - Ütődeszka flotta méretezése klubokhoz
+        - Felfújható vs kemény SUP kereskedelmi használatra
+        - A legjobb SUP deszkák a kölcsönzői flottákhoz
+        - Üdülőhelyek vízi sportjai bevételi stratégiák
+        - Kereskedelmi berendezések karbantartási útmutató
 featured_guides:
-  tagline: 'Featured Guides'
-  title: 'Most popular knowledge resources'
+  tagline: Kiemelt útmutatók
+  title: Legnépszerűbb tudásforrás
   items:
-    - title: 'SUP Basics'
-      href: '/learn/sup'
-    - title: 'Inflatable vs Hard Board'
-      href: '/compare/inflatable-vs-hardboard'
-    - title: 'Water Safety Guide'
-      href: '/learn/water-safety'
-    - title: 'Materials Reference'
-      href: '/learn/materials'
-    - title: 'SUP Size Guide'
-      href: '/size-guide'
-    - title: 'SUP Rental Cost Guide'
-      href: '/v2/cost-to-start-sup-rental-business'
-    - title: 'Resort Water Sports Center'
-      href: '/v2/building-resort-water-sports-center'
-    - title: 'Start a Water Brand'
-      href: '/v2/start-water-sports-brand-private-label'
-
+    - title: SUP Alapok
+      href: /learn/sup
+    - title: Felfújható vs kemény tábla
+      href: /compare/inflatable-vs-hardboard
+    - title: Vízbiztonsági útmutató
+      href: /learn/water-safety
+    - title: Anyagreferencia
+      href: /learn/materials
+    - title: SUP Méret útmutató
+      href: /size-guide
+    - title: SUP Bérleti költségek útmutatója
+      href: /v2/cost-to-start-sup-rental-business
+    - title: Üdülőhely Vízi Sportközpont
+      href: /v2/building-resort-water-sports-center
+    - title: Indíts vízmárkát
+      href: /v2/start-water-sports-brand-private-label
 cta:
-  title: 'Start exploring'
-  subtitle: 'Dive into our knowledge base and get the information you need for your next water adventure.'
+  title: Kezdj el felfedezni
+  subtitle: Merülj el tudásbázisunkban, és szerezd meg azokat az információkat, amire szükséged van a következő vízi kalandjához.
   actions:
     - variant: primary
-      text: 'Browse all guides'
-      href: '/academy'
-    - text: 'Explore Knowledge Graph'
-      href: '/knowledge'
+      text: Böngéssze az összes útmutatót
+      href: /academy
+    - text: Fedezze fel a tudásgráfot
+      href: /knowledge

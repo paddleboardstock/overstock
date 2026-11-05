@@ -1,69 +1,69 @@
 hero:
-  tagline: Equipment
-  title: Manufacturing Equipment & Machinery
-  subtitle: Industrial-grade equipment across cutting, welding, printing, and assembly
-  back_label: Back to Factory
+  tagline: معدات
+  title: معدات التصنيع والآلات
+  subtitle: معدات صناعية في مجالات القطع، اللحام، الطباعة، والتجميع
+  back_label: العودة إلى المصنع
   back_link: /factory
 categories:
-  - title: Cutting & Material Preparation
+  - title: القطع وتحضير المواد
     items:
-      - name: Automatic PVC Cutting Machine
-        spec: CNC-controlled, 6.5 m × 2.5 m, 0.1 mm accuracy
-        desc: Computer-controlled automatic cutting machine for PVC and drop-stitch fabrics. Nesting software optimises material utilisation to below 5% waste.
-      - name: Fabric Spreader
-        spec: 3 m max width, tension-controlled feed
-        desc: Lays fabric in single or multiple plies with controlled tension to prevent distortion before cutting.
-  - title: Welding & Bonding
+      - name: ماكينة القطع الأوتوماتيكية PVC
+        spec: CNC-محكمة، 6.5 م × 2.5 م، دقة 0.1 مم
+        desc: آلة قص أوتوماتيكية تتحكم بها الحاسوب PVC drop-stitch للأقمشة. برنامج التعشيش يحسن استخدام المواد إلى أقل من 5٪ من الفضلات.
+      - name: منشط الأقمشة
+        spec: عرض أقصى 3 أمتار، تغذية متحكم بها بالتوتر
+        desc: يضع القماش في طبقات واحدة أو متعددة مع شد متحكم فيه لمنع التشوه قبل القص.
+  - title: اللحام والربط
     items:
-      - name: Heat Sealing Machine
-        spec: Hot-air welding, variable 200–600 °C, 0.5–5 m/min
-        desc: Hot-air heat sealing machine for bonding and welding PVC laminates, rail bands, and chamber seams. Used for tacking, sealing, and fusing drop-stitch core joints.
-      - name: Dielectric RF Press
-        spec: 15 kW, platen 2000 × 600 mm
-        desc: Radio-frequency welding press for main longitudinal seams, transom-to-tube joints, and large-chamber fabrication.
-      - name: CNC-Controlled RF Welder
-        spec: 8 kW, XY table 2500 × 1200 mm
-        desc: Programmable curved-seam welding for complex geometries, logo embossing, and precision patchwork.
-  - title: Deck Art & Finishing
+      - name: ماكينة الختم بالحرارة
+        spec: اللحام بالهواء الساخن، متغير بين 200–600 درجة مئوية، 0.5–5 م/دقيقة
+        desc: آلة ختم حراري بالهواء الساخن لربط PVC ولحام الطبقات، وأحزمة السكك الحديدية، ودرزات الحجرة. تستخدم للتثبيت والختم ودمج drop-stitch وصلات النواة.
+      - name: مكبس RF عازل
+        spec: 15 كيلوواط، ألواح 2000 × 600 مم
+        desc: مكبس لحام بترددات راديوية للفواصل الطولية الرئيسية، وصلات الترانسوم إلى الأنبوب، وتصنيع الحجرات الكبيرة.
+      - name: CNC- لحام RF متحكم فيه
+        spec: 8 كيلوواط، XY طاولة 2500 × 1200 مم
+        desc: لحام منحني قابل للبرمجة للهندسات المعقدة، ونقش الشعار، والترقيع الدقيقة.
+  - title: فن الطرح والتشطيب
     items:
-      - name: EVA Deck Cutting Machine
-        spec: CNC knife cutting, 2 m width
-        desc: Precision cutting of EVA deck foam panels for art-series deck patterns. Each panel is cut to shape for a seamless full-deck fit.
-      - name: Deck Lamination Press
-        spec: Temperature & pressure controlled
-        desc: Bonds EVA deck panels to the board surface with consistent adhesion across the full deck area.
-  - title: SUP Printing & Decoration
+      - name: EVA ماكينة تقطيع السطح
+        spec: CNC قطع بالسكين بعرض 2 متر
+        desc: قطع دقيق EVA لألواح الفوم على السطح لأنماط السطح من سلسلة الفن. يتم قطع كل لوحة لتكون مناسبة كاملة للسطح بسلاسة.
+      - name: مكبس تغليف السطح
+        spec: التحكم في درجة الحرارة والضغط
+        desc: يربط EVA ألواح السطح بسطح اللوح مع التصاق ثابت عبر كامل مساحة السطح.
+  - title: SUP الطباعة والزخرفة
     items:
-      - name: Digital Printer
-        spec: High-resolution inkjet, up to 2 m print width
-        desc: Direct-to-fabric digital printing for full-colour SUP deck graphics. Prints custom patterns, gradients, and photo-quality images with UV-resistant water-based inks.
-      - name: Screen Printing Machine
-        spec: Manual and semi-automatic, multi-colour registration
-        desc: Screen printing for SUP board logos, brand marks, and repeating patterns. Provides durable, opaque prints with vibrant colour saturation.
-  - title: Final Assembly
+      - name: طابعة رقمية
+        spec: نفث حبر عالي الدقة، عرض طباعة يصل إلى 2 متر
+        desc: طباعة رقمية مباشرة على القماش SUP لرسومات السطح الملونة بالكامل. تطبع أنماطا مخصصة، تدرجات وصور بجودة فوتوغرافية باستخدام UV أحبار مقاومة للماء.
+      - name: آلة الطباعة بالشاشة
+        spec: تسجيل يدوي وشبه أوتوماتيكي متعدد الألوان
+        desc: طباعة شاشة SUP لشعارات اللوحة، وعلامات العلامة التجارية، والأنماط المتكررة. توفر مطبوعات متينة ومعتمة مع تشبع ألوان زاهية.
+  - title: الجمعية النهائية
     items:
-      - name: Valve Torque Station
-        spec: Calibrated, 10-cycle function test
-        desc: Installs and torques inflation valves, then function-tests every valve through 10 open/close cycles.
-      - name: Fin Box & D-Ring Setter
-        spec: Jig-aligned, adhesive cured
-        desc: Positions and bonds fin boxes, D-rings, and handles at exact deck locations per model specification.
-  - title: Testing & Quality Control
+      - name: محطة عزم الصمام
+        spec: اختبار دالة معاير من 10 دورات
+        desc: يركب ويعزم صمامات النفخ، ثم يختبر وظيفة كل صمام خلال 10 دورات فتح وإغلاق.
+      - name: صندوق الزعنفة ومحدد الحلقة D
+        spec: محاذي للجيج، ومعالجة بالمادة اللاصقة
+        desc: تضع وتربط صناديق الزعانف، وحلقات D، والمقابض في مواقع سطح السطح الدقيقة حسب مواصفات الطراز.
+  - title: الاختبار ومراقبة الجودة
     items:
-      - name: Universal Tensile Tester
-        spec: 50 kN capacity
-        desc: Breaking force, elongation at break, and tear propagation testing for fabric batches.
-      - name: Air Retention Test Rig
-        spec: Programmable, 30-min pressure-hold
-        desc: Automated pressure-hold test for every tube chamber before assembly.
-      - name: Seam Peel Tester
-        spec: Motorised 180° peel at 100 mm/min
-        desc: Weld and bonded-seam peel strength testing per internal protocol.
-      - name: Xenon-Arc Weathering Chamber
-        spec: 2000 h exposure
-        desc: UV resistance testing for colour change and strength retention.
+      - name: جهاز اختبار الشد الشامل
+        spec: سعة 50 كيلو نيوتن
+        desc: اختبار قوة الكسر، والتمد عند الكسر، وانتشار التمزق لدفعات القماش.
+      - name: منصة اختبار الاحتفاظ بالهواء
+        spec: قابل للبرمجة، بالضغط لمدة 30 دقيقة
+        desc: اختبار تثبيت الضغط الآلي لكل غرفة أنابيب قبل التجميع.
+      - name: اختبار تقشير الدرزات
+        spec: تقشير محرك بزاوية 180° بسرعة 100 مم/دقيقة
+        desc: اختبار قوة تقشير اللحام واللحام المرتبط حسب بروتوكول داخلي.
+      - name: غرفة تآكل قوس الزينون
+        spec: تعريض 2000 ساعة
+        desc: UV اختبار المقاومة لتغير اللون والحفاظ على القوة.
 cta:
-  title: Interested in a factory tour?
-  desc: We welcome visitors to our Weihai facility. See our equipment and processes in person.
-  label: Schedule a visit →
+  title: هل ترغب في جولة في المصنع؟
+  desc: نرحب بالزوار في منشأة ويهاي الخاصة بنا. شاهد معداتنا وعملياتنا شخصيا.
+  label: حدد موعدا للزيارة →
   link: /contact

@@ -1,73 +1,70 @@
 hero:
-  tagline: 'Water Exploration Knowledge'
-  title: 'Learn'
+  tagline: Vízkutatási Tudás
+  title: Tanul
   subtitle: |
-    Guides, tutorials, and deep dives — everything you need to explore<br />
-    water with confidence. From choosing your first SUP to mastering advanced techniques.
-  taglineSection: 'Knowledge for every paddler. From beginner to professional.'
-
+    Útmutatók, oktatások és mélyreható elemzések — minden, amire szükséged van a felfedezéshez<br />
+    vízzel magabiztosan. Az első SUP kiválasztásától a fejlett technikák elsajátításáig.
+  taglineSection: Tudás minden evezős számára. Kezdőtől a profiig.
 featured:
-  tagline: 'Featured Topics'
-  title: 'Start your learning journey'
-  subtitle: 'Whether you are new to water sports or looking to level up, our guides have you covered.'
+  tagline: Kiemelt témák
+  title: Kezdd el a tanulási utadat
+  subtitle: Akár új vagy a vízi sportok terén, akár előrébb szeretnél lépni, útmutatóink segítenek neked.
   items:
-    - title: 'SUP Basics'
-      description: 'Everything a beginner needs to know — board types, paddle sizing, stance, and first-day tips.'
-      icon: 'tabler:lifebuoy'
-      href: '/learn/sup'
-    - title: 'Inflatable vs Hard Board'
-      description: 'Which is right for you? We compare portability, performance, durability, and cost side by side.'
-      icon: 'tabler:arrows-left-right'
-      href: '/compare/inflatable-vs-hardboard'
-    - title: 'Water Safety'
-      description: 'Essential safety knowledge every paddler should have — weather, PFDs, self-rescue, and more.'
-      icon: 'tabler:shield'
-      href: '/learn/water-safety'
-    - title: 'Materials Guide'
-      description: 'Drop-stitch cores, PVC laminates, EVA deck foam — understand what your board is made of.'
-      icon: 'tabler:hexagons'
-      href: '/learn/materials'
-    - title: 'SUP Size Guide'
-      description: 'Find the right board length, width, and volume for your weight, skill, and paddling style.'
-      icon: 'tabler:ruler'
-      href: '/size-guide'
-    - title: 'Intermediate Techniques'
-      description: 'Step up your paddling with advanced strokes, turning techniques, and rough-water handling.'
-      icon: 'tabler:ripple'
-      href: '/learn/intermediate-techniques'
-
+    - title: SUP Alapok
+      description: Minden, amit egy kezdőnek tudnia kell — deszkafajták, ütőméretek, testtartás és első napi tippek.
+      icon: tabler:lifebuoy
+      href: /learn/sup
+    - title: Felfújható vs kemény tábla
+      description: Melyik a megfelelő számodra? Összehasonlítjuk a hordozhatóságot, a teljesítményt, a tartósságot és a költséget egymás mellett.
+      icon: tabler:arrows-left-right
+      href: /compare/inflatable-vs-hardboard
+    - title: Vízbiztonság
+      description: Alapvető biztonsági ismeretek, amelyeket minden evezőnek ismernie kell — időjárás, mentőmellények, önmentés és még sok más.
+      icon: tabler:shield
+      href: /learn/water-safety
+    - title: Anyagok Útmutató
+      description: Drop-stitch magok, PVC rétegek, EVA fedélhab — értsd meg, miből áll a deszkád.
+      icon: tabler:hexagons
+      href: /learn/materials
+    - title: SUP Méret útmutató
+      description: Találd meg a megfelelő deszkahosszt, szélességet és térfogatot a súlyodhoz, képességedhez és evezési stílusodhoz.
+      icon: tabler:ruler
+      href: /size-guide
+    - title: Köztes technikák
+      description: Fejleszd evezésedet haladó lapátfogásokkal, kanyarodási technikákkal és hullámos vízen való irányítással.
+      icon: tabler:ripple
+      href: /learn/intermediate-techniques
 categories:
-  tagline: 'Categories'
-  title: 'Explore by topic'
-  subtitle: 'All learning content organized by skill level and interest.'
+  tagline: Kategóriák
+  title: Böngésszen téma szerint
+  subtitle: Minden tananyagot a készségszint és az érdeklődés szerint rendszerezve.
   columns:
-    - title: 'Beginner'
+    - title: Kezdő
       items:
-        - 'SUP Basics — start here'
-        - 'Inflatable vs Hard Board'
-        - 'Water Safety Essentials'
-        - 'How to Choose Your SUP'
-        - 'Pump & Pack Guide'
-    - title: 'Intermediate'
+        - SUP Alapok — kezdj itt
+        - Felfújható vs kemény tábla
+        - A vízbiztonság alapjai
+        - Hogyan válassz SUP
+        - Szivattyúzás és csomagolás útmutató
+    - title: Közbülső
       items:
-        - 'Paddling Techniques'
-        - 'Inflatable Technology'
-        - 'Materials Reference'
-        - 'EVA Deck Art Explained'
-        - 'Drop-Stitch Core Explained'
-    - title: 'Advanced'
+        - Evezési technikák
+        - Felfújható Technológia
+        - Anyagreferencia
+        - EVA Deszkaművészet magyarázata
+        - Drop-Stitch A Magyarázat
+    - title: Fejlett
       items:
-        - 'Multi-Day Touring'
-        - 'Rough-Water Handling'
-        - 'Night Paddling'
-        - 'Board Repair & Care'
-
+        - Többnapos túrázás
+        - Durva vízen való irányítás
+        - Éjszakai evezés
+        - Deszka javítása és ápolása
 cta:
-  title: 'Still have questions?'
-  subtitle: 'Ask our AI guide for personalized answers about gear, safety, and techniques.'
+  title: Még mindig vannak kérdései?
+  subtitle: Kérdezze meg MI útmutatónkat személyre szabott válaszokért a felszerelésről, a biztonságról és a technikákról.
   actions:
     - variant: primary
-      text: 'Ask the Water Advisor AI'
+      text: Kérdezze meg a Víz Tanácsadó MI-t
       href: '#ai-guide'
-    - text: 'Browse all guides'
-      href: '/academy'
+    - text: Böngéssze az összes útmutatót
+      href: /academy

@@ -1,122 +1,122 @@
 hero_text:
-  tagline: Contact
-  title: GET IN TOUCH
+  tagline: اتصل بنا
+  title: تواصل معنا
 contact_form:
   id: form
-  title: Send us a message
-  subtitle: For order questions, sizing advice or product support, drop us a line. We reply within one business day.
+  title: أرسل لنا رسالة
+  subtitle: لأسئلة الطلبات، نصائح الحجم أو دعم المنتج، أرسل لنا رسالة. نرد خلال يوم عمل واحد.
   email_to: info@paddleboardoverstock.com
-  submit_button: Send Inquiry → Get a Quote
-  success_message: Thanks! Your message has landed in our inbox. We will reply within one business day.
-  error_message: Something went wrong sending your message. Please try again or email us directly.
-  default_country_code: "+1"
+  submit_button: إرسال استفسار → الحصول على عرض سعر
+  success_message: شكرًا! لقد وصلت رسالتك إلى صندوق الوارد لدينا. سنرد خلال يوم عمل واحد.
+  error_message: حدث خطأ عند إرسال رسالتك. يرجى المحاولة مرة أخرى أو مراسلتنا عبر البريد الإلكتروني مباشرة.
+  default_country_code: '+1'
   captcha:
-    label: "Anti-spam: please solve the following"
+    label: 'مكافحة البريد العشوائي: يرجى حل ما يلي'
   fields:
-    - name: firstName
-      label: First Name
+    - name: الاسم الأول
+      label: الاسم الأول
       row: 1
-    - name: lastName
-      label: Last Name
+    - name: اسم العائلة
+      label: الاسم الأخير
       row: 1
-    - name: companyName
-      label: Company Name
+    - name: اسم الشركة
+      label: اسم الشركة
       row: 2
     - name: address
-      label: Address
+      label: العنوان
       row: 3
     - name: zip
-      label: Zip / Postal Code
+      label: الرمز البريدي
       row: 4
     - name: country
-      label: Country
+      label: الدولة
       row: 4
       type: select
       optionsKey: countries
     - name: email
-      label: E-mail
+      label: البريد الإلكتروني
       row: 5
       type: email
     - name: tel
-      label: TEL
+      label: الهاتف
       row: 5
       type: tel
       withCountryCode: true
-    - name: orderVolume
-      label: Estimated Order Volume
+    - name: حجم الطلب
+      label: حجم الطلب المقدر
       row: 6
       type: select
       options:
-        - value: ""
-          label: How many boards are you shopping for?...
+        - value: ''
+          label: كم عدد الألواح التي تبحث عن شرائها؟...
         - value: one
-          label: Just one board
+          label: لوح واحد فقط
         - value: 2-4
-          label: 2–4 boards
+          label: 2–4 ألواح
         - value: 5-plus
-          label: 5+ boards (family, club, or rental)
+          label: 5+ ألواح (عائلية، نادٍ، أو للإيجار)
     - name: customization
-      label: What can we help with?
+      label: بماذا يمكننا المساعدة؟
       row: 7
       type: select
       options:
-        - value: ""
-          label: Select a topic...
+        - value: ''
+          label: اختر موضوعًا...
         - value: none
-          label: General product question
+          label: سؤال عام عن المنتج
         - value: sizing
-          label: Help choosing the right board
+          label: مساعدة في اختيار اللوح المناسب
         - value: order
-          label: Order, payment or shipping
+          label: الطلب، الدفع أو الشحن
         - value: warranty
-          label: Warranty or repair support
-    - name: productInterest
-      label: Product Categories of Interest
+          label: الدعم الخاص بالضمان أو الإصلاح
+    - name: ProductInterest
+      label: فئات المنتجات المهتم بها
       row: 8
       type: select
       options:
-        - value: ""
-          label: Select product category...
+        - value: ''
+          label: اختر فئة المنتج...
         - value: all
-          label: All products / Full catalog
+          label: جميع المنتجات / الكتالوج الكامل
         - value: sup
-          label: SUP Boards / Paddleboards
+          label: SUP ألواح / ألواح تجديف
         - value: packages
-          label: Complete SUP packages
+          label: حزم SUP كاملة
         - value: accessory
-          label: Accessories (pumps, oars, bags)
+          label: ملحقات (مضخات، مجاديف، حقائب)
     - name: subject
-      label: Subject
+      label: الموضوع
       row: 9
     - name: message
-      label: Message
+      label: رسالة
       row: 10
       type: textarea
       rows: 6
 features2_other_ways:
-  title: Other ways to reach us
+  title: طرق أخرى للتواصل معنا
   columns: 3
   items:
-    - title: Order help
-      description: Product questions, sizing advice, and order support.
+    - title: مساعدة بالطلب
+      description: أسئلة عن المنتجات، نصائح حول المقاسات، ودعم الطلب.
       icon: tabler:shopping-bag
-    - title: Technical support
-      description: Warranty, repairs, spare parts and operating questions.
+    - title: الدعم الفني
+      description: الضمان، الإصلاحات، قطع الغيار وأسئلة التشغيل.
       icon: tabler:tool
-    - title: Press & partnerships
-      description: Media kits, sponsorship and industry collaboration.
+    - title: الصحافة والشراكات
+      description: مجموعات الإعلام، الرعاية والتعاون الصناعي.
       icon: tabler:news
-    - title: Phone
-      description: +1 279 732 3333 (US HQ) · +86 13305324192 (factory)
+    - title: الهاتف
+      description: +1 279 732 3333 (المقر الأمريكي) · +86 13305324192 (المصنع)
       icon: tabler:headset
-    - title: Email
+    - title: البريد الإلكتروني
       description: info@paddleboardoverstock.com
       icon: tabler:mail
-    - title: Global HQ & Billing
-      description: Weihai Dongjilian Co., Ltd.
+    - title: المقر العالمي والفواتير
+      description: شركة ويهاي دونغجيليان المحدودة
       icon: tabler:map-pin
 map:
-  title: Our Location
-  subtitle: Visit our Weihai manufacturing hub
-  address: Weihai, Shandong, China
+  title: موقعنا
+  subtitle: زيارة مركز التصنيع في ويهاي
+  address: ويهاي، شاندونغ، الصين
   zoom: 15

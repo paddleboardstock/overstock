@@ -1,73 +1,70 @@
 hero:
-  tagline: 'Water Exploration Knowledge'
-  title: 'Learn'
+  tagline: Connaissance de l'exploration de l'eau
+  title: Apprendre
   subtitle: |
-    Guides, tutorials, and deep dives — everything you need to explore<br />
-    water with confidence. From choosing your first SUP to mastering advanced techniques.
-  taglineSection: 'Knowledge for every paddler. From beginner to professional.'
-
+    Guides, tutoriels et approfondissements — tout ce dont vous avez besoin pour explorer<br />
+    nager avec confiance. Du choix de votre premier SUP à la maîtrise des techniques avancées.
+  taglineSection: Des connaissances pour chaque pagayeur. Du débutant au professionnel.
 featured:
-  tagline: 'Featured Topics'
-  title: 'Start your learning journey'
-  subtitle: 'Whether you are new to water sports or looking to level up, our guides have you covered.'
+  tagline: Sujets en vedette
+  title: Commencez votre parcours d'apprentissage
+  subtitle: Que vous soyez nouveau dans les sports nautiques ou que vous cherchiez à progresser, nos guides sont là pour vous.
   items:
-    - title: 'SUP Basics'
-      description: 'Everything a beginner needs to know — board types, paddle sizing, stance, and first-day tips.'
-      icon: 'tabler:lifebuoy'
-      href: '/learn/sup'
-    - title: 'Inflatable vs Hard Board'
-      description: 'Which is right for you? We compare portability, performance, durability, and cost side by side.'
-      icon: 'tabler:arrows-left-right'
-      href: '/compare/inflatable-vs-hardboard'
-    - title: 'Water Safety'
-      description: 'Essential safety knowledge every paddler should have — weather, PFDs, self-rescue, and more.'
-      icon: 'tabler:shield'
-      href: '/learn/water-safety'
-    - title: 'Materials Guide'
-      description: 'Drop-stitch cores, PVC laminates, EVA deck foam — understand what your board is made of.'
-      icon: 'tabler:hexagons'
-      href: '/learn/materials'
-    - title: 'SUP Size Guide'
-      description: 'Find the right board length, width, and volume for your weight, skill, and paddling style.'
-      icon: 'tabler:ruler'
-      href: '/size-guide'
-    - title: 'Intermediate Techniques'
-      description: 'Step up your paddling with advanced strokes, turning techniques, and rough-water handling.'
-      icon: 'tabler:ripple'
-      href: '/learn/intermediate-techniques'
-
+    - title: SUP Bases
+      description: Tout ce qu'un débutant doit savoir — types de planches, taille de la pagaie, position et conseils pour le premier jour.
+      icon: tabler:lifebuoy
+      href: /learn/sup
+    - title: Planches gonflables vs planches dures
+      description: Lequel est fait pour vous ? Nous comparons la portabilité, les performances, la durabilité et le coût côte à côte.
+      icon: tabler:arrows-left-right
+      href: /compare/inflatable-vs-hardboard
+    - title: Sécurité de l'eau
+      description: Connaissances de sécurité essentielles que tout pagayeur devrait avoir — météo, gilets de sauvetage, auto-secours, et plus encore.
+      icon: tabler:shield
+      href: /learn/water-safety
+    - title: Guide des matériaux
+      description: Drop-stitch noyaux, PVC stratifiés, EVA mousse de pont — comprenez de quoi votre planche est faite.
+      icon: tabler:hexagons
+      href: /learn/materials
+    - title: Guide des tailles SUP
+      description: Trouvez la bonne longueur, largeur et volume de planche pour votre poids, votre niveau et votre style de pagaie.
+      icon: tabler:ruler
+      href: /size-guide
+    - title: Techniques intermédiaires
+      description: Améliorez votre pagaie avec des coups avancés, des techniques de virage et la gestion des eaux agitées.
+      icon: tabler:ripple
+      href: /learn/intermediate-techniques
 categories:
-  tagline: 'Categories'
-  title: 'Explore by topic'
-  subtitle: 'All learning content organized by skill level and interest.'
+  tagline: Catégories
+  title: Explorer par sujet
+  subtitle: Tout le contenu d'apprentissage est organisé par niveau de compétence et par intérêt.
   columns:
-    - title: 'Beginner'
+    - title: Débutant
       items:
-        - 'SUP Basics — start here'
-        - 'Inflatable vs Hard Board'
-        - 'Water Safety Essentials'
-        - 'How to Choose Your SUP'
-        - 'Pump & Pack Guide'
-    - title: 'Intermediate'
+        - SUP Notions de base — commencez ici
+        - Planches gonflables vs planches dures
+        - Essentiels de la Sécurité sur l'Eau
+        - Comment choisir votre SUP
+        - Guide de pompage et d'emballage
+    - title: Intermédiaire
       items:
-        - 'Paddling Techniques'
-        - 'Inflatable Technology'
-        - 'Materials Reference'
-        - 'EVA Deck Art Explained'
-        - 'Drop-Stitch Core Explained'
-    - title: 'Advanced'
+        - Techniques de pagaie
+        - Technologie Gonflable
+        - Référence des matériaux
+        - EVA Art de la Planche expliqué
+        - Drop-Stitch Noyau expliqué
+    - title: Avancé
       items:
-        - 'Multi-Day Touring'
-        - 'Rough-Water Handling'
-        - 'Night Paddling'
-        - 'Board Repair & Care'
-
+        - Touring sur plusieurs jours
+        - Maniement en eaux agitées
+        - Paddling de nuit
+        - Réparation et entretien de la planche
 cta:
-  title: 'Still have questions?'
-  subtitle: 'Ask our AI guide for personalized answers about gear, safety, and techniques.'
+  title: Vous avez encore des questions ?
+  subtitle: Demandez à notre guide IA des réponses personnalisées sur l’équipement, la sécurité et les techniques.
   actions:
     - variant: primary
-      text: 'Ask the Water Advisor AI'
+      text: Demandez à l’IA Conseiller en Eau
       href: '#ai-guide'
-    - text: 'Browse all guides'
-      href: '/academy'
+    - text: Parcourir tous les guides
+      href: /academy

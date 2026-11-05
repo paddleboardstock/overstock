@@ -1,126 +1,121 @@
 hero:
-  tagline: Paddle Board Overstock Academy
-  title: Learning Center
-  subtitle: Guides and tutorials for every skill level — from SUP basics to advanced rescue techniques
-
+  tagline: Paddle Board Overstock Academie
+  title: Centrul de Învățare
+  subtitle: Ghiduri și tutoriale pentru orice nivel de abilitate — de la SUP elemente de bază la tehnici avansate de salvare
 categories:
-  - level: Beginner
+  - level: Începător
     color: from-green-500 to-emerald-600
     badge: bg-green-100 text-green-700
     guides:
-      - title: SUP Basics
-        desc: Learn the fundamentals of stand-up paddleboarding — stance, stroke technique, and balance.
+      - title: SUP Elemente de bază
+        desc: Învățați fundamentele paddleboarding-ului — poziția, tehnica loviturii și echilibrul.
         slug: beginner-sup-guide
-      - title: Paddle Techniques
-        desc: Forward stroke, sweep stroke, draw stroke, and low brace — master the essential paddle moves.
+      - title: Tehnici de vâslire
+        desc: Lovitura înainte, lovitura de măturare, lovitura de tragere și sprijinul jos — stăpâniți mișcările esențiale de vâslire.
         slug: sup-paddle-guide
-      - title: Safety First
-        desc: Essential safety practices including weather checks, PFD use, leash rules, and self-rescue.
+      - title: Siguranța pe primul loc
+        desc: Practici esențiale de siguranță, inclusiv verificarea vremii, utilizarea PFD, regulile pentru lesa și auto-salvarea.
         slug: sup-safety-guide
-  - level: Intermediate
+  - level: Intermediar
     color: from-blue-500 to-indigo-600
     badge: bg-blue-100 text-blue-700
     guides:
-      - title: Touring Essentials
-        desc: Planning multi-hour paddles — navigation, hydration, pacing, and reading wind forecasts.
+      - title: Elemente esențiale pentru tururi
+        desc: Planificarea de vâsliri de mai multe ore — navigație, hidratare, ritm și citirea prognozelor meteo.
         slug: touring-sup-guide
-      - title: Weather Reading
-        desc: Interpret marine forecasts, identify cloud patterns, and understand wind effects on water.
+      - title: Citirea vremii
+        desc: Interpretarea prognozelor marine, identificarea tiparelor de nori și înțelegerea efectelor vântului asupra apei.
         slug: weather-planning-water-sports
-      - title: Navigation Basics
-        desc: Chart reading, compass use, GPS waypoints, and route planning for coastal paddling.
+      - title: Elemente de bază în navigație
+        desc: Citirea hărților, folosirea busolei, punctelor GPS și planificarea traseului pentru vâslire de coastă.
         slug: sup-navigation-guide
-      - title: Tidal Awareness
-        desc: Understanding tide cycles, currents, and how they affect launch timing and routing.
+      - title: Conștientizarea mareelor
+        desc: Înțelegerea ciclurilor de maree, curenților și cum afectează aceștia momentul de lansare și traseul.
         slug: understanding-tides
-  - level: Advanced
+  - level: Avansat
     color: from-purple-500 to-violet-600
     badge: bg-purple-100 text-purple-700
     guides:
-      - title: Multi-Day Trip Planning
-        desc: Expedition logistics — gear selection, food planning, safety protocols, and emergency contacts.
+      - title: Planificarea unei expediții de mai multe zile
+        desc: Logistica expediției — selectarea echipamentului, planificarea alimentației, protocoale de siguranță și contacte de urgență.
         slug: sup-travel-guide
-      - title: Rescue Techniques
-        desc: Self-rescue, T-rescue, and towing protocols for open water.
+      - title: Tehnici de salvare
+        desc: Protocoale de auto-salvare, salvare în formă de T și tractare pentru ape deschise.
         slug: sup-self-rescue
-      - title: Night Paddling
-        desc: Navigation after dark — lighting requirements, route memory, group communication, and hazard awareness.
+      - title: Vâslire pe timp de noapte
+        desc: Navigația după lăsarea întunericului — cerințe de iluminare, memorarea traseului, comunicarea în grup și conștientizarea pericolelor.
         slug: sup-navigation-guide
-  - level: Maintenance
+  - level: Întreținere
     color: from-amber-500 to-orange-600
     badge: bg-amber-100 text-amber-700
     guides:
-      - title: Cleaning & Care
-        desc: Freshwater rinsing, UV protection, mildew prevention, and proper drying techniques after every session.
+      - title: Curățare și Îngrijire
+        desc: Clătire cu apă dulce, protecția UV, prevenirea mucegaiului și tehnici corecte de uscare după fiecare sesiune.
         slug: inflatable-sup-maintenance
-      - title: Storage Guide
-        desc: Best practices for storing inflatable boards — deflation, folding, temperature control, and shelf life.
+      - title: Ghid de depozitare
+        desc: Cele mai bune practici pentru depozitarea plăcilor gonflabile — deflație, pliere, controlul temperaturii și durata de valabilitate.
         slug: inflatable-sup-storage
-      - title: Repair Basics
-        desc: Fix small punctures, seam leaks, and valve issues with PVC repair kits and patch techniques.
+      - title: Elemente de bază ale reparației
+        desc: Repară mici înțepături, scurgeri în cusături și probleme cu supapele folosind PVC kituri de reparații și tehnici de reparație.
         slug: inflatable-sup-repair
-      - title: Valve Maintenance
-        desc: Identify valve types (Halkey-Roberts, Boston, Leafield), clean debris, and replace faulty stems.
+      - title: Întreținerea supapelor
+        desc: Identificați tipurile de supape (Halkey-Roberts, Boston, Leafield), curățați resturile și înlocuiți tijele defecte.
         slug: inflatable-sup-repair
-
-knowledge_center_tagline: 'Knowledge Center'
-knowledge_center_title: 'Paddle Board Guides & Knowledge'
-knowledge_center_subtitle: 'Expert guides and buying advice for paddle boarders of every level.'
-
+knowledge_center_tagline: Centru de cunoștințe
+knowledge_center_title: Ghiduri și cunoștințe despre Paddle Board
+knowledge_center_subtitle: Ghiduri de experți și sfaturi de cumpărare pentru padboarderi de orice nivel.
 knowledge_sections:
-  - title: 'Board Technology & Construction'
-    tagline: 'Inside Your Paddle Board'
-    desc: 'How inflatable paddle boards are built — drop-stitch cores, laminate layers, EVA decks, and factory pressure testing.'
+  - title: Tehnologia și construcția plăcilor
+    tagline: În interiorul plăcii tale de paddle
+    desc: Cum sunt construite plăcile cu palete gonflabile — drop-stitch miezuri, straturi laminate, EVA terase și testarea presiunii din fabrică.
     guides:
-      - title: 'How Paddle Boards Are Made'
-        desc: 'From material cutting and lamination to 100% pressure testing — see how every board leaves the factory.'
-        href: '/factory/process'
-      - title: 'Drop-Stitch Core Technology'
-        desc: 'How thousands of internal threads create a rigid, high-pressure inflatable structure.'
-        href: '/learn/drop-stitch-core'
-      - title: 'Materials Reference'
-        desc: 'PVC denier ratings, fabric weights, UV resistance, and deck materials explained.'
-        href: '/learn/materials'
-      - title: 'Inflatable Board Technology'
-        desc: 'Welded seams, rail construction, and valve systems that keep your board stiff and airtight.'
-        href: '/learn/inflatable-technology'
-  - title: 'Buying Guides'
-    tagline: 'Choose the Right Board'
-    desc: 'Everything you need to pick your first — or next — inflatable SUP, from sizing to construction.'
+      - title: Cum sunt fabricate plăcile cu palete
+        desc: De la tăierea și laminarea materialelor până la testarea presiunii 100% — vezi cum fiecare scândură părăsește fabrica.
+        href: /factory/process
+      - title: Tehnologia de bază Drop-Stitch
+        desc: Cum mii de filete interne creează o structură rigidă, gonflabilă la presiune înaltă.
+        href: /learn/drop-stitch-core
+      - title: Referință pentru materiale
+        desc: PVC Au explicat ratingurile Denier, greutățile materialelor, UV rezistența și materialele de terasă.
+        href: /learn/materials
+      - title: Tehnologia plăcilor gonflabile
+        desc: Cusături sudate, construcție a șinei și sisteme de supape care mențin placa rigidă și etanșă.
+        href: /learn/inflatable-technology
+  - title: Ghiduri de cumpărare
+    tagline: Alege tabla potrivită
+    desc: Tot ce ai nevoie pentru a alege primul — sau următorul — gonflabil SUP, de la mărime la construcție.
     guides:
-      - title: 'How to Choose an Inflatable SUP'
-        desc: "The key factors — construction, thickness, fin setup, and included accessories."
-        href: '/guides/how-to-choose-your-sup/'
-      - title: 'What Is Stand-Up Paddleboarding?'
-        desc: 'A friendly introduction to the sport, the gear, and why inflatable boards make it easy to start.'
-        href: '/guides/what-is-sup'
-      - title: 'Inflatable vs Hard Board'
-        desc: 'Compare iSUPs and hard epoxy boards across portability, durability, performance, and value.'
-        href: '/compare/inflatable-vs-hardboard'
-      - title: 'SUP Size Guide'
-        desc: 'Find the right board length, width, and volume for your weight, skill, and paddling style.'
-        href: '/size-guide'
-  - title: 'Skills & Safety'
-    tagline: 'Paddle with Confidence'
-    desc: 'Practical knowledge for every session — beginner basics, water safety, care, and repair.'
+      - title: Cum să alegi un SUP gonflabil
+        desc: Factorii cheie — construcția, grosimea, configurarea aripioarelor și accesoriile incluse.
+        href: /guides/how-to-choose-your-sup/
+      - title: Ce este stand-up paddleboarding-ul?
+        desc: O introducere prietenoasă în sport, echipament și de ce plăcile gonflabile fac ușor începutul.
+        href: /guides/what-is-sup
+      - title: Gonflabil vs Hard Board
+        desc: Compară iSUP-urile și plăcile epoxidice dure în funcție de portabilitate, durabilitate, performanță și valoare.
+        href: /compare/inflatable-vs-hardboard
+      - title: SUP Ghid de mărimi
+        desc: Găsește lungimea, lățimea și volumul potrivite ale plăcii în funcție de greutatea, abilitatea și stilul tău de vâslit.
+        href: /size-guide
+  - title: Abilități și Siguranță
+    tagline: Vâslește cu Încredere
+    desc: Cunoștințe practice pentru fiecare sesiune — elemente de bază pentru începători, siguranță pe apă, întreținere și reparații.
     guides:
-      - title: "SUP Basics — Beginner's Guide"
-        desc: 'Everything a beginner needs to know — board types, paddle sizing, stance, and first-day tips.'
-        href: '/v2/beginner-sup-guide'
-      - title: 'Water Safety Essentials'
-        desc: 'Weather checks, PFD selection, leash rules, self-rescue, and group paddling best practices.'
-        href: '/learn/water-safety'
-      - title: 'SUP Maintenance & Care'
-        desc: 'Cleaning, storage, UV protection, and care tips for inflatable SUP boards.'
-        href: '/v2/inflatable-sup-maintenance'
-      - title: 'Board Repair Basics'
-        desc: 'Fix small punctures, seam leaks, and valve issues with PVC repair kits and patch techniques.'
-        href: '/v2/inflatable-sup-repair'
-
-read_guide: Read guide →
-
+      - title: SUP Bazele — Ghid pentru începători
+        desc: Tot ce trebuie să știe un începător — tipuri de plăci, dimensiunea paletei, poziția și sfaturi pentru prima zi.
+        href: /v2/beginner-sup-guide
+      - title: Elemente esențiale de siguranță la apă
+        desc: Verificări meteo, selectarea PFD, reguli pentru lese, auto-salvare și bune practici pentru vâslitul în grup.
+        href: /learn/water-safety
+      - title: SUP Întreținere și îngrijire
+        desc: Curățare, depozitare, protecția UV și sfaturi de îngrijire pentru plăcile gonflabile SUP.
+        href: /v2/inflatable-sup-maintenance
+      - title: Bazele Reparării Plăcilor
+        desc: Repară mici înțepături, scurgeri în cusături și probleme cu supapele folosind PVC kituri de reparații și tehnici de reparație.
+        href: /v2/inflatable-sup-repair
+read_guide: Citește ghidul →
 cta:
-  title: Not sure where to start?
-  desc: Reach out and we'll point you to the right guides and gear for your level.
-  label: Contact us →
+  title: Nu știi de unde să începi?
+  desc: Contactează-ne și te vom direcționa către ghidurile și echipamentele potrivite pentru nivelul tău.
+  label: Contactează-ne →
   link: /contact

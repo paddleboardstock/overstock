@@ -1,56 +1,56 @@
 hero:
-  tagline: Quality Control Laboratory
-  title: Testing Laboratory & Quality Assurance
-  subtitle: Independent quality lab — every unit tested before shipment
-intro: Paddle Board Overstock operates a dedicated quality control laboratory that operates independently from production. Every batch of raw material and every finished board passes through documented inspection protocols before release. Our QC team reports directly to management, ensuring impartial quality decisions.
+  tagline: Minőségellenőrző Laboratórium
+  title: Tesztlaboratórium & Minőségbiztosítás
+  subtitle: Független minőségellenőrző laboratórium — minden egység tesztelve a kiszállítás előtt
+intro: Paddle Board Overstock egy dedikált minőségellenőrző laboratóriumot működtet, amely független a gyártástól. Minden nyersanyag- és késztermék-sorozat dokumentált ellenőrzési protokollokon megy keresztül a kiadás előtt. Minőségellenőrzési csapatunk közvetlenül a vezetőségnek jelent, biztosítva az elfogulatlan minőségi döntéseket.
 highlights:
   - value: 100%
-    label: Units pressure-tested
-    detail: Every chamber, every board
+    label: Egységek nyomáspróbája
+    detail: Minden kamra, minden deszka
   - value: 48 h
-    label: Air retention test duration
-    detail: At 1.25× rated pressure
-  - value: "&lt;5%"
-    label: Max allowed pressure drop
-    detail: Over 24-hour hold period
+    label: Légtartó képesség teszt hossza
+    detail: 1,25× névleges nyomáson
+  - value: '&lt;5%'
+    label: Maximálisan megengedett nyomáscsökkenés
+    detail: 24 órás tartás alatt
   - value: 99.3%
-    label: Defect-free rate
-    detail: Trailing 12-month shipments
+    label: Hibámentes sebesség
+    detail: Az elmúlt 12 hónap szállításai
 test_procedures:
-  - title: Raw Material Inspection
-    description: Every incoming batch of PVC, drop-stitch fabric, EVA foam, and hardware is tested before acceptance. Tensile strength, tear resistance, and UV resistance are verified. Non-conforming materials are quarantined and returned.
+  - title: Nyersanyag-ellenőrzés
+    description: Minden beérkező PVC, drop-stitch szövet-, EVA hab- és hardver-sorozatot tesztelnek az átvétel előtt. Ellenőrzik a szakítószilárdságot, a szakítószilárdságot és a UV ellenállást. A nem megfelelő anyagokat karanténba helyezik és visszaküldik.
     standards:
-      - Tensile strength (350 N/cm min)
-      - Tear resistance
-      - UV resistance (1,000 h)
-  - title: In-Process QC Checkpoints
-    description: Production operators perform self-inspection at each stage. QC auditors conduct random sampling throughout the shift. Weld peel tests are performed every 50 units. Dimensional checks happen every 20th panel.
+      - Szakítószilárdság (min. 350 N/cm)
+      - Szakadásállóság
+      - UV ellenállás (1 000 óra)
+  - title: Folyamatközi QC Ellenőrzési Pontok
+    description: A termelési operátorok minden szakaszban önellenőrzést végeznek. A QC auditorok véletlenszerű mintavételt végeznek a műszak során. A hegesztett illesztések leválasztási tesztjét 50 egységenként végzik. Méretellenőrzés minden 20. panel esetén történik.
     standards:
-      - Peel test every 50 units
-      - Internal 100-point checklist
-      - Random sampling audits
-  - title: 48-Hour Air Retention Test
-    description: Every tube chamber is inflated to 125% of rated pressure and held for 48 hours. Pressure sensors log continuously with temperature compensation. Any chamber exceeding 5% pressure drop triggers automatic batch re-inspection.
+      - Elválasztási teszt minden 50. egységnél
+      - Belső 100-pontos ellenőrzőlista
+      - Véletlenszerű mintavételes ellenőrzés
+  - title: 48 órás légtartási teszt
+    description: Minden csőkamrát 125%-os névleges nyomásra felfújnak és 48 órán át tartanak. A nyomásérzékelők folyamatosan logolnak hőmérséklet-kompenzációval. Bármely kamra, amely 5%-nál nagyobb nyomáscsökkenést mutat, automatikus tétel újbóli ellenőrzést vált ki.
     standards:
-      - 1.25x rated pressure hold
-      - <5% max pressure drop
-  - title: Load & Balance Testing
-    description: Completed boards are tested at maximum rated capacity for stability, freeboard, and handling. Each board undergoes water testing before final inspection approval.
+      - 1,25× névleges nyomás megtartása
+      - '&lt;5% maximális nyomáscsökkenés'
+  - title: Terhelés- és egyensúlyvizsgálat
+    description: A kész deszkákat a maximális névleges kapacitás mellett tesztelik a stabilitás, a szabad rész és a kezelhetőség szempontjából. Minden deszkát víztesztelésnek vetnek alá a végső ellenőrzési jóváhagyás előtt.
     standards:
-      - 1.25x rated load verification
-      - Water testing
+      - 1,25× névleges terhelés ellenőrzés
+      - Vízmintázás
 equipment:
-  - name: Universal Testing Machine (tensile)
-    spec: 5 kN capacity
-  - name: Pressure Decay Tester
-    spec: Multi-channel, 0–50 psi, datalogging
-  - name: UV Weathering Chamber
-    spec: UVA-340, 1,000 h cycles
-  - name: Thickness Gauge (digital)
-    spec: 0.01 mm resolution
-  - name: Peel Tester (weld)
-    spec: Motorized, 50 N capacity
-  - name: Temperature Chamber
-    spec: -40 °C to +100 °C
-  - name: Leak Detection Tank
-    spec: 6 m × 2 m, illuminated
+  - name: Univerzális vizsgáló gép (húzó)
+    spec: 5 kN kapacitás
+  - name: Nyomáscsökkenés-tesztelő
+    spec: Többcsatornás, 0–50 psi, adatnaplózás
+  - name: UV Időjárásállósági kamra
+    spec: UVA-340, 1,000 órás ciklusok
+  - name: Vastagságmérő (digitális)
+    spec: 0,01 mm felbontás
+  - name: Húzópróba készülék (hegesztés)
+    spec: Motoros, 50 N kapacitás
+  - name: Hőmérsékletkamra
+    spec: -40 °C-tól +100 °C-ig
+  - name: Szivárgásérzékelő tartály
+    spec: 6 m × 2 m, világított

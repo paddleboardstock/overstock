@@ -1,126 +1,121 @@
 hero:
-  tagline: Paddle Board Overstock Academy
-  title: Learning Center
-  subtitle: Guides and tutorials for every skill level — from SUP basics to advanced rescue techniques
-
+  tagline: Paddle Board Overstock Academie
+  title: Leercentrum
+  subtitle: Gidsen en tutorials voor elk vaardigheidsniveau — van SUP basis tot geavanceerde reddingstechnieken
 categories:
   - level: Beginner
     color: from-green-500 to-emerald-600
     badge: bg-green-100 text-green-700
     guides:
-      - title: SUP Basics
-        desc: Learn the fundamentals of stand-up paddleboarding — stance, stroke technique, and balance.
+      - title: SUP Basis
+        desc: 'Leer de basisprincipes van stand-up paddleboarden: houding, slagtechniek en balans.'
         slug: beginner-sup-guide
-      - title: Paddle Techniques
-        desc: Forward stroke, sweep stroke, draw stroke, and low brace — master the essential paddle moves.
+      - title: Peddeltechnieken
+        desc: 'Voorwaartse slag, sweepslag, trekslag en lage brace: beheers de essentiële peddelbewegingen.'
         slug: sup-paddle-guide
-      - title: Safety First
-        desc: Essential safety practices including weather checks, PFD use, leash rules, and self-rescue.
+      - title: Veiligheid eerst
+        desc: Essentiële veiligheidspraktijken, waaronder weercontroles, PFD-gebruik, lijnregels en zelfredding.
         slug: sup-safety-guide
-  - level: Intermediate
+  - level: Tussenliggend
     color: from-blue-500 to-indigo-600
     badge: bg-blue-100 text-blue-700
     guides:
-      - title: Touring Essentials
-        desc: Planning multi-hour paddles — navigation, hydration, pacing, and reading wind forecasts.
+      - title: Essentiële reisbenodigdheden
+        desc: Paddles van meerdere uren plannen - navigatie, hydratatie, tempo en windvoorspellingen lezen.
         slug: touring-sup-guide
-      - title: Weather Reading
-        desc: Interpret marine forecasts, identify cloud patterns, and understand wind effects on water.
+      - title: Weer lezen
+        desc: Interpreteer mariene voorspellingen, identificeer wolkenpatronen en begrijp windeffecten op water.
         slug: weather-planning-water-sports
-      - title: Navigation Basics
-        desc: Chart reading, compass use, GPS waypoints, and route planning for coastal paddling.
+      - title: Basisbeginselen van navigatie
+        desc: Kaartlezen, kompasgebruik, GPS-waypoints en routeplanning voor peddelen langs de kust.
         slug: sup-navigation-guide
-      - title: Tidal Awareness
-        desc: Understanding tide cycles, currents, and how they affect launch timing and routing.
+      - title: Getijdenbewustzijn
+        desc: Inzicht in getijdencycli, stromingen en hoe deze de timing en route van lancering beïnvloeden.
         slug: understanding-tides
-  - level: Advanced
+  - level: Geavanceerd
     color: from-purple-500 to-violet-600
     badge: bg-purple-100 text-purple-700
     guides:
-      - title: Multi-Day Trip Planning
-        desc: Expedition logistics — gear selection, food planning, safety protocols, and emergency contacts.
+      - title: Meerdaagse reisplanning
+        desc: Expeditielogistiek - uitrustingskeuze, voedselplanning, veiligheidsprotocollen en contacten voor noodgevallen.
         slug: sup-travel-guide
-      - title: Rescue Techniques
-        desc: Self-rescue, T-rescue, and towing protocols for open water.
+      - title: Reddingstechnieken
+        desc: Zelfredding, T-redding en sleepprotocollen voor open water.
         slug: sup-self-rescue
-      - title: Night Paddling
-        desc: Navigation after dark — lighting requirements, route memory, group communication, and hazard awareness.
+      - title: Nacht peddelen
+        desc: 'Navigatie in het donker: verlichtingsvereisten, routegeheugen, groepscommunicatie en gevaarbewustzijn.'
         slug: sup-navigation-guide
-  - level: Maintenance
+  - level: Onderhoud
     color: from-amber-500 to-orange-600
     badge: bg-amber-100 text-amber-700
     guides:
-      - title: Cleaning & Care
-        desc: Freshwater rinsing, UV protection, mildew prevention, and proper drying techniques after every session.
+      - title: Reiniging en onderhoud
+        desc: Spoelen met zoet water, UV-bescherming, schimmelpreventie en goede droogtechnieken na elke sessie.
         slug: inflatable-sup-maintenance
-      - title: Storage Guide
-        desc: Best practices for storing inflatable boards — deflation, folding, temperature control, and shelf life.
+      - title: Gids voor opslag
+        desc: Beste praktijken voor het opslaan van opblaasbare boards — leeg laten lopen, opvouwen, temperatuurscontrole en houdbaarheid.
         slug: inflatable-sup-storage
-      - title: Repair Basics
-        desc: Fix small punctures, seam leaks, and valve issues with PVC repair kits and patch techniques.
+      - title: Basisprincipes van reparatie
+        desc: Repareer kleine lekke banden, naadlekken en klepproblemen met PVC reparatiesets en patchtechnieken.
         slug: inflatable-sup-repair
-      - title: Valve Maintenance
-        desc: Identify valve types (Halkey-Roberts, Boston, Leafield), clean debris, and replace faulty stems.
+      - title: Ventielonderhoud
+        desc: Identificeer kleptypes (Halkey-Roberts, Boston, Leafield), verwijder vuil en vervang defecte stelen.
         slug: inflatable-sup-repair
-
-knowledge_center_tagline: 'Knowledge Center'
-knowledge_center_title: 'Paddle Board Guides & Knowledge'
-knowledge_center_subtitle: 'Expert guides and buying advice for paddle boarders of every level.'
-
+knowledge_center_tagline: Kenniscentrum
+knowledge_center_title: Paddleboardgidsen & Kennis
+knowledge_center_subtitle: Expertgidsen en koopadvies voor peddelboarders van elk niveau.
 knowledge_sections:
-  - title: 'Board Technology & Construction'
-    tagline: 'Inside Your Paddle Board'
-    desc: 'How inflatable paddle boards are built — drop-stitch cores, laminate layers, EVA decks, and factory pressure testing.'
+  - title: Bordtechnologie & Constructie
+    tagline: Binnenin je peddelboard
+    desc: Hoe opblaasbare paddleboards worden gebouwd — drop-stitch kernen, laminaatlagen, EVA dekken en fabrieksdruktesten.
     guides:
-      - title: 'How Paddle Boards Are Made'
-        desc: 'From material cutting and lamination to 100% pressure testing — see how every board leaves the factory.'
-        href: '/factory/process'
-      - title: 'Drop-Stitch Core Technology'
-        desc: 'How thousands of internal threads create a rigid, high-pressure inflatable structure.'
-        href: '/learn/drop-stitch-core'
-      - title: 'Materials Reference'
-        desc: 'PVC denier ratings, fabric weights, UV resistance, and deck materials explained.'
-        href: '/learn/materials'
-      - title: 'Inflatable Board Technology'
-        desc: 'Welded seams, rail construction, and valve systems that keep your board stiff and airtight.'
-        href: '/learn/inflatable-technology'
-  - title: 'Buying Guides'
-    tagline: 'Choose the Right Board'
-    desc: 'Everything you need to pick your first — or next — inflatable SUP, from sizing to construction.'
+      - title: Hoe paddleboards worden gemaakt
+        desc: Van materiaal snijden en lamineren tot 100% druktesten — zie hoe elk bord de fabriek verlaat.
+        href: /factory/process
+      - title: Drop-Stitch Kerntechnologie
+        desc: Hoe duizenden interne draden een stijve, hogedruk opblaasbare structuur creëren.
+        href: /learn/drop-stitch-core
+      - title: Materiaalreferentie
+        desc: PVC denier-beoordelingen, stofgewichten, UV weerstand en dekmaterialen uitgelegd.
+        href: /learn/materials
+      - title: Opblaasbare Borden Technologie
+        desc: Gelaste naden, railconstructie en klepsystemen die je board stijf en luchtdicht houden.
+        href: /learn/inflatable-technology
+  - title: Koopgidsen
+    tagline: Kies het juiste bord
+    desc: Alles wat je nodig hebt om je eerste — of volgende — opblaasbare SUP te kiezen, van maatvoering tot constructie.
     guides:
-      - title: 'How to Choose an Inflatable SUP'
-        desc: "The key factors — construction, thickness, fin setup, and included accessories."
-        href: '/guides/how-to-choose-your-sup/'
-      - title: 'What Is Stand-Up Paddleboarding?'
-        desc: 'A friendly introduction to the sport, the gear, and why inflatable boards make it easy to start.'
-        href: '/guides/what-is-sup'
-      - title: 'Inflatable vs Hard Board'
-        desc: 'Compare iSUPs and hard epoxy boards across portability, durability, performance, and value.'
-        href: '/compare/inflatable-vs-hardboard'
-      - title: 'SUP Size Guide'
-        desc: 'Find the right board length, width, and volume for your weight, skill, and paddling style.'
-        href: '/size-guide'
-  - title: 'Skills & Safety'
-    tagline: 'Paddle with Confidence'
-    desc: 'Practical knowledge for every session — beginner basics, water safety, care, and repair.'
+      - title: Hoe kies je een opblaasbare SUP
+        desc: De belangrijkste factoren — constructie, dikte, vinconfiguratie en inbegrepen accessoires.
+        href: /guides/how-to-choose-your-sup/
+      - title: Wat is Stand-Up Paddleboarden?
+        desc: Een vriendelijke introductie tot de sport, de uitrusting, en waarom opblaasbare boards het gemakkelijk maken om te beginnen.
+        href: /guides/what-is-sup
+      - title: Opblaasbare versus harde plank
+        desc: Vergelijk iSUP's en harde epoxyboards op het gebied van draagbaarheid, duurzaamheid, prestaties en waarde.
+        href: /compare/inflatable-vs-hardboard
+      - title: SUP Maattabel
+        desc: Vind de juiste boardlengte, breedte en volume voor je gewicht, vaardigheid en peddelstijl.
+        href: /size-guide
+  - title: Vaardigheden & Veiligheid
+    tagline: Peddel met Vertrouwen
+    desc: Praktische kennis voor elke sessie — basis voor beginners, waterveiligheid, onderhoud en reparatie.
     guides:
-      - title: "SUP Basics — Beginner's Guide"
-        desc: 'Everything a beginner needs to know — board types, paddle sizing, stance, and first-day tips.'
-        href: '/v2/beginner-sup-guide'
-      - title: 'Water Safety Essentials'
-        desc: 'Weather checks, PFD selection, leash rules, self-rescue, and group paddling best practices.'
-        href: '/learn/water-safety'
-      - title: 'SUP Maintenance & Care'
-        desc: 'Cleaning, storage, UV protection, and care tips for inflatable SUP boards.'
-        href: '/v2/inflatable-sup-maintenance'
-      - title: 'Board Repair Basics'
-        desc: 'Fix small punctures, seam leaks, and valve issues with PVC repair kits and patch techniques.'
-        href: '/v2/inflatable-sup-repair'
-
-read_guide: Read guide →
-
+      - title: SUP Basis — Gids voor Beginners
+        desc: Alles wat een beginner moet weten — soorten boards, peddelmaat, houding en tips voor de eerste dag.
+        href: /v2/beginner-sup-guide
+      - title: Essentiële Waterveiligheid
+        desc: Weerscontrole, PFD selectie, leash-regels, zelfredding en beste praktijken voor groepspeddelen.
+        href: /learn/water-safety
+      - title: SUP Onderhoud en verzorging
+        desc: Reiniging, opslag, UV bescherming en onderhoudstips voor opblaasbare SUP boards.
+        href: /v2/inflatable-sup-maintenance
+      - title: Basiskennis Boardreparatie
+        desc: Repareer kleine lekke banden, naadlekken en klepproblemen met PVC reparatiesets en patchtechnieken.
+        href: /v2/inflatable-sup-repair
+read_guide: Lees gids →
 cta:
-  title: Not sure where to start?
-  desc: Reach out and we'll point you to the right guides and gear for your level.
-  label: Contact us →
+  title: Weet u niet zeker waar u moet beginnen?
+  desc: Neem contact met ons op en we wijzen je naar de juiste gidsen en uitrusting voor jouw niveau.
+  label: Neem contact met ons op →
   link: /contact

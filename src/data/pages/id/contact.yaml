@@ -1,40 +1,40 @@
 hero_text:
-  tagline: Contact
-  title: GET IN TOUCH
+  tagline: Kontak
+  title: HUBUNGI KAMI
 contact_form:
   id: form
-  title: Send us a message
-  subtitle: For order questions, sizing advice or product support, drop us a line. We reply within one business day.
+  title: Kirimkan pesan kepada kami
+  subtitle: Untuk pertanyaan tentang pesanan, saran ukuran, atau dukungan produk, hubungi kami. Kami akan membalas dalam satu hari kerja.
   email_to: info@paddleboardoverstock.com
-  submit_button: Send Inquiry → Get a Quote
-  success_message: Thanks! Your message has landed in our inbox. We will reply within one business day.
-  error_message: Something went wrong sending your message. Please try again or email us directly.
-  default_country_code: "+1"
+  submit_button: Kirim Permintaan → Dapatkan Penawaran
+  success_message: Terima kasih! Pesan Anda telah masuk ke kotak masuk kami. Kami akan membalas dalam satu hari kerja.
+  error_message: Ada kesalahan saat mengirim pesan Anda. Silakan coba lagi atau kirim email langsung kepada kami.
+  default_country_code: '+1'
   captcha:
-    label: "Anti-spam: please solve the following"
+    label: 'Anti-spam: silakan selesaikan berikut ini'
   fields:
-    - name: firstName
-      label: First Name
+    - name: namaDepan
+      label: Nama Depan
       row: 1
-    - name: lastName
-      label: Last Name
+    - name: namaBelakang
+      label: Nama Belakang
       row: 1
-    - name: companyName
-      label: Company Name
+    - name: namaPerusahaan
+      label: Nama Perusahaan
       row: 2
     - name: address
-      label: Address
+      label: Alamat
       row: 3
     - name: zip
-      label: Zip / Postal Code
+      label: Kode Pos
       row: 4
     - name: country
-      label: Country
+      label: Negara
       row: 4
       type: select
       optionsKey: countries
     - name: email
-      label: E-mail
+      label: Surel
       row: 5
       type: email
     - name: tel
@@ -42,81 +42,81 @@ contact_form:
       row: 5
       type: tel
       withCountryCode: true
-    - name: orderVolume
-      label: Estimated Order Volume
+    - name: volumePesanan
+      label: Perkiraan Volume Pesanan
       row: 6
       type: select
       options:
-        - value: ""
-          label: How many boards are you shopping for?...
+        - value: ''
+          label: Berapa banyak papan yang Anda beli?...
         - value: one
-          label: Just one board
+          label: Hanya satu papan
         - value: 2-4
-          label: 2–4 boards
+          label: 2–4 papan
         - value: 5-plus
-          label: 5+ boards (family, club, or rental)
+          label: 5+ papan (untuk keluarga, klub, atau penyewaan)
     - name: customization
-      label: What can we help with?
+      label: Apa yang bisa kami bantu?
       row: 7
       type: select
       options:
-        - value: ""
-          label: Select a topic...
+        - value: ''
+          label: Pilih topik...
         - value: none
-          label: General product question
+          label: Pertanyaan umum tentang produk
         - value: sizing
-          label: Help choosing the right board
+          label: Bantuan memilih papan yang tepat
         - value: order
-          label: Order, payment or shipping
+          label: Pesanan, pembayaran atau pengiriman
         - value: warranty
-          label: Warranty or repair support
-    - name: productInterest
-      label: Product Categories of Interest
+          label: Dukungan garansi atau perbaikan
+    - name: minatProduk
+      label: Kategori Produk yang Menarik
       row: 8
       type: select
       options:
-        - value: ""
-          label: Select product category...
+        - value: ''
+          label: Pilih kategori produk...
         - value: all
-          label: All products / Full catalog
+          label: Semua produk / Katalog lengkap
         - value: sup
-          label: SUP Boards / Paddleboards
+          label: SUP Papan / Papan Dayung
         - value: packages
-          label: Complete SUP packages
+          label: Paket SUP lengkap
         - value: accessory
-          label: Accessories (pumps, oars, bags)
+          label: Aksesori (pompa, dayung, tas)
     - name: subject
-      label: Subject
+      label: Subjek
       row: 9
     - name: message
-      label: Message
+      label: Pesan
       row: 10
       type: textarea
       rows: 6
 features2_other_ways:
-  title: Other ways to reach us
+  title: Cara lain untuk menghubungi kami
   columns: 3
   items:
-    - title: Order help
-      description: Product questions, sizing advice, and order support.
+    - title: Bantuan pemesanan
+      description: Pertanyaan produk, saran ukuran, dan dukungan pesanan.
       icon: tabler:shopping-bag
-    - title: Technical support
-      description: Warranty, repairs, spare parts and operating questions.
+    - title: Dukungan teknis
+      description: Garansi, perbaikan, suku cadang, dan pertanyaan operasional.
       icon: tabler:tool
-    - title: Press & partnerships
-      description: Media kits, sponsorship and industry collaboration.
+    - title: Pers dan kemitraan
+      description: Kit media, sponsor, dan kolaborasi industri.
       icon: tabler:news
-    - title: Phone
-      description: +1 279 732 3333 (US HQ) · +86 13305324192 (factory)
+    - title: Telepon
+      description: +1 279 732 3333 (Kantor Pusat AS) · +86 13305324192 (pabrik)
       icon: tabler:headset
-    - title: Email
+    - title: Surel
       description: info@paddleboardoverstock.com
       icon: tabler:mail
-    - title: Global HQ & Billing
+    - title: Kantor Pusat & Penagihan
       description: Weihai Dongjilian Co., Ltd.
       icon: tabler:map-pin
 map:
-  title: Our Location
-  subtitle: Visit our Weihai manufacturing hub
-  address: Weihai, Shandong, China
+  title: Lokasi Kami
+  subtitle: Kunjungi pusat manufaktur kami di Weihai
+  address: Weihai, Shandong, Tiongkok
   zoom: 15

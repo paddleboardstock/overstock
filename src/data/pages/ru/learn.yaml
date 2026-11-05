@@ -1,73 +1,70 @@
 hero:
-  tagline: 'Water Exploration Knowledge'
-  title: 'Learn'
+  tagline: Знания о водных исследованиях
+  title: Учить
   subtitle: |
-    Guides, tutorials, and deep dives — everything you need to explore<br />
-    water with confidence. From choosing your first SUP to mastering advanced techniques.
-  taglineSection: 'Knowledge for every paddler. From beginner to professional.'
-
+    Руководства, учебники и подробные исследования — всё, что вам нужно для исследования<br />
+    Вода с уверенностью. От выбора вашего первого SUP до освоения продвинутых техник.
+  taglineSection: Знания для каждого гребца. От новичка до профессионала.
 featured:
-  tagline: 'Featured Topics'
-  title: 'Start your learning journey'
-  subtitle: 'Whether you are new to water sports or looking to level up, our guides have you covered.'
+  tagline: Избранные темы
+  title: Начните своё путешествие в обучение
+  subtitle: Будь вы новичком в водных видах спорта или хотите повысить уровень, наши гиды вам помогут.
   items:
-    - title: 'SUP Basics'
-      description: 'Everything a beginner needs to know — board types, paddle sizing, stance, and first-day tips.'
-      icon: 'tabler:lifebuoy'
-      href: '/learn/sup'
-    - title: 'Inflatable vs Hard Board'
-      description: 'Which is right for you? We compare portability, performance, durability, and cost side by side.'
-      icon: 'tabler:arrows-left-right'
-      href: '/compare/inflatable-vs-hardboard'
-    - title: 'Water Safety'
-      description: 'Essential safety knowledge every paddler should have — weather, PFDs, self-rescue, and more.'
-      icon: 'tabler:shield'
-      href: '/learn/water-safety'
-    - title: 'Materials Guide'
-      description: 'Drop-stitch cores, PVC laminates, EVA deck foam — understand what your board is made of.'
-      icon: 'tabler:hexagons'
-      href: '/learn/materials'
-    - title: 'SUP Size Guide'
-      description: 'Find the right board length, width, and volume for your weight, skill, and paddling style.'
-      icon: 'tabler:ruler'
-      href: '/size-guide'
-    - title: 'Intermediate Techniques'
-      description: 'Step up your paddling with advanced strokes, turning techniques, and rough-water handling.'
-      icon: 'tabler:ripple'
-      href: '/learn/intermediate-techniques'
-
+    - title: SUP Основы
+      description: Все, что нужно знать начинающему — типы досок, размер весла, стойка и советы для первого дня.
+      icon: tabler:lifebuoy
+      href: /learn/sup
+    - title: Надувная доска против жесткой доски
+      description: Что подходит именно вам? Мы сравниваем портативность, производительность, долговечность и стоимость бок о бок.
+      icon: tabler:arrows-left-right
+      href: /compare/inflatable-vs-hardboard
+    - title: Безопасность на воде
+      description: Основные знания по безопасности, которые должен иметь каждый гребец — погода, спасательные жилеты, самоспасение и многое другое.
+      icon: tabler:shield
+      href: /learn/water-safety
+    - title: Руководство по материалам
+      description: Drop-stitch сердечники, PVC ламиниры, EVA пенопласт для деки — разберитесь, из чего состоит ваша доска.
+      icon: tabler:hexagons
+      href: /learn/materials
+    - title: Руководство по размерам SUP
+      description: Найдите подходящую длину, ширину и объем доски для вашего веса, уровня навыков и стиля гребли.
+      icon: tabler:ruler
+      href: /size-guide
+    - title: Промежуточные техники
+      description: Улучшите свои навыки гребли с помощью продвинутых приемов, техник поворота и управления на бурной воде.
+      icon: tabler:ripple
+      href: /learn/intermediate-techniques
 categories:
-  tagline: 'Categories'
-  title: 'Explore by topic'
-  subtitle: 'All learning content organized by skill level and interest.'
+  tagline: Категории
+  title: Исследуйте по темам
+  subtitle: Весь учебный контент организован по уровню навыков и интересам.
   columns:
-    - title: 'Beginner'
+    - title: Новичок
       items:
-        - 'SUP Basics — start here'
-        - 'Inflatable vs Hard Board'
-        - 'Water Safety Essentials'
-        - 'How to Choose Your SUP'
-        - 'Pump & Pack Guide'
-    - title: 'Intermediate'
+        - SUP Основы — начните здесь
+        - Надувная доска против жесткой доски
+        - Основы безопасности на воде
+        - Как выбрать SUP
+        - Руководство по насосной и упаковочной технике
+    - title: Средний
       items:
-        - 'Paddling Techniques'
-        - 'Inflatable Technology'
-        - 'Materials Reference'
-        - 'EVA Deck Art Explained'
-        - 'Drop-Stitch Core Explained'
-    - title: 'Advanced'
+        - Техники гребли
+        - Надувные технологии
+        - Справочник материалов
+        - EVA Объяснение оформления деки
+        - Drop-Stitch Объяснение сердечника
+    - title: Передовой
       items:
-        - 'Multi-Day Touring'
-        - 'Rough-Water Handling'
-        - 'Night Paddling'
-        - 'Board Repair & Care'
-
+        - Многодневные туры
+        - Управление в бурной воде
+        - Ночная гребля
+        - Ремонт и уход за доской
 cta:
-  title: 'Still have questions?'
-  subtitle: 'Ask our AI guide for personalized answers about gear, safety, and techniques.'
+  title: Остались вопросы?
+  subtitle: Спросите нашего AI-гида для персональных ответов о снаряжении, безопасности и техниках.
   actions:
     - variant: primary
-      text: 'Ask the Water Advisor AI'
+      text: Спросить у Water Advisor AI
       href: '#ai-guide'
-    - text: 'Browse all guides'
-      href: '/academy'
+    - text: Просмотреть все руководства
+      href: /academy

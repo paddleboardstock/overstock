@@ -1,136 +1,136 @@
 hero:
-  tagline: Quality Control
-  title: Quality Control<br />System
-  subtitle: Multi-stage inspection process covering incoming materials, in-process production, pressure testing, final assembly, and pre-shipment verification. Every batch is traceable, every test is recorded.
+  tagline: Controlul calității
+  title: Controlul calității<br />Sistem
+  subtitle: Proces de inspecție în mai multe etape care acoperă materialele primite, producția în curs, testarea presiunii, asamblarea finală și verificarea înainte de expediere. Fiecare lot este trasabil, fiecare test este înregistrat.
   image:
     src: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/factory/paddleboardoverstock-pressure-testing.webp
-    alt: Paddle Board Overstock quality control and pressure testing process
+    alt: Paddle Board Overstock procesul de control al calității și testare sub presiune
 stats:
-  title: QC by the Numbers
+  title: Controlul calității prin cifre
   stats:
-    - title: Units Pressure-Tested
+    - title: Unități testate sub presiune
       amount: 100%
-    - title: Max Pressure Drop
+    - title: Căderea maximă a presiunii
       amount: <5%
-    - title: QC Inspectors
-      amount: "12"
-    - title: Records Retained
-      amount: 10 years
+    - title: Inspectorii de control al calității
+      amount: '12'
+    - title: Înregistrări Păstrate
+      amount: 10 ani
 content_system:
-  tagline: QC System Overview
-  title: Integrated Quality<br />Control Framework
-  subtitle: Our QC system operates independently from production and reports directly to management. No batch is shipped without signed quality release from the quality lab.
+  tagline: Prezentare generală a sistemului QC
+  title: Calitate integrată<br />Cadru de control
+  subtitle: Sistemul nostru de control al calității funcționează independent de producție și raportează direct managementului. Niciun lot nu este expediat fără eliberarea calității semnată de laboratorul de calitate.
   items:
-    - title: Independent Quality Lab
-      description: Our quality lab operates as a separate function from production. QC inspectors report to the Quality Manager, not the Production Director. This organizational independence ensures that quality decisions are made objectively — production deadlines never override quality requirements.
+    - title: Laborator de Calitate Independent
+      description: Laboratorul nostru de calitate funcționează ca o funcție separată de producție. Inspectorii QC raportează Managerului de Calitate, nu Directorului de Producție. Această independență organizațională asigură faptul că deciziile privind calitatea sunt luate obiectiv — termenele de producție nu prevalează niciodată asupra cerințelor de calitate.
       features:
-        - Reports directly to management, independent of production
-        - Authorized to halt production for quality issues
-        - 12 dedicated QC inspectors across all stages
-        - All test equipment calibrated annually
-    - title: Batch Traceability
-      description: Every batch of raw material is assigned a unique lot number in our ERP system. From material arrival through production to finished product, each board's bill of materials links back to original supplier batches. This enables full upstream traceability for any quality or compliance inquiry.
+        - Raportează direct conducerii, independent de producție
+        - Autorizat să oprească producția din cauza problemelor de calitate
+        - 12 inspectori QC dedicați în toate etapele
+        - Toate echipamentele de testare sunt calibrate anual
+    - title: Trasabilitatea lotului
+      description: Fiecare lot de materie primă primește un număr de lot unic în sistemul nostru ERP. De la sosirea materialului, prin producție până la produsul finit, fișa de materiale a fiecărei plăci se leagă înapoi de loturile originale ale furnizorului. Acest lucru permite trasabilitatea completă în amonte pentru orice întrebare legată de calitate sau conformitate.
       features:
-        - ERP-based lot tracking from material to finished product
-        - Physical batch tags on each work order
-        - 100% material coverage — PVC, drop-stitch, EVA foam, hardware, adhesives
-        - Records retained for 10 years
-    - title: Quality Management
-      description: Our QC procedures follow documented internal protocols. Test results are recorded, traceable, and reviewed by our independent quality lab. 99.3% defect-free rate across trailing 12-month shipments.
+        - Urmărirea loturilor bazată pe ERP, de la material la produsul finit
+        - Etichete fizice de lot pe fiecare ordin de lucru
+        - Acoperire 100% a materialului — PVC, drop-stitch, spumă EVA, componente, adezivi
+        - Înregistrări păstrate timp de 10 ani
+    - title: Managementul Calității
+      description: Procedurile noastre de control al calității urmează protocoale interne documentate. Rezultatele testelor sunt înregistrate, trasabile și revizuite de laboratorul nostru independent de calitate. Rata de defecte de 99,3% pe livrările din ultimele 12 luni.
       features:
-        - Documented internal QC protocols, reviewed annually
-        - 99.3% defect-free rate across trailing 12-month shipments
-        - Zero tolerance on safety-critical defects
-        - Records retained for 10 years
+        - Protocoale interne documentate de control al calității, revizuite anual
+        - Rata de defecte de 99,3% pe livrările din ultimele 12 luni
+        - Toleranță zero pentru defectele critice de siguranță
+        - Înregistrări păstrate timp de 10 ani
 content_inspection:
-  tagline: Inspection Stages
-  title: Six-Stage<br />Inspection Process
-  subtitle: Every product passes through 6 inspection stages with documented QC checkpoints. Defects are caught early, corrective actions are immediate, and every batch is fully traceable.
+  tagline: Etapele de inspecție
+  title: Șase Etape<br />Procesul de inspecție
+  subtitle: Fiecare produs trece prin 6 etape de inspecție cu puncte de control QC documentate. Defectele sunt depistate devreme, acțiunile corective sunt imediate, iar fiecare lot este complet trasabil.
   stages:
-    - stage: "1"
-      title: Incoming Material Inspection
-      description: All incoming materials are logged by batch/lot number and quarantined until QC sign-off. PVC fabric rolls are tested for tensile strength, tear resistance, and thickness. Drop-stitch cores, valves, adhesives, and hardware are visually inspected and measured against specifications.
-      checks: Tensile strength, tear resistance, thickness gauge, adhesive viscosity, visual defect scan
-      threshold: 100% of batches tested. Reject if tensile < 90% of spec, tear < spec min, or any visual defect
-    - stage: "2"
-      title: In-Process QC — Cutting & Prep
-      description: CNC-cut panels are dimensionally checked against CAD source files every 20th panel. Edge quality is inspected for fraying, uneven cuts, or dimensional drift. Panel count is verified against the BOM for each production batch before materials move to welding.
-      checks: Dimensional check against CAD DXF files, edge quality inspection, panel count verification
-      threshold: Tolerance ±0.5mm. Reject batch if >2% out of tolerance
-    - stage: "3"
-      title: In-Process QC — Welding & Bonding
-      description: During production, weld quality is continuously monitored. Peel tests are conducted on samples every 50 units. Weld width is measured against specification. Hot-air temperature logs are reviewed for consistency. Every seam is visually inspected under backlight for channeling or voids.
-      checks: Peel test every 50 units, weld width measurement, hot-air temperature log review, backlight seam inspection
-      threshold: Peel strength min 8 N/cm. Weld width tolerance ±1mm. Any visible channeling = reject
-    - stage: "4"
-      title: Assembly QC
-      description: Each unit follows a 100-point assembly checklist signed off by the team lead. Valve function is tested through 10 open/close cycles. Hardware torque is verified. Visual inspection covers surface finish, color consistency, label placement, and accessory completeness.
-      checks: 100-point checklist per unit, valve function test, hardware torque verification, visual inspection
-      threshold: "Zero-defect policy on safety-critical items (valves, D-rings, handles). Minor cosmetic: 99.3% defect-free target"
-    - stage: "5"
-      title: Pressure Testing
-      description: Every chamber is inflated to 1.25× rated pressure and held for 24-48 hours. Pressure sensors log continuously throughout the hold period. Temperature-compensated readings ensure accuracy. Any chamber exceeding 5% pressure drop is rejected and sent for seam re-inspection with 100% re-test of the entire production batch.
-      checks: 24-48h pressure hold log, sensor calibration verified daily, temperature-compensated reading, seam re-test after repair
-      threshold: Max 5% pressure drop over 24h at stable temp. Exceeding = 100% re-test of entire batch
-    - stage: "6"
-      title: Final Inspection & Shipment Release
-      description: Final visual and functional inspection before packing. Surface defects, color consistency, label/BIN verification, packaging integrity, and accessory completeness are checked against the customer order. Units are vacuum-packed, boxed, and palletized. Final QC sign-off is required before any product leaves the factory.
-      checks: Full visual inspection, accessory checklist per SKU, packaging drop test (1m random sample), label/bar code scan verification
-      threshold: Zero tolerance safety defects. 99.3% defect-free target. 100% of units visually inspected
+    - stage: '1'
+      title: Inspecția materialelor de sosire
+      description: Toate materialele primite sunt înregistrate după numărul lotului și puse în carantină până la aprobarea QC. Rolele de PVC sunt testate pentru rezistența la tracțiune, rezistența la rupere și grosime. Nucleele, supapele, adezivii și componentele hardware sunt inspectate vizual și măsurate conform specificațiilor.
+      checks: Rezistență la tracțiune, rezistență la rupere, calibru de grosime, vâscozitate adeziv, scanare vizuală pentru defecte
+      threshold: 100% dintre loturi au fost testate. Se respinge dacă rezistența la tracțiune < 90% din specificație, ruperea < minimul specificației sau există vreun defect vizual
+    - stage: '2'
+      title: Controlul calității în proces — Tăiere și pregătire
+      description: CNC- panourile tăiate sunt verificate dimensional față de fișierele sursă CAD la fiecare 20 de panou. Calitatea marginilor este inspectată pentru destrămare, tăieturi inegale sau derive dimensionale. Numărul panourilor este verificat în raport cu BOM pentru fiecare lot de producție înainte ca materialele să treacă la sudură.
+      checks: Verificarea dimensională față de fișierele CAD DXF, inspecția calității muchiilor, verificarea numărului de panouri
+      threshold: Toleranță ±0,5mm. Respinge lotul dacă >2% din toleranță
+    - stage: '3'
+      title: Controlul calității în proces — Sudură și lipire
+      description: În timpul producției, calitatea sudurii este monitorizată continuu. Testele de decojire sunt efectuate pe eșantioane la fiecare 50 de unități. Lățimea sudurii este măsurată conform specificației. Jurnalele de temperatură a aerului cald sunt revizuite pentru consistență. Fiecare cusătură este inspectată vizual sub lumină din spate pentru canale sau goluri.
+      checks: Test de decojire la fiecare 50 de unități, măsurarea lățimii sudurii, revizuirea jurnalului de temperatură a aerului cald, inspectarea cusăturii sub lumină din spate
+      threshold: Rezistența la cojire minim 8 N/cm. Toleranța lățimii ±sudurii 1 mm. Orice canalizare vizibilă = respingere
+    - stage: '4'
+      title: Controlul calității asamblării
+      description: Fiecare unitate urmează o listă de verificare a asamblării în 100 de puncte, aprobată de liderul echipei. Funcționarea supapelor este testată prin 10 cicluri de deschidere/închidere. Cuplul hardware este verificat. Inspecția vizuală acoperă finisajul suprafeței, consistența culorii, plasarea etichetei și completitudinea accesoriilor.
+      checks: Listă de verificare de 100 de puncte per unitate, test de funcție al supapelor, verificare cuplu hardware, inspecție vizuală
+      threshold: 'Politica zero-defect pentru articolele critice de siguranță (supape, inele D, mânere). Defecte cosmetice minore: obiectiv 99,3% fără defecte'
+    - stage: '5'
+      title: Testarea Presiunii
+      description: Fiecare cameră este umflată la o presiune nominală de 1,25× și menținută timp de 24-48 de ore. Senzorii de presiune înregistrează continuu pe toată durata perioadei de păstrare. Citirile compensate de temperatură asigură acuratețea. Orice cameră care depășește o cădere de presiune de 5% este respinsă și trimisă la reinspecție a cusăturii cu retestare 100% a întregului lot de producție.
+      checks: Jurnal de menținere a presiunii pe 24-48 de ore, calibrarea senzorului verificată zilnic, citire compensată de temperatură, retestare a cusăturii după reparație
+      threshold: Scădere maximă de 5% a presiunii pe 24 de ore la temperatura stabilă. Depășire = 100% retestare a întregului lot
+    - stage: '6'
+      title: Inspecția finală și eliberarea expedierii
+      description: Inspecția vizuală și funcțională finală înainte de ambalare. Defectele de suprafață, consistența culorii, verificarea etichetei/BIN, integritatea ambalajului și completitudinea accesoriilor sunt verificate în raport cu comanda clientului. Unitățile sunt ambalate în vid, ambalate și paletizate. Este necesară aprobarea finală a controlului calității înainte ca orice produs să părăsească fabrica.
+      checks: Inspecție vizuală completă, listă de verificare a accesoriilor conform SKU, test de cădere a ambalajului (eșantion aleatoriu de 1 m), verificarea scanării etichetei/codului de bare
+      threshold: Toleranță zero pentru defectele de siguranță. Obiectiv 99,3% fără defecte. 100% din unități sunt inspectate vizual
 content_equipment:
-  tagline: Testing Equipment
-  title: QC Lab<br />Equipment
-  subtitle: Our quality lab is equipped with specialized testing equipment for material verification, weld integrity, and product performance validation.
+  tagline: Echipament de testare
+  title: Laborator QC<br />Echipamente
+  subtitle: Laboratorul nostru de calitate este echipat cu echipamente de testare specializate pentru verificarea materialelor, integritatea sudurilor și validarea performanței produsului.
   columns: 3
   items:
-    - title: Tensile Testing Machine
-      description: Measures fabric tensile strength and elongation per internal test protocol. Used for incoming QC of all PVC and drop-stitch fabric batches.
+    - title: Mașină de testare a tracțiunii
+      description: Măsoară rezistența la tracțiune și alungirea țesăturii conform protocolului intern de testare. Folosit pentru controlul calității la recepție al tuturor loturilor de țesătură PVC și drop-stitch.
       icon: tabler:scale
-    - title: Temperature Chamber
-      description: Environmental chamber for UV resistance testing and low-temperature flexibility testing. Simulates extreme operating conditions.
+    - title: Cameră de temperatură
+      description: Cameră de mediu pentru testarea rezistenței la UV și testarea flexibilității la temperaturi scăzute. Simulează condiții extreme de funcționare.
       icon: tabler:temperature
-    - title: Pressure Sensors & Loggers
-      description: Digital pressure sensors with continuous data logging for 24-48 hour air retention tests. Temperature-compensated for accuracy.
+    - title: Senzori și înregistratoare de presiune
+      description: Senzori de presiune digitali cu înregistrare continuă a datelor pentru teste de retenție a aerului de 24-48 de ore. Compensați pentru temperatură pentru acuratețe.
       icon: tabler:wind
-    - title: Peel Test Rig
-      description: Calibrated peel testing equipment for weld seam strength verification. Random samples from every production batch.
+    - title: Banc de testare pentru desprindere
+      description: Echipamente calibrate de testare a dezlipirii pentru verificarea rezistenței cusăturii. Mostre aleatorii din fiecare lot de producție.
       icon: tabler:files
-    - title: Leak Detection Tank
-      description: Water tank for submerged leak testing of inflated chambers. Visual bubble detection for seam and valve integrity verification.
+    - title: Tanc de detectare a scurgerilor
+      description: Rezervor de apă pentru testarea scurgerilor subacvatice a camerelor umflate. Detectarea vizuală a bulelor pentru verificarea integrității cusăturilor și a supapelor.
       icon: tabler:ripple
-    - title: Inspection Tools
-      description: Calibrated measurement tools — thickness gauges, torque wrenches, dimensional calipers, hardness testers for production QC stations.
+    - title: Instrumente de inspecție
+      description: Instrumente de măsurare calibrate — calibre de grosime, chei dinamometrice, șublere dimensionale, teste de duritate pentru stațiile de control al calității în producție.
       icon: tabler:tools
 content_metrics:
-  tagline: QC Performance
-  title: Quality Control<br />Metrics
-  subtitle: Real pass/fail data from our production line. These metrics are monitored daily and reviewed monthly by management.
+  tagline: Performanța QC
+  title: Controlul calității<br />Metrice
+  subtitle: Date reale de trecere/respingere de pe linia noastră de producție. Aceste metrici sunt monitorizate zilnic și revizuite lunar de conducere.
   columns: 3
   items:
-    - title: 100% Units Tested
-      description: Every chamber of every board is pressure-tested before shipping. No sampling — 100% inspection on pressure integrity.
+    - title: 100% Unități Testate
+      description: Fiecare cameră a fiecărui tablou este testată la presiune înainte de expediere. Nicio eșantionare - inspecție 100% a integrității presiunii.
       icon: tabler:check
-    - title: <5% Pressure Drop
-      description: Maximum allowable pressure loss over 24-48 hours at 1.25× rated pressure. Any chamber exceeding this threshold triggers batch re-test.
+    - title: <Scădere de presiune <5%
+      description: Pierdere maximă admisă de presiune pe o perioadă de 24-48 de ore la 1,25× presiunea nominală. Orice cameră care depășește acest prag declanșează retestarea lotului.
       icon: tabler:gauge
-    - title: 99.3% Defect-Free
-      description: Defect-free rate across trailing 12-month shipments. Zero tolerance on safety-critical defects.
+    - title: 99,3% fără defecte
+      description: Rata fără defecte pe parcursul livrărilor din ultimele 12 luni. Toleranță zero pentru defectele critice de siguranță.
       icon: tabler:clipboard-check
-    - title: 24-48 Hour Hold
-      description: Boards are held 24-48 hours depending on model and batch. Pressure sensors log continuously throughout the hold period.
+    - title: Reținere de 24-48 de ore
+      description: Plăcile sunt menținute 24-48 de ore, în funcție de model și lot. Senzorii de presiune înregistrează continuu pe parcursul perioadei de menținere.
       icon: tabler:clock
-    - title: 1.25× Test Pressure
-      description: Safety margin on every chamber — tested at 25% above rated pressure to ensure margin above maximum operating conditions.
+    - title: 1,25× Presiune de test
+      description: Marjă de siguranță pentru fiecare cameră — testată la 25% peste presiunea nominală pentru a asigura o marjă peste condițiile maxime de funcționare.
       icon: tabler:arrow-up
-    - title: 0% Safety Defects
-      description: Zero tolerance policy on safety-critical defects — valves, D-rings, seams, and buoyancy chambers. Any defect = 100% re-inspection.
+    - title: 0% Defecte de siguranță
+      description: Politică de toleranță zero pentru defectele critice de siguranță — supape, inele D, cusături și camere de flotabilitate. Orice defect = 100% re-inspectare.
       icon: tabler:shield
 cta:
-  title: Request quality documentation
-  subtitle: We provide full quality documentation packages including test reports and inspection records with every shipment. Contact us for samples.
+  title: Solicitați documentația de calitate
+  subtitle: Oferim pachete complete de documentație de calitate, inclusiv rapoarte de testare și registre de inspecție la fiecare expediere. Contactați-ne pentru mostre.
   actions:
     - variant: primary
-      text: Request QC documentation
+      text: Solicitați documentația QC
       href: /contact
-    - text: View testing protocols
+    - text: Vizualizați protocoalele de testare
       href: /quality

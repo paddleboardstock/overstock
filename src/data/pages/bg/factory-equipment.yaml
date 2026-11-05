@@ -1,69 +1,69 @@
 hero:
-  tagline: Equipment
-  title: Manufacturing Equipment & Machinery
-  subtitle: Industrial-grade equipment across cutting, welding, printing, and assembly
-  back_label: Back to Factory
+  tagline: Оборудване
+  title: Производствено оборудване и машини
+  subtitle: Индустриално оборудване за рязане, заваряване, печат и сглобяване
+  back_label: Обратно във фабриката
   back_link: /factory
 categories:
-  - title: Cutting & Material Preparation
+  - title: Рязане и подготовка на материали
     items:
-      - name: Automatic PVC Cutting Machine
-        spec: CNC-controlled, 6.5 m × 2.5 m, 0.1 mm accuracy
-        desc: Computer-controlled automatic cutting machine for PVC and drop-stitch fabrics. Nesting software optimises material utilisation to below 5% waste.
-      - name: Fabric Spreader
-        spec: 3 m max width, tension-controlled feed
-        desc: Lays fabric in single or multiple plies with controlled tension to prevent distortion before cutting.
-  - title: Welding & Bonding
+      - name: Автоматична PVC машина за рязане
+        spec: CNC-контролирано, 6,5 м × 2,5 м, точност 0,1 мм
+        desc: Компютърно управлявана автоматична рязателна машина за PVC и drop-stitch тъкани. Софтуерът за гнездене оптимизира използването на материала до по-малко от 5% отпадък.
+      - name: Разстилач на плат
+        spec: Максимална ширина 3 м, подаване с контролирано напрежение
+        desc: Разстила плат в един или няколко пласта с контролирано напрежение, за да се предотврати деформация преди рязането.
+  - title: Заваряване и слепване
     items:
-      - name: Heat Sealing Machine
-        spec: Hot-air welding, variable 200–600 °C, 0.5–5 m/min
-        desc: Hot-air heat sealing machine for bonding and welding PVC laminates, rail bands, and chamber seams. Used for tacking, sealing, and fusing drop-stitch core joints.
-      - name: Dielectric RF Press
-        spec: 15 kW, platen 2000 × 600 mm
-        desc: Radio-frequency welding press for main longitudinal seams, transom-to-tube joints, and large-chamber fabrication.
-      - name: CNC-Controlled RF Welder
-        spec: 8 kW, XY table 2500 × 1200 mm
-        desc: Programmable curved-seam welding for complex geometries, logo embossing, and precision patchwork.
-  - title: Deck Art & Finishing
+      - name: Машина за топлинно уплътняване
+        spec: Горещ въздух, променлива 200–600 °C, 0,5–5 м/мин
+        desc: Машина за топло въздушно лепене за свързване и заваряване на PVC ламинирани материали, релсови ленти и шевове на камери. Използва се за закрепване, запечатване и сливане на ставите на drop-stitch ядрото.
+      - name: Диелектрическа RF преса
+        spec: 15 kW, плоча 2000 × 600 мм
+        desc: Радиочестотна заваръчна преса за основни надлъжни шевове, съединения трюм-тръба и изработка на големи камери.
+      - name: CNC-Контролирана RF заваръчна машина
+        spec: 8 kW, XY маса 2500 × 1200 мм
+        desc: Програмирано заваряване на извит шев за сложни геометрии, ембосиране на лого и прецизна пачуърк работа.
+  - title: Изкуство и завършване на дек
     items:
-      - name: EVA Deck Cutting Machine
-        spec: CNC knife cutting, 2 m width
-        desc: Precision cutting of EVA deck foam panels for art-series deck patterns. Each panel is cut to shape for a seamless full-deck fit.
-      - name: Deck Lamination Press
-        spec: Temperature & pressure controlled
-        desc: Bonds EVA deck panels to the board surface with consistent adhesion across the full deck area.
-  - title: SUP Printing & Decoration
+      - name: EVA Машина за рязане на тераса
+        spec: Рязане с нож CNC, ширина 2 м
+        desc: Прецизно рязане на EVA панели от пяна за палубата за дизайни на арт серията на палубата. Всеки панел се изрязва по форма за безшевно цялостно пасване на палубата.
+      - name: Преса за ламиниране на палубата
+        spec: Контролирана температура и налягане
+        desc: Свързва EVA палубни панели с повърхността на дъската с постоянна адхезия по цялата площ на палубата.
+  - title: Печат и декорация
     items:
-      - name: Digital Printer
-        spec: High-resolution inkjet, up to 2 m print width
-        desc: Direct-to-fabric digital printing for full-colour SUP deck graphics. Prints custom patterns, gradients, and photo-quality images with UV-resistant water-based inks.
-      - name: Screen Printing Machine
-        spec: Manual and semi-automatic, multi-colour registration
-        desc: Screen printing for SUP board logos, brand marks, and repeating patterns. Provides durable, opaque prints with vibrant colour saturation.
-  - title: Final Assembly
+      - name: Дигитален принтер
+        spec: Високорезолюционен мастиленоструен печат, до 2 м широчина на печат
+        desc: Директен дигитален печат върху плат за полноцветни SUP графики на палубата. Печата персонализирани шаблони, градиенти и изображения с качество на фотография с водоразтворими мастила, устойчиви на UV.
+      - name: Машина за ситопечат
+        spec: Ръчна и полуавтоматична, многопластова регистрация
+        desc: Ситопечат за SUP лога на борда, марки на бранда и повтарящи се шаблони. Осигурява издръжливи, непрозрачни отпечатъци с ярка наситеност на цветовете.
+  - title: Крайно сглобяване
     items:
-      - name: Valve Torque Station
-        spec: Calibrated, 10-cycle function test
-        desc: Installs and torques inflation valves, then function-tests every valve through 10 open/close cycles.
-      - name: Fin Box & D-Ring Setter
-        spec: Jig-aligned, adhesive cured
-        desc: Positions and bonds fin boxes, D-rings, and handles at exact deck locations per model specification.
-  - title: Testing & Quality Control
+      - name: Станция за въртящ момент на клапани
+        spec: Калибриран, функционален тест за 10 цикъла
+        desc: Монтира и затяга въздушните клапани, след това тества функционално всеки клапан чрез 10 цикъла отваряне/затваряне.
+      - name: Сетър за кутии с перки и D-пръстени
+        spec: Подравнен по шаблон, с изсъхнал адхезив
+        desc: Поставя и свързва кутии с перки, D-пръстени и дръжки на точно определените места на платната според спецификацията на модела.
+  - title: Тестване и контрол на качеството
     items:
-      - name: Universal Tensile Tester
-        spec: 50 kN capacity
-        desc: Breaking force, elongation at break, and tear propagation testing for fabric batches.
-      - name: Air Retention Test Rig
-        spec: Programmable, 30-min pressure-hold
-        desc: Automated pressure-hold test for every tube chamber before assembly.
-      - name: Seam Peel Tester
-        spec: Motorised 180° peel at 100 mm/min
-        desc: Weld and bonded-seam peel strength testing per internal protocol.
-      - name: Xenon-Arc Weathering Chamber
-        spec: 2000 h exposure
-        desc: UV resistance testing for colour change and strength retention.
+      - name: Универсален тестер за опън
+        spec: Капацитет 50 kN
+        desc: Тестване на пробивна сила, удължение при скъсване и разпространение на разкъсване за партиди плат.
+      - name: Стенд за тестване на задържане на въздух
+        spec: Програмиран, 30 минути задържане на налягане
+        desc: Автоматизиран тест за задържане на налягане за всяка камера на тръбата преди сглобяване.
+      - name: Тестер за разлепване на шевове
+        spec: Моторизиран 180° разлепване при 100 мм/мин
+        desc: Тест за якост на заварени и залепени шевове според вътрешен протокол.
+      - name: Камера за устойчива на атмосферни влияния със Xenon-Arc
+        spec: 2000 часа излагане
+        desc: Тестване на устойчивостта UV за промяна на цвета и запазване на якостта.
 cta:
-  title: Interested in a factory tour?
-  desc: We welcome visitors to our Weihai facility. See our equipment and processes in person.
-  label: Schedule a visit →
+  title: Интересувате ли се от обиколка на фабриката?
+  desc: Добре дошли сте в нашето съоръжение в Уейхай. Вижте нашето оборудване и процеси на живо.
+  label: Запазете посещение →
   link: /contact

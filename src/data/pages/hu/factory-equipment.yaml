@@ -1,69 +1,69 @@
 hero:
-  tagline: Equipment
-  title: Manufacturing Equipment & Machinery
-  subtitle: Industrial-grade equipment across cutting, welding, printing, and assembly
-  back_label: Back to Factory
+  tagline: Felszerelések
+  title: Gyártási Berendezések és Gépészet
+  subtitle: Ipari szintű berendezések vágáshoz, hegesztéshez, nyomtatáshoz és összeszereléshez
+  back_label: Vissza a gyárhoz
   back_link: /factory
 categories:
-  - title: Cutting & Material Preparation
+  - title: Vágás és Anyagelőkészítés
     items:
-      - name: Automatic PVC Cutting Machine
-        spec: CNC-controlled, 6.5 m × 2.5 m, 0.1 mm accuracy
-        desc: Computer-controlled automatic cutting machine for PVC and drop-stitch fabrics. Nesting software optimises material utilisation to below 5% waste.
-      - name: Fabric Spreader
-        spec: 3 m max width, tension-controlled feed
-        desc: Lays fabric in single or multiple plies with controlled tension to prevent distortion before cutting.
-  - title: Welding & Bonding
+      - name: Automata PVC Vágógép
+        spec: CNC-vezérelt, 6,5 m × 2,5 m, 0,1 mm pontosság
+        desc: Számítógép által vezérelt automata vágógép PVC és drop-stitch szövetekhez. A sorolási szoftver az anyaghasználatot 5% alatti hulladékra optimalizálja.
+      - name: Szövetterítő
+        spec: 3 m maximális szélesség, feszültség-vezérelt adagolás
+        desc: A szövetet egy vagy több rétegben teríti, a feszültség kontrollált, hogy vágás előtt elkerülje az eltorzulást.
+  - title: Hegesztés és ragasztás
     items:
-      - name: Heat Sealing Machine
-        spec: Hot-air welding, variable 200–600 °C, 0.5–5 m/min
-        desc: Hot-air heat sealing machine for bonding and welding PVC laminates, rail bands, and chamber seams. Used for tacking, sealing, and fusing drop-stitch core joints.
-      - name: Dielectric RF Press
-        spec: 15 kW, platen 2000 × 600 mm
-        desc: Radio-frequency welding press for main longitudinal seams, transom-to-tube joints, and large-chamber fabrication.
-      - name: CNC-Controlled RF Welder
-        spec: 8 kW, XY table 2500 × 1200 mm
-        desc: Programmable curved-seam welding for complex geometries, logo embossing, and precision patchwork.
-  - title: Deck Art & Finishing
+      - name: Hőzáró Gép
+        spec: Forró levegős hegesztés, 200–600 °C változtatható, 0,5–5 m/perc
+        desc: Forrólevegős hőhegesztő gép PVC laminátumok, sínszalagok és kamraszegélyek ragasztására és hegesztésére. Használják drop-stitch magillesztések rögzítésére, zárására és egyesítésére.
+      - name: Dielektromos RF sajtó
+        spec: 15 kW, 2000 × 600 mm-es lap
+        desc: Rádiófrekvenciás hegesztőprés fő hosszanti varratokhoz, kereszt-tubus csatlakozásokhoz és nagy kamrák gyártásához.
+      - name: CNC-Vezérelt RF Hegesztő
+        spec: 8 kW, XY asztal 2500 × 1200 mm
+        desc: Programozható görbe varrat hegesztés összetett geometriai alakzatokhoz, logó dombornyomáshoz és precíz foltragasztáshoz.
+  - title: Pakli művészet és befejezés
     items:
-      - name: EVA Deck Cutting Machine
-        spec: CNC knife cutting, 2 m width
-        desc: Precision cutting of EVA deck foam panels for art-series deck patterns. Each panel is cut to shape for a seamless full-deck fit.
-      - name: Deck Lamination Press
-        spec: Temperature & pressure controlled
-        desc: Bonds EVA deck panels to the board surface with consistent adhesion across the full deck area.
-  - title: SUP Printing & Decoration
+      - name: EVA Fedélvágó gép
+        spec: CNC késes vágás, 2 m szélesség
+        desc: Precíziós vágás EVA fedélhab panelekből művészeti sorozatú fedélmintákhoz. Minden panel formára van vágva a tökéletes, illesztésmentes teljes fedélhez.
+      - name: Fedél laminálógép
+        spec: Hőmérséklet- és nyomásszabályozott
+        desc: EVA fedélpanelek a deszka felületéhez való rögzítése állandó tapadással a teljes fedélterületen.
+  - title: SUP Nyomtatás és Díszítés
     items:
-      - name: Digital Printer
-        spec: High-resolution inkjet, up to 2 m print width
-        desc: Direct-to-fabric digital printing for full-colour SUP deck graphics. Prints custom patterns, gradients, and photo-quality images with UV-resistant water-based inks.
-      - name: Screen Printing Machine
-        spec: Manual and semi-automatic, multi-colour registration
-        desc: Screen printing for SUP board logos, brand marks, and repeating patterns. Provides durable, opaque prints with vibrant colour saturation.
-  - title: Final Assembly
+      - name: Digitális Nyomtató
+        spec: Nagy felbontású tintasugaras nyomtatás, maximum 2 m nyomtatási szélesség
+        desc: Közvetlen szövetre történő digitális nyomtatás teljes színű SUP fedélzeti grafikákhoz. Egyedi mintákat, színátmeneteket és fényképminőségű képeket nyomtat UV-álló vízbázisú tintákkal.
+      - name: Sitanyomó gép
+        spec: Kézi és félautomata, többszínű igazítás
+        desc: Szitanyomás SUP deszka logókhoz, márkajelekhez és ismétlődő mintákhoz. Tartós, átlátszatlan nyomatokat biztosít élénk színsűrűséggel.
+  - title: Végszerelés
     items:
-      - name: Valve Torque Station
-        spec: Calibrated, 10-cycle function test
-        desc: Installs and torques inflation valves, then function-tests every valve through 10 open/close cycles.
-      - name: Fin Box & D-Ring Setter
-        spec: Jig-aligned, adhesive cured
-        desc: Positions and bonds fin boxes, D-rings, and handles at exact deck locations per model specification.
-  - title: Testing & Quality Control
+      - name: Szelepnyomaték állomás
+        spec: Kalibrált, 10 ciklusos funkcióteszt
+        desc: Felszereli és meghúzza a felfújási szelepeket, majd minden szelepet 10 nyit/zár cikluson keresztül funkciót tesztel.
+      - name: Uszonydoboz és D-gyűrű beállító
+        spec: Jig-gel igazított, ragasztóval kikeményített
+        desc: Az uszonydobozokat, D-gyűrűket és fogantyúkat a modell specifikáció szerint pontos deck-helyekre pozícionálja és rögzíti.
+  - title: Tesztelés és minőségellenőrzés
     items:
-      - name: Universal Tensile Tester
-        spec: 50 kN capacity
-        desc: Breaking force, elongation at break, and tear propagation testing for fabric batches.
-      - name: Air Retention Test Rig
-        spec: Programmable, 30-min pressure-hold
-        desc: Automated pressure-hold test for every tube chamber before assembly.
-      - name: Seam Peel Tester
-        spec: Motorised 180° peel at 100 mm/min
-        desc: Weld and bonded-seam peel strength testing per internal protocol.
-      - name: Xenon-Arc Weathering Chamber
-        spec: 2000 h exposure
-        desc: UV resistance testing for colour change and strength retention.
+      - name: Univerzális szakítógép
+        spec: 50 kN kapacitás
+        desc: Szövetminták szakítószilárdságának, szakadásnál való nyúlásának és szakadási terjedésének vizsgálata.
+      - name: Légtartó képesség vizsgáló állomás
+        spec: Programozható, 30 perces nyomásfenntartás
+        desc: Automatizált nyomásfenntartási teszt minden csőkamrán az összeszerelés előtt.
+      - name: Varratfelhúzó tesztelő
+        spec: Motoros, 180°-os felhúzás 100 mm/perc sebességgel
+        desc: Hegesztett és ragasztott varrat-húzóerő tesztelés belső protokoll szerint.
+      - name: Xenon-ív időjárásállósági kamra
+        spec: 2000 órás expozíció
+        desc: UV ellenállásvizsgálat a színváltozás és szilárdság megtartása szempontjából.
 cta:
-  title: Interested in a factory tour?
-  desc: We welcome visitors to our Weihai facility. See our equipment and processes in person.
-  label: Schedule a visit →
+  title: Érdekel egy gyárlátogatás?
+  desc: Látogatókat üdvözlünk a weihai létesítményünkben. Tekintse meg berendezéseinket és folyamatainkat személyesen.
+  label: Időpontfoglalás →
   link: /contact

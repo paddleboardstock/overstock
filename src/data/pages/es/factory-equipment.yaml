@@ -1,69 +1,69 @@
 hero:
-  tagline: Equipment
-  title: Manufacturing Equipment & Machinery
-  subtitle: Industrial-grade equipment across cutting, welding, printing, and assembly
-  back_label: Back to Factory
+  tagline: Equipo
+  title: Equipos y Maquinaria de Fabricación
+  subtitle: Equipos de grado industrial para corte, soldadura, impresión y ensamblaje
+  back_label: Volver a la Fábrica
   back_link: /factory
 categories:
-  - title: Cutting & Material Preparation
+  - title: Corte y Preparación de Materiales
     items:
-      - name: Automatic PVC Cutting Machine
-        spec: CNC-controlled, 6.5 m × 2.5 m, 0.1 mm accuracy
-        desc: Computer-controlled automatic cutting machine for PVC and drop-stitch fabrics. Nesting software optimises material utilisation to below 5% waste.
-      - name: Fabric Spreader
-        spec: 3 m max width, tension-controlled feed
-        desc: Lays fabric in single or multiple plies with controlled tension to prevent distortion before cutting.
-  - title: Welding & Bonding
+      - name: Máquina automática de corte PVC
+        spec: Corte controlado por CNC, 6,5 m × 2,5 m, precisión de 0,1 mm
+        desc: Máquina de corte automática controlada por computadora para telas PVC y drop-stitch. El software de anidamiento optimiza la utilización del material a menos del 5% de desperdicio.
+      - name: Extendedora de Tela
+        spec: Ancho máximo de 3 m, alimentación con tensión controlada
+        desc: Coloca la tela en una o varias capas con tensión controlada para evitar distorsiones antes del corte.
+  - title: Soldadura y Unión
     items:
-      - name: Heat Sealing Machine
-        spec: Hot-air welding, variable 200–600 °C, 0.5–5 m/min
-        desc: Hot-air heat sealing machine for bonding and welding PVC laminates, rail bands, and chamber seams. Used for tacking, sealing, and fusing drop-stitch core joints.
-      - name: Dielectric RF Press
-        spec: 15 kW, platen 2000 × 600 mm
-        desc: Radio-frequency welding press for main longitudinal seams, transom-to-tube joints, and large-chamber fabrication.
-      - name: CNC-Controlled RF Welder
-        spec: 8 kW, XY table 2500 × 1200 mm
-        desc: Programmable curved-seam welding for complex geometries, logo embossing, and precision patchwork.
-  - title: Deck Art & Finishing
+      - name: Máquina de sellado térmico
+        spec: Soldadura con aire caliente, variable 200–600 °C, 0,5–5 m/min
+        desc: Máquina de sellado térmico por aire caliente para unir y soldar laminados PVC, bandas de riel y costuras de cámara. Se utiliza para sujetar, sellar y fusionar juntas del núcleo drop-stitch.
+      - name: Prensa Dielectrica RF
+        spec: 15 kW, platina 2000 × 600 mm
+        desc: Prensa de soldadura por radiofrecuencia para costuras longitudinales principales, articulaciones de travesaño a tubo y fabricación de cámaras grandes.
+      - name: Soldador RF Controlado por CNC
+        spec: 8 kW, mesa XY 2500 × 1200 mm
+        desc: Soldadura programable de costuras curvas para geometrías complejas, estampado de logotipos y trabajos de patchwork de precisión.
+  - title: Arte y acabado de baraja
     items:
-      - name: EVA Deck Cutting Machine
-        spec: CNC knife cutting, 2 m width
-        desc: Precision cutting of EVA deck foam panels for art-series deck patterns. Each panel is cut to shape for a seamless full-deck fit.
-      - name: Deck Lamination Press
-        spec: Temperature & pressure controlled
-        desc: Bonds EVA deck panels to the board surface with consistent adhesion across the full deck area.
-  - title: SUP Printing & Decoration
+      - name: Máquina de corte de cubierta EVA
+        spec: Corte con cuchillo CNC, ancho de 2 m
+        desc: Corte de precisión de paneles de espuma de cubierta EVA para patrones de cubierta de la serie artística. Cada panel se corta con forma para un ajuste completo y sin costuras de la cubierta.
+      - name: Prensa de Laminación de Cubierta
+        spec: Control de temperatura y presión
+        desc: Une paneles de cubierta EVA a la superficie de la tabla con adhesión consistente en toda el área de la cubierta.
+  - title: Impresión y decoración SUP
     items:
-      - name: Digital Printer
-        spec: High-resolution inkjet, up to 2 m print width
-        desc: Direct-to-fabric digital printing for full-colour SUP deck graphics. Prints custom patterns, gradients, and photo-quality images with UV-resistant water-based inks.
-      - name: Screen Printing Machine
-        spec: Manual and semi-automatic, multi-colour registration
-        desc: Screen printing for SUP board logos, brand marks, and repeating patterns. Provides durable, opaque prints with vibrant colour saturation.
-  - title: Final Assembly
+      - name: Impresora digital
+        spec: Inyección de tinta de alta resolución, hasta 2 m de ancho de impresión
+        desc: Impresión digital directa a tela para gráficos a todo color para SUP barajas. Imprime patrones personalizados, degradados e imágenes de calidad fotográfica con UV tintas resistentes al agua.
+      - name: Máquina de serigrafía
+        spec: Registro manual y semiautomático, multicolor
+        desc: Serigrafía para SUP logotipos de cartón, marcas y patrones repetitivos. Proporciona impresiones duraderas y opacas con saturación de color vibrante.
+  - title: Asamblea Final
     items:
-      - name: Valve Torque Station
-        spec: Calibrated, 10-cycle function test
-        desc: Installs and torques inflation valves, then function-tests every valve through 10 open/close cycles.
-      - name: Fin Box & D-Ring Setter
-        spec: Jig-aligned, adhesive cured
-        desc: Positions and bonds fin boxes, D-rings, and handles at exact deck locations per model specification.
-  - title: Testing & Quality Control
+      - name: Estación de torsión de válvulas
+        spec: Prueba de función calibrada de 10 ciclos
+        desc: Instala y aprieta las válvulas de inflación, luego prueba la función de cada válvula durante 10 ciclos de apertura/cierre.
+      - name: Caja de aletas y colocador de anillo D
+        spec: Alineado con plantillas y curado con adhesivo
+        desc: Coloca y enlaza las cajas de aletas, los anillos en D y los mangos en ubicaciones exactas de la plataforma según la especificación del modelo.
+  - title: Pruebas y control de calidad
     items:
-      - name: Universal Tensile Tester
-        spec: 50 kN capacity
-        desc: Breaking force, elongation at break, and tear propagation testing for fabric batches.
-      - name: Air Retention Test Rig
-        spec: Programmable, 30-min pressure-hold
-        desc: Automated pressure-hold test for every tube chamber before assembly.
-      - name: Seam Peel Tester
-        spec: Motorised 180° peel at 100 mm/min
-        desc: Weld and bonded-seam peel strength testing per internal protocol.
-      - name: Xenon-Arc Weathering Chamber
-        spec: 2000 h exposure
-        desc: UV resistance testing for colour change and strength retention.
+      - name: Probador de tracción universal
+        spec: Capacidad de 50 kN
+        desc: Pruebas de fuerza de ruptura, elongación al romper y propagación de desgarros para lotes de tela.
+      - name: Plataforma de pruebas de retención de aire
+        spec: Programable, mantenimiento de presión de 30 minutos
+        desc: Prueba automatizada de mantenimiento de presión para cada cámara de tubos antes del montaje.
+      - name: Probador de despegadura de costura
+        spec: Velocidad motorizada de 180° a 100 mm/min
+        desc: Pruebas de resistencia de pelado de soldadura y unión según el protocolo interno.
+      - name: Cámara de meteorización con arco de xenón
+        spec: Exposición 2000 h
+        desc: UV pruebas de resistencia para cambio de color y retención de resistencia.
 cta:
-  title: Interested in a factory tour?
-  desc: We welcome visitors to our Weihai facility. See our equipment and processes in person.
-  label: Schedule a visit →
+  title: ¿Te interesa hacer una visita a la fábrica?
+  desc: Damos la bienvenida a los visitantes en nuestras instalaciones de Weihai. Consulta nuestro equipo y procesos en persona.
+  label: Programa una visita →
   link: /contact

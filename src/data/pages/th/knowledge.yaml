@@ -1,91 +1,88 @@
 hero:
-  tagline: 'Knowledge Graph'
-  title: 'Water Exploration Knowledge'
+  tagline: กราฟความรู้
+  title: ความรู้เกี่ยวกับการสำรวจน้ำ
   subtitle: |
-    A structured knowledge base covering inflatable SUP technology,<br />
-    water safety, board engineering, and adventure planning.
-  taglineSection: 'Explore. Learn. Go with confidence.'
-
+    ฐานความรู้ที่มีโครงสร้างครอบคลุมเทคโนโลยี SUP แบบพองลม,<br />
+    ความปลอดภัยทางน้ำ วิศวกรรมกระดาน และการวางแผนผจญภัย
+  taglineSection: สำรวจ เรียนรู้ ไปด้วยความมั่นใจ
 clusters:
-  tagline: 'Knowledge Clusters'
-  title: 'Explore by topic'
-  subtitle: 'Deep dives into the technology, safety, and skills behind every Paddle Board Overstock product.'
+  tagline: คลัสเตอร์ความรู้
+  title: สำรวจตามหัวข้อ
+  subtitle: การเจาะลึกเทคโนโลยี ความปลอดภัย และทักษะเบื้องหลังผลิตภัณฑ์ Paddle Board Overstock แต่ละชิ้น
   items:
-    - title: 'SUP Knowledge'
-      description: 'From choosing your first board to advanced touring techniques — everything about stand-up paddle boarding.'
-      icon: 'tabler:lifebuoy'
+    - title: ความรู้ SUP
+      description: ตั้งแต่การเลือกกระดานครั้งแรกของคุณไปจนถึงเทคนิคการท่องเที่ยวขั้นสูง — ทุกสิ่งเกี่ยวกับการพายบอร์ดยืนขึ้น
+      icon: tabler:lifebuoy
       topics:
-        - 'How to choose your first inflatable SUP'
-        - 'Best SUP size for beginners'
-        - 'How difficult is paddle boarding?'
-        - 'Inflatable vs hard board comparison'
-        - 'SUP safety checklist'
-    - title: 'Board Technology'
-      description: 'Technical deep dives on drop-stitch cores, PVC laminates, rails, and valves — how inflatable SUPs are engineered.'
-      icon: 'tabler:anchor'
+        - วิธีการเลือก SUP แบบเป่าลมชิ้นแรกของคุณ
+        - ขนาด SUP ที่ดีที่สุดสำหรับผู้เริ่มต้น
+        - การพายเรือยืนบนกระดานยากแค่ไหน?
+        - การเปรียบเทียบระหว่างบอร์ดพองลมกับบอร์ดแข็ง
+        - SUP รายการตรวจสอบความปลอดภัย
+    - title: เทคโนโลยีกระดาน
+      description: การเจาะลึกทางเทคนิคเกี่ยวกับแกน drop-stitch ชั้นลามิเนต PVC ราง และวาล์ว — วิธีการออกแบบ SUPs แบบเป่าลม
+      icon: tabler:anchor
       topics:
-        - 'How inflatable SUPs are made'
-        - 'PVC laminate layers explained'
-        - 'Rail and seam construction'
-        - 'Drop-stitch technology deep dive'
-        - 'EVA deck art explained'
-    - title: 'Safety Knowledge'
-      description: 'Essential safety knowledge for every paddler — from PFD selection to weather reading to self-rescue techniques.'
-      icon: 'tabler:shield'
+        - วิธีการผลิต SUPs แบบเป่าลม
+        - การอธิบายชั้นลามิเนต PVC
+        - การสร้างรางและรอยต่อ
+        - การสำรวจเชิงลึกด้านเทคโนโลยี Drop-stitch
+        - การอธิบายงานศิลปะบนดาดฟ้า EVA
+    - title: ความรู้ด้านความปลอดภัย
+      description: ความรู้ด้านความปลอดภัยที่จำเป็นสำหรับผู้พายเรือทุกคน — ตั้งแต่การเลือก PFD การอ่านสภาพอากาศ ไปจนถึงเทคนิคการช่วยเหลือตัวเอง
+      icon: tabler:shield
       topics:
-        - 'SUP safety checklist'
-        - 'Do you need a life jacket?'
-        - 'Ocean paddling safety guide'
-        - 'River and current safety for paddlers'
-        - 'Weather and water condition awareness'
-    - title: 'Technology'
-      description: 'The engineering behind Paddle Board Overstock products — materials, construction methods, and quality testing.'
-      icon: 'tabler:microscope'
+        - SUP รายการตรวจสอบความปลอดภัย
+        - คุณต้องการเสื้อชูชีพไหม?
+        - คู่มือความปลอดภัยในการพายเรือในมหาสมุทร
+        - ความปลอดภัยในแม่น้ำและกระแสน้ำสำหรับผู้พายเรือ
+        - ความตระหนักเกี่ยวกับสภาพอากาศและน้ำ
+    - title: เทคโนโลยี
+      description: วิศวกรรมเบื้องหลังผลิตภัณฑ์ Paddle Board Overstock — วัสดุ วิธีการก่อสร้าง และการทดสอบคุณภาพ
+      icon: tabler:microscope
       topics:
-        - 'Marine-grade PVC technology'
-        - 'Drop-stitch core explained'
-        - 'Why PSI matters for inflatable SUPs'
-        - 'RF welding vs adhesive bonding'
-        - 'Quality testing on every board'
-    - title: 'Club & Rental Knowledge'
-      description: 'Practical guides for running a SUP program — from rental operations to resort and club fleets.'
-      icon: 'tabler:briefcase'
+        - เทคโนโลยีระดับเรือPVC
+        - Drop-stitch คําอธิบายแกนกลาง
+        - เหตุผลPSIที่สําคัญสําหรับอุปกรณ์SUPsเป่าลม
+        - การเชื่อม RF เทียบกับการยึดติดด้วยกาว
+        - การทดสอบคุณภาพบนบอร์ดทุกชิ้น
+    - title: ความรู้เกี่ยวกับคลับและการเช่า
+      description: คู่มือปฏิบัติสำหรับการดำเนินโปรแกรม SUP — ตั้งแต่การดำเนินการเช่าจนถึงกองเรือของรีสอร์ทและคลับ
+      icon: tabler:briefcase
       topics:
-        - 'How to start a SUP rental business'
-        - 'Building a resort water sports center'
-        - 'Paddle board fleet sizing for clubs'
-        - 'Inflatable vs hard SUP for commercial use'
-        - 'Best SUP boards for rental fleets'
-        - 'Resort water sports revenue strategies'
-        - 'Commercial equipment maintenance guide'
-
+        - วิธีเริ่มต้นSUPธุรกิจให้เช่า
+        - การสร้างศูนย์กีฬาทางน้ําของรีสอร์ท
+        - ขนาดเรือพายบอร์ดสําหรับสโมสร
+        - เป่าลมกับแบบแข็งSUPสําหรับการใช้งานเชิงพาณิชย์
+        - บอร์ด SUP ที่ดีที่สุดสำหรับกองเรือเช่า
+        - กลยุทธ์รายได้จากกีฬาทางน้ําของรีสอร์ท
+        - คู่มือการบํารุงรักษาอุปกรณ์เชิงพาณิชย์
 featured_guides:
-  tagline: 'Featured Guides'
-  title: 'Most popular knowledge resources'
+  tagline: ไกด์แนะนํา
+  title: แหล่งข้อมูลความรู้ยอดนิยมที่สุด
   items:
-    - title: 'SUP Basics'
-      href: '/learn/sup'
-    - title: 'Inflatable vs Hard Board'
-      href: '/compare/inflatable-vs-hardboard'
-    - title: 'Water Safety Guide'
-      href: '/learn/water-safety'
-    - title: 'Materials Reference'
-      href: '/learn/materials'
-    - title: 'SUP Size Guide'
-      href: '/size-guide'
-    - title: 'SUP Rental Cost Guide'
-      href: '/v2/cost-to-start-sup-rental-business'
-    - title: 'Resort Water Sports Center'
-      href: '/v2/building-resort-water-sports-center'
-    - title: 'Start a Water Brand'
-      href: '/v2/start-water-sports-brand-private-label'
-
+    - title: SUP พื้นฐาน
+      href: /learn/sup
+    - title: กระดานเป่าลม vs กระดานแข็ง
+      href: /compare/inflatable-vs-hardboard
+    - title: คู่มือความปลอดภัยทางน้ํา
+      href: /learn/water-safety
+    - title: ข้อมูลอ้างอิงวัสดุ
+      href: /learn/materials
+    - title: SUP คู่มือขนาด
+      href: /size-guide
+    - title: SUP คู่มือค่าเช่า
+      href: /v2/cost-to-start-sup-rental-business
+    - title: ศูนย์กีฬาทางน้ําของรีสอร์ท
+      href: /v2/building-resort-water-sports-center
+    - title: เริ่มต้นแบรนด์น้ํา
+      href: /v2/start-water-sports-brand-private-label
 cta:
-  title: 'Start exploring'
-  subtitle: 'Dive into our knowledge base and get the information you need for your next water adventure.'
+  title: เริ่มสํารวจ
+  subtitle: ดําดิ่งสู่ฐานความรู้ของเราและรับข้อมูลที่คุณต้องการสําหรับการผจญภัยทางน้ําครั้งต่อไปของคุณ
   actions:
     - variant: primary
-      text: 'Browse all guides'
-      href: '/academy'
-    - text: 'Explore Knowledge Graph'
-      href: '/knowledge'
+      text: เรียกดูคู่มือทั้งหมด
+      href: /academy
+    - text: สํารวจกราฟความรู้
+      href: /knowledge

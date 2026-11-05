@@ -1,73 +1,70 @@
 hero:
-  tagline: 'Water Exploration Knowledge'
-  title: 'Learn'
+  tagline: Wiedza o eksploracji wody
+  title: Uczyć się
   subtitle: |
-    Guides, tutorials, and deep dives — everything you need to explore<br />
-    water with confidence. From choosing your first SUP to mastering advanced techniques.
-  taglineSection: 'Knowledge for every paddler. From beginner to professional.'
-
+    Przewodniki, samouczki i dogłębne analizy — wszystko, czego potrzebujesz, aby eksplorować<br />
+    pływaj z pewnością. Od wyboru swojego pierwszego SUP do opanowania zaawansowanych technik.
+  taglineSection: Wiedza dla każdego wioślarza. Od początkującego do profesjonalisty.
 featured:
-  tagline: 'Featured Topics'
-  title: 'Start your learning journey'
-  subtitle: 'Whether you are new to water sports or looking to level up, our guides have you covered.'
+  tagline: Polecane tematy
+  title: Rozpocznij swoją podróż edukacyjną
+  subtitle: Niezależnie od tego, czy jesteś nowicjuszem w sportach wodnych, czy chcesz się rozwijać, nasze przewodniki mają wszystko, czego potrzebujesz.
   items:
-    - title: 'SUP Basics'
-      description: 'Everything a beginner needs to know — board types, paddle sizing, stance, and first-day tips.'
-      icon: 'tabler:lifebuoy'
-      href: '/learn/sup'
-    - title: 'Inflatable vs Hard Board'
-      description: 'Which is right for you? We compare portability, performance, durability, and cost side by side.'
-      icon: 'tabler:arrows-left-right'
-      href: '/compare/inflatable-vs-hardboard'
-    - title: 'Water Safety'
-      description: 'Essential safety knowledge every paddler should have — weather, PFDs, self-rescue, and more.'
-      icon: 'tabler:shield'
-      href: '/learn/water-safety'
-    - title: 'Materials Guide'
-      description: 'Drop-stitch cores, PVC laminates, EVA deck foam — understand what your board is made of.'
-      icon: 'tabler:hexagons'
-      href: '/learn/materials'
-    - title: 'SUP Size Guide'
-      description: 'Find the right board length, width, and volume for your weight, skill, and paddling style.'
-      icon: 'tabler:ruler'
-      href: '/size-guide'
-    - title: 'Intermediate Techniques'
-      description: 'Step up your paddling with advanced strokes, turning techniques, and rough-water handling.'
-      icon: 'tabler:ripple'
-      href: '/learn/intermediate-techniques'
-
+    - title: SUP Podstawy
+      description: Wszystko, co początkujący powinien wiedzieć — typy desek, dobór wiosła, postawa i wskazówki na pierwszy dzień.
+      icon: tabler:lifebuoy
+      href: /learn/sup
+    - title: Nadmuchiwana vs twarda deska
+      description: Który jest odpowiedni dla Ciebie? Porównujemy przenośność, wydajność, trwałość i koszt jeden obok drugiego.
+      icon: tabler:arrows-left-right
+      href: /compare/inflatable-vs-hardboard
+    - title: Bezpieczeństwo nad wodą
+      description: Podstawowa wiedza o bezpieczeństwie, którą powinien posiadać każdy wioślarz — pogoda, kamizelki ratunkowe, samoratowanie i inne.
+      icon: tabler:shield
+      href: /learn/water-safety
+    - title: Przewodnik po materiałach
+      description: Drop-stitch rdzenie, PVC laminaty, EVA pianka pokładowa — zrozum, z czego zrobiona jest twoja deska.
+      icon: tabler:hexagons
+      href: /learn/materials
+    - title: SUP Przewodnik po rozmiarach
+      description: Znajdź odpowiednią długość, szerokość i objętość deski dopasowaną do swojej wagi, umiejętności i stylu wiosłowania.
+      icon: tabler:ruler
+      href: /size-guide
+    - title: Techniki średniozaawansowane
+      description: Podnieś poziom swojego wiosłowania dzięki zaawansowanym pociągnięciom, technikom skręcania i radzeniu sobie na wzburzonej wodzie.
+      icon: tabler:ripple
+      href: /learn/intermediate-techniques
 categories:
-  tagline: 'Categories'
-  title: 'Explore by topic'
-  subtitle: 'All learning content organized by skill level and interest.'
+  tagline: Kategorie
+  title: Eksploruj według tematu
+  subtitle: Cała zawartość edukacyjna uporządkowana według poziomu umiejętności i zainteresowań.
   columns:
-    - title: 'Beginner'
+    - title: Początkujący
       items:
-        - 'SUP Basics — start here'
-        - 'Inflatable vs Hard Board'
-        - 'Water Safety Essentials'
-        - 'How to Choose Your SUP'
-        - 'Pump & Pack Guide'
-    - title: 'Intermediate'
+        - SUP Podstawy — zacznij tutaj
+        - Nadmuchiwana vs twarda deska
+        - Podstawy bezpieczeństwa na wodzie
+        - Jak wybrać swój SUP
+        - Przewodnik po pompowaniu i pakowaniu
+    - title: Mediator
       items:
-        - 'Paddling Techniques'
-        - 'Inflatable Technology'
-        - 'Materials Reference'
-        - 'EVA Deck Art Explained'
-        - 'Drop-Stitch Core Explained'
-    - title: 'Advanced'
+        - Techniki wiosłowania
+        - Technologia nadmuchiwana
+        - Materiały referencyjne
+        - EVA Wyjaśnienie grafiki na pokładzie
+        - Drop-Stitch Wyjaśnienie rdzenia
+    - title: Zaawansowany
       items:
-        - 'Multi-Day Touring'
-        - 'Rough-Water Handling'
-        - 'Night Paddling'
-        - 'Board Repair & Care'
-
+        - Wielodniowe wycieczki
+        - Radzenie sobie w trudnych warunkach wodnych
+        - Nocne wiosłowanie
+        - Naprawa i pielęgnacja deski
 cta:
-  title: 'Still have questions?'
-  subtitle: 'Ask our AI guide for personalized answers about gear, safety, and techniques.'
+  title: Masz jeszcze pytania?
+  subtitle: Zapytaj naszego przewodnika AI o spersonalizowane odpowiedzi dotyczące sprzętu, bezpieczeństwa i technik.
   actions:
     - variant: primary
-      text: 'Ask the Water Advisor AI'
+      text: Zapytaj AI Doradcę Wodnego
       href: '#ai-guide'
-    - text: 'Browse all guides'
-      href: '/academy'
+    - text: Przeglądaj wszystkie przewodniki
+      href: /academy

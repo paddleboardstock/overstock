@@ -1,126 +1,121 @@
 hero:
-  tagline: Paddle Board Overstock Academy
-  title: Learning Center
-  subtitle: Guides and tutorials for every skill level — from SUP basics to advanced rescue techniques
-
+  tagline: Paddle Board Overstock อะคาเดมี
+  title: ศูนย์การเรียนรู้
+  subtitle: คู่มือและบทเรียนสำหรับทุกระดับทักษะ — ตั้งแต่พื้นฐาน SUP ไปจนถึงเทคนิคการกู้ภัยขั้นสูง
 categories:
-  - level: Beginner
+  - level: ผู้เริ่มต้น
     color: from-green-500 to-emerald-600
     badge: bg-green-100 text-green-700
     guides:
-      - title: SUP Basics
-        desc: Learn the fundamentals of stand-up paddleboarding — stance, stroke technique, and balance.
+      - title: SUP พื้นฐาน
+        desc: เรียนรู้พื้นฐานของการพายบอร์ดแบบยืน — ท่าทาง เทคนิคการพาย และการทรงตัว
         slug: beginner-sup-guide
-      - title: Paddle Techniques
-        desc: Forward stroke, sweep stroke, draw stroke, and low brace — master the essential paddle moves.
+      - title: เทคนิคการพายเรือ
+        desc: การพายไปข้างหน้า การพายกวาด การวาดพาย และการพายต่ำ — ฝึกให้ชำนาญท่าพายหลักเหล่านี้
         slug: sup-paddle-guide
-      - title: Safety First
-        desc: Essential safety practices including weather checks, PFD use, leash rules, and self-rescue.
+      - title: ความปลอดภัยมาก่อน
+        desc: แนวทางด้านความปลอดภัยที่สำคัญรวมถึงการตรวจสอบสภาพอากาศ, การใช้ PFD, กฎการใช้สายจูง และการช่วยเหลือตัวเอง
         slug: sup-safety-guide
-  - level: Intermediate
+  - level: ระดับกลาง
     color: from-blue-500 to-indigo-600
     badge: bg-blue-100 text-blue-700
     guides:
-      - title: Touring Essentials
-        desc: Planning multi-hour paddles — navigation, hydration, pacing, and reading wind forecasts.
+      - title: สิ่งจำเป็นสำหรับการท่องเที่ยว
+        desc: วางแผนการพายเรือหลายชั่วโมง — การนำทาง การดื่มน้ำ การจัดจังหวะ และการอ่านพยากรณ์ลม
         slug: touring-sup-guide
-      - title: Weather Reading
-        desc: Interpret marine forecasts, identify cloud patterns, and understand wind effects on water.
+      - title: การอ่านสภาพอากาศ
+        desc: ตีความพยากรณ์ทางทะเล ระบุรูปแบบเมฆ และเข้าใจผลกระทบของลมต่อผิวน้ำ
         slug: weather-planning-water-sports
-      - title: Navigation Basics
-        desc: Chart reading, compass use, GPS waypoints, and route planning for coastal paddling.
+      - title: พื้นฐานการนำทาง
+        desc: การอ่านแผนที่ การใช้เข็มทิศ จุดทาง GPS และการวางแผนเส้นทางสำหรับการพายเลียบชายฝั่ง
         slug: sup-navigation-guide
-      - title: Tidal Awareness
-        desc: Understanding tide cycles, currents, and how they affect launch timing and routing.
+      - title: ความตระหนักเกี่ยวกับน้ำขึ้นน้ำลง
+        desc: การเข้าใจวงจรน้ำขึ้นน้ำลง กระแสน้ำ และวิธีที่สิ่งเหล่านี้ส่งผลต่อเวลาการออกเรือและเส้นทาง
         slug: understanding-tides
-  - level: Advanced
+  - level: ขั้นสูง
     color: from-purple-500 to-violet-600
     badge: bg-purple-100 text-purple-700
     guides:
-      - title: Multi-Day Trip Planning
-        desc: Expedition logistics — gear selection, food planning, safety protocols, and emergency contacts.
+      - title: การวางแผนการเดินทางหลายวัน
+        desc: ลอจิสติกส์ของการสำรวจ — การเลือกอุปกรณ์ การวางแผนอาหาร โปรโตคอลความปลอดภัย และผู้ติดต่อฉุกเฉิน
         slug: sup-travel-guide
-      - title: Rescue Techniques
-        desc: Self-rescue, T-rescue, and towing protocols for open water.
+      - title: เทคนิคการช่วยเหลือ
+        desc: การช่วยตัวเอง การช่วยเหลือแบบที และขั้นตอนการลากในน้ำเปิด
         slug: sup-self-rescue
-      - title: Night Paddling
-        desc: Navigation after dark — lighting requirements, route memory, group communication, and hazard awareness.
+      - title: พายเรือกลางคืน
+        desc: การนำทางหลังค่ำ — ข้อกำหนดการส่องสว่าง ความจำเส้นทาง การสื่อสารกลุ่ม และการรับรู้ถึงอันตราย
         slug: sup-navigation-guide
-  - level: Maintenance
+  - level: การบำรุงรักษา
     color: from-amber-500 to-orange-600
     badge: bg-amber-100 text-amber-700
     guides:
-      - title: Cleaning & Care
-        desc: Freshwater rinsing, UV protection, mildew prevention, and proper drying techniques after every session.
+      - title: การทำความสะอาดและการดูแล
+        desc: การล้างด้วยน้ำจืด, การป้องกัน UV, การป้องกันเชื้อราบูด, และเทคนิคการทำให้แห้งที่เหมาะสมหลังจากแต่ละครั้ง
         slug: inflatable-sup-maintenance
-      - title: Storage Guide
-        desc: Best practices for storing inflatable boards — deflation, folding, temperature control, and shelf life.
+      - title: คู่มือการเก็บรักษา
+        desc: แนวทางปฏิบัติที่ดีที่สุดในการเก็บบอร์ดเป่าลม — การปล่อยลม, การพับ, การควบคุมอุณหภูมิ, และอายุการใช้งาน
         slug: inflatable-sup-storage
-      - title: Repair Basics
-        desc: Fix small punctures, seam leaks, and valve issues with PVC repair kits and patch techniques.
+      - title: พื้นฐานการซ่อมแซม
+        desc: ซ่อมรอยเจาะเล็ก ๆ รอยรั่วที่ตะเข็บ และปัญวาล์วด้วยชุดซ่อม PVC และเทคนิคการติดแผ่นปะ
         slug: inflatable-sup-repair
-      - title: Valve Maintenance
-        desc: Identify valve types (Halkey-Roberts, Boston, Leafield), clean debris, and replace faulty stems.
+      - title: การบำรุงรักษาวาล์ว
+        desc: ระบุประเภทวาล์ว (Halkey-Roberts, Boston, Leafield) ทำความสะอาดเศษสิ่งสกปรก และเปลี่ยนก้านวาล์วที่ชำรุด
         slug: inflatable-sup-repair
-
-knowledge_center_tagline: 'Knowledge Center'
-knowledge_center_title: 'Paddle Board Guides & Knowledge'
-knowledge_center_subtitle: 'Expert guides and buying advice for paddle boarders of every level.'
-
+knowledge_center_tagline: ศูนย์ความรู้
+knowledge_center_title: คู่มือและความรู้เกี่ยวกับบอร์ดพาย
+knowledge_center_subtitle: คู่มือผู้เชี่ยวชาญและคำแนะนำในการซื้อสำหรับนักพายทุกระดับ
 knowledge_sections:
-  - title: 'Board Technology & Construction'
-    tagline: 'Inside Your Paddle Board'
-    desc: 'How inflatable paddle boards are built — drop-stitch cores, laminate layers, EVA decks, and factory pressure testing.'
+  - title: เทคโนโลยีและการสร้างบอร์ด
+    tagline: ภายในบอร์ดพายของคุณ
+    desc: วิธีการสร้างบอร์ดพายเป่าลม — drop-stitch แกน, ชั้นลามิเนต, EVA ดาดฟ้า, และการทดสอบความดันในโรงงาน
     guides:
-      - title: 'How Paddle Boards Are Made'
-        desc: 'From material cutting and lamination to 100% pressure testing — see how every board leaves the factory.'
-        href: '/factory/process'
-      - title: 'Drop-Stitch Core Technology'
-        desc: 'How thousands of internal threads create a rigid, high-pressure inflatable structure.'
-        href: '/learn/drop-stitch-core'
-      - title: 'Materials Reference'
-        desc: 'PVC denier ratings, fabric weights, UV resistance, and deck materials explained.'
-        href: '/learn/materials'
-      - title: 'Inflatable Board Technology'
-        desc: 'Welded seams, rail construction, and valve systems that keep your board stiff and airtight.'
-        href: '/learn/inflatable-technology'
-  - title: 'Buying Guides'
-    tagline: 'Choose the Right Board'
-    desc: 'Everything you need to pick your first — or next — inflatable SUP, from sizing to construction.'
+      - title: วิธีการผลิตบอร์ดพาย
+        desc: ตั้งแต่การตัดวัสดุและการลามิเนตไปจนถึงการทดสอบความดัน 100% — ดูว่าบอร์ดแต่ละชิ้นออกจากโรงงานอย่างไร
+        href: /factory/process
+      - title: เทคโนโลยีแกน Drop-Stitch
+        desc: วิธีที่เส้นด้ายภายในหลายพันเส้นทำให้เกิดโครงสร้างเป่าลมที่แข็งแรงและความดันสูง
+        href: /learn/drop-stitch-core
+      - title: ข้อมูลอ้างอิงวัสดุ
+        desc: การให้คะแนน denier PVC, น้ำหนักผ้า, UV ความต้านทาน, และวัสดุดาดฟ้า อธิบายไว้
+        href: /learn/materials
+      - title: เทคโนโลยีบอร์ดเป่าลม
+        desc: รอยต่อเชื่อม, โครงสร้างขอบ, และระบบวาล์วที่ทำให้บอร์ดของคุณแข็งแรงและปิดสนิท
+        href: /learn/inflatable-technology
+  - title: คู่มือการซื้อ
+    tagline: เลือกบอร์ดที่เหมาะสม
+    desc: ทุกสิ่งที่คุณต้องการเพื่อเลือก SUP เป่าลมชิ้นแรก — หรือชิ้นถัดไป — ตั้งแต่ขนาดไปจนถึงการก่อสร้าง
     guides:
-      - title: 'How to Choose an Inflatable SUP'
-        desc: "The key factors — construction, thickness, fin setup, and included accessories."
-        href: '/guides/how-to-choose-your-sup/'
-      - title: 'What Is Stand-Up Paddleboarding?'
-        desc: 'A friendly introduction to the sport, the gear, and why inflatable boards make it easy to start.'
-        href: '/guides/what-is-sup'
-      - title: 'Inflatable vs Hard Board'
-        desc: 'Compare iSUPs and hard epoxy boards across portability, durability, performance, and value.'
-        href: '/compare/inflatable-vs-hardboard'
-      - title: 'SUP Size Guide'
-        desc: 'Find the right board length, width, and volume for your weight, skill, and paddling style.'
-        href: '/size-guide'
-  - title: 'Skills & Safety'
-    tagline: 'Paddle with Confidence'
-    desc: 'Practical knowledge for every session — beginner basics, water safety, care, and repair.'
+      - title: วิธีการเลือกเรือเป่าลม SUP
+        desc: ปัจจัยสำคัญ — การก่อสร้าง, ความหนา, การติดตั้งครีบ, และอุปกรณ์เสริมที่รวมมา
+        href: /guides/how-to-choose-your-sup/
+      - title: การพายแบบยืนคืออะไร?
+        desc: แนะนำกีฬาที่เป็นมิตร, อุปกรณ์ต่าง ๆ, และเหตุผลที่บอร์ดเป่าลมทำให้เริ่มต้นได้ง่าย
+        href: /guides/what-is-sup
+      - title: กระดานเป่าลม vs กระดานแข็ง
+        desc: เปรียบเทียบ iSUP และบอร์ดอีพ็อกซี่แข็งในเรื่องการพกพา ความทนทาน ประสิทธิภาพ และความคุ้มค่า
+        href: /compare/inflatable-vs-hardboard
+      - title: SUP คู่มือขนาด
+        desc: หาความยาว ความกว้าง และปริมาตรของบอร์ดที่เหมาะสมกับน้ำหนัก ความสามารถ และสไตล์การพายของคุณ
+        href: /size-guide
+  - title: ทักษะและความปลอดภัย
+    tagline: พายเรือด้วยความมั่นใจ
+    desc: ความรู้ที่ใช้งานได้จริงสำหรับทุกเซสชัน — พื้นฐานสำหรับผู้เริ่มต้น ความปลอดภัยทางน้ำ การดูแล และการซ่อมแซม
     guides:
-      - title: "SUP Basics — Beginner's Guide"
-        desc: 'Everything a beginner needs to know — board types, paddle sizing, stance, and first-day tips.'
-        href: '/v2/beginner-sup-guide'
-      - title: 'Water Safety Essentials'
-        desc: 'Weather checks, PFD selection, leash rules, self-rescue, and group paddling best practices.'
-        href: '/learn/water-safety'
-      - title: 'SUP Maintenance & Care'
-        desc: 'Cleaning, storage, UV protection, and care tips for inflatable SUP boards.'
-        href: '/v2/inflatable-sup-maintenance'
-      - title: 'Board Repair Basics'
-        desc: 'Fix small punctures, seam leaks, and valve issues with PVC repair kits and patch techniques.'
-        href: '/v2/inflatable-sup-repair'
-
-read_guide: Read guide →
-
+      - title: SUP พื้นฐาน — คู่มือผู้เริ่มต้น
+        desc: ทุกสิ่งที่ผู้เริ่มต้นจำเป็นต้องรู้ — ประเภทของกระดาน ขนาดไม้ตีท่า ยืน และเคล็ดลับวันแรก
+        href: /v2/beginner-sup-guide
+      - title: ความปลอดภัยในการใช้น้ำพื้นฐาน
+        desc: ตรวจสอบสภาพอากาศ การเลือก PFD กฎการใช้สายรัด การช่วยเหลือตนเองและแนวทางปฏิบัติในการพายแบบกลุ่ม
+        href: /learn/water-safety
+      - title: การบำรุงรักษาและดูแล SUP
+        desc: การทำความสะอาด การเก็บรักษา การปกป้อง UV และเคล็ดลับการดูแลสำหรับบอร์ดเป่าลม SUP
+        href: /v2/inflatable-sup-maintenance
+      - title: พื้นฐานการซ่อมบอร์ด
+        desc: ซ่อมรอยเจาะเล็ก ๆ รอยรั่วที่ตะเข็บ และปัญวาล์วด้วยชุดซ่อม PVC และเทคนิคการติดแผ่นปะ
+        href: /v2/inflatable-sup-repair
+read_guide: อ่านคู่มือ →
 cta:
-  title: Not sure where to start?
-  desc: Reach out and we'll point you to the right guides and gear for your level.
-  label: Contact us →
+  title: ไม่แน่ใจว่าจะเริ่มจากตรงไหน?
+  desc: ติดต่อเราและเราจะแนะนำคู่มือและอุปกรณ์ที่เหมาะสมกับระดับของคุณ
+  label: ติดต่อเรา →
   link: /contact

@@ -1,126 +1,121 @@
 hero:
-  tagline: Paddle Board Overstock Academy
-  title: Learning Center
-  subtitle: Guides and tutorials for every skill level — from SUP basics to advanced rescue techniques
-
+  tagline: Paddle Board Overstock Academia
+  title: Centro de Aprendizaje
+  subtitle: Guías y tutoriales para todos los niveles de habilidad — desde SUP lo básico hasta técnicas avanzadas de rescate
 categories:
-  - level: Beginner
+  - level: Principiante
     color: from-green-500 to-emerald-600
     badge: bg-green-100 text-green-700
     guides:
-      - title: SUP Basics
-        desc: Learn the fundamentals of stand-up paddleboarding — stance, stroke technique, and balance.
+      - title: SUP Conceptos básicos
+        desc: 'Aprende los fundamentos del paddleboarding de pie: postura, técnica de brazada y equilibrio.'
         slug: beginner-sup-guide
-      - title: Paddle Techniques
-        desc: Forward stroke, sweep stroke, draw stroke, and low brace — master the essential paddle moves.
+      - title: Técnicas de remo
+        desc: Golpe hacia adelante, barrido, golpe de estirado y refuerzo bajo — domina los movimientos esenciales de la pala.
         slug: sup-paddle-guide
-      - title: Safety First
-        desc: Essential safety practices including weather checks, PFD use, leash rules, and self-rescue.
+      - title: La seguridad es lo primero
+        desc: Prácticas esenciales de seguridad que incluyen revisiones meteorológicas, PFD uso, normas de correa y auto-rescate.
         slug: sup-safety-guide
-  - level: Intermediate
+  - level: Intermedio
     color: from-blue-500 to-indigo-600
     badge: bg-blue-100 text-blue-700
     guides:
-      - title: Touring Essentials
-        desc: Planning multi-hour paddles — navigation, hydration, pacing, and reading wind forecasts.
+      - title: Imprescindibles para giras
+        desc: Planificar remadas de varias horas — navegación, hidratación, ritmo y lectura de pronósticos de viento.
         slug: touring-sup-guide
-      - title: Weather Reading
-        desc: Interpret marine forecasts, identify cloud patterns, and understand wind effects on water.
+      - title: Lectura del tiempo
+        desc: Interpreta las previsiones marinas, identifica patrones de nubes y entiende los efectos del viento sobre el agua.
         slug: weather-planning-water-sports
-      - title: Navigation Basics
-        desc: Chart reading, compass use, GPS waypoints, and route planning for coastal paddling.
+      - title: Fundamentos de la navegación
+        desc: Lectura de cartas, uso de brújula, puntos GPS y planificación de rutas para el remo costero.
         slug: sup-navigation-guide
-      - title: Tidal Awareness
-        desc: Understanding tide cycles, currents, and how they affect launch timing and routing.
+      - title: Conciencia de las Mareas
+        desc: Entender los ciclos de mareas, las corrientes y cómo afectan al momento y la ruta de lanzamiento.
         slug: understanding-tides
-  - level: Advanced
+  - level: Avanzado
     color: from-purple-500 to-violet-600
     badge: bg-purple-100 text-purple-700
     guides:
-      - title: Multi-Day Trip Planning
-        desc: Expedition logistics — gear selection, food planning, safety protocols, and emergency contacts.
+      - title: Planificación de viajes de varios días
+        desc: Logística de expediciones — selección de equipo, planificación de alimentos, protocolos de seguridad y contactos de emergencia.
         slug: sup-travel-guide
-      - title: Rescue Techniques
-        desc: Self-rescue, T-rescue, and towing protocols for open water.
+      - title: Técnicas de rescate
+        desc: Auto-rescate, T-rescue y protocolos de remolque para aguas abiertas.
         slug: sup-self-rescue
-      - title: Night Paddling
-        desc: Navigation after dark — lighting requirements, route memory, group communication, and hazard awareness.
+      - title: Remo nocturno
+        desc: Navegación después del anochecer — requisitos de iluminación, memoria de rutas, comunicación grupal y conciencia de peligros.
         slug: sup-navigation-guide
-  - level: Maintenance
+  - level: Mantenimiento
     color: from-amber-500 to-orange-600
     badge: bg-amber-100 text-amber-700
     guides:
-      - title: Cleaning & Care
-        desc: Freshwater rinsing, UV protection, mildew prevention, and proper drying techniques after every session.
+      - title: Limpieza y cuidado
+        desc: Enjuague en agua dulce, UV protección, prevención de hongos y técnicas adecuadas de secado después de cada sesión.
         slug: inflatable-sup-maintenance
-      - title: Storage Guide
-        desc: Best practices for storing inflatable boards — deflation, folding, temperature control, and shelf life.
+      - title: Guía de almacenamiento
+        desc: Mejores prácticas para almacenar tablas inflables — desinflado, plegado, control de temperatura y vida útil.
         slug: inflatable-sup-storage
-      - title: Repair Basics
-        desc: Fix small punctures, seam leaks, and valve issues with PVC repair kits and patch techniques.
+      - title: Conceptos básicos de reparación
+        desc: Repara pequeños pinchazos, fugas en las costuras y problemas con la válvula con kits de reparación PVC y técnicas de parches.
         slug: inflatable-sup-repair
-      - title: Valve Maintenance
-        desc: Identify valve types (Halkey-Roberts, Boston, Leafield), clean debris, and replace faulty stems.
+      - title: Mantenimiento de la válvula
+        desc: Identifica los tipos de válvula (Halkey-Roberts, Boston, Leafield), limpia los residuos y reemplaza los vástagos defectuosos.
         slug: inflatable-sup-repair
-
-knowledge_center_tagline: 'Knowledge Center'
-knowledge_center_title: 'Paddle Board Guides & Knowledge'
-knowledge_center_subtitle: 'Expert guides and buying advice for paddle boarders of every level.'
-
+knowledge_center_tagline: Centro de conocimiento
+knowledge_center_title: Guías y conocimientos sobre paddle boards
+knowledge_center_subtitle: Guías de expertos y consejos de compra para paddle boarders de todos los niveles.
 knowledge_sections:
-  - title: 'Board Technology & Construction'
-    tagline: 'Inside Your Paddle Board'
-    desc: 'How inflatable paddle boards are built — drop-stitch cores, laminate layers, EVA decks, and factory pressure testing.'
+  - title: Tecnología y construcción de tablas
+    tagline: Dentro de tu paddle board
+    desc: Cómo se construyen las tablas de paddle inflables — núcleos drop-stitch, capas laminadas, cubiertas EVA, y pruebas de presión en fábrica.
     guides:
-      - title: 'How Paddle Boards Are Made'
-        desc: 'From material cutting and lamination to 100% pressure testing — see how every board leaves the factory.'
-        href: '/factory/process'
-      - title: 'Drop-Stitch Core Technology'
-        desc: 'How thousands of internal threads create a rigid, high-pressure inflatable structure.'
-        href: '/learn/drop-stitch-core'
-      - title: 'Materials Reference'
-        desc: 'PVC denier ratings, fabric weights, UV resistance, and deck materials explained.'
-        href: '/learn/materials'
-      - title: 'Inflatable Board Technology'
-        desc: 'Welded seams, rail construction, and valve systems that keep your board stiff and airtight.'
-        href: '/learn/inflatable-technology'
-  - title: 'Buying Guides'
-    tagline: 'Choose the Right Board'
-    desc: 'Everything you need to pick your first — or next — inflatable SUP, from sizing to construction.'
+      - title: Cómo se fabrican las paddle boards
+        desc: Desde el corte de materiales y la laminación hasta las pruebas de presión al 100% — descubre cómo cada tabla sale de la fábrica.
+        href: /factory/process
+      - title: Tecnología de núcleo Drop-Stitch
+        desc: Cómo miles de hilos internos crean una estructura inflable rígida y de alta presión.
+        href: /learn/drop-stitch-core
+      - title: Referencia de materiales
+        desc: Clasificaciones de denier PVC, pesos de tela, resistencia UV y materiales de cubierta explicados.
+        href: /learn/materials
+      - title: Tecnología de tablas inflables
+        desc: Costuras soldadas, construcción del borde y sistemas de válvula que mantienen tu tabla rígida y hermética.
+        href: /learn/inflatable-technology
+  - title: Guías de compra
+    tagline: Elige la tabla correcta
+    desc: Todo lo que necesitas para elegir tu primera — o próxima — SUP inflable, desde el tamaño hasta la construcción.
     guides:
-      - title: 'How to Choose an Inflatable SUP'
-        desc: "The key factors — construction, thickness, fin setup, and included accessories."
-        href: '/guides/how-to-choose-your-sup/'
-      - title: 'What Is Stand-Up Paddleboarding?'
-        desc: 'A friendly introduction to the sport, the gear, and why inflatable boards make it easy to start.'
-        href: '/guides/what-is-sup'
-      - title: 'Inflatable vs Hard Board'
-        desc: 'Compare iSUPs and hard epoxy boards across portability, durability, performance, and value.'
-        href: '/compare/inflatable-vs-hardboard'
-      - title: 'SUP Size Guide'
-        desc: 'Find the right board length, width, and volume for your weight, skill, and paddling style.'
-        href: '/size-guide'
-  - title: 'Skills & Safety'
-    tagline: 'Paddle with Confidence'
-    desc: 'Practical knowledge for every session — beginner basics, water safety, care, and repair.'
+      - title: Cómo elegir una SUP inflable
+        desc: Los factores clave — construcción, grosor, configuración de aletas y accesorios incluidos.
+        href: /guides/how-to-choose-your-sup/
+      - title: ¿Qué es el stand-up paddleboarding?
+        desc: Una introducción amistosa al deporte, el equipo, y por qué las tablas inflables facilitan el inicio.
+        href: /guides/what-is-sup
+      - title: Tabla inflable vs tabla rígida
+        desc: Compara i SUP y tablas rígidas de epoxi en cuanto a portabilidad, durabilidad, rendimiento y valor.
+        href: /compare/inflatable-vs-hardboard
+      - title: Guía de tallas SUP
+        desc: Encuentra la longitud, anchura y volumen adecuados de la tabla según tu peso, habilidad y estilo de remo.
+        href: /size-guide
+  - title: Habilidades y Seguridad
+    tagline: Rema con Confianza
+    desc: 'Conocimiento práctico para cada sesión: conceptos básicos para principiantes, seguridad en el agua, cuidado y reparación.'
     guides:
-      - title: "SUP Basics — Beginner's Guide"
-        desc: 'Everything a beginner needs to know — board types, paddle sizing, stance, and first-day tips.'
-        href: '/v2/beginner-sup-guide'
-      - title: 'Water Safety Essentials'
-        desc: 'Weather checks, PFD selection, leash rules, self-rescue, and group paddling best practices.'
-        href: '/learn/water-safety'
-      - title: 'SUP Maintenance & Care'
-        desc: 'Cleaning, storage, UV protection, and care tips for inflatable SUP boards.'
-        href: '/v2/inflatable-sup-maintenance'
-      - title: 'Board Repair Basics'
-        desc: 'Fix small punctures, seam leaks, and valve issues with PVC repair kits and patch techniques.'
-        href: '/v2/inflatable-sup-repair'
-
-read_guide: Read guide →
-
+      - title: SUP Conceptos Básicos — Guía para Principiantes
+        desc: 'Todo lo que un principiante necesita saber: tipos de tabla, tamaño del remo, postura y consejos para el primer día.'
+        href: /v2/beginner-sup-guide
+      - title: Conceptos Esenciales de Seguridad en el Agua
+        desc: Revisión del clima, PFD selección, reglas del leash, autorrescate y mejores prácticas para remar en grupo.
+        href: /learn/water-safety
+      - title: SUP Mantenimiento y Cuidado
+        desc: Limpieza, almacenamiento, protección UV y consejos de cuidado para tablas inflables SUP.
+        href: /v2/inflatable-sup-maintenance
+      - title: Conceptos Básicos de Reparación de Tablas
+        desc: Repara pequeños pinchazos, fugas en las costuras y problemas con la válvula con kits de reparación PVC y técnicas de parches.
+        href: /v2/inflatable-sup-repair
+read_guide: Leer guía →
 cta:
-  title: Not sure where to start?
-  desc: Reach out and we'll point you to the right guides and gear for your level.
-  label: Contact us →
+  title: ¿No sabes por dónde empezar?
+  desc: Contáctanos y te indicaremos las guías y el equipo adecuados para tu nivel.
+  label: Contáctanos →
   link: /contact

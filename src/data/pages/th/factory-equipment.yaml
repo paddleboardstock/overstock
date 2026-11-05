@@ -1,69 +1,69 @@
 hero:
-  tagline: Equipment
-  title: Manufacturing Equipment & Machinery
-  subtitle: Industrial-grade equipment across cutting, welding, printing, and assembly
-  back_label: Back to Factory
+  tagline: อุปกรณ์
+  title: อุปกรณ์และเครื่องจักรการผลิต
+  subtitle: อุปกรณ์ระดับอุตสาหกรรมสำหรับการตัด การเชื่อม การพิมพ์ และการประกอบ
+  back_label: กลับไปที่โรงงาน
   back_link: /factory
 categories:
-  - title: Cutting & Material Preparation
+  - title: การตัดและการเตรียมวัสดุ
     items:
-      - name: Automatic PVC Cutting Machine
-        spec: CNC-controlled, 6.5 m × 2.5 m, 0.1 mm accuracy
-        desc: Computer-controlled automatic cutting machine for PVC and drop-stitch fabrics. Nesting software optimises material utilisation to below 5% waste.
-      - name: Fabric Spreader
-        spec: 3 m max width, tension-controlled feed
-        desc: Lays fabric in single or multiple plies with controlled tension to prevent distortion before cutting.
-  - title: Welding & Bonding
+      - name: PVC เครื่องตัดอัตโนมัติ
+        spec: เครื่องควบคุม CNC, ขนาด 6.5 ม. × 2.5 ม., ความแม่นยำ 0.1 มม.
+        desc: เครื่องตัดอัตโนมัติควบคุมด้วยคอมพิวเตอร์สำหรับผ้า PVC และ drop-stitch ซอฟต์แวร์จัดวางรูปแบบช่วยเพิ่มประสิทธิภาพการใช้วัสดุให้เสียหายน้อยกว่า 5%
+      - name: เครื่องปูผ้า
+        spec: ความกว้างสูงสุด 3 ม., ป้อนด้วยความตึงควบคุม
+        desc: ปูผ้าเป็นชั้นเดียวหรือหลายชั้นพร้อมควบคุมความตึงเพื่อป้องกันการบิดเบี้ยวก่อนการตัด
+  - title: การเชื่อม & การยึดติด
     items:
-      - name: Heat Sealing Machine
-        spec: Hot-air welding, variable 200–600 °C, 0.5–5 m/min
-        desc: Hot-air heat sealing machine for bonding and welding PVC laminates, rail bands, and chamber seams. Used for tacking, sealing, and fusing drop-stitch core joints.
-      - name: Dielectric RF Press
-        spec: 15 kW, platen 2000 × 600 mm
-        desc: Radio-frequency welding press for main longitudinal seams, transom-to-tube joints, and large-chamber fabrication.
-      - name: CNC-Controlled RF Welder
-        spec: 8 kW, XY table 2500 × 1200 mm
-        desc: Programmable curved-seam welding for complex geometries, logo embossing, and precision patchwork.
-  - title: Deck Art & Finishing
+      - name: เครื่องซีลด้วยความร้อน
+        spec: การเชื่อมด้วยลมร้อน, 200–600 °C ปรับได้, 0.5–5 ม./นาที
+        desc: เครื่องซีลด้วยความร้อนลมร้อนสำหรับการยึดและเชื่อมชั้นฟิล์ม PVC แถบราง และรอยต่อห้อง ใช้สำหรับการยึด, การซีล และการหลอมรวมรอยต่อแกนกลาง drop-stitch
+      - name: เครื่องกดเชื่อม RF แบบไดอิเล็กทริก
+        spec: 15 kW, พื้นที่กด 2000 × 600 มม.
+        desc: เครื่องกดเชื่อมความถี่วิทยุสำหรับรอยตะเข็บตามแนวยาวหลัก, ข้อต่อข้ามท่อน และการสร้างห้องขนาดใหญ่
+      - name: เครื่องเชื่อม RF ควบคุม CNC
+        spec: 8 kW, โต๊ะ XY 2500 × 1200 มม.
+        desc: การเชื่อมรอยโค้งแบบโปรแกรมได้สำหรับรูปทรงซับซ้อน การประทับโลโก้ และงานปะติดที่แม่นยำ
+  - title: ศิลปะและการตกแต่งดาดฟ้า
     items:
-      - name: EVA Deck Cutting Machine
-        spec: CNC knife cutting, 2 m width
-        desc: Precision cutting of EVA deck foam panels for art-series deck patterns. Each panel is cut to shape for a seamless full-deck fit.
-      - name: Deck Lamination Press
-        spec: Temperature & pressure controlled
-        desc: Bonds EVA deck panels to the board surface with consistent adhesion across the full deck area.
-  - title: SUP Printing & Decoration
+      - name: EVA เครื่องตัดดาดฟ้า
+        spec: การตัดด้วยมีด CNC กว้าง 2 ม.
+        desc: การตัดแม่นยำของแผ่นโฟมเด็ค EVA สำหรับลวดลายเด็คชุดศิลปะ แต่ละแผ่นถูกตัดเป็นรูปทรงเพื่อให้เข้ากับเด็คทั้งหมดอย่างไร้รอยต่อ
+      - name: เครื่องอัดชั้นฟิล์มเด็ค
+        spec: ควบคุมอุณหภูมิและความดัน
+        desc: ยึดแผ่นเด็ค EVA เข้ากับพื้นผิวบอร์ดด้วยการยึดเกาะที่สม่ำเสมอทั่วทั้งพื้นที่เด็ค
+  - title: SUP การพิมพ์และการตกแต่ง
     items:
-      - name: Digital Printer
-        spec: High-resolution inkjet, up to 2 m print width
-        desc: Direct-to-fabric digital printing for full-colour SUP deck graphics. Prints custom patterns, gradients, and photo-quality images with UV-resistant water-based inks.
-      - name: Screen Printing Machine
-        spec: Manual and semi-automatic, multi-colour registration
-        desc: Screen printing for SUP board logos, brand marks, and repeating patterns. Provides durable, opaque prints with vibrant colour saturation.
-  - title: Final Assembly
+      - name: เครื่องพิมพ์ดิจิทัล
+        spec: เครื่องพิมพ์อิงค์เจ็ทความละเอียดสูง, ความกว้างการพิมพ์สูงสุด 2 ม.
+        desc: การพิมพ์โดยตรงลงบนผ้าสำหรับกราฟิกชั้นดาดฟ้าสีเต็มรูปแบบ SUP พิมพ์ลวดลายกำหนดเอง, สีไล่ระดับ, และภาพคุณภาพระดับภาพถ่ายด้วยหมึกน้ำที่ทนต่อ UV
+      - name: เครื่องพิมพ์สกรีน
+        spec: การลงทะเบียนแบบแมนนวลและกึ่งอัตโนมัติหลายสี
+        desc: การพิมพ์สกรีนสำหรับโลโก้บอร์ด SUP, เครื่องหมายแบรนด์, และลวดลายซ้ำ พิมพ์ที่ทนทานและทึบแสงพร้อมสีสันสดใส
+  - title: การประกอบขั้นสุดท้าย
     items:
-      - name: Valve Torque Station
-        spec: Calibrated, 10-cycle function test
-        desc: Installs and torques inflation valves, then function-tests every valve through 10 open/close cycles.
-      - name: Fin Box & D-Ring Setter
-        spec: Jig-aligned, adhesive cured
-        desc: Positions and bonds fin boxes, D-rings, and handles at exact deck locations per model specification.
-  - title: Testing & Quality Control
+      - name: สถานีขันแรงบิดวาล์ว
+        spec: สอบเทียบ ทดสอบฟังก์ชัน 10 รอบ
+        desc: ติดตั้งและขันแรงบิดวาล์วเติมลม จากนั้นทดสอบฟังก์ชันของวาล์วทุกตัวด้วยการเปิด/ปิด 10 รอบ
+      - name: เครื่องวางกล่องครีบและ D-Ring
+        spec: จัดตำแหน่งด้วยจิ๊ก กาวแห้ง
+        desc: วางและยึดกล่องครีบ D-ring และด้ามจับที่ตำแหน่งบนดาดฟ้าอย่างแม่นยำตามสเปกของรุ่น
+  - title: การทดสอบและควบคุมคุณภาพ
     items:
-      - name: Universal Tensile Tester
-        spec: 50 kN capacity
-        desc: Breaking force, elongation at break, and tear propagation testing for fabric batches.
-      - name: Air Retention Test Rig
-        spec: Programmable, 30-min pressure-hold
-        desc: Automated pressure-hold test for every tube chamber before assembly.
-      - name: Seam Peel Tester
-        spec: Motorised 180° peel at 100 mm/min
-        desc: Weld and bonded-seam peel strength testing per internal protocol.
-      - name: Xenon-Arc Weathering Chamber
-        spec: 2000 h exposure
-        desc: UV resistance testing for colour change and strength retention.
+      - name: เครื่องทดสอบแรงดึงสากล
+        spec: ความจุ 50 kN
+        desc: ทดสอบแรงดึง, การยืดตัวตอนขาด, และการขยายรอยขาดของผ้าแต่ละชุด
+      - name: ชุดทดสอบการเก็บอากาศ
+        spec: โปรแกรมตั้งค่าได้, การยึดแรงดัน 30 นาที
+        desc: การทดสอบการยึดแรงดันอัตโนมัติสำหรับทุกช่องท่อก่อนการประกอบ
+      - name: เครื่องทดสอบการลอกตะเข็บ
+        spec: ลอกอัตโนมัติ 180° ที่ 100 มม./นาที
+        desc: ทดสอบความแข็งแรงของรอยต่อเชื่อมและรอยต่อที่ยึดด้วยกาวตามโปรโตคอลภายใน
+      - name: เครื่องจำลองสภาพอากาศ Xenon-Arc
+        spec: การสัมผัส 2000 ชั่วโมง
+        desc: การทดสอบความต้านทาน UV สำหรับการเปลี่ยนสีและการคงความแข็งแรง
 cta:
-  title: Interested in a factory tour?
-  desc: We welcome visitors to our Weihai facility. See our equipment and processes in person.
-  label: Schedule a visit →
+  title: สนใจทัวร์โรงงานไหม?
+  desc: เรายินดีต้อนรับผู้เยี่ยมชมสถานที่ของเราในเว่ยไห่ มาชมอุปกรณ์และกระบวนการของเราด้วยตัวคุณเอง
+  label: กำหนดเวลาการเยี่ยมชม →
   link: /contact
