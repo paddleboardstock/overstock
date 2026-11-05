@@ -1,26 +1,26 @@
 hero_text:
-  tagline: Contact
-  title: GET IN TOUCH
+  tagline: Kontak
+  title: MAKIPAG-UGNAYAN
 contact_form:
   id: form
-  title: Send us a message
-  subtitle: For order questions, sizing advice or product support, drop us a line. We reply within one business day.
+  title: Magpadala sa amin ng mensahe
+  subtitle: Para sa mga tanong tungkol sa order, payo sa sukat o suporta sa produkto, magpadala sa amin ng mensahe. Sumasagot kami sa loob ng isang araw ng negosyo.
   email_to: info@paddleboardoverstock.com
-  submit_button: Send Inquiry → Get a Quote
-  success_message: Thanks! Your message has landed in our inbox. We will reply within one business day.
-  error_message: Something went wrong sending your message. Please try again or email us directly.
-  default_country_code: "+1"
+  submit_button: Magpadala ng Pagtatanong → Kumuha ng Quote
+  success_message: Salamat! Ang iyong mensahe ay natanggap na sa aming inbox. Sasagutin namin ito sa loob ng isang araw ng negosyo.
+  error_message: May nagkamali sa pagpapadala ng iyong mensahe. Pakisubukang muli o mag-email sa amin nang direkta.
+  default_country_code: '+1'
   captcha:
-    label: "Anti-spam: please solve the following"
+    label: 'Anti-spam: pakisolve ang sumusunod'
   fields:
-    - name: firstName
-      label: First Name
+    - name: unangPangalan
+      label: Pangalan
       row: 1
-    - name: lastName
-      label: Last Name
+    - name: hulingPangalan
+      label: Apelyido
       row: 1
-    - name: companyName
-      label: Company Name
+    - name: pangalanKompanya
+      label: Pangalan ng Kumpanya
       row: 2
     - name: address
       label: Address
@@ -29,7 +29,7 @@ contact_form:
       label: Zip / Postal Code
       row: 4
     - name: country
-      label: Country
+      label: Bansa
       row: 4
       type: select
       optionsKey: countries
@@ -43,80 +43,80 @@ contact_form:
       type: tel
       withCountryCode: true
     - name: orderVolume
-      label: Estimated Order Volume
+      label: Tinatayang Dami ng Order
       row: 6
       type: select
       options:
-        - value: ""
-          label: How many boards are you shopping for?...
+        - value: ''
+          label: Ilan ang mga board na bibilhin mo?...
         - value: one
-          label: Just one board
+          label: Isa lamang na board
         - value: 2-4
-          label: 2–4 boards
+          label: 2–4 na board
         - value: 5-plus
-          label: 5+ boards (family, club, or rental)
+          label: 5+ board (para sa pamilya, club, o renta)
     - name: customization
-      label: What can we help with?
+      label: Ano ang maaari naming maitulong?
       row: 7
       type: select
       options:
-        - value: ""
-          label: Select a topic...
+        - value: ''
+          label: Pumili ng paksa...
         - value: none
-          label: General product question
+          label: Pangkalahatang tanong sa produkto
         - value: sizing
-          label: Help choosing the right board
+          label: Tulong sa pagpili ng tamang board
         - value: order
-          label: Order, payment or shipping
+          label: Pag-order, pagbabayad o pagpapadala
         - value: warranty
-          label: Warranty or repair support
-    - name: productInterest
-      label: Product Categories of Interest
+          label: Suporta sa warranty o pagkukumpuni
+    - name: interesSaProdukto
+      label: Mga Kategorya ng Produkto na Interesado
       row: 8
       type: select
       options:
-        - value: ""
-          label: Select product category...
+        - value: ''
+          label: Pumili ng kategorya ng produkto...
         - value: all
-          label: All products / Full catalog
+          label: Lahat ng produkto / Buong katalogo
         - value: sup
-          label: SUP Boards / Paddleboards
+          label: SUP Mga Board / Paddleboards
         - value: packages
-          label: Complete SUP packages
+          label: Kumpletong SUP na mga pakete
         - value: accessory
-          label: Accessories (pumps, oars, bags)
+          label: Mga Aksesorya (pampump, sagwan, bag)
     - name: subject
-      label: Subject
+      label: Paksa
       row: 9
     - name: message
-      label: Message
+      label: Mensahe
       row: 10
       type: textarea
       rows: 6
 features2_other_ways:
-  title: Other ways to reach us
+  title: Iba pang paraan upang makipag-ugnayan sa amin
   columns: 3
   items:
-    - title: Order help
-      description: Product questions, sizing advice, and order support.
+    - title: Tulong sa pag-order
+      description: Mga tanong tungkol sa produkto, payo sa sukat, at suporta sa order.
       icon: tabler:shopping-bag
-    - title: Technical support
-      description: Warranty, repairs, spare parts and operating questions.
+    - title: Suportang teknikal
+      description: Warranty, pagkukumpuni, ekstrang bahagi at mga tanong sa operasyon.
       icon: tabler:tool
-    - title: Press & partnerships
-      description: Media kits, sponsorship and industry collaboration.
+    - title: Press & pakikipag-partner
+      description: Mga media kit, sponsorship at kolaborasyong pang-industriya.
       icon: tabler:news
-    - title: Phone
-      description: +1 279 732 3333 (US HQ) · +86 13305324192 (factory)
+    - title: Telepono
+      description: +1 279 732 3333 (US HQ) · +86 13305324192 (pabrika)
       icon: tabler:headset
     - title: Email
       description: info@paddleboardoverstock.com
       icon: tabler:mail
-    - title: Global HQ & Billing
+    - title: Pang-Globong Punong-Tanggapan at Pagsingil
       description: Weihai Dongjilian Co., Ltd.
       icon: tabler:map-pin
 map:
-  title: Our Location
-  subtitle: Visit our Weihai manufacturing hub
-  address: Weihai, Shandong, China
+  title: Aming Lokasyon
+  subtitle: Bisitahin ang aming pabrika sa Weihai
+  address: Weihai, Shandong, Tsina
   zoom: 15

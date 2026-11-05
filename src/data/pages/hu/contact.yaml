@@ -1,35 +1,35 @@
 hero_text:
-  tagline: Contact
-  title: GET IN TOUCH
+  tagline: Kapcsolat
+  title: LÉPJEN KAPCSOLATBA
 contact_form:
   id: form
-  title: Send us a message
-  subtitle: For order questions, sizing advice or product support, drop us a line. We reply within one business day.
+  title: Küldjön nekünk üzenetet
+  subtitle: Rendelési kérdések, méretválasztási tanácsok vagy terméktámogatás esetén írjon nekünk. Egy munkanapon belül válaszolunk.
   email_to: info@paddleboardoverstock.com
-  submit_button: Send Inquiry → Get a Quote
-  success_message: Thanks! Your message has landed in our inbox. We will reply within one business day.
-  error_message: Something went wrong sending your message. Please try again or email us directly.
-  default_country_code: "+1"
+  submit_button: Kérdés küldése → Árajánlat kérés
+  success_message: Köszönjük! Üzenete megérkezett a postafiókunkba. Egy munkanapon belül válaszolunk.
+  error_message: Üzenete küldése sikertelen volt. Kérjük, próbálja újra, vagy küldjön közvetlenül e-mailt.
+  default_country_code: '+1'
   captcha:
-    label: "Anti-spam: please solve the following"
+    label: 'Spam elleni védelem: kérjük, oldja meg a következőt'
   fields:
-    - name: firstName
-      label: First Name
+    - name: keresztnév
+      label: Keresztnév
       row: 1
-    - name: lastName
-      label: Last Name
+    - name: vezetéknév
+      label: Vezetéknév
       row: 1
-    - name: companyName
-      label: Company Name
+    - name: cég neve
+      label: Cégnév
       row: 2
     - name: address
-      label: Address
+      label: Cím
       row: 3
     - name: zip
-      label: Zip / Postal Code
+      label: Irányítószám
       row: 4
     - name: country
-      label: Country
+      label: Ország
       row: 4
       type: select
       optionsKey: countries
@@ -42,81 +42,81 @@ contact_form:
       row: 5
       type: tel
       withCountryCode: true
-    - name: orderVolume
-      label: Estimated Order Volume
+    - name: rendelési mennyiség
+      label: Becsült rendelési mennyiség
       row: 6
       type: select
       options:
-        - value: ""
-          label: How many boards are you shopping for?...
+        - value: ''
+          label: Hány deszkát szeretne vásárolni?...
         - value: one
-          label: Just one board
+          label: Csak egy deszka
         - value: 2-4
-          label: 2–4 boards
+          label: 2–4 deszka
         - value: 5-plus
-          label: 5+ boards (family, club, or rental)
+          label: 5+ deszka (család, klub vagy kölcsönzés)
     - name: customization
-      label: What can we help with?
+      label: Miben tudunk segíteni?
       row: 7
       type: select
       options:
-        - value: ""
-          label: Select a topic...
+        - value: ''
+          label: Válasszon témát...
         - value: none
-          label: General product question
+          label: Általános termékkérdés
         - value: sizing
-          label: Help choosing the right board
+          label: Segítség a megfelelő deszka kiválasztásában
         - value: order
-          label: Order, payment or shipping
+          label: Rendelés, fizetés vagy szállítás
         - value: warranty
-          label: Warranty or repair support
-    - name: productInterest
-      label: Product Categories of Interest
+          label: Garancia vagy javítási támogatás
+    - name: termékÉrdeklődés
+      label: Érdeklődési termékkategóriák
       row: 8
       type: select
       options:
-        - value: ""
-          label: Select product category...
+        - value: ''
+          label: Válasszon termékkategóriát...
         - value: all
-          label: All products / Full catalog
+          label: Minden termék / Teljes katalógus
         - value: sup
-          label: SUP Boards / Paddleboards
+          label: SUP Deszkák / Paddleboardok
         - value: packages
-          label: Complete SUP packages
+          label: Teljes SUP csomagok
         - value: accessory
-          label: Accessories (pumps, oars, bags)
+          label: Kiegészítők (szivattyúk, evezők, táskák)
     - name: subject
-      label: Subject
+      label: Tárgy
       row: 9
     - name: message
-      label: Message
+      label: Üzenet
       row: 10
       type: textarea
       rows: 6
 features2_other_ways:
-  title: Other ways to reach us
+  title: Egyéb elérhetőségek
   columns: 3
   items:
-    - title: Order help
-      description: Product questions, sizing advice, and order support.
+    - title: Rendelési segítség
+      description: Termék kérdések, méret tanácsadás és rendelési támogatás.
       icon: tabler:shopping-bag
-    - title: Technical support
-      description: Warranty, repairs, spare parts and operating questions.
+    - title: Műszaki támogatás
+      description: Garancia, javítások, alkatrészek és üzemeltetési kérdések.
       icon: tabler:tool
-    - title: Press & partnerships
-      description: Media kits, sponsorship and industry collaboration.
+    - title: Sajtó és partnerségek
+      description: Médiacsomagok, szponzoráció és ipari együttműködés.
       icon: tabler:news
-    - title: Phone
-      description: +1 279 732 3333 (US HQ) · +86 13305324192 (factory)
+    - title: Telefon
+      description: +1 279 732 3333 (US HQ) · +86 13305324192 (gyár)
       icon: tabler:headset
-    - title: Email
+    - title: E-mail
       description: info@paddleboardoverstock.com
       icon: tabler:mail
-    - title: Global HQ & Billing
-      description: Weihai Dongjilian Co., Ltd.
+    - title: Globális központ & Számlázás
+      description: Weihai Dongjilian Kft.
       icon: tabler:map-pin
 map:
-  title: Our Location
-  subtitle: Visit our Weihai manufacturing hub
-  address: Weihai, Shandong, China
+  title: Helyszínünk
+  subtitle: Látogasson el a weihai gyártási központunkba
+  address: Weihai, Shandong, Kína
   zoom: 15

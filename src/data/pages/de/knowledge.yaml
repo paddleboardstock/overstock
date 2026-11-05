@@ -1,91 +1,88 @@
 hero:
-  tagline: 'Knowledge Graph'
-  title: 'Water Exploration Knowledge'
+  tagline: Wissensgraph
+  title: Wassererforschungswissen
   subtitle: |
-    A structured knowledge base covering inflatable SUP technology,<br />
-    water safety, board engineering, and adventure planning.
-  taglineSection: 'Explore. Learn. Go with confidence.'
-
+    Eine strukturierte Wissensdatenbank, die aufblasbare SUP-Technologie abdeckt,<br />
+    Wassersicherheit, Bretttechnik und Abenteuerplanung.
+  taglineSection: Entdecken. Lernen. Gehe mit Vertrauen.
 clusters:
-  tagline: 'Knowledge Clusters'
-  title: 'Explore by topic'
-  subtitle: 'Deep dives into the technology, safety, and skills behind every Paddle Board Overstock product.'
+  tagline: Wissenscluster
+  title: Nach Thema erkunden
+  subtitle: Tiefgehende Einblicke in die Technologie, Sicherheit und Fähigkeiten hinter jedem Paddle Board Overstock-Produkt.
   items:
-    - title: 'SUP Knowledge'
-      description: 'From choosing your first board to advanced touring techniques — everything about stand-up paddle boarding.'
-      icon: 'tabler:lifebuoy'
+    - title: SUP Wissen
+      description: Von der Auswahl Ihres ersten Boards bis zu fortgeschrittenen Touring-Techniken – alles über Stand-up-Paddeln.
+      icon: tabler:lifebuoy
       topics:
-        - 'How to choose your first inflatable SUP'
-        - 'Best SUP size for beginners'
-        - 'How difficult is paddle boarding?'
-        - 'Inflatable vs hard board comparison'
-        - 'SUP safety checklist'
-    - title: 'Board Technology'
-      description: 'Technical deep dives on drop-stitch cores, PVC laminates, rails, and valves — how inflatable SUPs are engineered.'
-      icon: 'tabler:anchor'
+        - Wie man sein erstes aufblasbares SUP auswählt
+        - Beste SUP-Größe für Anfänger
+        - Wie schwierig ist Stand-Up-Paddling?
+        - Vergleich zwischen aufblasbarem und festem Board
+        - SUP Sicherheitscheckliste
+    - title: Plattentechnologie
+      description: Technische Tiefenanalysen zu drop-stitch-Kernen, PVC-Laminaten, Schienen und Ventilen – wie aufblasbare SUPs konstruiert werden.
+      icon: tabler:anchor
       topics:
-        - 'How inflatable SUPs are made'
-        - 'PVC laminate layers explained'
-        - 'Rail and seam construction'
-        - 'Drop-stitch technology deep dive'
-        - 'EVA deck art explained'
-    - title: 'Safety Knowledge'
-      description: 'Essential safety knowledge for every paddler — from PFD selection to weather reading to self-rescue techniques.'
-      icon: 'tabler:shield'
+        - Wie aufblasbare SUPs hergestellt werden
+        - PVC Laminatschichten erklärt
+        - Schienen- und Nahtkonstruktion
+        - Drop-stitch Technologie tiefgehender Einblick
+        - EVA Deck-Art erklärt
+    - title: Sicherheitswissen
+      description: Wesentliches Sicherheitswissen für jeden Paddler — von der PFD-Auswahl über Wetterbeobachtung bis hin zu Selbstrettungstechniken.
+      icon: tabler:shield
       topics:
-        - 'SUP safety checklist'
-        - 'Do you need a life jacket?'
-        - 'Ocean paddling safety guide'
-        - 'River and current safety for paddlers'
-        - 'Weather and water condition awareness'
-    - title: 'Technology'
-      description: 'The engineering behind Paddle Board Overstock products — materials, construction methods, and quality testing.'
-      icon: 'tabler:microscope'
+        - SUP Sicherheitscheckliste
+        - Brauchst du eine Rettungsweste?
+        - Sicherheitsleitfaden für das Paddeln im Ozean
+        - Fluss- und Strömungssicherheit für Paddler
+        - Bewusstsein für Wetter- und Wasserbedingungen
+    - title: Technologie
+      description: Die Technik hinter Paddle Board Overstock-Produkten – Materialien, Konstruktionsmethoden und Qualitätstests.
+      icon: tabler:microscope
       topics:
-        - 'Marine-grade PVC technology'
-        - 'Drop-stitch core explained'
-        - 'Why PSI matters for inflatable SUPs'
-        - 'RF welding vs adhesive bonding'
-        - 'Quality testing on every board'
-    - title: 'Club & Rental Knowledge'
-      description: 'Practical guides for running a SUP program — from rental operations to resort and club fleets.'
-      icon: 'tabler:briefcase'
+        - Marine-Grade-PVC-Technologie
+        - Drop-stitch-Kern erklärt
+        - Warum PSI für aufblasbare SUPs wichtig ist
+        - RF-Schweißen vs. Klebeverbindung
+        - Qualitätstest auf jedem Board
+    - title: Club- & Mietwissen
+      description: Praktische Leitfäden zum Betrieb eines SUP-Programms – von Mietbetrieben bis zu Resort- und Clubflotten.
+      icon: tabler:briefcase
       topics:
-        - 'How to start a SUP rental business'
-        - 'Building a resort water sports center'
-        - 'Paddle board fleet sizing for clubs'
-        - 'Inflatable vs hard SUP for commercial use'
-        - 'Best SUP boards for rental fleets'
-        - 'Resort water sports revenue strategies'
-        - 'Commercial equipment maintenance guide'
-
+        - So starten Sie ein SUP Vermietungsunternehmen
+        - Bau eines Resort-Wassersportzentrums
+        - Dimensionierung der Paddle-Board-Flotte für Vereine
+        - Aufblasbar vs. hart SUP für den gewerblichen Einsatz
+        - Beste SUP-Boards für Mietflotten
+        - Umsatzstrategien für Wassersport-Resorts
+        - Leitfaden zur Wartung gewerblicher Geräte
 featured_guides:
-  tagline: 'Featured Guides'
-  title: 'Most popular knowledge resources'
+  tagline: Ausgewählte Leitfäden
+  title: Die beliebtesten Wissensressourcen
   items:
-    - title: 'SUP Basics'
-      href: '/learn/sup'
-    - title: 'Inflatable vs Hard Board'
-      href: '/compare/inflatable-vs-hardboard'
-    - title: 'Water Safety Guide'
-      href: '/learn/water-safety'
-    - title: 'Materials Reference'
-      href: '/learn/materials'
-    - title: 'SUP Size Guide'
-      href: '/size-guide'
-    - title: 'SUP Rental Cost Guide'
-      href: '/v2/cost-to-start-sup-rental-business'
-    - title: 'Resort Water Sports Center'
-      href: '/v2/building-resort-water-sports-center'
-    - title: 'Start a Water Brand'
-      href: '/v2/start-water-sports-brand-private-label'
-
+    - title: SUP Grundlagen
+      href: /learn/sup
+    - title: Aufblasbar vs. Hardboard
+      href: /compare/inflatable-vs-hardboard
+    - title: Wasser-Sicherheitsleitfaden
+      href: /learn/water-safety
+    - title: Materialreferenz
+      href: /learn/materials
+    - title: SUP Größenratgeber
+      href: /size-guide
+    - title: SUP Mietkostenleitfaden
+      href: /v2/cost-to-start-sup-rental-business
+    - title: Wassersportzentrum des Resorts
+      href: /v2/building-resort-water-sports-center
+    - title: Eine Wasser-Marke starten
+      href: /v2/start-water-sports-brand-private-label
 cta:
-  title: 'Start exploring'
-  subtitle: 'Dive into our knowledge base and get the information you need for your next water adventure.'
+  title: Beginnen Sie zu erkunden
+  subtitle: Tauchen Sie in unsere Wissensdatenbank ein und erhalten Sie die Informationen, die Sie für Ihr nächstes Wasserabenteuer benötigen.
   actions:
     - variant: primary
-      text: 'Browse all guides'
-      href: '/academy'
-    - text: 'Explore Knowledge Graph'
-      href: '/knowledge'
+      text: Alle Leitfäden durchsuchen
+      href: /academy
+    - text: Wissensgraph erkunden
+      href: /knowledge

@@ -1,69 +1,69 @@
 hero:
-  tagline: Equipment
-  title: Manufacturing Equipment & Machinery
-  subtitle: Industrial-grade equipment across cutting, welding, printing, and assembly
-  back_label: Back to Factory
+  tagline: Wyposażenie
+  title: Sprzęt i Maszyny Produkcyjne
+  subtitle: Sprzęt przemysłowy do cięcia, spawania, drukowania i montażu
+  back_label: Powrót do Fabryki
   back_link: /factory
 categories:
-  - title: Cutting & Material Preparation
+  - title: Cięcie i Przygotowanie Materiału
     items:
-      - name: Automatic PVC Cutting Machine
-        spec: CNC-controlled, 6.5 m × 2.5 m, 0.1 mm accuracy
-        desc: Computer-controlled automatic cutting machine for PVC and drop-stitch fabrics. Nesting software optimises material utilisation to below 5% waste.
-      - name: Fabric Spreader
-        spec: 3 m max width, tension-controlled feed
-        desc: Lays fabric in single or multiple plies with controlled tension to prevent distortion before cutting.
-  - title: Welding & Bonding
+      - name: PVC Automatyczna maszyna tnąca
+        spec: Sterowane CNC, 6,5 m × 2,5 m, dokładność 0,1 mm
+        desc: Komputerowo sterowana automatyczna maszyna do cięcia tkanin PVC i drop-stitch. Oprogramowanie do rozmieszczenia elementów optymalizuje wykorzystanie materiału do mniej niż 5% odpadów.
+      - name: Rozwijarka tkanin
+        spec: Maksymalna szerokość 3 m, podawanie sterowane napięciem
+        desc: Układa tkaninę w jednej lub wielu warstwach z kontrolowanym napięciem, aby zapobiec zniekształceniom przed cięciem.
+  - title: Spawanie i klejenie
     items:
-      - name: Heat Sealing Machine
-        spec: Hot-air welding, variable 200–600 °C, 0.5–5 m/min
-        desc: Hot-air heat sealing machine for bonding and welding PVC laminates, rail bands, and chamber seams. Used for tacking, sealing, and fusing drop-stitch core joints.
-      - name: Dielectric RF Press
-        spec: 15 kW, platen 2000 × 600 mm
-        desc: Radio-frequency welding press for main longitudinal seams, transom-to-tube joints, and large-chamber fabrication.
-      - name: CNC-Controlled RF Welder
-        spec: 8 kW, XY table 2500 × 1200 mm
-        desc: Programmable curved-seam welding for complex geometries, logo embossing, and precision patchwork.
-  - title: Deck Art & Finishing
+      - name: Maszyna do uszczelniania termicznego
+        spec: Spawanie gorącym powietrzem, zmienne 200–600 °C, 0,5–5 m/min
+        desc: Maszyna do zgrzewania gorącym powietrzem do łączenia i spawania laminatów PVC, taśm szynowych oraz szwów komór. Używana do klejenia, zgrzewania i łączenia rdzeni drop-stitch.
+      - name: Prasa dielektryczna RF
+        spec: 15 kW, płyta 2000 × 600 mm
+        desc: Prasa do zgrzewania radiowo-falowego do głównych szwów podłużnych, połączeń poprzeczka–rura oraz produkcji dużych komór.
+      - name: Spawarka RF sterowana CNC
+        spec: 8 kW, stolik XY 2500 × 1200 mm
+        desc: Programowalna spawarka do szwów krzywoliniowych dla skomplikowanych kształtów, tłoczenia logo i precyzyjnych łatek.
+  - title: Dekorowanie deski i wykończenia
     items:
-      - name: EVA Deck Cutting Machine
-        spec: CNC knife cutting, 2 m width
-        desc: Precision cutting of EVA deck foam panels for art-series deck patterns. Each panel is cut to shape for a seamless full-deck fit.
-      - name: Deck Lamination Press
-        spec: Temperature & pressure controlled
-        desc: Bonds EVA deck panels to the board surface with consistent adhesion across the full deck area.
-  - title: SUP Printing & Decoration
+      - name: EVA Maszyna do cięcia pokładów
+        spec: Cięcie nożem CNC, szerokość 2 m
+        desc: Precyzyjne cięcie paneli piankowych pokładu EVA dla wzorów serii artystycznej. Każdy panel jest wycinany w kształt zapewniający bezszwowe dopasowanie całego pokładu.
+      - name: Prasa do laminowania pokładów
+        spec: Sterowanie temperaturą i ciśnieniem
+        desc: Łączy panele pokładu EVA z powierzchnią deski zapewniając spójne przyleganie na całym obszarze pokładu.
+  - title: SUP Druk i dekoracja
     items:
-      - name: Digital Printer
-        spec: High-resolution inkjet, up to 2 m print width
-        desc: Direct-to-fabric digital printing for full-colour SUP deck graphics. Prints custom patterns, gradients, and photo-quality images with UV-resistant water-based inks.
-      - name: Screen Printing Machine
-        spec: Manual and semi-automatic, multi-colour registration
-        desc: Screen printing for SUP board logos, brand marks, and repeating patterns. Provides durable, opaque prints with vibrant colour saturation.
-  - title: Final Assembly
+      - name: Drukarka cyfrowa
+        spec: Drukarka atramentowa o wysokiej rozdzielczości, szerokość do 2 m
+        desc: Cyfrowy druk bezpośrednio na tkaninę dla SUP pełnokolorowych grafik tarasowych. Drukuje niestandardowe wzory, gradienty i obrazy o jakości fotograficznej za pomocą UV wodoodpornych tuszów na bazie wody.
+      - name: Maszyna sitodruku
+        spec: Rejestracja manualna i półautomatyczna, wielokolorowa
+        desc: Sitodruk do SUP logotypów kartonowych, znaków marek i powtarzających się wzorów. Zapewnia trwałe, nieprzezroczyste wydruki z żywą sytością kolorów.
+  - title: Montaż końcowy
     items:
-      - name: Valve Torque Station
-        spec: Calibrated, 10-cycle function test
-        desc: Installs and torques inflation valves, then function-tests every valve through 10 open/close cycles.
-      - name: Fin Box & D-Ring Setter
-        spec: Jig-aligned, adhesive cured
-        desc: Positions and bonds fin boxes, D-rings, and handles at exact deck locations per model specification.
-  - title: Testing & Quality Control
+      - name: Stacja momentu obrotowego zaworu
+        spec: Kalibrowany, 10-cyklowy test funkcji
+        desc: Instaluje i dokręca zawory napompowujące, a następnie testuje każdy zawór przez 10 cykli otwierania/zamykania.
+      - name: Pudełko na płetwy i zestaw D-Ring
+        spec: Dopasowane do szablonu, utwardzone klejem
+        desc: Pozycje i łączą skrzynki z płetwami, pierścienie D oraz uchwyty w dokładnych lokalizacjach pokładów zgodnie ze specyfikacją modelu.
+  - title: Testowanie i kontrola jakości
     items:
-      - name: Universal Tensile Tester
-        spec: 50 kN capacity
-        desc: Breaking force, elongation at break, and tear propagation testing for fabric batches.
-      - name: Air Retention Test Rig
-        spec: Programmable, 30-min pressure-hold
-        desc: Automated pressure-hold test for every tube chamber before assembly.
-      - name: Seam Peel Tester
-        spec: Motorised 180° peel at 100 mm/min
-        desc: Weld and bonded-seam peel strength testing per internal protocol.
-      - name: Xenon-Arc Weathering Chamber
-        spec: 2000 h exposure
-        desc: UV resistance testing for colour change and strength retention.
+      - name: Uniwersalny Tester Rozciągania
+        spec: Pojemność 50 kN
+        desc: Testy siły pękania, wydłużania przy przerwaniu i propagacji rozdarcia dla partii tkanin.
+      - name: Testowa Platforma Pomiarowa Utrzymania Powietrza
+        spec: Programowalny, 30-minutowy utrzymywający ciśnienie
+        desc: Automatyczny test utrzymania ciśnienia dla każdej komory rury przed montażem.
+      - name: Tester oklejania szwów
+        spec: Zmotoryzowane peelingowanie o 180° przy prędkości 100 mm/min
+        desc: Testy wytrzymałości na osuszanie szwów spoiwowych i łączonych według wewnętrznego protokołu.
+      - name: Komora wietrzenia ksenonu łukowego
+        spec: Ekspozycja 2000 h
+        desc: UV Testy odpornościowe na zmianę koloru i utrzymanie siły.
 cta:
-  title: Interested in a factory tour?
-  desc: We welcome visitors to our Weihai facility. See our equipment and processes in person.
-  label: Schedule a visit →
+  title: Interesuje Cię wycieczka po fabryce?
+  desc: Zapraszamy gości do naszego obiektu w Weihai. Zobacz nasz sprzęt i procesy osobiście.
+  label: Umów się na wizytę →
   link: /contact

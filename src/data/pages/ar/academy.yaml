@@ -1,126 +1,121 @@
 hero:
-  tagline: Paddle Board Overstock Academy
-  title: Learning Center
-  subtitle: Guides and tutorials for every skill level — from SUP basics to advanced rescue techniques
-
+  tagline: أكاديمية Paddle Board Overstock
+  title: مركز التعلم
+  subtitle: أدلة وبرامج تعليمية لكل مستوى من مستويات المهارة - بدءًا من الأساسيات SUP وحتى تقنيات الإنقاذ المتقدمة
 categories:
-  - level: Beginner
+  - level: مبتدئ
     color: from-green-500 to-emerald-600
     badge: bg-green-100 text-green-700
     guides:
-      - title: SUP Basics
-        desc: Learn the fundamentals of stand-up paddleboarding — stance, stroke technique, and balance.
+      - title: SUP الأساسيات
+        desc: تعلم أساسيات رياضة التجديف واقفًا - الوقوف، وتقنية الضربة، والتوازن.
         slug: beginner-sup-guide
-      - title: Paddle Techniques
-        desc: Forward stroke, sweep stroke, draw stroke, and low brace — master the essential paddle moves.
+      - title: تقنيات التجديف
+        desc: الضربة الأمامية، والضربة الاجتياحية، وضربة السحب، والدعامة المنخفضة - أتقن حركات المجداف الأساسية.
         slug: sup-paddle-guide
-      - title: Safety First
-        desc: Essential safety practices including weather checks, PFD use, leash rules, and self-rescue.
+      - title: السلامة أولا
+        desc: ممارسات السلامة الأساسية بما في ذلك فحص الطقس واستخدام PFD وقواعد المقود والإنقاذ الذاتي.
         slug: sup-safety-guide
-  - level: Intermediate
+  - level: متوسط
     color: from-blue-500 to-indigo-600
     badge: bg-blue-100 text-blue-700
     guides:
-      - title: Touring Essentials
-        desc: Planning multi-hour paddles — navigation, hydration, pacing, and reading wind forecasts.
+      - title: أساسيات السياحة
+        desc: تخطيط المجاذيف لعدة ساعات - الملاحة، والترطيب، والسرعة، وقراءة توقعات الرياح.
         slug: touring-sup-guide
-      - title: Weather Reading
-        desc: Interpret marine forecasts, identify cloud patterns, and understand wind effects on water.
+      - title: قراءة الطقس
+        desc: تفسير التنبؤات البحرية وتحديد أنماط السحب وفهم تأثيرات الرياح على الماء.
         slug: weather-planning-water-sports
-      - title: Navigation Basics
-        desc: Chart reading, compass use, GPS waypoints, and route planning for coastal paddling.
+      - title: أساسيات الملاحة
+        desc: قراءة المخططات واستخدام البوصلة ونقاط الطريق لنظام تحديد المواقع العالمي (GPS) وتخطيط الطريق للتجديف الساحلي.
         slug: sup-navigation-guide
-      - title: Tidal Awareness
-        desc: Understanding tide cycles, currents, and how they affect launch timing and routing.
+      - title: الوعي المد والجزر
+        desc: فهم دورات المد والجزر والتيارات وكيفية تأثيرها على توقيت الإطلاق والتوجيه.
         slug: understanding-tides
-  - level: Advanced
+  - level: متقدم
     color: from-purple-500 to-violet-600
     badge: bg-purple-100 text-purple-700
     guides:
-      - title: Multi-Day Trip Planning
-        desc: Expedition logistics — gear selection, food planning, safety protocols, and emergency contacts.
+      - title: تخطيط الرحلات لعدة أيام
+        desc: الخدمات اللوجستية للبعثة - اختيار المعدات، وتخطيط الطعام، وبروتوكولات السلامة، والاتصالات في حالات الطوارئ.
         slug: sup-travel-guide
-      - title: Rescue Techniques
-        desc: Self-rescue, T-rescue, and towing protocols for open water.
+      - title: تقنيات الإنقاذ
+        desc: بروتوكولات الإنقاذ الذاتي، وإنقاذ T، والسحب في المياه المفتوحة.
         slug: sup-self-rescue
-      - title: Night Paddling
-        desc: Navigation after dark — lighting requirements, route memory, group communication, and hazard awareness.
+      - title: التجديف الليلي
+        desc: التنقل بعد حلول الظلام - متطلبات الإضاءة، وذاكرة المسار، والتواصل الجماعي، والتوعية بالمخاطر.
         slug: sup-navigation-guide
-  - level: Maintenance
+  - level: صيانة
     color: from-amber-500 to-orange-600
     badge: bg-amber-100 text-amber-700
     guides:
-      - title: Cleaning & Care
-        desc: Freshwater rinsing, UV protection, mildew prevention, and proper drying techniques after every session.
+      - title: التنظيف والعناية
+        desc: شطف بالمياه العذبة، وحماية UV، ومنع العفن، وتقنيات التجفيف الصحيحة بعد كل جلسة.
         slug: inflatable-sup-maintenance
-      - title: Storage Guide
-        desc: Best practices for storing inflatable boards — deflation, folding, temperature control, and shelf life.
+      - title: دليل التخزين
+        desc: أفضل ممارسات لتخزين الألواح القابلة للنفخ — التفريغ من الهواء، الطي، التحكم في الحرارة، وفترة الصلاحية.
         slug: inflatable-sup-storage
-      - title: Repair Basics
-        desc: Fix small punctures, seam leaks, and valve issues with PVC repair kits and patch techniques.
+      - title: أساسيات الإصلاح
+        desc: أصلح الثقوب الصغيرة وتسربات التماس ومشكلات الصمامات باستخدام مجموعات الإصلاح وتقنيات التصحيح PVC.
         slug: inflatable-sup-repair
-      - title: Valve Maintenance
-        desc: Identify valve types (Halkey-Roberts, Boston, Leafield), clean debris, and replace faulty stems.
+      - title: صيانة الصمام
+        desc: تحديد أنواع الصمامات (Halkey-Roberts، وBoston، وLeafield)، وتنظيف الحطام، واستبدال السيقان المعيبة.
         slug: inflatable-sup-repair
-
-knowledge_center_tagline: 'Knowledge Center'
-knowledge_center_title: 'Paddle Board Guides & Knowledge'
-knowledge_center_subtitle: 'Expert guides and buying advice for paddle boarders of every level.'
-
+knowledge_center_tagline: مركز المعرفة
+knowledge_center_title: أدلة ومعرفة ركوب لوح التجديف
+knowledge_center_subtitle: أدلة خبراء ونصائح للشراء لراكبي لوح التجديف من جميع المستويات.
 knowledge_sections:
-  - title: 'Board Technology & Construction'
-    tagline: 'Inside Your Paddle Board'
-    desc: 'How inflatable paddle boards are built — drop-stitch cores, laminate layers, EVA decks, and factory pressure testing.'
+  - title: تكنولوجيا بناء الألواح
+    tagline: داخل لوح التجديف الخاص بك
+    desc: كيف تُصنع ألواح التجديف القابلة للنفخ — نوى drop-stitch، طبقات لامينات، أسطح EVA، واختبار الضغط في المصنع.
     guides:
-      - title: 'How Paddle Boards Are Made'
-        desc: 'From material cutting and lamination to 100% pressure testing — see how every board leaves the factory.'
-        href: '/factory/process'
-      - title: 'Drop-Stitch Core Technology'
-        desc: 'How thousands of internal threads create a rigid, high-pressure inflatable structure.'
-        href: '/learn/drop-stitch-core'
-      - title: 'Materials Reference'
-        desc: 'PVC denier ratings, fabric weights, UV resistance, and deck materials explained.'
-        href: '/learn/materials'
-      - title: 'Inflatable Board Technology'
-        desc: 'Welded seams, rail construction, and valve systems that keep your board stiff and airtight.'
-        href: '/learn/inflatable-technology'
-  - title: 'Buying Guides'
-    tagline: 'Choose the Right Board'
-    desc: 'Everything you need to pick your first — or next — inflatable SUP, from sizing to construction.'
+      - title: كيفية صنع ألواح التجديف
+        desc: من تقطيع المواد واللّامينة إلى اختبار الضغط بنسبة 100٪ — شاهد كيف يغادر كل لوح المصنع.
+        href: /factory/process
+      - title: تكنولوجيا النواة Drop-Stitch
+        desc: كيف تخلق آلاف الخيوط الداخلية هيكلًا صلبًا وقابلًا للنفخ عالي الضغط.
+        href: /learn/drop-stitch-core
+      - title: مرجع المواد
+        desc: تفسيرات تصنيفات PVC الدنير، أوزان الأقمشة، مقاومة UV، ومواد السطح.
+        href: /learn/materials
+      - title: تكنولوجيا الألواح القابلة للنفخ
+        desc: الحامات الملحومة، بناء الحواف، وأنظمة الصمامات التي تحافظ على صلابة اللوح وعدم تسرب الهواء.
+        href: /learn/inflatable-technology
+  - title: أدلة الشراء
+    tagline: اختر اللوح المناسب
+    desc: كل ما تحتاجه لاختيار أول لوح — أو التالي — قابل للنفخ SUP، من الحجم إلى البناء.
     guides:
-      - title: 'How to Choose an Inflatable SUP'
-        desc: "The key factors — construction, thickness, fin setup, and included accessories."
-        href: '/guides/how-to-choose-your-sup/'
-      - title: 'What Is Stand-Up Paddleboarding?'
-        desc: 'A friendly introduction to the sport, the gear, and why inflatable boards make it easy to start.'
-        href: '/guides/what-is-sup'
-      - title: 'Inflatable vs Hard Board'
-        desc: 'Compare iSUPs and hard epoxy boards across portability, durability, performance, and value.'
-        href: '/compare/inflatable-vs-hardboard'
-      - title: 'SUP Size Guide'
-        desc: 'Find the right board length, width, and volume for your weight, skill, and paddling style.'
-        href: '/size-guide'
-  - title: 'Skills & Safety'
-    tagline: 'Paddle with Confidence'
-    desc: 'Practical knowledge for every session — beginner basics, water safety, care, and repair.'
+      - title: كيفية اختيار لوح قابل للنفخ SUP
+        desc: العوامل الرئيسية — البناء، السماكة، إعداد الزعنفة، والإكسسوارات المرفقة.
+        href: /guides/how-to-choose-your-sup/
+      - title: ما هو ركوب لوح التجديف الواقف؟
+        desc: مقدمة ودية للرياضة، المعدات، ولماذا تجعل الألواح القابلة للنفخ من السهل البدء.
+        href: /guides/what-is-sup
+      - title: الألواح القابلة للنفخ مقابل الألواح الصلبة
+        desc: قارن بين iSUPs وألواح الإيبوكسي الصلبة من حيث قابلية النقل والمتانة والأداء والقيمة.
+        href: /compare/inflatable-vs-hardboard
+      - title: دليل الحجم SUP
+        desc: اعثر على طول اللوح المناسب، عرضه، وحجمه وفقًا لوزنك، مهارتك، وأسلوب التجديف الخاص بك.
+        href: /size-guide
+  - title: المهارات والسلامة
+    tagline: التجديف بثقة
+    desc: المعرفة العملية لكل جلسة — أساسيات المبتدئين، سلامة المياه، العناية، والإصلاح.
     guides:
-      - title: "SUP Basics — Beginner's Guide"
-        desc: 'Everything a beginner needs to know — board types, paddle sizing, stance, and first-day tips.'
-        href: '/v2/beginner-sup-guide'
-      - title: 'Water Safety Essentials'
-        desc: 'Weather checks, PFD selection, leash rules, self-rescue, and group paddling best practices.'
-        href: '/learn/water-safety'
-      - title: 'SUP Maintenance & Care'
-        desc: 'Cleaning, storage, UV protection, and care tips for inflatable SUP boards.'
-        href: '/v2/inflatable-sup-maintenance'
-      - title: 'Board Repair Basics'
-        desc: 'Fix small punctures, seam leaks, and valve issues with PVC repair kits and patch techniques.'
-        href: '/v2/inflatable-sup-repair'
-
-read_guide: Read guide →
-
+      - title: SUP الأساسيات — دليل المبتدئين
+        desc: كل ما يحتاج المبتدئون لمعرفته — أنواع الألواح، قياس المجداف، الوضعية، ونصائح اليوم الأول.
+        href: /v2/beginner-sup-guide
+      - title: أساسيات سلامة المياه
+        desc: فحص الطقس، اختيار PFD، قواعد الحبل، الإنقاذ الذاتي، وأفضل الممارسات للتجديف الجماعي.
+        href: /learn/water-safety
+      - title: SUP الصيانة والعناية
+        desc: التنظيف، التخزين، حماية UV، ونصائح العناية بالألواح القابلة للانتفاخ SUP.
+        href: /v2/inflatable-sup-maintenance
+      - title: أساسيات إصلاح الألواح
+        desc: أصلح الثقوب الصغيرة وتسربات التماس ومشكلات الصمامات باستخدام مجموعات الإصلاح وتقنيات التصحيح PVC.
+        href: /v2/inflatable-sup-repair
+read_guide: اقرأ الدليل →
 cta:
-  title: Not sure where to start?
-  desc: Reach out and we'll point you to the right guides and gear for your level.
-  label: Contact us →
+  title: لست متأكدا من أين تبدأ؟
+  desc: تواصل معنا وسنرشدك إلى الأدلة والمعدات المناسبة لمستواك.
+  label: اتصل بنا →
   link: /contact

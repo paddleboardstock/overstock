@@ -1,56 +1,56 @@
 hero:
-  tagline: Quality Control Laboratory
-  title: Testing Laboratory & Quality Assurance
-  subtitle: Independent quality lab — every unit tested before shipment
-intro: Paddle Board Overstock operates a dedicated quality control laboratory that operates independently from production. Every batch of raw material and every finished board passes through documented inspection protocols before release. Our QC team reports directly to management, ensuring impartial quality decisions.
+  tagline: Лаборатория за контрол на качеството
+  title: Тестова лаборатория и осигуряване на качеството
+  subtitle: Независима лаборатория за контрол на качеството — всяко устройство се тества преди изпращане
+intro: Paddle Board Overstock управлява специализирана лаборатория за контрол на качеството, която работи независимо от производството. Всяка партида суровини и всяка готова дъска преминават през документирани протоколи за инспекция преди пускане в употреба. Екипът за контрол на качеството докладва директно на ръководството, осигурявайки безпристрастни решения за качеството.
 highlights:
   - value: 100%
-    label: Units pressure-tested
-    detail: Every chamber, every board
+    label: Устройства подложени на тест за налягане
+    detail: Всяка камера, всяка дъска
   - value: 48 h
-    label: Air retention test duration
-    detail: At 1.25× rated pressure
-  - value: "&lt;5%"
-    label: Max allowed pressure drop
-    detail: Over 24-hour hold period
+    label: Продължителност на теста за задържане на въздух
+    detail: При 1,25× номинално налягане
+  - value: <5%
+    label: Максимално допустим спад на налягането
+    detail: През 24-часов период на задържане
   - value: 99.3%
-    label: Defect-free rate
-    detail: Trailing 12-month shipments
+    label: Бездефектен процент
+    detail: Доставки през последните 12 месеца
 test_procedures:
-  - title: Raw Material Inspection
-    description: Every incoming batch of PVC, drop-stitch fabric, EVA foam, and hardware is tested before acceptance. Tensile strength, tear resistance, and UV resistance are verified. Non-conforming materials are quarantined and returned.
+  - title: Инспекция на суровини
+    description: Всяка постъпила партида PVC, drop-stitch плат, EVA пяна и хардуер се тества преди приемане. Проверяват се якост на опън, устойчивост на разкъсване и устойчивост на UV. Несъответстващите материали се изолират и връщат.
     standards:
-      - Tensile strength (350 N/cm min)
-      - Tear resistance
-      - UV resistance (1,000 h)
-  - title: In-Process QC Checkpoints
-    description: Production operators perform self-inspection at each stage. QC auditors conduct random sampling throughout the shift. Weld peel tests are performed every 50 units. Dimensional checks happen every 20th panel.
+      - Якост на опън (минимум 350 N/cm)
+      - Устойчивост на разкъсване
+      - Устойчивост на UV (1,000 ч)
+  - title: Контролни точки по време на процеса
+    description: Операторите в производството извършват самоконтрол на всеки етап. Одиторите по КК провеждат случайно пробонабиране през целия работен цикъл. Тестове за отлепване на заварките се извършват на всеки 50 единици. Проверка на размерите се извършва на всеки 20-ти панел.
     standards:
-      - Peel test every 50 units
-      - Internal 100-point checklist
-      - Random sampling audits
-  - title: 48-Hour Air Retention Test
-    description: Every tube chamber is inflated to 125% of rated pressure and held for 48 hours. Pressure sensors log continuously with temperature compensation. Any chamber exceeding 5% pressure drop triggers automatic batch re-inspection.
+      - Тест на обелване на всеки 50 единици
+      - Вътрешен контролен списък с 100 точки
+      - Контролни проверки чрез случайна извадка
+  - title: 48-часов тест за задържане на въздуха
+    description: Всеки отсек на тръбата се напомпва до 125% от номиналното налягане и се поддържа за 48 часа. Датчиците за налягане регистрират непрекъснато с компенсация за температурата. Всяка камера, която надвиши 5% спад на налягането, задейства автоматична повторна инспекция на партидата.
     standards:
-      - 1.25x rated pressure hold
-      - <5% max pressure drop
-  - title: Load & Balance Testing
-    description: Completed boards are tested at maximum rated capacity for stability, freeboard, and handling. Each board undergoes water testing before final inspection approval.
+      - Задържане на 1.25x номинално налягане
+      - Максимална загуба на налягане <5%
+  - title: Тестване на натоварване и баланс
+    description: Завършените дъски се тестват при максималния номинален капацитет за стабилност, свободен борд и манипулиране. Всяка дъска преминава воден тест преди окончателното одобрение на инспекцията.
     standards:
-      - 1.25x rated load verification
-      - Water testing
+      - Проверка на натоварването при 1.25x номинално
+      - Тестване на вода
 equipment:
-  - name: Universal Testing Machine (tensile)
-    spec: 5 kN capacity
-  - name: Pressure Decay Tester
-    spec: Multi-channel, 0–50 psi, datalogging
-  - name: UV Weathering Chamber
-    spec: UVA-340, 1,000 h cycles
-  - name: Thickness Gauge (digital)
-    spec: 0.01 mm resolution
-  - name: Peel Tester (weld)
-    spec: Motorized, 50 N capacity
-  - name: Temperature Chamber
-    spec: -40 °C to +100 °C
-  - name: Leak Detection Tank
-    spec: 6 m × 2 m, illuminated
+  - name: Универсална изпитвателна машина (разтегателна)
+    spec: Капацитет 5 kN
+  - name: Тестер за загуба на налягане
+    spec: Много канала, 0–50 psi, с водене на данни
+  - name: UV Камера за стареене
+    spec: UVA-340, 1 000 ч цикли
+  - name: Дебеломер (дигитален)
+    spec: Резолюция 0,01 мм
+  - name: Тестер за обелване (заварка)
+    spec: Моторизиран, капацитет 50 N
+  - name: Температурна камера
+    spec: -40 °C до + 100 °C
+  - name: Резервоар за откриване на течове
+    spec: 6 м × 2 м, осветен

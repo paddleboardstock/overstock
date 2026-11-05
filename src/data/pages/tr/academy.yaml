@@ -1,126 +1,121 @@
 hero:
-  tagline: Paddle Board Overstock Academy
-  title: Learning Center
-  subtitle: Guides and tutorials for every skill level — from SUP basics to advanced rescue techniques
-
+  tagline: Paddle Board Overstock Akademi
+  title: Öğrenme Merkezi
+  subtitle: Her beceri seviyesi için rehberler ve öğreticiler — SUP temellerden ileri kurtarma tekniklerine kadar
 categories:
-  - level: Beginner
+  - level: Başlangıç
     color: from-green-500 to-emerald-600
     badge: bg-green-100 text-green-700
     guides:
-      - title: SUP Basics
-        desc: Learn the fundamentals of stand-up paddleboarding — stance, stroke technique, and balance.
+      - title: SUP Temeller
+        desc: Ayakta kürek sörfü (stand-up paddleboarding) temellerini öğrenin — duruş, kürek çekme tekniği ve denge.
         slug: beginner-sup-guide
-      - title: Paddle Techniques
-        desc: Forward stroke, sweep stroke, draw stroke, and low brace — master the essential paddle moves.
+      - title: Kürek Teknikleri
+        desc: İleri kürek, süpürme küreği, çekme küreği ve düşük destek — temel kürek hareketlerinde ustalaşın.
         slug: sup-paddle-guide
-      - title: Safety First
-        desc: Essential safety practices including weather checks, PFD use, leash rules, and self-rescue.
+      - title: Önce Güvenlik
+        desc: Hava kontrolleri, PFD kullanımı, emniyet ipi kuralları ve kendi kendine kurtarma dahil temel güvenlik uygulamaları.
         slug: sup-safety-guide
-  - level: Intermediate
+  - level: Orta Seviye
     color: from-blue-500 to-indigo-600
     badge: bg-blue-100 text-blue-700
     guides:
-      - title: Touring Essentials
-        desc: Planning multi-hour paddles — navigation, hydration, pacing, and reading wind forecasts.
+      - title: Tur Temelleri
+        desc: Saatler süren kürek gezilerini planlama — navigasyon, su tüketimi, tempo ayarlama ve rüzgar tahminlerini okuma.
         slug: touring-sup-guide
-      - title: Weather Reading
-        desc: Interpret marine forecasts, identify cloud patterns, and understand wind effects on water.
+      - title: Hava Durumu Okuma
+        desc: Deniz tahminlerini yorumlama, bulut desenlerini tanımlama ve rüzgarın su üzerindeki etkilerini anlama.
         slug: weather-planning-water-sports
-      - title: Navigation Basics
-        desc: Chart reading, compass use, GPS waypoints, and route planning for coastal paddling.
+      - title: Navigasyon Temelleri
+        desc: Harita okuma, pusula kullanımı, GPS noktaları ve kıyı boyunca kürek rotası planlama.
         slug: sup-navigation-guide
-      - title: Tidal Awareness
-        desc: Understanding tide cycles, currents, and how they affect launch timing and routing.
+      - title: Gelgit Farkındalığı
+        desc: Gelgit döngülerini, akıntıları ve bunların kalkış zamanlaması ile rota seçimine etkilerini anlama.
         slug: understanding-tides
-  - level: Advanced
+  - level: İleri Seviye
     color: from-purple-500 to-violet-600
     badge: bg-purple-100 text-purple-700
     guides:
-      - title: Multi-Day Trip Planning
-        desc: Expedition logistics — gear selection, food planning, safety protocols, and emergency contacts.
+      - title: Çok Günlü Gezi Planlama
+        desc: Sefer lojistiği — ekipman seçimi, yiyecek planlama, güvenlik protokolleri ve acil durum iletişim bilgileri.
         slug: sup-travel-guide
-      - title: Rescue Techniques
-        desc: Self-rescue, T-rescue, and towing protocols for open water.
+      - title: Kurtarma Teknikleri
+        desc: Açık sularda kendi kurtarma, T-kurtarma ve çekme protokolleri.
         slug: sup-self-rescue
-      - title: Night Paddling
-        desc: Navigation after dark — lighting requirements, route memory, group communication, and hazard awareness.
+      - title: Gece Küreği
+        desc: Karanlıktan sonra navigasyon — aydınlatma gereksinimleri, rota hafızası, grup iletişimi ve tehlike farkındalığı.
         slug: sup-navigation-guide
-  - level: Maintenance
+  - level: Bakım
     color: from-amber-500 to-orange-600
     badge: bg-amber-100 text-amber-700
     guides:
-      - title: Cleaning & Care
-        desc: Freshwater rinsing, UV protection, mildew prevention, and proper drying techniques after every session.
+      - title: Temizlik ve Bakım
+        desc: Tatlı su ile durulama, UV koruması, küf önleme ve her seanstan sonra doğru kurutma teknikleri.
         slug: inflatable-sup-maintenance
-      - title: Storage Guide
+      - title: Depolama Rehberi
         desc: Best practices for storing inflatable boards — deflation, folding, temperature control, and shelf life.
         slug: inflatable-sup-storage
-      - title: Repair Basics
-        desc: Fix small punctures, seam leaks, and valve issues with PVC repair kits and patch techniques.
+      - title: Onarım Temelleri
+        desc: Küçük delikleri, dikiş sızıntılarını ve vana sorunlarını PVC onarım kitleri ve yama teknikleri ile düzeltin.
         slug: inflatable-sup-repair
-      - title: Valve Maintenance
-        desc: Identify valve types (Halkey-Roberts, Boston, Leafield), clean debris, and replace faulty stems.
+      - title: Vana Bakımı
+        desc: Vana tiplerini belirleyin (Halkey-Roberts, Boston, Leafield), kalıntılardan temizleyin ve arızalı sapları değiştirin.
         slug: inflatable-sup-repair
-
-knowledge_center_tagline: 'Knowledge Center'
-knowledge_center_title: 'Paddle Board Guides & Knowledge'
-knowledge_center_subtitle: 'Expert guides and buying advice for paddle boarders of every level.'
-
+knowledge_center_tagline: Bilgi Merkezi
+knowledge_center_title: Paddle Board Guides & Knowledge
+knowledge_center_subtitle: Expert guides and buying advice for paddle boarders of every level.
 knowledge_sections:
-  - title: 'Board Technology & Construction'
-    tagline: 'Inside Your Paddle Board'
-    desc: 'How inflatable paddle boards are built — drop-stitch cores, laminate layers, EVA decks, and factory pressure testing.'
+  - title: Board Technology & Construction
+    tagline: Inside Your Paddle Board
+    desc: How inflatable paddle boards are built — drop-stitch cores, laminate layers, EVA decks, and factory pressure testing.
     guides:
-      - title: 'How Paddle Boards Are Made'
-        desc: 'From material cutting and lamination to 100% pressure testing — see how every board leaves the factory.'
-        href: '/factory/process'
-      - title: 'Drop-Stitch Core Technology'
-        desc: 'How thousands of internal threads create a rigid, high-pressure inflatable structure.'
-        href: '/learn/drop-stitch-core'
-      - title: 'Materials Reference'
-        desc: 'PVC denier ratings, fabric weights, UV resistance, and deck materials explained.'
-        href: '/learn/materials'
-      - title: 'Inflatable Board Technology'
-        desc: 'Welded seams, rail construction, and valve systems that keep your board stiff and airtight.'
-        href: '/learn/inflatable-technology'
-  - title: 'Buying Guides'
-    tagline: 'Choose the Right Board'
-    desc: 'Everything you need to pick your first — or next — inflatable SUP, from sizing to construction.'
+      - title: How Paddle Boards Are Made
+        desc: From material cutting and lamination to 100% pressure testing — see how every board leaves the factory.
+        href: /factory/process
+      - title: Drop-Stitch Core Technology
+        desc: How thousands of internal threads create a rigid, high-pressure inflatable structure.
+        href: /learn/drop-stitch-core
+      - title: Malzeme Referansı
+        desc: PVC denier ratings, fabric weights, UV resistance, and deck materials explained.
+        href: /learn/materials
+      - title: Inflatable Board Technology
+        desc: Welded seams, rail construction, and valve systems that keep your board stiff and airtight.
+        href: /learn/inflatable-technology
+  - title: Satın Alma Kılavuzları
+    tagline: Choose the Right Board
+    desc: Everything you need to pick your first — or next — inflatable SUP, from sizing to construction.
     guides:
-      - title: 'How to Choose an Inflatable SUP'
-        desc: "The key factors — construction, thickness, fin setup, and included accessories."
-        href: '/guides/how-to-choose-your-sup/'
-      - title: 'What Is Stand-Up Paddleboarding?'
-        desc: 'A friendly introduction to the sport, the gear, and why inflatable boards make it easy to start.'
-        href: '/guides/what-is-sup'
-      - title: 'Inflatable vs Hard Board'
-        desc: 'Compare iSUPs and hard epoxy boards across portability, durability, performance, and value.'
-        href: '/compare/inflatable-vs-hardboard'
-      - title: 'SUP Size Guide'
-        desc: 'Find the right board length, width, and volume for your weight, skill, and paddling style.'
-        href: '/size-guide'
-  - title: 'Skills & Safety'
-    tagline: 'Paddle with Confidence'
-    desc: 'Practical knowledge for every session — beginner basics, water safety, care, and repair.'
+      - title: Şişme SUP Nasıl Seçilir
+        desc: The key factors — construction, thickness, fin setup, and included accessories.
+        href: /guides/how-to-choose-your-sup/
+      - title: What Is Stand-Up Paddleboarding?
+        desc: A friendly introduction to the sport, the gear, and why inflatable boards make it easy to start.
+        href: /guides/what-is-sup
+      - title: Şişme ve Sert Tahta
+        desc: iSUP'leri ve sert epoksi tahtaları taşınabilirlik, dayanıklılık, performans ve değer açısından karşılaştırın.
+        href: /compare/inflatable-vs-hardboard
+      - title: SUP Boyut Rehberi
+        desc: Ağırlığınıza, beceri seviyenize ve kürek çekme tarzınıza uygun doğru tahta uzunluğunu, genişliğini ve hacmini bulun.
+        href: /size-guide
+  - title: Beceriler ve Güvenlik
+    tagline: Güvenle Kürek Çekin
+    desc: Her oturum için pratik bilgiler — yeni başlayanlar için temel bilgiler, su güvenliği, bakım ve onarım.
     guides:
-      - title: "SUP Basics — Beginner's Guide"
-        desc: 'Everything a beginner needs to know — board types, paddle sizing, stance, and first-day tips.'
-        href: '/v2/beginner-sup-guide'
-      - title: 'Water Safety Essentials'
-        desc: 'Weather checks, PFD selection, leash rules, self-rescue, and group paddling best practices.'
-        href: '/learn/water-safety'
-      - title: 'SUP Maintenance & Care'
-        desc: 'Cleaning, storage, UV protection, and care tips for inflatable SUP boards.'
-        href: '/v2/inflatable-sup-maintenance'
-      - title: 'Board Repair Basics'
-        desc: 'Fix small punctures, seam leaks, and valve issues with PVC repair kits and patch techniques.'
-        href: '/v2/inflatable-sup-repair'
-
-read_guide: Read guide →
-
+      - title: SUP Temeller — Yeni Başlayanlar İçin Rehber
+        desc: Bir aceminin bilmesi gereken her şey — tahta türleri, raket boyutları, duruş ve ilk gün ipuçları.
+        href: /v2/beginner-sup-guide
+      - title: Su Güvenliği Temelleri
+        desc: Hava durumu kontrolleri, PFD seçimi, bağlılık kuralları, kendi kendine kurtarma ve grup halinde kürek çekme en iyi uygulamaları.
+        href: /learn/water-safety
+      - title: SUP Bakım ve Özen
+        desc: Şişme SUP tahtaları için temizlik, depolama, UV koruma ve bakım ipuçları.
+        href: /v2/inflatable-sup-maintenance
+      - title: Tahta Onarım Temelleri
+        desc: Küçük delikleri, dikiş sızıntılarını ve vana sorunlarını PVC onarım kitleri ve yama teknikleri ile düzeltin.
+        href: /v2/inflatable-sup-repair
+read_guide: Kılavuzu oku →
 cta:
-  title: Not sure where to start?
-  desc: Reach out and we'll point you to the right guides and gear for your level.
-  label: Contact us →
+  title: Nereden başlayacağınızı bilmiyor musunuz?
+  desc: İletişime geçin, seviyeniz için doğru rehberleri ve ekipmanları size gösterelim.
+  label: Bizimle iletişime geç →
   link: /contact

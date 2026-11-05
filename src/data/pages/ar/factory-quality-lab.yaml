@@ -1,56 +1,56 @@
 hero:
-  tagline: Quality Control Laboratory
-  title: Testing Laboratory & Quality Assurance
-  subtitle: Independent quality lab — every unit tested before shipment
-intro: Paddle Board Overstock operates a dedicated quality control laboratory that operates independently from production. Every batch of raw material and every finished board passes through documented inspection protocols before release. Our QC team reports directly to management, ensuring impartial quality decisions.
+  tagline: مختبر مراقبة الجودة
+  title: مختبر الاختبارات وضمان الجودة
+  subtitle: مختبر جودة مستقل — كل وحدة تُختبر قبل الشحن
+intro: Paddle Board Overstock يدير مختبر مراقبة جودة مخصص يعمل بشكل مستقل عن الإنتاج. كل دفعة من المواد الخام وكل لوحة تامة تمر عبر بروتوكولات تفتيش موثقة قبل الإطلاق. يقوم فريق مراقبة الجودة لدينا بالتقرير مباشرة للإدارة، مما يضمن اتخاذ قرارات جودة نزيهة.
 highlights:
   - value: 100%
-    label: Units pressure-tested
-    detail: Every chamber, every board
+    label: تم اختبار الضغط على الوحدات
+    detail: كل غرفة، كل لوحة
   - value: 48 h
-    label: Air retention test duration
-    detail: At 1.25× rated pressure
-  - value: "&lt;5%"
-    label: Max allowed pressure drop
-    detail: Over 24-hour hold period
+    label: مدة اختبار احتفاظ الهواء
+    detail: عند 1.25× الضغط المقدر
+  - value: <5%
+    label: أقصى انخفاض مسموح بالضغط
+    detail: خلال فترة الاحتفاظ 24 ساعة
   - value: 99.3%
-    label: Defect-free rate
-    detail: Trailing 12-month shipments
+    label: معدل خلو العيوب
+    detail: الشحنات الـ 12 شهر الماضية
 test_procedures:
-  - title: Raw Material Inspection
-    description: Every incoming batch of PVC, drop-stitch fabric, EVA foam, and hardware is tested before acceptance. Tensile strength, tear resistance, and UV resistance are verified. Non-conforming materials are quarantined and returned.
+  - title: تفتيش المواد الخام
+    description: يتم اختبار كل دفعة واردة من PVC، قماش drop-stitch، رغوة EVA، والأجهزة قبل القبول. يتم التحقق من قوة الشد، مقاومة التمزق، ومقاومة UV. تُحجز المواد غير المطابقة ويتم إرجاعها.
     standards:
-      - Tensile strength (350 N/cm min)
-      - Tear resistance
-      - UV resistance (1,000 h)
-  - title: In-Process QC Checkpoints
-    description: Production operators perform self-inspection at each stage. QC auditors conduct random sampling throughout the shift. Weld peel tests are performed every 50 units. Dimensional checks happen every 20th panel.
+      - قوة الشد (350 نيوتن/سم كحد أدنى)
+      - مقاومة التمزق
+      - مقاومة UV (1,000 ساعة)
+  - title: نقاط فحص مراقبة الجودة خلال العملية
+    description: يقوم مشغلو الإنتاج بفحص ذاتي في كل مرحلة. يقوم مراجعي الجودة بأخذ عينات عشوائية طوال الوردية. يتم إجراء اختبارات تقشير اللحام كل 50 وحدة. تحدث الفحوصات البُعدية لكل لوحة 20.
     standards:
-      - Peel test every 50 units
-      - Internal 100-point checklist
-      - Random sampling audits
-  - title: 48-Hour Air Retention Test
-    description: Every tube chamber is inflated to 125% of rated pressure and held for 48 hours. Pressure sensors log continuously with temperature compensation. Any chamber exceeding 5% pressure drop triggers automatic batch re-inspection.
+      - اختبار التقشير كل 50 وحدة
+      - قائمة فحص داخلية من 100 نقطة
+      - مراجعات عينات عشوائية
+  - title: اختبار احتفاظ الهواء لمدة 48 ساعة
+    description: يتم نفخ كل غرفة أنبوبية إلى 125% من الضغط المقدر وتُحفظ لمدة 48 ساعة. تقوم أجهزة استشعار الضغط بالتسجيل المستمر مع تعويض الحرارة. أي غرفة تتجاوز انخفاض ضغط 5% تؤدي إلى إعادة فحص الدفعة تلقائيًا.
     standards:
-      - 1.25x rated pressure hold
-      - <5% max pressure drop
-  - title: Load & Balance Testing
-    description: Completed boards are tested at maximum rated capacity for stability, freeboard, and handling. Each board undergoes water testing before final inspection approval.
+      - الاحتفاظ عند 1.25x الضغط المقدر
+      - <5% الحد الأقصى لانخفاض الضغط
+  - title: اختبار الحمل والتوازن
+    description: تُختبر اللوحات المكتملة عند الحد الأقصى للقدرة المقررة للتحقق من الاستقرار، الخلو من المياه، وسهولة التعامل. تمر كل لوحة باختبار المياه قبل الموافقة على الفحص النهائي.
     standards:
-      - 1.25x rated load verification
-      - Water testing
+      - التحقق من التحميل عند 1.25x المقدار المقدر
+      - اختبار المياه
 equipment:
-  - name: Universal Testing Machine (tensile)
-    spec: 5 kN capacity
-  - name: Pressure Decay Tester
-    spec: Multi-channel, 0–50 psi, datalogging
-  - name: UV Weathering Chamber
-    spec: UVA-340, 1,000 h cycles
-  - name: Thickness Gauge (digital)
-    spec: 0.01 mm resolution
-  - name: Peel Tester (weld)
-    spec: Motorized, 50 N capacity
-  - name: Temperature Chamber
-    spec: -40 °C to +100 °C
-  - name: Leak Detection Tank
-    spec: 6 m × 2 m, illuminated
+  - name: آلة الاختبار الشاملة (شد)
+    spec: سعة 5 كيلو نيوتن
+  - name: جهاز اختبار تدهور الضغط
+    spec: متعدد القنوات، 0–50 رطل/بوصة²، تسجيل البيانات
+  - name: UV غرفة التحمل للطقس
+    spec: UVA-340، دورات لمدة 1000 ساعة
+  - name: جهاز قياس السمك (رقمي)
+    spec: دقة 0.01 مم
+  - name: جهاز اختبار التقشير (لحام)
+    spec: محرك، سعة 50 نيوتن
+  - name: غرفة الحرارة
+    spec: -40 °م إلى +100 °م
+  - name: خزان كشف التسرب
+    spec: 6 م × 2 م، مضاءة

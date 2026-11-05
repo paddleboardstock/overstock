@@ -1,122 +1,122 @@
 hero_text:
-  tagline: Contact
-  title: GET IN TOUCH
+  tagline: Контакт
+  title: СВЪРЖЕТЕ СЕ С НАС
 contact_form:
   id: form
-  title: Send us a message
-  subtitle: For order questions, sizing advice or product support, drop us a line. We reply within one business day.
+  title: Изпратете ни съобщение
+  subtitle: За въпроси относно поръчки, съвети за размер или поддръжка на продукта, свържете се с нас. Отговаряме в рамките на един работен ден.
   email_to: info@paddleboardoverstock.com
-  submit_button: Send Inquiry → Get a Quote
-  success_message: Thanks! Your message has landed in our inbox. We will reply within one business day.
-  error_message: Something went wrong sending your message. Please try again or email us directly.
-  default_country_code: "+1"
+  submit_button: Изпратете запитване → Получете оферта
+  success_message: Благодарим! Вашето съобщение е получено във входящата ни поща. Ще отговорим в рамките на един работен ден.
+  error_message: Нещо се обърка при изпращането на вашето съобщение. Моля, опитайте отново или ни изпратете имейл директно.
+  default_country_code: '+1'
   captcha:
-    label: "Anti-spam: please solve the following"
+    label: 'Антиспам: моля, решете следното'
   fields:
-    - name: firstName
-      label: First Name
+    - name: първоИме
+      label: Собствено име
       row: 1
-    - name: lastName
-      label: Last Name
+    - name: фамилия
+      label: Фамилия
       row: 1
-    - name: companyName
-      label: Company Name
+    - name: имеНаФирмата
+      label: Име на компанията
       row: 2
     - name: address
-      label: Address
+      label: Адрес
       row: 3
     - name: zip
-      label: Zip / Postal Code
+      label: Пощенски код
       row: 4
     - name: country
-      label: Country
+      label: Държава
       row: 4
       type: select
       optionsKey: countries
     - name: email
-      label: E-mail
+      label: Имейл
       row: 5
       type: email
     - name: tel
-      label: TEL
+      label: Тел
       row: 5
       type: tel
       withCountryCode: true
-    - name: orderVolume
-      label: Estimated Order Volume
+    - name: обем на поръчката
+      label: Прогнозен обем на поръчката
       row: 6
       type: select
       options:
-        - value: ""
-          label: How many boards are you shopping for?...
+        - value: ''
+          label: Колко борда пазарувате?...
         - value: one
-          label: Just one board
+          label: Само един борд
         - value: 2-4
-          label: 2–4 boards
+          label: 2–4 борда
         - value: 5-plus
-          label: 5+ boards (family, club, or rental)
+          label: 5+ борда (за семейство, клуб или наем)
     - name: customization
-      label: What can we help with?
+      label: С какво можем да помогнем?
       row: 7
       type: select
       options:
-        - value: ""
-          label: Select a topic...
+        - value: ''
+          label: Изберете тема...
         - value: none
-          label: General product question
+          label: Общ въпрос за продукта
         - value: sizing
-          label: Help choosing the right board
+          label: Помощ при избора на правилния борд
         - value: order
-          label: Order, payment or shipping
+          label: Поръчка, плащане или доставка
         - value: warranty
-          label: Warranty or repair support
-    - name: productInterest
-      label: Product Categories of Interest
+          label: Гаранция или поддръжка за ремонт
+    - name: интерес към продукта
+      label: Категории продукти, които представляват интерес
       row: 8
       type: select
       options:
-        - value: ""
-          label: Select product category...
+        - value: ''
+          label: Изберете категория продукт...
         - value: all
-          label: All products / Full catalog
+          label: Всички продукти / Пълен каталог
         - value: sup
-          label: SUP Boards / Paddleboards
+          label: SUP Дъски / Падълбордове
         - value: packages
-          label: Complete SUP packages
+          label: Пълни SUP комплекти
         - value: accessory
-          label: Accessories (pumps, oars, bags)
+          label: Аксесоари (помпи, гребла, чанти)
     - name: subject
-      label: Subject
+      label: Тема
       row: 9
     - name: message
-      label: Message
+      label: Съобщение
       row: 10
       type: textarea
       rows: 6
 features2_other_ways:
-  title: Other ways to reach us
+  title: Други начини да ни достигнете
   columns: 3
   items:
-    - title: Order help
-      description: Product questions, sizing advice, and order support.
+    - title: Помощ с поръчки
+      description: Въпроси за продукта, съвети за размери и поддръжка на поръчки.
       icon: tabler:shopping-bag
-    - title: Technical support
-      description: Warranty, repairs, spare parts and operating questions.
+    - title: Техническа поддръжка
+      description: Гаранция, ремонти, резервни части и въпроси относно експлоатацията.
       icon: tabler:tool
-    - title: Press & partnerships
-      description: Media kits, sponsorship and industry collaboration.
+    - title: Преса и партньорства
+      description: Медийни пакети, спонсорство и индустриално сътрудничество.
       icon: tabler:news
-    - title: Phone
-      description: +1 279 732 3333 (US HQ) · +86 13305324192 (factory)
+    - title: Телефон
+      description: +1 279 732 3333 (САЩ главен офис) · +86 13305324192 (фабрика)
       icon: tabler:headset
-    - title: Email
+    - title: Имейл
       description: info@paddleboardoverstock.com
       icon: tabler:mail
-    - title: Global HQ & Billing
-      description: Weihai Dongjilian Co., Ltd.
+    - title: Глобален главен офис и фактуриране
+      description: Уейхай Донгджилиан ООД
       icon: tabler:map-pin
 map:
-  title: Our Location
-  subtitle: Visit our Weihai manufacturing hub
-  address: Weihai, Shandong, China
+  title: Нашето местоположение
+  subtitle: Посетете нашия производствен център в Уейхай
+  address: Уейхай, Шандонг, Китай
   zoom: 15

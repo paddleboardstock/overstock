@@ -1,126 +1,121 @@
 hero:
-  tagline: Paddle Board Overstock Academy
-  title: Learning Center
-  subtitle: Guides and tutorials for every skill level — from SUP basics to advanced rescue techniques
-
+  tagline: Paddle Board Overstock Accademia
+  title: Centro di Apprendimento
+  subtitle: Guide e tutorial per ogni livello di abilità — dalle basi di SUP alle tecniche avanzate di soccorso
 categories:
-  - level: Beginner
+  - level: Principiante
     color: from-green-500 to-emerald-600
     badge: bg-green-100 text-green-700
     guides:
-      - title: SUP Basics
-        desc: Learn the fundamentals of stand-up paddleboarding — stance, stroke technique, and balance.
+      - title: SUP Basi
+        desc: Impara le basi del stand-up paddleboarding — postura, tecnica della pagaia e equilibrio.
         slug: beginner-sup-guide
-      - title: Paddle Techniques
-        desc: Forward stroke, sweep stroke, draw stroke, and low brace — master the essential paddle moves.
+      - title: Tecniche di Pagaiata
+        desc: Pagaia avanti, pagaia sweep, pagaia draw e low brace — padroneggia i movimenti essenziali della pagaia.
         slug: sup-paddle-guide
-      - title: Safety First
-        desc: Essential safety practices including weather checks, PFD use, leash rules, and self-rescue.
+      - title: Sicurezza Prima di Tutto
+        desc: Pratiche di sicurezza essenziali, inclusi controlli meteo, uso di PFD, regole del leash e auto-soccorso.
         slug: sup-safety-guide
-  - level: Intermediate
+  - level: Intermedio
     color: from-blue-500 to-indigo-600
     badge: bg-blue-100 text-blue-700
     guides:
-      - title: Touring Essentials
-        desc: Planning multi-hour paddles — navigation, hydration, pacing, and reading wind forecasts.
+      - title: Essenziali del Touring
+        desc: Pianificazione di pagaiate di più ore — navigazione, idratazione, ritmo e interpretazione delle previsioni del vento.
         slug: touring-sup-guide
-      - title: Weather Reading
-        desc: Interpret marine forecasts, identify cloud patterns, and understand wind effects on water.
+      - title: Lettura del Meteo
+        desc: Interpretare le previsioni marine, identificare i modelli nuvolosi e comprendere gli effetti del vento sull’acqua.
         slug: weather-planning-water-sports
-      - title: Navigation Basics
-        desc: Chart reading, compass use, GPS waypoints, and route planning for coastal paddling.
+      - title: Basi di Navigazione
+        desc: Lettura delle carte, uso della bussola, punti GPS e pianificazione del percorso per la pagaia costiera.
         slug: sup-navigation-guide
-      - title: Tidal Awareness
-        desc: Understanding tide cycles, currents, and how they affect launch timing and routing.
+      - title: Consapevolezza delle Maree
+        desc: Comprendere i cicli delle maree, le correnti e come influenzano i tempi di partenza e i percorsi.
         slug: understanding-tides
-  - level: Advanced
+  - level: Avanzato
     color: from-purple-500 to-violet-600
     badge: bg-purple-100 text-purple-700
     guides:
-      - title: Multi-Day Trip Planning
-        desc: Expedition logistics — gear selection, food planning, safety protocols, and emergency contacts.
+      - title: Pianificazione di Viaggi di Più Giorni
+        desc: Logistica dell’expedition — selezione dell’attrezzatura, pianificazione del cibo, protocolli di sicurezza e contatti d’emergenza.
         slug: sup-travel-guide
-      - title: Rescue Techniques
-        desc: Self-rescue, T-rescue, and towing protocols for open water.
+      - title: Tecniche di Soccorso
+        desc: Auto-soccorso, T-rescue e protocolli di traino in acque aperte.
         slug: sup-self-rescue
-      - title: Night Paddling
-        desc: Navigation after dark — lighting requirements, route memory, group communication, and hazard awareness.
+      - title: Pagaiata Notturna
+        desc: Navigazione dopo il tramonto — requisiti di illuminazione, memorizzazione del percorso, comunicazione nel gruppo e consapevolezza dei rischi.
         slug: sup-navigation-guide
-  - level: Maintenance
+  - level: Manutenzione
     color: from-amber-500 to-orange-600
     badge: bg-amber-100 text-amber-700
     guides:
-      - title: Cleaning & Care
-        desc: Freshwater rinsing, UV protection, mildew prevention, and proper drying techniques after every session.
+      - title: Pulizia e Cura
+        desc: Risciacquo in acqua dolce, protezione UV, prevenzione della muffa e corrette tecniche di asciugatura dopo ogni sessione.
         slug: inflatable-sup-maintenance
-      - title: Storage Guide
-        desc: Best practices for storing inflatable boards — deflation, folding, temperature control, and shelf life.
+      - title: Guida allo Stoccaggio
+        desc: Migliori pratiche per conservare le tavole gonfiabili — deflazione, piegatura, controllo della temperatura e durata di conservazione.
         slug: inflatable-sup-storage
-      - title: Repair Basics
-        desc: Fix small punctures, seam leaks, and valve issues with PVC repair kits and patch techniques.
+      - title: Nozioni di base sulla riparazione
+        desc: Ripara piccole forature, perdite di giuntura e problemi di valvole con PVC kit di riparazione e tecniche di patch.
         slug: inflatable-sup-repair
-      - title: Valve Maintenance
-        desc: Identify valve types (Halkey-Roberts, Boston, Leafield), clean debris, and replace faulty stems.
+      - title: Manutenzione delle valvole
+        desc: Identificare i tipi di valvole (Halkey-Roberts, Boston, Leafield), pulire i detriti e sostituire gli steli difettosi.
         slug: inflatable-sup-repair
-
-knowledge_center_tagline: 'Knowledge Center'
-knowledge_center_title: 'Paddle Board Guides & Knowledge'
-knowledge_center_subtitle: 'Expert guides and buying advice for paddle boarders of every level.'
-
+knowledge_center_tagline: Centro della Conoscenza
+knowledge_center_title: Guide e conoscenze sulle tavole di paddle
+knowledge_center_subtitle: Guide esperte e consigli sull'acquisto per i paddleboarder di ogni livello.
 knowledge_sections:
-  - title: 'Board Technology & Construction'
-    tagline: 'Inside Your Paddle Board'
-    desc: 'How inflatable paddle boards are built — drop-stitch cores, laminate layers, EVA decks, and factory pressure testing.'
+  - title: Tecnologia e Costruzione per Consigli
+    tagline: Dentro la tua tavola da paddle
+    desc: Come vengono costruite le tavole gonfiabili — drop-stitch nuclei, strati laminati, EVA terrazze e test di pressione in fabbrica.
     guides:
-      - title: 'How Paddle Boards Are Made'
-        desc: 'From material cutting and lamination to 100% pressure testing — see how every board leaves the factory.'
-        href: '/factory/process'
-      - title: 'Drop-Stitch Core Technology'
-        desc: 'How thousands of internal threads create a rigid, high-pressure inflatable structure.'
-        href: '/learn/drop-stitch-core'
-      - title: 'Materials Reference'
-        desc: 'PVC denier ratings, fabric weights, UV resistance, and deck materials explained.'
-        href: '/learn/materials'
-      - title: 'Inflatable Board Technology'
-        desc: 'Welded seams, rail construction, and valve systems that keep your board stiff and airtight.'
-        href: '/learn/inflatable-technology'
-  - title: 'Buying Guides'
-    tagline: 'Choose the Right Board'
-    desc: 'Everything you need to pick your first — or next — inflatable SUP, from sizing to construction.'
+      - title: Come vengono realizzate le tavole da paddle
+        desc: Dal taglio e laminazione dei materiali al test di pressione al 100% — vedi come ogni tavola esce dalla fabbrica.
+        href: /factory/process
+      - title: Drop-Stitch Tecnologia Core
+        desc: Come migliaia di filettature interne creino una struttura rigida e gonfiabile ad alta pressione.
+        href: /learn/drop-stitch-core
+      - title: Riferimento dei materiali
+        desc: PVC Spiegate di denier, pesi di tessuto, UV resistenza e materiali del deck.
+        href: /learn/materials
+      - title: Tecnologia delle tavole gonfiabili
+        desc: Giunture saldate, costruzione di rotaie e sistemi di valvole che mantengono la tavola rigida e ermetica.
+        href: /learn/inflatable-technology
+  - title: Guide all'acquisto
+    tagline: Scegli la tavola giusta
+    desc: Tutto ciò di cui hai bisogno per scegliere il tuo primo — o il prossimo — gonfiabile SUP, dalla taglia alla costruzione.
     guides:
-      - title: 'How to Choose an Inflatable SUP'
-        desc: "The key factors — construction, thickness, fin setup, and included accessories."
-        href: '/guides/how-to-choose-your-sup/'
-      - title: 'What Is Stand-Up Paddleboarding?'
-        desc: 'A friendly introduction to the sport, the gear, and why inflatable boards make it easy to start.'
-        href: '/guides/what-is-sup'
-      - title: 'Inflatable vs Hard Board'
-        desc: 'Compare iSUPs and hard epoxy boards across portability, durability, performance, and value.'
-        href: '/compare/inflatable-vs-hardboard'
-      - title: 'SUP Size Guide'
-        desc: 'Find the right board length, width, and volume for your weight, skill, and paddling style.'
-        href: '/size-guide'
-  - title: 'Skills & Safety'
-    tagline: 'Paddle with Confidence'
-    desc: 'Practical knowledge for every session — beginner basics, water safety, care, and repair.'
+      - title: Come scegliere un gonfiabile SUP
+        desc: I fattori chiave — costruzione, spessore, configurazione delle alne e accessori inclusi.
+        href: /guides/how-to-choose-your-sup/
+      - title: Cos'è il paddleboarding in piedi?
+        desc: Un'introduzione amichevole allo sport, all'attrezzatura e al motivo per cui le tavole gonfiabili rendono facile avviare.
+        href: /guides/what-is-sup
+      - title: Gonfiabile vs Tavola rigida
+        desc: Confronta i SUP e schede epossidiche rigide in termini di portabilità, durata, prestazioni e valore.
+        href: /compare/inflatable-vs-hardboard
+      - title: SUP Guida alle dimensioni
+        desc: Trova la lunghezza, larghezza e volume della tavola giuste per il tuo peso, abilità e stile di pagai.
+        href: /size-guide
+  - title: Competenze e Sicurezza
+    tagline: Pagaia con Fiducia
+    desc: Conoscenze pratiche per ogni sessione — basi per principianti, sicurezza in acqua, cura e riparazione.
     guides:
-      - title: "SUP Basics — Beginner's Guide"
-        desc: 'Everything a beginner needs to know — board types, paddle sizing, stance, and first-day tips.'
-        href: '/v2/beginner-sup-guide'
-      - title: 'Water Safety Essentials'
-        desc: 'Weather checks, PFD selection, leash rules, self-rescue, and group paddling best practices.'
-        href: '/learn/water-safety'
-      - title: 'SUP Maintenance & Care'
-        desc: 'Cleaning, storage, UV protection, and care tips for inflatable SUP boards.'
-        href: '/v2/inflatable-sup-maintenance'
-      - title: 'Board Repair Basics'
-        desc: 'Fix small punctures, seam leaks, and valve issues with PVC repair kits and patch techniques.'
-        href: '/v2/inflatable-sup-repair'
-
-read_guide: Read guide →
-
+      - title: SUP Basi — Guida per Principianti
+        desc: Tutto ciò che un principiante deve sapere — tipi di tavole, dimensioni della pagaia, postura e consigli per il primo giorno.
+        href: /v2/beginner-sup-guide
+      - title: Nozioni Essenziali di Sicurezza in Acqua
+        desc: Controllo del meteo, selezione PFD, regole del guinzaglio, auto-salvataggio e buone pratiche per la pagaia di gruppo.
+        href: /learn/water-safety
+      - title: SUP Manutenzione e Cura
+        desc: Pulizia, stoccaggio, protezione UV e consigli di cura per tavole gonfiabili SUP.
+        href: /v2/inflatable-sup-maintenance
+      - title: Basi della Riparazione delle Tavole
+        desc: Ripara piccole forature, perdite di giuntura e problemi di valvole con PVC kit di riparazione e tecniche di patch.
+        href: /v2/inflatable-sup-repair
+read_guide: Leggi la guida →
 cta:
-  title: Not sure where to start?
-  desc: Reach out and we'll point you to the right guides and gear for your level.
-  label: Contact us →
+  title: Non sai da dove cominciare?
+  desc: Contattaci e ti indicheremo le guide e l'attrezzatura giuste per il tuo livello.
+  label: Contattaci →
   link: /contact

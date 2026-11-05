@@ -1,35 +1,35 @@
 hero_text:
   tagline: Contact
-  title: GET IN TOUCH
+  title: ENTREZ EN CONTACT
 contact_form:
   id: form
-  title: Send us a message
-  subtitle: For order questions, sizing advice or product support, drop us a line. We reply within one business day.
+  title: Envoyez-nous un message
+  subtitle: Pour des questions concernant une commande, des conseils sur les tailles ou le support produit, envoyez-nous un message. Nous répondons dans un délai d'un jour ouvrable.
   email_to: info@paddleboardoverstock.com
-  submit_button: Send Inquiry → Get a Quote
-  success_message: Thanks! Your message has landed in our inbox. We will reply within one business day.
-  error_message: Something went wrong sending your message. Please try again or email us directly.
-  default_country_code: "+1"
+  submit_button: Envoyer une demande → Obtenir un devis
+  success_message: Merci ! Votre message a été reçu dans notre boîte de réception. Nous répondrons dans un délai d'un jour ouvrable.
+  error_message: Une erreur est survenue lors de l'envoi de votre message. Veuillez réessayer ou nous envoyer un e-mail directement.
+  default_country_code: '+1'
   captcha:
-    label: "Anti-spam: please solve the following"
+    label: 'Anti-spam : veuillez résoudre ce qui suit'
   fields:
-    - name: firstName
-      label: First Name
+    - name: Prénom
+      label: Prénom
       row: 1
-    - name: lastName
-      label: Last Name
+    - name: Nom
+      label: Nom de famille
       row: 1
-    - name: companyName
-      label: Company Name
+    - name: Nom de l'entreprise
+      label: Nom de l'entreprise
       row: 2
     - name: address
-      label: Address
+      label: Adresse
       row: 3
     - name: zip
-      label: Zip / Postal Code
+      label: Code postal
       row: 4
     - name: country
-      label: Country
+      label: Pays
       row: 4
       type: select
       optionsKey: countries
@@ -42,51 +42,51 @@ contact_form:
       row: 5
       type: tel
       withCountryCode: true
-    - name: orderVolume
-      label: Estimated Order Volume
+    - name: Volume de commande
+      label: Volume de commande estimé
       row: 6
       type: select
       options:
-        - value: ""
-          label: How many boards are you shopping for?...
+        - value: ''
+          label: Pour combien de planches faites-vous vos achats ?...
         - value: one
-          label: Just one board
+          label: Une seule planche
         - value: 2-4
-          label: 2–4 boards
+          label: 2–4 planches
         - value: 5-plus
-          label: 5+ boards (family, club, or rental)
+          label: 5+ planches (famille, club ou location)
     - name: customization
-      label: What can we help with?
+      label: En quoi pouvons-nous vous aider ?
       row: 7
       type: select
       options:
-        - value: ""
-          label: Select a topic...
+        - value: ''
+          label: Sélectionnez un sujet...
         - value: none
-          label: General product question
+          label: Question générale sur le produit
         - value: sizing
-          label: Help choosing the right board
+          label: Aide pour choisir la bonne planche
         - value: order
-          label: Order, payment or shipping
+          label: Commande, paiement ou expédition
         - value: warranty
-          label: Warranty or repair support
-    - name: productInterest
-      label: Product Categories of Interest
+          label: Assistance pour la garantie ou la réparation
+    - name: produitIntérêt
+      label: Catégories de produits d'intérêt
       row: 8
       type: select
       options:
-        - value: ""
-          label: Select product category...
+        - value: ''
+          label: Sélectionner une catégorie de produit...
         - value: all
-          label: All products / Full catalog
+          label: Tous les produits / Catalogue complet
         - value: sup
-          label: SUP Boards / Paddleboards
+          label: SUP Planches / Stand up paddle
         - value: packages
-          label: Complete SUP packages
+          label: Kits complets SUP
         - value: accessory
-          label: Accessories (pumps, oars, bags)
+          label: Accessoires (pompes, pagaies, sacs)
     - name: subject
-      label: Subject
+      label: Sujet
       row: 9
     - name: message
       label: Message
@@ -94,29 +94,29 @@ contact_form:
       type: textarea
       rows: 6
 features2_other_ways:
-  title: Other ways to reach us
+  title: Autres moyens de nous contacter
   columns: 3
   items:
-    - title: Order help
-      description: Product questions, sizing advice, and order support.
+    - title: Aide à la commande
+      description: Questions sur les produits, conseils de taille et support de commande.
       icon: tabler:shopping-bag
-    - title: Technical support
-      description: Warranty, repairs, spare parts and operating questions.
+    - title: Support technique
+      description: Garantie, réparations, pièces détachées et questions d'utilisation.
       icon: tabler:tool
-    - title: Press & partnerships
-      description: Media kits, sponsorship and industry collaboration.
+    - title: Presse & partenariats
+      description: Kits médias, parrainage et collaboration dans l'industrie.
       icon: tabler:news
-    - title: Phone
-      description: +1 279 732 3333 (US HQ) · +86 13305324192 (factory)
+    - title: Téléphone
+      description: +1 279 732 3333 (Siège US) · +86 13305324192 (usine)
       icon: tabler:headset
     - title: Email
       description: info@paddleboardoverstock.com
       icon: tabler:mail
-    - title: Global HQ & Billing
+    - title: Siège mondial & facturation
       description: Weihai Dongjilian Co., Ltd.
       icon: tabler:map-pin
 map:
-  title: Our Location
-  subtitle: Visit our Weihai manufacturing hub
-  address: Weihai, Shandong, China
+  title: Notre emplacement
+  subtitle: Visitez notre centre de fabrication à Weihai
+  address: Weihai, Shandong, Chine
   zoom: 15

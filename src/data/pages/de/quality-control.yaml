@@ -1,136 +1,136 @@
 hero:
-  tagline: Quality Control
-  title: Quality Control<br />System
-  subtitle: Multi-stage inspection process covering incoming materials, in-process production, pressure testing, final assembly, and pre-shipment verification. Every batch is traceable, every test is recorded.
+  tagline: Qualitätskontrolle
+  title: Qualitätskontrolle<br />System
+  subtitle: Mehrstufiger Inspektionsprozess, der eingehende Materialien, die Produktion im Prozess, Druckprüfung, Endmontage und Vorversandprüfung abdeckt. Jede Charge ist rückverfolgbar, jeder Test wird aufgezeichnet.
   image:
     src: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/factory/paddleboardoverstock-pressure-testing.webp
-    alt: Paddle Board Overstock quality control and pressure testing process
+    alt: Paddle Board Overstock Qualitätskontrolle- und Druckprüfungsvorgang
 stats:
-  title: QC by the Numbers
+  title: QC in Zahlen
   stats:
-    - title: Units Pressure-Tested
+    - title: Einheiten druckgeprüft
       amount: 100%
-    - title: Max Pressure Drop
+    - title: Maximaler Druckabfall
       amount: <5%
-    - title: QC Inspectors
-      amount: "12"
-    - title: Records Retained
-      amount: 10 years
+    - title: QS-Inspektoren
+      amount: '12'
+    - title: Aufzeichnungen aufbewahrt
+      amount: 10 Jahre
 content_system:
-  tagline: QC System Overview
-  title: Integrated Quality<br />Control Framework
-  subtitle: Our QC system operates independently from production and reports directly to management. No batch is shipped without signed quality release from the quality lab.
+  tagline: Übersicht über das QS-System
+  title: Integrierte Qualität<br />Kontrollrahmen
+  subtitle: Unser QS-System arbeitet unabhängig von der Produktion und berichtet direkt an das Management. Keine Charge wird versendet, ohne dass eine unterzeichnete Qualitätsfreigabe aus dem Qualitätslabor vorliegt.
   items:
-    - title: Independent Quality Lab
-      description: Our quality lab operates as a separate function from production. QC inspectors report to the Quality Manager, not the Production Director. This organizational independence ensures that quality decisions are made objectively — production deadlines never override quality requirements.
+    - title: Unabhängiges Qualitätslabor
+      description: Unser Qualitätslabor arbeitet als eigenständige Funktion getrennt von der Produktion. QC-Inspektoren berichten an den Qualitätsmanager, nicht an den Produktionsleiter. Diese organisatorische Unabhängigkeit stellt sicher, dass Qualitätsentscheidungen objektiv getroffen werden – Produktionsfristen haben niemals Vorrang vor Qualitätsanforderungen.
       features:
-        - Reports directly to management, independent of production
-        - Authorized to halt production for quality issues
-        - 12 dedicated QC inspectors across all stages
-        - All test equipment calibrated annually
-    - title: Batch Traceability
-      description: Every batch of raw material is assigned a unique lot number in our ERP system. From material arrival through production to finished product, each board's bill of materials links back to original supplier batches. This enables full upstream traceability for any quality or compliance inquiry.
+        - Berichtet direkt an die Geschäftsleitung, unabhängig von der Produktion
+        - Berechtigt, die Produktion bei Qualitätsproblemen zu stoppen
+        - 12 engagierte QC-Inspektoren in allen Phasen
+        - Alle Prüfgeräte werden jährlich kalibriert
+    - title: Chargenrückverfolgbarkeit
+      description: Jeder Rohstoffcharge wird in unserem ERP-System eine eindeutige Losnummer zugewiesen. Vom Materialeingang über die Produktion bis zum fertigen Produkt verweist die Stückliste jeder Platine auf die ursprünglichen Lieferantenchargen. Dies ermöglicht eine vollständige Rückverfolgbarkeit für alle Qualitäts- oder Compliance-Anfragen.
       features:
-        - ERP-based lot tracking from material to finished product
-        - Physical batch tags on each work order
-        - 100% material coverage — PVC, drop-stitch, EVA foam, hardware, adhesives
-        - Records retained for 10 years
-    - title: Quality Management
-      description: Our QC procedures follow documented internal protocols. Test results are recorded, traceable, and reviewed by our independent quality lab. 99.3% defect-free rate across trailing 12-month shipments.
+        - Chargenverfolgung auf ERP-Basis vom Material bis zum Fertigprodukt
+        - Physische Chargenetiketten auf jedem Arbeitsauftrag
+        - 100% Materialabdeckung — PVC, drop-stitch, EVA Schaum, Hardware, Klebstoffe
+        - Aufzeichnungen werden 10 Jahre lang aufbewahrt
+    - title: Qualitätsmanagement
+      description: Unsere QS-Verfahren folgen dokumentierten internen Protokollen. Testergebnisse werden aufgezeichnet, sind nachvollziehbar und werden von unserem unabhängigen Qualitätslabor überprüft. 99,3 % fehlerfreie Rate bei den Lieferungen der letzten 12 Monate.
       features:
-        - Documented internal QC protocols, reviewed annually
-        - 99.3% defect-free rate across trailing 12-month shipments
-        - Zero tolerance on safety-critical defects
-        - Records retained for 10 years
+        - Dokumentierte interne QC-Protokolle, jährlich überprüft
+        - 99,3 % fehlerfreie Quote bei den Lieferungen der letzten 12 Monate
+        - Null Toleranz gegenüber sicherheitskritischen Defekten
+        - Aufzeichnungen werden 10 Jahre lang aufbewahrt
 content_inspection:
-  tagline: Inspection Stages
-  title: Six-Stage<br />Inspection Process
-  subtitle: Every product passes through 6 inspection stages with documented QC checkpoints. Defects are caught early, corrective actions are immediate, and every batch is fully traceable.
+  tagline: Inspektionsphasen
+  title: Sechsstufige<br />Inspektionsprozess
+  subtitle: Jedes Produkt durchläuft 6 Inspektionsphasen mit dokumentierten Qualitätskontrollpunkten. Fehler werden frühzeitig erkannt, Korrekturmaßnahmen sind sofort und jede Charge ist vollständig nachverfolgbar.
   stages:
-    - stage: "1"
-      title: Incoming Material Inspection
-      description: All incoming materials are logged by batch/lot number and quarantined until QC sign-off. PVC fabric rolls are tested for tensile strength, tear resistance, and thickness. Drop-stitch cores, valves, adhesives, and hardware are visually inspected and measured against specifications.
-      checks: Tensile strength, tear resistance, thickness gauge, adhesive viscosity, visual defect scan
-      threshold: 100% of batches tested. Reject if tensile < 90% of spec, tear < spec min, or any visual defect
-    - stage: "2"
-      title: In-Process QC — Cutting & Prep
-      description: CNC-cut panels are dimensionally checked against CAD source files every 20th panel. Edge quality is inspected for fraying, uneven cuts, or dimensional drift. Panel count is verified against the BOM for each production batch before materials move to welding.
-      checks: Dimensional check against CAD DXF files, edge quality inspection, panel count verification
-      threshold: Tolerance ±0.5mm. Reject batch if >2% out of tolerance
-    - stage: "3"
-      title: In-Process QC — Welding & Bonding
-      description: During production, weld quality is continuously monitored. Peel tests are conducted on samples every 50 units. Weld width is measured against specification. Hot-air temperature logs are reviewed for consistency. Every seam is visually inspected under backlight for channeling or voids.
-      checks: Peel test every 50 units, weld width measurement, hot-air temperature log review, backlight seam inspection
-      threshold: Peel strength min 8 N/cm. Weld width tolerance ±1mm. Any visible channeling = reject
-    - stage: "4"
+    - stage: '1'
+      title: Eingehende Materialinspektion
+      description: Alle eingehenden Materialien werden nach Chargen-/Chargennummer protokolliert und bis zur Qualitätskontrolle in Quarantäne gestellt.PVC Stoffrollen werden auf Zugfestigkeit, Reißfestigkeit und Dicke getestet.Drop-stitch Kerne, Ventile, Klebstoffe und Beschläge werden visuell inspiziert und anhand der Vorgaben gemessen.
+      checks: Zugfestigkeit, Reißfestigkeit, Dickenmessgerät, Klebstoffviskosität, Visuelle Fehlerprüfung
+      threshold: 100 % der geprüften Chargen. Ablehnen, wenn die Zugfestigkeit < 90 % der Spezifikation, die Reißfestigkeit < Spezifikationsminimum oder irgendein sichtbarer Mangel vorhanden ist
+    - stage: '2'
+      title: In-Process QC — Schneiden und Vorbereitung
+      description: CNC-geschnittene Platten werden alle 20. Platten maßlich mit CAD-Quelldateien überprüft. Die Kantenqualität wird auf Ausfransen, ungleichmäßige Schnitte oder Maßverschiebung überprüft. Die Plattenanzahl wird für jede Produktionscharge anhand des Stückstücks überprüft, bevor Materialien zum Schweißen übergehen.
+      checks: Dimensionsprüfung gegen CAD-DXF-Dateien, Kantenqualitätsprüfung, Überprüfung der Paneelanzahl
+      threshold: Toleranz ±0,5 mm. Charge verwerfen, wenn >2 % außerhalb der Toleranz liegen
+    - stage: '3'
+      title: In-Process Qualitätskontrolle – Schweißen und Binden
+      description: Während der Produktion wird die Schweißqualität kontinuierlich überwacht. Alle 50 Einheiten werden Peel-Tests an Proben durchgeführt. Die Schweißbreite wird gemäß den Vorgaben gemessen. Heißluft-Temperaturprotokolle werden auf Konsistenz überprüft. Jede Naht wird unter Gegenlicht visuell auf Kanalisation oder Hohlräume inspiziert.
+      checks: Peel-Test alle 50 Einheiten, Moos der Schweißbreite, Überprüfung des Heißlufttemperaturprotokolls, Inspektion der Backlight-Naht
+      threshold: Abschalfestigkeit mindestens 8 N/cm. Schweißweitentoleranz ±1 mm. Sichtbare Kanalisierung = Ablehnung
+    - stage: '4'
       title: Assembly QC
-      description: Each unit follows a 100-point assembly checklist signed off by the team lead. Valve function is tested through 10 open/close cycles. Hardware torque is verified. Visual inspection covers surface finish, color consistency, label placement, and accessory completeness.
-      checks: 100-point checklist per unit, valve function test, hardware torque verification, visual inspection
-      threshold: "Zero-defect policy on safety-critical items (valves, D-rings, handles). Minor cosmetic: 99.3% defect-free target"
-    - stage: "5"
-      title: Pressure Testing
-      description: Every chamber is inflated to 1.25× rated pressure and held for 24-48 hours. Pressure sensors log continuously throughout the hold period. Temperature-compensated readings ensure accuracy. Any chamber exceeding 5% pressure drop is rejected and sent for seam re-inspection with 100% re-test of the entire production batch.
-      checks: 24-48h pressure hold log, sensor calibration verified daily, temperature-compensated reading, seam re-test after repair
-      threshold: Max 5% pressure drop over 24h at stable temp. Exceeding = 100% re-test of entire batch
-    - stage: "6"
-      title: Final Inspection & Shipment Release
-      description: Final visual and functional inspection before packing. Surface defects, color consistency, label/BIN verification, packaging integrity, and accessory completeness are checked against the customer order. Units are vacuum-packed, boxed, and palletized. Final QC sign-off is required before any product leaves the factory.
-      checks: Full visual inspection, accessory checklist per SKU, packaging drop test (1m random sample), label/bar code scan verification
-      threshold: Zero tolerance safety defects. 99.3% defect-free target. 100% of units visually inspected
+      description: Jede Einheit folgt einer 100-Punkte-Montage-Checkliste, die vom Teamleiter unterzeichnet wird. Die Ventilfunktion wird in 10 Öffnungs-/Schließzyklen getestet. Das Drehmoment der Hardware wird überprüft. Die Sichtprüfung umfasst Oberflächenoberfläche, Farbkonsistenz, Etikettplatzierung und Zubehörvollständigkeit.
+      checks: 100-Punkte-Checkliste pro Einheit, Ventilfunktionstest, Drehmomentüberprüfung der Hardware, Sichtprüfung
+      threshold: 'Null-Fehler-Richtlinie bei sicherheitskritischen Gegenständen (Ventile, D-Ringe, Griffe). Kleine Kosmetik: 99,3 % fehlerfreies Ziel'
+    - stage: '5'
+      title: Druckprüfung
+      description: Jede Kammer wird auf 1,25× Nenndruck aufgeblasen und 24–48 Stunden gehalten. Drucksensoren protokollieren während der gesamten Wartezeit kontinuierlich. Temperaturkompensierte Messwerte gewährleisten die Genauigkeit. Jede Kammer mit mehr als 5 % Druckabfall wird abgelehnt und zur Nahtinspektion mit 100 % erneuten Tests der gesamten Produktionscharge geschickt.
+      checks: 24-48 Stunden Druckhaltprotokoll, täglich überprüfte Sensorkalibrierung, temperaturkompensierte Messung, Nahttest nach Reparatur erneut
+      threshold: Maximal 5 % Druckabfall über 24 Stunden bei stabiler Temperatur. Überschreiten = 100 % erneutes Testen der gesamten Charge
+    - stage: '6'
+      title: Endgültige Inspektion und Versandfreigabe
+      description: Abschließende visuelle und funktionale Inspektion vor dem Verpacken. Oberflächenfehler, Farbkonsistenz, Etikett-/Bin-Verifikation, Verpackungsintegrität und Zubehör-Vollständigkeit werden mit der Kundenbestellung überprüft. Die Einheiten werden vakuumverpackt, verpackt und palettiert. Vor dem Verlassen eines Produkts ist eine endgültige Qualitätskontrolle erforderlich.
+      checks: Vollständige visuelle Inspektion, Zubehör-Checkliste pro SKU Stück, Verpackungs-Droptest (1 m Zufallsprobe), Etikett-/Barcode-Scan-Verifikation
+      threshold: Sicherheitsmängel ohne Toleranz. 99,3 % fehlerfreies Ziel. 100 % der Geräte visuell inspiziert
 content_equipment:
-  tagline: Testing Equipment
-  title: QC Lab<br />Equipment
-  subtitle: Our quality lab is equipped with specialized testing equipment for material verification, weld integrity, and product performance validation.
+  tagline: Prüfausrüstung
+  title: QC-Labor<br />Ausrüstung
+  subtitle: Unser Qualitätslabor ist mit spezialisierten Prüfgeräten für Materialverifikation, Schweißintegrität und Produktleistungsvalidierung ausgestattet.
   columns: 3
   items:
-    - title: Tensile Testing Machine
-      description: Measures fabric tensile strength and elongation per internal test protocol. Used for incoming QC of all PVC and drop-stitch fabric batches.
+    - title: Zugprüfmaschine
+      description: Misst Zugfestigkeit und Verlängerung des Gewebes gemäß internem Testprotokoll. Wird für die eingehende Qualitätskontrolle aller PVC und drop-stitch Stoffchargen verwendet.
       icon: tabler:scale
-    - title: Temperature Chamber
-      description: Environmental chamber for UV resistance testing and low-temperature flexibility testing. Simulates extreme operating conditions.
+    - title: Temperaturkammer
+      description: Umweltkammer für UV Widerstandstests und Flexibilitätstests bei niedrigen Temperaturen. Simuliert extreme Betriebsbedingungen.
       icon: tabler:temperature
-    - title: Pressure Sensors & Loggers
-      description: Digital pressure sensors with continuous data logging for 24-48 hour air retention tests. Temperature-compensated for accuracy.
+    - title: Drucksensoren und Holzlogger
+      description: Digitale Drucksensoren mit kontinuierlicher Datenerfassung für 24-48-stündige Luftretentionstests. Temperaturkompensiert für Genauigkeit.
       icon: tabler:wind
-    - title: Peel Test Rig
-      description: Calibrated peel testing equipment for weld seam strength verification. Random samples from every production batch.
+    - title: Peel-Testgerät
+      description: Kalibrierte Peel-Testgeräte zur Überprüfung der Schweißnahtfestigkeit. Zufällige Proben jeder Produktionscharge.
       icon: tabler:files
-    - title: Leak Detection Tank
-      description: Water tank for submerged leak testing of inflated chambers. Visual bubble detection for seam and valve integrity verification.
+    - title: Leckdetektionstank
+      description: Wassertank für Unterwasser-Lecktests aufgeblasener Kammern. Visuelle Blasenerkennung zur Überprüfung der Naht- und Ventilintegrität.
       icon: tabler:ripple
-    - title: Inspection Tools
-      description: Calibrated measurement tools — thickness gauges, torque wrenches, dimensional calipers, hardness testers for production QC stations.
+    - title: Inspektionswerkzeuge
+      description: Kalibrierte Messwerkzeuge – Dickenmessgeräte, Drehmomentschlüssel, Maßschieber, Härtemesser für Produktions-QC-Stationen.
       icon: tabler:tools
 content_metrics:
-  tagline: QC Performance
-  title: Quality Control<br />Metrics
-  subtitle: Real pass/fail data from our production line. These metrics are monitored daily and reviewed monthly by management.
+  tagline: QC-Leistung
+  title: Qualitätskontrolle<br />Metriken
+  subtitle: Echte Bestanden/Nicht-bestanden-Daten aus unserer Produktionslinie. Diese Kennzahlen werden täglich überwacht und monatlich vom Management überprüft.
   columns: 3
   items:
-    - title: 100% Units Tested
-      description: Every chamber of every board is pressure-tested before shipping. No sampling — 100% inspection on pressure integrity.
+    - title: 100 % getestete Einheiten
+      description: Jede Kammer jeder Platine wird vor dem Versand unter Druck getestet. Keine Probenahme – 100%ige Inspektion der Druckintegrität.
       icon: tabler:check
-    - title: <5% Pressure Drop
-      description: Maximum allowable pressure loss over 24-48 hours at 1.25× rated pressure. Any chamber exceeding this threshold triggers batch re-test.
+    - title: <5 % Druckabfall
+      description: Maximal zulässiger Druckverlust über 24–48 Stunden bei 1,25× Nenndruck. Jede Kammer, die diesen Schwellenwert überschreitet, löst einen Batch-Neutest aus.
       icon: tabler:gauge
-    - title: 99.3% Defect-Free
-      description: Defect-free rate across trailing 12-month shipments. Zero tolerance on safety-critical defects.
+    - title: 99,3 % fehlerfrei
+      description: Fehlerfreie Rate über nachfolgende 12-Monats-Lieferungen. Null Toleranz gegenüber sicherheitskritischen Mängeln.
       icon: tabler:clipboard-check
-    - title: 24-48 Hour Hold
-      description: Boards are held 24-48 hours depending on model and batch. Pressure sensors log continuously throughout the hold period.
+    - title: 24-48 Stunden Aufenthalt
+      description: Die Boards werden je nach Modell und Charge rund um die Uhr aufbewahrt. Drucksensoren erfassen während der gesamten Wartezeit kontinuierlich.
       icon: tabler:clock
-    - title: 1.25× Test Pressure
-      description: Safety margin on every chamber — tested at 25% above rated pressure to ensure margin above maximum operating conditions.
+    - title: 1,25× Testdruck
+      description: Sicherheitsmarge an jeder Kammer – getestet bei 25 % über dem Nenndruck, um die Marge über den maximalen Betriebsbedingungen zu gewährleisten.
       icon: tabler:arrow-up
-    - title: 0% Safety Defects
-      description: Zero tolerance policy on safety-critical defects — valves, D-rings, seams, and buoyancy chambers. Any defect = 100% re-inspection.
+    - title: 0 % Sicherheitsmängel
+      description: Null-Toleranz-Richtlinie gegenüber sicherheitskritischen Mängeln – Ventile, D-Ringe, Nähte und Auftriebskammern. Jeder Defekt = 100 % Nachinspektion.
       icon: tabler:shield
 cta:
-  title: Request quality documentation
-  subtitle: We provide full quality documentation packages including test reports and inspection records with every shipment. Contact us for samples.
+  title: Qualitätsdokumentation anfordern
+  subtitle: Wir stellen vollständige Qualitätsdokumentationspakete einschließlich Prüfberichten und Inspektionsaufzeichnungen mit jeder Lieferung bereit. Kontaktieren Sie uns für Muster.
   actions:
     - variant: primary
-      text: Request QC documentation
+      text: QC-Dokumentation anfordern
       href: /contact
-    - text: View testing protocols
+    - text: Prüfprotokolle einsehen
       href: /quality

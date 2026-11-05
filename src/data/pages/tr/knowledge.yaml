@@ -1,91 +1,88 @@
 hero:
-  tagline: 'Knowledge Graph'
-  title: 'Water Exploration Knowledge'
+  tagline: Bilgi Grafiği
+  title: Su Keşif Bilgisi
   subtitle: |
-    A structured knowledge base covering inflatable SUP technology,<br />
-    water safety, board engineering, and adventure planning.
-  taglineSection: 'Explore. Learn. Go with confidence.'
-
+    Şişirilebilir SUP teknolojisini kapsayan yapılandırılmış bir bilgi tabanı,<br />
+    su güvenliği, board mühendisliği ve macera planlaması.
+  taglineSection: Keşfet. Öğren. Güvenle git.
 clusters:
-  tagline: 'Knowledge Clusters'
-  title: 'Explore by topic'
-  subtitle: 'Deep dives into the technology, safety, and skills behind every Paddle Board Overstock product.'
+  tagline: Bilgi Kümeleri
+  title: Konuya göre keşfet
+  subtitle: Her Paddle Board Overstock ürününün arkasındaki teknoloji, güvenlik ve becerilere derinlemesine dalış.
   items:
-    - title: 'SUP Knowledge'
-      description: 'From choosing your first board to advanced touring techniques — everything about stand-up paddle boarding.'
-      icon: 'tabler:lifebuoy'
+    - title: SUP Bilgisi
+      description: İlk boardunuzu seçmekten gelişmiş tur tekniklerine kadar — ayakta kürek sörfü hakkında her şey.
+      icon: tabler:lifebuoy
       topics:
-        - 'How to choose your first inflatable SUP'
-        - 'Best SUP size for beginners'
-        - 'How difficult is paddle boarding?'
-        - 'Inflatable vs hard board comparison'
-        - 'SUP safety checklist'
-    - title: 'Board Technology'
-      description: 'Technical deep dives on drop-stitch cores, PVC laminates, rails, and valves — how inflatable SUPs are engineered.'
-      icon: 'tabler:anchor'
+        - İlk şişme SUP nasıl seçilir
+        - Yeni başlayanlar için en iyi SUP boyutu
+        - Paddle sörfü ne kadar zor?
+        - Şişme ve sert tahta karşılaştırması
+        - SUP güvenlik kontrol listesi
+    - title: Board Teknolojisi
+      description: drop-stitch çekirdekler, PVC lamine, kenarlar ve valfler hakkında teknik detaylar — şişme SUPs nasıl tasarlanır.
+      icon: tabler:anchor
       topics:
-        - 'How inflatable SUPs are made'
-        - 'PVC laminate layers explained'
-        - 'Rail and seam construction'
-        - 'Drop-stitch technology deep dive'
-        - 'EVA deck art explained'
-    - title: 'Safety Knowledge'
-      description: 'Essential safety knowledge for every paddler — from PFD selection to weather reading to self-rescue techniques.'
-      icon: 'tabler:shield'
+        - Şişme SUPs nasıl yapılır
+        - PVC lamine katmanlar açıklaması
+        - Kenarlık ve dikiş yapısı
+        - Drop-stitch teknoloji derinlemesine inceleme
+        - EVA üst yüzey tasarımı açıklaması
+    - title: Güvenlik Bilgisi
+      description: Her kürekçi için temel güvenlik bilgisi — PFD seçimi, hava durumu okuma ve kendini kurtarma tekniklerinden.
+      icon: tabler:shield
       topics:
-        - 'SUP safety checklist'
-        - 'Do you need a life jacket?'
-        - 'Ocean paddling safety guide'
-        - 'River and current safety for paddlers'
-        - 'Weather and water condition awareness'
-    - title: 'Technology'
-      description: 'The engineering behind Paddle Board Overstock products — materials, construction methods, and quality testing.'
-      icon: 'tabler:microscope'
+        - SUP güvenlik kontrol listesi
+        - Bir can yeleğine ihtiyacın var mı?
+        - Okyanus kürek çekme güvenlik rehberi
+        - Kürekçiler için nehir ve akıntı güvenliği
+        - Hava ve su koşulları farkındalığı
+    - title: Teknoloji
+      description: Paddle Board Overstock ürünlerinin mühendisliği — malzemeler, üretim yöntemleri ve kalite testleri.
+      icon: tabler:microscope
       topics:
-        - 'Marine-grade PVC technology'
-        - 'Drop-stitch core explained'
-        - 'Why PSI matters for inflatable SUPs'
-        - 'RF welding vs adhesive bonding'
-        - 'Quality testing on every board'
-    - title: 'Club & Rental Knowledge'
-      description: 'Practical guides for running a SUP program — from rental operations to resort and club fleets.'
-      icon: 'tabler:briefcase'
+        - Deniz Kuvvetleri PVC seviyesindeki teknoloji
+        - Drop-stitch Core açıklama
+        - PSI Şişme SUPsiçin neden önemlidir
+        - RF kaynak vs yapıştırıcı yapıştırma
+        - Her tahtada kalite testi
+    - title: Kulüp ve Kiralama Bilgisi
+      description: Bir SUP programı yürütmek için pratik rehberler — kiralama işlemlerinden tatil köyü ve kulüp filolarına kadar.
+      icon: tabler:briefcase
       topics:
-        - 'How to start a SUP rental business'
-        - 'Building a resort water sports center'
-        - 'Paddle board fleet sizing for clubs'
-        - 'Inflatable vs hard SUP for commercial use'
-        - 'Best SUP boards for rental fleets'
-        - 'Resort water sports revenue strategies'
-        - 'Commercial equipment maintenance guide'
-
+        - Kiralama işine nasıl başlanılır SUP
+        - Bir tatil köyü su sporları merkezi inşa etmek
+        - Kulüpler için paddle board filosu boyutları
+        - Şişirilebilir ve ticari kullanım için sert mu SUP
+        - Kiralama filoları için en iyi SUP tahtalar
+        - Tatil köyü su sporları gelir stratejileri
+        - Ticari ekipman bakım rehberi
 featured_guides:
-  tagline: 'Featured Guides'
-  title: 'Most popular knowledge resources'
+  tagline: Öne Çıkan Rehberler
+  title: En popüler bilgi kaynakları
   items:
-    - title: 'SUP Basics'
-      href: '/learn/sup'
-    - title: 'Inflatable vs Hard Board'
-      href: '/compare/inflatable-vs-hardboard'
-    - title: 'Water Safety Guide'
-      href: '/learn/water-safety'
-    - title: 'Materials Reference'
-      href: '/learn/materials'
-    - title: 'SUP Size Guide'
-      href: '/size-guide'
-    - title: 'SUP Rental Cost Guide'
-      href: '/v2/cost-to-start-sup-rental-business'
-    - title: 'Resort Water Sports Center'
-      href: '/v2/building-resort-water-sports-center'
-    - title: 'Start a Water Brand'
-      href: '/v2/start-water-sports-brand-private-label'
-
+    - title: SUP Temeller
+      href: /learn/sup
+    - title: Şişme ve Sert Tahta
+      href: /compare/inflatable-vs-hardboard
+    - title: Su Güvenliği Rehberi
+      href: /learn/water-safety
+    - title: Malzeme Referansı
+      href: /learn/materials
+    - title: SUP Boyut Rehberi
+      href: /size-guide
+    - title: SUP Kira Maliyeti Rehberi
+      href: /v2/cost-to-start-sup-rental-business
+    - title: Resort Su Sporları Merkezi
+      href: /v2/building-resort-water-sports-center
+    - title: Bir Su Markası Başlatın
+      href: /v2/start-water-sports-brand-private-label
 cta:
-  title: 'Start exploring'
-  subtitle: 'Dive into our knowledge base and get the information you need for your next water adventure.'
+  title: Keşfe başlayın
+  subtitle: Bilgi tabanımıza dalın ve bir sonraki su maceranız için ihtiyacınız olan bilgileri edinin.
   actions:
     - variant: primary
-      text: 'Browse all guides'
-      href: '/academy'
-    - text: 'Explore Knowledge Graph'
-      href: '/knowledge'
+      text: Tüm rehberlere göz atın
+      href: /academy
+    - text: Bilgi Grafiğini Keşfedin
+      href: /knowledge

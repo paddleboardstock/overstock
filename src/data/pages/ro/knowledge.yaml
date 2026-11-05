@@ -1,91 +1,88 @@
 hero:
-  tagline: 'Knowledge Graph'
-  title: 'Water Exploration Knowledge'
+  tagline: Grafic de cunoștințe
+  title: Cunoștințe despre Explorarea Apei
   subtitle: |
-    A structured knowledge base covering inflatable SUP technology,<br />
-    water safety, board engineering, and adventure planning.
-  taglineSection: 'Explore. Learn. Go with confidence.'
-
+    O bază de cunoștințe structurată care acoperă tehnologia SUP gonflabilă,<br />
+    siguranța pe apă, ingineria plăcilor și planificarea aventurilor.
+  taglineSection: Explorează. Învață. Mergi cu încredere.
 clusters:
-  tagline: 'Knowledge Clusters'
-  title: 'Explore by topic'
-  subtitle: 'Deep dives into the technology, safety, and skills behind every Paddle Board Overstock product.'
+  tagline: Clustere de cunoștințe
+  title: Explorează după subiect
+  subtitle: Explorări detaliate ale tehnologiei, siguranței și abilităților din spatele fiecărui produs Paddle Board Overstock.
   items:
-    - title: 'SUP Knowledge'
-      description: 'From choosing your first board to advanced touring techniques — everything about stand-up paddle boarding.'
-      icon: 'tabler:lifebuoy'
+    - title: SUP Cunoaștere
+      description: De la alegerea primei tale plăci până la tehnici avansate de turism — totul despre paddleboarding-ul în picioare.
+      icon: tabler:lifebuoy
       topics:
-        - 'How to choose your first inflatable SUP'
-        - 'Best SUP size for beginners'
-        - 'How difficult is paddle boarding?'
-        - 'Inflatable vs hard board comparison'
-        - 'SUP safety checklist'
-    - title: 'Board Technology'
-      description: 'Technical deep dives on drop-stitch cores, PVC laminates, rails, and valves — how inflatable SUPs are engineered.'
-      icon: 'tabler:anchor'
+        - Cum să alegi primul tău SUP gonflabil
+        - Cea mai bună dimensiune SUP pentru începători
+        - Cât de dificil este să faci stand-up paddle?
+        - Comparație între placă gonflabilă și placă tare
+        - SUP lista de verificare a siguranței
+    - title: Tehnologia plăcilor
+      description: Analize tehnice aprofundate asupra nucleelor drop-stitch, laminate PVC, marginilor și supapelor — cum sunt concepute plăcile gonflabile SUPs.
+      icon: tabler:anchor
       topics:
-        - 'How inflatable SUPs are made'
-        - 'PVC laminate layers explained'
-        - 'Rail and seam construction'
-        - 'Drop-stitch technology deep dive'
-        - 'EVA deck art explained'
-    - title: 'Safety Knowledge'
-      description: 'Essential safety knowledge for every paddler — from PFD selection to weather reading to self-rescue techniques.'
-      icon: 'tabler:shield'
+        - Cum sunt realizate plăcile gonflabile SUPs
+        - Straturile laminatului PVC explicate
+        - Construcția marginilor și cusăturilor
+        - analiză detaliată a tehnologiei Drop-stitch
+        - Arta de pe puntea plăcii explicată EVA
+    - title: Cunoștințe de siguranță
+      description: Cunoștințe esențiale de siguranță pentru fiecare vâslaș — de la selecția PFD, la citirea vremii și până la tehnicile de auto-salvare.
+      icon: tabler:shield
       topics:
-        - 'SUP safety checklist'
-        - 'Do you need a life jacket?'
-        - 'Ocean paddling safety guide'
-        - 'River and current safety for paddlers'
-        - 'Weather and water condition awareness'
-    - title: 'Technology'
-      description: 'The engineering behind Paddle Board Overstock products — materials, construction methods, and quality testing.'
-      icon: 'tabler:microscope'
+        - SUP lista de verificare a siguranței
+        - Ai nevoie de o vestă de salvare?
+        - Ghid de siguranță pentru vâslitul în ocean
+        - Siguranța pe râuri și curenți pentru vâslași
+        - Conștientizarea condițiilor meteorologice și ale apei
+    - title: Tehnologie
+      description: Ingineria din spatele produselor Paddle Board Overstock — materiale, metode de construcție și teste de calitate.
+      icon: tabler:microscope
       topics:
-        - 'Marine-grade PVC technology'
-        - 'Drop-stitch core explained'
-        - 'Why PSI matters for inflatable SUPs'
-        - 'RF welding vs adhesive bonding'
-        - 'Quality testing on every board'
-    - title: 'Club & Rental Knowledge'
-      description: 'Practical guides for running a SUP program — from rental operations to resort and club fleets.'
-      icon: 'tabler:briefcase'
+        - Tehnologie de grad marin PVC
+        - Drop-stitch Core explicat
+        - De ce PSI contează pentru sistemul gonflabil SUPs
+        - Sudură RF vs lipire adezivă
+        - Testarea calității pe fiecare placă
+    - title: Cunoștințe despre club și închiriere
+      description: Ghiduri practice pentru administrarea unui program SUP — de la operațiuni de închiriere la flotile de stațiune și club.
+      icon: tabler:briefcase
       topics:
-        - 'How to start a SUP rental business'
-        - 'Building a resort water sports center'
-        - 'Paddle board fleet sizing for clubs'
-        - 'Inflatable vs hard SUP for commercial use'
-        - 'Best SUP boards for rental fleets'
-        - 'Resort water sports revenue strategies'
-        - 'Commercial equipment maintenance guide'
-
+        - Cum să începi o SUP afacere de închirieri
+        - Construirea unui centru sportiv acvatic pentru stațiune
+        - Mărimea flotei de paddle board pentru cluburi
+        - Gonflabil vs dur SUP pentru uz comercial
+        - Cele mai bune plăci SUP pentru flotele de închiriere
+        - Strategii de venituri din sporturile nautice pentru stațiuni
+        - Ghid de întreținere a echipamentelor comerciale
 featured_guides:
-  tagline: 'Featured Guides'
-  title: 'Most popular knowledge resources'
+  tagline: Ghiduri recomandate
+  title: Cele mai populare resurse de cunoaștere
   items:
-    - title: 'SUP Basics'
-      href: '/learn/sup'
-    - title: 'Inflatable vs Hard Board'
-      href: '/compare/inflatable-vs-hardboard'
-    - title: 'Water Safety Guide'
-      href: '/learn/water-safety'
-    - title: 'Materials Reference'
-      href: '/learn/materials'
-    - title: 'SUP Size Guide'
-      href: '/size-guide'
-    - title: 'SUP Rental Cost Guide'
-      href: '/v2/cost-to-start-sup-rental-business'
-    - title: 'Resort Water Sports Center'
-      href: '/v2/building-resort-water-sports-center'
-    - title: 'Start a Water Brand'
-      href: '/v2/start-water-sports-brand-private-label'
-
+    - title: SUP Elemente de bază
+      href: /learn/sup
+    - title: Gonflabil vs Hard Board
+      href: /compare/inflatable-vs-hardboard
+    - title: Ghid de siguranță în apă
+      href: /learn/water-safety
+    - title: Referință pentru materiale
+      href: /learn/materials
+    - title: SUP Ghid de mărimi
+      href: /size-guide
+    - title: SUP Ghid pentru Costuri de Închiriere
+      href: /v2/cost-to-start-sup-rental-business
+    - title: Centrul de Sporturi Acvatice al Resortului
+      href: /v2/building-resort-water-sports-center
+    - title: Începe un brand de apă
+      href: /v2/start-water-sports-brand-private-label
 cta:
-  title: 'Start exploring'
-  subtitle: 'Dive into our knowledge base and get the information you need for your next water adventure.'
+  title: Începe să explorezi
+  subtitle: Explorează baza noastră de cunoștințe și obține informațiile de care ai nevoie pentru următoarea ta aventură acvatică.
   actions:
     - variant: primary
-      text: 'Browse all guides'
-      href: '/academy'
-    - text: 'Explore Knowledge Graph'
-      href: '/knowledge'
+      text: Răsfoiește toate ghidurile
+      href: /academy
+    - text: Explorează Knowledge Graph
+      href: /knowledge

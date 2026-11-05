@@ -1,73 +1,70 @@
 hero:
-  tagline: 'Water Exploration Knowledge'
-  title: 'Learn'
+  tagline: معرفة استكشاف المياه
+  title: تعلّم
   subtitle: |
-    Guides, tutorials, and deep dives — everything you need to explore<br />
-    water with confidence. From choosing your first SUP to mastering advanced techniques.
-  taglineSection: 'Knowledge for every paddler. From beginner to professional.'
-
+    أدلة، دروس تعليمية، وعمليات استكشافية متعمقة — كل ما تحتاجه للاستكشاف<br />
+    الماء بثقة. من اختيار أول SUP لك إلى إتقان التقنيات المتقدمة.
+  taglineSection: المعرفة لكل متزلج على المجداف. من المبتدئ إلى المحترف.
 featured:
-  tagline: 'Featured Topics'
-  title: 'Start your learning journey'
-  subtitle: 'Whether you are new to water sports or looking to level up, our guides have you covered.'
+  tagline: المواضيع المميزة
+  title: ابدأ رحلتك التعليمية
+  subtitle: سواء كنت جديدًا على الرياضات المائية أو تبحث عن تحسين مستواك، فإن أدلتنا تغطي كل ما تحتاجه.
   items:
-    - title: 'SUP Basics'
-      description: 'Everything a beginner needs to know — board types, paddle sizing, stance, and first-day tips.'
-      icon: 'tabler:lifebuoy'
-      href: '/learn/sup'
-    - title: 'Inflatable vs Hard Board'
-      description: 'Which is right for you? We compare portability, performance, durability, and cost side by side.'
-      icon: 'tabler:arrows-left-right'
-      href: '/compare/inflatable-vs-hardboard'
-    - title: 'Water Safety'
-      description: 'Essential safety knowledge every paddler should have — weather, PFDs, self-rescue, and more.'
-      icon: 'tabler:shield'
-      href: '/learn/water-safety'
-    - title: 'Materials Guide'
-      description: 'Drop-stitch cores, PVC laminates, EVA deck foam — understand what your board is made of.'
-      icon: 'tabler:hexagons'
-      href: '/learn/materials'
-    - title: 'SUP Size Guide'
-      description: 'Find the right board length, width, and volume for your weight, skill, and paddling style.'
-      icon: 'tabler:ruler'
-      href: '/size-guide'
-    - title: 'Intermediate Techniques'
-      description: 'Step up your paddling with advanced strokes, turning techniques, and rough-water handling.'
-      icon: 'tabler:ripple'
-      href: '/learn/intermediate-techniques'
-
+    - title: SUP الأساسيات
+      description: كل ما يحتاج المبتدئون لمعرفته — أنواع الألواح، قياس المجداف، الوضعية، ونصائح اليوم الأول.
+      icon: tabler:lifebuoy
+      href: /learn/sup
+    - title: الألواح القابلة للنفخ مقابل الألواح الصلبة
+      description: أيهما يناسبك؟ نحن نقارن بين القابلية للنقل، الأداء، المتانة، والتكلفة جنبًا إلى جنب.
+      icon: tabler:arrows-left-right
+      href: /compare/inflatable-vs-hardboard
+    - title: سلامة المياه
+      description: المعرفة الأساسية للسلامة التي يجب أن يمتلكها كل راكب زوارق — الطقس، وسترات النجاة، والإنقاذ الذاتي، وأكثر.
+      icon: tabler:shield
+      href: /learn/water-safety
+    - title: دليل المواد
+      description: Drop-stitch النوى، PVC الطبقات، EVA رغوة اللوح — افهم مما مصنوع لوحك.
+      icon: tabler:hexagons
+      href: /learn/materials
+    - title: دليل الحجم SUP
+      description: اعثر على طول اللوح المناسب، عرضه، وحجمه وفقًا لوزنك، مهارتك، وأسلوب التجديف الخاص بك.
+      icon: tabler:ruler
+      href: /size-guide
+    - title: تقنيات متوسطة
+      description: ارتقِ بمستوى التجديف الخاص بك باستخدام الحركات المتقدمة وتقنيات الدوران والتعامل مع المياه الهائجة.
+      icon: tabler:ripple
+      href: /learn/intermediate-techniques
 categories:
-  tagline: 'Categories'
-  title: 'Explore by topic'
-  subtitle: 'All learning content organized by skill level and interest.'
+  tagline: الفئات
+  title: استكشف حسب الموضوع
+  subtitle: كل المحتوى التعليمي منظم حسب مستوى المهارة والاهتمام.
   columns:
-    - title: 'Beginner'
+    - title: مبتدئ
       items:
-        - 'SUP Basics — start here'
-        - 'Inflatable vs Hard Board'
-        - 'Water Safety Essentials'
-        - 'How to Choose Your SUP'
-        - 'Pump & Pack Guide'
-    - title: 'Intermediate'
+        - SUP الأساسيات — ابدأ هنا
+        - الألواح القابلة للنفخ مقابل الألواح الصلبة
+        - أساسيات سلامة المياه
+        - كيفية اختيار SUP الخاص بك
+        - دليل الضخ والتعبئة
+    - title: متوسط
       items:
-        - 'Paddling Techniques'
-        - 'Inflatable Technology'
-        - 'Materials Reference'
-        - 'EVA Deck Art Explained'
-        - 'Drop-Stitch Core Explained'
-    - title: 'Advanced'
+        - تقنيات التجديف
+        - تكنولوجيا النفخ
+        - مرجع المواد
+        - EVA شرح فن سطح اللوح
+        - Drop-Stitch شرح الجوهر
+    - title: متقدم
       items:
-        - 'Multi-Day Touring'
-        - 'Rough-Water Handling'
-        - 'Night Paddling'
-        - 'Board Repair & Care'
-
+        - الجولات لعدة أيام
+        - التعامل مع المياه الهائجة
+        - التجديف الليلي
+        - إصلاح اللوح والعناية به
 cta:
-  title: 'Still have questions?'
-  subtitle: 'Ask our AI guide for personalized answers about gear, safety, and techniques.'
+  title: هل لا تزال لديك أسئلة؟
+  subtitle: اسأل دليلنا الذكي للحصول على إجابات مخصصة حول المعدات والسلامة والتقنيات.
   actions:
     - variant: primary
-      text: 'Ask the Water Advisor AI'
+      text: اسأل مستشار المياه الذكي
       href: '#ai-guide'
-    - text: 'Browse all guides'
-      href: '/academy'
+    - text: تصفح جميع الأدلة
+      href: /academy

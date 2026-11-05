@@ -1,126 +1,121 @@
 hero:
-  tagline: Paddle Board Overstock Academy
-  title: Learning Center
-  subtitle: Guides and tutorials for every skill level — from SUP basics to advanced rescue techniques
-
+  tagline: Paddle Board Overstock Akademya
+  title: Sentro ng Pagkatuto
+  subtitle: Mga gabay at tutorial para sa bawat antas ng kasanayan — mula sa SUP mga pangunahing kaalaman hanggang sa advanced na mga teknika sa pagsagip
 categories:
-  - level: Beginner
+  - level: Nagsisimula
     color: from-green-500 to-emerald-600
     badge: bg-green-100 text-green-700
     guides:
-      - title: SUP Basics
-        desc: Learn the fundamentals of stand-up paddleboarding — stance, stroke technique, and balance.
+      - title: SUP Mga Pangunahing Kaalaman
+        desc: Matutunan ang mga pundasyon ng stand-up paddleboarding — tindig, teknik sa paga, at balanse.
         slug: beginner-sup-guide
-      - title: Paddle Techniques
-        desc: Forward stroke, sweep stroke, draw stroke, and low brace — master the essential paddle moves.
+      - title: Mga Teknik sa Paga
+        desc: Forward stroke, sweep stroke, draw stroke, at low brace — masterin ang mahahalagang galaw sa paga.
         slug: sup-paddle-guide
-      - title: Safety First
-        desc: Essential safety practices including weather checks, PFD use, leash rules, and self-rescue.
+      - title: Kaligtasan Muna
+        desc: Mahahalagang kasanayan sa kaligtasan kabilang ang pagsuri ng panahon, PFD paggamit, mga patakaran sa leash, at self-rescue.
         slug: sup-safety-guide
-  - level: Intermediate
+  - level: Gitnang Antas
     color: from-blue-500 to-indigo-600
     badge: bg-blue-100 text-blue-700
     guides:
-      - title: Touring Essentials
-        desc: Planning multi-hour paddles — navigation, hydration, pacing, and reading wind forecasts.
+      - title: Mga Mahahalagang Bagay sa Touring
+        desc: Pagpaplano ng multi-hour na paga — nabigasyon, pag-inom ng tubig, pacing, at pagbasa ng mga forecast ng hangin.
         slug: touring-sup-guide
-      - title: Weather Reading
-        desc: Interpret marine forecasts, identify cloud patterns, and understand wind effects on water.
+      - title: Pagbasa ng Panahon
+        desc: Interpretasyon ng mga marine forecast, pagtukoy sa pattern ng ulap, at pag-unawa sa epekto ng hangin sa tubig.
         slug: weather-planning-water-sports
-      - title: Navigation Basics
-        desc: Chart reading, compass use, GPS waypoints, and route planning for coastal paddling.
+      - title: Mga Pangunahing Kaalaman sa Nabigasyon
+        desc: Pagbabasa ng chart, paggamit ng compass, GPS waypoints, at pagpaplano ng ruta para sa paddling sa baybayin.
         slug: sup-navigation-guide
-      - title: Tidal Awareness
-        desc: Understanding tide cycles, currents, and how they affect launch timing and routing.
+      - title: Kamalayan sa Tidal
+        desc: Pag-unawa sa mga cycle ng tide, agos, at kung paano ito nakakaapekto sa oras ng paglulunsad at ruta.
         slug: understanding-tides
-  - level: Advanced
+  - level: Pinaunlad
     color: from-purple-500 to-violet-600
     badge: bg-purple-100 text-purple-700
     guides:
-      - title: Multi-Day Trip Planning
-        desc: Expedition logistics — gear selection, food planning, safety protocols, and emergency contacts.
+      - title: Pagpaplano ng Multi-Araw na Paglalakbay
+        desc: Logistics ng ekspedisyon — pagpili ng kagamitan, pagpaplano ng pagkain, mga protocol sa kaligtasan, at emergency contacts.
         slug: sup-travel-guide
-      - title: Rescue Techniques
-        desc: Self-rescue, T-rescue, and towing protocols for open water.
+      - title: Mga Teknik sa Pagsagip
+        desc: Mga protokol sa sariling pagliligtas, T-ligtas, at pagtutulak para sa bukas na tubig.
         slug: sup-self-rescue
-      - title: Night Paddling
-        desc: Navigation after dark — lighting requirements, route memory, group communication, and hazard awareness.
+      - title: Paggawa ng Paga sa Gabi
+        desc: Nabigasyon pagkatapos ng dilim — mga kinakailangang ilaw, memorya ng ruta, komunikasyon sa grupo, at kamalayan sa panganib.
         slug: sup-navigation-guide
-  - level: Maintenance
+  - level: Pagpapanatili
     color: from-amber-500 to-orange-600
     badge: bg-amber-100 text-amber-700
     guides:
-      - title: Cleaning & Care
-        desc: Freshwater rinsing, UV protection, mildew prevention, and proper drying techniques after every session.
+      - title: Paglilinis at Pangangalaga
+        desc: Banlawan sa sariwang tubig, UV proteksyon, pag-iwas sa amag, at tamang paraan ng pagpapatuyo pagkatapos ng bawat session.
         slug: inflatable-sup-maintenance
-      - title: Storage Guide
-        desc: Best practices for storing inflatable boards — deflation, folding, temperature control, and shelf life.
+      - title: Gabay sa Pag-iimbak
+        desc: Pinakamahusay na mga kasanayan sa pag-iimbak ng mga inflatable board — pagbaklas, pagtupi, kontrol sa temperatura, at haba ng buhay sa istante.
         slug: inflatable-sup-storage
-      - title: Repair Basics
-        desc: Fix small punctures, seam leaks, and valve issues with PVC repair kits and patch techniques.
+      - title: Mga Pangunahing Kaalaman sa Pagkukumpuni
+        desc: Ayusin ang maliliit na butas, tagas sa tahi, at mga isyu sa balbula gamit ang PVC repair kits at mga teknik sa pagbibitay patch.
         slug: inflatable-sup-repair
-      - title: Valve Maintenance
-        desc: Identify valve types (Halkey-Roberts, Boston, Leafield), clean debris, and replace faulty stems.
+      - title: Pagpapanatili ng Balbula
+        desc: Tukuyin ang mga uri ng balbula (Halkey-Roberts, Boston, Leafield), linisin ang mga dumi, at palitan ang mga sira na stems.
         slug: inflatable-sup-repair
-
-knowledge_center_tagline: 'Knowledge Center'
-knowledge_center_title: 'Paddle Board Guides & Knowledge'
-knowledge_center_subtitle: 'Expert guides and buying advice for paddle boarders of every level.'
-
+knowledge_center_tagline: Sentro ng Kaalaman
+knowledge_center_title: Gabay at Kaalaman sa Paddle Board
+knowledge_center_subtitle: Ekspertong gabay at payo sa pagbili para sa mga paddle boarder sa anumang antas.
 knowledge_sections:
-  - title: 'Board Technology & Construction'
-    tagline: 'Inside Your Paddle Board'
-    desc: 'How inflatable paddle boards are built — drop-stitch cores, laminate layers, EVA decks, and factory pressure testing.'
+  - title: Teknolohiya at Konstruksyon ng Board
+    tagline: Sa Loob ng Iyong Paddle Board
+    desc: Paano binubuo ang mga inflatable paddle board — drop-stitch cores, laminate layers, EVA decks, at pagsusuri sa presyon ng pabrika.
     guides:
-      - title: 'How Paddle Boards Are Made'
-        desc: 'From material cutting and lamination to 100% pressure testing — see how every board leaves the factory.'
-        href: '/factory/process'
-      - title: 'Drop-Stitch Core Technology'
-        desc: 'How thousands of internal threads create a rigid, high-pressure inflatable structure.'
-        href: '/learn/drop-stitch-core'
-      - title: 'Materials Reference'
-        desc: 'PVC denier ratings, fabric weights, UV resistance, and deck materials explained.'
-        href: '/learn/materials'
-      - title: 'Inflatable Board Technology'
-        desc: 'Welded seams, rail construction, and valve systems that keep your board stiff and airtight.'
-        href: '/learn/inflatable-technology'
-  - title: 'Buying Guides'
-    tagline: 'Choose the Right Board'
-    desc: 'Everything you need to pick your first — or next — inflatable SUP, from sizing to construction.'
+      - title: Paano Ginagawa ang mga Paddle Board
+        desc: Mula sa pagputol ng materyal at lamination hanggang sa 100% na pagsusuri sa presyon — tingnan kung paano umaalis sa pabrika ang bawat board.
+        href: /factory/process
+      - title: Drop-stitch core na teknolohiya
+        desc: Paano ang libu-libong panloob na mga thread ay lumilikha ng matibay, mataas na presyon na inflatable na istruktura.
+        href: /learn/drop-stitch-core
+      - title: Sanggunian ng Materyales
+        desc: Ipinaliwanag ang PVC denier ratings, bigat ng tela, UV resistance, at mga materyales ng deck.
+        href: /learn/materials
+      - title: Teknolohiya ng Inflatable Board
+        desc: Mga welded seam, konstruksyon ng rail, at mga sistema ng balbula na nagpapanatiling matigas at airtight ang iyong board.
+        href: /learn/inflatable-technology
+  - title: Mga Gabay sa Pagbili
+    tagline: Pumili ng Tamang Board
+    desc: Lahat ng kailangan mo upang pumili ng iyong una — o susunod — inflatable SUP, mula sa sukat hanggang sa konstruksyon.
     guides:
-      - title: 'How to Choose an Inflatable SUP'
-        desc: "The key factors — construction, thickness, fin setup, and included accessories."
-        href: '/guides/how-to-choose-your-sup/'
-      - title: 'What Is Stand-Up Paddleboarding?'
-        desc: 'A friendly introduction to the sport, the gear, and why inflatable boards make it easy to start.'
-        href: '/guides/what-is-sup'
-      - title: 'Inflatable vs Hard Board'
-        desc: 'Compare iSUPs and hard epoxy boards across portability, durability, performance, and value.'
-        href: '/compare/inflatable-vs-hardboard'
-      - title: 'SUP Size Guide'
-        desc: 'Find the right board length, width, and volume for your weight, skill, and paddling style.'
-        href: '/size-guide'
-  - title: 'Skills & Safety'
-    tagline: 'Paddle with Confidence'
-    desc: 'Practical knowledge for every session — beginner basics, water safety, care, and repair.'
+      - title: Paano Pumili ng Inflatable SUP
+        desc: Ang mga pangunahing salik — konstruksyon, kapal, setup ng palikpik, at mga kasamang aksesorya.
+        href: /guides/how-to-choose-your-sup/
+      - title: Ano ang Stand-Up Paddleboarding?
+        desc: Isang magiliw na pagpapakilala sa isport, sa kagamitan, at kung bakit pinapadali ng mga inflatable board ang pagsisimula.
+        href: /guides/what-is-sup
+      - title: Inflatable laban sa Matigas na Tabla
+        desc: Ihambing ang iSUP at matigas na epoxy boards sa pagiging portable, tibay, pagganap, at halaga.
+        href: /compare/inflatable-vs-hardboard
+      - title: SUP Gabay sa Sukat
+        desc: Hanapin ang tamang haba, lapad, at dami ng board para sa iyong timbang, kasanayan, at istilo ng pagbibisikleta.
+        href: /size-guide
+  - title: Kasanayan at Kaligtasan
+    tagline: Maglayag nang may Kumpiyansa
+    desc: Pangunahing kaalaman para sa bawat sesyon — mga batayang kaalaman para sa mga baguhan, kaligtasan sa tubig, pangangalaga, at pagkukumpuni.
     guides:
-      - title: "SUP Basics — Beginner's Guide"
-        desc: 'Everything a beginner needs to know — board types, paddle sizing, stance, and first-day tips.'
-        href: '/v2/beginner-sup-guide'
-      - title: 'Water Safety Essentials'
-        desc: 'Weather checks, PFD selection, leash rules, self-rescue, and group paddling best practices.'
-        href: '/learn/water-safety'
-      - title: 'SUP Maintenance & Care'
-        desc: 'Cleaning, storage, UV protection, and care tips for inflatable SUP boards.'
-        href: '/v2/inflatable-sup-maintenance'
-      - title: 'Board Repair Basics'
-        desc: 'Fix small punctures, seam leaks, and valve issues with PVC repair kits and patch techniques.'
-        href: '/v2/inflatable-sup-repair'
-
-read_guide: Read guide →
-
+      - title: SUP Pangunahing Kaalaman — Gabay para sa Nagsisimula
+        desc: Lahat ng kailangang malaman ng isang baguhan — mga uri ng board, sukat ng paddle, postura, at mga tip sa unang araw.
+        href: /v2/beginner-sup-guide
+      - title: Mahahalagang Kaalaman sa Kaligtasan sa Tubig
+        desc: Pagsusuri ng panahon, pagpili ng PFD, alituntunin sa leash, sariling pagliligtas, at pinakamahusay na kasanayan sa pangkatang paglalayag.
+        href: /learn/water-safety
+      - title: SUP Pagpapanatili at Pangangalaga
+        desc: Paglilinis, pag-iimbak, proteksyon ng UV, at mga tip sa pangangalaga para sa mga inflatable na SUP board.
+        href: /v2/inflatable-sup-maintenance
+      - title: Mga Pangunahing Kaalaman sa Pagkukumpuni ng Board
+        desc: Ayusin ang maliliit na butas, tagas sa tahi, at mga isyu sa balbula gamit ang PVC repair kits at mga teknik sa pagbibitay patch.
+        href: /v2/inflatable-sup-repair
+read_guide: Basahin ang gabay →
 cta:
-  title: Not sure where to start?
-  desc: Reach out and we'll point you to the right guides and gear for your level.
-  label: Contact us →
+  title: Hindi sigurado kung saan magsisimula?
+  desc: Makipag-ugnayan sa amin at ituturo namin sa iyo ang tamang mga gabay at kagamitan para sa iyong antas.
+  label: Makipag-ugnayan sa amin →
   link: /contact

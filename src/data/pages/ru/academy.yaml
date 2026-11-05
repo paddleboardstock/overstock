@@ -1,126 +1,121 @@
 hero:
-  tagline: Paddle Board Overstock Academy
-  title: Learning Center
-  subtitle: Guides and tutorials for every skill level — from SUP basics to advanced rescue techniques
-
+  tagline: Paddle Board Overstock Академия
+  title: Учебный центр
+  subtitle: Руководства и учебные пособия для любого уровня навыков — от SUP основ до продвинутых методов спасения.
 categories:
-  - level: Beginner
+  - level: Новичок
     color: from-green-500 to-emerald-600
     badge: bg-green-100 text-green-700
     guides:
-      - title: SUP Basics
-        desc: Learn the fundamentals of stand-up paddleboarding — stance, stroke technique, and balance.
+      - title: SUP Основы
+        desc: Изучите основы гребли с веслом стоя — стойку, технику удара и баланс.
         slug: beginner-sup-guide
-      - title: Paddle Techniques
-        desc: Forward stroke, sweep stroke, draw stroke, and low brace — master the essential paddle moves.
+      - title: Техники весла
+        desc: Гребок вперед, подметание, вытягивание и низкий подъем — освойте основные движения весла.
         slug: sup-paddle-guide
-      - title: Safety First
-        desc: Essential safety practices including weather checks, PFD use, leash rules, and self-rescue.
+      - title: Безопасность превыше всего
+        desc: Основные правила техники безопасности, включая проверку погодных условий, использование PFD, правила использования поводка и самоспасение.
         slug: sup-safety-guide
-  - level: Intermediate
+  - level: Средний
     color: from-blue-500 to-indigo-600
     badge: bg-blue-100 text-blue-700
     guides:
-      - title: Touring Essentials
-        desc: Planning multi-hour paddles — navigation, hydration, pacing, and reading wind forecasts.
+      - title: Основы туризма
+        desc: Планирование многочасовых весла — навигация, гидратация, темп и чтение прогнозов ветра.
         slug: touring-sup-guide
-      - title: Weather Reading
-        desc: Interpret marine forecasts, identify cloud patterns, and understand wind effects on water.
+      - title: Погода Ридинг
+        desc: Интерпретируйте морские прогнозы, определяйте структуру облаков и изучайте влияние ветра на воду.
         slug: weather-planning-water-sports
-      - title: Navigation Basics
-        desc: Chart reading, compass use, GPS waypoints, and route planning for coastal paddling.
+      - title: Основы навигации
+        desc: Чтение карт, использование компаса, путевые точки GPS и планирование маршрута для плавания по побережью.
         slug: sup-navigation-guide
-      - title: Tidal Awareness
-        desc: Understanding tide cycles, currents, and how they affect launch timing and routing.
+      - title: Приливная осведомленность
+        desc: Понимание циклов приливов, течений и того, как они влияют на время и маршрут запуска.
         slug: understanding-tides
-  - level: Advanced
+  - level: Передовой
     color: from-purple-500 to-violet-600
     badge: bg-purple-100 text-purple-700
     guides:
-      - title: Multi-Day Trip Planning
-        desc: Expedition logistics — gear selection, food planning, safety protocols, and emergency contacts.
+      - title: Планирование многодневной поездки
+        desc: Логистика экспедиции — выбор снаряжения, планирование питания, протоколы безопасности и контакты в случае чрезвычайной ситуации.
         slug: sup-travel-guide
-      - title: Rescue Techniques
-        desc: Self-rescue, T-rescue, and towing protocols for open water.
+      - title: Спасательные методы
+        desc: Протоколы самоспасения, спасения товарищей и буксировки на открытой воде.
         slug: sup-self-rescue
-      - title: Night Paddling
-        desc: Navigation after dark — lighting requirements, route memory, group communication, and hazard awareness.
+      - title: Ночная гребля
+        desc: Навигация в темное время суток — требования к освещению, запоминание маршрута, групповое общение и предупреждение об опасностях.
         slug: sup-navigation-guide
-  - level: Maintenance
+  - level: Обслуживание
     color: from-amber-500 to-orange-600
     badge: bg-amber-100 text-amber-700
     guides:
-      - title: Cleaning & Care
-        desc: Freshwater rinsing, UV protection, mildew prevention, and proper drying techniques after every session.
+      - title: Чистка и уход
+        desc: Промывание пресной водой, защита UV, предотвращение плесени и правильные методы сушки после каждой тренировки.
         slug: inflatable-sup-maintenance
-      - title: Storage Guide
-        desc: Best practices for storing inflatable boards — deflation, folding, temperature control, and shelf life.
+      - title: Руководство по хранению
+        desc: Лучшие практики хранения надувных досок — спуск воздуха, складывание, контроль температуры и срок службы.
         slug: inflatable-sup-storage
-      - title: Repair Basics
-        desc: Fix small punctures, seam leaks, and valve issues with PVC repair kits and patch techniques.
+      - title: Основы ремонта
+        desc: Устраните небольшие проколы, неплотности швов и проблемы с клапанами с помощью ремонтных комплектов PVC и методов заплатки.
         slug: inflatable-sup-repair
-      - title: Valve Maintenance
-        desc: Identify valve types (Halkey-Roberts, Boston, Leafield), clean debris, and replace faulty stems.
+      - title: Техническое обслуживание клапана
+        desc: Определите типы клапанов (Halkey-Roberts, Boston, Leafield), очистите их от мусора и замените неисправные штоки.
         slug: inflatable-sup-repair
-
-knowledge_center_tagline: 'Knowledge Center'
-knowledge_center_title: 'Paddle Board Guides & Knowledge'
-knowledge_center_subtitle: 'Expert guides and buying advice for paddle boarders of every level.'
-
+knowledge_center_tagline: Центр знаний
+knowledge_center_title: Руководства и знания о паддлбордах
+knowledge_center_subtitle: Экспертные руководства и советы по покупке для паддлбордистов любого уровня.
 knowledge_sections:
-  - title: 'Board Technology & Construction'
-    tagline: 'Inside Your Paddle Board'
-    desc: 'How inflatable paddle boards are built — drop-stitch cores, laminate layers, EVA decks, and factory pressure testing.'
+  - title: Технологии и конструкция досок
+    tagline: Внутри вашей паддлборд-доски
+    desc: Как строятся надувные паддлборды — сердечники drop-stitch, слои ламината, палубы EVA и заводское тестирование под давлением.
     guides:
-      - title: 'How Paddle Boards Are Made'
-        desc: 'From material cutting and lamination to 100% pressure testing — see how every board leaves the factory.'
-        href: '/factory/process'
-      - title: 'Drop-Stitch Core Technology'
-        desc: 'How thousands of internal threads create a rigid, high-pressure inflatable structure.'
-        href: '/learn/drop-stitch-core'
-      - title: 'Materials Reference'
-        desc: 'PVC denier ratings, fabric weights, UV resistance, and deck materials explained.'
-        href: '/learn/materials'
-      - title: 'Inflatable Board Technology'
-        desc: 'Welded seams, rail construction, and valve systems that keep your board stiff and airtight.'
-        href: '/learn/inflatable-technology'
-  - title: 'Buying Guides'
-    tagline: 'Choose the Right Board'
-    desc: 'Everything you need to pick your first — or next — inflatable SUP, from sizing to construction.'
+      - title: Как изготавливаются паддлборды
+        desc: От резки материалов и ламинации до 100% тестирования под давлением — смотрите, как каждая доска покидает завод.
+        href: /factory/process
+      - title: Технология сердечника Drop-Stitch
+        desc: Как тысячи внутренних нитей создают жесткую накачиваемую конструкцию с высоким давлением.
+        href: /learn/drop-stitch-core
+      - title: Справочник материалов
+        desc: Рейтинги ден (denier), веса ткани, UV устойчивость и материалы палубы объяснены.
+        href: /learn/materials
+      - title: Технология надувных досок
+        desc: Сварные швы, конструкция борта и клапанные системы, которые удерживают доску жесткой и герметичной.
+        href: /learn/inflatable-technology
+  - title: Руководства по покупке
+    tagline: Выбор правильной доски
+    desc: Все, что нужно для выбора вашей первой — или следующей — надувной доски SUP, от размера до конструкции.
     guides:
-      - title: 'How to Choose an Inflatable SUP'
-        desc: "The key factors — construction, thickness, fin setup, and included accessories."
-        href: '/guides/how-to-choose-your-sup/'
-      - title: 'What Is Stand-Up Paddleboarding?'
-        desc: 'A friendly introduction to the sport, the gear, and why inflatable boards make it easy to start.'
-        href: '/guides/what-is-sup'
-      - title: 'Inflatable vs Hard Board'
-        desc: 'Compare iSUPs and hard epoxy boards across portability, durability, performance, and value.'
-        href: '/compare/inflatable-vs-hardboard'
-      - title: 'SUP Size Guide'
-        desc: 'Find the right board length, width, and volume for your weight, skill, and paddling style.'
-        href: '/size-guide'
-  - title: 'Skills & Safety'
-    tagline: 'Paddle with Confidence'
-    desc: 'Practical knowledge for every session — beginner basics, water safety, care, and repair.'
+      - title: Как выбрать надувную SUP
+        desc: Ключевые факторы — конструкция, толщина, установка плавников и включенные аксессуары.
+        href: /guides/how-to-choose-your-sup/
+      - title: Что такое стоячие заплывы на паддлборде?
+        desc: Дружелюбное введение в спорт, снаряжение и почему надувные доски облегчают старт.
+        href: /guides/what-is-sup
+      - title: Надувная доска против жесткой доски
+        desc: Сравните i SUP и жесткие эпоксидные доски по портативности, долговечности, производительности и стоимости.
+        href: /compare/inflatable-vs-hardboard
+      - title: Руководство по размерам SUP
+        desc: Найдите подходящую длину, ширину и объем доски для вашего веса, уровня навыков и стиля гребли.
+        href: /size-guide
+  - title: Навыки и безопасность
+    tagline: Гребите с уверенностью
+    desc: Практические знания для каждой сессии — основы для начинающих, безопасность на воде, уход и ремонт.
     guides:
-      - title: "SUP Basics — Beginner's Guide"
-        desc: 'Everything a beginner needs to know — board types, paddle sizing, stance, and first-day tips.'
-        href: '/v2/beginner-sup-guide'
-      - title: 'Water Safety Essentials'
-        desc: 'Weather checks, PFD selection, leash rules, self-rescue, and group paddling best practices.'
-        href: '/learn/water-safety'
-      - title: 'SUP Maintenance & Care'
-        desc: 'Cleaning, storage, UV protection, and care tips for inflatable SUP boards.'
-        href: '/v2/inflatable-sup-maintenance'
-      - title: 'Board Repair Basics'
-        desc: 'Fix small punctures, seam leaks, and valve issues with PVC repair kits and patch techniques.'
-        href: '/v2/inflatable-sup-repair'
-
-read_guide: Read guide →
-
+      - title: SUP Основы — Руководство для новичка
+        desc: Все, что нужно знать начинающему — типы досок, размер весла, стойка и советы для первого дня.
+        href: /v2/beginner-sup-guide
+      - title: Основы безопасности на воде
+        desc: Проверка погоды, выбор PFD, правила использования привязи, самоспасение и лучшие практики групповой гребли.
+        href: /learn/water-safety
+      - title: SUP Обслуживание и уход
+        desc: Очистка, хранение, защита UV и советы по уходу за надувными SUP досками.
+        href: /v2/inflatable-sup-maintenance
+      - title: Основы ремонта досок
+        desc: Устраните небольшие проколы, неплотности швов и проблемы с клапанами с помощью ремонтных комплектов PVC и методов заплатки.
+        href: /v2/inflatable-sup-repair
+read_guide: Читать руководство →
 cta:
-  title: Not sure where to start?
-  desc: Reach out and we'll point you to the right guides and gear for your level.
-  label: Contact us →
+  title: Не знаете, с чего начать?
+  desc: Свяжитесь с нами, и мы укажем вам правильные руководства и снаряжение для вашего уровня.
+  label: Свяжитесь с нами →
   link: /contact

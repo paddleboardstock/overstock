@@ -1,126 +1,121 @@
 hero:
-  tagline: Paddle Board Overstock Academy
-  title: Learning Center
-  subtitle: Guides and tutorials for every skill level — from SUP basics to advanced rescue techniques
-
+  tagline: Paddle Board Overstock Akadémia
+  title: Oktatási Központ
+  subtitle: Útmutatók és oktatóanyagok minden szinthez — a SUP alapoktól a haladó mentési technikákig
 categories:
-  - level: Beginner
+  - level: Kezdő
     color: from-green-500 to-emerald-600
     badge: bg-green-100 text-green-700
     guides:
-      - title: SUP Basics
-        desc: Learn the fundamentals of stand-up paddleboarding — stance, stroke technique, and balance.
+      - title: SUP Alapok
+        desc: Tanuld meg a szörfdeszkázás alapjait — a testtartást, az evezéstechnikát és az egyensúlyt.
         slug: beginner-sup-guide
-      - title: Paddle Techniques
-        desc: Forward stroke, sweep stroke, draw stroke, and low brace — master the essential paddle moves.
+      - title: Evezőtechnikák
+        desc: Előrecsapás, söprésszerű csapás, húzós csapás és alacsony támasz — sajátítsd el az alapvető lapátmozdulatokat.
         slug: sup-paddle-guide
-      - title: Safety First
-        desc: Essential safety practices including weather checks, PFD use, leash rules, and self-rescue.
+      - title: Biztonság az első
+        desc: Alapvető biztonsági gyakorlatok, beleértve az időjárás-ellenőrzést, PFD használatát, pórázszabályokat és az önmentést.
         slug: sup-safety-guide
-  - level: Intermediate
+  - level: Közbülső
     color: from-blue-500 to-indigo-600
     badge: bg-blue-100 text-blue-700
     guides:
-      - title: Touring Essentials
-        desc: Planning multi-hour paddles — navigation, hydration, pacing, and reading wind forecasts.
+      - title: Túrafelszerelések
+        desc: Többórás evezések tervezése — navigáció, hidratáció, tempó és szél-előrejelzések olvasása.
         slug: touring-sup-guide
-      - title: Weather Reading
-        desc: Interpret marine forecasts, identify cloud patterns, and understand wind effects on water.
+      - title: Időjárás olvasat
+        desc: Elemzd a tengeri előrejelzéseket, azonosítsd a felhőmintákat, és értsd meg a szél vízre gyakorolt hatásait.
         slug: weather-planning-water-sports
-      - title: Navigation Basics
-        desc: Chart reading, compass use, GPS waypoints, and route planning for coastal paddling.
+      - title: Navigáció alapjai
+        desc: Térképolvasás, iránytű használata, GPS pontok és útvonaltervezés a parti evezéshez.
         slug: sup-navigation-guide
-      - title: Tidal Awareness
-        desc: Understanding tide cycles, currents, and how they affect launch timing and routing.
+      - title: Árapály Tudatosság
+        desc: A dagályciklusok, áramlatok és azok a kilövési időzítésre és útvonaltervezésre gyakorolt hatásának megértése.
         slug: understanding-tides
-  - level: Advanced
+  - level: Fejlett
     color: from-purple-500 to-violet-600
     badge: bg-purple-100 text-purple-700
     guides:
-      - title: Multi-Day Trip Planning
-        desc: Expedition logistics — gear selection, food planning, safety protocols, and emergency contacts.
+      - title: Többnapos utazás tervezése
+        desc: Expedíciós logisztika — felszerelés kiválasztása, ételtervezés, biztonsági protokollok és vészhelyzeti kapcsolatok.
         slug: sup-travel-guide
-      - title: Rescue Techniques
-        desc: Self-rescue, T-rescue, and towing protocols for open water.
+      - title: Mentési technikák
+        desc: Önmentés, T-mentés és vontatás protokollok nyílt vízen.
         slug: sup-self-rescue
-      - title: Night Paddling
-        desc: Navigation after dark — lighting requirements, route memory, group communication, and hazard awareness.
+      - title: Éjszakai evezés
+        desc: Navigáció sötétben — világítási követelmények, útvonalemlékezet, csoportkommunikáció és veszélytudatosság.
         slug: sup-navigation-guide
-  - level: Maintenance
+  - level: Karbantartás
     color: from-amber-500 to-orange-600
     badge: bg-amber-100 text-amber-700
     guides:
-      - title: Cleaning & Care
-        desc: Freshwater rinsing, UV protection, mildew prevention, and proper drying techniques after every session.
+      - title: Tisztítás és ápolás
+        desc: Édesvízzel történő öblítés, UV védelem, penészmegelőzés és megfelelő szárítási technikák minden egyes alkalom után.
         slug: inflatable-sup-maintenance
-      - title: Storage Guide
-        desc: Best practices for storing inflatable boards — deflation, folding, temperature control, and shelf life.
+      - title: Tárolási útmutató
+        desc: A legjobb gyakorlatok a felfújható deszkák tárolásához — leeresztés, hajtogatás, hőmérséklet-szabályozás és eltarthatóság.
         slug: inflatable-sup-storage
-      - title: Repair Basics
-        desc: Fix small punctures, seam leaks, and valve issues with PVC repair kits and patch techniques.
+      - title: Javítási alapok
+        desc: Javítsd ki apró dyukásokat, varrásszivárgásokat és szelepproblémákat PVC javítókészletekkel és javítási technikákkal.
         slug: inflatable-sup-repair
-      - title: Valve Maintenance
-        desc: Identify valve types (Halkey-Roberts, Boston, Leafield), clean debris, and replace faulty stems.
+      - title: Szelepkarbantartás
+        desc: Azonosítsa a szeleptípusokat (Halkey-Roberts, Boston, Leafield), tisztítsa meg a törmeléket, és cserélje ki a hibás szárakat.
         slug: inflatable-sup-repair
-
-knowledge_center_tagline: 'Knowledge Center'
-knowledge_center_title: 'Paddle Board Guides & Knowledge'
-knowledge_center_subtitle: 'Expert guides and buying advice for paddle boarders of every level.'
-
+knowledge_center_tagline: Tudásközpont
+knowledge_center_title: Evezős Deszka Útmutatók & Tudás
+knowledge_center_subtitle: Szakértői útmutatók és vásárlási tanácsok minden szintű evezős deszkázónak.
 knowledge_sections:
-  - title: 'Board Technology & Construction'
-    tagline: 'Inside Your Paddle Board'
-    desc: 'How inflatable paddle boards are built — drop-stitch cores, laminate layers, EVA decks, and factory pressure testing.'
+  - title: Deszkatechnológia & Kivitelezés
+    tagline: Az evezős deszkád belseje
+    desc: Hogyan készülnek a felfújható evezős deszkák — drop-stitch magok, laminált rétegek, EVA fedélzetek és gyári nyomáspróbák.
     guides:
-      - title: 'How Paddle Boards Are Made'
-        desc: 'From material cutting and lamination to 100% pressure testing — see how every board leaves the factory.'
-        href: '/factory/process'
-      - title: 'Drop-Stitch Core Technology'
-        desc: 'How thousands of internal threads create a rigid, high-pressure inflatable structure.'
-        href: '/learn/drop-stitch-core'
-      - title: 'Materials Reference'
-        desc: 'PVC denier ratings, fabric weights, UV resistance, and deck materials explained.'
-        href: '/learn/materials'
-      - title: 'Inflatable Board Technology'
-        desc: 'Welded seams, rail construction, and valve systems that keep your board stiff and airtight.'
-        href: '/learn/inflatable-technology'
-  - title: 'Buying Guides'
-    tagline: 'Choose the Right Board'
-    desc: 'Everything you need to pick your first — or next — inflatable SUP, from sizing to construction.'
+      - title: Hogyan készülnek az evezős deszkák
+        desc: Az anyagvágástól és laminálástól a 100%-os nyomáspróbáig — lásd, hogyan hagyja el minden deszka a gyárat.
+        href: /factory/process
+      - title: Drop-Stitch Core technológia
+        desc: Hogyan hoznak létre ezrek belső szálak egy merev, nagy nyomású felfújható szerkezetet.
+        href: /learn/drop-stitch-core
+      - title: Anyagreferencia
+        desc: PVC denier értékek, szövet súlyok, UV ellenállás és fedélzeti anyagok magyarázata.
+        href: /learn/materials
+      - title: Felfújható Deszka Technológia
+        desc: Hegesztett varratok, élszerkezet és szelep rendszerek, amelyek mereven és légmentesen tartják a deszkát.
+        href: /learn/inflatable-technology
+  - title: Vásárlási útmutatók
+    tagline: Válassza ki a megfelelő deszkát
+    desc: Minden, amire szüksége van ahhoz, hogy kiválassza első — vagy következő — felfújható SUP deszkáját, a mérettől a kivitelezésig.
     guides:
-      - title: 'How to Choose an Inflatable SUP'
-        desc: "The key factors — construction, thickness, fin setup, and included accessories."
-        href: '/guides/how-to-choose-your-sup/'
-      - title: 'What Is Stand-Up Paddleboarding?'
-        desc: 'A friendly introduction to the sport, the gear, and why inflatable boards make it easy to start.'
-        href: '/guides/what-is-sup'
-      - title: 'Inflatable vs Hard Board'
-        desc: 'Compare iSUPs and hard epoxy boards across portability, durability, performance, and value.'
-        href: '/compare/inflatable-vs-hardboard'
-      - title: 'SUP Size Guide'
-        desc: 'Find the right board length, width, and volume for your weight, skill, and paddling style.'
-        href: '/size-guide'
-  - title: 'Skills & Safety'
-    tagline: 'Paddle with Confidence'
-    desc: 'Practical knowledge for every session — beginner basics, water safety, care, and repair.'
+      - title: Hogyan válassz felfújható SUP-t
+        desc: A fő tényezők — kivitelezés, vastagság, uszony beállítás és tartozékok.
+        href: /guides/how-to-choose-your-sup/
+      - title: Mi az a Stand-Up Paddleboarding?
+        desc: Barátságos bevezetés a sportba, a felszerelésbe, és hogy miért teszik a felfújható deszkák könnyűvé a kezdést.
+        href: /guides/what-is-sup
+      - title: Felfújható vs kemény tábla
+        desc: Hasonlítsd össze az iSUP-okat és kemény epoxi táblákat hordozhatóság, tartósság, teljesítmény és ár-érték arány szerint.
+        href: /compare/inflatable-vs-hardboard
+      - title: SUP Méret útmutató
+        desc: Találd meg a megfelelő deszkahosszt, szélességet és térfogatot a súlyodhoz, képességedhez és evezési stílusodhoz.
+        href: /size-guide
+  - title: Készségek és biztonság
+    tagline: Evezzen magabiztosan
+    desc: Gyakorlati tudnivalók minden alkalomra — kezdő alapok, vízbiztonság, karbantartás és javítás.
     guides:
-      - title: "SUP Basics — Beginner's Guide"
-        desc: 'Everything a beginner needs to know — board types, paddle sizing, stance, and first-day tips.'
-        href: '/v2/beginner-sup-guide'
-      - title: 'Water Safety Essentials'
-        desc: 'Weather checks, PFD selection, leash rules, self-rescue, and group paddling best practices.'
-        href: '/learn/water-safety'
-      - title: 'SUP Maintenance & Care'
-        desc: 'Cleaning, storage, UV protection, and care tips for inflatable SUP boards.'
-        href: '/v2/inflatable-sup-maintenance'
-      - title: 'Board Repair Basics'
-        desc: 'Fix small punctures, seam leaks, and valve issues with PVC repair kits and patch techniques.'
-        href: '/v2/inflatable-sup-repair'
-
-read_guide: Read guide →
-
+      - title: SUP Alapok — Kezdő útmutató
+        desc: Minden, amit egy kezdőnek tudnia kell — deszkafajták, ütőméretek, testtartás és első napi tippek.
+        href: /v2/beginner-sup-guide
+      - title: A vízbiztonság alapjai
+        desc: Időjárás-ellenőrzés, PFD kiválasztás, pórázszabályok, önmentés, és csoportos evezési bevált gyakorlatok.
+        href: /learn/water-safety
+      - title: SUP Karbantartás & Gondozás
+        desc: Tisztítás, tárolás, UV védelem és gondozási tippek felfújható SUP deszkákhoz.
+        href: /v2/inflatable-sup-maintenance
+      - title: Deszkajavítás alapjai
+        desc: Javítsd ki apró dyukásokat, varrásszivárgásokat és szelepproblémákat PVC javítókészletekkel és javítási technikákkal.
+        href: /v2/inflatable-sup-repair
+read_guide: Olvassa el az útmutatót →
 cta:
-  title: Not sure where to start?
-  desc: Reach out and we'll point you to the right guides and gear for your level.
-  label: Contact us →
+  title: Nem biztos, hogy hol kezdje?
+  desc: Forduljon hozzánk bizalommal, és megmutatjuk a megfelelő útmutatókat és felszerelést az Ön szintjéhez.
+  label: Lépjen kapcsolatba velünk →
   link: /contact

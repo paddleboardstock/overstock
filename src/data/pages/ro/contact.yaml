@@ -1,35 +1,35 @@
 hero_text:
   tagline: Contact
-  title: GET IN TOUCH
+  title: IA LEGĂTURA
 contact_form:
   id: form
-  title: Send us a message
-  subtitle: For order questions, sizing advice or product support, drop us a line. We reply within one business day.
+  title: Trimite-ne un mesaj
+  subtitle: Pentru întrebări legate de comenzi, sfaturi privind mărimea sau suport pentru produse, trimiteți-ne un mesaj. Răspundem în termen de o zi lucrătoare.
   email_to: info@paddleboardoverstock.com
-  submit_button: Send Inquiry → Get a Quote
-  success_message: Thanks! Your message has landed in our inbox. We will reply within one business day.
-  error_message: Something went wrong sending your message. Please try again or email us directly.
-  default_country_code: "+1"
+  submit_button: Trimite Cerere de Informații → Obțineți o Cotație
+  success_message: Mulțumim! Mesajul dumneavoastră a ajuns în inboxul nostru. Vom răspunde în termen de o zi lucrătoare.
+  error_message: Ceva a mers prost la trimiterea mesajului dumneavoastră. Vă rugăm să încercați din nou sau să ne trimiteți un e-mail direct.
+  default_country_code: '+1'
   captcha:
-    label: "Anti-spam: please solve the following"
+    label: 'Anti-spam: vă rugăm să rezolvați următorul'
   fields:
-    - name: firstName
-      label: First Name
+    - name: prenume
+      label: Prenume
       row: 1
-    - name: lastName
-      label: Last Name
+    - name: nume de familie
+      label: Nume de familie
       row: 1
-    - name: companyName
-      label: Company Name
+    - name: numeCompanie
+      label: Numele Companiei
       row: 2
     - name: address
-      label: Address
+      label: Adresă
       row: 3
     - name: zip
-      label: Zip / Postal Code
+      label: Cod poștal
       row: 4
     - name: country
-      label: Country
+      label: Țară
       row: 4
       type: select
       optionsKey: countries
@@ -42,81 +42,81 @@ contact_form:
       row: 5
       type: tel
       withCountryCode: true
-    - name: orderVolume
-      label: Estimated Order Volume
+    - name: volumComandă
+      label: Volum estimat al comenzii
       row: 6
       type: select
       options:
-        - value: ""
-          label: How many boards are you shopping for?...
+        - value: ''
+          label: Câte plăci doriți să achiziționați?...
         - value: one
-          label: Just one board
+          label: Doar o placă
         - value: 2-4
-          label: 2–4 boards
+          label: 2–4 plăci
         - value: 5-plus
-          label: 5+ boards (family, club, or rental)
+          label: 5+ plăci (pentru familie, club sau închirieri)
     - name: customization
-      label: What can we help with?
+      label: Cu ce vă putem ajuta?
       row: 7
       type: select
       options:
-        - value: ""
-          label: Select a topic...
+        - value: ''
+          label: Selectați un subiect...
         - value: none
-          label: General product question
+          label: Întrebare generală despre produs
         - value: sizing
-          label: Help choosing the right board
+          label: Ajutor pentru alegerea plăcii potrivite
         - value: order
-          label: Order, payment or shipping
+          label: Comandă, plată sau livrare
         - value: warranty
-          label: Warranty or repair support
-    - name: productInterest
-      label: Product Categories of Interest
+          label: Garanție sau suport pentru reparații
+    - name: interesProdus
+      label: Categorii de produse de interes
       row: 8
       type: select
       options:
-        - value: ""
-          label: Select product category...
+        - value: ''
+          label: Selectați categoria de produs...
         - value: all
-          label: All products / Full catalog
+          label: Toate produsele / Catalog complet
         - value: sup
-          label: SUP Boards / Paddleboards
+          label: SUP Plăci / Paddleboards
         - value: packages
-          label: Complete SUP packages
+          label: Pachete complete SUP
         - value: accessory
-          label: Accessories (pumps, oars, bags)
+          label: Accesorii (pompe, vâsle, genți)
     - name: subject
-      label: Subject
+      label: Subiect
       row: 9
     - name: message
-      label: Message
+      label: Mesaj
       row: 10
       type: textarea
       rows: 6
 features2_other_ways:
-  title: Other ways to reach us
+  title: Alte modalități de a ne contacta
   columns: 3
   items:
-    - title: Order help
-      description: Product questions, sizing advice, and order support.
+    - title: Ajutor pentru comandă
+      description: Întrebări despre produse, sfaturi privind mărimile și suport pentru comandă.
       icon: tabler:shopping-bag
-    - title: Technical support
-      description: Warranty, repairs, spare parts and operating questions.
+    - title: Suport tehnic
+      description: Garanție, reparații, piese de schimb și întrebări de operare.
       icon: tabler:tool
-    - title: Press & partnerships
-      description: Media kits, sponsorship and industry collaboration.
+    - title: Presă & parteneriate
+      description: Kit-uri media, sponsorizări și colaborări în industrie.
       icon: tabler:news
-    - title: Phone
-      description: +1 279 732 3333 (US HQ) · +86 13305324192 (factory)
+    - title: Telefon
+      description: +1 279 732 3333 (HQ SUA) · +86 13305324192 (fabrică)
       icon: tabler:headset
-    - title: Email
+    - title: E-mail
       description: info@paddleboardoverstock.com
       icon: tabler:mail
-    - title: Global HQ & Billing
+    - title: Sediu global & Facturare
       description: Weihai Dongjilian Co., Ltd.
       icon: tabler:map-pin
 map:
-  title: Our Location
-  subtitle: Visit our Weihai manufacturing hub
+  title: Locația noastră
+  subtitle: Vizitați centrul nostru de producție din Weihai
   address: Weihai, Shandong, China
   zoom: 15

@@ -1,35 +1,35 @@
 hero_text:
   tagline: Contact
-  title: GET IN TOUCH
+  title: NEEM CONTACT OP
 contact_form:
   id: form
-  title: Send us a message
-  subtitle: For order questions, sizing advice or product support, drop us a line. We reply within one business day.
+  title: Stuur ons een bericht
+  subtitle: Voor vragen over bestellingen, advies over maten of productondersteuning, stuur ons een bericht. We antwoorden binnen één werkdag.
   email_to: info@paddleboardoverstock.com
-  submit_button: Send Inquiry → Get a Quote
-  success_message: Thanks! Your message has landed in our inbox. We will reply within one business day.
-  error_message: Something went wrong sending your message. Please try again or email us directly.
-  default_country_code: "+1"
+  submit_button: Stel een vraag → Vraag een offerte aan
+  success_message: Bedankt! Je bericht is in onze inbox aangekomen. We zullen binnen één werkdag antwoorden.
+  error_message: Er is iets misgegaan bij het versturen van je bericht. Probeer het opnieuw of mail ons direct.
+  default_country_code: '+1'
   captcha:
-    label: "Anti-spam: please solve the following"
+    label: 'Anti-spam: los het volgende op'
   fields:
-    - name: firstName
-      label: First Name
+    - name: eersteNaam
+      label: Voornaam
       row: 1
-    - name: lastName
-      label: Last Name
+    - name: achternaam
+      label: Achternaam
       row: 1
-    - name: companyName
-      label: Company Name
+    - name: bedrijfsnaam
+      label: Bedrijfsnaam
       row: 2
     - name: address
-      label: Address
+      label: Adres
       row: 3
     - name: zip
-      label: Zip / Postal Code
+      label: Postcode / ZIP-code
       row: 4
     - name: country
-      label: Country
+      label: Land
       row: 4
       type: select
       optionsKey: countries
@@ -42,81 +42,81 @@ contact_form:
       row: 5
       type: tel
       withCountryCode: true
-    - name: orderVolume
-      label: Estimated Order Volume
+    - name: Bestelvolume
+      label: Geschat bestelvolume
       row: 6
       type: select
       options:
-        - value: ""
-          label: How many boards are you shopping for?...
+        - value: ''
+          label: Voor hoeveel boards ben je aan het shoppen?...
         - value: one
-          label: Just one board
+          label: Slechts één board
         - value: 2-4
           label: 2–4 boards
         - value: 5-plus
-          label: 5+ boards (family, club, or rental)
+          label: 5+ boards (familie, club of verhuur)
     - name: customization
-      label: What can we help with?
+      label: Waarmee kunnen we helpen?
       row: 7
       type: select
       options:
-        - value: ""
-          label: Select a topic...
+        - value: ''
+          label: Selecteer een onderwerp...
         - value: none
-          label: General product question
+          label: Algemene productvraag
         - value: sizing
-          label: Help choosing the right board
+          label: Hulp bij het kiezen van het juiste board
         - value: order
-          label: Order, payment or shipping
+          label: Bestelling, betaling of verzending
         - value: warranty
-          label: Warranty or repair support
-    - name: productInterest
-      label: Product Categories of Interest
+          label: Garantie of reparatieondersteuning
+    - name: productInteresse
+      label: Productcategorieën van interesse
       row: 8
       type: select
       options:
-        - value: ""
-          label: Select product category...
+        - value: ''
+          label: Selecteer productcategorie...
         - value: all
-          label: All products / Full catalog
+          label: Alle producten / Volledige catalogus
         - value: sup
           label: SUP Boards / Paddleboards
         - value: packages
-          label: Complete SUP packages
+          label: Complete SUP pakketten
         - value: accessory
-          label: Accessories (pumps, oars, bags)
+          label: Accessoires (pompen, peddels, tassen)
     - name: subject
-      label: Subject
+      label: Onderwerp
       row: 9
     - name: message
-      label: Message
+      label: Bericht
       row: 10
       type: textarea
       rows: 6
 features2_other_ways:
-  title: Other ways to reach us
+  title: Andere manieren om ons te bereiken
   columns: 3
   items:
-    - title: Order help
-      description: Product questions, sizing advice, and order support.
+    - title: Hulp bij bestelling
+      description: Productvragen, maatadvies en bestellingsondersteuning.
       icon: tabler:shopping-bag
-    - title: Technical support
-      description: Warranty, repairs, spare parts and operating questions.
+    - title: Technische ondersteuning
+      description: Garantie, reparaties, reserveonderdelen en bedieningsvragen.
       icon: tabler:tool
-    - title: Press & partnerships
-      description: Media kits, sponsorship and industry collaboration.
+    - title: Pers & partnerschappen
+      description: Perskits, sponsoring en samenwerking in de industrie.
       icon: tabler:news
-    - title: Phone
-      description: +1 279 732 3333 (US HQ) · +86 13305324192 (factory)
+    - title: Telefoon
+      description: +1 279 732 3333 (VS hoofdkantoor) · +86 13305324192 (fabriek)
       icon: tabler:headset
-    - title: Email
+    - title: E-mail
       description: info@paddleboardoverstock.com
       icon: tabler:mail
-    - title: Global HQ & Billing
+    - title: Global HQ & Facturering
       description: Weihai Dongjilian Co., Ltd.
       icon: tabler:map-pin
 map:
-  title: Our Location
-  subtitle: Visit our Weihai manufacturing hub
+  title: Onze locatie
+  subtitle: Bezoek ons productiecentrum in Weihai
   address: Weihai, Shandong, China
   zoom: 15

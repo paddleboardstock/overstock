@@ -1,91 +1,88 @@
 hero:
-  tagline: 'Knowledge Graph'
-  title: 'Water Exploration Knowledge'
+  tagline: Wykres wiedzy
+  title: Wiedza o eksploracji wody
   subtitle: |
-    A structured knowledge base covering inflatable SUP technology,<br />
-    water safety, board engineering, and adventure planning.
-  taglineSection: 'Explore. Learn. Go with confidence.'
-
+    Strukturalna baza wiedzy obejmująca technologię nadmuchiwanych SUP,<br />
+    bezpieczeństwo na wodzie, inżynieria desek i planowanie przygód.
+  taglineSection: Odkrywaj. Ucz się. Idź z pewnością.
 clusters:
-  tagline: 'Knowledge Clusters'
-  title: 'Explore by topic'
-  subtitle: 'Deep dives into the technology, safety, and skills behind every Paddle Board Overstock product.'
+  tagline: Klastry wiedzy
+  title: Eksploruj według tematu
+  subtitle: Dogłębne analizy technologii, bezpieczeństwa i umiejętności stojących za każdym produktem Paddle Board Overstock.
   items:
-    - title: 'SUP Knowledge'
-      description: 'From choosing your first board to advanced touring techniques — everything about stand-up paddle boarding.'
-      icon: 'tabler:lifebuoy'
+    - title: SUP Wiedza
+      description: Od wyboru swojej pierwszej deski po zaawansowane techniki turystyki — wszystko o paddle boardingu stojącym.
+      icon: tabler:lifebuoy
       topics:
-        - 'How to choose your first inflatable SUP'
-        - 'Best SUP size for beginners'
-        - 'How difficult is paddle boarding?'
-        - 'Inflatable vs hard board comparison'
-        - 'SUP safety checklist'
-    - title: 'Board Technology'
-      description: 'Technical deep dives on drop-stitch cores, PVC laminates, rails, and valves — how inflatable SUPs are engineered.'
-      icon: 'tabler:anchor'
+        - Jak wybrać swoją pierwszą dmuchaną SUP
+        - Najlepszy rozmiar SUP dla początkujących
+        - Jak trudne jest paddleboarding?
+        - Porównanie deski dmuchanej i twardej
+        - SUP lista kontrolna bezpieczeństwa
+    - title: Technologia Płyt
+      description: Techniczne dogłębne analizy rdzeni drop-stitch, laminatów PVC, szyn i zaworów — jak projektowane są nadmuchiwane SUPs.
+      icon: tabler:anchor
       topics:
-        - 'How inflatable SUPs are made'
-        - 'PVC laminate layers explained'
-        - 'Rail and seam construction'
-        - 'Drop-stitch technology deep dive'
-        - 'EVA deck art explained'
-    - title: 'Safety Knowledge'
-      description: 'Essential safety knowledge for every paddler — from PFD selection to weather reading to self-rescue techniques.'
-      icon: 'tabler:shield'
+        - Jak są wykonane nadmuchiwane SUPs
+        - PVC warstwy laminatu wyjaśnione
+        - Konstrukcja szyn i szwów
+        - Drop-stitch dogłębne zanurzenie w technologię
+        - wyjaśnienie grafiki talii EVA
+    - title: Wiedza o bezpieczeństwie
+      description: Podstawowa wiedza o bezpieczeństwie dla każdego wioślarza — od wyboru PFD po odczytywanie pogody i techniki samoewakuacji.
+      icon: tabler:shield
       topics:
-        - 'SUP safety checklist'
-        - 'Do you need a life jacket?'
-        - 'Ocean paddling safety guide'
-        - 'River and current safety for paddlers'
-        - 'Weather and water condition awareness'
-    - title: 'Technology'
-      description: 'The engineering behind Paddle Board Overstock products — materials, construction methods, and quality testing.'
-      icon: 'tabler:microscope'
+        - SUP lista kontrolna bezpieczeństwa
+        - Potrzebujesz kamizelki ratunkowej?
+        - Przewodnik bezpieczeństwa wiosłowania po oceanie
+        - Bezpieczeństwo na rzece i prądach dla wioślarzy
+        - Świadomość warunków pogodowych i wodnych
+    - title: Technologia
+      description: Inżynieria stojąca za produktami Paddle Board Overstock — materiały, metody konstrukcji i testy jakości.
+      icon: tabler:microscope
       topics:
-        - 'Marine-grade PVC technology'
-        - 'Drop-stitch core explained'
-        - 'Why PSI matters for inflatable SUPs'
-        - 'RF welding vs adhesive bonding'
-        - 'Quality testing on every board'
-    - title: 'Club & Rental Knowledge'
-      description: 'Practical guides for running a SUP program — from rental operations to resort and club fleets.'
-      icon: 'tabler:briefcase'
+        - Technologia klasy morskiej PVC
+        - Wyjaśnienie rdzenia Drop-stitch
+        - Dlaczego PSI jest ważne dla dmuchanych SUPs
+        - Spawanie RF a łączenie klejowe
+        - Testy jakości na każdej desce
+    - title: Wiedza Klubowa i Wynajmu
+      description: Praktyczne przewodniki dotyczące prowadzenia programu SUP — od operacji wynajmu po floty ośrodków i klubów.
+      icon: tabler:briefcase
       topics:
-        - 'How to start a SUP rental business'
-        - 'Building a resort water sports center'
-        - 'Paddle board fleet sizing for clubs'
-        - 'Inflatable vs hard SUP for commercial use'
-        - 'Best SUP boards for rental fleets'
-        - 'Resort water sports revenue strategies'
-        - 'Commercial equipment maintenance guide'
-
+        - Jak rozpocząć działalność związaną z wynajmem SUP
+        - Budowa uzdrowiskowego centrum sportów wodnych
+        - Rozmiar floty desek wiosłowych dla klubów
+        - Nadmuchiwane vs twarde SUP do użytku komercyjnego
+        - Najlepsze deski SUP do flot wynajmowych
+        - Strategie przychodów ze sportów wodnych w kurortach
+        - Przewodnik konserwacji sprzętu komercyjnego
 featured_guides:
-  tagline: 'Featured Guides'
-  title: 'Most popular knowledge resources'
+  tagline: Polecane przewodniki
+  title: Najpopularniejsze zasoby wiedzy
   items:
-    - title: 'SUP Basics'
-      href: '/learn/sup'
-    - title: 'Inflatable vs Hard Board'
-      href: '/compare/inflatable-vs-hardboard'
-    - title: 'Water Safety Guide'
-      href: '/learn/water-safety'
-    - title: 'Materials Reference'
-      href: '/learn/materials'
-    - title: 'SUP Size Guide'
-      href: '/size-guide'
-    - title: 'SUP Rental Cost Guide'
-      href: '/v2/cost-to-start-sup-rental-business'
-    - title: 'Resort Water Sports Center'
-      href: '/v2/building-resort-water-sports-center'
-    - title: 'Start a Water Brand'
-      href: '/v2/start-water-sports-brand-private-label'
-
+    - title: SUP Podstawy
+      href: /learn/sup
+    - title: Nadmuchiwana vs twarda deska
+      href: /compare/inflatable-vs-hardboard
+    - title: Przewodnik bezpieczeństwa na wodzie
+      href: /learn/water-safety
+    - title: Materiały referencyjne
+      href: /learn/materials
+    - title: SUP Przewodnik po rozmiarach
+      href: /size-guide
+    - title: SUP Przewodnik po kosztach wynajmu
+      href: /v2/cost-to-start-sup-rental-business
+    - title: Ośrodek Sportów Wodnych Centrum
+      href: /v2/building-resort-water-sports-center
+    - title: Załóż markę wodną
+      href: /v2/start-water-sports-brand-private-label
 cta:
-  title: 'Start exploring'
-  subtitle: 'Dive into our knowledge base and get the information you need for your next water adventure.'
+  title: Zacznij odkrywać
+  subtitle: Zanurz się w naszej bazie wiedzy i uzyskaj informacje potrzebne na swoją kolejną wodną przygodę.
   actions:
     - variant: primary
-      text: 'Browse all guides'
-      href: '/academy'
-    - text: 'Explore Knowledge Graph'
-      href: '/knowledge'
+      text: Przeglądaj wszystkie przewodniki
+      href: /academy
+    - text: Eksploruj Graf Wiedzy
+      href: /knowledge
