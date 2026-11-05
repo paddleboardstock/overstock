@@ -1,0 +1,98 @@
+badge: Proof & Quality
+heading: Dowody
+description: Prawdziwe historie jakości, dane testowe i zdjęcia z fabryki pokazujące, jak każda deska wyprzedażowa jest wysyłana w jakości detalicznej.
+case_studies:
+  - id: clearance-quality-check
+    client: Wyprzedaż, Kontrola Jakości w Standardzie Detalicznym
+    product: Każda deska z nadwyżek, ponownie sprawdzana
+    industry: Kontrola jakości
+    challenge: Deski z nadwyżek i wyprzedaży pochodzą z nadprodukcji, więc kupujący słusznie pytają, czy przeceniona deska przechodzi te same kontrole co pełnopłatna.
+    solution: Każda deska wyprzedażowa trafia ponownie na linię kontroli jakości. Każda komora jest poddawana testowi ciśnieniowemu z utrzymaniem 24-48 godzin przy 1,25-krotnym ciśnieniu nominalnym, każda wysyłka jest sprawdzana pod kątem wad, a akcesoria są kontrolowane pod kątem kompletności przed pakowaniem.
+    result: 99,3% brak wad w wysyłkach w ciągu ostatnich 12 miesięcy – ten sam standard dotyczy zarówno wyprzedaży, jak i zapasów detalicznych.
+    image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-medusa-glow-1.webp
+    tags:
+      - Próba ciśnieniowa
+      - Bez Wad
+      - Kontrola Jakości Wyprzedaży
+    outcome_metrics:
+      - label: Wskaźnik Braków
+        value: 99.3%
+      - label: Zakres Testu Ciśnieniowego
+        value: 100%
+      - label: Czas Utrzymania
+        value: 24-48h
+  - id: pressure-test-regime
+    client: Utrzymanie Ciśnienia przez 24-48 godzin
+    product: Każda Komora, 1,25-krotne Ciśnienie Nominalne
+    industry: Testowanie Produktu
+    challenge: Deska SUP żyje lub umiera poprzez swoje jądro i szwy drop-stitch, a szybkie sprawdzenie napompowania na końcu linii nie wystarcza, aby wykryć powolne nieszczelności lub słabe spoiny.
+    solution: Każda deska jest napompowana do 1,25-krotnego ciśnienia nominalnego i utrzymywana przez 24-48 godzin, przy czym spadek ciśnienia musi pozostać poniżej 5%. Zawory, pierścienie D, szwy i wyporność są sprawdzane z zerową tolerancją na wady bezpieczeństwa.
+    result: 100% produkcji przechodzi ten proces zanim zostanie zapakowana – żadnych skrótów przy próbkowaniu, żadnych wyjątków.
+    image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/factory/paddleboardoverstock-sup-manufacturing.webp
+    tags:
+      - Drop-Stitch
+      - 1,25x Ciśnienie
+      - Zero Wad Bezpieczeństwa
+    outcome_metrics:
+      - label: Testowe Ciśnienie
+        value: 1.25x
+      - label: Maksymalne spadek ciśnienia
+        value: <5%
+      - label: Testowane Jednostki
+        value: 100%
+  - id: warranty-claims-support
+    client: Gwarancja, Która Odpowiada
+    product: 2-letnia Ochrona dla desek SUP i akcesoriów
+    industry: Obsługa Posprzedażowa
+    challenge: Kupowanie przecenionych produktów bezpośrednio z fabryki rodzi uczciwe pytanie — jeśli coś pójdzie nie tak za kilka miesięcy, kto się tym zajmie?
+    solution: Każda deska jest objęta 2-letnią gwarancją obejmującą deski SUP, szwy drop-stitch, zawory do pompowania i akcesoria. Roszczenia kieruje się bezpośrednio do naszego zespołu — wyślij zdjęcia lub krótki film, a my zajmiemy się resztą.
+    result: Roszczenia gwarancyjne są rozpatrywane i załatwiane przez ten sam zespół, który kontroluje produkcję — bez pośredników.
+    image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/hero/factory-gate.webp
+    tags:
+      - 2-letnia gwarancja
+      - Bezpośrednie wsparcie
+      - Akcesoria objęte gwarancją
+    outcome_metrics:
+      - label: Gwarancja
+        value: 2 lata
+      - label: Zakres ochrony
+        value: Deska + Akcesoria
+      - label: Wsparcie
+        value: Bezpośredni zespół
+test_results:
+  - metric: Units Pressure Tested
+    value: 100%
+    detail: Każda deska, każda komora, każda partia
+  - metric: Max Pressure Drop
+    value: <5%
+    detail: Ponad 24h przy 1,25-krotnie zwiększonym ciśnieniu
+  - metric: Outgoing Defect-Free Rate
+    value: 99.3%
+    detail: Wysyłki z 12 miesięcy
+  - metric: Pressure Hold Duration
+    value: 24-48h
+    detail: W zależności od kategorii produktu
+  - metric: Test Pressure Margin
+    value: 1.25x
+    detail: Margines bezpieczeństwa w każdej komorze
+  - metric: Safety Defect Tolerance
+    value: 0%
+    detail: Zawory, D-ringi, szwy, wyporność
+spec_sheets:
+  - name: Deski SUP-owe
+    href: /products
+  - name: Akcesoria
+    href: /products
+deployment_photos:
+  - image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-medusa-glow-1.webp
+    caption: SUP deska sunąca po spokojnej wodzie o zachodzie słońca
+    context: Na wodzie
+  - image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/hero/factory-gate.webp
+    caption: SUP turystyka wzdłuż malowniczego wybrzeża
+    context: Rekreacja
+  - image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/factory/paddleboardoverstock-sup-manufacturing.webp
+    caption: Produkcja dmuchanych SUP w naszym zakładzie w Weihai
+    context: Fabryka
+  - image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/factory/paddleboardoverstock-warehouse-storage.webp
+    caption: Gotowe do wysyłki nadwyżki w naszym magazynie w Weihai
+    context: Logistyka

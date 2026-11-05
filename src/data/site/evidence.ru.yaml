@@ -1,0 +1,98 @@
+badge: Proof & Quality
+heading: Доказательства
+description: Реальные качественные истории, тестовые данные и фотографии с фабрики, показывающие, как каждая доска из секции распродажи отправляется с качеством розничного уровня.
+case_studies:
+  - id: clearance-quality-check
+    client: Распродажные запасы, контроль качества розничного уровня
+    product: Каждая доска с излишками на складе повторно проверяется
+    industry: Контроль качества
+    challenge: Доски с излишками и распродажные доски происходят из сверхпроизводственных партий, поэтому покупатели справедливо спрашивают, проходят ли доски со скидкой те же проверки, что и доски по полной цене.
+    solution: Каждая доска из секции распродажи повторно проходит контроль качества. Каждая камера проверяется на давление с удержанием 24-48 часов при 1,25-кратном номинальном давлении, каждая отправляемая партия проверяется на дефекты, а аксессуары проверяются на комплектность перед упаковкой.
+    result: 99,3% Бесп defect rate на отправляемых партиях за последние 12 месяцев — тот же стандарт применяется к распродажным и розничным запасам.
+    image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-medusa-glow-1.webp
+    tags:
+      - Испытание давлением
+      - Без дефектов
+      - Контроль качества распродажи
+    outcome_metrics:
+      - label: Процент без дефектов
+        value: 99.3%
+      - label: Покрытие проверки давления
+        value: 100%
+      - label: Время удержания
+        value: 24-48h
+  - id: pressure-test-regime
+    client: Удержание давления 24-48 часов
+    product: Каждая камера, 1,25-кратное номинальное давление
+    industry: Тестирование продукта
+    challenge: Доска SUP живет или умирает благодаря своему сердечнику drop-stitch и швам, и быстрая проверка на надув в конце линии недостаточна, чтобы выявить медленные утечки или слабые сварные швы.
+    solution: Каждая доска надувается до 1,25-кратного номинального давления и удерживается 24-48 часов, с допустимым падением давления менее 5%. Клапаны, D-кольца, швы и плавучесть проверяются с нулевой толерантностью к дефектам безопасности.
+    result: 100% продукции проходит этот режим перед упаковкой — без выборочных проверок, без исключений.
+    image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/factory/paddleboardoverstock-sup-manufacturing.webp
+    tags:
+      - Drop-Stitch
+      - 1,25-кратное давление
+      - Нулевые дефекты безопасности
+    outcome_metrics:
+      - label: Тестовое давление
+        value: 1.25x
+      - label: Максимальное падение давления
+        value: <5%
+      - label: Количество протестированных единиц
+        value: 100%
+  - id: warranty-claims-support
+    client: Гарантия, которая отвечает на вопросы
+    product: 2 года гарантии на доски SUP и аксессуары
+    industry: Послепродажное обслуживание
+    challenge: Покупка товаров с распродажи напрямую с завода вызывает справедливый вопрос — если что-то выйдет из строя через несколько месяцев, кто будет этим заниматься?
+    solution: Каждая доска поставляется с 2-летней гарантией, которая покрывает SUP доски, drop-stitch швы, клапаны для надувания и аксессуары. Претензии направляются напрямую нашей команде — отправьте фото или короткое видео, а мы разберёмся с этим.
+    result: Гарантийные претензии рассматриваются и решаются той же командой, которая проверяет производство — напрямую, без посредников.
+    image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/hero/factory-gate.webp
+    tags:
+      - 2-летняя гарантия
+      - Прямая поддержка
+      - Аксессуары включены
+    outcome_metrics:
+      - label: Гарантия
+        value: 2 года
+      - label: Покрытие
+        value: Доска + Аксессуары
+      - label: Поддержка
+        value: Прямая команда
+test_results:
+  - metric: Units Pressure Tested
+    value: 100%
+    detail: Каждая доска, каждая камера, каждая партия
+  - metric: Max Pressure Drop
+    value: <5%
+    detail: Более 24 ч при давлении 1,25× номинального
+  - metric: Outgoing Defect-Free Rate
+    value: 99.3%
+    detail: Последующие 12-месячные поставки
+  - metric: Pressure Hold Duration
+    value: 24-48h
+    detail: В зависимости от категории товара
+  - metric: Test Pressure Margin
+    value: 1.25x
+    detail: Запас прочности в каждой камере
+  - metric: Safety Defect Tolerance
+    value: 0%
+    detail: Клапаны, D-образные кольца, швы, плавучесть
+spec_sheets:
+  - name: SUP-доски
+    href: /products
+  - name: Аксессуары
+    href: /products
+deployment_photos:
+  - image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-medusa-glow-1.webp
+    caption: SUP доска скользит по спокойной воде на закате
+    context: На воде
+  - image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/hero/factory-gate.webp
+    caption: SUP тур по живописному прибрежному побережью
+    context: Отдых
+  - image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/factory/paddleboardoverstock-sup-manufacturing.webp
+    caption: Производство надувных SUP на нашем производственном предприятии в Вэйхай
+    context: Фабрика
+  - image: https://assets.paddleboardoverstock.com/images/paddleboardoverstock/factory/paddleboardoverstock-warehouse-storage.webp
+    caption: Инвентарь на складе в Вэйхай, готовый к отправке
+    context: Логистика
