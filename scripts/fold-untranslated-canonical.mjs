@@ -16,8 +16,10 @@
  *     2. canonical 指向自身（self）→ 改写为英文根路径
  *     3. 已折叠（canonical = EN 根或他页）→ 不动
  *
- * 采样前剥离 Tldr AI 摘要块（data-ai-block="tldr"）：factory 系列页面的
- * 英文 directAnswer 会把已翻译页误判为英文。置信阈值防止近平局误折叠
+ * 采样前剥离全部 AI 语义块（data-ai-block="*"）：缺翻译时回退英文的
+ * sr-only 块（entity/definition/tldr 等）会把已翻译页误判为英文——
+ * 8 个语言首页曾因 entity 块英文回填被误折叠；factory 系列页面的英文
+ * directAnswer 亦同。置信阈值防止近平局误折叠
  * （实测 de/solutions/offshore-energy 曾以 17:17 平局按表序误判 en）。
  *
  * 已翻译页（正文为该语言）→ 保持 self canonical，不受影响。
@@ -284,7 +286,10 @@ function detectLanguage(text, bodyText) {
 function mainText(html) {
   const body = html.split('</head>')[1] || '';
   let t = (body.match(/<main\b[^>]*>([\s\S]*?)<\/main>/i) || [])[1] || body;
-  t = t.replace(/<section\b[^>]*data-ai-block="tldr"[^>]*>[\s\S]*?<\/section>/gi, ' ');
+  // 采样前剥离全部 AI 语义块（data-ai-block="*"）：这些 sr-only 块面向 AI 爬虫，
+  // 缺失 ai.* 翻译时回退英文，占据采样窗口头部，把正文已翻译的页面误判为英文
+  // （实测 8 个语言首页 de/it/nl/pl/id/ms/tl+ 因 entity 块英文回填被误折叠）。
+  t = t.replace(/<section\b[^>]*data-ai-block="[^"]*"[^>]*>[\s\S]*?<\/section>/gi, ' ');
   t = t.replace(/<(script|style|nav|header|footer|template|noscript|svg)\b[^>]*>[\s\S]*?<\/\1>/gi, ' ');
   // Form controls are not prose: the contact form's country <select> lists ~200 English
   // country names, which pushed en stopword hits above the fold threshold for a page
