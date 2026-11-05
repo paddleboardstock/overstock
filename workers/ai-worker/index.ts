@@ -793,7 +793,21 @@ async function runReindexSlice(env: Env, opts: { force?: boolean; reset?: boolea
   ]);
 
   let queue: QueueItem[] = Array.isArray(state.queue) ? state.queue : [];
-  const rebuildQueue = opts.force === true || opts.reset === true || state.status !== 'running';
+  // Self-heal: drop in-flight queue items whose corpus file no longer exists in
+  // the manifest (language removed/renamed between deploys). A stale queue would
+  // 404 on fetch and wedge the rebuild in a 500 retry loop forever.
+  const manifestFiles = new Set(manifest.locales.map((l) => l.file));
+  const validQueue = queue.filter((q) => manifestFiles.has(q.file));
+  const prunedStale = validQueue.length !== queue.length;
+  queue = validQueue;
+  if (prunedStale) {
+    await appendReindexLog(env, {
+      at: new Date().toISOString(),
+      note: 'pruned stale queue items missing from manifest',
+    });
+  }
+  const rebuildQueue =
+    opts.force === true || opts.reset === true || state.status !== 'running' || prunedStale;
   if (rebuildQueue) {
     queue = manifest.locales
       .filter((l) => opts.force === true || meta[l.locale]?.hash !== l.hash)
