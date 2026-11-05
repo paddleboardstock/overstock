@@ -61,6 +61,274 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
         },
       ],
     },
+    'family-recreation': {
+      description:
+        'Надуваеми плавателни съдове, използвани за случайни семейни разходки по езера, тихи реки и защитени крайбрежни води.',
+      features: [
+        'Голяма товароносимост',
+        'Стабилен дизайн за няколко души',
+        'Лесен транспорт',
+        'Няколко въздушни камери за безопасност',
+      ],
+      useCases: ['Разходки по езеро', 'Дни на плажа', 'Плаване по тихи реки', 'Пикници край вода'],
+      faq: [
+        {
+          q: 'Коя надуваема лодка е най-подходяща за семейство?',
+          a: 'Стабилна надуваема лодка или каяк е идеална за семейни развлечения. Потърсете модели с няколко въздушни камери за безопасност и достатъчна вместимост за всички.',
+        },
+        {
+          q: 'Безопасна ли е надуваемата лодка за деца?',
+          a: 'Да, при правилно наблюдение и спасителни жилетки. Надуваемите лодки са по своята същност стабилни и с меки стени, което ги прави по-безопасни за семейства в сравнение с лодки с твърд корпус.',
+        },
+      ],
+    },
+    'river-touring': {
+      description: 'Навигация по реки с течение, от спокойни участъци клас I до по-предизвикателни бързеи клас II.',
+      features: ['Маневрен корпус', 'Устойчив на удари', 'Бързо оттичане', 'Способен за бяла вода'],
+      useCases: ['Река клас I-II', 'Живописни речни прекосявания', 'Многодневни речни пътувания', 'Игра в бяла вода'],
+      faq: [
+        {
+          q: 'Какъв тип каяк е най-подходящ за речно турне?',
+          a: 'Надуваемите каяци са отлични за речно турне, тъй като са издръжливи, маневрени и могат да издържат на удари с камъни по-добре от твърдите каяци.',
+        },
+        {
+          q: 'Какви бързеи може да издържи надуваем каяк?',
+          a: 'Качествените надуваеми каяци са окачествени за бързеи клас I-II, като някои модели могат да издържат клас III в опитни ръце.',
+        },
+      ],
+    },
+  },
+  et: {
+    touring: {
+      description: 'Pikad aerutamisretked, mis katavad suurt vahemaad järvedel, jõgedel ja rannikuvees.',
+      features: ['Pika vahemaa laudade disain', 'Tõhus kerekuju', 'Kerge aer', 'Varustuse hoiustamine'],
+      useCases: ['Mitmepäevased järveretked', 'Ranniku avastamine', 'Jõereisid', 'Fitness-treening'],
+      faq: [
+        {
+          q: 'Milline laud on turismiks parim?',
+          a: 'Pikemad, kitsamad lauad, millel on tõhus kerekuju, sobivad turismiks kõige paremini. Täispuhutavad SUPs koos drop-stitch konstruktsiooniga tagavad nõutava jäikuse tõhusaks pika vahemaa aerutamiseks.',
+        },
+        {
+          q: 'Kui kaugele saab päevaga aerutada?',
+          a: 'Õige vormi ja tingimuste korral võivad kogenud aerutajad ühe turismipäevaga läbida 15–25 miili (24–40 km).',
+        },
+      ],
+    },
+    beginner: {
+      description:
+        'Esmakordsed aerutajad, kes õpivad täispuhutavate veesõidukite kasutamise, ohutuse ja vee navigatsiooni põhialuseid.',
+      features: [
+        'Stabiilne platvorm',
+        'Lihtne täis puhuda ja üles seada',
+        'Andestav käsitsemine',
+        'Kõik-ühes komplekt saadaval',
+      ],
+      useCases: [
+        'Esimene aerutamiskord',
+        'Põhijõuõpetuse õppimine',
+        'Veeohutuse mõistmine',
+        'Enesekindluse kasvatamine vees',
+      ],
+      faq: [
+        {
+          q: 'Kas täispuhutav SUP on sobiv algajatele?',
+          a: 'Jah. Täispuhutavad SUPs on stabiilsed, andestavad ja neid on lihtsam transportida ja hoiustada kui kõvasid laudu, mistõttu on need algajatele suurepärased.',
+        },
+        {
+          q: 'Kui kaua võtab aega tasakaalus aerutamise õppimine?',
+          a: 'Enamik algajaid suudab esimese sessiooni jooksul tasakaalus seisma tõusta ja aerutada lamevees. Tasakaal paraneb praktika käigus kiiresti.',
+        },
+      ],
+    },
+    'family-recreation': {
+      description:
+        'Täispuhutavad veesõidukid, mida kasutatakse juhuslike pereväljasõitude jaoks järvedel, rahulikul jõgedel ja kaitstud rannikuvetes.',
+      features: [
+        'Suur kandevõime',
+        'Stabiilne mitme inimese disain',
+        'Lihtne transport',
+        'Mitme õhuruumiga turvalisuse tagamiseks',
+      ],
+      useCases: ['Järvepäevad', 'Randapäevad', 'Rahulikud jõesõidud', 'Vees pikniku tegemine'],
+      faq: [
+        {
+          q: 'Milline täispuhutav paat on pere jaoks kõige parem?',
+          a: 'Stabiilne täispuhutav parv või kajakk on ideaalne perepuhkuseks. Otsige mudeleid, millel on turvalisuse tagamiseks mitu õhuruumi ja piisav mahutavus kõigile.',
+        },
+        {
+          q: 'Kas täispuhutav paat on laste jaoks ohutu?',
+          a: 'Jah, korraliku järelevalve ja päästevestidega. Täispuhutavad paadid on loomulikult stabiilsed ja pehmete külgedega, muutes need perepaatide jaoks turvalisemaks kui kõvakerepaadid.',
+        },
+      ],
+    },
+    'river-touring': {
+      description:
+        'Jõgede navigeerimine vooluga, alates rahulikest I klassi lõikudest kuni keerukamate II klassi kärestikeni.',
+      features: ['Manööverdav kere', 'Mõjutuskindel', 'Kiire äravool', 'Vahutavate jõgede jaoks sobiv'],
+      useCases: [
+        'I-II klassi jõgede sõit',
+        'Kaunite jõgede sillatud matkad',
+        'Mitmepäevased jõematkad',
+        'Vahutavate jõgede mängimine',
+      ],
+      faq: [
+        {
+          q: 'Milline kajak on jõematkamiseks parim?',
+          a: 'Täispuhutavad kajakid sobivad jõematkamiseks suurepäraselt, kuna need on vastupidavad, manööverdusvõimelised ja suudavad kive paremini taluda kui kõvakestad kajakid.',
+        },
+        {
+          q: 'Milliseid koske võib täispuhutav kajak läbida?',
+          a: 'Kvaliteetsed täispuhutavad kajakid on hinnatud I-II klassi koskede jaoks, mõned mudelid suudavad kogemustega III klassi koski läbida.',
+        },
+      ],
+    },
+  },
+  he: {
+    touring: {
+      description: 'טיולי חניית משוטים ארוכים המכסים מרחק משמעותי באגמים, נהרות ומים חופיים.',
+      features: ['עיצוב לוח למרחקים ארוכים', 'צורת גוף ימית יעילה', 'משוט קל', 'אחסון ציוד'],
+      useCases: ['מסעות באגמים למספר ימים', 'חקר חופים', 'מסעות נהר', 'אימון כושר'],
+      faq: [
+        {
+          q: 'איזה לוח הכי טוב לטיולים?',
+          a: 'לוחות ארוכים וצרים יותר עם צורות גוף ימית יעילות אידיאליים לטיולים. לוחות מתנפחים SUPs עם בנייה drop-stitch מספקים את הקשיחות הנדרשת להנעת משוטים יעילה למרחקים ארוכים.',
+        },
+        {
+          q: 'כמה רחוק אפשר לשוט ביום?',
+          a: 'עם כושר מתאים ותנאים טובים, שוטים מנוסים יכולים לכסות 15-25 מייל (24-40 ק"מ) ביום של טיול.',
+        },
+      ],
+    },
+    beginner: {
+      description: 'שוטים בפעם הראשונה שלומדים את היסודות של הפעלת כלי מים מתנפחים, בטיחות וניווט במים.',
+      features: ['פלטפורמה יציבה', 'קל לנפח ולהקים', 'טיפול סלחני', 'ערכת הכל-באחד זמינה'],
+      useCases: ['שיט בפעם הראשונה', 'לימוד מכות בסיסיות', 'הבנת בטיחות במים', 'בניית ביטחון במים'],
+      faq: [
+        {
+          q: 'האם לוח מתנפח SUP טוב למתחילים?',
+          a: 'כן. לוחות מתנפחים SUPs יציבים, סלחניים וקלים יותר להובלה ואחסון מלוחות קשים, מה שהופך אותם למעולים למתחילים.',
+        },
+        {
+          q: 'כמה זמן לוקח ללמוד לשיט עם משוט עמידה?',
+          a: 'רוב המתחילים יכולים לעמוד ולשוט על מים רגועים במהלך המפגש הראשון שלהם. שיווי המשקל משתפר במהירות עם תרגול.',
+        },
+      ],
+    },
+    'family-recreation': {
+      description: 'סירות מתנפחות המשמשות לטיולים משפחתיים נעימים באגמים, נהרות שקטים ומים חופיים מוגנים.',
+      features: ['יכולת נשיאה גבוהה', 'עיצוב יציב למסע של כמה אנשים', 'קלות בהובלה', 'כמה תאיות אוויר לבטיחות'],
+      useCases: ['טיולי אגמים', 'ימי חוף', 'שיט בנהרות שקטים', 'טיולי פיקניק ליד מים'],
+      faq: [
+        {
+          q: 'איזו סירה מתנפחת היא הטובה ביותר למשפחה?',
+          a: 'דינגי או קיאק מתנפחים יציבים אידיאליים לפנאי משפחתי. חפשו דגמים עם כמה תאיות אוויר לבטיחות וכושר נשיאה מספיק לכולם.',
+        },
+        {
+          q: 'האם סירה מתנפחת בטוחה לילדים?',
+          a: 'כן, בפיקוח מתאים ובאפודי הצלה. סירות מתנפחות יציבות מטבען ובעלות דפנות רכות, מה שהופך אותן לבטוחות יותר מסירות קשות למשפחות.',
+        },
+      ],
+    },
+    'river-touring': {
+      description: 'ניווט בנהרות עם זרם, החל ממקטעים שקטים דרגה I ועד מערבולות דרגה II מאתגרות יותר.',
+      features: ['סיפון מנוהל', 'עמיד בזעזועים', 'ניקוז מהיר', 'יכולת מים סוערים'],
+      useCases: ['נהר דרגה I-II', 'שיט נהרות נופי', 'טיולי נהרות מרובי ימים', 'משחק במים סוערים'],
+      faq: [
+        {
+          q: 'איזה סוג של קיאק הכי טוב לטיול בנהרות?',
+          a: 'קיאקים מתנפחים מצוינים לטיול בנהרות שכן הם עמידים, ניתנים לתמרון, ויכולים להתמודד עם פגיעות בסלעים טוב יותר מקיאקים עם מעטפת קשה.',
+        },
+        {
+          q: 'איזה מיתלים קיאק מתנפח יכול להתמודד איתם?',
+          a: 'קיאקים מתנפחים איכותיים מדורגים לנהרות דרגה I-II, כאשר חלק מהדגמים מסוגלים לדרגה III בידיים מנוסות.',
+        },
+      ],
+    },
+  },
+  hr: {
+    touring: {
+      description:
+        'Produžena veslačka putovanja koja pokrivaju značajne udaljenosti po jezerima, rijekama i obalnim vodama.',
+      features: ['Dizajn daske za dugotrajne vožnje', 'Efikasan oblik trupa', 'Lagana vesla', 'Prostor za opremu'],
+      useCases: ['Višednevne ekspedicije po jezerima', 'Obalna istraživanja', 'Riječne vožnje', 'Trening za kondiciju'],
+      faq: [
+        {
+          q: 'Koja je daska najbolja za touring?',
+          a: 'Duža, uža daske s efikasnim oblikom trupa idealne su za touring. Naduvane SUPs s drop-stitch konstrukcijom pružaju krutost potrebnu za učinkovito veslanje na dugim udaljenostima.',
+        },
+        {
+          q: 'Koliko daleko možete veslati u jednom danu?',
+          a: 'Uz odgovarajuću kondiciju i uvjete, iskusni veslači mogu preći 15-25 milja (24-40 km) u jednom danu turističkog veslanja.',
+        },
+      ],
+    },
+    beginner: {
+      description:
+        'Prvi put veslači koji uče osnove upravljanja naduvnim vodenim plovilima, sigurnosti i navigaciji na vodi.',
+      features: [
+        'Stabilna platforma',
+        'Jednostavno napuhavanje i postavljanje',
+        'Oluedljivo rukovanje',
+        'Dostupan komplet sve-u-jednom',
+      ],
+      useCases: [
+        'Prvo veslanje',
+        'Učenje osnovnih zamaha',
+        'Razumijevanje sigurnosti na vodi',
+        'Izgradnja samopouzdanja na vodi',
+      ],
+      faq: [
+        {
+          q: 'Je li naduvna SUP dobra za početnike?',
+          a: 'Da. Naduvne SUPs su stabilne, oprostive i lakše ih je transportirati i skladištiti nego tvrde daske, što ih čini izvrsnima za početnike.',
+        },
+        {
+          q: 'Koliko vremena treba da se nauči stand-up paddleboarding?',
+          a: 'Većina početnika može stajati i veslati po mirnoj vodi tijekom svoje prve sesije. Ravnoteža se brzo poboljšava s praksom.',
+        },
+      ],
+    },
+    'family-recreation': {
+      description:
+        'Napuhljiva plovila koja se koriste za povremene obiteljske izlete na jezerima, mirnim rijekama i zaštićenim obalnim vodama.',
+      features: [
+        'Veliki kapacitet težine',
+        'Stabilan dizajn za više osoba',
+        'Jednostavan za transport',
+        'Više zračnih komora za sigurnost',
+      ],
+      useCases: ['Izleti na jezeru', 'Dani na plaži', 'Plovidba mirnim rijekama', 'Piknici uz vodu'],
+      faq: [
+        {
+          q: 'Koja napuhljiva čamac je najbolja za obitelj?',
+          a: 'Stabilni napuhljivi čamac ili kajak idealan je za obiteljski odmor. Potražite modele s više zračnih komora za sigurnost i dovoljno kapaciteta za sve.',
+        },
+        {
+          q: 'Je li napuhljivi čamac siguran za djecu?',
+          a: 'Da, uz odgovarajući nadzor i prsluke za spašavanje. Napuhljivi čamci su po prirodi stabilni i s mekanim stranama, što ih čini sigurnijima od čvrstih trupa za obitelji.',
+        },
+      ],
+    },
+    'river-touring': {
+      description: 'Navigacija rijekama s tijekom vode, od blagih dijelova klase I do zahtjevnijih brzacih klase II.',
+      features: ['Manjepljivo korito', 'Otporno na udarce', 'Brzo isušivanje', 'Sposobno za bijelu vodu'],
+      useCases: [
+        'Plovidba rijekom klase I-II',
+        'Scenski splavovi rijekom',
+        'Višednevni izleti rijekom',
+        'Igre na bijeloj vodi',
+      ],
+      faq: [
+        {
+          q: 'Koja je vrsta kajaka najbolja za vožnju rijekom?',
+          a: 'Napuhavajući kajaci izvrsni su za vožnju rijekom jer su izdržljivi, okretniji i bolje podnose udarce o stijene od kajaka s tvrdom ljuskom.',
+        },
+        {
+          q: 'Koje brzace može podnijeti napuhavajući kajak?',
+          a: 'Kvalitetni napuhavajući kajaci ocijenjeni su za brzace klase I-II, a neki modeli mogu podnijeti i klasu III kod iskusnih ruku.',
+        },
+      ],
+    },
   },
   hu: {
     touring: {
@@ -101,6 +369,42 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
         {
           q: 'Mennyi időbe telik megtanulni a stand-up paddleboardingot?',
           a: 'A legtöbb kezdő már az első alkalommal képes felállni és evezni sík vízen. Az egyensúly gyorsan javul a gyakorlással.',
+        },
+      ],
+    },
+    'family-recreation': {
+      description:
+        'Felfújható vízi járművek, amelyeket családi kikapcsolódásra használnak tavakon, enyhe folyókon és védett tengerparti vizeken.',
+      features: [
+        'Nagy teherbírás',
+        'Stabil, több személyes kialakítás',
+        'Könnyű szállítás',
+        'Több légkamra a biztonság érdekében',
+      ],
+      useCases: ['Tavi kirándulások', 'Strandnapok', 'Enyhe folyami úszások', 'Piknikezés vízparton'],
+      faq: [
+        {
+          q: 'Melyik felfújható csónak a legjobb egy család számára?',
+          a: 'Egy stabil felfújható csónak vagy kajak ideális a családi szabadidős tevékenységekhez. Olyan modelleket keressünk, amelyek több légkamrával rendelkeznek a biztonság érdekében és elegendő kapacitással mindenki számára.',
+        },
+        {
+          q: 'Biztonságos a felfújható csónak gyermekek számára?',
+          a: 'Igen, megfelelő felügyelet és mentőmellény mellett. A felfújható csónakok természetüknél fogva stabilak és puha oldallal rendelkeznek, ami biztonságosabbá teszi őket a keménytestű csónakoknál a családok részére.',
+        },
+      ],
+    },
+    'river-touring': {
+      description: 'Folyók átkelése áramlattal, az enyhe I. osztályú szakaszoktól a nehezebb II. osztályú zuhatagokig.',
+      features: ['Kormányozható hajótest', 'Ütközésálló', 'Gyors leeresztés', 'Fehérvizes képes'],
+      useCases: ['I-II. osztályú folyami evezés', 'Festői folyami túrák', 'Többnapos folyami utak', 'Fehérvizes játék'],
+      faq: [
+        {
+          q: 'Milyen típusú kajak a legjobb folyami túrázáshoz?',
+          a: 'A felfújható kajakok kiválóak a folyami túrázáshoz, mivel tartósak, könnyen manőverezhetők, és jobban bírják a kövekkel való ütközést, mint a keményhéjú kajakok.',
+        },
+        {
+          q: 'Milyen zuhatagokat bír el egy felfújható kajak?',
+          a: 'A minőségi felfújható kajakok I-II. osztályú zuhatagokra vannak minősítve, egyes modellek tapasztalt kezekben III. osztályt is elbírnak.',
         },
       ],
     },
@@ -149,6 +453,299 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
         {
           q: 'Berapa lama waktu yang dibutuhkan untuk belajar stand-up paddleboarding?',
           a: 'Kebanyakan pemula dapat berdiri dan mendayung di perairan tenang dalam sesi pertama mereka. Keseimbangan meningkat dengan cepat melalui latihan.',
+        },
+      ],
+    },
+    'family-recreation': {
+      description:
+        'Kapal karet tiup digunakan untuk rekreasi keluarga santai di danau, sungai yang tenang, dan perairan pantai yang terlindungi.',
+      features: [
+        'Kapasitas berat besar',
+        'Desain stabil untuk banyak orang',
+        'Mudah dibawa',
+        'Beberapa ruang udara untuk keselamatan',
+      ],
+      useCases: ['Rekreasi di danau', 'Hari di pantai', 'Arung sungai yang tenang', 'Perjalanan piknik di tepi air'],
+      faq: [
+        {
+          q: 'Perahu karet tiup mana yang terbaik untuk keluarga?',
+          a: 'Perahu karet atau kayak tiup yang stabil ideal untuk rekreasi keluarga. Cari model dengan beberapa ruang udara untuk keselamatan dan kapasitas cukup untuk semua orang.',
+        },
+        {
+          q: 'Apakah perahu karet tiup aman untuk anak-anak?',
+          a: 'Ya, dengan pengawasan yang tepat dan jaket pelampung. Perahu tiup secara alami stabil dan memiliki sisi yang lembut, membuatnya lebih aman daripada perahu berbodi keras untuk keluarga.',
+        },
+      ],
+    },
+    'river-touring': {
+      description:
+        'Menavigasi sungai dengan arus, dari sungai yang tenang Kelas I hingga jeram yang lebih menantang Kelas II.',
+      features: [
+        'Lambung yang mudah dikendalikan',
+        'Tahan benturan',
+        'Pembuangan air cepat',
+        'Mampu digunakan di jeram',
+      ],
+      useCases: [
+        'Arung jeram kelas I-II',
+        'Arung sungai yang indah',
+        'Perjalanan sungai multi-hari',
+        'Bermain di jeram',
+      ],
+      faq: [
+        {
+          q: 'Jenis kayak apa yang terbaik untuk tur sungai?',
+          a: 'Kayak kembung sangat baik untuk tur sungai karena tahan lama, mudah dikendalikan, dan dapat menangani benturan dengan batu lebih baik daripada kayak berbadan keras.',
+        },
+        {
+          q: 'Jeram apa yang bisa ditangani kayak kembung?',
+          a: 'Kayak kembung berkualitas dinilai untuk jeram kelas I-II, dengan beberapa model mampu menghadapi kelas III jika digunakan oleh orang berpengalaman.',
+        },
+      ],
+    },
+  },
+  ko: {
+    touring: {
+      description: '호수, 강, 해안 수역에서 상당한 거리를 커버하는 장거리 패들링 여행.',
+      features: ['장거리용 보드 디자인', '효율적인 선체 형상', '가벼운 패들', '장비 보관 공간'],
+      useCases: ['다일간 호수 원정', '해안 탐험', '강 여행', '피트니스 훈련'],
+      faq: [
+        {
+          q: '투어링에 가장 적합한 보드는 무엇입니까?',
+          a: '길고 좁은 보드에 효율적인 선체 형상이 있는 보드가 투어링에 이상적입니다. 팽창식 SUPs 은 drop-stitch 구조로 효율적인 장거리 패들링에 필요한 강성을 제공합니다.',
+        },
+        {
+          q: '하루에 어느 정도 거리를 패들링할 수 있습니까?',
+          a: '적절한 체력과 조건이 갖춰지면, 경험 있는 패들러는 투어링 하루 동안 15-25마일(24-40 km)를 이동할 수 있습니다.',
+        },
+      ],
+    },
+    beginner: {
+      description: '팽창식 수상 장비 조작, 안전 및 수상 내비게이션 기본을 배우는 초보 패들러.',
+      features: ['안정적인 플랫폼', '간편한 팽창 및 설치', '관용적인 조작', '올인원 키트 제공'],
+      useCases: ['처음 패들링', '기본 스트로크 학습', '수상 안전 이해', '수상에서 자신감 형성'],
+      faq: [
+        {
+          q: '초보자에게 팽창식 SUP 가 좋나요?',
+          a: '예. 팽창식 SUPs 는 안정적이고 관용적이며, 하드 보드보다 운반 및 보관이 용이하여 초보자에게 매우 적합합니다.',
+        },
+        {
+          q: '스탠드업 패들보드를 배우는 데 얼마나 걸리나요?',
+          a: '대부분 초보자는 첫 세션에서 평평한 물에서 서서 패들할 수 있습니다. 연습을 통해 균형감각은 빠르게 향상됩니다.',
+        },
+      ],
+    },
+    'family-recreation': {
+      description: '호수, 잔잔한 강, 보호된 해안 지역에서 가족이 가벼운 나들이를 위해 사용하는 팽창식 수상 보트.',
+      features: ['대용량 하중', '안정적인 다인용 설계', '쉬운 운송', '안전을 위한 다중 공기실'],
+      useCases: ['호수 나들이', '해변 나들이', '잔잔한 강에서의 플로트', '수변 소풍'],
+      faq: [
+        {
+          q: '가족에게 가장 좋은 팽창식 보트는 무엇인가요?',
+          a: '안정적인 팽창식 딩히 또는 카약이 가족 레크리에이션에 이상적입니다. 안전을 위해 다중 공기실이 있고 모든 사람이 탈 수 있는 충분한 용량을 가진 모델을 찾으세요.',
+        },
+        {
+          q: '팽창식 보트는 어린이에게 안전한가요?',
+          a: '예, 적절한 감독과 구명조끼를 착용하면 가능합니다. 팽창식 보트는 본질적으로 안정적이고 측면이 부드러워 딱딱한 선체의 보트보다 가족에게 안전합니다.',
+        },
+      ],
+    },
+    'river-touring': {
+      description: '잔잔한 클래스 I 구간부터 더 도전적인 클래스 II 급류까지 흐르는 강을 항해.',
+      features: ['조종이 용이한 선체', '충격 저항성', '빠른 배수', '급류 가능'],
+      useCases: ['I-II급 강류 운행', '경치 좋은 강 플로트', '다일 강 여행', '급류 놀이'],
+      faq: [
+        {
+          q: '어떤 종류의 카약이 강 여행에 가장 적합한가요?',
+          a: '내구성이 뛰어나고 조종이 용이하며 딱딱한 셸 카약보다 바위와의 충격을 잘 견딜 수 있기 때문에, 강 여행에는 고무보트 카약이 매우 좋습니다.',
+        },
+        {
+          q: '고무보트 카약은 어떤 급류를 견딜 수 있나요?',
+          a: '양질의 고무보트 카약은 I-II급 급류용으로 평가되며, 일부 모델은 숙련된 사용자가 III급 급류도 견딜 수 있습니다.',
+        },
+      ],
+    },
+  },
+  lt: {
+    touring: {
+      description: 'Ilgos ir tolimos plaukiojimo kelionės ežeruose, upėse ir palei pakrantę.',
+      features: [
+        'Ilgo nuotolio lentos dizainas',
+        'Efektyvi korpuso forma',
+        'Lengvas irklas',
+        'Įrankių laikymo galimybės',
+      ],
+      useCases: [
+        'Daugiadienės ekskursijos ežeruose',
+        'Pajūrio tyrinėjimas',
+        'Upių kelionės',
+        'Fizinio pasirengimo treniruotės',
+      ],
+      faq: [
+        {
+          q: 'Kokia lenta geriausia turizmui?',
+          a: 'Ilgesnės, siauresnės lentos su efektyvia korpuso forma yra idealios turizmui. Pripučiamieji SUPs su drop-stitch konstrukcija suteikia tvirtumą, reikalingą efektyviam ilgo nuotolio irklavimui.',
+        },
+        {
+          q: 'Kiek galima nuplaukti per dieną?',
+          a: 'Esant tinkamam fiziniam pasirengimui ir sąlygoms, patyrę irklistai per vieną turizmo dieną gali nueiti 15-25 mylių (24-40 km).',
+        },
+      ],
+    },
+    beginner: {
+      description:
+        'Pradedantieji, mokantis pripučiamųjų vandens transporto priemonių valdymo, saugos ir laivybos pagrindų.',
+      features: [
+        'Stabili platforma',
+        'Lengva pripūsti ir paruošti',
+        'Atleidžiantis (naudojimui) valdymas',
+        'Galimas viskas-viename rinkinys',
+      ],
+      useCases: [
+        'Pirmasis irklavimas',
+        'Mokomasi pagrindinių irklavimo judesių',
+        'Vandens saugos supratimas',
+        'Pasitikėjimo įgijimas vandenyje',
+      ],
+      faq: [
+        {
+          q: 'Ar pripučiamas SUP tinka pradedantiesiems?',
+          a: 'Taip. Pripučiami SUPs yra stabilūs, lengvai valdomi ir paprasčiau transportuojami bei laikomi nei kietos lentos, todėl puikiai tinka pradedantiesiems.',
+        },
+        {
+          q: 'Kiek užtrunka išmokti stovimą irklavimą?',
+          a: 'Dauguma pradedančiųjų gali atsistoti ir irkluoto ant ramios vandens pradžioje. Pusiausvyra greitai gerėja su praktika.',
+        },
+      ],
+    },
+    'family-recreation': {
+      description:
+        'Pripučiamieji vandens laivai, skirti laisvalaikio šeimos išvykoms ežeruose, ramiose upėse ir saugiuose pakrančių vandenyse.',
+      features: [
+        'Didelė svorio talpa',
+        'Stabilus kelių žmonių dizainas',
+        'Lengvas transportavimas',
+        'Daug oro kamerų saugumui',
+      ],
+      useCases: ['Išvykos prie ežero', 'Paplūdimio dienos', 'Ramus plaukimas upe', 'Piknikai prie vandens'],
+      faq: [
+        {
+          q: 'Kuris pripučiamas laivas geriausias šeimai?',
+          a: 'Stabilus pripučiamas kateris ar baidarė yra idealus šeimos laisvalaikiui. Rinkitės modelius su keliomis oro kameromis saugumui ir pakankama talpa visiems.',
+        },
+        {
+          q: 'Ar pripučiamas laivas saugus vaikams?',
+          a: 'Taip, tinkamai juos prižiūrint ir naudojant gelbėjimosi liemenes. Pripučiamieji laivai yra natūraliai stabilūs ir minkštomis sienelėmis, todėl šeimoms yra saugesni nei laivai su kietu korpusu.',
+        },
+      ],
+    },
+    'river-touring': {
+      description: 'Plaukimas upėmis su tėkme, nuo ramių I klasės ruožų iki sudėtingesnių II klasės greitupių.',
+      features: [
+        'Manevringas korpusas',
+        'Atsparus smūgiams',
+        'Greitas vandens nutekėjimas',
+        'Vandens sportui tinkamas',
+      ],
+      useCases: [
+        'I-II klasės upės plaukimas',
+        'Vaizdingos upės plaukimai',
+        'Daugdieniai upių žygiai',
+        'Vandens sporto žaidimai',
+      ],
+      faq: [
+        {
+          q: 'Koks baidarės tipas geriausias upių turizmui?',
+          a: 'Pripučiamas baidares puikiai tinka upių turizmui, nes jos yra patvarios, manevringos ir geriau atlaiko susidūrimus su akmenimis nei kietos korpusinės baidarės.',
+        },
+        {
+          q: 'Kokius rapidus gali įveikti pripučiamoji baidarė?',
+          a: 'Kokybiškos pripučiamojo tipo baidarės įvertintos I-II klasės rapidams, o kai kurie modeliai patyrusio vartotojo rankose gali įveikti III klasės rapidus.',
+        },
+      ],
+    },
+  },
+  lv: {
+    touring: {
+      description: 'Paplašinātas airēšanas braucieni, segumā nozīmīgu attālumu pa ezeriem, upēm un piekrastes ūdeņiem.',
+      features: ['Ilgdistance dēļa dizains', 'Efektīva korpusa forma', 'Viegls airis', 'Aprīkojuma glabāšanas vieta'],
+      useCases: ['Daudzu dienu ekspedīcijas pa ezeriem', 'Piekrastes izpēte', 'Upju ceļojumi', 'Fitnesa treniņi'],
+      faq: [
+        {
+          q: 'Kurš dēlis ir vislabākais tūrisma braucieniem?',
+          a: 'Garāki, šaurāki dēļi ar efektīvām korpusa formām ir ideāli tūrisma braucieniem. Piepūšamie SUPs ar drop-stitch konstrukciju nodrošina nepieciešamo stingrību efektīvai ilgdistances airēšanai.',
+        },
+        {
+          q: 'Cik tālu var airēt dienā?',
+          a: 'Ar pienācīgu fizisko sagatavotību un labvēlīgiem apstākļiem pieredzējuši airētāji tūrisma brauciena dienā var veikt 15-25 jūdzes (24-40 km).',
+        },
+      ],
+    },
+    beginner: {
+      description:
+        'Pirmo reizi airētāji, apgūstot piepūšamu ūdens transportlīdzekļu darbību, drošību un ūdens navigāciju.',
+      features: [
+        'Stabila platforma',
+        'Viegli piepūšams un uzstādāms',
+        'Atvieglo airēšanu',
+        'Pieejams viss vienā komplektā',
+      ],
+      useCases: [
+        'Pirmā airēšanas reize',
+        'Pamatzīmju apguve',
+        'Ūdens drošības izpratne',
+        'Pašklepošanās un pārliecības veidošana uz ūdens',
+      ],
+      faq: [
+        {
+          q: 'Vai piepūšamais SUP ir piemērots iesācējiem?',
+          a: 'Jā. Piepūšamie SUPs ir stabili, piedodoši un vieglāk transportējami un uzglabājami nekā cietie dēļi, padarot tos lieliskus iesācējiem.',
+        },
+        {
+          q: 'Cik ilgi nepieciešams, lai iemācītos airēt stāvus?',
+          a: 'Lielākā daļa iesācēju var nostāties un airēt pa mierīgu ūdeni jau pirmajā nodarbībā. Līdzsvars ātri uzlabojas ar praksi.',
+        },
+      ],
+    },
+    'family-recreation': {
+      description:
+        'Piepūšamie ūdenslīdzekļi, ko izmanto ikdienišķiem ģimenes izbraucieniem uz ezeriem, maigiem upju posmiem un aizsargātām piekrastes ūdeņu zonām.',
+      features: [
+        'Liela svara ietilpība',
+        'Stabila vairāku personu konstrukcija',
+        'Viegla transportēšana',
+        'Vairāki gaisa nodalījumi drošībai',
+      ],
+      useCases: ['Ezera izbraucieni', 'Pludmales dienas', 'Mierīgas upes braucieni', 'Piknika izbraucieni pie ūdens'],
+      faq: [
+        {
+          q: 'Kura piepūšamā laiva ir vislabāk piemērota ģimenei?',
+          a: 'Stabila piepūšamā laiva vai kajaks ir ideāli piemērots ģimenes atpūtai. Meklējiet modeļus ar vairākiem gaisa nodalījumiem drošībai un pietiekamu ietilpību visiem.',
+        },
+        {
+          q: 'Vai piepūšamā laiva ir droša bērniem?',
+          a: 'Jā, ar pienācīgu uzraudzību un glābšanas vestēm. Piepūšamās laivas ir dabiski stabilas un mīkstas sānu konstrukcijas, kas padara tās drošākas ģimenēm nekā cietas korpusa laivas.',
+        },
+      ],
+    },
+    'river-touring': {
+      description:
+        'Upju navigācija ar straumi, sākot no mierīgiem I klases posmiem līdz sarežģītākiem II klases rapidiem.',
+      features: ['Manevrējams korpuss', 'Izturīgs pret triecieniem', 'Ātra drenāža', 'Spējīgs baltais ūdens'],
+      useCases: [
+        'I-II klases upju braucieni',
+        'Ainaviski skaisti upju braucieni',
+        'Vairāku dienu upju pārgājieni',
+        'Balta ūdens spēle',
+      ],
+      faq: [
+        {
+          q: 'Kāds kajaks ir vispiemērotākais upju tūrisma braucieniem?',
+          a: 'Piepūšamie kajaki ir lieliski piemēroti upju tūrisma braucieniem, jo tie ir izturīgi, manevrējami un spēj labāk izturēt sadursmes ar akmeņiem nekā cietie kajaki.',
+        },
+        {
+          q: 'Kādas rapas var pārvarēt piepūšamais kajaks?',
+          a: 'Kvalitatīvi piepūšamie kajaki ir novērtēti I-II klases rapām, un daži modeļi pieredzējušu rokaspuišu vadībā spēj pārvarēt III klases rapas.',
         },
       ],
     },
@@ -201,6 +798,48 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
         },
       ],
     },
+    'family-recreation': {
+      description:
+        'Perahu tiup yang digunakan untuk percutian keluarga santai di tasik, sungai yang tenang, dan perairan pantai yang terlindung.',
+      features: [
+        'Kapasiti berat yang besar',
+        'Reka bentuk stabil untuk berbilang orang',
+        'Pengangkutan mudah',
+        'Beberapa ruang udara untuk keselamatan',
+      ],
+      useCases: ['Percutian di tasik', 'Hari di pantai', 'Arus sungai yang tenang', 'Perjalanan berkelah di tepi air'],
+      faq: [
+        {
+          q: 'Perahu tiup mana yang terbaik untuk keluarga?',
+          a: 'Perahu tiub atau kayak tiup yang stabil adalah ideal untuk rekreasi keluarga. Cari model dengan beberapa ruang udara untuk keselamatan dan kapasiti yang cukup untuk semua orang.',
+        },
+        {
+          q: 'Adakah perahu tiup selamat untuk kanak-kanak?',
+          a: 'Ya, dengan pengawasan yang betul dan jaket keselamatan. Perahu tiup adalah secara semula jadi stabil dan bersisi lembut, menjadikannya lebih selamat daripada perahu berkayuh keras untuk keluarga.',
+        },
+      ],
+    },
+    'river-touring': {
+      description:
+        'Navigasi sungai dengan arus, dari rentetan Kelas I yang tenang hingga jeram Kelas II yang lebih mencabar.',
+      features: ['Laut yang mudah dikendalikan', 'Tahan hentakan', 'Saliran cepat', 'Boleh digunakan di air deras'],
+      useCases: [
+        'Sungai kelas I-II',
+        'Mengapung di sungai yang indah',
+        'Perjalanan sungai berhari-hari',
+        'Permainan air deras',
+      ],
+      faq: [
+        {
+          q: 'Jenis kayak apa yang terbaik untuk jelajah sungai?',
+          a: 'Kayak tiup sangat baik untuk jelajah sungai kerana ia tahan lasak, mudah dikendalikan, dan boleh menghadapi hentakan dengan batu lebih baik daripada kayak keras.',
+        },
+        {
+          q: 'Apa jeram yang boleh diatasi oleh kayak tiup?',
+          a: 'Kayak tiup berkualiti dinilai untuk jeram kelas I-II, dengan beberapa model mampu untuk kelas III bagi tangan yang berpengalaman.',
+        },
+      ],
+    },
   },
   ro: {
     touring: {
@@ -250,6 +889,300 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
         },
       ],
     },
+    'family-recreation': {
+      description:
+        'Ambarcațiuni gonflabile utilizate pentru plimbări ocazionale în familie pe lacuri, râuri line și ape de coastă protejate.',
+      features: [
+        'Capacitate mare de greutate',
+        'Design stabil pentru mai multe persoane',
+        'Transport ușor',
+        'Multiple camere de aer pentru siguranță',
+      ],
+      useCases: ['Plimbări pe lac', 'Zile la plajă', 'Plutiri pe râuri line', 'Excursii cu picnic pe apă'],
+      faq: [
+        {
+          q: 'Care este cea mai bună barcă gonflabilă pentru o familie?',
+          a: 'Un dinghy sau caiac gonflabil stabil este ideal pentru recreere în familie. Căutați modele cu mai multe camere de aer pentru siguranță și suficientă capacitate pentru toată lumea.',
+        },
+        {
+          q: 'Este o barcă gonflabilă sigură pentru copii?',
+          a: 'Da, cu supraveghere corespunzătoare și veste de salvare. Bărci gonflabile sunt în mod inerent stabile și cu părți moi, ceea ce le face mai sigure decât bărcile cu corp dur pentru familii.',
+        },
+      ],
+    },
+    'river-touring': {
+      description:
+        'Navigarea pe râuri cu curent, de la secțiuni line Clasa I până la rapidități mai provocatoare Clasa II.',
+      features: ['Corpul maniabil', 'Rezistent la impact', 'Drenaj rapid', 'Capabil pentru ape albe'],
+      useCases: [
+        'Râu de clasa I-II',
+        'Plimbări scurte pe râu cu peisaj pitoresc',
+        'Călătorii de câteva zile pe râu',
+        'Joacă pe ape albe',
+      ],
+      faq: [
+        {
+          q: 'Ce tip de caiac este cel mai bun pentru tururi pe râu?',
+          a: 'Caiacele gonflabile sunt excelente pentru tururi pe râu, deoarece sunt durabile, ușor de manevrat și pot face față mai bine impacturilor cu pietrele decât caiacele cu coajă dură.',
+        },
+        {
+          q: 'Ce rapide poate face față un caiac gonflabil?',
+          a: 'Caiacele gonflabile de calitate sunt evaluate pentru rapide de clasa I-II, unele modele fiind capabile să abordeze clasa III în mâini experimentate.',
+        },
+      ],
+    },
+  },
+  sk: {
+    touring: {
+      description:
+        'Predĺžené výlety na pádlovanie pokrývajúce značnú vzdialenosť po jazerách, riekach a pobrežných vodách.',
+      features: [
+        'Dizajn dosky na dlhé vzdialenosti',
+        'Efektívny tvar trupu',
+        'Ľahké pádlo',
+        'Úložný priestor na vybavenie',
+      ],
+      useCases: ['Viacdňové jazdy po jazerách', 'Pobrežné objavovanie', 'Cesty po riekach', 'Tréning kondície'],
+      faq: [
+        {
+          q: 'Ktorá doska je najlepšia na cestovanie?',
+          a: 'Dlhšie, užšie dosky s efektívnymi tvarmi trupu sú ideálne na cestovanie. Nafukovacie SUPs s drop-stitch konštrukciou poskytujú tuhosť potrebnú pre efektívne dlhé vzdialenosti pádlovania.',
+        },
+        {
+          q: 'Ako ďaleko môžete pádlovať za deň?',
+          a: 'Pri vhodnej kondícii a podmienkach môžu skúsení pádlovači pokryť 15-25 míľ (24-40 km) za deň cestovania.',
+        },
+      ],
+    },
+    beginner: {
+      description:
+        'Začiatočníci, ktorí sa učia základy ovládania nafukovateľných vodných plavidiel, bezpečnosti a navigácie na vode.',
+      features: [
+        'Stabilná platforma',
+        'Jednoduché nafúkanie a nastavenie',
+        'Odpúšťajúce správanie pri riadení',
+        'Dostupná kompletná sada',
+      ],
+      useCases: [
+        'Prvé pádlovanie',
+        'Učenie základných ťahov',
+        'Porozumenie bezpečnosti na vode',
+        'Budovanie dôvery na vode',
+      ],
+      faq: [
+        {
+          q: 'Je nafukovacie SUP vhodné pre začiatočníkov?',
+          a: 'Áno. Nafukovacie SUPs sú stabilné, odpúšťajúce a ľahšie na prepravu a skladovanie než tvrdé dosky, čo ich robí vynikajúcimi pre začiatočníkov.',
+        },
+        {
+          q: 'Ako dlho trvá naučiť sa stand-up paddleboarding?',
+          a: 'Väčšina začiatočníkov sa dokáže postaviť a pádlovať na pokojnej vode už počas prvej lekcie. Rovnováha sa rýchlo zlepšuje s praxou.',
+        },
+      ],
+    },
+    'family-recreation': {
+      description:
+        'Nafukovateľné plavidlo používané na bežné rodinné výlety na jazerách, pokojné rieky a chránené pobrežné vody.',
+      features: [
+        'Veľká nosnosť',
+        'Stabilný dizajn pre viacerých ľudí',
+        'Jednoduchá preprava',
+        'Viacnásobné vzduchové komory pre bezpečnosť',
+      ],
+      useCases: ['Výlety k jazeru', 'Dni na pláži', 'Jemná rieka pláva', 'Piknikové výlety pri vode'],
+      faq: [
+        {
+          q: 'Ktorá nafukovacia loď je najlepšia pre rodinu?',
+          a: 'Stabilný nafukovací čln alebo kajak je ideálny na rodinnú rekreáciu. Hľadajte modely s viacerými vzduchovými komorami pre bezpečnosť a dostatočnou kapacitou pre všetkých.',
+        },
+        {
+          q: 'Je nafukovacia loď bezpečná pre deti?',
+          a: 'Áno, s riadnym dohľadom a záchrannými vestami. Nafukovacie lode sú prirodzene stabilné a mäkké na dotyk, čo ich robí pre rodiny bezpečnejšími ako lode s tvrdým trupom.',
+        },
+      ],
+    },
+    'river-touring': {
+      description: 'Plavba po riekach s prúdom, od jemných úsekov triedy I po náročnejšie rýchle prúdy triedy II.',
+      features: ['Manévrovateľný trup', 'Odolný proti nárazom', 'Rýchle odvodnenie', 'Vhodné do divokej vody'],
+      useCases: ['Rieky triedy I-II', 'Malebné plavby po rieke', 'Viacdňové výlety po rieke', 'Hranie vo divokej vode'],
+      faq: [
+        {
+          q: 'Aký typ kajaku je najlepší na riečne výlety?',
+          a: 'Nafukovacie kajaky sú vynikajúce na riečne výlety, pretože sú odolné, obratné a dokážu lepšie odolávať nárazom o kamene než kajaky s tvrdou škrupinou.',
+        },
+        {
+          q: 'Aké prúdy zvládne nafukovací kajak?',
+          a: 'Kvalitné nafukovacie kajaky sú určené na prúdy triedy I-II, pričom niektoré modely zvládnu aj triedu III v rukách skúseného používateľa.',
+        },
+      ],
+    },
+  },
+  sl: {
+    touring: {
+      description: 'Dolge vožnje s supi, ki zajemajo znatno razdaljo po jezerih, rekah in obalnih vodah.',
+      features: ['Dizajn dolge deske', 'Učinkovita oblika trupa', 'Lahka vesla', 'Shramba za opremo'],
+      useCases: ['Večdnevni izleti po jezerih', 'Raziskovanje obale', 'Potovanja po rekah', 'Vadba in fitnes'],
+      faq: [
+        {
+          q: 'Katera deska je najboljša za turing?',
+          a: 'Daljše, ožje deske z učinkovito obliko trupa so idealne za turing. Napihljive SUPs s drop-stitch konstrukcijo zagotavljajo togost, potrebno za učinkovito veslanje na dolge razdalje.',
+        },
+        {
+          q: 'Koliko lahko v enem dnevu veslamo?',
+          a: 'Z ustrezno kondicijo in pogoji lahko izkušeni veslači v enem dnevu turinga preveslajo 15-25 milj (24-40 km).',
+        },
+      ],
+    },
+    beginner: {
+      description: 'Prvič veslajoči, ki se učijo osnov delovanja napihljive plovne opreme, varnosti in plovbe po vodi.',
+      features: [
+        'Stabilna platforma',
+        'Enostavno napihovanje in postavitev',
+        'Opravičljivo rokovanje',
+        'Na voljo komplet vse-v-enem',
+      ],
+      useCases: [
+        'Prvo veslanje',
+        'Učenje osnovnih zaveslajev',
+        'Razumevanje varnosti na vodi',
+        'Povečevanje samozavesti na vodi',
+      ],
+      faq: [
+        {
+          q: 'Ali je napihljiva SUP dobra za začetnike?',
+          a: 'Da. Napihljive SUPs so stabilne, oproščajoče napake in jih je lažje prevažati ter shranjevati kot trde deske, zato so odlične za začetnike.',
+        },
+        {
+          q: 'Koliko časa traja, da se naučimo stand-up paddleboardinga?',
+          a: 'Večina začetnikov lahko stoji in vesla po mirni vodi že v svoji prvi seji. Ravnotežje se hitro izboljša z vadbo.',
+        },
+      ],
+    },
+    'family-recreation': {
+      description:
+        'Napihljiva plovila za sproščene družinske izlete po jezerih, mirnih rekah in zaščitenih obalnih vodah.',
+      features: [
+        'Velika nosilnost',
+        'Stabilna oblika za več oseb',
+        'Enostaven transport',
+        'Več zračnih komor za varnost',
+      ],
+      useCases: ['Izleti na jezero', 'Dnevi na plaži', 'Mirne rečne vožnje', 'Pikniki ob vodi'],
+      faq: [
+        {
+          q: 'Katera napihljiva čoln je najboljši za družino?',
+          a: 'Stabilna napihljiva gumenjaka ali kajak je idealen za družinsko rekreacijo. Poiščite modele z več zračnimi komorami za varnost in dovolj kapacitete za vse.',
+        },
+        {
+          q: 'Ali je napihljiv čoln varen za otroke?',
+          a: 'Da, ob ustreznem nadzoru in reševalnih jopičih. Napihljivi čolni so naravno stabilni in mehkih stranic, zaradi česar so za družine varnejši kot čolni s trdim trupom.',
+        },
+      ],
+    },
+    'river-touring': {
+      description: 'Plovba po rekah z tokom, od mirnih odsekov razreda I do zahtevnejših brzic razreda II.',
+      features: [
+        'Manjši trup, primeren za manevriranje',
+        'Odpornost proti udarcem',
+        'Hitro odvajanje vode',
+        'Primeren za divje vode',
+      ],
+      useCases: [
+        'Reke razreda I-II',
+        'Pletniški spusti po slikovitih rekah',
+        'Večdnevni rečni izleti',
+        'Igranje na divjih vodah',
+      ],
+      faq: [
+        {
+          q: 'Katera vrsta kajaka je najboljša za rečno turizem?',
+          a: 'Napihljivi kajaki so odlični za rečno turizem, saj so trpežni, enostavno vodljivi in bolje prenašajo trke s kamni kot trdi kajaki.',
+        },
+        {
+          q: 'Katere brzice lahko prenese napihljivi kajak?',
+          a: 'Kakovostni napihljivi kajaki so primerni za brzice razreda I-II, nekateri modeli pa z izkušenimi vodniki lahko prenesejo tudi razred III.',
+        },
+      ],
+    },
+  },
+  sr: {
+    touring: {
+      description: 'Produženi izleti kajakom koji pokrivaju značajne udaljenosti po jezerima, rekama i obalnim vodama.',
+      features: ['Dizajn daske za duga rastojanja', 'Efikasan oblik trupa', 'Lagana vesla', 'Prostor za opremu'],
+      useCases: ['Višednevne ekspedicije po jezerima', 'Obalna istraživanja', 'Rečne avanture', 'Trening za kondiciju'],
+      faq: [
+        {
+          q: 'Koja daska je najbolja za turističko veslanje?',
+          a: 'Duža, uža daske sa efikasnim oblikom trupa idealne su za turističko veslanje. Naduvavajuće SUPs sa drop-stitch konstrukcijom obezbeđuju čvrstinu potrebnu za efikasno veslanje na dugim relacijama.',
+        },
+        {
+          q: 'Koliko daleko možete veslati za jedan dan?',
+          a: 'Uz odgovarajuću kondiciju i uslove, iskusni veslači mogu preći 15-25 milja (24-40 km) za jedan dan turističkog veslanja.',
+        },
+      ],
+    },
+    beginner: {
+      description:
+        'Početnici koji prvi put uče osnove upravljanja naduvavajućim plovilima, bezbednost i navigaciju po vodi.',
+      features: [
+        'Stabilna platforma',
+        'Jednostavno naduvavanje i postavljanje',
+        'Oprostivo rukovanje',
+        'Sve-u-jednom komplet dostupan',
+      ],
+      useCases: [
+        'Prvo veslanje',
+        'Učenje osnovnih zamaha',
+        'Razumevanje bezbednosti na vodi',
+        'Sticanje samopouzdanja na vodi',
+      ],
+      faq: [
+        {
+          q: 'Da li je naduvavajući SUP dobar za početnike?',
+          a: 'Da. Naduvavajući SUPs su stabilni, forgiving, i lakši za transport i skladištenje nego tvrde daske, što ih čini odličnim za početnike.',
+        },
+        {
+          q: 'Koliko vremena je potrebno da se nauči stand-up paddleboarding?',
+          a: 'Većina početnika može stati i veslati po mirnoj vodi u toku prve sesije. Ravnoteža se brzo poboljšava vežbom.',
+        },
+      ],
+    },
+    'family-recreation': {
+      description:
+        'Naduvane plovke koje se koriste za opuštena porodična izletanja po jezerima, mirnim rekama i zaštićenim priobalnim vodama.',
+      features: [
+        'Veliki kapacitet za težinu',
+        'Stabilan dizajn za više osoba',
+        'Jednostavan transport',
+        'Više vazdušnih komora za sigurnost',
+      ],
+      useCases: ['Izleti po jezeru', 'Dani na plaži', 'Plovidba mirnim rekama', 'Piknik pored vode'],
+      faq: [
+        {
+          q: 'Koja je naduvana čamca najbolja za porodicu?',
+          a: 'Stabilan naduvani čamac ili kajak je idealan za porodičnu rekreaciju. Tražite modele sa više vazdušnih komora za sigurnost i dovoljnim kapacitetom za sve.',
+        },
+        {
+          q: 'Da li je naduvani čamac bezbedan za decu?',
+          a: 'Da, uz odgovarajući nadzor i prsluke za spasavanje. Naduvani čamci su po prirodi stabilni i sa mekanim stranama, što ih čini bezbednijim za porodice nego čamce sa tvrdom oplatom.',
+        },
+      ],
+    },
+    'river-touring': {
+      description: 'Navigacija rekama sa strujom, od mirnih odseka klase I do zahtevnijih brzaka klase II.',
+      features: ['Manje manevaran trup', 'Otporan na udarce', 'Brzo oduvavanje vode', 'Sposoban za beli vodu'],
+      useCases: ['Reka klase I-II', 'Scenske vožnje rekom', 'Višednevni izleti rekom', 'Igra u beloj vodi'],
+      faq: [
+        {
+          q: 'Koja vrsta kajaka je najbolja za vožnju rekom?',
+          a: 'Naduvani kajaci su odlični za vožnju rekom jer su izdržljivi, upravljivi i bolje podnose udarce o stene od kajaka sa čvrstom školjkom.',
+        },
+        {
+          q: 'Sa kojim brzacima se može nositi naduvani kajak?',
+          a: 'Kvalitetni naduvani kajaci su ocenjeni za brze vode klase I-II, a neki modeli mogu podneti i klasu III u rukama iskusnih kajakaša.',
+        },
+      ],
+    },
   },
   th: {
     touring: {
@@ -292,6 +1225,43 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
         },
       ],
     },
+    'family-recreation': {
+      description:
+        'เรือเป่าลมที่ใช้สำหรับการออกทริปครอบครัวแบบสบาย ๆ บนทะเลสาบ แม่น้ำที่ไหลช้า และน่านน้ำชายฝั่งที่มีการป้องกัน',
+      features: ['ความจุน้ำหนักมาก', 'การออกแบบหลายบุคคลที่มั่นคง', 'การขนส่งที่ง่าย', 'หลายห้องอากาศเพื่อความปลอดภัย'],
+      useCases: ['การไปเที่ยวทะเลสาบ', 'วันชายหาด', 'แม่น้ำอ่อนโยนลอยไป', 'ทริปปิกนิกริมแม่น้ำ'],
+      faq: [
+        {
+          q: 'เรือยางแบบเป่าลมแบบไหนดีที่สุดสำหรับครอบครัว?',
+          a: 'เรือยางเป่าลมหรือคายัคที่มีความมั่นคงเหมาะสำหรับการพักผ่อนแบบครอบครัว ควรมองหารุ่นที่มีหลายห้องลมเพื่อความปลอดภัยและมีความจุเพียงพอสำหรับทุกคน',
+        },
+        {
+          q: 'เรือเป่าลมปลอดภัยสำหรับเด็กหรือไม่?',
+          a: 'ใช่ โดยมีการดูแลอย่างเหมาะสมและใส่เสื้อชูชีพ เรือเป่าลมมีความมั่นคงโดยตัวมันเองและมีด้านอ่อน ทำให้ปลอดภัยกว่าสำหรับครอบครัวเมื่อเทียบกับเรือที่มีตัวถังแข็ง',
+        },
+      ],
+    },
+    'river-touring': {
+      description:
+        'การล่องเรือในแม่น้ำที่มีกระแสน้ำ ตั้งแต่ช่วงน้ำไหลสงบระดับคลาส I ไปจนถึงน้ำตกไหลเชี่ยวระดับคลาส II ที่ท้าทายมากขึ้น',
+      features: ['ตัวเรือที่สามารถควบคุมได้', 'ทนต่อแรงกระแทก', 'ระบายเร็ว', 'สามารถล่องแก่งน้ำเชี่ยว'],
+      useCases: [
+        'การล่องเรือแม่น้ำชั้น I-II',
+        'การล่องเรือชมทิวทัศน์',
+        'การเดินทางล่องแม่น้ำหลายวัน',
+        'เล่นน้ำตามกระแสน้ำเชี่ยว',
+      ],
+      faq: [
+        {
+          q: 'ประเภทเรือคายัคใดที่เหมาะสำหรับการล่องแม่น้ำ?',
+          a: 'เรือคายัคเป่าลมเหมาะอย่างยิ่งสำหรับการล่องแม่น้ำ เนื่องจากมีความทนทาน คล่องตัว และสามารถรับแรงกระแทกกับโขดหินได้ดีกว่าเรือคายัคแบบแข็ง',
+        },
+        {
+          q: 'เรือคายัคเป่าลมสามารถรับมือกับน้ำเชี่ยวระดับใดได้บ้าง?',
+          a: 'เรือคายัคเป่าลมคุณภาพสูงได้รับการจัดอันดับสำหรับน้ำเชี่ยวชั้น I-II โดยมีบางรุ่นที่สามารถรับมือกับน้ำเชี่ยวชั้น III เมื่ออยู่ในมือผู้มีประสบการณ์',
+        },
+      ],
+    },
   },
   tl: {
     touring: {
@@ -322,7 +1292,7 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
     },
     beginner: {
       description:
-        'Mga first-time paddler na nag-aaral ng mga pangunahing kaalaman sa paggamit ng inflatable SUP board, kaligtasan, at navigasyon sa tubig.',
+        'Mga first-time paddler na nag-aaral ng mga pangunahing kaalaman sa paggamit ng inflatable na watercraft, kaligtasan, at navigasyon sa tubig.',
       features: [
         'Matatag na platform',
         'Madaling i-inflate at i-setup',
@@ -343,6 +1313,53 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
         {
           q: 'Gaano katagal bago matutunan ang stand-up paddleboarding?',
           a: 'Karamihan sa mga baguhan ay makakatayo at makakapaddle sa patag na tubig sa kanilang unang session. Ang balanse ay mabilis na bumubuti sa pamamagitan ng pagsasanay.',
+        },
+      ],
+    },
+    'family-recreation': {
+      description:
+        'Mga inflatable na sasakyang pantubig na ginagamit para sa kaswal na paglalakbay ng pamilya sa mga lawa, banayad na ilog, at protektadong baybayin.',
+      features: [
+        'Malaking kapasidad sa timbang',
+        'Matatag na disenyo para sa maraming tao',
+        'Madaling dalhin',
+        'Maraming air chamber para sa kaligtasan',
+      ],
+      useCases: [
+        'Paglalakbay sa lawa',
+        'Araw sa dalampasigan',
+        'Banayad na paglalayag sa ilog',
+        'Mga piknik sa tabi ng tubig',
+      ],
+      faq: [
+        {
+          q: 'Alin ang pinakamahusay na inflatable na bangka para sa pamilya?',
+          a: 'Ang matatag na inflatable na dinghy o kayak ay perpekto para sa libangan ng pamilya. Maghanap ng mga modelo na may maraming air chamber para sa kaligtasan at sapat na kapasidad para sa lahat.',
+        },
+        {
+          q: 'Ligtas ba ang inflatable na bangka para sa mga bata?',
+          a: 'Oo, sa wastong pangangalaga at paggamit ng life vest. Ang mga inflatable na bangka ay likas na matatag at may malalambot na gilid, na mas ligtas kaysa sa mga bangkang may matigas na hull para sa mga pamilya.',
+        },
+      ],
+    },
+    'river-touring': {
+      description:
+        'Paglalayag sa mga ilog na may agos, mula sa banayad na Class I stretches hanggang sa mas mahihirap na Class II rapids.',
+      features: ['Maneuverable hull', 'Matibay sa impact', 'Mabilis na pag-drain', 'Kayang-kaya sa Whitewater'],
+      useCases: [
+        'Pagpapatakbo sa I-II na klaseng ilog',
+        'Magandang tanawin na ilog para sa pabangon-bangon na paglalayag',
+        'Maramihang araw na paglalakbay sa ilog',
+        'Whitewater play',
+      ],
+      faq: [
+        {
+          q: 'Anong uri ng kayak ang pinakamahusay para sa paglilibot sa ilog?',
+          a: 'Ang mga inflatable na kayak ay mahusay para sa paglilibot sa ilog dahil matibay, madaling paikutin, at mas kayang tiisin ang banggaan sa mga bato kaysa sa mga hard-shell na kayak.',
+        },
+        {
+          q: 'Anong klaseng mabilis na agos ang kaya ng inflatable kayak?',
+          a: 'Ang mga de-kalidad na inflatable kayak ay may rating para sa class I-II na rapids, na ang ilan ay kayang kayanin ang class III sa bihasang kamay.',
         },
       ],
     },
@@ -379,6 +1396,202 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
         },
       ],
     },
+    'family-recreation': {
+      description:
+        'Göllerde, sakin nehirlerde ve korunaklı kıyı sularında ailecek eğlenceli geziler için kullanılan şişme su araçları.',
+      features: [
+        'Yüksek taşıma kapasitesi',
+        'Dengeli çok kişilik tasarım',
+        'Kolay taşıma',
+        'Güvenlik için birden fazla hava bölmesi',
+      ],
+      useCases: ['Göl gezileri', 'Plaj günleri', 'Sakin nehirlerde gezinti', 'Su kenarında piknik gezileri'],
+      faq: [
+        {
+          q: 'Hangi şişme tekne aile için en iyisidir?',
+          a: 'Dengeli bir şişme bot veya kano, aile gezileri için idealdir. Güvenlik için birden fazla hava bölmesi olan ve herkes için yeterli kapasite sağlayan modelleri arayın.',
+        },
+        {
+          q: 'Şişme botlar çocuklar için güvenli midir?',
+          a: 'Evet, uygun gözetim ve can yelekleri ile şişme botlar doğal olarak stabildir ve yumuşak yanlara sahiptir, bu da onları sert gövdeli teknelere göre aileler için daha güvenli yapar.',
+        },
+      ],
+    },
+    'river-touring': {
+      description:
+        'Nehirde akan suyun içinde, sakin Sınıf I kısımlardan daha zorlu Sınıf II hızlı akıntılara kadar gezinmek.',
+      features: ['Hareket kabiliyeti olan gövde', 'Darbelere dayanıklı', 'Hızlı drenaj', 'Beyaz suya uygun'],
+      useCases: [
+        'Sınıf I-II nehirlerde kürek çekme',
+        'Manzaralı nehir gezintileri',
+        'Çok günlük nehir turları',
+        'Beyaz su oyunları',
+      ],
+      faq: [
+        {
+          q: 'Hangi tür kayak nehir turu için en iyisidir?',
+          a: 'Şişme kayıklar, dayanıklı, manevra kabiliyeti yüksek oldukları ve sert kabuklu kayıklardan daha iyi kaya çarpışmalarına dayanabildikleri için nehir turu için mükemmeldir.',
+        },
+        {
+          q: 'Şişme bir kayak hangi hızlı akıntılara dayanabilir?',
+          a: 'Kaliteli şişme kayıklar sınıf I-II hızlı akıntılar için değerlendirilmiştir, bazı modeller deneyimli ellerde sınıf III seviyesini kaldırabilir.',
+        },
+      ],
+    },
+  },
+  da: {
+    touring: {
+      description: 'Udvidede padleture, der dækker betydelige afstande på søer, floder og kystvand.',
+      features: ['Langdistance-boarddesign', 'Effektiv skrogform', 'Letvægts-paddle', 'Opbevaring til udstyr'],
+      useCases: ['Fler-dages søekspeditioner', 'Kystudforskning', 'Flodrejser', 'Fitness træning'],
+      faq: [
+        {
+          q: 'Hvilket board er bedst til touring?',
+          a: 'Længere, smallere boards med effektiv skrogform er ideelle til touring. Oppustelige SUPs med drop-stitch konstruktion giver den nødvendige stivhed til effektiv padling over lange afstande.',
+        },
+        {
+          q: 'Hvor langt kan du padle på en dag?',
+          a: 'Med korrekt form og forhold kan erfarne paddlere dække 15-25 miles (24-40 km) på en dag med touring.',
+        },
+      ],
+    },
+    beginner: {
+      description:
+        'Begynderpaddlere, der lærer de grundlæggende færdigheder i at betjene oppustelige vandscootere, sikkerhed og navigation på vandet.',
+      features: ['Stabil platform', 'Let at puste op og opsætte', 'Tilgivende håndtering', 'Alt-i-en kit tilgængeligt'],
+      useCases: [
+        'Første gang padling',
+        'Indlæring af grundlæggende slag',
+        'Forståelse af vandsikkerhed',
+        'Opbygge selvtillid på vandet',
+      ],
+      faq: [
+        {
+          q: 'Er en oppustelig SUP god for begyndere?',
+          a: 'Ja. Oppustelige SUPs er stabile, tilgivende og nemmere at transportere og opbevare end hårde boards, hvilket gør dem fremragende for begyndere.',
+        },
+        {
+          q: 'Hvor lang tid tager det at lære stand-up paddleboarding?',
+          a: 'De fleste begyndere kan stå op og padle på fladt vand inden for deres første session. Balancen forbedres hurtigt med øvelse.',
+        },
+      ],
+    },
+    'family-recreation': {
+      description:
+        'Oppustelige fartøjer til afslappede familieudflugter på søer, rolige floder og beskyttede kystfarvande.',
+      features: [
+        'Stor vægtkapacitet',
+        'Stabilt design til flere personer',
+        'Nemmere transport',
+        'Flere luftkamre for sikkerhed',
+      ],
+      useCases: ['Søudflugter', 'Stranddage', 'Rolige flodture', 'Picnicture ved vandet'],
+      faq: [
+        {
+          q: 'Hvilken oppustelig båd er bedst for en familie?',
+          a: 'En stabil oppustelig jolle eller kajak er ideel til familieunderholdning. Se efter modeller med flere luftkamre for sikkerhed og tilstrækkelig kapacitet til alle.',
+        },
+        {
+          q: 'Er en oppustelig båd sikker for børn?',
+          a: 'Ja, med korrekt opsyn og redningsveste. Oppustelige både er i sig selv stabile og har bløde sider, hvilket gør dem mere sikre end både med hårdt skrog for familier.',
+        },
+      ],
+    },
+    'river-touring': {
+      description:
+        'Navigation på floder med strøm, fra rolige klasse I strækninger til mere udfordrende klasse II strømhvirvler.',
+      features: ['Manøvredygtigt skrog', 'Slagfast', 'Hurtig dræning', 'Hvidvandskapabel'],
+      useCases: ['Klasse I-II flodsejlads', 'Sceniske flodture', 'Flere dages flodture', 'Hvidvandsspil'],
+      faq: [
+        {
+          q: 'Hvilken type kajak er bedst til flodture?',
+          a: 'Oppustelige kajakker er fremragende til flodture, da de er holdbare, manøvredygtige og kan tåle kollisioner med sten bedre end hårdskal-kajakker.',
+        },
+        {
+          q: 'Hvilke strømhvirvler kan en oppustelig kajak håndtere?',
+          a: 'Kvalitetsoppustelige kajakker er vurderet til klasse I-II strømhvirvler, med nogle modeller, der kan klare klasse III i erfarne hænder.',
+        },
+      ],
+    },
+  },
+  no: {
+    touring: {
+      description: 'Langdistanse padleturer som dekker betydelige avstander på innsjøer, elver og kystvann.',
+      features: ['Langdistanse brettdesign', 'Effektiv skrogform', 'Lett padleåre', 'Oppbevaring for utstyr'],
+      useCases: ['Flerdagers innsjøekspedisjoner', 'Kystutforskning', 'Elveturer', 'Trening av fysisk form'],
+      faq: [
+        {
+          q: 'Hvilket brett er best for turpadling?',
+          a: 'Lengre, smalere brett med effektiv skrogform er ideelle for turpadling. Oppblåsbare SUPs med drop-stitch-konstruksjon gir den stivheten som trengs for effektiv langdistansepadling.',
+        },
+        {
+          q: 'Hvor langt kan du padle på en dag?',
+          a: 'Med riktig form og forhold kan erfarne padlere dekke 15-25 miles (24-40 km) på en dag med turpadling.',
+        },
+      ],
+    },
+    beginner: {
+      description:
+        'Førstegangspadlere som lærer det grunnleggende i drift av oppblåsbare vannfartøy, sikkerhet og navigasjon på vann.',
+      features: [
+        'Stabil plattform',
+        'Enkel å blåse opp og sette opp',
+        'Tilgivende håndtering',
+        'Alt-i-ett sett tilgjengelig',
+      ],
+      useCases: [
+        'Første gang padling',
+        'Lære grunnleggende padletak',
+        'Forstå vannsikkerhet',
+        'Bygge selvtillit på vannet',
+      ],
+      faq: [
+        {
+          q: 'Er et oppblåsbart SUP godt for nybegynnere?',
+          a: 'Ja. Oppblåsbare SUPs er stabile, tilgivende og lettere å transportere og oppbevare enn harde brett, noe som gjør dem utmerket for nybegynnere.',
+        },
+        {
+          q: 'Hvor lang tid tar det å lære å stå på paddleboard?',
+          a: 'De fleste nybegynnere kan stå opp og padle på flatt vann i løpet av deres første økt. Balansen forbedres raskt med øvelse.',
+        },
+      ],
+    },
+    'family-recreation': {
+      description:
+        'Oppblåsbare fartøy brukt til uformelle familieutflukter på innsjøer, rolige elver og beskyttede kystområder.',
+      features: [
+        'Stor vektkapasitet',
+        'Stabilt design for flere personer',
+        'Enkel transport',
+        'Flere luftkamre for sikkerhet',
+      ],
+      useCases: ['Innsjøutflukter', 'Stranddager', 'Rolige elveflåter', 'Picnicturer ved vannet'],
+      faq: [
+        {
+          q: 'Hvilken oppblåsbar båt er best for en familie?',
+          a: 'En stabil oppblåsbar jolle eller kajakk er ideell for familieaktiviteter. Se etter modeller med flere luftkamre for sikkerhet og tilstrekkelig kapasitet for alle.',
+        },
+        {
+          q: 'Er en oppblåsbar båt trygg for barn?',
+          a: 'Ja, med riktig tilsyn og redningsvester. Oppblåsbare båter er iboende stabile og myke på sidene, noe som gjør dem tryggere enn båter med hardt skrog for familier.',
+        },
+      ],
+    },
+    'river-touring': {
+      description: 'Navigere elver med strøm, fra rolige klasse I-strekninger til mer utfordrende klasse II-stryk.',
+      features: ['Manøvrerbart skrog', 'Slagfast', 'Rask drenering', 'Egnet for stryk'],
+      useCases: ['Elv med klasse I-II', 'Sceniske elvturer', 'Elvturer over flere dager', 'Lek i stryk'],
+      faq: [
+        {
+          q: 'Hva slags kajakk er best for elvturer?',
+          a: 'Oppblåsbare kajakker er utmerkede for elvturer fordi de er slitesterke, manøvrerbare og tåler støt mot steiner bedre enn kajakker med hardt skrog.',
+        },
+        {
+          q: 'Hvilke stryk kan en oppblåsbar kajakk håndtere?',
+          a: 'Kvalitetsoppblåsbare kajakker er klassifisert for klasse I-II stryk, med noen modeller som kan håndtere klasse III i erfarne hender.',
+        },
+      ],
+    },
   },
   nl: {
     touring: {
@@ -397,8 +1610,7 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
       ],
     },
     beginner: {
-      description:
-        'Beginnende peddelaars die de basis leren van het gebruik van opblaasbare SUP boards, veiligheid en navigatie op het water.',
+      description: 'Beginnende peddelaars die de basis leren van opblaasbare SUP boards, veiligheid en waternavigatie.',
       features: [
         'Stabiel platform',
         'Gemakkelijk op te blazen en op te zetten',
@@ -419,6 +1631,48 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
         {
           q: 'Hoe lang duurt het om te leren stand-up paddleboarden?',
           a: 'De meeste beginners kunnen tijdens hun eerste sessie al staan en peddelen op stilstaand water. Het evenwicht verbetert snel met oefening.',
+        },
+      ],
+    },
+    'family-recreation': {
+      description:
+        'Opblaasbare SUP boards gebruikt voor ontspannen gezinsuitjes op meren, rustige rivieren en beschermde kustwateren.',
+      features: [
+        'Grote gewichtscapaciteit',
+        'Stabiel ontwerp voor meerdere personen',
+        'Gemakkelijk transport',
+        'Meerdere luchtkamers voor veiligheid',
+      ],
+      useCases: ['Merenuitjes', 'Stranddagen', 'Zachte rivier drijft', 'Picknicktochten per water'],
+      faq: [
+        {
+          q: 'Welke SUP board is het beste voor een gezin?',
+          a: 'Een breed, stabiel opblaasbaar SUP met een hoog draagvermogen is ideaal voor gezinsrecreatie. Zoek naar modellen met meerdere luchtkamers voor veiligheid en voldoende capaciteit voor rijders en uitrusting.',
+        },
+        {
+          q: 'Is een opblaasbare SUP veilig voor kinderen?',
+          a: 'Ja, bij goed toezicht en het dragen van reddingsvesten. Opblaasbare SUPs zijn van nature stabiel en zacht, waardoor ze vergevingsgezind zijn voor gezinnen.',
+        },
+      ],
+    },
+    'river-touring': {
+      description:
+        'Het navigeren van rivieren met stroom, van rustige Class I-streken tot meer uitdagende Class II-stromingen.',
+      features: ['Wendbare romp', 'Schokbestendig', 'Snelle afvoer', 'Geschikt voor wildwatervaren'],
+      useCases: [
+        'Rivier van klasse I-II bevaren',
+        'Pittoreske riviertrips',
+        'Meerdaagse rivierreizen',
+        'Wildwater spelen',
+      ],
+      faq: [
+        {
+          q: 'Zijn opblaasbare SUPs geschikt voor riviertoertochten?',
+          a: 'Ja. Opblaasbare SUPs zijn duurzaam en wendbaar, en ze kunnen beter omgaan met impact met stenen dan harde boards, waardoor ze een uitstekende keuze zijn voor riviertoertochten.',
+        },
+        {
+          q: 'Welke stroomversnellingen kan een opblaasbare SUP aan?',
+          a: 'Kwalitatieve opblaasbare SUPs zijn goed geschikt voor klasse I-II water, met sommige modellen die klasse III aankunnen in ervaren handen.',
         },
       ],
     },
@@ -445,8 +1699,7 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
       ],
     },
     beginner: {
-      description:
-        'Remadores iniciantes aprendendo o básico da operação de embarcações infláveis, segurança e navegação na água.',
+      description: 'Remadores iniciantes aprendendo o básico de pranchas infláveis SUP, segurança e navegação na água.',
       features: ['Plataforma estável', 'Fácil de inflar e montar', 'Manuseio tolerante', 'Kit completo disponível'],
       useCases: [
         'Primeira vez remando',
@@ -465,6 +1718,682 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
         },
       ],
     },
+    'family-recreation': {
+      description:
+        'SUP Tábuas infláveis usadas para passeios casuais em família em lagos, rios suaves e águas costeiras protegidas.',
+      features: [
+        'Grande capacidade de peso',
+        'Design estável para várias pessoas',
+        'Transporte fácil',
+        'Múltiplas câmaras de ar para segurança',
+      ],
+      useCases: [
+        'Passeios em lagos',
+        'Dias de praia',
+        'Flutuações em rios tranquilos',
+        "Viagens de piquenique à beira d'água",
+      ],
+      faq: [
+        {
+          q: 'Qual SUP prancha é melhor para uma família?',
+          a: 'Um inflável largo SUP e estável com alta capacidade de peso é ideal para recreação em família. Procure modelos com múltiplas câmaras de ar para segurança e capacidade suficiente para pilotos e equipamentos.',
+        },
+        {
+          q: 'Um inflável é SUP seguro para crianças?',
+          a: 'Sim, com supervisão adequada e coletes salva-vidas. Infláveis SUPs são inerentemente estáveis e macios, tornando-os indulgentes para famílias.',
+        },
+      ],
+    },
+    'river-touring': {
+      description:
+        'Navegando por rios com corrente, desde trechos suaves Classe I até rápidos mais desafiadores Classe II.',
+      features: ['Casco manobrável', 'Resistente a impactos', 'Drenagem rápida', 'Capaz de águas brancas'],
+      useCases: [
+        'Rio classe I-II',
+        'Passeios cênicos de barco no rio',
+        'Viagens de vários dias no rio',
+        'Recreação em águas brancas',
+      ],
+      faq: [
+        {
+          q: 'Infláveis são SUPs bons para passeios em rios?',
+          a: 'Sim. Infláveis SUPs são duráveis e manobráveis, e lidam melhor com impactos com pedras do que pranchas duras, tornando-as uma ótima escolha para passeios em rios.',
+        },
+        {
+          q: 'Quais corredeiras um inflável SUP pode suportar?',
+          a: 'Infláveis de qualidade SUPs são bem adequados para águas de classe I a II, com alguns modelos capazes de classe III em mãos experientes.',
+        },
+      ],
+    },
+  },
+  pl: {
+    touring: {
+      description:
+        'Długie wyprawy kajakarskie obejmujące znaczne odległości po jeziorach, rzekach i wodach przybrzeżnych.',
+      features: [
+        'Projektowanie płytek dalekiego zasięgu',
+        'Wydajny kształt kadłuba',
+        'Lekkie wiosło',
+        'Przechowywanie sprzętu',
+      ],
+      useCases: ['Wielodniowe wyprawy na jezioro', 'Eksploracja wybrzeża', 'Podróże rzeczne', 'Trening kondycyjny'],
+      faq: [
+        {
+          q: 'Która deska jest najlepsza do zwiedzania?',
+          a: 'Dłuższe, węższe deski o efektywnym kształcie kadłuba są idealne do wycieczek. Nadmuchiwane i SUPs drop-stitch konstrukcyjne zapewniają sztywność niezbędną do efektywnego wiosłowania na długich dystansach.',
+        },
+        {
+          q: 'Jak daleko możesz wiosłować w ciągu dnia?',
+          a: 'Przy odpowiedniej kondycji i warunkach doświadczeni kajakarze mogą pokonać 15-25 mil (24-40 km) w ciągu jednego dnia touringu.',
+        },
+      ],
+    },
+    beginner: {
+      description:
+        'Początkujący kajakarze SUP uczą się podstaw dmuchanych desek, bezpieczeństwa i nawigacji po wodzie.',
+      features: [
+        'Platforma stabilna',
+        'Łatwe napompowanie i ustawienie',
+        'Wyrozumiałe traktowanie',
+        'Dostępny zestaw all-in-one',
+      ],
+      useCases: [
+        'Pierwszy raz wiosłować',
+        'Nauka podstawowych pociągów',
+        'Zrozumienie bezpieczeństwa wodnego',
+        'Budowanie pewności siebie na wodzie',
+      ],
+      faq: [
+        {
+          q: 'Czy nadmuchiwana jest SUP dobra dla początkujących?',
+          a: 'Tak. Nadmuchiwane SUPs deski są stabilne, wybaczają i łatwiejsze w transportie oraz przechowywaniu niż deski twarde, co czyni je doskonałymi dla początkujących.',
+        },
+        {
+          q: 'Jak długo zajmuje nauka paddleboardingu na stojąco?',
+          a: 'Większość początkujących potrafi wstać i wiosłować po spokojnej wodzie już podczas pierwszej sesji. Równowaga szybko poprawia się z praktyką.',
+        },
+      ],
+    },
+    'family-recreation': {
+      description:
+        'SUP Nadmuchiwane deski używane do swobodnych rodzinnych wypadów na jeziora, łagodne rzeki i chronione wody przybrzeżne.',
+      features: [
+        'Duża nośność',
+        'Stabilny projekt wieloosobowy',
+        'Łatwy transport',
+        'Dla bezpieczeństwa wiele komór powietrznych',
+      ],
+      useCases: ['Wyprawy na jezioro', 'Dni na plaży', 'Łagodne pływające rzeki', 'Wyprawy piknikowe wodą'],
+      faq: [
+        {
+          q: 'Która SUP deska jest najlepsza dla rodziny?',
+          a: 'Szeroka, stabilna dmuchana SUP z dużą ładownią jest idealna do rodzinnej rekreacji. Szukaj modeli z wieloma komorami powietrznymi dla bezpieczeństwa i wystarczającą na jeźdźców i sprzęt.',
+        },
+        {
+          q: 'Czy nadmuchiwana jest SUP bezpieczna dla dzieci?',
+          a: 'Tak, przy odpowiednim nadzorze i kamizelkach ratunkowych. Nadmuchiwane SUPs są z natury stabilne i miękkie, co czyni je wybaczającymi rodzinom.',
+        },
+      ],
+    },
+    'river-touring': {
+      description: 'Żeglowanie po rzekach z prądem, od łagodnych odcinków klasy I po trudniejsze bystrza klasy II.',
+      features: [
+        'Kadłub zwrotny',
+        'Odporność na uderzenia',
+        'Szybkie drenowanie',
+        'Zdolny do jazdy na wodach górskich',
+      ],
+      useCases: [
+        'Przepływ rzeki klasy I-II',
+        'Malownicze pływaki rzeczne',
+        'Wielodniowe wyprawy rzeczne',
+        'Gra na wodach górskich',
+      ],
+      faq: [
+        {
+          q: 'Czy nadmuchiwane są SUPs dobre do turystyki po rzece?',
+          a: 'Tak. Nadmuchiwane SUPs są wytrzymałe i zwrotne, a także lepiej radzą sobie z uderzeniami o kamienie niż twarde deski, co czyni je świetnym wyborem na wycieczki po rzeczach.',
+        },
+        {
+          q: 'Jakie bystrza może pokonać nadmuchiwana SUP maszyna?',
+          a: 'Wysokiej jakości nadmuchiwane urządzenia SUPs doskonale sprawdzają się w wodzie klasy I-II, a niektóre modele w doświadczeniu mogą być w klasie III.',
+        },
+      ],
+    },
+  },
+  ru: {
+    touring: {
+      description:
+        'Длительные поездки на веслах, охватывающие значительные расстояния по озерам, рекам и прибрежным водам.',
+      features: [
+        'Дизайн доски для дальних поездок',
+        'Эффективная форма корпуса',
+        'Легкое весло',
+        'Хранилище для снаряжения',
+      ],
+      useCases: [
+        'Многодневные экспедиции по озерам',
+        'Прибрежные исследования',
+        'Речные путешествия',
+        'Фитнес-тренировки',
+      ],
+      faq: [
+        {
+          q: 'Какая доска лучше всего подходит для туринга?',
+          a: 'Длинные, узкие доски с эффективной формой корпуса идеально подходят для туринга. Надувные SUPs с конструкцией drop-stitch обеспечивают жесткость, необходимую для эффективного гребли на большие расстояния.',
+        },
+        {
+          q: 'Сколько можно проплыть за день?',
+          a: 'При надлежащей физической подготовке и условиях опытные гребцы могут преодолеть 15-25 миль (24-40 км) за один день туринга.',
+        },
+      ],
+    },
+    beginner: {
+      description: 'Новички, которые осваивают основы надувных SUP досок, безопасность и навигацию на воде.',
+      features: [
+        'Стабильная платформа',
+        'Легко надувается и собирается',
+        'Прощающий ошибки контроль',
+        'Доступен комплект «всё в одном»',
+      ],
+      useCases: [
+        'Первое занятие на веслах',
+        'Изучение основных гребков',
+        'Понимание безопасности на воде',
+        'Уверенность на воде',
+      ],
+      faq: [
+        {
+          q: 'Подходит ли надувная SUP для новичков?',
+          a: 'Да. Надувные SUPs стабильны, прощают ошибки и их легче транспортировать и хранить, чем жесткие доски, что делает их отличным вариантом для новичков.',
+        },
+        {
+          q: 'Сколько времени требуется, чтобы научиться стоять на весле?',
+          a: 'Большинство новичков могут встать и грести на спокойной воде в течение первого занятия. Баланс быстро улучшается с практикой.',
+        },
+      ],
+    },
+    'family-recreation': {
+      description:
+        'Надувные SUP доски, используемые для семейных прогулок на озёрах, спокойных реках и защищённых прибрежных водах.',
+      features: [
+        'Большая грузоподъемность',
+        'Стабильная многолюдная конструкция',
+        'Удобный транспорт',
+        'Несколько воздушных камер для безопасности',
+      ],
+      useCases: ['Прогулки у озера', 'Дни на пляже', 'Плавные плавущие реки', 'Пикники на воде'],
+      faq: [
+        {
+          q: 'Какая SUP доска лучше всего подходит для семьи?',
+          a: 'Широкий надувной SUP аппарат с большой грузоподъемностью идеально подходит для семейного отдыха. Ищите модели с несколькими воздушными камерами для безопасности и достаточной вместимости для пассажиров и снаряжения.',
+        },
+        {
+          q: 'Безопасно ли надувное устройство SUP для детей?',
+          a: 'Да, при надлежащем присмотре и спасательных жилетах. Надувные SUPs жилеты по своей природе устойчивы и мягкие, что делает их прощающими для семей.',
+        },
+      ],
+    },
+    'river-touring': {
+      description: 'Навигация по рекам с течением — от плавных участков класса I до более сложных порогов класса II.',
+      features: ['Манёвренный корпус', 'Ударостойкость', 'Быстрый дренаж', 'Способный на бурную воду'],
+      useCases: [
+        'Речной маршрут класса I-II',
+        'Живописные речные поплавки',
+        'Многодневные речные поездки',
+        'Игра на бурной воде',
+      ],
+      faq: [
+        {
+          q: 'Подходят ли надувные SUPs устройства для прогулок по реке?',
+          a: 'Да. Надувные SUPs доски надувные и манёвренные, они лучше переносят удары о камни, чем твёрдые доски, что делает их отличным выбором для речного туризма.',
+        },
+        {
+          q: 'Какие пороги может SUP справиться надувная машина?',
+          a: 'Качественные надувные машины SUPs хорошо подходят для воды классов I-II, некоторые модели способны на класс III в опытных руках.',
+        },
+      ],
+    },
+  },
+  ar: {
+    touring: {
+      description: 'رحلات تجديف طويلة تغطي مسافات كبيرة في البحيرات والأنهار والمياه الساحلية.',
+      features: ['تصميم اللوحات لمسافات طويلة', 'شكل الهيكل الفعال', 'مجداف خفيف الوزن', 'تخزين المعدات'],
+      useCases: [
+        'رحلات استكشافية متعددة الأيام في البحيرة',
+        'الاستكشاف الساحلي',
+        'رحلات النهر',
+        'تدريب اللياقة البدنية',
+      ],
+      faq: [
+        {
+          q: 'ما هو أفضل لوحة للجولات؟',
+          a: 'الألواح الأطول والأضيق ذات الأشكال الفعالة للهيكل مثالية للجولات. القابلة للنفخ SUPs drop-stitch مع البناء توفر الصلابة اللازمة للتجديف الفعال لمسافات طويلة.',
+        },
+        {
+          q: 'كم يمكنك التجديف في اليوم؟',
+          a: 'مع اللياقة البدنية والظروف المناسبة، يمكن للمجدفين ذوي الخبرة قطع 15-25 ميلا (24-40 كم) في يوم من الجولة.',
+        },
+      ],
+    },
+    beginner: {
+      description: 'المجدفون لأول مرة يتعلمون أساسيات الألواح القابلة للنفخ SUP ، والسلامة، والملاحة المائية.',
+      features: ['منصة مستقرة', 'النفخ السهل والإعداد', 'التعامل المتسامح', 'مجموعة شاملة متوفرة'],
+      useCases: ['أول مرة تجدف فيها', 'تعلم الضربات الأساسية', 'فهم سلامة المياه', 'بناء الثقة في المياه'],
+      faq: [
+        {
+          q: 'هل النفخ SUP جيد للمبتدئين؟',
+          a: 'نعم. الألواح القابلة للنفخ SUPs مستقرة، متسامحة، وأسهل في النقل والتخزين من الألواح الصلبة، مما يجعلها ممتازة للمبتدئين.',
+        },
+        {
+          q: 'كم يستغرق تعلم التجديف على الألواح الواقفة؟',
+          a: 'معظم المبتدئين يمكنهم الوقوف والتجديف على الماء المستو خلال أول جلسة لهم. يتحسن التوازن بسرعة مع الممارسة.',
+        },
+      ],
+    },
+    'family-recreation': {
+      description:
+        'ألواح قابلة للنفخ SUP تُستخدم للنزهات العائلية العارضة على البحيرات والأنهار الهادئة والمياه الساحلية المحمية.',
+      features: ['قدرة تحمل كبيرة', 'تصميم مستقر لعدة أشخاص', 'سهلة النقل', 'عدة حجرات هوائية للسلامة'],
+      useCases: ['نزهات على البحيرة', 'أيام الشاطئ', 'التجديف على الأنهار الهادئة', 'رحلات نزهة قرب الماء'],
+      faq: [
+        {
+          q: 'ما هو أفضل لوح SUP للعائلة؟',
+          a: 'لوح قابل للنفخ SUP واسع ومستقر مع قدرة تحمل عالية مثالي للترفيه العائلي. ابحث عن نماذج بها عدة حجرات هوائية للسلامة وسعة كافية للركاب والمعدات.',
+        },
+        {
+          q: 'هل لوح SUP القابل للنفخ آمن للأطفال؟',
+          a: 'نعم، مع الإشراف المناسب وارتداء سترة النجاة. الألواح القابلة للنفخ SUPs مستقرة بطبيعتها وذات جوانب ناعمة، مما يجعلها مناسبة للعائلات.',
+        },
+      ],
+    },
+    'river-touring': {
+      description:
+        'التنقل في الأنهار ذات التيار، من المقاطع اللطيفة من الفئة I إلى الشلالات الأكثر تحدياً من الفئة II.',
+      features: ['هيكل قابل للمناورة', 'مقاوم للصدمات', 'تصريف سريع للمياه', 'قادر على المياه البيضاء'],
+      useCases: [
+        'جولات الأنهار من الفئة I-II',
+        'نزهات نهريه ذات مناظر خلابة',
+        'رحلات نهريه متعددة الأيام',
+        'اللعب في المياه البيضاء',
+      ],
+      faq: [
+        {
+          q: 'هل الألواح SUPs القابلة للنفخ جيدة لجولات الأنهار؟',
+          a: 'نعم. الألواح القابلة للنفخ SUPs متينة وسهلة المناورة، وتتحمل الصدمات بالصخور أفضل من الألواح الصلبة، مما يجعلها خياراً رائعاً لجولات الأنهار.',
+        },
+        {
+          q: 'ما هي الشلالات التي يمكن للوح SUP القابل للنفخ التعامل معها؟',
+          a: 'الألواح القابلة للنفخ عالية الجودة SUPs مناسبة جيداً لمياه الفئة I-II، مع بعض النماذج القادرة على الفئة III عند الأشخاص ذوي الخبرة.',
+        },
+      ],
+    },
+  },
+  de: {
+    touring: {
+      description: 'Ausgedehnte Paddeltouren mit größeren Strecken auf Seen, Flüssen und Küstengewässern.',
+      features: [
+        'Design der Langstrecken-Platine',
+        'Effiziente Rumpfform',
+        'Leichtes Paddel',
+        'Lagerung von Ausrüstung',
+      ],
+      useCases: ['Mehrtägige Seeexpeditionen', 'Küstenforschung', 'Flussreisen', 'Fitnesstraining'],
+      faq: [
+        {
+          q: 'Welches Board eignet sich am besten zum Touren?',
+          a: 'Längere, schmalere Bretter mit effizienten Rumpfformen sind ideal für Touren. Aufblasbar SUPs mit drop-stitch Bauweise bieten die Steifigkeit für effizientes Langstreckenpaddeln.',
+        },
+        {
+          q: 'Wie weit kannst du an einem Tag paddeln?',
+          a: 'Mit guter Fitness und Bedingungen können erfahrene Paddler an einem Tag Touren 15–25 Meilen (24–40 km) zurücklegen.',
+        },
+      ],
+    },
+    beginner: {
+      description:
+        'Erstläufer, die die Grundlagen von aufblasbaren SUP Brettern, Sicherheit und Wassernavigation lernen.',
+      features: [
+        'Stabile Plattform',
+        'Einfaches Aufpumpen und Einrichten',
+        'Nachsichtige Handhabung',
+        'All-in-One-Kit verfügbar',
+      ],
+      useCases: [
+        'Erstes Paddeln',
+        'Erlernen grundlegender Streiche',
+        'Verständnis der Wassersicherheit',
+        'Vertrauen im Wasser aufbauen',
+      ],
+      faq: [
+        {
+          q: 'Ist ein aufblasbares SUP Gerät gut für Anfänger?',
+          a: 'Ja. Aufblasbare SUPs Bretter sind stabil, verzeihend und leichter zu transportieren und zu lagern als harte Bretter, was sie hervorragend für Anfänger macht.',
+        },
+        {
+          q: 'Wie lange dauert es, Stand-up-Paddleboarding zu lernen?',
+          a: 'Die meisten Anfänger können in ihrer ersten Session auf flachem Wasser aufstehen und paddeln. Das Gleichgewicht verbessert sich schnell mit Übung.',
+        },
+      ],
+    },
+    'family-recreation': {
+      description:
+        'Aufblasbare SUP-Boards, die für entspannte Familienausflüge auf Seen, sanften Flüssen und geschützten Küstengewässern verwendet werden.',
+      features: [
+        'Große Tragfähigkeit',
+        'Stabiles Design für mehrere Personen',
+        'Einfacher Transport',
+        'Mehrere Luftkammern für Sicherheit',
+      ],
+      useCases: ['Ausflüge auf den See', 'Strandtage', 'Sanfte Flussfahrten', 'Picknicks am Wasser'],
+      faq: [
+        {
+          q: 'Welches SUP-Board ist am besten für eine Familie?',
+          a: 'Ein breites, stabiles aufblasbares SUP mit hoher Tragfähigkeit ist ideal für die Freizeit der Familie. Achten Sie auf Modelle mit mehreren Luftkammern für Sicherheit und ausreichender Kapazität für Fahrer und Ausrüstung.',
+        },
+        {
+          q: 'Ist ein aufblasbares SUP für Kinder sicher?',
+          a: 'Ja, bei entsprechender Aufsicht und Schwimmwesten. Aufblasbare SUPs sind von Natur aus stabil und weichseitig, was sie für Familien verzeihend macht.',
+        },
+      ],
+    },
+    'river-touring': {
+      description:
+        'Flüsse mit Strömung befahren, von sanften Klassen I-Strecken bis zu anspruchsvolleren Klassen II-Stromschnellen.',
+      features: ['Wendiger Rumpf', 'Stoßfest', 'Schnelle Entwässerung', 'Für Wildwasser geeignet'],
+      useCases: ['Flussfahrten Klasse I-II', 'Malerische Flussfahrten', 'Mehrtägige Flussreisen', 'Wildwasser-Spiel'],
+      faq: [
+        {
+          q: 'Sind aufblasbare SUPs gut für Fluss-Touren?',
+          a: 'Ja. Aufblasbare SUPs sind langlebig und wendig und vertragen Stöße gegen Felsen besser als harte Boards, was sie zu einer guten Wahl für Flusserkundungen macht.',
+        },
+        {
+          q: 'Welche Stromschnellen kann ein aufblasbares SUP bewältigen?',
+          a: 'Qualitativ hochwertige aufblasbare SUPs eignen sich gut für Wasser der Klassen I-II, einige Modelle sind in erfahrenen Händen sogar Klasse III-fähig.',
+        },
+      ],
+    },
+  },
+  es: {
+    touring: {
+      description:
+        'Excursiones extendidas en remo que cubren distancias significativas en lagos, ríos y aguas costeras.',
+      features: [
+        'Diseño de tabla de larga distancia',
+        'Forma de casco eficiente',
+        'Pala ligera',
+        'Almacenamiento para equipo',
+      ],
+      useCases: [
+        'Expediciones de varios días en lagos',
+        'Exploración costera',
+        'Viajes por ríos',
+        'Entrenamiento físico',
+      ],
+      faq: [
+        {
+          q: '¿Qué tabla es mejor para recorrer?',
+          a: 'Las tablas más largas y estrechas con formas de casco eficientes son ideales para recorrer. Los SUPs inflables con construcción drop-stitch proporcionan la rigidez necesaria para un remo eficiente a larga distancia.',
+        },
+        {
+          q: '¿Cuánto se puede remar en un día?',
+          a: 'Con la condición física adecuada y buenas condiciones, los remeros experimentados pueden cubrir 15-25 millas (24-40 km) en un día de recorrido.',
+        },
+      ],
+    },
+    beginner: {
+      description:
+        'Remeros primerizos aprendiendo los conceptos básicos de las tablas SUP inflables, seguridad y navegación en el agua.',
+      features: ['Plataforma estable', 'Fácil de inflar y montar', 'Manejo indulgente', 'Kit todo en uno disponible'],
+      useCases: [
+        'primer viaje de remo',
+        'Aprender técnicas básicas de remo',
+        'Comprender la seguridad en el agua',
+        'Ganar confianza en el agua',
+      ],
+      faq: [
+        {
+          q: '¿Es una SUP inflable buena para principiantes?',
+          a: 'Sí. Las SUPs inflables son estables, tolerantes y más fáciles de transportar y almacenar que las tablas rígidas, lo que las hace excelentes para principiantes.',
+        },
+        {
+          q: '¿Cuánto tiempo se tarda en aprender a hacer paddleboard?',
+          a: 'La mayoría de los principiantes pueden ponerse de pie y remar en aguas tranquilas durante su primera sesión. El equilibrio mejora rápidamente con la práctica.',
+        },
+      ],
+    },
+    'family-recreation': {
+      description:
+        'Tablas inflables SUP utilizadas para salidas familiares casuales en lagos, ríos tranquilos y aguas costeras protegidas.',
+      features: [
+        'Gran capacidad de peso',
+        'Diseño estable para varias personas',
+        'Fácil transporte',
+        'Múltiples cámaras de aire para mayor seguridad',
+      ],
+      useCases: ['Excursiones a lagos', 'Días de playa', 'Navegación en ríos tranquilos', 'Picnics junto al agua'],
+      faq: [
+        {
+          q: '¿Cuál tabla SUP es mejor para una familia?',
+          a: 'Una tabla inflable SUP ancha y estable con alta capacidad de peso es ideal para la recreación familiar. Busque modelos con múltiples cámaras de aire para mayor seguridad y suficiente capacidad para los pasajeros y el equipo.',
+        },
+        {
+          q: '¿Es segura una SUP inflable para niños?',
+          a: 'Sí, con la supervisión adecuada y chalecos salvavidas. Las SUPs inflables son inherentemente estables y de lados blandos, lo que las hace seguras para las familias.',
+        },
+      ],
+    },
+    'river-touring': {
+      description:
+        'Navegación en ríos con corriente, desde tramos suaves de clase I hasta rápidos más desafiantes de clase II.',
+      features: ['Casco maniobrable', 'Resistente a impactos', 'Drenaje rápido', 'Capaz de aguas bravas'],
+      useCases: [
+        'Navegación en ríos clase I-II',
+        'Paseos escénicos por el río',
+        'Viajes de varios días por el río',
+        'Juegos en aguas bravas',
+      ],
+      faq: [
+        {
+          q: '¿Son buenas las SUPs inflables para recorrer ríos?',
+          a: 'Sí. Las SUPs inflables son duraderas y maniobrables, y manejan mejor los impactos con las rocas que las tablas rígidas, lo que las convierte en una excelente opción para recorrer ríos.',
+        },
+        {
+          q: '¿Qué rápidos puede manejar una SUP inflable?',
+          a: 'Las SUPs inflables de calidad son adecuadas para aguas de clase I-II, con algunos modelos capaces de manejar clase III en manos experimentadas.',
+        },
+      ],
+    },
+  },
+  fr: {
+    touring: {
+      description:
+        'De longues expéditions de pagaie couvrant de longues distances sur des lacs, des rivières et des eaux côtières.',
+      features: [
+        'Conception de planches longue distance',
+        'Forme efficace de la coque',
+        'Pagaie légère',
+        'Stockage du matériel',
+      ],
+      useCases: [
+        'Expéditions lacustres de plusieurs jours',
+        'Exploration côtière',
+        'Voyages fluviaux',
+        'Entraînement physique',
+      ],
+      faq: [
+        {
+          q: 'Quelle planche est la meilleure pour la tournée ?',
+          a: 'Les planches plus longues et plus étroites avec des formes de coque efficaces sont idéales pour les excursions. Les planches gonflables SUPs drop-stitch de construction offrent la rigidité nécessaire à une pagaie efficace sur de longues distances.',
+        },
+        {
+          q: 'Jusqu’où peut-on pagayer en une journée ?',
+          a: 'Avec une forme physique et des conditions adéquates, les pagayeurs expérimentés peuvent parcourir 15 à 25 miles (24 à 40 km) en une journée de randonnée.',
+        },
+      ],
+    },
+    beginner: {
+      description:
+        'Débutants SUP en pagayant apprennent les bases des planches gonflables, de la sécurité et de la navigation aquatique.',
+      features: [
+        'Plateforme stable',
+        'Gonflage et installation faciles',
+        'Manipulation indulgente',
+        'Kit tout-en-un disponible',
+      ],
+      useCases: [
+        'Première fois à pagayer',
+        'Apprendre les traits de base',
+        'Comprendre la sécurité aquatique',
+        'Renforcer la confiance sur l’eau',
+      ],
+      faq: [
+        {
+          q: 'Un gonflable SUP est-il bon pour les débutants ?',
+          a: 'Oui. Les gonflables SUPs sont stables, tolérants et plus faciles à transporter et à stocker que les planches rigides, ce qui en fait d’excellentes pour les débutants.',
+        },
+        {
+          q: 'Combien de temps faut-il pour apprendre le paddleboard debout ?',
+          a: 'La plupart des débutants peuvent se lever et pagayer sur de l’eau plate dès leur première séance. L’équilibre s’améliore rapidement avec la pratique.',
+        },
+      ],
+    },
+    'family-recreation': {
+      description:
+        'Planches SUP gonflables utilisées pour les sorties familiales occasionnelles sur les lacs, les rivières calmes et les eaux côtières protégées.',
+      features: [
+        'Grande capacité de poids',
+        'Conception stable pour plusieurs personnes',
+        'Transport facile',
+        'Multiples chambres à air pour la sécurité',
+      ],
+      useCases: [
+        'Sorties au lac',
+        'Journées à la plage',
+        'Flottements sur rivière douce',
+        "Pique-niques au bord de l'eau",
+      ],
+      faq: [
+        {
+          q: 'Quelle planche SUP est idéale pour une famille ?',
+          a: 'Une grande planche SUP gonflable et stable avec une grande capacité de poids est idéale pour les activités familiales. Recherchez des modèles avec plusieurs chambres à air pour la sécurité et suffisamment de capacité pour les passagers et le matériel.',
+        },
+        {
+          q: 'Une planche SUP gonflable est-elle sûre pour les enfants ?',
+          a: 'Oui, avec une supervision appropriée et des gilets de sauvetage. Les planches SUPs gonflables sont naturellement stables et à côtés souples, ce qui les rend tolérantes pour les familles.',
+        },
+      ],
+    },
+    'river-touring': {
+      description:
+        'Navigation sur les rivières avec courant, des sections douces de classe I aux rapides plus difficiles de classe II.',
+      features: ['Coque maniable', 'Résistante aux chocs', 'Drainage rapide', 'Adaptée aux eaux vives'],
+      useCases: [
+        'Navigation sur rivières de classe I-II',
+        'Flottements pittoresques sur rivière',
+        'Excursions de plusieurs jours sur rivière',
+        'Jeux en eaux vives',
+      ],
+      faq: [
+        {
+          q: 'Les planches SUPs gonflables sont-elles adaptées pour le tourisme fluvial ?',
+          a: 'Oui. Les planches SUPs gonflables sont durables et maniables, et elles résistent mieux aux impacts avec les rochers que les planches rigides, ce qui en fait un excellent choix pour le tourisme fluvial.',
+        },
+        {
+          q: 'Quels rapides une planche SUP gonflable peut-elle gérer ?',
+          a: 'Les planches SUPs gonflables de qualité conviennent bien aux eaux de classe I-II, certains modèles étant capables de gérer la classe III entre des mains expérimentées.',
+        },
+      ],
+    },
+  },
+  it: {
+    touring: {
+      description: 'Lunghi viaggi di pagaiata che coprono distanze significative su laghi, fiumi e acque costiere.',
+      features: [
+        'Progettazione delle tavole a lunga distanza',
+        'Forma efficiente dello scafo',
+        'Pagaia leggera',
+        "Stoccaggio dell'attrezzatura",
+      ],
+      useCases: ['Spedizioni di più giorni su laghi', 'Esplorazione costiera', 'Viaggi fluviali', 'Allenamento fisico'],
+      faq: [
+        {
+          q: 'Qual è la tavola migliore per i tour?',
+          a: 'Tavole più lunghe e strette con forme di scafo efficienti sono ideali per il touring. Le tavole gonfiabili SUPs drop-stitch con costruzione forniscono la rigidità necessaria per una pagaia efficiente a lunga distanza.',
+        },
+        {
+          q: 'Quanto lontano si può remare in un giorno?',
+          a: 'Con una corretta forma fisica e condizioni, i canoisti esperti possono percorrere 15-25 miglia (24-40 km) in una giornata di touring.',
+        },
+      ],
+    },
+    beginner: {
+      description:
+        'Principianti che imparano le basi delle SUP tavole gonfiabili, della sicurezza e della navigazione in acqua.',
+      features: [
+        'Piattaforma stabile',
+        'Facile da gonfiare e preparare',
+        'Gestione indulgente',
+        'Kit tutto-in-uno disponibile',
+      ],
+      useCases: [
+        'Prima volta che pagaiano',
+        'Imparare i colpi base',
+        'Comprendere la sicurezza in acqua',
+        "Costruire fiducia sull'acqua",
+      ],
+      faq: [
+        {
+          q: 'Un gonfiabile è SUP adatto per i principianti?',
+          a: 'Sì. Le gonfiabili SUPs sono stabili, tolleranti e più facili da trasportare e conservare rispetto alle tavole rigide, rendendole eccellenti per i principianti.',
+        },
+        {
+          q: 'Quanto tempo ci vuole per imparare a fare stand-up paddleboard?',
+          a: "La maggior parte dei principianti può alzarsi in piedi e remare su acque piatte già nella prima sessione. L'equilibrio migliora rapidamente con la pratica.",
+        },
+      ],
+    },
+    'family-recreation': {
+      description: 'SUP Tavole gonfiabili usate per uscite familiari su laghi, fiumi dolci e acque costiere protette.',
+      features: [
+        'Ampia capacità di peso',
+        'Progettazione stabile multi-persona',
+        'Trasporto facile',
+        "Camere d'aria multiple per sicurezza",
+      ],
+      useCases: ['Uscite al lago', 'Giornate in spiaggia', 'Fluture dolci', 'Picnic via acqua'],
+      faq: [
+        {
+          q: 'Quale SUP tavola è la migliore per una famiglia?',
+          a: "Un gonfiabile ampio, SUP stabile con grande capacità di peso è ideale per il tempo libero in famiglia. Cerca modelli con più camere d'aria per sicurezza e sufficiente capacità per passeggeri e attrezzatura.",
+        },
+        {
+          q: 'Un gonfiabile è SUP sicuro per i bambini?',
+          a: 'Sì, con una corretta supervisione e giubbotti di salvataggio. I gonfiabili SUPs sono intrinsecamente stabili e morbidi, rendendoli tolleranti per le famiglie.',
+        },
+      ],
+    },
+    'river-touring': {
+      description:
+        'Navigare fiumi con corrente, da estensioni di Classe I più dolci a rapide di Classe II più impegnative.',
+      features: ['Scafo manovrabile', 'Resistente agli urti', 'Drenaggio rapido', 'Capace di acque bianche'],
+      useCases: [
+        'Corsi fluviali di classe I-II',
+        'Galleggianti panoramici dei fiumi',
+        'Viaggi fluviali di più giorni',
+        'Gioco in acque bianche',
+      ],
+      faq: [
+        {
+          q: 'I gonfiabili sono SUPs adatti per le escursioni fluviali?',
+          a: 'Sì. I gonfiabili SUPs sono resistenti e manovrabili, e sopportano meglio gli impatti con rocce rispetto alle tavole rigide, rendendoli una scelta eccellente per il turismo fluviale.',
+        },
+        {
+          q: 'Quali rapide può SUP gestire un gonfiabile?',
+          a: 'I gonfiabili di qualità SUPs sono ben adatti alle acque di classe I-II, con alcuni modelli capaci di classe III in mani esperte.',
+        },
+      ],
+    },
   },
 };
 
@@ -478,6 +2407,24 @@ export const USE_CASE_HEADINGS_MT: Record<
     scenarios: 'Сценарии',
     recommended: 'Препоръчано оборудване',
   },
+  et: {
+    whatIs: 'Mis see kasutusjuhtum on?',
+    keyFeatures: 'Olulised omadused',
+    scenarios: 'Stsenaariumid',
+    recommended: 'Soovitatav varustus',
+  },
+  he: {
+    whatIs: 'מהו מקרה שימוש זה?',
+    keyFeatures: 'תכונות עיקריות',
+    scenarios: 'תרחישים',
+    recommended: 'ציוד מומלץ',
+  },
+  hr: {
+    whatIs: 'Koja je ova upotreba?',
+    keyFeatures: 'Ključne značajke',
+    scenarios: 'Scenariji',
+    recommended: 'Preporučena oprema',
+  },
   hu: {
     whatIs: 'Mi ez a felhasználási eset?',
     keyFeatures: 'Fő jellemzők',
@@ -490,6 +2437,24 @@ export const USE_CASE_HEADINGS_MT: Record<
     scenarios: 'Skenario',
     recommended: 'Peralatan yang Direkomendasikan',
   },
+  ko: {
+    whatIs: '이 사용 사례는 무엇입니까?',
+    keyFeatures: '주요 특징',
+    scenarios: '시나리오',
+    recommended: '추천 장비',
+  },
+  lt: {
+    whatIs: 'Koks yra šio naudojimo atvejis?',
+    keyFeatures: 'Pagrindinės savybės',
+    scenarios: 'Scenarijai',
+    recommended: 'Rekomenduojama įranga',
+  },
+  lv: {
+    whatIs: 'Kas ir šis lietošanas gadījums?',
+    keyFeatures: 'Galvenās īpašības',
+    scenarios: 'Scenāriji',
+    recommended: 'Ieteicamā aprīkojuma komplekts',
+  },
   ms: {
     whatIs: 'Apakah kes penggunaan ini?',
     keyFeatures: 'Ciri-ciri Utama',
@@ -501,6 +2466,24 @@ export const USE_CASE_HEADINGS_MT: Record<
     keyFeatures: 'Caracteristici principale',
     scenarios: 'Scenarii',
     recommended: 'Echipament recomandat',
+  },
+  sk: {
+    whatIs: 'Aký je tento prípad použitia?',
+    keyFeatures: 'Kľúčové vlastnosti',
+    scenarios: 'Scenáre',
+    recommended: 'Odporúčané vybavenie',
+  },
+  sl: {
+    whatIs: 'Kakšna je ta uporaba?',
+    keyFeatures: 'Ključne lastnosti',
+    scenarios: 'Scenariji',
+    recommended: 'Priporočena oprema',
+  },
+  sr: {
+    whatIs: 'Koja je upotreba ovog slučaja?',
+    keyFeatures: 'Ključne karakteristike',
+    scenarios: 'Scenariji',
+    recommended: 'Preporučena oprema',
   },
   th: {
     whatIs: 'กรณีการใช้งานนี้คืออะไร?',
@@ -520,6 +2503,18 @@ export const USE_CASE_HEADINGS_MT: Record<
     scenarios: 'Senaryolar',
     recommended: 'Önerilen Ekipman',
   },
+  da: {
+    whatIs: 'Hvad er denne brugssituation?',
+    keyFeatures: 'Nøglefunktioner',
+    scenarios: 'Scenarier',
+    recommended: 'Anbefalet udstyr',
+  },
+  no: {
+    whatIs: 'Hva er denne bruksområdet?',
+    keyFeatures: 'Nøkkelfunksjoner',
+    scenarios: 'Scenarioer',
+    recommended: 'Anbefalt utstyr',
+  },
   nl: {
     whatIs: 'Wat is dit gebruiksscenario?',
     keyFeatures: 'Belangrijkste kenmerken',
@@ -531,5 +2526,47 @@ export const USE_CASE_HEADINGS_MT: Record<
     keyFeatures: 'Principais Recursos',
     scenarios: 'Cenários',
     recommended: 'Equipamento Recomendado',
+  },
+  pl: {
+    whatIs: 'Jaki jest ten przypadek użycia?',
+    keyFeatures: 'Kluczowe cechy',
+    scenarios: 'Scenariusze',
+    recommended: 'Zalecany sprzęt',
+  },
+  ru: {
+    whatIs: 'Какой это вариант использования?',
+    keyFeatures: 'Ключевые особенности',
+    scenarios: 'Сценарии',
+    recommended: 'Рекомендуемое оборудование',
+  },
+  ar: {
+    whatIs: 'ما هو هذا الاستخدام؟',
+    keyFeatures: 'الميزات الرئيسية',
+    scenarios: 'السيناريوهات',
+    recommended: 'المعدات الموصى بها',
+  },
+  de: {
+    whatIs: 'Was ist dieser Anwendungsfall?',
+    keyFeatures: 'Hauptmerkmale',
+    scenarios: 'Szenarien',
+    recommended: 'Empfohlene Ausrüstung',
+  },
+  es: {
+    whatIs: '¿Cuál es este caso de uso?',
+    keyFeatures: 'Características clave',
+    scenarios: 'Escenarios',
+    recommended: 'Equipo recomendado',
+  },
+  fr: {
+    whatIs: 'Quel est ce cas d’usage ?',
+    keyFeatures: 'Caractéristiques clés',
+    scenarios: 'Scénarios',
+    recommended: 'Équipement recommandé',
+  },
+  it: {
+    whatIs: "Qual è questo caso d'uso?",
+    keyFeatures: 'Caratteristiche principali',
+    scenarios: 'Scenari',
+    recommended: 'Equipaggiamento Consigliato',
   },
 };
