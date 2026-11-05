@@ -24,7 +24,13 @@ t('answerCenter.badge');
 t('answerCenter.suggested');
 t('answerCenter.explore');
 
-const categories = (AI_CATEGORIES[lang] || AI_CATEGORIES.en) as any[];
+const categories = ((AI_CATEGORIES[lang] || AI_CATEGORIES.en) as any[]).map((cat: any) => ({
+  ...cat,
+  label:
+    typeof cat.label === 'string' && cat.label.startsWith('LABEL_')
+      ? t(cat.label.slice('LABEL_'.length)) || cat.label
+      : cat.label,
+}));
 
 const metadata = {
   title: `${heroTitle} | ${SITE.name}`,
