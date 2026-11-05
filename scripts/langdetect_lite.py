@@ -41,6 +41,10 @@ _DIA_EVIDENCE = [
     ("pl", re.compile("[\u0105\u0107\u0119\u0142\u0144\u015B\u017A\u017C]")),  # ą ć ę ł ń ś ź ż
     ("cs", re.compile("[\u011B\u016F\u0159\u0165\u010F\u0148]")),              # ě ů ř ť ď ň
     ("pt", re.compile("[\u00E3\u00F5]")),                                     # ã õ
+    # ñ 仅出现在西班牙语（pt 无 ñ，tl 不参与语种判定）：es 与 nl 共享 de/en/in
+    # 停用词，无字形证据时西语样本混入英文块会被误判成 nl（es/factory/capacity
+    # 曾因硬编码英文 TLDR 块被误报“语言串台”阻断 CI）。
+    ("es", re.compile("[\u00F1\u00D1]")),                                     # ñ Ñ
     ("no", re.compile("[\u00F8\u00E6]")),                                     # ø æ
     ("da", re.compile("[\u00F8\u00E6]")),                                     # ø æ
 ]
