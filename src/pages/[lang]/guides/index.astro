@@ -9,7 +9,7 @@ import { GUIDE_L10N, GUIDE_META_L10N } from '~/lib/guides-l10n';
 import { GUIDE_L10N_MT, GUIDE_META_L10N_MT } from '~/lib/guides-l10n-mt';
 import { getPageContent, setPageContentData } from '~/i18n/page-content';
 import __pageData from '~/i18n/generated/pages/guides.ts';
-import { localizePageTitle } from '~/i18n/page-title';
+import { localizePageTitle, localizePageDescription } from '~/i18n/page-title';
 import { languages } from '~/i18n/config';
 
 export async function getStaticPaths() {
@@ -25,8 +25,10 @@ const sizeGuide = page.size_guide ?? {};
 
 const metadata = {
   title: localizePageTitle(page, `Guides — ${SITE.name}`),
-  description:
-    'Beginner guides for SUP and water sports. Learn how to choose your SUP, safety tips, inflatable vs hard board comparisons, paddling techniques, and more.',
+  description: localizePageDescription(
+    page,
+    'Beginner guides for SUP and water sports. Learn how to choose your SUP, safety tips, inflatable vs hard board comparisons, paddling techniques, and more.'
+  ),
 };
 
 const categories = [...new Set(guides.map((g) => g.category))];
