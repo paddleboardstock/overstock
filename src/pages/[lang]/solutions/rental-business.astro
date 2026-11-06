@@ -250,8 +250,8 @@ const faqSchema = JSON.stringify({
       </p>
     </div>
     <LandingCompareTable
-      title="Rental SUP Boards"
-      subtitle="Compare our most popular SUP boards for rental fleets"
+      title={t('solutions.rental.compareTable.title') || 'Rental SUP Boards'}
+      subtitle={t('solutions.rental.compareTable.subtitle') || 'Compare our most popular SUP boards for rental fleets'}
       productIds={['sup-explorer-11', 'sup-ocean-pulse', 'sup-dolphin-wave', 'sup-ocean-voyager']}
       specs={['category', 'skill', 'environment', 'water_condition', 'use_case']}
     />

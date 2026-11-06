@@ -25,7 +25,7 @@ const categories = page.categories ?? [];
 const testimonials = page.testimonials ?? [];
 const cta = page.cta ?? {};
 
-const crumbs = [{ name: t('nav.home'), href: `/${lang}/` }, { name: 'Testimonials' }];
+const crumbs = [{ name: t('nav.home'), href: `/${lang}/` }, { name: t('nav.testimonials') || 'Testimonials' }];
 
 const metadata = {
   title: localizePageTitle(page, `Testimonials — ${SITE.name}`),

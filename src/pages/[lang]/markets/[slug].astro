@@ -94,7 +94,11 @@ const cta = page.cta ?? {};
 
 const localizeHref = (href: string) => (href.startsWith('/') ? `/${lang}${href}` : href);
 
-const crumbs = [{ name: t('nav.home'), href: `/${lang}/` }, { name: 'Markets' }, { name: marketName }];
+const crumbs = [
+  { name: t('nav.home'), href: `/${lang}/` },
+  { name: t('nav.markets') || 'Markets' },
+  { name: marketName },
+];
 
 const metadata = {
   title: localizePageTitle(page, `Wholesale SUP Boards for ${marketName} — Shipping & Market Guide | ${SITE.name}`),

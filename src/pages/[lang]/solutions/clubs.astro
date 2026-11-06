@@ -46,7 +46,7 @@ const compareLabels = page.compare_table_labels ?? {};
 
 const crumbs = [
   { name: t('nav.home'), href: `/${lang}/` },
-  { name: 'Solutions', href: `/${lang}/solutions` },
+  { name: t('nav.solutions') || 'Solutions', href: `/${lang}/solutions` },
   { name: hero.tagline || 'Water Sports Clubs' },
 ];
 
