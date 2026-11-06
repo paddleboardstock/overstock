@@ -10,7 +10,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import { SITE } from 'astrowind:config';
 import { getPageContent, setPageContentData } from '~/i18n/page-content';
 import __pageData from '~/i18n/generated/pages/brand-why-paddleboardoverstock.ts';
-import { localizePageTitle } from '~/i18n/page-title';
+import { localizePageTitle, localizePageDescription } from '~/i18n/page-title';
 import { languages } from '~/i18n/config';
 import { getUiForLang } from '~/i18n/generated/ui-all';
 
@@ -33,8 +33,10 @@ const ctaActions = cta.actions?.map((a: any) => ({ ...a, href: lh(a.href) }));
 
 const metadata = {
   title: localizePageTitle(page, `Why Choose ${SITE.name}`),
-  description:
-    'Seven reasons why customers choose Paddle Board Overstock: real manufacturing, engineering-led design, factory-tested quality, global logistics, lifetime support.',
+  description: localizePageDescription(
+    page,
+    'Seven reasons why customers choose Paddle Board Overstock: real manufacturing, engineering-led design, factory-tested quality, global logistics, lifetime support.'
+  ),
 };
 const crumbs = [
   { name: t('nav.home') || 'Home', href: `/${lang}/` },

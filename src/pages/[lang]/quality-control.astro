@@ -12,7 +12,7 @@ import TrustBadges from '~/components/common/TrustBadges.astro';
 import { SITE } from 'astrowind:config';
 import { getPageContent, setPageContentData } from '~/i18n/page-content';
 import __pageData from '~/i18n/generated/pages/quality-control.ts';
-import { localizePageTitle } from '~/i18n/page-title';
+import { localizePageTitle, localizePageDescription } from '~/i18n/page-title';
 import { languages } from '~/i18n/config';
 import { getUiForLang } from '~/i18n/generated/ui-all';
 
@@ -38,8 +38,10 @@ const ctaActions = cta.actions?.map((a: any) => ({ ...a, href: lh(a.href) }));
 
 const metadata = {
   title: localizePageTitle(page, `Quality Control System — ${SITE.name} | SUP Manufacturing QC Process`),
-  description:
-    'Six-stage quality control system for SUP board manufacturing: material inspection, in-process QC, welding verification, pressure testing, final inspection. 100% of units tested.',
+  description: localizePageDescription(
+    page,
+    'Six-stage quality control system for SUP board manufacturing: material inspection, in-process QC, welding verification, pressure testing, final inspection. 100% of units tested.'
+  ),
 };
 const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: page.crumb_label || 'Quality Control' }];
 

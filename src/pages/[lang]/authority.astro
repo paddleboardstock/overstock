@@ -10,7 +10,7 @@ import JsonLd from '~/components/common/JsonLd.astro';
 import { SITE } from 'astrowind:config';
 import { getPageContent, setPageContentData } from '~/i18n/page-content';
 import __pageData from '~/i18n/generated/pages/authority.ts';
-import { localizePageTitle } from '~/i18n/page-title';
+import { localizePageTitle, localizePageDescription } from '~/i18n/page-title';
 import { languages } from '~/i18n/config';
 import { getUiForLang } from '~/i18n/generated/ui-all';
 
@@ -45,8 +45,10 @@ const metadata = {
     page,
     `Authority Center — ${SITE.name} | Why Industry Professionals Trust Paddle Board Overstock`
   ),
-  description:
-    'Team expertise, manufacturing capabilities, and proof of quality. Everything that makes Paddle Board Overstock a trusted inflatable SUP board manufacturer.',
+  description: localizePageDescription(
+    page,
+    'Team expertise, manufacturing capabilities, and proof of quality. Everything that makes Paddle Board Overstock a trusted inflatable SUP board manufacturer.'
+  ),
 };
 const crumbs = [
   { name: t('nav.home') || 'Home', href: `/${lang}/` },

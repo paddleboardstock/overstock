@@ -10,7 +10,7 @@ import JsonLd from '~/components/common/JsonLd.astro';
 import { SITE } from 'astrowind:config';
 import { getPageContent, setPageContentData } from '~/i18n/page-content';
 import __pageData from '~/i18n/generated/pages/brand-team.ts';
-import { localizePageTitle } from '~/i18n/page-title';
+import { localizePageTitle, localizePageDescription } from '~/i18n/page-title';
 import { languages } from '~/i18n/config';
 import { getUiForLang } from '~/i18n/generated/ui-all';
 
@@ -39,8 +39,10 @@ const ctaActions = cta.actions?.map((a: any) => ({ ...a, href: lh(a.href) }));
 
 const metadata = {
   title: localizePageTitle(page, `Team — ${SITE.name} | Marine Engineering & Leadership`),
-  description:
-    'Meet the Paddle Board Overstock team — marine engineers, material scientists, and manufacturing experts with decades of combined experience in inflatable SUP board design and production.',
+  description: localizePageDescription(
+    page,
+    'Meet the Paddle Board Overstock team — marine engineers, material scientists, and manufacturing experts with decades of combined experience in inflatable SUP board design and production.'
+  ),
 };
 const crumbs = [
   { name: t('nav.home') || 'Home', href: `/${lang}/` },

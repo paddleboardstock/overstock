@@ -7,7 +7,7 @@ import { getProducts } from '~/utils/products';
 import { languages, defaultLang } from '~/i18n/config';
 import { getPageContent, setPageContentData } from '~/i18n/page-content';
 import __pageData from '~/i18n/generated/pages/size-guide.ts';
-import { localizePageTitle } from '~/i18n/page-title';
+import { localizePageTitle, localizePageDescription } from '~/i18n/page-title';
 import { localizeProductData } from '~/lib/product-l10n';
 
 export async function getStaticPaths() {
@@ -24,8 +24,10 @@ const howToChoose = page.how_to_choose || {};
 
 const metadata = {
   title: localizePageTitle(page, `Size Guide — ${SITE.name}`),
-  description:
-    'Find the right inflatable SUP size for your weight and skill. Compare board lengths, widths, thickness, weight, and max load.',
+  description: localizePageDescription(
+    page,
+    'Find the right inflatable SUP size for your weight and skill. Compare board lengths, widths, thickness, weight, and max load.'
+  ),
 };
 
 const rawProducts = await getProducts();

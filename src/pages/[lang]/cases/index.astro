@@ -8,7 +8,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import { SITE } from 'astrowind:config';
 import { getPageContent, setPageContentData } from '~/i18n/page-content';
 import __pageData from '~/i18n/generated/pages/cases.ts';
-import { localizePageTitle } from '~/i18n/page-title';
+import { localizePageTitle, localizePageDescription } from '~/i18n/page-title';
 import { languages } from '~/i18n/config';
 import { getUiForLang } from '~/i18n/generated/ui-all';
 
@@ -29,8 +29,10 @@ const ctaActions = cta.actions?.map((a: any) => ({ ...a, href: lh(a.href) }));
 
 const metadata = {
   title: localizePageTitle(page, `Case Studies — ${SITE.name} | Real-World SUP Projects`),
-  description:
-    'Real projects from around the world: resort fleets, rental operators, surf schools, club programs, and more.',
+  description: localizePageDescription(
+    page,
+    'Real projects from around the world: resort fleets, rental operators, surf schools, club programs, and more.'
+  ),
 };
 const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: t('nav.cases') || 'Case Studies' }];
 const caseYears = ['2023', '2024', '2024', '2025', '2025', '2025', '2024', '2026', '2025', '2026', '2026', '2026'];
