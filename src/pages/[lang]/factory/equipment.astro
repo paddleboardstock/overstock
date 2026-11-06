@@ -34,6 +34,9 @@ const page = getPageContent(lang, 'factory-equipment');
 const hero: Record<string, string> = page.hero ?? {};
 const categories: CategoryItem[] = page.categories ?? [];
 const cta: Record<string, string> = page.cta ?? {};
+const tldr: { summary?: string; points?: string[] } = page.tldr ?? {};
+const tldrSummary: string = tldr.summary ?? '';
+const tldrPoints: string[] = tldr.points ?? [];
 
 const crumbs = [
   { name: t('nav.home') || 'Home', href: '/' + lang + '/' },
@@ -49,17 +52,6 @@ const metadata = {
       ' factory equipment: automatic PVC cutting machines, high-frequency RF welders, EVA deck cutting stations, heat sealing presses, final assembly rigs, and pressure test rigs.'
   ),
 };
-
-const tldrSummary =
-  'Paddle Board Overstock operates 12,000 m\u00B2 of production space equipped with automatic PVC cutting machines, high-frequency RF welders, EVA deck cutting and finishing stations, heat sealing presses, and final assembly rigs. Every board passes 1.25x rated pressure hold testing.';
-
-const tldrPoints: string[] = [
-  'Automatic PVC cutting with CNC precision',
-  'High-frequency RF welding for seam integrity',
-  'EVA deck cutting and hand-finishing stations',
-  'Valve torque and fin box assembly rigs',
-  '1.25x rated pressure hold testing on 100% of boards',
-];
 
 const faqSchema = JSON.stringify({
   '@context': 'https://schema.org',
@@ -121,21 +113,29 @@ const faqSchema = JSON.stringify({
     </div>
   </section>
 
-  <section class="px-6 sm:px-6 pb-8 mx-auto max-w-4xl">
-    <Tldr summary={tldrSummary} points={tldrPoints} />
-  </section>
+  {
+    tldrSummary && (
+      <section class="px-6 sm:px-6 pb-8 mx-auto max-w-4xl">
+        <Tldr summary={tldrSummary} points={tldrPoints} />
+      </section>
+    )
+  }
 
-  <section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl">
-    <div
-      class="bg-blue-50/60 dark:bg-slate-800/40 border-l-4 border-blue-500 rounded-r-xl px-6 py-4"
-      data-ai-block="direct-answer"
-    >
-      <p class="text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider mb-2">
-        Quick Answer &mdash; AI Summary
-      </p>
-      <p class="text-sm text-gray-700 dark:text-slate-300 leading-relaxed">{tldrSummary}</p>
-    </div>
-  </section>
+  {
+    tldrSummary && (
+      <section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl">
+        <div
+          class="bg-blue-50/60 dark:bg-slate-800/40 border-l-4 border-blue-500 rounded-r-xl px-6 py-4"
+          data-ai-block="direct-answer"
+        >
+          <p class="text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider mb-2">
+            Quick Answer &mdash; AI Summary
+          </p>
+          <p class="text-sm text-gray-700 dark:text-slate-300 leading-relaxed">{tldrSummary}</p>
+        </div>
+      </section>
+    )
+  }
 
   <section class="px-6 sm:px-6 pb-20 mx-auto max-w-5xl space-y-16">
     {

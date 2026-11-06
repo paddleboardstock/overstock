@@ -43,21 +43,13 @@ const metadata = {
 };
 const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: 'Quality Control' }];
 
-const tldrSummary =
-  'Six-stage quality control system: material inspection, in-process QC, welding verification, assembly QC, pressure testing at 1.25x rated, and final inspection. 100% unit pressure testing. 99.3% defect-free rate per AQL 2.5 sampling.';
+const tldr = page.tldr || {};
 
-const tldrPoints = [
-  'Six-stage QC: material inspection, in-process QC, welding verification, assembly QC, 1.25x pressure testing, and 100-point final inspection',
-  '100-point final inspection on every board before packing',
-  '100% of units undergo 24-48h hold at 1.25x rated pressure with max 5% drop tolerance',
-  'AQL 2.5 sampling ensuring 99.3% defect-free rate',
-  'Welding QC: peel testing, weld width verification, and backlight seam inspection on every welded joint',
-];
-
-const directAnswerHtml =
-  '<div class="direct-answer border-l-4 border-blue-600 bg-blue-50 dark:bg-slate-800/50 rounded-r-xl px-6 py-5 my-8"><p class="text-sm text-gray-700 dark:text-slate-300 leading-relaxed">' +
-  tldrSummary +
-  '</p></div>';
+const directAnswerHtml = tldr.summary
+  ? '<div class="direct-answer border-l-4 border-blue-600 bg-blue-50 dark:bg-slate-800/50 rounded-r-xl px-6 py-5 my-8"><p class="text-sm text-gray-700 dark:text-slate-300 leading-relaxed">' +
+    tldr.summary +
+    '</p></div>'
+  : '';
 
 const faqSchema = JSON.stringify({
   '@context': 'https://schema.org',
@@ -111,11 +103,15 @@ const faqSchema = JSON.stringify({
   <Hero tagline={hero.tagline} image={hero.image} title={hero.title} subtitle={hero.subtitle} />
   <Stats title={stats.title} stats={stats.stats} />
 
-  <div class="px-6 mx-auto max-w-5xl py-10">
-    <Tldr summary={tldrSummary} points={tldrPoints} />
-  </div>
+  {
+    tldr.summary && (
+      <div class="px-6 mx-auto max-w-5xl py-10">
+        <Tldr summary={tldr.summary} points={tldr.points} />
+      </div>
+    )
+  }
 
-  <div class="px-6 mx-auto max-w-5xl" set:html={directAnswerHtml} />
+  {directAnswerHtml && <div class="px-6 mx-auto max-w-5xl" set:html={directAnswerHtml} />}
 
   {
     system.items?.length > 0 && (

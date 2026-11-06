@@ -42,20 +42,13 @@ const metadata = {
 const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: hero.tagline }];
 const siteUrl = 'https://paddleboardoverstock.com';
 
-const tldrSummary =
-  'Paddle Board Overstock operates an 8-protocol quality testing program covering pressure, impact, UV, abrasion, low-temperature, buoyancy, maneuverability, and watertightness. 99.3% defect-free rate across trailing 12-month shipments.';
+const tldr = page.tldr || {};
 
-const tldrPoints = [
-  '8 testing protocols: pressure, impact, UV, abrasion, low-temperature, buoyancy, maneuverability, and watertightness',
-  '99.3% defect-free rate across trailing 12-month shipments',
-  'Every unit undergoes 24-48h hold at 1.25x rated pressure with max 5% drop tolerance',
-  'UV accelerated weathering (1,000+ hours) and coating abrasion resistance testing',
-];
-
-const directAnswerHtml =
-  '<div class="direct-answer border-l-4 border-blue-600 bg-blue-50 dark:bg-slate-800/50 rounded-r-xl px-6 py-5 my-8"><p class="text-sm text-gray-700 dark:text-slate-300 leading-relaxed">' +
-  tldrSummary +
-  '</p></div>';
+const directAnswerHtml = tldr.summary
+  ? '<div class="direct-answer border-l-4 border-blue-600 bg-blue-50 dark:bg-slate-800/50 rounded-r-xl px-6 py-5 my-8"><p class="text-sm text-gray-700 dark:text-slate-300 leading-relaxed">' +
+    tldr.summary +
+    '</p></div>'
+  : '';
 
 const faqSchema = JSON.stringify({
   '@context': 'https://schema.org',
@@ -109,11 +102,15 @@ const faqSchema = JSON.stringify({
     </div>
   </section>
 
-  <div class="px-6 mx-auto max-w-5xl py-10">
-    <Tldr summary={tldrSummary} points={tldrPoints} />
-  </div>
+  {
+    tldr.summary && (
+      <div class="px-6 mx-auto max-w-5xl py-10">
+        <Tldr summary={tldr.summary} points={tldr.points} />
+      </div>
+    )
+  }
 
-  <div class="px-6 mx-auto max-w-5xl" set:html={directAnswerHtml} />
+  {directAnswerHtml && <div class="px-6 mx-auto max-w-5xl" set:html={directAnswerHtml} />}
 
   {
     trustBar.items && trustBar.items.length > 0 && (

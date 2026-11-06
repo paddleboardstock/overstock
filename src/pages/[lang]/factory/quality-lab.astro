@@ -42,6 +42,9 @@ const intro = page.intro ?? '';
 const highlights: HighlightItem[] = page.highlights ?? [];
 const procedures: ProcedureItem[] = page.test_procedures ?? [];
 const labEquipment: EquipmentItem[] = page.equipment ?? [];
+const tldr: { summary?: string; points?: string[] } = page.tldr ?? {};
+const tldrSummary: string = tldr.summary ?? '';
+const tldrPoints: string[] = tldr.points ?? [];
 
 const crumbs = [
   { name: t('nav.home') || 'Home', href: '/' + (lang || '') + '/' },
@@ -53,17 +56,6 @@ const metadata = {
   title: localizePageTitle(page, hero.title + ' — ' + SITE.name),
   description: intro?.slice(0, 160) || SITE.name + ' quality control laboratory and testing.',
 };
-
-const tldrSummary =
-  'The Paddle Board Overstock quality lab operates independently from production, performing tensile, peel, UV, and pressure testing per documented internal protocols. 100% of units undergo 1.25x rated pressure hold testing. Defect-free rate: 99.3% across trailing 12-month shipments.';
-
-const tldrPoints = [
-  'Independent lab separated from production for unbiased quality verification',
-  '100% pressure testing at 1.25x rated pressure for 24-48h hold per unit',
-  'Documented internal protocols governing every test',
-  '99.3% defect-free rate across trailing 12-month shipments',
-  'Every unit inspected across 6-stage quality control before shipping',
-];
 
 const faqSchema = JSON.stringify({
   '@context': 'https://schema.org',
@@ -126,18 +118,26 @@ const faqSchema = JSON.stringify({
     <p class="mt-3 text-lg text-muted">{hero.subtitle}</p>
   </section>
 
-  <section class="px-6 sm:px-6 pb-8 mx-auto max-w-4xl">
-    <Tldr summary={tldrSummary} points={tldrPoints} />
-  </section>
+  {
+    tldrSummary && (
+      <section class="px-6 sm:px-6 pb-8 mx-auto max-w-4xl">
+        <Tldr summary={tldrSummary} points={tldrPoints} />
+      </section>
+    )
+  }
 
-  <section class="px-6 sm:px-6 pb-16 mx-auto max-w-4xl">
-    <div
-      class="border-l-4 border-blue-500 rounded-r-xl bg-blue-50/80 dark:bg-slate-800/50 px-6 py-5"
-      data-ai-block="direct-answer"
-    >
-      <p class="text-sm text-gray-700 dark:text-slate-300 leading-relaxed">{tldrSummary}</p>
-    </div>
-  </section>
+  {
+    tldrSummary && (
+      <section class="px-6 sm:px-6 pb-16 mx-auto max-w-4xl">
+        <div
+          class="border-l-4 border-blue-500 rounded-r-xl bg-blue-50/80 dark:bg-slate-800/50 px-6 py-5"
+          data-ai-block="direct-answer"
+        >
+          <p class="text-sm text-gray-700 dark:text-slate-300 leading-relaxed">{tldrSummary}</p>
+        </div>
+      </section>
+    )
+  }
 
   {
     intro && (
