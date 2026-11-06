@@ -9,6 +9,8 @@ import { getPageContent, setPageContentData } from '~/i18n/page-content';
 import __pageData from '~/i18n/generated/pages/size-guide.ts';
 import { localizePageTitle, localizePageDescription } from '~/i18n/page-title';
 import { localizeProductData } from '~/lib/product-l10n';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+const t = (key: string) => getUiForLang(lang)?.[key] || '';
 
 export async function getStaticPaths() {
   return Object.keys(languages).map((lang) => ({ params: { lang } }));
@@ -46,26 +48,32 @@ const faqSchema = JSON.stringify({
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'What SUP board sizes are available?',
+      name: t('faq.sizeGuide.q1.q') || 'What SUP board sizes are available?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Our boards are ~11 ft (330 cm) all-around shapes, 32 inches wide, with 6-inch drop-stitch cores rated to 15 PSI.',
+        text:
+          t('faq.sizeGuide.q1.a') ||
+          'Our boards are ~11 ft (330 cm) all-around shapes, 32 inches wide, with 6-inch drop-stitch cores rated to 15 PSI.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What size is best for beginners?',
+      name: t('faq.sizeGuide.q2.q') || 'What size is best for beginners?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'A ~11 ft all-around board at 32 inches wide and 6-inch thickness at 15 PSI offers the best stability and versatility for beginners.',
+        text:
+          t('faq.sizeGuide.q2.a') ||
+          'A ~11 ft all-around board at 32 inches wide and 6-inch thickness at 15 PSI offers the best stability and versatility for beginners.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What is included with a board?',
+      name: t('faq.sizeGuide.q3.q') || 'What is included with a board?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Every SUP ships as a complete package: board, travel backpack, hand pump, adjustable paddle, removable fin, coil leash, and repair kit.',
+        text:
+          t('faq.sizeGuide.q3.a') ||
+          'Every SUP ships as a complete package: board, travel backpack, hand pump, adjustable paddle, removable fin, coil leash, and repair kit.',
       },
     },
   ],

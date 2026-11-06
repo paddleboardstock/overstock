@@ -101,26 +101,29 @@ const faqSchema = JSON.stringify({
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'What resources are available?',
+      name: t('faq.resources.q1.q') || 'What resources are available?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'The 2026 SUP product catalog, inflatable SUP buyer guide, size and fit guide, board care and maintenance guide, materials guide, and getting-started paddling basics.',
+        text:
+          t('faq.resources.q1.a') ||
+          'The 2026 SUP product catalog, inflatable SUP buyer guide, size and fit guide, board care and maintenance guide, materials guide, and getting-started paddling basics.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Are resources free to access?',
+      name: t('faq.resources.q2.q') || 'Are resources free to access?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. All catalogs and guides are free to download.',
+        text: t('faq.resources.q2.a') || 'Yes. All catalogs and guides are free to download.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Can I request additional documentation?',
+      name: t('faq.resources.q3.q') || 'Can I request additional documentation?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Material test reports and pressure test logs are available upon request.',
+        text:
+          t('faq.resources.q3.a') || 'Yes. Material test reports and pressure test logs are available upon request.',
       },
     },
   ],

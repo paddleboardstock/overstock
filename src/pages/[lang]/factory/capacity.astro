@@ -57,42 +57,52 @@ const faqSchema = JSON.stringify({
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'What is the annual production capacity?',
+      name: t('faq.factoryCapacity.q1.q') || 'What is the annual production capacity?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '15,000 paddle boards per year across all-around and art-series SUP lines, plus 2,000+ accessory sets (paddles, pumps, leashes, bags).',
+        text:
+          t('faq.factoryCapacity.q1.a') ||
+          '15,000 paddle boards per year across all-around and art-series SUP lines, plus 2,000+ accessory sets (paddles, pumps, leashes, bags).',
       },
     },
     {
       '@type': 'Question',
-      name: 'How large is the factory?',
+      name: t('faq.factoryCapacity.q2.q') || 'How large is the factory?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '12,000 m² of production space at our Weihai facility in China, run by 200-300 skilled workers across 2 shifts.',
+        text:
+          t('faq.factoryCapacity.q2.a') ||
+          '12,000 m² of production space at our Weihai facility in China, run by 200-300 skilled workers across 2 shifts.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Can you handle large volume orders?',
+      name: t('faq.factoryCapacity.q3.q') || 'Can you handle large volume orders?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. With 2-shift operation we can scale to 20,000+ boards annually, so even peak-season demand ships on time.',
+        text:
+          t('faq.factoryCapacity.q3.a') ||
+          'Yes. With 2-shift operation we can scale to 20,000+ boards annually, so even peak-season demand ships on time.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How fast do orders ship?',
+      name: t('faq.factoryCapacity.q4.q') || 'How fast do orders ship?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'In-stock orders leave our Weihai factory within 2-3 business days with tracked delivery to 50+ countries.',
+        text:
+          t('faq.factoryCapacity.q4.a') ||
+          'In-stock orders leave our Weihai factory within 2-3 business days with tracked delivery to 50+ countries.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Do you have separate production lines?',
+      name: t('faq.factoryCapacity.q5.q') || 'Do you have separate production lines?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Dedicated workshops for welding and lamination, deck art and EVA finishing, final assembly, and accessories, each with specialized equipment and QC checkpoints.',
+        text:
+          t('faq.factoryCapacity.q5.a') ||
+          'Yes. Dedicated workshops for welding and lamination, deck art and EVA finishing, final assembly, and accessories, each with specialized equipment and QC checkpoints.',
       },
     },
   ],

@@ -169,42 +169,52 @@ const faqSchema = JSON.stringify({
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'What is Drop-Stitch technology?',
+      name: t('faq.researchDropStitchTechnology.q1.q') || 'What is Drop-Stitch technology?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Drop-Stitch uses thousands of internal polyester threads connecting top and bottom PVC layers, creating a rigid flat structure when pressurized. This allows inflatable boards to perform like hard boards.',
+        text:
+          t('faq.researchDropStitchTechnology.q1.a') ||
+          'Drop-Stitch uses thousands of internal polyester threads connecting top and bottom PVC layers, creating a rigid flat structure when pressurized. This allows inflatable boards to perform like hard boards.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What thickness options are available?',
+      name: t('faq.researchDropStitchTechnology.q2.q') || 'What thickness options are available?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '4-inch (10cm) core for standard SUP boards at 15 PSI. 6-inch (15cm) core for premium boards at up to 20 PSI.',
+        text:
+          t('faq.researchDropStitchTechnology.q2.a') ||
+          '4-inch (10cm) core for standard SUP boards at 15 PSI. 6-inch (15cm) core for premium boards at up to 20 PSI.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How is Drop-Stitch quality tested?',
+      name: t('faq.researchDropStitchTechnology.q3.q') || 'How is Drop-Stitch quality tested?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Every core holds 1.25x rated pressure for 24-48 hours before shipment, plus tensile strength and UV aging checks on the laminate.',
+        text:
+          t('faq.researchDropStitchTechnology.q3.a') ||
+          'Every core holds 1.25x rated pressure for 24-48 hours before shipment, plus tensile strength and UV aging checks on the laminate.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What are the advantages over traditional construction?',
+      name: t('faq.researchDropStitchTechnology.q4.q') || 'What are the advantages over traditional construction?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Lighter weight, packable/portable, no dings or cracks, lower manufacturing cost, and consistent wall thickness through RF welding.',
+        text:
+          t('faq.researchDropStitchTechnology.q4.a') ||
+          'Lighter weight, packable/portable, no dings or cracks, lower manufacturing cost, and consistent wall thickness through RF welding.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Who invented Drop-Stitch?',
+      name: t('faq.researchDropStitchTechnology.q5.q') || 'Who invented Drop-Stitch?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Originally developed for military inflatables in the 1950s, modern Drop-Stitch was refined for SUP boards and has become the industry standard for high-performance inflatables.',
+        text:
+          t('faq.researchDropStitchTechnology.q5.a') ||
+          'Originally developed for military inflatables in the 1950s, modern Drop-Stitch was refined for SUP boards and has become the industry standard for high-performance inflatables.',
       },
     },
   ],

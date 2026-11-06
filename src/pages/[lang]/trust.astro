@@ -49,34 +49,38 @@ const faqSchema = JSON.stringify({
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'How does Paddle Board Overstock ensure quality?',
+      name: t('faq.trust.q1.q') || 'How does Paddle Board Overstock ensure quality?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Six-stage quality control with 100% pressure testing at 1.25x rated pressure and a 99.3% defect-free rate.',
+        text:
+          t('faq.trust.q1.a') ||
+          'Six-stage quality control with 100% pressure testing at 1.25x rated pressure and a 99.3% defect-free rate.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Is every board pressure tested?',
+      name: t('faq.trust.q2.q') || 'Is every board pressure tested?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. 100% of boards undergo a 24-48h hold at 1.25x rated pressure with max 5% drop tolerance.',
+        text:
+          t('faq.trust.q2.a') ||
+          'Yes. 100% of boards undergo a 24-48h hold at 1.25x rated pressure with max 5% drop tolerance.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What is the defect-free rate?',
+      name: t('faq.trust.q3.q') || 'What is the defect-free rate?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '99.3% defect-free rate per AQL 2.5 sampling.',
+        text: t('faq.trust.q3.a') || '99.3% defect-free rate per AQL 2.5 sampling.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Can I request factory audit documentation?',
+      name: t('faq.trust.q4.q') || 'Can I request factory audit documentation?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Test reports and quality documentation are available upon request.',
+        text: t('faq.trust.q4.a') || 'Yes. Test reports and quality documentation are available upon request.',
       },
     },
   ],

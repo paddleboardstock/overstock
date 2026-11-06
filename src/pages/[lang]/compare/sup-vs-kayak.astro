@@ -27,26 +27,32 @@ const faqSchema = JSON.stringify({
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Should I choose SUP or kayak for my business?',
+      name: t('faq.compareSupVsKayak.q1.q') || 'Should I choose SUP or kayak for my business?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'SUP boards for fitness, recreation, and rental popularity. Kayaks for touring, fishing, and multi-person use. Both are strong rental performers.',
+        text:
+          t('faq.compareSupVsKayak.q1.a') ||
+          'SUP boards for fitness, recreation, and rental popularity. Kayaks for touring, fishing, and multi-person use. Both are strong rental performers.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Which has higher rental demand?',
+      name: t('faq.compareSupVsKayak.q2.q') || 'Which has higher rental demand?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'SUP boards currently have higher rental demand globally, but kayaks offer year-round appeal and multi-person configurations.',
+        text:
+          t('faq.compareSupVsKayak.q2.a') ||
+          'SUP boards currently have higher rental demand globally, but kayaks offer year-round appeal and multi-person configurations.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Does Paddle Board Overstock offer both?',
+      name: t('faq.compareSupVsKayak.q3.q') || 'Does Paddle Board Overstock offer both?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Inflatable SUP boards (9ft-15ft) and kayaks (1-3 person), all in commercial-grade Drop-Stitch construction.',
+        text:
+          t('faq.compareSupVsKayak.q3.a') ||
+          'Yes. Inflatable SUP boards (9ft-15ft) and kayaks (1-3 person), all in commercial-grade Drop-Stitch construction.',
       },
     },
   ],

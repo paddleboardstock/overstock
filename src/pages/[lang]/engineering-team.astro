@@ -42,42 +42,52 @@ const faqSchema = JSON.stringify({
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'How large is the Paddle Board Overstock engineering team?',
+      name: t('faq.engineeringTeam.q1.q') || 'How large is the Paddle Board Overstock engineering team?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '14+ engineers with an average of 7+ years in inflatable manufacturing, covering hull design, materials science, and production engineering.',
+        text:
+          t('faq.engineeringTeam.q1.a') ||
+          '14+ engineers with an average of 7+ years in inflatable manufacturing, covering hull design, materials science, and production engineering.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Can Paddle Board Overstock design custom hull shapes?',
+      name: t('faq.engineeringTeam.q2.q') || 'Can Paddle Board Overstock design custom hull shapes?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Our R&D team develops custom hull shapes using 3D CAD modeling and CNC-machined aluminum molds for precision and consistency.',
+        text:
+          t('faq.engineeringTeam.q2.a') ||
+          'Yes. Our R&D team develops custom hull shapes using 3D CAD modeling and CNC-machined aluminum molds for precision and consistency.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What CAD software is used?',
+      name: t('faq.engineeringTeam.q3.q') || 'What CAD software is used?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Industry-standard 3D CAD tools for hull design, mold engineering, and structural analysis. Technical drawings available in PDF, DXF, and STEP formats.',
+        text:
+          t('faq.engineeringTeam.q3.a') ||
+          'Industry-standard 3D CAD tools for hull design, mold engineering, and structural analysis. Technical drawings available in PDF, DXF, and STEP formats.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What testing capabilities does the team have?',
+      name: t('faq.engineeringTeam.q4.q') || 'What testing capabilities does the team have?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Pressure testing (1.25x rated pressure, 24-48h), UV aging, abrasion, tensile/tear strength, buoyancy, and cold crack resistance.',
+        text:
+          t('faq.engineeringTeam.q4.a') ||
+          'Pressure testing (1.25x rated pressure, 24-48h), UV aging, abrasion, tensile/tear strength, buoyancy, and cold crack resistance.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Can I request technical drawings?',
+      name: t('faq.engineeringTeam.q5.q') || 'Can I request technical drawings?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. PDF GA drawings are freely available. DXF/DWG require a light form submission. STEP/IGES require project application. See the Technical Drawings page.',
+        text:
+          t('faq.engineeringTeam.q5.a') ||
+          'Yes. PDF GA drawings are freely available. DXF/DWG require a light form submission. STEP/IGES require project application. See the Technical Drawings page.',
       },
     },
   ],
@@ -100,7 +110,7 @@ const faqSchema = JSON.stringify({
     type="BreadcrumbList"
     breadcrumbs={[
       { name: t('nav.home') || 'Home', href: `/${lang}/` },
-      { name: 'About', href: `/${lang}/about` },
+      { name: t('nav.about') || 'About', href: `/${lang}/about` },
       { name: t('engineeringTeam.heading') || 'Engineering Team' },
     ]}
   />

@@ -366,14 +366,14 @@ const heroActions: HeroAction[] =
   </section>
 
   <JsonLd type="FAQPage" faqs={faqLd} />
-  <JsonLd type="BreadcrumbList" breadcrumbs={[{ name: 'Home', item: L('/') }]} />
+  <JsonLd type="BreadcrumbList" breadcrumbs={[{ name: t('nav.home') || 'Home', item: L('/') }]} />
   <script
     is:inline
     type="application/ld+json"
     set:html={JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'ItemList',
-      name: 'Available Overstock Inventory',
+      name: t('home.overstock.inventory.title') || 'Available Overstock Inventory',
       itemListElement: inventoryProducts.map((p, i) => ({
         '@type': 'ListItem',
         position: i + 1,

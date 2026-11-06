@@ -82,26 +82,30 @@ const faqSchema = JSON.stringify({
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'What evidence supports Paddle Board Overstock quality claims?',
+      name: t('faq.evidence.q1.q') || 'What evidence supports Paddle Board Overstock quality claims?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '99.3% defect-free rate on outgoing shipments, 100% pressure testing with a 24-48h hold at 1.25x rated pressure, and 2-year warranty coverage.',
+        text:
+          t('faq.evidence.q1.a') ||
+          '99.3% defect-free rate on outgoing shipments, 100% pressure testing with a 24-48h hold at 1.25x rated pressure, and 2-year warranty coverage.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Can I review test reports?',
+      name: t('faq.evidence.q2.q') || 'Can I review test reports?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Material test reports, pressure test logs, and QC reports are available on request.',
+        text:
+          t('faq.evidence.q2.a') ||
+          'Yes. Material test reports, pressure test logs, and QC reports are available on request.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Are third-party inspections accepted?',
+      name: t('faq.evidence.q3.q') || 'Are third-party inspections accepted?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Independent third-party inspectors are welcome at our Weihai facility.',
+        text: t('faq.evidence.q3.a') || 'Yes. Independent third-party inspectors are welcome at our Weihai facility.',
       },
     },
   ],

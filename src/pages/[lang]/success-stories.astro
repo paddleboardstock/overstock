@@ -41,26 +41,32 @@ const faqSchema = JSON.stringify({
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'What types of customers does Paddle Board Overstock serve?',
+      name: t('faq.successStories.q1.q') || 'What types of customers does Paddle Board Overstock serve?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Families, solo paddlers, adventure travelers, fitness and yoga practitioners, plus clubs, resorts, and rental operators across 50+ countries.',
+        text:
+          t('faq.successStories.q1.a') ||
+          'Families, solo paddlers, adventure travelers, fitness and yoga practitioners, plus clubs, resorts, and rental operators across 50+ countries.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What is a typical success story?',
+      name: t('faq.successStories.q2.q') || 'What is a typical success story?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Customers finding the right board for their needs — from first-time paddlers to avid tourers — and getting years of reliable performance backed by our warranty and support.',
+        text:
+          t('faq.successStories.q2.a') ||
+          'Customers finding the right board for their needs — from first-time paddlers to avid tourers — and getting years of reliable performance backed by our warranty and support.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Where can I read customer reviews?',
+      name: t('faq.successStories.q3.q') || 'Where can I read customer reviews?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'See our testimonials and success stories pages — many customers share their experiences with board quality, durability, and our support.',
+        text:
+          t('faq.successStories.q3.a') ||
+          'See our testimonials and success stories pages — many customers share their experiences with board quality, durability, and our support.',
       },
     },
   ],
@@ -218,10 +224,12 @@ const faqSchema = JSON.stringify({
   <JsonLd
     type="Service"
     service={{
-      name: 'Paddle Board Overstock Customer Success Stories',
-      description: 'Case studies of water sports clubs, resorts, and brands building profitable operations.',
-      serviceType: 'Success Stories',
-      areaServed: ['Global'],
+      name: t('jsonld.successStories.name') || 'Paddle Board Overstock Customer Success Stories',
+      description:
+        t('jsonld.successStories.description') ||
+        'Case studies of water sports clubs, resorts, and brands building profitable operations.',
+      serviceType: t('jsonld.successStories.serviceType') || 'Success Stories',
+      areaServed: [t('jsonld.global') || 'Global'],
       url: `/${lang}/success-stories`,
       items: stories.map((s: any) => ({
         name: s.title,

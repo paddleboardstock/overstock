@@ -58,19 +58,34 @@ const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: t(
   <JsonLd
     type="Service"
     service={{
-      name: 'Paddle Board Solutions — Clubs, Resorts & Rentals',
-      description: 'Equipment packages for water sports clubs, resorts, rental operators, and paddling programs.',
-      serviceType: 'Business Solutions',
-      areaServed: ['Global'],
+      name: t('jsonld.solutions.name') || 'Paddle Board Solutions — Clubs, Resorts & Rentals',
+      description:
+        t('jsonld.solutions.description') ||
+        'Equipment packages for water sports clubs, resorts, rental operators, and paddling programs.',
+      serviceType: t('jsonld.solutions.serviceType') || 'Business Solutions',
+      areaServed: [t('jsonld.global') || 'Global'],
       url: `/${lang}/solutions`,
       items: [
         {
-          name: 'Water Sports Clubs',
-          description: 'Equipment packages and branding for SUP clubs and surf schools',
+          name: t('jsonld.solutions.item1.name') || 'Water Sports Clubs',
+          description:
+            t('jsonld.solutions.item1.description') || 'Equipment packages and branding for SUP clubs and surf schools',
         },
-        { name: 'Resorts & Hotels', description: 'Premium water sports programs for hospitality properties' },
-        { name: 'Rental Businesses', description: 'Fleet packages and support for paddle board rental operators' },
-        { name: 'Paddling Use Cases', description: 'Touring, yoga, fishing, and fitness paddle boarding guides' },
+        {
+          name: t('jsonld.solutions.item2.name') || 'Resorts & Hotels',
+          description:
+            t('jsonld.solutions.item2.description') || 'Premium water sports programs for hospitality properties',
+        },
+        {
+          name: t('jsonld.solutions.item3.name') || 'Rental Businesses',
+          description:
+            t('jsonld.solutions.item3.description') || 'Fleet packages and support for paddle board rental operators',
+        },
+        {
+          name: t('jsonld.solutions.item4.name') || 'Paddling Use Cases',
+          description:
+            t('jsonld.solutions.item4.description') || 'Touring, yoga, fishing, and fitness paddle boarding guides',
+        },
       ],
     }}
   />

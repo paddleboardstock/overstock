@@ -62,26 +62,32 @@ const faqSchema = JSON.stringify({
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'What use cases does Paddle Board Overstock support?',
+      name: t('faq.solutionsByUseCase.q1.q') || 'What use cases does Paddle Board Overstock support?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Beginner paddling, touring and exploration, SUP yoga and fitness, SUP fishing, and family recreation.',
+        text:
+          t('faq.solutionsByUseCase.q1.a') ||
+          'Beginner paddling, touring and exploration, SUP yoga and fitness, SUP fishing, and family recreation.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Can I get a use-case recommendation?',
+      name: t('faq.solutionsByUseCase.q2.q') || 'Can I get a use-case recommendation?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Use the scenarios on this page to find the right board for how you paddle, or ask our AI Answer Center.',
+        text:
+          t('faq.solutionsByUseCase.q2.a') ||
+          'Yes. Use the scenarios on this page to find the right board for how you paddle, or ask our AI Answer Center.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Is everything included with each board?',
+      name: t('faq.solutionsByUseCase.q3.q') || 'Is everything included with each board?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Every board ships as a complete package with pump, paddle, leash, and backpack.',
+        text:
+          t('faq.solutionsByUseCase.q3.a') ||
+          'Yes. Every board ships as a complete package with pump, paddle, leash, and backpack.',
       },
     },
   ],

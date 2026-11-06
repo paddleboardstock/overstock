@@ -27,42 +27,52 @@ const faqSchema = JSON.stringify({
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Are inflatable SUP boards as rigid as hard boards?',
+      name: t('faq.compareInflatableVsHardboard.q1.q') || 'Are inflatable SUP boards as rigid as hard boards?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Premium Drop-Stitch boards at 15-20 PSI approach the rigidity of hard boards, while offering portability and storage advantages.',
+        text:
+          t('faq.compareInflatableVsHardboard.q1.a') ||
+          'Premium Drop-Stitch boards at 15-20 PSI approach the rigidity of hard boards, while offering portability and storage advantages.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What are the advantages of inflatable boards?',
+      name: t('faq.compareInflatableVsHardboard.q2.q') || 'What are the advantages of inflatable boards?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Portability (pack into a backpack), durability (no dings or cracks), storage convenience, safety (softer surface), and lower cost.',
+        text:
+          t('faq.compareInflatableVsHardboard.q2.a') ||
+          'Portability (pack into a backpack), durability (no dings or cracks), storage convenience, safety (softer surface), and lower cost.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What are the advantages of hard boards?',
+      name: t('faq.compareInflatableVsHardboard.q3.q') || 'What are the advantages of hard boards?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Maximum performance, no inflation needed, lighter weight at racing level, and superior tracking in choppy conditions.',
+        text:
+          t('faq.compareInflatableVsHardboard.q3.a') ||
+          'Maximum performance, no inflation needed, lighter weight at racing level, and superior tracking in choppy conditions.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Which is better for rental businesses?',
+      name: t('faq.compareInflatableVsHardboard.q4.q') || 'Which is better for rental businesses?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Inflatable boards are preferred for rentals due to durability, easy storage, transport efficiency, and lower replacement cost.',
+        text:
+          t('faq.compareInflatableVsHardboard.q4.a') ||
+          'Inflatable boards are preferred for rentals due to durability, easy storage, transport efficiency, and lower replacement cost.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What pressure should I inflate to?',
+      name: t('faq.compareInflatableVsHardboard.q5.q') || 'What pressure should I inflate to?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Standard Drop-Stitch: 15 PSI. Premium 6-inch core: up to 20 PSI. Always test at 1.25x rated pressure for safety.',
+        text:
+          t('faq.compareInflatableVsHardboard.q5.a') ||
+          'Standard Drop-Stitch: 15 PSI. Premium 6-inch core: up to 20 PSI. Always test at 1.25x rated pressure for safety.',
       },
     },
   ],

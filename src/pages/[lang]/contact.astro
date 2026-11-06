@@ -115,6 +115,8 @@ import cfg from '~/config.yaml';
 const branding = (cfg as any)?.branding || {};
 import { pageContentData } from '~/i18n/generated/site-data';
 import formTextData from '~/data/site/contact-form-text.yaml';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+const tUi = (key: string) => getUiForLang(lang)?.[key] || '';
 const lang = Astro.params.lang || 'en';
 const hub = HUB_TEXT[lang] || HUB_TEXT.en;
 setPageContentData(__pageData);
@@ -192,26 +194,32 @@ const faqSchema = JSON.stringify({
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'How can I contact Paddle Board Overstock?',
+      name: tUi('faq.contact.q1.q') || 'How can I contact Paddle Board Overstock?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Email, WhatsApp, or the contact form on this page. Inquiries typically receive a response within 24 hours.',
+        text:
+          tUi('faq.contact.q1.a') ||
+          'Email, WhatsApp, or the contact form on this page. Inquiries typically receive a response within 24 hours.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Can I visit the factory?',
+      name: tUi('faq.contact.q2.q') || 'Can I visit the factory?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. On-site and virtual factory tours available. See our Factory Audit page for preparation details.',
+        text:
+          tUi('faq.contact.q2.a') ||
+          'Yes. On-site and virtual factory tours available. See our Factory Audit page for preparation details.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What is the best way to get a quote?',
+      name: tUi('faq.contact.q3.q') || 'What is the best way to get a quote?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Use our Request Quotation form for the fastest response. Include your product requirements, target quantity, and timeline.',
+        text:
+          tUi('faq.contact.q3.a') ||
+          'Use our Request Quotation form for the fastest response. Include your product requirements, target quantity, and timeline.',
       },
     },
   ],

@@ -68,26 +68,32 @@ const faqSchema = JSON.stringify({
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Who is Paddle Board Overstock?',
+      name: t('faq.about.q1.q') || 'Who is Paddle Board Overstock?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Paddle Board Overstock is operated by Weihai Dongjilian Co., Ltd. We sell brand-new inflatable SUP boards at overstock and clearance prices, backed by our own Weihai manufacturing operations since 2012.',
+        text:
+          t('faq.about.q1.a') ||
+          'Paddle Board Overstock is operated by Weihai Dongjilian Co., Ltd. We sell brand-new inflatable SUP boards at overstock and clearance prices, backed by our own Weihai manufacturing operations since 2012.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Where does the overstock inventory come from?',
+      name: t('faq.about.q2.q') || 'Where does the overstock inventory come from?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'From two sources: surplus production batches from our own Weihai manufacturing operations, and selected excess inventory sourced from other production partners we audit. Every board is brand-new, unused, and 100% pressure-tested.',
+        text:
+          t('faq.about.q2.a') ||
+          'From two sources: surplus production batches from our own Weihai manufacturing operations, and selected excess inventory sourced from other production partners we audit. Every board is brand-new, unused, and 100% pressure-tested.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Do you serve wholesale buyers?',
+      name: t('faq.about.q3.q') || 'Do you serve wholesale buyers?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Small retailers can order 5-20 boards with mixed models in one shipment, priced by total quantity, shipped from Weihai by express air or consolidated sea freight.',
+        text:
+          t('faq.about.q3.a') ||
+          'Yes. Small retailers can order 5-20 boards with mixed models in one shipment, priced by total quantity, shipped from Weihai by express air or consolidated sea freight.',
       },
     },
   ],
