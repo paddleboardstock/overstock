@@ -1,10 +1,17 @@
 ---
+import { getLangFromUrl } from '~/i18n/utils';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
+const locale = getLangFromUrl(Astro.url);
+const ui = getUiForLang(locale || 'en') ?? {};
+const t = (key: string, fallback: string) => ui[key] || fallback;
+
 export interface Props {
   position?: 'bottom-right' | 'bottom-left';
   title?: string;
 }
 
-const { position = 'bottom-right', title = 'Paddle Board Overstock Water Advisor AI' } = Astro.props;
+const { position = 'bottom-right', title = t('aiChat.title', 'Paddle Board Overstock Water Advisor AI') } = Astro.props;
 ---
 
 <div
@@ -58,7 +65,12 @@ const { position = 'bottom-right', title = 'Paddle Board Overstock Water Advisor
       <div class="flex-1 min-w-0">
         <div class="font-semibold text-sm">{title}</div>
         <div class="text-xs text-white/80">
-          Tell me your location, experience & purpose — I will suggest gear, safety & learning
+          {
+            t(
+              'aiChat.subtitle',
+              'Tell me your location, experience & purpose — I will suggest gear, safety & learning content'
+            )
+          }
         </div>
       </div>
       <button id="ai-chat-close" class="text-white/80 hover:text-white" type="button" aria-label="Close">
@@ -81,31 +93,45 @@ const { position = 'bottom-right', title = 'Paddle Board Overstock Water Advisor
       <button
         type="button"
         class="text-xs px-2.5 py-1 rounded-full bg-sky-50 text-sky-700 border border-sky-200 hover:bg-sky-100 transition-colors"
-        data-hint="I am a beginner paddling on a lake. What SUP do you recommend?">Beginner on a lake</button
+        data-hint="I am a beginner paddling on a lake. What SUP do you recommend?"
+        >{t('aiChat.hint1', 'Beginner on a lake')}</button
       >
       <button
         type="button"
         class="text-xs px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 hover:bg-emerald-100 transition-colors"
         data-hint="I need a family paddle board for weekend lake trips with my wife and two kids."
-        >Family lake SUP</button
+        >{t('aiChat.hint2', 'Family lake SUP')}</button
       >
       <button
         type="button"
         class="text-xs px-2.5 py-1 rounded-full bg-amber-50 text-amber-700 border border-amber-200 hover:bg-amber-100 transition-colors"
-        data-hint="What safety equipment do I need for coastal paddling as an intermediate?">Coastal safety</button
+        data-hint="What safety equipment do I need for coastal paddling as an intermediate?"
+        >{t('aiChat.hint3', 'Coastal safety')}</button
       >
       <button
         type="button"
         class="text-xs px-2.5 py-1 rounded-full bg-purple-50 text-purple-700 border border-purple-200 hover:bg-purple-100 transition-colors"
-        data-hint="Compare SUP Explorer 11 vs Ocean Voyager Series for lake touring.">Compare products</button
+        data-hint="Compare SUP Explorer 11 vs Ocean Voyager Series for lake touring."
+        >{t('aiChat.hint4', 'Compare products')}</button
       >
     </div>
 
     <!-- Messages -->
-    <div id="ai-chat-messages" class="flex-1 overflow-y-auto max-h-72 p-4 space-y-3 min-h-[180px]">
+    <div
+      id="ai-chat-messages"
+      class="flex-1 overflow-y-auto max-h-72 p-4 space-y-3 min-h-[180px]"
+      data-thinking={t('aiChat.thinking', 'Thinking...')}
+      data-error={t('aiChat.error', "Sorry, I couldn't process that request.")}
+      data-network-error={t('aiChat.networkError', 'Network error. Please try again.')}
+      data-sources={t('aiChat.sources', 'Sources: ')}
+    >
       <div class="bg-gray-100 dark:bg-gray-900 text-gray-700 dark:text-gray-300 p-3 rounded-lg text-sm">
-        Tell me where you paddle, your experience level, and what you want to do — I will recommend gear, safety tips,
-        and learning resources.
+        {
+          t(
+            'aiChat.hintMessage',
+            'Tell me where you paddle, your experience level, and what you want to do — I will recommend gear, safety tips, and learning resources.'
+          )
+        }
       </div>
     </div>
 
@@ -115,7 +141,7 @@ const { position = 'bottom-right', title = 'Paddle Board Overstock Water Advisor
         <input
           id="ai-chat-input"
           type="text"
-          placeholder="Type your question..."
+          placeholder={t('aiChat.placeholder', 'Type your question...')}
           class="flex-1 px-3 py-2 text-sm border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
         <button
@@ -202,7 +228,7 @@ const { position = 'bottom-right', title = 'Paddle Board Overstock Water Advisor
       const div = document.createElement('div');
       div.id = 'ai-typing';
       div.className = 'bg-gray-100 dark:bg-gray-900 text-gray-500 p-3 rounded-lg text-sm mr-8';
-      div.textContent = 'Thinking...';
+      div.textContent = messages.getAttribute('data-thinking') || 'Thinking...';
       messages.appendChild(div);
       messages.scrollTop = messages.scrollHeight;
     }
@@ -217,7 +243,7 @@ const { position = 'bottom-right', title = 'Paddle Board Overstock Water Advisor
       const div = document.createElement('div');
       div.className = 'text-xs text-gray-400 mt-1 px-1';
       div.textContent =
-        'Sources: ' +
+        (messages.getAttribute('data-sources') || 'Sources: ') +
         sources
           .map(function (s) {
             return s.title;
@@ -255,11 +281,11 @@ const { position = 'bottom-right', title = 'Paddle Board Overstock Water Advisor
           history.push({ role: 'assistant', content: data.answer });
           addSources(data.matches || data.sources);
         } else {
-          addMessage("Sorry, I couldn't process that request.", false);
+          addMessage(messages.getAttribute('data-error') || "Sorry, I couldn't process that request.", false);
         }
       } catch {
         removeTyping();
-        addMessage('Network error. Please try again.', false);
+        addMessage(messages.getAttribute('data-network-error') || 'Network error. Please try again.', false);
       } finally {
         sendBtn.disabled = false;
       }
