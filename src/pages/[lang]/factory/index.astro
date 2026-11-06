@@ -225,11 +225,15 @@ const faqSchema = JSON.stringify({
               </div>
               <div class="md:col-span-3 p-6">
                 <div class="mb-3">
-                  <span class="text-xs font-bold text-sky-600 uppercase tracking-wider">QC Checkpoint</span>
+                  <span class="text-xs font-bold text-sky-600 uppercase tracking-wider">
+                    {page.qc_checkpoint_label || 'QC Checkpoint'}
+                  </span>
                   <p class="mt-1 text-sm text-gray-700 dark:text-gray-300">{f.qc_check}</p>
                 </div>
                 <div>
-                  <span class="text-xs font-bold text-amber-600 uppercase tracking-wider">Pass / Fail Threshold</span>
+                  <span class="text-xs font-bold text-amber-600 uppercase tracking-wider">
+                    {page.qc_threshold_label || 'Pass / Fail Threshold'}
+                  </span>
                   <p class="mt-1 text-sm text-gray-700 dark:text-gray-300">{f.qc_threshold}</p>
                 </div>
               </div>

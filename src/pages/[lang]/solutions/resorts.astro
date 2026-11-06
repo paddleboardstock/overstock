@@ -162,7 +162,9 @@ const faqSchema = JSON.stringify({
     benefits.length > 0 && (
       <section class="bg-gray-50 py-16 px-6">
         <div class="max-w-6xl mx-auto">
-          <h2 class="text-3xl font-bold text-center mb-12">Why Resorts Choose Paddle Board Overstock</h2>
+          <h2 class="text-3xl font-bold text-center mb-12">
+            {page.benefits_title || 'Why Resorts Choose Paddle Board Overstock'}
+          </h2>
           <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((b: any) => (
               <div class="p-6 rounded-xl bg-white border border-gray-200 text-center">
