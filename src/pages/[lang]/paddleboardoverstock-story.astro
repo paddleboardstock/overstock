@@ -39,7 +39,10 @@ const metadata = {
 };
 const lh = (h: string) => (h ? `/${lang}${h}` : h);
 const ctaActions = cta.actions?.map((a: any) => ({ ...a, href: lh(a.href) }));
-const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: 'Paddle Board Overstock Story' }];
+const crumbs = [
+  { name: t('nav.home') || 'Home', href: `/${lang}/` },
+  { name: hero.tagline || 'Paddle Board Overstock Story' },
+];
 const statsData = stats.stats || [];
 const tSignals = trustSignals || {};
 const manufacturing = tSignals.manufacturing || {};
@@ -120,12 +123,12 @@ const growthParagraphs = contentGrowth.paragraphs || [];
         <a
           href={lh('/products')}
           class="px-8 py-4 bg-white text-gray-900 rounded-full font-semibold hover:bg-gray-50 transition shadow-xl"
-          >Explore Products</a
+          >{page.hero_cta_primary || 'Explore Products'}</a
         >
         <a
           href={lh('/factory')}
           class="px-8 py-4 border border-white/30 text-white rounded-full font-medium hover:bg-white/10 transition"
-          >Visit Our Factory</a
+          >{page.hero_cta_secondary || 'Visit Our Factory'}</a
         >
       </div>
     </div>
@@ -171,8 +174,12 @@ const growthParagraphs = contentGrowth.paragraphs || [];
       <section class="py-24 px-6">
         <div class="max-w-5xl mx-auto">
           <div class="text-center mb-16">
-            <p class="text-sm font-medium text-sky-600 tracking-wide uppercase">Brand Journey</p>
-            <h2 class="mt-4 text-3xl font-semibold text-gray-900">Paddle Board Overstock Timeline</h2>
+            <p class="text-sm font-medium text-sky-600 tracking-wide uppercase">
+              {page.timeline_tagline || 'Brand Journey'}
+            </p>
+            <h2 class="mt-4 text-3xl font-semibold text-gray-900">
+              {page.timeline_title || 'Paddle Board Overstock Timeline'}
+            </h2>
           </div>
           <div class="relative">
             <div class="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-gray-300 md:-translate-x-px" />
@@ -249,7 +256,7 @@ const growthParagraphs = contentGrowth.paragraphs || [];
                     <span class="text-3xl font-bold text-sky-600">DC</span>
                   </div>
                   <p class="mt-4 text-sm font-medium text-gray-900">David Chen</p>
-                  <p class="text-xs text-gray-500">Founder & CEO</p>
+                  <p class="text-xs text-gray-500">{page.founder_role || 'Founder & CEO'}</p>
                 </div>
               </div>
             </div>
@@ -373,7 +380,7 @@ const growthParagraphs = contentGrowth.paragraphs || [];
           <p class="mt-4 text-lg text-gray-500 text-center max-w-3xl mx-auto">{marketPos.position}</p>
           <div class="mt-12 grid md:grid-cols-2 gap-8">
             <div>
-              <h3 class="text-lg font-bold text-gray-900 mb-4">Strengths</h3>
+              <h3 class="text-lg font-bold text-gray-900 mb-4">{page.strengths_label || 'Strengths'}</h3>
               <ul class="space-y-3">
                 {strengths.map((s: string) => (
                   <li class="flex items-start gap-3 text-gray-600">
@@ -384,7 +391,7 @@ const growthParagraphs = contentGrowth.paragraphs || [];
               </ul>
             </div>
             <div>
-              <h3 class="text-lg font-bold text-gray-900 mb-4">Best For</h3>
+              <h3 class="text-lg font-bold text-gray-900 mb-4">{page.best_for_label || 'Best For'}</h3>
               <ul class="space-y-3">
                 {bestFors.map((b: string) => (
                   <li class="flex items-start gap-3 text-gray-600">
@@ -406,13 +413,13 @@ const growthParagraphs = contentGrowth.paragraphs || [];
         <a
           href={lh('/engineering-team')}
           class="text-sky-600 hover:text-sky-800 font-medium underline underline-offset-4"
-          >&rarr; Meet Our R&D Engineering Team</a
+          >&rarr; {page.link_rnd_team || 'Meet Our R&D Engineering Team'}</a
         >
         <a href={lh('/trust')} class="text-sky-600 hover:text-sky-800 font-medium underline underline-offset-4"
-          >&rarr; View Certifications & Quality Assurance</a
+          >&rarr; {page.link_certifications || 'View Certifications & Quality Assurance'}</a
         >
         <a href={lh('/factory')} class="text-sky-600 hover:text-sky-800 font-medium underline underline-offset-4"
-          >&rarr; Tour Our Manufacturing Facility</a
+          >&rarr; {page.link_factory_tour || 'Tour Our Manufacturing Facility'}</a
         >
       </div>
     </div>

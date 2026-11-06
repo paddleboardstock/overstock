@@ -57,7 +57,7 @@ const metadata = {
     `${SITE.name} builds every paddle board in its own 12,000 m² factory in Weihai, China. 15,000 boards a year, 200-300 workers, 100% pressure-tested, 99.3% defect-free, direct-to-customer shipping to 50+ countries.`
   ),
 };
-const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: 'Factory' }];
+const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: t('nav.factory') || 'Factory' }];
 
 const renderIntro = (text: any) => text.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
 
