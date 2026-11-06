@@ -61,6 +61,7 @@ const PAGES = [
   'technology',
   'testimonials',
   'warranty',
+  'size-guide',
   'guides',
   'fishing',
 ];
