@@ -41,7 +41,7 @@ const metadata = {
   description:
     'Six-stage quality control system for SUP board manufacturing: material inspection, in-process QC, welding verification, pressure testing, final inspection. 100% of units tested.',
 };
-const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: 'Quality Control' }];
+const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: page.crumb_label || 'Quality Control' }];
 
 const tldr = page.tldr || {};
 
@@ -167,7 +167,7 @@ const faqSchema = JSON.stringify({
                     {s.checks && (
                       <div class="p-3 rounded-lg bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800">
                         <span class="text-xs font-semibold text-amber-800 dark:text-amber-300 uppercase tracking-wider">
-                          Checks
+                          {page.checks_label || 'Checks'}
                         </span>
                         <p class="mt-1 text-sm text-amber-700 dark:text-amber-400">{s.checks}</p>
                       </div>
@@ -175,7 +175,7 @@ const faqSchema = JSON.stringify({
                     {s.threshold && (
                       <div class="p-3 rounded-lg bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800">
                         <span class="text-xs font-semibold text-red-800 dark:text-red-300 uppercase tracking-wider">
-                          Threshold
+                          {page.threshold_label || 'Threshold'}
                         </span>
                         <p class="mt-1 text-sm text-red-700 dark:text-red-400">{s.threshold}</p>
                       </div>
