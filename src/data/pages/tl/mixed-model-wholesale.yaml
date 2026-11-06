@@ -53,29 +53,29 @@ example_section:
     total_row: Kabuuang Order — 10 Board
     note: Ang mga presyo sa retail ay ipinapakita bilang ilustrasyon lamang. Ang presyo ng wholesale bawat yunit ay iniquote sa bawat order at mas mababa sa retail.
   rows:
-    - model: SUP Explorer 11'
-      type: All-around
+    - model: SUP Explorer 11
+      type: Kabuuan
       qty: 3
       unit_retail: '399'
       subtotal: 1,197
-    - model: Cheetah Surge Edition
-      type: All-around
+    - model: Edisyon ng Cheetah Surge
+      type: Kabuuan
       qty: 4
       unit_retail: '449'
       subtotal: 1,796
-    - model: Ocean Voyager Series
-      type: Touring / Art Edition
+    - model: Serye ng Manlalakbay sa Karagatan
+      type: Paglilibot / Edisyon ng Sining
       qty: 3
       unit_retail: '449'
       subtotal: 1,347
 selector_section:
-  tagline: Interactive
+  tagline: Interaktibo
   title: Buuin ang Iyong Pinaghalong Order
   subtitle: Itakda ang dami para sa bawat modelo, tingnan ang bilang ng board at kabuuang halaga ng retail na update, pagkatapos ay ipadala ang halo direkta sa aming wholesale inquiry form.
   labels:
     model: Modelo
     type: Uri
-    retail: Retail
+    retail: Tingi
     boards: mga board na napili
     total_retail: 'Kabuuang halaga ng retail:'
     min_note: Ang mga pinaghalong order ay nagsisimula sa 5 board. Ang dami ay draft lamang — kinukumpirma namin ang stock at ipo-quote ang presyo ng wholesale kapag ipinadala mo ang iyong inquiry.
@@ -95,7 +95,7 @@ who_benefits:
     - title: Mga Paupahang Fleet at Paaralan
       description: Mga fleet na nangangailangan ng iba't ibang sukat ng board para sa iba't ibang timbang ng rider at uri ng leksyon, hindi iisang-spec na fleet.
 faq_section:
-  title: Mixed Model FAQ
+  title: Mga Madalas Itanong tungkol sa Pinagsamang Modelo
   items:
     - q: May minimum ba na dami bawat modelo?
       a: Wala. Ang 5-board minimum ay naaangkop sa kabuuang order, hindi sa bawat modelo. Maaari kang mag-order ng 5 magkakaibang modelo, isang board bawat isa.

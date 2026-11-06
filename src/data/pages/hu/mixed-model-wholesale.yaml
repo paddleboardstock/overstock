@@ -48,12 +48,12 @@ example_section:
     model: Modell
     type: Típus
     qty: Mennyiség
-    unit_retail: Unit Retail (USD)
+    unit_retail: Egységár kiskereskedelemben (USD)
     subtotal: Alösszeg (USD)
     total_row: Sorrend összesített száma — 10 deszka
     note: A kiskereskedelmi értékek csak illusztráció alapján láthatók. A nagykereskedelmi egységár rendelésenként árverésre kerül, és alacsonyabb, mint a kiskereskedelemben.
   rows:
-    - model: SUP Explorer 11'
+    - model: SUP Explorer 11
       type: Mindenre
       qty: 3
       unit_retail: '399'
@@ -80,7 +80,7 @@ selector_section:
     total_retail: 'Teljes kiskereskedelmi érték:'
     min_note: A vegyes megrendelések 5 táblával kezdődnek. A mennyiségek vázlat – a részvény- és árfolyam árajánlatát megerősítjük, amikor elküldöd a lekérdezést.
     send: Kérd ezt a mixet
-    reset: Reset
+    reset: Visszaállítás
     prefilled: Feltöltöttük a mentett táblaválasztásodat az alábbi üzenetbe — add fel az adataidat, és küldd el.
 who_benefits:
   tagline: Kik profitálhatnak

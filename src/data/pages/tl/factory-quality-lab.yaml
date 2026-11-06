@@ -21,23 +21,23 @@ test_procedures:
     description: Bawat papasok na batch ng PVC, drop-stitch na tela, EVA na foam, at hardware ay sinusuri bago tanggapin. Masusuri ang tensile strength, tear resistance, at UV resistance. Ang mga materyal na hindi pumasa sa pamantayan ay ikino-kwarantina at ibinabalik.
     standards:
       - Tensile strength (min 350 N/cm)
-      - Tear resistance
-      - UV resistance (1,000 h)
+      - Paglaban sa pagkapunit
+      - UV paglaban (1,000 h)
   - title: Pagpapatupad ng QC sa Proseso
     description: Ang mga production operator ay nagsasagawa ng sariling inspeksyon sa bawat yugto. Ang mga QC auditor ay gumagawa ng random sampling sa buong shift. Ang weld peel test ay isinasagawa bawat 50 yunit. Ang pagsuri sa sukat ay ginagawa sa bawat ika-20 panel.
     standards:
       - Peel test bawat 50 yunit
       - Internal na 100-point checklist
-      - Random sampling audits
+      - Random na pagsusuri ng sampol
   - title: 48-Oras na Pagsusuri ng Pagpapanatili ng Hangin
     description: Bawat tube chamber ay pinapalobo sa 125% ng rated na presyon at pinananatili ng 48 oras. Ang mga pressure sensor ay nagre-record nang tuloy-tuloy na may compensation sa temperatura. Ang anumang chamber na lumalagpas sa 5% pagbaba ng presyon ay awtomatikong nagti-trigger ng muling inspeksyon ng batch.
     standards:
-      - 1.25x rated pressure hold
-      - <5% max pressure drop
+      - 1.25x na inaasahang presyon na pagpigil
+      - <5% pinakamataas na pagbaba ng presyon
   - title: Pagsusuri ng Load at Balanseng
     description: Ang mga natapos na board ay sinusuri sa maximum na rated na kapasidad para sa katatagan, freeboard, at paghawak. Bawat board ay sumasailalim sa pagsusuri sa tubig bago ang huling aprubal sa inspeksyon.
     standards:
-      - 1.25x rated load verification
+      - 1.25x na beripikasyon ng inaasahang load
       - Pagsusuri ng tubig
 equipment:
   - name: Pangkalahatang Makina sa Pagsusuri (tensile)
@@ -54,3 +54,11 @@ equipment:
     spec: -40 °C hanggang +100 °C
   - name: Tangke para sa Pagtuklas ng Tagas
     spec: 6 m × 2 m, may ilaw
+tldr:
+  summary: 'Ang Paddle Board Overstock quality lab ay gumagana nang hiwalay mula sa produksyon, na nagsasagawa ng tensile, peel, UV, at pagsusuri ng presyon alinsunod sa dokumentadong panloob na mga protocol. 100% ng mga yunit ay sumasailalim sa 1.25x na inaasahang presyon na pagpigil. Rate ng walang depekto: 99.3% sa kabuuang pagpapadala sa nakaraang 12 buwan.'
+  points:
+    - Independiyenteng laboratoryo na hiwalay sa produksyon para sa walang kinikilingang beripikasyon ng kalidad
+    - 100% na pagsusuri ng presyon sa 1.25x na inaasahang presyon para sa 24-48h na pagpigil kada yunit
+    - Dokumentadong panloob na protocol na namamahala sa bawat pagsusuri
+    - 99.3% rate ng defect-free sa nakaraang 12 buwang padala
+    - Bawat yunit ay sinusuri sa 6-na-yugtong kontrol ng kalidad bago ipadala
