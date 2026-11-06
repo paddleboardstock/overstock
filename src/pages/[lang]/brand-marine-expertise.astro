@@ -9,7 +9,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import { SITE } from 'astrowind:config';
 import { getPageContent, setPageContentData } from '~/i18n/page-content';
 import __pageData from '~/i18n/generated/pages/brand-marine-expertise.ts';
-import { localizePageTitle } from '~/i18n/page-title';
+import { localizePageTitle, localizePageDescription } from '~/i18n/page-title';
 import { languages } from '~/i18n/config';
 import { getUiForLang } from '~/i18n/generated/ui-all';
 
@@ -32,8 +32,10 @@ const ctaActions = cta.actions?.map((a: any) => ({ ...a, href: lh(a.href) }));
 
 const metadata = {
   title: localizePageTitle(page, `Marine Engineering Expertise — ${SITE.name} | Material Science & Manufacturing`),
-  description:
-    "Paddle Board Overstock's engineering expertise spans PVC drop-stitch fabrication, rail construction, precision RF welding, and rigorous quality manufacturing.",
+  description: localizePageDescription(
+    page,
+    "Paddle Board Overstock's engineering expertise spans PVC drop-stitch fabrication, rail construction, precision RF welding, and rigorous quality manufacturing."
+  ),
 };
 const crumbs = [
   { name: t('nav.home') || 'Home', href: `/${lang}/` },

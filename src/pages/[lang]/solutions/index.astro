@@ -10,7 +10,7 @@ import JsonLd from '~/components/common/JsonLd.astro';
 import { SITE } from 'astrowind:config';
 import { getPageContent, setPageContentData } from '~/i18n/page-content';
 import __pageData from '~/i18n/generated/pages/solutions.ts';
-import { localizePageTitle } from '~/i18n/page-title';
+import { localizePageTitle, localizePageDescription } from '~/i18n/page-title';
 import { languages } from '~/i18n/config';
 import { getUiForLang } from '~/i18n/generated/ui-all';
 
@@ -36,8 +36,10 @@ const localizedItems = solutions.items?.map((item: any) => ({
 
 const metadata = {
   title: localizePageTitle(page, `Paddle Board Solutions for Clubs, Resorts & Rentals — ${SITE.name}`),
-  description:
-    'Water sports solutions for clubs, resorts, and rental operators. Purpose-built inflatable SUP boards for touring, yoga, fishing, and family paddling.',
+  description: localizePageDescription(
+    page,
+    'Water sports solutions for clubs, resorts, and rental operators. Purpose-built inflatable SUP boards for touring, yoga, fishing, and family paddling.'
+  ),
 };
 const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: t('nav.solutions') || 'Solutions' }];
 ---

@@ -7,7 +7,7 @@ import { SITE } from 'astrowind:config';
 import { languages } from '~/i18n/config';
 import { getPageContent, setPageContentData } from '~/i18n/page-content';
 import __pageData from '~/i18n/generated/pages/why-paddleboardoverstock.ts';
-import { localizePageTitle } from '~/i18n/page-title';
+import { localizePageTitle, localizePageDescription } from '~/i18n/page-title';
 import Features3 from '~/components/widgets/Features3.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import Testimonials from '~/components/widgets/Testimonials.astro';
@@ -34,8 +34,10 @@ const metadata = {
     page,
     `Why Paddle Board Overstock — Commercial Water Sports Equipment Partner | ${SITE.name}`
   ),
-  description:
-    'Built different. Built for business. Discover why global clubs, resorts, rental operators, and water brands choose Paddle Board Overstock as their manufacturing and business partner.',
+  description: localizePageDescription(
+    page,
+    'Built different. Built for business. Discover why global clubs, resorts, rental operators, and water brands choose Paddle Board Overstock as their manufacturing and business partner.'
+  ),
 };
 ---
 
