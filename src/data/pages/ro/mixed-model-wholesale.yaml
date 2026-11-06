@@ -54,17 +54,17 @@ example_section:
     note: Valorile retail afișate sunt doar pentru ilustrație. Prețul en-gros pe unitate se citește pe comandă și este mai mic decât prețul de retail.
   rows:
     - model: SUP Explorer 11'
-      type: All-around
+      type: Toate direcțiile
       qty: 3
       unit_retail: '399'
       subtotal: 1,197
-    - model: Cheetah Surge Edition
-      type: All-around
+    - model: Ediția Cheetah Surge
+      type: Toate direcțiile
       qty: 4
       unit_retail: '449'
       subtotal: 1,796
-    - model: Ocean Voyager Series
-      type: Touring / Art Edition
+    - model: Seria Ocean Voyager
+      type: Turism / Ediție Art
       qty: 3
       unit_retail: '449'
       subtotal: 1,347
@@ -75,7 +75,7 @@ selector_section:
   labels:
     model: Model
     type: Tip
-    retail: Retail
+    retail: Cu amănuntul
     boards: plăci selectate
     total_retail: 'Valoarea totală de retail:'
     min_note: Comenzile mixte încep de la 5 plăci. Cantitățile sunt un draft — confirmăm stocul și oferim prețul en-gros când trimiți cererea.

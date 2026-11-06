@@ -486,6 +486,14 @@ export async function translateObjectDeep(engine, obj, lang) {
   const records = [];
   const units = new Set();
   collectValues(obj, [], '', records, units);
+  const map = await translateUnits(engine, units, lang);
+  const out = structuredClone(obj);
+  for (const { seg, parts } of records) setSeg(out, seg, rebuild(parts, map));
+  return out;
+}
+
+// Batch-translate a set of prose lines; returns line -> translated line.
+async function translateUnits(engine, units, lang) {
   const list = [...units];
   const map = new Map();
   const { batchChars, batchLines } = engine.opts;
@@ -503,7 +511,68 @@ export async function translateObjectDeep(engine, obj, lang) {
     const out = await engine.translateBatch(chunk, lang);
     chunk.forEach((t, k) => map.set(t, out[k]));
   }
-  const out = structuredClone(obj);
-  for (const { seg, parts } of records) setSeg(out, seg, rebuild(parts, map));
+  return map;
+}
+
+function getSeg(obj, seg) {
+  let cur = obj;
+  for (const k of seg) {
+    if (cur === undefined || cur === null) return undefined;
+    cur = cur[k];
+  }
+  return cur;
+}
+
+function setSegDeep(obj, seg, value) {
+  let cur = obj;
+  for (let i = 0; i < seg.length - 1; i++) {
+    const k = seg[i];
+    if (cur[k] === undefined || cur[k] === null) cur[k] = typeof seg[i + 1] === 'number' ? [] : {};
+    cur = cur[k];
+  }
+  cur[seg[seg.length - 1]] = value;
+}
+
+// Deep-fill `dst` with leaves that exist in `src` but are missing in `dst`, so newly
+// added EN fields reach partially translated docs. `dst`-only fields are preserved.
+function fillMissing(dst, src) {
+  if (Array.isArray(src)) {
+    if (!Array.isArray(dst)) return;
+    for (let i = 0; i < src.length; i++) {
+      if (i < dst.length) fillMissing(dst[i], src[i]);
+      else dst.push(structuredClone(src[i]));
+    }
+    return;
+  }
+  if (src && typeof src === 'object') {
+    if (!dst || typeof dst !== 'object' || Array.isArray(dst)) return;
+    for (const [k, v] of Object.entries(src)) {
+      if (!(k in dst)) dst[k] = structuredClone(v);
+      else fillMissing(dst[k], v);
+    }
+  }
+}
+
+/**
+ * Fill a partially translated doc: leaves that still equal the EN source (or are
+ * missing) get machine-translated; leaves that already differ (localized) are kept
+ * byte-for-byte. Leaves present only in `existing` are preserved.
+ */
+export async function translateObjectPartial(engine, enDoc, existingDoc, lang) {
+  const records = [];
+  const units = new Set();
+  collectValues(enDoc, [], '', records, units);
+  // Only leaves that are still EN (missing or equal) need translation.
+  const todo = records.filter((r) => {
+    const cur = getSeg(existingDoc, r.seg);
+    return cur === undefined || cur === getSeg(enDoc, r.seg);
+  });
+  const todoUnits = new Set();
+  for (const r of todo)
+    for (const p of r.parts) if (p.lines) for (const ln of p.lines) if (isTranslatableLine(ln)) todoUnits.add(ln);
+  const map = await translateUnits(engine, todoUnits, lang);
+  const out = structuredClone(existingDoc);
+  fillMissing(out, enDoc);
+  for (const { seg, parts } of todo) setSegDeep(out, seg, rebuild(parts, map));
   return out;
 }

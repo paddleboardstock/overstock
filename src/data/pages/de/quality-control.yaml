@@ -63,7 +63,7 @@ content_inspection:
       checks: Peel-Test alle 50 Einheiten, Moos der Schweißbreite, Überprüfung des Heißlufttemperaturprotokolls, Inspektion der Backlight-Naht
       threshold: Abschalfestigkeit mindestens 8 N/cm. Schweißweitentoleranz ±1 mm. Sichtbare Kanalisierung = Ablehnung
     - stage: '4'
-      title: Assembly QC
+      title: Montage-QC
       description: Jede Einheit folgt einer 100-Punkte-Montage-Checkliste, die vom Teamleiter unterzeichnet wird. Die Ventilfunktion wird in 10 Öffnungs-/Schließzyklen getestet. Das Drehmoment der Hardware wird überprüft. Die Sichtprüfung umfasst Oberflächenoberfläche, Farbkonsistenz, Etikettplatzierung und Zubehörvollständigkeit.
       checks: 100-Punkte-Checkliste pro Einheit, Ventilfunktionstest, Drehmomentüberprüfung der Hardware, Sichtprüfung
       threshold: 'Null-Fehler-Richtlinie bei sicherheitskritischen Gegenständen (Ventile, D-Ringe, Griffe). Kleine Kosmetik: 99,3 % fehlerfreies Ziel'
@@ -134,3 +134,11 @@ cta:
       href: /contact
     - text: Prüfprotokolle einsehen
       href: /quality
+tldr:
+  summary: 'Sechs-stufiges Qualitätskontrollsystem: Materialprüfung, Prozess-QC, Schweißüberprüfung, Montage-QC, Druckprüfung bei 1,25-fachem Nennwert und Endkontrolle. 100% Druckprüfung der Einheiten. 99,3% fehlerfreie Rate gemäß AQL 2,5-Stichprobe.'
+  points:
+    - 'Sechs-stufiges QC: Materialprüfung, Prozess-QC, Schweißüberprüfung, Montage-QC, 1,25-fache Druckprüfung und 100-Punkte-Endkontrolle'
+    - 100-Punkte-Endkontrolle jeder Platine vor der Verpackung
+    - 100% der Einheiten unterliegen einer 24-48-stündigen Haltezeit bei 1,25-fachem Nennwert mit maximal 5% Toleranz beim Druckabfall
+    - AQL 2,5-Stichprobe zur Sicherstellung einer 99,3% fehlerfreien Rate
+    - 'Schweiß-QC: Abziehprüfung, Überprüfung der Schweißnahtbreite und Inspektion der Hintergrundnaht jeder geschweißten Verbindung'
