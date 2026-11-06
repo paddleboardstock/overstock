@@ -2,6 +2,16 @@ import type { GraphNode } from '../../content/graph/nodes';
 import { USE_CASE_HEADINGS_MT, USE_CASE_L10N_MT } from '../use-cases-l10n-mt';
 import { localized } from './i18n';
 
+// Curated node field for `lang`, or undefined when the locale is missing or the
+// value is an untranslated EN placeholder (byte-identical to the EN field).
+function curated<T>(field: Record<string, T> | undefined, lang: string): T | undefined {
+  if (!field) return undefined;
+  const v = field[lang];
+  if (v === undefined || v === null) return undefined;
+  if (lang !== 'en' && JSON.stringify(v) === JSON.stringify(field.en)) return undefined;
+  return v;
+}
+
 export interface GuideSection {
   h2: string;
   content: string[] | string;
@@ -68,11 +78,13 @@ export function useCaseFromNode(node: GraphNode, lang: string = 'en'): Generated
   const name = localized(node.name, lang) || localized(node.name, 'en') || '';
   // Curated node fields win; the machine-translated map only fills locales the graph
   // does not cover yet (the nodes ship description/features/faq for en/de/es/fr/it).
+  // A curated field that is byte-identical to the EN value is an untranslated
+  // placeholder — treat it as missing so the MT map can take over.
   const mt = lang === 'en' ? undefined : USE_CASE_L10N_MT[lang]?.[node.id];
-  const desc = localized(node.description, lang) || mt?.description || localized(node.description, 'en') || '';
-  const features = localized(node.features, lang) || mt?.features || localized(node.features, 'en') || [];
-  const useCases = localized(node.useCases, lang) || mt?.useCases || localized(node.useCases, 'en') || [];
-  const faq = localized(node.faq, lang) || mt?.faq || localized(node.faq, 'en') || [];
+  const desc = curated(node.description, lang) || mt?.description || localized(node.description, 'en') || '';
+  const features = curated(node.features, lang) || mt?.features || localized(node.features, 'en') || [];
+  const useCases = curated(node.useCases, lang) || mt?.useCases || localized(node.useCases, 'en') || [];
+  const faq = curated(node.faq, lang) || mt?.faq || localized(node.faq, 'en') || [];
   const headings = USE_CASE_HEADINGS_MT[lang];
 
   const sections: GuideSection[] = [{ h2: headings?.whatIs || 'What is this use case?', content: desc }];

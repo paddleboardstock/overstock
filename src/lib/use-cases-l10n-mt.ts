@@ -37,7 +37,7 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
     },
     beginner: {
       description:
-        'Първоначални гребци, които учат основите на работа с надуваеми водни съоръжения, безопасност и навигация по вода.',
+        'Първоначално гребци, които учат основите на надуваемите SUP дъски, безопасността и навигацията по вода.',
       features: [
         'Стабилна платформа',
         'Лесно надуване и монтаж',
@@ -61,9 +61,25 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
         },
       ],
     },
+    fishing: {
+      description:
+        'Използване на стабилна надуваема SUP платформа като преносима платформа за риболов на езеро, река и крайбрежие.',
+      features: ['Стабилна риболовна платформа', 'Тих подход', 'Достъп до плитки води', 'Тролиране без ръце'],
+      useCases: ['Риболов в езерото', 'Крайбрежен риболов', 'Речен риболов', 'Мухарски риболов от SUP'],
+      faq: [
+        {
+          q: 'Може ли да се лови риба от SUP надуваема машина?',
+          a: 'Да. Много риболовци ловят от надуваеми съдове SUPs, използвайки конюшнята като платформа за хвърляне в плитки води, където по-големите плавателни съдове не могат да отидат.',
+        },
+        {
+          q: 'Какво прави една SUP риболовна дъска добра?',
+          a: 'Широк, стабилен надуваем SUP апарат с голям товароносимост работи добре. Функции като държачи за пръти, точки за закрепване и стойки за зъбни колела подобряват преживяването.',
+        },
+      ],
+    },
     'family-recreation': {
       description:
-        'Надуваеми плавателни съдове, използвани за случайни семейни разходки по езера, тихи реки и защитени крайбрежни води.',
+        'Надуваеми SUP дъски, използвани за непринудени семейни излети по езера, спокойни реки и защитени крайбрежни води.',
       features: [
         'Голяма товароносимост',
         'Стабилен дизайн за няколко души',
@@ -73,12 +89,12 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
       useCases: ['Разходки по езеро', 'Дни на плажа', 'Плаване по тихи реки', 'Пикници край вода'],
       faq: [
         {
-          q: 'Коя надуваема лодка е най-подходяща за семейство?',
-          a: 'Стабилна надуваема лодка или каяк е идеална за семейни развлечения. Потърсете модели с няколко въздушни камери за безопасност и достатъчна вместимост за всички.',
+          q: 'Коя SUP дъска е най-подходяща за едно семейство?',
+          a: 'Широк, стабилен надуваем SUP апарат с голям товароносимост е идеален за семейно отдих. Търсете модели с няколко въздушни камери за безопасност и достатъчен капацитет за ездачи и екипировка.',
         },
         {
-          q: 'Безопасна ли е надуваемата лодка за деца?',
-          a: 'Да, при правилно наблюдение и спасителни жилетки. Надуваемите лодки са по своята същност стабилни и с меки стени, което ги прави по-безопасни за семейства в сравнение с лодки с твърд корпус.',
+          q: 'Безопасно ли е надуваемото SUP устройство за деца?',
+          a: 'Да, с подходящ надзор и спасителни жилетки. Надуваемите SUPs жилетки са по природа стабилни и с меки страни, което ги прави прощаващи за семействата.',
         },
       ],
     },
@@ -88,12 +104,12 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
       useCases: ['Река клас I-II', 'Живописни речни прекосявания', 'Многодневни речни пътувания', 'Игра в бяла вода'],
       faq: [
         {
-          q: 'Какъв тип каяк е най-подходящ за речно турне?',
-          a: 'Надуваемите каяци са отлични за речно турне, тъй като са издръжливи, маневрени и могат да издържат на удари с камъни по-добре от твърдите каяци.',
+          q: 'Дали надуваемите SUPs са добри за речни турове?',
+          a: 'Да. Надуваемите SUPs са издръжливи и маневрени, и по-добре понасят ударите със скали от твърдите дъски, което ги прави чудесен избор за речни турове.',
         },
         {
-          q: 'Какви бързеи може да издържи надуваем каяк?',
-          a: 'Качествените надуваеми каяци са окачествени за бързеи клас I-II, като някои модели могат да издържат клас III в опитни ръце.',
+          q: 'Какви бързеи може да понася надуваем SUP?',
+          a: 'Качествените надуваеми SUPs са подходящи за вода клас I-II, като някои модели могат да се справят с клас III в ръцете на опитни хора.',
         },
       ],
     },
@@ -116,7 +132,7 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
     },
     beginner: {
       description:
-        'Esmakordsed aerutajad, kes õpivad täispuhutavate veesõidukite kasutamise, ohutuse ja vee navigatsiooni põhialuseid.',
+        'Esmakordsed sõudjad, kes õpivad täispuhutavate SUP laudade põhitõdesid, ohutust ja vee peal navigeerimist.',
       features: [
         'Stabiilne platvorm',
         'Lihtne täis puhuda ja üles seada',
@@ -140,9 +156,30 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
         },
       ],
     },
+    fishing: {
+      description:
+        'Stabiilse täispuhutava SUP kasutamine kaasaskantava heitemisalusena järve-, jõu- ja rannikukalastuseks.',
+      features: [
+        'Stabiilne kalastusplatvorm',
+        'Vaikne lähenemine',
+        'Ligipääs madalale veele',
+        'Vabade kätega trollimine',
+      ],
+      useCases: ['Järvekalastus', 'Rannikukalastus', 'Jõekalastus', 'Lendvärvega kalastamine SUP pealt'],
+      faq: [
+        {
+          q: 'Kas saab täispuhutavalt SUP kalastada?',
+          a: 'Jah. Paljud kalamehed kalastavad täispuhutatavatelt SUPs, kasutades stabiilset teki heitemisalusena madalas vees, kuhu suuremad alused ei saa.',
+        },
+        {
+          q: 'Mis teeb hea SUP kalaplaadi?',
+          a: 'Lai, stabiilne täispuhutav SUP suure kandevõimega töötab hästi. Sellised omadused nagu õngede hoidjad, ankrupunktid ja varustuse kinnitused parandavad kogemust.',
+        },
+      ],
+    },
     'family-recreation': {
       description:
-        'Täispuhutavad veesõidukid, mida kasutatakse juhuslike pereväljasõitude jaoks järvedel, rahulikul jõgedel ja kaitstud rannikuvetes.',
+        'Täispuhutavad SUP lauad, mida kasutatakse lõdvestunud pereväljasõitudeks järvedel, rahulikel jõgedel ja kaitstud rannikuveekogudes.',
       features: [
         'Suur kandevõime',
         'Stabiilne mitme inimese disain',
@@ -152,12 +189,12 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
       useCases: ['Järvepäevad', 'Randapäevad', 'Rahulikud jõesõidud', 'Vees pikniku tegemine'],
       faq: [
         {
-          q: 'Milline täispuhutav paat on pere jaoks kõige parem?',
-          a: 'Stabiilne täispuhutav parv või kajakk on ideaalne perepuhkuseks. Otsige mudeleid, millel on turvalisuse tagamiseks mitu õhuruumi ja piisav mahutavus kõigile.',
+          q: 'Milline SUP laud on parim perele?',
+          a: 'Lai, stabiilne täispuhutav SUP suure kandevõimega on ideaalne perele mõeldud puhkuseks. Otsige mudeleid, millel on mitu õhupesa ohutuse tagamiseks ja piisavalt mahutavust sõitjate ja varustuse jaoks.',
         },
         {
-          q: 'Kas täispuhutav paat on laste jaoks ohutu?',
-          a: 'Jah, korraliku järelevalve ja päästevestidega. Täispuhutavad paadid on loomulikult stabiilsed ja pehmete külgedega, muutes need perepaatide jaoks turvalisemaks kui kõvakerepaadid.',
+          q: 'Kas täispuhutav SUP on laste jaoks ohutu?',
+          a: 'Jah, nõuetekohase järelevalve ja päästevestidega. Täispuhutavad SUPs on oma olemuselt stabiilsed ja pehmete külgedega, muutes need perede jaoks andestavaks.',
         },
       ],
     },
@@ -173,12 +210,12 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
       ],
       faq: [
         {
-          q: 'Milline kajak on jõematkamiseks parim?',
-          a: 'Täispuhutavad kajakid sobivad jõematkamiseks suurepäraselt, kuna need on vastupidavad, manööverdusvõimelised ja suudavad kive paremini taluda kui kõvakestad kajakid.',
+          q: 'Kas uppuvad SUPs on jõereisiks head?',
+          a: 'Jah. Uppuvad SUPs on vastupidavad ja manööverdatavad ning taluvad kive paremini kui kõvad lauad, muutes need suurepäraseks valikuks jõereisiks.',
         },
         {
-          q: 'Milliseid koske võib täispuhutav kajak läbida?',
-          a: 'Kvaliteetsed täispuhutavad kajakid on hinnatud I-II klassi koskede jaoks, mõned mudelid suudavad kogemustega III klassi koski läbida.',
+          q: 'Milliseid kärestikke suudab uppuv SUP taluda?',
+          a: 'Kvaliteetsed uppuvad SUPs sobivad hästi I-II klassi veele, mõningad mudelid suudavad kogemustega kätega ka III klassi.',
         },
       ],
     },
@@ -200,7 +237,7 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
       ],
     },
     beginner: {
-      description: 'שוטים בפעם הראשונה שלומדים את היסודות של הפעלת כלי מים מתנפחים, בטיחות וניווט במים.',
+      description: 'מתחילים בפדלים הלומדים את יסודות הלוחות הנפחים, הבטיחות והניווט במים.',
       features: ['פלטפורמה יציבה', 'קל לנפח ולהקים', 'טיפול סלחני', 'ערכת הכל-באחד זמינה'],
       useCases: ['שיט בפעם הראשונה', 'לימוד מכות בסיסיות', 'הבנת בטיחות במים', 'בניית ביטחון במים'],
       faq: [
@@ -214,18 +251,33 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
         },
       ],
     },
+    fishing: {
+      description: 'שימוש במשטח מתנפח יציב SUP כפלטפורמת דיג ניידת באגמים, נהרות וחופים.',
+      features: ['פלטפורמת דיג יציבה', 'גישה שקטה', 'גישה למים רדודים', 'דיג טרולר בידיים חופשיות'],
+      useCases: ['דיג באגם', 'דיג חופי', 'דיג בנהר', 'דיג בעף מ SUP'],
+      faq: [
+        {
+          q: 'האם ניתן לדוג ממפלטת מתנפחת SUP?',
+          a: 'כן. דייגים רבים דגים ממפלטות מתנפחות SUPs, תוך שימוש בדק היציב כפלטפורמת הדגה במים רדודים בהם כלי שיט גדולים לא יכולים להגיע.',
+        },
+        {
+          q: 'מה עושה לוח דיג SUP טוב?',
+          a: 'מתנפח רחב ויציב SUP עם קיבולת משקל גבוהה עובד היטב. תכונות כמו מחזיקים לחכות, נקודות עגינה ותושבות ציוד משפרות את החוויה.',
+        },
+      ],
+    },
     'family-recreation': {
-      description: 'סירות מתנפחות המשמשות לטיולים משפחתיים נעימים באגמים, נהרות שקטים ומים חופיים מוגנים.',
+      description: 'לוחות מתנפחים SUP משמשים לטיולים משפחתיים מזדמנים באגמים, נהרות רגועים ומים חופיים מוגנים.',
       features: ['יכולת נשיאה גבוהה', 'עיצוב יציב למסע של כמה אנשים', 'קלות בהובלה', 'כמה תאיות אוויר לבטיחות'],
       useCases: ['טיולי אגמים', 'ימי חוף', 'שיט בנהרות שקטים', 'טיולי פיקניק ליד מים'],
       faq: [
         {
-          q: 'איזו סירה מתנפחת היא הטובה ביותר למשפחה?',
-          a: 'דינגי או קיאק מתנפחים יציבים אידיאליים לפנאי משפחתי. חפשו דגמים עם כמה תאיות אוויר לבטיחות וכושר נשיאה מספיק לכולם.',
+          q: 'איזו לוח SUP הכי טוב למשפחה?',
+          a: 'מתנפח רחב ויציב SUP עם קיבולת משקל גבוהה אידיאלי לפנאי משפחתי. חפשו דגמים עם מספר תאיי אוויר לבטיחות וקיבולת די מספקת לרוכבים וציוד.',
         },
         {
-          q: 'האם סירה מתנפחת בטוחה לילדים?',
-          a: 'כן, בפיקוח מתאים ובאפודי הצלה. סירות מתנפחות יציבות מטבען ובעלות דפנות רכות, מה שהופך אותן לבטוחות יותר מסירות קשות למשפחות.',
+          q: 'האם מתנפח SUP בטוח לילדים?',
+          a: 'כן, תחת השגחה מתאימה וחגורות הצלה. מתנפחים SUPs הם יציבים מטבעם ורכים בצדדים, מה שהופך אותם לסליחים למשפחות.',
         },
       ],
     },
@@ -235,12 +287,12 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
       useCases: ['נהר דרגה I-II', 'שיט נהרות נופי', 'טיולי נהרות מרובי ימים', 'משחק במים סוערים'],
       faq: [
         {
-          q: 'איזה סוג של קיאק הכי טוב לטיול בנהרות?',
-          a: 'קיאקים מתנפחים מצוינים לטיול בנהרות שכן הם עמידים, ניתנים לתמרון, ויכולים להתמודד עם פגיעות בסלעים טוב יותר מקיאקים עם מעטפת קשה.',
+          q: 'האם SUPs מתנפחים טובים לטיולי נהר?',
+          a: 'כן. SUPs מתנפחים עמידים וניתנים לתמרון, והם מתמודדים עם פגיעות בסלעים טוב יותר מלוחות קשים, מה שהופך אותם לבחירה מצוינת לסיורי נהר.',
         },
         {
-          q: 'איזה מיתלים קיאק מתנפח יכול להתמודד איתם?',
-          a: 'קיאקים מתנפחים איכותיים מדורגים לנהרות דרגה I-II, כאשר חלק מהדגמים מסוגלים לדרגה III בידיים מנוסות.',
+          q: 'אילו מים סוערים ניתן להתמודד איתם עם SUP מתנפח?',
+          a: 'מתנפחים באיכות SUPs מתאימים היטב למים בדרגה I-II, כאשר חלק מהדגמים מסוגלים לדרגה III בידיים מנוסות.',
         },
       ],
     },
@@ -263,8 +315,7 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
       ],
     },
     beginner: {
-      description:
-        'Prvi put veslači koji uče osnove upravljanja naduvnim vodenim plovilima, sigurnosti i navigaciji na vodi.',
+      description: 'Početnici u veslanju uče osnove napuhljivih SUP dasaka, sigurnost i plovidbu po vodi.',
       features: [
         'Stabilna platforma',
         'Jednostavno napuhavanje i postavljanje',
@@ -288,9 +339,30 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
         },
       ],
     },
+    fishing: {
+      description:
+        'Korištenje stabilne napuhanice SUP kao prijenosne platforme za ribolov na jezeru, rijeci i priobalju.',
+      features: [
+        'Stabilna platforma za ribolov',
+        'Tiho približavanje',
+        'Pristup plitkoj vodi',
+        'Ribolov uz slobodne ruke',
+      ],
+      useCases: ['Ribolov na jezeru', 'Ribolov na obali', 'Ribolov na rijeci', 'Mušičarenje s SUP'],
+      faq: [
+        {
+          q: 'Možete li loviti s napuhanicom SUP?',
+          a: 'Da. Mnogi ribolovci love s napuhanicama SUPs, koristeći stabilnu palubu kao platformu za bacanje u plitkim vodama gdje veća plovila ne mogu ući.',
+        },
+        {
+          q: 'Što čini dobru ribolovnu ploču SUP?',
+          a: 'Široka, stabilna napuhanica SUP s visokom nosivošću dobro funkcionira. Značajke poput držača štapova, sidrišta i nosača opreme poboljšavaju iskustvo.',
+        },
+      ],
+    },
     'family-recreation': {
       description:
-        'Napuhljiva plovila koja se koriste za povremene obiteljske izlete na jezerima, mirnim rijekama i zaštićenim obalnim vodama.',
+        'Napuhanice SUP koriste se za opuštena obiteljska izleta na jezerima, mirnim rijekama i zaštićenim obalnim vodama.',
       features: [
         'Veliki kapacitet težine',
         'Stabilan dizajn za više osoba',
@@ -300,12 +372,12 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
       useCases: ['Izleti na jezeru', 'Dani na plaži', 'Plovidba mirnim rijekama', 'Piknici uz vodu'],
       faq: [
         {
-          q: 'Koja napuhljiva čamac je najbolja za obitelj?',
-          a: 'Stabilni napuhljivi čamac ili kajak idealan je za obiteljski odmor. Potražite modele s više zračnih komora za sigurnost i dovoljno kapaciteta za sve.',
+          q: 'Koja je ploča SUP najbolja za obitelj?',
+          a: 'Široka, stabilna napuhanica SUP s visokom nosivošću idealna je za obiteljski odmor. Potražite modele s više zračnih komora za sigurnost i dovoljno kapaciteta za putnike i opremu.',
         },
         {
-          q: 'Je li napuhljivi čamac siguran za djecu?',
-          a: 'Da, uz odgovarajući nadzor i prsluke za spašavanje. Napuhljivi čamci su po prirodi stabilni i s mekanim stranama, što ih čini sigurnijima od čvrstih trupa za obitelji.',
+          q: 'Je li napuhanica SUP sigurna za djecu?',
+          a: 'Da, uz odgovarajući nadzor i prsluke za spašavanje. Napuhanice SUPs su prirodno stabilne i s mekanim stranama, što ih čini prihvatljivima za obitelji.',
         },
       ],
     },
@@ -320,12 +392,12 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
       ],
       faq: [
         {
-          q: 'Koja je vrsta kajaka najbolja za vožnju rijekom?',
-          a: 'Napuhavajući kajaci izvrsni su za vožnju rijekom jer su izdržljivi, okretniji i bolje podnose udarce o stijene od kajaka s tvrdom ljuskom.',
+          q: 'Jesu li napuhavajuće SUPs dobre za vožnju rijekom?',
+          a: 'Da. Napuhavajuće SUPs su izdržljive i okretnе, te bolje podnose udarce o kamenje nego tvrde daske, što ih čini odličnim izborom za vožnju rijekom.',
         },
         {
-          q: 'Koje brzace može podnijeti napuhavajući kajak?',
-          a: 'Kvalitetni napuhavajući kajaci ocijenjeni su za brzace klase I-II, a neki modeli mogu podnijeti i klasu III kod iskusnih ruku.',
+          q: 'Koje brzace može izdržati napuhavajuće SUP?',
+          a: 'Kvalitetne napuhavajuće SUPs dobro se snalaze u vodi klase I-II, a neki modeli su sposobni za klasu III u rukama iskusnih korisnika.',
         },
       ],
     },
@@ -348,7 +420,7 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
     },
     beginner: {
       description:
-        'Első alkalommal evezők, akik a felfújható vízi járművek kezelésének, biztonságának és vízi navigációnak az alapjait tanulják.',
+        'Első alkalommal evezők, akik a felfújható SUP deszkák alapjait, a biztonságot és a vízi navigációt tanulják.',
       features: [
         'Stabil platform',
         'Könnyű felfújás és beállítás',
@@ -372,9 +444,25 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
         },
       ],
     },
+    fishing: {
+      description:
+        'Egy stabil felfújható eszközt SUP használunk hordozható dobóplatformként tó, folyó és part menti horgászathoz.',
+      features: ['Stabil horgászplatform', 'Csendes megközelítés', 'Sekély víz hozzáférése', 'Kéz nélküli trollkodás'],
+      useCases: ['Tói horgászat', 'Parti halászat', 'Folyami horgászat', 'Legyezőhorgászat SUP'],
+      faq: [
+        {
+          q: 'Fel lehet horgászni egy SUP felfújható gépből?',
+          a: 'Igen. Sok horgász felfújható SUPs horgászatból horgászik, az istálló fedélzetet használva dobóplatformként sekély vízekben, ahol nagyobb hajók nem mehetnek be.',
+        },
+        {
+          q: 'Mitől lesz jó SUP horgászdeszka?',
+          a: 'Egy széles, stabil SUP felfújható nagy teherbírással jól működik. Olyan funkciók, mint a rúdtartók, rögzítőpontok és fogaskerek rögzítői fokozzák az élményt.',
+        },
+      ],
+    },
     'family-recreation': {
       description:
-        'Felfújható vízi járművek, amelyeket családi kikapcsolódásra használnak tavakon, enyhe folyókon és védett tengerparti vizeken.',
+        'Fújható SUP deszkák, amelyeket tavak, enyhe folyók és védett tengerparti vizek alkalmi családi kirándulására használnak.',
       features: [
         'Nagy teherbírás',
         'Stabil, több személyes kialakítás',
@@ -384,12 +472,12 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
       useCases: ['Tavi kirándulások', 'Strandnapok', 'Enyhe folyami úszások', 'Piknikezés vízparton'],
       faq: [
         {
-          q: 'Melyik felfújható csónak a legjobb egy család számára?',
-          a: 'Egy stabil felfújható csónak vagy kajak ideális a családi szabadidős tevékenységekhez. Olyan modelleket keressünk, amelyek több légkamrával rendelkeznek a biztonság érdekében és elegendő kapacitással mindenki számára.',
+          q: 'Melyik SUP tábla a legjobb egy családnak?',
+          a: 'Egy széles, stabil SUP felfújható nagy teherrel, ideális családi szórakozáshoz. Keress olyan modelleket, amelyek több légkamrával rendelkeznek a biztonság érdekében, és elegendő kapacitással a utasok és felszerelés számára.',
         },
         {
-          q: 'Biztonságos a felfújható csónak gyermekek számára?',
-          a: 'Igen, megfelelő felügyelet és mentőmellény mellett. A felfújható csónakok természetüknél fogva stabilak és puha oldallal rendelkeznek, ami biztonságosabbá teszi őket a keménytestű csónakoknál a családok részére.',
+          q: 'Biztonságos-e a felfújható SUP gyerekeknek?',
+          a: 'Igen, megfelelő felügyelettel és mentőmellényekkel. Felfújható gépek alapvetően SUPs stabilak és puha oldalúak, így megbocsátóak a családok számára.',
         },
       ],
     },
@@ -399,12 +487,12 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
       useCases: ['I-II. osztályú folyami evezés', 'Festői folyami túrák', 'Többnapos folyami utak', 'Fehérvizes játék'],
       faq: [
         {
-          q: 'Milyen típusú kajak a legjobb folyami túrázáshoz?',
-          a: 'A felfújható kajakok kiválóak a folyami túrázáshoz, mivel tartósak, könnyen manőverezhetők, és jobban bírják a kövekkel való ütközést, mint a keményhéjú kajakok.',
+          q: 'Jó az felfújható SUPs folyami túrázáshoz?',
+          a: 'Igen. Az felfújható SUPs tartósak és jól irányíthatóak, és a kövekkel való ütközéseket jobban bírják, mint a kemény deszkák, így remek választás a folyami túrázáshoz.',
         },
         {
-          q: 'Milyen zuhatagokat bír el egy felfújható kajak?',
-          a: 'A minőségi felfújható kajakok I-II. osztályú zuhatagokra vannak minősítve, egyes modellek tapasztalt kezekben III. osztályt is elbírnak.',
+          q: 'Milyen zúgókat bír el egy felfújható SUP?',
+          a: 'A minőségi felfújható SUPs jól alkalmas az I-II-es osztályú vizekre, néhány modell pedig tapasztalt kezekben a III-as osztályt is képes kezelni.',
         },
       ],
     },
@@ -431,8 +519,7 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
       ],
     },
     beginner: {
-      description:
-        'Pendayung pemula yang belajar dasar-dasar pengoperasian kendaraan air tiup, keselamatan, dan navigasi air.',
+      description: 'Pendayung pemula yang belajar dasar-dasar papan SUP tiup, keselamatan, dan navigasi air.',
       features: [
         'Platform yang stabil',
         'Mudah untuk dipompa dan dipasang',
@@ -456,9 +543,30 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
         },
       ],
     },
+    fishing: {
+      description:
+        'Menggunakan SUP tiup yang stabil sebagai platform memancing portabel untuk memancing di danau, sungai, dan perairan pesisir.',
+      features: [
+        'Platform memancing yang stabil',
+        'Pendekatan yang tenang',
+        'Akses ke perairan dangkal',
+        'Trolling tanpa tangan',
+      ],
+      useCases: ['Memancing di danau', 'Memancing di pesisir', 'Memancing di sungai', 'Memancing dengan fly dari SUP'],
+      faq: [
+        {
+          q: 'Bisakah Anda memancing dari SUP tiup?',
+          a: 'Ya. Banyak pemancing memancing dari SUPs tiup, menggunakan dek yang stabil sebagai platform memancing di perairan dangkal di mana kapal yang lebih besar tidak bisa pergi.',
+        },
+        {
+          q: 'Apa yang membuat SUP papan memancing bagus?',
+          a: 'SUP tiup yang lebar dan stabil dengan kapasitas berat tinggi bekerja dengan baik. Fitur seperti tempat joran, titik jangkar, dan dudukan peralatan meningkatkan pengalaman.',
+        },
+      ],
+    },
     'family-recreation': {
       description:
-        'Kapal karet tiup digunakan untuk rekreasi keluarga santai di danau, sungai yang tenang, dan perairan pantai yang terlindungi.',
+        'Papan SUP tiup digunakan untuk rekreasi keluarga santai di danau, sungai yang tenang, dan perairan pesisir yang terlindung.',
       features: [
         'Kapasitas berat besar',
         'Desain stabil untuk banyak orang',
@@ -468,12 +576,12 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
       useCases: ['Rekreasi di danau', 'Hari di pantai', 'Arung sungai yang tenang', 'Perjalanan piknik di tepi air'],
       faq: [
         {
-          q: 'Perahu karet tiup mana yang terbaik untuk keluarga?',
-          a: 'Perahu karet atau kayak tiup yang stabil ideal untuk rekreasi keluarga. Cari model dengan beberapa ruang udara untuk keselamatan dan kapasitas cukup untuk semua orang.',
+          q: 'Papan SUP mana yang terbaik untuk keluarga?',
+          a: 'SUP tiup yang lebar dan stabil dengan kapasitas berat tinggi ideal untuk rekreasi keluarga. Carilah model dengan beberapa ruang udara untuk keselamatan dan kapasitas yang cukup untuk penumpang dan peralatan.',
         },
         {
-          q: 'Apakah perahu karet tiup aman untuk anak-anak?',
-          a: 'Ya, dengan pengawasan yang tepat dan jaket pelampung. Perahu tiup secara alami stabil dan memiliki sisi yang lembut, membuatnya lebih aman daripada perahu berbodi keras untuk keluarga.',
+          q: 'Apakah SUP tiup aman untuk anak-anak?',
+          a: 'Ya, dengan pengawasan yang tepat dan pelampung. SUPs tiup secara alami stabil dan berpinggiran lunak, membuatnya aman untuk keluarga.',
         },
       ],
     },
@@ -494,12 +602,12 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
       ],
       faq: [
         {
-          q: 'Jenis kayak apa yang terbaik untuk tur sungai?',
-          a: 'Kayak kembung sangat baik untuk tur sungai karena tahan lama, mudah dikendalikan, dan dapat menangani benturan dengan batu lebih baik daripada kayak berbadan keras.',
+          q: 'Apakah SUPs tiup bagus untuk tur sungai?',
+          a: 'Ya. SUPs tiup tahan lama dan mudah dikendalikan, serta mampu menangani benturan dengan batu lebih baik daripada papan keras, menjadikannya pilihan yang bagus untuk tur sungai.',
         },
         {
-          q: 'Jeram apa yang bisa ditangani kayak kembung?',
-          a: 'Kayak kembung berkualitas dinilai untuk jeram kelas I-II, dengan beberapa model mampu menghadapi kelas III jika digunakan oleh orang berpengalaman.',
+          q: 'Aliran deras apa yang bisa ditangani oleh SUP tiup?',
+          a: 'SUPs tiup berkualitas sangat cocok untuk perairan kelas I-II, dengan beberapa model mampu menangani kelas III oleh tangan yang berpengalaman.',
         },
       ],
     },
@@ -521,7 +629,7 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
       ],
     },
     beginner: {
-      description: '팽창식 수상 장비 조작, 안전 및 수상 내비게이션 기본을 배우는 초보 패들러.',
+      description: '처음 패들을 잡는 사람들이 팽창식 SUP 보드의 기본, 안전 및 수상 항법을 배우는 중입니다.',
       features: ['안정적인 플랫폼', '간편한 팽창 및 설치', '관용적인 조작', '올인원 키트 제공'],
       useCases: ['처음 패들링', '기본 스트로크 학습', '수상 안전 이해', '수상에서 자신감 형성'],
       faq: [
@@ -535,18 +643,33 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
         },
       ],
     },
+    fishing: {
+      description: '호수, 강, 근해 낚시를 위한 휴대용 캐스팅 플랫폼으로 안정적인 팽창식 SUP 사용.',
+      features: ['안정적인 낚시 플랫폼', '조용한 접근', '얕은 물 접근', '손을 자유롭게 하는 트롤링'],
+      useCases: ['호수 낚시', '해안 낚시', '강 낚시', 'SUP 에서 플라이 낚시'],
+      faq: [
+        {
+          q: '팽창식 SUP 에서 낚시할 수 있나요?',
+          a: '예. 많은 낚시꾼들이 안정적인 갑판을 사용하여 큰 배가 갈 수 없는 얕은 물에서 캐스팅 플랫폼으로 팽창식 SUPs 에서 낚시를 합니다.',
+        },
+        {
+          q: '좋은 SUP 낚시 보드를 만드는 요소는 무엇인가요?',
+          a: '넓고 안정적이며 높은 중량 수용 능력을 가진 팽창식 SUP 가 잘 작동합니다. 낚싯대 홀더, 닻 고정점, 장비 장착 지점과 같은 기능이 경험을 향상시킵니다.',
+        },
+      ],
+    },
     'family-recreation': {
-      description: '호수, 잔잔한 강, 보호된 해안 지역에서 가족이 가벼운 나들이를 위해 사용하는 팽창식 수상 보트.',
+      description: '호수, 잔잔한 강, 보호된 연안에서의 캐주얼한 가족 나들이에 사용되는 팽창식 SUP 보드.',
       features: ['대용량 하중', '안정적인 다인용 설계', '쉬운 운송', '안전을 위한 다중 공기실'],
       useCases: ['호수 나들이', '해변 나들이', '잔잔한 강에서의 플로트', '수변 소풍'],
       faq: [
         {
-          q: '가족에게 가장 좋은 팽창식 보트는 무엇인가요?',
-          a: '안정적인 팽창식 딩히 또는 카약이 가족 레크리에이션에 이상적입니다. 안전을 위해 다중 공기실이 있고 모든 사람이 탈 수 있는 충분한 용량을 가진 모델을 찾으세요.',
+          q: '어떤 SUP 보드가 가족에게 가장 적합한가요?',
+          a: '넓고 안정적이며 높은 중량 수용 능력을 가진 팽창식 SUP 가 가족 레크리에이션에 이상적입니다. 안전을 위해 여러 개의 공기실이 있는 모델과 탑승자 및 장비를 위한 충분한 용량이 있는 모델을 찾으세요.',
         },
         {
-          q: '팽창식 보트는 어린이에게 안전한가요?',
-          a: '예, 적절한 감독과 구명조끼를 착용하면 가능합니다. 팽창식 보트는 본질적으로 안정적이고 측면이 부드러워 딱딱한 선체의 보트보다 가족에게 안전합니다.',
+          q: '팽창식 SUP 는 아이들에게 안전한가요?',
+          a: '예, 적절한 감독과 구명조끼 사용 시 안전합니다. 팽창식 SUPs 는 본질적으로 안정적이고 부드러운 측면을 가지고 있어 가족에게 안전합니다.',
         },
       ],
     },
@@ -556,12 +679,12 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
       useCases: ['I-II급 강류 운행', '경치 좋은 강 플로트', '다일 강 여행', '급류 놀이'],
       faq: [
         {
-          q: '어떤 종류의 카약이 강 여행에 가장 적합한가요?',
-          a: '내구성이 뛰어나고 조종이 용이하며 딱딱한 셸 카약보다 바위와의 충격을 잘 견딜 수 있기 때문에, 강 여행에는 고무보트 카약이 매우 좋습니다.',
+          q: '강 여행에 공기 주입식 SUPs 이 좋은가요?',
+          a: '네. 공기 주입식 SUPs 은 내구성이 좋고 조종이 용이하며, 단단한 보드보다 바위와의 충격을 잘 견디기 때문에 강 여행에 적합한 선택입니다.',
         },
         {
-          q: '고무보트 카약은 어떤 급류를 견딜 수 있나요?',
-          a: '양질의 고무보트 카약은 I-II급 급류용으로 평가되며, 일부 모델은 숙련된 사용자가 III급 급류도 견딜 수 있습니다.',
+          q: '공기 주입식 SUP 은 어떤 급류를 다룰 수 있나요?',
+          a: '고급 공기 주입식 SUPs 은 클래스 I-II 급수에 적합하며, 일부 모델은 경험이 있는 사람 손에 클래스 III 급수도 견딜 수 있습니다.',
         },
       ],
     },
@@ -594,7 +717,7 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
     },
     beginner: {
       description:
-        'Pradedantieji, mokantis pripučiamųjų vandens transporto priemonių valdymo, saugos ir laivybos pagrindų.',
+        'Pradedantieji irklavimo mėgėjai mokosi pripučiamų SUP lentų pagrindų, saugumo ir vandens navigacijos.',
       features: [
         'Stabili platforma',
         'Lengva pripūsti ir paruošti',
@@ -618,9 +741,30 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
         },
       ],
     },
+    fishing: {
+      description:
+        'Naudojant stabilų pripučiamą SUP kaip nešiojamą meškeriojimo platformą ežerų, upių ir pakrantės žvejybai.',
+      features: [
+        'Stabili žvejybos platforma',
+        'Tylus priėjimas',
+        'Patekimas į seklus vandenį',
+        'Tolimosiomis meškerėmis be rankų',
+      ],
+      useCases: ['Žvejyba ežere', 'Pakrantės žvejyba', 'Žvejyba upėje', 'Skraidymo (fly) žvejyba iš SUP'],
+      faq: [
+        {
+          q: 'Ar galima žvejoti iš pripučiamo SUP?',
+          a: 'Taip. Daugelis žvejų žvejoja iš pripučiamų SUPs, naudodami stabilų denį kaip metimo platformą sekliose vietose, kur didesni laivai negali patekti.',
+        },
+        {
+          q: 'Kas daro gerą SUP žvejybos lentą?',
+          a: 'Platus, stabilus pripučiamas SUP su dideliu svorio talpumu puikiai tinka. Tokios savybės kaip meškerių laikikliai, inkarų tvirtinimo taškai ir įrangos laikikliai pagerina žvejybos patirtį.',
+        },
+      ],
+    },
     'family-recreation': {
       description:
-        'Pripučiamieji vandens laivai, skirti laisvalaikio šeimos išvykoms ežeruose, ramiose upėse ir saugiuose pakrančių vandenyse.',
+        'Pripučamos SUP lentos naudojamos atsipalaidavimui su šeima ežeruose, ramiose upėse ir apsaugotose pakrančių vandenyse.',
       features: [
         'Didelė svorio talpa',
         'Stabilus kelių žmonių dizainas',
@@ -630,12 +774,12 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
       useCases: ['Išvykos prie ežero', 'Paplūdimio dienos', 'Ramus plaukimas upe', 'Piknikai prie vandens'],
       faq: [
         {
-          q: 'Kuris pripučiamas laivas geriausias šeimai?',
-          a: 'Stabilus pripučiamas kateris ar baidarė yra idealus šeimos laisvalaikiui. Rinkitės modelius su keliomis oro kameromis saugumui ir pakankama talpa visiems.',
+          q: 'Kuri SUP lenta geriausia šeimai?',
+          a: 'Platus, stabilus pripučiamas SUP su dideliu svorio talpumu yra idealus šeimos rekreacijai. Rinkitės modelius su keliais oro kameromis dėl saugumo ir pakankama talpa tiek žmonėms, tiek įrangai.',
         },
         {
-          q: 'Ar pripučiamas laivas saugus vaikams?',
-          a: 'Taip, tinkamai juos prižiūrint ir naudojant gelbėjimosi liemenes. Pripučiamieji laivai yra natūraliai stabilūs ir minkštomis sienelėmis, todėl šeimoms yra saugesni nei laivai su kietu korpusu.',
+          q: 'Ar pripučiamas SUP yra saugus vaikams?',
+          a: 'Taip, esant tinkamam priežiūrai ir dėvint gelbėjimosi liemenes. Pripučiamos SUPs yra iš prigimties stabilios ir minkštos, todėl jos saugios šeimoms.',
         },
       ],
     },
@@ -655,12 +799,12 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
       ],
       faq: [
         {
-          q: 'Koks baidarės tipas geriausias upių turizmui?',
-          a: 'Pripučiamas baidares puikiai tinka upių turizmui, nes jos yra patvarios, manevringos ir geriau atlaiko susidūrimus su akmenimis nei kietos korpusinės baidarės.',
+          q: 'Ar pripučiami SUPs tinka upių turizmui?',
+          a: 'Taip. Pripučiami SUPs yra patvarūs ir manevringi, geriau susidoroja su smūgiais į akmenis nei kieti valtys, todėl jie yra puikus pasirinkimas upių turizmui.',
         },
         {
-          q: 'Kokius rapidus gali įveikti pripučiamoji baidarė?',
-          a: 'Kokybiškos pripučiamojo tipo baidarės įvertintos I-II klasės rapidams, o kai kurie modeliai patyrusio vartotojo rankose gali įveikti III klasės rapidus.',
+          q: 'Kokias rapide vietas gali įveikti pripučiamas SUP?',
+          a: 'Kokybiški pripučiami SUPs puikiai tinka I–II klasės vandeniui, o kai kurie modeliai patyrusiam žmogui gali įveikti III klasę.',
         },
       ],
     },
@@ -682,8 +826,7 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
       ],
     },
     beginner: {
-      description:
-        'Pirmo reizi airētāji, apgūstot piepūšamu ūdens transportlīdzekļu darbību, drošību un ūdens navigāciju.',
+      description: 'Sākotnējie airētāji, kas apgūst piepūšamo SUP dēļu pamatus, drošību un ūdens navigāciju.',
       features: [
         'Stabila platforma',
         'Viegli piepūšams un uzstādāms',
@@ -707,9 +850,25 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
         },
       ],
     },
+    fishing: {
+      description:
+        'Stabila piepūšamā ierīce SUP tiek izmantota kā pārnēsājama makšķerēšanas platforma makšķerēšanai ezeros, upēs un piekrastes makšķerēšanā.',
+      features: ['Stabila zvejas platforma', 'Klusā pieeja', 'Piekļuve seklam ūdenim', 'Brīvroku troļļošana'],
+      useCases: ['Makšķerēšana ezerā', 'Piekrastes zveja', 'Upes makšķerēšana', 'Mušiņmakšķerēšana no SUP'],
+      faq: [
+        {
+          q: 'Vai var makšķerēt no piepūšamā aparāta SUP?',
+          a: 'Jā. Daudzi makšķernieki makšķerē no piepūšamām laivām SUPs, izmantojot stabilo klāju kā metiena platformu seklos ūdeņos, kur lielāki kuģi nevar piebraukt.',
+        },
+        {
+          q: 'Kas padara SUP makšķerēšanas dēli labu?',
+          a: 'Plats, stabils piepūšamais ar SUP lielu svara ietilpību darbojas labi. Tādas funkcijas kā makšķeres turētāji, enkura punkti un pārnesumu stiprinājumi uzlabo pieredzi.',
+        },
+      ],
+    },
     'family-recreation': {
       description:
-        'Piepūšamie ūdenslīdzekļi, ko izmanto ikdienišķiem ģimenes izbraucieniem uz ezeriem, maigiem upju posmiem un aizsargātām piekrastes ūdeņu zonām.',
+        'Piepūšamās SUP dēļi, ko izmanto neformālām ģimenes izbraukšanām pa ezeriem, mierīgām upēm un aizsargātiem piekrastes ūdeņiem.',
       features: [
         'Liela svara ietilpība',
         'Stabila vairāku personu konstrukcija',
@@ -719,12 +878,12 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
       useCases: ['Ezera izbraucieni', 'Pludmales dienas', 'Mierīgas upes braucieni', 'Piknika izbraucieni pie ūdens'],
       faq: [
         {
-          q: 'Kura piepūšamā laiva ir vislabāk piemērota ģimenei?',
-          a: 'Stabila piepūšamā laiva vai kajaks ir ideāli piemērots ģimenes atpūtai. Meklējiet modeļus ar vairākiem gaisa nodalījumiem drošībai un pietiekamu ietilpību visiem.',
+          q: 'Kura SUP tastatūra ir labākā ģimenei?',
+          a: 'Plata, stabila piepūšamā ierīce SUP ar lielu svara ietilpību ir ideāla ģimenes atpūtai. Meklējiet modeļus ar vairākām gaisa kamerām drošībai un pietiekamu ietilpību braucējiem un ekipējumam.',
         },
         {
-          q: 'Vai piepūšamā laiva ir droša bērniem?',
-          a: 'Jā, ar pienācīgu uzraudzību un glābšanas vestēm. Piepūšamās laivas ir dabiski stabilas un mīkstas sānu konstrukcijas, kas padara tās drošākas ģimenēm nekā cietas korpusa laivas.',
+          q: 'Vai piepūšamā ierīce ir SUP droša bērniem?',
+          a: 'Jā, ar pienācīgu uzraudzību un glābšanas vestēm. Piepūšamās ir dabiski SUPs stabilas un mīkstas, padarot tās piedodošas ģimenēm.',
         },
       ],
     },
@@ -740,12 +899,12 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
       ],
       faq: [
         {
-          q: 'Kāds kajaks ir vispiemērotākais upju tūrisma braucieniem?',
-          a: 'Piepūšamie kajaki ir lieliski piemēroti upju tūrisma braucieniem, jo tie ir izturīgi, manevrējami un spēj labāk izturēt sadursmes ar akmeņiem nekā cietie kajaki.',
+          q: 'Vai piepūšamie SUPs ir labi upju tūrisma braucieniem?',
+          a: 'Jā. Piepūšamie SUPs ir izturīgi un manevrējami, un tie labāk iztur triecienus pret akmeņiem nekā cietie dēļi, padarot tos par lielisku izvēli upju tūrisma braucieniem.',
         },
         {
-          q: 'Kādas rapas var pārvarēt piepūšamais kajaks?',
-          a: 'Kvalitatīvi piepūšamie kajaki ir novērtēti I-II klases rapām, un daži modeļi pieredzējušu rokaspuišu vadībā spēj pārvarēt III klases rapas.',
+          q: 'Kādas ātrumupes spēj pārdzīvot piepūšamais SUP?',
+          a: 'Kvalitatīvi piepūšamie SUPs ir labi piemēroti I-II klases ūdeņiem, ar dažiem modeļiem, kas pieredzējušu roku vadībā spēj pārvarēt III klases posmus.',
         },
       ],
     },
@@ -773,8 +932,7 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
       ],
     },
     beginner: {
-      description:
-        'Pengayuh kali pertama yang mempelajari asas operasi kenderaan air tiup, keselamatan, dan navigasi air.',
+      description: 'Pendayung kali pertama mempelajari asas papan tiup SUP, keselamatan, dan navigasi air.',
       features: [
         'Platform stabil',
         'Mudah untuk dikembungkan dan dipasang',
@@ -798,9 +956,35 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
         },
       ],
     },
+    fishing: {
+      description:
+        'Menggunakan SUP tiup yang stabil sebagai platform memancing mudah alih untuk memancing di tasik, sungai, dan pesisir pantai.',
+      features: [
+        'Platform memancing yang stabil',
+        'Pendekatan yang senyap',
+        'Akses ke air cetek',
+        'Memancing tanpa menggunakan tangan',
+      ],
+      useCases: [
+        'Memancing di tasik',
+        'Memancing di pesisir pantai',
+        'Memancing di sungai',
+        'Memancing menggunakan fly dari SUP',
+      ],
+      faq: [
+        {
+          q: 'Bolehkah anda memancing dari SUP tiup?',
+          a: 'Ya. Ramai pemancing memancing dari SUPs tiup, menggunakan dek yang stabil sebagai platform lontaran di kawasan cetek di mana kapal yang lebih besar tidak boleh pergi.',
+        },
+        {
+          q: 'Apa yang membuatkan papan memancing SUP baik?',
+          a: 'SUP tiup yang lebar dan stabil dengan kapasiti berat tinggi berfungsi dengan baik. Ciri-ciri seperti pemegang joran, titik sauh, dan pemasangan peralatan meningkatkan pengalaman.',
+        },
+      ],
+    },
     'family-recreation': {
       description:
-        'Perahu tiup yang digunakan untuk percutian keluarga santai di tasik, sungai yang tenang, dan perairan pantai yang terlindung.',
+        'Papan SUP tiup digunakan untuk aktiviti santai bersama keluarga di tasik, sungai yang tenang, dan perairan pesisir yang terlindung.',
       features: [
         'Kapasiti berat yang besar',
         'Reka bentuk stabil untuk berbilang orang',
@@ -810,12 +994,12 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
       useCases: ['Percutian di tasik', 'Hari di pantai', 'Arus sungai yang tenang', 'Perjalanan berkelah di tepi air'],
       faq: [
         {
-          q: 'Perahu tiup mana yang terbaik untuk keluarga?',
-          a: 'Perahu tiub atau kayak tiup yang stabil adalah ideal untuk rekreasi keluarga. Cari model dengan beberapa ruang udara untuk keselamatan dan kapasiti yang cukup untuk semua orang.',
+          q: 'Papan SUP mana yang terbaik untuk keluarga?',
+          a: 'SUP tiup yang lebar dan stabil dengan kapasiti berat tinggi sesuai untuk rekreasi keluarga. Cari model dengan beberapa ruang udara untuk keselamatan dan kapasiti yang mencukupi untuk penumpang dan peralatan.',
         },
         {
-          q: 'Adakah perahu tiup selamat untuk kanak-kanak?',
-          a: 'Ya, dengan pengawasan yang betul dan jaket keselamatan. Perahu tiup adalah secara semula jadi stabil dan bersisi lembut, menjadikannya lebih selamat daripada perahu berkayuh keras untuk keluarga.',
+          q: 'Adakah SUP tiup selamat untuk kanak-kanak?',
+          a: 'Ya, dengan pengawasan yang betul dan jaket keselamatan. SUPs tiup secara semula jadi stabil dan sisi lembut, menjadikannya sesuai untuk keluarga.',
         },
       ],
     },
@@ -831,12 +1015,12 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
       ],
       faq: [
         {
-          q: 'Jenis kayak apa yang terbaik untuk jelajah sungai?',
-          a: 'Kayak tiup sangat baik untuk jelajah sungai kerana ia tahan lasak, mudah dikendalikan, dan boleh menghadapi hentakan dengan batu lebih baik daripada kayak keras.',
+          q: 'Adakah SUPs boleh dikembungkan bagus untuk jelajah sungai?',
+          a: 'Ya. SUPs boleh dikembungkan adalah tahan lama dan mudah dikendalikan, serta ia boleh menangani hentaman dengan batu dengan lebih baik daripada papan keras, menjadikannya pilihan yang hebat untuk jelajah sungai.',
         },
         {
-          q: 'Apa jeram yang boleh diatasi oleh kayak tiup?',
-          a: 'Kayak tiup berkualiti dinilai untuk jeram kelas I-II, dengan beberapa model mampu untuk kelas III bagi tangan yang berpengalaman.',
+          q: 'Apakah jeram yang boleh ditangani oleh SUP boleh dikembungkan?',
+          a: 'SUPs boleh dikembungkan yang berkualiti sesuai untuk air kelas I-II, dengan beberapa model mampu mengendalikan kelas III di tangan yang berpengalaman.',
         },
       ],
     },
@@ -865,7 +1049,7 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
     },
     beginner: {
       description:
-        'Paddlerii începători care învață bazele operării ambarcațiunilor gonflabile, siguranța și navigarea pe apă.',
+        'Cei care practică canoe pentru prima dată învață elementele de bază ale plăcilor gonflabile SUP, siguranța și navigarea pe apă.',
       features: [
         'Platformă stabilă',
         'Ușor de umflat și de instalat',
@@ -889,9 +1073,30 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
         },
       ],
     },
+    fishing: {
+      description:
+        'Folosirea unei SUP gonflabile stabile ca platformă portabilă de lansare pentru pescuitul pe lac, râu și în zonele costiere.',
+      features: [
+        'Platformă de pescuit stabilă',
+        'Apropiere silențioasă',
+        'Acces la ape puțin adânci',
+        'Tragere la trolling fără mâini',
+      ],
+      useCases: ['Pescuit pe lac', 'Pescuit de coastă', 'Pescuit pe râu', 'Pescuit la muscă de pe SUP'],
+      faq: [
+        {
+          q: 'Poți pescui de pe o SUP gonflabilă?',
+          a: 'Da. Mulți pescari pescuiesc de pe SUPs gonflabile, folosind puntea stabilă ca platformă de lansare în ape puțin adânci, unde vasele mai mari nu pot ajunge.',
+        },
+        {
+          q: 'Ce face o bună placă de pescuit SUP?',
+          a: 'O SUP gonflabilă lată și stabilă, cu capacitate mare de greutate, funcționează bine. Caracteristici precum suporturi de lansete, puncte de ancorare și monturi pentru echipament îmbunătățesc experiența.',
+        },
+      ],
+    },
     'family-recreation': {
       description:
-        'Ambarcațiuni gonflabile utilizate pentru plimbări ocazionale în familie pe lacuri, râuri line și ape de coastă protejate.',
+        'Plăci gonflabile SUP folosite pentru ieșiri casual în familie pe lacuri, râuri blânde și ape coste protejate.',
       features: [
         'Capacitate mare de greutate',
         'Design stabil pentru mai multe persoane',
@@ -901,12 +1106,12 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
       useCases: ['Plimbări pe lac', 'Zile la plajă', 'Plutiri pe râuri line', 'Excursii cu picnic pe apă'],
       faq: [
         {
-          q: 'Care este cea mai bună barcă gonflabilă pentru o familie?',
-          a: 'Un dinghy sau caiac gonflabil stabil este ideal pentru recreere în familie. Căutați modele cu mai multe camere de aer pentru siguranță și suficientă capacitate pentru toată lumea.',
+          q: 'Care placă SUP este cea mai bună pentru familie?',
+          a: 'O SUP gonflabilă lată și stabilă, cu capacitate mare de greutate, este ideală pentru recreerea în familie. Caută modele cu mai multe camere de aer pentru siguranță și suficientă capacitate pentru pasageri și echipament.',
         },
         {
-          q: 'Este o barcă gonflabilă sigură pentru copii?',
-          a: 'Da, cu supraveghere corespunzătoare și veste de salvare. Bărci gonflabile sunt în mod inerent stabile și cu părți moi, ceea ce le face mai sigure decât bărcile cu corp dur pentru familii.',
+          q: 'Este o SUP gonflabilă sigură pentru copii?',
+          a: 'Da, cu supraveghere corespunzătoare și veste de salvare. SUPs gonflabile sunt inerent stabile și cu laturi moi, făcându-le prietenoase pentru familii.',
         },
       ],
     },
@@ -922,12 +1127,12 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
       ],
       faq: [
         {
-          q: 'Ce tip de caiac este cel mai bun pentru tururi pe râu?',
-          a: 'Caiacele gonflabile sunt excelente pentru tururi pe râu, deoarece sunt durabile, ușor de manevrat și pot face față mai bine impacturilor cu pietrele decât caiacele cu coajă dură.',
+          q: 'Sunt SUPs gonflabile bune pentru tururi pe râu?',
+          a: 'Da. SUPs gonflabile sunt durabile și manevrabile și fac față impacturilor cu pietrele mai bine decât plăcile tari, ceea ce le face o alegere excelentă pentru tururi pe râu.',
         },
         {
-          q: 'Ce rapide poate face față un caiac gonflabil?',
-          a: 'Caiacele gonflabile de calitate sunt evaluate pentru rapide de clasa I-II, unele modele fiind capabile să abordeze clasa III în mâini experimentate.',
+          q: 'Ce rapide poate face față un SUP gonflabil?',
+          a: 'SUPs gonflabile de calitate sunt potrivite pentru apă de clasa I-II, unele modele fiind capabile să facă față clasei III în mâini experimentate.',
         },
       ],
     },
@@ -955,8 +1160,7 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
       ],
     },
     beginner: {
-      description:
-        'Začiatočníci, ktorí sa učia základy ovládania nafukovateľných vodných plavidiel, bezpečnosti a navigácie na vode.',
+      description: 'Začiatočníci na paddloch sa učia základy nafukovacích SUP dosiek, bezpečnosť a navigáciu na vode.',
       features: [
         'Stabilná platforma',
         'Jednoduché nafúkanie a nastavenie',
@@ -980,9 +1184,30 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
         },
       ],
     },
+    fishing: {
+      description:
+        'Používanie stabilnej nafukovacej SUP ako prenosnej platformy na rybolov v jazerách, riekach a pri pobrežnom rybolove.',
+      features: [
+        'Stabilná rybárska platforma',
+        'Tichý prístup',
+        'Prístup do plytkej vody',
+        'Rybárčenie bez použitia rúk pri trollovaní',
+      ],
+      useCases: ['Rybárčenie v jazere', 'Pobrežný rybolov', 'Rybárčenie v rieke', 'Muškárčenie z SUP'],
+      faq: [
+        {
+          q: 'Môžete rybárčiť z nafukovacej SUP?',
+          a: 'Áno. Mnohí rybári používajú nafukovacie SUPs, pričom stabilná paluba slúži ako platforma na nahadzovanie v plytkých vodách, kam sa väčšie lode nedostanú.',
+        },
+        {
+          q: 'Čo robí dobrú SUP rybársku dosku?',
+          a: 'Široká, stabilná nafukovacia SUP s vysokou nosnosťou funguje dobre. Funkcie ako držiaky prútov, kotviace body a uchytenie vybavenia zlepšujú zážitok.',
+        },
+      ],
+    },
     'family-recreation': {
       description:
-        'Nafukovateľné plavidlo používané na bežné rodinné výlety na jazerách, pokojné rieky a chránené pobrežné vody.',
+        'Nafukovacie SUP dosky používané na bežné rodinné výlety po jazerách, pokojnejších riekach a chránených pobrežných vodách.',
       features: [
         'Veľká nosnosť',
         'Stabilný dizajn pre viacerých ľudí',
@@ -992,12 +1217,12 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
       useCases: ['Výlety k jazeru', 'Dni na pláži', 'Jemná rieka pláva', 'Piknikové výlety pri vode'],
       faq: [
         {
-          q: 'Ktorá nafukovacia loď je najlepšia pre rodinu?',
-          a: 'Stabilný nafukovací čln alebo kajak je ideálny na rodinnú rekreáciu. Hľadajte modely s viacerými vzduchovými komorami pre bezpečnosť a dostatočnou kapacitou pre všetkých.',
+          q: 'Ktorá SUP doska je najlepšia pre rodinu?',
+          a: 'Široká, stabilná nafukovacia SUP s vysokou nosnosťou je ideálna na rodinnú rekreáciu. Hľadajte modely s viacerými vzduchovými komorami pre bezpečnosť a dostatočnou kapacitou pre jazdcov a vybavenie.',
         },
         {
-          q: 'Je nafukovacia loď bezpečná pre deti?',
-          a: 'Áno, s riadnym dohľadom a záchrannými vestami. Nafukovacie lode sú prirodzene stabilné a mäkké na dotyk, čo ich robí pre rodiny bezpečnejšími ako lode s tvrdým trupom.',
+          q: 'Je nafukovacia SUP bezpečná pre deti?',
+          a: 'Áno, pri správnom dohľade a použití záchranných vestí. Nafukovacie SUPs sú z princípu stabilné a s mäkkými stranami, čo je ľahké a bezpečné pre rodiny.',
         },
       ],
     },
@@ -1007,12 +1232,12 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
       useCases: ['Rieky triedy I-II', 'Malebné plavby po rieke', 'Viacdňové výlety po rieke', 'Hranie vo divokej vode'],
       faq: [
         {
-          q: 'Aký typ kajaku je najlepší na riečne výlety?',
-          a: 'Nafukovacie kajaky sú vynikajúce na riečne výlety, pretože sú odolné, obratné a dokážu lepšie odolávať nárazom o kamene než kajaky s tvrdou škrupinou.',
+          q: 'Sú nafukovacie SUPs vhodné na splavovanie riek?',
+          a: 'Áno. Nafukovacie SUPs sú odolné a ľahko ovládateľné a lepšie zvládajú nárazy na kamene než tvrdé dosky, čo ich robí skvelou voľbou na splavovanie riek.',
         },
         {
-          q: 'Aké prúdy zvládne nafukovací kajak?',
-          a: 'Kvalitné nafukovacie kajaky sú určené na prúdy triedy I-II, pričom niektoré modely zvládnu aj triedu III v rukách skúseného používateľa.',
+          q: 'Aké prudké prúdy zvládne nafukovacie SUP?',
+          a: 'Kvalitné nafukovacie SUPs sú vhodné pre vodu triedy I-II, niektoré modely sú schopné zvládnuť triedu III v rukách skúsených používateľov.',
         },
       ],
     },
@@ -1034,7 +1259,7 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
       ],
     },
     beginner: {
-      description: 'Prvič veslajoči, ki se učijo osnov delovanja napihljive plovne opreme, varnosti in plovbe po vodi.',
+      description: 'Prvič veslači, ki se učijo osnov napihljivih SUP desk, varnosti in navigacije po vodi.',
       features: [
         'Stabilna platforma',
         'Enostavno napihovanje in postavitev',
@@ -1058,9 +1283,30 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
         },
       ],
     },
+    fishing: {
+      description:
+        'Uporaba stabilnega napihljivega SUP kot prenosne platforme za ribolov na jezerih, rekah in obalnih vodah.',
+      features: [
+        'Stabilna ribiška platforma',
+        'Tiho približevanje',
+        'Dostop do plitvih voda',
+        'Ribolov brez uporabe rok',
+      ],
+      useCases: ['Ribolov na jezerih', 'Obalni ribolov', 'Ribolov na rekah', 'Mušični ribolov z SUP'],
+      faq: [
+        {
+          q: 'Ali lahko ribariš z napihljivim SUP?',
+          a: 'Da. Veliko ribičev ribari z napihljivimi SUPs, pri čemer uporabljajo stabilno površino kot platformo za metanje v plitvih vodah, kamor večja plovila ne morejo.',
+        },
+        {
+          q: 'Kaj naredi dobro ribiško desko SUP?',
+          a: 'Širok, stabilen napihljivi SUP z veliko nosilnostjo deluje dobro. Lastnosti, kot so držala za ribiške palice, sidrna mesta in pritrdila za opremo, izboljšajo izkušnjo.',
+        },
+      ],
+    },
     'family-recreation': {
       description:
-        'Napihljiva plovila za sproščene družinske izlete po jezerih, mirnih rekah in zaščitenih obalnih vodah.',
+        'Napihljive deske SUP se uporabljajo za sproščena družinska druženja na jezerih, mirnih rekah in zaščitenih obalnih vodah.',
       features: [
         'Velika nosilnost',
         'Stabilna oblika za več oseb',
@@ -1070,12 +1316,12 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
       useCases: ['Izleti na jezero', 'Dnevi na plaži', 'Mirne rečne vožnje', 'Pikniki ob vodi'],
       faq: [
         {
-          q: 'Katera napihljiva čoln je najboljši za družino?',
-          a: 'Stabilna napihljiva gumenjaka ali kajak je idealen za družinsko rekreacijo. Poiščite modele z več zračnimi komorami za varnost in dovolj kapacitete za vse.',
+          q: 'Katera deska SUP je najboljša za družino?',
+          a: 'Širok, stabilen napihljiv SUP z veliko nosilnostjo je idealen za družinsko rekreacijo. Poiščite modele z več zračnimi komorami za varnost in dovolj prostora za osebe in opremo.',
         },
         {
-          q: 'Ali je napihljiv čoln varen za otroke?',
-          a: 'Da, ob ustreznem nadzoru in reševalnih jopičih. Napihljivi čolni so naravno stabilni in mehkih stranic, zaradi česar so za družine varnejši kot čolni s trdim trupom.',
+          q: 'Ali je napihljiv SUP varen za otroke?',
+          a: 'Da, ob ustreznem nadzoru in uporabi rešilnih jopičev. Napihljivi SUPs so po naravi stabilni in mehki, zaradi česar so prijazni za družine.',
         },
       ],
     },
@@ -1095,12 +1341,12 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
       ],
       faq: [
         {
-          q: 'Katera vrsta kajaka je najboljša za rečno turizem?',
-          a: 'Napihljivi kajaki so odlični za rečno turizem, saj so trpežni, enostavno vodljivi in bolje prenašajo trke s kamni kot trdi kajaki.',
+          q: 'Ali so napihljivi SUPs dobri za rečni turizem?',
+          a: 'Da. Napihljivi SUPs so trpežni in okrepljivi za manevriranje, ter bolje prenašajo udarce s kamni kot trde deske, zaradi česar so odlična izbira za rečni turizem.',
         },
         {
-          q: 'Katere brzice lahko prenese napihljivi kajak?',
-          a: 'Kakovostni napihljivi kajaki so primerni za brzice razreda I-II, nekateri modeli pa z izkušenimi vodniki lahko prenesejo tudi razred III.',
+          q: 'S katerimi brzicami se lahko spopade napihljivi SUP?',
+          a: 'Kakovostni napihljivi SUPs so primerni za vodo razreda I-II, pri nekaterih modelih pa so v rokah izkušenega veslača zmožni tudi razreda III.',
         },
       ],
     },
@@ -1122,8 +1368,7 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
       ],
     },
     beginner: {
-      description:
-        'Početnici koji prvi put uče osnove upravljanja naduvavajućim plovilima, bezbednost i navigaciju po vodi.',
+      description: 'First-time paddlers learning the basics of inflatable SUP boards, safety, and water navigation.',
       features: [
         'Stabilna platforma',
         'Jednostavno naduvavanje i postavljanje',
@@ -1147,9 +1392,24 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
         },
       ],
     },
+    fishing: {
+      description: 'Using a stable inflatable SUP as a portable casting platform for lake, river, and inshore fishing.',
+      features: ['Stable fishing platform', 'Quiet approach', 'Shallow water access', 'Hands-free trolling'],
+      useCases: ['Lake fishing', 'Coastal fishing', 'River fishing', 'Fly fishing from SUP'],
+      faq: [
+        {
+          q: 'Can you fish from an inflatable SUP?',
+          a: 'Yes. Many anglers fish from inflatable SUPs, using the stable deck as a casting platform in shallow waters where larger vessels cannot go.',
+        },
+        {
+          q: 'What makes a good SUP fishing board?',
+          a: 'A wide, stable inflatable SUP with high weight capacity works well. Features like rod holders, anchor points, and gear mounts enhance the experience.',
+        },
+      ],
+    },
     'family-recreation': {
       description:
-        'Naduvane plovke koje se koriste za opuštena porodična izletanja po jezerima, mirnim rekama i zaštićenim priobalnim vodama.',
+        'Inflatable SUP boards used for casual family outings on lakes, gentle rivers, and protected coastal waters.',
       features: [
         'Veliki kapacitet za težinu',
         'Stabilan dizajn za više osoba',
@@ -1159,12 +1419,12 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
       useCases: ['Izleti po jezeru', 'Dani na plaži', 'Plovidba mirnim rekama', 'Piknik pored vode'],
       faq: [
         {
-          q: 'Koja je naduvana čamca najbolja za porodicu?',
-          a: 'Stabilan naduvani čamac ili kajak je idealan za porodičnu rekreaciju. Tražite modele sa više vazdušnih komora za sigurnost i dovoljnim kapacitetom za sve.',
+          q: 'Which SUP board is best for a family?',
+          a: 'A wide, stable inflatable SUP with high weight capacity is ideal for family recreation. Look for models with multiple air chambers for safety and enough capacity for riders and gear.',
         },
         {
-          q: 'Da li je naduvani čamac bezbedan za decu?',
-          a: 'Da, uz odgovarajući nadzor i prsluke za spasavanje. Naduvani čamci su po prirodi stabilni i sa mekanim stranama, što ih čini bezbednijim za porodice nego čamce sa tvrdom oplatom.',
+          q: 'Is an inflatable SUP safe for children?',
+          a: 'Yes, with proper supervision and life vests. Inflatable SUPs are inherently stable and soft-sided, making them forgiving for families.',
         },
       ],
     },
@@ -1174,12 +1434,12 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
       useCases: ['Reka klase I-II', 'Scenske vožnje rekom', 'Višednevni izleti rekom', 'Igra u beloj vodi'],
       faq: [
         {
-          q: 'Koja vrsta kajaka je najbolja za vožnju rekom?',
-          a: 'Naduvani kajaci su odlični za vožnju rekom jer su izdržljivi, upravljivi i bolje podnose udarce o stene od kajaka sa čvrstom školjkom.',
+          q: 'Are inflatable SUPs good for river touring?',
+          a: 'Yes. Inflatable SUPs are durable and maneuverable, and they handle impacts with rocks better than hard boards, making them a great choice for river touring.',
         },
         {
-          q: 'Sa kojim brzacima se može nositi naduvani kajak?',
-          a: 'Kvalitetni naduvani kajaci su ocenjeni za brze vode klase I-II, a neki modeli mogu podneti i klasu III u rukama iskusnih kajakaša.',
+          q: 'What rapids can an inflatable SUP handle?',
+          a: 'Quality inflatable SUPs are well suited to class I-II water, with some models capable of class III in experienced hands.',
         },
       ],
     },
@@ -1201,7 +1461,7 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
       ],
     },
     beginner: {
-      description: 'ผู้พายมือใหม่ที่กำลังเรียนรู้พื้นฐานการใช้งานเรือเป่าลม การรักษาความปลอดภัย และการนำทางทางน้ำ',
+      description: 'ผู้พายครั้งแรกกำลังเรียนรู้พื้นฐานของกระดานเป่าลม SUP ความปลอดภัย และการเดินเรือในน้ำ',
       features: [
         'แพลตฟอร์มที่มั่นคง',
         'ง่ายต่อการเติมลมและติดตั้ง',
@@ -1225,19 +1485,33 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
         },
       ],
     },
+    fishing: {
+      description: 'การใช้ SUP เป่าลมที่มั่นคงเป็นแพสำหรับการตีเหยื่อตามทะเลสาบ แม่น้ำ และชายฝั่ง',
+      features: ['แพตกปลาที่มั่นคง', 'เข้าถึงเงียบ', 'เข้าถึงน้ำตื้น', 'ลากเบ็ดโดยไม่ต้องใช้มือ'],
+      useCases: ['ตกปลาที่ทะเลสาบ', 'ตกปลาชายฝั่ง', 'ตกปลาที่แม่น้ำ', 'ตกปลาฟลายจาก SUP'],
+      faq: [
+        {
+          q: 'สามารถตกปลาจาก SUP เป่าลมได้หรือไม่?',
+          a: 'ได้ หลายคนตกปลาจาก SUPs เป่าลม โดยใช้ดาดฟ้าที่มั่นคงเป็นแพสำหรับการตีเหยื่อในน้ำตื้นที่เรือใหญ่เข้าไปไม่ได้',
+        },
+        {
+          q: 'อะไรทำให้ SUP เป็นกระดานตกปลาที่ดี?',
+          a: 'SUP เป่าลมที่กว้างและมั่นคงที่รองรับน้ำหนักสูงทำงานได้ดี คุณลักษณะเช่นที่วางคันเบ็ด จุดยึดสมอ และที่ติดอุปกรณ์ช่วยเพิ่มประสบการณ์',
+        },
+      ],
+    },
     'family-recreation': {
-      description:
-        'เรือเป่าลมที่ใช้สำหรับการออกทริปครอบครัวแบบสบาย ๆ บนทะเลสาบ แม่น้ำที่ไหลช้า และน่านน้ำชายฝั่งที่มีการป้องกัน',
+      description: 'SUP เป่าลมที่ใช้สำหรับกิจกรรมครอบครัวแบบสบาย ๆ บนทะเลสาบ แม่น้ำที่ไม่แรง และน้ำชายฝั่งที่มีความสงบ',
       features: ['ความจุน้ำหนักมาก', 'การออกแบบหลายบุคคลที่มั่นคง', 'การขนส่งที่ง่าย', 'หลายห้องอากาศเพื่อความปลอดภัย'],
       useCases: ['การไปเที่ยวทะเลสาบ', 'วันชายหาด', 'แม่น้ำอ่อนโยนลอยไป', 'ทริปปิกนิกริมแม่น้ำ'],
       faq: [
         {
-          q: 'เรือยางแบบเป่าลมแบบไหนดีที่สุดสำหรับครอบครัว?',
-          a: 'เรือยางเป่าลมหรือคายัคที่มีความมั่นคงเหมาะสำหรับการพักผ่อนแบบครอบครัว ควรมองหารุ่นที่มีหลายห้องลมเพื่อความปลอดภัยและมีความจุเพียงพอสำหรับทุกคน',
+          q: 'กระดาน SUP ใดดีที่สุดสำหรับครอบครัว?',
+          a: 'SUP เป่าลมกว้างและมั่นคงที่รองรับน้ำหนักสูงเหมาะสำหรับกิจกรรมครอบครัว มองหารุ่นที่มีหลายห้องอากาศเพื่อความปลอดภัยและรองรับผู้โดยสารและอุปกรณ์เพียงพอ',
         },
         {
-          q: 'เรือเป่าลมปลอดภัยสำหรับเด็กหรือไม่?',
-          a: 'ใช่ โดยมีการดูแลอย่างเหมาะสมและใส่เสื้อชูชีพ เรือเป่าลมมีความมั่นคงโดยตัวมันเองและมีด้านอ่อน ทำให้ปลอดภัยกว่าสำหรับครอบครัวเมื่อเทียบกับเรือที่มีตัวถังแข็ง',
+          q: 'SUP เป่าลมปลอดภัยสำหรับเด็กหรือไม่?',
+          a: 'ใช่ ถ้ามีการดูแลและสวมชูชีพ SUPs เป่าลมโดยธรรมชาติแล้วมั่นคง มีขอบนุ่ม ทำให้เหมาะสำหรับครอบครัว',
         },
       ],
     },
@@ -1253,12 +1527,12 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
       ],
       faq: [
         {
-          q: 'ประเภทเรือคายัคใดที่เหมาะสำหรับการล่องแม่น้ำ?',
-          a: 'เรือคายัคเป่าลมเหมาะอย่างยิ่งสำหรับการล่องแม่น้ำ เนื่องจากมีความทนทาน คล่องตัว และสามารถรับแรงกระแทกกับโขดหินได้ดีกว่าเรือคายัคแบบแข็ง',
+          q: 'เรือยาง SUPs เหมาะสำหรับการท่องแม่น้ำหรือไม่?',
+          a: 'ใช่ เรือเป่าลม SUPs แข็งแรงและคล่องตัว และสามารถรับแรงกระแทกกับก้อนหินได้ดีกว่ากระดานแข็ง ทำให้เหมาะอย่างยิ่งสำหรับการท่องแม่น้ำ',
         },
         {
-          q: 'เรือคายัคเป่าลมสามารถรับมือกับน้ำเชี่ยวระดับใดได้บ้าง?',
-          a: 'เรือคายัคเป่าลมคุณภาพสูงได้รับการจัดอันดับสำหรับน้ำเชี่ยวชั้น I-II โดยมีบางรุ่นที่สามารถรับมือกับน้ำเชี่ยวชั้น III เมื่ออยู่ในมือผู้มีประสบการณ์',
+          q: 'กระแสน้ำเชี่ยวชนิดใดที่ SUP แบบเป่าลมสามารถรับมือได้?',
+          a: 'แปรงลมคุณภาพ SUPs เหมาะอย่างยิ่งสำหรับน้ำระดับ I-II โดยมีบางรุ่นที่สามารถใช้งานในระดับ III ได้หากมีผู้เชี่ยวชาญ',
         },
       ],
     },
@@ -1292,7 +1566,7 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
     },
     beginner: {
       description:
-        'Mga first-time paddler na nag-aaral ng mga pangunahing kaalaman sa paggamit ng inflatable na watercraft, kaligtasan, at navigasyon sa tubig.',
+        'Mga unang beses na maglalangoy gamit ang mga inflatable na SUP board, natututo ng mga pangunahing kaalaman sa kaligtasan at pag-navigate sa tubig.',
       features: [
         'Matatag na platform',
         'Madaling i-inflate at i-setup',
@@ -1316,9 +1590,35 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
         },
       ],
     },
+    fishing: {
+      description:
+        'Paggamit ng matatag na inflatable SUP bilang portable na plataporma para sa pamamarig sa lawa, ilog, at tabing-dagat.',
+      features: [
+        'Matatag na plataporma sa pangingisda',
+        'Tahimik na paglapit',
+        'Pag-access sa mababaw na tubig',
+        'Trolling nang walang gamit ang kamay',
+      ],
+      useCases: [
+        'Pamamarig sa lawa',
+        'Pamamarig sa baybayin',
+        'Pamamarig sa ilog',
+        'Pamamarig gamit ang fly mula sa SUP',
+      ],
+      faq: [
+        {
+          q: 'Makakakainis ka ba mula sa inflatable na SUP?',
+          a: 'Oo. Maraming mangingisda ang namimingwit mula sa inflatable na SUPs, gamit ang matatag na dek bilang plataporma sa pamamarig sa mababaw na tubig kung saan hindi makakapasok ang malalaking bangka.',
+        },
+        {
+          q: 'Ano ang gumagawa ng magandang SUP fishing board?',
+          a: 'Isang malapad at matatag na inflatable SUP na may mataas na kapasidad sa timbang ay mahusay gamitin. Ang mga tampok tulad ng rod holders, anchor points, at gear mounts ay nagpapahusay sa karanasan.',
+        },
+      ],
+    },
     'family-recreation': {
       description:
-        'Mga inflatable na sasakyang pantubig na ginagamit para sa kaswal na paglalakbay ng pamilya sa mga lawa, banayad na ilog, at protektadong baybayin.',
+        'Inflatable SUP boards na ginagamit para sa kaswal na pamamasyal ng pamilya sa mga lawa, mahinahong ilog, at protektadong tubig sa baybayin.',
       features: [
         'Malaking kapasidad sa timbang',
         'Matatag na disenyo para sa maraming tao',
@@ -1333,33 +1633,33 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
       ],
       faq: [
         {
-          q: 'Alin ang pinakamahusay na inflatable na bangka para sa pamilya?',
-          a: 'Ang matatag na inflatable na dinghy o kayak ay perpekto para sa libangan ng pamilya. Maghanap ng mga modelo na may maraming air chamber para sa kaligtasan at sapat na kapasidad para sa lahat.',
+          q: 'Aling SUP board ang pinakamainam para sa pamilya?',
+          a: 'Isang malapad at matatag na inflatable SUP na may mataas na kapasidad sa timbang ang pinakamainam para sa libangan ng pamilya. Humanap ng modelo na may maraming air chambers para sa kaligtasan at sapat na kapasidad para sa mga pasahero at kagamitan.',
         },
         {
-          q: 'Ligtas ba ang inflatable na bangka para sa mga bata?',
-          a: 'Oo, sa wastong pangangalaga at paggamit ng life vest. Ang mga inflatable na bangka ay likas na matatag at may malalambot na gilid, na mas ligtas kaysa sa mga bangkang may matigas na hull para sa mga pamilya.',
+          q: 'Ligtas ba ang inflatable SUP para sa mga bata?',
+          a: 'Oo, sa tamang pagsusubaybay at pagsusuot ng life vest. Ang inflatable SUPs ay likas na matatag at may malambot na gilid, kaya ito ay maayos para sa pamilya.',
         },
       ],
     },
     'river-touring': {
       description:
         'Paglalayag sa mga ilog na may agos, mula sa banayad na Class I stretches hanggang sa mas mahihirap na Class II rapids.',
-      features: ['Maneuverable hull', 'Matibay sa impact', 'Mabilis na pag-drain', 'Kayang-kaya sa Whitewater'],
+      features: ['Maneuverable na hull', 'Matibay sa impact', 'Mabilis na pag-drain', 'Kayang-kaya sa Whitewater'],
       useCases: [
         'Pagpapatakbo sa I-II na klaseng ilog',
         'Magandang tanawin na ilog para sa pabangon-bangon na paglalayag',
         'Maramihang araw na paglalakbay sa ilog',
-        'Whitewater play',
+        'Laro sa puting tubig',
       ],
       faq: [
         {
-          q: 'Anong uri ng kayak ang pinakamahusay para sa paglilibot sa ilog?',
-          a: 'Ang mga inflatable na kayak ay mahusay para sa paglilibot sa ilog dahil matibay, madaling paikutin, at mas kayang tiisin ang banggaan sa mga bato kaysa sa mga hard-shell na kayak.',
+          q: 'Maganda ba ang mga inflatable SUPs para sa paglilibot sa ilog?',
+          a: "Oo. Matibay at madaling maniobrahin ang mga inflatable SUPs, at mas mahusay nilang hinaharap ang mga banggaan sa bato kaysa sa matitigas na tabla, kaya't mahusay silang pagpipilian para sa paglilibot sa ilog.",
         },
         {
-          q: 'Anong klaseng mabilis na agos ang kaya ng inflatable kayak?',
-          a: 'Ang mga de-kalidad na inflatable kayak ay may rating para sa class I-II na rapids, na ang ilan ay kayang kayanin ang class III sa bihasang kamay.',
+          q: 'Anong klaseng mga mabilisang tubig ang kaya ng isang inflatable SUP?',
+          a: 'Ang de-kalidad na inflatable SUPs ay angkop para sa klase I-II na tubig, na ang ilang mga modelo ay kayang sa klase III sa kamay ng mga may karanasan.',
         },
       ],
     },
@@ -1382,7 +1682,7 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
     },
     beginner: {
       description:
-        'İlk defa kürek çekenler, şişme su araçlarının kullanımı, güvenliği ve su navigasyonunun temellerini öğreniyor.',
+        'Şişme SUP tahtalarının temellerini, güvenliği ve suyun navigasyonunu öğrenen ilk kez kürek çekenler.',
       features: ['Stabil platform', 'Kolay şişirme ve kurulum', 'Hoşgörülü kullanım', 'Hepsi bir arada kit mevcut'],
       useCases: ['İlk kez kürek çekme', 'Temel vuruşları öğrenme', 'Su güvenliğini anlama', 'Suda güven kazanma'],
       faq: [
@@ -1396,9 +1696,25 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
         },
       ],
     },
+    fishing: {
+      description:
+        'Göl, nehir ve kıyı balıkçılığı için taşınabilir bir oltalama platformu olarak stabil bir şişme SUP kullanımı.',
+      features: ['Stabil balıkçılık platformu', 'Sessiz yaklaşım', 'Sığ suya erişim', 'Eller serbest oltalama'],
+      useCases: ['Göl balıkçılığı', 'Kıyı balıkçılığı', 'Nehir balıkçılığı', 'SUP üzerinden sinek balıkçılığı'],
+      faq: [
+        {
+          q: 'Şişme bir SUP üzerinde balık tutulabilir mi?',
+          a: 'Evet. Birçok balıkçı, büyük teknelerin giremeyeceği sığ sularda olta atma platformu olarak stabil güvertelerini kullanarak şişme SUPs ile balık tutar.',
+        },
+        {
+          q: 'İyi bir SUP balıkçılık tahtasını ne yapar?',
+          a: 'Geniş, stabil ve yüksek ağırlık kapasitesine sahip bir şişme SUP iyi çalışır. Olta tutucular, çapa noktaları ve ekipman montajları gibi özellikler deneyimi artırır.',
+        },
+      ],
+    },
     'family-recreation': {
       description:
-        'Göllerde, sakin nehirlerde ve korunaklı kıyı sularında ailecek eğlenceli geziler için kullanılan şişme su araçları.',
+        'Göllerde, sakin nehirlerde ve korunaklı kıyı sularında sıradan aile gezileri için kullanılan şişme SUP tahtaları.',
       features: [
         'Yüksek taşıma kapasitesi',
         'Dengeli çok kişilik tasarım',
@@ -1408,12 +1724,12 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
       useCases: ['Göl gezileri', 'Plaj günleri', 'Sakin nehirlerde gezinti', 'Su kenarında piknik gezileri'],
       faq: [
         {
-          q: 'Hangi şişme tekne aile için en iyisidir?',
-          a: 'Dengeli bir şişme bot veya kano, aile gezileri için idealdir. Güvenlik için birden fazla hava bölmesi olan ve herkes için yeterli kapasite sağlayan modelleri arayın.',
+          q: 'Aile için en iyi SUP tahtası hangisidir?',
+          a: 'Yüksek ağırlık kapasitesine sahip, geniş ve stabil bir şişme SUP aile eğlencesi için idealdir. Güvenlik için birden fazla hava odasına sahip ve yolcu ile ekipman kapasitesi yeterli modelleri tercih edin.',
         },
         {
-          q: 'Şişme botlar çocuklar için güvenli midir?',
-          a: 'Evet, uygun gözetim ve can yelekleri ile şişme botlar doğal olarak stabildir ve yumuşak yanlara sahiptir, bu da onları sert gövdeli teknelere göre aileler için daha güvenli yapar.',
+          q: 'Çocuklar için şişme SUP güvenli midir?',
+          a: 'Evet, uygun gözetim ve can yelekleri ile. Şişme SUPs doğası gereği stabil ve yumuşak yanlıdır, bu da aileler için affedici olmasını sağlar.',
         },
       ],
     },
@@ -1429,12 +1745,12 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
       ],
       faq: [
         {
-          q: 'Hangi tür kayak nehir turu için en iyisidir?',
-          a: 'Şişme kayıklar, dayanıklı, manevra kabiliyeti yüksek oldukları ve sert kabuklu kayıklardan daha iyi kaya çarpışmalarına dayanabildikleri için nehir turu için mükemmeldir.',
+          q: 'Şişme SUPs nehir turu için uygun mu?',
+          a: 'Evet. Şişme SUPs dayanıklıdır ve manevra kabiliyeti yüksektir, ayrıca kayalarla çarpışmalara sert tahtalardan daha iyi dayanır, bu da onları nehir turu için harika bir seçim yapar.',
         },
         {
-          q: 'Şişme bir kayak hangi hızlı akıntılara dayanabilir?',
-          a: 'Kaliteli şişme kayıklar sınıf I-II hızlı akıntılar için değerlendirilmiştir, bazı modeller deneyimli ellerde sınıf III seviyesini kaldırabilir.',
+          q: 'Şişme SUP hangi hızlı sularla başa çıkabilir?',
+          a: 'Kaliteli şişme SUPs sınıf I-II sulara uygundur ve bazı modeller deneyimli kişiler tarafından sınıf III suları bile kaldırabilir.',
         },
       ],
     },
@@ -1457,7 +1773,7 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
     },
     beginner: {
       description:
-        'Begynderpaddlere, der lærer de grundlæggende færdigheder i at betjene oppustelige vandscootere, sikkerhed og navigation på vandet.',
+        'Førstegangs-padlere, der lærer grundlæggende færdigheder på oppustelige SUP-boards, sikkerhed og vandnavigation.',
       features: ['Stabil platform', 'Let at puste op og opsætte', 'Tilgivende håndtering', 'Alt-i-en kit tilgængeligt'],
       useCases: [
         'Første gang padling',
@@ -1476,9 +1792,24 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
         },
       ],
     },
+    fishing: {
+      description: 'Brug af et stabilt oppusteligt SUP som en bærbar kasteplatform til sø-, flod- og kystfiskeri.',
+      features: ['Stabil fiskerplatform', 'Stille tilgang', 'Adgang til lavt vand', 'Fritgående trolling'],
+      useCases: ['Søfiskeri', 'Kystfiskeri', 'Flodfiskeri', 'Fluefiskeri fra SUP'],
+      faq: [
+        {
+          q: 'Kan man fiske fra en oppustelig SUP?',
+          a: 'Ja. Mange lystfiskere fisker fra oppustelige SUPs, og bruger den stabile dæk som en kasteplatform i lavt vand, hvor større både ikke kan komme frem.',
+        },
+        {
+          q: 'Hvad gør en SUP fiskebåd god?',
+          a: 'En bred, stabil oppustelig SUP med høj vægtkapacitet fungerer godt. Funktioner som stangholdere, ankerpunkter og udstyrsmonteringer forbedrer oplevelsen.',
+        },
+      ],
+    },
     'family-recreation': {
       description:
-        'Oppustelige fartøjer til afslappede familieudflugter på søer, rolige floder og beskyttede kystfarvande.',
+        'Oppustelige SUP boards bruges til afslappede familieture på søer, rolige floder og beskyttede kystvand.',
       features: [
         'Stor vægtkapacitet',
         'Stabilt design til flere personer',
@@ -1488,12 +1819,12 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
       useCases: ['Søudflugter', 'Stranddage', 'Rolige flodture', 'Picnicture ved vandet'],
       faq: [
         {
-          q: 'Hvilken oppustelig båd er bedst for en familie?',
-          a: 'En stabil oppustelig jolle eller kajak er ideel til familieunderholdning. Se efter modeller med flere luftkamre for sikkerhed og tilstrækkelig kapacitet til alle.',
+          q: 'Hvilken SUP board er bedst for en familie?',
+          a: 'En bred, stabil oppustelig SUP med høj vægtkapacitet er ideel til familieudflugter. Kig efter modeller med flere luftkamre for sikkerhed og tilstrækkelig kapacitet til både personer og udstyr.',
         },
         {
-          q: 'Er en oppustelig båd sikker for børn?',
-          a: 'Ja, med korrekt opsyn og redningsveste. Oppustelige både er i sig selv stabile og har bløde sider, hvilket gør dem mere sikre end både med hårdt skrog for familier.',
+          q: 'Er en oppustelig SUP sikker for børn?',
+          a: 'Ja, med passende opsyn og redningsveste. Oppustelige SUPs er naturligt stabile og bløde, hvilket gør dem tilgivende for familier.',
         },
       ],
     },
@@ -1504,12 +1835,12 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
       useCases: ['Klasse I-II flodsejlads', 'Sceniske flodture', 'Flere dages flodture', 'Hvidvandsspil'],
       faq: [
         {
-          q: 'Hvilken type kajak er bedst til flodture?',
-          a: 'Oppustelige kajakker er fremragende til flodture, da de er holdbare, manøvredygtige og kan tåle kollisioner med sten bedre end hårdskal-kajakker.',
+          q: 'Er oppustelige SUPs gode til flodsejlads?',
+          a: 'Ja. Oppustelige SUPs er holdbare og manøvredygtige, og de håndterer stød mod sten bedre end hårde boards, hvilket gør dem til et godt valg til flodsejlads.',
         },
         {
-          q: 'Hvilke strømhvirvler kan en oppustelig kajak håndtere?',
-          a: 'Kvalitetsoppustelige kajakker er vurderet til klasse I-II strømhvirvler, med nogle modeller, der kan klare klasse III i erfarne hænder.',
+          q: 'Hvilke stryk kan en oppustelig SUP håndtere?',
+          a: 'Kvalitets oppustelige SUPs er velegnede til klasse I-II vand, med nogle modeller der kan klare klasse III i erfarne hænder.',
         },
       ],
     },
@@ -1532,7 +1863,7 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
     },
     beginner: {
       description:
-        'Førstegangspadlere som lærer det grunnleggende i drift av oppblåsbare vannfartøy, sikkerhet og navigasjon på vann.',
+        'Førstegangs-padlere som lærer det grunnleggende om oppblåsbare SUP-brett, sikkerhet og vannnavigasjon.',
       features: [
         'Stabil plattform',
         'Enkel å blåse opp og sette opp',
@@ -1556,9 +1887,24 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
         },
       ],
     },
+    fishing: {
+      description: 'Bruke en stabil oppblåsbar SUP som en bærbar kasteplattform for innsjø-, elve- og kystfiske.',
+      features: ['Stabil fiskerplattform', 'Tilstøtende rolig', 'Tilgang til grunt vann', 'Håndfri trolling'],
+      useCases: ['Innsjøfiske', 'Kystfiske', 'Elvefiske', 'Fluefiske fra SUP'],
+      faq: [
+        {
+          q: 'Kan du fiske fra en oppblåsbar SUP?',
+          a: 'Ja. Mange sportsfiskere fisker fra oppblåsbare SUPs, og bruker det stabile dekket som en kasteplattform i grunt vann der større fartøy ikke kan gå.',
+        },
+        {
+          q: 'Hva gjør en god SUP fiskebrett?',
+          a: 'Et bredt, stabilt oppblåsbart SUP med høy vektkapasitet fungerer godt. Funksjoner som stangholdere, ankepunkter og utstyrsmonteringer forbedrer opplevelsen.',
+        },
+      ],
+    },
     'family-recreation': {
       description:
-        'Oppblåsbare fartøy brukt til uformelle familieutflukter på innsjøer, rolige elver og beskyttede kystområder.',
+        'Oppblåsbare SUP brett brukt til uformelle familieutflukter på innsjøer, rolige elver og beskyttede kystvann.',
       features: [
         'Stor vektkapasitet',
         'Stabilt design for flere personer',
@@ -1568,12 +1914,12 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
       useCases: ['Innsjøutflukter', 'Stranddager', 'Rolige elveflåter', 'Picnicturer ved vannet'],
       faq: [
         {
-          q: 'Hvilken oppblåsbar båt er best for en familie?',
-          a: 'En stabil oppblåsbar jolle eller kajakk er ideell for familieaktiviteter. Se etter modeller med flere luftkamre for sikkerhet og tilstrekkelig kapasitet for alle.',
+          q: 'Hvilket SUP brett er best for en familie?',
+          a: 'Et bredt, stabilt oppblåsbart SUP med høy vektkapasitet er ideelt for familiefritid. Se etter modeller med flere luftkamre for sikkerhet og nok kapasitet for passasjerer og utstyr.',
         },
         {
-          q: 'Er en oppblåsbar båt trygg for barn?',
-          a: 'Ja, med riktig tilsyn og redningsvester. Oppblåsbare båter er iboende stabile og myke på sidene, noe som gjør dem tryggere enn båter med hardt skrog for familier.',
+          q: 'Er en oppblåsbar SUP trygg for barn?',
+          a: 'Ja, med riktig tilsyn og redningsvester. Oppblåsbare SUPs er iboende stabile og mykside, noe som gjør dem tilgivende for familier.',
         },
       ],
     },
@@ -1583,12 +1929,12 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
       useCases: ['Elv med klasse I-II', 'Sceniske elvturer', 'Elvturer over flere dager', 'Lek i stryk'],
       faq: [
         {
-          q: 'Hva slags kajakk er best for elvturer?',
-          a: 'Oppblåsbare kajakker er utmerkede for elvturer fordi de er slitesterke, manøvrerbare og tåler støt mot steiner bedre enn kajakker med hardt skrog.',
+          q: 'Er oppblåsbare SUPs gode for elveturer?',
+          a: 'Ja. Oppblåsbare SUPs er holdbare og manøvrerbare, og de tåler støt mot steiner bedre enn harde brett, noe som gjør dem til et flott valg for elveturer.',
         },
         {
-          q: 'Hvilke stryk kan en oppblåsbar kajakk håndtere?',
-          a: 'Kvalitetsoppblåsbare kajakker er klassifisert for klasse I-II stryk, med noen modeller som kan håndtere klasse III i erfarne hender.',
+          q: 'Hvilke stryk kan en oppblåsbar SUP håndtere?',
+          a: 'Kvalitets oppblåsbare SUPs er godt egnet for klasse I-II vann, med noen modeller som kan takle klasse III i erfarne hender.',
         },
       ],
     },
@@ -1631,6 +1977,22 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
         {
           q: 'Hoe lang duurt het om te leren stand-up paddleboarden?',
           a: 'De meeste beginners kunnen tijdens hun eerste sessie al staan en peddelen op stilstaand water. Het evenwicht verbetert snel met oefening.',
+        },
+      ],
+    },
+    fishing: {
+      description:
+        'Het gebruik van een stabiele opblaasbare SUP als een draagbaar visplatform voor vissen in meren, rivieren en kustwateren.',
+      features: ['Stabiel visplatform', 'Stille aanpak', 'Toegang tot ondiep water', 'Handsfree trollen'],
+      useCases: ['Meer vissen', 'Kustvissen', 'Rivervissen', 'Vliegen vissen vanaf SUP'],
+      faq: [
+        {
+          q: 'Kun je vissen vanaf een opblaasbare SUP?',
+          a: 'Ja. Veel vissers vissen vanaf opblaasbare SUPs, waarbij ze het stabiele dek gebruiken als een werpplatform in ondiep water waar grotere vaartuigen niet kunnen komen.',
+        },
+        {
+          q: 'Wat maakt een goed SUP visboard?',
+          a: 'Een brede, stabiele opblaasbare SUP met een hoog draagvermogen werkt goed. Functies zoals hengelhouders, ankerpunten en uitrustingsmontages verbeteren de ervaring.',
         },
       ],
     },
@@ -1715,6 +2077,27 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
         {
           q: 'Quanto tempo leva para aprender a praticar stand-up paddle?',
           a: 'A maioria dos iniciantes consegue se levantar e remar em águas calmas já na primeira sessão. O equilíbrio melhora rapidamente com a prática.',
+        },
+      ],
+    },
+    fishing: {
+      description:
+        'Usando um SUP inflável estável como uma plataforma portátil de arremesso para pesca em lago, rio e em águas costeiras.',
+      features: [
+        'Plataforma de pesca estável',
+        'Abordagem silenciosa',
+        'Acesso a águas rasas',
+        'Pesca com trollagem sem mãos',
+      ],
+      useCases: ['Pesca em lago', 'Pesca costeira', 'Pesca em rios', 'Pesca com mosca desde SUP'],
+      faq: [
+        {
+          q: 'É possível pescar de um SUP inflável?',
+          a: 'Sim. Muitos pescadores pescam de SUPs infláveis, usando o convés estável como plataforma de arremesso em águas rasas onde embarcações maiores não conseguem alcançar.',
+        },
+        {
+          q: 'O que torna uma boa prancha de pesca SUP?',
+          a: 'Um SUP inflável largo e estável, com alta capacidade de peso, funciona bem. Recursos como suportes de varas, pontos de âncora e suportes para equipamentos aprimoram a experiência.',
         },
       ],
     },
@@ -1811,6 +2194,27 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
         {
           q: 'Jak długo zajmuje nauka paddleboardingu na stojąco?',
           a: 'Większość początkujących potrafi wstać i wiosłować po spokojnej wodzie już podczas pierwszej sesji. Równowaga szybko poprawia się z praktyką.',
+        },
+      ],
+    },
+    fishing: {
+      description:
+        'Używanie stabilnego dmuchanego SUP jako przenośnej platformy do wędkowania na jeziorach, rzekach i przybrzeżnych wodach.',
+      features: [
+        'Stabilna platforma wędkarska',
+        'Ciche podejście',
+        'Dostęp do płytkiej wody',
+        'Wędkarstwo bez użycia rąk podczas trollingu',
+      ],
+      useCases: ['Wędkowanie na jeziorach', 'Wędkowanie przybrzeżne', 'Wędkowanie w rzece', 'Wędkarstwo muchowe z SUP'],
+      faq: [
+        {
+          q: 'Czy można łowić z dmuchanego SUP?',
+          a: 'Tak. Wielu wędkarzy łowi z dmuchanych SUPs, wykorzystując stabilny pokład jako platformę do rzutu w płytkich wodach, gdzie większe jednostki nie mogą wpłynąć.',
+        },
+        {
+          q: 'Co czyni dobrą wędkarską deskę SUP?',
+          a: 'Szeroki, stabilny dmuchany SUP o dużej nośności sprawdza się doskonale. Funkcje takie jak uchwyty na wędki, punkty mocowania kotwic i uchwyty na sprzęt zwiększają komfort użytkowania.',
         },
       ],
     },
@@ -1913,6 +2317,27 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
         },
       ],
     },
+    fishing: {
+      description:
+        'Использование стабильного надувного SUP в качестве переносной платформы для заброса на озере, реке и прибрежной рыбалке.',
+      features: [
+        'Стабильная рыболовная платформа',
+        'Тихий подход',
+        'Доступ к мелководью',
+        'Ловля на троллинг без помощи рук',
+      ],
+      useCases: ['Рыбалка на озере', 'Прибрежная рыбалка', 'Рыбалка на реке', 'Ловля нахлыстом с SUP'],
+      faq: [
+        {
+          q: 'Можно ли рыбачить с надувного SUP?',
+          a: 'Да. Многие рыбаки рыбачат с надувного SUPs, используя стабильную палубу как платформу для заброса в мелких водах, куда не могут пройти большие суда.',
+        },
+        {
+          q: 'Что делает надувную SUP хорошей рыболовной доской?',
+          a: 'Широкий, стабильный надувной SUP с высокой грузоподъемностью хорошо подходит. Такие функции, как держатели удочек, крепления для якоря и монтажные места для снаряжения, улучшают опыт.',
+        },
+      ],
+    },
     'family-recreation': {
       description:
         'Надувные SUP доски, используемые для семейных прогулок на озёрах, спокойных реках и защищённых прибрежных водах.',
@@ -1988,6 +2413,22 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
         {
           q: 'كم يستغرق تعلم التجديف على الألواح الواقفة؟',
           a: 'معظم المبتدئين يمكنهم الوقوف والتجديف على الماء المستو خلال أول جلسة لهم. يتحسن التوازن بسرعة مع الممارسة.',
+        },
+      ],
+    },
+    fishing: {
+      description:
+        'استخدام SUP قابل للنفخ ومستقر كمنصة صيد محمولة لصيد الأسماك في البحيرات والأنهار والمناطق الساحلية.',
+      features: ['منصة صيد مستقرة', 'نهج هادئ', 'الوصول إلى المياه الضحلة', 'الصيد بدون استخدام اليدين'],
+      useCases: ['صيد الأسماك في البحيرات', 'الصيد الساحلي', 'صيد الأسماك في الأنهار', 'صيد الذباب من SUP'],
+      faq: [
+        {
+          q: 'هل يمكنك الصيد من SUP قابل للنفخ؟',
+          a: 'نعم. يصطاد العديد من الصيادين من SUPs قابلة للنفخ، باستخدام السطح المستقر كمنصة صيد في المياه الضحلة التي لا يمكن للسفن الكبيرة الوصول إليها.',
+        },
+        {
+          q: 'ما الذي يجعل SUP لوحة صيد جيدة؟',
+          a: 'SUP قابل للنفخ وعريض ومستقر ويحتوي على سعة وزن عالية يعمل بشكل جيد. الميزات مثل حوامل الصيد ونقاط التثبيت للأوتاد وركائز المعدات تعزز التجربة.',
         },
       ],
     },
@@ -2076,6 +2517,22 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
         },
       ],
     },
+    fishing: {
+      description:
+        'Verwendung eines stabilen aufblasbaren SUP als tragbare Angelplattform für See-, Fluss- und Küstenangeln.',
+      features: ['Stabile Angelplattform', 'Leiser Ansatz', 'Zugang zu flachem Wasser', 'Freihändiges Schleppangeln'],
+      useCases: ['Seeangeln', 'Küstenangeln', 'Flussangeln', 'Fliegenfischen von SUP'],
+      faq: [
+        {
+          q: 'Kann man von einem aufblasbaren SUP angeln?',
+          a: 'Ja. Viele Angler angeln von aufblasbaren SUPs und nutzen das stabile Deck als Wurfplattform in flachen Gewässern, in die größere Boote nicht gelangen.',
+        },
+        {
+          q: 'Was macht eine gute SUP Angelplattform aus?',
+          a: 'Ein breites, stabiles aufblasbares SUP mit hoher Tragfähigkeit funktioniert gut. Funktionen wie Rutenhalter, Befestigungspunkte für Anker und Ausrüstungsmontagen verbessern das Erlebnis.',
+        },
+      ],
+    },
     'family-recreation': {
       description:
         'Aufblasbare SUP-Boards, die für entspannte Familienausflüge auf Seen, sanften Flüssen und geschützten Küstengewässern verwendet werden.',
@@ -2159,6 +2616,27 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
         {
           q: '¿Cuánto tiempo se tarda en aprender a hacer paddleboard?',
           a: 'La mayoría de los principiantes pueden ponerse de pie y remar en aguas tranquilas durante su primera sesión. El equilibrio mejora rápidamente con la práctica.',
+        },
+      ],
+    },
+    fishing: {
+      description:
+        'Usando un SUP inflable y estable como plataforma portátil de lanzamiento para pesca en lago, río y costa.',
+      features: [
+        'Plataforma de pesca estable',
+        'Acercamiento silencioso',
+        'Acceso a aguas poco profundas',
+        'Trolleado sin usar las manos',
+      ],
+      useCases: ['Pesca en lago', 'Pesca costera', 'Pesca en río', 'Pesca con mosca desde SUP'],
+      faq: [
+        {
+          q: '¿Se puede pescar desde un SUP inflable?',
+          a: 'Sí. Muchos pescadores pescan desde SUPs inflables, usando la cubierta estable como plataforma de lanzamiento en aguas poco profundas donde no pueden entrar embarcaciones más grandes.',
+        },
+        {
+          q: '¿Qué hace buena a una tabla de pesca SUP?',
+          a: 'Un SUP inflable ancho y estable con alta capacidad de peso funciona bien. Características como portacañas, puntos de anclaje y soportes para equipo mejoran la experiencia.',
         },
       ],
     },
@@ -2258,6 +2736,27 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
         },
       ],
     },
+    fishing: {
+      description:
+        'Utiliser un SUP gonflable stable comme plateforme de lancer portable pour la pêche en lac, en rivière et en zones côtières.',
+      features: [
+        'Plateforme de pêche stable',
+        'Approche silencieuse',
+        'Accès aux eaux peu profondes',
+        'Traîne mains libres',
+      ],
+      useCases: ['Pêche en lac', 'Pêche côtière', 'Pêche en rivière', 'Pêche à la mouche depuis SUP'],
+      faq: [
+        {
+          q: 'Peut-on pêcher depuis un SUP gonflable ?',
+          a: 'Oui. De nombreux pêcheurs utilisent des SUPs gonflables, utilisant le pont stable comme plateforme de lancer dans les eaux peu profondes où les plus grands bateaux ne peuvent pas aller.',
+        },
+        {
+          q: "Qu'est-ce qui fait une bonne planche de pêche SUP ?",
+          a: "Un SUP gonflable large et stable avec une grande capacité de poids fonctionne bien. Des fonctionnalités comme des porte-cannes, des points d'ancrage et des supports pour l'équipement améliorent l'expérience.",
+        },
+      ],
+    },
     'family-recreation': {
       description:
         'Planches SUP gonflables utilisées pour les sorties familiales occasionnelles sur les lacs, les rivières calmes et les eaux côtières protégées.',
@@ -2350,6 +2849,27 @@ export const USE_CASE_L10N_MT: Record<string, Record<string, UseCaseL10n>> = {
         {
           q: 'Quanto tempo ci vuole per imparare a fare stand-up paddleboard?',
           a: "La maggior parte dei principianti può alzarsi in piedi e remare su acque piatte già nella prima sessione. L'equilibrio migliora rapidamente con la pratica.",
+        },
+      ],
+    },
+    fishing: {
+      description:
+        'Utilizzare un SUP gonfiabile stabile come piattaforma portatile per la pesca in lago, fiume e acque costiere.',
+      features: [
+        'Piattaforma da pesca stabile',
+        'Approccio silenzioso',
+        'Accesso ad acque basse',
+        'Traino a mani libere',
+      ],
+      useCases: ['Pesca in lago', 'Pesca costiera', 'Pesca in fiume', 'Pesca a mosca da SUP'],
+      faq: [
+        {
+          q: 'Si può pescare da un SUP gonfiabile?',
+          a: 'Sì. Molti pescatori pescano da SUPs gonfiabili, utilizzando il ponte stabile come piattaforma di lancio in acque basse dove imbarcazioni più grandi non possono arrivare.',
+        },
+        {
+          q: 'Cosa rende buona una tavola da pesca SUP?',
+          a: "Un SUP gonfiabile largo e stabile con alta capacità di carico funziona bene. Caratteristiche come portacanne, punti di ancoraggio e supporti per attrezzatura migliorano l'esperienza.",
         },
       ],
     },
