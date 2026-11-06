@@ -30,7 +30,7 @@ const cta = page.cta ?? {};
 
 const crumbs = [
   { name: t('nav.home'), href: `/${lang}/` },
-  { name: 'Solutions', href: `/${lang}/solutions` },
+  { name: t('nav.solutions') || 'Solutions', href: `/${lang}/solutions` },
   { name: hero.tagline || 'Resorts & Hotels' },
 ];
 
@@ -100,12 +100,7 @@ const faqSchema = JSON.stringify({
 
   <Tldr
     summary={directAnswer || 'Premium water sports programs for resorts, hotels, and yacht clubs.'}
-    points={[
-      'Resort Standard: 20–50 SUP boards with resort branding, safety infrastructure, staff training',
-      'Resort Premium: 50–100+ fleet with guest experience systems, revenue programs, seasonal support',
-      'Full safety compliance: lifeguard stations, buoy lines, AED, emergency action plans',
-      'Add $50K–$200K annual ancillary revenue with a professionally managed water sports program',
-    ]}
+    points={page.tldr_points ?? []}
     className="max-w-5xl mx-auto my-10 px-6"
   />
 

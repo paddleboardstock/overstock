@@ -35,7 +35,11 @@ const metadata = {
   description:
     "Paddle Board Overstock's engineering expertise spans PVC drop-stitch fabrication, rail construction, precision RF welding, and rigorous quality manufacturing.",
 };
-const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: 'Brand' }, { name: 'Marine Expertise' }];
+const crumbs = [
+  { name: t('nav.home') || 'Home', href: `/${lang}/` },
+  { name: t('nav.brand') || 'Brand' },
+  { name: t('nav.brandMarineExpertise') || 'Marine Expertise' },
+];
 
 const faqSchema = JSON.stringify({
   '@context': 'https://schema.org',

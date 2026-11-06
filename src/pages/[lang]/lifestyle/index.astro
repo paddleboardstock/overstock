@@ -28,7 +28,7 @@ const metadata = {
   title: localizePageTitle(page, `${hero.title.replace(/<br\s*\/?>/gi, ' ')} — ${SITE.name}`),
   description: localizePageDescription(page, `${SITE.name} lifestyle — ${hero.subtitle}`),
 };
-const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: 'Lifestyle' }];
+const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: t('nav.lifestyle') || 'Lifestyle' }];
 ---
 
 <Layout metadata={metadata} breadcrumbs={crumbs}>

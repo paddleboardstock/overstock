@@ -60,7 +60,7 @@ const metadata = {
     ...(hero?.image?.src ? { images: [{ url: hero.image.src, width: 1200, height: 630 }] } : {}),
   },
 };
-const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: 'About' }];
+const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: t('nav.about') || 'About' }];
 
 const faqSchema = JSON.stringify({
   '@context': 'https://schema.org',
