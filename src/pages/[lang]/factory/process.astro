@@ -56,42 +56,52 @@ const faqSchema = JSON.stringify({
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'What is the Paddle Board Overstock manufacturing process?',
+      name: t('faq.factoryProcess.q1.q') || 'What is the Paddle Board Overstock manufacturing process?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Multi-stage process: material inspection, CNC cutting, welding and lamination, deck art and EVA finishing, final assembly, 1.25x pressure testing, and 100-point final inspection.',
+        text:
+          t('faq.factoryProcess.q1.a') ||
+          'Multi-stage process: material inspection, CNC cutting, welding and lamination, deck art and EVA finishing, final assembly, 1.25x pressure testing, and 100-point final inspection.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How long does production take?',
+      name: t('faq.factoryProcess.q2.q') || 'How long does production take?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'A complete board moves through all 8 production stages in about 2-3 weeks. In-stock orders leave our Weihai factory within 2-3 business days.',
+        text:
+          t('faq.factoryProcess.q2.a') ||
+          'A complete board moves through all 8 production stages in about 2-3 weeks. In-stock orders leave our Weihai factory within 2-3 business days.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What quality checks are performed?',
+      name: t('faq.factoryProcess.q3.q') || 'What quality checks are performed?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Material tensile/tear/UV testing, weld peel testing, backlight seam inspection, 24-48h pressure hold at 1.25x rated, and 100-point final checklist.',
+        text:
+          t('faq.factoryProcess.q3.a') ||
+          'Material tensile/tear/UV testing, weld peel testing, backlight seam inspection, 24-48h pressure hold at 1.25x rated, and 100-point final checklist.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What is the defect-free rate?',
+      name: t('faq.factoryProcess.q4.q') || 'What is the defect-free rate?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '99.3% of boards pass all quality checks on the first pass — measured across a trailing 12-month window.',
+        text:
+          t('faq.factoryProcess.q4.a') ||
+          '99.3% of boards pass all quality checks on the first pass — measured across a trailing 12-month window.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Can I see how my board is made?',
+      name: t('faq.factoryProcess.q5.q') || 'Can I see how my board is made?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes — our Factory Video Tour walks you through all 8 production stages, from raw material inspection to packing and shipping.',
+        text:
+          t('faq.factoryProcess.q5.a') ||
+          'Yes — our Factory Video Tour walks you through all 8 production stages, from raw material inspection to packing and shipping.',
       },
     },
   ],

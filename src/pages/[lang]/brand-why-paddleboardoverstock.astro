@@ -50,26 +50,32 @@ const faqSchema = JSON.stringify({
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Why choose Paddle Board Overstock over competitors?',
+      name: t('faq.brandWhyPaddleboardoverstock.q1.q') || 'Why choose Paddle Board Overstock over competitors?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Direct factory (no trading company), 11 product models, 99.3% defect-free rate, and every unit pressure-tested before shipping.',
+        text:
+          t('faq.brandWhyPaddleboardoverstock.q1.a') ||
+          'Direct factory (no trading company), 11 product models, 99.3% defect-free rate, and every unit pressure-tested before shipping.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What makes Paddle Board Overstock different?',
+      name: t('faq.brandWhyPaddleboardoverstock.q2.q') || 'What makes Paddle Board Overstock different?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Vertically integrated manufacturing with in-house engineering, quality lab, and full batch traceability — not a trading company.',
+        text:
+          t('faq.brandWhyPaddleboardoverstock.q2.a') ||
+          'Vertically integrated manufacturing with in-house engineering, quality lab, and full batch traceability — not a trading company.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How do I verify Paddle Board Overstock claims?',
+      name: t('faq.brandWhyPaddleboardoverstock.q3.q') || 'How do I verify Paddle Board Overstock claims?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Factory visits welcome. Test reports and inspection records available for review on request.',
+        text:
+          t('faq.brandWhyPaddleboardoverstock.q3.a') ||
+          'Factory visits welcome. Test reports and inspection records available for review on request.',
       },
     },
   ],

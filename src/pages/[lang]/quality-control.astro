@@ -59,42 +59,52 @@ const faqSchema = JSON.stringify({
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'What is the Paddle Board Overstock quality control process?',
+      name: t('faq.qualityControl.q1.q') || 'What is the Paddle Board Overstock quality control process?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Six-stage QC: material inspection, in-process QC, welding verification, assembly QC, 1.25x pressure testing, and 100-point final inspection.',
+        text:
+          t('faq.qualityControl.q1.a') ||
+          'Six-stage QC: material inspection, in-process QC, welding verification, assembly QC, 1.25x pressure testing, and 100-point final inspection.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What is AQL 2.5 sampling?',
+      name: t('faq.qualityControl.q2.q') || 'What is AQL 2.5 sampling?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Acceptable Quality Level \u2014 statistically valid sampling method ensuring 99.3% defect-free rate.',
+        text:
+          t('faq.qualityControl.q2.a') ||
+          'Acceptable Quality Level \u2014 statistically valid sampling method ensuring 99.3% defect-free rate.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Is every unit pressure tested?',
+      name: t('faq.qualityControl.q3.q') || 'Is every unit pressure tested?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. 100% of units undergo 24-48h hold at 1.25x rated pressure with max 5% drop tolerance.',
+        text:
+          t('faq.qualityControl.q3.a') ||
+          'Yes. 100% of units undergo 24-48h hold at 1.25x rated pressure with max 5% drop tolerance.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What welding QC is performed?',
+      name: t('faq.qualityControl.q4.q') || 'What welding QC is performed?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Peel testing, weld width verification, and backlight seam inspection on every welded joint.',
+        text:
+          t('faq.qualityControl.q4.a') ||
+          'Peel testing, weld width verification, and backlight seam inspection on every welded joint.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What does the final inspection include?',
+      name: t('faq.qualityControl.q5.q') || 'What does the final inspection include?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '100-point checklist, AQL 2.5 sampling, zero-tolerance safety defects, and signed quality release.',
+        text:
+          t('faq.qualityControl.q5.a') ||
+          '100-point checklist, AQL 2.5 sampling, zero-tolerance safety defects, and signed quality release.',
       },
     },
   ],
@@ -223,19 +233,36 @@ const faqSchema = JSON.stringify({
   <JsonLd
     type="Service"
     service={{
-      name: 'Paddle Board Overstock Quality Control System',
+      name: t('jsonld.qualityControl.name') || 'Paddle Board Overstock Quality Control System',
       description:
+        t('jsonld.qualityControl.description') ||
         'Six-stage quality control system: material inspection, in-process QC, welding verification, assembly QC, pressure testing, final inspection. 100% unit pressure testing.',
-      serviceType: 'Quality Control',
-      areaServed: ['Global'],
+      serviceType: t('jsonld.qualityControl.serviceType') || 'Quality Control',
+      areaServed: [t('jsonld.global') || 'Global'],
       url: `/${lang}/quality-control`,
       items: [
-        { name: 'Material Inspection', description: 'Tensile, tear, and UV testing of all incoming materials' },
-        { name: 'Welding QC', description: 'Peel testing, weld width verification, backlight seam inspection' },
-        { name: 'Pressure Testing', description: '24-48h hold at 1.25x rated pressure. Max 5% drop tolerance' },
         {
-          name: 'Final Inspection',
-          description: '100-point checklist, AQL 2.5 sampling, zero-tolerance safety defects',
+          name: t('jsonld.qualityControl.item1.name') || 'Material Inspection',
+          description:
+            t('jsonld.qualityControl.item1.description') || 'Tensile, tear, and UV testing of all incoming materials',
+        },
+        {
+          name: t('jsonld.qualityControl.item2.name') || 'Welding QC',
+          description:
+            t('jsonld.qualityControl.item2.description') ||
+            'Peel testing, weld width verification, backlight seam inspection',
+        },
+        {
+          name: t('jsonld.qualityControl.item3.name') || 'Pressure Testing',
+          description:
+            t('jsonld.qualityControl.item3.description') ||
+            '24-48h hold at 1.25x rated pressure. Max 5% drop tolerance',
+        },
+        {
+          name: t('jsonld.qualityControl.item4.name') || 'Final Inspection',
+          description:
+            t('jsonld.qualityControl.item4.description') ||
+            '100-point checklist, AQL 2.5 sampling, zero-tolerance safety defects',
         },
       ],
     }}

@@ -91,26 +91,32 @@ const faqSchema = JSON.stringify({
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'What design capabilities does Paddle Board Overstock have?',
+      name: t('faq.designPowerhouse.q1.q') || 'What design capabilities does Paddle Board Overstock have?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '3D CAD hull design, CNC-machined aluminum molds, digital UV and screen printing, and full customization from concept to production.',
+        text:
+          t('faq.designPowerhouse.q1.a') ||
+          '3D CAD hull design, CNC-machined aluminum molds, digital UV and screen printing, and full customization from concept to production.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Can I get custom product designs?',
+      name: t('faq.designPowerhouse.q2.q') || 'Can I get custom product designs?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Share your specs or concept — our engineering team develops CAD drawings, produces prototypes, and manufactures custom products.',
+        text:
+          t('faq.designPowerhouse.q2.a') ||
+          'Yes. Share your specs or concept — our engineering team develops CAD drawings, produces prototypes, and manufactures custom products.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What is the design-to-production timeline?',
+      name: t('faq.designPowerhouse.q3.q') || 'What is the design-to-production timeline?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'CAD modeling: 3-5 days. Prototype: 7-14 days. Production: 30-45 days after sample approval.',
+        text:
+          t('faq.designPowerhouse.q3.a') ||
+          'CAD modeling: 3-5 days. Prototype: 7-14 days. Production: 30-45 days after sample approval.',
       },
     },
   ],

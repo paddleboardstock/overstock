@@ -43,34 +43,40 @@ const faqSchema = JSON.stringify({
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'What safety testing do Paddle Board Overstock products undergo?',
+      name: t('faq.safety.q1.q') || 'What safety testing do Paddle Board Overstock products undergo?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Every unit undergoes a 24-48h hold at 1.25x rated pressure with max 5% drop tolerance, plus seam peel verification, air retention, and a full systems check before shipping.',
+        text:
+          t('faq.safety.q1.a') ||
+          'Every unit undergoes a 24-48h hold at 1.25x rated pressure with max 5% drop tolerance, plus seam peel verification, air retention, and a full systems check before shipping.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What pressure testing is performed?',
+      name: t('faq.safety.q2.q') || 'What pressure testing is performed?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Every unit undergoes 24-48h hold at 1.25x rated pressure with max 5% drop tolerance, verified by continuous sensor logging.',
+        text:
+          t('faq.safety.q2.a') ||
+          'Every unit undergoes 24-48h hold at 1.25x rated pressure with max 5% drop tolerance, verified by continuous sensor logging.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What is the defect-free rate?',
+      name: t('faq.safety.q3.q') || 'What is the defect-free rate?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '99.3% defect-free rate across trailing 12-month shipments, with zero tolerance on safety-critical defects.',
+        text:
+          t('faq.safety.q3.a') ||
+          '99.3% defect-free rate across trailing 12-month shipments, with zero tolerance on safety-critical defects.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What warranty is provided?',
+      name: t('faq.safety.q4.q') || 'What warranty is provided?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'A 2-year limited warranty on SUP boards, covering manufacturing defects.',
+        text: t('faq.safety.q4.a') || 'A 2-year limited warranty on SUP boards, covering manufacturing defects.',
       },
     },
   ],

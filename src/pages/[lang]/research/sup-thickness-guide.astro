@@ -169,26 +169,32 @@ const faqSchema = JSON.stringify({
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'What thickness SUP should I choose?',
+      name: t('faq.researchSupThicknessGuide.q1.q') || 'What thickness SUP should I choose?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '4-inch (10cm) for all-around recreational use at 15 PSI. 6-inch (15cm) for larger riders or performance at up to 20 PSI.',
+        text:
+          t('faq.researchSupThicknessGuide.q1.a') ||
+          '4-inch (10cm) for all-around recreational use at 15 PSI. 6-inch (15cm) for larger riders or performance at up to 20 PSI.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Does thickness affect stability?',
+      name: t('faq.researchSupThicknessGuide.q2.q') || 'Does thickness affect stability?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Thicker boards sit higher in the water, offering more volume and stability for heavier riders. Thinner boards are more responsive for experienced paddlers.',
+        text:
+          t('faq.researchSupThicknessGuide.q2.a') ||
+          'Yes. Thicker boards sit higher in the water, offering more volume and stability for heavier riders. Thinner boards are more responsive for experienced paddlers.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What pressure should I inflate to?',
+      name: t('faq.researchSupThicknessGuide.q3.q') || 'What pressure should I inflate to?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '4-inch: 15 PSI. 6-inch: up to 20 PSI. Always test at 1.25x rated pressure per Paddle Board Overstock QC standards.',
+        text:
+          t('faq.researchSupThicknessGuide.q3.a') ||
+          '4-inch: 15 PSI. 6-inch: up to 20 PSI. Always test at 1.25x rated pressure per Paddle Board Overstock QC standards.',
       },
     },
   ],

@@ -61,26 +61,28 @@ const faqSchema = JSON.stringify({
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'What authority does Paddle Board Overstock have in the marine industry?',
+      name: t('faq.authority.q1.q') || 'What authority does Paddle Board Overstock have in the marine industry?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '12+ years manufacturing, 14+ R&D engineers, 200-300 workers, 15,000 annual units shipped to 50+ countries.',
+        text:
+          t('faq.authority.q1.a') ||
+          '12+ years manufacturing, 14+ R&D engineers, 200-300 workers, 15,000 annual units shipped to 50+ countries.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What is the defect-free rate?',
+      name: t('faq.authority.q2.q') || 'What is the defect-free rate?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '99.3% defect-free rate across trailing 12-month shipments.',
+        text: t('faq.authority.q2.a') || '99.3% defect-free rate across trailing 12-month shipments.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Can customers visit the factory?',
+      name: t('faq.authority.q3.q') || 'Can customers visit the factory?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Customers and inspection agencies are welcome at our Weihai facility.',
+        text: t('faq.authority.q3.a') || 'Yes. Customers and inspection agencies are welcome at our Weihai facility.',
       },
     },
   ],
@@ -115,19 +117,38 @@ const faqSchema = JSON.stringify({
   <JsonLd
     type="Service"
     service={{
-      name: 'Paddle Board Overstock Authority Center — Trust & Proof',
+      name: t('jsonld.authority.name') || 'Paddle Board Overstock Authority Center — Trust & Proof',
       description:
+        t('jsonld.authority.description') ||
         'Team expertise, manufacturing capabilities, and quality evidence for inflatable SUP board manufacturing.',
-      serviceType: 'Brand Authority',
-      areaServed: ['Global'],
+      serviceType: t('jsonld.authority.serviceType') || 'Brand Authority',
+      areaServed: [t('jsonld.global') || 'Global'],
       url: `/${lang}/authority`,
       items: [
-        { name: 'About Paddle Board Overstock', description: 'Company history and manufacturing story since 2012' },
-        { name: 'Marine Expertise', description: 'Material science and engineering capabilities' },
-        { name: 'Global Presence', description: '50+ countries served worldwide' },
-        { name: 'Factory Testing', description: '8-protocol testing with 99.3% defect-free rate' },
-        { name: 'Quality & Testing', description: 'Rigorous testing for every production batch' },
-        { name: 'Team & Leadership', description: '14+ R&D engineers and industry experts' },
+        {
+          name: t('jsonld.authority.item1.name') || 'About Paddle Board Overstock',
+          description: t('jsonld.authority.item1.description') || 'Company history and manufacturing story since 2012',
+        },
+        {
+          name: t('jsonld.authority.item2.name') || 'Marine Expertise',
+          description: t('jsonld.authority.item2.description') || 'Material science and engineering capabilities',
+        },
+        {
+          name: t('jsonld.authority.item3.name') || 'Global Presence',
+          description: t('jsonld.authority.item3.description') || '50+ countries served worldwide',
+        },
+        {
+          name: t('jsonld.authority.item4.name') || 'Factory Testing',
+          description: t('jsonld.authority.item4.description') || '8-protocol testing with 99.3% defect-free rate',
+        },
+        {
+          name: t('jsonld.authority.item5.name') || 'Quality & Testing',
+          description: t('jsonld.authority.item5.description') || 'Rigorous testing for every production batch',
+        },
+        {
+          name: t('jsonld.authority.item6.name') || 'Team & Leadership',
+          description: t('jsonld.authority.item6.description') || '14+ R&D engineers and industry experts',
+        },
       ],
     }}
   />

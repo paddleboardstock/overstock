@@ -67,26 +67,32 @@ const faqSchema = JSON.stringify({
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'What do water sports clubs typically order?',
+      name: t('faq.solutionsClubs.q1.q') || 'What do water sports clubs typically order?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'SUP boards for lessons, rentals, and guided tours. Commercial-grade materials recommended.',
+        text:
+          t('faq.solutionsClubs.q1.a') ||
+          'SUP boards for lessons, rentals, and guided tours. Commercial-grade materials recommended.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What warranty applies to club use?',
+      name: t('faq.solutionsClubs.q2.q') || 'What warranty applies to club use?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '2-year warranty on SUP boards, covering manufacturing defects even under commercial use.',
+        text:
+          t('faq.solutionsClubs.q2.a') ||
+          '2-year warranty on SUP boards, covering manufacturing defects even under commercial use.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Can you provide instructor training materials?',
+      name: t('faq.solutionsClubs.q3.q') || 'Can you provide instructor training materials?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Product care guides, inflation procedures, and safety checklists are available for club instructors and staff.',
+        text:
+          t('faq.solutionsClubs.q3.a') ||
+          'Product care guides, inflation procedures, and safety checklists are available for club instructors and staff.',
       },
     },
   ],
@@ -326,10 +332,10 @@ const faqSchema = JSON.stringify({
   <JsonLd
     type="Service"
     service={{
-      name: 'Water Sports Club Equipment Solutions',
+      name: t('jsonld.solutionsClubs.name') || 'Water Sports Club Equipment Solutions',
       description: hero.subtitle || 'Complete equipment packages for SUP clubs, surf schools, and training centers.',
-      serviceType: 'Club Solutions',
-      areaServed: ['Global'],
+      serviceType: t('jsonld.solutionsClubs.serviceType') || 'Club Solutions',
+      areaServed: [t('jsonld.global') || 'Global'],
       url: `/${lang}/solutions/clubs`,
       items: offerings.map((o: any) => ({
         name: o.title,

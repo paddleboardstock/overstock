@@ -96,42 +96,52 @@ const faqSchema = JSON.stringify({
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'What is Drop-Stitch technology?',
+      name: t('faq.technology.q1.q') || 'What is Drop-Stitch technology?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Drop-Stitch uses thousands of internal polyester threads connecting the top and bottom PVC layers, allowing the board to maintain a flat, rigid shape under high pressure (15-20 PSI) while remaining lightweight and packable.',
+        text:
+          t('faq.technology.q1.a') ||
+          'Drop-Stitch uses thousands of internal polyester threads connecting the top and bottom PVC layers, allowing the board to maintain a flat, rigid shape under high pressure (15-20 PSI) while remaining lightweight and packable.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What pressure can Drop-Stitch boards handle?',
+      name: t('faq.technology.q2.q') || 'What pressure can Drop-Stitch boards handle?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Standard 4-inch (10cm) cores: 15 PSI. Premium 6-inch (15cm) cores: up to 20 PSI. All tested at 1.25x rated pressure for 24-48h.',
+        text:
+          t('faq.technology.q2.a') ||
+          'Standard 4-inch (10cm) cores: 15 PSI. Premium 6-inch (15cm) cores: up to 20 PSI. All tested at 1.25x rated pressure for 24-48h.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What materials does Paddle Board Overstock use?',
+      name: t('faq.technology.q3.q') || 'What materials does Paddle Board Overstock use?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Marine-grade PVC (0.9-1.2mm, 1,100-1,680 DTEX), premium Drop-Stitch core fabrics, and full-deck EVA foam traction.',
+        text:
+          t('faq.technology.q3.a') ||
+          'Marine-grade PVC (0.9-1.2mm, 1,100-1,680 DTEX), premium Drop-Stitch core fabrics, and full-deck EVA foam traction.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What welding technology is used?',
+      name: t('faq.technology.q4.q') || 'What welding technology is used?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'High-frequency RF welding for PVC seams, with peel testing and backlight seam inspection.',
+        text:
+          t('faq.technology.q4.a') ||
+          'High-frequency RF welding for PVC seams, with peel testing and backlight seam inspection.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How does UV resistance testing work?',
+      name: t('faq.technology.q5.q') || 'How does UV resistance testing work?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Fabric samples are exposed to accelerated UV weathering cycles simulating years of sun exposure — boards are rated for 1,000+ hours of UV resistance.',
+        text:
+          t('faq.technology.q5.a') ||
+          'Fabric samples are exposed to accelerated UV weathering cycles simulating years of sun exposure — boards are rated for 1,000+ hours of UV resistance.',
       },
     },
   ],

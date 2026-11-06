@@ -87,26 +87,32 @@ const faqSchema = JSON.stringify({
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'What does engineering perfection mean at Paddle Board Overstock?',
+      name: t('faq.engineeringPerfection.q1.q') || 'What does engineering perfection mean at Paddle Board Overstock?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '1.25x rated pressure hold testing, 99.3% defect-free rate, and a 100-point quality checklist on every unit.',
+        text:
+          t('faq.engineeringPerfection.q1.a') ||
+          '1.25x rated pressure hold testing, 99.3% defect-free rate, and a 100-point quality checklist on every unit.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How are quality standards maintained?',
+      name: t('faq.engineeringPerfection.q2.q') || 'How are quality standards maintained?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'AQL 2.5 statistical sampling, an independent quality lab, and final inspection before shipment.',
+        text:
+          t('faq.engineeringPerfection.q2.a') ||
+          'AQL 2.5 statistical sampling, an independent quality lab, and final inspection before shipment.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Can I specify additional quality requirements?',
+      name: t('faq.engineeringPerfection.q3.q') || 'Can I specify additional quality requirements?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Custom inspection protocols, third-party inspection, and specific test requirements can be arranged for your order.',
+        text:
+          t('faq.engineeringPerfection.q3.a') ||
+          'Yes. Custom inspection protocols, third-party inspection, and specific test requirements can be arranged for your order.',
       },
     },
   ],

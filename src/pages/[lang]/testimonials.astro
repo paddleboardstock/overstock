@@ -40,26 +40,32 @@ const faqSchema = JSON.stringify({
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'What do partners say about Paddle Board Overstock?',
+      name: t('faq.testimonials.q1.q') || 'What do partners say about Paddle Board Overstock?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Partners highlight consistent quality across production runs, responsive engineering support, and reliable lead times. See our testimonials section.',
+        text:
+          t('faq.testimonials.q1.a') ||
+          'Partners highlight consistent quality across production runs, responsive engineering support, and reliable lead times. See our testimonials section.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Are testimonials verified?',
+      name: t('faq.testimonials.q2.q') || 'Are testimonials verified?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. All testimonials are from verified customers who have purchased and paddled our boards.',
+        text:
+          t('faq.testimonials.q2.a') ||
+          'Yes. All testimonials are from verified customers who have purchased and paddled our boards.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Can I visit the factory before committing?',
+      name: t('faq.testimonials.q3.q') || 'Can I visit the factory before committing?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. We welcome on-site and virtual factory tours. See our Factory Audit page for preparation checklist.',
+        text:
+          t('faq.testimonials.q3.a') ||
+          'Yes. We welcome on-site and virtual factory tours. See our Factory Audit page for preparation checklist.',
       },
     },
   ],
@@ -162,10 +168,12 @@ const faqSchema = JSON.stringify({
   <JsonLd
     type="Service"
     service={{
-      name: 'Paddle Board Overstock Customer Testimonials',
-      description: 'Customer reviews from clubs, resorts, entrepreneurs, and owners worldwide.',
-      serviceType: 'Testimonials',
-      areaServed: ['Global'],
+      name: t('jsonld.testimonials.name') || 'Paddle Board Overstock Customer Testimonials',
+      description:
+        t('jsonld.testimonials.description') ||
+        'Customer reviews from clubs, resorts, entrepreneurs, and owners worldwide.',
+      serviceType: t('jsonld.testimonials.serviceType') || 'Testimonials',
+      areaServed: [t('jsonld.global') || 'Global'],
       url: `/${lang}/testimonials`,
       items: testimonials.map((tItem: any) => ({
         name: tItem.name,

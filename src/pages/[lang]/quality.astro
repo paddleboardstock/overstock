@@ -56,26 +56,30 @@ const faqSchema = JSON.stringify({
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'What quality testing does Paddle Board Overstock perform?',
+      name: t('faq.quality.q1.q') || 'What quality testing does Paddle Board Overstock perform?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '8-protocol testing: pressure, impact, UV, abrasion, low-temperature, buoyancy, maneuverability, and watertightness.',
+        text:
+          t('faq.quality.q1.a') ||
+          '8-protocol testing: pressure, impact, UV, abrasion, low-temperature, buoyancy, maneuverability, and watertightness.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What is the defect-free rate?',
+      name: t('faq.quality.q2.q') || 'What is the defect-free rate?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '99.3% defect-free rate across trailing 12-month shipments.',
+        text: t('faq.quality.q2.a') || '99.3% defect-free rate across trailing 12-month shipments.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How are pressure tests conducted?',
+      name: t('faq.quality.q3.q') || 'How are pressure tests conducted?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Every unit undergoes 24-48h hold at 1.25x rated pressure with max 5% drop tolerance.',
+        text:
+          t('faq.quality.q3.a') ||
+          'Every unit undergoes 24-48h hold at 1.25x rated pressure with max 5% drop tolerance.',
       },
     },
   ],

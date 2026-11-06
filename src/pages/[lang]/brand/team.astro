@@ -56,26 +56,32 @@ const faqSchema = JSON.stringify({
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'How large is the Paddle Board Overstock team?',
+      name: t('faq.brandTeam.q1.q') || 'How large is the Paddle Board Overstock team?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '200-300 skilled workers, 25+ engineers averaging 7+ years experience, dedicated quality lab staff, and customer support team.',
+        text:
+          t('faq.brandTeam.q1.a') ||
+          '200-300 skilled workers, 25+ engineers averaging 7+ years experience, dedicated quality lab staff, and customer support team.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What engineering expertise is available?',
+      name: t('faq.brandTeam.q2.q') || 'What engineering expertise is available?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Hull design, materials science, RF welding engineering, quality systems, and compliance documentation — all in-house.',
+        text:
+          t('faq.brandTeam.q2.a') ||
+          'Hull design, materials science, RF welding engineering, quality systems, and compliance documentation — all in-house.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Can I work with specific team members?',
+      name: t('faq.brandTeam.q3.q') || 'Can I work with specific team members?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Our support team is available throughout your ownership experience, and engineering staff answer technical questions via the contact page.',
+        text:
+          t('faq.brandTeam.q3.a') ||
+          'Our support team is available throughout your ownership experience, and engineering staff answer technical questions via the contact page.',
       },
     },
   ],

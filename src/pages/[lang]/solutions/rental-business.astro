@@ -43,26 +43,32 @@ const faqSchema = JSON.stringify({
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'What SUP boards are best for rental?',
+      name: t('faq.solutionsRentalBusiness.q1.q') || 'What SUP boards are best for rental?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '4-inch Drop-Stitch boards at 15 PSI offer the best balance of durability, performance, and cost for rental fleets.',
+        text:
+          t('faq.solutionsRentalBusiness.q1.a') ||
+          '4-inch Drop-Stitch boards at 15 PSI offer the best balance of durability, performance, and cost for rental fleets.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What is the MOQ for rental fleet orders?',
+      name: t('faq.solutionsRentalBusiness.q2.q') || 'What is the MOQ for rental fleet orders?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '5-10 units per SKU for standard models. Mixed-model containers available for fleet pricing.',
+        text:
+          t('faq.solutionsRentalBusiness.q2.a') ||
+          '5-10 units per SKU for standard models. Mixed-model containers available for fleet pricing.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Do you offer fleet pricing?',
+      name: t('faq.solutionsRentalBusiness.q3.q') || 'Do you offer fleet pricing?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Volume discounts on mixed-model container orders, spare parts kits, and maintenance training for rental operators.',
+        text:
+          t('faq.solutionsRentalBusiness.q3.a') ||
+          'Yes. Volume discounts on mixed-model container orders, spare parts kits, and maintenance training for rental operators.',
       },
     },
   ],
@@ -78,23 +84,38 @@ const faqSchema = JSON.stringify({
   <JsonLd
     type="Service"
     service={{
-      name: 'Water Sports Rental Business Solutions',
+      name: t('jsonld.solutionsRentalBusiness.name') || 'Water Sports Rental Business Solutions',
       description:
+        t('jsonld.solutionsRentalBusiness.description') ||
         'Complete rental fleet packages for water sports operators. Commercial-grade SUP fleets with storage solutions and maintenance support.',
-      serviceType: 'Rental Fleet Solutions',
-      areaServed: ['Worldwide'],
+      serviceType: t('jsonld.solutionsRentalBusiness.serviceType') || 'Rental Fleet Solutions',
+      areaServed: [t('jsonld.worldwide') || 'Worldwide'],
       url: 'https://paddleboardoverstock.com/solutions/rental-business',
       items: [
         {
-          name: 'Fleet Assessment & Design',
-          description: 'Expert analysis of your location, guest demographics, and revenue targets.',
+          name: t('jsonld.solutionsRentalBusiness.item1.name') || 'Fleet Assessment & Design',
+          description:
+            t('jsonld.solutionsRentalBusiness.item1.description') ||
+            'Expert analysis of your location, guest demographics, and revenue targets.',
         },
         {
-          name: 'Commercial-Grade Equipment',
-          description: 'Rental-proven SUP boards with commercial-grade PVC construction.',
+          name: t('jsonld.solutionsRentalBusiness.item2.name') || 'Commercial-Grade Equipment',
+          description:
+            t('jsonld.solutionsRentalBusiness.item2.description') ||
+            'Rental-proven SUP boards with commercial-grade PVC construction.',
         },
-        { name: 'Fleet Management Support', description: 'Maintenance training, spare parts, and technical support.' },
-        { name: 'Custom Branding', description: 'Logo printing, custom colors, and branded safety equipment.' },
+        {
+          name: t('jsonld.solutionsRentalBusiness.item3.name') || 'Fleet Management Support',
+          description:
+            t('jsonld.solutionsRentalBusiness.item3.description') ||
+            'Maintenance training, spare parts, and technical support.',
+        },
+        {
+          name: t('jsonld.solutionsRentalBusiness.item4.name') || 'Custom Branding',
+          description:
+            t('jsonld.solutionsRentalBusiness.item4.description') ||
+            'Logo printing, custom colors, and branded safety equipment.',
+        },
       ],
     }}
   />

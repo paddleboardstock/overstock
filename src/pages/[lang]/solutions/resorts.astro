@@ -48,26 +48,32 @@ const faqSchema = JSON.stringify({
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'What products work best for resorts?',
+      name: t('faq.solutionsResorts.q1.q') || 'What products work best for resorts?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'SUP boards are most popular. Durable commercial-grade PVC with consistent resort branding.',
+        text:
+          t('faq.solutionsResorts.q1.a') ||
+          'SUP boards are most popular. Durable commercial-grade PVC with consistent resort branding.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Can you match resort branding?',
+      name: t('faq.solutionsResorts.q2.q') || 'Can you match resort branding?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Full branding package including logo, tube graphics, deck pad colors, and retail-ready packaging.',
+        text:
+          t('faq.solutionsResorts.q2.a') ||
+          'Yes. Full branding package including logo, tube graphics, deck pad colors, and retail-ready packaging.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What is the lead time for resort orders?',
+      name: t('faq.solutionsResorts.q3.q') || 'What is the lead time for resort orders?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '30-45 days FOB Weihai for standard orders. Seasonal planning recommended for peak demand.',
+        text:
+          t('faq.solutionsResorts.q3.a') ||
+          '30-45 days FOB Weihai for standard orders. Seasonal planning recommended for peak demand.',
       },
     },
   ],
@@ -251,10 +257,10 @@ const faqSchema = JSON.stringify({
   <JsonLd
     type="Service"
     service={{
-      name: 'Resort & Hospitality Water Sports Solutions',
+      name: t('jsonld.solutionsResorts.name') || 'Resort & Hospitality Water Sports Solutions',
       description: hero.subtitle || 'Premium water sports programs for hotels, resorts, and yacht clubs.',
-      serviceType: 'Resort Solutions',
-      areaServed: ['Global'],
+      serviceType: t('jsonld.solutionsResorts.serviceType') || 'Resort Solutions',
+      areaServed: [t('jsonld.global') || 'Global'],
       url: `/${lang}/solutions/resorts`,
       items: offerings.map((o: any) => ({
         name: o.title,

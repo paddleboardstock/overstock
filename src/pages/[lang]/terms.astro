@@ -137,7 +137,10 @@ const metadata = {
   description: meta.description,
   ignoreTitleTemplate: true,
 };
-const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: 'Terms and Conditions' }];
+const crumbs = [
+  { name: t('nav.home') || 'Home', href: `/${lang}/` },
+  { name: t('nav.termsAndConditions') || 'Terms and Conditions' },
+];
 ---
 
 <Layout metadata={metadata} breadcrumbs={crumbs}>

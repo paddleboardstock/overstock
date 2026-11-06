@@ -100,42 +100,52 @@ const faqSchema = JSON.stringify({
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'What warranty does Paddle Board Overstock offer?',
+      name: t('faq.warranty.q1.q') || 'What warranty does Paddle Board Overstock offer?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'A 2-year limited warranty on SUP boards, covering manufacturing defects in materials and workmanship.',
+        text:
+          t('faq.warranty.q1.a') ||
+          'A 2-year limited warranty on SUP boards, covering manufacturing defects in materials and workmanship.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What does the warranty cover?',
+      name: t('faq.warranty.q2.q') || 'What does the warranty cover?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Manufacturing defects in materials and workmanship including seam failures, valve defects, and material delamination under normal use.',
+        text:
+          t('faq.warranty.q2.a') ||
+          'Manufacturing defects in materials and workmanship including seam failures, valve defects, and material delamination under normal use.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What is not covered by warranty?',
+      name: t('faq.warranty.q3.q') || 'What is not covered by warranty?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Normal wear and tear, damage from misuse, improper storage, unauthorized modifications, and cosmetic issues that do not affect performance.',
+        text:
+          t('faq.warranty.q3.a') ||
+          'Normal wear and tear, damage from misuse, improper storage, unauthorized modifications, and cosmetic issues that do not affect performance.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How do I make a warranty claim?',
+      name: t('faq.warranty.q4.q') || 'How do I make a warranty claim?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Contact Paddle Board Overstock via the contact page with your proof of purchase, product serial number, and photos of the defect.',
+        text:
+          t('faq.warranty.q4.a') ||
+          'Contact Paddle Board Overstock via the contact page with your proof of purchase, product serial number, and photos of the defect.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Does the warranty apply to commercial use?',
+      name: t('faq.warranty.q5.q') || 'Does the warranty apply to commercial use?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. The same warranty terms apply to commercial and recreational use, provided the product is used within its rated specifications.',
+        text:
+          t('faq.warranty.q5.a') ||
+          'Yes. The same warranty terms apply to commercial and recreational use, provided the product is used within its rated specifications.',
       },
     },
   ],

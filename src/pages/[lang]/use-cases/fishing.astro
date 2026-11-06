@@ -8,6 +8,8 @@ import { articleSchema } from '~/lib/seo/schema';
 import { nodes } from '~/content/graph/nodes';
 import { getPageContent, setPageContentData } from '~/i18n/page-content';
 import __pageData from '~/i18n/generated/pages/fishing.ts';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+const t = (key: string) => getUiForLang(lang)?.[key] || '';
 
 export function getStaticPaths() {
   return Object.keys(languages).map((lang) => ({ params: { lang } }));
@@ -49,26 +51,32 @@ const faqSchema = JSON.stringify({
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'What inflatable fishing paddle boards are available?',
+      name: t('faq.useCasesFishing.q1.q') || 'What inflatable fishing paddle boards are available?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Stable, wide fishing SUP boards with fishing accessories. Rod holders, fish finder mounts, and reinforced decking for fishing applications.',
+        text:
+          t('faq.useCasesFishing.q1.a') ||
+          'Stable, wide fishing SUP boards with fishing accessories. Rod holders, fish finder mounts, and reinforced decking for fishing applications.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Are these suitable for saltwater fishing?',
+      name: t('faq.useCasesFishing.q2.q') || 'Are these suitable for saltwater fishing?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Our UV-resistant PVC boards handle recreational coastal and saltwater fishing; rinse with fresh water after use.',
+        text:
+          t('faq.useCasesFishing.q2.a') ||
+          'Yes. Our UV-resistant PVC boards handle recreational coastal and saltwater fishing; rinse with fresh water after use.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Can fishing-specific features be added?',
+      name: t('faq.useCasesFishing.q3.q') || 'Can fishing-specific features be added?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Rod holders, live wells, fish finder mounts, and custom seating configurations for fishing applications.',
+        text:
+          t('faq.useCasesFishing.q3.a') ||
+          'Yes. Rod holders, live wells, fish finder mounts, and custom seating configurations for fishing applications.',
       },
     },
   ],

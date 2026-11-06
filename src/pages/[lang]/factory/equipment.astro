@@ -59,42 +59,52 @@ const faqSchema = JSON.stringify({
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'What manufacturing equipment does Paddle Board Overstock use?',
+      name: t('faq.factoryEquipment.q1.q') || 'What manufacturing equipment does Paddle Board Overstock use?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Automatic PVC cutting machines, high-frequency RF welders, EVA deck cutting and finishing stations, heat sealing presses, final assembly rigs, and pressure test rigs in a 12,000 m\u00B2 facility.',
+        text:
+          t('faq.factoryEquipment.q1.a') ||
+          'Automatic PVC cutting machines, high-frequency RF welders, EVA deck cutting and finishing stations, heat sealing presses, final assembly rigs, and pressure test rigs in a 12,000 m\u00B2 facility.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What welding technology is used?',
+      name: t('faq.factoryEquipment.q2.q') || 'What welding technology is used?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'High-frequency RF welding for PVC seams and drop-stitch bonding, with peel testing and backlight seam inspection.',
+        text:
+          t('faq.factoryEquipment.q2.a') ||
+          'High-frequency RF welding for PVC seams and drop-stitch bonding, with peel testing and backlight seam inspection.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How are the art-series deck designs made?',
+      name: t('faq.factoryEquipment.q3.q') || 'How are the art-series deck designs made?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Multi-color EVA foam blocks are precision die-cut and hand-assembled into pieced deck art — no printing, so the artwork never fades or peels.',
+        text:
+          t('faq.factoryEquipment.q3.a') ||
+          'Multi-color EVA foam blocks are precision die-cut and hand-assembled into pieced deck art — no printing, so the artwork never fades or peels.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How are valves and fins installed?',
+      name: t('faq.factoryEquipment.q4.q') || 'How are valves and fins installed?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Valves are installed at calibrated torque stations, fin boxes and D-rings are set with dedicated assembly rigs, and every board gets a function test before packing.',
+        text:
+          t('faq.factoryEquipment.q4.a') ||
+          'Valves are installed at calibrated torque stations, fin boxes and D-rings are set with dedicated assembly rigs, and every board gets a function test before packing.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Is every board tested?',
+      name: t('faq.factoryEquipment.q5.q') || 'Is every board tested?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. 100% of boards are inflated to 1.25x rated pressure and held for 24-48 hours before they leave the factory.',
+        text:
+          t('faq.factoryEquipment.q5.a') ||
+          'Yes. 100% of boards are inflated to 1.25x rated pressure and held for 24-48 hours before they leave the factory.',
       },
     },
   ],

@@ -63,42 +63,50 @@ const faqSchema = JSON.stringify({
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'What testing does the Paddle Board Overstock quality lab perform?',
+      name: t('faq.factoryQualityLab.q1.q') || 'What testing does the Paddle Board Overstock quality lab perform?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Independent lab performs tensile, peel, UV, abrasion, pressure, and dimensional testing on every production batch.',
+        text:
+          t('faq.factoryQualityLab.q1.a') ||
+          'Independent lab performs tensile, peel, UV, abrasion, pressure, and dimensional testing on every production batch.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Is 100% pressure testing performed?',
+      name: t('faq.factoryQualityLab.q2.q') || 'Is 100% pressure testing performed?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Every inflatable unit undergoes 24-48h hold at 1.25x rated pressure with max 5% drop tolerance.',
+        text:
+          t('faq.factoryQualityLab.q2.a') ||
+          'Yes. Every inflatable unit undergoes 24-48h hold at 1.25x rated pressure with max 5% drop tolerance.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What is the defect-free rate?',
+      name: t('faq.factoryQualityLab.q3.q') || 'What is the defect-free rate?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '99.3% defect-free rate across trailing 12-month shipments.',
+        text: t('faq.factoryQualityLab.q3.a') || '99.3% defect-free rate across trailing 12-month shipments.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How do I know my board passed testing?',
+      name: t('faq.factoryQualityLab.q4.q') || 'How do I know my board passed testing?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Every board is pressure-tested and inspected before it leaves the factory — 100% of units, no sampling shortcuts. Boards that fail any check never ship.',
+        text:
+          t('faq.factoryQualityLab.q4.a') ||
+          'Every board is pressure-tested and inspected before it leaves the factory — 100% of units, no sampling shortcuts. Boards that fail any check never ship.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Can I request quality documentation?',
+      name: t('faq.factoryQualityLab.q5.q') || 'Can I request quality documentation?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Test records, batch reports, and quality documentation are available upon request via the contact page.',
+        text:
+          t('faq.factoryQualityLab.q5.a') ||
+          'Yes. Test records, batch reports, and quality documentation are available upon request via the contact page.',
       },
     },
   ],
