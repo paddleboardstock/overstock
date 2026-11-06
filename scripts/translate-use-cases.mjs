@@ -8,11 +8,12 @@
  * `useCases` and `faq` only in en/de/es/fr/it, and `useCaseFromNode` hardcodes the
  * English section headings — so every other locale shows an English body.
  *
- * This script translates the English fields of the six rendered nodes plus the four
+ * This script translates the English fields of the five rendered nodes plus the four
  * section headings and writes `src/lib/use-cases-l10n-mt.ts`. `useCaseFromNode`
  * prefers the curated node fields and falls back to this map, so nothing curated is
- * overwritten. (`fishing` is skipped: `use-cases/fishing.astro` is a static page that
- * takes precedence over the `[slug]` route.)
+ * overwritten. (`fishing` used to be skipped because `use-cases/fishing.astro` is a
+ * static page that shadows the `[slug]` route — but it/pl/pt render the node under
+ * localized slugs like `fishing-from-inflatable-craft`, so it needs MT coverage too.)
  *
  * Usage:
  *   node scripts/translate-use-cases.mjs                 # translate + emit
@@ -35,7 +36,7 @@ const OUT_JSON = path.resolve(ROOT, '.cache', 'use-cases-out.json');
 const OUT_TS = path.resolve(ROOT, 'src/lib/use-cases-l10n-mt.ts');
 const NODES_SRC = path.resolve(ROOT, 'src/content/graph/nodes.ts');
 
-const SKIP_IDS = new Set(['fishing']);
+// No node is skipped: every `use-case` node can surface under a localized slug.
 const HEADINGS = {
   whatIs: 'What is this use case?',
   keyFeatures: 'Key Features',
@@ -64,7 +65,7 @@ const sanitizeText = (s) =>
 
 async function loadNodes() {
   const mod = await import(pathToFileURL(NODES_SRC).href);
-  const nodes = (mod.nodes || []).filter((n) => n.type === 'use-case' && !SKIP_IDS.has(n.id));
+  const nodes = (mod.nodes || []).filter((n) => n.type === 'use-case');
   if (!nodes.length) throw new Error('no use-case nodes');
   return nodes;
 }
