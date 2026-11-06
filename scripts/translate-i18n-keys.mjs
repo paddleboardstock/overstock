@@ -10,6 +10,10 @@ const ROOT = path.resolve(__dirname, '..');
 const CONFIG_PATH = path.join(ROOT, 'src/data/site/i18n-config.json');
 const CACHE_FILE = path.join(ROOT, '.cache', 'i18n-translate-cache.json');
 const DRY_RUN = process.argv.includes('--dry-run');
+// Optional targeted run: --keys=key1,key2 translates ONLY those keys
+// (protects the 808 verified-correct sameAsEn keys from bulk MT).
+const KEYS_ARG = process.argv.find((a) => a.startsWith('--keys='));
+const ONLY_KEYS = KEYS_ARG ? new Set(KEYS_ARG.slice(7).split(',').filter(Boolean)) : null;
 
 const SKIP_PATTERNS = [
   /^(ISO|CE|OEM|ODM|SUP|RIB|PVC|Hypalon|Drop-Stitch|CSM|UV|RFID|SLA|MOQ|FOB|CIF|BSCI|REACH|UKCA|EVA|PFD|TLDR|FAQ)[\s/]|^(ISO|CE|OEM|ODM|SUP|RIB|PVC|Hypalon|Drop-Stitch|CSM|UV|RFID|SLA|MOQ|FOB|CIF|BSCI|REACH|UKCA|EVA|PFD|TLDR|FAQ)$/,
@@ -54,6 +58,7 @@ async function main() {
     console.log(`\n--- ${lang} ---`);
     const todo = [];
     for (const key of enKeys) {
+      if (ONLY_KEYS && !ONLY_KEYS.has(key)) continue;
       const enVal = config.en[key];
       const langVal = config[lang][key];
       if (langVal && langVal !== enVal) continue;
