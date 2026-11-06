@@ -48,18 +48,18 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'weight-limit',
-      question: 'What is the weight limit?',
+      question: 'Какъв е лимитът на теглото?',
       answer:
-        'Our All-Around SUPs support up to 220 lbs. The Touring and Yoga series support up to 250 lbs. For tandem paddling or heavier riders, choose a wider, higher-volume board.',
+        'Нашите SUPs универсални лодки поддържат до 220 lbs. Серията Touring и Yoga поддържат до 250 lbs. RIB Лодките обикновено поддържат 600–1500 lbs в зависимост от модела. За съвместна употреба или по-тежки товари, нашите надуваеми лодки предлагат опции с по-голям капацитет.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: ['understanding-specs'],
     },
     {
       id: 'box-contents',
-      question: 'What comes in the box?',
+      question: 'Какво идва в кутията?',
       answer:
-        'Every Paddle Board Overstock SUP includes the board, a travel backpack, dual-action hand pump, removable fin, coil leash, and repair kit. Some models also include a carbon paddle upgrade option.',
+        'Всеки Paddle Board Overstock SUP включва борда, туристическа раница, ръчна помпа с двойно действие, подвижно перо, намотка за повод и комплект за ремонт. Някои модели включват и опция за ъпгрейд с карбоново гребло. Надуваемите лодки включват лодката, помпата, комплект за ремонт и гребла.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -75,18 +75,18 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'pfd-requirement',
-      question: 'Do I need a life vest on a SUP?',
+      question: 'Трябва ли ми спасителна жилетка?SUP',
       answer:
-        'Yes. Many jurisdictions legally require a life vest when paddling, including on SUPs. Even where not required, a life vest is essential safety equipment. We recommend wearing it at all times on the water.',
+        'Да. Много юрисдикции законово изискват спасителна жилетка на всяко водно плавателно средство, включително SUPs. Дори когато не е задължително, сертифицираният CE спасителен жилетка е основно средство за безопасност. Препоръчваме да го носите по всяко време на водата.',
       category: 'safety',
       relatedProducts: [],
       relatedGuides: ['safety-tips'],
     },
     {
       id: 'paddleboard-registration',
-      question: 'Do I need to register my paddle board?',
+      question: 'Трябва ли да регистрирам надуваемата си лодка?',
       answer:
-        'In most regions, unpowered paddle boards do not require registration. Requirements vary by jurisdiction, so check your local maritime authority for the rules that apply to you.',
+        'Изискванията варират в зависимост от юрисдикцията. В повечето региони надуваеми лодки с двигатели над определена конска мощност изискват регистрация. SUPs Немоторни и малки лодки обикновено не изискват регистрация. Проверете в местния морски орган за конкретни правила.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: [],
@@ -129,9 +129,9 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'warranty',
-      question: 'What is the Paddle Board Overstock warranty?',
+      question: 'Каква е Paddle Board Overstock гаранцията?',
       answer:
-        'Every board is backed by a 2-year limited manufacturer warranty covering defects in materials and workmanship under normal use. Accessories carry the same 2-year coverage.',
+        'Всички Paddle Board Overstock продукти са подкрепени с всеобхватна гаранция от производителя. Тъканта, шевовете и корпуса на надуваемата лодка са покрити с 5-годишна ограничена гаранция; SUP дъски и аксесоари имат 2-годишна ограничена гаранция. Гаранцията покрива дефекти в материалите и изработката при нормална употреба.',
       category: 'warranty',
       relatedProducts: [],
       relatedGuides: [],
@@ -156,144 +156,1014 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'return-policy',
-      question: 'What is your return policy?',
+      question: 'Каква е вашата политика за връщане?',
       answer:
-        'We accept returns within 30 days of delivery for unused products in original packaging. Contact our support team to initiate a return — we provide a prepaid shipping label.',
+        'Приемаме връщания в рамките на 30 дни след доставката за неизползвани продукти в оригинална опаковка. Поръчката/OEM поръчките не подлежат на връщане. Свържете се с нашия екип за поддръжка, за да започнете връщане — ние предоставяме предплатен етикет за доставка.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
     },
     {
       id: 'paddle-length',
-      question: 'What paddle length do I need?',
+      question: 'Предлагате OEM ли /ODM услуги?',
       answer:
-        'For SUP, the paddle should be 6–8 inches taller than your height. See our paddle guide for detailed sizing.',
+        'Да. Предлагаме услуги за частна марка и персонализиран дизайн за бизнеси. От персонализирано брандиране на съществуващи модели до напълно персонализирани дизайни на корпуса, нашият инженерен екип може да разработва продукти под вашата марка. Минимални количества поръчки се прилагат.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: ['choosing-paddle'],
     },
     {
       id: 'sup-width-stability',
-      question: 'Коя SUP ширина е най-добра за стабилност?',
+      question: 'Каква дължина на греблото ми е нужна?',
       answer:
-        'За начинаещи ширина от 33–34 инча осигурява най-добро съчетание на стабилност и лекота при гребане. Дъски с ширина под 32 инча се усещат нестабилни за нови гребци. Paddle Board Overstock SUP Explorer 11 с 33 инча е идеален за учене.',
+        'За SUP: греблото трябва да е с 6–8 инча по-високо от вашия ръст. За каяк: дължината на греблото зависи от ширината на лодката и дължината на торса. Вижте нашето ръководство за подробни размери.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
     },
     {
       id: 'sup-volume-weight',
-      question: 'Как да SUP избера обем за теглото си?',
+      question: 'Какъв размер двигател ми трябва за RIB?',
       answer:
-        'Умножете теглото си в кг по 2.2 за целева цел за обем, подходящ за начинаещи. Например, гребец с тегло 75 кг изисква поне 165 литра, но 220–260 литра е много по-стабилно за учене. SUP Explorer 11 предлага 260 литра, подходящи за колоездачи до 100 кг.',
+        'Обемът на двигателя зависи от дължината и теглото на лодката. 3 м RIB обикновено покрива 15–25 HP м, 4.5 м RIB – 40–60 HP, а 6 м RIB – 90–150 HP. Винаги следвайте максималната HP оценка на лодката си.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
     },
     {
       id: 'paddleboardoverstock-vs-others',
-      question: 'Как се сравнява Paddle Board Overstock с други марки?',
+      question: 'Каква е разликата между PVC и Hypalon?',
       answer:
-        'Paddle Board Overstock предлага най-добра стойност в надуваемото оборудване за водни спортове. В сравнение с Red Paddle Co, Paddle Board Overstock осигурява 90% от представянето на 60% от цената. В сравнение с iRocker, Paddle Board Overstock използва по-висококачествен трипластов военен PVC и по-високи PSI оценки. В сравнение с Bluefin, Paddle Board Overstock предлага по-добри технически характеристики на материала. За повечето развлекателни каякъри, Paddle Board Overstock осигурява най-добър баланс между качество и цена.',
+        'PVC е по-лек, по-достъпен и по-лесен за поправка — идеален за развлекателна употреба. Hypalon (CSM) предлага превъзходна UV и химическа устойчивост с по-дълъг живот, предпочитан за търговска и военна употреба. Paddle Board Overstock използва и двата варианта в зависимост от ниво на продукта.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-your-sup'],
     },
     {
       id: 'fishing-sup-setup',
-      question: 'Мога ли да ловя риба от SUP дъска?',
+      question: 'Коя SUP ширина е най-добра за стабилност?',
       answer:
-        'Да. SUP риболовът става все по-популярен, защото правостоящата позиция предлага отлична видимост към водата. Изберете дъска поне 11 фута дълга и 33–34 инча широка за стабилност. Добавете млекоподобен кош с държачи за въдици, закрепен за бунгеите на палубата, малък котва и винаги носете PFD. Paddle Board Overstock SUP Explorer 11 е подходяща за случайни риболовни сесии.',
+        'За начинаещи ширина от 33–34 инча осигурява най-добро съчетание на стабилност и лекота при гребане. Дъски с ширина под 32 инча се усещат нестабилни за нови гребци. Paddle Board Overstock SUP Explorer 11 с 33 инча е идеален за учене.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-fishing'],
     },
     {
       id: 'sup-yoga',
-      question: 'Мога ли да правя йога на SUP дъска?',
+      question: 'Как да SUP избера обем за теглото си?',
       answer:
-        'Абсолютно.SUP Йога съчетава традиционни пози с предизвикателството на плаваща платформа, ангажираща по-дълбоки стабилизиращи мускули. Използвайте дъска с размер 33 инча или по-широка с мека, сцеплива подложка за палуба. Практикувайте в спокойна, плитка вода с котва. Започнете с основни пози като куче надолу, воин II и поза на дърво. SUP Explorer 11 с пълната EVA си подложка е много подходяща.',
+        'Умножете теглото си в кг по 2.2 за целева цел за обем, подходящ за начинаещи. Например, гребец с тегло 75 кг изисква поне 165 литра, но 220–260 литра е много по-стабилно за учене. SUP Explorer 11 предлага 260 литра, подходящи за колоездачи до 100 кг.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-yoga'],
     },
     {
       id: 'airline-travel-sup',
-      question: 'Какви са правилата на авиокомпанията за пътуване с надуваема SUP машина?',
+      question: 'Какъв размер двигател ми е необходим за моята надуваема лодка?',
       answer:
-        'Повечето авиокомпании приемат SUP раници като чекиран багаж, ако са под 23–32 кг. Paddle Board Overstock раницата е приблизително 90x40x30 см и тежи около 15 кг, когато е опакована. Някои авиокомпании могат да начислят такси за извънгабаритен багаж. Идете по-рано, опаковайте плавниците и помпата отделно в ръчния багаж и маркирайте чантата като крехка. Винаги проверявайте политиката на авиокомпанията за спортно оборудване преди полет.',
+        'За AirDeck 270 използвай до 6 HP. За AirDeck 360 – до 15 HP. За RIB 330 – до 40 HP. За RIB патрул 450 – до 60 HP. Винаги проверявай максималната HP оценителна табела на лодката си и никога не я надвишавай.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['multi-day-trip'],
     },
     {
       id: 'cold-weather-safety',
-      question: 'Какво защитно оборудване ми трябва за гребане със студена вода?',
+      question: 'Какъв тип под е най-подходящ за надуваема лодка?',
       answer:
-        'Вода под 15°C изисква термична защита. При 8–14°C използвайте неопренов костюм или сух костюм с ботуши, ръкавици и качулка. За 14–20°C е достатъчен 3/2 мм неопренов костюм. Винаги носете добре PFD прилепнал костюм за топлинна защита и безопасност. Проверете местните регулации за задължителни изисквания за оборудване.',
+        'Алуминиевите решетъчни подове осигуряват най-добра производителност — твърди, подходящи за рендестиране и стабилни за стоене. Въздушните палуби са по-леки и са по-малки, но са по-гъвкави. Подовете с ролинг е най-простият и най-достъпен, но предлагат най-ниска твърдост. Избирайте според основното си предназначение: риболов и скорост предпочитат летвени подове; преносимостта предпочита въздушните палуби.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: ['safety-tips'],
     },
     {
       id: 'sup-inflate-pressure',
-      question: 'На какво PSI да надуя SUP моята стойност?',
+      question: 'Как се сравнява Paddle Board Overstock с други марки?',
       answer:
-        'Надуйте до максималното PSI, което е препоръчано за дъската, за най-добро представяне — обикновено 15–18 PSI за качествена надуваема SUPs. Paddle Board Overstock SUP Explorer 11 работи най-добре при 15–18 PSI. Недостатъчното надуване кара дъската да се усеща мека и да следи лошо. Пренадутване над препоръчания максимум може да повреди drop-stitch нишките. Проверете стикера близо до клапана за конкретната оценка на вашата дъска.',
+        'Paddle Board Overstock предлага най-добра стойност в надуваемото оборудване за водни спортове. В сравнение с Red Paddle Co, Paddle Board Overstock осигурява 90% от представянето на 60% от цената. В сравнение с iRocker, Paddle Board Overstock използва по-висококачествен трипластов военен PVC и по-високи PSI оценки. В сравнение с Bluefin, Paddle Board Overstock предлага по-добри технически характеристики на материала. За повечето развлекателни каякъри, Paddle Board Overstock осигурява най-добър баланс между качество и цена.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
     },
     {
       id: 'sup-deck-pad-care',
-      question: 'Как да почистя и поддържам EVA подложката на палубата?',
+      question: 'Мога ли да ловя риба от SUP дъска?',
       answer:
-        'Изплаквайте подложката с прясна вода след всяка сесия. За мръсотия или петна използвайте мек сапун и мека четка — избягвайте агресивни химикали. Ако ръбовете започнат да се повдигат, нанесете малко водоустойчиво морско лепило и пресувайте под тежест 24 часа. Дръжте дъската извън UV директна загуба, когато не се използва, за да предотвратите разграждане.',
+        'Да. SUP риболовът става все по-популярен, защото правостоящата позиция предлага отлична видимост към водата. Изберете дъска поне 11 фута дълга и 33–34 инча широка за стабилност. Добавете млекоподобен кош с държачи за въдици, закрепен за бунгеите на палубата, малък котва и винаги носете PFD. Paddle Board Overstock SUP Explorer 11 е подходяща за случайни риболовни сесии.',
       category: 'maintenance',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-maintenance'],
     },
     {
       id: 'sup-seated-paddling',
-      question: 'Мога ли да седна, докато греба на моята SUP дъска?',
+      question: 'Мога ли да правя йога на SUP дъска?',
       answer:
-        'Да. Много SUP дъски, включително Paddle Board Overstock Explorer 11, имат D-ключалки, които позволяват закрепване на седалка. Използването на SUP със седалка и еднолопатева гребла предлага удобна позиция за сядане за по-дълги пътувания или риболов. Някои марки предлагат специализирани комплекти за преобразуване със седалки и по-дълги гребла.',
+        'Абсолютно.SUP Йога съчетава традиционни пози с предизвикателството на плаваща платформа, ангажираща по-дълбоки стабилизиращи мускули. Използвайте дъска с размер 33 инча или по-широка с мека, сцеплива подложка за палуба. Практикувайте в спокойна, плитка вода с котва. Започнете с основни пози като куче надолу, воин II и поза на дърво. SUP Explorer 11 с пълната EVA си подложка е много подходяща.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: [],
     },
     {
       id: 'saltwater-rinse',
-      question: 'Do I need to rinse my board after ocean use?',
+      question: 'Какви са правилата на авиокомпанията за пътуване с надуваема SUP машина?',
       answer:
-        'Yes — always rinse your board, fins, pump, and paddle with fresh water after saltwater use. Salt crystals work into seams and valves, causing micro-leaks and corrosion. Dry the board in the shade before deflating and storing. Regular rinsing dramatically extends the life of your board.',
+        'Повечето авиокомпании приемат SUP раници като чекиран багаж, ако са под 23–32 кг. Paddle Board Overstock раницата е приблизително 90x40x30 см и тежи около 15 кг, когато е опакована. Някои авиокомпании могат да начислят такси за извънгабаритен багаж. Идете по-рано, опаковайте плавниците и помпата отделно в ръчния багаж и маркирайте чантата като крехка. Винаги проверявайте политиката на авиокомпанията за спортно оборудване преди полет.',
       category: 'maintenance',
       relatedProducts: [],
       relatedGuides: ['sup-maintenance'],
     },
     {
       id: 'sup-leash-necessity',
-      question: 'Наистина ли ми е необходим предпазен шнур за SUP?',
+      question: 'Какво защитно оборудване ми трябва за гребане със студена вода?',
       answer:
-        'Да — винаги носете предпазен шнур. Спираловиден SUP шнур се прикрепя към глезена или прасеца и държи дъската с вас при падане. В открити води предпазният шнур може да спаси живота ви, като предотврати отделянето от плаваемото устройство. За гребане по река, използвайте предпазен шнур с бързо освобождаване, за да избегнете заклещване.',
+        'Вода под 15°C изисква термична защита. При 8–14°C използвайте неопренов костюм или сух костюм с ботуши, ръкавици и качулка. За 14–20°C е достатъчен 3/2 мм неопренов костюм. Винаги носете добре PFD прилепнал костюм за топлинна защита и безопасност. Проверете местните регулации за задължителни изисквания за оборудване.',
       category: 'safety',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['safety-tips'],
     },
     {
       id: 'company-model',
-      question: 'Дали Paddle Board Overstock е търговска компания или производител?',
+      question: 'Какви са минималните количества за поръчки OEM за /ODM?',
       answer:
-        'Нито чисто фабрика, нито търговска компания — Weihai Dongjilian Co., Ltd. е бранд компания с собствено производствено звено. Weihai Dongjilian Co., Ltd. се занимава с глобално разпространение, договори, фактуриране и следпродажбено обслужване, докато Paddle Board Overstock производственият център в Weihai управлява R&D, производство и контрол на качеството в собствената ни база от 12 000 м². Без посредници: всяка поръчка се изпраща директно от фабриката.',
+        'Минималните количества за поръчки MOQs() варират според типа продукта и сложността. Персонализираното брандиране на съществуващи модели обикновено изисква 5–10 броя. Напълно персонализираните дизайни на корпуса изискват повече MOQs. Свържете се с нашия търговски екип с вашите изисквания за подробна оферта. Ние се занимаваме с всичко – от персонализирани цветове и лога до изцяло оригинални дизайни на калъпи.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
     },
     {
       id: 'us-contract-weihai-shipping',
-      question: 'Защо моят договор е с американска компания, когато стоките се изпращат от Weihai?',
+      question: 'Мога ли да сложа собствено лого върху продуктите на Paddle Board Overstock?',
       answer:
-        'Weihai Dongjilian Co., Ltd. е глобалният търговски субект, който подписва договори, издава фактури и предоставя следпродажбена поддръжка, докато производственият център Weihai произвежда и изпраща всяка поръчка FOB от Weihai. Тази структура с два центъра запазва стандарта на договорите и уреждането в САЩ, като същевременно осигурява директни цени от фабриката и пълна прозрачност на производството.',
+        'Да. OEM Нашата услуга включва персонализирано поставяне на лого, цветови схеми и персонализирана опаковка. Предлагаме опции за печат с тампон, топлотрансфер и бродерия в зависимост от вида продукт. Изпратете вашите произведения и спецификации на нашия търговски екип за оферта и оценка на срока за изпълнение.',
+      category: 'ordering',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+  ],
+  et: [
+    {
+      id: 'sup-learning',
+      question: 'Kas on SUP raske õppida?',
+      answer:
+        'Sugugi mitte. Enamik algajaid tõuseb püsti ja sõulab juba esimesel sessioonil. Meie All-Around SUP seerias on eriti laiad stabiilsed platvormid, mis on spetsiaalselt mõeldud esmakordsetele aerutajatele. Alusta rahulikus vees ja oled juba mõne minuti pärast sõitmas.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: ['beginner-guide'],
+    },
+    {
+      id: 'ocean-use',
+      question: 'Kas ma saan seda kasutada ookeanis?',
+      answer:
+        'Jah. Paddle Board Overstock SUP laudu saab kasutada ookeanis, järves ja jões. Meie Touring-seeria saab hakkama rannikulainetega ning kõik lauad on valmistatud merekvaliteediga PVC-st, mis talub soolase vee korrosiooni. Pärast ookeanis kasutamist loputage värske veega.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: ['weather-conditions'],
+    },
+    {
+      id: 'inflation-time',
+      question: 'Kui kaua võtab aega täispuhumiseks?',
+      answer:
+        'Kaasasoleva kahetoimelise pumbaga täidavad enamik laudu 12–15 PSI kraadini vähem kui 5 minutiga. Meie elektripumba valik vähendab selle kestuse alla 2 minuti. Deflatsioon ja pakkimine võtavad umbes 3 minutit.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: ['sup-maintenance'],
+    },
+    {
+      id: 'travel-sup',
+      question: 'Kas ma saan reisida täispuhutava SUPs eadmega?',
+      answer:
+        'Absoluutselt. Iga Paddle Board Overstock laud mahub seljakoti suurusesse kandekotti, mis on loodud mugavaks reisimiseks — kontrollige oma lennufirma suuruse ja kaalu piiranguid. Kõigest 18–22 naela juures on seda lihtne kanda rannale, järve äärde või lennujaama terminalidesse.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'weight-limit',
+      question: 'Mis on kaalupiirang?',
+      answer:
+        'Meie universaalsed SUPs paadid toetavad kuni 220 naela. Touring ja Yoga seeriad toetavad kuni 250 naela. RIB paadid kannavad tavaliselt 600–1500 naela, sõltuvalt mudelist. Tandem- või raskemate koormate jaoks pakuvad meie täispuhutavad paadid suurema mahutavusega valikuid.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: ['understanding-specs'],
+    },
+    {
+      id: 'box-contents',
+      question: 'Mis on karbis?',
+      answer:
+        'Iga Paddle Board Overstock SUP sisaldab lauda, reisiseljakotti, kahetoimelist käsipumpa, eemaldatavat finni, spiraalkinnitusega rihma ja remondikomplekti. Mõned mudelid sisaldavad ka süsinikust aeru täiendusvõimalust. Täispuhutavad paadid sisaldavad paati, pumpa, remondikomplekti ja aereid.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'bundle-deals',
+      question: 'Kas pakute komplektide pakkumisi?',
+      answer:
+        'Jah. Pakume kureeritud komplekte, mis säästavad raha võrreldes toodete eraldi ostmisega. Võta ühendust meie müügitiimiga, et saada praegusi komplektide kampaaniaid ja mahusoodustusi.',
+      category: 'ordering',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'pfd-requirement',
+      question: 'Kas mul on vaja päästevesti SUP?',
+      answer:
+        'Jah. Paljud jurisdiktsioonid nõuavad seaduslikult päästevesti igas veesõidukis, sealhulgas SUPs. Isegi kui seda ei nõuta, CE on sertifitseeritud päästevest hädavajalik ohutusvarustus. Soovitame seda kanda kogu aeg vee peal.',
+      category: 'safety',
+      relatedProducts: [],
+      relatedGuides: ['safety-tips'],
+    },
+    {
+      id: 'paddleboard-registration',
+      question: 'Kas ma pean registreerima oma täispuhutava paadi?',
+      answer:
+        'Nõuded varieeruvad jurisdiktsiooniti. Enamikus piirkondades nõuavad täispuhutavad paadid, mille mootorid ületavad teatud hobujõu, registreerimist. Mootorita SUPs ja väikesed paadid tavaliselt mitte. Kontrollige konkreetseid reegleid oma kohaliku merendusameti kohta.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'puncture-repair',
+      question: 'Kuidas parandada torkehastust?',
+      answer:
+        'Puhastage ala, lõigake lapike ümarate nurkadega, kandke peale PVC liim, suruge kindlalt ja oodake 24 tundi enne täispuhumust. Paddle Board Overstock laudadel on remondikomplekt. Täpsemate juhiste jaoks vaadake meie täispuhutavate esemete remondijuhendit.',
+      category: 'maintenance',
+      relatedProducts: [],
+      relatedGuides: ['inflatable-repair', 'sup-maintenance'],
+    },
+    {
+      id: 'storage',
+      question: 'Kuidas ma peaksin oma täispuhutavat seadet SUP hoiustama?',
+      answer:
+        'Loputa värske veega, kuivata täielikult, tühjenda täielikult, rulli nina juurest lahtiselt ja hoia kandekottis jahedas ja kuivas kohas, eemal otsesest päikesevalgusest. Ära kunagi hoia märjana ega äärmuslikes temperatuurides.',
+      category: 'maintenance',
+      relatedProducts: [],
+      relatedGuides: ['sup-maintenance'],
+    },
+    {
+      id: 'sup-vs-hard',
+      question: 'Täispuhutav või kõva SUP laud?',
+      answer:
+        'Täispuhutavad lauad pakuvad kaasaskantavust, hoiustamise mugavust ja löökide neeldumist. Kõvad lauad pakuvad maksimaalset jäikust ja kiirust. Enamiku vaba aja kasutajate jaoks on praktiline valik kvaliteetne täispuhutav drop-stitch südamikuga raam.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: ['inflatable-vs-hard', 'how-to-choose-your-sup'],
+    },
+    {
+      id: 'wind-safety',
+      question: 'Millise tuulekiiruse jaoks on liiga SUPs uur?',
+      answer:
+        'Algajad: üle 10 mph (8 sõlme). Keskmine: üle 15 mph (13 sõlme). Edasijõudnute: üle 20 mph (17 sõlme). Kui kahtled, ära mine välja. Avamere tuul (puhub maalt merre) on ohtlik igas oskustasemes.',
+      category: 'safety',
+      relatedProducts: [],
+      relatedGuides: ['weather-conditions', 'safety-tips'],
+    },
+    {
+      id: 'warranty',
+      question: 'Mis on Paddle Board Overstock garantii?',
+      answer:
+        'Kõik Paddle Board Overstock tooted on tagatud ulatusliku tootjagarantiiga. Täispuhutava paadi toru kangas, õmblused ja kere on kaetud 5-aastase piiratud garantiiga; SUP lauad ja tarvikud on kaetud 2-aastase piiratud garantiiga. Garantii katab materjalide ja töötluse puudusi tavakasutuse korral.',
+      category: 'warranty',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'warranty-claim',
+      question: 'Kuidas ma saan esitada garantiinõuet?',
+      answer:
+        'Esitage nõue, võttes ühendust meie tugitiimiga, saates oma tellimusnumbri, probleemi fotod ja lühikese kirjelduse. Enamik nõudeid vaadatakse läbi kahe tööpäeva jooksul. Heakskiidetud nõuded saavad asendus- või remondijuhised mõne päeva jooksul.',
+      category: 'warranty',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'shipping-info',
+      question: 'Kui kaua võtab saatmine aega?',
+      answer:
+        'Laos olevad tellimused saadetakse 2–3 tööpäeva jooksul. USA sisetellimused saabuvad 5–10 tööpäeva jooksul. Rahvusvahelised tellimused saabuvad 10–20 tööpäeva jooksul, sõltuvalt sihtkohast. Kiireloomulisi tellimusi saab kiirendada.',
+      category: 'shipping',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'return-policy',
+      question: 'Milline on teie tagastuspoliitika?',
+      answer:
+        'Võtame vastu tagastusi 30 päeva jooksul pärast kohaletoimetamist, kui kasutamata tooted on originaalpakendis. Eritellimused/OEM tellimused ei ole tagastatavad. Võta ühendust meie tugitiimiga, et alustada tagastust — pakume ettemakstud saatmissilti.',
+      category: 'ordering',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'paddle-length',
+      question: 'Kas OEM pakute /ODM teenuseid?',
+      answer:
+        'Jah. Pakume ettevõtetele privaatmärgi ja eritellimusel disainiteenuseid. Alates olemasolevate mudelite eritellimusel brändingust kuni täielikult eritellimusel kere disainideni – meie inseneritiim saab arendada tooteid teie brändi all. Kehtivad miinimumtellimuste kogused.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: ['choosing-paddle'],
+    },
+    {
+      id: 'sup-width-stability',
+      question: 'Millist aeru pikkust mul vaja on?',
+      answer:
+        'SUP Selleks: aeru peaks olema 6–8 tolli kõrgem kui sinu pikkus. Kajaki puhul: aeru pikkus sõltub paadi laiusest ja kere pikkusest. Vaata meie aerujuhendit detailse suuruse kohta.',
+      category: 'product',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
+    },
+    {
+      id: 'sup-volume-weight',
+      question: 'Mis suuruses mootorit mul vaja RIB on?',
+      answer:
+        'Mootori suurus sõltub paadi pikkusest ja kaalust. 3 m RIB mahutab tavaliselt 15–25 HP meetrit, 4,5 m RIB 40–60 HP ja 6 m RIB 90–150 HP meetrit. Järgi alati HP oma paadi maksimaalset reitingumärki.',
+      category: 'product',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
+    },
+    {
+      id: 'paddleboardoverstock-vs-others',
+      question: 'Mis vahe PVC on ja Hypalon vahel?',
+      answer:
+        'PVC on kergem, taskukohasem ja lihtsamini parandatav — ideaalne vaba aja veetmiseks. Hypalon (CSM) pakub paremat UV ja kemikaalikindlust pikema elueaga, eelistatud kaubanduslikuks ja sõjaväeliseks kasutuseks. Paddle Board Overstock kasutab mõlemat, sõltuvalt tootetasemest.',
+      category: 'general',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['how-to-choose-your-sup'],
+    },
+    {
+      id: 'fishing-sup-setup',
+      question: 'Milline SUP laius on stabiilsuse jaoks parim?',
+      answer:
+        'Algajatele annab 33–34-tolline laius parima tasakaalu stabiilsuse ja aerutamislihtsuse vahel. Lauad, mis on kitsamad kui 32 tolli, tunduvad uutele aerutajatele kõikuvad. Paddle Board Overstock SUP Explorer 11 33 tolli laiusega on õppimiseks ideaalne.',
+      category: 'general',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['sup-fishing'],
+    },
+    {
+      id: 'sup-yoga',
+      question: 'Kuidas valida SUP maht oma kaalule?',
+      answer:
+        'Korruta oma kaal kilogrammides 2,2-ga, et saada algajasõbralik mahu eesmärk. Näiteks 75 kg kaaluv aerutaja vajab vähemalt 165 liitrit, kuid 220–260 liitrit on õppimiseks palju stabiilsem. SUP Explorer 11 pakub 260 liitrit, mis sobib kuni 100 kg kaaluvatele sõitjatele.',
+      category: 'general',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['sup-yoga'],
+    },
+    {
+      id: 'airline-travel-sup',
+      question: 'Mis suurusega mootorit mul on vaja oma täispuhutava paadi jaoks?',
+      answer:
+        'AirDeck 270 puhul kasuta kuni 6 HP. AirDeck 360 puhul kuni 15 HP. RIB 330 puhul kuni 40 HP. RIB 450 patrulli puhul kuni 60 HP. Kontrolli alati HP oma paadi maksimaalset reitingumärki ja ära ületa seda.',
+      category: 'general',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['multi-day-trip'],
+    },
+    {
+      id: 'cold-weather-safety',
+      question: 'Milline põrandatüüp on täispuhutava paadi jaoks parim?',
+      answer:
+        'Alumiiniumist lattpõrandad annavad parima jõudluse — jäigad, hööveldamisvõimelised ja stabiilsed seismiseks. Õhutekid on kergemad ja mahutavad väiksemad, kuid painduvad rohkem. Rullitavad põrandad on lihtsamad ja taskukohasemad, kuid pakuvad kõige vähem jäikust. Vali vastavalt oma peamisele kasutusele: kalapüük ja kiirus eelistavad liistupõrandaid; kaasaskantavus eelistab õhutekke.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: ['safety-tips'],
+    },
+    {
+      id: 'sup-inflate-pressure',
+      question: 'Kuidas Paddle Board Overstock võrdub teiste brändidega?',
+      answer:
+        'Paddle Board Overstock pakub parimat hinna ja kvaliteedi suhet täispuhutavates veespordialade varustuses. Võrreldes Red Paddle Co-ga annab Paddle Board Overstock 90% jõudlusest 60% hinnaga. Võrreldes iRockeriga kasutab Paddle Board Overstock kõrgema kvaliteediga kolmekihilist sõjaväelist PVC ja kõrgema PSI hindega materjale. Võrreldes Bluefiniga pakub Paddle Board Overstock paremaid materjalispetsiifikatsioone. Enamikule harrastajatele pakub Paddle Board Overstock parimat tasakaalu kvaliteedi ja hinna vahel.',
+      category: 'product',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
+    },
+    {
+      id: 'sup-deck-pad-care',
+      question: 'Kas ma võin kalastada SUP laualt?',
+      answer:
+        'Jah. SUP kalapüük on järjest populaarsem, sest seistes on vesi hästi nähtav. Valige laud, mis on vähemalt 11 jalga pikk ja 33–34 tolli lai, et tagada stabiilsus. Lisage piidriampste, millele on kinnitatud õngeridmehoidjad, väike ankur ja kandke alati PFD. Paddle Board Overstock SUP Explorer 11 sobib hästi vabaaja kalapüügiks.',
+      category: 'maintenance',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['sup-maintenance'],
+    },
+    {
+      id: 'sup-seated-paddling',
+      question: 'Kas ma saan teha joogat SUP laual?',
+      answer:
+        'Absoluutselt.SUP Jooga ühendab traditsioonilised poosid hõljuva platvormi väljakutsega, kaasates sügavamaid stabilisaatorilihaseid. Kasuta 33 tolli või laiemat lauda, millel on pehme ja haarduv tekipadja. Harjuta rahulikus, madalas vees ankruga. Alusta aluspoosidega nagu allapoole suunatud koer, sõdalane II ja puu poos. SUP Explorer 11 oma EVA täisteki padjaga sobib hästi.',
+      category: 'product',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: [],
+    },
+    {
+      id: 'saltwater-rinse',
+      question: 'Millised on lennufirma reeglid täispuhutava lennukiga SUP reisimiseks?',
+      answer:
+        'Enamik lennufirmasid aktsepteerib SUP seljakotte kui registreeritud pagasit, kui need on alla 23–32 kg. Paddle Board Overstock seljakott on umbes 90x40x30 cm ja kaalub umbes 15 kg pakituna. Mõned lennufirmad võivad küsida suurte pagasi tasu. Saabuge varakult, mähkige uimed ja pump eraldi käsipagasisse ning märgistage kott kui habras. Uurige alati oma lennufirma spordivarustuse poliitikat enne lendamist.',
+      category: 'maintenance',
+      relatedProducts: [],
+      relatedGuides: ['sup-maintenance'],
+    },
+    {
+      id: 'sup-leash-necessity',
+      question: 'Millist turvavarustust vajan külma vee aerutamiseks?',
+      answer:
+        'Vesi alla 15°C vajab soojuskaitset. 8–14°C puhul kasuta kalipsot või kuivülikonda koos saapade, kinnaste ja kapuutsiga. 14–20°C puhul piisab 3/2 mm märgkostüümist. Kandke alati korralikult PFD istuvat ülikonda soojuskaitse ja ohutuse tagamiseks. Kontrollige kohalikke regulatsioone kohustuslike seadmete nõuete osas.',
+      category: 'safety',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['safety-tips'],
+    },
+    {
+      id: 'company-model',
+      question: 'Millised on /?OEM ODM',
+      answer:
+        'Minimaalsed tellimuste arvud MOQs() varieeruvad tootetüübi ja keerukuse järgi. Olemasolevate mudelite eritellimusel brändimine nõuab tavaliselt 5–10 ühikut. Täielikult eritellimusel kere disainid nõuavad MOQs kõrgemat . Võta meie müügimeeskonnaga ühendust oma nõudmistega, et saada üksikasjalik hinnapakkumine. Me tegeleme kõigega alates eritellimusel värvidest ja logodest kuni täiesti originaalsete vormikujundusteni.',
+      category: 'ordering',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'us-contract-weihai-shipping',
+      question: 'Kas ma saan Paddle Board Overstock toodetele oma logo panna?',
+      answer:
+        'Jah. Meie OEM teenus hõlmab kohandatud logo paigutust, eritellimusel värviskeeme ja eritellimusel pakendamist. Pakume padtprintimist, soojusülekannet ja tikkimisvõimalusi sõltuvalt toote tüübist. Saada oma kunstiteosed ja spetsifikatsioonid meie müügitiimile, et saada hinnapakkumine ja tarneaja hinnapakkumine.',
+      category: 'ordering',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+  ],
+  he: [
+    {
+      id: 'sup-learning',
+      question: 'SUP קשה ללמוד?',
+      answer:
+        'בכלל לא. רוב המתחילים עומדים וחותרים כבר במפגש הראשון. סדרת ה-All-Around שלנו SUP כוללת פלטפורמות יציבות רחבות במיוחד המיועדות במיוחד לחותרים בפעם הראשונה. התחילו במים רגועים ותצאו לשייט תוך דקות.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: ['beginner-guide'],
+    },
+    {
+      id: 'ocean-use',
+      question: 'האם אפשר להשתמש בו בים?',
+      answer:
+        'כן. קרשי Paddle Board Overstock SUP נבנים לשימוש באוקיינוס, אגם, ונהר. סדרת Touring שלנו מתמודדת עם גלישה קרוב לחוף, וכל הקרשים משתמשים ב-PVC בדרגת ימית שמונע קורוזיה ממים מלוחים. יש לשטוף במים מתוקים לאחר שימוש באוקיינוס.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: ['weather-conditions'],
+    },
+    {
+      id: 'inflation-time',
+      question: 'כמה זמן לוקח להתנפח?',
+      answer:
+        'עם המשאבה הדו-פעולתית המצורפת, רוב הלוחות מתנפחים ל-12–15 PSI בפחות מ-5 דקות. אופציית המשאבה החשמלית שלנו מקצרת את זה לפחות מ-2 דקות. דפלציה ואריזה לוקחות כ-3 דקות.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: ['sup-maintenance'],
+    },
+    {
+      id: 'travel-sup',
+      question: 'האם אפשר לנסוע עם מתנפח SUP?',
+      answer:
+        'בהחלט. כל קרש Paddle Board Overstock נכנס לתיק גב בגודל קטן שנועד לנוחות נסיעה — בדקו את נהלי הגודל והמשקל של חברת התעבורה שלכם. במשקל של 18-22 ליברות בלבד, קל לשאת לחוף, לאגם או דרך טרמינלים של שדות תעופה.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'weight-limit',
+      question: 'מהי מגבלת המשקל?',
+      answer:
+        'ה-All-Around SUPs שלנו תומך עד 220 פאונד. סדרות Touring ו-Yoga תומכות בעד 250 פאונד. RIB סירות בדרך כלל תומכות ב-600–1500 פאונד בהתאם לדגם. לשימוש טנדם או בעומסים כבדים יותר, הסירות המתנפחות שלנו מציעות אפשרויות קיבולת גבוהה יותר.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: ['understanding-specs'],
+    },
+    {
+      id: 'box-contents',
+      question: 'מה מגיע בקופסה?',
+      answer:
+        'כל קרש Paddle Board Overstock SUP כולל את הקרש, תיק גב לנשיאה, משאבה ידנית פעולה כפולה, סנפיר ניתן להסרה, רצועת ביטחון (coil leash), וערכת תיקון. חלק מהדגמים כוללים גם אופציה לשדרוג משוט לפחמן. סירות מתנפחות כוללות את הסירה, משאבה, ערכת תיקון, וחברים.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'bundle-deals',
+      question: 'האם אתם מציעים דילים חבילה?',
+      answer:
+        'כן. אנו מציעים חבילות מותאמות שחוסכות לך כסף לעומת רכישת פריטים בנפרד. צור קשר עם צוות המכירות שלנו לקבלת מבצעים עדכניים של חבילות ותמחור הנחות בכמות.',
+      category: 'ordering',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'pfd-requirement',
+      question: 'האם אני צריך אפוד הצלה על SUP?',
+      answer:
+        'כן. ברוב השיפוטים נדרשים חוקית אפוד הצלה בכל כלי שיט מים, כולל SUPs. גם כאשר לא נדרש, CE אפוד הצלה מוסמך הוא ציוד בטיחות חיוני. אנו ממליצים ללבוש אותו בכל עת על המים.',
+      category: 'safety',
+      relatedProducts: [],
+      relatedGuides: ['safety-tips'],
+    },
+    {
+      id: 'paddleboard-registration',
+      question: 'האם אני צריך לרשום את הסירה המתנפחת שלי?',
+      answer:
+        'הדרישות משתנות לפי תחום שיפוט. ברוב האזורים, סירות מתנפחות עם מנועים מעל כוח סוס מסוים דורשות רישום. סירות קטנות וללא מנוע SUPs בדרך כלל אינן דורשות רישום. בדוק את הרשות הימית המקומית שלך לכללים ספציפיים.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'puncture-repair',
+      question: "איך מתקנים פנצ'ר?",
+      answer:
+        'נקה את האזור, חתוך טלאי עם פינות מעוגלות, מרח דבק PVC, לחץ חזק, והמתן 24 שעות לפני הניפוח. קרשי Paddle Board Overstock כוללים ערכת תיקון. להוראות מפורטות, ראו את מדריך התיקון המתנפח שלנו.',
+      category: 'maintenance',
+      relatedProducts: [],
+      relatedGuides: ['inflatable-repair', 'sup-maintenance'],
+    },
+    {
+      id: 'storage',
+      question: 'איך כדאי לאחסן את המתנפח שלי SUP?',
+      answer:
+        'שטוף במים טריים, ייבש לחלוטין, התרוקן לחלוטין, גלגל ברפיון מהאף, ואחסן בתיק הנשיאה במקום קריר ויבש הרחק מאור שמש ישיר. לעולם אל תאחסן רטוב או בטמפרטורות קיצוניות.',
+      category: 'maintenance',
+      relatedProducts: [],
+      relatedGuides: ['sup-maintenance'],
+    },
+    {
+      id: 'sup-vs-hard',
+      question: 'לוח מתנפח או SUP קשה?',
+      answer:
+        'לוחות מתנפחים מציעים ניידות, נוחות אחסון וספיגת פגיעה. לוחות קשיחים מציעים קשיחות ומהירות מרבית. עבור רוב המשתמשים לפנאי, לוחות מתנפחים איכותיים עם drop-stitch ליבה הוא הבחירה המעשית.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: ['inflatable-vs-hard', 'how-to-choose-your-sup'],
+    },
+    {
+      id: 'wind-safety',
+      question: 'איזו מהירות רוח גבוהה מדי SUP בשביל ?',
+      answer:
+        'מתחילים: מעל 10 מייל לשעה (8 קשר). בינוני: מעל 15 מייל לשעה (13 קשר). מתקדם: מעל 20 מייל לשעה (17 קשר). אם יש ספק, אל תצא. רוח ימית (נושבת מהיבשה לים) מסוכנת בכל רמת מיומנות.',
+      category: 'safety',
+      relatedProducts: [],
+      relatedGuides: ['weather-conditions', 'safety-tips'],
+    },
+    {
+      id: 'warranty',
+      question: 'מהי האחריות של Paddle Board Overstock?',
+      answer:
+        'כל מוצרי Paddle Board Overstock מגובים בערבות יצרן מקיפה. בד צינור הסירה המתנפח, התפרים והחופה כוללים ערבות מוגבלת ל-5 שנים; לוחות וציוד נלווה SUP נושאים ערבות מוגבלת ל-2 שנים. הערבות מכסה פגמים בחומרי הגלם ובייצור בשימוש רגיל.',
+      category: 'warranty',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'warranty-claim',
+      question: 'איך מגישים תביעת אחריות?',
+      answer:
+        'הגישו תביעה על ידי יצירת קשר עם צוות התמיכה שלנו עם מספר ההזמנה, תמונות של הבעיה ותיאור קצר. רוב התביעות נבדקות בתוך יומי עסקים. תביעות שאושרו מקבלות הוראת החלפה או תיקון בתוך ימים.',
+      category: 'warranty',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'shipping-info',
+      question: 'כמה זמן לוקח משלוח?',
+      answer:
+        'הזמנות במלאי נשלחות בתוך 2–3 ימי עסקים. הזמנות מקומיות בארה"ב מגיעות תוך 5–10 ימי עסקים. הזמנות בינלאומיות מגיעות תוך 10–20 ימי עסקים בהתאם ליעד. הזמנות דחופות יכולות להיות מזורזות.',
+      category: 'shipping',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'return-policy',
+      question: 'מהי מדיניות ההחזרה שלכם?',
+      answer:
+        'אנו מקבלים החזרות בתוך 30 יום מהמשלוח עבור מוצרים שלא נוצלו באריזות המקוריות. הזמנות בהתאמה אישית/OEM אינן ניתנות להחזרה. צרו קשר עם צוות התמיכה שלנו כדי להתחיל החזרה — אנו מספקים תווית משלוח בתשלום מראש.',
+      category: 'ordering',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'paddle-length',
+      question: 'האם אתם מציעים OEM ODM / שירותים?',
+      answer:
+        'כן. אנו מציעים שירותי מותג פרטי ועיצוב מותאם אישית לעסקים. ממיתוג מותאם אישית על דגמים קיימים ועד עיצובים מותאמים אישית לחלוטין, צוות ההנדסה שלנו יכול לפתח מוצרים תחת המותג שלך. כמויות מינימום של הזמנות חלות.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: ['choosing-paddle'],
+    },
+    {
+      id: 'sup-width-stability',
+      question: 'איזה אורך משוט אני צריך?',
+      answer:
+        "עבור SUP: המשוט צריך להיות גבוה ב-6–8 אינץ' מהגובה שלך. לגבי קיאק: אורך המשוט תלוי ברוחב הסירה ובאורך הגוף. ראו את מדריך המשוט שלנו לגודל מפורט.",
+      category: 'product',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
+    },
+    {
+      id: 'sup-volume-weight',
+      question: 'איזה גודל מנוע אני צריך עבור RIB?',
+      answer:
+        'גודל המנוע תלוי באורך ובמשקל של הסירה. מנוע 3 מטר RIB בדרך כלל מתמודד עם 15–25 HP, 4.5 מטר RIB מטפל ב-40–60 HP, ומנוע 6 מטר RIB מטפל ב-90–150 HP. תמיד עקבו אחרי HP לוחית הדירוג המקסימלית בסירה שלכם.',
+      category: 'product',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
+    },
+    {
+      id: 'paddleboardoverstock-vs-others',
+      question: 'מה ההבדל בין PVC ו Hypalon-?',
+      answer:
+        'PVC קל יותר, זול יותר וקל יותר לתיקון — אידיאלי לשימוש פנאי. Hypalon (CSM) מציע עמידות עליונה ל-UV וכימיקלים עם אורך חיים ארוך יותר, מועדף לשימוש מסחרי וצבאי. Paddle Board Overstock משתמש בשניהם בהתאם לרמת המוצר.',
+      category: 'general',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['how-to-choose-your-sup'],
+    },
+    {
+      id: 'fishing-sup-setup',
+      question: 'איזה SUP רוחב הכי טוב ליציבות?',
+      answer:
+        "למתחילים, רוחב של 33–34 אינצ'ים מספק את האיזון הטוב ביותר בין יציבות ונוחות גרירה. לוחות צר יותר מ-32 אינצ'ים מרגישים נוטים להפוך עבור מתחילים. Paddle Board Overstock SUP Explorer 11 ברוחב 33 אינצ'ים אידיאלי ללמידה.",
+      category: 'general',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['sup-fishing'],
+    },
+    {
+      id: 'sup-yoga',
+      question: 'איך אני בוחרת SUP נפח לפי המשקל שלי?',
+      answer:
+        'הכפל את המשקל שלך בקלוגרם ב-2.2 עבור יעד נפח ידידותי למתחילים. לדוגמה, חותר במשקל 75 ק"ג צריך לפחות 165 ליטר, אך 220–260 ליטר יציב הרבה יותר ללמידה. SUP אקספלורר 11 מציע 260 ליטר, מתאים לרוכבים עד 100 ק"ג.',
+      category: 'general',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['sup-yoga'],
+    },
+    {
+      id: 'airline-travel-sup',
+      question: 'איזה גודל מנוע אני צריך לסירה המתנפחת שלי?',
+      answer:
+        'AirDeck ל-270, השתמש עד 6 HP. AirDeck ל-360, עד 15 HP. RIB ל-330, עד 40 HP. RIB ל-450 פטרול, עד 60 HP. תמיד בדוק HP את לוחית הדירוג המקסימלית בסירה שלך ולעולם אל תעבור אותה.',
+      category: 'general',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['multi-day-trip'],
+    },
+    {
+      id: 'cold-weather-safety',
+      question: 'איזה סוג רצפה הכי מתאים לסירה מתנפחת?',
+      answer:
+        'רצפות אלומיניום מספקות את הביצועים הטובים ביותר — קשיחות, מתאימות לתכנון ויציבות לעמידה. רצפות אוויר קלות יותר וקטנות יותר אך גמישות יותר. רצפות מתגלגלות הן הפשוטות והזולות ביותר אך מציעות את הקשיחות הנמוכה ביותר. בחר לפי השימוש העיקרי שלך: דיג ומהירות מעדיפים רצפות ספלט; ניידות מעדיפה רצפות אוויר.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: ['safety-tips'],
+    },
+    {
+      id: 'sup-inflate-pressure',
+      question: 'איך Paddle Board Overstock משווה למותגים אחרים?',
+      answer:
+        'Paddle Board Overstock מציע את הערך הטוב ביותר בציוד ספורט מים מתנפח. בהשוואה ל-Red Paddle Co, Paddle Board Overstock הוא מספק 90% מהביצועים ב-60% מהעלות. בהשוואה ל-iRocker, Paddle Board Overstock הוא משתמש בדירוגים משולשי ברמה גבוהה יותר ברמת צבא PVC ודירוג גבוה PSI יותר. בהשוואה ל-Bluefin, Paddle Board Overstock מציע מפרט חומרים איכותי יותר. לרוב החותרים הפנאי, Paddle Board Overstock הוא מספק את האיזון הטוב ביותר בין איכות למחיר.',
+      category: 'product',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
+    },
+    {
+      id: 'sup-deck-pad-care',
+      question: 'האם אפשר לדוג SUP מקרש?',
+      answer:
+        "כן.SUP הדיג הופך לפופולרי יותר ויותר כי המצב בעמידה מאפשר ראות מצוינת אל תוך המים. בחר לוח באורך של לפחות 11 רגל וברוחב 33–34 אינץ' ליציבות. הוסף ארגז חלב עם מחזיק חכות מחוברים לבנג'ים של הסיפון, עוגן קטן, ותמיד לבש PFD. Paddle Board Overstock SUP ה-Explorer 11 מתאים מאוד לדיג מזדמן.",
+      category: 'maintenance',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['sup-maintenance'],
+    },
+    {
+      id: 'sup-seated-paddling',
+      question: 'האם אפשר לעשות יוגה על SUP לוח?',
+      answer:
+        "בהחלט.SUP יוגה משלבת תנוחות מסורתיות עם האתגר של פלטפורמה צפה, ומפעילה שרירי מייצב עמוקים יותר. השתמש בלוח בגודל 33 אינץ' ומעלה עם משטח דק רך ואחיזה. תרגל במים שקטים ורדודים עם עוגן. התחל בתנוחות יסוד כמו Downward Dog, Warrior II ותנוחת העץ. SUP ה-Explorer 11 עם EVA משטח הדק המלא מתאים מאוד.",
+      category: 'product',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: [],
+    },
+    {
+      id: 'saltwater-rinse',
+      question: 'מהם כללי חברת התעופה לנסיעה עם רכב מתנפח SUP?',
+      answer:
+        'רוב חברות התעופה מקבלות SUP תיקי גב כמזוודה שנשלחה אם משקלם פחות מ-23–32 ק"ג. Paddle Board Overstock התיק הוא בגודל כ-90x40x30 ס"מ ומשקלו כ-15 ק"ג ארוז. חלק מהחברות עשויות לגבות דמי מטען גדולים מדי. הגעה מוקדמת, עטוף את הסנפירים והשאבה בנפרד בתיק היד, וסמן את התיק כעדין. תמיד יש לבדוק את מדיניות ציוד הספורט של חברת התעופה לפני הטיסה.',
+      category: 'maintenance',
+      relatedProducts: [],
+      relatedGuides: ['sup-maintenance'],
+    },
+    {
+      id: 'sup-leash-necessity',
+      question: 'איזה ציוד בטיחות אני צריך לחתירה במים קרים?',
+      answer:
+        'מים מתחת ל-15°C דורשים הגנה תרמית. ל-8–14°C השתמשו בחליפת צלילה או חליפת יבש עם מגפיים, כפפות וקפוצ\'ון. ל-14–20°C חליפת צלילה 3/2 מ"מ מספיקה. תמיד לבש חליפת שחייה מותאמת PFD להגנה תרמית ובטיחות. בדקו תקנות מקומיות לגבי דרישות ציוד חובה.',
+      category: 'safety',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['safety-tips'],
+    },
+    {
+      id: 'company-model',
+      question: 'מהן כמות ההזמנות המינימליות עבור OEM/ODM?',
+      answer:
+        'כמויות ההזמנות המינימליות MOQs() משתנות בהתאם לסוג המוצר ולמורכבות. מיתוג מותאם אישית בדגמים קיימים דורש בדרך כלל 5–10 יחידות. עיצובים מותאמים אישית לחלוטין דורשים מחירים MOQs גבוהים יותר. צרו קשר עם צוות המכירות שלנו לקבלת הצעת מחיר מפורטת. אנו מטפלים בכל דבר, מצבעים ולוגואים מותאמים אישית ועד עיצובים מקוריים לחלוטין.',
+      category: 'ordering',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'us-contract-weihai-shipping',
+      question: 'האם אפשר לשים את הלוגו שלי על Paddle Board Overstock המוצרים?',
+      answer:
+        'כן. OEM השירות שלנו כולל מיקום לוגואים מותאמים אישית, סכימות צבעים מותאמות אישית ואריזות מותאמות אישית. אנו מציעים הדפסת פד, העברת חום ואפשרויות רקמה בהתאם לסוג המוצר. שלחו את יצירות האמנות והמפרטים שלכם לצוות המכירות שלנו לקבלת הצעת מחיר והערכת זמן אספקה.',
+      category: 'ordering',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+  ],
+  hr: [
+    {
+      id: 'sup-learning',
+      question: 'SUP Je li teško naučiti?',
+      answer:
+        'Nimalo. Većina početnika ustane i vesla već u prvoj sesiji. Naša SUP All-Around serija sadrži ekstra široke stabilne platforme dizajnirane posebno za početnike u veslanju. Počnite na mirnoj vodi i krstarit ćete za nekoliko minuta.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: ['beginner-guide'],
+    },
+    {
+      id: 'ocean-use',
+      question: 'Mogu li ga koristiti u oceanu?',
+      answer:
+        'Da. Paddle Board Overstock SUP daske su izrađene za korištenje na oceanu, jezeru i rijeci. Naša Touring serija podnosi obalni valoviti uvjet, a sve daske koriste materijal PVC pomorskog razreda koji je otporan na koroziju od slane vode. Isperite čistom vodom nakon korištenja u oceanu.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: ['weather-conditions'],
+    },
+    {
+      id: 'inflation-time',
+      question: 'Koliko traje napuhovanje?',
+      answer:
+        'S uključenom pumpom s dvostrukim djelovanjem, većina dasaka se napuhne na 12–15 PSI za manje od 5 minuta. Naša električna pumpa smanjuje to na manje od 2 minute. Deflacija i pakiranje traju oko 3 minute.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: ['sup-maintenance'],
+    },
+    {
+      id: 'travel-sup',
+      question: 'Mogu li putovati s napuhivačem SUP?',
+      answer:
+        'Apsolutno. Svaka Paddle Board Overstock daska spakira se u torbu veličine ruksaka, dizajniranu za praktično putovanje — provjerite pravila za veličinu i težinu kod prijevoznika. S težinom od samo 18-22 lbs, lako se nosi do plaže, jezera ili kroz zračne luke.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'weight-limit',
+      question: 'Koja je granica težine?',
+      answer:
+        'Naš All-Around SUPs podržava do 220 lbs. Touring i Yoga serije podržavaju do 250 lbs. RIB Čamci obično podržavaju 600–1500 lbs, ovisno o modelu. Za tandem upotrebu ili teže terete, naši napuhujući čamci nude opcije veće nosivosti.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: ['understanding-specs'],
+    },
+    {
+      id: 'box-contents',
+      question: 'Što dolazi u kutiji?',
+      answer:
+        'Svaka Paddle Board Overstock SUP uključuje dasku, putni ruksak, dvostruku ručnu pumpu, uklonjivu peraju, coil uzicu i komplet za popravak. Neki modeli također uključuju opciju nadogradnje na karbonsko veslo. Napuhavajući čamci uključuju čamac, pumpu, komplet za popravak i vesla.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'bundle-deals',
+      question: 'Nudite li bundle ponude?',
+      answer:
+        'Da. Nudimo pažljivo odabrane pakete koji štede novac u usporedbi s kupnjom pojedinačnih artikala. Kontaktirajte naš prodajni tim za aktualne promocije paketa i popuste na količinu.',
+      category: 'ordering',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'pfd-requirement',
+      question: 'Trebam li prsluk za spašavanje na SUP?',
+      answer:
+        'Da. Mnoge jurisdikcije zakonski zahtijevaju prsluk za spašavanje na svakom plovilu, uključujući SUPs. Čak i tamo gdje nije obavezan, -CE certificirani prsluk za spašavanje je ključna sigurnosna oprema. Preporučujemo da ga nosite u svakom trenutku na vodi.',
+      category: 'safety',
+      relatedProducts: [],
+      relatedGuides: ['safety-tips'],
+    },
+    {
+      id: 'paddleboard-registration',
+      question: 'Trebam li registrirati svoj napuhani čamac?',
+      answer:
+        'Zahtjevi se razlikuju ovisno o jurisdikciji. U većini regija, napuhujući čamci s motorima većim od određene snage zahtijevaju registraciju. SUPs Nemotorni i mali čamci obično ne. Provjerite specifična pravila kod lokalne pomorske uprave.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'puncture-repair',
+      question: 'Kako popraviti probušenje?',
+      answer:
+        'Očistite područje, izrežite zakrpu s zaobljenim kutovima, nanesite ljepilo PVC, čvrsto pritisnite i pričekajte 24 sata prije napuhavanja. Paddle Board Overstock daske uključuju komplet za popravak. Za detaljne upute, pogledajte naš vodič za popravak napuhavajućih dasaka.',
+      category: 'maintenance',
+      relatedProducts: [],
+      relatedGuides: ['inflatable-repair', 'sup-maintenance'],
+    },
+    {
+      id: 'storage',
+      question: 'Kako bih trebao skladištiti svoj napuhivač?SUP',
+      answer:
+        'Isperite svježom vodom, potpuno osušite, potpuno ispuhnite, labavo se kotrljajte od nosa i spremite u torbu na hladno i suho mjesto, daleko od izravne sunčeve svjetlosti. Nikada ne čuvajte mokro ili na ekstremnim temperaturama.',
+      category: 'maintenance',
+      relatedProducts: [],
+      relatedGuides: ['sup-maintenance'],
+    },
+    {
+      id: 'sup-vs-hard',
+      question: 'Napuhavanje ili SUP tvrda daska?',
+      answer:
+        'Napuhavajuće daske nude prenosivost, praktičnost skladištenja i apsorpciju udaraca. Tvrde daske nude maksimalnu krutost i brzinu. Za većinu rekreativnih korisnika, kvalitetna napuhavajuća daska s drop-stitch jezgrom praktičan je izbor.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: ['inflatable-vs-hard', 'how-to-choose-your-sup'],
+    },
+    {
+      id: 'wind-safety',
+      question: 'Koja brzina vjetra je prevelika za SUP?',
+      answer:
+        'Početnici: preko 10 mph (8 čvorova). Srednji nivo: preko 15 mph (13 čvorova). Napredni: preko 20 mph (17 čvorova). Ako ste u nedoumici, nemojte izlaziti van. Offshore vjetar (puše s kopna na more) opasan je na bilo kojoj razini vještine.',
+      category: 'safety',
+      relatedProducts: [],
+      relatedGuides: ['weather-conditions', 'safety-tips'],
+    },
+    {
+      id: 'warranty',
+      question: 'Koja je Paddle Board Overstock garancija?',
+      answer:
+        'Svi Paddle Board Overstock proizvodi imaju opsežnu proizvođačku garanciju. Tkanina za cijevi napuhavajućih čamaca, šavovi i trup pokriveni su ograničenom 5-godišnjom garancijom; SUP daske i dodaci imaju ograničenu 2-godišnju garanciju. Garancija pokriva nedostatke u materijalima i izradi pod normalnim korištenjem.',
+      category: 'warranty',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'warranty-claim',
+      question: 'Kako podnijeti zahtjev za jamstvo?',
+      answer:
+        'Podnesite zahtjev kontaktiranjem našeg tima za podršku s brojem narudžbe, fotografijama problema i kratkim opisom. Većina zahtjeva se pregleda u roku od 2 radna dana. Odobreni zahtjevi dobivaju upute za zamjenu ili popravak u roku od nekoliko dana.',
+      category: 'warranty',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'shipping-info',
+      question: 'Koliko traje dostava?',
+      answer:
+        'Narudžbe na zalihama šalju se unutar 2–3 radna dana. Domaće narudžbe u SAD-u stižu u roku od 5–10 radnih dana. Međunarodne narudžbe stižu u roku od 10–20 radnih dana, ovisno o odredištu. Hitne narudžbe mogu se ubrzati.',
+      category: 'shipping',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'return-policy',
+      question: 'Koja je vaša politika povrata?',
+      answer:
+        'Prihvaćamo povrate unutar 30 dana od isporuke za neiskorištene proizvode u originalnom pakiranju. Prilagođeni/OEM narudžbe nisu za povrat. Kontaktirajte naš tim za podršku kako biste pokrenuli povrat — pružamo unaprijed plaćenu naljepnicu za dostavu.',
+      category: 'ordering',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'paddle-length',
+      question: 'Nudite li OEM ODM / usluge?',
+      answer:
+        'Da. Nudimo usluge privatnog brenda i prilagođenog dizajna za tvrtke. Od personaliziranog brendiranja postojećih modela do potpuno prilagođenih dizajna trupa, naš inženjerski tim može razvijati proizvode pod vašom markom. Primjenjuju se minimalne količine narudžbi.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: ['choosing-paddle'],
+    },
+    {
+      id: 'sup-width-stability',
+      question: 'Koju duljinu reketa trebam?',
+      answer:
+        'Za SUP: veslo bi trebalo biti 6–8 inča više od vaše visine. Za kajak: duljina vesla ovisi o širini broda i duljini trupa. Pogledajte naš vodič za veslanje za detaljne veličine.',
+      category: 'product',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
+    },
+    {
+      id: 'sup-volume-weight',
+      question: 'Koju veličinu motora trebam za RIB?',
+      answer:
+        'Veličina motora ovisi o duljini i težini broda. 3m obično RIB podnosi 15–25, HP4,5m RIB 40–60, HP a 6m RIB 90–150 HP. Uvijek se pridržavajte HP maksimalne oznake na vašem brodu.',
+      category: 'product',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
+    },
+    {
+      id: 'paddleboardoverstock-vs-others',
+      question: 'Koja je razlika između PVC i Hypalon?',
+      answer:
+        'PVC je lakši, povoljniji i jednostavniji za popravak — idealan za rekreativnu upotrebu. Hypalon (CSM) nudi vrhunsku UV i kemijsku otpornost s dužim životnim vijekom, što je poželjno za komercijalnu i vojnu upotrebu. Paddle Board Overstock koristi oba ovisno o razini proizvoda.',
+      category: 'general',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['how-to-choose-your-sup'],
+    },
+    {
+      id: 'fishing-sup-setup',
+      question: 'SUP Koja je širina najbolja za stabilnost?',
+      answer:
+        'Za početnike, širina od 33–34 inča pruža najbolju ravnotežu stabilnosti i jednostavnosti veslanja. Daske uže od 32 inča osjećaju se nestabilno za nove veslače. Paddle Board Overstock SUP Explorer 11 s 33 inča idealna je za učenje.',
+      category: 'general',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['sup-fishing'],
+    },
+    {
+      id: 'sup-yoga',
+      question: 'Kako odabrati SUP volumen prema svojoj težini?',
+      answer:
+        'Pomnožite svoju težinu u kg s 2,2 za početnički prilagođeni volumen. Na primjer, veslač od 75 kg treba najmanje 165 litara, ali 220–260 litara je puno stabilnije za učenje. SUP Explorer 11 nudi 260 litara, prikladan za vozače do 100 kg.',
+      category: 'general',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['sup-yoga'],
+    },
+    {
+      id: 'airline-travel-sup',
+      question: 'Koju veličinu motora trebam za svoj napuhujući čamac?',
+      answer:
+        'Za AirDeck 270 koristite do 6 HP. Za AirDeck 360 do 15 HP. Za RIB 330 do 40 HP. Za RIB 450 Patrol do 60 HP. Uvijek provjerite HP maksimalnu oznaku na svom brodu i nikada je ne prelazite.',
+      category: 'general',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['multi-day-trip'],
+    },
+    {
+      id: 'cold-weather-safety',
+      question: 'Koji je tip poda najbolji za napuhujući čamac?',
+      answer:
+        'Aluminijski podovi s letvicama pružaju najbolje performanse — kruti, sposobni za planiranje i stabilni za stajanje. Zračne palube su lakše i manje se spakiraju, ali se više savijaju. Podovi s podlogom su najjednostavniji i najpovoljniji, ali nude najmanju krutost. Birajte prema svojoj primarnoj namjeni: ribolov i brzina preferiraju podove s letvama; prenosivost pogoduje zračnim palubama.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: ['safety-tips'],
+    },
+    {
+      id: 'sup-inflate-pressure',
+      question: 'Kako se Paddle Board Overstock uspoređuje s drugim markama?',
+      answer:
+        'Paddle Board Overstock nudi najbolju vrijednost u opremi za vodene sportove na napuhavanje. U usporedbi s Red Paddle Co, Paddle Board Overstock pruža 90% performansi za 60% cijene. U usporedbi s iRocker, Paddle Board Overstock koristi visokokvalitetni trostruki vojni PVC i ima veće PSI ocjene. U usporedbi s Bluefin, Paddle Board Overstock nudi superiorne specifikacije materijala. Za većinu rekreativnih veslača, Paddle Board Overstock osigurava najbolju ravnotežu kvalitete i cijene.',
+      category: 'product',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
+    },
+    {
+      id: 'sup-deck-pad-care',
+      question: 'Mogu li pecati s SUP daske?',
+      answer:
+        'Da. SUP ribolov postaje sve popularniji jer stojeći položaj omogućuje izvrsnu vidljivost u vodi. Odaberite dasku koja je barem 11 stopa dugačka i 33–34 inča široka radi stabilnosti. Dodajte mliječnu kutiju s držačima štapova pričvršćenu na elastične trake na palubi, mali sidro i uvijek nosite PFD. Paddle Board Overstock SUP Explorer 11 dobro funkcionira za povremeni ribolov.',
+      category: 'maintenance',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['sup-maintenance'],
+    },
+    {
+      id: 'sup-seated-paddling',
+      question: 'Mogu li raditi jogu na SUP dasci?',
+      answer:
+        'Apsolutno.SUP Joga kombinira tradicionalne poze s izazovom plutajuće platforme, aktivirajući dublje stabilizatorske mišiće. Koristite dasku širinu 33 inča ili širu s mekanom, prijanjavajućom podlogom za palubu. Vježbajte u mirnoj, plitkoj vodi s sidrom. Počnite s osnovnim položajima poput downward dog, warrior II i tree pose. SUP Explorer 11 s EVA punom podlogom za palubu je vrlo prikladan.',
+      category: 'product',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: [],
+    },
+    {
+      id: 'saltwater-rinse',
+      question: 'Koja su pravila aviokompanije za putovanje s napuhavajućim avionom SUP?',
+      answer:
+        'Većina zrakoplovnih prijevoznika prihvaća SUP ruksake kao predanu prtljagu ako su ispod 23–32 kg. Paddle Board Overstock ruksak je otprilike 90x40x30 cm i teži oko 15 kg kada je spakiran. Neki zrakoplovni prijevoznici mogu naplatiti dodatne naknade za preveliku prtljagu. Stignite ranije, zasebno zamotajte peraje i pumpu u ručnu prtljagu i označite torbu kao lomljivu. Uvijek istražite pravila vašeg zrakoplovnog prijevoznika o sportskoj opremi prije letenja.',
+      category: 'maintenance',
+      relatedProducts: [],
+      relatedGuides: ['sup-maintenance'],
+    },
+    {
+      id: 'sup-leash-necessity',
+      question: 'Koju sigurnosnu opremu trebam za veslanje u hladnoj vodi?',
+      answer:
+        'Voda ispod 15°C zahtijeva toplinsku zaštitu. Za 8–14°C koristite ronilačko odijelo ili suho odijelo s čizmama, rukavicama i kapuljačom. Za 14–20°C je dovoljno ronilačko odijelo promjera 3/2 mm. Uvijek nosite pravilno prilagođeno odijelo PFD radi toplinske zaštite i sigurnosti. Provjerite lokalne propise o obaveznim zahtjevima za opremu.',
+      category: 'safety',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['safety-tips'],
+    },
+    {
+      id: 'company-model',
+      question: 'Koje su minimalne količine narudžbe za OEM/ODM?',
+      answer:
+        'Minimalne količine narudžbi (MOQs) razlikuju se ovisno o vrsti proizvoda i složenosti. Prilagođeno brendiranje postojećih modela obično zahtijeva 5–10 jedinica. Potpuno prilagođeni dizajni trupa zahtijevaju više MOQs. Kontaktirajte naš prodajni tim s vašim zahtjevima za detaljnu ponudu. Mi se bavimo svime, od prilagođenih boja i logotipa do potpuno originalnih dizajna kalupa.',
+      category: 'ordering',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'us-contract-weihai-shipping',
+      question: 'Mogu li staviti vlastiti logo na Paddle Board Overstock proizvode?',
+      answer:
+        'Da. Naša OEM usluga uključuje postavljanje logotipa po mjeri, prilagođene sheme boja i prilagođeno pakiranje. Nudimo opcije tampon tiska, prijenosa toplinom i veza ovisno o vrsti proizvoda. Pošaljite svoje umjetničko djelo i specifikacije našem prodajnom timu za ponudu i procjenu vremena isporuke.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -338,18 +1208,18 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'weight-limit',
-      question: 'What is the weight limit?',
+      question: 'Mi a súlyhatár?',
       answer:
-        'Our All-Around SUPs support up to 220 lbs. The Touring and Yoga series support up to 250 lbs. For tandem paddling or heavier riders, choose a wider, higher-volume board.',
+        'A Mindenre Utazó hajóink SUPs akár 220 fontot is támogatnak. A túra- és jóga sorozat akár 250 fontot is támogat RIB . A hajók általában 600–1500 fontot bírnak a modelltől függően. Tandem használatra vagy nehezebb terhelésre felfújható csónakjaink nagyobb kapacitású lehetőségeket kínálnak.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: ['understanding-specs'],
     },
     {
       id: 'box-contents',
-      question: 'What comes in the box?',
+      question: 'Mi van a dobozban?',
       answer:
-        'Every Paddle Board Overstock SUP includes the board, a travel backpack, dual-action hand pump, removable fin, coil leash, and repair kit. Some models also include a carbon paddle upgrade option.',
+        'Minden Paddle Board Overstock SUP tartalmazza a deszkát, egy utazó hátizsákot, dupla hatású kézi pumpát, levehető uszonyt, tekercs zsinórt és javító készletet. Egyes modellek karbon evező fejlesztési lehetőséget is tartalmaznak. A felfújható csónakok tartalmazzák a csónakot, pumpát, javító készletet és evezőket.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -365,18 +1235,18 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'pfd-requirement',
-      question: 'Do I need a life vest on a SUP?',
+      question: 'Szükségem van mentőmellényre egy SUP?',
       answer:
-        'Yes. Many jurisdictions legally require a life vest when paddling, including on SUPs. Even where not required, a life vest is essential safety equipment. We recommend wearing it at all times on the water.',
+        'Igen. Sok joghatóság jogilag megköveteli a mentőmellényt bármely vízi járműn, beleértve SUPs a . Még ha nem is kötelező, a CE tanúsított mentőmellény elengedhetetlen biztonsági felszerelés. Javasoljuk, hogy mindig viseld a vízen.',
       category: 'safety',
       relatedProducts: [],
       relatedGuides: ['safety-tips'],
     },
     {
       id: 'paddleboard-registration',
-      question: 'Do I need to register my paddle board?',
+      question: 'Regisztrálnom kell a felfújható hajómat?',
       answer:
-        'In most regions, unpowered paddle boards do not require registration. Requirements vary by jurisdiction, so check your local maritime authority for the rules that apply to you.',
+        'A követelmények joghatóságonként eltérnek. A legtöbb régióban a felfújható hajók, amelyek egy bizonyos lóerőnél nagyobb motorral rendelkeznek, regisztrációt igényelnek. A hajthatatlan SUPs és kis csónakok általában nem. Ellenőrizd a helyi tengerészeti hatóságot a konkrét szabályokért.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: [],
@@ -419,9 +1289,9 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'warranty',
-      question: 'What is the Paddle Board Overstock warranty?',
+      question: 'Mi a Paddle Board Overstock garancia?',
       answer:
-        'Every board is backed by a 2-year limited manufacturer warranty covering defects in materials and workmanship under normal use. Accessories carry the same 2-year coverage.',
+        'Minden Paddle Board Overstock terméket átfogó gyártói garancia fedez. A felfújható csónakcső anyaga, varrásai és teste 5 éves korlátozott jótállással rendelkezik; a SUP deszkák és kiegészítők 2 éves korlátozott jótállással rendelkeznek. A garancia a normál használat mellett anyag- és kivitelezési hibákra vonatkozik.',
       category: 'warranty',
       relatedProducts: [],
       relatedGuides: [],
@@ -446,144 +1316,144 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'return-policy',
-      question: 'What is your return policy?',
+      question: 'Mi a visszaküldési szabályzatod?',
       answer:
-        'We accept returns within 30 days of delivery for unused products in original packaging. Contact our support team to initiate a return — we provide a prepaid shipping label.',
+        'A kézbesítés után 30 napon belül visszaküldést fogadunk el eredeti csomagolásban használt termékek esetén. Az egyedi rendelések OEM nem visszaküldhetők. Vegye fel a kapcsolatot ügyfélszolgálatunkkal, hogy megkezdeményezze a visszaküldést — előre fizetett szállítási címkét biztosítunk.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
     },
     {
       id: 'paddle-length',
-      question: 'What paddle length do I need?',
+      question: 'OEM Kínálsz /ODM szolgáltatásokat?',
       answer:
-        'For SUP, the paddle should be 6–8 inches taller than your height. See our paddle guide for detailed sizing.',
+        'Igen. Private label és egyedi tervezési szolgáltatásokat kínálunk vállalkozásoknak. A meglévő modellek egyedi márkázásától a teljesen egyedi hajótest-tervekig mérnöki csapatunk a márkád alatt fejleszthet termékeket. Minimális rendelési mennyiség érvényes.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: ['choosing-paddle'],
     },
     {
       id: 'sup-width-stability',
-      question: 'Melyik SUP szélesség a legjobb a stabilitáshoz?',
+      question: 'Milyen lapáthosszra van szükségem?',
       answer:
-        'Kezdőknek a 33–34 hüvelykes szélesség biztosítja a legjobb egyensúlyt a stabilitás és az evezés könnyedsége között. A 32 hüvelyknél keskenyebb deszkák instabilnak érezhetők az új evezősök számára. A Paddle Board Overstock SUP Explorer 11 33 hüvelyken ideális a tanuláshoz.',
+        'SUPA : az evezőnek 6–8 hüvelykkel magasabbnak kell lennie, mint a magasságod. Kajaknál: az evező hossza a hajó szélességétől és törzshosszától függ. Részletes méretezésért lásd az evező útmutatónkat.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
     },
     {
       id: 'sup-volume-weight',
-      question: 'Hogyan válasszam SUP a térfogatot a testsúlyomhoz?',
+      question: 'Milyen méretű motorra van szükségem egy RIB?',
       answer:
-        'Szorozd meg a súlyodat kg-ban 2,2-vel, hogy kezdőbarát volumencélt kapjon. Például egy 75 kg-os evezőnek legalább 165 literre van szüksége, de a 220–260 liter sokkal stabilabb a tanuláshoz. SUP Az Explorer 11 260 litert kínál, amely akár 100 kg-ig is alkalmas.',
+        'A motor mérete a hajó hosszától és súlyától függ. Egy 3 m RIB általában 15–25 HP métert, a 4,5 méteres RIB 40–60 HP métert, a 6 méteres RIB pedig 90–150 HP métert kezel. Mindig kövesd a HP hajód maximális besorolási tábláját.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
     },
     {
       id: 'paddleboardoverstock-vs-others',
-      question: 'Hogyan viszonyul Paddle Board Overstock más márkákhoz?',
+      question: 'Mi a különbség PVC és Hypalon között?',
       answer:
-        'Paddle Board Overstock a legjobb ár-érték arányt kínálja a felfújható vízisport felszerelések között. A Red Paddle Co-hoz képest Paddle Board Overstock a teljesítmény 90%-át nyújtja 60%-os áron. Az iRockerhez képest Paddle Board Overstock magasabb minőségű, háromrétegű, katonai szintű PVC-t használ, valamint magasabb PSI minősítéssel rendelkezik. A Bluefin-hez képest Paddle Board Overstock kiválóbb anyagminőséget kínál. A legtöbb szabadidős evezős számára Paddle Board Overstock biztosítja a legjobb egyensúlyt a minőség és az ár között.',
+        'PVC könnyebb, megfizethetőbb, és könnyebben javítható — ideális rekreációs használatra. A Hypalon (CSM) kiváló UV és vegyszerállóságot kínál hosszabb élettartammal, kereskedelmi és katonai alkalmazásokhoz előnyös. A Paddle Board Overstock mindkettőt használja, a termékkategóriától függően.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-your-sup'],
     },
     {
       id: 'fishing-sup-setup',
-      question: 'Horgászhatok SUP deszkáról?',
+      question: 'Melyik SUP szélesség a legjobb a stabilitáshoz?',
       answer:
-        'Igen. A SUP horgászat egyre népszerűbb, mert az álló pozícióban kiválóan lehet látni a víz alá. Válassz legalább 11 láb hosszú és 33–34 hüvelyk széles deszkát a stabilitás érdekében. Adj hozzá egy tejesládát bot tartókkal, rögzítve a fedélzet gumipántjaihoz, egy kis lehorgonyzó súlyt, és mindig viselj PFD-et. A Paddle Board Overstock SUP Explorer 11 jól működik alkalmi horgászathoz.',
+        'Kezdőknek a 33–34 hüvelykes szélesség biztosítja a legjobb egyensúlyt a stabilitás és az evezés könnyedsége között. A 32 hüvelyknél keskenyebb deszkák instabilnak érezhetők az új evezősök számára. A Paddle Board Overstock SUP Explorer 11 33 hüvelyken ideális a tanuláshoz.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-fishing'],
     },
     {
       id: 'sup-yoga',
-      question: 'Tudok jógázni SUP deszkán?',
+      question: 'Hogyan válasszam SUP a térfogatot a testsúlyomhoz?',
       answer:
-        'Természetesen.SUP A jóga ötvözi a hagyományos pózokat a lebegő platform kihívásával, mélyebb stabilizátor izmokat mozgatva. Használj egy 33 hüvelyk vagy szélesebb deszkát puha, tapadós fedélzetpárnával. Gyakorolj nyugodt, sekély vízben horgonysal. Kezdj alappózokkal, mint például lefelé irányuló kutya, harcos II és fa póz. Az SUP Explorer 11 teljes EVA fedélzeti párnával jól illik hozzá.',
+        'Szorozd meg a súlyodat kg-ban 2,2-vel, hogy kezdőbarát volumencélt kapjon. Például egy 75 kg-os evezőnek legalább 165 literre van szüksége, de a 220–260 liter sokkal stabilabb a tanuláshoz. SUP Az Explorer 11 260 litert kínál, amely akár 100 kg-ig is alkalmas.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-yoga'],
     },
     {
       id: 'airline-travel-sup',
-      question: 'Mik a légitársasági szabályok a felfújható géppel való SUP utazáshoz?',
+      question: 'Milyen méretű motorra van szükségem a felfújható csónakomhoz?',
       answer:
-        'A legtöbb légitársaság elfogadja a SUP hátizsákokat feladott poggyászként, ha 23–32 kg alattiak. A Paddle Board Overstock hátizsák kb. 90x40x30 cm és kb. 15 kg súlyú csomagolt állapotban. Néhány légitársaság túlsúly díjat számíthat fel. Érkezz korán, a lapátokat és a pumpát külön kézipoggyászban csomagold, és jelöld a táskát törékenyként. Mindig nézd át a légitársaság sportfelszerelésre vonatkozó szabályzatát a repülés előtt.',
+        'AirDeck A 270-es autóhoz legfeljebb HP6-ot használj. AirDeck A 360-as modellhez legfeljebb 15-ig HP. RIB A 330-as autóhoz akár 40-ig HP is. RIB A 450-es járőröknél akár 60-ig HP is. Mindig ellenőrizd a HP hajód maximális minősítő tábláját, és soha ne lépd túl azt.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['multi-day-trip'],
     },
     {
       id: 'cold-weather-safety',
-      question: 'Milyen biztonsági felszerelésre van szükségem hidegvízes evezéshez?',
+      question: 'Milyen padlótípus a legjobb egy felfújható csónaknak?',
       answer:
-        '15°C alatti víz hővédelmet igényel. 8–14°C-os hőmérsékleten használj wetsuit vagy drysuit csizmával, kesztyűvel és kapucnival. 14–20°C-nál egy 3/2 mm-es wetsuit elegendő. Mindig viselj megfelelően szabott PFD ruhát a hővédelem és biztonság érdekében. Ellenőrizd a helyi előírásokat a kötelező felszerelés követelményeiről.',
+        'Az alumínium lécpadló a legjobb teljesítményt nyújtja — merev, gyilkolható és stabil álló. A légfedélzetek könnyebbek, kisebb csomagolóak, de rugalmasabbak. A feltekerhető padlók a legegyszerűbbek és legmegfizethetőbbek, de a legkevesebb merevséget kínálják. Válassz a fő felhasználásod alapján: a horgászat és a sebesség előnyben részesíti a lécpadlót; a hordozhatóság a légfedélzeteket kedveli.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: ['safety-tips'],
     },
     {
       id: 'sup-inflate-pressure',
-      question: 'Mire PSI fújjam fel a SUP dolgokat?',
+      question: 'Hogyan viszonyul Paddle Board Overstock más márkákhoz?',
       answer:
-        'Fújd fel a deszkát a névleges maximális PSI-re a legjobb teljesítmény érdekében — általában 15–18 PSI a minőségi felfújható SUPs esetében. A Paddle Board Overstock SUP Explorer 11 a 15–18 PSI nyomásnál működik a legjobban. A túl kevés levegő puhává és nehezen irányíthatóvá teszi a deszkát. A névleges maximumnál magasabb túlfújás veszélyezteti a drop-stitch meneteket. Ellenőrizd a szelep közelében lévő matricát a deszkád konkrét értékeléséhez.',
+        'Paddle Board Overstock a legjobb ár-érték arányt kínálja a felfújható vízisport felszerelések között. A Red Paddle Co-hoz képest Paddle Board Overstock a teljesítmény 90%-át nyújtja 60%-os áron. Az iRockerhez képest Paddle Board Overstock magasabb minőségű, háromrétegű, katonai szintű PVC-t használ, valamint magasabb PSI minősítéssel rendelkezik. A Bluefin-hez képest Paddle Board Overstock kiválóbb anyagminőséget kínál. A legtöbb szabadidős evezős számára Paddle Board Overstock biztosítja a legjobb egyensúlyt a minőség és az ár között.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
     },
     {
       id: 'sup-deck-pad-care',
-      question: 'Hogyan tisztítsam és karbantartsam a EVA teraszpadot?',
+      question: 'Horgászhatok SUP deszkáról?',
       answer:
-        'Minden alkalommal öblítsd le a teraszpadot friss vízzel minden alkalommal. Kosz vagy foltok esetén használj enyhe szappant és puha kefét — kerüld az erős vegyszereket. Ha a szélek elkezdenek emelkedni, kis mennyiségű vízálló tengeri ragasztót vigyél fel, és nyomd súly alatt 24 órán át. Tartsd a deszkát UV közvetlenül a használat nélkül, hogy elkerüld a párna lebomlását.',
+        'Igen. A SUP horgászat egyre népszerűbb, mert az álló pozícióban kiválóan lehet látni a víz alá. Válassz legalább 11 láb hosszú és 33–34 hüvelyk széles deszkát a stabilitás érdekében. Adj hozzá egy tejesládát bot tartókkal, rögzítve a fedélzet gumipántjaihoz, egy kis lehorgonyzó súlyt, és mindig viselj PFD-et. A Paddle Board Overstock SUP Explorer 11 jól működik alkalmi horgászathoz.',
       category: 'maintenance',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-maintenance'],
     },
     {
       id: 'sup-seated-paddling',
-      question: 'Leülhetek, miközben evezek a SUP deszkámon?',
+      question: 'Tudok jógázni SUP deszkán?',
       answer:
-        'Igen. Sok SUP tábla, beleértve a Paddle Board Overstock Explorer 11-et, rendelkezik D-karikákkal, amelyek lehetővé teszik egy ülés rögzítését. Egy SUP használata üléssel és egylapos evezővel kényelmes ülőhelyzetet biztosít hosszabb utakhoz vagy horgászathoz. Néhány márka dedikált átalakító készleteket kínál ülésekkel és hosszabb evezőkkel.',
+        'Természetesen.SUP A jóga ötvözi a hagyományos pózokat a lebegő platform kihívásával, mélyebb stabilizátor izmokat mozgatva. Használj egy 33 hüvelyk vagy szélesebb deszkát puha, tapadós fedélzetpárnával. Gyakorolj nyugodt, sekély vízben horgonysal. Kezdj alappózokkal, mint például lefelé irányuló kutya, harcos II és fa póz. Az SUP Explorer 11 teljes EVA fedélzeti párnával jól illik hozzá.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: [],
     },
     {
       id: 'saltwater-rinse',
-      question: 'Do I need to rinse my board after ocean use?',
+      question: 'Mik a légitársasági szabályok a felfújható géppel való SUP utazáshoz?',
       answer:
-        'Yes — always rinse your board, fins, pump, and paddle with fresh water after saltwater use. Salt crystals work into seams and valves, causing micro-leaks and corrosion. Dry the board in the shade before deflating and storing. Regular rinsing dramatically extends the life of your board.',
+        'A legtöbb légitársaság elfogadja a SUP hátizsákokat feladott poggyászként, ha 23–32 kg alattiak. A Paddle Board Overstock hátizsák kb. 90x40x30 cm és kb. 15 kg súlyú csomagolt állapotban. Néhány légitársaság túlsúly díjat számíthat fel. Érkezz korán, a lapátokat és a pumpát külön kézipoggyászban csomagold, és jelöld a táskát törékenyként. Mindig nézd át a légitársaság sportfelszerelésre vonatkozó szabályzatát a repülés előtt.',
       category: 'maintenance',
       relatedProducts: [],
       relatedGuides: ['sup-maintenance'],
     },
     {
       id: 'sup-leash-necessity',
-      question: 'Tényleg szükségem van SUP pórázra?',
+      question: 'Milyen biztonsági felszerelésre van szükségem hidegvízes evezéshez?',
       answer:
-        'Igen — mindig viselj pórázt. A tekercses SUP póráz a bokádhoz vagy vádlihoz rögzíthető, és a deszkát magaddal tartja, ha elessz. Nyílt vízben a póráz megmentheti az életed, mert megakadályozza, hogy leváljon a lebegő eszközödtől. Folyami evezéshez használj gyorskioldó pórázt, hogy elkerüld a csapdába ejtést.',
+        '15°C alatti víz hővédelmet igényel. 8–14°C-os hőmérsékleten használj wetsuit vagy drysuit csizmával, kesztyűvel és kapucnival. 14–20°C-nál egy 3/2 mm-es wetsuit elegendő. Mindig viselj megfelelően szabott PFD ruhát a hővédelem és biztonság érdekében. Ellenőrizd a helyi előírásokat a kötelező felszerelés követelményeiről.',
       category: 'safety',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['safety-tips'],
     },
     {
       id: 'company-model',
-      question: 'Paddle Board Overstock kereskedőcég vagy gyártó?',
+      question: 'Mik a minimális rendelési mennyiségek OEM/ODM?',
       answer:
-        'Sem tiszta gyár, sem kereskedő cég — a Weihai Dongjilian Kft. egy márkacég saját gyártóbázissal. A Weihai Dongjilian Kft. kezeli a globális értékesítést, szerződéseket, számlázást és az értékesítés utáni szolgáltatást, míg a Paddle Board Overstock Weihai Gyártó Központ kutatás-fejlesztést, termelést és minőségellenőrzést végez saját, 12 000 m²-es létesítményünkben. Közvetítők nélkül: minden rendelés közvetlenül a gyárból szállítva érkezik.',
+        'A minimális rendelési mennyiségek (MOQs) terméktípustól és összetettségtől függően változnak. A meglévő modellek egyedi márkázása általában 5–10 darabot igényel. A teljesen egyedi hajótesttervek esetén MOQs magasabb . Keresse értékesítési csapatunkat a részletes árajánlatért. Mindent kezelünk az egyedi színektől és logóktól kezdve egészen teljesen eredeti formájú mintákig.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
     },
     {
       id: 'us-contract-weihai-shipping',
-      question: 'Miért van szerződésem egy amerikai céggel, amikor az árukat Weihai-ból szállítják?',
+      question: 'Felhelyezhetem saját logómat Paddle Board Overstock termékekre?',
       answer:
-        'A Weihai Dongjilian Co., Ltd. a globális kereskedelmi egység, amely szerződéseket köt, számlákat bocsát ki és értékesítés utáni támogatást nyújt, míg a Weihai Gyártóközpont minden megrendelést előállít és szállít FOB Weihai-ból. Ez a kétközpontú struktúra az amerikai szabványú szerződéskötést és elszámolást tartja fenn, miközben megőrzi a közvetlen gyári árakat és a teljes gyártási átláthatóságot.',
+        'Igen. OEM Szolgáltatásunk magában foglalja az egyedi logóelhelyezést, egyedi színsémákat és egyedi csomagolást. Pad nyomtatást, hőátadást és hímzési lehetőségeket kínálunk a terméktípustól függően. Küldd el a műalkotásait és műszaki adataidat értékesítési csapatunknak árajánlatért és becslés esetén az előzményi időért.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -628,18 +1498,18 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'weight-limit',
-      question: 'What is the weight limit?',
+      question: 'Berapa batas beratnya?',
       answer:
-        'Our All-Around SUPs support up to 220 lbs. The Touring and Yoga series support up to 250 lbs. For tandem paddling or heavier riders, choose a wider, higher-volume board.',
+        'Seri All-Around kami SUPs mendukung hingga 220 lbs. Seri Touring dan Yoga mendukung hingga 250 lbs. RIB Perahu biasanya mendukung 600–1500 lbs tergantung modelnya. Untuk penggunaan tandem atau muatan yang lebih berat, perahu tiup kami menawarkan opsi kapasitas lebih tinggi.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: ['understanding-specs'],
     },
     {
       id: 'box-contents',
-      question: 'What comes in the box?',
+      question: 'Apa yang ada di dalam kotak?',
       answer:
-        'Every Paddle Board Overstock SUP includes the board, a travel backpack, dual-action hand pump, removable fin, coil leash, and repair kit. Some models also include a carbon paddle upgrade option.',
+        'Setiap Paddle Board Overstock SUP termasuk papan, tas ransel perjalanan, pompa tangan dua aksi, sirip yang dapat dilepas, tali pengaman berumbai, dan kit perbaikan. Beberapa model juga menyertakan opsi peningkatan dayung karbon. Perahu karet termasuk perahu, pompa, kit perbaikan, dan dayung.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -655,18 +1525,18 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'pfd-requirement',
-      question: 'Do I need a life vest on a SUP?',
+      question: 'Apakah saya perlu memakai rompi pelampung SUP di ?',
       answer:
-        'Yes. Many jurisdictions legally require a life vest when paddling, including on SUPs. Even where not required, a life vest is essential safety equipment. We recommend wearing it at all times on the water.',
+        'Ya. Banyak yurisdiksi secara hukum mewajibkan rompi pelampung pada kapal air apa pun, termasuk SUPs. Bahkan jika tidak diwajibkan, CE rompi pelampung bersertifikat -adalah perlengkapan keselamatan yang penting. Kami menyarankan untuk memakainya setiap saat di atas air.',
       category: 'safety',
       relatedProducts: [],
       relatedGuides: ['safety-tips'],
     },
     {
       id: 'paddleboard-registration',
-      question: 'Do I need to register my paddle board?',
+      question: 'Apakah saya perlu mendaftarkan perahu karet saya?',
       answer:
-        'In most regions, unpowered paddle boards do not require registration. Requirements vary by jurisdiction, so check your local maritime authority for the rules that apply to you.',
+        'Persyaratan berbeda-beda tergantung yurisdiksi. Di sebagian besar wilayah, perahu tiup dengan mesin di atas tenaga kuda tertentu memerlukan registrasi. SUPs Perahu kecil dan tanpa tenaga biasanya tidak diperlukan. Periksa otoritas maritim setempat Anda untuk aturan spesifik.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: [],
@@ -709,9 +1579,9 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'warranty',
-      question: 'What is the Paddle Board Overstock warranty?',
+      question: 'Apa garansi Paddle Board Overstock?',
       answer:
-        'Every board is backed by a 2-year limited manufacturer warranty covering defects in materials and workmanship under normal use. Accessories carry the same 2-year coverage.',
+        'Semua produk Paddle Board Overstock didukung oleh garansi pabrikan yang komprehensif. Kain tabung perahu karet tiup, jahitan, dan lambung dilindungi oleh garansi terbatas selama 5 tahun; papan SUP dan aksesori memiliki garansi terbatas selama 2 tahun. Garansi mencakup cacat material dan pengerjaan di bawah penggunaan normal.',
       category: 'warranty',
       relatedProducts: [],
       relatedGuides: [],
@@ -736,144 +1606,1014 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'return-policy',
-      question: 'What is your return policy?',
+      question: 'Apa kebijakan pengembalian Anda?',
       answer:
-        'We accept returns within 30 days of delivery for unused products in original packaging. Contact our support team to initiate a return — we provide a prepaid shipping label.',
+        'Kami menerima pengembalian dalam waktu 30 hari setelah pengiriman untuk produk yang tidak terpakai dalam kemasan asli. Pesanan kustom/tidak OEM dapat dikembalikan. Hubungi tim dukungan kami untuk memulai pengembalian — kami menyediakan label pengiriman prabayar.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
     },
     {
       id: 'paddle-length',
-      question: 'What paddle length do I need?',
+      question: 'Apakah Anda menawarkan OEM ODM / layanan?',
       answer:
-        'For SUP, the paddle should be 6–8 inches taller than your height. See our paddle guide for detailed sizing.',
+        'Ya. Kami menawarkan layanan private label dan desain khusus untuk bisnis. Mulai dari branding khusus pada model yang sudah ada hingga desain lambung kustom sepenuhnya, tim engineering kami dapat mengembangkan produk di bawah merek Anda. Jumlah pesanan minimum berlaku.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: ['choosing-paddle'],
     },
     {
       id: 'sup-width-stability',
-      question: 'Lebar berapa SUP yang terbaik untuk stabilitas?',
+      question: 'Panjang dayung berapa yang saya butuhkan?',
       answer:
-        'Untuk pemula, lebar 33–34 inci memberikan keseimbangan terbaik antara stabilitas dan kemudahan mendayung. Papan yang lebih sempit dari 32 inci terasa goyah bagi pendayung baru. Paddle Board Overstock SUP Explorer 11 pada 33 inci ideal untuk belajar.',
+        'Untuk SUP: dayung harus 6–8 inci lebih tinggi dari tinggi Anda. Untuk kayak: panjang dayung tergantung pada lebar dan panjang badan perahu. Lihat panduan dayung kami untuk ukuran yang lebih detail.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
     },
     {
       id: 'sup-volume-weight',
-      question: 'Bagaimana cara memilih SUP volume untuk berat badan saya?',
+      question: 'Ukuran mesin berapa yang saya butuhkan untuk RIB?',
       answer:
-        'Kalikan berat badan Anda dengan kg dengan 2,2 untuk target volume yang ramah pemula. Misalnya, pendayung 75 kg membutuhkan setidaknya 165 liter, tetapi 220–260 liter jauh lebih stabil untuk pembelajaran. SUP Explorer 11 menawarkan 260 liter, cocok untuk pengendara hingga 100 kg.',
+        'Ukuran mesin tergantung pada panjang dan berat perahu. Ukuran 3m RIB biasanya menangani 15–25, HP4,5m menangani RIB 40–60, HP dan 6m menangani RIB 90–150 HP. Selalu ikuti HP pelat rating maksimum pada perahu Anda.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
     },
     {
       id: 'paddleboardoverstock-vs-others',
-      question: 'Bagaimana Paddle Board Overstock dibandingkan dengan merek lain?',
+      question: 'Apa perbedaan PVC antara dan Hypalon?',
       answer:
-        'Paddle Board Overstock menawarkan nilai terbaik dalam perlengkapan olahraga air tiup. Dibandingkan dengan Red Paddle Co, Paddle Board Overstock memberikan 90% dari kinerja dengan 60% dari biaya. Dibandingkan dengan iRocker, Paddle Board Overstock menggunakan PVC kualitas militer tiga lapis yang lebih tinggi dan peringkat PSI yang lebih tinggi. Dibandingkan dengan Bluefin, Paddle Board Overstock menawarkan spesifikasi bahan yang lebih unggul. Untuk sebagian besar pengayuh rekreasional, Paddle Board Overstock memberikan keseimbangan terbaik antara kualitas dan harga.',
+        'PVC lebih ringan, lebih terjangkau, dan lebih mudah diperbaiki — ideal untuk penggunaan rekreasi. Hypalon (CSM) menawarkan UV dan ketahanan kimia yang superior dengan umur lebih panjang, disukai untuk aplikasi komersial dan militer. Paddle Board Overstock menggunakan keduanya tergantung pada tingkatan produk.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-your-sup'],
     },
     {
       id: 'fishing-sup-setup',
-      question: 'Bisakah saya memancing dari SUP papan?',
+      question: 'Lebar berapa SUP yang terbaik untuk stabilitas?',
       answer:
-        'Ya. Memancing dengan SUP semakin populer karena posisi berdiri memberikan visibilitas yang sangat baik ke dalam air. Pilih papan setidaknya sepanjang 11 kaki dan lebar 33–34 inci untuk stabilitas. Tambahkan krat susu dengan penahan joran yang dipasang pada tali dek, jangkar kecil, dan selalu kenakan PFD. Paddle Board Overstock SUP Explorer 11 bekerja dengan baik untuk memancing santai.',
+        'Untuk pemula, lebar 33–34 inci memberikan keseimbangan terbaik antara stabilitas dan kemudahan mendayung. Papan yang lebih sempit dari 32 inci terasa goyah bagi pendayung baru. Paddle Board Overstock SUP Explorer 11 pada 33 inci ideal untuk belajar.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-fishing'],
     },
     {
       id: 'sup-yoga',
-      question: 'Bisakah saya melakukan yoga di SUP atas papan?',
+      question: 'Bagaimana cara memilih SUP volume untuk berat badan saya?',
       answer:
-        'Tentu saja.SUP Yoga menggabungkan pose tradisional dengan tantangan platform mengambang, mengaktifkan otot penstabil yang lebih dalam. Gunakan papan berukuran 33 inci atau lebih lebar dengan pad dek yang lembut dan mencengkeram. Berlatihlah di air yang tenang dan dangkal dengan jangkar. Mulailah dengan pose dasar seperti downward dog, warrior II, dan pose pohon. SUP Explorer 11 dengan EVA pad dek penuh sangat cocok.',
+        'Kalikan berat badan Anda dengan kg dengan 2,2 untuk target volume yang ramah pemula. Misalnya, pendayung 75 kg membutuhkan setidaknya 165 liter, tetapi 220–260 liter jauh lebih stabil untuk pembelajaran. SUP Explorer 11 menawarkan 260 liter, cocok untuk pengendara hingga 100 kg.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-yoga'],
     },
     {
       id: 'airline-travel-sup',
-      question: 'Apa aturan maskapai untuk bepergian dengan mobil tiup SUP?',
+      question: 'Ukuran mesin apa yang saya butuhkan untuk perahu tiup saya?',
       answer:
-        'Kebanyakan maskapai menerima ransel SUP sebagai bagasi tercatat jika beratnya di bawah 23–32 kg. Ransel Paddle Board Overstock berukuran sekitar 90x40x30 cm dan berat sekitar 15 kg saat dikemas. Beberapa maskapai mungkin mengenakan biaya bagasi berukuran besar. Datanglah lebih awal, bungkus sirip dan pompa secara terpisah dalam tas jinjing Anda, dan beri label tas sebagai rapuh. Selalu periksa kebijakan perlengkapan olahraga maskapai Anda sebelum terbang.',
+        'Untuk AirDeck 270, gunakan hingga 6. HP Untuk AirDeck 360, hingga 15 HP. Untuk RIB 330, hingga 40 HP. Untuk RIB 450 Patrol, hingga 60 HP. Selalu periksa HP plat rating maksimum pada kapal Anda dan jangan pernah melebihinya.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['multi-day-trip'],
     },
     {
       id: 'cold-weather-safety',
-      question: 'Perlengkapan keselamatan apa yang saya butuhkan untuk mendayung di air dingin?',
+      question: 'Jenis lantai apa yang terbaik untuk perahu tiup?',
       answer:
-        'Air di bawah 15°C memerlukan perlindungan termal. Untuk 8–14°C gunakan wetsuit atau drysuit dengan sepatu bot, sarung tangan, dan tudung. Untuk 14–20°C, wetsuit 3/2mm sudah cukup. Selalu kenakan pakaian yang pas PFD untuk perlindungan termal dan keselamatan. Periksa peraturan lokal untuk persyaratan perlengkapan wajib.',
+        'Lantai bilah aluminium memberikan performa terbaik — kaku, mampu diratakan, dan stabil untuk berdiri. Dek udara lebih ringan dan lebih kecil tetapi lebih fleksibel. Lantai gulung adalah yang paling sederhana dan terjangkau tetapi menawarkan kekakuan paling rendah. Pilih berdasarkan penggunaan utama Anda: memancing dan kecepatan lebih menyukai lantai bilah; portabilitas lebih menguntungkan dek udara.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: ['safety-tips'],
     },
     {
       id: 'sup-inflate-pressure',
-      question: 'Ke mana PSI saya harus mengembang SUP ?',
+      question: 'Bagaimana Paddle Board Overstock dibandingkan dengan merek lain?',
       answer:
-        'Tiup hingga PSI maksimum papan untuk kinerja terbaik — biasanya 15–18 PSI untuk SUPs tiup berkualitas. Paddle Board Overstock SUP Explorer 11 bekerja paling baik pada 15–18 PSI. Inflasi yang kurang menyebabkan papan terasa lembut dan jelek dalam pelacakan. Inflasi berlebih melebihi maksimum yang ditetapkan berisiko merusak ulir drop-stitch. Periksa stiker di dekat katup untuk mengetahui peringkat spesifik papan Anda.',
+        'Paddle Board Overstock menawarkan nilai terbaik dalam perlengkapan olahraga air tiup. Dibandingkan dengan Red Paddle Co, Paddle Board Overstock memberikan 90% dari kinerja dengan 60% dari biaya. Dibandingkan dengan iRocker, Paddle Board Overstock menggunakan PVC kualitas militer tiga lapis yang lebih tinggi dan peringkat PSI yang lebih tinggi. Dibandingkan dengan Bluefin, Paddle Board Overstock menawarkan spesifikasi bahan yang lebih unggul. Untuk sebagian besar pengayuh rekreasional, Paddle Board Overstock memberikan keseimbangan terbaik antara kualitas dan harga.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
     },
     {
       id: 'sup-deck-pad-care',
-      question: 'Bagaimana cara membersihkan dan merawat EVA deck pad?',
+      question: 'Bisakah saya memancing dari SUP papan?',
       answer:
-        'Bilas alas dek dengan air segar setelah setiap sesi. Untuk kotoran atau noda, gunakan sabun ringan dan sikat lembut — hindari bahan kimia yang keras. Jika tepi mulai terangkat, aplikasikan sedikit perekat laut tahan air dan tekan dengan berat selama 24 jam. Jaga papan agar tidak langsung UV terkena saat tidak digunakan untuk mencegah kerusakan alas pelindung.',
+        'Ya. Memancing dengan SUP semakin populer karena posisi berdiri memberikan visibilitas yang sangat baik ke dalam air. Pilih papan setidaknya sepanjang 11 kaki dan lebar 33–34 inci untuk stabilitas. Tambahkan krat susu dengan penahan joran yang dipasang pada tali dek, jangkar kecil, dan selalu kenakan PFD. Paddle Board Overstock SUP Explorer 11 bekerja dengan baik untuk memancing santai.',
       category: 'maintenance',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-maintenance'],
     },
     {
       id: 'sup-seated-paddling',
-      question: 'Bisakah saya duduk sambil mendayung papan SUP saya?',
+      question: 'Bisakah saya melakukan yoga di SUP atas papan?',
       answer:
-        'Ya. Banyak papan SUP, termasuk Paddle Board Overstock Explorer 11, memiliki cincin D yang memungkinkan pemasangan kursi. Menggunakan SUP dengan kursi dan dayung satu bilah menawarkan posisi duduk yang nyaman untuk perjalanan yang lebih panjang atau memancing. Beberapa merek menawarkan paket konversi khusus dengan kursi dan dayung yang lebih panjang.',
+        'Tentu saja.SUP Yoga menggabungkan pose tradisional dengan tantangan platform mengambang, mengaktifkan otot penstabil yang lebih dalam. Gunakan papan berukuran 33 inci atau lebih lebar dengan pad dek yang lembut dan mencengkeram. Berlatihlah di air yang tenang dan dangkal dengan jangkar. Mulailah dengan pose dasar seperti downward dog, warrior II, dan pose pohon. SUP Explorer 11 dengan EVA pad dek penuh sangat cocok.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: [],
     },
     {
       id: 'saltwater-rinse',
-      question: 'Do I need to rinse my board after ocean use?',
+      question: 'Apa aturan maskapai untuk bepergian dengan mobil tiup SUP?',
       answer:
-        'Yes — always rinse your board, fins, pump, and paddle with fresh water after saltwater use. Salt crystals work into seams and valves, causing micro-leaks and corrosion. Dry the board in the shade before deflating and storing. Regular rinsing dramatically extends the life of your board.',
+        'Kebanyakan maskapai menerima ransel SUP sebagai bagasi tercatat jika beratnya di bawah 23–32 kg. Ransel Paddle Board Overstock berukuran sekitar 90x40x30 cm dan berat sekitar 15 kg saat dikemas. Beberapa maskapai mungkin mengenakan biaya bagasi berukuran besar. Datanglah lebih awal, bungkus sirip dan pompa secara terpisah dalam tas jinjing Anda, dan beri label tas sebagai rapuh. Selalu periksa kebijakan perlengkapan olahraga maskapai Anda sebelum terbang.',
       category: 'maintenance',
       relatedProducts: [],
       relatedGuides: ['sup-maintenance'],
     },
     {
       id: 'sup-leash-necessity',
-      question: 'Apakah saya benar-benar perlu tali pengikat untuk SUP?',
+      question: 'Perlengkapan keselamatan apa yang saya butuhkan untuk mendayung di air dingin?',
       answer:
-        'Ya — selalu kenakan tali pengikat. Tali pengikat SUP yang digulung dipasang di pergelangan kaki atau betis Anda dan menjaga papan tetap bersama Anda jika Anda jatuh. Di perairan terbuka, tali pengikat dapat menyelamatkan nyawa Anda dengan mencegah terpisah dari alat apung Anda. Untuk mendayung di sungai, gunakan tali pengikat pelepas cepat untuk mencegah terjebak.',
+        'Air di bawah 15°C memerlukan perlindungan termal. Untuk 8–14°C gunakan wetsuit atau drysuit dengan sepatu bot, sarung tangan, dan tudung. Untuk 14–20°C, wetsuit 3/2mm sudah cukup. Selalu kenakan pakaian yang pas PFD untuk perlindungan termal dan keselamatan. Periksa peraturan lokal untuk persyaratan perlengkapan wajib.',
       category: 'safety',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['safety-tips'],
     },
     {
       id: 'company-model',
-      question: 'Apakah Paddle Board Overstock perusahaan dagang atau produsen?',
+      question: 'Berapa jumlah pesanan minimum untuk OEM/ODM?',
       answer:
-        'Bukan pabrik murni maupun perusahaan dagang — Weihai Dongjilian Co., Ltd. adalah perusahaan merek dengan basis manufaktur sendiri. Weihai Dongjilian Co., Ltd. menangani distribusi global, kontrak, penagihan, dan layanan purna jual, sementara Paddle Board Overstock Weihai Manufacturing Hub menjalankan R&D, produksi, dan kontrol kualitas di fasilitas 12.000 m² kami sendiri. Tanpa perantara: setiap pesanan dikirim langsung dari pabrik.',
+        'Jumlah pesanan minimum (MOQs) bervariasi tergantung jenis produk dan kompleksitas. Branding kustom pada model yang ada biasanya membutuhkan 5–10 unit. Desain lambung yang sepenuhnya kustom membutuhkan lebih tinggi MOQs. Hubungi tim penjualan kami dengan kebutuhan Anda untuk penawaran rinci. Kami menangani segala hal mulai dari warna dan logo kustom hingga desain cetakan yang sepenuhnya orisinal.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
     },
     {
       id: 'us-contract-weihai-shipping',
-      question: 'Mengapa kontrak saya dengan perusahaan AS padahal barang dikirim dari Weihai?',
+      question: 'Apakah saya bisa menempelkan logo sendiri pada produk Paddle Board Overstock?',
       answer:
-        'Weihai Dongjilian Co., Ltd. adalah entitas komersial global yang menandatangani kontrak, mengeluarkan faktur, dan menyediakan dukungan purna jual, sementara Weihai Manufacturing Hub memproduksi dan mengirimkan setiap pesanan FOB dari Weihai. Struktur dual-hub ini menjaga kontrak dan penyelesaian standar AS, sambil mempertahankan harga pabrik langsung dan transparansi penuh produksi.',
+        'Ya. OEM Layanan kami mencakup penempatan logo khusus, skema warna khusus, dan kemasan khusus. Kami menawarkan pilihan padprinting, heat transfer, dan bordir tergantung pada jenis produk. Kirimkan karya seni dan spesifikasi Anda ke tim penjualan kami untuk mendapatkan penawaran dan estimasi waktu pengerjaan.',
+      category: 'ordering',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+  ],
+  ko: [
+    {
+      id: 'sup-learning',
+      question: 'SUP 배우기 어렵나요?',
+      answer:
+        '전혀 그렇지 않습니다. 대부분의 초보자는 첫 세션에서 일어나 노를 젓습니다. 저희 올어라운드 SUP 시리즈는 처음 패들러를 위해 특별히 설계된 초넓은 안정 플랫폼을 제공합니다. 잔잔한 물에서 시작하면 몇 분 만에 크루징을 시작할 수 있습니다.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: ['beginner-guide'],
+    },
+    {
+      id: 'ocean-use',
+      question: '바다에서 사용할 수 있나요?',
+      answer:
+        '네. Paddle Board Overstock SUP 보드는 바다, 호수, 강에서 사용할 수 있도록 제작되었습니다. 우리 투어링 시리즈는 연안의 물결에도 적합하며, 모든 보드는 해수 부식을 방지하는 해양 등급 PVC 를 사용합니다. 바다에서 사용 후에는 신선한 물로 세척하세요.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: ['weather-conditions'],
+    },
+    {
+      id: 'inflation-time',
+      question: '부풀리는 데 얼마나 걸리나요?',
+      answer:
+        '포함된 듀얼 액션 펌프를 사용하면 대부분의 보드가 5분 이내에 12–15까지 팽창합니다 PSI . 저희 전기 펌프 옵션은 이를 2분 이내로 단축시켜 줍니다. 디플레이션과 패킹 작업은 약 3분 만에 소요됩니다.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: ['sup-maintenance'],
+    },
+    {
+      id: 'travel-sup',
+      question: '인플레이터블을 가지고 여행할 수 있나요 SUP?',
+      answer:
+        '절대적으로 맞습니다. 모든 Paddle Board Overstock 보드는 편리한 여행을 위해 배낭 크기의 휴대용 케이스에 들어갑니다 — 운송사의 크기 및 무게 제한을 확인하세요. 단 18-22파운드로, 해변, 호수 또는 공항 터미널로 쉽게 운반할 수 있습니다.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'weight-limit',
+      question: '무게 제한이 얼마나 되나요?',
+      answer:
+        '저희 올어라운드 보 SUPs 트는 최대 220파운드까지 지원합니다. 투어링과 요가 시리즈는 최대 250파운드까지 지원하며, RIB 모델에 따라 보통 600–1500파운드까지 지원합니다. 탠덤 사용이나 무거운 짐을 위한 저희 고무선 보트는 더 큰 용량 옵션을 제공합니다.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: ['understanding-specs'],
+    },
+    {
+      id: 'box-contents',
+      question: '상자 안에 뭐가 들어있어?',
+      answer:
+        '모든 Paddle Board Overstock SUP 에는 보드, 여행용 배낭, 이중 작용 손 펌프, 탈부착식 핀, 코일 리쉬, 수리 키트가 포함됩니다. 일부 모델은 카본 패들 업그레이드 옵션도 제공합니다. 고무보트에는 보트, 펌프, 수리 키트, 노가 포함됩니다.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'bundle-deals',
+      question: '번들 딜도 제공하나요?',
+      answer:
+        '네. 별도로 구매하는 것보다 비용을 절감할 수 있는 엄선된 번들을 제공합니다. 현재 번들 프로모션과 대량 할인 가격은 영업팀에 문의해 주세요.',
+      category: 'ordering',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'pfd-requirement',
+      question: '구명조끼가 필요한 SUP 가요?',
+      answer:
+        '네. 많은 관할 구역에서는 모든 수상 선박에 구명조끼를 법적으로 요구하고 SUPs 있습니다. 필수가 아니더라도 CE 인증된 구명조끼는 필수 안전 장비입니다. 우리는 항상 물 위에서 구명조끼를 착용할 것을 권장합니다.',
+      category: 'safety',
+      relatedProducts: [],
+      relatedGuides: ['safety-tips'],
+    },
+    {
+      id: 'paddleboard-registration',
+      question: '고무보트를 등록해야 하나요?',
+      answer:
+        '요건은 관할 구역마다 다릅니다. 대부분의 지역에서는 일정 마력 이상의 엔진을 장착한 팽창선은 등록이 필요합니다. 동력 없는 소형 SUPs 딩기는 보통 등록이 필요하지 않습니다. 구체적인 규정은 지역 해사 당국을 확인하세요.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'puncture-repair',
+      question: '펑크 난 부분은 어떻게 수리하나요?',
+      answer:
+        '사용 영역을 청소하고, 모서리를 둥글게 자른 패치를 준비한 뒤 PVC 접착제를 바르고 단단히 누른 후 24시간 동안 부풀리기 전에 기다리십시오. Paddle Board Overstock 보드에는 수리 키트가 포함되어 있습니다. 자세한 지침은 우리의 인플레이션 수리 가이드를 참조하십시오.',
+      category: 'maintenance',
+      relatedProducts: [],
+      relatedGuides: ['inflatable-repair', 'sup-maintenance'],
+    },
+    {
+      id: 'storage',
+      question: '인플레이터블은 어떻게 보관해야 SUP 하나요?',
+      answer:
+        '신선한 물로 헹구고 완전히 말린 후 완전히 공기가 빠진 후 코에서 느슨하게 굴려 휴대 가방에 넣어 직사광선이 닿지 않는 서늘하고 건조한 곳에 보관하세요. 절대 젖은 상태나 극한 온도에서 보관하지 마세요.',
+      category: 'maintenance',
+      relatedProducts: [],
+      relatedGuides: ['sup-maintenance'],
+    },
+    {
+      id: 'sup-vs-hard',
+      question: '팽창식 보드 아니면 단단 SUP 한 보드 중 어느 쪽이 좋을까요?',
+      answer:
+        '인플레이션 보드는 휴대성, 수납 편리함, 충격 흡수 능력을 제공합니다. 하드 보드는 최대한의 강성과 속도를 제공합니다. 대부분의 레크리에이션 사용자에게 핵심이 포함된 고품질 인플레이터블 drop-stitch 이 실용적인 선택입니다.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: ['inflatable-vs-hard', 'how-to-choose-your-sup'],
+    },
+    {
+      id: 'wind-safety',
+      question: '어떤 풍속이 너무 강한 SUP 가요?',
+      answer:
+        '초급: 10mph 이상(8노트). 중급: 15mph (13노트) 이상. 고급: 20mph (17노트) 이상. 의심스러우면 나가지 마세요. 해안에서 바다로 불어오는 해상 바람은 모든 실력에서 위험합니다.',
+      category: 'safety',
+      relatedProducts: [],
+      relatedGuides: ['weather-conditions', 'safety-tips'],
+    },
+    {
+      id: 'warranty',
+      question: 'Paddle Board Overstock 보증은 무엇입니까?',
+      answer:
+        '모든 Paddle Board Overstock 제품은 포괄적인 제조사 보증이 적용됩니다. 인플레이션 보트 튜브 천, 솔기, 선체는 5년 제한 보증이 제공되며, SUP 보드와 액세서리는 2년 제한 보증이 적용됩니다. 이 보증은 정상적인 사용 조건에서 소재 및 제작상의 결함을 보장합니다.',
+      category: 'warranty',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'warranty-claim',
+      question: '보증 청구는 어떻게 해야 하나요?',
+      answer:
+        '주문 번호, 문제 사진, 간단한 설명을 첨부하여 지원팀에 연락하여 청구를 제출하세요. 대부분의 청구는 영업일 2일 이내에 검토됩니다. 승인된 청구는 며칠 내에 교체 또는 수리 지침을 받습니다.',
+      category: 'warranty',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'shipping-info',
+      question: '배송은 얼마나 걸리나요?',
+      answer:
+        '재고 주문은 2–3영업일 내에 배송됩니다. 미국 국내 주문은 5–10영업일 내에 도착합니다. 국제 주문은 목적지에 따라 10–20영업일 내에 도착합니다. 긴급 주문은 신속 처리가 가능합니다.',
+      category: 'shipping',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'return-policy',
+      question: '반품 정책이 어떻게 되나요?',
+      answer:
+        '저희는 원래 포장된 미사용 제품에 대해 배송 후 30일 이내에 반품을 받습니다. 맞춤 OEM 주문은 반품이 불가합니다. 반품을 시작하려면 저희 지원팀에 연락해 주세요 — 선불 배송 라벨을 제공합니다.',
+      category: 'ordering',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'paddle-length',
+      question: '서비스를 제공하나요 OEM ODM ?',
+      answer:
+        '네. 저희는 기업을 위한 프라이셜 라벨 및 맞춤형 디자인 서비스를 제공합니다. 기존 모델의 맞춤형 브랜딩부터 완전 맞춤형 선체 디자인까지, 저희 엔지니어링 팀이 귀사의 브랜드 아래 제품을 개발할 수 있습니다. 최소 주문량이 적용됩니다.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: ['choosing-paddle'],
+    },
+    {
+      id: 'sup-width-stability',
+      question: '패들 길이는 어느 정도가 필요한가요?',
+      answer:
+        '예를 들어 SUP: 패들은 당신의 키보다 6–8인치 더 높아야 합니다. 카약의 경우: 패들 길이는 보트 너비와 몸통 길이에 따라 달라집니다. 자세한 사이즈는 저희 패들 가이드를 참고하세요.',
+      category: 'product',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
+    },
+    {
+      id: 'sup-volume-weight',
+      question: '어떤 크기의 엔진이 필요 RIB 한가요?',
+      answer:
+        '엔진 크기는 보트 길이와 무게에 따라 달라집니다. 3m는 RIB 보통 15–25mph HP, 4.5m는 RIB 40–60mph HP, 6m는 RIB 90–150mph를 처리 HP 합니다. 항상 HP 보트의 최대 등급 번호판을 따라야 합니다.',
+      category: 'product',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
+    },
+    {
+      id: 'paddleboardoverstock-vs-others',
+      question: '와 의 차이가 무엇인가요 PVC Hypalon?',
+      answer:
+        'PVC 는 더 가볍고, 더 저렴하며, 수리가 더 용이하여 레크리에이션 용도로 적합합니다. Hypalon(CSM)는 우수한 UV 와 화학적 저항성을 제공하며 더 긴 수명을 가지고 있어 상업 및 군사 용도로 선호됩니다. Paddle Board Overstock 는 제품 등급에 따라 두 가지를 모두 사용합니다.',
+      category: 'general',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['how-to-choose-your-sup'],
+    },
+    {
+      id: 'fishing-sup-setup',
+      question: 'SUP 안정성을 위해 가장 좋은 폭은 무엇인가요?',
+      answer:
+        '초보자에게는 33-34인치의 너비가 안정성과 패들링 용이성의 최적 균형을 제공합니다. 32인치보다 좁은 보드는 초보자에게 불안정하게 느껴질 수 있습니다. Paddle Board Overstock SUP Explorer 11의 33인치는 학습용으로 이상적입니다.',
+      category: 'general',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['sup-fishing'],
+    },
+    {
+      id: 'sup-yoga',
+      question: 'SUP 내 체중에 맞는 볼륨을 어떻게 선택하나요?',
+      answer:
+        '초보자에게 적합한 볼륨 목표를 위해 kg에 kg을 곱하세요. 예를 들어, 75kg의 패들러는 최소 165리터가 필요하지만, 220–260리터가 학습에 훨씬 더 안정적입니다. SUP 익스플로러 11은 최대 100kg의 라이더에게 적합한 260리터를 제공합니다.',
+      category: 'general',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['sup-yoga'],
+    },
+    {
+      id: 'airline-travel-sup',
+      question: '내 고무보트에 필요한 엔진 크기는 얼마인가요?',
+      answer:
+        'AirDeck 270 등급은 최대 6 HP. AirDeck 360 등급은 최대 15 HP 등급 . RIB 330등급은 최대 40등급 HP. RIB 450등급 순찰 등급은 최대 60등급 HP. 항상 HP 보트의 최대 등급 번호판을 확인하고 절대 초과하지 마세요.',
+      category: 'general',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['multi-day-trip'],
+    },
+    {
+      id: 'cold-weather-safety',
+      question: '인플레이터블 보트에 가장 적합한 바닥 유형은 무엇인가요?',
+      answer:
+        '알루미늄 슬랫 플로어는 최고의 성능을 제공합니다 — 단단하고, 대패질이 가능하며, 서 있어도 안정적입니다. 에어 데크는 더 가볍고 적재량도 작지만 더 많이 굽습니다. 롤업 플로어는 가장 단순하고 저렴하지만 강성은 가장 낮습니다. 주요 용도에 따라 선택하세요: 낚시와 속도가 슬랫 플로어를 선호하고; 휴대성이 에어 데크를 선호합니다.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: ['safety-tips'],
+    },
+    {
+      id: 'sup-inflate-pressure',
+      question: 'Paddle Board Overstock 는 다른 브랜드와 어떻게 비교됩니까?',
+      answer:
+        'Paddle Board Overstock 는 인플레이션 수상 스포츠 장비에서 최고의 가성비를 제공합니다. Red Paddle Co와 비교했을 때, Paddle Board Overstock 은 성능의 90%를 60% 비용으로 제공합니다. iRocker와 비교하면, Paddle Board Overstock 는 더 고급의 삼중 레이어 군용 PVC 및 높은 PSI 등급을 사용합니다. Bluefin과 비교할 때, Paddle Board Overstock 는 더 우수한 재질 사양을 제공합니다. 대부분의 레크리에이션 패들러에게 Paddle Board Overstock 는 품질과 가격의 최적 균형을 제공합니다.',
+      category: 'product',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
+    },
+    {
+      id: 'sup-deck-pad-care',
+      question: '보드에서 낚시할 수 SUP 있나요?',
+      answer:
+        '네. SUP 낚시는 서 있는 자세가 물속을 잘 볼 수 있게 해주기 때문에 점점 인기를 얻고 있습니다. 안정성을 위해 최소 11피트 길이와 33–34인치 너비의 보드를 선택하세요. 갑판 번지에 고정된 로드 홀더가 있는 우유 상자, 작은 앵커를 추가하고 항상 PFD 를 착용하세요. Paddle Board Overstock SUP Explorer 11은 캐주얼 낚시에 적합합니다.',
+      category: 'maintenance',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['sup-maintenance'],
+    },
+    {
+      id: 'sup-seated-paddling',
+      question: '보드 위에서 요가를 할 수 SUP 있나요?',
+      answer:
+        '물론입니다.SUP 요가는 전통적인 자세와 떠다니는 플랫폼의 도전을 결합하여 더 깊은 안정근을 활성화합니다. 33인치 이상의 보드와 부드럽고 그립감 있는 데크 패드를 사용하세요. 잔잔하고 얕은 물에서 앵커를 착용해 연습하세요. 다운워드 독, 워리어 II, 트리 포즈 같은 기본 자세부터 시작하세요. SUP 완전한 데크 패드가 있는 익스플로러 11이 EVA 잘 맞습니다.',
+      category: 'product',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: [],
+    },
+    {
+      id: 'saltwater-rinse',
+      question: '에어버스 여행에 대한 항공사 규정은 무엇인가요 SUP?',
+      answer:
+        '대부분의 항공사는 23–32kg 미만인 경우 SUP 백팩을 위탁 수하물로 허용합니다. Paddle Board Overstock 백팩은 약 90x40x30cm 크기이며 포장 시 약 15kg입니다. 일부 항공사는 특대 수하물 요금을 부과할 수 있습니다. 일찍 도착하고, 오리발과 펌프를 기내 반입 수하물에 따로 포장하며, 가방에 ‘취급주의’ 라벨을 붙이세요. 항상 항공사의 스포츠 장비 정책을 비행 전에 확인하세요.',
+      category: 'maintenance',
+      relatedProducts: [],
+      relatedGuides: ['sup-maintenance'],
+    },
+    {
+      id: 'sup-leash-necessity',
+      question: '찬물 패들링에 필요한 안전 장비는 무엇인가요?',
+      answer:
+        '15°C 이하의 물은 열 보호가 필요합니다. 8–14°C에서는 부츠, 장갑, 후드가 포함된 웻수트 또는 드라이수트를 착용하세요. 14–20°C에서는 3/2mm 웻수트면 충분합니다. 항상 적절한 착용을 PFD 하여 열 보호와 안전을 위해 착용하세요. 필수 장비 요구 사항에 대해서는 현지 규정을 확인하세요.',
+      category: 'safety',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['safety-tips'],
+    },
+    {
+      id: 'company-model',
+      question: '/의 최소 주문 수량은 얼마 OEM ODM 인가요?',
+      answer:
+        '최소 주문 수량()은 MOQs 제품 종류와 복잡성에 따라 다릅니다. 기존 모델에 맞춤형 브랜딩을 하려면 보통 5–10개 단위가 필요합니다. 완전 맞춤 선체 설계는 더 높은 금액이 필요합니다 MOQs. 자세한 견적을 원하시면 저희 영업팀에 문의해 주세요. 저희는 맞춤 색상과 로고부터 완전히 독창적인 금형 디자인까지 모든 것을 처리합니다.',
+      category: 'ordering',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'us-contract-weihai-shipping',
+      question: 'Paddle Board Overstock 제품에 제 로고를 넣을 수 있나요?',
+      answer:
+        '네. 저희 OEM 서비스에는 맞춤형 로고 배치, 맞춤형 색상 구성, 맞춤형 포장 서비스가 포함되어 있습니다. 제품 유형에 따라 패드 프린팅, 열전사, 자수 옵션을 제공합니다. 작품과 사양을 영업팀에 보내 견적과 리드 타임 견적을 받으시면 됩니다.',
+      category: 'ordering',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+  ],
+  lt: [
+    {
+      id: 'sup-learning',
+      question: 'Ar SUP sunku išmokti?',
+      answer:
+        'Visiškai ne. Dauguma pradedančiųjų atsistoja ir irkluoja jau per pirmąją treniruotę. Mūsų "All-Around" SUP serijoje yra ypač plačios stabilios platformos, sukurtos specialiai pradedantiesiems irkluojantiems. Pradėkite ramioje vandenyje ir per kelias minutes galėsite plaukti.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: ['beginner-guide'],
+    },
+    {
+      id: 'ocean-use',
+      question: 'Ar galiu jį naudoti vandenyne?',
+      answer:
+        'Taip. Paddle Board Overstock SUP lentos yra sukurtos naudoti vandenyne, ežere ir upėje. Mūsų Touring serija įveikia pakrantės bangavimą, o visos lentos naudoja jūrinės klasės PVC, atsparią sūraus vandens korozijai. Po naudojimo vandenyne praplauti gėlu vandeniu.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: ['weather-conditions'],
+    },
+    {
+      id: 'inflation-time',
+      question: 'Kiek laiko užtrunka pripūsti?',
+      answer:
+        'Su komplekte esančiu dvigubo veikimo siurbliu dauguma plokščių išsipučia iki 12–15 laipsnių PSI per mažiau nei 5 minutes. Mūsų elektrinės pompos variantas sumažina šį laiką iki mažiau nei 2 minučių. Defliacija ir užpildymas trunka apie 3 minutes.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: ['sup-maintenance'],
+    },
+    {
+      id: 'travel-sup',
+      question: 'Ar galiu keliauti su pripučiamu daiktu SUP?',
+      answer:
+        'Tikrai taip. Kiekviena Paddle Board Overstock lenta telpa į kuprinę dydžio dėklą, sukurtą patogiam kelionių nešiojimui — patikrinkite savo vežėjo dydžio ir svorio taisykles. Svoris tik 18-22 svarai, todėl lengva nešti į paplūdimį, ežerą ar per oro uosto terminalus.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'weight-limit',
+      question: 'Kokia yra svorio riba?',
+      answer:
+        'Mūsų universalūs SUPs laivai palaiko iki 220 svarų. Touring ir Yoga serijos palaiko iki 250 svarų RIB valtis, priklausomai nuo modelio, paprastai palaiko 600–1500 svarų. Tandeminiam naudojimui arba sunkesniems kroviniams mūsų pripučiamos valtys siūlo didesnę talpą.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: ['understanding-specs'],
+    },
+    {
+      id: 'box-contents',
+      question: 'Kas yra dėžutėje?',
+      answer:
+        'Kiekvienas Paddle Board Overstock SUP apima lentą, kelioninį kuprinę, dvigubos veiksmų rankinį siurblį, nuimamą mentę, spiralės pavadėlį ir taisymo rinkinį. Kai kuriuose modeliuose taip pat yra galimybė atnaujinti į anglies pluošto irklą. Pripučiamuose laivuose yra laivas, siurblys, taisymo rinkinys ir irklai.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'bundle-deals',
+      question: 'Ar siūlote paketinius pasiūlymus?',
+      answer:
+        'Taip. Siūlome atrinktus paketus, kurie leidžia jums sutaupyti pinigų, palyginti su pirkimu atskirai. Susisiekite su mūsų pardavimų komanda dėl naujausių paketų akcijų ir didmeninių nuolaidų.',
+      category: 'ordering',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'pfd-requirement',
+      question: 'Ar man reikia gelbėjimosi liemenės ant SUP?',
+      answer:
+        'Taip. Daugelis jurisdikcijų teisiškai reikalauja gelbėjimosi liemenės bet kokioje vandens transporto priemonėje, įskaitant SUPs. Net jei to nereikalaujama, CE sertifikuota gelbėjimosi liemenė yra būtina saugos įranga. Rekomenduojame ją visada dėvėti vandenyje.',
+      category: 'safety',
+      relatedProducts: [],
+      relatedGuides: ['safety-tips'],
+    },
+    {
+      id: 'paddleboard-registration',
+      question: 'Ar turiu registruoti savo pripučiamą valtį?',
+      answer:
+        'Reikalavimai skiriasi priklausomai nuo jurisdikcijos. Daugumoje regionų pripučiami laivai, kurių varikliai viršija tam tikrą arklio galią, reikalauja registracijos. Nevaromi SUPs ir maži jolliniai paprastai nereikalauja. Patikrinkite savo vietos jūrų instituciją dėl konkrečių taisyklių.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'puncture-repair',
+      question: 'Kaip pataisyti pradūrimą?',
+      answer:
+        'Išvalykite plotą, išpjaukite pleistrą su apvaliais kampais, užtepkite PVC klijus, stipriai prispauskite ir palaukite 24 valandas prieš pūsdami. Paddle Board Overstock lentos turi remonto rinkinį. Išsamias instrukcijas rasite mūsų pripučiamų daiktų remonto vadove.',
+      category: 'maintenance',
+      relatedProducts: [],
+      relatedGuides: ['inflatable-repair', 'sup-maintenance'],
+    },
+    {
+      id: 'storage',
+      question: 'Kaip turėčiau laikyti savo pripučiamą daiktą SUP?',
+      answer:
+        'Skalaukite šviežiu vandeniu, visiškai išdžiovinkite, visiškai išleiskite orą, laisvai suvyniokite nuo nosies ir laikykite krepšyje vėsioje, sausoje vietoje, toli nuo tiesioginių saulės spindulių. Niekada nelaikykite šlapio ar ekstremalioje temperatūroje.',
+      category: 'maintenance',
+      relatedProducts: [],
+      relatedGuides: ['sup-maintenance'],
+    },
+    {
+      id: 'sup-vs-hard',
+      question: 'Pripučiama ar kieta SUP lenta?',
+      answer:
+        'Pripučiamos lentos suteikia nešiojamumą, patogų laikymą ir smūgių sugėrimą. Kietos lentos pasižymi maksimaliu standumu ir greičiu. Daugumai mėgėjų praktiškas pasirinkimas yra kokybiškas pripučiamas su drop-stitch šerdimi.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: ['inflatable-vs-hard', 'how-to-choose-your-sup'],
+    },
+    {
+      id: 'wind-safety',
+      question: 'Koks vėjo greitis yra per didelis SUP?',
+      answer:
+        'Pradedantieji: virš 10 mylių per valandą (8 mazgai). Vidutiniai: virš 15 mylių per valandą (13 mazgų). Pažengę: virš 20 mylių per valandą (17 mazgų). Jei kyla abejonių, neik į jūrą. Atviras vėjas (pučiantis iš žemės į jūrą) yra pavojingas bet kokiame įgūdžių lygyje.',
+      category: 'safety',
+      relatedProducts: [],
+      relatedGuides: ['weather-conditions', 'safety-tips'],
+    },
+    {
+      id: 'warranty',
+      question: 'Kokia yra Paddle Board Overstock garantija?',
+      answer:
+        'Visi Paddle Board Overstock produktai yra palaikomi visapusiška gamintojo garantija. Pripučiamo valties vamzdžio audinys, siūlės ir korpusas yra padengti 5 metų ribota garantija; SUP lentos ir priedai turi 2 metų ribotą garantiją. Garantija apima medžiagų ir gamybos defektus įprasto naudojimo metu.',
+      category: 'warranty',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'warranty-claim',
+      question: 'Kaip pateikti garantijos pretenziją?',
+      answer:
+        'Pateikite pretenziją susisiekę su mūsų pagalbos komanda, pateikdami užsakymo numerį, problemos nuotraukas ir trumpą aprašymą. Dauguma pretenzijų peržiūrimos per 2 darbo dienas. Patvirtintos pretenzijos per kelias dienas gauna pakeitimo ar remonto instrukcijas.',
+      category: 'warranty',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'shipping-info',
+      question: 'Kiek laiko trunka siuntimas?',
+      answer:
+        'Sandėlyje esantys užsakymai išsiunčiami per 2–3 darbo dienas. JAV vidaus užsakymai atkeliauja per 5–10 darbo dienų. Tarptautiniai užsakymai atkeliauja per 10–20 darbo dienų, priklausomai nuo paskirties vietos. Skubūs užsakymai gali būti pagreitinti.',
+      category: 'shipping',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'return-policy',
+      question: 'Kokia jūsų grąžinimo politika?',
+      answer:
+        'Mes priimame grąžinimus per 30 dienų nuo pristatymo už nenaudotus produktus originalioje pakuotėje. Individualūs OEM užsakymai nėra grąžinami. Susisiekite su mūsų palaikymo komanda, kad inicijuotumėte grąžinimą – mes pateikiame išankstinio apmokėjimo siuntimo etiketę.',
+      category: 'ordering',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'paddle-length',
+      question: 'Ar siūlote OEM/ODM teikiate paslaugas?',
+      answer:
+        'Taip. Siūlome privačių prekių ženklų ir individualaus dizaino paslaugas verslams. Nuo individualaus prekės ženklo esamuose modeliuose iki visiškai individualių korpusų dizainų – mūsų inžinierių komanda gali kurti produktus po jūsų prekės ženklu. Taikomi minimalūs užsakymų kiekiai.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: ['choosing-paddle'],
+    },
+    {
+      id: 'sup-width-stability',
+      question: 'Kokio ilgio man reikia?',
+      answer:
+        'Dėl SUP: irklas turėtų būti 6–8 coliais aukštesnis už jūsų ūgį. Baidarėms: irklų ilgis priklauso nuo valties pločio ir liemens ilgio. Daugiau apie dydį rasite mūsų irklų vadove.',
+      category: 'product',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
+    },
+    {
+      id: 'sup-volume-weight',
+      question: 'Kokio dydžio variklio man reikia RIB?',
+      answer:
+        'Variklio dydis priklauso nuo valties ilgio ir svorio. 3 m RIB paprastai tinka 15–25 cm HP, 4,5 m – RIB 40–60, HP o 6 m – RIB 90–150 HP. Visada laikykitės HP maksimalaus reitingo lentelės savo laive.',
+      category: 'product',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
+    },
+    {
+      id: 'paddleboardoverstock-vs-others',
+      question: 'Kuo skiriasi PVC ir Hypalon?',
+      answer:
+        'PVC yra lengvesnis, pigesnis ir lengviau taisomas – idealus pramoginiam naudojimui. Hypalon (CSM) siūlo geresnę UV ir cheminį atsparumą bei ilgesnį tarnavimo laiką, todėl pageidaujamas komerciniams ir kariniams taikymams. Paddle Board Overstock naudoja abu, priklausomai nuo produkto lygio.',
+      category: 'general',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['how-to-choose-your-sup'],
+    },
+    {
+      id: 'fishing-sup-setup',
+      question: 'Koks SUP plotis yra geriausias stabilumui?',
+      answer:
+        'Pradedantiesiems 33–34 colių pločio lenta užtikrina geriausią stabilumo ir irklavimo lengvumo pusiausvyrą. Lentos siauresnės nei 32 coliai naujokams atrodo nestabilios. Paddle Board Overstock SUP Explorer 11 su 33 colių pločiu yra idealus mokymuisi.',
+      category: 'general',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['sup-fishing'],
+    },
+    {
+      id: 'sup-yoga',
+      question: 'Kaip pasirinkti SUP tūrį pagal savo svorį?',
+      answer:
+        'Padauginkite savo svorį kilogramais iš 2,2, kad gautumėte pradedantiesiems tinkamą tūrio tikslą. Pavyzdžiui, 75 kg irkluotojui reikia bent 165 litrų, tačiau 220–260 litrų yra daug stabilesnis mokymuisi. SUP Explorer 11 siūlo 260 litrų, tinkamą iki 100 kg sveriantiems sportininkams.',
+      category: 'general',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['sup-yoga'],
+    },
+    {
+      id: 'airline-travel-sup',
+      question: 'Kokio dydžio variklio man reikia mano pripučiamai valčiai?',
+      answer:
+        'AirDeck 270 modeliui naudokite iki 6 HP. AirDeck 360 – iki 15 HP. RIB 330 – iki 40 HP. RIB 450 Patrol – iki 60 HP. Visada patikrinkite HP maksimalų reitingo numerį savo laive ir niekada jo neviršykite.',
+      category: 'general',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['multi-day-trip'],
+    },
+    {
+      id: 'cold-weather-safety',
+      question: 'Kokio tipo grindys geriausiai tinka pripučiamai valčiai?',
+      answer:
+        'Aliuminio lentelių grindys užtikrina geriausią našumą – standžios, tinkamos planuoti ir stabilios stovint. Oro deniai yra lengvesni ir kompaktiškesni, bet labiau lankstūs. Sulankstomos grindys yra paprasčiausios ir prieinamiausios, tačiau turi mažiausią standumą. Rinkitės pagal pagrindinį paskirtį: žvejyba ir greitis labiau tinka lentų grindims; nešiojamumas palankus oro deniams.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: ['safety-tips'],
+    },
+    {
+      id: 'sup-inflate-pressure',
+      question: 'Kaip Paddle Board Overstock lyginamas su kitais prekių ženklais?',
+      answer:
+        'Paddle Board Overstock siūlo geriausią kainos ir kokybės santykį pripučiamos vandens sporto įrangos srityje. Palyginti su Red Paddle Co, Paddle Board Overstock suteikia 90% našumo už 60% kainos. Palyginti su iRocker, Paddle Board Overstock naudoja aukštesnės kokybės trigubo sluoksnio karinę PVC medžiagą ir didesnius PSI reitingus. Palyginti su Bluefin, Paddle Board Overstock siūlo pranašesnes medžiagų savybes. Daugumai pramoginių irkluotojų Paddle Board Overstock suteikia geriausią kokybės ir kainos balansą.',
+      category: 'product',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
+    },
+    {
+      id: 'sup-deck-pad-care',
+      question: 'Ar galiu žvejoti nuo SUP lentos?',
+      answer:
+        'Taip. SUP žvejyba tampa vis populiaresnė, nes stovima padėtis suteikia puikų matomumą į vandenį. Pasirinkite lentą, kuri būtų bent 11 pėdų ilgio ir 33–34 colių pločio stabilumui. Pridėkite pieno dėžę su meškerių laikikliais, pritvirtintą prie denio guminių dirželių, mažą inkarą ir visada dėvėkite PFD. Paddle Board Overstock SUP Explorer 11 puikiai tinka laisvalaikio žvejybai.',
+      category: 'maintenance',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['sup-maintenance'],
+    },
+    {
+      id: 'sup-seated-paddling',
+      question: 'Ar galiu daryti jogą ant SUP lentos?',
+      answer:
+        'Tikrai taip.SUP Joga derina tradicines pozas su iššūkiu plaukiojančioje platformoje, įtraukiančioje gilesnius stabilizatorius. Naudokite lentą, kuri yra 33 colių ar platesnė, su minkšta, gerai sukibusia terasa. Praktikuokite ramioje, seklioje vandenyje su inkaru. Pradėkite nuo pagrindinių pozų, tokių kaip žemyn nukreiptas šuo, karys II ir medžio poza. SUP Explorer 11 su pilnu EVA denio padu puikiai tinka.',
+      category: 'product',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: [],
+    },
+    {
+      id: 'saltwater-rinse',
+      question: 'Kokios yra oro linijų taisyklės keliaujant su pripučiamu lėktuvu SUP?',
+      answer:
+        'Dauguma oro linijų priima SUP kuprines kaip registruotą bagažą, jei jos sveria mažiau nei 23–32 kg. Paddle Board Overstock kuprinė yra maždaug 90x40x30 cm ir sveria apie 15 kg supakuota. Kai kurios oro linijos gali taikyti didelio bagažo mokesčius. Atvykite anksti, atskirai supakuokite pelekus ir pompą rankiniame bagaže, ir pažymėkite krepšį kaip trapią. Visada iš anksto pasidomėkite savo oro linijų sportinės įrangos politika prieš skrydį.',
+      category: 'maintenance',
+      relatedProducts: [],
+      relatedGuides: ['sup-maintenance'],
+    },
+    {
+      id: 'sup-leash-necessity',
+      question: 'Kokios saugos įrangos reikia šalto vandens irklavimui?',
+      answer:
+        'Vandeniui žemiau 15°C reikalinga šiluminė apsauga. 8–14°C temperatūroje naudokite hidrokostiumą arba sausą kostiumą su batais, pirštinėmis ir gobtuvu. 14–20°C temperatūroje pakanka 3/2 mm hidrokostiumo. Visada dėvėkite tinkamai pritaikytą hidrokostiumą PFD dėl šiluminės apsaugos ir saugumo. Patikrinkite vietinius reikalavimus dėl privalomų įrangos reikalavimų.',
+      category: 'safety',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['safety-tips'],
+    },
+    {
+      id: 'company-model',
+      question: 'Kokie yra minimalūs užsakymo kiekiai OEM/ODM?',
+      answer:
+        'Minimalūs užsakymų kiekiai (MOQs) skiriasi priklausomai nuo produkto tipo ir sudėtingumo. Individualus ženklinimas esamuose modeliuose paprastai reikalauja 5–10 vienetų. Visiškai individualūs korpuso dizainai reikalauja didesnių MOQs. Susisiekite su mūsų pardavimų komanda ir pateikite savo reikalavimus dėl išsamios kainos pasiūlymo. Mes rūpinamės viskuo – nuo individualių spalvų ir logotipų iki visiškai originalių formų dizainų.',
+      category: 'ordering',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'us-contract-weihai-shipping',
+      question: 'Ar galiu ant Paddle Board Overstock produktų dėti savo logotipą?',
+      answer:
+        'Taip. Mūsų OEM paslauga apima individualų logotipų išdėstymą, individualias spalvų schemas ir individualias pakuotes. Siūlome pagalvėlių spausdinimo, šilumos perdavimo ir siuvinėjimo galimybes, priklausomai nuo produkto tipo. Siųskite savo meno kūrinius ir specifikacijas mūsų pardavimų komandai, kad gautumėte pasiūlymą ir numatomą terminą.',
+      category: 'ordering',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+  ],
+  lv: [
+    {
+      id: 'sup-learning',
+      question: 'Vai to SUP ir grūti apgūt?',
+      answer:
+        'Nemaz ne. Lielākā daļa iesācēju pieceļas un airē jau pirmajā nodarbībā. Mūsu All-Around SUP sērijā ir īpaši platas stabilas platformas, kas īpaši izstrādātas pirmreizējiem airētājiem. Sāciet mierīgā ūdenī, un jūs varēsiet braukt jau pēc dažām minūtēm.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: ['beginner-guide'],
+    },
+    {
+      id: 'ocean-use',
+      question: 'Vai es varu to izmantot okeānā?',
+      answer:
+        'Jā. Paddle Board Overstock SUP dēļi ir izgatavoti izmantošanai okeānā, ezerā un upē. Mūsu Touring sērija tiek galā ar piekrastes viļņiem, un visi dēļi izmanto jūras klases PVC, kas iztur sālsūdens koroziju. Pēc izmantošanas okeānā noskalo ar svaigu ūdeni.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: ['weather-conditions'],
+    },
+    {
+      id: 'inflation-time',
+      question: 'Cik ilgi nepieciešams, lai uzpūstos?',
+      answer:
+        'Ar komplektā iekļauto divu darbību sūkni lielākā daļa dēļu piepūšas līdz 12–15 grādiem PSI mazāk nekā 5 minūtēs. Mūsu elektriskā sūkņa opcija šo laiku samazina līdz mazāk nekā 2 minūtēm. Deflācija un iepakošana aizņem apmēram 3 minūtes.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: ['sup-maintenance'],
+    },
+    {
+      id: 'travel-sup',
+      question: 'Vai es varu ceļot ar piepūšamo ierīci SUP?',
+      answer:
+        'Pilnīgi noteikti. Katrs Paddle Board Overstock dēlis ietilpst mugursomas izmēra pārnēsāšanas somā, kas paredzēta ērtai ceļošanai — pārbaudiet sava pārvadātāja izmēru un svara politiku. Tikai 18–22 mārciņas smags, to viegli nogādāt pludmalē, ezerā vai caur lidostas termināliem.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'weight-limit',
+      question: 'Kas ir svara ierobežojums?',
+      answer:
+        'Mūsu All-Around SUPs atbalsta līdz 220 mārciņām. Touring un Yoga sērijas atbalsta līdz 250 mārciņām. RIB Laivas parasti atbalsta 600–1500 mārciņas atkarībā no modeļa. Tandēma lietošanai vai smagākām kravām mūsu piepūšamās laivas piedāvā lielākas ietilpības iespējas.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: ['understanding-specs'],
+    },
+    {
+      id: 'box-contents',
+      question: 'Kas ir kastē?',
+      answer:
+        'Katrs Paddle Board Overstock SUP komplekts ietver dēli, ceļojumu mugursomu, divfunkciju roku sūkni, noņemamu spuru, spirālveida siksnu un remonta komplektu. Daži modeļi ietver arī oglekļa airu uzlabošanas iespēju. Piepūšamie laivas komplekti satur laivu, sūkni, remonta komplektu un airus.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'bundle-deals',
+      question: 'Vai jūs piedāvājat komplektu piedāvājumus?',
+      answer:
+        'Jā. Mēs piedāvājam rūpīgi atlasītus komplektus, kas ļauj ietaupīt naudu, salīdzinot ar preču iegādi atsevišķi. Sazinieties ar mūsu pārdošanas komandu, lai uzzinātu aktuālas komplektu akcijas un apjoma atlaides.',
+      category: 'ordering',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'pfd-requirement',
+      question: 'Vai man vajag glābšanas vesti uz SUP?',
+      answer:
+        'Jā. Daudzās jurisdikcijās likums prasa glābšanas vesti jebkurā ūdens transportlīdzeklī, tostarp SUPs. Pat ja tas nav obligāti, CE sertificēta glābšanas veste ir būtisks drošības aprīkojums. Mēs iesakām to valkāt visu laiku uz ūdens.',
+      category: 'safety',
+      relatedProducts: [],
+      relatedGuides: ['safety-tips'],
+    },
+    {
+      id: 'paddleboard-registration',
+      question: 'Vai man ir jāreģistrē sava piepūšamā laiva?',
+      answer:
+        'Prasības atšķiras atkarībā no jurisdikcijas. Lielākajā daļā reģionu piepūšamām laivām ar dzinējiem, kas pārsniedz noteiktu zirgspēku, reģistrācija ir nepieciešama. Nemotorizētām SUPs un mazām laivām parasti tāda nav. Pārbaudiet vietējo jūras pārvaldi par konkrētiem noteikumiem.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'puncture-repair',
+      question: 'Kā es varu salabot riepu caurumu?',
+      answer:
+        'Notīriet vietu, izgrieziet pleķi ar noapaļotiem stūriem, uzklājiet PVC līmi, cieši nospiediet un gaidiet 24 stundas pirms piepūšanas. Paddle Board Overstock dēļi ietver remonta komplektu. Lai iegūtu detalizētas instrukcijas, skatiet mūsu piepūšamo dēļu remonta ceļvedi.',
+      category: 'maintenance',
+      relatedProducts: [],
+      relatedGuides: ['inflatable-repair', 'sup-maintenance'],
+    },
+    {
+      id: 'storage',
+      question: 'Kā man vajadzētu glabāt savu piepūšamo ierīci SUP?',
+      answer:
+        'Skalojiet ar svaigu ūdeni, pilnībā izžāvējiet, pilnībā iztukšojiet, brīvi rullējiet no deguna un glabājiet somā vēsā, sausā vietā, prom no tiešiem saules stariem. Nekad neglabājiet mitru vai ekstremālos temperatūras apstākļos.',
+      category: 'maintenance',
+      relatedProducts: [],
+      relatedGuides: ['sup-maintenance'],
+    },
+    {
+      id: 'sup-vs-hard',
+      question: 'Piepūšamais vai cietais SUP dēlis?',
+      answer:
+        'Piepūšamie dēļi nodrošina pārnēsājamību, ērtu uzglabāšanas ērtību un triecienu absorbciju. Cietie dēļi nodrošina maksimālu stingrību un ātrumu. Lielākajai daļai atpūtas lietotāju kvalitatīvs piepūšamais dēlis ar drop-stitch kodolu ir praktiskā izvēle.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: ['inflatable-vs-hard', 'how-to-choose-your-sup'],
+    },
+    {
+      id: 'wind-safety',
+      question: 'Kāds vēja ātrums ir par lielu SUP?',
+      answer:
+        'Iesācēji: virs 10 mph (8 mezgli). Vidējais: virs 15 mph (13 mezgli). Advanced: virs 20 mph (17 mezgli). Ja šaubies, neizej ārā. Jūras vējš (pūšot no sauszemes uz jūru) ir bīstams jebkurā prasmju līmenī.',
+      category: 'safety',
+      relatedProducts: [],
+      relatedGuides: ['weather-conditions', 'safety-tips'],
+    },
+    {
+      id: 'warranty',
+      question: 'Kāda ir Paddle Board Overstock garantija?',
+      answer:
+        'Visi Paddle Board Overstock produkti ir apdrošināti ar visaptverošu ražotāja garantiju. Piepūšamā laivas caurules audums, šuves un korpuss ir segti ar 5 gadu ierobežotu garantiju; SUP dēļi un aksesuāri ir segti ar 2 gadu ierobežotu garantiju. Garantija attiecas uz materiālu un izstrādājuma defektiem normālas lietošanas laikā.',
+      category: 'warranty',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'warranty-claim',
+      question: 'Kā iesniegt garantijas prasību?',
+      answer:
+        'Iesniedziet prasību, sazinoties ar mūsu atbalsta komandu, norādot pasūtījuma numuru, problēmas fotogrāfijas un īsu aprakstu. Lielākā daļa prasību tiek izskatītas 2 darba dienu laikā. Apstiprinātās prasības saņem nomaiņas vai remonta instrukcijas dažu dienu laikā.',
+      category: 'warranty',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'shipping-info',
+      question: 'Cik ilgi aizņem piegāde?',
+      answer:
+        'Noliktavā esošie pasūtījumi tiek piegādāti 2–3 darba dienu laikā. ASV iekšzemes pasūtījumi ierodas 5–10 darba dienu laikā. Starptautiskie pasūtījumi ierodas 10–20 darba dienu laikā atkarībā no galamērķa. Steidzamos pasūtījumus var paātrināt.',
+      category: 'shipping',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'return-policy',
+      question: 'Kāda ir jūsu atgriešanas politika?',
+      answer:
+        'Mēs pieņemam atgriešanu 30 dienu laikā pēc piegādes neizmantotiem produktiem oriģinālajā iepakojumā. Pielāgotie/OEM pasūtījumi nav atgriežami. Sazinieties ar mūsu atbalsta komandu, lai uzsāktu atgriešanu — mēs nodrošinām priekšapmaksas piegādes etiķeti.',
+      category: 'ordering',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'paddle-length',
+      question: 'Vai jūs piedāvājat OEM/ODM pakalpojumus?',
+      answer:
+        'Jā. Mēs piedāvājam privātā zīmola un pielāgota dizaina pakalpojumus uzņēmumiem. No pielāgota zīmola uz esošiem modeļiem līdz pilnībā pielāgotiem korpusu dizainiem – mūsu inženieru komanda var izstrādāt produktus zem jūsu zīmola. Tiek piemēroti minimālie pasūtījuma apjomi.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: ['choosing-paddle'],
+    },
+    {
+      id: 'sup-width-stability',
+      question: 'Kādu airi man vajag?',
+      answer:
+        'Piemēram SUP: airim jābūt par 6–8 collām augstākam par jūsu augumu. Kajakam: airu garums ir atkarīgs no laivas platuma un torsa garuma. Skatiet mūsu airu ceļvedi ar detalizētu izmēru.',
+      category: 'product',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
+    },
+    {
+      id: 'sup-volume-weight',
+      question: 'Kāda izmēra dzinējs man ir nepieciešams RIB?',
+      answer:
+        'Dzinēja izmērs ir atkarīgs no laivas garuma un svara. 3 m RIB parasti iztur 15–25 collas HP, 4,5 m – RIB 40–60, HP bet 6 m – RIB 90–150 HP collas. Vienmēr ievērojiet HP savas laivas maksimālo vērtējuma plati.',
+      category: 'product',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
+    },
+    {
+      id: 'paddleboardoverstock-vs-others',
+      question: 'Kāda ir atšķirība starp PVC un Hypalon?',
+      answer:
+        'PVC ir vieglāks, lētāks un vieglāk remontējams — ideāli piemērots atpūtas lietošanai. Hypalon (CSM) piedāvā augstāku UV un ķīmiskās izturības līmeni ar ilgāku kalpošanas laiku, to dod priekšroka komerciālai un militārai lietošanai. Paddle Board Overstock izmanto abus atkarībā no produkta līmeņa.',
+      category: 'general',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['how-to-choose-your-sup'],
+    },
+    {
+      id: 'fishing-sup-setup',
+      question: 'Kāds SUP platums ir labākais stabilitātei?',
+      answer:
+        'Iesācējiem platums 33–34 collas nodrošina labāko stabilitātes un airēšanas viegluma līdzsvaru. Dēļi, kas šaurāki par 32 collām, jaunajiem airētājiem šķiet nestabili. Paddle Board Overstock SUP Explorer 11 ar 33 collām ir ideāls mācībām.',
+      category: 'general',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['sup-fishing'],
+    },
+    {
+      id: 'sup-yoga',
+      question: 'Kā izvēlēties SUP apjomu savam svaram?',
+      answer:
+        'Reiziniet savu svaru kilogramos ar 2,2, lai iegūtu iesācējiem draudzīgu tilpuma mērķi. Piemēram, 75 kg airētājam nepieciešami vismaz 165 litri, bet 220–260 litri ir daudz stabilāki mācībām. SUP Explorer 11 piedāvā 260 litrus, kas piemēroti braucējiem līdz 100 kg.',
+      category: 'general',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['sup-yoga'],
+    },
+    {
+      id: 'airline-travel-sup',
+      question: 'Kāda izmēra dzinējs man vajadzīgs manai piepūšamajai laivai?',
+      answer:
+        'AirDeck Par 270 izmanto līdz 6 HP. AirDeck Par 360 līdz 15 HP. Par RIB 330 līdz 40 HP. Par RIB 450 Patrol līdz līdz 60 HP. Vienmēr pārbaudi HP maksimālo reitinga plāksni uz savas laivas un nekad to nepārsniedz.',
+      category: 'general',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['multi-day-trip'],
+    },
+    {
+      id: 'cold-weather-safety',
+      question: 'Kāds grīdas tips ir vispiemērotākais piepūšamajai laivai?',
+      answer:
+        'Alumīnija līstes grīdas nodrošina vislabāko veiktspēju — stingras, piemērotas planēšanai un stabilas stāvēšanai. Gaisa klāji ir vieglāki un kompaktāki, bet elastīgāki. Uzvelkamās grīdas ir vienkāršākās un pieejamākās, bet piedāvā vismazāko stingrību. Izvēlieties pēc galvenā pielietojuma: makšķerēšana un ātrums dod priekšroku līstu grīdām; pārnēsājamība dod priekšroku gaisa klājiem.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: ['safety-tips'],
+    },
+    {
+      id: 'sup-inflate-pressure',
+      question: 'Kā Paddle Board Overstock salīdzina ar citām zīmolu?',
+      answer:
+        'Paddle Board Overstock piedāvā labāko vērtību uzpūšamajos ūdens sporta aprīkojumos. Salīdzinot ar Red Paddle Co, Paddle Board Overstock nodrošina 90% snieguma par 60% no izmaksām. Salīdzinot ar iRocker, Paddle Board Overstock izmanto augstākas klases trīsslāņu militāras kvalitātes PVC un augstākus PSI rādītājus. Salīdzinot ar Bluefin, Paddle Board Overstock piedāvā labākus materiālu parametrus. Lielākajai daļai rekreācijas airētāju Paddle Board Overstock nodrošina labāko kvalitātes un cenas līdzsvaru.',
+      category: 'product',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
+    },
+    {
+      id: 'sup-deck-pad-care',
+      question: 'Vai es varu makšķerēt no SUP dēļa?',
+      answer:
+        'Jā. SUP makšķerēšana kļūst aizvien populārāka, jo stāvoša pozīcija nodrošina lielisku redzamību ūdenī. Izvēlieties dēli vismaz 11 pēdu garumā un 33–34 collas platumā stabilitātei. Pievienojiet piena kasti ar makšķerkātu turētājiem, kas piestiprināti pie dēļa gumijām, mazu enkuru, un vienmēr valkājiet PFD. Paddle Board Overstock SUP Explorer 11 ir labi piemērots ikdienas makšķerēšanai.',
+      category: 'maintenance',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['sup-maintenance'],
+    },
+    {
+      id: 'sup-seated-paddling',
+      question: 'Vai es varu nodarboties ar jogu uz SUP dēļa?',
+      answer:
+        'Pilnīgi noteikti.SUP Joga apvieno tradicionālas pozas ar izaicinājumu uz peldošas platformas, iesaistot dziļākus stabilizatora muskuļus. Izmanto dēli, kas ir 33 collas vai platāks, ar mīkstu, saķeramu klāja paliktni. Trenējies mierīgā, seklā ūdenī ar enkuru. Sāc ar pamata pozām, piemēram, lejupvērsto suni, karotāju II un koka pozu. SUP Explorer 11 ar pilnu EVA klāja paliktni ir lieliski piemērots.',
+      category: 'product',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: [],
+    },
+    {
+      id: 'saltwater-rinse',
+      question: 'Kādi ir aviokompāniju noteikumi ceļošanai ar piepūšamo lidmašīnu SUP?',
+      answer:
+        'Lielākās aviokompānijas pieņem SUP mugursomas kā reģistrēto bagāžu, ja tās sver mazāk par 23–32 kg. Paddle Board Overstock mugursoma ir aptuveni 90x40x30 cm un sver apmēram 15 kg iepakota. Dažas aviokompānijas var piemērot maksu par pārmērīgu bagāžu. Ierodieties savlaicīgi, somā atsevišķi iepakojiet spuras un pumpi, un pielīmējiet etiķeti kā trauslu. Vienmēr pirms lidojuma izpētiet aviokompānijas sporta aprīkojuma politiku.',
+      category: 'maintenance',
+      relatedProducts: [],
+      relatedGuides: ['sup-maintenance'],
+    },
+    {
+      id: 'sup-leash-necessity',
+      question: 'Kādu drošības aprīkojumu man vajag aukstā ūdens airēšanai?',
+      answer:
+        'Ūdenim zem 15°C nepieciešama termiskā aizsardzība. 8–14°C gadījumā lietojiet neoprēna tērpu vai sauso tērpu ar zābakiem, cimdiem un kapuci. Pie 14–20°C pietiek ar 3/2 mm hidrotērpu. Vienmēr valkājiet pareizi pieguļošu hidrotērpu PFD termiskās aizsardzības un drošības nolūkos. Pārbaudiet vietējos noteikumus par obligātajām aprīkojuma prasībām.',
+      category: 'safety',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['safety-tips'],
+    },
+    {
+      id: 'company-model',
+      question: 'Kādi ir minimālie pasūtījuma apjomi OEM/ODM?',
+      answer:
+        'Minimālie pasūtījuma apjomi (MOQs) atšķiras atkarībā no produkta veida un sarežģītības. Pielāgota zīmola veidošana esošajos modeļos parasti prasa 5–10 vienības. Pilnībā pielāgotiem korpusa dizainiem nepieciešams augstāks MOQs. Sazinieties ar mūsu pārdošanas komandu, lai saņemtu detalizētu piedāvājumu. Mēs apstrādājam visu, sākot no pielāgotām krāsām un logotipiem līdz pilnīgi oriģināliem veidņu dizainiem.',
+      category: 'ordering',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'us-contract-weihai-shipping',
+      question: 'Vai es varu uz Paddle Board Overstock produktiem uzlikt savu logotipu?',
+      answer:
+        'Jā. Mūsu OEM pakalpojums ietver pielāgotu logotipu izvietojumu, pielāgotas krāsu shēmas un personalizētu iepakojumu. Mēs piedāvājam spilventiņu drukas, siltuma pārneses un izšūšanas iespējas atkarībā no produkta veida. Nosūtiet savus mākslas darbus un specifikācijas mūsu pārdošanas komandai, lai saņemtu piedāvājumu un izpildes laika novērtējumu.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -918,18 +2658,18 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'weight-limit',
-      question: 'What is the weight limit?',
+      question: 'Apakah had beratnya?',
       answer:
-        'Our All-Around SUPs support up to 220 lbs. The Touring and Yoga series support up to 250 lbs. For tandem paddling or heavier riders, choose a wider, higher-volume board.',
+        'Serba Boleh kami SUPs menyokong sehingga 220 lbs. Siri Touring dan Yoga menyokong sehingga 250 lbs. RIB bot biasanya menyokong 600–1500 lbs bergantung pada model. Untuk kegunaan tandem atau muatan yang lebih berat, bot tiup kami menawarkan pilihan kapasiti lebih tinggi.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: ['understanding-specs'],
     },
     {
       id: 'box-contents',
-      question: 'What comes in the box?',
+      question: 'Apa yang ada dalam kotak?',
       answer:
-        'Every Paddle Board Overstock SUP includes the board, a travel backpack, dual-action hand pump, removable fin, coil leash, and repair kit. Some models also include a carbon paddle upgrade option.',
+        'Setiap Paddle Board Overstock SUP termasuk papan, beg galas untuk perjalanan, pam tangan dua tindakan, sirip boleh tanggal, tali leher koil, dan kit pembaikan. Beberapa model juga termasuk pilihan peningkatan dayung karbon. Bot boleh kembung termasuk bot, pam, kit pembaikan, dan dayung.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -945,18 +2685,18 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'pfd-requirement',
-      question: 'Do I need a life vest on a SUP?',
+      question: 'Adakah saya perlu memakai jaket keselamatan SUP pada ?',
       answer:
-        'Yes. Many jurisdictions legally require a life vest when paddling, including on SUPs. Even where not required, a life vest is essential safety equipment. We recommend wearing it at all times on the water.',
+        'Ya. Banyak bidang kuasa secara sah mewajibkan jaket keselamatan pada mana-mana kenderaan air, termasuk SUPs. Walaupun tidak diperlukan, CE jaket keselamatan yang diperakui adalah peralatan keselamatan yang penting. Kami mengesyorkan memakainya setiap masa di atas air.',
       category: 'safety',
       relatedProducts: [],
       relatedGuides: ['safety-tips'],
     },
     {
       id: 'paddleboard-registration',
-      question: 'Do I need to register my paddle board?',
+      question: 'Adakah saya perlu mendaftar bot tiup saya?',
       answer:
-        'In most regions, unpowered paddle boards do not require registration. Requirements vary by jurisdiction, so check your local maritime authority for the rules that apply to you.',
+        'Keperluan berbeza mengikut bidang kuasa. Di kebanyakan kawasan, bot kembung dengan enjin melebihi kuasa kuda tertentu memerlukan pendaftaran. Bot kecil tanpa enjin SUPs dan bot kecil biasanya tidak diperlukan. Semak pihak berkuasa maritim tempatan anda untuk peraturan khusus.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: [],
@@ -999,9 +2739,9 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'warranty',
-      question: 'What is the Paddle Board Overstock warranty?',
+      question: 'Apakah waranti Paddle Board Overstock?',
       answer:
-        'Every board is backed by a 2-year limited manufacturer warranty covering defects in materials and workmanship under normal use. Accessories carry the same 2-year coverage.',
+        'Semua produk Paddle Board Overstock disokong oleh waranti pengeluar yang menyeluruh. Kain tiub bot tiup, jahitan, dan lunas dilindungi oleh waranti terhad 5 tahun; papan dan aksesori SUP mempunyai waranti terhad 2 tahun. Waranti ini meliputi kecacatan bahan dan kerja di bawah penggunaan biasa.',
       category: 'warranty',
       relatedProducts: [],
       relatedGuides: [],
@@ -1026,144 +2766,144 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'return-policy',
-      question: 'What is your return policy?',
+      question: 'Apakah polisi pemulangan anda?',
       answer:
-        'We accept returns within 30 days of delivery for unused products in original packaging. Contact our support team to initiate a return — we provide a prepaid shipping label.',
+        'Kami menerima pemulangan dalam masa 30 hari selepas penghantaran untuk produk yang tidak digunakan dalam pembungkusan asal. Pesanan khas/OEM tidak boleh dipulangkan. Hubungi pasukan sokongan kami untuk memulakan pemulangan — kami menyediakan label penghantaran prabayar.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
     },
     {
       id: 'paddle-length',
-      question: 'What paddle length do I need?',
+      question: 'Adakah anda menawarkan OEM ODM / perkhidmatan?',
       answer:
-        'For SUP, the paddle should be 6–8 inches taller than your height. See our paddle guide for detailed sizing.',
+        'Ya. Kami menawarkan perkhidmatan label peribadi dan reka bentuk khusus untuk perniagaan. Daripada penjenamaan khusus pada model sedia ada hingga reka bentuk badan yang sepenuhnya tersuai, pasukan kejuruteraan kami boleh membangunkan produk di bawah jenama anda. Kuantiti pesanan minimum dikenakan.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: ['choosing-paddle'],
     },
     {
       id: 'sup-width-stability',
-      question: 'Lebar mana SUP yang terbaik untuk kestabilan?',
+      question: 'Panjang dayung berapakah yang saya perlukan?',
       answer:
-        'Bagi pemula, lebar 33–34 inci memberikan keseimbangan terbaik antara kestabilan dan kemudahan mendayung. Papan yang lebih sempit daripada 32 inci terasa goyah bagi pendayung baru. Paddle Board Overstock SUP Explorer 11 pada 33 inci adalah ideal untuk belajar.',
+        'Untuk SUP: dayung harus 6–8 inci lebih tinggi daripada ketinggian anda. Untuk kayak: panjang dayung bergantung pada lebar bot dan panjang badan. Lihat panduan dayung kami untuk saiz terperinci.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
     },
     {
       id: 'sup-volume-weight',
-      question: 'Bagaimana saya memilih SUP isipadu untuk berat badan saya?',
+      question: 'Saiz enjin apa yang saya perlukan untuk RIB?',
       answer:
-        'Darabkan berat anda dalam kg dengan 2.2 untuk sasaran volum mesra pemula. Sebagai contoh, pendayung seberat 75 kg memerlukan sekurang-kurangnya 165 liter, tetapi 220–260 liter jauh lebih stabil untuk pembelajaran. SUP Explorer 11 menawarkan 260 liter, sesuai untuk penunggang sehingga 100 kg.',
+        'Saiz enjin bergantung pada panjang dan berat bot. Saiz 3m RIB biasanya mengendalikan 15–25, HP4.5m RIB mengendalikan 40–60, HP dan 6m mengendalikan RIB 90–150. HP Sentiasa ikut HP plat penarafan maksimum pada bot anda.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
     },
     {
       id: 'paddleboardoverstock-vs-others',
-      question: 'Bagaimana Paddle Board Overstock dibandingkan dengan jenama lain?',
+      question: 'Apakah perbezaan antara PVC dan Hypalon?',
       answer:
-        'Paddle Board Overstock menawarkan nilai terbaik dalam peralatan sukan air boleh kembung. Berbanding dengan Red Paddle Co, Paddle Board Overstock memberikan 90% prestasi pada 60% kos. Berbanding dengan iRocker, Paddle Board Overstock menggunakan PVC gred ketenteraan tiga lapisan yang lebih tinggi dan penarafan PSI yang lebih tinggi. Berbanding dengan Bluefin, Paddle Board Overstock menawarkan spesifikasi bahan yang lebih baik. Untuk kebanyakan pengayuh rekreasi, Paddle Board Overstock menyediakan keseimbangan terbaik antara kualiti dan harga.',
+        'PVC lebih ringan, lebih mampu milik, dan lebih mudah diperbaiki — sesuai untuk kegunaan rekreasi. Hypalon (CSM) menawarkan UV yang unggul dan rintangan kimia dengan jangka hayat lebih lama, dipilih untuk aplikasi komersial dan ketenteraan. Paddle Board Overstock menggunakan kedua-duanya bergantung pada tahap produk.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-your-sup'],
     },
     {
       id: 'fishing-sup-setup',
-      question: 'Bolehkah saya memancing dari SUP papan?',
+      question: 'Lebar mana SUP yang terbaik untuk kestabilan?',
       answer:
-        'Ya. Memancing SUP semakin popular kerana kedudukan berdiri memberikan penglihatan yang sangat baik ke dalam air. Pilih papan yang sekurang-kurangnya 11 kaki panjang dan 33–34 inci lebar untuk kestabilan. Tambah kotak susu dengan pemegang joran yang disambungkan pada tali bungee dek, sauh kecil, dan sentiasa pakai PFD. Paddle Board Overstock SUP Explorer 11 sesuai untuk memancing santai.',
+        'Bagi pemula, lebar 33–34 inci memberikan keseimbangan terbaik antara kestabilan dan kemudahan mendayung. Papan yang lebih sempit daripada 32 inci terasa goyah bagi pendayung baru. Paddle Board Overstock SUP Explorer 11 pada 33 inci adalah ideal untuk belajar.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-fishing'],
     },
     {
       id: 'sup-yoga',
-      question: 'Bolehkah saya melakukan yoga di SUP atas papan?',
+      question: 'Bagaimana saya memilih SUP isipadu untuk berat badan saya?',
       answer:
-        'Sudah tentu.SUP Yoga menggabungkan pose tradisional dengan cabaran platform terapung, mengaktifkan otot penstabil yang lebih dalam. Gunakan papan berukuran 33 inci atau lebih lebar dengan pad dek yang lembut dan cengkaman. Berlatih di air yang tenang dan cetek dengan sauh. Mulakan dengan pose asas seperti downward dog, warrior II, dan tree pose. SUP Explorer 11 dengan EVA pad dek penuh sangat sesuai.',
+        'Darabkan berat anda dalam kg dengan 2.2 untuk sasaran volum mesra pemula. Sebagai contoh, pendayung seberat 75 kg memerlukan sekurang-kurangnya 165 liter, tetapi 220–260 liter jauh lebih stabil untuk pembelajaran. SUP Explorer 11 menawarkan 260 liter, sesuai untuk penunggang sehingga 100 kg.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-yoga'],
     },
     {
       id: 'airline-travel-sup',
-      question: 'Apakah peraturan syarikat penerbangan untuk melancong dengan kereta kembung SUP?',
+      question: 'Saiz enjin apa yang saya perlukan untuk bot kembung saya?',
       answer:
-        'Kebanyakan syarikat penerbangan menerima beg galas SUP sebagai bagasi berdaftar jika beratnya di bawah 23–32 kg. Beg galas Paddle Board Overstock adalah kira-kira 90x40x30 cm dan beratnya sekitar 15 kg bila dibungkus. Sesetengah syarikat penerbangan mungkin mengenakan yuran bagasi lebih saiz. Tiba awal, balut sirip dan pam secara berasingan dalam bagasi tangan, dan labelkan beg sebagai rapuh. Sentiasa selidik polisi peralatan sukan syarikat penerbangan anda sebelum terbang.',
+        'Untuk AirDeck 270, gunakan sehingga 6. HP Untuk AirDeck 360, sehingga 15 HP. Untuk RIB 330, sehingga 40 HP. Untuk RIB 450 Patrol, sehingga 60 HP. Sentiasa periksa HP plat penarafan maksimum pada bot anda dan jangan melebihi itu.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['multi-day-trip'],
     },
     {
       id: 'cold-weather-safety',
-      question: 'Apakah peralatan keselamatan yang saya perlukan untuk mendayung air sejuk?',
+      question: 'Apakah jenis lantai yang terbaik untuk bot tiup?',
       answer:
-        'Air di bawah 15°C memerlukan perlindungan terma. Untuk 8–14°C, gunakan wetsuit atau drysuit dengan but, sarung tangan, dan tudung. Untuk 14–20°C, wetsuit 3/2mm sudah memadai. Sentiasa pakai pakaian yang sesuai PFD untuk perlindungan haba dan keselamatan. Semak peraturan tempatan untuk keperluan peralatan wajib.',
+        'Lantai slat aluminium memberikan prestasi terbaik — tegar, mampu diratakan dan stabil untuk berdiri. Dek udara lebih ringan dan lebih kecil, tetapi lebih fleksibel. Lantai roll-up adalah yang paling ringkas dan mampu milik tetapi menawarkan ketegaran paling minimum. Pilih berdasarkan kegunaan utama anda: memancing dan kelajuan lebih memihak kepada lantai slat; kebolehalihan lebih mengutamakan dek udara.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: ['safety-tips'],
     },
     {
       id: 'sup-inflate-pressure',
-      question: 'Apa PSI yang patut saya tiup SUP ke mana?',
+      question: 'Bagaimana Paddle Board Overstock dibandingkan dengan jenama lain?',
       answer:
-        'Pam sehingga PSI maksimum yang dinilai untuk papan bagi prestasi terbaik — biasanya 15–18 PSI untuk SUPs boleh kembung berkualiti. Paddle Board Overstock SUP Explorer 11 berprestasi terbaik pada 15–18 PSI. Kekurangan pam akan membuat papan terasa lembut dan sukar dikawal. Pam berlebihan melebihi maksima yang dinilai berisiko merosakkan benang drop-stitch. Semak pelekat berdekatan injap untuk penarafan spesifik papan anda.',
+        'Paddle Board Overstock menawarkan nilai terbaik dalam peralatan sukan air boleh kembung. Berbanding dengan Red Paddle Co, Paddle Board Overstock memberikan 90% prestasi pada 60% kos. Berbanding dengan iRocker, Paddle Board Overstock menggunakan PVC gred ketenteraan tiga lapisan yang lebih tinggi dan penarafan PSI yang lebih tinggi. Berbanding dengan Bluefin, Paddle Board Overstock menawarkan spesifikasi bahan yang lebih baik. Untuk kebanyakan pengayuh rekreasi, Paddle Board Overstock menyediakan keseimbangan terbaik antara kualiti dan harga.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
     },
     {
       id: 'sup-deck-pad-care',
-      question: 'Bagaimana saya membersihkan dan menyelenggara EVA pad dek?',
+      question: 'Bolehkah saya memancing dari SUP papan?',
       answer:
-        'Bilas pad dek dengan air segar selepas setiap sesi. Untuk kotoran atau kotoran, gunakan sabun lembut dan berus lembut — elakkan bahan kimia yang keras. Jika tepi mula terangkat, sapukan sedikit pelekat marin kalis air dan tekan di bawah berat selama 24 jam. Pastikan papan tidak berada secara langsung UV apabila tidak digunakan untuk mengelakkan kemerosotan pad.',
+        'Ya. Memancing SUP semakin popular kerana kedudukan berdiri memberikan penglihatan yang sangat baik ke dalam air. Pilih papan yang sekurang-kurangnya 11 kaki panjang dan 33–34 inci lebar untuk kestabilan. Tambah kotak susu dengan pemegang joran yang disambungkan pada tali bungee dek, sauh kecil, dan sentiasa pakai PFD. Paddle Board Overstock SUP Explorer 11 sesuai untuk memancing santai.',
       category: 'maintenance',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-maintenance'],
     },
     {
       id: 'sup-seated-paddling',
-      question: 'Bolehkah saya duduk sambil mendayung papan SUP saya?',
+      question: 'Bolehkah saya melakukan yoga di SUP atas papan?',
       answer:
-        'Ya. Banyak papan SUP, termasuk Paddle Board Overstock Explorer 11, mempunyai D-ring yang membolehkan pemasangan tempat duduk. Menggunakan SUP dengan tempat duduk dan dayung bilah tunggal menawarkan kedudukan duduk yang selesa untuk perjalanan yang lebih panjang atau memancing. Sesetengah jenama menawarkan kit penukaran khusus dengan tempat duduk dan dayung lebih panjang.',
+        'Sudah tentu.SUP Yoga menggabungkan pose tradisional dengan cabaran platform terapung, mengaktifkan otot penstabil yang lebih dalam. Gunakan papan berukuran 33 inci atau lebih lebar dengan pad dek yang lembut dan cengkaman. Berlatih di air yang tenang dan cetek dengan sauh. Mulakan dengan pose asas seperti downward dog, warrior II, dan tree pose. SUP Explorer 11 dengan EVA pad dek penuh sangat sesuai.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: [],
     },
     {
       id: 'saltwater-rinse',
-      question: 'Do I need to rinse my board after ocean use?',
+      question: 'Apakah peraturan syarikat penerbangan untuk melancong dengan kereta kembung SUP?',
       answer:
-        'Yes — always rinse your board, fins, pump, and paddle with fresh water after saltwater use. Salt crystals work into seams and valves, causing micro-leaks and corrosion. Dry the board in the shade before deflating and storing. Regular rinsing dramatically extends the life of your board.',
+        'Kebanyakan syarikat penerbangan menerima beg galas SUP sebagai bagasi berdaftar jika beratnya di bawah 23–32 kg. Beg galas Paddle Board Overstock adalah kira-kira 90x40x30 cm dan beratnya sekitar 15 kg bila dibungkus. Sesetengah syarikat penerbangan mungkin mengenakan yuran bagasi lebih saiz. Tiba awal, balut sirip dan pam secara berasingan dalam bagasi tangan, dan labelkan beg sebagai rapuh. Sentiasa selidik polisi peralatan sukan syarikat penerbangan anda sebelum terbang.',
       category: 'maintenance',
       relatedProducts: [],
       relatedGuides: ['sup-maintenance'],
     },
     {
       id: 'sup-leash-necessity',
-      question: 'Adakah saya benar-benar memerlukan tali untuk SUP?',
+      question: 'Apakah peralatan keselamatan yang saya perlukan untuk mendayung air sejuk?',
       answer:
-        'Ya — sentiasa pakai tali leher. Tali leher SUP yang dililit boleh dipasang pada buku lali atau betis anda dan memastikan papan kekal bersama anda jika anda jatuh. Di perairan terbuka, tali leher boleh menyelamatkan nyawa anda dengan mencegah pemisahan daripada alat apungan anda. Untuk mendayung di sungai, gunakan tali leher lepasan cepat untuk mengelakkan tersepit.',
+        'Air di bawah 15°C memerlukan perlindungan terma. Untuk 8–14°C, gunakan wetsuit atau drysuit dengan but, sarung tangan, dan tudung. Untuk 14–20°C, wetsuit 3/2mm sudah memadai. Sentiasa pakai pakaian yang sesuai PFD untuk perlindungan haba dan keselamatan. Semak peraturan tempatan untuk keperluan peralatan wajib.',
       category: 'safety',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['safety-tips'],
     },
     {
       id: 'company-model',
-      question: 'Adakah Paddle Board Overstock sebuah syarikat perdagangan atau pengilang?',
+      question: 'Apakah kuantiti pesanan minimum untuk OEM/ODM?',
       answer:
-        'Bukan sama ada kilang tulen atau syarikat perdagangan — Weihai Dongjilian Co., Ltd. adalah syarikat jenama dengan pangkalan pembuatan sendiri. Weihai Dongjilian Co., Ltd. mengurus pengagihan global, kontrak, pengebilan, dan perkhidmatan selepas jualan, manakala Paddle Board Overstock Weihai Manufacturing Hub mengurus R&D, pengeluaran, dan kawalan kualiti di kemudahan kami sendiri seluas 12,000 m². Tiada orang tengah: setiap pesanan dihantar terus dari kilang.',
+        'Kuantiti pesanan minimum (MOQs) berbeza mengikut jenis produk dan kerumitan. Penjenamaan khusus pada model sedia ada biasanya memerlukan 5–10 unit. Reka bentuk badan yang sepenuhnya tersuai memerlukan lebih tinggi MOQs. Hubungi pasukan jualan kami dengan keperluan anda untuk sebut harga terperinci. Kami mengendalikan segala-galanya dari warna dan logo tersuai hingga reka bentuk acuan asli sepenuhnya.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
     },
     {
       id: 'us-contract-weihai-shipping',
-      question: 'Mengapa kontrak saya dengan syarikat AS apabila barang dihantar dari Weihai?',
+      question: 'Bolehkah saya letakkan logo sendiri pada produk Paddle Board Overstock?',
       answer:
-        'Weihai Dongjilian Co., Ltd. adalah entiti komersial global yang menandatangani kontrak, mengeluarkan invois, dan menyediakan sokongan selepas jualan, manakala Weihai Manufacturing Hub menghasilkan dan menghantar setiap pesanan FOB Weihai. Struktur dua hab ini mengekalkan standard kontrak dan penyelesaian AS, sambil mengekalkan harga terus dari kilang dan ketelusan penuh pengeluaran.',
+        'Ya. OEM Perkhidmatan kami merangkumi penempatan logo tersuai, skema warna tersuai, dan pembungkusan tersuai. Kami menawarkan pilihan cetakan pad, pemindahan haba, dan sulaman bergantung pada jenis produk. Hantar karya seni dan spesifikasi anda kepada pasukan jualan kami untuk sebut harga dan anggaran masa produk.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -1208,18 +2948,18 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'weight-limit',
-      question: 'What is the weight limit?',
+      question: 'Care este limita de greutate?',
       answer:
-        'Our All-Around SUPs support up to 220 lbs. The Touring and Yoga series support up to 250 lbs. For tandem paddling or heavier riders, choose a wider, higher-volume board.',
+        'All-Around suportă SUPs până la 220 lbs. Seriile Touring și Yoga suportă până la 250 lbs. RIB Bărcile suportă de obicei 600–1500 lbs, în funcție de model. Pentru utilizare în tandem sau încărcări mai grele, bărcile noastre gonflabile oferă opțiuni de capacitate mai mare.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: ['understanding-specs'],
     },
     {
       id: 'box-contents',
-      question: 'What comes in the box?',
+      question: 'Ce vine în cutie?',
       answer:
-        'Every Paddle Board Overstock SUP includes the board, a travel backpack, dual-action hand pump, removable fin, coil leash, and repair kit. Some models also include a carbon paddle upgrade option.',
+        'Fiecare Paddle Board Overstock SUP include placa, un rucsac de călătorie, o pompă manuală cu acțiune dublă, aripă detașabilă, chingă cu spiră și trusă de reparat. Unele modele includ, de asemenea, opțiunea de upgrade cu pagaj din carbon. Bărci gonflabile includ barca, pompa, trusa de reparat și vâslele.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -1235,18 +2975,18 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'pfd-requirement',
-      question: 'Do I need a life vest on a SUP?',
+      question: 'Am nevoie de o vestă de salvare pe SUP un ?',
       answer:
-        'Yes. Many jurisdictions legally require a life vest when paddling, including on SUPs. Even where not required, a life vest is essential safety equipment. We recommend wearing it at all times on the water.',
+        'Da. Multe jurisdicții cer legal vesta de salvare pe orice ambarcațiune, inclusiv SUPs. Chiar și atunci când nu este necesar, o CE vestă de salvare certificată este un echipament de siguranță esențial. Recomandăm purtarea ei în orice moment pe apă.',
       category: 'safety',
       relatedProducts: [],
       relatedGuides: ['safety-tips'],
     },
     {
       id: 'paddleboard-registration',
-      question: 'Do I need to register my paddle board?',
+      question: 'Trebuie să-mi înmatriculez barca gonflabilă?',
       answer:
-        'In most regions, unpowered paddle boards do not require registration. Requirements vary by jurisdiction, so check your local maritime authority for the rules that apply to you.',
+        'Cerințele variază în funcție de jurisdicție. În majoritatea regiunilor, bărcile gonflabile cu motoare peste un anumit cai putere necesită înmatriculare. SUPs Bărcile mici și nemotorizate, de obicei, nu cer. Verifică autoritatea maritimă locală pentru reguli specifice.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: [],
@@ -1289,9 +3029,9 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'warranty',
-      question: 'What is the Paddle Board Overstock warranty?',
+      question: 'Care este garanția Paddle Board Overstock?',
       answer:
-        'Every board is backed by a 2-year limited manufacturer warranty covering defects in materials and workmanship under normal use. Accessories carry the same 2-year coverage.',
+        'Toate produsele Paddle Board Overstock sunt acoperite de o garanție cuprinzătoare oferită de producător. Materialul tubului bărcii pneumatice, cusăturile și corpul bărcii sunt acoperite de o garanție limitată de 5 ani; plăcile și accesoriile SUP beneficiază de o garanție limitată de 2 ani. Garanția acoperă defectele de materiale și de fabricație în condiții normale de utilizare.',
       category: 'warranty',
       relatedProducts: [],
       relatedGuides: [],
@@ -1316,144 +3056,1014 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'return-policy',
-      question: 'What is your return policy?',
+      question: 'Care este politica ta de returnare?',
       answer:
-        'We accept returns within 30 days of delivery for unused products in original packaging. Contact our support team to initiate a return — we provide a prepaid shipping label.',
+        'Acceptăm retururi în termen de 30 de zile de la livrare pentru produsele nefolosite în ambalajul original.OEM Comenzile personalizate sau comenzile nu pot fi returnate. Contactează echipa noastră de suport pentru a iniția un retur — oferim o etichetă de expediere preplătită.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
     },
     {
       id: 'paddle-length',
-      question: 'What paddle length do I need?',
+      question: 'OEM Oferiți /ODM servicii?',
       answer:
-        'For SUP, the paddle should be 6–8 inches taller than your height. See our paddle guide for detailed sizing.',
+        'Da. Oferim servicii private label și design personalizat pentru afaceri. De la branding personalizat pe modele existente până la designuri complet personalizate ale carcasei, echipa noastră de inginerie poate dezvolta produse sub brandul tău. Se aplică cantitățile minime de comandă.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: ['choosing-paddle'],
     },
     {
       id: 'sup-width-stability',
-      question: 'Ce SUP lățime este cea mai bună pentru stabilitate?',
+      question: 'Ce lungime de paletă am nevoie?',
       answer:
-        'Pentru începători, o lățime de 33–34 de inci oferă cel mai bun echilibru între stabilitate și ușurința de vâslire. Plăcile mai înguste de 32 de inci se simt instabile pentru vâslitorii noi. Paddle Board Overstock SUP Explorer 11 de 33 de inci este ideal pentru învățare.',
+        'Pentru SUP: vâsla ar trebui să fie cu 6–8 inch mai înaltă decât înălțimea ta. Pentru caiac: lungimea vâslei depinde de lățimea bărcii și lungimea trunchiului. Consultă ghidul nostru pentru vâsle pentru mărimi detaliate.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
     },
     {
       id: 'sup-volume-weight',
-      question: 'Cum aleg SUP volumul pentru greutatea mea?',
+      question: 'Ce dimensiune de motor am nevoie pentru RIB un ?',
       answer:
-        'Înmulțiți-vă greutatea în kg cu 2,2 pentru o țintă de volum accesibilă începătorilor. De exemplu, un vâslit de 75 kg are nevoie de cel puțin 165 litri, dar 220–260 litri este mult mai stabil pentru învățare. SUP Explorer 11 oferă 260 litri, potrivit pentru cicliști de până la 100 kg.',
+        'Mărimea motorului depinde de lungimea și greutatea bărcii. Un 3m RIB poate manevra de obicei 15–25 HP m, un 4,5m RIB 40–60 HP, iar un 6m RIB 90–150 HP. Respectă întotdeauna HP placa maximă de rating a bărcii tale.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
     },
     {
       id: 'paddleboardoverstock-vs-others',
-      question: 'Cum se compară Paddle Board Overstock cu alte mărci?',
+      question: 'Care este diferența dintre PVC și Hypalon?',
       answer:
-        'Paddle Board Overstock oferă cel mai bun raport calitate-preț la echipamente gonflabile pentru sporturi acvatice. Comparativ cu Red Paddle Co, Paddle Board Overstock oferă 90% din performanță la 60% din cost. Comparativ cu iRocker, Paddle Board Overstock folosește PVC militare cu trei straturi de calitate superioară și ratinguri PSI mai mari. Comparativ cu Bluefin, Paddle Board Overstock oferă specificații materiale superioare. Pentru majoritatea practicanților recreaționali, Paddle Board Overstock oferă cel mai bun echilibru între calitate și preț.',
+        'PVC este mai ușor, mai accesibil și mai ușor de reparat — ideal pentru utilizarea recreativă. Hypalon (CSM) oferă UV superioare și rezistență chimică, având o durată de viață mai lungă, fiind preferat pentru aplicații comerciale și militare. Paddle Board Overstock folosește ambele, în funcție de nivelul produsului.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-your-sup'],
     },
     {
       id: 'fishing-sup-setup',
-      question: 'Pot să pescuiesc de pe SUP o placă?',
+      question: 'Ce SUP lățime este cea mai bună pentru stabilitate?',
       answer:
-        'Da. Pescuitul SUP este din ce în ce mai popular deoarece poziția în picioare oferă vizibilitate excelentă asupra apei. Alege o placă de cel puțin 11 ft lungime și 33–34 inches lățime pentru stabilitate. Adaugă un coș de lapte cu suporturi pentru undițe fixate pe chingi pe punte, o ancoră mică și poartă întotdeauna un PFD. Paddle Board Overstock SUP Explorer 11 funcționează bine pentru pescuit ocazional.',
+        'Pentru începători, o lățime de 33–34 de inci oferă cel mai bun echilibru între stabilitate și ușurința de vâslire. Plăcile mai înguste de 32 de inci se simt instabile pentru vâslitorii noi. Paddle Board Overstock SUP Explorer 11 de 33 de inci este ideal pentru învățare.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-fishing'],
     },
     {
       id: 'sup-yoga',
-      question: 'Pot să fac yoga pe SUP o placă?',
+      question: 'Cum aleg SUP volumul pentru greutatea mea?',
       answer:
-        'Absolut.SUP Yoga combină pozițiile tradiționale cu provocarea unei platforme plutitoare, care implică mușchii stabilizatori mai adânci. Folosește o placă de 33 de inci sau mai lată cu o pernă moale și aderentă. Exersează în apă calmă și puțin adâncă, cu o ancoră. Începe cu poziții de fundație precum downward dog, warrior II și poziția copacului. SUP Explorer 11, cu perna sa completă EVA pentru terasă, este foarte potrivită.',
+        'Înmulțiți-vă greutatea în kg cu 2,2 pentru o țintă de volum accesibilă începătorilor. De exemplu, un vâslit de 75 kg are nevoie de cel puțin 165 litri, dar 220–260 litri este mult mai stabil pentru învățare. SUP Explorer 11 oferă 260 litri, potrivit pentru cicliști de până la 100 kg.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-yoga'],
     },
     {
       id: 'airline-travel-sup',
-      question: 'Care sunt regulile companiilor aeriene pentru călătoria cu un gonflabil SUP?',
+      question: 'Ce dimensiune de motor am nevoie pentru barca mea gonflabilă?',
       answer:
-        'Majoritatea companiilor aeriene acceptă rucsacuri SUP ca bagaj de cală dacă sunt sub 23–32 kg. Rucsacul Paddle Board Overstock are aproximativ 90x40x30 cm și cântărește aproximativ 15 kg împachetat. Unele companii aeriene pot percepe taxe pentru bagaje supradimensionate. Soseste devreme, împachetează separat cârpele și pompa în bagajul de mână și etichetează bagajul ca fiind fragil. Cercetează întotdeauna politica companiei aeriene referitoare la echipamente sportive înainte de zbor.',
+        'Pentru AirDeck 270, folosește până la 6 HP. Pentru AirDeck 360, până la 15 HP. Pentru RIB 330, până la 40 HP. Pentru RIB patrula 450, până la 60 HP. Verifică întotdeauna HP placa maximă de rating a bărcii tale și nu o depășește niciodată.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['multi-day-trip'],
     },
     {
       id: 'cold-weather-safety',
-      question: 'Ce echipament de siguranță am nevoie pentru vâslitul în apă rece?',
+      question: 'Ce tip de podea este cel mai bun pentru o barcă gonflabilă?',
       answer:
-        'Apa sub 15°C necesită protecție termică. Pentru 8–14°C folosiți un costum de neopren sau un costum uscat cu cizme, mănuși și glugă. Pentru 14–20°C, un costum de neopren de 3/2 mm este suficient. Purtați întotdeauna un costum adecvat PFD pentru protecție termică și siguranță. Verificați reglementările locale pentru cerințele obligatorii privind echipamentul.',
+        'Pardoselile din lemn din aluminiu oferă cele mai bune performanțe — rigide, capabile de rindeluire și stabile pentru starea în picioare. Platformele de aer sunt mai ușoare și se împachetează mai mici, dar se flexibilizează mai mult. Pardoselile rulante sunt cele mai simple și accesibile, dar oferă cea mai mică rigiditate. Alege în funcție de utilizarea ta principală: pescuitul și viteza favorizează podelele cu șipci; portabilitatea favorizează punțile de aer.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: ['safety-tips'],
     },
     {
       id: 'sup-inflate-pressure',
-      question: 'La ce PSI ar trebui să-mi umfl SUP ?',
+      question: 'Cum se compară Paddle Board Overstock cu alte mărci?',
       answer:
-        'Umflă până la PSI maxim recomandat al plăcii pentru cea mai bună performanță — de obicei 15–18 PSI pentru SUPs gonflabile de calitate. Paddle Board Overstock SUP Explorer 11 funcționează cel mai bine la 15–18 PSI. Subumflarea face ca placa să se simtă moale și să alunece prost. Supraumflarea peste maximul recomandat poate deteriora firele drop-stitch. Verifică eticheta de lângă ventil pentru ratingul specific al plăcii tale.',
+        'Paddle Board Overstock oferă cel mai bun raport calitate-preț la echipamente gonflabile pentru sporturi acvatice. Comparativ cu Red Paddle Co, Paddle Board Overstock oferă 90% din performanță la 60% din cost. Comparativ cu iRocker, Paddle Board Overstock folosește PVC militare cu trei straturi de calitate superioară și ratinguri PSI mai mari. Comparativ cu Bluefin, Paddle Board Overstock oferă specificații materiale superioare. Pentru majoritatea practicanților recreaționali, Paddle Board Overstock oferă cel mai bun echilibru între calitate și preț.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
     },
     {
       id: 'sup-deck-pad-care',
-      question: 'Cum curăț și întrețin EVA platforma de pe terasă?',
+      question: 'Pot să pescuiesc de pe SUP o placă?',
       answer:
-        'Clătește placa de pe terasă cu apă proaspătă după fiecare sesiune. Pentru murdărie sau pete, folosește săpun blând și o pensulă moale — evită substanțele chimice dure. Dacă marginile încep să se ridice, aplică o cantitate mică de adeziv marin impermeabil și apasă sub greutate timp de 24 de ore. Ține placa departe UV când nu este folosită pentru a preveni degradarea tamponului.',
+        'Da. Pescuitul SUP este din ce în ce mai popular deoarece poziția în picioare oferă vizibilitate excelentă asupra apei. Alege o placă de cel puțin 11 ft lungime și 33–34 inches lățime pentru stabilitate. Adaugă un coș de lapte cu suporturi pentru undițe fixate pe chingi pe punte, o ancoră mică și poartă întotdeauna un PFD. Paddle Board Overstock SUP Explorer 11 funcționează bine pentru pescuit ocazional.',
       category: 'maintenance',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-maintenance'],
     },
     {
       id: 'sup-seated-paddling',
-      question: 'Pot să mă așez în timp ce vâslesc pe placa mea SUP?',
+      question: 'Pot să fac yoga pe SUP o placă?',
       answer:
-        'Da. Multe plăci SUP, inclusiv Paddle Board Overstock Explorer 11, au inele în formă de D care permit atașarea unui scaun. Folosirea unui SUP cu un scaun și o vâslă cu o singură lamă oferă o poziție confortabilă pentru șederi lungi sau pescuit. Unele mărci oferă kituri dedicate de conversie cu scaune și vâsle mai lungi.',
+        'Absolut.SUP Yoga combină pozițiile tradiționale cu provocarea unei platforme plutitoare, care implică mușchii stabilizatori mai adânci. Folosește o placă de 33 de inci sau mai lată cu o pernă moale și aderentă. Exersează în apă calmă și puțin adâncă, cu o ancoră. Începe cu poziții de fundație precum downward dog, warrior II și poziția copacului. SUP Explorer 11, cu perna sa completă EVA pentru terasă, este foarte potrivită.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: [],
     },
     {
       id: 'saltwater-rinse',
-      question: 'Do I need to rinse my board after ocean use?',
+      question: 'Care sunt regulile companiilor aeriene pentru călătoria cu un gonflabil SUP?',
       answer:
-        'Yes — always rinse your board, fins, pump, and paddle with fresh water after saltwater use. Salt crystals work into seams and valves, causing micro-leaks and corrosion. Dry the board in the shade before deflating and storing. Regular rinsing dramatically extends the life of your board.',
+        'Majoritatea companiilor aeriene acceptă rucsacuri SUP ca bagaj de cală dacă sunt sub 23–32 kg. Rucsacul Paddle Board Overstock are aproximativ 90x40x30 cm și cântărește aproximativ 15 kg împachetat. Unele companii aeriene pot percepe taxe pentru bagaje supradimensionate. Soseste devreme, împachetează separat cârpele și pompa în bagajul de mână și etichetează bagajul ca fiind fragil. Cercetează întotdeauna politica companiei aeriene referitoare la echipamente sportive înainte de zbor.',
       category: 'maintenance',
       relatedProducts: [],
       relatedGuides: ['sup-maintenance'],
     },
     {
       id: 'sup-leash-necessity',
-      question: 'Chiar am nevoie de lesă SUP pentru ?',
+      question: 'Ce echipament de siguranță am nevoie pentru vâslitul în apă rece?',
       answer:
-        'Da — poartă întotdeauna o lesă. O SUP lesă încolăcită se atașează de gleznă sau gambă și ține placa cu tine dacă cazi. În ape deschise, o lesă îți poate salva viața prevenind separarea de dispozitivul de plutire. Pentru vâslitul pe râu, folosește o lesă cu eliberare rapidă pentru a preveni prinderea blocării.',
+        'Apa sub 15°C necesită protecție termică. Pentru 8–14°C folosiți un costum de neopren sau un costum uscat cu cizme, mănuși și glugă. Pentru 14–20°C, un costum de neopren de 3/2 mm este suficient. Purtați întotdeauna un costum adecvat PFD pentru protecție termică și siguranță. Verificați reglementările locale pentru cerințele obligatorii privind echipamentul.',
       category: 'safety',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['safety-tips'],
     },
     {
       id: 'company-model',
-      question: 'Paddle Board Overstock este o companie de comerț sau un producător?',
+      question: 'Care sunt cantitățile minime de comandă OEM pentru /ODM?',
       answer:
-        'Nici o fabrică pură, nici o companie comercială — Weihai Dongjilian Co., Ltd. este o companie de brand cu propria bază de producție. Weihai Dongjilian Co., Ltd. se ocupă de distribuția globală, contracte, facturare și service post-vânzare, în timp ce Paddle Board Overstock Centrul de Producție Weihai gestionează cercetarea și dezvoltarea, producția și controlul calității în facilitatea noastră de 12.000 m². Fără intermediari: fiecare comandă se expediază direct de la fabrică.',
+        'Cantitățile minime de comandă (MOQs) variază în funcție de tipul și complexitatea produsului. Brandingul personalizat pe modelele existente necesită de obicei 5–10 unități. Designurile complet personalizate ale carcasei necesită un preț mai MOQs mare. Contactează echipa noastră de vânzări cu cerințele tale pentru o ofertă detaliată. Ne ocupăm de totul, de la culori și logo-uri personalizate până la modele complet originale.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
     },
     {
       id: 'us-contract-weihai-shipping',
-      question: 'De ce este contractul meu cu o companie din SUA când bunurile sunt expediate din Weihai?',
+      question: 'Pot să pun propriul meu logo pe produsele Paddle Board Overstock?',
       answer:
-        'Weihai Dongjilian Co., Ltd. este entitatea comercială globală care semnează contracte, emite facturi și oferă suport post-vânzare, în timp ce Weihai Manufacturing Hub produce și expediază fiecare comandă FOB Weihai. Această structură cu două centre menține standardele de contractare și de decontare conform SUA, păstrând în același timp prețurile directe de la fabrică și transparența completă a producției.',
+        'Da. OEM Serviciul nostru include plasarea personalizată a logo-urilor, scheme de culori personalizate și ambalaje personalizate. Oferim opțiuni de imprimare pad, transfer termic și broderie, în funcție de tipul produsului. Trimiteți lucrările și specificațiile echipei noastre de vânzări pentru o ofertă și o estimare a timpului de livrare.',
+      category: 'ordering',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+  ],
+  sk: [
+    {
+      id: 'sup-learning',
+      question: 'Je SUP ťažké sa to naučiť?',
+      answer:
+        'Vôbec nie. Väčšina začiatočníkov sa postaví a pádluje už počas prvého tréningu. Naša SUP séria All-Around obsahuje extra široké stabilné plošiny navrhnuté špeciálne pre nováčikov. Začnite na pokojnej vode a za pár minút budete plaviť.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: ['beginner-guide'],
+    },
+    {
+      id: 'ocean-use',
+      question: 'Môžem ho použiť v oceáne?',
+      answer:
+        'Áno. Dosky Paddle Board Overstock SUP sú určené na používanie v oceáne, jazere a rieke. Naša séria Touring zvláda pobrežný rozbúrený vlnobit a všetky dosky používajú námorný PVC, ktorý odoláva korózii spôsobenej slanou vodou. Po použití v oceáne opláchnite sladkou vodou.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: ['weather-conditions'],
+    },
+    {
+      id: 'inflation-time',
+      question: 'Ako dlho trvá, kým sa nafúkne?',
+      answer:
+        'S integrovaným dvojčinným čerpadlom sa väčšina dosiek nafúkne na 12–15 za PSI menej ako 5 minút. Naša možnosť elektrického čerpadla to skracuje na menej ako 2 minúty. Deflácia a balenie trvajú približne 3 minúty.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: ['sup-maintenance'],
+    },
+    {
+      id: 'travel-sup',
+      question: 'Môžem cestovať s nafukovacou SUP?',
+      answer:
+        'Určite. Každá doska Paddle Board Overstock sa zmestí do prenosného obalu veľkosti batohu, navrhnutého pre pohodlné cestovanie — skontrolujte si pravidlá pre veľkosť a hmotnosť u vášho dopravcu. Pri hmotnosti len 18-22 lbs sa ľahko prenáša na pláž, k jazeru alebo cez letiskové terminály.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'weight-limit',
+      question: 'Aký je hmotnostný limit?',
+      answer:
+        'Náš All-Around SUPs podporuje až 220 libier. Série Touring and Yoga podporujú až 250 libier. RIB Člny zvyčajne nosia 600–1500 libier v závislosti od modelu. Pre tandemové použitie alebo ťažšie náklady ponúkajú naše nafukovacie člny možnosti s vyššou kapacitou.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: ['understanding-specs'],
+    },
+    {
+      id: 'box-contents',
+      question: 'Čo je v krabici?',
+      answer:
+        'Každá doska Paddle Board Overstock SUP obsahuje dosku, cestovný batoh, dvojčinnú ručnú pumpu, odnímateľnú plutvu, špirálový leash a opravárenskú sadu. Niektoré modely ponúkajú aj možnosť upgradu na karbonové pádlo. Nafukovacie čluny obsahujú čln, pumpu, opravárenskú sadu a veslá.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'bundle-deals',
+      question: 'Ponúkate balíkové ponuky?',
+      answer:
+        'Áno. Ponúkame starostlivo vybrané balíčky, ktoré vám ušetria peniaze v porovnaní s nákupom produktov zvlášť. Kontaktujte náš predajný tím pre aktuálne akcie balíčkov a zľavy na objem.',
+      category: 'ordering',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'pfd-requirement',
+      question: 'Potrebujem na to záchrannú vestu SUP?',
+      answer:
+        'Áno. Mnohé jurisdikcie zákonne vyžadujú záchrannú vestu na každom vodnom plavidle, vrátane SUPs. Aj tam, kde nie je potrebná, je -CE certifikovaná záchranná vesta nevyhnutným bezpečnostným vybavením. Odporúčame ju nosiť neustále na vode.',
+      category: 'safety',
+      relatedProducts: [],
+      relatedGuides: ['safety-tips'],
+    },
+    {
+      id: 'paddleboard-registration',
+      question: 'Musím registrovať svoju nafukovaciu loď?',
+      answer:
+        'Požiadavky sa líšia podľa jurisdikcie. Vo väčšine regiónov vyžadujú nafukovacie člny s motormi nad určitú konskú silu registráciu. SUPs Nemotorné a malé člny zvyčajne nie. Overte si miestny námorný úrad pre konkrétne pravidlá.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'puncture-repair',
+      question: 'Ako opravím defekt?',
+      answer:
+        'Vyčistite plochu, vystrihnite záplatu so zaoblenými rohmi, naneste lepidlo PVC, pevne pritlačte a počkajte 24 hodín pred nafúknutím. Dosky Paddle Board Overstock obsahujú opravárenskú sadu. Pre podrobné pokyny si pozrite náš návod na opravu nafukovacích vecí.',
+      category: 'maintenance',
+      relatedProducts: [],
+      relatedGuides: ['inflatable-repair', 'sup-maintenance'],
+    },
+    {
+      id: 'storage',
+      question: 'Ako by som mal skladovať svoj nafukovací prístroj SUP?',
+      answer:
+        'Prepláchnite čerstvou vodou, úplne vysušte, úplne vyfúknite, voľne zrolujte z nosa a skladujte v taške na chladnom a suchom mieste mimo priameho slnečného slnka. Nikdy neskladujte mokré alebo v extrémnych teplotách.',
+      category: 'maintenance',
+      relatedProducts: [],
+      relatedGuides: ['sup-maintenance'],
+    },
+    {
+      id: 'sup-vs-hard',
+      question: 'Nafukovacie alebo SUP tvrdé dosky?',
+      answer:
+        'Nafukovacie dosky ponúkajú prenosnosť, pohodlie skladovania a tlmenie nárazov. Tvrdé dosky ponúkajú maximálnu tuhosť a rýchlosť. Pre väčšinu rekreačných používateľov je praktickou voľbou kvalitná nafukovacia doska s drop-stitch jadrom.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: ['inflatable-vs-hard', 'how-to-choose-your-sup'],
+    },
+    {
+      id: 'wind-safety',
+      question: 'Aká rýchlosť vetra je pre ňu príliš vysoká SUP?',
+      answer:
+        'Začiatočníci: viac ako 10 mph (8 uzlov). Stredne pokročilí: viac ako 15 mph (13 uzlov). Pokročilí: viac ako 20 mph (17 uzlov). Ak si nie ste istí, nechoďte von. Pobrežný vietor (fúkajúci z pevniny na more) je nebezpečný na akejkoľvek úrovni zručnosti.',
+      category: 'safety',
+      relatedProducts: [],
+      relatedGuides: ['weather-conditions', 'safety-tips'],
+    },
+    {
+      id: 'warranty',
+      question: 'Aká je záruka Paddle Board Overstock?',
+      answer:
+        'Všetky produkty Paddle Board Overstock sú podporené komplexnou záručnou lehotou výrobcu. Materiál nafukovacej lode, švy a trup sú kryté 5-ročnou obmedzenou zárukou; dosky a doplnky SUP majú 2-ročnú obmedzenú záruku. Záruka sa vzťahuje na vady materiálu a spracovania pri bežnom používaní.',
+      category: 'warranty',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'warranty-claim',
+      question: 'Ako môžem podať reklamáciu na základe záruky?',
+      answer:
+        'Podajte reklamáciu kontaktovaním nášho podporného tímu s číslom objednávky, fotografiami problému a stručným popisom. Väčšina nárokov je preskúmaná do 2 pracovných dní. Schválené nároky dostanú pokyny na výmenu alebo opravu do niekoľkých dní.',
+      category: 'warranty',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'shipping-info',
+      question: 'Ako dlho trvá doručenie?',
+      answer:
+        'Objednávky na sklade sú odoslané do 2–3 pracovných dní. Domáce objednávky v USA dorazia do 5–10 pracovných dní. Medzinárodné objednávky dorazia do 10–20 pracovných dní v závislosti od destinácie. Naliehavé objednávky je možné urýchliť.',
+      category: 'shipping',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'return-policy',
+      question: 'Aká je vaša politika vrátenia tovaru?',
+      answer:
+        'Prijímame vrátenie do 30 dní od doručenia za nepoužité produkty v originálnom balení. Zákazky/OEM objednávky nie sú vratné. Kontaktujte náš tím podpory pre iniciovanie vrátenia — poskytujeme predplatený poštovný štítok.',
+      category: 'ordering',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'paddle-length',
+      question: 'Ponúkate OEM ODM / služby?',
+      answer:
+        'Áno. Ponúkame služby privátnej značky a zákazkového dizajnu pre firmy. Od vlastného brandingu existujúcich modelov až po plne prispôsobené dizajny trupu, náš inžiniersky tím dokáže vyvíjať produkty pod vašou značkou. Platí minimálne množstvá objednávok.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: ['choosing-paddle'],
+    },
+    {
+      id: 'sup-width-stability',
+      question: 'Akú dĺžku pádla potrebujem?',
+      answer:
+        'Pre SUP: pádlo by malo byť o 6–8 palcov vyššie ako vaša výška. Pre kajak: dĺžka pádla závisí od šírky lode a dĺžky trupu. Podrobné veľkosti nájdete v našom sprievodcovi pádlom.',
+      category: 'product',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
+    },
+    {
+      id: 'sup-volume-weight',
+      question: 'Akú veľkosť motora potrebujem RIB na ?',
+      answer:
+        'Veľkosť motora závisí od dĺžky a hmotnosti lode. 3m zvyčajne RIB zvláda 15–25, HP4,5m RIB 40–60 a HP6m RIB 90–150 HP. Vždy dodržiavajte HP maximálnu hodnotiacu tabuľku na vašej lodi.',
+      category: 'product',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
+    },
+    {
+      id: 'paddleboardoverstock-vs-others',
+      question: 'Aký je rozdiel medzi PVC a Hypalon?',
+      answer:
+        'PVC je ľahší, cenovo dostupnejší a ľahšie sa opravuje — ideálny na rekreačné použitie. Hypalon (CSM) ponúka vynikajúcu UV a chemickú odolnosť s dlhšou životnosťou, preferovaný pre komerčné a vojenské aplikácie. Paddle Board Overstock používa oba typy v závislosti od úrovne produktu.',
+      category: 'general',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['how-to-choose-your-sup'],
+    },
+    {
+      id: 'fishing-sup-setup',
+      question: 'SUP Aká šírka je najlepšia pre stabilitu?',
+      answer:
+        'Pre začiatočníkov poskytuje šírka 33–34 palcov najlepší pomer stability a ľahkosti pádlovania. Dosky užšie než 32 palcov pôsobia pri nových pádlovaniach nestabilne. Paddle Board Overstock SUP Explorer 11 so šírkou 33 palcov je ideálny na učenie.',
+      category: 'general',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['sup-fishing'],
+    },
+    {
+      id: 'sup-yoga',
+      question: 'Ako si mám vybrať SUP objem podľa svojej váhy?',
+      answer:
+        'Vynásobte svoju hmotnosť v kg 2,2 pre cieľový objem vhodný pre začiatočníkov. Napríklad 75 kg pádlovač potrebuje aspoň 165 litrov, ale 220–260 litrov je oveľa stabilnejšie na učenie. SUP Explorer 11 ponúka 260 litrov, vhodný pre jazdcov do 100 kg.',
+      category: 'general',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['sup-yoga'],
+    },
+    {
+      id: 'airline-travel-sup',
+      question: 'Aký veľký motor potrebujem pre svoju nafukovaciu loď?',
+      answer:
+        'Pre AirDeck 270 použite až 6 HP. Pre AirDeck 360 až 15 HP. Pre RIB 330 až 40 HP. Pre RIB 450 Patrol až do 60 HP. Vždy kontrolujte HP maximálnu hodnotiacu tabuľku na vašej lodi a nikdy ju neprekračujete.',
+      category: 'general',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['multi-day-trip'],
+    },
+    {
+      id: 'cold-weather-safety',
+      question: 'Aký typ podlahy je najlepší pre nafukovací čln?',
+      answer:
+        'Hliníkové lamelové podlahy poskytujú najlepší výkon — pevné, schopné hoblovania a stabilné na státie. Vzdušné paluby sú ľahšie a majú menšie priestory, ale viac sa ohýbajú. Rolovacie podlahy sú najjednoduchšie a najdostupnejšie, ale ponúkajú najmenšiu tuhosť. Vyberte podľa svojho hlavného využitia: rybolov a rýchlosť uprednostňujú lamelové podlahy; prenosnosť uprednostňuje vzdušné paluby.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: ['safety-tips'],
+    },
+    {
+      id: 'sup-inflate-pressure',
+      question: 'Ako sa Paddle Board Overstock porovnáva s inými značkami?',
+      answer:
+        'Paddle Board Overstock ponúka najlepšiu hodnotu v nafukovacom vodnom športovom vybavení. V porovnaní s Red Paddle Co, Paddle Board Overstock poskytuje 90 % výkonu za 60 % ceny. V porovnaní s iRocker, Paddle Board Overstock používa vyššej kvality trojvrstvový vojenský PVC a vyššie PSI hodnotenia. V porovnaní s Bluefin, Paddle Board Overstock ponúka lepšie parametre materiálu. Pre väčšinu rekreačných paddlerov, Paddle Board Overstock poskytuje najlepší pomer kvality a ceny.',
+      category: 'product',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
+    },
+    {
+      id: 'sup-deck-pad-care',
+      question: 'Môžem rybárčiť z SUP dosky?',
+      answer:
+        'Áno. SUP rybolov je čoraz populárnejší, pretože stojaca pozícia poskytuje vynikajúcu viditeľnosť do vody. Vyberte si dosku aspoň 11 stôp dlhú a 33–34 palcov širokú pre stabilitu. Pridajte mliečnu krabicu s držiakmi na prúty upevnenú na deck bungee, malý kotviaci čln a vždy noste PFD. Paddle Board Overstock SUP Explorer 11 je vhodný pre rekreačný rybolov.',
+      category: 'maintenance',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['sup-maintenance'],
+    },
+    {
+      id: 'sup-seated-paddling',
+      question: 'Môžem robiť jogu na SUP doske?',
+      answer:
+        'Určite áno.SUP Joga kombinuje tradičné pozície s výzvou plávajúcej plošiny, ktorá zapája hlbšie stabilizačné svaly. Použite dosku 33 palcov alebo širšiu s mäkkou, priľnavou podložkou na palubu. Cvičte v pokojnej, plytkej vode s kotvou. Začnite základnými pozíciami ako downward dog, warrior II a tree pose. SUP Explorer 11 s plnou EVA podložkou na palubu je dobre prispôsobený.',
+      category: 'product',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: [],
+    },
+    {
+      id: 'saltwater-rinse',
+      question: 'Aké sú pravidlá leteckých spoločností pre cestovanie s nafukovacou SUP?',
+      answer:
+        'Väčšina leteckých spoločností akceptuje SUP batohy ako registrovanú batožinu, ak vážia menej ako 23–32 kg. Paddle Board Overstock batoh má približne rozmery 90x40x30 cm a váži približne 15 kg zabalený. Niektoré letecké spoločnosti môžu účtovať poplatky za nadrozmernú batožinu. Príďte včas, ploutve a pumpu zabaľte samostatne do príručnej batožiny a označte tašku ako krehkú. Vždy si pred letom overte pravidlá vašej leteckej spoločnosti týkajúce sa športového vybavenia.',
+      category: 'maintenance',
+      relatedProducts: [],
+      relatedGuides: ['sup-maintenance'],
+    },
+    {
+      id: 'sup-leash-necessity',
+      question: 'Aké bezpečnostné vybavenie potrebujem na pádlovanie v studenej vode?',
+      answer:
+        'Voda pod 15°C vyžaduje tepelnú ochranu. Pri 8–14°C používajte neoprén alebo suchý oblek s topánkami, rukavicami a kapucňou. Pri 14–20°C postačuje 3/2mm neoprén. Vždy noste správne padnúci oblek PFD pre tepelnú ochranu a bezpečnosť. Skontrolujte miestne predpisy o povinných požiadavkách na vybavenie.',
+      category: 'safety',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['safety-tips'],
+    },
+    {
+      id: 'company-model',
+      question: 'Aké sú minimálne objednávkové množstvá pre OEM/ODM?',
+      answer:
+        'Minimálne množstvá objednávok (MOQs) sa líšia podľa typu produktu a zložitosti. Vlastné brandovanie existujúcich modelov zvyčajne vyžaduje 5–10 kusov. Plne prispôsobené dizajny trupu vyžadujú viac MOQs. Kontaktujte náš predajný tím so svojimi požiadavkami pre podrobnú cenovú ponuku. Postaráme sa o všetko od vlastných farieb a log až po úplne originálne návrhy foriem.',
+      category: 'ordering',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'us-contract-weihai-shipping',
+      question: 'Môžem na produkty Paddle Board Overstock umiestniť vlastné logo?',
+      answer:
+        'Áno. Naša OEM služba zahŕňa umiestnenie loga na mieru, farebné schémy na mieru a balenie na mieru. Ponúkame možnosti tampotlače, prenosu tepla a výšivky v závislosti od typu produktu. Pošlite svoje umelecké diela a špecifikácie nášmu predajnému tímu na cenovú ponuku a odhad dodacieho času.',
+      category: 'ordering',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+  ],
+  sl: [
+    {
+      id: 'sup-learning',
+      question: 'Je SUP težko za naučiti?',
+      answer:
+        'Sploh ne. Večina začetnikov vstane in vesla že v prvem treningu. Naša serija All-Around vključuje ekstra SUP široke stabilne platforme, posebej zasnovane za začetnike. Začnite na mirni vodi in v nekaj minutah boste že križarili.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: ['beginner-guide'],
+    },
+    {
+      id: 'ocean-use',
+      question: 'Ali ga lahko uporabljam v oceanu?',
+      answer:
+        'Da. Paddle Board Overstock SUP deske so narejene za uporabo v oceanu, jezeru in reki. Naša serija Touring se spopada s priobalnimi valovi, vse deske pa uporabljajo morsko obstojen PVC, ki je odporen proti koroziji zaradi slane vode. Po uporabi v oceanu sperite s svežo vodo.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: ['weather-conditions'],
+    },
+    {
+      id: 'inflation-time',
+      question: 'Kako dolgo traja, da se napihne?',
+      answer:
+        'S priloženo dvojno delujočo črpalko se večina plošč napihne na 12–15 v PSI manj kot 5 minutah. Naša električna črpalka to skrajša na manj kot 2 minuti. Izpraznitev in pakiranje trajata približno 3 minute.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: ['sup-maintenance'],
+    },
+    {
+      id: 'travel-sup',
+      question: 'Ali lahko potujem z napihljivo napravo SUP?',
+      answer:
+        'Absolutno. Vsaka Paddle Board Overstock deska se prilega v nahrbtnik velikostnega nosilca, zasnovanega za priročno potovanje — preverite politike glede velikosti in teže za prevoz. Tehta le 18-22 lbs, zato jo je enostavno prinesti na plažo, jezero ali skozi terminale letališča.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'weight-limit',
+      question: 'Kakšna je omejitev teže?',
+      answer:
+        'Naša vsestranska SUPs oprema podpira do 220 lbs. Serije Touring in Yoga podpirajo do 250 lbs. RIB Čolni običajno podpirajo 600–1500 lbs, odvisno od modela. Za tandemsko uporabo ali težje obremenitve naši napihljivi čolni ponujajo možnosti večje kapacitete.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: ['understanding-specs'],
+    },
+    {
+      id: 'box-contents',
+      question: 'Kaj pride v škatli?',
+      answer:
+        'Vsaka Paddle Board Overstock SUP vključuje desko, potovalni nahrbtnik, dvostopenjsko ročno črpalko, snemljivo plavut, zanko za nogo s spiralo in komplet za popravilo. Nekateri modeli vključujejo tudi možnost nadgradnje z ogljikovim veslom. Napihljivi čolni vključujejo čoln, črpalko, komplet za popravilo in vesla.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'bundle-deals',
+      question: 'Ali ponujate paketne ponudbe?',
+      answer:
+        'Da. Ponujamo skrbno izbrane pakete, ki vam prihranijo denar v primerjavi z nakupom izdelkov posebej. Za trenutne promocije paketov in znižane cene kontaktirajte našo prodajno ekipo.',
+      category: 'ordering',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'pfd-requirement',
+      question: 'Ali potrebujem rešilni jopič na SUP?',
+      answer:
+        'Da. Veliko jurisdikcij zakonsko zahteva rešilni jopič na vsakem plovilu, vključno z SUPs. Tudi tam, kjer ni obvezen, je -certificiran CE rešilni jopič bistvena varnostna oprema. Priporočamo, da ga nosite ves čas na vodi.',
+      category: 'safety',
+      relatedProducts: [],
+      relatedGuides: ['safety-tips'],
+    },
+    {
+      id: 'paddleboard-registration',
+      question: 'Ali moram registrirati svoj napihljivi čoln?',
+      answer:
+        'Zahteve se razlikujejo glede na jurisdikcijo. V večini regij je registracija za napihljive čolne z motorji nad določeno konjsko močjo. SUPs Nemotorni in majhni čolni običajno ne. Preverite pri lokalni pomorski oblasti za posebna pravila.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'puncture-repair',
+      question: 'Kako popravim predrto luknjo?',
+      answer:
+        'Očistite površino, izrežite zakrpko z zaobljenimi robovi, nanesite lepilo PVC, močno pritisnite in počakajte 24 ur pred napihovanjem. Paddle Board Overstock deske vključujejo komplet za popravilo. Za podrobna navodila si oglejte naš vodič za popravilo napihljivih izdelkov.',
+      category: 'maintenance',
+      relatedProducts: [],
+      relatedGuides: ['inflatable-repair', 'sup-maintenance'],
+    },
+    {
+      id: 'storage',
+      question: 'Kako naj shranjujem svojo napihljivo napravo SUP?',
+      answer:
+        'Sperite s svežo vodo, popolnoma posušite, popolnoma izpraznite, ohlapno zvijte od nosu in shranite v torbo na hladnem in suhem mestu, stran od neposredne sončne svetlobe. Nikoli ne shranjujte mokrega ali v ekstremnih temperaturah.',
+      category: 'maintenance',
+      relatedProducts: [],
+      relatedGuides: ['sup-maintenance'],
+    },
+    {
+      id: 'sup-vs-hard',
+      question: 'Napihljiva ali SUP trda deska?',
+      answer:
+        'Napihljive deske nudijo prenosljivost, udobje shranjevanja in absorpcijo udarcev. Trde deske nudijo največjo togost in hitrost. Za večino rekreativnih uporabnikov je kakovostna napihljiva deska z drop-stitch jedrom praktična izbira.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: ['inflatable-vs-hard', 'how-to-choose-your-sup'],
+    },
+    {
+      id: 'wind-safety',
+      question: 'Katera hitrost vetra je previsoka za SUP?',
+      answer:
+        'Začetniki: več kot 10 mph (8 vozlov). Srednji nivo: več kot 15 mph (13 vozlov). Napredni: več kot 20 mph (17 vozlov). Če ste v dvomih, ne hodite ven. Veter z odprtega območja (pihanje s kopnega na morje) je nevaren na katerikoli ravni spretnosti.',
+      category: 'safety',
+      relatedProducts: [],
+      relatedGuides: ['weather-conditions', 'safety-tips'],
+    },
+    {
+      id: 'warranty',
+      question: 'Kakšna je Paddle Board Overstock garancija?',
+      answer:
+        'Vsi Paddle Board Overstock izdelki so podprti s celovito proizvajalčevo garancijo. Tkanina tub za napihljive čolne, šivi in trup so zajeti s 5-letno omejeno garancijo; SUP deske in dodatki imajo 2-letno omejeno garancijo. Garancija krije napake v materialih in izdelavi pri normalni uporabi.',
+      category: 'warranty',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'warranty-claim',
+      question: 'Kako vložim garancijski zahtevek?',
+      answer:
+        'Vložite zahtevek tako, da kontaktirate našo podporno ekipo z vašo številko naročila, fotografijami težave in kratkim opisom. Večina zahtevkov je pregledanih v dveh delovnih dneh. Odobreni zahtevki prejmejo navodila za zamenjavo ali popravilo v nekaj dneh.',
+      category: 'warranty',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'shipping-info',
+      question: 'Kako dolgo traja pošiljanje?',
+      answer:
+        'Naročila, ki so na zalogi, so odposlana v 2–3 delovnih dneh. Ameriška domača naročila prispejo v 5–10 delovnih dneh. Mednarodna naročila prispejo v 10–20 delovnih dneh, odvisno od destinacije. Nujna naročila je mogoče pospešiti.',
+      category: 'shipping',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'return-policy',
+      question: 'Kakšna je vaša politika vračila?',
+      answer:
+        'Sprejemamo vračila v 30 dneh po dostavi za neuporabljene izdelke v originalni embalaži. Naročila po meri niso OEM vračljiva. Kontaktirajte našo podporno ekipo za začetek vračila — zagotavljamo predplačniško nalepko za pošiljanje.',
+      category: 'ordering',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'paddle-length',
+      question: 'Ali ponujate OEM ODM / storitve?',
+      answer:
+        'Da. Nudimo storitve zasebnega blagovnega znamka in oblikovanja po meri za podjetja. Od prilagojenega blagovnega znamčenja obstoječih modelov do popolnoma unikatnih trupov – naša inženirska ekipa lahko razvija izdelke pod vašo blagovno znamko. Veljajo minimalne količine naročil.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: ['choosing-paddle'],
+    },
+    {
+      id: 'sup-width-stability',
+      question: 'Kakšno dolžino lopatice potrebujem?',
+      answer:
+        'Za SUP: veslo naj bo 6–8 palcev višje od vaše višine. Za kajak: dolžina vesla je odvisna od širine čolna in dolžine trupa. Za podrobne velikosti si oglejte naš vodnik po veslanju.',
+      category: 'product',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
+    },
+    {
+      id: 'sup-volume-weight',
+      question: 'Kakšno velikost motorja potrebujem za RIB?',
+      answer:
+        'Velikost motorja je odvisna od dolžine in teže čolna. 3m običajno RIB sprejme 15–25, HP4,5m RIB 40–60, HP6m pa RIB 90–150 HP. Vedno upoštevajte HP najvišjo oceno na svoji ladji.',
+      category: 'product',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
+    },
+    {
+      id: 'paddleboardoverstock-vs-others',
+      question: 'Kakšna je razlika med PVC in Hypalon?',
+      answer:
+        'PVC je lažji, bolj dostopen in enostavnejši za popravilo — idealen za rekreativno uporabo. Hypalon (CSM) nudi boljšo UV in odpornost proti kemikalijam z daljšo življenjsko dobo, primerno za komercialno in vojaško uporabo. Paddle Board Overstock uporablja oba, odvisno od razreda izdelka.',
+      category: 'general',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['how-to-choose-your-sup'],
+    },
+    {
+      id: 'fishing-sup-setup',
+      question: 'SUP Katera širina je najboljša za stabilnost?',
+      answer:
+        'Za začetnike je širina 33–34 palcev najbolj uravnotežena med stabilnostjo in enostavnostjo veslanja. Deske ožjе od 32 palcev so za nove veslače nestabilne. Paddle Board Overstock SUP Explorer 11 s širino 33 palcev je idealen za učenje.',
+      category: 'general',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['sup-fishing'],
+    },
+    {
+      id: 'sup-yoga',
+      question: 'Kako izberem SUP volumen glede na svojo težo?',
+      answer:
+        'Pomnožite svojo težo v kg z 2,2 za začetniške ciljne prostornine. Na primer, veslač s 75 kg potrebuje vsaj 165 litrov, medtem ko je 220–260 litrov veliko bolj stabilno za učenje. SUP Explorer 11 ponuja 260 litrov, primerno za kolesarje do 100 kg.',
+      category: 'general',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['sup-yoga'],
+    },
+    {
+      id: 'airline-travel-sup',
+      question: 'Kakšno velikost motorja potrebujem za svoj napihljivi čoln?',
+      answer:
+        'Za AirDeck 270 uporabite do 6 HP. Za AirDeck 360 do 15 HP. Za RIB 330 do 40 HP. Za RIB 450 Patrol do 60 HP. Vedno preverite HP najvišjo oceno na čolnu in je nikoli ne presegajte.',
+      category: 'general',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['multi-day-trip'],
+    },
+    {
+      id: 'cold-weather-safety',
+      question: 'Katera vrsta tal je najboljša za napihljiv čoln?',
+      answer:
+        'Aluminijasta letvasta tla zagotavljajo najboljšo zmogljivost — togosta, sposobna gobljenja in stabilna za stoje. Zračne palube so lažje in se zložijo manjše, a se bolj upognejo. Zvijačna tla so najpreprostejša in cenovno dostopna, vendar nudijo najmanjšo togost. Izbirajte glede na svojo osnovno uporabo: ribolov in hitrost dajata prednost letvnim ploščam; prenosljivost favorizira zračne palube.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: ['safety-tips'],
+    },
+    {
+      id: 'sup-inflate-pressure',
+      question: 'Kako se Paddle Board Overstock primerja z drugimi blagovnimi znamkami?',
+      answer:
+        'Paddle Board Overstock ponuja najboljšo vrednost med napihljivimi pripomočki za vodne športe. V primerjavi z Red Paddle Co, Paddle Board Overstock zagotavlja 90 % zmogljivosti za 60 % cene. V primerjavi z iRocker, Paddle Board Overstock uporablja višje kakovostne trojne sloje vojaškega razreda PVC in višje PSI ocene. V primerjavi z Bluefin, Paddle Board Overstock ponuja boljše specifikacije materiala. Za večino rekreativnih veslačev, Paddle Board Overstock zagotavlja najboljše ravnovesje med kakovostjo in ceno.',
+      category: 'product',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
+    },
+    {
+      id: 'sup-deck-pad-care',
+      question: 'Ali lahko ribarim z SUP desko?',
+      answer:
+        'Da. SUP ribolov postaja vse bolj priljubljen, ker stoječi položaj omogoča odlično vidljivost v vodo. Izberite desko, dolgo vsaj 11 čevljev in široko 33–34 palcev za stabilnost. Dodajte mlečno škatlo z držali za palice, pritrjeno na palubne elastike, majhen sidro in vedno nosite PFD. Paddle Board Overstock SUP Explorer 11 je primeren za priložnostni ribolov.',
+      category: 'maintenance',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['sup-maintenance'],
+    },
+    {
+      id: 'sup-seated-paddling',
+      question: 'Ali lahko delam jogo na SUP deski?',
+      answer:
+        'Absolutno.SUP Joga združuje tradicionalne položaje z izzivom plavajoče platforme, ki vključuje globlje stabilizacijske mišice. Uporabite desko dolžine 33 palcev ali širšo z mehko, oprijemljivo podlogo za teraso. Vadite v mirni, plitvi vodi s sidrom. Začnite z osnovnimi položaji, kot so downward dog, warrior II in tree pose. SUP Explorer 11 s EVA polno podlogo za palubo je zelo primeren.',
+      category: 'product',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: [],
+    },
+    {
+      id: 'saltwater-rinse',
+      question: 'Kakšna so pravila letalske družbe za potovanje z napihljivim vozilom SUP?',
+      answer:
+        'Večina letalskih družb sprejema SUP nahrbtnike kot odjavljeno prtljago, če tehtajo med 23–32 kg. Paddle Board Overstock nahrbtnik je približno 90x40x30 cm in tehta okoli 15 kg, ko je zapakiran. Nekatere letalske družbe lahko zaračunajo pristojbino za preveliko prtljago. Pridite zgodaj, plavuti in črpalko zavijte ločeno v ročno prtljago ter torbo označite kot lomljivo. Vedno preverite pravila letalske družbe glede športne opreme pred poletom.',
+      category: 'maintenance',
+      relatedProducts: [],
+      relatedGuides: ['sup-maintenance'],
+    },
+    {
+      id: 'sup-leash-necessity',
+      question: 'Kakšno varnostno opremo potrebujem za veslanje v hladni vodi?',
+      answer:
+        'Voda pod 15°C zahteva toplotno zaščito. Za 8–14°C uporabljajte neoprensko ali suho obleko s škornji, rokavicami in kapuco. Za 14–20°C zadostuje 3/2 mm neoprenska obleka. Vedno nosite ustrezno prilagojeno obleko PFD za toplotno zaščito in varnost. Preverite lokalne predpise glede obveznih zahtev glede opreme.',
+      category: 'safety',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['safety-tips'],
+    },
+    {
+      id: 'company-model',
+      question: 'Kakšne so minimalne količine naročila za OEM/ODM?',
+      answer:
+        'Minimalne količine naročil (MOQs) se razlikujejo glede na vrsto izdelka in zahtevnost. Prilagojena blagovna znamka na obstoječih modelih običajno zahteva 5–10 enot. Popolnoma unikatne zasnove trupa zahtevajo več MOQs. Kontaktirajte našo prodajno ekipo za vaše zahteve za podrobno ponudbo. Poskrbimo za vse od unikatnih barv in logotipov do povsem izvirnih modelov.',
+      category: 'ordering',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'us-contract-weihai-shipping',
+      question: 'Ali lahko na Paddle Board Overstock izdelke namestim lastno logotip?',
+      answer:
+        'Da. OEM Naša storitev vključuje postavitev logotipov po meri, barvne sheme po meri in embalažo po meri. Ponujamo možnosti za tiskanje tampo, toplotni prenos in vezenje, odvisno od vrste izdelka. Pošljite svoje umetniško delo in specifikacije naši prodajni ekipi za ponudbo in oceno časa dobav.',
+      category: 'ordering',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+  ],
+  sr: [
+    {
+      id: 'sup-learning',
+      question: 'Da li je SUP teško naučiti?',
+      answer:
+        'Uopšte ne. Većina početnika ustaje i vesla u svojoj prvoj sesiji. Naša SUP All-Around serija ima ekstra široke stabilne platforme dizajnirane specijalno za prve veslače. Počnite na mirnoj vodi i bićete krstarenje za nekoliko minuta.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: ['beginner-guide'],
+    },
+    {
+      id: 'ocean-use',
+      question: 'Mogu li ga koristiti u okeanu?',
+      answer:
+        'Da. Paddle Board Overstock SUP daske su napravljene za korišćenje na okeanu, jezeru i reci. Naša Touring serija se nosi sa obalskim talasima, a sve daske koriste marine-grade PVC koji je otporan na koroziju od slane vode. Ispirajte svežom vodom nakon korišćenja u okeanu.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: ['weather-conditions'],
+    },
+    {
+      id: 'inflation-time',
+      question: 'Koliko vremena je potrebno da se naduva?',
+      answer:
+        'Sa uključenom pumpom sa dvostrukim dejstvom, većina ploča se naduva na 12–15 PSI za manje od 5 minuta. Naša opcija električne pumpe smanjuje to na manje od 2 minuta. Deflacija i pakovanje traju oko 3 minuta.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: ['sup-maintenance'],
+    },
+    {
+      id: 'travel-sup',
+      question: 'Mogu li da putujem sa naduvavanje SUP?',
+      answer:
+        'Apsolutno. Svaka Paddle Board Overstock daska se spakuje u ranac veličine za nošenje koji je dizajniran za praktično putovanje — proverite pravila o veličini i težini kod vašeg prevoznika. Sa samo 18-22 lbs, lako se nosi do plaže, jezera ili kroz aerodromske terminale.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'weight-limit',
+      question: 'Koja je granica težine?',
+      answer:
+        'Naš SUPs All-Around podrška do 220 cm. Touring i Joga serija podržava do 250 lbs. RIB Brodovi obično podržavaju 600–1500 lbs u zavisnosti od modela. Za tandem upotrebu ili teže opterećenja, naši gumeni čamci nude veće opcije kapaciteta.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: ['understanding-specs'],
+    },
+    {
+      id: 'box-contents',
+      question: 'Šta dolazi u kutiji?',
+      answer:
+        'Svaka Paddle Board Overstock SUP uključuje dasku, putni ranac, dvostruku ručnu pumpu, odvojivu peraju, spiralno uzicu i set za popravku. Neki modeli takođe uključuju opciju nadogradnje na karbonsko veslo. Naduvavajući čamci uključuju čamac, pumpu, set za popravku i vesla.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'bundle-deals',
+      question: 'Da li nudite pakete?',
+      answer:
+        'Da. Nudimo kurirane pakete koji vam štede novac u poređenju sa kupovinom artikala odvojeno. Kontaktirajte naš prodajni tim za trenutne promocije paketa i cene popusta.',
+      category: 'ordering',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'pfd-requirement',
+      question: 'Da li mi treba prsluk za spašavanje na SUP?',
+      answer:
+        'Da. Mnoge jurisdikcije zakonski zahtevaju prsluk za spašavanje na bilo kojem plovilu, uključujući SUPs. Čak i tamo gde nije potrebno, CE sertifikovani prsluk za spašavanje je neophodna sigurnosna oprema. Preporučujemo da ga nosite u svakom trenutku na vodi.',
+      category: 'safety',
+      relatedProducts: [],
+      relatedGuides: ['safety-tips'],
+    },
+    {
+      id: 'paddleboard-registration',
+      question: 'Da li treba da registrujem svoj čamac na naduvavanje?',
+      answer:
+        'Zahtevi se razlikuju u zavisnosti od nadležnosti. U većini regiona, čamci na naduvavanje sa motorima preko određene konjske snage zahtevaju registraciju. Unpovered SUPs i mali čamci obično ne. Proverite lokalnu pomorsku vlast za posebna pravila.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'puncture-repair',
+      question: 'Kako da popravim punkciju?',
+      answer:
+        'Očistite područje, isecite zakrpu sa zaobljenim uglovima, nanesite PVC lepak, čvrsto pritisnite i sačekajte 24 sata pre naduvavanja. Paddle Board Overstock daske uključuju set za popravku. Za detaljna uputstva, pogledajte naš vodič za popravku naduvavanja.',
+      category: 'maintenance',
+      relatedProducts: [],
+      relatedGuides: ['inflatable-repair', 'sup-maintenance'],
+    },
+    {
+      id: 'storage',
+      question: 'Kako da skladištim svoj naduvavanje SUP?',
+      answer:
+        'Isperite svežom vodom, potpuno osušite, ispuhati u potpunosti, roll labavo od nosa, i čuvati u torbi za nošenje na hladnom i suvom mestu daleko od direktne sunčeve svetlosti. Nikada ne čuvati mokro ili na ekstremnim temperaturama.',
+      category: 'maintenance',
+      relatedProducts: [],
+      relatedGuides: ['sup-maintenance'],
+    },
+    {
+      id: 'sup-vs-hard',
+      question: 'Naduvavanje ili SUP tvrda ploča?',
+      answer:
+        'Naduvavanje ploče nude prenosivost, skladištenje pogodnost, i apsorpcija uticaja. Hard ploče nude maksimalnu krutost i brzinu. Za većinu rekreativnih korisnika, kvalitetan naduvavanje sa drop-stitch jezgrom je praktičan izbor.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: ['inflatable-vs-hard', 'how-to-choose-your-sup'],
+    },
+    {
+      id: 'wind-safety',
+      question: 'Šta brzina vetra je previsoka za SUP?',
+      answer:
+        'Početnici: preko 10 mph (8 čvorova). Srednji: preko 15 mph (13 čvorova). Napredni: preko 20 mph (17 čvorova). Ako ste u nedoumici, ne izlazite. Offshore vetar (duva od kopna do mora) je opasan na bilo kom nivou veštine.',
+      category: 'safety',
+      relatedProducts: [],
+      relatedGuides: ['weather-conditions', 'safety-tips'],
+    },
+    {
+      id: 'warranty',
+      question: 'Koja je Paddle Board Overstock garancija?',
+      answer:
+        'Svi Paddle Board Overstock proizvodi imaju podršku sveobuhvatnom fabričkom garancijom. Tkanina, šavovi i trup napuhavajuće čamce za cijevi pokriveni su 5-godišnjom ograničenom garancijom; SUP daske i dodaci imaju 2-godišnju ograničenu garanciju. Garancija pokriva nedostatke u materijalima i izradi pri normalnoj upotrebi.',
+      category: 'warranty',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'warranty-claim',
+      question: 'Kako da podnesem zahtev za garanciju?',
+      answer:
+        'Podnesite zahtev tako što ćete kontaktirati naš tim za podršku sa brojem porudžbine, fotografijama problema i kratkim opisom. Većina potraživanja se pregleda u roku od 2 radna dana. Odobreni zahtevi dobijaju instrukcije za zamenu ili popravku u roku od nekoliko dana.',
+      category: 'warranty',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'shipping-info',
+      question: 'Koliko dugo traje isporuka?',
+      answer:
+        'Narudžbe na lageru isporučuju se u roku od 2-3 radna dana. Domaće porudžbine u SAD-u stižu u 5-10 radnih dana. Međunarodne porudžbine stižu u 10-20 radnih dana u zavisnosti od destinacije. Hitne porudžbine mogu se ubrzati.',
+      category: 'shipping',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'return-policy',
+      question: 'Koja je vaša politika povratka?',
+      answer:
+        'Prihvatamo povrat u roku od 30 dana od isporuke za neiskorišćene proizvode u originalnom pakovanju.OEM Prilagođeni / narudžbe su nepovratne. Kontaktirajte naš tim za podršku da biste pokrenuli povratak - pružamo unapred plaćenu etiketu za otpremu.',
+      category: 'ordering',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'paddle-length',
+      question: 'Da li nudite OEM/ODM usluge?',
+      answer:
+        'Da. Nudimo privatne etikete i prilagođene usluge dizajna za preduzeća. Od prilagođenog brendiranja na postojećim modelima do potpuno prilagođenih dizajna trupa, naš inženjerski tim može razviti proizvode pod vašim brendom. Minimalne količine narudžbe se primenjuju.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: ['choosing-paddle'],
+    },
+    {
+      id: 'sup-width-stability',
+      question: 'Koja dužina vesla mi je potrebna?',
+      answer:
+        'Za SUP: veslo treba da bude 6–8 inča viši od vaše visine. Za kajak: dužina vesla zavisi od širine čamca i dužine torza. Pogledajte naš vodič za veslo za detaljno dimenzionisanje.',
+      category: 'product',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
+    },
+    {
+      id: 'sup-volume-weight',
+      question: 'Koja veličina motora mi je potrebna za RIB?',
+      answer:
+        'Veličina motora zavisi od dužine i težine broda. 3m RIB obično rukuje 15-25 HP, 4.5m RIB ručke 40-60, HP a 6m RIB ručke 90-150 HP. Uvek pratite HP maksimalnu oznaku na vašem brodu.',
+      category: 'product',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
+    },
+    {
+      id: 'paddleboardoverstock-vs-others',
+      question: 'Koja je razlika između PVC i Hypalon?',
+      answer:
+        'PVC je lakši, povoljniji i lakši za popravku — idealan za rekreativnu upotrebu. Hypalon (CSM) nudi vrhunsko UV i otpornost na hemikalije sa dužim vekom trajanja, preferiran za komercijalnu i vojnu upotrebu. Paddle Board Overstock koristi oba, zavisno od nivoa proizvoda.',
+      category: 'general',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['how-to-choose-your-sup'],
+    },
+    {
+      id: 'fishing-sup-setup',
+      question: 'SUP Koja širina je najbolja za stabilnost?',
+      answer:
+        'Za početnike, širina od 33–34 inča pruža najbolju ravnotežu stabilnosti i lakoće veslanja. Daske užine od 32 inča deluju nestabilno za nove veslače. Paddle Board Overstock SUP Explorer 11 od 33 inča je idealan za učenje.',
+      category: 'general',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['sup-fishing'],
+    },
+    {
+      id: 'sup-yoga',
+      question: 'Kako da izaberem SUP jačinu zvuka za svoju težinu?',
+      answer:
+        'Pomnožite svoju težinu u kg sa 2,2 za cilj zapremine prilagođen početnicima. Na primer, veslaču od 75 kg treba najmanje 165 litara, ali 220–260 litara je mnogo stabilnije za učenje. SUP Ekplorer 11 nudi 260 litara, pogodan za vozače do 100 kg.',
+      category: 'general',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['sup-yoga'],
+    },
+    {
+      id: 'airline-travel-sup',
+      question: 'Koja veličina motora mi je potrebna za moj čamac na naduvavanje?',
+      answer:
+        'Za AirDeck 270, koristite do 6 HP. Za AirDeck 360, do 15 HP. Za RIB 330, do 40 HP. Za RIB 450 Patrol, do 60 HP. Uvek proverite maksimalnu HP oznaku na vašem brodu i nikada ga ne prekoračite.',
+      category: 'general',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['multi-day-trip'],
+    },
+    {
+      id: 'cold-weather-safety',
+      question: 'Koji tip poda je najbolji za čamac na naduvavanje?',
+      answer:
+        'Aluminijumski lamelni podovi pružaju najbolje performanse - kruti, rendisanje sposobni i stabilni za stajanje. Vazdušne palube su lakše i pakuju manje, ali se više savijaju. Roll-up podovi su najjednostavniji i najpristupačniji, ali nude najmanje krutosti. Izaberite na osnovu vaše primarne upotrebe: ribolov i brzina favorizuju podove od letvica; prenosivost favorizuje vazdušne palube.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: ['safety-tips'],
+    },
+    {
+      id: 'sup-inflate-pressure',
+      question: 'Kako se Paddle Board Overstock upoređuje sa drugim brendovima?',
+      answer:
+        'Paddle Board Overstock nudi najbolju vrednost u opremi za vodene sportove na naduvavanje. U poređenju sa Red Paddle Co, Paddle Board Overstock pruža 90% performansi po 60% cene. U poređenju sa iRocker, Paddle Board Overstock koristi treslojni vojni PVC višeg kvaliteta i veće PSI rejtinge. U poređenju sa Bluefin, Paddle Board Overstock nudi bolje specifikacije materijala. Za većinu rekreativnih veslača, Paddle Board Overstock pruža najbolji balans između kvaliteta i cene.',
+      category: 'product',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
+    },
+    {
+      id: 'sup-deck-pad-care',
+      question: 'Mogu li da pecam sa SUP daske?',
+      answer:
+        'Da. SUP ribolov postaje sve popularniji jer stojeći položaj pruža odličnu preglednost vode. Izaberite dasku dug najmanje 11 stopa i širok 33–34 inča radi stabilnosti. Dodajte mlečnu kutiju sa držačima štapova pričvršćenu na dek pomoću bungee konopaca, mali sidro i uvek nosite PFD. Paddle Board Overstock SUP Explorer 11 dobro funkcioniše za povremeni ribolov.',
+      category: 'maintenance',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['sup-maintenance'],
+    },
+    {
+      id: 'sup-seated-paddling',
+      question: 'Mogu li da radim jogu na SUP tabli?',
+      answer:
+        'Apsolutno.SUP Joga kombinuje tradicionalne poze sa izazovom plutajuće platforme, angažovanje dublje mišiće stabilizatora. Koristite ploču 33 inča ili šire sa mekom, grippi palube pad. Vežbajte u mirnoj, plitkoj vodi sa sidrom. Počnite sa temeljnim pozama kao što su pas prema dolje, ratnik II, i drvo poze. SUP Ekplorer 11 sa svojim punim EVA palube pad je veoma pogodna.',
+      category: 'product',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: [],
+    },
+    {
+      id: 'saltwater-rinse',
+      question: 'Koja su pravila aviokompanije za putovanje sa naduvavanjem SUP?',
+      answer:
+        'Većina avio-kompanija prihvata SUP rančeve kao registrovanu prtljagu ako je težina ispod 23–32 kg. Paddle Board Overstock ranac je približno 90x40x30 cm i teži oko 15 kg spakovan. Neke avio-kompanije mogu naplatiti taksu za preveliku prtljagu. Stignite ranije, zasebno spakujte peraje i pumpu u ručni prtljag i obeležite torbu kao krhku. Uvek istražite pravilnik vaše avio-kompanije o sportskoj opremi pre leta.',
+      category: 'maintenance',
+      relatedProducts: [],
+      relatedGuides: ['sup-maintenance'],
+    },
+    {
+      id: 'sup-leash-necessity',
+      question: 'Koja sigurnosna oprema mi je potrebna za veslanje hladnom vodom?',
+      answer:
+        'Voda ispod 15 ° C zahteva termičku zaštitu. Za 8–14 ° C koristite ronilačko odelo ili suvo odelo sa čizmama, rukavicama i kapuljačom. Za 14–20 ° C dovoljno je ronilačko odelo od 3/2 mm. Uvek nosite pravilno postavljen PFD za toplotnu zaštitu i bezbednost. Proverite lokalne propise za obavezne zahteve za opremu.',
+      category: 'safety',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['safety-tips'],
+    },
+    {
+      id: 'company-model',
+      question: 'Koje su minimalne količine porudžbine za OEM/ODM?',
+      answer:
+        'Minimalne količine narudžbi (MOQs) variraju u zavisnosti od vrste proizvoda i složenosti. Prilagođeno brendiranje na postojećim modelima obično zahteva 5–10 jedinica. Potpuno prilagođeni dizajn trupa zahteva više MOQs. Kontaktirajte naš prodajni tim sa vašim zahtevima za detaljnu ponudu. Mi se bavimo svime, od prilagođenih boja i logotipa do potpuno originalnih dizajna kalupa.',
+      category: 'ordering',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'us-contract-weihai-shipping',
+      question: 'Mogu li staviti svoj logo na Paddle Board Overstock proizvode?',
+      answer:
+        'Da. Naša OEM usluga uključuje postavljanje prilagođenog logotipa, prilagođene šeme boja i prilagođeno pakovanje. Nudimo opcije za tampon štampu, prenos toplote i vez u zavisnosti od vrste proizvoda. Pošaljite svoje umetničko delo i specifikacije našem prodajnom timu za ponudu i procenu vremena.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -1498,18 +4108,18 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'weight-limit',
-      question: 'What is the weight limit?',
+      question: 'น้ําหนักสูงสุดคือเท่าไหร่?',
       answer:
-        'Our All-Around SUPs support up to 220 lbs. The Touring and Yoga series support up to 250 lbs. For tandem paddling or heavier riders, choose a wider, higher-volume board.',
+        'บริการ All-Around ของเรา SUPs รองรับน้ําหนักได้สูงสุด 220 ปอนด์เรือ Touring และ Yoga รองรับน้ําหนักได้สูงสุด 250 ปอนด์ RIB โดยทั่วไปรองรับน้ําหนักได้ถึง 600–1500 ปอนด์ ขึ้นอยู่กับรุ่นสําหรับการใช้งานแบบแทนเด็มหรือบรรทุกหนัก เรือยางของเรามีตัวเลือกความจุที่สูงขึ้น',
       category: 'product',
       relatedProducts: [],
       relatedGuides: ['understanding-specs'],
     },
     {
       id: 'box-contents',
-      question: 'What comes in the box?',
+      question: 'ในกล่องมีอะไรบ้าง?',
       answer:
-        'Every Paddle Board Overstock SUP includes the board, a travel backpack, dual-action hand pump, removable fin, coil leash, and repair kit. Some models also include a carbon paddle upgrade option.',
+        'กระดาน Paddle Board Overstock SUP ทุกชิ้นมาพร้อมกระดาน, กระเป๋าเป้สำหรับเดินทาง, ปั๊มมือแบบสองทิศทาง, ครีบที่ถอดได้, สายพาล์มแบบเกลียว, และชุดซ่อม บางรุ่นยังมีตัวเลือกอัปเกรดไม้พายคาร์บอน เรือเป่าลมมาพร้อมเรือ, ปั๊ม, ชุดซ่อม และใบพาย',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -1525,18 +4135,18 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'pfd-requirement',
-      question: 'Do I need a life vest on a SUP?',
+      question: 'ฉันจําเป็นต้องใส่เสื้อชูชีพไหม SUP?',
       answer:
-        'Yes. Many jurisdictions legally require a life vest when paddling, including on SUPs. Even where not required, a life vest is essential safety equipment. We recommend wearing it at all times on the water.',
+        'ใช่หลายเขตอํานาจศาลกําหนดให้เรือทุกลําต้องสวมเสื้อชูชีพ SUPs รวมถึงแม้ในกรณีที่ไม่บังคับ เสื้อ CE ชูชีพที่ได้รับการรับรองก็เป็นอุปกรณ์ความปลอดภัยที่จําเป็นเราแนะนําให้สวมใส่ตลอดเวลาบนผิวน้ํา',
       category: 'safety',
       relatedProducts: [],
       relatedGuides: ['safety-tips'],
     },
     {
       id: 'paddleboard-registration',
-      question: 'Do I need to register my paddle board?',
+      question: 'ฉันจําเป็นต้องลงทะเบียนเรือเป่าลมของฉันหรือไม่?',
       answer:
-        'In most regions, unpowered paddle boards do not require registration. Requirements vary by jurisdiction, so check your local maritime authority for the rules that apply to you.',
+        'ข้อกําหนดจะแตกต่างกันไปตามเขตอํานาจศาลในหลายภูมิภาค เรือยางที่มีเครื่องยนต์เกินกําลังแรงม้ากําหนดจะต้องลงทะเบียนเรือเล็กที่ไม่มีเครื่องยนต์SUPs และเรือเล็กโดยทั่วไปไม่ต้องตรวจสอบหน่วยงานทางทะเลท้องถิ่นของคุณสําหรับกฎระเบียบเฉพาะ',
       category: 'general',
       relatedProducts: [],
       relatedGuides: [],
@@ -1579,9 +4189,9 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'warranty',
-      question: 'What is the Paddle Board Overstock warranty?',
+      question: 'การรับประกัน Paddle Board Overstock คืออะไร?',
       answer:
-        'Every board is backed by a 2-year limited manufacturer warranty covering defects in materials and workmanship under normal use. Accessories carry the same 2-year coverage.',
+        'ผลิตภัณฑ์ Paddle Board Overstock ทุกชิ้นมาพร้อมกับการรับประกันจากผู้ผลิตอย่างครบถ้วน ผ้า ท่อนั่ง และตัวเรือของเรือยางเป่าลมครอบคลุมการรับประกันแบบจำกัด 5 ปี; กระดาน SUP และอุปกรณ์เสริมมีการรับประกันแบบจำกัด 2 ปี การรับประกันครอบคลุมข้อบกพร่องในวัสดุและฝีมือการผลิตภายใต้การใช้งานปกติ',
       category: 'warranty',
       relatedProducts: [],
       relatedGuides: [],
@@ -1606,144 +4216,144 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'return-policy',
-      question: 'What is your return policy?',
+      question: 'นโยบายการคืนสินค้าของคุณเป็นอย่างไร?',
       answer:
-        'We accept returns within 30 days of delivery for unused products in original packaging. Contact our support team to initiate a return — we provide a prepaid shipping label.',
+        'เรารับคืนสินค้าภายใน 30 วันหลังรับสินค้าสําหรับสินค้าที่ไม่ได้ใช้ในบรรจุภัณฑ์เดิมสินค้าสั่งทําพิเศษ/สั่งทําไม่สามารถ OEM คืนสินค้าได้ติดต่อทีมสนับสนุนของเราเพื่อเริ่มกระบวนการคืนสินค้า — เราจะจัดเตรียมป้ายส่งสินค้าแบบชําระเงินล่วงหน้า',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
     },
     {
       id: 'paddle-length',
-      question: 'What paddle length do I need?',
+      question: 'คุณมีบริการหรือ OEM ODM บริการอะไรบ้าง?',
       answer:
-        'For SUP, the paddle should be 6–8 inches taller than your height. See our paddle guide for detailed sizing.',
+        'ใช่เรามีบริการออกแบบฉลากส่วนตัวและออกแบบตามสั่งสําหรับธุรกิจตั้งแต่การสร้างแบรนด์แบบกําหนดเองบนรุ่นที่มีอยู่จนถึงการออกแบบตัวเรือแบบกําหนดเองเต็มรูปแบบ ทีมวิศวกรของเราสามารถพัฒนาผลิตภัณฑ์ภายใต้แบรนด์ของคุณได้กําหนดปริมาณสั่งซื้อขั้นต่ํา',
       category: 'product',
       relatedProducts: [],
       relatedGuides: ['choosing-paddle'],
     },
     {
       id: 'sup-width-stability',
-      question: 'ความกว้างแบบไหน SUP ถึงจะมั่นคงที่สุด?',
+      question: 'ฉันต้องใช้ความยาวไม้พายเท่าไหร่?',
       answer:
-        'สำหรับผู้เริ่มต้น ความกว้าง 33–34 นิ้วให้สมดุลที่ดีที่สุดระหว่างความมั่นคงและการพาย กระดานที่แคบกว่า 32 นิ้วทำให้ผู้พายใหม่รู้สึกไม่มั่นคง Paddle Board Overstock SUP Explorer 11 ที่ความกว้าง 33 นิ้วเหมาะกับการเรียนรู้',
+        'สําหรับ SUP: ไม้พายควรสูงกว่าความสูงของคุณ 6–8 นิ้วสําหรับเรือคายัค: ความยาวไม้พายขึ้นอยู่กับความกว้างของเรือและความยาวลําตัวดูคู่มือไม้พายของเราสําหรับขนาดรายละเอียด',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
     },
     {
       id: 'sup-volume-weight',
-      question: 'ฉันจะเลือก SUP ปริมาตรสําหรับน้ําหนักของฉันได้อย่างไร?',
+      question: 'ฉันต้องใช้เครื่องยนต์ขนาดไหน RIB สําหรับ ?',
       answer:
-        'คูณน้ําหนักเป็นกิโลกรัมด้วย 2.2 เพื่อเป้าหมายปริมาตรที่เหมาะสําหรับผู้เริ่มต้นตัวอย่างเช่น นักพายน้ําหนัก 75 กก. ต้องการอย่างน้อย 165 ลิตร แต่ 220–260 ลิตรถือว่ามั่นคงกว่าสําหรับการเรียนรู้ SUP Explorer 11 มีความจุ 260 ลิตร เหมาะสําหรับผู้ขี่น้ําหนักไม่เกิน 100 กิโลกรัม',
+        'ขนาดเครื่องยนต์ขึ้นอยู่กับความยาวและน้ําหนักของเรือ 3m RIB โดยทั่วไปรองรับ 15–25 นิ้ว HP, 4.5m RIB รองรับ 40–60 นิ้ว HP และ 6m RIB รองรับ 90–150 HP ต้องปฏิบัติตาม HP ป้ายสูงสุดของเรือเสมอ',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
     },
     {
       id: 'paddleboardoverstock-vs-others',
-      question: 'Paddle Board Overstock เปรียบเทียบกับแบรนด์อื่นอย่างไร?',
+      question: 'ความแตกต่างระหว่าง PVC กับ Hypalon คืออะไร?',
       answer:
-        'Paddle Board Overstock นำเสนอความคุ้มค่าที่สุดในอุปกรณ์กีฬาเหนือน้ำที่สามารถพองตัวได้ เมื่อเทียบกับ Red Paddle Co, Paddle Board Overstock ให้ประสิทธิภาพ 90% ในราคาเพียง 60% เมื่อเทียบกับ iRocker, Paddle Board Overstock ใช้วัสดุระดับสามชั้นคุณภาพทหาร PVC และมีค่าประสิทธิภาพ PSI สูงกว่า เมื่อเทียบกับ Bluefin, Paddle Board Overstock มีสเปควัสดุที่เหนือกว่า สำหรับนักพายส่วนใหญ่, Paddle Board Overstock ให้สมดุลที่ดีที่สุดระหว่างคุณภาพและราคา',
+        'PVC เบากว่า ราคาย่อมเยาว์กว่า และซ่อมแซมง่ายกว่า — เหมาะสำหรับการใช้งานเพื่อความบันเทิง Hypalon (CSM) มอบความทนทานต่อ UV และสารเคมีได้ดีกว่า พร้อมอายุการใช้งานที่ยาวนานกว่า เหมาะสำหรับการใช้งานเชิงพาณิชย์และทางทหาร Paddle Board Overstock ใช้วัสดุทั้งสองแบบขึ้นอยู่กับระดับของผลิตภัณฑ์',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-your-sup'],
     },
     {
       id: 'fishing-sup-setup',
-      question: 'ฉันสามารถตกปลาจากบอร์ดได้SUP ไหม?',
+      question: 'ความกว้างแบบไหน SUP ถึงจะมั่นคงที่สุด?',
       answer:
-        'ใช่ การตกปลา SUP กำลังได้รับความนิยมมากขึ้น เนื่องจากการยืนบนบอร์ดช่วยให้มองเห็นในน้ำได้อย่างชัดเจน เลือกบอร์ดที่ยาวอย่างน้อย 11 ฟุต และกว้าง 33–34 นิ้วเพื่อความมั่นคง เพิ่มลังนมพร้อมที่วางเบ็ดที่ยึดแน่นกับสายยางบนดาดฟ้า, สมอเล็ก และสวม PFD เสมอ Paddle Board Overstock SUP Explorer 11 ใช้ได้ดีสำหรับการตกปลาแบบสบาย ๆ',
+        'สำหรับผู้เริ่มต้น ความกว้าง 33–34 นิ้วให้สมดุลที่ดีที่สุดระหว่างความมั่นคงและการพาย กระดานที่แคบกว่า 32 นิ้วทำให้ผู้พายใหม่รู้สึกไม่มั่นคง Paddle Board Overstock SUP Explorer 11 ที่ความกว้าง 33 นิ้วเหมาะกับการเรียนรู้',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-fishing'],
     },
     {
       id: 'sup-yoga',
-      question: 'ฉันเล่นโยคะบนบอร์ดได้SUP ไหม?',
+      question: 'ฉันจะเลือก SUP ปริมาตรสําหรับน้ําหนักของฉันได้อย่างไร?',
       answer:
-        'แน่นอน SUP โยคะผสมผสานท่าทางแบบดั้งเดิมกับความท้าทายของแพลตฟอร์มลอยน้ํา โดยใช้กล้ามเนื้อที่ช่วยเสถียรลึกขึ้นใช้บอร์ดที่กว้างกว่า 33 นิ้ว พร้อมแผ่นรองดาดฟ้าที่นุ่มและยึดเกาะได้ดีฝึกในน้ําตื้นและสงบพร้อมสมอเรือเริ่มด้วยท่าพื้นฐาน เช่น ท่า downward dog, warrior II และท่าต้นไม้ SUP Explorer 11 ที่มีEVA แผ่นรองดาดฟ้าเต็มตัวเหมาะสมอย่างยิ่ง',
+        'คูณน้ําหนักเป็นกิโลกรัมด้วย 2.2 เพื่อเป้าหมายปริมาตรที่เหมาะสําหรับผู้เริ่มต้นตัวอย่างเช่น นักพายน้ําหนัก 75 กก. ต้องการอย่างน้อย 165 ลิตร แต่ 220–260 ลิตรถือว่ามั่นคงกว่าสําหรับการเรียนรู้ SUP Explorer 11 มีความจุ 260 ลิตร เหมาะสําหรับผู้ขี่น้ําหนักไม่เกิน 100 กิโลกรัม',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-yoga'],
     },
     {
       id: 'airline-travel-sup',
-      question: 'กฎของสายการบินสําหรับการเดินทางด้วยเรือเป่าลม SUP เป็นอย่างไร?',
+      question: 'ฉันต้องใช้เครื่องยนต์ขนาดเท่าไรสําหรับเรือเป่าลมของฉัน?',
       answer:
-        'สายการบินส่วนใหญ่รับเป้ SUP เป็นสัมภาระเช็คอินหากน้ำหนักไม่เกิน 23–32 กก. เป้ Paddle Board Overstock มีขนาดประมาณ 90x40x30 ซม. และมีน้ำหนักประมาณ 15 กก. เมื่อบรรจุแล้ว บางสายการบินอาจเรียกเก็บค่าธรรมเนียมสัมภาระเกินขนาด มาถึงก่อนเวลา, ห่อครีบและปั๊มแยกในสัมภาระติดตัว และติดป้ายว่าของเปราะบาง ควรศึกษานโยบายอุปกรณ์กีฬาในสายการบินของคุณก่อนขึ้นเครื่องเสมอ',
+        'สําหรับ AirDeck 270 ให้ใช้สูงสุด 6 HP.สําหรับ AirDeck 360 ใช้สูงสุด 15 HP.สําหรับ RIB 330 ใช้สูงสุด 40 HP.สําหรับ RIB 450 Patrol ให้ใช้สูงสุด 60 HP.ตรวจสอบ HP แผ่นคะแนนสูงสุดบนเรือเสมอ และอย่าเกิน',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['multi-day-trip'],
     },
     {
       id: 'cold-weather-safety',
-      question: 'ฉันต้องใช้อุปกรณ์ความปลอดภัยอะไรบ้างสําหรับการพายน้ําเย็น?',
+      question: 'พื้นเรือแบบไหนดีที่สุดสําหรับเรือเป่าลม?',
       answer:
-        'ถ้ามีน้ําต่ํากว่า 15°C ต้องได้รับการป้องกันความร้อนสําหรับอุณหภูมิ 8–14°C ให้ใส่ชุดเว็ทสูทหรือชุดดรายสูทพร้อมรองเท้าบูท ถุงมือ และฮู้ดสําหรับอุณหภูมิ 14–20°C ใช้ชุดเว็ทสูทขนาด 3/2 มม. ก็เพียงพอแล้วควรสวมชุดเว็ทสูทที่พอดีตัว PFD เพื่อการป้องกันความร้อนและความปลอดภัยตรวจสอบข้อบังคับท้องถิ่นเกี่ยวกับข้อกําหนดอุปกรณ์ที่จําเป็น',
+        'พื้นอลูมิเนียมแบบแผ่นไม้ให้ประสิทธิภาพสูงสุด — แข็งแรง ไสได้ และมั่นคงสําหรับการยืนพื้นแอร์มีน้ําหนักเบาและเก็บของได้น้อยกว่าแต่ยืดหยุ่นมากกว่าพื้นแบบม้วนขึ้นเป็นแบบที่เรียบง่ายและราคาถูกที่สุด แต่มีความแข็งน้อยที่สุดเลือกตามการใช้งานหลักของคุณ: การตกปลาและความเร็วเหมาะกับพื้นแบบแร็ต;ความสะดวกในการพกพาเหมาะกับพื้นแอร์เด็ค',
       category: 'product',
       relatedProducts: [],
       relatedGuides: ['safety-tips'],
     },
     {
       id: 'sup-inflate-pressure',
-      question: 'ควร PSI เติมลม SUP TO0 เท่าไหร่ดี?',
+      question: 'Paddle Board Overstock เปรียบเทียบกับแบรนด์อื่นอย่างไร?',
       answer:
-        'พองลมให้ถึงแรงดันสูงสุดที่ระบุของบอร์ดเพื่อประสิทธิภาพสูงสุด — ปกติ 15–18 PSI สำหรับบอร์ดพองคุณภาพ SUPs Paddle Board Overstock SUP Explorer 11 ทำงานได้ดีที่สุดที่ 15–18 PSI การพองลมน้อยเกินไปทำให้บอร์ดรู้สึกนุ่มและติดตามเส้นทางได้ไม่ดี การพองลมเกินแรงดันสูงสุดเสี่ยงต่อการทำลายเกลียว drop-stitch ตรวจสอบสติกเกอร์ใกล้วาล์วเพื่อดูค่าประสิทธิภาพเฉพาะของบอร์ดคุณ',
+        'Paddle Board Overstock นำเสนอความคุ้มค่าที่สุดในอุปกรณ์กีฬาเหนือน้ำที่สามารถพองตัวได้ เมื่อเทียบกับ Red Paddle Co, Paddle Board Overstock ให้ประสิทธิภาพ 90% ในราคาเพียง 60% เมื่อเทียบกับ iRocker, Paddle Board Overstock ใช้วัสดุระดับสามชั้นคุณภาพทหาร PVC และมีค่าประสิทธิภาพ PSI สูงกว่า เมื่อเทียบกับ Bluefin, Paddle Board Overstock มีสเปควัสดุที่เหนือกว่า สำหรับนักพายส่วนใหญ่, Paddle Board Overstock ให้สมดุลที่ดีที่สุดระหว่างคุณภาพและราคา',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
     },
     {
       id: 'sup-deck-pad-care',
-      question: 'ฉันจะทําความสะอาดและดูแล EVA แผ่นรองพื้นได้อย่างไร?',
+      question: 'ฉันสามารถตกปลาจากบอร์ดได้SUP ไหม?',
       answer:
-        'ล้างแผ่นรองพื้นด้วยน้ําสะอาดหลังจากแต่ละครั้งที่ทําสําหรับคราบสกปรกหรือคราบ ให้ใช้สบู่อ่อนและแปรงนุ่ม — หลีกเลี่ยงสารเคมีรุนแรงหากขอบเริ่มลอก ให้ทากาวกันน้ําปริมาณเล็กน้อยแล้วกดใต้น้ําหนักเป็นเวลา 24 ชั่วโมงเก็บแผ่นไม้ให้ไม่สัมผัสกับพื้นโดยตรง UV เมื่อไม่ได้ใช้งานเพื่อป้องกันการเสื่อมสภาพของแผ่นรอง',
+        'ใช่ การตกปลา SUP กำลังได้รับความนิยมมากขึ้น เนื่องจากการยืนบนบอร์ดช่วยให้มองเห็นในน้ำได้อย่างชัดเจน เลือกบอร์ดที่ยาวอย่างน้อย 11 ฟุต และกว้าง 33–34 นิ้วเพื่อความมั่นคง เพิ่มลังนมพร้อมที่วางเบ็ดที่ยึดแน่นกับสายยางบนดาดฟ้า, สมอเล็ก และสวม PFD เสมอ Paddle Board Overstock SUP Explorer 11 ใช้ได้ดีสำหรับการตกปลาแบบสบาย ๆ',
       category: 'maintenance',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-maintenance'],
     },
     {
       id: 'sup-seated-paddling',
-      question: 'ฉันสามารถนั่งขณะพาย SUP ได้ไหม?',
+      question: 'ฉันเล่นโยคะบนบอร์ดได้SUP ไหม?',
       answer:
-        'ใช่ บอร์ด SUP หลายรุ่น รวมถึง Paddle Board Overstock Explorer 11 มี D-ring ที่อนุญาตให้ติดตั้งที่นั่ง การใช้ SUP กับที่นั่งและไม้พายใบเดี่ยวช่วยให้มีท่าทางการนั่งที่สบายสำหรับการเดินทางหรือการตกปลาที่ยาวนาน บางแบรนด์มีชุดแปลงเฉพาะพร้อมที่นั่งและไม้พายยาว',
+        'แน่นอน SUP โยคะผสมผสานท่าทางแบบดั้งเดิมกับความท้าทายของแพลตฟอร์มลอยน้ํา โดยใช้กล้ามเนื้อที่ช่วยเสถียรลึกขึ้นใช้บอร์ดที่กว้างกว่า 33 นิ้ว พร้อมแผ่นรองดาดฟ้าที่นุ่มและยึดเกาะได้ดีฝึกในน้ําตื้นและสงบพร้อมสมอเรือเริ่มด้วยท่าพื้นฐาน เช่น ท่า downward dog, warrior II และท่าต้นไม้ SUP Explorer 11 ที่มีEVA แผ่นรองดาดฟ้าเต็มตัวเหมาะสมอย่างยิ่ง',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: [],
     },
     {
       id: 'saltwater-rinse',
-      question: 'Do I need to rinse my board after ocean use?',
+      question: 'กฎของสายการบินสําหรับการเดินทางด้วยเรือเป่าลม SUP เป็นอย่างไร?',
       answer:
-        'Yes — always rinse your board, fins, pump, and paddle with fresh water after saltwater use. Salt crystals work into seams and valves, causing micro-leaks and corrosion. Dry the board in the shade before deflating and storing. Regular rinsing dramatically extends the life of your board.',
+        'สายการบินส่วนใหญ่รับเป้ SUP เป็นสัมภาระเช็คอินหากน้ำหนักไม่เกิน 23–32 กก. เป้ Paddle Board Overstock มีขนาดประมาณ 90x40x30 ซม. และมีน้ำหนักประมาณ 15 กก. เมื่อบรรจุแล้ว บางสายการบินอาจเรียกเก็บค่าธรรมเนียมสัมภาระเกินขนาด มาถึงก่อนเวลา, ห่อครีบและปั๊มแยกในสัมภาระติดตัว และติดป้ายว่าของเปราะบาง ควรศึกษานโยบายอุปกรณ์กีฬาในสายการบินของคุณก่อนขึ้นเครื่องเสมอ',
       category: 'maintenance',
       relatedProducts: [],
       relatedGuides: ['sup-maintenance'],
     },
     {
       id: 'sup-leash-necessity',
-      question: 'ฉันจำเป็นต้องใช้สายจูงสำหรับ SUP จริง ๆ หรือ?',
+      question: 'ฉันต้องใช้อุปกรณ์ความปลอดภัยอะไรบ้างสําหรับการพายน้ําเย็น?',
       answer:
-        'ใช่ — ควรใส่สายจูงตลอดเวลา สายจูงแบบม้วน SUP สามารถติดกับข้อเท้าหรือหน้าแข้งของคุณและช่วยให้บอร์ดอยู่กับคุณหากคุณล้ม ในน้ำเปิด สายจูงสามารถช่วยชีวิตคุณได้โดยป้องกันไม่ให้คุณแยกจากอุปกรณ์ลอยตัว สำหรับการพายเรือแม่น้ำ ให้ใช้สายจูงแบบปลดออกเร็วเพื่อป้องกันการติดขัด',
+        'ถ้ามีน้ําต่ํากว่า 15°C ต้องได้รับการป้องกันความร้อนสําหรับอุณหภูมิ 8–14°C ให้ใส่ชุดเว็ทสูทหรือชุดดรายสูทพร้อมรองเท้าบูท ถุงมือ และฮู้ดสําหรับอุณหภูมิ 14–20°C ใช้ชุดเว็ทสูทขนาด 3/2 มม. ก็เพียงพอแล้วควรสวมชุดเว็ทสูทที่พอดีตัว PFD เพื่อการป้องกันความร้อนและความปลอดภัยตรวจสอบข้อบังคับท้องถิ่นเกี่ยวกับข้อกําหนดอุปกรณ์ที่จําเป็น',
       category: 'safety',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['safety-tips'],
     },
     {
       id: 'company-model',
-      question: 'Paddle Board Overstock เป็นบริษัทการค้าหรือผู้ผลิต?',
+      question: 'ปริมาณขั้นต่ําในการสั่งซื้อสําหรับ OEM/ODM?',
       answer:
-        'ไม่ใช่โรงงานล้วน ๆ และไม่ใช่บริษัทการค้า — บริษัท เว่ยไห่ตงจี้เลี่ยน จำกัด เป็นบริษัทแบรนด์ที่มีฐานการผลิตของตัวเอง บริษัท เว่ยไห่ตงจี้เลี่ยน จำกัด ดูแลการจัดจำหน่ายทั่วโลก การทำสัญญา การเรียกเก็บเงิน และการบริการหลังการขาย ขณะที่ Paddle Board Overstock ศูนย์การผลิตเว่ยไห่ ดูแลการวิจัยและพัฒนา การผลิต และการควบคุมคุณภาพในโรงงานของเราเองขนาด 12,000 ตารางเมตร ไม่มีคนกลาง: ทุกคำสั่งซื้อจัดส่งตรงจากโรงงาน',
+        'จํานวนสั่งซื้อขั้นต่ํา (MOQs) จะแตกต่างกันไปตามประเภทสินค้าและความซับซ้อนการสร้างแบรนด์แบบกําหนดเองในโมเดลที่มีอยู่มักต้องใช้ 5–10 ชิ้นการออกแบบตัวเรือแบบสั่งทําเต็มรูปแบบต้องการจํานวนมากกว่า MOQs ติดต่อทีมขายของเราพร้อมความต้องการของคุณเพื่อขอใบเสนอราคาอย่างละเอียดเราดูแลทุกอย่างตั้งแต่สีและโลโก้แบบกําหนดเองไปจนถึงการออกแบบแม่พิมพ์ต้นฉบับทั้งหมด',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
     },
     {
       id: 'us-contract-weihai-shipping',
-      question: 'ทำไมสัญญาของฉันกับบริษัทสหรัฐอเมริกาถึงเป็นเมื่อสินค้าจัดส่งมาจากเว่ยไห่?',
+      question: 'ฉันสามารถใส่โลโก้ของตัวเองบนผลิตภัณฑ์ Paddle Board Overstock ได้ไหม?',
       answer:
-        'บริษัท Weihai Dongjilian จำกัด เป็นหน่วยธุรกิจระดับโลกที่ลงนามในสัญญา ออกใบแจ้งหนี้ และให้การสนับสนุนหลังการขาย ขณะที่ศูนย์การผลิต Weihai ผลิตและจัดส่งคำสั่งซื้อทั้งหมด FOB Weihai โครงสร้างแบบสองศูนย์นี้รักษามาตรฐานการทำสัญญาและการชำระเงินตามมาตรฐานสหรัฐฯ ในขณะที่ยังคงราคาโดยตรงจากโรงงานและความโปร่งใสในการผลิตเต็มรูปแบบ',
+        'ใช่OEM บริการของเรารวมถึงการวางโลโก้แบบกําหนดเอง โทนสีที่กําหนดเอง และบรรจุภัณฑ์แบบกําหนดเองเรามีบริการพิมพ์แผ่น การถ่ายเทความร้อน และงานปักขึ้นอยู่กับประเภทสินค้าส่งงานศิลปะและสเปกของคุณไปยังทีมขายของเราเพื่อขอใบเสนอราคาและประมาณระยะเวลาการผลิต',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -1788,18 +4398,18 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'weight-limit',
-      question: 'What is the weight limit?',
+      question: 'Ano ang limitasyon ng timbang?',
       answer:
-        'Our All-Around SUPs support up to 220 lbs. The Touring and Yoga series support up to 250 lbs. For tandem paddling or heavier riders, choose a wider, higher-volume board.',
+        'Ang aming All-Around SUPs ay sumusuporta hanggang 220 lbs. Ang Touring at Yoga series ay sumusuporta ng hanggang 250 lbs. RIB karaniwang kayang suportahan ng mga bangka ang 600–1500 lbs depende sa modelo. Para sa tandem use o mas mabibigat na karga, nag-aalok ang aming mga inflatable boat ng mas mataas na kapasidad na opsyon.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: ['understanding-specs'],
     },
     {
       id: 'box-contents',
-      question: 'What comes in the box?',
+      question: 'Ano ang laman ng kahon?',
       answer:
-        'Every Paddle Board Overstock SUP includes the board, a travel backpack, dual-action hand pump, removable fin, coil leash, and repair kit. Some models also include a carbon paddle upgrade option.',
+        'Bawat Paddle Board Overstock SUP ay may kasamang board, travel backpack, dual-action hand pump, natatanggal na fin, coil leash, at repair kit. Ang ilang modelo ay may option din para sa carbon paddle upgrade. Ang inflatable boats ay may kasamang bote, pump, repair kit, at mga sagwan.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -1815,18 +4425,18 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'pfd-requirement',
-      question: 'Do I need a life vest on a SUP?',
+      question: 'Kailangan ko ba ng life vest sa SUP isang ?',
       answer:
-        'Yes. Many jurisdictions legally require a life vest when paddling, including on SUPs. Even where not required, a life vest is essential safety equipment. We recommend wearing it at all times on the water.',
+        'Oo. Maraming hurisdiksyon ang legal na nag-aatas ng life vest sa anumang sasakyang pantubig, kabilang ang SUPs. Kahit hindi kinakailangan, ang CE-certified life vest ay mahalagang kagamitan sa kaligtasan. Inirerekomenda naming isuot ito sa lahat ng oras sa tubig.',
       category: 'safety',
       relatedProducts: [],
       relatedGuides: ['safety-tips'],
     },
     {
       id: 'paddleboard-registration',
-      question: 'Do I need to register my paddle board?',
+      question: 'Kailangan ko bang irehistro ang inflatable boat ko?',
       answer:
-        'In most regions, unpowered paddle boards do not require registration. Requirements vary by jurisdiction, so check your local maritime authority for the rules that apply to you.',
+        'Nagkakaiba-iba ang mga kinakailangan depende sa hurisdiksyon. Sa karamihan ng mga rehiyon, ang mga inflatable na bangka na may makina na higit sa isang tiyak na horsepower ay nangangailangan ng rehistrasyon. Ang mga walang makina SUPs at maliliit na dinghy ay karaniwang hindi. Suriin ang iyong lokal na maritime authority para sa mga partikular na patakaran.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: [],
@@ -1869,9 +4479,9 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'warranty',
-      question: 'What is the Paddle Board Overstock warranty?',
+      question: 'Ano ang warranty ng Paddle Board Overstock?',
       answer:
-        'Every board is backed by a 2-year limited manufacturer warranty covering defects in materials and workmanship under normal use. Accessories carry the same 2-year coverage.',
+        'Lahat ng Paddle Board Overstock na produkto ay may kasamang komprehensibong warranty mula sa gumawa. Ang tela, tahi, at katawan ng inflatable na bangka ay saklaw ng 5-taong limitadong warranty; ang SUP na boards at accessories ay may 2-taong limitadong warranty. Sinasaklaw ng warranty ang mga depekto sa materyales at paggawa sa ilalim ng normal na paggamit.',
       category: 'warranty',
       relatedProducts: [],
       relatedGuides: [],
@@ -1896,145 +4506,144 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'return-policy',
-      question: 'What is your return policy?',
+      question: 'Ano ang iyong patakaran sa pagbalik?',
       answer:
-        'We accept returns within 30 days of delivery for unused products in original packaging. Contact our support team to initiate a return — we provide a prepaid shipping label.',
+        'Tumatanggap kami ng pagbabalik sa loob ng 30 araw mula sa paghahatid para sa mga hindi nagamit na produkto sa orihinal na packaging. Ang custom/OEM order ay hindi maaaring ibalik. Makipag-ugnayan sa aming support team upang simulan ang pagbabalik — nagbibigay kami ng prepaid shipping label.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
     },
     {
       id: 'paddle-length',
-      question: 'What paddle length do I need?',
+      question: 'Nag-aalok ba kayo OEM/ODM mga serbisyo?',
       answer:
-        'For SUP, the paddle should be 6–8 inches taller than your height. See our paddle guide for detailed sizing.',
+        'Oo. Nag-aalok kami ng private label at custom design services para sa mga negosyo. Mula sa custom branding sa mga umiiral na modelo hanggang sa fully custom hull designs, maaaring bumuo ang aming engineering team ng mga produkto sa ilalim ng iyong brand. May minimum na dami ng order na ipinatutupad.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: ['choosing-paddle'],
     },
     {
       id: 'sup-width-stability',
-      question: 'Anong SUP lapad ang pinakamainam para sa katatagan?',
+      question: 'Anong haba ng paddle ang kailangan ko?',
       answer:
-        'Para sa mga baguhan, ang lapad na 33–34 pulgada ay nagbibigay ng pinakamahusay na balanse ng katatagan at kadalian sa pagpaddling. Ang mga boards na mas makitid sa 32 pulgada ay nakakaramdam ng pagkakatipa para sa mga bagong paddler. Ang Paddle Board Overstock SUP Explorer 11 na may 33 pulgada ay perpekto para sa pag-aaral.',
+        'Para sa SUP: ang paddle ay dapat 6–8 pulgada na mas mataas kaysa sa iyong taas. Para sa kayak: ang haba ng paddle ay nakadepende sa lapad ng bangka at haba ng katawan. Tingnan ang aming gabay sa paddle para sa detalyadong sukat.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
     },
     {
       id: 'sup-volume-weight',
-      question: 'Paano ko pipiliin ang SUP volume para sa aking timbang?',
+      question: 'Anong laki ng makina ang kailangan ko para sa RIB isang ?',
       answer:
-        'Imultiply ang iyong timbang sa kg ng 2.2 para sa target na volume na madaling gamitin para sa mga baguhan. Halimbawa, ang isang 75 kg na paddler ay nangangailangan ng hindi bababa sa 165 litro, ngunit ang 220–260 litro ay mas matatag para sa pagkatuto. Ang SUP Explorer 11 ay nag-aalok ng 260 litro, angkop para sa mga rider na hanggang 100 kg.',
+        'Ang laki ng makina ay nakadepende sa haba at bigat ng bangka. Ang 3m RIB ay karaniwang humahawak ng 15–25, HP ang 4.5m RIB ay humahawak ng 40–60, HP at ang 6m RIB ay humahawak ng 90–150 HP. Laging sundin ang max HP rating plate sa iyong bangka.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
     },
     {
       id: 'paddleboardoverstock-vs-others',
-      question: 'Paano nagkukumpara ang Paddle Board Overstock sa ibang mga brand?',
+      question: 'Ano ang pagkakaiba ng PVC at Hypalon?',
       answer:
-        'Paddle Board Overstock ay nag-aalok ng pinakamahusay na halaga sa inflatable na gamit para sa water sports. Kung ikukumpara sa Red Paddle Co, Paddle Board Overstock ay nagbibigay ng 90% ng performance sa 60% lamang ng gastos. Kung ikukumpara sa iRocker, Paddle Board Overstock ay gumagamit ng mas mataas na kalidad ng triple-layer military-grade PVC at mas mataas na PSI ratings. Kung ikukumpara sa Bluefin, Paddle Board Overstock ay nag-aalok ng superior na material specs. Para sa karamihan ng mga recreational paddlers, Paddle Board Overstock ay nagbibigay ng pinakamahusay na balanse ng kalidad at presyo.',
+        'PVC ay mas magaan, mas abot-kaya, at mas madaling ayusin — perpekto para sa pang-recreational na paggamit. Ang Hypalon (CSM) ay nag-aalok ng mas mataas na UV at paglaban sa kemikal na may mas mahabang buhay, na mas pinipili para sa komersyal at militar na aplikasyon. Ang Paddle Board Overstock ay gumagamit ng pareho depende sa tier ng produkto.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-your-sup'],
     },
     {
       id: 'fishing-sup-setup',
-      question: 'Pwede ba akong mangisda mula sa SUP board?',
+      question: 'Anong SUP lapad ang pinakamainam para sa katatagan?',
       answer:
-        'Oo. Ang SUP fishing ay patuloy na sumisikat dahil ang nakatindig na posisyon ay nagbibigay ng mahusay na visibility sa tubig. Pumili ng board na hindi bababa sa 11 talampakan ang haba at 33–34 pulgada ang lapad para sa katatagan. Magdagdag ng milk crate na may rod holders na nakakabit sa deck bungees, isang maliit na anchura, at laging magsuot ng PFD. Ang Paddle Board Overstock SUP Explorer 11 ay mahusay para sa casual na pangingisda.',
+        'Para sa mga baguhan, ang lapad na 33–34 pulgada ay nagbibigay ng pinakamahusay na balanse ng katatagan at kadalian sa pagpaddling. Ang mga boards na mas makitid sa 32 pulgada ay nakakaramdam ng pagkakatipa para sa mga bagong paddler. Ang Paddle Board Overstock SUP Explorer 11 na may 33 pulgada ay perpekto para sa pag-aaral.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-fishing'],
     },
     {
       id: 'sup-yoga',
-      question: 'Pwede ba akong mag-yoga sa SUP board?',
+      question: 'Paano ko pipiliin ang SUP volume para sa aking timbang?',
       answer:
-        'Siyempre.SUP Pinagsasama ng yoga ang tradisyunal na posisyon at hamon ng lumulutang na plataporma, na nagpapasigla sa mas malalalim na kalamnan ng stabilizer. Gumamit ng board na 33 pulgada o mas malapad na may malambot at grippy na deck pad. Magpraktis sa kalmado at mababaw na tubig na may anchor. Magsimula sa mga foundation pose tulad ng downward dog, warrior II, at tree pose. Ang SUP Explorer 11 na may buong EVA deck pad ay bagay na bagay.',
+        'Imultiply ang iyong timbang sa kg ng 2.2 para sa target na volume na madaling gamitin para sa mga baguhan. Halimbawa, ang isang 75 kg na paddler ay nangangailangan ng hindi bababa sa 165 litro, ngunit ang 220–260 litro ay mas matatag para sa pagkatuto. Ang SUP Explorer 11 ay nag-aalok ng 260 litro, angkop para sa mga rider na hanggang 100 kg.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-yoga'],
     },
     {
       id: 'airline-travel-sup',
-      question: 'Ano ang mga patakaran ng airline para sa paglalakbay gamit ang inflatable SUP?',
+      question: 'Anong laki ng makina ang kailangan ko para sa inflatable boat ko?',
       answer:
-        'Karamihan sa mga airline ay tumatanggap ng SUP backpacks bilang checked baggage kung ito ay mas mababa sa 23–32 kg. Ang Paddle Board Overstock backpack ay humigit-kumulang 90x40x30 cm at may timbang na mga 15 kg kapag nakapack. Maaaring maningil ang ilang airline ng oversized baggage fees. Dumating nang maaga, balutin ang fins at pump nang hiwalay sa iyong carry-on, at lagyan ng label na fragile ang bag. Laging suriin ang policy ng iyong airline tungkol sa sporting equipment bago lumipad.',
+        'Para sa AirDeck 270, gumamit ng hanggang 6 HP. Para sa AirDeck 360, hanggang 15 HP. Para sa RIB 330, hanggang 40 HP. Para sa RIB 450 Patrol, hanggang 60 HP. Laging suriin ang max HP rating plate ng iyong bangka at huwag lalampas dito.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['multi-day-trip'],
     },
     {
       id: 'cold-weather-safety',
-      question: 'Anong mga safety equipment ang kailangan ko para sa malamig na tubig na pag-paddle?',
+      question: 'Anong uri ng sahig ang pinakamainam para sa inflatable na bangka?',
       answer:
-        'Ang tubig na mas mababa sa 15°C ay nangangailangan ng thermal protection. Para sa 8–14°C, gumamit ng wetsuit o drysuit na may neoprene footwear, gloves, at hood. Para sa 14–20°C, sapat na ang 3/2mm na wetsuit. Laging magsuot ng tamang fitted PFD para sa thermal protection at kaligtasan. Suriin ang lokal na regulasyon para sa mandatory equipment requirements.',
+        'Ang aluminum slat floors ay nagbibigay ng pinakamahusay na performance — matibay, kayang planing, at matatag para sa pagtayo. Ang air decks ay mas magaan at mas maliit ang pack ngunit mas flexible. Ang roll-up floors ang pinakasimple at pinaka-abot-kaya ngunit nag-aalok ng pinakamababang tigas. Pumili base sa iyong pangunahing gamit: pabor sa fishing at speed ang slat floors; mas gusto ng portability ang air decks.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: ['safety-tips'],
     },
     {
       id: 'sup-inflate-pressure',
-      question: 'Ano PSI ang dapat kong i-inflate SUP ?',
+      question: 'Paano nagkukumpara ang Paddle Board Overstock sa ibang mga brand?',
       answer:
-        'Punuin ng hangin hanggang sa maximum rating na PSI ng board para sa pinakamahusay na performance — karaniwang 15–18 PSI para sa kalidad na inflatable SUPs. Ang Paddle Board Overstock SUP Explorer 11 ay gumagana nang pinakamahusay sa 15–18 PSI. Ang kulang sa hangin ay nagiging sanhi ng board na malambot at hindi maayos ang pag-track. Ang sobrang hangin lampas sa rated max ay maaaring makasira sa drop-stitch threads. Tingnan ang sticker malapit sa valve para sa partikular na rating ng iyong board.',
+        'Paddle Board Overstock ay nag-aalok ng pinakamahusay na halaga sa inflatable na gamit para sa water sports. Kung ikukumpara sa Red Paddle Co, Paddle Board Overstock ay nagbibigay ng 90% ng performance sa 60% lamang ng gastos. Kung ikukumpara sa iRocker, Paddle Board Overstock ay gumagamit ng mas mataas na kalidad ng triple-layer military-grade PVC at mas mataas na PSI ratings. Kung ikukumpara sa Bluefin, Paddle Board Overstock ay nag-aalok ng superior na material specs. Para sa karamihan ng mga recreational paddlers, Paddle Board Overstock ay nagbibigay ng pinakamahusay na balanse ng kalidad at presyo.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
     },
     {
       id: 'sup-deck-pad-care',
-      question: 'Paano ko lilinisin at mapanatili ang EVA deck pad?',
+      question: 'Pwede ba akong mangisda mula sa SUP board?',
       answer:
-        'Banlawan ang deck pad gamit ang sariwang tubig pagkatapos ng bawat session. Para sa dumi o mantsa, gumamit ng banayad na sabon at malambot na brush — iwasan ang matitinding kemikal. Kung magsimulang umangat ang mga gilid, maglagay ng kaunting waterproof marine adhesive at pindutin sa ilalim ng bigat ng 24 na oras. Panatilihing hindi direktang mailagay ang board UV kapag hindi ginagamit upang maiwasan ang pagkasira ng pad.',
+        'Oo. Ang SUP fishing ay patuloy na sumisikat dahil ang nakatindig na posisyon ay nagbibigay ng mahusay na visibility sa tubig. Pumili ng board na hindi bababa sa 11 talampakan ang haba at 33–34 pulgada ang lapad para sa katatagan. Magdagdag ng milk crate na may rod holders na nakakabit sa deck bungees, isang maliit na anchura, at laging magsuot ng PFD. Ang Paddle Board Overstock SUP Explorer 11 ay mahusay para sa casual na pangingisda.',
       category: 'maintenance',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-maintenance'],
     },
     {
       id: 'sup-seated-paddling',
-      question: 'Maaari ko bang maupo habang sinasagwan ang aking SUP board?',
+      question: 'Pwede ba akong mag-yoga sa SUP board?',
       answer:
-        'Oo. Maraming SUP boards, kabilang ang Paddle Board Overstock Explorer 11, ay may D-rings na nagpapahintulot sa pagkakabit ng isang upuan. Ang paggamit ng SUP na may upuan at isang single-blade paddle ay nag-aalok ng kumportableng posisyon sa pag-upo para sa mas mahahabang paglalakbay o pangingisda. Ang ilang mga tatak ay nag-aalok ng dedikadong conversion kits na may mga upuan at mas mahahabang paddle.',
+        'Siyempre.SUP Pinagsasama ng yoga ang tradisyunal na posisyon at hamon ng lumulutang na plataporma, na nagpapasigla sa mas malalalim na kalamnan ng stabilizer. Gumamit ng board na 33 pulgada o mas malapad na may malambot at grippy na deck pad. Magpraktis sa kalmado at mababaw na tubig na may anchor. Magsimula sa mga foundation pose tulad ng downward dog, warrior II, at tree pose. Ang SUP Explorer 11 na may buong EVA deck pad ay bagay na bagay.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: [],
     },
     {
       id: 'saltwater-rinse',
-      question: 'Do I need to rinse my board after ocean use?',
+      question: 'Ano ang mga patakaran ng airline para sa paglalakbay gamit ang inflatable SUP?',
       answer:
-        'Yes — always rinse your board, fins, pump, and paddle with fresh water after saltwater use. Salt crystals work into seams and valves, causing micro-leaks and corrosion. Dry the board in the shade before deflating and storing. Regular rinsing dramatically extends the life of your board.',
+        'Karamihan sa mga airline ay tumatanggap ng SUP backpacks bilang checked baggage kung ito ay mas mababa sa 23–32 kg. Ang Paddle Board Overstock backpack ay humigit-kumulang 90x40x30 cm at may timbang na mga 15 kg kapag nakapack. Maaaring maningil ang ilang airline ng oversized baggage fees. Dumating nang maaga, balutin ang fins at pump nang hiwalay sa iyong carry-on, at lagyan ng label na fragile ang bag. Laging suriin ang policy ng iyong airline tungkol sa sporting equipment bago lumipad.',
       category: 'maintenance',
       relatedProducts: [],
       relatedGuides: ['sup-maintenance'],
     },
     {
       id: 'sup-leash-necessity',
-      question: 'Talaga bang kailangan ko ng tali para sa SUP?',
+      question: 'Anong mga safety equipment ang kailangan ko para sa malamig na tubig na pag-paddle?',
       answer:
-        'Oo — laging magsuot ng tali. Ang natitinag na SUP na tali ay ikinakabit sa iyong bukung-bukong o binti at pinananatiling kasama ang iyong board kung ikaw ay mahulog. Sa bukas na tubig, makapagliligtas ng buhay ang tali sa pamamagitan ng pagpigil sa pagkakahiwalay mula sa iyong pantukoy na bagay sa tubig. Para sa paglalayag sa ilog, gumamit ng mabilis na pagpapakawala ng tali upang maiwasan ang pagkakagambala.',
+        'Ang tubig na mas mababa sa 15°C ay nangangailangan ng thermal protection. Para sa 8–14°C, gumamit ng wetsuit o drysuit na may boots, gloves, at hood. Para sa 14–20°C, sapat na ang 3/2mm na wetsuit. Laging magsuot ng tamang fitted PFD para sa thermal protection at kaligtasan. Suriin ang lokal na regulasyon para sa mandatory equipment requirements.',
       category: 'safety',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['safety-tips'],
     },
     {
       id: 'company-model',
-      question: 'Ang Paddle Board Overstock ba ay isang trading company o isang manufacturer?',
+      question: 'Ano ang minimum na dami ng order para sa OEM/ODM?',
       answer:
-        'Hindi ito purong pabrika o trading company — ang Weihai Dongjilian Co., Ltd. ay isang brand company na may sariling base sa paggawa. Pinangangasiwaan ng Weihai Dongjilian Co., Ltd. ang pandaigdigang distribusyon, kontrata, pananalapi, at after-sales, samantalang ang Paddle Board Overstock Weihai Manufacturing Hub ay nagpapatakbo ng R&D, produksyon, at kontrol ng kalidad sa sariling 12,000 m² na pasilidad. Walang mga middlemen: bawat order ay ipinapadala nang direkta mula sa pabrika.',
+        'Ang minimum na dami ng order (MOQs) ay nagkakaiba-iba depende sa uri ng produkto at pagiging komplikado. Ang custom branding sa mga umiiral na modelo ay karaniwang nangangailangan ng 5–10 yunit. Ang ganap na custom na disenyo ng hull ay nangangailangan ng mas mataas MOQs na halaga. Makipag-ugnayan sa aming sales team para sa iyong mga pangangailangan para sa detalyadong quote. Hinahawakan namin ang lahat mula sa mga custom na kulay at logo hanggang sa ganap na orihinal na disenyo ng mold.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
     },
     {
       id: 'us-contract-weihai-shipping',
-      question:
-        'Bakit ang kontrata ko ay sa isang kumpanya sa US gayong ang mga kalakal ay ipinapadala mula sa Weihai?',
+      question: 'Pwede ko bang ilagay ang sarili kong logo sa Paddle Board Overstock na produkto?',
       answer:
-        'Ang Weihai Dongjilian Co., Ltd. ang pandaigdigang komersyal na entidad na pumipirma ng mga kontrata, nag-iisyu ng mga invoice, at nagbibigay ng after-sales support, habang ang Weihai Manufacturing Hub ay gumagawa at nagpapadala ng bawat order FOB mula sa Weihai. Ang dual-hub na estruktura na ito ay nagpapanatili ng US-standard na kontrata at pag-settle, habang pinapanatili ang factory-direct pricing at ganap na transparency sa produksyon.',
+        'Oo. OEM Kasama sa aming serbisyo ang custom na paglalagay ng logo, custom na mga scheme ng kulay, at custom na packaging. Nag-aalok kami ng pad printing, heat transfer, at mga opsyon sa burda depende sa uri ng produkto. Ipadala ang iyong artwork at mga espesipikasyon sa aming sales team para sa quote at lead time estimate.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -2079,18 +4688,18 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'weight-limit',
-      question: 'What is the weight limit?',
+      question: 'Ağırlık sınırı nedir?',
       answer:
-        'Our All-Around SUPs support up to 220 lbs. The Touring and Yoga series support up to 250 lbs. For tandem paddling or heavier riders, choose a wider, higher-volume board.',
+        "Genel Kapasitemiz SUPs 220 lbs'e kadar destekler. Touring ve Yoga serileri ise 250 lbs'ye kadar destek verir RIB . Tekneler modele bağlı olarak genellikle 600–1500 lbs destekler. Tandem kullanım veya daha ağır yükler için, şişme teknelerimiz daha yüksek kapasiteli seçenekler sunar.",
       category: 'product',
       relatedProducts: [],
       relatedGuides: ['understanding-specs'],
     },
     {
       id: 'box-contents',
-      question: 'What comes in the box?',
+      question: 'Kutuda ne var?',
       answer:
-        'Every Paddle Board Overstock SUP includes the board, a travel backpack, dual-action hand pump, removable fin, coil leash, and repair kit. Some models also include a carbon paddle upgrade option.',
+        'Her Paddle Board Overstock SUP, tahta, seyahat çantası, çift etkili el pompası, çıkarılabilir yüzgeç, spiral tasma ve onarım kiti içerir. Bazı modeller ayrıca karbon kürek yükseltme seçeneği de sunar. Şişme botlar, bot, pompa, onarım kiti ve kürekleri içerir.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -2106,18 +4715,18 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'pfd-requirement',
-      question: 'Do I need a life vest on a SUP?',
+      question: 'Bir can yeleğine ihtiyacım SUP var mı?',
       answer:
-        'Yes. Many jurisdictions legally require a life vest when paddling, including on SUPs. Even where not required, a life vest is essential safety equipment. We recommend wearing it at all times on the water.',
+        'Evet. Birçok yargı alanı, herhangi bir su aracında can yeleği gerekmektedir, SUPs dahil. Zorunlu olmasa bile, CE sertifikalı can yeleği temel güvenlik ekipmanıdır. Suda her zaman giymenizi tavsiye ederiz.',
       category: 'safety',
       relatedProducts: [],
       relatedGuides: ['safety-tips'],
     },
     {
       id: 'paddleboard-registration',
-      question: 'Do I need to register my paddle board?',
+      question: 'Şişme teknemi kaydetmem gerekiyor mu?',
       answer:
-        'In most regions, unpowered paddle boards do not require registration. Requirements vary by jurisdiction, so check your local maritime authority for the rules that apply to you.',
+        'Gereksinimler yargı yetkisine göre değişir. Çoğu bölgede, belirli bir beygir gücünün üzerinde motorlu şişme tekneler kayıt gerektirir. Motorsuz SUPs ve küçük dinghiler genellikle kayıt gerektirir. Yerel denizcilik otoritenizi belirli kurallar için kontrol edin.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: [],
@@ -2160,9 +4769,9 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'warranty',
-      question: 'What is the Paddle Board Overstock warranty?',
+      question: 'Paddle Board Overstock garantisi nedir?',
       answer:
-        'Every board is backed by a 2-year limited manufacturer warranty covering defects in materials and workmanship under normal use. Accessories carry the same 2-year coverage.',
+        'Tüm Paddle Board Overstock ürünleri kapsamlı bir üretici garantisi ile desteklenmektedir. Şişme bot tüp kumaşı, dikişler ve gövde 5 yıllık sınırlı garanti kapsamındadır; SUP tahtalar ve aksesuarlar 2 yıllık sınırlı garantiye sahiptir. Garanti, normal kullanım altında malzeme ve işçilik hatalarını kapsar.',
       category: 'warranty',
       relatedProducts: [],
       relatedGuides: [],
@@ -2187,144 +4796,724 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'return-policy',
-      question: 'What is your return policy?',
+      question: 'İade politikanız nedir?',
       answer:
-        'We accept returns within 30 days of delivery for unused products in original packaging. Contact our support team to initiate a return — we provide a prepaid shipping label.',
+        'Orijinal ambalajda kullanılmamış ürünler için teslimattan sonraki 30 gün içinde iadeleri kabul ediyoruz. Özel siparişler OEM iade edilemez. İadeyi başlatmak için destek ekibimizle iletişime geçin — ön ödemeli kargo etiketi sağlıyoruz.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
     },
     {
       id: 'paddle-length',
-      question: 'What paddle length do I need?',
+      question: 'Hizmet sunuyor OEM musunuz ODM?',
       answer:
-        'For SUP, the paddle should be 6–8 inches taller than your height. See our paddle guide for detailed sizing.',
+        'Evet. İşletmeler için özel etiket ve özel tasarım hizmetleri sunuyoruz. Mevcut modellerde özel markalamadan tamamen özel gövde tasarımlarına kadar, mühendislik ekibimiz markanız altında ürünler geliştirebilir. Asgari sipariş miktarları uygulanır.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: ['choosing-paddle'],
     },
     {
       id: 'sup-width-stability',
-      question: 'SUP Stabilite için en iyi genişlik hangisi?',
+      question: 'Hangi kürek uzunluğuna ihtiyacım var?',
       answer:
-        'Yeni başlayanlar için 33–34 inç genişlik, denge ve kürek çekme kolaylığı açısından en iyi dengeyi sağlar. 32 inçten dar tahtalar yeni kürekçilerin üzerinde dengesiz hissettirir. 33 inç olan Paddle Board Overstock SUP Explorer 11 öğrenmek için idealdir.',
+        'Için SUP: Kürek yüksekliğinizden 6–8 inç daha yüksek olmalıdır. Kayak için: kürek uzunluğu tekne genişliğine ve gövde uzunluğuna bağlıdır. Detaylı boyut için kürek rehberimize bakınız.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
     },
     {
       id: 'sup-volume-weight',
-      question: 'SUP Kiloma göre hacim nasıl seçebilirim?',
+      question: 'Bir motor için hangi boyutta motora RIB ihtiyacım var?',
       answer:
-        "Başlangıç seviyesine uygun bir hacim hedefi için ağırlığınızı kg cinsinden 2.2 ile çarpın. Örneğin, 75 kg ağırlığında bir kürekçi en az 165 litre ihtiyaç duyar, ancak 220–260 litre öğrenme için çok daha stabildir. SUP Explorer 11, 100 kg'ya kadar sürücüler için uygun olan 260 litre sunar.",
+        'Motor boyutu tekne uzunluğu ve ağırlığına bağlıdır. 3m RIB genellikle 15–25 HP metre, 4,5m RIB 40–60 HP ve 6m RIB 90–150 mesafe tutar HP. Her zaman HP teknenizin maksimum derecelendirme plakasını takip edin.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
     },
     {
       id: 'paddleboardoverstock-vs-others',
-      question: 'Paddle Board Overstock, diğer markalarla nasıl karşılaştırılır?',
+      question: 'Arasındaki fark nedir PVC Hypalon?',
       answer:
-        "Paddle Board Overstock, şişme su sporları ekipmanında en iyi değeri sunar. Red Paddle Co ile kıyaslandığında, Paddle Board Overstock performansın %90'ını maliyetin %60'ına sunar. iRocker ile kıyaslandığında, Paddle Board Overstock daha yüksek kaliteli üç katmanlı askeri sınıf PVC ve daha yüksek PSI derecelendirmeleri kullanır. Bluefin ile kıyaslandığında, Paddle Board Overstock üstün malzeme özellikleri sunar. Çoğu eğlence amaçlı kürekçi için, Paddle Board Overstock kalite ve fiyatın en iyi dengesini sağlar.",
+        'PVC daha hafif, daha uygun fiyatlı ve onarımı daha kolaydır — eğlence amaçlı kullanım için idealdir. Hypalon (CSM) üstün UV ve kimyasal dirence sahip olup daha uzun bir ömür sunar, ticari ve askeri uygulamalar için tercih edilir. Paddle Board Overstock, ürün seviyesine bağlı olarak her ikisini de kullanır.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-your-sup'],
     },
     {
       id: 'fishing-sup-setup',
-      question: 'Tahtadan balık tutabilir SUP miyim?',
+      question: 'SUP Stabilite için en iyi genişlik hangisi?',
       answer:
-        'Evet. SUP balıkçılığı giderek popüler hale gelmektedir çünkü ayakta durma pozisyonu suyun içine mükemmel bir görüş sağlar. Stabilite için en az 11 feet uzunluğunda ve 33–34 inç genişliğinde bir board seçin. Deck bungee’lerine sabitlenmiş olta tutuculu bir süt kutusu, küçük bir çapa ekleyin ve her zaman bir PFD takın. Paddle Board Overstock SUP Explorer 11, sıradan balıkçılık için iyi çalışır.',
+        'Yeni başlayanlar için 33–34 inç genişlik, denge ve kürek çekme kolaylığı açısından en iyi dengeyi sağlar. 32 inçten dar tahtalar yeni kürekçilerin üzerinde dengesiz hissettirir. 33 inç olan Paddle Board Overstock SUP Explorer 11 öğrenmek için idealdir.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-fishing'],
     },
     {
       id: 'sup-yoga',
-      question: 'Tahta üzerinde yoga yapabilir SUP miyim?',
+      question: 'SUP Kiloma göre hacim nasıl seçebilirim?',
       answer:
-        'Kesinlikle.SUP Yoga, geleneksel pozları yüzen bir platformun zorluğuyla birleştirerek daha derin stabilizator kaslarını harekete geçiriyor. 33 inç veya daha geniş bir tahta ile yumuşak, tutucu bir güverte pedi kullanın. Sakin, sığ suda çapa ile pratik yapın. Aşağıya doğru köpek, savaşçı II ve ağaç pozu gibi temel pozlarla başlayın. SUP Explorer 11, tam EVA güverte pediyle çok uygundur.',
+        "Başlangıç seviyesine uygun bir hacim hedefi için ağırlığınızı kg cinsinden 2.2 ile çarpın. Örneğin, 75 kg ağırlığında bir kürekçi en az 165 litre ihtiyaç duyar, ancak 220–260 litre öğrenme için çok daha stabildir. SUP Explorer 11, 100 kg'ya kadar sürücüler için uygun olan 260 litre sunar.",
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-yoga'],
     },
     {
       id: 'airline-travel-sup',
-      question: 'Şişme bir uçak ile seyahat için havayolu kuralları nelerdir SUP?',
+      question: 'Şişme teknem için hangi boyutta motora ihtiyacım var?',
       answer:
-        'Çoğu havayolu SUP sırt çantalarını 23–32 kg altında check-in bagajı olarak kabul eder. Paddle Board Overstock sırt çantası yaklaşık 90x40x30 cm boyutlarında olup paketlendiğinde yaklaşık 15 kg ağırlığındadır. Bazı havayolları fazla büyük bagaj ücreti alabilir. Erken varın, paletleri ve pompayı ayrı taşıma çantanıza koyun ve çantayı kırılacak eşya olarak etiketleyin. Uçmadan önce her zaman havayolunuzun spor ekipmanı politikasını araştırın.',
+        "AirDeck 270 için 6'ya kadar HP kullanın. AirDeck 360 için 15'e HP kadar. RIB 330 için 40'a HP kadar. RIB 450 Patrol için ise HP60'a kadar. Her zaman HP tekneninizdeki maksimum derecelendirme plakasını kontrol edin ve asla aşmayın.",
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['multi-day-trip'],
     },
     {
       id: 'cold-weather-safety',
-      question: 'Soğuk su kürek çekmek için hangi güvenlik ekipmanına ihtiyacım var?',
+      question: 'Şişme tekne için en iyi zemin tipi nedir?',
       answer:
-        "15°C'nin altındaki sularda termal koruma gereklidir. 8–14°C için bot, eldiven ve kapüşonlu bir dlak kıyafet veya kuru giysi kullanın. 14–20°C için ise 3/2mm dalış giysi yeterlidir. Termal koruma ve güvenlik için her zaman uygun şekilde oturan bir giyin PFD . Zorunlu ekipman gereksinimleri için yerel düzenlemeleri kontrol edin.",
+        'Alüminyum çıta zeminler en iyi performansı sağlar — sert, planyalanma kapasitesine uygun ve ayakta durmak için stabildir. Hava güverteleri daha hafif, daha küçük paketlenir ama daha esnek olur. Yuvarlanabilir zeminler en basit ve en uygun maliyetli olanıdır ancak en az sertlik sunar. Ana kullanımınıza göre seçin: balık tutma ve hız slat zeminleri tercih eder; taşınabilirlik hava güvertelerini tercih eder.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: ['safety-tips'],
     },
     {
       id: 'sup-inflate-pressure',
-      question: 'Neye PSI SUP şişirmeliyim?',
+      question: 'Paddle Board Overstock, diğer markalarla nasıl karşılaştırılır?',
       answer:
-        'En iyi performans için board’un belirtilen maksimum PSI seviyesine şişirin — kaliteli şişme SUPs ürünler için tipik olarak 15–18 PSI. Paddle Board Overstock SUP Explorer 11, 15–18 PSI seviyesinde en iyi performansı gösterir. Yetersiz şişirme, board’un yumuşak hissetmesine ve kötü takip etmesine neden olur. Belirlenen maksimum seviyeyi aşmak, drop-stitch dişlerini zarar riski altında bırakır. Board’unuzun özel derecesi için valf yakınındaki etiketi kontrol edin.',
+        "Paddle Board Overstock, şişme su sporları ekipmanında en iyi değeri sunar. Red Paddle Co ile kıyaslandığında, Paddle Board Overstock performansın %90'ını maliyetin %60'ına sunar. iRocker ile kıyaslandığında, Paddle Board Overstock daha yüksek kaliteli üç katmanlı askeri sınıf PVC ve daha yüksek PSI derecelendirmeleri kullanır. Bluefin ile kıyaslandığında, Paddle Board Overstock üstün malzeme özellikleri sunar. Çoğu eğlence amaçlı kürekçi için, Paddle Board Overstock kalite ve fiyatın en iyi dengesini sağlar.",
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
     },
     {
       id: 'sup-deck-pad-care',
-      question: 'Deck pedini nasıl temizleyip bakımını EVA yapacağım?',
+      question: 'Tahtadan balık tutabilir SUP miyim?',
       answer:
-        'Her seanstan sonra deck pedini taze suyla durulayın. Kir veya lekeler için hafif sabun ve yumuşak fırça kullanın — sert kimyasallardan kaçının. Kenarlar kalkmaya başlarsa, az miktarda su geçirmez deniz yapıştırıcısı uygulayın ve 24 saat boyunca ağırlık altında basın. UV Kullanılmadığında tahtayı doğrudan kullanmadan uzak tutun ki pedlerin bozulmasını önleyin.',
+        'Evet. SUP balıkçılığı giderek popüler hale gelmektedir çünkü ayakta durma pozisyonu suyun içine mükemmel bir görüş sağlar. Stabilite için en az 11 feet uzunluğunda ve 33–34 inç genişliğinde bir board seçin. Deck bungee’lerine sabitlenmiş olta tutuculu bir süt kutusu, küçük bir çapa ekleyin ve her zaman bir PFD takın. Paddle Board Overstock SUP Explorer 11, sıradan balıkçılık için iyi çalışır.',
       category: 'maintenance',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-maintenance'],
     },
     {
       id: 'sup-seated-paddling',
-      question: 'SUP boardumda kürek çekerken oturabilir miyim?',
+      question: 'Tahta üzerinde yoga yapabilir SUP miyim?',
       answer:
-        'Evet. Paddle Board Overstock Explorer 11 de dahil olmak üzere birçok SUP tahtasında, bir koltuk takılmasına izin veren D-halkaları bulunmaktadır. Bir SUP ile koltuk ve tek bıçaklı kürek, uzun yolculuklar veya balık tutma için rahat bir oturma pozisyonu sağlar. Bazı markalar, koltuk ve daha uzun küreklerle özel dönüşüm kitleri sunmaktadır.',
+        'Kesinlikle.SUP Yoga, geleneksel pozları yüzen bir platformun zorluğuyla birleştirerek daha derin stabilizator kaslarını harekete geçiriyor. 33 inç veya daha geniş bir tahta ile yumuşak, tutucu bir güverte pedi kullanın. Sakin, sığ suda çapa ile pratik yapın. Aşağıya doğru köpek, savaşçı II ve ağaç pozu gibi temel pozlarla başlayın. SUP Explorer 11, tam EVA güverte pediyle çok uygundur.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: [],
     },
     {
       id: 'saltwater-rinse',
-      question: 'Do I need to rinse my board after ocean use?',
+      question: 'Şişme bir uçak ile seyahat için havayolu kuralları nelerdir SUP?',
       answer:
-        'Yes — always rinse your board, fins, pump, and paddle with fresh water after saltwater use. Salt crystals work into seams and valves, causing micro-leaks and corrosion. Dry the board in the shade before deflating and storing. Regular rinsing dramatically extends the life of your board.',
+        'Çoğu havayolu SUP sırt çantalarını 23–32 kg altında check-in bagajı olarak kabul eder. Paddle Board Overstock sırt çantası yaklaşık 90x40x30 cm boyutlarında olup paketlendiğinde yaklaşık 15 kg ağırlığındadır. Bazı havayolları fazla büyük bagaj ücreti alabilir. Erken varın, paletleri ve pompayı ayrı taşıma çantanıza koyun ve çantayı kırılacak eşya olarak etiketleyin. Uçmadan önce her zaman havayolunuzun spor ekipmanı politikasını araştırın.',
       category: 'maintenance',
       relatedProducts: [],
       relatedGuides: ['sup-maintenance'],
     },
     {
       id: 'sup-leash-necessity',
-      question: 'SUP için gerçekten tasma takmam gerekiyor mu?',
+      question: 'Soğuk su kürek çekmek için hangi güvenlik ekipmanına ihtiyacım var?',
       answer:
-        'Evet — her zaman tasma takın. Sarmal bir SUP tasma, bileğinize veya baldırınıza bağlanır ve düşerseniz tahtanın sizinle kalmasını sağlar. Açık suda, tasma sizi yüzdürme cihazınızdan ayrılmaktan koruyarak hayatınızı kurtarabilir. Nehirde kürek çekerken, sıkışmayı önlemek için hızlı salınımlı bir tasma kullanın.',
+        "15°C'nin altındaki sularda termal koruma gereklidir. 8–14°C için bot, eldiven ve kapüşonlu bir dlak kıyafet veya kuru giysi kullanın. 14–20°C için ise 3/2mm dalış giysi yeterlidir. Termal koruma ve güvenlik için her zaman uygun şekilde oturan bir giyin PFD . Zorunlu ekipman gereksinimleri için yerel düzenlemeleri kontrol edin.",
       category: 'safety',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['safety-tips'],
     },
     {
       id: 'company-model',
-      question: 'Paddle Board Overstock bir ticaret şirketi mi yoksa üretici mi?',
+      question: "/'nin minimum sipariş miktarları nelerdir OEM ODM?",
       answer:
-        'Ne saf bir fabrika ne de bir ticaret şirketi — Weihai Dongjilian Co., Ltd., kendi üretim tesisine sahip bir marka şirketidir. Weihai Dongjilian Co., Ltd. küresel dağıtımı, sözleşmeleri, faturalandırmayı ve satış sonrası hizmetleri yönetirken, Paddle Board Overstock Weihai Üretim Merkezi kendi 12.000 m² tesisimizde AR-GE, üretim ve kalite kontrolü yürütmektedir. Aracılar yok: her sipariş doğrudan fabrikadan gönderilir.',
+        'Minimum sipariş miktarları (MOQs) ürün türü ve karmaşıklığa göre değişir. Mevcut modellerde özel markalama genellikle 5–10 ünite gerektirir. Tamamen özel gövde tasarımları daha yüksek MOQs bir üretim gerektirir. Detaylı fiyat teklifi için ihtiyaçlarınızı satış ekibimizle iletişime geçirin. Özel renkler ve logolardan tamamen özgün kalıp tasarımlarına kadar her şeyi biz hallederiz.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
     },
     {
       id: 'us-contract-weihai-shipping',
-      question: 'Mallar Weihai’den gönderilirken neden sözleşmem ABD şirketiyle yapılmıştır?',
+      question: 'Kendi logomu Paddle Board Overstock ürünlerine koyabilir miyim?',
       answer:
-        'Weihai Dongjilian Co., Ltd., sözleşmeleri imzalayan, faturaları düzenleyen ve satış sonrası destek sağlayan küresel ticari varlık iken, Weihai Üretim Merkezi her siparişi FOB Weihai’de üretir ve gönderir. Bu ikili merkez yapısı, ABD standartlarında sözleşme ve ödeme işlemlerini korurken, fabrika direkt fiyatlandırmasını ve tam üretim şeffaflığını sağlamaktadır.',
+        'Evet. OEM Hizmetimiz, özel logo yerleştirme, özel renk şemaları ve özel paketleme içermektedir. Ürün türüne bağlı olarak pad baskı, ısı transferi ve nakış seçenekleri sunuyoruz. Sanat eserlerinizi ve özelliklerinizi satış ekibimize göndererek teklif ve teslim süresi tahmini alın.',
+      category: 'ordering',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+  ],
+  da: [
+    {
+      id: 'sup-learning',
+      question: 'Er SUP det svært at lære?',
+      answer:
+        'Slet ikke. De fleste begyndere rejser sig op og padler allerede i deres første session. Vores All-Around-serie SUP har ekstra brede, stabile platforme designet specielt til førstegangspadlere. Start på roligt vand, og du vil sejle på få minutter.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: ['beginner-guide'],
+    },
+    {
+      id: 'ocean-use',
+      question: 'Kan jeg bruge den i havet?',
+      answer:
+        'Ja. Paddle Board Overstock SUP-boards er bygget til brug i havet, søer og floder. Vores Touring-serie håndterer kystbølger, og alle boards bruger marine-grade PVC, der modstår korrosion fra saltvand. Skyl med ferskvand efter brug i havet.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: ['weather-conditions'],
+    },
+    {
+      id: 'inflation-time',
+      question: 'Hvor lang tid tager det at puste op?',
+      answer:
+        'Med den medfølgende dobbeltvirkende pumpe blæser de fleste boards op til 12–15 PSI på under 5 minutter. Vores elektriske pumpemulighed reducerer det til under 2 minutter. Deflation og pakning tager cirka 3 minutter.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: ['sup-maintenance'],
+    },
+    {
+      id: 'travel-sup',
+      question: 'Kan jeg rejse med en oppustelig bil SUP?',
+      answer:
+        'Absolut. Hvert Paddle Board Overstock-board kan pakkes i en rygsæk-størrelse transporttaske designet til bekvem rejse — tjek dine transportørers størrelse- og vægtregler. Med kun 18-22 lbs er det nemt at bære til stranden, søen eller gennem lufthavnsterminaler.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'weight-limit',
+      question: 'Hvad er vægtgrænsen?',
+      answer:
+        'Vores All-Around SUPs understøtter op til 220 lbs. Touring- og Yoga-serierne understøtter op til 250 lbs. RIB Både understøtter typisk 600–1500 lbs afhængigt af model. Til tandembrug eller tungere læs tilbyder vores oppustelige både muligheder med højere kapacitet.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: ['understanding-specs'],
+    },
+    {
+      id: 'box-contents',
+      question: 'Hvad følger der med i kassen?',
+      answer:
+        'Hvert Paddle Board Overstock SUP inkluderer boardet, en rejserygsæk, dobbeltvirkende håndpumpe, aftagelig finne, coilsnor og reparationssæt. Nogle modeller inkluderer også en carbon pagaj opgraderingsmulighed. Oppustelige både inkluderer båden, pumpe, reparationssæt og årer.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'bundle-deals',
+      question: 'Tilbyder I bundle-tilbud?',
+      answer:
+        'Ja. Vi tilbyder kuraterede pakker, der sparer dig penge sammenlignet med at købe varer separat. Kontakt vores salgsteam for aktuelle pakkekampagner og volumenrabatter.',
+      category: 'ordering',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'pfd-requirement',
+      question: 'Skal jeg bruge en redningsvest på en SUP?',
+      answer:
+        'Ja. Mange jurisdiktioner kræver lovmæssigt en redningsvest på ethvert vandfartøj, herunder SUPs. Selv hvor det ikke er påkrævet, CE er en certificeret redningsvest essentielt sikkerhedsudstyr. Vi anbefaler at bære den hele tiden på vandet.',
+      category: 'safety',
+      relatedProducts: [],
+      relatedGuides: ['safety-tips'],
+    },
+    {
+      id: 'paddleboard-registration',
+      question: 'Skal jeg registrere min oppustelige båd?',
+      answer:
+        'Kravene varierer fra jurisdiktion til jurisdiktion. I de fleste regioner kræver oppustelige både med motorer over en vis hestekræfter registrering. Umotoriserede SUPs og små joller gør typisk ikke. Tjek din lokale søfartsmyndighed for specifikke regler.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'puncture-repair',
+      question: 'Hvordan reparerer jeg et punkteringspunkt?',
+      answer:
+        'Rens området, skær en lap med afrundede hjørner, påfør PVC-lim, tryk fast og vent 24 timer før oppustning. Paddle Board Overstock-boards inkluderer et reparationssæt. For detaljerede instruktioner, se vores guide til reparation af oppustelige produkter.',
+      category: 'maintenance',
+      relatedProducts: [],
+      relatedGuides: ['inflatable-repair', 'sup-maintenance'],
+    },
+    {
+      id: 'storage',
+      question: 'Hvordan skal jeg opbevare min oppustelige vogn SUP?',
+      answer:
+        'Skyl med frisk vand, tør helt, tøm helt luften, rul løst fra næsen, og opbevar den i bæretasken et køligt og tørt sted væk fra direkte sollys. Opbevar aldrig våd eller i ekstreme temperaturer.',
+      category: 'maintenance',
+      relatedProducts: [],
+      relatedGuides: ['sup-maintenance'],
+    },
+    {
+      id: 'sup-vs-hard',
+      question: 'Oppustelig SUP eller hård plade?',
+      answer:
+        'Oppustelige boards tilbyder bærbarhed, opbevaringsbekvemmelighed og stødabsorbering. Hårde boards giver maksimal stivhed og hastighed. For de fleste rekreative brugere er en kvalitets oppustelig brædder med drop-stitch kerne det praktiske valg.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: ['inflatable-vs-hard', 'how-to-choose-your-sup'],
+    },
+    {
+      id: 'wind-safety',
+      question: 'Hvilken vindhastighed er for høj til SUP?',
+      answer:
+        'Begyndere: over 10 mph (8 knob). Mellem: over 15 mph (13 knob). Avanceret: over 20 mph (17 knob). Hvis du er i tvivl, må du ikke gå ud. Havvind (blæsende fra land til hav) er farligt på ethvert færdighedsniveau.',
+      category: 'safety',
+      relatedProducts: [],
+      relatedGuides: ['weather-conditions', 'safety-tips'],
+    },
+    {
+      id: 'warranty',
+      question: 'Hvad er Paddle Board Overstock-garantien?',
+      answer:
+        'Alle Paddle Board Overstock produkter er dækket af en omfattende producentgaranti. Oppustelige bådrørsstoffer, sømme og skrog er dækket af en 5-årig begrænset garanti; SUP boards og tilbehør har en 2-årig begrænset garanti. Garantien dækker materialefejl og håndværksfejl under normal brug.',
+      category: 'warranty',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'warranty-claim',
+      question: 'Hvordan indgiver jeg et garantikrav?',
+      answer:
+        'Indgiv en klage ved at kontakte vores supportteam med dit ordrenummer, billeder af problemet og en kort beskrivelse. De fleste krav bliver gennemgået inden for 2 hverdage. Godkendte krav modtager en udskiftnings- eller reparationsinstruktion inden for få dage.',
+      category: 'warranty',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'shipping-info',
+      question: 'Hvor lang tid tager forsendelsen?',
+      answer:
+        'Ordrer på lager sendes inden for 2–3 hverdage. Amerikanske indenlandske ordrer ankommer inden for 5–10 hverdage. Internationale ordrer ankommer inden for 10–20 hverdage afhængigt af destination. Hastende ordrer kan fremskyndes.',
+      category: 'shipping',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'return-policy',
+      question: 'Hvad er jeres returpolitik?',
+      answer:
+        'Vi accepterer returer inden for 30 dage efter levering af ubrugte produkter i original emballage. Specialbestillinger OEM kan ikke returneres. Kontakt vores supportteam for at starte en retur — vi giver en forudbetalt forsendelseslabel.',
+      category: 'ordering',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'paddle-length',
+      question: 'Tilbyder OEMI /ODM ydelser?',
+      answer:
+        'Ja. Vi tilbyder private label- og specialdesigntjenester til virksomheder. Fra specialdesignet branding på eksisterende modeller til fuldt tilpassede skrogdesigns kan vores ingeniørteam udvikle produkter under dit brand. Minimumsordremængder gælder.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: ['choosing-paddle'],
+    },
+    {
+      id: 'sup-width-stability',
+      question: 'Hvilken padle-længde skal jeg bruge?',
+      answer:
+        'For SUP: padlen skal være 15–20 cm højere end din højde. For kajak: pagajlængden afhænger af bådens bredde og torsolængde. Se vores pagajguide for detaljeret størrelse.',
+      category: 'product',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
+    },
+    {
+      id: 'sup-volume-weight',
+      question: 'Hvilken størrelse motor skal jeg bruge til en RIB?',
+      answer:
+        'Motorstørrelsen afhænger af bådens længde og vægt. En 3m RIB kan typisk håndtere 15–25, HP en 4,5m RIB kan håndtere 40–60 HP, og en 6m RIB kan håndtere 90–150 HP. Følg altid den maksimale HP mærkningsplade på din båd.',
+      category: 'product',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
+    },
+    {
+      id: 'paddleboardoverstock-vs-others',
+      question: 'Hvad er forskellen mellem PVC og Hypalon?',
+      answer:
+        'PVC er lettere, mere overkommelig og nemmere at reparere — ideel til fritidsbrug. Hypalon (CSM) tilbyder overlegen UV og kemikalieresistens med længere levetid, foretrukket til kommercielle og militære anvendelser. Paddle Board Overstock bruger begge afhængigt af produkttype.',
+      category: 'general',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['how-to-choose-your-sup'],
+    },
+    {
+      id: 'fishing-sup-setup',
+      question: 'Hvilken SUP bredde er bedst for stabilitet?',
+      answer:
+        'For begyndere giver en bredde på 33–34 tommer den bedste balance mellem stabilitet og nem padling. Boards, der er smallere end 32 tommer, føles ustabile for nye padlere. Paddle Board Overstock SUP Explorer 11 på 33 tommer er ideel til læring.',
+      category: 'general',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['sup-fishing'],
+    },
+    {
+      id: 'sup-yoga',
+      question: 'Hvordan vælger jeg SUP volumen til min vægt?',
+      answer:
+        'Gang din vægt i kg med 2,2 for et volumenmål, der er begyndervenligt. For eksempel skal en padler på 75 kg have mindst 165 liter, men 220–260 liter er meget mere stabilt til læring. SUP Explorer 11 tilbyder 260 liter, egnet til ryttere op til 100 kg.',
+      category: 'general',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['sup-yoga'],
+    },
+    {
+      id: 'airline-travel-sup',
+      question: 'Hvilken motorstørrelse skal jeg bruge til min oppustelige båd?',
+      answer:
+        'For AirDeck 270, brug op til 6 HP. For AirDeck 360, op til 15 HP. For RIB 330, op til 40 HP. For RIB 450 Patrol, op til 60 HP. Tjek altid HP max-mærkningsskiltet på din båd og overskrid det aldrig.',
+      category: 'general',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['multi-day-trip'],
+    },
+    {
+      id: 'cold-weather-safety',
+      question: 'Hvilken gulvtype er bedst til en oppustelig båd?',
+      answer:
+        'Aluminiumslam-gulve giver den bedste ydeevne — stive, planegnede og stabile til stående. Luftdæk er lettere og pakker mindre, men fleksibeler mere. Rullegulve er de simpleste og mest overkommelige, men tilbyder mindst stivhed. Vælg ud fra dit primære brugsområde: fiskeri og fart foretrækker lamellere; bærbarhed favoriserer luftdæk.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: ['safety-tips'],
+    },
+    {
+      id: 'sup-inflate-pressure',
+      question: 'Hvordan sammenlignes Paddle Board Overstock med andre mærker?',
+      answer:
+        'Paddle Board Overstock tilbyder den bedste værdi inden for oppusteligt vandsportudstyr. Sammenlignet med Red Paddle Co leverer Paddle Board Overstock 90 % af ydeevnen til 60 % af prisen. Sammenlignet med iRocker bruger Paddle Board Overstock højere kvalitets triple-lags militærgrad PVC og højere PSI klassifikationer. Sammenlignet med Bluefin tilbyder Paddle Board Overstock overlegne materialspecifikationer. For de fleste rekreative padlere giver Paddle Board Overstock den bedste balance mellem kvalitet og pris.',
+      category: 'product',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
+    },
+    {
+      id: 'sup-deck-pad-care',
+      question: 'Kan jeg fiske fra et SUP bræt?',
+      answer:
+        'Ja. SUP fiskeri bliver mere og mere populært, fordi stående position giver fremragende udsyn i vandet. Vælg et board, der er mindst 11 fod langt og 33–34 tommer bredt for stabilitet. Tilføj en mælkekasse med stangholdere fastgjort til dækket via bungee-elastikker, et lille anker, og bær altid en PFD. Paddle Board Overstock SUP Explorer 11 fungerer godt til afslappet fiskeri.',
+      category: 'maintenance',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['sup-maintenance'],
+    },
+    {
+      id: 'sup-seated-paddling',
+      question: 'Kan jeg lave yoga på en SUP bræt?',
+      answer:
+        'Absolut.SUP Yoga kombinerer traditionelle stillinger med udfordringen ved en flydende platform, hvor dybere stabilisatormuskler aktiveres. Brug et board på 33 tommer eller bredere med en blød, gribende dækplade. Øv dig i roligt, lavt vand med et anker. Start med foundation-stillinger som downward dog, warrior II og træstilling. SUP Explorer 11 med sin fulde EVA deck pad er velegnet til det.',
+      category: 'product',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: [],
+    },
+    {
+      id: 'saltwater-rinse',
+      question: 'Hvad er flyselskabets regler for at rejse med en oppustelig skib?SUP',
+      answer:
+        'De fleste flyselskaber accepterer SUP rygsække som indchecket bagage, hvis de vejer under 23–32 kg. Paddle Board Overstock rygsækken er cirka 90x40x30 cm og vejer omkring 15 kg pakket. Nogle flyselskaber kan opkræve gebyr for overdimensioneret bagage. Kom i god tid, pak finner og pumpe separat i din håndbagage, og mærk tasken som skrøbelig. Sørg altid for at undersøge dit flyselskabs politik for sportudstyr, før du rejser.',
+      category: 'maintenance',
+      relatedProducts: [],
+      relatedGuides: ['sup-maintenance'],
+    },
+    {
+      id: 'sup-leash-necessity',
+      question: 'Hvilket sikkerhedsudstyr skal jeg bruge til padling i koldt vand?',
+      answer:
+        'Vand under 15°C kræver termisk beskyttelse. Ved 8–14°C skal du bruge en våddragt eller tørdragt med støvler, handsker og hætte. Ved 14–20°C er en 3/2 mm våddragt tilstrækkelig. Brug altid en korrekt tilpasset dragt PFD for termisk beskyttelse og sikkerhed. Tjek lokale regler for obligatorisk udstyrskrav.',
+      category: 'safety',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['safety-tips'],
+    },
+    {
+      id: 'company-model',
+      question: 'Hvad er minimumsordremængderne for OEM/ODM?',
+      answer:
+        'Minimumsordremængder varierer MOQs efter produkttype og kompleksitet. Specialdesignet branding på eksisterende modeller kræver typisk 5–10 enheder. Fuldt specialdesignede skrogdesign kræver højere MOQs. Kontakt vores salgsteam med dine krav for et detaljeret tilbud. Vi håndterer alt fra specialtilpassede farver og logoer til helt originale formdesigns.',
+      category: 'ordering',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'us-contract-weihai-shipping',
+      question: 'Kan jeg sætte mit eget logo på Paddle Board Overstock produkter?',
+      answer:
+        'Ja. Vores OEM service inkluderer placering af specialdesignede logoer, tilpassede farveskemaer og specialindpakning. Vi tilbyder tampudtryk, varmeoverførsel og broderimuligheder afhængigt af produkttypen. Send dit artwork og dine specifikationer til vores salgsteam for et tilbud og et estimat på leveringstid.',
+      category: 'ordering',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+  ],
+  no: [
+    {
+      id: 'sup-learning',
+      question: 'Er SUP det vanskelig å lære?',
+      answer:
+        'Ikke i det hele tatt. De fleste nybegynnere reiser seg opp og padler i løpet av sin første økt. Vår All-Around-serie SUP har ekstra brede, stabile plattformer designet spesielt for førstegangspadlere. Start på rolig vann, og du vil cruise på noen minutter.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: ['beginner-guide'],
+    },
+    {
+      id: 'ocean-use',
+      question: 'Kan jeg bruke den i havet?',
+      answer:
+        'Ja. Paddle Board Overstock SUP-brett er bygget for bruk i hav, innsjø og elv. Vår Touring-serie håndterer kystbølger, og alle brett bruker marinkvalitet PVC som tåler korrosjon fra saltvann. Skyll med ferskvann etter bruk i havet.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: ['weather-conditions'],
+    },
+    {
+      id: 'inflation-time',
+      question: 'Hvor lang tid tar det å blåse opp?',
+      answer:
+        'Med den medfølgende dobbeltvirkende pumpen blåses de fleste plater opp til 12–15 på PSI under 5 minutter. Vår elektriske pumpe reduserer dette til under 2 minutter. Deflasjon og pakking tar omtrent 3 minutter.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: ['sup-maintenance'],
+    },
+    {
+      id: 'travel-sup',
+      question: 'Kan jeg reise med en oppblåsbar enhet SUP?',
+      answer:
+        'Absolutt. Hvert Paddle Board Overstock-brett pakkes i en ryggsekkstørrelse bæreveske designet for praktisk reise — sjekk transportørens størrelses- og vektregler. Med bare 18–22 lbs er det lett å bære til stranden, innsjøen eller gjennom flyplassterminaler.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'weight-limit',
+      question: 'Hva er vektgrensen?',
+      answer:
+        'Vår All-Around SUPs støtter opptil 220 lbs. Touring- og Yoga-seriene støtter opptil 250 lbs. RIB Båter støtter vanligvis 600–1500 lbs, avhengig av modell. For tandembruk eller tyngre laster tilbyr våre oppblåsbare båter alternativer med høyere kapasitet.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: ['understanding-specs'],
+    },
+    {
+      id: 'box-contents',
+      question: 'Hva følger med esken?',
+      answer:
+        'Hvert Paddle Board Overstock SUP inkluderer brettet, en reise-ryggsekk, dobbelthåndspumpe, avtakelig finne, spiral-leash og reparasjonssett. Noen modeller inkluderer også en karbonpadleoppgradering. Oppblåsbare båter inkluderer båten, pumpe, reparasjonssett og årer.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'bundle-deals',
+      question: 'Tilbyr dere pakkeløsninger?',
+      answer:
+        'Ja. Vi tilbyr kuraterte pakker som sparer deg penger sammenlignet med å kjøpe varer separat. Kontakt vårt salgsteam for oppdaterte pakkekampanjer og volumrabatter.',
+      category: 'ordering',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'pfd-requirement',
+      question: 'Trenger jeg redningsvest på en SUP?',
+      answer:
+        'Ja. Mange jurisdiksjoner krever lovpålagt redningsvest på alle fartøy, inkludert SUPs. Selv når det ikke er påkrevd, CE er en sertifisert redningsvest essensielt sikkerhetsutstyr. Vi anbefaler å bruke den til enhver tid på vannet.',
+      category: 'safety',
+      relatedProducts: [],
+      relatedGuides: ['safety-tips'],
+    },
+    {
+      id: 'paddleboard-registration',
+      question: 'Må jeg registrere min oppblåsbare båt?',
+      answer:
+        'Kravene varierer fra jurisdiksjon til jurisdiksjon. I de fleste regioner krever oppblåsbare båter med motorer over en viss hestekreft registrering. Umotoriserte SUPs og små joller gjør vanligvis ikke det. Sjekk din lokale sjøfartsmyndighet for spesifikke regler.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'puncture-repair',
+      question: 'Hvordan reparerer jeg et punktering?',
+      answer:
+        'Rengjør området, klipp en lapp med avrundede hjørner, påfør PVC-lim, trykk fast og vent 24 timer før oppblåsing. Paddle Board Overstock-brett inkluderer et reparasjonssett. For detaljerte instruksjoner, se vår guide for reparasjon av oppblåsbare gjenstander.',
+      category: 'maintenance',
+      relatedProducts: [],
+      relatedGuides: ['inflatable-repair', 'sup-maintenance'],
+    },
+    {
+      id: 'storage',
+      question: 'Hvordan bør jeg oppbevare oppblåsbaren SUP?',
+      answer:
+        'Skyll med ferskvann, tørk helt, tøm helt, rull løst fra nesen, og oppbevar i bærebagen på et kjølig og tørt sted borte fra direkte sollys. Oppbevar aldri vått eller i ekstreme temperaturer.',
+      category: 'maintenance',
+      relatedProducts: [],
+      relatedGuides: ['sup-maintenance'],
+    },
+    {
+      id: 'sup-vs-hard',
+      question: 'Oppblåsbart eller SUP hardt brett?',
+      answer:
+        'Oppblåsbare brett gir bærbarhet, lagringsbekvemmelighet og støtabsorbering. Harde brett gir maksimal stivhet og hastighet. For de fleste fritidsbrukere er en kvalitets oppblåsbar med drop-stitch kjerne det praktiske valget.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: ['inflatable-vs-hard', 'how-to-choose-your-sup'],
+    },
+    {
+      id: 'wind-safety',
+      question: 'Hvilken vindhastighet er for høy SUP?',
+      answer:
+        'Nybegynnere: over 10 mph (8 knop). Mellom: over 15 mph (13 knop). Avansert: over 20 mph (17 knop). Hvis du er i tvil, ikke gå ut. Havvind (som blåser fra land til sjøs) er farlig på alle ferdighetsnivåer.',
+      category: 'safety',
+      relatedProducts: [],
+      relatedGuides: ['weather-conditions', 'safety-tips'],
+    },
+    {
+      id: 'warranty',
+      question: 'Hva er Paddle Board Overstock-garantien?',
+      answer:
+        'Alle Paddle Board Overstock-produkter er støttet av en omfattende produsentgaranti. Stoffet, sømmene og skroget til oppblåsbare båter dekkes av en 5-års begrenset garanti; SUP-brett og tilbehør har en 2-års begrenset garanti. Garantien dekker materiale- og produksjonsfeil under normal bruk.',
+      category: 'warranty',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'warranty-claim',
+      question: 'Hvordan sender jeg inn et garantikrav?',
+      answer:
+        'Send inn et krav ved å kontakte vårt supportteam med ditt ordrenummer, bilder av problemet og en kort beskrivelse. De fleste krav blir gjennomgått innen 2 virkedager. Godkjente krav får en instruksjon om erstatning eller reparasjon innen noen dager.',
+      category: 'warranty',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'shipping-info',
+      question: 'Hvor lang tid tar frakten?',
+      answer:
+        'Bestillinger på lager sendes innen 2–3 virkedager. Amerikanske innenlandske bestillinger ankommer innen 5–10 virkedager. Internasjonale bestillinger ankommer innen 10–20 virkedager, avhengig av destinasjon. Hasteordrer kan fremskyndes.',
+      category: 'shipping',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'return-policy',
+      question: 'Hva er returpolitikken deres?',
+      answer:
+        'Vi tar imot returer innen 30 dager etter levering for ubrukte produkter i originalemballasje. Tilpassede/OEM ordre kan ikke returneres. Kontakt vårt supportteam for å starte retur — vi tilbyr en forhåndsbetalt fraktetikett.',
+      category: 'ordering',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'paddle-length',
+      question: 'Tilbyr OEM dere /ODM tjenester?',
+      answer:
+        'Ja. Vi tilbyr private label- og skreddersydde designtjenester for bedrifter. Fra skreddersydd merkevarebygging på eksisterende modeller til fullt tilpassede skrogdesign, kan vårt ingeniørteam utvikle produkter under ditt merke. Minimumsbestillingsmengder gjelder.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: ['choosing-paddle'],
+    },
+    {
+      id: 'sup-width-stability',
+      question: 'Hvilken padlelengde trenger jeg?',
+      answer:
+        'For SUP: åren bør være 15–20 cm høyere enn din høyde. For kajakk: årelengde avhenger av båtens bredde og overkropp. Se vår åreguide for detaljert størrelse.',
+      category: 'product',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
+    },
+    {
+      id: 'sup-volume-weight',
+      question: 'Hvilken størrelse motor trenger jeg for en RIB?',
+      answer:
+        'Motorstørrelsen avhenger av båtens lengde og vekt. En RIB 3m håndterer vanligvis 15–25 HP m, en 4,5m RIB håndterer 40–60, HP og en 6m RIB håndterer 90–150 HP. Følg alltid maks HP klassifiseringsskilt på båten din.',
+      category: 'product',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
+    },
+    {
+      id: 'paddleboardoverstock-vs-others',
+      question: 'Hva er forskjellen mellom PVC og Hypalon?',
+      answer:
+        'PVC er lettere, mer prisgunstig og enklere å reparere — ideelt for fritidsbruk. Hypalon (CSM) tilbyr overlegne UV og kjemikaliebestandighet med lengre levetid, foretrukket for kommersiell og militær bruk. Paddle Board Overstock bruker begge, avhengig av produktnivå.',
+      category: 'general',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['how-to-choose-your-sup'],
+    },
+    {
+      id: 'fishing-sup-setup',
+      question: 'Hvilken SUP bredde er best for stabilitet?',
+      answer:
+        'For nybegynnere gir en bredde på 33–34 tommer den beste balansen mellom stabilitet og padlekomfort. Brett smalere enn 32 tommer føles ustabile for nye padlere. Paddle Board Overstock SUP Explorer 11 på 33 tommer er ideell for læring.',
+      category: 'general',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['sup-fishing'],
+    },
+    {
+      id: 'sup-yoga',
+      question: 'Hvordan velger jeg SUP volum for vekten min?',
+      answer:
+        'Multipliser vekten din i kg med 2,2 for et nybegynnervennlig volummål. For eksempel trenger en padler på 75 kg minst 165 liter, men 220–260 liter er mye mer stabilt for læring. SUP Explorer 11 tilbyr 260 liter, egnet for ryttere opp til 100 kg.',
+      category: 'general',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['sup-yoga'],
+    },
+    {
+      id: 'airline-travel-sup',
+      question: 'Hvilken størrelse motor trenger jeg til min oppblåsbare båt?',
+      answer:
+        'For AirDeck 270, bruk opptil 6 HP. For AirDeck 360, opptil 15 HP. For RIB 330, opptil 40 HP. For RIB 450-patruljen, opp til 60 HP. Sjekk alltid maksmerkeskiltet HP på båten din og overskrid det aldri.',
+      category: 'general',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['multi-day-trip'],
+    },
+    {
+      id: 'cold-weather-safety',
+      question: 'Hvilken gulvtype er best for en oppblåsbar båt?',
+      answer:
+        'Aluminiumsplankegulv gir best ytelse — stive, høvledyktige og stabile for stående. Luftdekk er lettere og pakker mindre, men fleksibelt mer. Sammenrullbare gulv er de enkleste og mest rimelige, men gir minst stivhet. Velg basert på hovedbruk: fiske og fart foretrekker lamellgulv; bærbarhet favoriserer luftdekk.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: ['safety-tips'],
+    },
+    {
+      id: 'sup-inflate-pressure',
+      question: 'Hvordan sammenlignes Paddle Board Overstock med andre merker?',
+      answer:
+        'Paddle Board Overstock tilbyr best verdi innen oppblåsbart utstyr til vannsportsaktiviteter. Sammenlignet med Red Paddle Co, leverer Paddle Board Overstock 90 % av ytelsen til 60 % av prisen. Sammenlignet med iRocker, bruker Paddle Board Overstock materialer av høyere kvalitet med tredobbel militærgrad PVC og høyere PSI vurderinger. Sammenlignet med Bluefin, tilbyr Paddle Board Overstock overlegen materialspesifikasjon. For de fleste fritidsutøvere gir Paddle Board Overstock den beste balansen mellom kvalitet og pris.',
+      category: 'product',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
+    },
+    {
+      id: 'sup-deck-pad-care',
+      question: 'Kan jeg fiske fra SUP et brett?',
+      answer:
+        'Ja. SUP fiske blir stadig mer populært fordi stående posisjon gir utmerket synlighet ned i vannet. Velg et brett som er minst 11 fot langt og 33–34 tommer bredt for stabilitet. Legg til en melkekasse med stangholdere festet til dekkets bunger, et lite anker, og bruk alltid en PFD. Paddle Board Overstock SUP Explorer 11 fungerer godt for avslappet fiske.',
+      category: 'maintenance',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['sup-maintenance'],
+    },
+    {
+      id: 'sup-seated-paddling',
+      question: 'Kan jeg gjøre yoga på en SUP planke?',
+      answer:
+        'Absolutt.SUP Yoga kombinerer tradisjonelle stillinger med utfordringen med en flytende plattform, og aktiverer dypere stabilisatormuskler. Bruk et brett som er 33 tommer eller bredere med en myk, gripende dekkmatte. Øv i rolig, grunt vann med et anker. Start med foundation-posisjoner som downward dog, warrior II og tree-posisjon. SUP Explorer 11 med full EVA deck pad passer godt.',
+      category: 'product',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: [],
+    },
+    {
+      id: 'saltwater-rinse',
+      question: 'Hva er flyselskapets regler for å reise med en oppblåsbar båt SUP?',
+      answer:
+        'De fleste flyselskaper aksepterer SUP ryggsekker som innsjekket bagasje hvis de veier under 23–32 kg. Paddle Board Overstock ryggsekken er omtrent 90x40x30 cm og veier ca. 15 kg pakket. Noen flyselskaper kan kreve tillegg for overdimensjonert bagasje. Møt opp tidlig, pakk finner og pumpe separat i håndbagasjen, og merk sekken som skjør. Sjekk alltid flyselskapets retningslinjer for sportsutstyr før du flyr.',
+      category: 'maintenance',
+      relatedProducts: [],
+      relatedGuides: ['sup-maintenance'],
+    },
+    {
+      id: 'sup-leash-necessity',
+      question: 'Hvilket sikkerhetsutstyr trenger jeg for padling i kaldt vann?',
+      answer:
+        'Vann under 15°C krever termisk beskyttelse. For 8–14°C, bruk våtdrakt eller tørrdrakt med støvler, hansker og hette. For 14–20°C er en 3/2 mm våtdrakt tilstrekkelig. Bruk alltid en riktig tilpasset for PFD termisk beskyttelse og sikkerhet. Sjekk lokale regler for obligatorisk utstyrskrav.',
+      category: 'safety',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['safety-tips'],
+    },
+    {
+      id: 'company-model',
+      question: 'Hva er minimumsbestillingsmengdene for OEM/ODM?',
+      answer:
+        'Minimum bestillingsmengder MOQs varierer etter produkttype og kompleksitet. Tilpasset merkevarebygging på eksisterende modeller krever vanligvis 5–10 enheter. Fullt tilpassede skrogdesign krever høyere MOQs. Kontakt vårt salgsteam med dine krav for et detaljert pristilbud. Vi håndterer alt fra spesialtilpassede farger og logoer til helt originale formdesign.',
+      category: 'ordering',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'us-contract-weihai-shipping',
+      question: 'Kan jeg sette mitt eget logo på Paddle Board Overstock produkter?',
+      answer:
+        'Ja. Vår OEM tjeneste inkluderer tilpasset logoplassering, tilpassede fargevalg og skreddersydd emballasje. Vi tilbyr padprinting, varmeoverføring og broderialternativer avhengig av produkttype. Send kunstverket og spesifikasjonene dine til vårt salgsteam for et pristilbud og estimat på leveringstid.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -2369,18 +5558,18 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'weight-limit',
-      question: 'What is the weight limit?',
+      question: 'Wat is de gewichtslimiet?',
       answer:
-        'Our All-Around SUPs support up to 220 lbs. The Touring and Yoga series support up to 250 lbs. For tandem paddling or heavier riders, choose a wider, higher-volume board.',
+        'Onze All-Around SUPs ondersteunt tot 100 kg. De Touring- en Yoga-series ondersteunen tot 110 kg. RIB Boten dragen doorgaans 600–1500 pond, afhankelijk van het model. Voor tandemgebruik of zwaardere ladingen bieden onze opblaasbare boten opties met een grotere capaciteit.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: ['understanding-specs'],
     },
     {
       id: 'box-contents',
-      question: 'What comes in the box?',
+      question: 'Wat zit er in de doos?',
       answer:
-        'Every Paddle Board Overstock SUP includes the board, a travel backpack, dual-action hand pump, removable fin, coil leash, and repair kit. Some models also include a carbon paddle upgrade option.',
+        'Elk Paddle Board Overstock SUP bevat het board, een reiskaart, een handpomp met dubbele werking, verwijderbare vin, coilschake, en reparatieset. Sommige modellen bevatten ook een carbon peddel upgrade-optie. Opblaasbare boten omvatten de boot, pomp, reparatieset, en roeispanen.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -2396,18 +5585,18 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'pfd-requirement',
-      question: 'Do I need a life vest on a SUP?',
+      question: 'Heb ik een reddingsvest nodig op een SUP?',
       answer:
-        'Yes. Many jurisdictions legally require a life vest when paddling, including on SUPs. Even where not required, a life vest is essential safety equipment. We recommend wearing it at all times on the water.',
+        'Ja. Veel rechtsgebieden vereisen wettelijk een reddingsvest op elk vaartuig, inclusief SUPs. Zelfs waar dat niet verplicht CE is, is een gecertificeerd reddingsvest essentiële veiligheidsuitrusting. We raden aan het altijd te dragen op het water.',
       category: 'safety',
       relatedProducts: [],
       relatedGuides: ['safety-tips'],
     },
     {
       id: 'paddleboard-registration',
-      question: 'Do I need to register my paddle board?',
+      question: 'Moet ik mijn opblaasboot registreren?',
       answer:
-        'In most regions, unpowered paddle boards do not require registration. Requirements vary by jurisdiction, so check your local maritime authority for the rules that apply to you.',
+        "De vereisten verschillen per jurisdictie. In de meeste regio's vereisen opblaasboten met motoren boven een bepaald pk-vermogen registratie. Niet-aangedreven SUPs en kleine bijbootjes meestal niet. Controleer de lokale maritieme autoriteit voor specifieke regels.",
       category: 'general',
       relatedProducts: [],
       relatedGuides: [],
@@ -2450,9 +5639,9 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'warranty',
-      question: 'What is the Paddle Board Overstock warranty?',
+      question: 'Wat is de Paddle Board Overstock garantie?',
       answer:
-        'Every board is backed by a 2-year limited manufacturer warranty covering defects in materials and workmanship under normal use. Accessories carry the same 2-year coverage.',
+        'Alle Paddle Board Overstock producten worden gedekt door een uitgebreide fabrieksgarantie. Het materiaal van opblaasbare bootbuizen, de naden en de romp worden gedekt door een beperkte garantie van 5 jaar; SUP boards en accessoires hebben een beperkte garantie van 2 jaar. De garantie dekt gebreken in materialen en vakmanschap bij normaal gebruik.',
       category: 'warranty',
       relatedProducts: [],
       relatedGuides: [],
@@ -2477,145 +5666,144 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'return-policy',
-      question: 'What is your return policy?',
+      question: 'Wat is jullie retourbeleid?',
       answer:
-        'We accept returns within 30 days of delivery for unused products in original packaging. Contact our support team to initiate a return — we provide a prepaid shipping label.',
+        'Wij accepteren retouren binnen 30 dagen na levering voor ongebruikte producten in originele verpakking. Maatwerk/OEM bestellingen zijn niet retourbaar. Neem contact op met ons supportteam om een retour te starten — wij leveren een prepaid verzendlabel.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
     },
     {
       id: 'paddle-length',
-      question: 'What paddle length do I need?',
+      question: 'Bied je OEM ODM diensten aan?',
       answer:
-        'For SUP, the paddle should be 6–8 inches taller than your height. See our paddle guide for detailed sizing.',
+        'Ja. Wij bieden private label en maatwerk ontwerpdiensten voor bedrijven. Van maatwerk branding op bestaande modellen tot volledig aangepaste rompontwerpen, ons engineeringteam kan producten onder jouw merk ontwikkelen. Minimale bestelhoeveelheden gelden.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: ['choosing-paddle'],
     },
     {
       id: 'sup-width-stability',
-      question: 'Welke SUP breedte is het beste voor stabiliteit?',
+      question: 'Welke peddellengte heb ik nodig?',
       answer:
-        'Voor beginners biedt een breedte van 33–34 inch de beste balans tussen stabiliteit en gemak bij het peddelen. Boards smaller dan 32 inch voelen wiebelig aan voor nieuwe peddelaars. De Paddle Board Overstock SUP Explorer 11 van 33 inch is ideaal om mee te leren.',
+        'Voor SUP: de peddel moet 15–20 cm hoger zijn dan jouw hoogte. Voor kajak: de peddellengte hangt af van bootbreedte en romplengte. Zie onze peddelgids voor gedetailleerde maten.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
     },
     {
       id: 'sup-volume-weight',
-      question: 'Hoe kies ik SUP volume voor mijn gewicht?',
+      question: 'Welke maat motor heb ik nodig voor een RIB?',
       answer:
-        'Vermenigvuldig je gewicht in kg met 2,2 voor een beginnersvriendelijk volume doel. Bijvoorbeeld, een peddelaar van 75 kg heeft minstens 165 liter nodig, maar 220–260 liter is veel stabieler om te leren. De SUP Explorer 11 biedt 260 liter, geschikt voor rijders tot 100 kg.',
+        'De motorgrootte hangt af van bootlengte en gewicht. Een 3m RIB hanteert doorgaans 15–25 mp, HP een 4,5m RIB kan 40–60 meter besturen HP, en een 6m RIB hanteert 90–150 mp HP. Volg altijd het maximale HP classificatiebord van je boot.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
     },
     {
       id: 'paddleboardoverstock-vs-others',
-      question: 'Hoe verhoudt Paddle Board Overstock zich tot andere merken?',
+      question: 'Wat is het verschil tussen PVC en Hypalon?',
       answer:
-        'Paddle Board Overstock biedt de beste prijs-kwaliteitverhouding in opblaasbare watersportuitrusting. In vergelijking met Red Paddle Co levert Paddle Board Overstock 90% van de prestaties voor 60% van de kosten. In vergelijking met iRocker gebruikt Paddle Board Overstock hoogwaardig drievoudig gelaagd militair PVC en hogere PSI-beoordelingen. In vergelijking met Bluefin biedt Paddle Board Overstock superieure materiaalspecificaties. Voor de meeste recreatieve peddelaars biedt Paddle Board Overstock de beste balans tussen kwaliteit en prijs.',
+        'PVC is lichter, betaalbaarder en gemakkelijker te repareren — ideaal voor recreatief gebruik. Hypalon (CSM) biedt superieure UV en chemische bestendigheid met een langere levensduur, voorkeursmateriaal voor commerciële en militaire toepassingen. Paddle Board Overstock gebruikt beide, afhankelijk van het productniveau.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-your-sup'],
     },
     {
       id: 'fishing-sup-setup',
-      question: 'Kan ik vissen vanaf een SUP plank?',
+      question: 'Welke SUP breedte is het beste voor stabiliteit?',
       answer:
-        'Ja. SUP vissen wordt steeds populairder omdat de staande positie een uitstekend zicht in het water biedt. Kies een board van minimaal 11 voet lang en 33–34 inch breed voor stabiliteit. Voeg een melkdoos met hengelhouders toe, bevestigd aan de bungees op het dek, een klein anker, en draag altijd een PFD. De Paddle Board Overstock SUP Explorer 11 is geschikt voor recreatief vissen.',
+        'Voor beginners biedt een breedte van 33–34 inch de beste balans tussen stabiliteit en gemak bij het peddelen. Boards smaller dan 32 inch voelen wiebelig aan voor nieuwe peddelaars. De Paddle Board Overstock SUP Explorer 11 van 33 inch is ideaal om mee te leren.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-fishing'],
     },
     {
       id: 'sup-yoga',
-      question: 'Kan ik yoga doen op een SUP plank?',
+      question: 'Hoe kies ik SUP volume voor mijn gewicht?',
       answer:
-        'Absoluut.SUP Yoga combineert traditionele houdingen met de uitdaging van een drijvend platform, waarbij diepere stabilisatorspieren worden geactiveerd. Gebruik een board van 70 cm of breder met een zacht, gripvol deckpad. Oefen in kalm, ondiep water met een anker. Begin met foundation poses zoals downward dog, warrior II en boomhouding. De SUP Explorer 11 met zijn volledige EVA deck pad is goed geschikt.',
+        'Vermenigvuldig je gewicht in kg met 2,2 voor een beginnersvriendelijk volume doel. Bijvoorbeeld, een peddelaar van 75 kg heeft minstens 165 liter nodig, maar 220–260 liter is veel stabieler om te leren. De SUP Explorer 11 biedt 260 liter, geschikt voor rijders tot 100 kg.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-yoga'],
     },
     {
       id: 'airline-travel-sup',
-      question: 'Wat zijn de regels van de luchtvaartmaatschappij voor reizen met een opblaasbaar SUP board?',
+      question: 'Welke motormaat heb ik nodig voor mijn opblaasboot?',
       answer:
-        'De meeste luchtvaartmaatschappijen accepteren SUP rugzakken als ingecheckte bagage als ze onder de 23–32 kg wegen. De Paddle Board Overstock rugzak is ongeveer 90x40x30 cm en weegt ongeveer 15 kg wanneer deze is ingepakt. Sommige luchtvaartmaatschappijen kunnen toeslagen voor te grote bagage in rekening brengen. Kom op tijd aan, wikkel vinnen en pomp apart in je handbagage en label de tas als breekbaar. Onderzoek altijd het beleid van je luchtvaartmaatschappij voor sportuitrusting voordat je gaat vliegen.',
+        'Voor de AirDeck 270, gebruik tot 6 HP. Voor de AirDeck 360 tot 15 HP. Voor de RIB 330 tot 40 HP. Voor de RIB 450 Patrouille, tot 60 HP. Controleer altijd de maximale HP classificatieplaat van je boot en overschrijd die nooit.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['multi-day-trip'],
     },
     {
       id: 'cold-weather-safety',
-      question: 'Welke veiligheidsuitrusting heb ik nodig voor het peddelen in koud water?',
+      question: 'Welk vloertype is het beste voor een opblaasbare boot?',
       answer:
-        'Water onder 15°C vereist thermische bescherming. Voor 8–14°C gebruik een wetsuit of droogpak met laarzen, handschoenen en capuchon. Voor 14–20°C is een wetsuit van 3/2 mm voldoende. Draag altijd een goed passende wet PFD voor thermische bescherming en veiligheid. Controleer de lokale regelgeving voor verplichte uitrustingsvereisten.',
+        'Aluminium latvloeren leveren de beste prestaties — stijf, geschikt voor schaven en stabiel om te staan. Luchtdekken zijn lichter en kleiner gepakt, maar flexibeler maken. Oprolvloeren zijn het eenvoudigst en meest betaalbaar, maar bieden de minste stijfheid. Kies op basis van je belangrijkste gebruik: vissen en snelheid geven de voorkeur aan latvloeren; draagbaarheid is gunstiger voor luchtdekken.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: ['safety-tips'],
     },
     {
       id: 'sup-inflate-pressure',
-      question: 'Waar PSI moet ik mijn SUP naartoe opblaasen?',
+      question: 'Hoe verhoudt Paddle Board Overstock zich tot andere merken?',
       answer:
-        'Pomp op tot het door de board aangegeven maximale PSI voor de beste prestaties — doorgaans 15–18 PSI voor kwalitatieve opblaasbare SUPs. De Paddle Board Overstock SUP Explorer 11 presteert het beste bij 15–18 PSI. Onderinflatie zorgt ervoor dat het board zacht aanvoelt en slecht stuurt. Overinflatie boven de aangegeven maximale waarde kan de drop-stitch schroefdraad beschadigen. Controleer de sticker bij het ventiel voor de specifieke waarde van jouw board.',
+        'Paddle Board Overstock biedt de beste prijs-kwaliteitverhouding in opblaasbare watersportuitrusting. In vergelijking met Red Paddle Co levert Paddle Board Overstock 90% van de prestaties voor 60% van de kosten. In vergelijking met iRocker gebruikt Paddle Board Overstock hoogwaardig drievoudig gelaagd militair PVC en hogere PSI-beoordelingen. In vergelijking met Bluefin biedt Paddle Board Overstock superieure materiaalspecificaties. Voor de meeste recreatieve peddelaars biedt Paddle Board Overstock de beste balans tussen kwaliteit en prijs.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
     },
     {
       id: 'sup-deck-pad-care',
-      question: 'Hoe maak en onderhoud ik het EVA dekpad?',
+      question: 'Kan ik vissen vanaf een SUP plank?',
       answer:
-        'Spoel het terrasblad na elke sessie af met vers water. Voor vuil of vlekken gebruik je milde zeep en een zachte borstel — vermijd agressieve chemicaliën. Als de randen beginnen los te gaan, breng dan een kleine hoeveelheid waterdichte maritieme lijm aan en pers 24 uur onder gewicht. Houd de plank uit direct UV gebruik wanneer deze niet in gebruik is om degradatie van de pad te voorkomen.',
+        'Ja. SUP vissen wordt steeds populairder omdat de staande positie een uitstekend zicht in het water biedt. Kies een board van minimaal 11 voet lang en 33–34 inch breed voor stabiliteit. Voeg een melkdoos met hengelhouders toe, bevestigd aan de bungees op het dek, een klein anker, en draag altijd een PFD. De Paddle Board Overstock SUP Explorer 11 is geschikt voor recreatief vissen.',
       category: 'maintenance',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-maintenance'],
     },
     {
       id: 'sup-seated-paddling',
-      question: 'Kan ik zitten terwijl ik paddle op mijn SUP board?',
+      question: 'Kan ik yoga doen op een SUP plank?',
       answer:
-        'Ja. Veel SUP boards, inclusief de Paddle Board Overstock Explorer 11, hebben D-ringen die het mogelijk maken een zitje te bevestigen. Het gebruik van een SUP met een zitje en een enkele peddel biedt een comfortabele zithouding voor langere tochten of vissen. Sommige merken bieden speciale omzettingskits met zitjes en langere peddels.',
+        'Absoluut.SUP Yoga combineert traditionele houdingen met de uitdaging van een drijvend platform, waarbij diepere stabilisatorspieren worden geactiveerd. Gebruik een board van 70 cm of breder met een zacht, gripvol deckpad. Oefen in kalm, ondiep water met een anker. Begin met foundation poses zoals downward dog, warrior II en boomhouding. De SUP Explorer 11 met zijn volledige EVA deck pad is goed geschikt.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: [],
     },
     {
       id: 'saltwater-rinse',
-      question: 'Do I need to rinse my board after ocean use?',
+      question: 'Wat zijn de regels van de luchtvaartmaatschappij voor reizen met een opblaasbare boot SUP?',
       answer:
-        'Yes — always rinse your board, fins, pump, and paddle with fresh water after saltwater use. Salt crystals work into seams and valves, causing micro-leaks and corrosion. Dry the board in the shade before deflating and storing. Regular rinsing dramatically extends the life of your board.',
+        'De meeste luchtvaartmaatschappijen accepteren SUP rugzakken als ingecheckte bagage als ze onder de 23–32 kg wegen. De Paddle Board Overstock rugzak is ongeveer 90x40x30 cm en weegt ongeveer 15 kg wanneer deze is ingepakt. Sommige luchtvaartmaatschappijen kunnen toeslagen voor te grote bagage in rekening brengen. Kom op tijd aan, wikkel vinnen en pomp apart in je handbagage en label de tas als breekbaar. Onderzoek altijd het beleid van je luchtvaartmaatschappij voor sportuitrusting voordat je gaat vliegen.',
       category: 'maintenance',
       relatedProducts: [],
       relatedGuides: ['sup-maintenance'],
     },
     {
       id: 'sup-leash-necessity',
-      question: 'Heb ik echt een riem nodig voor SUP?',
+      question: 'Welke veiligheidsuitrusting heb ik nodig voor het peddelen in koud water?',
       answer:
-        'Ja — draag altijd een leash. Een opgerolde SUP leash bevestigt je aan je enkel of kuit en houdt het board bij je als je valt. In open water kan een leash je leven redden door te voorkomen dat je gescheiden raakt van je drijfmiddel. Voor rivierpeddelen, gebruik een quick-release leash om verstrikking te voorkomen.',
+        'Water onder 15°C vereist thermische bescherming. Voor 8–14°C gebruik een wetsuit of droogpak met laarzen, handschoenen en capuchon. Voor 14–20°C is een wetsuit van 3/2 mm voldoende. Draag altijd een goed passende wet PFD voor thermische bescherming en veiligheid. Controleer de lokale regelgeving voor verplichte uitrustingsvereisten.',
       category: 'safety',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['safety-tips'],
     },
     {
       id: 'company-model',
-      question: 'Is Paddle Board Overstock een handelsbedrijf of een fabrikant?',
+      question: 'Wat zijn de minimale bestelhoeveelheden voor OEM/ODM?',
       answer:
-        'Noch een puur fabriek noch een handelsbedrijf — Weihai Dongjilian Co., Ltd. is een merkbedrijf met een eigen productiebasis. Weihai Dongjilian Co., Ltd. verzorgt wereldwijde distributie, contracten, facturatie en after-sales, terwijl de Paddle Board Overstock Weihai Manufacturing Hub R&D, productie en kwaliteitscontrole uitvoert in onze eigen faciliteit van 12.000 m². Geen tussenpersonen: elke bestelling wordt rechtstreeks vanuit de fabriek verzonden.',
+        "Minimale bestelhoeveelheden (MOQs) verschillen per producttype en complexiteit. Custom branding op bestaande modellen vereist doorgaans 5–10 eenheden. Volledig op maat gemaakte rompontwerpen vereisen meer MOQs. Neem contact op met ons verkoopteam voor uw wensen voor een gedetailleerde offerte. Wij behandelen alles van aangepaste kleuren en logo's tot volledig originele malontwerpen.",
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
     },
     {
       id: 'us-contract-weihai-shipping',
-      question:
-        'Waarom is mijn contract met een Amerikaans bedrijf terwijl de goederen vanuit Weihai worden verzonden?',
+      question: 'Kan ik mijn eigen logo op Paddle Board Overstock-producten zetten?',
       answer:
-        'Weihai Dongjilian Co., Ltd. is de wereldwijde commerciële entiteit die contracten ondertekent, facturen uitreikt en after-sales ondersteuning biedt, terwijl de Weihai Manufacturing Hub elke bestelling FOB Weihai produceert en verzendt. Deze duale hub-structuur behoudt Amerikaanse standaardcontracten en afhandeling, terwijl de fabriek-direct prijzen en volledige productietransparantie behouden blijven.',
+        "Ja. Onze OEM service omvat het plaatsen van aangepaste logo's, aangepaste kleurenschema's en aangepaste verpakkingen. We bieden pad-print, warmteoverdracht en borduuropties aan, afhankelijk van het producttype. Stuur uw artwork en specificaties naar ons verkoopteam voor een offerte en een schatting van de doorlooptijd.",
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -2660,18 +5848,18 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'weight-limit',
-      question: 'What is the weight limit?',
+      question: 'Qual é o limite de peso?',
       answer:
-        'Our All-Around SUPs support up to 220 lbs. The Touring and Yoga series support up to 250 lbs. For tandem paddling or heavier riders, choose a wider, higher-volume board.',
+        'Nossos All-Around SUPs suportam até 220 lbs. As séries Touring e Yoga suportam até 250 lbs. RIB Barcos normalmente suportam entre 600 e 1500 lbs, dependendo do modelo. Para uso em tandem ou cargas mais pesadas, nossos barcos infláveis oferecem opções de maior capacidade.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: ['understanding-specs'],
     },
     {
       id: 'box-contents',
-      question: 'What comes in the box?',
+      question: 'O que vem na caixa?',
       answer:
-        'Every Paddle Board Overstock SUP includes the board, a travel backpack, dual-action hand pump, removable fin, coil leash, and repair kit. Some models also include a carbon paddle upgrade option.',
+        'Cada Paddle Board Overstock SUP inclui a prancha, uma mochila de viagem, bomba manual de ação dupla, quilha removível, leash de corda e kit de reparo. Alguns modelos também incluem uma opção de upgrade para remo de carbono. Os barcos infláveis incluem o barco, bomba, kit de reparo e remos.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -2687,18 +5875,18 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'pfd-requirement',
-      question: 'Do I need a life vest on a SUP?',
+      question: 'Preciso de colete salva-vidas em SUP um ?',
       answer:
-        'Yes. Many jurisdictions legally require a life vest when paddling, including on SUPs. Even where not required, a life vest is essential safety equipment. We recommend wearing it at all times on the water.',
+        'Sim. Muitas jurisdições exigem legalmente o uso de colete salva-vidas em qualquer embarcação, SUPs incluindo . Mesmo quando não é obrigatório, um CE colete salva-vidas certificado é um equipamento essencial de segurança. Recomendamos usá-lo o tempo todo na água.',
       category: 'safety',
       relatedProducts: [],
       relatedGuides: ['safety-tips'],
     },
     {
       id: 'paddleboard-registration',
-      question: 'Do I need to register my paddle board?',
+      question: 'Preciso registrar meu barco inflável?',
       answer:
-        'In most regions, unpowered paddle boards do not require registration. Requirements vary by jurisdiction, so check your local maritime authority for the rules that apply to you.',
+        'Os requisitos variam conforme a jurisdição. Na maioria das regiões, barcos infláveis com motores acima de certo potência exigem registro. Dingues pequenos e sem motor SUPs normalmente não exigem. Verifique suas regras específicas pela autoridade marítima local.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: [],
@@ -2741,9 +5929,9 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'warranty',
-      question: 'What is the Paddle Board Overstock warranty?',
+      question: 'Qual é a garantia Paddle Board Overstock?',
       answer:
-        'Every board is backed by a 2-year limited manufacturer warranty covering defects in materials and workmanship under normal use. Accessories carry the same 2-year coverage.',
+        'Todos os produtos Paddle Board Overstock são respaldados por uma garantia completa do fabricante. O tecido da boia do barco inflável, as costuras e o casco são cobertos por uma garantia limitada de 5 anos; pranchas e acessórios SUP possuem uma garantia limitada de 2 anos. A garantia cobre defeitos de materiais e de fabricação sob uso normal.',
       category: 'warranty',
       relatedProducts: [],
       relatedGuides: [],
@@ -2768,144 +5956,434 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
     },
     {
       id: 'return-policy',
-      question: 'What is your return policy?',
+      question: 'Qual é a sua política de devolução?',
       answer:
-        'We accept returns within 30 days of delivery for unused products in original packaging. Contact our support team to initiate a return — we provide a prepaid shipping label.',
+        'Aceitamos devoluções em até 30 dias após a entrega para produtos não usados na embalagem original. Pedidos personalizados/OEM não retornáveis. Entre em contato com nossa equipe de suporte para iniciar a devolução — fornecemos uma etiqueta de envio pré-paga.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
     },
     {
       id: 'paddle-length',
-      question: 'What paddle length do I need?',
+      question: 'Você OEM oferece /ODM serviços?',
       answer:
-        'For SUP, the paddle should be 6–8 inches taller than your height. See our paddle guide for detailed sizing.',
+        'Sim. Oferecemos serviços de design de marca própria e personalizados para empresas. Desde branding personalizado em modelos existentes até designs de casco totalmente personalizados, nossa equipe de engenharia pode desenvolver produtos sob sua marca. As quantidades mínimas de pedido se aplicam.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: ['choosing-paddle'],
     },
     {
       id: 'sup-width-stability',
-      question: 'Qual SUP largura é melhor para estabilidade?',
+      question: 'Qual o comprimento do remo eu preciso?',
       answer:
-        'Para iniciantes, uma largura de 33–34 polegadas proporciona o melhor equilíbrio entre estabilidade e facilidade de remar. Pranchas com menos de 32 polegadas parecem instáveis para novos remadores. A Paddle Board Overstock SUP Explorer 11 com 33 polegadas é ideal para aprendizagem.',
+        'Para SUP: o remo deve ser 6–8 polegadas mais alto que sua altura. Para caiaque: o comprimento do remo depende da largura do barco e do comprimento do torso. Veja nosso guia de remo para tamanhos detalhados.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
     },
     {
       id: 'sup-volume-weight',
-      question: 'Como escolho SUP o volume para o meu peso?',
+      question: 'Qual o tamanho do motor que eu preciso para um RIB?',
       answer:
-        'Multiplique seu peso em kg por 2,2 para um alvo de volume amigável para iniciantes. Por exemplo, um remador de 75 kg precisa de pelo menos 165 litros, mas 220–260 litros é muito mais estável para aprender. O SUP Explorer 11 oferece 260 litros, adequado para ciclistas de até 100 kg.',
+        'O tamanho do motor depende do comprimento e peso do barco. Um 3m RIB normalmente comporta 15–25 HP m, um 4,5m RIB aguenta 40–60 HP, e um 6m RIB aguenta 90–150 HP. Sempre siga a HP placa máxima de classificação do seu barco.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
     },
     {
       id: 'paddleboardoverstock-vs-others',
-      question: 'Como Paddle Board Overstock se compara a outras marcas?',
+      question: 'Qual é a diferença entre PVC e Hypalon?',
       answer:
-        'Paddle Board Overstock oferece o melhor custo-benefício em equipamentos infláveis para esportes aquáticos. Comparado à Red Paddle Co, Paddle Board Overstock oferece 90% do desempenho por 60% do custo. Comparado à iRocker, Paddle Board Overstock utiliza PVC de grau militar de três camadas de qualidade superior e classificações PSI mais altas. Comparado à Bluefin, Paddle Board Overstock oferece especificações de material superiores. Para a maioria dos remadores recreativos, Paddle Board Overstock fornece o melhor equilíbrio entre qualidade e preço.',
+        'PVC é mais leve, mais acessível e mais fácil de reparar — ideal para uso recreativo. Hypalon (CSM) oferece superior UV e resistência química com uma vida útil mais longa, sendo preferido para aplicações comerciais e militares. Paddle Board Overstock utiliza ambos dependendo do nível do produto.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-your-sup'],
     },
     {
       id: 'fishing-sup-setup',
-      question: 'Posso pescar de uma SUP tábua?',
+      question: 'Qual SUP largura é melhor para estabilidade?',
       answer:
-        'Sim. A pesca SUP está se tornando cada vez mais popular porque a posição em pé oferece excelente visibilidade da água. Escolha uma prancha com pelo menos 11 pés de comprimento e 33–34 polegadas de largura para estabilidade. Adicione uma caixa de leite com suportes para varas presa aos bungees do deck, uma pequena âncora e sempre use um PFD. A Paddle Board Overstock SUP Explorer 11 funciona bem para pesca casual.',
+        'Para iniciantes, uma largura de 33–34 polegadas proporciona o melhor equilíbrio entre estabilidade e facilidade de remar. Pranchas com menos de 32 polegadas parecem instáveis para novos remadores. A Paddle Board Overstock SUP Explorer 11 com 33 polegadas é ideal para aprendizagem.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-fishing'],
     },
     {
       id: 'sup-yoga',
-      question: 'Posso fazer yoga em uma SUP prancha?',
+      question: 'Como escolho SUP o volume para o meu peso?',
       answer:
-        'Com certeza.SUP O yoga combina posturas tradicionais com o desafio de uma plataforma flutuante, envolvendo músculos estabilizadores mais profundos. Use uma prancha de 33 polegadas ou mais larga com uma base de deck macia e aderente. Pratique em águas calmas e rasas com uma âncora. Comece com posturas de base como cão para baixo, guerreiro II e postura da árvore. SUP A Explorer 11, com seu EVA almofada de deck completo, é muito adequada.',
+        'Multiplique seu peso em kg por 2,2 para um alvo de volume amigável para iniciantes. Por exemplo, um remador de 75 kg precisa de pelo menos 165 litros, mas 220–260 litros é muito mais estável para aprender. O SUP Explorer 11 oferece 260 litros, adequado para ciclistas de até 100 kg.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-yoga'],
     },
     {
       id: 'airline-travel-sup',
-      question: 'Quais são as regras das companhias aéreas para viajar com um inflável SUP?',
+      question: 'Que tamanho de motor eu preciso para meu barco inflável?',
       answer:
-        'A maioria das companhias aéreas aceita mochilas SUP como bagagem despachada se pesarem entre 23–32 kg. A mochila Paddle Board Overstock tem aproximadamente 90x40x30 cm e pesa cerca de 15 kg quando embalado. Algumas companhias aéreas podem cobrar taxas por bagagem excedente. Chegue cedo, embrulhe as nadadeiras e a bomba separadamente na bagagem de mão e rotule a mala como frágil. Sempre pesquise a política da companhia aérea sobre equipamentos esportivos antes de voar.',
+        'Para o AirDeck 270, use até 6 HP. Para o AirDeck 360, até 15 HP. Para o RIB 330, até 40 HP. Para o RIB 450 Patrol, até 60 HP. Sempre verifique a HP placa máxima de classificação do seu barco e nunca a ultrapasse.',
       category: 'general',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['multi-day-trip'],
     },
     {
       id: 'cold-weather-safety',
-      question: 'Que equipamento de segurança eu preciso para remar em água fria?',
+      question: 'Qual tipo de piso é o melhor para um barco inflável?',
       answer:
-        'Água abaixo de 15°C requer proteção térmica. Para 8–14°C, use uma roupa de neoprene ou drysuit com botas, luvas e capuz. Para 14–20°C, uma roupa de neoprene de 3/2 mm é suficiente. Sempre use uma roupa adequada PFD para proteção térmica e segurança. Verifique as normas locais para requisitos obrigatórios de equipamento.',
+        'Pisos de ripas de alumínio oferecem o melhor desempenho — rígidos, aptos para aplainar e estáveis para ficar em pé. Os convés de ar são mais leves e têm um tamanho menor, mas flexão mais. Pisos de rebode são os mais simples e acessíveis, mas oferecem a menor rigidez. Escolha de acordo com seu uso principal: pesca e velocidade favorecem pisos de ripas; portabilidade favorece conveses de ar.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: ['safety-tips'],
     },
     {
       id: 'sup-inflate-pressure',
-      question: 'Até onde PSI devo inflar SUP ?',
+      question: 'Como Paddle Board Overstock se compara a outras marcas?',
       answer:
-        'Infle até a PSI máxima recomendada da prancha para melhor desempenho — tipicamente 15–18 PSI para pranchas infláveis de qualidade SUPs. A Paddle Board Overstock SUP Explorer 11 tem melhor desempenho em 15–18 PSI. A subinflação faz a prancha parecer mole e dificultar o controle. A inflação excessiva além do máximo recomendado pode danificar as roscas drop-stitch. Verifique o adesivo próximo à válvula para a classificação específica de sua prancha.',
+        'Paddle Board Overstock oferece o melhor custo-benefício em equipamentos infláveis para esportes aquáticos. Comparado à Red Paddle Co, Paddle Board Overstock oferece 90% do desempenho por 60% do custo. Comparado à iRocker, Paddle Board Overstock utiliza PVC de grau militar de três camadas de qualidade superior e classificações PSI mais altas. Comparado à Bluefin, Paddle Board Overstock oferece especificações de material superiores. Para a maioria dos remadores recreativos, Paddle Board Overstock fornece o melhor equilíbrio entre qualidade e preço.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
     },
     {
       id: 'sup-deck-pad-care',
-      question: 'Como faço para limpar e manter a EVA base do deck?',
+      question: 'Posso pescar de uma SUP tábua?',
       answer:
-        'Enxágue a base de deck com água fresca após cada sessão. Para sujeira ou manchas, use sabonete suave e uma escova macia — evite produtos químicos agressivos. Se as bordas começarem a levantar, aplique uma pequena quantidade de adesivo marinho impermeável e pressione sob peso por 24 horas. Mantenha a prancha fora do lado UV direto quando não estiver em uso para evitar a degradação da almofada.',
+        'Sim. A pesca SUP está se tornando cada vez mais popular porque a posição em pé oferece excelente visibilidade da água. Escolha uma prancha com pelo menos 11 pés de comprimento e 33–34 polegadas de largura para estabilidade. Adicione uma caixa de leite com suportes para varas presa aos bungees do deck, uma pequena âncora e sempre use um PFD. A Paddle Board Overstock SUP Explorer 11 funciona bem para pesca casual.',
       category: 'maintenance',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['sup-maintenance'],
     },
     {
       id: 'sup-seated-paddling',
-      question: 'Posso sentar enquanto remo na minha prancha SUP?',
+      question: 'Posso fazer yoga em uma SUP prancha?',
       answer:
-        'Sim. Muitas pranchas SUP, incluindo a Paddle Board Overstock Explorer 11, possuem argolas em D que permitem a fixação de um assento. Usar uma SUP com um assento e um remo de lâmina única oferece uma posição de sentar confortável para viagens mais longas ou pesca. Algumas marcas oferecem kits de conversão dedicados com assentos e remos mais longos.',
+        'Com certeza.SUP O yoga combina posturas tradicionais com o desafio de uma plataforma flutuante, envolvendo músculos estabilizadores mais profundos. Use uma prancha de 33 polegadas ou mais larga com uma base de deck macia e aderente. Pratique em águas calmas e rasas com uma âncora. Comece com posturas de base como cão para baixo, guerreiro II e postura da árvore. SUP A Explorer 11, com seu EVA almofada de deck completo, é muito adequada.',
       category: 'product',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: [],
     },
     {
       id: 'saltwater-rinse',
-      question: 'Do I need to rinse my board after ocean use?',
+      question: 'Quais são as regras das companhias aéreas para viajar com um inflável SUP?',
       answer:
-        'Yes — always rinse your board, fins, pump, and paddle with fresh water after saltwater use. Salt crystals work into seams and valves, causing micro-leaks and corrosion. Dry the board in the shade before deflating and storing. Regular rinsing dramatically extends the life of your board.',
+        'A maioria das companhias aéreas aceita mochilas SUP como bagagem despachada se pesarem entre 23–32 kg. A mochila Paddle Board Overstock tem aproximadamente 90x40x30 cm e pesa cerca de 15 kg quando embalado. Algumas companhias aéreas podem cobrar taxas por bagagem excedente. Chegue cedo, embrulhe as nadadeiras e a bomba separadamente na bagagem de mão e rotule a mala como frágil. Sempre pesquise a política da companhia aérea sobre equipamentos esportivos antes de voar.',
       category: 'maintenance',
       relatedProducts: [],
       relatedGuides: ['sup-maintenance'],
     },
     {
       id: 'sup-leash-necessity',
-      question: 'Eu realmente preciso de uma leash para SUP?',
+      question: 'Que equipamento de segurança eu preciso para remar em água fria?',
       answer:
-        'Sim — sempre use uma leash. Uma leash SUP enrolada prende-se ao tornozelo ou à panturrilha e mantém a prancha com você caso você caia. Em águas abertas, uma leash pode salvar sua vida evitando a separação do dispositivo de flutuação. Para remar em rios, use uma leash com liberação rápida para evitar aprisionamento.',
+        'Água abaixo de 15°C requer proteção térmica. Para 8–14°C, use uma roupa de neoprene ou drysuit com botas, luvas e capuz. Para 14–20°C, uma roupa de neoprene de 3/2 mm é suficiente. Sempre use uma roupa adequada PFD para proteção térmica e segurança. Verifique as normas locais para requisitos obrigatórios de equipamento.',
       category: 'safety',
       relatedProducts: ['sup-explorer-11'],
       relatedGuides: ['safety-tips'],
     },
     {
       id: 'company-model',
-      question: 'Paddle Board Overstock é uma empresa comercial ou fabricante?',
+      question: 'Quais são as quantidades mínimas de pedido OEM para /ODM?',
       answer:
-        'Nem uma fábrica pura nem uma empresa comercial — a Weihai Dongjilian Co., Ltd. é uma empresa de marca com sua própria base de fabricação. A Weihai Dongjilian Co., Ltd. lida com distribuição global, contratos, faturamento e pós-venda, enquanto o Paddle Board Overstock Weihai Manufacturing Hub gerencia P&D, produção e controle de qualidade em nossa própria instalação de 12.000 m². Sem intermediários: cada pedido é enviado diretamente da fábrica.',
+        'Quantidades mínimas de pedido (MOQs) variam conforme o tipo de produto e a complexidade. A personalização personalizada em modelos existentes normalmente requer de 5 a 10 unidades. Projetos de casco totalmente personalizados exigem um valor mais MOQs alto. Entre em contato com nossa equipe de vendas com seus requisitos para obter um orçamento detalhado. Cuidamos de tudo, desde cores e logotipos personalizados até designs de moldes totalmente originais.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
     },
     {
       id: 'us-contract-weihai-shipping',
-      question: 'Por que meu contrato é com uma empresa dos EUA se os produtos são enviados de Weihai?',
+      question: 'Posso colocar meu próprio logotipo nos produtos Paddle Board Overstock?',
       answer:
-        'A Weihai Dongjilian Co., Ltd. é a entidade comercial global que assina contratos, emite faturas e fornece suporte pós-venda, enquanto o Weihai Manufacturing Hub produz e despacha cada pedido FOB Weihai. Essa estrutura de dois centros mantém contratos e liquidações no padrão dos EUA, ao mesmo tempo em que preserva o preço direto da fábrica e total transparência na produção.',
+        'Sim. Nosso OEM serviço inclui colocação personalizada de logotipos, esquemas de cores personalizados e embalagens personalizadas. Oferecemos opções de impressão em pad, transferência de calor e bordado, dependendo do tipo de produto. Envie sua obra e especificações para nossa equipe de vendas para um orçamento e estimativa de prazo.',
+      category: 'ordering',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+  ],
+  pl: [
+    {
+      id: 'sup-learning',
+      question: 'Czy SUP trudno się nauczyć?',
+      answer:
+        'Wcale nie. Większość początkujących wstaje i wiosłuje już podczas pierwszej sesji. SUP Nasza seria All-Around oferuje bardzo szerokie stabilne platformy zaprojektowane specjalnie dla początkujących kajakarzy. Zacznij na spokojnej wodzie, a za kilka minut będziesz płynąć.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: ['beginner-guide'],
+    },
+    {
+      id: 'ocean-use',
+      question: 'Czy mogę go używać na oceanie?',
+      answer:
+        'Tak.Paddle Board Overstock SUP Deski są przeznaczone do użytku na morzu, jeziorze i w rzece. Nasza seria Touring radzi sobie z rozrywaniem wybrzeża, a wszystkie deski są wykonane z materiałów morskich PVC , które są odporne na korozję w słonej wodzie. Po jeździe na morzu spłukuj wodą słodką.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: ['weather-conditions'],
+    },
+    {
+      id: 'inflation-time',
+      question: 'Jak długo trwa napompowanie?',
+      answer:
+        'Dzięki dołączonej pompie dwuczynnościowej większość desek napompowuje się do 12–15 w PSI mniej niż 5 minut. Nasza elektryczna pompa skraca to do mniej niż 2 minut. Deflacja i pakowanie zajmują około 3 minut.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: ['sup-maintenance'],
+    },
+    {
+      id: 'travel-sup',
+      question: 'Czy mogę podróżować z nadmuchiwanym SUP urządzeniem?',
+      answer:
+        'Zdecydowanie. Każda Paddle Board Overstock deska mieści się w torbie wielkości plecaka, zaprojektowanej do wygodnych podróży — sprawdź politykę dotyczącą rozmiaru i wagi transportera. Ważąca zaledwie 18-22 funty, łatwo ją przenieść na plażę, jezioro lub przez terminale lotniskowe.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'weight-limit',
+      question: 'Jaki jest limit wagowy?',
+      answer:
+        'Nasza wszechstronna SUPs obsługa do 220 lbs. Seria Touring and Yoga obsługuje do 250 lbs. Dla tandemowych lub cięższych jeźdźców wybierz szerszą, bardziej wolumentalną deskę.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: ['understanding-specs'],
+    },
+    {
+      id: 'box-contents',
+      question: 'Co jest w pudełku?',
+      answer:
+        'Każdy Paddle Board Overstock SUP z nich zawiera deskę, plecak podróżny, pompkę ręczną z podwójnym działaniem, odbieraną żebracę, smycz do sprężyny oraz zestaw naprawczy. Niektóre modele oferują także opcję ulepszenia karbonowej łopatki.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'bundle-deals',
+      question: 'Czy oferujecie pakiety?',
+      answer:
+        'Tak. Oferujemy selekcjonowane pakiety, które oszczędzają pieniądze w porównaniu do kupowania produktów osobno. Skontaktuj się z naszym zespołem sprzedaży, aby uzyskać aktualne promocje pakietów i ceny z rabatami na ilości.',
+      category: 'ordering',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'pfd-requirement',
+      question: 'Czy potrzebuję kamizelki ratunkowej SUP na ?',
+      answer:
+        'Tak. W wielu jurysdykcjach prawo wymaga kamizelki ratunkowej podczas wiosłowania, w tym na SUPs. Nawet tam, gdzie nie jest to wymagane, kamizelka ratunkowa jest niezbędnym sprzętem bezpieczeństwa. Zalecamy noszenie jej przez cały czas na wodzie.',
+      category: 'safety',
+      relatedProducts: [],
+      relatedGuides: ['safety-tips'],
+    },
+    {
+      id: 'paddleboard-registration',
+      question: 'Czy muszę zarejestrować swoją deskę do wiosłania?',
+      answer:
+        'W większości regionów deski bez napędu nie wymagają rejestracji. Wymagania różnią się w zależności od jurysdykcji, więc sprawdź przepisy obowiązujące w lokalnym urzędzie morskim.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'puncture-repair',
+      question: 'Jak naprawić przebicie bitki?',
+      answer:
+        'Oczyść ten obszar, wytnij łatę z zaokrąglonymi rogami, nałożyć PVC klej, mocno docisnąć i odczekaj 24 godziny przed napompowaniem.Paddle Board Overstock Deski zawierają zestaw naprawczy. Szczegółowe instrukcje znajdziesz w naszym przewodniku po naprawie nadmuchiwanych płyt.',
+      category: 'maintenance',
+      relatedProducts: [],
+      relatedGuides: ['inflatable-repair', 'sup-maintenance'],
+    },
+    {
+      id: 'storage',
+      question: 'Jak powinienem przechowywać moją dmuchaną SUP maszynę?',
+      answer:
+        'Przepłucz świeżą wodą, całkowicie wysusz, całkowicie opróżnij, luźno zwij od nosa i przechowuj w torbie w chłodnym, suchym miejscu, z dala od bezpośredniego słońca. Nigdy nie przechowuj mokrego ani w ekstremalnych temperaturach.',
+      category: 'maintenance',
+      relatedProducts: [],
+      relatedGuides: ['sup-maintenance'],
+    },
+    {
+      id: 'sup-vs-hard',
+      question: 'Nadmuchiwana czy SUP twarda deska?',
+      answer:
+        'Nadmuchiwane deski oferują przenośność, wygodę przechowywania oraz amortyzację uderzeń. Deski twarde oferują maksymalną sztywność i szybkość. Dla większości użytkowników rekreacyjnych praktycznym wyborem jest wysokiej jakości nadmuchiwana deska z drop-stitch rdzeniem.',
+      category: 'general',
+      relatedProducts: [],
+      relatedGuides: ['inflatable-vs-hard', 'how-to-choose-your-sup'],
+    },
+    {
+      id: 'wind-safety',
+      question: 'Jaka prędkość wiatru jest zbyt wysoka dla SUP?',
+      answer:
+        'Początkujący: powyżej 10 mph (8 węzłów). Średniozaawansowany: powyżej 15 mph (13 węzłów). Zaawansowany: powyżej 20 mph (17 węzłów). W razie wątpliwości nie wychodź na zewnątrz. Wiatr z morza (wiejący z lądu na morze) jest niebezpieczny na każdym poziomie umiejętności.',
+      category: 'safety',
+      relatedProducts: [],
+      relatedGuides: ['weather-conditions', 'safety-tips'],
+    },
+    {
+      id: 'warranty',
+      question: 'Jaka Paddle Board Overstock jest gwarancja?',
+      answer:
+        'Każda płyta jest objęta 2-letnią ograniczoną gwarancją producenta, obejmującą wady materiałów i wykonania podczas normalnego użytkowania. Akcesoria obowiązują taką samą 2-letnią ochroną.',
+      category: 'warranty',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'warranty-claim',
+      question: 'Jak zgłosić reklamację gwarancyjną?',
+      answer:
+        'Złóż reklamację, kontaktując się z naszym zespołem wsparcia, podając numer zamówienia, zdjęcia problemu oraz krótki opis. Większość roszczeń jest rozpatrywana w ciągu 2 dni roboczych. Zatwierdzone zgłoszenia otrzymują instrukcje wymiany lub naprawy w ciągu kilku dni.',
+      category: 'warranty',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'shipping-info',
+      question: 'Jak długo trwa wysyłka?',
+      answer:
+        'Zamówienia na stanie są wysyłane w ciągu 2–3 dni roboczych. Zamówienia krajowe w USA docierają w ciągu 5–10 dni roboczych. Zamówienia międzynarodowe docierają w ciągu 10–20 dni roboczych, w zależności od miejsca docelowego. Zamówienia pilne mogą być przyspieszone.',
+      category: 'shipping',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'return-policy',
+      question: 'Jaka jest Wasza polityka zwrotów?',
+      answer:
+        'Przyjmujemy zwroty w ciągu 30 dni od dostawy nieużywanych produktów w oryginalnym opakowaniu. Skontaktuj się z naszym zespołem wsparcia, aby rozpocząć zwrot — oferujemy opłaconą etykietę wysyłkową.',
+      category: 'ordering',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'paddle-length',
+      question: 'Jakiej długości łopatki potrzebuję?',
+      answer:
+        'Dla SUP, wiosło powinno być o 6–8 cali wyższe niż Twój wzrost. Zobacz nasz przewodnik po wiosłach, aby uzyskać szczegółowe rozmiary.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: ['choosing-paddle'],
+    },
+    {
+      id: 'sup-width-stability',
+      question: 'SUP Jaka szerokość jest najlepsza dla stabilności?',
+      answer:
+        'Dla początkujących szerokość 33–34 cale zapewnia najlepszy balans między stabilnością a łatwością wiosłowania. Deski węższe niż 32 cale sprawiają wrażenie lekkim dla początkujących kajakarzy. Paddle Board Overstock SUP Explorer 11 o długości 33 cali jest idealny do nauki.',
+      category: 'product',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
+    },
+    {
+      id: 'sup-volume-weight',
+      question: 'Jak wybrać SUP objętość do mojej wagi?',
+      answer:
+        'Pomnóż swoją wagę w kg przez 2,2, aby uzyskać odpowiedni dla początkujących cel objętościowy. Na przykład kajakarz ważący 75 kg potrzebuje co najmniej 165 litrów, ale 220–260 litrów jest znacznie bardziej stabilne do nauki. SUP Explorer 11 oferuje 260 litrów, odpowiedni dla rowerzystów do 100 kg.',
+      category: 'product',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
+    },
+    {
+      id: 'paddleboardoverstock-vs-others',
+      question: 'Jak wypada na Paddle Board Overstock tle innych marek?',
+      answer:
+        'Paddle Board Overstock Oferuje najlepszą wartość w zakresie nadmuchiwanego sprzętu do sportów wodnych. W porównaniu z Red Paddle Co, Paddle Board Overstock zapewnia 90% osiągów przy 60% ceny. W porównaniu z iRockerem Paddle Board Overstock stosuje wyższą klasę wojskową klasy potrójnej warstwy PVC i PSI wyższe oceny. W porównaniu z Bluefinem Paddle Board Overstock oferuje lepsze specyfikacje materiałowe. Dla większości rekreacyjnych kajakarzy Paddle Board Overstock zapewnia najlepszy balans jakości i ceny.',
+      category: 'general',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['how-to-choose-your-sup'],
+    },
+    {
+      id: 'fishing-sup-setup',
+      question: 'Czy mogę łowić z SUP deski?',
+      answer:
+        'Tak.SUP Wędkowanie jest coraz popularniejsze, ponieważ pozycja stojąca zapewnia doskonałą widoczność w wodzie. Wybierz deskę o długości co najmniej 11 stóp i szerokości 33–34 cali dla stabilności. Dodaj skrzynkę na mleko z uchwytami na wędki przymocowaną do bungees na pokładzie, małą kotwicę i zawsze noś . PFD  Paddle Board Overstock SUP Explorer 11 dobrze sprawdza się przy rekreacyjnym łowieniu.',
+      category: 'general',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['sup-fishing'],
+    },
+    {
+      id: 'sup-yoga',
+      question: 'Czy mogę ćwiczyć jogę na SUP desce?',
+      answer:
+        'Zdecydowanie.SUP Joga łączy tradycyjne pozycje z wyzwaniem unoszącej się platformy, angażując głębsze mięśnie stabilizujące. Użyj deski o długości 33 cali lub szerszej z miękką, chwytliwą podkładką na pokładzie. Ćwicz w spokojnej, płytkiej wodzie z kotwicą. Zacznij od pozycji bazowych, takich jak pies w dół, wojownik II i pozycja drzewa. SUP Explorer 11 z EVA pełnym podkładem jest dobrze dopasowany.',
+      category: 'general',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['sup-yoga'],
+    },
+    {
+      id: 'airline-travel-sup',
+      question: 'Jakie są zasady linii lotniczych dotyczące podróżowania z nadmuchiwanym SUP pojazdem?',
+      answer:
+        'Większość linii lotniczych przyjmuje SUP plecaki jako bagaż rejestrowany, jeśli waży poniżej 23–32 kg. Paddle Board Overstock Plecak ma wymiary około 90x40x30 cm i waży około 15 kg spakowany. Niektóre linie lotnicze mogą pobierać opłaty za bagaż nadgabarytowy. Przybądź wcześniej, owiń płetwy i pompę osobno w bagażu podręcznym i oznacz torbę jako delikatną. Zawsze zapoznaj się z polityką dotyczącą sprzętu sportowego swojej linii lotniczej przed lotem.',
+      category: 'general',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['multi-day-trip'],
+    },
+    {
+      id: 'cold-weather-safety',
+      question: 'Jakiego sprzętu bezpieczeństwa potrzebuję do wiosłowania w zimnej wodzie?',
+      answer:
+        'Woda poniżej 15°C wymaga ochrony termicznej. Przy 8–14°C używaj pianki lub suchego kombinezonu z neoprenowym obuwiem, rękawicami i kapturem. Przy 14–20°C wystarczy pianka 3/2mm. Zawsze noś odpowiednio dopasowaną piankę PFD dla ochrony termicznej i bezpieczeństwa. Sprawdź lokalne przepisy dotyczące obowiązkowych wymagań sprzętowych.',
+      category: 'product',
+      relatedProducts: [],
+      relatedGuides: ['safety-tips'],
+    },
+    {
+      id: 'sup-inflate-pressure',
+      question: 'Do czego PSI powinienem nadmuchać moją baterię SUP ?',
+      answer:
+        'Napompuj do maksymalnego poziomu dla PSI najlepszej wydajności — zazwyczaj 15–18 PSI dla wysokiej jakości nadmuchiwanej deski SUPs. Paddle Board Overstock SUP Explorer 11 najlepiej sprawdza się w 15–18 PSI. Niedopompowanie powoduje, że deska wydaje się miękka i źle się przesuwa. Nadmierne napompowanie powyżej dopuszczalnego maksimum grozi uszkodzeniem drop-stitch gwintów. Sprawdź naklejkę przy zaworze pod kątem konkretnej oceny deski.',
+      category: 'product',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['how-to-choose-your-sup', 'understanding-specs'],
+    },
+    {
+      id: 'sup-deck-pad-care',
+      question: 'Jak wyczyścić i utrzymać EVA podkład pod taras?',
+      answer:
+        'Po każdej sesji opłucz podkład świeżą wodą. Na brud lub plamy używaj łagodnego mydła i miękkiej szczotki — unikaj agresywnych chemikaliów. Jeśli krawędzie zaczną się unosić, nałóż niewielką ilość wodoodpornego kleju morskiego i dociśnij pod ciężarem przez 24 godziny. Trzymaj deskę z dala od bezpośredniego kontaktu z podkładem UV , gdy nie jest używana, aby zapobiec degradacji podkładki.',
+      category: 'maintenance',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['sup-maintenance'],
+    },
+    {
+      id: 'sup-seated-paddling',
+      question: 'Czy mogę usiąść podczas wiosłowania SUP moim ?',
+      answer:
+        'Tak. Wiele SUP desek, w tym Paddle Board Overstock Explorer 11, posiada pierścienie D, które pozwalają mocować siedzenie do wiosłowania. Użycie SUP z siedzeniem i wiosłem z pojedynczym łopatem zapewnia wygodną pozycję podczas dłuższych wypraw lub wędkowania. Niektóre marki oferują dedykowane zestawy konwersyjne z siedzeniem i dłuższymi wiosłami.',
+      category: 'product',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: [],
+    },
+    {
+      id: 'saltwater-rinse',
+      question: 'Czy muszę płukać deskę po użyciu na morzu?',
+      answer:
+        'Tak — zawsze płucz deskę, żeberła, pompę i wiosło świeżą wodą po użyciu w wodzie słonej. Kryształy soli wnikają w szwy i zawory, powodując mikroprzecieki i korozję. Wysusz deskę w cieniu przed spuszczeniem i przechowywaniem. Regularne płukanie znacznie wydłuża jej żywotność.',
+      category: 'maintenance',
+      relatedProducts: [],
+      relatedGuides: ['sup-maintenance'],
+    },
+    {
+      id: 'sup-leash-necessity',
+      question: 'Czy naprawdę potrzebuję smyczy SUP?',
+      answer:
+        'Tak — zawsze noś smycz. Smycz zwinięta SUP przyczepia się do kostki lub łydki i trzyma deskę przy sobie, gdy upadniesz. W otwartej wodzie smycz może uratować życie, zapobiegając oddzieleniu się od urządzenia wypływającego. Do wiosłowania rzecznego używaj smyczy z szybkim zwalnianiem, aby zapobiec uwięzieniu.',
+      category: 'safety',
+      relatedProducts: ['sup-explorer-11'],
+      relatedGuides: ['safety-tips'],
+    },
+    {
+      id: 'company-model',
+      question: 'Czy Paddle Board Overstock to firma handlowa czy producent?',
+      answer:
+        'Nie jest ani czystą fabryką, ani firmą handlową — Weihai Dongjilian Co., Ltd. to firma markowa z własną bazą produkcyjną Weihai. Nasze nadwyżki pochodzą z nadwyżek produkcji z naszej własnej produkcji oraz wybranych nadmiarowych zapasów pozyskanych od innych partnerów produkcyjnych, których audytujemy. Obok sprzedaży detalicznej prowadzimy hurtowo modeli mieszanych dla małych detalistów: 5–20 płyt, dowolne modele zmieszane w jednej dostawie, wycenione według całkowitej ilości. Każde zamówienie wysyłane jest bezpośrednio z fabryki z Weihai — bez pośredników.',
+      category: 'ordering',
+      relatedProducts: [],
+      relatedGuides: [],
+    },
+    {
+      id: 'us-contract-weihai-shipping',
+      question: 'Dlaczego moja umowa z amerykańską firmą jest wysyłana z Weihai?',
+      answer:
+        'Weihai Dongjilian Co., Ltd. to globalny podmiot handlowy, który podpisuje umowy, wydaje faktury i zapewnia wsparcie posprzedażowe, podczas gdy Weihai Manufacturing Hub produkuje i wysyła każde zamówienie FOB Weihai. Ta struktura z dwoma węzłami zachowuje standardy umowy i rozliczenia według standardów USA, jednocześnie zachowując bezpośrednie ceny fabryczne i pełną przejrzystość produkcji.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
@@ -2916,42 +6394,107 @@ export const FAQS_BY_LANG_MT: Record<string, FaqRecord[]> = {
 export const FAQ_PAGE_META_MT: Record<string, { title: string; description: string }> = {
   bg: {
     title: 'Често задавани въпроси',
-    description: 'Често задавани въпроси за надуваеми SUP дъски, весла, помпи и аксесоари.',
+    description:
+      'Често задавани въпроси относно SUP надуваеми дъски, каяци, лодки RIBs, защитно оборудване и водни спортове.',
+  },
+  et: {
+    title: 'Korduma kippuvad küsimused',
+    description:
+      'Korduma kippuvad küsimused SUP täispuhutavate laudade, kajakkide, RIBs paatide, turvavarustuse ja veespordi kohta.',
+  },
+  he: {
+    title: 'שאלות נפוצות',
+    description: 'שאלות נפוצות על קרש מתנפח SUP , קיאקים, דינגים, RIBs ציוד בטיחות וספורט ימי.',
+  },
+  hr: {
+    title: 'Često postavljana pitanja',
+    description:
+      'Često postavljana pitanja o SUP napuhavajućim daskama, kajacima, čamcima, RIBs sigurnosnoj opremi i vodenim sportovima.',
   },
   hu: {
     title: 'Gyakran ismételt kérdések',
-    description: 'Gyakran ismételt kérdések felfújható SUP deszkákról, evezőkről, pumpákról és kiegészítőkről.',
+    description:
+      'Gyakran ismételt kérdések SUP felfújható deszkákról, kajakokról, RIBs csónakokról, biztonsági felszerelésekről és vízi sportokról.',
   },
   id: {
     title: 'Pertanyaan yang sering diajukan',
-    description: 'Pertanyaan yang sering diajukan tentang papan SUP tiup, dayung, pompa, dan aksesori.',
+    description:
+      'Pertanyaan yang sering diajukan tentang papan tiup SUP , kayak, perahu kecil, RIBs perlengkapan keselamatan, dan olahraga air.',
+  },
+  ko: {
+    title: '자주 묻는 질문',
+    description: '팽창식 SUP 보드, 카약, 딩기, RIBs 안전 장비, 수상 스포츠에 관한 자주 묻는 질문들입니다.',
+  },
+  lt: {
+    title: 'Dažniausiai užduodami klausimai',
+    description:
+      'Dažniausiai užduodami klausimai apie pripučiamas SUP lentas, baidares, valtis, RIBs saugos įrangą ir vandens sportą.',
+  },
+  lv: {
+    title: 'Biežāk uzdotie jautājumi',
+    description:
+      'Biežāk uzdotie jautājumi par piepūšamajiem SUP dēļiem, kajakiem, švertlaivām RIBs, drošības aprīkojumu un ūdens sporta veidiem.',
   },
   ms: {
     title: 'Soalan lazim',
-    description: 'Soalan lazim tentang papan SUP kembung, kayuh, pam dan aksesori.',
+    description: 'Soalan lazim tentang papan kembung SUP , kayak, dinghy, RIBs peralatan keselamatan, dan sukan air.',
   },
   ro: {
     title: 'Întrebări frecvente',
-    description: 'Întrebări frecvente despre plăci SUP gonflabile, vâsle, pompe și accesorii.',
+    description:
+      'Întrebări frecvente despre plăci gonflabile SUP , caiace, RIBs dinghie-uri, echipamente de siguranță și sporturi nautice.',
+  },
+  sk: {
+    title: 'Často kladené otázky',
+    description:
+      'Často kladené otázky o SUP nafukovacích doskách, kajakoch, člnoch, RIBs bezpečnostnom vybavení a vodných športoch.',
+  },
+  sl: {
+    title: 'Pogosta vprašanja',
+    description:
+      'Pogosto zastavljena vprašanja o SUP napihljivih deskah, kajakih, čolnih, RIBs varnostni opremi in vodnih športih.',
+  },
+  sr: {
+    title: 'Često postavljana pitanja',
+    description:
+      'Često postavljana pitanja o daskama na naduvavanje SUP , kajacima, gumenjacima, RIBs sigurnosnoj opremi i sportovima na vodi.',
   },
   th: {
     title: 'คําถามที่พบบ่อย',
-    description: 'คําถามที่พบบ่อยเกี่ยวกับกระดาน SUP แบบเป่าลม ใบพาย ปั๊ม และอุปกรณ์เสริม',
+    description: 'คําถามที่พบบ่อยเกี่ยวกับกระดานเป่าลม SUP เรือคายัค เรือเล็ก RIBs อุปกรณ์ความปลอดภัย และกีฬาทางน้ํา',
   },
   tl: {
     title: 'Mga madalas itanong',
-    description: 'Mga madalas itanong tungkol sa inflatable SUP boards, paddle, pump, at accessories.',
+    description:
+      'Mga madalas itanong tungkol sa inflatable SUP boards, kayaks, dinghies, RIBs safety equipment, at water sports.',
   },
   tr: {
     title: 'Sıkça Sorulan Sorular',
-    description: 'Şişme SUP tahtaları, kürekler, pompalar ve aksesuarlar hakkında sıkça sorulan sorular.',
+    description:
+      'Şişme SUP tahtalar, kayaklar, RIBs dinghiler, güvenlik ekipmanları ve su sporları hakkında sıkça sorulan sorular.',
+  },
+  da: {
+    title: 'Ofte stillede spørgsmål',
+    description:
+      'Ofte stillede spørgsmål om oppustelige SUP brædder, kajakker, joller, RIBs sikkerhedsudstyr og vandsport.',
+  },
+  no: {
+    title: 'Ofte stilte spørsmål',
+    description: 'Ofte stilte spørsmål om oppblåsbare SUP brett, kajakker, joller, RIBs sikkerhetsutstyr og vannsport.',
   },
   nl: {
     title: 'Veelgestelde vragen',
-    description: 'Veelgestelde vragen over opblaasbare SUP boards, peddels, pompen en accessoires.',
+    description:
+      'Veelgestelde vragen over opblaasbare SUP planken, kajaks, bijbootjes RIBs, veiligheidsuitrusting en watersporten.',
   },
   pt: {
     title: 'Perguntas frequentes',
-    description: 'Perguntas frequentes sobre pranchas SUP infláveis, remos, bombas e acessórios.',
+    description:
+      'Perguntas frequentes sobre SUP pranchas infláveis, caiaques, botes, RIBs equipamentos de segurança e esportes aquáticos.',
+  },
+  pl: {
+    title: 'Najczęściej zadawane pytania',
+    description:
+      'Najczęściej zadawane pytania dotyczące SUP nadmuchiwanych desek, kajaków, pontonów, RIBs sprzętu bezpieczeństwa oraz sportów wodnych.',
   },
 };
