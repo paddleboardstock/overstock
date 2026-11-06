@@ -25,7 +25,7 @@ const stories = page.stories ?? [];
 const aggregateStats = page.aggregate_stats ?? [];
 const cta = page.cta ?? {};
 
-const crumbs = [{ name: t('nav.home'), href: `/${lang}/` }, { name: 'Success Stories' }];
+const crumbs = [{ name: t('nav.home'), href: `/${lang}/` }, { name: hero.tagline || 'Success Stories' }];
 
 const metadata = {
   title: localizePageTitle(page, `${hero.tagline || 'Success Stories'} — Clubs, Resorts & Brands | ${SITE.name}`),
@@ -92,12 +92,13 @@ const faqSchema = JSON.stringify({
   </section>
 
   <Tldr
-    summary="Real success stories from water sports clubs, resorts, and entrepreneurs who built profitable operations with Paddle Board Overstock."
+    summary={page.tldr_summary ||
+      'Real success stories from water sports clubs, resorts, and entrepreneurs who built profitable operations with Paddle Board Overstock.'}
     points={[
-      'Mediterranean resort: $180K annual ancillary revenue from guest water activities',
-      'Australian startup: launched brand in 90 days, sold out first 200 units in 45 days',
-      'Thai beach club: scaled from 10 to 80 boards in 18 months with consistent quality',
-      'Caribbean chain: standardized water sports across 5 properties, reduced costs 30%',
+      page.tldr_point_1 || 'Mediterranean resort: $180K annual ancillary revenue from guest water activities',
+      page.tldr_point_2 || 'Australian startup: launched brand in 90 days, sold out first 200 units in 45 days',
+      page.tldr_point_3 || 'Thai beach club: scaled from 10 to 80 boards in 18 months with consistent quality',
+      page.tldr_point_4 || 'Caribbean chain: standardized water sports across 5 properties, reduced costs 30%',
     ]}
     className="max-w-5xl mx-auto my-10 px-6"
   />
@@ -119,16 +120,16 @@ const faqSchema = JSON.stringify({
               <div class="space-y-6">
                 {story.customer && <p class="text-sm font-semibold text-primary">{story.customer}</p>}
                 <div>
-                  <h3 class="font-semibold mb-2">The Challenge</h3>
+                  <h3 class="font-semibold mb-2">{page.challenge_label || 'The Challenge'}</h3>
                   <p class="text-muted text-sm leading-relaxed">{story.problem}</p>
                 </div>
                 <div>
-                  <h3 class="font-semibold mb-2">The Solution</h3>
+                  <h3 class="font-semibold mb-2">{page.solution_label || 'The Solution'}</h3>
                   <p class="text-muted text-sm leading-relaxed">{story.solution}</p>
                 </div>
                 {story.result?.length > 0 && (
                   <div>
-                    <h3 class="font-semibold mb-2">Results</h3>
+                    <h3 class="font-semibold mb-2">{page.results_label || 'Results'}</h3>
                     <ul class="space-y-1">
                       {story.result.map((r: any) => (
                         <li class="text-sm text-muted flex items-start gap-2">
@@ -183,13 +184,13 @@ const faqSchema = JSON.stringify({
         <a
           href={`/${lang}/engineering-team`}
           class="text-sky-600 hover:text-sky-800 font-medium underline underline-offset-4"
-          >&rarr; Meet Our R&D Engineering Team</a
+          >&rarr; {page.link_rnd_team || 'Meet Our R&D Engineering Team'}</a
         >
         <a href={`/${lang}/trust`} class="text-sky-600 hover:text-sky-800 font-medium underline underline-offset-4"
-          >&rarr; View Certifications & Quality Assurance</a
+          >&rarr; {page.link_certifications || 'View Certifications & Quality Assurance'}</a
         >
         <a href={`/${lang}/factory`} class="text-sky-600 hover:text-sky-800 font-medium underline underline-offset-4"
-          >&rarr; Tour Our Manufacturing Facility</a
+          >&rarr; {page.link_factory_tour || 'Tour Our Manufacturing Facility'}</a
         >
       </div>
     </div>

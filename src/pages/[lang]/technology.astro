@@ -185,10 +185,15 @@ const faqSchema = JSON.stringify({
 
         <section class="px-6 py-16 mx-auto max-w-5xl">
           <div class="text-center mb-12">
-            <p class="text-sm font-semibold text-[#06b6d4] uppercase tracking-wider">Materials & Construction</p>
-            <h2 class="mt-2 text-3xl font-bold text-gray-900">Engineered for Marine Environments</h2>
+            <p class="text-sm font-semibold text-[#06b6d4] uppercase tracking-wider">
+              {page.materials_tagline || 'Materials & Construction'}
+            </p>
+            <h2 class="mt-2 text-3xl font-bold text-gray-900">
+              {page.materials_title || 'Engineered for Marine Environments'}
+            </h2>
             <p class="mt-3 text-gray-500 max-w-2xl mx-auto">
-              Every material is selected, tested, and validated in-house at our 12,000 m² Weihai R&D center.
+              {page.materials_subtitle ||
+                'Every material is selected, tested, and validated in-house at our 12,000 m² Weihai R&D center.'}
             </p>
           </div>
           <div class="space-y-12">
@@ -242,7 +247,9 @@ const faqSchema = JSON.stringify({
             <div class="bg-gradient-to-br from-sky-50 to-white dark:from-gray-900 dark:to-gray-950 rounded-2xl border border-sky-100 dark:border-gray-800 p-8 md:p-12">
               <div class="grid md:grid-cols-5 gap-8 items-center">
                 <div class="md:col-span-3">
-                  <span class="text-sm font-semibold text-[#06b6d4] uppercase tracking-wider">What Paddlers Say</span>
+                  <span class="text-sm font-semibold text-[#06b6d4] uppercase tracking-wider">
+                    {page.paddlers_label || 'What Paddlers Say'}
+                  </span>
                   <blockquote class="mt-4 text-lg text-gray-700 dark:text-gray-300 leading-relaxed italic">
                     &ldquo;{testimonial.quote}&rdquo;
                   </blockquote>
@@ -260,10 +267,10 @@ const faqSchema = JSON.stringify({
                 </div>
                 <div class="md:col-span-2">
                   <div class="p-5 bg-white dark:bg-gray-900 rounded-xl border border-gray-200">
-                    <h3 class="font-bold text-gray-900 text-sm">In-House R&D</h3>
+                    <h3 class="font-bold text-gray-900 text-sm">{page.rnd_title || 'In-House R&D'}</h3>
                     <p class="mt-2 text-sm text-gray-600 leading-relaxed">
-                      Our materials science team develops and validates every compound, weld parameter, and structural
-                      layup in-house. No outsourcing of critical engineering.
+                      {page.rnd_body ||
+                        'Our materials science team develops and validates every compound, weld parameter, and structural layup in-house. No outsourcing of critical engineering.'}
                     </p>
                   </div>
                 </div>
@@ -274,7 +281,7 @@ const faqSchema = JSON.stringify({
 
         <section class="px-6 pb-20 mx-auto max-w-4xl">
           <div class="flex flex-wrap justify-center gap-3 text-sm">
-            <span class="text-gray-400 font-medium">Explore more:</span>
+            <span class="text-gray-400 font-medium">{page.explore_label || 'Explore more'}:</span>
             {(related.links && related.links.length > 0 ? related.links : []).map((link: any) => (
               <a
                 href={lh(link.url)}
