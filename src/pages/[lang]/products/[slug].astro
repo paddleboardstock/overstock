@@ -10,7 +10,6 @@ import ProductLayout from '~/layouts/ProductLayout.astro';
 import ProductCard from '~/components/widgets/ProductCard.astro';
 import ToBlogLink from '~/components/blog/ToBlogLink.astro';
 import JsonLd from '~/components/common/JsonLd.astro';
-import Tldr from '~/components/common/Tldr.astro';
 import TrustBadges from '~/components/common/TrustBadges.astro';
 import ProductGradeBadge from '~/components/widgets/ProductGradeBadge.astro';
 import ProductFullSet from '~/components/widgets/ProductFullSet.astro';
@@ -466,21 +465,6 @@ const inTheBoxItems = (includedSpecRaw?.value || '')
       </div>
     </div>
   </section>
-
-  {/* TLDR (AI-crawlable) */}
-  {
-    (product.definition || rec) && (
-      <section class="max-w-7xl mx-auto px-4 sm:px-6 -mt-1 relative z-10">
-        <Tldr
-          summary={product.definition || rec?.definition}
-          points={[
-            `${product.audience || rec?.audience}`,
-            `Use cases: ${(product.ai_use_cases || rec?.ai_use_cases || []).slice(0, 3).join(', ')}`,
-          ]}
-        />
-      </section>
-    )
-  }
 
   {/* Environment & Water Condition Tags */}
   {
