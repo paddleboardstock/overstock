@@ -63,10 +63,10 @@ const growthParagraphs = contentGrowth.paragraphs || [];
       '@context': 'https://schema.org',
       '@type': 'Organization',
       name: 'Paddle Board Overstock',
-      alternateName: 'Paddle Board Overstock Inflatable SUP Boards',
+      alternateName: t('jsonld.story.alternateName') || 'Paddle Board Overstock Inflatable SUP Boards',
       description: hero.subtitle,
       url: 'https://paddleboardoverstock.com',
-      slogan: 'Inflatable SUP Boards, Paddles & Accessories — Factory-Direct Brand',
+      slogan: t('jsonld.story.slogan') || 'Inflatable SUP Boards, Paddles & Accessories — Factory-Direct Brand',
       foundingDate: '2012',
       foundingLocation: 'Weihai, China',
       address: {
@@ -87,8 +87,9 @@ const growthParagraphs = contentGrowth.paragraphs || [];
       '@context': 'https://schema.org',
       '@type': 'Person',
       name: 'David Chen',
-      jobTitle: 'Founder & CEO',
+      jobTitle: t('jsonld.story.jobTitle') || 'Founder & CEO',
       description:
+        t('jsonld.story.personDescription') ||
         'Founder of Paddle Board Overstock, marine manufacturing expert with a decade of experience in inflatable product development for European and North American markets before founding the company in 2012.',
       url: 'https://paddleboardoverstock.com/paddleboardoverstock-story',
       knowsAbout: [

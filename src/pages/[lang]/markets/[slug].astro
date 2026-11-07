@@ -83,7 +83,7 @@ const t = (key: string) => getUiForLang(lang || defaultLang)?.[key] || '';
 setPageContentData(PAGE_MODULES[slug || ''] ?? {});
 const page = getPageContent(lang, `markets-${slug}`);
 
-const marketName = MARKET_NAMES[slug || ''] ?? 'Market';
+const marketName = t(`markets.name.${slug}`) || (MARKET_NAMES[slug || ''] ?? 'Market');
 
 const hero = page.hero ?? {};
 const directAnswer = page.direct_answer ?? '';
@@ -191,7 +191,8 @@ const metadata = {
           href={`/${lang}/international-shipping/`}
           class="mt-8 inline-flex items-center gap-2 text-sky-600 dark:text-sky-400 font-semibold hover:underline"
         >
-          Full shipping details — express & sea freight <span aria-hidden="true">&rarr;</span>
+          {t('markets.fullShippingDetails') || 'Full shipping details — express & sea freight'}{' '}
+          <span aria-hidden="true">&rarr;</span>
         </a>
       </section>
     )

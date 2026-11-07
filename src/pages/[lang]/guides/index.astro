@@ -10,13 +10,15 @@ import { GUIDE_L10N_MT, GUIDE_META_L10N_MT } from '~/lib/guides-l10n-mt';
 import { getPageContent, setPageContentData } from '~/i18n/page-content';
 import __pageData from '~/i18n/generated/pages/guides.ts';
 import { localizePageTitle, localizePageDescription } from '~/i18n/page-title';
-import { languages } from '~/i18n/config';
+import { languages, defaultLang } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
 
 export async function getStaticPaths() {
   return Object.keys(languages).map((lang) => ({ params: { lang } }));
 }
 
 const { lang } = Astro.params;
+const t = (key: string) => getUiForLang(lang || defaultLang)?.[key] || '';
 setPageContentData(__pageData);
 const page = getPageContent(lang, 'guides');
 
@@ -53,20 +55,25 @@ const catNames: Record<string, string> = {
   <JsonLd
     type="WebSite"
     data={{
-      name: 'Paddle Board Overstock Guides',
-      description: 'Water sports guides and tutorials',
+      name: t('jsonld.guidesHub.name') || 'Paddle Board Overstock Guides',
+      description: t('jsonld.guidesHub.description') || 'Water sports guides and tutorials',
     }}
   />
 
   <section class="max-w-4xl mx-auto py-24 px-6" data-ai-block="definition">
-    <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">{hero.tagline || 'Guides'}</span>
-    <h1 class="mt-4 text-4xl font-semibold text-gray-900">{hero.title || 'New to SUP?'}</h1>
+    <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">{hero.tagline || t('guides.pageLabel')}</span
+    >
+    <h1 class="mt-4 text-4xl font-semibold text-gray-900">{hero.title || t('guides.pageTitle')}</h1>
     <p class="mt-4 text-lg text-gray-500">
-      {hero.subtitle || 'Practical guides to help you choose, use, and enjoy inflatable water sports equipment.'}
+      {hero.subtitle || t('guides.pageDesc')}
     </p>
     <div class="mt-6 flex flex-wrap gap-2 text-xs">
-      <span class="px-3 py-1.5 bg-gray-100 text-gray-600 rounded-full font-medium">{guides.length} guides</span>
-      <span class="px-3 py-1.5 bg-gray-100 text-gray-600 rounded-full font-medium">{categories.length} categories</span>
+      <span class="px-3 py-1.5 bg-gray-100 text-gray-600 rounded-full font-medium"
+        >{t('guides.count').replace('{count}', String(guides.length))}</span
+      >
+      <span class="px-3 py-1.5 bg-gray-100 text-gray-600 rounded-full font-medium"
+        >{t('guides.categories').replace('{count}', String(categories.length))}</span
+      >
     </div>
   </section>
 
@@ -126,7 +133,7 @@ const catNames: Record<string, string> = {
                   href={`/${lang}/guides/${g.slug}`}
                   class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-sky-600 hover:text-sky-700"
                 >
-                  Read guide →
+                  {t('guides.readGuide')}
                 </a>
               </div>
             ))}

@@ -161,8 +161,11 @@ const faqSchema = JSON.stringify({
         <JsonLd
           type="Article"
           article={{
-            headline: 'Technology & Materials — Drop-Stitch Core, Marine-Grade PVC, EVA Deck',
+            headline:
+              t('jsonld.technology.headline') ||
+              'Technology & Materials — Drop-Stitch Core, Marine-Grade PVC, EVA Deck',
             description:
+              t('jsonld.technology.description') ||
               'Paddle Board Overstock product technology: drop-stitch core construction at 12-15 PSI, marine-grade fusion-welded PVC fabric, full-deck EVA traction, triple-layer fusion-bonded rails. In-house materials R&D since 2012.',
             datePublished: '2026-07-07',
           }}
