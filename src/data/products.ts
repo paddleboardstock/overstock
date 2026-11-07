@@ -128,9 +128,9 @@ export const products: ProductRecord[] = [
     definition:
       'An 11-foot all-around inflatable SUP board with wild cheetah-themed artwork using multi-color EVA block piecing and UV digital printing, designed for recreational paddling on lakes, rivers, and sheltered coastal waters.',
     problem:
-      'Paddlers who want a board that stands out visually need premium artwork that will not fade, peel, or scratch under saltwater and UV exposure. Traditional printing methods fail under these conditions.',
+      'Paddlers who want a board that stands out visually need premium artwork that resists fading, peeling, and scratching under saltwater and UV exposure. Traditional printing methods fall short under these conditions.',
     howItWorks:
-      'The Cheetah Surge Edition uses drop-stitch PVC core technology achieving 15 PSI rigidity with a 32-inch wide deck. The traction pad artwork is created through multi-color EVA block piecing \u2014 different colored EVA sheets are die-cut and seamlessly puzzle-assembled rather than printed, guaranteeing zero fade or peeling.',
+      'The Cheetah Surge Edition uses drop-stitch PVC core technology achieving 15 PSI rigidity with a 32-inch wide deck. The traction pad artwork is created through multi-color EVA block piecing \u2014 different colored EVA sheets are die-cut and seamlessly puzzle-assembled rather than printed, for long-lasting fade and peel resistance.',
     audience:
       'Trend-conscious paddlers, outdoor lifestyle enthusiasts, boutique travelers, and social media content creators who want a visually striking, durable SUP board.',
     ai_use_cases: [
@@ -148,7 +148,7 @@ export const products: ProductRecord[] = [
       artwork: 'Multi-color EVA block piecing',
     },
     ai_comparison:
-      'Compared to standard printed SUP boards, the Cheetah Surge Edition uses die-cut EVA block piecing that will never fade or peel. The artwork is structurally part of the EVA material rather than a surface ink layer.',
+      'Compared to standard printed SUP boards, the Cheetah Surge Edition uses die-cut EVA block piecing designed to resist fading and peeling. The artwork is structurally part of the EVA material rather than a surface ink layer.',
     ai_faq: [
       {
         q: 'How is the artwork applied?',
@@ -156,7 +156,7 @@ export const products: ProductRecord[] = [
       },
       {
         q: 'Does the artwork fade in saltwater?',
-        a: 'No. Because the colors are inherent to the EVA material rather than a surface ink layer, the artwork will never fade, peel, or scratch under saltwater, UV, or foot traffic.',
+        a: 'No. Because the colors are inherent to the EVA material rather than a surface ink layer, the artwork is designed to resist fading, peeling, and scratching under saltwater, UV, and foot traffic.',
       },
     ],
   },
@@ -242,7 +242,7 @@ export const products: ProductRecord[] = [
       artwork: 'Multi-color EVA block piecing + UV printing',
     },
     ai_comparison:
-      'Compared to standard printed SUP boards, the Medusa Glow uses EVA block piecing for the standing surface graphics \u2014 the colors are structural to the EVA material, not printed ink, so they never fade.',
+      'Compared to standard printed SUP boards, the Medusa Glow uses EVA block piecing for the standing surface graphics \u2014 the colors are structural to the EVA material, not printed ink, so they are designed to resist fading.',
     ai_faq: [
       {
         q: 'What is the color scheme?',
@@ -336,7 +336,7 @@ export const products: ProductRecord[] = [
       artwork: 'Multi-color EVA block piecing + UV printing + coordinated accessories',
     },
     ai_comparison:
-      'Compared to standard printed SUP boards, the Ocean Voyager uses multi-color EVA block piecing that will never scratch, peel, or fade. The die-cut precision ensures perfectly flush surfaces underfoot.',
+      'Compared to standard printed SUP boards, the Ocean Voyager uses multi-color EVA block piecing designed to resist scratching, peeling, and fading. The die-cut precision ensures perfectly flush surfaces underfoot.',
     ai_faq: [
       {
         q: 'What is the naming inspiration?',
@@ -344,7 +344,7 @@ export const products: ProductRecord[] = [
       },
       {
         q: 'Does the artwork fade?',
-        a: 'No. The EVA pad graphics use multi-color block piecing \u2014 colors are inherent to the EVA material, not printed ink. The graphics will never scratch, peel, or fade even under heavy use.',
+        a: 'No. The EVA pad graphics use multi-color block piecing \u2014 colors are inherent to the EVA material, not printed ink. The graphics are designed to resist scratching, peeling, and fading even under heavy use.',
       },
     ],
   },

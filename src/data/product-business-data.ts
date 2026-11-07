@@ -31,11 +31,11 @@ export const productBusinessData: Record<string, BusinessProductInfo> = {
   'sup-cheetah-surge': {
     bestFor: ['clubs', 'resorts'],
     recommendation:
-      'Performance board for club racing programs and advanced resort guests. Sportier shape appeals to experienced paddlers. Suitable for fitness-focused rental programs.',
-    useCase: 'Racing programs, fitness classes, advanced guest experiences',
+      'Eye-catching all-around board for rental fleets and resort programs. The extra-wide 32" platform is stable and forgiving for first-time guests, while the bold cheetah artwork stands out on the beach and in guest photos.',
+    useCase: 'Rental fleet standout, beginner lessons, family resort activities',
     operatingCost: 'Low-maintenance, no fuel, replace tracking fin as needed',
     whyBusinessesChooseIt:
-      'Differentiates your offering from standard rental boards. Attracts experienced paddlers and fitness enthusiasts. Creates upsell opportunity for premium rental experience.',
+      'Distinctive artwork draws attention and drives rental demand. Wide stable deck reduces falls for beginner guests. Drop-stitch construction holds up to daily rental use.',
     lifespan: '3-4 years with regular use',
   },
   'sup-ocean-pulse': {
