@@ -8,7 +8,6 @@ import ProductLayout from '~/layouts/ProductLayout.astro';
 import ProductCard from '~/components/widgets/ProductCard.astro';
 import ToBlogLink from '~/components/blog/ToBlogLink.astro';
 import JsonLd from '~/components/common/JsonLd.astro';
-import Tldr from '~/components/common/Tldr.astro';
 import TrustBadges from '~/components/common/TrustBadges.astro';
 import ProductGradeBadge from '~/components/widgets/ProductGradeBadge.astro';
 import ProductFullSet from '~/components/widgets/ProductFullSet.astro';
@@ -495,18 +494,6 @@ const productExtraData: Record<string, unknown> = {
     </div>
   </section>
 
-  {/* TLDR (AI-crawlable) */}
-  {
-    rec && (
-      <section class="max-w-7xl mx-auto px-4 sm:px-6 -mt-1 relative z-10">
-        <Tldr
-          summary={rec.definition}
-          points={[`${rec.audience}`, `Use cases: ${rec.ai_use_cases.slice(0, 3).join(', ')}`]}
-        />
-      </section>
-    )
-  }
-
   {/* Content (MDX) */}
   {
     product.Content && (
@@ -562,59 +549,6 @@ const productExtraData: Record<string, unknown> = {
             <div class="mt-6 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-xl p-5">
               <p class="text-sm font-semibold text-gray-900 dark:text-slate-100 mb-2">Designed for</p>
               <p class="text-sm text-gray-600 dark:text-slate-400 capitalize">{rec.audience}</p>
-            </div>
-          )}
-          {rec && productBusinessData[rec.id] && (
-            <div class="mt-4 bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-800 rounded-xl p-5">
-              <p class="text-sm font-semibold text-orange-800 dark:text-orange-300 mb-3">Best For Your Business</p>
-              <div class="flex flex-wrap gap-2 mb-3">
-                {productBusinessData[rec.id].bestFor.includes('clubs') && (
-                  <span class="inline-block text-xs font-medium bg-sky-100 dark:bg-sky-900/50 text-sky-700 dark:text-sky-300 px-3 py-1 rounded-full">
-                    Clubs
-                  </span>
-                )}
-                {productBusinessData[rec.id].bestFor.includes('resorts') && (
-                  <span class="inline-block text-xs font-medium bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300 px-3 py-1 rounded-full">
-                    Resorts
-                  </span>
-                )}
-                {productBusinessData[rec.id].bestFor.includes('entrepreneurs') && (
-                  <span class="inline-block text-xs font-medium bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 px-3 py-1 rounded-full">
-                    Entrepreneurs
-                  </span>
-                )}
-              </div>
-              <p class="text-sm text-orange-700 dark:text-orange-400 leading-relaxed">
-                {productBusinessData[rec.id].recommendation}
-              </p>
-              <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-3">
-                <div class="bg-white/70 dark:bg-slate-800/70 rounded-lg p-3">
-                  <p class="text-xs font-semibold text-orange-700 dark:text-orange-400 uppercase tracking-wider mb-1">
-                    Use Case
-                  </p>
-                  <p class="text-sm text-gray-700 dark:text-slate-300">{productBusinessData[rec.id].useCase}</p>
-                </div>
-                <div class="bg-white/70 dark:bg-slate-800/70 rounded-lg p-3">
-                  <p class="text-xs font-semibold text-orange-700 dark:text-orange-400 uppercase tracking-wider mb-1">
-                    Operating Cost
-                  </p>
-                  <p class="text-sm text-gray-700 dark:text-slate-300">{productBusinessData[rec.id].operatingCost}</p>
-                </div>
-                <div class="bg-white/70 dark:bg-slate-800/70 rounded-lg p-3">
-                  <p class="text-xs font-semibold text-orange-700 dark:text-orange-400 uppercase tracking-wider mb-1">
-                    Expected Lifespan
-                  </p>
-                  <p class="text-sm text-gray-700 dark:text-slate-300">{productBusinessData[rec.id].lifespan}</p>
-                </div>
-                <div class="bg-white/70 dark:bg-slate-800/70 rounded-lg p-3">
-                  <p class="text-xs font-semibold text-orange-700 dark:text-orange-400 uppercase tracking-wider mb-1">
-                    Why Businesses Choose It
-                  </p>
-                  <p class="text-sm text-gray-700 dark:text-slate-300">
-                    {productBusinessData[rec.id].whyBusinessesChooseIt}
-                  </p>
-                </div>
-              </div>
             </div>
           )}
         </div>
@@ -750,6 +684,36 @@ const productExtraData: Record<string, unknown> = {
             <dd class="text-gray-600 dark:text-slate-400">Brand-new</dd>
           </div>
           <div class="flex flex-wrap gap-x-4 gap-y-1 px-6 py-3.5">
+            <dt class="w-40 shrink-0 font-semibold text-gray-700 dark:text-slate-300">Why the lower price</dt>
+            <dd class="text-gray-600 dark:text-slate-400">
+              Surplus from a completed manufacturing order, sold factory-direct at a reduced overstock price.
+            </dd>
+          </div>
+          {
+            rec?.skill && (
+              <div class="flex flex-wrap gap-x-4 gap-y-1 px-6 py-3.5">
+                <dt class="w-40 shrink-0 font-semibold text-gray-700 dark:text-slate-300">Recommended for</dt>
+                <dd class="text-gray-600 dark:text-slate-400 capitalize">{rec.skill} paddlers</dd>
+              </div>
+            )
+          }
+          {
+            rec && rec.water_condition.length > 0 && (
+              <div class="flex flex-wrap gap-x-4 gap-y-1 px-6 py-3.5">
+                <dt class="w-40 shrink-0 font-semibold text-gray-700 dark:text-slate-300">Best water</dt>
+                <dd class="text-gray-600 dark:text-slate-400">{rec.water_condition.join(', ')}</dd>
+              </div>
+            )
+          }
+          {
+            rec?.ai_specs?.max_load && (
+              <div class="flex flex-wrap gap-x-4 gap-y-1 px-6 py-3.5">
+                <dt class="w-40 shrink-0 font-semibold text-gray-700 dark:text-slate-300">Max load</dt>
+                <dd class="text-gray-600 dark:text-slate-400">{rec.ai_specs.max_load}</dd>
+              </div>
+            )
+          }
+          <div class="flex flex-wrap gap-x-4 gap-y-1 px-6 py-3.5">
             <dt class="w-40 shrink-0 font-semibold text-gray-700 dark:text-slate-300">Inventory</dt>
             <dd class="text-gray-600 dark:text-slate-400">Limited available stock</dd>
           </div>
@@ -768,9 +732,9 @@ const productExtraData: Record<string, unknown> = {
           <div class="flex flex-wrap gap-x-4 gap-y-1 px-6 py-3.5">
             <dt class="w-40 shrink-0 font-semibold text-gray-700 dark:text-slate-300">Shipping</dt>
             <dd class="text-gray-600 dark:text-slate-400">
-              International delivery available ·{' '}
+              Ships from Weihai, China · International delivery available ·{' '}
               <a href="/international-shipping/" class="font-medium text-sky-600 dark:text-sky-400 hover:underline">
-                International Shipping
+                Delivery times & options
               </a>
             </dd>
           </div>
