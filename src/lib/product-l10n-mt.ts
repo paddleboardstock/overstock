@@ -673,11 +673,11 @@ export const PRODUCT_L10N_MT: Record<string, ProductL10n> = {
       'oars-pump-set': 'พายอะลูมิเนียม 1.6 ม. จำนวน 2 ข้าง และปั๊มเท้าแรงดันสูง 5 ลิตร สำหรับบอร์ด SUP ทุกประเภท',
       'sup-cheetah-surge': 'บอร์ด SUP อเนกประสงค์ลายแรงบันดาลใจจากธรรมชาติ พรางาน EVA หลากสี',
       'sup-dolphin-wave':
-        'Dolphin-inspired all-around SUP board with medieval blue waves, high-precision EVA color-block splicing, and 360 marine aesthetics. Ideal for flatwater cruising and recreational paddling.',
+        'กระดาน SUP ได้รับแรงบันดาลใจจากปลาโลมา มาพร้อมคลื่นสีน้ำเงินยุคกลาง การต่อสี EVA ที่มีความแม่นยำสูง และความงามทางทะเล 360 องศา เหมาะสำหรับการล่องเรือบนผืนน้ำเรียบและการพายเล่นเพื่อสันทนาการ',
       'sup-explorer-11':
-        'Versatile 11 ft all-around inflatable SUP board with wide-body stability for beginners and recreational paddlers.',
+        'กระดานเป่าลมอเนกประสงค์ ขนาด 11 ฟุต เหมาะกับทุกการใช้งาน SUP พร้อมความมั่นคงของตัวกระดานขนาดกว้าง สำหรับผู้เริ่มต้นและผู้พายเพื่อการพักผ่อน',
       'sup-flowing-lotus':
-        'Eastern art-inspired all-around SUP board with lotus, koi, and dragonfly motifs, featuring laser-engraved traction pad and gradient water-flow artwork. Ideal for tranquil paddling and yoga.',
+        'บอร์ด SUP ทุกด้านที่ได้รับแรงบันดาลใจจากศิลปะตะวันออก พร้อมลวดลายดอกบัว ปลาคราฟ และแมลงปอ มีแผ่นกันลื่นสลักเลเซอร์ และงานศิลปะลวดลายน้ำไล่ระดับ เหมาะสำหรับการพายเรืออย่างสงบและโยคะ',
       'sup-jungle-mandala': 'บอร์ด SUP อเนกประสงค์ลายป่าเขตร้อนแมนดาลา พร้อม EVA สลักเลเซอร์สองชั้น',
       'sup-leviathan-wake': 'บอร์ด SUP อเนกประสงค์ลายวาฬสีน้ำเงิน',
       'sup-medusa-glow': 'บอร์ด SUP อเนกประสงค์ลายแมงกะพรุน พร้อม EVA พรีเมียม',
@@ -792,7 +792,7 @@ export const PRODUCT_L10N_MT: Record<string, ProductL10n> = {
       'sup-medusa-glow': 'Medusa Glow Series (Ang Edisyon ng Pugita)',
       'sup-ocean-pulse': 'Serye ng Ocean Pulse',
       'sup-ocean-voyager': 'Serye ng Manlalakbay sa Karagatan',
-      'sup-tropical-breeze': 'Tropical Breeze Island Escape Series',
+      'sup-tropical-breeze': 'Tropical Breeze Series ng Paglikas sa Isla',
     },
     summaries: {
       'oars-pump-set':

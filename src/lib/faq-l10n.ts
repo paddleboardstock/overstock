@@ -330,18 +330,18 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
     },
     {
       id: 'weight-limit',
-      question: 'What is the weight limit?',
+      question: 'Was ist die Gewichtsgrenze?',
       answer:
-        'Our All-Around SUPs support up to 220 lbs. The Touring and Yoga series support up to 250 lbs. For tandem paddling or heavier riders, choose a wider, higher-volume board.',
+        'Unsere All-Around-SUPs unterstützen bis zu 220 lbs. Die Touring- und Yoga-Serien unterstützen bis zu 250 lbs. Für Tandempaddeln oder schwerere Fahrer wählen Sie ein breiteres Board mit höherem Volumen.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: ['understanding-specs'],
     },
     {
       id: 'box-contents',
-      question: 'What comes in the box?',
+      question: 'Was ist in der Schachtel enthalten?',
       answer:
-        'Every Paddle Board Overstock SUP includes the board, a travel backpack, dual-action hand pump, removable fin, coil leash, and repair kit. Some models also include a carbon paddle upgrade option.',
+        'Jedes Paddle Board Overstock SUP beinhaltet das Board, einen Reiserucksack, eine Handpumpe mit Doppelwirkung, eine abnehmbare Finne, eine Spiralleine und ein Reparaturset. Einige Modelle enthalten auch eine Carbon-Paddel-Upgrade-Option.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -357,18 +357,18 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
     },
     {
       id: 'pfd-requirement',
-      question: 'Do I need a life vest on a SUP?',
+      question: 'Brauche ich eine Schwimmweste auf einem SUP?',
       answer:
-        'Yes. Many jurisdictions legally require a life vest when paddling, including on SUPs. Even where not required, a life vest is essential safety equipment. We recommend wearing it at all times on the water.',
+        'Ja. In vielen Rechtsgebieten ist eine Rettungsweste beim Paddeln gesetzlich vorgeschrieben, auch auf SUPs. Selbst dort, wo sie nicht vorgeschrieben ist, ist eine Rettungsweste eine wichtige Sicherheitsausrüstung. Wir empfehlen, sie jederzeit auf dem Wasser zu tragen.',
       category: 'safety',
       relatedProducts: [],
       relatedGuides: ['safety-tips'],
     },
     {
       id: 'paddleboard-registration',
-      question: 'Do I need to register my paddle board?',
+      question: 'Muss ich mein Stand-Up-Paddle-Board registrieren?',
       answer:
-        'In most regions, unpowered paddle boards do not require registration. Requirements vary by jurisdiction, so check your local maritime authority for the rules that apply to you.',
+        'In den meisten Regionen erfordern unmotorisierte Stand-Up-Paddle-Boards keine Registrierung. Die Anforderungen variieren je nach Rechtsgebiet, daher sollten Sie bei Ihrer örtlichen Seefahrtsbehörde nach den für Sie geltenden Regeln fragen.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: [],
@@ -411,9 +411,9 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
     },
     {
       id: 'warranty',
-      question: 'What is the Paddle Board Overstock warranty?',
+      question: 'Was ist die Paddle Board Overstock Garantie?',
       answer:
-        'Every board is backed by a 2-year limited manufacturer warranty covering defects in materials and workmanship under normal use. Accessories carry the same 2-year coverage.',
+        'Jedes Board wird durch eine 2-jährige eingeschränkte Herstellergarantie abgedeckt, die Material- und Verarbeitungsfehler bei normaler Nutzung abdeckt. Zubehörteile haben denselben 2-jährigen Schutz.',
       category: 'warranty',
       relatedProducts: [],
       relatedGuides: [],
@@ -438,18 +438,18 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
     },
     {
       id: 'return-policy',
-      question: 'What is your return policy?',
+      question: 'Wie lautet Ihre Rückgaberecht?',
       answer:
-        'We accept returns within 30 days of delivery for unused products in original packaging. Contact our support team to initiate a return — we provide a prepaid shipping label.',
+        'Wir akzeptieren Rücksendungen innerhalb von 30 Tagen nach Lieferung für unbenutzte Produkte in der Originalverpackung. Kontaktieren Sie unser Support-Team, um eine Rücksendung einzuleiten — wir stellen ein vorausbezahltes Versandetikett zur Verfügung.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
     },
     {
       id: 'paddle-length',
-      question: 'What paddle length do I need?',
+      question: 'Welche Paddellänge brauche ich?',
       answer:
-        'For SUP, the paddle should be 6–8 inches taller than your height. See our paddle guide for detailed sizing.',
+        'Für SUP sollte das Paddel 6–8 Zoll größer als Ihre Körpergröße sein. Details zur richtigen Größe finden Sie in unserem Paddelführer.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: ['choosing-paddle'],
@@ -546,9 +546,9 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
     },
     {
       id: 'saltwater-rinse',
-      question: 'Do I need to rinse my board after ocean use?',
+      question: 'Muss ich mein Brett nach dem Gebrauch im Ozean abspülen?',
       answer:
-        'Yes — always rinse your board, fins, pump, and paddle with fresh water after saltwater use. Salt crystals work into seams and valves, causing micro-leaks and corrosion. Dry the board in the shade before deflating and storing. Regular rinsing dramatically extends the life of your board.',
+        'Ja — spülen Sie immer Ihr Board, die Finnen, die Pumpe und das Paddel nach der Benutzung im Salzwasser mit Süßwasser ab. Salzkristalle gelangen in Nähte und Ventile und verursachen Mikrolecks und Korrosion. Trocknen Sie das Board im Schatten, bevor Sie es entlüften und lagern. Regelmäßiges Abspülen verlängert die Lebensdauer Ihres Boards erheblich.',
       category: 'maintenance',
       relatedProducts: [],
       relatedGuides: ['sup-maintenance'],
@@ -620,18 +620,18 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
     },
     {
       id: 'weight-limit',
-      question: 'What is the weight limit?',
+      question: '¿Cuál es el límite de peso?',
       answer:
-        'Our All-Around SUPs support up to 220 lbs. The Touring and Yoga series support up to 250 lbs. For tandem paddling or heavier riders, choose a wider, higher-volume board.',
+        'Nuestros SUP todoterreno soportan hasta 220 libras. Las series Touring y Yoga soportan hasta 250 libras. Para remar en tándem o con usuarios más pesados, elija una tabla más ancha y de mayor volumen.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: ['understanding-specs'],
     },
     {
       id: 'box-contents',
-      question: 'What comes in the box?',
+      question: '¿Qué viene en la caja?',
       answer:
-        'Every Paddle Board Overstock SUP includes the board, a travel backpack, dual-action hand pump, removable fin, coil leash, and repair kit. Some models also include a carbon paddle upgrade option.',
+        'Cada Paddle Board Overstock SUP incluye la tabla, una mochila de viaje, una bomba de mano de acción doble, aleta extraíble, correa en espiral y kit de reparación. Algunos modelos también incluyen una opción de mejora a remo de carbono.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -647,18 +647,18 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
     },
     {
       id: 'pfd-requirement',
-      question: 'Do I need a life vest on a SUP?',
+      question: '¿Necesito un chaleco salvavidas en un SUP?',
       answer:
-        'Yes. Many jurisdictions legally require a life vest when paddling, including on SUPs. Even where not required, a life vest is essential safety equipment. We recommend wearing it at all times on the water.',
+        'Sí. Muchas jurisdicciones requieren legalmente un chaleco salvavidas al remar, incluso en SUPs. Incluso donde no es obligatorio, un chaleco salvavidas es un equipo de seguridad esencial. Recomendamos usarlo en todo momento en el agua.',
       category: 'safety',
       relatedProducts: [],
       relatedGuides: ['safety-tips'],
     },
     {
       id: 'paddleboard-registration',
-      question: 'Do I need to register my paddle board?',
+      question: '¿Necesito registrar mi tabla de paddle?',
       answer:
-        'In most regions, unpowered paddle boards do not require registration. Requirements vary by jurisdiction, so check your local maritime authority for the rules that apply to you.',
+        'En la mayoría de las regiones, las tablas de paddle sin motor no requieren registro. Los requisitos varían según la jurisdicción, así que consulte con su autoridad marítima local para conocer las normas que se aplican a usted.',
       category: 'general',
       relatedProducts: [],
       relatedGuides: [],
@@ -701,9 +701,9 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
     },
     {
       id: 'warranty',
-      question: 'What is the Paddle Board Overstock warranty?',
+      question: '¿Cuál es la garantía Paddle Board Overstock?',
       answer:
-        'Every board is backed by a 2-year limited manufacturer warranty covering defects in materials and workmanship under normal use. Accessories carry the same 2-year coverage.',
+        'Cada tabla cuenta con una garantía limitada del fabricante de 2 años que cubre defectos en materiales y mano de obra bajo uso normal. Los accesorios tienen la misma cobertura de 2 años.',
       category: 'warranty',
       relatedProducts: [],
       relatedGuides: [],
@@ -728,18 +728,18 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
     },
     {
       id: 'return-policy',
-      question: 'What is your return policy?',
+      question: '¿Cuál es su política de devoluciones?',
       answer:
-        'We accept returns within 30 days of delivery for unused products in original packaging. Contact our support team to initiate a return — we provide a prepaid shipping label.',
+        'Aceptamos devoluciones dentro de los 30 días posteriores a la entrega de productos no utilizados en su embalaje original. Contacte a nuestro equipo de soporte para iniciar una devolución: proporcionamos una etiqueta de envío prepagada.',
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
     },
     {
       id: 'paddle-length',
-      question: 'What paddle length do I need?',
+      question: '¿Qué longitud de pala necesito?',
       answer:
-        'For SUP, the paddle should be 6–8 inches taller than your height. See our paddle guide for detailed sizing.',
+        'Para SUP, la pala debe ser de 6 a 8 pulgadas más alta que tu altura. Consulta nuestra guía de palas para obtener un tamaño detallado.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: ['choosing-paddle'],
@@ -836,9 +836,9 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
     },
     {
       id: 'saltwater-rinse',
-      question: 'Do I need to rinse my board after ocean use?',
+      question: '¿Necesito enjuagar mi tabla después de usarla en el océano?',
       answer:
-        'Yes — always rinse your board, fins, pump, and paddle with fresh water after saltwater use. Salt crystals work into seams and valves, causing micro-leaks and corrosion. Dry the board in the shade before deflating and storing. Regular rinsing dramatically extends the life of your board.',
+        'Sí, siempre enjuague su tabla, quillas, bomba y remo con agua dulce después de usar agua salada. Los cristales de sal se introducen en las juntas y válvulas, causando microfugas y corrosión. Seque la tabla a la sombra antes de desinflarla y guardarla. Enjuagarla regularmente prolonga significativamente la vida de su tabla.',
       category: 'maintenance',
       relatedProducts: [],
       relatedGuides: ['sup-maintenance'],
@@ -910,18 +910,18 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
     },
     {
       id: 'weight-limit',
-      question: 'What is the weight limit?',
+      question: 'Quelle est la limite de poids ?',
       answer:
-        'Our All-Around SUPs support up to 220 lbs. The Touring and Yoga series support up to 250 lbs. For tandem paddling or heavier riders, choose a wider, higher-volume board.',
+        "Nos SUP polyvalents supportent jusqu'à 220 lb. Les séries Touring et Yoga supportent jusqu'à 250 lb. Pour le pagayage en tandem ou les utilisateurs plus lourds, choisissez une planche plus large et à plus grand volume.",
       category: 'product',
       relatedProducts: [],
       relatedGuides: ['understanding-specs'],
     },
     {
       id: 'box-contents',
-      question: 'What comes in the box?',
+      question: "Qu'y a-t-il dans la boîte ?",
       answer:
-        'Every Paddle Board Overstock SUP includes the board, a travel backpack, dual-action hand pump, removable fin, coil leash, and repair kit. Some models also include a carbon paddle upgrade option.',
+        'Chaque Paddle Board Overstock SUP comprend la planche, un sac à dos de voyage, une pompe à main à double action, un aileron amovible, un leash en spirale et un kit de réparation. Certains modèles incluent également une option de mise à niveau de pagaie en carbone.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -937,18 +937,18 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
     },
     {
       id: 'pfd-requirement',
-      question: 'Do I need a life vest on a SUP?',
+      question: "Ai-je besoin d'un gilet de sauvetage sur un SUP ?",
       answer:
-        'Yes. Many jurisdictions legally require a life vest when paddling, including on SUPs. Even where not required, a life vest is essential safety equipment. We recommend wearing it at all times on the water.',
+        "Oui. De nombreuses juridictions exigent légalement un gilet de sauvetage lors de la pratique de la pagaie, y compris sur SUPs. Même lorsque ce n'est pas obligatoire, un gilet de sauvetage est un équipement de sécurité essentiel. Nous recommandons de le porter en permanence sur l'eau.",
       category: 'safety',
       relatedProducts: [],
       relatedGuides: ['safety-tips'],
     },
     {
       id: 'paddleboard-registration',
-      question: 'Do I need to register my paddle board?',
+      question: 'Dois-je enregistrer ma planche à pagaie ?',
       answer:
-        'In most regions, unpowered paddle boards do not require registration. Requirements vary by jurisdiction, so check your local maritime authority for the rules that apply to you.',
+        "Dans la plupart des régions, les planches à pagaie non motorisées ne nécessitent pas d'enregistrement. Les exigences varient selon la juridiction, il est donc conseillé de vérifier auprès de votre autorité maritime locale les règles qui s'appliquent à vous.",
       category: 'general',
       relatedProducts: [],
       relatedGuides: [],
@@ -991,9 +991,9 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
     },
     {
       id: 'warranty',
-      question: 'What is the Paddle Board Overstock warranty?',
+      question: 'Quelle est la garantie Paddle Board Overstock ?',
       answer:
-        'Every board is backed by a 2-year limited manufacturer warranty covering defects in materials and workmanship under normal use. Accessories carry the same 2-year coverage.',
+        "Chaque planche est couverte par une garantie constructeur limitée de 2 ans contre les défauts de matériaux et de fabrication dans des conditions d'utilisation normales. Les accessoires bénéficient de la même couverture de 2 ans.",
       category: 'warranty',
       relatedProducts: [],
       relatedGuides: [],
@@ -1018,18 +1018,18 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
     },
     {
       id: 'return-policy',
-      question: 'What is your return policy?',
+      question: 'Quelle est votre politique de retour ?',
       answer:
-        'We accept returns within 30 days of delivery for unused products in original packaging. Contact our support team to initiate a return — we provide a prepaid shipping label.',
+        "Nous acceptons les retours sous 30 jours après la livraison pour les produits non utilisés dans leur emballage d'origine. Contactez notre équipe d'assistance pour initier un retour — nous fournissons une étiquette d'expédition prépayée.",
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
     },
     {
       id: 'paddle-length',
-      question: 'What paddle length do I need?',
+      question: 'Quelle longueur de pagaie me faut-il ?',
       answer:
-        'For SUP, the paddle should be 6–8 inches taller than your height. See our paddle guide for detailed sizing.',
+        'Pour SUP, la pagaie devrait être 6 à 8 pouces plus haute que votre taille. Consultez notre guide des pagaies pour connaître les tailles détaillées.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: ['choosing-paddle'],
@@ -1126,9 +1126,9 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
     },
     {
       id: 'saltwater-rinse',
-      question: 'Do I need to rinse my board after ocean use?',
+      question: "Dois-je rincer ma planche après l'avoir utilisée dans l'océan ?",
       answer:
-        'Yes — always rinse your board, fins, pump, and paddle with fresh water after saltwater use. Salt crystals work into seams and valves, causing micro-leaks and corrosion. Dry the board in the shade before deflating and storing. Regular rinsing dramatically extends the life of your board.',
+        "Oui — rincez toujours votre planche, vos ailerons, votre pompe et votre pagaie à l'eau douce après une utilisation en eau salée. Les cristaux de sel pénètrent dans les coutures et les valves, provoquant des micro-fuites et de la corrosion. Séchez la planche à l'ombre avant de la dégonfler et de la ranger. Un rinçage régulier prolonge considérablement la durée de vie de votre planche.",
       category: 'maintenance',
       relatedProducts: [],
       relatedGuides: ['sup-maintenance'],
@@ -1201,18 +1201,18 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
     },
     {
       id: 'weight-limit',
-      question: 'What is the weight limit?',
+      question: 'Qual è il limite di peso?',
       answer:
-        'Our All-Around SUPs support up to 220 lbs. The Touring and Yoga series support up to 250 lbs. For tandem paddling or heavier riders, choose a wider, higher-volume board.',
+        'I nostri SUP tuttofare supportano fino a 220 libbre. Le serie Touring e Yoga supportano fino a 250 libbre. Per pagaiare in tandem o per utenti più pesanti, scegli una tavola più larga e con maggior volume.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: ['understanding-specs'],
     },
     {
       id: 'box-contents',
-      question: 'What comes in the box?',
+      question: "Cosa c'è nella scatola?",
       answer:
-        'Every Paddle Board Overstock SUP includes the board, a travel backpack, dual-action hand pump, removable fin, coil leash, and repair kit. Some models also include a carbon paddle upgrade option.',
+        "Ogni Paddle Board Overstock SUP include la tavola, uno zaino da viaggio, una pompa a doppia azione, una pinna rimovibile, un leash a spirale e un kit di riparazione. Alcuni modelli includono anche un'opzione di aggiornamento alla pagaia in carbonio.",
       category: 'product',
       relatedProducts: [],
       relatedGuides: [],
@@ -1228,18 +1228,18 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
     },
     {
       id: 'pfd-requirement',
-      question: 'Do I need a life vest on a SUP?',
+      question: 'Ho bisogno di un giubbotto di salvataggio su un SUP?',
       answer:
-        'Yes. Many jurisdictions legally require a life vest when paddling, including on SUPs. Even where not required, a life vest is essential safety equipment. We recommend wearing it at all times on the water.',
+        "Sì. In molte giurisdizioni è legalmente richiesto un giubbotto di salvataggio durante la pagaia, anche su SUPs. Anche dove non è richiesto, un giubbotto di salvataggio è un equipaggiamento di sicurezza essenziale. Si consiglia di indossarlo in ogni momento sull'acqua.",
       category: 'safety',
       relatedProducts: [],
       relatedGuides: ['safety-tips'],
     },
     {
       id: 'paddleboard-registration',
-      question: 'Do I need to register my paddle board?',
+      question: 'Devo registrare il mio paddle board?',
       answer:
-        'In most regions, unpowered paddle boards do not require registration. Requirements vary by jurisdiction, so check your local maritime authority for the rules that apply to you.',
+        "Nella maggior parte delle regioni, le tavole da paddle non motorizzate non richiedono registrazione. I requisiti variano a seconda della giurisdizione, quindi controlla con l'autorità marittima locale le regole che si applicano a te.",
       category: 'general',
       relatedProducts: [],
       relatedGuides: [],
@@ -1282,9 +1282,9 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
     },
     {
       id: 'warranty',
-      question: 'What is the Paddle Board Overstock warranty?',
+      question: 'Qual è la garanzia Paddle Board Overstock?',
       answer:
-        'Every board is backed by a 2-year limited manufacturer warranty covering defects in materials and workmanship under normal use. Accessories carry the same 2-year coverage.',
+        "Ogni tavola è coperta da una garanzia limitata del produttore di 2 anni che copre difetti nei materiali e nella lavorazione durante l'uso normale. Gli accessori godono della stessa copertura di 2 anni.",
       category: 'warranty',
       relatedProducts: [],
       relatedGuides: [],
@@ -1309,18 +1309,18 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
     },
     {
       id: 'return-policy',
-      question: 'What is your return policy?',
+      question: 'Qual è la vostra politica di reso?',
       answer:
-        'We accept returns within 30 days of delivery for unused products in original packaging. Contact our support team to initiate a return — we provide a prepaid shipping label.',
+        "Accettiamo resi entro 30 giorni dalla consegna per prodotti non utilizzati nella confezione originale. Contatta il nostro team di assistenza per avviare un reso — forniamo un'etichetta di spedizione prepagata.",
       category: 'ordering',
       relatedProducts: [],
       relatedGuides: [],
     },
     {
       id: 'paddle-length',
-      question: 'What paddle length do I need?',
+      question: 'Di quale lunghezza della pagaia ho bisogno?',
       answer:
-        'For SUP, the paddle should be 6–8 inches taller than your height. See our paddle guide for detailed sizing.',
+        'Per SUP, la pagaia dovrebbe essere alta 6-8 pollici in più della tua altezza. Consulta la nostra guida alle pagaie per le dimensioni dettagliate.',
       category: 'product',
       relatedProducts: [],
       relatedGuides: ['choosing-paddle'],
@@ -1417,9 +1417,9 @@ export const FAQS_BY_LANG: Record<string, FaqRecord[]> = {
     },
     {
       id: 'saltwater-rinse',
-      question: 'Do I need to rinse my board after ocean use?',
+      question: "Devo risciacquare la mia tavola dopo l'uso in mare?",
       answer:
-        'Yes — always rinse your board, fins, pump, and paddle with fresh water after saltwater use. Salt crystals work into seams and valves, causing micro-leaks and corrosion. Dry the board in the shade before deflating and storing. Regular rinsing dramatically extends the life of your board.',
+        "Sì — lava sempre la tua tavola, le pinne, la pompa e la pagaia con acqua dolce dopo l'uso in acqua salata. I cristalli di sale si insinuano nelle cuciture e nelle valvole, causando microperdite e corrosione. Asciuga la tavola all'ombra prima di sgonfiarla e riporla. Lavaggi regolari prolungano notevolmente la vita della tua tavola.",
       category: 'maintenance',
       relatedProducts: [],
       relatedGuides: ['sup-maintenance'],
