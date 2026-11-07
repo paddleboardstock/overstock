@@ -70,7 +70,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
       problem:
         'Paddler, die ein optisch auffälliges Board wünschen, benötigen hochwertige Motive, die unter Salzwasser- und UV-Einwirkung weder ausbleichen, abblättern noch verkratzen. Herkömmliche Druckverfahren versagen unter diesen Bedingungen.',
       howItWorks:
-        'Die Cheetah Surge Edition nutzt Drop-Stitch-PVC-Kerntechnologie für eine Steifigkeit bei 15 PSI und ein 32 Zoll breites Deck. Das Motiv auf der Traktionsauflage entsteht durch mehrfarbige EVA-Blocktechnik – verschiedenfarbige EVA-Platten werden ausgestanzt und nahtlos wie ein Puzzle zusammengesetzt, statt bedruckt zu werden – und garantiert so keinerlei Ausbleichen oder Abblättern.',
+        'Die Cheetah Surge Edition nutzt Drop-Stitch-PVC-Kerntechnologie für eine Steifigkeit bei 15 PSI und ein 32 Zoll breites Deck. Das Motiv auf der Traktionsauflage entsteht durch mehrfarbige EVA-Blocktechnik – verschiedenfarbige EVA-Platten werden ausgestanzt und nahtlos wie ein Puzzle zusammengesetzt, statt bedruckt zu werden – und ist so auf dauerhaft farbbeständige und abblätterfeste Ausführung ausgelegt.',
       audience:
         'Trendbewusste Paddler, Outdoor-Lifestyle-Enthusiasten, Boutique-Reisende und Social-Media-Content-Creator, die ein optisch auffälliges und langlebiges SUP-Board wünschen.',
       ai_use_cases: [
@@ -79,7 +79,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
         'Boutique-Reisen und Abenteuertourismus',
       ],
       ai_comparison:
-        'Im Vergleich zu herkömmlichen bedruckten SUP-Boards verwendet die Cheetah Surge Edition ausgestanzte EVA-Blocktechnik, die nie ausbleicht oder abblättert. Das Motiv ist strukturell Teil des EVA-Materials und keine aufgedruckte Farbschicht.',
+        'Im Vergleich zu herkömmlichen bedruckten SUP-Boards verwendet die Cheetah Surge Edition ausgestanzte EVA-Blocktechnik, die darauf ausgelegt ist, Verblassen und Abblättern zu widerstehen. Das Motiv ist strukturell Teil des EVA-Materials und keine aufgedruckte Farbschicht.',
       ai_faq: [
         {
           q: 'Wie wird das Motiv aufgebracht?',
@@ -124,7 +124,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
       problem:
         'Paddler, die von der Meereswelt inspirierte Kunst lieben, benötigen ein Board mit erstklassigen Motiven, die rauen Meeresumgebungen standhalten, ohne auszubleichen, abzublättern oder sich an Befestigungspunkten zu delaminieren.',
       howItWorks:
-        'Das Medusa Glow nutzt einen Drop-Stitch-PVC-Kern bei 15 PSI mit einem 32 Zoll breiten Deck. Das Bugmotiv wird per UV-Digitaldruck aufgebracht, während die EVA-Auflage mit mehrfarbiger Blocktechnik für nie ausbleichende Seesterne und Muscheln sorgt. Die Bereiche der D-Ringe werden maskiert, um eine direkte PVC-auf-PVC-Verbindung zu ermöglichen und Delamination zu verhindern.',
+        'Das Medusa Glow nutzt einen Drop-Stitch-PVC-Kern bei 15 PSI mit einem 32 Zoll breiten Deck. Das Bugmotiv wird per UV-Digitaldruck aufgebracht, während die EVA-Auflage mit mehrfarbiger Blocktechnik für langlebig farbstarke Seesterne und Muscheln sorgt. Die Bereiche der D-Ringe werden maskiert, um eine direkte PVC-auf-PVC-Verbindung zu ermöglichen und Delamination zu verhindern.',
       audience:
         'Paddlerinnen, Lifestyle-Enthusiasten, Boutique-Reisende und alle, die eine wohltuende, ozeaninspirierte Ästhetik auf dem Wasser schätzen.',
       ai_use_cases: [
@@ -133,7 +133,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
         'Tropische und küstennahe Paddelabenteuer',
       ],
       ai_comparison:
-        'Im Vergleich zu herkömmlichen bedruckten SUP-Boards verwendet das Medusa Glow für die Motive auf der Standfläche EVA-Blocktechnik – die Farben sind struktureller Bestandteil des EVA-Materials und keine aufgedruckte Farbe, weshalb sie nie ausbleichen.',
+        'Im Vergleich zu herkömmlichen bedruckten SUP-Boards verwendet das Medusa Glow für die Motive auf der Standfläche EVA-Blocktechnik – die Farben sind struktureller Bestandteil des EVA-Materials und keine aufgedruckte Farbe, weshalb sie darauf ausgelegt sind, Verblassen zu widerstehen.',
       ai_faq: [
         {
           q: 'Welches Farbschema wird verwendet?',
@@ -187,7 +187,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
         'Langstrecken-Touren und Entdeckungen',
       ],
       ai_comparison:
-        'Im Vergleich zu herkömmlichen bedruckten SUP-Boards verwendet das Ocean Voyager mehrfarbige EVA-Blocktechnik, die nie verkratzt, abblättert oder ausbleicht. Die Präzision der Stanzung garantiert unter den Füßen perfekt ebene Flächen.',
+        'Im Vergleich zu herkömmlichen bedruckten SUP-Boards verwendet das Ocean Voyager mehrfarbige EVA-Blocktechnik, die darauf ausgelegt ist, Kratzer, Abblättern und Verblassen zu widerstehen. Die Präzision der Stanzung garantiert unter den Füßen perfekt ebene Flächen.',
       ai_faq: [
         {
           q: 'Was ist die Inspiration für den Namen?',
@@ -366,7 +366,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
       problem:
         'Los remeros que quieren una tabla que destaque visualmente necesitan un arte premium que no se desvanezca, no se despegue ni se raye con la exposición al agua salada y a los rayos UV. Los métodos de estampado tradicionales fallan en estas condiciones.',
       howItWorks:
-        'La Cheetah Surge Edition utiliza tecnología de núcleo de PVC drop-stitch que alcanza una rigidez de 15 PSI con una cubierta de 32 pulgadas de ancho. El arte de la plataforma de tracción se crea mediante piezas de bloques de EVA multicolor: láminas de EVA de distintos colores se troquelan y se ensamblan como un rompecabezas sin costuras, en lugar de imprimirse, lo que garantiza que no se desvanezca ni se despegue.',
+        'La Cheetah Surge Edition utiliza tecnología de núcleo de PVC drop-stitch que alcanza una rigidez de 15 PSI con una cubierta de 32 pulgadas de ancho. El arte de la plataforma de tracción se crea mediante piezas de bloques de EVA multicolor: láminas de EVA de distintos colores se troquelan y se ensamblan como un rompecabezas sin costuras, en lugar de imprimirse, lo que la hace resistente al desvanecimiento y al desprendimiento.',
       audience:
         'Remeros a la moda, entusiastas del estilo de vida al aire libre, viajeros boutique y creadores de contenido para redes sociales que quieren una tabla de SUP visualmente llamativa y duradera.',
       ai_use_cases: [
@@ -375,7 +375,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
         'Viajes boutique y turismo de aventura',
       ],
       ai_comparison:
-        'En comparación con las tablas de SUP estándar impresas, la Cheetah Surge Edition utiliza piezas de bloques de EVA troqueladas que nunca se desvanecen ni se despegan. El arte forma parte estructural del material de EVA y no es una capa de tinta superficial.',
+        'En comparación con las tablas de SUP estándar impresas, la Cheetah Surge Edition utiliza piezas de bloques de EVA troqueladas diseñadas para resistir el desvanecimiento y el desprendimiento. El arte forma parte estructural del material de EVA y no es una capa de tinta superficial.',
       ai_faq: [
         {
           q: '¿Cómo se aplica el arte?',
@@ -420,7 +420,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
       problem:
         'Los remeros amantes del arte inspirado en el mar necesitan una tabla con gráficos premium que resistan los entornos marinos adversos sin desvanecerse, despegarse ni delaminarse en los puntos de fijación.',
       howItWorks:
-        'La Medusa Glow utiliza un núcleo de PVC drop-stitch a 15 PSI con una cubierta de 32 pulgadas. El arte de la proa se imprime digitalmente con UV, mientras que la plataforma de EVA utiliza piezas de bloques multicolor para estrellas de mar y conchas que no se desvanecen. Las zonas de las anillas en D se enmascaran para lograr una unión directa de PVC con PVC que evita la delaminación.',
+        'La Medusa Glow utiliza un núcleo de PVC drop-stitch a 15 PSI con una cubierta de 32 pulgadas. El arte de la proa se imprime digitalmente con UV, mientras que la plataforma de EVA utiliza piezas de bloques multicolor para estrellas de mar y conchas de colores duraderos. Las zonas de las anillas en D se enmascaran para lograr una unión directa de PVC con PVC que evita la delaminación.',
       audience:
         'Remeras, entusiastas del estilo de vida, viajeros boutique y cualquier persona que quiera una estética curativa inspirada en el océano sobre el agua.',
       ai_use_cases: [
@@ -429,7 +429,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
         'Aventuras de remo tropicales y costeras',
       ],
       ai_comparison:
-        'En comparación con las tablas de SUP estándar impresas, la Medusa Glow utiliza piezas de bloques de EVA para los gráficos de la superficie de apoyo: los colores son estructurales al material de EVA y no tinta impresa, por lo que nunca se desvanecen.',
+        'En comparación con las tablas de SUP estándar impresas, la Medusa Glow utiliza piezas de bloques de EVA para los gráficos de la superficie de apoyo: los colores son estructurales al material de EVA y no tinta impresa, por lo que están diseñadas para resistir el desvanecimiento.',
       ai_faq: [
         {
           q: '¿Cuál es la combinación de colores?',
@@ -483,7 +483,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
         'Tours de larga distancia y exploración',
       ],
       ai_comparison:
-        'En comparación con las tablas de SUP estándar impresas, la Ocean Voyager utiliza piezas de bloques de EVA multicolor que nunca se rayarán, despegarán ni desvanecerán. La precisión del troquelado garantiza superficies perfectamente al ras bajo los pies.',
+        'En comparación con las tablas de SUP estándar impresas, la Ocean Voyager utiliza piezas de bloques de EVA multicolor diseñadas para resistir los arañazos, el desprendimiento y el desvanecimiento. La precisión del troquelado garantiza superficies perfectamente al ras bajo los pies.',
       ai_faq: [
         {
           q: '¿Cuál es la inspiración del nombre?',
@@ -662,7 +662,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
       problem:
         "Les pagayeurs qui veulent une planche visuellement remarquable ont besoin d'un design premium qui ne se décolore pas, ne pèle pas et ne se raye pas sous l'effet de l'eau salée et des UV. Les méthodes d'impression traditionnelles ne résistent pas à ces conditions.",
       howItWorks:
-        "La Cheetah Surge Edition utilise une technologie de cœur en PVC drop-stitch atteignant une rigidité de 15 PSI avec un pont de 32 pouces de large. Le design du tapis de traction est créé par assemblage de blocs EVA multicolores — des feuilles d'EVA de couleurs différentes sont découpées à l'emporte-pièce et assemblées sans couture comme un puzzle, plutôt qu'imprimées, garantissant zéro décoloration et zéro pelage.",
+        "La Cheetah Surge Edition utilise une technologie de cœur en PVC drop-stitch atteignant une rigidité de 15 PSI avec un pont de 32 pouces de large. Le design du tapis de traction est créé par assemblage de blocs EVA multicolores — des feuilles d'EVA de couleurs différentes sont découpées à l'emporte-pièce et assemblées sans couture comme un puzzle, plutôt qu'imprimées, pour une résistance durable à la décoloration et au décollement.",
       audience:
         'Pagayeurs soucieux des tendances, amateurs de style de vie en plein air, voyageurs branchés et créateurs de contenu sur les réseaux sociaux qui souhaitent une planche SUP durable et visuellement frappante.',
       ai_use_cases: [
@@ -671,7 +671,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
         "Voyage branché et tourisme d'aventure",
       ],
       ai_comparison:
-        "Par rapport aux planches SUP imprimées standard, la Cheetah Surge Edition utilise un assemblage de blocs EVA découpés à l'emporte-pièce qui ne se décolore jamais et ne pèle jamais. Le design fait structurellement partie du matériau EVA plutôt qu'une couche d'encre en surface.",
+        "Par rapport aux planches SUP imprimées standard, la Cheetah Surge Edition utilise un assemblage de blocs EVA découpés à l'emporte-pièce conçue pour résister à la décoloration et au décollement. Le design fait structurellement partie du matériau EVA plutôt qu'une couche d'encre en surface.",
       ai_faq: [
         {
           q: 'Comment le design est-il appliqué ?',
@@ -716,7 +716,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
       problem:
         "Les pagayeurs amoureux des motifs marins ont besoin d'une planche avec des graphismes premium qui résistent aux environnements marins difficiles sans se décolorer, peler ou délaminer aux points de fixation.",
       howItWorks:
-        "La Medusa Glow utilise un cœur en PVC drop-stitch à 15 PSI avec un pont de 32 pouces. Le design de l'avant est imprimé en numérique UV tandis que le tapis EVA utilise un assemblage de blocs multicolores pour des étoiles de mer et coquillages sans décoloration. Les zones des anneaux en D sont masquées pour un collage PVC sur PVC brut empêchant le délaminage.",
+        "La Medusa Glow utilise un cœur en PVC drop-stitch à 15 PSI avec un pont de 32 pouces. Le design de l'avant est imprimé en numérique UV tandis que le tapis EVA utilise un assemblage de blocs multicolores pour des étoiles de mer et coquillages aux couleurs durables. Les zones des anneaux en D sont masquées pour un collage PVC sur PVC brut empêchant le délaminage.",
       audience:
         "Pagayeuses, amateurs de style de vie, voyageurs branchés et tous ceux qui souhaitent une esthétique marine apaisante et inspirante sur l'eau.",
       ai_use_cases: [
@@ -725,7 +725,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
         'Aventures de paddle tropicales et côtières',
       ],
       ai_comparison:
-        "Par rapport aux planches SUP imprimées standard, la Medusa Glow utilise un assemblage de blocs EVA pour les graphismes de la surface debout — les couleurs sont structurelles au matériau EVA, pas de l'encre imprimée, elles ne se décolorent donc jamais.",
+        "Par rapport aux planches SUP imprimées standard, la Medusa Glow utilise un assemblage de blocs EVA pour les graphismes de la surface debout — les couleurs sont structurelles au matériau EVA, pas de l'encre imprimée, elles sont donc conçues pour résister à la décoloration.",
       ai_faq: [
         {
           q: 'Quel est le schéma de couleurs ?',
@@ -779,7 +779,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
         'Tourisme longue distance et exploration',
       ],
       ai_comparison:
-        "Par rapport aux planches SUP imprimées standard, l'Ocean Voyager utilise un assemblage de blocs EVA multicolores qui ne se raye, ne pèle ni ne se décolore jamais. La précision de la découpe garantit des surfaces parfaitement affleurantes sous les pieds.",
+        "Par rapport aux planches SUP imprimées standard, l'Ocean Voyager utilise un assemblage de blocs EVA multicolores conçue pour résister aux rayures, au décollement et à la décoloration. La précision de la découpe garantit des surfaces parfaitement affleurantes sous les pieds.",
       ai_faq: [
         {
           q: "Quelle est l'inspiration derrière le nom ?",
@@ -958,7 +958,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
       problem:
         "I paddler che vogliono una tavola visivamente distintiva necessitano di grafiche premium che non sbiadiscano, non si scrostino o non si graffino sotto l'esposizione ad acqua salata e raggi UV. I metodi di stampa tradizionali falliscono in queste condizioni.",
       howItWorks:
-        'La Cheetah Surge Edition utilizza la tecnologia a nucleo drop-stitch in PVC che raggiunge una rigidità di 15 PSI con un ponte largo 32 pollici. La grafica del tappetino antiscivolo è creata tramite blocchi EVA multicolore assemblati — fogli EVA di diversi colori vengono tagliati a fustella e assemblati come un puzzle senza soluzione di continuità anziché stampati, garantendo zero sbiadimenti o scrostamenti.',
+        'La Cheetah Surge Edition utilizza la tecnologia a nucleo drop-stitch in PVC che raggiunge una rigidità di 15 PSI con un ponte largo 32 pollici. La grafica del tappetino antiscivolo è creata tramite blocchi EVA multicolore assemblati — fogli EVA di diversi colori vengono tagliati a fustella e assemblati come un puzzle senza soluzione di continuità anziché stampati, per una resistenza duratura allo sbiadimento e allo scrostamento.',
       audience:
         "Paddler attenti alle tendenze, appassionati di lifestyle all'aria aperta, viaggiatori boutique e creatori di contenuti per i social media che desiderano una tavola SUP visivamente accattivante e duratura.",
       ai_use_cases: [
@@ -967,7 +967,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
         "Viaggi boutique e turismo d'avventura",
       ],
       ai_comparison:
-        'Rispetto alle tavole SUP standard stampate, la Cheetah Surge Edition utilizza blocchi EVA tagliati a fustella che non sbiadiscono né si scrostano mai. La grafica è strutturalmente parte del materiale EVA anziché uno strato di inchiostro superficiale.',
+        'Rispetto alle tavole SUP standard stampate, la Cheetah Surge Edition utilizza blocchi EVA tagliati a fustella progettate per resistere allo sbiadimento e allo scrostamento. La grafica è strutturalmente parte del materiale EVA anziché uno strato di inchiostro superficiale.',
       ai_faq: [
         {
           q: 'Come viene applicata la grafica?',
@@ -1012,7 +1012,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
       problem:
         "I paddler amanti dell'arte ispirata al mare necessitano di una tavola con grafiche premium in grado di resistere ad ambienti marini difficili senza sbiadire, scrostarsi o delaminarsi nei punti di attacco.",
       howItWorks:
-        'La Medusa Glow utilizza un nucleo drop-stitch in PVC a 15 PSI con ponte da 32 pollici. La grafica di prua è stampata digitalmente UV, mentre il tappetino EVA usa blocchi multicolore assemblati per stelle marine e conchiglie che non sbiadiscono. Le zone degli anelli a D sono mascherate per un incollaggio PVC-su-PVC grezzo che previene la delaminazione.',
+        'La Medusa Glow utilizza un nucleo drop-stitch in PVC a 15 PSI con ponte da 32 pollici. La grafica di prua è stampata digitalmente UV, mentre il tappetino EVA usa blocchi multicolore assemblati per stelle marine e conchiglie dai colori duraturi. Le zone degli anelli a D sono mascherate per un incollaggio PVC-su-PVC grezzo che previene la delaminazione.',
       audience:
         "Paddler donne, appassionati di lifestyle, viaggiatori boutique e chiunque desideri un'estetica curativa ispirata all'oceano in acqua.",
       ai_use_cases: [
@@ -1021,7 +1021,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
         'Avventure di paddle tropicali e costiere',
       ],
       ai_comparison:
-        'Rispetto alle tavole SUP standard stampate, la Medusa Glow utilizza blocchi EVA assemblati per le grafiche della superficie calpestabile — i colori sono strutturali al materiale EVA, non inchiostro stampato, quindi non sbiadiscono mai.',
+        'Rispetto alle tavole SUP standard stampate, la Medusa Glow utilizza blocchi EVA assemblati per le grafiche della superficie calpestabile — i colori sono strutturali al materiale EVA, non inchiostro stampato, quindi sono progettate per resistere allo sbiadimento.',
       ai_faq: [
         {
           q: 'Qual è la combinazione di colori?',
@@ -1075,7 +1075,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
         'Tour ed esplorazioni a lunga distanza',
       ],
       ai_comparison:
-        'Rispetto alle tavole SUP standard stampate, la Ocean Voyager utilizza blocchi EVA multicolore assemblati che non si graffiano, non si scrostano né sbiadiscono mai. La precisione del taglio a fustella garantisce superfici perfettamente a filo sotto i piedi.',
+        'Rispetto alle tavole SUP standard stampate, la Ocean Voyager utilizza blocchi EVA multicolore assemblati progettate per resistere ai graffi, allo scrostamento e allo sbiadimento. La precisione del taglio a fustella garantisce superfici perfettamente a filo sotto i piedi.',
       ai_faq: [
         {
           q: "Qual è l'ispirazione del nome?",
@@ -1257,7 +1257,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
       problem:
         'Гребцам, которым нужен визуально выделяющийся борд, требуется премиальный арт, который не выцветает, не отслаивается и не царапается от солёной воды и ультрафиолета. Традиционные методы печати не выдерживают таких условий.',
       howItWorks:
-        'Cheetah Surge Edition использует ядро drop-stitch ПВХ, достигающее жёсткости 15 PSI, с широкой палубой 32 дюйма. Арт-оформление подушки палубы создаётся техникой разноцветной EVA-блочной инкрустации — листы EVA разных цветов точно вырезаются и соединяются бесшовно, как пазл, вместо печати, что гарантирует нулевое выцветание и отслоение.',
+        'Cheetah Surge Edition использует ядро drop-stitch ПВХ, достигающее жёсткости 15 PSI, с широкой палубой 32 дюйма. Арт-оформление подушки палубы создаётся техникой разноцветной EVA-блочной инкрустации — листы EVA разных цветов точно вырезаются и соединяются бесшовно, как пазл, вместо печати, что обеспечивает устойчивость к выцветанию и отслаиванию.',
       audience:
         'Следящие за стилем гребцы, энтузиасты активного отдыха, бутик-путешественники и авторы контента для соцсетей, которым нужен яркий и прочный SUP-борд.',
       ai_use_cases: [
@@ -1266,7 +1266,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
         'Бутик-путешествия и приключенческий туризм',
       ],
       ai_comparison:
-        'По сравнению с обычными печатными SUP-бордами Cheetah Surge Edition использует вырезанную технику EVA-блочной инкрустации, которая никогда не выцветает и не отслаивается. Арт является структурной частью материала EVA, а не поверхностной печатью.',
+        'По сравнению с обычными печатными SUP-бордами Cheetah Surge Edition использует вырезанную технику EVA-блочной инкрустации, которая рассчитана на устойчивость к выцветанию и отслаиванию. Арт является структурной частью материала EVA, а не поверхностной печатью.',
       ai_faq: [
         {
           q: 'Как наносится арт?',
@@ -1311,7 +1311,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
       problem:
         'Гребцам, которые любят морской арт, нужен борд с премиальной графикой, выдерживающей суровые морские условия без выцветания, отслоения или расслоения в точках крепления.',
       howItWorks:
-        'Medusa Glow использует ядро drop-stitch ПВХ при 15 PSI с палубой 32 дюйма. Мотив на носу наносится УФ-цифровой печатью, а подушка EVA использует разноцветную блочную инкрустацию для невыцветающих морских звёзд и ракушек. Зоны D-колец маскируются для прямого соединения ПВХ с ПВХ, предотвращающего расслоение.',
+        'Medusa Glow использует ядро drop-stitch ПВХ при 15 PSI с палубой 32 дюйма. Мотив на носу наносится УФ-цифровой печатью, а подушка EVA использует разноцветную блочную инкрустацию для морских звёзд и ракушек с долговечными цветами. Зоны D-колец маскируются для прямого соединения ПВХ с ПВХ, предотвращающего расслоение.',
       audience:
         'Гребцы-женщины, энтузиасты стиля жизни, бутик-путешественники и все, кто хочет целительную морскую эстетику на воде.',
       ai_use_cases: [
@@ -1320,7 +1320,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
         'Тропические и прибрежные гребные приключения',
       ],
       ai_comparison:
-        'По сравнению с обычными печатными SUP-бордами Medusa Glow использует технику EVA-блочной инкрустации для графики на поверхности стояния — цвета структурно встроены в материал EVA, а не напечатаны краской, поэтому они никогда не выцветают.',
+        'По сравнению с обычными печатными SUP-бордами Medusa Glow использует технику EVA-блочной инкрустации для графики на поверхности стояния — цвета структурно встроены в материал EVA, а не напечатаны краской, поэтому они рассчитаны на устойчивость к выцветанию.',
       ai_faq: [
         {
           q: 'Какова цветовая палитра?',
@@ -1374,7 +1374,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
         'Длинные прогулки и исследование акваторий',
       ],
       ai_comparison:
-        'По сравнению с обычными печатными SUP-бордами Ocean Voyager использует разноцветную EVA-блочную инкрустацию, которая никогда не царапается, не отслаивается и не выцветает. Точность вырезки обеспечивает абсолютно ровные поверхности под ногами.',
+        'По сравнению с обычными печатными SUP-бордами Ocean Voyager использует разноцветную EVA-блочную инкрустацию, которая рассчитана на устойчивость к царапинам, отслаиванию и выцветанию. Точность вырезки обеспечивает абсолютно ровные поверхности под ногами.',
       ai_faq: [
         {
           q: 'В чём смысл названия?',
@@ -1556,7 +1556,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
       problem:
         'Paddleboarders die een board willen dat visueel opvalt, hebben premium kunst nodig die niet verbleekt, bladdert of krast door zout water en UV-blootstelling. Traditionele drukmethoden houden dit niet vol.',
       howItWorks:
-        'De Cheetah Surge Edition gebruikt drop-stitch PVC-kerntechnologie die 15 PSI stijfheid bereikt met een breed dek van 32 inch. Het kunstwerk op de deckpad wordt gecreëerd met multikleuren EVA-bloktechniek — EVA-vellen in verschillende kleuren worden precies uitgesneden en naadloos samengevoegd als een puzzel in plaats van bedrukt, wat garandeert dat er geen verbleking of bladdering optreedt.',
+        'De Cheetah Surge Edition gebruikt drop-stitch PVC-kerntechnologie die 15 PSI stijfheid bereikt met een breed dek van 32 inch. Het kunstwerk op de deckpad wordt gecreëerd met multikleuren EVA-bloktechniek — EVA-vellen in verschillende kleuren worden precies uitgesneden en naadloos samengevoegd als een puzzel in plaats van bedrukt, wat het ontwerp bestand maakt tegen verbleken en afbladderen.',
       audience:
         'Modebewuste paddleboarders, outdoorliefhebbers, boutique-reizigers en makers van socialmedia-content die een opvallend en duurzaam SUP-board willen.',
       ai_use_cases: [
@@ -1565,7 +1565,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
         'Boutique-reizen en avontuurlijk toerisme',
       ],
       ai_comparison:
-        'Vergeleken met gewone bedrukte SUP-boards gebruikt de Cheetah Surge Edition uitgesneden EVA-bloktechniek die nooit verbleekt of bladdert. Het kunstwerk is een structureel onderdeel van het EVA-materiaal in plaats van een oppervlakkige druk.',
+        'Vergeleken met gewone bedrukte SUP-boards gebruikt de Cheetah Surge Edition uitgesneden EVA-bloktechniek die ontworpen is om verbleken en afbladderen te weerstaan. Het kunstwerk is een structureel onderdeel van het EVA-materiaal in plaats van een oppervlakkige druk.',
       ai_faq: [
         {
           q: 'Hoe wordt de kunst aangebracht?',
@@ -1610,7 +1610,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
       problem:
         'Paddleboarders die houden van oceaan-geïnspireerde kunst, hebben een board nodig met premium graphics die ruige mariene omgevingen doorstaan zonder te verbleken, bladderen of te delamineren op bevestigingspunten.',
       howItWorks:
-        'De Medusa Glow gebruikt een drop-stitch PVC-kern bij 15 PSI met een dek van 32 inch. Het boegmotief is UV-digitaal geprint, terwijl de EVA-pad multikleurige bloktechniek gebruikt voor niet-verblekende zeesterren en schelpen. De D-ring-gebieden worden gemaskeerd voor blote PVC-op-PVC-binding die delaminatie voorkomt.',
+        'De Medusa Glow gebruikt een drop-stitch PVC-kern bij 15 PSI met een dek van 32 inch. Het boegmotief is UV-digitaal geprint, terwijl de EVA-pad multikleurige bloktechniek gebruikt voor zeesterren en schelpen met duurzame kleuren. De D-ring-gebieden worden gemaskeerd voor blote PVC-op-PVC-binding die delaminatie voorkomt.',
       audience:
         'Vrouwelijke paddleboarders, levensstijl-liefhebbers, boutique-reizigers en iedereen die een helende oceaan-geïnspireerde esthetiek op het water wil.',
       ai_use_cases: [
@@ -1619,7 +1619,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
         'Tropische en kustnabije paddle-avonturen',
       ],
       ai_comparison:
-        'Vergeleken met gewone bedrukte SUP-boards gebruikt de Medusa Glow EVA-bloktechniek voor de graphics op het staande oppervlak — de kleuren zijn structureel in het EVA-materiaal aangebracht, niet geprint, dus ze verbleken nooit.',
+        'Vergeleken met gewone bedrukte SUP-boards gebruikt de Medusa Glow EVA-bloktechniek voor de graphics op het staande oppervlak — de kleuren zijn structureel in het EVA-materiaal aangebracht, niet geprint, dus ze zijn ontworpen om verbleken te weerstaan.',
       ai_faq: [
         {
           q: 'Wat is het kleurenpalet?',
@@ -1669,7 +1669,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
         'Oceaanliefhebbers, schildpadden-enthousiastelingen, trendbewuste paddleboarders en boutique-reizigers die een premium pakket met gecoördineerde levensstijl zoeken.',
       ai_use_cases: ['Paddleboarden met marien behoudthema', 'Socialmedia-content', 'Langere tochten en verkenning'],
       ai_comparison:
-        'Vergeleken met gewone bedrukte SUP-boards gebruikt de Ocean Voyager multikleurige EVA-bloktechniek die nooit krast, bladdert of verbleekt. De snijprecisie garandeert volledig vlakke oppervlakken onder de voeten.',
+        'Vergeleken met gewone bedrukte SUP-boards gebruikt de Ocean Voyager multikleurige EVA-bloktechniek die ontworpen is om krassen, afbladderen en verbleken te weerstaan. De snijprecisie garandeert volledig vlakke oppervlakken onder de voeten.',
       ai_faq: [
         {
           q: 'Wat is de naaminspiratie?',
@@ -1847,7 +1847,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
       problem:
         'Paddleboarderzy, którzy chcą deskę wyróżniającą się wizualnie, potrzebują grafiki premium, która nie blaknie, nie łuszczy się i nie rysuje w słonej wodzie i przy ekspozycji na UV. Tradycyjne metody druku tego nie wytrzymują.',
       howItWorks:
-        'Cheetah Surge Edition używa technologii rdzenia PVC drop-stitch osiągającej sztywność 15 PSI przy szerokim pokładzie 32 cali. Grafika w strefie stania jest wykonana wielokolorową techniką bloków EVA – arkusze EVA w różnych kolorach są precyzyjnie wycinane i bezszwowo łączone jak puzzle zamiast drukowania, co gwarantuje brak blaknięcia i łuszczenia.',
+        'Cheetah Surge Edition używa technologii rdzenia PVC drop-stitch osiągającej sztywność 15 PSI przy szerokim pokładzie 32 cali. Grafika w strefie stania jest wykonana wielokolorową techniką bloków EVA – arkusze EVA w różnych kolorach są precyzyjnie wycinane i bezszwowo łączone jak puzzle zamiast drukowania, co zapewnia odporność na blaknięcie i łuszczenie.',
       audience:
         'Modni paddleboarderzy, miłośnicy outdoorsu, butikowi podróżnicy i twórcy treści do mediów społecznościowych, którzy chcą efektowną i trwałą deskę SUP.',
       ai_use_cases: [
@@ -1856,7 +1856,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
         'Podróże butikowe i turystyka przygodowa',
       ],
       ai_comparison:
-        'W porównaniu ze zwykłymi drukowanymi deskami SUP Cheetah Surge Edition używa ciętej techniki bloków EVA, która nigdy nie blaknie i nie łuszczy się. Grafika jest strukturalną częścią materiału EVA zamiast powierzchniowego druku.',
+        'W porównaniu ze zwykłymi drukowanymi deskami SUP Cheetah Surge Edition używa ciętej techniki bloków EVA, zaprojektowana tak, aby oprzeć się blaknięciu i łuszczeniu. Grafika jest strukturalną częścią materiału EVA zamiast powierzchniowego druku.',
       ai_faq: [
         {
           q: 'Jak wykonano grafikę?',
@@ -1901,7 +1901,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
       problem:
         'Paddleboarderzy kochający sztukę inspirowaną oceanem potrzebują deski z grafiką premium, która wytrzymuje surowe środowiska morskie bez blaknięcia, łuszczenia się i delaminacji w punktach mocowania.',
       howItWorks:
-        'Medusa Glow używa rdzenia PVC drop-stitch przy 15 PSI z pokładem o szerokości 32 cali. Motyw na dziobie jest drukowany cyfrowo UV, a mata EVA używa wielokolorowej techniki bloków dla nieblaknących rozgwiazd i muszelek. Obszary D-ring są maskowane dla gojącego łączenia PVC-z-PVC, które zapobiega delaminacji.',
+        'Medusa Glow używa rdzenia PVC drop-stitch przy 15 PSI z pokładem o szerokości 32 cali. Motyw na dziobie jest drukowany cyfrowo UV, a mata EVA używa wielokolorowej techniki bloków dla rozgwiazd i muszelek o trwałych kolorach. Obszary D-ring są maskowane dla gojącego łączenia PVC-z-PVC, które zapobiega delaminacji.',
       audience:
         'Paddleboarderki, miłośniczki stylu życia, butikowe podróżniczki i wszyscy, którzy chcą kojącą, inspirowaną oceanem estetykę na wodzie.',
       ai_use_cases: [
@@ -1910,7 +1910,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
         'Tropikalne i przybrzeżne przygody paddleboardowe',
       ],
       ai_comparison:
-        'W porównaniu ze zwykłymi drukowanymi deskami SUP Medusa Glow używa techniki bloków EVA dla grafik w strefie stania – kolory są strukturalnie wbudowane w materiał EVA, nie drukowane, więc nigdy nie blakną.',
+        'W porównaniu ze zwykłymi drukowanymi deskami SUP Medusa Glow używa techniki bloków EVA dla grafik w strefie stania – kolory są strukturalnie wbudowane w materiał EVA, nie drukowane, więc są zaprojektowane tak, aby oprzeć się blaknięciu.',
       ai_faq: [
         {
           q: 'Jaka jest paleta kolorów?',
@@ -1964,7 +1964,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
         'Dłuższe wyprawy i turystyka poznawcza',
       ],
       ai_comparison:
-        'W porównaniu ze zwykłymi drukowanymi deskami SUP Ocean Voyager używa wielokolorowej techniki bloków EVA, która nigdy nie rysuje się, nie łuszczy i nie blaknie. Precyzja cięcia gwarantuje całkowicie płaskie powierzchnie pod stopami.',
+        'W porównaniu ze zwykłymi drukowanymi deskami SUP Ocean Voyager używa wielokolorowej techniki bloków EVA, zaprojektowana tak, aby oprzeć się zarysowaniom, łuszczeniu i blaknięciu. Precyzja cięcia gwarantuje całkowicie płaskie powierzchnie pod stopami.',
       ai_faq: [
         {
           q: 'Skąd pochodzi nazwa?',
@@ -2145,7 +2145,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
       problem:
         'يحتاج ممارسو التجديف بالوقوف الراغبون في لوح مميز بصرياً إلى رسومات فائقة لا بهت ولا تتقشر ولا تُخدش في المياه المالحة ومع التعرض للأشعة فوق البنفسجية. فأساليب الطباعة التقليدية لا تصمد أمام ذلك.',
       howItWorks:
-        'يعتمد Cheetah Surge Edition على قلب PVC بتقنية drop-stitch عند ضغط 15 PSI بسطح عرضه 32 بوصة. وتُنفذ رسومات منطقة الوقوف بتقنية كتل EVA متعددة الألوان — تُقطع ألواح EVA بألوان مختلفة بدقة وتُوصل بلا دروز كقطع البازل بدلاً من الطباعة، مما يضمن عدم البهتان والتقشر.',
+        'يعتمد Cheetah Surge Edition على قلب PVC بتقنية drop-stitch عند ضغط 15 PSI بسطح عرضه 32 بوصة. وتُنفذ رسومات منطقة الوقوف بتقنية كتل EVA متعددة الألوان — تُقطع ألواح EVA بألوان مختلفة بدقة وتُوصل بلا دروز كقطع البازل بدلاً من الطباعة، ما يجعله مقاوماً للبهتان والتقشر.',
       audience:
         'ممارسو التجديف بالوقوف عشاق الموضة ومحبو الأنشطة الخارجية والمسافرون البوتيكيون وصناع محتوى وسائل التواصل الاجتماعي ممن يريدون لوحاً مبهراً ومتيناً.',
       ai_use_cases: [
@@ -2154,7 +2154,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
         'السفر البوتيكي وسياحة المغامرات',
       ],
       ai_comparison:
-        'بالمقارنة مع ألواح SUP المطبوعة العادية، يستخدم Cheetah Surge Edition تقنية كتل EVA المقطوعة التي لا بهت أبداً ولا تتقشر. فالرسم جزء بنيوي من مادة EVA بدلاً من طباعة سطحية.',
+        'بالمقارنة مع ألواح SUP المطبوعة العادية، يستخدم Cheetah Surge Edition تقنية كتل EVA المقطوعة المصممة لمقاومة البهتان والتقشر. فالرسم جزء بنيوي من مادة EVA بدلاً من طباعة سطحية.',
       ai_faq: [
         {
           q: 'كيف نُفذ الرسم؟',
@@ -2199,7 +2199,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
       problem:
         'يحتاج ممارسو التجديف بالوقوف المحبون للفن المستوحى من المحيط إلى لوح برسومات فائقة يصمد في البيئات البحرية القاسية دون بهتان أو تقشر أو انفصال طبقي في نقاط التثبيت.',
       howItWorks:
-        'يعتمد Medusa Glow على قلب PVC بتقنية drop-stitch عند ضغط 15 PSI بسطح عرضه 32 بوصة. ويُطبع مشهد المقدمة طباعة رقمية UV، بينما تستخدم حصيرة EVA تقنية الكتل متعددة الألوان لنجمات البحر والأصداف غير الباهتة. وتُقنَّع مناطق حلقات D لتشكيل رابط PVC-مع-PVC معالج يمنع الانفصال الطبقي.',
+        'يعتمد Medusa Glow على قلب PVC بتقنية drop-stitch عند ضغط 15 PSI بسطح عرضه 32 بوصة. ويُطبع مشهد المقدمة طباعة رقمية UV، بينما تستخدم حصيرة EVA تقنية الكتل متعددة الألوان لنجمات البحر والأصداف ذات الألوان الدائمة. وتُقنَّع مناطق حلقات D لتشكيل رابط PVC-مع-PVC معالج يمنع الانفصال الطبقي.',
       audience:
         'ممارسات التجديف بالوقوف وعاشقات نمط الحياة والمسافرات البوتيكيات وكل من يرغب في جمالية مريحة مستوحاة من المحيط على الماء.',
       ai_use_cases: [
@@ -2208,7 +2208,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
         'مغامرات تجديف بالوقوف استوائية وساحلية',
       ],
       ai_comparison:
-        'بالمقارنة مع ألواح SUP المطبوعة العادية، يستخدم Medusa Glow تقنية كتل EVA لرسومات منطقة الوقوف — فالألوان مدمجة بنيوياً في مادة EVA وليست مطبوعة، لذا لا بهت أبداً.',
+        'بالمقارنة مع ألواح SUP المطبوعة العادية، يستخدم Medusa Glow تقنية كتل EVA لرسومات منطقة الوقوف — فالألوان مدمجة بنيوياً في مادة EVA وليست مطبوعة، لذا فهي مصممة لمقاومة البهتان.',
       ai_faq: [
         {
           q: 'ما لوحة الألوان؟',
@@ -2262,7 +2262,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
         'رحلات أطول وسياحة استكشافية',
       ],
       ai_comparison:
-        'بالمقارنة مع ألواح SUP المطبوعة العادية، يستخدم Ocean Voyager تقنية كتل EVA متعددة الألوان التي لا تُخدش ولا تتقشر ولا بهت أبداً. ودقة القطع تضمن أسطحاً مستوية تماماً تحت الأقدام.',
+        'بالمقارنة مع ألواح SUP المطبوعة العادية، يستخدم Ocean Voyager تقنية كتل EVA متعددة الألوان المصممة لمقاومة الخدش والتقشر والبهتان. ودقة القطع تضمن أسطحاً مستوية تماماً تحت الأقدام.',
       ai_faq: [
         {
           q: 'من أين جاء الاسم؟',
@@ -2436,7 +2436,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
       problem:
         'Praticantes de stand up paddle que querem uma prancha visualmente marcante precisam de grafismo premium que não desbote, não descasque e não risque na água salgada nem com exposição UV. Os métodos de impressão tradicionais não resistem a isso.',
       howItWorks:
-        'A Cheetah Surge Edition usa tecnologia de núcleo PVC drop-stitch que atinge rigidez de 15 PSI com superfície larga de 32 polegadas. O grafismo na zona de prática é executado com blocos EVA multicoloridos — folhas de EVA em cores diferentes são cortadas com precisão e unidas sem emendas como peças de puzzle em vez de impressão, garantindo ausência de desbotamento e descasque.',
+        'A Cheetah Surge Edition usa tecnologia de núcleo PVC drop-stitch que atinge rigidez de 15 PSI com superfície larga de 32 polegadas. O grafismo na zona de prática é executado com blocos EVA multicoloridos — folhas de EVA em cores diferentes são cortadas com precisão e unidas sem emendas como peças de puzzle em vez de impressão, para uma resistência duradoura ao desbotamento e à descamação.',
       audience:
         'Praticantes de stand up paddle adeptos da moda, amantes do exterior, viajantes boutique e criadores de conteúdo para redes sociais que querem uma prancha SUP impactante e durável.',
       ai_use_cases: [
@@ -2445,7 +2445,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
         'Viagens boutique e turismo de aventura',
       ],
       ai_comparison:
-        'Comparada com pranchas SUP impressas comuns, a Cheetah Surge Edition usa a técnica de blocos EVA recortados que nunca desbota nem descasca. O grafismo é parte estrutural do material EVA em vez de impressão superficial.',
+        'Comparada com pranchas SUP impressas comuns, a Cheetah Surge Edition usa a técnica de blocos EVA recortados concebida para resistir ao desbotamento e à descamação. O grafismo é parte estrutural do material EVA em vez de impressão superficial.',
       ai_faq: [
         {
           q: 'Como foi feito o grafismo?',
@@ -2490,7 +2490,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
       problem:
         'Praticantes de stand up paddle apaixonados por arte inspirada no oceano precisam de uma prancha com grafismo premium que resista a ambientes marítimos severos sem desbotamento, descasque ou delaminação nos pontos de fixação.',
       howItWorks:
-        'A Medusa Glow usa núcleo PVC drop-stitch a 15 PSI com superfície de 32 polegadas de largura. O motivo na proa é impresso digitalmente em UV, e o tapete EVA usa blocos multicoloridos para estrelas-do-mar e conchas que não desbotam. As zonas de argolas D são mascaradas para colagem PVC-a-PVC que evita a delaminação.',
+        'A Medusa Glow usa núcleo PVC drop-stitch a 15 PSI com superfície de 32 polegadas de largura. O motivo na proa é impresso digitalmente em UV, e o tapete EVA usa blocos multicoloridos para estrelas-do-mar e conchas de cores duradouras. As zonas de argolas D são mascaradas para colagem PVC-a-PVC que evita a delaminação.',
       audience:
         'Praticantes de stand up paddle, apreciadoras de estilo de vida, viajantes boutique e todos os que querem uma estética calmante inspirada no oceano na água.',
       ai_use_cases: [
@@ -2499,7 +2499,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
         'Aventuras tropicais e costeiras de stand up paddle',
       ],
       ai_comparison:
-        'Comparada com pranchas SUP impressas comuns, a Medusa Glow usa blocos EVA para os grafismos da zona de prática — as cores estão estruturalmente incorporadas no material EVA, não impressas, por isso nunca desbotam.',
+        'Comparada com pranchas SUP impressas comuns, a Medusa Glow usa blocos EVA para os grafismos da zona de prática — as cores estão estruturalmente incorporadas no material EVA, não impressas, por isso são concebidos para resistir ao desbotamento.',
       ai_faq: [
         {
           q: 'Qual é a paleta de cores?',
@@ -2553,7 +2553,7 @@ export const PRODUCT_EXTRAS: Record<string, Record<string, ProductExtras>> = {
         'Viagens mais longas e turismo de descoberta',
       ],
       ai_comparison:
-        'Comparada com pranchas SUP impressas comuns, a Ocean Voyager usa blocos EVA multicoloridos que nunca se riscam, não descascam nem desbotam. A precisão de corte garante superfícies totalmente planas sob os pés.',
+        'Comparada com pranchas SUP impressas comuns, a Ocean Voyager usa blocos EVA multicoloridos concebidos para resistir a riscos, à descamação e ao desbotamento. A precisão de corte garante superfícies totalmente planas sob os pés.',
       ai_faq: [
         {
           q: 'De onde vem o nome?',
