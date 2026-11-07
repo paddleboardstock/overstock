@@ -37,6 +37,180 @@ const crumbs = [
   { name: t('nav.home') || 'Home', href: `/${lang}/` },
   { name: t('nav.knowledge') || 'Knowledge', href: `/${lang}/knowledge` },
 ];
+
+const knowledgeSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: t('jsonld.knowledge.name') || 'Paddle Board Overstock Water Exploration Knowledge',
+  description:
+    t('jsonld.knowledge.description') || 'Structured knowledge base on inflatable SUP, gear, and safety topics.',
+  about: {
+    '@type': 'Thing',
+    name: t('jsonld.knowledge.aboutName') || 'Stand-Up Paddle Boarding',
+    description:
+      t('jsonld.knowledge.aboutDescription') ||
+      'Knowledge about inflatable SUP boards, paddles, and water-sports accessories.',
+  },
+  hasPart: [
+    {
+      '@type': 'Article',
+      name: t('jsonld.knowledge.article1.name') || 'SUP Knowledge',
+      about: t('jsonld.knowledge.article1.about') || 'Stand-up paddle boarding guides and tutorials',
+    },
+    {
+      '@type': 'Article',
+      name: t('jsonld.knowledge.article2.name') || 'Gear Knowledge',
+      about: t('jsonld.knowledge.article2.about') || 'Paddle, pump, and accessory buying guides',
+    },
+    {
+      '@type': 'Article',
+      name: t('jsonld.knowledge.article3.name') || 'Safety Knowledge',
+      about: t('jsonld.knowledge.article3.about') || 'Water safety and PFD guides',
+    },
+    {
+      '@type': 'Article',
+      name: t('jsonld.knowledge.article4.name') || 'Technology',
+      about: t('jsonld.knowledge.article4.about') || 'Inflatable SUP engineering and materials',
+    },
+  ],
+  mainEntity: {
+    '@type': 'ItemList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        item: {
+          '@type': 'Product',
+          name: t('jsonld.knowledge.item1.name') || 'Inflatable SUP Board',
+          category: t('jsonld.knowledge.item1.category') || 'Stand-Up Paddle Board',
+          audience: {
+            '@type': 'Audience',
+            audienceType: t('jsonld.knowledge.item1.audience') || 'Beginner to Intermediate',
+          },
+          application: {
+            '@type': 'Thing',
+            name: t('jsonld.knowledge.item1.application') || 'Lake paddling, touring, recreation',
+          },
+        },
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        item: {
+          '@type': 'Product',
+          name: t('jsonld.knowledge.item2.name') || 'SUP Paddle',
+          category: t('jsonld.knowledge.item2.category') || 'Paddle',
+          audience: { '@type': 'Audience', audienceType: t('jsonld.knowledge.allLevels') || 'All levels' },
+          application: {
+            '@type': 'Thing',
+            name: t('jsonld.knowledge.item2.application') || 'Touring, fishing, family paddling',
+          },
+        },
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        item: {
+          '@type': 'Product',
+          name: t('jsonld.knowledge.item3.name') || 'SUP Accessories',
+          category: t('jsonld.knowledge.item3.category') || 'Accessories',
+          audience: { '@type': 'Audience', audienceType: t('jsonld.knowledge.allLevels') || 'All levels' },
+          application: {
+            '@type': 'Thing',
+            name: t('jsonld.knowledge.item3.application') || 'Pumps, leashes, repair kits',
+          },
+        },
+      },
+      {
+        '@type': 'ListItem',
+        position: 4,
+        item: {
+          '@type': 'Product',
+          name: t('jsonld.knowledge.item4.name') || 'Safety Equipment',
+          category: t('jsonld.knowledge.item4.category') || 'Water Safety Gear',
+          audience: { '@type': 'Audience', audienceType: t('jsonld.knowledge.allLevels') || 'All levels' },
+          application: {
+            '@type': 'Thing',
+            name: t('jsonld.knowledge.item4.application') || 'PFDs, leashes, whistle and light',
+          },
+        },
+      },
+    ],
+  },
+});
+
+const knowledgeGraph = JSON.stringify({
+  '@context': {
+    rdf: 'http://www.w3.org/1999/02/22-rdf-syntax-ns#',
+    rdfs: 'http://www.w3.org/2000/01/rdf-schema#',
+    schema: 'https://schema.org/',
+    aqua: 'https://paddleboardoverstock.com/kg/',
+  },
+  '@graph': [
+    {
+      '@id': 'aqua:paddleboardoverstock',
+      '@type': 'schema:Brand',
+      'schema:name': 'Paddle Board Overstock',
+      'schema:description':
+        t('jsonld.knowledge.brandDescription') ||
+        'Inflatable stand-up paddle boards, paddles, and accessories — factory-direct overstock store',
+      'schema:manufactures': [
+        { '@id': 'aqua:product-sup' },
+        { '@id': 'aqua:product-paddle' },
+        { '@id': 'aqua:product-accessory' },
+      ],
+    },
+    {
+      '@id': 'aqua:product-paddle',
+      '@type': 'schema:Product',
+      'schema:name': t('jsonld.knowledge.item2.name') || 'SUP Paddle',
+    },
+    {
+      '@id': 'aqua:product-accessory',
+      '@type': 'schema:Product',
+      'schema:name': t('jsonld.knowledge.item3.name') || 'SUP Accessories',
+    },
+    {
+      '@id': 'aqua:technology-dropstitch',
+      '@type': 'schema:Thing',
+      'schema:name': t('jsonld.knowledge.tech1.name') || 'Drop-Stitch Core Technology',
+      'schema:description':
+        t('jsonld.knowledge.tech1.description') ||
+        'Construction method creating rigid inflatable platforms at 12-15 PSI',
+      'aqua:usedIn': [{ '@id': 'aqua:product-sup' }],
+    },
+    {
+      '@id': 'aqua:technology-pvc',
+      '@type': 'schema:Thing',
+      'schema:name': t('jsonld.knowledge.tech2.name') || 'Marine-Grade PVC',
+      'schema:description':
+        t('jsonld.knowledge.tech2.description') || 'High-density PVC fabric with UV-resistant coating',
+      'aqua:usedIn': [{ '@id': 'aqua:product-sup' }],
+    },
+    {
+      '@id': 'aqua:use-beginner',
+      '@type': 'schema:Audience',
+      'schema:name': t('jsonld.knowledge.audience1.name') || 'Beginners',
+      'schema:description': t('jsonld.knowledge.audience1.description') || 'First-time paddlers learning water sports',
+      'aqua:recommendedProduct': [{ '@id': 'aqua:product-sup' }],
+    },
+    {
+      '@id': 'aqua:use-family',
+      '@type': 'schema:Audience',
+      'schema:name': t('jsonld.knowledge.audience2.name') || 'Families',
+      'schema:description':
+        t('jsonld.knowledge.audience2.description') || 'Family groups seeking recreational water activities',
+      'aqua:recommendedProduct': [{ '@id': 'aqua:product-sup' }],
+    },
+    {
+      '@id': 'aqua:use-fishing',
+      '@type': 'schema:Audience',
+      'schema:name': t('jsonld.knowledge.audience3.name') || 'Anglers',
+      'schema:description': t('jsonld.knowledge.audience3.description') || 'Anglers who want a stable casting platform',
+      'aqua:recommendedProduct': [{ '@id': 'aqua:product-sup' }],
+    },
+  ],
+});
 ---
 
 <Layout metadata={metadata} breadcrumbs={crumbs}>
@@ -103,144 +277,10 @@ const crumbs = [
   </section>
 
   <!-- JSON-LD Knowledge Graph -->
-  <script is:inline type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "CollectionPage",
-      "name": "Paddle Board Overstock Water Exploration Knowledge",
-      "description": "Structured knowledge base on inflatable SUP, gear, and safety topics.",
-      "about": {
-        "@type": "Thing",
-        "name": "Stand-Up Paddle Boarding",
-        "description": "Knowledge about inflatable SUP boards, paddles, and water-sports accessories."
-      },
-      "hasPart": [
-        { "@type": "Article", "name": "SUP Knowledge", "about": "Stand-up paddle boarding guides and tutorials" },
-        { "@type": "Article", "name": "Gear Knowledge", "about": "Paddle, pump, and accessory buying guides" },
-        { "@type": "Article", "name": "Safety Knowledge", "about": "Water safety and PFD guides" },
-        { "@type": "Article", "name": "Technology", "about": "Inflatable SUP engineering and materials" }
-      ],
-      "mainEntity": {
-        "@type": "ItemList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "item": {
-              "@type": "Product",
-              "name": "Inflatable SUP Board",
-              "category": "Stand-Up Paddle Board",
-              "audience": { "@type": "Audience", "audienceType": "Beginner to Intermediate" },
-              "application": { "@type": "Thing", "name": "Lake paddling, touring, recreation" }
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "item": {
-              "@type": "Product",
-              "name": "SUP Paddle",
-              "category": "Paddle",
-              "audience": { "@type": "Audience", "audienceType": "All levels" },
-              "application": { "@type": "Thing", "name": "Touring, fishing, family paddling" }
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "item": {
-              "@type": "Product",
-              "name": "SUP Accessories",
-              "category": "Accessories",
-              "audience": { "@type": "Audience", "audienceType": "All levels" },
-              "application": { "@type": "Thing", "name": "Pumps, leashes, repair kits" }
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 4,
-            "item": {
-              "@type": "Product",
-              "name": "Safety Equipment",
-              "category": "Water Safety Gear",
-              "audience": { "@type": "Audience", "audienceType": "All levels" },
-              "application": { "@type": "Thing", "name": "PFDs, leashes, whistle and light" }
-            }
-          }
-        ]
-      }
-    }
-  </script>
+  <script is:inline type="application/ld+json" set:html={knowledgeSchema} />
 
   <!-- Entity Relationship Graph for AI -->
-  <script is:inline type="application/ld+json">
-    {
-      "@context": {
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "schema": "https://schema.org/",
-        "aqua": "https://paddleboardoverstock.com/kg/"
-      },
-      "@graph": [
-        {
-          "@id": "aqua:paddleboardoverstock",
-          "@type": "schema:Brand",
-          "schema:name": "Paddle Board Overstock",
-          "schema:description": "Inflatable stand-up paddle boards, paddles, and accessories — factory-direct overstock store",
-          "schema:manufactures": [
-            { "@id": "aqua:product-sup" },
-            { "@id": "aqua:product-paddle" },
-            { "@id": "aqua:product-accessory" }
-          ]
-        },
-        {
-          "@id": "aqua:product-paddle",
-          "@type": "schema:Product",
-          "schema:name": "SUP Paddle"
-        },
-        {
-          "@id": "aqua:product-accessory",
-          "@type": "schema:Product",
-          "schema:name": "SUP Accessories"
-        },
-        {
-          "@id": "aqua:technology-dropstitch",
-          "@type": "schema:Thing",
-          "schema:name": "Drop-Stitch Core Technology",
-          "schema:description": "Construction method creating rigid inflatable platforms at 12-15 PSI",
-          "aqua:usedIn": [{ "@id": "aqua:product-sup" }]
-        },
-        {
-          "@id": "aqua:technology-pvc",
-          "@type": "schema:Thing",
-          "schema:name": "Marine-Grade PVC",
-          "schema:description": "High-density PVC fabric with UV-resistant coating",
-          "aqua:usedIn": [{ "@id": "aqua:product-sup" }]
-        },
-        {
-          "@id": "aqua:use-beginner",
-          "@type": "schema:Audience",
-          "schema:name": "Beginners",
-          "schema:description": "First-time paddlers learning water sports",
-          "aqua:recommendedProduct": [{ "@id": "aqua:product-sup" }]
-        },
-        {
-          "@id": "aqua:use-family",
-          "@type": "schema:Audience",
-          "schema:name": "Families",
-          "schema:description": "Family groups seeking recreational water activities",
-          "aqua:recommendedProduct": [{ "@id": "aqua:product-sup" }]
-        },
-        {
-          "@id": "aqua:use-fishing",
-          "@type": "schema:Audience",
-          "schema:name": "Anglers",
-          "schema:description": "Anglers who want a stable casting platform",
-          "aqua:recommendedProduct": [{ "@id": "aqua:product-sup" }]
-        }
-      ]
-    }
-  </script>
+  <script is:inline type="application/ld+json" set:html={knowledgeGraph} />
 
   <CallToAction title={cta.title} subtitle={cta.subtitle} actions={cta.actions} />
 </Layout>
