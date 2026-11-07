@@ -26,6 +26,7 @@ import langData from '~/data/site/languages.yaml';
 import { defaultLang, setLang } from '~/i18n/config';
 import { getLangFromUrl, removeLang, localizeUseCasePath } from '~/i18n/utils';
 import { isRootOnlyRoute as isRootOnlyRouteFn } from '~/i18n/root-only';
+import { getUiForLang } from '~/i18n/generated/ui-all';
 import facts from '~/config/facts.json';
 // P1-D：只为完整本地化并毕业的语言背书（清单见 TECH.md §16.4），其余语言整体 noindex（见 seo-suppress.json）
 const FULLY_LOCALIZED = [
@@ -77,6 +78,8 @@ const textDirection = RTL_LANGS.has(language) ? 'rtl' : defaultTextDir || 'ltr';
 // Root-only routes have no localized versions. Emitting per-locale
 // `<link rel="alternate" hreflang>` for them would produce dead URLs.
 const isRootOnlyRoute = isRootOnlyRouteFn(pathWithoutLang);
+
+const t = (key: string) => getUiForLang(currentLang)?.[key] || '';
 ---
 
 <!doctype html>
@@ -181,8 +184,9 @@ const isRootOnlyRoute = isRootOnlyRouteFn(pathWithoutLang);
               name: SITE_SETTINGS.siteName || orgName,
               url: seo.siteUrl,
               description:
+                t('jsonld.website.description') ||
                 'Discount inflatable SUP boards — overstock and clearance prices, up to 60% off retail. Brand-new complete paddle board packages ship worldwide.',
-              about: getAboutSchema(pathname),
+              about: getAboutSchema(pathname, t),
               potentialAction: {
                 '@type': 'SearchAction',
                 target: {

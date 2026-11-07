@@ -110,8 +110,10 @@ const faqSchema = JSON.stringify({
 const howtoSchema = JSON.stringify({
   '@context': 'https://schema.org',
   '@type': 'HowTo',
-  name: 'Paddle Board Overstock Manufacturing Process',
-  description: 'Multi-stage manufacturing process from raw material to finished paddle board.',
+  name: t('jsonld.factoryProcessHowto.name') || 'Paddle Board Overstock Manufacturing Process',
+  description:
+    t('jsonld.factoryProcessHowto.description') ||
+    'Multi-stage manufacturing process from raw material to finished paddle board.',
   step: steps.map((s: ProcessStep, i: number) => ({
     '@type': 'HowToStep',
     position: i + 1,

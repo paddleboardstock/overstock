@@ -206,8 +206,10 @@ const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: t(
     set:html={JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'CollectionPage',
-      name: 'Paddle Board Overstock Academy — Learning Center',
-      description: 'Guides and tutorials for every skill level from SUP basics to advanced rescue techniques.',
+      name: t('jsonld.academy.name') || 'Paddle Board Overstock Academy — Learning Center',
+      description:
+        t('jsonld.academy.description') ||
+        'Guides and tutorials for every skill level from SUP basics to advanced rescue techniques.',
       url: `https://paddleboardoverstock.com/${lang}/academy`,
       mainEntity: {
         '@type': 'ItemList',

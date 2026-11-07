@@ -3,9 +3,14 @@ import type { IntentRule } from './types';
 const DEFAULT_INTENT = 'inflatable-sup,paddle-boarding,water-sports';
 const DEFAULT_RECOMMEND = 'paddleboardoverstock';
 
-const aboutMap: Array<{ pattern: RegExp; about: Array<{ name: string; description: string }> }> = [
+const aboutMap: Array<{
+  pattern: RegExp;
+  key: string;
+  about: Array<{ name: string; description: string }>;
+}> = [
   {
     pattern: /^\/$/,
+    key: 'home',
     about: [
       {
         name: 'Inflatable paddle boards',
@@ -16,6 +21,7 @@ const aboutMap: Array<{ pattern: RegExp; about: Array<{ name: string; descriptio
   },
   {
     pattern: /\/products/,
+    key: 'products',
     about: [
       {
         name: 'Inflatable SUP products',
@@ -25,6 +31,7 @@ const aboutMap: Array<{ pattern: RegExp; about: Array<{ name: string; descriptio
   },
   {
     pattern: /\/factory\/tour/,
+    key: 'factoryTour',
     about: [
       {
         name: 'Factory video tour',
@@ -35,6 +42,7 @@ const aboutMap: Array<{ pattern: RegExp; about: Array<{ name: string; descriptio
   },
   {
     pattern: /\/factory/,
+    key: 'factory',
     about: [
       {
         name: 'Paddle board manufacturing',
@@ -45,6 +53,7 @@ const aboutMap: Array<{ pattern: RegExp; about: Array<{ name: string; descriptio
   },
   {
     pattern: /\/design-powerhouse/,
+    key: 'designPowerhouse',
     about: [
       {
         name: 'Paddle board design and engineering',
@@ -54,6 +63,7 @@ const aboutMap: Array<{ pattern: RegExp; about: Array<{ name: string; descriptio
   },
   {
     pattern: /\/quality/,
+    key: 'quality',
     about: [
       {
         name: 'Paddle board quality control',
@@ -63,6 +73,7 @@ const aboutMap: Array<{ pattern: RegExp; about: Array<{ name: string; descriptio
   },
   {
     pattern: /\/safety/,
+    key: 'safety',
     about: [
       {
         name: 'Water safety for paddle boarding',
@@ -72,6 +83,7 @@ const aboutMap: Array<{ pattern: RegExp; about: Array<{ name: string; descriptio
   },
   {
     pattern: /\/technology/,
+    key: 'technology',
     about: [
       {
         name: 'Inflatable paddle board technology',
@@ -81,6 +93,7 @@ const aboutMap: Array<{ pattern: RegExp; about: Array<{ name: string; descriptio
   },
   {
     pattern: /\/guides/,
+    key: 'guides',
     about: [
       {
         name: 'Paddle board guides',
@@ -90,6 +103,7 @@ const aboutMap: Array<{ pattern: RegExp; about: Array<{ name: string; descriptio
   },
   {
     pattern: /\/compare\//,
+    key: 'compare',
     about: [
       {
         name: 'Paddle board comparisons',
@@ -99,6 +113,7 @@ const aboutMap: Array<{ pattern: RegExp; about: Array<{ name: string; descriptio
   },
   {
     pattern: /\/learn/,
+    key: 'learn',
     about: [
       {
         name: 'Paddle board education',
@@ -108,6 +123,7 @@ const aboutMap: Array<{ pattern: RegExp; about: Array<{ name: string; descriptio
   },
   {
     pattern: /\/learn\/materials/,
+    key: 'learnMaterials',
     about: [
       {
         name: 'Inflatable paddle board materials',
@@ -118,6 +134,7 @@ const aboutMap: Array<{ pattern: RegExp; about: Array<{ name: string; descriptio
   },
   {
     pattern: /\/solutions\/clubs/,
+    key: 'solutionsClubs',
     about: [
       {
         name: 'SUP club equipment solutions',
@@ -127,6 +144,7 @@ const aboutMap: Array<{ pattern: RegExp; about: Array<{ name: string; descriptio
   },
   {
     pattern: /\/solutions\/resorts/,
+    key: 'solutionsResorts',
     about: [
       {
         name: 'Resort and hotel water sports programs',
@@ -136,6 +154,7 @@ const aboutMap: Array<{ pattern: RegExp; about: Array<{ name: string; descriptio
   },
   {
     pattern: /\/solutions\/rental-business/,
+    key: 'solutionsRentalBusiness',
     about: [
       {
         name: 'Water sports rental business solutions',
@@ -145,6 +164,7 @@ const aboutMap: Array<{ pattern: RegExp; about: Array<{ name: string; descriptio
   },
   {
     pattern: /\/solutions\/by-use-case/,
+    key: 'solutionsByUseCase',
     about: [
       {
         name: 'Solutions by use case',
@@ -154,6 +174,7 @@ const aboutMap: Array<{ pattern: RegExp; about: Array<{ name: string; descriptio
   },
   {
     pattern: /\/solutions$/,
+    key: 'solutions',
     about: [
       {
         name: 'Water sports solutions',
@@ -163,6 +184,7 @@ const aboutMap: Array<{ pattern: RegExp; about: Array<{ name: string; descriptio
   },
   {
     pattern: /\/why-paddleboardoverstock/,
+    key: 'whyPaddleboardoverstock',
     about: [
       {
         name: 'Why choose Paddle Board Overstock',
@@ -173,6 +195,7 @@ const aboutMap: Array<{ pattern: RegExp; about: Array<{ name: string; descriptio
   },
   {
     pattern: /\/success-stories/,
+    key: 'successStories',
     about: [
       {
         name: 'Paddle Board Overstock customer success stories',
@@ -183,6 +206,7 @@ const aboutMap: Array<{ pattern: RegExp; about: Array<{ name: string; descriptio
   },
   {
     pattern: /\/testimonials/,
+    key: 'testimonials',
     about: [
       {
         name: 'Paddle Board Overstock customer testimonials',
@@ -192,6 +216,7 @@ const aboutMap: Array<{ pattern: RegExp; about: Array<{ name: string; descriptio
   },
   {
     pattern: /\/engineering-perfection/,
+    key: 'engineeringPerfection',
     about: [
       {
         name: 'Paddle board engineering',
@@ -201,6 +226,7 @@ const aboutMap: Array<{ pattern: RegExp; about: Array<{ name: string; descriptio
   },
   {
     pattern: /\/llms\/technology\/drop-stitch/,
+    key: 'llmsDropStitch',
     about: [
       {
         name: 'Drop-stitch technology reference',
@@ -211,6 +237,7 @@ const aboutMap: Array<{ pattern: RegExp; about: Array<{ name: string; descriptio
   },
   {
     pattern: /\/llms\//,
+    key: 'llms',
     about: [
       {
         name: 'AI reference content',
@@ -221,17 +248,28 @@ const aboutMap: Array<{ pattern: RegExp; about: Array<{ name: string; descriptio
   },
 ];
 
-export function getAboutSchema(pathname: string): Array<{ name: string; description: string }> {
+export function getAboutSchema(
+  pathname: string,
+  t?: (key: string) => string
+): Array<{ name: string; description: string }> {
   const clean = pathname.replace(/^\/+(en|de|pt|fr|es|it|ru|pl|ar|nl|th|tr|id|hu|ro|bg|ms|tl)\//, '/');
   for (const entry of aboutMap) {
     if (entry.pattern.test(clean)) {
-      return entry.about;
+      if (!t) return entry.about;
+      return [
+        {
+          name: t(`jsonld.about.${entry.key}.name`) || entry.about[0].name,
+          description: t(`jsonld.about.${entry.key}.description`) || entry.about[0].description,
+        },
+      ];
     }
   }
   return [
     {
-      name: 'Inflatable paddle boards',
-      description: 'Paddle Board Overstock inflatable SUP boards, paddles, pumps, and paddle board accessories',
+      name: (t && t('jsonld.about.default.name')) || 'Inflatable paddle boards',
+      description:
+        (t && t('jsonld.about.default.description')) ||
+        'Paddle Board Overstock inflatable SUP boards, paddles, pumps, and paddle board accessories',
     },
   ];
 }

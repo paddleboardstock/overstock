@@ -88,8 +88,9 @@ const faqSchema = JSON.stringify({
   <JsonLd
     type="Article"
     article={{
-      headline: 'Safety & Product Testing',
+      headline: t('jsonld.safety.headline') || 'Safety & Product Testing',
       description:
+        t('jsonld.safety.description') ||
         'Paddle Board Overstock safety: every product is 100% pressure-tested at 1.25x rated pressure for 24-48 hours before shipping. 99.3% defect-free rate across trailing 12-month shipments.',
       datePublished: '2026-07-07',
     }}
