@@ -65,12 +65,18 @@ async function main() {
   const handReport = [];
   for (const lang of HAND_LANGS) {
     const range = handRanges[lang];
-    if (!range) { console.log('HAND ' + lang + ': BLOCK MISSING'); continue; }
+    if (!range) {
+      console.log('HAND ' + lang + ': BLOCK MISSING');
+      continue;
+    }
     for (const slug of PRODUCTS) {
       const block = hand.slice(range[0], range[1]);
       const key = `'${slug}':`;
       const ki = block.indexOf(key);
-      if (ki < 0) { handReport.push(`MISS ${lang}/${slug}: slug key`); continue; }
+      if (ki < 0) {
+        handReport.push(`MISS ${lang}/${slug}: slug key`);
+        continue;
+      }
       // value on following physical line
       const afterKey = block.slice(ki);
       const nl = afterKey.indexOf('\n');
@@ -78,28 +84,43 @@ async function main() {
       const valueLine = afterKey.slice(nl + 1, lineEnd < 0 ? undefined : lineEnd);
       const t = valueLine.trim();
       const q = t[0];
-      if (q !== "'" && q !== '"') { handReport.push(`MISS ${lang}/${slug}: no value line`); continue; }
+      if (q !== "'" && q !== '"') {
+        handReport.push(`MISS ${lang}/${slug}: no value line`);
+        continue;
+      }
       const innerEnd = t.lastIndexOf(q);
       const inner = t.slice(1, innerEnd);
       // segments are separated by the literal two-char sequence `\n` in the raw text
       const segs = inner.split('\\n');
-      const unesc = (s) => (q === "'" ? s.replace(/\\'/g, "'").replace(/\\\\/g, '\\') : s.replace(/\\"/g, '"').replace(/\\\\/g, '\\'));
+      const unesc = (s) =>
+        q === "'" ? s.replace(/\\'/g, "'").replace(/\\\\/g, '\\') : s.replace(/\\"/g, '"').replace(/\\\\/g, '\\');
       const esc = (s) => (q === "'" ? escSingle(s) : escDouble(s));
       let idx = segs[10] && unesc(segs[10]).includes('EVA') && unesc(segs[10]).includes(': ') ? 10 : -1;
       if (idx < 0) {
-        const cands = segs.map((s, i) => ({ s, i })).filter((x) => unesc(x.s).includes('EVA') && unesc(x.s).includes(': '));
+        const cands = segs
+          .map((s, i) => ({ s, i }))
+          .filter((x) => unesc(x.s).includes('EVA') && unesc(x.s).includes(': '));
         if (cands.length === 1) idx = cands[0].i;
       }
-      if (idx < 0) { handReport.push(`MISS ${lang}/${slug}: bullet segment not found`); continue; }
+      if (idx < 0) {
+        handReport.push(`MISS ${lang}/${slug}: bullet segment not found`);
+        continue;
+      }
       const oldSeg = unesc(segs[idx]);
-      if (oldSeg.split('\n').length > 1) { handReport.push(`MISS ${lang}/${slug}: segment contains newline`); continue; }
+      if (oldSeg.split('\n').length > 1) {
+        handReport.push(`MISS ${lang}/${slug}: segment contains newline`);
+        continue;
+      }
       const ci = oldSeg.indexOf(': ');
       const prefix = oldSeg.slice(0, ci);
       const enBody = enLines[slug].slice(enLines[slug].indexOf(': ') + 2);
       let trBody;
       if (DRY) trBody = '[DRY] ' + enBody.slice(0, 30);
       else trBody = await engine.translate1(enBody, lang);
-      if (!trBody || trBody.length < 10) { handReport.push(`FAIL ${lang}/${slug}: translation empty`); continue; }
+      if (!trBody || trBody.length < 10) {
+        handReport.push(`FAIL ${lang}/${slug}: translation empty`);
+        continue;
+      }
       if (trBody.includes('\n')) trBody = trBody.replace(/\s*\n\s*/g, ' ');
       segs[idx] = esc(prefix + ': ' + trBody);
       const newInner = segs.join('\\n');
@@ -109,7 +130,9 @@ async function main() {
       // recompute ranges (lengths changed)
       const rr = langRanges(hand);
       for (const l of Object.keys(rr)) handRanges[l] = rr[l];
-      handReport.push(`OK   ${lang}/${slug} seg[${idx}]: ${oldSeg.slice(0, 50).trim()}... -> ${trBody.slice(0, 50)}...`);
+      handReport.push(
+        `OK   ${lang}/${slug} seg[${idx}]: ${oldSeg.slice(0, 50).trim()}... -> ${trBody.slice(0, 50)}...`
+      );
     }
   }
 
@@ -119,18 +142,27 @@ async function main() {
   const mtReport = [];
   for (const lang of MT_LANGS) {
     const range = mtRanges[lang];
-    if (!range) { console.log('MT ' + lang + ': BLOCK MISSING'); continue; }
+    if (!range) {
+      console.log('MT ' + lang + ': BLOCK MISSING');
+      continue;
+    }
     for (const slug of PRODUCTS) {
       const block = mt.slice(range[0], range[1]);
       const key = `'${slug}':`;
       const ki = block.indexOf(key);
-      if (ki < 0) { mtReport.push(`MISS ${lang}/${slug}: slug key`); continue; }
+      if (ki < 0) {
+        mtReport.push(`MISS ${lang}/${slug}: slug key`);
+        continue;
+      }
       const afterKey = block.slice(ki);
       const nl = afterKey.indexOf('\n');
       const lineEnd = afterKey.indexOf('\n', nl + 1);
       const valueLine = afterKey.slice(nl + 1, lineEnd < 0 ? undefined : lineEnd);
       const t = valueLine.trim();
-      if (t[0] !== "'") { mtReport.push(`MISS ${lang}/${slug}: no value line`); continue; }
+      if (t[0] !== "'") {
+        mtReport.push(`MISS ${lang}/${slug}: no value line`);
+        continue;
+      }
       const innerEnd = t.lastIndexOf("'");
       const inner = t.slice(1, innerEnd);
       const segs = inner.split('\\n');
@@ -140,14 +172,23 @@ async function main() {
         const cands = segs.map((s, i) => ({ s, i })).filter((x) => unesc(x.s).includes('EVA'));
         if (cands.length === 1) idx = cands[0].i;
       }
-      if (idx < 0) { mtReport.push(`MISS ${lang}/${slug}: bullet segment not found`); continue; }
+      if (idx < 0) {
+        mtReport.push(`MISS ${lang}/${slug}: bullet segment not found`);
+        continue;
+      }
       const oldSeg = unesc(segs[idx]);
-      if (oldSeg.split('\n').length > 1) { mtReport.push(`MISS ${lang}/${slug}: segment contains newline`); continue; }
+      if (oldSeg.split('\n').length > 1) {
+        mtReport.push(`MISS ${lang}/${slug}: segment contains newline`);
+        continue;
+      }
       const lineText = enLines[slug].replace(/^- /, '');
       let trLine;
       if (DRY) trLine = '[DRY] ' + lineText.slice(0, 30);
       else trLine = await engine.translate1(lineText, lang);
-      if (!trLine || trLine.length < 10) { mtReport.push(`FAIL ${lang}/${slug}: translation empty`); continue; }
+      if (!trLine || trLine.length < 10) {
+        mtReport.push(`FAIL ${lang}/${slug}: translation empty`);
+        continue;
+      }
       if (trLine.includes('\n')) trLine = trLine.replace(/\s*\n\s*/g, ' ');
       const stars = (trLine.match(/\*\*/g) || []).length;
       if (stars < 2) mtReport.push(`WARN ${lang}/${slug}: ** markers lost (${stars})`);
@@ -169,7 +210,9 @@ async function main() {
 
   const handFail = handReport.filter((r) => r.startsWith('MISS') || r.startsWith('FAIL')).length;
   const mtFail = mtReport.filter((r) => r.startsWith('MISS') || r.startsWith('FAIL')).length;
-  console.log(`\nhand ok=${handReport.filter((r) => r.startsWith('OK')).length} fail=${handFail} | mt ok=${mtReport.filter((r) => r.startsWith('OK')).length} fail=${mtFail}`);
+  console.log(
+    `\nhand ok=${handReport.filter((r) => r.startsWith('OK')).length} fail=${handFail} | mt ok=${mtReport.filter((r) => r.startsWith('OK')).length} fail=${mtFail}`
+  );
 
   if (!DRY) {
     if (handFail === 0) fs.writeFileSync(HAND, hand, 'utf8');
