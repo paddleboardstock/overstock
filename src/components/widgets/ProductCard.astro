@@ -24,6 +24,9 @@ const hasPrice = Number.isFinite(priceAmount) && priceAmount > 0;
 const priceDisplay = hasPrice ? `$${priceAmount % 1 === 0 ? priceAmount.toFixed(0) : priceAmount.toFixed(2)}` : '';
 const priceCents = hasPrice ? Math.round(priceAmount * 100) : 0;
 const currency = product.price?.currency || 'USD';
+
+const keySpecLabels = ['Length', 'Max load', 'Max pressure'];
+const keySpecs = (product.specs || []).filter((s) => keySpecLabels.includes(s.label)).slice(0, 3);
 ---
 
 <article
@@ -93,6 +96,18 @@ const currency = product.price?.currency || 'USD';
     </h3>
 
     {product.summary && <p class="text-sm text-gray-500 dark:text-slate-400 leading-relaxed">{product.summary}</p>}
+
+    {
+      keySpecs.length > 0 && (
+        <div class="mt-3 flex flex-wrap gap-1.5">
+          {keySpecs.map((s) => (
+            <span class="inline-flex items-center px-2 py-1 text-[11px] font-medium bg-gray-50 dark:bg-slate-800 border border-gray-100 dark:border-slate-700 rounded-md text-gray-600 dark:text-slate-300">
+              <span class="text-gray-400 dark:text-slate-500">{s.label}:</span> {s.value}
+            </span>
+          ))}
+        </div>
+      )
+    }
 
     {
       hasPrice && (
