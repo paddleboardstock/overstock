@@ -58,6 +58,7 @@ const PAGES = [
   'solutions-clubs',
   'solutions-rental-business',
   'solutions-resorts',
+  'solutions-retailers',
   'technology',
   'testimonials',
   'warranty',
