@@ -1,6 +1,7 @@
 ---
 import merge from 'lodash.merge';
 import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
 import ProductCard from '~/components/widgets/ProductCard.astro';
 import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
 import Icon from '~/components/ui/Icon.astro';
@@ -34,18 +35,62 @@ if (!activeCategory) {
   Astro.redirect('/404');
 }
 
-const CATEGORY_COPY: Record<string, { title: string; description: string; h1: string; subtitle: string }> = {
+interface CategoryFaq {
+  q: string;
+  a: string;
+}
+
+const CATEGORY_COPY: Record<
+  string,
+  { title: string; description: string; h1: string; subtitle: string; intro: string; faqs: CategoryFaq[] }
+> = {
   supboard: {
     title: `Inflatable SUP Boards — Overstock & Clearance, Up to 60% Off | ${SITE.name}`,
     description: `Inflatable SUP boards at overstock clearance prices \u2014 complete packages (board, pump, paddle, leash, backpack), drop-stitch construction, 12\u201315 PSI. Up to 60% off retail, factory direct.`,
     h1: 'Inflatable SUP Boards \u2014 Overstock & Clearance',
     subtitle: 'Complete paddle board packages at factory-clearance prices \u2014 up to 60% off retail.',
+    intro:
+      'Every board in this catalog is brand-new overstock inventory — surplus stock left over after completed manufacturing orders at our Weihai, China production base and selected manufacturing partners. Because the original production run has already been paid for and fulfilled, there is no retail markup and no distributor margin: complete SUP packages ship at up to 60% off typical retail prices. Each board is built on a drop-stitch core laminated in marine-grade PVC, inflates to 12\u201315 PSI for hard-board rigidity, and ships as a complete package with paddle, pump, leash, removable fin, backpack, and repair kit. Stock condition is stated per board: Grade A is brand-new, unused surplus; Grade B is factory seconds with minor cosmetic marks, still 100% airtight and pressure-tested. Every board is covered by the 2-Year SUP Warranty and ships worldwide to 50+ countries by express air freight or consolidated sea freight.',
+    faqs: [
+      {
+        q: 'Are these paddle boards brand new?',
+        a: 'Grade A boards are brand-new, unused surplus from completed manufacturing orders — never rented, never displayed. Grade B boards are factory seconds with minor cosmetic marks; they are 100% airtight, fully pressure-tested, and clearly labeled as Grade B on the product page.',
+      },
+      {
+        q: 'Why are your prices lower than retail?',
+        a: 'Overstock means the boards were already produced for completed orders, so the production cost has been recovered. We sell the surplus directly from our Weihai base with no retail markup, no distributor margin, and no middleman — which is why complete packages cost up to 60% less than typical retail.',
+      },
+      {
+        q: 'What is included in the package?',
+        a: 'Every SUP board ships as a complete package: the inflatable board, an adjustable paddle, a dual-action hand pump, a removable fin, a coil leash, a travel backpack, and a repair kit. The listed price includes the full package — there are no hidden extras.',
+      },
+      {
+        q: 'Do you ship internationally?',
+        a: 'Yes. Orders ship from Weihai, China to more than 50 countries across the EU, North America, Asia-Pacific, the Middle East, and Africa. Single boards ship by express courier; larger orders can move by consolidated sea freight for a lower per-board cost.',
+      },
+    ],
   },
   accessory: {
     title: `SUP Accessories — Pumps, Paddles, Fins | ${SITE.name}`,
     description: `Paddle board accessories at clearance prices \u2014 pumps, paddles, fins, repair kits, life vests and bags. Factory-direct from Weihai, worldwide shipping.`,
     h1: 'Pumps, Paddles, Fins & Repair Kits',
     subtitle: 'Everything your paddle board setup needs \u2014 at overstock clearance prices.',
+    intro:
+      'Overstock accessories come from the same completed manufacturing orders as our SUP boards — matched accessory kits produced for retail orders, now offered at clearance prices. The current stock includes the Oars & Pump Set: a pair of 1.6 m aluminum oars with plastic blades and a 5-liter high-flow foot pump with pressure gauge, compatible with standard inflatables. Quantities are limited to what remains after each production run, so availability changes as batches sell out. Every accessory ships factory-direct from Weihai, China to 50+ countries.',
+    faqs: [
+      {
+        q: 'Are overstock accessories compatible with other SUP brands?',
+        a: 'The Oars & Pump Set works with any board that uses a standard inflation valve and standard oar fittings. The 5-liter high-flow foot pump includes a pressure gauge and fits the valves used on all our SUP boards as well as most major inflatable SUP brands.',
+      },
+      {
+        q: 'Why are these accessory prices lower?',
+        a: 'They are overstock — accessory kits produced for completed manufacturing orders. The production cost was already covered by the original order, so the remaining stock is offered directly at clearance prices without retail markup.',
+      },
+      {
+        q: 'Do accessories ship together with a SUP board order?',
+        a: 'Yes. Accessories can be added to any SUP board order and ship together from Weihai, China. Combined orders travel as one parcel by express courier, which keeps the shipping cost lower than ordering separately.',
+      },
+    ],
   },
 };
 
@@ -71,6 +116,7 @@ const metadata = merge(
 ) as MetaData;
 
 const catalogUrl = '/' + urlSlug + '/';
+const faqLd = (copy?.faqs || []).map((f) => ({ question: f.q, answer: f.a }));
 const categoryGraph = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -104,6 +150,14 @@ const categoryGraph = {
         {copy ? copy.subtitle : `Premium ${urlSlug} — built for life on the water.`}
       </p>
     </header>
+
+    {
+      copy?.intro && (
+        <div class="mb-10 md:mb-14 max-w-3xl mx-auto text-gray-600 dark:text-slate-300 leading-relaxed">
+          <p>{copy.intro}</p>
+        </div>
+      )
+    }
 
     {
       categories.length > 0 && (
@@ -180,6 +234,34 @@ const categoryGraph = {
       )
     }
   </section>
+
+  {faqLd.length > 0 && <JsonLd type="FAQPage" faqs={faqLd} />}
+
+  {
+    faqLd.length > 0 && (
+      <section class="max-w-4xl mx-auto px-4 md:px-6 pb-16 md:pb-20">
+        <div class="text-center mb-10">
+          <span class="text-sm font-semibold text-primary dark:text-blue-400 uppercase tracking-wider">FAQ</span>
+          <h2 class="mt-3 text-3xl font-bold tracking-tight font-heading">
+            {activeCategory === 'sup' ? 'Inflatable SUP Board Questions' : 'Accessory Questions'}
+          </h2>
+        </div>
+        <div class="space-y-4">
+          {copy?.faqs.map((f) => (
+            <details class="bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 rounded-xl overflow-hidden group">
+              <summary class="px-6 py-4 font-semibold text-gray-900 dark:text-slate-100 cursor-pointer hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors list-none flex items-center justify-between">
+                <span>{f.q}</span>
+                <span class="text-gray-400 group-open:rotate-180 transition-transform">▼</span>
+              </summary>
+              <div class="px-6 pb-4">
+                <p class="text-gray-600 dark:text-slate-300 leading-relaxed">{f.a}</p>
+              </div>
+            </details>
+          ))}
+        </div>
+      </section>
+    )
+  }
 
   <section class="sr-only" data-ai-block="definition" aria-hidden="true">
     <p>Paddle Board Overstock product catalog — {urlSlug} category.</p>
