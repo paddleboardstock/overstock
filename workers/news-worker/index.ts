@@ -64,6 +64,21 @@ function langRoot(lang: string): string {
   return lang === 'en' ? '/' : `/${lang}/`;
 }
 
+function notFound(lang: string, urlPath: string): Response {
+  return htmlResponse(
+    pageShell(lang, '<h1 style="padding:60px 0">404 — Not found</h1>', 'Not found', publicUrl(urlPath), 'Not found'),
+    404
+  );
+}
+
+function redirectTo(path: string): Response {
+  return new Response(null, { status: 301, headers: { Location: path } });
+}
+
+function totalPagesFor(total: number): number {
+  return Math.max(1, Math.ceil(total / POSTS_PER_PAGE));
+}
+
 // ---------- page shell ----------
 
 const CSS = `
@@ -429,20 +444,25 @@ export default {
       if (tokens[0] === 'news') {
         const rest = tokens.slice(1);
         // /news/[slug]/ (single post) or /news/search-index.json handled above
-        if (rest.length === 0 || (rest.length === 1 && rest[0] === 'page')) {
-          const page = rest.length === 1 && rest[0] === 'page' ? NaN : 1;
-          const pageNum = Number.isNaN(page) ? 1 : page;
-          const [posts, total] = await Promise.all([publishedPosts(db, { page: pageNum }), countPublished(db)]);
-          const canonical = langCanonical(lang, rest.length ? ['news', 'page', String(pageNum)] : ['news']);
-          return htmlResponse(listPage(lang, posts, total, pageNum, canonical, ''), 200, {
+        if (rest.length === 0) {
+          const [posts, total] = await Promise.all([publishedPosts(db, { page: 1 }), countPublished(db)]);
+          const canonical = langCanonical(lang, ['news']);
+          return htmlResponse(listPage(lang, posts, total, 1, canonical, ''), 200, {
             'Cache-Control': 'public, max-age=300',
           });
         }
+        if (rest.length === 1 && rest[0] === 'page') {
+          return redirectTo(`${langPrefix(lang)}/news/`);
+        }
         if (rest.length === 2 && rest[0] === 'page' && /^\d+$/.test(rest[1])) {
           const pageNum = Math.max(1, Number(rest[1]));
+          if (pageNum === 1) return redirectTo(`${langPrefix(lang)}/news/`);
           const [posts, total] = await Promise.all([publishedPosts(db, { page: pageNum }), countPublished(db)]);
+          if (pageNum > totalPagesFor(total)) return notFound(lang, url.pathname);
           return htmlResponse(
-            listPage(lang, posts, total, pageNum, langCanonical(lang, ['news', 'page', String(pageNum)]), '')
+            listPage(lang, posts, total, pageNum, langCanonical(lang, ['news', 'page', String(pageNum)]), ''),
+            200,
+            { 'Cache-Control': 'public, max-age=300' }
           );
         }
         if (rest.length >= 2 && rest[0] === 'category') {
@@ -463,10 +483,13 @@ export default {
               ),
               404
             );
+          const catBase = `${langPrefix(lang)}/news/category/${catSlug}/`;
+          if (pageNum === 1 && rest[2] === 'page') return redirectTo(catBase);
           const [posts, total] = await Promise.all([
             publishedPosts(db, { category: cat, page: pageNum }),
             countPublished(db, { category: cat }),
           ]);
+          if (pageNum > totalPagesFor(total)) return notFound(lang, url.pathname);
           return htmlResponse(
             listPage(
               lang,
@@ -475,16 +498,21 @@ export default {
               pageNum,
               langCanonical(lang, ['news', 'category', catSlug, ...(pageNum > 1 ? ['page', String(pageNum)] : [])]),
               cat
-            )
+            ),
+            200,
+            { 'Cache-Control': 'public, max-age=300' }
           );
         }
         if (rest.length >= 2 && rest[0] === 'tag') {
           const tagSlug = rest[1];
           const pageNum = rest[2] === 'page' && /^\d+$/.test(rest[3] || '') ? Number(rest[3]) : 1;
+          const tagBase = `${langPrefix(lang)}/news/tag/${tagSlug}/`;
+          if (pageNum === 1 && rest[2] === 'page') return redirectTo(tagBase);
           const [posts, total] = await Promise.all([
             publishedPosts(db, { tag: tagSlug, page: pageNum }),
             countPublished(db, { tag: tagSlug }),
           ]);
+          if (pageNum > totalPagesFor(total)) return notFound(lang, url.pathname);
           return htmlResponse(
             listPage(
               lang,
