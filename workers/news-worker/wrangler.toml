@@ -7,6 +7,7 @@ routes = [
   # Paths may only end with a wildcard (Cloudflare zone route syntax); the
   # /{lang}/news prefixes must be listed explicitly.
   { pattern = "paddleboardoverstock.com/news*", zone_name = "paddleboardoverstock.com" },
+  { pattern = "paddleboardoverstock.com/en/news*", zone_name = "paddleboardoverstock.com" },
   { pattern = "paddleboardoverstock.com/fr/news*", zone_name = "paddleboardoverstock.com" },
   { pattern = "paddleboardoverstock.com/de/news*", zone_name = "paddleboardoverstock.com" },
   { pattern = "paddleboardoverstock.com/es/news*", zone_name = "paddleboardoverstock.com" },
