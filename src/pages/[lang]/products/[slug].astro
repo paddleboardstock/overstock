@@ -158,7 +158,9 @@ const inTheBoxItems = (includedSpecRaw?.value || '')
         '@type': 'Offer',
         availability: product.inStock === false ? 'https://schema.org/OutOfStock' : 'https://schema.org/InStock',
         businessFunction: 'https://schema.org/Sell',
-        url: `${SITE.site}/contact/`,
+        // P11（审计 P1-1）：明确全新库存而非二手（overstock 定位关键）；Offer.url 指向产品页本身
+        itemCondition: 'https://schema.org/NewCondition',
+        url: String(url || ''),
         ...(product.price?.amount
           ? {
               price: product.price.amount,
