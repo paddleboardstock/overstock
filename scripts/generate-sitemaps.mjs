@@ -1,4 +1,4 @@
-import { existsSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
@@ -289,19 +289,26 @@ function main() {
   const community = pages.filter(
     (p) => isEn(p) && ['/community/', '/gallery/', '/lifestyle/', '/journal/'].includes(p)
   );
-  const communityXml = simpleXml(community, 'monthly', pages);
-  writeFileSync(path.join(DIST, 'sitemap-community.xml'), communityXml);
-  writeFileSync(path.join(PUBLIC, 'sitemap-community.xml'), communityXml);
-
   const media = pages.filter((p) => isEn(p) && ['/media/', '/news/'].includes(p));
-  const mediaXml = simpleXml(media, 'monthly', pages);
-  writeFileSync(path.join(DIST, 'sitemap-media.xml'), mediaXml);
-  writeFileSync(path.join(PUBLIC, 'sitemap-media.xml'), mediaXml);
-
   const learning = pages.filter((p) => isEn(p) && p.startsWith('/learn/'));
-  const learningXml = simpleXml(learning, 'monthly', pages);
-  writeFileSync(path.join(DIST, 'sitemap-learning.xml'), learningXml);
-  writeFileSync(path.join(PUBLIC, 'sitemap-learning.xml'), learningXml);
+
+  // P11（审计 P1-4）：空分片不写文件、不进 sitemap-index，避免 GSC 报错；
+  // 分片重新有内容时会自动恢复写入与索引。
+  const optionalShards = [
+    { name: 'sitemap-community.xml', urls: community },
+    { name: 'sitemap-media.xml', urls: media },
+    { name: 'sitemap-learning.xml', urls: learning },
+  ];
+  for (const shard of optionalShards) {
+    for (const dir of [DIST, PUBLIC]) {
+      const stale = path.join(dir, shard.name);
+      if (existsSync(stale)) rmSync(stale);
+    }
+    if (shard.urls.length === 0) continue;
+    const xml = simpleXml(shard.urls, 'monthly', pages);
+    writeFileSync(path.join(DIST, shard.name), xml);
+    writeFileSync(path.join(PUBLIC, shard.name), xml);
+  }
 
   // 单一 sitemap 入口（robots.txt 指向 sitemap-index.xml；gate 汇总时跳过 sitemapindex）
   const INDEX_FILES = [
@@ -309,9 +316,7 @@ function main() {
     'ai-sitemap.xml',
     'knowledge-sitemap.xml',
     'sitemap-products.xml',
-    'sitemap-community.xml',
-    'sitemap-media.xml',
-    'sitemap-learning.xml',
+    ...optionalShards.filter((s) => s.urls.length > 0).map((s) => s.name),
   ];
   const indexXml =
     `<?xml version="1.0" encoding="UTF-8"?>\n` +

@@ -1,3 +1,49 @@
+import V2_REDIRECTS from '../src/config/v2-redirects.json';
+import LEGACY_REDIRECTS from '../src/config/legacy-redirects.json';
+
+// P11（SEO/GEO 审计 P0-1/P1-3）：Astro 静态 redirects 只生成 meta-refresh 200 桩页；
+// 中间件基于同一份映射表输出真 301（curl -I → 301），语言前缀自动剥离/回加。
+const REDIRECT_MAP: Record<string, string> = {
+  ...V2_REDIRECTS,
+  ...LEGACY_REDIRECTS,
+  '/manufacturer/': '/factory/',
+};
+
+// 站点实际拥有的 17 个非英语言（与 astro.config.ts buildLocalizedRedirects 一致）。
+const SITE_LANGS = new Set([
+  'fr',
+  'de',
+  'es',
+  'pt',
+  'ar',
+  'it',
+  'ru',
+  'pl',
+  'nl',
+  'th',
+  'tl',
+  'hu',
+  'ro',
+  'bg',
+  'tr',
+  'id',
+  'ms',
+]);
+
+function matchRedirect(pathname: string): string | null {
+  const hit = REDIRECT_MAP[pathname] ?? REDIRECT_MAP[pathname.replace(/\/$/, '') + '/'];
+  if (hit) return hit;
+  const m = pathname.match(/^\/([a-z]{2})(\/.*)$/);
+  if (m) {
+    const target = REDIRECT_MAP[m[2]] ?? REDIRECT_MAP[m[2].replace(/\/$/, '') + '/'];
+    if (target) {
+      // /en/... 与非站点语言（如 /ja/...）折叠到无前缀正式路径；站点语言保留前缀。
+      return m[1] === 'en' || !SITE_LANGS.has(m[1]) ? target : `/${m[1]}${target}`;
+    }
+  }
+  return null;
+}
+
 const LANGUAGES: Record<string, string> = {
   en: 'English',
   fr: 'Français',
@@ -192,6 +238,12 @@ export const onRequest: (...args: any[]) => any = async (context) => {
 
   if (shouldRedirectToR2(pathname)) {
     return setSecurityHeaders(Response.redirect(ASSETS_BASE + pathname, 301));
+  }
+
+  // P11：收敛/合并页真 301（先于 i18n 检测，避免非英文用户多一跳 302）
+  const redirectTarget = matchRedirect(pathname);
+  if (redirectTarget) {
+    return setSecurityHeaders(Response.redirect(url.origin + redirectTarget + url.search, 301));
   }
 
   if (shouldSkipI18n(pathname)) {

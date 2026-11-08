@@ -25,6 +25,12 @@ const V2_REDIRECTS = JSON.parse(
   readFileSync(new URL('./src/config/v2-redirects.json', import.meta.url), 'utf8')
 ) as Record<string, string>;
 
+// 遗留 Astro.redirect 页面迁移表 + 双页合并（如 about-paddle-board-overstock → about）。
+// 同一份表被 functions/_middleware.ts 引用，输出真 301（Astro 静态 stub 只是兜底 meta-refresh）。
+const LEGACY_REDIRECTS = JSON.parse(
+  readFileSync(new URL('./src/config/legacy-redirects.json', import.meta.url), 'utf8')
+) as Record<string, string>;
+
 // P1-A：同一份单语言表套 14 个语言前缀（en 走根路径）
 function buildLocalizedRedirects(map: Record<string, string>): Record<string, string> {
   const locales = [
@@ -56,14 +62,7 @@ function buildLocalizedRedirects(map: Record<string, string>): Record<string, st
 
 // 遗留 Astro.redirect 页面迁移表：静态输出模式不执行 JS redirect（生成 200 空壳），
 // 统一改为 config 301（meta refresh）。源页面文件删除后由 buildLocalizedRedirects 生成全语言条目。
-const LEGACY_REDIRECTS = {
-  '/about/paddleboardoverstock/': '/about/',
-  '/paddleboardoverstock/': '/about/',
-  '/brand-story/': '/paddleboardoverstock-story/',
-  '/brand/paddleboardoverstock/': '/paddleboardoverstock-story/',
-  '/brand/': '/paddleboardoverstock-story/',
-  '/quality-testing/': '/quality/',
-};
+// （条目本体已迁至 src/config/legacy-redirects.json，与 functions/_middleware.ts 共享。）
 
 export default defineConfig({
   output: 'static',
@@ -75,7 +74,8 @@ export default defineConfig({
   redirects: {
     // P0-5：/zh/ 无页面（仓库无 zh 路由），防线上残留软 200
     '/zh/': '/',
-    // P1-A：/v2/ 内容库 43 篇收敛（MERGE_301 + KILL_410→栏目页），×14 语言
+    // P1-A + P11：/v2/ 内容库收敛（46 条：撞题 MERGE_301 + 离题 KILL→栏目页），×14 语言；
+    // 真 301 由 functions/_middleware.ts 基于 v2-redirects.json 输出，此处静态 stub 仅兜底
     ...buildLocalizedRedirects(V2_REDIRECTS),
     // /manufacturer/ 是 /factory/ 的同内容克隆路由（同数据同布局），收敛为 301，消除重复 title/内容
     ...buildLocalizedRedirects({ '/manufacturer/': '/factory/' }),

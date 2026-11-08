@@ -10,15 +10,12 @@ import path from 'node:path';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
 const DIST = path.join(ROOT, 'dist');
-const SITEMAPS = [
-  'sitemap-entity.xml',
-  'ai-sitemap.xml',
-  'knowledge-sitemap.xml',
-  'sitemap-products.xml',
-  'sitemap-community.xml',
-  'sitemap-media.xml',
-  'sitemap-learning.xml',
-];
+// P11：分片清单以 sitemap-index.xml 为准（空分片已不再写入，避免此处硬编码漂移）
+const SITEMAPS = (() => {
+  const indexFile = path.join(DIST, 'sitemap-index.xml');
+  const body = readFileSync(indexFile, 'utf8');
+  return [...body.matchAll(/<loc>[^<]*\/([^/<]+\.xml)<\/loc>/g)].map((m) => m[1]);
+})();
 const EXCLUDE_EXACT = new Set(['/brand/', '/v2/']);
 const MOJIBAKE = /\uFFFD|u\{2014\}|镥|—\?/;
 

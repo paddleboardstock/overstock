@@ -113,7 +113,7 @@ export async function GET() {
 ## Related Resources
 
 - [Brand Entity Page](${SITE_URL}/brand/paddleboardoverstock)
-- [About Paddle Board Overstock](${SITE_URL}/about-paddle-board-overstock)
+- [About Us](${SITE_URL}/about)
 - [Wholesale Paddle Boards](${SITE_URL}/wholesale-paddle-boards)
 - [Mixed Model Wholesale](${SITE_URL}/mixed-model-wholesale)
 - [International Shipping](${SITE_URL}/international-shipping)
