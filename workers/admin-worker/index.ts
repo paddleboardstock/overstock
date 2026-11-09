@@ -15,6 +15,7 @@ import {
   shipment,
   discount,
   adminAuditLog,
+  stockAccess,
   INQUIRY_STATUSES,
   ORDER_STATUSES,
   SHIPMENT_STATUSES,
@@ -23,6 +24,7 @@ import {
   type ShipmentStatus,
 } from '../shared/schema';
 import type { News } from '../shared/schema';
+import { STOCK_CATALOG } from './stock-catalog';
 import {
   releaseOrderReservations,
   markOrderPaidByIdAndFulfill,
@@ -78,6 +80,11 @@ export default {
         if (!admin) return json({ error: 'Unauthorized' }, 401);
         return await handleAdmin(request, env, path, admin, db);
       }
+      // Wholesale stock catalog: any authenticated better-auth user may ask;
+      // only emails whitelisted in stock_access (D1) receive the price list.
+      if (path === '/api/stock-catalog' && request.method === 'GET') {
+        return await handleStockCatalog(request, env, db);
+      }
       return json({ error: 'Not found' }, 404);
     } catch (e) {
       return json({ error: e instanceof Error ? e.message : 'Internal error' }, 500);
@@ -109,6 +116,35 @@ function isInternalRef(ref: string): boolean {
   return /^https?:\/\/(www\.)?paddleboardoverstock\.com\//i.test(ref);
 }
 
+/**
+ * Wholesale stock catalog gate: authenticated better-auth session + email on
+ * the stock_access whitelist (D1). Prices are business-sensitive — responses
+ * are never cacheable.
+ */
+async function handleStockCatalog(request: Request, env: AuthEnv, db: DB): Promise<Response> {
+  const auth = createAuth(env, db);
+  const session = await auth.api.getSession({
+    headers: request.headers,
+    query: { disableCookieCache: true },
+  });
+  if (!session?.user) {
+    return json({ error: 'unauthenticated' }, 401);
+  }
+  const email = String(session.user.email || '').toLowerCase();
+  const rows = await db
+    .select({ email: stockAccess.email })
+    .from(stockAccess)
+    .where(eq(stockAccess.email, email))
+    .limit(1);
+  if (!rows[0]) {
+    return json({ error: 'not_authorized' }, 403);
+  }
+  return new Response(JSON.stringify(STOCK_CATALOG), {
+    status: 200,
+    headers: { 'Content-Type': 'application/json', 'Cache-Control': 'private, no-store', ...CORS },
+  });
+}
+
 async function handleAdmin(request: Request, env: Env, path: string, admin: AdminUser, db: DB): Promise<Response> {
   // ---- DB-backed admin surface (better-auth users + D1 inquiries) ----
   if (path === '/api/admin/me' && request.method === 'GET') {
@@ -138,6 +174,45 @@ async function handleAdmin(request: Request, env: Env, path: string, admin: Admi
     const sortBy = urlParam(request, 'sortBy') || 'createdAt';
     const sortDir = urlParam(request, 'sortDir') === 'asc' ? 'asc' : 'desc';
     return json(await listUsers(db, { q, page, pageSize, sortBy, sortDir }));
+  }
+
+  // ---- Wholesale stock catalog whitelist (stock_access) ----
+  if (path === '/api/admin/stock-access' && request.method === 'GET') {
+    const rows = await db.select().from(stockAccess).orderBy(desc(stockAccess.createdAt));
+    return json({ rows });
+  }
+
+  if (path === '/api/admin/stock-access' && request.method === 'POST') {
+    const body = (await request.json()) as { email?: string; note?: string };
+    const email = String(body.email || '').trim().toLowerCase();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      return json({ error: 'Invalid email address' }, 400);
+    }
+    const note = String(body.note || '').trim().slice(0, 200);
+    try {
+      await db.insert(stockAccess).values({
+        email,
+        note,
+        addedBy: admin.email,
+        createdAt: new Date(),
+      });
+    } catch (e) {
+      if (String(e).includes('UNIQUE')) {
+        return json({ error: `Email ${email} is already whitelisted` }, 409);
+      }
+      throw e;
+    }
+    await writeAudit(db, admin, 'stock_access.create', 'stock_access', email, { note });
+    return json({ success: true, email }, 201);
+  }
+
+  if (path === '/api/admin/stock-access/delete' && request.method === 'POST') {
+    const { email } = (await request.json()) as { email?: string };
+    const target = String(email || '').trim().toLowerCase();
+    if (!target) return json({ error: 'email is required' }, 400);
+    await db.delete(stockAccess).where(eq(stockAccess.email, target));
+    await writeAudit(db, admin, 'stock_access.delete', 'stock_access', target, {});
+    return json({ success: true });
   }
 
   if (path === '/api/admin/inquiries' && request.method === 'GET') {
