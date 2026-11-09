@@ -225,16 +225,26 @@ jobs:
             exit 0
           fi
           EXISTING=$(curl -sS "https://api.cloudflare.com/client/v4/zones/${CF_ZONE_ID}/dns_records?name=shop.paddleboardoverstock.com" \
-            -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}")
+            -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" || echo '{}')
           COUNT=$(echo "$EXISTING" | jq -r '.result | length')
           if [ "$COUNT" != "0" ]; then
             echo "[dns] shop record already exists ($(echo "$EXISTING" | jq -r '.result[0].type') → $(echo "$EXISTING" | jq -r '.result[0].content')); leaving untouched"
+            exit 0
+          fi
+          # Failure here is almost always a token-scope issue (Zone DNS Edit
+          # missing) — surface it as a warning instead of failing the deploy:
+          # the storefront is already live on *.pages.dev, only the vanity
+          # hostname is missing.
+          RESP=$(curl -sS -X POST "https://api.cloudflare.com/client/v4/zones/${CF_ZONE_ID}/dns_records" \
+            -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" \
+            -H "Content-Type: application/json" \
+            -d '{"type":"CNAME","name":"shop","content":"paddleboardoverstock-shop.pages.dev","proxied":true}')
+          if echo "$RESP" | jq -e '.success' > /dev/null 2>&1; then
+            echo "[dns] created CNAME shop → paddleboardoverstock-shop.pages.dev (proxied)"
           else
-            curl -sS -X POST "https://api.cloudflare.com/client/v4/zones/${CF_ZONE_ID}/dns_records" \
-              -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" \
-              -H "Content-Type: application/json" \
-              -d '{"type":"CNAME","name":"shop","content":"paddleboardoverstock-shop.pages.dev","proxied":true}' | jq -e '.success' > /dev/null \
-              && echo "[dns] created CNAME shop → paddleboardoverstock-shop.pages.dev (proxied)"
+            echo "::warning::Could not create the DNS record (API token may lack Zone DNS Edit)."
+            echo "$RESP" | jq -c '{success, errors}' 2> /dev/null || echo "$RESP"
+            echo "::warning::Create it manually: CNAME shop → paddleboardoverstock-shop.pages.dev (proxied)."
           fi
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
