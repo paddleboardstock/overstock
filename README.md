@@ -55,16 +55,12 @@ npm run db:migrate:local
 node scripts/seed-stock.mjs                # regenerates seed-stock.sql from main repo
 npx wrangler d1 execute paddleboardoverstock-shop-db --local --file seed-stock.sql --config workers/shop-api/wrangler.toml
 
-# Optional: activate all 56 drafts locally (placeholder prices = EXW wholesale ×100)
-npx wrangler d1 execute paddleboardoverstock-shop-db --local --command "UPDATE products SET status='active' WHERE status='draft'" --config workers/shop-api/wrangler.toml
-
 # Terminal 2 — storefront
 npm run dev                                # astro dev on :4321
 ```
 
-> Local dev state: all 56 SKUs are **active** at EXW wholesale placeholder prices.
-> Retail pricing is still undecided — reprice via `PATCH /api/admin/products/:id`
-> before any real sale. Remote/production seeding stays **draft** (see below).
+> Retail prices equal the EXW wholesale prices from the source catalog
+> (business decision) — the seed imports all 56 SKUs as **active**.
 
 Worker secrets for local dev go in `workers/shop-api/.dev.vars`:
 
@@ -83,8 +79,8 @@ SHOP_SESSION_SECRET=<random>
    `database_id` into `workers/shop-api/wrangler.toml` (all three environments).
 2. `npm run db:migrate:remote` — apply the 5 migrations.
 3. Seed catalog: `node scripts/seed-stock.mjs` then execute `seed-stock.sql`
-   against remote D1. All 56 SKUs import as **draft** — an admin must set
-   retail prices (xlsx prices are EXW wholesale) and activate them.
+    against remote D1. Retail prices = EXW wholesale prices (business decision);
+    all 56 SKUs import as **active** and immediately sellable.
 4. Worker secrets (production): `wrangler secret put STRIPE_SECRET_KEY`,
    `STRIPE_WEBHOOK_SECRET`, `SHOP_ADMIN_TOKEN`, `APP_ORIGIN`,
    `API_ORIGIN`, `SHOP_SESSION_SECRET` (`--config workers/shop-api/wrangler.toml`).
