@@ -73,30 +73,47 @@ API_ORIGIN=http://localhost:8787
 SHOP_SESSION_SECRET=<random>
 ```
 
-## Deployment checklist (Cloudflare)
+## Deployment (GitHub Actions → Cloudflare API)
 
-1. `wrangler d1 create paddleboardoverstock-shop-db` — put the returned
-   `database_id` into `workers/shop-api/wrangler.toml` (all three environments).
-2. `npm run db:migrate:remote` — apply the 5 migrations.
-3. Seed catalog: `node scripts/seed-stock.mjs` then execute `seed-stock.sql`
-    against remote D1. Retail prices = EXW wholesale prices (business decision);
-    all 56 SKUs import as **active** and immediately sellable.
-4. Worker secrets (production): `wrangler secret put STRIPE_SECRET_KEY`,
-   `STRIPE_WEBHOOK_SECRET`, `SHOP_ADMIN_TOKEN`, `APP_ORIGIN`,
-   `API_ORIGIN`, `SHOP_SESSION_SECRET` (`--config workers/shop-api/wrangler.toml`).
-5. `npm run deploy:worker` — routes `shop-api.paddleboardoverstock.com/api/*`.
-6. Register the Stripe webhook endpoint
-   `https://shop-api.paddleboardoverstock.com/api/stripe/webhook` with events:
+All deployment goes through `.github/workflows/deploy.yml` — no local wrangler
+deploys. It runs on every push to `main` (and manual dispatch) and is fully
+idempotent: it creates the D1 database, Pages project, Pages custom domain and
+DNS record when missing, applies migrations, seeds the catalog only when the
+products table is empty, syncs worker secrets, then deploys the worker and the
+storefront.
+
+One domain serves everything — `shop.paddleboardoverstock.com`:
+Cloudflare Pages serves the storefront, and the shop-api worker owns the
+zone route `shop.paddleboardoverstock.com/api/*` (worker route takes
+precedence over Pages). `wrangler.toml` keeps explicit
+`REPLACE_WITH_D1_DATABASE_ID` placeholders; the workflow discovers the real
+UUID via `wrangler d1 info` and injects it at deploy time.
+
+Required repo secrets (Settings → Secrets and variables → Actions):
+
+```
+CLOUDFLARE_API_TOKEN     # token with Workers Scripts/Pages/D1/DNS edit on the account + zone
+CLOUDFLARE_ACCOUNT_ID
+CLOUDFLARE_ZONE_ID       # zone paddleboardoverstock.com (enables the DNS step)
+STRIPE_SECRET_KEY        # until set, checkout returns 502 (products/orders still work)
+STRIPE_WEBHOOK_SECRET
+SHOP_ADMIN_TOKEN         # Bearer token for /api/admin/*
+SHOP_SESSION_SECRET
+```
+
+First deploy: push to `main` (or Actions → Deploy → Run workflow). Then:
+
+1. Register the Stripe webhook endpoint
+   `https://shop.paddleboardoverstock.com/api/stripe/webhook` with events:
    `checkout.session.completed`, `checkout.session.expired`,
    `checkout.session.async_payment_succeeded`,
    `checkout.session.async_payment_failed`,
    `payment_intent.payment_failed`, `charge.refunded`.
-   Copy the signing secret into `STRIPE_WEBHOOK_SECRET`.
-7. Storefront: build (`npm run build`) and deploy `dist/` to Cloudflare Pages
-   (project `paddleboardoverstock-shop`), set `PUBLIC_API_BASE=https://shop-api.paddleboardoverstock.com`.
-8. DNS: `shop.paddleboardoverstock.com` → Pages, `shop-api.paddleboardoverstock.com` → Worker.
-9. Create at least one `manual_quote` shipping rule per target market
-   (default when no rule matches is manual quote — safe).
+   Copy the signing secret into the `STRIPE_WEBHOOK_SECRET` repo secret and
+   re-run the deploy (or run `wrangler secret bulk` manually once).
+2. Create at least one `manual_quote` shipping rule per target market via
+   `/api/admin/shipping-rules` (default when no rule matches is manual
+   quote — safe).
 
 ## Key invariants
 
