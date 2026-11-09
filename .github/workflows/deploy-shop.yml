@@ -201,8 +201,9 @@ jobs:
             -d '{"name":"shop.paddleboardoverstock.com"}' > /tmp/domain-attach.json
           set -e
           if ! jq -e '.success' /tmp/domain-attach.json > /dev/null; then
-            # tolerate "domain already attached" (error 8000007 / codes containing 'already')
-            if jq -e '.errors[]?.code' /tmp/domain-attach.json | grep -qiE "8000007|already"; then
+            # tolerate "domain already attached" (code 8000018 / 8000007 or any
+            # 'already' in the error text)
+            if grep -qiE "8000018|8000007|already" /tmp/domain-attach.json; then
               echo "[pages] custom domain already attached"
             else
               cat /tmp/domain-attach.json
