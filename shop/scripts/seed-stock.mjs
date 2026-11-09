@@ -32,7 +32,9 @@ function uuidV5(name) {
 }
 
 const scriptDir = dirname(fileURLToPath(import.meta.url));
-const defaultCatalog = resolve(scriptDir, '../../Overstock/workers/admin-worker/stock-catalog.ts');
+// Monorepo layout: shop/scripts → up two levels is the repo root, where the
+// main site's stock catalog lives.
+const defaultCatalog = resolve(scriptDir, '../../workers/admin-worker/stock-catalog.ts');
 const catalogPath = process.argv[2] ?? defaultCatalog;
 const outputPath = resolve(scriptDir, '../seed-stock.sql');
 
