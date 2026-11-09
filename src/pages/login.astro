@@ -101,6 +101,19 @@ const metadata = {
   </main>
 
   <script>
+    // Post-login destination: internal ?redirect= path (open-redirect guard),
+    // falling back to the admin dashboard.
+    const redirectParam = new URLSearchParams(window.location.search).get('redirect') || '';
+    const redirectTarget =
+      redirectParam.startsWith('/') && !redirectParam.startsWith('//') ? redirectParam : '/keystatic';
+    const googleLogin = document.getElementById('google-login');
+    if (googleLogin && redirectTarget !== '/keystatic') {
+      googleLogin.setAttribute(
+        'href',
+        `/api/auth/sign-in/social?provider=google&callbackURL=${encodeURIComponent(redirectTarget)}`
+      );
+    }
+
     const siteKey = (import.meta.env.PUBLIC_TURNSTILE_SITE_KEY as string | undefined) || '';
     if (siteKey) {
       const script = document.createElement('script');
@@ -144,7 +157,8 @@ const metadata = {
         });
         const data = await res.json().catch(() => ({}));
         if (res.ok && data.user) {
-          window.location.href = new URLSearchParams(window.location.search).get('redirect') || '/keystatic';
+          const p = new URLSearchParams(window.location.search).get('redirect') || '';
+          window.location.href = p.startsWith('/') && !p.startsWith('//') ? p : '/keystatic';
         } else {
           if (errorEl) {
             errorEl.textContent = data.message || data.error || 'Invalid email or password';

@@ -6,6 +6,7 @@ compatibility_flags = ["nodejs_compat"]
 routes = [
   { pattern = "paddleboardoverstock.com/api/admin/*", zone_name = "paddleboardoverstock.com" },
   { pattern = "paddleboardoverstock.com/api/auth/*", zone_name = "paddleboardoverstock.com" },
+  { pattern = "paddleboardoverstock.com/api/stock-catalog", zone_name = "paddleboardoverstock.com" },
 ]
 
 [vars]

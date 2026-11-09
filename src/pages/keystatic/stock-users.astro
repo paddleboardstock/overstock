@@ -1,0 +1,306 @@
+---
+import AdminLayout from '~/layouts/AdminLayout.astro';
+export const prerender = true;
+---
+
+<AdminLayout title="Stock Catalog Access" active="stock">
+  <div class="flex flex-wrap items-center justify-between gap-3 mb-6">
+    <div>
+      <h1 class="text-xl font-bold">Stock Catalog Access</h1>
+      <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
+        Whitelist for <code>/wholesale-stock</code> — signed-in users whose email is listed here can fetch
+        <code>/api/stock-catalog</code> (overstock price list).
+      </p>
+    </div>
+  </div>
+
+  <!-- Add to whitelist -->
+  <div class="mb-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-4">
+    <form id="add-form" class="flex flex-wrap items-end gap-3">
+      <div class="flex-1 min-w-56">
+        <label for="add-email" class="block text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">Email</label>
+        <input
+          id="add-email"
+          type="email"
+          required
+          placeholder="buyer@company.com"
+          class="w-full px-3 py-1.5 text-sm rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900"
+        />
+      </div>
+      <div class="flex-1 min-w-56">
+        <label for="add-note" class="block text-xs font-medium text-gray-500 dark:text-gray-400 mb-1"
+          >Note (optional)</label
+        >
+        <input
+          id="add-note"
+          type="text"
+          placeholder="Company, country, …"
+          class="w-full px-3 py-1.5 text-sm rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900"
+        />
+      </div>
+      <button type="submit" class="px-4 py-1.5 text-sm rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-medium">
+        Grant access
+      </button>
+    </form>
+  </div>
+
+  <!-- Whitelist -->
+  <h2 class="text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-2">
+    Whitelisted accounts (<span id="whitelist-count">…</span>)
+  </h2>
+  <div class="overflow-x-auto rounded-lg border border-gray-200 dark:border-gray-800 mb-10">
+    <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-800 text-sm">
+      <thead class="bg-gray-50 dark:bg-gray-900">
+        <tr>
+          <th class="px-4 py-3 text-left font-medium">Email</th>
+          <th class="px-4 py-3 text-left font-medium">Note</th>
+          <th class="px-4 py-3 text-left font-medium">Added by</th>
+          <th class="px-4 py-3 text-left font-medium">Added</th>
+          <th class="px-4 py-3"></th>
+        </tr>
+      </thead>
+      <tbody id="whitelist-rows" class="divide-y divide-gray-200 dark:divide-gray-800">
+        <tr>
+          <td colspan="5" class="px-4 py-8 text-center text-gray-400">Loading…</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Registered users (approve from here) -->
+  <h2 class="text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-2">
+    Registered accounts (better-auth)
+  </h2>
+  <p class="text-xs text-gray-400 mb-3">
+    Latest 100 accounts. "Grant" adds the email to the wholesale catalog whitelist.
+  </p>
+  <div class="overflow-x-auto rounded-lg border border-gray-200 dark:border-gray-800">
+    <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-800 text-sm">
+      <thead class="bg-gray-50 dark:bg-gray-900">
+        <tr>
+          <th class="px-4 py-3 text-left font-medium">User</th>
+          <th class="px-4 py-3 text-left font-medium">Created</th>
+          <th class="px-4 py-3 text-left font-medium">Catalog access</th>
+          <th class="px-4 py-3"></th>
+        </tr>
+      </thead>
+      <tbody id="user-rows" class="divide-y divide-gray-200 dark:divide-gray-800">
+        <tr>
+          <td colspan="4" class="px-4 py-8 text-center text-gray-400">Loading…</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script is:inline>
+    (function () {
+      const whitelist = new Set(); // lowercase emails
+
+      function toast(msg, type) {
+        const container = document.getElementById('toast-container');
+        const el = document.createElement('div');
+        const bg = type === 'error' ? 'bg-red-600 text-white' : 'bg-green-600 text-white';
+        el.className = bg + ' px-4 py-2 rounded-md shadow-lg text-sm pointer-events-auto';
+        el.textContent = msg;
+        container.appendChild(el);
+        setTimeout(function () {
+          el.style.opacity = '0';
+          setTimeout(function () {
+            el.remove();
+          }, 300);
+        }, 3000);
+      }
+
+      function escapeHtml(s) {
+        return String(s ?? '').replace(/[&<>"']/g, function (c) {
+          return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+        });
+      }
+
+      async function loadWhitelist() {
+        const tbody = document.getElementById('whitelist-rows');
+        try {
+          const res = await fetch('/api/admin/stock-access', { credentials: 'same-origin' });
+          if (res.status === 401) {
+            window.location.replace('/login');
+            return;
+          }
+          if (!res.ok) throw new Error('HTTP ' + res.status);
+          const data = await res.json();
+          const rows = data.rows || [];
+          whitelist.clear();
+          rows.forEach(function (r) {
+            whitelist.add(String(r.email).toLowerCase());
+          });
+          document.getElementById('whitelist-count').textContent = String(rows.length);
+          if (rows.length === 0) {
+            tbody.innerHTML =
+              '<tr><td colspan="5" class="px-4 py-8 text-center text-gray-400">No whitelisted accounts yet.</td></tr>';
+          } else {
+            tbody.innerHTML = rows
+              .map(function (r) {
+                const date = r.createdAt ? new Date(r.createdAt).toLocaleDateString() : '';
+                return (
+                  '<tr>' +
+                  '<td class="px-4 py-3 font-medium">' +
+                  escapeHtml(r.email) +
+                  '</td>' +
+                  '<td class="px-4 py-3 text-gray-500 dark:text-gray-400">' +
+                  escapeHtml(r.note || '') +
+                  '</td>' +
+                  '<td class="px-4 py-3 text-gray-500 dark:text-gray-400">' +
+                  escapeHtml(r.addedBy || '') +
+                  '</td>' +
+                  '<td class="px-4 py-3 text-gray-500 dark:text-gray-400 whitespace-nowrap">' +
+                  escapeHtml(date) +
+                  '</td>' +
+                  '<td class="px-4 py-3 text-right">' +
+                  '<button class="revoke-btn text-xs text-red-600 dark:text-red-400 hover:underline" data-email="' +
+                  escapeHtml(r.email) +
+                  '">Revoke</button></td>' +
+                  '</tr>'
+                );
+              })
+              .join('');
+            tbody.querySelectorAll('.revoke-btn').forEach(function (btn) {
+              btn.addEventListener('click', async function () {
+                try {
+                  const res = await fetch('/api/admin/stock-access/delete', {
+                    method: 'POST',
+                    credentials: 'same-origin',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email: btn.dataset.email }),
+                  });
+                  if (!res.ok) throw new Error('HTTP ' + res.status);
+                  toast('Access revoked for ' + btn.dataset.email);
+                  loadWhitelist();
+                  loadUsers();
+                } catch {
+                  toast('Failed to revoke', 'error');
+                }
+              });
+            });
+          }
+        } catch (err) {
+          tbody.innerHTML =
+            '<tr><td colspan="5" class="px-4 py-8 text-center text-red-500">Failed to load: ' +
+            escapeHtml(String(err)) +
+            '</td></tr>';
+        }
+      }
+
+      async function loadUsers() {
+        const tbody = document.getElementById('user-rows');
+        try {
+          const res = await fetch('/api/admin/users?pageSize=100&sortBy=createdAt&sortDir=desc', {
+            credentials: 'same-origin',
+          });
+          if (res.status === 401) {
+            window.location.replace('/login');
+            return;
+          }
+          if (!res.ok) throw new Error('HTTP ' + res.status);
+          const data = await res.json();
+          const rows = data.rows || [];
+          if (rows.length === 0) {
+            tbody.innerHTML =
+              '<tr><td colspan="4" class="px-4 py-8 text-center text-gray-400">No registered accounts.</td></tr>';
+            return;
+          }
+          tbody.innerHTML = rows
+            .map(function (r) {
+              const email = String(r.email || '').toLowerCase();
+              const has = whitelist.has(email);
+              const avatar = r.image
+                ? '<img src="' + escapeHtml(r.image) + '" class="w-8 h-8 rounded-full object-cover" alt="" />'
+                : '<div class="w-8 h-8 rounded-full bg-gray-300 dark:bg-gray-700 flex items-center justify-center text-xs font-bold">' +
+                  escapeHtml((r.name || '?')[0].toUpperCase()) +
+                  '</div>';
+              return (
+                '<tr>' +
+                '<td class="px-4 py-3"><div class="flex items-center gap-3"><div>' +
+                avatar +
+                '</div><div><div class="font-medium">' +
+                escapeHtml(r.name) +
+                '</div><div class="text-xs text-gray-500">' +
+                escapeHtml(r.email) +
+                '</div></div></div></td>' +
+                '<td class="px-4 py-3 text-gray-500 dark:text-gray-400 whitespace-nowrap">' +
+                escapeHtml(r.createdAt ? new Date(r.createdAt).toLocaleDateString() : '') +
+                '</td>' +
+                '<td class="px-4 py-3">' +
+                (has
+                  ? '<span class="px-2 py-0.5 rounded bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-300 text-xs">Granted</span>'
+                  : '<span class="px-2 py-0.5 rounded bg-gray-100 dark:bg-gray-800 text-gray-500 text-xs">—</span>') +
+                '</td>' +
+                '<td class="px-4 py-3 text-right">' +
+                (has
+                  ? ''
+                  : '<button class="grant-btn text-xs text-blue-600 dark:text-blue-400 hover:underline" data-email="' +
+                    escapeHtml(r.email) +
+                    '">Grant</button>') +
+                '</td>' +
+                '</tr>'
+              );
+            })
+            .join('');
+          tbody.querySelectorAll('.grant-btn').forEach(function (btn) {
+            btn.addEventListener('click', async function () {
+              try {
+                const res = await fetch('/api/admin/stock-access', {
+                  method: 'POST',
+                  credentials: 'same-origin',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({ email: btn.dataset.email }),
+                });
+                if (!res.ok) {
+                  const data = await res.json().catch(function () {
+                    return {};
+                  });
+                  throw new Error(data.error || 'HTTP ' + res.status);
+                }
+                toast('Access granted to ' + btn.dataset.email);
+                loadWhitelist();
+                loadUsers();
+              } catch (err) {
+                toast('Failed: ' + err.message, 'error');
+              }
+            });
+          });
+        } catch (err) {
+          tbody.innerHTML =
+            '<tr><td colspan="4" class="px-4 py-8 text-center text-red-500">Failed to load: ' +
+            escapeHtml(String(err)) +
+            '</td></tr>';
+        }
+      }
+
+      document.getElementById('add-form').addEventListener('submit', async function (e) {
+        e.preventDefault();
+        const emailEl = document.getElementById('add-email');
+        const noteEl = document.getElementById('add-note');
+        try {
+          const res = await fetch('/api/admin/stock-access', {
+            method: 'POST',
+            credentials: 'same-origin',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email: emailEl.value, note: noteEl.value }),
+          });
+          const data = await res.json().catch(function () {
+            return {};
+          });
+          if (!res.ok) throw new Error(data.error || 'HTTP ' + res.status);
+          toast('Access granted to ' + data.email);
+          emailEl.value = '';
+          noteEl.value = '';
+          loadWhitelist();
+          loadUsers();
+        } catch (err) {
+          toast('Failed: ' + err.message, 'error');
+        }
+      });
+
+      loadWhitelist().then(loadUsers);
+    })();
+  </script>
+</AdminLayout>

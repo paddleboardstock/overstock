@@ -27,6 +27,7 @@
     "deploy:worker-shop": "npx wrangler deploy -c workers/shop-worker/wrangler.toml",
     "deploy:workers": "node scripts/deploy-workers.mjs",
     "gen:shop-catalog": "node scripts/gen-shop-catalog.mjs",
+    "stock:catalog": "node scripts/generate-stock-catalog.mjs",
     "seo:pipeline": "node scripts/seo-pipeline.mjs",
     "geo:build": "node scripts/geo-build.mjs",
     "ai:corpus": "node scripts/generate-ai-corpus.mjs",

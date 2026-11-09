@@ -384,6 +384,19 @@ export const adminAuditLog = sqliteTable(
 
 export type AdminAuditLog = typeof adminAuditLog.$inferSelect;
 
+// Wholesale stock catalog access whitelist (migration 0007). Emails listed
+// here may fetch /api/stock-catalog once authenticated via better-auth.
+export const stockAccess = sqliteTable('stock_access', {
+  email: text('email').primaryKey(),
+  note: text('note').notNull().default(''),
+  addedBy: text('added_by').notNull().default(''),
+  createdAt: integer('created_at', { mode: 'timestamp_ms' })
+    .default(sql`(cast(unixepoch('subsecond') * 1000 as integer))`)
+    .notNull(),
+});
+
+export type StockAccess = typeof stockAccess.$inferSelect;
+
 export const DISCOUNT_KINDS = ['percent', 'fixed'] as const;
 export type DiscountKind = (typeof DISCOUNT_KINDS)[number];
 
