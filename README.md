@@ -55,9 +55,16 @@ npm run db:migrate:local
 node scripts/seed-stock.mjs                # regenerates seed-stock.sql from main repo
 npx wrangler d1 execute paddleboardoverstock-shop-db --local --file seed-stock.sql --config workers/shop-api/wrangler.toml
 
+# Optional: activate all 56 drafts locally (placeholder prices = EXW wholesale ×100)
+npx wrangler d1 execute paddleboardoverstock-shop-db --local --command "UPDATE products SET status='active' WHERE status='draft'" --config workers/shop-api/wrangler.toml
+
 # Terminal 2 — storefront
 npm run dev                                # astro dev on :4321
 ```
+
+> Local dev state: all 56 SKUs are **active** at EXW wholesale placeholder prices.
+> Retail pricing is still undecided — reprice via `PATCH /api/admin/products/:id`
+> before any real sale. Remote/production seeding stays **draft** (see below).
 
 Worker secrets for local dev go in `workers/shop-api/.dev.vars`:
 
