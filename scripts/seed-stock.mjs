@@ -11,8 +11,26 @@
 //     --file seed-stock.sql --config workers/shop-api/wrangler.toml
 
 import { readFileSync, writeFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+
+// Deterministic UUIDv5 so re-running the seed is idempotent (ON CONFLICT DO
+// NOTHING) while IDs stay UUID-formatted — checkout validates variantIds with
+// isUuid, so opaque ids like "v-sb-01" would be rejected.
+const NAMESPACE_HEX = 'a1b2c3d4e5f67890abcdef0123456789';
+
+function uuidV5(name) {
+  const hash = createHash('sha1')
+    .update(Buffer.from(NAMESPACE_HEX, 'hex'))
+    .update(Buffer.from(name, 'utf8'))
+    .digest();
+  const b = hash.subarray(0, 16);
+  b[6] = (b[6] & 0x0f) | 0x50;
+  b[8] = (b[8] & 0x3f) | 0x80;
+  const hex = b.toString('hex');
+  return `${hex.slice(0, 8)}-${hex.slice(8, 12)}-${hex.slice(12, 16)}-${hex.slice(16, 20)}-${hex.slice(20)}`;
+}
 
 const scriptDir = dirname(fileURLToPath(import.meta.url));
 const defaultCatalog = resolve(scriptDir, '../../Overstock/workers/admin-worker/stock-catalog.ts');
@@ -47,8 +65,8 @@ let imageCount = 0;
 for (const section of catalog.sections) {
   for (const item of section.items) {
     const slug = `clearance-${item.id}`;
-    const productId = `p-${item.id}`;
-    const variantId = `v-${item.id}`;
+    const productId = uuidV5(`product:${item.id}`);
+    const variantId = uuidV5(`variant:${item.id}`);
     const title = `${item.dimensions} cm — ${section.title.replace(/Stock /i, '')} (clearance)`;
     const description = item.note ? `${item.note}\n\nDimensions: ${item.dimensions} cm. Warehouse clearance stock; limited quantity. Contact us for a shipping quote.` : `Dimensions: ${item.dimensions} cm. Warehouse clearance stock; limited quantity. Contact us for a shipping quote.`;
 
@@ -69,7 +87,7 @@ for (const section of catalog.sections) {
     item.images.forEach((imagePath, index) => {
       const url = imagePath.startsWith('http') ? imagePath : `${MAIN_SITE_ORIGIN}${imagePath}`;
       statements.push(
-        `INSERT INTO product_images (id, product_id, external_url, alt_text, sort_order) VALUES ('img-${item.id}-${index + 1}', '${productId}', ${sqlString(url)}, ${sqlString(title)}, ${index}) ON CONFLICT(id) DO NOTHING;`
+        `INSERT INTO product_images (id, product_id, external_url, alt_text, sort_order) VALUES ('${uuidV5(`image:${item.id}:${index + 1}`)}', '${productId}', ${sqlString(url)}, ${sqlString(title)}, ${index}) ON CONFLICT(id) DO NOTHING;`
       );
       imageCount++;
     });

@@ -49,8 +49,14 @@ interface ReserveItem {
 
 /**
  * Atomically reserve stock for each item. Returns null on success or the
- * variantId that could not be fully reserved (caller must release anything
- * done before the failure — this helper already did).
+ * variantId that could not be fully reserved (this helper already rolled
+ * back everything it reserved before the failure).
+ *
+ * Retry-safe: a reservation row for (order, variant) is reused via UPDATE so
+ * re-running checkout for the same order never trips UNIQUE(order_id,
+ * variant_id). Each item's inventory increment and reservation-row write are
+ * one atomic batch — the `CHECK (reserved <= on_hand)` constraint makes an
+ * oversell abort the whole batch.
  */
 export async function reserveForOrder(
   db: D1Database,
@@ -58,30 +64,77 @@ export async function reserveForOrder(
   items: ReserveItem[],
   expiresAtIso: string
 ): Promise<string | null> {
+  // Snapshot existing reservation rows so retries reuse instead of duplicate.
+  const existingRows = (
+    await db
+      .prepare(`SELECT variant_id, quantity, status FROM inventory_reservations WHERE order_id = ?1`)
+      .bind(orderId)
+      .all<{ variant_id: string; quantity: number; status: string }>()
+  ).results;
+  const existing = new Map(existingRows.map((r) => [r.variant_id, r]));
+
   const done: ReserveItem[] = [];
   for (const item of items) {
-    const res = await db
-      .prepare(
-        `UPDATE inventory SET reserved = reserved + ?1, updated_at = ?2
-         WHERE variant_id = ?3 AND on_hand - reserved >= ?1`
-      )
-      .bind(item.quantity, nowIso(), item.variantId)
-      .run();
-    if (res.meta.changes !== 1) {
+    const ex = existing.get(item.variantId);
+    if (ex && ex.status === 'active' && ex.quantity === item.quantity) {
+      // Idempotent retry: stock already reserved — just extend the window.
+      await db
+        .prepare(
+          `UPDATE inventory_reservations SET expires_at = ?1, updated_at = ?2
+           WHERE order_id = ?3 AND variant_id = ?4 AND status = 'active'`
+        )
+        .bind(expiresAtIso, nowIso(), orderId, item.variantId)
+        .run();
+      continue;
+    }
+    const activeQty = ex && ex.status === 'active' ? ex.quantity : 0;
+    const need = item.quantity - activeQty;
+    const inv = (
+      await db.prepare(`SELECT variant_id FROM inventory WHERE variant_id = ?1`).bind(item.variantId).first()
+    );
+    if (!inv) {
       await releaseReservationsForOrder(db, orderId, done, 'released', 'reservation_rollback');
       return item.variantId;
     }
-    done.push(item);
+    if (need > 0) {
+      try {
+        // Atomic: CHECK(reserved <= on_hand) aborts the batch on oversell.
+        await db.batch([
+          db
+            .prepare(`UPDATE inventory SET reserved = reserved + ?1, updated_at = ?2 WHERE variant_id = ?3`)
+            .bind(need, nowIso(), item.variantId),
+          ex
+            ? db
+                .prepare(
+                  `UPDATE inventory_reservations SET quantity = ?1, status = 'active', expires_at = ?2, updated_at = ?3
+                   WHERE order_id = ?4 AND variant_id = ?5`
+                )
+                .bind(item.quantity, expiresAtIso, nowIso(), orderId, item.variantId)
+            : db
+                .prepare(
+                  `INSERT INTO inventory_reservations (id, order_id, variant_id, quantity, status, expires_at)
+                   VALUES (?1, ?2, ?3, ?4, 'active', ?5)`
+                )
+                .bind(genId(), orderId, item.variantId, item.quantity, expiresAtIso),
+        ]);
+      } catch {
+        await releaseReservationsForOrder(db, orderId, done, 'released', 'reservation_rollback');
+        return item.variantId;
+      }
+      done.push({ variantId: item.variantId, quantity: need });
+    } else if (ex) {
+      // need <= 0 with an existing row: refresh quantity/window without
+      // touching the reserved counter (quantity never grows here because
+      // order items are immutable).
+      await db
+        .prepare(
+          `UPDATE inventory_reservations SET quantity = ?1, status = 'active', expires_at = ?2, updated_at = ?3
+           WHERE order_id = ?4 AND variant_id = ?5`
+        )
+        .bind(item.quantity, expiresAtIso, nowIso(), orderId, item.variantId)
+        .run();
+    }
   }
-  const stmts = items.map((item) =>
-    db
-      .prepare(
-        `INSERT INTO inventory_reservations (id, order_id, variant_id, quantity, status, expires_at)
-         VALUES (?1, ?2, ?3, ?4, 'active', ?5)`
-      )
-      .bind(genId(), orderId, item.variantId, item.quantity, expiresAtIso)
-  );
-  await db.batch(stmts);
   return null;
 }
 
@@ -125,16 +178,6 @@ export async function releaseReservationsForOrder(
       )
       .bind(status, nowIso(), orderId)
   );
-  for (const item of toRelease) {
-    stmts.push(
-      db
-        .prepare(
-          `INSERT INTO inventory_movements (id, variant_id, change_qty, reason, order_id)
-           VALUES (?1, ?2, 0, ?3, ?4)`
-        )
-        .bind(genId(), item.variantId, reason, orderId)
-    );
-  }
   await db.batch(stmts);
 }
 
@@ -150,31 +193,38 @@ export async function consumeReservationsForOrder(db: D1Database, orderId: strin
       .all<ReservationRow>()
   ).results;
   if (rows.length === 0) return true; // already consumed (idempotent)
+  // Every reserved variant must have an inventory row; a missing row means
+  // the reservation cannot be honoured (never auto-skip: that would leak the
+  // reserved counter).
+  for (const r of rows) {
+    const inv = (await db.prepare(`SELECT variant_id FROM inventory WHERE variant_id = ?1`).bind(r.variant_id).first());
+    if (!inv) return false;
+  }
+  // Single atomic batch: CHECK(on_hand >= 0) / CHECK(reserved >= 0) abort the
+  // whole batch if any decrement would go negative, so no partial consume.
   const stmts: D1PreparedStatement[] = [];
   for (const r of rows) {
     stmts.push(
       db
         .prepare(
           `UPDATE inventory SET on_hand = on_hand - ?1, reserved = reserved - ?1, updated_at = ?2
-           WHERE variant_id = ?3 AND on_hand >= ?1 AND reserved >= ?1`
+           WHERE variant_id = ?3`
         )
         .bind(r.quantity, nowIso(), r.variant_id)
     );
   }
-  const results = await db.batch(stmts);
-  for (const res of results) {
-    if (res.meta.changes !== 1) return false; // inconsistent — caller marks failure
-  }
-  const after: D1PreparedStatement[] = rows.map((r) =>
-    db
-      .prepare(
-        `UPDATE inventory_reservations SET status = 'consumed', updated_at = ?1
-         WHERE order_id = ?2 AND variant_id = ?3 AND status = 'active'`
-      )
-      .bind(nowIso(), orderId, r.variant_id)
-  );
   for (const r of rows) {
-    after.push(
+    stmts.push(
+      db
+        .prepare(
+          `UPDATE inventory_reservations SET status = 'consumed', updated_at = ?1
+           WHERE order_id = ?2 AND variant_id = ?3 AND status = 'active'`
+        )
+        .bind(nowIso(), orderId, r.variant_id)
+    );
+  }
+  for (const r of rows) {
+    stmts.push(
       db
         .prepare(
           `INSERT INTO inventory_movements (id, variant_id, change_qty, reason, order_id)
@@ -183,7 +233,11 @@ export async function consumeReservationsForOrder(db: D1Database, orderId: strin
         .bind(genId(), r.variant_id, -r.quantity, orderId)
     );
   }
-  await db.batch(after);
+  try {
+    await db.batch(stmts);
+  } catch {
+    return false; // inconsistent — caller marks failure, nothing committed
+  }
   return true;
 }
 
@@ -647,8 +701,29 @@ export async function handleCheckoutSession(request: Request, env: Env, requestI
   }
 
   // --- Flat shipping: reserve + Stripe session --------------------------
-  const started = await startStripeSession(db, env, order, pricedItems.map((i) => ({ variantId: i.variantId, quantity: i.quantity })));
+  let started: Awaited<ReturnType<typeof startStripeSession>>;
+  try {
+    started = await startStripeSession(db, env, order, pricedItems.map((i) => ({ variantId: i.variantId, quantity: i.quantity })));
+  } catch {
+    // Network-level failure reaching Stripe (fetch threw): clean up so the
+    // customer can retry cleanly with the same idempotency key flow.
+    await releaseReservationsForOrder(db, orderId);
+    await db
+      .prepare(`UPDATE orders SET status = 'cancelled', updated_at = ?1 WHERE id = ?2 AND status = 'pending_payment'`)
+      .bind(nowIso(), orderId)
+      .run();
+    return finish(
+      502,
+      { error: { code: 'STRIPE_UNREACHABLE', message: 'Payment provider could not be reached, please try again', requestId } },
+      'failed'
+    );
+  }
   if (!started.ok) {
+    // OUT_OF_STOCK leaves a zombie pending_payment order — cancel it.
+    await db
+      .prepare(`UPDATE orders SET status = 'cancelled', updated_at = ?1 WHERE id = ?2 AND status = 'pending_payment'`)
+      .bind(nowIso(), orderId)
+      .run();
     return finish(
       started.status,
       { error: { code: started.code, message: started.message, requestId } },
@@ -851,13 +926,40 @@ export async function handleQuoteAccept(
     total_cents: totalCents,
     shipping_status: 'ready',
   };
-  const started = await startStripeSession(
-    db,
-    env,
-    updatedOrder,
-    items.map((i) => ({ variantId: i.variant_id, quantity: i.quantity }))
-  );
+  let started: Awaited<ReturnType<typeof startStripeSession>>;
+  try {
+    started = await startStripeSession(
+      db,
+      env,
+      updatedOrder,
+      items.map((i) => ({ variantId: i.variant_id, quantity: i.quantity }))
+    );
+  } catch {
+    // Network-level failure reaching Stripe: revert the quote so the customer
+    // can retry, and release anything startStripeSession reserved.
+    await releaseReservationsForOrder(db, order.id);
+    await db
+      .prepare(`UPDATE shipping_quotes SET status = 'proposed', accepted_at = NULL WHERE id = ?1`)
+      .bind(quoteId)
+      .run();
+    await db
+      .prepare(`UPDATE orders SET shipping_status = 'quoted', updated_at = ?1 WHERE id = ?2 AND status = 'pending_shipping_quote'`)
+      .bind(nowIso(), order.id)
+      .run();
+    return apiError(502, 'STRIPE_UNREACHABLE', 'Payment provider could not be reached — the quote is still open, please try again', requestId);
+  }
   if (!started.ok) {
+    // Revert the quote so the customer can retry after a transient failure
+    // (e.g. Stripe unreachable). startStripeSession already released any
+    // reservations it had made.
+    await db
+      .prepare(`UPDATE shipping_quotes SET status = 'proposed', accepted_at = NULL WHERE id = ?1`)
+      .bind(quoteId)
+      .run();
+    await db
+      .prepare(`UPDATE orders SET shipping_status = 'quoted', updated_at = ?1 WHERE id = ?2 AND status = 'pending_shipping_quote'`)
+      .bind(nowIso(), order.id)
+      .run();
     return apiError(started.status, started.code, started.message, requestId);
   }
   return json({ orderNumber: order.order_number, checkoutUrl: started.checkoutUrl, requestId });
