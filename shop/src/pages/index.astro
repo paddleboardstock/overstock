@@ -1,0 +1,82 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Clearance Paddle Boards & Accessories">
+  <section class="rounded-2xl bg-gradient-to-br from-[var(--brand)] to-[var(--brand-dark)] px-6 py-14 text-white sm:px-12">
+    <h1 class="max-w-2xl text-3xl font-bold leading-tight sm:text-5xl">
+      Overstock paddle boards at clearance prices
+    </h1>
+    <p class="mt-4 max-w-xl text-base text-blue-100 sm:text-lg">
+      Factory closeouts, cancelled orders and last-season stock from major SUP brands.
+      Limited quantities — once it's gone, it's gone.
+    </p>
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a href="/products/" class="inline-flex items-center rounded-lg bg-white px-6 py-3 text-sm font-semibold text-[var(--brand)] hover:bg-blue-50">
+        Browse Clearance Stock
+      </a>
+      <a href="/orders/" class="inline-flex items-center rounded-lg border border-white/40 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10">
+        Track an Order
+      </a>
+    </div>
+  </section>
+
+  <section class="mt-12 grid gap-6 sm:grid-cols-3">
+    <div class="card p-6">
+      <h2 class="text-sm font-bold uppercase tracking-wide text-[var(--brand)]">1. Pick your gear</h2>
+      <p class="mt-2 text-sm text-slate-600">
+        Every listing shows real-time availability. Stock is reserved for 30 minutes once you start checkout.
+      </p>
+    </div>
+    <div class="card p-6">
+      <h2 class="text-sm font-bold uppercase tracking-wide text-[var(--brand)]">2. We quote shipping</h2>
+      <p class="mt-2 text-sm text-slate-600">
+        Boards ship as freight worldwide. We email you a firm shipping quote — no payment is taken until you accept it.
+      </p>
+    </div>
+    <div class="card p-6">
+      <h2 class="text-sm font-bold uppercase tracking-wide text-[var(--brand)]">3. Pay &amp; track</h2>
+      <p class="mt-2 text-sm text-slate-600">
+        Secure Stripe checkout, order lookup with tracking numbers, and email updates at every step.
+      </p>
+    </div>
+  </section>
+
+  <section class="mt-12">
+    <div class="flex items-end justify-between">
+      <h2 class="text-xl font-bold">Latest arrivals</h2>
+      <a href="/products/" class="text-sm font-semibold text-[var(--brand)] hover:underline">View all →</a>
+    </div>
+    <div id="featured" class="mt-5 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4"></div>
+  </section>
+</Layout>
+
+<script>
+  import { apiGet, money } from '../scripts/shop';
+  import type { PublicProduct } from '../../workers/shop-api/src/types';
+
+  interface ProductsResponse { products: PublicProduct[] }
+
+  try {
+    const { products } = await apiGet<ProductsResponse>('/api/products');
+    const grid = document.getElementById('featured')!;
+    grid.innerHTML = products.slice(0, 4).map((p) => {
+      const img = p.images[0]?.url ?? '';
+      const from = Math.min(...p.variants.map((v) => v.priceCents), Infinity);
+      const currency = p.variants[0]?.currency ?? 'usd';
+      return `
+        <a href="/product/?slug=${encodeURIComponent(p.slug)}" class="card group overflow-hidden transition hover:shadow-md">
+          <div class="aspect-4/3 overflow-hidden bg-slate-100">
+            ${img ? `<img src="${img}" alt="${p.title.replace(/"/g, '&quot;')}" loading="lazy" class="h-full w-full object-cover transition group-hover:scale-105" />` : ''}
+          </div>
+          <div class="p-3">
+            <p class="truncate text-sm font-semibold text-slate-900">${p.title.replace(/</g, '&lt;')}</p>
+            <p class="mt-1 text-sm text-[var(--brand)]">${Number.isFinite(from) ? `from ${money(from, currency)}` : ''}</p>
+          </div>
+        </a>`;
+    }).join('');
+  } catch {
+    document.getElementById('featured')!.innerHTML =
+      '<p class="col-span-full text-sm text-slate-500">Products are being restocked — check back soon.</p>';
+  }
+</script>

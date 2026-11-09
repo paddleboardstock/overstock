@@ -1,0 +1,51 @@
+name = "paddleboardoverstock-shop-api"
+main = "src/index.ts"
+compatibility_date = "2026-10-23"
+
+# Scheduled cleanup: release expired inventory reservations and stale quotes.
+[triggers]
+crons = ["*/15 * * * *"]
+
+[vars]
+APP_ORIGIN = "https://shop.paddleboardoverstock.com"
+API_ORIGIN = "https://shop.paddleboardoverstock.com"
+# Minutes an inventory reservation is held while a Stripe session is open.
+RESERVATION_TTL_MINUTES = "30"
+
+# Local/dev database. The database_id is replaced by CI (or `wrangler d1 create`)
+# before the first real deploy — it is an explicit placeholder on purpose.
+[[d1_databases]]
+binding = "SHOP_DB"
+database_name = "paddleboardoverstock-shop-db"
+database_id = "REPLACE_WITH_D1_DATABASE_ID"
+migrations_dir = "../../migrations"
+
+# R2 is intentionally NOT bound in v0: product images seed from the main site's
+# public CDN via product_images.external_url. Bind SHOP_ASSETS later when
+# images move into R2 (schema already supports r2_key).
+
+[env.staging]
+name = "paddleboardoverstock-shop-api-staging"
+vars = { APP_ORIGIN = "https://shop-staging.paddleboardoverstock.com", API_ORIGIN = "https://shop-staging.paddleboardoverstock.com", RESERVATION_TTL_MINUTES = "30" }
+routes = [
+  { pattern = "shop-staging.paddleboardoverstock.com/api/*", zone_name = "paddleboardoverstock.com" }
+]
+
+[[env.staging.d1_databases]]
+binding = "SHOP_DB"
+database_name = "REPLACE_WITH_STAGING_D1_DATABASE_NAME"
+database_id = "REPLACE_WITH_STAGING_D1_DATABASE_ID"
+migrations_dir = "../../migrations"
+
+[env.production]
+name = "paddleboardoverstock-shop-api"
+vars = { APP_ORIGIN = "https://shop.paddleboardoverstock.com", API_ORIGIN = "https://shop.paddleboardoverstock.com", RESERVATION_TTL_MINUTES = "30" }
+routes = [
+  { pattern = "shop.paddleboardoverstock.com/api/*", zone_name = "paddleboardoverstock.com" }
+]
+
+[[env.production.d1_databases]]
+binding = "SHOP_DB"
+database_name = "REPLACE_WITH_PRODUCTION_D1_DATABASE_NAME"
+database_id = "REPLACE_WITH_PRODUCTION_D1_DATABASE_ID"
+migrations_dir = "../../migrations"

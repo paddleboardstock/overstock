@@ -1,0 +1,102 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Product">
+  <div id="product" class="grid gap-8 lg:grid-cols-2">
+    <p class="text-sm text-slate-500">Loading product…</p>
+  </div>
+</Layout>
+
+<script>
+  import { addToCart, apiGet, money } from '../scripts/shop';
+  import type { PublicProduct } from '../../workers/shop-api/src/types';
+
+  interface ProductResponse { product: PublicProduct }
+
+  const slug = new URLSearchParams(location.search).get('slug');
+  const root = document.getElementById('product')!;
+  document.title = `${slug ?? 'Product'} · Paddle Board Overstock Shop`;
+
+  if (!slug) {
+    root.innerHTML = '<p class="text-sm text-red-600">Missing product slug. <a class="underline" href="/products/">Back to catalog</a></p>';
+  } else {
+    try {
+      const { product } = await apiGet<ProductResponse>(`/api/products/${encodeURIComponent(slug)}`);
+      document.title = `${product.title} · Paddle Board Overstock Shop`;
+      const gallery = product.images
+        .map(
+          (img, idx) =>
+            `<img src="${img.url}" alt="${(img.alt ?? product.title).replace(/"/g, '&quot;')}" class="w-full rounded-xl border border-slate-200 bg-slate-100 object-cover ${idx === 0 ? '' : 'hidden'}" loading="${idx === 0 ? 'eager' : 'lazy'}" />`
+        )
+        .join('');
+      const variantOptions = product.variants
+        .map(
+          (v) =>
+            `<option value="${v.id}" data-price="${v.priceCents}" data-currency="${v.currency}" data-name="${v.name.replace(/"/g, '&quot;')}" data-sku="${v.sku}" ${v.availableQuantity === 0 ? 'disabled' : ''}>
+              ${v.name} — ${money(v.priceCents, v.currency)}${v.availableQuantity === 0 ? ' (sold out)' : ` (${v.availableQuantity} available)`}
+            </option>`
+        )
+        .join('');
+
+      root.innerHTML = `
+        <div class="space-y-3">${gallery || '<div class="flex aspect-4/3 items-center justify-center rounded-xl bg-slate-100 text-sm text-slate-400">No image</div>'}</div>
+        <div>
+          <h1 class="text-2xl font-bold">${product.title.replace(/</g, '&lt;')}</h1>
+          ${product.description ? `<p class="mt-3 text-sm leading-relaxed text-slate-600">${product.description.replace(/</g, '&lt;')}</p>` : ''}
+          <form id="add-form" class="card mt-6 space-y-4 p-5">
+            <div>
+              <label class="label" for="variant">Variant</label>
+              <select id="variant" class="input">${variantOptions}</select>
+            </div>
+            <div class="flex items-end gap-4">
+              <div class="w-28">
+                <label class="label" for="qty">Quantity</label>
+                <input id="qty" class="input" type="number" min="1" max="99" value="1" />
+              </div>
+              <button type="submit" class="btn-primary flex-1">Add to Cart</button>
+            </div>
+            <p id="error" class="hidden text-sm text-red-600"></p>
+          </form>
+          <p class="mt-4 text-xs text-slate-500">
+            Need a shipping estimate first? Add items to the cart and submit checkout — we'll email you a freight quote before any payment is taken.
+          </p>
+        </div>`;
+
+      const form = document.getElementById('add-form') as HTMLFormElement;
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const select = document.getElementById('variant') as HTMLSelectElement;
+        const qtyInput = document.getElementById('qty') as HTMLInputElement;
+        const error = document.getElementById('error')!;
+        const quantity = Math.max(1, Math.min(99, Number.parseInt(qtyInput.value, 10) || 1));
+        const variant = product.variants.find((v) => v.id === select.value);
+        if (!variant) return;
+        if (variant.availableQuantity === 0) {
+          error.textContent = 'This variant is sold out.';
+          error.classList.remove('hidden');
+          return;
+        }
+        if (quantity > variant.availableQuantity) {
+          error.textContent = `Only ${variant.availableQuantity} available.`;
+          error.classList.remove('hidden');
+          return;
+        }
+        addToCart({
+          variantId: variant.id,
+          slug: product.slug,
+          sku: variant.sku,
+          title: product.title,
+          variantName: variant.name,
+          priceCents: variant.priceCents,
+          currency: variant.currency,
+          image: product.images[0]?.url ?? '',
+          quantity,
+        });
+        window.location.href = '/cart/';
+      });
+    } catch (err) {
+      root.innerHTML = `<p class="text-sm text-red-600">Could not load product: ${(err as Error).message}</p>`;
+    }
+  }
+</script>
