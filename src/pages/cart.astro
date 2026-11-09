@@ -1,0 +1,172 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Cart & Checkout">
+  <h1 class="text-2xl font-bold">Cart &amp; Checkout</h1>
+  <div class="mt-6 grid gap-8 lg:grid-cols-5">
+    <section class="lg:col-span-3">
+      <div id="cart-items" class="space-y-3"></div>
+    </section>
+    <section class="lg:col-span-2">
+      <form id="checkout-form" class="card space-y-4 p-5">
+        <h2 class="text-sm font-bold uppercase tracking-wide text-slate-500">Contact &amp; shipping</h2>
+        <div>
+          <label class="label" for="email">Email</label>
+          <input id="email" class="input" type="email" required autocomplete="email" placeholder="you@example.com" />
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div class="col-span-2">
+            <label class="label" for="name">Full name</label>
+            <input id="name" class="input" required autocomplete="name" />
+          </div>
+          <div class="col-span-2">
+            <label class="label" for="line1">Address line 1</label>
+            <input id="line1" class="input" required autocomplete="address-line1" />
+          </div>
+          <div class="col-span-2">
+            <label class="label" for="line2">Address line 2 <span class="font-normal normal-case text-slate-400">(optional)</span></label>
+            <input id="line2" class="input" autocomplete="address-line2" />
+          </div>
+          <div>
+            <label class="label" for="city">City</label>
+            <input id="city" class="input" required autocomplete="address-level2" />
+          </div>
+          <div>
+            <label class="label" for="region">State / Region</label>
+            <input id="region" class="input" autocomplete="address-level1" />
+          </div>
+          <div>
+            <label class="label" for="postalCode">Postal code</label>
+            <input id="postalCode" class="input" required autocomplete="postal-code" />
+          </div>
+          <div>
+            <label class="label" for="countryCode">Country</label>
+            <input id="countryCode" class="input uppercase" required maxlength="2" placeholder="US" autocomplete="country" />
+          </div>
+          <div class="col-span-2">
+            <label class="label" for="discountCode">Discount code <span class="font-normal normal-case text-slate-400">(optional)</span></label>
+            <input id="discountCode" class="input uppercase" autocomplete="off" />
+          </div>
+          <div class="col-span-2">
+            <label class="label" for="note">Order note <span class="font-normal normal-case text-slate-400">(optional)</span></label>
+            <textarea id="note" class="input" rows="2" maxlength="1000"></textarea>
+          </div>
+        </div>
+        <button id="submit-btn" type="submit" class="btn-primary w-full">Continue to Payment / Quote</button>
+        <p id="error" class="hidden text-sm text-red-600"></p>
+        <p class="text-xs text-slate-500">
+          Heavy items ship as freight. If prepaid shipping rates are unavailable for your address,
+          we'll create your order and email a shipping quote — <strong>no payment is taken until you accept it</strong>.
+        </p>
+      </form>
+    </section>
+  </div>
+</Layout>
+
+<script>
+  import { getCart, saveCart, money, apiPost, idempotencyKey } from '../scripts/shop';
+  import type { CartItem } from '../scripts/shop';
+
+  const itemsEl = document.getElementById('cart-items')!;
+  const form = document.getElementById('checkout-form') as HTMLFormElement;
+  const errorEl = document.getElementById('error')!;
+  const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement;
+
+  function render(): void {
+    const items = getCart();
+    if (items.length === 0) {
+      itemsEl.innerHTML = `
+        <div class="card p-8 text-center">
+          <p class="text-sm text-slate-500">Your cart is empty.</p>
+          <a href="/products/" class="btn-secondary mt-4">Browse Products</a>
+        </div>`;
+      form.classList.add('hidden');
+      return;
+    }
+    form.classList.remove('hidden');
+    itemsEl.innerHTML = items
+      .map(
+        (item, idx) => `
+        <div class="card flex items-center gap-4 p-4">
+          <a href="/product/?slug=${encodeURIComponent(item.slug)}" class="h-16 w-16 shrink-0 overflow-hidden rounded-lg bg-slate-100">
+            ${item.image ? `<img src="${item.image}" alt="" class="h-full w-full object-cover" />` : ''}
+          </a>
+          <div class="min-w-0 flex-1">
+            <p class="truncate text-sm font-semibold">${item.title.replace(/</g, '&lt;')}</p>
+            <p class="text-xs text-slate-500">${item.variantName.replace(/</g, '&lt;')} · ${item.sku}</p>
+            <p class="mt-1 text-sm font-semibold text-[var(--brand)]">${money(item.priceCents, item.currency)}</p>
+          </div>
+          <input class="input w-20" type="number" min="1" max="99" value="${item.quantity}" data-idx="${idx}" data-role="qty" />
+          <button type="button" class="text-sm text-slate-400 hover:text-red-600" data-idx="${idx}" data-role="remove" aria-label="Remove">✕</button>
+        </div>`
+      )
+      .join('');
+    itemsEl.querySelectorAll<HTMLInputElement>('[data-role="qty"]').forEach((input) => {
+      input.addEventListener('change', () => {
+        const items = getCart();
+        const idx = Number(input.dataset.idx);
+        items[idx].quantity = Math.max(1, Math.min(99, Number.parseInt(input.value, 10) || 1));
+        saveCart(items);
+      });
+    });
+    itemsEl.querySelectorAll<HTMLButtonElement>('[data-role="remove"]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const items = getCart();
+        items.splice(Number(btn.dataset.idx), 1);
+        saveCart(items);
+        render();
+      });
+    });
+  }
+  render();
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    errorEl.classList.add('hidden');
+    const items: CartItem[] = getCart();
+    if (items.length === 0) return;
+
+    const email = (document.getElementById('email') as HTMLInputElement).value.trim();
+    const countryCode = (document.getElementById('countryCode') as HTMLInputElement).value.trim().toUpperCase();
+    const region = (document.getElementById('region') as HTMLInputElement).value.trim();
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Creating order…';
+
+    try {
+      const data = await apiPost<{ orderNumber?: string; checkoutUrl?: string; status?: string }>('/api/checkout/session', {
+        items: items.map((i) => ({ variantId: i.variantId, quantity: i.quantity })),
+        email,
+        shippingAddress: {
+          name: (document.getElementById('name') as HTMLInputElement).value.trim(),
+          line1: (document.getElementById('line1') as HTMLInputElement).value.trim(),
+          line2: (document.getElementById('line2') as HTMLInputElement).value.trim() || undefined,
+          city: (document.getElementById('city') as HTMLInputElement).value.trim(),
+          region: region || undefined,
+          postalCode: (document.getElementById('postalCode') as HTMLInputElement).value.trim(),
+          countryCode,
+        },
+        currency: items[0].currency,
+        discountCode: (document.getElementById('discountCode') as HTMLInputElement).value.trim() || undefined,
+        note: (document.getElementById('note') as HTMLTextAreaElement).value.trim() || undefined,
+        idempotencyKey: idempotencyKey(),
+      });
+      // Quote flow: keep the cart so the customer can still review the order.
+      if (data.status === 'pending_shipping_quote') {
+        window.location.href = `/orders/?order=${encodeURIComponent(data.orderNumber ?? '')}&email=${encodeURIComponent(email)}&quoted=1`;
+        return;
+      }
+      if (data.checkoutUrl) {
+        saveCart([]);
+        window.location.href = data.checkoutUrl;
+        return;
+      }
+      throw new Error('Unexpected response from server');
+    } catch (err) {
+      errorEl.textContent = (err as Error).message;
+      errorEl.classList.remove('hidden');
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Continue to Payment / Quote';
+    }
+  });
+</script>

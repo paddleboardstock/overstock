@@ -1,0 +1,49 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="All Products">
+  <div class="flex items-end justify-between">
+    <div>
+      <h1 class="text-2xl font-bold">Clearance Catalog</h1>
+      <p class="mt-1 text-sm text-slate-500">All items are overstock / closeout. Quantities are limited.</p>
+    </div>
+    <p id="count" class="text-sm text-slate-500"></p>
+  </div>
+  <div id="grid" class="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4"></div>
+</Layout>
+
+<script>
+  import { apiGet, money } from '../scripts/shop';
+  import type { PublicProduct } from '../../workers/shop-api/src/types';
+
+  interface ProductsResponse { products: PublicProduct[] }
+
+  const grid = document.getElementById('grid')!;
+  try {
+    const { products } = await apiGet<ProductsResponse>('/api/products');
+    document.getElementById('count')!.textContent = `${products.length} products`;
+    if (products.length === 0) {
+      grid.innerHTML = '<p class="col-span-full text-sm text-slate-500">No products are currently listed.</p>';
+    }
+    grid.innerHTML = products.map((p) => {
+      const img = p.images[0]?.url ?? '';
+      const totalAvailable = p.variants.reduce((n, v) => n + v.availableQuantity, 0);
+      const from = Math.min(...p.variants.map((v) => v.priceCents), Infinity);
+      const currency = p.variants[0]?.currency ?? 'usd';
+      return `
+        <a href="/product/?slug=${encodeURIComponent(p.slug)}" class="card group overflow-hidden transition hover:shadow-md">
+          <div class="relative aspect-4/3 overflow-hidden bg-slate-100">
+            ${img ? `<img src="${img}" alt="${p.title.replace(/"/g, '&quot;')}" loading="lazy" class="h-full w-full object-cover transition group-hover:scale-105" />` : ''}
+            ${totalAvailable > 0 ? `<span class="badge badge-amber absolute top-2 left-2">Only ${totalAvailable} left</span>` : '<span class="badge badge-neutral absolute top-2 left-2">Sold out</span>'}
+          </div>
+          <div class="p-3">
+            <p class="truncate text-sm font-semibold text-slate-900">${p.title.replace(/</g, '&lt;')}</p>
+            <p class="mt-1 text-sm text-[var(--brand)]">${Number.isFinite(from) ? `from ${money(from, currency)}` : ''}</p>
+          </div>
+        </a>`;
+    }).join('');
+  } catch (err) {
+    grid.innerHTML = `<p class="col-span-full text-sm text-red-600">Could not load products: ${(err as Error).message}</p>`;
+  }
+</script>

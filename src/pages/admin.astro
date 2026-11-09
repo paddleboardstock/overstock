@@ -1,0 +1,355 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Admin Console">
+  <div id="gate" class="mx-auto max-w-md py-16">
+    <h1 class="text-xl font-bold">Admin Console</h1>
+    <form id="gate-form" class="card mt-4 space-y-4 p-6">
+      <div>
+        <label class="label" for="token">Admin token</label>
+        <input id="token" class="input" type="password" autocomplete="off" required />
+      </div>
+      <button type="submit" class="btn-primary w-full">Sign In</button>
+      <p id="gate-error" class="hidden text-sm text-red-600"></p>
+    </form>
+  </div>
+
+  <div id="console" class="hidden">
+    <div class="flex flex-wrap items-center justify-between gap-3">
+      <h1 class="text-2xl font-bold">Admin Console</h1>
+      <button id="signout" class="btn-secondary text-xs">Sign out</button>
+    </div>
+
+    <nav class="mt-6 flex gap-1 border-b border-slate-200 text-sm font-semibold">
+      <button data-tab="orders" class="tab-btn -mb-px border-b-2 border-[var(--brand)] px-4 py-2.5 text-[var(--brand)]">Orders</button>
+      <button data-tab="products" class="tab-btn -mb-px border-b-2 border-transparent px-4 py-2.5 text-slate-500 hover:text-slate-800">Products</button>
+      <button data-tab="rules" class="tab-btn -mb-px border-b-2 border-transparent px-4 py-2.5 text-slate-500 hover:text-slate-800">Rules</button>
+    </nav>
+
+    <section id="tab-orders" class="tab-panel mt-6">
+      <div class="flex flex-wrap gap-2">
+        <input id="order-status-filter" class="input max-w-56" placeholder="Filter by status (e.g. pending_shipping_quote)" />
+        <button id="orders-refresh" class="btn-secondary">Refresh</button>
+      </div>
+      <div id="orders-list" class="mt-4 space-y-2"></div>
+      <div id="order-detail" class="mt-6"></div>
+    </section>
+
+    <section id="tab-products" class="tab-panel mt-6 hidden">
+      <button id="products-refresh" class="btn-secondary">Refresh</button>
+      <div id="products-list" class="mt-4 overflow-x-auto"></div>
+    </section>
+
+    <section id="tab-rules" class="tab-panel mt-6 hidden">
+      <div class="grid gap-6 lg:grid-cols-3">
+        <div><h2 class="text-sm font-bold uppercase text-slate-500">Shipping rules</h2><div id="shipping-rules" class="mt-2"></div></div>
+        <div><h2 class="text-sm font-bold uppercase text-slate-500">Tax rules</h2><div id="tax-rules" class="mt-2"></div></div>
+        <div><h2 class="text-sm font-bold uppercase text-slate-500">Discounts</h2><div id="discounts" class="mt-2"></div></div>
+      </div>
+      <p class="mt-4 text-xs text-slate-500">
+        Rule creation/edits use the API (see README) — this view is read-only for v0.
+      </p>
+    </section>
+  </div>
+</Layout>
+
+<script>
+  import { API_BASE, money } from '../scripts/shop';
+
+  const TOKEN_KEY = 'pbo-admin-token';
+  const gate = document.getElementById('gate')!;
+  const consoleEl = document.getElementById('console')!;
+
+  let token = localStorage.getItem(TOKEN_KEY) ?? '';
+
+  async function adminFetch<T>(path: string, init: RequestInit = {}): Promise<T> {
+    const res = await fetch(`${API_BASE}${path}`, {
+      ...init,
+      headers: {
+        Authorization: `Bearer ${token}`,
+        ...(init.body ? { 'Content-Type': 'application/json' } : {}),
+        ...(init.headers ?? {}),
+      },
+    });
+    const data = (await res.json()) as T & { error?: { message?: string } };
+    if (!res.ok) throw new Error(data.error?.message ?? `Request failed (${res.status})`);
+    return data;
+  }
+
+  function esc(s: unknown): string {
+    return String(s ?? '').replace(/</g, '&lt;');
+  }
+
+  // --- Gate ---------------------------------------------------------------
+  const gateForm = document.getElementById('gate-form') as HTMLFormElement;
+  gateForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const candidate = (document.getElementById('token') as HTMLInputElement).value.trim();
+    try {
+      const res = await fetch(`${API_BASE}/api/admin/orders?limit=1`, {
+        headers: { Authorization: `Bearer ${candidate}` },
+      });
+      if (res.status === 401) throw new Error('Invalid token');
+      token = candidate;
+      localStorage.setItem(TOKEN_KEY, token);
+      openConsole();
+    } catch (err) {
+      const gateError = document.getElementById('gate-error')!;
+      gateError.textContent = (err as Error).message;
+      gateError.classList.remove('hidden');
+    }
+  });
+  document.getElementById('signout')!.addEventListener('click', () => {
+    localStorage.removeItem(TOKEN_KEY);
+    location.reload();
+  });
+
+  function openConsole(): void {
+    gate.classList.add('hidden');
+    consoleEl.classList.remove('hidden');
+    void loadOrders();
+    void loadProducts();
+    void loadRules();
+  }
+
+  // --- Tabs ---------------------------------------------------------------
+  document.querySelectorAll<HTMLButtonElement>('.tab-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach((b) => {
+        b.classList.remove('border-[var(--brand)]', 'text-[var(--brand)]');
+        b.classList.add('border-transparent', 'text-slate-500');
+      });
+      btn.classList.add('border-[var(--brand)]', 'text-[var(--brand)]');
+      btn.classList.remove('border-transparent', 'text-slate-500');
+      document.querySelectorAll('.tab-panel').forEach((p) => p.classList.add('hidden'));
+      document.getElementById(`tab-${btn.dataset.tab}`)!.classList.remove('hidden');
+    });
+  });
+
+  // --- Orders ---------------------------------------------------------------
+  interface AdminOrderRow {
+    id: string; order_number: string; email: string; status: string;
+    currency: string; total_cents: number; shipping_status: string; created_at: string;
+  }
+  interface AdminOrderDetail {
+    order: AdminOrderRow & { subtotal_cents: number; shipping_cents: number; discount_cents: number; tax_cents: number; customer_note: string | null };
+    items: Array<{ sku_snapshot: string; title_snapshot: string; quantity: number; line_total_cents: number }>;
+    quotes: Array<{ id: string; amount_cents: number; currency: string; status: string; expires_at: string; carrier_name: string | null }>;
+    payments: Array<{ id: string; status: string; amount_cents: number; currency: string; refunded_cents: number }>;
+    shipments: Array<{ id: string; status: string; carrier: string | null; tracking_number: string | null }>;
+  }
+
+  async function loadOrders(): Promise<void> {
+    const status = (document.getElementById('order-status-filter') as HTMLInputElement).value.trim();
+    const list = document.getElementById('orders-list')!;
+    try {
+      const data = await adminFetch<{ orders: AdminOrderRow[]; total: number }>(
+        `/api/admin/orders?limit=50${status ? `&status=${encodeURIComponent(status)}` : ''}`
+      );
+      list.innerHTML = data.orders
+        .map(
+          (o) => `
+          <button class="order-row card flex w-full flex-wrap items-center justify-between gap-2 p-3 text-left text-sm hover:shadow-md" data-order="${o.order_number}">
+            <span class="font-mono font-semibold">${o.order_number}</span>
+            <span class="text-slate-500">${esc(o.email)}</span>
+            <span class="badge badge-blue">${esc(o.status)}</span>
+            <span class="font-semibold">${money(o.total_cents, o.currency)}</span>
+            <span class="text-xs text-slate-400">${new Date(o.created_at).toLocaleString()}</span>
+          </button>`
+        )
+        .join('') || '<p class="text-sm text-slate-500">No orders.</p>';
+      list.querySelectorAll<HTMLButtonElement>('.order-row').forEach((btn) => {
+        btn.addEventListener('click', () => void loadOrderDetail(btn.dataset.order!));
+      });
+    } catch (err) {
+      list.innerHTML = `<p class="text-sm text-red-600">${(err as Error).message}</p>`;
+    }
+  }
+  document.getElementById('orders-refresh')!.addEventListener('click', () => void loadOrders());
+
+  async function loadOrderDetail(orderNumber: string): Promise<void> {
+    const el = document.getElementById('order-detail')!;
+    try {
+      const { order, items, quotes, payments, shipments } = await adminFetch<AdminOrderDetail>(
+        `/api/admin/orders/${encodeURIComponent(orderNumber)}`
+      );
+      const activeQuote = quotes.find((q) => q.status === 'proposed');
+      el.innerHTML = `
+        <div class="card p-5">
+          <h2 class="text-lg font-bold">${order.order_number} <span class="badge badge-blue align-middle">${esc(order.status)}</span></h2>
+          <p class="mt-1 text-sm text-slate-500">${esc(order.email)} · ${new Date(order.created_at).toLocaleString()}</p>
+          <table class="mt-4 w-full text-sm">
+            ${items.map((i) => `<tr class="border-b border-slate-100"><td class="py-1.5">${esc(i.title_snapshot)} <span class="text-xs text-slate-400">${esc(i.sku_snapshot)}</span></td><td>×${i.quantity}</td><td class="text-right">${money(i.line_total_cents, order.currency)}</td></tr>`).join('')}
+            <tr><td class="pt-2 text-slate-500">Shipping</td><td></td><td class="pt-2 text-right">${money(order.shipping_cents, order.currency)}</td></tr>
+            <tr><td class="text-slate-500">Tax</td><td></td><td class="text-right">${money(order.tax_cents, order.currency)}</td></tr>
+            <tr><td class="font-bold">Total</td><td></td><td class="text-right font-bold">${money(order.total_cents, order.currency)}</td></tr>
+          </table>
+
+          <div class="mt-4 grid gap-4 md:grid-cols-2">
+            <div>
+              <h3 class="text-xs font-bold uppercase text-slate-400">Payments</h3>
+              ${payments.map((p) => `<p class="text-sm">${money(p.amount_cents, p.currency)} · ${esc(p.status)}${p.refunded_cents ? ` (refunded ${money(p.refunded_cents, p.currency)})` : ''}</p>`).join('') || '<p class="text-sm text-slate-400">None</p>'}
+              <h3 class="mt-3 text-xs font-bold uppercase text-slate-400">Quotes</h3>
+              ${quotes.map((q) => `<p class="text-sm">${money(q.amount_cents, q.currency)} · ${esc(q.status)}${q.carrier_name ? ` · ${esc(q.carrier_name)}` : ''}</p>`).join('') || '<p class="text-sm text-slate-400">None</p>'}
+              <h3 class="mt-3 text-xs font-bold uppercase text-slate-400">Shipments</h3>
+              ${shipments.map((s) => `<p class="text-sm">${esc(s.status)} ${esc(s.carrier ?? '')} ${esc(s.tracking_number ?? '')}</p>`).join('') || '<p class="text-sm text-slate-400">None</p>'}
+            </div>
+
+            <div class="space-y-4">
+              ${order.status === 'pending_shipping_quote' ? `
+                <form data-action="quote" class="rounded-lg border border-slate-200 p-3">
+                  <h3 class="text-xs font-bold uppercase text-slate-400">Create shipping quote</h3>
+                  <div class="mt-2 grid grid-cols-2 gap-2">
+                    <input name="amountCents" class="input" type="number" min="0" placeholder="Amount (cents)" required />
+                    <input name="expiresInHours" class="input" type="number" min="1" max="720" value="72" title="Expires in hours" />
+                    <input name="carrierName" class="input col-span-2" placeholder="Carrier (optional)" />
+                    <input name="notes" class="input col-span-2" placeholder="Notes (optional)" />
+                  </div>
+                  <button class="btn-primary mt-2 w-full text-xs">Send Quote</button>
+                </form>` : ''}
+              ${order.status === 'paid' || order.status === 'processing' ? `
+                <form data-action="shipment" class="rounded-lg border border-slate-200 p-3">
+                  <h3 class="text-xs font-bold uppercase text-slate-400">Add shipment</h3>
+                  <div class="mt-2 grid grid-cols-2 gap-2">
+                    <input name="carrier" class="input" placeholder="Carrier" />
+                    <input name="trackingNumber" class="input" placeholder="Tracking #" />
+                  </div>
+                  <button class="btn-primary mt-2 w-full text-xs">Create &amp; Mark Shipped</button>
+                </form>
+                <form data-action="refund" class="rounded-lg border border-slate-200 p-3">
+                  <h3 class="text-xs font-bold uppercase text-slate-400">Refund</h3>
+                  <input name="amountCents" class="input mt-2" type="number" min="1" placeholder="Amount (cents, blank = full)" />
+                  <button class="btn-primary mt-2 w-full text-xs bg-red-600 hover:bg-red-700">Issue Refund</button>
+                </form>` : ''}
+              ${order.status === 'paid' || order.status === 'processing' || order.status === 'shipped' ? `
+                <form data-action="status" class="rounded-lg border border-slate-200 p-3">
+                  <h3 class="text-xs font-bold uppercase text-slate-400">Change status</h3>
+                  <select name="status" class="input mt-2">
+                    ${['processing', 'shipped', 'completed'].filter((s) => s !== order.status).map((s) => `<option value="${s}">${s}</option>`).join('')}
+                  </select>
+                  <button class="btn-secondary mt-2 w-full text-xs">Apply</button>
+                </form>` : ''}
+              ${!['paid', 'processing', 'shipped', 'completed', 'refunded', 'partially_refunded', 'cancelled'].includes(order.status) ? `
+                <form data-action="status" class="rounded-lg border border-slate-200 p-3">
+                  <h3 class="text-xs font-bold uppercase text-slate-400">Cancel order</h3>
+                  <button name="status" value="cancelled" class="btn-secondary mt-2 w-full text-xs">Cancel &amp; Release Stock</button>
+                </form>` : ''}
+            </div>
+          </div>
+          <p class="action-error mt-3 hidden text-sm text-red-600"></p>
+        </div>`;
+
+      el.querySelectorAll<HTMLFormElement>('form[data-action]').forEach((formEl) => {
+        formEl.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          const errEl = el.querySelector('.action-error')!;
+          errEl.classList.add('hidden');
+          const fd = new FormData(formEl);
+          const body: Record<string, unknown> = {};
+          fd.forEach((v, k) => {
+            if (String(v) !== '') body[k] = /^\d+$/.test(String(v)) ? Number(v) : v;
+          });
+          try {
+            const action = formEl.dataset.action;
+            if (action === 'quote') {
+              await adminFetch(`/api/admin/orders/${encodeURIComponent(orderNumber)}/quotes`, {
+                method: 'POST',
+                body: JSON.stringify(body),
+              });
+            } else if (action === 'shipment') {
+              body.status = 'shipped';
+              await adminFetch(`/api/admin/orders/${encodeURIComponent(orderNumber)}/shipments`, {
+                method: 'POST',
+                body: JSON.stringify(body),
+              });
+            } else if (action === 'refund') {
+              await adminFetch(`/api/admin/orders/${encodeURIComponent(orderNumber)}/refund`, {
+                method: 'POST',
+                body: JSON.stringify(body),
+              });
+            } else if (action === 'status') {
+              const statusBtn = formEl.querySelector('button[value="cancelled"]') as HTMLButtonElement | null;
+              await adminFetch(`/api/admin/orders/${encodeURIComponent(orderNumber)}`, {
+                method: 'PATCH',
+                body: JSON.stringify({ status: statusBtn ? 'cancelled' : body.status }),
+              });
+            }
+            await loadOrders();
+            await loadOrderDetail(orderNumber);
+          } catch (err) {
+            errEl.textContent = (err as Error).message;
+            errEl.classList.remove('hidden');
+          }
+        });
+      });
+    } catch (err) {
+      el.innerHTML = `<p class="text-sm text-red-600">${(err as Error).message}</p>`;
+    }
+  }
+
+  // --- Products ---------------------------------------------------------------
+  interface AdminProduct {
+    id: string; slug: string; title: string; status: string;
+    variants: Array<{ id: string; sku: string; name: string; priceCents: number; currency: string; onHand: number; reserved: number; available: number; active: boolean }>;
+  }
+
+  async function loadProducts(): Promise<void> {
+    const el = document.getElementById('products-list')!;
+    try {
+      const { products } = await adminFetch<{ products: AdminProduct[] }>('/api/admin/products');
+      el.innerHTML = `
+        <table class="card w-full text-sm">
+          <thead><tr class="border-b border-slate-200 text-left text-xs uppercase text-slate-400">
+            <th class="p-3">Product</th><th>Variant</th><th>SKU</th><th>Price</th><th>On hand</th><th>Avail.</th><th>Status</th>
+          </tr></thead>
+          <tbody>
+          ${products.map((p) => p.variants.map((v) => `
+            <tr class="border-b border-slate-100">
+              <td class="p-3 font-medium">${esc(p.title)}</td>
+              <td>${esc(v.name)}</td>
+              <td class="font-mono text-xs">${esc(v.sku)}</td>
+              <td>${money(v.priceCents, v.currency)}</td>
+              <td>${v.onHand}</td>
+              <td>${v.available}</td>
+              <td><span class="badge ${p.status === 'active' ? 'badge-green' : 'badge-neutral'}">${esc(p.status)}</span></td>
+            </tr>`).join('')).join('')}
+          </tbody>
+        </table>`;
+    } catch (err) {
+      el.innerHTML = `<p class="text-sm text-red-600">${(err as Error).message}</p>`;
+    }
+  }
+  document.getElementById('products-refresh')!.addEventListener('click', () => void loadProducts());
+
+  // --- Rules (read-only v0) -----------------------------------------------------
+  async function loadRules(): Promise<void> {
+    try {
+      const [shipping, tax, discounts] = await Promise.all([
+        adminFetch<{ shipping_rules: Array<{ id: string; name: string; country_code: string; mode: string; amount_cents: number | null; currency: string; active: number }> }>('/api/admin/shipping-rules'),
+        adminFetch<{ tax_rules: Array<{ id: string; country_code: string; rate_basis_points: number; active: number }> }>('/api/admin/tax-rules'),
+        adminFetch<{ discounts: Array<{ id: string; code: string; discount_type: string; value: number; active: number; usage_count: number }> }>('/api/admin/discounts'),
+      ]);
+      document.getElementById('shipping-rules')!.innerHTML = shipping.shipping_rules
+        .map((r) => `<p class="text-sm">${esc(r.name)} · ${esc(r.country_code)} · ${r.mode}${r.mode === 'flat' ? ` ${money(r.amount_cents ?? 0, r.currency)}` : ''} ${r.active ? '✓' : '✕'}</p>`)
+        .join('') || '<p class="text-sm text-slate-400">None</p>';
+      document.getElementById('tax-rules')!.innerHTML = tax.tax_rules
+        .map((r) => `<p class="text-sm">${esc(r.country_code)} · ${(r.rate_basis_points / 100).toFixed(2)}% ${r.active ? '✓' : '✕'}</p>`)
+        .join('') || '<p class="text-sm text-slate-400">None</p>';
+      document.getElementById('discounts')!.innerHTML = discounts.discounts
+        .map((d) => `<p class="text-sm">${esc(d.code)} · ${d.discount_type === 'percent' ? `${d.value}%` : d.value} · used ${d.usage_count}× ${d.active ? '✓' : '✕'}</p>`)
+        .join('') || '<p class="text-sm text-slate-400">None</p>';
+    } catch {
+      // Rules tab is optional; failures are surfaced by other tabs.
+    }
+  }
+
+  if (token) {
+    // Verify stored token before showing the console.
+    fetch(`${API_BASE}/api/admin/orders?limit=1`, { headers: { Authorization: `Bearer ${token}` } })
+      .then((res) => {
+        if (res.ok) openConsole();
+      })
+      .catch(() => {});
+  }
+</script>
