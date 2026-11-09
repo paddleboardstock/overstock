@@ -32,8 +32,12 @@ jobs:
     steps:
       # secrets cannot be used in `if`; probe them first and expose as step
       # output so runs without credentials skip Cloudflare steps gracefully.
+      # NB: runs before checkout, so it must NOT inherit the job-level
+      # working-directory (shop/ does not exist yet) — override it to the
+      # workspace root.
       - name: Check for Cloudflare credentials
         id: guard
+        working-directory: .
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
@@ -47,6 +51,7 @@ jobs:
 
       - name: Fail fast on manual dispatch without credentials
         if: github.event_name == 'workflow_dispatch' && steps.guard.outputs.enabled != 'true'
+        working-directory: .
         run: |
           echo "::error::Manual deploy requested but CLOUDFLARE_API_TOKEN / CLOUDFLARE_ACCOUNT_ID repo secrets are not set."
           exit 1
