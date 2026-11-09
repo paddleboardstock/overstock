@@ -24,7 +24,7 @@ export const GET: APIRoute = async () => {
       const price = `${priceAmount.toFixed(2)} ${currency}`;
       const title = p.title || p.slug;
       const description = (p.summary || p.description || title).replace(/\s+/g, ' ').trim();
-      const link = `${siteBase}${p.permalink}`;
+      const link = `${siteBase}/${String(p.permalink).replace(/^\/+/, '')}`;
       const image = p.image || '';
       const availability = p.inStock ? 'in_stock' : 'out_of_stock';
       const gradeNote =
