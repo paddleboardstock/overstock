@@ -7,7 +7,7 @@ import typescriptParser from '@typescript-eslint/parser';
 
 export default [
   {
-    ignores: ['sup-stocklot/', 'shop-starter/', 'docs/notes/'],
+    ignores: ['sup-stocklot/', 'shop-starter/', 'shop/', 'docs/notes/'],
   },
   js.configs.recommended,
   ...eslintPluginAstro.configs['flat/recommended'],
