@@ -75,12 +75,14 @@ SHOP_SESSION_SECRET=<random>
 
 ## Deployment (GitHub Actions → Cloudflare API)
 
-All deployment goes through `.github/workflows/deploy.yml` — no local wrangler
-deploys. It runs on every push to `main` (and manual dispatch) and is fully
-idempotent: it creates the D1 database, Pages project, Pages custom domain and
-DNS record when missing, applies migrations, seeds the catalog only when the
-products table is empty, syncs worker secrets, then deploys the worker and the
-storefront.
+This project lives in the overstock monorepo as the self-contained `shop/`
+subdirectory (own `package.json`; commands below run from `shop/`). All
+deployment goes through the repo-root `.github/workflows/deploy-shop.yml`
+(no local wrangler deploys). It triggers on pushes to `main` that touch
+`shop/**` (and manual dispatch) and is fully idempotent: it creates the D1
+database, Pages project, Pages custom domain and DNS record when missing,
+applies migrations, seeds the catalog only when the products table is empty,
+syncs worker secrets, then deploys the worker and the storefront.
 
 One domain serves everything — `shop.paddleboardoverstock.com`:
 Cloudflare Pages serves the storefront, and the shop-api worker owns the
@@ -89,19 +91,20 @@ precedence over Pages). `wrangler.toml` keeps explicit
 `REPLACE_WITH_D1_DATABASE_ID` placeholders; the workflow discovers the real
 UUID via `wrangler d1 info` and injects it at deploy time.
 
-Required repo secrets (Settings → Secrets and variables → Actions):
+Cloudflare secrets are shared with the main site's deploy workflow and are
+already configured in this repo (`CLOUDFLARE_API_TOKEN`,
+`CLOUDFLARE_ACCOUNT_ID`, `CLOUDFLARE_ZONE_ID`). Still to add (repo secrets,
+Settings → Secrets and variables → Actions):
 
 ```
-CLOUDFLARE_API_TOKEN     # token with Workers Scripts/Pages/D1/DNS edit on the account + zone
-CLOUDFLARE_ACCOUNT_ID
-CLOUDFLARE_ZONE_ID       # zone paddleboardoverstock.com (enables the DNS step)
 STRIPE_SECRET_KEY        # until set, checkout returns 502 (products/orders still work)
 STRIPE_WEBHOOK_SECRET
 SHOP_ADMIN_TOKEN         # Bearer token for /api/admin/*
 SHOP_SESSION_SECRET
 ```
 
-First deploy: push to `main` (or Actions → Deploy → Run workflow). Then:
+First deploy: push to `main` touching `shop/**` (or Actions → Deploy Shop →
+Run workflow). Then:
 
 1. Register the Stripe webhook endpoint
    `https://shop.paddleboardoverstock.com/api/stripe/webhook` with events:

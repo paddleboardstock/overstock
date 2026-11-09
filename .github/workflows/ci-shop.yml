@@ -1,9 +1,12 @@
-name: CI
+name: CI Shop
 
+# Quality gate for the clearance shop (shop/ subdir, self-contained package).
 on:
   push:
     branches: [main]
+    paths: ['shop/**']
   pull_request:
+    paths: ['shop/**']
 
 permissions:
   contents: read
@@ -11,12 +14,18 @@ permissions:
 jobs:
   check:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: shop
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
+          cache-dependency-path: shop/package-lock.json
+
       - run: npm ci
       - name: Typecheck worker
         run: npm run check:worker
@@ -27,5 +36,5 @@ jobs:
       - name: Dry-run worker bundle
         run: npx wrangler deploy --dry-run --config workers/shop-api/wrangler.toml
 
-  # Deployment lives in deploy.yml (push to main / manual dispatch), driven by
-  # CLOUDFLARE_API_TOKEN + CLOUDFLARE_ACCOUNT_ID repo secrets.
+  # Deployment lives in deploy-shop.yml (push to main / manual dispatch),
+  # driven by the repo's CLOUDFLARE_API_TOKEN + CLOUDFLARE_ACCOUNT_ID secrets.
