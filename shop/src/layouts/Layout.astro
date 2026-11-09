@@ -1,0 +1,60 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Overstock and closeout paddle boards, paddles and accessories at clearance prices. International shipping with manual quotes for heavy freight.' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title} · Paddle Board Overstock Shop</title>
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <header class="sticky top-0 z-40 border-b border-slate-200 bg-white/90 backdrop-blur">
+      <div class="mx-auto flex h-14 max-w-6xl items-center justify-between px-4">
+        <a href="/" class="flex items-center gap-2 font-bold text-slate-900">
+          <span class="inline-block h-6 w-6 rounded-md bg-[var(--brand)]"></span>
+          <span>PaddleBoard<span class="text-[var(--brand)]">Overstock</span></span>
+        </a>
+        <nav class="flex items-center gap-1 text-sm font-medium">
+          <a href="/products/" class="rounded-md px-3 py-2 text-slate-600 hover:bg-slate-100 hover:text-slate-900">Products</a>
+          <a href="/orders/" class="rounded-md px-3 py-2 text-slate-600 hover:bg-slate-100 hover:text-slate-900">My Orders</a>
+          <a href="/cart/" class="relative rounded-md px-3 py-2 text-slate-600 hover:bg-slate-100 hover:text-slate-900">
+            Cart
+            <span id="cart-badge" class="absolute -top-0.5 -right-0.5 hidden min-w-5 rounded-full bg-[var(--brand)] px-1 text-center text-[11px] font-bold leading-5 text-white">0</span>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="mx-auto w-full max-w-6xl flex-1 px-4 py-8">
+      <slot />
+    </main>
+
+    <footer class="border-t border-slate-200 bg-white">
+      <div class="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-6 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+        <p>© {new Date().getFullYear()} Paddle Board Overstock. Clearance stock — limited quantities.</p>
+        <p class="flex gap-4">
+          <a href="/orders/" class="hover:text-slate-900">Order Lookup</a>
+          <a href="https://paddleboardoverstock.com/" class="hover:text-slate-900">Main Site</a>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      import { updateCartBadge } from '../scripts/shop';
+      updateCartBadge();
+      window.addEventListener('pbo-cart-changed', updateCartBadge);
+    </script>
+  </body>
+</html>

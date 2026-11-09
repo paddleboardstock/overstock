@@ -1,0 +1,187 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const params = Astro.url.searchParams;
+const initialOrder = params.get('order') ?? '';
+const initialEmail = params.get('email') ?? '';
+const quoted = params.get('quoted') === '1';
+---
+
+<Layout title="Order Lookup">
+  <h1 class="text-2xl font-bold">Order Lookup</h1>
+
+  <div id="quoted-banner" class={`mt-4 rounded-lg border border-amber-300 bg-amber-50 p-4 text-sm text-amber-800 ${quoted ? '' : 'hidden'}`}>
+    <strong>Order created.</strong> We're preparing a shipping quote for you — it will appear below and be emailed to you
+    once our team confirms freight costs. No payment has been taken.
+  </div>
+
+  <form id="lookup-form" class="card mt-6 flex flex-wrap items-end gap-3 p-5">
+    <div class="min-w-48 flex-1">
+      <label class="label" for="order">Order number</label>
+      <input id="order" class="input uppercase" required placeholder="PBO-XXXXXX-XXXXXX" value={initialOrder} />
+    </div>
+    <div class="min-w-48 flex-1">
+      <label class="label" for="email">Email used at checkout</label>
+      <input id="email" class="input" type="email" required value={initialEmail} />
+    </div>
+    <button type="submit" class="btn-primary">Find Order</button>
+  </form>
+
+  <div id="order" class="mt-8"></div>
+</Layout>
+
+<script>
+  import { apiGet, apiPost, money } from '../scripts/shop';
+
+  interface OrderItemView {
+    sku: string; title: string; variant: string;
+    unitPriceCents: number; quantity: number; lineTotalCents: number;
+  }
+  interface QuoteView {
+    id: string; amountCents: number; currency: string; carrierName: string | null;
+    serviceName: string | null; notes: string | null; status: string; expiresAt: string;
+  }
+  interface ShipmentView {
+    id: string; carrier: string | null; trackingNumber: string | null;
+    trackingUrl: string | null; status: string;
+  }
+  interface OrderView {
+    orderNumber: string; status: string; email: string; currency: string;
+    subtotalCents: number; shippingCents: number; discountCents: number; taxCents: number; totalCents: number;
+    shippingStatus: string; customerNote: string | null; createdAt: string; paidAt: string | null;
+    items: OrderItemView[]; quotes: QuoteView[]; shipments: ShipmentView[];
+  }
+  interface LookupResponse { order: OrderView }
+
+  const form = document.getElementById('lookup-form') as HTMLFormElement;
+  const root = document.getElementById('order')!;
+
+  const STATUS_BADGE: Record<string, [string, string]> = {
+    pending_shipping_quote: ['badge-amber', 'Awaiting shipping quote'],
+    pending_payment: ['badge-blue', 'Awaiting payment'],
+    paid: ['badge-green', 'Paid'],
+    processing: ['badge-blue', 'Processing'],
+    shipped: ['badge-blue', 'Shipped'],
+    completed: ['badge-green', 'Completed'],
+    cancelled: ['badge-neutral', 'Cancelled'],
+    payment_failed: ['badge-red', 'Payment failed'],
+    partially_refunded: ['badge-amber', 'Partially refunded'],
+    refunded: ['badge-neutral', 'Refunded'],
+  };
+
+  async function lookup(orderNumber: string, email: string): Promise<void> {
+    root.innerHTML = '<p class="text-sm text-slate-500">Searching…</p>';
+    try {
+      const { order } = await apiGet<LookupResponse>(
+        `/api/orders/${encodeURIComponent(orderNumber)}?email=${encodeURIComponent(email)}`
+      );
+      const [badge, label] = STATUS_BADGE[order.status] ?? ['badge-neutral', order.status];
+      const proposedQuote = order.quotes.find((q) => q.status === 'proposed' && new Date(q.expiresAt) > new Date());
+
+      root.innerHTML = `
+        <div class="card p-6">
+          <div class="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <h2 class="text-lg font-bold">${order.orderNumber}</h2>
+              <p class="text-xs text-slate-500">Placed ${new Date(order.createdAt).toLocaleString()}</p>
+            </div>
+            <span class="badge ${badge}">${label}</span>
+          </div>
+
+          <div class="mt-5 overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead><tr class="border-b border-slate-200 text-left text-xs uppercase tracking-wide text-slate-400">
+                <th class="py-2">Item</th><th>Price</th><th>Qty</th><th class="text-right">Total</th>
+              </tr></thead>
+              <tbody>
+                ${order.items.map((i) => `
+                  <tr class="border-b border-slate-100">
+                    <td class="py-2"><p class="font-medium">${i.title.replace(/</g, '&lt;')}</p><p class="text-xs text-slate-500">${i.variant.replace(/</g, '&lt;')} · ${i.sku}</p></td>
+                    <td>${money(i.unitPriceCents, order.currency)}</td>
+                    <td>${i.quantity}</td>
+                    <td class="text-right font-medium">${money(i.lineTotalCents, order.currency)}</td>
+                  </tr>`).join('')}
+              </tbody>
+            </table>
+          </div>
+
+          <div class="mt-4 space-y-1 text-sm">
+            <div class="flex justify-between"><span class="text-slate-500">Subtotal</span><span>${money(order.subtotalCents, order.currency)}</span></div>
+            <div class="flex justify-between"><span class="text-slate-500">Shipping</span><span>${order.shippingCents > 0 ? money(order.shippingCents, order.currency) : 'Quoted'}</span></div>
+            ${order.discountCents > 0 ? `<div class="flex justify-between text-emerald-700"><span>Discount</span><span>-${money(order.discountCents, order.currency)}</span></div>` : ''}
+            ${order.taxCents > 0 ? `<div class="flex justify-between"><span class="text-slate-500">Tax</span><span>${money(order.taxCents, order.currency)}</span></div>` : ''}
+            <div class="flex justify-between border-t border-slate-200 pt-2 text-base font-bold"><span>Total</span><span>${money(order.totalCents, order.currency)}</span></div>
+          </div>
+
+          ${order.status === 'pending_payment' ? `
+            <p class="mt-5 rounded-lg bg-blue-50 p-3 text-sm text-blue-800">
+              Payment link sent to Stripe — your stock is reserved for a short window. If your checkout session expired,
+              contact support to have the order re-issued.
+            </p>` : ''}
+
+          ${proposedQuote ? `
+            <div class="mt-5 rounded-xl border border-emerald-300 bg-emerald-50 p-4">
+              <h3 class="text-sm font-bold text-emerald-900">Shipping quote ready</h3>
+              <p class="mt-1 text-sm text-emerald-800">
+                ${proposedQuote.carrierName ?? 'Freight'}${proposedQuote.serviceName ? ` · ${proposedQuote.serviceName}` : ''}:
+                <strong>${money(proposedQuote.amountCents, proposedQuote.currency)}</strong>
+                ${proposedQuote.notes ? `<span class="block text-xs text-emerald-700">${proposedQuote.notes.replace(/</g, '&lt;')}</span>` : ''}
+              </p>
+              <p class="mt-1 text-xs text-emerald-700">Valid until ${new Date(proposedQuote.expiresAt).toLocaleString()}</p>
+              <button id="accept-quote" class="btn-primary mt-3" data-quote="${proposedQuote.id}">Accept Quote &amp; Pay</button>
+              <p id="quote-error" class="mt-2 hidden text-sm text-red-600"></p>
+            </div>` : ''}
+          ${order.status === 'pending_shipping_quote' && !proposedQuote ? `
+            <p class="mt-5 rounded-lg bg-amber-50 p-3 text-sm text-amber-800">
+              Our team is preparing your shipping quote. You'll receive it by email — check back here later.
+            </p>` : ''}
+
+          ${order.shipments.length > 0 ? `
+            <div class="mt-5">
+              <h3 class="text-sm font-bold uppercase tracking-wide text-slate-500">Shipments</h3>
+              ${order.shipments.map((s) => `
+                <p class="mt-2 text-sm">
+                  <span class="badge badge-blue">${s.status}</span>
+                  ${s.carrier ?? ''} ${s.trackingNumber ?? ''}
+                  ${s.trackingUrl ? `<a class="ml-1 text-[var(--brand)] underline" href="${s.trackingUrl}" target="_blank" rel="noopener">Track</a>` : ''}
+                </p>`).join('')}
+            </div>` : ''}
+        </div>`;
+
+      const acceptBtn = document.getElementById('accept-quote') as HTMLButtonElement | null;
+      if (acceptBtn) {
+        acceptBtn.addEventListener('click', async () => {
+          acceptBtn.disabled = true;
+          acceptBtn.textContent = 'Creating payment…';
+          const quoteError = document.getElementById('quote-error')!;
+          try {
+            const data = await apiPost<{ checkoutUrl: string }>(
+              `/api/orders/${encodeURIComponent(order.orderNumber)}/quote/accept`,
+              { email, quoteId: acceptBtn.dataset.quote }
+            );
+            window.location.href = data.checkoutUrl;
+          } catch (err) {
+            quoteError.textContent = (err as Error).message;
+            quoteError.classList.remove('hidden');
+            acceptBtn.disabled = false;
+            acceptBtn.textContent = 'Accept Quote & Pay';
+          }
+        });
+      }
+    } catch (err) {
+      root.innerHTML = `<p class="text-sm text-red-600">Order not found: ${(err as Error).message}</p>`;
+    }
+  }
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const orderNumber = (document.getElementById('order') as HTMLInputElement).value.trim();
+    const email = (document.getElementById('email') as HTMLInputElement).value.trim();
+    if (orderNumber && email) void lookup(orderNumber, email);
+  });
+
+  // Auto-lookup when redirected here with ?order=&email=
+  const orderNumber = (document.getElementById('order') as HTMLInputElement).value.trim();
+  const email = (document.getElementById('email') as HTMLInputElement).value.trim();
+  if (orderNumber && email) void lookup(orderNumber, email);
+</script>

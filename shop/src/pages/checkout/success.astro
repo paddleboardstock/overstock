@@ -1,0 +1,26 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Payment Successful">
+  <div class="mx-auto max-w-lg py-12 text-center">
+    <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-emerald-100 text-3xl">✓</div>
+    <h1 class="mt-6 text-2xl font-bold">Payment received!</h1>
+    <p class="mt-3 text-sm text-slate-600">
+      Thank you — your order <span id="order-number" class="font-mono font-semibold"></span> is confirmed.
+      A receipt has been emailed to you. We'll notify you when your gear ships.
+    </p>
+    <div class="mt-8 flex justify-center gap-3">
+      <a href="/orders/" class="btn-primary">View My Order</a>
+      <a href="/products/" class="btn-secondary">Continue Shopping</a>
+    </div>
+  </div>
+</Layout>
+
+<script>
+  const order = new URLSearchParams(location.search).get('order');
+  if (order) {
+    document.getElementById('order-number')!.textContent = order;
+    document.title = `Order ${order} confirmed · Paddle Board Overstock Shop`;
+  }
+</script>
