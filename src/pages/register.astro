@@ -44,6 +44,7 @@ const metadata = {
         </div>
 
         <a
+          id="google-login"
           href="/api/auth/sign-in/social?provider=google&callbackURL=/keystatic"
           class="w-full flex items-center justify-center gap-2 py-2.5 px-4 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-200 font-medium hover:bg-gray-50 dark:hover:bg-gray-600 transition mb-5"
         >
@@ -130,6 +131,8 @@ const metadata = {
             </select>
           </div>
 
+          <div id="turnstile-widget"></div>
+
           <button
             type="submit"
             class="w-full py-2.5 px-4 bg-sky-600 hover:bg-sky-700 text-white font-medium rounded-lg transition duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800"
@@ -160,6 +163,21 @@ const metadata = {
       );
     }
 
+    const siteKey = (import.meta.env.PUBLIC_TURNSTILE_SITE_KEY as string | undefined) || '';
+    if (siteKey) {
+      const script = document.createElement('script');
+      script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js';
+      script.async = true;
+      script.defer = true;
+      script.onload = () => {
+        const el = document.getElementById('turnstile-widget');
+        if (el && window.turnstile) {
+          window.turnstile.render(el, { sitekey: siteKey, theme: 'light' });
+        }
+      };
+      document.head.appendChild(script);
+    }
+
     document.getElementById('register-form')?.addEventListener('submit', async (e) => {
       e.preventDefault();
       const form = e.currentTarget as HTMLFormElement | null;
@@ -177,9 +195,12 @@ const metadata = {
 
       try {
         const formData = new FormData(form);
+        const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+        const token = window.turnstile && window.turnstile.getResponse ? window.turnstile.getResponse() : '';
+        if (token) headers['x-captcha-response'] = token;
         const res = await fetch('/api/auth/sign-up/email', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+          headers,
           body: JSON.stringify({
             name: formData.get('name'),
             email: formData.get('email'),
