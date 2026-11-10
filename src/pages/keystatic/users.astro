@@ -43,6 +43,7 @@ export const prerender = true;
         <tr>
           <th class="px-4 py-3 text-left font-medium">User</th>
           <th class="px-4 py-3 text-left font-medium">Role</th>
+          <th class="px-4 py-3 text-left font-medium">Country</th>
           <th class="px-4 py-3 text-left font-medium">Created</th>
           <th class="px-4 py-3 text-left font-medium">Status</th>
           <th class="px-4 py-3"></th>
@@ -50,7 +51,7 @@ export const prerender = true;
       </thead>
       <tbody id="user-rows" class="divide-y divide-gray-200 dark:divide-gray-800">
         <tr>
-          <td colspan="5" class="px-4 py-8 text-center text-gray-400">Loading…</td>
+          <td colspan="6" class="px-4 py-8 text-center text-gray-400">Loading…</td>
         </tr>
       </tbody>
     </table>
@@ -87,7 +88,7 @@ export const prerender = true;
 
       async function load() {
         const tbody = document.getElementById('user-rows');
-        tbody.innerHTML = '<tr><td colspan="5" class="px-4 py-8 text-center text-gray-400">Loading…</td></tr>';
+        tbody.innerHTML = '<tr><td colspan="6" class="px-4 py-8 text-center text-gray-400">Loading…</td></tr>';
         const params = new URLSearchParams({
           page: String(page),
           pageSize: String(pageSize),
@@ -111,7 +112,7 @@ export const prerender = true;
 
           if (rows.length === 0) {
             tbody.innerHTML =
-              '<tr><td colspan="5" class="px-4 py-8 text-center text-gray-400">No users found.</td></tr>';
+              '<tr><td colspan="6" class="px-4 py-8 text-center text-gray-400">No users found.</td></tr>';
             return;
           }
 
@@ -137,6 +138,7 @@ export const prerender = true;
                   </div>
                 </td>
                 <td class="px-4 py-3">${escapeHtml(r.role || 'user')}</td>
+                <td class="px-4 py-3">${escapeHtml(r.country || '—')}</td>
                 <td class="px-4 py-3 whitespace-nowrap text-gray-500 dark:text-gray-400">${date.toLocaleDateString()}</td>
                 <td class="px-4 py-3">${statusBadge}</td>
                 <td class="px-4 py-3 text-right whitespace-nowrap">
@@ -194,7 +196,7 @@ export const prerender = true;
             });
           });
         } catch (err) {
-          tbody.innerHTML = `<tr><td colspan="5" class="px-4 py-8 text-center text-red-500">Failed to load: ${escapeHtml(String(err))}</td></tr>`;
+          tbody.innerHTML = `<tr><td colspan="6" class="px-4 py-8 text-center text-red-500">Failed to load: ${escapeHtml(String(err))}</td></tr>`;
         }
       }
 

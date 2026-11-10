@@ -1022,6 +1022,7 @@ async function listUsers(
         name: user.name,
         email: user.email,
         image: user.image,
+        country: user.country,
         role: user.role,
         banned: user.banned,
         banReason: user.banReason,
