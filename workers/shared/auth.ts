@@ -1,4 +1,4 @@
-import { betterAuth } from 'better-auth';
+import { betterAuth, APIError } from 'better-auth';
 import { drizzleAdapter } from 'better-auth/adapters/drizzle';
 import { admin, captcha } from 'better-auth/plugins';
 import { createAccessControl } from 'better-auth/plugins/access';
@@ -71,6 +71,23 @@ export function createAuth(authEnv: AuthEnv, db: DB) {
     },
     user: {
       deleteUser: { enabled: true },
+      additionalFields: {
+        country: { type: 'string', required: false, input: true, returned: true },
+      },
+    },
+    // Email registration must include a country selection (the register form
+    // has a required country dropdown). Social (Google) sign-up can't collect
+    // it up front, so the hook only gates /sign-up/email.
+    hooks: {
+      before: async (ctx) => {
+        if (ctx.path === '/sign-up/email') {
+          const body = (ctx.body ?? {}) as { country?: unknown };
+          const country = typeof body.country === 'string' ? body.country.trim() : '';
+          if (!country || country.length > 100) {
+            throw new APIError('BAD_REQUEST', { message: 'Please select your country.' });
+          }
+        }
+      },
     },
     databaseHooks: {
       user: {
