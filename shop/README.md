@@ -22,7 +22,9 @@ public/
 Public:
 
 - `GET  /api/health`
-- `GET  /api/products` · `GET /api/products/:slug`
+- `GET  /api/products` · `GET /api/products/:slug` — active products only,
+  filtered by the visitor's country (`CF-IPCountry`) per product visibility
+  settings (see "Country visibility" below)
 - `POST /api/checkout/session` — server-side pricing, atomic reservation;
   returns `202 {status:'pending_shipping_quote'}` for manual-quote countries
   or `200 {checkoutUrl}` when a flat shipping rule matches
@@ -34,13 +36,30 @@ Public:
 
 Admin (`Authorization: Bearer $SHOP_ADMIN_TOKEN`, all mutations audited):
 
-- Catalog: `GET/POST /api/admin/products`, `PATCH /api/admin/products/:id`,
+- Catalog: `GET/POST /api/admin/products`, `PATCH /api/admin/products/:id`
+  (incl. `visibilityMode`/`visibilityCountries`),
   `POST /api/admin/products/:id/images|variants`, `PATCH /api/admin/variants/:id`,
   `POST /api/admin/inventory/:variantId`, `GET /api/admin/inventory/:variantId/movements`
 - Orders: `GET /api/admin/orders`, `GET/PATCH /api/admin/orders/:orderNumber`,
   `POST /api/admin/orders/:n/quotes|shipments|refund`
 - Rules: `GET/POST` + `PATCH/DELETE` on `/api/admin/shipping-rules|tax-rules|discounts`
 - `GET /api/admin/audit`
+
+## Country visibility
+
+Each product carries `visibility_mode` + `visibility_countries`
+(migrations/0006):
+
+- `all` — visible everywhere (default; country list ignored)
+- `allow` — visible only in the listed countries (hidden when the visitor's
+  country is unknown)
+- `block` — visible everywhere except the listed countries
+
+The list is a JSON array of ISO 3166-1 alpha-2 codes (`["US","CA"]`).
+Enforcement: the public catalog/detail endpoints filter by the visitor's
+`CF-IPCountry`, and checkout (`/api/checkout/session`, quote accept) rejects
+with `403 COUNTRY_NOT_ELIGIBLE` based on the shipping address country. The
+admin console (`/admin`) exposes an inline editor on the Products tab.
 
 ## Local development
 

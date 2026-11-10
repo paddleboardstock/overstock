@@ -105,6 +105,12 @@ export function clientKey(request: Request, scope: string): string {
   return `rl:${scope}:${ip}`;
 }
 
+/** Visitor country from Cloudflare (CF-IPCountry), upper-cased; null when unknown. */
+export function requestCountry(request: Request): string | null {
+  const raw = request.headers.get('CF-IPCountry');
+  return typeof raw === 'string' && /^[A-Za-z]{2}$/.test(raw) ? raw.toUpperCase() : null;
+}
+
 // ---------------------------------------------------------------------------
 // Validation helpers (never trust client JSON)
 // ---------------------------------------------------------------------------

@@ -39,6 +39,28 @@ import Layout from '../layouts/Layout.astro';
     <section id="tab-products" class="tab-panel mt-6 hidden">
       <button id="products-refresh" class="btn-secondary">Refresh</button>
       <div id="products-list" class="mt-4 overflow-x-auto"></div>
+      <div id="visibility-editor" class="card mt-4 hidden p-4">
+        <h3 class="text-sm font-bold">Country visibility — <span id="vis-product-title"></span></h3>
+        <div class="mt-3 grid gap-3 md:grid-cols-2">
+          <div>
+            <label class="label" for="vis-mode">Mode</label>
+            <select id="vis-mode" class="input">
+              <option value="all">All countries</option>
+              <option value="allow">Only listed countries</option>
+              <option value="block">All except listed countries</option>
+            </select>
+          </div>
+          <div>
+            <label class="label" for="vis-countries">Countries (ISO 3166-1 alpha-2, comma-separated)</label>
+            <input id="vis-countries" class="input" placeholder="US, CA, DE" autocomplete="off" />
+          </div>
+        </div>
+        <div class="mt-3 flex gap-2">
+          <button id="vis-save" class="btn-primary text-xs">Save</button>
+          <button id="vis-cancel" class="btn-secondary text-xs">Cancel</button>
+        </div>
+        <p id="vis-error" class="mt-2 hidden text-sm text-red-600"></p>
+      </div>
     </section>
 
     <section id="tab-rules" class="tab-panel mt-6 hidden">
@@ -291,20 +313,31 @@ import Layout from '../layouts/Layout.astro';
   // --- Products ---------------------------------------------------------------
   interface AdminProduct {
     id: string; slug: string; title: string; status: string;
+    visibilityMode: 'all' | 'allow' | 'block';
+    visibilityCountries: string[];
     variants: Array<{ id: string; sku: string; name: string; priceCents: number; currency: string; onHand: number; reserved: number; available: number; active: boolean }>;
+  }
+
+  let loadedProducts: AdminProduct[] = [];
+
+  function visibilityLabel(p: AdminProduct): string {
+    if (p.visibilityMode === 'allow') return `Only: ${p.visibilityCountries.join(', ') || '—'}`;
+    if (p.visibilityMode === 'block') return `Except: ${p.visibilityCountries.join(', ') || '—'}`;
+    return 'All countries';
   }
 
   async function loadProducts(): Promise<void> {
     const el = document.getElementById('products-list')!;
     try {
       const { products } = await adminFetch<{ products: AdminProduct[] }>('/api/admin/products');
+      loadedProducts = products;
       el.innerHTML = `
         <table class="card w-full text-sm">
           <thead><tr class="border-b border-slate-200 text-left text-xs uppercase text-slate-400">
-            <th class="p-3">Product</th><th>Variant</th><th>SKU</th><th>Price</th><th>On hand</th><th>Avail.</th><th>Status</th>
+            <th class="p-3">Product</th><th>Variant</th><th>SKU</th><th>Price</th><th>On hand</th><th>Avail.</th><th>Status</th><th>Visibility</th>
           </tr></thead>
           <tbody>
-          ${products.map((p) => p.variants.map((v) => `
+          ${products.map((p) => p.variants.map((v, vi) => `
             <tr class="border-b border-slate-100">
               <td class="p-3 font-medium">${esc(p.title)}</td>
               <td>${esc(v.name)}</td>
@@ -313,6 +346,10 @@ import Layout from '../layouts/Layout.astro';
               <td>${v.onHand}</td>
               <td>${v.available}</td>
               <td><span class="badge ${p.status === 'active' ? 'badge-green' : 'badge-neutral'}">${esc(p.status)}</span></td>
+              ${vi === 0 ? `<td rowspan="${p.variants.length}" class="p-3 align-top">
+                <div class="text-xs">${esc(visibilityLabel(p))}</div>
+                <button class="btn-secondary mt-1 text-xs" data-vis-edit="${p.id}">Edit</button>
+              </td>` : ''}
             </tr>`).join('')).join('')}
           </tbody>
         </table>`;
@@ -321,6 +358,56 @@ import Layout from '../layouts/Layout.astro';
     }
   }
   document.getElementById('products-refresh')!.addEventListener('click', () => void loadProducts());
+
+  // --- Product country visibility editor ---------------------------------------
+  let editingProductId = '';
+  const visEditor = document.getElementById('visibility-editor')!;
+
+  document.getElementById('products-list')!.addEventListener('click', (e) => {
+    const btn = (e.target as HTMLElement).closest('[data-vis-edit]');
+    if (!btn) return;
+    const product = loadedProducts.find((p) => p.id === btn.getAttribute('data-vis-edit'));
+    if (!product) return;
+    editingProductId = product.id;
+    document.getElementById('vis-product-title')!.textContent = product.title;
+    (document.getElementById('vis-mode') as HTMLSelectElement).value = product.visibilityMode;
+    (document.getElementById('vis-countries') as HTMLInputElement).value = product.visibilityCountries.join(', ');
+    document.getElementById('vis-error')!.classList.add('hidden');
+    visEditor.classList.remove('hidden');
+    visEditor.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  });
+
+  document.getElementById('vis-cancel')!.addEventListener('click', () => visEditor.classList.add('hidden'));
+
+  document.getElementById('vis-save')!.addEventListener('click', async () => {
+    const errEl = document.getElementById('vis-error')!;
+    errEl.classList.add('hidden');
+    const mode = (document.getElementById('vis-mode') as HTMLSelectElement).value as AdminProduct['visibilityMode'];
+    const raw = (document.getElementById('vis-countries') as HTMLInputElement).value;
+    const codes = [...new Set(raw.split(/[\s,;]+/).map((c) => c.trim().toUpperCase()).filter((c) => c !== ''))];
+    if (mode !== 'all' && codes.length === 0) {
+      errEl.textContent = 'Enter at least one country code for this mode.';
+      errEl.classList.remove('hidden');
+      return;
+    }
+    const invalid = codes.find((c) => !/^[A-Z]{2}$/.test(c));
+    if (invalid) {
+      errEl.textContent = `Invalid country code: ${invalid} (use 2-letter ISO codes like US, DE)`;
+      errEl.classList.remove('hidden');
+      return;
+    }
+    try {
+      await adminFetch(`/api/admin/products/${editingProductId}`, {
+        method: 'PATCH',
+        body: JSON.stringify({ visibilityMode: mode, visibilityCountries: mode === 'all' ? [] : codes }),
+      });
+      visEditor.classList.add('hidden');
+      await loadProducts();
+    } catch (err) {
+      errEl.textContent = (err as Error).message;
+      errEl.classList.remove('hidden');
+    }
+  });
 
   // --- Rules (read-only v0) -----------------------------------------------------
   async function loadRules(): Promise<void> {

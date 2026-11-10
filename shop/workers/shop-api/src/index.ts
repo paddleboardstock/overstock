@@ -5,7 +5,7 @@ import { handleCheckoutSession, handleOrderLookup, handleQuoteAccept } from './c
 import { handleGetProduct, handleListProducts } from './products';
 import { handleStripeWebhook } from './webhook';
 import type { Env } from './types';
-import { apiError, corsHeaders, isNonEmptyString, json, nowIso } from './util';
+import { apiError, corsHeaders, isNonEmptyString, json, nowIso, requestCountry } from './util';
 
 function withCors(response: Response, request: Request, env: Env): Response {
   const headers = new Headers(response.headers);
@@ -24,12 +24,12 @@ async function route(request: Request, env: Env, requestId: string): Promise<Res
   }
 
   if (path === '/api/products' && method === 'GET') {
-    return handleListProducts(db, request);
+    return handleListProducts(db, requestCountry(request));
   }
 
   const productMatch = path.match(/^\/api\/products\/([a-z0-9-]+)$/);
   if (productMatch && method === 'GET') {
-    return handleGetProduct(db, productMatch[1]);
+    return handleGetProduct(db, productMatch[1], false, requestCountry(request));
   }
 
   if (path === '/api/checkout/session' && method === 'POST') {

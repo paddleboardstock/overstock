@@ -10,7 +10,7 @@
 
 import type { D1Database } from '@cloudflare/workers-types';
 import { stripeRequest } from './stripe';
-import { loadSellableVariants } from './products';
+import { loadSellableVariants, productVisibleInCountry } from './products';
 import type {
   CheckoutRequestBody,
   Env,
@@ -541,6 +541,13 @@ export async function handleCheckoutSession(request: Request, env: Env, requestI
     if (!entry) {
       return finish(404, { error: { code: 'VARIANT_UNAVAILABLE', message: 'Item is not available', requestId } }, 'failed');
     }
+    if (!productVisibleInCountry(entry.product, body.shippingAddress.countryCode)) {
+      return finish(
+        403,
+        { error: { code: 'COUNTRY_NOT_ELIGIBLE', message: 'One or more items are not available in your country', requestId } },
+        'failed'
+      );
+    }
     if (entry.variant.currency !== body.currency) {
       return finish(409, { error: { code: 'CURRENCY_MISMATCH', message: 'Item currency mismatch', requestId } }, 'failed');
     }
@@ -881,6 +888,31 @@ export async function handleQuoteAccept(
       .bind(order.id)
       .all<{ variant_id: string; quantity: number }>()
   ).results;
+
+  // Re-check country visibility at accept time: an admin may have restricted a
+  // product between order creation and quote acceptance.
+  const visRows = (
+    await db
+      .prepare(
+        `SELECT DISTINCT p.visibility_mode AS mode, p.visibility_countries AS countries
+         FROM order_items oi
+         JOIN product_variants v ON v.id = oi.variant_id
+         JOIN products p ON p.id = v.product_id
+         WHERE oi.order_id = ?1`
+      )
+      .bind(order.id)
+      .all<{ mode: string | null; countries: string | null }>()
+  ).results;
+  for (const row of visRows) {
+    if (
+      !productVisibleInCountry(
+        { visibility_mode: row.mode === 'allow' || row.mode === 'block' ? row.mode : 'all', visibility_countries: row.countries },
+        address.countryCode
+      )
+    ) {
+      return apiError(403, 'COUNTRY_NOT_ELIGIBLE', 'One or more items are no longer available in your country', requestId);
+    }
+  }
 
   const stmts: D1PreparedStatement[] = [
     db
