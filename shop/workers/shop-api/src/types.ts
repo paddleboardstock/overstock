@@ -26,6 +26,8 @@ export interface ProductRow {
   brand: string | null;
   title: string;
   description: string | null;
+  visibility_mode: 'all' | 'allow' | 'block';
+  visibility_countries: string | null;
   created_at: string;
   updated_at: string;
 }

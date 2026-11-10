@@ -3,6 +3,7 @@
 import type { D1Database } from '@cloudflare/workers-types';
 import {
   genId,
+  isCountryCode,
   isCurrency,
   isNonEmptyString,
   isNonNegativeInt,
@@ -34,6 +35,41 @@ function imageUrl(image: ProductImageRow): string {
   return image.r2_key ? `/assets/${image.r2_key.replace(/^\/+/, '')}` : '';
 }
 
+// ---------------------------------------------------------------------------
+// Country visibility (see migrations/0006_product_country_visibility.sql)
+// ---------------------------------------------------------------------------
+
+function parseCountryList(raw: string | null): string[] {
+  if (!raw) return [];
+  try {
+    const parsed: unknown = JSON.parse(raw);
+    if (!Array.isArray(parsed)) return [];
+    return parsed.filter((c): c is string => typeof c === 'string' && /^[A-Z]{2}$/.test(c));
+  } catch {
+    return [];
+  }
+}
+
+/**
+ * Whether a product may be shown/sold for the given country.
+ * - 'all':   visible everywhere.
+ * - 'allow': visible only in the listed countries (fail-closed when country unknown).
+ * - 'block': visible everywhere except the listed countries (fail-open when unknown).
+ */
+export function productVisibleInCountry(
+  product: Pick<ProductRow, 'visibility_mode' | 'visibility_countries'>,
+  country: string | null
+): boolean {
+  const mode =
+    product.visibility_mode === 'allow' || product.visibility_mode === 'block'
+      ? product.visibility_mode
+      : 'all';
+  if (mode === 'all') return true;
+  const list = parseCountryList(product.visibility_countries);
+  if (mode === 'allow') return country !== null && list.includes(country);
+  return country === null || !list.includes(country);
+}
+
 function toPublic(bundle: ProductBundle): PublicProduct {
   return {
     id: bundle.product.id,
@@ -61,7 +97,8 @@ function toPublic(bundle: ProductBundle): PublicProduct {
 async function loadBundles(
   db: D1Database,
   productWhere: string,
-  bind: unknown[] = []
+  bind: unknown[] = [],
+  visibleCountry?: string | null
 ): Promise<PublicProduct[]> {
   const products = (await db
     .prepare(`SELECT * FROM products ${productWhere} ORDER BY created_at ASC`)
@@ -105,24 +142,29 @@ async function loadBundles(
           : { variant_id: v.id, on_hand: v.inv_on_hand, reserved: v.inv_reserved ?? 0, updated_at: v.inv_updated_at ?? nowIso() },
     });
   }
-  return [...byId.values()].map(toPublic);
+  const bundles = [...byId.values()];
+  return (
+    visibleCountry === undefined ? bundles : bundles.filter((b) => productVisibleInCountry(b.product, visibleCountry))
+  ).map(toPublic);
 }
 
-export async function handleListProducts(db: D1Database, request: Request): Promise<Response> {
-  const url = new URL(request.url);
-  const status = url.searchParams.get('status');
-  const allowed = status === 'active' || status === 'draft' || status === 'archived';
-  // Public listing is always active-only; other statuses are admin-only.
-  const where = 'WHERE status = ?1';
-  const products = await loadBundles(db, where, [allowed ? status : 'active']);
+export async function handleListProducts(db: D1Database, country: string | null = null): Promise<Response> {
+  // Public listing is always active-only (drafts/archived are admin-only via
+  // /api/admin/products) and is filtered by the visitor's country.
+  const products = await loadBundles(db, 'WHERE status = ?1', ['active'], country);
   return json({ products });
 }
 
-export async function handleGetProduct(db: D1Database, slug: string, includeDrafts = false): Promise<Response> {
+export async function handleGetProduct(
+  db: D1Database,
+  slug: string,
+  includeDrafts = false,
+  country: string | null = null
+): Promise<Response> {
   if (!isSlug(slug)) return json({ error: { code: 'BAD_SLUG', message: 'Invalid slug' } }, 400);
   const bundles = includeDrafts
     ? await loadBundles(db, 'WHERE slug = ?1', [slug])
-    : await loadBundles(db, 'WHERE slug = ?1 AND status = ?2', [slug, 'active']);
+    : await loadBundles(db, 'WHERE slug = ?1 AND status = ?2', [slug, 'active'], country);
   if (bundles.length === 0) {
     return json({ error: { code: 'NOT_FOUND', message: 'Product not found' } }, 404);
   }
@@ -133,6 +175,38 @@ export async function handleGetProduct(db: D1Database, slug: string, includeDraf
 // Admin mutations (products / images / variants)
 // ---------------------------------------------------------------------------
 
+interface VisibilityInput {
+  mode: ProductRow['visibility_mode'];
+  countriesJson: string | null;
+}
+
+function parseVisibilityInput(
+  body: Record<string, unknown>
+): VisibilityInput | { error: { code: string; message: string } } {
+  const mode = body.visibilityMode;
+  if (mode !== 'all' && mode !== 'allow' && mode !== 'block') {
+    return { error: { code: 'BAD_VISIBILITY_MODE', message: "visibilityMode must be 'all', 'allow' or 'block'" } };
+  }
+  if (mode === 'all') return { mode, countriesJson: null };
+  const raw = body.visibilityCountries;
+  if (!Array.isArray(raw) || raw.length === 0) {
+    return {
+      error: {
+        code: 'BAD_VISIBILITY_COUNTRIES',
+        message: 'visibilityCountries must be a non-empty array of ISO 3166-1 alpha-2 codes',
+      },
+    };
+  }
+  const codes = new Set<string>();
+  for (const entry of raw) {
+    if (!isCountryCode(entry)) {
+      return { error: { code: 'BAD_VISIBILITY_COUNTRIES', message: `Invalid country code: ${String(entry)}` } };
+    }
+    codes.add(entry.toUpperCase());
+  }
+  return { mode, countriesJson: JSON.stringify([...codes]) };
+}
+
 export async function adminCreateProduct(db: D1Database, body: Record<string, unknown>): Promise<Response> {
   const slug = body.slug;
   const title = body.title;
@@ -141,13 +215,20 @@ export async function adminCreateProduct(db: D1Database, body: Record<string, un
   const description = typeof body.description === 'string' ? body.description.slice(0, 5000) : null;
   const brand = typeof body.brand === 'string' && body.brand.trim() ? body.brand.slice(0, 120) : null;
   const status = body.status === 'active' || body.status === 'archived' ? body.status : 'draft';
+  let visibility: VisibilityInput = { mode: 'all', countriesJson: null };
+  if (body.visibilityMode !== undefined) {
+    const parsed = parseVisibilityInput(body);
+    if ('error' in parsed) return json({ error: parsed.error }, 400);
+    visibility = parsed;
+  }
   const id = genId();
   try {
     await db
       .prepare(
-        `INSERT INTO products (id, slug, status, brand, title, description) VALUES (?1, ?2, ?3, ?4, ?5, ?6)`
+        `INSERT INTO products (id, slug, status, brand, title, description, visibility_mode, visibility_countries)
+         VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8)`
       )
-      .bind(id, slug, status, brand, title.trim(), description)
+      .bind(id, slug, status, brand, title.trim(), description, visibility.mode, visibility.countriesJson)
       .run();
   } catch (error) {
     const msg = error instanceof Error ? error.message : '';
@@ -183,6 +264,12 @@ export async function adminUpdateProduct(db: D1Database, id: string, body: Recor
   if (body.status === 'draft' || body.status === 'active' || body.status === 'archived') {
     sets.push('status = ?');
     bind.push(body.status);
+  }
+  if (body.visibilityMode !== undefined) {
+    const parsed = parseVisibilityInput(body);
+    if ('error' in parsed) return json({ error: parsed.error }, 400);
+    sets.push('visibility_mode = ?', 'visibility_countries = ?');
+    bind.push(parsed.mode, parsed.countriesJson);
   }
   if (sets.length === 0) return json({ error: { code: 'NO_FIELDS', message: 'Nothing to update' } }, 400);
   sets.push('updated_at = ?');
@@ -415,6 +502,8 @@ export async function adminListProductsAll(db: D1Database): Promise<Response> {
     description: p.description,
     brand: p.brand,
     status: p.status,
+    visibilityMode: p.visibility_mode,
+    visibilityCountries: parseCountryList(p.visibility_countries),
     createdAt: p.created_at,
     images: images
       .filter((i) => i.product_id === p.id)
@@ -454,6 +543,7 @@ export async function loadSellableVariants(
       .prepare(
         `SELECT v.*, p.id AS pid, p.slug AS pslug, p.status AS pstatus, p.brand AS pbrand,
                 p.title AS ptitle, p.description AS pdesc, p.created_at AS pcreated, p.updated_at as pupdated,
+                p.visibility_mode AS pvis_mode, p.visibility_countries AS pvis_countries,
                 i.on_hand, i.reserved
          FROM product_variants v
          JOIN products p ON p.id = v.product_id AND p.status = 'active'
@@ -471,6 +561,8 @@ export async function loadSellableVariants(
           pdesc: string | null;
           pcreated: string;
           pupdated: string;
+          pvis_mode: string | null;
+          pvis_countries: string | null;
           on_hand: number | null;
           reserved: number | null;
         }
@@ -499,6 +591,9 @@ export async function loadSellableVariants(
         brand: r.pbrand,
         title: r.ptitle,
         description: r.pdesc,
+        visibility_mode:
+          r.pvis_mode === 'allow' || r.pvis_mode === 'block' ? r.pvis_mode : 'all',
+        visibility_countries: r.pvis_countries,
         created_at: r.pcreated,
         updated_at: r.pupdated,
       },
