@@ -145,13 +145,17 @@ const activeLabel = activeGroup?.label ?? '';
     <title>{title} — Paddle Board Overstock Admin</title>
     <script is:inline>
       (function () {
-        // better-auth session gate: redirect to /login when not authenticated.
+        // better-auth session gate: redirect to /login when not authenticated,
+        // and to /select-country when the account has no country yet (e.g.
+        // Google OAuth sign-up — country is only collected after sign-in).
         fetch('/api/auth/get-session', { credentials: 'same-origin' })
           .then((r) => r.json())
           .then((data) => {
             const user = data?.user || data?.session?.user;
             if (!user && window.location.pathname !== '/login') {
               window.location.replace('/login');
+            } else if (user && !user.country && window.location.pathname !== '/select-country') {
+              window.location.replace('/select-country');
             }
           })
           .catch(() => {

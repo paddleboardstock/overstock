@@ -9,6 +9,7 @@ export type AdminUser = {
   name: string;
   image?: string | null;
   role?: string | null;
+  country?: string | null;
 };
 
 /**
@@ -35,5 +36,12 @@ export async function assertAdmin(authEnv: AuthEnv, db: DB, request: Request): P
     await db.update(user).set({ role: 'user', updatedAt: new Date() }).where(eq(user.id, u.id));
     return null;
   }
-  return { id: u.id, email: u.email, name: u.name, image: u.image, role: 'admin' };
+  return {
+    id: u.id,
+    email: u.email,
+    name: u.name,
+    image: u.image,
+    role: 'admin',
+    country: (u as { country?: string | null }).country ?? null,
+  };
 }
