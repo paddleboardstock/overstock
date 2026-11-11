@@ -97,7 +97,7 @@ const rows = Object.keys(grouped)
   .sort((a, b) => a - b);
 ---
 
-<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
+<WidgetWrapper isDark={isDark} containerClass={`max-w-7xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
   <Headline title={title} subtitle={subtitle} tagline={tagline} />
 
   <div
@@ -107,7 +107,7 @@ const rows = Object.keys(grouped)
       id={id}
       method="POST"
       action="/api/contact"
-      class="space-y-7"
+      class="scroll-mt-[72px] space-y-7"
       data-contact-form
       data-success-message={successMessage}
       data-error-message={errorMessage}
