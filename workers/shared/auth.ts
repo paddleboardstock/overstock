@@ -87,6 +87,17 @@ export function createAuth(authEnv: AuthEnv, db: DB) {
             throw new APIError('BAD_REQUEST', { message: 'Please select your country.' });
           }
         }
+        if (ctx.path === '/update-user') {
+          const body = (ctx.body ?? {}) as Record<string, unknown>;
+          // Only validate when the caller is setting a country; other profile
+          // updates (name/image) pass through untouched.
+          if ('country' in body) {
+            const country = typeof body.country === 'string' ? body.country.trim() : '';
+            if (!country || country.length > 100) {
+              throw new APIError('BAD_REQUEST', { message: 'Please select your country.' });
+            }
+          }
+        }
       },
     },
     databaseHooks: {

@@ -78,6 +78,9 @@ export default {
       if (path.startsWith('/api/admin/')) {
         const admin = await assertAdmin(env, db, request);
         if (!admin) return json({ error: 'Unauthorized' }, 401);
+        // Account gate: a country must be selected before the account can be
+        // used (Google OAuth sign-ups collect it on /select-country).
+        if (!admin.country) return json({ error: 'COUNTRY_REQUIRED' }, 403);
         return await handleAdmin(request, env, path, admin, db);
       }
       // Wholesale stock catalog: any authenticated better-auth user may ask;
@@ -129,6 +132,10 @@ async function handleStockCatalog(request: Request, env: AuthEnv, db: DB): Promi
   });
   if (!session?.user) {
     return json({ error: 'unauthenticated' }, 401);
+  }
+  // Account gate: country must be selected before the account can be used.
+  if (!(session.user as { country?: string | null }).country) {
+    return json({ error: 'COUNTRY_REQUIRED' }, 403);
   }
   const email = String(session.user.email || '').toLowerCase();
   const rows = await db

@@ -1,0 +1,139 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+import countryData from '~/data/site/countries.yaml';
+
+interface CountryOption {
+  value: string;
+  label: string;
+}
+
+const countries: CountryOption[] = ((countryData as any).countries ?? [])
+  .map((c: any) => ({
+    value: String(c.value ?? ''),
+    label: String(c.label?.en ?? c.value ?? ''),
+  }))
+  .filter((c: { value: string }) => c.value);
+
+const metadata = {
+  title: `Select Your Country — ${SITE.name}`,
+  description: 'Select your country to continue to your Paddle Board Overstock account.',
+  robots: { index: false, follow: false },
+};
+---
+
+<Layout metadata={metadata}>
+  <main class="min-h-[70vh] flex items-center justify-center px-4 py-24">
+    <div class="w-full max-w-md">
+      <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 p-8">
+        <div class="text-center mb-8">
+          <h1 class="text-2xl font-bold text-gray-900 dark:text-white">Select your country</h1>
+          <p class="text-gray-500 dark:text-gray-400 mt-2">Please select your country to continue to your account.</p>
+        </div>
+
+        <div
+          id="error-message"
+          class="hidden bg-red-50 dark:bg-red-900/30 text-red-600 dark:text-red-400 text-sm rounded-lg p-3 mb-5"
+        >
+        </div>
+
+        <form id="country-form" class="space-y-5">
+          <div>
+            <label for="country" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+              >Country <span class="text-red-500">*</span></label
+            >
+            <select
+              id="country"
+              name="country"
+              required
+              autocomplete="country"
+              class="w-full px-4 py-2.5 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none transition"
+            >
+              <option value="" disabled selected>Select your country</option>
+              {countries.map((c) => <option value={c.value}>{c.label}</option>)}
+            </select>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full py-2.5 px-4 bg-sky-600 hover:bg-sky-700 text-white font-medium rounded-lg transition duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800"
+          >
+            Continue
+          </button>
+
+          <p class="text-center text-sm text-gray-500 dark:text-gray-400">
+            <a href="/api/auth/sign-out" class="text-gray-400 hover:underline">Sign out instead</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // Post-selection destination: internal ?redirect= path (open-redirect guard),
+    // falling back to the admin dashboard.
+    const redirectParam = new URLSearchParams(window.location.search).get('redirect') || '';
+    const redirectTarget =
+      redirectParam.startsWith('/') && !redirectParam.startsWith('//') ? redirectParam : '/keystatic';
+    const errorEl = document.getElementById('error-message');
+
+    // Gate: must be signed in; if the country is already set, skip straight on.
+    fetch('/api/auth/get-session', { credentials: 'same-origin' })
+      .then((r) => r.json())
+      .then((data) => {
+        const user = data?.user || data?.session?.user;
+        if (!user) {
+          window.location.replace(`/login?redirect=${encodeURIComponent('/select-country')}`);
+        } else if (user.country) {
+          window.location.replace(redirectTarget);
+        }
+      })
+      .catch(() => {
+        window.location.replace(`/login?redirect=${encodeURIComponent('/select-country')}`);
+      });
+
+    document.getElementById('country-form')?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const form = e.currentTarget as HTMLFormElement | null;
+      if (!form) return;
+      const submitBtn = form.querySelector('button[type="submit"]') as HTMLButtonElement | null;
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Saving...';
+      }
+      errorEl?.classList.add('hidden');
+
+      try {
+        const formData = new FormData(form);
+        const res = await fetch('/api/auth/update-user', {
+          method: 'POST',
+          credentials: 'same-origin',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            country: formData.get('country'),
+          }),
+        });
+        const data = await res.json().catch(() => ({}));
+        if (res.ok) {
+          window.location.href = redirectTarget;
+        } else {
+          if (errorEl) {
+            errorEl.textContent = data.message || data.error || 'Could not save your country. Please try again.';
+            errorEl.classList.remove('hidden');
+          }
+        }
+      } catch {
+        if (errorEl) {
+          errorEl.textContent = 'Network error. Please try again.';
+          errorEl.classList.remove('hidden');
+        }
+      } finally {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Continue';
+        }
+      }
+    });
+  </script>
+</Layout>
