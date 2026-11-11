@@ -45,7 +45,12 @@ const summary = getSocialSummary();
             <div class="border border-gray-200 rounded-xl overflow-hidden">
               <div class="bg-gray-50 px-5 py-3 border-b border-gray-200 flex items-center justify-between">
                 <h3 class="font-semibold text-gray-900 text-sm">{pack.title}</h3>
-                <a href={`/v2/${pack.slug}`} target="_blank" class="text-xs text-sky-600 hover:underline">
+                <a
+                  href={`/v2/${pack.slug}`}
+                  target="_blank"
+                  rel="noopener"
+                  class="text-xs text-sky-600 hover:underline"
+                >
                   View page →
                 </a>
               </div>
