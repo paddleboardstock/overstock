@@ -199,6 +199,7 @@ jobs:
             PAYPAL_CLIENT_ID: env.PAYPAL_CLIENT_ID,
             PAYPAL_CLIENT_SECRET: env.PAYPAL_CLIENT_SECRET,
             PAYPAL_WEBHOOK_ID: env.PAYPAL_WEBHOOK_ID,
+            PAYPAL_ENV: env.PAYPAL_ENV,
             SHOP_BASE_URL: env.SHOP_BASE_URL
           } | with_entries(select(.value != null and .value != ""))' > /tmp/shop-worker-secrets.json
           if [ -s /tmp/shop-worker-secrets.json ] && ! grep -q '^{}$' /tmp/shop-worker-secrets.json; then
@@ -214,6 +215,7 @@ jobs:
           PAYPAL_CLIENT_ID: ${{ secrets.PAYPAL_CLIENT_ID }}
           PAYPAL_CLIENT_SECRET: ${{ secrets.PAYPAL_CLIENT_SECRET }}
           PAYPAL_WEBHOOK_ID: ${{ secrets.PAYPAL_WEBHOOK_ID }}
+          PAYPAL_ENV: ${{ secrets.PAYPAL_ENV }}
           SHOP_BASE_URL: ${{ secrets.SHOP_BASE_URL }}
 
       - name: Ensure Vectorize index exists

@@ -14,6 +14,7 @@ routes = [
 #   PAYPAL_CLIENT_ID         — PayPal REST app client id
 #   PAYPAL_CLIENT_SECRET     — PayPal REST app secret
 #   PAYPAL_WEBHOOK_ID        — (optional) PayPal webhook id for signature verification
+#   PAYPAL_ENV               — (optional) 'sandbox' routes API calls to api-m.sandbox.paypal.com
 #   SHOP_BASE_URL            — (optional) override site base URL; defaults to https://paddleboardoverstock.com
 #
 # Stripe webhook endpoint: https://paddleboardoverstock.com/api/shop/webhook/stripe

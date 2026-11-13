@@ -19,6 +19,8 @@ interface Env {
   PAYPAL_CLIENT_ID?: string;
   PAYPAL_CLIENT_SECRET?: string;
   PAYPAL_WEBHOOK_ID?: string;
+  /** 'sandbox' routes PayPal calls to api-m.sandbox.paypal.com (default live). */
+  PAYPAL_ENV?: string;
   SHOP_BASE_URL?: string;
 }
 
@@ -43,7 +45,8 @@ const SUPPORTED_LANGS = new Set([
 ]);
 
 const SITE_BASE = (env: Env): string => (env.SHOP_BASE_URL || 'https://paddleboardoverstock.com').replace(/\/+$/, '');
-const PAYPAL_API_BASE = 'https://api-m.paypal.com';
+const PAYPAL_API_BASE = (env: Env): string =>
+  env.PAYPAL_ENV === 'sandbox' ? 'https://api-m.sandbox.paypal.com' : 'https://api-m.paypal.com';
 const STRIPE_API_BASE = 'https://api.stripe.com';
 
 function json(body: unknown, status = 200, extraHeaders: Record<string, string> = {}): Response {
@@ -274,7 +277,7 @@ async function paypalToken(env: Env): Promise<string | null> {
   if (!env.PAYPAL_CLIENT_ID || !env.PAYPAL_CLIENT_SECRET) return null;
   const basic = btoa(`${env.PAYPAL_CLIENT_ID}:${env.PAYPAL_CLIENT_SECRET}`);
   try {
-    const res = await fetch(`${PAYPAL_API_BASE}/v1/oauth2/token`, {
+    const res = await fetch(`${PAYPAL_API_BASE(env)}/v1/oauth2/token`, {
       method: 'POST',
       headers: {
         Authorization: `Basic ${basic}`,
@@ -300,7 +303,7 @@ async function paypalCreateOrder(
   const token = await paypalToken(env);
   if (!token) return null;
   try {
-    const res = await fetch(`${PAYPAL_API_BASE}/v2/checkout/orders`, {
+    const res = await fetch(`${PAYPAL_API_BASE(env)}/v2/checkout/orders`, {
       method: 'POST',
       headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -337,7 +340,7 @@ async function paypalGetOrder(env: Env, paypalOrderId: string): Promise<{ status
   const token = await paypalToken(env);
   if (!token) return null;
   try {
-    const res = await fetch(`${PAYPAL_API_BASE}/v2/checkout/orders/${encodeURIComponent(paypalOrderId)}`, {
+    const res = await fetch(`${PAYPAL_API_BASE(env)}/v2/checkout/orders/${encodeURIComponent(paypalOrderId)}`, {
       headers: { Authorization: `Bearer ${token}` },
     });
     if (!res.ok) return null;
@@ -351,7 +354,7 @@ async function paypalCaptureOrder(env: Env, paypalOrderId: string): Promise<{ st
   const token = await paypalToken(env);
   if (!token) return null;
   try {
-    const res = await fetch(`${PAYPAL_API_BASE}/v2/checkout/orders/${encodeURIComponent(paypalOrderId)}/capture`, {
+    const res = await fetch(`${PAYPAL_API_BASE(env)}/v2/checkout/orders/${encodeURIComponent(paypalOrderId)}/capture`, {
       method: 'POST',
       headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
       body: '{}',
@@ -863,7 +866,7 @@ export default {
         if (env.PAYPAL_WEBHOOK_ID && env.PAYPAL_CLIENT_ID && env.PAYPAL_CLIENT_SECRET) {
           const token = await paypalToken(env);
           if (token) {
-            const verifyRes = await fetch(`${PAYPAL_API_BASE}/v1/notifications/verify-webhook-id`, {
+            const verifyRes = await fetch(`${PAYPAL_API_BASE(env)}/v1/notifications/verify-webhook-id`, {
               method: 'POST',
               headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
               body: JSON.stringify({
