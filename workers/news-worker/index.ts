@@ -24,19 +24,40 @@ const POSTS_PER_PAGE = 6;
 
 // ---------- helpers ----------
 
+// 与主站 functions/_middleware.ts setSecurityHeaders 同一套安全头：
+// news-worker 的 zone 路由（rss.xml、/news、sitemap-news.xml）绕过 Pages
+// 中间件，必须自带，否则安全头出现缺口（线上巡检 2026-11 实证）。
+const SECURITY_HEADERS: Record<string, string> = {
+  'Strict-Transport-Security': 'max-age=31536000; includeSubDomains',
+  'X-Content-Type-Options': 'nosniff',
+  'X-Frame-Options': 'SAMEORIGIN',
+  'Referrer-Policy': 'strict-origin-when-cross-origin',
+  'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
+};
+
 function json(data: unknown, status = 200, headers: Record<string, string> = {}): Response {
   return new Response(JSON.stringify(data), {
     status,
-    headers: { 'Content-Type': 'application/json; charset=utf-8', ...headers },
+    headers: { 'Content-Type': 'application/json; charset=utf-8', ...SECURITY_HEADERS, ...headers },
   });
 }
 
 function htmlResponse(body: string, status = 200, headers: Record<string, string> = {}): Response {
-  return new Response(body, { status, headers: { 'Content-Type': 'text/html; charset=utf-8', ...headers } });
+  return new Response(body, {
+    status,
+    headers: { 'Content-Type': 'text/html; charset=utf-8', ...SECURITY_HEADERS, ...headers },
+  });
 }
 
 function xmlResponse(body: string, status = 200): Response {
-  return new Response(body, { status, headers: { 'Content-Type': 'application/xml; charset=utf-8' } });
+  return new Response(body, {
+    status,
+    headers: {
+      'Content-Type': 'application/xml; charset=utf-8',
+      'Cache-Control': 'public, max-age=3600',
+      ...SECURITY_HEADERS,
+    },
+  });
 }
 
 function parseTags(raw: string | null): string[] {
@@ -72,7 +93,7 @@ function notFound(lang: string, urlPath: string): Response {
 }
 
 function redirectTo(path: string): Response {
-  return new Response(null, { status: 301, headers: { Location: path } });
+  return new Response(null, { status: 301, headers: { Location: path, ...SECURITY_HEADERS } });
 }
 
 function totalPagesFor(total: number): number {
@@ -424,8 +445,10 @@ export default {
       // ---- llms/news/[slug] ----
       if (tokens[0] === 'llms' && tokens[1] === 'news' && tokens[2]) {
         const post = await getPost(db, tokens[2]);
-        if (!post) return new Response('Not found', { status: 404 });
-        return new Response(llmsPost(post), { headers: { 'Content-Type': 'text/markdown; charset=utf-8' } });
+        if (!post) return new Response('Not found', { status: 404, headers: SECURITY_HEADERS });
+        return new Response(llmsPost(post), {
+          headers: { 'Content-Type': 'text/markdown; charset=utf-8', ...SECURITY_HEADERS },
+        });
       }
 
       // ---- sitemap-news.xml ----
@@ -546,10 +569,10 @@ export default {
         });
       }
 
-      return new Response('Not found', { status: 404 });
+      return notFound(lang, url.pathname);
     } catch (e) {
       console.error('news-worker error:', e);
-      return new Response(String(e instanceof Error ? e.message : e), { status: 500 });
+      return new Response('Internal Server Error', { status: 500, headers: SECURITY_HEADERS });
     }
   },
 };
