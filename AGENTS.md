@@ -63,7 +63,7 @@ scripts/               # Build pipeline + gates (see Build Pipeline below)
 
 ### Build Pipeline
 
-`npm run build` runs (see `package.json`): `geo-build.mjs` → `generate-data-json.mjs` → `generate-geo-files.ts` → `_gen-uiall.cjs` → `_gen-pages.cjs` → `gen-icon-svgs.cjs` → `generate-image-dimensions.mjs` → `astro build` (~4,650 pages) → `mirror-root-en.mjs` (mirrors root pages to `/en/`) → `generate-sitemaps.mjs` → `validate-dist.mjs` (dist gate) → `fold-untranslated-canonical.mjs` (degraded langs fold to EN canonical) → `clean-public-assets.mjs` → `generate-ai-corpus.mjs` (AI knowledge corpus → `dist/ai-corpus/*.json` + manifest, consumed by ai-worker's `/api/reindex`).
+`npm run build` runs (see `package.json`): `geo-build.mjs` → `generate-data-json.mjs` → `generate-geo-files.ts` → `_gen-uiall.cjs` → `_gen-pages.cjs` → `gen-icon-svgs.cjs` → `generate-image-dimensions.mjs` → `astro build` (~4,650 pages) → `mirror-root-en.mjs` (mirrors root pages to `/en/`) → `apply-word-gate-noindex.mjs` → `fold-untranslated-canonical.mjs` (degraded langs fold to EN canonical; folded pages get `noindex, follow` so the later sitemap step excludes them entirely) → `generate-sitemaps.mjs` (sitemap-index lists only the full `sitemap-entity.xml`; topic shards stay standalone) → `validate-dist.mjs` (dist gate incl. b2b static-output contract: per-page lang/title/desc/canonical/img-alt, indexable canonical/title uniqueness, sitemap bidirectional consistency, no duplicates, robots.txt/404.html) → `clean-public-assets.mjs` → `generate-ai-corpus.mjs` (AI knowledge corpus → `dist/ai-corpus/*.json` + manifest, consumed by ai-worker's `/api/reindex`).
 
 ### Redirects
 

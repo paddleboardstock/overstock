@@ -322,7 +322,31 @@ let folded = 0;
 let kept = 0;
 let already = 0;
 let skippedNoindex = 0;
+let sitemapRemovals = 0;
 const samples = [];
+
+// 折叠页与 EN 根共用同一 canonical：留在 sitemap / 保持 index 会构成
+// "可索引页指向他页 canonical"的矛盾状态（b2b 静态输出契约：sitemap 只收
+// 可索引的 self-canonical 页）。折叠时从所有分片（dist + public）移除该 URL。
+function removeUrlFromSitemaps(url) {
+  const escaped = url.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const re = new RegExp(`[ \\t]*<url\\b[^>]*>\\s*<loc>${escaped}</loc>[\\s\\S]*?</url>\\n?`, 'g');
+  const dirs = [DIST, path.resolve(DIST, '..', 'public')];
+  for (const dir of dirs) {
+    if (!fs.existsSync(dir)) continue;
+    for (const e of fs.readdirSync(dir)) {
+      if (!/sitemap/.test(e) || !e.endsWith('.xml') || e === 'sitemap-index.xml') continue;
+      const f = path.join(dir, e);
+      const xml = fs.readFileSync(f, 'utf8');
+      if (!xml.includes(url)) continue;
+      const next = xml.replace(re, '');
+      if (next !== xml) {
+        fs.writeFileSync(f, next, 'utf8');
+        sitemapRemovals++;
+      }
+    }
+  }
+}
 
 function walk(dir) {
   for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -368,11 +392,22 @@ function walk(dir) {
           continue;
         }
         if (!enRoot) continue;
-        const newHtml = html.replace(
+        let newHtml = html.replace(
           /<link\s+rel="canonical"\s+href="[^"]*"/i,
           `<link rel="canonical" href="${BASE}${enRoot}"`
         );
+        // 折叠即退场：canonical 指向 EN 根的页面不再参与索引竞争，
+        // 同步改写 robots 为 noindex, follow（P1-D 同口径）。
+        if (/<meta\s+name="robots"\s+content="[^"]*"/i.test(newHtml)) {
+          newHtml = newHtml.replace(
+            /<meta\s+name="robots"\s+content="[^"]*"/i,
+            '<meta name="robots" content="noindex, follow"'
+          );
+        } else {
+          newHtml = newHtml.replace(/<\/head>/i, '<meta name="robots" content="noindex, follow">\n</head>');
+        }
         fs.writeFileSync(p, newHtml, 'utf8');
+        removeUrlFromSitemaps(`${BASE}${pathKey}`);
         folded++;
         if (samples.length < 8)
           samples.push(
@@ -386,7 +421,7 @@ function walk(dir) {
 if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.argv[1])).href) {
   walk(DIST);
   console.log(
-    `[fold-canonical] folded=${folded} keptLowConfidence=${kept} alreadyFolded=${already} noindexSkipped=${skippedNoindex}`
+    `[fold-canonical] folded=${folded} keptLowConfidence=${kept} alreadyFolded=${already} noindexSkipped=${skippedNoindex} sitemapRemovals=${sitemapRemovals}`
   );
   for (const s of samples) console.log('  ', s);
 }
