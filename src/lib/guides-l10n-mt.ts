@@ -1522,7 +1522,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
   },
   ms: {
     'how-to-choose-your-sup': {
-      title: 'Cara Memilih SUP Papan Anda',
+      title: 'Panduan Memilih Papan SUP Anda',
       description:
         'Panduan lengkap untuk memilih papan dayung berdiri yang sesuai berdasarkan tahap kemahiran, keadaan air, dan kegunaan yang dimaksudkan.',
       tldr: 'Pilih berdasarkan SUP tahap kemahiran, jenis air, dan penggunaan utama. Papan serba boleh sesuai untuk pemula dan air yang tenang. Papan touring sesuai untuk mendayung jarak jauh. Papan yoga menawarkan lebar tambahan untuk kestabilan. Papan prestasi sesuai untuk pendayung berpengalaman dalam pelbagai keadaan.',
@@ -1555,7 +1555,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
       ],
     },
     'beginner-guide': {
-      title: 'Panduan Pemula untuk Paddle Boarding',
+      title: 'Panduan Permulaan Paddle Boarding',
       description:
         'Segala yang anda perlu tahu sebelum sesi paddle boarding pertama anda — dari penyediaan peralatan hingga teknik asas mendayung.',
       tldr: 'Mulakan di air yang tenang dan rata dengan papan yang lebar dan stabil. Kembangkan ke 12-15, PSIpasang tali, dan gunakan panjang dayung yang betul (6-8" lebih tinggi daripada ketinggian anda). Pastikan posisi berdiri anda selebar bahu, lutut sedikit bengkok, dan pandang ke ufuk.',
@@ -1855,7 +1855,7 @@ export const GUIDE_L10N_MT: Record<string, Record<string, GuideL10n>> = {
       ],
     },
     'sup-fishing': {
-      title: 'SUP Panduan Memancing: Cara Paddle Board Memancing',
+      title: 'Panduan Memancing SUP: Teknik Memancing Papan Dayung',
       description:
         'Segala yang anda perlu tahu tentang memancing dari papan dayung — tetapan peralatan, tip kestabilan, dan teknik.',
       tldr: 'SUP Memancing menawarkan pendekatan senyap, akses air cetek, dan lontaran 360 darjah. Gunakan papan stabil yang lebar (34"+), pasang pemegang joran, dan gunakan penyejuk atau peti sebagai dek gear. Sauh dalam keadaan berangin. Sentiasa pakai PFD.',
