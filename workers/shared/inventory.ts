@@ -2,7 +2,6 @@
 // workers. Every stock mutation is a single conditional UPDATE
 // (`on_hand - reserved >= qty`) so two concurrent checkouts can never claim
 // the same unit. All functions take the raw D1 binding and speak plain SQL.
-// Reference architecture: pbo-shop-starter.
 
 export interface CartLine {
   slug: string;
