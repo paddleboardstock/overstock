@@ -163,7 +163,6 @@ const ACCEPT_LANG_MAP: Record<string, string> = {
   in: 'id',
 };
 
-const ASSETS_BASE = 'https://assets.paddleboardoverstock.com';
 const I18N_EXCLUDED = [
   '/api',
   '/keystatic',
@@ -180,7 +179,6 @@ const I18N_EXCLUDED = [
   '/solutions-rescue-watercraft',
   '/solutions-yacht-tender-solutions',
 ];
-const ASSET_PREFIXES = ['/images', '/files'];
 
 function hasExtension(url: string): boolean {
   return /\.[a-z0-9]+(\?.*)?$/i.test(url);
@@ -189,10 +187,6 @@ function hasExtension(url: string): boolean {
 function shouldSkipI18n(url: string): boolean {
   if (hasExtension(url)) return true;
   return I18N_EXCLUDED.some((p) => url === p || url.startsWith(p + '/'));
-}
-
-function shouldRedirectToR2(url: string): boolean {
-  return ASSET_PREFIXES.some((p) => url === p || url.startsWith(p + '/'));
 }
 
 function detectLocale(request: Request): string {
@@ -241,10 +235,6 @@ export const onRequest: (...args: any[]) => any = async (context) => {
   // canonical 之外的兜底（爬虫与直接访问均收敛到单一主机）。
   if (url.hostname === 'www.paddleboardoverstock.com') {
     return setSecurityHeaders(Response.redirect('https://paddleboardoverstock.com' + url.pathname + url.search, 301));
-  }
-
-  if (shouldRedirectToR2(pathname)) {
-    return setSecurityHeaders(Response.redirect(ASSETS_BASE + pathname, 301));
   }
 
   // P11：收敛/合并页真 301（先于 i18n 检测，避免非英文用户多一跳 302）

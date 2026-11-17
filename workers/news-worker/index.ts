@@ -144,7 +144,15 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Ar
 footer{border-top:1px solid #eee;padding:26px 0 40px;color:#8a8a8a;font-size:13px;text-align:center}
 `;
 
-function pageShell(lang: string, body: string, title: string, canonical: string, description: string, extraHead = '') {
+function pageShell(
+  lang: string,
+  body: string,
+  title: string,
+  canonical: string,
+  description: string,
+  extraHead = '',
+  ogImage = ''
+) {
   const dir = lang === 'ar' ? ' dir="rtl"' : '';
   return `<!DOCTYPE html>
 <html lang="${lang}"${dir}>
@@ -158,6 +166,7 @@ function pageShell(lang: string, body: string, title: string, canonical: string,
 <meta property="og:title" content="${escapeAttr(title)}"/>
 <meta property="og:description" content="${escapeAttr(description)}"/>
 <meta property="og:url" content="${canonical}"/>
+${ogImage ? `<meta property="og:image" content="${escapeAttr(ogImage)}"/>\n<meta name="twitter:card" content="summary_large_image"/>\n<meta name="twitter:title" content="${escapeAttr(title)}"/>\n<meta name="twitter:description" content="${escapeAttr(description)}"/>\n<meta name="twitter:image" content="${escapeAttr(ogImage)}"/>` : ''}
 ${hreflangAlternates(lang, canonical)}
 ${extraHead}
 <style>${CSS}</style>
@@ -337,7 +346,7 @@ function postPage(lang: string, post: News, related: News[], canonical: string) 
 </article>
 ${relatedHtml}`;
 
-  return pageShell(lang, body, `${post.title} | Paddle Board Overstock`, canonical, post.excerpt || '', jsonLd);
+  return pageShell(lang, body, `${post.title} | Paddle Board Overstock`, canonical, post.excerpt || '', jsonLd, post.image || '');
 }
 
 function fmtDate(d: Date, lang: string): string {

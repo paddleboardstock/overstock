@@ -211,7 +211,7 @@ The navigation editor (`src/pages/keystatic/navigation.astro`) shows a static wa
 
 Admin reads submissions at `/keystatic/contact-submissions` — the page fetches `/api/admin/inquiries` (admin-worker, D1-backed, cookie-authenticated) and shows the latest 50; full data is exportable via `/api/admin/inquiries.csv`.
 
-**Daily D1 maintenance:** `paddleboardoverstock-automation` (cron `0 2 * * *`) runs `src/db-cleanup.ts` — purges expired `session`/`verification` rows (better-auth) and `rate_limit` rows older than 30 days. Manual trigger: `GET /api/automation/cleanup-db?token=<CLEANUP_TOKEN>` (token check only when `CLEANUP_TOKEN` var is set).
+**Daily D1 maintenance:** `paddleboardoverstock-automation` (cron `0 2 * * *`) runs `src/db-cleanup.ts` — purges expired `session`/`verification` rows (better-auth) and `rate_limit` rows older than 30 days. All `/api/automation/*` HTTP endpoints are gated behind `AUTOMATION_TOKEN` (fail closed: without the secret the endpoints return 404; wrong token → 401). Manual trigger: `GET /api/automation/cleanup-db?token=<AUTOMATION_TOKEN>` (or `Authorization: Bearer <AUTOMATION_TOKEN>`).
 
 **Turnstile wiring:** the widget renders when `PUBLIC_TURNSTILE_SITE_KEY` is set (injected by CI into both `deploy.yml` and `ci.yml` builds); the secret is synced to the contact + admin workers via `wrangler secret bulk` in `deploy.yml`.
 

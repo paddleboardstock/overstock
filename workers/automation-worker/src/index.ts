@@ -17,7 +17,7 @@ interface Env {
   INDEXNOW_KEY?: string;
   INDEXNOW_HOST?: string;
   INDEXNOW_KEY_LOCATION?: string;
-  CLEANUP_TOKEN?: string;
+  AUTOMATION_TOKEN?: string;
 }
 
 function json(body: unknown, status = 200): Response {
@@ -27,6 +27,17 @@ function json(body: unknown, status = 200): Response {
   });
 }
 
+function safeEqual(a: string, b: string): boolean {
+  const ea = new TextEncoder().encode(a);
+  const eb = new TextEncoder().encode(b);
+  const n = Math.max(ea.length, eb.length);
+  let diff = ea.length ^ eb.length;
+  for (let i = 0; i < n; i++) {
+    diff |= (ea[i] || 0) ^ (eb[i] || 0);
+  }
+  return diff === 0;
+}
+
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     if (request.method === 'OPTIONS')
@@ -34,6 +45,18 @@ export default {
 
     const url = new URL(request.url);
     const path = url.pathname.replace(/^\/api\/automation/, '') || '/';
+
+    // Every /api/automation/* endpoint is an internal maintenance trigger.
+    // Fail closed like ai-worker's REINDEX_TOKEN: without AUTOMATION_TOKEN the
+    // HTTP surface stays disabled (404); a mismatched token is 401. The daily
+    // cron runs via `scheduled` and is unaffected.
+    if (!env.AUTOMATION_TOKEN) return json({ error: 'Not found' }, 404);
+    const bearer = request.headers.get('Authorization') || '';
+    const provided = bearer.startsWith('Bearer ')
+      ? bearer.slice(7).trim()
+      : url.searchParams.get('token') || '';
+    if (!provided || !safeEqual(provided, env.AUTOMATION_TOKEN))
+      return json({ error: 'Unauthorized' }, 401);
 
     try {
       switch (path) {
@@ -51,11 +74,8 @@ export default {
           return await geoScore(env);
         case '/indexnow':
           return await indexnowHandler(env, request);
-        case '/cleanup-db': {
-          if (env.CLEANUP_TOKEN && url.searchParams.get('token') !== env.CLEANUP_TOKEN)
-            return json({ error: 'Unauthorized' }, 401);
+        case '/cleanup-db':
           return json(await dbCleanup(env));
-        }
         default:
           return json(
             {

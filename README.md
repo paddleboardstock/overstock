@@ -364,7 +364,7 @@ All locale URLs use **path-based** format: `paddleboardoverstock.com/fr/products
 - **Route:** `paddleboardoverstock.com/api/automation/*`
 - **Cron:** Daily `0 2 * * *`
 - **Bindings:** `DATA_BUCKET` (R2), `DB` (D1)
-- **Endpoints:**
+- **Endpoints (all gated behind `AUTOMATION_TOKEN`, fail closed — 404 without the secret, 401 on mismatch; cron via `scheduled` is unaffected):**
   - `POST /api/automation/run` — Run full automation pipeline
   - `POST /api/automation/geo-generate` — Generate GEO content (FAQ, comparisons, buying guides)
   - `POST /api/automation/gsc-fetch` — Fetch Google Search Console data (mock)
@@ -372,8 +372,8 @@ All locale URLs use **path-based** format: `paddleboardoverstock.com/fr/products
   - `GET /api/automation/tasks/export?format=json|csv|md` — Export SEO tasks
   - `GET /api/automation/geo/score` — Run GEO scoring assessment
   - `POST /api/automation/indexnow` — Ping IndexNow for URL changes
-  - `GET /api/automation/cleanup-db?token=...` — Daily D1 maintenance (purge expired better-auth sessions/verifications + `rate_limit` rows > 30 days + better-auth `rateLimit` rows older than 24 h); token-checked when `CLEANUP_TOKEN` is set
-- **Vars:** `INDEXNOW_KEY`, `INDEXNOW_HOST`, `INDEXNOW_KEY_LOCATION`, `CLEANUP_TOKEN`
+  - `GET /api/automation/cleanup-db?token=<AUTOMATION_TOKEN>` — Daily D1 maintenance (purge expired better-auth sessions/verifications + `rate_limit` rows > 30 days + better-auth `rateLimit` rows older than 24 h)
+- **Vars:** `INDEXNOW_KEY`, `INDEXNOW_HOST`, `INDEXNOW_KEY_LOCATION`, `AUTOMATION_TOKEN`
 - **Daily pipeline:** D1 cleanup → GEO pipeline (GSC fetch → Rule engine → GEO generator → Score report → R2)
 
 ### 4.6 Worker Constraints
@@ -827,7 +827,7 @@ routes = ["paddleboardoverstock.com/api/automation/*"]
 [triggers] crons = ["0 2 * * *"]
 [[r2_buckets]] binding = "DATA_BUCKET" bucket_name = "paddleboardoverstock-data"
 [[d1_databases]] binding = "DB" database_name = "paddleboardoverstock-db"
-[vars] INDEXNOW_KEY / INDEXNOW_HOST / INDEXNOW_KEY_LOCATION / CLEANUP_TOKEN
+[vars] INDEXNOW_KEY / INDEXNOW_HOST / INDEXNOW_KEY_LOCATION / AUTOMATION_TOKEN
 ```
 
 ---

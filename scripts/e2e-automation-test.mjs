@@ -123,11 +123,27 @@ console.log('seed ok (stale + fresh rows in place)');
 // Start wrangler dev
 // ---------------------------------------------------------------------------
 console.log('--- starting wrangler dev :' + PORT + ' ---');
-const dev = spawn('npx', ['wrangler', 'dev', '-c', TOML, '--port', String(PORT), '--ip', '127.0.0.1'], {
-  shell: true,
-  env: { ...process.env, CI: 'true', WRANGLER_SEND_METRICS: 'false' },
-  stdio: ['ignore', 'pipe', 'pipe'],
-});
+const E2E_TOKEN = 'e2e-automation-test';
+const dev = spawn(
+  'npx',
+  [
+    'wrangler',
+    'dev',
+    '-c',
+    TOML,
+    '--port',
+    String(PORT),
+    '--ip',
+    '127.0.0.1',
+    '--var',
+    `AUTOMATION_TOKEN:${E2E_TOKEN}`,
+  ],
+  {
+    shell: true,
+    env: { ...process.env, CI: 'true', WRANGLER_SEND_METRICS: 'false' },
+    stdio: ['ignore', 'pipe', 'pipe'],
+  }
+);
 let devLog = '';
 dev.stdout.on('data', (d) => (devLog += d.toString()));
 dev.stderr.on('data', (d) => (devLog += d.toString()));
@@ -161,7 +177,9 @@ console.log('dev server ready');
 // ---------------------------------------------------------------------------
 // Trigger the cleanup endpoint and validate the response
 // ---------------------------------------------------------------------------
-const res = await fetch(BASE + '/api/automation/cleanup-db', { signal: AbortSignal.timeout(30000) });
+const res = await fetch(BASE + '/api/automation/cleanup-db?token=' + E2E_TOKEN, {
+  signal: AbortSignal.timeout(30000),
+});
 const counts = await res.json();
 check('C6a cleanup endpoint responds 200 with counts JSON', res.status === 200, 'status=' + res.status);
 check(

@@ -17,7 +17,7 @@ export const SHOP_CATALOG: CatalogEntry[] = [
     title: 'Oars & Pump Set',
     priceCents: 18000,
     currency: 'USD',
-    image: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/paddleboardoverstock-electric-pump.webp',
+    image: 'https://paddleboardoverstock.com/images/paddleboardoverstock/products/paddleboardoverstock-electric-pump.webp',
     inStock: true,
   },
   {
@@ -25,7 +25,7 @@ export const SHOP_CATALOG: CatalogEntry[] = [
     title: 'Cheetah Surge Edition',
     priceCents: 44900,
     currency: 'USD',
-    image: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-cheetah-surge-1.webp',
+    image: 'https://paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-cheetah-surge-1.webp',
     inStock: true,
   },
   {
@@ -33,7 +33,7 @@ export const SHOP_CATALOG: CatalogEntry[] = [
     title: 'Dolphin Wave Series',
     priceCents: 44900,
     currency: 'USD',
-    image: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-dolphin-wave-1.webp',
+    image: 'https://paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-dolphin-wave-1.webp',
     inStock: true,
   },
   {
@@ -41,7 +41,7 @@ export const SHOP_CATALOG: CatalogEntry[] = [
     title: 'SUP Explorer 11\'',
     priceCents: 39900,
     currency: 'USD',
-    image: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/paddleboardoverstock-sup-allround-board.webp',
+    image: 'https://paddleboardoverstock.com/images/paddleboardoverstock/products/paddleboardoverstock-sup-allround-board.webp',
     inStock: true,
   },
   {
@@ -49,7 +49,7 @@ export const SHOP_CATALOG: CatalogEntry[] = [
     title: 'Flowing Lotus Series',
     priceCents: 44900,
     currency: 'USD',
-    image: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-flowing-lotus-1.webp',
+    image: 'https://paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-flowing-lotus-1.webp',
     inStock: true,
   },
   {
@@ -57,7 +57,7 @@ export const SHOP_CATALOG: CatalogEntry[] = [
     title: 'Jungle Mandala Series',
     priceCents: 44900,
     currency: 'USD',
-    image: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-jungle-mandala-1.webp',
+    image: 'https://paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-jungle-mandala-1.webp',
     inStock: true,
   },
   {
@@ -65,7 +65,7 @@ export const SHOP_CATALOG: CatalogEntry[] = [
     title: 'Leviathan Wake Series (The Whale Edition)',
     priceCents: 44900,
     currency: 'USD',
-    image: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-leviathan-wake-1.webp',
+    image: 'https://paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-leviathan-wake-1.webp',
     inStock: true,
   },
   {
@@ -73,7 +73,7 @@ export const SHOP_CATALOG: CatalogEntry[] = [
     title: 'Medusa Glow Series (The Jellyfish Edition)',
     priceCents: 44900,
     currency: 'USD',
-    image: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-medusa-glow-1.webp',
+    image: 'https://paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-medusa-glow-1.webp',
     inStock: true,
   },
   {
@@ -81,7 +81,7 @@ export const SHOP_CATALOG: CatalogEntry[] = [
     title: 'Ocean Pulse Series',
     priceCents: 44900,
     currency: 'USD',
-    image: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-ocean-pulse-1.webp',
+    image: 'https://paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-ocean-pulse-1.webp',
     inStock: true,
   },
   {
@@ -89,7 +89,7 @@ export const SHOP_CATALOG: CatalogEntry[] = [
     title: 'Ocean Voyager Series',
     priceCents: 44900,
     currency: 'USD',
-    image: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-ocean-voyager-1.webp',
+    image: 'https://paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-ocean-voyager-1.webp',
     inStock: true,
   },
   {
@@ -97,7 +97,7 @@ export const SHOP_CATALOG: CatalogEntry[] = [
     title: 'Tropical Breeze Island Escape Series',
     priceCents: 44900,
     currency: 'USD',
-    image: 'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-tropical-breeze-1.webp',
+    image: 'https://paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-tropical-breeze-1.webp',
     inStock: true,
   },
 ];

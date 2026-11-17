@@ -25,14 +25,12 @@ interface HeroSlide {
 }
 const heroSlides: HeroSlide[] = (heroImagesData as any)?.slides?.filter((s: any) => s?.image?.trim()) || [
   {
-    image:
-      'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-cheetah-surge-1.webp',
+    image: 'https://paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-cheetah-surge-1.webp',
     label: 'Inflatable SUP Boards',
     categories: ['SUP'],
   },
   {
-    image:
-      'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-ocean-voyager-1.webp',
+    image: 'https://paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-ocean-voyager-1.webp',
     label: 'SUP Packages',
     categories: ['SUP'],
   },
@@ -40,9 +38,9 @@ const heroSlides: HeroSlide[] = (heroImagesData as any)?.slides?.filter((s: any)
 
 const defaultVisuals: Record<string, string> = {
   'sup-explorer-11':
-    'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/paddleboardoverstock-sup-allround-board.webp',
+    'https://paddleboardoverstock.com/images/paddleboardoverstock/products/paddleboardoverstock-sup-allround-board.webp',
   'oars-pump-set':
-    'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/paddleboardoverstock-electric-pump.webp',
+    'https://paddleboardoverstock.com/images/paddleboardoverstock/products/paddleboardoverstock-electric-pump.webp',
 };
 const rawVisuals = ((productVisualsData as any)?.visuals || []) as Array<{ id: string; image: string }>;
 const yamlVisuals = Object.fromEntries(rawVisuals.map((v) => [v.id, v.image]).filter(([, img]) => img));
@@ -222,7 +220,7 @@ const faqCategories = [
         <div class="hidden lg:block flex-1">
           <div class="relative">
             <img
-              src="https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-ocean-voyager-1.webp"
+              src="https://paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-ocean-voyager-1.webp"
               alt="SUP Ocean Voyager"
               class="w-full max-w-md mx-auto object-contain drop-shadow-2xl"
               style="filter: drop-shadow(0 20px 60px rgba(0,0,0,0.2)); animation: floatBoard 4s ease-in-out infinite;"
@@ -413,7 +411,7 @@ const faqCategories = [
               <img
                 src={
                   card.image ||
-                  'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-cheetah-surge-1.webp'
+                  'https://paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-cheetah-surge-1.webp'
                 }
                 alt={card.title || 'Paddle Board Overstock technology'}
                 class="w-full h-full object-cover"

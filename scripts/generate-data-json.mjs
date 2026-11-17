@@ -19,11 +19,11 @@ try {
   // ignore
 }
 
-const ASSET_BASE = (process.env.ASSETS_BASE_URL || 'https://assets.paddleboardoverstock.com').replace(/\/+$/, '');
+const ASSET_BASE = (process.env.ASSETS_BASE_URL || 'https://paddleboardoverstock.com').replace(/\/+$/, '');
 
-// Prefix image/file paths with the public R2 custom-domain base so the emitted
-// data references the public CDN (not the Worker). Already-absolute URLs are
-// left untouched. This keeps asset URLs env-overridable at build time.
+// Prefix image/file paths with the same-origin static base so the emitted data
+// references the Pages deploy (images ship in public/images). Already-absolute
+// URLs are left untouched. This keeps asset URLs env-overridable at build time.
 function prefixAssetUrl(s) {
   if (typeof s !== 'string') return s;
   if (/^https?:\/\//i.test(s)) return s;
