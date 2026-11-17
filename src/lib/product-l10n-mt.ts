@@ -527,7 +527,7 @@ export const PRODUCT_L10N_MT: Record<string, ProductL10n> = {
       'Max engine power': 'Kuasa enjin maksimum',
     },
     cats: {
-      sup: 'SUP Papan Dayung',
+      sup: 'Papan Dayung SUP',
       accessory: 'Aksesori',
       service: 'Perkhidmatan',
     },
