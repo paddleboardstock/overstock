@@ -14,14 +14,13 @@ const file = siteFileForLocale('src/data/site/categories.yaml', locale);
 const defaultData: Record<string, { name: string; image: string; gradient: string }> = {
   SUP: {
     name: 'SUP Paddle Boards',
-    image:
-      'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-ocean-voyager-1.webp',
+    image: 'https://paddleboardoverstock.com/images/paddleboardoverstock/products/sup-series/sup-ocean-voyager-1.webp',
     gradient: 'from-sky-400 to-blue-500',
   },
   ACCESSORY: {
     name: 'Accessories',
     image:
-      'https://assets.paddleboardoverstock.com/images/paddleboardoverstock/categories/paddleboardoverstock-accessories-category.webp',
+      'https://paddleboardoverstock.com/images/paddleboardoverstock/categories/paddleboardoverstock-accessories-category.webp',
     gradient: 'from-violet-400 to-purple-500',
   },
 };
@@ -146,7 +145,7 @@ const keys = Object.keys(defaultData);
                 type="text"
                 name="{key}.image"
                 value={entry.image}
-                placeholder="https://assets.paddleboardoverstock.com/images/paddleboardoverstock/categories/..."
+                placeholder="https://paddleboardoverstock.com/images/paddleboardoverstock/categories/..."
                 class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
               />
             </div>

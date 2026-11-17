@@ -15,7 +15,7 @@ export function cleanBuildAssets() {
   for (const { dir, label } of candidates) {
     if (!existsSync(dir)) continue;
 
-    for (const sub of ['images', 'files']) {
+    for (const sub of ['files']) {
       const subDir = path.join(dir, sub);
       if (existsSync(subDir)) {
         rmSync(subDir, { recursive: true, force: true });

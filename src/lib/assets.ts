@@ -1,7 +1,6 @@
-// Central asset base URL — all /images/* and /files/* references are served
-// from the public R2 custom domain (NOT via the Worker / R2 binding) so they
-// hit Cloudflare's cache rules. Override per-environment with ASSETS_BASE_URL.
-export const ASSETS_BASE: string = (process.env.ASSETS_BASE_URL || 'https://assets.paddleboardoverstock.com').replace(
+// Central asset base URL — /images/* and /files/* are served same-origin from
+// the static Pages deploy. Override per-environment with ASSETS_BASE_URL.
+export const ASSETS_BASE: string = (process.env.ASSETS_BASE_URL || 'https://paddleboardoverstock.com').replace(
   /\/+$/,
   ''
 );

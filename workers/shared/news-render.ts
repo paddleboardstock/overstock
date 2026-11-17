@@ -2,7 +2,7 @@
 // (headings, paragraphs, bold/italic, links, images, lists, blockquote, hr,
 // code) — enough to render the existing 21 posts without a heavy MDX pipeline.
 
-export const LANGS = ['en', 'fr', 'de', 'es', 'pt', 'ar', 'it', 'ru', 'pl', 'nl'];
+export const LANGS = ['en', 'fr', 'de', 'es', 'pt', 'ar', 'it', 'ru', 'pl', 'nl', 'th', 'tl', 'hu', 'ro', 'bg', 'tr', 'id', 'ms'];
 
 // Hero heading + subtitle per locale (mirrors src/i18n/generated/pages/news.ts).
 export const NEWS_UI: Record<string, { title: string; subtitle: string }> = {
@@ -51,16 +51,41 @@ export const NEWS_UI: Record<string, { title: string; subtitle: string }> = {
   },
   tr: {
     title: 'Haberler',
-    subtitle: "Paddle Board Overstock'dan en son haberler – ürün lansmanları, şirket güncellemeleri, rehberler ve sudan hikayeler",
+    subtitle: "Paddle Board Overstock’dan en son haberler — ürün lansmanları, şirket güncellemeleri, rehberler ve suyla ilgili hikayeler",
   },
   ro: {
-    title: 'Noutăți',
+    title: 'Știri',
     subtitle:
-      'Cele mai recente de la Paddle Board Overstock — lansări de produse, actualizări ale companiei, ghiduri și povești de pe apă',
+      'Cele mai recente de la Paddle Board Overstock — lansări de produse, actualizări ale companiei, ghiduri și povești din domeniul apei',
   },
   th: {
     title: 'ข่าวสาร',
-    subtitle: 'ข่าวสารล่าสุดจาก Paddle Board Overstock — การเปิดตัวสินค้า อัปเดตบริษัท คำแนะนำ และเรื่องราวจากบนน้ำ',
+    subtitle: 'ข่าวล่าสุดจาก Paddle Board Overstock — การเปิดตัวผลิตภัณฑ์, การอัปเดตของบริษัท, คู่มือ, และเรื่องราวจากน้ำ',
+  },
+  tl: {
+    title: 'Balita',
+    subtitle:
+      'Ang pinakabago mula sa Paddle Board Overstock — paglulunsad ng produkto, mga update ng kumpanya, mga gabay, at mga kwento mula sa tubig',
+  },
+  hu: {
+    title: 'Hírek',
+    subtitle:
+      'A legfrissebb Paddle Board Overstock-tól — termékbevezetések, vállalati frissítések, útmutatók és történetek a vízről',
+  },
+  bg: {
+    title: 'Новини',
+    subtitle:
+      'Най-новото от Paddle Board Overstock — пускане на продукти, актуализации на компанията, ръководства и истории от водата',
+  },
+  id: {
+    title: 'Berita',
+    subtitle:
+      'Yang terbaru dari Paddle Board Overstock — peluncuran produk, pembaruan perusahaan, panduan, dan cerita dari air',
+  },
+  ms: {
+    title: 'Berita',
+    subtitle:
+      'Terkini dari Paddle Board Overstock — pelancaran produk, kemas kini syarikat, panduan, dan cerita dari air',
   },
 };
 
