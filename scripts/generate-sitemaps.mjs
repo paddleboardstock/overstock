@@ -239,14 +239,12 @@ function main() {
     writeFileSync(path.join(PUBLIC, shard.name), xml);
   }
 
-  // 单一 sitemap 入口（robots.txt 指向 sitemap-index.xml；gate 汇总时跳过 sitemapindex）
-  const INDEX_FILES = [
-    'sitemap-entity.xml',
-    'ai-sitemap.xml',
-    'knowledge-sitemap.xml',
-    'sitemap-products.xml',
-    ...optionalShards.filter((s) => s.urls.length > 0).map((s) => s.name),
-  ];
+  // 单一 sitemap 入口（robots.txt 指向 sitemap-index.xml）：索引只列全量 entity
+  // 分片。专题分片（ai/knowledge/products/community/media/learning）是 entity 的
+  // 子集，进索引只会产生跨分片重复 URL（b2b 静态输出契约：sitemap 不得含重复
+  // URL）。专题分片仍作为独立文件写入 dist/public，供 IndexNow、llms.txt 等
+  // 定向消费方直接引用。
+  const INDEX_FILES = ['sitemap-entity.xml'];
   const indexXml =
     `<?xml version="1.0" encoding="UTF-8"?>\n` +
     `<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
