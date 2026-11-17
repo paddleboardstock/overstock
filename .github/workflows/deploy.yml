@@ -190,36 +190,6 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           REINDEX_TOKEN: ${{ secrets.REINDEX_TOKEN }}
 
-      - name: Sync automation worker secrets
-        if: steps.guard.outputs.enabled == 'true'
-        run: |
-          jq -n '{
-            AUTOMATION_TOKEN: env.AUTOMATION_TOKEN,
-            GSC_CLIENT_ID: env.GSC_CLIENT_ID,
-            GSC_CLIENT_SECRET: env.GSC_CLIENT_SECRET,
-            GSC_REFRESH_TOKEN: env.GSC_REFRESH_TOKEN,
-            GSC_SITE_URL: env.GSC_SITE_URL,
-            INDEXNOW_KEY: env.INDEXNOW_KEY,
-            INDEXNOW_HOST: env.INDEXNOW_HOST,
-            INDEXNOW_KEY_LOCATION: env.INDEXNOW_KEY_LOCATION
-          } | with_entries(select(.value != null and .value != ""))' > /tmp/automation-secrets.json
-          if [ -s /tmp/automation-secrets.json ] && ! grep -q '^{}$' /tmp/automation-secrets.json; then
-            npx wrangler secret bulk /tmp/automation-secrets.json -c workers/automation-worker/wrangler.toml
-          else
-            echo "::notice::AUTOMATION_TOKEN not set — /api/automation/* stays disabled (404) until it is added as a repo secret."
-          fi
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          AUTOMATION_TOKEN: ${{ secrets.AUTOMATION_TOKEN }}
-          GSC_CLIENT_ID: ${{ secrets.GSC_CLIENT_ID }}
-          GSC_CLIENT_SECRET: ${{ secrets.GSC_CLIENT_SECRET }}
-          GSC_REFRESH_TOKEN: ${{ secrets.GSC_REFRESH_TOKEN }}
-          GSC_SITE_URL: ${{ secrets.GSC_SITE_URL }}
-          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
-          INDEXNOW_HOST: ${{ secrets.INDEXNOW_HOST }}
-          INDEXNOW_KEY_LOCATION: ${{ secrets.INDEXNOW_KEY_LOCATION }}
-
       - name: Sync shop worker secrets
         if: steps.guard.outputs.enabled == 'true'
         run: |
@@ -272,6 +242,39 @@ jobs:
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+
+      # Must run AFTER "Deploy Workers": the automation worker previously shipped a
+      # plain-text [vars] AUTOMATION_TOKEN binding; a secret with the same name is
+      # rejected (CF error 10053) until the deploy that removes the var binding lands.
+      - name: Sync automation worker secrets
+        if: steps.guard.outputs.enabled == 'true'
+        run: |
+          jq -n '{
+            AUTOMATION_TOKEN: env.AUTOMATION_TOKEN,
+            GSC_CLIENT_ID: env.GSC_CLIENT_ID,
+            GSC_CLIENT_SECRET: env.GSC_CLIENT_SECRET,
+            GSC_REFRESH_TOKEN: env.GSC_REFRESH_TOKEN,
+            GSC_SITE_URL: env.GSC_SITE_URL,
+            INDEXNOW_KEY: env.INDEXNOW_KEY,
+            INDEXNOW_HOST: env.INDEXNOW_HOST,
+            INDEXNOW_KEY_LOCATION: env.INDEXNOW_KEY_LOCATION
+          } | with_entries(select(.value != null and .value != ""))' > /tmp/automation-secrets.json
+          if [ -s /tmp/automation-secrets.json ] && ! grep -q '^{}$' /tmp/automation-secrets.json; then
+            npx wrangler secret bulk /tmp/automation-secrets.json -c workers/automation-worker/wrangler.toml
+          else
+            echo "::notice::AUTOMATION_TOKEN not set — /api/automation/* stays disabled (404) until it is added as a repo secret."
+          fi
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          AUTOMATION_TOKEN: ${{ secrets.AUTOMATION_TOKEN }}
+          GSC_CLIENT_ID: ${{ secrets.GSC_CLIENT_ID }}
+          GSC_CLIENT_SECRET: ${{ secrets.GSC_CLIENT_SECRET }}
+          GSC_REFRESH_TOKEN: ${{ secrets.GSC_REFRESH_TOKEN }}
+          GSC_SITE_URL: ${{ secrets.GSC_SITE_URL }}
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+          INDEXNOW_HOST: ${{ secrets.INDEXNOW_HOST }}
+          INDEXNOW_KEY_LOCATION: ${{ secrets.INDEXNOW_KEY_LOCATION }}
 
       - name: Purge CDN cache
         if: steps.guard.outputs.enabled == 'true'

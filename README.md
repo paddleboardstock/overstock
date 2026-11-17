@@ -373,7 +373,8 @@ All locale URLs use **path-based** format: `paddleboardoverstock.com/fr/products
   - `GET /api/automation/geo/score` — Run GEO scoring assessment
   - `POST /api/automation/indexnow` — Ping IndexNow for URL changes
   - `GET /api/automation/cleanup-db?token=<AUTOMATION_TOKEN>` — Daily D1 maintenance (purge expired better-auth sessions/verifications + `rate_limit` rows > 30 days + better-auth `rateLimit` rows older than 24 h)
-- **Vars:** `INDEXNOW_KEY`, `INDEXNOW_HOST`, `INDEXNOW_KEY_LOCATION`, `AUTOMATION_TOKEN`
+- **Vars:** `INDEXNOW_KEY`, `INDEXNOW_HOST`, `INDEXNOW_KEY_LOCATION`
+- **Secrets (synced from GitHub repo secrets via `wrangler secret bulk` in deploy.yml, after Deploy Workers):** `AUTOMATION_TOKEN`, `GSC_CLIENT_ID`, `GSC_CLIENT_SECRET`, `GSC_REFRESH_TOKEN`, `GSC_SITE_URL`
 - **Daily pipeline:** D1 cleanup → GEO pipeline (GSC fetch → Rule engine → GEO generator → Score report → R2)
 
 ### 4.6 Worker Constraints
@@ -827,7 +828,7 @@ routes = ["paddleboardoverstock.com/api/automation/*"]
 [triggers] crons = ["0 2 * * *"]
 [[r2_buckets]] binding = "DATA_BUCKET" bucket_name = "paddleboardoverstock-data"
 [[d1_databases]] binding = "DB" database_name = "paddleboardoverstock-db"
-[vars] INDEXNOW_KEY / INDEXNOW_HOST / INDEXNOW_KEY_LOCATION / AUTOMATION_TOKEN
+[vars] INDEXNOW_KEY / INDEXNOW_HOST / INDEXNOW_KEY_LOCATION
 ```
 
 ---
