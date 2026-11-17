@@ -224,6 +224,7 @@ function setSecurityHeaders(response: Response): Response {
   headers.set('X-Frame-Options', 'SAMEORIGIN');
   headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
   headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
+  headers.set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains');
   return new Response(response.body, {
     status: response.status,
     statusText: response.statusText,
@@ -235,6 +236,12 @@ export const onRequest: (...args: any[]) => any = async (context) => {
   const { request, next } = context;
   const url = new URL(request.url);
   const pathname = url.pathname;
+
+  // www → apex 301：两个 Pages 自定义域同时 200 会产生重复主机名内容，
+  // canonical 之外的兜底（爬虫与直接访问均收敛到单一主机）。
+  if (url.hostname === 'www.paddleboardoverstock.com') {
+    return setSecurityHeaders(Response.redirect('https://paddleboardoverstock.com' + url.pathname + url.search, 301));
+  }
 
   if (shouldRedirectToR2(pathname)) {
     return setSecurityHeaders(Response.redirect(ASSETS_BASE + pathname, 301));
